@@ -1,0 +1,293 @@
+<table width="100%" border="1px">
+<tr>
+    <td><b>Propriedade</b></td>
+    <td><b>{1&amp;gt;Descrição&amp;lt;1}</b></td>
+    <td><b>{1&amp;gt;Opções&amp;lt;1}</b></td>
+</tr>
+<tr>
+    <td><code> abi.type </code></td>
+    <td><strong>Tipo de ABI</strong> – especifica o tipo de ABI (interface binária de aplicativo) do dispositivo emulado. A opção <code>x86</code> é para o conjunto de instruções normalmente chamado de "x86" ou "IA-32". A opção <code>x86_64</code> é para o conjunto de instruções x86 de 64 bits. A opção <code>armeabi-v7a</code> é para o conjunto de instruções ARM com extensões ARM v7-a. A opção <code>arm64-v8a</code> é para o conjunto de instruções ARM que oferece suporte a AArch64.  </td>
+    <td> x86, x86_64, armeabi-v7a, arm64-v8a </td>
+</tr>
+<tr>
+    <td><code> disk.cachePartition </code></td>
+    <td><strong>Partição de cache</strong> – determina se o dispositivo emulado usará uma partição de <strong>/cache</strong> no dispositivo. A partição de <strong>/cache</strong> (que inicialmente é vazia) é o local em que o Android armazena os dados acessados com frequência e os componentes de aplicativo. Se definida como <code>não</code>, o não utilizará uma partição de <strong>/cache</strong> e as outras configurações de <code>disk.cache</code> serão ignoradas.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> disk.cachePartition.path </code></td>
+    <td><strong>Caminho da partição de cache</strong> – especifica um arquivo de imagem de partição de cache no computador de desenvolvimento. O emulador usará esse arquivo para a partição de <strong>/cache</strong>. Insira um caminho absoluto ou um caminho relativo ao diretório de <strong>dados</strong> do emulador. Se não estiver definido, o emulador criará um arquivo temporário vazio chamado <strong>cache.img</strong> no computador de desenvolvimento. Se o arquivo não existir, será criado como um arquivo vazio. Essa opção será ignorada se <code>disk.cachePartition</code> estiver definido como <code>não</code>. </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.cachePartition.size </code></td>
+    <td><strong>Tamanho da partição de cache</strong> – o tamanho do arquivo de partição de cache (em megabytes). Normalmente, não é necessário definir essa opção, a menos que o aplicativo baixe arquivos muito grandes, maiores que o tamanho padrão do cache, de 66 megabytes. Essa opção será ignorada se <code>disk.cachePartition</code> estiver definido como <code>não</code>.</td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.dataPartition.initPath </code></td>
+    <td><strong>Caminho inicial para a partição de dados</strong> – especifica o conteúdo inicial da partição de dados. Depois de apagar os dados do usuário, o emulador copia o conteúdo do arquivo especificado para os dados do usuário (por padrão, <strong>userdata-qemu.img</strong>) em vez de usar <strong>userdata.img</strong> como versão inicial. </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.dataPartition.path </code></td>
+    <td><strong>Caminho para a partição de dados</strong> – especifica o arquivo de partição de dados de usuário. Para configurar um arquivo de dados de usuário persistente, insira um nome de arquivo e um caminho no computador de desenvolvimento. Se o arquivo não existir, o emulador criará uma imagem do arquivo padrão <strong>userdata.img</strong>, armazena ela no nome de arquivo especificado por <code>disk.dataPartition.path</code> e persiste os dados de usuário quando o emulador é desligado. Se um caminho não for especificado, o arquivo padrão será nomeado <strong>userdata-qemu.img</strong>. O valor especial <code>&lt;temp></code> faz com que o emulador crie e use um arquivo temporário. Se <code>disk.dataPartition.initPath</code> estiver definido, seu conteúdo será copiado para o arquivo <code>disk.dataPartition.path</code> em tempo de inicialização. Observe que essa opção não pode ser deixada em branco.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.dataPartition.size </code></td>
+    <td><strong>Tamanho da partição de dados</strong> – especifica o tamanho da partição de dados do usuário em megabytes.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.ramdisk.path </code></td>
+    <td><strong>Caminho do ramdisk</strong> – caminho para a imagem da partição de inicialização (ramdisk). A imagem do ramdisk é um subconjunto da imagem do sistema carregada pelo kernel antes de a imagem do sistema ser montada. A imagem do ramdisk normalmente contém binários de tempo de inicialização e scripts de inicialização. Se essa opção não estiver especificada, o padrão será <strong>ramdisk.img</strong> no diretório do sistema do emulador.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.snapStorage.path </code></td>
+    <td><strong>Caminho de armazenamento de instantâneo</strong> – caminho para o <i>arquivo de armazenamento de instantâneo</i> em que todos os instantâneos são armazenados. Todos os instantâneos feitos durante a execução serão salvos nesse arquivo. Somente os instantâneos salvos neste arquivo podem ser restaurados durante a execução do emulador. Se essa opção não estiver especificada, o padrão será <strong>snapshots.img</strong> no diretório de dados do emulador.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.systemPartition.initPath </code></td>
+    <td><strong>Caminho de inicialização da partição do sistema</strong> – caminho para a cópia somente leitura do arquivo de imagem do sistema; especificamente, a partição que contém as bibliotecas e dados do sistema correspondentes ao nível da API e a qualquer variante. Se esse caminho não estiver especificado, o padrão será <strong>system.img</strong> no diretório do sistema do emulador.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.systemPartition.path </code></td>
+    <td><strong>Caminho da partição do sistema</strong> – caminho para a imagem de partição do sistema de leitura/gravação. Se esse caminho não estiver definido, um arquivo temporário será criado e inicializado nos conteúdos do arquivo especificado por <code>disk.systemPartition.initPath</code>. </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> disk.systemPartition.size </code></td>
+    <td><strong>Tamanho da partição do sistema</strong> – o tamanho ideal da partição do sistema (em megabytes). O tamanho será ignorado se a imagem da partição do sistema real for maior que essa configuração. Caso contrário, especifica o tamanho máximo que o arquivo de partição do sistema pode atingir.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.accelerometer </code></td>
+    <td><strong>Acelerômetro</strong> – determina se o dispositivo emulado contém um sensor de acelerômetro. O acelerômetro ajuda o dispositivo a determinar orientação (usada para rotação automática). O acelerômetro informa a aceleração do dispositivo em três eixos do sensor.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.audioInput </code></td>
+    <td><strong>Suporte para gravação de áudio</strong> – determina se o dispositivo emulado pode gravar áudio.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.audioOutput </code></td>
+    <td><strong>Suporte para reprodução de áudio</strong> – determina se o dispositivo emulado pode reproduzir áudio.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.battery </code></td>
+    <td><strong>Suporte para bateria</strong> – determina se o dispositivo emulado pode ser executado em uma bateria.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.camera </code></td>
+    <td><strong>Suporte para câmera</strong> – determina se o dispositivo emulado tem uma câmera.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.camera.back </code></td>
+    <td><strong>Câmera traseira</strong> – configura a câmera traseira (a lente fica em direção contrária ao usuário). Caso esteja usando uma webcam no computador de desenvolvimento para simular uma câmera traseira no dispositivo emulado, esse valor deve ser definido como <code>webcam<i>n</i></code>, em que <i>n</i> seleciona a webcam (se você tiver apenas uma webcam, escolha <code>webcam0</code>). Se definido como <code>emulado</code>, o emulador simulará a câmera no software. Para desabilitar a câmera traseira, defina esse valor como <code>nenhum</code>. Ao habilitar a câmera traseira, lembre-se de habilitar <code>hw.camera</code> também.  </td>
+    <td> emulado, nenhum, webcam0 </td>
+</tr>
+<tr>
+    <td><code> hw.camera.front </code></td>
+    <td><strong>Câmera frontal</strong> – configura a câmera frontal (a lente fica de frente para o usuário). Caso esteja usando uma webcam no computador de desenvolvimento para simular uma câmera frontal no dispositivo emulado, esse valor deve ser definido como <code>webcam<i>n</i></code>, em que <i>n</i> seleciona a webcam (se você tiver apenas uma webcam, escolha <code>webcam0</code>). Se definido como <code>emulado</code>, o emulador simulará uma câmera no software. Para desabilitar a câmera frontal, defina esse valor como <code>nenhum</code>. Ao habilitar a câmera frontal, lembre-se de habilitar <code>hw.camera</code> também.  </td>
+    <td> emulado, nenhum, webcam0 </td>
+</tr>
+<tr>
+    <td><code> hw.camera.maxHorizontalPixels </code></td>
+    <td><strong>Máximo de pixels da câmera na horizontal</strong> – configura a resolução máxima na horizontal da câmera do dispositivo emulado (em pixels).  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.camera.maxVerticalPixels </code></td>
+    <td><strong>Máximo de pixels da câmera na vertical</strong> – configura a resolução máxima na vertical da câmera do dispositivo emulado (em pixels).  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.cpu.arch </code></td>
+    <td><strong>Arquitetura da CPU</strong> – a arquitetura da CPU a ser emulada pelo dispositivo virtual. Se estiver usando o Intel HAXM para aceleração de hardware, selecione <code>x86</code> para uma CPU de 32 bits. Selecione <code>x86_64</code> para um dispositivo de 64 bits acelerado por HAXM. Lembre-se de instalar a imagem do sistema x86 Intel correspondente no Gerenciador de SDK: por exemplo, <strong>Intel x86 Atom</strong> ou <strong>Intel x86 Atom_64</strong>. Para simular uma CPU ARM, selecione <code>arm</code> para uma CPU ARM de 32 bits ou <code>arm64</code> para uma CPU ARM de 64 bits. Lembre-se que dispositivos virtuais baseados em ARM serão executados de forma muito mais lenta que aqueles baseados em x86, porque a aceleração de hardware não está disponível para ARM.  </td>
+    <td> x86, x86_64, arm, arm64 </td>
+</tr>
+<tr>
+    <td><code> hw.cpu.model </code></td>
+    <td><strong>Modelo de CPU</strong> – esse valor normalmente não é definido (será definido como um valor derivado de <code>hw.cpu.arch</code> se não for explicitamente definido). No entanto, pode ser definido como uma cadeia de caracteres específicas do emulador para uso experimental.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.dPad </code></td>
+    <td><strong>Chaves DPad</strong> – determina se o dispositivo emulado dá suporte a chaves de botão direcional (DPad). Normalmente, um DPad tem quatro chaves para indicar o controle direcional.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.gps </code></td>
+    <td><strong>Suporte para GPS</strong> – determina se o dispositivo emulado tem um receptor GPS.  </td>
+    <td> sim, não </td>
+<tr>
+</tr>
+<tr>
+    <td><code> hw.gpu.enabled </code></td>
+    <td><strong>Emulação de GPU</strong> – determina se o dispositivo emulado dá suporte à emulação de GPU. Quando habilitada, a emulação de GPU usa o Open GL para Embedded Systems (OpenGL ES) para renderizar gráficos 2D e 3D na tela e a configuração do Modo de Emulação de GPU associada determina como a emulação de GPU é implementada.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.gpu.mode </code></td>
+    <td><strong>Modo de emulação de GPU</strong> – determina como a emulação de GPU é implementada pelo emulador. Se você selecionar <code>automático</code>, o emulador escolherá a aceleração de hardware e software com base na configuração do computador de desenvolvimento. Se você selecionar <code>host</code>, o emulador usará o processador de gráfico do seu computador de desenvolvimento para executar a emulação de GPU e renderizar mais rápido. Se sua GPU não é compatível com o emulador e você estiver no Windows, é possível tentar <code>ângulo</code> em vez de <code>host</code>. O modo <code>ângulo</code> usa o DirectX para proporcionar um desempenho semelhante ao <code>host</code>. Se você selecionar <code>mesa</code>, o emulador usará a biblioteca de software 3D Mesa para renderizar elementos gráficos. Selecione <code>mesa</code> se tiver problemas de renderização por meio do processador de gráfico do computador de desenvolvimento. O modo <code>swiftshader</code> pode ser usado para renderizar elementos gráficos no software com desempenho ligeiramente menor que por meio da GPU do computador. <code>Off</code> (desabilitar emulação de hardware de gráficos) é uma opção preterida que pode causar a renderização inadequada de alguns itens e, portanto, não é recomendada. </td>
+    <td> automático, host, mesa, ângulo, swiftshader, off </td>
+</tr>
+<tr>
+    <td><code> hw.gsmModem </code></td>
+    <td><strong>Suporte para modem GSM</strong> – determina se o dispositivo emulado inclui um modem que oferece suporte ao sistema de telefonia móvel GSM (Sistema Global para Comunicações Móveis).  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.initialOrientation </code></td>
+    <td><strong>Orientação da tela de inicial</strong> – configura a orientação inicial da tela no dispositivo emulado (modo retrato ou paisagem). No modo retrato, a tela é mais alta do que larga. No modo paisagem, a tela é mais larga do que alta. Ao executar o dispositivo emulado, é possível alterar a orientação se os modos retrato e paisagem tiverem suporte no perfil do dispositivo.  </td>
+    <td> retrato, paisagem </td>
+</tr>
+<tr>
+    <td><code> hw.keyboard </code></td>
+    <td><strong>Suporte para teclado</strong> – determina se o dispositivo emulado dá suporte a um teclado QWERTY.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.keyboard.charmap </code></td>
+    <td><strong>Nome do charmap do teclado</strong> – o nome do charmap do hardware do dispositivo. OBSERVAÇÃO: esse sempre deve ser o padrão <code>qwerty2</code>, a menos que você tenha modificado a imagem do sistema adequadamente. Esse nome é enviado para o kernel no momento da inicialização. Usar um nome incorreto resulta em um dispositivo virtual inutilizável.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.keyboard.lid </code></td>
+    <td><strong>Suporte para a tampa de teclado</strong> – se o suporte para teclado estiver habilitado, essa configuração determina se o teclado QWERTY pode ser fechado/oculto ou aberto/visível. Essa configuração será ignorada se <code>hw.keyboard</code> estiver definido como <code>false</code>. OBSERVAÇÃO: o valor padrão será <code>false</code> se o dispositivo emulado tiver como alvo o nível da API 12 ou superior.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.lcd.backlight </code></td>
+    <td><strong>Luz de fundo LCD</strong> – determina se uma luz de fundo LCD é simulada pelo dispositivo emulado.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.lcd.density </code></td>
+    <td><strong>Densidade de LCD</strong> – a densidade da tela de LCD emulada, medida em pixels independentes de densidade ou <i>dp</i> (dp é uma unidade virtual de pixel). Quando a configuração é de 160 dp, cada dp corresponde a um pixel físico. Em tempo de execução, o Android usa esse valor para selecionar e dimensionar os recursos/ativos apropriados para a renderização correta da exibição.  </td>
+    <td> 120, 160, 240, 213, 320 </td>
+</tr>
+<tr>
+    <td><code> hw.lcd.depth </code></td>
+    <td><strong>Profundidade da cor do LCD</strong> – a profundidade de bit de cor do framebuffer emulado que contém o bitmap para controlar a tela de LCD. Esse valor pode ser 16 bits (65.536 cores possíveis) ou 32 bits (16.777.216 cores e transparência). A configuração de 32 bits pode fazer o emulador ser executado a um ritmo um pouco mais lento, mas com maior precisão de cor.  </td>
+    <td> 16, 32 </td>
+</tr>
+<tr>
+    <td><code> hw.lcd.height </code></td>
+    <td><strong>Altura de pixel do LCD</strong> – o número de pixels que compõem a dimensão vertical da tela de LCD emulada.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.lcd.width </code></td>
+    <td><strong>Largura de pixel do LCD</strong> – o número de pixels que compõem a dimensão horizontal da tela de LCD emulada.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.mainKeys </code></td>
+    <td><strong>Teclas Voltar/Tela Inicial do hardware</strong> – determinam se o dispositivo emulado oferece suporte aos botões de navegação Voltar e Tela Inicial do hardware. Esse valor poderá ser definido como <code>sim</code> se os botões forem implementados somente no software. Caso <code>hw.mainKeys</code> seja definido como <code>sim</code>, o emulador não exibirá botões de navegação na tela, mas é possível usar o painel lateral do emulador para "pressionar" esses botões.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.ramSize </code></td>
+    <td><strong>Tamanho da RAM do dispositivo</strong> – a quantidade de RAM física do dispositivo emulado, em megabytes. O valor padrão será calculado com base no tamanho da tela ou na versão de capa. Aumentar o tamanho pode acelerar a operação do emulador, mas exige mais recursos do computador de desenvolvimento.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.screen </code></td>
+    <td><strong>Tipo de tela touch</strong> – define o tipo de tela no dispositivo emulado. Uma tela <code>multitouch</code> pode acompanhar um ou mais dedos na interface de toque. Uma tela <code>touch</code> pode detectar somente eventos acionados por um dedo. Uma tela <code>sem toque</code> não detecta eventos de toque.  </td>
+    <td> touch, multitouch, sem toque </td>
+</tr>
+<tr>
+    <td><code> hw.sdCard </code></td>
+    <td><strong>Suporte para cartão SD</strong> – determina se o dispositivo emulado dá suporte à inserção e remoção de cartões SD (Secure Digital) virtuais. O emulador usa imagens de disco montável armazenadas no computador de desenvolvimento para simular as partições de dispositivos de cartão SD reais (consulte <code>hw.sdCard.path</code>).  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> sdcard.size </code></td>
+    <td><strong>Tamanho do cartão SD</strong> – especifica o tamanho do arquivo do cartão SD virtual no local especificado por <code>hw.sdCard.path</code>. disponível no dispositivo (em bytes). Se o tamanho for um inteiro simples, ele especificará o tamanho em bytes. Também é possível especificar o tamanho em quilobytes, megabytes e gigabytes acrescentando K, M ou G ao tamanho. O tamanho mínimo é 9 M e o tamanho máximo é de 1023 G.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.sdCard.path </code></td>
+    <td><strong>Caminho da imagem do cartão SD</strong> – especifica o nome de arquivo e o caminho para um arquivo de imagem de partição de cartão SD no computador de desenvolvimento. Por exemplo, esse caminho pode ser definido como <strong>C:\sd\sdcard.img</strong> no Windows.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> hw.sensors.magnetic_field </code></td>
+    <td><strong>Sensor de campo magnético</strong> – determina se o dispositivo emulado dá suporte a um sensor de campo magnético. O sensor de campo magnético (também conhecido como magnetômetro) informa o campo geomagnético do ambiente, conforme medido ao longo de três eixos de sensor. Habilite essa configuração para aplicativos que precisam acessar uma leitura de bússola. Por exemplo, um aplicativo de navegação pode usar esse sensor para detectar a direção que o usuário está seguindo.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.sensors.orientation </code></td>
+    <td><strong>Sensor de orientação</strong> – determina se o dispositivo emulado fornece valores de sensor de orientação. O sensor de orientação mede os graus de rotação de um dispositivo ao redor de todas os três eixos físicos (x, y, z). Observe que o sensor de orientação foi preterido a partir do Android 2.2 (nível da API 8).  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.sensors.proximity </code></td>
+    <td><strong>Sensor de proximidade</strong> – determina se o dispositivo emulado dá suporte a um sensor de proximidade. Esse sensor mede a proximidade de um objeto em relação à tela de exibição de um dispositivo. Normalmente, é usado para determinar se um aparelho está próximo ao ouvido de uma pessoa.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.sensors.temperature </code></td>
+    <td><strong>Sensor de temperatura</strong> – determina se o dispositivo emulado dá suporte a um sensor de temperatura. Esse sensor mede a temperatura do dispositivo em graus Celsius (°C).  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.touchScreen </code></td>
+    <td><strong>Suporte para tela touch</strong> – determina se o dispositivo emulado dá suporte a uma tela touch. A tela touch é usada para manipulação direta dos objetos na tela.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.trackBall </code></td>
+    <td><strong>Suporte para trackball</strong> – determina se o dispositivo emulado dá suporte a um trackball.  </td>
+    <td> sim, não </td>
+</tr>
+<tr>
+    <td><code> hw.useext4 </code></td>
+    <td><strong>Suporte para o sistema de arquivos EXT4</strong> – determina se o dispositivo emulado usa o sistema de arquivos Linux EXT4 para partições. Como agora o tipo de sistema de arquivos é detectado automaticamente, essa opção é preterida e ignorada.  </td>
+    <td> no </td>
+</tr>
+<tr>
+    <td><code> kernel.newDeviceNaming </code></td>
+    <td><strong>Nomenclatura do novo dispositivo kernel</strong> – usada para especificar se o kernel exige um esquema de nomeação de dispositivo novo. Normalmente, é usado com kernels do Linux 3.10 ou posterior. Se definido como <code>detecção automática</code>, o emulador detectará automaticamente se o kernel exige um esquema de nomeação de dispositivo novo.  </td>
+    <td> detecção automática, sim, não </td>
+</tr>
+<tr>
+    <td><code> kernel.parameters </code></td>
+    <td><strong>Parâmetros de kernel</strong> – especifica a cadeia de caracteres de parâmetros de inicialização de kernel do Linux. Por padrão, essa configuração é deixada em branco.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> kernel.path </code></td>
+    <td><strong>Caminho do kernel</strong> – especifica o caminho para o kernel do Linux. Se esse caminho não estiver especificado, o emulador pesquisará no diretório do sistema do emulador por <code>kernel-ranchu</code>.  </td>
+    <td>  </td>
+</tr>
+<tr>
+    <td><code> kernel.supportsYaffs2 </code></td>
+    <td><strong>Suporte para partição YAFFS2</strong> – determina se o kernel oferece suporte a partições YAFFS2 (Yet Another Flash File System 2). Normalmente, isso se aplica somente aos kernels anteriores ao Linux 3.10. Se definido como <code>detecção automática</code>, o emulador detectará automaticamente se o kernel pode montar sistemas de arquivos YAFFS2.  </td>
+    <td> detecção automática, sim, não </td>
+</tr>
+<tr>
+    <td><code> skin.name </code></td>
+    <td><strong>Nome de capa</strong> – o nome de uma capa de Android Emulator. Uma capa é uma coleção de arquivos que define o visual e os elementos de controle de uma exibição de emulador. Ela descreve a aparência da janela do AVD no computador de desenvolvimento. Uma capa descreve o tamanho de tela, os botões e o design geral, mas não afeta a operação do aplicativo. </td>
+    <td> </td>
+</tr>
+<tr>
+    <td><code> skin.path </code></td>
+    <td><strong>Caminho de capa</strong> – caminho para o diretório que contém os arquivos de aparências do emulador especificados em <code>skin.name</code>. Esse diretório contém arquivos de layout <code>hardware.ini</code> e arquivos de imagem para os elementos de exibição da capa. </td>
+    <td> </td>
+</tr>
+<tr>
+    <td><code> skin.dynamic </code></td>
+    <td><strong>Dinâmica de capa</strong> – se a capa é dinâmica ou não. A capa do emulador é uma capa dinâmica se o emulador criar uma capa de um determinado tamanho com base na altura e largura especificada. </td>
+    <td> no </td>
+</tr>
+</table>
