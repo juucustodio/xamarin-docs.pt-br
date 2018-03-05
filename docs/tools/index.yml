@@ -1,0 +1,89 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Ferramentas do Xamarin
+metadata:
+  description: "Ferramentas para melhorar a experiência de desenvolvimento do Xamarin."
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02-17-2018
+  ms.topic: landing-page
+  ms.openlocfilehash: 8e2ba81dbfc573678fa58e01809f7bcd5b3130a4
+  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 02/27/2018
+abstract:
+  description: "Ferramentas para melhorar a experiência de desenvolvimento do Xamarin."
+  menu:
+    items:
+    - href: https://visualstudio.com/
+      text: Visual Studio
+    - href: https://developer.xamarin.com/releases/#mac
+      text: "Notas de Versão"
+sections:
+- title: Ferramentas
+  items:
+  - type: list
+    style: cards
+    className: cardsC
+    items:
+    - href: ~/tools/live-player/index.md
+      html: "Introdução ao Xamarin em minutos, usando o aplicativo Live Player com o Visual Studio."
+      image:
+        src: ~/media/index/xamarin-tools-live-player.svg?branch=master
+        href: ~/tools/live-player/index.md
+      title: Xamarin Live Player
+    - href: ~/tools/inspector/index.md
+      html: "Entender e depurar sua interface de usuário."
+      image:
+        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+        href: ~/tools/inspector/index.md
+      title: Xamarin Inspector
+    - href: ~/tools/workbooks/index.md
+      html: Aprenda C# e a plataforma Xamarin interativamente.
+      image:
+        src: https://review.docs.microsoft.com/en-us//media/illustrations/dynamics-resource-library.svg?branch=master
+        href: ~/tools/workbooks/index.md
+      title: Xamarin Workbooks
+    - href: ~/tools/ios-simulator.md
+      html: Interagir com o Simulador de iOS usando o Visual Studio no Windows.
+      image:
+        src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
+        href: ~/tools/ios-simulator.md
+      title: Simulador de iOS para Windows
+    - href: ~/tools/profiler/index.md
+      html: Identificar e corrigir problemas de desempenho.
+      image:
+        src: ~/media/index/xamarin-tools-profiler.svg?branch=master
+        href: ~/tools/profiler/index.md
+      title: Xamarin Profiler
+    - href: ~/tools/dotnet-embedding/index.md
+      html: "Permite que seu código .NET existente seja consumido a partir de outras linguagens de programação."
+      image:
+        src: https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg
+        href: ~/tools/dotnet-embedding/index.md
+      title: .NET Embedding
+    - href: https://developer.xamarin.com/testcloud/
+      html: Teste seu aplicativo em qualquer dispositivo.
+      image:
+        src: https://docs.microsoft.com/en-us/media/illustrations/team-services-agile-track.svg
+        href: https://developer.xamarin.com/testcloud/
+      title: Xamarin Test Cloud
+- title: Plataformas
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: Xamarin.Forms
+      href: ~/xamarin-forms/index.md
+      html: "<p><a href=\"~/xamarin-forms/get-started/index.md\">Introdução</a><br /><a href=\"~/xamarin-forms/app-fundamentals/index.md\">Conceitos básicos do aplicativo</a><br /><a href=\"~/xamarin-forms/user-interface/index.md\">Interface do usuário</a><br /><a href=\"~/xamarin-forms/platform/index.md\">Recursos da plataforma</a><br /><a href=\"~/xamarin-forms/deploy-test/index.md\">Implantação e Teste</a><br /><a href=\"~/xamarin-forms/xaml/index.md\">XAML</a><br /><a href=\"~/xamarin-forms/data-cloud/index.md\">Serviços de dados e de nuvem</a><br /><a href=\"~/xamarin-forms/internals/index.md\">Conceitos avançados e recursos internos</a></p>"
+    - title: Android
+      href: ~/android/index.md
+      html: "<p><a href=\"~/android/get-started/index.md\">Introdução</a><br /><a href=\"~/android/app-fundamentals/index.md\">Conceitos básicos do aplicativo</a><br /><a href=\"~/android/user-interface/index.md\">Interface do usuário</a><br /><a href=\"~/android/platform/index.md\">Recursos da plataforma</a><br /><a href=\"~/android/deploy-test/index.md\">Implantação e Teste</a><br /><a href=\"~/android/data-cloud/index.md\">Serviços de dados e de nuvem</a><br /><a href=\"~/android/internals/index.md\">Conceitos avançados e recursos internos</a></p>"
+    - title: iOS
+      href: ~/ios/index.md
+      html: "<p><a href=\"~/ios/get-started/index.md\">Introdução</a><br /><a href=\"~/ios/app-fundamentals/index.md\">Conceitos básicos do aplicativo</a><br /><a href=\"~/ios/user-interface/index.md\">Interface do usuário</a><br /><a href=\"~/ios/platform/index.md\">Recursos da plataforma</a><br /><a href=\"~/ios/deploy-test/index.md\">Implantação e Teste</a><br /><a href=\"~/ios/data-cloud/index.md\">Serviços de dados e de nuvem</a><br /><a href=\"~/ios/internals/index.md\">Conceitos avançados e recursos internos</a></p>"
+    - title: Mac
+      href: ~/mac/index.md
+      html: "<p><a href=\"~/mac/get-started/index.md\">Introdução</a><br /><a href=\"~/mac/app-fundamentals/index.md\">Conceitos básicos do aplicativo</a><br /><a href=\"~/mac/user-interface/index.md\">Interface do usuário</a><br /><a href=\"~/mac/platform/index.md\">Recursos da plataforma</a><br /><a href=\"~/mac/deploy-test/index.md\">Implantação e Teste</a><br /><a href=\"~/mac/internals/index.md\">Conceitos avançados e recursos internos</a></p>"
