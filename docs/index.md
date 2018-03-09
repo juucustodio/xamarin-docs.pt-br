@@ -1083,7 +1083,7 @@ ms.lasthandoff: 02/27/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Xamarin Profiler</h3>
+                                                    <h3>Criador de perfil do Xamarin</h3>
                                                     <p>Identificar e corrigir problemas de desempenho.</p>
                                                 </div>
                                             </div>
