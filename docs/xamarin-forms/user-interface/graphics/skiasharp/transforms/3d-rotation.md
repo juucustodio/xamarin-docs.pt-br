@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 04/14/2017
 ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/27/2018
 ---
@@ -27,7 +27,7 @@ Esse trabalho envolve trabalhar com rotações tridimensionais e, em seguida, de
 
 Um sistema de coordenadas tridimensional adiciona um terceiro eixo z conceitualmente chamado, o eixo Z é ângulos direita para a tela. Pontos de coordenadas no espaço 3D são indicados com três números: (x, y, z). Em 3D do sistema de coordenadas usado neste artigo, aumentar os valores de X são à direita e aumentar os valores de Y, ficarem desativados, assim como ocorre em duas dimensões. Aumentar os valores Z positivos sair da tela. A origem é o canto superior esquerdo, assim como em gráficos 2D. Você pode pensar a tela como um plano XY com o eixo Z reto para esse plano.
 
-Isso é chamado de um sistema de coordenadas esquerdo. Se você apontar o dedo indicador para a esquerda na direção de X positivo coordenadas (à direita) e o dedo intermediária na direção y crescentes coordenadas (baixo), em seguida, os pontos de thumb a direção de aumentar as coordenadas Z & #x 2014; Estendendo fora da tela.
+Isso é chamado de um sistema de coordenadas esquerdo. Se você apontar o dedo indicador para a esquerda na direção de X positivo coordenadas (à direita) e o dedo intermediária na direção y crescentes coordenadas (baixo), em seguida, os pontos de thumb a direção de aumentar as coordenadas Z &#x2014; Estendendo fora da tela.
 
 Em gráficos 3D, as transformações são baseadas em uma matriz 4 por 4. Aqui está a matriz de identidade 4 por 4:
 
@@ -109,7 +109,7 @@ Rotação ao redor do eixo Z é igual de gráficos 2D:
 |    0       0     0  1  |
 </pre>
 
-A direção de rotação indicada pela direção do sistema de coordenadas. Este é um sistema canhoto, portanto, se você apontar o thumb da sua mão esquerda para aumentar os valores para um determinado eixo & #x 2014; à direita de rotação ao redor do eixo X, para baixo para rotação ao redor do eixo Y e na sua direção de rotação ao redor do eixo Z & #x 2014; em seguida, a curva de seus dedos outros indica a direção de rotação ângulos positivos.
+A direção de rotação indicada pela direção do sistema de coordenadas. Este é um sistema canhoto, portanto, se você apontar o thumb da sua mão esquerda para aumentar os valores para um determinado eixo &#x2014; à direita de rotação ao redor do eixo X, para baixo para rotação ao redor do eixo Y e na sua direção de rotação ao redor do eixo Z &#x2014; em seguida, a curva de seus dedos outros indica a direção de rotação ângulos positivos.
 
 `SKMatrix44` tenha generalizado estático [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) e [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) métodos que permitem que você especifique o eixo ao redor do qual a rotação ocorre:
 
@@ -442,7 +442,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-O `OnAppearing` substituição define três xamarin. Forms `Animation` objetos para animar a `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campos em diferentes taxas. Observe que os períodos dessas animações são definidos como números primos & #x 2014; 5 segundos, 7 segundos e 11 segundos & #x 2014; para que a combinação geral somente se repete a cada 385 segundos ou mais de 10 minutos:
+O `OnAppearing` substituição define três xamarin. Forms `Animation` objetos para animar a `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campos em diferentes taxas. Observe que os períodos dessas animações são definidos como números primos &#x2014; 5 segundos, 7 segundos e 11 segundos &#x2014; para que a combinação geral somente se repete a cada 385 segundos ou mais de 10 minutos:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage

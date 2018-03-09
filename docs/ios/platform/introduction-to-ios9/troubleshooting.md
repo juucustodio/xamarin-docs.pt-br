@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ms.openlocfilehash: 6ea274ca198a4ca76a87198b02b6229e0e1c88b2
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/27/2018
 ---
@@ -42,7 +42,7 @@ No iOS 8 (e versões anteriores), elementos de interface do usuário em Storyboa
 
 Se o Storyboard mesmo em executar no iOS 9, resultará em uma exceção no seguinte formato:
 
-> Finalizando o aplicativo devido uma exceção não percebida 'NSInvalidArgumentException', motivo: ' * + [NSLayoutConstraint constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:]: uma restrição não pode ser feita entre à esquerda/à direita atributo e um atributo de direita ou esquerda. Use à esquerda/à direita para ambos ou nenhum.'
+> Finalizando o aplicativo devido uma exceção não percebida 'NSInvalidArgumentException', motivo: '*** + [NSLayoutConstraint constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:]: uma restrição não pode ser feita entre à esquerda/à direita atributo e um atributo de direita ou esquerda. Use à esquerda/à direita para ambos ou nenhum.'
 
 iOS 9 impõe layouts para usar um **direita** & **esquerda** _ou_ **esquerda**  &   **À direita** atributos mas *não* ambos. Para corrigir esse problema, altere todas as restrições de layout para usar o mesmo atributo definido em seu arquivo de Storyboard.
 
