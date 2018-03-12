@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 08/02/2017
 ms.openlocfilehash: 402b17ddbb28fb8896ad0f158fe8dbcd17689f40
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/27/2018
 ---
@@ -28,7 +28,7 @@ O artigo aborda a implementação e usando o [seletor](#picker) e [seletor de da
 
 ### <a name="implementing-a-picker"></a>Implementando um seletor
 
-Um seletor é implementado por criando um novo [ `UIPickerView` ](https://developer.xamarin.com/api/type/UIKit.UIPickerView/):
+Um seletor é implementado por criando um novo [`UIPickerView`](https://developer.xamarin.com/api/type/UIKit.UIPickerView/):
 
 ```csharp
 UIPickerView pickerView = new UIPickerView(

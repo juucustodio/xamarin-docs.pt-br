@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: 8ca187b86126c9a0f2d9931f63d75e99ac4d2b23
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/28/2018
 ---
@@ -136,7 +136,7 @@ Para alternar para o usando um .xib baseada em interface do usuário, faça o se
     [![Conectando o representante do aplicativo](xib-images/setup08.png "conectando o representante do aplicativo")](xib-images/setup08-large.png)
 16. Salvar as alterações e retornar ao Visual Studio para Mac.
 
-Com todas essas alterações em vigor, edite o **appdelegate. CS** de arquivo e torná-lo a aparência a seguir:
+Com todas essas alterações em vigor, edite o **AppDelegate.cs** de arquivo e torná-lo a aparência a seguir:
 
 ```csharp
 using AppKit;
@@ -453,7 +453,7 @@ Para adicionar uma nova janela, faça o seguinte:
     [![Criando o layout de windows](xib-images/new03.png "criando layout do windows")](xib-images/new03-large.png)
 6. Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
-Adicione o seguinte código para **appdelegate. CS** para exibir a nova janela:
+Adicione o seguinte código para **AppDelegate.cs** para exibir a nova janela:
 
 ```csharp
 [Export("applicationPreferences:")]
