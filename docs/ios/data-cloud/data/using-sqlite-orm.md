@@ -2,27 +2,29 @@
 title: Usando SQLite.NET
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
+ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2018
-ms.openlocfilehash: d18fe5960a44153626fbf0bda30e3485faf5b9fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2b29826f1a7acc6bb8dcd0594c69a5cb7ff6db42
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="using-sqlitenet"></a>Usando SQLite.NET
 
 A biblioteca de SQLite.NET Xamarin recomenda é um ORM básica que permite armazenar e recuperar objetos no banco de dados SQLite local em um dispositivo iOS.
 ORM significa mapeamento relacional objeto – uma API que permite que você salvar e recuperar "objetos" de um banco de dados sem escrever instruções SQL.
 
-## <a name="using-sqlitenet"></a>Usando SQLite.NET
+<a name="Usage"/>
+
+## <a name="usage"></a>Uso
 
 Adicionar o [SQLite.net PCL NuGet pacote](https://www.nuget.org/packages/sqlite-net-pcl/), ao seu projeto - ele dá suporte a uma variedade de plataformas, incluindo iOS, Android e Windows.
 
-  [ ![](using-sqlite-orm-images/image1a-sml.png "Pacote do SQLite.NET NuGet")](using-sqlite-orm-images/image1a.png)
+  [![](using-sqlite-orm-images/image1a-sml.png "Pacote do SQLite.NET NuGet")](using-sqlite-orm-images/image1a.png#lightbox)
 
 Uma vez que a biblioteca de SQLite.NET disponível, siga estas três etapas para usá-lo para acessar um banco de dados:
 
@@ -68,7 +70,7 @@ Você precisará incluir esses namespaces:
 using SQLite; // from the github SQLite.cs class
 ```
 
-Isso requer que você adicionou SQLite ao seu projeto, como destacado [aqui](#Using_SQLite.NET). Observe que a tabela de banco de dados SQLite é definida com a adição de atributos a uma classe (o `Stock` classe) em vez de um comando CREATE TABLE.
+Isso requer que você adicionou SQLite ao seu projeto, como destacado [aqui](#Usage). Observe que a tabela de banco de dados SQLite é definida com a adição de atributos a uma classe (o `Stock` classe) em vez de um comando CREATE TABLE.
 
 ```csharp
 [Table("Items")]

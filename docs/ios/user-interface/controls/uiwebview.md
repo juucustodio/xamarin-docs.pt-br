@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 83e01bba82713b55a0a69858c2a83aa243f71588
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 70703797792a2f667a2eb20cbc45d1736e5e6b9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-views"></a>Exibições da Web
 
@@ -40,7 +40,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 Isso gera o seguinte modo de exibição da web:
 
-[ ![](uiwebview-images/webview.png "O efeito de ScalesPagesToFit")](uiwebview-images/webview.png)
+[![](uiwebview-images/webview.png "O efeito de ScalesPagesToFit")](uiwebview-images/webview.png#lightbox)
 
 Para obter mais informações sobre como usar `UIWebView`, consulte as receitas a seguir:
 
@@ -68,7 +68,7 @@ O código a seguir pode ser usado para iniciar um `WKWebView` em seu aplicativo 
 
 Isso gera o seguinte modo de exibição da web:
 
-[ ![](uiwebview-images/wkwebview.png "Uma exibição da web de exemplo sem ScalesPagesToFit")](uiwebview-images/wkwebview.png)
+[![](uiwebview-images/wkwebview.png "Uma exibição da web de exemplo sem ScalesPagesToFit")](uiwebview-images/wkwebview.png#lightbox)
 
 É importante observar que `WKWebView` está no namespace WebKit, portanto você precisará adicionar isso usando a diretiva para a parte superior da sua classe.
 
@@ -98,7 +98,7 @@ PresentViewController(sfViewController, true, null);
 
 Isso gera o seguinte modo de exibição da web:
 
-[ ![](uiwebview-images/sfsafariviewcontroller.png "Uma exibição da web de exemplo com SFSafariViewController")](uiwebview-images/sfsafariviewcontroller.png)
+[![](uiwebview-images/sfsafariviewcontroller.png "Uma exibição da web de exemplo com SFSafariViewController")](uiwebview-images/sfsafariviewcontroller.png#lightbox)
 
 ## <a name="safari"></a>Safari
 
@@ -113,7 +113,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 Isso gera o seguinte modo de exibição da web:
 
-[ ![](uiwebview-images/safari.png "Uma página da web apresentadas no Safari")](uiwebview-images/safari.png)
+[![](uiwebview-images/safari.png "Uma página da web apresentadas no Safari")](uiwebview-images/safari.png#lightbox)
 
 Navegar os usuários de seu aplicativo para o Safari deve sempre ser normalmente evitado. A maioria dos usuários não esperam navegação fora de seu aplicativo, portanto, se você navegar para fora de seu aplicativo, os usuários podem nunca retorná-la, eliminando essencialmente contrato.
 

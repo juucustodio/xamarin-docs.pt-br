@@ -7,30 +7,22 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ea4489cd6f9839d5d32c97aa7ded41e4f15538a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eb8bae676a4b5c682cdb204c6d38ffc1112b483a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing"></a>Edição
 
 Recursos de edição de tabela são habilitados por substituir métodos em um `UITableViewSource` subclasse. O comportamento de edição mais simples é o gesto de passar para exclusão que pode ser implementado com um único método de substituição.
 Edição mais complexos (incluindo mover linhas) pode ser feito com a tabela no modo de edição.
 
-Este guia aborda o seguinte:
-
-- [Passe o dedo para excluir](#Swipe_to_Delete)
-- [Modo de edição](#Edit_Mode)
-- [Estilo de edição de inserção de linha](#row_insertion_editing_style)
-
-<a name="Swipe_to_delete" />
-
 ## <a name="swipe-to-delete"></a>Passe o dedo para exclusão
 
 O dedo para excluir o recurso é um gesto natural no iOS que os usuários esperam. 
 
- [ ![](editing-images/image10.png "Exemplo de passe o dedo para exclusão")](editing-images/image10.png)
+ [![](editing-images/image10.png "Exemplo de passe o dedo para exclusão")](editing-images/image10.png#lightbox)
 
 Há três substituições de método que afetam o gesto de passar para mostrar um **excluir** botão em uma célula:
 
@@ -68,14 +60,13 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 Para este exemplo de `UITableViewSource` foi atualizado para usar um `List<TableItem>` (em vez de uma matriz de cadeia de caracteres) como a fonte de dados porque ele dá suporte à adição e exclusão de itens da coleção.
 
-<a name="Edit_mode" />
 
 ## <a name="edit-mode"></a>Modo de edição
 
 Quando uma tabela está no modo de edição o usuário vê um widget vermelho de 'stop' em cada linha, que revela um botão de exclusão quando tocadas. A tabela também exibe um ícone de 'Identificador' para indicar que a linha pode ser arrastada para alterar a ordem.
 O **TableEditMode** exemplo implementa esses recursos, como mostrado.
 
- [ ![](editing-images/image11.png "O exemplo de TableEditMode implementa esses recursos, conforme mostrado")](editing-images/image11.png)
+ [![](editing-images/image11.png "O exemplo de TableEditMode implementa esses recursos, conforme mostrado")](editing-images/image11.png#lightbox)
 
 Existem vários métodos diferentes de `UITableViewSource` que afetam o comportamento do modo de edição de uma tabela:
 
@@ -136,13 +127,12 @@ e quando é concluído, o usuário de edição, o **feito** botão deve desativa
 table.SetEditing (false, true);
 ```
 
-<a name="Edit_mode_–_row_insertion_editing_style" />
 
 ## <a name="row-insertion-editing-style"></a>Estilo de edição de inserção de linha
 
 Inserção de linha de dentro da tabela é uma interface de usuário comum – o exemplo principal nos aplicativos do iOS padrão é o **Editar contato** tela. Esta captura de tela mostra como funciona a funcionalidade de inserção de linha – Editar modo não há mais linhas que (quando clicado) insere linhas adicionais nos dados. Quando a edição é concluída, temporárias **(Adicionar nova)** linha será removida.
 
- [ ![](editing-images/image12.png "Quando a edição estiver concluída, temporárias adicionar nova linha será removida")](editing-images/image12.png)
+ [![](editing-images/image12.png "Quando a edição estiver concluída, temporárias adicionar nova linha será removida")](editing-images/image12.png#lightbox)
 
 Existem vários métodos diferentes de `UITableViewSource` que afetam o comportamento do modo de edição de uma tabela. Esses métodos foram implementados como a seguir no código de exemplo:
 

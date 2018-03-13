@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 5a5072d7f07fa7e426a14d3ac841e775d872acff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cb87593b63e28c01beacdea479cc9d6ec4aceb9b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="validation"></a>Validação
 
@@ -19,7 +19,7 @@ Qualquer aplicativo que aceita a entrada de usuários deve garantir que a entrad
 
 No contexto do modelo do modelo-ViewModel (MVVM) padrão, um modelo de exibição ou modelo geralmente precisará executar a validação de dados e sinalizar erros de validação para o modo de exibição para que o usuário poderá corrigi-los. O aplicativo móvel eShopOnContainers executa a validação de cliente síncrona de propriedades do modelo de exibição e notifica o usuário de quaisquer erros de validação, realçando o controle que contém os dados inválidos e exibindo mensagens de erro que informam o usuário do motivo pelo qual os dados são inválidos. Figura 6-1 mostra as classes envolvidas ao executar a validação no aplicativo móvel do eShopOnContainers.
 
-[![](validation-images/validation.png "Classes de validação no aplicativo móvel eShopOnContainers")](validation-images/validation-large.png "classes de validação no aplicativo móvel eShopOnContainers")
+[![](validation-images/validation.png "Classes de validação no aplicativo móvel eShopOnContainers")](validation-images/validation-large.png#lightbox "classes de validação no aplicativo móvel eShopOnContainers")
 
 **Figura 6-1**: classes de validação no aplicativo móvel eShopOnContainers
 

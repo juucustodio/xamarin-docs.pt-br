@@ -3,16 +3,16 @@ title: Inicie a telas
 description: "Este artigo explica como criar um aplicativo da tela Iniciar para todos os dispositivos iOS, em qualquer resolução e orientação, usando um Storyboard de unificado único."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
+ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/19/2018
-ms.openlocfilehash: 48dc2e7a270c4e12c4e3dc9d1e2ce14fb0d41249
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 54ec41636f491708ea72585d3889fbbca85c8eb1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="launch-screens"></a>Inicie a telas
 
@@ -226,7 +226,7 @@ Para usar o novo Storyboard como uma tela inicial, faça o seguinte:
 
 - [Telas de inicialização dinâmica (exemplo)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
 - [Storyboards unificadas](~/ios/user-interface/storyboards/unified-storyboards.md)
-- [Noções básicas de Designer do iOS](~/ios/user-interface/designer/index.md)
+- [Noções básicas do Designer do iOS](~/ios/user-interface/designer/index.md)
 - [Adicionando imagens a uma imagem do catálogo de ativos definida](~/ios/app-fundamentals/images-icons/displaying-an-image.md#asset-catalogs)
 - [Layout automático com o Designer de Xamarin para iOS](~/ios/user-interface/designer/designer-auto-layout.md)
 - [Diretrizes de Interface Humana: Tela de inicialização](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)

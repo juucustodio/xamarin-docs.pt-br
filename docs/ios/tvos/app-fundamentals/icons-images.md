@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 670c990fb4f2e4d2a01ada83ea98e8e589b5c473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-icons-and-images"></a>Trabalhando com imagens e ícones
 
@@ -67,13 +67,13 @@ Para definir a imagem de inicialização para o seu projeto tvOS, faça o seguin
 
 1. No **Solution Explorer**, clique duas vezes em `Assets.xcassets` para abri-lo para edição: 
 
-    [ ![](icons-images-images/asset01.png "O arquivo Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "O arquivo Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. No **Editor ativo**, clique no `LaunchImages` ativo: 
 
-    [ ![](icons-images-images/asset02.png "O ativo LaunchImages")](icons-images-images/asset02.png)
+    [![](icons-images-images/asset02.png "O ativo LaunchImages")](icons-images-images/asset02.png#lightbox)
 3. Clique no **1 x Apple TV** entrada e selecione a imagem de inicialização ou, opcionalmente, arraste uma nova imagem do sistema de arquivos: 
 
-    [ ![](icons-images-images/asset03.png "Selecione uma imagem de inicialização")](icons-images-images/asset03.png)
+    [![](icons-images-images/asset03.png "Selecione uma imagem de inicialização")](icons-images-images/asset03.png#lightbox)
 4. Salve as alterações.
 
 <a name="Layered-Images" />
@@ -84,7 +84,7 @@ Novo para Apple TV, o trabalho de imagens em camadas com o efeito da Parallax pa
 
 Contém imagens em camadas de dois (2) a cinco (5) separar camadas que são combinadas para formar uma imagem completa. Com exceção da camada de plano de fundo, cada camada usa sua ordem Z junto com transparência para criar uma ilusão de profundidade. Quando o usuário interage com uma imagem em camadas, as camadas superiores ordenados Z são dimensionadas e sobrepostas para criar esse efeito.
 
-[ ![](icons-images-images/layered01.png "Diagrama de ordenados Z de imagens em camadas")](icons-images-images/layered01.png)
+[![](icons-images-images/layered01.png "Diagrama de ordenados Z de imagens em camadas")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > **Observação:** imagens em camadas são necessárias para os ícones do aplicativo e opcionais para outros [itens Focusable é](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (como a imagem de prateleira superior). No entanto, a Apple sugere usando imagens em camadas para qualquer imagem que pode receber o foco em seu aplicativo.
@@ -109,7 +109,7 @@ Sempre que possível, você sempre deve usar o interno `UIKit` controles para ex
 
 É importante lembrar-se de incluir um _zona de segurança_ borda em cada camada que será compõem sua imagem em camadas. Como camadas individuais podem ser dimensionadas e cortadas durante o efeito da Parallax, o conteúdo das camadas pode ser cortado se ele for muito próximos à borda da camada:
 
-[ ![](icons-images-images/layered02.png "borda de pixel 35")](icons-images-images/layered02.png)
+[![](icons-images-images/layered02.png "borda de pixel 35")](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images" />
 
@@ -128,7 +128,7 @@ tvOS funciona com imagens em camadas nos seguintes formatos:
 
 Apple criado o [da Parallax visualizador](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para visualização e imagens de em camadas criado necessários para os ícones de aplicativo e itens Focusable é opcional. O visualizador mostra todas as camadas que formam a imagem completa em camadas:
 
-[ ![](icons-images-images/layered03.png "O Visualizador da Parallax")](icons-images-images/layered03.png)
+[![](icons-images-images/layered03.png "O Visualizador da Parallax")](icons-images-images/layered03.png#lightbox)
 
 Enquanto visualiza uma imagem em camadas, você pode usar o mouse para girar a imagem e visualizar o efeito da Parallax. Use o  **+**  (mais) e  **-**  (botões para adicionar e remover camadas menos).
 
@@ -142,7 +142,7 @@ Para obter mais informações sobre como criar e visualizar imagens em camadas, 
 
 Seu aplicativo Xamarin.tvOS exigirá não só um ícone do aplicativo para a tela inicial para Apple TV, mas também um ícone para a loja de aplicativos. O ícone do aplicativo é o seu primeiro alterar para tornar uma boa impressão potenciais do usuário e deve se comunicar a finalidade do seu aplicativo em um relance.
 
-[ ![](icons-images-images/icon01.png "O ícone do aplicativo")](icons-images-images/icon01.png)
+[![](icons-images-images/icon01.png "O ícone do aplicativo")](icons-images-images/icon01.png#lightbox)
 
 Cada aplicativo deve fornecer uma pequena e uma versão grande do seu ícone de aplicativo. O ícone pequeno será usado na tela de início para Apple TV, quando o aplicativo é instalado. A versão grande é usada pela loja de aplicativos. O ícone de aplicativo grande deve simular a aparência da versão do ícone pequeno.
 
@@ -202,16 +202,16 @@ Para definir os ícones de aplicativo necessária para o seu projeto tvOS, faça
 
 1. No **Solution Explorer**, clique duas vezes em `Assets.xcassets` para abri-lo para edição: 
 
-    [ ![](icons-images-images/asset01.png "O fileg Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "O fileg Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. No **Editor ativo**, expanda o `App Icon & Top Shelf Image` ativo: 
 
-    [ ![](icons-images-images/asset04.png "Expanda o ativo de imagem de prateleira superior")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "Expanda o ativo de imagem de prateleira superior")](icons-images-images/asset04.png#lightbox)
 3. Em seguida, expanda o `App Icon - Small` ativo: 
 
-    [ ![](icons-images-images/asset05.png "Expanda o ícone do aplicativo - ativo pequeno")](icons-images-images/asset05.png)
+    [![](icons-images-images/asset05.png "Expanda o ícone do aplicativo - ativo pequeno")](icons-images-images/asset05.png#lightbox)
 4. Em seguida, expanda o `Back` ativo e clique no `Contents` entrada: 
 
-    [ ![](icons-images-images/asset06.png "Em seguida, expanda o ativo novamente")](icons-images-images/asset06.png)
+    [![](icons-images-images/asset06.png "Em seguida, expanda o ativo novamente")](icons-images-images/asset06.png#lightbox)
 5. Clique no **1 x entrada Apple TV** e selecione um arquivo de imagem.
 6. Repita as etapas acima para o `Front` e `Middle` ativos.
 7. Em seguida, repita as mesmas etapas para definir o `App Icon - Large` ativo.
@@ -223,7 +223,7 @@ Para definir os ícones de aplicativo necessária para o seu projeto tvOS, faça
 
 Se o usuário tiver inserido o seu aplicativo Xamarin.tvOS na linha superior na tela de início para Apple TV, uma imagem grande de prateleira superior será exibida quando seu aplicativo é selecionado pelo usuário. Essa imagem deve realçar os recursos do seu aplicativo ou forneça links diretos para o seu conteúdo.
 
-[ ![](icons-images-images/topshelf01.png "Exemplo de imagem prateleira superior")](icons-images-images/topshelf01.png)
+[![](icons-images-images/topshelf01.png "Exemplo de imagem prateleira superior")](icons-images-images/topshelf01.png#lightbox)
 
 A imagem de prateleira superior pode ser fornecida como um único static `.png` ou `.lsr` arquivo (consulte [criar imagens em camadas](#Creating-Layered-Images)) ou pode ser dinamicamente criado em tempo de execução como uma única linha de itens de controle (consulte [ Conteúdo dinâmico prateleira superior](#Dynamic-Top-Shelf-Content) abaixo).
 
@@ -253,13 +253,13 @@ Para definir a imagem de prateleira principais necessários para seu projeto tvO
 
 1. No **Solution Explorer**, clique duas vezes em `Assets.xcassets` para abri-lo para edição: 
 
-    [ ![](icons-images-images/asset01.png "O arquivo Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "O arquivo Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. No **Editor ativo**, expanda o `App Icon & Top Shelf Image` ativo: 
 
-    [ ![](icons-images-images/asset04.png "Expanda o ativo de imagem de prateleira superior")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "Expanda o ativo de imagem de prateleira superior")](icons-images-images/asset04.png#lightbox)
 3. Clique no `Top Shelf Image` ativo: 
 
-    [ ![](icons-images-images/asset07.png "O ativo de imagem de prateleira superior")](icons-images-images/asset07.png)
+    [![](icons-images-images/asset07.png "O ativo de imagem de prateleira superior")](icons-images-images/asset07.png#lightbox)
 5. Clique no **1 x entrada Apple TV** e selecione um arquivo de imagem.
 6. Salve as alterações.
 
@@ -423,10 +423,10 @@ Faça o seguinte:
 
 1. No **Solution Explorer**, clique duas vezes o `Info.plist` para abri-lo para edição: 
 
-    [ ![](icons-images-images/info01.png "O arquivo Info. plist")](icons-images-images/info01.png)
+    [![](icons-images-images/info01.png "O arquivo Info. plist")](icons-images-images/info01.png#lightbox)
 2. No **Info. plist Editor**, selecione o catálogo de ativos (configurado acima no [definindo os ícones de aplicativo](#Setting-the-App-Icons) seção) para o **ícones de aplicativo**: 
 
-    [ ![](icons-images-images/info02.png "O Editor de info. plist")](icons-images-images/info02.png)
+    [![](icons-images-images/info02.png "O Editor de info. plist")](icons-images-images/info02.png#lightbox)
 3. Em seguida, selecione o catálogo de ativos (configurado acima no [definindo a imagem de inicialização](#Setting-the-Launch-Image) seção) para o **imagens de inicialização**.
 4. Salve as alterações.
 
@@ -438,7 +438,7 @@ Este artigo abordou todos os tipos de imagem e tamanhos usados em um aplicativo 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

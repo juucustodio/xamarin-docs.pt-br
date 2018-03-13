@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d4446d30491ee796ca93eadf2e107fc9d74748df
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e7f2ad9e94d68007b1b7d0cca212cd51515a0108
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-positioning"></a>Posicionamento de vídeo personalizado
 
@@ -472,7 +472,7 @@ Portanto, o `Position` propriedade do `VideoPlayer` podem ser associados ao `Pos
 
 No primeiro botão de reticências (...) oculta o `ActivityIndicator`; é igual ao anterior **transporte personalizadas** página. Observe os dois `Label` elementos exibindo o `Position` e `TimeToEnd` propriedades. No botão de reticências entre esses dois `Label` elementos oculta os dois `Button` elementos mostrados na **transporte personalizadas** página para executar, pausar e parar. A lógica por trás do código também é o mesmo que o **transporte personalizadas** página.
 
-[![Posicionamento personalizado](custom-positioning-images/custompositioning-small.png "posicionamento personalizado")](custom-positioning-images/custompositioning-large.png "posicionamento personalizado")
+[![Posicionamento personalizado](custom-positioning-images/custompositioning-small.png "posicionamento personalizado")](custom-positioning-images/custompositioning-large.png#lightbox "posicionamento personalizado")
 
 Isso conclui a discussão sobre o `VideoPlayer`.
 

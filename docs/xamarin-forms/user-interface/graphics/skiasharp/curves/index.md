@@ -4,14 +4,15 @@ description: Saiba como usar SkiaSharp desenhar curvas e usar recursos de caminh
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 0e3a9d0e4bedb2e4321c3c846eddeee8b36cb3e4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9daea43ea09f7acaa2f3cd1300785391f69c4746
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="skiasharp-curves-and-paths"></a>Caminhos e SkiaSharp curvas
 
@@ -21,7 +22,7 @@ A exploração de [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.
 
 Todos os programas de exemplo nesta seção aparecem sob o título **curvas e caminhos mais** na home page do [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa e o [ **Curvas** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) pasta da solução.
 
-## <a name="three-ways-to-draw-an-arcarcsmd"></a>[Três maneiras para desenhar um arco](arcs.md)
+## <a name="three-ways-to-draw-an-arcarcsmd"></a>[Três formas de desenhar um arco](arcs.md)
 
 Saiba como usar SkiaSharp para definir arcos de três maneiras diferentes.
 
@@ -33,7 +34,7 @@ Explorar como usar SkiaSharp para renderizar cúbicas, quadráticas e conic curv
 
 Definir caminhos usando cadeias de caracteres de texto no formato de gráficos vetoriais escalonáveis
 
-## <a name="clipping-with-paths-and-regionsclippingmd"></a>[Com regiões e caminhos de recorte](clipping.md)
+## <a name="clipping-with-paths-and-regionsclippingmd"></a>[Recorte com caminhos de regiões](clipping.md)
 
 Use caminhos para gráficos de clipe para áreas específicas e para criar as regiões.
 

@@ -1,5 +1,5 @@
 ---
-title: fragmentos
+title: Fragmentos
 description: "Android 3.0 apresentou fragmentos, mostrando como dar suporte a projetos mais flexíveis para os vários tamanhos de tela diferentes encontrados em telefones e tablets. Este artigo aborda como usar fragmentos para desenvolver aplicativos xamarin e também como dar suporte a fragmentos em previamente Android dispositivos (API nível 11) 3.0."
 ms.topic: article
 ms.prod: xamarin
@@ -8,13 +8,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 0486b9e4371a1bcab02921da42bcb929f00a782f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="fragments"></a>fragmentos
+# <a name="fragments"></a>Fragmentos
 
 _Android 3.0 apresentou fragmentos, mostrando como dar suporte a projetos mais flexíveis para os vários tamanhos de tela diferentes encontrados em telefones e tablets. Este artigo aborda como usar fragmentos para desenvolver aplicativos xamarin e também como dar suporte a fragmentos em previamente Android dispositivos (API nível 11) 3.0._
 
@@ -28,13 +28,13 @@ Pacotes de suporte foram originalmente chamados *compatibilidade bibliotecas* e 
 
 Por exemplo, a imagem a seguir ilustra como um único aplicativo usa os fragmentos em diferentes fatores forma de dispositivo.
 
-[![Diagrama de como os fragmentos são usados em Tablets e telefones](images/00.png)](images/00.png)
+[![Diagrama de como os fragmentos são usados em Tablets e telefones](images/00.png)](images/00.png#lightbox)
 
 *Um fragmento de* contém uma lista, enquanto *fragmento B* contém detalhes de um item selecionado na lista. Quando o aplicativo é executado em um tablet, ele pode exibir ambos os fragmentos na mesma atividade. Quando o mesmo aplicativo é executado em um telefone (com o menor tamanho da tela), os fragmentos são hospedados em duas atividades separadas. Fragmento A e B de fragmento são os mesmos em ambos os formatos, mas as atividades que os hospedam são diferentes.
 
 Para ajudar a uma atividade coordenar e gerenciar todos esses fragmentos, o Android introduziu uma nova classe chamada a *FragmentManager*. Cada atividade tem sua própria instância de um `FragmentManager` para adicionar, excluir e Localizando hospedados fragmentos. O diagrama a seguir ilustra o relacionamento entre fragmentos e atividades:
 
-[![Diagrama de ilustrar relações entre fragmentos, Gerenciador de fragmento e atividade](images/01.png)](images/01.png)
+[![Diagrama de ilustrar relações entre fragmentos, Gerenciador de fragmento e atividade](images/01.png)](images/01.png#lightbox)
 
 Em alguns aspectos, fragmentos podem ser pensados como controles compostos ou mini atividades. Eles reunir partes da interface do usuário em módulos reutilizáveis que podem ser usados independentemente por desenvolvedores nas atividades. Um fragmento tem uma hierarquia de exibição — como uma atividade — mas, ao contrário de uma atividade, ele pode ser compartilhado entre telas. Modos de exibição são diferentes de fragmentos de fragmentos têm seu próprios ciclo de vida; modos de exibição, não.
 
@@ -51,11 +51,11 @@ Este guia contém uma cobertura abrangente sobre como usar os fragmentos, inclui
 
 Fragmentos estão disponíveis no SDK do Android, começando com o nível de API 11 (3.0 Android), conforme mostrado na seguinte captura de tela:
 
-[![Selecionando o nível de API no Gerenciador de SDK do Android](images/02.png)](images/02.png)
+[![Selecionando o nível de API no Gerenciador de SDK do Android](images/02.png)](images/02.png#lightbox)
 
 Fragmentos estão disponíveis no xamarin 4.0 e superior. Um aplicativo xamarin deve ter como destino pelo menos o nível de API 11 (3.0 Android) ou superior para usar fragmentos. A estrutura de destino pode ser definida nas opções de projeto, conforme mostrado abaixo:
 
-[![Definir o nível de API da estrutura de destino nas opções de projeto](images/03.png)](images/03.png)
+[![Definir o nível de API da estrutura de destino nas opções de projeto](images/03.png)](images/03.png#lightbox)
 
 É possível usar os fragmentos em versões mais antigas do Android usando o pacote de suporte Android e xamarin 4.2 ou posterior. Como fazer isso é abordado mais detalhadamente nos documentos desta seção.
 
@@ -63,6 +63,6 @@ Fragmentos estão disponíveis no xamarin 4.0 e superior. Um aplicativo xamarin 
 ## <a name="related-links"></a>Links relacionados
 
 - [Galeria de Honeycomb (exemplo)](https://developer.xamarin.com/samples/monodroid/HoneycombGallery)
-- [fragmentos](http://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [Fragmentos](http://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Pacote de suporte](http://developer.android.com/sdk/compatibility-library.html)
 - [Webinar MOTODEV: Apresentando fragmentos](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

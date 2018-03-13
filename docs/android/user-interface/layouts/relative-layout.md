@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 4d7129ed8645eda5d2bed2d5b22ffb3cd979c280
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c7de56038d5f59c6cff89b87f48535c3e757bb91
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
@@ -75,9 +75,8 @@ O [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App
 
 Execute o aplicativo. Você deve ver o layout do seguinte:
 
-[![Captura de tela de um layout relativo com um TextView EditText e dois botões](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png)
+[![Captura de tela de um layout relativo com um TextView EditText e dois botões](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
 
-<a name="Resources" />
 
 ## <a name="resources"></a>Recursos
 

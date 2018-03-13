@@ -3,16 +3,16 @@ title: "Modos de exibição de estrutura de tópicos"
 description: "Este artigo aborda a trabalhar com modos de exibição de estrutura de tópicos em um aplicativo Xamarin.Mac. Ele descreve a criar e manter modos de exibição de estrutura de tópicos no Xcode e o construtor de Interface e trabalhar com eles por meio de programação."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a125c2991c9b8c2453fad396c1d0baebe10be015
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: dbbd10af046c0a8421e06e675364f92405b2317f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="outline-views"></a>Modos de exibição de estrutura de tópicos
 
@@ -22,7 +22,7 @@ Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, você tem acesso à 
 
 Uma exibição de estrutura de tópicos é um tipo de tabela que permite que o usuário expandir ou recolher linhas de dados hierárquicos. Como um modo de exibição de tabela, um modo de exibição de estrutura de tópicos exibe dados de um conjunto de itens relacionados, com linhas que representam itens individuais e colunas que representam os atributos desses itens. Ao contrário de um modo de exibição de tabela, itens em uma exibição de estrutura de tópicos não estão em uma lista simples, eles são organizados em uma hierarquia, como arquivos e pastas em um disco rígido.
 
-[ ![](outline-view-images/populate03.png "Executar um aplicativo de exemplo")](outline-view-images/populate03.png)
+[![](outline-view-images/populate03.png "Executar um aplicativo de exemplo")](outline-view-images/populate03.png#lightbox)
 
 Neste artigo, vamos abordar os fundamentos de trabalhar com modos de exibição de estrutura de tópicos em um aplicativo Xamarin.Mac. É altamente recomendável que você leia o [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, especificamente o [Introdução ao construtor da Interface e Xcode](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [tomadas e ações](~/mac/get-started/hello-mac.md#Outlets_and_Actions) seções, como ele aborda os principais conceitos e técnicas que será usado neste artigo.
 
@@ -50,23 +50,23 @@ Como uma exibição de estrutura de tópicos compartilha grande parte da funcion
 
 Quando você cria um novo aplicativo de Xamarin.Mac Cocoa, obtém uma janela em branco, padrão por padrão. Esse windows é definido em um `.storyboard` arquivo incluído automaticamente no projeto. Para editar o design do windows, o **Gerenciador de soluções**, clique duas vezes o `Main.storyboard` arquivo:
 
-[ ![](outline-view-images/edit01.png "Selecionando o storyboard principal")](outline-view-images/edit01.png)
+[![](outline-view-images/edit01.png "Selecionando o storyboard principal")](outline-view-images/edit01.png#lightbox)
 
 Isso abrirá o design de janela no construtor de Interface do Xcode:
 
-[ ![](outline-view-images/edit02.png "Editando a interface do usuário no Xcode")](outline-view-images/edit02.png)
+[![](outline-view-images/edit02.png "Editando a interface do usuário no Xcode")](outline-view-images/edit02.png#lightbox)
 
 Tipo `outline` para o **Inspetor de biblioteca** caixa de pesquisa para tornar mais fácil localizar os controles de exibição de estrutura de tópicos:
 
-[ ![](outline-view-images/edit03.png "Selecionar um modo de exibição de estrutura de tópicos da biblioteca")](outline-view-images/edit03.png)
+[![](outline-view-images/edit03.png "Selecionar um modo de exibição de estrutura de tópicos da biblioteca")](outline-view-images/edit03.png#lightbox)
 
 Arraste um modo de exibição de estrutura de tópicos para o controlador de exibição no **Editor de Interface**, torná-lo a preencher a área de conteúdo do controlador de exibição e defina-o para onde ele for reduzido e cresce com a janela no **Editor de restrição de**:
 
-[ ![](outline-view-images/edit04.png "As restrições de edição")](outline-view-images/edit04.png)
+[![](outline-view-images/edit04.png "As restrições de edição")](outline-view-images/edit04.png#lightbox)
 
 Selecione o modo de exibição de estrutura de tópicos no **hierarquia Interface** e as propriedades a seguir estão disponíveis no **Inspetor de atributo**:
 
-[ ![](outline-view-images/edit05.png "O Inspetor de atributo")](outline-view-images/edit05.png)
+[![](outline-view-images/edit05.png "O Inspetor de atributo")](outline-view-images/edit05.png#lightbox)
 
 - **Coluna de estrutura de tópicos** -a coluna da tabela na qual os dados hierárquicos são exibidos.
 - **Coluna de estrutura de tópicos de salvamento automático** - se `true`, a coluna de estrutura de tópicos será automaticamente salvo e restaurada entre o aplicativo é executado.
@@ -101,7 +101,7 @@ Selecione o modo de exibição de estrutura de tópicos no **hierarquia Interfac
 
 Selecione uma coluna da tabela de **hierarquia de Interface** e as propriedades a seguir estão disponíveis no **Inspetor de atributo**:
 
-[ ![](outline-view-images/edit06.png "O Inspetor de atributo")](outline-view-images/edit06.png)
+[![](outline-view-images/edit06.png "O Inspetor de atributo")](outline-view-images/edit06.png#lightbox)
 
 - **Título** -define o título da coluna.
 - **Alinhamento** -definir o alinhamento do texto dentro das células.
@@ -119,19 +119,19 @@ Vamos selecionar a cada coluna em nossa tabela de exibição e dê a primeira co
 
 Selecione um modo de exibição de célula de tabela (`NSTableViewCell`) no **hierarquia Interface** e as propriedades a seguir estão disponíveis no **Inspetor de atributo**:
 
-[ ![](outline-view-images/edit07.png "O Inspetor de atributo")](outline-view-images/edit07.png)
+[![](outline-view-images/edit07.png "O Inspetor de atributo")](outline-view-images/edit07.png#lightbox)
 
 Essas são todas as propriedades de uma exibição padrão. Você também tem a opção de redimensionamento de linhas para essa coluna aqui.
 
 Selecione uma célula de exibição de tabela (por padrão, esse é um `NSTextField`) no **hierarquia de Interface** e as propriedades a seguir estão disponíveis no **Inspetor de atributo**:
 
-[ ![](outline-view-images/edit08.png "O Inspetor de atributo")](outline-view-images/edit08.png)
+[![](outline-view-images/edit08.png "O Inspetor de atributo")](outline-view-images/edit08.png#lightbox)
 
 Você terá todas as propriedades de um campo de texto padrão para definir aqui. Por padrão, um campo de texto padrão é usado para exibir dados de uma célula em uma coluna.
 
 Selecione um modo de exibição de célula de tabela (`NSTableFieldCell`) no **hierarquia Interface** e as propriedades a seguir estão disponíveis no **Inspetor de atributo**:
 
-[ ![](outline-view-images/edit09.png "O Inspetor de atributo")](outline-view-images/edit09.png)
+[![](outline-view-images/edit09.png "O Inspetor de atributo")](outline-view-images/edit09.png#lightbox)
 
 As configurações mais importantes são:
 
@@ -145,7 +145,7 @@ As configurações mais importantes são:
 
 Selecione o modo de exibição de célula de tabela (`NSTableFieldCell`) na parte inferior de uma coluna da tabela de **hierarquia Interface**:
 
-[ ![](outline-view-images/edit11.png "Selecionar a exibição de célula de tabela")](outline-view-images/edit10.png)
+[![](outline-view-images/edit11.png "Selecionar a exibição de célula de tabela")](outline-view-images/edit10.png#lightbox)
 
 Isso permite que você edite a exibição de célula de tabela usada como a base de _padrão_ para todas as células criadas para a coluna especificada.
 
@@ -159,14 +159,14 @@ O processo é o mesmo para qualquer elemento de estrutura de tópicos que você 
 
 1. Alterne para o **Assistente Editor** e certifique-se de que o `ViewController.h` arquivo está selecionado: 
 
-    [ ![](outline-view-images/edit11.png "Selecionando o arquivo correto. h")](outline-view-images/edit11.png)
+    [![](outline-view-images/edit11.png "Selecionando o arquivo correto. h")](outline-view-images/edit11.png#lightbox)
 2. Selecione o modo de exibição de estrutura de tópicos do **hierarquia Interface**, control, clique e arraste para o `ViewController.h` arquivo.
 3. Criar um **tomada** para o modo de exibição de estrutura de tópicos chamada `ProductOutline`: 
 
-    [ ![](outline-view-images/edit13.png "Configurando uma tomada")](outline-view-images/edit13.png)
+    [![](outline-view-images/edit13.png "Configurando uma tomada")](outline-view-images/edit13.png#lightbox)
 4. Criar **tomadas** para as colunas de tabelas também chamado `ProductColumn` e `DetailsColumn`: 
 
-    [ ![](outline-view-images/edit14.png "Configurando uma tomada")](outline-view-images/edit14.png)
+    [![](outline-view-images/edit14.png "Configurando uma tomada")](outline-view-images/edit14.png#lightbox)
 5. Salve a você as alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
 Em seguida, vamos escrever a exibição de código alguns dados para a estrutura de tópicos quando o aplicativo é executado.
@@ -179,7 +179,7 @@ Com nosso modo de exibição de estrutura de tópicos criados no construtor de I
 
 Primeiro, vamos criar um novo `Product` classe para armazenar as informações para as linhas e grupos de produtos sub. No **Solution Explorer**, clique com o botão direito e selecione **adicionar** > **novo arquivo...** Selecione **geral** > **classe vazia**, digite `Product` para o **nome** e clique no **novo** botão:
 
-[ ![](outline-view-images/populate01.png "Criando uma classe vazia")](outline-view-images/populate01.png)
+[![](outline-view-images/populate01.png "Criando uma classe vazia")](outline-view-images/populate01.png#lightbox)
 
 Verifique o `Product.cs` arquivo aparência semelhante ao seguinte:
 
@@ -390,11 +390,11 @@ public override void AwakeFromNib ()
 
 Se o aplicativo é executado, é exibido o seguinte:
 
-[ ![](outline-view-images/populate02.png "O modo de exibição recolhido")](outline-view-images/populate02.png)
+[![](outline-view-images/populate02.png "O modo de exibição recolhido")](outline-view-images/populate02.png#lightbox)
 
 Se, expanda um nó no modo de exibição de estrutura de tópicos, ele se parecerá com o seguinte:
 
-[ ![](outline-view-images/populate03.png "O modo de exibição expandido")](outline-view-images/populate03.png)
+[![](outline-view-images/populate03.png "O modo de exibição expandido")](outline-view-images/populate03.png#lightbox)
 
 <a name="Sorting_by_Column" />
 
@@ -402,7 +402,7 @@ Se, expanda um nó no modo de exibição de estrutura de tópicos, ele se parece
 
 Vamos permitir que o usuário classificar os dados na estrutura de tópicos clicando em um cabeçalho de coluna. Primeiro, clique duas vezes o `Main.storyboard` arquivo para abri-lo para edição no construtor de Interface. Selecione o `Product` coluna, digite `Title` para o **chave de classificação**, `compare:` para o **seletor** e selecione `Ascending` para o **ordem**:
 
-[ ![](outline-view-images/sort01.png "Definindo a ordem de chave de classificação")](outline-view-images/sort01.png)
+[![](outline-view-images/sort01.png "Definindo a ordem de chave de classificação")](outline-view-images/sort01.png#lightbox)
 
 Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
@@ -435,7 +435,7 @@ O `Sort` método nos permitem classificar os dados na fonte de dados com base em
 
 Se executar o aplicativo e clique nos cabeçalhos de coluna, as linhas serão classificadas por essa coluna:
 
-[ ![](outline-view-images/sort02.png "Exemplo de saída classificada")](outline-view-images/sort02.png)
+[![](outline-view-images/sort02.png "Exemplo de saída classificada")](outline-view-images/sort02.png#lightbox)
 
 <a name="Row_Selection" />
 
@@ -443,7 +443,7 @@ Se executar o aplicativo e clique nos cabeçalhos de coluna, as linhas serão cl
 
 Se você deseja permitir que o usuário selecione uma única linha, clique duas vezes o `Main.storyboard` arquivo para abri-lo para edição no construtor de Interface. Selecione o modo de exibição de estrutura de tópicos no **hierarquia Interface** e desmarque o **vários** caixa de seleção no **Inspetor de atributo**:
 
-[ ![](outline-view-images/select01.png "O Inspetor de atributo")](outline-view-images/select01.png)
+[![](outline-view-images/select01.png "O Inspetor de atributo")](outline-view-images/select01.png#lightbox)
 
 Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
@@ -466,7 +466,7 @@ Isso permitirá que o usuário selecione qualquer linha única na exibição de 
 
 Se você deseja permitir que o usuário selecionar um várias linhas, clique duas vezes o `Main.storyboard` arquivo para abri-lo para edição no construtor de Interface. Selecione o modo de exibição de estrutura de tópicos no **hierarquia Interface** e verifique o **vários** caixa de seleção no **Inspetor de atributo**:
 
-[ ![](outline-view-images/select02.png "O Inspetor de atributo")](outline-view-images/select02.png)
+[![](outline-view-images/select02.png "O Inspetor de atributo")](outline-view-images/select02.png#lightbox)
 
 Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
@@ -489,7 +489,7 @@ Isso permitirá que o usuário selecione qualquer linha única na exibição de 
 
 Se você deseja permitir que o usuário digita um caractere com o modo de exibição de estrutura de tópicos selecionado e selecione a primeira linha com esse caractere, clique duas vezes o `Main.storyboard` arquivo para abri-lo para edição no construtor de Interface. Selecione a exibição de estrutura de tópicos no **hierarquia Interface** e verifique o **Selecionar tipo** caixa de seleção no **Inspetor de atributo**:
 
-[ ![](outline-view-images/type01.png "O tipo de linha de edição")](outline-view-images/type01.png)
+[![](outline-view-images/type01.png "O tipo de linha de edição")](outline-view-images/type01.png#lightbox)
 
 Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
@@ -517,7 +517,7 @@ O `GetNextTypeSelectMatch` leva a determinado `searchString` e retorna o item do
 
 Se você quiser permitir que o usuário arrasta reordenar colunas na exibição de estrutura de tópicos, clique duas vezes o `Main.storyboard` arquivo para abri-lo para edição no construtor de Interface. Selecione o modo de exibição de estrutura de tópicos no **hierarquia Interface** e verifique o **reordenação** caixa de seleção no **Inspetor de atributo**:
 
-[ ![](outline-view-images/reorder01.png "O Inspetor de atributo")](outline-view-images/reorder01.png)
+[![](outline-view-images/reorder01.png "O Inspetor de atributo")](outline-view-images/reorder01.png#lightbox)
 
 Se podemos fornecer um valor para o **salvamento automático** propriedade e verifique se o **informações de coluna** campo, quaisquer alterações que podemos fazer layout da tabela serão salvas automaticamente para nós e restaurados na próxima vez que o aplicativo é executado.
 
@@ -536,7 +536,7 @@ O `ShouldReorder` método deve retornar `true` para qualquer coluna que deseja q
 
 Se o aplicativo é executado, é possível arrastar os cabeçalhos de coluna em torno reordenar nossas colunas:
 
-[ ![](outline-view-images/reorder02.png "Exemplo de reordenação de colunas")](outline-view-images/reorder02.png)
+[![](outline-view-images/reorder02.png "Exemplo de reordenação de colunas")](outline-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells" />
 
@@ -598,7 +598,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 Agora se o aplicativo é executado, o usuário pode editar as células no modo de exibição de tabela:
 
-[ ![](outline-view-images/editing01.png "Um exemplo de edição de células")](outline-view-images/editing01.png)
+[![](outline-view-images/editing01.png "Um exemplo de edição de células")](outline-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Outline_Views" />
 
@@ -689,12 +689,12 @@ Este artigo obteve uma visão detalhada de como trabalhar com os modos de exibi�
 ## <a name="related-links"></a>Links relacionados
 
 - [MacOutlines (exemplo)](https://developer.xamarin.com/samples/mac/MacOutlines/)
-- [MacImages (exemplo)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages (amostra)](https://developer.xamarin.com/samples/mac/MacImages/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Modos de exibição de tabela](~/mac/user-interface/table-view.md)
 - [Listas de origem](~/mac/user-interface/source-list.md)
 - [Associação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
-- [Diretrizes de Interface do sistema operacional X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introdução aos modos de exibição de estrutura de tópicos](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)

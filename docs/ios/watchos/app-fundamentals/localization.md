@@ -7,11 +7,11 @@ ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4dde338a7c289f228f877fa4d968d156a941ba16
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-localization"></a>Trabalhando com localização
 
@@ -67,7 +67,7 @@ O projeto de aplicativo de inspeção tem esta aparência após essas alteraçõ
 
 Quando você edita o storyboard, selecione cada elemento e observe o **identificação da localização** que aparece no **propriedades** teclado:
 
-  [ ![](localization-images/storyboard-sml.png "A ID de localização que aparece no painel de propriedades")](localization-images/storyboard.png)
+  [![](localization-images/storyboard-sml.png "A ID de localização que aparece no painel de propriedades")](localization-images/storyboard.png#lightbox)
 
 No **Base.lproj** pasta, criar pares chave-valor, conforme mostrado abaixo, onde a chave é formada pelo **identificação da localização** e um nome de propriedade do controle, unidas por um ponto (`.`).
 

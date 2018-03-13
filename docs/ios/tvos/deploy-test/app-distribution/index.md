@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c0cfe437b03a1f0dea05a506b1dfce62a4658bb4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e96e98f90c7f4c849a9f679b2de819ccaabfec0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-distribution-overview"></a>Visão geral da distribuição de aplicativos
 
@@ -22,7 +22,7 @@ _Este documento fornece uma visão geral das técnicas de distribuição que est
 Depois que seu aplicativo Xamarin.tvOS foi desenvolvido, é a próxima etapa no ciclo de vida de desenvolvimento de software distribuir seu aplicativo para usuários, conforme mostrado na seção realçada o diagrama a seguir:
 
 
-[![A visão geral do ciclo de vida de desenvolvimento de software](images/publishingdiagram.png)](images/publishingdiagram.png)
+[![A visão geral do ciclo de vida de desenvolvimento de software](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
 
 Apple fornece as seguintes maneiras para distribuir um aplicativo tvOS, que são suportados pelo Xamarin.tvOS:
@@ -70,7 +70,7 @@ Para obter mais informações, visite o [de publicação para a loja de aplicati
 
 Para obter mais informações sobre a obtenção de configuração e como distribuir seu aplicativo internamente, consulte o [guia distribuição internamente](~/ios/deploy-test/app-distribution/in-house-distribution.md). Este documento é específico do iOS, mas as mesmas técnicas são usadas para tvOS aplicativos.
 
-<a name="Ad-Hoc-Distribution" />
+<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Distribuição Ad Hoc
 
@@ -88,7 +88,7 @@ Este artigo forneceu uma visão geral dos mecanismos de distribuição que estã
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

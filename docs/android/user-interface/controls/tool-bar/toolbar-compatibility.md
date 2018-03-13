@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: d4d6e93bf3a755d9b48c9e096de87b4c89f2831f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a17ad79d3f3b537332494fc368c878f2733d5db2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbar-compatibility"></a>Compatibilidade de barra de ferramentas
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -36,7 +35,6 @@ Para modificar um aplicativo para usar a versão de AppCompat da barra de ferram
 Cada uma dessas etapas é explicada em detalhes nas seções a seguir.
 
 
-<a name="android_version" />
 
 ## <a name="set-the-minimum-and-target-android-version"></a>Definir o mínimo e a versão destino do Android
 
@@ -44,23 +42,20 @@ Estrutura de destino do aplicativo deve ser definida como 21 de nível de API ou
 
 Defina a estrutura de destino a 21 de nível de API ou maior e definir as configurações de nível de projeto de API do Android para a versão do Android mínimo que o aplicativo deve dar suporte. Para obter mais informações sobre como definir níveis de API do Android, consulte [Noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md). No `ToolbarFun` exemplo, a versão do Android mínimo é definida como KitKat (API nível 4.4). 
 
-<a name="install_nuget" />
 
 ## <a name="install-the-appcompat-nuget-package"></a>Instale o pacote NuGet de AppCompat
 
 Em seguida, adicione o [biblioteca de suporte Android v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacote ao projeto. No Visual Studio, clique com botão direito **referências** e selecione **gerenciar pacotes NuGet...** . Clique em **procurar** e procure **biblioteca de suporte Android v7 AppCompat**. Selecione **Xamarin.Android.Support.v7.AppCompat** e clique em **instalar**: 
 
-[![Captura de tela de Appcompat V7 pacote selecionado em Gerenciar pacotes do NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png)
+[![Captura de tela de Appcompat V7 pacote selecionado em Gerenciar pacotes do NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
 Quando este NuGet é instalado, vários outros pacotes do NuGet também são instalados se não estiver presente (como **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, e **Xamarin.Android.Support.Vector.Drawable**). Para obter mais informações sobre como instalar pacotes do NuGet, consulte [passo a passo: incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
-<a name="appcompat_theme" />
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Usar um tema de AppCompat e a barra de ferramentas
 
 A biblioteca de AppCompat vem com vários `Theme.AppCompat` temas que podem ser usados em qualquer versão do Android com suporte pela biblioteca de AppCompat. O `ToolbarFun` tema do aplicativo de exemplo é derivado de `Theme.Material.Light.DarkActionBar`, que não está disponível no Android versões anteriores de pirulito. Portanto, `ToolbarFun` devem ser adaptados para usar a contraparte de AppCompat para este tema `Theme.AppCompat.Light.DarkActionBar`. Além disso, porque `Toolbar` é não está disponível em versões do Android anteriores pirulito, podemos deve usar a versão de AppCompat do `Toolbar`. Portanto, devem usar os layouts `android.support.v7.widget.Toolbar` em vez de `Toolbar`. 
 
-<a name="update_layouts" />
 
 ### <a name="update-layouts"></a>Layouts de atualização
 
@@ -91,7 +86,6 @@ Editar **Resources/layout/toolbar.xml** e substitua o seu conteúdo com o seguin
 
 Observe que o `?attr` valores não são prefixados com `android:` (Lembre-se de que o `?` notação faz referência a um recurso no tema atual). Se `?android:attr` ainda foram usados aqui, Android deve referenciar o valor do atributo da plataforma em execução no momento, em vez da biblioteca de AppCompat. Como este exemplo usa o `actionBarSize` definido pela biblioteca AppCompat, o `android:` prefixo é descartado. Da mesma forma, `@android:style` é alterado para `@style` para que o `android:theme` atributo é definido como um tema na biblioteca de AppCompat &ndash; o `ThemeOverlay.AppCompat.Dark.ActionBar` tema é usado aqui, em vez de `ThemeOverlay.Material.Dark.ActionBar`. 
 
-<a name="update_style" />
 
 ### <a name="update-the-style"></a>O estilo de atualização
 
@@ -113,7 +107,6 @@ Editar **Resources/values/styles.xml** e substitua o seu conteúdo com o seguint
 Os nomes de item e o tema do pai neste exemplo não são prefixados com `android:` porque estamos usando a biblioteca de AppCompat. Além disso, o tema do pai for alterado para a versão de AppCompat do `Light.DarkActionBar`. 
 
 
-<a name="update_menus" />
 
 ### <a name="update-menus"></a>Menus de atualização
 
@@ -180,7 +173,6 @@ Da mesma forma, editar **Resources/menu/edit_menus.xml** e substitua o seu conte
 
 Como essa opção namespace fornecem suporte para o `showAsAction` atributo no Android versões antes de 11 de nível de API? O atributo personalizado `showAsAction` e todos os seus valores possíveis são incluídos no aplicativo quando o AppCompat NuGet está instalado. 
 
-<a name="subclass" />
 
 ## <a name="subclass-appcompatactivity"></a>Subclasse AppCompatActivity
 
@@ -208,7 +200,7 @@ Por fim, altere o nível mínimo Android para o valor de pré-pirulito com supor
 
 Compile o aplicativo e executá-lo em um dispositivo de pirulito pré ou o emulador Android. Captura de tela a seguir mostra a versão de AppCompat do **ToolbarFun** em 4 Nexus executando KitKat (API 19): 
 
-[![Captura de tela inteira do aplicativo em execução em um dispositivo KitKat, ambas as barras de ferramentas são mostradas](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png)
+[![Captura de tela inteira do aplicativo em execução em um dispositivo KitKat, ambas as barras de ferramentas são mostradas](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png#lightbox)
 
 Quando a biblioteca de AppCompat é usada, temas não precisam ser alternado com base na versão do Android &ndash; a biblioteca de AppCompat torna possível fornecer uma experiência de usuário consistente em todas as versões com suporte do Android. 
 

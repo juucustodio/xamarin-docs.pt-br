@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 67bd1caf26c441e2a89def41ce3189b0dd67d7b1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc41c70495e40235d7acffa56c1255bfd074ca0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="advanced-manual-real-world-example"></a>Avançado (manual) exemplo do mundo Real
 
@@ -130,7 +130,7 @@ Você encontrará o `-scope` argumento geralmente é opcional para bibliotecas i
 
 Além disso, especificamos `-c -Ibuild/headers`. Em primeiro lugar, o `-c` argumento informa Sharpie objetivo para parar a interpretar os argumentos de linha de comando e passar argumentos subsequentes _diretamente para o compilador clang_. Portanto, `-Ibuild/Headers` inclui um argumento de compilador clang que instrui o clang para pesquisar em `build/Headers`, que é onde os cabeçalhos POP ao vivo. Sem esse argumento clang não saberia onde localizar os arquivos que `POP.h` é `#import`ndo. _Quase todos os "problemas" com o objetivo de Sharpie resumem para descobrir o que passar para clang_.
 
-###<a name="completing-the-binding"></a>Concluindo a associação
+### <a name="completing-the-binding"></a>Concluindo a associação
 
 Objetivo Sharpie gerou `Binding/ApiDefinitions.cs` e `Binding/StructsAndEnums.cs` arquivos.
 

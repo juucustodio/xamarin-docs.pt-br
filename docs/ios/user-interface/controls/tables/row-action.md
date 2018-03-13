@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: e9d3e2eecd4c03e7b3046e1ad86dd8a0d70a7f73
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 23a8fcd0633757bfffdb1761c3fc811268341b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-row-actions"></a>Trabalhando com ações de linha
 
@@ -177,7 +177,7 @@ table.Delegate = tableDelegate;
 
 Quando o código acima é executado e swipes o usuário à esquerda em uma linha de tabela, o **Hi** botão será exibido em vez do **excluir** botão é exibido por padrão:
 
-[ ![](row-action-images/action01.png "Botão Hi sendo exibido em vez de no botão Excluir")](row-action-images/action01.png)
+[![](row-action-images/action01.png "Botão Hi sendo exibido em vez de no botão Excluir")](row-action-images/action01.png#lightbox)
 
 Se o usuário toca o **Hi** botão `Hello World!` serão gravados para o console no Visual Studio para Mac ou o Visual Studio quando o aplicativo é executado no modo de depuração.
 

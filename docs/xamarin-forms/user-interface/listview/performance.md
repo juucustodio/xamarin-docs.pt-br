@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 2acaef5fd42b867e88fb9b81d401ea752480124a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 81d4aec3153a4cb7bbb0f3577c5a67acd430f279
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-performance"></a>Desempenho de ListView
 
@@ -45,7 +45,7 @@ public enum ListViewCachingStrategy
 ```
 
 > [!NOTE]
-> **Observação**: O Windows UWP (plataforma Universal) ignora o [ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) cache estratégia, pois ele sempre usa o cache para melhorar o desempenho. Portanto, por padrão ele se comporta como se o [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) estratégia de cache é aplicada.
+> O Windows UWP (plataforma Universal) ignora o [ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) cache estratégia, pois ele sempre usa o cache para melhorar o desempenho. Portanto, por padrão ele se comporta como se o [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) estratégia de cache é aplicada.
 
 ### <a name="retainelement"></a>RetainElement
 
@@ -101,14 +101,14 @@ No iOS e Android, se as células usam processadores personalizados, eles devem g
 Quando um [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) usa um [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) para selecionar um [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), o [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) cache estratégia de cache não `DataTemplate`s. Em vez disso, um `DataTemplate` é selecionado para cada item de dados na lista.
 
 > [!NOTE]
-> **Observação**: O [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) estratégia de cache tem um pré-requisito, introduzido no xamarin. Forms 2.4, que, quando um [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) é solicitado a selecionar um [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) cada `DataTemplate` deve retornar o mesmo [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) tipo. Por exemplo, dada uma [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) com um `DataTemplateSelector` que pode retornar `MyDataTemplateA` (onde `MyDataTemplateA` retorna um `ViewCell` do tipo `MyViewCellA`), ou `MyDataTemplateB` (onde `MyDataTemplateB`retorna um `ViewCell` do tipo `MyViewCellB`), quando `MyDataTemplateA` é retornado deve retornar `MyViewCellA` ou uma exceção será lançada.
+> O [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) estratégia de cache tem um pré-requisito, introduzido no xamarin. Forms 2.4, que, quando um [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) é solicitado a selecionar um [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)que cada `DataTemplate` deve retornar o mesmo [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) tipo. Por exemplo, dada uma [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) com um `DataTemplateSelector` que pode retornar `MyDataTemplateA` (onde `MyDataTemplateA` retorna um `ViewCell` do tipo `MyViewCellA`), ou `MyDataTemplateB` (onde `MyDataTemplateB`retorna um `ViewCell` do tipo `MyViewCellB`), quando `MyDataTemplateA` é retornado deve retornar `MyViewCellA` ou uma exceção será lançada.
 
 ### <a name="recycleelementanddatatemplate"></a>RecycleElementAndDataTemplate
 
 O [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) estratégia de cache se baseia o [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) estratégia de cache, além disso, garantindo que, quando um [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) usa um [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) para selecionar um [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), `DataTemplate`s são armazenados em cache pelo tipo de item na lista. Portanto, `DataTemplate`s serão selecionadas uma vez por tipo de item, em vez de uma vez por instância do item.
 
 > [!NOTE]
-> **Observação**: O [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) estratégia de cache tem um pré-requisito que o `DataTemplate`s retornado pelo [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) devem usar o [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) construtor que usa um `Type`.
+> O [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) estratégia de cache tem um pré-requisito que o `DataTemplate`s retornado pelo [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) devem usar o [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) construtor que usa um `Type`.
 
 ### <a name="setting-the-caching-strategy"></a>Definir a estratégia de cache
 

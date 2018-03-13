@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: bda207796d1019f8188176acce055d782cb9e32d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e8487dc06b3512a0ec0bb1b30393faeab506df60
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-platform-setup"></a>Instalação da plataforma de Mac
 
@@ -20,6 +21,10 @@ ms.lasthandoff: 02/27/2018
 
 Antes de começar, crie (ou usar uma existente) projeto xamarin. Forms.
 Você só pode adicionar aplicativos Mac usando o Visual Studio para Mac.
+
+> [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
+
+**A adição de um projeto macOS para xamarin. Forms, pelo [University Xamarin](https://university.xamarin.com/)**
 
 ## <a name="adding-a-mac-app"></a>Adicionar um aplicativo do Mac
 
@@ -92,7 +97,7 @@ Siga estas instruções para adicionar um aplicativo do Mac que serão executado
 
 9. Clique duas vezes em **Main.storyboard** Editar no Xcode. Selecione o **janela** e _desmarque_ o **controlador inicial é** caixa de seleção (Isso ocorre porque o código acima cria uma janela):
 
-  [ ![Desmarque a caixa de seleção de controlador inicial estiver no Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png)
+  [![Desmarque a caixa de seleção de controlador inicial estiver no Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
   Você pode editar o sistema de menu no storyboard para remover os itens indesejados.
 

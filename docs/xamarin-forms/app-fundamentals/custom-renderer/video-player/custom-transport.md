@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d37c2c9dbb12668680b5813e9e083d2ebb184c66
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-transport-controls"></a>Controles personalizados de transporte de vídeo
 
@@ -646,11 +646,11 @@ namespace VideoPlayerDemos
 
 Porque `AutoPlay` é definido como `false` no **CustomTransport.xaml** arquivo, será necessário pressionar o **reproduzir** botão quando ele fica habilitado para iniciar o vídeo. Os botões são definidos para que os caracteres Unicode discutidos acima são acompanhados por seus equivalentes de texto. Os botões tem uma aparência consistente em cada plataforma quando a reprodução do vídeo:
 
-[![Execução de transporte personalizado](custom-transport-images/customtransportplaying-small.png "reprodução de transporte personalizado")](custom-transport-images/customtransportplaying-large.png "reprodução de transporte personalizado")
+[![Execução de transporte personalizado](custom-transport-images/customtransportplaying-small.png "reprodução de transporte personalizado")](custom-transport-images/customtransportplaying-large.png#lightbox "reprodução de transporte personalizado")
 
 Mas, no Android e UWP, o **reproduzir** botão se parece muito diferente quando o vídeo é pausado:
 
-[![Em pausa de transporte personalizado](custom-transport-images/customtransportpaused-small.png "pausado de transporte personalizado")](custom-transport-images/customtransportpaused-large.png "pausado de transporte personalizado")
+[![Em pausa de transporte personalizado](custom-transport-images/customtransportpaused-small.png "pausado de transporte personalizado")](custom-transport-images/customtransportpaused-large.png#lightbox "pausado de transporte personalizado")
 
 Em um aplicativo de produção, você provavelmente desejará usar suas próprias imagens de bitmap para os botões para alcançar a uniformidade visual.
 

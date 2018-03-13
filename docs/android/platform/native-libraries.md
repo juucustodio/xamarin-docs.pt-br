@@ -6,11 +6,12 @@ ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: 8d7e03582571939b8cd3ae89fc2deff3b5603d36
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 7bd9a64ab7ea775688225ff5496773647174ebf8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="using-native-libraries"></a>Usando bibliotecas nativas
 
@@ -27,7 +28,7 @@ Há duas maneiras de fazer isso:
 1.  Usando um `AndroidNativeLibrary/Abi` elemento dentro do arquivo de projeto
 
 
-Com a detecção de caminho, o nome do diretório pai da biblioteca nativa é usado para especificar a ABI que os destinos de biblioteca. Portanto, se você adicionar `lib/armeabi/libfoo.so` para o projeto, em seguida, ABI será ser "detectada" como `armeabi`.
+Com a detecção de caminho, o nome do diretório pai da biblioteca nativa é usado para especificar a ABI usada como destino pela biblioteca. Portanto, se você adicionar `lib/armeabi/libfoo.so` para o projeto, em seguida, ABI será ser "detectada" como `armeabi`.
 
 Como alternativa, você pode editar o arquivo de projeto para especificar explicitamente a ABI usar:
 

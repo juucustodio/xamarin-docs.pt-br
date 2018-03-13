@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 14abb7a4b85b493bb0ab96a982d989fad783fabd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Layouts com guias com a barra de ação
 
 _Este guia apresenta e explica como usar as APIs ActionBar para criar uma interface com guias do usuário em um aplicativo xamarin._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -27,7 +26,6 @@ A barra de ação é um padrão de Android da interface do usuário que é usado
 Observe que `Toolbar` é um componente de barra de ação mais generalizada e mais recentes que você deve usar em vez de `ActionBar` (`Toolbar` foi projetado para substituir `ActionBar`). Para obter mais informações, consulte [barra de ferramentas](~/android/user-interface/controls/tool-bar/index.md). 
 
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,7 +34,6 @@ Qualquer aplicativo xamarin que tem como alvo o nível de API 11 (3.0 Android) o
 Algumas das APIs ActionBar foram adaptadas volta para o nível de API 7 (Android 2.1) e estão disponíveis por meio de [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que será disponibilizado para aplicativos xamarin por meio do [Xamarin biblioteca de suporte do Android - V7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacote.
 
 
-<a name="Introducing_tabs_in_the_ActionBar" />
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>Guias de Introdução na barra de ação
 
@@ -63,7 +60,6 @@ Xamarin encapsula o `ActionBar.ITabListener` com eventos no `ActionBar.Tab` clas
 -  TabUnselected
 
 
-<a name="Adding_Tabs_to_the_ActionBar" />
 
 ### <a name="adding-tabs-to-the-actionbar"></a>Adicionando guias para a barra de ação
 
@@ -111,7 +107,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-<a name="Event_Handlers_vs_ActionBar.ITabListener" />
 
 #### <a name="event-handlers-vs-actionbaritablistener"></a>Manipuladores de evento x ActionBar.ITabListener
 
@@ -120,7 +115,6 @@ Os aplicativos devem usar manipuladores de eventos e `ActionBar.ITabListener` pa
 Ao lidar com várias guias, ou a funcionalidade comum entre as guias da barra de ação de compartilhamento, pode ser mais eficiente em termos de memória e desempenho para criar uma classe personalizada que implementa `ActionBar.ITabListener`e o compartilhamento de uma única instância da classe. Isso reduzirá o número de GREF que um aplicativo xamarin está usando. 
 
 
-<a name="Backwards_Compatibility_for_Older_Devices" />
 
 ### <a name="backwards-compatibility-for-older-devices"></a>Versões anteriores a compatibilidade de dispositivos mais antigos
 
@@ -177,7 +171,6 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
@@ -187,8 +180,8 @@ Este guia discutimos como criar uma interface com guias do usuário em um xamari
 ## <a name="related-links"></a>Links relacionados
 
 - [ActionBarTabs (exemplo)](https://developer.xamarin.com/samples/monodroid/UserInterface/ActionBarTabs/)
-- [Barra de ferramentas](~/android/user-interface/controls/tool-bar/index.md)
-- [fragmentos](~/android/platform/fragments/index.md)
+- [Toolbar](~/android/user-interface/controls/tool-bar/index.md)
+- [Fragmentos](~/android/platform/fragments/index.md)
 - [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
 - [ActionBarActivity](http://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
 - [Barra de ação padrão](http://developer.android.com/design/patterns/actionbar.html)

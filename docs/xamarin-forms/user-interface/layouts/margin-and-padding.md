@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 7bab512ef11f8e0f553a00f0240d82f860fe2676
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 461430ba27b5d6008338019e5feaebed7b09d4cb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="margin-and-padding"></a>Margem e preenchimento
 
@@ -27,7 +27,7 @@ Margem e preenchimento são conceitos de layout relacionadas:
 
 O diagrama a seguir ilustra dois conceitos:
 
-[![](margin-and-padding-images/margins-and-padding-sml.png "Margens e preenchimento conceitos")](margin-and-padding-images/margins-and-padding.png "margens e preenchimento conceitos")
+[![](margin-and-padding-images/margins-and-padding-sml.png "Margens e preenchimento conceitos")](margin-and-padding-images/margins-and-padding.png#lightbox "margens e preenchimento conceitos")
 
 Observe que [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) os valores são aditivas. Portanto, se dois elementos adjacentes especificam uma margem de 20 pixels, a distância entre os elementos serão 40 pixels. Além disso, a margem e preenchimento são aditivas quando ambos são aplicadas, em que a distância entre um elemento e qualquer conteúdo será a margem e preenchimento.
 
@@ -63,7 +63,7 @@ var stackLayout = new StackLayout {
 ```
 
 > [!NOTE]
-> **Observação**: `Thickness` valores podem ser negativos, que normalmente recorta ou overdraws o conteúdo.
+> `Thickness` os valores podem ser negativos, que normalmente recorta ou overdraws o conteúdo.
 
 ## <a name="summary"></a>Resumo
 

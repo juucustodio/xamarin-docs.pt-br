@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 38a2e8b8cd5932bf96c1e0032a6f47627c3ea592
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 98cd780a29abdbeaab02483e4b6ed01a218f88e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-icons"></a>Trabalhando com ícones
 
@@ -97,7 +97,7 @@ Uma vez o [aplicativo-pai](~/ios/watchos/app-fundamentals/parent-app.md) seus í
 
 3. Adicione todas as imagens de watchOS, conforme mostrado nesta captura de tela:
 
-  [ ![](icons-images/appicons-sml.png "Adicione todas as imagens de watchOS, conforme mostrado nesta captura de tela")](icons-images/appicons.png)
+  [![](icons-images/appicons-sml.png "Adicione todas as imagens de watchOS, conforme mostrado nesta captura de tela")](icons-images/appicons.png#lightbox)
 
   Consulte [diretrizes de ícone da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html) para os tamanhos necessários (as dimensões também são mostradas na tela). Lembre-se de que esses ícones serão cortados automaticamente para renderizar em um círculo.
 

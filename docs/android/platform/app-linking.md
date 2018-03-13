@@ -3,16 +3,16 @@ title: "Vinculação de aplicativo no Android"
 description: "Este guia aborda como Android 6.0 oferece suporte a aplicativo vinculação, uma técnica que permite que aplicativos móveis responder a URLs de sites. Ele abordará vinculando o aplicativo é, a implementação de vinculação de aplicativo em um aplicativo do Android 6.0 e como configurar um site para conceder permissões ao aplicativo móvel para um domínio."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
+ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 726890e48407dd26f52c5aeaecf4eab51dcc5182
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
 
@@ -84,7 +84,7 @@ Android verificará se cada host que é identificado pelos filtros intencionais 
 Android 6.0 vinculando o aplicativo requer que o Android Verifique a associação entre o aplicativo e o site antes de configurar o aplicativo como o manipulador padrão para o URI. Essa verificação ocorrerá quando o aplicativo é instalado pela primeira vez. O *Links ativos digitais* arquivo é um arquivo JSON que é hospedado pelo webdomain(s) relevantes.
 
 > [!NOTE]
-> **Observação:** o `android:autoVerify` atributo deve ser definido pelo filtro intenção &ndash; contrário Android não executará a verificação.
+> O `android:autoVerify` atributo deve ser definido pelo filtro intenção &ndash; contrário Android não executará a verificação.
 
 O arquivo é colocado pelo administrador do domínio no local **https://domain/.well-known/assetlinks.json**.
 

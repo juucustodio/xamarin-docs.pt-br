@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 294d28c57978218986d62d1ee6579e8d283b8f72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f448a3ee9c018aa475775a5ac2c614f3e7ddc324
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -29,12 +29,12 @@ Você pode pensar nele como simplificado, próxima geração de [biblioteca de c
 
 Projetos de biblioteca .NET padrão podem ser criados no Xamarin Studio 6.2, criando primeiro um projeto de biblioteca portátil:
 
-[ ![](net-standard-images/xs01-sml.png "Criar um novo projeto de biblioteca portátil")](net-standard-images/xs01.png)
+[![](net-standard-images/xs01-sml.png "Criar um novo projeto de biblioteca portátil")](net-standard-images/xs01.png#lightbox)
 
 Quando o projeto tiver sido criado, clique com botão direito e abra o **opções de projeto** janela.
 No **geral** seção projeto pode ser convertido em .NET padrão e definido para usar uma versão específica do **plataforma** lista suspensa:
 
-[ ![](net-standard-images/xs02-sml.png "Converter em .NET padrão em geral, opções")](net-standard-images/xs02.png)
+[![](net-standard-images/xs02-sml.png "Converter em .NET padrão em geral, opções")](net-standard-images/xs02.png#lightbox)
 
 Você pode, em seguida, [criar um pacote do NuGet](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md) compartilhamento de biblioteca com outros desenvolvedores.
 

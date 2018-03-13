@@ -6,11 +6,11 @@ ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 4a83afca753d1131e3486004443f9c4a895f6fbc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a0873c6b902e29174da5e27a09e8f580d6d69eb7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debugging-integrations"></a>Integrações de depuração
 
@@ -43,11 +43,11 @@ defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
 
 e, em seguida, reinicie o Xamarin pastas de trabalho. Quando você fizer isso, você deverá ver **elemento inspecionar** aparecer no seu menu de contexto e um novo **desenvolvedor** painel estarão disponível nas preferências de pastas de trabalho. Essa opção permite que você escolha se deseja que as ferramentas de desenvolvedor abertas durante a inicialização:
 
-[![Painel do desenvolvedor](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png)
+[![Painel do desenvolvedor](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png#lightbox)
 
 Esta preferência é somente para reinicialização também — você precisará reiniciar o cliente de pastas de trabalho para que ele entre em vigor em novas pastas de trabalho. Ativar as ferramentas de desenvolvedor por meio do menu de contexto ou as preferências mostrará a interface de usuário familiar do Safari:
 
-[![Ferramentas de desenvolvimento do Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png)
+[![Ferramentas de desenvolvimento do Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png#lightbox)
 
 Para obter informações sobre como usar as ferramentas de desenvolvedor do Safari, consulte o [documentação do Inspetor WebKit][webkit-docs].
 
@@ -61,6 +61,6 @@ C:\Windows\System32\F12\F12Chooser.exe
 
 Seletor de execução F12 e você verá a instância incorporada que habilita a superfície de cliente de pastas de trabalho na lista. Escolha o e o familiar F12 ferramentas de depuração do Internet Explorer serão exibida, conectados ao cliente:
 
-[![Ferramentas F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png)
+[![Ferramentas F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png#lightbox)
 
 [webkit-docs]: https://trac.webkit.org/wiki/WebInspector

@@ -4,14 +4,15 @@ description: "Saiba como usar a transformação de conversão a ser deslocado Sk
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 491c82406dafceb876ddbb4a0a7204447b95f57d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cac2479af2778af6043a85583f9d7b518748d7da
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-translate-transform"></a>A transformação de conversão
 
@@ -68,7 +69,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Os retângulos sucessivos fluem para baixo na página:
 
-[![](translate-images/accumulatedtranslate-small.png "Tripla captura de tela da página acumulados traduzir")](translate-images/accumulatedtranslate-large.png "tripla captura de tela da página acumulados traduzir")
+[![](translate-images/accumulatedtranslate-small.png "Tripla captura de tela da página acumulados traduzir")](translate-images/accumulatedtranslate-large.png#lightbox "tripla captura de tela da página acumulados traduzir")
 
 Se os fatores de conversão acumulado são `dx` e `dy`, e é o ponto especificado em uma função de desenho (`x`, `y`), em seguida, o objeto de gráfico é renderizado no ponto (`x'`, `y'`), onde:
 
@@ -125,7 +126,7 @@ using (SKPaint textPaint = new SKPaint())
 
 Em cada um dos três exemplos, `Translate` é chamado para exibir o texto para deslocá-lo do local fornecido pelo `x` e `y` variáveis. Em seguida, o texto será exibido novamente em outra cor sem efeito de conversão:
 
-[![](translate-images/translatetexteffects-small.png "Tripla captura de tela da página Converter texto efeitos")](translate-images/translatetexteffects-large.png "tripla captura de tela da página traduzir efeitos de texto")
+[![](translate-images/translatetexteffects-small.png "Tripla captura de tela da página Converter texto efeitos")](translate-images/translatetexteffects-large.png#lightbox "tripla captura de tela da página traduzir efeitos de texto")
 
 Cada um dos três exemplos a seguir mostra uma maneira diferente de negar a `Translate` chamar:
 
@@ -209,7 +210,7 @@ public class HendecagramArrayPage : ContentPage
 
 Aqui está o resultado:
 
-[![](translate-images/hendecagramarray-small.png "Captura de tela da página Hendecagram matriz tripla")](translate-images/hendecagramarray-large.png "tripla captura de tela da página Hendecagram matriz")
+[![](translate-images/hendecagramarray-small.png "Captura de tela da página Hendecagram matriz tripla")](translate-images/hendecagramarray-large.png#lightbox "tripla captura de tela da página Hendecagram matriz")
 
 Animações frequentemente envolvem transformações. O **Hendecagram animação** página move a estrela apontada 11 em torno de um círculo. O [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) classe começa com alguns campos e substituições do `OnAppearing` e `OnDisappearing` métodos para iniciar e parar um temporizador xamarin. Forms:
 
@@ -294,7 +295,7 @@ public class HendecagramAnimationPage : ContentPage
 
 O `PaintSurface` chamadas do manipulador de `Translate` método duas vezes, primeiro para converter para o centro da tela e, em seguida, converter a circunferência de um círculo gira em torno (0, 0). O raio do círculo é definido para ser tão grandes quanto possível, mantendo ainda a estrela dentro dos limites da página:
 
-[![](translate-images/hendecagramanimation-small.png "Captura de tela da página Hendecagram animação tripla")](translate-images/hendecagramanimation-large.png "tripla captura de tela da página Hendecagram animação")
+[![](translate-images/hendecagramanimation-small.png "Captura de tela da página Hendecagram animação tripla")](translate-images/hendecagramanimation-large.png#lightbox "tripla captura de tela da página Hendecagram animação")
 
 Observe que a estrela mantém a mesma orientação à medida que ele gira em torno do centro da página. Ele não gira. Que é um trabalho para uma transformação de giro.
 

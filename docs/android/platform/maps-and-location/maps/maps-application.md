@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/05/2017
-ms.openlocfilehash: a6bfebb5272da3fd50f4f165fc25bb75574a0b63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4bcbd14b88f19dc48dc9d0694fb30aed31708153
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps-application"></a>Aplicativo de mapas
 
 É a maneira mais simples para trabalhar com mapas em xamarin aproveitar o aplicativo de mapas internos mostrado abaixo:
 
-[![Captura de tela de exemplo de aplicativo interno do Google Maps](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png)
+[![Captura de tela de exemplo de aplicativo interno do Google Maps](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 Quando você usar o aplicativo de mapas, o mapa não farão parte do seu aplicativo. Em vez disso, seu aplicativo iniciará o aplicativo de mapas e carregar o mapa externamente. A próxima seção examina como usar o xamarin para iniciar o maps, como a mostrada acima.
 
-<a name="Creating_the_Intent" />
 
 ## <a name="creating-the-intent"></a>Criando a intenção
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 Esse código é tudo o que é necessário para iniciar o mapa mostrado na captura de tela anterior. Além de especificar a latitude e longitude, o esquema de URI para mapas dá suporte a várias outras opções.
 
-<a name="Geo_Uri_Scheme" />
 
 ## <a name="geo-uri-scheme"></a>Esquema de URI de replicação geográfica
 
@@ -52,10 +50,9 @@ O código anterior usado o esquema de replicação geográfica para criar um URI
 
 As versões do URI que executar uma consulta (ou seja, as Rua endereço ou pesquisa de termos) usam serviço de geocoder do Google para recuperar o local que é exibido no mapa. Por exemplo, o URI `geo:0,0?q=coop+Cambridge` resulta no mapa mostrado abaixo:
 
-[![Captura de tela de exemplo mostrando Google Maps com um termo de pesquisa](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png)
+[![Captura de tela de exemplo mostrando Google Maps com um termo de pesquisa](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 
-<a name="Street_View" />
 
 Para obter mais informações sobre esquemas URI de área geográfica, consulte [mostrar um local em um mapa](http://developer.android.com/guide/components/intents-common.html#Maps).
 
@@ -64,7 +61,7 @@ Para obter mais informações sobre esquemas URI de área geográfica, consulte 
 
 Além do esquema de replicação geográfica, Android também dá suporte ao carregamento ruas modos de exibição de uma tentativa. Um exemplo de aplicativo exibição Rua iniciado a partir de xamarin é mostrado abaixo:
 
-[![Captura de tela de exemplo de uma exibição da rua](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png)
+[![Captura de tela de exemplo de uma exibição da rua](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 Para iniciar um modo de exibição de rua, simplesmente use o `google.streetview` esquema URI, como demonstrado no código a seguir:
 

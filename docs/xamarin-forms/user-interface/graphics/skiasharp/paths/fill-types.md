@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6e8a37816e28120392f550376807e91fb3b5d458
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cee93f082386e78a643b8c07dd48d0196e8ecd6c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
@@ -164,7 +164,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normalmente, o tipo de preenchimento do caminho deve afetar apenas preenchimentos e não traços, mas os dois `Inverse` modos afetam preenchimentos e traçados. Para preencher, os dois `Inverse` tipos preencher as áreas oppositely para que a área fora estrela é preenchida. Para traços, os dois `Inverse` tipos de cores tudo, exceto o traçado. Usar esses tipos de preenchimento inverso pode produzir efeitos ímpares, como mostra a captura de tela do iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Captura de tela da página Five-Pointed estrela tripla")](fill-types-images/fivepointedstar-large.png "tripla captura de tela da página Five-Pointed estrela")
+[![](fill-types-images/fivepointedstar-small.png "Captura de tela da página Five-Pointed estrela tripla")](fill-types-images/fivepointedstar-large.png#lightbox "tripla captura de tela da página Five-Pointed estrela")
 
 As Android e Windows mobile capturas de tela mostram os efeitos de par-ímpares e contorno típicos, mas a ordem de traço e preenchimento também afeta os resultados.
 
@@ -217,7 +217,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 É uma imagem interessante criada com um mínimo de código:
 
-[![](fill-types-images/overlappingcircles-small.png "Tripla captura de tela da página círculos sobrepostos")](fill-types-images/overlappingcircles-large.png "tripla captura de tela da página círculos sobrepostos")
+[![](fill-types-images/overlappingcircles-small.png "Tripla captura de tela da página círculos sobrepostos")](fill-types-images/overlappingcircles-large.png#lightbox "tripla captura de tela da página círculos sobrepostos")
 
 
 ## <a name="related-links"></a>Links relacionados

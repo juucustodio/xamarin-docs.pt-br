@@ -3,16 +3,16 @@ title: tvOS internos
 description: "Xamarin.tvOS compartilha o mesmo DNA nosso produto xamarin, para que os documentos avançados que é produzida para nosso produto iOS são praticamente idênticos ao nosso produto tvOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
+ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 6adba454ac153186c05715f4baa3261212e7b18b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fee2843840f7f6dac461cd4e3426fb8b296b30bf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tvos-internals"></a>tvOS internos
 
@@ -31,11 +31,11 @@ Este artigo aborda os tipos de estrutura de destino (bibliotecas de classes Base
 
 Os artigos a seguir são relevantes para tvOS mas específico do iOS (desde tvOS 9 é um subconjunto do iOS 9).
 
-###  <a name="unified-apicross-platformmaciosunifiedindexmd"></a>[API unificada](~/cross-platform/macios/unified/index.md)
+###  <a name="unified-apicross-platformmaciosunifiedindexmd"></a>[API Unificada](~/cross-platform/macios/unified/index.md)
 
 Apresenta as novas APIs unificada que permite código mais simples de compartilhamento entre Apple TV e iOS bases de código, bem como a introdução do suporte para APIs de 64 bits e 64 bits de compilação.  
 
-###  <a name="api-designiosinternalsapi-designindexmd"></a>[Projeto de API](~/ios/internals/api-design/index.md)
+###  <a name="api-designiosinternalsapi-designindexmd"></a>[Design de API](~/ios/internals/api-design/index.md)
 
 Explica os princípios de design em que a associação de API.
 
@@ -43,7 +43,7 @@ Explica os princípios de design em que a associação de API.
 
 Esta seção ilustra armadilhas e limitações a serem consideradas com relação xamarin, muitos dos quais são aplicáveis ao Xamarin.tvOS.
 
-###  <a name="linkeriosdeploy-testlinkermd"></a>[Linker](~/ios/deploy-test/linker.md)
+###  <a name="linkeriosdeploy-testlinkermd"></a>[Vinculador](~/ios/deploy-test/linker.md)
 
 Explica como funciona o vinculador para garantir que o pacote de aplicativo possíveis menor, bem como para modificar suas configurações e o uso.
 
@@ -79,7 +79,7 @@ Como o Visual Studio para Mac se integra com o construtor de Interface do Xcode 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

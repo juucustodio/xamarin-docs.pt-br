@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e421a52b1ae97b0beef59352a756401ed661051e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -142,7 +142,7 @@ Android determina os recursos de base por iteração sobre o teste de regras a s
 
 Essas regras também são ilustradas no fluxograma a seguir:
 
-[![Fluxograma de recursos](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png)
+[![Fluxograma de recursos](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 Quando o sistema está procurando por recursos específicos de densidade e não é possível encontrá-los, ele tentará localizar outros recursos específicos de densidade e dimensionamento-los. Android necessariamente não pode usar os recursos padrão.
 Por exemplo, quando procurando um recurso de baixa densidade e ele não estiver disponível, Android pode selecionar versão de alta densidade do recurso sobre os recursos padrão ou a densidade média. Isso ocorre porque o recurso de alta densidade pode ser reduzido por um fator de 0,5, o que resulta em menos problemas de visibilidade de dimensionamento de um recurso de densidade média que exija um fator de 0,75.
@@ -196,4 +196,4 @@ Next é o qualificador para a densidade da tela, `ldpi`, que resulta na exclusã
 Como resultado desse processo, o Android usará os recursos drawable no diretório de recursos `drawable-en-port-ldpi` para o dispositivo.
 
 > [!NOTE]
-> **Observação:** os qualificadores de tamanho de tela fornecem uma exceção a esse processo de seleção. É possível para o Android selecionar os recursos que são criados para uma tela menor do que o dispositivo atual fornece. Por exemplo, um dispositivo de tela grande pode usar os recursos fornecem uma tela de tamanho normal. No entanto o oposto isso não é possível: o mesmo dispositivo de tela grande não usará os recursos fornecidos para uma tela de xlarge. Se o Android não é possível encontrar um conjunto de recursos que corresponde a um tamanho de tela de determinado, o aplicativo falhará.
+> Os qualificadores de tamanho de tela fornecem uma exceção a esse processo de seleção. É possível para o Android selecionar os recursos que são criados para uma tela menor do que o dispositivo atual fornece. Por exemplo, um dispositivo de tela grande pode usar os recursos fornecem uma tela de tamanho normal. No entanto o oposto isso não é possível: o mesmo dispositivo de tela grande não usará os recursos fornecidos para uma tela de xlarge. Se o Android não é possível encontrar um conjunto de recursos que corresponde a um tamanho de tela de determinado, o aplicativo falhará.

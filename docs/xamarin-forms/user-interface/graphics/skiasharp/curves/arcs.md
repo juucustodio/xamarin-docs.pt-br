@@ -4,14 +4,15 @@ description: "Saiba como usar SkiaSharp para definir arcos de três maneiras dif
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 236f5da78022d6f6482ed66ffd439c4cd15766a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 390c8f4634ea38ecb93e3f21175db00fef27b8e4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três maneiras para desenhar um arco
 
@@ -100,7 +101,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Como você pode ver, o ângulo inicial e o ângulo de flecha podem assumir valores negativos:
 
-[![](arcs-images/anglearc-small.png "Tripla captura da página do ângulo arco")](arcs-images/anglearc-large.png "tripla captura da página do arco do ângulo")
+[![](arcs-images/anglearc-small.png "Tripla captura da página do ângulo arco")](arcs-images/anglearc-large.png#lightbox "tripla captura da página do arco do ângulo")
 
 Essa abordagem para gerar um arco é o algoritmo mais simples e é fácil derivar as equações paramétricos que descrevem o arco. Saber o tamanho e o local da elipse e os ângulos de início e de varredura, os pontos inicial e final do arco pode ser calculados usando trigonometria simple:
 
@@ -205,11 +206,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Um novo `SKPath` objeto é criado para cada fatia da pizza. O caminho consiste em uma linha do centro, então um `ArcTo` para desenhar o arco e outra linha de volta para os resultados do centro do `Close` chamar. Este programa exibe fatias da pizza "destacado", movendo-os de tudo no Centro por 50 pixels. Essa tarefa requer um vetor de direção do ponto central do ângulo de flecha de cada fatia:
 
-[![](arcs-images/explodedpiechart-small.png "Captura de tela da página de gráfico de pizza destacada tripla")](arcs-images/explodedpiechart-large.png "tripla captura da página do gráfico de pizza destacada")
+[![](arcs-images/explodedpiechart-small.png "Captura de tela da página de gráfico de pizza destacada tripla")](arcs-images/explodedpiechart-large.png#lightbox "tripla captura da página do gráfico de pizza destacada")
 
 Para ver sua aparência sem "explosão", simplesmente comentar o `Translate` chamar:
 
-[![](arcs-images/explodedpiechartunexploded-small.png "Tripla captura da página do gráfico de pizza destacada sem explosão")](arcs-images/explodedpiechartunexploded-large.png "tripla captura da página do gráfico de pizza destacada sem o detalhamento")
+[![](arcs-images/explodedpiechartunexploded-small.png "Tripla captura da página do gráfico de pizza destacada sem explosão")](arcs-images/explodedpiechartunexploded-large.png#lightbox "tripla captura da página do gráfico de pizza destacada sem o detalhamento")
 
 ## <a name="the-tangent-arc"></a>O arco tangente
 
@@ -413,7 +414,7 @@ public partial class TangentArcPage : InteractivePage
 
 Aqui está o **arco tangente** página em execução em todas as três plataformas:
 
-[![](arcs-images/tangentarc-small.png "Captura de tela da página arco tangente tripla")](arcs-images/tangentarc-large.png "tripla captura da página do arco tangente")
+[![](arcs-images/tangentarc-small.png "Captura de tela da página arco tangente tripla")](arcs-images/tangentarc-large.png#lightbox "tripla captura da página do arco tangente")
 
 No dispositivo móvel do Windows, os três pontos são quase colinear e o arco é muito pequeno.
 
@@ -490,7 +491,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui está o programa em execução em plataformas de três:
 
-[![](arcs-images/roundedheptagon-small.png "Captura de tela da página Heptágono arredondado tripla")](arcs-images/roundedheptagon-large.png "tripla captura de tela da página Heptágono arredondado")
+[![](arcs-images/roundedheptagon-small.png "Captura de tela da página Heptágono arredondado tripla")](arcs-images/roundedheptagon-large.png#lightbox "tripla captura de tela da página Heptágono arredondado")
 
 ## <a name="the-elliptical-arc"></a>O arco elíptico
 
@@ -585,7 +586,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui, ele é executado em três plataformas:
 
-[![](arcs-images/ellipticalarc-small.png "Captura de tela da página arco elíptico tripla")](arcs-images/ellipticalarc-large.png "tripla captura da página do arco elíptico")
+[![](arcs-images/ellipticalarc-small.png "Captura de tela da página arco elíptico tripla")](arcs-images/ellipticalarc-large.png#lightbox "tripla captura da página do arco elíptico")
 
 O **infinito arco** página usa o arco elíptico para desenhar um símbolo de infinito. O símbolo de infinito se baseia em dois círculos com raios dos 100 unidades separadas por 100 unidades:
 
@@ -653,7 +654,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O código usa o `Bounds` propriedade `SKPath` para determinar as dimensões do seno de infinito para dimensioná-lo ao tamanho da tela:
 
-[![](arcs-images/arcinfinity-small.png "Tripla captura da página do arco infinito")](arcs-images/arcinfinity-large.png "tripla captura de tela da página infinito de arco")
+[![](arcs-images/arcinfinity-small.png "Tripla captura da página do arco infinito")](arcs-images/arcinfinity-large.png#lightbox "tripla captura de tela da página infinito de arco")
 
 O resultado parece um pouco pequeno, o que sugere que a `Bounds` propriedade `SKPath` está relatando um tamanho maior que o caminho.
 
@@ -661,7 +662,7 @@ Internamente, Skia aproxima o arco usando várias curvas de Bézier quadráticas
 
 Para obter um ajuste maior, use o `TightBounds` propriedade, que exclui os pontos de controle. Aqui está o programa em execução no modo paisagem e usando o `TightBounds` propriedade para obter os limites de caminho:
 
-[![](arcs-images/arcinfinitytightbounds-small.png "Tripla captura da página do arco infinito com limites rígidos")](arcs-images/arcinfinitytightbounds-large.png "tripla captura de tela da página com limites rígidos infinito de arco")
+[![](arcs-images/arcinfinitytightbounds-small.png "Tripla captura da página do arco infinito com limites rígidos")](arcs-images/arcinfinitytightbounds-large.png#lightbox "tripla captura de tela da página com limites rígidos infinito de arco")
 
 Embora as conexões entre os arcos e linhas retas são matematicamente suaves, a alteração do arco linear pode parecer um pouco abrupta. Um símbolo de infinito melhor é apresentado na próxima página.
 

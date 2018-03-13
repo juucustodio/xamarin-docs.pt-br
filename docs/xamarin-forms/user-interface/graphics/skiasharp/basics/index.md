@@ -4,14 +4,15 @@ description: "Conheça os fundamentos de coordenadas e conceitos de gráficos Sk
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1220da91cd3d8cd6a448a8845c897013419867e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb12924ff181439de601ecc07e1c7f3fe63a6616
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="skiasharp-drawing-basics"></a>Noções básicas de desenho de SkiaSharp
 
@@ -21,11 +22,11 @@ Depois de adicionar o pacote SkiaSharp NuGet para seu aplicativo xamarin. Forms,
 
 Todos os programas de exemplo nesta seção aparecem sob o título **Noções básicas de SkiaSharp** na home page do [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa e o [ **Noções básicas de** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) pasta da solução.
 
-## <a name="drawing-a-simple-circlecirclemd"></a>[Desenho de um círculo simples](circle.md)
+## <a name="drawing-a-simple-circlecirclemd"></a>[Desenhar um círculo simples](circle.md)
 
 Conheça os fundamentos de desenho SkiaSharp, incluindo telas e pintura.
 
-## <a name="integrating-with-xamarinformsintegrationmd"></a>[Integração com o xamarin. Forms](integration.md)
+## <a name="integrating-with-xamarinformsintegrationmd"></a>[Integração com Xamarin.Forms](integration.md)
 
 Crie gráficos interativos de SkiaSharp respondendo para que a entrada e a integração com o xamarin. Forms elementos de toque.
 

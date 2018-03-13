@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 36d8e27ce06e38e1cf652558bfb5a83f572e4403
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 202df615f1b35504f1fe5c9fd64c9c4b4db77a2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>Noções básicas sobre os conceitos de SiriKit
 
@@ -57,7 +57,7 @@ Siri e mapas gerenciam todas as interações do usuário e exibem os resultados 
 
 Esta seção apresentará uma visão geral de como SiriKit permite que o usuário interaja com o aplicativo usando o Siri. Para este exemplo, usaremos o aplicativo MonkeyChat falso:
 
-[ ![](understanding-sirikit-images/monkeychat01.png "O ícone de MonkeyChat")](understanding-sirikit-images/monkeychat01.png)
+[![](understanding-sirikit-images/monkeychat01.png "O ícone de MonkeyChat")](understanding-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat mantém seu próprio catálogo de contato de amigos do usuário, cada um associado a um nome de tela (como Bobo, por exemplo) e permite que o usuário enviar texto chats para cada friend por seu nome de tela.
 
@@ -179,7 +179,7 @@ Independentemente de como é feita uma solicitação ou como o Siri responde à 
 
 Quando o usuário faz uma solicitação textual do Siri, estas são as etapas seguidas Siri:
 
-[ ![](understanding-sirikit-images/monkeychat02.png "As etapas seguidas Siri")](understanding-sirikit-images/monkeychat02.png)
+[![](understanding-sirikit-images/monkeychat02.png "As etapas seguidas Siri")](understanding-sirikit-images/monkeychat02.png#lightbox)
 
 1. Primeiro, Siri leva o áudio do usuário **fala** e a converte em texto.
 2. Em seguida, o texto é convertido em um **intenção**, estruturado de representação de solicitação do usuário.
@@ -188,7 +188,7 @@ Quando o usuário faz uma solicitação textual do Siri, estas são as etapas se
 
 Há três maneiras principais que o aplicativo pode fazer parte de conversa do usuário com Siri:
 
-[ ![](understanding-sirikit-images/monkeychat03.png "Os três modos principais que o aplicativo pode fazer parte de conversa usuários com Siri")](understanding-sirikit-images/monkeychat03.png)
+[![](understanding-sirikit-images/monkeychat03.png "Os três modos principais que o aplicativo pode fazer parte de conversa usuários com Siri")](understanding-sirikit-images/monkeychat03.png#lightbox)
 
 1. **Vocabulário** -isso é como o aplicativo informa Siri as palavras que ele precisa saber para interagir com ela.
 2. **Lógica de aplicativo** - são as ações e respostas que tenham o aplicativo com base em determinadas tentativas.
@@ -219,7 +219,7 @@ Considerando as informações acima, examine como a seguir conversa interagiria 
 
 A primeira função em que o aplicativo recebe a conversa é Siri compreender voz do usuário:
 
-[ ![](understanding-sirikit-images/monkeychat04.png "Ajudando Siri entender a fala de usuários")](understanding-sirikit-images/monkeychat04.png)
+[![](understanding-sirikit-images/monkeychat04.png "Ajudando Siri entender a fala de usuários")](understanding-sirikit-images/monkeychat04.png#lightbox)
 
 Siri não tem o nome "Bobo" em seu banco de dados, mas o aplicativo e compartilha essas informações com Siri por meio de seu vocabulário. O aplicativo também ajuda Siri reconhecer que Bobo é um destinatário, pois ele especificado para Siri como um *entre em contato com*.
 
@@ -227,7 +227,7 @@ Siri sabe o que mais é necessário para enviar uma mensagem que um destinatári
 
 No exemplo acima, o usuário respondeu, *"Envie bananas mais"*, que o Siri será agrupar em um estruturado **intenção**:
 
-[ ![](understanding-sirikit-images/monkeychat05.png "Siri unirá a resposta do usuário em uma tentativa de estruturado")](understanding-sirikit-images/monkeychat05.png)
+[![](understanding-sirikit-images/monkeychat05.png "Siri unirá a resposta do usuário em uma tentativa de estruturado")](understanding-sirikit-images/monkeychat05.png#lightbox)
 
 A intenção estruturada conterá as seguintes informações:
 
@@ -248,7 +248,7 @@ Siri automaticamente criará um apropriado `NSUserActivity` para iniciar o aplic
 
 Depois que o aplicativo tiver processado a intenção e retornou uma resposta para Siri, em seguida, apresenta os resultados para o usuário (verbalmente e visualmente):
 
-[ ![](understanding-sirikit-images/monkeychat06.png "Os resultados apresentados ao usuário verbalmente e visualmente")](understanding-sirikit-images/monkeychat06.png)
+[![](understanding-sirikit-images/monkeychat06.png "Os resultados apresentados ao usuário verbalmente e visualmente")](understanding-sirikit-images/monkeychat06.png#lightbox)
 
 Siri tem resposta interna várias Interfaces de usuário para cada um dos domínios disponíveis para o aplicativo. No entanto, como MonkeyChat forneceu uma extensão de interface do usuário intenção opcional, ele é usado para apresentar os resultados da conversa para o usuário no exemplo acima.
 
@@ -256,7 +256,7 @@ Siri tem resposta interna várias Interfaces de usuário para cada um dos domín
 
 Há três tarefas principais que a extensão do aplicativo precisa executar ao lidar com propósitos:
 
-[ ![](understanding-sirikit-images/monkeychat07.png "O ciclo de vida intencional")](understanding-sirikit-images/monkeychat07.png)
+[![](understanding-sirikit-images/monkeychat07.png "O ciclo de vida intencional")](understanding-sirikit-images/monkeychat07.png#lightbox)
 
 1. O aplicativo deve **resolver** cada parâmetro em um evento. Como resultado, o aplicativo chamará resolva várias vezes (uma vez por cada parâmetro) e, às vezes, várias vezes no mesmo parâmetro até que o aplicativo e o usuário concordarem com o que está sendo solicitado.
 2. O aplicativo deve **confirmar** que pode lidar com a intenção solicitada e informar Siri sobre o resultado esperado.
@@ -329,7 +329,7 @@ Também é uma API para fornecer palavras e frases para Siri para auxiliar no re
 
 A extensão de tentativas é responsável por gerenciar as principais interações entre o aplicativo e o Siri da seguinte maneira:
 
-[ ![](understanding-sirikit-images/intents01.png "A extensão de tentativas")](understanding-sirikit-images/intents01.png)
+[![](understanding-sirikit-images/intents01.png "A extensão de tentativas")](understanding-sirikit-images/intents01.png#lightbox)
 
 A extensão de intenção pode dar suporte a um ou mais tentativas, é responsabilidade do desenvolvedor para decidir como desejam implementar SiriKit no aplicativo. O desenvolvedor também pode adicionar uma extensão de intenção separado para cada tentativa de precisar ser manipulada.  Dito isso, que o desenvolvedor de limitar o número de intenção de extensões para que o Siri não tem vários processos abrir contra o aplicativo que exige mais memória e tempo para tratar as solicitações de Apple.
 
@@ -355,7 +355,7 @@ Uma das tarefas mais comuns que os usuários fará é "verbify" nome do aplicati
 
 A extensão de interface do usuário de tentativas apresenta a oportunidade de exibir a interface do usuário do aplicativo e identidade visual na experiência de Siri e fazer com que os usuários se sentir conectados ao aplicativo. Com essa extensão, o aplicativo pode colocar a marca, bem como visual e outras informações para a transcrição.
 
-[ ![](understanding-sirikit-images/intents02.png "Exemplo de saída de extensão de tentativas de IU")](understanding-sirikit-images/intents02.png)
+[![](understanding-sirikit-images/intents02.png "Exemplo de saída de extensão de tentativas de IU")](understanding-sirikit-images/intents02.png#lightbox)
 
 A extensão de interface do usuário de tentativas sempre retornará um `UIViewController` e o aplicativo pode adicionar qualquer coisa que desejar dentro do controlador de exibição como mostrando informações adicionais que ultrapassa a resposta inicial. Tentativas de interface do usuário também pode atualizar o usuário com o status de um evento de execução longa, como quanto tempo mais levará a uma jornada carro para alcançar o local de compartilhamento.
 

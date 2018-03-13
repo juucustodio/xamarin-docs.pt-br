@@ -4,14 +4,15 @@ description: "Explorar os efeitos e animações possíveis com a transformação
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: c87f9a561ac2f7a8c3da1c1e4ab839431073fcb9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 146093e15651316e84947e2bd81eeee3bf55cedb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-rotate-transform"></a>A transformação de rotação
 
@@ -57,7 +58,7 @@ using (SKPaint textPaint = new SKPaint
 
 Como rotação gira em torno do canto superior esquerdo da tela, para a maioria dos ângulos definido neste programa, o texto será girado fora da tela:
 
-[![](rotate-images/basicrotate-small.png "Tripla captura de tela da página básica girar")](rotate-images/basicrotate-large.png "tripla captura de tela da página girar básico")
+[![](rotate-images/basicrotate-small.png "Tripla captura de tela da página básica girar")](rotate-images/basicrotate-large.png#lightbox "tripla captura de tela da página girar básico")
 
 Com muita frequência, você desejará girar algo gira em torno de um ponto de corrente especificada usando estas versões dos [ `RotateDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/System.Single/System.Single/) e [ `RotateRadians` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/System.Single/System.Single/) métodos:
 
@@ -85,7 +86,7 @@ using (SKPaint textPaint = new SKPaint
 
 Agora o texto gira em torno do ponto usado para posicionar o texto, que é o centro da linha de base do texto horizontal:
 
-[![](rotate-images/centeredrotate-small.png "Captura de tela da página centralizada girar tripla")](rotate-images/centeredrotate-large.png "tripla captura de tela da página centralizada girar")
+[![](rotate-images/centeredrotate-small.png "Captura de tela da página centralizada girar tripla")](rotate-images/centeredrotate-large.png#lightbox "tripla captura de tela da página centralizada girar")
 
 Assim como ocorre com a versão centralizada a `Scale` método, a versão centralizada do `RotateDegrees` chamada é um atalho:
 
@@ -139,7 +140,7 @@ Conceitualmente, as duas transformações são aplicadas na ordem em vez de como
 
 Geralmente, há várias maneiras para combinar rotação e conversão. O **texto girado** página cria a exibição a seguir:
 
-[![](rotate-images/rotatedtext-small.png "Captura de tela da página de texto girado tripla")](rotate-images/rotatedtext-large.png "tripla captura de tela da página de texto girado")
+[![](rotate-images/rotatedtext-small.png "Captura de tela da página de texto girado tripla")](rotate-images/rotatedtext-large.png#lightbox "tripla captura de tela da página de texto girado")
 
 Aqui está o `PaintSurface` manipulador do [ `RotatedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) classe:
 
@@ -363,7 +364,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O relógio é certamente funcional, embora os ponteiros são bastante crua:
 
-[![](rotate-images/uglyanalogclock-small.png "Captura de tela da página de texto de relógio analógico feio tripla")](rotate-images/uglyanalogclock-large.png "Triple screenshot of the Ugly Analog page")
+[![](rotate-images/uglyanalogclock-small.png "Captura de tela da página de texto de relógio analógico feio tripla")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
 
 
 ## <a name="related-links"></a>Links relacionados

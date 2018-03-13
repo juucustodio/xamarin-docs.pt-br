@@ -3,16 +3,16 @@ title: "Introdução ao sugestões proativos"
 description: "Este artigo mostra como usar sugestões pró-ativo no aplicativo xamarin ao contrato de unidade, permitindo que o sistema proativamente apresentar informações úteis automaticamente para o usuário."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2762487d25befd15d8b57a002c5da4e9dcb15bb8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>Introdução ao sugestões proativos
 
@@ -63,7 +63,7 @@ Permite que o aplicativo contatos (e entre em contato com as informações relac
 
 ## <a name="ride-sharing-based-suggestions"></a>Sugestões baseadas em jornada de compartilhamento
 
-Se um aplicativo de compartilhamento jornada usa o [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 irá apresentá-lo como uma opção no alternador de aplicativo às vezes quando o usuário é provável que queira uma jornada. O aplicativo também deve ser registrado como um aplicativo de compartilhamento jornada especificando o `MKDirectionsModeRideShare` para o [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW33) chave em seu `Info.plist` arquivo.
+Se um aplicativo de compartilhamento jornada usa o [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 irá apresentá-lo como uma opção no alternador de aplicativo às vezes quando o usuário é provável que queira uma jornada. O aplicativo também deve ser registrado como um aplicativo de compartilhamento jornada especificando o `MKDirectionsModeRideShare` para o [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) chave em seu `Info.plist` arquivo.
 
 Se o aplicativo só dá suporte a jornada de compartilhamento, a sugestão de sistema começaria com *"Obter uma jornada para..."*, se houver suporte para outros tipos de roteamento direção (como Walking ou bicicleta), o sistema usará *"Obter o caminho para..."*
 
@@ -95,7 +95,7 @@ Todos esses recursos têm algo em comum, todos eles usarão `NSUserActivity` de 
 
 Como mencionado acima, `NSUserActivity` ajuda o sistema a entender as informações que o usuário estiver atualmente trabalhando na tela. `NSUserActivity` é um estado leve mecanismo para capturar a atividade do usuário, como eles navegam por meio do aplicativo de cache. Por exemplo, olhando para um aplicativo do restaurante:
 
-[ ![](proactive-suggestions-images/activity02.png "O estado de leve NSUserActivity mecanismo de cache")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "O estado de leve NSUserActivity mecanismo de cache")](proactive-suggestions-images/activity02.png#lightbox)
 
 Com as interações do seguintes:
 
@@ -105,7 +105,7 @@ Com as interações do seguintes:
 
 Analisar mais detalhadamente na última tela:
 
-[ ![](proactive-suggestions-images/activity03.png "Os detalhes de NSUserActivity")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "Os detalhes de NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 Aqui o aplicativo está criando um `NSUserActivity` e tenha sido populada com informações para recriar o estado mais tarde. O aplicativo também inclui alguns metadados, como o nome e o endereço do local. Com essa atividade criada, o aplicativo permite que iOS Saiba que representa o estado do usuário atual.
 
@@ -324,7 +324,7 @@ Interações de contato são implementadas no aplicativo usando `NSUserActivity`
 
 Dê uma olhada em como o aplicativo pode Doe interações:
 
-[ ![](proactive-suggestions-images/activity04.png "Visão geral de interações doação")](proactive-suggestions-images/activity04.png)
+[![](proactive-suggestions-images/activity04.png "Visão geral de interações doação")](proactive-suggestions-images/activity04.png#lightbox)
 
 O aplicativo cria um `INInteraction` objeto que contém um **intenção** (`INIntent`), **participantes** e **metadados**. O **intenção** representa uma ação do usuário, como fazer uma chamada de vídeo ou enviar uma mensagem de texto. O **participantes** incluem as pessoas que recebem a comunicação. O **metadados** define as informações de adição, como enviar com êxito a mensagem, etc.
 
@@ -334,7 +334,7 @@ Depois que a interação está completamente populada, chamar o `DonateInteracti
 
 Quando o usuário interage com o aplicativo de cartão de visita, a interação é agrupada com um `NSUserActivity`, que é usado para iniciar o aplicativo:
 
-[ ![](proactive-suggestions-images/activity05.png "A interação é agrupada com um NSUserActivity que é usado para iniciar o aplicativo")](proactive-suggestions-images/activity05.png)
+[![](proactive-suggestions-images/activity05.png "A interação é agrupada com um NSUserActivity que é usado para iniciar o aplicativo")](proactive-suggestions-images/activity05.png#lightbox)
 
 Observe o seguinte exemplo de uma tentativa de envio de mensagem:
 
@@ -449,7 +449,7 @@ Plano de fundo alguns Schema.org:
 - Há mais de 500 esquemas que representa vários conceitos disponíveis.
 - Por implementá-la no site, o desenvolvedor pode adquirir alguns dos benefícios do uso de `NSUserActivity` em um aplicativo nativo.
 
-Os esquemas são organizados em uma árvore como estrutura, onde específico tipos como *restaurante*, herdadas de tipos mais genéricos, como *comercial Local*. Para obter mais informações, consulte [Schema.org](#http://schema.org).
+Os esquemas são organizados em uma árvore como estrutura, onde específico tipos como *restaurante*, herdadas de tipos mais genéricos, como *comercial Local*. Para obter mais informações, consulte [Schema.org](http://schema.org).
 
 Por exemplo, se a página da web incluído os seguintes dados:
 

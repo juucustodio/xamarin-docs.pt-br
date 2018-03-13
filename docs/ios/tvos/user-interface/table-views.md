@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 26a73c2536bf4b4959928bfb27958b1a10734bf5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af562ac03f2cd5f293f99c7509000499ad5deaa4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-table-views"></a>Trabalhando com modos de exibição de tabela
 
@@ -22,7 +22,7 @@ TvOS, uma exibição de tabela é apresentada como uma única coluna de linhas q
 
 Modos de exibição de tabela geralmente são exibidos em um dos lados de uma [modo divisão](~/ios/tvos/user-interface/split-views.md) como navegação com os detalhes do item selecionado exibido no lado oposto:
 
-[ ![](table-views-images/intro01.png "Modo de exibição de tabela de exemplo")](table-views-images/intro01.png)
+[![](table-views-images/intro01.png "Modo de exibição de tabela de exemplo")](table-views-images/intro01.png#lightbox)
 
 <a name="About-Table-Views" />
 
@@ -30,7 +30,7 @@ Modos de exibição de tabela geralmente são exibidos em um dos lados de uma [m
 
 Um `UITableView` exibe uma única coluna de linhas roláveis como uma lista hierárquica de informações que podem opcionalmente ser organizadas em grupos de seções: 
 
-[ ![](table-views-images/table01.png "Um item selecionado")](table-views-images/table01.png)
+[![](table-views-images/table01.png "Um item selecionado")](table-views-images/table01.png#lightbox)
 
 Apple tem as seguintes sugestões para trabalhar com tabelas:
 
@@ -72,86 +72,86 @@ Para começar, faça o seguinte:
     
 1. No Visual Studio para Mac, inicie um novo projeto de aplicativo tvOS e selecione **tvOS** > **aplicativo** > **único aplicativo de exibição** e clique no  **Próxima** botão: 
 
-    [ ![](table-views-images/table02.png "Selecione o aplicativo de modo único")](table-views-images/table02.png)
+    [![](table-views-images/table02.png "Selecione o aplicativo de modo único")](table-views-images/table02.png#lightbox)
 1. Insira um **nome** para o aplicativo e clique **próximo**: 
 
-    [ ![](table-views-images/table03.png "Insira um nome para o aplicativo")](table-views-images/table03.png)
+    [![](table-views-images/table03.png "Insira um nome para o aplicativo")](table-views-images/table03.png#lightbox)
 1. O ajuste de **nome do projeto** e **nome da solução** ou aceite os padrões e clique no **criar** botão para criar a nova solução: 
 
-    [ ![](table-views-images/table04.png "O nome do projeto e solução")](table-views-images/table04.png)
+    [![](table-views-images/table04.png "O nome do projeto e solução")](table-views-images/table04.png#lightbox)
 1. No **solução preenchimento**, clique duas vezes o `Main.storyboard` arquivo para abri-lo no Designer de iOS: 
 
-    [ ![](table-views-images/table05.png "O arquivo Main.storyboard")](table-views-images/table05.png)
+    [![](table-views-images/table05.png "O arquivo Main.storyboard")](table-views-images/table05.png#lightbox)
 1. Selecione e exclua o **padrão View-Controller**: 
 
-    [ ![](table-views-images/table06.png "Selecione e exclua o controlador de exibição padrão")](table-views-images/table06.png)
+    [![](table-views-images/table06.png "Selecione e exclua o controlador de exibição padrão")](table-views-images/table06.png#lightbox)
 1. Selecione um **divisão View Controller** do **caixa de ferramentas** e arraste-o para a superfície de Design.
 1. Por padrão, você obterá um [modo divisão](~/ios/tvos/user-interface/split-views.md) com um **controlador de exibição de navegação** e um **tabela View Controller** no lado esquerdo e um **View Controller** no lado direito. Este é o uso sugerido da Apple de uma exibição de tabela em tvOS: 
 
-    [ ![](table-views-images/table08.png "Adicionar um modo de exibição de divisão")](table-views-images/table08.png)
+    [![](table-views-images/table08.png "Adicionar um modo de exibição de divisão")](table-views-images/table08.png#lightbox)
 1. Você precisará selecionar todas as partes da exibição de tabela e atribuir a ele um personalizado **nome da classe** no **Widget** guia do **propriedades Explorer** para que você pode acessá-lo mais tarde em c# código. Por exemplo, o **tabela View Controller**: 
 
-    [ ![](table-views-images/table09.png "Atribua um nome de classe")](table-views-images/table09.png)
+    [![](table-views-images/table09.png "Atribua um nome de classe")](table-views-images/table09.png#lightbox)
 1. Certifique-se de que você crie uma classe personalizada para o **controlador de exibição de tabela**, o **tabela exibição** e qualquer **protótipo células**. O Visual Studio para Mac adicionará as classes personalizadas para a árvore de projeto conforme eles são criados: 
 
-    [ ![](table-views-images/table10.png "As classes personalizadas na árvore do projeto")](table-views-images/table10.png)
+    [![](table-views-images/table10.png "As classes personalizadas na árvore do projeto")](table-views-images/table10.png#lightbox)
 1. Em seguida, selecione o modo de exibição de tabela na superfície de Design e ajuste suas propriedades, conforme necessário. Como o número de **protótipo células** e **estilo** (simples ou agrupado): 
 
-    [ ![](table-views-images/table11.png "A guia de widget")](table-views-images/table11.png)
+    [![](table-views-images/table11.png "A guia de widget")](table-views-images/table11.png#lightbox)
 1. Para cada **protótipo célula**, selecione-o e atribuir uma única **identificador** no **Widget** guia do **propriedades Explorer**. Esta etapa é _muito importante_ como esse identificador será necessário mais tarde ao popular a tabela. Por exemplo `AttrCell`: 
 
-    [ ![](table-views-images/table12.png "A guia de Widget")](table-views-images/table12.png)
+    [![](table-views-images/table12.png "A guia de Widget")](table-views-images/table12.png#lightbox)
 1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#Table-View-Cell-Types) via o **estilo** suspensa ou defina-a como **personalizado** e use a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário do **caixa de ferramentas**: 
 
-    [ ![](table-views-images/table13.png "O layout da célula")](table-views-images/table13.png)
+    [![](table-views-images/table13.png "O layout da célula")](table-views-images/table13.png#lightbox)
 1. Atribuir uma única **nome** para cada elemento de interface do usuário no design da célula de protótipo no **Widget** guia do **propriedades Explorer** para que você pode acessá-los mais tarde no código do c#: 
 
-    [ ![](table-views-images/table14.png "Atribua um nome")](table-views-images/table14.png)
+    [![](table-views-images/table14.png "Atribua um nome")](table-views-images/table14.png#lightbox)
 1. Repita a etapa acima para todas as células de protótipo na exibição de tabela.
 1. Em seguida, atribuir classes personalizadas para o restante do seu design de interface do usuário, a exibição de detalhes de layout e atribuir exclusivo **nomes** para cada elemento de interface do usuário nos detalhes da exibição para que você possa acessá-los em c#, bem. Por exemplo: 
 
-    [ ![](table-views-images/table15.png "O layout da interface do usuário")](table-views-images/table15.png)
+    [![](table-views-images/table15.png "O layout da interface do usuário")](table-views-images/table15.png#lightbox)
 1. Salve suas alterações para o Storyboard.
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
     
 1. No Visual Studio, iniciar um novo projeto de aplicativo tvOS e selecione **tvOS** > **único aplicativo de exibição** e digite um nome para seu aplicativo. Clique o **Okey** botão para criar uma nova solução: 
 
-    [ ![](table-views-images/table02-vs.png "Selecione o aplicativo de modo único")](table-views-images/table02-vs.png)
+    [![](table-views-images/table02-vs.png "Selecione o aplicativo de modo único")](table-views-images/table02-vs.png#lightbox)
 1. No **Solution Explorer**, clique duas vezes o `Main.storyboard` arquivo para abri-lo no Designer do iOS: 
 
-    [ ![](table-views-images/table05-vs.png "O arquivo Main.storyboard")](table-views-images/table05-vs.png)
+    [![](table-views-images/table05-vs.png "O arquivo Main.storyboard")](table-views-images/table05-vs.png#lightbox)
 1. Selecione e exclua o **padrão View-Controller**: 
 
-    [ ![](table-views-images/table06-vs.png "Selecione e exclua o controlador de exibição padrão")](table-views-images/table06-vs.png)
+    [![](table-views-images/table06-vs.png "Selecione e exclua o controlador de exibição padrão")](table-views-images/table06-vs.png#lightbox)
 1. Selecione um **divisão View Controller** do **caixa de ferramentas** e arraste-o para a superfície de Design: 
 
-    [ ![](table-views-images/table07-vs.png "Um controlador de exibição de divisão")](table-views-images/table07-vs.png)
+    [![](table-views-images/table07-vs.png "Um controlador de exibição de divisão")](table-views-images/table07-vs.png#lightbox)
 1. Por padrão, você obterá um [modo divisão](~/ios/tvos/user-interface/split-views.md) com um **controlador de exibição de navegação** e um **tabela View Controller** no lado esquerdo e um **View Controller** no lado direito. Este é o uso sugerido da Apple de uma exibição de tabela em tvOS: 
 
-    [ ![](table-views-images/table08-vs.png "Layout da interface do usuário")](table-views-images/table08-vs.png)
+    [![](table-views-images/table08-vs.png "Layout da interface do usuário")](table-views-images/table08-vs.png#lightbox)
 1. Você precisará selecionar todas as partes da exibição de tabela e atribuir a ele um personalizado **nome da classe** no **Widget** guia do **propriedades Explorer** para que você pode acessá-lo mais tarde em c# código. Por exemplo, o **tabela View Controller**: 
 
-    [ ![](table-views-images/table09-vs.png "A guia de Widget")](table-views-images/table09-vs.png)
+    [![](table-views-images/table09-vs.png "A guia de Widget")](table-views-images/table09-vs.png#lightbox)
 1. Certifique-se de que você crie uma classe personalizada para o **controlador de exibição de tabela**, o **tabela exibição** e qualquer **protótipo células**. O Visual Studio para Mac adicionará as classes personalizadas para a árvore de projeto conforme eles são criados: 
 
-    [ ![](table-views-images/table10-vs.png "As classes personalizadas na árvore do projeto")](table-views-images/table10-vs.png)
+    [![](table-views-images/table10-vs.png "As classes personalizadas na árvore do projeto")](table-views-images/table10-vs.png#lightbox)
 1. Em seguida, selecione o modo de exibição de tabela na superfície de Design e ajuste suas propriedades, conforme necessário. Como o número de **protótipo células** e **estilo** (simples ou agrupado): 
 
-    [ ![](table-views-images/table11-vs.png "A guia de Widget")](table-views-images/table11-vs.png)
+    [![](table-views-images/table11-vs.png "A guia de Widget")](table-views-images/table11-vs.png#lightbox)
 1. Para cada **protótipo célula**, selecione-o e atribuir uma única **identificador** no **Widget** guia do **propriedades Explorer**. Esta etapa é _muito importante_ como esse identificador será necessário mais tarde ao popular a tabela. Por exemplo `AttrCell`: 
 
-    [ ![](table-views-images/table12-vs.png "Atribua um identificador")](table-views-images/table12-vs.png)
+    [![](table-views-images/table12-vs.png "Atribua um identificador")](table-views-images/table12-vs.png#lightbox)
 1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#Table-View-Cell-Types) via o **estilo** suspensa ou defina-a como **personalizado** e use a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário do **caixa de ferramentas**: 
 
-    [ ![](table-views-images/table13-vs.png "Menu suspenso de estilo")](table-views-images/table13-vs.png)
+    [![](table-views-images/table13-vs.png "Menu suspenso de estilo")](table-views-images/table13-vs.png#lightbox)
 1. Atribuir uma única **nome** para cada elemento de interface do usuário no design da célula de protótipo no **Widget** guia do **propriedades Explorer** para que você pode acessá-los mais tarde no código do c#: 
 
-    [ ![](table-views-images/table14-vs.png "A guia de Widget")](table-views-images/table14-vs.png)
+    [![](table-views-images/table14-vs.png "A guia de Widget")](table-views-images/table14-vs.png#lightbox)
 1. Repita a etapa acima para todas as células de protótipo na exibição de tabela.
 1. Em seguida, atribuir classes personalizadas para o restante do seu design de interface do usuário, a exibição de detalhes de layout e atribuir exclusivo **nomes** para cada elemento de interface do usuário nos detalhes da exibição para que você possa acessá-los em c#, bem. Por exemplo: 
 
-    [ ![](table-views-images/table15.png "O Layout da interface do usuário")](table-views-images/table15.png)
+    [![](table-views-images/table15.png "O Layout da interface do usuário")](table-views-images/table15.png#lightbox)
 1. Salve suas alterações para o Storyboard.
     
 -----
@@ -168,13 +168,13 @@ Veja o exemplo de um aplicativo de reservas de viagem que contém uma lista de *
 
 Para criar o modelo de dados para um **atração**, com o botão direito no nome do projeto no **solução preenchimento** e selecione **adicionar** > **novo arquivo...** . Digite `AttractionInformation` para o **nome** e clique no **novo** botão: 
 
-[ ![](table-views-images/data01.png "Digite AttractionInformation para o nome")](table-views-images/data01.png)
+[![](table-views-images/data01.png "Digite AttractionInformation para o nome")](table-views-images/data01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Para criar o modelo de dados para um **atração**, com o botão direito no nome do projeto no **Solution Explorer** e selecione **adicionar** > **Novo Item ...** . Selecione **classe** e digite `AttractionInformation` para o **nome** e clique no **adicionar** botão: 
 
-[ ![](table-views-images/data01-vs.png "Selecione a classe e digite AttractionInformation para o nome")](table-views-images/data01-vs.png)
+[![](table-views-images/data01-vs.png "Selecione a classe e digite AttractionInformation para o nome")](table-views-images/data01-vs.png#lightbox)
 
 -----
 
@@ -216,13 +216,13 @@ Essa classe fornece as propriedades para armazenar as informações sobre um det
 
 Em seguida, clique no nome do projeto no **solução preenchimento** novamente e selecione **adicionar** > **novo arquivo...** . Digite `CityInformation` para o **nome** e clique no **novo** botão: 
 
-[ ![](table-views-images/data02.png "Digite CityInformation para o nome")](table-views-images/data02.png)
+[![](table-views-images/data02.png "Digite CityInformation para o nome")](table-views-images/data02.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Em seguida, clique no nome do projeto no **Solution Explorer** novamente e selecione **adicionar** > **Novo Item...** . Digite `CityInformation` para o **nome** e clique no **adicionar** botão: 
 
-[ ![](table-views-images/data02-vs.png "Digite CityInformation para o nome")](table-views-images/data02-vs.png)
+[![](table-views-images/data02-vs.png "Digite CityInformation para o nome")](table-views-images/data02-vs.png#lightbox)
 
 -----
 
@@ -733,7 +733,7 @@ Para obter mais informações sobre como trabalhar com um `UITableViewController
 
 Conforme mencionado no início deste documento, modos de exibição de tabela geralmente são exibidos em um dos lados de uma [modo divisão](~/ios/tvos/user-interface/split-views.md) como navegação com os detalhes do item selecionado exibido no lado oposto. Por exemplo: 
 
-[ ![](table-views-images/intro01.png "Aplicativo de exemplo executar")](table-views-images/intro01.png)
+[![](table-views-images/intro01.png "Aplicativo de exemplo executar")](table-views-images/intro01.png#lightbox)
 
 Como esse é um padrão em tvOS, vamos analisar as etapas finais para reunir tudo e ter os lados esquerdos e direito do modo divisão interagem entre si.
 
@@ -957,7 +957,7 @@ Este artigo abordou criando e trabalhando com modos de exibição de tabela dent
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)

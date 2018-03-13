@@ -4,14 +4,15 @@ description: "Consulte como determinar o tamanho da cadeia de caracteres de text
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a8cfac8911b1a8a13a4b6f149d02cd2f2c78453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1cb6b6fcd8a9d02910842eb3eba966fce281d977
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="integrating-text-and-graphics"></a>Integração de texto e elementos gráficos
 
@@ -113,7 +114,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Depois disso, o restante do método é direta. Ele cria outro `SKPaint` objeto de bordas e chamadas `DrawRoundRect` duas vezes. A segunda chamada usa um retângulo inflado outro 10 pixels. A primeira chamada especifica um raio de canto de 20 pixels. o segundo tem um raio de canto de 30 pixels, para que eles parecem ser paralela:
 
- [![](text-images/framedtext-small.png "Captura de tela da página de texto estruturado tripla")](text-images/framedtext-large.png "tripla captura de tela da página de texto estruturado")
+ [![](text-images/framedtext-small.png "Captura de tela da página de texto estruturado tripla")](text-images/framedtext-large.png#lightbox "tripla captura de tela da página de texto estruturado")
 
 Você pode ativar o seu telefone ou o simulador lado para ver o texto e o aumento do tamanho do quadro.
 
@@ -121,7 +122,7 @@ Se você precisar somente centralizar um texto na tela, você pode fazer isso ap
 
 Texto em si pode ser tratado como uma opção gráfica muito. É uma opção simple exibir a estrutura de tópicos de caracteres de texto em vez da exibição preenchida normal:
 
-[![](text-images/outlinedtext-small.png "Tripla captura de tela da página de texto apresentadas")](text-images/outlinedtext-large.png "tripla captura de tela da página de texto apresentadas")
+[![](text-images/outlinedtext-small.png "Tripla captura de tela da página de texto apresentadas")](text-images/outlinedtext-large.png#lightbox "tripla captura de tela da página de texto apresentadas")
 
 Isso é feito alterando o normal `Style` propriedade o `SKPaint` objeto da sua configuração padrão de `SKPaintStyle.Fill` para `SKPaintStyle.Stroke` e especificando uma largura do traço. O `PaintSurface` manipulador do **texto descritas** página mostra como isso é feito:
 

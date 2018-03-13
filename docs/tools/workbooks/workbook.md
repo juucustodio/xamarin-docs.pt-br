@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: bd53074fcde25736d37544efc719ecef1110c364
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="interactive-workbooks"></a>Pastas de trabalho interativas
 
@@ -30,7 +30,7 @@ Pastas de trabalho podem ser salvo e abertas novamente mais tarde no aplicativo.
 
 Janela de edição de código fornece conclusão de código, a coloração de sintaxe, embutido em tempo real de diagnóstico e suporte de instrução de várias linhas.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "Janela de edição de código fornece conclusão de código, a coloração de sintaxe, embutido em tempo real de diagnóstico e suporte de instrução de várias linhas")](workbook-images/inspector-0.6.0-repl.png)
+[ ![](workbook-images/inspector-0.6.0-repl-small.png "Janela de edição de código fornece conclusão de código, a coloração de sintaxe, embutido em tempo real de diagnóstico e suporte de instrução de várias linhas")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin pastas de trabalho são salvos em um `.workbook` arquivo, que é um arquivo de CommonMark com alguns metadados na parte superior (consulte [tipos de arquivo de pastas de trabalho](#Workbooks_Files_Types) para obter mais detalhes sobre como as pastas de trabalho podem ser salvos).
 

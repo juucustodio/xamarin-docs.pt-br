@@ -1,5 +1,5 @@
 ---
-title: "Localização"
+title: "Localização de Interface de usuário do aplicativo"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 38b74c9f50ac0b61eecaa952367d41ef6242e8ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 510e8a6b0b2839a1a191538e7fb4e49bd005b450
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="localization"></a>Localização
 
@@ -60,7 +60,7 @@ Cadeias de caracteres Alemanha (por exemplo) podem ser muito longos. às vezes, 
 
 Compare os comprimentos de cadeia de caracteres para alguns itens na tela inicial do iOS em inglês, alemão e japonês:
 
-[ ![](localization-images/language-compare-sml.png "Comprimento de cadeia de caracteres japoneses vs alemão")](localization-images/language-compare.png)
+[![](localization-images/language-compare-sml.png "Comprimento de cadeia de caracteres japoneses vs alemão")](localization-images/language-compare.png#lightbox)
 
 Observe que **configurações** em inglês (8 caracteres) requer 13 caracteres para a tradução para o alemão, mas só 2 caracteres em japonês.
 
@@ -264,13 +264,16 @@ Ou, mais precisamente, não reutilize cadeias de caracteres apenas porque eles s
 
 Por exemplo: imagine que você tem uma chave liga/desliga em seu aplicativo e o controle de comutador precisa o texto para 'em' e 'off' a ser localizada. Também é exibir o valor de configuração em outro lugar no aplicativo em um rótulo de texto. Você deve usar cadeias de caracteres diferentes para a exibição de comutador em comparação com o status do comutador (mesmo se eles forem a mesma cadeia de caracteres em seu idioma padrão) – por exemplo:
 
-• "On" – exibidos no switch • "Desativado" – exibido switch • "On" – exibido em um rótulo • "Desativado" exibido em um rótulo
+-   "Em" – exibido no switch
+-   "Off" – exibidas no switch
+-   "Em" – exibido em um rótulo
+-   "Off" – exibidas em um rótulo
 
 Isso proporciona flexibilidade máxima para o conversor:
 
-• Por razões de design, talvez o próprio switch usa minúsculas "on" e "desativado" mas o rótulo de exibição usa letras maiusculas "On" e "Desativado".
-• Alguns idiomas, talvez seja necessário o valor da opção deve ser abreviado para caber no controle de interface do usuário, enquanto a completar palavra (traduzida) pode aparecer no rótulo.
-• Como alternativa, para alguns idiomas, o processamento de seu comutador pode ser usar "I" e "O" para familiaridade cultura, mas ainda poderá ser necessário o rótulo a ser lido "On" ou "Off".
+-   Por razões de design, talvez o próprio switch usa minúsculas "on" e "desativado" mas o rótulo de exibição usa letras maiusculas "On" e "Desativado".
+-   Alguns idiomas talvez seja necessário que o valor da opção deve ser abreviado para caber no controle de interface do usuário, enquanto a completar palavra (traduzida) pode aparecer no rótulo.
+-   Como alternativa, para alguns idiomas o processamento de seu comutador pode ser usar "I" e "O" para familiaridade cultura, mas ainda poderá ser necessário o rótulo a ser lido "On" ou "Off".
 
 <!--
 # Testing
@@ -307,28 +310,24 @@ or
 
 When you are testing on the emulator, you can navigate using the settings app as above, or you can reset the locale using the ADB tool command. Using Command Prompt on Windows or Terminal on OS X, start `adb shell` then send commands to set the emulator’s locale. **adb** can usually be found on the Mac in `/Users/YOURNAME/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb`
 
-###Spanish (Mexico)
+### Spanish (Mexico)
 setprop persist.sys.language es;setprop persist.sys.country MX;stop;sleep 5;start
 
-###French (France)
+### French (France)
 setprop persist.sys.language fr;setprop persist.sys.country FR;stop;sleep 5;start
 
-###Japanese (Japan)
+### Japanese (Japan)
 setprop persist.sys.language ja;setprop persist.sys.country JP;stop;sleep 5;start
 
-###Portuguese (Brazil)
+### Portuguese (Brazil)
 setprop persist.sys.language pt;setprop persist.sys.country BR;stop;sleep 5;start
 
-###English (USA)
+### English (USA)
 setprop persist.sys.language en;setprop persist.sys.country US;stop;sleep 5;start
 
 **TIP:** the default location of ADB on Mac OS X is
 `/Users/[USERNAME]/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb shell`
 
-
-## Windows Phone
-
-Refer to Microsoft’s instructions for [How to test region settings for Windows Phone Emulator](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh394014(v=vs.105).aspx).
 -->
 
 
@@ -336,13 +335,16 @@ Refer to Microsoft’s instructions for [How to test region settings for Windows
 
 #### <a name="machine-translation"></a>Tradução automática
 
-Para testes é podem ajudar a usar uma das diversas ferramentas de tradução online para incluir algum texto localizado em seu aplicativo durante o desenvolvimento.
+Para criar recursos de conversão em seu aplicativo, considere o [API do Azure conversor texto](https://azure.microsoft.com/en-au/services/cognitive-services/translator-text-api/).
 
-- [Bing Translator](https://www.bing.com/translator/) <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
+Para fins de teste, você pode usar uma das diversas ferramentas de tradução online para incluir um texto localizado em seu aplicativo durante o desenvolvimento:
 
-- [Traduzir do Google](http://translate.google.com)
+- [Bing Translator](https://www.bing.com/translator/)
+- [Traduzir do Google](http://translate.google.com/)
 
 Há muitas outras disponíveis. A qualidade da tradução automática geralmente não é considerada bom o bastante lançar um aplicativo sem primeiro sendo revisado e testado por tradutores professional ou alto-falantes nativos.
+
+ <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
 
 #### <a name="professional-translation"></a>Tradução profissional
 

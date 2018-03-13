@@ -8,15 +8,15 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
-ms.openlocfilehash: b6054b4037b14a73cb5bfe50b619e805fdcf1737
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: caee0d685838f7c0a54e19611fdf72df5730c037
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Criar aplicativos móveis com a edição de primeiro do catálogo xamarin. Forms
 
-<p><img src="Images/Cover-sml.png" title="Criando aplicativos móveis com o catálogo de xamarin. Forms" align="left"/>Catálogo de mais recente de Charles Petzold - <i>criação de aplicativos móveis com o xamarin. Forms</i> - foi enviada para pressionar (eletrônico) e agora está disponível para download!</p>
+<p><img src="Images/Cover-sml.png" title="Criando aplicativos móveis com o catálogo de xamarin. Forms" align="left" />Catálogo de mais recente de Charles Petzold - <i>criação de aplicativos móveis com o xamarin. Forms</i> - foi enviada para pressionar (eletrônico) e agora está disponível para download!</p>
 
 Isso *primeira edição* tem 27 capítulos e abrange xamarin. Forms&nbsp;2. x, incluindo animação, MVVM, gatilhos, comportamentos, layouts personalizados, processadores personalizados e muito mais.
 Capítulo 28 agora também está disponível online entre os capítulos individuais listados abaixo.

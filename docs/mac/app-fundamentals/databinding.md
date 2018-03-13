@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 2c01a36eabb15fbe9b975c91328dfa7cfd651896
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: b7ffd069a8c99c2cdfd0ecb58fe7ef762e5a46f3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="data-binding-and-key-value-coding"></a>Associação de dados e a codificação de chave-valor
 
@@ -24,7 +24,7 @@ Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, você tem acesso par
 
 Usando técnicas de associação em seu aplicativo Xamarin.Mac de dados e codificação de chave-valor, você pode diminuir significativamente a quantidade de código que você precisa escrever e manter para preencher e trabalhar com elementos de interface do usuário. Você também tem a vantagem de desligamento ainda mais seus dados de backup (_modelo de dados_) do seu front end Interface do usuário (_Model-View-Controller_), à esquerda para mais fáceis de manter, mais flexível de aplicativos Design.
 
-[![Um exemplo de aplicativo em execução](databinding-images/intro01.png "um exemplo de aplicativo em execução")](databinding-images/intro01-large.png)
+[![Um exemplo de aplicativo em execução](databinding-images/intro01.png "um exemplo de aplicativo em execução")](databinding-images/intro01-large.png#lightbox)
 
 Neste artigo, vamos abordar os fundamentos de trabalhar com codificação de chave-valor e associação de dados em um aplicativo Xamarin.Mac. É altamente recomendável que você leia o [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, especificamente o [Introdução ao construtor da Interface e Xcode](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [tomadas e ações](~/mac/get-started/hello-mac.md#Outlets_and_Actions) seções, como ele aborda os principais conceitos e técnicas que será usado neste artigo.
 
@@ -421,7 +421,7 @@ Com o modelo de dados definidas, vamos examinar um exemplo simples de associaç�
 
 Primeiro, vamos adicionar um novo **View Controller** para nosso **Main.storyboard** no construtor de Interface e nome de sua classe `SimpleViewController`: 
 
-[![Adicionar um novo controlador de exibição](databinding-images/simple01.png "adicionando um novo controlador de exibição")](databinding-images/simple01-large.png)
+[![Adicionar um novo controlador de exibição](databinding-images/simple01.png "adicionando um novo controlador de exibição")](databinding-images/simple01-large.png#lightbox)
 
 Em seguida, retorne ao Visual Studio para Mac, edite o **SimpleViewController.cs** arquivo (que foi adicionado automaticamente ao nosso projeto) e expor uma instância das `PersonModel` que será nosso formulário de associação de dados. Adicione o seguinte código:
 
@@ -461,27 +461,27 @@ public override void ViewDidLoad ()
 
 Agora, precisamos criar nosso formulário, clique duas vezes o **Main.storyboard** arquivo para abri-lo para edição no construtor de Interface. Layout de formulário para a seguinte aparência:
 
-[![Editando o storyboard no Xcode](databinding-images/simple02.png "editando o storyboard no Xcode")](databinding-images/simple02-large.png)
+[![Editando o storyboard no Xcode](databinding-images/simple02.png "editando o storyboard no Xcode")](databinding-images/simple02-large.png#lightbox)
 
 Para vincular dados do formulário para o `PersonModel` que é exposto por meio de `Person` chave, faça o seguinte:
 
 1. Selecione o **nome de funcionário** campo de texto e alternar para o **Inspetor associações**.
 2. Verifique o **associar a** caixa e selecione **simples View Controller** na lista suspensa. Em seguida digite `self.Person.Name` para o **caminho de chave**: 
 
-    [![Inserir o caminho da chave](databinding-images/simple03.png "digitando o caminho da chave")](databinding-images/simple03-large.png)
+    [![Inserir o caminho da chave](databinding-images/simple03.png "digitando o caminho da chave")](databinding-images/simple03-large.png#lightbox)
 3. Selecione o **ocupação** campo de texto e verifique se o **associar a** caixa e selecione **simples View Controller** na lista suspensa. Em seguida digite `self.Person.Occupation` para o **caminho de chave**:  
 
-    [![Inserir o caminho da chave](databinding-images/simple04.png "digitando o caminho da chave")](databinding-images/simple04-large.png)
+    [![Inserir o caminho da chave](databinding-images/simple04.png "digitando o caminho da chave")](databinding-images/simple04-large.png#lightbox)
 4. Selecione o **funcionário for um gerente** caixa de seleção e verifique o **associar a** caixa e selecione **simples View Controller** na lista suspensa. Em seguida digite `self.Person.isManager` para o **caminho de chave**:  
 
-    [![Inserir o caminho da chave](databinding-images/simple05.png "digitando o caminho da chave")](databinding-images/simple05-large.png)
+    [![Inserir o caminho da chave](databinding-images/simple05.png "digitando o caminho da chave")](databinding-images/simple05-large.png#lightbox)
 5. Selecione o **número de funcionários gerenciados** campo de texto e verifique se o **associar a** caixa e selecione **simples View Controller** na lista suspensa. Em seguida digite `self.Person.NumberOfEmployees` para o **caminho de chave**:  
 
-    [![Inserir o caminho da chave](databinding-images/simple06.png "digitando o caminho da chave")](databinding-images/simple06-large.png)
+    [![Inserir o caminho da chave](databinding-images/simple06.png "digitando o caminho da chave")](databinding-images/simple06-large.png#lightbox)
 6. Se o funcionário não for um gerente, queremos ocultar o número de funcionários gerenciados rótulo e o campo de texto.
 7. Selecione o **número de funcionários gerenciados** rótulo, expanda o **Hidden** turndown e verifique se o **associar a** caixa e selecione **simples View Controller** na lista suspensa. Em seguida digite `self.Person.isManager` para o **caminho de chave**:  
 
-    [![Inserir o caminho da chave](databinding-images/simple07.png "digitando o caminho da chave")](databinding-images/simple07-large.png)
+    [![Inserir o caminho da chave](databinding-images/simple07.png "digitando o caminho da chave")](databinding-images/simple07-large.png#lightbox)
 8. Selecione `NSNegateBoolean` do **valor transformador** suspensa:  
 
     ![Selecionar a transformação de chave NSNegateBoolean](databinding-images/simple08.png "selecionando a transformação de chave NSNegateBoolean")
@@ -491,11 +491,11 @@ Para vincular dados do formulário para o `PersonModel` que é exposto por meio 
 
 Se você executar o aplicativo, os valores da `Person` propriedade preencherá automaticamente o formulário:
 
-[![Mostrando um formulário preenchido automaticamente](databinding-images/simple09.png "mostrando um formulário preenchido automaticamente")](databinding-images/simple09-large.png)
+[![Mostrando um formulário preenchido automaticamente](databinding-images/simple09.png "mostrando um formulário preenchido automaticamente")](databinding-images/simple09-large.png#lightbox)
 
 As alterações que faz com que os usuários para o formulário serão gravadas de volta para o `Person` propriedade no controlador de exibição. Por exemplo, se **funcionário é um Gerenciador de** atualizações a `Person` instância do nosso `PersonModel` e **número de funcionários gerenciados** rótulo e o campo de texto estão ocultos automaticamente (por meio de associação de dados):
 
-[![Ocultando o número de funcionários não gerentes de](databinding-images/simple10.png "ocultando o número de funcionários não gerentes")](databinding-images/simple10-large.png)
+[![Ocultando o número de funcionários não gerentes de](databinding-images/simple10.png "ocultando o número de funcionários não gerentes")](databinding-images/simple10-large.png#lightbox)
 
 <a name="Table_View_Data_Binding" />
 
@@ -505,7 +505,7 @@ Agora que temos os fundamentos da associação de dados fora do caminho, vamos d
 
 Primeiro, vamos adicionar um novo **View Controller** para nosso **Main.storyboard** no construtor de Interface e nome de sua classe `TableViewController`:
 
-[![Adicionar um novo controlador de exibição](databinding-images/table01.png "adicionando um novo controlador de exibição")](databinding-images/table01-large.png)
+[![Adicionar um novo controlador de exibição](databinding-images/table01.png "adicionando um novo controlador de exibição")](databinding-images/table01-large.png#lightbox)
 
 Em seguida, vamos editar o **TableViewController.cs** arquivo (que foi adicionado automaticamente ao nosso projeto) e expõe uma matriz (`NSArray`) de `PersonModel` classes que será nosso formulário de associação de dados. Adicione o seguinte código:
 
@@ -572,7 +572,7 @@ public override void AwakeFromNib ()
 
 Agora, precisamos criar nossa tabela de exibição, clique duas vezes o **Main.storyboard** arquivo para abri-lo para edição no construtor de Interface. Layout de tabela para a seguinte aparência:
 
-[![Layout de um novo modo de exibição de tabela](databinding-images/table02.png "dispor um novo modo de exibição de tabela")](databinding-images/table02-large.png)
+[![Layout de um novo modo de exibição de tabela](databinding-images/table02.png "dispor um novo modo de exibição de tabela")](databinding-images/table02-large.png#lightbox)
 
 Precisamos adicionar um **controlador de matriz** para fornecer os dados associados à nossa tabela, faça o seguinte:
 
@@ -581,7 +581,7 @@ Precisamos adicionar um **controlador de matriz** para fornecer os dados associa
     ![Selecionar um controlador de matriz da biblioteca](databinding-images/table03.png "selecionando um controlador de matriz da biblioteca")
 2. Selecione **controlador de matriz** no **hierarquia Interface** e alterne para o **Inspetor de atributo**:  
 
-    [![Selecionando o Inspetor de atributos](databinding-images/table04.png "selecionando o Inspetor de atributos")](databinding-images/table04-large.png)
+    [![Selecionando o Inspetor de atributos](databinding-images/table04.png "selecionando o Inspetor de atributos")](databinding-images/table04-large.png#lightbox)
 3. Digite `PersonModel` para o **nome da classe**, clique no **mais** botão e adicione três chaves. Nomeá-los `Name`, `Occupation` e `isManager`:  
 
     ![Adicionando os caminhos de chaves necessários](databinding-images/table05.png "adicionando os caminhos de chave necessários")
@@ -595,22 +595,22 @@ Agora é preciso associar nossa tabela de exibição para o controlador de matri
 
 1. Selecione o modo de exibição de tabela e o **associação Inspetor**:  
 
-    [![Selecionando o Inspetor de associação](databinding-images/table07.png "selecionando o Inspetor de associação")](databinding-images/table07-large.png)
+    [![Selecionando o Inspetor de associação](databinding-images/table07.png "selecionando o Inspetor de associação")](databinding-images/table07-large.png#lightbox)
 2. Sob o **sumário** turndown, selecione **associar a** e **controlador de matriz**. Digite `arrangedObjects` para o **chave controlador** campo:  
 
     ![Definir a chave de controlador](databinding-images/table08.png "definindo a chave do controlador")
 3. Selecione o **célula de exibição de tabela** sob o **funcionário** coluna. No **Inspetor associações** sob o **valor** turndown, selecione **associar a** e **exibição de célula de tabela**. Digite `objectValue.Name` para o **caminho da chave do modelo**:  
 
-    [![Definir o caminho da chave modelo](databinding-images/table09.png "definindo o caminho da chave de modelo")](databinding-images/table09-large.png)
+    [![Definir o caminho da chave modelo](databinding-images/table09.png "definindo o caminho da chave de modelo")](databinding-images/table09-large.png#lightbox)
 4. `objectValue` é o atual `PersonModel` na matriz que está sendo gerenciada pelo controlador de matriz.
 5. Selecione o **célula de exibição de tabela** sob o **ocupação** coluna. No **Inspetor associações** sob o **valor** turndown, selecione **associar a** e **exibição de célula de tabela**. Digite `objectValue.Occupation` para o **caminho da chave do modelo**:  
 
-    [![Definir o caminho da chave modelo](databinding-images/table10.png "definindo o caminho da chave de modelo")](databinding-images/table10-large.png)
+    [![Definir o caminho da chave modelo](databinding-images/table10.png "definindo o caminho da chave de modelo")](databinding-images/table10-large.png#lightbox)
 6. Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
 Se o aplicativo é executado, a tabela será preenchida com a matriz de `PersonModels`:
 
-[![Executando o aplicativo](databinding-images/table11.png "executando o aplicativo")](databinding-images/table11-large.png)
+[![Executando o aplicativo](databinding-images/table11.png "executando o aplicativo")](databinding-images/table11-large.png#lightbox)
 
 <a name="Outline_View_Data_Binding" />
 
@@ -620,7 +620,7 @@ associação de dados em uma exibição de estrutura de tópicos é muito semelh
 
 Primeiro, vamos adicionar um novo **View Controller** para nosso **Main.storyboard** no construtor de Interface e nome de sua classe `OutlineViewController`: 
 
-[![Adicionar um novo controlador de exibição](databinding-images/outline01.png "adicionando um novo controlador de exibição")](databinding-images/outline01-large.png)
+[![Adicionar um novo controlador de exibição](databinding-images/outline01.png "adicionando um novo controlador de exibição")](databinding-images/outline01-large.png#lightbox)
 
 Em seguida, vamos editar o **OutlineViewController.cs** arquivo (que foi adicionado automaticamente ao nosso projeto) e expõe uma matriz (`NSArray`) de `PersonModel` classes que será nosso formulário de associação de dados. Adicione o seguinte código:
 
@@ -690,7 +690,7 @@ public override void AwakeFromNib ()
 
 Agora, precisamos criar nossa modo de exibição de estrutura de tópicos, clique duas vezes o **Main.storyboard** arquivo para abri-lo para edição no construtor de Interface. Layout de tabela para a seguinte aparência:
 
-[![Criando o modo de exibição de estrutura de tópicos](databinding-images/outline02.png "criar o modo de exibição de estrutura de tópicos")](databinding-images/outline02-large.png)
+[![Criando o modo de exibição de estrutura de tópicos](databinding-images/outline02.png "criar o modo de exibição de estrutura de tópicos")](databinding-images/outline02-large.png#lightbox)
 
 Precisamos adicionar um **árvore controlador** para fornecer os dados associados ao nosso esboço, faça o seguinte:
 
@@ -699,7 +699,7 @@ Precisamos adicionar um **árvore controlador** para fornecer os dados associado
     ![Selecionar um controlador de árvore da biblioteca](databinding-images/outline03.png "selecionando um controlador de árvore da biblioteca")
 2. Selecione **árvore controlador** no **hierarquia Interface** e alterne para o **Inspetor de atributo**:  
 
-    [![Selecionando o Inspetor de atributo](databinding-images/outline04.png "selecionando o Inspetor de atributo")](databinding-images/outline04-large.png)
+    [![Selecionando o Inspetor de atributo](databinding-images/outline04.png "selecionando o Inspetor de atributo")](databinding-images/outline04-large.png#lightbox)
 3. Digite `PersonModel` para o **nome da classe**, clique no **mais** botão e adicione três chaves. Nomeá-los `Name`, `Occupation` e `isManager`:  
 
     ![Adicionando os caminhos de chaves necessários](databinding-images/outline05.png "adicionando os caminhos de chave necessários")
@@ -717,22 +717,22 @@ Agora, precisamos ligação nosso modo de estrutura de tópicos com o controle d
 
 1. Selecione o modo de exibição de estrutura de tópicos e no **Inspetor associação** selecione:  
 
-    [![Selecionando o Inspetor de associação](databinding-images/outline07.png "selecionando o Inspetor de associação")](databinding-images/outline07-large.png)
+    [![Selecionando o Inspetor de associação](databinding-images/outline07.png "selecionando o Inspetor de associação")](databinding-images/outline07-large.png#lightbox)
 2. Sob o **exibir conteúdo da estrutura de tópicos** turndown, selecione **associar a** e **árvore controlador**. Digite `arrangedObjects` para o **chave controlador** campo:  
 
     ![Definindo a chave de controlador](databinding-images/outline08.png "definindo a chave do controlador")
 3. Selecione o **célula de exibição de tabela** sob o **funcionário** coluna. No **Inspetor associações** sob o **valor** turndown, selecione **associar a** e **exibição de célula de tabela**. Digite `objectValue.Name` para o **caminho da chave do modelo**:  
 
-    [![Inserir o caminho da chave modelo](databinding-images/outline09.png "inserindo o caminho de chave do modelo")](databinding-images/outline09-large.png)
+    [![Inserir o caminho da chave modelo](databinding-images/outline09.png "inserindo o caminho de chave do modelo")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue` é o atual `PersonModel` na matriz que está sendo gerenciada pelo controlador de árvore.
 5. Selecione o **célula de exibição de tabela** sob o **ocupação** coluna. No **Inspetor associações** sob o **valor** turndown, selecione **associar a** e **exibição de célula de tabela**. Digite `objectValue.Occupation` para o **caminho da chave do modelo**:  
 
-    [![Inserir o caminho da chave modelo](databinding-images/outline10.png "inserindo o caminho de chave do modelo")](databinding-images/outline10-large.png)
+    [![Inserir o caminho da chave modelo](databinding-images/outline10.png "inserindo o caminho de chave do modelo")](databinding-images/outline10-large.png#lightbox)
 6. Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
 Se o aplicativo é executado, a estrutura de tópicos será preenchida com nosso conjunto de `PersonModels`:
 
-[![Executando o aplicativo](databinding-images/outline11.png "executando o aplicativo")](databinding-images/outline11-large.png)
+[![Executando o aplicativo](databinding-images/outline11.png "executando o aplicativo")](databinding-images/outline11-large.png#lightbox)
 
 ### <a name="collection-view-data-binding"></a>Associação de dados de exibição de coleção
 
@@ -860,7 +860,7 @@ For more information on working with Collection Views, please see our [Collectio
 
 Cometer um erro em suas associações de dados pode resultar em uma _falhas nativo_ em código não gerenciado e fazer com que seu aplicativo Xamarin.Mac completamente falhe com um `SIGABRT` erro:
 
-[![Exemplo de uma caixa de diálogo Falha nativo](databinding-images/debug01.png "exemplo de uma caixa de diálogo Falha nativo")](databinding-images/debug01-large.png)
+[![Exemplo de uma caixa de diálogo Falha nativo](databinding-images/debug01.png "exemplo de uma caixa de diálogo Falha nativo")](databinding-images/debug01-large.png#lightbox)
 
 Normalmente há quatro causas principais para nativo falhas durante a associação de dados:
 
@@ -873,15 +873,15 @@ Normalmente há quatro causas principais para nativo falhas durante a associaç�
 
 Vamos causa uma falha de nativo em nossa associação de dados, para que possa mostrar como localizar e corrigi-lo. No construtor de Interface, vamos alterar nossa associação do primeiro rótulo no exemplo a exibição de coleção do `Name` para `Title`:
 
-[![Editar a chave de associação](databinding-images/debug02.png "editando a chave de associação")](databinding-images/debug02-large.png)
+[![Editar a chave de associação](databinding-images/debug02.png "editando a chave de associação")](databinding-images/debug02-large.png#lightbox)
 
 Vamos salvar a alteração, retorne ao Visual Studio para Mac sincronizar com o Xcode e executar o nosso aplicativo. Quando o modo de exibição de coleção é exibido, o aplicativo momentaneamente falhará com um `SIGABRT` erro (conforme mostrado no **saída do aplicativo** no Visual Studio para Mac) desde o `PersonModel` não expõe uma propriedade com a chave `Title`:
 
-[![Exemplo de um erro de associação](databinding-images/debug03.png "exemplo de um erro de associação")](databinding-images/debug03-large.png)
+[![Exemplo de um erro de associação](databinding-images/debug03.png "exemplo de um erro de associação")](databinding-images/debug03-large.png#lightbox)
 
 Se podemos rolar para o início do erro no **saída do aplicativo** podemos ver a chave para solucionar o problema:
 
-[![Encontrando o problema no log de erros](databinding-images/debug04.png "encontrando o problema no log de erros")](databinding-images/debug04-large.png)
+[![Encontrando o problema no log de erros](databinding-images/debug04.png "encontrando o problema no log de erros")](databinding-images/debug04-large.png#lightbox)
 
 Esta linha está dizendo que a chave `Title` não existe no objeto que estamos ligando. Se podemos alterar a associação de volta para `Name` no construtor de Interface, salvar, sincronização, recriar e executado, o aplicativo será executado como esperado sem problemas.
 

@@ -3,14 +3,15 @@ title: "Resumo do capítulo 21. Transformações"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 378ce3fb39cfb5c42d5ec7611415f5420146a9cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumo do capítulo 21. Transformações
 
@@ -49,7 +50,7 @@ O [ **TranslationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 Um uso comum de propriedades de conversão é Deslocar um pouco a renderização de texto. Isso é demonstrado no [ **TextOffsets** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets) exemplo:
 
-[![Captura de tela tripla de deslocamentos de texto](images/ch21fg03-small.png "texto desloca")](images/ch21fg03-large.png "deslocamentos de texto")
+[![Captura de tela tripla de deslocamentos de texto](images/ch21fg03-small.png "texto desloca")](images/ch21fg03-large.png#lightbox "deslocamentos de texto")
 
 Outro efeito é processar várias cópias de um `Label` se pareça com um bloco 3D, como demonstrado no [ **BlockText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText) exemplo.
 
@@ -101,7 +102,7 @@ O [ **MinimalBoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samp
 
 O [ **BoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock) usa `BoxView` para gráficos mais amplo, incluindo escala marca ao redor de face do relógio e encaminha ou girar uma pequena distância de suas extremidades:
 
-[![Captura de tela tripla do relógio BoxView](images/ch21fg17-small.png "Face do relógio analógico")](images/ch21fg17-large.png "Face do relógio analógico")
+[![Captura de tela tripla do relógio BoxView](images/ch21fg17-small.png "Face do relógio analógico")](images/ch21fg17-large.png#lightbox "Face do relógio analógico")
 
 Além de um [ `SecondBackEaseConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) classe em **Xamarin.FormsBook.Toolkit** faz com que o segundo mão apareça retroceder um pouco antes de Avançar e, em seguida, Voltar na posição correta.
 

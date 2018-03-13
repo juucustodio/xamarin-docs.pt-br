@@ -7,18 +7,17 @@ ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 84ef87f5ed84fcd0a9aa2504c52a0fec17404e1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="troubleshooting-bindings"></a>Solucionando problemas de associações
 
 _Este artigo resume vários erros comuns que podem ocorrer durante a geração de associações, junto com as possíveis causas e as maneiras sugeridas para resolvê-los._
 
-<a name="OVERVIEW" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -38,7 +37,6 @@ Depois de habilitar a saída de diagnóstico, recompile o projeto de associaçã
 
 Também podem ser úteis descompilar biblioteca do Android e examinar os tipos e métodos xamarin está tentando associar. Isso é abordado em mais detalhes posteriormente neste guia.
 
-<a name="DECOMPILING_AN_ANDROID_LIBRARY" />
 
 ## <a name="decompiling-an-android-library"></a>Decompilar uma biblioteca Android
 
@@ -59,9 +57,8 @@ Depois de você ter descompilado biblioteca do Android, examine o código-fonte.
 - **`import` instruções para bibliotecas não referenciadas** &ndash; identificar a biblioteca não referenciada e adicionar essas dependências para o projeto de associação xamarin com um **ação de compilação** de **ReferenceJar**  ou **EmbedddedReferenceJar**.
 
 > [!NOTE]
-> **Observação:** decompilar uma biblioteca Java pode ser proibido ou sujeito a restrições legais com base em leis locais ou a licença sob a qual a biblioteca Java foi publicada. Se necessário, inscrever-se os serviços de um profissional legal antes de tentar descompilar uma biblioteca Java e inspecione o código-fonte.
+> Decompilar uma biblioteca Java pode ser proibido ou sujeito a restrições legais com base em leis locais ou a licença sob a qual a biblioteca Java foi publicada. Se necessário, inscrever-se os serviços de um profissional legal antes de tentar descompilar uma biblioteca Java e inspecione o código-fonte.
 
-<a name="INSPECTING_API_XML" />
 
 ## <a name="inspect-apixml"></a>Inspecione a API. XML
 
@@ -71,19 +68,16 @@ Como parte da criação de um projeto de associação, xamarin irá gerar um nom
 
 Esse arquivo fornece uma lista de todas as APIs de Java que xamarin está tentando associar. O conteúdo deste arquivo pode ajudar a identificar tipos ou métodos ausentes, associação duplicada. Embora a inspeção deste arquivo é entediante e demorado, ele pode fornecer para encontrar pistas sobre o que pode estar causando problemas de associação. Por exemplo, **api.xml** poderia revelar que uma propriedade está retornando um tipo inadequado ou que há dois tipos que compartilham o mesmo nome gerenciado.
 
-<a name="KNOWN_ISSUES" />
 
 ## <a name="known-issues"></a>Problemas Conhecidos
 
 Esta seção lista alguns dos sintomas ou mensagens de erro comuns que meu ocorrer ao tentar vincular uma biblioteca Android.
 
-<a name="PROBLEM_JAVA_VERSION_MISMATCH" />
 
 ### <a name="problem-java-version-mismatch"></a>Problema: Incompatibilidade de versão de Java
 
 Às vezes, tipos não serão gerados ou falhas inesperadas podem ocorrer porque você estiver usando uma versão mais antiga ou mais recente do Java em comparação com o que a biblioteca foi compilada. Recompile a biblioteca Android com a mesma versão do JDK que seu projeto xamarin está usando.
 
-<a name="PROBLEM_AT_LEAST_ONE_JAVA_LIBRARY_IS_REQUIRED" />
 
 ### <a name="problem-at-least-one-java-library-is-required"></a>Problema: pelo menos uma biblioteca de Java é necessária
 
@@ -93,7 +87,6 @@ Você receberá o erro "pelo menos uma biblioteca de Java é necessária,", embo
 
 Verifique se a ação de compilação é definida como `EmbeddedJar`. Como existem várias ações de compilação para. Arquivos JAR (como `InputJar`, `EmbeddedJar`, `ReferenceJar` e `EmbeddedReferenceJar`), o gerador de associação não é possível adivinhar qual delas usar por padrão. Para obter mais informações sobre ações de compilação, consulte [criar ações](~/android/platform/binding-java-library/index.md).
 
-<a name="PROBLEM_BINDING_TOOLS_CANNOT_LOAD_THE_JAR_LIBRARY" />
 
 ### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problema: Ferramentas de associação não é possível carregar o. Biblioteca JAR
 
@@ -104,7 +97,6 @@ O gerador de biblioteca de ligação Falha ao carregar o. Biblioteca JAR.
 Alguns. Não não possível carregar bibliotecas JAR que usam ofuscação de código (por meio de ferramentas como o Proguard) pelas ferramentas de Java. Desde que a nossa ferramenta faz uso da reflexão Java e o código de bytes do ASM biblioteca de engenharia, essas ferramentas dependentes podem rejeitar as bibliotecas ofuscadas enquanto as ferramentas de tempo de execução Android podem passar. A solução para isso é associar mão essas bibliotecas em vez de usar o gerador de associação.
 
 
-<a name="PROBLEM_MISSING_C_TYPES_IN_GENERATED_OUTPUT_" />
 
 ### <a name="problem-missing-c-types-in-generated-output"></a>Problema: Faltando tipos c# na saída gerada.
 
@@ -253,8 +245,6 @@ A solução é carregar manualmente o **. SO** biblioteca com uma chamada para `
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
-
-<a name=summary />
 
 ## <a name="summary"></a>Resumo
 

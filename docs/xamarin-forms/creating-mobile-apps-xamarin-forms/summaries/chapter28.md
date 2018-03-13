@@ -3,14 +3,15 @@ title: "Resumo do capítulo 28. Local e mapas"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7361f65fecfed9d61b9df7088f9021ffa0192ad8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumo do capítulo 28. Local e mapas
 
@@ -215,7 +216,7 @@ O [ `PositionExtensions` ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Isso é usado no [LocalMuseumsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml) arquivo e [LocalMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml.cs) arquivo code-behind para exibir a distância também Museu do local do usuário:
 
-[![Tripla captura de tela da página museus Local](images/ch28fg28-small.png "distância até um local")](images/ch28fg28-large.png "distância para um local")
+[![Tripla captura de tela da página museus Local](images/ch28fg28-small.png "distância até um local")](images/ch28fg28-large.png#lightbox "distância para um local")
 
 O programa também demonstra como restringir dinamicamente o número de pins com base no local do mapa.
 

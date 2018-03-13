@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: b471742ae9fb365d75e8dd3ca0f93f5e55208f19
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 343694163c79ab4d7e8b78875282e7077db979e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="adding-a-second-toolbar"></a>Adicionando uma segunda barra de ferramentas
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral 
 
 O `Toolbar` pode fazer mais do que substituir a barra de ação &ndash; ele pode ser usado várias vezes em uma atividade, ele pode ser a ser personalizado para posicionamento em qualquer lugar na tela, e pode ser configurada para abranger apenas uma parcial largura da tela. Os exemplos a seguir ilustram como criar um segundo `Toolbar` e colocá-lo na parte inferior da tela. Isso `Toolbar` implementa **cópia**, **Recortar**, e **colar** itens de menu. 
 
-<a name="define_second" />
 
 ## <a name="define-the-second-toolbar"></a>Definir a segunda barra de ferramentas 
 
@@ -78,10 +76,9 @@ Editar **Resources/values/styles.xml** e adicionar a cor de destaque a seguir pa
 
 Isso oferece a barra de ferramentas inferior âmbar escura. Criando e executando o aplicativo exibe uma barra de ferramentas de segundo em branco na parte inferior da tela: 
 
-[![Captura de tela do aplicativo com a segunda barra de ferramentas amarela na parte inferior da tela](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png)
+[![Captura de tela do aplicativo com a segunda barra de ferramentas amarela na parte inferior da tela](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
 
-<a name="second_menus" />
  
 ## <a name="add-edit-menu-items"></a>Adicionar itens de Menu Editar 
 
@@ -100,7 +97,6 @@ Para adicionar itens de menu para um secundário `Toolbar`:
 As seções a seguir demonstram esse processo em detalhes: **Recortar**, **cópia**, e **colar** itens de menu são adicionados à parte inferior `Toolbar`. 
 
 
-<a name="second_resource" />
 
 ### <a name="define-the-edit-menu-resource"></a>Definir o recurso de Menu Editar
 
@@ -130,7 +126,6 @@ No **recursos/menu** subdiretório, criar um novo arquivo XML chamado **edit_men
 Esse XML cria o **Recortar**, **cópia**, e **colar** itens de menu (usando ícones que foram adicionados para o `mipmap-` pastas no [substituindo a barra de ação ](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 
-<a name="inflate_menus" />
 
 ### <a name="inflate-the-menus"></a>Aumentar os Menus
 
@@ -149,18 +144,17 @@ Esse código localiza o `edit_toolbar` exibição definida no **Main.axml**, def
 
 Compile e execute o aplicativo. Quando o aplicativo é executado, o texto e ícones adicionados acima serão exibidos conforme mostrado aqui: 
 
-[![Diagrama da parte inferior da barra de ferramentas com ícones de recortar, copiar e colar](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png)
+[![Diagrama da parte inferior da barra de ferramentas com ícones de recortar, copiar e colar](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
 Tocar o **Recortar** ícone do menu faz a torrada seguinte a ser exibido: 
 
-[![Captura de tela de notificação do sistema que indica que o ícone do menu Recortar foi tocado](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png)
+[![Captura de tela de notificação do sistema que indica que o ícone do menu Recortar foi tocado](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
 Ao tocar em itens de menu ou barra de ferramentas exibe as notificações do sistema resultantes: 
 
-[![Capturas de tela de notificações do sistema para salvar a cópia e colar itens de menu sendo tocados](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png)
+[![Capturas de tela de notificações do sistema para salvar a cópia e colar itens de menu sendo tocados](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
 
-<a name="up_button" />
 
 ## <a name="the-up-button"></a>O botão de cima 
 
@@ -187,7 +181,7 @@ SupportActionBar.SetHomeButtonEnabled (true);
 
 Quando o usuário navega a partir de `MainActivity` para `DetailActivity`, o `DetailActivity` exibe um **backup** botão (seta à esquerda), conforme mostrado na captura de tela:
 
-[![Captura de tela exemplo de uma seta à esquerda do botão Up na barra de ferramentas](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png)
+[![Captura de tela exemplo de uma seta à esquerda do botão Up na barra de ferramentas](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 Tocar isso **backup** botão faz com que o aplicativo retornar ao `MainActivity`. Em um aplicativo mais complexo com vários níveis de hierarquia, você tocar neste botão retornaria o usuário para o próximo nível mais alto no aplicativo em vez da tela anterior. 
 

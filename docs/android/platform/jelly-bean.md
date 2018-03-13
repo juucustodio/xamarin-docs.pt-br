@@ -7,18 +7,17 @@ ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/14/2017
-ms.openlocfilehash: 2e54bfc4bea3955dc80a747c4ecce485b78ada1d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 136484644779ac40e661f50ff19cf15884c864c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="jelly-bean-features"></a>Recursos de Bean Jelly
 
 _Este documento fornece uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4.1. Esses recursos incluem: aprimorada notificações, atualizações de emissão Android para compartilhar arquivos grandes, as atualizações para a descoberta de rede de multimídia, ponto a ponto, animações, novas permissões._
 
-<a name="Overview" />
 
 
 ## <a name="overview"></a>Visão geral
@@ -31,21 +30,18 @@ Foi adicionado suporte para descoberta de serviço de rede usando serviços base
 
 Por fim várias novas permissões foram adicionadas no Android 4.1.
 
- <a name="Requirements" />
 
 
 ## <a name="requirements"></a>Requisitos
 
 Para desenvolver aplicativos xamarin usar Jelly Bean requer xamarin 4.2.6 ou superior e Android 4.1 (API nível 16) ser instalado por meio do Gerenciador de SDK do Android, conforme mostrado na captura de tela a seguir:
 
-[![Selecionando o Android 4.1 no Gerenciador de SDK do Android](jelly-bean-images/image1.png)](jelly-bean-images/image1.png)
+[![Selecionando o Android 4.1 no Gerenciador de SDK do Android](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
- <a name="What's_New" />
 
 
 ## <a name="whats-new"></a>O Que Há de Novo
 
- <a name="Animations" />
 
 
 ### <a name="animations"></a>Animations
@@ -79,7 +75,6 @@ animator.Start();
 
 Como o `TimeAnimator` instância está em execução, ele chamará `ITimeAnimator.ITimeListener`, que, em seguida, faça logon como tempo de animator permaneceu em execução e quanto tempo ele como foi desde a última vez que o método foi chamado.
 
- <a name="Application_Stack_Navigation" />
 
 
 ### <a name="application-stack-navigation"></a>Navegação de pilha do aplicativo
@@ -98,7 +93,6 @@ Para cenários mais complexos, há novos métodos na classe de atividade que pod
 -   `OnCreateNavigateUpTaskStack` – Esse método é substituído quando é necessário ter controle completo sobre como a pilha sintética é criada.
 
 
- <a name="Camera" />
 
 
 ### <a name="camera"></a>Câmera
@@ -149,19 +143,16 @@ button.Click += (sender, args) => mediaActionPlayer.Play(MediaActionSoundType.Sh
 mediaActionPlayer.Release();
 ```
 
- <a name="Connectivity" />
 
 
 ### <a name="connectivity"></a>Conectividade
 
- <a name="Android_Beam" />
 
 
 #### <a name="android-beam"></a>Emitir Android
 
 Emitir Android é uma tecnologia de NFC com base que permite que os dois dispositivos Android para se comunicar entre si. Android 4.1 fornece melhor suporte para a transferência de arquivos grandes. Ao usar o novo método `NfcAdapter.SetBeamPushUris()` Android alternará entre mecanismos de transporte alternativo (como Bluetooth) para obter uma velocidade de transferência rápida.
 
- <a name="Network_Services_Discovery" />
 
 
 #### <a name="network-services-discovery"></a>Descoberta de serviços de rede
@@ -173,14 +164,12 @@ Para criar um serviço que pode ser consumido por outros serviços, o `NsdServic
 
 Para descobrir os serviços na rede e a implementação de `Nsd.DiscoveryListener` passado para `NsdManager.discoverServices()`.
 
- <a name="Network_Usage" />
 
 
 #### <a name="network-usage"></a>Uso de rede
 
 Um novo método, `ConnectivityManager.IsActiveNetworkMetered` permite que um dispositivo verificar se ele está conectado a uma rede limitada. Esse método pode ser usado para ajudar a gerenciar o uso de dados com precisão informando os usuários que pode ser caros encargos para operações de dados.
 
- <a name="WiFi_Direct_Service_Discovery" />
 
 
 #### <a name="wifi-direct-service-discovery"></a>Descoberta de serviço de Wi-Fi Direct
@@ -195,14 +184,12 @@ No Bean Jelly, `WifiP2pManager` pode descobrir dispositivos usando próximos *Bo
 -   `SetUpnpServiceResponseListener()` – Esse método é usado para registrar retornos de chamada a ser invocado durante o recebimento de uma resposta a solicitações de descoberta Upnp.
 
 
- <a name="Content_Providers" />
 
 
 ### <a name="content-providers"></a>Provedores de conteúdo
 
 O `ContentResolver` classe recebeu um novo método, `AcquireUnstableContentProvider`. Esse método permite que um aplicativo adquirir um provedor de conteúdo "instável". Normalmente, quando um aplicativo obtém um provedor de conteúdo, e esse provedor falha, será o aplicativo. Com essa chamada de método, um aplicativo não falhará se o provedor de conteúdo falhar. Em vez disso, `Android.OS.DeadObjectionException` será lançada de chamadas no provedor de conteúdo para informar um aplicativo que o provedor de conteúdo está ausente. Um provedor de conteúdo "instável" é útil ao interagir com provedores de conteúdo de outros aplicativos, é menos provável que o código com bug de outro aplicativo afetará o outro aplicativo.
 
- <a name="Copy_and_Paste_With_Intents" />
 
 
 ### <a name="copy-and-paste-with-intents"></a>Copiar e colar com propósitos
@@ -214,14 +201,11 @@ O `Intent` classe agora pode ter um `ClipData` objeto associado a ele por meio d
 -   **URI** – isso pode ser qualquer URI, como um indicador HTTP ou o URI para um provedor de conteúdo.
 
 
- <a name="Isolated_Services" />
 
 
 ### <a name="isolated-services"></a>Serviços isolados
 
 Um serviço isolado é um serviço que é executado em seu próprio processo especial e não tem permissões de seu próprio. A única comunicação com o serviço é quando iniciar o serviço e associação a ele por meio da API de serviço. É possível declarar um serviço como isolado, definindo a propriedade `IsolatedProcess="true"` no `ServiceAttribute` que adorna uma classe de serviço.
-
- <a name="Media" />
 
 
 ### <a name="media"></a>Mídia
@@ -245,7 +229,6 @@ As novas classes a seguir fornecem os mecanismos padrão e a interface do usuár
 -   `MediaRouterActionProvider` e `MediaRouteButton` – essas classes ajudam a fornecer uma interface do usuário consistente para selecionar e reprodução de mídia.
 
 
- <a name="Notifications" />
 
 
 ### <a name="notifications"></a>Notificações
@@ -255,26 +238,25 @@ Permite que aplicativos do Android 4.1 mais flexibilidade e controle de exibiç�
 -   `Notification.BigPictureStyle` – Esta é uma classe auxiliar que irá gerar notificações que terão uma imagem neles. A imagem a seguir mostra um exemplo de uma notificação com uma imagem grande:
 
 
- [ ![Captura de tela de exemplo de uma notificação BigPictureStyle](jelly-bean-images/image2.png)](jelly-bean-images/image2.png)
+ [![Captura de tela de exemplo de uma notificação BigPictureStyle](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
 -   `Notification.BigTextStyle` – Esta é uma classe auxiliar que irá gerar notificações que terão várias linhas de texto, como email. Um exemplo de como esse novo estilo de notificação pode ser visto na captura de tela a seguir:
 
 
- [ ![Captura de tela de exemplo de uma notificação BigTextStyle](jelly-bean-images/image3.png)](jelly-bean-images/image3.png)
+ [![Captura de tela de exemplo de uma notificação BigTextStyle](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
 -   `Notification.InboxStyle` – Esta é uma classe auxiliar que irá gerar notificações que contêm uma lista de cadeias de caracteres, como trechos de código de uma mensagem de email, conforme mostrado nesta captura de tela:
 
 
- [ ![Captura de tela de exemplo de uma notificação Notification.InboxStyle](jelly-bean-images/image4.png)](jelly-bean-images/image4.png)
+ [![Captura de tela de exemplo de uma notificação Notification.InboxStyle](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
 
 É possível adicionar até dois botões de ação na parte inferior de uma mensagem de notificação quando a notificação é usando o estilo normal ou maior.
 Um exemplo disso pode ser visto na seguinte captura de tela, onde os botões de ação estão visíveis na parte inferior da notificação:
 
- [ ![Captura de tela de exemplo de botões de ação exibida abaixo de uma mensagem de notificação](jelly-bean-images/image5.png)](jelly-bean-images/image5.png)
+ [![Captura de tela de exemplo de botões de ação exibida abaixo de uma mensagem de notificação](jelly-bean-images/image5.png)](jelly-bean-images/image5.png#lightbox)
 
 O `Notification` classe recebeu novas constantes que permitem que um desenvolvedor especificar um dos cinco níveis de prioridade para uma notificação. Podem ser definidos em uma notificação usando o `Priority` propriedade.
 
- <a name="Permissions" />
 
 
 ### <a name="permissions"></a>Permissões
@@ -290,7 +272,6 @@ As novas permissões a seguir foram adicionadas:
 
 Uma alteração importante a observar `READ_EXTERNAL_STORAGE` – no momento essa permissão é concedida automaticamente pelo Android. Versões futuras do Android exigirá um aplicativo para solicitar essa permissão antes de receber a permissão.
 
- <a name="Summary" />
 
 
 ## <a name="summary"></a>Resumo

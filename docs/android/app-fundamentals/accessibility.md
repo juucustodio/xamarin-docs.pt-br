@@ -6,12 +6,12 @@ ms.assetid: 157F0899-4E3E-4538-90AF-B59B8A871204
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/31/2018
-ms.openlocfilehash: 0cf1557cea8d5adb3678ba5e424f9f23375e32bc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 02/28/2018
+ms.openlocfilehash: 2dea77b4c52db0c032aba9bde471e76eb36ba3ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-android"></a>Acessibilidade no Android
 
@@ -171,14 +171,12 @@ No layout de XML como atributos de acessibilidade `hint` e `contentDescription` 
 
 A vantagem de armazenar texto em um arquivo separado é que várias traduções de idioma do arquivo podem ser fornecidas em seu aplicativo. Consulte o [guia localização Android](~/android/app-fundamentals/localization.md) para saber como adicionar arquivos de cadeia de caracteres localizada para um projeto de aplicativo.
 
-<a name="testing" />
 
 ## <a name="testing-accessibility"></a>Teste de acessibilidade
 
 Execute [essas etapas](http://developer.android.com/training/accessibility/testing.html#how-to) para habilitar o TalkBack e explorar por toque testar a acessibilidade em dispositivos Android.
 
 Você talvez precise instalar [o TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) no Google Play se ele não aparecer na **Configurações > acessibilidade**.
-
 
 
 ## <a name="related-links"></a>Links relacionados

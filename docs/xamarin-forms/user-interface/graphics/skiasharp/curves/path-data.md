@@ -4,14 +4,15 @@ description: "Definir caminhos usando cadeias de caracteres de texto no formato 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: feb4c5f4c7e7ad3fc5f762786001be9aa57ae718
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="svg-path-data"></a>Dados de caminho SVG
 
@@ -216,7 +217,7 @@ public class PathDataHelloPage : ContentPage
 
 O caminho preenche a tela, que é mais razoável quando exibido no modo paisagem:
 
-[![](path-data-images/pathdatahello-small.png "Captura de tela tripla do caminho dados Hello página")](path-data-images/pathdatahello-large.png "tripla captura de tela de caminho dados Hello página")
+[![](path-data-images/pathdatahello-small.png "Captura de tela tripla do caminho dados Hello página")](path-data-images/pathdatahello-large.png#lightbox "tripla captura de tela de caminho dados Hello página")
 
 O **caminho dados Cat** página é semelhante. Os objetos de caminho e paint são definidos como campos de [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe:
 
@@ -287,7 +288,7 @@ public class PathDataCatPage : ContentPage
 
 Aqui está o programa em execução em todas as três plataformas:
 
-[![](path-data-images/pathdatacat-small.png "Tripla captura da página do caminho dados Cat")](path-data-images/pathdatacat-large.png "tripla captura da página do caminho dados Cat")
+[![](path-data-images/pathdatacat-small.png "Tripla captura da página do caminho dados Cat")](path-data-images/pathdatacat-large.png#lightbox "tripla captura da página do caminho dados Cat")
 
 Normalmente, quando um `SKPath` objeto é definido como um campo, o contorno do caminho deve ser definido no construtor ou outro método. Ao usar dados de caminho SVG, no entanto, você viu que o caminho pode ser especificado inteiramente na definição do campo.
 
@@ -424,7 +425,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 Algo especial é feito com o ponteiro de segundo, no entanto. Porque o relógio é atualizado a cada 16 milissegundos, o `Millisecond` propriedade do `DateTime` valor potencialmente pode ser usado para animar uma varredura de segundo manualmente em vez de um que move na discretos saltos do segundo a segundo. Mas esse código não permite a movimentação suave. Em vez disso, ele usa o xamarin. Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) e [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animação atenuação funções para um tipo diferente de movimento. Essas funções de atenuação fazer com que a mão de segundo mover uma maneira de mais irregular & #x 2014; remoção de um pouco antes de movê-la e, em seguida, um pouco excesso acertar seu destino, um efeito que Infelizmente não pode ser reproduzido nessas capturas de tela estáticas:
 
-[![](path-data-images/prettyanalogclock-small.png "Captura de tela de tripla da página bastante o relógio analógico")](path-data-images/prettyanalogclock-large.png "tripla captura de tela da página bastante o relógio analógico")
+[![](path-data-images/prettyanalogclock-small.png "Captura de tela de tripla da página bastante o relógio analógico")](path-data-images/prettyanalogclock-large.png#lightbox "tripla captura de tela da página bastante o relógio analógico")
 
 
 ## <a name="related-links"></a>Links relacionados

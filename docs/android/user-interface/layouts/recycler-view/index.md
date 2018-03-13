@@ -3,16 +3,16 @@ title: RecyclerView
 description: "RecyclerView é um grupo de exibição para exibir coleções; ele é projetado para ser uma substituição mais flexível para grupos de modo de exibição mais antigos, como ListView e GridView.  Este guia explica como usar e personalizar aplicativos xamarin RecyclerView."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
+ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/03/2018
-ms.openlocfilehash: ec8b3a4655c8e8d9e492c9f7a1807dd64ecc6ae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 028520742a84e717e28147f2fa1fafacfef34028
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -23,7 +23,7 @@ _RecyclerView é um grupo de exibição para exibir coleções; ele é projetado
 Muitos aplicativos precisam exibir coleções do mesmo tipo (como mensagens, contatos, imagens ou músicas); Geralmente, essa coleção é muito grande para caber na tela, para que a coleção é apresentada em uma janela pequena que pode rolar suavemente através de todos os itens na coleção.
 `RecyclerView` é um Android widget que exibe uma coleção de itens em uma lista ou uma grade, permitindo que o usuário percorrer a coleção. A seguir está uma captura de tela de um aplicativo de exemplo que usa `RecyclerView` para exibir o conteúdo da caixa de entrada de email em uma lista de rolagem vertical:
 
-[ ![Exemplo de aplicativo usando RecyclerView para mensagens de entrada da lista](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png)
+[![Exemplo de aplicativo usando RecyclerView para mensagens de entrada da lista](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png#lightbox)
 
 `RecyclerView` oferece dois recursos interessantes:
 

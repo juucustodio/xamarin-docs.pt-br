@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 88db45135104f14ca3a4b18e466e95288853a6df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cc2c12ce2826f0b66cdf49a9a4df84d7f67f7713
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="apple-pay-capabilities"></a>Funcionalidades do Apple Pay
 
@@ -79,8 +79,8 @@ A ID do comerciante é usada para informar o Apple Pay que você pode aceitar pa
 7.  Role até o final desta seção expandida e clique em **Editar**.
 8.  Role na lista até o Apple Pay e clique no botão **Editar**:  
     
-    
     ![Editar detalhes da ID do aplicativo do Apple Pay](apple-pay-capabilities-images/image39.png)
+
 9.  Selecione a ID do comerciante a ser usada com essa ID do aplicativo e clique em **Continuar**:  
     
     ![Selecione a ID do comerciante a ser usada para a ID do aplicativo](apple-pay-capabilities-images/image40.png)

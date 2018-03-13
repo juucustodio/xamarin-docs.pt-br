@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ef016d963f710ff54fc57b5e6e57181df030c8f6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e67646e5072f703af71fc3f0a7901fd8485f9710
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementando um HybridWebView
 
@@ -151,7 +151,7 @@ O processo para criar a classe de renderizador personalizado é o seguinte:
 1. Adicionar um `ExportRenderer` de atributo para a classe de renderizador personalizado para especificar que será usada para renderizar o controle personalizado do xamarin. Forms. Este atributo é usado para registrar o renderizador personalizado com xamarin. Forms.
 
 > [!NOTE]
-> **Observação**: para a maioria dos elementos de xamarin. Forms, é opcional fornecer um renderizador personalizado em cada projeto da plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão para a classe base do controle. No entanto, renderizadores personalizados são necessários em cada projeto de plataforma ao renderizar um [exibição](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
+> Para a maioria dos elementos de xamarin. Forms, é opcional fornecer um renderizador personalizado em cada projeto da plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão para a classe base do controle. No entanto, renderizadores personalizados são necessários em cada projeto de plataforma ao renderizar um [exibição](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto de aplicativo de exemplo, juntamente com as relações entre eles:
 
@@ -316,7 +316,7 @@ Essa funcionalidade é obtida da seguinte maneira:
   - Os recursos são liberados.
 
 > [!NOTE]
-> **Observação**: O `WKWebView` classe só tem suporte no iOS 8 e posterior.
+> O `WKWebView` classe só tem suporte no iOS 8 e posterior.
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Criando o renderizador personalizado no Android
 
@@ -411,7 +411,7 @@ public class JSBridge : Java.Lang.Object
 A classe deve derivar de `Java.Lang.Object`, e métodos que são expostos para JavaScript devem ser decorados com o `[JavascriptInterface]` e `[Export]` atributos. Portanto, quando o `invokeCSharpAction` função JavaScript é injetada na página da web e é executada, ele chamará o `JSBridge.InvokeAction` método devido a ser decorados com o `[JavascriptInterface]` e `[Export("invokeAction")]` atributos. Por sua vez, o `InvokeAction` método invoca o `HybridWebView.InvokeAction` método, que será chamado a ação registrada para exibir o pop-up.
 
 > [!NOTE]
-> **Observação**: projetos que usam o `[Export]` atributo deve incluir uma referência a `Mono.Android.Export`, ou ocorrerá um erro de compilador.
+> Projetos que usam o `[Export]` atributo deve incluir uma referência a `Mono.Android.Export`, ou ocorrerá um erro de compilador.
 
 Observe que o `JSBridge` classe mantém um `WeakReference` para o `HybridWebViewRenderer` classe. Isso é para evitar a criação de uma referência circular entre as duas classes. Para obter mais informações, consulte [referências fracas](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) no MSDN.
 

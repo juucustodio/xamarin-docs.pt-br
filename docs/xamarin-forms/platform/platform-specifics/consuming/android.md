@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: e26fcb81bb99e5a49d16731777171b4efa4163c6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-specifics"></a>Especificações de plataforma Android
 
@@ -54,7 +54,7 @@ O `Application.On<Android>` método Especifica que este específica de plataform
 
 O resultado é que o teclado virtual área modo operacional pode ser definido quando um controle de entrada tem o foco de entrada:
 
-[![](android-images/pan-resize.png "Teclado virtual específico de plataforma de modo de operação")](android-images/pan-resize-large.png "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Teclado virtual específico de plataforma de modo de operação")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
 
 <a name="fastscroll" />
 
@@ -98,7 +98,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 O resultado é que percorrer rápida de dados em um [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) podem ser habilitadas, que altera o tamanho do controle deslizante de rolagem:
 
-[![](android-images/fastscroll.png "Específico da plataforma ListView FastScroll")](android-images/fastscroll-large.png "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "Específico da plataforma ListView FastScroll")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
 
 <a name="enable_swipe_paging" />
 
@@ -244,7 +244,7 @@ O `Application.Current.On<Android>` método Especifica que este específica de p
 
 O resultado é que o [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) e [ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) eventos de página não ser acionados em pausa do aplicativo e retomar respectivamente, e que, se o teclado virtual foi exibida quando o aplicativo foi pausada, ele também será exibido quando o aplicativo retoma o:
 
-[![](android-images/keyboard-on-resume.png "Específico de plataforma de eventos de ciclo de vida")](android-images/keyboard-on-resume-large.png "específica de plataforma de eventos de ciclo de vida")
+[![](android-images/keyboard-on-resume.png "Específico de plataforma de eventos de ciclo de vida")](android-images/keyboard-on-resume-large.png#lightbox "específica de plataforma de eventos de ciclo de vida")
 
 ## <a name="summary"></a>Resumo
 
@@ -253,7 +253,7 @@ Este artigo demonstrou como consumir os Android plataforma específicos que são
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Criando específicos de plataforma](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [AndroidSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/)
 - [AndroidSpecific.AppCompat](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat/)

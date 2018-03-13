@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: 371ffae8e14a630cb548f4a9ee2bf0bd06f7284c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acecc53e8429ac3ca963053fe7a1786937d37ae3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="responding-to-authentication-callbacks"></a>Responder a chamadas de autenticação
 
@@ -27,7 +27,7 @@ Se um `CryptoObject` foi usada ao chamar `Authenticate`, recomenda-se chamar `Ci
 
 
 > [!NOTE]
-> **Observação:** é recomendável manter o retorno de chamada classe relativamente leve e gratuita da lógica de aplicativo específico. Os retornos de chamada devem agir como um "cop de tráfego" entre o aplicativo do Android e os resultados usando o scanner de impressão digital.
+> É recomendável manter o retorno de chamada classe relativamente leve e gratuita da lógica de aplicativo específico. Os retornos de chamada devem agir como um "cop de tráfego" entre o aplicativo do Android e os resultados usando o scanner de impressão digital.
 
 ## <a name="a-sample-authentication-callback-handler"></a>Um manipulador de retorno de chamada de autenticação de exemplo
 

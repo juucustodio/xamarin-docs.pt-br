@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b5d3a03324e73b06bd3defe7e6610163c3d1b26d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c021550e17cf8206d59102856a11c72000ad06aa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-progress-indicators"></a>Trabalhando com indicadores de progresso
 
@@ -21,7 +21,7 @@ _Este artigo aborda criando e trabalhando com indicadores de progresso dentro de
 
 Pode haver momentos em que seu aplicativo Xamarin.tvOS precisa carregar um novo conteúdo ou executar uma operação de processamento mais extenso. Durante esses horários, você deve apresentar um indicador de atividade ou barra de progresso para informar o usuário que o aplicativo ainda está em execução e para fornecer alguma indicação quanto à duração da tarefa que está sendo executada.
 
-[ ![](progress-indicators-images/intro01.png "Indicadores de progresso de exemplo")](progress-indicators-images/intro01.png)
+[![](progress-indicators-images/intro01.png "Indicadores de progresso de exemplo")](progress-indicators-images/intro01.png#lightbox)
 
 <a name="About-Activity-Indicators" />
 
@@ -57,19 +57,19 @@ Apple tem as seguintes sugestões para trabalhar com barras de progresso:
 1. No **solução preenchimento**, clique duas vezes no `Main.storyboard` de arquivo e abri-lo para edição.
 1. Arraste um **indicador de atividade** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](progress-indicators-images/activity01.png "Um indicador de atividade")](progress-indicators-images/activity01.png)
+    [![](progress-indicators-images/activity01.png "Um indicador de atividade")](progress-indicators-images/activity01.png#lightbox)
 1. No **Widget guia** do **propriedades de preenchimento**, você pode ajustar várias propriedades do indicador de atividade, como seu **estilo** e **comportamento**: 
 
-    [ ![](progress-indicators-images/activity02.png "A guia de Widget ")](progress-indicators-images/activity02.png)
+    [![](progress-indicators-images/activity02.png "A guia de Widget ")](progress-indicators-images/activity02.png#lightbox)
 1. Arraste um **andamento** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](progress-indicators-images/activity03.png "Um modo de exibição do andamento")](progress-indicators-images/activity03.png)
+    [![](progress-indicators-images/activity03.png "Um modo de exibição do andamento")](progress-indicators-images/activity03.png#lightbox)
 1. No **Widget guia** do **propriedade Explorer**, você pode ajustar várias propriedades da exibição de progresso, como seu **estilo** e **andamento**(porcentagem concluída): 
 
-    [ ![](progress-indicators-images/activity04.png "A guia de Widget")](progress-indicators-images/activity04.png)
+    [![](progress-indicators-images/activity04.png "A guia de Widget")](progress-indicators-images/activity04.png#lightbox)
 1. Por fim, atribuir **nomes** para os controles para que você pode responder a eles no código c#. Por exemplo: 
 
-    [ ![](progress-indicators-images/activity05.png "Atribua um nome")](progress-indicators-images/activity05.png)
+    [![](progress-indicators-images/activity05.png "Atribua um nome")](progress-indicators-images/activity05.png#lightbox)
 1. Salve as alterações.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -77,19 +77,19 @@ Apple tem as seguintes sugestões para trabalhar com barras de progresso:
 1. No **Solution Explorer**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo para edição.
 1. Arraste um **indicador de atividade** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](progress-indicators-images/activity01-vs.png "Um indicador de atividade")](progress-indicators-images/activity01-vs.png)
+    [![](progress-indicators-images/activity01-vs.png "Um indicador de atividade")](progress-indicators-images/activity01-vs.png#lightbox)
 1. No **Widget guia** do **propriedades Explorer**, você pode ajustar várias propriedades do indicador de atividade, como seu **estilo** e **comportamento**: 
 
-    [ ![](progress-indicators-images/activity02-vs.png "A guia de Widget")](progress-indicators-images/activity02-vs.png)
+    [![](progress-indicators-images/activity02-vs.png "A guia de Widget")](progress-indicators-images/activity02-vs.png#lightbox)
 1. Arraste um **andamento** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](progress-indicators-images/activity03-vs.png "Um modo de exibição do andamento")](progress-indicators-images/activity03-vs.png)
+    [![](progress-indicators-images/activity03-vs.png "Um modo de exibição do andamento")](progress-indicators-images/activity03-vs.png#lightbox)
 1. No **Widget guia** do **propriedade Explorer**, você pode ajustar várias propriedades da exibição de progresso, como seu **estilo** e **andamento**(porcentagem concluída): 
 
-    [ ![](progress-indicators-images/activity04-vs.png "A guia de Widget")](progress-indicators-images/activity04-vs.png)
+    [![](progress-indicators-images/activity04-vs.png "A guia de Widget")](progress-indicators-images/activity04-vs.png#lightbox)
 1. Por fim, atribuir **nomes** para os controles para que você pode responder a eles no código c#. Por exemplo: 
 
-    [ ![](progress-indicators-images/activity05-vs.png "Atribua um nome")](progress-indicators-images/activity05-vs.png)
+    [![](progress-indicators-images/activity05-vs.png "Atribua um nome")](progress-indicators-images/activity05-vs.png#lightbox)
 1. Salve as alterações.
 
 -----
@@ -134,7 +134,7 @@ Este artigo abordou criando e trabalhando com indicadores de progresso dentro de
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

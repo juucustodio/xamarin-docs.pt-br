@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: acdcdc2b76a995ca324532c6a034b2fdf8e21db5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>Recursos de segurança e privacidade de iOS
 
@@ -76,7 +76,7 @@ Para obter mais informações sobre como trabalhar com `Info.plist` chaves, cons
 
 Se o exemplo a seguir de acessar HomeKit no iOS 10 (e superior), o desenvolvedor precisa adicionar o `NSHomeKitUsageDescription` chave para o aplicativo `Info.plist` de arquivo e forneça uma cadeia de caracteres declarando por que o aplicativo deseja acessar o banco de dados do usuário HomeKit. Essa cadeia de caracteres será apresentada para o usuário na primeira vez que executar o aplicativo:
 
-[ ![](security-privacy-images/info01.png "Um exemplo de alerta NSHomeKitUsageDescription")](security-privacy-images/info01.png)
+[![](security-privacy-images/info01.png "Um exemplo de alerta NSHomeKitUsageDescription")](security-privacy-images/info01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -87,7 +87,7 @@ Xamarin para Visual Studio atual não oferece suporte para editar o aprimorament
 3. Adicione o seguinte nó para fornecer a descrição necessária: `<string>Allows the app to control HomeKit enabled devices.</string>`
 4. O `Info.plist` arquivo deve ser semelhante ao seguinte: 
 
-    [ ![](security-privacy-images/info02vs.png "O arquivo Info. plist deve parecer com o seguinte")](security-privacy-images/info02vs.png)
+    [![](security-privacy-images/info02vs.png "O arquivo Info. plist deve parecer com o seguinte")](security-privacy-images/info02vs.png#lightbox)
 4. Salve as alterações no arquivo.
 5. Retorne ao Visual Studio e recompilação do aplicativo.
 
@@ -100,10 +100,10 @@ Para definir qualquer uma das chaves de privacidade, faça o seguinte:
 3. Adicionar um novo **entrada** à lista.
 4. Na lista suspensa, selecione uma chave de privacidade (como **privacidade - descrição do uso de HomeKit**): 
 
-    [ ![](security-privacy-images/info02.png "Selecione uma chave de privacidade")](security-privacy-images/info02.png)
+    [![](security-privacy-images/info02.png "Selecione uma chave de privacidade")](security-privacy-images/info02.png#lightbox)
 5. Insira uma descrição de por que o aplicativo deseja acessar as informações de recurso ou usuário específica: 
 
-    [ ![](security-privacy-images/info03.png "Insira uma descrição")](security-privacy-images/info03.png)
+    [![](security-privacy-images/info03.png "Insira uma descrição")](security-privacy-images/info03.png#lightbox)
 6. Salve as alterações no arquivo.
 
 -----

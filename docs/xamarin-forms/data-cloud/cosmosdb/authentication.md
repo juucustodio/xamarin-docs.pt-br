@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: a16f72e6aaee93aa313aff0aba23887b51acf701
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 10c4a1e3355263722d170dff0a5e2707eb794818
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>Autenticação de usuários com um banco de dados de documento de banco de dados do Cosmos do Azure
 
@@ -81,7 +81,7 @@ O processo para hospedar o agente de token de recurso no serviço de aplicativo 
 
     Captura de tela a seguir demonstra essa configuração:
 
-    [![](authentication-images/azure-web-app-settings.png "Configurações do aplicativo do serviço de aplicativo Web")](authentication-images/azure-web-app-settings-large.png "configurações de aplicativo do serviço de aplicativo Web")
+    [![](authentication-images/azure-web-app-settings.png "Configurações do aplicativo do serviço de aplicativo Web")](authentication-images/azure-web-app-settings-large.png#lightbox "configurações de aplicativo do serviço de aplicativo Web")
 
 1. Publica a solução de agente de token de recurso para o aplicativo da web do serviço de aplicativo do Azure.
 
@@ -117,7 +117,7 @@ O processo de configuração fácil de autenticação do serviço de aplicativo 
 
   Captura de tela a seguir demonstra essa configuração:
 
-  [![](authentication-images/app-service-authentication-settings.png "Configurações de autenticação do aplicativo do serviço de aplicativo Web")](authentication-images/app-service-authentication-settings-large.png "configurações de autenticação do aplicativo do serviço de aplicativo Web")
+  [![](authentication-images/app-service-authentication-settings.png "Configurações de autenticação do aplicativo do serviço de aplicativo Web")](authentication-images/app-service-authentication-settings-large.png#lightbox "configurações de autenticação do aplicativo do serviço de aplicativo Web")
 
 O aplicativo do serviço de aplicativo web também deve ser configurado para se comunicar com o aplicativo do Facebook para habilitar o fluxo de autenticação. Isso pode ser feito selecionando o provedor de identidade do Facebook e inserindo o **ID do aplicativo** e **segredo do aplicativo** valores de configurações do aplicativo Facebook no Centro de desenvolvedores do Facebook. Para obter mais informações, consulte [Facebook adicionar informações ao seu aplicativo](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
@@ -270,7 +270,7 @@ Este artigo explicou como combinar o controle de acesso com coleções particion
 ## <a name="related-links"></a>Links relacionados
 
 - [TodoDocumentDBAuth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
-- [Consumo de um banco de dados de documento de banco de dados do Cosmos do Azure](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
+- [Consumo de um banco de dados de documento do Azure Cosmos DB](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
 - [Protegendo o acesso a dados do banco de dados do Azure Cosmos](/azure/cosmos-db/secure-access-to-data/)
 - [Controle de acesso na API DocumentDB](/rest/api/documentdb/access-control-on-documentdb-resources/).
 - [A partição e escala no banco de dados do Azure Cosmos](/azure/cosmos-db/partition-data/)

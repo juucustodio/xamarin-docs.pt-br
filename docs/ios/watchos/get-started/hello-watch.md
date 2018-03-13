@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/14/2016
-ms.openlocfilehash: 88f9a86173756738d44f099b13177489226fa0e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 732fd9808ded4bf97e99e7ab0e6ab63b989452d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-watch"></a>Olá, inspecionar
 
@@ -150,7 +150,7 @@ Se já não é o projeto de inicialização
 
 1. Pressione a **depurar** botão para disparar uma inicialização de compilação e do simulador.
 
-    [ ![](hello-watch-images/readytodebug-sml.png "Os elementos de interface do Visual Studio")](hello-watch-images/readytodebug.png)
+    [![](hello-watch-images/readytodebug-sml.png "Os elementos de interface do Visual Studio")](hello-watch-images/readytodebug.png#lightbox)
 
 Quando o simulador é iniciado, pressione o botão para incrementar o rótulo.
 Parabéns, você terá um aplicativo de Observação!

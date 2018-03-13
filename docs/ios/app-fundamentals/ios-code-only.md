@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5e4b0e7bbad94976b23e58d4248cb2ea1a6f2b0f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Criando Interfaces do usuário do iOS em código
 
@@ -24,7 +24,7 @@ A interface do usuário de um aplicativo do iOS é como uma vitrine eletrônica 
 
 O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo: 
 
-[ ![](ios-code-only-images/image9.png "Este diagrama ilustra as relações entre a janela, modos de exibição, sub-visualizações e View Controller")](ios-code-only-images/image9.png)
+[![](ios-code-only-images/image9.png "Este diagrama ilustra as relações entre a janela, modos de exibição, sub-visualizações e View Controller")](ios-code-only-images/image9.png#lightbox)
 
 Essas hierarquias de modo de exibição podem ser criadas usando o [Xamarin Designer para iOS](~/ios/user-interface/designer/index.md) no Visual Studio, no entanto é bom ter um entendimento fundamental de como trabalhar inteiramente no código. Este artigo explica alguns pontos básicos para colocá-lo e em execução com o desenvolvimento de interface de usuário somente código.
 
@@ -32,7 +32,7 @@ Essas hierarquias de modo de exibição podem ser criadas usando o [Xamarin Desi
 
 O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo: 
 
-[ ![](ios-code-only-images/image9.png "Este diagrama ilustra as relações entre a janela, modos de exibição, sub-visualizações e View Controller")](ios-code-only-images/image9.png)
+[![](ios-code-only-images/image9.png "Este diagrama ilustra as relações entre a janela, modos de exibição, sub-visualizações e View Controller")](ios-code-only-images/image9.png#lightbox)
 
 
 Essas hierarquias de modo de exibição podem ser criadas usando o [Xamarin Designer para iOS](~/ios/user-interface/designer/index.md) no Visual Studio para Mac, porém é recomendável ter um entendimento fundamental de como trabalhar inteiramente no código. Este artigo explica alguns pontos básicos para colocá-lo e em execução com o desenvolvimento de interface de usuário somente código.
@@ -49,13 +49,13 @@ Essas hierarquias de modo de exibição podem ser criadas usando o [Xamarin Desi
 Primeiro, crie um projeto do iOS no Visual Studio usando o iPhone **projeto em branco** modelo, mostrado abaixo, que entenderemos para adicionar controladores e exibições.
 
 
-[ ![](ios-code-only-images/blankapp-vs.png "Caixa de diálogo Novo projeto")](ios-code-only-images/blankapp-vs.png)
+[![](ios-code-only-images/blankapp-vs.png "Caixa de diálogo Novo projeto")](ios-code-only-images/blankapp-vs.png#lightbox)
 
 
 O modelo de projeto vazio adiciona 4 arquivos ao projeto:
 
 
-[ ![](ios-code-only-images/empty-project.png "Arquivos de projeto")](ios-code-only-images/empty-project.png)
+[![](ios-code-only-images/empty-project.png "Arquivos de projeto")](ios-code-only-images/empty-project.png#lightbox)
 
 
 1. **Appdelegate. CS** -contém um `UIApplicationDelegate` subclasse, `AppDelegate` , que é usada para manipular eventos de aplicativo do iOS. A janela do aplicativo é criada no `AppDelegate`do `FinishedLaunching` método.
@@ -76,16 +76,16 @@ As etapas a seguir orientam você pelo removendo o Storyboard de um aplicativo.
 
 1. Use o modelo de aplicativo de modo único para criar um novo projeto do iOS:
     
-    [ ![](ios-code-only-images/single-view-app.png "Use o modelo de aplicativo de modo único")](ios-code-only-images/single-view-app.png)
+    [![](ios-code-only-images/single-view-app.png "Use o modelo de aplicativo de modo único")](ios-code-only-images/single-view-app.png#lightbox)
 
 1. Excluir o `Main.Storyboard` e `ViewController.cs` arquivos. Fazer **não** excluir o `LaunchScreen.Storyboard`. O controlador de exibição deve ser excluído porque é o código para o controlador de exibição é criado no Storyboard:
 1. Certifique-se de selecionar **excluir** na caixa de diálogo pop-up:
     
-    [ ![](ios-code-only-images/delete.png "Selecione Excluir na caixa de diálogo pop-up")](ios-code-only-images/delete.png)
+    [![](ios-code-only-images/delete.png "Selecione Excluir na caixa de diálogo pop-up")](ios-code-only-images/delete.png#lightbox)
 
 1. No Info. plist, exclui as informações de **informações de implantação > Interface principal** opção:
     
-    [ ![](ios-code-only-images/main-interface.png "Exclui as informações a opção de Interface principal")](ios-code-only-images/main-interface.png)
+    [![](ios-code-only-images/main-interface.png "Exclui as informações a opção de Interface principal")](ios-code-only-images/main-interface.png#lightbox)
 
 1. Finalmente, adicione o seguinte código ao seu `FinishedLaunching` método na classe AppDelegate:
         
@@ -176,7 +176,7 @@ public class AppDelegate : UIApplicationDelegate
 
 Cada controlador tem uma exibição associada, o que é acessível a partir de `View` propriedade. O código acima altera o modo de exibição `BackgroundColor` propriedade `UIColor.LightGray` para que ela ficará visível, conforme mostrado abaixo:
 
- [ ![](ios-code-only-images/image1.png "Plano de fundo da exibição é um visível cinza-claro")](ios-code-only-images/image1.png)
+ [![](ios-code-only-images/image1.png "Plano de fundo da exibição é um visível cinza-claro")](ios-code-only-images/image1.png#lightbox)
 
 Poderíamos definido qualquer `UIViewController` subclasse como o `RootViewController` dessa maneira, incluindo controladores de UIKit, bem como os escrevemos nós. Por exemplo, o código a seguir adiciona uma `UINavigationController` como o `RootViewController`:
 
@@ -214,7 +214,7 @@ public class AppDelegate : UIApplicationDelegate
 
 Isso gera o controlador aninhado o controlador de navegação, conforme mostrado abaixo:
 
- [ ![](ios-code-only-images/image2.png "O controlador aninhado no controlador de navegação")](ios-code-only-images/image2.png)
+ [![](ios-code-only-images/image2.png "O controlador aninhado no controlador de navegação")](ios-code-only-images/image2.png#lightbox)
 
 ## <a name="creating-a-view-controller"></a>Criando um controlador de exibição
 
@@ -224,11 +224,11 @@ Adicionar uma nova classe chamada `CustomViewController` conforme mostrado abaix
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](ios-code-only-images/customviewcontroller.png "Adicionar uma nova classe chamada CustomViewController")](ios-code-only-images/customviewcontroller.png)
+[![](ios-code-only-images/customviewcontroller.png "Adicionar uma nova classe chamada CustomViewController")](ios-code-only-images/customviewcontroller.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![](ios-code-only-images/new-file.png "Adicionar uma nova classe chamada CustomViewController")](ios-code-only-images/new-file.png)
+[![](ios-code-only-images/new-file.png "Adicionar uma nova classe chamada CustomViewController")](ios-code-only-images/new-file.png#lightbox)
 
 -----
 
@@ -245,6 +245,8 @@ namespace CodeOnlyDemo
     }
 }
 ```
+
+<a name="Initializing_the_View"/>
 
 ## <a name="initializing-the-view"></a>Inicializando o modo de exibição
 
@@ -302,11 +304,11 @@ Window.RootViewController = navController;
 
 Agora quando o aplicativo é carregado, o `CustomViewController` é carregado em um controlador de navegação:
 
- [ ![](ios-code-only-images/customvc.png "O CustomViewController é carregado em um controlador de navegação")](ios-code-only-images/customvc.png)
+ [![](ios-code-only-images/customvc.png "O CustomViewController é carregado em um controlador de navegação")](ios-code-only-images/customvc.png#lightbox)
  
 Clique no botão será _push_ um novo controlador de exibição para a pilha de navegação:
 
-[ ![](ios-code-only-images/customvca.png "Um novo controlador de exibição enviados por push para a pilha de navegação")](ios-code-only-images/customvca.png)
+[![](ios-code-only-images/customvca.png "Um novo controlador de exibição enviados por push para a pilha de navegação")](ios-code-only-images/customvca.png#lightbox)
 
 ## <a name="building-the-view-hierarchy"></a>Criar a hierarquia de exibição
 
@@ -352,7 +354,7 @@ Quando criamos o `UITextField`, definimos o `Frame` propriedade para definir seu
 
 O aplicativo com o `UITextField` incluído é mostrado abaixo:
 
- [ ![](ios-code-only-images/image4.png "O aplicativo com o UITextField incluído")](ios-code-only-images/image4.png)
+ [![](ios-code-only-images/image4.png "O aplicativo com o UITextField incluído")](ios-code-only-images/image4.png#lightbox)
 
 Podemos adicionar um `UITextField` a senha de modo semelhante, somente neste momento definimos o `SecureTextEntry` a propriedade como true, conforme mostrado abaixo:
 
@@ -380,7 +382,7 @@ public class CustomViewController : UIViewController
 
 Configuração `SecureTextEntry = true` oculta o texto inserido no `UITextField` pelo usuário, conforme mostrado abaixo:
 
- [ ![](ios-code-only-images/image4a.png "Configuração SecureTextEntry verdadeiro oculta o texto inserido pelo usuário")](ios-code-only-images/image4a.png)
+ [![](ios-code-only-images/image4a.png "Configuração SecureTextEntry verdadeiro oculta o texto inserido pelo usuário")](ios-code-only-images/image4a.png#lightbox)
 
 ### <a name="adding-the-button"></a>Adicionar o botão
 
@@ -403,7 +405,7 @@ View.AddSubview(submitButton);
 
 Com isso em vigor, a tela de login agora aparece como mostrado abaixo:
 
- [ ![](ios-code-only-images/image5.png "A tela de login")](ios-code-only-images/image5.png)
+ [![](ios-code-only-images/image5.png "A tela de login")](ios-code-only-images/image5.png#lightbox)
 
 Ao contrário nas versões anteriores do iOS, o plano de fundo do botão padrão é transparente. Alterando o botão `BackgroundColor` alterações de propriedade isso:
 
@@ -419,7 +421,7 @@ submitButton.Layer.CornerRadius = 5f;
 
 Com essas alterações, a exibição será assim:
 
-[ ![](ios-code-only-images/image6.png "Executar um exemplo do modo de exibição")](ios-code-only-images/image6.png)
+[![](ios-code-only-images/image6.png "Executar um exemplo do modo de exibição")](ios-code-only-images/image6.png#lightbox)
  
 ## <a name="adding-multiple-views-to-the-view-hierarchy"></a>Adicionando vários modos de exibição para a hierarquia de exibição
 
@@ -452,7 +454,7 @@ submitButton.TouchUpInside += (sender, e) => {
 
 Painel de navegação está ilustrada abaixo:
 
-[ ![](ios-code-only-images/navigation.png "A navegação é ilustrada neste gráfico")](ios-code-only-images/navigation.png)
+[![](ios-code-only-images/navigation.png "A navegação é ilustrada neste gráfico")](ios-code-only-images/navigation.png#lightbox)
 
 Observe que por padrão, quando você usa um controlador de navegação, iOS dá ao aplicativo uma barra de navegação e um botão Voltar para permitir que você percorrer a pilha.
 
@@ -477,7 +479,7 @@ Isso, porém não funcionará se a exibição iterada para é um `UIView` como t
 
 Se o usuário gira o dispositivo para paisagem, os controles não são redimensionados adequadamente, conforme ilustrado na captura de tela a seguir:
 
- [ ![](ios-code-only-images/image7.png "Se o usuário gira o dispositivo para paisagem, os controles não são redimensionados adequadamente")](ios-code-only-images/image7.png)
+ [![](ios-code-only-images/image7.png "Se o usuário gira o dispositivo para paisagem, os controles não são redimensionados adequadamente")](ios-code-only-images/image7.png#lightbox)
 
 É uma maneira de corrigir isso, definindo o `AutoresizingMask` propriedade em cada modo de exibição. Nesse caso queremos que os controles para alongar horizontalmente, assim, definiríamos cada `AutoresizingMask`. O exemplo a seguir é para `usernameField`, mas o mesmo precisa ser aplicado a cada gadget na hierarquia do modo de exibição.
 
@@ -487,7 +489,7 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 Agora quando podemos gira o simulador ou dispositivo, tudo o que expande para preencher o espaço adicional, conforme mostrado abaixo:
 
- [ ![](ios-code-only-images/image8.png "Todos os controles esticam para preencher o espaço adicional")](ios-code-only-images/image8.png)
+ [![](ios-code-only-images/image8.png "Todos os controles esticam para preencher o espaço adicional")](ios-code-only-images/image8.png#lightbox)
 
 ## <a name="creating-custom-views"></a>Criando modos de exibição personalizados
 
@@ -592,7 +594,7 @@ submitButton.TouchUpInside += delegate
 
 Agora, quando executar o aplicativo e toque no botão Enviar, o novo modo de exibição com um círculo é exibido:
 
- [ ![](ios-code-only-images/circles.png "O novo modo de exibição com um círculo é exibido")](ios-code-only-images/circles.png)
+ [![](ios-code-only-images/circles.png "O novo modo de exibição com um círculo é exibido")](ios-code-only-images/circles.png#lightbox)
 
 ## <a name="creating-a-launch-screen"></a>Criando uma tela de inicialização
 

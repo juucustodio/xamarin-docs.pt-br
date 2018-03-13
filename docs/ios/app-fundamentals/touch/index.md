@@ -3,16 +3,16 @@ title: Toque
 description: "Telas sensíveis ao toque em muitos dos dispositivos atuais permitem que usuários rápida e eficientemente interagir com dispositivos de uma maneira natural e intuitiva. Essa interação não está limitada apenas a detecção de toque simples – é possível usar gestos também. Por exemplo, o gesto de pinçagem para aplicar zoom é um exemplo comum disso – por esmagamento uma parte da tela com dois dedos, que o usuário pode ampliar ou reduzir. Este guia examina toque e gestos em iOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4A17FD28-313F-4AAC-B82B-3847B4D64A88
+ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: 8f6c26048bc0ece0d64acf069151ff1d67403ccc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b0e1cf8b1cb18982fe319fef7c524aeb70be4a9b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="touch"></a>Toque
 
@@ -37,8 +37,8 @@ No entanto, há ocasiões em que você precisa para usar o processamento de nív
 
 Este guia serve como introdução ao toque no iOS. Para obter mais informações sobre como usar 3D Touch e comentários Haptic no iOS, que foram introduzido no iOS 9 e 10 respectivamente, consulte os guias específicos abaixo:
 
-* [Toque 3D](~/ios/platform/3d-touch.md)
-* [Fornecendo comentários Haptic](~/ios/user-interface/ios-ui/haptic-feedback.md)
+* [3D Touch](~/ios/platform/3d-touch.md)
+* [Fornecer comentários hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 
 

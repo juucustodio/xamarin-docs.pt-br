@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f375f58215fbef13298e31b03b969c9388d2bfa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77bad4c31ad0cb11476c656aa495707d2a94aa8f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="workout-apps"></a>Aplicativos de ginástica
 
@@ -29,7 +29,7 @@ Usuários de aplicativos de adequação e treinamento podem ser altamente dedica
 
 Um aplicativo bem projetado de treinamento ou de adequação ajuda os usuários a suas atividades para atingir suas metas de adequação do gráfico. Usando o Apple Watch, aplicativos de treinamento e de adequação a tem acesso instantâneo à frequência cardíaca, detecção de gravação e a atividade de calorias.
 
-[ ![](workout-apps-images/workout01.png "Exemplo de aplicativo de adequação e treinamento")](workout-apps-images/workout01.png)
+[![](workout-apps-images/workout01.png "Exemplo de aplicativo de adequação e treinamento")](workout-apps-images/workout01.png#lightbox)
 
 Novo para watchOS 3, _em execução em segundo plano_ fornece treinamento relacionados a aplicativos a capacidade de executar em segundo plano sobre o Apple Watch e obter acesso aos dados HealthKit.
 
@@ -60,20 +60,20 @@ Para habilitar a execução do plano de fundo, faça o seguinte:
 1. No **Solution Explorer**, clique duas vezes em do aplicativo do iPhone da extensão inspecionar complementar `Info.plist` arquivo para abri-lo para edição.
 2. Alterne para o **fonte** exibição: 
 
-    [ ![](workout-apps-images/plist01.png "A exibição da fonte")](workout-apps-images/plist01.png)
+    [![](workout-apps-images/plist01.png "A exibição da fonte")](workout-apps-images/plist01.png#lightbox)
 3. Adicionar uma nova chave chamada `WKBackgroundModes` e defina o **tipo** para `Array`: 
 
-    [ ![](workout-apps-images/plist02.png "Adicionar uma nova chave chamada WKBackgroundModes")](workout-apps-images/plist02.png)
+    [![](workout-apps-images/plist02.png "Adicionar uma nova chave chamada WKBackgroundModes")](workout-apps-images/plist02.png#lightbox)
 4. Adicionar um novo item para a matriz com o **tipo** de `String` e um valor de `workout-processing`: 
 
-    [ ![](workout-apps-images/plist03.png "Adicionar um novo item para a matriz com o tipo de cadeia de caracteres e um valor de processamento de ginástica")](workout-apps-images/plist03.png)
+    [![](workout-apps-images/plist03.png "Adicionar um novo item para a matriz com o tipo de cadeia de caracteres e um valor de processamento de ginástica")](workout-apps-images/plist03.png#lightbox)
 5. Salve as alterações no arquivo.
 
 ## <a name="starting-a-workout-session"></a>Iniciar uma sessão de treinamento
 
 Há três etapas principais para iniciar uma sessão de treinamento:
 
-[ ![](workout-apps-images/workout02.png "As três etapas principais para iniciar uma sessão de treinamento")](workout-apps-images/workout02.png)
+[![](workout-apps-images/workout02.png "As três etapas principais para iniciar uma sessão de treinamento")](workout-apps-images/workout02.png#lightbox)
 
 1. O aplicativo deve solicitar autorização para acessar dados em HealthKit.
 2. Crie um objeto de configuração de treinamento para o tipo de treinamento que está sendo iniciado.
@@ -97,7 +97,7 @@ Faça o seguinte:
 1. No **Gerenciador de Soluções**, clique duas vezes no arquivo `Entitlements.plist` para abri-lo para edição.
 2. Role para baixo e marque **HealthKit habilitar**: 
 
-    [ ![](workout-apps-images/auth01.png "Seleção Habilitar HealthKit")](workout-apps-images/auth01.png)
+    [![](workout-apps-images/auth01.png "Seleção Habilitar HealthKit")](workout-apps-images/auth01.png#lightbox)
 3. Salve as alterações no arquivo.
 4. Siga as instruções no [explícita ID do aplicativo e perfil de provisionamento de](~/ios/platform/healthkit.md) e [associando o ID do aplicativo e o provisionamento de perfil com seu aplicativo de xamarin](~/ios/platform/healthkit.md) seções o [Introdução ao HealthKit](~/ios/platform/healthkit.md) artigo para configurar corretamente o aplicativo.
 5. Por fim, use as instruções no [Kit de integridade de programação](~/ios/platform/healthkit.md) e [solicitando permissão do usuário](~/ios/platform/healthkit.md) seções do [Introdução ao HealthKit](~/ios/platform/healthkit.md) a solicitação do artigo autorização para acessar o repositório de dados do usuário HealthKit.
@@ -273,7 +273,7 @@ private void StartOutdoorRun ()
 
 Se o aplicativo inicia esta sessão de treinamento e o usuário alternar novamente para seu face do relógio, um pequeno ícone verde "man está em execução" será exibido acima da face:
 
-[ ![](workout-apps-images/workout03.png "Um pequeno em execução man ícone verde exibido acima da face")](workout-apps-images/workout03.png)
+[![](workout-apps-images/workout03.png "Um pequeno em execução man ícone verde exibido acima da face")](workout-apps-images/workout03.png#lightbox)
 
 Se o usuário tocar nesse ícone, ele serão levados novamente para o aplicativo.
 
@@ -281,7 +281,7 @@ Se o usuário tocar nesse ícone, ele serão levados novamente para o aplicativo
 
 Depois que uma sessão de treinamento foi configurada e iniciada, o aplicativo precisará coletar dados sobre a sessão (por exemplo, a taxa de coração do usuário) e controlar o estado da sessão:
 
-[ ![](workout-apps-images/workout04.png "Coleta de dados e o diagrama de controle")](workout-apps-images/workout04.png)
+[![](workout-apps-images/workout04.png "Coleta de dados e o diagrama de controle")](workout-apps-images/workout04.png#lightbox)
 
 1. **Observando exemplos** -o aplicativo será necessário recuperar informações de HealthKit que será tratado e exibido ao usuário.
 2. **Observar eventos** -o aplicativo precisa responder a eventos gerados pela HealthKit ou em uma interface do usuário do aplicativo (por exemplo, o usuário pausa o treinamento).
@@ -502,7 +502,7 @@ Exercícios que incluem exemplos de energia atualizará o anel de mover do usuá
 
 As etapas a seguir são necessários para terminar e salvar uma sessão de treinamento:
 
-[ ![](workout-apps-images/workout05.png "Encerramento e salvar o diagrama de sessão de treinamento")](workout-apps-images/workout05.png)
+[![](workout-apps-images/workout05.png "Encerramento e salvar o diagrama de sessão de treinamento")](workout-apps-images/workout05.png#lightbox)
 
 1. Primeiro, o aplicativo precisará encerrar a sessão de treinamento.
 2. A sessão de treinamento é salvo HealthKit.
@@ -642,7 +642,7 @@ Enquanto o aplicativo watchOS é executado, ele pode usar WatchConnectivity para
 
 Dê uma olhada em como esse processo funciona:
 
-[ ![](workout-apps-images/workout06.png "iPhone e diagrama de comunicação do Apple Watch")](workout-apps-images/workout06.png)
+[![](workout-apps-images/workout06.png "iPhone e diagrama de comunicação do Apple Watch")](workout-apps-images/workout06.png#lightbox)
 
 1. O aplicativo de iPhone cria um `HKWorkoutConfiguration` do objeto e define o tipo de treinamento e o local.
 2. O `HKWorkoutConfiguration` objeto seja enviado a versão do aplicativo do Apple Watch e, se ele ainda não estiver sendo executado, ele é iniciado pelo sistema.

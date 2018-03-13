@@ -3,16 +3,16 @@ title: "Estrutura de notificações de usuário"
 description: "Este artigo aborda todas as maneiras que a notificação de usuários foram aprimorada por iOS 10 e como usá-los em um aplicativo xamarin."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/01/2016
-ms.openlocfilehash: 473f9b4d4fa2a034c7f39ce309fb3f921d809a10
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ab0a4add92db21c352dbaeadc71a3ff1e3d0cf9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="user-notifications-framework"></a>Estrutura de notificações de usuário
 
@@ -25,11 +25,11 @@ Além disso, o aplicativo ou extensão pode receber (e potencialmente modificar)
 A nova estrutura de interface do usuário de notificação de usuário permite que o aplicativo ou extensão do aplicativo para personalizar a aparência de notificações de locais e remotas quando eles são apresentados ao usuário.
 
 
-## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notificações de usuário aprimorada](~/ios/platform/user-notifications/enhanced-user-notifications.md)
+## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notificações de usuário aprimoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
 Este artigo apresenta todas as maneiras que as notificações de usuário foram aprimoradas para iOS 10 e fornece uma rápida introdução às implementá-los usando a nova estrutura de notificação do usuário.
 
-## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notificações de usuário avançado](~/ios/platform/user-notifications/advanced-user-notifications.md)
+## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notificações de usuário avançadas](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
 Este artigo usa uma análise mais profunda sobre a nova estrutura de notificações de usuário e como aproveitar ao máximo-lo em um aplicativo xamarin.
 

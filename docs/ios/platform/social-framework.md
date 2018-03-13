@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: da096c8575896bc9f522a92b3fb94b81f9e772df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9892577d7e0ed3d3f622f881cc51db09eb44a8fd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="social-framework"></a>Estrutura social
 
@@ -30,7 +30,7 @@ Usando a estrutura Social permite que aplicativos a interagir com redes sociais 
 
 Para se conectar ao Twitter usando a estrutura Social, uma conta deve ser configurado nas configurações do dispositivo, conforme mostrado abaixo:
 
- [ ![](social-framework-images/twitter01.png "Configurações de conta do Twitter")](social-framework-images/twitter01.png)
+ [![](social-framework-images/twitter01.png "Configurações de conta do Twitter")](social-framework-images/twitter01.png#lightbox)
 
 Depois que uma conta foi inserida e verificada com o Twitter, qualquer aplicativo no dispositivo que usa as classes do Framework Social para acessar o Twitter usará essa conta.
 
@@ -38,7 +38,7 @@ Depois que uma conta foi inserida e verificada com o Twitter, qualquer aplicativ
 
 A estrutura Social inclui um controlador chamado `SLComposeViewController` que apresenta um modo de exibição para editar e enviar um tweet fornecido pelo sistema. Captura de tela a seguir mostra um exemplo dessa exibição:
 
- [ ![](social-framework-images/twitter02.png "Esta captura de tela mostra um exemplo da SLComposeViewController")](social-framework-images/twitter02.png)
+ [![](social-framework-images/twitter02.png "Esta captura de tela mostra um exemplo da SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
 
 Para usar um `SLComposeViewController` com o Twitter, uma instância do controlador deve ser criada chamando o `FromService` método com `SLServiceType.Twitter` conforme mostrado abaixo:
 
@@ -284,7 +284,7 @@ request.PerformRequest ((data, response, error) => {
 
 Se os dados foram carregados com êxito, os dados brutos do JSON serão exibidos (como a saída de exemplo abaixo):
 
-[ ![](social-framework-images/twitter03.png "Um exemplo de exibição de dados bruto do JSON")](social-framework-images/twitter03.png)
+[![](social-framework-images/twitter03.png "Um exemplo de exibição de dados bruto do JSON")](social-framework-images/twitter03.png#lightbox)
 
 Em um aplicativo real, os resultados JSON, em seguida, podem ser analisados como normal e os resultados apresentados ao usuário. Consulte [serviços da Web de Introdução](~/cross-platform/data-cloud/web-services/index.md) para obter informações sobre como analisar o JSON.
 
@@ -294,7 +294,7 @@ Em um aplicativo real, os resultados JSON, em seguida, podem ser analisados como
 
 Conectar com o Facebook com o Framework Social é praticamente idêntica ao processo usado para Twitter mostrado acima. Uma conta de usuário do Facebook deve ser configurada nas configurações do dispositivo, conforme mostrado abaixo:
 
-[ ![](social-framework-images/facebook01.png "Configurações de conta do Facebook")](social-framework-images/facebook01.png)
+[![](social-framework-images/facebook01.png "Configurações de conta do Facebook")](social-framework-images/facebook01.png#lightbox)
 
 Uma vez configurado, qualquer aplicativo no dispositivo que usa a estrutura Social usará essa conta para se conectar ao Facebook.
 
@@ -368,7 +368,7 @@ namespace SocialFrameworkDemo
 
 Quando usado com o Facebook, o `SLComposeViewController` exibe uma exibição que é praticamente idêntica ao exemplo Twitter, mostrando **Facebook** como o título nesse caso:
 
-[ ![](social-framework-images/facebook02.png "A exibição SLComposeViewController")](social-framework-images/facebook02.png)
+[![](social-framework-images/facebook02.png "A exibição SLComposeViewController")](social-framework-images/facebook02.png#lightbox)
 
 ### <a name="calling-facebook-graph-api"></a>Chamar a API de gráfico do Facebook
 

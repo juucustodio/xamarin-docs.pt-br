@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 03089e4760ebf19849cd4d34cafb7047d8915a4d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee0625f22062fef3c27a697ce33488274abc24d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="2d-drawing"></a>Desenho 2D
 
 SkiaSharp fornece uma API c# poderosa para fazer gráficos 2D. Ele é alimentado por [biblioteca de Skia do Google](http://skia.org), da mesma biblioteca que habilita o Google Chrome, Firefox e do Android pilhas de gráfico.
 
-[ ![](images/ide-sml.png "SkiaSharp fornece uma API c# poderosa para fazer gráficos 2D")](images/ide.png)
+[![](images/ide-sml.png "SkiaSharp fornece uma API c# poderosa para fazer gráficos 2D")](images/ide.png#lightbox)
 
 SkiaSharp é uma biblioteca portátil e convenientemente é fornecido como um [pacote de NuGet de plataforma cruzada](https://www.nuget.org/packages/SkiaSharp)e suporta as seguintes plataformas predefinido: macOS, xamarin, xamarin e a área de trabalho do Windows.
 
@@ -32,7 +32,7 @@ Aprenda a trabalhar com cruzada gráficos de plataforma que processam em xamarin
 
 - [Noções básicas de desenho](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md)
   * [Desenho de um círculo simple](~/xamarin-forms/user-interface/graphics/skiasharp/basics/circle.md)
-  * [Integração com o xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
+  * [Integração com Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
   * [Unidades independentes de dispositivo e pixels](~/xamarin-forms/user-interface/graphics/skiasharp/basics/pixels.md)
   * [Animação básica](~/xamarin-forms/user-interface/graphics/skiasharp/basics/animation.md)
   * [Integração de texto e elementos gráficos](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md)
@@ -54,15 +54,15 @@ Aprenda a trabalhar com cruzada gráficos de plataforma que processam em xamarin
   * [Transformações não afins](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)
   * [Rotação 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
 - [Curvas e caminhos](~/xamarin-forms/user-interface/graphics/skiasharp/curves/index.md)
-  * [Três maneiras para desenhar um arco](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
+  * [Três formas de desenhar um arco](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
   * [Três tipos de curvas de Bézier](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
   * [Dados de caminho SVG](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
-  * [Com regiões e caminhos de recorte](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
+  * [Recorte com caminhos de regiões](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
   * [Efeitos de caminho](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
   * [Caminhos e texto](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
   * [Enumeração e informações de caminho](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
 
-## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[Anotações específicas de plataforma](~/graphics-games/skiasharp/platform.md)
+## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[Notas específicas à plataforma](~/graphics-games/skiasharp/platform.md)
 
 Esta página descreve as instruções de instalação para SkiaSharp em diferentes plataformas, inclusive Windows, iOS, Android e macOS.
 

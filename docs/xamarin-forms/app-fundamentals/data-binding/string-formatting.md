@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3b54ed876857f0cd04d7a304ff05b9710fbd9e04
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6735e9c03bee981f048231b53539c3b239f64484
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="string-formatting"></a>Cadeia de caracteres de formatação
 
@@ -121,7 +121,7 @@ Os últimos conjuntos de seção de `BindingContext` para o valor de `Math.PI` e
 
 Aqui está o programa em execução em todas as três plataformas:
 
-[![Cadeia de caracteres de formatação](string-formatting-images/stringformatting-small.png "formatação da cadeia de caracteres")](string-formatting-images/stringformatting-large.png "formatação da cadeia de caracteres")
+[![Cadeia de caracteres de formatação](string-formatting-images/stringformatting-small.png "formatação da cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "formatação da cadeia de caracteres")
 
 ## <a name="viewmodels-and-string-formatting"></a>Cadeia de caracteres de formatação e ViewModels
 
@@ -174,7 +174,7 @@ Essa abordagem é mostrada no **melhor seletor de cores** sample, que usa o mesm
 
 Agora, há três pares de `Slider` e `Label` elementos que estão associados à mesma fonte de propriedade no `HslColorViewModel` objeto. A única diferença é que `Label` tem um `StringFormat` propriedade para exibir cada `Slider` valor.
 
-[![Seletor de cores melhor](string-formatting-images/bettercolorselector-small.png "melhor o seletor de cores")](string-formatting-images/bettercolorselector-large.png "melhor o seletor de cores")
+[![Seletor de cores melhor](string-formatting-images/bettercolorselector-small.png "melhor o seletor de cores")](string-formatting-images/bettercolorselector-large.png#lightbox "melhor o seletor de cores")
 
 Você deve estar se perguntando como você pode exibir valores RGB (vermelhos, verdes e azuis) em formato hexadecimal de dois dígitos tradicional. Os valores inteiros não são diretamente disponíveis no `Color` estrutura. Uma solução seria calcular valores de inteiro dos componentes de cor no ViewModel e expô-los como propriedades. Em seguida, você pode formatá-los usando o `X2` especificação de formatação.
 

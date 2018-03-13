@@ -3,14 +3,15 @@ title: "Resumos de capítulo para a criação de aplicativos móveis com o xamar
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 14A1A56C-CE91-4F86-BCF2-A4CB055A861E
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b88d227b272c34dd1c4d22fc707edce4df6dd91f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2cf6033958848f0c1b16e78fbc3a3d18a6b4fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="chapter-summaries-for-creating-mobile-apps-with-xamarinforms"></a>Resumos de capítulo para a criação de aplicativos móveis com o xamarin. Forms
 
@@ -26,27 +27,27 @@ O **código original do catálogo** ramificação do [ **xamarin forms-livro exe
 
 ## <a name="contents"></a>Conteúdo
 
-[Capítulo 1. Como xamarin. Forms se encaixa?](chapter01.md)
+[Capítulo 1. Como o Xamarin.Forms se encaixa?](chapter01.md)
 
 [Capítulo 2. Anatomia de um aplicativo](chapter02.md)
 
-[Capítulo 3. Aprofundar no texto](chapter03.md)
+[Capítulo 3. Aprofundamento no texto](chapter03.md)
 
-[Capítulo 4. A pilha de rolagem](chapter04.md)
+[Capítulo 4. Rolagem da pilha](chapter04.md)
 
 [Capítulo 5. Lidar com tamanhos](chapter05.md)
 
-[Capítulo 6. Cliques de botão](chapter06.md)
+[Capítulo 6. Cliques no botão](chapter06.md)
 
-[Capítulo 7. XAML e código](chapter07.md)
+[Capítulo 7. XAML versus código](chapter07.md)
 
 [Capítulo 8. Código e XAML em harmonia](chapter08.md)
 
-[Capítulo 9. Chamadas à API específica de plataforma](chapter09.md)
+[Capítulo 9. Chamadas de API específicas à plataforma](chapter09.md)
 
 [Capítulo 10. Extensões de marcação XAML](chapter10.md)
 
-[Capítulo 11. A infraestrutura vinculável](chapter11.md)
+[Capítulo 11. A infraestrutura associável](chapter11.md)
 
 [Capítulo 12. Estilos](chapter12.md)
 
@@ -56,31 +57,31 @@ O **código original do catálogo** ramificação do [ **xamarin forms-livro exe
 
 [Capítulo 15. A interface interativa](chapter15.md)
 
-[Capítulo 16. associação de dados](chapter16.md)
+[Capítulo 16. Associação de dados](chapter16.md)
 
-[Capítulo 17. Controle de grade](chapter17.md)
+[Capítulo 17. Domínio da grade](chapter17.md)
 
 [Capítulo 18. MVVM](chapter18.md)
 
 [Capítulo 19. Exibições de coleção](chapter19.md)
 
-[Capítulo 20. E/s assíncrona e arquivo](chapter20.md)
+[Capítulo 20. E/S assíncrona e de arquivo](chapter20.md)
 
-[Capítulo 21. Transforms](chapter21.md)
+[Capítulo 21. Transformações](chapter21.md)
 
 [Capítulo 22. Animação](chapter22.md)
 
 [23 de capítulo. Gatilhos e comportamentos](chapter23.md)
 
-[Capítulo 24. Navegação de página](chapter24.md)
+[Capítulo 24. Navegação da página](chapter24.md)
 
 [Capítulo 25. Variedades de página](chapter25.md)
 
 [26 de capítulo. Layouts personalizados](chapter26.md)
 
-[Capítulo 27. Processadores personalizados](chapter27.md)
+[Capítulo 27. Renderizadores personalizados](chapter27.md)
 
-[Capítulo 28. Local e mapas](chapter28.md)
+[Capítulo 28. Localização e mapas](chapter28.md)
 
 
 

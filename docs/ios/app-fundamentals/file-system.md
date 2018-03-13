@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: a2c3ce9e19340067d77a8bc131b5a247806ecfa1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 36c793e7a9b7b30bcb0cdf2c7959fd2df36c8775
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-file-system"></a>Trabalhando com o sistema de arquivos
 
@@ -26,7 +26,7 @@ iOS também tem alguns recursos específicos do sistema de arquivos: determinado
 
 Este artigo aborda os recursos e restrições do iOS, sistema de arquivos em detalhes e inclui um aplicativo de exemplo que demonstra como usar o xamarin para executar algumas operações de sistema de arquivos simples:
 
- [ ![](file-system-images/05-sampleapp.png "Um exemplo de iOS executar algumas operações de sistema de arquivos simples")](file-system-images/05-sampleapp.png)
+ [![](file-system-images/05-sampleapp.png "Um exemplo de iOS executar algumas operações de sistema de arquivos simples")](file-system-images/05-sampleapp.png#lightbox)
 
  <a name="General_File_Access" />
 
@@ -110,7 +110,7 @@ Para obter mais informações sobre o namespace System.IO, consulte o [documenta
 
 Trabalhar com Json dados em um aplicativo xamarin são muito fácil usando o [Json.NET](http://www.newtonsoft.com/json) estrutura JSON de alto desempenho para o pacote NuGet .NET. Basta adicione o pacote NuGet ao projeto do aplicativo: 
 
-[ ![](file-system-images/json01.png "Adicionar o pacote NuGet para o projeto de aplicativos")](file-system-images/json01.png)
+[![](file-system-images/json01.png "Adicionar o pacote NuGet para o projeto de aplicativos")](file-system-images/json01.png#lightbox)
 
 Em seguida, adicione uma classe para atuar como o modelo de dados para serialização/desserialização (neste caso `Account.cs`):
 
@@ -217,11 +217,11 @@ Quando você navega para o pacote de aplicativo no Mac OS, ele aparece com um í
 
 Para exibir o pacote de aplicativo para o código de exemplo, com o botão direito no projeto no Visual Studio para Mac e selecione **abrir a pasta que contém**. Navegue até **bin/Debug/** onde você deve encontrar um ícone do aplicativo (semelhante a captura de tela abaixo).
 
- [ ![](file-system-images/40-bundle.png "Navegue para bin/Debug para encontrar um ícone do aplicativo semelhante a esta captura de tela")](file-system-images/40-bundle.png)
+ [![](file-system-images/40-bundle.png "Navegue para bin/Debug para encontrar um ícone do aplicativo semelhante a esta captura de tela")](file-system-images/40-bundle.png#lightbox)
 
 Clique nesse ícone e escolha **exibir o conteúdo do pacote** para procurar o conteúdo do diretório do pacote de aplicativo. O conteúdo é exibido como o conteúdo de um diretório regular, conforme mostrado aqui:
 
- [ ![](file-system-images/45-bundle.png "O conteúdo do pacote de aplicativo")](file-system-images/45-bundle.png)
+ [![](file-system-images/45-bundle.png "O conteúdo do pacote de aplicativo")](file-system-images/45-bundle.png#lightbox)
 
 O pacote de aplicativo é o que é instalado no simulador ou no seu dispositivo durante o teste e, por fim, é o que é enviado para a Apple para inclusão na loja de aplicativos.
 
@@ -313,7 +313,7 @@ O conteúdo deste diretório nunca é exposto para o usuário por meio do iTunes
 
 Esta captura de tela mostra a estrutura de diretórios em uma janela de localizador:
 
- [ ![](file-system-images/08-library-directory.png "Esta captura de tela mostra a estrutura de diretórios em uma janela de localizador")](file-system-images/08-library-directory.png)
+ [![](file-system-images/08-library-directory.png "Esta captura de tela mostra a estrutura de diretórios em uma janela de localizador")](file-system-images/08-library-directory.png#lightbox)
 
  <a name="Accessing_Other_Directories_Programmatically" />
 
@@ -352,11 +352,11 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 Os usuários podem acessar os arquivos no diretório de documentos do aplicativo por meio da edição `Info.plist` e criando uma **aplicativo oferece suporte ao compartilhamento de iTunes** (`UIFileSharingEnabled`) entrada no **fonte** modo de exibição, como mostrado aqui:
 
- [ ![](file-system-images/09-uifilesharingenabled-plist.png "Adicionar o aplicativo dá suporte a compartilhamento de propriedade do iTunes")](file-system-images/09-uifilesharingenabled-plist.png)
+ [![](file-system-images/09-uifilesharingenabled-plist.png "Adicionar o aplicativo dá suporte a compartilhamento de propriedade do iTunes")](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
 
 Esses arquivos podem ser acessados na iTunes quando o dispositivo está conectado e o usuário escolhe o `Apps` guia. Por exemplo, a captura de tela a seguir mostra os arquivos no aplicativo selecionado compartilhado por meio da iTunes:
 
- [ ![](file-system-images/10-itunes-file-sharing.png "Esta captura de tela mostra os arquivos no aplicativo selecionado compartilhado por meio da iTunes")](file-system-images/10-itunes-file-sharing.png)
+ [![](file-system-images/10-itunes-file-sharing.png "Esta captura de tela mostra os arquivos no aplicativo selecionado compartilhado por meio da iTunes")](file-system-images/10-itunes-file-sharing.png#lightbox)
 
 Usuários podem acessar apenas os itens de nível superior neste diretório por meio do iTunes. Eles não podem ver o conteúdo de todas as subpastas (embora eles podem copiá-los ao seu computador ou excluí-los). Por exemplo, com GoodReader, arquivos PDF e EPUB podem ser compartilhados com o aplicativo para que os usuários podem ler em seus dispositivos iOS.
 
@@ -364,7 +364,7 @@ Os usuários que modifiquem o conteúdo da pasta dos documentos podem causar pro
 
 O código de exemplo para este artigo cria um arquivo e uma pasta na pasta documentos (em **SampleCode.cs**) e permite o compartilhamento de arquivos o **Info. plist** arquivo. Esta captura de tela mostra como eles aparecem na iTunes:
 
- [ ![](file-system-images/15-itunes-file-sharing-example.png "Esta captura de tela mostra como os arquivos exibidos na iTunes")](file-system-images/15-itunes-file-sharing-example.png)
+ [![](file-system-images/15-itunes-file-sharing-example.png "Esta captura de tela mostra como os arquivos exibidos na iTunes")](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
 Consulte o [trabalhando com imagens](~/ios/app-fundamentals/images-icons/index.md) artigo para obter informações sobre como definir ícones para o aplicativo e de qualquer tipo de documento personalizadas que você criar.
 

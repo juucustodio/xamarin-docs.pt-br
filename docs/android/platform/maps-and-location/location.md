@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: beb690fe495d142bb4b0424ad752101fc46da590
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="location-services"></a>Serviços de localização
 
@@ -54,7 +54,7 @@ Para aplicativos que se destinam a API versão 21 (Android 5.0 pirulito) ou supe
 
 Para definir as permissões, expanda o **propriedades** pasta o **solução preenchimento** e clique duas vezes em **AndroidManifest.xml**. As permissões serão listadas na **permissões necessárias**:
 
-[![Captura de tela das configurações do Android necessárias permissões de manifesto](location-images/location-01-xs.png)](location-images/location-01-xs.png)
+[![Captura de tela das configurações do Android necessárias permissões de manifesto](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
 
 Definição de uma dessas permissões informa Android que seu aplicativo precisa de permissão do usuário para acessar os provedores de local. Dispositivos que executar API nível 22 (Android 5.1) ou inferior solicitará ao usuário conceder essas permissões a cada vez que o aplicativo está instalado. Em dispositivos que executam API nível 23 (Android 6.0) ou superior, o aplicativo deve executar uma verificação de permissão de tempo de execução antes de fazer uma solicitação do provedor local. 
 
@@ -334,11 +334,11 @@ else
 > [!NOTE]
 >  Se o usuário tiver desabilitado a todos os provedores de local, `GetBestProvider` retornará `null`. Para ver como esse código funciona em um dispositivo real, certifique-se de habilitar GPS, Wi-Fi e redes de celulares em **as configurações do Google > local > modo** conforme mostrado nesta captura de tela:
 
-[![Tela de modo do local de configurações em um telefone Android](location-images/location-02.png)](location-images/location-02.png)
+[![Tela de modo do local de configurações em um telefone Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
 
 Captura de tela abaixo demonstra local aplicativo em execução usando `GetBestProvider`:
 
-[![Aplicativo GetBestProvider exibindo latitude, longitude e provedor](location-images/location-03.png)](location-images/location-03.png)
+[![Aplicativo GetBestProvider exibindo latitude, longitude e provedor](location-images/location-03.png)](location-images/location-03.png#lightbox)
 
 Tenha em mente que `GetBestProvider` não altera o provedor dinamicamente. Em vez disso, ele determina o provedor mais uma vez durante o ciclo de vida da atividade. Se o status do provedor for alterada após ter sido definido, o aplicativo exigirá código adicional no `ILocationListener` métodos &ndash; `OnProviderEnabled`, `OnProviderDisabled`, e `OnStatusChanged` &ndash; para lidar com todas as possibilidades relacionadas para o opção de provedor.
 

@@ -8,23 +8,23 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b07a88f25da1ea504785ddc4a0db8db1ed0e2650
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2a04dc047674b67b8f21571ed9e7890ddf773f64
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migrando uma associação para a API unificada
 
 _Este artigo aborda as etapas necessárias para atualizar um projeto de vinculação de Xamarin existente para dar suporte a APIs unificado para aplicativos xamarin e Xamarin.Mac._
 
-#<a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão geral
 
 Começando em 1º de fevereiro de 2015 Apple requer que todos os envios de novo a iTunes e Mac App Store devem ser aplicativos de 64 bits. Como resultado, qualquer novo aplicativo xamarin ou Xamarin.Mac precisará estar usando a nova API unificada em vez de MonoTouch clássico e MonoMac APIs existentes para dar suporte a 64 bits.
 
 Além disso, qualquer projeto de associação Xamarin também deve dar suporte a novas APIs unificado devem ser incluídos em um projeto de Xamarin.Mac ou xamarin de 64 bits. Este artigo aborda as etapas necessárias para atualizar um projeto existente de associação para usar a API unificada.
 
-#<a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos
 
 O exemplo a seguir é necessário para concluir as etapas apresentadas neste artigo:
 
@@ -33,7 +33,7 @@ O exemplo a seguir é necessário para concluir as etapas apresentadas neste art
 
 Não há suporte para associação de projetos no Visual studio em um computador Windows.
 
-#<a name="modify-the-using-statements"></a>Modifique as instruções Using
+## <a name="modify-the-using-statements"></a>Modifique as instruções Using
 
 As APIs unificado torna mais fácil para compartilhar código entre Mac e iOS, bem como permitindo que você oferecer suporte a 32 e 64 bits aplicativos com os mesmos binários. Descartando o _MonoMac_ e _MonoTouch_ prefixos de namespaces, mais simples de compartilhamento é obtida em projetos de aplicativo Xamarin.Mac e xamarin.
 
@@ -61,9 +61,9 @@ using ObjCRuntime;
 
 Novamente, será necessário fazer isso para qualquer `.cs` arquivo em nosso projeto de associação. Com essa alteração no local, a próxima etapa é atualizar nosso projeto de vinculação para usar os novos tipos de dados nativos.
 
-Para obter mais informações sobre a API unificado, consulte o [API unificada](~/cross-platform/macios/unified/index.md) documentação. Para obter mais informações sobre suporte de 32 e 64 bits aplicativos e informações sobre estruturas, consulte o [32 e 64 bits de considerações sobre a plataforma](~/cross-platform/macios/32-and-64.md) documentação.
+Para obter mais informações sobre a API unificado, consulte o [API unificada](~/cross-platform/macios/unified/index.md) documentação. Para obter mais informações sobre suporte de 32 e 64 bits aplicativos e informações sobre estruturas, consulte o [32 e 64 bits de considerações sobre a plataforma](~/cross-platform/macios/32-and-64/index.md) documentação.
 
-#<a name="update-to-native-data-types"></a>Atualização para tipos de dados nativos
+## <a name="update-to-native-data-types"></a>Atualização para tipos de dados nativos
 
 Objective-C mapeia o `NSInteger` tipo de dados `int32_t` em sistemas de 32 bits e para `int64_t` em sistemas de 64 bits. Para corresponder a esse comportamento, a nova API unificada substitui os usos anteriores `int` (que no .NET é definida como sendo sempre `System.Int32`) para um novo tipo de dados: `System.nint`.
 
@@ -94,7 +94,7 @@ Se nós está mapeando para uma biblioteca parte 3 de versão mais recente que o
 
 Para saber mais sobre essas alterações de tipo de dados, consulte o [tipos nativos](~/cross-platform/macios/nativetypes.md) documento.
 
-#<a name="update-the-coregraphics-types"></a>Atualizar os tipos de CoreGraphics
+## <a name="update-the-coregraphics-types"></a>Atualizar os tipos de CoreGraphics
 
 Os tipos de dados de ponto, o tamanho e o retângulo que são usados com `CoreGraphics` usam 32 ou 64 bits dependendo do dispositivo estão sendo executados em. Quando Xamarin vinculado originalmente o iOS e Mac APIs usamos estruturas de dados que correspondam a tipos de dados em `System.Drawing` (`RectangleF` por exemplo).
 
@@ -130,12 +130,12 @@ IntPtr Constructor (CGRect frame);
 
 Com todas as alterações de código já em vigor, é preciso modificar nosso projeto de associação ou tornar arquivo ligar as APIs unificado.
 
-#<a name="modify-the-binding-project"></a>Modificar o projeto de vinculação
+## <a name="modify-the-binding-project"></a>Modificar o projeto de vinculação
 
 Como a etapa final para atualizar nosso projeto de vinculação para usar as APIs unificado, é preciso modificar o `MakeFile` que usamos para compilar o projeto ou o tipo de projeto Xamarin (se estamos associando de dentro do Visual Studio para Mac) e instruir _btouch_  ligar as APIs unificado em vez dos clássica.
 
 
-##<a name="updating-a-makefile"></a>Atualizando um MakeFile
+### <a name="updating-a-makefile"></a>Atualizando um MakeFile
 
 Se estiver usando um makefile para compilar nosso projeto de associação em um Xamarin. DLL, será necessário incluir o `--new-style` opção de linha de comando e chame `btouch-native` em vez de `btouch`.
 
@@ -189,7 +189,7 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 
 Agora podemos executar nosso `MakeFile` normalmente para criar a nova versão de 64 bits da nossa API.
 
-##<a name="updating-a-binding-project-type"></a>Atualizar um tipo de projeto de vinculação
+### <a name="updating-a-binding-project-type"></a>Atualizar um tipo de projeto de vinculação
 
 Se estiver usando um Visual Studio para Mac associação de modelo de projeto para criar nossa API, precisaremos atualizar para a nova versão de API unificada a associação do modelo de projeto. A maneira mais fácil de fazer isso é iniciar um novo projeto de associação de API unificada e cópia sobre todas as configurações e o código existente.
 
@@ -199,7 +199,7 @@ Faça o seguinte:
 2. Selecione **arquivo** > **novo** > **solução...**
 3. Na caixa de diálogo nova solução, selecione **iOS** > **API unificada** > **iOS projeto associação**: 
 
-    [ ![](update-binding-images/image01new.png "Na caixa de diálogo nova solução, selecionar o iOS / API unificada / projeto de vinculação do iOS")](update-binding-images/image01new.png)
+    [![](update-binding-images/image01new.png "Na caixa de diálogo nova solução, selecionar o iOS / API unificada / projeto de vinculação do iOS")](update-binding-images/image01new.png#lightbox)
 4. Na caixa de diálogo 'Configurar seu novo projeto' Insira uma **nome** para o novo projeto de vinculação e clique o **Okey** botão.
 5. Inclui a versão de 64 bits da biblioteca Objective-C que você pretende criar associações.
 6. Copie o código-fonte do seu projeto existente de associação de API clássica de 32 bits (como o `ApiDefinition.cs` e `StructsAndEnums.cs` arquivos).
@@ -207,7 +207,7 @@ Faça o seguinte:
 
 Todas essas alterações em vigor, você pode criar a nova versão de 64 bits da API de como você faria com a versão de 32 bits.
 
-#<a name="summary"></a>Resumo
+## <a name="summary"></a>Resumo
 
 Neste artigo, mostramos as alterações que precisam ser feitas a um projeto existente de associação Xamarin para dar suporte a novas APIs unificado e dispositivos de 64 bits e as etapas necessárias para criar a nova versão compatível do 64 bits de uma API.
 
@@ -216,8 +216,8 @@ Neste artigo, mostramos as alterações que precisam ser feitas a um projeto exi
 ## <a name="related-links"></a>Links relacionados
 
 - [Mac e iOS](~/cross-platform/macios/index.md)
-- [API unificada](~/cross-platform/macios/nativetypes.md)
-- [Considerações sobre a plataforma de 32/64 bits](~/cross-platform/macios/32-and-64.md)
+- [API Unificada](~/cross-platform/macios/nativetypes.md)
+- [Considerações sobre a plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md)
 - [Atualizando aplicativos do iOS existente](~/cross-platform/macios/unified/updating-ios-apps.md)
-- [API unificada](~/cross-platform/macios/unified/index.md)
+- [API Unificada](~/cross-platform/macios/unified/index.md)
 - [BindingSample](https://developer.xamarin.com/samples/monotouch/BindingSample/)

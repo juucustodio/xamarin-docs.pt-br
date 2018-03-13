@@ -5,20 +5,24 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: b2decf1331764ed6b1696126d8b23318e329e0c7
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 38d3b6da0dd33e038f2d50209280f2983faf6013
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
 _Indexação de aplicativo permite que os aplicativos que seriam esquecidos caso contrário, depois de alguns usa permaneça relevante por apareçam nos resultados da pesquisa. Vinculação profunda permite que aplicativos responder a um resultado de pesquisa que contém dados de aplicativos, normalmente, navegando até uma página referenciada por um link profundo. Este artigo demonstra como usar a indexação de aplicativo e vinculação profunda para tornar o conteúdo do aplicativo xamarin. Forms pesquisável em dispositivos iOS e Android._
 
-## <a name="overview"></a>Visão geral
+> [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
+
+**Profundidade da vinculação com xamarin. Forms e o Azure, pelo [University Xamarin](https://university.xamarin.com/)**
+
 
 Indexação de aplicativo xamarin. Forms e vinculação profunda fornecem uma API para metadados de publicação para indexação de aplicativo, como os usuários navegam por meio de aplicativos. Conteúdo indexado pode ser pesquisado na pesquisa do Spotlight, pesquisa do Google ou uma pesquisa na web. Toque em um resultado de pesquisa que contém um link profundo acionarão um evento que pode ser tratado por um aplicativo e é normalmente usado para navegar até a página referenciada do link profundo.
 
@@ -31,7 +35,7 @@ Cada `TodoItem` instância criada pelo usuário que está sendo indexada. Pesqui
 Para obter mais informações sobre como usar um banco de dados SQLite, consulte [trabalhando com um banco de dados Local](~/xamarin-forms/app-fundamentals/databases.md).
 
 > [!NOTE]
-> **Observação**: aplicativo xamarin. Forms indexação e o vínculo profundo funcionalidade só está disponível nas plataformas Android e iOS e requer iOS 9 e API 23 respectivamente.
+> Indexação de aplicativo xamarin. Forms e profundo vinculação funcionalidade só está disponíveis nas plataformas Android e iOS e requer iOS 9 e API 23 respectivamente.
 
 ## <a name="setup"></a>Configuração
 
@@ -106,7 +110,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 Isso adiciona o [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instância para o aplicativo [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) coleção.
 
 > [!NOTE]
-> **Observação**: O `RegisterLink` método também pode ser usado para atualizar o conteúdo foi indexado para uma página.
+> O `RegisterLink` método também pode ser usado para atualizar o conteúdo foi indexado para uma página.
 
 Uma vez um [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instância foi registrada para indexação, ele pode aparecer nos resultados da pesquisa. Captura de tela a seguir mostra o conteúdo indexado apareçam nos resultados da pesquisa na plataforma iOS:
 
@@ -123,7 +127,7 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 Isso remove o [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instância a partir do aplicativo [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) coleção.
 
 > [!NOTE]
-> **Observação**: no Android não é possível remover o conteúdo indexado de resultados da pesquisa.
+> No Android não é possível remover o conteúdo indexado de resultados da pesquisa.
 
 <a name="responding" />
 
@@ -211,7 +215,7 @@ Além disso, os valores para as chaves a seguir podem ser especificados:
 - `shouldAddToPublicIndex` – um `string` do `true` ou `false` que controla se deve ou não adicionar o conteúdo indexado para o índice de nuvem pública da Apple, que, em seguida, pode ser apresentada aos usuários que ainda não instalou o aplicativo em seu dispositivo iOS. No entanto, apenas porque o conteúdo tiver sido definido para indexação pública, isso não significa que ele será automaticamente adicionado ao índice de nuvem pública da Apple. Para obter mais informações, consulte [indexação pública da pesquisa](~/ios/platform/search/nsuseractivity.md). Observe que essa chave deve ser definida como `false` ao adicionar dados pessoais para o [ `KeyValues` ](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) coleção.
 
 > [!NOTE]
-> **Observação**: O `KeyValues` coleção não é usada na plataforma Android.
+> O `KeyValues` coleção não é usada na plataforma Android.
 
 Para obter mais informações sobre a entrega, consulte [Introdução à entrega](~/ios/platform/handoff.md).
 

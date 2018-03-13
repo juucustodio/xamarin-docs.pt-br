@@ -8,13 +8,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5ae7753fe7d12fd41b39f9429fa4a3ee97a22a5d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f781e0ad889415d75f22e7dd5fb3eae75d080a8f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[Distribuição de aplicativo](~/ios/tvos/deploy-test/app-distribution/index.md)
+# <a name="deployment-and-testing"></a>Implantação e Teste
+
+## <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[Distribuição de aplicativo](~/ios/tvos/deploy-test/app-distribution/index.md)
 
 Este artigo mostra como configurar, criar e publicar um aplicativo Xamarin.tvOS para distribuição através de várias maneiras diferentes, incluindo:
 
@@ -24,11 +26,9 @@ Este artigo mostra como configurar, criar e publicar um aplicativo Xamarin.tvOS 
 
 Se você estiver tendo problemas para enviar seu aplicativo Xamarin.tvOS a loja de aplicativos Apple TV, consulte nosso [solução de problemas](~/ios/tvos/troubleshooting.md) guia. Ele contém vários problemas conhecidos que podem ocorrer e como resolvê-los no Xamarin.tvOS.
 
-
-
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

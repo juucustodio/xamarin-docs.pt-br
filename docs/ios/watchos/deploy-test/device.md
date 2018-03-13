@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fab2092837f9b9ca8ada53274c9644f131fb5659
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="testing-on-watch-devices"></a>Testes em dispositivos de inspeção
 
@@ -32,7 +32,7 @@ Testando aplicativos do iOS em um iPhone real ou iPad sempre exigiu o dispositiv
 
 Observa não é diferentes - agora, você precisa adicionar seu dispositivo Apple Watch antes de implantar aplicativos para ele. Localizar o relógio UDID usando **Xcode** (**Windows > dispositivos** lista). Quando estiver conectado ao telefone emparelhado informações da observação também serão exibidas:
 
-[ ![](device-images/xcode-devices-sml.png "Informações de inspecionar emparelhados")](device-images/xcode-devices.png)
+[![](device-images/xcode-devices-sml.png "Informações de inspecionar emparelhados")](device-images/xcode-devices.png#lightbox)
 
 Quando você sabe que o relógio UDID, adicioná-lo à lista de dispositivos no Centro de desenvolvimento:
 
@@ -99,12 +99,12 @@ Isso pode ocorrer ao compilar no modo de depuração para implantar em um dispos
 
 Para *temporariamente* contornar esse problema, desabilite **compilações incrementais** na extensão de inspeção **opções de projeto > compilar > watchOS Build** janela:
 
-[ ![](device-images/disable-incremental-sml.png "A caixa de seleção de compilações incrementais")](device-images/disable-incremental.png)
+[![](device-images/disable-incremental-sml.png "A caixa de seleção de compilações incrementais")](device-images/disable-incremental.png#lightbox)
 
 Isso será corrigido em uma versão futura, após o qual compilações incrementais podem ser habilitadas novamente para tirar proveito dos tempos de compilação.
 
 
-#<a name="3-watch-app-fails-to-start-while-debugging-on-device"></a>N º 3 aplicativo watch falhar ao iniciar durante a depuração no dispositivo
+### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Observar o que aplicativo não for iniciado durante a depuração no dispositivo
 
 Quando aparecer a tentar depurar um aplicativo de inspeção em um dispositivo físico, apenas o ícone de & controle giratório de carregamento (e, eventualmente, tempo limite). Isso será abordado em uma versão futura; uma solução alternativa é executar uma compilação de versão (que não permitirá que a depuração).
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c5deb294aac679d60535f3f3bd6c9745e8bff358
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c8d66ff8199d451ce7469fa893b7673589c9e320
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-sizing-row-height"></a>Altura da linha de dimensionamento automático
 
@@ -23,25 +23,25 @@ iOS 11 adicionou a capacidade de linhas expandir automaticamente. Cabeçalhos, r
 
 Abra o storyboard para o modo de exibição de tabela que você deseja ter o redimensionamento automático da linha no iOS Designer, selecione a célula *protótipo* e criar o layout da célula. Por exemplo:
 
-[ ![](autosizing-row-height-images/table01.png "Design de protótipo da célula")](autosizing-row-height-images/table01.png)
+[![](autosizing-row-height-images/table01.png "Design de protótipo da célula")](autosizing-row-height-images/table01.png#lightbox)
 
 Para cada elemento no protótipo, adicione restrições para manter os elementos na posição correta, como o modo de exibição de tabela é redimensionado para rotação ou iOS diferentes tamanhos de tela do dispositivo. Por exemplo, fixar o `Title` na parte superior, à esquerda e à direita da célula do *exibição de conteúdo*:
 
-[ ![](autosizing-row-height-images/table02.png "Fixar o título para a parte superior, à esquerda e direita da exibição de conteúdo de células")](autosizing-row-height-images/table02.png)
+[![](autosizing-row-height-images/table02.png "Fixar o título para a parte superior, à esquerda e direita da exibição de conteúdo de células")](autosizing-row-height-images/table02.png#lightbox)
 
 No caso de nossa tabela de exemplo, o pequeno `Label` (sob o `Title`) que pode reduzir e expandir para aumentar ou diminuir a altura da linha. Para obter esse efeito, adicione as seguintes restrições para fixar à esquerda, direita, partes superior e inferior do rótulo:
 
-[ ![](autosizing-row-height-images/table03.png "Essas restrições para fixar à esquerda, direita, partes superior e inferior do rótulo")](autosizing-row-height-images/table03.png)
+[![](autosizing-row-height-images/table03.png "Essas restrições para fixar à esquerda, direita, partes superior e inferior do rótulo")](autosizing-row-height-images/table03.png#lightbox)
 
 Agora que estamos totalmente ter restrita os elementos na célula, precisamos esclarecer quais elemento deve ser estendido. Para fazer isso, defina o **conteúdo prioridade abraços** e **prioridade de resistência a compactação de conteúdo** conforme a necessidade do **Layout** seção do painel de propriedades:
 
-[ ![](autosizing-row-height-images/table03a.png "A seção de Layout do painel de propriedades")](autosizing-row-height-images/table03a.png)
+[![](autosizing-row-height-images/table03a.png "A seção de Layout do painel de propriedades")](autosizing-row-height-images/table03a.png#lightbox)
 
 Definir o elemento que você deseja expandir para ter um **inferior** valor de prioridade abraços e um **inferior** valor de prioridade de resistência a compactação.
 
 Em seguida, é preciso selecionar o protótipo de célula e dê a ele um exclusivo **identificador**:
 
-[ ![](autosizing-row-height-images/table04.png "Dando o protótipo de célula de um identificador exclusivo")](autosizing-row-height-images/table04.png)
+[![](autosizing-row-height-images/table04.png "Dando o protótipo de célula de um identificador exclusivo")](autosizing-row-height-images/table04.png#lightbox)
 
 No caso do nosso exemplo, `GrowCell`. Vamos usar esse valor posteriormente quando é popular a tabela.
 
@@ -50,19 +50,19 @@ No caso do nosso exemplo, `GrowCell`. Vamos usar esse valor posteriormente quand
 
 Para cada elemento de nosso protótipo de célula, atribuir uma **nome** para expô-lo ao código c#. Por exemplo:
 
-[ ![](autosizing-row-height-images/table05.png "Atribua um nome para expô-lo ao código c#")](autosizing-row-height-images/table05.png)
+[![](autosizing-row-height-images/table05.png "Atribua um nome para expô-lo ao código c#")](autosizing-row-height-images/table05.png#lightbox)
 
 Em seguida, adicione uma classe personalizada para o `UITableViewController`, o `UITableView` e `UITableCell` (Prototype). Por exemplo: 
 
-[ ![](autosizing-row-height-images/table06.png "Adicionando uma classe personalizada para o UITableViewController, o UITableView e o UITableCell")](autosizing-row-height-images/table06.png)
+[![](autosizing-row-height-images/table06.png "Adicionando uma classe personalizada para o UITableViewController, o UITableView e o UITableCell")](autosizing-row-height-images/table06.png#lightbox)
 
 Finalmente, para certificar-se de que todos os esperados conteúdo é exibido em nosso rótulo, defina o **linhas** propriedade `0`:
 
-[ ![](autosizing-row-height-images/table06.png "A propriedade de linhas é definido como 0")](autosizing-row-height-images/table06a.png)
+[![](autosizing-row-height-images/table06.png "A propriedade de linhas é definido como 0")](autosizing-row-height-images/table06a.png#lightbox)
 
 Com a interface do usuário definida, vamos adicionar o código para habilitar o redimensionamento de altura de linha automática.
 
-##<a name="enabling-auto-resizing-height"></a>Habilitando a altura de redimensionamento automático
+## <a name="enabling-auto-resizing-height"></a>Habilitando a altura de redimensionamento automático
 
 No de fonte de dados nossa tabela da exibição (`UITableViewDatasource`) ou origem (`UITableViewSource`), quando é retirada da fila uma célula que precisamos usar o `Identifier` que definimos no designer. Por exemplo:
 
@@ -106,7 +106,7 @@ Essa estimativa não precisa ser exato, apenas uma estimativa aproximada da altu
 
 Com esse código, quando o aplicativo é executado, cada linha serão reduzido e crescer com base na altura do último rótulo no protótipo de célula. Por exemplo:
 
-[ ![](autosizing-row-height-images/table07.png "Uma tabela de exemplo executar")](autosizing-row-height-images/table07.png)
+[![](autosizing-row-height-images/table07.png "Uma tabela de exemplo executar")](autosizing-row-height-images/table07.png#lightbox)
 
 
 ## <a name="related-links"></a>Links relacionados

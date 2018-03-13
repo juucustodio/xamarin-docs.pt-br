@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: a5309b46b67a79225611aafb546b35e73d891b38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3c06fca9c6d8c3cd91889007bd1879149771622b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="service-notifications"></a>Notificações de serviço
 
@@ -48,7 +48,7 @@ public class MyService: Service
 
 Esta captura de tela é um exemplo da notificação que é exibido:
 
-[![Ícone de notificação exibida na barra de status](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png)
+[![Ícone de notificação exibida na barra de status](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
 Quando os slides de usuário a tela de notificação da parte superior para baixo, para a notificação completa é exibida:
 

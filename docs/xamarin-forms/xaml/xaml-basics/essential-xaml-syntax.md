@@ -3,16 +3,16 @@ title: Parte 2. Sintaxe XAML essenciais
 description: "XAML destina-se principalmente a criando e inicializando objetos. Muitas vezes, mas propriedades devem ser definidas como objetos complexos que não podem ser facilmente representados como cadeias de caracteres XML e, às vezes, as propriedades definidas por uma classe devem ser definidas em uma classe filha. Essas duas necessidades exigem os recursos de sintaxe XAML essenciais de elementos de propriedade e propriedades anexadas."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: f99d4b177f5957b2e5f8c22171fe92799af8505a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77ed7c49a901a877d822c2274263bcb8dbe19ac6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxe XAML essenciais
 
@@ -253,7 +253,7 @@ O `Grid.Row` e `Grid.Column` as configurações de 0 não são necessárias, mas
 
 Aqui está como ele funciona em todas as três plataformas:
 
-[ ![](essential-xaml-syntax-images/griddemo.png "Layout de grade")](essential-xaml-syntax-images/griddemo-large.png "Layout de grade")
+[![](essential-xaml-syntax-images/griddemo.png "Layout de grade")](essential-xaml-syntax-images/griddemo-large.png#lightbox "Layout de grade")
 
 A julgar unicamente com a sintaxe, essas `Grid.Row`, `Grid.Column`, `Grid.RowSpan`, e `Grid.ColumnSpan` atributos aparecem como campos estáticos ou propriedades de `Grid`, mas interessante `Grid` não define nada chamado `Row`, `Column`, `RowSpan`, ou `ColumnSpan`.
 
@@ -310,7 +310,7 @@ O `AbsoluteLayout` classe define duas propriedades anexadas denominadas `LayoutB
 
 E aqui é:
 
-[ ![](essential-xaml-syntax-images/absolutedemo-large.png "Layout absoluto")](essential-xaml-syntax-images/absolutedemo-large.png "Layout absoluto")
+[![](essential-xaml-syntax-images/absolutedemo-large.png "Layout absoluto")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "Layout absoluto")
 
 Para algo semelhante a isso, você pode questionar a sabedoria da usando XAML. Sem dúvida, a repetição e regularidade do `LayoutBounds` retângulo sugere que ele pode ser melhor realizado no código.
 
@@ -530,7 +530,7 @@ Com os elementos de propriedade e propriedades anexadas, grande parte da sintaxe
 ## <a name="related-links"></a>Links relacionados
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [Parte 1. Guia de Introdução com XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-- [Parte 3. Extensões de marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Parte 4. Noções básicas de associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+- [Parte 1. Introdução ao XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [Parte 3. Extensões de Marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [Parte 4. Conceitos básicos da associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 - [Parte 5. De associação de dados para o modelo MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

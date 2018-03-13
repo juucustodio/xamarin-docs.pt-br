@@ -3,16 +3,16 @@ title: Siri remoto e controladores de Bluetooth
 description: Este artigo aborda o suporte os novos controladores de jogo Siri remoto e Bluetooth em seus aplicativos Xamarin.tvOS.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5d74479e995c5c6ba6f6fd9fd23fbca78718ee31
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri remoto e controladores de Bluetooth
 
@@ -23,7 +23,7 @@ Os usuários do seu aplicativo Xamarin.tvOS não interagirá com sua interface d
 
 Se seu aplicativo for um jogo, você poderá opcionalmente criar no suporte para 3ª parte, feita para iOS (MFI) [controladores de jogo Bluetooth](#Bluetooth-Game-Controllers) em seu aplicativo também.
 
-[ ![](remote-bluetooth-images/intro01.png "O Bluetooth remoto e o controlador de jogo")](remote-bluetooth-images/intro01.png)
+[![](remote-bluetooth-images/intro01.png "O Bluetooth remoto e o controlador de jogo")](remote-bluetooth-images/intro01.png#lightbox)
 
 Este artigo descreve o [Siri remoto](#The-Siri-Remote), [gestos de toque de superfície](#Touch-Surface-Gestures) e [botões remoto Siri](#Siri-Remote-Buttons) e mostra como trabalhar com eles via [gestos e Storyboards](#Gestures-and-Storyboards), [gestos e código](#Gestures-and-Code) e [manipulação de eventos de nível baixo](#Low-Level-Event-Handling). Finalmente, ele discute [trabalhando com os controladores de jogo](#Working-with-Game-Controllers) em um aplicativo Xamarin.tvOS.
 
@@ -35,7 +35,7 @@ A maneira principal que os usuários interagirá com o Apple TV e seu aplicativo
 
 Seu desafio como um desenvolvedor de aplicativo tvOS é criar uma interface do usuário rápida e fácil de usar visualmente atraentes que aproveita a superfície de toque de Siri Remote, o acelerômetro, giroscópio e botões.
 
-[ ![](remote-bluetooth-images/remote01.png "Siri remoto")](remote-bluetooth-images/remote01.png)
+[![](remote-bluetooth-images/remote01.png "Siri remoto")](remote-bluetooth-images/remote01.png#lightbox)
 
 Siri remoto tem os seguintes recursos e usos esperados dentro de seu aplicativo tvOS:
 
@@ -128,14 +128,14 @@ Para adicionar um reconhecedor de gestos, faça o seguinte:
 1. No **Solution Explorer**, clique duas vezes o `Main.storyboard` de arquivo e abra-o para o Designer de Interface de edição.
 2. Arraste um **reconhecedor de gestos de toque** do **biblioteca** e solte-o no modo de exibição: 
 
-    [ ![](remote-bluetooth-images/storyboard01.png "Um reconhecedor de gestos de toque")](remote-bluetooth-images/storyboard01.png)
+    [![](remote-bluetooth-images/storyboard01.png "Um reconhecedor de gestos de toque")](remote-bluetooth-images/storyboard01.png#lightbox)
 3. Verificar **selecione** no **botão** seção o **Inspetor de atributo**: 
 
-    [ ![](remote-bluetooth-images/storyboard02.png "Verifique a seleção")](remote-bluetooth-images/storyboard02.png)
+    [![](remote-bluetooth-images/storyboard02.png "Verifique a seleção")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Selecione** significa o gesto responde para o usuário clicando o **superfície Touch** remoto o Siri. Você também tem a opção de responder ao **Menu**, **executar/pausar**, **backup**, **para baixo**, **esquerda** e **Direita** botões.
 5. Em seguida, conectar um **ação** do **reconhecedor de gestos de toque** e chamá-lo `TouchSurfaceClicked`: 
 
-    [ ![](remote-bluetooth-images/storyboard03.png "Uma ação do reconhecedor de gestos de toque")](remote-bluetooth-images/storyboard03.png)
+    [![](remote-bluetooth-images/storyboard03.png "Uma ação do reconhecedor de gestos de toque")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Salve suas alterações e retornar ao Visual Studio para Mac.
 
 Editar seu controlador de exibição (exemplo `FirstViewController.cs`) e adicione o seguinte código para manipular o gesto sendo acionado:
@@ -314,7 +314,7 @@ Assim como acontece com `UITouch` eventos, se você precisa implementar qualquer
 
 Além de remoto Siri padrão que é fornecido com o Apple TV, 3ª parte, feita para iOS controladores de jogo Bluetooth (MFI) podem ser combinados com a Apple TV e usados para controlar o seu aplicativo Xamarin.tvOS.
 
-[ ![](remote-bluetooth-images/game01.png "Controladores de jogo de Bluetooth")](remote-bluetooth-images/game01.png)
+[![](remote-bluetooth-images/game01.png "Controladores de jogo de Bluetooth")](remote-bluetooth-images/game01.png#lightbox)
 
 Controladores de jogo podem ser usados para aprimorar a jogos e fornecer uma noção de imersão em um jogo. Eles também podem ser usados para controlar a interface padrão do Apple TV, o uso precisa alternar entre o controle remoto e o controlador.
 
@@ -425,7 +425,7 @@ Apple tem vários requisitos específicos que devem ser atendidos se seu aplicat
 
 Para habilitar o suporte de controlador de jogo em seu aplicativo Xamarin.tvOS, clique duas vezes o `Info.plist` arquivo o **Gerenciador de soluções** para abri-lo para edição:
 
-[ ![](remote-bluetooth-images/game02.png "O editor de info. plist")](remote-bluetooth-images/game02.png)
+[![](remote-bluetooth-images/game02.png "O editor de info. plist")](remote-bluetooth-images/game02.png#lightbox)
 
 Sob o **jogo controlador** seção, marque-a por **ativar os controladores de jogo**, verifique todos os tipos de controlador de jogo que terão suporte pelo aplicativo.
 
@@ -465,7 +465,7 @@ Este artigo abordou remoto Siri novo que é fornecido com o Apple TV, gestos de 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

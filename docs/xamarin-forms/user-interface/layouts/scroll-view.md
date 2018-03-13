@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: c305075d37a25bfe828f16d4e69955437a591f9a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 648125ca8bd2c7c8a015b4c29195dc75c0bbf0a0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="scrollview"></a>ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) contém layouts e permite que eles rolagem fora da tela. `ScrollView` também é usado para permitir que os modos de exibição mover automaticamente para a parte visível da tela quando o teclado está mostrando.
 
-[ ![](scroll-view-images/layouts-sml.png "Layouts de xamarin. Forms")](scroll-view-images/layouts.png "xamarin. Forms Layouts")
+[![](scroll-view-images/layouts-sml.png "Layouts de xamarin. Forms")](scroll-view-images/layouts.png#lightbox "xamarin. Forms Layouts")
 
 Este artigo aborda:
 
@@ -35,7 +35,7 @@ Este artigo aborda:
 ## <a name="usage"></a>Uso
 
 > [!NOTE]
-> **Observação**: `ScrollView`s não devem ser aninhados. Além disso, `ScrollView`s não devem ser aninhados com outros controles que fornecem a rolagem como `ListView` e `WebView`.
+> `ScrollView`s não devem ser aninhados. Além disso, `ScrollView`s não devem ser aninhados com outros controles que fornecem a rolagem como `ListView` e `WebView`.
 
 `ScrollView` expõe um `Content` propriedade que pode ser definida para um único modo de exibição ou layout. Considere este exemplo de um layout com um boxView muito grande, seguido por um `Entry`:
 

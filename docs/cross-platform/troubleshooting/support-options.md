@@ -6,17 +6,13 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 165313fb0150c2d9832566d5bc32842722b0a039
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>Quais opções de suporte estão disponíveis para Xamarin?
-
-## <a name="overview"></a>Visão geral
-- [Resumo das opções de suporte](#Summary_of_Support_Options)
-- [Recomendações detalhadas](#Detailed_Recommendations)
 
 ## <a name="summary-of-support-options"></a>Resumo das opções de suporte
 
@@ -46,6 +42,8 @@ Conforme mostrado no [página de suporte de Xamarin](https://www.xamarin.com/sup
 </table>
 
 A equipe de suporte de Xamarin ajuda a monitorar a cada uma dessas opções.  Recomendamos que todos os usuários para contribuir com suas perguntas ponderadas e relatórios para tirar proveito do e ajudar a aumentar a comunidade de desenvolvedores do Xamarin experiente.  Em busca de defeitos suspeitos, certifique-se de enviar relatórios de erros quando possível para garantir que os problemas são controlados formalmente pela equipe de engenharia do Xamarin.
+
+<a name="Visual_Studio_email_support_incidents_for_Xamarin_topics"/>
 
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Incidentes de suporte de email do Visual Studio para tópicos de Xamarin
 
@@ -95,7 +93,7 @@ Por favor, [arquivar um bug no Bugzilla do Xamarin](https://bugzilla.xamarin.com
 
 Para discussão de comunidade sobre problemas conhecidos e soluções alternativas, você poderá postar uma pergunta no Fórum de visualização correspondente:
 
--   [Player de ao vivo do Xamarin](https://forums.xamarin.com/categories/live-player)
+-   [Xamarin Live Player](https://forums.xamarin.com/categories/live-player)
 -   Para visualizações de associações do SDK para novas versões do iOS, Android e macOS SDKs, localize o lançamento de versão de visualização correspondente no [xamarin](http://forums.xamarin.com/categories/android), [xamarin](http://forums.xamarin.com/categories/ios), ou [Xamarin.Mac ](http://forums.xamarin.com/categories/mac) Fórum.
 -   Para outros recursos de visualização, navegue para um anúncio de versão correspondentes no [pré-lançamento & Betas](http://forums.xamarin.com/categories/xamarin-prerelease) Fórum.  Ou, se não houver nenhuma correspondência comunicado, fique à vontade para aumentar sua pergunta em seu próprio thread no Fórum.
 

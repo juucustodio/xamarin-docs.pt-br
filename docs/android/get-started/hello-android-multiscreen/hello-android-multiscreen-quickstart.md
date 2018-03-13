@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 4c61a588eafdf0a86f4124d264c41cabef3e7a14
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 159bd2435a1d2b5252e0fd1b9d525cdf6cfa7207
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: início rápido
 
@@ -22,7 +22,7 @@ _Este guia de duas partes expande o aplicativo Phoneword para manipular uma segu
 
 Na seção de passo a passo deste guia, você adicionará uma segunda tela ao aplicativo [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) para controlar o histórico de números convertidos usando o aplicativo. O [aplicativo final](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/) terá uma segunda tela exibindo os números que foram “convertidos”, conforme ilustrado pela captura de tela à direita:
 
-[![Capturas de tela de aplicativo de exemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![Capturas de tela de aplicativo de exemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 O [Aprofundamento](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md) de acompanhamento analisa o que foi criado e discute a arquitetura, navegação e outros novos conceitos do Android encontrados ao longo do caminho.
 
@@ -44,15 +44,15 @@ Comece abrindo o aplicativo **Phoneword** no Visual Studio e edite o arquivo **M
 
 Na **Caixa de Ferramentas**, arraste um **Botão** para a superfície de design e coloque-o abaixo do TextView **TranslatedPhoneWord**. No painel **Propriedades**, altere a **ID** do botão para `@+id/TranslationHistoryButton` 
 
-[![Arrastar um novo botão](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png)
+[![Arrastar um novo botão](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
 Ajuste a propriedade **Texto** do botão para `@string/translationHistory`. O Designer do Android interpretará isso literalmente, porém vamos fazer algumas alterações para que o texto do botão seja exibido corretamente:
 
-[![Definir o texto de botão do histórico de conversão](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png)
+[![Definir o texto de botão do histórico de conversão](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png#lightbox)
 
 Expanda o nó de **valores** na pasta **Recursos** no **Gerenciador de Soluções** e clique duas vezes no arquivo de recursos de cadeia de caracteres, **Strings.xml**:
 
-[![Abrir Strings.xml](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file.png)
+[![Abrir Strings.xml](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file.png#lightbox)
 
 Adicione o `translationHistory` nome e valor da cadeia de caracteres ao arquivo **Strings.xml** e salve-o:
 
@@ -66,17 +66,17 @@ Adicione o `translationHistory` nome e valor da cadeia de caracteres ao arquivo 
 
 O texto do botão **Histórico de Conversão** deve ser atualizado para refletir o novo valor de cadeia de caracteres:
 
-[![O botão reflete o novo valor de cadeia de caracteres](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)
+[![O botão reflete o novo valor de cadeia de caracteres](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png#lightbox)
 
 Com o botão **Histórico de Conversão** selecionado na superfície de design, localize a configuração `enabled` no painel **Propriedades** e defina seu valor como `false` para desabilitar o botão. Isso fará com que o botão fique mais escuro na superfície de design:
 
-[![Desabilitar o botão de histórico de conversão](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png)
+[![Desabilitar o botão de histórico de conversão](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>Criando a segunda atividade
 
 Crie uma segunda Atividade para ligar a segunda tela. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **Phoneword** e selecione **Adicionar > Novo Item…**:
 
-[![Adicionar um novo arquivo](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png)
+[![Adicionar um novo arquivo](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
 Na caixa de diálogo **Adicionar Novo Item**, escolha **Visual C# > Atividade** e nomeie o arquivo de Atividade **TranslationHistoryActivity.cs**.
 
@@ -171,7 +171,7 @@ Salve e compile o aplicativo para garantir que não haja erros.
 
 Implante o aplicativo em um dispositivo ou emulador. As capturas de tela a seguir ilustram o aplicativo **Phoneword** em execução:
 
-[![Capturas de tela de exemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![Capturas de tela de exemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -181,16 +181,16 @@ Comece abrindo o projeto **Phoneword** no Visual Studio para Mac e edite o arqui
 
 Na **Caixa de Ferramentas**, arraste um **Botão** para a superfície de design e coloque-o abaixo do TextView **TranslatedPhoneWord**. No painel **Propriedades**, altere a **ID** do botão para `@+id/TranslationHistoryButton` 
 
-[![Arrastar um novo botão](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png)
+[![Arrastar um novo botão](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
 Ajuste a propriedade **Texto** do botão para `@string/translationHistory`. O Designer do Android interpretará isso literalmente, porém vamos fazer algumas alterações para que o texto do botão seja exibido corretamente:
 
-[![Definir o texto de botão do histórico de conversão](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png)
+[![Definir o texto de botão do histórico de conversão](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
 
 Expanda o nó de **valores** na pasta **Recursos** do **Painel de Soluções** e clique duas vezes no arquivo de recursos de cadeia de caracteres, **Strings.xml**:
 
-[![Abrir cadeias de caracteres](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png)
+[![Abrir cadeias de caracteres](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
 
 
 Adicione o `translationHistory` nome e valor da cadeia de caracteres ao arquivo **Strings.xml** e salve-o:
@@ -205,12 +205,12 @@ Adicione o `translationHistory` nome e valor da cadeia de caracteres ao arquivo 
 
 O texto do botão **Histórico de Conversão** deve ser atualizado para refletir o novo valor de cadeia de caracteres:
 
-[![O botão reflete o novo valor de cadeia de caracteres](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png)
+[![O botão reflete o novo valor de cadeia de caracteres](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
 
 
 Com o botão **Histórico de Conversão** selecionado na superfície de design, abra a guia **Comportamento** no **Painel de Propriedades** e clique duas vezes na caixa de seleção **Habilitado** para desabilitar o botão. Isso fará com que o botão fique mais escuro na superfície de design:
 
-[![Desabilitar o botão de histórico de conversão](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png)
+[![Desabilitar o botão de histórico de conversão](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>Criando a segunda atividade
 
@@ -304,7 +304,7 @@ translateButton.Click += (sender, e) =>
 
 Implante o aplicativo em um dispositivo ou emulador. As capturas de tela a seguir ilustram o aplicativo **Phoneword** em execução:
 
-[![Capturas de tela de exemplo](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![Capturas de tela de exemplo](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 -----
 

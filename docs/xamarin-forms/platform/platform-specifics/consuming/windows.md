@@ -3,16 +3,16 @@ title: "Específicos de plataforma do Windows"
 description: "Específicos de plataforma permitem consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo demonstra como utilizar os Windows platform específicos que são integrados ao xamarin. Forms."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: da9279939af8dc4033cd89769a7add60a745ac85
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01b32d1ca5356ed69480dff0d31c210a8c460417
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows-platform-specifics"></a>Específicos de plataforma do Windows
 
@@ -52,7 +52,7 @@ O `Page.On<Windows>` método Especifica que este específica de plataforma será
 
 O resultado é que o posicionamento da barra de ferramentas especificada é aplicado para o [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) instância:
 
-[![](windows-images/toolbar-placement.png "Específico da barra de ferramentas da plataforma posicionamento")](windows-images/toolbar-placement-large.png "específica de plataforma do posicionamento da barra de ferramentas")
+[![](windows-images/toolbar-placement.png "Específico da barra de ferramentas da plataforma posicionamento")](windows-images/toolbar-placement-large.png#lightbox "específica de plataforma do posicionamento da barra de ferramentas")
 
 <a name="collapsable_navigation_bar" />
 
@@ -84,7 +84,7 @@ O `MasterDetailPage.On<Windows>` método Especifica que este específica de plat
 
 O resultado é que a especificada [ `CollapseStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/) é aplicado ao [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) instância com a largura também sejam especificada:
 
-[![](windows-images/collapsed-navigation-bar.png "Recolhido específica de plataforma da barra de navegação")](windows-images/collapsed-navigation-bar-large.png "recolhido específica de plataforma da barra de navegação")
+[![](windows-images/collapsed-navigation-bar.png "Recolhido específica de plataforma da barra de navegação")](windows-images/collapsed-navigation-bar-large.png#lightbox "recolhido específica de plataforma da barra de navegação")
 
 ## <a name="summary"></a>Resumo
 
@@ -93,6 +93,6 @@ Este artigo demonstrou como utilizar os Windows platform específicos que são i
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Criando específicos de plataforma](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [WindowsSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.WindowsSpecific/)

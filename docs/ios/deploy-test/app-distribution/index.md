@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: eec352264d918730e68a925f2a1e3796d9125c88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4be12c5530f59dc027672d8db72b966711a531d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-distribution-overview"></a>Visão geral da distribuição de aplicativos
 
@@ -21,7 +21,7 @@ _Este documento fornece uma visão geral das técnicas de distribuição dispon�
 Depois que um aplicativo Xamarin.iOS for desenvolvido, a próxima etapa no ciclo de vida de desenvolvimento do software é distribuir o aplicativo para os usuários, conforme mostrado na seção destacada do diagrama abaixo:
 
 
-[![](images/publishingdiagram.png "Depois que o aplicativo iOS for desenvolvido, a próxima etapa é distribuir o aplicativo para os usuários, conforme mostrado na seção destacada deste diagrama")](images/publishingdiagram.png)
+[![](images/publishingdiagram.png "Depois que o aplicativo iOS for desenvolvido, a próxima etapa é distribuir o aplicativo para os usuários, conforme mostrado na seção destacada deste diagrama")](images/publishingdiagram.png#lightbox)
 
 
 Apple fornece as seguintes maneiras de distribuir um aplicativo iOS, que tem suporte com Xamarin.iOS:
@@ -31,6 +31,8 @@ Apple fornece as seguintes maneiras de distribuir um aplicativo iOS, que tem sup
 2. [**Ad Hoc**](#Ad_Hoc_Distribution)
 
 Todos esses cenários exigem que os aplicativos sejam provisionados usando o *perfil de provisionamento* apropriado. Perfis de provisionamento são arquivos que contêm informações de assinatura de código, bem como a identidade do aplicativo e o mecanismo de distribuição desejado. Para a distribuição fora da App Store, também há informações sobre em quais dispositivos o aplicativo pode ser implantado.
+
+<a name="App_Store_Distribution"/>
 
 ## <a name="app-store-distribution"></a>Distribuição da App Store
 
@@ -42,12 +44,15 @@ Os aplicativos são enviados à App Store por meio de um portal chamado *iTunes 
 
 Para obter mais informações, acesse o guia de [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md).
 
+<a name="In-House_Distribution"/>
+
 ## <a name="in-house-distribution"></a>Distribuição Interna
 
 Às vezes chamada de *Distribuição Corporativa*, a distribuição interna permite que membros do **Programa de Desenvolvedores Corporativos da Apple** distribuam aplicativos internamente para outros membros da mesma organização. A distribuição interna tem as vantagens de não exigir uma análise da App Store e não ter nenhum limite de número de dispositivos nos quais um aplicativo pode ser instalado. No entanto, é importante observar que membros do **Programa de Desenvolvedor Corporativo da Apple** **não** têm acesso ao iTunes Connect e, portanto, o licenciado é responsável por distribuir o aplicativo.
 
 Para obter mais informações sobre como configurar e distribuir um aplicativo internamente, consulte o [guia de Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md).
 
+<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Distribuição Ad Hoc
 
@@ -64,7 +69,7 @@ Este artigo forneceu uma breve visão geral dos mecanismos de distribuição que
 - [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Como configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
-- [Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
 - [O arquivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Suporte a IPA](~/ios/deploy-test/app-distribution/ipa-support.md)

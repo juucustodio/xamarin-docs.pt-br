@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: c1dd3495b0d7f76197126094cfd10e50d0ca760d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 415c3a5e9446c5db545b62272f3b90a9ac73e401
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-a-fragment"></a>Criando um fragmento
 
@@ -28,7 +28,7 @@ O código acima irá aumentar o modo de exibição `Resource.Layout.Example_Frag
 
 
 > [!NOTE]
-> **Observação:** classes sub fragmento não devem ter um padrão público construtor nenhum argumento.
+> Classes de subtipo do fragmento não devem ter um padrão público construtor nenhum argumento.
 
 ## <a name="adding-a-fragment-to-an-activity"></a>Adição de um fragmento de uma atividade
 
@@ -108,7 +108,7 @@ OU
 Fragmentos têm seu próprios ciclo de vida que é independente da, mas ainda é afetado pelo, o [ciclo de vida da atividade de hospedagem](~/android/app-fundamentals/activity-lifecycle/index.md).
 Por exemplo, quando uma atividade pausa, todos os seus fragmentos associados foram pausados. O diagrama a seguir descreve o ciclo de vida do fragmento.
 
-[![Diagrama de fluxo que ilustra o ciclo de vida de fragmento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png)
+[![Diagrama de fluxo que ilustra o ciclo de vida de fragmento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Métodos de ciclo de vida de criação de fragmento
@@ -238,4 +238,4 @@ public override void OnCreate(Bundle savedState)
 
 A tela a seguir mostra como esse menu seria:
 
-[![Captura de tela de exemplo de viagens de meu aplicativo exibindo itens de menu](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png)
+[![Captura de tela de exemplo de viagens de meu aplicativo exibindo itens de menu](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)

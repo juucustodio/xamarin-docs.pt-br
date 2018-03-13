@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 053696ebf37e73e3b121e2aa52b80b7ea1b8ed64
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f870cda73625197fb15bf19be1cdabbd675124d6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout para aplicativos de Desktop e Tablet
 
@@ -41,7 +41,7 @@ Para fornecer uma experiência de inicialização agradável e certifique-se de 
 Antes do iOS 9 todos os aplicativos levaram a tela inteira no dispositivo, mas agora pode executar alguns iPads [dividir tela multitarefa](~/ios/platform/multitasking.md).
 Isso significa que seu aplicativo pode levar apenas uma coluna slim ao lado da tela, 50% da largura da tela, ou a tela inteira.
 
-[ ![](tablet-images/ipad-sml.png "Exemplo de tela de divisão de iPad")](tablet-images/ipad.png "iPad exemplo de tela de divisão")
+[![](tablet-images/ipad-sml.png "Exemplo de tela de divisão de iPad")](tablet-images/ipad.png#lightbox "iPad exemplo de tela de divisão")
 
 Funcionalidade de tela dividida significa que você deve projetar seu aplicativo para funcionar bem com até 320 pixels de largura ou 1366 conforme pixels de largura.
 
@@ -63,7 +63,7 @@ Para dar suporte a tablets e computadores desktop que executam o Windows, você 
 
 Aplicativos executados em computadores e tablets Windows podem ser redimensionados para dimensões arbitrários além para tela cheia está em execução.
 
-[ ![](tablet-images/splitscreen-sml.png "Exemplo de tela de divisão do Windows")](tablet-images/splitscreen.png "exemplo de tela de divisão do Windows")
+[![](tablet-images/splitscreen-sml.png "Exemplo de tela de divisão do Windows")](tablet-images/splitscreen.png#lightbox "exemplo de tela de divisão do Windows")
 
 
 <a name="optimize" />

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 8f9294c10f8d3287a2985ede9aadf84ce663c38a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0bc64d0b03aa4f80b19ea098904dc1e2155313f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-app-configuration"></a>Configuração do aplicativo Mac
 
@@ -32,7 +32,7 @@ Para alterar as configurações de aplicativo de um aplicativo Xamarin.Mac, cliq
 
 Isso exibirá as opções disponíveis para o aplicativo:
 
- [![Editar o arquivo Info.plist](app-configuration-images/config01.png "Editar o arquivo Info.plist")](app-configuration-images/config01-large.png)
+ [![Editar o arquivo Info.plist](app-configuration-images/config01.png "Editar o arquivo Info.plist")](app-configuration-images/config01-large.png#lightbox)
 
 Aplicativos Mac em execução criados com Xamarin.Mac têm os seguintes requisitos do sistema:
 
@@ -43,7 +43,7 @@ Aplicativos Mac em execução criados com Xamarin.Mac têm os seguintes requisit
 
 A seção **Assinatura do Mac** da caixa de diálogo **Opções de Projeto** permite que o desenvolvedor assine um aplicativo Xamarin.Mac para teste, para versão própria ou por meio da Apple App Store:
 
-[![O editor de Assinatura do Mac](app-configuration-images/config02.png "A janela de Assinatura do Mac")](app-configuration-images/config02-large.png)
+[![O editor de Assinatura do Mac](app-configuration-images/config02.png "A janela de Assinatura do Mac")](app-configuration-images/config02-large.png#lightbox)
 
 Aqui, selecione a Identidade, o Perfil de provisionamento e quaisquer direitos personalizados usados para assinar o aplicativo quando ele é compilado. O desenvolvedor pode, opcionalmente, assinar o instalador usado para instalar o aplicativo em outro Mac.
 
@@ -52,7 +52,7 @@ Aqui, selecione a Identidade, o Perfil de provisionamento e quaisquer direitos p
 
 A seção **Build do Mac** da caixa de diálogo **Opções de Projeto** permite que o desenvolvedor selecione a arquitetura de um aplicativo Xamarin.Mac, para controlar a qual versão do macOS o aplicativo dará suporte e, opcionalmente, para criar um pacote de instalação quando o aplicativo é compilado com êxito:
 
- [![Editar as configurações de build](app-configuration-images/config03.png "Editar as configurações de build")](app-configuration-images/config03-large.png)
+ [![Editar as configurações de build](app-configuration-images/config03.png "Editar as configurações de build")](app-configuration-images/config03-large.png#lightbox)
 
 
 ## <a name="related-links"></a>Links relacionados

@@ -3,22 +3,22 @@ title: "Conceitos básicos de aplicativo"
 description: Conceitos fundamentais do aplicativo
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: 9cace37a9e762a49a90963591931793d30d05453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f6c0bb75327f0c14d314a0e7ad9d114fd17c2a57
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>Conceitos básicos de aplicativo
 
 Esta seção fornece um guia sobre alguns dos conceitos que os desenvolvedores precisam estar atento ao desenvolvimento de aplicativos xamarin (anteriormente conhecida como MonoTouch) ou tarefas de coisas mais comuns.
 
-## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[Segurança de transporte do aplicativo](~/ios/app-fundamentals/ats.md)
+## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[Segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md)
 
 Este artigo apresenta as alterações de segurança que impõe a segurança de transporte do aplicativo em um aplicativo iOS 9 e o que isso significa para seus projetos xamarin, ele aborda as opções de configuração ATS e ele aborda como recusar ATS, se necessário. Como ATS está habilitado por padrão, todas as conexões da internet não segura gerará uma exceção em aplicativos do iOS 9 (a menos que você explicitamente permitido-lo).
 

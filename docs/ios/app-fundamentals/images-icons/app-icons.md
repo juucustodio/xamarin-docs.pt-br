@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 6de57e9523ff336c2e06e39903280db9c9ab95fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df9059b0e64b4a05b554f25b5f9d7f6031406633
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icons"></a>Ícones de aplicativo
 
@@ -32,13 +32,13 @@ Da mesma forma que um aplicativo xamarin pode usar ativos de imagem para control
 
 - **Ícone do aplicativo** -todos os aplicativos iOS devem definir um ícone do aplicativo. Esse é o ícone que o usuário será tocar na tela inicial do iOS para iniciar o aplicativo. Além disso, esse ícone é usado pelo Centro de jogo, se aplicável. Exemplo: 
 
-    [ ![](app-icons-images/000.png "Ícone do aplicativo")](app-icons-images/000-full.png)
+    [![](app-icons-images/000.png "Ícone do aplicativo")](app-icons-images/000-full.png#lightbox)
 - **Ícone de destaque** - sempre que o usuário insere o nome de um aplicativo em uma pesquisa do Spotlight, esse ícone é exibido. Exemplo: 
 
-    [ ![](app-icons-images/000a.png "Ícone de destaque")](app-icons-images/000a-full.png)
+    [![](app-icons-images/000a.png "Ícone de destaque")](app-icons-images/000a-full.png#lightbox)
 - **Ícone de configurações** - se que o usuário insere o **configurações** aplicativo em seu dispositivo iOS, esse ícone será exibido no final o **configurações** lista para o aplicativo. Exemplo: 
 
-    [ ![](app-icons-images/000b.png "Ícone de configurações")](app-icons-images/000b-full.png)
+    [![](app-icons-images/000b.png "Ícone de configurações")](app-icons-images/000b-full.png#lightbox)
 
 Os seguintes tamanhos de ativos de imagem e resoluções serão necessários para dar suporte a todos os tipos de ícone exigidos por um aplicativo xamarin direcionando o iOS 5, por meio do iOS 9 (ou superior):
 

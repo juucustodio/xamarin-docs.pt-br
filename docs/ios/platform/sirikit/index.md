@@ -3,16 +3,16 @@ title: SiriKit
 description: "Este artigo mostra como usar SiriKit em um aplicativo xamarin para fornecer serviços que são acessíveis para o usuário usando Siri em um dispositivo iOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 84E5681A-F557-4967-AA99-F831169157AA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c4fdf61b35ca28af82e3890242d54a75e50d2f82
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9d7773be1244b0ba4e1a57c8a1efbddf02396138
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -35,7 +35,7 @@ Quando o usuário faz uma solicitação de Siri que envolvem um dos serviços de
 
 Este artigo aborda os principais conceitos que serão necessários para trabalhar com SiriKit em um aplicativo xamarin. Ele aborda as novas tentativas e tentativas de pontos de extensão de interface do usuário e como elas funcionam com o aplicativo e o vocabulário do usuário para abrir um aplicativo em Siri.
 
-## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[Implementando SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
+## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[Implementar SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
 
 Este artigo aborda as etapas necessárias para implementar SiriKit suporte em um aplicativos xamarin. O desenvolvedor deve ler o guia de Noções básicas sobre conceitos de SiriKit acima antes de tentar adicionar SiriKit suporte a um aplicativo, como chave conceitos são abordados que serão necessário para uma implementação bem-sucedida.
 

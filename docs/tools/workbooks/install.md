@@ -2,15 +2,15 @@
 title: "Instalação e requisitos"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
+ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: dffea94b309b3c945a37a116668486f404f544b3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abc9f9402b55a11e313b9938f07f37e5329b55b6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="installation-and-requirements"></a>Instalação e requisitos
 

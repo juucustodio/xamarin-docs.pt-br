@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 63bc1f0ed13fe65b36e95978da9ccc2ea8d4481c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8812c6a234e05e4d651effbeb83a7bcad38dc683
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-web-markup"></a>Pesquisa de marcação da Web
 
@@ -20,12 +20,12 @@ Para aplicativos que fornecem acesso a seu conteúdo por meio de um site da web 
 
 Se seu aplicativo iOS já oferece suporte a vinculação profunda móvel e seu site apresentados links profundos para conteúdo dentro de seu aplicativo, Apple _Applebot_ rastreador da web será esse conteúdo de índice e adicione-o automaticamente seu índice de nuvem:
 
-[ ![](web-markup-images/webmarkup01.png "Visão geral do índice de nuvem")](web-markup-images/webmarkup01.png)
+[![](web-markup-images/webmarkup01.png "Visão geral do índice de nuvem")](web-markup-images/webmarkup01.png#lightbox)
 
 Apple será superficial esses resultados nos resultados da pesquisa do Spotlight e pesquisa do Safari.
 Se o usuário toca em um destes resultados (e têm seu aplicativo instalado), em seguida, eles serão levados para o conteúdo em seu aplicativo:
 
-[ ![](web-markup-images/webmarkup02.png "Profundidade de vinculação de um site nos resultados da pesquisa")](web-markup-images/webmarkup02.png)
+[![](web-markup-images/webmarkup02.png "Profundidade de vinculação de um site nos resultados da pesquisa")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Habilitar a indexação de conteúdo da Web
 
@@ -154,7 +154,7 @@ As mesmas informações podem ser representadas em formato de LD JSON do schema.
 
 O exemplo a seguir mostra um exemplo de metadados do seu site, fornecendo os resultados de pesquisa avançados para o usuário final:
 
-[ ![](web-markup-images/deeplink01.png "Pesquisa avançada de resultados por meio de marcação de dados estruturados")](web-markup-images/deeplink01.png)
+[![](web-markup-images/deeplink01.png "Pesquisa avançada de resultados por meio de marcação de dados estruturados")](web-markup-images/deeplink01.png#lightbox)
 
 Apple atualmente suporta os seguintes tipos de esquema de schema.org:
 

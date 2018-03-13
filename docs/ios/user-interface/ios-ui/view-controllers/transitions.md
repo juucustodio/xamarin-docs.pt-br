@@ -2,16 +2,16 @@
 title: "Transições de controlador de exibição"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
+ms.assetid: CB3AC8E2-8A47-4839-AFA5-AE33047BB26C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: f85867f08b21a525937e1c938c7c8fd224554abc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 88849d3007c007a5ac8820ca84083aa01459c4ce
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="view-controller-transitions"></a>Transições de controlador de exibição
 
@@ -266,5 +266,5 @@ Como o usuário pinches o modo de exibição de coleção, o `TransitionProgress
 ## <a name="related-links"></a>Links relacionados
 
 - [Introdução ao iOS 7 (exemplo)](https://developer.xamarin.com/samples/monotouch/IntroToiOS7)
-- [iOS 7 visão geral sobre a Interface do usuário](~/ios/platform/introduction-to-ios7/ios7-ui.md)
+- [Visão geral da interface do usuário do iOS 7](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Backgrounding](~/ios/app-fundamentals/backgrounding/index.md)

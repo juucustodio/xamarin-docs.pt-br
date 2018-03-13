@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/24/2017
-ms.openlocfilehash: d8fa54f23dfea063fa25f6e26e2df2c2ed82101e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9aa66a531b723f176b940ba35ee4e86eae711f7d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="collection-views"></a>Exibições de coleção
 
@@ -22,7 +22,7 @@ Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, o desenvolvedor tenh
 
 Um `NSCollectionView` exibe uma grade de sub-visualizações organizadas usando um `NSCollectionViewLayout`. Cada modo de exibição secundário na grade é representado por um `NSCollectionViewItem` que gerencia o carregamento do conteúdo do modo de exibição de um `.xib` arquivo.
 
-[ ![Executar um aplicativo de exemplo](collection-view-images/intro01.png)](collection-view-images/intro01.png)
+[![Executar um aplicativo de exemplo](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
 Este artigo aborda os fundamentos de trabalhar com exibições de coleção em um aplicativo Xamarin.Mac. É altamente recomendável que você leia o [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, especificamente o [Introdução ao construtor da Interface e Xcode](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [tomadas e ações](~/mac/get-started/hello-mac.md#Outlets_and_Actions) seções, como ele aborda os principais conceitos e técnicas que são usadas neste artigo.
 
@@ -821,4 +821,4 @@ Este artigo obteve uma visão detalhada de como trabalhar com exibições de col
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Associação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)
-- [Diretrizes de Interface do sistema operacional X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

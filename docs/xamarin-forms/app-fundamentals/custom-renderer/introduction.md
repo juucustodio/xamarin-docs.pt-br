@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: a9908429994f4575a9e41936d500bfd8906a843b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 837d75bd4ecde92d4c375c680a5f5e7ff231f825
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>Introdução aos renderizadores personalizados
 
@@ -52,7 +52,7 @@ O `MyEntry` controle é um `Entry` controlam onde o `BackgroundColor` é definid
 O `local` o prefixo do namespace pode ser qualquer coisa. No entanto, o `namespace` e `assembly` valores devem coincidir com os detalhes do controle personalizado. Depois que o namespace for declarado, o prefixo é usado para referenciar o controle personalizado.
 
 > [!NOTE]
-> **Observação**: definindo a `xmlns` é muito mais simples no PCLs que projetos compartilhados. Um PCL é compilado em um assembly, portanto, é fácil determinar o que o `assembly=CustomRenderer` o valor deve ser. Ao usar projetos compartilhados, todos os recursos compartilhados (incluindo o XAML) são compilados em cada um dos projetos de referência, o que significa que, se o iOS, Android e Windows Phone projetos têm seus próprios *nomes de assembly* é impossível para gravar o `xmlns` declaração porque o valor precisa ser diferente para cada aplicativo. Controles personalizados em XAML para projetos compartilhados exige que todos os projetos de aplicativo a ser configurado com o mesmo nome de assembly.
+> Definindo o `xmlns` é muito mais simples no PCLs que projetos compartilhados. Um PCL é compilado em um assembly, portanto, é fácil determinar o que o `assembly=CustomRenderer` o valor deve ser. Ao usar projetos compartilhados, todos os recursos compartilhados (incluindo o XAML) são compilados em cada um dos projetos de referência, o que significa que, se o iOS, Android e Windows Phone projetos têm seus próprios *nomes de assembly* é impossível para gravar o `xmlns` declaração porque o valor precisa ser diferente para cada aplicativo. Controles personalizados em XAML para projetos compartilhados exige que todos os projetos de aplicativo a ser configurado com o mesmo nome de assembly.
 
 O `MyEntry` controle personalizado é renderizado em cada plataforma, com um plano de fundo cinza, conforme mostrado nas capturas de tela seguir:
 
@@ -69,7 +69,7 @@ O processo para criar uma classe de renderizador personalizado é da seguinte ma
 1. Adicionar um `ExportRenderer` de atributo para a classe de renderizador personalizado para especificar que será usada para renderizar o controle xamarin. Forms. Este atributo é usado para registrar o renderizador personalizado com xamarin. Forms.
 
 > [!NOTE]
-> **Observação**: para a maioria dos elementos de xamarin. Forms, é opcional fornecer um renderizador personalizado em cada projeto da plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão para a classe base do controle. No entanto, renderizadores personalizados são necessários em cada projeto de plataforma ao renderizar um [exibição](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ou [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) elemento.
+> Para a maioria dos elementos de xamarin. Forms, é opcional fornecer um renderizador personalizado em cada projeto da plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão para a classe base do controle. No entanto, renderizadores personalizados são necessários em cada projeto de plataforma ao renderizar um [exibição](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ou [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) elemento.
 
 Os tópicos nesta série fornecerão demonstrações e explicações sobre esse processo para diferentes elementos de xamarin. Forms.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/03/2017
-ms.openlocfilehash: a13de7fbb4b6e1f9fa2853ce599f3a038a5e4040
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: affe58d9276bd0b687089fb42a14ca964c570c9c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="complications"></a>Complicações
 
@@ -24,7 +24,7 @@ Observe que cada aplicativo watchOS pode ter apenas um complicativo.
 
 Comece lendo [documentos da Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) para determinar se seu aplicativo é adequado para um complicativo. Há 5 `CLKComplicationFamily` tipos de exibição para escolher:
 
-[ ![](complications-images/all-complications-sml.png "Os tipos de CLKComplicationFamily 5 disponíveis: Circular pequeno, pequeno Modular, Modular grande, utilitários pequeno, utilitários grande")](complications-images/all-complications.png)
+[![](complications-images/all-complications-sml.png "Os tipos de CLKComplicationFamily 5 disponíveis: Circular pequeno, pequeno Modular, Modular grande, utilitários pequeno, utilitários grande")](complications-images/all-complications.png#lightbox)
 
 Aplicativos podem implementar apenas um estilo ou todas as cinco, dependendo dos dados que está sendo exibidos.
 Você também pode dar suporte a viagem, fornecer valores para horas anteriores e/ou futuras como o usuário ativa o coroa Digital.
@@ -83,7 +83,7 @@ Siga o [escrevendo um complicativo](#writing) instruções para adicionar códig
 
 A extensão de inspeção **Info. plist** arquivo deve especificar o nome do `CLKComplicationDataSource` e quais famílias complicativo que você deseja dar suporte:
 
-[ ![](complications-images/complications-config-sml.png "Os tipos de família do complicativo")](complications-images/complications-config.png)
+[![](complications-images/complications-config-sml.png "Os tipos de família do complicativo")](complications-images/complications-config.png#lightbox)
 
 O **classe da fonte de dados** lista de entrada Mostrar nomes de classe que subclasse `CLKComplicationDataSource` subclasse que inclui a lógica do complicativo.
 

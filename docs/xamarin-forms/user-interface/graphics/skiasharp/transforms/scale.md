@@ -4,14 +4,15 @@ description: "Descobrir a transformação de escala SkiaSharp para objetos para 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 3ea498b3672c0b9ef4efeff7ec5981dca5a36912
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
@@ -103,7 +104,7 @@ Você talvez esteja se perguntando: como os fatores de dimensionamento afetam o 
 
 Como você pode ver, tudo desenhado após o `Scale` chamar aumenta proporcionalmente:
 
-[![](scale-images/basicscale-small.png "Tripla captura de tela da página de escala básico")](scale-images/basicscale-large.png "tripla captura de tela da página de escala básico")
+[![](scale-images/basicscale-small.png "Tripla captura de tela da página de escala básico")](scale-images/basicscale-large.png#lightbox "tripla captura de tela da página de escala básico")
 
 O texto, a largura da linha tracejada, o comprimento de traços nessa linha, o arredondamento de cantos e a margem de 10 pixels entre as bordas esquerda e superiores da tela e o retângulo arredondado estão todos os sujeitos os mesmos fatores de dimensionamento.
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O canto superior esquerdo do retângulo arredondado é posicionado `margin` pixels do lado esquerdo da tela e `margin` pixels da parte superior. Os dois últimos argumentos para o `Scale` método são definidas para os valores mais a largura e altura do texto, que também é a largura e altura do retângulo arredondado. Isso significa que todo dimensionamento é relativa ao centro do retângulo:
 
-[![](scale-images/centeredscale-small.png "Tripla captura de tela da página de escala centralizada")](scale-images/centeredscale-large.png "tripla captura de tela da página de escala centralizada")
+[![](scale-images/centeredscale-small.png "Tripla captura de tela da página de escala centralizada")](scale-images/centeredscale-large.png#lightbox "tripla captura de tela da página de escala centralizada")
 
 O `Slider` elementos deste programa têm um intervalo de & #x 2013; 10 a 10. Como você pode ver, valores negativos de vertical escala (como no Android tela no centro) causam objetos Inverter em torno do eixo horizontal que passa através do centro da escala. Valores negativos de horizontal para escala (como a tela do Windows à direita) causam objetos Inverter em torno do eixo vertical que passa através do centro da escala.
 
@@ -246,7 +247,7 @@ using (SKPaint strokePaint = new SKPaint
 
 O `pathBounds` retângulo é obtido na parte superior do código e usado posteriormente com a largura e altura da tela no `Scale` chamar. Chamada por si só dimensionará as coordenadas do caminho quando ele for renderizado o `DrawPath` chamada mas estrela será centralizada no canto superior direito da tela. Ele precisa ser alterado para baixo e para a esquerda. Esse é o trabalho do `Translate` chamar. Essas duas propriedades de `pathBounds` são aproximadamente -100, portanto, os fatores de conversão são aproximadamente 100. Porque o `Translate` é chamada após o `Scale` chamar, esses valores são efetivamente dimensionadas com os fatores de dimensionamento para o centro da estrela terem sido movidos para o centro da tela:
 
-[![](scale-images/anisotropicscaling-small.png "Tripla captura de tela da página dimensionamento anisotrópico")](scale-images/anisotropicscaling-large.png "tripla captura de tela da página dimensionamento anisotrópico")
+[![](scale-images/anisotropicscaling-small.png "Tripla captura de tela da página dimensionamento anisotrópico")](scale-images/anisotropicscaling-large.png#lightbox "tripla captura de tela da página dimensionamento anisotrópico")
 
 Outra maneira, você pode pensar sobre o `Scale` e `Translate` chamadas é determinar o efeito em sequência inversa: O `Translate` chamada desloca o caminho de forma que seja totalmente visível, mas orientado por no canto superior esquerdo da tela. O `Scale` método torna esse estrela maior em relação ao canto superior esquerdo.
 
@@ -289,7 +290,7 @@ using (SKPaint textPaint = new SKPaint
 
 Lógica semelhante é e o texto se expande para o tamanho da página com base no retângulo de limites de texto retornado de `MeasureText` (que é um pouco maior do que o texto real):
 
-[![](scale-images/anisotropictext-small.png "Captura de tela da página de teste anisotrópico tripla")](scale-images/anisotropictext-large.png "tripla captura de tela da página de teste anisotrópico")
+[![](scale-images/anisotropictext-small.png "Captura de tela da página de teste anisotrópico tripla")](scale-images/anisotropictext-large.png#lightbox "tripla captura de tela da página de teste anisotrópico")
 
 Se você precisar preservar a proporção de objetos gráficos, você desejará usar o dimensionamento isotropic. O **dimensionamento Isotropic** página demonstra isso para estrela apontada 11. Conceitualmente, as etapas para exibir um objeto gráfico no centro da página com o dimensionamento isotropic são:
 
@@ -338,7 +339,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O código também exibirá estrela dez vezes mais, cada vez que o dimensionamento de diminuição fatores 10% e progressivamente alterando a cor de vermelho para azul:
 
-[![](scale-images/isotropicscaling-small.png "Captura de tela da página dimensionamento Isotropic tripla")](scale-images/isotropicscaling-large.png "tripla captura de tela da página dimensionamento Isotropic")
+[![](scale-images/isotropicscaling-small.png "Captura de tela da página dimensionamento Isotropic tripla")](scale-images/isotropicscaling-large.png#lightbox "tripla captura de tela da página dimensionamento Isotropic")
 
 
 ## <a name="related-links"></a>Links relacionados

@@ -4,14 +4,15 @@ description: "Explorar como usar SkiaSharp para renderizar cúbicas, quadrática
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 8fdebd00b0b33c184337eacd0836dd81a19f161b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de Bézier
 
@@ -88,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui, ele é executado em todas as três plataformas:
 
-[![](beziers-images/beziercurve-small.png "Captura de tela da página da curva de Bézier tripla")](beziers-images/beziercurve-large.png "tripla captura de tela da página da curva de Bézier")
+[![](beziers-images/beziercurve-small.png "Captura de tela da página da curva de Bézier tripla")](beziers-images/beziercurve-large.png#lightbox "tripla captura de tela da página da curva de Bézier")
 
 Matematicamente, a curva é um polinômio cúbico. A curva cruza uma linha reta em três pontos no máximo. No ponto de início, a curva é sempre uma linha reta desde o início de tangente para e, na mesma direção, aponte para o primeiro ponto de controle. No ponto de extremidade, a curva é sempre uma linha reta do segundo controle de tangente para e, na mesma direção, aponte para o ponto de extremidade.
 
@@ -206,7 +207,7 @@ Os pontos inicial e final (`point0` e `point3`) são calculadas com base em equa
 
 Aqui está o programa em execução em plataformas de três com três ângulos diferentes:
 
-[![](beziers-images/beziercirculararc-small.png "Captura de tela da página de Bézier em arco Circular tripla")](beziers-images/beziercirculararc-large.png "tripla captura de tela da página de Bézier em arco Circular")
+[![](beziers-images/beziercirculararc-small.png "Captura de tela da página de Bézier em arco Circular tripla")](beziers-images/beziercirculararc-large.png#lightbox "tripla captura de tela da página de Bézier em arco Circular")
 
 Examinar atentamente a tela do Windows Mobile e você verá que a curva de Bézier em especial do desvio de um semicírculo quando o ângulo é 180 graus, mas a tela de iOS mostra que parece se ajustar um trimestre-círculo bem quando o ângulo é 90 graus.
 
@@ -288,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Os pontos são interpolados com base em um valor sinusoidally oscilantes `t`. Os pontos de interpolada são usados para construir uma série de quatro curvas de Bézier conectadas. Aqui está a animação em execução nas três plataformas mostrando o andamento de um círculo a um quadrado:
 
-[![](beziers-images/squaringthecircle-small.png "Tripla captura de tela do Squaring a página de círculo")](beziers-images/squaringthecircle-large.png "tripla captura de tela do Squaring a página de círculo")
+[![](beziers-images/squaringthecircle-small.png "Tripla captura de tela do Squaring a página de círculo")](beziers-images/squaringthecircle-large.png#lightbox "tripla captura de tela do Squaring a página de círculo")
 
 Tal uma animação seria impossível sem curvas de maneira algorítmica é flexíveis o suficiente para ser processado como linhas retas e arcos circulares.
 
@@ -337,7 +338,7 @@ Pode ser um bom exercício para plotar essas coordenadas no papel de gráfico pa
 
 Aqui está o símbolo de infinito em todas as três plataformas:
 
-[![](beziers-images/bezierinfinity-small.png "Captura de tela da página infinito de Bézier tripla")](beziers-images/bezierinfinity-large.png "tripla captura de tela da página infinito de Bézier")
+[![](beziers-images/bezierinfinity-small.png "Captura de tela da página infinito de Bézier tripla")](beziers-images/bezierinfinity-large.png#lightbox "tripla captura de tela da página infinito de Bézier")
 
 É um pouco mais suave para o centro do que o símbolo de infinito processado pelo **infinito arco** página do [ **três maneiras para desenhar um arco** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) artigo.
 
@@ -400,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 E aqui está em execução em todas as três plataformas:
 
-[![](beziers-images/quadraticcurve-small.png "Captura de tela da página curva quadrática tripla")](beziers-images/quadraticcurve-large.png "tripla captura de tela da página curva quadrática")
+[![](beziers-images/quadraticcurve-small.png "Captura de tela da página curva quadrática tripla")](beziers-images/quadraticcurve-large.png#lightbox "tripla captura de tela da página curva quadrática")
 
 As linhas pontilhadas são tangente curva no ponto inicial e no ponto de extremidade e atender no ponto de controle.
 
@@ -478,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui, ele é executado em todas as três plataformas:
 
-[![](beziers-images/coniccurve-small.png "Captura de tela da página curva Conic tripla")](beziers-images/coniccurve-large.png "tripla captura de tela da página Conic curva")
+[![](beziers-images/coniccurve-small.png "Captura de tela da página curva Conic tripla")](beziers-images/coniccurve-large.png#lightbox "tripla captura de tela da página Conic curva")
 
 Como você pode ver, o ponto de controle parece puxe a curva em direção mais quando o peso é mais alto. Quando o peso é zero, a curva torna-se uma linha reta do ponto de início para o ponto de extremidade.
 
@@ -542,7 +543,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Como você pode ver, não há nenhuma diferença visual entre o `ConicTo` caminho mostrada em vermelho e o círculo subjacente exibidos para referência:
 
-[![](beziers-images/coniccirculararc-small.png "Captura de tela da página Conic arco Circular tripla")](beziers-images/coniccirculararc-large.png "tripla captura de tela da página Conic arco Circular")
+[![](beziers-images/coniccirculararc-small.png "Captura de tela da página Conic arco Circular tripla")](beziers-images/coniccirculararc-large.png#lightbox "tripla captura de tela da página Conic arco Circular")
 
 Mas, definir o ângulo de 180 graus, e a falha de matemática.
 

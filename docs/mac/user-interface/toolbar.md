@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 641f62d5e646607b2ff61db412a5defce63a211d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 92b90f8d4655ea89b67e81f3235b6fd9b6d92833
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbars"></a>Barras de ferramentas
 
@@ -82,7 +82,7 @@ Para expor elementos de interface do usuário ao código c# por meio de saídas 
 2. Selecione o controlador de janela na superfície de design.
 3. Alterne para o **Inspetor de identidade** e digite "WindowController" como o **nome da classe**: 
 
-    [![Configurar um nome de classe personalizada para o controlador de janela](toolbar-images/windowcontroller01.png "configurar um nome de classe personalizada para o controlador de janela")](toolbar-images/windowcontroller01-large.png) 
+    [![Configurar um nome de classe personalizada para o controlador de janela](toolbar-images/windowcontroller01.png "configurar um nome de classe personalizada para o controlador de janela")](toolbar-images/windowcontroller01-large.png#lightbox) 
 
 4. Salve suas alterações e retornar ao Visual Studio para Mac sincronizar.
 5. Um **WindowController.cs** arquivo será adicionado ao seu projeto no **solução preenchimento** no Visual Studio para Mac: 
@@ -92,7 +92,7 @@ Para expor elementos de interface do usuário ao código c# por meio de saídas 
 6. Reabra o storyboard no construtor de Interface do Xcode.
 7. O **WindowController.h** arquivo estará disponível para uso: 
 
-    [![O arquivo WindowController.h](toolbar-images/windowcontroller03.png "WindowController.h o arquivo")](toolbar-images/windowcontroller03-large.png)
+    [![O arquivo WindowController.h](toolbar-images/windowcontroller03.png "WindowController.h o arquivo")](toolbar-images/windowcontroller03-large.png#lightbox)
 
 ## <a name="creating-and-maintaining-toolbars-in-xcode"></a>Criar e manter as barras de ferramentas no Xcode
 
@@ -188,7 +188,7 @@ Aqui, use o construtor de Interface para configurar o campo de pesquisa e expô-
 
 Vários elementos de interface de usuário Cocoa interagem com os itens da barra de ferramentas padrão por padrão. Por exemplo, arraste um **exibição de texto** para a janela do aplicativo e posicione-o para preencher a área de conteúdo:
 
-[![Adicionando uma exibição de texto para o aplicativo](toolbar-images/edit09.png "adicionando uma exibição de texto para o aplicativo")](toolbar-images/edit09-large.png)
+[![Adicionando uma exibição de texto para o aplicativo](toolbar-images/edit09.png "adicionando uma exibição de texto para o aplicativo")](toolbar-images/edit09-large.png#lightbox)
 
 Salve o documento, retorne ao Visual Studio para Mac para sincronizar com o Xcode, executar o aplicativo, digite algum texto, selecione-o e clique no **cores** item da barra de ferramentas. Observe que a exibição de texto funciona automaticamente com o seletor de cores:
 
@@ -201,7 +201,7 @@ Usando um **Item da barra de ferramentas de imagem**, nenhuma imagem de bitmap �
 1. No Visual Studio para Mac, no **preenchimento de solução**, com o botão direito do **recursos** pasta e selecione **adicionar** > **adicionar arquivos** .
 2. Do **adicionar arquivos** caixa de diálogo caixa, navegue até as imagens desejadas, selecione-os e clique no **abrir** botão: 
 
-    [![Selecionando imagens para adicionar](toolbar-images/edit11.png "selecionando imagens para adicionar")](toolbar-images/edit11-large.png)
+    [![Selecionando imagens para adicionar](toolbar-images/edit11.png "selecionando imagens para adicionar")](toolbar-images/edit11-large.png#lightbox)
 
 3. Selecione **cópia**, verifique **usar a mesma ação para todos os arquivos selecionados**e clique em **Okey**:
 
@@ -225,7 +225,7 @@ Usando um **Item da barra de ferramentas de imagem**, nenhuma imagem de bitmap �
 
 9. Arraste um **separador de Item de barra de ferramentas** do **biblioteca Inspetor** na barra de ferramentas **permitido itens da barra de ferramentas** área: 
 
-    [![Um Item de barra de ferramentas do separador adicionado à área de barra de ferramentas de itens permitidos](toolbar-images/edit17.png "um separador de barra de ferramentas Item adicionado à área de itens permitidos de barra de ferramentas")](toolbar-images/edit17-large.png)
+    [![Um Item de barra de ferramentas do separador adicionado à área de barra de ferramentas de itens permitidos](toolbar-images/edit17.png "um separador de barra de ferramentas Item adicionado à área de itens permitidos de barra de ferramentas")](toolbar-images/edit17-large.png#lightbox)
 
 10. Arraste o item de separador e o item "Lixeira" para o **itens de barra de ferramentas padrão** área e defina a ordem da barra de ferramentas itens da esquerda para a direita, da seguinte maneira (cores, fontes, separador, Lixeira, espaço flexível, impressão): 
 
@@ -244,7 +244,7 @@ Para acessar uma barra de ferramentas ou um item de barra de ferramentas no cód
 1. No **solução preenchimento**, clique duas vezes em **Main.storyboard** para abri-lo no Xcode.
 2. Certifique-se de que a classe personalizada "WindowController" foi atribuída ao controlador de janela principal do **Inspetor de identidade**:
 
-    [![Usando o Inspetor de identidade para definir uma classe personalizada para o controlador de janela](toolbar-images/edit20a.png "usando o Inspetor de identidade para definir uma classe personalizada para o controlador de janela")](toolbar-images/edit20a-large.png)
+    [![Usando o Inspetor de identidade para definir uma classe personalizada para o controlador de janela](toolbar-images/edit20a.png "usando o Inspetor de identidade para definir uma classe personalizada para o controlador de janela")](toolbar-images/edit20a-large.png#lightbox)
 
 3. Em seguida, selecione o item da barra de ferramentas de **hierarquia Interface**: 
 
@@ -253,11 +253,11 @@ Para acessar uma barra de ferramentas ou um item de barra de ferramentas no cód
 4. Abra o **Assistente de exibição**, selecione o **WindowController.h** arquivo e arraste de controle do item de barra de ferramentas para a **WindowController.h** arquivo.
 5. Definir o **Conexão** tipo **ação**, digite "trashDocument" para o **nome**e clique no **conectar** botão: 
 
-    [![Configurar uma ação para um item de barra de ferramentas](toolbar-images/edit23.png "configurar uma ação para um item de barra de ferramentas")](toolbar-images/edit23-large.png)
+    [![Configurar uma ação para um item de barra de ferramentas](toolbar-images/edit23.png "configurar uma ação para um item de barra de ferramentas")](toolbar-images/edit23-large.png#lightbox)
 
 6. Expor o **exibição de texto** como uma tomada chamada "documentEditor" no **ViewController.h** arquivo: 
 
-    [![Configurando uma tomada para o modo de exibição de texto](toolbar-images/edit24.png "Configurando uma tomada para o modo de texto")](toolbar-images/edit24-large.png)
+    [![Configurando uma tomada para o modo de exibição de texto](toolbar-images/edit24.png "Configurando uma tomada para o modo de texto")](toolbar-images/edit24-large.png#lightbox)
 
 7. Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 

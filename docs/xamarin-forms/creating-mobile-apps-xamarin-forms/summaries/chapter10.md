@@ -3,14 +3,15 @@ title: "Resumo do capítulo 10. Extensões de marcação XAML"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 8ded1dba0e1d4d1a9062d0f75935b3d748a83370
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e9f630fbfc9f7a1d6346b6dd8308504a6806e1a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Resumo do capítulo 10. Extensões de marcação XAML
 
@@ -36,7 +37,7 @@ Essas quatro extensões de marcação XAML têm suporte por muitas implementaç�
 
 - `StaticResource` Com suporte [`StaticResourceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticResourceExtension/)
 - `DynamicResource` Com suporte [`DynamicResourceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.DynamicResourceExtension/)
-- `Binding` suporte [ `BindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) &mdash;discutidos [capítulo 16. associação de dados](#chapter16)
+- `Binding` suporte [ `BindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) &mdash;discutidos [capítulo 16. Associação de dados](#chapter16)
 - `TemplateBinding` suporte [ `TemplateBindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.TemplateBindingExtension/) &mdash;não abordadas no catálogo
 
 Uma extensão de marcação XAML adicional está incluída no xamarin. Forms em conexão com [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/):
@@ -57,7 +58,7 @@ O `VisualElement` classe define uma propriedade chamada [ `Resources` ](https://
 
 Na maioria dos casos você usará o [ `StaticResource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticResourceExtension/) extensão de marcação para fazer referência a um item de dicionário de recurso, conforme demonstrado a [ **ResourceSharing** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceSharing) exemplo . Você pode usar um `StaticResourceExtension` elemento ou `StaticResource` entre chaves:
 
-[![Captura de tela tripla de compartilhamento de recursos](images/ch10fg03-small.png "compartilhamento de recursos")](images/ch10fg03-large.png "compartilhamento de recursos")
+[![Captura de tela tripla de compartilhamento de recursos](images/ch10fg03-small.png "compartilhamento de recursos")](images/ch10fg03-large.png#lightbox "compartilhamento de recursos")
 
 Não confunda o `x:Static` extensão de marcação e o `StaticResource` extensão de marcação.
 

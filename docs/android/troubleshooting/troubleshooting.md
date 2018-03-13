@@ -6,16 +6,15 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ce62e844a9ec76217947c0f0f5ed5e9a81336c7e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 145c8507ca5ebea6197fa8827b93f58fbc9bb078
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting-tips"></a>Dicas de Solução de Problemas
 
-<a name="Getting_Diagnostic_Information" />
 
 ## <a name="getting-diagnostic-information"></a>Obtendo informações de diagnóstico
 
@@ -27,20 +26,19 @@ Elas incluem:
 3.  Saída de Log de depuração Android.
 
 
- <a name="Diagnostic_MSBuild_Output" />
-
+<a name="Diagnostic_MSBuild_Output" />
 
 ## <a name="diagnostic-msbuild-output"></a>Saída de diagnóstico MSBuild
 
 Diagnóstico MSBuild pode conter informações adicionais relacionadas à criação de pacote e pode conter algumas informações de implantação do pacote.
 
-Para habilitar a saída de diagnóstico MSBuild no Visual Studio:
+Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Mac:
 
 1.  Clique em **Ferramentas > Opções...**
 2.  Na exibição de árvore à esquerda, selecione **projetos e soluções > compilar e executar**
 3.  No painel direito, defina o menu suspenso de detalhamento de saída de compilação MSBuild para diagnóstico
 4.  Clique em **OK**
-5.  Limpar e recrie seu pacote.
+5.  Limpe e recompile o seu pacote.
 6.  Saída de diagnóstico está visível no painel de saída.
 
 
@@ -50,12 +48,11 @@ Para habilitar o diagnóstica saída MSBuild no Visual Studio para Mac/OS x:
 2.  Na exibição de árvore à esquerda, selecione **projetos > criar**
 3.  No painel direito, defina o nível de detalhes de Log lista suspensa para diagnóstico
 4.  Clique em **OK**
-5.  Reinicie o Visual Studio para Mac
-6.  Limpar e recrie seu pacote.
+5.  Reiniciar o Visual Studio para Mac
+6.  Limpe e recompile o seu pacote.
 7.  Saída de diagnóstico é visível na área de erros (**exibição > preenche > erros** ), clicando no botão de saída de compilação.
 
 
- <a name="Device_Deployment_Logs" />
 
 
 ## <a name="device-deployment-logs"></a>Logs de implantação de dispositivo
@@ -74,7 +71,6 @@ O Visual Studio para Mac sempre grava logs de implantação de dispositivo. Loca
 -  Nos X, os arquivos de log são gravados em `$HOME/Library/Logs/XamarinStudio-{VERSION}`.
 
 
- <a name="Android_Debug_Log_Output" />
 
 
 ## <a name="android-debug-log-output"></a>Saída de Log de depuração de Android
@@ -88,10 +84,9 @@ adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 
 Propriedades do sistema são lidas durante a inicialização do processo e, portanto, devem ser definido antes do aplicativo é iniciado ou o aplicativo deve ser reiniciado depois que as propriedades do sistema são alteradas.
 
-<a name="Xamarin.Android_System_Properties" />
 
 
-### <a name="xamarinandroid-system-properties"></a>Propriedades do sistema de xamarin
+### <a name="xamarinandroid-system-properties"></a>Propriedades do sistema Xamarin.Android
 
 Xamarin suporta as seguintes propriedades de sistema:
 
@@ -130,7 +125,6 @@ Esse erro ocorre devido a uma incompatibilidade com o Visual Studio.
 
 Escolha o System.ValueTuple NuGet correta que corresponde à sua instalação do Visual Studio de 2017.
 
-<a name="GC_Messages" />
 
 ## <a name="gc-messages"></a>Mensagens de GC
 
@@ -162,7 +156,6 @@ No `GC_MINOR` e `GC_MAJOR` mensagens, `total` é a quantidade de tempo enquanto 
 
  *Em geral*, quanto maior o valor de `num_hash_entries`, a mais tempo que o `bridge` terão coleções e maior o `total` será o tempo gasto na coleta.
 
- <a name="Global_Reference_Messages" />
 
 
 ## <a name="global-reference-messages"></a>Mensagens de referência global
@@ -254,14 +247,12 @@ Você pode consultar as contagens de GREF e WREF consultando o `JniRuntime` obje
 
 `Java.Interop.JniRuntime.CurrentRuntime.WeakGlobalReferenceCount` -Contagem de referência fraca
 
- <a name="Offline_Activation" />
 
 
 ## <a name="offline-activation"></a>Ativação offline
 
 Se você não é possível ativar o xamarin no Windows ou não é possível instalar a versão completa do xamarin no Mac OS X, consulte o [ativação Offline](~/android/get-started/installation/index.md) página.
 
- <a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
 
 
 ## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>Não é possível atualizar o Indie de negócios de conta de avaliação
@@ -275,7 +266,6 @@ Se você adquiriu recentemente xamarin e iniciou anteriormente uma versão de av
 
 Isso deve proporcionar a você em funcionamento. Se você continuar tendo problemas, convém tentar uma [ativação Offline](~/android/get-started/installation/index.md) para concluir a ativação da estação de trabalho.
 
- <a name="Receiving_'Activation_Incomplete'_Error_Message" />
 
 
 ## <a name="receiving-activation-incomplete-error-message"></a>Recebendo ' mensagem de erro incompleta de ativação
@@ -285,7 +275,6 @@ Esse problema pode ocorrer ao usar o xamarin para Visual Studio. Para resolver e
 -  Local do log: **% LocalAppData %\\Xamarin\\Logs**
 
 
- <a name="Receiving_'Error_Retrieving_Update_Information'_Error_Message" />
 
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>Recebendo a mensagem de erro 'Erro ao recuperar informações de atualização'
@@ -315,14 +304,12 @@ Para fazer isso, localize sua plataforma de escolha abaixo e siga as etapas:
 Se essa mensagem de erro continuar a aparecer, envie um e-mail  **contact@xamarin.com** .
 
 
- <a name="Android_Debug_Logs" />
 
 
 ## <a name="android-debug-logs"></a>Logs de depuração Android
 
 O [Android Logs de depuração](~/android/deploy-test/debugging/android-debug-log.md) pode fornecer um contexto adicional sobre os erros de tempo de execução que você está vendo.
 
- <a name="Floating-Point_performance_is_terrible!" />
 
 
 ## <a name="floating-point-performance-is-terrible"></a>Desempenho de ponto flutuante é terrível!
@@ -339,7 +326,6 @@ Compilações de versão só incluirá os ABIs selecionadas na guia Propriedades
 
 Se seu aplicativo requer um desempenho razoável de ponto flutuante (por exemplo, jogos), você deve habilitar o *armeabi v7a* ABI. Talvez você queira só oferecem suporte a *armeabi v7a* tempo de execução, embora isso significa que dispositivos mais antigos que oferecem suporte apenas a *armeabi* não poderá executar seu aplicativo.
 
- <a name="Could_not_locate_Android_SDK" />
 
 
 ## <a name="could-not-locate-android-sdk"></a>Não foi possível localizar o SDK do Android
@@ -347,9 +333,8 @@ Se seu aplicativo requer um desempenho razoável de ponto flutuante (por exemplo
 Há 2 downloads do Google para o Android SDK para Windows.
 Se você escolher o instalador .exe, ele gravará chaves do registro que indicam o xamarin onde ele foi instalado. Se você escolher o arquivo. zip e descompacte-, xamarin não sabe onde procurar o SDK. Você pode informar xamarin onde o SDK está no Visual Studio, vá para **Ferramentas > Opções > Xamarin > configurações do Android**:
 
-[![Local do SDK do Android nas configurações do Xamarin Android](troubleshooting-images/01a.png)]()
+[![Local do SDK do Android nas configurações do Xamarin Android](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
 
-<a name="IDE_does_not_display_target_device" />
 
 
 ## <a name="ide-does-not-display-target-device"></a>IDE não mostra o dispositivo de destino
@@ -393,7 +378,6 @@ emulator -partition-size 512 -avd MonoDroid
 
 Verifique se você usar o nome correto do simulador, ou seja, [o nome usado ao configurar o simulador](~/android/get-started/installation/windows.md#device).
 
-<a name="INSTALL_FAILED_INVALID_APK_when_installing_a_package" />
 
 ## <a name="installfailedinvalidapk-when-installing-a-package"></a>INSTALAR\_falha\_inválido\_APK ao instalar um pacote
 
@@ -410,7 +394,6 @@ Nomes de pacote Android *deve* contém um ponto ('*.*'). Edite o nome do pacote 
     -   Altere o campo de nome de pacote para conter um '.'.
 
 
-<a name="INSTALL_FAILED_MISSING_SHARED_LIBRARY_when_installing_a_package" />
 
 
 ## <a name="installfailedmissingsharedlibrary-when-installing-a-package"></a>INSTALAR\_falha\_ausente\_compartilhado\_biblioteca ao instalar um pacote
@@ -424,7 +407,6 @@ Para determinar quais bibliotecas compartilhadas são necessárias, veja o *gera
 
 Por exemplo, adicionando uma referência de assembly para *Mono.Android.GoogleMaps.dll* implicitamente adicionará um `<uses-library/>` para a biblioteca compartilhada Google Maps.
 
-<a name="INSTALL_FAILED_UPDATE_INCOMPATIBLE_when_installing_a_package" />
 
 
 ## <a name="installfailedupdateincompatible-when-installing-a-package"></a>INSTALAR\_falha\_atualização\_INCOMPATÍVEL ao instalar um pacote
@@ -450,7 +432,6 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 
 Para corrigir esse erro, remova completamente o aplicativo de seu dispositivo antes de reinstalar.
 
-<a name="INSTALL_FAILED_UID_CHANGED_when_installing_a_package" />
 
 ## <a name="installfaileduidchanged-when-installing-a-package"></a>INSTALAR\_falha\_UID\_ALTERADO durante a instalação de um pacote
 
@@ -475,7 +456,6 @@ $ adb uninstall @PACKAGE_NAME@
 **NÃO USE** `adb uninstall -k`, pois isso será *preservar* dados de aplicativo e, portanto, preservar o UID conflitante no dispositivo de destino.
 
 
-<a name="Release_apps_fail_to_launch_on_device" />
 
 ## <a name="release-apps-fail-to-launch-on-device"></a>Aplicativos de versão falharem ao iniciar no dispositivo
 
@@ -603,7 +583,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 [Isso será corrigido em uma versão futura](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
 
-<a name="Unexpected_NullReferenceExceptions" />
 
 ## <a name="unexpected-nullreferenceexceptions"></a>NullReferenceExceptions inesperado
 
@@ -635,7 +614,6 @@ Para ver se esse for o caso, verifique o Log de depuração Android para uma men
 E/dalvikvm(  123): VM aborting
 ```
 
-<a name="Abort_due_to_Global_Reference_Exhaustion" />
 
 ## <a name="abort-due-to-global-reference-exhaustion"></a>Anular devido ao esgotamento de referência Global
 
@@ -726,7 +704,6 @@ Normalmente, uma solução útil é encontrar o tipo tem muitas instâncias aloc
 
 Você pode habilitar [GREF log](~/android/troubleshooting/index.md) para ver quando GREFs são criados e quantos existem.
 
-<a name="Abort_due_to_JNI_type_mismatch" />
 
 ## <a name="abort-due-to-jni-type-mismatch"></a>Anulamento devido à incompatibilidade de tipo JNI
 

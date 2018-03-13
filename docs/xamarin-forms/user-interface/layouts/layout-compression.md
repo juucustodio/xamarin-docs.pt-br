@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 15f198465c544989b347fe534978956741478ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e03acbbac737bffd21ee3b592ab017d227f822ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-compression"></a>Compactação de Layout
 
@@ -60,7 +60,7 @@ A hierarquia de exibição aninhada resultante pode ser examinada com [Xamarin I
 Compactação de layout, que está disponível para xamarin. Forms aplicativos nas plataformas Android e iOS, tem como objetivo para mesclar a exibição de aninhamento removendo especificados layouts da árvore visual, o que pode melhorar o desempenho de renderização da página. O benefício de desempenho que é fornecido varia dependendo da complexidade de uma página, a versão do sistema operacional que está sendo usado e o dispositivo no qual o aplicativo está sendo executado. No entanto, os maiores ganhos de desempenho serão observados em versões mais antigas.
 
 > [!NOTE]
-> **Observação**: enquanto este artigo enfoca os resultados da aplicação de compactação de layout no Android, é igualmente aplicável para iOS.
+> Embora este artigo enfoca os resultados da aplicação de compactação de layout no Android, é igualmente aplicável para iOS.
 
 ## <a name="layout-compression"></a>Compactação de Layout
 
@@ -119,6 +119,6 @@ Compactação de layout remove especificados layouts da árvore visual em uma te
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Criar um Layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
-- [Processadores rápidos](~/xamarin-forms/internals/fast-renderers.md)
+- [Criar um layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
+- [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
 - [LayoutCompression (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutcompression/)

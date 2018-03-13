@@ -8,23 +8,21 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d1cb0f6a329604dcac4943eaf39f838bcba38793
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 956b9e4e280545c8e11925697fced4b9d4e40693
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-sdk-emulator"></a>Emulador do SDK do Android
 
 _Este guia explica como usar o Emulador do SDK do Android do Google com o Visual Studio._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
 Um Emulador do SDK do Android do Google pode ser executado em uma variedade de configurações para simular dispositivos diferentes. Cada uma dessas configurações é criada como um _dispositivo virtual_. Este guia mostrará como iniciar o emulador no Visual Studio e como solucionar problemas comuns.
 
-<a name="sections" />
 
 ## <a name="sections"></a>Seções
 
@@ -39,7 +37,6 @@ Como identificar e resolver problemas comuns do Emulador do SDK do Android.
 Para saber mais sobre como configurar o emulador do SDK do Android e como criar novos dispositivos virtuais, confira [Configuração do Android Emulator](~/android/get-started/installation/android-emulator/index.md).
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumo
 

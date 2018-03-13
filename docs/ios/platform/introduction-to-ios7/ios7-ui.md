@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 6df47bd54611feedd0d355a976a055d62f37afeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 visão geral sobre a Interface do usuário
 
@@ -146,7 +146,7 @@ Como preparar seu aplicativo para iOS 7, você pode realinhar sub-visualizaçõe
 
  `TopLayoutGuide` e `BottomLayoutGuide` servir como uma referência para onde os modos de exibição devem começar ou terminar, para que o conteúdo não é sobreposto por um transparente `UIKit` barra, como no exemplo a seguir:
 
- [ ![](ios7-ui-images/clipped.png "Conteúdo de exemplo não sobreposto por uma barra UIKit transparente")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "Conteúdo de exemplo não sobreposto por uma barra UIKit transparente")](ios7-ui-images/clipped.png#lightbox)
 
 Essas APIs pode ser usadas para calcular o deslocamento de um modo de exibição da parte superior ou inferior da tela e ajustar adequadamente o posicionamento do conteúdo:
 
@@ -166,7 +166,7 @@ public override void ViewDidLayoutSubviews ()
 
 Podemos usar o valor calculado acima para definir nossos `ImageView`do deslocamento da parte superior da tela, para que a imagem inteira fique visível:
 
- [ ![](ios7-ui-images/good2.png "Deslocamento de ImageViews de exemplo da parte superior da tela")](ios7-ui-images/good2.png)
+ [![](ios7-ui-images/good2.png "Deslocamento de ImageViews de exemplo da parte superior da tela")](ios7-ui-images/good2.png#lightbox)
 
 Consulte o [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) para um exemplo de funcionamento.
 
@@ -179,15 +179,15 @@ O valor de deslocamento é gerado dinamicamente depois que o modo de exibição 
 
 Essa API Especifica quais bordas de um modo de exibição devem ser estendidas para tela inteira, independentemente de barra translucency. No iOS 7, barras de navegação e barras de ferramentas são exibidos em camadas sobre o modo de exibição do controlador - diferentemente no iOS anterior versões, em que eles não ocupam o mesmo espaço. O aplicativo de fotos do iOS 7 ilustra o padrão `UIViewController.EdgesForExtendedLayout` valor, `UIRectEdge.All`. Essa configuração preenche todos os quatro bordas na exibição de conteúdo, criando o efeito de sobreposição e tela cheia:
 
- [ ![](ios7-ui-images/photos.png "Exemplo EdgesForExtendedLayout")](ios7-ui-images/photos.png)
+ [![](ios7-ui-images/photos.png "Exemplo EdgesForExtendedLayout")](ios7-ui-images/photos.png#lightbox)
 
 Tocar a imagem remove as barras e mostra a imagem em tela inteira:
 
- [ ![](ios7-ui-images/photos2.png "EdgesForExtendedLayout com as barras removido")](ios7-ui-images/photos2.png)
+ [![](ios7-ui-images/photos2.png "EdgesForExtendedLayout com as barras removido")](ios7-ui-images/photos2.png#lightbox)
 
 Como o conteúdo de tela inteira é o padrão, os aplicativos configurados para iOS 6 terá parte da exibição recortada, como a captura de tela abaixo:
 
- [ ![](ios7-ui-images/clipped.png "Aplicativos configurados para iOS 6 terá parte da exibição recortada, como esta captura de tela")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "Aplicativos configurados para iOS 6 terá parte da exibição recortada, como esta captura de tela")](ios7-ui-images/clipped.png#lightbox)
 
 Modificando o `UIViewController.EdgesForExtendedLayout` propriedade ajusta esse comportamento. É possível especificar que o modo de exibição não preencher qualquer Bordas, nossa visão evitará a exibição de conteúdo no espaço ocupado pela navegação ou barras de ferramentas (em cada orientação):
 
@@ -199,7 +199,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
 Em nosso aplicativo, veremos que o modo de exibição é reposicionado novamente, para que a imagem inteira fique visível:
 
- [ ![](ios7-ui-images/good.png "Exemplo com a imagem inteira visível")](ios7-ui-images/good.png)
+ [![](ios7-ui-images/good.png "Exemplo com a imagem inteira visível")](ios7-ui-images/good.png#lightbox)
 
 Observe que, enquanto os efeitos da `TopLayoutGuide/BottomLayoutGuide` e `EdgesForExtendedLayout` APIs são semelhantes, eles devem preencher objetivos diferentes. Alterando o `EdgesForExtendedLayout` configuração padrão pode corrigir recortadas exibições em aplicativos criados para iOS 6, mas um design de BOM iOS 7 deve respeitar a estética de tela inteira e fornecer uma experiência de exibição, contando completo tela `TopLayoutGuide` e `BottomLayoutGuide`para posicionar o conteúdo que tenha devem ser manipulados em um local à vontade para o usuário corretamente.
 

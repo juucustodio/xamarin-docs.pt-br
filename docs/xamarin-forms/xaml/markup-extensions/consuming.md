@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: cc4407be9dee7e19dbf1f3cc03b3b88191717e6f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0c68d2cfd43eb535fe2e02b5662250cb6e453ddd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumindo extensões de marcação XAML
 
@@ -137,7 +137,7 @@ O exemplo final exibe o `Device.RuntimePlatform` valor. O `Environment.NewLine` 
 
 Aqui está o exemplo em execução em todas as três plataformas:
 
-[![Demonstração de X:Static](consuming-images/staticdemo-small.png "X:Static demonstração")](consuming-images/staticdemo-large.png "X:Static demonstração")
+[![Demonstração de X:Static](consuming-images/staticdemo-small.png "X:Static demonstração")](consuming-images/staticdemo-large.png#lightbox "X:Static demonstração")
 
 <a name="reference" />
 
@@ -181,7 +181,7 @@ O **x: referência demonstração** página mostra dois usos do `x:Reference` co
 
 Ambos `x:Reference` expressões usam a versão abreviada do `ReferenceExtension` nome da classe e eliminar o `Name=` faz parte da expressão. No primeiro exemplo, o `x:Reference` extensão de marcação é inserida no `Binding` extensão de marcação. Observe que o `Source` e `StringFormat` configurações são separadas por vírgulas. Aqui está o programa em execução em todas as três plataformas:
 
-[![Demonstração de x: referência](consuming-images/referencedemo-small.png "x: referência demonstração")](consuming-images/referencedemo-large.png "demonstração x: referência")
+[![Demonstração de x: referência](consuming-images/referencedemo-small.png "x: referência demonstração")](consuming-images/referencedemo-large.png#lightbox "demonstração x: referência")
 
 <a name="type" />
 
@@ -236,7 +236,7 @@ Isso é como o menu de navegação em `MainPage` no **extensões de marcação**
 
 Aqui está a página principal de abertura em **extensões de marcação**:
 
-[![Principal página](consuming-images/mainpage-small.png "principal página")](consuming-images/mainpage-large.png "principal página")
+[![Principal página](consuming-images/mainpage-small.png "principal página")](consuming-images/mainpage-large.png#lightbox "principal página")
 
 Cada `CommandParameter` está definida como um `x:Type` extensão de marcação que faz referência a uma das outras páginas. O `Command` propriedade é associada a uma propriedade denominada `NavigateCommand`. Essa propriedade é definida no `MainPage` arquivo code-behind:
 
@@ -319,7 +319,7 @@ public partial class TypeDemoPage : ContentPage
 
 O método que é executado quando um `Button` é pressionado cria uma nova instância do argumento, define seu `VerticalOptions` propriedade e adiciona-o para o `StackLayout`. Os três `Button` elementos, em seguida, compartilhem a página com criado dinamicamente exibições:
 
-[![Demonstração de x: tipo](consuming-images/typedemo-small.png "X:Type demonstração")](consuming-images/typedemo-large.png "x: tipo demonstração")
+[![Demonstração de x: tipo](consuming-images/typedemo-small.png "X:Type demonstração")](consuming-images/typedemo-large.png#lightbox "x: tipo demonstração")
 
 <a name="array" />
 
@@ -376,7 +376,7 @@ O **X:array demonstração** página mostra como usar `x:Array` para adicionar i
 
 O `ViewCell` cria um simples `BoxView` para cada entrada de cor:
 
-[![Demonstração de X:array](consuming-images/arraydemo-small.png "X:array demonstração")](consuming-images/arraydemo-large.png "X:array demonstração")
+[![Demonstração de X:array](consuming-images/arraydemo-small.png "X:array demonstração")](consuming-images/arraydemo-large.png#lightbox "X:array demonstração")
 
 Há várias maneiras para especificar o indivíduo `Color` itens nesta matriz. Você pode usar um `x:Static` extensão de marcação:
 
@@ -449,7 +449,7 @@ Em seguida, você descobre que para uma da `Label` elementos, você deseja que t
 
 Aqui está o programa em execução em plataformas de três:
 
-[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png "x:Null Demo")
+[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png#lightbox "x:Null Demo")
 
 Observe que quatro do `Label` elementos têm uma fonte serif, mas o centro `Label` tem a fonte de sans-serif padrão.
 
@@ -462,6 +462,6 @@ Se você encontrou a necessidade de uma extensão de marcação XAML que não es
 
 - [Extensões de marcação (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 - [Capítulo de extensões de marcação XAML do catálogo xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
-- [Dicionários de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinâmicos](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)

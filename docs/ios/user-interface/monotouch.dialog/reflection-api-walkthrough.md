@@ -7,11 +7,11 @@ ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 44df6fce4ec6d667c096da01cfc339ec2afdb077
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec5ca2883c6e109a67ee8a4ecb25fe938d0df4ec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>Passo a passo: Criando um aplicativo usando a API de reflexão
 
@@ -34,7 +34,7 @@ Usando a API de reflexão é tão simple quanto:
 
 Vejamos um exemplo para ilustrar como usar a API de reflexão. Neste exemplo, criaremos uma tela de entrada de dados simples como mostrado abaixo:
 
- [ ![](reflection-api-walkthrough-images/01-expense-entry.png "Neste exemplo, criaremos uma tela de entrada de dados simples como mostrado aqui")](reflection-api-walkthrough-images/01-expense-entry.png)
+ [![](reflection-api-walkthrough-images/01-expense-entry.png "Neste exemplo, criaremos uma tela de entrada de dados simples como mostrado aqui")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
 
@@ -119,7 +119,7 @@ window.RootViewController = nav;
 
 Agora, quando o aplicativo é executado, o título é exibido no `UINavigationController’s` barra de navegação como a captura de tela abaixo mostra:
 
- [ ![](reflection-api-walkthrough-images/02-create-task.png "Agora quando o aplicativo é executado, o título é exibido na barra de navegação UINavigationControllers")](reflection-api-walkthrough-images/02-create-task.png)
+ [![](reflection-api-walkthrough-images/02-create-task.png "Agora quando o aplicativo é executado, o título é exibido na barra de navegação UINavigationControllers")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
 Incluindo um `UINavigationController`, agora podem tirar proveito de outros recursos do MT. D para o qual a navegação é necessária. Por exemplo, podemos adicionar uma enumeração para o `Expense` classe para definir a categoria de despesas e MT. D criará automaticamente uma tela de seleção. Para demonstrar, modifique o `Expense` classe para incluir um `ExpenseCategory` campo da seguinte maneira:
 
@@ -142,11 +142,11 @@ public class Expense
 
 Executando o aplicativo agora resulta em uma nova linha na tabela para a categoria, conforme mostrado:
 
- [ ![](reflection-api-walkthrough-images/03-set-details.png "Executando o aplicativo agora resulta em uma nova linha na tabela para a categoria, conforme mostrado")](reflection-api-walkthrough-images/03-set-details.png)
+ [![](reflection-api-walkthrough-images/03-set-details.png "Executando o aplicativo agora resulta em uma nova linha na tabela para a categoria, conforme mostrado")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
 
 Selecionar a linha resulta no aplicativo navegando para uma nova tela com linhas que correspondem à enumeração, conforme mostrado abaixo:
 
- [ ![](reflection-api-walkthrough-images/04-set-category.png "Selecionar a linha resulta no aplicativo navegando para uma nova tela com linhas que correspondem à enumeração")](reflection-api-walkthrough-images/04-set-category.png)
+ [![](reflection-api-walkthrough-images/04-set-category.png "Selecionar a linha resulta no aplicativo navegando para uma nova tela com linhas que correspondem à enumeração")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
  <a name="Summary" />
 

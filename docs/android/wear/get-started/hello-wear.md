@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: bac9402df544a57cceb98e816e268eb2dcb99c72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-wear"></a>Olá, desgaste
 
@@ -30,11 +30,11 @@ Criar um novo **aplicativo Android usam**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Criando um novo aplicativo Android desempenham na caixa de diálogo Novo projeto](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png)
+[![Criando um novo aplicativo Android desempenham na caixa de diálogo Novo projeto](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Criando um novo aplicativo Android desempenham na caixa de diálogo nova solução](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png)
+[![Criando um novo aplicativo Android desempenham na caixa de diálogo nova solução](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -47,13 +47,13 @@ Esse modelo inclui automaticamente o **Xamarin biblioteca de vestir Android** Nu
 
 Certifique-se de que **mínimo Android para o destino** é definido como **Android 5.0 (pirulito)** ou posterior: 
 
-[![Definir a estrutura de destino para o Android 5.0 no Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png)
+[![Definir a estrutura de destino para o Android 5.0 no Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Certifique-se de que a estrutura de destino é definida como **Android 5.0 (pirulito)** ou posterior:
 
-[ ![Definir a estrutura de destino para o Android 5.0 no Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png)
+[![Definir a estrutura de destino para o Android 5.0 no Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -144,11 +144,11 @@ O dispositivo Android desgaste deve aparecer no menu suspenso do dispositivo. Ce
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Escolhendo um AVD desempenham no menu de dispositivo do Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png)
+[![Escolhendo um AVD desempenham no menu de dispositivo do Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Escolhendo um AVD desempenham no Visual Studio para o menu de dispositivo do Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png)
+[![Escolhendo um AVD desempenham no Visual Studio para o menu de dispositivo do Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -160,11 +160,11 @@ Se você estiver usando um emulador watch, pode levar um tempo para iniciar o ap
 
 Depois que o aplicativo implanta com êxito, a tela do dispositivo desgaste deve exibir uma tela semelhante ao seguinte:
 
-[![Tela inicial do aplicativo de desgaste](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png)
+[![Tela inicial do aplicativo de desgaste](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Toque na **clique ME!** botão na frente do dispositivo de desgaste e consulte o incremento de contagem com cada toque:
 
-[![Captura de tela de desgaste aplicativo após 3 cliques](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png)
+[![Captura de tela de desgaste aplicativo após 3 cliques](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>Próximas etapas

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 12314e6ec5951a5a094ed8b0a5536b450853c5fb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a3f8ca8f4502b9585536815aef81f66cacd214f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-tables-appearance"></a>Personalizando a aparência de uma tabela
 
@@ -29,7 +29,7 @@ Há quatro estilos internos:
 
 Essas capturas de tela mostram como cada estilo aparece:
 
- [ ![](customizing-table-appearance-images/image7.png "Essas capturas de tela mostram como cada estilo aparece")](customizing-table-appearance-images/image7.png)
+ [![](customizing-table-appearance-images/image7.png "Essas capturas de tela mostram como cada estilo aparece")](customizing-table-appearance-images/image7.png#lightbox)
 
 O exemplo **CellDefaultTable** contém o código para gerar essas telas. O estilo de célula é definido `UITableViewCell` construtor, como este:
 
@@ -60,7 +60,7 @@ Células podem ter os seguintes Acessórios adicionados à direita da exibição
 
 Esta é sua aparência:
 
- [ ![](customizing-table-appearance-images/image8.png "Acessórios de exemplo")](customizing-table-appearance-images/image8.png)
+ [![](customizing-table-appearance-images/image8.png "Acessórios de exemplo")](customizing-table-appearance-images/image8.png#lightbox)
 
 Para exibir uma esses acessórios que você pode definir o `Accessory` propriedade o `GetCell` método:
 
@@ -119,7 +119,7 @@ Para alterar o estilo visual de uma tabela, você precisa fornecer células pers
 
 O exemplo CellCustomTable implementa um `UITableViewCell` subclasse que define um layout personalizado de `UILabel`s e um `UIImage` com diferentes fontes e cores. As células resultantes tem esta aparência:
 
- [ ![](customizing-table-appearance-images/image9.png "Layouts de célula personalizado")](customizing-table-appearance-images/image9.png)
+ [![](customizing-table-appearance-images/image9.png "Layouts de célula personalizado")](customizing-table-appearance-images/image9.png#lightbox)
 
 A classe de célula personalizado consiste em apenas três métodos:
 

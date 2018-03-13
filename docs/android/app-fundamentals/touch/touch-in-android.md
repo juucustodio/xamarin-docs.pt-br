@@ -6,12 +6,12 @@ ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 83997018f4e08567a9150bf1e21374a98c8ddb4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 1d9cf345aa971c40f4132cc7970ed1244640da14
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-android"></a>Toque no Android
 
@@ -33,7 +33,7 @@ O `MotionEvent` objeto será passado para um método apropriado em um aplicativo
 
 
 > [!NOTE]
-> **Observação:** nem todos os dispositivos Android oferecem suporte a telas sensíveis ao toque. 
+> Nem todos os dispositivos Android oferecem suporte a telas sensíveis ao toque. 
 
 Adicionando a seguinte marca para o arquivo de manifesto faz com que o Google Play somente exibição seu aplicativo para os dispositivos que são toque habilitado:
 
@@ -90,11 +90,11 @@ Gestos são uma ótima maneira para que os usuários interagem com um aplicativo
 
 Desde 1.6 Android, o SDK do Android vem com um aplicativo instalado previamente no emulador chamado construtor de gestos. Esse aplicativo permite que um desenvolvedor crie gestos predefinidos que podem ser inseridos em um aplicativo. A captura de tela a seguir mostra um exemplo do construtor de gestos de:
 
-[![Captura de tela de gestos de construtor com gestos de exemplo](touch-in-android-images/image11.png)](touch-in-android-images/image11.png)
+[![Captura de tela de gestos de construtor com gestos de exemplo](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 Uma versão aprimorada desse aplicativo chamada ferramenta gesto pode ser encontrada Google Play. Gesto ferramenta é muito semelhante ao construtor de gestos exceto que ele permite que você teste gestos depois que elas foram criadas. Próxima captura de tela mostra gestos construtor:
 
-[![Captura de tela de gesto de ferramenta com gestos de exemplo](touch-in-android-images/image12.png)](touch-in-android-images/image12.png)
+[![Captura de tela de gesto de ferramenta com gestos de exemplo](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 Ferramenta de gesto é um pouco mais útil para criar gestos personalizados conforme ele permite que os gestos a ser testada conforme eles são criados e está facilmente disponível por meio do Google Play.
 

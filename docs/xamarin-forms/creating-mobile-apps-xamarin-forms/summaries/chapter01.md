@@ -3,14 +3,15 @@ title: "Resumo do capítulo 1. Como xamarin. Forms se encaixa?"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c0f3313fa3c4d1075be7deeb871e303006c533e8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumo do capítulo 1. Como xamarin. Forms se encaixa?
 
@@ -44,7 +45,7 @@ Os modelos de solução xamarin. Forms atuais não incluem os modelos de projeto
 
 A maior parte de um programa xamarin. Forms existe em um PCL ou um SAP. Cada uma das plataformas consiste de um stub de aplicativo pequeno que chama o PCL. As APIs Xamarin.Forms mapear para controles nativos em cada plataforma, para que cada plataforma mantém sua aparência característica:
 
-[![Captura de tela de tripla de visuais de plataforma de compartilhamento](images/ch01fg03-small.png "xamarin. Forms controles em cada plataforma")](images/ch01fg03-large.png "xamarin. Forms controles em cada plataforma")
+[![Captura de tela de tripla de visuais de plataforma de compartilhamento](images/ch01fg03-small.png "xamarin. Forms controles em cada plataforma")](images/ch01fg03-large.png#lightbox "xamarin. Forms controles em cada plataforma")
 
 As capturas de tela da esquerda para a direita mostram um iPhone, um telefone Android e um telefone Windows 10 Mobile. Em cada tela, a página contém um xamarin. Forms [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) para exibir o texto, um [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) para iniciar ações, uma [ `Switch` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) para Escolha um valor de ativar/desativar e um [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) para especificar um valor dentro de um intervalo contínuo. Todos os quatro dessas exibições são filhos de um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) em uma [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/).
 

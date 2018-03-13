@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 9c95a1b71f83ee810b775420aab3ceafeeca0379
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5c17c53c154eb4da4ec76e567c1c73695de7e35
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -30,7 +30,7 @@ Este guia examina os cenários comuns de criação de perfil e apresenta o criad
 
 - [Baixar e instalar](#Download_and_Install)
 - [Criadores de perfis e criação de perfil](#Profilers_and_Profiling)
-- [Criador de perfil do Xamarin](#Xamarin_Profiler)
+- [Xamarin Profiler](#Xamarin_Profiler)
 - [Suporte do criador de perfil](#Profiler_Support)
 - [Noções básicas sobre o criador de perfil](#Profiler_Basics)
     - [Permitindo a criação de perfil em seu aplicativo](#Allowing_Profiling_in_your_App)
@@ -212,11 +212,11 @@ O criador de perfil do Xamarin é composta de cinco seções, conforme ilustrado
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![](images/profiler-mac-sml.png "Seções do criador de perfil do Visual Studio para Mac")](images/profiler-mac.png) 
+[![](images/profiler-mac-sml.png "Seções do criador de perfil do Visual Studio para Mac")](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/profiler-vs.png "Seções do criador de perfil do Visual Studio")](images/profiler-vs.png)
+[![](images/profiler-vs.png "Seções do criador de perfil do Visual Studio")](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -234,11 +234,11 @@ Na parte superior do criador de perfil é o gráfico de alocações, que exibe a
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![](images/allocations1.png "Instrumento de alocações")](images/allocations1.png) 
+[![](images/allocations1.png "Instrumento de alocações")](images/allocations1.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/allocations1-vs.png "Instrumento de alocações")](images/allocations1-vs.png)
+[![](images/allocations1-vs.png "Instrumento de alocações")](images/allocations1-vs.png#lightbox)
 
 -----
 
@@ -248,11 +248,11 @@ Há exibições de dados diferentes em instrumento de alocações, que permitem 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-  [![](images/allocations3.png "Guia de alocações")](images/allocations3.png) 
+  [![](images/allocations3.png "Guia de alocações")](images/allocations3.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations2-vs.png "Guia de alocações")](images/allocations2-vs.png)
+  [![](images/allocations2-vs.png "Guia de alocações")](images/allocations2-vs.png#lightbox)
 
 -----
 
@@ -264,11 +264,11 @@ A exibição de inspetor para alocações fornece opções de filtragem e agrupa
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-  [![](images/allocations2.png "Guia árvore de chamadas")](images/allocations2.png) 
+  [![](images/allocations2.png "Guia árvore de chamadas")](images/allocations2.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations3-vs.png "Guia árvore de chamadas")](images/allocations3-vs.png)
+  [![](images/allocations3-vs.png "Guia árvore de chamadas")](images/allocations3-vs.png#lightbox)
 
 -----
 
@@ -276,11 +276,11 @@ A exibição de inspetor para alocações fornece opções de filtragem e agrupa
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-  [![](images/allocations4.png "Guia de instantâneos")](images/allocations4.png) 
+  [![](images/allocations4.png "Guia de instantâneos")](images/allocations4.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations4-vs.png "Guia de instantâneos")](images/allocations4-vs.png)
+  [![](images/allocations4-vs.png "Guia de instantâneos")](images/allocations4-vs.png#lightbox)
 
 -----
 
@@ -292,15 +292,15 @@ O gráfico, conforme mostrado na captura de tela abaixo, exibe o número de amos
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Instrumento de criador de perfil de tempo](images/time1.png)](images/time1.png) 
+[![Instrumento de criador de perfil de tempo](images/time1.png)](images/time1.png#lightbox) 
 
-[![Instrumento de criador de perfil de tempo – lista de exemplos](images/time3.png)](images/time3.png) 
+[![Instrumento de criador de perfil de tempo – lista de exemplos](images/time3.png)](images/time3.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Instrumento de criador de perfil de tempo](images/time1-vs.png)](images/time1-vs.png) 
+[![Instrumento de criador de perfil de tempo](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
-[![Instrumento de criador de perfil de tempo – lista de exemplos](images/time3-vs.png)](images/time3-vs.png) 
+[![Instrumento de criador de perfil de tempo – lista de exemplos](images/time3-vs.png)](images/time3-vs.png#lightbox) 
 
 -----
 
@@ -309,11 +309,11 @@ O gráfico, conforme mostrado na captura de tela abaixo, exibe o número de amos
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-  [![](images/time2.png "Instrumento de criador de perfil de tempo – árvore de chamadas")](images/time2.png) 
+  [![](images/time2.png "Instrumento de criador de perfil de tempo – árvore de chamadas")](images/time2.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/time2-vs.png "Instrumento de criador de perfil de tempo – árvore de chamadas")](images/time2-vs.png) 
+  [![](images/time2-vs.png "Instrumento de criador de perfil de tempo – árvore de chamadas")](images/time2-vs.png#lightbox) 
 
 -----
 
@@ -325,7 +325,7 @@ Com o uso de c# e código gerenciado do F #, ele pode ser bastante comum e Infel
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Ciclos de instrumento](images/cycles-vs.png)](images/time1-vs.png) 
+[![Ciclos de instrumento](images/cycles-vs.png)](images/time1-vs.png#lightbox) 
 
 -----
 
@@ -338,11 +338,11 @@ Se você criar o perfil de um aplicativo com qualquer outra configuração, voc�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Caixa de diálogo de erro de criação de perfil](images/image001.png)](images/image001.png) 
+[![Caixa de diálogo de erro de criação de perfil](images/image001.png)](images/image001.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/image1vs.png "Caixa de diálogo de erro de criação de perfil")](images/image1vs.png) 
+[![](images/image1vs.png "Caixa de diálogo de erro de criação de perfil")](images/image1vs.png#lightbox) 
 
 -----
 
@@ -350,7 +350,7 @@ Se você criar o perfil de um aplicativo com qualquer outra configuração, voc�
 Selecione **atualização** para continuar.
 
 <!---
-##Profiling Android Applications
+## Profiling Android Applications
 
 
 Due to the recent inclusion of the profiling libraries into any new Android project template, you will find that when profiling any legacy applications you are greeted with the message dialog above.
@@ -358,7 +358,7 @@ Due to the recent inclusion of the profiling libraries into any new Android proj
 You will need to enable this to make sure that the profiling libraries are included in your Android application, for debug builds. This should not be checked for release builds as it creates overhead.
 
 
-##Profiling iOS Applications
+## Profiling iOS Applications
 
 ### Profiling tvOS
 

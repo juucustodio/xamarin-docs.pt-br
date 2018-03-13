@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 26609043e872241a2ec4f878086b97b12b064e87
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0f018aa666f08792a1693a79e22da150f82712f6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>Serviços Android em execução em processos remotos
 
@@ -470,7 +470,7 @@ Em seguida, o **AndroidManifest.xml** do cliente APK deve solicitar explicitamen
 
 Para exibir as permissões concedidas a um aplicativo, abra o aplicativo de configurações do Android e selecione **aplicativos**. Localize e selecione o aplicativo na lista. Do **App Info** tela, toque em **permissões** que abrirá uma exibição que mostra todas as permissões concedidas ao aplicativo:
 
-[![Capturas de tela de um dispositivo Android mostrando como localizar as permissões concedidas a um aplicativo](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png)
+[![Capturas de tela de um dispositivo Android mostrando como localizar as permissões concedidas a um aplicativo](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 

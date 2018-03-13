@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 20b18cd79eeaabab8019c367e241a4975dc37b0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-core-spotlight"></a>Pesquisa com destaque de núcleo
 
@@ -46,7 +46,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 Essas informações aparecerá como o seguinte em um resultado de pesquisa:
 
-[ ![](corespotlight-images/corespotlight01.png "Visão geral sobre o resultado de pesquisa Spotlight Core")](corespotlight-images/corespotlight01.png)
+[![](corespotlight-images/corespotlight01.png "Visão geral sobre o resultado de pesquisa Spotlight Core")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>Restauração de um Item
 
@@ -80,7 +80,7 @@ Observe que esse tempo é são seleção para a atividade com um `ActivityType` 
 Pode haver ocasiões em que um Item de índice são criados com destaque Core precisa ser modificados, como uma alteração no título ou imagem em miniatura é necessária. Para fazer essa alteração, podemos usar o mesmo método que foi usada para criar inicialmente o índice.
 Criamos um novo `CSSearchableItem` usando a mesma ID que foi usada para criar o item e anexar um novo `CSSearchableItemAttributeSet` que contém os atributos modificados:
 
-[ ![](corespotlight-images/corespotlight02.png "Atualizando uma visão geral de Item")](corespotlight-images/corespotlight02.png)
+[![](corespotlight-images/corespotlight02.png "Atualizando uma visão geral de Item")](corespotlight-images/corespotlight02.png#lightbox)
 
 Quando esse item é gravado para o índice de pesquisado, o item existente será atualizado com as novas informações.
 

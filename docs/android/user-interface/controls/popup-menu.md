@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 54b6809b7e27dc87be6d510e4a4b6071e4ae22e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f976d798ae1b1279fc8f82d3cf1d738bb2c93911
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="popup-menu"></a>Menu pop-up
 
 O `PopupMenu` classe adiciona suporte para exibir os menus pop-up que estão anexados a uma exibição específica. A ilustração a seguir mostra um menu pop-up exibido usando um botão, o segundo item realçado exatamente como ele é selecionado:
 
- [ ![Exemplo de um PopopMenu com três três itens](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png)
+ [![Exemplo de um PopopMenu com três três itens](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
 
 Android 4 adicionou alguns novos recursos para `PopupMenu` que tornam mais fácil trabalhar com, ou seja:
 
@@ -26,9 +26,8 @@ Android 4 adicionou alguns novos recursos para `PopupMenu` que tornam mais fáci
 
 Vamos examinar esses aprimoramentos. Neste exemplo, temos uma única atividade que contém um botão. Quando o usuário clica no botão, um menu pop-up é exibido conforme mostrado abaixo:
 
- [ ![Exemplo de aplicativo em execução no emulador com o botão e menu pop-up do item 3](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png)
+ [![Exemplo de aplicativo em execução no emulador com o botão e menu pop-up do item 3](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
 
-<a name="Creating_a_Popup_Menu" />
 
 ## <a name="creating-a-popup-menu"></a>Criar um Menu pop-up
 
@@ -62,7 +61,6 @@ showPopupMenu.Click += (s, arg) => {
 
 No código acima, após inflacionando menu simplesmente chamamos `menu.Show` para exibi-la na tela.
 
-<a name="Handling_Menu_Events" />
 
 ## <a name="handling-menu-events"></a>Manipulação de eventos de Menu
 

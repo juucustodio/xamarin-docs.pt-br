@@ -3,16 +3,16 @@ title: "Sugestões proativos"
 description: "Este artigo mostra como usar pró-ativo sugestões em um aplicativo watchOS 3 para o contrato de unidade, permitindo que o sistema proativamente apresentar informações úteis automaticamente para o usuário."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ca2476eef120c7d86b939934ec4b286e871d6a78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="proactive-suggestions"></a>Sugestões proativos
 
@@ -61,7 +61,7 @@ Todos esses recursos têm algo em comum, todos eles usarão `NSUserActivity` de 
 
 Como mencionado acima, `NSUserActivity` ajuda o sistema a entender as informações que o usuário estiver atualmente trabalhando na tela. `NSUserActivity` é um estado leve mecanismo para capturar a atividade do usuário, como eles navegam por meio do aplicativo de cache. Por exemplo, olhando para o aplicativo do restaurante:
 
-[ ![](proactive-suggestions-images/activity02.png "O aplicativo do restaurante")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "O aplicativo do restaurante")](proactive-suggestions-images/activity02.png#lightbox)
 
 Com as interações do seguintes:
 
@@ -71,7 +71,7 @@ Com as interações do seguintes:
 
 Analisar mais detalhadamente na última tela:
 
-[ ![](proactive-suggestions-images/activity03.png "A carga de NSUserActivity")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "A carga de NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 Aqui o aplicativo está criando um `NSUserActivity` e tenha sido populada com informações para recriar o estado mais tarde. O aplicativo também inclui alguns metadados, como o nome e o endereço do local. Com essa atividade criada, o aplicativo permite que iOS Saiba que representa o estado do usuário atual.
 

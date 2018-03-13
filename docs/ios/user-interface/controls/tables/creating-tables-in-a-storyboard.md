@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c59ddde44b0e47122865c55a7964707f106d2691
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabalhando com tabelas no Designer de iOS
 
@@ -40,7 +40,7 @@ Um `UITableView` com protótipo conteúdo normalmente destina-se para exibir uma
 
 O exemplo StoryboardTable contém um aplicativo mestre-detalhes simples que usa os dois tipos de UITableView em um Storyboard. O restante desta seção descreve como criar um exemplo de lista de tarefas pequeno terá esta aparência quando concluído:
 
- [ ![Telas de exemplo](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png)
+ [![Telas de exemplo](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 A interface do usuário será criada com um storyboard, e ambas as telas usará um UITableView. A tela principal usa *conteúdo de protótipo* para layout de linha e o detalhe da tela usa *conteúdo estático* para criar um formulário de entrada de dados usando layouts de célula personalizado.
 
@@ -48,7 +48,7 @@ A interface do usuário será criada com um storyboard, e ambas as telas usará 
 
 Criar uma nova solução no Visual Studio usando **projeto novo (criar)... > App(C#) de exibição única**e chamá-lo _StoryboardTables_.
 
- [ ![Criar uma caixa de diálogo Novo projeto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png)
+ [![Criar uma caixa de diálogo Novo projeto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
 A solução será aberto com alguns arquivos c# e um `Main.storyboard` arquivo já foi criado. Clique duas vezes o `Main.storyboard` arquivo para abri-lo no Designer de iOS.
 
@@ -75,24 +75,24 @@ A primeira alteração para o storyboard é excluir o modo de exibição de deta
 2.  Arraste um **navegação controlador** e um **controlador de exibição de tabela** para o Storyboard da caixa de ferramentas. 
 3.  Crie um segue do controlador de exibição de raiz para o segundo controlador de exibição de tabela que acabou de ser adicionado. Para criar o segue, controle + arrastar *da célula de detalhe* para o UITableViewController recém-adicionada. Escolha a opção **Mostrar*** em **seleção atender**. 
 4.  Selecione o novo atender você criou e dê a ele um identificador para referência isso atender no código. Clique no segue e digite `TaskSegue` para o **identificador** no **propriedades de preenchimento**, assim:    
-  [ ![Nomenclatura atender no painel de propriedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png) 
+  [![Nomenclatura atender no painel de propriedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. Em seguida, configure as duas exibições de tabela selecionando-as e usando o painel de propriedades. Certifique-se de selecionar a exibição e não o controlador de exibição – você pode usar a estrutura de tópicos do documento para ajudar com a seleção.
 
 6.  Altere o controlador de exibição de raiz para ser **conteúdo: protótipos dinâmico** (o modo de exibição na superfície de Design será denominado **protótipo conteúdo** ):
 
-    [ ![Definir a propriedade de conteúdo como protótipos dinâmicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png)
+    [![Definir a propriedade de conteúdo como protótipos dinâmicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
 7.  Altere o novo **UITableViewController** ser **conteúdo: células estático**. 
 
 
 8. O novo UITableViewController deve ter seu nome de classe e um identificador definido. Selecione a controlador de exibição e digite _TaskDetailViewController_ para o **classe** no **propriedades de preenchimento** – Isso criará um novo `TaskDetailViewController.cs` arquivo da solução Teclado. Insira o **StoryboardID** como _detalhes_, conforme ilustrado no exemplo a seguir. Isso será usado posteriormente para carregar este modo de exibição no código do c#:  
 
-    [ ![Definir a ID do Storyboard](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png)
+    [![Definir a ID do Storyboard](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. A superfície de design de storyboard agora deve se parecer com (título do item de navegação do controlador de exibição de raiz foi alterado para "Tarefa quadro"):
 
-    [ ![Superfície de design](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png)  
+    [![Superfície de design](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
 
 
@@ -106,11 +106,11 @@ Agora que os modos de exibição e segues estiver configurado, os elementos de i
 
 Primeiro, selecione a célula de protótipo no controlador de modo de exibição mestre e defina o **identificador** como _taskcell_, conforme ilustrado abaixo. Isso será usado posteriormente no código para recuperar uma instância deste UITableViewCell:
 
- [ ![definir o identificador de célula](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png)
+ [![definir o identificador de célula](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
 
 Em seguida, você precisará criar um botão que adicionará novas tarefas, conforme ilustrado abaixo:
 
-[ ![barra de item de botão na barra de navegação](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png)
+[![barra de item de botão na barra de navegação](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
 Faça o seguinte: 
 
@@ -123,7 +123,7 @@ Faça o seguinte:
 
 O modo de exibição de detalhes requer muito mais trabalho. Células de modo de exibição de tabela precisa ser arrastado para o modo de exibição e, em seguida, preenchida com os botões, modos de exibição de texto e rótulos. Captura de tela abaixo mostra a interface do usuário terminado com duas seções. Uma seção tem três células, três rótulos, um e dois campos alternar, enquanto a segunda seção tem uma célula com dois botões:
 
- [ ![layout do modo de exibição de detalhes](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png)
+ [![layout do modo de exibição de detalhes](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 As etapas para criar o layout de conclusão são:
 
@@ -137,7 +137,7 @@ Selecione o modo de exibição de tabela e abra o **propriedade preenchimento**.
 Selecione a seção superior e, em **Propriedades > seção de exibição de tabela** alterar **linhas** para _3_, conforme ilustrado abaixo:
 
 
- [ ![definir a seção superior a três linhas](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png)
+ [![definir a seção superior a três linhas](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 Para cada célula abrir o **propriedades de preenchimento** e defina:
 
@@ -152,7 +152,7 @@ Na segunda seção, defina **linhas** para _1_ e arraste a alça de redimensiona
 -  **Definir o plano de fundo**: _Limpar cores_ .
 -  Arraste dois botões para a célula e defina seus títulos corretamente (ou seja, _salvar_ e _excluir_), conforme ilustrado abaixo:
 
-   [ ![configuração de dois botões na seção inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png)
+   [![configuração de dois botões na seção inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
 Neste momento você talvez queira definir restrições em seus controles para garantir um layout adaptável e células.
 
@@ -342,7 +342,7 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 Isso conclui o exemplo de Storyboard – o aplicativo concluído esta aparência:
 
-[ ![Aplicativo concluído](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png)
+[![Aplicativo concluído](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 O exemplo demonstra:
 

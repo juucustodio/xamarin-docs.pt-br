@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1cc74fb30e59ecd5f6be3cf3e1c84f60cd5ca0a6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1fba2219a10a83043097d1b5ca6fb293de4d6c70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="source-lists"></a>Lista de origem
 
@@ -22,7 +22,7 @@ Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, você tem acesso à 
 
 Uma lista de origem é um tipo especial de exibição de estrutura de tópicos usada para mostrar a origem de uma ação, como a barra lateral no localizador ou iTunes.
 
-[ ![](source-list-images/source05.png "Uma lista de origem de exemplo")](source-list-images/source05.png)
+[![](source-list-images/source05.png "Uma lista de origem de exemplo")](source-list-images/source05.png#lightbox)
 
 Neste artigo, vamos abordar os fundamentos de trabalhar com listas de origem em um aplicativo Xamarin.Mac. É altamente recomendável que você leia o [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, especificamente o [Introdução ao construtor da Interface e Xcode](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [tomadas e ações](~/mac/get-started/hello-mac.md#Outlets_and_Actions) seções, como ele aborda os principais conceitos e técnicas que será usado neste artigo.
 
@@ -50,7 +50,7 @@ Uma lista de origem é um tipo especial de exibição de estrutura de tópicos u
 
 Primeiro, vamos criar um novo `SourceListItem` classe para manter os dados de nossa lista de origem. No **Solution Explorer**, clique com o botão direito e selecione **adicionar** > **novo arquivo...** Selecione **geral** > **classe vazia**, digite `SourceListItem` para o **nome** e clique no **novo** botão:
 
-[ ![](source-list-images/source01.png "Adicionando uma classe vazia")](source-list-images/source01.png)
+[![](source-list-images/source01.png "Adicionando uma classe vazia")](source-list-images/source01.png#lightbox)
 
 Verifique o `SourceListItem.cs` arquivo aparência semelhante ao seguinte: 
 
@@ -532,19 +532,19 @@ Isso cria uma subclasse personalizada, reutilizável de `NSOutlineView` (`Source
 
 Agora, vamos criar nossa lista de origem no construtor de Interface. Clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no construtor de Interface e arraste uma exibição da divisão do **Inspetor de biblioteca**, adicioná-lo ao controlador de exibição e defina-a para redimensionar com o modo de exibição de **Constraints Editor** :
 
-[ ![](source-list-images/source00.png "Restrições de edição")](source-list-images/source00.png)
+[![](source-list-images/source00.png "Restrições de edição")](source-list-images/source00.png#lightbox)
 
 Em seguida, arraste uma lista de origem do **Inspetor de biblioteca**, adicioná-lo para o lado esquerdo do modo divisão e defini-lo para redimensionar com o modo de exibição de **Constraints Editor**:
 
-[ ![](source-list-images/source02.png "Restrições de edição")](source-list-images/source02.png)
+[![](source-list-images/source02.png "Restrições de edição")](source-list-images/source02.png#lightbox)
 
 Em seguida, alterne para o **exibição identidade**, selecione a lista de origem e alterá-la do **classe** para `SourceListView`:
 
-[ ![](source-list-images/source03.png "Configurar o nome de classe")](source-list-images/source03.png)
+[![](source-list-images/source03.png "Configurar o nome de classe")](source-list-images/source03.png#lightbox)
 
 Finalmente, crie um **tomada** para chamada de nossa lista de origem `SourceList` no `ViewController.h` arquivo:
 
-[ ![](source-list-images/source04.png "Configurando uma tomada")](source-list-images/source04.png)
+[![](source-list-images/source04.png "Configurando uma tomada")](source-list-images/source04.png#lightbox)
 
 Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
 
@@ -614,7 +614,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Se executarmos nosso aplicativo, a seguinte mensagem será exibida:
 
-[ ![](source-list-images/source05.png "Executar um aplicativo de exemplo")](source-list-images/source05.png)
+[![](source-list-images/source05.png "Executar um aplicativo de exemplo")](source-list-images/source05.png#lightbox)
 
 <a name="Summary" />
 
@@ -628,7 +628,7 @@ Este artigo obteve uma visão detalhada de como trabalhar com a lista de origem 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Modos de exibição de tabela](~/mac/user-interface/table-view.md)
 - [Modos de exibição de estrutura de tópicos](~/mac/user-interface/outline-view.md)
-- [Diretrizes de Interface do sistema operacional X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introdução aos modos de exibição de estrutura de tópicos](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)

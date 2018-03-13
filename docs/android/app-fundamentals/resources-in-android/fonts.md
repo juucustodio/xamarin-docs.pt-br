@@ -2,20 +2,19 @@
 title: Fontes
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA$
+ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 01/30/2018
-ms.openlocfilehash: 3b7c45a50ffb0748b5f63edfd444cb02af3fdc67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 7cde19a153585a6f9739aa02f3ea69dc4f09be58
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fonts"></a>Fontes
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -60,7 +59,6 @@ Como as fontes são fornecidas para um aplicativo Android de forma adequada, pod
 
 Este guia primeiro descrevem como usar fontes como um recurso Android e vá para discutir como baixar fontes em tempo de execução.
 
-<a name="fonts_as_a_resource" />
 
 ## <a name="fonts-as-a-resource"></a>Fontes como um recurso
 
@@ -139,7 +137,6 @@ Depois que tiver sido definida uma família de fontes, ele pode ser usado declar
     />
 ```
 
-<a name="programatically_assigning_fonts" />
 
 ### <a name="programmatically-assigning-fonts"></a>Atribuindo programaticamente fontes
 
@@ -158,7 +155,6 @@ var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceSt
 textView1.Typeface = typeface;
 ```
 
-<a name="downloading_fonts" />
 
 ## <a name="downloading-fonts"></a>Download de fontes
 
@@ -202,7 +198,6 @@ O `font-family` elemento contém os seguintes atributos, declarando as informaç
 
 Uma vez definidas as fontes, talvez seja necessário fornecer informações sobre o _certificados fonte_ envolvido com o download.
 
-<a name="font_certificates" />
 
 ### <a name="font-certificates"></a>Certificados de fonte
 
@@ -232,7 +227,6 @@ Por exemplo, o XML a seguir é denominado **Resources/values/fonts_cert.xml** e 
 
 Com esses arquivos de recursos em vigor, o aplicativo é capaz de baixar as fontes.
 
-<a name="downloadable_font_resource_declaration" />
 
 ### <a name="declaring-downloadable-fonts-as-resources"></a>Declarando fontes para download como recursos
 
@@ -253,7 +247,6 @@ Para baixar essas fontes, eles precisam ser declarados em **AndroidManifest.XML*
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
 
-<a name="programatically_downloading_fonts" />
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>Baixar uma fonte com as APIs de fonte
 
@@ -326,10 +319,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     }
 }
 
-
-/// <summary>
-/// EventArg when a font has been downloaded. 
-/// </summary>
 public class FontDownloadEventArg : EventArgs
 {
     public FontDownloadEventArg(Android.Graphics.Typeface typeface)
@@ -360,7 +349,6 @@ fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumo
 

@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 91d5612991c2297418cf7003c499c1a1bbfc7558
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e71c6ea816b8b732d21148db32fd9395732dd4c0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="replacing-the-action-bar"></a>Substituição da barra de ação
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -36,16 +35,14 @@ Para substituir a barra de ação padrão do aplicativo com um `Toolbar`:
 As seções a seguir explicam esse processo em detalhes. Um aplicativo simples é criado e sua barra de ação é substituída com um personalizado `Toolbar`. 
 
 
-<a name="start_project" />
 
 ## <a name="start-an-app-project"></a>Iniciar um projeto de aplicativo
 
 Criar um novo projeto Android chamado **ToolbarFun** (consulte [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para obter mais informações sobre como criar um novo projeto Android). Depois que este projeto é criado, definir os níveis de API do Android mínimo e de destino **Android 5.0 (API nível 21 - pirulito)**. Para obter mais informações sobre configuração de níveis de versão do Android, consulte [Noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md). Quando o aplicativo é compilado e executado, ele exibe a barra de ação padrão como mostrado na captura de tela: 
 
-[![Captura de tela da barra de ação padrão](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png)
+[![Captura de tela da barra de ação padrão](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
 
-<a name="custom_theme" />
 
 ## <a name="create-a-custom-theme"></a>Crie um tema personalizado
 
@@ -89,7 +86,6 @@ Editar **Properties/AndroidManifest.xml** e adicione o seguinte `android:theme` 
 Para obter mais informações sobre como aplicar um tema personalizado para um aplicativo, consulte [usando temas personalizados](~/android/user-interface/material-theme.md#customtheme). 
 
 
-<a name="toolbar_layout" />
 
 ## <a name="define-a-toolbar-layout"></a>Definir um Layout de barra de ferramentas
 
@@ -127,7 +123,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 Essa configuração é usada para que os itens de menu Compare com a cor de plano de fundo mais escura.
 
 
-<a name="include_layout" />
 
 ## <a name="include-the-toolbar-layout"></a>Incluir o Layout da barra de ferramentas
 
@@ -153,7 +148,6 @@ Edite o arquivo de layout **Resources/layout/Main.axml** e substitua o seu conte
 Esse layout inclui o `Toolbar` definido em **toolbar.xml** e usa um `RelativeLayout` para especificar que o `Toolbar` será colocado na parte superior da interface do usuário (acima do botão). 
 
 
-<a name="activate_toolbar" />
 
 ## <a name="find-and-activate-the-toolbar"></a>Localizar e ativar a barra de ferramentas
 
@@ -173,12 +167,11 @@ ActionBar.Title = "My Toolbar";
 
 Esse código localiza o `Toolbar` e chamadas `SetActionBar` para que o `Toolbar` terá características de barra de ação padrão. O título da barra de ferramentas é alterado para **minha barra de ferramentas**. Como mostrado no exemplo de código, o `ToolBar` pode ser referenciado diretamente como uma barra de ação. Compilar e executar esse aplicativo &ndash; o personalizado `Toolbar` é exibido no lugar da barra de ação padrão: 
 
-[![Captura de tela da barra de ferramentas personalizada com o esquema de cores verde](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png)
+[![Captura de tela da barra de ferramentas personalizada com o esquema de cores verde](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png#lightbox)
 
 Observe que o `Toolbar` estilo independentemente do `Theme.Material.Light.DarkActionBar` tema aplicado para o restante do aplicativo. 
 
 
-<a name="main_menus" />
  
 ## <a name="add-menu-items"></a>Adicionar itens de Menu 
 
@@ -197,13 +190,11 @@ Para adicionar menus para o `Toolbar`:
 As seções a seguir demonstram esse processo detalhadamente adicionando **editar** e **salvar** itens de menu para o personalizado `Toolbar`. 
 
 
-<a name="menu_icons" />
 
 ### <a name="install-menu-icons"></a>Instalar os ícones de Menu
 
 Continuar com a `ToolbarFun` aplicativo de exemplo, adicionar ícones de menu ao projeto de aplicativo. Baixar [icons.zip de barra de ferramentas](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true) e descompacte-o. Copie o conteúdo a *mipmap -* pastas para o projeto *mipmap -* pastas sob **ToolbarFun/recursos** e incluir cada arquivo de ícone adicionado no projeto.
 
-<a name="menu_resource" />
 
 ### <a name="define-a-menu-resource"></a>Definir um recurso de Menu
 
@@ -239,7 +230,6 @@ Esse XML cria três itens de menu:
 
 O `showAsAction` atributos do **editar** e **salvar** itens de menu são definidos como `ifRoom` &ndash; essa configuração faz com que esses itens de menu apareçam no `Toolbar` se houver espaço suficiente para exibi-las. O **preferências** conjuntos de item de menu `showAsAction` para `never` &ndash; isso faz com que o **preferências** menu apareçam no *estouro* menu (três pontos verticais). 
 
-<a name="on_create_options_menu" />
 
 ### <a name="implement-oncreateoptionsmenu"></a>Implementar OnCreateOptionsMenu
 
@@ -256,7 +246,6 @@ public override bool OnCreateOptionsMenu(IMenu menu)
 Chamadas Android a `OnCreateOptionsMenu` método para que o aplicativo pode especificar o recurso de menu para uma atividade. Nesse método, o **top_menus.xml** recurso é aumentado em transmitido `menu`. Este código faz com que o novo **editar**, **salvar**, e **preferências** itens de menu apareçam no `Toolbar`. 
 
 
-<a name="on_options_item_selected" />
 
 ### <a name="implement-onoptionsitemselected"></a>Implement OnOptionsItemSelected
 
@@ -275,15 +264,15 @@ Quando um usuário toca em um item de menu, Android chama o `OnOptionsItemSelect
 
 Compilar e executar `ToolbarFun` para ver os novos itens de menu na barra de ferramentas. O `Toolbar` agora exibe três ícones de menu, como mostrado na captura de tela: 
 
-[![Diagrama ilustrando locais de editar, salvar e itens de menu de estouro](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png)
+[![Diagrama ilustrando locais de editar, salvar e itens de menu de estouro](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png#lightbox)
 
 Quando um usuário toques a **editar** item de menu, uma notificação do sistema é exibido para indicar que o `OnOptionsItemSelected` método foi chamado: 
 
-[![Captura de tela de torrada exibida quando o item de edição é tocado](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png)
+[![Captura de tela de torrada exibida quando o item de edição é tocado](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png#lightbox)
 
 Quando um usuário toca o menu de estouro, o **preferências** item de menu é exibido. Normalmente, menos comuns ações devem ser colocadas no menu de estouro &ndash; Este exemplo usa o menu de estouro de **preferências** porque ele não é usado com frequência como **editar** e  **Salvar**: 
 
-[![Item de menu de captura de tela de preferências que aparece no menu de estouro](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png)
+[![Item de menu de captura de tela de preferências que aparece no menu de estouro](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 Para obter mais informações sobre menus Android, consulte o desenvolvedor Android [Menus](https://developer.android.com/guide/topics/ui/menus.html) tópico. 
  

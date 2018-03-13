@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 91afe9b627d9d430fba38b34f915d7e79652a2d3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c0846e959b4a4cfec9417de59125a8665b648a76
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um Pin de mapa
 
@@ -137,7 +137,7 @@ O processo para criar a classe de renderizador personalizado é o seguinte:
 1. Adicionar um `ExportRenderer` de atributo para a classe de renderizador personalizado para especificar que ele será usado para renderizar o mapa personalizado xamarin. Forms. Este atributo é usado para registrar o renderizador personalizado com xamarin. Forms.
 
 > [!NOTE]
-> **Observação**: é opcional fornecer um renderizador personalizado em cada projeto da plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão para a classe base do controle.
+> É opcional fornecer um renderizador personalizado em cada projeto da plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão para a classe base do controle.
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto de aplicativo de exemplo, juntamente com as relações entre eles:
 

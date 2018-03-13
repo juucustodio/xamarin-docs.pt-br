@@ -4,14 +4,15 @@ description: "Veja como a transformação de distorção pode criar objetos grá
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: b8bb4db49d3800d694724d6be8fe949b55060c21
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a18b60d486a911e4a76298fd20a70f16ac392881
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-skew-transform"></a>A transformação de distorção
 
@@ -69,7 +70,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Valores de `xSkew` argumento de deslocamento para a parte inferior do texto à direita para valores positivos ou à esquerda dos valores negativos. Valores de `ySkew` Deslocar à direita do texto para baixo para valores negativos ou valores positivos:
 
-[![](skew-images/skewexperiment-small.png "Tripla captura de tela da página de teste distorcer")](skew-images/skewexperiment-large.png "tripla captura de tela da página de teste distorcer")
+[![](skew-images/skewexperiment-small.png "Tripla captura de tela da página de teste distorcer")](skew-images/skewexperiment-large.png#lightbox "tripla captura de tela da página de teste distorcer")
 
 Se `xSkew` é negativo do `ySkew`, o resultado é a rotação, mas também dimensionada um pouco como o Windows indica de exibição.
 
@@ -152,7 +153,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 Como um ângulo abordagens de 90 graus positivos ou negativos, a tangente abordagens infinito, mas ângulos até aproximadamente 80 graus mais ou menos são úteis:
 
-[![](skew-images/skewangleexperiment-small.png "Captura de tela da página de teste de ângulo de inclinação tripla")](skew-images/skewangleexperiment-large.png "tripla captura de tela da página de teste de ângulo de inclinação")
+[![](skew-images/skewangleexperiment-small.png "Captura de tela da página de teste de ângulo de inclinação tripla")](skew-images/skewangleexperiment-large.png#lightbox "tripla captura de tela da página de teste de ângulo de inclinação")
 
 Uma pequena inclinação de horizontal negativa pode imitar o texto em itálico ou Oblíquo, como o **texto oblíqua** demonstra da página. O [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe mostra como isso é feito:
 
@@ -188,7 +189,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 O `TextAlign` propriedade `SKPaint` é definido como `Center`. Sem quaisquer transformações a `DrawText` chamar pelas coordenadas de (0, 0) seria posicionar o texto com o centro da linha de base horizontal no canto superior esquerdo. O `SkewDegrees` inclina o texto horizontalmente 20 graus em relação à linha de base. O `Translate` chamada move o centro da linha de base do texto horizontal para o centro da tela:
 
-[![](skew-images/obliquetext-small.png "Captura de tela da página de texto oblíqua tripla")](skew-images/obliquetext-large.png "tripla captura de tela da página de texto oblíqua")
+[![](skew-images/obliquetext-small.png "Captura de tela da página de texto oblíqua tripla")](skew-images/obliquetext-large.png#lightbox "tripla captura de tela da página de texto oblíqua")
 
 O **distorcer texto de sombra** página demonstra como usar uma combinação de uma escala de distorção e vertical de 45 graus para fazer uma sombra de texto que giram fora do texto. Aqui está a parte pertinente do `PaintSurface` manipulador:
 
@@ -221,11 +222,11 @@ using (SKPaint textPaint = new SKPaint())
 
 A sombra será exibido primeiro e, em seguida, o texto:
 
-[![](skew-images/skewshadowtext1-small.png "Tripla captura de tela da página de texto de sombra distorcer")](skew-images/skewshadowtext1-large.png "tripla captura de tela da página distorcer texto de sombra")
+[![](skew-images/skewshadowtext1-small.png "Tripla captura de tela da página de texto de sombra distorcer")](skew-images/skewshadowtext1-large.png#lightbox "tripla captura de tela da página distorcer texto de sombra")
 
 A coordenada vertical é passado para o `DrawText` método indica a posição do texto em relação à linha de base. É a coordenada vertical mesmo usada para o Centro de inclinação. Essa técnica não funcionará se a cadeia de caracteres de texto contém descendentes. Por exemplo, substitua a palavra "estranha" para "Sombra" e aqui 's o resultado:
 
-[![](skew-images/skewshadowtext2-small.png "Captura de tela de tripla da página distorcer sombra texto com uma palavra alternativa com descendentes")](skew-images/skewshadowtext2-large.png "tripla captura de tela da página distorcer sombra texto com uma palavra alternativa com descendentes")
+[![](skew-images/skewshadowtext2-small.png "Captura de tela de tripla da página distorcer sombra texto com uma palavra alternativa com descendentes")](skew-images/skewshadowtext2-large.png#lightbox "tripla captura de tela da página distorcer sombra texto com uma palavra alternativa com descendentes")
 
 Sombra de texto ainda estão alinhadas na linha de base, mas apenas o efeito parece incorreto. Para corrigi-lo, você precisa obter os limites de texto:
 
@@ -245,7 +246,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 Agora, a sombra estende da parte inferior dos descendentes:
 
-[![](skew-images/skewshadowtext3-small.png "Captura de tela de tripla da página de texto de sombra distorcer ajustes para os descendentes")](skew-images/skewshadowtext3-large.png "tripla captura de tela da página de texto de sombra distorcer ajustes para os descendentes")
+[![](skew-images/skewshadowtext3-small.png "Captura de tela de tripla da página de texto de sombra distorcer ajustes para os descendentes")](skew-images/skewshadowtext3-large.png#lightbox "tripla captura de tela da página de texto de sombra distorcer ajustes para os descendentes")
 
 
 ## <a name="related-links"></a>Links relacionados

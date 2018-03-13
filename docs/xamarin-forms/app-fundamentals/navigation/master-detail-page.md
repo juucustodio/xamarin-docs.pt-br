@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: f7e949902e2f960a9aa68c600514b7fefc8ae30d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9d774870a541630d8c6519f9dfeaeb21cacb98e8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="master-detail-page"></a>Página de detalhes mestre
 
@@ -22,7 +22,7 @@ _O MasterDetailPage xamarin. Forms é uma página que gerencia as duas páginas 
 
 Uma página mestra exibe uma lista de itens, como mostrado nas capturas de tela seguir:
 
-[![](master-detail-page-images/masterpage-components.png "Componentes de página mestra")](master-detail-page-images/masterpage-components-large.png "componentes de página mestra")
+[![](master-detail-page-images/masterpage-components.png "Componentes de página mestra")](master-detail-page-images/masterpage-components-large.png#lightbox "componentes de página mestra")
 
 O local da lista de itens é idêntico em cada plataforma e selecionar um dos itens navegará para a página de detalhes correspondentes. Além disso, a página mestra também apresenta uma barra de navegação que contém um botão que pode ser usado para navegar até a página de detalhes de ativo:
 

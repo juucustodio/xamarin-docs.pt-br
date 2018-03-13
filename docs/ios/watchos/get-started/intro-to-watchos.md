@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 55d692fa92dd08dd9c0887ed10013589afc98ec6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2276b67fc29f2752e4b178168a12e6e980b788d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-watchos"></a>Introdução ao watchOS
 
@@ -29,11 +29,11 @@ Uma solução de aplicativo watchOS tem 3 projetos:
 
 Em aplicativos watchOS 1, o código de extensão é executado no iPhone – o Apple Watch é efetivamente um vídeo externo. aplicativos de watchOS 2 e 3 são executados inteiramente no Apple Watch. Essa diferença é mostrada no diagrama a seguir:
 
-[ ![](intro-to-watchos-images/arch-sml.png "A diferença entre watchOS 1 e 2 (e superior) de watchOS é mostrada no diagrama")](intro-to-watchos-images/arch.png)
+[ ![](intro-to-watchos-images/arch-sml.png "A diferença entre watchOS 1 e 2 (e superior) de watchOS é mostrada no diagrama")](intro-to-watchos-images/arch.png#lightbox)
 
 Independentemente de qual versão do watchOS destina-se, no Visual Studio para preenchimento de solução do Mac uma solução completa será parecida com isto:
 
-[ ![](intro-to-watchos-images/projectstructure-sml.png "O preenchimento de solução")](intro-to-watchos-images/projectstructure.png)
+[![](intro-to-watchos-images/projectstructure-sml.png "O preenchimento de solução")](intro-to-watchos-images/projectstructure.png#lightbox)
 
 O *aplicativo-pai* um watchOS solução é um aplicativo iOS regular. Esse é o único projeto na solução que é visível **no telefone**. Casos de uso para este aplicativo inclui tutoriais, telas administrativas e intermediária filtragem, cacheing, etc. No entanto, é possível que o usuário instalar e executar a inspeção/extensão do aplicativo sem **nunca** ter aberto o aplicativo-pai, então se você precisar que o aplicativo-pai para executar a inicialização única ou de administração, você precisa programar seu relógio extensão do aplicativo/para informar ao usuário que.
 

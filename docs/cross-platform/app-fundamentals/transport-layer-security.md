@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/10/2017
-ms.openlocfilehash: 5237ed35116e5f8983df579d0ab68363996fb06f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b0f205c5ab2c65f0e2a99f912f3961f12a4f2b7a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="transport-layer-security-tls"></a>Transport Layer Security (TLS)
 
@@ -41,12 +41,12 @@ Esta seção explica algumas das opções de configuração de rede em projetos 
 
 Essas configurações podem ser encontradas em **opções de projeto > Opções Android** e, em seguida, clicando no **avançado** botão: 
 
-[![Configurar HttpClient e TLS no Visual Studio](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png)
+[![Configurar HttpClient e TLS no Visual Studio](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 Essas configurações podem ser encontradas em **propriedades do projeto > Opções de compilação > Avançado** guia:
 
-[![Configurar HttpClient e TLS no Xamarin Studio e o Visual Studio para Mac](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png)
+[![Configurar HttpClient e TLS no Xamarin Studio e o Visual Studio para Mac](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png#lightbox)
 
 -----
 
@@ -79,7 +79,7 @@ Novos projetos Xamarin padrão para a implementação nativo que dá suporte a T
 >
 > A opção nativo é recomendada.
 
-# <a name="platform-specific-details"></a>Detalhes específicos de plataforma
+## <a name="platform-specific-details"></a>Detalhes específicos de plataforma
 
 O resumo acima explica as configurações de nível de projeto para implementação HttpClient e SSL/TLS em projetos do Xamarin. A implementação de HttpClient também pode ser definida dinamicamente em código e no iOS há duas opções nativo à sua escolha.
 
@@ -87,14 +87,14 @@ O resumo acima explica as configurações de nível de projeto para implementaç
 - [**iOS e Mac**](~/cross-platform/macios/http-stack.md)
 
 
-# <a name="summary"></a>Resumo
+## <a name="summary"></a>Resumo
 
 Aplicativos devem usar a segurança de camada de transporte (TLS) 1.2, sempre que possível.
 Novos aplicativos agora padrão para essa configuração, no entanto, talvez seja necessário atualizar as configurações em aplicativos existentes de acordo com as instruções neste artigo.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Segurança de transporte do aplicativo](~/ios/app-fundamentals/ats.md)
+- [Segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md)
 - [Xamarin.Android Environment](~/android/deploy-test/environment.md)
 - [Ciclo de Xamarin 9 (fevereiro de 2017)](https://releases.xamarin.com/stable-release-cycle-9/)
 - [TLS (Wikipédia)](https://en.wikipedia.org/wiki/Transport_Layer_Security)

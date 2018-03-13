@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 97ca114f1160168c7fd9439e31dc475bc37b0467
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2ec783b6963fc4ae14166ebf1e56bf8a802ba8b4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-page"></a>Página com guias
 
@@ -97,7 +97,7 @@ public class MainPageCS : TabbedPage
 O [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) é populada com dois filhos [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) objetos. O primeiro filho é um [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instância e a segunda guia é um [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) que contém um `ContentPage` instância.
 
 > [!NOTE]
-> **Observação**: O [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) não oferece suporte a virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se o `TabbedPage` contém muitos elementos filho.
+> O [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) não oferece suporte a virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se o `TabbedPage` contém muitos elementos filho.
 
 O capturas de tela a seguir mostram o `TodayPage` [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instância, que é exibida no *hoje* guia:
 

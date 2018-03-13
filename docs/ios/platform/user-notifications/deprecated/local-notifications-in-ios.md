@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d84473ee4379cd9a39315635017b81a2714da162
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2a8ae55f9cc3e2dd4818dec96a35017c76cc9623
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications-in-xamarinios"></a>Notificações no xamarin
 
@@ -44,7 +44,7 @@ var settings = UIUserNotificationSettings.GetSettingsForTypes(
 UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
 ```
 
-  [ ![](local-notifications-in-ios-images/image0-sml.png "Confirmar a capacidade de enviar uma notificação de local")](local-notifications-in-ios-images/image0.png)
+  [![](local-notifications-in-ios-images/image0-sml.png "Confirmar a capacidade de enviar uma notificação de local")](local-notifications-in-ios-images/image0.png#lightbox)
 
 Para agendar uma notificação de local que você criar um `UILocalNotification` do objeto, defina o `FireDate`e agendá-lo por meio de `ScheduleLocalNotification` método no `UIApplication.SharedApplication` objeto. O trecho de código a seguir mostra como agendar uma notificação que irá disparar um minuto no futuro e exibir um alerta com uma mensagem:
 
@@ -59,7 +59,7 @@ UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 
 Captura de tela a seguir mostram como esse alerta aparece:
 
-  [ ![](local-notifications-in-ios-images/image2-sml.png "Um exemplo de alerta")](local-notifications-in-ios-images/image2.png)
+  [![](local-notifications-in-ios-images/image2-sml.png "Um exemplo de alerta")](local-notifications-in-ios-images/image2.png#lightbox)
 
 Observe que, se o usuário optou por *não permitir* notificações e em seguida, nada será exibido.
 

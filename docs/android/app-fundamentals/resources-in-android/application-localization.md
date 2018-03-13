@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/30/2017
-ms.openlocfilehash: 9c65672ef2c3f968e76c6180da07f5daf9f5b68a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a8d25d8780a62e54780d7aa03d81f89fa0f668a4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-localization-and-string-resources"></a>Localização do aplicativo e os recursos de cadeia de caracteres
 
@@ -19,7 +19,7 @@ Localização do aplicativo é o ato de fornecer recursos alternativos para uma 
 
 Por exemplo, a imagem abaixo mostra o mesmo aplicativo é executado em três locais de dispositivos diferentes, mas o texto exibido em cada botão é específico para a localidade que cada dispositivo é definido como:
 
-[![Exemplos de três localidades diferentes](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png)
+[![Exemplos de três localidades diferentes](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
 Neste exemplo, o conteúdo de um arquivo de layout, **Main.axml** parecida com esta:
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: d2298cf3edcadcc8a4d781e3e121852886fbf1d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 05443bb341b2355c9e7a72f46b70214fb169e598
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="garbage-collection"></a>Coleta de Lixo
 
@@ -21,7 +21,7 @@ Xamarin usa da Mono [coletor de lixo geracional simples](http://www.mono-project
 -   Coleções principais (objeto grande e coleta Gen1 espaço heaps). 
 
 > [!NOTE]
-> **Observação:** na ausência de uma coleção explícita por meio de [GC. Collect ()](https://developer.xamarin.com/api/member/System.GC.Collect/) coleções são *sob demanda*, com base em alocações de heap. *Isso não é um sistema de contagem de referência*; objetos *não serão coletados como existem referências pendentes*, ou quando um escopo foi encerrado. O GC será executado quando a pilha secundária ficou sem memória para alocações de novo. Se não houver nenhuma alocação, ele não será executado.
+> Na ausência de uma coleção explícita por meio de [GC. Collect ()](https://developer.xamarin.com/api/member/System.GC.Collect/) coleções são *sob demanda*, com base em alocações de heap. *Isso não é um sistema de contagem de referência*; objetos *não serão coletados como existem referências pendentes*, ou quando um escopo foi encerrado. O GC será executado quando a pilha secundária ficou sem memória para alocações de novo. Se não houver nenhuma alocação, ele não será executado.
 
 
 Coleções secundárias são baratas e frequentes e são usadas para coletar objetos recentemente alocados e inativos. Coleções secundárias são executadas após cada MB alguns dos objetos alocados. Coleções secundárias podem ser executadas chamando [GC. Coletar (0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32/) 
@@ -29,7 +29,6 @@ Coleções secundárias são baratas e frequentes e são usadas para coletar obj
 Coleções principais são menos frequentes e caro e são usadas para recuperar todos os objetos inativos. Coleções principais são executadas quando a memória é esgotada para o tamanho do heap atual (antes de redimensionar o heap). Coleções principais podem ser executadas chamando [GC. Coletar ()](https://developer.xamarin.com/api/member/System.GC.Collect/) ou chamando [GC. Coletar (int)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32) com o argumento [GC. Collect ou](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/). 
 
 
-<a name="Cross-VM_Object_Collections" />
 
 ## <a name="cross-vm-object-collections"></a>VM de várias coleções de objetos
 
@@ -67,7 +66,6 @@ Coleções mono são onde acontece a fun. Objetos gerenciados são coletados nor
 
 O resultado final de tudo isso é que uma instância de um objeto de ponto a ponto operará como ela é referenciada por qualquer um de código gerenciado (por exemplo, armazenados em um `static` variável) ou referenciados pelo código de Java. Além disso, o tempo de vida de pares nativo será estendido além do que seriam em caso contrário ao vivo, o par nativo não será coleção até que o par nativo e gerenciado par coleção.
 
-<a name="Object_Cycles" />
 
 ## <a name="object-cycles"></a>Ciclos de objeto
 
@@ -77,7 +75,6 @@ Todos os objetos que têm representação em ambas as VMs terão tempos de vida 
 
 Para reduzir o tempo de vida do objeto, [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/) deve ser chamado. Isso manualmente "cortará" a conexão no objeto entre as duas VMs liberando referência global, permitindo que os objetos a serem coletadas mais rapidamente. 
 
-<a name="Automatic_Collections" />
 
 ## <a name="automatic-collections"></a>Coleções automática
 
@@ -135,7 +132,6 @@ A configuração padrão é **Tarjan**. Se você encontrar uma regressão, talve
 Há várias maneiras para ajudar o GC para reduzir o tempo de coleta e uso de memória.
 
 
-<a name="Disposing_of_Peer_instances" />
 
 ### <a name="disposing-of-peer-instances"></a>Descarte de instâncias de ponto a ponto
 
@@ -148,7 +144,7 @@ Frequentemente, é necessário ajudar o GC. Infelizmente, *GC. AddMemoryPressure
 
 
 > [!NOTE]
-> **Observação:** deve ser *extremamente* cuidado ao descartar `Java.Lang.Object` instâncias de subclasse.
+> Você deve ser *extremamente* cuidado ao descartar `Java.Lang.Object` instâncias de subclasse.
 
 Para minimizar a possibilidade de corrupção de memória, observe as seguintes diretrizes ao chamar `Dispose()`.
 
@@ -243,7 +239,6 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-<a name="Reduce_Referenced_Instances" />
 
 ### <a name="reduce-referenced-instances"></a>Reduzir instâncias referenciadas
 
@@ -316,7 +311,6 @@ class BetterActivity : Activity {
 }
 ```
 
-<a name="Minor_Collections" />
 
 ## <a name="minor-collections"></a>Coleções secundárias
 
@@ -329,7 +323,6 @@ Se seu aplicativo tiver um "ciclo de imposto" em que a mesma coisa é feita vár
 -  Um grupo de solicitações de rede para sincronização/atualização de dados do aplicativo.
 
 
-<a name="Major_Collections" />
 
 ## <a name="major-collections"></a>Coleções principais
 
@@ -344,14 +337,12 @@ Coleções principais devem apenas ser invocadas manualmente, se alguma vez:
 -   Dentro de uma substituição [Android.App.Activity.OnLowMemory()](https://developer.xamarin.com/api/member/Android.App.Activity.OnLowMemory/) método. 
 
 
-<a name="Diagnostics" />
 
 ## <a name="diagnostics"></a>Diagnóstico
 
 Para controlar quando referências globais são criadas e destruídas, você pode definir o [debug.mono.log](~/android/troubleshooting/index.md) propriedade do sistema para conter [ *gref* ](~/android/troubleshooting/index.md) e/ou [ *gc*](~/android/troubleshooting/index.md). 
 
 
-<a name="Configuration" />
 
 ## <a name="configuration"></a>Configuração
 

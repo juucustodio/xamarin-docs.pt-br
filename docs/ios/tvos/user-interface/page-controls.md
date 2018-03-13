@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d4da50dac901628b9baf10a07650d232a977a653
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f77eac8179f9e368e767bb4b586ccaa3f93e40a3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-page-control"></a>Trabalhando com controle de página
 
@@ -20,7 +20,7 @@ _Este artigo aborda criando e trabalhando com controle de página dentro de um a
 
 Às vezes, talvez seja necessário exibir uma série de páginas ou imagens em seu aplicativo Xamarin.tvOS. Um controle de página foi projetado para mostrar claramente a página de um usuário estiver no número máximo de páginas. Um controle de página exibe uma série de pontos em um escuro, oval em forma de plano de fundo. A página atual será exibido um ponto preenchido, todas as outras páginas mostram como pontos vazios. O controle de página recortará os pontos mais externos, se houver muito grande para caber na área de seu plano de fundo.
 
-[ ![](page-controls-images/page01.png "Exemplo de controle de página")](page-controls-images/page01.png)
+[![](page-controls-images/page01.png "Exemplo de controle de página")](page-controls-images/page01.png#lightbox)
 
 Um controle de página em um elemento não interativo projetado para fornecer comentários para o usuário somente. Você precisará adicionar outros controles para alterar o número da página atual (como botões ou gestos).
 
@@ -41,14 +41,14 @@ Apple tem as sugestões a seguir ao usar um controle de página:
 1. No **solução preenchimento**, clique duas vezes no `Main.storyboard` de arquivo e abri-lo para edição.
 1. Arraste um **controle de página** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](page-controls-images/page02.png "Um controle de página")](page-controls-images/page02.png)
+    [![](page-controls-images/page02.png "Um controle de página")](page-controls-images/page02.png#lightbox)
 1. No **Widget guia** do **propriedades de preenchimento**, você pode ajustar várias propriedades de controle de página, como seu **página atual** e **n º de páginas**: 
 
-    [ ![](page-controls-images/page03.png "A guia de Widget")](page-controls-images/page03.png)
+    [![](page-controls-images/page03.png "A guia de Widget")](page-controls-images/page03.png#lightbox)
 1. Em seguida, adicione controles ou gestos para a exibição para retroceder e Avançar pela coleção de páginas.
 1. Por fim, atribuir **nomes** para os controles para que você pode responder a eles no código c#. Por exemplo: 
 
-    [ ![](page-controls-images/page04.png "Nome do controle")](page-controls-images/page04.png)
+    [![](page-controls-images/page04.png "Nome do controle")](page-controls-images/page04.png#lightbox)
 1. Salve as alterações.
     
 
@@ -58,14 +58,14 @@ Apple tem as sugestões a seguir ao usar um controle de página:
 1. No **Solution Explorer**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo para edição.
 1. Arraste um **controle de página** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](page-controls-images/page02-vs.png "Um controle de página")](page-controls-images/page02-vs.png)
+    [![](page-controls-images/page02-vs.png "Um controle de página")](page-controls-images/page02-vs.png#lightbox)
 1. No **Widget guia** do **propriedades Explorer**, você pode ajustar várias propriedades de controle de página, como seu **página atual** e **n º de páginas**: 
 
-    [ ![](page-controls-images/page03-vs.png "A guia de Widget")](page-controls-images/page03-vs.png)
+    [![](page-controls-images/page03-vs.png "A guia de Widget")](page-controls-images/page03-vs.png#lightbox)
 1. Em seguida, adicione controles ou gestos para a exibição para retroceder e Avançar pela coleção de páginas.
 1. Por fim, atribuir **nomes** para os controles para que você pode responder a eles no código c#. Por exemplo: 
 
-    [ ![](page-controls-images/page04-vs.png "Nome do controle")](page-controls-images/page04-vs.png)
+    [![](page-controls-images/page04-vs.png "Nome do controle")](page-controls-images/page04-vs.png#lightbox)
 1. Salve as alterações.
     
 
@@ -177,7 +177,7 @@ Este artigo abordou criando e trabalhando com controle de página dentro de um a
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

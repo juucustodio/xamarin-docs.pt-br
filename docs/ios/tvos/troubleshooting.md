@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 278b9e782073a26dc04bac9418613ea4c09db445
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b6d0901f8b01668626fc3b6a70a091e99e2287e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 
@@ -46,7 +46,7 @@ Para resolver esse problema, faça o seguinte:
 1. No Visual Studio para Mac, clique em seu arquivo de projeto no Xamarin.tvOS o **Solution Explorer** e selecione **opções**.
 2. Selecione **tvOS Build** e certifique-se de que você estiver usando o **versão** configuração: 
 
-    [ ![](troubleshooting-images/ts01.png "Selecione tvOS opções de compilação")](troubleshooting-images/ts01.png)
+    [![](troubleshooting-images/ts01.png "Selecione tvOS opções de compilação")](troubleshooting-images/ts01.png#lightbox)
 3. Adicionar `--bitcode=asmonly` para o **argumentos adicionais mtouch** campo e clique no **Okey** botão.
 4. Recriar seu aplicativo o **versão** configuração.
 
@@ -124,7 +124,7 @@ Recompilar o aplicativo para a versão e envie novamente para conectar-se de iTu
 
 Se você estiver usando uma biblioteca de terceiros 3º (como MonoGame) e a compilação de versão falhou com uma longa série de mensagens de erro que terminam em `Task "MTouch" execution -- FAILED`, tente adicionar `-gcc_flags="-framework OpenAL"` para sua **argumentos adicionais toque**:
 
-[ ![](troubleshooting-images/mtouch01.png "Execução da tarefa MTouch")](troubleshooting-images/mtouch01.png)
+[![](troubleshooting-images/mtouch01.png "Execução da tarefa MTouch")](troubleshooting-images/mtouch01.png#lightbox)
 
 Você também deve incluir `--bitcode=asmonly` no **argumentos adicionais toque**, configurou suas opções de vinculador para **todos os links** e fazer uma compilação limpa.
 
@@ -204,7 +204,7 @@ Com esse arquivo em vigor, você deve ser capaz de adicionar o arquivo PCL com �
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

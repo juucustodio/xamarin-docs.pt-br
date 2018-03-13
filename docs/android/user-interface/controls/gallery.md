@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: a5315e0f55952872761308bd4cfc1d678585b6bc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: da6815a073d93379c8564f3ff91023deb20b0d55
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="gallery"></a>Galeria
 
@@ -133,7 +133,6 @@ Execute o aplicativo. Deve se parecer com a captura de tela abaixo:
 ![Captura de tela de HelloGallery exibindo imagens de amostra](gallery-images/hellogallery3.png)
 
 
-<a name="References" />
 
 ## <a name="references"></a>Referências
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 011b6d184e55c9054a845d4922687b4565221859
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bbbf3fb09edb802f1315977fb14ecfe154b2572f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-jar"></a>Associação de um. JAR
 
@@ -75,7 +75,6 @@ Picasso.With (this)
 
 ```
 
-<a name="creating" />
 
 ### <a name="creating-the-bindings-library"></a>Criando a biblioteca de associações
 
@@ -83,19 +82,19 @@ Antes de começar as etapas abaixo, faça o download [2.x.x.jar picasso](http://
 
 Primeiro, crie um novo projeto de biblioteca de associações. No Visual Studio para Mac ou o Visual Studio, crie uma nova solução e selecione o *biblioteca associações Android* modelo. (As capturas de tela neste passo a passo usam o Visual Studio, mas o Visual Studio para Mac é muito semelhante). Nome da solução **JarBinding**: 
 
-[ ![Criar projeto de biblioteca de JarBinding](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png)
+[![Criar projeto de biblioteca de JarBinding](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
 
 O modelo inclui uma **Jars** pasta em que você adicionar seu. JAR(s) para o projeto de biblioteca de associações. Clique com botão direito do **Jars** pasta e selecione **Adicionar > Existing Item**: 
 
-[ ![Adicionar item existente](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png)
+[![Adicionar item existente](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png#lightbox)
 
 Navegue até o **picasso 2.x.x.jar** arquivos baixados anteriormente, selecione-o e clique em **adicionar**: 
 
-[ ![Selecione o arquivo jar e clique em Adicionar](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png)
+[![Selecione o arquivo jar e clique em Adicionar](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
 
 Verifique o **2.x.x.jar picasso** arquivo foi adicionado com êxito ao projeto: 
 
-[ ![JAR adicionado ao projeto](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png)
+[![JAR adicionado ao projeto](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
 
 Quando você cria um projeto de biblioteca de associações de Java, você deve especificar se o. JAR será inserido na biblioteca de associações ou empacotado separadamente. Para fazer isso, você especificar um dos seguintes *ações de construção*: 
 
@@ -107,19 +106,18 @@ Normalmente, você usa o **EmbeddedJar** ação de compilação para que o. JAR 
 
 Defina a ação de compilação para **EmbeddedJar**: 
 
-[ ![Selecione a ação de compilação EmbeddedJar](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png)
+[![Selecione a ação de compilação EmbeddedJar](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
 
 Em seguida, abra o projeto de propriedades para configurar o *Framework de destino*. Se o. JAR usa APIs Android, defina a estrutura de destino para o nível de API que o. JAR espera. Normalmente, o desenvolvedor das. Arquivo JAR indicará qual nível de API (ou níveis) que o. JAR é compatível com. (Para obter mais informações sobre a configuração de estrutura de destino e os níveis de API do Android em geral, consulte [Noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md).)
 
 Definir o destino da API de nível para a biblioteca de associações (neste exemplo, estamos usando o nível de API 19): 
 
-[ ![Nível de API de destino definido como 19 da API](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png)
+[![Nível de API de destino definido como 19 da API](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
 
 Finalmente, crie a biblioteca de associações. Embora algumas mensagens de aviso podem ser exibidas, o projeto de biblioteca de associações deve compilar com êxito e produzir uma saída. DLL no seguinte local: **JarBinding/bin/Debug/JarBinding.dll**
     
 
-<a name="using" />
 
 ### <a name="using-the-bindings-library"></a>Usando a biblioteca de associações
 
@@ -133,19 +131,19 @@ Nas etapas a seguir, vamos criar um aplicativo mínimo que usa a biblioteca de a
 
 Primeiro, crie um novo aplicativo xamarin que consome a biblioteca de associações. A solução e selecione **adicionar novo projeto**; nome do novo projeto **BindingTest**. Estamos criando este aplicativo na mesma solução que a biblioteca de associações para simplificar este passo a passo; No entanto, o aplicativo que consome a biblioteca de associações em vez disso, pode residir em uma solução diferente: 
 
-[ ![Adicionar novo projeto BindingTest](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png)
+[![Adicionar novo projeto BindingTest](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
 
 Com o botão direito do **referências** nó do **BindingTest** do projeto e selecione **adicionar referência...** :
 
-[ ![Adicionar a referência à direita](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png)
+[![Adicionar a referência à direita](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 
 Verifique o **JarBinding** projeto criado anteriormente e clique em **Okey**:
 
-[ ![Selecione o projeto JarBinding](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png)
+[![Selecione o projeto JarBinding](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
 
 Abra o **referências** nó do **BindingTest** do projeto e verifique o **JarBinding** referência está presente: 
 
-[ ![JarBinding aparece em referências](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png)
+[![JarBinding aparece em referências](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
 
 Modificar o **BindingTest** layout (**Main.axml**) para que ele tem um único `ImageView`:
 
@@ -191,11 +189,10 @@ public class MainActivity : Activity
 
 Compilar e executar o **BindingTest** projeto. O aplicativo será iniciado e, depois de um pequeno atraso (dependendo de condições de rede), ele deve baixar e exibir uma imagem semelhante à captura de tela a seguir:
 
-[ ![Execução de captura de tela de BindingTest](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png)
+[![Execução de captura de tela de BindingTest](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 Parabéns! Você já associada com êxito uma biblioteca de Java. JAR e usado em seu aplicativo xamarin.
  
-<a name="summary" />
  
 ## <a name="summary"></a>Resumo
 
@@ -206,4 +203,4 @@ Neste passo a passo, criamos uma biblioteca de associações de um terceiro. JAR
 ## <a name="related-links"></a>Links relacionados
 
 - [Criar uma biblioteca de associações de Java (vídeo)](https://university.xamarin.com/classes#10090)
-- [Associação de uma biblioteca de Java](~/android/platform/binding-java-library/index.md)
+- [Associação de uma biblioteca Java](~/android/platform/binding-java-library/index.md)

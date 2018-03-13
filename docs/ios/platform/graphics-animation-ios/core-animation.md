@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 80fe298f3dd24aac7f84213aee96499dd369d16d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f0cb4e00abffead854c2590bde6df45c200ff0bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-animation"></a>Animação de núcleo
 
@@ -23,12 +23,16 @@ Todas as animações suaves no iOS, como rolagem de tabelas e passar o dedo entr
 
 As estruturas de animação principais e principais gráficos podem trabalhar juntos para criar lindos, animado gráficos 2D. Na verdade animação Core pode transformar gráficos 2D em espaço 3D, criando o incríveis experiências inicial. No entanto, para criar gráficos 3D true, você precisaria usar algo como OpenGL ES, ou para ativar jogos para uma API como MonoGame, embora 3D está além do escopo deste artigo.
 
+<a name="Using_Core_Animation" />
+
 ## <a name="core-animation"></a>Animação de núcleo
 
 iOS usa a estrutura de animação principal para criar efeitos de animação, como fazer a transição entre os modos de exibição, deslizante menus e rolagem efeitos para citar alguns. Há duas maneiras de trabalhar com animação:
 
--  [Por meio de UIKit](#Using_UIKit_Animation), que inclui animações com base na exibição, bem como animadas transições entre os controladores.
--   [Por meio de animação Core](#Using_Core_Animation), as camadas diretamente, permitindo um controle refinado.
+- [Por meio de UIKit](#Using_UIKit_Animation), que inclui animações com base na exibição, bem como animadas transições entre os controladores.
+- [Por meio de animação Core](#Using_Core_Animation), as camadas diretamente, permitindo um controle refinado.
+
+<a name="Using_UIKit_Animation" />
 
 ## <a name="using-uikit-animation"></a>Usando animação UIKit
 
@@ -237,6 +241,6 @@ Neste artigo examinamos os recursos de animação fornecidos por meio de *Core a
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de animação de núcleo](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
-- [Gráficos de núcleo](~/ios/platform/graphics-animation-ios/core-graphics.md)
+- [Gráficos principais](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Elementos gráficos e instruções passo a passo de animação](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
-- [Animação de núcleo](https://developer.xamarin.com/recipes/ios/animation/coreanimation)
+- [Animação principal](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

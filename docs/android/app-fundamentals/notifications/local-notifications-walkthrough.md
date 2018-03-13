@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/30/2018
-ms.openlocfilehash: 4728b50446033c02d33ccf8273f1dc2e50d66906
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8642a1c96ee525fbd6950616fbc6da0ad0e2337
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Passo a passo - usando notificações Local no xamarin
 
 _Este passo a passo demonstra como usar notificações locais em aplicativos xamarin. Ele demonstra os conceitos básicos de criação e publicação de uma notificação de local. Quando o usuário clica na notificação na área de notificação, ele inicia uma segunda atividade._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -26,16 +25,14 @@ Neste passo a passo, criaremos um aplicativo do Android que emite uma notificaç
 
 As capturas de tela a seguir ilustram alguns exemplos desse aplicativo:
 
-[![Capturas de tela de exemplo com notificação](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png)
+[![Capturas de tela de exemplo com notificação](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png#lightbox)
 
 
-<a name="walkthrough" />
 
 ## <a name="walkthrough"></a>Passo a passo
 
 Para começar, vamos criar um novo projeto Android usando o **aplicativo Android** modelo. Vamos chamar esse projeto **LocalNotifications**. (Se você não estiver familiarizado com a criação de projetos de xamarin, consulte [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).)
 
-<a name="add-v4-support" />
 
 ### <a name="add-the-androidsupportv4app-component"></a>Adicionar o componente Android.Support.V4.App
 
@@ -53,7 +50,6 @@ Além disso, podemos deverá torná-lo claro para o compilador que estamos usand
 using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 ```
 
-<a name="define-id" />
 
 ### <a name="define-the-notification-id"></a>Definir a ID de notificação
 
@@ -63,7 +59,6 @@ Será necessário uma ID exclusiva para nossa notificação. Vamos editar **Main
 private static readonly int ButtonClickNotificationId = 1000;
 ```
 
-<a name="add-code" />
 
 ### <a name="add-code-to-generate-the-notification"></a>Adicione código para gerar a notificação
 
@@ -117,7 +112,6 @@ No `OnCreate` método, atribua `ButtonOnClick` método para o `Click` eventos do
 button.Click += ButtonOnClick;
 ```
 
-<a name="second-activity" />
 
 ### <a name="create-a-second-activity"></a>Criar uma segunda atividade
 
@@ -174,36 +168,33 @@ Também é necessário criar um layout de recurso para **SecondActivity**. Adici
 </LinearLayout>
 ```
 
-<a name="add-icon" />
 
 ### <a name="add-a-notification-icon"></a>Adicionar um ícone de notificação
 
 Por fim, vamos adicionar um pequeno ícone será exibido na área de notificação quando nossa notificação é iniciada. Você pode copiar [esse ícone](local-notifications-walkthrough-images/ic-stat-button-click.png) ao seu projeto ou criar seu próprio ícone personalizado. Chamaremos o arquivo de ícone **ic\_stat\_botão\_click.png** e copie-o para o **recursos/drawable** pasta. Lembre-se de usar **Adicionar > Item existente...**  para incluir esse arquivo de ícone em seu projeto.
 
-<a name="run-app" />
 
 ### <a name="run-the-application"></a>Executar o aplicativo
 
 Vamos criar e executar o aplicativo. Você deve ser apresentada com a primeira atividade, semelhante à captura de tela a seguir:
 
-[ ![Captura de tela de atividade primeiro](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png)
+[![Captura de tela de atividade primeiro](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png#lightbox)
 
 Ao clicar no botão, você deve observar o ícone pequeno para a notificação aparecem na área de notificação:
 
-[ ![Ícone de notificação é exibida](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png)
+[![Ícone de notificação é exibida](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png#lightbox)
 
 Se você passa o dedo para baixo e expor a gaveta de notificação, você verá a notificação:
 
-[ ![Mensagem de notificação](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png)
+[![Mensagem de notificação](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png#lightbox)
 
 Quando você clicar na notificação, deverá desaparecer e nossa outra atividade deve ser iniciada &ndash; aparência semelhante a captura de tela a seguir:
 
-[ ![Segunda tela de atividade](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png)
+[![Segunda tela de atividade](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
 Parabéns! Agora você concluiu o passo a passo do Android notificação local e você tem uma amostra funcional que você pode consultar. Há muito mais notificações que mostramos aqui, então se você quiser obter mais informações, dê uma olhada [documentação do Google em notificações](http://developer.android.com/guide/topics/ui/notifiers/notifications.html) e o Android [notificações](http://developer.android.com/design/patterns/notifications.html) guia de design.
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumo
 

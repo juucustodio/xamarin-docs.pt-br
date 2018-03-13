@@ -1,17 +1,17 @@
 ---
 title: Suporte do UrhoSharp Android
-description: "Recursos e configuração específica do android"
+description: "Recursos para UrhoSharp e configuração específica do Android."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 5100fd4ac573021e088a88446f5f6559d49c4972
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f99b8d2d9f779bc0cf14d76c110d9769ec49ad53
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="urhosharp-android-support"></a>Suporte do UrhoSharp Android
 
@@ -21,11 +21,11 @@ Embora Urho é uma biblioteca de classes portátil, e permite que a mesma API a 
 
 Nas páginas a seguir, suponha que `MyGame` é uma subclasse do `Application` classe.
 
-# <a name="architectures"></a>Arquiteturas
+## <a name="architectures"></a>Arquiteturas
 
 **Suporte a arquiteturas**: x86, armeabi, armeabi v7a
 
-# <a name="create-a-project"></a>Criar um projeto
+## <a name="create-a-project"></a>Criar um projeto
 
 Criar um projeto Android e adicionar o pacote UrhoSharp NuGet.
 
@@ -33,7 +33,7 @@ Adicionar dados que contém seus ativos para o **ativos** directory e verifique 
 
 ![Configuração de projeto](android-images/image-3.png "adicionar dados que contém os ativos para o diretório de ativos")
 
-# <a name="configure-and-launching-urho"></a>Configurar e iniciar Urho
+## <a name="configure-and-launching-urho"></a>Configurar e iniciar Urho
 
 Adicionar usando as instruções para o `Urho` e `Urho.Android` namespaces e, em seguida, adicione este código para inicializar Urho, bem como a inicialização do seu aplicativo.
 
@@ -45,7 +45,7 @@ UrhoSurface.RunInActivity<MyGame>();
 
 Isso abrirá uma atividade de tela inteira como um conteúdo com o jogo.
 
-# <a name="custom-embedding-of-urho"></a>Inserindo personalizado de Urho
+## <a name="custom-embedding-of-urho"></a>Inserindo personalizado de Urho
 
 Você pode opcionalmente a ter Urho assumir a tela do aplicativo inteiro e para usá-lo como um componente do seu aplicativo, você pode criar um `SurfaceView` por meio de:
 

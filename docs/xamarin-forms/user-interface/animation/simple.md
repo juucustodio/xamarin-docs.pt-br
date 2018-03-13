@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d1d91804c11d2e944bb618fadb3d659b512c5905
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb7ca216978e4c890349a44b07d5a383e9ca2384
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="simple-animations"></a>Animações simples
 
@@ -130,7 +130,7 @@ As capturas de tela a seguir mostram a conversão em andamento em cada plataform
 ![](simple-images/translateto.png "Animação de tradução")
 
 > [!NOTE]
-> **Observação**: se um elemento é inicialmente disposto fora da tela e, em seguida, convertido na tela, após a conversão do elemento de entrada do layout permanece fora da tela e o usuário não pode interagir com ele. Portanto, é recomendável que um modo de exibição deve ser apresentado em sua posição final e, em seguida, as necessárias traduções executadas.
+> Se um elemento é inicialmente disposto fora da tela e, em seguida, convertido na tela, após a conversão de layout de entrada do elemento permanece fora da tela e o usuário não pode interagir com ele. Portanto, é recomendável que um modo de exibição deve ser apresentado em sua posição final e, em seguida, as necessárias traduções executadas.
 
 ### <a name="fading"></a>Esmaecimento
 
@@ -228,6 +228,6 @@ Este artigo demonstrou criando e Cancelando animações usando o [ `ViewExtensio
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Visão geral de suporte assíncrono](~/cross-platform/platform/async.md)
+- [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
 - [Animação básica (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/basic/)
 - [ViewExtensions](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/)

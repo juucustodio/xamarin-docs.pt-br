@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: edc1dd9f9544d1ab03781e7f3181a78b72f53909
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1fea2e2f7210e282fa1e27ad3a1203da2216791e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-live-player"></a>Xamarin Live Player
 
 Xamarin Live Player permite que você faça edições de ao vivo em seu aplicativo e tem essas alterações refletidas ao vivo em seu dispositivo. O código é executado dentro do aplicativo Xamarin ao vivo Player – não é necessário para configurar os emuladores ou usar os cabos para implantar o código!
 
-[ ![Player de ao vivo de Xamarin: Código, teste de varredura,](images/xamarin-live.png)](images/xamarin-live-sml.png)
+[![Player de ao vivo de Xamarin: Código, teste de varredura,](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
 1. Habilitar o *Xamarin Live Player* na **preferências**, em seguida, selecione o **dispositivos** lista.
 2. Depurar ou executar e, em seguida, verificar o par QRCodeto seu dispositivo.
@@ -28,11 +28,11 @@ Xamarin Live Player permite que você faça edições de ao vivo em seu aplicati
 
 Configurar o IDE para usar o Player de Live Xamarin no Visual Studio de 2017 ou o Visual Studio para Mac. Xamarin Live Player oferece suporte a projetos de iOS, Android e xamarin. Forms.
 
-## <a name="xamarin-live-player-appplayermd"></a>[Aplicativo de Player ao vivo do Xamarin](player.md)
+## <a name="xamarin-live-player-appplayermd"></a>[Aplicativo Xamarin Live Player](player.md)
 
 Usando o Xamarin Live aplicativo de Player.
 
-## <a name="xaml-live-previewinglive-viewmd"></a>[XAML Live visualização](live-view.md)
+## <a name="xaml-live-previewinglive-viewmd"></a>[Visualização do XAML Live](live-view.md)
 
 Usando o recurso de "Live executar modo de exibição atual".
 

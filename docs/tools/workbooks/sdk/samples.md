@@ -6,11 +6,11 @@ ms.assetid: 327DAD2E-1F76-4EB5-BCD0-9E7384D99E48
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 3b07e457bd54f16826f44a3b913434fea6ebe20b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f71da0f522c6c028981637a9797c3836063516f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sample-integrations"></a>Integrações de exemplo
 
@@ -18,7 +18,7 @@ ms.lasthandoff: 02/27/2018
 
 Consulte o [cozinha coletor] [ KitchenSink] de exemplo para um exemplo de uma integração. Basta criar `KitchenSink.sln` no Visual Studio para Mac ou o Visual Studio e abra `KitchenSink.workbook`.
 
-[![Captura de tela de integração de coletor cozinha](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png)
+[![Captura de tela de integração de coletor cozinha](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png#lightbox)
 
 O exemplo da cozinha coletor demonstra os dois conjuntos de conceitos:
 

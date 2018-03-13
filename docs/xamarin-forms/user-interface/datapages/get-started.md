@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 79ce4a1393b2affade3422f73e1c3d4680d199df
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1e65207e987dbdab8bf2fe5f48f0b0a500dd27bc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-datapages"></a>Guia de Introdução ao DataPages
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/28/2018
 
 Para começar a criação de uma página simples de unidade de dados usando a visualização DataPages, siga as etapas abaixo. Essa usa demonstração um estilo codificado ("eventos") na visualização compilações funciona apenas com o formato JSON específico no código.
 
-[ ![](get-started-images/demo-sml.png "Aplicativo de exemplo DataPages")](get-started-images/demo.png "DataPages exemplo de aplicativo")
+[![](get-started-images/demo-sml.png "Aplicativo de exemplo DataPages")](get-started-images/demo.png#lightbox "DataPages exemplo de aplicativo")
 
 ## <a name="1-add-nuget-packages"></a>1. Adicione pacotes NuGet
 
@@ -134,7 +134,7 @@ Um exemplo dos dados JSON com o [fonte demonstração](http://demo3143189.mockab
 
 As etapas acima devem resultar em uma página de dados do trabalho:
 
-[ ![](get-started-images/demo-sml.png "Aplicativo de exemplo DataPages")](get-started-images/demo.png "DataPages exemplo de aplicativo")
+[![](get-started-images/demo-sml.png "Aplicativo de exemplo DataPages")](get-started-images/demo.png#lightbox "DataPages exemplo de aplicativo")
 
 Isso funciona porque o estilo pré-criado **"Eventos"** existe no pacote Nuget de tema claro e tem os estilos definidos que correspondem a fonte de dados (por exemplo. "title", "imagem", "apresentador").
 
@@ -163,7 +163,7 @@ O estilo herdado pode ser substituído especificando um modelo e usando associa�
 
 Fornecendo um `DataTemplate` esse código substitui o `StyleClass` e usa o layout padrão para um `ListItemControl`.
 
-[ ![](get-started-images/custom-sml.png "Aplicativo de exemplo DataPages")](get-started-images/custom.png "DataPages exemplo de aplicativo")
+[![](get-started-images/custom-sml.png "Aplicativo de exemplo DataPages")](get-started-images/custom.png#lightbox "DataPages exemplo de aplicativo")
 
 Os desenvolvedores que preferem c# para XAML pode criar dados de origem associações muito (Lembre-se de incluir um `using Xamarin.Forms.Pages;` instrução):
 

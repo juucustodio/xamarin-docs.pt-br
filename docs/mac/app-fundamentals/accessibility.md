@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0117364f02302add1f8788de1a79e4c4210fd07b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4363258a9047ee4e2de4f53595a6eedc5dfe5861
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-macos"></a>Acessibilidade no macOS
 
@@ -30,7 +30,7 @@ AppKit usa o `NSAccessibility` protocolo para expor APIs que ajudam a tornar ace
 Xamarin.Mac usa o construtor de Interface do Xcode para editar arquivos de storyboard.
 Informações de acessibilidade podem ser editadas no **Inspetor de identidade** quando um controle está selecionado na superfície de design (conforme mostrado na captura de tela abaixo):
 
-[![A adição de acessibilidade no construtor de Interface do Xcode](accessibility-images/xcode.png "adicionando acessibilidade no construtor de Interface do Xcode")](accessibility-images/xcode-large.png)
+[![A adição de acessibilidade no construtor de Interface do Xcode](accessibility-images/xcode.png "adicionando acessibilidade no construtor de Interface do Xcode")](accessibility-images/xcode-large.png#lightbox)
 
 ### <a name="code"></a>Código
 
@@ -80,7 +80,7 @@ Desbloquear a tela de configurações (se necessário, no canto inferior esquerd
 
 Uma vez habilitada, o Inspetor de aparece como uma janela flutuante que pode ser movida pela tela. Captura de tela abaixo mostra o Inspetor de execução ao lado de uma amostra de aplicativo do Mac. Como o cursor é movido sobre a janela, o Inspetor exibe todas as propriedades acessíveis de cada controle:
 
-[![Exemplo de execução do Inspetor de acessibilidade](accessibility-images/accessibility-example.png "em execução do Inspetor de exemplo de acessibilidade")](accessibility-images/accessibility-example-large.png)
+[![Exemplo de execução do Inspetor de acessibilidade](accessibility-images/accessibility-example.png "em execução do Inspetor de exemplo de acessibilidade")](accessibility-images/accessibility-example-large.png#lightbox)
 
 Para obter mais informações, leia o [testes de acessibilidade para o guia de OS X](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
 

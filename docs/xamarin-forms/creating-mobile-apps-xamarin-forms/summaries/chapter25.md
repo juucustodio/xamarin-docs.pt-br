@@ -3,14 +3,15 @@ title: "Resumo do Capítulo 25. Variedades de página"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: bbe960357d9180df90a4423d6acfdf3f869d1b77
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 30642709519fc809d30da9a437728112f56a64d6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Resumo do Capítulo 25. Variedades de página
 
@@ -54,7 +55,7 @@ O `Master` e `Detail` propriedades são definidas com árvores visual a [SchoolA
 
 Arquivo XAML também define o [ `IsPresented` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/) propriedade `MasterDetailPage` para `True`. Isso faz com que a página mestra a ser exibida na inicialização; Por padrão, a página de detalhes é exibida. O [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) conjuntos de arquivos `IsPresented` para `false` quando um item é selecionado do `ListView` na página mestra. A página de detalhes, em seguida, é exibida:
 
-[![Captura de tela tripla da escola e detalhes](images/ch25fg09-small.png "página de detalhes de um MasterDetailPage")](images/ch25fg09-large.png "página de detalhes de um MasterDetailPage")
+[![Captura de tela tripla da escola e detalhes](images/ch25fg09-small.png "página de detalhes de um MasterDetailPage")](images/ch25fg09-large.png#lightbox "página de detalhes de um MasterDetailPage")
 
 ### <a name="your-own-user-interface"></a>Sua própria interface do usuário
 
@@ -98,7 +99,7 @@ O [ **DiscreteTabbedColors** ](https://github.com/xamarin/xamarin-forms-book-sam
 
 Para cada página que aparece em uma `TabbedPage`, o `Title` propriedade é necessária para especificar o texto na guia e Apple Store requer que um ícone, assim a `Icon` propriedade está definida para iOS:
 
-[![Captura de tela de tripla de cores distintas com guias](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png "TabbedPage")
+[![Captura de tela de tripla de cores distintas com guias](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png#lightbox "TabbedPage")
 
 O [ **StudentNotes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/StudentNotes) exemplo tem uma home page que lista todos os alunos. Quando um aluno é tocado, navega até um `TabbedPage` derivado, [ `StudentNotesDataPage` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/StudentNotes/StudentNotes/StudentNotes/StudentNotesDataPage.xaml), que incorpora três `ContentPage` objetos na árvore visual, um dos quais permite inserir algumas observações para esse aluno.
 

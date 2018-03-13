@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: c02ad78cc15f2d71f19d605f7a4d6889bbe3ca01
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec8d000f235a8e0da5198e425f9f1e630b2c662a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Passo a passo - usando toque no Android
 
 Vamos ver como usar os conceitos da seção anterior em um aplicativo de trabalho. Criaremos um aplicativo com quatro atividades. A primeira atividade será um menu ou um menu de controle que iniciará as outras atividades para demonstrar as várias APIs. Captura de tela a seguir mostra a atividade principal:
 
-[![Captura de tela de exemplo com toque Me botão](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png)
+[![Captura de tela de exemplo com toque Me botão](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png#lightbox)
 
 A primeira atividade, o exemplo de toque, mostrará como usar manipuladores de eventos de tocar os modos de exibição. A atividade do reconhecedor de gestos demonstrará como subclasse `Android.View.Views` e manipular eventos, bem como mostram como lidar com gestos de aperto. A terceira e última atividade, **gesto personalizado**, irá mostrar como usar gestos personalizados. Para facilitar as coisas a seguir e absorver, podemos irá dividir este passo a passo em seções, com cada seção concentrando-se em uma das atividades.
 
@@ -25,7 +25,7 @@ A primeira atividade, o exemplo de toque, mostrará como usar manipuladores de e
 
 -   Abra o projeto **TouchWalkthrough\_iniciar**. O **MainActivity** está configurado para ir &ndash; depende para implementar o comportamento de toque na atividade. Se você executar o aplicativo e clique em **exemplo Touch**, a seguinte atividade deve ser iniciado:
 
-    [![Captura de tela de atividade com toque começa exibido](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+    [![Captura de tela de atividade com toque começa exibido](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 -   Agora que Confirmamos que a atividade é iniciado, abra o arquivo **TouchActivity.cs** e adicione um manipulador para o `Touch` evento o `ImageView`:
 
@@ -63,11 +63,11 @@ Observe, no código acima, que será tratado o `Move` e `Down` ação como a mes
 
 Cada vez que o usuário toques a `ImageView`, o `Touch` evento será gerado e nosso manipulador exibirá a mensagem **Touch começa** na tela, conforme mostrado na seguinte captura de tela:
 
-[![Captura de tela de atividade com toque começa](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+[![Captura de tela de atividade com toque começa](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 Desde que o usuário estiver tocando os `ImageView`, **Touch começa** será exibido no `TextView`. Quando o usuário não estiver tocando os `ImageView`, a mensagem **Touch termina** será exibido no `TextView`, conforme mostrado na seguinte captura de tela:
 
-[![Captura de tela de atividade com toque termina](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png)
+[![Captura de tela de atividade com toque termina](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
 
 ## <a name="gesture-recognizer-activity"></a>Atividade do reconhecedor de gesto
@@ -234,11 +234,11 @@ Agora, vamos implementar a atividade do reconhecedor de gestos. Essa atividade d
 -   Agora execute o aplicativo e iniciar a atividade do reconhecedor de gestos.
     Ao iniciar a tela deve ser semelhante a captura de tela abaixo:
 
-    [![Tela de início de reconhecedor de gestos com ícone de Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png)
+    [![Tela de início de reconhecedor de gestos com ícone de Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
 -   Agora o ícone de toque e arraste-o pela tela. Tente o gesto de pinçagem para aplicar zoom. Em algum momento sua tela deve ser semelhante a captura de tela a seguir:
 
-    [![Ícone de movimentação de gestos na tela](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png)
+    [![Ícone de movimentação de gestos na tela](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
 Neste ponto, abra um pat na parte traseira: você implementou apenas Pince para aplicar zoom em um aplicativo do Android! Faça uma pausa rápida e permite passar para a terceira e última atividade neste passo a passo &ndash; usando gestos personalizados.
 
@@ -341,17 +341,17 @@ Para os fins deste passo a passo, a biblioteca de gestos já foi criada usando a
 
 -   Execute o aplicativo e começar a atividade do reconhecedor de gestos personalizados. Ele deve ser semelhante a captura de tela a seguir:
 
-    [![Captura de tela com Check-Me a imagem](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png)
+    [![Captura de tela com Check-Me a imagem](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
     Agora desenhe uma marca de seleção na tela e o bitmap que está sendo exibido deverá ser semelhante ao mostrado nas capturas de tela seguinte:
 
-    [![Desenhar a marca de seleção](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png)
-    [![reconhecido marca de seleção](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png)
+    [![Desenhar a marca de seleção](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+    [![reconhecido marca de seleção](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
     Por fim, desenhe um rabisco na tela. A caixa de seleção deve alterar novamente para a imagem original, conforme mostrado nessas capturas de tela:
 
-    [![Rabisco na tela](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png)
-    [![imagem Original é exibida](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png)
+    [![Rabisco na tela](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
+    [![imagem Original é exibida](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
 
 Agora você tem uma compreensão de como integrar o toque e gestos em um aplicativo do Android usando o xamarin.
 

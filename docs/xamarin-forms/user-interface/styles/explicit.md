@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 43a1a5ee6a8bd9d53f6fd44be935ae7573db6812
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1fbc12288527c053a24041aa6c49cc1a4abdde55
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="explicit-styles"></a>Estilos explícitos
 
@@ -64,7 +64,7 @@ O seguinte exemplo de código mostra *explícita* estilos declarado em XAML em u
 
 O [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) define três *explícita* estilos que são aplicados para a página [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instâncias. Cada `Style` é usado para exibir texto em uma cor diferente, e também define a fonte de opções de layout de tamanho e horizontal e vertical. Cada `Style` é aplicada a outro `Label` definindo seu [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) propriedades usando o `StaticResource` extensão de marcação. Isso resulta na exibição mostrada nas capturas de tela seguir:
 
-[![](explicit-images/explicit-styles.png "Exemplo de estilos explícita")](explicit-images/explicit-styles-large.png "estilos explícita de exemplo")
+[![](explicit-images/explicit-styles.png "Exemplo de estilos explícita")](explicit-images/explicit-styles-large.png#lightbox "estilos explícita de exemplo")
 
 Além disso, o último [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) tem um [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) aplicada a ele, mas também substitui o [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/) propriedade para um diferentes`Color`valor.
 
@@ -95,7 +95,7 @@ Neste exemplo, o *explícita* [ `Style` ](https://developer.xamarin.com/api/type
 
 Para obter informações sobre como criar estilos em um aplicativo [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), consulte [estilos globais](~/xamarin-forms/user-interface/styles/application.md).
 
-## <a name="creating-an-explicit-style-in-c35"></a>Criando um estilo explícito C &#35;
+## <a name="creating-an-explicit-style-in-c35"></a>Criando um estilo explícito em C&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) instâncias podem ser adicionadas a uma página [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) coleção em c#, criando um novo [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)e, em seguida, adicionando o `Style` instâncias para o `ResourceDictionary`, conforme mostrado no exemplo de código a seguir:
 

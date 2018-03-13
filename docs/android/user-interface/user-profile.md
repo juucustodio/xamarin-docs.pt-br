@@ -2,16 +2,16 @@
 title: "Perfil de usuário"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
+ms.assetid: 6BB01F75-5E98-49A1-BBA0-C2680905C59D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/21/2017
-ms.openlocfilehash: 53ac30abea05095583fcac5ddc315f93ce7024f2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf8230c5832104fd17b14532f1d32822a1fc0097
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="user-profile"></a>Perfil de usuário
 
@@ -38,13 +38,11 @@ if (cursor.MoveToFirst ()) {
 
 Com 4 Android (API nível 14), um novo `ContactsContact.Profile` classe está disponível por meio do provedor de ContactsContract. O `ContactsContact.Profile` fornece acesso a um perfil pessoal para o proprietário de um dispositivo, o que inclui dados de contato, como do proprietário do dispositivo nome e número de telefone.
 
-<a name="Required_Permissions" />
 
 ## <a name="required-permissions"></a>Permissões necessárias
 
 Para ler e gravar dados de contato, aplicativos devem solicitar o `Read_Contacts` e `Write_Contacts` permissões, respectivamente. Além disso, para ler e editar o perfil de usuário, os aplicativos devem exigir a `Read_Profile` e `Write_Profile` permissões.
 
-<a name="Updating_Profile_Data" />
 
 ## <a name="updating-profile-data"></a>Atualização de dados de perfil
 
@@ -60,7 +58,6 @@ ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri,
     values, null, null);
 ```
 
-<a name="Reading_Profile_Data" />
 
 ## <a name="reading-profile-data"></a>Lendo dados de perfil
 
@@ -78,7 +75,6 @@ if (cursor.MoveToFirst ()) {
 }
 ```
 
-<a name="Navigating_to_the_People_App" />
 
 ## <a name="navigating-to-the-people-app"></a>Navegar para o aplicativo de pessoas
 
@@ -92,7 +88,7 @@ StartActivity (intent);
 
 Ao executar o código acima, o aplicativo de pessoas será carregado para o perfil de usuário, conforme mostrado na seguinte captura de tela:
 
-[![Aplicativo de captura de tela de pessoas exibindo o perfil de usuário de John Doe](user-profile-images/15-people-app.png)](user-profile-images/15-people-app.png)
+[![Aplicativo de captura de tela de pessoas exibindo o perfil de usuário de John Doe](user-profile-images/15-people-app.png)](user-profile-images/15-people-app.png#lightbox)
 
 Trabalhar com o perfil do usuário agora é semelhante a interagir com outros dados no Android e oferece um nível adicional de personalização do dispositivo.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 55864073aecb48176d650da6edefad24c3248767
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0c4014ecda0501e9309a17901c439444e4b48e86
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-views-in-c"></a>Modos de exibição nativos em c#
 
@@ -24,7 +24,7 @@ Qualquer controle de xamarin. Forms permite `Content` para ser definido, ou que 
 
 As capturas de tela a seguir demonstram específico da plataforma exibições com foi adicionado a um xamarin. Forms [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 
-[![](code-images/screenshots-sml.png "StackLayout que contém exibições específicas de plataforma")](code-images/screenshots.png "StackLayout que contém exibições específicas de plataforma")
+[![](code-images/screenshots-sml.png "StackLayout que contém exibições específicas de plataforma")](code-images/screenshots.png#lightbox "StackLayout que contém exibições específicas de plataforma")
 
 A capacidade de adicionar modos de exibição específicos da plataforma para um layout de xamarin. Forms é habilitada por dois métodos de extensão em cada plataforma:
 
@@ -64,7 +64,7 @@ O exemplo supõe que o `stackLayout` e `contentView` instâncias criadas anterio
 O exemplo de código a seguir demonstra como adicionar um `TextView` para um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) e um [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
 
 ```csharp
-var textView = new TextView (Forms.Context) { Text = originalText, TextSize = 14 };
+var textView = new TextView (MainActivity.Instance) { Text = originalText, TextSize = 14 };
 stackLayout.Children.Add (textView);
 contentView.Content = textView.ToView();
 ```
@@ -188,7 +188,7 @@ public class CustomControl : TextView
 Uma instância deste modo de exibição é adicionada a um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
-var customControl = new CustomControl (Forms.Context) {
+var customControl = new CustomControl (MainActivity.Instance) {
   Text = "This control has incorrect sizing - it doesn't occupy the available width of the device.",
   TextSize = 14
 };
@@ -323,4 +323,4 @@ Este artigo explicou como adicionar exibições nativo para um layout de xamarin
 ## <a name="related-links"></a>Links relacionados
 
 - [NativeEmbedding (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeEmbedding/)
-- [Formulários nativo](~/xamarin-forms/platform/native-forms.md)
+- [Formulários nativos](~/xamarin-forms/platform/native-forms.md)

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 4798da42718658096509948bae07e5e5534d5af0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizador XAML para xamarin. Forms
 
@@ -30,13 +30,13 @@ Há mais informações no [notas de versão](https://developer.xamarin.com/relea
 
 O **visualização** botão pode ser exibido no editor do mouse em um arquivo XAML e selecionando **abrir com > Visualizador XAML**. O painel de visualização, em seguida, pode ser mostrado ou ocultado pressionando o **visualização** botão no canto superior direito de qualquer janela de documento XAML:
 
-[ ![Visualização do controle ListView no Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "visualizador Forms no Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png "visualizador Forms no Visual Studio para Mac")
+[![Visualização do controle ListView no Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "visualizador Forms no Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox "visualizador Forms no Visual Studio para Mac")
 
 ### <a name="visual-studio-on-windows"></a>Visual Studio no Windows
 
 Use o **exibição > outras janelas > Visualizador xamarin. Forms** menu do Visual Studio para abrir a janela de visualização. Use o **Janela > novo grupo de guias Vertical** menu para posicioná-la lado a lado.
 
-[ ![Visualização do controle ListView no Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "visualizador Forms no Visual Studio")](xaml-previewer-images/xamlp-list-vs.png "visualizador Forms no Visual Studio")
+[![Visualização do controle ListView no Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "visualizador Forms no Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "visualizador Forms no Visual Studio")
 
 ## <a name="xaml-preview-options"></a>Opções de visualização do XAML
 

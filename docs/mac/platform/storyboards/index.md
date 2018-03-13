@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 21e35b056293e422b577b0ee8b51e8c43dbbf07d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ccee60b5d953987e858ef592d005cec9803b8b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introdução ao Storyboards
 
@@ -20,7 +20,7 @@ _Este artigo fornece uma introdução ao trabalho com Storyboards em um aplicati
 
 Storyboards permitem que você desenvolva uma Interface do usuário para seu aplicativo Xamarin.Mac que inclui não apenas as definições de janela e controles, mas também contém links entre diferentes janelas (via segues) e exibir estados.
 
-[ ![](images/intro01.png "Um exemplo da interface do usuário no Xcode")](images/intro01.png)
+[![](images/intro01.png "Um exemplo da interface do usuário no Xcode")](images/intro01.png#lightbox)
 
 Este artigo fornecem uma introdução ao uso de Storyboards para definir a Interface do usuário do aplicativo um Xamarin.Mac.
 
@@ -36,11 +36,11 @@ Usando Storyboards, da interface do usuário de um aplicativo Xamarin.Mac podem 
 
 Como mencionado acima, um Storyboard define todos os da interface do usuário para um determinado aplicativo dividido em uma visão geral das funções de seu _exibir controladores_. No construtor de Interface do Xcode, cada um desses controladores reside em seu próprio _cena_.
 
-[ ![](images/intro02.png "Um controlador de exibição de exemplo")](images/intro02.png)
+[![](images/intro02.png "Um controlador de exibição de exemplo")](images/intro02.png#lightbox)
 
 Cada cena representa um determinado modo de exibição e exibição controlador par com um conjunto de linhas (chamado Segues) que se conectam cada cena na interface de usuário, mostrando as relações. Alguns Segues definir como um controlador de exibição contém uma ou mais exibições filho ou exibir controladores. Outros Segues, definir transições entre o controlador de exibição (como exibir uma caixa de diálogo ou popover). 
 
-[ ![](images/intro03.png "Segue um exemplo")](images/intro03.png)
+[![](images/intro03.png "Segue um exemplo")](images/intro03.png#lightbox)
 
 O mais importante a observar é que cada Segue representa o fluxo de alguma forma de dados entre o determinado elemento de interface de usuário do aplicativo.
 
@@ -50,7 +50,7 @@ O mais importante a observar é que cada Segue representa o fluxo de alguma form
 
 Exibir controladores definem as relações entre um determinado modo de exibição de informações dentro de um aplicativo do Mac e o modelo de dados que fornece essas informações. Cada cena de nível superior no Storyboard representa um controlador de exibição de código do aplicativo Xamarin.Mac.
 
-[ ![](images/intro04.png "Um exemplo guias de controlador de exibição")](images/intro04.png)
+[![](images/intro04.png "Um exemplo guias de controlador de exibição")](images/intro04.png#lightbox)
 
 Dessa forma, cada controlador de exibição é um emparelhamento autônomas e reutilizável de representação visual da informação (exibição) e a lógica para apresentar e controlar essas informações.
 
@@ -115,8 +115,8 @@ Este artigo obteve uma visão geral de trabalhar com Storyboards em um aplicativ
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Olá, Mac (exemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello, Mac (amostra)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabalhando com o Windows](~/mac/user-interface/window.md)
-- [Diretrizes de Interface do sistema operacional X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introdução ao Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

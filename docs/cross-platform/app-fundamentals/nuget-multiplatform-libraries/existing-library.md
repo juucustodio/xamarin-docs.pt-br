@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 44a97114e7d325a1fa196d2c9828855ad1a30c94
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ef34b1be5f993a3be819cd4ae1a9dcd5dfc27715
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Criando um NuGet de projetos de biblioteca existente
 
@@ -21,7 +21,7 @@ Bibliotecas PCL existente ou .NET padrão podem ser transformadas em NuGets por 
 
 2. Vá para o **pacote NuGet > metadados** seção e insira todas a [informações necessárias](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) no **geral** guia:
 
-  [ ![](existing-library-images/existing-metadata-sml.png "Insira os metadados necessários")](existing-library-images/existing-metadata.png)
+  [![](existing-library-images/existing-metadata-sml.png "Insira os metadados necessários")](existing-library-images/existing-metadata.png#lightbox)
 
 3. Opcionalmente, [adicionar metadados adicionais](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) no **detalhes** guia.
 
@@ -31,7 +31,7 @@ Bibliotecas PCL existente ou .NET padrão podem ser transformadas em NuGets por 
 
 5. Para criar o pacote do NuGet em _cada_ compilar ou implantar, vá para o **pacote NuGet > compilar** seção e escala **criar um pacote NuGet ao criar o projeto**:
 
-    [ ![](existing-library-images/existing-tickbox-sml.png "Escala para criar um pacote do NuGet")](existing-library-images/existing-tickbox.png)
+    [![](existing-library-images/existing-tickbox-sml.png "Escala para criar um pacote do NuGet")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
 > Compilando o NuGet pacote pode diminuir o processo de compilação. Se essa caixa não está marcada, ainda será possível gerar um pacote NuGet manualmente a qualquer momento no menu de contexto de projeto (mostrado na etapa 4 acima).

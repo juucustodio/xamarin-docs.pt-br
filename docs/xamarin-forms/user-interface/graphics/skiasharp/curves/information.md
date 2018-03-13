@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 992e6583d64f078c0cd693765a1512c3e41a620a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c7edf0c8e563dad25693d184d3a44a3e66466126
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 
@@ -110,7 +110,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O `Length` propriedade recém-criado `SKPathMeasure` objeto obtém o comprimento do caminho. Isso é dividido pelo `baseTextWidth` valor (que é a largura do texto com base em um tamanho de texto de 10) e, em seguida, multiplicado pelo tamanho da base de texto de 10. O resultado é um novo tamanho de texto para exibir o texto ao longo desse caminho:
 
-[![](information-images/pathlength-small.png "Captura de tela da página de comprimento de caminho tripla")](information-images/pathlength-large.png "tripla captura de tela da página de comprimento de caminho")
+[![](information-images/pathlength-small.png "Captura de tela da página de comprimento de caminho tripla")](information-images/pathlength-large.png#lightbox "tripla captura de tela da página de comprimento de caminho")
 
 Como a curva de Bézier obtém maior ou menor, você pode ver o tamanho do texto alterar.
 
@@ -136,7 +136,7 @@ O [ `SKPathMeasureMatrixFlags` ](https://developer.xamarin.com/api/type/SkiaShar
 
 O **Pipe monociclo metade** página anima uma figura de ponteiro em um monociclo que parece andar e para trás ao longo de uma curva cúbica de Bézier:
 
-[![](information-images/unicyclehalfpipe-small.png "Tripla captura da página do Pipe monociclo metade")](information-images/unicyclehalfpipe-large.png "tripla captura de tela da página monociclo metade Pipe")
+[![](information-images/unicyclehalfpipe-small.png "Tripla captura da página do Pipe monociclo metade")](information-images/unicyclehalfpipe-large.png#lightbox "tripla captura de tela da página monociclo metade Pipe")
 
 O `SKPaint` objeto usado para traçar o pipe metade e o monociclo é definido como um campo de [ `UnicycleHalfPipePage` ]() classe. Também é definido é o `SKPath` objeto para o monociclo:
 
@@ -425,7 +425,7 @@ Observe que o método retém o primeiro ponto de cada delimitação na variável
 
 O **GlobularText** exemplo usa esse método de extensão para quebrar o texto ao redor de um hemisfério aparentemente um efeito 3D:
 
-[![](information-images/globulartext-small.png "Captura de tela da página de texto Globular tripla")](information-images/globulartext-large.png "tripla captura de tela da página de texto Globular")
+[![](information-images/globulartext-small.png "Captura de tela da página de texto Globular tripla")](information-images/globulartext-large.png#lightbox "tripla captura de tela da página de texto Globular")
 
 O [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) construtor da classe executa essa transformação. Ele cria um `SKPaint` de objeto para o texto e, em seguida, obtém um `SKPath` de objeto o `GetTextPath` método. Este é o caminho passado para o `CloneWithTransform` método de extensão juntamente com uma função de transformação: 
 

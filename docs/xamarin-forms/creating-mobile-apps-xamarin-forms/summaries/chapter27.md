@@ -3,14 +3,15 @@ title: "Resumo do Capítulo 27. Processadores personalizados"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0c1dc9ba5cf382551a1142110c68d16421db07e4
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6d7c2b17e9596b7d2dd26aaf77cf13f7f8086cd5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Resumo do Capítulo 27. Processadores personalizados
 
@@ -66,7 +67,7 @@ O [ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 Todos os a `ViewRenderer` derivados contêm um `ExportRenderer` atributo no nível de assembly que associa o `HelloView` classe com determinado `HelloViewRenderer` classe. Isso é como o xamarin. Forms localiza renderizadores nos projetos de plataforma individual:
 
-[![Tripla captura de tela da exibição Hello](images/ch27fg02-small.png "personalizado renderizadores")](images/ch27fg02-large.png "renderizadores personalizado")
+[![Tripla captura de tela da exibição Hello](images/ch27fg02-small.png "personalizado renderizadores")](images/ch27fg02-large.png#lightbox "renderizadores personalizado")
 
 ## <a name="renderers-and-properties"></a>Processadores e propriedades
 
@@ -89,7 +90,7 @@ O `OnElementPropertyChanged` substituição, portanto, pode transferir o `Color`
 
 O [ **EllipseDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) classe exibe várias dessas `EllipseView` objetos:
 
-[![Captura de tela tripla de demonstração de elipse](images/ch27fg03-small.png "EllipseView personalizado renderizadores")](images/ch27fg03-large.png "EllipseView personalizado renderizadores")
+[![Captura de tela tripla de demonstração de elipse](images/ch27fg03-small.png "EllipseView personalizado renderizadores")](images/ch27fg03-large.png#lightbox "EllipseView personalizado renderizadores")
 
 O [ **BouncingBall** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) bounces um `EllipseView` off os lados da tela.
 
@@ -113,4 +114,4 @@ O [ **StepSliderDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 - [Capítulo 27 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf)
 - [Exemplos de capítulo 27](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
-- [Processadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

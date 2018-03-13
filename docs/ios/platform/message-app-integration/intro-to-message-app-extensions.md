@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7da0f52816d4efc102e830411589e0ac38a73574
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="message-app-extension-basics"></a>Noções básicas de extensão do aplicativo de mensagem
 
@@ -121,13 +121,13 @@ Para criar uma experiência de etiqueta personalizada, faça o seguinte:
 2. Abra a solução para adicionar uma extensão de aplicativo de mensagem. 
 3. Selecione **iOS** > **extensões** > **iMessage extensão** e clique no **próximo** botão: 
 
-    [ ![](intro-to-message-app-extensions-images/message01.png "Selecione iMessage extensão")](intro-to-message-app-extensions-images/message01.png)
+    [![](intro-to-message-app-extensions-images/message01.png "Selecione iMessage extensão")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Insira um **nome de extensão** e clique no **próximo** botão: 
 
-    [ ![](intro-to-message-app-extensions-images/message02.png "Insira um nome de extensão")](intro-to-message-app-extensions-images/message02.png)
+    [![](intro-to-message-app-extensions-images/message02.png "Insira um nome de extensão")](intro-to-message-app-extensions-images/message02.png#lightbox)
 5. Clique o **criar** botão para criar a extensão: 
 
-    [ ![](intro-to-message-app-extensions-images/message03.png "Clique no botão Criar")](intro-to-message-app-extensions-images/message03.png)
+    [![](intro-to-message-app-extensions-images/message03.png "Clique no botão Criar")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -135,7 +135,7 @@ Para criar uma experiência de etiqueta personalizada, faça o seguinte:
 2. Abra a solução para adicionar uma extensão de aplicativo de mensagem. 
 3. Selecione **iOS** > **extensões** > **iMessage extensão** e clique no **próximo** botão: 
 
-    [ ![](intro-to-message-app-extensions-images/message01w.png "Selecione iMessage extensão")](intro-to-message-app-extensions-images/message01.png)
+    [![](intro-to-message-app-extensions-images/message01w.png "Selecione iMessage extensão")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Insira um **nome de extensão** e clique no **Okey** botão
 
 -----
@@ -159,7 +159,7 @@ Faça o seguinte:
 1. No **solução preenchimento**, com o botão direito no nome do projeto de extensão e selecione **adicionar** > **novo arquivo...**   >  **iOS | Apple Watch** > **Interface controlador**.
 2. Digite `StickerBrowserViewController` para o **nome** e clique no **novo** botão: 
 
-    [ ![](intro-to-message-app-extensions-images/browser01.png "Digite StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.png)
+    [![](intro-to-message-app-extensions-images/browser01.png "Digite StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Abra o `StickerBrowserViewController.cs` arquivo para edição.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -167,7 +167,7 @@ Faça o seguinte:
 1. No **Solution Explorer**, com o botão direito no nome do projeto de extensão e selecione **adicionar** > **novo arquivo...**   >  **iOS | Apple Watch** > **Interface controlador**.
 2. Digite `StickerBrowserViewController` para o **nome** e clique no **novo** botão: 
 
-    [ ![](intro-to-message-app-extensions-images/browser01w.png "Digite StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.png)
+    [![](intro-to-message-app-extensions-images/browser01w.png "Digite StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Abra o `StickerBrowserViewController.cs` arquivo para edição.
 
 -----

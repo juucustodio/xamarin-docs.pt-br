@@ -6,11 +6,11 @@ ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e46520122b54fabfe27f73370e2ab736a349f7f4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c4eed99533ba1aca1bd5ba23078866909330b542
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introdução ao Backgrounding no iOS
 
@@ -27,7 +27,7 @@ Antes de mergulhar no código de processamento no iOS em segundo plano, é neces
 
 O ciclo de vida do aplicativo do iOS é uma coleção de estados do aplicativo e os métodos para mover entre elas. Um aplicativo faz a transição entre estados com base no comportamento do usuário e os requisitos de backgrounding do aplicativo. A movimentação é ilustrada o diagrama a seguir:
 
- [ ![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "Diagrama de estados de aplicativo e os métodos de representante do aplicativo")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png)
+ [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "Diagrama de estados de aplicativo e os métodos de representante do aplicativo")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
 
 -  **Não está em execução** -o aplicativo ainda não foi iniciado no dispositivo.
 -  **Execução/ativo** -o aplicativo está na tela e está executando código em primeiro plano.
@@ -52,7 +52,7 @@ Quando um aplicativo muda de estado, o iOS notifica o aplicativo por meio de mé
 
 O diagrama a seguir ilustra como o aplicativo declara e métodos de ciclo de vida se encaixam:
 
- [ ![](introduction-to-backgrounding-in-ios-images/image2.png "Este diagrama ilustra como o aplicativo declara e métodos de ciclo de vida se encaixam")](introduction-to-backgrounding-in-ios-images/image2.png)
+ [![](introduction-to-backgrounding-in-ios-images/image2.png "Este diagrama ilustra como o aplicativo declara e métodos de ciclo de vida se encaixam")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
 
 ## <a name="user-controls-for-backgrounding-in-ios"></a>Controles de usuário para Backgrounding no iOS
 
@@ -62,7 +62,7 @@ iOS 7 introduziu vários recursos para dar aos usuários mais controle sobre o e
 
 O seletor de exibição do aplicativo é um recurso de controle importante introduzido no iOS 7. Ele é iniciado por um toque duplo o **início** botão e mostra os aplicativos cujos processos estão ativo:
 
- [ ![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "Movendo entre aplicativos usando o seletor de exibição do aplicativo")](introduction-to-backgrounding-in-ios-images/app-switcher-.png)
+ [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "Movendo entre aplicativos usando o seletor de exibição do aplicativo")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
 
 Usando o seletor de exibição do aplicativo, os usuários podem rolar pelos instantâneos de todos os aplicativos backgrounded e suspensos. Ao tocar em um aplicativo inicia no primeiro plano. Passar o dedo para cima remove o plano de fundo, encerrando o processo do aplicativo. Nós o conduziremos detalhadamente o alternador de aplicativo no [demonstração de ciclo de vida do aplicativo do iOS](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) na próxima seção.
 
@@ -77,7 +77,7 @@ iOS 7 aumenta o controle de usuário sobre o ciclo de vida do aplicativo, permit
 
 Os usuários podem alterar essa configuração, navegando para <span class="uiitem">Configurações > Geral > atualização de aplicativo em segundo plano</span> e editar os privilégios backgrounding para um aplicativo selecionado. Se a atualização de aplicativo em segundo plano é definido como off, o aplicativo ser suspenso imediatamente após a inserção de plano de fundo e impedido de executar qualquer processamento em segundo plano:
 
- [ ![](introduction-to-backgrounding-in-ios-images/settings-.png "Configurações de atualização de aplicativo em segundo plano")](introduction-to-backgrounding-in-ios-images/settings-.png)
+ [![](introduction-to-backgrounding-in-ios-images/settings-.png "Configurações de atualização de aplicativo em segundo plano")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 
 Os desenvolvedores podem verificar o status do aplicativo de atualização em segundo plano com o `BackgroundRefreshStatus` API. Para obter um exemplo, consulte o [receita de verificação em segundo plano de atualização de configuração](https://developer.xamarin.com/recipes/ios/multitasking/check_background_refresh_setting/).
 

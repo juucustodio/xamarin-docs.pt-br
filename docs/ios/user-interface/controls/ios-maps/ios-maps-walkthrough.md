@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 7eea7231ec4300a368e4612cbed2ba4ebc044a26
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 807ae6554d029120ad28f8fb8cc6c57ba3b58c8c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="annotations-and-overlays--walkthrough"></a>As anotações e sobreposições – passo a passo
 
 O aplicativo que vamos construir neste passo a passo é mostrado abaixo:
 
- [![](ios-maps-walkthrough-images/00-map-overlay.png "Um exemplo de aplicativo MapKit")](ios-maps-walkthrough-images/00-map-overlay.png)
+ [![](ios-maps-walkthrough-images/00-map-overlay.png "Um exemplo de aplicativo MapKit")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
  
 Você pode encontrar o código completo no **MapsWalkthroughComplete** pasta dentro de [exemplo de demonstração do mapa](https://developer.xamarin.com/samples/monotouch/MapDemo/).
 
@@ -279,7 +279,7 @@ Isso completa o código em `ViewDidLoad`. Agora, precisamos implementar nosso `M
 
 Execute o aplicativo. Agora temos um mapa interativo com uma anotação personalizada e uma sobreposição! Toque na anotação e a imagem de Austin é exibida, conforme mostrado abaixo:
 
- [![](ios-maps-walkthrough-images/01-map-image.png "Toque na anotação e a imagem de Austin é exibida")](ios-maps-walkthrough-images/01-map-image.png)
+ [![](ios-maps-walkthrough-images/01-map-image.png "Toque na anotação e a imagem de Austin é exibida")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 

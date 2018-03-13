@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 9579acc6c070bf692b0db1bd444a31c9ea4aa7ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="architecture"></a>Arquitetura
 
@@ -22,13 +22,12 @@ Você pode usar o [sistema](http://msdn.microsoft.com/en-us/library/system.aspx)
 
 No Android, a maioria das instalações do sistema como áudio, gráficos, OpenGL e telefonia não está disponível diretamente a aplicativos nativos, eles só são expostos através das APIs de Java Runtime Android que residem em um do [Java](https://developer.xamarin.com/api/namespace/Java.Lang/). * namespaces ou o [Android](https://developer.xamarin.com/api/namespace/Android/). * namespaces. A arquitetura é mais ou menos assim:
 
-[![Diagrama de Mono e arte acima do kernel e abaixo .NET/Java + associações](architecture-images/architecture1.png)](architecture-images/architecture1.png)
+[![Diagrama de Mono e arte acima do kernel e abaixo .NET/Java + associações](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Os desenvolvedores do xamarin acessar os diversos recursos do sistema operacional chamando APIs do .NET que eles saibam (para acesso de baixo nível) ou usando as classes expostas nos namespaces Android que fornece uma ponte para as APIs de Java que são expostas pelo o tempo de execução do Android.
 
 Para obter mais informações sobre como as classes Android se comunicam com as classes de tempo de execução Android, consulte o [API Design](~/android/internals/api-design.md) documento.
 
-<a name="Application_Packages" />
 
 ## <a name="application-packages"></a>Pacotes de aplicativos
 
@@ -44,7 +43,6 @@ Pacotes de aplicativos do Android são contêineres ZIP com um *. Apk* extensão
 Aplicativos xamarin também contêm *Android Callable Wrappers* para permitir que o Android chamar código gerenciado.
 
 
-<a name="Android_Callable_Wrappers" />
 
 ## <a name="android-callable-wrappers"></a>Callable Wrappers do Android
 
@@ -67,7 +65,6 @@ Referências globais podem ser liberadas explicitamente chamando [Java.Lang.Obje
 Deve ser tomado quando descartar gerenciados Callable Wrappers se a instância pode ser compartilhada entre threads, como descartar a instância inadvertidamente afetará as referências de quaisquer outros threads. Para segurança máxima, apenas `Dispose()` de instâncias que foram alocadas por meio de `new` *ou* de métodos que você *saber* sempre alocar novas instâncias e as instâncias não armazenados em cache que podem fazer com que a instância acidental de compartilhamento entre threads.
 
 
-<a name="Managed_Callable_Wrapper_Subclasses" />
 
 ## <a name="managed-callable-wrapper-subclasses"></a>Gerenciado Subclasses Callable Wrapper
 
@@ -76,7 +73,6 @@ Pode ser chamado de wrapper gerenciado subclasses são onde toda a lógica espec
 Gerenciados como callable wrappers, gerenciados subclasses callable wrapper também contêm uma referência global, acessível por meio de [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propriedade. Assim como com callable wrappers do gerenciado, referências globais podem ser liberadas explicitamente chamando [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
 Ao contrário de encapsuladores que pode ser chamadas, *muito cuidadoso* devem ser tomadas antes de descartar nesses casos, como *Dispose ()*espelhamento da instância interromperá o mapeamento entre a instância de Java (uma instância de um Android Callable Wrapper) e a instância gerenciada.
 
-<a name="Java_Activation" />
 
 ### <a name="java-activation"></a>Ativação de Java
 
@@ -182,7 +178,6 @@ I/mono-stdout( 2993): [Managed: Value=]
 Somente *Dispose ()* de gerenciados subclasses callable wrapper quando você souber que o objeto de Java não será usado mais ou, a subclasse não contém nenhum dado de instância e um *(IntPtr, JniHandleOwnership)* construtor foi fornecido.
 
 
-<a name="Application_Startup" />
 
 ## <a name="application-startup"></a>Inicialização do aplicativo
 

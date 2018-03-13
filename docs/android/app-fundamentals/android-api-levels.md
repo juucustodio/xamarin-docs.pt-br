@@ -7,18 +7,17 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 5a8b51f6c63d8632e71d1cddabb0c37758ee02f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 907af0948e9d081f05cc201c49f94629a513c935
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="understanding-android-api-levels"></a>Noções básicas sobre níveis de API do Android
 
 _Xamarin tem várias configurações de nível de API do Android que determinam a compatibilidade do aplicativo com várias versões do Android. Este guia explica o que significam que essas configurações, como configurá-los e o efeito que eles têm em seu aplicativo em tempo de execução._
 
-<a name="quick" />
 
 ## <a name="quick-start"></a>Início rápido
 
@@ -37,30 +36,30 @@ Antes de configurar um nível de API para seu projeto, você deve instalar os co
 Normalmente, todos os três níveis de API do xamarin são definidos com o mesmo valor. Sobre o **aplicativo** , defina **compilar usando a versão do Android (estrutura de destino)** para a versão mais recente da API estável (ou, no mínimo, para a versão do Android que tem todos os recursos necessários).
 Captura de tela a seguir, a estrutura de destino é definida como **7.1 Android (API nível 25 - Nougat)**:
 
-[![Destino padrão é versão do Framework compilação usando a versão do Android](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png)
+[![Destino padrão é versão do Framework compilação usando a versão do Android](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png#lightbox)
 
 No **manifesto do Android** , defina a versão do Android mínimo **Use compilar com SDK versão** e defina a versão de destino Android para o mesmo valor que a versão do Framework de destino (no exemplo a seguir captura de tela, a estrutura de destino Android é definida como **7.1 Android (Nougat)**):
 
-[![Versões de mínimo e o destino Android definido para a versão do Framework de destino](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png)
+[![Versões de mínimo e o destino Android definido para a versão do Framework de destino](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png#lightbox)
 
 Se você quiser manter a compatibilidade com versões anteriores com uma versão anterior do Android, defina **mínimo Android versão destino** para a versão mais antiga do Android que você deseja que seu aplicativo para dar suporte. (Observe que 14 de nível de API é o nível de API mínimo necessário para [serviços do Google Play e suporte de Firebase](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html).) A configuração de exemplo a seguir oferece suporte a versões Android na 14 de nível de API por meio do nível de API 25:
 
-[![Compilar usando o nível de API 25 Nougat, versão do Android do mínimo definido como 14 de nível de API](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png)
+[![Compilar usando o nível de API 25 Nougat, versão do Android do mínimo definido como 14 de nível de API](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Normalmente, todos os três níveis de API do xamarin são definidos com o mesmo valor. Definir **framework de destino** para a versão mais recente da API estável (ou, no mínimo, para a versão do Android que tem todos os recursos necessários). Para definir o **framework de destino**, navegue até **Build > geral** no **opções de projeto**. Captura de tela a seguir, a estrutura de destino é definida como **usar a mais recente plataforma instalada (8.0)**:
 
-[![Estrutura de destino padrão é a plataforma de uso mais recente instalado](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png)
+[![Estrutura de destino padrão é a plataforma de uso mais recente instalado](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png#lightbox)
 
 As configurações de versão mínima e o destino Android podem ser encontradas em **Build > aplicativo Android** na **opções de projeto**. Defina a versão do Android mínimo **automático - versão do framework de destino use** e defina a versão de destino Android para o mesmo valor que a versão do Framework de destino. Captura de tela a seguir, a estrutura de destino Android está definida como **8.0 Android (API nível 26)** para corresponder à configuração do Framework de destino acima:
 
-[![Configurando os níveis de destino e do framework nas opções de projeto](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png)
+[![Configurando os níveis de destino e do framework nas opções de projeto](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png#lightbox)
 
 Se você quiser manter a compatibilidade com versões anteriores com uma versão anterior do Android, alterar **versão do Android mínimo** para a versão mais antiga do Android que você deseja que seu aplicativo para dar suporte. Observe que 14 de nível de API é o nível de API mínimo necessário para [serviços do Google Play e suporte de Firebase](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html).
 Por exemplo, a configuração a seguir oferece suporte a versões Android mais cedo 14 de nível de API:
 
-[ ![Mínimo e versões de destino definidas como automático - usar a versão do framework de destino](android-api-levels-images/xs-minimum-sml.png)](android-api-levels-images/xs-minimum.png)
+[![Mínimo e versões de destino definidas como automático - usar a versão do framework de destino](android-api-levels-images/xs-minimum-sml.png)](android-api-levels-images/xs-minimum.png#lightbox)
 
 -----
 
@@ -68,13 +67,11 @@ Por exemplo, a configuração a seguir oferece suporte a versões Android mais c
 Se seu aplicativo dá suporte a várias versões Android, seu código deverá incluir verificações de tempo de execução para garantir que seu aplicativo funcione com a configuração de versão mínima Android (consulte [verificações de tempo de execução para versões Android](#runtimechecks) abaixo para obter detalhes). Se você estiver consumindo ou criar uma biblioteca, consulte [níveis de API e bibliotecas](#libraries) abaixo para práticas recomendadas na API de configuração de nível de configurações de bibliotecas.
 
 
-<a name="verslevels" />
 
 ## <a name="android-versions-and-api-levels"></a>Versões do Android e níveis de API
 
 Como a plataforma Android evolui e são lançadas novas versões Android, cada versão do Android é atribuído um identificador inteiro exclusivo, chamado de *nível API*. Portanto, cada versão do Android corresponde a um único nível de API do Android. Como os usuários instalar aplicativos em versões anteriores, bem como a mais recentes do Android, aplicativos do Android reais devem ser criados para trabalhar com vários níveis de API do Android.
 
-<a name="versions" />
 
 ### <a name="android-versions"></a>Versões do Android
 
@@ -145,7 +142,6 @@ Além disso, define o xamarin *códigos de versão de compilação* que mapeiam 
 
 Como essa lista indica, Android são lançadas novas versões frequentemente &ndash; , às vezes, várias versões por ano. Como resultado, o universo de dispositivos com Android que pode executar seu aplicativo inclui uma ampla variedade de versões Android mais antigas e mais recentes. Como você pode garantir que o aplicativo será executado consistente e confiável em muitas versões diferentes do Android? Níveis de API do Android podem ajudá-lo a gerenciar esse problema.
 
-<a name="apilevels" />
 
 ### <a name="android-api-levels"></a>Níveis de API do Android
 
@@ -159,13 +155,11 @@ Quando um aplicativo é criado, ele contém as seguintes informações de nível
 
 Essas configurações são usadas para garantir que a funcionalidade necessária para executar o aplicativo corretamente está disponível no dispositivo Android no momento da instalação. Caso contrário, o aplicativo está bloqueado em execução no dispositivo. Por exemplo, se o nível de API de um dispositivo Android é menor do que o nível mínimo de API que você especificar para seu aplicativo, o dispositivo Android impedirá o usuário instalando o aplicativo.
 
-<a name="settings" />
 
 ## <a name="project-api-level-settings"></a>Configurações de nível de API do projeto
 
 As seções a seguir explicam como usar o Gerenciador de SDK para preparar o ambiente de desenvolvimento para os níveis de API que você deseja como destino, seguido de explicações detalhadas sobre como configurar *Framework de destino*, *mínimo Versão do Android*, e *versão destino Android* configurações no xamarin.
 
-<a name="sdk" />
 
 ### <a name="android-sdk-platforms"></a>Plataformas SDK do Android
 
@@ -182,7 +176,7 @@ A estrutura de destino identifica quais versões de biblioteca que seu aplicativ
 É recomendável que você sempre compilar com o *mais recente* versão do Framework de destino disponível. Isso é útil mensagens de aviso para quaisquer APIs obsoletas que podem ser chamados por seu código. Usando a versão mais recente do Framework de destino é especialmente importante quando você usar as versões mais recentes de biblioteca de suporte &ndash; cada biblioteca espera que seu aplicativo para ser compilada no nível de API mínima da biblioteca de suporte ou maior. 
 
 > [!NOTE]
-> **Observação:** a partir de agosto de 2018, o Console do Google reproduzir exigirá que o nível de API 26 (Android 8.0) de destino novos aplicativos ou superior.
+> A partir de agosto de 2018, o Console do Google reproduzir exigirá que o nível de API 26 (Android 8.0) de destino novos aplicativos ou superior.
 Aplicativos existentes precisarão 26 de nível de API ou superior novembro de 2018 a partir de destino. Para obter mais informações, consulte [melhorando o desempenho no Google Play para anos ficar e segurança de aplicativo](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
 
@@ -190,7 +184,7 @@ Aplicativos existentes precisarão 26 de nível de API ou superior novembro de 2
 
 Para acessar a configuração da estrutura de destino no Visual Studio, abra as propriedades do projeto no **Solution Explorer** e selecione o **aplicativo** página:
 
-[![Página de propriedades do projeto de aplicativo](android-api-levels-images/vs-target-framework-sml.png)](android-api-levels-images/vs-target-framework.png)
+[![Página de propriedades do projeto de aplicativo](android-api-levels-images/vs-target-framework-sml.png)](android-api-levels-images/vs-target-framework.png#lightbox)
 
 Definir a estrutura de destino, selecionando um nível de API no menu suspenso em **compilar usando a versão do Android** como mostrado acima.
 
@@ -198,7 +192,7 @@ Definir a estrutura de destino, selecionando um nível de API no menu suspenso e
 
 Para acessar a configuração da estrutura de destino no Visual Studio para Mac, clique no nome do projeto e selecione **opções**; este abre o **opções de projeto** caixa de diálogo. Na caixa de diálogo, navegue até **Build > geral** conforme mostrado aqui:
 
-[![Criar uma seção geral da página de opções de projeto](android-api-levels-images/xs-target-framework-sml.png)](android-api-levels-images/xs-target-framework.png)
+[![Criar uma seção geral da página de opções de projeto](android-api-levels-images/xs-target-framework-sml.png)](android-api-levels-images/xs-target-framework.png#lightbox)
 
 Definir a estrutura de destino, selecionando um nível de API no menu suspenso à direita do **framework de destino** como mostrado acima.
 
@@ -219,7 +213,7 @@ Embora o seu aplicativo pode criar e instalar esse intervalo de plataformas com 
 
 Para acessar a configuração de versão mínima Android no Visual Studio, abra as propriedades do projeto no **Solution Explorer** e selecione o **manifesto do Android** página. No menu suspenso em **versão do Android mínimo** você pode selecionar a versão do Android mínimo para o seu aplicativo:
 
-[![Android mínimo para a opção de destino definida para compilar usando a versão do SDK](android-api-levels-images/vs-minimum-version-sml.png)](android-api-levels-images/vs-minimum-version.png)
+[![Android mínimo para a opção de destino definida para compilar usando a versão do SDK](android-api-levels-images/vs-minimum-version-sml.png)](android-api-levels-images/vs-minimum-version.png#lightbox)
 
 Se você selecionar **Use compilar com SDK versão**, a versão do Android mínimo será o mesmo que a configuração da estrutura de destino.
 
@@ -228,7 +222,7 @@ Se você selecionar **Use compilar com SDK versão**, a versão do Android míni
 Para acessar a configuração da estrutura de destino no Visual Studio para Mac, clique no nome do projeto e selecione **opções**; este abre o **opções de projeto** caixa de diálogo. Navegue até **Build > aplicativo Android**.
 Usando o menu suspenso à direita do **versão do Android mínimo**, você pode definir a versão do Android mínimo para seu aplicativo:
 
-[ ![Versão mínima do Android definido como automático - versão do framework de destino de uso](android-api-levels-images/xs-minimum-version-sml.png)](android-api-levels-images/xs-minimum-version.png)
+[![Versão mínima do Android definido como automático - versão do framework de destino de uso](android-api-levels-images/xs-minimum-version-sml.png)](android-api-levels-images/xs-minimum-version.png#lightbox)
 
 Se você selecionar **automático &ndash; usar a versão do framework de destino**, a versão do Android mínimo será o mesmo que a configuração da estrutura de destino.
 
@@ -247,7 +241,7 @@ A estrutura de destino e a versão de destino Android, embora tenha nomes simila
 
 Para acessar essa configuração no Visual Studio, abra as propriedades do projeto no **Solution Explorer** e selecione o **manifesto do Android** página. No menu suspenso em **versão destino Android** você pode selecionar a versão de destino Android para o seu aplicativo:
 
-[![Versão do Android destino definido para compilar usando a versão do SDK](android-api-levels-images/vs-target-version-sml.png)](android-api-levels-images/vs-target-version.png)
+[![Versão do Android destino definido para compilar usando a versão do SDK](android-api-levels-images/vs-target-version-sml.png)](android-api-levels-images/vs-target-version.png#lightbox)
 
 É recomendável que você defina explicitamente a versão do Android do destino para a versão mais recente do Android que você pode usar para testar seu aplicativo. Idealmente, ele deve ser definido para a versão mais recente do SDK do Android &ndash; Isso permite que você use as novas APIs antes de realizar as alterações de comportamento. Para a maioria dos desenvolvedores, nós *não* recomendável definir a versão de destino Android com **Use compilar com SDK versão**.
 
@@ -256,7 +250,7 @@ Para acessar essa configuração no Visual Studio, abra as propriedades do proje
 Para acessar a configuração da estrutura de destino no Visual Studio para Mac, clique no nome do projeto e selecione **opções**; este abre o **opções de projeto** caixa de diálogo. Navegue até **Build > aplicativo Android**.
 Usando o menu suspenso à direita do **versão destino Android**, você pode definir a versão de destino Android para o seu aplicativo:
 
-[![Versão do Android destino definido como automático - versão do framework de destino de uso](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png)
+[![Versão do Android destino definido como automático - versão do framework de destino de uso](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png#lightbox)
 
 É recomendável que você defina explicitamente a versão do Android do destino para a versão mais recente do Android que você pode usar para testar seu aplicativo. Idealmente, ele deve ser definido para a versão de SDK do Android mais recente disponível &ndash; Isso permite que você use as novas APIs antes de realizar as alterações de comportamento. Para a maioria dos desenvolvedores, não é recomendável definir a versão de destino Android com **automático - versão do framework de destino use**.
 
@@ -311,14 +305,14 @@ Não há nenhuma regra rápida e simple que explica como reduzir ou modificar a 
 
 Quando você cria um projeto de biblioteca do xamarin (como uma biblioteca de classe ou de uma biblioteca de associações), você pode configurar apenas a definição da estrutura de destino &ndash; a versão do Android mínimo e as configurações de versão de destino Android não estão disponíveis. Isso ocorre porque não há nenhum **manifesto do Android** página:
 
-[![Apenas a compilação usando a opção de versão do Android está disponível](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png)
+[![Apenas a compilação usando a opção de versão do Android está disponível](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Quando você cria um projeto de biblioteca de xamarin, não há nenhum **aplicativo Android** página onde você pode configurar a versão do Android mínimo e a versão de destino Android &ndash; a versão do Android mínimo e o destino Configurações de versão do Android não estão disponíveis.
 Isso ocorre porque não há nenhum **Build > aplicativo Android** página):
 
-[ ![Página geral sem opções de versão mínima e o destino de compilação](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png)
+[![Página geral sem opções de versão mínima e o destino de compilação](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
 
 -----
 

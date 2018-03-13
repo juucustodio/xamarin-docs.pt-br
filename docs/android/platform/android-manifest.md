@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0f270111ad4e10f035a3cb695564d789f40097fd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-android-manifest"></a>Trabalhando com o manifesto do Android
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -24,7 +23,6 @@ ms.lasthandoff: 02/27/2018
 **AndroidManifest.xml** é gerado como parte do processo de compilação e o XML encontrado em **Properties/AndroidManifest.xml** é mesclado com o XML que é gerada a partir de atributos personalizados. Mesclado resultante **AndroidManifest.xml** reside no **obj** subdiretório; por exemplo, ela reside no **obj/Debug/android/AndroidManifest.xml** para compilações de depuração . O processo de mesclagem é simples: ele usa atributos personalizados dentro do código para gerar elementos XML, e *insere* esses elementos em **AndroidManifest.xml**. 
 
 
-<a name="The_Basics" />
 
 ## <a name="the-basics"></a>Noções básicas
 
@@ -60,7 +58,6 @@ Este exemplo faz o seguinte fragmento xml a ser adicionado ao **AndroidManifest.
 O `[Activity]` atributo não tem nenhum efeito `abstract` tipos; `abstract` tipos são ignorados.
 
 
-<a name="Activity_Name" />
 
 ### <a name="activity-name"></a>Nome da Atividade
 
@@ -83,7 +80,6 @@ Este exemplo produz o seguinte fragmento xml:
 
 *Observação*: você deve usar o `Name` propriedade apenas por motivos de compatibilidade com versões anteriores, como tal, renomeando pode causar lentidão na pesquisa do tipo em tempo de execução. Se você tiver código herdado que espera que o nome do tipo padrão da atividade deve se basear em minúscula namespace e nome de classe, consulte [nomenclatura Wrapper Callable Android](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) para obter dicas sobre como manter a compatibilidade. 
 
-<a name="Activity_Title_Bar" />
 
 ### <a name="activity-title-bar"></a>Barra de título da atividade
 
@@ -104,7 +100,6 @@ Este exemplo produz o seguinte fragmento xml:
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-<a name="Launchable_from_Application_Chooser" />
 
 ### <a name="launchable-from-application-chooser"></a>Pode ser iniciado a partir do seletor de aplicativo
 
@@ -130,7 +125,6 @@ Este exemplo produz o seguinte fragmento xml:
 ```
 
 
-<a name="Activity_Icon" />
 
 ### <a name="activity-icon"></a>Ícone de atividade
 
@@ -155,7 +149,6 @@ Este exemplo produz o seguinte fragmento xml:
 </activity>
 ```
 
-<a name="Permissions" />
 
 ### <a name="permissions"></a>Permissões
 
@@ -178,11 +171,9 @@ Na versão de versão do manifesto de compilação (no **obj/Debug/android/Andro
 
 
 
-<a name="Advanced_Features" />
 
 ## <a name="advanced-features"></a>Recursos avançados
 
-<a name="Intent_Actions_and_Features" />
 
 ### <a name="intent-actions-and-features"></a>Recursos e ações intencionais
 
@@ -214,7 +205,6 @@ Este exemplo produz o seguinte fragmento xml:
 </activity>
 ```
 
-<a name="Application_Element" />
 
 ### <a name="application-element"></a>Elemento de aplicativo
 
@@ -243,7 +233,6 @@ O `Application` elemento não é a única maneira de configurar `<application>` 
 Há muitos atributos de nível de aplicativo que você pode configurar o `<application>` elemento; para obter mais informações sobre essas configurações, consulte o [propriedades públicas](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/#Public_Properties) seção [ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/). 
 
 
-<a name="List_of_Custom_Attributes" />
 
 ## <a name="list-of-custom-attributes"></a>Lista de atributos personalizados
 

@@ -3,14 +3,15 @@ title: "Resumo do capítulo 19. Exibições de coleção"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 37afa3a54fd20745a65312fb5a24d958c8ec405f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: 73b3ec3e60a8fca5c48f515eab2cbb8359618dbb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Resumo do capítulo 19. Exibições de coleção
 
@@ -97,7 +98,7 @@ O [ **TextCellListXaml** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Em XAML, é possível definir um [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) para o `DataTemplate` e, em seguida, definir uma árvore visual personalizada como o [ `View` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ViewCell.View/) propriedade `ViewCell`. (`View` é a propriedade de conteúdo de `ViewCell` as `ViewCell.View` marcas não são necessárias.) O [ **CustomNamedColorList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/CustomNamedColorList) demonstra essa técnica:
 
-[![Tripla captura de tela da lista de cores denominado personalizada](images/ch19fg11-small.png "personalizado chamado cor lista")](images/ch19fg11-large.png "personalizado chamado lista de cores")
+[![Tripla captura de tela da lista de cores denominado personalizada](images/ch19fg11-small.png "personalizado chamado cor lista")](images/ch19fg11-large.png#lightbox "personalizado chamado lista de cores")
 
 Obter o tamanho certo para todas as plataformas pode ser difícil. O [ `RowHeight` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RowHeight/) propriedade é útil, mas em alguns casos, você vai querer recorrer ao [ `HasUnevenRows` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.HasUnevenRows/) propriedade, que é menos eficiente, mas força o `ListView` para dimensionar linhas. Para iOS e Android, você deve usar uma dessas duas propriedades para obter dimensionamento de linha adequada.
 
@@ -127,7 +128,7 @@ O [ `Student` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/maste
 
 O [ **StudentList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/StudentList) programa usa uma `ImageCell` para exibir os alunos e das imagens em um `ListView`:
 
-[![Tripla captura de tela da lista de aluno](images/ch19fg18-small.png "aluno lista")](images/ch19fg18-large.png "aluno lista")
+[![Tripla captura de tela da lista de aluno](images/ch19fg18-small.png "aluno lista")](images/ch19fg18-large.png#lightbox "aluno lista")
 
 O [ **ListViewHeader** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ListViewHeader) exemplo adiciona um [ `Header` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.Header/) propriedade, mas aparece somente no Android.
 

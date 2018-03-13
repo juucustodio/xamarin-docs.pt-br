@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e95cf18c281732c85c2029e4ff35e8dd8be0f5e2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a56cc080ac04c45ef3f0fcc6c7c89096a08beddf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Criando uma nova biblioteca de multiplataforma para NuGet
 
@@ -30,21 +30,21 @@ Se você precisar posteriormente a funcionalidade específica de plataforma, [po
 
 2. Escolha **Multiplatform biblioteca** do **Multiplatform > biblioteca** seção:
 
-  [ ![](single-codebase-images/mulitplatform-library-sml.png "Configurar a biblioteca de multiplataforma para uma base de código único")](single-codebase-images/mulitplatform-library.png)
+  [![](single-codebase-images/mulitplatform-library-sml.png "Configurar a biblioteca de multiplataforma para uma base de código único")](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. Insira um **nome** e **descrição**e escolha **única para todas as plataformas**:
 
-  [ ![](single-codebase-images/single-configure-sml.png "Configurar a biblioteca de multiplataforma para uma base de código único")](single-codebase-images/single-configure.png)
+  [![](single-codebase-images/single-configure-sml.png "Configurar a biblioteca de multiplataforma para uma base de código único")](single-codebase-images/single-configure.png#lightbox)
 
 4. Conclua o assistente. Um projeto de biblioteca único é criado na solução.
 
 5. Clique com botão direito no novo projeto de biblioteca e, em seguida, selecione **opções**. O **Build > geral** seção permite que o **Framework de destino** a ser definido – escolha um perfil PCL portátil do .NET ou uma versão padrão do .NET:
 
-  [ ![](single-codebase-images/single-choose-type-sml.png "Escolher PCL ou .NET padrão para o tipo de biblioteca")](single-codebase-images/single-choose-type.png)
+  [![](single-codebase-images/single-choose-type-sml.png "Escolher PCL ou .NET padrão para o tipo de biblioteca")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. Também no **opções de projeto** janela, abra o **pacote NuGet > metadados** seção e insira o [metadados necessários](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (bem como quaisquer metadados opcional):
 
-  [ ![](single-codebase-images/single-metadata-sml.png "Insira os metadados necessários")](single-codebase-images/single-metadata.png)
+  [![](single-codebase-images/single-metadata-sml.png "Insira os metadados necessários")](single-codebase-images/single-metadata.png#lightbox)
 
 7. Clique com botão direito no projeto de biblioteca e escolha **criar pacote do NuGet** (ou compilar ou implantar a solução) e o **nupkg** arquivo de pacote do NuGet serão salvas no **/bin/** pasta (Debug ou Release, dependendo da configuração):
 
@@ -61,17 +61,17 @@ Esta captura de tela mostra o conteúdo de um NuGet com base em PCL – um únic
 
 <a name="add-platforms" />
 
-# <a name="adding-platform-specific-code"></a>Adicionando código específico da plataforma
+## <a name="adding-platform-specific-code"></a>Adicionando código específico da plataforma
 
 Projetos baseados em PCL e projetos baseados em .NET padrão não podem conter referências de plataforma específica (por exemplo, iOS ou Android funcionalidade).
 
 Se um projeto existente de PCL ou .NET padrão precisa ser expandido para incluir o código específico da plataforma, isso pode ser feito clicando duas vezes no projeto e selecionando **Adicionar > Adicionar a implementação de plataforma...** :
 
-[ ![](single-codebase-images/add-later-sml.png "Adicionar menu de implementação de plataforma")](single-codebase-images/add-later.png)
+[![](single-codebase-images/add-later-sml.png "Adicionar menu de implementação de plataforma")](single-codebase-images/add-later.png#lightbox)
 
 Um ou mais projetos de plataforma podem ser adicionados à solução e a biblioteca de PCL ou .NET padrão existente, opcionalmente, pode ser convertida em um projeto compartilhado:
 
-[ ![](single-codebase-images/add-later-platforms-sml.png "Adicionar opções de plataformas como iOS, Android e projeto compartilhado")](single-codebase-images/add-later-platforms-sml.png)
+[![](single-codebase-images/add-later-platforms-sml.png "Adicionar opções de plataformas como iOS, Android e projeto compartilhado")](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
 Depois de converter em um projeto compartilhado, visite o **opções de projeto > pacote NuGet > Assemblies de referência**
 [seção](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) e certifique-se de que as necessárias perfil selecionado (para que o NuGet continua a ser compatível com projetos que ela foi usada anteriormente).

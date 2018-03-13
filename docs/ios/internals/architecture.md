@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: bf9d292acf43bbbe3e4ba76b5a264a11288b7225
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 732f60a413077bc15018679fe8f8bc0a18227246
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-architecture"></a>Arquitetura do iOS
 
@@ -20,7 +20,7 @@ Aplicativos xamarin executado dentro do ambiente de execução Mono e usam a com
 
 O diagrama a seguir mostra uma visão geral básica dessa arquitetura:
 
-[ ![](architecture-images/ios-arch-small.png "Este diagrama mostra uma visão geral básica da arquitetura de compilação em frente do tempo (AOT)")](architecture-images/ios-arch.png)
+[ ![](architecture-images/ios-arch-small.png "Este diagrama mostra uma visão geral básica da arquitetura de compilação em frente do tempo (AOT)")](architecture-images/ios-arch.png#lightbox)
 
 ## <a name="native-and-managed-code-an-explanation"></a>Nativo e código gerenciado: uma explicação
 
@@ -36,7 +36,7 @@ Quando você compila a qualquer aplicativo da plataforma de Xamarin, o compilado
 No entanto, há uma restrição de segurança no iOS, definido pela Apple, que não permite a execução de código gerado dinamicamente em um dispositivo.
 Para garantir o cumprimento esses protocolos de segurança, xamarin usa um compilador em frente do tempo (AOT) para compilar o código gerenciado. Isso produz um iOS nativo binário, opcionalmente otimizado com LLVM para dispositivos, que podem ser implantados em um processador baseado em ARM da Apple. Um esboço do diagrama de como isso se encaixa está ilustrada abaixo:
 
-[ ![](architecture-images/aot.png "Um esboço do diagrama de como isso se encaixa em conjunto")](architecture-images/aot-large.png)
+[![](architecture-images/aot.png "Um esboço do diagrama de como isso se encaixa em conjunto")](architecture-images/aot-large.png#lightbox)
 
 Usar AOT tem um número de limitações que são detalhadas no [limitações](~/ios/internals/limitations.md) guia. Ele também fornece uma série de melhorias por JIT por meio de uma redução no tempo de inicialização e várias otimizações de desempenho
 
@@ -101,7 +101,7 @@ Há dois tipos de registradores usados em xamarin – dinâmico e estático:
 
 - **Registradores estáticos** – o registrador estático gera código Objective-C durante a compilação, o que é compilada em uma biblioteca estática e vinculada para o executável. Isso permite uma inicialização mais rápida, mas leva mais tempo durante o tempo de compilação. Isso é usado por padrão para compilações do dispositivo. O registrador estático também pode ser usado com o simulador de iOS passando `--registrar:static` como um `mtouch` atributo nas opções de compilação do projeto, conforme mostrado abaixo:
 
-    [ ![](architecture-images/image1.png "Argumentos de mtouch adicionais de configuração")](architecture-images/image1.png)
+    [![](architecture-images/image1.png "Argumentos de mtouch adicionais de configuração")](architecture-images/image1.png#lightbox)
 
 Para obter mais informações sobre as especificações do sistema de registro do tipo usado pelo xamarin iOS, consulte o [tipo registrador](~/ios/internals/registrar.md) guia.
 
@@ -179,7 +179,7 @@ Este guia pesquisados na compilação de AOT de aplicativos xamarin e xamarin ex
 ## <a name="related-links"></a>Links relacionados
 
 - [Limitações](~/ios/internals/limitations.md)
-- [Associação Objective-C](~/cross-platform/macios/binding/overview.md)
+- [Associação do Objective-C](~/cross-platform/macios/binding/overview.md)
 - [Seletores de Objective-C](~/ios/internals/objective-c-selectors.md)
 - [Tipo de registro](~/ios/internals/registrar.md)
-- [Linker](~/ios/deploy-test/linker.md)
+- [Vinculador](~/ios/deploy-test/linker.md)

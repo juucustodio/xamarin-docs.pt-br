@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 28c8ecc77aaeb00eff6f343ad41fed1c653362db
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 78832c396f8968769f3134728cd435555aecbc8f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="checking-battery-status"></a>Verificando o Status da bateria
 
@@ -70,7 +70,7 @@ namespace DependencyServiceSample
 Codificando a essa interface no código compartilhado permitirá que o aplicativo xamarin. Forms acessar as APIs de gerenciamento de energia em cada plataforma.
 
 > [!NOTE]
-> **Observação**: Classes que implementam a Interface devem ter um construtor sem parâmetros para trabalhar com o `DependencyService`. Construtores não podem ser definidos por interfaces.
+> Classes que implementam a Interface devem ter um construtor sem parâmetros para trabalhar com o `DependencyService`. Construtores não podem ser definidos por interfaces.
 
 <a name="iOS_Implementation" />
 
@@ -547,4 +547,4 @@ Executar este aplicativo no iOS, Android ou plataformas Windows e pressionando o
 
 - [DependencyService (exemplo)](https://developer.xamarin.com/samples/DependencyService)
 - [Usando DependencyService (exemplo)](https://developer.xamarin.com/samples/UsingDependencyService/)
-- [Exemplos de xamarin. Forms](https://github.com/xamarin/xamarin-forms-samples)
+- [Amostras do Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)

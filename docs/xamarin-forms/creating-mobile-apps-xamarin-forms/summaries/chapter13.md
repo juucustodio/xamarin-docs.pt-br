@@ -3,14 +3,15 @@ title: "Resumo do capítulo 13. Bitmaps"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 2e511f2ebf75b065469a9051ee5797ac58c147f3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 74e5e47a481d02fe11be4b770b818d2c88b517f7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumo do capítulo 13. Bitmaps
 
@@ -76,7 +77,7 @@ A melhor abordagem é começar com um bitmap maior do que a largura de telefone 
 
 O [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) exibe capítulo 7 de Lewis Carroll *tempo livre de Alice no país das Maravilhas* com as ilustrações originais por John Tenniel:
 
-[![Captura de tela tripla da parte de chá mad](images/ch13fg16-small.png "Mad Hatters chá de catálogo de texto")](images/ch13fg16-large.png "Mad Hatters chá de catálogo de texto")
+[![Captura de tela tripla da parte de chá mad](images/ch13fg16-small.png "Mad Hatters chá de catálogo de texto")](images/ch13fg16-large.png#lightbox "Mad Hatters chá de catálogo de texto")
 
 ### <a name="browsing-and-waiting"></a>Navegar e aguardando
 

@@ -3,16 +3,16 @@ title: "Notificações de usuário avançado"
 description: "Este artigo usa uma análise mais profunda sobre a nova estrutura de notificações de usuário e como aproveitar ao máximo-lo em um aplicativo xamarin."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4e1ff652-28f0-4566-b383-9d12664401a4
+ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6408f3b45f93413fa814e410f07e7b71179b7338
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e20c9f068fe92e0dd711e0c20d31d713a0d03f0d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="advanced-user-notifications"></a>Notificações de usuário avançado
 
@@ -81,7 +81,7 @@ Para uma notificação remoto a ser modificado por uma extensão de serviço, su
 
 Examine a visão geral do processo a seguir:
 
-[ ![](advanced-user-notifications-images/extension02.png "Adicionando o processo de anexos de mídia")](advanced-user-notifications-images/extension02.png)
+[![](advanced-user-notifications-images/extension02.png "Adicionando o processo de anexos de mídia")](advanced-user-notifications-images/extension02.png#lightbox)
 
 Depois que a notificação remoto é entregue ao dispositivo (por meio de APNs), a extensão do serviço, em seguida, pode baixar a imagem necessária por meio de qualquer meio desejado (como uma `NSURLSession`) e depois de receber a imagem, ele pode modificar o conteúdo da notificação e exibir -o para o usuário.
 
@@ -157,7 +157,7 @@ Para dar suporte à interação do usuário com a notificação do usuário, aç
 
 Quando uma notificação de usuário com uma interface de usuário personalizada é apresentada ao usuário, ele terá os seguintes elementos:
 
-[ ![](advanced-user-notifications-images/customui01.png "A notificação do usuário com um elemento de interface de usuário personalizada")](advanced-user-notifications-images/customui01.png)
+[![](advanced-user-notifications-images/customui01.png "A notificação do usuário com um elemento de interface de usuário personalizada")](advanced-user-notifications-images/customui01.png#lightbox)
 
 Se o usuário interage com as ações personalizadas (apresentados a seguir, a notificação), a Interface do usuário pode ser atualizada para fornecer os comentários de usuário como o que aconteceu quando invocada a uma determinada ação.
 
@@ -171,13 +171,13 @@ Para implementar uma interface de usuário de notificação de usuário personal
 2. Com o botão direito no nome da solução no **solução preenchimento** e selecione **adicionar** > **adicionar novo projeto**.
 3. Selecione **iOS** > **extensões** > **extensões de conteúdo de notificação** e clique no **próximo** botão: 
 
-    [ ![](advanced-user-notifications-images/notify01.png "Selecione as extensões de conteúdo de notificação")](advanced-user-notifications-images/notify01.png)
+    [![](advanced-user-notifications-images/notify01.png "Selecione as extensões de conteúdo de notificação")](advanced-user-notifications-images/notify01.png#lightbox)
 4. Insira um **nome** para a extensão e clique no **próximo** botão: 
 
-    [ ![](advanced-user-notifications-images/notify02.png "Insira um nome para a extensão")](advanced-user-notifications-images/notify02.png)
+    [![](advanced-user-notifications-images/notify02.png "Insira um nome para a extensão")](advanced-user-notifications-images/notify02.png#lightbox)
 5. Ajustar o **nome do projeto** e/ou **nome da solução** se necessário e clique no **criar** botão: 
 
-    [ ![](advanced-user-notifications-images/notify03.png "Ajustar o nome do projeto e/ou o nome da solução")](advanced-user-notifications-images/notify03.png)
+    [![](advanced-user-notifications-images/notify03.png "Ajustar o nome do projeto e/ou o nome da solução")](advanced-user-notifications-images/notify03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -185,7 +185,7 @@ Para implementar uma interface de usuário de notificação de usuário personal
 2. Clique com botão direito no nome da solução no **Solution Explorer** e selecione **adicionar** > **adicionar novo projeto**.
 3. Selecione **iOS** > **extensões** > **extensões de conteúdo de notificação**: 
 
-    [ ![](advanced-user-notifications-images/notify01w.png "Selecione as extensões de conteúdo de notificação")](advanced-user-notifications-images/notify01w.png)
+    [![](advanced-user-notifications-images/notify01w.png "Selecione as extensões de conteúdo de notificação")](advanced-user-notifications-images/notify01w.png#lightbox)
 4. Insira um **nome** para a extensão e clique no **Okey** botão.
 
 -----
@@ -254,7 +254,7 @@ O sistema precisa ser informado sobre como localizar a extensão de conteúdo de
 3. Expanda o `NSExtension` chave.
 4. Adicionar o `UNNotificationExtensionCategory` chave como tipo **cadeia de caracteres** com o valor da categoria de extensão pertence (neste exemplo ' evento convite): 
 
-    [ ![](advanced-user-notifications-images/customui02.png "Adicionar a chave UNNotificationExtensionCategory")](advanced-user-notifications-images/customui02.png)
+    [![](advanced-user-notifications-images/customui02.png "Adicionar a chave UNNotificationExtensionCategory")](advanced-user-notifications-images/customui02.png#lightbox)
 5. Salve as alterações.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -263,7 +263,7 @@ O sistema precisa ser informado sobre como localizar a extensão de conteúdo de
 3. Expanda o `NSExtension` chave.
 4. Adicionar o `UNNotificationExtensionCategory` chave como tipo **cadeia de caracteres** com o valor da categoria de extensão pertence (neste exemplo ' evento convite): 
 
-    [ ![](advanced-user-notifications-images/customui02w.png "Adicionar a chave UNNotificationExtensionCategory")](advanced-user-notifications-images/customui02w.png)
+    [![](advanced-user-notifications-images/customui02w.png "Adicionar a chave UNNotificationExtensionCategory")](advanced-user-notifications-images/customui02w.png#lightbox)
 5. Salve as alterações.
 
 -----
@@ -272,11 +272,11 @@ Categorias de extensão de conteúdo de notificação (`UNNotificationExtensionC
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui03.png "Categorias de extensão de conteúdo de notificação")](advanced-user-notifications-images/customui03.png)
+[![](advanced-user-notifications-images/customui03.png "Categorias de extensão de conteúdo de notificação")](advanced-user-notifications-images/customui03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui03w.png "Categorias de extensão de conteúdo de notificação")](advanced-user-notifications-images/customui03w.png)
+[![](advanced-user-notifications-images/customui03w.png "Categorias de extensão de conteúdo de notificação")](advanced-user-notifications-images/customui03w.png#lightbox)
 
 -----
 
@@ -286,11 +286,11 @@ Em uma situação em que a interface do usuário de notificação personalizada 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui04.png "Localizando informações sobre o padrão")](advanced-user-notifications-images/customui04.png)
+[![](advanced-user-notifications-images/customui04.png "Localizando informações sobre o padrão")](advanced-user-notifications-images/customui04.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui04w.png "Localizando informações sobre o padrão")](advanced-user-notifications-images/customui04w.png)
+[![](advanced-user-notifications-images/customui04w.png "Localizando informações sobre o padrão")](advanced-user-notifications-images/customui04w.png#lightbox)
 
 -----
 
@@ -367,11 +367,11 @@ Para eliminar esse efeito, edite o `Info.plist` arquivo para a extensão e defin
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui05.png "A chave UNNotificationExtensionInitialContentSizeRatio")](advanced-user-notifications-images/customui05.png)
+[![](advanced-user-notifications-images/customui05.png "A chave UNNotificationExtensionInitialContentSizeRatio")](advanced-user-notifications-images/customui05.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui05w.png "A chave UNNotificationExtensionInitialContentSizeRatio")](advanced-user-notifications-images/customui05w.png)
+[![](advanced-user-notifications-images/customui05w.png "A chave UNNotificationExtensionInitialContentSizeRatio")](advanced-user-notifications-images/customui05w.png#lightbox)
 
 -----
 

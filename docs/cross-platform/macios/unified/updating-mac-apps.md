@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 1967dea3b7f3a870950cdc7732292e9d4e24a1a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 35665731fb0b8b669a850c06929dd951589e6bf6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="updating-existing-mac-apps"></a>Atualizando aplicativos existentes do Mac
 
@@ -20,18 +20,17 @@ _Siga estas etapas para atualizar um aplicativo Xamarin.Mac existente para usar 
 
 Atualizar um aplicativo existente para usar a API unificada requer alterações no próprio arquivo do projeto, bem como para os namespaces e as APIs usadas no código do aplicativo.
 
-# <a name="the-road-to-64-bits"></a>O caminho para 64 Bits
+## <a name="the-road-to-64-bits"></a>O caminho para 64 Bits
 
 As novas APIs unificado são necessários para dar suporte a arquiteturas de dispositivo de 64 bits de um aplicativo Xamarin.Mac. A partir de 1º de fevereiro de 2015 Apple requer que todos os envios de aplicativo novo para Mac App Store dá suporte a arquiteturas de 64 bits.
 
 Xamarin fornece ferramentas para Visual Studio para Mac e o Visual Studio automatizar o processo de migração da API clássica para a API unificada ou você pode converter os arquivos de projeto manualmente. Enquanto o usando as ferramentas automática é altamente recomendável, este artigo aborda os dois métodos.
 
-## <a name="before-you-start"></a>Antes de começar...
+### <a name="before-you-start"></a>Antes de começar...
 
 Antes de atualizar seu código existente para a API unificada, é altamente recomendável que você elimine todas *avisos de compilação*. Muitos *avisos* na API do clássico se tornarão erros quando você migrar para unificada. É mais fácil corrigi-los antes de iniciar, porque as mensagens do compilador da API clássica geralmente fornecem dicas sobre o que a atualização.
 
-
-# <a name="automated-updating"></a>Automatizada de atualização
+## <a name="automated-updating"></a>Automatizada de atualização
 
 Depois que os avisos foram corrigidos, selecione um projeto existente do Mac no Visual Studio para Mac ou o Visual Studio e escolha **migrar para a API de unificado de Xamarin.Mac** do **projeto** menu. Por exemplo:
 
@@ -50,11 +49,11 @@ Para obter informações detalhadas sobre a estrutura de destino e as implicaç�
 
 A ferramenta basicamente automatiza todas as etapas descritas no **atualização manualmente** seção apresentados a seguir e é o método sugerido de converter um projeto existente do Xamarin.Mac para a API unificada.
 
-# <a name="steps-to-update-manually"></a>Etapas para atualizar manualmente
+## <a name="steps-to-update-manually"></a>Etapas para atualizar manualmente
 
 Novamente, depois que os avisos foram corrigidos, siga estas etapas para atualizar manualmente Xamarin.Mac aplicativos para usar a nova API unificada:
 
-## <a name="1-update-project-type--build-target"></a>1. Tipo de projeto de atualização e o destino de compilação
+### <a name="1-update-project-type--build-target"></a>1. Tipo de projeto de atualização e o destino de compilação
 
 Alterar o tipo de projeto em seu **csproj** arquivos de `42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23` para `A3F8F2AB-B479-4A4A-A458-A89E7DC349F1`. Editar o **csproj** arquivo em um editor de texto, substituindo o item primeiro o `<ProjectTypeGuids>` elemento conforme mostrado:
 
@@ -76,8 +75,7 @@ Exemplo:
 
 ![](updating-mac-apps-images/csproj3.png "Adicione estas linhas de código após o elemento < AssemblyName >")
 
-
-## <a name="2-update-project-references"></a>2. Atualizar referências de projeto
+### <a name="2-update-project-references"></a>2. Atualizar referências de projeto
 
 Expanda o projeto de aplicativo de Mac **referências** nó. Mostrarão inicialmente um * quebrada - **XamMac** referência semelhante à captura de tela (como acabamos de alterar o tipo de projeto):
 
@@ -91,28 +89,27 @@ Em seguida, clique duas vezes no **referências** pasta o **Solution Explorer** 
 
 Pressione **Okey** para salvar alterações de referências de projeto.
 
-## <a name="3-remove-monomac-from-namespaces"></a>3. Remover MonoMac de Namespaces
+### <a name="3-remove-monomac-from-namespaces"></a>3. Remover MonoMac de Namespaces
 
 Remover o **MonoMac** prefixo de namespaces no `using` instruções ou sempre que um nome de classe foi totalmente qualificado (por exemplo. `MonoMac.AppKit` torna-se apenas `AppKit`).
 
-## <a name="4-remap-types"></a>4. Remapear tipos
+### <a name="4-remap-types"></a>4. Remapear tipos
 
 [Tipos nativos](~/cross-platform/macios/nativetypes.md) foram introduzidas qual substituir alguns tipos que foram usados anteriormente, como instâncias de `System.Drawing.RectangleF` com `CoreGraphics.CGRect` (por exemplo). A lista completa de tipos pode ser encontrada no [tipos nativos](~/cross-platform/macios/nativetypes.md) página.
 
-## <a name="5-fix-method-overrides"></a>5. Corrija as substituições de método
+### <a name="5-fix-method-overrides"></a>5. Corrija as substituições de método
 
 Alguns `AppKit` métodos tiveram sua assinatura alterada para usar o novo [tipos nativos](~/cross-platform/macios/nativetypes.md) (como `nint`). Se esses métodos de substituição de subclasses personalizadas as assinaturas não irão corresponder e resultarão em erros. Corrigi essas substituições de método alterando a subclasse de acordo com a nova assinatura usando tipos nativos. 
 
-# <a name="considerations"></a>Considerações
+## <a name="considerations"></a>Considerações
 
 As seguintes considerações devem ser levadas em conta ao converter um projeto existente do Xamarin.Mac da API clássica para a nova API unificada se esse aplicativo depende de um ou mais componentes ou pacote do NuGet. 
 
-## <a name="components"></a>Componentes
+### <a name="components"></a>Componentes
 
 Qualquer componente que você incluiu em seu aplicativo também precisam ser atualizados para a API unificada ou você receberá um conflito ao tentar compilar. Para qualquer componente incluído, substituir a versão atual com uma nova versão do armazenamento de componente Xamarin que oferece suporte a API unificada e faça uma compilação limpa. Qualquer componente que ainda não foi convertido pelo autor, exibirá um aviso somente no repositório de componente de 32 bits.
 
-
-## <a name="nuget-support"></a>Suporte do NuGet
+### <a name="nuget-support"></a>Suporte do NuGet
 
 Enquanto estamos contribuiu com alterações ao NuGet para funcionar com o suporte da API unificada, não houve uma nova versão do NuGet, portanto, estamos avaliando como obter NuGet reconheça as novas APIs. 
 
@@ -121,20 +118,16 @@ Até lá, assim como os componentes, você precisará alternar qualquer pacote d
 > [!IMPORTANT]
 > **Observação:** se você tiver um erro no formato _"Erro 3 não pode incluir 'monomac.dll' e 'Xamarin.Mac.dll' no mesmo projeto Xamarin.Mac - 'Xamarin.Mac.dll' é referenciado explicitamente, enquanto a 'monomac.dll' é referenciado por ' xxx, Versão = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ depois de converter seu aplicativo para as APIs unificado, normalmente ele é devido à necessidade de um componente ou um pacote do NuGet no projeto que não foi atualizado para a API unificada. Você precisará remover o componente/NuGet existente, atualize para uma versão que oferece suporte a APIs unificado e faça uma compilação limpa.
 
+## <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Habilitação de 64 bits compilações de Xamarin.Mac aplicativos
 
-
-
-# <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Habilitação de 64 bits compilações de Xamarin.Mac aplicativos
-
-Para um aplicativo móvel de Xamarin.Mac foi convertido para a API unificada, o desenvolvedor precisa ainda permitem a criação do aplicativo para computadores de 64 bits de opções do aplicativo. Consulte o **habilitando 64 Bit compilações de Xamarin.Mac aplicativos de** do [considerações sobre a plataforma de 32/64 bits](~/cross-platform/macios/32-and-64.md) compilações do documento para obter instruções detalhadas sobre como habilitar 64 bits.
+Para um aplicativo móvel de Xamarin.Mac foi convertido para a API unificada, o desenvolvedor precisa ainda permitem a criação do aplicativo para computadores de 64 bits de opções do aplicativo. Consulte o **habilitando 64 Bit compilações de Xamarin.Mac aplicativos de** do [considerações sobre a plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md) compilações do documento para obter instruções detalhadas sobre como habilitar 64 bits.
     
-# <a name="finishing-up"></a>Concluindo a
+## <a name="finishing-up"></a>Concluindo a
 
 Se você optar por usar o método manual ou automática para converter seu aplicativo Xamarin.Mac de clássica para as APIs unificado, ou não existem várias instâncias que serão mais, requerem intervenção manual. Confira nosso [dicas para atualizar o código para a API unificada](~/cross-platform/macios/unified/updating-tips.md) documentos para problemas conhecidos e soluções alternativas.
-
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Dicas para atualizar o código para a API unificada](~/cross-platform/macios/unified/updating-tips.md)
-- [Trabalhando com tipos nativos em aplicativos de plataforma cruzada](~/cross-platform/macios/native-types-cross-platform.md)
+- [Trabalhar com tipos nativos em aplicativos de plataforma cruzada](~/cross-platform/macios/native-types-cross-platform.md)
 - [Diferenças de API unificada do vs clássico](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

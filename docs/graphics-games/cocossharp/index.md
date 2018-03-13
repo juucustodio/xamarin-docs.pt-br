@@ -6,11 +6,11 @@ ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 2801fd74e9f5f8f2927b06dc7b68cdf004faa104
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a1e28bc9a8a17b4b06ec45746a6ce60ddd129ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cocossharp"></a>CocosSharp
 
@@ -22,7 +22,7 @@ CocosSharp é uma biblioteca fácil de usar para jogos 2D usando c# e F #. É um
 
 Essa prático vídeo mostra como criar um simple CocosSharp de plataforma cruzada jogo.
 
-<iframe src="//channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player" width="800" height="450" allowFullScreen frameBorder="0"></iframe>
+> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player]
 
 ###  <a name="introduction-to-game-development-with-cocossharpgraphics-gamescocossharpfirst-gameindexmd"></a>[Introdução ao desenvolvimento de jogos com CocosSharp](~/graphics-games/cocossharp/first-game/index.md)
 
@@ -32,7 +32,7 @@ Este passo a passo de várias parte mostra como criar um jogo 2D simple usando C
 
 
 
-##  <a name="fruity-falls-game-detailsgraphics-gamescocossharpfruity-fallsmd"></a>[Detalhes do jogo vão fruity](~/graphics-games/cocossharp/fruity-falls.md)
+##  <a name="fruity-falls-game-detailsgraphics-gamescocossharpfruity-fallsmd"></a>[Detalhes do jogo Fruity Falls](~/graphics-games/cocossharp/fruity-falls.md)
 
 ![](images/fruity-falls.png "Este guia examina o jogo vão Fruity")
 
@@ -64,7 +64,7 @@ CCDrawNode fornece métodos para desenho primitivas de objetos, como linhas, cí
 
 
 
-## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[Usando lado a lado com CocosSharp](~/graphics-games/cocossharp/tiled.md)
+## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[Usar lado a lado com CocosSharp](~/graphics-games/cocossharp/tiled.md)
 
 ![](images/tiled.png "Lado a lado é uma poderosa, flexível e aplicativo consolidado para a criação de bloco ortogonal e isométrico mapeia para jogos") lado a lado é uma poderosa, flexível e aplicativo consolidado para a criação de bloco ortogonal e isométrico mapeia para jogos. CocosSharp fornece integração interna para o formato de arquivo nativo do lado a lado.
 
@@ -78,7 +78,7 @@ O padrão de entidade é uma maneira eficiente de organizar o código de jogo. E
 
 
 
-##  <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[Manipulando várias resoluções CocosSharp](~/graphics-games/cocossharp/resolutions.md)
+##  <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[Tratar várias resoluções no CocosSharp](~/graphics-games/cocossharp/resolutions.md)
 
 ![](images/resolutions.png "Este guia mostra como trabalhar com CocosSharp para desenvolver jogos exibem corretamente em dispositivos de resoluções diferentes")
 
@@ -86,7 +86,7 @@ Este guia mostra como trabalhar com CocosSharp para desenvolver jogos exibem cor
 
 
 
-##  <a name="cocossharp-content-pipelinegraphics-gamescocossharpcontent-pipelineindexmd"></a>[Pipeline de conteúdo CocosSharp](~/graphics-games/cocossharp/content-pipeline/index.md)
+##  <a name="cocossharp-content-pipelinegraphics-gamescocossharpcontent-pipelineindexmd"></a>[Pipeline de conteúdo do CocosSharp](~/graphics-games/cocossharp/content-pipeline/index.md)
 
 ![](images/content-pipeline.png "Pipelines conteúdos geralmente são usados no desenvolvimento de jogos para otimizar o conteúdo e o formato")
 
@@ -94,7 +94,7 @@ Pipelines conteúdos geralmente são usados no desenvolvimento de jogos para oti
 
 
 
-## <a name="improving-framerate-with-ccspritesheetgraphics-gamescocossharpccspritesheetmd"></a>[Melhorando a taxa de quadros com CCSpriteSheet](~/graphics-games/cocossharp/ccspritesheet.md)
+## <a name="improving-framerate-with-ccspritesheetgraphics-gamescocossharpccspritesheetmd"></a>[Melhorar a taxa de quadros com CCSpriteSheet](~/graphics-games/cocossharp/ccspritesheet.md)
 
 ![](images/ccspritesheet.png "CCSpriteSheet fornece funcionalidade para combinar e usar muitos arquivos de imagem em uma textura")
 

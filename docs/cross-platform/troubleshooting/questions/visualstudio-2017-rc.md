@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 745e532a9543029f13e5fdffcc15153d780278ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6144a422b9c01279ce345eccf9830bcd335597a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarin"></a>Pode usar o Visual Studio 2017 Release Candidate com Xamarin?
 
@@ -30,7 +30,7 @@ Enquanto a equipe atualmente está observando maneiras para ignorar esse comport
 
 * Selecione o **Xamarin** componente como parte do novo **instalador do Visual Studio**
 
-  [ ![](visualstudio-2017-rc-images/install1-sml.png "Tela de instalador RC do Visual Studio de 2017")](visualstudio-2017-rc-images/install1-orig.png)
+  [![](visualstudio-2017-rc-images/install1-sml.png "Tela de instalador RC do Visual Studio de 2017")](visualstudio-2017-rc-images/install1-orig.png#lightbox)
 
 Isso irá instalar a extensão do Visual Studio para desenvolvimento do xamarin e xamarin.
 
@@ -40,26 +40,26 @@ Isso irá instalar a extensão do Visual Studio para desenvolvimento do xamarin 
 
 1. Procure o aplicativo instalador do Visual Studio
 
-  [ ![](visualstudio-2017-rc-images/reinstall1-sml.png "Resultados da pesquisa para o aplicativo de instalador do Visual Studio")](visualstudio-2017-rc-images/reinstall1-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall1-sml.png "Resultados da pesquisa para o aplicativo de instalador do Visual Studio")](visualstudio-2017-rc-images/reinstall1-orig.png#lightbox)
 
 2. Selecione: um. **Desenvolvimento móvel com o .NET (visualização)** na guia de cargas de trabalho, ou
 
-  [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "Guia de cargas de trabalho de instalador do VS") ](visualstudio-2017-rc-images/reinstall2-orig.png) b. **Xamarin** no **componentes individuais** guia
+  [![](visualstudio-2017-rc-images/reinstall2-sml.png "Guia de cargas de trabalho de instalador do VS") ](visualstudio-2017-rc-images/reinstall2-orig.png#lightbox) b. **Xamarin** no **componentes individuais** guia
 
-  [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "Guia de componentes de instalação do VS")](visualstudio-2017-rc-images/reinstall3-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall3-sml.png "Guia de componentes de instalação do VS")](visualstudio-2017-rc-images/reinstall3-orig.png#lightbox)
 
 #### <a name="using-the-visual-studio-installer-within-visual-studio"></a>Usando o instalador do Visual Studio no Visual Studio:
 1. Navegue até a página de início do Visual Studio de 2017
 2. Clique em **mais modelos de projeto** sob o **novo projeto** seção
 
-    [ ![](visualstudio-2017-rc-images/reinstall4-sml.png "Página inicial do Visual Studio")](visualstudio-2017-rc-images/reinstall4-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall4-sml.png "Página inicial do Visual Studio")](visualstudio-2017-rc-images/reinstall4-orig.png#lightbox)
 3. Clique em `Open Visual Studio Installer` no painel esquerdo
 
-    [ ![](visualstudio-2017-rc-images/reinstall5-sml.png "Nova tela de projeto")](visualstudio-2017-rc-images/reinstall5-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall5-sml.png "Nova tela de projeto")](visualstudio-2017-rc-images/reinstall5-orig.png#lightbox)
 4. Selecione:
     
     a. **Desenvolvimento móvel com o .NET (visualização)** na guia de cargas de trabalho, ou
 
-    [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "Guia de cargas de trabalho de instalador do VS") ](visualstudio-2017-rc-images/reinstall2-orig.png) b. **Xamarin** no **componentes individuais** guia
+    [![](visualstudio-2017-rc-images/reinstall2-sml.png "Guia de cargas de trabalho de instalador do VS") ](visualstudio-2017-rc-images/reinstall2-orig.png#lightbox) b. **Xamarin** no **componentes individuais** guia
 
-    [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "Guia de componentes de instalação do VS")](visualstudio-2017-rc-images/reinstall3-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall3-sml.png "Guia de componentes de instalação do VS")](visualstudio-2017-rc-images/reinstall3-orig.png#lightbox)

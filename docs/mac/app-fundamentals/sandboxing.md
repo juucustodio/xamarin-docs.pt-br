@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e64f1962e35372a6058f4b515efa5a61c1c9e45
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Um aplicativo Xamarin.Mac de modo seguro
 
@@ -22,7 +22,7 @@ _Este artigo aborda um aplicativo Xamarin.Mac versão na loja de aplicativos de 
 
 Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, você tem a mesma capacidade de um aplicativo de área restrita como faria ao trabalhar com Objective-C ou Swift.
 
-[![Um exemplo de aplicativo em execução](sandboxing-images/intro01.png "um exemplo de aplicativo em execução")](sandboxing-images/intro01-large.png)
+[![Um exemplo de aplicativo em execução](sandboxing-images/intro01.png "um exemplo de aplicativo em execução")](sandboxing-images/intro01-large.png#lightbox)
 
 Neste artigo, vamos abordar os fundamentos de trabalhar com modo seguro em um aplicativo Xamarin.Mac e todos os elementos que entram no modo seguro: diretórios de contêiner, direitos, permissões de usuário determinado, separação de privilégios e imposição de kernel. É altamente recomendável que você leia o [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, especificamente o [Introdução ao construtor da Interface e Xcode](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [tomadas e ações](~/mac/get-started/hello-mac.md#Outlets_and_Actions) seções, como ele aborda os principais conceitos e técnicas que será usado neste artigo.
 
@@ -70,19 +70,19 @@ Vamos fazer o seguinte para criar nosso projeto de exemplo:
 1. Inicie o Visual Studio para Mac e clique no **nova solução.** .
 2. Do **novo projeto** caixa de diálogo, selecione **Mac** > **aplicativo** > **Cocoa aplicativo**: 
 
-    [![Criando um novo aplicativo de Cocoa](sandboxing-images/sample01.png "criar um novo aplicativo Cocoa")](sandboxing-images/sample01-large.png)
+    [![Criando um novo aplicativo de Cocoa](sandboxing-images/sample01.png "criar um novo aplicativo Cocoa")](sandboxing-images/sample01-large.png#lightbox)
 3. Clique o **próximo** botão, digite `MacSandbox` para o nome do projeto e clique o **criar** botão: 
 
-    [![Inserir o nome do aplicativo](sandboxing-images/sample02.png "digitando o nome do aplicativo")](sandboxing-images/sample02-large.png)
+    [![Inserir o nome do aplicativo](sandboxing-images/sample02.png "digitando o nome do aplicativo")](sandboxing-images/sample02-large.png#lightbox)
 4. No **solução preenchimento**, clique duas vezes o **Main.storyboard** arquivo para abri-lo para edição no Xcode: 
 
-    [![Editando o storyboard principal](sandboxing-images/sample03.png "editando o storyboard principal")](sandboxing-images/sample03-large.png)
+    [![Editando o storyboard principal](sandboxing-images/sample03.png "editando o storyboard principal")](sandboxing-images/sample03-large.png#lightbox)
 5. Arraste um **exibição Web** para a janela de tamanho para preencher a área de conteúdo e defini-la para aumentar ou reduzir a janela: 
 
-    [![Adicionando uma exibição da web](sandboxing-images/sample04.png "adicionando uma exibição da web")](sandboxing-images/sample04-large.png)
+    [![Adicionando uma exibição da web](sandboxing-images/sample04.png "adicionando uma exibição da web")](sandboxing-images/sample04-large.png#lightbox)
 6. Criar uma tomada para o modo de exibição da web chamado `webView`: 
 
-    [![Criar uma nova loja](sandboxing-images/sample05.png "criar uma nova loja")](sandboxing-images/sample05-large.png)
+    [![Criar uma nova loja](sandboxing-images/sample05.png "criar uma nova loja")](sandboxing-images/sample05-large.png#lightbox)
 7. Retornar ao Visual Studio para Mac e clique duas vezes o **ViewController.cs** do arquivo no **solução preenchimento** para abri-lo para edição.
 8. Adicione a seguinte instrução using: `using WebKit;`
 9. Verifique o `ViewDidLoad` método aparência semelhante ao seguinte: 
@@ -99,7 +99,7 @@ public override void AwakeFromNib ()
 
 Execute a você o aplicativo e certifique-se de que o site da Apple é exibido na janela da seguinte maneira:
 
-[![Mostra um exemplo de aplicativo em execução](sandboxing-images/sample06.png "mostrando um exemplo de aplicativo em execução")](sandboxing-images/sample06-large.png)
+[![Mostra um exemplo de aplicativo em execução](sandboxing-images/sample06.png "mostrando um exemplo de aplicativo em execução")](sandboxing-images/sample06-large.png#lightbox)
 
 <a name="Signing_and_Provisioning_the_App" />
 
@@ -111,34 +111,34 @@ Permitir que faça o seguinte:
 
 1. Faça logon no Portal do desenvolvedor Apple: 
 
-    [![Fazer logon no Portal do desenvolvedor Apple](sandboxing-images/sign01.png "fazer logon no Portal do desenvolvedor Apple")](sandboxing-images/sign01-large.png)
+    [![Fazer logon no Portal do desenvolvedor Apple](sandboxing-images/sign01.png "fazer logon no Portal do desenvolvedor Apple")](sandboxing-images/sign01-large.png#lightbox)
 2. Selecione **certificados, identificadores e perfis**: 
 
-    [![Selecionar certificados, identificadores e perfis](sandboxing-images/sign02.png "selecionar certificados, identificadores e perfis")](sandboxing-images/sign02-large.png)
+    [![Selecionar certificados, identificadores e perfis](sandboxing-images/sign02.png "Selecionar certificados, identificadores e perfis")](sandboxing-images/sign02-large.png#lightbox)
 3. Em **aplicativos Mac**, selecione **identificadores**: 
 
-    [![Selecionando identificadores](sandboxing-images/sign03.png "selecionando identificadores")](sandboxing-images/sign03-large.png)
+    [![Selecionando identificadores](sandboxing-images/sign03.png "selecionando identificadores")](sandboxing-images/sign03-large.png#lightbox)
 4. Crie uma nova ID para o aplicativo: 
 
-    [![Criar uma nova ID de aplicativo](sandboxing-images/sign04.png "criando uma nova ID de aplicativo")](sandboxing-images/sign04-large.png)
+    [![Criar uma nova ID de aplicativo](sandboxing-images/sign04.png "criando uma nova ID de aplicativo")](sandboxing-images/sign04-large.png#lightbox)
 5. Em **perfis de provisionamento**, selecione **desenvolvimento**: 
 
-    [![Seleção de desenvolvimento](sandboxing-images/sign05.png "selecionando o desenvolvimento")](sandboxing-images/sign05-large.png)
+    [![Seleção de desenvolvimento](sandboxing-images/sign05.png "selecionando o desenvolvimento")](sandboxing-images/sign05-large.png#lightbox)
 6. Criar um novo perfil e selecione **o desenvolvimento de aplicativos do Mac**: 
 
-    [![Criando um novo perfil](sandboxing-images/sign06.png "criando um novo perfil")](sandboxing-images/sign06-large.png)
+    [![Criando um novo perfil](sandboxing-images/sign06.png "criando um novo perfil")](sandboxing-images/sign06-large.png#lightbox)
 7. Selecione a ID de aplicativo criado anteriormente: 
 
-    [![Selecionar a ID do aplicativo](sandboxing-images/sign07.png "selecionando o ID do aplicativo")](sandboxing-images/sign07-large.png)
+    [![Selecionar a ID do aplicativo](sandboxing-images/sign07.png "selecionando o ID do aplicativo")](sandboxing-images/sign07-large.png#lightbox)
 8. Selecione os desenvolvedores para este perfil: 
 
-    [![Adicionando desenvolvedores](sandboxing-images/sign08.png "adicionando desenvolvedores")](sandboxing-images/sign08-large.png)
+    [![Adicionando desenvolvedores](sandboxing-images/sign08.png "adicionando desenvolvedores")](sandboxing-images/sign08-large.png#lightbox)
 9. Selecione os computadores para este perfil: 
 
-    [![Selecionar os computadores permitidos](sandboxing-images/sign09.png "selecionar os computadores permitidos")](sandboxing-images/sign09-large.png)
+    [![Selecionar os computadores permitidos](sandboxing-images/sign09.png "selecionar os computadores permitidos")](sandboxing-images/sign09-large.png#lightbox)
 10. Dê um nome de perfil: 
 
-    [![Nomeando o perfil](sandboxing-images/sign10.png "dar um nome de perfil")](sandboxing-images/sign10-large.png)
+    [![Nomeando o perfil](sandboxing-images/sign10.png "dar um nome de perfil")](sandboxing-images/sign10-large.png#lightbox)
 11. Clique o **feito** botão.
 
 > [!IMPORTANT]
@@ -160,10 +160,10 @@ Em seguida, precisamos selecionar a nova ID do aplicativo e perfil de provisiona
 1. No **solução preenchimento**, clique duas vezes o **Info. plist** arquivo para abri-lo para edição.
 2. Certifique-se de que o **identificador de pacote** corresponde nosso ID de aplicativo criado anteriormente (exemplo: `com.appracatappra.MacSandbox`): 
 
-    [![Editando o identificador de pacote](sandboxing-images/sign13.png "editando o identificador de pacote")](sandboxing-images/sign13-large.png)
+    [![Editando o identificador de pacote](sandboxing-images/sign13.png "editando o identificador de pacote")](sandboxing-images/sign13-large.png#lightbox)
 3. Em seguida, clique duas vezes o **Entitlements.plist** e verifique se o nosso **iCloud repositório de chave-valor** e **iCloud contêineres** todos correspondem nosso ID do aplicativo criado anteriormente (exemplo: `com.appracatappra.MacSandbox`): 
 
-    [![Editar o arquivo Entitlements.plist](sandboxing-images/sign17.png "editando o arquivo Entitlements.plist")](sandboxing-images/sign17-large.png)
+    [![Editar o arquivo Entitlements.plist](sandboxing-images/sign17.png "editando o arquivo Entitlements.plist")](sandboxing-images/sign17-large.png#lightbox)
 3. Salve as alterações.
 4. No **teclado de solução**, clique duas vezes no arquivo de projeto para abrir suas opções para editar:  
 
@@ -180,7 +180,7 @@ Em seguida, precisamos selecionar a nova ID do aplicativo e perfil de provisiona
 
 Agora você deve tentar executar o aplicativo e certifique-se de que tudo está assinado e configurado corretamente. Se o aplicativo ainda é executado como antes, tudo o que é bom. Em caso de falha, você poderá receber uma caixa de diálogo como esta:
 
-[![Um exemplo de provisionamento de caixa de diálogo de problema](sandboxing-images/sign16.png "um exemplo de provisionamento de caixa de diálogo do problema")](sandboxing-images/sign16-large.png)
+[![Um exemplo de provisionamento de caixa de diálogo de problema](sandboxing-images/sign16.png "um exemplo de provisionamento de caixa de diálogo do problema")](sandboxing-images/sign16-large.png#lightbox)
 
 Aqui estão as causas mais comuns de provisionamento e problemas de assinatura:
 
@@ -197,12 +197,12 @@ Você pode habilitar o aplicativo de proteção marcando a caixa de seleção em
 1. No **solução preenchimento**, clique duas vezes o **Entitlements.plist** arquivo para abri-lo para edição.
 2. Marque ambos **habilitar direitos** e **habilitar a área restrita do aplicativo**: 
 
-    [![Direitos de edição e habilitar a área restrita](sandboxing-images/sign17.png "direitos de edição e habilitar a área restrita")](sandboxing-images/sign17-large.png)
+    [![Direitos de edição e habilitar a área restrita](sandboxing-images/sign17.png "direitos de edição e habilitar a área restrita")](sandboxing-images/sign17-large.png#lightbox)
 3. Salve as alterações.
 
 Neste ponto, você habilitou o aplicativo de proteção, mas não forneceu o acesso de rede necessários para a exibição da Web. Se você executar o aplicativo agora, você deve obter uma janela em branco:
 
-[![Mostrando o que está sendo bloqueado o acesso via web](sandboxing-images/sample08.png "mostrando o que está sendo bloqueado o acesso via web")](sandboxing-images/sample08-large.png)
+[![Mostrando o que está sendo bloqueado o acesso via web](sandboxing-images/sample08.png "mostrando o que está sendo bloqueado o acesso via web")](sandboxing-images/sample08-large.png#lightbox)
 
 ### <a name="verifying-that-the-app-is-sandboxed"></a>Verificando se o aplicativo está em modo seguro
 
@@ -210,25 +210,25 @@ Além do comportamento de bloqueio de recurso, há três maneiras principais de 
 
 1. No localizador, verifique o conteúdo do `~/Library/Containers/` pasta - se o aplicativo está em modo seguro, haverá uma pasta chamada como identificador de pacote do aplicativo (exemplo: `com.appracatappra.MacSandbox`): 
 
-    [![Abrir o pacote do aplicativo](sandboxing-images/sample09.png "abrindo o pacote do aplicativo")](sandboxing-images/sample09-large.png)
+    [![Abrir o pacote do aplicativo](sandboxing-images/sample09.png "abrindo o pacote do aplicativo")](sandboxing-images/sample09-large.png#lightbox)
 2. O sistema vê o aplicativo como em modo seguro no Monitor de atividade:
     - Iniciar o Monitor de atividade (em `/Applications/Utilities`). 
     - Escolha **exibição** > **colunas** e certifique-se de que o **Sandbox** item de menu é marcado.
     - Certifique-se de que a coluna de área restrita lê `Yes` para seu aplicativo: 
 
-    [![Verificando o aplicativo no Monitor de atividade](sandboxing-images/sample10.png "verificando o aplicativo no Monitor de atividade")](sandboxing-images/sample10-large.png)
+    [![Verificando o aplicativo no Monitor de atividade](sandboxing-images/sample10.png "verificando o aplicativo no Monitor de atividade")](sandboxing-images/sample10-large.png#lightbox)
 3. Verifique se os binários do aplicativo está em modo seguro:
     - Inicie o aplicativo de Terminal.
     - Navegue até os aplicativos `bin` directory.
     - Execute este comando: `codesign -dvvv --entitlements :- executable_path` (onde `executable_path` é o caminho para seu aplicativo): 
 
-    [![Verificando o aplicativo na linha de comando](sandboxing-images/sample11.png "verificando o aplicativo na linha de comando")](sandboxing-images/sample11-large.png)
+    [![Verificando o aplicativo na linha de comando](sandboxing-images/sample11.png "verificando o aplicativo na linha de comando")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>Depurar um aplicativo de área restrita
 
 O depurador se conecta ao Xamarin.Mac aplicativos por meio de TCP, o que significa que por padrão quando você habilita a área restrita, não é possível se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões adequadas habilitadas, você obterá um erro *"não é possível se conectar ao o depurador"*. 
 
-[![Definindo as opções necessárias](sandboxing-images/debug01.png "definindo as opções necessárias")](sandboxing-images/debug01-large.png)
+[![Definindo as opções necessárias](sandboxing-images/debug01.png "definindo as opções necessárias")](sandboxing-images/debug01-large.png#lightbox)
 
 O **permitir saída conexões de rede (cliente)** a permissão é necessária para o depurador, habilitar esta permite que a depuração normalmente. Desde que você não pode depurar sem ele, atualizamos o `CompileEntitlements` de destino para `msbuild` para adicionar automaticamente essa permissão para os direitos para qualquer aplicativo que está na área restrita para depuração somente compilações. Compilações de versão devem usar as autorizações especificadas no arquivo de direitos, sem modificações.
 
@@ -248,7 +248,7 @@ Faça o seguinte:
 2. Abra o **Console** aplicativo (da `/Applications/Utilties/`).
 3. Selecione **todas as mensagens** na barra lateral e digite `sandbox` na pesquisa: 
 
-    [![Um exemplo de um problema de modo seguro no console do](sandboxing-images/resolve01.png "um exemplo de um problema de modo seguro no console do")](sandboxing-images/resolve01-large.png)
+    [![Um exemplo de um problema de modo seguro no console do](sandboxing-images/resolve01.png "um exemplo de um problema de modo seguro no console do")](sandboxing-images/resolve01-large.png#lightbox)
 
 Para nosso aplicativo de exemplo acima, você pode ver que o kernel está bloqueando o `network-outbound` tráfego devido o aplicativo de proteção, pois estamos não solicitou esse direito.
 
@@ -261,7 +261,7 @@ Faça o seguinte:
 1. No **solução preenchimento**, clique duas vezes o **Entitlements.plist** arquivo para abri-lo para edição.
 2. Sob o **direitos** seção, verifique o **permitir saída conexões de rede (cliente)** caixa de seleção: 
 
-    [![Os direitos de edição](sandboxing-images/sign17.png "os direitos de edição")](sandboxing-images/sign17-large.png)
+    [![Os direitos de edição](sandboxing-images/sign17.png "os direitos de edição")](sandboxing-images/sign17-large.png#lightbox)
 3. Salve as alterações para o aplicativo.
 
 Se, em seguida, podemos fazer acima para nosso aplicativo de exemplo compilar e executá-lo, o conteúdo da web agora será exibido como esperado.
@@ -284,7 +284,7 @@ Habilitando o aplicativo de proteção, você remova todos deixando apenas um co
 
 Modificar recursos de área restrita do aplicativo do aplicativo editando seu **Entitlements.plist** arquivo e verificando ou selecionando os direitos necessários nas caixas de lista suspensa de editores:
 
-[![Os direitos de edição](sandboxing-images/sign17.png "os direitos de edição")](sandboxing-images/sign17-large.png)
+[![Os direitos de edição](sandboxing-images/sign17.png "os direitos de edição")](sandboxing-images/sign17-large.png#lightbox)
 
 ### <a name="container-directories-and-file-system-access"></a>Acesso de sistema de arquivos e diretórios de contêiner
 

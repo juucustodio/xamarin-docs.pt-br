@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6b55e525849d57f2ad9e40ea64b75cfc65ef0727
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho firebase
 
@@ -138,7 +138,7 @@ O `Job.Builder` executará algumas verificações de validação básicos nos va
 * Um `Job`do _tempo de vida_ (quanto tempo ele será agendado para ser executado) é até que o dispositivo for reinicializado &ndash; depois que o dispositivo for reinicializado o `Job` será perdido.
 * Um `Job` não seja recorrente &ndash; só será executado uma vez.
 * Um `Job` será agendado para ser executado assim que possível.
-* A estratégia de repetição padrão para um `Job` é usar um _retirada exponencial_ (discutido em mais detalhes abaixo na seção [definindo um RetryStrategy](#Setting_a_RestryStrategy))
+* A estratégia de repetição padrão para um `Job` é usar um _retirada exponencial_ (discutido em mais detalhes abaixo na seção [definindo um RetryStrategy](#Setting_a_RetryStrategy))
 
 ### <a name="scheduling-a-job"></a>Agendando um `Job`
 
@@ -164,12 +164,14 @@ O valor retornado por `FirebaseJobDispatcher.Schedule` deve ser um dos seguintes
 
 É possível personalizar um trabalho. Exemplos de como um trabalho pode ser personalizado incluem o seguinte:
 
-* [Passar parâmetros para um trabalho](#Passing_Parameters_to_a_Job) &ndash; um `Job` pode exigir valores adicionais para realizar seu trabalho, por exemplo, baixar um arquivo.
+* [Passando parâmetros para um trabalho](#Passing_Parameters_to_a_Job) &ndash; um `Job` pode exigir valores adicionais para realizar seu trabalho, por exemplo, baixar um arquivo.
 * [Definir restrições](#Setting_Constraints) &ndash; pode ser necessário executar um trabalho apenas quando determinadas condições forem atendidas. Por exemplo, executar apenas uma `Job` quando o dispositivo está sendo carregada. 
 * [Especifique quando um `Job` devem ser executados](#Setting_Job_Triggers) &ndash; o Dispatcher de trabalho Firebase permite que os aplicativos especificar uma hora de quando o trabalho deve ser executado.  
 * [Declare uma estratégia de repetição para trabalhos com falha](#Setting_a_RetryStrategy) &ndash; um _estratégia de tentar novamente_ fornece orientação para a `FirebaseJobDispatcher` sobre o que fazer com `Jobs` que falha ao concluir. 
 
 Os seguintes tópicos serão discutidos mais nas seções a seguir.
+
+<a name="Passing_Parameters_to_a_Job" />
 
 #### <a name="passing-parameters-to-a-job"></a>Passando parâmetros para um trabalho
 
@@ -197,6 +199,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
+<a name="Setting_Constraints" />
 
 #### <a name="setting-constraints"></a>Restrições de configuração
 
@@ -215,6 +218,8 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
+<a name="Setting_Job_Triggers" />
+
 #### <a name="setting-job-triggers"></a>Gatilhos de trabalho de configuração
 
 O `JobTrigger` fornece orientação para o sistema operacional sobre quando o trabalho deve ser iniciada. Um `JobTrigger` tem um _executar janela_ que define um horário agendado quando o `Job` deve ser executado. A janela de execução tem um _iniciar janela_ valor e um _janela final_ valor. A janela de início é o número de segundos que o dispositivo deve aguardar antes de executar o trabalho e o valor de janela final é o número máximo de segundos a aguardar antes de executar o `Job`. 
@@ -230,6 +235,8 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 O padrão `JobTrigger` para um trabalho é representado pelo valor `Trigger.Now`, que especifica se um trabalho ser executado mais rápido possível depois de ser agendado.
+
+<a name="Setting_a_RetryStrategy" />
 
 #### <a name="setting-a-retrystrategy"></a>Definindo um RetryStrategy
 

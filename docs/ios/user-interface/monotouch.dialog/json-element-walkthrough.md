@@ -7,11 +7,11 @@ ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63faa0c46abfb509a6834efa647f23ad0ed7f454
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1a5e4ab73c9090cbb743dc8cb339d6f50c5ff527
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>Passo a passo: Usando um elemento de JSON para criar uma Interface do usuário
 
@@ -22,7 +22,7 @@ MT. D oferece suporte a criar interfaces de usuário declaradas em JSON. Quando 
 
 MT. D oferece suporte a gama completa de recursos que estão disponíveis na API de elementos ao usar JSON. Por exemplo, o aplicativo na seguinte captura de tela é completamente declarado usando JSON:
 
-[ ![](json-element-walkthrough-images/01-load-from-file.png "Por exemplo, o aplicativo nesta captura de tela é declarado completamente usando JSON") ](json-element-walkthrough-images/01-load-from-file.png) [ ![ ] (json-element-walkthrough-images/02-load-from-file-details.png "por exemplo, o aplicativo nesta captura de tela é declarado completamente usando JSON")](json-element-walkthrough-images/02-load-from-file-details.png)
+[![](json-element-walkthrough-images/01-load-from-file.png "Por exemplo, o aplicativo nesta captura de tela é declarado completamente usando JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png "por exemplo, o aplicativo nesta captura de tela é declarado completamente usando JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Vamos examinar novamente o exemplo da [passo a passo de API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, mostrando como adicionar uma tela de detalhes da tarefa usando JSON.
 
@@ -30,7 +30,7 @@ Vamos examinar novamente o exemplo da [passo a passo de API de elementos](~/ios/
 
 O exemplo neste passo a passo permite a criação de tarefas. Quando uma tarefa está selecionada na primeira tela, uma tela de detalhes é apresentada como mostrado:
 
- [ ![](json-element-walkthrough-images/03-task-list.png "Quando uma tarefa está selecionada na primeira tela, uma tela de detalhes é apresentada como mostrado")](json-element-walkthrough-images/03-task-list.png)
+ [![](json-element-walkthrough-images/03-task-list.png "Quando uma tarefa está selecionada na primeira tela, uma tela de detalhes é apresentada como mostrado")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
 ## <a name="creating-the-json"></a>Criando o JSON
 
@@ -166,7 +166,7 @@ _rootElement = new RootElement ("Json Example"){
 
 Em tempo de execução, o arquivo será recuperado e analisado por MT. D quando o usuário navega para o segundo modo de exibição, conforme mostrado na captura de tela abaixo:
 
- [ ![](json-element-walkthrough-images/04-json-web-example.png "O arquivo será recuperado e analisado por MT. D quando o usuário navega para o segundo modo de exibição")](json-element-walkthrough-images/04-json-web-example.png)
+ [![](json-element-walkthrough-images/04-json-web-example.png "O arquivo será recuperado e analisado por MT. D quando o usuário navega para o segundo modo de exibição")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
  <a name="Summary" />
 

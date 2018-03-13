@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 1689736ce3f2a8e20ceaa23edf410d3892038522
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5422d3f0a68f99790617fe534b30389aae2563c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tinyrenderer-workbooks"></a>Pastas de trabalho TinyRenderer
 
@@ -30,7 +30,7 @@ Uma série de pastas de trabalho que explicam como OpenGL funciona, que é execu
 -    [Lição 7: Mapeamento de sombra](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson7.workbook)
 -    [Lição 8: Oclusão de ambiente](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson8.workbook)
 
-[ ![](tinyrenderer-images/tinyrenderer-sml.png "Exemplo de processamento de wireframe")](tinyrenderer-images/tinyrenderer.png)
+[![](tinyrenderer-images/tinyrenderer-sml.png "Exemplo de processamento de wireframe")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 O código c# nessas pastas de trabalho baseia-se este software livre [código C++](https://github.com/ssloy/tinyrenderer) e o texto deste [wiki](https://github.com/ssloy/tinyrenderer/wiki/). Agradecemos que o trabalho original está disponível sob uma licença que permitiu transformá-lo em um conjunto de pastas de trabalho.
 

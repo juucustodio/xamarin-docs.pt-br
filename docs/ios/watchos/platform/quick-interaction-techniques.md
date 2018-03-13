@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 75a8e807a68a3fccfa76fc7ba1f260818b25174d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf93744914a0caf4f6599fc333ae200468d66e48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-interaction-techniques-for-watchos-3"></a>Técnicas de interação rápida para watchOS 3
 
@@ -77,7 +77,7 @@ No código, responda à ação do reconhecedor para lidar com o gesto sendo disp
 
 Para gestos discretos, a ação é chamada quando o gesto é reconhecido e um estado (`WKGestureRecognizerState`) é atribuído como:
 
-[ ![](quick-interaction-techniques-images/quick01.png "Estados de gesto discretos")](quick-interaction-techniques-images/quick01.png)
+[![](quick-interaction-techniques-images/quick01.png "Estados de gesto discretos")](quick-interaction-techniques-images/quick01.png#lightbox)
 
 Todos os gestos discretos Iniciar do `Possible` estado e façam a transição para um o `Failed` ou `Recognized` estado. Ao usar gestos discretos, o desenvolvedor geralmente não lida diretamente com o estado. Em vez disso, eles usam a ação que está sendo chamada quando o gesto é reconhecido somente.
 
@@ -85,7 +85,7 @@ Todos os gestos discretos Iniciar do `Possible` estado e façam a transição pa
 
 Gestos contínuos são um pouco diferentes dos gestos discretos, onde a ação é chamada várias vezes, conforme o gesto está sendo reconhecido:
 
-[ ![](quick-interaction-techniques-images/quick02.png "Estados de gesto contínua")](quick-interaction-techniques-images/quick02.png)
+[![](quick-interaction-techniques-images/quick02.png "Estados de gesto contínua")](quick-interaction-techniques-images/quick02.png#lightbox)
 
 Novamente, gestos contínua inicia o `Possible` estado, mas eles andamento sobre várias atualizações. Aqui o desenvolvedor precisa considerar o estado do reconhecedor e atualizar a interface do usuário do aplicativo durante o `Changed` fase até que o gesto é finalmente `Recognized` ou `Canceled`.
 
@@ -168,7 +168,7 @@ Apple deixou responsabilidade do desenvolvedor para determinar como as contagens
 
 O sinal (`+/-`) de rotação Delta indica a direção que o usuário está ligado a Crown Digital:
 
-[ ![](quick-interaction-techniques-images/quick03.png "O sinal de Delta rotação indica a direção que o usuário está ligado a Crown Digital")](quick-interaction-techniques-images/quick03.png)
+[![](quick-interaction-techniques-images/quick03.png "O sinal de Delta rotação indica a direção que o usuário está ligado a Crown Digital")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 
 Se o usuário está rolando para cima, WatchKit retornará se rolando para baixo, em seguida, deltas negativos serão retornados, independentemente de qual orientação o usuário está usando o relógio no e deltas positivos.
@@ -189,15 +189,15 @@ Por exemplo, qualquer um dos seguintes controles pode roubar o foco de coroa Dig
 
 É o modo padrão de um usuário navega um modo de exibição de tabela em um aplicativo de watchOS rolar para a parte desejada de dados, toque em uma linha específica para exibir a exibição detalhada, toque no botão Voltar quando terminar de exibir os detalhes e repita o processo para qualquer outra informação que o y está interessado em de dentro da tabela:
 
-[ ![](quick-interaction-techniques-images/quick04.png "Movendo entre uma tabela e a exibição de detalhes")](quick-interaction-techniques-images/quick04.png)
+[![](quick-interaction-techniques-images/quick04.png "Movendo entre uma tabela e a exibição de detalhes")](quick-interaction-techniques-images/quick04.png#lightbox)
 
 Novo para watchOS 3, o desenvolvedor pode habilitar a paginação Vertical em seus controles de exibição de tabela. Com esse recurso habilitado, o usuário pode rolar para localizar uma linha do modo de exibição de tabela e toque em linha para exibir seus detalhes como antes. No entanto, eles podem agora passa o dedo para cima para selecionar a próxima linha na tabela ou para baixo para selecionar a linha anterior (ou use o coroa Digital), sem precisar retornar ao modo de exibição de tabela pela primeira vez:
 
-[ ![](quick-interaction-techniques-images/quick05.png "Movendo entre uma tabela e a exibição de detalhes e passar o dedo para cima e para baixo para mover entre as outras linhas")](quick-interaction-techniques-images/quick05.png)
+[![](quick-interaction-techniques-images/quick05.png "Movendo entre uma tabela e a exibição de detalhes e passar o dedo para cima e para baixo para mover entre as outras linhas")](quick-interaction-techniques-images/quick05.png#lightbox)
 
 Para habilitar esse modo, abra o Storyboard watchOS do aplicativo no Xcode para edição, selecione o modo de exibição de tabela e verifique o **paginação Vertical de detalhes** caixa de seleção:
 
-[ ![](quick-interaction-techniques-images/quick06.png "Marque a caixa de seleção de paginação Vertical de detalhes")](quick-interaction-techniques-images/quick06.png)
+[![](quick-interaction-techniques-images/quick06.png "Marque a caixa de seleção de paginação Vertical de detalhes")](quick-interaction-techniques-images/quick06.png#lightbox)
 
 Certifique-se de que a tabela está usando Segues para exibir a exibição detalhada e salvar as alterações para o Storyboard e retornar ao Visual Studio para Mac sincronizar.
 
@@ -313,7 +313,7 @@ Uma experiência de interação rápida bem projetado dar ao usuário a confian�
 
 Onde isso especificamente se torna um problema é quando o aplicativo watch é fazer qualquer tipo de conexão de rede ou compartilhar informações com seu aplicativo de iPhone complementar. Geralmente, isso pode levar a um indicador de espera enquanto a transação está em andamento, que não é desejável durante uma interação rápida. Veja o exemplo a seguir:
 
-[ ![](quick-interaction-techniques-images/quick07.png "Diagrama do aplicativo inspecionar fazendo uma conexão de rede e compartilhamento de informações com seu aplicativo de iPhone complementar")](quick-interaction-techniques-images/quick07.png)
+[![](quick-interaction-techniques-images/quick07.png "Diagrama do aplicativo inspecionar fazendo uma conexão de rede e compartilhamento de informações com seu aplicativo de iPhone complementar")](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. O usuário escolhe um item para comprar no relógio.
 2. Eles tocar no botão comprar.
@@ -325,7 +325,7 @@ Desde o momento em que o usuário toca no botão comprar até que a transação 
 
 Usando o modelo sugerido da Apple, examine novamente a mesma interação rápida:
 
-[ ![](quick-interaction-techniques-images/quick08.png "Diagrama de sugerido para o modelo de maçãs")](quick-interaction-techniques-images/quick08.png)
+[![](quick-interaction-techniques-images/quick08.png "Diagrama de sugerido para o modelo de maçãs")](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. O usuário escolhe um item para comprar no relógio.
 2. Eles tocar no botão comprar.

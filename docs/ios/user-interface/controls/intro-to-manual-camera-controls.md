@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e5ff4e3732476415ff32e98b8281f3cb6e03e332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7111c1716ef3a8869f8b2401a7653d9e9941977b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manual-camera-controls"></a>Controles de câmera manual
 
@@ -26,7 +26,7 @@ Esses controles também podem ser úteis ao desenvolver aplicativos científicos
 
 Se colocar o vídeo ou imagens usando a câmera em um dispositivo iOS, o processo usado para capturar essas imagens é basicamente o mesmo. Isso é verdadeiro para aplicativos que usam os controles de câmera padrão automatizada ou aqueles que aproveitam os novos controles de câmera Manual:
 
- [ ![](intro-to-manual-camera-controls-images/image1.png "Visão geral de objetos de capturar AVFoundation")](intro-to-manual-camera-controls-images/image1.png)
+ [![](intro-to-manual-camera-controls-images/image1.png "Visão geral de objetos de capturar AVFoundation")](intro-to-manual-camera-controls-images/image1.png#lightbox)
 
 Entrada é obtida uma `AVCaptureDeviceInput` em uma `AVCaptureSession` por meio de um `AVCaptureConnection`. O resultado é a saída como uma imagem estática ou como um fluxo de vídeo. Todo o processo é controlado por um `AVCaptureDevice`.
 
@@ -280,11 +280,11 @@ Ao permitir que o usuário final se controles do foco diretamente, um aplicativo
 
 Por exemplo, fotógrafos profissionais podem suavizar o foco de uma imagem para alcançar um [Bokeh efeito](http://en.wikipedia.org/wiki/Bokeh):
 
-[ ![](intro-to-manual-camera-controls-images/image2.png "Um efeito de Bokeh")](intro-to-manual-camera-controls-images/image2.png)
+[![](intro-to-manual-camera-controls-images/image2.png "Um efeito de Bokeh")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
 Criar um [foco Pull efeito](http://www.mediacollege.com/video/camera/focus/pull.html), tais como:
 
-[ ![](intro-to-manual-camera-controls-images/image3.png "O efeito de Pull de foco")](intro-to-manual-camera-controls-images/image3.png)
+[![](intro-to-manual-camera-controls-images/image3.png "O efeito de Pull de foco")](intro-to-manual-camera-controls-images/image3.png#lightbox)
 
 Cientistas ou um gravador de aplicativos médicos, o aplicativo talvez queira programaticamente mover a lente para experiências. De qualquer forma, a nova API permite que o usuário final ou o aplicativo para assumir o controle sobre o foco no momento em que a imagem é tomado.
 
@@ -292,7 +292,7 @@ Cientistas ou um gravador de aplicativos médicos, o aplicativo talvez queira pr
 
 Antes de discutir os detalhes de controle do foco em um aplicativo do IOS 8. Vamos dar uma olhada rápida como foco funciona em um dispositivo iOS:
 
-[ ![](intro-to-manual-camera-controls-images/image4.png "Como o foco funciona em um dispositivo iOS")](intro-to-manual-camera-controls-images/image4.png)
+[![](intro-to-manual-camera-controls-images/image4.png "Como o foco funciona em um dispositivo iOS")](intro-to-manual-camera-controls-images/image4.png#lightbox)
 
 Claro insere a lente da câmera no dispositivo iOS e se concentra em um sensor de imagem. A distância da lente do sensor controla onde é o ponto Focal (a área onde a imagem será exibido o mais nítido), em relação ao sensor. Quanto mais distante a Lente é do sensor, objetos de distância parecerem mais nítidos e quanto mais próximo, próximo a objetos parecer mais nítido.
 
@@ -358,7 +358,7 @@ Conforme visto no código acima, o dispositivo de captura deve ser bloqueado par
 
 Com o código de configuração de captura de AV geral em vigor, um `UIViewController` podem ser adicionados ao Storyboard do aplicativo e configurados da seguinte maneira:
 
-[ ![](intro-to-manual-camera-controls-images/image5.png "Um UIViewController pode ser adicionado aos aplicativos de Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image5.png)
+[![](intro-to-manual-camera-controls-images/image5.png "Um UIViewController pode ser adicionado aos aplicativos de Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 O modo de exibição contém os seguintes elementos principais:
 
@@ -491,10 +491,10 @@ Faça o seguinte para transmissão-se o controlador de exibição para controle 
   
 1. Com a câmera no modo automático, o controle deslizante moverá automaticamente como a câmera ajusta o foco:
 
-    [![](intro-to-manual-camera-controls-images/image6.png "O controle deslizante moverá automaticamente como a câmera ajusta o foco neste aplicativo de exemplo")](intro-to-manual-camera-controls-images/image6.png)
+    [![](intro-to-manual-camera-controls-images/image6.png "O controle deslizante moverá automaticamente como a câmera ajusta o foco neste aplicativo de exemplo")](intro-to-manual-camera-controls-images/image6.png#lightbox)
 1. O segmento bloqueado de toque e arraste o controle deslizante de posição para ajustar a posição de lente manualmente:
 
-    [![](intro-to-manual-camera-controls-images/image7.png "Ajuste manualmente a posição de Lente")](intro-to-manual-camera-controls-images/image7.png)
+    [![](intro-to-manual-camera-controls-images/image7.png "Ajuste manualmente a posição de Lente")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. Interrompa o aplicativo.
 
 
@@ -506,7 +506,7 @@ Exposição refere-se para o brilho de uma imagem em relação o brilho da orige
 
 Usando os controles de exposição Manual, o usuário pode ter uma imagem de inacreditavelmente claro para escuro e moody:
 
-[ ![](intro-to-manual-camera-controls-images/image8.png "Um exemplo de uma imagem mostrando exposição de inacreditavelmente claro para escuro e moody")](intro-to-manual-camera-controls-images/image8.png)
+[![](intro-to-manual-camera-controls-images/image8.png "Um exemplo de uma imagem mostrando exposição de inacreditavelmente claro para escuro e moody")](intro-to-manual-camera-controls-images/image8.png#lightbox)
 
 Novamente, isso pode ser feito automaticamente usando o controle programático de aplicativos científicos ou por meio de controles manuais fornecidos pela interface do usuário de aplicativos. De qualquer forma, o novo iOS 8 APIs de exposição fornecem um controle refinado sobre as configurações de exposição da câmera.
 
@@ -514,7 +514,7 @@ Novamente, isso pode ser feito automaticamente usando o controle programático d
 
 Antes de discutir os detalhes de controle de exposição em um aplicativo do IOS 8. Vamos dar uma olhada rápida como funciona a exposição:
 
-[ ![](intro-to-manual-camera-controls-images/image9.png "Como funciona a exposição")](intro-to-manual-camera-controls-images/image9.png)
+[![](intro-to-manual-camera-controls-images/image9.png "Como funciona a exposição")](intro-to-manual-camera-controls-images/image9.png#lightbox)
 
 Os três elementos básicos que vir juntos para controlar a exposição são:
 
@@ -527,7 +527,7 @@ Os três elementos básicos que vir juntos para controlar a exposição são:
 
 Antes de aprendizado de como funciona a exposição manual, é uma boa ideia para entender como contínua exposição de auto funciona em um dispositivo iOS.
 
-[ ![](intro-to-manual-camera-controls-images/image10.png "Como funciona a exposição automática contínua em um dispositivo iOS")](intro-to-manual-camera-controls-images/image10.png)
+[![](intro-to-manual-camera-controls-images/image10.png "Como funciona a exposição automática contínua em um dispositivo iOS")](intro-to-manual-camera-controls-images/image10.png#lightbox)
 
 A primeira é o bloco de exposição automática, ela tem o trabalho de cálculo exposição ideal e continuamente está sendo alimentada estatísticas de medição. Ele usa essas informações para calcular a combinação ideal de ISO e velocidade de redimensionamento para obter a cena bem acenda. Esse ciclo é conhecido como o Loop AE.
 
@@ -535,7 +535,7 @@ A primeira é o bloco de exposição automática, ela tem o trabalho de cálculo
 
 Em seguida, vamos examinar como bloqueado funciona exposição em dispositivos iOS.
 
-[ ![](intro-to-manual-camera-controls-images/image11.png "Como bloqueado exposição funciona em dispositivos iOS")](intro-to-manual-camera-controls-images/image11.png)
+[![](intro-to-manual-camera-controls-images/image11.png "Como bloqueado exposição funciona em dispositivos iOS")](intro-to-manual-camera-controls-images/image11.png#lightbox)
 
 Novamente, você tem o bloco de exposição automática que está tentando para calcular os valores de duração e iOS ideal. No entanto, nesse modo o bloco AE está desconectado do mecanismo de estatísticas de medição.
 
@@ -589,7 +589,7 @@ Conforme visto no código acima, o dispositivo de captura deve ser bloqueado par
 
 Com o código de configuração de captura de AV geral em vigor, um `UIViewController` podem ser adicionados ao Storyboard do aplicativo e configurados da seguinte maneira:
 
-[ ![](intro-to-manual-camera-controls-images/image12.png "Um UIViewController pode ser adicionado aos aplicativos de Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image12.png)
+[![](intro-to-manual-camera-controls-images/image12.png "Um UIViewController pode ser adicionado aos aplicativos de Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 O modo de exibição contém os seguintes elementos principais:
 
@@ -791,13 +791,13 @@ Faça o seguinte para o controlador de exibição de backup durante a transmiss�
   
 1. Com a câmera no modo automático, os controles deslizantes moverá automaticamente como a câmera ajusta exposição:
 
-    [![](intro-to-manual-camera-controls-images/image13.png "Os controles deslizantes moverá automaticamente como a câmera ajusta exposição")](intro-to-manual-camera-controls-images/image13.png)
+    [![](intro-to-manual-camera-controls-images/image13.png "Os controles deslizantes moverá automaticamente como a câmera ajusta exposição")](intro-to-manual-camera-controls-images/image13.png#lightbox)
 1. O segmento bloqueado de toque e arraste o controle deslizante de ajuste para ajustar a diferença da exposição automática manualmente:
 
-    [![](intro-to-manual-camera-controls-images/image14.png "Ajustando a diferença da exposição automática manualmente")](intro-to-manual-camera-controls-images/image14.png)
+    [![](intro-to-manual-camera-controls-images/image14.png "Ajustando a diferença da exposição automática manualmente")](intro-to-manual-camera-controls-images/image14.png#lightbox)
 1. O segmento personalizada de toque e arraste os controles deslizantes ISO e a duração para controlar manualmente a exposição:
 
-    [![](intro-to-manual-camera-controls-images/image15.png "Arraste os controles deslizantes duração e ISO para controlar a exposição manualmente")](intro-to-manual-camera-controls-images/image15.png)
+    [![](intro-to-manual-camera-controls-images/image15.png "Arraste os controles deslizantes duração e ISO para controlar a exposição manualmente")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. Interrompa o aplicativo.
 
 
@@ -807,7 +807,7 @@ O código acima mostra como monitorar as configurações de exposição quando a
 
 Controles de balanço de branco permitem que os usuários ajustar o equilíbrio de colosr em uma imagem para torná-las mais realista. Fontes de luz diferentes têm temperaturas de cor diferente, e as configurações de câmera usadas para capturar uma imagem devem ser ajustadas para compensar essas diferenças. Novamente, permitindo que o controle de usuário sobre a proporção de branco, eles podem tornar professional ajustes que as rotinas automática não são capazes de obter efeitos artísticos.
 
-[ ![](intro-to-manual-camera-controls-images/image16.png "Uma imagem de exemplo mostrando os ajustes de balanço de branco Manual")](intro-to-manual-camera-controls-images/image16.png)
+[![](intro-to-manual-camera-controls-images/image16.png "Uma imagem de exemplo mostrando os ajustes de balanço de branco Manual")](intro-to-manual-camera-controls-images/image16.png#lightbox)
 
 Por exemplo, o horário de verão tem uma conversão blueish, enquanto luzes incandescentes tungstênio têm um tom mais quente, laranja. (Erroneamente, cores "interessantes" tem temperaturas de cor mais alto que cores "passivos". Cor temperaturas são uma medida física, não uma percepção).
 
@@ -821,7 +821,7 @@ Antes de discutir os detalhes de controle de saldo branco em um aplicativo do IO
 
 Estudo de percepção de cor, o [CIE 1931 RGB cor espaço e o espaço de cor CIE 1931 XYZ](http://en.wikipedia.org/wiki/CIE_1931_color_space) são a primeira matematicamente espaços de cores. Eles foram criados pela comissão internacional de iluminação (CIE) em 1931.
 
-[ ![](intro-to-manual-camera-controls-images/image17.png "O espaço de cor RGB CIE 1931 e CIE 1931 XYZ espaço de cores")](intro-to-manual-camera-controls-images/image17.png)
+[![](intro-to-manual-camera-controls-images/image17.png "O espaço de cor RGB CIE 1931 e CIE 1931 XYZ espaço de cores")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
 O gráfico acima mostra todas as cores visíveis ao olho humano, da profundidade azul brilhante verde para vermelho brilhante. Qualquer ponto no diagrama pode ser plotado com um valor de X e Y, conforme mostrado no gráfico acima.
 
@@ -900,7 +900,7 @@ O dispositivo de captura deve ser bloqueado para a configuração antes de uma a
 
 Com o código de configuração de captura de AV geral em vigor, um `UIViewController` podem ser adicionados ao Storyboard do aplicativo e configurados da seguinte maneira:
 
-[ ![](intro-to-manual-camera-controls-images/image18.png "Um UIViewController pode ser adicionado aos aplicativos de Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image18.png)
+[![](intro-to-manual-camera-controls-images/image18.png "Um UIViewController pode ser adicionado aos aplicativos de Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 O modo de exibição contém os seguintes elementos principais:
 
@@ -1111,13 +1111,13 @@ Faça o seguinte para transmissão-se o controlador de exibição para controle 
 1. Salvar as alterações de código e executar o aplicativo.
 1. Com a câmera no modo automático, os controles deslizantes moverá automaticamente como a câmera ajusta a proporção de branco:
 
-    [![](intro-to-manual-camera-controls-images/image19.png "Os controles deslizantes moverá automaticamente como a câmera ajusta a proporção de branco")](intro-to-manual-camera-controls-images/image19.png)
+    [![](intro-to-manual-camera-controls-images/image19.png "Os controles deslizantes moverá automaticamente como a câmera ajusta a proporção de branco")](intro-to-manual-camera-controls-images/image19.png#lightbox)
 1. O segmento bloqueado de toque e arraste os controles deslizantes Temp e tonalidade para ajustar o equilíbrio de branco manualmente:
 
-    [![](intro-to-manual-camera-controls-images/image20.png "Arraste os controles deslizantes Temp e tonalidade para ajustar o equilíbrio de branco manualmente")](intro-to-manual-camera-controls-images/image20.png)
+    [![](intro-to-manual-camera-controls-images/image20.png "Arraste os controles deslizantes Temp e tonalidade para ajustar o equilíbrio de branco manualmente")](intro-to-manual-camera-controls-images/image20.png#lightbox)
 1. Com o segmento bloqueado ainda selecionado, coloque um cartão físico cinza na frente da câmera e toque no botão de cartão de cinza para ajustar o equilíbrio de branco para o mundo cinza:
 
-    [![](intro-to-manual-camera-controls-images/image21.png "Toque no botão de cartão de cinza para ajustar o equilíbrio de branco para o mundo cinza")](intro-to-manual-camera-controls-images/image21.png)
+    [![](intro-to-manual-camera-controls-images/image21.png "Toque no botão de cartão de cinza para ajustar o equilíbrio de branco para o mundo cinza")](intro-to-manual-camera-controls-images/image21.png#lightbox)
 1. Interrompa o aplicativo.
 
 O código acima mostra como monitorar as configurações de balanço de branco quando a câmera está no modo automático ou use os controles deslizantes para controlar o saldo em branco quando ele estiver no modo bloqueado.
@@ -1128,7 +1128,7 @@ A captura de colchetes é baseada nas configurações dos controles de câmera M
 
 Simplificando, colchetes de captura é uma intermitência de imagens tiradas com uma variedade de configurações de imagem para a imagem.
 
-[ ![](intro-to-manual-camera-controls-images/image22.png "Como funciona a captura de colchetes")](intro-to-manual-camera-controls-images/image22.png)
+[![](intro-to-manual-camera-controls-images/image22.png "Como funciona a captura de colchetes")](intro-to-manual-camera-controls-images/image22.png#lightbox)
 
 Usando a captura de colchetes no iOS 8, um aplicativo pode predefinir uma série de controles da câmera Manual, emitir um único comando e ter cena atual retornar uma série de imagens para cada uma das predefinições manuais.
 
@@ -1187,7 +1187,7 @@ Com essas informações em mente, vamos dar uma olhada em um exemplo do uso de c
 
 Com o código de configuração de captura de AV geral em vigor, um `UIViewController` podem ser adicionados ao Storyboard do aplicativo e configurados da seguinte maneira:
 
-[ ![](intro-to-manual-camera-controls-images/image23.png "Um UIViewController pode ser adicionado aos aplicativos de Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image23.png)
+[![](intro-to-manual-camera-controls-images/image23.png "Um UIViewController pode ser adicionado aos aplicativos de Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 O modo de exibição contém os seguintes elementos principais:
 
@@ -1345,10 +1345,10 @@ Faça o seguinte para transmissão-se o controlador de exibição para capturar 
 1. Salvar as alterações de código e executar o aplicativo.
 1. Quadro uma cena e toque no botão de colchete capturar:
 
-    [![](intro-to-manual-camera-controls-images/image24.png "Quadro uma cena e toque no botão de captura colchete")](intro-to-manual-camera-controls-images/image24.png)
+    [![](intro-to-manual-camera-controls-images/image24.png "Quadro uma cena e toque no botão de captura colchete")](intro-to-manual-camera-controls-images/image24.png#lightbox)
 1. Passe o dedo da direita para esquerda para ver as três imagens tomadas por colchetes captura:
 
-    [![](intro-to-manual-camera-controls-images/image25.png "Passe o dedo da direita para esquerda para ver as três imagens tomadas por colchetes captura")](intro-to-manual-camera-controls-images/image25.png)
+    [![](intro-to-manual-camera-controls-images/image25.png "Passe o dedo da direita para esquerda para ver as três imagens tomadas por colchetes captura")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. Interrompa o aplicativo.
 
 

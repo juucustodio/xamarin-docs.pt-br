@@ -7,23 +7,22 @@ ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/29/2017
-ms.openlocfilehash: 9f084899f44e0104d0aa2d4b3c0509812bd3fdd2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: ef073999e10e184806089bed3ef9ab93e2f28dd6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="firebase-cloud-messaging"></a>Firebase mensagens de nuvem
 
 _Mensagens de nuvem firebase (FCM) é um serviço que facilita a mensagens entre aplicativos móveis e aplicativos de servidor. Este artigo fornece uma visão geral de como funciona o FCM e explica como configurar os serviços do Google para que seu aplicativo possa usar FCM._
 
-[![Imagem do herói firebase Cloud Messaging](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png)
+[![Imagem do herói firebase Cloud Messaging](firebase-cloud-messaging-images/preview.png)](firebase-cloud-messaging-images/preview.png#lightbox)
 
 Este tópico fornece uma visão geral de como Firebase Cloud Messaging roteia mensagens entre seu aplicativo xamarin e um servidor de aplicativo e fornece um procedimento passo a passo para adquirir credenciais para que seu aplicativo pode usar serviços FCM.
 
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -31,12 +30,11 @@ Mensagens de nuvem firebase (FCM) é um serviço de plataforma cruzada que contr
 
 Conforme ilustrado no diagrama a seguir, FCM atua como um intermediário entre remetentes e clientes. Um *aplicativo cliente* é um aplicativo habilitado para FCM que é executado em um dispositivo. O *servidor de aplicativos* (fornecido por você ou sua empresa) é o servidor habilitado FCM que seu aplicativo cliente se comunica com a FCM. Ao contrário do GCM, FCM torna possível para enviar mensagens para aplicativos de cliente diretamente por meio da GUI Firebase Console notificações:
 
-[![FCM fica entre o aplicativo cliente e um servidor de aplicativo](firebase-cloud-messaging-images/01-server-fcm-app-sml.png)](firebase-cloud-messaging-images/01-server-fcm-app.png)
+[![FCM fica entre o aplicativo cliente e um servidor de aplicativo](firebase-cloud-messaging-images/01-server-fcm-app-sml.png)](firebase-cloud-messaging-images/01-server-fcm-app.png#lightbox)
 
 Usando FCM, servidores de aplicativo podem enviar mensagens em um único dispositivo, para um grupo de dispositivos ou para um número de dispositivos que estão inscritos em um tópico. Um aplicativo cliente pode usar FCM para assinar mensagens downstream de um servidor de aplicativo (por exemplo, para receber notificações remotas). Para obter mais informações sobre os diferentes tipos de mensagens Firebase, consulte [sobre FCM mensagens](https://firebase.google.com/docs/cloud-messaging/concept-options).
 
 
-<a name="inaction" />
 
 ## <a name="firebase-cloud-messaging-in-action"></a>Nuvem firebase mensagens em ação
 
@@ -64,7 +62,7 @@ As seções a seguir explicam como essas credenciais são usadas quando os aplic
 
 Um aplicativo cliente deve primeiro registrar com FCM antes de mensagens podem ocorrer. O aplicativo cliente deve concluir as etapas de registro mostradas no diagrama a seguir:
 
-[![Diagrama de etapas de registro de aplicativo](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png)
+[![Diagrama de etapas de registro de aplicativo](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
 
 1.  O aplicativo cliente contata FCM para obter um token de registro, passando a ID do remetente, a chave de API e a ID do aplicativo para FCM.
 
@@ -77,13 +75,12 @@ O servidor de aplicativo armazena em cache o token de registro para comunicaçõ
 Quando o aplicativo cliente não deseja receber mensagens do servidor de aplicativo, ele pode enviar uma solicitação para o servidor de aplicativos para excluir o token de registro. Se o aplicativo cliente é desinstalado de um dispositivo, FCM detecta isso e notifica automaticamente o servidor de aplicativos para excluir o token de registro.
 
 
-<a name="downstream" />
 
 ### <a name="downstream-messaging"></a>Mensagens de downstream
 
 O diagrama a seguir ilustra como mensagens de nuvem Firebase armazena e encaminha mensagens downstream:
 
-[![FCM usa armazenamento e avanço para mensagens downstream](firebase-cloud-messaging-images/03-downstream-sml.png)](firebase-cloud-messaging-images/03-downstream.png)
+[![FCM usa armazenamento e avanço para mensagens downstream](firebase-cloud-messaging-images/03-downstream-sml.png)](firebase-cloud-messaging-images/03-downstream.png#lightbox)
 
 Quando o servidor de aplicativo envia uma mensagem de downstream para o aplicativo cliente, ele usa as etapas a seguir como enumerados no diagrama acima:
 
@@ -99,14 +96,11 @@ Neste cenário de mensagens (onde o servidor de aplicativo envia uma mensagem pa
 
 Para obter informações detalhadas sobre o recebimento de mensagens FCM downstream no Android, consulte [remoto notificações com FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
-
-<a name="topic" />
-
 ### <a name="topic-messaging"></a>Mensagens do tópico
 
 *Mensagens do tópico* torna possível para um servidor de aplicativo enviar uma mensagem para vários dispositivos que tem aceitado um tópico específico. Você também pode compor e enviar mensagens do tópico por meio da GUI de notificações do Console Firebase. FCM manipula o roteamento e entrega de mensagens do tópico aos clientes inscritos. Esse recurso pode ser usado para mensagens, como alertas de clima, cotações de ações e manchetes.
 
-[![Diagrama de mensagens do tópico](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png)
+[![Diagrama de mensagens do tópico](firebase-cloud-messaging-images/04-topic-messaging-sml.png)](firebase-cloud-messaging-images/04-topic-messaging.png#lightbox)
 
 As etapas a seguir são usadas no sistema de mensagens do tópico (depois que o aplicativo cliente obtém um token de registro, conforme explicado anteriormente):
 
@@ -127,28 +121,28 @@ Antes de usar os serviços FCM em seu aplicativo, você deve criar um novo proje
 
 1.  Entrar a [Firebase Console](https://console.firebase.google.com/) com sua conta do Google (ou seja, o endereço do Gmail) e clique em **criar novo projeto**:
 
-    [![Criar botão novo projeto](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png)
+    [![Criar botão novo projeto](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png#lightbox)
 
     Se você tiver um projeto existente, clique em **importar um projeto do Google**.
 
 2.  No **criar um projeto** caixa de diálogo, digite o nome do seu projeto e clique em **criar projeto**. No exemplo a seguir, um novo projeto chamado **XamarinFCM** é criada:
 
-    [![Criar uma caixa de diálogo do projeto](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png)
+    [![Criar uma caixa de diálogo do projeto](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png#lightbox)
 
 3.  No Console do Firebase **visão geral**, clique em **Firebase adicionar ao seu aplicativo Android**:
 
-    [![Adicionar Firebase ao seu aplicativo Android](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png)
+    [![Adicionar Firebase ao seu aplicativo Android](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
 
 4.  Na próxima tela, insira o nome do pacote do aplicativo. Neste exemplo, o nome do pacote é **com.xamarin.fcmexample**. Esse valor deve corresponder ao nome do pacote do aplicativo Android. Um apelido do aplicativo também pode ser inserido no **apelido do aplicativo** campo:
 
-    [![Inserindo exemplo FCM como o apelido do aplicativo](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png)
+    [![Inserindo exemplo FCM como o apelido do aplicativo](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
 
 5.  Se seu aplicativo usa links dinâmicos, convites ou Google Auth, você também deve inserir seu certificado de assinatura de depuração. Para obter mais informações sobre como localizar seu certificado de autenticação, consulte [localizando o armazenamento de chaves MD5 ou SHA1 assinatura](~/android/deploy-test/signing/keystore-signature.md).
     Neste exemplo, o certificado de autenticação for deixado em branco.
 
 6.  Clique em **Adicionar aplicativo**:
 
-    [![Clique no botão Adicionar aplicativo](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png)
+    [![Clique no botão Adicionar aplicativo](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png#lightbox)
 
     Uma chave de API de servidor e uma ID de cliente são gerados automaticamente para o aplicativo. Essas informações são empacotadas em um **google services.json** arquivo é baixado automaticamente quando você clica em **Adicionar aplicativo**.
     Certifique-se de salvar este arquivo em um local seguro.
@@ -156,7 +150,6 @@ Antes de usar os serviços FCM em seu aplicativo, você deve criar um novo proje
 Para obter um exemplo detalhado de como adicionar **google services.json** para um projeto de aplicativo para receber mensagens de notificação por push FCM no Android, consulte [remoto notificações com FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
 
-<a name="furtherreading" />
 
 ## <a name="for-further-reading"></a>Para leitura adicional
 
@@ -167,7 +160,6 @@ Para obter um exemplo detalhado de como adicionar **google services.json** para 
 -   [6120 RFC](https://tools.ietf.org/html/rfc6120) e [6121 RFC](https://tools.ietf.org/html/rfc6121) explicam e definir as mensagens extensível e o protocolo de presença (XMPP).
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumo
 
@@ -176,4 +168,4 @@ Este artigo fornece uma visão geral do sistema de mensagens de nuvem com a Fire
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Firebase mensagens de nuvem](https://firebase.google.com/docs/cloud-messaging/)
+- [Mensagens na nuvem do Firebase](https://firebase.google.com/docs/cloud-messaging/)

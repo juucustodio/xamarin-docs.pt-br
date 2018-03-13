@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2016
-ms.openlocfilehash: d68d84671028ded14b4b885f2c134656fc639f9e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b5e9a4c449bc99bd88fc415f5ebb969d2c2a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-features"></a>Recursos de plataforma Android
 
@@ -28,14 +28,14 @@ Para adicionar os temas de Design de Material ao seu projeto Android xamarin. Fo
 
 Aqui está o **Todo** exemplo com o padrão `FormsApplicationActivity`:
 
-[ ![](images/before-appcompat-sml.png "Exemplo de todo o aplicativo sem AppCompat")](images/before-appcompat.png "aplicativo de exemplo de tarefas sem AppCompat")
+[![](images/before-appcompat-sml.png "Exemplo de todo o aplicativo sem AppCompat")](images/before-appcompat.png#lightbox "aplicativo de exemplo de tarefas sem AppCompat")
 
 E isso é o mesmo código depois de atualizar o projeto para usar `FormsAppCompatActivity` (e adicionar as informações adicionais de tema):
 
-[ ![](images/post-appcompat-sml.png "Aplicativo de exemplo de tarefas com AppCompat e temas")](images/post-appcompat.png "aplicativo de exemplo de tarefas com AppCompat e temas")
+[![](images/post-appcompat-sml.png "Aplicativo de exemplo de tarefas com AppCompat e temas")](images/post-appcompat.png#lightbox "aplicativo de exemplo de tarefas com AppCompat e temas")
 
 > [!NOTE]
-> **Observação**: ao usar `FormsAppCompatActivity`, o [classes base para alguns processadores personalizados Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) serão diferentes.
+> Ao usar `FormsAppCompatActivity`, o [classes base para alguns processadores personalizados Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) serão diferentes.
 
 
 ## <a name="related-links"></a>Links relacionados

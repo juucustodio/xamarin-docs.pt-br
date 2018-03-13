@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: d81776dcb48d33927ffde4087ceb3f408b38d16f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 036e1ddc95f8eabec3e87c13c25cad972c29a5d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>Introdução ao macOS Serra
 
@@ -52,7 +52,7 @@ Para obter mais informações, consulte da Apple [ApplePay JS Framework](https:/
 
 Aplicativos de macOS modernos como da Apple navegador web Safari, processador de textos de páginas e uso de folha de espalhamento números muitas novas tecnologias para apresentar uma Interface unificada e sensível ao contexto do usuário que elimina com tradicionais elementos de interface do usuário, como painéis flutuantes e vários abrir Windows.
 
-[ ![Um exemplo de uma janela com guias do Mac](images/content08.png)](images/content08.png)
+[![Um exemplo de uma janela com guias do Mac](images/content08.png)](images/content08.png#lightbox)
 
 Nosso [macOS construção modernos aplicativos](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) guia abrange várias dicas, recursos e técnicas de um desenvolvedor pode usar para compilar um aplicativo moderno macOS em Xamarin.Mac.
 
@@ -152,5 +152,5 @@ Consulte da Apple [v10.12 OS X comparações API](https://developer.apple.com/li
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de Mac](https://developer.xamarin.com/samples/mac/)
+- [Amostras de Mac](https://developer.xamarin.com/samples/mac/)
 - [O que há de novo nos X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

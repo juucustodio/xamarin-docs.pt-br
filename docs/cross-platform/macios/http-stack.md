@@ -8,13 +8,15 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 06/12/2017
-ms.openlocfilehash: d4fce635b26b0c367e836e4ec41d4f51a10b9c35
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eff096b1dca15b9b11038a599987f632bca2352f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="httpclient-stack-selector"></a>Seletor de pilha HttpClient
+# <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>Pilha de HttpClient e seletor de implementação de SSL/TLS para iOS/macOS
+
+## <a name="httpclient-stack-selector"></a>Seletor de pilha HttpClient
 
 Disponível para xamarin, Xamarin.tvOS e Xamarin.Mac: Isso controla quais `HttpClient` implementação para usar. O padrão continua sendo um HttpClient que é alimentado por `HttpWebRequest`, enquanto você agora pode, opcionalmente, alterne para uma implementação que usa o iOS, tvOS ou macOS transportes nativo (`NSUrlSession` ou `CFNetwork` dependendo do sistema operacional). A vantagem é binários menores e downloads mais rápidos, a desvantagem é que ele requer que o loop de eventos esteja em execução para operações assíncronas ser executado.
 
@@ -22,7 +24,7 @@ Projetos devem fazer referência a **System** assembly.
 
 <a name="Selecting-a-HttpClient-Stack" />
 
-## <a name="selecting-a-httpclient-stack"></a>Selecionando uma pilha HttpClient
+### <a name="selecting-a-httpclient-stack"></a>Selecionando uma pilha HttpClient
 
 Para ajustar o HttpClient que está sendo usado pelo seu aplicativo:
 
@@ -30,19 +32,19 @@ Para ajustar o HttpClient que está sendo usado pelo seu aplicativo:
 2. Alterne para o **criar** configurações para seu projeto (por exemplo, **iOS Build** para um aplicativo xamarin).
 3. Do **HttpClient implementação** lista suspensa, selecione o HttpClient tipo como um dos seguintes: **gerenciado**, **CFNetwork** ou **NSUrlSession**.
 
-[ ![Escolher HttpClient implementação gerenciado, CFNetwork ou NSUrlSession](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png)
+[![Escolher HttpClient implementação gerenciado, CFNetwork ou NSUrlSession](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
 <a name="Managed" />
 
-## <a name="managed-default"></a>Gerenciado (padrão)
+### <a name="managed-default"></a>Gerenciado (padrão)
 
 O manipulador gerenciado é o manipulador de HttpClient totalmente gerenciado que é enviado com a versão anterior do Xamarin.
 
-### <a name="pros"></a>Prós:
+#### <a name="pros"></a>Prós:
 
  - Ele tem o recurso mais compatível definida com o Microsoft .NET e versões mais antigas do Xamarin.
 
-### <a name="cons"></a>Contras:
+#### <a name="cons"></a>Contras:
 
  - Ele não está totalmente integrado com os sistemas operacionais Apple e é limitado a TLS 1.0.
  - Ele geralmente muito mais lento em coisas como criptografia de APIs nativas.
@@ -50,16 +52,16 @@ O manipulador gerenciado é o manipulador de HttpClient totalmente gerenciado qu
 
 <a name="CFNetwork" />
 
-## <a name="cfnetwork"></a>CFNetwork
+### <a name="cfnetwork"></a>CFNetwork
 
 O manipulador de CFNetwork baseia nativo `CFNetwork` framework disponível no iOS 6 e mais recente.
 
-### <a name="pros"></a>Prós:
+#### <a name="pros"></a>Prós:
 
  - Ele usa as APIs nativas para melhor desempenho e o menor tamanho executável.
  - Oferece suporte para os padrões mais recentes, como TLS 1.2.
 
-### <a name="cons"></a>Contras:
+#### <a name="cons"></a>Contras:
 
  - Requer iOS 6 ou posterior.
  - Não disponível em watchOS.
@@ -67,22 +69,21 @@ O manipulador de CFNetwork baseia nativo `CFNetwork` framework disponível no iO
 
 <a name="NSUrlSession" />
 
-## <a name="nsurlsession"></a>NSUrlSession
+### <a name="nsurlsession"></a>NSUrlSession
 
 O manipulador de NSURLSession baseia nativo `NSURLSession` framework disponível no iOS 7 e versões mais recente.
 
-### <a name="pros"></a>Prós:
+#### <a name="pros"></a>Prós:
 
  - Ele usa as APIs nativas para melhor desempenho e o menor tamanho executável.
  - Oferece suporte para os padrões mais recentes, como TLS 1.2.
 
-### <a name="cons"></a>Contras:
+#### <a name="cons"></a>Contras:
 
  - Requer iOS 7 ou posterior.
  - Alguns recursos de HttpClient/opções não estão disponíveis.
 
-
-## <a name="programmatically-setting-the-httpmessagehandler"></a>Configurando programaticamente o HttpMessageHandler
+### <a name="programmatically-setting-the-httpmessagehandler"></a>Configurando programaticamente o HttpMessageHandler
 
 Além da configuração de todo o projeto mostrada acima, você também pode instanciar uma `HttpClient` e injetar desejado `HttpMessageHandler` por meio do construtor, conforme demonstrado nestes trechos de código:
 
@@ -104,7 +105,7 @@ Isso torna possível usar outra `HttpMessageHandler` de declarado no **opções 
 <a name="Selecting-a-SSL-TLS-implementation" />
 <a name="Apple-TLS" />
 
-# <a name="ssltls-implementation-build"></a>Compilação de implementação de SSL/TLS
+## <a name="ssltls-implementation-build"></a>Compilação de implementação de SSL/TLS
 
 SSL (Secure Socket Layer) e seu sucessor, o TLS (Transport Layer Security), oferecem suporte para HTTP e outras conexões de rede por meio de `System.Net.Security.SslStream`. Xamarin, Xamarin.tvOS ou do Xamarin.Mac `System.Net.Security.SslStream` implementação chamará a implementação de SSL/TLS nativa da Apple em vez de usar a implementação gerenciada fornecida pelo Mono. Implementação nativa da Apple oferece suporte a TLS 1.2.
 
@@ -114,7 +115,7 @@ SSL (Secure Socket Layer) e seu sucessor, o TLS (Transport Layer Security), ofer
 
 <a name="App-Transport-Security" />
 
-# <a name="app-transport-security"></a>Segurança de transporte do aplicativo
+## <a name="app-transport-security"></a>Segurança de transporte do aplicativo
 
 Da Apple _segurança de transporte do aplicativo_ (ATS) impõe conexões seguras entre os recursos de internet (como o servidor de back-end do aplicativo) e seu aplicativo. ATS garante que todas as comunicações de internet esteja em conformidade para proteger a conexão práticas recomendadas, impedindo assim a divulgação acidental de informações confidenciais diretamente por meio de seu aplicativo ou uma biblioteca que está consumindo.
 
@@ -141,10 +142,8 @@ O trecho a seguir é um exemplo do que o `MtouchTlsProvider` configuração fica
 ```xml
 <MtouchTlsProvider>Default</MtouchTlsProvider>
 ```
-s
-
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Transport Layer Security (TLS)](~/cross-platform/app-fundamentals/transport-layer-security.md)
-- [Segurança de transporte do aplicativo](~/ios/app-fundamentals/ats.md)
+- [TLS (Transport Layer Security)](~/cross-platform/app-fundamentals/transport-layer-security.md)
+- [Segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md)

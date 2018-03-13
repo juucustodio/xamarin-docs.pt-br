@@ -3,16 +3,16 @@ title: Mapa
 description: Xamarin. Forms usa o mapa nativo APIs em cada plataforma.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
+ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 98e6cade952e656046c6c0981a0b73ff0894c9d6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2f0ad800ed1ab3a336f10dd4431e234ac4ff9675
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="map"></a>Mapa
 
@@ -28,7 +28,7 @@ Uma vez configurado, o `Map` controlar funciona exatamente como qualquer outro e
 
 O controle de mapa foi usado no [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) sample, que é mostrado abaixo.
 
- [ ![Mapas no exemplo MobileCRM](map-images/maps-zoom-sml.png "exemplo de controle de mapa")](map-images/maps-zoom.png "exemplo de controle de mapa")
+ [![Mapas no exemplo MobileCRM](map-images/maps-zoom-sml.png "exemplo de controle de mapa")](map-images/maps-zoom.png#lightbox "exemplo de controle de mapa")
 
 Funcionalidade de mapa pode ser aprimorada ainda mais com a criação de um [mapear renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -103,7 +103,7 @@ Depois de seguir essas instruções, cole a chave de API no **Properties/Android
 Sem uma chave de API válida o controle de mapas será exibido como uma caixa cinza no Android.
 
 > [!NOTE]
-> **Observação**: Lembre-se de gerar outra chave usando o arquivo de armazenamento de chaves que é usado para assinar a versão de qualquer aplicativo que é carregado para o Google Play store. A chave que você gerar para desenvolvimento e depuração não funcionará e o aplicativo baixado do Google Play será desfeito exibição do mapa. Lembre-se também ao regenerar a chave se o aplicativo **nome do pacote** alterações.
+> Lembre-se de gerar outra chave usando o arquivo de armazenamento de chaves que é usado para assinar a versão de qualquer aplicativo que é carregado para o Google Play store. A chave que você gerar para desenvolvimento e depuração não funcionará e o aplicativo baixado do Google Play será desfeito exibição do mapa. Lembre-se também ao regenerar a chave se o aplicativo **nome do pacote** alterações.
 
 Você também precisará habilitar as permissões apropriadas, clicando duas vezes no projeto Android e selecionando **opções > compilar > aplicativo Android** e marcar o seguinte:
 
@@ -185,7 +185,7 @@ slider.ValueChanged += (sender, e) => {
 };
 ```
 
- [ ![Mapas com zoom](map-images/maps-zoom-sml.png "Zoom de controle de mapa")](map-images/maps-zoom.png "Zoom de controle de mapa")
+ [![Mapas com zoom](map-images/maps-zoom-sml.png "Zoom de controle de mapa")](map-images/maps-zoom.png#lightbox "Zoom de controle de mapa")
 
 ### <a name="map-pins"></a>Pins de mapa
 
@@ -253,4 +253,4 @@ Uma vez configurada, a API mapeia pode ser usada para renderizar o maps com marc
 
 - [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/)
 - [Renderizador de mapa personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
-- [Exemplos de xamarin. Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)

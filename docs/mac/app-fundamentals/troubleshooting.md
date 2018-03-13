@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f7ded8fdc1274f7c98d8f7134f6a87c7ba767646
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b0d757c951f9244beb093a0a9b13ac1d069b507
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="reporting-bugs"></a>Relatório de bugs
 
@@ -70,7 +70,7 @@ As seções a seguir abordam os problemas conhecidos e suas soluções.
 
 O depurador se conecta ao Xamarin.Mac aplicativos por meio de TCP, o que significa que por padrão quando você habilita a área restrita, não é possível se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões adequadas habilitadas, você obterá um erro *"não é possível se conectar ao o depurador"*. 
 
-[![Os direitos de edição](troubleshooting-images/debug01.png "os direitos de edição")](troubleshooting-images/debug01-large.png)
+[![Os direitos de edição](troubleshooting-images/debug01.png "os direitos de edição")](troubleshooting-images/debug01-large.png#lightbox)
 
 O **permitir saída conexões de rede (cliente)** a permissão é necessária para o depurador, habilitar esta permite que a depuração normalmente. Desde que você não pode depurar sem ele, atualizamos o `CompileEntitlements` de destino para `msbuild` para adicionar automaticamente essa permissão para os direitos para qualquer aplicativo que está na área restrita para depuração somente compilações. Compilações de versão devem usar as autorizações especificadas no arquivo de direitos, sem modificações.
 
@@ -80,7 +80,7 @@ Ao incluir 3º bibliotecas de terceiros em seu aplicativo Xamarin.Mac, você pod
 
 Isso pode ser resolvido, abra as opções para o projeto Xamarin.Mac, vai **Mac criar** > **internacionalização** e verificando o **Oeste** internacionalização:
 
-[![Editar as opções de compilação](troubleshooting-images/issue01.png "editar as opções de compilação")](troubleshooting-images/issue01-large.png)
+[![Editar as opções de build](troubleshooting-images/issue01.png "Editar as opções de build")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>Falha ao compilar (mm5103)
 
@@ -100,7 +100,7 @@ Com o novo Visual Studio para Mac instalado, quando você cria um novo projeto d
 
 Se você clicar duas vezes o **Entitlements.plist** arquivo, o Editor de direitos será exibido:
 
-[![Os direitos de edição](troubleshooting-images/entitlements02.png "os direitos de edição")](troubleshooting-images/entitlements02-large.png)
+[![Os direitos de edição](troubleshooting-images/entitlements02.png "os direitos de edição")](troubleshooting-images/entitlements02-large.png#lightbox)
 
 Para projetos de Xamarin.Mac existentes, você precisará criar manualmente o **Entitlements.plist** arquivo clicando no projeto no **solução preenchimento** e selecionando **adicionar**  >  **Novo arquivo...** . Em seguida, selecione **Xamarin.Mac** > **lista vazia de propriedade**:
 
@@ -108,7 +108,7 @@ Para projetos de Xamarin.Mac existentes, você precisará criar manualmente o **
 
 Digite `Entitlements` para o nome e clique o **novo** botão. Se seu projeto incluídos anteriormente um arquivo de direitos, você deverá adicioná-lo para o projeto em vez de criar um novo arquivo:
 
-[![Verificando a substituição de um arquivo](troubleshooting-images/entitlements04.png "verificando a substituição de um arquivo")](troubleshooting-images/entitlements04-large.png)
+[![Verificando a substituição de um arquivo](troubleshooting-images/entitlements04.png "verificando a substituição de um arquivo")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## <a name="contacting-support-business-or-enterprise-licenses"></a>Entrar em contato com suporte (licenças de negócios ou enterprise)
 
@@ -124,14 +124,14 @@ A comunidade de desenvolvedores que usam o Xamarin produtos é o incrível e mui
 
 Seus comentários são importantes para nós. Se você encontrar problemas com Xamarin.Mac:
 
-- Pesquisa o [repositório do problema](https://github.com/xamarin/xamarin-macios/issues) 
-- Antes de alternar para problemas do GitHub, Xamarin problemas foram controlados na [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Procure lá para correspondência de problemas.
-- Se você não encontrar um problema de correspondência, envie um novo problema de [repositório de problema do GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+- Pesquise o [repositório de problemas](https://github.com/xamarin/xamarin-macios/issues) 
+- Antes de mudar para problemas do GitHub, os problemas do Xamarin eram rastreados no [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Procure lá por problemas correspondentes.
+- Se você não encontrar um problema correspondente, envie um novo problema no [repositório de problemas do GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Problemas do GitHub são todos os públicos. Não é possível ocultar comentários ou anexos. 
+Os problemas do GitHub são todos públicos. Não é possível ocultar comentários ou anexos. 
 
-Inclua tanto o seguinte como possíveis:                                                                                                                                          
+Inclua tanto do seguinte quanto possível:                                                                                                                                          
 
-- Um exemplo simple de reproduzir o problema. Isso é **inestimável** sempre que possível. 
-- O rastreamento de pilha completa da falha.
-- O código c# ao redor da falha. 
+- Um exemplo simples reproduzindo o problema. Isso é **inestimável**, quando possível. 
+- O rastreamento de pilha completo da falha.
+- O código C# ao redor da falha. 

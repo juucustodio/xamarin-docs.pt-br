@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/30/2017
-ms.openlocfilehash: 7048962a93f5bd99f4a27062ecc6cc2d5b2d3398
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d2d9c455f2ddd652a76177527586673901edd012
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="textureview"></a>TextureView
 
 O `TextureView` classe é uma exibição que usa a renderização 2D acelerada por hardware para habilitar um vídeo ou OpenGL fluxo de conteúdo a ser exibido. Por exemplo, a captura de tela a seguir mostra o `TextureView` exibindo um feed de câmera do dispositivo:
 
-[![Captura de tela de exemplo de uma imagem ao vivo da câmera do dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png)
+[![Captura de tela de exemplo de uma imagem ao vivo da câmera do dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
 
 Ao contrário de `SurfaceView` classe, que também pode ser usado para exibir o conteúdo de vídeo ou de OpenGL, o TextureView não será renderizado em uma janela separada.
 Portanto, `TextureView` é capaz de dar suporte a transformações de exibição como qualquer outra exibição. Por exemplo, girando uma `TextureView` pode ser feito simplesmente definindo seu `Rotation` propriedade, a transparência, definindo seu `Alpha` propriedade e assim por diante.
@@ -67,7 +67,7 @@ public class TextureViewActivity : Activity,
 
 O código acima cria um `TextureView` instância na atividade de `OnCreate` método e define a atividade como o `TextureView`do `SurfaceTextureListener`. Para ser o `SurfaceTextureListener`, a atividade implementa o `TextureView.ISurfaceTextureListener` interface. O sistema chamará o `OnSurfaceTextAvailable` método quando o `SurfaceTexture` está pronto para uso. Nesse método, faremos o `SurfaceTexture` que é transmitido e defina-a textura de visualização da câmera. Em seguida, estamos livres para executar operações com base em modo de exibição normais, como configuração de `Rotation` e `Alpha`, conforme mostrado no exemplo acima. O aplicativo resultante, em execução em um dispositivo, é mostrado abaixo:
 
-[![Exemplo de aplicativo em execução em um dispositivo, exibindo uma imagem](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png)
+[![Exemplo de aplicativo em execução em um dispositivo, exibindo uma imagem](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
 Para usar o `TextureView`, aceleração de hardware deve ser ativada, o que será por padrão a partir de 14 de nível de API. Também, uma vez que este exemplo usa a câmera, tanto o `android.permission.CAMERA` permissão e o `android.hardware.camera` recurso deve ser definido na **AndroidManifest.xml**.
 

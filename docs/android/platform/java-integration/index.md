@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 88e8c66d36956649f0a996046f038d89a7267cf5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="java-integration-overview"></a>Visão geral da integração Java
 
 _O ecossistema de Java inclui um conjunto diversificado e enorme de componentes. Muitos desses componentes podem ser usados para reduzir o tempo necessário para desenvolver um aplicativo do Android. Este documento apresentará e fornecem uma visão geral de algumas das maneiras que os desenvolvedores podem usar esses componentes existentes do Java para melhorar sua experiência de desenvolvimento de aplicativo xamarin._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -41,7 +40,6 @@ A segunda técnica, usando JNI, funciona em um nível muito menor, mas pode forn
 A terceira técnica é radicalmente diferente dos dois anteriores: portar o código do Java no c#. Portabilidade de código de um idioma para outro pode ser um processo muito trabalhoso, mas é possível reduzir que esforço com a Ajuda de uma ferramenta chamada *nitidez*. Nitidez é uma ferramenta de código-fonte aberto que é um Java-para-C# conversor. 
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
@@ -51,7 +49,7 @@ Este documento fornecida uma visão geral de algumas das maneiras diferentes que
 ## <a name="related-links"></a>Links relacionados
 
 - [Arquitetura](~/android/internals/architecture.md)
-- [Associação de uma biblioteca de Java](~/android/platform/binding-java-library/index.md)
+- [Associação de uma biblioteca Java](~/android/platform/binding-java-library/index.md)
 - [Trabalhando com JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Ajustar Nitidez](https://github.com/slluis/sharpen)
 - [Interface nativa do Java](http://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)

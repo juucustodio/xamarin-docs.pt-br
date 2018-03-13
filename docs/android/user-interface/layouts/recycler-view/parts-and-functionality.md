@@ -6,12 +6,12 @@ ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: b1ddcca25fd83a806e8383a5717462b518b46d0b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 89679f7d825422ab34dd77b31a7a3fde60f36e99
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="recyclerview-parts-and-functionality"></a>Funcionalidade e partes de RecyclerView
 
@@ -57,7 +57,7 @@ Se você não estender `ItemDecoration` e `ItemAnimator`, `RecyclerView` usa pad
 
 `RecyclerView` uma exibição de item não aloca para cada item na fonte de dados. Em vez disso, ele aloca somente o número de modos de exibição do item que caibam na tela e reutiliza os layouts de item, como o usuário rolar. Quando o modo de exibição primeiro rola ficará oculta, ele passa pelo processo de reciclagem ilustrado na figura a seguir:
 
-[ ![Diagrama que ilustra as seis etapas de reciclagem de exibição](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png)
+[![Diagrama que ilustra as seis etapas de reciclagem de exibição](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
 1.  Quando uma exibição rola ficará oculta e não será mais exibida, ele se torna um *exibição de descarte*.
 
@@ -75,7 +75,6 @@ Se você não estender `ItemDecoration` e `ItemAnimator`, `RecyclerView` usa pad
 Além de reutilização de exibição de item, `RecyclerView` também usa outra otimização de eficiência: exibir proprietários. Um *proprietário de exibição* é uma classe simple caches exibir referências. Cada vez que o adaptador inflação um arquivo de layout do item, ele também cria um proprietário de exibição correspondente. O proprietário da exibição usa `FindViewById` obter referências para os modos de exibição dentro do arquivo inflated do layout do item. Essas referências são usadas para carregar novos dados para os modos de exibição, toda vez que o layout é reciclado para mostrar novos dados.
  
 
-<a name="layoutmanager" />
 
 ### <a name="the-layout-manager"></a>O Gerenciador de Layout
 
@@ -96,7 +95,6 @@ Para especificar o Gerenciador de layout, instanciar o Gerenciador de layout esc
 
 Para obter mais informações sobre o Gerenciador de layout, consulte o [referência de classe RecyclerView.LayoutManager](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-<a name="viewholder" />
 
 ### <a name="the-view-holder"></a>O proprietário de exibição
 
@@ -109,7 +107,6 @@ O proprietário de exibição é uma classe que você define para caching de ref
 Um exemplo detalhado de um `ViewHolder` implementação é apresentada em [um exemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
 Para obter mais informações sobre `RecyclerView.ViewHolder`, consulte o [referência de classe RecyclerView.ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
-<a name="adapter" />
 
 ### <a name="the-adapter"></a>O adaptador
 
@@ -118,7 +115,7 @@ Como a fonte de dados é específico do aplicativo, você deve implementar a fun
 
 O desenho a seguir ilustra como o adaptador mapeia o conteúdo em uma fonte de dados através de proprietários de exibição para exibições individuais dentro de cada item de linha no `RecyclerView`:
 
-[ ![Diagrama que ilustra o adaptador de conexão de fonte de dados com ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png)
+[![Diagrama que ilustra o adaptador de conexão de fonte de dados com ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
 
 O adaptador carrega cada `RecyclerView` linha com dados de um item de linha específica. Posição de linha *P*, por exemplo, o adaptador localiza os dados associados na posição *P* dentro da fonte de dados e copia esses dados para a linha do item na posição *P* do `RecyclerView` coleção.
 No desenho acima, por exemplo, o adaptador usa o proprietário de exibição para pesquisar as referências para o `ImageView` e `TextView` naquela posição, portanto, não precisa chamar repetidamente `FindViewById` para os modos de exibição como o usuário rola através da coleção e reutiliza os modos de exibição.
@@ -134,7 +131,6 @@ Quando você implementa um adaptador, você deve substituir o seguinte `Recycler
 O Gerenciador de layout chama esses métodos enquanto o posicionamento de itens dentro de `RecyclerView`. 
 
 
-<a name="datachanges" />
 
 ### <a name="notifying-recyclerview-of-data-changes"></a>Notificando RecyclerView das alterações de dados
 

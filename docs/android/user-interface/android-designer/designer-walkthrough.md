@@ -8,23 +8,21 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: b199e4370e93712211db125e427fb61da39cb296
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c9ec0d3bc9c3278f097b925ccb755323df950c62
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-the-android-designer"></a>Usando o Designer de Android
 
 _Este tópico é um passo a passo do Designer xamarin. Ele demonstra como criar uma interface do usuário para um aplicativo de navegador coloridas; Essa interface do usuário é criado inteiramente no Designer._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Visão geral
 
 Interfaces de usuário do Android podem ser criadas declarativamente usando arquivos XML ou programaticamente, escrevendo código. O Designer de xamarin permite aos desenvolvedores criar e modificar layouts declarativos visualmente, sem a necessidade de lidar com o tédio edição manual de arquivos de XML. O Designer também fornece comentários em tempo real, o que permite ao desenvolvedor a avaliar as alterações de interface do usuário sem precisar reimplantar o aplicativo para um dispositivo ou emulador. Isso pode acelerar o desenvolvimento do Android da interface do usuário bastante. Neste artigo, apresentamos um passo a passo que mostra como usar o Designer do xamarin para criar visualmente uma interface do usuário.
 
-<a name="Walkthrough" />
 
 ## <a name="walkthrough"></a>Passo a passo
 
@@ -32,7 +30,6 @@ O objetivo deste passo a passo é usar o Designer de Android para criar uma inte
 
 Vamos começar!
 
-<a name="Creating_a_New_Project" />
 
 ### <a name="creating-a-new-project"></a>Criando um novo projeto
 
@@ -42,13 +39,13 @@ A primeira etapa é criar um novo projeto de xamarin.
 
 Inicie o Visual Studio e clique em **novo projeto...**  , em seguida, escolha o **Visual C\# > Android > aplicativo em branco (Android)** modelo:
 
-[ ![Aplicativo do Android em branco](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png)
+[![Aplicativo do Android em branco](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Inicie o Visual Studio para Mac e clique em **nova solução...** . Escolha o **aplicativo Android** modelo e clique em **próximo**:
 
-[ ![Aplicativo do Android em branco](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png)
+[![Aplicativo do Android em branco](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png#lightbox)
 
 -----
 
@@ -56,20 +53,19 @@ Inicie o Visual Studio para Mac e clique em **nova solução...** . Escolha o **
 
 Nomeie o novo aplicativo **Designer** e clique em **Okey**.
 
-[ ![Nome de aplicativo](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png)
+[![Nome de aplicativo](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Nomeie o novo aplicativo **Designer**. Em **plataformas de destino**, selecione **mais recente e maior** e clique em **próximo**:
 
-[ ![Nome de aplicativo](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png)
+[![Nome de aplicativo](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png#lightbox)
 
 Na próxima tela da caixa de diálogo, clique em **criar**.
 
 -----
 
 
-<a name="Adding_a_Layout" />
 
 ### <a name="adding-a-layout"></a>Adicionando um Layout
 
@@ -79,38 +75,37 @@ Vamos criar um **LinearLayout** que usaremos para manter nossos usuário element
 
 No Visual Studio, clique com botão direito **recursos/layout** no **Solution Explorer** e selecione **Adicionar > Novo Item...** . No **Adicionar Novo Item** caixa de diálogo, selecione **Layout Android**. Nomeie o arquivo **ListItem.axml** e clique em **adicionar**:
 
-[ ![Novo layout](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png)
+[![Novo layout](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
 
 O novo **ListItem** layout é exibido no Designer:
 
-[ ![Designer de exibição](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png)
+[![Designer de exibição](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png#lightbox)
 
 Clique o **fonte** guia na parte inferior do Designer para exibir a origem XML para este layout:
 
-[ ![XML Designer](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png)
+[![XML Designer](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png#lightbox)
 
 Do **exibição** menu, clique em **outras janelas > esboço de documento** para abrir o **esboço de documento**. O **esboço de documento** mostra que o layout atualmente contém um único **LinearLayout** widget:
 
-[ ![Estrutura de tópicos do documento](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png)
+[![Estrutura de tópicos do documento](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 No Visual Studio para Mac, clique com botão direito **recursos/layout** no **solução** preenchimento e selecione **Adicionar > novo arquivo...** . No **novo arquivo** caixa de diálogo, selecione **Android > Layout**. Nomeie o arquivo **ListItem** e clique em **novo**:
 
-[ ![Novo layout](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png)
+[![Novo layout](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png#lightbox)
 
 O novo **ListItem** layout é exibido no Designer:
 
-[ ![Designer de exibição](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png)
+[![Designer de exibição](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png#lightbox)
 
 Clique o **fonte** guia na parte inferior do Designer para exibir a origem XML para este layout. Quando você clica o **esboço de documento** guia à direita, ele mostra que o layout atualmente contém um único **LinearLayout** widget:
 
-[ ![XML Designer](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png)
+[![XML Designer](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png#lightbox)
 
 -----
 
 
-<a name="Creating_the_List_Item_User_Interface" />
 
 ### <a name="creating-the-list-item-user-interface"></a>Criando a Interface de usuário do Item de lista
 
@@ -120,11 +115,11 @@ No **caixa de ferramentas**, role para baixo até o **imagens & mídia** seção
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Localizar ImageView](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png)
+[![Localizar ImageView](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Localizar ImageView](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png)
+[![Localizar ImageView](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png#lightbox)
 
 -----
 
@@ -132,11 +127,11 @@ Como alternativa, você pode inserir *ImageView* na barra de pesquisa para local
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Pesquisa ImageView](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png)
+[![Pesquisa ImageView](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Pesquisa ImageView](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png)
+[![Pesquisa ImageView](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png#lightbox)
 
 -----
 
@@ -144,11 +139,11 @@ Arraste esta `ImageView` na superfície de Design:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![ImageView na tela](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png)
+[![ImageView na tela](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![ImageView na tela](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png)
+[![ImageView na tela](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png#lightbox)
 
 -----
 
@@ -158,11 +153,11 @@ Em seguida, arraste um `LinearLayout (Vertical)` widget do **caixa de ferramenta
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Contorno azul](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png)
+[![Contorno azul](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Contorno azul](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png)
+[![Contorno azul](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png#lightbox)
 
 -----
 
@@ -170,11 +165,11 @@ Quando você seleciona o `ImageView` no Designer, a estrutura de tópicos azul m
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Selecione ImageView](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png)
+[![Selecione ImageView](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Selecione ImageView](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png)
+[![Selecione ImageView](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png#lightbox)
 
 -----
 
@@ -182,11 +177,11 @@ Em seguida, arraste um `Text (Large)` widget do **caixa de ferramentas** no rec�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Destaques verdes](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png)
+[![Destaques verdes](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Destaques verdes](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png)
+[![Destaques verdes](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png#lightbox)
 
 -----
 
@@ -194,11 +189,11 @@ Em seguida, adicione um `Text (Small)` widget abaixo o `Text (Large)` widget:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Adicionar texto pequeno widget](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png)
+[![Adicionar texto pequeno widget](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Adicionar texto pequeno widget](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png)
+[![Adicionar texto pequeno widget](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png#lightbox)
 
 -----
 
@@ -206,18 +201,17 @@ Neste ponto, o Designer deve ser semelhante a captura de tela a seguir:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Layout do Designer](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png)
+[![Layout do Designer](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Layout do Designer](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png)
+[![Layout do Designer](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png#lightbox)
 
 -----
 
 Se os dois `textView` widgets não estão dentro `linearLayout1`, você pode arrastá-los para `linearLayout1` no **esboço de documento** e posicioná-los para que elas apareçam como mostrado na captura de tela anterior (recuado sob `linearLayout1`).
 
 
-<a name="Arranging_The_User_Interface" />
 
 ### <a name="arranging-the-user-interface"></a>Organizando a Interface do usuário
 
@@ -241,13 +235,13 @@ Vamos modificar a interface do usuário para exibir o `ImageView` à esquerda, c
 
 3.  Role para baixo até **ViewGroup** e altere o `Width` definindo como `wrap_content`:
 
-[ ![Conteúdo do conjunto de wrap](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png)
+[![Conteúdo do conjunto de wrap](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png#lightbox)
 
 -----
 
 Outra maneira de alterar o `Width` configuração é clique no triângulo no lado direito do widget para alternar a configuração de sua largura para `wrap_content`:
 
-[ ![Arraste para definir a largura](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png)
+[![Arraste para definir a largura](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png#lightbox)
 
 Clique no triângulo novamente retorna o `Width` definindo como `match_parent`.
 
@@ -255,11 +249,11 @@ Em seguida, alterne para o **esboço de documento** e selecione a raiz `LinearLa
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Selecione raiz LinearLayout](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png)
+[![Selecione raiz LinearLayout](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Selecione raiz LinearLayout](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png)
+[![Selecione raiz LinearLayout](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png#lightbox)
 
 -----
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -272,7 +266,7 @@ Com a raiz `LinearLayout` selecionada, retornar para o **propriedades** janela, 
 
 Com a raiz `LinearLayout` selecionada, retornar para o **propriedades** guia e clique em **Widget**. Alterar o `Orientation` definindo como `horizontal`:
 
-[ ![Selecione a orientação horizontal](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png)
+[![Selecione a orientação horizontal](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png#lightbox)
 
 -----
 
@@ -280,15 +274,14 @@ Neste ponto, o Designer deve ser semelhante a captura de tela a seguir:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Layout do Designer](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png)
+[![Layout do Designer](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Layout do Designer](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png)
+[![Layout do Designer](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png#lightbox)
 
 -----
 
-<a name="Modifying_the_Spacing" />
 
 ### <a name="modifying-the-spacing"></a>Modificando o espaçamento
 
@@ -296,13 +289,13 @@ Neste ponto, o Designer deve ser semelhante a captura de tela a seguir:
 
 Em seguida, modificaremos configurações de preenchimento e margem na interface de usuário para fornecer mais espaço entre os widgets. Selecione o `ImageView`, clique no **categorizado** ícone de pesquisa no **propriedades** janela e role para baixo até o **Layout** seção. Alterar o `Min Height` para `70dp`, o `Min Width` para `50dp`e o `padding` para `10dp`. Isso se aplica preenchimento ao redor de todos os lados do `ImageView` e elongates-verticalmente:
 
-[ ![Definir preenchimento](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png)
+[![Definir preenchimento](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Em seguida, modificaremos configurações de preenchimento e margem na interface de usuário para fornecer mais espaço entre os widgets. Selecione o `ImageView` e clique no **Layout** guia **propriedades**. Alterar o `Padding` para `10dp`, o `Min Width` para `50dp`e o `Min Height` para `70dp`. Isso se aplica preenchimento ao redor de todos os lados do `ImageView` e elongates-verticalmente:
 
-[ ![Definir preenchimento](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png)
+[![Definir preenchimento](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png#lightbox)
 
 -----
 
@@ -311,13 +304,13 @@ Em seguida, modificaremos configurações de preenchimento e margem na interface
 A parte inferior, esquerda, direita e configurações de preenchimento superior pode ser definida independentemente inserindo valores para o `paddingBottom`, `paddingLeft`, `paddingRight`, e `paddingTop` campos, respectivamente.
 Por exemplo, definir a `paddingLeft` campo `5dp` e `paddingBottom`, `paddingRight`, e `paddingTop` campos de `10dp`:
 
-[ ![Configurações de preenchimento personalizada](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png)
+[![Configurações de preenchimento personalizada](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 A parte superior, direita, inferior e configurações de preenchimento à esquerda podem ser definidos independentemente inserindo valores para o `Top`, `Right`, `Bottom`, e `Left` preenchimento de campos, respectivamente. Por exemplo, definir a `Left` para o valor de preenchimento `5dp` e `Top`, `Right`, e `Bottom` preenchimento valores `10dp`. Observe que o `Padding` configuração muda para uma lista separada por vírgulas desses valores:
 
-[ ![Configurações de preenchimento personalizada](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png)
+[![Configurações de preenchimento personalizada](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png#lightbox)
 
 -----
 
@@ -325,18 +318,17 @@ A parte superior, direita, inferior e configurações de preenchimento à esquer
 
 Em seguida, ajustar a posição do `LinearLayout` widget que contém os dois `TextView` widgets. No **esboço de documento**, selecione `linearLayout1`. No **propriedades** janela, role até a **Layout - ViewGroup** seção. Definir `layout_marginBottom`, `layout_marginLeft`, `layout_marginRight`, e `layout_marginTop` para `5dp`, `5dp`, `0dp`, e `5dp` respectivamente:
 
-[ ![Definir margens](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png)
+[![Definir margens](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Em seguida, ajustar a posição do `LinearLayout` widget que contém os dois `TextView` widgets. No **esboço de documento**, selecione `linearLayout1`. No **propriedades** painel, selecione o **Layout** guia. Role para baixo até o **ViewGroup** seção e defina o `Left`, `Top`, `Right`, e `Bottom` margens para `5dp`, `5dp`, `0dp`, e `5dp` respectivamente:
 
-[ ![Definir margens](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png)
+[![Definir margens](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png#lightbox)
 
 -----
 
 
-<a name="Removing_the_Default_Image" />
 
 ### <a name="removing-the-default-image"></a>Removendo a imagem padrão
 
@@ -360,11 +352,10 @@ Como estamos usando o `ImageView` para exibir cores (em vez de imagens), vamos r
 
 3.  Limpar o `Src` configuração de forma que ela está em branco:
 
-[ ![Limpar a configuração de src ImageView](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png)
+[![Limpar a configuração de src ImageView](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png#lightbox)
 
 -----
 
-<a name="Adding_a_ListView" />
 
 ### <a name="adding-a-listview-container"></a>Adicionar um contêiner de ListView
 
@@ -377,7 +368,7 @@ No **caixa de ferramentas**, localize o `ListView` widget e arraste-o para a sup
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Novo ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png)
+[![Novo ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png#lightbox)
 
 -----
 
@@ -390,14 +381,13 @@ Abra o **Widget** guia **propriedades** e altere o `Id` para `@+id/myListView`:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Renomeie o id para myListView](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png)
+[![Renomeie o id para myListView](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png#lightbox)
 
 -----
 
 Neste momento, nossa interface do usuário está pronta para uso.
 
 
-<a name="Running_the_Application" />
 
 ### <a name="running-the-application"></a>Executando o aplicativo
 
@@ -490,10 +480,9 @@ Esse código usa um personalizado `ListView` adaptador para carregar informaçõ
 
 Crie e execute o aplicativo. Captura de tela a seguir está um exemplo de como o aplicativo é exibido durante a execução em um dispositivo:
 
-[ ![Captura de tela final](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png)
+[![Captura de tela final](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 

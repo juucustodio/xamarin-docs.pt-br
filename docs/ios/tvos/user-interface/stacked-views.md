@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2b16fd970e724228215fd0dd1c9022227ab84435
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-stacked-view"></a>Trabalhando com exibição empilhada
 
@@ -23,7 +23,7 @@ O controle de exibição de pilha (`UIStackView`) aproveita o poder do Layout au
 
 O layout de todos os sub-visualizações anexado a um modo de exibição de pilha são gerenciadas por ela com base nas propriedades de desenvolvedor definido como eixo, distribuição, alinhamento e espaçamento:
 
-[ ![](stacked-views-images/stacked01.png "Diagrama de layout do modo de exibição secundário")](stacked-views-images/stacked01.png)
+[![](stacked-views-images/stacked01.png "Diagrama de layout do modo de exibição secundário")](stacked-views-images/stacked01.png#lightbox)
 
 Ao usar um `UIStackView` em um aplicativo de Xamarin.tvOS, o desenvolvedor pode definir sub-visualizações tanto dentro de um Storyboard no iOS Designer ou adicionando e removendo sub-visualizações em código c#.
 
@@ -103,21 +103,21 @@ Há vários tipos de layout que funcionam bem com controles de exibição de pil
 1. No **solução preenchimento**, clicando duas vezes no `Main.storyboard` de arquivo e abri-lo para edição.
 1. Crie o layout de seus elementos individuais que você pretende adicionar ao modo de exibição de pilha: 
 
-    [ ![](stacked-views-images/layout01.png "Exemplo de layout do elemento")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "Exemplo de layout do elemento")](stacked-views-images/layout01.png#lightbox)
 1. Adicione quaisquer restrições necessárias para os elementos para garantir que eles dimensionadas corretamente. Esta etapa é importante quando o elemento é adicionado à exibição de pilha.
 1. Verifique o número necessário de cópias (quatro neste caso): 
 
-    [ ![](stacked-views-images/layout02.png "O número de cópias necessárias")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "O número de cópias necessárias")](stacked-views-images/layout02.png#lightbox)
 1. Arraste um **exibição pilha** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](stacked-views-images/layout03.png "Um modo de exibição de pilha")](stacked-views-images/layout03.png)
+    [![](stacked-views-images/layout03.png "Um modo de exibição de pilha")](stacked-views-images/layout03.png#lightbox)
 1. Selecione o modo de exibição de pilha, o **Widget guia** do **propriedades de preenchimento** selecione **preencher** para o **alinhamento**, **preenchimento Igualmente** para o **distribuição** e digite `25` para o **espaçamento**: 
 
-    [ ![](stacked-views-images/layout04.png "A guia de Widget")](stacked-views-images/layout04.png)
+    [![](stacked-views-images/layout04.png "A guia de Widget")](stacked-views-images/layout04.png#lightbox)
 1. Posicione o modo de exibição de pilha na tela onde você desejar e adicionar restrições para mantê-lo no local necessário.
 1. Selecione os elementos individuais e arraste-os para o modo de exibição de pilha: 
 
-    [ ![](stacked-views-images/layout05.png "Os elementos individuais na exibição da pilha")](stacked-views-images/layout05.png)
+    [![](stacked-views-images/layout05.png "Os elementos individuais na exibição da pilha")](stacked-views-images/layout05.png#lightbox)
 1. O layout será ajustado e os elementos serão organizados na exibição da pilha com base nos atributos definida acima.
 1. Atribuir **nomes** no **Widget guia** do **propriedades Explorer** para trabalhar com os controles de interface do usuário em código c#.
 1. Salve as alterações.
@@ -127,21 +127,21 @@ Há vários tipos de layout que funcionam bem com controles de exibição de pil
 1. No **Solution Explorer**, clicando duas vezes no `Main.storyboard` de arquivo e abri-lo para edição.
 1. Crie o layout de seus elementos individuais que você pretende adicionar ao modo de exibição de pilha: 
 
-    [ ![](stacked-views-images/layout01.png "Exemplo de layout de elemento")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "Exemplo de layout de elemento")](stacked-views-images/layout01.png#lightbox)
 1. Adicione quaisquer restrições necessárias para os elementos para garantir que eles dimensionadas corretamente. Esta etapa é importante quando o elemento é adicionado à exibição de pilha.
 1. Verifique o número necessário de cópias (quatro neste caso): 
 
-    [ ![](stacked-views-images/layout02.png "O número de cópias necessárias")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "O número de cópias necessárias")](stacked-views-images/layout02.png#lightbox)
 1. Arraste um **exibição pilha** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](stacked-views-images/layout03-vs.png "Um modo de exibição de pilha")](stacked-views-images/layout03-vs.png)
+    [![](stacked-views-images/layout03-vs.png "Um modo de exibição de pilha")](stacked-views-images/layout03-vs.png#lightbox)
 1. Selecione o modo de exibição de pilha, o **Widget guia** do **propriedades Explorer** selecione **preencher** para o **alinhamento**, **preencher Igualmente** para o **distribuição** e digite `25` para o **espaçamento**: 
 
-    [ ![](stacked-views-images/layout04-vs.png "A guia de Widget")](stacked-views-images/layout04-vs.png)
+    [![](stacked-views-images/layout04-vs.png "A guia de Widget")](stacked-views-images/layout04-vs.png#lightbox)
 1. Posicione o modo de exibição de pilha na tela onde você desejar e adicionar restrições para mantê-lo no local necessário.
 1. Selecione os elementos individuais e arraste-os para o modo de exibição de pilha: 
 
-    [ ![](stacked-views-images/layout05-vs.png "Os elementos individuais na exibição da pilha")](stacked-views-images/layout05-vs.png)
+    [![](stacked-views-images/layout05-vs.png "Os elementos individuais na exibição da pilha")](stacked-views-images/layout05-vs.png#lightbox)
 1. O layout será ajustado e os elementos serão organizados na exibição da pilha com base nos atributos definida acima.
 1. Atribuir **nomes** no **Widget guia** do **propriedades Explorer** para trabalhar com os controles de interface do usuário em código c#.
 1. Salve as alterações.
@@ -190,11 +190,11 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 
 Quando o aplicativo é executado, quatro elementos serão igualmente distribuídos em nossa visualização da pilha:
 
-[ ![](stacked-views-images/layout06.png "Quando o aplicativo é executado, quatro elementos serão igualmente distribuídos em nossa visualização da pilha")](stacked-views-images/layout06.png)
+[![](stacked-views-images/layout06.png "Quando o aplicativo é executado, quatro elementos serão igualmente distribuídos em nossa visualização da pilha")](stacked-views-images/layout06.png#lightbox)
 
 Se o número de players é reduzido, os modos de exibição não utilizados são ocultados, e a exibição da pilha de ajustar o layout de acordo com:
 
-[ ![](stacked-views-images/layout07.png "Se o número de players é reduzido, os modos de exibição não utilizados são ocultados, e a exibição da pilha de ajustar o layout de acordo com")](stacked-views-images/layout07.png)
+[![](stacked-views-images/layout07.png "Se o número de players é reduzido, os modos de exibição não utilizados são ocultados, e a exibição da pilha de ajustar o layout de acordo com")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 
@@ -317,7 +317,7 @@ Este artigo abordou criando e trabalhando com exibição empilhada dentro de um 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

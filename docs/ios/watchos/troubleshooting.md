@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9c9032b3206fa35d264bd69c94b7882e877b334f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS solução de problemas
 
@@ -61,7 +61,7 @@ Esta página contém informações adicionais e soluções alternativas para os 
 - Não é possível adicionar dois `WKNotificationControllers` para um storyboard.
     Solução alternativa: A `notificationCategory` elemento no storyboard XML sempre é inserido com o mesmo `id`. Para contornar esse problema, você pode adicionar duas (ou mais) controladores de notificação, abra o arquivo de storyboard em um editor de texto e alterar manualmente o `id` elemento seja exclusivo.
 
-    [ ![](troubleshooting-images/duplicate-id-sml.png "Abrindo o storyboard do arquivo em um editor de texto e altere manualmente o elemento de id para ser exclusivo")](troubleshooting-images/duplicate-id.png)
+    [![](troubleshooting-images/duplicate-id-sml.png "Abrindo o storyboard do arquivo em um editor de texto e altere manualmente o elemento de id para ser exclusivo")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - Você pode ver um erro "o aplicativo não foi construído" ao tentar iniciar o aplicativo. Isso ocorre após um **limpar** quando o projeto de inicialização está definido como o projeto de extensão de inspeção.
     A correção é selecionar **Build > recriar todos** e, em seguida, inicie o aplicativo novamente.

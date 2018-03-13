@@ -8,15 +8,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/23/2017
-ms.openlocfilehash: f8680cde2e5536495f33d571adea9980020a72fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 02a425c8276524accc088b53c1099e7c2e28d828
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-layouts"></a>Layouts com guias
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -45,7 +44,6 @@ O `ActionBar` API é mais simples e possivelmente fornece uma melhor experiênci
 O `TabHost` API é compatível com todas as versões do Android, mas requer mais esforço para usar e não é consistente com o atual [Android diretrizes de interface do usuário](http://developer.android.com/design/index.html). Os desenvolvedores são recomendados de usar essa API e devem favorecer a barra de ação mais recente para seus aplicativos xamarin. 
 
 
-<a name="Introducing_ActionBarSherlock" />
 
 ## <a name="actionbarsherlock"></a>ActionBarSherlock
 

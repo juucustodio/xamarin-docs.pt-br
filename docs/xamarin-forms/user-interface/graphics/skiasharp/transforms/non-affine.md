@@ -4,14 +4,15 @@ description: "Criar ponto de Vista e efeitos de diminuição com a terceira colu
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 3fda8524b824042aa4aba07853da2801baf47027
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2e2e83404bc93bd07885008b868c51eba2ff7140
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="non-affine-transforms"></a>Transformações não afins
 
@@ -226,7 +227,7 @@ public partial class TestPerspectivePage : ContentPage
 
 Aqui estão algumas imagens de amostra:
 
-[![](non-affine-images/testperspective-small.png "Captura de tela da página da perspectiva de teste tripla")](non-affine-images/testperspective-large.png "tripla captura de tela da página da perspectiva de teste")
+[![](non-affine-images/testperspective-small.png "Captura de tela da página da perspectiva de teste tripla")](non-affine-images/testperspective-large.png#lightbox "tripla captura de tela da página da perspectiva de teste")
 
 Como fazer experiências com os controles deslizantes, verá que valores além 0.0066 ou abaixo –0.0066 fazem com que a imagem a ser interrompido e incoerentes, repentinamente. O bitmap que está sendo transformado é quadrado de 300 pixels. Ele é transformado em relação a seu centro, para que as coordenadas do bitmap no intervalo de –150 até 150. Lembre-se de que o valor de z' é:
 
@@ -390,13 +391,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Estes são alguns exemplos:
 
-[![](non-affine-images/tapertransform-small.png "Tripla captura de tela da página diminuição da transformação")](non-affine-images/tapertransform-large.png "tripla captura de tela da página diminuição da transformação")
+[![](non-affine-images/tapertransform-small.png "Tripla captura de tela da página diminuição da transformação")](non-affine-images/tapertransform-large.png#lightbox "tripla captura de tela da página diminuição da transformação")
 
 Outro tipo de transformações não afim generalizadas é rotação 3D, que é demonstrada no próximo artigo, [rotações 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
 
 A transformação não é afim pode transformar um retângulo em qualquer quadrilátero convexo. Isso é demonstrado pelo **matriz afim de não mostrar** página. É muito semelhante do **afim de mostrar** página do [transformações de matriz](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) artigo exceto que ela tem uma quarta `TouchPoint` objeto para manipular o quarto canto do bitmap:
 
-[![](non-affine-images/shownonaffinematrix-small.png "Tripla captura de tela da página de matriz não afim Mostrar")](non-affine-images/shownonaffinematrix-large.png "tripla captura de tela da página matriz afim de não mostrar")
+[![](non-affine-images/shownonaffinematrix-small.png "Tripla captura de tela da página de matriz não afim Mostrar")](non-affine-images/shownonaffinematrix-large.png#lightbox "tripla captura de tela da página matriz afim de não mostrar")
 
 Desde que você não tente fazer um ângulo interior de um dos cantos do bitmap maior 180 graus, ou fazer com que dois lados cruzada entre si, o programa calcula com êxito usando esse método de transformação de [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) classe:
 

@@ -4,14 +4,15 @@ description: "Use transformações não afins para girar objetos 2D em espaço 3
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: a959278b5de72792b23e46372b1333362bed91c8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="3d-rotations"></a>Rotações 3D
 
@@ -27,7 +28,7 @@ Esse trabalho envolve trabalhar com rotações tridimensionais e, em seguida, de
 
 Um sistema de coordenadas tridimensional adiciona um terceiro eixo z conceitualmente chamado, o eixo Z é ângulos direita para a tela. Pontos de coordenadas no espaço 3D são indicados com três números: (x, y, z). Em 3D do sistema de coordenadas usado neste artigo, aumentar os valores de X são à direita e aumentar os valores de Y, ficarem desativados, assim como ocorre em duas dimensões. Aumentar os valores Z positivos sair da tela. A origem é o canto superior esquerdo, assim como em gráficos 2D. Você pode pensar a tela como um plano XY com o eixo Z reto para esse plano.
 
-Isso é chamado de um sistema de coordenadas esquerdo. Se você apontar o dedo indicador para a esquerda na direção de X positivo coordenadas (à direita) e o dedo intermediária na direção y crescentes coordenadas (baixo), em seguida, os pontos de thumb a direção de aumentar as coordenadas Z &#x2014; Estendendo fora da tela.
+Isso é chamado de um sistema de coordenadas esquerdo. Se você apontar o dedo indicador para a esquerda na direção de positivo X coordenadas (à direita) e coordena o dedo intermediária na direção do aumento Y (baixo), em seguida, o polegar pontos na direção de aumentar as coordenadas Z — estendendo fora do a tela.
 
 Em gráficos 3D, as transformações são baseadas em uma matriz 4 por 4. Aqui está a matriz de identidade 4 por 4:
 
@@ -109,7 +110,7 @@ Rotação ao redor do eixo Z é igual de gráficos 2D:
 |    0       0     0  1  |
 </pre>
 
-A direção de rotação indicada pela direção do sistema de coordenadas. Este é um sistema canhoto, portanto, se você apontar o thumb da sua mão esquerda para aumentar os valores para um determinado eixo &#x2014; à direita de rotação ao redor do eixo X, para baixo para rotação ao redor do eixo Y e na sua direção de rotação ao redor do eixo Z &#x2014; em seguida, a curva de seus dedos outros indica a direção de rotação ângulos positivos.
+A direção de rotação indicada pela direção do sistema de coordenadas. Este é um sistema canhoto, portanto, se você apontar o thumb da sua mão esquerda para aumentar os valores para um determinado eixo — para a direita para rotação ao redor do eixo X, para baixo para rotação ao redor do eixo Y e na sua direção de rotação ao redor do eixo Z —, em seguida, a curva de seu os outros dedos indica a direção de rotação ângulos positivos.
 
 `SKMatrix44` tenha generalizado estático [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) e [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) métodos que permitem que você especifique o eixo ao redor do qual a rotação ocorre:
 
@@ -408,7 +409,7 @@ public partial class Rotation3DPage : ContentPage
 
 Quando você testar o controle deslizante quarto, você observará que as configurações de profundidade diferentes não movem o objeto mais distante do visualizador, mas em vez disso, alteram a extensão do efeito de perspectiva:
 
-[![](3d-rotation-images/rotation3d-small.png "Captura de tela da página rotação 3D tripla")](3d-rotation-images/rotation3d-large.png "tripla captura de tela da página rotação 3D")
+[![](3d-rotation-images/rotation3d-small.png "Captura de tela da página rotação 3D tripla")](3d-rotation-images/rotation3d-large.png#lightbox "tripla captura de tela da página rotação 3D")
 
 O **animado rotação 3D** também usa `SKMatrix44` para animar uma cadeia de caracteres de texto em espaço 3D. O `textPaint` objeto definido como um campo é usado no construtor para determinar os limites do texto:
 
@@ -442,7 +443,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-O `OnAppearing` substituição define três xamarin. Forms `Animation` objetos para animar a `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campos em diferentes taxas. Observe que os períodos dessas animações são definidos como números primos &#x2014; 5 segundos, 7 segundos e 11 segundos &#x2014; para que a combinação geral somente se repete a cada 385 segundos ou mais de 10 minutos:
+O `OnAppearing` substituição define três xamarin. Forms `Animation` objetos para animar a `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campos em diferentes taxas. Observe que os períodos dessas animações são definidos como principal números — 5 segundos, 7 e 11 segundos — para a combinação geral somente se repete a cada 385 segundos ou mais de 10 minutos:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -532,7 +533,7 @@ public class AnimatedRotation3DPage : ContentPage
 
 Essa rotação 3D é colocada entre várias transformações 2D para mover o Centro de rotação para o centro da tela e dimensionar o tamanho da cadeia de caracteres de texto para que seja a mesma largura de tela:
 
-[![](3d-rotation-images/animatedrotation3d-small.png "Captura de tela da página de animação de rotação 3D tripla")](3d-rotation-images/animatedrotation3d-large.png "tripla captura de tela da página de animação de rotação 3D")
+[![](3d-rotation-images/animatedrotation3d-small.png "Captura de tela da página de animação de rotação 3D tripla")](3d-rotation-images/animatedrotation3d-large.png#lightbox "tripla captura de tela da página de animação de rotação 3D")
 
 
 ## <a name="related-links"></a>Links relacionados

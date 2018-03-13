@@ -4,14 +4,15 @@ description: "Conheça os fundamentos de desenho SkiaSharp, incluindo telas e pi
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 63314efdd29c8da0273459de2d12f7b807968a04
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Desenho de um círculo simples
 
@@ -139,7 +140,7 @@ Neste momento, o `DrawCircle` chamada preenche o círculo usando as novas propri
 
 Aqui está o programa em execução no iOS, Android e a plataforma Universal do Windows:
 
-[![](circle-images/simplecircle-small.png "Captura de tela da página círculo simples tripla")](circle-images/simplecircle-large.png "tripla captura da página do círculo simples")
+[![](circle-images/simplecircle-small.png "Captura de tela da página círculo simples tripla")](circle-images/simplecircle-large.png#lightbox "tripla captura da página do círculo simples")
 
 Ao executar o programa, você pode ativar o telefone ou o simulador lado para ver como o gráfico é redesenhado. Cada vez que o gráfico deve ser redesenhado, o `PaintSurface` manipulador de eventos é chamado novamente.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d5f9f86447886e2cea46a6317d05506cdbed90bb
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-view"></a>Implementando um modo de exibição
 
@@ -115,7 +115,7 @@ O processo para criar a classe de renderizador personalizado é o seguinte:
 1. Adicionar um `ExportRenderer` de atributo para a classe de renderizador personalizado para especificar que será usada para renderizar o controle personalizado do xamarin. Forms. Este atributo é usado para registrar o renderizador personalizado com xamarin. Forms.
 
 > [!NOTE]
-> **Observação**: para a maioria dos elementos de xamarin. Forms, é opcional fornecer um renderizador personalizado em cada projeto da plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão para a classe base do controle. No entanto, renderizadores personalizados são necessários em cada projeto de plataforma ao renderizar um [exibição](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
+> Para a maioria dos elementos de xamarin. Forms, é opcional fornecer um renderizador personalizado em cada projeto da plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão para a classe base do controle. No entanto, renderizadores personalizados são necessários em cada projeto de plataforma ao renderizar um [exibição](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto de aplicativo de exemplo, juntamente com as relações entre eles:
 
@@ -318,7 +318,7 @@ namespace CustomRenderer.WinPhone81
 Desde que o `Control` é de propriedade `null`, um novo `CaptureElement` é instanciada e `InitializeAsync` método é chamado, que usa o `MediaCapture` API para fornecer o fluxo de visualização da câmera. O `SetNativeControl` método é chamado para atribuir uma referência para o `CaptureElement` de instância para o `Control` propriedade. O `CaptureElement` controlar expõe um `Tapped` evento é manipulado pelo `OnCameraPreviewTapped` método para parar e iniciar a visualização do vídeo quando ele é tocado. O `Tapped` evento está inscrito quando o renderizador personalizado é anexado a um novo elemento xamarin. Forms e não inscrito em apenas quando o elemento que o processador é anexado a alterações.
 
 > [!NOTE]
-> **Observação**: é importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo do Windows Phone ou UWP. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte e [início rápido: captura de vídeo usando a API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) para aplicativos de tempo de execução do Windows, e [exibir a visualização de câmera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) para aplicativos UWP.
+> É importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo de UWP ou Windows Phone. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte e [início rápido: captura de vídeo usando a API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) para aplicativos de tempo de execução do Windows, e [exibir a visualização de câmera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) para aplicativos UWP.
 
 ## <a name="summary"></a>Resumo
 

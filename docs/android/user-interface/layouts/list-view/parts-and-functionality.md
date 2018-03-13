@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: a963922dfdc07164b7c20f84be4f0b87440bff13
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a7947c40d80c0ff8cb35dab54a11907280335d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-parts-and-functionality"></a>Funcionalidade e partes de ListView
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -31,41 +30,36 @@ Um `ListView` consiste nas seguintes partes:
 
 Essas capturas de tela usam um basic `ListView` controle para mostrar como rolagem rápida e o índice de seção são renderizados:
 
-[![Capturas de tela de aplicativos usando linhas antigas simples, rápida de rolagem e o índice de seção](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png)
+[![Capturas de tela de aplicativos usando linhas antigas simples, rápida de rolagem e o índice de seção](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
 Os elementos que compõem um `ListView` são descritas em mais detalhes abaixo:
 
-<a name="Rows" />
 
 ## <a name="rows"></a>Linhas
 
 Cada linha tem seu próprio `View`. O modo de exibição pode ser qualquer uma das exibições internas definidas em `Android.Resources`, ou uma exibição personalizada. Cada linha podem usar o mesmo layout do modo de exibição ou todas elas podem ser diferentes. Há exemplos neste documento do uso de layouts internos e outros explicando como definir layouts personalizados.
 
-<a name="Adapter" />
 
 ## <a name="adapter"></a>Adaptador
 
 O `ListView` controle requer uma `Adapter` para fornecer o formatado `View` para cada linha. Android tem internos adaptadores e exibições que podem ser usadas ou classes personalizadas podem ser criadas.
 
-<a name="Fast_Scrolling" />
 
 ## <a name="fast-scrolling"></a>Rolagem rápida
 
 Quando um `ListView` contém muitas linhas de dados o fast de rolagem pode ser habilitada para ajudar o usuário navegar para qualquer parte da lista. O fast rolagem 'barra de rolagem' pode ser opcionalmente habilitado (e personalizada em nível de API 11 e superior).
 
-<a name="Section_Index" />
 
 ## <a name="section-index"></a>Índice de seção
 
 Ao rolar por listas longas, o índice de seção opcional fornece ao usuário comentários em qual parte da lista estão exibindo no momento. Só é apropriado em listas longas, geralmente em conjunto com rolagem rápida.
 
-<a name="Classes_Overview" />
 
 ## <a name="classes-overview"></a>Visão geral de classes
 
 As classes principais usadas para exibir `ListViews` são mostradas aqui:
 
-[![Diagrama UML ilustrar relações entre ListView e classes associadas](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png)
+[![Diagrama UML ilustrar relações entre ListView e classes associadas](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
 A finalidade de cada classe é descrita abaixo:
 

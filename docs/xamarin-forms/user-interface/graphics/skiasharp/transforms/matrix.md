@@ -4,14 +4,15 @@ description: "Aprofundar-se em transformações SkiaSharp com a matriz de transf
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 85402768990869a2121cdea5ab7d232d80d64ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="matrix-transforms"></a>Transformações de matriz
 
@@ -401,7 +402,7 @@ public class PathTransformPage : ContentPage
 
 Ele é exibido no canto superior esquerdo da tela:
 
-[![](matrix-images/pathtransform-small.png "Tripla captura da página do caminho transformar")](matrix-images/pathtransform-large.png "tripla captura da página do caminho de transformação")
+[![](matrix-images/pathtransform-small.png "Tripla captura da página do caminho transformar")](matrix-images/pathtransform-large.png#lightbox "tripla captura da página do caminho de transformação")
 
 O construtor deste programa aplica-se a matriz para o caminho com a chamada a seguir:
 
@@ -588,7 +589,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 A tela de iOS abaixo mostra o bitmap quando a página for carregada pela primeira vez, enquanto as outras duas telas mostrá-la depois de alguns manipulação:
 
-[![](matrix-images/showaffinematrix-small.png "Tripla captura de tela da página afim de mostrar")](matrix-images/showaffinematrix-large.png "tripla captura de tela da página afim de mostrar")
+[![](matrix-images/showaffinematrix-small.png "Tripla captura de tela da página afim de mostrar")](matrix-images/showaffinematrix-large.png#lightbox "tripla captura de tela da página afim de mostrar")
 
 Embora pareça como se os pontos de toque arraste os cantos do bitmap, que é apenas uma ilusão. A matriz calculada a partir de pontos de toque transforma o bitmap para que os cantos coincidam com os pontos de toque.
 

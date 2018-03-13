@@ -2,16 +2,16 @@
 title: "Implementando um player de vídeo"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
+ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e818bc3fa9793f093c10ac2617c5a822d08213d4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a889be5ee31f667117d2c36859e667980f0e6610
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="implementing-a-video-player"></a>Implementando um player de vídeo
 
@@ -27,7 +27,7 @@ No [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/
 
 Players de vídeo requerem *controles de transporte*, que são botões para reproduzir e pausar o vídeo e um posicionamento de barras que mostra o progresso através do vídeo e permite que o usuário ignore rapidamente para um local diferente. `VideoPlayer` pode usar os controles de transporte e posicionamento barra fornecida pela plataforma (conforme mostrado abaixo), ou você pode fornecer uma barra de posicionamento e controles de transporte personalizado. Aqui está o programa em execução no iOS, Android e a plataforma Universal do Windows:
 
-[![Reproduzir o vídeo do Web](web-videos-images/playwebvideo-small.png "reproduzir o vídeo do Web")](web-videos-images/playwebvideo-large.png "reproduzir o vídeo de Web")
+[![Reproduzir o vídeo do Web](web-videos-images/playwebvideo-small.png "reproduzir o vídeo do Web")](web-videos-images/playwebvideo-large.png#lightbox "reproduzir o vídeo de Web")
 
 Obviamente, você pode ativar o telefone para os lados de uma exibição maior.
 

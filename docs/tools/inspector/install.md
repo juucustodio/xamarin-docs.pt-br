@@ -8,10 +8,10 @@ author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
 ms.openlocfilehash: a587935e35882ed1dc68817fbbe1ae3e91200f29
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.sourcegitcommit: 0bdcd00b64d581d4c5179bc39ded4018c9374229
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation-and-requirements"></a>Instalação e requisitos
 

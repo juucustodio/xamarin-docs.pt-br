@@ -3,16 +3,16 @@ title: 'Multitela do Hello, Android: aprofundamento'
 description: "Neste guia de duas partes, o aplicativo Phoneword básico (criado no guia Hello, Android) é expandido para processar uma segunda tela. Ao longo do caminho, são apresentados os Blocos de Construção de Aplicativo Android básico. Um aprofundamento na arquitetura Android está incluído para ajudá-lo a desenvolver uma melhor compreensão da estrutura de aplicativo e da funcionalidade do Android."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: AD3BAE9A-963C-4CF7-9733-111033034289
+ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: a47dea43b1fb1e84a0cd3dffc07b483497edbe09
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Multitela do Hello, Android: aprofundamento
 
@@ -30,7 +30,6 @@ Neste guia, você explorará a arquitetura Android mais avançada conforme os *B
 
 Em [Aprofundamento no Hello, Android](~/android/get-started/hello-android/hello-android-deepdive.md), você aprendeu que aplicativos Android são programas exclusivos porque carecem de um ponto de entrada único. Em vez disso, o sistema operacional (ou outro aplicativo) inicia qualquer uma das Atividades registradas do aplicativo, que, por sua vez, inicia o processo para o aplicativo. Este aprofundamento na arquitetura do Android expande seu entendimento de como os aplicativos Android são construídos, apresentando os Blocos de Construção do Aplicativo Android e suas funções.
 
-<a name="AndroidApplicationBlocks" />
 
 ### <a name="android-application-blocks"></a>Blocos de aplicativos Android
 
@@ -52,7 +51,6 @@ O Android é desenvolvido em torno do *princípio do privilégio mínimo* &ndash
 
 Para comunicação, os Blocos de Aplicativos enviam e recebem mensagens assíncronas chamadas *Intenções*. As Intenções contêm informações sobre o Bloco receptor e, às vezes, alguns dados. Uma Intenção enviada de um componente um Aplicativo faz algo acontecer em outro componente de Aplicativo, associando ambos os componentes de Aplicativo e permitindo que eles se comuniquem. Ao enviar e receber Intenções, você pode fazer os Blocos coordenarem ações complexas, como iniciar o aplicativo de câmera para capturar e salvar, coletar informações sobre o local ou navegar de uma tela para a próxima.
 
-<a name="AndroidManifestXML" />
 
 ### <a name="androidmanifestxml"></a>AndroidManifest.XML
 

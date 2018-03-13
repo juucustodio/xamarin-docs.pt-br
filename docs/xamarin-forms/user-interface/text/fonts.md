@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 22a0b0f5df5a44f2409a59b26eb841b97c920d8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 771e1607bc4e6be8f0991e159b5d34f6d4ea9c02
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fonts"></a>Fontes
 
@@ -181,7 +181,7 @@ Ao especificar uma face de fonte personalizada, é sempre uma boa ideia usar `On
 
 Usando uma fonte que não sejam de tipos internos requer alguma codificação específica de plataforma. Esta captura de tela mostra a fonte personalizada **Lobster** de [fontes do código-fonte aberto do Google](https://www.google.com/fonts) renderizado no iOS, Android e Windows Phone usando xamarin. Forms.
 
- [ ![A fonte personalizada no iOS e Android](fonts-images/custom-sml.png "personalizado fontes exemplo")](fonts-images/custom.png "exemplo de fontes personalizadas")
+ [![A fonte personalizada no iOS e Android](fonts-images/custom-sml.png "personalizado fontes exemplo")](fonts-images/custom.png#lightbox "exemplo de fontes personalizadas")
 
 As etapas necessárias para cada plataforma são descritas abaixo. Ao incluir arquivos de fonte personalizado com um aplicativo, certifique-se de verificar se a licença da fonte permite para distribuição.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 89d3b56a15110d0c106c43ce227f11f86bbdf404
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0fd037e62bcdb1b2be4c93dc0d32ca76f4e1ba8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="invoking-events-from-effects"></a>Invocação de eventos de efeitos
 
@@ -448,7 +448,7 @@ O `Moved` lógica move o `BoxView` alterando o `LayoutBounds` propriedade anexad
 
 Você pode mover várias `BoxView` elementos simultaneamente usando os dedos diferentes.
 
-[![](touch-tracking-images/boxviewdragging-small.png "Captura de tela da página BoxView arrastando tripla")](touch-tracking-images/boxviewdragging-large.png "tripla captura de tela da página BoxView arrastando")
+[![](touch-tracking-images/boxviewdragging-small.png "Captura de tela da página BoxView arrastando tripla")](touch-tracking-images/boxviewdragging-large.png#lightbox "tripla captura de tela da página BoxView arrastando")
 
 ### <a name="subclassing-the-view"></a>Subclasses de modo de exibição
 
@@ -511,7 +511,7 @@ As próximas duas demonstrações exigem gráficos, e eles usam SkiaSharp para e
 
 O **desenho elipse** página permite que você desenhar uma elipse passando o dedo na tela. Dependendo de como você pode mover o dedo, você pode desenhar a elipse de canto superior esquerdo para o canto inferior direito, ou de qualquer outro canto para o canto oposto. Elipse é desenhada com uma cor aleatória e opacidade.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "Captura de tela da página de desenho de elipse tripla")](touch-tracking-images/ellipsedrawing-large.png "tripla captura de tela da página de desenho de elipse")
+[![](touch-tracking-images/ellipsedrawing-small.png "Captura de tela da página de desenho de elipse tripla")](touch-tracking-images/ellipsedrawing-large.png#lightbox "tripla captura de tela da página de desenho de elipse")
 
 Se você tocar em seguida, uma das elipses, você pode arrastá-lo para outro local. Isso requer uma técnica conhecida como "teste de clique," que envolve a pesquisa para o objeto gráfico em um momento específico. As reticências SkiaSharp não são elementos de xamarin. Forms, para que eles não podem executar suas próprias `TouchEffect` de processamento. O `TouchEffect` deve ser aplicada a todo o `SKCanvasView` objeto.
 
@@ -683,7 +683,7 @@ case TouchActionType.Pressed:
 
 Outro exemplo de SkiaSharp é o **dedo pintura** página. Você pode selecionar uma cor de traço e a largura do traço de dois `Picker` modos de exibição e, em seguida, desenhar com um ou mais indicadores:
 
-[![](touch-tracking-images/fingerpaint-small.png "Tripla captura de tela da página de pintura dedo")](touch-tracking-images/fingerpaint-large.png "tripla captura de tela da página de pintura dedo")
+[![](touch-tracking-images/fingerpaint-small.png "Tripla captura de tela da página de pintura dedo")](touch-tracking-images/fingerpaint-large.png#lightbox "tripla captura de tela da página de pintura dedo")
 
 Este exemplo também requer uma classe separada para representar cada linha pintada na tela:
 
@@ -791,7 +791,7 @@ O `AddToList` e `RemoveFromList` métodos Verifique se o `List` foi alterado ent
 
 As várias `WhiteKey` e `BlackKey` elementos são organizados na página de [arquivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml), que fica melhor quando o telefone é mantido em um modo de paisagem:
 
-[![](touch-tracking-images/silentkeyboard-small.png "Captura de tela da página teclado silenciosa tripla")](touch-tracking-images/silentkeyboard-large.png "tripla captura de tela da página teclado silenciosa")
+[![](touch-tracking-images/silentkeyboard-small.png "Captura de tela da página teclado silenciosa tripla")](touch-tracking-images/silentkeyboard-large.png#lightbox "tripla captura de tela da página teclado silenciosa")
 
 Se você passa o dedo através de chaves, você verá por pequenas alterações na cor que os eventos de toque são transferidos de uma chave para outra.
 

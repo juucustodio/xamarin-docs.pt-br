@@ -3,16 +3,16 @@ title: Acesso a dados do iOS
 description: "A maioria dos aplicativos têm alguns requisitos para salvar dados no dispositivo local. A menos que a quantidade de dados é muito pequena, isso geralmente exige um banco de dados e uma camada de dados do aplicativo para gerenciar o acesso ao banco de dados. iOS tem o mecanismo de banco de dados SQLite \"interno\" e acesso para armazenar e recuperar dados é simplificado pela plataforma do Xamarin. Este documento mostra como acessar um banco de dados SQLite."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
+ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 9ca929f584ec2b0d98300e7645707131df89969f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dba862055cc266b2af1eaf87418fe7ebf5830c5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-data-access"></a>Acesso a dados do iOS
 
@@ -38,9 +38,9 @@ Para aplicativos xamarin. Forms, leia [trabalhando com bancos de dados](~/xamari
 
 -  [Introdução](introduction.md)
 -  [Configuração](configuration.md)
--  [Usando SQLite.NET ORM](using-sqlite-orm.md)
--  [Usando o ADO.NET](using-adonet.md)
--  [Usando dados de um aplicativo](using-data-in-an-app.md)
+-  [Usar SQLite.NET ORM](using-sqlite-orm.md)
+-  [Usar ADO.NET](using-adonet.md)
+-  [Usar dados em um aplicativo](using-data-in-an-app.md)
 
 
 ## <a name="summary"></a>Resumo

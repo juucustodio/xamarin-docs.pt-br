@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ab6124e2b11d26d4c10330e7b824e4761ebf4603
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="wide-color"></a>Cores de largura
 
@@ -38,19 +38,19 @@ Os seguintes conceitos de cor core precisam ser abordadas antes de fazer uma an�
 
 Um espaço de cor é um ambiente no qual cores podem ser representadas e comparadas. Pode ser um espaço de uma a quatro dimensional que é definido pela intensidade de seus componentes de cor. 
 
-[ ![](wide-color-images/color00.png "Um espaço de cor")](wide-color-images/color00.png)
+[![](wide-color-images/color00.png "Um espaço de cor")](wide-color-images/color00.png#lightbox)
 
 ### <a name="color-channels"></a>Canais de cores
 
 Os componentes de cor também podem ser chamados como canais de cores. Algumas representações familiares seria RGB espaços, cinza espaços, espaços CMYK ou espaços independente de dispositivo. 
 
-[ ![](wide-color-images/color02.png "Os componentes de cor também podem ser chamados como canais de cores")](wide-color-images/color02.png)
+[![](wide-color-images/color02.png "Os componentes de cor também podem ser chamados como canais de cores")](wide-color-images/color02.png#lightbox)
 
 ### <a name="color-primaries"></a>Cores primárias
 
 Cores primárias fornecem o sistema de coordenadas que é usado para comparar e cores de computação. Cores primárias geralmente se encaixam mais intensa versão de determinada cor que pode ser gerada no canal de cor.
 
-[ ![](wide-color-images/color01.png "Cores primárias fornecem o sistema de coordenadas que é usado para comparar e cores de computação")](wide-color-images/color01.png)
+[![](wide-color-images/color01.png "Cores primárias fornecem o sistema de coordenadas que é usado para comparar e cores de computação")](wide-color-images/color01.png#lightbox)
 
 No caso do espaço de cor RGB representada acima, as cores primárias são onde o `1.0` coordenadas são ancoradas (como `[1.0, 0.0, 0.0]` para vermelho).
 
@@ -58,7 +58,7 @@ No caso do espaço de cor RGB representada acima, as cores primárias são onde 
 
 Gama de cores se refere a todas as cores que podem ser definidas como uma combinação dos canais de cores individuais dentro de um espaço de cores oferecem.
 
-[ ![](wide-color-images/color03.png "Exemplo de gama de cores")](wide-color-images/color03.png)
+[![](wide-color-images/color03.png "Exemplo de gama de cores")](wide-color-images/color03.png#lightbox)
 
 ## <a name="what-is-wide-color"></a>O que é a cor grande
 
@@ -80,7 +80,7 @@ Os usuários que têm captura de imagens digitais no formato BRUTO podem ter ima
 
 Em 2015, Apple lançou novos produtos (iMac e iPad Pro 9.7") que fornecem o espaço de cor P3 nova exibição para lidar com os problemas criados pelo espaço de cor sRGB.
 
-[ ![](wide-color-images/color04.png "O espaço de cor nova exibição P3")](wide-color-images/color04.png)
+[![](wide-color-images/color04.png "O espaço de cor nova exibição P3")](wide-color-images/color04.png#lightbox)
 
 O espaço de cor P3 exibição tem as seguintes propriedades:
 
@@ -112,7 +112,7 @@ Por permitindo valores menores que zero e maior que um, o sRGB intervalo estendi
 
 Para ver como os valores fora do zero e um trabalho em sRGB o intervalo estendido espaço de cor, veja o exemplo seguinte da mais saturada vermelho disponíveis no espaço de cor P3 de exibição:
 
-[ ![](wide-color-images/color05.png "Como os valores fora do zero e um funcionam em sRGB o intervalo estendido espaço de cor")](wide-color-images/color05.png)
+[![](wide-color-images/color05.png "Como os valores fora do zero e um funcionam em sRGB o intervalo estendido espaço de cor")](wide-color-images/color05.png#lightbox)
 
 Na exibição P3, essa cor seria representada como `[1.0, 0.0, 0.0]` e no intervalo estendido sRGB seria `[1.358, -0.074, -0.012]`. Porque valores sRGB estão cheios contidos dentro de exibição P3 e os valores de exibição P3 dispor "fora" dos intervalos sRGB.
 

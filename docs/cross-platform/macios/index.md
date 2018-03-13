@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a5711b5ac8332ac518ba5b639f05de557229af6e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1491e6ec36a9ced9460e083769b2148386d1d518
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-and-mac"></a>iOS e Mac
 
@@ -24,7 +24,7 @@ Para elementos do seu código com nenhum elemento de interface do usuário a mel
 
 Para o código que tem algum trabalho de interface de usuário e ainda, você deseja compartilhar, você deve usar [projetos compartilhados](~/cross-platform/app-fundamentals/shared-projects.md) que permitem que você coloque o código para compartilhar em um único projeto e que ele seja compilado com Mac e iOS, quando referenciadas.
 
-##  <a name="unified-apiunifiedindexmd"></a>[API unificada](unified/index.md)
+##  <a name="unified-apiunifiedindexmd"></a>[API Unificada](unified/index.md)
 
 A API unificada para projetos de Mac e iOS usa os mesmos namespaces estruturas para que o mesmo arquivo de código pode ser usado entre plataformas, para compartilhar código perfeita. Ele também permite compilações de bit de 32 e 64. A API Unified tem sido o padrão de modelo desde o início de 2015 e é recomendada para todos os novos projetos - *somente* projetos unificado API podem ser enviados para a loja de aplicativos.
 
@@ -40,7 +40,7 @@ As APIs de Xamarin.Mac e xamarin original (não unificado) feitas compartilhamen
 
 Há instruções detalhadas para a atualização de qualquer aplicativo clássica para a API unificada.
 
-## <a name="binding-objective-c-librariesbindingindexmd"></a>[Associação de bibliotecas Objective-C](binding/index.md)
+## <a name="binding-objective-c-librariesbindingindexmd"></a>[Associação de bibliotecas de Objective-C](binding/index.md)
 
 Xamarin permite que você coloque bibliotecas nativas em seus aplicativos com associações. Esta seção explica:
 
@@ -48,7 +48,7 @@ Xamarin permite que você coloque bibliotecas nativas em seus aplicativos com as
 - como criar manualmente um projeto de associação que permite que você coloque o código Objective-C em Xamarin, e
 - como usar nosso **Sharpie objetivo** ferramenta para ajudar a automatizar o processo.
 
-## <a name="native-referencesnative-referencesmd"></a>[Referências nativo](native-references.md)
+## <a name="native-referencesnative-referencesmd"></a>[Referências nativas](native-references.md)
 
 
 
@@ -56,17 +56,17 @@ Xamarin permite que você coloque bibliotecas nativas em seus aplicativos com as
 
 Para oferecer suporte de 32 e 64 bits código transparente de c# e F #, estamos introduzindo novos tipos de dados.   Saiba mais sobre eles aqui.
 
-##  <a name="building-32-and-64-bit-apps32-and-64md"></a>[Compilando 32 e 64 bits aplicativos](32-and-64.md)
+##  <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Compilando 32 e 64 bits aplicativos](32-and-64/index.md)
 
 O que você precisa saber para dar suporte a 32 e 64 bits de aplicativos.
 
-## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[Trabalhando com tipos nativos em aplicativos de plataforma cruzada](native-types-cross-platform.md)
+## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[Trabalhar com tipos nativos em aplicativos de plataforma cruzada](native-types-cross-platform.md)
 
 Este artigo aborda o uso do iOS novos tipos nativos de API unificada (`nint`, `nuint`, `nfloat`) em um aplicativo de plataforma cruzada onde o código é compartilhado com dispositivos iOS não, como Android ou sistemas operacionais do Windows Phone.
 Ele fornece informações sobre quando os tipos nativos devem ser usados e fornece várias soluções possíveis para casos em que o novo tipo deve ser usado com o código de plataforma cruzada.
 
 
-## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Pilha de HttpClient e seletor de implementação de SSL/TLS](http-stack.md)
+## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Pilha de HttpClient e seletor de implementação SSL/TLS](http-stack.md)
 
 O novo seletor de pilha HttpClient controla qual implementação HttpClient para usar em seu aplicativo xamarin, Xamarin.tvOS e Xamarin.Mac. Você agora pode alternar para uma implementação que usa do iOS, do tvOS ou transportes nativo OS x (`NSUrlSession` ou `CFNetwork` dependendo do sistema operacional).
 

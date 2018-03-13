@@ -4,18 +4,17 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: d20b2aa7df17f2000e2de9cb67f091c52989719b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 39ee7f826d4c775ead679a09ce56a7c0f92b60ed
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permissões em xamarin
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -42,7 +41,7 @@ Antes de solicitar uma ou mais permissões, é uma prática recomendada para for
 
 O fluxo de trabalho inteiro de verificação e solicitando permissões é conhecido como um _permissões de tempo de execução_ Verifique e pode ser resumido no diagrama a seguir: 
 
-[ ![Gráfico de fluxo de verificação de permissão de tempo de execução](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png)
+[![Gráfico de fluxo de verificação de permissão de tempo de execução](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 A biblioteca de suporte Android backports algumas das novas APIs para permissões em versões anteriores do Android. Essas APIs backported verificará automaticamente a versão do Android no dispositivo não é necessário executar uma verificação de nível de API cada vez.  
 
@@ -50,7 +49,7 @@ Este documento explicará como adicionar permissões a um aplicativo xamarin e c
 
 
 > [!NOTE]
-> **Observação:** é possível que as permissões de hardware podem afetar como o aplicativo é filtrado pelo Google Play. Por exemplo, se o aplicativo requer a permissão para a câmera, em seguida, Google Play não mostrará o aplicativo no Google Play Store em um dispositivo que não tem uma câmera instalada.
+> É possível que as permissões de hardware podem afetar como o aplicativo é filtrado pelo Google Play. Por exemplo, se o aplicativo requer a permissão para a câmera, em seguida, Google Play não mostrará o aplicativo no Google Play Store em um dispositivo que não tem uma câmera instalada.
 
 
 <a name="requirements" />
@@ -59,7 +58,6 @@ Este documento explicará como adicionar permissões a um aplicativo xamarin e c
 
 É altamente recomendável que incluem projetos xamarin o [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) pacote NuGet. Essa permissão de backport do pacote será APIs específicas para versões mais antigas do Android, fornecendo um comum constantemente interface sem a necessidade de verificar a versão do Android que o aplicativo está em execução.
 
-<a name="requesting_permissions" />
 
 ## <a name="requesting-system-permissions"></a>Solicitando permissões do sistema
 
@@ -68,9 +66,8 @@ Este documento explicará como adicionar permissões a um aplicativo xamarin e c
 Aplicativos de destino Android 6.0 ou superior não podem assumir que porque o usuário a permissão em algum momento no passado, se a permissão será válida na próxima vez. Um aplicativo que tem como alvo o Android 6.0 sempre deve executar uma verificação de permissão de tempo de execução. Aplicativos para Android 5.1 ou inferior não precisa executar uma verificação de permissão de tempo de execução.
 
 > [!NOTE]
-> **Observação:** aplicativos só devem solicitar as permissões que eles exigem.
+> Aplicativos só devem solicitar as permissões que eles exigem.
 
-<a name="declaring_permissions_in_the_manifest" />
 
 ### <a name="declaring-permissions-in-the-manifest"></a>Declarando permissões no manifesto
 
@@ -87,15 +84,15 @@ As permissões são adicionadas para o **AndroidManifest.xml** com o `uses-permi
 
 1. Clique duas vezes em **propriedades** no **Solution Explorer** e selecione o **manifesto do Android** guia na janela Propriedades:
 
-    [![Permissões necessárias na guia do manifesto do Android](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png)
+    [![Permissões necessárias na guia do manifesto do Android](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. Se o aplicativo ainda não tiver um AndroidManifest.xml, clique em **AndroidManifest.xml não encontrado. Clique para adicionar um** conforme mostrado abaixo:
 
-    [![Nenhuma mensagem AndroidManifest.xml](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png)
+    [![Nenhuma mensagem AndroidManifest.xml](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. Selecione as permissões que seu aplicativo precisa do **as permissões necessárias** Liste e salvar:
 
-    [![Exemplo de permissões de CÂMERA selecionado](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png)
+    [![Exemplo de permissões de CÂMERA selecionado](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -103,15 +100,15 @@ As permissões são adicionadas para o **AndroidManifest.xml** com o `uses-permi
 
 1. Clique duas vezes no projeto no **solução preenchimento** e selecione **opções > compilar > aplicativo Android**:
 
-    [![Seção de permissões necessária mostrada](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png)
+    [![Seção de permissões necessária mostrada](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. Clique o **adicionar manifesto do Android** botão se o projeto não tiver um **AndroidManifest.xml**:
 
-    [![Manifesto do Android do projeto está ausente](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png)
+    [![Manifesto do Android do projeto está ausente](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. Selecione as permissões que seu aplicativo precisa do **as permissões necessárias** lista e clique em **Okey**:
 
-    [![Exemplo de permissões de CÂMERA selecionado](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png)
+    [![Exemplo de permissões de CÂMERA selecionado](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
@@ -119,7 +116,6 @@ Xamarin automaticamente adicionará algumas permissões no momento da compilaç�
 
 Para aplicativos que se destinam a 5.1 Android (API nível 22) ou inferior, não há nada mais que precisa ser feito. Aplicativos que serão executados no Android 6.0 (API 23 nível 23) ou superior devem prosseguir para a próxima seção sobre como executar verificações de permissão de tempo de execução. 
 
-<a name="run_time_permission_checks" />
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Verificações de permissão de tempo de execução no Android 6.0
 
@@ -213,7 +209,6 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumo
 

@@ -3,14 +3,15 @@ title: "Resumo do capítulo 3. Aprofundar no texto"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9d283a4136a7cdfe39ea0b2da65273332fd47b00
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7dbcc093bc467e633f9333bb129adc25372832f3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumo do capítulo 3. Aprofundar no texto
 
@@ -129,7 +130,7 @@ Em todos os exemplos até agora, todo o texto exibido pelo `Label` tiverem sido 
 
 O [ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText) exemplo demonstra como usar o `FormattedText` propriedade para uma única linha de texto, e [ **VariableFormattedParagraph** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara) demonstra a técnica para todo o parágrafo, como mostrado aqui:
 
-[![Tripla captura de tela da variável formatado parágrafo](images/ch03fg06-small.png "texto de rótulo formatado da variável")](images/ch03fg06-large.png "variável formatado texto de rótulo")
+[![Tripla captura de tela da variável formatado parágrafo](images/ch03fg06-small.png "texto de rótulo formatado da variável")](images/ch03fg06-large.png#lightbox "variável formatado texto de rótulo")
 
 O [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) programa usa uma única `Label` e um `FormattedString` objeto para exibir todos os tamanhos de fonte nomeados para cada plataforma.
 

@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 8e5bb4747811729adf5363b0a893b0f85108b220
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 39c699b10280218223b6f6022d419f77aba875dc
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="multitasking-for-ipad"></a>Multitarefa para iPad
 
@@ -35,6 +36,11 @@ Há várias coisas a considerar quando [suporte multitarefas em seu aplicativo](
 Como desenvolvedor de aplicativos também é possível [recusar multitarefa](#Opting-Out-of-Multitasking), incluindo [desabilitando a reprodução de vídeo de PIP](#Disabling-PIP-Video-Playback).
 
 Este artigo aborda as etapas necessárias para garantir que seu aplicativo xamarin funciona corretamente em um ambiente de multitarefa ou como recusar multitarefa se ele não é uma boa opção para seu aplicativo.
+
+> [!VIDEO https://youtube.com/embed/GctYAozoLr8]
+
+**Multitarefa para iPad, pelo [University Xamarin](https://university.xamarin.com)**
+
 
 <a name="Multitasking-QuickStart" />
 
@@ -59,7 +65,7 @@ iOS 9 oferece novas habilidades de multitarefa no iPad com a introdução de _Sl
 
 O recurso de Slide sobre permite que o usuário selecione um segundo aplicativo e exibi-lo em um painel deslizante pequeno para fornecer a interação rápida. O painel de Slide sobre é temporário e será fechada quando o usuário voltar a trabalhar com o aplicativo principal novamente.
 
-[ ![](multitasking-images/about01.png "O painel de Slide sobre")](multitasking-images/about01.png)
+[![](multitasking-images/about01.png "O painel de Slide sobre")](multitasking-images/about01.png#lightbox)
 
 O ponto principal a ser lembrado é que o usuário decide qual dois aplicativos serão executados lado a lado e que o desenvolvedor não tem controle sobre esse processo. Como resultado, há algumas coisas que você precisará fazer para garantir que seu aplicativo xamarin seja executado corretamente em um painel de Slide sobre:
 
@@ -74,7 +80,7 @@ Slide sobre só está disponível em um iPad Pro, iPad ar, iPad 2 ar, iPad 2 Min
 
 No hardware de iPad com suporte (iPad 2 ar, iPad Mini 4 e iPad Pro somente), o usuário pode escolher um segundo aplicativo e executá-lo lado a lado com o aplicativo em execução no momento em um modo de tela de divisão. O usuário pode controlar o percentual de tela principal de que cada aplicativo ocupa arrastando uma tela divisor.
 
-[ ![](multitasking-images/about02.png "O modo de exibição de divisão")](multitasking-images/about02.png)
+[![](multitasking-images/about02.png "O modo de exibição de divisão")](multitasking-images/about02.png#lightbox)
 
 Como o Slide sobre o usuário decide qual dois aplicativos serão executados lado a lado e novamente, o desenvolvedor não tem controle sobre esse processo. Como resultado, o modo divisão coloca requisitos semelhantes em um aplicativo xamarin:
 
@@ -89,7 +95,7 @@ Para saber mais sobre como preparar seu aplicativo para o modo de exibição de 
 
 A nova imagem no recurso de imagem (também conhecido como _PIP_) permite que o usuário assistir a um vídeo em uma janela flutuante pequeno que o usuário pode posicionar em qualquer lugar na tela acima de outros aplicativos em execução.
 
-[ ![](multitasking-images/about03.png "Um exemplo de imagem na janela flutuante de imagem")](multitasking-images/about03.png)
+[![](multitasking-images/about03.png "Um exemplo de imagem na janela flutuante de imagem")](multitasking-images/about03.png#lightbox)
 
 Como com o Slide sobre e modo de divisão, o usuário tem controle total sobre assistir um vídeo em uma imagem no modo de imagem. Se for Assista ao vídeo função principal do seu aplicativo, será necessário algumas modificações se comportem corretamente no modo PIP. Caso contrário, nenhuma alteração é necessária para dar suporte ao PIP.
 
@@ -111,44 +117,27 @@ Para oferecer suporte a iOS 9 multitarefa em qualquer novo aplicativo xamarin, n
 
 ### <a name="screen-size-and-orientation-considerations"></a>Tamanho da tela e considerações de orientação
 
-Antes de iOS 9, você pode criar seus tamanhos de tela de dispositivo específico do aplicativo agains e orientações. Como um aplicativo agora pode ser executado em um painel de Slide Out ou no modo de exibição de divisão, ele pode encontrar se executado em uma classe de tamanho horizontal compact ou regulares no iPad, independentemente do tamanho físico de orientação ou de tela do dispositivo.
+Antes de iOS 9, você pode projetar seu aplicativo em tamanhos de tela do dispositivo específico e orientações. Como um aplicativo agora pode ser executado em um painel de Slide Out ou no modo de exibição de divisão, ele pode encontrar se executado em uma classe de tamanho horizontal compact ou regulares no iPad, independentemente do tamanho físico de orientação ou de tela do dispositivo.
 
-[ ![](multitasking-images/sizeclasses01.png "Tamanho da tela e considerações de orientação")](multitasking-images/sizeclasses01.png)
+[![](multitasking-images/sizeclasses01.png "Tamanho da tela e considerações de orientação")](multitasking-images/sizeclasses01.png#lightbox)
 
 Em um iPad, um aplicativo de tela inteira tem Classes regulares de tamanho horizontal e vertical. Todos os iPhones, mas o iPhone 6 Plus e iPhone 6s Plus, ter classes compacto em ambas as direções em qualquer orientação. O iPhone 6 Plus e iPhone 6s Plus no modo paisagem têm uma classe de tamanho horizontal Regular e uma classe de tamanho vertical Compact (muito semelhante um iPad Mini).
 
 Em iPads que dão suporte a Slide sobre e modo divisão, você pode terminar com as seguintes combinações:
 
-<table width=100% border="1px">
-    <tr>
-        <td><b>Orientação</b></td>
-        <td><b>Aplicativo primário</b></td>
-        <td><b>Aplicativo secundário</b></td>
-    </tr>
-    <tr>
-        <td><b>Retrato</b></td>
-        <td>75% da tela<br/>Compact Horizontal<br/>Regular Vertical</td>
-        <td>25% da tela<br/>Compact Horizontal<br/>Regular Vertical</td>
-    </tr>
-    <tr>
-        <td><b>Landscape</b></td>
-        <td>75% da tela<br/>Regular Horizontal<br/>Regular Vertical</td>
-        <td>25% da tela<br/>Compact Horizontal<br/>Regular Vertical</td>
-    </tr>
-    <tr>
-        <td><b>Landscape</b></td>
-        <td>50% da tela<br/>Compact Horizontal<br/>Regular Vertical</td>
-        <td>50% da tela<br/>Compact Horizontal<br/>Regular Vertical</td>
-    </tr>
-</table>
+| **Orientação** | **Aplicativo primário** | **Aplicativo secundário** |
+|--- |--- |--- |
+| **Retrato** |75% da tela<br />Compact Horizontal<br />Regular Vertical|25% da tela<br />Compact Horizontal<br />Regular Vertical|
+| **Landscape** |75% da tela<br />Regular Horizontal<br />Regular Vertical|25% da tela<br />Compact Horizontal<br />Regular Vertical|
+| **Landscape** |50% da tela<br />Compact Horizontal<br />Regular Vertical|50% da tela<br />Compact Horizontal<br />Regular Vertical|
 
 O exemplo [MuliTask](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) aplicativo, se a tela inteira é executado em um iPad no modo paisagem, ele apresentará a lista e o modo de exibição de detalhes ao mesmo tempo:
 
-[ ![](multitasking-images/sizeclasses03.png "A lista e o modo de exibição de detalhes apresentados ao mesmo tempo")](multitasking-images/sizeclasses03.png)
+[![](multitasking-images/sizeclasses03.png "A lista e o modo de exibição de detalhes apresentados ao mesmo tempo")](multitasking-images/sizeclasses03.png#lightbox)
 
 Se o mesmo aplicativo é executado em um painel de Slide sobre, ele é apresentado como uma classe de tamanho Horizontal Compact e exibe somente a lista:
 
-[ ![](multitasking-images/sizeclasses04.png "Somente a lista exibida quando o dispositivo é horizontal")](multitasking-images/sizeclasses04.png)
+[![](multitasking-images/sizeclasses04.png "Somente a lista exibida quando o dispositivo é horizontal")](multitasking-images/sizeclasses04.png#lightbox)
 
 Para garantir que seu aplicativo se comporta corretamente nessas situações, você deve adotar coleções característica junto com as Classes de tamanho e estar de acordo com o `IUIContentContainer` e `IUITraitEnvironment` interfaces. Consulte da Apple [referência de classe UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) e nossa [Introdução ao Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guia para obter mais informações.
 
@@ -166,11 +155,11 @@ Agora, com iOS 9, aplicativos podem criar seus próprios atalhos de teclado pers
 
 **Guia comando** abrirá um alternador de aplicativo que permite ao usuário alternar rapidamente entre aplicativos do teclado, assim como o Mac OS:
 
-[ ![](multitasking-images/keyboard01.png "O seletor de exibição do aplicativo")](multitasking-images/keyboard01.png)
+[![](multitasking-images/keyboard01.png "O seletor de exibição do aplicativo")](multitasking-images/keyboard01.png#lightbox)
 
 Se um aplicativo iOS 9 inclui atalhos de teclado, o usuário pode manter pressionada **comando**, **opção** ou **controle** chaves para exibi-los em um pop-up:
 
-[ ![](multitasking-images/keyboard02.png "O pop-up atalhos de teclado")](multitasking-images/keyboard02.png)
+[![](multitasking-images/keyboard02.png "O pop-up atalhos de teclado")](multitasking-images/keyboard02.png#lightbox)
 
 #### <a name="defining-custom-keyboard-shortcuts"></a>Definindo os atalhos de teclado personalizados
 
@@ -206,7 +195,7 @@ Em seguida, podemos substituir o `KeyCommands` propriedade e criar um novo `UIKe
 
 Se executarmos esse aplicativo em um iPad com um teclado de hardware conectados e os tipos de usuário **comando N**, uma nova entrada será adicionada à lista. Se o usuário mantiver pressionada **comando** chave, a lista de atalhos será exibida:
 
-[ ![](multitasking-images/keyboard03.png "O pop-up atalhos de teclado")](multitasking-images/keyboard03.png)
+[![](multitasking-images/keyboard03.png "O pop-up atalhos de teclado")](multitasking-images/keyboard03.png#lightbox)
 
 Consulte o exemplo [MultiTask aplicativo](http://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) para um exemplo de implementação.
 
@@ -240,7 +229,7 @@ Enquanto Apple sugere que todos os aplicativos do iOS 9 suportam multitarefa, po
 
 Para o aplicativo xamarin recusar sendo executado em qualquer um Slide Out painel ou no modo de exibição de divisão, editar o projeto **Info. plist** de arquivos e verificar **requer a tela inteira**:
 
-[ ![](multitasking-images/fullscreen01.png "Aceitar-Out de multitarefa")](multitasking-images/fullscreen01.png)
+[![](multitasking-images/fullscreen01.png "Aceitar-Out de multitarefa")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
 > **Observação:** enquanto Opting-Out de multitarefa impede que o seu aplicativo está sendo executado no Slide Out ou no modo de divisão, ele faz **não** impedir que outro aplicativo está sendo executado em Slide Out ou uma imagem no vídeo de imagem da exibição junto com seu aplicativo.

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 332ce13b08f3d021553be5747b21b05d62aba6ea
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 21f8c6738c00d5738c02962ee95b415e3855d740
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="transactions-and-verification"></a>Verificação e transações
 
@@ -148,7 +148,7 @@ Como os produtos sejam entregues remotamente, também é possível adicionar mai
    
    
    
- [ ![](transactions-and-verification-images/image38.png "Obter os preços de produtos de servidor e entregue")](transactions-and-verification-images/image38.png)   
+ [![](transactions-and-verification-images/image38.png "Obter os preços de produtos de servidor e entregue")](transactions-and-verification-images/image38.png#lightbox)   
    
    
    
@@ -170,7 +170,7 @@ Como os produtos sejam entregues remotamente, também é possível adicionar mai
 
 Porque o servidor remoto requer alguma forma de validação que uma solicitação de conteúdo é válida (ie. pago para), as informações de recebimento são passadas para a autenticação. O servidor remoto encaminha dados iTunes para verificação e, se for bem-sucedida, inclui o conteúdo de produto na resposta para o aplicativo.   
    
- [ ![](transactions-and-verification-images/image39.png "Compras de produtos entregues pelo servidor")](transactions-and-verification-images/image39.png)   
+ [![](transactions-and-verification-images/image39.png "Compras de produtos entregues pelo servidor")](transactions-and-verification-images/image39.png#lightbox)   
    
  1. O aplicativo adiciona um `SKPayment` para a fila. Se necessário, o usuário será solicitado a fornecer sua ID Apple e solicitado a confirmar o pagamento.   
    

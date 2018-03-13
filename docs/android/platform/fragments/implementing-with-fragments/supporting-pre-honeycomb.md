@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 9ffa3733908affb8a6f3cc5a1ae2e83c5a15f0f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 242adc94f04b3bda40238370ca924c1807a0c787
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="supporting-pre-honeycomb-android-using-support-packages"></a>Suporte Android pré-Honeycomb usando pacotes de suporte
 
@@ -21,7 +21,6 @@ O *pacote de suporte Android* consiste em bibliotecas de volta a porta alguns a 
 
 ![Captura de tela de atividade de detalhes](supporting-pre-honeycomb-images/01.png)
 
-<a name="Adding_the_Support_Package" />
 
 ## <a name="adding-the-support-package"></a>Adicionar o pacote de suporte
 
@@ -39,7 +38,6 @@ Além disso, certifique-se de que a versão mínima do Android tem como destino 
 ![Captura de tela de definir a versão do Android mínimo](supporting-pre-honeycomb-images/04.png)
 
 
-<a name="Change_MainActivity_to_derive_from_FragmentActivity" />
 
 ### <a name="change-mainactivity-to-derive-from-fragmentactivity"></a>Alterar MainActivity derivar FragmentActivity
 
@@ -57,7 +55,6 @@ public class MainActivity : Android.Support.V4.App.FragmentActivity
 }
 ```
 
-<a name="Change_DetailsActivity_to_derive_from_FragmentActivity" />
 
 ### <a name="change-detailsactivity-to-derive-from-fragmentactivity"></a>Alterar DetailsActivity derivar FragmentActivity
 

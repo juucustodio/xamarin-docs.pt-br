@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: ee91f0ebdc07f03831ae95a4b8ae6f85c3eb549e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d23f29fbfb51473ff5f89f27c0bfd621cfffbce0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="checking-device-orientation"></a>Verificando a orientação do dispositivo
 
@@ -29,7 +29,7 @@ O aplicativo usando `DependencyService` terá a seguinte estrutura:
 ![](device-orientation-images/orientation-diagram.png "Estrutura de aplicativo DependencyService")
 
 > [!NOTE]
-> **Observação:** é possível detectar se o dispositivo estiver na orientação retrato ou paisagem no código compartilhado, conforme demonstrado no [dispositivo Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation) . O método descrito neste artigo usa recursos nativos para obter mais informações sobre a orientação, incluindo se o dispositivo é de cabeça para baixo.
+> É possível detectar se o dispositivo estiver na orientação retrato ou paisagem no código compartilhado, conforme demonstrado no [Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation de dispositivo). O método descrito neste artigo usa recursos nativos para obter mais informações sobre a orientação, incluindo se o dispositivo é de cabeça para baixo.
 
 <a name="Creating_the_Interface" />
 
@@ -57,7 +57,7 @@ namespace DependencyServiceSample.Abstractions
 Codificando a essa interface no código compartilhado permitirá que o aplicativo xamarin. Forms acessar a orientação do dispositivo APIs em cada plataforma.
 
 > [!NOTE]
-> **Observação**: Classes que implementam a interface devem ter um construtor sem parâmetros para trabalhar com o `DependencyService`.
+> Classes que implementam a interface devem ter um construtor sem parâmetros para trabalhar com o `DependencyService`.
 
 <a name="iOS_Implementation" />
 
@@ -224,4 +224,4 @@ Executar este aplicativo no iOS, Android ou plataformas Windows e pressionando o
 
 - [Usando DependencyService (exemplo)](https://developer.xamarin.com/samples/UsingDependencyService)
 - [DependencyService (exemplo)](https://developer.xamarin.com/samples/DependencyService/DependencyServiceSample/)
-- [Exemplos de xamarin. Forms](https://github.com/xamarin/xamarin-forms-samples)
+- [Amostras do Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)

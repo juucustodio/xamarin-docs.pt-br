@@ -8,25 +8,24 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 99a35705c408d16f5b4b0e71e53dd453ae377341
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>Instruções passo a passo - Criando uma interface do usuário com guias com TabHost
 
 _Este artigo traz orientações durante a criação de uma interface de usuário com guias em xamarin usando a API TabHost._
 
 > [!NOTE]
-> **Observação:** `TabHost` é uma API antiga que foi substituída pelo Google. Os desenvolvedores são encorajados a criar aplicativos com guias usando o [barra de ação](~/android/user-interface/controls/action-bar.md). O `ActionBar` está disponível em todos os versão do Android. Ele foi introduzido no Android 3.0 (API nível 11) e volta foi movido para o Android 2.2 (API nível 8) e no Android 2.3 (API nível 10) no [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que está disponível para xamarin por meio de [Xamarin Biblioteca de suporte do Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacote.
+> `TabHost` é uma API antiga que foi substituída pelo Google. Os desenvolvedores são encorajados a criar aplicativos com guias usando o [barra de ação](~/android/user-interface/controls/action-bar.md). O `ActionBar` está disponível em todos os versão do Android. Ele foi introduzido no Android 3.0 (API nível 11) e volta foi movido para o Android 2.2 (API nível 8) e no Android 2.3 (API nível 10) no [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que está disponível para xamarin por meio de [Xamarin Biblioteca de suporte do Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacote.
 
 Este artigo traz orientações durante a criação de uma interface de usuário com guias em xamarin usando o `TabHost` API. Esta é uma API mais antigo que está disponível em todas as versões do Android. Este exemplo criará um aplicativo com estas três guias com a lógica para cada guia sendo encapsulada em uma atividade.
 Captura de tela a seguir é um exemplo de aplicativo que vamos criar:
 
 ![Captura de tela de exemplo do aplicativo em várias guias](creating-a-tabbed-ui-images/image02.png)
 
-<a name="Creating_the_Application" />
 
 ## <a name="creating-the-application"></a>Criando o aplicativo
 
@@ -61,7 +60,7 @@ Primeiro vamos atualizar o arquivo de layout **Resources/Layout/Main.axml** que 
 
 Captura de tela a seguir mostra o layout no Designer de Xamarin:
 
-[![Captura de tela do layout TabHost no Designer de Xamarin](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png)
+[![Captura de tela do layout TabHost no Designer de Xamarin](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png#lightbox)
 
 O TabHost deve ter dois modos de exibição do filho dentro dela: uma `TabWidget` e um `FrameLayout`. A posição de `TabWidget` e `FrameLayout` verticalmente dentro de `TabHost`, um `LinearLayout` é usado. O FrameLayout é onde fica o conteúdo para cada guia, que está vazio porque o `TabHost` incorporará automaticamente cada atividade em tempo de execução. Há várias regras que devem ser observadas quando se trata de criar o layout de interfaces de usuário com guias:
 
@@ -203,7 +202,6 @@ Execute o aplicativo. Seu aplicativo deve ser semelhante a captura de tela mostr
 É só isso! Você criou um aplicativo com guias que concede ao usuário navegar de uma maneira fácil para partes diferentes de um aplicativo.
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 

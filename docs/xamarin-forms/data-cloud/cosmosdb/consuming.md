@@ -5,20 +5,23 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 41e28366a856f5f0c12db6087117aebb4de72844
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5013b35828cecc2e38600839f306f3c0fc1366b9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Consumo de um banco de dados de documento de banco de dados do Cosmos do Azure
 
 _Um banco de dados de documento de banco de dados do Azure Cosmos é um banco de dados NoSQL que fornece acesso de baixa latência para documentos JSON, oferecendo um serviço de banco de dados rápida, altamente disponível e dimensionável para aplicativos que necessitam de replicação global e escala contínua. Este artigo explica como usar a biblioteca de cliente de documentos do Microsoft Azure para integrar um banco de dados de documento de banco de dados do Azure Cosmos em um aplicativo xamarin. Forms._
 
-## <a name="overview"></a>Visão geral
+> [!VIDEO https://youtube.com/embed/BoVH12igmbg]
+
+**Microsoft Azure Cosmos banco de dados, por [University Xamarin](https://university.xamarin.com/)**
 
 Uma conta de banco de dados de documento de banco de dados do Azure Cosmos pode ser provisionada usando uma assinatura do Azure. Cada conta de banco de dados pode ter zero ou mais bancos de dados. Um banco de dados de documento no banco de dados do Azure Cosmos é um contêiner lógico para os usuários e coleções de documento.
 

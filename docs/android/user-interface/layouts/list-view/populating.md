@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: 74d8533d0a757a307d88125701a482dfefd5eec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 12197d238ddc6ddc2bd8f48f77aa15f5eff22a0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-listview-with-data"></a>Preenchendo uma ListView com dados
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -23,7 +22,6 @@ Para adicionar linhas a uma `ListView` necessário adicioná-lo ao seu layout e 
 
 Os adaptadores internos usam uma ID de recurso do modo de exibição como um parâmetro que é usado para cada linha. Você pode usar recursos internos, como aqueles em `Android.Resource.Layout` para que você não precisa escrever suas próprias.
 
-<a name="Using_ListActivity_and_ArrayAdapterString" />
 
 ## <a name="using-listactivity-and-arrayadapterltstringgt"></a>Usando ListActivity e ArrayAdapter&lt;cadeia de caracteres&gt;
 
@@ -43,13 +41,12 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-<a name="Handling_Row_Clicks" />
 
 ### <a name="handling-row-clicks"></a>Tratamento de linha clica
 
 Geralmente um `ListView` também permitirá que o usuário tocar em uma linha para executar alguma ação (como executar uma música, chamar um contato ou mostrando outra tela). Para responder a ajustes de usuário deve ser um método mais implementado no `ListActivity` &ndash; `OnListItemClick` &ndash; esta aparência:
 
-[![Captura de tela de um SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png)
+[![Captura de tela de um SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -61,9 +58,8 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 Agora o usuário pode tocar em uma linha e um `Toast` alerta será exibido:
 
-[![Captura de tela de notificação do sistema que é exibida quando uma linha é alterada](populating-images/basictable2.png)](populating-images/basictable2.png)
+[![Captura de tela de notificação do sistema que é exibida quando uma linha é alterada](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
-<a name="Implementing_a_ListAdapter" />
 
 ## <a name="implementing-a-listadapter"></a>Implementando um ListAdapter
 
@@ -110,7 +106,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-<a name="Using_a_Custom_Adapter" />
 
 ### <a name="using-a-custom-adapter"></a>Usando um adaptador padrão
 
@@ -122,7 +117,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 
 Como este exemplo usa o mesmo layout de linha (`SimpleListItem1`) o aplicativo resultante terá a mesma aparência ao exemplo anterior.
 
-<a name="Row_View_Re-Use" />
 
 ### <a name="row-view-re-use"></a>Reutilização do modo de exibição linha
 
@@ -147,13 +141,12 @@ Implementações de adaptador personalizado devem *sempre* usar novamente o `con
 
 Algumas implementações de adaptador (como o `CursorAdapter`) não tem um `GetView` método, em vez disso, eles exigem dois métodos diferentes `NewView` e `BindView` que impõe a reutilização de linha, separando as responsabilidades de `GetView` em duas métodos. Há um `CursorAdapter` exemplo posteriormente neste documento.
 
-<a name="Enabling_Fast_Scrolling" />
 
 ## <a name="enabling-fast-scrolling"></a>Habilitar a rolagem rápida
 
 Rolagem rápida ajuda o usuário rolar por listas longas, fornecendo um adicional 'Identificador' que atua como uma barra de rolagem para acessar diretamente uma parte da lista. Esta captura de tela mostra o identificador de rolagem rápida:
 
-[![Captura de tela de rolagem fast com um identificador de rolagem](populating-images/fastscroll.png)](populating-images/fastscroll.png)
+[![Captura de tela de rolagem fast com um identificador de rolagem](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 Fazendo com que o identificador de rolagem rápido apareça é tão simple quanto a configuração de `FastScrollEnabled` propriedade `true`:
 
@@ -161,13 +154,12 @@ Fazendo com que o identificador de rolagem rápido apareça é tão simple quant
 ListView.FastScrollEnabled = true;
 ```
 
-<a name="Adding_a_Section_Index" />
 
 ### <a name="adding-a-section-index"></a>Adicionar um índice de seção
 
 Um índice de seção fornece comentários adicionais para os usuários quando eles estiverem fast-rolar por uma longa lista &ndash; mostra quais eles percorreu 'seção'. Para fazer com que o índice de seção apareça a subclasse adaptador deve implementar o `ISectionIndexer` interface para fornecer o texto de índice, dependendo das linhas que está sendo exibido:
 
-[![Captura de tela de H que aparece acima da seção que começa com H](populating-images/sectionindex.png)](populating-images/sectionindex.png)
+[![Captura de tela de H que aparece acima da seção que começa com H](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
 Para implementar `ISectionIndexer` você precisa adicionar três métodos para um adaptador:
 

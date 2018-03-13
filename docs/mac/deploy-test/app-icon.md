@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 742780ad87672bd8a3e2bb3cb66ca582a680d44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28218bcbf6527c818fdf2988375d1c353e9f1d27
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icon"></a>Ícone do aplicativo
 
@@ -122,7 +122,7 @@ Faça o seguinte:
     ![Editar o AppIcons.appiconset](app-icon-images/intro01.png "Editar o AppIcons.appiconset")
 2. Para cada tamanho de ícone necessário, clique no ícone e selecione o arquivo de imagem correspondentes criado acima: 
 
-    [![Selecionar uma imagem de ícone](app-icon-images/intro02.png "Selecionar uma imagem de ícone")](app-icon-images/intro02-large.png)
+    [![Selecionar uma imagem de ícone](app-icon-images/intro02.png "Selecionar uma imagem de ícone")](app-icon-images/intro02-large.png#lightbox)
 3. Salve as alterações.
 
 
@@ -135,7 +135,7 @@ Faça o seguinte:
 1. Clique duas vezes no **Info.plist** no **Painel de Soluções** para abrir as **Opções de Projeto**.
 2. Na seção **Destino de Aplicativo do Mac OS X**, clique em **Ícones de Aplicativo** para selecionar o arquivo `AppIcons.appiconset`: 
 
-    [![Definir o conjunto de ícones](app-icon-images/icon01.png "Definir o conjunto de ícones")](app-icon-images/icon01-large.png)
+    [![Definir o conjunto de ícones](app-icon-images/icon01.png "Definir o conjunto de ícones")](app-icon-images/icon01-large.png#lightbox)
 3. Salve as alterações.
 
 Quando o aplicativo for executado, o novo ícone será exibido no compartimento:

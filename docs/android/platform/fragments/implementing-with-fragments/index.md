@@ -1,6 +1,6 @@
 ---
 title: Implementando com fragmentos
-description: "Android 3.0 apresentou fragmentos. Os fragmentos são independentes e modulares, componentes que são usados para ajudar a solucionar a complexidade da gravação de aplicativos que podem ser executados em telas de tamanhos diferentes. Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin e como dar suporte a fragmentos em 3.0 dispositivos previamente Android."
+description: "Android 3.0 apresentou fragmentos. Os fragmentos são componentes independentes e modulares usados para ajudar a solucionar a complexidade da produção de aplicativos que podem ser executados em telas de tamanhos diferentes. Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin e como dar suporte a fragmentos em 3.0 dispositivos previamente Android."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
@@ -8,23 +8,22 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: ebb53398edba64e255f1a534556836df8734ba6f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-with-fragments"></a>Implementando com fragmentos
 
-_Android 3.0 apresentou fragmentos. Os fragmentos são independentes e modulares, componentes que são usados para ajudar a solucionar a complexidade da gravação de aplicativos que podem ser executados em telas de tamanhos diferentes. Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin e como dar suporte a fragmentos em 3.0 dispositivos previamente Android._
+_Android 3.0 apresentou fragmentos. Os fragmentos são componentes independentes e modulares usados para ajudar a solucionar a complexidade da produção de aplicativos que podem ser executados em telas de tamanhos diferentes. Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin e como dar suporte a fragmentos em 3.0 dispositivos previamente Android._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Visão geral
 
 Nesta seção, examinaremos como criar um aplicativo que será exibida uma lista de opções de Shakespeare e uma cotação de cada atividade selecionada. Nosso aplicativo utilizará os fragmentos de forma que podemos pode definir nossos componentes de interface do usuário em um único local, mas, em seguida, usá-los em diferentes fatores forma. Por exemplo, as capturas de tela a seguir mostram o aplicativo em execução em um tablet 10", bem como em um telefone:
 
-[![Capturas de tela de exemplo de aplicativo em execução no tablet e telefone](images/intro-screenshot-sml.png)](images/intro-screenshot.png)
+[![Capturas de tela de exemplo de aplicativo em execução no tablet e telefone](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
 
 Esta seção aborda os seguintes tópicos:
 
@@ -34,13 +33,11 @@ Esta seção aborda os seguintes tópicos:
 
 - **Usando o pacote de suporte Android** &ndash; implementa o pacote de suporte Android e, em seguida, faz algumas pequenas alterações para as atividades no aplicativo, permitindo que ele seja executado em versões anteriores do Android.
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
 Este passo a passo requer xamarin 4.0 ou superior. Também será necessário instalar o pacote de suporte Android, conforme descrito na documentação de fragmentos.
 
-<a name="Introduction" />
 
 ## <a name="introduction"></a>Introdução
 

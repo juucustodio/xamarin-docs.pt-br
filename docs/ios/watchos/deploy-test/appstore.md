@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: eed12c84b9952ef5c3dd27847071f05392bc16c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dfbc976da109a3813b8d7abd85adafbc9bb94fa0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deploying-to-the-app-store"></a>Implantando a loja de aplicativos
 
@@ -62,6 +62,8 @@ Você pode verificar o perfil de provisionamento no **opções de projeto** sele
 O **perfil de provisionamento de** lista mostrará todos os perfis de correspondência – você deve ver os perfis de correspondência que você criou na lista suspensa.
 
 ![](appstore-images/options-selectprofile-sml.png "A caixa de diálogo de assinatura de pacote do iOS")
+
+<a name="iTunes_Connect"/>
 
 ## <a name="itunes-connect"></a>conectar-se de iTunes
 
@@ -123,7 +125,7 @@ Xcode mostrará automaticamente os arquivos criados no Visual Studio para Mac.
 
 5. Visite iTunes conectar-se novamente para ver o binário carregado. Acesse a página de configuração do aplicativo e escolha **pré-lançamento** no menu superior, para ver o **cria** lista:
 
-  [ ![](appstore-images/itc-prerelease-sml.png "Página de configuração de aplicativos do iTunes conectar")](appstore-images/itc-prerelease.png)
+  [![](appstore-images/itc-prerelease-sml.png "Página de configuração de aplicativos do iTunes conectar")](appstore-images/itc-prerelease.png#lightbox)
 
 Em seguida, você pode enviar o aplicativo para aprovação no **versões** página. Consulte o [visão geral de distribuição de aplicativo do iOS](~/ios/deploy-test/app-distribution/index.md) para obter mais informações.
 

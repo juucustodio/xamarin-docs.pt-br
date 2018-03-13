@@ -1,122 +1,78 @@
 ---
 title: "Páginas xamarin. Forms"
-description: "Páginas xamarin. Forms representam as telas de aplicativo móvel de plataforma cruzada."
+description: "Páginas xamarin. Forms representam as telas de aplicativos móveis de plataforma cruzada."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
+ms.assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 35822dbbb7d5694e7f1f0a3f35f10df404206af9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5f979d2dbb894107d8d606ec1f41de44c294cdd3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarinforms-pages"></a>Páginas xamarin. Forms
 
-_Páginas xamarin. Forms representam as telas de aplicativo móvel de plataforma cruzada._
+_Páginas xamarin. Forms representam as telas de aplicativos móveis de plataforma cruzada._
 
-<style>.tableimg {largura máxima: nenhum! importante;}</style>
+Todos os tipos de página que são descritos abaixo derivam o xamarin. Forms [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) classe. Esses elementos visuais ocupam todos ou a maioria da tela. Um `Page` objeto representa um `ViewController` no iOS e um `Page` na plataforma Universal do Windows. No Android, cada página ocupa a tela como uma `Activity`, mas xamarin. Forms páginas *não* `Activity` objetos.
+
+[ ![](pages-images/pages-sml.png "Os tipos de página xamarin. Forms")](pages-images/pages.png#lightbox "os tipos de página xamarin. Forms")
 
 ## <a name="pages"></a>Páginas
 
-O [ `Page` ](http://iosapi.xamarin.com/?link=T%3aXamarin.Forms.Page) classe é um elemento visual que ocupa a maior parte ou todo da tela e contém um único filho. Um `Xamarin.Forms.Page` representa um controlador de exibição no iOS ou uma página no Windows Phone. No Android cada página ocupa a tela como uma atividade, mas xamarin. Forms páginas *não* atividades.
+Xamarin. Forms suporta os seguintes tipos de página:
 
- [ ![](pages-images/pages-sml.png "Os tipos de página xamarin. Forms")](pages-images/pages.png "os tipos de página xamarin. Forms")
+<a name="contentPage" />
 
-<br clear="all" />
+### <a name="contentpage"></a>ContentPage
 
-Xamarin. Forms oferece suporte a:
+|     |     | 
+| --- | --- | 
+| [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) é o tipo mais simples e mais comuns da página. Definir o [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentPage.Content/) propriedade para um único [ `View` ](views.md) objeto, que é geralmente um [ `Layout` ](layouts.md) como [ `StackLayout` ](layouts.md#stackLayout), [ `Grid` ](layouts.md#grid), ou [ `ScrollView` ](layouts.md#scrollView).<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) | [![Exemplo de ContentPage](pages-images/ContentPage.png "ContentPage exemplo")](pages-images/ContentPage-Large.png#lightbox "ContentPage exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
+|     |     |
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <tr>
-  <thead>
-    <th>
-      <strong>tipo de</strong>
-    </th>
-    <th>
-      <strong>Descrição</strong>
-    </th>
-    <th style="min-width:400px">
-      <strong>captura de tela</strong>
-    </th>
-  </thead></tr>
-  <tbody>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/">ContentPage</a>
-    </td>
-    <td align="center" valign="top">
-Um <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/">ContentPage</a> exibe uma única <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">exibição</a>, geralmente um contêiner, como um <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/">StackLayout</a> ou um <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">ScrollView</a>.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ContentPageDemoPage.cs"><img src="pages-images/ContentPage.png" title="Exemplo de ContentPage" class="tableimg">
-    </a></td>
-  </tr><tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/">MasterDetailPage</a>
-    </td>
-    <td valign="top">
-Um <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">página</a> que gerencia os dois painéis de informações.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/MasterDetailPageDemoPage.cs"><img src="pages-images/MasterDetailPage.png" title="Exemplo de MasterDetailPage" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/">NavigationPage</a>
-    </td>
-    <td valign="top">
-Um <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">página</a> que gerencia a navegação e a experiência do usuário de uma pilha de outras páginas.  
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/NavigationPageDemoPage.cs"><img src="pages-images/NavigationPage.png" title="Exemplo de NavigationPage" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/">TabbedPage</a>
-    </td>
-    <td valign="top">
-Um <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">página</a> que permite a navegação entre filhos páginas usando as guias.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/TabbedPageDemoPage.cs"><img src="pages-images/TabbedPage.png" title="Exemplo de TabbedPage" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedPage/">TemplatedPage</a>
-    </td>
-    <td valign="top">
-Um <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">página</a> que exibe o conteúdo de tela inteira com um modelo de controle e a classe base para <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/">ContentPage</a>.
-    </td>
-    <td valign="top">
-    <a href="https://github.com/xamarin/xamarin-forms-samples/tree/master/Templates/ControlTemplates/"><img src="pages-images/TemplatedPage.png" title="Exemplo de TemplatedPage" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/">CarouselPage</a>
-    </td>
-    <td valign="top">
-Um <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">página</a> permitindo gestos passar entre subpáginas, como uma galeria.
-    </td>
-    <td valign="top">
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CarouselPageDemoPage.cs"><img src="pages-images/CarouselPage.png" title="Exemplo de CarouselPage" class="tableimg">
-    </a></td>
-  </tr>
-  </tbody>
-</table>
+### <a name="masterdetailpage"></a>MasterDetailPage
 
+|     |     | 
+| --- | --- | 
+| Um [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) gerencia dois painéis de informações. Definir o [ `Master` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Master/) propriedade a uma página em geral, mostrando uma lista ou menu. Definir o [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) propriedade a uma página mostrando um item selecionado da página mestra. O [ `IsPresented` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/) propriedade controla se a página mestra ou de detalhes está visível.<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) / [guia](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md) / [exemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/) | [![Exemplo de MasterDetailPage](pages-images/MasterDetailPage.png "MasterDetailPage exemplo")](pages-images/MasterDetailPage-Large.png#lightbox "MasterDetailPage exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MasterDetailPageDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml) com [por trás do código](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml.cs) |
+|     |     |
 
+### <a name="navigationpage"></a>NavigationPage
+
+|     |     | 
+| --- | --- | 
+| O [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) gerencia a navegação entre outras páginas usando uma arquitetura de pilha. Ao usar a navegação de página em seu aplicativo, uma instância da página inicial deve ser passada para o construtor de uma `NavigationPage` objeto.<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) / [guia](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md) / [exemplo 1](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/), [2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/), e [3](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)  | [![Exemplo de NavigationPage](pages-images/NavigationPage.png "NavigationPage exemplo")](pages-images/NavigationPage-Large.png#lightbox "NavigationPage exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/NavigationPageDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/NavigationPageDemoPage.xaml) com [código = atrás](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/NavigationPageDemoPage.xaml.cs) |
+|     |     |
+
+### <a name="tabbedpage"></a>TabbedPage
+
+|     |     | 
+| --- | --- | 
+| [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) deriva abstrata [ `MultiPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/) classe e permite a navegação entre filho usando guias de páginas. Definir o [ `Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.Children/) propriedade a uma coleção de páginas ou de conjunto a [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemsSource/) propriedade a uma coleção de objetos de dados e o [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemTemplate/) propriedade para um [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) que descrevem como cada objeto a ser visualmente representado.<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) / [guia](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md) / [exemplo 1](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/) e [2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage) | [![Exemplo de TabbedPage](pages-images/TabbedPage.png "TabbedPage exemplo")](pages-images/TabbedPage-Large.png#lightbox "TabbedPage exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TabbedPageDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TabbedPageDemoPage.xaml) |
+|     |     |
+
+### <a name="carouselpage"></a>CarouselPage
+
+|     |     | 
+| --- | --- | 
+| [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) deriva abstrata [ `MultiPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/) classe e permite a navegação entre filho páginas por meio dedo passar o dedo. Definir o [ `Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.Children/) propriedade a uma coleção de [ `ContentPage` ](#contentPage) objetos ou conjunto o [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemsSource/) propriedade a uma coleção de objetos de dados e o [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemTemplate/) propriedade para um [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) que descrevem como cada objeto a ser visualmente representado.<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) / [guia](~/xamarin-forms/app-fundamentals/navigation/carousel-page.md) / [exemplo 1](https://developer.xamarin.com/samples/xamarin-forms/Navigation/CarouselPage/) e [2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/CarouselPageTemplate/) | [![Exemplo de CarouselPage](pages-images/CarouselPage.png "CarouselPage exemplo")](pages-images/CarouselPage-Large.png#lightbox "CarouselPage exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselPageDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselPageDemoPage.xaml) |
+|     |     |
+
+### <a name="templatedpage"></a>TemplatedPage
+
+|     |     | 
+| --- | --- | 
+| [`TemplatedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedPage/) Exibe o conteúdo de tela inteira com um modelo de controle, e é a classe base para [ `ContentPage` ](#contentPage).<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedPage/) / [guia](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md) | [![Exemplo de TemplatedPage](pages-images/TemplatedPage.png "TemplatedPage exemplo")](pages-images/TemplatedPage.png "TemplatedPage exemplo") |
+|     |     |
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Introdução ao Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Galeria xamarin. Forms (exemplo)](https://developer.xamarin.com/samples/FormsGallery/)
-- [Exemplos de xamarin. Forms](https://developer.xamarin.com/samples/tag/Xamarin.Forms/)
-- [Documentação da API de xamarin. Forms](http://iosapi.xamarin.com/?link=N%3aXamarin.Forms)
+- [Exemplo de FormsGallery xamarin. Forms](https://developer.xamarin.com/samples/FormsGallery/)
+- [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Documentação da API de xamarin. Forms](https://developer.xamarin.com/api/root/Xamarin.Forms/)

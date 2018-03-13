@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1625fe15d76ffe2bd3712d9126d9bd217bf60085
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f47fded9c09849f6d5f1329a4efd652df80816d5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manually-signing-the-apk"></a>Assinando manualmente o APK
 
-<a name="signing_legacy" />
 
 Depois de o aplicativo ser compilado para liberação, o APK deverá ser assinado antes da distribuição para que ele possa ser executado em um dispositivo Android. Normalmente, esse processo é tratado no IDE, no entanto, há algumas situações em que é necessário assinar o APK manualmente, na linha de comando. As seguintes etapas estão envolvidas com a assinatura de um APK:
 
@@ -29,7 +28,6 @@ Depois de o aplicativo ser compilado para liberação, o APK deverá ser assinad
 A ordem das etapas é importante e depende de qual ferramenta é usada para assinar o APK. Ao usar **apksigner**, é importante primeiro usar **zipalign** no aplicativo e, em seguida, assiná-lo com **apksigner**.  Caso seja necessário usar **jarsigner** para assinar o APK, é importante primeiro assinar o APK e, em seguida, executar **zipalign**. 
 
 
-<a name="Prerequisites" />
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -38,7 +36,6 @@ Este guia se concentrará no uso do **apksigner** usando as ferramentas de build
 Aplicativos compilados usando uma versão anterior das Ferramentas de Build do SDK de Android devem usar **jarsigner** conforme descrito em [Assinar o APK com jarsigner](#Sign_the_APK_with_jarsigner) abaixo.
 
 
-<a name="Creating_a_Private_Keystore" />
 
 ## <a name="create-a-private-keystore"></a>Criar um Repositório de Chaves Privado
 
@@ -53,7 +50,6 @@ Por esse motivo, um repositório de chaves privado deve ser criado e usado para 
 A única solução para o problema causado por um repositório de chaves perdido seria criar um novo repositório de chaves, assinar novamente o APK com a nova chave e, em seguida, enviar um novo aplicativo. Em seguida, o aplicativo antigo teria que ser removido do Google Play. Da mesma forma, se esse novo repositório de chaves for comprometido ou distribuído publicamente, será possível que versões não oficiais ou mal-intencionadas de um aplicativo sejam distribuídas.
 
 
-<a name="Create_a_New_Keystore" />
 
 ### <a name="create-a-new-keystore"></a>Criar um Novo Repositório de Chaves
 
@@ -99,7 +95,6 @@ Para listar as chaves armazenadas em um repositório de chaves, use o **keytool*
 $ keytool -list -keystore xample.keystore
 ```
 
-<a name="Zipalign_the_APK" />
 
 ## <a name="zipalign-the-apk"></a>Efetuar o zipalign no APK
 
@@ -111,7 +106,6 @@ O comando a seguir usará o APK assinado e produzirá um sinal, o APK com zipali
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
 
-<a name="Manually_Signing_the_APK" />
 
 ## <a name="sign-the-apk"></a>Assinar o APK
 

@@ -4,14 +4,15 @@ description: "Descubra como animar SkiaSharp elementos gráficos"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: c91cb064ea3973294c3a9dd8e07f3c4b0627fe34
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e18ef7c77c1d5c93d53882233c65a56e5567fcd7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="basic-animation"></a>Animação básica
 
@@ -141,7 +142,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O método calcula um raio máximo com base no tamanho da área de exibição e um raio mínimo com base no raio máximo. O `scale` valor é animado entre 0 e 1 e de volta para 0, para o método usa para calcular uma `xRadius` e `yRadius` que varia entre `minRadius` e `maxRadius`. Esses valores são usados para desenhar e preencher uma elipse:
 
-[![](animation-images/pulsatingellipse-small.png "Captura de tela da página elipse pulsando tripla")](animation-images/pulsatingellipse-large.png "tripla captura de tela da página pulsando elipse")
+[![](animation-images/pulsatingellipse-small.png "Captura de tela da página elipse pulsando tripla")](animation-images/pulsatingellipse-large.png#lightbox "tripla captura de tela da página pulsando elipse")
 
 Observe que o `SKPaint` objeto é criado em um `using` bloco. Como muitas classes SkiaSharp `SKPaint` deriva `SKObject`, que é derivado de `SKNativeObject`, que implementa o [ `IDisposable` ](https://developer.xamarin.com/api/type/System.IDisposable/) interface. `SKPaint` substitui o `Dispose` método para liberar recursos não gerenciados.
 
@@ -244,7 +245,7 @@ public class ExpandingCirclesPage : ContentPage
 
 O resultado é que a imagem está com o mesmo ao `t` é igual a 0, como quando `t` é igual a 1, e os círculos parecem continue expandindo para sempre:
 
-[![](animation-images/expandingcircles-small.png "Captura de tela da página expandindo círculos tripla")](animation-images/expandingcircles-large.png "tripla captura de tela da página expandindo círculos")
+[![](animation-images/expandingcircles-small.png "Captura de tela da página expandindo círculos tripla")](animation-images/expandingcircles-large.png#lightbox "tripla captura de tela da página expandindo círculos")
 
 
 ## <a name="related-links"></a>Links relacionados

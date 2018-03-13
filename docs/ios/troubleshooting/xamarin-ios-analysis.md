@@ -1,20 +1,28 @@
 ---
-title: Xamarin.iOS Analysis Rules
+title: "Regras de análise do xamarin"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/26/2017
-ms.openlocfilehash: 7cf627f369b666bb54d0f512dc1361d2a685a057
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/06/2018
+ms.openlocfilehash: c7dc63cbed0dbdc13dfd2d32a0859c0fe7a29196
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="xamarinios-analysis-rules"></a>Xamarin.iOS Analysis Rules
+# <a name="xamarinios-analysis-rules"></a>Regras de análise do xamarin
 
+Análise de xamarin é um conjunto de regras que verificam as configurações do projeto para ajudá-lo a determinar se as configurações de otimização melhor/mais disponíveis.
+
+Execute as regras de análise sempre que possível para localizar possíveis melhorias desde o início e economizar tempo de desenvolvimento.
+
+Para executar as regras, no Visual Studio para abrir o menu do Mac, selecione **projeto > Executar análise de código**.
+
+> [!NOTE]
+> Análise de xamarin só é executada em sua configuração selecionada no momento. É altamente recomendável executar a ferramenta de depuração **e** configurações de versão.
 
 ## <a name="a-namexia0001xia0001-disabledlinkerrule"></a><a name="XIA0001"/>XIA0001: DisabledLinkerRule
 
@@ -41,3 +49,8 @@ Para configurá-lo, vá para o projeto > iOS compilação > comportamento do vin
 
 - **Problema:** não usando a opção float32 (– aot-opções-O = = float32) leva a desempenho pesado custo, especialmente no dispositivo móvel, em que é mais lenta, matemática de precisão dupla. Observe que .NET usa precisão dupla internamente, mesmo para float, para que habilitar essa opção afeta a precisão e, possivelmente, compatibilidade.
 - **Correção:** duplo clique no seu projeto do iOS, vá para a compilação > iOS compilar e desmarque o "Executar todas as operações de float de 32 bits como float de 64 bits".
+
+## <a name="a-namexia0006xia0006-httpclientavoidmanaged"></a><a name="XIA0006"/>XIA0006: HttpClientAvoidManaged
+
+- **Problema:** é recomendável usar o manipulador de HttpClient nativo em vez de gerenciado para melhorar o desempenho, executável menores e para suportar facilmente os padrões mais recentes.
+- **Correção:** duplo clique no seu projeto do iOS, vá para a compilação > iOS criar e alterar a implementação de HttpClient NSUrlSession (iOS 7 +) ou CFNetwork para dar suporte a versão anterior do iOS 7.

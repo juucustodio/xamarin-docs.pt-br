@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 015bce612f369797f0540a0cb55f71f420f007a2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Passo a passo - usando NSURLSession e o serviço de transferência em segundo plano
 
@@ -20,7 +20,7 @@ _Neste passo a passo, usamos o serviço de transferência em segundo plano e a A
 
 Uma transferência em segundo plano é iniciada com a configuração de um plano de fundo `NSURLSession` e ao enfileirar carregar ou baixar tarefas. Se as tarefas forem concluídas enquanto o aplicativo é backgrounded, suspenso ou encerrado, o iOS notificará o aplicativo chamando o manipulador de conclusão do aplicativo *AppDelegate*. O diagrama a seguir demonstra isso em ação:
 
- [ ![](background-transfer-walkthrough-images/transfer.png "Uma transferência em segundo plano é iniciada com a configuração de um plano de fundo NSURLSession e ao enfileirar carregar ou baixar tarefas")](background-transfer-walkthrough-images/transfer.png)
+ [![](background-transfer-walkthrough-images/transfer.png "Uma transferência em segundo plano é iniciada com a configuração de um plano de fundo NSURLSession e ao enfileirar carregar ou baixar tarefas")](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 Vamos ver como isso aparece no código.
 

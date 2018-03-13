@@ -3,14 +3,15 @@ title: "Resumo do capítulo 22. Animação"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0ee99881a43b625cc8a70fb59e54710705c2d07a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df0647e869fcf37a3a1dfdeb6f3dbf1e7d07ad95
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-22-animation"></a>Resumo do capítulo 22. Animação
 
@@ -110,7 +111,7 @@ O [ **CopterAnimation** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 [**RotatingSpokes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotatingSpokes) gira `BoxView` raios em torno do centro da tela e, em seguida, gira cada spoke para criar padrões interessantes:
 
-[![Captura de tela tripla de rotação raios](images/ch22fg21-small.png "girando raios")](images/ch22fg21-large.png "girando raios")
+[![Captura de tela tripla de rotação raios](images/ch22fg21-small.png "girando raios")](images/ch22fg21-large.png#lightbox "girando raios")
 
 No entanto, aumentar progressivamente a `Rotation` propriedade de um elemento pode não funcionar no longo prazo, como o [ **RotationBreakdown** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown) demonstra.
 
@@ -124,7 +125,7 @@ O `LayoutTo` método deve ser restrito para fins especiais. O [ **BouncingBox** 
 
 O [ **XamagonXuzzle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle) usa `LayoutTo` mover blocos em uma implementação de clássica 15-16 quebra-cabeça que exibe uma imagem embaralhada em vez de blocos numerados:
 
-[![Captura de tela tripla do Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle quebra-cabeça jogo")](images/ch22fg26-large.png "Xuzzle quebra-cabeça jogo")
+[![Captura de tela tripla do Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle quebra-cabeça jogo")](images/ch22fg26-large.png#lightbox "Xuzzle quebra-cabeça jogo")
 
 ### <a name="your-own-awaitable-animations"></a>Suas próprias animações awaitable
 

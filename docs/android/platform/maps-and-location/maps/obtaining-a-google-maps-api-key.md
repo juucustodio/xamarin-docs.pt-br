@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: b529d0090595cc8a3020f37606d5dc3db5f0db74
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9402132b528d705455c183bb70e5bc9a270a8d05
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Obter um Google mapeia a chave de API
 
@@ -23,7 +23,6 @@ Como obter uma chave de API Maps v2 envolve as seguintes etapas:
 2.  Crie um projeto no console de APIs do Google.
 3.  Obter a chave de API.
 
-<a name="Step_1_-_Obtaining_your_Signing_Key_Fingerprint" />
 
 ## <a name="obtaining-your-signing-key-fingerprint"></a>Obter sua impressão digital da chave assinatura
 
@@ -106,7 +105,6 @@ Certificate fingerprints:
 
 Você usará a impressão digital de SHA-1 (listados depois **SHA1**) mais adiante neste guia.
 
-<a name="Step_2_-Create_an_API_project" />
 
 ## <a name="creating-an-api-project"></a>Criando um projeto de API
 
@@ -114,25 +112,24 @@ Depois de recuperar a impressão digital de SHA-1 da chave de armazenamento de a
 
 1. Em um navegador, navegue até o [Console de desenvolvedores do Google](https://console.developers.google.com/): e clique em **criar projeto**:
 
-   [![Botão Criar projeto de Console de desenvolvedor Google](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png)
+   [![Botão Criar projeto de Console de desenvolvedor Google](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
 
 2. No **novo projeto** caixa de diálogo que aparece, digite o nome do projeto.
    A caixa de diálogo produzirá um ID exclusivo do projeto com base no nome do projeto, conforme mostrado neste exemplo:
 
-   [![Novo projeto é denominado XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png)
+   [![Novo projeto é denominado XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
 
 3. Clique no botão **Criar**. Após um minuto ou menos, o projeto é criado e você será direcionado para o **Manager API** página. No **biblioteca** seção, clique em **API Android do Google Maps**:
 
-   [![Clicando em API Android do Google Maps na seção de biblioteca](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png)
+   [![Clicando em API Android do Google Maps na seção de biblioteca](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
 
 4. Na parte superior do **API Android do Google Maps** , clique em **habilitar** para ativar o serviço para este projeto:
 
-   [![Clicar no botão Ativar na seção de painel](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png)
+   [![Clicar no botão Ativar na seção de painel](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
 
 Neste ponto o projeto de API foi criado e a API do Android do Google Maps v2 foi adicionado a ele. No entanto, você não pode usar essa API em seu projeto até que você criar credenciais para ele. Em seguida, veremos como criar uma chave de API e um aplicativo xamarin de lista de permissões para que ele está autorizado a usar essa chave.
 
-<a name="Obtaining_the_API_Key" />
 
 ## <a name="obtaining-the-api-key"></a>Como obter a chave de API
 
@@ -140,38 +137,37 @@ Após o **Console de desenvolvedor do Google** API projeto tiver sido criado, é
 
 1. No **API Android do Google Maps** página exibida (depois de clicar em **habilitar** na etapa anterior), clique no **acesse credenciais** botão:
 
-   [![Essa API é habilitada mensagem](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png)
+   [![Essa API é habilitada mensagem](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. No **credenciais** , clique no **as credenciais que eu preciso?** botão:
 
-   [![Adicionar credenciais para a caixa de diálogo do projeto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png)
+   [![Adicionar credenciais para a caixa de diálogo do projeto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
 3. Depois de clicar nesse botão, a chave de API é gerada. Next é necessário restringir a essa chave para que apenas o aplicativo pode chamar APIs com essa chave. Clique em **chave Restrict**:
 
-   [![Clicando em restringir chave na página de credenciais](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png)
+   [![Clicando em restringir chave na página de credenciais](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
 
 4. Alterar o **nome** campo de **1 da chave de API** para um nome que ajudará a lembrar-se de que a chave é usada (**XamarinMapsDemoKey** é usada neste exemplo). Em seguida, clique o **aplicativos Android** botão de opção:
 
-   [![Selecionando aplicativos Android na página de credenciais](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png)
+   [![Selecionando aplicativos Android na página de credenciais](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png#lightbox)
 
 5. Para adicionar a impressão digital de SHA-1, clique em **+ Adicionar nome do pacote e a impressão digital**:
 
-   [![Clicar em Adicionar nome do pacote e a impressão digital](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png)
+   [![Clicar em Adicionar nome do pacote e a impressão digital](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
 
 6. Insira o nome do pacote do aplicativo e impressão digital do certificado o SHA-1 (obtido por meio de `keytool` conforme explicado anteriormente neste guia). No exemplo a seguir, o pacote de nomes para `XamarinMapsDemo` é inserido, seguido pela impressão digital do certificado SHA-1 obtida **debug.keystore**:
 
-   [![Nome do pacote inserido é com.xamarin.docs.android.map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png)
+   [![Nome do pacote inserido é com.xamarin.docs.android.map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
 7. Observe que, para o APK acessar o Google Maps, você deve incluir a impressão digital de SHA-1 e nomes para cada armazenamento de chaves (debug e release) que você usa para assinar seu APK do pacote. Por exemplo, se você usar um computador para outro computador para gerar a versão APK e de depuração, você deve incluir a impressão digital do certificado SHA-1 do repositório de chaves de depuração do primeiro computador e a impressão digital do certificado SHA-1 do repositório de chaves de versão o segundo computador. Clique em **+ Adicionar nome do pacote e a impressão digital** para adicionar outro nome de pacote e a impressão digital, como mostrado neste exemplo:
 
-   [![Adicionando a impressão digital outro cria outro certificado de SHA-1](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png)
+   [![Adicionando a impressão digital outro cria outro certificado de SHA-1](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 
 8. Clique no botão **Save (Salvar)** para salvar suas alterações. Em seguida, você retornará à lista de suas chaves de API. Se você tiver outras chaves de API que você criou anteriormente, eles serão também listados aqui. Neste exemplo, somente uma chave de API (criada nas etapas anteriores) é listada:
 
-   [![XamarinMapsDemoKey é mostrado na lista de chaves de API](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png)
+   [![XamarinMapsDemoKey é mostrado na lista de chaves de API](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png#lightbox)
 
 
-<a name="Adding_the_Key" />
 
 ## <a name="adding-the-key-to-your-project"></a>Adicionando a chave ao seu projeto
 

@@ -7,28 +7,20 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: b68e03251b83192bdc5836af6ea54446ddaad24a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bffc6bb1bc6537745fe9603906b5938fc3c34fe1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-xamarin-in-visual-studio-on-windows"></a>Instalando o Xamarin no Visual Studio no Windows
 
 Como o Xamarin agora está incluído em todas as edições do Visual Studio sem custos adicionais e sem a necessidade de uma licença separada, você pode usar o Instalador do Visual Studio para baixar e instalar ferramentas do Xamarin.
 
 
--   [Requisitos](#requirements)
--   [Instalação](#installation)
--   [Adicionando o Xamarin ao Visual Studio 2017](#vs2017)
--   [Adicionando o Xamarin ao Visual Studio 2015](#vs2015)
--   [Verificando a instalação](#verifying)
--   [Próximas Etapas](#nextsteps)
-
-
 <a name="requirements" />
 
-# <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos
 
 Os itens a seguir são necessários para a instalação das Ferramentas do Visual Studio para Xamarin:
 
@@ -45,7 +37,7 @@ Para obter mais informações sobre os pré-requisitos de instalação e uso do 
 
 <a name="installation" />
 
-# <a name="installation"></a>Instalação
+## <a name="installation"></a>Instalação
 
 O Xamarin pode ser instalado como parte de uma nova instalação do Visual Studio.
 Para fazer isso, siga estas etapas:
@@ -56,7 +48,7 @@ Para fazer isso, siga estas etapas:
 
 3. Selecione a carga de trabalho **Desenvolvimento móvel com .NET** na tela de instalação: 
 
-    [![Seleção de Desenvolvimento móvel com .NET na tela Cargas de trabalho](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png)
+    [![Seleção de Desenvolvimento móvel com .NET na tela Cargas de trabalho](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png#lightbox)
 
 4. Enquanto **Desenvolvimento móvel com .NET** estiver selecionado, veja o painel **Resumo** à direita. Nele, é possível anular a seleção das opções de desenvolvimento móvel que você não deseja instalar. Por padrão, todas as opções exibidas na captura de tela a seguir são instaladas (**Xamarin Workbooks**, **Xamarin Profiler**, **Xamarin Remoted Simulator**, **NDK do Android**, **SDK do Android**, **Java SE Development Kit**, **Emulador do Android do Google**, **Suporte para F#** e **Intel HAXM**):
 
@@ -77,7 +69,7 @@ Para fazer isso, siga estas etapas:
 
 <a name="vs2017" />
 
-## <a name="adding-xamarin-to-visual-studio-2017"></a>Adicionando o Xamarin ao Visual Studio 2017
+### <a name="adding-xamarin-to-visual-studio-2017"></a>Adicionando o Xamarin ao Visual Studio 2017
 
 Se o Visual Studio 2017 já está instalado, é possível adicionar o Xamarin executando novamente o instalador do Visual Studio para modificar as cargas de trabalho (consulte [Modificar o Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter detalhes). Em seguida, siga as etapas listadas acima para instalar o Xamarin.
 
@@ -86,7 +78,7 @@ Para obter mais informações sobre como baixar e instalar o Visual Studio 2017,
 
 <a name="vs2015" />
 
-## <a name="adding-xamarin-to-visual-studio-2015"></a>Adicionando o Xamarin ao Visual Studio 2015
+### <a name="adding-xamarin-to-visual-studio-2015"></a>Adicionando o Xamarin ao Visual Studio 2015
 
 Para adicionar o Xamarin.Android a uma instalação existente do Visual Studio 2015, siga estas etapas:
 
@@ -105,7 +97,7 @@ Para adicionar o Xamarin.Android a uma instalação existente do Visual Studio 2
 
 <a name="verifying" />
 
-## <a name="verifying-installation"></a>Verificando a instalação
+### <a name="verifying-installation"></a>Verificando a instalação
 
 No Visual Studio 2017, verifique se o Xamarin está instalado clicando no menu **Ajuda**. Se o Xamarin estiver instalado, você verá o item de menu **Xamarin**, conforme mostrado nesta captura de tela:
 
@@ -119,11 +111,11 @@ Para saber mais sobre como localizar informações de versão, consulte [Where c
 
 <a name="nextsteps" />
 
-# <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 A instalação das Ferramentas do Visual Studio para Xamarin permite que você comece a escrever código para seus aplicativos, mas é preciso uma configuração adicional para criar e implantar os aplicativos no simulador, no emulador e no dispositivo. Acesse os guias a seguir para concluir a instalação e iniciar a criação de aplicativos multiplataforma.
 
-## <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 Para obter informações mais detalhadas, consulte o guia [Como instalar o Xamarin.iOS no Windows](~/ios/get-started/installation/windows/index.md). 
 
@@ -134,7 +126,7 @@ Para obter informações mais detalhadas, consulte o guia [Como instalar o Xamar
 5. [Simulador de iOS remoto](~/tools/ios-simulator.md)
 6. [Introdução ao Xamarin.iOS para Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
-## <a name="android"></a>Android
+### <a name="android"></a>Android
 
 Para obter informações mais detalhadas, consulte o guia [Instalando o Xamarin.Android no Windows](~/android/get-started/installation/windows.md).
 

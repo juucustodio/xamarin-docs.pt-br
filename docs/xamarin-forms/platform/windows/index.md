@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 4385534a6e2ecfc9c908648fa267a543c2313ce0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f77290a8c780d7dd5c936af576b39228d91687aa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="windows-platform-features"></a>Recursos de plataforma do Windows
 
@@ -32,7 +32,7 @@ Se você tiver instalado as opções corretas de desenvolvimento no Visual Studi
 
 
 > [!NOTE]
-> **Observação:** suporte de xamarin. Forms 1. x e 2. x _Windows Phone 8 Silverlight_ desenvolvimento de aplicativos, porém este tipo de projeto foi preterido.
+> Suporte de xamarin. Forms 1. x e 2. x _Windows Phone 8 Silverlight_ desenvolvimento de aplicativos, porém este tipo de projeto foi preterido.
 
 
 ## <a name="getting-started"></a>Guia de Introdução

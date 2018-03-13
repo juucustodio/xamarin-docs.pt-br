@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: fe1796839524a271760a9beb82895fd6e93c7ad0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d53494e61d702b83a28534c644f33fb5327b5958
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-graphics"></a>Gráficos de núcleo
 
@@ -40,6 +40,7 @@ Há alguns benefícios dessa abordagem:
 -  Reduzindo a necessidade de imagens estáticas no pacote do aplicativo pode reduzir o tamanho do aplicativo.
 -  Elementos gráficos se tornam mais resistentes a alterações de resolução em todos os dispositivos.
 
+<a name="Drawing_in_a_UIView_Subclass"/>
 
 ## <a name="drawing-in-a-uiview-subclass"></a>Desenhando em uma subclasse de UIView
 
@@ -182,6 +183,8 @@ Adicionar este código antes de qualquer resultado de operações de desenho em 
  ![](core-graphics-images/02-dashed-stroke.png "Adicionar este código antes de qualquer resultado de operações de desenho em traçados tracejados")
  
 Observe que ao usar a API unificada em xamarin, o tipo de matriz deve ser um `nfloat`e também precisa ser convertido explicitamente em Math. pi.
+
+<a name="Drawing_Images_and_Text"/>
 
 ## <a name="drawing-images-and-text"></a>Texto e imagens de desenho
 
@@ -428,5 +431,5 @@ Neste artigo vimos recursos gráficos fornecidos por meio de *principais gráfic
 
 - [Exemplo de gráfico principal](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
 - [Elementos gráficos e instruções passo a passo de animação](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
-- [Animação de núcleo](~/ios/platform/graphics-animation-ios/core-animation.md)
+- [Animação principal](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [Receitas de animação de núcleo](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

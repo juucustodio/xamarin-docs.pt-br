@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0846dc8bdb3ac722838faa4173f5d30233912ecc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86514dbd6b40e9d59ea9a598395cf6f0a3f4889a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publicando na App Store
 
@@ -32,7 +32,7 @@ Este documento explica como usar o Visual Studio para Mac e o Xcode para configu
 
 Ao ingressar no [Programa de Desenvolvedores do Mac](https://developer.apple.com/devcenter/mac/) será oferecido ao desenvolvedor uma opção para participar como uma Pessoa Física ou como uma Empresa, conforme mostrado na captura de tela abaixo:
 
-[![O Portal do Desenvolvedor da Apple](images/image1.png "O Portal do Desenvolvedor da Apple")](images/image1-large.png)
+[![O Portal do Desenvolvedor da Apple](images/image1.png "O Portal do Desenvolvedor da Apple")](images/image1-large.png#lightbox)
 
 Escolha o tipo de registro correto para a sua situação.
 
@@ -73,5 +73,5 @@ Este guia ensina como fazer upload de aplicativos Xamarin.Mac para publicação 
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](/visualstudio/mac/installation/)
-- [Exemplo do Hello, Mac](~/mac/get-started/hello-mac.md)
+- [Amostra do Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/resources/developer-id/)

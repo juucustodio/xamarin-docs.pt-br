@@ -7,11 +7,11 @@ metadata:
   ms.author: crdun
   ms.date: 02-17-2018
   ms.topic: landing-page
-  ms.openlocfilehash: 8e2ba81dbfc573678fa58e01809f7bcd5b3130a4
-  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.openlocfilehash: 7426a18a708b3483ace40a8fef7ce5897ed08ebd
+  ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/27/2018
+  ms.lasthandoff: 03/09/2018
 abstract:
   description: "Ferramentas para melhorar a experiência de desenvolvimento do Xamarin."
   menu:
@@ -56,11 +56,11 @@ sections:
       image:
         src: ~/media/index/xamarin-tools-profiler.svg?branch=master
         href: ~/tools/profiler/index.md
-      title: Xamarin Profiler
+      title: Criador de perfil do Xamarin
     - href: ~/tools/dotnet-embedding/index.md
       html: "Permite que seu código .NET existente seja consumido a partir de outras linguagens de programação."
       image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg
+        src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
         href: ~/tools/dotnet-embedding/index.md
       title: .NET Embedding
     - href: https://developer.xamarin.com/testcloud/

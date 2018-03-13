@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 92a11ebe983840270d3679fd11f5faa0b8222cfe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 956fa919ef9aa994fea92a9a64ca1325819f3ffc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fast-renderers"></a>Renderizadores Rápidos
 
@@ -40,11 +40,11 @@ Forms.SetFlags("FastRenderers_Experimental");
 ```
 
 > [!NOTE]
-> **Observação**: renderizadores rápidos só são aplicáveis ao aplicativo compat Android back-end, para que essa configuração será ignorada em atividades de compatibilidade de aplicativo pré.
+> Renderizadores rápidos só são aplicáveis para o aplicativo compat Android back-end, para que essa configuração será ignorada em atividades de compatibilidade de aplicativo pré.
 
 Melhorias de desempenho irá variar para cada aplicativo, dependendo da complexidade do layout. Por exemplo, melhorias de desempenho de x2 são possíveis ao rolar por um [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) contendo milhares de linhas de dados, onde as células em cada linha são feitas dos controles que usam processadores rápidas, o que resulta em visivelmente rolagem mais suave.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Processadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

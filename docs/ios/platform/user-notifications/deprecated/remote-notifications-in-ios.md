@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c4a88f875b4082f85b1c5565de2a24548e7b8874
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8e90bc3974247066a714cb44b6648a83cdb58cf5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="push-notifications-in-ios"></a>Notificações por push no iOS
 
@@ -45,37 +45,37 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
 1.  Para criar um certificados vá para o iOS Portal de provisionamento no site da Apple, conforme mostrado na seguinte captura de tela (Observe o item de menu de IDs de aplicativo no lado esquerdo):
 
-    [ ![](remote-notifications-in-ios-images/image5new.png "O Portal de provisionamento no site de maçãs do iOS")](remote-notifications-in-ios-images/image5new.png)
+    [![](remote-notifications-in-ios-images/image5new.png "O Portal de provisionamento no site de maçãs do iOS")](remote-notifications-in-ios-images/image5new.png#lightbox)
 
 2.  Em seguida, navegue até a seção de IDs de aplicativo e criar uma nova ID de aplicativo, conforme mostrado na seguinte captura de tela:
 
-    [ ![](remote-notifications-in-ios-images/image6new.png "Navegue até a seção de IDs de aplicativo e criar uma nova ID de aplicativo")](remote-notifications-in-ios-images/image6new.png)
+    [![](remote-notifications-in-ios-images/image6new.png "Navegue até a seção de IDs de aplicativo e criar uma nova ID de aplicativo")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
 3.  Quando você clicar no  **+**  botão, você poderá inserir a descrição e um identificador de pacote para a ID do aplicativo, conforme mostrado na seguinte captura de tela:
 
-    [ ![](remote-notifications-in-ios-images/image7new.png "Insira a descrição e um identificador de pacote para a ID de aplicativo")](remote-notifications-in-ios-images/image7new.png)
+    [![](remote-notifications-in-ios-images/image7new.png "Insira a descrição e um identificador de pacote para a ID de aplicativo")](remote-notifications-in-ios-images/image7new.png#lightbox)
 
 4. Certifique-se de selecionar **explícita ID do aplicativo** e que o identificador de pacote não termina com um `*` . Isso criará um identificador que é bom para vários aplicativos e certificados de notificação por push devem ser de um único aplicativo.
 
 1. Em serviços de aplicativos, selecione **notificações por Push**:
 
-    [ ![](remote-notifications-in-ios-images/image8new.png "Selecione as notificações por Push")](remote-notifications-in-ios-images/image8new.png)
+    [![](remote-notifications-in-ios-images/image8new.png "Selecione as notificações por Push")](remote-notifications-in-ios-images/image8new.png#lightbox)
 
 2. E pressione **enviar** para confirmar o registro da nova ID de aplicativo:
 
-    [ ![](remote-notifications-in-ios-images/image9new.png "Confirmar registro da nova ID de aplicativo")](remote-notifications-in-ios-images/image9new.png)
+    [![](remote-notifications-in-ios-images/image9new.png "Confirmar registro da nova ID de aplicativo")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
 3.  Em seguida, você deve criar o certificado para a ID do aplicativo. No painel de navegação à esquerda, navegue até **certificados > todos os** e selecione o `+` botão, conforme mostrado na seguinte captura de tela:
 
-    [ ![](remote-notifications-in-ios-images/image10new.png "Criar o certificado para a ID de aplicativo")](remote-notifications-in-ios-images/image8.png)
+    [![](remote-notifications-in-ios-images/image10new.png "Criar o certificado para a ID de aplicativo")](remote-notifications-in-ios-images/image8.png#lightbox)
 
 4.  Selecione se você gostaria de usar um certificado de produção ou desenvolvimento:
 
-    [ ![](remote-notifications-in-ios-images/image11new.png "Selecione um certificado de produção ou desenvolvimento")](remote-notifications-in-ios-images/image11new.png)
+    [![](remote-notifications-in-ios-images/image11new.png "Selecione um certificado de produção ou desenvolvimento")](remote-notifications-in-ios-images/image11new.png#lightbox)
 
 5. E, em seguida, selecione a nova ID de aplicativo que você criou:
 
-    [ ![](remote-notifications-in-ios-images/image12new.png "Selecione a nova ID de aplicativo que acabou de criar")](remote-notifications-in-ios-images/image12new.png)
+    [![](remote-notifications-in-ios-images/image12new.png "Selecione a nova ID de aplicativo que acabou de criar")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
 6.  Isso exibirá as instruções que o guiará pelo processo de criação de um *solicitação de assinatura de certificado* usando o **ao conjunto de chaves** aplicativo no seu Mac.
 
@@ -85,11 +85,11 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
 9.  Depois de criar o perfil de provisionamento, abra **Xcode organizador** e atualizá-lo. Se o perfil de provisionamento que você criou não aparece, pode ser necessário baixar o perfil de Portal de provisionamento iOS e importá-lo manualmente. A captura de tela a seguir mostra um exemplo do organizador com o perfil de provisionamento adicionado:
 
-    [ ![](remote-notifications-in-ios-images/image13new.png "Esta captura de tela mostra um exemplo do organizador com o perfil de provisionamento adicionado")](remote-notifications-in-ios-images/image13new.png)
+    [![](remote-notifications-in-ios-images/image13new.png "Esta captura de tela mostra um exemplo do organizador com o perfil de provisionamento adicionado")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
 10.  Neste ponto, é preciso configurar o projeto xamarin para usar esse perfil de provisionamento de recém-criado. Isso é feito de **opções de projeto** caixa de diálogo, em **iOS de assinatura de pacote** guia, como mostra a captura de tela a seguir:
 
-    [ ![](remote-notifications-in-ios-images/image11.png "Configurar o projeto xamarin para usar esse perfil de provisionamento de recém-criado")](remote-notifications-in-ios-images/image11.png)
+    [![](remote-notifications-in-ios-images/image11.png "Configurar o projeto xamarin para usar esse perfil de provisionamento de recém-criado")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 
 

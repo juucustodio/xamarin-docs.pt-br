@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 30b7e322d618492164fac5e439c5187616d61717
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 32326eb472b1bb8b4fbaf4066edc36255f5948ca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dots-and-dashes"></a>Pontos e traços
 
@@ -155,7 +155,7 @@ float[] GetPickerArray(Picker picker)
 
 Nas capturas de tela seguir, a tela de iOS na extremidade esquerda mostra uma linha pontilhada:
 
-[![](dots-images/dotsanddashes-small.png "Captura de tela da página de pontos e hífens tripla")](dots-images/dotsanddashes-large.png "tripla captura de tela da página de pontos e traços")
+[![](dots-images/dotsanddashes-small.png "Captura de tela da página de pontos e hífens tripla")](dots-images/dotsanddashes-large.png#lightbox "tripla captura de tela da página de pontos e traços")
 
 No entanto, a tela Android também deve para mostrar uma linha pontilhada usando a matriz {10, 10}, mas em vez disso, a linha é sólida. O que aconteceu? O problema é que a tela Android também tem uma configuração de limites de traço de `Square`. Isso estende a todos os traços pela metade da largura do traço, fazendo com que eles preencher as lacunas.
 
@@ -213,7 +213,7 @@ protected override void OnAppearing()
 
 Naturalmente, você terá que, na verdade, execute o programa para ver a animação:
 
-[![](dots-images/animatedspiral-small.png "Captura de tela da página de animação em tripla")](dots-images/animatedspiral-large.png "tripla captura de tela da página em animado")
+[![](dots-images/animatedspiral-small.png "Captura de tela da página de animação em tripla")](dots-images/animatedspiral-large.png#lightbox "tripla captura de tela da página em animado")
 
 Você viu como desenhar linhas e definir curvas usando equações paramétricas. Uma seção a ser publicado posteriormente aborda os vários tipos de curvas que `SKPath` oferece suporte.
 

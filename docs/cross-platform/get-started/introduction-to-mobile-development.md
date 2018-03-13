@@ -7,28 +7,19 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 2f29851f9de410183c6f35d19486e7da8017566a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d3a39070e17729e99614e26e0a8892c6314512af
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-mobile-development"></a>Introdução ao desenvolvimento móvel
 
-
 Criar aplicativos móveis pode ser tão fácil quanto abrir o IDE, reunir alguns elementos, fazer alguns testes rápidos e enviar para uma App Store – tudo em uma tarde. Ou pode ser um processo extremamente complexo que envolve um design inicial rigoroso, teste de usabilidade, teste de garantia de qualidade em milhares de dispositivos, um ciclo de vida completo beta e, em seguida, implantação de várias maneiras diferentes.
-
-Este guia é uma análise minuciosa introdutória da compilação de um aplicativo móvel Xamarin, incluindo:
-
-1.   [ **Introdução ao Xamarin**](#Introduction_to_Xamarin) – lista de recursos da plataforma do Xamarin.
-1.   [ **Como funciona o Xamarin?**](#How_Does_Xamarin_Work) – Uma breve visão geral do funcionamento do Xamarin para trazer C# para iOS e Android.
-1.   [ **Introdução!**](#Sample_App) – Aprofunde-se e compile um aplicativo para iOS, Android ou todas as plataformas usando Xamarin.Forms.
-
 
 Este documento destina-se a apresentar a plataforma do Xamarin. Para saber mais sobre o *processo* de compilar aplicativos móveis do design ao teste, consulte o documento [Introduction to the Mobile Software Development Lifecycle](~/cross-platform/get-started/introduction-to-mobile-sdlc.md) (Introdução ao ciclo de vida de desenvolvimento de software móvel).
 
 Consulte nossos [requisitos de sistema](~/cross-platform/get-started/requirements.md#mac) para confirmar se você pode instalar o Xamarin.
-
 
 ## <a name="introduction-to-xamarin"></a>Introdução ao Xamarin
 

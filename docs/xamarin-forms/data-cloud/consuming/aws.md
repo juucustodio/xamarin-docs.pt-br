@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 590e39deb7972df9e45064bb1a96e533a1fc9856
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5604477ff182711a63ba2b0e6bbcbbcc082a76ed
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-an-amazon-simpledb-service"></a>Consumir um serviço de SimpleDB Amazon
 
@@ -141,7 +141,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 O `SelectAsync` método aceita um `SelectRequest` instância como um parâmetro que especifica um `Select` consulta de expressão do `SelectExpression` propriedade. O formato da expressão de consulta é semelhante ao formato do padrão SQL `SELECT` instrução. Para obter mais informações sobre a expressão de consulta, consulte [usando Select para criar consultas de SimpleDB Amazon](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/UsingSelect.html) no site da Amazon.
 
 > [!NOTE]
-> **Observação**: tenha cuidado para seguir as regras de cotação ao construir a expressão de consulta. Para obter mais informações, consulte [selecionar regras citando](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) no site da Amazon.
+> Certifique-se de seguir as regras de cotação ao construir a expressão de consulta. Para obter mais informações, consulte [selecionar regras citando](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) no site da Amazon.
 
 O `SelectAsync` método retorna uma resposta que contém uma coleção de itens e atributos associados que correspondem à expressão de consulta. Essa coleção é convertida em um `List` de `TodoItem` instâncias para exibição.
 

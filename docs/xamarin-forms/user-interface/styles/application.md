@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: d258d993d8452c0c93c53d875d81683a294f80d3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc728e5817a7d1d61d7745120bca7f05641ce76f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="global-styles"></a>Estilos globais
 
@@ -60,7 +60,7 @@ O exemplo de código a seguir mostra uma página do XAML aplicando o `buttonStyl
 
 Isso resulta na exibição mostrada nas capturas de tela seguir:
 
-[![](application-images/application-styles-1.png "Exemplo de estilos globais")](application-images/application-styles-1-large.png "exemplo estilos globais")
+[![](application-images/application-styles-1.png "Exemplo de estilos globais")](application-images/application-styles-1-large.png#lightbox "exemplo estilos globais")
 
 Para obter informações sobre como criar estilos em uma página [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), consulte [estilos explícita](~/xamarin-forms/user-interface/styles/explicit.md) e [estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md).
 
@@ -98,9 +98,9 @@ Estilos inferiores na hierarquia de exibição têm precedência sobre aquelas d
 
 O original `buttonStyle`, definidas no nível do aplicativo, é substituído pelo `buttonStyle` instância definida no nível da página. Além disso, o estilo de nível de página será substituído pelo nível de controle `buttonStyle`. Portanto, o [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) instâncias são exibidas com texto azul, conforme mostrado nas capturas de tela seguir:
 
-[![](application-images/application-styles-2.png "Substituindo o exemplo de estilos")](application-images/application-styles-2-large.png "substituindo estilos de exemplo")
+[![](application-images/application-styles-2.png "Substituindo o exemplo de estilos")](application-images/application-styles-2-large.png#lightbox "substituindo estilos de exemplo")
 
-## <a name="creating-a-global-style-in-c35"></a>Criando um estilo Global C &#35;
+## <a name="creating-a-global-style-in-c35"></a>Criando um estilo Global em C&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) instâncias podem ser adicionadas para o aplicativo [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) coleção em c#, criando um novo [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)e, em seguida, adicionando o `Style` instâncias para o `ResourceDictionary`, como como mostrado no exemplo de código a seguir:
 

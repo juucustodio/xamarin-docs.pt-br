@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f02c5cfd75fd9d9cd97d28ca276b32808f7a45ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-basics"></a>Noções básicas de caminho
 
@@ -99,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O contorno primeiro consiste em uma chamada para [ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) usando coordenadas X e Y em vez de um `SKPoint` valor, seguido de três chamadas ao [ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) para desenhar três lados das triângulo. O segundo contorno tem apenas duas chamadas para `LineTo` mas termina o contorno com uma chamada para [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), que fecha o contorno. A diferença é significativa:
 
-[![](paths-images/twotrianglecontours-small.png "Tripla captura de tela da página de dois contornos do triângulo")](paths-images/twotrianglecontours-large.png "tripla captura de tela da página de dois contornos do triângulo")
+[![](paths-images/twotrianglecontours-small.png "Tripla captura de tela da página de dois contornos do triângulo")](paths-images/twotrianglecontours-large.png#lightbox "tripla captura de tela da página de dois contornos do triângulo")
 
 Como você pode ver, a primeira delimitação obviamente é uma série de três linhas conectadas, mas final não se conectar com o início. As duas linhas se sobrepor na parte superior. O segundo contorno obviamente é fechado e foi realizado com um número menor `LineTo` chama porque o `Close` método adiciona automaticamente uma linha final para fechar o contorno.
 
@@ -189,7 +189,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui está o programa em execução em plataformas de três:
 
-[![](paths-images/strokejoins-small.png "Tripla captura de tela da página traço une")](paths-images/strokejoins-large.png "tripla captura de tela da página de junções de traço")
+[![](paths-images/strokejoins-small.png "Tripla captura de tela da página traço une")](paths-images/strokejoins-large.png#lightbox "tripla captura de tela da página de junções de traço")
 
 A junção de esquadria consiste em um ponto de curva em que as linhas se conectar. Ao unir duas linhas em um ângulo pequeno, a junção de esquadria pode se tornar muito longa. Para evitar que juntas de esquadrias excessivamente longo, o comprimento da junção esquadria é limitado pelo valor da [ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) propriedade `SKPaint`. Uma junção de esquadria que excede esse comprimento é cortada para se tornar uma junção de inclinação.
 

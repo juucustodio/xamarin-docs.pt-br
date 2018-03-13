@@ -3,16 +3,16 @@ title: Xamarin Workbooks
 description: "Pastas de trabalho de Xamarin fornecem uma mistura de documentação e código que é perfeito para experimentação, aprendizado e criar guias e auxílios de ensino."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
+ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 3d01d157fde1e69c7180c07adfd52e259cdddf14
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 04d6110ea9d0f2c10cf0c3d17182cd06b88e7708
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
@@ -26,7 +26,7 @@ Pastas de trabalho do Xamarin é um software de código aberto. Desenvolvimento 
 
 Experimente e informe-nos sobre sua opinião, ou se você [executados em qualquer bug](~/tools/workbooks/install.md#reporting-bugs). Temos um [fórum](https://forums.xamarin.com/categories/inspector) muito!
 
-[ ![](images/interactive-1.0.0-urho-planet-earth-small.png "Uma pasta de trabalho de UrhoSharp com base em amostra")](images/interactive-1.0.0-urho-planet-earth.png)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "Uma pasta de trabalho de UrhoSharp com base em amostra")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## <a name="installation-and-requirementsinstallmd"></a>[Instalação e requisitos](install.md)
 
@@ -40,7 +40,7 @@ Uma introdução para como usar pastas de trabalho do Xamarin.
 
 Há uma ampla variedade de [pastas de trabalho de exemplo](https://developer.xamarin.com/workbooks/) disponíveis, incluindo aqueles realçado [aqui](samples/index.md).
 
-## <a name="integration-sdksdkindexmd"></a>[Integração do SDK](sdk/index.md)
+## <a name="integration-sdksdkindexmd"></a>[SDK de integração](sdk/index.md)
 
 É possível estender o Xamarin pastas de trabalho com processadores e representações de dados personalizados. Integrações são gravadas com c# e TypeScript/JavaScript.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: db3662db50d8f3538f16f2af1f9e7880957dc25c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a08bc67a9af653a9a646ad62071df0400ce58c12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="eventkit"></a>EventKit
 
@@ -30,7 +30,7 @@ Este guia, vamos abordar:
 
 Todas as tarefas neste guia estão disponíveis no aplicativo de amostra complementar:
 
- [ ![](eventkit-images/01.png "As telas de aplicativo de exemplo complementar")](eventkit-images/01.png)
+ [![](eventkit-images/01.png "As telas de aplicativo de exemplo complementar")](eventkit-images/01.png#lightbox)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -148,7 +148,7 @@ App.Current.EventStore.GetCalendars ( EKEntityType.Event );
 
 O *EKEventEditViewController* faz muita o trabalho pesado por você, se você deseja criar ou editar um evento com a mesma interface do usuário é apresentada ao usuário ao usar o aplicativo de calendário:
 
- [ ![](eventkit-images/02.png "A interface do usuário que é apresentado ao usuário usando o aplicativo de calendário")](eventkit-images/02.png)
+ [![](eventkit-images/02.png "A interface do usuário que é apresentado ao usuário usando o aplicativo de calendário")](eventkit-images/02.png#lightbox)
 
 Para usá-lo, você desejará declará-la como uma variável de nível de classe para que nada é coletado como lixo se ela é declarada dentro de um método:
 

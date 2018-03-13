@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: edc724eb73b314c0accd3e8775b9b26b6eac16d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc1aaffe4e31b596d57b5de30c87217ffba3772e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="picker"></a>Seletor
 
@@ -20,11 +20,11 @@ _O modo de exibição de seletor é um controle para selecionar um item de texto
 
 Um [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) exibe uma lista curta de itens, na qual o usuário pode selecionar. No entanto, um [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) não mostra todos os dados quando ela é exibida pela primeira vez. Em vez disso, o valor de seu [ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/) propriedade é mostrada como um espaço reservado nas plataformas Android e iOS:
 
-[![](images/picker-initial.png "Seletor de exibição de inicial")](images/picker-initial-large.png "inicial seletor de exibição")
+[![](images/picker-initial.png "Seletor de exibição de inicial")](images/picker-initial-large.png#lightbox "inicial seletor de exibição")
 
 Quando o [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) ganhos foco, seus dados é exibido e o usuário pode selecionar um item:
 
-[![](images/picker-selection.png "Selecionando um Item de seletor")](images/picker-selection-large.png "seletor para selecionar um Item")
+[![](images/picker-selection.png "Selecionando um Item de seletor")](images/picker-selection-large.png#lightbox "seletor para selecionar um Item")
 
 Após a seleção, o item selecionado é exibido pelo [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/):
 

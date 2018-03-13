@@ -7,18 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: de4683ca660224aa3cf17398ac649086b7e4ad88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6c0f2b92b34ce4d446e51b0aafa56f6283701dd1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="extending-the-recyclerview-example"></a>Estendendo o exemplo RecyclerView
 
 
 O aplicativo básico descrito em [um exemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) , na verdade, não faz muito &ndash; simplesmente rola e exibe uma lista fixa de itens de fotografia para facilitar a navegação. Em aplicativos do mundo real, os usuários esperam ser capaz de interagir com o aplicativo ao tocar em itens na exibição. Além disso, a fonte de dados pode alterar (ou ser alterado pelo aplicativo) e o conteúdo da exibição deve permanecer consistente com essas alterações. As seções a seguir, você aprenderá como tratar eventos de clique de item e atualizar `RecyclerView` quando as alterações da fonte de dados subjacentes.
 
-<a name="itemclick" />
 
 ### <a name="handling-item-click-events"></a>Manipulação de eventos de clique de Item
 
@@ -91,7 +90,7 @@ PhotoViewHolder vh = new PhotoViewHolder (itemView, OnClick);
 
 Agora quando você compilar e executa o aplicativo de exibição de fotos de exemplo, ao tocar em uma foto na exibição fará com que uma notificação do sistema sejam exibidos que informa quais fotografia foi alterada:
 
-[ ![Sistema de exemplo que aparece quando uma cartão de foto é tocado](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png)
+[![Sistema de exemplo que aparece quando uma cartão de foto é tocado](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png#lightbox)
 
 Este exemplo demonstra apenas uma abordagem para implementar manipuladores de eventos com `RecyclerView`. Outra abordagem que pode ser usada aqui é colocar os eventos no suporte de exibição e fazer com que o adaptador de assinar esses eventos. Se o aplicativo de fotos de exemplo fornecido um recurso de edição de fotos, eventos separados seria necessários para o `ImageView` e `TextView` dentro de cada `CardView`: toca `TextView` inicia um `EditView` caixa de diálogo que permite que o usuário edite a legenda e ajustes no `ImageView` inicia uma ferramenta de retoque de fotos que permite ao usuário cortar ou girar a foto. Dependendo das necessidades do seu aplicativo, você deve projetar a melhor abordagem para manipular e responder a eventos de toque.
 
@@ -159,7 +158,7 @@ randomPickBtn.Click += delegate
 
 Agora, quando o **escolha aleatório** botão é tocado, `RecyclerView` atualiza a exibição para mostrar que uma foto ainda mais para baixo na coleção foram trocada com a foto primeiro na coleção:
 
-[ ![Captura de tela de primeira antes da troca, captura de tela de segundo após a troca](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png)
+[![Captura de tela de primeira antes da troca, captura de tela de segundo após a troca](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
 Obviamente, `NotifyDataSetChanged` pode ter sido chamado em vez de fazer as duas chamadas para `NotifyItemChanged`, mas fazer assim forçaria `RecyclerView` atualizar toda a coleção, mesmo que apenas dois itens da coleção foi alterado. Chamando `NotifyItemChanged` é significativamente mais eficiente do que chamar `NotifyDataSetChanged`.
 

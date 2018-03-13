@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2904a7da73f5bf6e8960f65239d1f8dc52ab1aba
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d66d8cd722aa9a7b6fe27db3f6128ee24309a1de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="visual-design-updates"></a>Atualizações de Design Visual
 
@@ -51,7 +51,7 @@ iOS 11 tornou mais fácil de adicionar um controlador de pesquisa diretamente à
 NavigationItem.SearchController = searchController;
 ```
 
-[![Título da navegação grandes com barra de pesquisa](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png)
+[![Título da navegação grandes com barra de pesquisa](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
 Dependendo da funcionalidade de seu aplicativo, você pode querer ou não a barra de pesquisa para ocultar quando um usuário rolar pela lista. Você poderá ajustar isso usando o `HidesSearchBarWhenScrolling` propriedade.
 
@@ -75,7 +75,7 @@ iOS 7 [introduzido](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `
 
 A área de segurança é uma nova maneira de pensar sobre o espaço visível do seu aplicativo e como as restrições são adicionadas entre uma exibição e um super. Por exemplo, considere a imagem a seguir:
 
-[![Área segura vs superior e guia de layout da parte inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png)
+[![Área segura vs superior e guia de layout da parte inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
 Anteriormente, se tiver adicionado um modo de exibição e quisesse que ele fique visível na área de verde acima, você poderia restringi-la para o _inferior_ do `TopLayoutGuide` e o _superior_ do `BottomLayoutGuide`. No iOS 11, você faria em vez disso, restringi-lo para o _superior_ e _inferior_ da área de segurança. Segue um exemplo:
 

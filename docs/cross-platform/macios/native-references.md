@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 29b405c61b745c26c74318243f75e5809ecfdd7d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a33993bdef16191b66127dcc68c57661636c0f8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-references"></a>Referências nativo
 
@@ -78,13 +78,13 @@ A etapa de acompanhamento são necessárias para incorporar uma estrutura em um 
 1. Criar um novo ou abrir um projeto existente de xamarin, Xamarin.Mac ou associação.
 2. No **Solution Explorer**, com o botão direito no nome do projeto e selecione **adicionar** > **adicionar referência nativa**: 
 
-    [ ![](native-references-images/ref01.png "No Gerenciador de soluções, clique com botão direito no nome do projeto e selecione Adicionar referência nativa")](native-references-images/ref01.png)
+    [![](native-references-images/ref01.png "No Gerenciador de soluções, clique com botão direito no nome do projeto e selecione Adicionar referência nativa")](native-references-images/ref01.png#lightbox)
 3. Do **abrir** caixa de diálogo, selecione o nome do Framework nativo que você deseja inserir e clique no **abrir** botão: 
 
-    [ ![](native-references-images/ref02.png "Selecione o nome da estrutura nativo para inserir e clique no botão Abrir")](native-references-images/ref02.png)
+    [![](native-references-images/ref02.png "Selecione o nome da estrutura nativo para inserir e clique no botão Abrir")](native-references-images/ref02.png#lightbox)
 4. A estrutura será adicionada à árvore do projeto: 
 
-    [ ![](native-references-images/ref03.png "A estrutura será adicionada à árvore de projetos")](native-references-images/ref03.png)
+    [![](native-references-images/ref03.png "A estrutura será adicionada à árvore de projetos")](native-references-images/ref03.png#lightbox)
 
 Quando o projeto é compilado, o Framework nativo será inserido no pacote do aplicativo.
 

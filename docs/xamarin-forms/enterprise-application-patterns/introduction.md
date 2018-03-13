@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: b8d8aed397f72df53fdca7e455b8ef723e48e0a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5334465905817336df91f5816596dc5723071811
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction"></a>Introdução
 
@@ -88,7 +88,7 @@ Para obter informações sobre a implementação dos serviços de back-end, cons
 
 Este guia se concentra na criação de aplicativos de empresa de plataforma cruzada usando xamarin. Forms e usa o aplicativo móvel eShopOnContainers como um exemplo. Figura 1-2 mostra as páginas do aplicativo móvel eShopOnContainers que fornecem a funcionalidade descrita anteriormente.
 
-[![](introduction-images/screenshots.png "O aplicativo móvel eShopOnContainers")](introduction-images/screenshots-large.png "o aplicativo móvel eShopOnContainers")
+[![](introduction-images/screenshots.png "O aplicativo móvel eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "o aplicativo móvel eShopOnContainers")
 
 **Figura 1-2**: O aplicativo móvel eShopOnContainers
 

@@ -7,19 +7,17 @@ ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
-ms.openlocfilehash: cf2211a572d45b7c29018d00f36cb8408484483f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbar"></a>Barra de ferramentas
 
 _A barra de ferramentas é um componente de barra de ação que fornece mais flexibilidade do que a barra de ação padrão: ele pode ser colocado em qualquer lugar no aplicativo, seu tamanho pode ser alterado e ele pode usar um esquema de cores diferente do tema do aplicativo. Além disso, cada tela do aplicativo pode ter várias barras de ferramentas._
 
-
-<a name="overview" />
  
 ## <a name="overview"></a>Visão geral
 
@@ -27,7 +25,7 @@ Um elemento de design importante de qualquer atividade Android é um *barra de a
 
 O `Toolbar` widget (introduzido no Android 5.0 de pirulito) pode ser pensada como uma generalização da interface da barra de ação &ndash; destina-se para substituir a barra de ação. O `Toolbar` pode ser usado em qualquer lugar no layout de um aplicativo, e é muito mais personalizável do que uma barra de ação. Captura de tela a seguir ilustra o personalizado `Toolbar` exemplo criado neste guia: 
 
-[![Captura de tela de exemplo de uma barra de ferramentas com editar, salvar e itens de menu de estouro](images/01-toolbar-sml.png)](images/01-toolbar.png)
+[![Captura de tela de exemplo de uma barra de ferramentas com editar, salvar e itens de menu de estouro](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
 
 Há algumas diferenças importantes entre o `Toolbar` e a barra de ação: 
 
@@ -72,7 +70,6 @@ Este guia aborda o comumente usada `Toolbar` cenários:
 -   Usando o **biblioteca de suporte Android v7 AppCompat** biblioteca (conhecido como *AppCompat* no restante deste guia) para implantar `Toolbar` em versões anteriores do Android. 
 
  
-<a name="requirements" />
  
 ## <a name="requirements"></a>Requisitos
 

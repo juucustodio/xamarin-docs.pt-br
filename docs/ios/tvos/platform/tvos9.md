@@ -3,16 +3,16 @@ title: "Introdução às tvOS 9"
 description: "Este artigo apresenta todas as APIs e recursos disponíveis no tvOS 9 novos e modificados para desenvolvedores de Xamarin.tvOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c1fafe85fb7f5c30dca0dff6fe3dff5172e0b9aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55e83658e09bc7e5c12bb3ef3f508497651ec46c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-tvos-9"></a>Introdução às tvOS 9
 
@@ -91,7 +91,7 @@ Siri remoto está disponível no momento nos seguintes países:
 
 Todos os outros países receberá o Apple TV remoto que substitui o botão Siri com um botão de pesquisa que exibe a tela de pesquisa padrão com entrada de texto de pesquisa:
 
-[ ![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png)
+[![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png#lightbox)
 
 Para obter mais informações, consulte nosso [Siri remoto e controladores Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentação.
 
@@ -155,7 +155,7 @@ Para obter mais informações, consulte nosso [trabalhando com foco e navegaçã
 
 A tela inicial para Apple TV mostra todos os aplicativos que estão instalados e fornece uma maneira de acessar as preferências do usuário:
 
-[ ![](tvos9-images/home01.png "Tela inicial")](tvos9-images/home01.png)
+[![](tvos9-images/home01.png "Tela inicial")](tvos9-images/home01.png#lightbox)
 
 O usuário navega uma grade de ícones de aplicativo usando gestos de toque em Siri remoto usando o foco para selecionar um aplicativo e iniciá-lo. O ícone do aplicativo é a sua primeira chance de fazer uma boa impressão em seu usuário potencial e devem se comunicar a finalidade do seu aplicativo em um relance.
 
@@ -169,7 +169,7 @@ Para obter mais informações, consulte nosso [trabalhando com imagens e ícones
 
 Se o usuário tiver inserido o seu aplicativo Xamarin.tvOS na linha superior na tela de início para Apple TV, uma imagem grande de prateleira superior será exibida quando seu aplicativo é selecionado pelo usuário. Essa imagem deve realçar os recursos do seu aplicativo ou forneça links diretos para o seu conteúdo.
 
-[ ![](tvos9-images/topshelf01.png "Prateleira superior")](tvos9-images/topshelf01.png)
+[![](tvos9-images/topshelf01.png "Prateleira superior")](tvos9-images/topshelf01.png#lightbox)
 
 A imagem de prateleira superior pode ser fornecida como um único static `.png` ou `.lsr` arquivo ou podem ser criada dinamicamente em tempo de execução como uma única linha de itens de controle.
 
@@ -184,7 +184,7 @@ Para obter mais informações, consulte nosso [trabalhando com imagens e ícones
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

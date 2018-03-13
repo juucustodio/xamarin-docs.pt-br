@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c3de0150bd34667a9310b796bf98a6bff6c07a67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 39186735749174884646a72871accfa051d2901c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="databases"></a>Bancos de dados
 
@@ -27,7 +27,7 @@ Neste artigo vamos abordar duas maneiras de acessar dados SQLite:
 1. **Acesso direto** -, acessando diretamente um banco de dados SQLite, podemos usar dados do banco de dados para a codificação de chave-valor e associação de dados com os elementos de interface do usuário criado no construtor de Interface do Xcode. Usando técnicas de associação em seu aplicativo Xamarin.Mac de dados e codificação de chave-valor, você pode diminuir significativamente a quantidade de código que você precisa escrever e manter para preencher e trabalhar com elementos de interface do usuário. Você também tem a vantagem de desligamento ainda mais seus dados de backup (_modelo de dados_) do seu front end Interface do usuário (_Model-View-Controller_), à esquerda para mais fáceis de manter, mais flexível de aplicativos Design.
 2. **ORM SQLite.NET** - usando o código-fonte aberto [SQLite.NET](http://www.sqlite.org) Manager da relação de objeto (ORM), que pode reduzir significativamente a quantidade de código necessária para ler e gravar dados de um banco de dados SQLite. Esses dados, em seguida, podem ser usados para popular um item de interface do usuário como um modo de exibição de tabela.
 
-[![Um exemplo de aplicativo em execução](databases-images/intro01.png "um exemplo de aplicativo em execução")](databases-images/intro01-large.png)
+[![Um exemplo de aplicativo em execução](databases-images/intro01.png "um exemplo de aplicativo em execução")](databases-images/intro01-large.png#lightbox)
 
 Neste artigo, vamos abordar os fundamentos de trabalhar com codificação de chave-valor e associação de dados com bancos de dados SQLite em um aplicativo Xamarin.Mac. É altamente recomendável que você leia o [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, especificamente o [Introdução ao construtor da Interface e Xcode](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [tomadas e ações](~/mac/get-started/hello-mac.md#Outlets_and_Actions) seções, como ele aborda os principais conceitos e técnicas que será usado neste artigo.
 
@@ -52,7 +52,7 @@ Faça o seguinte:
 1. No **solução preenchimento**, com o botão direito no **referências** pasta e selecione **Editar referências**.
 2. Selecione o **Mono.Data.Sqlite** e **System. Data** assemblies: 
 
-    [![Adicionando as referências necessárias](databases-images/reference01.png "adicionando as referências necessárias")](databases-images/reference01-large.png)
+    [![Adicionando as referências necessárias](databases-images/reference01.png "adicionando as referências necessárias")](databases-images/reference01-large.png#lightbox)
 3. Clique o **Okey** botão para salvar suas alterações e adicionar as referências.
 
 ### <a name="modifying-the-data-model"></a>Modificar o modelo de dados
@@ -1019,7 +1019,7 @@ Os controles de Menu disponíveis para macOS (por exemplo, a caixa de combinaç�
 
 Por exemplo, edite o exemplo simples de associação acima no construtor de Interface, adicione uma caixa de combinação e expô-lo usando uma tomada chamada `EmployeeSelector`:
 
-[![Expor uma tomada da caixa de combinação](databases-images/combo01.png "expor uma tomada da caixa de combinação")](databases-images/combo01-large.png)
+[![Expor uma tomada da caixa de combinação](databases-images/combo01.png "expor uma tomada da caixa de combinação")](databases-images/combo01-large.png#lightbox)
 
 No **atributos Inspetor**, verifique o **preenchida automaticamente à medida** e **usa a fonte de dados** propriedades:
 
@@ -1924,7 +1924,7 @@ Faça o seguinte para adicionar o pacote:
 1. No **teclado de solução**, com o botão direito do **pacotes** pasta e selecione **adicionar pacotes de...**
 2. Digite `SQLite.net` no **caixa de pesquisa** e selecione o **net sqlite** entrada:
 
-    [![Adicionar o pacote SQLite NuGet](databases-images/nuget01.png "adicionar o pacote SQLite NuGet")](databases-images/nuget01-large.png)
+    [![Adicionar o pacote SQLite NuGet](databases-images/nuget01.png "adicionar o pacote SQLite NuGet")](databases-images/nuget01-large.png#lightbox)
 3. Clique o **Adicionar pacote** botão para concluir.
 
 ### <a name="creating-the-data-model"></a>Criando o modelo de dados
@@ -2063,7 +2063,7 @@ conn.Insert (Occupation);
 
 Como um exemplo de uso, vamos adicionar uma exibição de tabela para nossa interface do usuário no construtor de Interface do Xcode. Podemos irá expor este modo de exibição de tabela por meio de uma loja (`OccupationTable`) para nós podem acessá-lo por meio de código c#:
 
-[![Expor uma tomada de modo de exibição de tabela](databases-images/table01.png "expor uma tomada de modo de exibição de tabela")](databases-images/table01-large.png)
+[![Expor uma tomada de modo de exibição de tabela](databases-images/table01.png "expor uma tomada de modo de exibição de tabela")](databases-images/table01-large.png#lightbox)
 
 Em seguida, adicionaremos as classes personalizadas para preencher esta tabela com dados do banco de dados SQLite.NET.
 

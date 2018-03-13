@@ -7,19 +7,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 695d02c5fa0477053cd95d73e1b738332d14f0f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0fdeecc4465aa5709b452ef0b591ec4e5c262e3d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="labels"></a>Rótulos
 
-O `UILabel` controle é usado para exibir único e várias linhas, de leitura somente texto. Este artigo aborda os seguintes tópicos:
-
-- [Implementando um rótulo](#Implementing_a_Label)
-- [Truncando e encapsulamento](#Truncating_and_Wrapping)
-- [Rótulo e formatação de texto](#Formatting_Text_and_Label)
+O `UILabel` controle é usado para exibir único e várias linhas, de leitura somente texto. 
 
 ## <a name="implementing-a-label"></a>Implementando um rótulo
 
@@ -52,6 +48,8 @@ As seguintes propriedades podem ser ajustadas no painel de propriedades:
 ## <a name="truncating-and-wrapping"></a>Truncando e encapsulamento
 
 Para obter informações sobre como usar a linha de quebra no iOS, consulte o [truncar e quebrar o texto](https://developer.xamarin.com/recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text/) receita.
+
+<a name="Formatting_Text_and_Label"/>
 
 ## <a name="formatting-text-and-label"></a>Rótulo e formatação de texto
 

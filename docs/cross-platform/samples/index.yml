@@ -5,13 +5,13 @@ metadata:
   description: "Aplicativos de exemplo de Xamarin de plataforma cruzada para desenvolvedores móveis."
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 02/26/2018
   ms.topic: article
-  ms.openlocfilehash: c5e8c04dcc5a9bf18af0dd9ce2dcd85b6b760836
-  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.openlocfilehash: 24f32938930d7cf13374536f9513640ab8e834dc
+  ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/27/2018
+  ms.lasthandoff: 03/12/2018
 abstract:
   description: "Aplicativos de exemplo de plataforma cruzada do Xamarin e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin."
   menu:
@@ -19,50 +19,68 @@ abstract:
     - href: https://developer.xamarin.com/samples/
       text: Todos os exemplos de Xamarin
 sections:
-- title: 
+- title: "Introdução"
   items:
   - type: list
     style: cards
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: "Este exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados e acessados em um banco de dados local do SQLite."
+      html: "Este exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados e acessados em um banco de dados local do SQLite, criado com o Xamarin.Forms."
       image:
         src: images/todo.png
         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
       title: Todo
-    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      html: "Este é um jogo conhecido com um novo toque. Dez bugs ficam ocultos em uma grade de blocos 9 por 9. Para vencer, você deve localizar e sinalizador os dez bugs."
+    - href: https://github.com/xamarinhq/app-myshoppe
+      html: "Aplicativo de demonstração para os vendedores acompanharem o desempenho de vendas, gerenciarem leads, exibirem contatos, gerenciarem pedidos e consultarem o catálogo de produtos."
       image:
-        src: images/bugsweeper.png
-        href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      title: BugSweeper
-    - href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      html: "Uma calculadora RPN (Reverse Polish Notation) permite que os números e as operações sejam inseridas sem parênteses ou uma chave de igual."
+        src: images/myshoppe.png
+        href: https://github.com/xamarinhq/app-myshoppe
+      title: My Shoppe
+    - href: https://github.com/xamarin/app-crm
+      html: "Aplicativo de demonstração para os vendedores acompanharem o desempenho de vendas, gerenciarem leads, exibirem contatos, gerenciarem pedidos e consultarem o catálogo de produtos."
       image:
-        src: images/rpncalc.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      title: Calculadora de RPN
-    - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      html: "O programa simula um disco giratório que você poderá pintar tocando e movendo seus dedos. O SpinPaint responde ao toque pintando uma linha sob o dedo, mas também duplica essa linha em três imagens de espelho nos outros três quadrantes do disco."
+        src: images/crm.png
+        href: https://github.com/xamarin/app-crm
+      title: Xamarin CRM
+- title: Azure & Enterprise
+  items:
+  - type: list
+    style: cards
+    className: cardsW
+    items:
+    - href: https://github.com/xamarinhq/app-acquaint/
+      html: "Aplicativo de lista de contatos com uma tela de detalhes e edição. O código-fonte está disponível no Xamarin.Forms e nas implementações nativas do Xamarin."
       image:
-        src: images/spinpaint.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      title: SpinPaint
-    - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      html: "XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código."
+        src: images/acquaint.jpg
+        href: https://github.com/xamarinhq/app-acquaint
+      title: Acquaint
+    - href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
+      html: "Demonstração na Connect 2017 de compilação de um pacote de aplicativos, incluindo o Xamarin e o Azure."
       image:
-        src: images/xaml.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      title: Amostras XAML
-    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      html: "XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código."
+        src: images/smarthotel360.png
+        href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
+      title: SmartHotel360
+    - href: https://github.com/Microsoft/BikeSharing360_MobileApps
+      html: "Demonstração na Connect 2016 de compilação de um pacote de aplicativos, incluindo o Xamarin e o Azure."
       image:
-        src: images/xuzzle.png
-        href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      title: Xuzzle
+        src: images/bikesharing360.png
+        href: https://github.com/Microsoft/BikeSharing360_MobileApps
+      title: BikeSharing360
+    - href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
+      html: "Diretrizes de arquitetura empresarial para a criação de aplicativos usando contêineres no Azure."
+      image:
+        src: images/eshop.png
+        href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
+      title: eShop
+- title: Todas as amostras
+  items:
+  - type: list
+    style: cards
+    className: cardsW
+    items:
     - href: https://developer.xamarin.com/samples/
-      html: "Acesso um conjunto completo de aplicativos de exemplo do Xamarin e demonstrações de código."
+      html: "O conjunto completo de aplicativos de exemplo e demonstrações de código multiplataforma do Xamarin."
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 01708f12340ec57bf1cb0e2bd076b680c99dff39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-java-library"></a>Associação de uma biblioteca de Java
 
@@ -30,7 +30,7 @@ Este guia explica a primeira opção: como criar um *biblioteca associações* q
 
 Xamarin implementa associações usando *gerenciados Callable Wrappers* (*MCW*). MCW é uma ponte JNI que é usada quando as necessidades de código gerenciado chamar o código Java. Callable wrappers do gerenciado também oferecem suporte para subclasses tipos Java e substituir métodos virtuais em tipos de Java. Da mesma forma, sempre que o código de tempo de execução Android (arte) deseja invocar código gerenciado, ele faz isso por meio de outra ponte JNI conhecido como Android Callable Wrappers (ACW). Isso [arquitetura](~/android/internals/architecture.md) é ilustrado no diagrama a seguir:
 
-[ ![Arquitetura de ponte JNI Android](images/architecture.png)](images/architecture.png)
+[![Arquitetura de ponte JNI Android](images/architecture.png)](images/architecture.png#lightbox)
 
 Uma biblioteca de associações é um assembly contendo gerenciados Callable Wrappers para tipos de Java. Por exemplo, aqui é um tipo de Java, `MyClass`, que desejamos incluir em uma biblioteca de associações:
 
@@ -74,7 +74,6 @@ Ao associar uma biblioteca Android existente, é necessário ter os seguintes po
 
 * **Qual versão do JDK foi usado para compilar a biblioteca?** &ndash; Erros de associação podem ocorrer se a biblioteca Android foi criada com uma versão diferente do JDK que em uso por xamarin. Se possível, compile novamente a biblioteca do Android usando a mesma versão do JDK que é usado por sua instalação do xamarin.
 
-<a name="BUILD_ACTIONS" />
 
 ## <a name="build-actions"></a>Ações de Build
 
@@ -127,7 +126,6 @@ O gerador de associação xamarin alterará alguns padrões para corresponder ao
 -   Um _classe interna_ em Java é um _as classes aninhadas_ com um construtor de instância no c#.
 
 
-<a name="BINDING_SCENARIOS" />
 
 ## <a name="binding-scenarios"></a>Cenários de associação
 
@@ -148,4 +146,4 @@ Os seguintes guias de cenário de associação podem ajudá-lo a associar a uma 
 
 - [Trabalhando com JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Metadados GAPI](http://www.mono-project.com/GAPI#Metadata)
-- [Usando bibliotecas nativas](~/android/platform/native-libraries.md)
+- [Usar bibliotecas nativas](~/android/platform/native-libraries.md)

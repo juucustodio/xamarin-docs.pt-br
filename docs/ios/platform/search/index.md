@@ -7,11 +7,11 @@ ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2d802a96fcc8dad1d610b99a1cddffdc4398da38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ec8cb9b6fdb391afcb8f9baaa641da5aec38f6d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-search-apis"></a>Novas APIs de pesquisa
 
@@ -21,7 +21,7 @@ A pesquisa foi expandida no iOS 9 para fornecer excelentes maneiras de acessar i
 
 Além disso, as novas APIs de pesquisa facilitam a integração de pesquisa em seu aplicativo sem experiência de implementação de pesquisa anterior. Por isso, a Apple declarações que geralmente leva apenas algumas horas para tornar o conteúdo de um aplicativo iOS 9 universalmente podem ser pesquisados usando a pesquisa do aplicativo.
 
-[ ![](images/intro01.png "Um exemplo de conteúdo de aplicativo do iOS 9 universalmente podem ser pesquisado usando a pesquisa do aplicativo")](images/intro01.png)
+[![](images/intro01.png "Um exemplo de conteúdo de aplicativo do iOS 9 universalmente podem ser pesquisado usando a pesquisa do aplicativo")](images/intro01.png#lightbox)
 
 Aplicativo de pesquisa é composta de três APIs separadas:
 

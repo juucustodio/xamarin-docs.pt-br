@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/19/2017
-ms.openlocfilehash: b169bcc64af15de3d87bfb7f8059b4251f1a3ad9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b1496f4a6a504c8e991f853c92f937015797aa6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>Meu arquivo Resource.designer.cs Android não serão atualizadas.
 
 > [!NOTE]
-> **Observação:** esse problema foi resolvido no Xamarin Studio 5.1.4 e versões posteriores. No entanto, se o problema ocorrer no Visual Studio para Mac, envie um [novo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) com o controle de versão completo completo e informações de log de saída de compilação.
+> Esse problema foi resolvido no Xamarin Studio 5.1.4 e versões posteriores. No entanto, se o problema ocorrer no Visual Studio para Mac, envie um [novo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) com o controle de versão completo completo e informações de log de saída de compilação.
 
 Um bug no Xamarin.Studio 5.1. csproj arquivos corrompidos anteriormente excluindo parcialmente ou totalmente o código xml no arquivo. csproj. Isso causaria um importante de sistema (como atualizar o Android Resource.designer.cs) de compilação de partes do Android que a falha. A partir de 5.1.4 estável de versão no dia 15 de julho, esse bug foi corrigido; mas, em muitos casos o arquivo de projeto deve ser reparado manualmente, conforme descrito abaixo.
 

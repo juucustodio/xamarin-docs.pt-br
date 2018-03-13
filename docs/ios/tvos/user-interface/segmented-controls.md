@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fd31413b777e1179e7f4faf6f91f91bc6c41e82b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6561ff70997af05ed4df6b7bfe0ba6345fb44d9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-segmented-controls"></a>Trabalhando com controles segmentados
 
@@ -21,7 +21,7 @@ _Este artigo aborda a criação e trabalhar com controles segmentado dentro de u
 
 Um controle segmentado fornece um conjunto de elementos lineares, cada um deles pode conter um ícone ou texto e é usada para fornecer um conjunto de opções relacionadas ao usuário.
 
-[ ![](segmented-controls-images/segment01.png "Controles de segmento de exemplo")](segmented-controls-images/segment01.png)
+[![](segmented-controls-images/segment01.png "Controles de segmento de exemplo")](segmented-controls-images/segment01.png#lightbox)
 
 Apple tem as seguintes sugestões para trabalhar com controles segmentado:
 
@@ -57,36 +57,36 @@ Novamente, você não pode misturar ícones em um determinado segmento e texto e
 
 É a maneira mais fácil trabalhar com controles de segmento em um aplicativo de Xamarin.tvOS para adicioná-los à interface de usuário do aplicativo usando o Designer do iOS.
 
-[[ide name="xs"]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. No **solução preenchimento**, clique duas vezes no `Main.storyboard` de arquivo e abri-lo para edição.
 1. Arraste um **segmento controle** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](segmented-controls-images/segment02.png "Um controle de segmento")](segmented-controls-images/segment02.png)
+    [![](segmented-controls-images/segment02.png "Um controle de segmento")](segmented-controls-images/segment02.png#lightbox)
 1. No **Widget guia** do **propriedade preenchimento**, você pode ajustar várias propriedades do controle de segmento, como seu **estilo** e **estado**: 
 
-    [ ![](segmented-controls-images/segment03.png "A guia de Widget")](segmented-controls-images/segment03.png)
+    [![](segmented-controls-images/segment03.png "A guia de Widget")](segmented-controls-images/segment03.png#lightbox)
 1. Use o **segmentos** campo para controlar o número de segmentos no controlador.
 1. Selecione um determinado segmento do **segmento suspenso** ajustar suas propriedades individuais, como **título** ou **imagem** e para controlar se um determinado segmento é  **Habilitado** ou **selecionados** quando o controle é exibido.
 1. Por fim, atribuir **nomes** para os controles para que você pode responder a eles no código c#. Por exemplo: 
 
-    [ ![](segmented-controls-images/segment04.png "Atribua um nome")](segmented-controls-images/segment04.png)
+    [![](segmented-controls-images/segment04.png "Atribua um nome")](segmented-controls-images/segment04.png#lightbox)
 1. Salve as alterações.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
     
 1. No **Solution Explorer**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo para edição.
 1. Arraste um **segmento controle** do **caixa de ferramentas** e solte-o no modo de exibição: 
 
-    [ ![](segmented-controls-images/segment02-vs.png "Um controle de segmento")](segmented-controls-images/segment02-vs.png)
+    [![](segmented-controls-images/segment02-vs.png "Um controle de segmento")](segmented-controls-images/segment02-vs.png#lightbox)
 1. No **Widget guia** do **propriedade Explorer**, você pode ajustar várias propriedades do controle de segmento, como seu **estilo** e **estado**: 
 
-    [ ![](segmented-controls-images/segment03-vs.png "A guia de Widget")](segmented-controls-images/segment03-vs.png)
+    [![](segmented-controls-images/segment03-vs.png "A guia de Widget")](segmented-controls-images/segment03-vs.png#lightbox)
 1. Use o **segmentos** campo para controlar o número de segmentos no controlador.
 1. Selecione um determinado segmento do **segmento suspenso** ajustar suas propriedades individuais, como **título** ou **imagem** e para controlar se um determinado segmento é  **Habilitado** ou **selecionados** quando o controle é exibido.
 1. Por fim, atribuir **nomes** para os controles para que você pode responder a eles no código c#. Por exemplo: 
 
-    [ ![](segmented-controls-images/segment04-vs.png "Atribua um nome")](segmented-controls-images/segment04-vs.png)
+    [![](segmented-controls-images/segment04-vs.png "Atribua um nome")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Salve as alterações.
     
 -----
@@ -240,7 +240,7 @@ Este artigo abordou criando e trabalhando com controle segmentado dentro de um a
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -3,14 +3,15 @@ title: "Resumo do capítulo 8. Código e XAML em harmonia"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: e95d6a20e828c92deb0e03fe1bcbcf18aac9e508
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 452a7835bcb54501edffe7a2467544c6677616ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Resumo do capítulo 8. Código e XAML em harmonia
 
@@ -69,7 +70,7 @@ Qualquer `View` objeto pode obter entrada de toque e geram eventos a partir dess
 
 O [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) gera [ `Tapped` ](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/) eventos. O [ **MonkeyTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) programa demonstra como anexar `TapGestureRecognizer` objetos para quatro `BoxView` elementos para criar um jogo imitação:
 
-[![Captura de tela tripla de toque monkey](images/ch08fg07-small.png "imitação jogo")](images/ch08fg07-large.png "imitação jogo")
+[![Captura de tela tripla de toque monkey](images/ch08fg07-small.png "imitação jogo")](images/ch08fg07-large.png#lightbox "imitação jogo")
 
 Mas o **MonkeyTap** programa realmente precisa de som. (Consulte [próximo capítulo](chapter09.md).)
 

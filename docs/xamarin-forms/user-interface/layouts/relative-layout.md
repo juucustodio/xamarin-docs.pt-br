@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad621fa093379d5ad2dd81c81ce42dcaaa9bd923
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d915191e24b5238d5165237f6ede74635b31e08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
 `RelativeLayout` é usado para a posição e modos de exibição de tamanho relativo propriedades dos modos de exibição de layout ou irmão. Ao contrário de `AbsoluteLayout`, `RelativeLayout` não tem o conceito da âncora de movimentação e não tem recursos para posicionar elementos em relação a margem inferior ou direita do layout. `RelativeLayout` suporte a elementos de posicionamento fora de seus próprios limites.
 
-[ ![](relative-layout-images/layouts-sml.png "Layouts de xamarin. Forms")](relative-layout-images/layouts.png "xamarin. Forms Layouts")
+[![](relative-layout-images/layouts-sml.png "Layouts de xamarin. Forms")](relative-layout-images/layouts.png#lightbox "xamarin. Forms Layouts")
 
 ## <a name="purpose"></a>Finalidade
 
@@ -76,7 +76,7 @@ Observe os seguintes aspectos do layout acima:
 - A caixa `y` coordenada é definida como metade da altura do pai, -100.
 
 > [!NOTE]
-> **Observação**: por causa da forma que as restrições são definidas, é possível fazer layouts mais complexos em c# que pode ser especificado com XAML.
+> Por causa da forma que as restrições são definidas, é possível fazer layouts mais complexos em c# que pode ser especificado com XAML.
 
 Ambos os exemplos anteriores definem restrições como `RelativeToParent` &ndash; ou seja, seus valores são em relação ao elemento pai. Também é possível definir restrições como em relação a outro modo de exibição. Isso permite mais intuitivos (para o desenvolvedor) layouts e pode tornar mais aparente a intenção do seu código de layout.
 

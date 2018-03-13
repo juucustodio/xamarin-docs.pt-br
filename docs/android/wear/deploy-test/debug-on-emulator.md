@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1ad3c193261bf22b7ee344aa1ccabb226533b907
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc6146670c4b5f7d29491335b4719e032487dcce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Depurar desgaste Android em um emulador
 
@@ -28,14 +28,14 @@ Para executar seu aplicativo desgaste em um emulador, você deve instalar o emul
 
 Quando você cria um dispositivo virtual desgaste, selecione um perfil de dispositivo Android desgaste (como **Android desgaste quadrado**). Para melhorar o desempenho, use o desgaste **x86** CPU/ABI como mostrado neste exemplo:
 
-[![Exemplo de configuração de dispositivo virtual desgaste](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png)
+[![Exemplo de configuração de dispositivo virtual desgaste](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
 
 ## <a name="launch-the-wear-virtual-device"></a>Inicie o dispositivo Virtual desgaste 
 
 Depois que você criou um dispositivo virtual Android desgaste, você pode escolhê-lo no menu suspenso de dispositivo no IDE antes de iniciar a depuração. Se seu dispositivo virtual não está disponível no dispositivo pendente, verifique se o projeto é um Android *desgaste* o projeto de aplicativo (não um projeto de aplicativo do Android) e que seu nível de API de destino é definido como a API do mesmo nível como o dispositivo virtual. Por exemplo:
 
-[ ![Escolhendo um AVD desempenham no menu de dispositivo do Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png)
+[![Escolhendo um AVD desempenham no menu de dispositivo do Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
 Após inicia o emulador Android, xamarin implantará o aplicativo de desgaste no emulador. O emulador executa o aplicativo com a imagem de dispositivo virtual configurada.
 

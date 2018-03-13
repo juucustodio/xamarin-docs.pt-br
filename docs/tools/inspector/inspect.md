@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: bd6d47f98435cc68ecf4156423526c31dbac09da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c923208b7ca4d41914504b4b0aa0687db1d49f01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="inspecting-live-applications"></a>Inspecionando os aplicativos ativos
 
@@ -27,11 +27,11 @@ Inspeção de aplicativo em tempo real está disponível para os clientes corpor
 
 
 
-[ ![](inspect-images/mac-heres-the-button.png "Clique no botão inspecionar na barra de ferramentas do IDE")](inspect-images/mac-heres-the-button.png)
+[![](inspect-images/mac-heres-the-button.png "Clique no botão inspecionar na barra de ferramentas do IDE")](inspect-images/mac-heres-the-button.png#lightbox)
 
 Abrirá uma nova janela de cliente do Inspetor de Xamarin, com um novo prompt REPL.
 
-[ ![](inspect-images/inspector-0.7.0-map-inspect-small.png "Uma nova janela de cliente Xamarin Inspetor será aberto, com um novo prompt REPL")](inspect-images/inspector-0.7.0-map-inspect.png)
+[![](inspect-images/inspector-0.7.0-map-inspect-small.png "Uma nova janela de cliente Xamarin Inspetor será aberto, com um novo prompt REPL")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
 
 Depois que essa janela aparece, você terá um prompt c# interativo que você pode usar para executar e avaliar expressões e instruções do c#. O que torna isso exclusivo é que o código é avaliado no contexto do processo de destino. Nesse caso, estamos mostrando o código em execução em relação ao aplicativo do iOS exibido.
 

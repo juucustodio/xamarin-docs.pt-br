@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 4555906512ecc36e3387f1b2483753e7f50a51ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="stack-view"></a>Exibição de pilha
 
@@ -25,11 +26,15 @@ O controle de exibição de pilha (`UIStackView`) aproveita o poder do Layout au
 
 O layout de todos os sub-visualizações anexado a um modo de exibição de pilha são gerenciadas por ela com base nas propriedades de desenvolvedor definido como eixo, distribuição, alinhamento e espaçamento:
 
-[ ![](uistackview-images/stacked01.png "Diagrama de layout do modo de exibição de pilha")](uistackview-images/stacked01.png)
+[![](uistackview-images/stacked01.png "Diagrama de layout do modo de exibição de pilha")](uistackview-images/stacked01.png#lightbox)
 
 Ao usar um `UIStackView` em um aplicativo xamarin, o desenvolvedor pode definir sub-visualizações tanto dentro de um Storyboard no iOS Designer ou adicionando e removendo sub-visualizações em código c#.
 
 Este documento consiste em duas partes: um início rápido para ajudá-lo a implementar exibir a pilha primeiro e, em seguida, alguns mais detalhes técnicos sobre como ele funciona.
+
+> [!VIDEO https://youtube.com/embed/p3po6507Ip8]
+
+**UIStackView, pelo [University Xamarin](https://university.xamarin.com/)**
 
 ## <a name="uistackview-quickstart"></a>Guia de início rápido UIStackView
 
@@ -39,11 +44,11 @@ Como uma rápida introdução ao `UIStackView` controle, vamos criar uma interfa
 
 Iniciar um novo projeto de xamarin e editar o **Main.storyboard** arquivo no construtor de Interface do Xcode. Primeiro, arraste um único **exibição pilha Vertical** no **View Controller**:
 
-[ ![](uistackview-images/quick01.png "Arraste uma única exibição de pilha Vertical no controlador de exibição")](uistackview-images/quick01.png)
+[![](uistackview-images/quick01.png "Arraste uma única exibição de pilha Vertical no controlador de exibição")](uistackview-images/quick01.png#lightbox)
 
 No **Inspetor de atributo**, defina as seguintes opções:
 
-[ ![](uistackview-images/quick02.png "Definir as opções de exibição de pilha")](uistackview-images/quick02.png)
+[![](uistackview-images/quick02.png "Definir as opções de exibição de pilha")](uistackview-images/quick02.png#lightbox)
 
 Sendo que:
 
@@ -61,17 +66,17 @@ Ao trabalhar com uma exibição de pilha, você pode pensar a **alinhamento** co
 
 Continue para layout de interface do aplicativo adicionando um rótulo, ImageView, dois botões e um modo de exibição de pilha Horizontal para que se assemelha ao seguinte:
 
-[ ![](uistackview-images/quick03.png "Dispor a interface de usuário do modo de exibição de pilha")](uistackview-images/quick03.png)
+[![](uistackview-images/quick03.png "Dispor a interface de usuário do modo de exibição de pilha")](uistackview-images/quick03.png#lightbox)
 
 Configure o modo de exibição de pilha Horizontal com as seguintes opções:
 
-[ ![](uistackview-images/quick04.png "Configurar as opções de exibição de pilha Horizontal")](uistackview-images/quick04.png)
+[![](uistackview-images/quick04.png "Configurar as opções de exibição de pilha Horizontal")](uistackview-images/quick04.png#lightbox)
 
 Porque não queremos que o ícone que representa cada "ponto" na classificação de alongado quando ele é adicionado à exibição de pilha Horizontal, definimos o **alinhamento** para **Center** e  **Distribuição** para **preencher igualmente**.
 
 Por fim, conectar o seguinte **tomadas** e **ações**:
 
-[ ![](uistackview-images/quick05.png "As saídas de modo de exibição de pilha e ações")](uistackview-images/quick05.png)
+[![](uistackview-images/quick05.png "As saídas de modo de exibição de pilha e ações")](uistackview-images/quick05.png#lightbox)
 
 ### <a name="populate-a-uistackview-from-code"></a>Preencher um UIStackView do código
 
@@ -168,7 +173,7 @@ Todos os necessário elementos de interface do usuário e código em vigor, voc�
 
 Quando o usuário toca o **aumentar classificação** botão, outra "estrela" é adicionada à tela (até um máximo de 5):
 
-[ ![](uistackview-images/intro01.png "Execute o aplicativo de exemplo")](uistackview-images/intro01.png)
+[![](uistackview-images/intro01.png "Execute o aplicativo de exemplo")](uistackview-images/intro01.png#lightbox)
 
 "Estrelas" serão automaticamente centralizadas e distribuídas igualmente na exibição da pilha Horizontal. Quando o usuário toca o **diminuir classificação** botão, uma "estrela" será removido (até que nenhum estão à esquerda).
 

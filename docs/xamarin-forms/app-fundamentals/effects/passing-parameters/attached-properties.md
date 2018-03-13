@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: df1287d2389d7645ee3f17b166af790f79aa70e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 585d0422b4dc2b35fc8ba50ed82d2d34e53a784e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 
@@ -29,7 +29,7 @@ O processo para criar parâmetros do efeito que respondem a alterações de prop
 Parâmetros podem ser passados para o efeito Adicionando propriedades anexadas e valores de propriedade para o controle apropriado. Além disso, os parâmetros podem ser alterados em tempo de execução, especificando um novo valor da propriedade anexada.
 
 > [!NOTE]
-> **Observação**: uma propriedade anexada é um tipo especial de propriedade associável, definida em uma classe, mas reconhecível em XAML e anexado a outros objetos como atributos que contêm uma classe e um nome de propriedade separado por um ponto. Para obter mais informações, consulte [propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md).
+> Uma propriedade anexada é um tipo especial de propriedade associável, definida em uma classe, mas reconhecível em XAML e anexado a outros objetos como atributos que contêm uma classe e um nome de propriedade separado por um ponto. Para obter mais informações, consulte [propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md).
 
 O aplicativo de exemplo demonstra um `ShadowEffect` que adiciona uma sombra para o texto exibido por um [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) controle. Além disso, a cor da sombra pode ser alterada em tempo de execução. O diagrama a seguir ilustra as responsabilidades de cada projeto de aplicativo de exemplo, juntamente com as relações entre eles:
 
@@ -434,7 +434,7 @@ Este artigo demonstrou Use nas propriedades para passar parâmetros para um efei
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Processadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
 - [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
 - [RoutingEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/)

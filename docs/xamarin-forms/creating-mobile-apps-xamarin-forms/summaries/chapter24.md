@@ -3,14 +3,15 @@ title: "Resumo do capítulo 24. Navegação da página"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b8eac45c52093dea23c08a19d219fa0bbd8d55ab
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3390a298cd8d9967f0aea2bd9fb5a90830714ba5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumo do capítulo 24. Navegação da página
 
@@ -99,7 +100,7 @@ Se uma determinada página modal pode ser navegada várias vezes, ele deve reter
 
 O [ **ViewGalleryType** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType) exemplo demonstra como usar um `TableView` para itens de menu da lista. Cada item é associado com um `Type` objeto para uma determinada página. Quando esse item é selecionado, o programa cria a página e navega para ele.
 
-[![Captura de tela tripla do tipo de exibição de galeria](images/ch24fg21-small.png "itens de Menu do modo de tabela listando")](images/ch24fg21-large.png "itens de Menu do modo de tabela listando")
+[![Captura de tela tripla do tipo de exibição de galeria](images/ch24fg21-small.png "itens de Menu do modo de tabela listando")](images/ch24fg21-large.png#lightbox "itens de Menu do modo de tabela listando")
 
 O [ **ViewGalleryInst** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst) exemplo é um pouco diferente em que o menu contém instâncias de cada página em vez de tipos. Isso ajuda a manter as informações de cada página, mas todas as páginas devem ser instanciadas na inicialização do programa.
 

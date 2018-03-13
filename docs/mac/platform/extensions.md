@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ce20322b576b12ff9dfe56ef0bc9d2e1ca27792
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 530e53230e9f0dea165b083fa6795558025a293f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinmac-extension-support"></a>Suporte à extensão de Xamarin.Mac
 
@@ -42,7 +42,7 @@ As dicas a seguir podem ser útil ao trabalhar com extensões no Xamarin.Mac:
 - Todas as exceções não capturadas falhará o processo de extensão, fornecendo uma pequena quantidade de informações úteis no **Log do sistema**. Quebra automática de código problemático em um `try/catch` (exceção) bloquear que `NSLog`do antes de lançar pode ser útil.
 - O **Log do sistema** pode ser acessado a partir de **Console** aplicativo sob **aplicativos** > **utilitários**:
 
-    [ ![](extensions-images/extension02.png "O log do sistema")](extensions-images/extension02.png)
+    [![](extensions-images/extension02.png "O log do sistema")](extensions-images/extension02.png#lightbox)
 - Conforme observado acima, executando o aplicativo de host da extensão será registrá-lo com o sistema. Excluindo o pacote de aplicativo com cancelar o registro. 
 - Se "perdidas" versões de extensões do aplicativo são registradas, use o seguinte comando para localizá-los (para que podem ser excluídos): `plugin kit -mv`
 
@@ -65,4 +65,4 @@ Este artigo obteve uma visão geral de trabalhar com as extensões em um aplicat
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [Diretrizes de Interface do sistema operacional X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

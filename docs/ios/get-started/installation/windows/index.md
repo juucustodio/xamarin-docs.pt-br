@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/29/2017
-ms.openlocfilehash: e3416b0551bafcd7ab87b21eafbe56b733f359a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfbe2df23317ee3ad11c9970ab892ddcc251b9d6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-xamarinios-on-windows"></a>Como instalar o Xamarin.iOS no Windows
 
@@ -34,7 +34,7 @@ Este artigo aborda as etapas para instalar e configurar as ferramentas Xamarin.i
 
 O diagrama a seguir mostra uma visão geral simples do fluxo de trabalho de desenvolvimento do Xamarin.iOS:
 
-[![O fluxo de trabalho de desenvolvimento do Xamarin.iOS](images/xma2.png)](images/xma2.png)
+[![O fluxo de trabalho de desenvolvimento do Xamarin.iOS](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
 >  Na verdade, o Visual Studio inicia um processo separado do MSBuild para compilar os projetos. Esse processo cria uma nova conexão com o Mac, significando que, na verdade, há duas conexões SSH do Windows com o Mac no build do Visual Studio. Compilar usando a [linha de comando](~/ios/get-started/installation/windows/connecting-to-mac/index.md) apenas cria o único processo MSBuild. Para simplificar esse diagrama, todas as conexões são simplesmente representadas por uma seta.
@@ -44,7 +44,7 @@ O diagrama a seguir mostra uma visão geral simples do fluxo de trabalho de dese
 O Xamarin.iOS para Visual Studio realiza um feito incrível: permite aos desenvolvedores criar, compilar e depurar aplicativos iOS em um computador com Windows usando o IDE do Visual Studio. Ele não pode fazer isso sozinho – aplicativos iOS não podem ser criados sem o compilador da Apple e não podem ser implantados sem os certificados e as ferramentas de assinatura de código da Apple. Isso significa que um Xamarin.iOS para a instalação do Visual Studio requer uma conexão a um computador Mac OS X em rede para realizar essas tarefas. Uma vez configuradas, as ferramentas da Xamarin tornarão o processo mais direto possível.
 
 
-<a name="system-requirements">
+<a name="system-requirements"/>
 
 ### <a name="system-requirements"></a>Requisitos de sistema
 
@@ -72,13 +72,9 @@ As ferramentas do Xamarin não podem ser usadas com as edições Express do Visu
 
 **O computador Windows deve ser capaz de acessar o Mac por meio da rede.**
 
-<a name="appleaccount" />
-
 ### <a name="apple-developer-account"></a>Conta de desenvolvedor da Apple
 
 Para implantar aplicativos em um dispositivo ou enviá-los à App Store, uma conta de Desenvolvedor da Apple é necessária. Os certificados de desenvolvedor e os perfis de provisionamento relevantes devem ser criados e instalados no Mac em rede para que o Xamarin.iOS para Visual Studio possa funcionar. Consulte o artigo [Provisionamento de dispositivo](~/ios/get-started/installation/device-provisioning/index.md) para conhecer as etapas para obter um certificado de desenvolvimento e provisionar um dispositivo.
-
-<a name="features" />
 
 ## <a name="features"></a>Recursos 
 
@@ -100,6 +96,7 @@ O Xamarin.iOS para Visual Studio permite criar, editar, compilar e implantar pro
 
 ## <a name="configuring-your-mac"></a>Configurando o Mac
 
+<a name="installation"/>
 
 ### <a name="installation"></a>Instalação
 
@@ -148,7 +145,7 @@ Para o desenvolvimento do iOS, é importante que o computador Mac esteja configu
 
 Com o Mac configurado, é hora de configurar seu computador Windows.
 
-<a name="windowsinstallation">
+<a name="windowsinstallation"/>
 
 ## <a name="windows-installation"></a>Instalação do Windows
 
@@ -159,7 +156,7 @@ O Xamarin pode ser instalado como parte da instalação do Visual Studio 2017 ou
 Depois da conclusão do processo de instalação, ainda há mais algumas etapas necessárias para fazer tudo funcionar:
 
 - [Conectar o Visual Studio ao Mac](#connectingtomac) – o Visual Studio deve ser conectado ao host de build do Mac antes de poder compilar projetos do Xamarin.iOS.
-- [Configurar a Barra de Ferramentas do Visual Studio](#Visual_Studio_Toolbar_Overview) – isso permitirá que você acesse facilmente os recursos do Xamarin.iOS no Visual Studio.
+- [Configurar a Barra de Ferramentas do Visual Studio](#toolbar) – isso permitirá que você acesse facilmente os recursos do Xamarin.iOS no Visual Studio.
 
 <a name="connectingtomac" /> 
 
@@ -171,19 +168,19 @@ Para conectar seu Mac, siga as etapas abaixo:
 
 - Navegue até **Ferramentas > Opções** e, em **Xamarin**, selecione **Configurações do iOS**:
 
-  [![A tela Configurações do iOS](images/image2.png)](images/image2.png)
+  [![A tela Configurações do iOS](images/image2.png)](images/image2.png#lightbox)
 
 - Desde que o Mac tenha sido [configurado](#configuration) corretamente para permitir **Logon Remoto**, você deverá poder selecionar seu Mac na lista:
 
-  [![A caixa de diálogo Host remoto](images/xma3.png)](images/xma3.png)
+  [![A caixa de diálogo Host remoto](images/xma3.png)](images/xma3.png#lightbox)
 
 - Isso solicitará as credenciais administrativas do host do Mac:
 
-  [![A caixa de diálogo de logon](images/xma4.png)](images/xma4.png)
+  [![A caixa de diálogo de logon](images/xma4.png)](images/xma4.png#lightbox)
 
 - Quando você tiver se conectado, exibirá o ícone “Conexão Bem-Sucedida” ao lado do nome do computador:
 
-  [![A caixa de diálogo Host remoto que exibe o ícone Conexão bem-sucedida ao lado do nome do computador](images/image6.png)](images/image6.png)
+  [![A caixa de diálogo Host remoto que exibe o ícone Conexão bem-sucedida ao lado do nome do computador](images/image6.png)](images/image6.png#lightbox)
 
 Você será reconectado sempre que iniciar o Visual Studio.
 
@@ -197,7 +194,7 @@ As etapas a seguir podem ser usadas se a barra de ferramentas do iOS não for ex
 
 Para configurar a barra de ferramentas, primeiro abra o menu **Exibir > Barras de Ferramentas** e verifique se a entrada **iOS** está selecionada. Escolha o item de menu conforme mostrado nesta captura de tela; ele deve estar marcado para indicar que a barra de ferramentas está visível:
 
-[![Escolha Barra de ferramentas > iOS](images/image31.png)](images/image31.png)
+[![Escolha Barra de ferramentas > iOS](images/image31.png)](images/image31.png#lightbox)
 
 ### <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -208,11 +205,11 @@ Clique no botão de menu no lado direito da barra de ferramentas Padrão:
 - Escolha **Adicionar ou Remover Botões**
 - Selecione **Plataformas de solução**
 
-[![Selecione Plataforma de solução](images/image35.png)](images/image35.png)
+[![Selecione Plataforma de solução](images/image35.png)](images/image35.png#lightbox)
 
 As barras de ferramentas **Padrão** e **iOS** agora devem se parecer com esta captura de tela:
 
-[![Agora, as barras de ferramentas Padrão e iOS devem ter a aparência desta captura de tela](images/image36.png)](images/image36.png)
+[![Agora, as barras de ferramentas Padrão e iOS devem ter a aparência desta captura de tela](images/image36.png)](images/image36.png#lightbox)
 
 Uma vez concluída a configuração da barra de ferramentas, você está pronto para começar a usar o Xamarin iOS para Visual Studio.
 

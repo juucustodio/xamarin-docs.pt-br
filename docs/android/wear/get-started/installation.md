@@ -7,18 +7,16 @@ ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
-ms.openlocfilehash: 5f583fa78674b1b07d362e5171877e4ec3c861a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 012f563dcdaa70e33d641a4d8fb52df1622c260a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="setup-and-installation"></a>Instalação e Configuração
 
 _Este artigo explica as etapas de instalação e os detalhes de configuração necessárias para preparar seu computador e dispositivos para o desenvolvimento de desgaste Android. No final deste artigo, você terá um trabalho de instalação desgaste xamarin integrada ao Visual Studio para Mac e/ou Microsoft Visual Studio, e você estará pronto para começar a criar seu primeiro aplicativo xamarin desgaste._
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
@@ -35,9 +33,7 @@ O exemplo a seguir é necessário para criar aplicativos baseados em Xamarin And
 Você pode continuar a usar [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se você estiver desenvolvendo especificamente para API nível 23 ou anterior.
 
 > [!IMPORTANT]
-> **Observação:** xamarin não oferece suporte para JDK 9.
-
-<a name="installation" />
+> Xamarin não oferece suporte para JDK 9.
 
 ## <a name="installation"></a>Instalação
 
@@ -49,7 +45,6 @@ Depois que você tiver instalado o xamarin, execute as seguintes etapas para que
 
 Essas etapas são descritas nas seções a seguir.
 
-<a name="sdktools" />
 
 ### <a name="install-android-sdk-and-tools"></a>Instalar ferramentas e SDK do Android 
 

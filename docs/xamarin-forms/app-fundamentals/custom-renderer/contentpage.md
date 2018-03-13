@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: f1f420641691e700894687fef8ea3bd44fd60ff2
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d7f7e031d91cd1505ee255bbf0d25198bd9ae82a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-contentpage"></a>Personalizando um ContentPage
 
@@ -99,7 +99,7 @@ O processo para criar a classe de renderizador personalizado é o seguinte:
 1. Adicionar um `ExportRenderer` de atributo para a classe de renderizador de página para especificar que será usada para renderizar a página xamarin. Forms. Este atributo é usado para registrar o renderizador personalizado com xamarin. Forms.
 
 > [!NOTE]
-> **Observação**: é opcional fornecer um renderizador de página em cada projeto da plataforma. Se um renderizador de página não estiver registrado, será usado o renderizador padrão para a página.
+> É opcional fornecer um renderizador de página em cada projeto da plataforma. Se um renderizador de página não estiver registrado, será usado o renderizador padrão para a página.
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto de aplicativo de exemplo, juntamente com a relação entre eles:
 
@@ -248,7 +248,7 @@ Na plataforma Windows Phone, uma referência de tipo para a página nativo que e
 Ao implementar um renderizador personalizado que é derivada de `PageRenderer` em tempo de execução do Windows, o `ArrangeOverride` método também deve ser implementado para organizar os controles da página, porque o processador de base não sabe o que fazer com elas. Caso contrário, resultados de uma página em branco. Portanto, no exemplo de `ArrangeOverride` chamadas de método de `Arrange` método na `Page` instância.
 
 > [!NOTE]
-> **Observação**: é importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo do Windows Phone 8.1 WinRT. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte o `CleanUpCaptureResourcesAsync` método no projeto do Windows Phone na solução de exemplo, e [início rápido: captura de vídeo usando a API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
+> É importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo do Windows Phone 8.1 WinRT. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte o `CleanUpCaptureResourcesAsync` método no projeto do Windows Phone na solução de exemplo, e [início rápido: captura de vídeo usando a API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Criando o renderizador de página em UWP
 
@@ -297,7 +297,7 @@ A chamada para a classe base `OnElementChanged` método instancia um `FrameworkE
 Ao implementar um renderizador personalizado que é derivada de `PageRenderer` em UWP, o `ArrangeOverride` método também deve ser implementado para organizar os controles da página, porque o processador de base não sabe o que fazer com elas. Caso contrário, resultados de uma página em branco. Portanto, no exemplo de `ArrangeOverride` chamadas de método de `Arrange` método na `Page` instância.
 
 > [!NOTE]
-> **Observação**: é importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo de UWP. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte [exibir a visualização de câmera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
+> É importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo de UWP. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte [exibir a visualização de câmera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
 
 ## <a name="summary"></a>Resumo
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: fb0e4341d8d8ad0719f35c691add9bad1d3f85a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe62b917946dda4cf669f5b15c91a5e3b596a0fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-table-with-data"></a>Populando uma tabela com dados
 
@@ -88,7 +88,7 @@ public override void ViewDidLoad ()
 
 A tabela resultante tem esta aparência:
 
- [ ![](populating-a-table-with-data-images/image3.png "Tabela de exemplo em execução")](populating-a-table-with-data-images/image3.png)
+ [![](populating-a-table-with-data-images/image3.png "Tabela de exemplo em execução")](populating-a-table-with-data-images/image3.png#lightbox)
 
 A maioria das tabelas permitir que o usuário tocar em uma linha para selecioná-lo e executar alguma outra ação (como executar uma música, chamar um contato ou mostrando outra tela). Para fazer isso, há algumas coisas que precisamos fazer. Primeiro, vamos criar um AlertController para exibir uma mensagem quando o usuário clica em uma linha, adicionando o seguinte para o `RowSelected` método:
 
@@ -140,7 +140,7 @@ Agora o usuário pode tocar em uma linha e um alerta será exibida:
 
 
 
- [ ![](populating-a-table-with-data-images/image4.png "O alerta selecionado da linha")](populating-a-table-with-data-images/image4.png)
+ [![](populating-a-table-with-data-images/image4.png "O alerta selecionado da linha")](populating-a-table-with-data-images/image4.png#lightbox)
 
 
 ## <a name="cell-reuse"></a>Reutilização de célula
@@ -220,7 +220,7 @@ Você pode ver exemplos dos tópicos explicados acima de **BasicTable** exemplo 
 
 Um índice ajuda o usuário rolar listas longas, geralmente classificadas em ordem alfabética, embora você pode indexar por todos os critérios que você deseja. O **BasicTableIndex** exemplo carrega uma lista mais longa de itens de um arquivo para demonstrar o índice. Cada item no índice corresponde a uma 'seção' da tabela.
 
- [ ![](populating-a-table-with-data-images/image5.png "A exibição do índice")](populating-a-table-with-data-images/image5.png)
+ [![](populating-a-table-with-data-images/image5.png "A exibição do índice")](populating-a-table-with-data-images/image5.png#lightbox)
 
 Para dar suporte a 'sections' os dados por trás de tabela precisam ser agrupados, portanto, o exemplo BasicTableIndex cria um `Dictionary<>` da matriz de cadeias de caracteres usando a primeira letra de cada item como a chave de dicionário:
 
@@ -270,7 +270,7 @@ public override string[] SectionIndexTitles (UITableView tableView)
 Cabeçalhos e rodapés de página podem ser usados para agrupar visualmente linhas em uma tabela. A estrutura de dados necessários é muito semelhante à adição de um índice – um `Dictionary<>` funciona muito bem. Em vez de usar o alfabeto para agrupar as células, este exemplo agrupará legumes por tipo científico.
 O resultado terá a seguinte aparência:
 
- [ ![](populating-a-table-with-data-images/image6.png "Exemplos de cabeçalhos e rodapés")](populating-a-table-with-data-images/image6.png)
+ [![](populating-a-table-with-data-images/image6.png "Exemplos de cabeçalhos e rodapés")](populating-a-table-with-data-images/image6.png#lightbox)
 
 Para exibir cabeçalhos e rodapés de `UITableViewSource` subclasse requer estes métodos adicionais:
 

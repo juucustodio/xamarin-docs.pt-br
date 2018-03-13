@@ -7,12 +7,12 @@ ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 36cabddc2439d64ad2d1135bbd0d453a7f411750
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Instruções passo a passo - salvar o estado de atividade
 
@@ -22,7 +22,7 @@ _Nós abordamos a teoria por trás de salvar o estado no guia de ciclo de vida d
 
 Vamos abrir o **ActivityLifecycle_Start** projeto (no [ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle) exemplo), compilá-lo e executá-lo. Este é um projeto muito simple que tem duas atividades para demonstrar o ciclo de vida da atividade e como os vários métodos de ciclo de vida são chamados. Quando você inicia o aplicativo, a tela de `MainActivity` é exibida: 
 
-[ ![Tela de atividade A](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png)
+[![Tela de atividade A](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### <a name="viewing-state-transitions"></a>Transições de estado de exibição
 
@@ -48,7 +48,7 @@ Quando clicarmos o **Iniciar atividade B** botão, podemos ver *atividade A* pau
 
 Como resultado, *atividade B* é iniciado e exibido no lugar de *atividade A*: 
 
-[ ![Tela de atividade B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png)
+[![Tela de atividade B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 Quando clicarmos o **novamente** botão, *atividade B* é destruído e *atividade A* é retomado: 
 
@@ -62,7 +62,7 @@ Quando clicarmos o **novamente** botão, *atividade B* é destruído e *atividad
 ```
 ### <a name="adding-a-click-counter"></a>Adicionar um contador de clique
 
-Em seguida, vamos alterar o aplicativo para que tenhamos um botão que conta e exibe o número de vezes que ele for clicado. Primeiro, vamos adicionar uma `_counter` variável de instância para `MainActivity`: 
+Em seguida, vamos alterar o aplicativo para que tenhamos um botão que conta e exibe o número de vezes que ele for clicado. Primeiro, vamos adicionar uma `_counter` variável de instância para `MainActivity`:
 
 ```csharp
 int _counter = 0;
@@ -105,11 +105,11 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 
 Quando criamos e executar o aplicativo novamente, um novo botão que incrementa e exibe o valor de `_counter` cada, clique em:
 
-[![Adicionar a contagem de toque](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png)
+[![Adicionar a contagem de toque](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 Mas quando podemos gira o dispositivo para o modo de paisagem, essa contagem é perdida:
 
-[ ![Girando para paisagem define a contagem de volta para zero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png)
+[![Girando para paisagem define a contagem de volta para zero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 Examinar a saída do aplicativo, podemos ver que *atividade A* foi pausado, interrompido, destruído, recriado, reiniciado e retomada durante a rotação de retrato para modo paisagem: 
 
@@ -152,7 +152,7 @@ if (bundle != null)
 
 Compilar e executar o aplicativo novamente, e clique no botão segundo algumas vezes. Quando é gira o dispositivo para o modo de paisagem, a contagem é preservada!
 
-[ ![Rotação de tela mostra a contagem de quatro preservados](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png)
+[![Rotação de tela mostra a contagem de quatro preservados](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 
 Vamos dar uma olhada na janela de saída para ver o que aconteceu:

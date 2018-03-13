@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: ac4644f65486d70fcbb7da1a03574fb238348313
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f657fc3dd87d5c39d442a863e4acc00ac320b00d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="target-framework"></a>Estrutura de Destino
 
@@ -41,12 +41,12 @@ Há três opções de estrutura de destino para Xamarin.Mac, cada uma com seus p
 Para alterar o tipo de estrutura de destino para um projeto Xamarin.Mac, faça o seguinte:
 
 1. Abra o projeto Xamarin.Mac no Visual Studio para Mac.
-2. No **Solution Explorer**, clique duas vezes no arquivo de projeto para abrir o **opções de projeto** caixa de diálogo.
+2. No **Gerenciador de Soluções**, clique duas vezes no arquivo do projeto para abrir a caixa de diálogo **Opções de Projeto**.
 3. Do **geral** , selecione o tipo de **Framework de destino** que atenda às necessidades de seu aplicativo:
 
-  [![Usando a janela de opções de projeto para escolher uma estrutura de destino](target-framework-images/select-target-full.png "usando a janela de opções de projeto para escolher uma estrutura de destino")](target-framework-images/select-target-full-large.png)
+  [![Usando a janela de opções de projeto para escolher uma estrutura de destino](target-framework-images/select-target-full.png "usando a janela de opções de projeto para escolher uma estrutura de destino")](target-framework-images/select-target-full-large.png#lightbox)
 
-4. Clique o **Okey** botão para salvar suas alterações.
+4. Clique no botão **OK** para salvar suas alterações.
 
 Você deve **limpar** e **recriar** seu projeto Xamarin.Mac depois de alternar o tipo de estrutura de destino.
 
@@ -58,7 +58,7 @@ Este artigo abordou brevemente os diferentes tipos de estrutura de destino (bibl
 ## <a name="related-links"></a>Links relacionados
 
 - [iOS e Mac compartilhamento de código](~/cross-platform/macios/index.md)
-- [API unificada](~/cross-platform/macios/unified/index.md)
-- [Bibliotecas de classes portátil](~/cross-platform/app-fundamentals/pcl.md)
+- [API Unificada](~/cross-platform/macios/unified/index.md)
+- [Bibliotecas de classes portáteis](~/cross-platform/app-fundamentals/pcl.md)
 - [Assemblies](~/cross-platform/internals/available-assemblies.md)
 - [Atualizando aplicativos existentes do Mac](~/cross-platform/macios/unified/updating-mac-apps.md)

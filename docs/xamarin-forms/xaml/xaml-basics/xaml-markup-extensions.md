@@ -4,14 +4,15 @@ description: "Extensões de marcação XAML constituem um recurso importante em 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 7aea7b1536efc952378c6a1df63640af191f1ebe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação XAML
 
@@ -298,7 +299,7 @@ Aqui está o arquivo XAML completo final com três botões acessando seis valore
 
 Verifique se as capturas de tela de estilo consistente e o estilo de dependente de plataforma:
 
-[ ![](xaml-markup-extensions-images/sharedresources.png "Controles com estilo")](xaml-markup-extensions-images/sharedresources-large.png "controles com estilo")
+[![](xaml-markup-extensions-images/sharedresources.png "Controles com estilo")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "controles com estilo")
 
 Embora seja mais comum para definir a `Resources` coleção na parte superior da página, tenha em mente que o `Resources` propriedade é definida por `VisualElement`, e você pode ter `Resources` coleções em outros elementos na página. Por exemplo, tente adicionar uma para o `StackLayout` neste exemplo:
 
@@ -436,7 +437,7 @@ Ambas as estas declarações de namespace estão incluídas no **StaticConstants
 
 O tamanho dos resultantes `BoxView` em relação à tela é dependente de plataforma:
 
- [ ![](xaml-markup-extensions-images/staticconstants.png "Controles usando a extensão de marcação X:Static")](xaml-markup-extensions-images/staticconstants-large.png "controles usando a extensão de marcação X:Static")
+ [![](xaml-markup-extensions-images/staticconstants.png "Controles usando a extensão de marcação X:Static")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "controles usando a extensão de marcação X:Static")
 
 ## <a name="other-standard-markup-extensions"></a>Outras extensões de marcação padrão
 
@@ -552,7 +553,7 @@ Talvez a lição mais importante que você deve executar este exemplo é a sinta
 
 Aqui está o programa em execução:
 
-[ ![](xaml-markup-extensions-images/relativelayout.png "Usando restrições de Layout relativo")](xaml-markup-extensions-images/relativelayout-large.png "relativo Layout usando restrições")
+[![](xaml-markup-extensions-images/relativelayout.png "Usando restrições de Layout relativo")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "relativo Layout usando restrições")
 
 ## <a name="summary"></a>Resumo
 
@@ -563,7 +564,7 @@ As extensões de marcação XAML mostradas aqui oferecem suporte importante para
 ## <a name="related-links"></a>Links relacionados
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [Parte 1. Guia de Introdução com XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-- [Parte 2. Sintaxe XAML essenciais](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-- [Parte 4. Noções básicas de associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+- [Parte 1. Introdução ao XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [Parte 2. Sintaxe essencial de XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [Parte 4. Conceitos básicos da associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 - [Parte 5. De associação de dados para o modelo MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

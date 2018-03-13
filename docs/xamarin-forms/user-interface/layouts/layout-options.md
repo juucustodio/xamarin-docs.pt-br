@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: 978985c4e9803fad33760e4b40ab73d57f3ec420
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a2aa143d5aeb801cd753dd99718ca9cf6dd72353
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layoutoptions"></a>LayoutOptions
 
@@ -91,7 +91,7 @@ Content = new StackLayout
 
 O código resulta no layout mostrado nas capturas de tela seguir:
 
-[![](layout-options-images/alignment.png "Opções de alinhamento de Layout")](layout-options-images/alignment-large.png "opções de alinhamento de Layout")
+[![](layout-options-images/alignment.png "Opções de alinhamento de Layout")](layout-options-images/alignment-large.png#lightbox "opções de alinhamento de Layout")
 
 <a name="expansion" />
 
@@ -146,7 +146,7 @@ Content = new StackLayout
 
 O código resulta no layout mostrado nas capturas de tela seguir:
 
-[![](layout-options-images/expansion.png "Opções de Layout de expansão")](layout-options-images/expansion-large.png "opções de Layout de expansão")
+[![](layout-options-images/expansion.png "Opções de Layout de expansão")](layout-options-images/expansion-large.png#lightbox "opções de Layout de expansão")
 
 Cada [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) ocupam a mesma quantidade de espaço dentro de [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). No entanto, apenas o último `Label`, que define seu [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedade [ `FillAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) tem um tamanho diferente. Além disso, cada `Label` é separado por um vermelho pequeno [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/), que permite que o espaço de `Label` ocupa para ser exibidos com facilidade.
 

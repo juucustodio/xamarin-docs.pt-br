@@ -3,22 +3,22 @@ title: "Conceitos básicos de aplicativo"
 description: Conceitos fundamentais do aplicativo
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 9e4e7705e1ca29b6abf716a48ae3fa0e7c1a19ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c5b823370e5b65fbcf9ba366cb89c05e003b1a89
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>Conceitos básicos de aplicativo
 
 Esta seção fornece um guia sobre alguns dos conceitos que os desenvolvedores precisam estar atento ao desenvolvimento de aplicativos móveis ou tarefas de coisas mais comuns.
 
-##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Criando aplicativos de plataforma cruzada /](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Compilar aplicativos de plataforma cruzada](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
 Escolhendo o Xamarin e manter alguns pontos em mente ao projetar e desenvolver aplicativos móveis, você pode perceber um enorme código compartilhamento entre plataformas móveis, reduzir o tempo de entrega, aproveitar talent existente, atender à demanda de cliente de acesso móvel, e reduzir a complexidade de plataforma cruzada. &nbsp;Este documento descreve as diretrizes importantes para concretizar estas vantagens para aplicativos de produtividade e utilitário.
 
@@ -37,7 +37,7 @@ Dicas para a criação de aplicativos acessíveis.
 Diretrizes para criação de aplicativos com reconhecimento de localidade que podem ser convertidos em vários idiomas.
 
 
-##  <a name="portable-class-librariescross-platformapp-fundamentalspclmd"></a>[Bibliotecas de classes portátil](~/cross-platform/app-fundamentals/pcl.md)
+##  <a name="portable-class-librariescross-platformapp-fundamentalspclmd"></a>[Bibliotecas de classes portáteis](~/cross-platform/app-fundamentals/pcl.md)
 
 Projetos de biblioteca de classes portátil permitem que você crie e distribua assemblies que contêm código compartilhado para ser executado em várias plataformas. Para criar uma biblioteca de classes portátil (ou "PCL"), você primeiro selecionar quais plataformas de destino, em seguida, escrever código contra um sub conjunto do .NET Framework que está disponível no perfil definido para essas plataformas. Este documento descreve como criar e usar PCLs com Xamarin.
 
@@ -62,7 +62,7 @@ Dicas para criar pacotes do NuGet que funcionam com a plataforma do Xamarin.
 A maioria dos aplicativos têm alguns requisitos para salvar dados no dispositivo local. A menos que a quantidade de dados é muito pequena, isso geralmente exige um banco de dados e uma camada de dados do aplicativo para gerenciar o acesso ao banco de dados. iOS e Android tem o mecanismo de banco de dados SQLite "interno" e acesso para armazenar e recuperar dados é simplificado pela plataforma do Xamarin. O [acesso a dados Android](~/android/data-cloud/data-access/index.md), [acesso a dados iOS](~/ios/data-cloud/data/index.md), e [acesso a dados xamarin. Forms](~/xamarin-forms/data-cloud/index.md) guias fornecem exemplos de como acessar SQLite em cada plataforma.
 
 
-##  <a name="transport-layer-securitytransport-layer-securitymd"></a>[Segurança de camada de transporte](transport-layer-security.md)
+##  <a name="transport-layer-securitytransport-layer-securitymd"></a>[Segurança da camada de transporte](transport-layer-security.md)
 
 Informações sobre selectingthe implementação correta de SSL/TLS para proteger a conectividade de rede do seu aplicativo.
 

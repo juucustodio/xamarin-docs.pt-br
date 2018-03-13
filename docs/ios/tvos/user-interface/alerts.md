@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 593e17096d92d9a9764545149991817fa616e2fc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-alerts"></a>Trabalhando com alertas
 
@@ -21,7 +21,7 @@ _Este artigo aborda o trabalho com UIAlertController para exibir uma mensagem de
 
 Se você precisar chamar a atenção do usuário tvOS ou peça permissão para executar uma ação destrutiva (como excluir um arquivo), você pode apresentar uma mensagem de alerta usando o `UIAlertViewController`:
 
-[ ![](alerts-images/alert01.png "Um exemplo UIAlertViewController")](alerts-images/alert01.png)
+[![](alerts-images/alert01.png "Um exemplo UIAlertViewController")](alerts-images/alert01.png#lightbox)
 
 Se a adição para exibir uma mensagem, você pode adicionar botões e campos de texto para um alerta para permitir que o usuário responder às ações e fornecer comentários.
 
@@ -31,7 +31,7 @@ Se a adição para exibir uma mensagem, você pode adicionar botões e campos de
 
 Como mencionado acima, os alertas são usados para chamar a atenção do usuário e informá-los do estado do seu aplicativo ou solicitação de comentários. Alertas devem apresentar um título, opcionalmente, eles podem ter uma mensagem e um ou mais botões ou campos de texto.
 
-[ ![](alerts-images/alert04.png "Um exemplo de alerta")](alerts-images/alert04.png)
+[![](alerts-images/alert04.png "Um exemplo de alerta")](alerts-images/alert04.png#lightbox)
 
 Apple tem as seguintes sugestões para trabalhar com alertas:
 
@@ -118,11 +118,11 @@ O `AddAction` método adiciona a ação em questão para o `UIAlertViewControlle
 
 Além de adicionar ações (botões) para o alerta, você pode adicionar campos de texto para o alerta para permitir que o usuário preencha informações como IDs de usuário e senhas:
 
-[ ![](alerts-images/alert02.png "Campo de texto em um alerta")](alerts-images/alert02.png)
+[![](alerts-images/alert02.png "Campo de texto em um alerta")](alerts-images/alert02.png#lightbox)
 
 Se o usuário selecionar o campo de texto, o teclado tvOS padrão será exibido, permitindo que ele insira um valor para o campo:
 
-[ ![](alerts-images/alert03.png "Inserindo texto")](alerts-images/alert03.png)
+[![](alerts-images/alert03.png "Inserindo texto")](alerts-images/alert03.png#lightbox)
 
 O código a seguir exibe um alerta de Okey/cancelar um único campo de texto para inserir um valor:
 
@@ -373,7 +373,7 @@ Este artigo abordou trabalhar com `UIAlertController` para exibir uma mensagem d
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

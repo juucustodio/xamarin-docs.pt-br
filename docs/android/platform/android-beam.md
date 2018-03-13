@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: bea8480c66a2ecf499375636c98511ca55ce7693
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-beam"></a>Emitir Android
 
 Emitir Android é uma nova tecnologia de comunicação NFC (curta distância) no Android 4 que permite que aplicativos compartilhe informações via NFC quando nas proximidades.
 
-[![Diagrama que ilustra dois dispositivos nas proximidades compartilhando informações](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png)
+[![Diagrama que ilustra dois dispositivos nas proximidades compartilhando informações](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 Emitir Android funciona enviando mensagens sobre NFC quando dois dispositivos estão no intervalo. Dispositivos aproximadamente 4cm uns dos outros podem compartilhar dados usando emitir Android. Cria uma mensagem de uma atividade em um dispositivo e especifica uma atividade (ou atividades) que pode lidar com envio por push-lo. Quando a atividade especificada está em primeiro plano e os dispositivos estão no intervalo, emitir Android enviará a mensagem para o segundo dispositivo. No dispositivo receptor, uma tentativa é invocada que contém os dados da mensagem.
 
@@ -30,7 +30,6 @@ Android oferece suporte a dois modos de mensagens de configuração com transmis
 
 Em ambos os casos, para enviar dados de transmissão Android, um aplicativo envia uma `NdefMessage`, empacotamento de dados em vários `NdefRecords`. Vamos dar uma olhada em pontos importantes que devem ser resolvidos antes de nós pode disparar emitir Android. Primeiro, trabalharemos com o estilo de retorno de chamada de criação de um `NdefMessage`.
 
-<a name="Creating_a_Message" />
 
 ## <a name="creating-a-message"></a>Criar uma mensagem
 
@@ -66,7 +65,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-<a name="Receiving_a_Message" />
 
 ## <a name="receiving-a-message"></a>Recebendo uma mensagem
 
@@ -79,7 +77,7 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 
 Para obter um exemplo de código completo que usa emitir Android, mostrado em execução na captura de tela abaixo, consulte o [demonstração emitir Android](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) na Galeria de exemplo.
 
-[![Capturas de tela de exemplo de demonstração emitir Android](android-beam-images/24.png)](android-beam-images/24.png)
+[![Capturas de tela de exemplo de demonstração emitir Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 

@@ -7,12 +7,12 @@ ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: adfc0da404c6b9df79c3b2be51f8cafa302a6bc3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: c4800c1fe844a03c20b28079640a5ddab8046b1f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-localization"></a>Localização do Android
 
@@ -81,7 +81,7 @@ A maioria dos desenvolvedores já estão familiarizados com o uso de **dpi** suf
 ![Captura de tela de recursos/drawable e valores de recursos/pastas para vários identificadores culturais](localization-images/resources.png)
 
 > [!NOTE]
-> **Observação:** ao especificar um idioma de nível superior como `es` apenas dois caracteres forem necessárias; no entanto, ao especificar uma localidade completa, o formato de nome de diretório requer um traço e minúsculas **r** para separar os dois partes, por exemplo **pt rBR** ou **zh-rCN**. Compare isso com o valor retornado no código, que tenha um sublinhado (por exemplo. `pt_BR`). Ambos são diferentes para o valor .NET `CultureInfo` classe usa, que tem um traço apenas (por exemplo. `pt-BR`). Mantenha essas diferenças em mente ao trabalhar com as plataformas de Xamarin.
+> Ao especificar um idioma de nível superior como `es` apenas dois caracteres forem necessárias; no entanto, ao especificar uma localidade completa, o formato de nome de diretório requer um traço e minúsculas **r** para separar as duas partes, por exemplo **pt rBR** ou **zh-rCN**. Compare isso com o valor retornado no código, que tenha um sublinhado (por exemplo. `pt_BR`). Ambos são diferentes para o valor .NET `CultureInfo` classe usa, que tem um traço apenas (por exemplo. `pt-BR`). Mantenha essas diferenças em mente ao trabalhar com as plataformas de Xamarin.
 
 #### <a name="stringsxml-file-format"></a>Formato de arquivo strings.XML
 
@@ -164,13 +164,13 @@ No **Strings.xml**
 
 ```xml
 <plurals name="numberOfTasks">
-         <!--
-                    As a developer, you should always supply "one" and "other"
-                    strings. Your translators will know which strings are actually
-                    needed for their language.
-             -->
-         <item quantity="one">There is %d task left.</item>
-         <item quantity="other">There are %d tasks still to do.</item>
+   <!--
+      As a developer, you should always supply "one" and "other"
+      strings. Your translators will know which strings are actually
+      needed for their language.
+    -->
+   <item quantity="one">There is %d task left.</item>
+   <item quantity="other">There are %d tasks still to do.</item>
  </plurals>
 ```
 
@@ -229,15 +229,13 @@ Ao usar o Android 4.2 (API nível 17) e mais recente, aligment valores podem ser
 
 A captura de tela a seguir mostra o [localizada **Tasky** exemplo](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em árabe:
 
-[![Captura de tela do aplicativo Tasky em árabe](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png) 
+[![Captura de tela do aplicativo Tasky em árabe](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 A próxima captura de tela mostra a [localizada **Tasky** exemplo](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em hebraico:
 
-[![Captura de tela do aplicativo Tasky em hebraico](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png)
+[![Captura de tela do aplicativo Tasky em hebraico](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 Texto RTL está localizado usando **Strings.xml** arquivos da mesma forma como texto LTR.
-
-<a name="testing" />
 
 ## <a name="testing"></a>Testes
 

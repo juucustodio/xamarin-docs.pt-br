@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 4d074dce06d5737bd6589efbc559c611425e5f19
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 18df6082f634d633d3f1ca8ea1e8d3f493532f47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="grid"></a>Grade
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) dá suporte à organização exibições em linhas e colunas. Linhas e colunas podem ser definidas para ter tamanhos proporcionais ou tamanhos absolutos. O `Grid` layout não deve ser confundido com tabelas tradicionais e não se destina a apresentar dados tabulares. `Grid` não tem o conceito de linha, coluna ou célula de formatação. Ao contrário das tabelas HTML, `Grid` destina-se somente para dispor conteúdo.
 
-[ ![](grid-images/layouts-sml.png "Layouts de xamarin. Forms")](grid-images/layouts.png "xamarin. Forms Layouts")
+[![](grid-images/layouts-sml.png "Layouts de xamarin. Forms")](grid-images/layouts.png#lightbox "xamarin. Forms Layouts")
 
 Este artigo aborda:
 
@@ -54,7 +54,7 @@ Informações de linha e coluna são armazenadas em `Grid`do `RowDefinitions`  &
 - **Absoluto** &ndash; tamanhos de colunas e linhas com valores de altura e largura fixas, específicos. Especificado como um valor e `GridUnitType.Absolute` em c# e como `#` em XAML, com `#` sendo o valor desejado.
 
 > [!NOTE]
-> **Observação**: os valores de largura de colunas são definidos como ' * ' por padrão em xamarin. Forms, que garante que a coluna preencherá o espaço disponível.
+> Os valores de largura de colunas são definidos como ' * ' por padrão em xamarin. Forms, que garante que a coluna preencherá o espaço disponível.
 
 Considere um aplicativo que precisa de três linhas e duas colunas. A linha inferior deve ser exatamente 200px altura e a linha superior precisa ser duas vezes altura da linha do meio. A coluna da esquerda deve ser grande o suficiente para ajustar o conteúdo e a coluna da direita deve preencher o espaço restante.
 

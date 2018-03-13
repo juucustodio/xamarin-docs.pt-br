@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6b4d63637eae7c1719f3f6e525327d416ddff59d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce5a7976f5bac68ca01b30a8d437aa83b8360580
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-styles"></a>Introdução aos estilos
 
@@ -84,7 +84,7 @@ public class NoStylesPageCS : ContentPage
 
 Cada [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instância tem valores de propriedade idênticas para controlar a aparência do texto exibido pelo `Label`. Isso resulta na exibição mostrada nas capturas de tela seguir:
 
-[![](introduction-images/no-styles.png "Rótulo aparência sem estilos")](introduction-images/no-styles-large.png "aparência sem estilos de rótulo")
+[![](introduction-images/no-styles.png "Rótulo aparência sem estilos")](introduction-images/no-styles-large.png#lightbox "aparência sem estilos de rótulo")
 
 Definir a aparência de cada controle individual pode ser repetitiva e propenso a erros. Em vez disso, pode ser criado um estilo que define a aparência e, em seguida, são aplicadas aos controles necessários.
 

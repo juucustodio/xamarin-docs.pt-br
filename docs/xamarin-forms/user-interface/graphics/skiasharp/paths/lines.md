@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a3090873569db2466db9ab25cc105ea59401df3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Linhas e limites de traço
 
@@ -92,7 +92,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Para cada membro do `SKStrokeCap` enumeração, o manipulador desenha duas linhas, uma com uma espessura do traço de 50 pixels e outra linha posicionado na parte superior com uma espessura do traço de 2 pixels. Essa segunda linha destina-se a ilustrar o Geométrico início e fim da linha independente da espessura da linha e um limite de traço:
 
-[![](lines-images/strokecaps-small.png "Tripla captura de tela da página traço Caps")](lines-images/strokecaps-large.png "tripla captura de tela da página tampas de traço")
+[![](lines-images/strokecaps-small.png "Tripla captura de tela da página traço Caps")](lines-images/strokecaps-large.png#lightbox "tripla captura de tela da página tampas de traço")
 
 Como você pode ver, o `Square` e `Round` caps traço efetivamente estendem o comprimento da linha, metade da largura do traço no início da linha e novamente no final. Essa extensão será importante quando é necessário determinar as dimensões de um objeto gráfico renderizado.
 
@@ -230,7 +230,7 @@ T GetPickerItem<T>(Picker picker)
 
 A captura de tela mostra uma variedade de `Picker` seleções nas três plataformas:
 
-[![](lines-images/multiplelines-small.png "Captura de tela da página de várias linhas tripla")](lines-images/multiplelines-large.png "tripla captura de tela da página de várias linhas")
+[![](lines-images/multiplelines-small.png "Captura de tela da página de várias linhas tripla")](lines-images/multiplelines-large.png#lightbox "tripla captura de tela da página de várias linhas")
 
 O iPhone na esquerda mostra como o `SKPointMode.Points` faz com que o membro de enumeração `DrawPoints` para processar cada um dos pontos do `SKPoint` matriz como um quadrado, se o limite de linha é `Butt` ou `Square`. Círculos são renderizados, se o limite de linha é `Round`.
 

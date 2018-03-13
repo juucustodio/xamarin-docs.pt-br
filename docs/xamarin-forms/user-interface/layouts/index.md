@@ -5,18 +5,25 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1fe290983bf7b130dee6f1a1878a32dce3efc4c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ede9bbb47f398a82d6eae5d827122f469ad6ea4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layouts"></a>Layouts
 
-Xamarin. Forms tem vários layouts e recursos para organizar o conteúdo na tela. Cada controle de layout é descrito abaixo, bem como detalhes sobre como lidar com as alterações de orientação de tela:
+Xamarin. Forms tem vários layouts e recursos para organizar o conteúdo na tela. 
+
+> [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
+
+**Layouts de xamarin. Forms, pelo [University Xamarin](https://university.xamarin.com/)**
+
+Cada controle de layout é descrito abaixo, bem como detalhes sobre como lidar com as alterações de orientação de tela:
 
 * **[StackLayout](stack-layout.md)**  &ndash; usado para organizar exibições linearmente, horizontal ou verticalmente. Modos de exibição em um StackLayout podem ser alinhados ao centro, esquerdo ou direito do layout.
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash; usado para organizar exibições definindo coordenadas & tamanho em termos de valores absolutos ou taxas. AbsoluteLayout pode ser usado para modos de exibição da camada, bem como ancorá-los para a esquerda, direita ou centralizado.
@@ -35,7 +42,7 @@ Controles de plataforma também podem ser usados diretamente em layouts de xamar
 
 O gráfico a seguir visualiza os controles de layout:
 
-[ ![](images/layouts-sml.png "Layouts de xamarin. Forms")](images/layouts.png "xamarin. Forms Layouts")
+[![](images/layouts-sml.png "Layouts de xamarin. Forms")](images/layouts.png#lightbox "xamarin. Forms Layouts")
 
 ## <a name="choosing-the-right-layout"></a>Escolher o Layout da direita
 
@@ -176,11 +183,11 @@ Xamarin. Forms e seus layouts internos são capazes de lidar com as alterações
 
 iOS, Android e Windows plataformas todos os maiores tamanhos de telas oferecem suporte no tablet dispositivos (assim como laptops e estações de trabalho Windows). Xamarin. Forms permite otimizar seu aplicativo para telas maiores detectar o tipo de dispositivo e a ajustar o layout de página ou usando uma página totalmente diferente completamente para telas maiores.
 
-### <a name="creating-a-custom-layoutcustommd"></a>[Criar um Layout personalizado](custom.md)
+### <a name="creating-a-custom-layoutcustommd"></a>[Criar um layout personalizado](custom.md)
 
 Xamarin. Forms define quatro classes de layout - [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/), e [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), e cada organiza seus filhos de forma diferente. No entanto, às vezes, o necessário para organizar o conteúdo de página usando um layout não fornecida pelo xamarin. Forms. Este artigo explica como escrever uma classe de layout personalizado e demonstra uma orientação diferencia `WrapLayout` classe organiza seus filhos horizontalmente na página e, em seguida, ajusta a exibição de filhos subsequentes para linhas adicionais.
 
-### <a name="layout-compressionlayout-compressionmd"></a>[Compactação de layout](layout-compression.md)
+### <a name="layout-compressionlayout-compressionmd"></a>[Compactação de Layout](layout-compression.md)
 
 Compactação de layout remove especificados layouts da árvore visual em uma tentativa de melhorar o desempenho de renderização da página. O benefício de desempenho que isso oferece varia dependendo da complexidade de uma página, da versão do sistema operacional que está sendo usado e do dispositivo no qual o aplicativo está sendo executado. No entanto, os maiores ganhos de desempenho serão observados em versões mais antigas.
 

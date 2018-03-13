@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4e640979305a568649c59f6c75033296153b99de
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 838a11f078d735759eda1d45a082ccbad51e2779
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-ios"></a>Toque no iOS
 
@@ -23,7 +23,7 @@ Controles em `UIKit` – essas subclasse de UIControl – é caso depende da int
 
 No entanto, muitas das exibições em `UIKit` não possuem toque habilitado por padrão. Há duas maneiras de habilitar toque em um controle. O primeiro modo é verificar a caixa de seleção habilitado de interação do usuário no painel de propriedade do iOS Designer, conforme mostrado na seguinte captura de tela:
 
- [ ![](touch-in-ios-images/image1.png "Marque a caixa de seleção habilitado de interação do usuário no painel de propriedade do Designer de iOS")](touch-in-ios-images/image1.png)
+ [![](touch-in-ios-images/image1.png "Marque a caixa de seleção habilitado de interação do usuário no painel de propriedade do Designer de iOS")](touch-in-ios-images/image1.png#lightbox)
 
 Podemos também pode usar um controlador para definir o `UserInteractionEnabled` propriedade como true em uma `UIView` classe. Isso é necessário se a interface do usuário é criado em código.
 
@@ -81,7 +81,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 Multitoque não está habilitado por padrão em controles. Multitoque pode ser habilitada no iOS Designer, conforme ilustrado na captura de tela a seguir:
 
- [ ![](touch-in-ios-images/image2.png "Multitoque habilitado no Designer de iOS")](touch-in-ios-images/image2.png)
+ [![](touch-in-ios-images/image2.png "Multitoque habilitado no Designer de iOS")](touch-in-ios-images/image2.png#lightbox)
 
 Também é possível definir multitoque programaticamente, definindo o `MultipleTouchEnabled` propriedade, conforme mostrado na seguinte linha de código:
 

@@ -6,11 +6,11 @@ ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f784497173db6bc3ffa87617765e63fc8d904e5f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 843e66a7979fc1aaa86371a3406c89af3f9ba967
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json Markup
 
@@ -75,7 +75,7 @@ Vamos começar com um exemplo. Este é um arquivo Json completo que pode ser pas
 
 A marcação acima produz a interface do usuário do seguinte:
 
- [ ![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "A interface do usuário criado pela marcação determinada")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png)
+ [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "A interface do usuário criado pela marcação determinada")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
 Cada elemento na árvore pode conter a propriedade `"id"`. É possível em tempo de execução para referenciar as seções individuais ou elementos usando o indexador JsonElement. Assim:
 

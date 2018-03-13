@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 84450527a1301cf95c93a5dc2796a2cf76f4ae2b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3a66ec9f935159e4854a12584a6c9f70ab805abb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-an-effect"></a>Criando um efeito
 
@@ -29,7 +29,7 @@ O processo para criar um efeito em cada projeto específico de plataforma é o s
 O efeito pode ser consumido por anexá-lo para o controle apropriado.
 
 > [!NOTE]
-> **Observação**: é opcional fornecer um efeito em cada projeto da plataforma. Tentativa de usar um efeito quando um não estiver registrado retornará um valor não nulo que não faz nada.
+> É opcional fornecer um efeito em cada projeto da plataforma. Tentativa de usar um efeito quando um não estiver registrado retornará um valor não nulo que não faz nada.
 
 O aplicativo de exemplo demonstra um `FocusEffect` que altera a cor de fundo de um controle quando ele recebe o foco. O diagrama a seguir ilustra as responsabilidades de cada projeto de aplicativo de exemplo, juntamente com as relações entre eles:
 
@@ -195,7 +195,7 @@ O processo para consumir um efeito de uma biblioteca de classe portátil xamarin
 1. Anexar o efeito para o controle adicionando-o para o controle [ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) coleção.
 
 > [!NOTE]
-> **Observação**: uma instância de efeito somente pode ser conectada a um único controle. Portanto, um efeito deve ser resolvido duas vezes para usá-lo em dois controles.
+> Uma instância de efeito somente pode ser conectada a um único controle. Portanto, um efeito deve ser resolvido duas vezes para usá-lo em dois controles.
 
 ## <a name="consuming-the-effect-in-xaml"></a>Consumindo o efeito em XAML
 
@@ -256,7 +256,7 @@ Este artigo demonstrou como criar um efeito que altera a cor de fundo de [ `Entr
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Processadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
 - [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
 - [Efeito de cor de plano de fundo (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/)

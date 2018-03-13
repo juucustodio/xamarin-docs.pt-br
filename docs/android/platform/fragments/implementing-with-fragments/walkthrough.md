@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 7441fbe1fc686dc4fa5cb67cbfc5ae6353f32c93
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5c058f173f64efe4a5c777872e9ea67120115f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough"></a>Passo a passo
 
@@ -21,7 +21,7 @@ Nas etapas a seguir, um aplicativo básico é criado com fragmentos. A primeira 
 
 Criar um novo projeto de xamarin chamado **FragmentSample**. O **mínimo Android** versão deve ser definida para o Android 3.1 ou posterior, conforme mostrado na imagem a seguir:
 
-[![Definindo a versão do Android mínimo](walkthrough-images/00.png)](walkthrough-images/00.png)
+[![Definindo a versão do Android mínimo](walkthrough-images/00.png)](walkthrough-images/00.png#lightbox)
 
 
 ## <a name="2-create-the-mainactivity"></a>2. Criar o MainActivity
@@ -47,7 +47,7 @@ public class MainActivity : Activity
 
 Os dois tamanhos de tela diferentes exigem dois arquivos diferentes de layout. Portanto, vamos criar uma nova pasta, **recursos/Layout-grande**e criar um novo layout chamado **activity_main.axml**. Iremos também renomear o arquivo de layout padrão como **Resources/Layout/activity_main.axml**. Após essas alterações, as pastas de layout devem ser semelhante a captura de tela a seguir:
 
-[![Captura de tela de pastas de layout no IDE](walkthrough-images/01.png)](walkthrough-images/01.png)
+[![Captura de tela de pastas de layout no IDE](walkthrough-images/01.png)](walkthrough-images/01.png#lightbox)
 
 
 Todos os dispositivos serão carregar e usar o arquivo de layout no **recursos/Layout**.
@@ -92,7 +92,7 @@ O arquivo de layout para as telas maior é ligeiramente diferente. Não é apena
 
 `TitlesFragment` será exibir os títulos das várias opções, então vamos adicionar um novo fragmento ao projeto chamado `TitlesFragment`:
 
-[![Adicionando um novo fragmento ao projeto TitlesFragment](walkthrough-images/02.png)](walkthrough-images/02.png)
+[![Adicionando um novo fragmento ao projeto TitlesFragment](walkthrough-images/02.png)](walkthrough-images/02.png#lightbox)
 
 Depois de `TitlesFragment` foi adicionado, que deve alterar a classe para que ele herda de `Android.App.ListFragment`. `ListFragment` é um tipo especializado de fragmento que inclui a funcionalidade de lista.
 `TitlesFragment` também substituirão `OnActivityCreated` (outro método de ciclo de vida de fragmento) e forneça um `Adapter` que `ListFragment` será usado para preencher a lista:
@@ -162,7 +162,6 @@ private void ShowDetails(int playId)
 
 O código determina do dispositivo como formatar e exibir a cotação da ação selecionada. No caso de tablets, o `_isDualPane` sinalizador será definido como `true`, e, portanto, as aspas serão exibidas ao lado de `TitlesFragment`. Se a ação selecionada `id` não estiver sendo exibida, em seguida, um novo `DetailsFragment` é criado e, em seguida, são carregados no `FrameLayout` na atividade. Para outros dispositivos que não possuem um monitor grande &ndash; telefones, por exemplo &ndash; `isDualPane` será definida como `false` para um novo `DetailsActivity` será iniciado.
 
-<a name="5. Create_the_DetailsActivity" />
 
 ## <a name="5-create-the-detailsactivity"></a>5. Criar o DetailsActivity
 
@@ -187,7 +186,6 @@ public class DetailsActivity : Activity
 
 Observe que nenhum arquivo de layout é carregado para `DetailsActivity`. Em vez disso, `DetailsFragment` é carregado no modo de exibição de raiz da atividade. Este modo de exibição de raiz tem a ID especial `Android.Resource.Id.Content`. Um novo `DetailFragment` é criado e, em seguida, adicionado a esta exibição de raiz dentro de um `FragmentTransaction` que é criado pela atividade de `FragmentManager`.
 
-<a name="6. Create_the_DetailsFragment" />
 
 ## <a name="6-create-the-detailsfragment"></a>6. Criar o DetailsFragment
 

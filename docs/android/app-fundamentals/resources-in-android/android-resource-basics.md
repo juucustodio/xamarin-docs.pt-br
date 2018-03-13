@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: c8f6832f618c37b3593f28c8efaeb87e4df5df03
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-resource-basics"></a>Noções básicas sobre o recurso de Android
 
@@ -39,7 +39,6 @@ Os cinco arquivos que compõem os recursos padrão foram criados na pasta de rec
 
 -  **Resource.Designer.CS** &ndash; esse arquivo é automaticamente gerado e mantido pelo xamarin e mantém o exclusivo IDs atribuídas a cada recurso. Isso é muito semelhante e idêntico em objetivo para o arquivo de R.java que tem um aplicativo do Android escrito em Java. Ele é criado automaticamente com as ferramentas xamarin e será regenerado de tempos em tempos.
 
-<a name="Creating_and_Accessing_Resources" />
 
 ## <a name="creating-and-accessing-resources"></a>Criando e acessando recursos
 
@@ -62,7 +61,6 @@ Além disso, é importante observar que, enquanto o Android só dá suporte a no
 
 Depois de adicionar recursos a um projeto, há duas maneiras de usá-los em um aplicativo &ndash; programaticamente (dentro do código) ou em arquivos XML.
 
-<a name="Referencing_Resources_Programmatically" />
 
 ## <a name="referencing-resources-programmatically"></a>Referência a recursos por meio de programação
 
@@ -108,7 +106,6 @@ Ao fazer referência a recursos programaticamente (no código), eles podem ser a
 
 -  **Nome do recurso** &ndash; é o nome do arquivo de recurso (sem a extensão) ou o valor do atributo android: nome de recursos que estão em um elemento XML.
 
-<a name="Referencing_Resources_from_XML" />
 
 ## <a name="referencing-resources-from-xml"></a>Referência a recursos do XML
 

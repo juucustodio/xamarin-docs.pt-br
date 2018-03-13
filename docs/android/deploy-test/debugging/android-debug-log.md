@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 99b9ed9e3c71766f483f7b00996137aae7a247d1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 26ac42e4b7acbe19dee746130fc335fdf18ffc46
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-debug-log"></a>Log de depuração do Android
 
@@ -36,7 +36,6 @@ Quando a janela de ferramentas for exibida, o dispositivo físico poderá ser se
 Essa janela de ferramentas fornece: uma tabela de entradas de log, uma caixa de combinação para a seleção de dispositivo, uma maneira de limpar entradas de log, uma caixa de pesquisa e botões reproduzir/parar/pausar. 
 
 
-<a name="Accessing_from_the_Command_Line" />
 
 ## <a name="accessing-from-the-command-line"></a>Acessando da Linha de Comando
 
@@ -52,7 +51,6 @@ Se mais de um dispositivo estiver conectado, o dispositivo deverá ser identific
 
 Para encontrar mais comandos é só executar o **adb**.
 
-<a name="Writing_to_the_Debug_Log" />
 
 
 ## <a name="writing-to-the-debug-log"></a>Gravar no Log de Depuração
@@ -75,7 +73,6 @@ W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
 ```
 
-<a name="Interesting_Messages" />
 
 ## <a name="interesting-messages"></a>Mensagens interessantes
 

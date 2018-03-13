@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c78396ce55c776c615f3b3027a97b5a334c0b7f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf519cb964bf852c74249c874b9a934d4a6cf5c3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="callkit"></a>CallKit
 
@@ -52,11 +52,11 @@ As seções a seguir aborda a arquitetura CallKit, a entrada e saída chamar flu
 
 No iOS 10, Apple adotou CallKit em todos os serviços do sistema, de modo que as chamadas feitas em CarPlay, por exemplo, são conhecidas para a interface do usuário do sistema por meio de CallKit. No exemplo fornecido abaixo, pois MonkeyCall adota CallKit, ele é conhecido pelo sistema da mesma forma como esses serviços de sistema internas e obtém todos os recursos de:
 
-[ ![](callkit-images/callkit01.png "A pilha do serviço CallKit")](callkit-images/callkit01.png)
+[![](callkit-images/callkit01.png "A pilha do serviço CallKit")](callkit-images/callkit01.png#lightbox)
 
 Examine perto o App MonkeyCall do diagrama acima. O aplicativo contém todos os seus códigos para se comunicar com sua própria rede e contém suas próprias Interfaces do usuário. Vincula em CallKit para se comunicar com o sistema:
 
-[ ![](callkit-images/callkit02.png "Arquitetura de aplicativo MonkeyCall")](callkit-images/callkit02.png)
+[![](callkit-images/callkit02.png "Arquitetura de aplicativo MonkeyCall")](callkit-images/callkit02.png#lightbox)
 
 Há duas interfaces principais CallKit que usa o aplicativo:
 
@@ -75,7 +75,7 @@ Um aplicativo deve usar o `CXProvider` para o seguinte:
 
 Quando o aplicativo deseja se comunicar com o sistema, ele usa o `CXCallUpdate` classe e quando o sistema precisa se comunicar com o aplicativo, ele usa o `CXAction` classe:
 
-[ ![](callkit-images/callkit03.png "Comunicação com o sistema por meio de um CXProvider")](callkit-images/callkit03.png)
+[![](callkit-images/callkit03.png "Comunicação com o sistema por meio de um CXProvider")](callkit-images/callkit03.png#lightbox)
 
 ### <a name="the-cxcallcontroller"></a>O CXCallController
 
@@ -89,7 +89,7 @@ Um aplicativo deve usar o `CXCallController` para o seguinte:
 
 Quando o aplicativo deseja se comunicar ações de usuário local para o sistema, ele usa o `CXTransaction` classe:
 
-[ ![](callkit-images/callkit04.png "Emissão de relatórios para o sistema usando uma CXCallController")](callkit-images/callkit04.png)
+[![](callkit-images/callkit04.png "Emissão de relatórios para o sistema usando uma CXCallController")](callkit-images/callkit04.png#lightbox)
 
 ## <a name="implementing-callkit"></a>Implementando CallKit
 
@@ -748,7 +748,7 @@ As seções a seguir terão uma visão detalhada de como um aplicativo pode usar
 
 Quando um usuário remoto iniciou uma conversa de VOIP do usuário local, ocorre o seguinte:
 
-[ ![](callkit-images/callkit05.png "Um usuário remoto iniciou uma conversa de VOIP")](callkit-images/callkit05.png)
+[![](callkit-images/callkit05.png "Um usuário remoto iniciou uma conversa de VOIP")](callkit-images/callkit05.png#lightbox)
 
 1. O aplicativo recebe uma notificação da sua rede de comunicação que há uma chamada VOIP.
 2. O aplicativo usa o `CXProvider` para enviar um `CXCallUpdate` para o sistema informando-lo da chamada.
@@ -783,7 +783,7 @@ Esse código cria um novo `CXCallUpdate` instância e anexa um identificador que
 
 Se o usuário deseja atender a chamada VOIP, ocorre o seguinte:
 
-[ ![](callkit-images/callkit06.png "O usuário responde à chamada VOIP de entrada")](callkit-images/callkit06.png)
+[![](callkit-images/callkit06.png "O usuário responde à chamada VOIP de entrada")](callkit-images/callkit06.png#lightbox)
 
 1. A interface do usuário do sistema informa o sistema que o usuário deseja responder à chamada VOIP.
 2. O sistema envia um `CXAnswerCallAction` para o aplicativo `CXProvider` informando-a intenção de resposta.
@@ -824,7 +824,7 @@ Esse código primeiro procura a determinada chamada em sua lista de chamadas ati
 
 Se o usuário deseja encerrar a chamada de dentro da interface do usuário do aplicativo, ocorre o seguinte:
 
-[ ![](callkit-images/callkit07.png "O usuário encerra a chamada de dentro da interface do usuário do aplicativo")](callkit-images/callkit07.png)
+[![](callkit-images/callkit07.png "O usuário encerra a chamada de dentro da interface do usuário do aplicativo")](callkit-images/callkit07.png#lightbox)
 
 1. O aplicativo cria `CXEndCallAction` que obtém empacotada em um `CXTransaction` que é enviada para o sistema para informá-lo que a chamada está terminando.
 2. O sistema verifica a tentativa de chamar final e envia o `CXEndCallAction` volta para o aplicativo por meio de `CXProvider`.
@@ -874,7 +874,7 @@ Em conceder a situação acima, o sistema enviará um `CXTransaction` para o apl
 
 Se o usuário toca uma entrada da lista recentes (no aplicativo do telefone), por exemplo, que é de uma chamada que pertencem ao aplicativo, ele será enviado um _iniciar intenção chamar_ pelo sistema:
 
-[ ![](callkit-images/callkit08.png "Recebimento de uma tentativa de chamada de início")](callkit-images/callkit08.png)
+[![](callkit-images/callkit08.png "Recebimento de uma tentativa de chamada de início")](callkit-images/callkit08.png#lightbox)
 
 1. O aplicativo criará um _iniciar ação chamar_ com base em Iniciar chamar intenção que ele recebeu do sistema. 
 2. O aplicativo usará o `CXCallController` para solicitar a ação de chamar Iniciar do sistema.
@@ -1119,7 +1119,7 @@ Além disso, CallKit tem acesso a outras dicas de roteamentos de áudio que pode
 
 Durante o ciclo de vida de um típico VOIP chamar usando CallKit, o aplicativo será necessário configurar o fluxo de áudio CallKit fornecerá. Veja o exemplo a seguir:
 
-[ ![](callkit-images/callkit09.png "A sequência de ação de chamada inicial")](callkit-images/callkit09.png)
+[![](callkit-images/callkit09.png "A sequência de ação de chamada inicial")](callkit-images/callkit09.png#lightbox)
 
 1. Uma ação de chamar Iniciar é recebida pelo aplicativo para responder a uma chamada de entrada.
 2. Antes que essa ação é atendida pelo aplicativo, ele fornece exigirá a configuração para seu `AVAudioSession`.
@@ -1140,13 +1140,13 @@ Para implementar uma extensão de diretório chamada em um aplicativo xamarin, f
 2. Clique com botão direito no nome da solução no **Solution Explorer** e selecione **adicionar** > **adicionar novo projeto**.
 3. Selecione **iOS** > **extensões** > **chamar extensões de diretório** e clique no **próximo** botão: 
 
-    [ ![](callkit-images/calldir01.png "Criando uma nova extensão de diretório chamar")](callkit-images/calldir01.png)
+    [![](callkit-images/calldir01.png "Criando uma nova extensão de diretório chamar")](callkit-images/calldir01.png#lightbox)
 4. Insira um **nome** para a extensão e clique no **próximo** botão: 
 
-    [ ![](callkit-images/calldir02.png "Inserir um nome para a extensão")](callkit-images/calldir02.png)
+    [![](callkit-images/calldir02.png "Inserir um nome para a extensão")](callkit-images/calldir02.png#lightbox)
 5. Ajustar o **nome do projeto** e/ou **nome da solução** se necessário e clique no **criar** botão: 
 
-    [ ![](callkit-images/calldir03.png "Criando o projeto")](callkit-images/calldir03.png) 
+    [![](callkit-images/calldir03.png "Criando o projeto")](callkit-images/calldir03.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -1154,7 +1154,7 @@ Para implementar uma extensão de diretório chamada em um aplicativo xamarin, f
 2. Clique com botão direito no nome da solução no **Solution Explorer** e selecione **adicionar** > **adicionar novo projeto**.
 3. Selecione **iOS** > **extensões** > **chamar extensões de diretório** e clique no **próximo** botão: 
 
-    [ ![](callkit-images/calldir01w.png "Criando uma nova extensão de diretório chamar")](callkit-images/calldir01.png)
+    [![](callkit-images/calldir01w.png "Criando uma nova extensão de diretório chamar")](callkit-images/calldir01.png#lightbox)
 4. Insira um **nome** para a extensão e clique no **Okey** botão
 
 -----

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fdd4311072efd5571724fbe00d12a96921054fa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4c5b9fcbfaabbfc78da1064396dc3fec2d3fde8d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
 
@@ -23,7 +23,7 @@ Se você estiver implantando em um teste de inspecionar ou carregando a loja de 
 - No **Centro de desenvolvimento do iOS**:
   - [IDs de aplicativo](#App_IDs) foram criados.
   - [Grupos de aplicativos](#App_Groups) configurado (se necessário).
-  - [*Distribuição* perfis de provisionamento](#Provisioning_Profiles) criado.
+  - Perfis de provisionamento de distribuição criado
 
 - Em sua solução:
 
@@ -36,6 +36,7 @@ Se você estiver implantando em um teste de inspecionar ou carregando a loja de 
   - [Implantar um Apple Watch para teste](~/ios/watchos/deploy-test/device.md), ou
   - [Carregue a loja de aplicativos](~/ios/watchos/deploy-test/appstore.md).
 
+<a name="App_IDs"/>
 
 ## <a name="app-ids"></a>IDs de aplicativo
 
@@ -65,7 +66,7 @@ Observe que alguns recursos não podem ser usados com um caractere curinga ID do
 
 Para distribuição, você só precisará criar um perfil de provisionamento de distribuição para o curinga de ID do aplicativo.
 
-<a name="app-groups" />
+<a name="App_Groups" />
 
 ## <a name="app-groups"></a>Grupos de Aplicativos
 
@@ -102,8 +103,6 @@ Clique duas vezes para editar o **Entitlements.plist** arquivo nesses projetos:
 .![O editor de Entitlements.plist](images/entitlements-plist-sml.png)
 
 Fazer **não** habilitar direitos no projeto de aplicativo de inspeção. Não é necessário para ser habilitado no relógio.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

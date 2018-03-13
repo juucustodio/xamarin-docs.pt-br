@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: b7756c63901d3b4fbfea70587b3fdf8e5cf9df72
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 965d4987c154acc5a2f95d4ca622266ebdc2a1c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Sincronização de dados Offline com aplicativos móveis do Azure
 
@@ -133,7 +133,7 @@ O `IMobileServiceSyncTable.PushAsync` método opera o contexto de sincronizaçã
 Pull é executado pelo `IMobileServiceSyncTable.PullAsync` método em uma única tabela. O primeiro parâmetro para o `PullAsync` método é um nome de consulta que é usado apenas no dispositivo móvel. Fornecendo os resultados de nome o SDK do Azure Mobile cliente executar uma consulta não nulo um *sincronização incremental*, onde cada vez que uma operação de recepção retorna resultados, a última `updatedAt` timestamp dos resultados é armazenado no local tabelas do sistema. Operações de recebimento subsequentes, em seguida, recuperam somente registros após esse carimbo de hora. Como alternativa, *sincronização completa* pode ser obtida, passando `null` como o nome da consulta, o que resulta em todos os registros estão sendo recuperados em cada operação de recepção. Após qualquer operação de sincronização, os dados recebidos são inseridos no repositório local.
 
 > [!NOTE]
-> **Observação**: se uma recepção é executada em uma tabela que tem as atualizações locais pendentes, o pull primeiro executará um envio por push no contexto de sincronização. Isso minimiza conflitos entre as alterações que já estão na fila e novos dados da instância os aplicativos móveis do Azure.
+> Se uma recepção é executada em uma tabela que tem as atualizações locais pendentes, o pull primeiro executará um envio por push no contexto de sincronização. Isso minimiza conflitos entre as alterações que já estão na fila e novos dados da instância os aplicativos móveis do Azure.
 
 O `SyncAsync` método também inclui uma implementação básica para tratar os conflitos quando o mesmo registro é alterado no armazenamento local e na instância os aplicativos móveis do Azure. Quando o conflito é que os dados foram atualizados no repositório local e na instância os aplicativos móveis do Azure, o `SyncAsync` método atualiza os dados no armazenamento local dos dados armazenados na instância os aplicativos móveis do Azure. Quando qualquer outro conflito ocorre, o `SyncAsync` método descarta as alterações locais. Ele trata o cenário em que uma alteração local existe para dados que foi excluídos da instância os aplicativos móveis do Azure.
 
@@ -150,7 +150,7 @@ await todoTable.PurgeAsync(todoTable.Where(item => item.Done));
 Uma chamada para `PurgeAsync` também irá disparar uma operação de envio. Portanto, todos os itens que são marcados como concluídos localmente serão enviados à instância os aplicativos móveis do Azure antes de serem removidos do armazenamento local. No entanto, se houver operações pendentes sincronização com a instância os aplicativos móveis do Azure, a limpeza lançará um `InvalidOperationException` , a menos que o `force` parâmetro está definido como `true`. Uma estratégia alternativa é examinar o `IMobileServiceSyncContext.PendingOperations` propriedade, que retorna o número de operações que ainda não foram enviados por push para a instância os aplicativos móveis do Azure e executar a limpeza apenas se a propriedade é zero pendentes.
 
 > [!NOTE]
-> **Observação**: invocar `PurgeAsync` com o `force` parâmetro definido como `true` perderá todas as alterações pendentes.
+> Invocar `PurgeAsync` com o `force` parâmetro definido como `true` perderá todas as alterações pendentes.
 
 ## <a name="initiating-synchronization"></a>Sincronização inicial
 

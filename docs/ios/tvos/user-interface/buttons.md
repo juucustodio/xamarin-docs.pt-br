@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 05a162dab3b427ec345f22818b6c6d9df82c498b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-buttons"></a>Trabalhando com botões
 
@@ -21,7 +21,7 @@ _Este artigo aborda criando e trabalhando com botões dentro de um aplicativo Xa
 
 Usar uma instância de `UIButton` classe para criar um botão Focusable é selecionável em uma janela tvOS. Quando o usuário seleciona um botão, ele envia uma mensagem de ação para o objeto de destino permitir responder seu aplicativo Xamarin.tvOS o usuário de entrada do.
 
-[ ![](buttons-images/buttons01.png "Botões de exemplo")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "Botões de exemplo")](buttons-images/buttons01.png#lightbox)
 
 Para obter mais informações sobre como trabalhar com foco e navegando com Siri remota, consulte nosso [trabalhando com foco e navegação](~/ios/tvos/app-fundamentals/navigation-focus.md) e [Siri remoto e controladores Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentação.
 
@@ -31,7 +31,7 @@ Para obter mais informações sobre como trabalhar com foco e navegando com Siri
 
 Em tvOS, botões são usados para ações específicas para o aplicativo em podem conter um título, um ícone ou ambos. Quando o usuário navega usando de Interface do usuário do aplicativo de [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), foco muda para o botão determinado, facilitando a alterar as cores de plano de fundo e texto. Uma sombra também é aplicada para o botão Adicionar um efeito 3D, facilitando aparecer subir o restante da Interface do usuário.
 
-[ ![](buttons-images/buttons01.png "Botões de exemplo")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "Botões de exemplo")](buttons-images/buttons01.png#lightbox)
 
 Apple tem as seguintes sugestões para trabalhar com botões:
 
@@ -70,19 +70,19 @@ Apple tem as sugestões a seguir ao criar os títulos para os botões:
 1. No **Solution Explorer**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo para edição.
 1. Arraste um **botão** do **biblioteca** e solte-o no modo de exibição: 
 
-    [ ![](buttons-images/storyboard01.png "Um botão")](buttons-images/storyboard01.png)
+    [![](buttons-images/storyboard01.png "Um botão")](buttons-images/storyboard01.png#lightbox)
 1. No **propriedades Explorer**, você pode ajustar várias propriedades do botão como seu **título** e **cor do texto**: 
 
-    [ ![](buttons-images/storyboard02.png "Propriedades de botão")](buttons-images/storyboard02.png)
+    [![](buttons-images/storyboard02.png "Propriedades de botão")](buttons-images/storyboard02.png#lightbox)
 1. Em seguida, alterne para o **guia eventos** e transmissão até um **evento** do **botão** e chamá-lo `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03.png "Na guia eventos")](buttons-images/storyboard03.png)
+    [![](buttons-images/storyboard03.png "Na guia eventos")](buttons-images/storyboard03.png#lightbox)
 1. Você será levado automaticamente para o `ViewController.cs` exibição onde você pode colocar a nova ação no seu código usando o **backup** e **para baixo** teclas de seta: 
 
-    [ ![](buttons-images/storyboard04.png "Colocando uma nova ação no código")](buttons-images/storyboard04.png)
+    [![](buttons-images/storyboard04.png "Colocando uma nova ação no código")](buttons-images/storyboard04.png#lightbox)
 1. Pressione a **Enter** para selecionar o local: 
 
-    [ ![](buttons-images/storyboard05.png "O editor de códigos")](buttons-images/storyboard05.png)
+    [![](buttons-images/storyboard05.png "O editor de códigos")](buttons-images/storyboard05.png#lightbox)
 1. Salve as alterações para todos os arquivos.
 
 
@@ -91,13 +91,13 @@ Apple tem as sugestões a seguir ao criar os títulos para os botões:
 1. No **Solution Explorer**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo para edição.
 1. Arraste um **botão** do **biblioteca** e solte-o no modo de exibição: 
 
-    [ ![](buttons-images/storyboard01vs.png "Um botão")](buttons-images/storyboard01vs.png)
+    [![](buttons-images/storyboard01vs.png "Um botão")](buttons-images/storyboard01vs.png#lightbox)
 1. No **propriedades Explorer**, você pode ajustar várias propriedades do botão como seu **título** e **cor do texto**: 
 
-    [ ![](buttons-images/storyboard02vs.png "O Gerenciador de propriedades")](buttons-images/storyboard02vs.png)
+    [![](buttons-images/storyboard02vs.png "O Gerenciador de propriedades")](buttons-images/storyboard02vs.png#lightbox)
 1. Em seguida, alterne para o **guia eventos** e transmissão até um **evento** do **botão** e chamá-lo `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03vs.png "Na guia eventos")](buttons-images/storyboard03vs.png)
+    [![](buttons-images/storyboard03vs.png "Na guia eventos")](buttons-images/storyboard03vs.png#lightbox)
 1. Salve as alterações para todos os arquivos.
 
 
@@ -270,7 +270,7 @@ Este artigo abordou criando e trabalhando com botões dentro de um aplicativo Xa
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

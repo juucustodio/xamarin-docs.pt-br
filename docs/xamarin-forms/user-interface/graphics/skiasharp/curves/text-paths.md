@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: bf382f380876e85db46226fb3586382f20d630f2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b22cebf8ca5804884c559da687fe90236c7af44d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="paths-and-text"></a>Caminhos e texto
 
@@ -44,7 +44,7 @@ O `GetTextPath` método é um exagero se você simplesmente deseja preencher ou 
 
 Uma dessas tarefas é de recorte. O **recorte texto** página cria um demarcador de recorte com base em dos contornos do caractere da palavra "Código". Esse caminho é estendido para o tamanho da página para recortar um bitmap que contém uma imagem do **recorte texto** código-fonte:
 
-[![](text-paths-images/clippingtext-small.png "Tripla captura de tela da página de recorte texto")](text-paths-images/clippingtext-large.png "tripla captura de tela da página de texto de recorte")
+[![](text-paths-images/clippingtext-small.png "Tripla captura de tela da página de recorte texto")](text-paths-images/clippingtext-large.png#lightbox "tripla captura de tela da página de texto de recorte")
 
 O [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) construtor da classe carrega o bitmap que é armazenado como um recurso incorporado no **mídia** pasta da solução:
 
@@ -125,7 +125,7 @@ Depois que o caminho de recorte for definido, o bitmap pode ser exibido e será 
 
 O **texto caminho efeito** página converte um caractere único e comercial em um caminho para criar um efeito de caminho 1D. Um objeto de pintura com esse efeito de caminho, em seguida, é usado para traçar o contorno de uma versão maior do mesmo caractere:
 
-[![](text-paths-images/textpatheffect-small.png "Tripla captura de tela da página de texto caminho efeito")](text-paths-images/textpatheffect-large.png "tripla captura da página do efeito de caminho de texto")
+[![](text-paths-images/textpatheffect-small.png "Tripla captura de tela da página de texto caminho efeito")](text-paths-images/textpatheffect-large.png#lightbox "tripla captura da página do efeito de caminho de texto")
 
 Volume de trabalho no [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe ocorre no construtor e campos. Os dois `SKPaint` objetos definidos como campos são usados para finalidades diferentes: A primeira (denominado `textPathPaint`) é usado para converter o e comercial com um `TextSize` de 50 para um caminho para o efeito de caminho 1D. O segundo (`textPaint`) é usado para exibir a versão maior do e comercial com o efeito desse caminho. Por esse motivo, o `Style` de pintura Este segundo objeto é definido como `Stroke`, mas o `StrokeWidth` propriedade não está definida como essa propriedade não é necessária ao usar um efeito de caminho 1D:
 
@@ -270,7 +270,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O `PaintSurface` manipulador, em seguida, cria um novo caminho denominado `outlinePath`. Isso torna-se o caminho de destino na chamada para `GetFillPath`. O `StrokeWidth` propriedade 25 causas `outlinePath` para descrever a estrutura de tópicos de um caminho de 25 pixels de largura traça os caracteres de texto. Esse caminho, em seguida, é exibido em vermelho com uma largura de 5 traçado:
 
-[![](text-paths-images/characteroutlineoutlines-small.png "Tripla captura da página do caractere da estrutura de tópicos descreve")](text-paths-images/characteroutlineoutlines-large.png "tripla captura de tela da página de estruturas de tópicos de caractere")
+[![](text-paths-images/characteroutlineoutlines-small.png "Tripla captura da página do caractere da estrutura de tópicos descreve")](text-paths-images/characteroutlineoutlines-large.png#lightbox "tripla captura de tela da página de estruturas de tópicos de caractere")
 
 Preste atenção e você verá sobreposições em que a estrutura de tópicos do caminho faz uma curva fechada. Esses são os artefatos normais desse processo.
 
@@ -323,7 +323,7 @@ public class CircularTextPage : ContentPage
 
 O `TextSize` propriedade `textPaint` , em seguida, é ajustado para que a largura do texto corresponda a circunferência do círculo:
 
-[![](text-paths-images/circulartext-small.png "Captura de tela da página de texto Circular tripla")](text-paths-images/circulartext-large.png "tripla captura de tela da página de texto Circular")
+[![](text-paths-images/circulartext-small.png "Captura de tela da página de texto Circular tripla")](text-paths-images/circulartext-large.png#lightbox "tripla captura de tela da página de texto Circular")
 
 O texto foi escolhido será um pouco circular: A palavra "círculo" é o assunto da frase e o objeto de uma frase de prepositional. 
 

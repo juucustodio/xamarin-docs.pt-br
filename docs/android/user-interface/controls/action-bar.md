@@ -7,28 +7,26 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: cdbdf7195daf9add01052df8fc0f0cf4c7a0cb0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64a5ac7e0c448205da66f9790a506ca34a944140
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="actionbar"></a>Barra de ação
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
 Ao usar `TabActivity`, o código para criar os ícones de guia não tem nenhum efeito quando é executado no Framework Android 4.0. Embora funcionalmente funciona como nas versões do Android 2.3, antes do `TabActivity` própria classe foi preterido no 4.0. Foi introduzida uma nova maneira de criar uma interface com guias que usa a barra de ação, que será abordado posteriormente.
 
-<a name="Action_Bar_Tabs" />
 
 ## <a name="action-bar-tabs"></a>Guias de barra de ação
 
 A barra de ação inclui suporte para adição de interfaces com guias no Android 4.0.
 Captura de tela a seguir mostra um exemplo de tal interface.
 
-[![Captura de tela do aplicativo em execução no emulador; duas guias são mostrados](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png)
+[![Captura de tela do aplicativo em execução no emulador; duas guias são mostrados](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
 Para criar guias na barra de ação, primeiro precisamos definir seu `NavigationMode` propriedade guias de suporte. No Android 4, um `ActionBar` propriedade está disponível na classe de atividade, que podemos usar para definir o `NavigationMode` como este:
 
@@ -84,26 +82,23 @@ this.ActionBar.AddTab (tab);
 
 Para o exemplo completo, consulte o *HelloTabsICS* projeto no código de exemplo para este documento.
 
-<a name="ShareActionProvider" />
 
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
 O `ShareActionProvider` classe permite que uma ação de compartilhamento assumir o lugar de uma barra de ação. Cuida da criação de uma exibição de ação com uma lista de aplicativos que podem lidar com uma intenção de compartilhamento e mantém um histórico dos aplicativos usados anteriormente para facilitar o acesso a eles posteriormente na barra de ação. Isso permite que aplicativos compartilhem dados por meio de uma experiência de usuário que seja consistente em todo o Android.
 
-<a name="Image_Sharing_Example" />
 
 ### <a name="image-sharing-example"></a>Exemplo de compartilhamento de imagem
 
 Por exemplo, abaixo está uma captura de tela de uma barra de ação com um item de menu para compartilhar uma imagem (obtido o [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) exemplo). Quando o usuário toca o item de menu na barra de ação, o ShareActionProvider carrega o aplicativo para lidar com uma intenção que é associada com o `ShareActionProvider`. Neste exemplo, o aplicativo de mensagens foi anteriormente usado, para que ela é apresentada na barra de ação.
 
-[![Captura de tela de ícone do aplicativo na barra de ação de mensagens](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png)
+[![Captura de tela de ícone do aplicativo na barra de ação de mensagens](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 
 Quando o usuário clica no item na barra de ação, o aplicativo de mensagens que contém a imagem compartilhada é iniciado, conforme mostrado abaixo:
 
-[![Captura de tela do aplicativo mensagens exibindo monkey imagem](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png)
+[![Captura de tela do aplicativo mensagens exibindo monkey imagem](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
-<a name="Specifying_the_action_Provider_Class" />
 
 ### <a name="specifying-the-action-provider-class"></a>Especifica a ação de classe de provedor
 
@@ -119,7 +114,6 @@ Para usar o `ShareActionProvider`, defina o `android:actionProviderClass` atribu
 </menu>
 ```
 
-<a name="Inflating_the_Menu" />
 
 ### <a name="inflating-the-menu"></a>Aumentando o Menu
 
@@ -137,7 +131,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-<a name="Creating_the_Intent" />
 
 ### <a name="creating-the-intent"></a>Criando a intenção
 

@@ -7,18 +7,17 @@ ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: b8f643c8158c5a3a849a3d8ee3dd8d0e7e30addf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 46eec10bbabec74719affabce1e8033a083680be
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cardview"></a>CardView
 
 _O widget Cardview é um componente de interface do usuário que apresenta o conteúdo de texto e imagem em exibições que lembram cartões. Este guia explica como usar e personalizar aplicativos xamarin CardView enquanto mantém a compatibilidade com versões anteriores do Android._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Visão geral
 
@@ -59,7 +58,6 @@ Para adicionar o `Xamarin.Android.Support.v7.CardView` pacote no Visual Studio:
 Para saber como configurar um projeto de aplicativo do Android 5.0, consulte [configuração de backup de um Android 5.0 projeto](~/android/platform/lollipop.md).
 Para obter mais informações sobre como instalar pacotes do NuGet, consulte [passo a passo: incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-<a name="basic" />
 
 ## <a name="introducing-cardview"></a>Introdução ao CardView
 
@@ -94,11 +92,10 @@ Se você usar esse XML para substituir o conteúdo existente de **Main.axml**, c
 
 Este exemplo de layout cria um padrão `CardView` com uma única linha de texto, como mostrado na captura de tela a seguir:
 
-[![Captura de tela de CardView com linha de texto e plano de fundo branco](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png)
+[![Captura de tela de CardView com linha de texto e plano de fundo branco](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png#lightbox)
 
 Neste exemplo, o estilo de aplicativo é definido como o Material de tema claro (`Theme.Material.Light`) para que o `CardView` bordas e sombras são mais fáceis de ver. Para obter mais informações sobre aplicativos de temas Android 5.0, consulte [Material tema](~/android/user-interface/material-theme.md). Na próxima seção, podemos aprenderá a personalizar `CardView` para um aplicativo.
 
-<a name="customizing" />
 
 ## <a name="customizing-cardview"></a>Personalizando CardView
 
@@ -159,30 +156,28 @@ Você pode chamar esse namespace `card_view` ou até mesmo `myapp` se você esco
 
 Quando este exemplo de layout é usado para exibir uma imagem em um aplicativo de exibição de foto, o `CardView` tem a aparência de um instantâneo de fotos, conforme ilustrado na captura de tela a seguir:
 
-[![CardView com uma imagem e a legenda abaixo da imagem](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png)
+[![CardView com uma imagem e a legenda abaixo da imagem](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 Esta captura de tela é obtida a [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer) amostra de aplicativo, que usa um `RecyclerView` widget para apresentar uma lista de rolagem de `CardView` imagens para exibir fotos. Para obter mais informações sobre `RecyclerView`, consulte o [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) guia.
 
 Observe que um `CardView` pode exibir mais de uma exibição de filho em sua área de conteúdo. Por exemplo, a exemplo de aplicativo de exibição de fotos acima, a área de conteúdo é composta de uma `ListView` que contém um `ImageView` e um `TextView`. Embora `CardView` instâncias geralmente são organizadas verticalmente, você também pode organizá-los horizontalmente (consulte [criando um estilo de exibição personalizado](~/android/user-interface/material-theme.md#customview) para uma captura de tela de exemplo).
 
-<a name="layout" />
 
 ### <a name="cardview-layout-options"></a>Opções de Layout de CardView
 
 `CardView` layouts de podem ser personalizados, definindo um ou mais atributos que afetam seu preenchimento, elevação, raio de canto e cor de plano de fundo:
 
-[![Diagrama de atributos de CardView](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png)
+[![Diagrama de atributos de CardView](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
 
 Cada atributo também pode ser alterado dinamicamente ao chamar um equivalente `CardView` método (para obter mais informações sobre `CardView` métodos, consulte o [referência de classe CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html)).
 Observe que esses atributos (exceto para a cor de plano de fundo) aceitam um valor de dimensão, que é um número decimal seguido de unidade. Por exemplo, `11.5dp` Especifica 11.5 pixels de densidade independentes.
 
-<a name="padding" />
 
 #### <a name="padding"></a>Enchimento
 `
 CardView` oferece cinco atributos de preenchimento para posicionar o conteúdo dentro do cartão. Você pode defini-las no layout do XML, ou você pode chamar métodos análogos no seu código:
 
-[![Diagrama de CardView atributos de preenchimento](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png)
+[![Diagrama de CardView atributos de preenchimento](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 
 Os atributos de preenchimento são explicados a seguir:
 
@@ -200,13 +195,12 @@ Atributos de preenchimento de conteúdo são relativas ao limite da área de con
 Por exemplo, se `contentPadding` suficientemente aumentaram no aplicativo de exibição de foto, o `CardView` seria cortar a imagem e o texto mostrado no cartão.
 
 
-<a name="elevation" />
 
 #### <a name="elevation"></a>Elevação
 
 `CardView` oferece dois atributos de elevação para controlar sua elevação e, como resultado, o tamanho da sua sombra:
 
-[![Diagrama de atributos de elevação CardView](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png)
+[![Diagrama de atributos de elevação CardView](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
 
 Os atributos de elevação são explicados a seguir:
 
@@ -217,13 +211,12 @@ Os atributos de elevação são explicados a seguir:
 Valores maiores de `cardElevation` aumentar o tamanho da sombra para tornar `CardView` parece float superior acima do plano de fundo. O `cardElevation` atributo também determina a ordem de desenho de sobreposição de exibições; ou seja, o `CardView` será desenhado em outra exibição sobreposta com uma configuração de elevação superior e acima de qualquer exibição sobrepostas com uma configuração inferior de elevação.
 O `cardMaxElevation` configuração é útil para quando seu aplicativo altera elevação dinamicamente &ndash; impede que a sombra estender além dos limites que definem com essa configuração.
 
-<a name="radius" />
 
 #### <a name="corner-radius-and-background-color"></a>Raio de canto e a cor do plano de fundo
 
 `CardView` oferece atributos que você pode usar para controlar o raio de canto e sua cor de plano de fundo. Essas duas propriedades permitem que você alterar o estilo geral do `CardView`:
 
-[![Diagrama de canto de CardView radious e atributos de cor do plano de fundo](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png)
+[![Diagrama de canto de CardView radious e atributos de cor do plano de fundo](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
 
 Esses atributos são explicados a seguir:
 
@@ -233,8 +226,6 @@ Esses atributos são explicados a seguir:
 
 Neste diagrama, `cardCornerRadius` é definido como um 10dp mais arredondado e `cardBackgroundColor` é definido como `"#FFFFCC"` (amarelo-claro).
 
-
-<a name="compatibility" />
 
 ## <a name="compatibility"></a>Compatibilidade
 
@@ -255,7 +246,6 @@ Para ajudar a gerenciar essas diferenças de compatibilidade, `CardView` fornece
 
 Para obter mais informações sobre como manter a compatibilidade com versões anteriores do Android, consulte [manter compatibilidade](https://developer.android.com/training/material/compatibility.html).
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumo
 
