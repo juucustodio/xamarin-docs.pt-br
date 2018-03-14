@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0d08b2ff5131996984dbe41862ad1d6aac33b3d0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e1232c96f5ea978c8adc640160a1e9b7e42663d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-ios-6"></a>Introdução ao iOS 6
 
 _iOS 6 inclui uma variedade de novas tecnologias para desenvolver aplicativos que xamarin 6 oferece aos desenvolvedores do c#._
 
-[ ![](images/ios6-large.jpg "O logotipo de iOS 6")](images/ios6-large.jpg)
+[ ![](images/ios6-large.jpg "O logotipo de iOS 6")](images/ios6-large.jpg#lightbox)
 
 Com iOS 6 e xamarin 6, os desenvolvedores agora têm uma grande quantidade de recursos à sua disposição para criar aplicativos do iOS, incluindo aqueles que iPhone 5 do destino.
 Este documento lista alguns dos novos recursos mais interessantes que estão disponíveis e links para artigos para cada tópico. Além disso toca em algumas alterações que serão importantes que os desenvolvedores se movem para iOS 6 e a nova resolução do iPhone 5.
@@ -92,11 +92,11 @@ No caso de salvar o estado, aplicativos podem executar isso em `ViewWillDisappea
 
 dispositivos iPhone 5 tem uma resolução de 640 x 1136. Aplicativos que destinados a versões anteriores do iOS aparecerão letterboxed quando executado em um iPhone 5, conforme mostrado abaixo:
 
- [ ![](images/01-letterboxed.png "Aplicativos que destinados a versões anteriores do iOS aparecerão letterboxed quando executado em um iPhone 5")](images/01-letterboxed.png)
+ [![](images/01-letterboxed.png "Aplicativos que destinados a versões anteriores do iOS aparecerão letterboxed quando executado em um iPhone 5")](images/01-letterboxed.png#lightbox)
 
 Para que o aplicativo seja exibido em tela inteira no iPhone 5, basta adicionar uma imagem chamada `Default-568h@2x.png` com uma resolução de 640 x 1136. Captura de tela a seguir mostra o aplicativo em execução depois que esta imagem foi incluída:
 
- [ ![](images/02-fullscreen.png "Esta captura de tela mostra o aplicativo em execução depois que esta imagem foi incluída")](images/02-fullscreen.png)
+ [![](images/02-fullscreen.png "Esta captura de tela mostra o aplicativo em execução depois que esta imagem foi incluída")](images/02-fullscreen.png#lightbox)
 
 ### <a name="subclassing-uinavigationbar"></a>Subclasses UINavigationBar
 
@@ -130,7 +130,7 @@ navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolb
 
 Usando esse `UINavigationBar` subclasse resulta na exibição da imagem que está sendo exibida conforme mostrado na seguinte captura de tela:
 
- [ ![](images/03-navbar.png "Usando essa resultados de subclasse de UINavigationBar na exibição da imagem que está sendo exibida conforme mostrado nesta captura de tela")](images/03-navbar.png)
+ [![](images/03-navbar.png "Usando essa resultados de subclasse de UINavigationBar na exibição da imagem que está sendo exibida conforme mostrado nesta captura de tela")](images/03-navbar.png#lightbox)
 
 ### <a name="interface-orientation"></a>Orientação de interface
 

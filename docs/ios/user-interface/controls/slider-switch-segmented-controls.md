@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1c24b1faf7b108466d6e93ffae8112d0dea6d844
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 282a4cb59545703c5172f8747cb5b633e7b648dc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sliders-switches-and-segmented-controls"></a>Controles deslizantes, comutadores e controles segmentados
 
@@ -22,11 +22,11 @@ ms.lasthandoff: 02/27/2018
 
 O controle deslizante permite simples seleção de um valor numérico em um intervalo. O padrão para um valor entre 0 e 1, mas esses limites podem ser personalizados.
 
- [ ![](slider-switch-segmented-controls-images/image25a.png "Controle deslizante")](slider-switch-segmented-controls-images/image25a.png)
+ [![](slider-switch-segmented-controls-images/image25a.png "Controle deslizante")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 Captura de tela a seguir mostra as propriedades que podem ser editadas no Designer:
 
- [ ![](slider-switch-segmented-controls-images/image26a.png "Propriedades de controle deslizante")](slider-switch-segmented-controls-images/image25a.png)
+ [![](slider-switch-segmented-controls-images/image26a.png "Propriedades de controle deslizante")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 Você pode definir esses valores no código conforme mostrado abaixo, incluindo fiação um manipulador para exibir o valor selecionado em um `UILabel` controle:
 
@@ -47,7 +47,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
 
 O controle deslizante personalizado tem esta aparência:
 
- [ ![](slider-switch-segmented-controls-images/image27a.png "Controle deslizante personalizado")](slider-switch-segmented-controls-images/image28a.png)
+ [![](slider-switch-segmented-controls-images/image27a.png "Controle deslizante personalizado")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
 > Atualmente, há um [bug](http://stackoverflow.com/a/19496179) fazendo com que o `ThumbTint` para não processar em tempo de execução, conforme o esperado. Você pode adicionar a seguinte linha de código **antes de** o código acima como uma solução alternativa. [[Fonte](http://stackoverflow.com/a/21396794)]:
@@ -62,11 +62,11 @@ O controle deslizante personalizado tem esta aparência:
 
 iOS usa o `UISwitch` um booliano que pode ser representado por um botão de opção em outras plataformas de entrada. O usuário pode manipular o controle movendo o *thumb* entre o **ativar/desativar** posições.
 
- [ ![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png)
+ [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 Personalizar a aparência do comutador no **propriedades de preenchimento** do designer, o que permitirá a você controlar o estado padrão, **ativar/desativar tonalidade** cores e uma **on/off imagem**. Isso é ilustrado na imagem abaixo:
 
- [ ![](slider-switch-segmented-controls-images/image29a.png "Propriedades do comutador")](slider-switch-segmented-controls-images/image29a.png)
+ [![](slider-switch-segmented-controls-images/image29a.png "Propriedades do comutador")](slider-switch-segmented-controls-images/image29a.png#lightbox)
 
 As propriedades do comutador também podem ser definidas no código, por exemplo, o código a seguir mostrará um comutador com o valor padrão de `On`:
 
@@ -81,15 +81,15 @@ switch1.On = true;
 
 Um controle segmentado é uma maneira organizada para permitir que os usuários interajam com um pequeno número de opções. Está disposto horizontalmente e cada segmento funciona como um botão separado. Ao usar o Designer, o controle segmentado podem ser encontrado em **Ferramentas > controles**e deve ser semelhante a imagem a seguir:
 
- [ ![](slider-switch-segmented-controls-images/segmentedcontrol.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrol.png)
+ [![](slider-switch-segmented-controls-images/segmentedcontrol.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
 
 Permite que um recurso exclusivo do Designer para cada segmento a ser selecionados individualmente na superfície de design, conforme ilustrado abaixo:
 
- [ ![](slider-switch-segmented-controls-images/segmentedcontrolselection.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrolselection.png)
+ [![](slider-switch-segmented-controls-images/segmentedcontrolselection.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
 
 Isso permite que o painel de propriedades a serem usadas para controlar com mais precisão as propriedades de cada segmento. Você pode ver as propriedades editáveis na captura de tela abaixo:
 
- [ ![](slider-switch-segmented-controls-images/segmentedcontrolproperties.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrolproperties.png)
+ [![](slider-switch-segmented-controls-images/segmentedcontrolproperties.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
 
 Deve-se observar que o estilo de controle segmentado foi preterido no iOS7 e, portanto, ajustar as opções para isso em um aplicativo iOS7 não terá efeito.
 
