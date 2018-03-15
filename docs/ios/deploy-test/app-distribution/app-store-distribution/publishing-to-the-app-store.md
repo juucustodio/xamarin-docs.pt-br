@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 84db17ede0019e1134b65edaca85ef2401fb3bc0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publicando na App Store
 
@@ -133,7 +133,7 @@ Faça o seguinte:
 4. A vinculação reduz o tamanho geral do distribuível do seu aplicativo, eliminando métodos, propriedades, classes, etc. não utilizados e, na maioria dos casos, deve ser deixada no valor padrão de **Vincular somente assemblies do SDK**. Em algumas situações, como ao usar algumas bibliotecas de terceiros específicas, você poderá ser forçado a definir esse valor como **Não vincular** para impedir que elementos necessários sejam removidos. Para obter mais informações, consulte o guia [iOS Build Mechanics](~/ios/deploy-test/ios-build-mechanics.md) (Mecânica de build do iOS).
 5. A caixa de seleção **Otimizar arquivos de imagem PNG para iOS** deve ser marcada, pois isso ajudará a diminuir ainda mais tamanho da entrega do seu aplicativo.
 6. A depuração _não_ deve ser habilitada, pois deixará o build maior, sem necessidade.
-8. Para o iOS 11, é preciso selecionar uma das arquiteturas de dispositivos com suporte para **ARM64**. Para obter mais informações sobre como compilar para dispositivos iOS de 64 bits, consulte a seção **Habilitando compilações de 64 bits de aplicativos Xamarin.iOS** da documentação [Considerações sobre plataformas de 32/64 bits](~/cross-platform/macios/32-and-64.md).
+8. Para o iOS 11, é preciso selecionar uma das arquiteturas de dispositivos com suporte para **ARM64**. Para obter mais informações sobre como compilar para dispositivos iOS de 64 bits, consulte a seção **Habilitando compilações de 64 bits de aplicativos Xamarin.iOS** da documentação [Considerações sobre plataformas de 32/64 bits](~/cross-platform/macios/32-and-64/index.md).
 9. Você pode optar por usar o compilador **LLVM**, que cria um código menor e mais rápido, mas ele levará mais tempo para compilar.
 10. Com base nas necessidades do seu aplicativo, você também pode ajustar o tipo de **Coleta de Lixo** que está sendo usado e configurar para a **Internacionalização**.
 11. Salve as alterações na configuração de build.
@@ -157,7 +157,7 @@ Faça o seguinte:
 
     ![](publishing-to-the-app-store-images/configurevs02.png "A guia Avançado")
 
-8. Se seu aplicativo Xamarin.iOS destina-se aos dispositivos iOS 8 e iOS 64 bits, será necessário selecionar uma das arquiteturas de dispositivo que oferece suporte a **ARM64**. Para obter mais informações sobre como compilar para dispositivos iOS de 64 bits, consulte a seção **Habilitando compilações de 64 bits de aplicativos Xamarin.iOS** da documentação [Considerações sobre plataformas de 32/64 bits](~/cross-platform/macios/32-and-64.md).
+8. Se seu aplicativo Xamarin.iOS destina-se aos dispositivos iOS 8 e iOS 64 bits, será necessário selecionar uma das arquiteturas de dispositivo que oferece suporte a **ARM64**. Para obter mais informações sobre como compilar para dispositivos iOS de 64 bits, consulte a seção **Habilitando compilações de 64 bits de aplicativos Xamarin.iOS** da documentação [Considerações sobre plataformas de 32/64 bits](~/cross-platform/macios/32-and-64/index.md).
 9. Você pode optar por usar o compilador **LLVM**, que cria um código menor e mais rápido, mas ele levará mais tempo para compilar.
 10. Com base nas necessidades do seu aplicativo, você também pode ajustar o tipo de **Coleta de Lixo** que está sendo usado e configurar para a **Internacionalização**.
 11. Salve as alterações na configuração de build.
@@ -351,16 +351,16 @@ O envio do aplicativo à Apple para análise é feito usando o aplicativo Carreg
 
 1. Selecione *Entregar seu aplicativo* e clique no botão *Escolher*:
 
-    [ ![](publishing-to-the-app-store-images/publishvs01.png "Selecione Entregar seu aplicativo")](publishing-to-the-app-store-images/publishvs01.png)
+    [![](publishing-to-the-app-store-images/publishvs01.png "Selecionar Entregar seu aplicativo")](publishing-to-the-app-store-images/publishvs01.png#lightbox)
 
 2. Selecione o arquivo zip ou IPA criado anteriormente e clique no botão **OK**.
 
 3. O Application Loader validará o arquivo:
 
-    [ ![](publishing-to-the-app-store-images/publishvs02.png "A tela de validação")](publishing-to-the-app-store-images/publishvs02.png)
+    [![](publishing-to-the-app-store-images/publishvs02.png "A tela de validação")](publishing-to-the-app-store-images/publishvs02.png#lightbox)
 4. Clique no botão *Avançar* e o aplicativo será validados na App Store:
 
-    [ ![](publishing-to-the-app-store-images/publishvs03.png "Validação em relação à App Store")](publishing-to-the-app-store-images/publishvs03.png)
+    [![](publishing-to-the-app-store-images/publishvs03.png "Validação na App Store")](publishing-to-the-app-store-images/publishvs03.png#lightbox)
 5. Clique no botão **Enviar** para enviar o aplicativo para a Apple para análise.
 6. O Application Loader informará quando o arquivo for carregado com êxito.
 
@@ -368,7 +368,7 @@ O envio do aplicativo à Apple para análise é feito usando o aplicativo Carreg
 
 Se você efetuar logon novamente no iTunes Connect e selecionar o seu aplicativo na lista de aplicativos disponíveis, o status no iTunes Connect agora deve mostrar que o aplicativo está **Aguardando Análise** (ele pode mostrar temporariamente **Upload recebido** durante o processamento):
 
-[ ![](publishing-to-the-app-store-images/image21.png "Agora o status no iTunes Connect deve mostrar que está Aguardando Análise")](publishing-to-the-app-store-images/image21.png)
+[![](publishing-to-the-app-store-images/image21.png "Agora o status no iTunes Connect deve mostrar que está Aguardando Análise")](publishing-to-the-app-store-images/image21.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 

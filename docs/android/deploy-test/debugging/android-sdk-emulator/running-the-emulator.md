@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2995d9126617a767013ed1f5cb808f22ce0fd2da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89768d2562814091f0e5894c4af2edd67d68cb00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="running-the-android-sdk-emulator"></a>Executar o Emulador de SDK do Android
 
@@ -32,13 +32,13 @@ O Visual Studio inclui dispositivos virtuais pré-configurados que aparecem no m
 
 -   **VisualStudio\_android-23\_x86\_tablet** 
 
-[ ![Dispositivos virtuais](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png)
+[![Dispositivos virtuais](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png#lightbox)
 
 Normalmente, você selecionaria o dispositivo virtual **VisualStudio\_android-23\_x86\_phone** para testar e depurar um aplicativo de telefone. Se um desses dispositivos virtuais pré-configurados atender às suas necessidades (ou seja, corresponder ao nível de API de destino de seu aplicativo), passe para [Iniciando o emulador](#launching) para começar a executar o aplicativo no emulador. (Se ainda não estiver familiarizado com os níveis de API do Android, consulte [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) [Noções básicas dos níveis de API do Android]).
 
 Se seu projeto Xamarin.Android estiver usando um nível de Estrutura de destino incompatível com os dispositivos virtuais disponíveis, o menu suspenso listará os dispositivos virtuais inutilizáveis em **Dispositivos sem Suporte**. Por exemplo, o projeto a seguir tem a Estrutura de destino definida como **Android 7.1 Nougat (API 25)**, que é incompatível com os dispositivos virtuais **Android 6.0** fornecidos por padrão:
 
-[ ![Dispositivo virtual incompatível](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png)
+[![Dispositivo virtual incompatível](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png#lightbox)
 
 Você pode clicar em **Alterar Destino Android Mínimo** para alterar a Versão mínima do Android do projeto de forma que ela corresponda ao nível da API dos dispositivos virtuais disponíveis. Você também pode usar o **Gerenciador do Emulador do Android** para criar novos dispositivos virtuais que dão suporte ao nível da API de destino, conforme explicado mais adiante em [Configurando dispositivos virtuais](#virtualdevice). Antes de configurar dispositivos virtuais para um novo nível de API, você precisa instalar as imagens do sistema correspondente para esse nível de API &ndash; isso é explicado na próxima seção.
 
@@ -50,7 +50,7 @@ O Visual Studio para Mac inclui dispositivos virtuais pré-configurados que apar
 
 -   **Android\_ARMv7a**
 
-[ ![Dispositivos virtuais](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png)
+[![Dispositivos virtuais](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png#lightbox)
 
 Normalmente, você selecionaria o dispositivo virtual **Android\_Accelerated\_x86** para testar e depurar um aplicativo de telefone. Se esse dispositivo virtual pré-configurado atender às suas necessidades (ou seja, corresponder ao nível de API de destino de seu aplicativo), passe para [Iniciando o emulador](#launching) para começar a executar o aplicativo no emulador. (Se ainda não estiver familiarizado com os níveis de API do Android, consulte [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) [Noções básicas dos níveis de API do Android]).
 
@@ -73,11 +73,11 @@ Depois de escolher um dispositivo virtual no menu suspenso do dispositivo, selec
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Modos de Depuração e Versão, botão Executar](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png)
+[![Modos de Depuração e Versão, botão Executar](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Modos de Depuração e Versão, botão Executar](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png)
+[![Modos de Depuração e Versão, botão Executar](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 

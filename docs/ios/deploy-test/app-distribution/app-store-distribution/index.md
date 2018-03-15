@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: e19949c3a2efa4a5ddb17393d58c4430662254eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ee98b48feb8bc1e3431d796a7ca07a6c2e74790
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-store-distribution"></a>Distribuição da App Store
 
@@ -37,7 +37,7 @@ Independentemente de como você pretende lançar um aplicativo Xamarin.iOS, voc�
 Você pode selecionar a mesma **ID do Aplicativo** e os mesmos **Dispositivos** usados para o perfil de provisionamento de desenvolvimento; porém, se ainda não tiver um, você precisará criar um Certificado de Distribuição para identificar sua organização ao enviar o aplicativo para a loja de aplicativos. As etapas sobre como criar um Certificado de Distribuição são descritas na seção a seguir.
 
 > [!NOTE]
->  Observação: somente Administradores e Agentes de Equipe podem criar Certificados de Distribuição e Perfis de Provisionamento.
+>  Observação: somente administradores e agentes de equipe podem criar certificados de distribuição e perfis de provisionamento.
 
 <a name="creatingcertificate" />
 
@@ -48,13 +48,13 @@ Você pode selecionar a mesma **ID do Aplicativo** e os mesmos **Dispositivos** 
 3. Clique no botão **+** para criar um novo Certificado.
 4. No título *Produção*, selecione **App Store e Ad Hoc**:
 
-    [ ![](images/createcertmanually01.png "Selecione a App Store e Ad Hoc")](images/createcertmanually01.png)
+    [![](images/createcertmanually01.png "Selecionar App Store e Ad Hoc")](images/createcertmanually01.png#lightbox)
 5. Clique em **Continuar** e siga as instruções para criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Sistema de Chaves:
 
-    [ ![](images/createcertmanually02.png "Crie uma solicitação de assinatura de certificado por meio do acesso ao conjunto de chaves")](images/createcertmanually02.png)
+    [![](images/createcertmanually02.png "Criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Conjunto de Chaves")](images/createcertmanually02.png#lightbox)
 6. Depois de criar o CSR conforme as instruções, clique em **Continuar** e carregue o CSR na Central de Associados:
 
-    [ ![](images/createcertmanually03.png "Carregue o CSR para a Central de Membros")](images/createcertmanually03.png)
+    [![](images/createcertmanually03.png "Carregar o CSR para a Central de Membros")](images/createcertmanually03.png#lightbox)
 
 7. Clique em **Generate (Gerar)** para criar o certificado.
 8. Por fim, escolha **Download (Baixar)** o certificado concluído e clique duas vezes no arquivo para instalá-lo.
@@ -62,11 +62,11 @@ Você pode selecionar a mesma **ID do Aplicativo** e os mesmos **Dispositivos** 
 
 Também é possível solicitar um Certificado usando a caixa de diálogo Preferências no Xcode. Para fazer isso, siga as etapas abaixo:
 
-1.   Selecione sua equipe e clique em **Gerenciar Certificados...**: [ ![](images/selectteam.png "Selecionar a equipe e Exibir Detalhes")](images/selectteam.png)
+1.   Selecione sua equipe e clique em **Gerenciar Certificados...**: [![](images/selectteam.png "Selecionar a equipe e Exibir Detalhes")](images/selectteam.png#lightbox)
 
-2.   Em seguida, clique no botão **Criar** próximo ao **Certificado de Distribuição iOS**: [ ![](images/selectcert.png "Criar um Certificado de Distribuição iOS")](images/selectcert.png)
+2.   Em seguida, clique no botão **Criar** próximo ao **Certificado de Distribuição iOS**: [![](images/selectcert.png "Criar um Certificado de Distribuição iOS")](images/selectcert.png#lightbox)
 
-3.   Dependendo dos privilégios da sua equipe, a identidade de assinatura será gerada conforme mostrado abaixo ou talvez você precise aguardar até um agente de equipe ou administrador aprová-la: [ ![](images/generated.png "a identidade de assinatura será gerada e uma caixa de diálogo será exibida")](images/generated.png)
+3.   Dependendo dos privilégios da sua equipe, a identidade de assinatura será gerada conforme mostrado abaixo ou talvez você precise aguardar até um agente da equipe ou administrador aprová-la: [![](images/generated.png "A identidade de assinatura será gerada e uma caixa de diálogo será exibida")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
@@ -95,27 +95,27 @@ Depois de obter os componentes obrigatórios necessários para criar um Perfil d
 
 1. Volte para o Portal de Provisionamento da Apple e selecione **Provisionamento** > **Distribuição**:
 
-    [ ![](images/distribute01.png "Selecione Provisionamento > Distribuição")](images/distribute01.png)
+    [![](images/distribute01.png "Selecionar Provisionamento > Distribuição")](images/distribute01.png#lightbox)
 
 2. Clique no botão **+** e selecione o tipo de Perfil de Distribuição que deseja criar como **App Store**:
 
-    [ ![](images/distribute02.png "Crie um perfil de distribuição da App Store")](images/distribute02.png)
+    [![](images/distribute02.png "Criar um perfil de distribuição da App Store")](images/distribute02.png#lightbox)
 
 3. Clique no botão **Continuar** e selecione a ID do Aplicativo na lista suspensa para a qual você deseja criar um Perfil de Distribuição:
 
-    [ ![](images/distribute03.png "Selecione a ID do aplicativo na lista suspensa")](images/distribute03.png)
+    [![](images/distribute03.png "Selecione a ID do aplicativo na lista suspensa")](images/distribute03.png#lightbox)
 
 4. Clique no botão **Continuar** e selecione o certificado necessário para assinar o aplicativo:
 
-    [ ![](images/distribute04.png "Selecione o certificado necessário para assinar o aplicativo")](images/distribute04.png)
+    [![](images/distribute04.png "Selecionar o certificado necessário para assinar o aplicativo")](images/distribute04.png#lightbox)
 
 5. Clique no botão **Continuar** e selecione os dispositivos iOS nos quais o aplicativo Xamarin.iOS poderá ser executado:
 
-    [ ![](images/distribute05.png "Selecione os dispositivos iOS nos quais o aplicativo terá permissão para ser executado")](images/distribute05.png)
+    [![](images/distribute05.png "Selecionar os dispositivos iOS nos quais o aplicativo terá permissão para ser executado")](images/distribute05.png#lightbox)
 
 6. Clique no botão **Continuar** e digite um **Nome** para o novo Perfil de Distribuição:
 
-    [ ![](images/distribute06.png "Insira um nome para o novo perfil de distribuição")](images/distribute06.png)
+    [![](images/distribute06.png "Insira um nome para o novo Perfil de Distribuição")](images/distribute06.png#lightbox)
 
 7. Clique no botão **Generate (Gerar)** para criar o novo perfil e finalizar o processo.
 
@@ -202,7 +202,7 @@ Este artigo abordou os principais componentes na preparação de um aplicativo X
 
 - [Como configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
-- [Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
 - [O arquivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Suporte a IPA](~/ios/deploy-test/app-distribution/ipa-support.md)

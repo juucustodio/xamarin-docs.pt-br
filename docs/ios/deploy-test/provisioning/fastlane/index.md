@@ -3,16 +3,16 @@ title: "Introdução ao fastlane para iOS"
 description: "Este guia apresenta várias ferramentas do Fastlane que podem ser usadas para assinatura de código de aplicativos do iOS"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 084be16b55650f607d71f6eb3baf86b6f968aa35
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15ee039fbfa339a9246b2a4234f37caf685c80c6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Introdução ao fastlane para iOS
 
@@ -87,12 +87,12 @@ O conteúdo fornecido pode ser usado como um springboard para ajudar com a distr
 
 O fastlane é um projeto de software livre muito ativo que regularmente envia por push novas versões. Quando uma nova versão do fastlane estiver disponível, você será informado ao executar qualquer comando do fastlane:
 
-[ ![](images/fastlane-image0.png "O aviso de atualização rápida")](images/fastlane-image0.png)
+[![](images/fastlane-image0.png "O aviso de atualização do fastlane")](images/fastlane-image0.png#lightbox)
 
 
 Para atualizar para uma nova versão do Fastlane, baixe o pacote mais recente [aqui](https://download.fastlane.tools) e clique duas vezes no pacote de instalação para executá-lo:
 
-[ ![](images/fastlane-image0a.png "Executando o pacote de instalação")](images/fastlane-image0a.png)
+[![](images/fastlane-image0a.png "Executando o pacote de instalação")](images/fastlane-image0a.png#lightbox)
 
 
 ## <a name="contents"></a>Conteúdo
@@ -111,7 +111,7 @@ Depois de criar uma identidade de assinatura e perfis de provisionamento com fas
 
 Para definir as opções de assinatura de código para um aplicativo do Xamarin.iOS, clique com o botão direito do mouse no nome do projeto, selecione **Opções de Projeto > Build > Assinatura do Pacote iOS** e defina a Identidade de Assinatura e o Perfil de Provisionamento explicitamente, como demonstrado a seguir:
 
-[ ![](images/fastlane-image11.png "Defina a Identidade de assinatura e o Perfil de provisionamento explicitamente")](images/fastlane-image11.png)
+[![](images/fastlane-image11.png "Definir a Identidade de assinatura e o Perfil de provisionamento explicitamente")](images/fastlane-image11.png#lightbox)
 
 ## <a name="related-links"></a>Links relacionados
 

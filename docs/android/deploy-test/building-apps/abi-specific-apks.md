@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 3bc53a8230b66b88319f729d7effe8ed75f0176b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf2f62929df63d08add76b7fb6de404d2780b2b3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="building-abi-specific-apks"></a>Compilação de APKs específicos para ABI
 
@@ -42,7 +42,6 @@ Este guia abordará como criar o script o build de múltiplos APKs para um aplic
 No final deste guia há um passo a passo que demonstra como criar o script dessas etapas usando o [Rake](http://martinfowler.com/articles/rake.html).
 
 
-<a name="Setting_android_versionCode" />
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Criar um código de versão para o APK
 
@@ -67,7 +66,7 @@ Expandindo esse esquema de código da versão de oito dígitos, será possível 
 
 O diagrama a seguir ilustra a posição de cada código descrito na lista acima:
 
-[![Diagrama do formato de código de versão de oito dígitos, codificado por cor](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png)
+[![Diagrama do formato de código de versão de oito dígitos, codificado por cor](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 
 O Google Play garantirá que o APK correto seja entregue ao dispositivo com base no `versionCode` e na configuração de APK. O APK com o código da versão mais alto será entregue ao dispositivo. Como um exemplo, um aplicativo pode ter três APKs com os seguintes códigos de versão:
@@ -88,7 +87,6 @@ Agora, imagine que a versão x86 recebe algumas atualizações ou correções de
 Manter esses códigos de versão manualmente pode ser um fardo significativo para o desenvolvedor. O processo de calcular o `android:versionCode` correto e posteriormente compilar os APKs deve ser automatizado.
 Um exemplo de como fazer isso será abordado no passo a passo no final deste documento.
 
-<a name="CreatingAndroidManifest" />
 
 ### <a name="create-a-temporary-androidmanifestxml"></a>Criar um AndroidManifest.XML temporário
 
@@ -123,7 +121,6 @@ A lista a seguir explica cada parâmetro de linha de comando:
 -   `<CS_PROJ FILE>` &ndash; Este é o caminho para o arquivo `.csproj` do projeto do Xamarin.Android.
 
 
-<a name="SignAndZipAlign" />
 
 ### <a name="sign-and-zipalign-the-apk"></a>Assinar e efetuar o zipalign no APK
 
@@ -139,7 +136,6 @@ O zipalign deve ser efetuado em todos os aplicativos Xamarin.Android antes que e
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-<a name="Automating_APK_Creation_With_Rake" />
 
 ## <a name="automating-apk-creation-with-rake"></a>Automatização da criação de APK com o Rake
 
@@ -174,11 +170,11 @@ $ rake build
 
 Após a tarefa rake ser concluída, haverá três pastas `bin` com o arquivo `xamarin.helloworld.apk`. A próxima captura de tela mostra cada uma dessas pastas com os respectivos conteúdos:
 
-[![Locais de pastas específicas de uma plataforma que contêm xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png)
+[![Locais de pastas específicas de uma plataforma que contêm xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 
 > [!NOTE]
-> **Observação:** o processo de build descrito neste guia pode ser implementado em um de muitos sistemas de build diferentes. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](http://fsharp.github.io/FAKE/).
+> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](http://fsharp.github.io/FAKE/).
 
 
 ## <a name="summary"></a>Resumo

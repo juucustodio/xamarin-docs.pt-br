@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/19/2017
-ms.openlocfilehash: 2eaf4c6180b51a827d8182d87ee2db0fd1726c8d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: fd6214f34c313db0d7a59291b73c5b29a9cc3592
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-requirements"></a>Requisitos do Xamarin.Forms
 
@@ -86,29 +86,18 @@ Você pode usar o Visual Studio para Mac para desenvolver aplicativos Xamarin.Fo
 
 ## <a name="windows-system-requirements"></a>Requisitos de sistema Windows
 
-Aplicativos Xamarin.Forms para iOS e Android podem ser compilados em qualquer instalação do Windows que dê suporte a desenvolvimento do Xamarin. Para isso, é necessário ter o Visual Studio 2013 Atualização 2 ou mais recente em execução no Windows 7 ou superior. Um Mac em rede é necessário para o desenvolvimento do iOS.
-
-Há requisitos adicionais para os seguintes tipos de aplicativos do Windows:
+Aplicativos Xamarin.Forms para iOS e Android podem ser compilados em qualquer instalação do Windows que dê suporte a desenvolvimento do Xamarin. Para isso, é necessário ter o Visual Studio 2015 ou mais recente em execução no Windows 7 ou superior. Um Mac em rede é necessário para o desenvolvimento do iOS.
 
 ### <a name="universal-windows-platform-uwp"></a>UWP (Plataforma Universal do Windows)
 
 O desenvolvimento de aplicativos Xamarin.Forms para UWP requer:
 
-* Windows 10
+* Windows 10 (é recomendável o Fall Creators Update)
 
-* Visual Studio 2015 ou mais recente
+* É recomendável o Visual Studio 2017
 
-* [Ferramentas de desenvolvedor do Windows universal](https://dev.windows.com/downloads/windows-10-sdk)
+* [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 
 Projetos da UWP são incluídos em soluções Xamarin.Forms criadas no Visual Studio 2015 e no Visual Studio 2017.
 Você também pode [adicionar um aplicativo UWP (Plataforma Universal do Windows)](~/xamarin-forms/platform/windows/installation/universal.md) a uma solução Xamarin.Forms existente.
 
-
-
-### <a name="windows-81-and-windows-phone-81-winrt"></a>WinRT do Windows 8.1 e do Windows Phone 8.1
-
-O desenvolvimento de aplicativos Xamarin.Forms para o WinRT do Windows 8.1 e do Windows Phone 8.1 requer:
-
-* Windows 8.1
-
-* Visual Studio 2013 Atualização 2 ou mais recente

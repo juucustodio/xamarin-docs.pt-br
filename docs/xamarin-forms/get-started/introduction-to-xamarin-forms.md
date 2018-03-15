@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 593e720e4a6125e2ef4a1c9488186cb2c04dcd66
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: be4b0c907774c33dfcd1818da167acb2dc3b04dd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Uma Introdução ao Xamarin.Forms
 
@@ -45,7 +45,7 @@ Este artigo aborda os conceitos básicos da estrutura do Xamarin.Forms e abrange
 
 No Visual Studio para Mac e Visual Studio, o modelo de aplicativo do Xamarin.Forms padrão cria a solução do Xamarin.Forms mais simples possível, que exibe o texto para o usuário. Se você executar o aplicativo, ele deverá ser semelhante às capturas de tela a seguir:
 
-[ ![](introduction-to-xamarin-forms-images/image05-sml.png "Aplicativo Xamarin.Forms padrão")](introduction-to-xamarin-forms-images/image05.png "Aplicativo Xamarin.Forms padrão")
+[![](introduction-to-xamarin-forms-images/image05-sml.png "Aplicativo Xamarin.Forms padrão")](introduction-to-xamarin-forms-images/image05.png#lightbox "Aplicativo Xamarin.Forms padrão")
 
 Cada tela nas capturas de tela corresponde a uma *página* no Xamarin.Forms. Um [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) representa uma *atividade* no Android, um *controlador de exibição* no iOS ou uma *página* na UWP (Plataforma Universal do Windows). O exemplo nas capturas de tela acima instancia um objeto [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) e usa isso para exibir um [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/).
 
@@ -249,7 +249,7 @@ public class StackLayoutExample : ContentPage
 
 Por padrão, o [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) assume uma orientação vertical conforme mostrado nas capturas de tela a seguir:
 
-[ ![](introduction-to-xamarin-forms-images/image09-sml.png "StackLayout vertical")](introduction-to-xamarin-forms-images/image09.png "StackLayout vertical")
+[![](introduction-to-xamarin-forms-images/image09-sml.png "StackLayout vertical")](introduction-to-xamarin-forms-images/image09.png#lightbox "StackLayout vertical")
 
 A orientação do [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) pode ser alterado para uma orientação horizontal, conforme demonstrado no exemplo de código XAML a seguir:
 
@@ -286,7 +286,7 @@ public class StackLayoutExample: ContentPage
 
 As capturas de tela a seguir mostram o layout resultante:
 
-[ ![](introduction-to-xamarin-forms-images/image10-sml.png "StackLayout horizontal")](introduction-to-xamarin-forms-images/image10.png "StackLayout horizontal")
+[![](introduction-to-xamarin-forms-images/image10-sml.png "StackLayout horizontal")](introduction-to-xamarin-forms-images/image10.png#lightbox "StackLayout horizontal")
 
 O tamanho dos controles pode ser definido por meio das propriedades `HeightRequest` e `WidthRequest`, conforme demonstrado no exemplo de código XAML a seguir:
 
@@ -329,7 +329,7 @@ Content = new StackLayout
 
 As capturas de tela a seguir mostram o layout resultante:
 
-[ ![](introduction-to-xamarin-forms-images/image11-sml.png "StackLayout horizontal com LayoutOptions")](introduction-to-xamarin-forms-images/image11.png "StackLayout horizontal com LayoutOptions")
+[![](introduction-to-xamarin-forms-images/image11-sml.png "StackLayout horizontal com LayoutOptions")](introduction-to-xamarin-forms-images/image11.png#lightbox "StackLayout horizontal com LayoutOptions")
 
 Para obter mais informações sobre a classe [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), veja [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 9fec6fca0bf7930a59a6927557786a3ed7a412da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9a5dc7839b1669e51e79efc0f02111eae8987b95
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Analisar aplicativos Xamarin.iOS com o Instrumentos
 
@@ -38,13 +38,13 @@ Selecione o dispositivo e execute o aplicativo Instrumentos:
 
 O Instrumentos será aberto e exibirá a caixa de diálogo a seguir:
 
- [ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Escolher um modelo de criação de perfil")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png)
+ [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Escolhendo um modelo de criação de perfil")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 Clique para selecionar o modelo **Alocações**. Os outros modelos são válidos, mas este artigo apenas aborda o modelo de perfil **Alocações**.
 
 Em seguida, selecione o dispositivo e o aplicativo usando o menu na parte superior da janela:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Selecionar o dispositivo e o aplicativo")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Selecionar o dispositivo e o aplicativo")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 O dispositivo iOS deve ser selecionado no menu na parte superior da janela e o aplicativo a ser analisado deve ser selecionado próximo dele (**MemoryDemo** na captura de tela acima).
 
@@ -52,13 +52,13 @@ Se o dispositivo não estiver listado no menu, verifique as mensagens de erro no
 
 Clique no botão **Escolher** e a próxima tela deverá aparecer:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "A interface de criação de perfil")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "A interface de criação de perfil")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Clique no botão gravar (círculo vermelho no canto superior esquerdo) para iniciar a análise.
 
 A captura de tela a seguir mostra um exemplo de análise usando o **Instrumentos**:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Um exemplo de criação de perfil usando o Instrumentos")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Um exemplo de criação de perfil usando o Instrumentos")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 

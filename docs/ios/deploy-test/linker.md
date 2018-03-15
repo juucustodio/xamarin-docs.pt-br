@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: c4ad69890b7f50478e44d59cd37e7b6ac96a87ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ee5da1b2c5d4c8fbf405c7f28ed280a3286a025
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="linking-on-ios"></a>Vinculação no iOS
 
@@ -29,7 +29,7 @@ Já que o vinculador é uma ferramenta estática, ele não pode marcar para tipo
 
 O processo de vinculação pode ser personalizado por meio do menu suspenso de comportamento do vinculador em **Opções do Projeto**. Para acessá-lo, clique duas vezes no projeto iOS e navegue até **Build do iOS > Opções do Vinculador**, conforme ilustrado abaixo:
 
-[ ![](linker-images/image1.png "Opções do Vinculador")](linker-images/image1.png)
+[![](linker-images/image1.png "Opções do Vinculador")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

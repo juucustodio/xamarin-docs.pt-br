@@ -2,16 +2,16 @@
 title: fastlane para iOS - match
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 435ba4c3799288724625ca06016770b3ecad56a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d92f820e22277148b4de3ff87e3fdaca0f573f52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane para iOS - match
 
@@ -56,15 +56,15 @@ Usando seu terminal, altere o diretório para o diretório do projeto e execute:
 
 Quando solicitado, digite a URL do repositório git:
 
- [ ![](match-images/fastlane-image7.png "Insira a URL do repositório git")](match-images/fastlane-image7.png)
+ [![](match-images/fastlane-image7.png "Inserir a URL do repositório git")](match-images/fastlane-image7.png#lightbox)
 
 A URL pode ser encontrada e copiada clicando no botão **Clonar ou Baixar** no github.com, conforme ilustrado abaixo:
 
-[ ![](match-images/fastlane-image6.png "A URL no botão Clonar ou Baixar no github.com")](match-images/fastlane-image6.png)
+[![](match-images/fastlane-image6.png "A URL no botão Clonar ou Baixar no github.com")](match-images/fastlane-image6.png#lightbox)
 
 A inicialização do projeto cria um matchfile – um arquivo de texto que pode ser editado para passar as variáveis de ambiente para a ferramenta de correspondência. Um exemplo de matchfile é ilustrado abaixo:
 
-[ ![](match-images/fastlane-image8.png "Um exemplo de matchfile")](match-images/fastlane-image8.png)
+[![](match-images/fastlane-image8.png "Um exemplo de matchfile")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -88,7 +88,7 @@ Além de criar novos certificados e perfis, usar qualquer um desses comandos adi
 - Um arquivo Leiame com instruções básicas
 - Uma versão compatível
 
-[ ![](match-images/fastlane-image9.png "A estrutura do projeto no repositório git")](match-images/fastlane-image9.png)
+[![](match-images/fastlane-image9.png "A estrutura do projeto no repositório git")](match-images/fastlane-image9.png#lightbox)
 
 Os perfis de provisionamento estão instalados em `~/Library/MobileDevice/Provisioning Profiles`. Certificados e chaves privadas são instalados diretamente no seu conjunto de chaves.
 

@@ -7,11 +7,11 @@ ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7e26c11f71b446baf89ca11effe30bc1e041f951
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 275cce891801cd542d202960efc3da668fa8f07b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin para desenvolvedores de Objective-C
 
@@ -21,7 +21,7 @@ O Xamarin oferece um caminho para que desenvolvedores de iOS movam seus códigos
 
 Além disso, o Xamarin permite aproveitar ativos existentes do Objective-C por meio de uma tecnologia conhecida como associações. Basta criar uma biblioteca estática em Objective-C e expô-la ao C# por meio de uma associação, conforme ilustrado no diagrama a seguir:
 
- [ ![](images/01-bindings.png "Uma biblioteca estática em Objective-C exposta a C# por meio de associação")](images/01-bindings.png)
+ [![](images/01-bindings.png "Uma biblioteca estática em Objective-C exposta a C# por meio de uma associação")](images/01-bindings.png#lightbox)
 
 Isso não precisa ser limitado a um código que não seja da interface do usuário. A associações podem expor o código da interface do usuário desenvolvido também em Objective-C.
 

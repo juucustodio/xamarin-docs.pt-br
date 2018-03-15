@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: fbf18bad2dbe227575f4d820a121eab6e91655a0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5263d32ace14eb803bfd65b6a9b2ea5992ee1413
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="connection-troubleshooting"></a>Solução de problemas de conexão
 
@@ -45,15 +45,15 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
 
 2. Verifique se o **Logon remoto** está habilitado no Mac. Defina o acesso para **Apenas esses usuários** e verifique se o seu usuário Mac está incluído na lista ou no grupo:
 
-    [ ![](troubleshooting-images/troubleshooting-image1.png "Defina o acesso para apenas esses usuários")](troubleshooting-images/troubleshooting-image1.png)
+    [![](troubleshooting-images/troubleshooting-image1.png "Definir o acesso como Apenas esses usuários")](troubleshooting-images/troubleshooting-image1.png#lightbox)
 
 3. Verifique se seu firewall permite conexões de entrada pela porta 22 – padrão para o SSH:
 
-    [ ![](troubleshooting-images/troubleshooting-image2.png "Verifique se o firewall permite conexões de entrada pela porta 22")](troubleshooting-images/troubleshooting-image2.png)
+    [![](troubleshooting-images/troubleshooting-image2.png "Verificar se o firewall permite conexões de entrada pela porta 22")](troubleshooting-images/troubleshooting-image2.png#lightbox)
 
     Se você desabilitou **Permitir automaticamente que o software assinado receba conexões de entrada**, o OS X apresentará uma caixa de diálogo durante o processo de emparelhamento pedindo para permitir que `mono-sgen` ou `mono-sgen32` receba conexões de entrada. Certifique-se de clicar em **Permitir** nessa caixa de diálogo:
 
-    [ ![](troubleshooting-images/troubleshooting-image4a.png "Clique em Permitir nesta caixa de diálogo")](troubleshooting-images/troubleshooting-image4a.png)
+    [![](troubleshooting-images/troubleshooting-image4a.png "Clicar em Permitir nesta caixa de diálogo")](troubleshooting-images/troubleshooting-image4a.png#lightbox)
 
 4. Verifique se você fez logon na conta do usuário nesse Mac e que tem uma sessão de GUI ativa.
 
@@ -63,12 +63,12 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
 
     Por exemplo, na captura de tela abaixo, o nome da conta será **amyb** e não **Amy Burns**:
 
-    [ ![](troubleshooting-images/troubleshooting-image5a.png "Obtendo o nome da conta do aplicativo Terminal")](troubleshooting-images/troubleshooting-image5a.png)
+    [![](troubleshooting-images/troubleshooting-image5a.png "Obtendo o nome da conta do aplicativo Terminal")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
 
 
 6. Verifique se o endereço IP que você está usando para o Mac está correto. Você pode encontrar o endereço IP em **Preferências do Sistema > Compartilhamento > Logon Remoto** no Mac.
 
-    [ ![](troubleshooting-images/troubleshooting-image17.png "O endereço IP no aplicativo Preferências do Sistema")](troubleshooting-images/troubleshooting-image17.png)
+    [![](troubleshooting-images/troubleshooting-image17.png "O endereço IP no aplicativo Preferências do Sistema")](troubleshooting-images/troubleshooting-image17.png#lightbox)
 
 7. Depois de confirmar o endereço IP do Mac, tente executar um `ping` nesse endereço no `cmd.exe` no Windows:
 
@@ -80,7 +80,7 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
 
         ssh amyb@10.1.8.95
 
-<a name="stepnine">
+<a name="stepnine" />
 
 9. Se **a etapa 8 for bem-sucedida**, você poderá tentar executar um comando simples, como o `ls` através da conexão:
 
@@ -129,7 +129,7 @@ Causa conhecida:
 
 - **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  – Esse problema poderá acontecer no Xamarin 4.1 se **Login shell (Shell de logon)** no menu de contexto **Opções Avançadas** para o usuário do Mac em **System Preferences (Preferências do sistema) &gt; Users (Usuários) &amp; Groups (Grupos)** estiver definido como um valor diferente de **/bin/bash**. (A partir do Xamarin 4.2, esse cenário leva à mensagem de erro “Não foi possível conectar”.) **Solução alternativa**: mude o **Login shell (Shell de logon)** para o padrão original de **/bin/bash**.
 
-<a name="tryagain">
+<a name="tryagain" />
 
 ### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"Não foi possível conectar ao MacBuildHost.local. Tente novamente."
 
@@ -153,7 +153,7 @@ Causas relatadas:
 
     1. Confirme o local do arquivo **sshd\_config**, executando `ls /etc/ssh/sshd_config` e `ls /etc/sshd_config` em um prompt de comando do Terminal. Para todas as demais etapas, certifique-se de usar o local que _não_ retornar "Não há tal arquivo ou diretório".
 
-        [ ![](troubleshooting-images/troubleshooting-image18.png "Executando `ls /etc/ssh/sshd_config` e `ls /etc/sshd_config` no Terminal")](troubleshooting-images/troubleshooting-image18.png)
+        [![](troubleshooting-images/troubleshooting-image18.png "Executando `ls /etc/ssh/sshd_config` e `ls /etc/sshd_config` no Terminal")](troubleshooting-images/troubleshooting-image18.png#lightbox)
 
     3. Execute `cp /etc/ssh/sshd_config "$HOME/Desktop/"` no Terminal para copiar o arquivo para a sua área de trabalho.
 
@@ -171,7 +171,7 @@ Causas relatadas:
 
     9. Desabilite e reabilite o **Logon Remoto** em **Preferências do Sistema &gt; Compartilhamento &gt; Logon Remoto** para reiniciar o servidor SSH.
 
-<a name="clearing">
+<a name="clearing" />
 
 ### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Desmarcar o Agente, o IDB, a build e os Agentes de Designer no Mac
 
@@ -183,7 +183,7 @@ Se os arquivos de log mostram um problema durante as etapas "Instalação", "Car
 
 2. Pressione Control e clique na pasta **XMA** e selecione **Mover para Lixeira**:
 
-    [ ![](troubleshooting-images/troubleshooting-image8.png "Mova a pasta XMA para a Lixeira")](troubleshooting-images/troubleshooting-image8.png)
+    [![](troubleshooting-images/troubleshooting-image8.png "Mover a pasta XMA para a Lixeira")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. Há um cache no Windows também que pode ajudar a limpar. Abra um prompt de comando como administrador no Windows:
 
@@ -221,7 +221,7 @@ A Janela de Saída é o melhor lugar para começar. Ela exibe mensagens sobre as
 2. Clique no menu suspenso **Mostrar saída de**.
 3. Selecione **Xamarin**.
 
-[ ![](troubleshooting-images/troubleshooting-image11.png "Selecione Xamarin na guia Saída")](troubleshooting-images/troubleshooting-image11.png)
+[![](troubleshooting-images/troubleshooting-image11.png "Selecionar Xamarin na guia Saída")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
 ### <a name="log-files"></a>Arquivos de log
 
@@ -236,18 +236,18 @@ Se a Janela de Saída não tem informações suficientes para diagnosticar o pro
 
 3. Depois que o Visual Studio encontrar o erro de conexão, colete os logs em **Ajuda > Xamarin > Logs de Zip**:
 
-    [ ![](troubleshooting-images/troubleshooting-image12.png "Coletar os logs da Ajuda > Xamarin > Logs de Zip")](troubleshooting-images/troubleshooting-image12.png)
+    [![](troubleshooting-images/troubleshooting-image12.png "Coletar os logs em Ajuda > Xamarin > Logs de Zip")](troubleshooting-images/troubleshooting-image12.png#lightbox)
 
 4. Quando você abrir o arquivo .zip, verá uma lista de arquivos semelhante ao exemplo a seguir. Para erros de conexão, os arquivos mais importantes são os arquivos **\*Ide.log** e **\*Ide.svclog**. Esses arquivos contêm as mesmas mensagens em dois formatos um pouco diferentes. O **.svclog** é um XML e é útil se você deseja procurar nas mensagens. O **.log** será um texto sem formatação e é útil se você quiser filtrar as mensagens usando ferramentas de linha de comando.
 
 
     Para procurar em todas as mensagens, selecione e abra o arquivo **.svclog**:
 
-    [ ![](troubleshooting-images/troubleshooting-image13.png "Selecione o arquivo svclog")](troubleshooting-images/troubleshooting-image13.png)
+    [![](troubleshooting-images/troubleshooting-image13.png "Selecionar o arquivo svclog")](troubleshooting-images/troubleshooting-image13.png#lightbox)
 
 5. O arquivo **.svclog** será aberto no **Visualizador de Rastreamento de Serviço da Microsoft**. Você pode procurar as mensagens por thread para ver grupos de mensagens relacionados. Para procurar por thread, primeiro selecione a guia **Gráfico** e, em seguida, clique no menu suspenso **Modo de layout** e selecione **Thread**:
 
-    [ ![](troubleshooting-images/troubleshooting-image14.png "Clique no menu suspenso Modo de layout e selecione Thread")](troubleshooting-images/troubleshooting-image14.png)
+    [![](troubleshooting-images/troubleshooting-image14.png "Clicar no menu suspenso Modo de Layout e selecionar Thread")](troubleshooting-images/troubleshooting-image14.png#lightbox)
 
 <a name="verboselogs" />
 
@@ -307,7 +307,7 @@ bug relacionado: [#36195](https://bugzilla.xamarin.com/show_bug.cgi?id=36195)
 
 Inicialize o Xcode no Mac e verifique se fez logon na sua conta de desenvolvedor Apple e se o seu Perfil de Desenvolvimento do iOS foi baixado:
 
-[ ![](troubleshooting-images/troubleshooting-image7.png "Garantindo que o logon conta de desenvolvedor da Apple foi feito que o Perfil de Desenvolvimento do iOS foi baixado")](troubleshooting-images/troubleshooting-image7.png)
+[![](troubleshooting-images/troubleshooting-image7.png "Garantindo que o logon conta de desenvolvedor da Apple foi feito que o Perfil de Desenvolvimento do iOS foi baixado")](troubleshooting-images/troubleshooting-image7.png#lightbox)
 
 ### <a name="a-socket-operation-was-attempted-to-an-unreachable-network"></a>"Uma operação de soquete foi tentada em uma rede inacessível"
 
@@ -323,7 +323,7 @@ Esse problema pode ocorrer quando o Visual Studio não consegue atualizar o cach
 
 Isso limpará o cache de componente do MEF do Visual Studio para corrigir problemas com a corrupção de cache.
 
-<a name="errors">
+<a name="errors" />
 
 ### <a name="errors-due-to-existing-build-host-processes-on-the-mac"></a>Erros devido a Processos de Host de Build existentes no Mac
 
@@ -333,7 +333,7 @@ Os processos de conexões de host de build anteriores, às vezes, podem interfer
 ps -A | grep mono
 ```
 
-[ ![](troubleshooting-images/troubleshooting-image10.png "Executando comandos no Terminal no Mac")](troubleshooting-images/troubleshooting-image10.png)
+[![](troubleshooting-images/troubleshooting-image10.png "Executando comandos no Terminal no Mac")](troubleshooting-images/troubleshooting-image10.png#lightbox)
 
 Para eliminar os processos existentes use o seguinte comando:
 
@@ -353,7 +353,7 @@ Se você estiver solucionando um problema de build e deseja verificar se o compo
 
 2. Pressione Control e clique na pasta **mtbs** e selecione **Mover para Lixeira**:
 
-    [ ![](troubleshooting-images/troubleshooting-image9.png "Mova a pasta mtbs para a Lixeira")](troubleshooting-images/troubleshooting-image9.png)
+    [![](troubleshooting-images/troubleshooting-image9.png "Mover a pasta mtbs para a Lixeira")](troubleshooting-images/troubleshooting-image9.png#lightbox)
 
 
 ## <a name="related-links"></a>Links relacionados

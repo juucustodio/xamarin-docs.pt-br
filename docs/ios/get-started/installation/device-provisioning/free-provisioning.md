@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: baf1ae7d4cc533af0db482e8d7c31fc3c8b4edbf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4e93696f8eef44030ffacbdbaa8ebcd860a402f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="free-provisioning"></a>Provisionamento gratuito
 
@@ -43,29 +43,29 @@ Para usar o provisionamento gratuito a fim de implantar um aplicativo em um disp
 2. Abra o Xcode e navegue até **Xcode > Preferências**.
 3. Em **Contas**, use o botão **+** para adicionar sua ID Apple existente. Deve ter uma aparência semelhante à captura de tela a seguir:
 
-  [ ![](free-provisioning-images/launchapp1.png "Xcode > Preferências > Contas")](free-provisioning-images/launchapp1.png)
+  [![](free-provisioning-images/launchapp1.png "Xcode > Preferências > Contas")](free-provisioning-images/launchapp1.png#lightbox)
 
 4. Conecte o dispositivo iOS que deseja implantar e crie um novo projeto do iOS de exibição única em branco no Xcode. Defina a lista suspensa **Equipe** como a ID da Apple que você acabou de adicionar. Ele deve ter um formato semelhante a `your name (Personal Team - your Apple ID)`:
 
-  [ ![](free-provisioning-images/launchapp2.png "Criar a Identidade de Assinatura")](free-provisioning-images/launchapp2.png)
+  [![](free-provisioning-images/launchapp2.png "Criar a Identidade de Assinatura")](free-provisioning-images/launchapp2.png#lightbox)
 
 5. Na seção **Geral > Identidade**, certifique-se de que o Identificador de Pacote corresponde _exatamente_ ao Identificador de Pacote de seu aplicativo Xamarin.iOS e verifique se o destino da implantação é igual ou menor que o dispositivo iOS conectado. Esta etapa é extremamente importante, pois o Xcode criará somente um perfil de provisionamento com uma ID do Aplicativo explícita:
 
-  [![](free-provisioning-images/launchapp5.png "Criar um perfil de provisionamento com uma ID de aplicativo explícito")](free-provisioning-images/launchapp5.png)
+  [![](free-provisioning-images/launchapp5.png "Criar um perfil de provisionamento com uma ID de aplicativo explícito")](free-provisioning-images/launchapp5.png#lightbox)
 
 6. Na seção Assinatura, selecione **Gerenciar Assinatura Automaticamente** e escolha sua equipe na lista suspensa:
 
-  [![](free-provisioning-images/launchapp6.png "Selecione Gerenciar Assinatura Automaticamente e escolha sua equipe na lista suspensa")](free-provisioning-images/launchapp6.png)
+  [![](free-provisioning-images/launchapp6.png "Selecione Gerenciar Assinatura Automaticamente e escolha sua equipe na lista suspensa")](free-provisioning-images/launchapp6.png#lightbox)
 
 7. A etapa anterior gerará automaticamente um perfil de provisionamento e uma identidade de assinatura para você. Você pode exibi-los clicando no ícone de informações ao lado do perfil de provisionamento:
 
-  [![](free-provisioning-images/launchapp7.png "Exibir o perfil de provisionamento")](free-provisioning-images/launchapp7.png)
+  [![](free-provisioning-images/launchapp7.png "Exibir o perfil de provisionamento")](free-provisioning-images/launchapp7.png#lightbox)
 
 8. Para testar o Xcode, implante o aplicativo em branco em seu dispositivo ao clicar no botão de execução.
 
 9. Volte para o IDE, com o mesmo dispositivo conectado e clique com o botão direito do mouse no nome do seu projeto Xamarin.iOS para abrir a caixa de diálogo **Opções de Projeto**. Navegue até a seção de Assinatura do Pacote iOS e defina explicitamente sua identidade de assinatura e seu perfil de provisionamento:
 
-  [![](free-provisioning-images/launchapp8.png "Definir a identidade de assinatura e o perfil de provisionamento")](free-provisioning-images/launchapp8.png)
+  [![](free-provisioning-images/launchapp8.png "Definir a identidade de assinatura e o perfil de provisionamento")](free-provisioning-images/launchapp8.png#lightbox)
 
 Se você não conseguir ver sua identidade de assinatura ou o perfil de provisionamento correto no seu IDE, poderá ser necessário reiniciá-lo.
 

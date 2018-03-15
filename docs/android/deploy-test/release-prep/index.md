@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 7f36a29b00e0393ac0a2d65e7ebe7d290bbdb89a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e440d5ab9f822277a8c0948a9795b9a030fa268c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
-<a name="Compile_the_Application_for_Release" />
 
 Depois que um aplicativo tiver sido codificado e testado, será necessário preparar um pacote para distribuição. A primeira tarefa na preparação desse pacote é compilar o aplicativo para a versão, o que envolve principalmente a configuração de alguns atributos do aplicativo.
 
@@ -53,13 +52,13 @@ O atributo `Icon` propriedade do `Application` é usado para especificar o ícon
 
 No Visual Studio 2015 e posteriores, especifique o ícone do aplicativo por meio da seção **Manifesto do Android** do projeto **Propriedades**, conforme é mostrado na seguinte captura de tela:
 
-[ ![Definir o ícone do aplicativo](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png)
+[![Definir o ícone do aplicativo](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 No Visual Studio para Mac, também é possível especificar o ícone do aplicativo usando a seção **Aplicativo Android** de **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
 
-[ ![Definir o ícone do aplicativo](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png)
+[![Definir o ícone do aplicativo](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
 
@@ -77,13 +76,13 @@ Controle de versão é importante para a distribuição e manutenção de aplica
 
 No Visual Studio, esses valores podem ser definidos na seção **Manifesto Android** do projeto **Propriedades**, conforme mostrado na seguinte captura de tela:
 
-[ ![Definir o número de versão](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png)
+[![Definir o número de versão](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Esses valores podem ser definidos na seção **Compilar > Aplicativo Android** em **Opções de Projeto** conforme mostrado na seguinte captura de tela:
 
-[ ![Definir o número de versão](images/xs/02-versioning-sml.png)](images/xs/02-versioning.png)
+[![Definir o número de versão](images/xs/02-versioning-sml.png)](images/xs/02-versioning.png#lightbox)
 
 -----
 
@@ -93,7 +92,6 @@ Esses valores podem ser definidos na seção **Compilar > Aplicativo Android** e
 
 APKs do Xamarin.Android podem ficar menores por meio de uma combinação do vinculador Xamarin.Android, que remove código *gerenciado* desnecessário e a ferramenta *ProGuard* do SDK do Android, que remove *código de bytes Java* não utilizado. O processo de build primeiro usa o vinculador do Xamarin.Android para otimizar o aplicativo no nível do código gerenciado (C#) e posteriormente usa o ProGuard (se habilitado) para otimizar o APK no nível do código de bytes Java.
 
-<a name="Configure_the_Linker" />
 
 ### <a name="configure-the-linker"></a>Configurar o vinculador
 
@@ -107,7 +105,7 @@ O modo Versão desativa o tempo de execução compartilhado e ativa a vinculaç�
 
 Defina opções de vinculador por meio da seção **Opções do Android** das **Propriedades** do projeto:
 
-[ ![Opções do vinculador](images/vs/03-linking-sml.png)](images/vs/03-linking.png)
+[![Opções do Vinculador](images/vs/03-linking-sml.png)](images/vs/03-linking.png#lightbox)
 
 O menu suspenso **Vinculação** fornece as seguintes opções para controlar o vinculador:
 
@@ -122,7 +120,7 @@ O menu suspenso **Vinculação** fornece as seguintes opções para controlar o 
 
 Defina as opções do vinculador por meio da guia **Vinculador** na seção **Build do Android** de **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
 
-[ ![Opções do vinculador](images/xs/03-linking-sml.png)](images/xs/03-linking.png)
+[![Opções do Vinculador](images/xs/03-linking-sml.png)](images/xs/03-linking.png#lightbox)
 
 As opções para controlar o vinculador são as seguintes:
 
@@ -136,7 +134,6 @@ As opções para controlar o vinculador são as seguintes:
 
 A vinculação pode produzir alguns efeitos colaterais indesejados, portanto, é importante que um aplicativo seja testado novamente no modo Liberação em um dispositivo físico.
 
-<a name="proguard" />
 
 ### <a name="proguard"></a>ProGuard
 
@@ -148,11 +145,11 @@ Quando **Habilitar ProGuard** está marcado, o Xamarin.Android executa a ferrame
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Ação de build do ProGuard](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png)
+[![Ação de build do ProGuard](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Ação de build do ProGuard](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png)
+[![Ação de build do ProGuard](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
 -----
 
@@ -228,7 +225,6 @@ A opção **Compilação AOT** (na página [Propriedades de Empacotamento](#Set_
 
 A opção **Compilação AOT** requer uma licença Enterprise ou superior. **Compilação AOT** só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão. Para obter mais informações sobre Compilação AOT, consulte [AOT](http://www.mono-project.com/docs/advanced/aot/).
 
-<a name="llvm" />
 
 #### <a name="llvm-optimizing-compiler"></a>Compilador de otimização de LLVM
 
@@ -246,31 +242,28 @@ O _compilador de otimização LLVM_ criará código compilado mais rápido e men
 
 As propriedades de empacotamento podem ser definidas na seção **Opções do Android** das **Propriedades** do projeto, conforme mostrado na seguinte captura de tela:
 
-[ ![Propriedades de empacotamento](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png)
+[![Propriedades de empacotamento](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 As propriedades de empacotamento podem ser definidas em **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
 
-[ ![Propriedades de empacotamento](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png)
+[![Propriedades de empacotamento](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png#lightbox)
 
 -----
 
 Muitas dessas propriedades, como **Usar Tempo de Execução Compartilhado** e **Usar Implantação Rápida**, destinam-se ao modo de Depuração. No entanto, quando o aplicativo é configurado para modo Versão, existem outras configurações que determinam como o aplicativo é [otimizado para velocidade de execução e tamanho](#shrink_apk), [como é protegido contra violação](#protect_app) e como pode ser empacotado para dar suporte a restrições de tamanho e arquiteturas diferentes.
 
-<a name="Specify_Supported_Architectures" />
 
 ### <a name="specify-supported-architectures"></a>Especificar arquiteturas com suporte
 
 Ao preparar um aplicativo Xamarin.Android para a versão, é necessário especificar as arquiteturas de CPU com suporte. Um único APK pode conter código de computador para dar suporte a várias arquiteturas diferentes. Consulte [Arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md) para obter detalhes sobre o suporte a várias arquiteturas de CPU.
 
-<a name="multiabi" />
 
 ### <a name="generate-one-package-apk-per-selected-abi"></a>Gerar um pacote (. APK) por ABI selecionado
 
 Quando essa opção é habilitada, um APK é criado para cada ABI com suporte (selecionado na guia **Avançado**, conforme descrito em [arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md)) em vez de um único e grande APK para todas as ABIs com suporte. Essa opção só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão.
 
-<a name="multidex" />
 
 ### <a name="multi-dex"></a>Multi-Dex
 
@@ -305,30 +298,30 @@ Depois de concluir todas as etapas acima, compile o aplicativo (selecione **Comp
 
 Para começar o processo de publicação, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione o item de menu de contexto **Arquivar...**:
 
-[ ![Arquivar aplicativo](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png)
+[![Arquivar aplicativo](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
 
 **Arquivar...** inicia o **Gerenciador de Arquivo Morto** e inicia o processo de arquivamento do pacote de Aplicativo, conforme mostrado nesta captura de tela:
 
-[ ![Gerenciador de Arquivo Morto](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png)
+[![Gerenciador de Arquivo Morto](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
 Outra maneira de criar um arquivo morto é clicar com o botão direito do mouse na Solução no **Gerenciador de Soluções** e selecionar **Arquivar Tudo...**, que compila a solução e arquiva todos os projetos do Xamarin que podem gerar um arquivo morto:
 
-[ ![Arquivar Todos](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png)
+[![Arquivar Tudo](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
 
 Tanto **Arquivar** quanto **Arquivar Tudo** inicializam automaticamente o **Gerenciador de Arquivo Morto**. Para iniciar o **Gerenciador de Arquivo Morto** diretamente, clique no item de menu **Ferramentas > Gerenciador de Arquivo Morto...**:
 
-[ ![Iniciar o Gerenciador de Arquivo Morto](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png)
+[![Iniciar o Gerenciador de Arquivo Morto](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
 Acesse os arquivos mortos da solução a qualquer momento clicando com o botão direito do mouse no nó **Solução** e selecionando **Exibir Arquivos Mortos**:
 
-[ ![Exibir Arquivos Mortos](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png)
+[![Exibir Arquivos Mortos](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png#lightbox)
 
 ### <a name="the-archive-manager"></a>O Gerenciador de Arquivo Morto
 
 O **Gerenciador de Arquivo Morto** é composto por um painel de **Lista de Soluções**, uma **Lista de Arquivos Mortos** e um **Painel de Detalhes**:
 
-[ ![Painéis do Gerenciador de Arquivo Morto](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png)
+[![Painéis do Gerenciador de Arquivo Morto](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
 A **Lista de Soluções** exibe todas as soluções que têm pelo menos um projeto arquivado. A **Lista de Soluções** inclui as seguintes seções:
 
@@ -348,11 +341,11 @@ O **Painel de Detalhes** exibe informações adicionais sobre cada arquivo morto
 
 Quando uma versão arquivada do aplicativo estiver pronta para publicação, selecione o arquivo morto no **Gerenciador de Arquivo Morto** e clique no botão **Distribuir...**:
 
-[ ![Botão Distribuir](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png)
+[![Botão Distribuir](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png#lightbox)
 
 A caixa de diálogo **Canal de Distribuição** mostra informações sobre o aplicativo, uma indicação de progresso do fluxo de trabalho de distribuição e uma variedade de canais de distribuição. Na primeira execução, são apresentadas duas opções:
 
-[ ![Selecionar canal de distribuição](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png)
+[![Selecionar Canal de Distribuição](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png#lightbox)
 
 É possível escolher um dos seguintes canais de distribuição:
 
@@ -364,15 +357,15 @@ A caixa de diálogo **Canal de Distribuição** mostra informações sobre o apl
 
 Para começar o processo de publicação, selecione **Compilar > Arquivo Morto para Publicação**:
 
-[ ![Arquivar para publicação](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png)
+[![Arquivo morto para publicação](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png#lightbox)
 
 **Arquivo Morto para Publicação** compila o projeto e empacota-o em um arquivo morto. A opção de menu **Arquivar Tudo** arquiva todos os projetos arquiváveis na solução. Ambas as opções abrem automaticamente o **Gerenciador de Arquivo Morto** quando as operações de build e de agrupamento são concluídas:
 
-[ ![Exibição de arquivo morto](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png)
+[![Exibição de Arquivo Morto](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
 Neste exemplo, o **Gerenciador de Arquivo Morto** lista somente um aplicativo arquivado, **MyApp**. Observe que o campo de comentários permite salvar um breve comentário com o arquivo morto. Para publicar uma versão arquivada de um aplicativo Xamarin.Android, selecione o aplicativo no **Gerenciador de Arquivo Morto** e clique em **Assinar e Distribuir...** conforme mostrado acima. A caixa de diálogo **Assinar e Distribuir** resultante apresenta duas opções:
 
-[ ![Assinar e Distribuir](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png)
+[![Assinar e Distribuir](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
 
 Aqui, é possível selecionar o canal de distribuição:

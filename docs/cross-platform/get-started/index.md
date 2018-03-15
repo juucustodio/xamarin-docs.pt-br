@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.technology: xamarin-cross-platform
+ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 24d58621ae8143984683a41cd849a8b60893fd25
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8d9acbf5fa53c2fa94d1a15d51de9d3db48a16fe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started"></a>Guia de Introdução
 
@@ -45,6 +46,12 @@ Este artigo aborda o ciclo de vida de desenvolvimento de software em relação a
 
 Este documento fornece uma visão geral do Visual Studio para Mac, o Ambiente de Desenvolvimento Integrado (IDE).
 
+
+## <a name="xamarin-university-video"></a>Vídeo do Xamarin University
+
+> [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
+
+**Criando seu primeiro aplicativo Xamarin.Forms com o Xamarin para Visual Studio, da [Xamarin University](https://university.xamarin.com)**
 
 ## <a name="related-links"></a>Links relacionados
 

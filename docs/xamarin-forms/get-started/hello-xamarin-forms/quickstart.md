@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 7ce674ea38bc847bc9064a5a61113900a45b991d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 434a12c26a5823b082751c95c2090b22c39cf081
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Início rápido do Xamarin.Forms
 
 Esse passo a passo demonstra como criar um aplicativo que converte um número de telefone alfanumérico inserido pelo usuário em um número de telefone e que chama o número. O aplicativo final é mostrado abaixo:
 
-[![](quickstart-images/intro-app-examples-sml.png "Aplicativo Phoneword")](quickstart-images/intro-app-examples.png "Aplicativo Phoneword")
+[![](quickstart-images/intro-app-examples-sml.png "Aplicativo Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Aplicativo Phoneword")
 
 Crie o aplicativo Phoneword da seguinte maneira:
 
@@ -113,7 +113,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
         }
 
   > [!NOTE]
-> **Observação**: tentar compilar o aplicativo neste ponto resultará em erros que serão corrigidos mais tarde.
+  > Tentar compilar o aplicativo neste ponto resultará em erros que serão corrigidos mais tarde.
 
   Salve as alterações em **MainPage.xaml.cs** ao pressionar **CTRL+S** e feche o arquivo.
 
@@ -241,7 +241,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
   Salve as alterações em **IDialer.cs** pressionando **CTRL + S** e feche o arquivo.
 
   > [!NOTE]
-> O código comum para o aplicativo agora está concluído. O código de discagem do telefone específico da plataforma agora será implementado como um [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
+> Agora o código comum para o aplicativo está concluído. O código de discagem do telefone específico da plataforma agora será implementado como um [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 1. No **Gerenciador de Soluções**, clique com botão direito do mouse no projeto **Phoneword.iOS** e selecione **Adicionar > Novo Item…**:
 
@@ -565,7 +565,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
         }
 
   > [!NOTE]
-> **Observação**: tentar compilar o aplicativo neste ponto resultará em erros que serão corrigidos mais tarde.
+  > Tentar compilar o aplicativo neste ponto resultará em erros que serão corrigidos mais tarde.
 
   Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
 
@@ -693,7 +693,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
   Salve as alterações em **IDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
 
   > [!NOTE]
-> O código comum para o aplicativo agora está concluído. O código de discagem do telefone específico da plataforma agora será implementado como um [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
+> Agora o código comum para o aplicativo está concluído. O código de discagem do telefone específico da plataforma agora será implementado como um [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 1. No **Painel de Soluções**, selecione o projeto **Phoneword.iOS**, clique com botão direito do mouse e selecione **Adicionar > Novo arquivo...**:
 

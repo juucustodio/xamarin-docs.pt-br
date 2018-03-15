@@ -8,17 +8,17 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 4bb6f0c219fc973d3d2e458445c76fd7611681ec
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: dab923f6150bdf005e9468add6d26d4fdb691a93
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="provisioning-profiles"></a>Perfis de Provisionamento
 
 Os perfis de provisionamento permitem que um desenvolvedor incorpore vários recursos específicos (como iCloud e notificações por Push) do macOS (anteriormente conhecido como o Mac OS X) em seus aplicativos Xamarin.Mac. Eles devem criar, baixar e instalar um Perfil de Provisionamento do Mac para cada aplicativo que estão desenvolvendo que usa esses recursos.
 
-[ ![](profiles-images/certif13.png "Portal de Provisionamento da Apple")](profiles-images/certif13.png)
+[![](profiles-images/certif13.png "O Portal de Provisionamento da Apple")](profiles-images/certif13.png#lightbox)
 
 <a name="Development_Provisioning_Profile" />
 
@@ -33,31 +33,31 @@ Faça o seguinte:
 
 1. Selecione o tipo de Perfil de Provisionamento a ser criado e clique no botão **Continuar**: 
 
-     [ ![](profiles-images/certif14.png "Selecionando o tipo de perfil")](profiles-images/certif14.png)
+     [![](profiles-images/certif14.png "Selecionando o tipo de perfil")](profiles-images/certif14.png#lightbox)
 2. Selecione a ID do aplicativo para o qual será criado o perfil e clique no botão **Continuar**: 
 
-     [ ![](profiles-images/certif15.png "Selecionando a ID do aplicativo")](profiles-images/certif15.png)
+     [![](profiles-images/certif15.png "Selecionando a ID do aplicativo")](profiles-images/certif15.png#lightbox)
 3. Selecione a ID de desenvolvedor usada para assinar o perfil e clique em **Continuar**: 
 
-     [ ![](profiles-images/certif16.png "Selecionando a ID de desenvolvedor")](profiles-images/certif16.png)
+     [![](profiles-images/certif16.png "Selecionando a ID de desenvolvedor")](profiles-images/certif16.png#lightbox)
 4. Selecione os computadores nos quais esse perfil pode ser usado e clique em **Continuar**: 
 
-     [ ![](profiles-images/certif17.png "Selecionando os computadores permitidos")](profiles-images/certif17.png)
+     [![](profiles-images/certif17.png "Selecionando os computadores permitidos")](profiles-images/certif17.png#lightbox)
 5. Agora, insira um **Nome do Perfil** e clique no botão **Gerar**: 
 
-     [ ![](profiles-images/certif18.png "Gerando o perfil")](profiles-images/certif18.png)
+     [![](profiles-images/certif18.png "Gerando o perfil")](profiles-images/certif18.png#lightbox)
 6. Clique no botão **Download** para baixar o novo perfil: 
 
-     [ ![](profiles-images/certif19.png "Baixando o perfil")](profiles-images/certif19.png)
+     [![](profiles-images/certif19.png "Baixando o perfil")](profiles-images/certif19.png#lightbox)
 7. Os perfis de provisionamento de desenvolvimento são instalados no painel de Preferências de Perfis das **Preferências do Sistema** do aplicativo do Mac: 
 
-     [ ![](profiles-images/certif20.png "Instalando o perfil")](profiles-images/certif20.png)
+     [![](profiles-images/certif20.png "Instalando o perfil")](profiles-images/certif20.png#lightbox)
 8. O painel de Preferências de Perfil mostrará todos os perfis instalados: 
 
-     [ ![](profiles-images/image47.png "Mostrando todos os perfis instalados")](profiles-images/image47.png)
+     [![](profiles-images/image47.png "Mostrando todos os perfis instalados")](profiles-images/image47.png#lightbox)
 9. O perfil também aparecerá no **Utilitário de Certificado de Desenvolvedor**, caso precise ser baixado novamente: 
 
-     [ ![](profiles-images/image48.png "O Utilitário de Certificado do Desenvolvedor")](profiles-images/image48.png)
+     [![](profiles-images/image48.png "O Utilitário de Certificado do Desenvolvedor")](profiles-images/image48.png#lightbox)
 
 Será necessário criar um novo Perfil de Provisionamento de Desenvolvimento para cada novo aplicativo ou quando um novo computador for adicionado para ser usado em teste.
 
@@ -71,25 +71,25 @@ Faça o seguinte:
 
 1. Selecione o tipo de perfil a ser criado e clique no botão **Continuar**: 
 
-    [ ![](profiles-images/certif21.png "Selecionando o tipo de perfil")](profiles-images/certif21.png)
+    [![](profiles-images/certif21.png "Selecionando o tipo de perfil")](profiles-images/certif21.png#lightbox)
 2. Selecione a ID do aplicativo para o qual será criado o perfil e clique no botão **Continuar**: 
 
-    [ ![](profiles-images/certif15.png "Selecionando a ID do aplicativo")](profiles-images/certif15.png)
+    [![](profiles-images/certif15.png "Selecionando a ID do aplicativo")](profiles-images/certif15.png#lightbox)
 3. Selecione a ID da empresa para assinar o perfil e clique no botão **Continuar**: 
 
-    [ ![](profiles-images/certif23.png "Selecionando a ID da empresa")](profiles-images/certif23.png)
+    [![](profiles-images/certif23.png "Selecionando a ID da empresa")](profiles-images/certif23.png#lightbox)
 4. Insira um **Nome do perfil** e clique no botão **Gerar**: 
 
-    [ ![](profiles-images/certif24.png "Gerando o perfil")](profiles-images/certif24.png)
+    [![](profiles-images/certif24.png "Gerando o perfil")](profiles-images/certif24.png#lightbox)
 5. Clique em **Download** para obter o arquivo de perfil de provisionamento (extensão `.provisionprofile`): 
 
-    [ ![](profiles-images/certif25.png "Baixando o perfil")](profiles-images/certif25.png)
+    [![](profiles-images/certif25.png "Baixando o perfil")](profiles-images/certif25.png#lightbox)
 6. Arraste-o até o **Organizador do Xcode** ou clique duas vezes nele para instalar. Dessa forma, o perfil aparecerá no Organizador do Xcode: 
 
-    [ ![](profiles-images/image51.png "Instalando o perfil")](profiles-images/image51.png)
+    [![](profiles-images/image51.png "Instalando o perfil")](profiles-images/image51.png#lightbox)
 7. O perfil de provisionamento também aparecerá na lista: 
 
-    [ ![](profiles-images/certif26.png "Mostrando os perfis instalados")](profiles-images/certif26.png)
+    [![](profiles-images/certif26.png "Mostrando os perfis instalados")](profiles-images/certif26.png#lightbox)
 
 
 Sempre que o desenvolvedor mudar os recursos que estão sendo usados por uma ID do aplicativo (por exemplo, habilitar o iCloud ou notificações por push), deverá recriar os perfis de provisionamento para aquela ID do aplicativo.

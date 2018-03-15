@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bc89450a5c9a00ab9f088ca9fff345ebbf7b6c4c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Aprofundamento no Hello, iOS
 
@@ -102,7 +102,7 @@ Antes que um aplicativo iOS possa carregar uma interface do usuário, duas coisa
 
 Esta seção estuda as relações ilustradas no diagrama a seguir:
 
-[![ ] (hello-ios-deepdive-images/image32.png "As relações dos conceitos básicos de arquitetura e aplicativo estão ilustradas neste diagrama")](hello-ios-deepdive-images/image32.png)
+[![](hello-ios-deepdive-images/image32.png "As relações dos conceitos básicos de arquitetura e aplicativo estão ilustradas neste diagrama")](hello-ios-deepdive-images/image32.png#lightbox)
 
 Vamos começar do início e aprender o que acontece na inicialização do aplicativo.
 
@@ -197,7 +197,7 @@ A _Exibição_ pode ser selecionada clicando dentro da parte branca da cena. A e
 
 À esquerda da cena há uma seta cinza com um ícone de sinalizador, conforme ilustrado pela captura de tela abaixo:
 
- [ ![](hello-ios-deepdive-images/image37.png "Uma seta cinza com um ícone de sinalizador")](hello-ios-deepdive-images/image37.png)
+ [![](hello-ios-deepdive-images/image37.png "Uma seta cinza com um ícone de sinalizador")](hello-ios-deepdive-images/image37.png#lightbox)
 
 A seta cinza representa uma transição de storyboard chamada *Segue* (pronuncia-se "seg-uêi"). Como este Segue não tem nenhuma origem, ele é chamado de *Segue sem origem*. Um Segue sem origem aponta para a primeira cena cujas exibições são carregadas na janela do nosso aplicativo na inicialização do aplicativo. A cena e as exibições dentro dela serão a primeira coisa que o usuário verá quando o aplicativo for carregado.
 
@@ -243,7 +243,7 @@ A próxima seção divide a hierarquia de exibição de conteúdo representado p
 
 Uma _hierarquia de exibição de conteúdo_ é uma pilha de exibições e subexibições gerenciadas por um único controlador de exibição, conforme ilustrado pelo diagrama a seguir:
 
- [ ![](hello-ios-deepdive-images/image41.png "A hierarquia de exibição de conteúdo")](hello-ios-deepdive-images/image41.png)
+ [![](hello-ios-deepdive-images/image41.png "A Hierarquia de exibição de conteúdo")](hello-ios-deepdive-images/image41.png#lightbox)
 
 Podemos tornar mais fácil a visualização da hierarquia de exibição de conteúdo de nosso `ViewController` alterando temporariamente a cor da tela de fundo da exibição raiz para amarelo na seção de Exibição do **Painel Propriedades**, conforme ilustrado pela captura de tela abaixo:
 
@@ -259,7 +259,7 @@ Podemos tornar mais fácil a visualização da hierarquia de exibição de conte
 
 O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo:
 
- [ ![](hello-ios-deepdive-images/image43.png "As relações entre a janela, as exibições, as subexibições e o controlador de exibição")](hello-ios-deepdive-images/image43.png)
+ [![](hello-ios-deepdive-images/image43.png "As relações entre a janela, as exibições, as subexibições e o controlador de exibição")](hello-ios-deepdive-images/image43.png#lightbox)
 
 A próxima seção discute como trabalhar com exibições no código e aprender programação voltada à interação do usuário usando os controladores de exibição e o ciclo de vida da exibição.
 
@@ -331,7 +331,7 @@ A função mais importante do controlador de exibição é responder a interaç�
 Agora que você já tem uma compreensão mais profunda das exibições e controladores de exibição, vamos explorar como isso funciona.
 No projeto `Phoneword_iOS`, um botão chamado `TranslateButton` foi adicionado à hierarquia de exibição de conteúdo:
 
- [ ![](hello-ios-deepdive-images/image1.png "Um botão chamado TranslateButton foi adicionado à hierarquia de exibição de conteúdo")](hello-ios-deepdive-images/image1.png)
+ [![](hello-ios-deepdive-images/image1.png "Um botão chamado TranslateButton foi adicionado à Hierarquia de exibição de conteúdo")](hello-ios-deepdive-images/image1.png#lightbox)
 
 Quando um **Name** é atribuído ao controle **Button** no **Painel Propriedades**, o Designer do iOS o mapeia automaticamente para um controle no **ViewController.designer.cs**, tornando o `TranslateButton` disponível dentro da classe `ViewController`. Controles serão disponibilizados primeiro no estágio `ViewDidLoad` do ciclo de vida de exibição, portanto, esse método de ciclo de vida é usado para responder ao toque do usuário:
 
@@ -432,7 +432,7 @@ Depois que o dispositivo é configurado você pode implantar para ele conectando
 
 O aplicativo será implantado no dispositivo iOS:
 
-[ ![](hello-ios-deepdive-images/image1.png "O aplicativo será implantado no dispositivo iOS e executado")](hello-ios-deepdive-images/image1.png)
+[![](hello-ios-deepdive-images/image1.png "O aplicativo será implantado no dispositivo iOS e executado")](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Gerar ícones personalizados e imagens de inicialização
 

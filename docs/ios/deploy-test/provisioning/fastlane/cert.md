@@ -2,16 +2,16 @@
 title: "fastlane para iOS – cert"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: b98375f8a526cd08f7d11f4ea6bb3498db87009c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a37b0dc1418fd9dda5c59723a96c20855c1c3e1b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios--cert"></a>fastlane para iOS – cert
 
@@ -60,7 +60,7 @@ Por padrão, isso criará um certificado de distribuição. Para criar um certif
 
 O cert solicitará sua Apple ID e senha, então insira:
 
-[ ![](cert-images/fastlane-image1.png "O cert solicitará sua Apple ID e senha")](cert-images/fastlane-image1.png)
+[![](cert-images/fastlane-image1.png "O cert solicitará sua Apple ID e senha")](cert-images/fastlane-image1.png#lightbox)
 
 > [!IMPORTANT]
 > Na primeira vez em que a senha for inserida, ela será salva no conjunto de chaves do macOS local. Como alternativa, variáveis de ambiente podem ser usadas para armazenar o nome de usuário e a senha ou você poderá usar `export fastlane_DONT_STORE_PASSWORD=1` se não quiser que sua senha seja armazenada no conjunto de chaves. Para saber mais sobre como gerenciar credenciais com fastlane, veja o guia do [gerenciador de credenciais](https://github.com/fastlane/fastlane/blob/master/credentials_manager/README.md) do fastlane.
@@ -71,7 +71,7 @@ A Apple ID também pode ser passada como um argumento usando o seguinte comando:
 
 Se sua Apple ID estiver conectada a várias equipes, elas serão exibidas aqui. Selecione o número que corresponde à equipe que você deseja usar:
 
-[ ![](cert-images/fastlane-image2.png "Selecione a equipe que você deseja usar")](cert-images/fastlane-image2.png)
+[![](cert-images/fastlane-image2.png "Selecionar a equipe que você deseja usar")](cert-images/fastlane-image2.png#lightbox)
 
 A ID da equipe também pode ser passada usando o seguinte sinalizador:
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a113a386f1312253fda8913cea3cb608a65e1061
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f7c743bab2a6acb3dcd57ebca207957f983e0c0f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="unit-testing"></a>Teste de unidade
 
@@ -119,15 +119,15 @@ Para executar este projeto dentro de sua solução, clique com botão direito do
 
 O executor de teste permite que você veja quais testes são registrados e selecione individualmente os testes que podem ser executados.
 
-[ ![](touch.unit-images/02.png "A lista de testes registrados")](touch.unit-images/02.png) 
+[![](touch.unit-images/02.png "A lista de testes registrados")](touch.unit-images/02.png#lightbox) 
 
-[ ![](touch.unit-images/03.png "Um texto individual")](touch.unit-images/03.png) 
+[![](touch.unit-images/03.png "Um texto individual")](touch.unit-images/03.png#lightbox) 
 
-[ ![](touch.unit-images/04.png "Os resultados da execução")](touch.unit-images/04.png)
+[![](touch.unit-images/04.png "Os resultados da execução")](touch.unit-images/04.png#lightbox)
 
 Você pode executar acessórios de teste individuais selecionando o acessório texto nas exibições aninhadas ou você pode executar todos os seus testes com "Executar tudo". Se você executar o teste padrão, ele deverá incluir um teste aprovado, um não aprovado e um ignorado. Esta é a aparência do relatório e você pode fazer uma busca detalhada diretamente nos testes não aprovados e descobrir mais informações sobre a falha:
 
-[ ![](touch.unit-images/05.png "Um relatório de exemplo")](touch.unit-images/05.png) [ ![](touch.unit-images/06.png "Um relatório de exemplo")](touch.unit-images/06.png) [ ![](touch.unit-images/07.png "Um relatório de exemplo")](touch.unit-images/07.png)
+[![](touch.unit-images/05.png "Um relatório de exemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Um relatório de exemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Um relatório de exemplo")](touch.unit-images/05.png#lightbox)
 
 Você também pode examinar a janela Saída do Aplicativo no seu IDE para ver quais testes estão sendo executados e seus status atuais.
 

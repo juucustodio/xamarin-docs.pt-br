@@ -7,100 +7,93 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: c09dcefb97a5edafcd03394e5ae3146b69a40745
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 37e38ddd84b50709bec147c54cdfa9f79404a39f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manually-uploading-the-apk"></a>Carregando o APK Manualmente
 
-<a name="Uploading_the_APK" />
 
 Na primeira vez que um APK for enviado ao Google Play (ou se uma versão anterior do Xamarin.Android for usada), o APK deverá ser carregado manualmente por meio do [Console do Desenvolvedor do Google Play](https://play.google.com/apps/publish). Esse guia explica as etapas necessárias para esse processo. 
 
-<a name="devconsole" />
 
 ## <a name="google-play-developer-console"></a>Console do Desenvolvedor do Google Play
 
 Depois que o APK tiver sido compilado e os ativos promocionais preparados, o aplicativo deverá ser carregado no Google Play. Isso é feito ao fazer logon no [Console do Desenvolvedor do Google Play](https://play.google.com/apps/publish) mostrado a seguir. Clique no botão **Publicar um Aplicativo Android no Google Play** para inicializar o processo de distribuição de um aplicativo.
 
-[ ![Console do Desenvolvedor do Google Play](manually-uploading-the-apk-images/00-google-play-developer-console-sml.png)](manually-uploading-the-apk-images/00-google-play-developer-console.png)
+[![Console do Desenvolvedor do Google Play](manually-uploading-the-apk-images/00-google-play-developer-console-sml.png)](manually-uploading-the-apk-images/00-google-play-developer-console.png#lightbox)
 
 Se você já tiver um aplicativo existente registrado com o Google Play, clique no botão **Adicionar novo aplicativo**:
 
-[ ![Botão Adicionar novo aplicativo](manually-uploading-the-apk-images/01-existing-app-sml.png)](manually-uploading-the-apk-images/01-existing-app.png)
+[![Botão Adicionar novo aplicativo](manually-uploading-the-apk-images/01-existing-app-sml.png)](manually-uploading-the-apk-images/01-existing-app.png#lightbox)
 
 Quando a caixa de diálogo **ADICIONAR NOVO APLICATIVO** for exibida, insira o nome do aplicativo e clique em **Carregar APK**:
 
-[ ![Botão Carregar APK](manually-uploading-the-apk-images/02-add-new-application-sml.png)](manually-uploading-the-apk-images/02-add-new-application.png)
+[![Botão Carregar APK](manually-uploading-the-apk-images/02-add-new-application-sml.png)](manually-uploading-the-apk-images/02-add-new-application.png#lightbox)
 
 A próxima tela permite que o aplicativo seja publicado para testes alfa, testes beta ou para produção. No exemplo a seguir, a guia **TESTES ALFA** está selecionada. Visto que o **MyApp** não usa serviços de licenciamento, o botão **Obter chave de licença** não precisa ser clicado nesse exemplo. Aqui, o botão **Carregar seu primeiro APK em Alfa** é clicado para publicar no canal Alfa:
 
-[ ![Botão Carregar seu primeiro APK para Alfa](manually-uploading-the-apk-images/03-upload-to-alpha-sml.png)](manually-uploading-the-apk-images/03-upload-to-alpha.png)
+[![Botão Carregar seu primeiro APK para Alfa](manually-uploading-the-apk-images/03-upload-to-alpha-sml.png)](manually-uploading-the-apk-images/03-upload-to-alpha.png#lightbox)
 
 A caixa de diálogo **CARREGAR NOVO APK EM ALFA** é exibida. O APK pode ser carregado ao clicar no botão **Procurar arquivos** ou ao arrastar e soltar o APK: 
 
-[ ![Caixa de diálogo Carregar novo APK para Alfa](manually-uploading-the-apk-images/04-upload-dialog-sml.png)](manually-uploading-the-apk-images/04-upload-dialog.png)
+[![Caixa de diálogo Carregar novo APK para Alfa](manually-uploading-the-apk-images/04-upload-dialog-sml.png)](manually-uploading-the-apk-images/04-upload-dialog.png#lightbox)
 
 Certifique-se de carregar o APK pronto para liberação que deverá ser distribuído.
 A próxima caixa de diálogo indica o progresso do upload do APK:
 
-[ ![Indicação de Progresso do Upload](manually-uploading-the-apk-images/05-upload-progress-sml.png)](manually-uploading-the-apk-images/05-upload-progress.png)
+[![Indicação de progresso do upload](manually-uploading-the-apk-images/05-upload-progress-sml.png)](manually-uploading-the-apk-images/05-upload-progress.png#lightbox)
 
 Depois que o APK for carregado, será possível selecionar um método de teste:
 
-[ ![Caixa de diálogo Escolher um Método de Teste](manually-uploading-the-apk-images/06-select-testing-method-sml.png)](manually-uploading-the-apk-images/06-select-testing-method.png)
+[![Caixa de diálogo Escolher um Método de Teste](manually-uploading-the-apk-images/06-select-testing-method-sml.png)](manually-uploading-the-apk-images/06-select-testing-method.png#lightbox)
 
 Para obter mais informações sobre o teste do aplicativo, confira o guia do Google [Set up alpha/beta tests](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en) (Configurar testes alfa/beta).
 
 Depois que o APK for carregado, ele será salvo como um rascunho. Ele não poderá ser publicado até que mais detalhes sejam fornecidos ao Google Play, conforme descrito a seguir.
 
-<a name="Listing_Details" />
 
 ## <a name="store-listing"></a>Listagem da Loja
 
 Clique em **Listagem da Loja** no **Console do Desenvolvedor do Google Play** para inserir as informações que o Google Play exibirá aos usuários potenciais do aplicativo: 
 
-[ ![Caixa de diálogo Listagem da Loja](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png)
+[![Caixa de diálogo Listagem da Loja](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
 
-<a name="Upload_Assets" />
 
 ### <a name="graphics-assets"></a>Elementos Gráficos Ativos
 
 Role para baixo até a seção **GRÁFICOS ATIVOS** da página **Listagem da Loja**:
 
-[ ![Caixa de diálogo Ativos Gráficos](manually-uploading-the-apk-images/08-graphic-assets-sml.png)](manually-uploading-the-apk-images/08-graphic-assets.png)
+[![Seção Ativos Gráficos](manually-uploading-the-apk-images/08-graphic-assets-sml.png)](manually-uploading-the-apk-images/08-graphic-assets.png#lightbox)
 
 Todos os ativos promocionais que foram preparados anteriormente são carregados nessa seção. São fornecidas diretrizes sobre quais ativos promocionais deverão ser oferecidos e em qual formato eles deverão ser disponibilizados.
 
-<a name="categorization" />
 
 ### <a name="categorization"></a>Categorização
 
 Após a seção **GRÁFICOS ATIVOS**, selecione o tipo e a categoria do aplicativo na seção chamada **CATEGORIZAÇÃO**:
 
-[ ![Seção Categorização](manually-uploading-the-apk-images/09-categorization-sml.png)](manually-uploading-the-apk-images/09-categorization.png)
+[![Seção Categorização](manually-uploading-the-apk-images/09-categorization-sml.png)](manually-uploading-the-apk-images/09-categorization.png#lightbox)
 
 A classificação de conteúdo é abordada após a próxima seção.
 
-<a name="contact_details" />
 
 ### <a name="contact-details"></a>Detalhes do Contato
 
 A seção final dessa página é uma seção de **DETALHES DO CONTATO**. Essa seção é usada para coletar informações de contato sobre o desenvolvedor do aplicativo:
 
-[ ![Seção Detalhes do Contato](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png)
+[![Seção Detalhes do Contato](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
 
 É possível fornecer uma URL para a política de privacidade do aplicativo na seção **POLÍTICA de PRIVACIDADE**, conforme indicado acima.
 
-<a name="content_rating" />
 
 ## <a name="content-rating"></a>Classificação de Conteúdo
 
 Clique em **Classificação de Conteúdo** no **Console do Desenvolvedor do Google Play**. Nessa página, especifique a classificação de conteúdo para seu aplicativo. O Google Play exige que todos os aplicativos especifiquem uma classificação de conteúdo. Clique no botão **Continuar** para concluir o questionário de classificação de conteúdo:
 
-[ ![Seção Classificação de Conteúdo](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png)
+[![Seção Classificação de conteúdo](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
 
 Todos os aplicativos no Google Play devem ser classificados de acordo com o sistema de classificação do Google Play. Além da classificação de conteúdo, todos os aplicativos devem aderir à [Política de Conteúdo do Desenvolvedor](http://www.android.com/us/developer-content-policy.html) do Google.
 
@@ -118,7 +111,6 @@ A seguir estão listados os quatro níveis do sistema de classificação do Goog
 
 Os itens na lista de maturidade média são subjetivos, de modo que é possível que uma diretriz que pareça ditar uma classificação de maturidade média seja suficientemente intensa para merecer uma classificação de maturidade alta. 
 
-<a name="pricing_and_distribution" />
 
 ## <a name="pricing-amp-distribution"></a>Preços &amp; Distribuição
 
@@ -128,40 +120,36 @@ O Google Play não permitirá que um aplicativo gratuito seja transformado em um
 
 É necessário configurar uma conta comercial antes de publicar um aplicativo pago. Para fazer isso, clique em **Configurar uma conta comercial** e siga as instruções.
 
-[ ![Caixa de diálogo Preços e Distribuição](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png)
+[![Caixa de diálogo Preços e Distribuição](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png#lightbox)
 
-<a name="manage_countries" />
 
 ### <a name="manage-countries"></a>Gerenciar Países
 
 A próxima seção, **Gerenciar Países**, fornece controle sobre em quais países um aplicativo poderá ser distribuído:
 
-[ ![Caixa de diálogo Gerenciar países](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png)
+[![Caixa de diálogo Gerenciar países](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
 
-<a name="other_information" />
 
 ### <a name="other-information"></a>Outras Informações
 
 Role mais para baixo para especificar se o aplicativo contém anúncios. Além disso, a seção **CATEGORIAS DO DISPOSITIVO** fornece opções para distribuir o aplicativo para o Android Wear, o Android TV ou o Android Auto, caso queira fazê-lo:
 
-[ ![Seção Contém Anúncios](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png)
+[![Seção Contém Anúncios](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png#lightbox)
 
 Após essa seção, há outras opções que podem ser selecionadas, como a alternativa **Projetado para famílias**, bem como distribuir o aplicativo por intermédio do Google Play for Education.
 
-<a name="consent" />
 
 ### <a name="consent"></a>Consentimento
 
 Na parte inferior da página **Preços &amp; Distribuição**, está a seção **CONSENTIMENTO**.
 Essa é uma seção obrigatória, utilizada para declarar que o aplicativo atende às [Diretrizes de Conteúdo do Android](http://www.android.com/market/terms/developer-content-policy.html#hl=us) e reconhecer que o aplicativo está sujeito às leis de exportação dos Estados Unidos:
 
-[ ![Seção Consentimento](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png)
+[![Seção Consentimento](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 
 Há muito mais sobre a publicação de um aplicativo Xamarin.Android do que pode ser abordado nesse guia.
 Para obter mais informações sobre como publicar seu aplicativo no Google Play, confira [Welcome to the Google Play Developer Console Help Center](https://support.google.com/googleplay/android-developer#topic=3450769) (Bem-vindo ao Centro de Ajuda do Console do Desenvolvedor do Google Play).
 
 
-<a name="Google_Play_Filters" />
 
 ## <a name="google-play-filters"></a>Filtros do Google Play
 

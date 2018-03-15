@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: fec57fbeb201d55e887969c5a50baf6a76c10e17
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e09bb1150c3cc53104b41b75a2c3d4d2db4e5ff
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="publishing-independently"></a>Publicação Independente
 
 É possível publicar um aplicativo sem usar nenhum dos mercados Android existentes. Esta seção explicará esses outros métodos de publicação e os níveis de licenciamento do Xamarin.Android.
 
-<a name="Xamarin_Licensing" />
 
 ## <a name="xamarin-licensing"></a>Licenciamento do Xamarin
 
@@ -31,36 +30,32 @@ Quatro licenças estão disponíveis para desenvolvimento, implantação e distr
 
 Visite a [visualstudio.com](https://www.visualstudio.com/xamarin/) para baixar as edições de comunidade ou para saber mais sobre como comprar as edições Professional e Enterprise.
 
-<a name="Allow_Installation_from_Unknown_Sources" />
 
 ## <a name="allow-installation-from-unknown-sources"></a>Permitir instalação de fontes desconhecidas
 
 Por padrão, o Android impede que os usuários baixem e instalem aplicativos de locais diferentes do Google Play. Para permitir a instalação de fontes diferentes do marketplace, um usuário deve habilitar a configuração *Fontes desconhecidas* em um dispositivo antes de tentar instalar um aplicativo. A configuração para isso pode ser encontrada em **Configurações > Segurança**, conforme mostrado no diagrama a seguir:
 
-[ ![Tela de Configurações de segurança](publishing-independently-images/settings.png)](publishing-independently-images/settings.png)
+[![Tela de Configurações de segurança](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
 
 > [!IMPORTANT]
-> **Observação:** alguns provedores de rede podem impedir a instalação de aplicativos de fontes desconhecidas, independentemente dessa configuração.
+> Alguns provedores de rede podem impedir a instalação de aplicativos de fontes desconhecidas, independentemente dessa configuração.
 
 
-<a name="Publishing_by_E-Mail" />
 
 ## <a name="publishing-by-e-mail"></a>Publicando por email
 
 Anexar a versão APK a um email é uma maneira rápida e fácil de distribuir um aplicativo para usuários. Quando o usuário abre o email em um dispositivo com Android, o Android reconhecerá o anexo APK e exibirá um botão **Instalar**, conforme mostrado na imagem a seguir:
 
-[ ![Botão Instalar para anexo](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png)
+[![Botão Instalar para anexo](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
 Embora a distribuição por email seja simples, ela fornece algumas proteções contra pirataria ou distribuição não autorizada. Ela é melhor reservada para situações em que os destinatários do aplicativo sejam poucos e eles são confiáveis para não distribuir o aplicativo.
 
-<a name="Publishing_by_Web" />
 
 ## <a name="publishing-by-web"></a>Publicando pela Web
 
 É possível distribuir um aplicativo por um servidor Web. Isso é feito ao carregar o aplicativo para o servidor Web e, em seguida, fornecer um link de download para os usuários. Quando um dispositivo com Android navega até um link e, em seguida, baixa o aplicativo, esse aplicativo será instalado automaticamente quando o download for concluído.
 
-<a name="Manually_Installing_an_APK" />
 
 ## <a name="manually-installing-an-apk"></a>Instalar manualmente um APK
 

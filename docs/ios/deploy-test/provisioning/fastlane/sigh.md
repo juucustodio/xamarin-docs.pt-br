@@ -2,16 +2,16 @@
 title: "fastlane para iOS – sigh"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d80a0ab5583231f95241fb8d4f6e339e44a84ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2c6ac298ca2040bb2d3619be080fb1387fbfd3a0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios--sigh"></a>fastlane para iOS – sigh
 
@@ -61,7 +61,7 @@ Uma ID do aplicativo pode ser criada com o seguinte comando:
 
 Em que `com.company.appname` é a ID do pacote do aplicativo, que está localizada no arquivo Info.plist do aplicativo do Xamarin.iOS, conforme ilustrado abaixo:
 
-[ ![](sigh-images/fastlane-image5.png "O arquivo Info.plist do aplicativo Xamarin.iOS")](sigh-images/fastlane-image5.png)
+[![](sigh-images/fastlane-image5.png "O arquivo Info.plist do aplicativo Xamarin.iOS")](sigh-images/fastlane-image5.png#lightbox)
 
 A ID do aplicativo exclusiva deve ser uma cadeia de caracteres de estilo DNS reversa. Depois de ter criado a ID, crie um lembrete sobre ela, pois você precisará usá-la quando for usar o Sigh posteriormente neste guia.
 
@@ -108,7 +108,7 @@ Insira seu nome de usuário da Apple ID quando solicitado pelo Fastlane. Também
 
 Se sua Apple ID estiver conectada a várias equipes, elas serão exibidas aqui. Selecione o número que corresponde à equipe que você deseja usar:
 
-[ ![](sigh-images/fastlane-image2.png "Selecione a equipe que você deseja usar")](sigh-images/fastlane-image2.png)
+[![](sigh-images/fastlane-image2.png "Selecionar a equipe que você deseja usar")](sigh-images/fastlane-image2.png#lightbox)
 
 A ID da equipe também pode ser passada para a CLI do seguinte modo:
 
@@ -124,7 +124,7 @@ O fastlane, então, criará, baixará e instalará o perfil de provisionamento p
 
 Se procurar a Central de desenvolvedores, você poderá exibir o perfil de provisionamento recém-criado, conforme ilustrado abaixo:
 
-[ ![](sigh-images/fastlane-image10.png "Exiba o perfil de provisionamento recém-criado")](sigh-images/fastlane-image10.png)
+[![](sigh-images/fastlane-image10.png "Exibir o perfil de provisionamento recém-criado")](sigh-images/fastlane-image10.png#lightbox)
 
 O sigh armazenará os perfis de provisionamento na pasta atual, por padrão. Para alterar o diretório de saída, edite o `output_path` ou faça o seguinte:
 
@@ -140,19 +140,19 @@ As opções a seguir podem ser usadas para dar suporte adicional ao usar o Sigh:
 
 - Para baixar todos os perfis de provisionamento, use:
 
-    ````bash
+    ```bash
     fastlane sigh download_all
     ```
 
-- To use a specific signing identity for your provisioning profile use:
+- Para usar uma identidade de assinatura específica para seu perfil de provisionamento, use:
 
     ```bash
     fastlane sigh -c "Amy cert"
     ```
     
-    Where `Amy cert` is the Code Signing Identity name.
+    Em que `Amy cert` é o nome da identidade de assinatura de código.
 
 
-## Related Links
+## <a name="related-links"></a>Links relacionados
 
-- [fastlane - sigh](https://github.com/fastlane/fastlane/tree/master/sigh#readme)
+- [fastlane – sigh](https://github.com/fastlane/fastlane/tree/master/sigh#readme)

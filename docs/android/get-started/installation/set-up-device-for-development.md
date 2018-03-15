@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6327c00253036f5ede8bf1934f56e6d4bb8f0ecd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64036af82ea49ad4d758a89767ff0da02eef094f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="set-up-device-for-development"></a>Configurar o dispositivo para desenvolvimento
 
@@ -28,13 +28,11 @@ Até agora, você provavelmente já viu seu novo e excelente aplicativo ser exec
 
 Cada uma dessas etapas será abordada de modo detalhado nas seções a seguir.
 
-<a name="EnableDebugging" />
 
 ## <a name="enable-debugging-on-the-device"></a>Habilitar a depuração remota no dispositivo
 
 É possível usar qualquer dispositivo Android para testar um aplicativo Android. No entanto, o dispositivo deve ser configurado corretamente antes que a depuração seja realizada. As etapas abrangidas são um pouco diferentes, dependendo da versão do Android em execução no dispositivo.
 
-<a name="EnableDebuggingAndroid4" />
 
 ### <a name="android-40-to-android-41"></a>Android 4.0 para Android 4.1
 
@@ -46,23 +44,21 @@ Do Android 4.0.x para o Android 4.1.x, a depuração é habilitada seguindo essa
 
 Essa captura de tela mostra a tela **Opções do desenvolvedor** em um dispositivo que está executando o Android 4.0.3:
 
-[![Opções do desenvolvedor](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png)
+[![Opções do desenvolvedor](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png#lightbox)
 
-<a name="EnableDebuggingAndroid42" />
 
 ### <a name="android-42-and-higher"></a>Android 4.2 e posterior
 
 No Android 4.2 e nas versões posteriores, as **Opções do desenvolvedor** estão ocultas por padrão. Para torná-las disponíveis, acesse **Configurações > Sobre o telefone** e toque no item **Número de build** sete vezes para revelar a guia **Opções do desenvolvedor**:
 
-[![Item de número de build](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png)
+[![Item de número de build](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png#lightbox)
 
 Uma vez que a guia **Opções do desenvolvedor** estiver disponível em **Configurações > Sistema**, abra-a para revelar as configurações do desenvolvedor:
 
-[![Tela de configurações do desenvolvedor](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png)
+[![Tela de configurações do desenvolvedor](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png#lightbox)
 
 Esse é o local para habilitar as opções do desenvolvedor, como a depuração USB e o modo permanecer ativo.
 
-<a name="USB_Debugging" />
 
 ## <a name="install-usb-drivers"></a>Instalar Drivers USB
 
@@ -71,13 +67,12 @@ Essa etapa não é necessária para o OS X. Basta conectar o dispositivo ao Mac 
 Pode ser necessário instalar alguns drivers adicionais antes que um computador Windows reconheça um dispositivo Android conectado por USB.
 
 > [!NOTE]
-> **Observação:** essas são as etapas para configurar um dispositivo Google Nexus e são fornecidas como uma referência. As etapas para o seu dispositivo específico podem variar, mas seguem um padrão semelhante. Se você tiver problemas, pesquise sobre seu dispositivo na Internet.
+> Essas são as etapas para configurar um dispositivo Google Nexus e são fornecidas como uma referência. As etapas para o seu dispositivo específico podem variar, mas seguem um padrão semelhante. Se você tiver problemas, pesquise sobre seu dispositivo na Internet.
 
 Execute o aplicativo **android.bat** no diretório **[caminho de instalação do SDK do Android] \ferramentas**. Por padrão, o instalador do Xamarin.Android colocará o SDK do Android no local a seguir em um computador Windows:
 
     C:\Users\[username]\AppData\Local\Android\android-sdk
 
-<a name="Download_the_USB_Drivers" />
 
 ### <a name="download-the-usb-drivers"></a>Baixar os Drivers USB
 
@@ -86,7 +81,7 @@ Todos os outros dispositivos Android devem usar o [driver USB do seu respectivo 
 
 Instale o pacote do **Driver USB do Google** iniciando o Gerenciador de SDK do Android e expandindo a pasta **Extras**, como pode ser visto na captura de tela a seguir:
 
-[![Pacote do Driver USB do Google selecionado](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png)
+[![Pacote do Driver USB do Google selecionado](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png#lightbox)
 
 Marque a caixa **Driver USB do Google** e clique no botão **Instalar**.
 Os arquivos de driver são baixados no seguinte local:
@@ -98,7 +93,6 @@ O caminho padrão para uma instalação do Xamarin.Android é:
     C:\Users\[username]\AppData\Local\Android\android-sdk\extras\google\usb_driver
 
 
-<a name="Installing_the_USB_Driver" />
 
 ### <a name="installing-the-usb-driver"></a>Instalando o Driver USB
 
@@ -122,7 +116,6 @@ Para instalar os drivers no Windows 7:
 
 8.  Clique em **Avançar** para instalar o driver.
 
-<a name="Windows_8" />
 
 ### <a name="installing-unverified-drivers-in-windows-8"></a>Instalando drivers não verificados no Windows 8
 
@@ -140,7 +133,6 @@ Etapas adicionais podem ser necessárias para instalar um driver não verificado
 4.  **Instalar os drivers de dispositivo** – Instale os drivers de dispositivo, conforme descrito acima.
 
 
-<a name="ConnectDevice" />
 
 ## <a name="connect-the-device-to-the-computer"></a>Conectar o dispositivo ao computador
 
@@ -150,7 +142,6 @@ A etapa final é conectar o dispositivo ao computador. Há duas formas de fazer 
 
 -   **WiFi** – É possível conectar um dispositivo Android a um computador sem usar um cabo USB, via WiFi. Essa técnica exige um pouco mais de esforço, mas pode ser útil quando não há nenhum cabo USB ou quando o dispositivo está muito longe de um. A conexão via WiFi será abordada na próxima seção.
 
-<a name="Debug_over_WiFi" />
 
 ### <a name="connecting-over-wifi"></a>Conectando via WiFi
 
@@ -186,7 +177,6 @@ Ao terminar a depuração via WiFi, você poderá redefinir o ADB de volta ao mo
 
     adb devices
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 

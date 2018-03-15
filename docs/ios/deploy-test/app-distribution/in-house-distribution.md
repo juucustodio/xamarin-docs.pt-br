@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 6bb712da5becbe9c19dddf3deb393f0d50cd726b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4da96f3119fb46fbeb22ad3d6c68b3099f6d0698
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="in-house-distribution"></a>Distribuição Interna
 
@@ -56,15 +56,15 @@ Certificados do Programa de Desenvolvedores Corporativos da Apple durão três a
 3. Clique no botão **+** para criar um novo Certificado.
 4. No título *Produção*, selecione **Interna e Ad Hoc**:
 
-   [ ![](in-house-distribution-images/createcertmanually01.png "Selecione Interno e Ad Hoc")](in-house-distribution-images/createcertmanually01.png)
+   [![](in-house-distribution-images/createcertmanually01.png "Selecionar Interna e Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Clique em Continuar e siga as instruções para criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Conjunto de Chaves:
 
-   [ ![](in-house-distribution-images/createcertmanually02.png "Crie uma solicitação de assinatura de certificado por meio do acesso ao conjunto de chaves")](in-house-distribution-images/createcertmanually02.png)
+   [![](in-house-distribution-images/createcertmanually02.png "Criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Conjunto de Chaves")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Depois de criar seu CSR, conforme instruído, clique em Continuar e carregue o CSR na Central de Associados:
 
-   [ ![](in-house-distribution-images/createcertmanually03.png "Carregue o CSR para a Central de Membros")](in-house-distribution-images/createcertmanually03.png)
+   [![](in-house-distribution-images/createcertmanually03.png "Carregar o CSR para a Central de Membros")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Clique em Generate (Gerar) para criar o certificado.
 8. Baixe o certificado concluído e clique duas vezes no arquivo para instalá-lo.
@@ -74,15 +74,15 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 1. Selecione a equipe e clique em *Exibir Detalhes*:
 
-    [ ![](in-house-distribution-images/selectteam.png "Selecione sua equipe")](in-house-distribution-images/selectteam.png)
+    [![](in-house-distribution-images/selectteam.png "Selecionar sua equipe")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Em seguida, clique no botão **Criar** próximo ao **Certificado de Distribuição iOS**:
 
-   [ ![](in-house-distribution-images/selectcert.png "Crie o Certificado de distribuição iOS")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Criar o Certificado de distribuição iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
 2.   Em seguida, clique no botão de **mais (+)** e selecione **iOS App Store**:
 
-   [ ![](in-house-distribution-images/selectcert.png "Selecione a iOS App Store")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Selecione a App Store do iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -105,23 +105,23 @@ Depois de obter os componentes obrigatórios necessários para criar um Perfil d
 
 1. Volte para o Portal de Provisionamento da Apple e selecione **Provisionamento** > **Distribuição**:
 
-   [![](in-house-distribution-images/distribute01.png "Selecione Provisionamento > Distribuição")](in-house-distribution-images/distribute01.png)
+   [![](in-house-distribution-images/distribute01.png "Selecione Provisionamento > Distribuição")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Clique no botão **+** e selecione o tipo de Perfil de Distribuição que você deseja criar como **Interna**:
 
-   [![](in-house-distribution-images/distribute02.png "Crie um Perfil de Distribuição Interna")](in-house-distribution-images/distribute02.png)
+   [![](in-house-distribution-images/distribute02.png "Crie um Perfil de Distribuição Interna")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Clique no botão **Continuar** e selecione a ID do Aplicativo na lista suspensa para a qual você deseja criar um Perfil de Distribuição:
 
-   [![](in-house-distribution-images/distribute03.png "Selecione a ID do aplicativo na lista suspensa")](in-house-distribution-images/distribute03.png)
+   [![](in-house-distribution-images/distribute03.png "Selecione a ID do aplicativo na lista suspensa")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Clique no botão **Continuar** e selecione o certificado de distribuição necessário para assinar o aplicativo:
 
-   [![](in-house-distribution-images/distribute04.png "Selecione o certificado de distribuição necessário para assinar o aplicativo")](in-house-distribution-images/distribute04.png)
+   [![](in-house-distribution-images/distribute04.png "Selecione o certificado de distribuição necessário para assinar o aplicativo")](in-house-distribution-images/distribute04.png#lightbox)
 
 6. Clique no botão **Continuar** e digite um **Nome** para o novo Perfil de Distribuição:
 
-   [![](in-house-distribution-images/distribute06.png "Insira um nome para o novo Perfil de Distribuição")](in-house-distribution-images/distribute06.png)
+   [![](in-house-distribution-images/distribute06.png "Insira um nome para o novo Perfil de Distribuição")](in-house-distribution-images/distribute06.png#lightbox)
 
 7. Clique no botão **Generate (Gerar)** para criar o novo perfil e finalizar o processo.
 
