@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 6625edc1f661e5f9769de82ec48367e9f900e567
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understanding-the-sample"></a>Noções básicas sobre o exemplo
 
@@ -38,47 +38,19 @@ Cada tópico deste guia fornece um link de download para um *diferentes* versão
 
 O projeto PCL para cada aplicativo de exemplo consiste em três pastas principais:
 
-<table>
-    <thead>
-        <tr><td><strong>Pasta</strong></td><td><strong>Finalidade</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Dados</strong></td>
-                        <td>Contém as classes e interfaces usadas para gerenciar itens de dados e se comunicar com o serviço web. No mínimo, isso inclui o <code>TodoItemManager</code> classe, que é exposto por meio de uma propriedade no <code>App</code> classe para chamar operações de serviço web.</td>
-        </tr>
-        <tr>
-            <td><strong>Modelos</strong></td>
-                        <td>Contém as classes de modelo de dados para o aplicativo. No mínimo, isso inclui o <code>TodoItem</code> classe, que modela um único item de dados usados pelo aplicativo. A pasta também pode incluir as classes adicionais usadas para modelar dados de usuário.</td>
-        </tr>
-        <tr>
-            <td><strong>Exibições</strong></td>
-                        <td>Contém as páginas do aplicativo. Isso normalmente consiste de <code>TodoListPage</code> e <code>TodoItemPage</code> classes e as classes adicionais usadas para fins de autenticação.</td>
-                </tr>
-    </tbody>
-</table>
+|Pasta|Finalidade|
+|--- |--- |
+|Dados|Contém as classes e interfaces usadas para gerenciar itens de dados e se comunicar com o serviço web. No mínimo, isso inclui o `TodoItemManager` classe, que é exposto por meio de uma propriedade no `App` classe para chamar operações de serviço web.|
+|Modelos|Contém as classes de modelo de dados para o aplicativo. No mínimo, isso inclui o `TodoItem` classe, que modela um único item de dados usados pelo aplicativo. A pasta também pode incluir as classes adicionais usadas para modelar dados de usuário.|
+|Exibições|Contém as páginas do aplicativo. Isso normalmente consiste de `TodoListPage` e `TodoItemPage` classes e as classes adicionais usadas para fins de autenticação.|
 
 O projeto PCL para cada aplicativo também consiste em um número de arquivos importantes:
 
-<table>
-    <thead>
-      <tr><td><strong>Arquivo</strong></td><td><strong>Finalidade</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td>O <code>Constants</code> classe, que especifica as constantes usadas pelo aplicativo para se comunicar com o serviço web. Constantes exigem atualização para acessar seu serviço de back-end pessoal criado em um provedor.
-        </tr>
-        <tr>
-            <td><strong>ITextToSpeech.cs</strong></td>
-            <td>O <code>ITextToSpeech</code> interface, que especifica que o <code>Speak</code> método deve ser fornecido por qualquer classe de implementação.</td>
-        </tr>
-        <tr>
-          <td><strong>Todo.cs</strong></td>
-          <td>O <code>App</code> classe que é responsável pela instanciação ambos a primeira página que será exibida no aplicativo em cada plataforma e o <code>TodoItemManager</code> classe que é usado para chamar operações de serviço web.</td>
-        </tr>
-    </tbody>
-</table>
+|Arquivo|Finalidade|
+|--- |--- |
+|Constants.cs|O `Constants` classe, que especifica as constantes usadas pelo aplicativo para se comunicar com o serviço web. Constantes exigem atualização para acessar seu serviço de back-end pessoal criado em um provedor.|
+|ITextToSpeech.cs|O `ITextToSpeech` interface, que especifica que o `Speak` método deve ser fornecido por qualquer classe de implementação.|
+|Todo.cs|O `App` classe que é responsável pela instanciação ambos a primeira página que será exibida no aplicativo em cada plataforma e o `TodoItemManager` classe que é usado para chamar operações de serviço web.|
 
 ### <a name="viewing-pages"></a>Exibir páginas
 

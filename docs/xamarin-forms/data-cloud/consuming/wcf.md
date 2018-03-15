@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5cf194dce9bf4d0af23ba663ab00cf94a8a1766c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a02627d5e5b40fe9e7b2fdbd3a6995a2d96fbf03
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Consumir um serviço Web do Windows Communication Foundation (WCF)
 
@@ -41,37 +41,12 @@ As instruções sobre como configurar o serviço WCF podem ser encontradas no ar
 
 O serviço WCF fornece as seguintes operações:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operação</th>
-      <th>Descrição</th>
-      <th>Parâmetros</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>Obter uma lista de itens pendentes</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>Criar um novo item de tarefas pendentes</td>
-      <td>Um XML serializado <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>Atualizar um item de tarefas pendentes</td>
-      <td>Um XML serializado <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>Excluir um item de tarefas pendentes</td>
-      <td>Um XML serializado <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|Operação|Descrição|Parâmetros|
+|--- |--- |--- |
+|GetTodoItems|Obter uma lista de itens pendentes|
+|CreateTodoItem|Criar um novo item de tarefas pendentes|Um XML serializado TodoItem|
+|EditTodoItem|Atualizar um item de tarefas pendentes|Um XML serializado TodoItem|
+|DeleteTodoItem|Excluir um item de tarefas pendentes|Um XML serializado TodoItem|
 
 Para obter mais informações sobre o modelo de dados usado no aplicativo, consulte [modelagem de dados](~/xamarin-forms/data-cloud/walkthrough.md).
 

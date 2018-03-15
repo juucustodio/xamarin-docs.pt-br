@@ -8,17 +8,17 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 756261db8f82198e6c5a4330a663bbd9965e57f7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 10b23975fab8aa87019b9d0fed42decdc6adddfb
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="skiasharp-transforms"></a>Transformações de SkiaSharp
 
 _Saiba mais sobre as transformações de exibição de gráficos SkiaSharp_
 
-SkiaSharp suporta transformações de tradicional de gráficos que são implementadas como métodos para o [ `SKCanvas` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/) objeto. Matematicamente, transformações alteram as coordenadas e tamanhos que você especificar na `SKCanvas` desenho funções como objetos gráficos são renderizados. As transformações são geralmente convenientes para desenhar gráficos repetitivos ou para animação. Algumas técnicas & #x 2014; como girar bitmaps ou texto & #x 2014; não é possível sem o uso de transformações.
+SkiaSharp suporta transformações de tradicional de gráficos que são implementadas como métodos para o [ `SKCanvas` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/) objeto. Matematicamente, transformações alteram as coordenadas e tamanhos que você especificar na `SKCanvas` desenho funções como objetos gráficos são renderizados. As transformações são geralmente convenientes para desenhar gráficos repetitivos ou para animação. Algumas técnicas &mdash; como girar texto ou bitmaps &mdash; não são possíveis, sem o uso de transformações.
 
 Transformações de SkiaSharp suportam as seguintes operações:
 

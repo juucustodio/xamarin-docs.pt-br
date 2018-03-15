@@ -8,17 +8,17 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: facdcb6231b77714d6f5d0c7d496db12f75b1d08
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 921697657397662e92fb72c32e6efcc31745d7f1
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="bitmap-basics"></a>Noções básicas de bitmap
 
 _Carregue os bitmaps de várias fontes e exibi-los._
 
-O suporte de bitmaps em SkiaSharp é muito extenso. Este artigo aborda apenas as Noções básicas de & #x 2014; como carregar bitmaps e como exibi-los:
+O suporte de bitmaps em SkiaSharp é muito extenso. Este artigo aborda apenas os fundamentos &mdash; como carregar bitmaps e como exibi-los:
 
 ![](bitmaps-images/bitmapssample.png "A exibição de dois bitmaps")
 
@@ -207,7 +207,7 @@ O bitmap é ampliado para as dimensões do retângulo, o motivo pelo qual o monk
 
 [![](bitmaps-images/basicbitmaps-small.png "Uma captura de tela tripla da página básica Bitmaps")](bitmaps-images/basicbitmaps-large.png#lightbox "uma tripla captura de tela da página básica Bitmaps")
 
-A terceira imagem & #x 2014; que você pode ver somente se você executar o programa e carregar uma foto de sua própria biblioteca de imagens & #x 2014; também é exibido dentro de um retângulo, mas o retângulo posição e tamanho são ajustados para manter a taxa de proporção do bitmap. Esse cálculo é um pouco mais envolvido porque ele requer o cálculo de um fator com base no tamanho do bitmap e o retângulo de destino de escala e centralizar o retângulo nessa área:
+A terceira imagem &mdash; que você pode ver somente se você executar o programa e carregar uma foto de sua própria biblioteca de imagens &mdash; também é exibido dentro de um retângulo, mas o retângulo posição e tamanho são ajustados para manter a taxa de proporção do bitmap. Esse cálculo é um pouco mais envolvido porque ele requer o cálculo de um fator com base no tamanho do bitmap e o retângulo de destino de escala e centralizar o retângulo nessa área:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

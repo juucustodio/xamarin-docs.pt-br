@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 230c26c2537987f7ca09e28e05ec96186e5f7882
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -44,7 +44,7 @@ As seguintes regras se aplicam ao adicionar qualificadores para um tipo de recur
 Os qualificadores possíveis estão listados abaixo para referência:
 
 - **MCC e MNC** &ndash; o [código de país móveis](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) e, opcionalmente, o [código de rede móvel](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). O cartão SIM fornecerá MCC, enquanto o dispositivo está conectado à rede fornecerá o MNC. Embora seja possível localidades de destino usando o código do país móveis, a abordagem recomendada é usar o qualificador de idioma especificado abaixo. Por exemplo, para recursos de destino para Alemanha, o qualificador seria `mcc262`. Recursos de destino para o T-Mobile nos EUA, o qualificador é `mcc310-mnc026`.
-  Para obter uma lista completa de códigos de país móveis e de rede móvel consulte <http://mcclist.com/>.
+  Para obter uma lista completa de códigos de país móveis e de rede móvel consulte <http://mcc-mnc.com/>.
 
 - **Idioma** &ndash; de duas letras [código do ISO 639-1 idioma](http://en.wikipedia.org/wiki/ISO_639-1) e opcionalmente seguido de duas letras [código de região ISO 3166-alpha 2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   Se ambos os qualificadores são fornecidos, eles serão separados por um `-r`. Por exemplo, para localidades falando em francês do destino, em seguida, o qualificador de `fr` é usado. Para direcionar o francês canadense localidades, a `fr-rCA` será usado. Para obter uma lista completa de códigos de idioma e região, consulte [códigos para a representação de nomes de idiomas](http://www.loc.gov/standards/iso639-2/php/English_list.php) e [nomes de país e elementos de código](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).

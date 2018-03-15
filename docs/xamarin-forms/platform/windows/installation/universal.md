@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
-ms.openlocfilehash: 36865dac6bd2ad13b9d3e286ab18a035c1edb3d8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4a8d2934c4fbdc5b748014cb7dc9a121ade8c37e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="adding-a-universal-windows-platform-uwp-app"></a>Adicionar um aplicativo UWP (plataforma) Universal do Windows
 
@@ -98,7 +98,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
 
 12 . Adicionar qualquer recurso local (por exemplo. arquivos de imagem) dos projetos existentes de plataforma que são necessários.
 
-<a name="troubleshooting"/>
+<a name="troubleshooting" />
 
 ## <a name="troubleshooting"></a>Solução de problemas
 

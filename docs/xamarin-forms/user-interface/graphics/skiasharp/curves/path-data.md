@@ -8,11 +8,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 7d50e5a33020de822f96a8bf2f713a8c5b9d3020
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="svg-path-data"></a>Dados de caminho SVG
 
@@ -423,7 +423,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Algo especial é feito com o ponteiro de segundo, no entanto. Porque o relógio é atualizado a cada 16 milissegundos, o `Millisecond` propriedade do `DateTime` valor potencialmente pode ser usado para animar uma varredura de segundo manualmente em vez de um que move na discretos saltos do segundo a segundo. Mas esse código não permite a movimentação suave. Em vez disso, ele usa o xamarin. Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) e [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animação atenuação funções para um tipo diferente de movimento. Essas funções de atenuação fazer com que a mão de segundo mover uma maneira de mais irregular & #x 2014; remoção de um pouco antes de movê-la e, em seguida, um pouco excesso acertar seu destino, um efeito que Infelizmente não pode ser reproduzido nessas capturas de tela estáticas:
+Algo especial é feito com o ponteiro de segundo, no entanto. Porque o relógio é atualizado a cada 16 milissegundos, o `Millisecond` propriedade do `DateTime` valor potencialmente pode ser usado para animar uma varredura de segundo manualmente em vez de um que move na discretos saltos do segundo a segundo. Mas esse código não permite a movimentação suave. Em vez disso, ele usa o xamarin. Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) e [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animação atenuação funções para um tipo diferente de movimento. Essas funções de atenuação fazer com que a mão de segundo mover de uma maneira mais irregular &mdash; remoção de um pouco antes de movê-la e, em seguida, um pouco excesso acertar seu destino, um efeito que Infelizmente não pode ser reproduzido nessas capturas de tela estáticas:
 
 [![](path-data-images/prettyanalogclock-small.png "Captura de tela de tripla da página bastante o relógio analógico")](path-data-images/prettyanalogclock-large.png#lightbox "tripla captura de tela da página bastante o relógio analógico")
 

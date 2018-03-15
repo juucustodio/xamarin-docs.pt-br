@@ -1,43 +1,37 @@
 ---
-title: "Instalação e requisitos"
+title: "Requisitos e instalação de pastas de trabalho"
+description: Como baixar, instalar e usar pastas de trabalho do Xamarin.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: abc9f9402b55a11e313b9938f07f37e5329b55b6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: abd6ac7d4bce5a180db087488b32c878ed0a416b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="installation-and-requirements"></a>Instalação e requisitos
-
-<script> var inspectorOnLoad = (função) {var primaryTextBase = "Xamarin as pastas de trabalho para"; var secondaryTextBase = "ou baixe para"; var inspectorDownloadUrlMac = "https://dl.xamarin.com/interactive/XamarinInteractive.pkg"; var inspectorDownloadUrlWin = " https://DL.xamarin.com/Interactive/XamarinInteractive.msi";
-
-  var aPrimary = document.getElementById("inspector-download-primary"); var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary; var aWin = aSecondary; var macTextBase = primaryTextBase; var winTextBase = secondaryTextBase;
-
-  if (/win/i.test(navigator.platform.toLowerCase())) { aMac = aSecondary; aWin = aPrimary; macTextBase = secondaryTextBase; winTextBase = primaryTextBase; }
-
-  aMac.href = inspectorDownloadUrlMac; aMac.text = macTextBase + "Mac"; aWin.href = inspectorDownloadUrlWin; aWin.text = winTextBase + "Windows". };
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# <a name="workbooks-installation-and-requirements"></a>Requisitos e instalação de pastas de trabalho
 
 <a name="install" />
 
 ## <a name="download-and-install"></a>Baixar e instalar
 
-<ol>
-  <li>Verifique o <a href="#Requirements"> requisitos</a> abaixo.</li>
-  <li>Baixe e instale o <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin pastas de trabalho para Mac</a> (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">ou de download para o Windows</a>).
-  </li>
-  <li>Iniciar <a href="~/tools/workbooks/workbook.md"> colocando</a> com pastas de trabalho ou experimentar o <a href="https://developer.xamarin.com/workbooks/">exemplos</a>.
-    </li>
-</ol>
+# <a name="windowstabvswin"></a>[Windows](#tab/vswin)
+
+1. Verifique o [requisitos](#requirements) abaixo.
+2. Baixe e instale o [Xamarin pastas de trabalho do Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+3. Iniciar [colocando](~/tools/workbooks/workbook.md) com pastas de trabalho ou experimentar o [exemplos](https://developer.xamarin.com/workbooks)
+
+# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+
+1. Verifique o [requisitos](#Requirements) abaixo.
+2. Baixe e instale o [Xamarin pastas de trabalho para Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+3. Iniciar [colocando](~/tools/workbooks/workbook.md) com pastas de trabalho ou experimentar o [exemplos](https://developer.xamarin.com/workbooks)
+
+-----
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,52 +42,15 @@ document.addEventListener("DOMContentLoaded", inspectorOnLoad);
 
 #### <a name="supported-app-platforms"></a>Plataformas com suporte do aplicativo
 
-<table>
-<thead>
-  <tr>
-    <th>Plataforma de aplicativos</th>
-    <th>Suporte de sistema operacional</th>
-    <th>Observações</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac (unificado)</td>
-    <td>Só tem suporte no Mac</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS (Unified)</td>
-    <td>Suporte para Mac e Windows</td>
-    <td>
-      <ul>
-        <li>Xamarin 11.0 e Xcode 9.0 ou posterior devem ser instalado no Mac.</li>
-        <li>Executar o iOS pastas de trabalho no Windows requer um host de compilação de Mac executando todos os itens acima e o <a href="~/tools/ios-simulator.md">simulador de iOS remoto</a> instalado no Windows.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>Suporte para Mac e Windows</td>
-    <td>Deve usar o emulador do Google, o Visual Studio ou o Xamarin Android, com um dispositivo virtual > = 5.0</td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>Só tem suporte no Windows</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>Console (.NET Framework)</td>
-    <td>Suporte para Mac e Windows</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>Console (.NET Core)</td>
-    <td>Suporte para Mac e Windows</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|Plataforma de aplicativos|Suporte de sistema operacional|Observações|
+|--- |--- |--- |
+|Mac (unificado)|Só tem suporte no Mac|
+|iOS (Unified)|Suporte para Mac e Windows|Xamarin 11.0 e Xcode 9.0 ou posterior devem ser instalado no Mac. Executar o iOS pastas de trabalho no Windows requer um host de compilação de Mac executando todos os itens acima e o [simulador de iOS remoto](~/tools/ios-simulator.md) instalado no Windows.|
+|Android|Suporte para Mac e Windows|Deve usar o emulador do Google, o Visual Studio ou o Xamarin Android, com um dispositivo virtual > = 5.0|
+|WPF|Só tem suporte no Windows|
+|Console (.NET Framework)|Suporte para Mac e Windows|
+|Console (.NET Core)|Suporte para Mac e Windows|
+
 
 ## <a name="reporting-bugs"></a>Relatório de Bugs
 
@@ -108,7 +65,7 @@ Sempre anexe arquivos de log do cliente de pastas de trabalho:
 
 1.4 também inclui a capacidade de selecionar o arquivo de log no localizador (macOS) ou no Explorer (Windows) diretamente no menu principal:
 
-- **Arquivo de Log de revelação ajuda →**
+- **Ajuda > revelar o arquivo de Log**
 
 #### <a name="log-paths-for-workbooks-13-and-earlier"></a>Caminhos para pastas de trabalho 1.3 e anterior do log:
 
@@ -121,23 +78,23 @@ Ele é muito útil para saber detalhes sobre o sistema operacional e Xamarin pro
 
 No menu principal em pastas de trabalho:
 
-* **Ajudar a informações de versão de cópia →**
+* **Ajuda > Copiar informações de versão**
 
 #### <a name="instructions-for-workbooks-13-and-earlier"></a>Instruções para pastas de trabalho 1.3 e anterior:
 
 O Visual Studio para Mac
 
-- **O Visual Studio → sobre informações de cópia do Visual Studio → Mostrar detalhes →**
+- **O Visual Studio > sobre o Visual Studio > Mostrar detalhes > Copiar informações**
 - Cole o relatório de erros
 
 Visual Studio
 
-- **Ajuda → sobre o Visual Studio → copiar informações**
+- **Ajuda > sobre o Visual Studio > Copiar informações**
 - Queremos sabe sua versão do sistema operacional e se você estiver executando o Windows de 32 bits ou 64 bits.
 
 ### <a name="samples"></a>Exemplos
 
-Se você pode anexar ou vincular a `.workbooks` arquivo estiver com problemas, que pode ajudar a resolver o erro mais rapidamente.
+Se você pode anexar ou vincular a **.workbooks** arquivo estiver com problemas, que pode ajudar a resolver o erro mais rapidamente.
 
 ### <a name="devices"></a>Dispositivos
 
@@ -148,7 +105,7 @@ Se você estiver tendo problemas para se conectar a seu iOS ou Android pasta de 
 - Android: Verifique se você está usando uma arquitetura x86 emulador
 - Android: A plataforma de emulador que você está usando? Google Emulator?
   Emulador do Android do Visual Studio? Player de Xamarin Android?
-- iOS no Windows: qual versão do iOS remoto Xamarin simulador você tenha instalado (Verifique `Add/Remove Programs` em `Control Panel`)?
+- iOS no Windows: qual versão do iOS remoto Xamarin simulador você tenha instalado (Verifique **adicionar ou remover programas** na **painel de controle**)?
 - iOS no Windows:. forneça informações de versão de plataforma para o host de compilação do Mac
 - O dispositivo tem conectividade de rede (seleção por meio do navegador da web)?
 
@@ -168,7 +125,7 @@ Se você tiver o Visual Studio de 2017, abra **instalador do Visual Studio**e ex
 
 Se você instalou & Inspetor de pastas de trabalho por conta própria com um instalador baixado, ela precisará ser desinstalado usando o **aplicativos e recursos** página de configurações do sistema no Windows 10 ou via **adicionar ou remover programas**no painel de controle em versões anteriores do Windows.
 
-> **Iniciar → configurações → recursos e aplicativos de sistema →**
+> **Iniciar > Configurações > sistema > aplicativos e recursos**
 
 ![](install-images/windows-remove.png "Pastas de trabalho do Xamarin e Inspetor conforme listado em &quot;aplicativos &amp; recursos&quot;")
 
@@ -197,7 +154,7 @@ Para versões mais antigas, será necessário remover manualmente o seguinte:
 
 ## <a name="downgrading"></a>Fazendo downgrade
 
-O identificador de pacote para `/Applications/Xamarin Workbooks.app` alterado de `com.xamarin.Inspector` para `com.xamarin.Workbooks` na versão 1.4 para facilitar uma divisão futura dos instaladores de pastas de trabalho do Xamarin & Inspetor.
+O identificador de pacote para **aplicativos/Xamarin Workbooks.app** alterado de `com.xamarin.Inspector` para `com.xamarin.Workbooks` na versão 1.4 para facilitar uma divisão futura dos instaladores de pastas de trabalho do Xamarin & Inspetor.
 
 Devido a um erro no instaladores mais antigas, não é possível fazer downgrade versões 1.4 ou mais recentes usando o 1.3.2 ou instaladores mais antigos.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a095dbbb78ad1517791356ae0b7cbeaa94d1336f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Consumir um serviço Web do ASP.NET (ASMX)
 
@@ -39,37 +39,12 @@ As instruções sobre como configurar o serviço ASMX podem ser encontradas no a
 
 O serviço ASMX fornece as seguintes operações:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operação</th>
-      <th>Descrição</th>
-      <th>Parâmetros</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>Obter uma lista de itens pendentes</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>Criar um novo item de tarefas pendentes</td>
-      <td>Um XML serializado <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>Atualizar um item de tarefas pendentes</td>
-      <td>Um XML serializado <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>Excluir um item de tarefas pendentes</td>
-      <td>Um XML serializado <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|Operação|Descrição|Parâmetros|
+|--- |--- |--- |
+|GetTodoItems|Obter uma lista de itens pendentes|
+|CreateTodoItem|Criar um novo item de tarefas pendentes|Um XML serializado TodoItem|
+|EditTodoItem|Atualizar um item de tarefas pendentes|Um XML serializado TodoItem|
+|DeleteTodoItem|Excluir um item de tarefas pendentes|Um XML serializado TodoItem|
 
 Para obter mais informações sobre o modelo de dados usado no aplicativo, consulte [modelagem de dados](~/xamarin-forms/data-cloud/walkthrough.md).
 

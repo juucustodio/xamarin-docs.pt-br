@@ -7,11 +7,11 @@ ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7dbcc093bc467e633f9333bb129adc25372832f3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a3ef515feabfc142f30e7e00a8fed710e733f4dc
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumo do capítulo 3. Aprofundar no texto
 
@@ -91,7 +91,7 @@ Vários métodos de instância permitem modificar uma cor existente para criar u
 
 Por fim, duas propriedades somente leitura estáticas definem valor de cor especial:
 
-- [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/), todos os canais definidas como & #x 2013; 1
+- [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/), todos os canais definido como &ndash;1
 - [`Color.Accent`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Accent/)
 
 `Color.Default` destina-se de aplicar o esquema de cores da plataforma e, consequentemente, tem um significado diferente em diferentes contextos em diferentes plataformas. Por padrão, os esquemas de cores de plataforma são:

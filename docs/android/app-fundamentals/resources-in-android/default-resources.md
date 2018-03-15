@@ -6,12 +6,12 @@ ms.assetid: 762572F0-173A-D994-0510-8F36BEF3D487
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 3d9c747cdf8e43f33b9310ac1156550066b400eb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 5cf5bd38612f0f763e30456b0dd42198a3c0ff06
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="default-resources"></a>Recursos padrão
 
@@ -31,7 +31,7 @@ Uma lista completa dos tipos de recursos é fornecida abaixo:
 -  **anim** &ndash; arquivos XML que descrevem *interpolação* animações. Animações de interpolação são uma série de instruções de animação para realizar transformações no conteúdo de uma rotação de objeto ou de exemplo, de modo de exibição de uma imagem ou aumentando o tamanho do texto. Animações de interpolação são limitadas para exibir somente os objetos.
 
 -  **cor** &ndash; arquivos XML que descrevem uma lista de estado de cores. Para compreender as listas de estado de cores, considere um widget de interface do usuário, como um botão.
-   Pode fazer tiverem estados diferentes, como pressionado ou desabilitado e o botão pode alterar a cor com cada alteração de estado. A lista é expresso em uma lista de estado.
+   Pode ter diferentes estados, como pressionado ou desabilitado e o botão pode alterar a cor com cada alteração de estado. A lista é expresso em uma lista de estado.
 
 -  **drawable** &ndash; Drawable recursos são um conceito geral de elementos gráficos que podem ser compilados no aplicativo e, em seguida, acessados por chamadas de API ou referenciados por outros recursos do XML.
    Alguns exemplos de drawables são arquivos de bitmap (. png,. gif,. jpg), especiais bitmaps redimensionáveis conhecido como [nove Patches](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch), estado lista genéricas formas definidas no XML, etc.

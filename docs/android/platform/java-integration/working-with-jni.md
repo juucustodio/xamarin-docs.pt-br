@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: e9a6f44637b77bf53c3cab00ac5051e6a2f27386
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f14d456cba66142c51e0755cdfd3c6795bd1cf73
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="working-with-jni"></a>Trabalhando com JNI
 
@@ -154,7 +154,7 @@ Observe que a classe base é preservada e declarações de métodos nativos são
 
 Normalmente, o xamarin gera automaticamente o código de Java que compreende ACW; Essa geração baseia-se nos nomes de classe e método quando uma classe derivada de uma classe Java e substitui os métodos de Java existentes. No entanto, em alguns cenários, a geração de código não é adequada, como descrito abaixo:
 
--   Ação de suporte do Android nomes em atributos de layout de xml, por exemplo o [android: onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) atributo XML. Quando for especificado, a instância de exibição inflated tente pesquisar o método de Java.
+-   Android dá suporte a nomes de ação em atributos de layout de XML, por exemplo o [android: onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) atributo XML. Quando for especificado, a instância de exibição inflated tenta pesquisar o método de Java.
 
 -   O [Java.IO. Serializable](http://developer.android.com/reference/java/io/Serializable.html) interface requer `readObject` e `writeObject` métodos. Desde que eles não são membros desta interface, nossa implementação gerenciada correspondente não expõe esses métodos para o código de Java.
 

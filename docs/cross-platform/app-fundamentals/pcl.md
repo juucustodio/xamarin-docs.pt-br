@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e81ecd10f4dfc101cf63ba9d052d15b51a367ee5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5dd77232dc992880b18393c740b54c7784e4d049
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introdução às bibliotecas de classes portátil
 
@@ -39,94 +39,13 @@ Quando você cria uma biblioteca de classes portátil, no entanto, você pode es
 
 A tabela a seguir mostra alguns dos recursos que variam por plataforma .NET. Para escrever um assembly PCL sempre é executado em dispositivos/plataformas específicas você simplesmente escolher qual suporte é necessário quando você cria o projeto.
 
-<table border="1" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-Recurso </td>
-      <td>
-.NET Framework </td>
-      <td>
-Aplicativos UWP </td>
-      <td>
-Silverlight </td>
-      <td>
-Windows Phone </td>
-      <td>
-Xamarin </td>
-    </tr>
-    <tr>
-      <td>
-Núcleo </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-    </tr>
-    <tr>
-      <td>
-LINQ </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-    </tr>
-    <tr>
-      <td>
-IQueryable </td>
-       <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-7.5 + </td>
-      <td>
-S </td>
-    </tr>
-    <tr>
-      <td>
-Serialização </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-S </td>
-    </tr>
-    <tr>
-      <td>
-Anotações de dados </td>
-      <td>
-4.0.3 + </td>
-      <td>
-S </td>
-      <td>
-S </td>
-      <td>
-      </td>
-      <td>
-S </td>
-    </tr>
-  </tbody>
-</table>
+|Recurso|.NET Framework|Aplicativos UWP|Silverlight|Windows Phone|Xamarin|
+|---|---|---|---|---|---|
+|Núcleo|S|S|S|S|S|
+|LINQ|S|S|S|S|S|
+|IQueryable|S|S|S|7.5 +|S|
+|Serialização|S|S|S|S|S|
+|Anotações de dados|4.0.3 +|S|S||S|
 
 A coluna Xamarin reflete o fato de que todos os perfis que acompanha o Visual Studio oferece suporte ao xamarin e xamarin, e a disponibilidade de recursos na biblioteca que você criar será limitada somente pelas outras plataformas que você escolher para dar suporte.
 

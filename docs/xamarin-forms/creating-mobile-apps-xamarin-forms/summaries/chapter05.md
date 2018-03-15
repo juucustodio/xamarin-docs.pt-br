@@ -7,11 +7,11 @@ ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1df1751c55c6a031bf9f26d774b739f4ca83fa91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0c61727e90a03d618a7423e5b865a7fcc9e0b399
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumo do capítulo 5. Lidar com tamanhos
 
@@ -42,7 +42,7 @@ Em resumo, um programador xamarin. Forms direcionado para telefones e tablets po
 - 160 unidades por polegada, equivalente a
 - 64 unidades para o centímetro
 
-Somente leitura [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) e [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) propriedades definidas por `VisualElement` ter padrão "simular" valores de & #x 2013; 1. Somente quando um elemento foi dimensionado e acomodado em layout essas propriedades refletirá o tamanho real do elemento em unidades independentes de dispositivo. Esse tamanho inclui qualquer `Padding` definida no elemento, mas não o `Margin`.
+Somente leitura [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) e [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) propriedades definidas por `VisualElement` ter padrão "simular" valores de &ndash;1. Somente quando um elemento foi dimensionado e acomodado em layout essas propriedades refletirá o tamanho real do elemento em unidades independentes de dispositivo. Esse tamanho inclui qualquer `Padding` definida no elemento, mas não o `Margin`.
 
 Um elemento visual dispara o [ `SizeChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.SizeChanged/) evento quando seu `Width` ou `Height` foi alterado. O [ **WhatSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) exemplo usa esse evento para exibir o tamanho da tela do programa.
 
@@ -75,7 +75,7 @@ O **EstimatedFontSize** programa e o **FitToSizeClock** programa ambos contêm u
 
 ## <a name="empirically-fitting-text"></a>Empiricamente ajustando o texto
 
-Outra maneira de ajustar o texto a um retângulo é empiricamente calcular o tamanho do texto renderizado e ajustá-lo para cima ou para baixo. O programa nas chamadas catálogo [ `GetSizeRequest` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/) em um elemento visual para obter o tamanho do elemento desejado. Que método foi substituído e programas em vez disso, devem chamar [`Measure`] (/ api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/).
+Outra maneira de ajustar o texto a um retângulo é empiricamente calcular o tamanho do texto renderizado e ajustá-lo para cima ou para baixo. O programa nas chamadas catálogo [ `GetSizeRequest` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/) em um elemento visual para obter o tamanho do elemento desejado. Que método foi substituído e programas em vez disso, devem chamar [ `Measure` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/).
 
 Para uma `Label`, o primeiro argumento deve ser a largura do contêiner (para permitir o encapsulamento), enquanto o segundo argumento deve ser definido para `Double.PositiveInfinity` para tornar a altura irrestrita. O [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) demonstra essa técnica.
 

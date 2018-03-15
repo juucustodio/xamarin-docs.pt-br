@@ -7,12 +7,12 @@ ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 64961e9c45c28ede4cc84f7b978da565be4426d9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 823fad163e837adab5490446c23ab2f492679114
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificações remotas com o Google Cloud Messaging
 
@@ -507,32 +507,12 @@ No XML acima, alterar *YOUR_PACKAGE_NAME* para o nome do pacote para o seu proje
 
 Vamos examinar o que faz cada configuração neste XML:
 
-<table>
-    <thead>
-        <tr>
-            <th>Configuração</th>
-            <th>Descrição</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>com.google.android.gms.gcm.GcmReceiver</code></td>
-            <td>Declara que o nosso aplicativo implementa um receptor do GCM que captura e processa mensagens de notificação por push.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.permission.SEND</code></td>
-            <td>Declara que os servidores do GCM só podem enviar mensagens diretamente para o aplicativo.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.intent.RECEIVE</code></td> 
-            <td>Filtro de intenção publicidade nosso aplicativo manipula mensagens de difusão do GCM.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.intent.REGISTRATION</code></td>
-            <td>Filtro intenção publicidade nosso aplicativo manipula novas tentativas de registro (ou seja, implementamos um serviço de escuta de ID de instância).</td>
-        </tr>
-    </tbody>
-</table>
+|Configuração|Descrição|
+|---|---|
+|`com.google.android.gms.gcm.GcmReceiver`|Declara que o nosso aplicativo implementa um receptor do GCM que captura e processa mensagens de notificação por push.|
+|`com.google.android.c2dm.permission.SEND`|Declara que os servidores do GCM só podem enviar mensagens diretamente para o aplicativo.|
+|`com.google.android.c2dm.intent.RECEIVE`|Filtro de intenção publicidade nosso aplicativo manipula mensagens de difusão do GCM.|
+|`com.google.android.c2dm.intent.REGISTRATION`|Filtro intenção publicidade nosso aplicativo manipula novas tentativas de registro (ou seja, implementamos um serviço de escuta de ID de instância).|
 
 Como alternativa, você pode decorar `GcmListenerService` com esses atributos em vez de especificá-los no XML; aqui é especificá-los no **AndroidManifest.xml** para que os exemplos de código são mais fáceis de seguir. 
 

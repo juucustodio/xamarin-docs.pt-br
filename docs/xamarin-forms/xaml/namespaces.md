@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2017
-ms.openlocfilehash: b0afba90dab5cba4bad385f8d6447d8b83c1de3d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55b83151e9c345096aeb0bfdd686d50c5fde62fd
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xaml-namespaces"></a>Namespaces XAML
 
@@ -38,40 +38,14 @@ XAML usa prefixos para declarar namespaces não padrão, com o prefixo que está
 
 A tabela a seguir descreve o `x` atributos do namespace xamarin. Forms com suporte:
 
-<table>
- <thead>
-   <tr>
-     <td><strong>Construir</strong></td>
-     <td><strong>Descrição</strong></td>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td><code>x:Arguments</code></td>
-     <td>Especifica argumentos de construtor para um construtor não padrão, ou para uma declaração de objeto do método de fábrica.</td>
-   </tr>
-   <tr>
-     <td><code>x:Class</code></td>
-     <td>Especifica o nome de namespace e classe para uma classe definida em XAML. O nome da classe deve corresponder ao nome de classe do arquivo code-behind. Observe que esse constructo só pode aparecer no elemento raiz de um arquivo XAML.</td>
-   </tr>
-   <tr>
-     <td><code>x:FactoryMethod</code></td>
-     <td>Especifica um método de fábrica que pode ser usado para inicializar um objeto.</td>
-   </tr>
-   <tr>
-     <td><code>x:Key</code></td>
-     <td>Especifica uma chave exclusiva definida pelo usuário para cada recurso em um <code>ResourceDictionary</code>. O valor da chave é usado para recuperar o recurso XAML e normalmente é usado como argumento para o <code>StaticResource</code> extensão de marcação.</td>
-   </tr>
-   <tr>
-     <td><code>x:Name</code></td>
-     <td>Especifica um nome de objeto de tempo de execução para o elemento XAML. Configuração <code>x:Name</code> é semelhante ao declarar uma variável no código.</td>
-   </tr>
-   <tr>
-     <td><code>x:TypeArguments</code></td>
-     <td>Especifica os argumentos de tipo genérico para o construtor de um tipo genérico.</td>
-   </tr>
- </tbody>
-</table>
+|Constructo|Descrição|
+|--- |--- |
+|`x:Arguments`|Especifica argumentos de construtor para um construtor não padrão, ou para uma declaração de objeto do método de fábrica.|
+|`x:Class`|Especifica o nome de namespace e classe para uma classe definida em XAML. O nome da classe deve corresponder ao nome de classe do arquivo code-behind. Observe que esse constructo só pode aparecer no elemento raiz de um arquivo XAML.|
+|`x:FactoryMethod`|Especifica um método de fábrica que pode ser usado para inicializar um objeto.|
+|`x:Key`|Especifica uma chave exclusiva definida pelo usuário para cada recurso em um `ResourceDictionary`. O valor da chave é usado para recuperar o recurso XAML e normalmente é usado como argumento para o `StaticResource` extensão de marcação.|
+|`x:Name`|Especifica um nome de objeto de tempo de execução para o elemento XAML. Configuração `x:Name` é semelhante ao declarar uma variável no código.|
+|`x:TypeArguments`|Especifica os argumentos de tipo genérico para o construtor de um tipo genérico.|
 
 Para obter mais informações sobre o `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` atributos, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
 

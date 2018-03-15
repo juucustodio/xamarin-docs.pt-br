@@ -7,11 +7,11 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d7a75ce0303030d53315b5e698fc604a910c969c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumo do capítulo 28. Local e mapas
 
@@ -29,7 +29,7 @@ Um ângulo medido Norte ou Sul, do Equador do Centro de marcas de terra linhas d
 
 ### <a name="longitude-and-meridians"></a>Longitude e os meridianos
 
-Metades de círculos ótimo do polo Norte ao polo Sul são linhas de longitude igual, também conhecido como *meridianos*. Esses são relativas do Meridiano de Greenwich, Inglaterra. Por convenção, longitudes Leste do Meridiano são valores positivos de 0 graus a 180 graus e longitudes Oeste do Meridiano valores negativos de 0 graus para & #x 2013; 180 graus.
+Metades de círculos ótimo do polo Norte ao polo Sul são linhas de longitude igual, também conhecido como *meridianos*. Esses são relativas do Meridiano de Greenwich, Inglaterra. Por convenção, longitudes Leste do Meridiano são valores positivos de 0 graus a 180 graus e longitudes Oeste do Meridiano valores negativos de 0 graus &ndash;180 graus.
 
 ### <a name="the-equirectangular-projection"></a>A projeção equirretangular
 

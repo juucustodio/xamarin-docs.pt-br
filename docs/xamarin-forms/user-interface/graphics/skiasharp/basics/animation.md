@@ -8,11 +8,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: e18ef7c77c1d5c93d53882233c65a56e5567fcd7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 347ecf72356915714200835263e38519c1ad8a13
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="basic-animation"></a>Animação básica
 
@@ -107,7 +107,7 @@ async Task AnimationLoop()
 
 ```
 
-O `while` loop começa obtendo o ciclo de tempo a partir de `Slider`. Este é um tempo em segundos, por exemplo, 5. A segunda instrução calcula um valor de `t` para *tempo*. Para uma `cycleTime` de 5, `t` aumenta de 0 para 1 a cada 5 segundos. O argumento para o `Math.Sin` função nos intervalos segunda instrução de 0 a 2π a cada 5 segundos. O `Math.Sin` função retorna um valor que varia de 0 como 1 para 0 e, em seguida, para & #x 2013; 1 e 0 a cada 5 segundos, mas com valores que são alterados com mais lentidão quando o valor for próximo a 1 ou -1. O valor 1 é adicionado para que os valores são sempre positivos e, em seguida, ele está dividido por 2, para que os valores varia de ½ como 1 para ½ como 0 para ½, mas mais lenta quando o valor é em torno de 1 e 0. Isso é armazenado na `scale` campo e o `SKCanvasView` é invalidado.
+O `while` loop começa obtendo o ciclo de tempo a partir de `Slider`. Este é um tempo em segundos, por exemplo, 5. A segunda instrução calcula um valor de `t` para *tempo*. Para uma `cycleTime` de 5, `t` aumenta de 0 para 1 a cada 5 segundos. O argumento para o `Math.Sin` função nos intervalos segunda instrução de 0 a 2π a cada 5 segundos. O `Math.Sin` função retorna um valor entre 0 e 1 volta para 0 e, em seguida, &ndash;1 e 0 a 5 segundos, mas com valores que são alterados com mais lentidão quando o valor for próximo a 1 ou -1. O valor 1 é adicionado para que os valores são sempre positivos e, em seguida, ele está dividido por 2, para que os valores varia de ½ como 1 para ½ como 0 para ½, mas mais lenta quando o valor é em torno de 1 e 0. Isso é armazenado na `scale` campo e o `SKCanvasView` é invalidado.
 
 O `PaintSurface` método utiliza `scale` para calcular os dois eixos da elipse:
 

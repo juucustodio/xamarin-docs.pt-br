@@ -8,11 +8,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 39e2084bf9ca888d6e39fc5f02a455d3500e568c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
@@ -44,7 +44,7 @@ O `SKCanvas` classe define quatro `Scale` métodos. A primeira [ `Scale` ](https
 public void Scale (Single s)
 ```
 
-Isso é conhecido como *isotropic* dimensionamento & #x 2014; dimensionamento que é o mesmo em ambas as direções. Dimensionamento Isotropic preserva a taxa de proporção do objeto.
+Isso é conhecido como *isotropic* dimensionamento &mdash; escala que é o mesmo em ambas as direções. Dimensionamento Isotropic preserva a taxa de proporção do objeto.
 
 A segunda [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) método permite que você especifique valores diferentes para a expansão horizontal e vertical:
 
@@ -168,7 +168,7 @@ O canto superior esquerdo do retângulo arredondado é posicionado `margin` pixe
 
 [![](scale-images/centeredscale-small.png "Tripla captura de tela da página de escala centralizada")](scale-images/centeredscale-large.png#lightbox "tripla captura de tela da página de escala centralizada")
 
-O `Slider` elementos deste programa têm um intervalo de & #x 2013; 10 a 10. Como você pode ver, valores negativos de vertical escala (como no Android tela no centro) causam objetos Inverter em torno do eixo horizontal que passa através do centro da escala. Valores negativos de horizontal para escala (como a tela do Windows à direita) causam objetos Inverter em torno do eixo vertical que passa através do centro da escala.
+O `Slider` elementos deste programa tem um intervalo de &ndash;10 a 10. Como você pode ver, valores negativos de vertical escala (como no Android tela no centro) causam objetos Inverter em torno do eixo horizontal que passa através do centro da escala. Valores negativos de horizontal para escala (como a tela do Windows à direita) causam objetos Inverter em torno do eixo vertical que passa através do centro da escala.
 
 Esta versão quarto do `Scale` método é realmente um atalho. Talvez você queira ver como isso funciona, substituindo o `Scale` método nesse código com o seguinte:
 

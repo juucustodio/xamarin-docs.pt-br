@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: f8b748ad1b57218d1e8aab11bdc1037cf3cfa14c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 98c38001ea7751c419d4be5b0f68339b06ec656f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-restful-web-service"></a>Consumir um serviço Web RESTful
 
@@ -49,42 +49,12 @@ As instruções sobre como configurar o serviço REST podem ser encontradas no a
 
 O serviço REST é gravado usando o ASP.NET Core e fornece as seguintes operações:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operação</th>
-      <th>Método HTTP</th>
-      <th>URI relativo</th>
-      <th>Parâmetros</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Obter uma lista de itens pendentes</td>
-      <td>OBTER</td>
-      <td>/API todoitems /</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Criar um novo item de tarefas pendentes</td>
-      <td>POSTAR</td>
-      <td>/API todoitems /</td>
-      <td>Um formato JSON <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>Atualizar um item de tarefas pendentes</td>
-      <td>PUT</td>
-      <td>/API todoitems /</td>
-      <td>Um formato JSON <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>Excluir um item de tarefas pendentes</td>
-      <td>DELETE</td>
-      <td>/api/todoitems/{id}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+|Operação|Método HTTP|URI relativo|Parâmetros|
+|--- |--- |--- |--- |
+|Obter uma lista de itens pendentes|OBTER|/API todoitems /|
+|Criar um novo item de tarefas pendentes|POSTAR|/API todoitems /|JSON formatado TodoItem|
+|Atualizar um item de tarefas pendentes|PUT|/API todoitems /|JSON formatado TodoItem|
+|Excluir um item de tarefas pendentes|DELETE|/api/todoitems/{id}|
 
 A maioria dos URIs incluem o `TodoItem` ID no caminho. Por exemplo, para excluir o `TodoItem` cuja ID é `6bb8a868-dba1-4f1a-93b7-24ebce87e243`, o cliente envia uma solicitação de exclusão para `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`. Para obter mais informações sobre o modelo de dados usado no aplicativo de amostra, consulte [modelagem de dados](~/xamarin-forms/data-cloud/walkthrough.md).
 

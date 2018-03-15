@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d2e600ccc85f6e72e7f913e7ffb501bf62ff69a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="path-basics"></a>Noções básicas de caminho
 
@@ -115,7 +115,7 @@ Como você pode ver, a primeira delimitação obviamente é uma série de três 
 - `AddPath` Para adicionar outro caminho para o caminho atual
 - [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) Para adicionar outro caminho na ordem inversa
 
-Lembre-se de que uma `SKPath` objeto define apenas uma geometria & #x 2014; uma série de pontos e conexões. Somente quando um `SKPath` é combinado com um `SKPaint` objeto é o caminho renderizado com uma cor específica, largura do traço e assim por diante. Além disso, tenha em mente que o `SKPaint` objeto passado para o `DrawPath` método define características de todo o caminho. Se você quiser desenhar algo que exigem várias cores, você deve usar um caminho separado para cada cor.
+Lembre-se de que uma `SKPath` objeto define apenas uma geometria &mdash; uma série de pontos e conexões. Somente quando um `SKPath` é combinado com um `SKPaint` objeto é o caminho renderizado com uma cor específica, largura do traço e assim por diante. Além disso, tenha em mente que o `SKPaint` objeto passado para o `DrawPath` método define características de todo o caminho. Se você quiser desenhar algo que exigem várias cores, você deve usar um caminho separado para cada cor.
 
 Assim como a aparência de início e de término de uma linha é definida por um limite de traço, a aparência da conexão entre duas linhas é definida por um *junção traço*. Você pode especificar isso definindo o [ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) propriedade de `SKPaint` a um membro do [ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) enumeração:
 

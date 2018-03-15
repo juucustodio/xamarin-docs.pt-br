@@ -1,5 +1,6 @@
 ---
-title: "Instalação e requisitos"
+title: "Requisitos e instalação de Inspetor"
+description: Como baixar, instalar e usar o Inspetor de Xamarin.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
@@ -7,35 +8,28 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: a587935e35882ed1dc68817fbbe1ae3e91200f29
-ms.sourcegitcommit: 0bdcd00b64d581d4c5179bc39ded4018c9374229
+ms.openlocfilehash: a2e6f254c77ac099b5700543db5763b8bbb44fef
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="installation-and-requirements"></a>Instalação e requisitos
-
-<script> var inspectorOnLoad = (função) {var primaryTextBase = "Pastas de trabalho do Xamarin & Inspetor para"; var secondaryTextBase = "ou baixe para"; var inspectorDownloadUrlMac = "https://dl.xamarin.com/interactive/XamarinInteractive.pkg"; var inspectorDownloadUrlWin = "https://dl.xamarin.com/interactive/XamarinInteractive.msi";
-
-  var aPrimary = document.getElementById("inspector-download-primary"); var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary; var aWin = aSecondary; var macTextBase = primaryTextBase; var winTextBase = secondaryTextBase;
-
-  if (/win/i.test(navigator.platform.toLowerCase())) { aMac = aSecondary; aWin = aPrimary; macTextBase = secondaryTextBase; winTextBase = primaryTextBase; }
-
-  aMac.href = inspectorDownloadUrlMac; aMac.text = macTextBase + "Mac"; aWin.href = inspectorDownloadUrlWin; aWin.text = winTextBase + "Windows". };
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# <a name="inspector-installation-and-requirements"></a>Requisitos e instalação de Inspetor
 
 ## <a name="download-and-installation"></a>Download e instalação
 
-<ol>
-  <li>Baixe e instale o <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">& Inspetor para Mac de pastas de trabalho do Xamarin</a> (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">ou de download para o Windows</a>).
-  </li>
-  <li><a href="~/tools/inspector/inspect.md"> Inspecione o seu próprio aplicativo!</a>
-    </li>
-</ol>
+
+# <a name="windowstabvswin"></a>[Windows](#tab/vswin)
+
+1. Baixe e instale o [pastas de trabalho do Xamarin & Inspetor para Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+2. [Inspecione o seu próprio aplicativo!](~/tools/inspector/inspect.md)
+
+# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+
+1. Baixe e instale o [pastas de trabalho do Xamarin & Inspetor para Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+2. [Inspecione o seu próprio aplicativo!](~/tools/inspector/inspect.md)
+
+-----
 
 ## <a name="requirements"></a>Requisitos
 
@@ -57,43 +51,13 @@ Inspeção de aplicativo em tempo real está disponível para os clientes corpor
 
 ### <a name="supported-app-platforms"></a>Plataformas com suporte do aplicativo
 
-<table>
-<thead>
-  <tr>
-    <th>Plataforma de aplicativos</th>
-    <th>Suporte IDE</th>
-    <th>Observações</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac (unificado)</td>
-    <td>Só tem suporte no Mac</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS (Unified)</td>
-    <td>Com suporte no Visual Studio e XS</td>
-    <td>Inspecionar os aplicativos do iOS do Windows requer a mesma versão do Inspetor também sejam instalados no host de compilação de Mac.</td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>Com suporte no Visual Studio e XS</td>
-    <td>
-      <ul>
-        <li>Devem ter como destino Android > = 4.0.3</li>
-        <li>Deve ter fastdev habilitado</li>
-        <li>Deve usar o Google, o Visual Studio ou o Xamarin Android emuladores. Android 7 emuladores não podem permitir a inspeção neste momento.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>Só tem suporte no Visual Studio no Windows</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|Plataforma de aplicativos|Suporte IDE|Observações|
+|--- |--- |--- |
+|Mac (unificado)|Só tem suporte no Mac|
+|iOS (Unified)|Com suporte no Visual Studio e XS|Inspecionar os aplicativos do iOS do Windows requer a mesma versão do Inspetor também sejam instalados no host de compilação de Mac.|
+|Android|Com suporte no Visual Studio e XS|Devem ter como destino Android > = 4.0.3, com **fastdev** habilitado.<br />Deve usar o Google, o Visual Studio ou o Xamarin Android emuladores. Android 7 emuladores não podem permitir a inspeção neste momento.|
+|WPF|Só tem suporte no Visual Studio no Windows|
+
 
 <a name="reporting-bugs" />
 
@@ -101,7 +65,7 @@ Inspeção de aplicativo em tempo real está disponível para os clientes corpor
 
 Bugs devem ser relatados diretamente por meio do Visual Studio:
 
-- **Ajuda → enviar comentários → relatar um problema**
+- **Ajuda > Enviar Comentários > relatar um problema**
 
 Inclua todas as informações a seguir:
 
@@ -111,12 +75,12 @@ Essas informações são essenciais.
 
 O Visual Studio para Mac
 
-- **O Visual Studio → sobre informações de cópia do Visual Studio → Mostrar detalhes →**
+- **O Visual Studio > sobre o Visual Studio > Mostrar detalhes > Copiar informações**
 - Cole o relatório de erros
 
 Xamarin Studio
 
-- **Xamarin Studio → sobre Xamarin Studio → Mostrar detalhes → copiar informações**
+- **Xamarin Studio > sobre o Xamarin Studio > Mostrar detalhes > Copiar informações**
 - Cole o relatório de erros
 
 Visual Studio
@@ -135,7 +99,7 @@ Cliente de Inspetor
 
 1.4 também inclui a capacidade de selecionar o arquivo de log no localizador (macOS) ou no Explorer (Windows) diretamente no menu principal:
 
-- **Arquivo de Log de revelação ajuda →**
+- **Ajuda > revelar o arquivo de Log**
 
 O Visual Studio para Mac
 
@@ -148,11 +112,11 @@ Xamarin Studio
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- O conteúdo do Visual Studio `Output` painel pode também ser informativo.
+- O conteúdo do Visual Studio **saída** painel pode também ser informativo.
 
 ### <a name="project-settings"></a>Configurações de projeto
 
-Se você pode anexar o `.csproj` para o projeto que você está tentando inspecionar, seria extremamente úteis. Isso é mais fácil do que perguntando sobre configurações individuais.
+Se você pode anexar o **. csproj** para o projeto que você está tentando inspecionar, seria extremamente úteis. Isso é mais fácil do que perguntando sobre configurações individuais.
 
 Confirme também que você está na configuração de depuração.
 
@@ -177,13 +141,13 @@ Dependendo de como você adquiriu & Inspetor de pastas de trabalho, você terá 
 
 #### <a name="visual-studio-installer"></a>Instalador do Visual Studio
 
-Se você tiver o Visual Studio de 2017, abra "Instalador do Visual Studio" e procure "Xamarin pastas de trabalho" em "Componentes individuais". Se estiver marcada, desmarque-a e, em seguida, clique em "Modificar" para desinstalar.
+Se você tiver o Visual Studio de 2017, abra **instalador do Visual Studio**e examinar **componentes individuais** para **pastas de trabalho do Xamarin**. Se estiver marcada, desmarque-a e, em seguida, clique em "Modificar" para desinstalar.
 
 #### <a name="system-uninstall"></a>Desinstalação do sistema
 
 Se você instalou & Inspetor de pastas de trabalho por conta própria com um instalador baixado, ela precisará ser desinstalado usando o **aplicativos e recursos** página de configurações do sistema no Windows 10 ou via **adicionar ou remover programas**no painel de controle em versões anteriores do Windows.
 
-> **Iniciar → configurações → recursos e aplicativos de sistema →**
+> **Iniciar > Configurações > sistema > aplicativos e recursos**
 
 ![](install-images/windows-remove.png "Pastas de trabalho do Xamarin e Inspetor conforme listado no 'Aplicativos e recursos'")
 

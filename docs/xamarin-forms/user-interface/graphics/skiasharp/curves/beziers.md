@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de Bézier
 
@@ -20,7 +20,7 @@ _Explorar como usar SkiaSharp para renderizar cúbicas, quadráticas e conic cur
 
 A curva de Bézier é nomeada após Pierre Bézier (1910 – 1999), um engenheiro de francês na empresa automotivo Renault, que usou a curva para o design auxiliado por computador de corpos de carro.
 
-Curvas de Bézier são conhecidas por ser adequada para design interativo: eles são bem comportamento & #x 2014; em outras palavras, não existem singularities que causam a curva para se tornar complicada ou infinita & #x 2014; e são geralmente esteticamente agradáveis. Contornos de caracteres de fontes com base em computador geralmente são definidos com curvas de Bézier:
+Curvas de Bézier são conhecidas por ser adequada para design interativo: estiverem com bom comportamento &mdash; em outras palavras, não existem singularities que causam a curva para se tornar complicada ou infinita &mdash; e geralmente são satisfatória esteticamente . Contornos de caracteres de fontes com base em computador geralmente são definidos com curvas de Bézier:
 
 ![](beziers-images/beziersample.png "Uma curva de Bézier de exemplo")
 
@@ -411,7 +411,7 @@ No entanto, a forma de uma curva de Bézier quadrática não é elíptica, por i
 
 ## <a name="the-conic-bzier-curve"></a>A curva de Bézier Conic
 
-A curva de Bézier conic & #x 2014; também conhecido como a curva de Bézier quadrática racional & #x 2014; é uma adição relativamente recente para a família de curvas de Bézier. Como a curva de Bézier quadrática, a curva de Bézier quadrática racional envolve um ponto inicial, um ponto de extremidade e o ponto de um controle. Mas a curva de Bézier quadrática racional também exige um *peso* valor. Ele é chamado um *racional* quadrática porque as fórmulas paramétricos envolvem taxas.
+A curva de Bézier conic &mdash; também conhecido como a racional curva Bézier quadrática &mdash; é uma adição relativamente recente para a família de curvas de Bézier. Como a curva de Bézier quadrática, a curva de Bézier quadrática racional envolve um ponto inicial, um ponto de extremidade e o ponto de um controle. Mas a curva de Bézier quadrática racional também exige um *peso* valor. Ele é chamado um *racional* quadrática porque as fórmulas paramétricos envolvem taxas.
 
 As equações paramétricos para X e Y são taxas que compartilham o mesmo denominador. Aqui está a equação para o denominador para *t* variando de 0 a 1 e um valor de peso de *w*:
 
@@ -425,7 +425,7 @@ x(t) = ((1 – t)²x₀ + 2wt(1 – t)x₁ + t²x₂)) ÷ d(t)
 
 y(t) = ((1 – t) ²y₀ + 2wt (1 – t) y₁ + t²y₂)) ÷ d(t)
 
-Também são chamadas de curvas de Bézier quadráticas racional *conics* porque podem representar exatamente segmentos de qualquer seção conic & #x 2014; hipérboles, parábolas, elipses e círculos.
+Também são chamadas de curvas de Bézier quadráticas racional *conics* porque podem representar exatamente segmentos de qualquer seção conic &mdash; hipérboles, parábolas, elipses e círculos.
 
 Para adicionar uma curva de Bézier quadrática razoável em um caminho, use o [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) método ou o [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) sobrecarga com separado `x` e `y` coordenadas:
 

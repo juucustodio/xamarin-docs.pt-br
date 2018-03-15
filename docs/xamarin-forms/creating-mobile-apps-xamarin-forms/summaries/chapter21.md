@@ -7,11 +7,11 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a40b4f00fd2a0dd3f61c4882a2ef25b8eb68a3a5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumo do capítulo 21. Transformações
 
@@ -19,9 +19,9 @@ Um modo de exibição do xamarin. Forms aparece na tela em um local e um tamanho
 
 Xamarin. Forms oferece suporte a três tipos básicos de transformações:
 
-- *Tradução* & #x 2014; Deslocar um elemento horizontal ou verticalmente
-- *Escala* & #x 2014; alterar o tamanho de um elemento
-- *Rotação* & #x 2014; ativar um elemento em torno de um ponto ou um eixo
+- *Tradução* &mdash; Deslocar um elemento horizontal ou verticalmente
+- *Escala* &mdash; alterar o tamanho de um elemento
+- *Rotação* &mdash; ativar um elemento em torno de um ponto ou um eixo
 
 Xamarin. Forms, a escala é isotropic; ele afeta a largura e altura uniformemente. Rotação tem suporte tanto na superfície bidimensional da tela e no espaço 3D. Não há nenhuma transformação de distorção (ou absoluta) e nenhuma transformação de matriz generalizado.
 

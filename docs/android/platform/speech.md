@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 7c38ebb6b482f4097a4977accecc4a230d3f3ed3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e8e56afbdf0b68ecc49a89b08b2e67a9715f2aef
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="android-speech"></a>Fala de Android
 
@@ -128,11 +128,11 @@ Em grande parte, dispositivos Android vêm com o padrão de serviço do Google T
 
 ### <a name="step-1---instantiating-texttospeech"></a>Etapa 1: criar uma instância de TextToSpeech
 
-`TextToSpeech` pode levar até 3 parâmetros, os dois primeiros são necessários com o terceiro opcionais (`AppContext`, `IOnInitListener`, `engine`). O ouvinte é usado para ligar para o serviço e o teste falha com o mecanismo que está sendo qualquer número de mecanismos de texto em fala disponíveis Android, no mínimo, o dispositivo terá o mecanismo do Google.
+`TextToSpeech` pode levar até 3 parâmetros, os dois primeiros são necessários com o terceiro opcionais (`AppContext`, `IOnInitListener`, `engine`). O ouvinte é usado para ligar para o serviço e o teste falha com o mecanismo que está sendo qualquer número de mecanismos de texto em fala disponíveis Android. No mínimo, o dispositivo terá o mecanismo do Google.
 
 ### <a name="step-2---finding-the-languages-available"></a>Etapa 2: Localizando os idiomas disponíveis
 
-O `Java.Util.Locale` namespace contém um método útil chamado `GetAvailableLocales()`. Esta lista de idiomas com suporte pelo mecanismo de fala, em seguida, pode ser testada em relação os idiomas instalados.
+O `Java.Util.Locale` classe contém um método útil chamado `GetAvailableLocales()`. Esta lista de idiomas com suporte pelo mecanismo de fala, em seguida, pode ser testada em relação os idiomas instalados.
 
 É uma questão trivial para gerar a lista de idiomas "entendi". Sempre haverá um idioma padrão (o idioma que o usuário definir quando eles primeiro configurarem seu dispositivo), portanto neste exemplo o `List<string>` tem "Padrão" como o primeiro parâmetro, o restante da lista será preenchido dependendo do resultado de `textToSpeech.IsLanguageAvailable(locale)`.
 
@@ -186,7 +186,7 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 
 ### <a name="step-5---the-ioninitlistener"></a>Etapa 5 - o IOnInitListener
 
-Para uma atividade poder converter texto em fala, o método de interface `OnInit` deve ser criado (esse é o segundo parâmetro especificado para a instanciação do `TextToSpeech` classe). Isso inicializa o ouvinte e o resultado de testes.
+Para uma atividade poder converter texto em fala, o método de interface `OnInit` precisa ser implementada (esse é o segundo parâmetro especificado para a instanciação do `TextToSpeech` classe). Isso inicializa o ouvinte e o resultado de testes.
 
 O ouvinte deve testar ambos `OperationResult.Success` e `OperationResult.Failure` no mínimo.
 O exemplo a seguir mostra isso:

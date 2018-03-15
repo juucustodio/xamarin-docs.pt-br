@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: b66f47ecb8f955f6558df6fff18af92a7a8b97cf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 037c82aa31c167e44a88619cba91a5be8035d0fa
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction-to-effects"></a>Introdução aos efeitos
 
@@ -38,42 +38,12 @@ Tudo o que pode ser obtido com um efeito também pode ser obtido com um renderiz
 
 A tabela a seguir lista o namespace para o `PlatformEffect` classe em cada plataforma e os tipos de suas propriedades:
 
-<table>
- <thead>
-   <tr>
-     <td><strong>Plataforma</strong></td>
-     <td><strong>Namespace</strong></td>
-     <td><strong>contêiner</strong></td>
-     <td><strong>Controle</strong></td>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td>iOS</a></td>
-     <td>Xamarin.Forms.Platform.iOS</td>
-     <td>UIView</td>
-     <td>UIView</td>
-   </tr>
-   <tr>
-     <td>Android</a></td>
-     <td>Xamarin.Forms.Platform.Android</td>
-     <td>ViewGroup</td>
-     <td>Exibir</td>
-   </tr>
-   <tr>
-     <td>Windows Phone 8.1</a></td>
-     <td>Xamarin.Forms.Platform.WinRT</td>
-     <td>FrameworkElement</td>
-     <td>FrameworkElement</td>
-   </tr>
-   <tr>
-     <td>UWP (Plataforma Universal do Windows)</a></td>
-     <td>Xamarin.Forms.Platform.UWP</td>
-     <td>FrameworkElement</td>
-     <td>FrameworkElement</td>
-   </tr>
- </tbody>
-</table>
+|Plataforma|Namespace|Contêiner|Controle|
+|--- |--- |--- |--- |
+|iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
+|Android|Xamarin.Forms.Platform.Android|ViewGroup|Exibir|
+|Windows Phone 8.1|Xamarin.Forms.Platform.WinRT|FrameworkElement|FrameworkElement|
+|UWP (Plataforma Universal do Windows)|Xamarin.Forms.Platform.UWP|FrameworkElement|FrameworkElement|
 
 Cada plataforma específica `PlatformEffect` classe expõe as propriedades a seguir:
 
@@ -93,4 +63,4 @@ Além disso, o `PlatformEffect` expõe o [ `OnElementPropertyChanged` ](https://
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Processadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

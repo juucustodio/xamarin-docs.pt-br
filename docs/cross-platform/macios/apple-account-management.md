@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: 465ba4822a1004100160703f1607d99199f28a16
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c0d328e784b0a12b0df1a6b2bf5b990ffa461da5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="apple-account-management"></a>Gerenciamento de conta da Apple
 
@@ -41,7 +41,7 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Para 
 
 - Certifique-se de que você está conectado à internet. Isso ocorre porque fastlane se comunica diretamente com o portal do desenvolvedor da Apple.
 - Verifique se você tem [fastlane ferramentas instaladas](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
-- Verifique se você tem as ferramentas mais recentes de fastlane de [https://download.fastlane.tools](https://download.fastlane.tools).
+- Verifique se você tem as ferramentas mais recentes de fastlane de [ https://download.fastlane.tools ](https://download.fastlane.tools).
 - Antes de começar, certifique-se de aceitar os contratos de licença de usuário no [portal do desenvolvedor](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Adicionando uma conta de desenvolvedor da Apple
@@ -69,8 +69,7 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Para 
     ![](apple-account-management-images/image6.png)
 
 
-<a name="managing"/>
-    
+<a name="managing" />
 
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>Gerenciamento de identidades de assinatura e perfis de provisionamento

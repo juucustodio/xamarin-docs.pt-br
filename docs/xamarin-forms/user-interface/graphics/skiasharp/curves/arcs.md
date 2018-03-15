@@ -8,11 +8,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 390c8f4634ea38ecb93e3f21175db00fef27b8e4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 739efa994f172a7a1de82ac02d1c10b0d80f4c30
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três maneiras para desenhar um arco
 
@@ -238,7 +238,7 @@ Esses três pontos definem duas linhas conectadas:
 
 ![](arcs-images/tangentarcconnectinglines.png "Linhas que conectam os três pontos de um arco tangente")
 
-Se os três pontos são colinear & #x 2014; ou seja, se eles residem no mesmo linha reta & #x 2014; Nenhum arco será desenhado.
+Se os três pontos são colinear &mdash; ou seja, se eles residem na mesma linha reta &mdash; nenhum arco será desenhado.
 
 O `ArcTo` método também inclui um `radius` parâmetro. Isso define o raio de um círculo:
 

@@ -7,12 +7,12 @@ ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ac83b74f39497333de7aa80079784adf61bf2e65
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: 5db4c735205753810466c26535ba9e2f525709a8
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -44,116 +44,25 @@ Explica como implantar seu aplicativo Android usam a um dispositivo Android desg
 
 Você pode encontrar um número de [exemplos](https://developer.xamarin.com/samples/android/Android%20Wear/) usando desgaste Android (ou vá diretamente para [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)). 
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-      <th>
-          <strong>Exemplo</strong>
-      </th>
-      <th>
-          <strong>Descrição</strong>
-      </th>
-      <th>
-          <strong>captura de tela</strong>
-      </th>
-  </thead>
-  <tbody>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/SkeletonWear/">SkeletonWear</a>
-      </td>
-      <td valign="top">
-Um exemplo simples de Noções básicas de vestir projetos, incluindo GridViewPager e notificações interativas.
-      </td>
-      <td>
-          <img src="Images/skeleton.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/WatchViewStub/">WatchViewStub</a>
-      </td>
-      <td valign="top">
-Uma demonstração simple do controle WatchViewStub detectar forma de tela e carrega automaticamente o layout correto.
-Consulte como WatchViewStub funciona no <b>Resources/layout/main_actvity.xml</b> layout.
-      </td>
-      <td>
-          <img src="Images/watchview.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/RecipeAssistant/">RecipeAssistant</a>
-      </td>
-      <td valign="top">
-Demonstração de desgaste páginas de notificação, na forma de etapas de receita. As notificações são criadas em <b>RecipeService.cs</b>.
-      </td>
-      <td>
-          <img src="Images/recipeassist.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/ElizaChat/">ElizaChat</a>
-      </td>
-      <td valign="top">
-Exemplo divertido de interagir com um assistente"pessoal" chamado Eliza, usando notificações de desgaste interativas para criar uma conversa usando respostas e padronizadas.
-      </td>
-      <td>
-          <img src="Images/eliza.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/GridViewPager/">GridViewPager</a>
-      </td>
-      <td valign="top">
-GridViewPager implementa o padrão 2D de navegação, em que o usuário obtém verticalmente e horizontalmente para percorrer as opções e conteúdo.
-      </td>
-      <td>
-          <img src="Images/gridviewpager.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/monodroid/wear/WatchFace">WatchFace</a>
-      </td>
-      <td valign="top">
-          <b>WatchFace</b> é uma face do relógio de personalizado com estilo analógico hora, minuto e segundo mãos. Este exemplo demonstra como criar um serviço de face de observação que desenha a hora atual e eventos de alteração de modo de ambiente de identificadores e visibilidade. Ele inclui um receptor de difusão que escuta de alterações de fuso horário e atualiza automaticamente o tempo.
-      </td>
-      <td>
-          <img src="Images/watchface.png" class="tableimg">
-      </td>
-  </tr>
-  </tbody>
-</table>
+|Amostra|Descrição|captura de tela|
+|--- |--- |--- |
+|[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|Um exemplo simples de Noções básicas de vestir projetos, incluindo GridViewPager e notificações interativas.|![Captura de tela de Skeletonwear](images/skeleton.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Uma demonstração simple do controle WatchViewStub detectar forma de tela e carrega automaticamente o layout correto.  Consulte como WatchViewStub funciona no **Resources/layout/main_actvity.xml** layout.|![Captura de tela de WatchViewStub](images/watchview.png)|
+|[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|Demonstração de desgaste páginas de notificação, na forma de etapas de receita. As notificações são criadas no RecipeService.cs.|![Captura de tela de RecipeAssistant](images/recipeassist.png)|
+|[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|Exemplo divertido de interagir com um assistente"pessoal" chamado Eliza, usando notificações de desgaste interativas para criar uma conversa usando respostas e padronizadas.|![Captura de tela de ElizaChat](images/eliza.png)|
+|[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager implementa o padrão 2D de navegação, em que o usuário obtém verticalmente e horizontalmente para percorrer as opções e conteúdo.|![Captura de tela de GridViewPager](images/gridviewpager.png)|
+|[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace é uma face do relógio de personalizado com estilo analógico hora, minuto e segundo mãos. Este exemplo demonstra como criar um serviço de face de observação que desenha a hora atual e eventos de alteração de modo de ambiente de identificadores e visibilidade. Ele inclui um receptor de difusão que escuta de alterações de fuso horário e atualiza automaticamente o tempo.|![Captura de tela de WatchFace](images/gridviewpager.png)|
+
 
 ##  <a name="videos"></a>Vídeos
 
-Check-out de vídeo esses links que abordam xamarin com desgaste de suporte.
+Check-out de vídeo esses links que abordam xamarin com desgaste de suporte:
 
-<table align="center" border="0" cellpadding="1" cellspacing="1">
-    <tr>
-        <td>
-        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0" /></td>
-        <td><a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/">L Android e muito mais</a>
-        <br />
-A visualização do desenvolvedor L Android introduziu uma infinidade de novas APIs para desenvolvedores aproveitar, incluindo o Material de Design, notificações e novas animações, para citar alguns.</td>
-    </tr>
-    <tr>
-        <td>
-        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" /></td>
-        <td><a href="https://www.youtube.com/watch?v=80H8tXByZQc">C# é em meu ouvidos em meus olhos: Google Glass e desgaste Android</a>
-        <br />
-Computação vestir pode parecer algo do futuro (ou um episódio de Inspetor Gadget), mas muitas pessoas já estão adotando futuro hoje! Os desenvolvedores do c# sabem isso e já tem as ferramentas e habilidades aproveitamento da capacidade de vestir dispositivos (Evolve 2014).</td>
-    </tr>
-    <tr>
-        <td>
-        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" /></td>
-        <td><a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU">O que há de novo no xamarin</a>
-        <br />
-        <i>L Android, desgaste Android, TV Android, Android automática, Design de Material e arte; o que isso significa para você como um desenvolvedor de Xamarin? </i> de evoluir 2014.</td>
-    </tr>
-</table>
+|Descrição|captura de tela|
+|--- |--- |
+|[Android L e muito mais](http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; o Android Developer Preview L introduziu uma infinidade de novas APIs para desenvolvedores aproveitar, incluindo o Material de Design, notificações e novas animações, para citar alguns.|![Captura de tela de vídeo de apresentação](images/video-android-l.png)|
+|[C# é em meu ouvidos em meus olhos: Google Glass e desgaste Android](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; computação vestir pode parecer algo do futuro (ou um episódio de Inspetor Gadget), mas muitas pessoas já estão adotando futuro hoje! Os desenvolvedores do c# sabem isso e já tem as ferramentas e habilidades aproveitamento da capacidade de vestir dispositivos (Evolve 2014).|![Captura de tela de vídeo de apresentação](images/video-eyes-ears.png)|
+|[O que há de novo no xamarin](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; L Android, desgaste Android, TV Android, Auto Android, Material de Design e arte; o que faz isso médio para você como um desenvolvedor Xamarin? do Evolve 2014.|![Captura de tela de vídeo de apresentação](Images/video-whats-new.png)|
 
 
 <!--

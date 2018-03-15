@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Desenho de um círculo simples
 
@@ -146,7 +146,7 @@ Ao executar o programa, você pode ativar o telefone ou o simulador lado para ve
 
 Um `SKPaint` objeto é um pouco mais de uma coleção de propriedades de desenho de elementos gráficos. Esses objetos são muito simples. Você pode reutilizar `SKPaint` objetos como esse programa não ou você pode criar vários `SKPaint` objetos para várias combinações de propriedades de desenho. Você pode criar e inicializar esses objetos fora do `PaintSurface` manipulador de eventos e você poderá salvá-los como campos na sua classe de página.
 
-Embora a largura do contorno do círculo é especificada como 25 pixels & #x 2014; ou um quarto do raio do círculo & #x 2014; ele parece ser mais estreito, e há um bom motivo para isso: metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão para o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura amplia o círculo Geométrico & #x 2014; metade em interna e metade fora.
+Embora a largura do contorno do círculo é especificada como 25 pixels &mdash; ou um quarto de raio do círculo &mdash; parece ser mais estreito, e há um bom motivo para isso: metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão para o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura amplia o círculo Geométrico &mdash; metade em interna e metade fora.
 
 O exemplo seguinte o [integrando xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) artigo demonstra isso visualmente.
 

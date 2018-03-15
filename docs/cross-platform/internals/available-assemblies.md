@@ -7,11 +7,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 3a4e39582a389774e5d17327cefecb0f676adfc6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: 09df3b5e203281070e21b8c18ee4ff42245c0e46
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="available-assemblies"></a>Assemblies disponíveis
 
@@ -19,332 +20,65 @@ _Assemblies disponíveis no xamarin, xamarin e Xamarin.Mac_
 
 Xamarin, xamarin e Xamarin.Mac todos os fornecidos com dezenas de assemblies. Assim como o Silverlight é um subconjunto estendido dos assemblies do .NET da área de trabalho, plataformas Xamarin também é um subconjunto estendido de vários Silverlight e área de trabalho assemblies do .NET.
 
-Xamarin plataformas não são ABI compatível com existentes assemblies compilados para um perfil diferente. Você deve recompilar o código-fonte para gerar assemblies de destino correto. perfil (assim como você precisa recompilar o código-fonte para usar o Silverlight e o .NET 3.5 separadamente).
+Xamarin plataformas não são ABI compatível com existentes assemblies compilados para um perfil diferente. Você deve recompilar o código-fonte para gerar assemblies direcionando o perfil correto (assim como você precisa recompilar o código-fonte para o destino do Silverlight e do .NET 3.5 separadamente).
 
 Xamarin.Mac aplicativos podem ser compilados em três modos: um que usa Xamarin do curadoria perfil móvel, o Xamarin.Mac .NET Framework 4.5 que permite que você direcione assemblies existentes de área de trabalho completa e um sem suporte que usa a API .NET encontrado em um sistema Mono instalação. Para obter mais informações, consulte nosso [estrutura de destino](~/mac/platform/target-framework.md) documentação.
 
 
+## <a name="net-standard-libraries"></a>Bibliotecas padrão do .NET
+
+Além de Mac, iOS e Android associações, Xamarin projetos podem consumir [bibliotecas .NET padrão](~/cross-platform/app-fundamentals/net-standard.md).
+
 ## <a name="portable-class-libraries"></a>Bibliotecas de Classes Portáteis
  
-Além de Mac, iOS e Android associações, Xamarin plataformas podem consumir [bibliotecas de classes portáteis do .NET](~/cross-platform/app-fundamentals/pcl.md).
+Projetos do Xamarin também podem consumir [bibliotecas de classes portáteis do .NET](~/cross-platform/app-fundamentals/pcl.md), embora essa tecnologia está sendo substituída pela .NET padrão.
 
 ## <a name="supported-assemblies"></a>Assemblies com suporte
 
-<style type="text/css"> .TG {borda-Recolher: Recolher; border-espaçamento: 0;} td .tg {5px preenchimento: 10px; border-largura: 1px; estouro: oculto; word-quebra: normal;} .tg th {fonte-peso: normal, 5 px de preenchimento: 10px; border-largura: 1px; o estouro: oculto; word-quebra: normal;} .tg .tg-zx05 {font-weight: bold; cor de plano de fundo: #d1d9dd; vertical-align: superior} .tg .tg-w6qd {cor de plano de fundo: #91e2f4; alinhar texto: center; vertical-align: superior} .tg .tg-yw4l {vertical-align: superior} .tg .tg-q3ci {cor de plano de fundo: #cfefa7; de alinhamento de texto: center; vertical-align: superior} .tg .tg-p7et {cor de plano de fundo: #cec0ec; alinhar texto: center; vertical-align: superior} </style>
-<table class="tg">
-  <tr>
-    <th class="tg-zx05">Assembly</th>
-    <th class="tg-zx05">Compatibilidade de API</th>
-    <th class="tg-zx05">Xamarin.iOS</th>
-    <th class="tg-zx05">Xamarin.Android</th>
-    <th class="tg-zx05">Xamarin.Mac</th>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">FSharp.Core.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">l18N.dll</td>
-    <td class="tg-yw4l">Inclui CJK, Ásia, outros, raros, oeste</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Microsoft.CSharp.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.CSharp.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.Data.Sqlite.dll</td>
-    <td class="tg-yw4l">Provedor ADO.NET para SQLite; consulte <a href="~/ios/data-cloud/system.data.md">limitações</a>.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.Data.Tds.dll</td>
-    <td class="tg-yw4l">Suporte de protocolo TDS; usado para <a href="https://developer.xamarin.com/api/namespace/System.Data.SqlClient/">SqlClient</a> suportem <a href="https://developer.xamarin.com/api/namespace/System.Data/">System. Data</a>.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.Dynamic.Interpreter.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.Security.dll</td>
-    <td class="tg-yw4l">APIs de criptografia.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">monotouch.dll</td>
-    <td class="tg-yw4l">Este assembly contém a associação para a API CocoaTouch c#. Isso só está disponível dentro de projetos de iOS clássico.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">MonoTouch.Dialog-1.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">MonoTouch.NUnitLite.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">mscorlib.dll</td>
-    <td class="tg-yw4l"><a ref="https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx">Silverlight</a></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">OpenTK-1.0.dll</td>
-    <td class="tg-yw4l">O objeto OpenGL/OpenAL orientada a APIs, estendido para oferecer suporte a dispositivos iPhone.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.dll</td>
-    <td class="tg-yw4l"><a href="https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx">Silverlight</a>, além de tipos dos namespaces a seguir:<br>System.Collections.Specialized<br>System.ComponentModel<br>System.ComponentModel.Design<br>System.Diagnostics<br>System.IO<br>System.IO.Compression<br>System.IO.Compression.FileSystem<br>System.Net<br>System.Net.Cache<br>System.Net.Mail<br>System.Net.Mime<br>System.Net.NetworkInformation<br>System.Net.Security<br>System.Net.Sockets<br>System.Runtime.InteropServices<br>System.Runtime.Versioning<br>System.Security.AccessControl<br>System.Security.Authentication<br>System.Security.Cryptography<br>System.Security.Permissions<br>System.Threading<br>System.Timers</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.ComponentModel.Composition.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.ComponentModel.DataAnnotations.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Core.dll</td>
-    <td class="tg-yw4l"><a ref="https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx">Silverlight</a></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Data.dll</td>
-    <td class="tg-yw4l"><a href="http://msdn.microsoft.com/en-us/library/ms229335.aspx">.NET 3.5</a> , <a href="~/ios/data-cloud/system.data.md">com algumas funcionalidades removidas</a>.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Data.Services.Client.dll</td>
-    <td class="tg-yw4l">Cliente oData completo.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.IO.Compression</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.IO.Compression.FileSystem</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Json.dll</td>
-    <td class="tg-yw4l"><a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx">Silverlight</a></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Net.Http.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Numerics.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Runtime.Serialization.dll</td>
-    <td class="tg-yw4l"><a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx">Silverlight</a></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.ServiceModel.dll</td>
-    <td class="tg-yw4l">Pilha do WCF como presentes no <a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx">Silverlight</a></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.ServiceModel.Internals.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.ServiceModel.Web.dll</td>
-    <td class="tg-yw4l"><a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx">Silverlight</a>, além de tipos dos namespaces a seguir: <br>Sistema<br>System.ServiceModel.Channels<br>System.ServiceModel.Description<br>System.ServiceModel.Web</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Transactions.dll</td>
-    <td class="tg-yw4l"><a href="http://msdn.microsoft.com/en-us/library/ms229335.aspx">.NET 3.5</a>; faz parte do <a href="~/ios/data-cloud/system.data.md">System. Data</a> suporte.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Web.Services.dll</td>
-    <td class="tg-yw4l">Serviços Web básico do perfil do .NET 3.5, com os recursos de servidor removido.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Windows.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Xml.dll</td>
-    <td class="tg-yw4l"><a href="http://msdn.microsoft.com/en-us/library/ms229335.aspx">.NET 3.5</a></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Xml.Linq.dll</td>
-    <td class="tg-yw4l"><a href="http://msdn.microsoft.com/en-us/library/ms229335.aspx">.NET 3.5</a></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Xml.Serialization.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Xamarin.iOS.dll</td>
-    <td class="tg-yw4l">Este assembly contém a associação para a API CocoaTouch c#. Isso é usado apenas em projetos do iOS unificada.</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Java.Interop.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.Android.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.Android.Export.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.Posix.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.EnterpriseServices.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Xamarin.Android.NUnitLite.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-q3ci">✓</td>
-    <td class="tg-yw4l"></td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Mono.CompilerServices.SymbolWriter.dll</td>
-    <td class="tg-yw4l">Para autores de compilador.</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Xamarin.Mac.dll</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">System.Drawing.dll</td>
-    <td class="tg-yw4l">System. Drawing API - somente API clássica.<br>Não há suporte para System. Drawing na API unificada para o Xamarin.Mac .NET 4.5 ou estruturas móveis.<br>Suporte de System. Drawing pode ser adicionado para iOS e OS X usando o <a href="https://github.com/mono/sysdrawing-coregraphics">sysdrawing coregraphics</a> biblioteca</td>
-    <td class="tg-w6qd">✓</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-p7et">✓</td>
-  </tr>
-</table>
+> [!div class="mx-tdCol2BreakAll"]
+> |Assembly|Compatibilidade de API|Xamarin iOS|Xamarin Android|Xamarin Mac|
+> |--------|-----------------|-----------|---------------|-----------|
+> |FSharp.Core.dll| |✓|✓|✓|
+> |l18N.dll|Inclui CJK, Ásia, outros, raros, oeste|✓|✓|✓|
+> |Microsoft.CSharp.dll| |✓|✓|✓|
+> |Mono.CSharp.dll| |✓|✓|✓|
+> |Mono.Data.Sqlite.dll|Provedor ADO.NET para SQLite; Consulte limitações.|✓|✓|✓|
+> |Mono.Data.Tds.dll|Suporte de protocolo TDS; usado para [SqlClient](https://developer.xamarin.com/api/namespace/System.Data.SqlClient/) suportem [System. Data](https://developer.xamarin.com/api/namespace/System.Data/).|✓|✓|✓|
+> |Mono.Dynamic.&#8203;Interpreter.dll| |✓| | |
+> |Mono.Security.dll|APIs de criptografia.|✓|✓|✓|
+> |monotouch.dll|Este assembly contém a associação para a API CocoaTouch c#. Isso só está disponível dentro de projetos de iOS clássico.|✓| | |
+> |MonoTouch.&#8203;Dialog-1.dll| |✓| | |
+> |MonoTouch.&#8203;NUnitLite.dll| |✓| | |
+> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |OpenTK-1.0.dll|O objeto OpenGL/OpenAL orientada a APIs, estendido para oferecer suporte a dispositivos iPhone.|✓|✓|✓|
+> |System.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx), além de tipos dos namespaces a seguir:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security.&#8203;Cryptography<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
+> |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
+> |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
+> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx) , com [algumas funcionalidades removidas](~/ios/data-cloud/system.data.md).|✓|✓|✓|
+> |System.Data.&#8203;Services.&#8203;Client.dll|Cliente oData completo.|✓|✓|✓|
+> |System.IO.&#8203;Compression| |✓|✓|✓|
+> |System.IO.&#8203;Compression.&#8203;FileSystem| |✓|✓|✓|
+> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Net.&#8203;Http.dll| |✓|✓|✓|
+> |System.&#8203;Numerics.dll| |✓|✓|✓|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.dll|Pilha do WCF como presentes no [Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Internals.dll| |✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx), além de tipos dos namespaces a seguir: <br />Sistema<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |System.&#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx); faz parte do [System. Data](~/ios/data-cloud/system.data.md) suporte.|✓|✓|✓|
+> |System.Web.&#8203;Services.dll|Serviços Web básico do perfil do .NET 3.5, com os recursos de servidor removido.|✓|✓|✓|
+> |System.&#8203;Windows.dll| |✓|✓|✓|
+> |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.Serialization.dll| |✓|✓|✓|
+> |Xamarin.iOS.dll|Este assembly contém a associação para a API CocoaTouch c#. Isso é usado apenas em projetos do iOS unificada.|✓| | |
+> |Java.Interop.dll| | |✓| |
+> |Mono.Android.dll| | |✓| |
+> |Mono.Android.&#8203;Export.dll| | |✓| |
+> |Mono.Posix.dll| | |✓| |
+> |System.&#8203;EnterpriseServices.dll| | |✓| |
+> |Xamarin.Android.&#8203;NUnitLite.dll| | |✓| |
+> |Mono.CompilerServices.&#8203;SymbolWriter.dll|Para autores de compilador.| | |✓|
+> |Xamarin.Mac.dll| | | |✓|
+> |System.&#8203;Drawing.dll|System. Drawing API - somente API clássica. Não há suporte para System. Drawing na API unificada para o Xamarin.Mac .NET 4.5 ou estruturas móveis. Suporte de System. Drawing pode ser adicionado para iOS e OS X usando o [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) biblioteca|✓| |✓|

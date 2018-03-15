@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: df3692777eaa0791385c9ef3d114fbc8a9ab752e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c489aab66a0aaafeaaeadad0e8b95d451ec1592
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Usando a ferramenta de Pipeline de MonoGame
 
@@ -135,7 +135,7 @@ Para adicionar um novo arquivo de .sprintefont, com o botão direito na pasta fo
 O arquivo .spritefont é realmente um arquivo XML que pode ser editado em qualquer editor de texto, incluindo o Visual Studio para Mac. As variáveis mais comuns editadas em um arquivo de .spritefont são o `FontName` e `Size` propriedade:
 
 
-```csharp
+```xml
     <!-- Modify this string to change the font that will be imported. -->
     <FontName>Arial</FontName>
 
@@ -147,7 +147,7 @@ O arquivo .spritefont é realmente um arquivo XML que pode ser editado em qualqu
 Abrirá o arquivo em qualquer editor de texto. Como nossa **arial 36.spritefont** nome sugere, vamos deixar o `FontName` como `Arial` , mas alterar o `Size` valor `36`:
 
 
-```csharp
+```xml
     <!-- Modify this string to change the font that will be imported. -->
     <FontName>Arial</FontName>   
   

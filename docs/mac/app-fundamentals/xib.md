@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a4b8ac68da7bcb25ea55906e8fe060b7c7fdee9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 92ca65409dd82806278885bb03efd7b04ab1827d
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xib-files"></a>arquivos de .xib
 
@@ -67,7 +67,7 @@ O **Editor de Interface** seção fornece a superfície no qual você graficamen
 
 #### <a name="properties--utilities"></a>Propriedades e utilitários
 
-O **propriedades & utilitários** seção é devided em duas seções principais que trabalharemos com, **propriedades** (também chamado de inspetores) e o **biblioteca**:
+O **propriedades & utilitários** seção é dividida em duas seções principais que trabalharemos com, **propriedades** (também chamado de inspetores) e o **biblioteca**:
 
 ![Inspetor de](xib-images/xcode04.png "Inspetor")
 
@@ -375,7 +375,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 Esse código anexa à ação que você criou no Xcode e o construtor de Interface e será chamado a qualquer momento em que o usuário clica no botão.
 
-Alguns elementos de interface do usuário automaticamente criou em ações, por exemplo, os itens na barra de menus padrão, como o **abrir...**  item de menu (`openDocument:`). No **solução preenchimento**, clique duas vezes no `AppDelegate.CS` arquivo para abri-lo para edição e adicione o seguinte código abaixo o `DidFinishLaunching` método:
+Alguns elementos de interface do usuário automaticamente criou em ações, por exemplo, os itens na barra de menus padrão, como o **abrir...**  item de menu (`openDocument:`). No **solução preenchimento**, clique duas vezes no **appdelegate. CS** arquivo para abri-lo para edição e adicione o seguinte código abaixo o `DidFinishLaunching` método:
 
 ```csharp
 [Export ("openDocument:")]

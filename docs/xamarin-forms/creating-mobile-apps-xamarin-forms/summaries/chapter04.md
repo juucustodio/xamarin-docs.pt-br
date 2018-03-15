@@ -7,11 +7,11 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5559f9e6a4baf9d3f82701b5e3f341900ba83bae
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumo do capítulo 4. A pilha de rolagem
 
@@ -67,9 +67,9 @@ Para um vertical `StackLayout`, o `HorizontalOptions` determina como o filho é 
 
 Para um vertical `StackLayout`, cada filho é irrestrito verticalmente e obtém uma vertical slot dependendo da altura do filho, caso em que o `VerticalOptions` configuração é irrelevante.
 
-Se vertical `StackLayout` em si é irrestrita & #x 2014; que está se seu `VerticalOptions` configuração é `Start`, `Center`, ou `End`, em seguida, a altura do `StackLayout` é a altura total de seus filhos.
+Se vertical `StackLayout` em si é irrestrita&mdash;que é se seu `VerticalOptions` configuração é `Start`, `Center`, ou `End`, em seguida, a altura do `StackLayout` é a altura total de seus filhos.
 
-No entanto, se vertical `StackLayout` verticalmente é restrito & #x 2014; se seu `VerticalOptions` configuração é `Fill`& #x 2014; em seguida, a altura do `StackLayout` será a altura de seu contêiner, que pode ser maior que a altura total do seus filhos. Se esse for o caso, e se tem pelo menos um filho um `VerticalOptions` configuração com um `Expands` sinalizador de `true`, em seguida, o espaço extra no `StackLayout` é alocado igualmente entre todos os filhos com um `Expands` sinalizador de `true`. A altura total de filhos, em seguida, será igual a altura do `StackLayout`e o `Alignment` parte do `VerticalOptions` determina como o filho é posicionado verticalmente no slot.
+No entanto, se o vertical `StackLayout` verticalmente é restrito&mdash;se seu `VerticalOptions` configuração é `Fill` &mdash;, em seguida, a altura do `StackLayout` será a altura de seu contêiner, que pode ser maior que o total altura de seus filhos. Se esse for o caso, e se tem pelo menos um filho um `VerticalOptions` configuração com um `Expands` sinalizador de `true`, em seguida, o espaço extra no `StackLayout` é alocado igualmente entre todos os filhos com um `Expands` sinalizador de `true`. A altura total de filhos, em seguida, será igual a altura do `StackLayout`e o `Alignment` parte do `VerticalOptions` determina como o filho é posicionado verticalmente no slot.
 
 Isso é demonstrado no [ **VerticalOptionsDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/VerticalOptionsDemo) exemplo.
 

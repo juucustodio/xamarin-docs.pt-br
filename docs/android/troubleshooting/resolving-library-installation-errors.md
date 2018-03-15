@@ -7,12 +7,12 @@ ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 5589d512f9a4ee9c1148810f36fee12d561f725c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/14/2018
+ms.openlocfilehash: 66555139cfaab2074e7461be737f997a9bb9c7a7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="resolving-library-installation-errors"></a>Resolvendo erros de instalação da biblioteca
 
@@ -104,7 +104,7 @@ Se você tentou usar as etapas de recuperação automática acima e ainda tiver 
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    Se o **m2repository** arquivo não é mostrado nesta tabela, você pode criar a URL de download acrescentando **https://dl-ssl.google.com/android/repository/** com o nome do **m2repository**  para baixar. Por exemplo, use **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** baixar **android\_m2repository\_r10.zip** .
+    Se o **m2repository** arquivo não é mostrado nesta tabela, você pode criar a URL de download acrescentando  **https://dl-ssl.google.com/android/repository/**  com o nome do **m2repository** para baixar. Por exemplo, use  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** baixar **android\_m2repository\_r10.zip**.
 
 2.  Renomeie o arquivo para o hash MD5 correspondente da URL de download, conforme mostrado na tabela acima. Por exemplo, se você tiver baixado **android\_m2repository\_r25.zip**, renomeá-lo como **0B3F1796C97C707339FB13AE8507AF50.zip**. Se o hash MD5 para a URL de download do arquivo baixado não é mostrado na tabela, você pode usar um [online gerador de MD5](http://www.webconfs.com/online-md5-generator.php) para converter a URL em uma cadeia de caracteres de hash MD5. 
 
@@ -160,6 +160,8 @@ Use as seguintes etapas para baixar **m2repository** e instalar seu conteúdo:
     [![Exemplo de arquivos copiados para a pasta 23.1.1.0/embedded](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
 8.  Verifique se que todos os arquivos são copiados. O **inserido** diretório agora deve conter os arquivos como **. jar**, **. aar**, e **.pom**.
+
+9.  Descompacte qualquer extraído **. aar** arquivos. No Windows, acrescente um **. zip** extensão para o **. aar** de arquivos, clique duas vezes e selecione **extrair tudo...** , em seguida, remova o **. zip** extensão. Em macOS, descompacte o **. aar** arquivo usando o **Descompacte** comando no Terminal (por exemplo, **Descompacte file.aar**).
 
 Neste ponto, você instalou manualmente os componentes ausentes e o projeto deve compilar sem erros. Se não, verifique se você baixou o **m2repository** **. zip** arquivar a versão que corresponde exatamente à versão na mensagem de erro e verifique se que você tenha instalado o seu conteúdo no Corrija locais, conforme descrito nas etapas acima. 
 
