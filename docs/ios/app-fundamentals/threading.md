@@ -6,21 +6,20 @@ ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 8be599f5b6541ef738ffa47a01374fd7f90044a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 693ada611dc24d3bb22de7c51efe378939a732ad
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="threading"></a>Threading
 
-O tempo de execução do xamarin fornece acesso para os desenvolvedores de .NET APIs de threading, explícitas usam de threads ( `System.Threading.Thread, System.Threading.ThreadPool`), implicitamente ao usar os padrões de delegado assíncrona ou os métodos BeginXXX, bem como o total a variedade de APIs que oferecem suporte a tarefa Biblioteca paralela.
+O tempo de execução do xamarin oferece aos desenvolvedores acesso para o .NET threading de APIs, ambos explicitamente ao usar threads (`System.Threading.Thread, System.Threading.ThreadPool`) e implicitamente ao usar os padrões de delegado assíncrona ou os métodos BeginXXX, bem como o total a variedade de APIs que oferecem suporte a Biblioteca paralela de tarefas.
 
 
 
-Xamarin recomenda que você use o [biblioteca paralela de tarefas](http://msdn.microsoft.com/en-us/library/dd460717.aspx)
-
- (TPL) para a criação de aplicativos por alguns motivos:-o Agendador TPL padrão delegará a execução da tarefa ao pool de threads, que por sua vez dinamicamente aumentar o número de threads necessário, pois o processo é executado, evitando um cenário onde muitos threads terminar a competição por tempo de CPU. 
+Xamarin recomenda que você use o [biblioteca paralela de tarefas](http://msdn.microsoft.com/en-us/library/dd460717.aspx) (TPL) para a criação de aplicativos por alguns motivos:
+-  O Agendador TPL padrão delegará a execução da tarefa ao pool de threads, que por sua vez dinamicamente aumentar o número de threads necessário, pois o processo é executado, evitando um cenário onde muitos threads acabarem competindo por tempo de CPU. 
 -  É mais fácil pensar sobre as operações em termos de TPL tarefas. Pode facilmente manipulá-los, agendá-los, serializar sua execução ou iniciar muitas em paralelo com um conjunto sofisticado de APIs. 
 -  É a base para a programação com as novo c# async extensões de linguagem. 
 
@@ -41,7 +40,6 @@ MyThreadedRoutine ()
 {  
     var result = DoComputation ();  
 
-    //
     // we want to update an object that is managed by the main
     // thread; To do so, we need to ensure that we only access
     // this from the main thread:
@@ -77,4 +75,4 @@ Observação: Desde xamarin 5.2 você não precisa fornecer sua própria `NSAuto
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Trabalhando com o Thread de interface do usuário](~/ios/user-interface/ios-ui/ui-thread.md)
+- [Trabalhar com o thread de interface do usuário](~/ios/user-interface/ios-ui/ui-thread.md)

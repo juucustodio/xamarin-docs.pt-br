@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 4f85f208c12561b6db9800d963e2d7bf32c2a4d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -67,7 +67,7 @@ Para obter mais informações sobre o provisionamento de um aplicativo iOS, o [a
 
 A criação de um valor explícito **ID do aplicativo** e adequados **perfil de provisionamento de** é feita dentro da Apple [iOS Centro de desenvolvimento](https://developer.apple.com/devcenter/ios/index.action). 
 
-As atuais **IDs de aplicativo** são listados no [certificados, identificadores e perfis](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) seção no Centro de desenvolvimento. Geralmente, essa lista mostrará **ID** valores de `*`, indicando que o **ID do aplicativo*- **nome** pode ser usado com qualquer número de sufixos. Tais *Wildcard App IDs* não pode ser usado com o Kit de integridade.
+As atuais **IDs de aplicativo** são listados no [certificados, identificadores e perfis](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) seção no Centro de desenvolvimento. Geralmente, essa lista mostrará **ID** valores de `*`, indicando que o **ID do aplicativo** - **nome** pode ser usado com qualquer número de sufixos. Tais *Wildcard App IDs* não pode ser usado com o Kit de integridade.
  
 Para criar uma explícita **ID do aplicativo**, clique no  **+**  botão no canto superior direito para o **registrar a ID do aplicativo do iOS** página:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Criando Interfaces do usuário do iOS em código
 
@@ -69,7 +69,7 @@ O modelo de projeto vazio adiciona 4 arquivos ao projeto:
 ## <a name="ios-templates"></a>Modelos do iOS
 
 
-O Visual Studio para Mac não fornece um modelo vazio. Todos os modelos são fornecidos com o suporte de Storyboard, que Apple recomenda como a principal maneira de criar uma interface do usuário. No entanto, é possível criar sua interface do usuário em completamente no código. 
+O Visual Studio para Mac não fornece um modelo vazio. Todos os modelos são fornecidos com o suporte de Storyboard, que Apple recomenda como a principal maneira de criar uma interface do usuário. No entanto, é possível criar sua interface do usuário completamente no código. 
 
 As etapas a seguir orientam você pelo removendo o Storyboard de um aplicativo. 
 
@@ -316,7 +316,7 @@ No exemplo acima, começamos a criar uma interface do usuário em código adicio
 
 interfaces de usuário do iOS são compostas de uma hierarquia de exibição. Modos de exibição adicionais, como rótulos, botões, controles deslizantes, etc. são adicionados como sub-visualizações de algum modo de exibição do pai.
 
-Por exemplo, vamos Editar para o `CustomViewController` para criar uma tela de logon em que o usuário pode inserir um nome de usuário e senha. A tela consistirá em dois campos de texto e um botão.
+Por exemplo, vamos editar o `CustomViewController` para criar uma tela de logon em que o usuário pode inserir um nome de usuário e senha. A tela consistirá em dois campos de texto e um botão.
 
 ### <a name="adding-the-text-fields"></a>Adicionando campos de texto
 
@@ -433,7 +433,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>Adicionando funcionalidade de botão
 
-Quando um botão é clicado, os usuários esperam que aconteça algo se isso por um alerta ou navegar para outra tela. 
+Quando um botão é clicado, os usuários esperam que aconteça algo. Por exemplo, um alerta é mostrado ou navegação é executada para outra tela. 
 
 Vamos adicionar alguns códigos para enviar por push a um segundo controlador de exibição para a pilha de navegação.
 
@@ -497,7 +497,7 @@ Além de usar controles que fazem parte do UIKit, modos de exibição personaliz
 
 ### <a name="inheriting-from-uiview"></a>Herdando UIView
 
-A primeira coisa que precisamos fazer é criar uma classe para o modo de exibição personalizado. Faremos isso usando o **classe** modelo no Visual Studio para adicionar uma classe vazia denominada `CircleView`. A classe base deve ser definida como `UIView`, que é Lembre-se no `UIKit` namespace. Também será necessário o `System.Drawing` namespace também. Os outros vários `System.*` namespaces não será tão usado neste exemplo, fique à vontade para removê-los.
+A primeira coisa que precisamos fazer é criar uma classe para o modo de exibição personalizado. Faremos isso usando o **classe** modelo no Visual Studio para adicionar uma classe vazia denominada `CircleView`. A classe base deve ser definida como `UIView`, que é recuperada está no `UIKit` namespace. Também será necessário o `System.Drawing` namespace também. Os outros vários `System.*` namespaces não será tão usado neste exemplo, fique à vontade para removê-los.
 
 A classe deve ter esta aparência:
 

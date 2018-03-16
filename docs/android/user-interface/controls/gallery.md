@@ -6,12 +6,12 @@ ms.assetid: 3112E68A-7853-B147-90A6-6295CA2C4CB5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: da6815a073d93379c8564f3ff91023deb20b0d55
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: c5e7cb864fc37a5365992fdff12a5be43dcccdd5
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="gallery"></a>Galeria
 
@@ -42,7 +42,7 @@ Consulte [ `ImageView.ScaleType` ](https://developer.xamarin.com/api/type/Androi
 
 Iniciar um novo projeto denominado *HelloGallery*.
 
-![Captura de tela do novo projeto Android na caixa de diálogo nova solução](gallery-images/hellogallery1.png)
+[![Captura de tela do novo projeto Android na caixa de diálogo nova solução](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
 Localizar algumas fotos que você deseja usar, ou [baixar essas imagens de amostra](http://developer.android.com/shareables/sample_images.zip).
 Adicionar arquivos de imagem para o projeto **recursos/Drawable** directory. No **propriedades** janela, defina a ação de compilação de cada **AndroidResource**.

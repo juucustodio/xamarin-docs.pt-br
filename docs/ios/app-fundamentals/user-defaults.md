@@ -8,20 +8,20 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c4b2a103821bb18da4878cd37335faa899e910be
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="working-with-user-defaults"></a>Trabalhando com os padrões do usuário
 
-_Este artigo aborda o trabalho com NSUserDefault para salvar as configurações padrão em um aplicativo ou extensão do iOS Xamarin._
+_Este artigo aborda o trabalho com NSUserDefault para salvar as configurações padrão em uma extensão ou Xamarin.iOS App._
 
 
-O `NSUserDefaults` classe fornece uma maneira para iOS, aplicativos e extensões para interagir programaticamente com o sistema de padrão de todo o sistema. Usando o sistema de padrões, o usuário pode configurar o comportamento de um aplicativo ou de estilo para atender às suas preferências (com base no design do aplicativo). Por exemplo, para apresentar dados de métricas vs medidas imperiais ou selecionar um tema de interface do usuário especificado.
+O `NSUserDefaults` classe fornece uma maneira para iOS, aplicativos e extensões para interagir programaticamente com o sistema de padrões de todo o sistema. Usando o sistema de padrões, o usuário pode configurar o comportamento de um aplicativo ou de estilo para atender às suas preferências (com base no design do aplicativo). Por exemplo, para apresentar dados de métricas vs medidas imperiais ou selecionar um tema de interface do usuário especificado.
 
-Quando usado de grupos de aplicativos, `NSUserDefaults` também fornece uma maneira de se comunicar entre aplicativos (ou extensões) em um grupo específico.
+Quando usado com grupos de aplicativos, `NSUserDefaults` também fornece uma maneira de se comunicar entre aplicativos (ou extensões) em um grupo específico.
 
 <a name="About-User-Defaults" />
 
@@ -32,7 +32,7 @@ Como mencionado acima, padrões do usuário (`NSUserDefaults`) pode ser adiciona
 Quando seu aplicativo é executado pela primeira vez, `NSUserDefaults` lê as chaves e valores de padrões de dados de usuário do aplicativo e os armazena em cache na memória para evitar a abrir e ler o banco de dados cada vez que um valor é necessário. 
 
 > [!IMPORTANT]
-> **Observação**: Apple não sugere que o desenvolvedor de chamar o `Synchronize` método para sincronizar o cache de memória com o banco de dados diretamente. Em vez disso, ele será chamado automaticamente em intervalos periódicos para manter o cache na memória em sincronia com o banco de dados de padrões do usuário.
+> **Observação**: Apple não recomenda mais que a chamada de desenvolvedor de `Synchronize` método para sincronizar o cache de memória com o banco de dados diretamente. Em vez disso, ele será chamado automaticamente em intervalos periódicos para manter o cache na memória em sincronia com o banco de dados de padrões do usuário.
 
 O `NSUserDefaults` classe contém diversos métodos de conveniência para ler e gravar valores de preferência para tipos de dados comuns, como: cadeia de caracteres, inteiro, float, booliano e URLs. Outros tipos de dados podem ser arquivados usando `NSData`, em seguida, lido ou gravado no banco de dados padrão do usuário. Para obter mais informações, consulte da Apple [preferências e configurações do guia de programação](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -46,7 +46,7 @@ A instância de padrões de usuário compartilhado fornece acesso para os padrõ
 - Domínio do identificador de pacote do aplicativo.
 - Um `NSGlobalDomain` consiste o padrão é compartilhado por todos os aplicativos.
 - Um domínio separado para cada idioma de preferência do usuário.
-- Um `NSRegistationDomain` com um conjunto de padrões temporários que pode ser modificado pelo aplicativo para garantir que estejam sempre pesquisas com êxito.
+- Um `NSRegistrationDomain` com um conjunto de padrões temporários que pode ser modificado pelo aplicativo para garantir que estejam sempre pesquisas com êxito.
 
 Para acessar a instância compartilhada padrões do usuário, use o seguinte código:
 
@@ -61,9 +61,9 @@ var plist = NSUserDefaults.StandardUserDefaults;
 
 Como mencionado acima, usando grupos de aplicativos, `NSUserDefaults` pode ser usado para comunicação entre aplicativos (ou extensões) em um grupo específico. Primeiro, você precisará garantir que o grupo de aplicativos e as IDs de aplicativo necessário foi corretamente configuradas no **certificados, identificadores e perfis** seção [Centro de desenvolvimento do iOS](https://developer.apple.com/devcenter/ios/) e foram instalados no ambiente de desenvolvimento.
 
-Em seguida, os projetos de aplicativo e/ou extensão precisará ser uma das IDs de aplicativo válido criado acima, que o `Entitlements.plist` arquivo tem a grupos de aplicativos habilitado e especificado e que ele obtém do incluídos no pacote de aplicativo.
+Em seguida, seus projetos de aplicativo e/ou extensão precisam ter uma das IDs de aplicativo válido criado acima e o `Entitlements.plist` arquivo deve ser incluído no pacote de aplicativo com os grupos de aplicativo habilitado e especificado.
 
-Com tudo no lugar, os padrões do usuário de grupo de aplicativo compartilhados podem ser acessados usando o seguinte código:
+Com tudo no lugar, compartilhado padrões de usuário do aplicativo grupo podem ser acessados usando o código a seguir:
 
 ```csharp
 // Get App Group User Defaults
@@ -140,6 +140,6 @@ Este artigo abordou a `NSUserDefaults` classe e como ele pode ser usado para for
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [As preferências e configurações do guia de programação](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i)
 - [NSUserDefaults](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/#//apple_ref/doc/constant_group/NSUserDefaults_Domains)

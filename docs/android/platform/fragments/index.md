@@ -7,12 +7,12 @@ ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="fragments"></a>Fragmentos
 
@@ -53,9 +53,9 @@ Fragmentos estão disponíveis no SDK do Android, começando com o nível de API
 
 [![Selecionando o nível de API no Gerenciador de SDK do Android](images/02.png)](images/02.png#lightbox)
 
-Fragmentos estão disponíveis no xamarin 4.0 e superior. Um aplicativo xamarin deve ter como destino pelo menos o nível de API 11 (3.0 Android) ou superior para usar fragmentos. A estrutura de destino pode ser definida nas opções de projeto, conforme mostrado abaixo:
+Fragmentos estão disponíveis no xamarin 4.0 e superior. Um aplicativo xamarin deve ter como destino pelo menos o nível de API 11 (3.0 Android) ou superior para usar fragmentos. A estrutura de destino pode ser definida no projeto propriedades conforme mostrado abaixo:
 
-[![Definir o nível de API da estrutura de destino nas opções de projeto](images/03.png)](images/03.png#lightbox)
+[![Definir o nível de API da estrutura de destino nas opções de projeto](images/03-sml.png)](images/03.png#lightbox)
 
 É possível usar os fragmentos em versões mais antigas do Android usando o pacote de suporte Android e xamarin 4.2 ou posterior. Como fazer isso é abordado mais detalhadamente nos documentos desta seção.
 

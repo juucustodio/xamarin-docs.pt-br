@@ -7,11 +7,11 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: abd6ac7d4bce5a180db087488b32c878ed0a416b
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: bf3d675224a1e1696d4ce526fa42260d2102aa7d
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisitos e instalação de pastas de trabalho
 
@@ -19,13 +19,13 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="download-and-install"></a>Baixar e instalar
 
-# <a name="windowstabvswin"></a>[Windows](#tab/vswin)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 1. Verifique o [requisitos](#requirements) abaixo.
 2. Baixe e instale o [Xamarin pastas de trabalho do Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
 3. Iniciar [colocando](~/tools/workbooks/workbook.md) com pastas de trabalho ou experimentar o [exemplos](https://developer.xamarin.com/workbooks)
 
-# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 1. Verifique o [requisitos](#Requirements) abaixo.
 2. Baixe e instale o [Xamarin pastas de trabalho para Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).

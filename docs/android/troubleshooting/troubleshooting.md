@@ -6,12 +6,12 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 145c8507ca5ebea6197fa8827b93f58fbc9bb078
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 015fff63c612c3acf29681b90c1e945c5e460034
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="troubleshooting-tips"></a>Dicas de Solução de Problemas
 
@@ -333,7 +333,7 @@ Se seu aplicativo requer um desempenho razoável de ponto flutuante (por exemplo
 Há 2 downloads do Google para o Android SDK para Windows.
 Se você escolher o instalador .exe, ele gravará chaves do registro que indicam o xamarin onde ele foi instalado. Se você escolher o arquivo. zip e descompacte-, xamarin não sabe onde procurar o SDK. Você pode informar xamarin onde o SDK está no Visual Studio, vá para **Ferramentas > Opções > Xamarin > configurações do Android**:
 
-[![Local do SDK do Android nas configurações do Xamarin Android](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
+[![Local do SDK do Android nas configurações do Xamarin Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
 
 
 
