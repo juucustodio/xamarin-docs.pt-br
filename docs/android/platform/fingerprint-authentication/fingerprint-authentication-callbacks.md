@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: acecc53e8429ac3ca963053fe7a1786937d37ae3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 37d288cd75f232c8674aece085a78a83ce12d720
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="responding-to-authentication-callbacks"></a>Responder a chamadas de autenticação
 
@@ -155,6 +155,6 @@ Uma lista e descrição dos códigos de erro e códigos de Ajuda podem ser encon
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Codificação](https://docs.oracle.com/javase/7/docshttps://developer.xamarin.com/api/javax/crypto/Cipher.html)
+- [Codificação](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
 - [AuthenticationCallback](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
 - [AuthenticationCallback](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)

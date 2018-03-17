@@ -7,12 +7,12 @@ ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
-ms.openlocfilehash: 5db4c735205753810466c26535ba9e2f525709a8
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 03/16/2018
+ms.openlocfilehash: 31114df0b631aea909e82f3a8b836d5ef922d2c1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -37,6 +37,10 @@ Visualize e otimizar sua interface de usuário para os tamanhos de tela disponí
 ##  <a name="deployment--testingandroidweardeploy-testindexmd"></a>[Implantação e Teste](~/android/wear/deploy-test/index.md)
 
 Explica como implantar seu aplicativo Android usam a um dispositivo Android desgaste ou emulador Android configurado para uso. Também inclui informações sobre como configurar uma conexão Bluetooth entre o computador de desenvolvimento e um dispositivo Android e dicas de depuração.
+
+##  <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Use APIs](https://developer.android.com/reference/android/support/wearable)
+
+O site do desenvolvedor Android fornece informações detalhadas sobre APIs de uso de chave como [atividade vestir](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [tentativas](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [autenticação](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [ Complicações](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [complicações renderização](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [notificações](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [exibições](https://developer.android.com/reference/android/support/wearable/view/package-summary.html), e [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
 
 

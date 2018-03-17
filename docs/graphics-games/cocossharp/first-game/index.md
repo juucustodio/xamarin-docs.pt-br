@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 3b1bb45ab87c85dff42b4f7ea5297eb3596b81a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5ab6f68aed791dd21516d663367ac5435e92d6cc
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="introduction-to-game-development-with-cocossharp"></a>Introdução ao desenvolvimento de jogos com CocosSharp
 
@@ -38,4 +38,4 @@ No final deste passo a passo, será criado um jogo simple onde meta do player é
 - [Conteúdo do jogo (exemplo)](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Content.zip?raw=true)
 - [Projeto concluído (exemplo)](https://developer.xamarin.com/samples/mobile/BouncingGame/)
 - [PCL CocosSharp NuGet](http://www.nuget.org/packages/CocosSharp.PCL.Shared/)
-- [Documentação da API do CocosSharp](http://developer.xamarin.comhttps://developer.xamarin.com/api/namespace/CocosSharp/)
+- [Documentação da API do CocosSharp](https://developer.xamarin.com/api/namespace/CocosSharp/)

@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 68b420f98461ee42862726a658d721b36326c203
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>Quais opções de suporte estão disponíveis para Xamarin?
 
@@ -18,28 +18,13 @@ ms.lasthandoff: 03/09/2018
 
 Conforme mostrado no [página de suporte de Xamarin](https://www.xamarin.com/support), várias opções estão disponíveis.  Aqui estão algumas recomendações iniciais rápidas [inspirada estouro de pilha](http://stackoverflow.com/help/product-support) sobre como escolher a melhor opção:
 
-<table>
-    <tr>
-        <td>"O que esse erro significa?" ou "Como fazer...?"</td>
-        <td><a href="http://stackoverflow.com/questions/ask?tags=xamarin">Estouro de pilha</a> sob o <em>xamarin</em> marca</td>
-    </tr>
-    <tr>
-        <td>Acredito que esse problema é causado por uma falha no código-fonte Xamarin.</td>
-        <td><a href="https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html">Xamarin Bugzilla</a></td>
-    </tr>
-    <tr>
-        <td>Tenho uma ideia, uma solicitação de recurso ou uma nova solicitação de documentação.</td>
-        <td><a href="https://xamarin.uservoice.com">Página Xamarin UserVoice</a></td>
-    </tr>
-    <tr>
-        <td>Quais recursos, estruturas ou ferramentas de outros usuários recomendamos para...? (e outras discussões abertas)</td>
-        <td><a href="https://forums.xamarin.com/">Fóruns do Xamarin</a></td>
-    </tr>
-    <tr>
-        <td>Tenho uma pergunta sobre assinaturas, licenciamento e preços.</td>
-        <td>Email ou ligue usando as informações de contato sobre o <a href="https://www.xamarin.com/faq">perguntas Frequentes</a></td>
-    </tr>
-</table>
+|   |   |
+|---|---|
+|"O que esse erro significa?" ou "Como fazer...?"|[Estouro de pilha](http://stackoverflow.com/questions/ask?tags=xamarin) sob o *xamarin* marca|
+|Acredito que esse problema é causado por uma falha no código-fonte Xamarin.|[Xamarin Bugzilla](https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html)|
+|Tenho uma ideia, uma solicitação de recurso ou uma nova solicitação de documentação.|[Página Xamarin UserVoice](https://xamarin.uservoice.com)|
+|Quais recursos, estruturas ou ferramentas de outros usuários recomendamos para...? (e outras discussões abertas)|[Fóruns do Xamarin](https://forums.xamarin.com)|
+|Tenho uma pergunta sobre assinaturas, licenciamento e preços.|Email ou ligue usando as informações de contato sobre o [perguntas Frequentes](https://www.xamarin.com/faq)|
 
 A equipe de suporte de Xamarin ajuda a monitorar a cada uma dessas opções.  Recomendamos que todos os usuários para contribuir com suas perguntas ponderadas e relatórios para tirar proveito do e ajudar a aumentar a comunidade de desenvolvedores do Xamarin experiente.  Em busca de defeitos suspeitos, certifique-se de enviar relatórios de erros quando possível para garantir que os problemas são controlados formalmente pela equipe de engenharia do Xamarin.
 

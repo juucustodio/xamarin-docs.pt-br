@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 017f3c1b5fc14bf22a5ad85d1017bc8125b04038
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6e0eebef2404ce3f117fe897d456f3ef78a8f585
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="ios-extensions"></a>Extensões do iOS
 
@@ -44,63 +44,14 @@ Este artigo aborda os seguintes tópicos:
 
 ## <a name="extension-points"></a>Pontos de extensão
 
-Há vários tipos de extensão que podem ser criados no iOS 8 (e superior):
-
-<table>
-<colgroup>
-<col />
-<col />
-<col />
-</colgroup>
-
-<thead>
-<tr>
-    <th >Tipo</th>
-    <th >Descrição</th>
-    <th >Ponto de extensão</th>
-    <th >Aplicativo de host</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-    <td >Ação</td>
-    <td >Editor especializados ou o visualizador para um determinado tipo de mídia</td>
-    <td ><code>com.apple.ui-services</code></td>
-    <td >Qualquer</td>
-</tr>
-<tr>
-    <td >Provedor de documento</td>
-    <td >Permite que o aplicativo usar um armazenamento remoto de documento</td>
-    <td ><code>com.apple.fileprovider-ui</code></td>
-    <td >Aplicativos que usam um <a href="https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/">UIDocumentPickerViewController</a></td>
-</tr>
-<tr>
-    <td >Teclado</td>
-    <td >Teclados alternativos</td>
-    <td ><code>com.apple.keyboard-service</code></td>
-    <td >Qualquer</td>
-</tr>
-<tr>
-    <td >Edição de fotos</td>
-    <td >Manipulação de fotos e edição</td>
-    <td ><code>com.apple.photo-editing</code></td>
-    <td >Editor de Photos.App</td>
-</tr>
-<tr>
-    <td >Compartilhar</td>
-    <td >Compartilha dados com redes sociais, serviços de mensagens etc.</td>
-    <td ><code>com.apple.share-services</code></td>
-    <td >Qualquer</td>
-</tr>
-<tr>
-    <td >Hoje</td>
-    <td >"Widgets" que aparecem na tela de hoje ou centro de notificação</td>
-    <td ><code>com.apple.widget-extensions</code></td>
-    <td >Centro de notificação e hoje</td>
-</tr>
-</tbody>
-</table>
+|Tipo|Descrição|Ponto de extensão|Aplicativo de host|
+|--- |--- |--- |--- |
+|Ação|Editor especializados ou o visualizador para um determinado tipo de mídia|`com.apple.ui-services`|Qualquer|
+|Provedor de documento|Permite que o aplicativo usar um armazenamento remoto de documento|`com.apple.fileprovider-ui`|Aplicativos que usam um [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|Teclado|Teclados alternativos|`com.apple.keyboard-service`|Qualquer|
+|Edição de fotos|Manipulação de fotos e edição|`com.apple.photo-editing`|Editor de Photos.App|
+|Compartilhar|Compartilha dados com redes sociais, serviços de mensagens etc.|`com.apple.share-services`|Qualquer|
+|Hoje|"Widgets" que aparecem na tela de hoje ou centro de notificação|`com.apple.widget-extensions`|Centro de notificação e hoje|
 
 [Pontos de extensão adicional](~/ios/platform/introduction-to-ios10/index.md#app-extensions) foram adicionados no iOS 10.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: d47499c1e309fbc67c85b55cacbbba3942188f54
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-datepicker"></a>Usando o selecionador de data
 
@@ -48,7 +48,7 @@ DatePicker datePicker = new DatePicker
 };
 ```
 
-Quando um `DateTime` valor especificado em XAML, o analisador XAML usa o `DateTime.Parse` método com um `CultureInfo.InvariantCulture` argumento para converter a cadeia de caracteres para um `DateTime` valor. As datas devem ser especificadas em um formato preciso: dois dígitos meses, dias de dois dígitos e anos de quatro dígitos, separados por barras:
+Quando um `DateTime` valor é especificado em XAML, o analisador XAML usa o `DateTime.Parse` método com um `CultureInfo.InvariantCulture` argumento para converter a cadeia de caracteres para um `DateTime` valor. As datas devem ser especificadas em um formato preciso: dois dígitos meses, dias de dois dígitos e anos de quatro dígitos, separados por barras:
 
 ```xaml
 <DatePicker MinimumDate="01/01/2018"
@@ -78,7 +78,7 @@ Se o `DatePicker` não tem uma associação no seu `Date` propriedade, um aplica
             ··· />
 ```
 
-No entanto, isso não é recomendado. Dependendo da configuração do `Format` propriedade selecionada datas podem exigir larguras de exibição diferente. Por exemplo, faz com que a cadeia de caracteres de formato "D" `DateTime` exibir datas em um formato longo e "Quarta-feira, 12 de setembro de 2018" requer uma maior largura de exibição que "Sexta-feira, 4 de maio de 2018". Dependendo da plataforma, essa diferença pode causar o `DateTime` exibição para alterar a largura de layout, ou para a exibição a ser truncado.
+No entanto, isso não é recomendado. Dependendo da configuração do `Format` propriedade selecionada datas podem exigir larguras de exibição diferente. Por exemplo, faz com que a cadeia de caracteres de formato "D" `DateTime` exibir datas em um formato longo e "Quarta-feira, 12 de setembro de 2018" requer uma maior largura de exibição que "Sexta-feira, 4 de maio de 2018." Dependendo da plataforma, essa diferença pode causar o `DateTime` exibição para alterar a largura de layout, ou para a exibição a ser truncado.
 
 > [!TIP]
 > É melhor usar o padrão `HorizontalOptions` de `Fill` com `DatePicker`e não para usar uma largura de `Auto` ao colocar `DatePicker` em um `Grid` célula.

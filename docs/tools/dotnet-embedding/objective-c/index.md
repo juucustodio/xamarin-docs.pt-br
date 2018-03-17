@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f6d19f0f6573b17dfb3feb6bf131686413d4e68f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 047f7d7497a114bf4b7c94e50bdf09862b882794
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="objective-c-support"></a>Suporte de Objective-C
 
@@ -201,13 +201,11 @@ Devido a `NSDate` referência data, todas as conversões entre ele e `DateTime` 
 
 Ao converter de `DateTime` para `NSDate` o DateTime `Kind` propriedade é levada em conta.
 
-<table>
-<tr><th> Tipo         </th><th> Resultados                                                                                            </th></tr>
-<!--tr><td> ------------ </td><td> -------------------------------------------------------------------------------------------------- </td></tr-->
-<tr><td> Utc          </td><td> A conversão é executada usando o objeto DateTime fornecido como está.                                  </td></tr>
-<tr><td> Local        </td><td> O resultado da chamada `ToUniversalTime ()` no DateTime fornecido o objeto é usado para conversão. </td></tr>
-<tr><td> Não especificado  </td><td> O objeto DateTime fornecido é considerado como UTC, até mesmo comportamento como tipo = = Utc.                </td></tr>
-</table>
+|Tipo|Resultados                                                                                            |
+|---|---|
+|Utc|Conversão é realizada usando fornecido `DateTime` objeto como está.|
+|Local|O resultado da chamada `ToUniversalTime()` fornecidos `DateTime` objeto é usado para conversão.|
+|Não especificado|Fornecido `DateTime` objeto é considerado como UTC, até mesmo comportamento como tipo = = Utc.|
 
 A conversão é feita usando a fórmula a seguir:
 

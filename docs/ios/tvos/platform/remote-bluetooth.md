@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ca3dd71c3da316e467d8c388efbbded3d9778bf0
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri remoto e controladores de Bluetooth
 
@@ -39,43 +39,14 @@ Seu desafio como um desenvolvedor de aplicativo tvOS é criar uma interface do u
 
 Siri remoto tem os seguintes recursos e usos esperados dentro de seu aplicativo tvOS:
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>Recurso</b></td>
-    <td><b>Uso do aplicativo geral</b></td>
-    <td><b>Uso do aplicativo de jogo</b></td>
-</tr>
-<tr>
-    <td valign="top"><b>Superfície de toque</b><br/>Passe o dedo para navegar, pressionar para selecionar e mantenha menus contextuais.</td>
-    <td valign="top"><b>Toque/passe o dedo para:</b><br/>Navegação da interface do usuário entre os itens de controle.<br/><br/><b>Clique em:</b><br/>Ativa o item (em foco) selecionado.</td>
-    <td valign="top"><b>Toque/passe o dedo para:</b><br/>Depende do projeto de jogo e pode ser usado como um bloco de D tocando as bordas.<br/><br/><b>Clique em:</b><br/>Execute a função do botão principal.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Menu</b><br/>Pressione para retornar à tela anterior ou menu.</td>
-    <td valign="top">Retorna a tela anterior e sai à tela de início para Apple TV de tela de aplicativo principal.</td>
-    <td valign="top">Pausar e retomar o jogo, para retornar à tela anterior e fecha a tela inicial para Apple TV na tela principal do aplicativo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Siri/pesquisa</b><br/>Em países com Siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.</td>
-    <td valign="top">N/D</td>
-    <td valign="top">N/D</td>
-</tr>
-<tr>
-    <td valign="top"><b>Play/Pause</b><br/>Reproduzir e pausar mídia ou fornece uma função secundária em aplicativos.</td>
-    <td valign="top">Inicia a reprodução de mídia e pausar ou retomar a reprodução.</td>
-    <td valign="top">Executa a função do botão secundário ou ignora o vídeo de Introdução (se existir).</td>
-</tr>
-<tr>
-    <td valign="top"><b>Início</b><br/>Pressione para retornar à tela inicial, clique duas vezes para exibir os aplicativos em execução, pressione e segure a suspensão do dispositivo.</td>
-    <td valign="top">N/D</td>
-    <td valign="top">N/D</td>
-</tr>
-<tr>
-    <td valign="top"><b>Volume</b><br/>Controles anexado volume equipamentos de áudio/vídeo.</td>
-    <td valign="top">N/D</td>
-    <td valign="top">N/D</td>
-</tr>
-</table>
+|Recurso|Uso do aplicativo geral|Uso do aplicativo de jogo|
+|---|---|---|
+|**Superfície de toque**<br />Passe o dedo para navegar, pressionar para selecionar e mantenha menus contextuais.|**Passe o dedo/toque**<br />Navegação da interface do usuário entre os itens de controle.<br /><br />**Clique em**<br />Ativa o item (em foco) selecionado.|**Passe o dedo/toque**<br />Depende do projeto de jogo e pode ser usado como um bloco de D tocando as bordas.<br /><br />**Clique em**<br />Execute a função do botão principal.|
+|**Menu**<br />Pressione para retornar à tela anterior ou menu.|Retorna a tela anterior e sai à tela de início para Apple TV de tela de aplicativo principal.|Pausar e retomar o jogo, para retornar à tela anterior e fecha a tela inicial para Apple TV na tela principal do aplicativo.|
+|**Siri/pesquisa**<br />Em países com Siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|N/D|N/D|
+|**Play/Pause**<br />Reproduzir e pausar mídia ou fornece uma função secundária em aplicativos.|Inicia a reprodução de mídia e pausar ou retomar a reprodução.|Executa a função do botão secundário ou ignora o vídeo de Introdução (se existir).|
+|**Início**<br />Pressione para retornar à tela inicial, clique duas vezes para exibir os aplicativos em execução, pressione e segure a suspensão do dispositivo.|N/D|N/D|
+|**Volume**<br />Controles anexado volume equipamentos de áudio/vídeo.|N/D|N/D|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -83,18 +54,10 @@ Siri remoto tem os seguintes recursos e usos esperados dentro de seu aplicativo 
 
 Superfície de toque de Siri Remote é capaz de detectar uma variedade de gestos desse tipo que você pode responder a em seu aplicativo Xamarin.tvOS:
 
-<table width="100%">
-<tr>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture01.png"></td>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture02.png"></td>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture03.png"></td>
-</tr>
-<tr>
-    <td valign="top"><b>Passe o dedo para:</b><br/>Move a seleção (foco) entre os elementos de interface do usuário na tela (para cima, para baixo à esquerda, à direita). Passar o dedo pode ser usado para percorrer as listas grandes de conteúdo rapidamente usando inércia.</td>
-    <td valign="top"><b>Clique em:</b><br/>Ativa o item selecionado (em foco) ou age como o botão principal em um jogo. Clicando e mantendo podem ativar menus contextuais ou funções secundárias.</td>
-    <td valign="top"><b>Toque em:</b><br/>Pouco tocando a superfície tocam as bordas age como botões direcional em uma direcional, movendo o foco para cima, para baixo, para a esquerda ou direita dependendo da área tocado. Dependendo do aplicativo, pode ser usado para revelar controles ocultos.</td>
-</tr>
-</table>
+|Passe o dedo|Clique em|Toque em|
+|---|---|---|
+|![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
+|Move a seleção (foco) entre os elementos de interface do usuário na tela (para cima, para baixo à esquerda, à direita). Passar o dedo pode ser usado para percorrer as listas grandes de conteúdo rapidamente usando inércia.|Ativa o item selecionado (em foco) ou age como o botão principal em um jogo. Clicando e mantendo podem ativar menus contextuais ou funções secundárias.|Pouco tocando a superfície tocam as bordas age como botões direcional em uma direcional, movendo o foco para cima, para baixo, para a esquerda ou direita dependendo da área tocado. Dependendo do aplicativo, pode ser usado para revelar controles ocultos.|
 
 Apple fornece as seguintes sugestões para trabalhar com gestos de toque superfície:
 
@@ -112,7 +75,7 @@ Além de gestos na superfície de toque, seu aplicativo pode responder ao usuár
 Além disso, pressionamentos de botão de menu podem ser detectados com um reconhecedor de gestos padrão `UIKit` elementos. Se você interceptar o pressionamento do botão de Menu, você será responsável por fechando a exibição e o controlador de exibição atual e retornar ao anterior.
 
 > [!IMPORTANT]
-> **Observação:** , você deve **sempre** atribuir uma função ao botão Play/Pause no controle remoto. Ter um botão não funcionais pode tornar seu aplicativo a ser interrompido para o usuário final. Se você não tiver uma função válida para este botão, atribua a mesma função que o botão principal (clique na superfície de toque).
+> Você deve **sempre** atribuir uma função ao botão Play/Pause no controle remoto. Ter um botão não funcionais pode tornar seu aplicativo a ser interrompido para o usuário final. Se você não tiver uma função válida para este botão, atribua a mesma função que o botão principal (clique na superfície de toque).
 
 
 
@@ -319,77 +282,24 @@ Além de remoto Siri padrão que é fornecido com o Apple TV, 3ª parte, feita p
 Controladores de jogo podem ser usados para aprimorar a jogos e fornecer uma noção de imersão em um jogo. Eles também podem ser usados para controlar a interface padrão do Apple TV, o uso precisa alternar entre o controle remoto e o controlador.
 
 > [!IMPORTANT]
-> **Observação:** Bluetooth controladores de jogo são uma compra opcional que os usuários finais podem fazer, seu aplicativo não é possível forçar o usuário a comprar um. Se seu aplicativo dá suporte a controladores de jogo também deve suportar Siri remoto para que o jogo seja utilizável por todos os usuários da Apple TV.
-
+> Os controladores de jogo Bluetooth são uma compra opcional que os usuários finais podem fazer, seu aplicativo não é possível forçar o usuário a comprar um. Se seu aplicativo dá suporte a controladores de jogo também deve suportar Siri remoto para que o jogo seja utilizável por todos os usuários da Apple TV.
 
 Um controlador de jogo tem os seguintes recursos e usos esperados dentro de seu aplicativo tvOS:
-<table width="100%" border="1px">
-<tr>
-    <td><b>Recurso</b></td>
-    <td><b>Uso do aplicativo geral</b></td>
-    <td><b>Uso do aplicativo de jogo</b></td>
-</tr>
-<tr>
-    <td valign="top"><b>D-Pad</b></td>
-    <td valign="top">Navega por meio de elementos de interface do usuário (altera o foco).</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>A</b></td>
-    <td valign="top">Ativa o item (em foco) selecionado.</td>
-    <td valign="top">Executa a função do botão principal e confirma as ações de caixa de diálogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>B</b></td>
-    <td valign="top">Retorna a tela anterior ou para a tela inicial é encerrado se na tela principal do aplicativo.</td>
-    <td valign="top">Executa a função do botão secundário ou retorna para a tela anterior.</td>
-</tr>
-<tr>
-    <td valign="top"><b>X</b></td>
-    <td valign="top">Inicia a reprodução de mídia ou pausar/reinicia a reprodução.</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Y</b></td>
-    <td valign="top">N/D</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Menu</b></td>
-    <td valign="top">Retorna a tela anterior ou para a tela inicial é encerrado se na tela principal do aplicativo.</td>
-    <td valign="top">Pausar/retomar jogos, para retornar à tela anterior ou saídas para a tela inicial se na tela principal do aplicativo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Botão do lado esquerdo</b></td>
-    <td valign="top">Navega esquerda.</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Gatilho esquerdo</b></td>
-    <td valign="top">Navega esquerda.</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Botão do lado direito</b></td>
-    <td valign="top">Navega direita.</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Gatilho direito</b></td>
-    <td valign="top">Navega direita</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Analógico esquerdo</b></td>
-    <td valign="top">Navega por meio de elementos de interface do usuário (altera o foco).</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Direcional direita</b></td>
-    <td valign="top">N/D</td>
-    <td valign="top">Depende de jogo.</td>
-</tr>
-</table>
+
+|Recurso|Uso do aplicativo geral|Uso do aplicativo de jogo|
+|---|---|---|
+|**D-Pad**|Navega por meio de elementos de interface do usuário (altera o foco).|Depende de jogo.|
+|**A**|Ativa o item (em foco) selecionado.|Executa a função do botão principal e confirma as ações de caixa de diálogo.|
+|**B**|Retorna a tela anterior ou para a tela inicial é encerrado se na tela principal do aplicativo.|Executa a função do botão secundário ou retorna para a tela anterior.|
+|**X**|Inicia a reprodução de mídia ou pausar/reinicia a reprodução.|Depende de jogo.|
+|**Y**|N/D|Depende de jogo.|
+|**Menu**|Retorna a tela anterior ou para a tela inicial é encerrado se na tela principal do aplicativo.|Pausar/retomar jogos, para retornar à tela anterior ou saídas para a tela inicial se na tela principal do aplicativo.|
+|**Botão do lado esquerdo**|Navega esquerda.|Depende de jogo.|
+|**Gatilho esquerdo**|Navega esquerda.|Depende de jogo.|
+|**Botão do lado direito**|Navega direita.|Depende de jogo.|
+|**Gatilho direito**|Navega direita|Depende de jogo.|
+|**Analógico esquerdo**|Navega por meio de elementos de interface do usuário (altera o foco).|Depende de jogo.|
+|**Direcional direita**|N/D|Depende de jogo.|
 
 Apple fornece as seguintes sugestões para trabalhar com os controladores de jogo:
 

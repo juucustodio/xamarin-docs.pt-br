@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7819201e76e268ea84bf2cc5d49a5a07b20a04e3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="programmatic-layout-constraints"></a>Restrições de Layout através de programação
 
@@ -79,32 +79,15 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 Onde as partes do código c# correspondem para as partes da equação de determinado da seguinte maneira:
 
-<table width="100%" border="1">
-<tr>
-<td width="50%"><b>Equação</b></td><td><b>Código</b></td>
-</tr>
-<tr>
-<td width="50%">Item 1</td><td>PurpleView</td>
-</tr>
-<tr>
-<td width="50%">Atributo 1</td><td>LeadingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Relationship</td><td>ConstraintEqualTo</td>
-</tr>
-<tr>
-<td width="50%">Multiplicador</td><td>O padrão é 1.0 assim não especificado</td>
-</tr>
-<tr>
-<td width="50%">Item 2</td><td>OrangeView</td>
-</tr>
-<tr>
-<td width="50%">Atributo 2</td><td>TrailingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Constante</td><td>10.0</td>
-</tr>
-</table>
+|Equação|Código|
+|---|---|
+|Item 1|PurpleView|
+|Atributo 1|LeadingAnchor|
+|Relationship|ConstraintEqualTo|
+|Multiplicador|O padrão é 1.0 assim não especificado|
+|Item 2|OrangeView|
+|Atributo 2|TrailingAnchor|
+|Constante|10.0|
 
 Além de fornecer apenas os parâmetros que são necessárias para resolver uma equação de restrição de layout fornecido, cada um dos métodos Layout âncora impor a segurança de tipos dos parâmetros passados a eles. Restrição horizontal assim como âncoras `LeadingAnchor` ou `TrailingAnchor` só pode ser usado com outros âncora horizontal tipos e multiplicadores são fornecidas apenas para restrições de tamanho.
 

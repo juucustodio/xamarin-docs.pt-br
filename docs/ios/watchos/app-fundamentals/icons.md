@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 98cd780a29abdbeaab02483e4b6ed01a218f88e5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d80ef6bdac7f35b282f6347a0356453a413b39c
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons"></a>Trabalhando com ícones
 
@@ -21,48 +21,12 @@ Soluções de Apple Watch exigem dois conjuntos de ícones:
 
 ## <a name="apple-watch-icons"></a>Ícones de Apple Watch
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-    <tr>
-      <td valign="top">
-        <b>Ícone do aplicativo do iOS</b>
-      </td>
-      <td valign="top">
-Aparece no iPhone e inicia o aplicativo pai </td>
-      <td>
-        <img src="icons-images/icon-ios.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" rowspan="3">
-        <b>Observe o ícone do aplicativo</b>
-      </td>
-      <td valign="top">
-É exibida na tela inicial do Apple Watch </td>
-      <td>
-        <img src="icons-images/icon-home.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-É exibida em notificações de inspeção </td>
-      <td>
-        <img src="icons-images/notification-icon.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-Aparece no <a href="~/ios/watchos/app-fundamentals/settings.md">Apple Watch aplicativo iOS</a>
-      </td>
-      <td>
-        <a href="icons-images/watch-app.png">
-          <img src="icons-images/watch-app-sml.png" class="tableimg">
-        </a>
-      </td>
-    </tr>
-    <tbody>
-</table>
-
-
+| | | |
+|-|-|-|
+|Ícone do aplicativo do iOS|Aparece no iPhone e inicia o aplicativo pai|![](icons-images/icon-ios.png)|
+|Observe o ícone do aplicativo|É exibida na tela inicial do Apple Watch|![](icons-images/icon-home.png)|
+||É exibida em notificações de inspeção|![](icons-images/notification-icon.png)|
+||Aparece no [Apple Watch aplicativo iOS](~/ios/watchos/app-fundamentals/settings.md)|![](icons-images/watch-app-sml.png)|
 
 ## <a name="configuring-your-solution"></a>Configurando sua solução
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: f962f4619352dbaaed8c8ffcf5d8c8305cb6ad62
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7ddb4b7d4867813311448258bb4fb177ae4cd175
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="specialized-fragment-classes"></a>Classes de fragmento especializado
 
@@ -191,8 +191,7 @@ public class AlertDialogFragment : DialogFragment
 
 ## <a name="preferencefragment"></a>PreferenceFragment
 
-Para ajudar a gerenciar Preferências, fornece a API de fragmentos de `PreferenceFragment` subclasse. O `PreferenceFragment` é semelhante de [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/
-) &ndash; mostrará uma hierarquia de preferências para o usuário em um fragmento. Como o usuário interage com as preferências, eles serão automaticamente salvas [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
+Para ajudar a gerenciar Preferências, fornece a API de fragmentos de `PreferenceFragment` subclasse. O `PreferenceFragment` é semelhante de [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; mostrará uma hierarquia de preferências para o usuário em um fragmento. Como o usuário interage com as preferências, eles serão automaticamente salvas [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
 No Android 3.0 ou mais aplicativos, use o `PreferenceFragment` para lidar com as preferências em aplicativos. A figura a seguir mostra um exemplo de uma `PreferenceFragment`:
 
 [![Exemplo PreferencesFragment com embutido, caixa de diálogo e preferências de inicialização](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)

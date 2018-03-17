@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 8d23211e28cb1b1dae13d67e32462888c66ff065
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Usando Jenkins com Xamarin
 
@@ -343,40 +343,14 @@ Assinatura e zipaligning o APK são tecnicamente duas tarefas separadas que são
 
 Os dois comandos exigem parâmetros de linha de comando que podem variar de um projeto para o projeto. Além disso, alguns desses parâmetros de linha de comando são senhas que não devem aparecer na saída do console quando a compilação estiver em execução. Armazenamos alguns desses parâmetros de linha de comando em variáveis de ambiente. As variáveis de ambiente necessárias para assinatura e/ou zip alinhando são descritas na tabela a seguir:
 
-<table>
-    <thead>
-        <tr>
-            <td>Variável de ambiente</td>
-            <td>Descrição</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>KEYSTORE_FILE</td>
-            <td>Este é o caminho para o armazenamento de chaves para assinar o APK</td>
-        </tr>
-        <tr>
-            <td>KEYSTORE_ALIAS</td>
-            <td>A chave no armazenamento de chaves que será usada para assinar o APK.</td>
-        </tr>
-        <tr>
-            <td>INPUT_APK</td>
-            <td>O APK que é criado pela `xbuild`.</td>
-        </tr>
-        <tr>
-            <td>SIGNED_APK</td>
-            <td>O assinado APK produzido por `jarsigner`.</td>
-        </tr>
-        <tr>
-            <td>FINAL_APK</td>
-            <td>Este é o zip alinhado APK produzido por `zipalign`.</td>
-        </tr>
-        <tr>
-            <td>STORE_PASS</td>
-            <td>Esta é a senha que é usada para acessar o conteúdo do repositório de chaves para singing o arquivo.</td>
-        </tr>
-    </tbody>
-</table>
+|Variável de ambiente|Descrição|
+|--- |--- |
+|KEYSTORE_FILE|Este é o caminho para o armazenamento de chaves para assinar o APK|
+|KEYSTORE_ALIAS|A chave no armazenamento de chaves que será usada para assinar o APK.|
+|INPUT_APK|O APK que é criado pela `xbuild`.|
+|SIGNED_APK|O assinado APK produzido por `jarsigner`.|
+|FINAL_APK|Este é o zip alinhado APK produzido por `zipalign`.|
+|STORE_PASS|Esta é a senha que é usada para acessar o conteúdo do repositório de chaves para singing o arquivo.|
 
 Conforme descrito na seção requisitos, essas variáveis de ambiente podem ser definidas durante a compilação usando o plug-in EnvInject. O trabalho deve ter uma nova compilação etapa adicionada com base em variáveis de ambiente de inserção, como mostrado na seguinte captura de tela:
 

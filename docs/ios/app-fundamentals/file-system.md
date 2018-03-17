@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 36c793e7a9b7b30bcb0cdf2c7959fd2df36c8775
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fd6aa66a7e5e788babc0df3e94b8f3677a7625f0
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-the-file-system"></a>Trabalhando com o sistema de arquivos
 
@@ -238,78 +238,14 @@ Esses diretórios e seus propósitos estão listados abaixo:
 
 &nbsp;
 
-<table>
-  <tbody>
-    <tr>
-      <td>
-Diretório </td>
-      <td>
-Descrição </td>
-    </tr>
-    <tr>
-      <td>
-        <p>[ApplicationName].app/</p>
-      </td>
-      <td>
-        <p><b>No iOS 7 e versões anteriores</b> este é o <code>ApplicationBundle</code> diretório onde o executável do aplicativo está armazenado. A estrutura de diretório que você cria no seu aplicativo existe neste diretório (por exemplo, imagens e outros tipos de arquivo que você marcou como recursos no seu Visual Studio para o projeto de Mac).</p>
-        <p>Se você precisar acessar os arquivos de conteúdo dentro de seu pacote de aplicativo, o caminho para este diretório está disponível por meio de <code>NSBundle.MainBundle.BundlePath</code> propriedade.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Documentos /</p>
-      </td>
-      <td>
-        <p>Use esse diretório para armazenar os documentos do usuário e arquivos de dados do aplicativo.</p>
-        <p>O conteúdo deste diretório pode ser disponibilizado para o usuário iTunes compartilhamento de arquivos (embora isso está desabilitado por padrão). Adicionar um <code>UIFileSharingEnabled</code> chave Boolean para o arquivo Info. plist que permite aos usuários acessar esses arquivos.</p>
-        <p>Mesmo se um aplicativo imediatamente não habilitar o compartilhamento de arquivos, você deve evitar colocar arquivos que devem ser ocultos dos usuários nesse diretório (como arquivos de banco de dados, a menos que você queira compartilhá-los). Contanto que os arquivos confidenciais permaneçam ocultos, esses arquivos não ser expostos (e potencialmente movidos, modificados ou excluídos pelo iTunes) se o compartilhamento de arquivos estiver habilitado em uma versão futura.</p>
-        <p>Você pode usar o <code>Environment.GetFolderPath
-(Environment.SpecialFolder.MyDocuments)</code> método para obter o caminho para o diretório de documentos para seu aplicativo.</p>
-        <p>O conteúdo deste diretório é feito pelo iTunes.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Biblioteca /</p>
-      </td>
-      <td>
-        <p>O diretório de biblioteca é um bom lugar para armazenar arquivos que não são criados diretamente pelo usuário, como bancos de dados ou outros arquivos gerados pelo aplicativo.
-O conteúdo deste diretório nunca é exposto para o usuário por meio do iTunes.</p>
-        <p>Você pode criar suas próprias subpastas na biblioteca; No entanto, já existem alguns criado pelo sistema diretórios aqui que você deve estar atento, incluindo preferências e Caches.</p>
-        <p>O conteúdo deste diretório (exceto o subdiretório de Caches) é feito pelo iTunes. Serão feitos diretórios personalizados que você criar na biblioteca.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Preferências de biblioteca / /</p>
-      </td>
-      <td>
-        <p>Arquivos de preferências específicas do aplicativo são armazenados nesse diretório. Não cria esses arquivos diretamente. Em vez disso, use o <code>NSUserDefaults</code> classe.</p>
-        <p>O conteúdo deste diretório é feito pelo iTunes.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Biblioteca/Caches /</p>
-      </td>
-      <td>
-        <p>O diretório de Caches é um bom lugar para armazenar arquivos de dados que podem ajudar o seu aplicativo é executado, mas que podem ser facilmente recriados se necessário. O aplicativo deve criar e excluir esses arquivos, conforme necessário e ser capaz de recriar esses arquivos, se necessário. iOS 5 também pode excluir esses arquivos (em situações de armazenamento muito baixa), no entanto, ele não fará isso enquanto o aplicativo está em execução.</p>
-        <p>O conteúdo deste diretório não é feito pela iTunes, o que significa que eles não estarão presentes se o usuário restaura um dispositivo, e eles podem não estar presentes após a instalação de uma versão atualizada de seu aplicativo.</p>
-        <p>Por exemplo, caso o aplicativo não pode se conectar à rede, você pode usar o diretório de Caches para armazenar arquivos de dados ou para fornecer uma boa experiência offline. O aplicativo pode salvar e recuperar esses dados rapidamente enquanto aguarda as respostas de rede, mas ele não precisa ser feito e pode facilmente ser recuperado ou criado novamente após uma restauração ou uma versão de atualização.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>tmp /</p>
-      </td>
-      <td>
-        <p>Aplicativos podem armazenar arquivos temporários que são necessários apenas por um curto período neste diretório. Para economizar espaço, os arquivos devem ser excluídos quando eles não são mais necessários. O sistema operacional também pode excluir arquivos nesse diretório quando um aplicativo não está em execução.</p>
-        <p>O conteúdo deste diretório não é feito pelo iTunes.</p>
-        <p>Por exemplo, o diretório tmp pode ser usado para armazenar arquivos temporários que são baixados para exibição para o usuário (como o Twitter avatares ou anexos de email), mas que pode ser excluído depois que já foram exibidas (e baixados novamente se forem necessários no futuro ).</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Diretório|Descrição|
+|---|---|
+|[ApplicationName].app/|**No iOS 7 e versões anteriores** este é o `ApplicationBundle` diretório onde o executável do aplicativo está armazenado. A estrutura de diretório que você cria no seu aplicativo existe neste diretório (por exemplo, imagens e outros tipos de arquivo que você marcou como recursos no seu Visual Studio para o projeto de Mac).<br /><br />Se você precisar acessar os arquivos de conteúdo dentro de seu pacote de aplicativo, o caminho para este diretório está disponível por meio de `NSBundle.MainBundle.BundlePath` propriedade.|
+|Documentos /|Use esse diretório para armazenar os documentos do usuário e arquivos de dados do aplicativo.<br /><br />O conteúdo deste diretório pode ser disponibilizado para o usuário iTunes compartilhamento de arquivos (embora isso está desabilitado por padrão). Adicionar um `UIFileSharingEnabled` chave Boolean para o arquivo Info. plist que permite aos usuários acessar esses arquivos.<br /><br />Mesmo se um aplicativo imediatamente não habilitar o compartilhamento de arquivos, você deve evitar colocar arquivos que devem ser ocultos dos usuários nesse diretório (como arquivos de banco de dados, a menos que você queira compartilhá-los). Contanto que os arquivos confidenciais permaneçam ocultos, esses arquivos não ser expostos (e potencialmente movidos, modificados ou excluídos pelo iTunes) se o compartilhamento de arquivos estiver habilitado em uma versão futura.<br /><br /> Você pode usar o `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` método para obter o caminho para o diretório de documentos para seu aplicativo.<br /><br />O conteúdo deste diretório é feito pelo iTunes.|
+|Biblioteca /|O diretório de biblioteca é um bom lugar para armazenar arquivos que não são criados diretamente pelo usuário, como bancos de dados ou outros arquivos gerados pelo aplicativo. O conteúdo deste diretório nunca é exposto para o usuário por meio do iTunes.<br /><br />Você pode criar suas próprias subpastas na biblioteca; No entanto, já existem alguns criado pelo sistema diretórios aqui que você deve estar atento, incluindo preferências e Caches.<br /><br />O conteúdo deste diretório (exceto o subdiretório de Caches) é feito pelo iTunes. Serão feitos diretórios personalizados que você criar na biblioteca.|
+|Preferências de biblioteca / /|Arquivos de preferências específicas do aplicativo são armazenados nesse diretório. Não cria esses arquivos diretamente. Em vez disso, use o `NSUserDefaults` classe.<br /><br />O conteúdo deste diretório é feito pelo iTunes.|
+|Biblioteca/Caches /|O diretório de Caches é um bom lugar para armazenar arquivos de dados que podem ajudar o seu aplicativo é executado, mas que podem ser facilmente recriados se necessário. O aplicativo deve criar e excluir esses arquivos, conforme necessário e ser capaz de recriar esses arquivos, se necessário. iOS 5 também pode excluir esses arquivos (em situações de armazenamento muito baixa), no entanto, ele não fará isso enquanto o aplicativo está em execução.<br /><br />O conteúdo deste diretório não é feito pela iTunes, o que significa que eles não estarão presentes se o usuário restaura um dispositivo, e eles podem não estar presentes após a instalação de uma versão atualizada de seu aplicativo.<br /><br />Por exemplo, caso o aplicativo não pode se conectar à rede, você pode usar o diretório de Caches para armazenar arquivos de dados ou para fornecer uma boa experiência offline. O aplicativo pode salvar e recuperar esses dados rapidamente enquanto aguarda as respostas de rede, mas ele não precisa ser feito e pode facilmente ser recuperado ou criado novamente após uma restauração ou uma versão de atualização.|
+|tmp /|Aplicativos podem armazenar arquivos temporários que são necessários apenas por um curto período neste diretório. Para economizar espaço, os arquivos devem ser excluídos quando eles não são mais necessários. O sistema operacional também pode excluir arquivos nesse diretório quando um aplicativo não está em execução.<br /><br />O conteúdo deste diretório não é feito pelo iTunes.<br /><br />Por exemplo, o diretório tmp pode ser usado para armazenar arquivos temporários que são baixados para exibição para o usuário (como o Twitter avatares ou anexos de email), mas que pode ser excluído depois que já foram exibidas (e baixados novamente se forem necessários no futuro ).|
 
 Esta captura de tela mostra a estrutura de diretórios em uma janela de localizador:
 

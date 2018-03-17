@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 30a952bf0df4db34c749de3d6198877b7a9766b9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="unified-storyboards"></a>Storyboards unificadas
 
@@ -116,63 +116,23 @@ Esta seção aborda os tipos típicos de coleções de característica que a exp
 
 O exemplo a seguir é uma coleção de característica típica que o desenvolvedor pode ver em um iPhone:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Propriedade</td>
-    <td>Valor</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>Compact</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>Normal</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>Telefone</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>2.0</td>
-</tr>
-</tbody>
-</table>
+|Propriedade|Valor|
+|--- |--- |
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Normal|
+|`UserInterfaceIdom`|Telefone|
+|`DisplayScale`|2.0|
 
 O conjunto acima representariam um totalmente qualificado característica coleção porque tem valores para todas as suas propriedades de característica.
 
 Também é possível ter um conjunto de características que está faltando em alguns de seus valores (que Apple se refere a como *Unspecified*):
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Propriedade</td>
-    <td>Valor</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>Compact</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>{especificado}</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>{especificado}</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>{especificado}</td>
-</tr>
-</tbody>
-</table>
+|Propriedade|Valor|
+|--- |--- |
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Não especificado|
+|`UserInterfaceIdom`|Não especificado|
+|`DisplayScale`|Não especificado|
 
 Em geral, no entanto, o desenvolvedor solicita o ambiente de característica para sua coleção de característica, ela retornará um conjunto totalmente qualificado como visto no exemplo acima.
 
@@ -216,7 +176,6 @@ Outra função que um desenvolvedor pode executar em coleções de característi
 
 Como mencionado acima, se qualquer traços é especificado em uma das coleções característica e é especificado em outro, o valor será definido para a versão especificada. No entanto, se houver várias versões de um determinado valor especificado, o valor da última coleta de característica será o valor que é usado.
 
-
 ## <a name="adaptive-view-controllers"></a>Controladores de exibição adaptável
 
 Esta seção aborda os detalhes de como os iOS exibição e exibir controladores de adotaram os conceitos de Classes de tamanho e características para ser mais adaptável em aplicativos do desenvolvedor automaticamente.
@@ -259,58 +218,11 @@ Primeiro, o iOS 8 faz algumas configurações para se preparar para a transiçã
 
 iOS 8 fornece vários retornos de chamada que o desenvolvedor pode usar para participar da alteração de característica conforme visto na tabela a seguir:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Fase</td>
-    <td>retorno de chamada</td>
-    <td>Descrição</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Configuração</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        <li><code>TraitCollectionDidChange</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Esse método é chamado no começo de uma alteração de característica antes de uma coleção de característica é definida para o novo valor.</li>
-        <li>O método é chamado quando o valor da coleção característica é alterado, mas antes de qualquer animação ocorre.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>Animação</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>O coordenador de transição que é passada para este método tem um <code>AnimateAlongside</code> propriedade que permite ao desenvolvedor adicionar animações que serão executadas juntamente com as animações padrão.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>Limpar</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Fornece um método para desenvolvedores incluir seu próprio código de limpeza após a transição ocorre.</li>
-        </ul>
-    </td>
-</tr>
-</tbody>
-</table>
+|Fase|retorno de chamada|Descrição|
+|--- |--- |--- |
+|Configuração|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Esse método é chamado no começo de uma alteração de característica antes de uma coleção de característica é definida para o novo valor.</li><li>O método é chamado quando o valor da coleção característica é alterado, mas antes de qualquer animação ocorre.</li></ul>|
+|Animação|`WillTransitionToTraitCollection`|O coordenador de transição que é passada para este método tem um `AnimateAlongside` propriedade que permite ao desenvolvedor adicionar animações que serão executadas juntamente com as animações padrão.|
+|Limpar|`WillTransitionToTraitCollection`|Fornece um método para desenvolvedores incluir seu próprio código de limpeza após a transição ocorre.|
 
 O `WillTransitionToTraitCollection` método é excelente para animar exibir controladores junto com as alterações da coleção de característica. O `WillTransitionToTraitCollection` método só está disponível em controladores de exibição ( `UIViewController`) e não em outros ambientes de característica, como `UIViews`.
 

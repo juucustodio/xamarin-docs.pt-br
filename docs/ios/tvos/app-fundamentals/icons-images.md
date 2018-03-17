@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons-and-images"></a>Trabalhando com imagens e ícones
 
@@ -40,17 +40,9 @@ A imagem de inicialização é exibido rapidamente e fornece a impressão de que
 
 Imagens de inicialização não são uma oportunidade para anúncios ou expressão artístico, eles existem somente para dar a impressão de que seu aplicativo é iniciado rapidamente e está pronto para usar.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Imagem de inicialização</b></td>
-</tr>
-<tr>
-    <td><b>Size</b></td>
-    <td>1920px x 1080px
-
-    Non-layered `.png` files only</td>
-</tr>
-</table>
+|Tamanho da imagem de inicialização|Observações|
+|---|---|
+|1920x1080px|Somente arquivos. PNG em camadas não|
 
 Apple torna as sugestões a seguir para criar a imagem de inicialização do aplicativo:
 
@@ -146,39 +138,15 @@ Seu aplicativo Xamarin.tvOS exigirá não só um ícone do aplicativo para a tel
 
 Cada aplicativo deve fornecer uma pequena e uma versão grande do seu ícone de aplicativo. O ícone pequeno será usado na tela de início para Apple TV, quando o aplicativo é instalado. A versão grande é usada pela loja de aplicativos. O ícone de aplicativo grande deve simular a aparência da versão do ícone pequeno.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Ícone pequeno</b></td>
-    <td colspan="2"><b>Ícone grande</b></td>
-</tr>
-<tr>
-    <td><b>Tamanho real</b></td>
-    <td>400px x 240px</td>
-    <td><b>Size</b></td>
-    <td>1280px x 768px</td>
-</tr>
-<tr>
-    <td><b>Tamanho da zona de segurança</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>Tamanho de foco</b></td>
-    <td>300px x 180px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>Tamanho foco</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-</table>
+|Ícone pequeno||Ícone grande||
+|---|---|---|---|
+|Tamanho real|400x240px|Tamanho|1280x768px|
+|Tamanho da zona de segurança|370x222px|||
+|Tamanho de foco|300x180px|||
+|Tamanho foco|370x222px|||
 
 > [!IMPORTANT]
-> **Observação:** os ícones de aplicativo deve ser fornecidos como **imagens em camadas**. Consulte o [em camadas de imagem](#Layered-Images) seção acima para obter mais detalhes.
+> Os ícones de aplicativo deve ser fornecidos como **imagens em camadas**. Consulte o [em camadas de imagem](#Layered-Images) seção acima para obter mais detalhes.
 
 
 
@@ -227,17 +195,9 @@ Se o usuário tiver inserido o seu aplicativo Xamarin.tvOS na linha superior na 
 
 A imagem de prateleira superior pode ser fornecida como um único static `.png` ou `.lsr` arquivo (consulte [criar imagens em camadas](#Creating-Layered-Images)) ou pode ser dinamicamente criado em tempo de execução como uma única linha de itens de controle (consulte [ Conteúdo dinâmico prateleira superior](#Dynamic-Top-Shelf-Content) abaixo).
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Imagem de prateleira superior</b></td>
-</tr>
-<tr>
-    <td><b>Size</b></td>
-    <td>1920px x 720px
-
-    Static `.png` or layered `.lsr` file</td>
-</tr>
-</table>
+|Tamanho da imagem prateleira superior|Observações|
+|---|---|
+|1920x720px|PNG estático ou arquivo .lsr em camadas|
 
 Apple fornece as seguintes sugestões para a criação de imagens prateleira superior:
 
@@ -279,38 +239,12 @@ O conteúdo é apresentado como uma única lista rolagem horizontal do conteúdo
 
 Os seguintes tamanhos de conteúdo serão necessários:
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>Poster (2:3)</b></td>
-    <td><b>Square (1:1)</b></td>
-    <td><b>HDTV (16:9)</b></td>
-</tr>
-<tr>
-    <td><b>Tamanho real</b></td>
-    <td>404px x 608px</td>
-    <td>608px x 608px</td>
-    <td>908px x 512px</td>
-</tr>
-<tr>
-    <td><b>Tamanho da zona de segurança</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-<tr>
-    <td><b>Tamanho de foco</b></td>
-    <td>333px x 500px</td>
-    <td>500px x 500px</td>
-    <td>782px x 440px</td>
-</tr>
-<tr>
-    <td><b>Tamanho foco</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-</table>
+||Poster (2:3)|Square (1:1)|HDTV (16:9)|
+|---|---|---|---|
+|Tamanho real|404x608px|608x608px|908x512px|
+|Tamanho da zona de segurança|380x570px|570x570px|852x479px|
+|Tamanho de foco|333x500px|500x500px|782x440px|
+|Tamanho foco|380x570px|570x570px|852x479px|
 
 Apple fornece as seguintes sugestões para a linha divididas em seções de conteúdo:
 
@@ -325,27 +259,14 @@ Opcionalmente, seu aplicativo Xamarin.tvOS pode apresentar seu conteúdo pratele
 
 Além de rolagem automática, o usuário pode assumir o controle das faixas de e rolagem em qualquer direção usando Siri remoto. Fazer um pequeno, circular gesto remoto o Siri quando uma faixa esteja em foco ativará o efeito da Parallax para essa faixa.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Imagem da faixa (Wide Extra)</b></td>
-</tr>
-<tr>
-    <td><b>Tamanho real</b></td>
-    <td>1940px x 624px</td>
-</tr>
-<tr>
-    <td><b>Tamanho da zona de segurança</b></td>
-    <td>1740px x 620px</td>
-</tr>
-<tr>
-    <td><b>Tamanho de foco</b></td>
-    <td>1740px x 560px</td>
-</tr>
-<tr>
-    <td><b>Tamanho foco</b></td>
-    <td>1740px x 620px</td>
-</tr>
-</table>
+**Imagem da faixa (Wide Extra)**
+
+|   |   |
+|---|---|
+|Tamanho real|1940x624px|
+|Tamanho da zona de segurança|1740x620px|
+|Tamanho de foco|1740x560px|
+|Tamanho foco|1740x620px|
 
 Faixas de inserção de rolagem pode a ser fornecida como estático `.png` ou em camadas `.lsr` arquivo.
 
@@ -366,44 +287,13 @@ Se seu aplicativo Xamarin.tvOS é um jogo e incluiu suporte Game Center, vários
 - **Arte final do painel** -uma imagem opcional pode ser fornecido, que será exibido na parte superior do painel de controle do aplicativo no Game Center. Essas imagens são não Focusable é.
 - **Placar de líderes de arte** -você deve fornecer entre um (1) para três (3) imagens de taxa de proporção de 16:9 para cada placar de líderes de que seu aplicativo aceita. Eles podem ser estáticas `.png` ou em camadas `.lsr` arquivos. A arte placar de líderes é Focusable é.
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>Ícones de realização</b></td>
-    <td><b>Arte final do painel de controle</b></td>
-    <td><b>Placar de líderes de arte</b></td>
-</tr>
-<tr>
-    <td><b>Tamanho visível</b></td>
-    <td>200px x 200px</td>
-    <td>923px x 150px</td>
-    <td>N/D</td>
-</tr>
-<tr>
-    <td><b>Tamanho real</b></td>
-    <td>320px x 320px</td>
-    <td>N/D</td>
-    <td>659px x 371px</td>
-</tr>
-<tr>
-    <td><b>Tamanho da zona de segurança</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>618px x 348px</td>
-</tr>
-<tr>
-    <td><b>Tamanho de foco</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>548px x 309px</td>
-</tr>
-<tr>
-    <td><b>Tamanho foco</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>618px x 348px</td>
-</tr>
-</table>
+||Ícones de realização|Arte final do painel de controle|Placar de líderes de arte|
+|---|---|---|---|
+|Tamanho visível|200x200px|923x150px|N/D|
+|Tamanho real|320x320px|N/D|659x371px|
+|Tamanho da zona de segurança|N/D|N/D|618x348px|
+|Tamanho de foco|N/D|N/D|548x309px|
+|Tamanho foco|N/D|N/D|618x348px|
 
 Para obter mais informações sobre como trabalhar com Game Center, consulte da Apple [guia de programação do Game Center](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html).
 

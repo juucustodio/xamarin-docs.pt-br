@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 0d6e953a6a45b78d470c7ff73e1d6faa7444a683
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4985d67f74d54644cbc033d6c76148f88d741ee1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="tools--commands"></a>Ferramentas e comandos
 
@@ -53,19 +53,14 @@ Available Tools:
 
 Objetivo Sharpie fornece as seguintes ferramentas:
 
-<table>
-  <thead>
-    <tr><td>Ferramenta</td><td>Descrição</td>
-  </thead>
-  <tbody>
-    <tr><td><b>xcode</b></td><td>Fornece informações sobre a instalação atual do Xcode e as versões do iOS e Mac SDKs que estão disponíveis. Usaremos essas informações posteriormente quando geramos nosso associações.</td></tr>
-    <tr><td><b>pod</b></td><td>Procura, configura, instala (em um diretório local) e associa Objective-C <a href="https://cocoapods.org">CocoaPod</a> bibliotecas disponíveis do repositório especificações principal. Essa ferramenta avalia a CocoaPod instalado para deduzir automaticamente a entrada correta para passar para o <code>bind</code> ferramenta abaixo. <em><strong>No 3.0!</strong></em></td></tr>
-    <tr><td><b>bind</b></td><td>Analisa os arquivos de cabeçalho (<code>*.h</code>) na biblioteca do Objective-C para o <a href="~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md">inicial <i>ApiDefinition.cs</i> e <i>StructsAndEnums.cs</i> arquivos</a>.</td></tr>
-    <tr><td><b>update</b></td><td>Verifica se há versões mais recentes do objetivo Sharpie e downloads e inicia o instalador, se houver um disponível.</td></tr>
-    <tr><td><b>verify-docs</b></td><td>Mostra informações detalhadas sobre <code>[Verify]</code> atributos.</td></tr>
-    <tr><td><b>docs</b></td><td>Navega para o documento em um navegador da web padrão.</td></tr>
-  </tbody>
-</table>
+|Ferramenta|Descrição|
+|--- |--- |
+|**xcode**|Fornece informações sobre a instalação atual do Xcode e as versões do iOS e Mac SDKs que estão disponíveis. Usaremos essas informações posteriormente quando geramos nosso associações.|
+|**pod**|Procura, configura, instala (em um diretório local) e associa Objective-C [CocoaPod](https://cocoapods.org/) bibliotecas disponíveis do repositório especificações principal. Essa ferramenta avalia a CocoaPod instalado para deduzir automaticamente a entrada correta para passar para o `bind` ferramenta abaixo. No 3.0!|
+|**bind**|Analisa os arquivos de cabeçalho (`*.h`) na biblioteca do Objective-C em inicial [ApiDefinition.cs e StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) arquivos.|
+|**update**|Verifica se há versões mais recentes do objetivo Sharpie e downloads e inicia o instalador, se houver um disponível.|
+|**verify-docs**|Mostra informações detalhadas sobre `[Verify]` atributos.|
+|**docs**|Navega para o documento em um navegador da web padrão.|
 
 Para obter ajuda sobre uma ferramenta Sharpie objetivo específica, digite o nome da ferramenta e o `-help` opção. Por exemplo, `sharpie xcode -help` retorna a seguinte saída:
 

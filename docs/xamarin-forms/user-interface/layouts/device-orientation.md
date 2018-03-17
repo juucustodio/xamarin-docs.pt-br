@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 8b266640bb0e1aa2bc584197e5fd7cbf4ab48e88
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cb17c224fc6102d9e0dc25853c2222734299647a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
@@ -504,4 +504,4 @@ Observe o seguinte:
 - [Layout (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [Exemplo de BusinessTumble (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
 - [Layout dinâmico (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
-- [Exibir uma imagem com base na orientação da tela](https://developer.xamarin.comhttps://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)
+- [Exibir uma imagem com base na orientação da tela](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)

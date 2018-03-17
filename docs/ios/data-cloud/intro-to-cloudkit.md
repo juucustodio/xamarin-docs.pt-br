@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 2c48ae5386fda63aed43c24c09c10cfb87b93637
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -147,40 +147,12 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 Aqui estão as diferenças entre os tipos de banco de dados:
 
-<table cellpadding="1" cellspacing="1" border="1" width="100%">
-<thead>
-<tr>
-<td></td>
-<td>Banco de dados público</td>
-<td>Banco de dados particular</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Tipo de dados</td>
-<td>Dados compartilhados</td>
-<td>Dados do usuário atual</td>
-</tr>
-
-<tr>
-<td>Quota</td>
-<td>Contabilizada na cota do desenvolvedor</td>
-<td>Contabilizada na cota do usuário</td>
-</tr>
-
-<tr>
-<td>Permissões padrão</td>
-<td>World legível</td>
-<td>Usuário legível</td>
-</tr>
-
-<tr>
-<td>Editar permissões</td>
-<td>iCloud painel funções por meio de um nível de registro de classe</td>
-<td>N/D</td>
-</tr>
-</tbody>
-</table>
+||Banco de dados público|Banco de dados particular|
+|---|--- |--- |
+|**Tipo de dados**|Dados compartilhados|Dados do usuário atual|
+|**Quota**|Contabilizada na cota do desenvolvedor|Contabilizada na cota do usuário|
+|**Permissões padrão**|World legível|Usuário legível|
+|**Editar permissões**|iCloud painel funções por meio de um nível de registro de classe|N/D|
 
 ### <a name="records"></a>Registros
 

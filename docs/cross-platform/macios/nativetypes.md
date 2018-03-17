@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: b78ade19efed92ab3b2d8ba790f2d7334472bab4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 09858bd7902b44bbedd96f1be9c9c827131ee16f
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="native-types"></a>Tipos nativos
 
@@ -27,28 +27,11 @@ Com esses novos tipos de dados, o mesmo código de origem é compilado para 32 b
 
 A tabela a seguir mostra as alterações em nossos tipos de dados para corresponder a esse novo mundo de 32/64 bits:
 
-<table>
-        <tr>
-            <th>Tipo nativo</th>
-            <th>tipo de suporte de 32 bits</th> 
-            <th>tipo de suporte de 64 bits</th>
-        </tr>
-        <tr>
-            <td><code>System.nint</code></td>
-        <td><code>System.Int32</code> (<code>int</code>)</td>
-        <td><code>System.Int64</code> (<code>long</code>)</td>
-        </tr>
-        <tr>
-            <td><code>System.nuint</code></td>
-        <td><code>System.UInt32</code> (<code>uint</code>)</td>
-        <td><code>System.UInt64</code> (<code>ulong</code>)</td>
-        </tr>
-        <tr>
-            <td><code>System.nfloat</code></td>
-        <td><code>System.Single</code> (<code>float</code>)</td>
-        <td><code>System.Double</code> (<code>double</code>)</td>
-        </tr>
-    </table>
+|Tipo nativo|tipo de suporte de 32 bits|tipo de suporte de 64 bits|
+|--- |--- |--- |
+|`System.nint`|`System.Int32` (`int`)|`System.Int64` (`long`)|
+|`System.nuint`|`System.UInt32` (`uint`)|`System.UInt64` (`ulong`)|
+|`System.nfloat`|`System.Single` (`float`)|`System.Double` (`double`)|
 
 Escolhemos a esses nomes para permitir que seu código c# pesquisar mais ou menos da mesma forma que seria hoje.
 
@@ -76,32 +59,15 @@ Os tipos de dados de ponto, o tamanho e o retângulo que são usados com CoreGra
 
 Ao mover para **unificada**, você precisará substituir instâncias da `System.Drawing` com seus `CoreGraphics` equivalentes, conforme mostrado na tabela a seguir:
 
-<table>
-        <tr>
-            <th>Tipo antigo no System. Drawing</th>
-            <th>Novo CoreGraphics de tipo de dados</th> 
-            <th>Descrição</th>
-        </tr>
-        <tr>
-        <td><code>RectangleF</code></td>
-        <td><code>CGRect</code></td>
-        <td>Mantém flutuante informações do ponto de retângulo.  </td>
-        </tr>
-        <tr>
-        <td><code>SizeF</code></td>
-        <td><code>CGSize</code></td>
-        <td>Informações sobre o tamanho (largura, altura) do ponto de mantém flutuante</td>
-        </tr>
-        <tr>
-        <td><code>PointF</code></td>
-        <td><code>CGPoint</code></td>
-        <td>Contém um ponto flutuante, do ponto de informações (X, Y)</td>
-        </tr>
-    </table>
+|Tipo antigo no System. Drawing|Novo CoreGraphics de tipo de dados|Descrição|
+|--- |--- |--- |
+|`RectangleF`|`CGRect`|Mantém flutuante informações do ponto de retângulo.|
+|`SizeF`|`CGSize`|Informações sobre o tamanho (largura, altura) do ponto de mantém flutuante|
+|`PointF`|`CGPoint`|Contém um ponto flutuante, do ponto de informações (X, Y)|
 
 As antigo flutuações de tipos usados de dados para armazenar os elementos das estruturas de dados, enquanto o novo usa `System.nfloat`.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Trabalhando com tipos nativos em aplicativos de plataforma cruzada](~/cross-platform/macios/native-types-cross-platform.md)
-- [Diferenças de API unificada do vs clássico](http://developer.xamarin.comhttps://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Trabalhar com tipos nativos em aplicativos de plataforma cruzada](~/cross-platform/macios/native-types-cross-platform.md)
+- [Diferenças de API unificada do vs clássico](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

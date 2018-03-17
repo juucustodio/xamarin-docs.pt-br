@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b1b6338494b9be98e677cf9d338410eae759feb8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a09ba93fe7c3f5ade6b5cafe44fd7ee2b0c33487
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Atualizando aplicativos existentes para a API unificada
 
@@ -49,7 +49,7 @@ Aplicativos Xamarin.Mac existentes podem ser atualizados para a API de Unificaç
 
 Siga estas instruções para atualizar uma solução xamarin. Forms existente com um projeto do iOS para usar a API unificada. Suporte de API unificada só está disponível no xamarin. Forms 1.3 e posterior, portanto [as instruções](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) também explicam como atualizar seu aplicativo xamarin. Forms para versão 1.3. Essas [dicas](~/cross-platform/macios/unified/updating-tips.md) pode ajudar a atualizar qualquer código de iOS nativo renderizadores personalizados ou serviços de dependência.
 
-## <a name="working-with-native-types-in-cross-platform-appscross-platformmaciosnativetypesmd"></a>[Trabalhando com tipos nativos em aplicativos de plataforma cruzada](~/cross-platform/macios/nativetypes.md)
+## <a name="working-with-native-types-in-cross-platform-appscross-platformmaciosnativetypesmd"></a>[Trabalhar com tipos nativos em aplicativos de plataforma cruzada](~/cross-platform/macios/nativetypes.md)
 
 Este artigo aborda o uso do iOS novos tipos unificado API nativa (nint, nuint, nfloat) em um aplicativo de plataforma cruzada onde o código é compartilhado com dispositivos iOS não, como Android ou sistemas operacionais do Windows Phone. Ele fornece informações sobre quando os tipos nativos devem ser usados e fornece várias soluções possíveis para casos em que o novo tipo deve ser usado com o código de plataforma cruzada.
 
@@ -68,4 +68,4 @@ Siga estas instruções para [atualizar um projeto existente de associação par
 - [Atualizar aplicativos xamarin. Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [Atualizando associações](~/cross-platform/macios/unified/update-binding.md)
 - [Atualizar dicas](~/cross-platform/macios/unified/updating-tips.md)
-- [Diferenças de API unificada do vs clássico](http://developer.xamarin.comhttps://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Diferenças de API unificada do vs clássico](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

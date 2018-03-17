@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: a2378cb439ceed94751e61fd44b54aae3a65bebd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3564b4f7d41822fdd9ab167fb3e756f26678a17b
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="touch-id"></a>ID de toque
 
@@ -39,11 +39,8 @@ O conjunto de chaves não é possível descriptografar o item de conjunto de cha
 
 Primeiro, seu aplicativo deve consultar no conjunto de chaves para verificar se existe uma senha. Se não existir, você precisará solicitar uma senha para que o usuário não é solicitado continuamente. Se a senha precisa ser atualizado, solicitar ao usuário uma nova senha e passar o valor atualizado ao conjunto de chaves.
 
-
-> ℹ️ **Observação**: com informações secretas receber do banco de dados, ele não é prática recomendada apenas, mas espera-se que nenhum segredos serão mantidos na memória. Você só deve manter um segredo para como tempo é necessário e absolutamente não o atribua a uma variável global!
-
-
-
+> [!NOTE]
+> Depois de usar um segredo recuperados do conjunto de chaves, todas as referências aos dados devem ser removidas da memória. Nunca atribuí-la a uma variável global.
 
 ## <a name="keychain-acl-and-touch-id"></a>ID do conjunto de chaves ACL e toque
 
@@ -53,32 +50,11 @@ Lista de controle de acesso é um novo atributo de item de conjunto de chaves no
 
 A partir do iOS 8, agora há uma nova política de presença de usuário, `SecAccessControl`, que é imposto pelo enclave seguro em um iPhone 5s e acima. Podemos ver na tabela a seguir, assim como a configuração do dispositivo pode influenciar a avaliação de política:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Configuração do dispositivo</td>
-    <td>Avaliação de política</td>
-    <td>Mecanismo de backup</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Dispositivo sem senha</td>
-    <td>Sem acesso</td>
-    <td>Nenhum</td>
-</tr>
-<tr>
-    <td>Dispositivo com senha</td>
-    <td>Requer a senha</td>
-    <td>Nenhum</td>
-</tr>
-<tr>
-    <td>Dispositivo com a ID de toque</td>
-    <td>Prefere a ID de toque</td>
-    <td>Permite que a senha</td>
-</tr>
-</tbody>
-</table>
+|Configuração do dispositivo|Avaliação de política|Mecanismo de backup|
+|--- |--- |--- |
+|Dispositivo sem senha|Sem acesso|Nenhum|
+|Dispositivo com senha|Requer a senha|Nenhum|
+|Dispositivo com a ID de toque|Prefere a ID de toque|Permite que a senha|
 
 Todas as operações dentro de Enclave seguro podem confiar em si. Isso significa que podemos usar o resultado da autenticação de ID de toque para autorizar a descriptografia de item de conjunto de chaves. O Enclave proteger também mantém um contador de correspondências de ID de toque com falha, nesse caso um usuário terá que voltar a usar a senha.
 Uma nova estrutura do iOS 8, chamada _autenticação Local_, dá suporte a esse processo de autenticação do dispositivo. Iremos explorar isso na próxima seção.

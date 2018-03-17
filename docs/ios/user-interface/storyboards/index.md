@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 342e8189d9dec6eaa60a999d56a7891da845d247
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a0b0ca9857e706a9a84f1c661f7f6ff294e112c1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introdução ao Storyboards
 
@@ -84,32 +84,12 @@ Qualquer aplicativo usando as Classes de tamanho também usam o novo [ *Segues a
 
 [![](images/adaptivesegue.png "A lista suspensa Segues adaptável")](images/adaptivesegue.png#lightbox)
 
-<table>
-    <thead>
-        <tr>
-            <th>Atender</th>
-            <th>Descrição</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>programa</td>
-            <td>Isso é muito semelhante para atender um envio por Push, mas ele considera o conteúdo da tela. </td>
-        </tr>
-        <tr>
-            <td>Mostrar detalhes</td>
-            <td>Se o aplicativo exibe um modo de exibição mestre e de detalhes (por exemplo, em um controlador de exibição de divisão em um iPAd), o conteúdo substituirá o modo de exibição de detalhes. Se o aplicativo exibe apenas o mestre <strong>ou</strong> detalhe, o conteúdo substituirá o topo da pilha de controlador de exibição.</td>
-        </tr>
-        <tr>
-            <td>Apresentação</td>
-            <td>Isso é semelhante ao que segue Modal e permite a seleção de estilos de apresentação e façam a transição.</td>
-        </tr>
-        <tr>
-            <td>Apresentação de popover</td>
-            <td>Isso apresenta conteúdo como um popover</td>
-        </tr>
-    </tbody>
-</table>
+|Atender|Descrição|
+|--- |--- |
+|programa|Isso é muito semelhante para atender um envio por Push, mas ele considera o conteúdo da tela.|
+|Mostrar detalhes|Se o aplicativo exibe um modo de exibição mestre e de detalhes (por exemplo, em um controlador de exibição de divisão em um iPad), o conteúdo substituirá o modo de exibição de detalhes. Se o aplicativo exibe apenas o mestre ou detalhes, o conteúdo substituirá o topo da pilha de controlador de exibição.|
+|Apresentação|Isso é semelhante ao que segue Modal e permite a seleção de estilos de apresentação e façam a transição.|
+|Apresentação de popover|Isso apresenta conteúdo como um popover|
 
 ### <a name="transferring-data-with-segues"></a>Transferência de dados com Segues
 
