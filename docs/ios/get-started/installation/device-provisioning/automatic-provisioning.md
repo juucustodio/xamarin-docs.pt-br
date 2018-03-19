@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: d7532d052c57ad46caca0cd6d6ce26d0e77dc05f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="automatic-provisioning"></a>Provisionamento automático
 
@@ -34,23 +34,15 @@ Para assinar seu aplicativo automaticamente para implantação em um dispositivo
 
 1. Abra o projeto iOS no Visual Studio para Mac.
 
-2. Abra o arquivo **Info.plist**:
+2. Abra o arquivo **Info.plist**.
 
-    ![Arquivo Info.plist](automatic-provisioning-images/image1.png)
-
-3. No seção **Assinatura**, selecione sua equipe na lista suspensa **Equipe**:
+3. Na seção **Assinatura**, selecione **Provisionamento automático**:
 
     ![Lista suspensa do seletor de equipe](automatic-provisioning-images/image2.png)
 
-4. Marque a caixa de seleção **Gerenciar assinatura automaticamente**, conforme ilustrado abaixo. Isso inicia o processo de assinatura automática, em que o Visual Studio para Mac tentará gerar uma ID do aplicativo, um perfil de provisionamento e uma identidade de assinatura e definir esses artefatos para serem usados para assinatura. Quando a caixa de seleção tiver sido marcada, os controles manuais para selecionar identidades de assinatura serão desabilitados.
+4. Selecione sua equipe na lista suspensa **Equipe**.
 
-    ![Opção de gerenciar equipes automaticamente](automatic-provisioning-images/image3.png)
-
-5. A seguinte caixa de diálogo será exibida, informando que o arquivo de projeto será modificado para usar o certificado e o perfil de provisionamento recém-gerados:
-
-    ![caixa de diálogo que avisa que o arquivo de projeto será modificado](automatic-provisioning-images/image4.png)
-
-6. Depois de alguns segundos, um Certificado de Assinatura e um Perfil de Provisionamento serão criados e exibidos:
+6. Depois de alguns segundos, um Certificado de Assinatura e um Perfil de Provisionamento serão criados:
 
     ![certificado e perfil criados com sucesso](automatic-provisioning-images/image5.png)
 

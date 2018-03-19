@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 3871955f723d1b3aec6245bba0502ca4f955d64c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarinandroid-performance"></a>Desempenho do Xamarin.Android
 
@@ -156,7 +156,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 Conforme o usuário rola, o [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) chama a substituição `GetView` para solicitar novos modos de exibição para mostrar – se disponível, ela passará um modo de exibição não utilizado no parâmetro `convertView`. Se esse valor for `null`, o código criará uma nova instância [`View`](https://developer.xamarin.com/api/type/Android.Views.View/). Caso contrário, as propriedades `convertView` poderão ser redefinidas e reutilizadas.
 
-Para obter mais informações, confira [Reutilização do modo de exibição da linha](~/android/user-interface/layouts/list-view/populating.md) em [Preenchendo um ListView usando dados](~/android/user-interface/layouts/list-view/populating.md).
+Para obter mais informações, confira [Reutilização do modo de exibição da linha](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) em [Preenchendo um ListView usando dados](~/android/user-interface/layouts/list-view/populating.md).
 
 <a name="removeeventhandlers" />
 

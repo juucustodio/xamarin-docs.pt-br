@@ -1,6 +1,6 @@
 ---
 title: "Implantação sem fio"
-description: "Este recurso em versão prévia permite a implantação em dispositivos iOS ou Apple TV por meio de uma conexão de rede"
+description: "Este recurso permite a implantação em dispositivos iOS ou Apple TV por meio de uma conexão de rede"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
@@ -8,47 +8,40 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/09/2018
-ms.openlocfilehash: 11961a21a7c4188c505c822a35531036fd953405
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7566669fb7d607ca6616b88cb32b770537146c94
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="wireless-deployment"></a>Implantação sem fio
 
-_Este recurso em versão prévia permite a implantação em dispositivos iOS ou Apple TV por meio de uma conexão de rede_
-
-![Versão prévia](~/media/shared/preview.png)
-
-Uma parte importante do fluxo de trabalho do desenvolvedor é a implantação em um dispositivo. O Xcode 9 introduziu a opção de implantação em um dispositivo iOS ou Apple TV por meio de uma rede, em vez de exigir instalações físicas sempre que você quiser implantar e depurar o aplicativo. Este recurso foi introduzido no Visual Studio para Mac e na versão 15.6 do Visual Studio, que está atualmente em versão prévia.
+Uma parte importante do fluxo de trabalho do desenvolvedor é a implantação em um dispositivo. O Xcode 9 introduziu a opção de implantação em um dispositivo iOS ou Apple TV por meio de uma rede, em vez de exigir instalações físicas sempre que você quiser implantar e depurar o aplicativo. Esse recurso foi introduzido nas versões do Visual Studio para Mac 7.4 e do Visual Studio 15.6.
 
 Este guia explica como emparelhar e implantar em um dispositivo na rede.
 
 ## <a name="requirements"></a>Requisitos
 
-A implantação sem fio está disponível como um recurso em **versão prévia** no Visual Studio para Mac e no Visual Studio.
-
+A implantação sem fio está disponível como um recurso no Visual Studio para Mac e no Visual Studio.
 
 Para usar a implantação sem fio, você deve ter o seguinte:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 - macOS 10.12.4
-- A versão prévia mais recente do Visual Studio para Mac 
-    - Para instalar, alterne para o [canal Alfa ou Beta](https://docs.microsoft.com/en-us/visualstudio/mac/update) no Visual Studio para Mac.
+- A versão mais recente do Visual Studio para Mac
 - Xcode 9.0 ou posterior
 - Um dispositivo com iOS 11.0 ou tvOS 11.0 e posterior
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-- A [versão prévia](https://www.visualstudio.com/vs/preview/) mais recente do Visual Studio
+- A versão mais recente do Visual Studio
 - Um dispositivo com iOS 11.0 ou tvOS 11.0 e posterior
 
 No host de compilação do Mac, os componentes a seguir devem ser instalados:
 
 - macOS 10.12.4
-- Versão prévia do Visual Studio para Mac
-    - Para instalar, alterne para o [canal Alfa ou Beta](https://docs.microsoft.com/en-us/visualstudio/mac/update) no Visual Studio para Mac.
+- Visual Studio para Mac
 - Xcode 9.0 ou posterior
 
 -----
