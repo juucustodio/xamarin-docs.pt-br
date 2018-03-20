@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 62ac3ab4b3114447f0c67d86c601a688bb8ff1a7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 551a0de8cd4965815c67a795fb5723d4261a173c
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="cell-appearance"></a>Aparência de célula
 
@@ -73,11 +73,9 @@ Observe que, durante o direcionamento do Windows Phone 8.1, `ImageCell` não dim
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>Células personalizadas
-Quando as células internas não fornecerem o layout necessário, células personalizadas implementado o layout necessário. Por exemplo, você talvez queira apresentar uma célula com dois rótulos que têm o mesmo peso. Um `LabelCell` seria suficiente porque a `LabelCell` tem um rótulo que for menor.
+Quando as células internas não fornecerem o layout necessário, células personalizadas implementado o layout necessário. Por exemplo, você talvez queira apresentar uma célula com dois rótulos que têm o mesmo peso. Um `LabelCell` seria suficiente porque a `LabelCell` tem um rótulo que for menor. A maioria das personalizações de célula adicionam dados somente leitura adicionais (como rótulos adicionais, imagens ou outras informações de exibição).
 
 Todas as células personalizadas devem derivar de [ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), a mesma classe base que todos os a célula interna tipos de uso.
-
-A maioria das personalizações de célula adicionam dados somente leitura adicionais (como rótulos adicionais, imagens ou outras informações de exibição). Se forem adicionados botões ou outros controles que podem se concentrar, a célula em si pode não ser clicável no Android. Veja abaixo uma maneira superar essa limitação.
 
 Xamarin. Forms 2 introduziu um novo [comportamento do cache](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy) no `ListView` controle que pode ser definida para melhorar o desempenho de rolagem para alguns tipos de células personalizados.
 
@@ -261,30 +259,6 @@ var listView = new ListView {
 ```
 
 No iOS e Android, se o [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) estiver Reciclando elementos e a célula personalizada usa um renderizador personalizado, o renderizador personalizado corretamente deve implementar a notificação de alteração de propriedade. Quando as células são reutilizadas seus valores de propriedade serão alterado quando o contexto de associação é atualizado para que uma célula disponível, com `PropertyChanged` eventos que está sendo gerados. Para obter mais informações, consulte [Personalizando uma ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). Para obter mais informações sobre a reciclagem de célula, consulte [estratégia de cache](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
-
-### <a name="enabling-row-selection-on-android"></a>Habilitar seleção de linha no Android
-
-Para permitir a seleção de linha de células que também inclui elementos de entrada, como botões, um simples [ `custom renderer` ](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) é necessário. No código comuns, criar uma subclasse de `Button` para que um renderizador personalizado pode ser adicionado os projetos de plataforma:
-
-```csharp
-public class ListButton : Button { }
-```
-
-A implementação do processador para o Android simplesmente define o `Focusable` propriedade permite que a linha a ser selecionadas, bem como botões clicáveis do host. Esse código é adicionado ao projeto de aplicativo do Android:
-
-```csharp
-[assembly: ExportRenderer (typeof (ListButton), typeof (ListButtonRenderer))]
-// ...
-public class ListButtonRenderer : ButtonRenderer {
-    protected override void OnElementChanged (ElementChangedEventArgs<ListButton> e) {
-        base.OnElementChanged (e);
-        Control.Focusable = false;
-    }
-}
-```
-
-Como mencionado acima, somente Android requer o `ButtonRenderer` a ser implementada. iOS e plataformas Windows Phone permitem que o botão para ser clicado sem implementar um renderizador personalizado.
-
 
 ## <a name="related-links"></a>Links relacionados
 

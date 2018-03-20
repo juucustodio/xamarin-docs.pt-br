@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 0f018aa666f08792a1693a79e22da150f82712f6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ebbb4b527b27b87bb6357723978e730304658720
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>Serviços Android em execução em processos remotos
 
@@ -415,7 +415,7 @@ Um exemplo simplificado de criar um personalizado `normal` permissão será desc
 
 Para usar uma permissão personalizada, é declarada com o serviço enquanto o cliente solicite explicitamente essa permissão.
 
-Para criar uma permissão no serviço APK, um `permission` elemento é adicionado para o `manifest` elemento em**AndroidManifest.xml**. Essa permissão deve ter o `name`, `protectionLevel`, e `label` conjunto de atributos. O `name` atributo deve ser definido como uma cadeia de caracteres que identifica exclusivamente a permissão. O nome será exibido no **App Info** exibir o **configurações do Android** (conforme mostrado na próxima seção).
+Para criar uma permissão no serviço APK, um `permission` elemento é adicionado para o `manifest` elemento em **AndroidManifest.xml**. Essa permissão deve ter o `name`, `protectionLevel`, e `label` conjunto de atributos. O `name` atributo deve ser definido como uma cadeia de caracteres que identifica exclusivamente a permissão. O nome será exibido no **App Info** exibir o **configurações do Android** (conforme mostrado na próxima seção).
 
 O `protectionLevel` atributo deve ser definido como um dos valores de cadeia de caracteres de quatro que foram descritos acima.  O `label` e `description` devem se referir aos recursos de cadeia de caracteres e são usados para fornecer um nome amigável e uma descrição para o usuário.
 

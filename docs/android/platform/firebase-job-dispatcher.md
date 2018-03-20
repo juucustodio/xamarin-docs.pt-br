@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho firebase
 
@@ -27,7 +27,7 @@ Por exemplo, um trabalho em segundo plano pode sondar um site cada alguns minuto
 Android já oferece várias APIs para ajudar com executando o trabalho em segundo plano, mas nenhuma delas é uma solução abrangente:
 
 * **[Tentativa de serviços](~/android/app-fundamentals/services/creating-a-service/intent-services.md)**  &ndash; intenção de serviços são ótimos para executar o trabalho, mas eles fornecem nenhuma maneira de agendar o trabalho.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager)**  &ndash; essas APIs permitem que apenas o trabalho ser agendado, mas não fornecer nenhuma maneira de realmente executar o trabalho. Além disso, o AlarmManager só permite que restrições de tempo com base, que significa emitir um alarme em uma determinada hora ou após um determinado período de tempo decorrido. 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; essas APIs permitem que apenas o trabalho ser agendado, mas não fornecer nenhuma maneira de realmente executar o trabalho. Além disso, o AlarmManager só permite que restrições de tempo com base, que significa emitir um alarme em uma determinada hora ou após um determinado período de tempo decorrido. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; JobSchedule o é uma API grande que funciona com o sistema operacional para agendar trabalhos. No entanto, só está disponível para esses aplicativos Android que o nível de API 21 destino ou superior. 
 * **[Receptores de difusão](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; Android um aplicativo pode configurar receptores difusão para executar o trabalho em resposta a eventos de sistema ou propósitos. No entanto, receptores de difusão não fornecem nenhum controle sobre quando o trabalho deve ser executado. Também restringirá as alterações no sistema operacional Android quando receptores difusão funcionam ou os tipos de trabalho que eles possam responder às. 
 * **Gerenciador de rede de mensagem do Google nuvem** &ndash; por um longo tempo foi, indiscutivelmente, a melhor maneira de forma inteligente agenda em segundo plano de trabalho. No entanto, o GCMNetworkManager já foi preterido. 
