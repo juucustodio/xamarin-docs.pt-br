@@ -8,33 +8,32 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/19/2018
-ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: fbcb0190f609efc4396429a7961c2d49ab82576f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho firebase
 
 _Este guia descreve como agendar o trabalho em segundo plano usando a biblioteca de Firebase trabalho Dispatcher do Google._
 
-## <a name="firebase-job-dispatcher-overview"></a>Visão geral do Dispatcher de trabalho firebase
+## <a name="overview"></a>Visão geral
 
 Uma das melhores maneiras de manter um aplicativo do Android resposta para o usuário é garantir que o trabalho de execução longa ou complexo é executado em segundo plano. No entanto, é importante que o trabalho de plano de fundo não afetará negativamente a experiência do usuário com o dispositivo. 
 
-Por exemplo, um trabalho em segundo plano pode sondar um site cada alguns minutos para consulta de alterações para um determinado conjunto de dados. Isso parece benigno, no entanto, ele pode ter um grande impacto no dispositivo. O aplicativo terminará ativar o dispositivo, elevar a CPU para um estado de energia mais alto, ligar os rádios, tornando as solicitações de rede e, em seguida, processar os resultados. Isso é pior porque o dispositivo não imediatamente será desligar e retornar para o estado ocioso de baixa energia. Trabalho em segundo plano mal agendada pode inadvertidamente manter o dispositivo em um estado com requisitos de energia desnecessária e excesso. Na verdade, essa atividade inocente aparente (um site de sondagem) deixará o dispositivo inutilizável em um período de tempo relativamente curto.
+Por exemplo, um trabalho em segundo plano pode sondar um site cada três ou quatro minutos para consulta de alterações para um determinado conjunto de dados. Isso parece benigno, mas teria um grande impacto sobre a vida útil da bateria. O aplicativo será repetidamente acorde o dispositivo, elevar a CPU para um estado de energia mais alto, ligue os rádios, verifique as solicitações de rede e, em seguida, processar os resultados. Isso é pior porque o dispositivo não imediatamente será desligar e retornar para o estado ocioso de baixa energia. Trabalho em segundo plano mal agendada pode inadvertidamente manter o dispositivo em um estado com requisitos de energia desnecessária e excesso. Essa atividade aparentemente inocente (um site de sondagem) deixará o dispositivo inutilizável em um período de tempo relativamente curto.
 
-Android já oferece várias APIs para ajudar com executando o trabalho em segundo plano, mas nenhuma delas é uma solução abrangente:
+Android fornece as seguintes APIs para ajudar a executar o trabalho em segundo plano, mas em si não são suficientes para o agendamento de trabalho inteligente. 
 
 * **[Tentativa de serviços](~/android/app-fundamentals/services/creating-a-service/intent-services.md)**  &ndash; intenção de serviços são ótimos para executar o trabalho, mas eles fornecem nenhuma maneira de agendar o trabalho.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; essas APIs permitem que apenas o trabalho ser agendado, mas não fornecer nenhuma maneira de realmente executar o trabalho. Além disso, o AlarmManager só permite que restrições de tempo com base, que significa emitir um alarme em uma determinada hora ou após um determinado período de tempo decorrido. 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; essas APIs permitem que apenas o trabalho ser agendada, mas não fornecer nenhuma maneira de realmente executar o trabalho. Além disso, o AlarmManager só permite que restrições de tempo com base, que significa emitir um alarme em uma determinada hora ou após um determinado período de tempo decorrido. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; JobSchedule o é uma API grande que funciona com o sistema operacional para agendar trabalhos. No entanto, só está disponível para esses aplicativos Android que o nível de API 21 destino ou superior. 
-* **[Receptores de difusão](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; Android um aplicativo pode configurar receptores difusão para executar o trabalho em resposta a eventos de sistema ou propósitos. No entanto, receptores de difusão não fornecem nenhum controle sobre quando o trabalho deve ser executado. Também restringirá as alterações no sistema operacional Android quando receptores difusão funcionam ou os tipos de trabalho que eles possam responder às. 
-* **Gerenciador de rede de mensagem do Google nuvem** &ndash; por um longo tempo foi, indiscutivelmente, a melhor maneira de forma inteligente agenda em segundo plano de trabalho. No entanto, o GCMNetworkManager já foi preterido. 
+* **[Receptores de difusão](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; Android um aplicativo pode configurar destinatários difusão para executar o trabalho em resposta a eventos de todo o sistema ou propósitos. No entanto, receptores de difusão não fornecem nenhum controle sobre quando o trabalho deve ser executado. Também restringirá as alterações no sistema operacional Android quando receptores difusão funcionam ou os tipos de trabalho que eles possam responder às. 
 
-Há dois recursos principais para efetivamente executando o trabalho em segundo plano (também conhecido como um _trabalho em segundo plano_ ou um _trabalho_):
+Há dois recursos principais para executar de forma eficiente trabalho em segundo plano (também conhecido como um _trabalho em segundo plano_ ou um _trabalho_):
 
-1. **Inteligente agendamento do trabalho** &ndash; é importante que quando um aplicativo estiver executando um trabalho em segundo plano que ele faz isso como um bom cidadão. Idealmente, o aplicativo deve não exigem que um trabalho seja executada. Em vez disso, o aplicativo deve especificar condições que devem ser atendidas para quando o trabalho pode executar e, em seguida, agendar que trabalham para ser executado quando as condições forem atendidas. Isso permite que o Android executar o trabalho de maneira inteligente. Por exemplo, solicitações de rede podem ser divididas em lotes para executar todos ao mesmo tempo para fazer uso máximo de sobrecarga envolvida com a rede.
+1. **Inteligente agendamento do trabalho** &ndash; é importante que quando um aplicativo estiver executando um trabalho em segundo plano que ele faz isso como um bom cidadão. Idealmente, o aplicativo deve não exigem que um trabalho seja executada. Em vez disso, o aplicativo deve especificar condições que devem ser atendidas para que quando o trabalho pode executar e, em seguida, agendar que funcionam para ser executado quando as condições forem atendidas. Isso permite que o Android executar o trabalho de maneira inteligente. Por exemplo, solicitações de rede podem ser divididas em lotes para executar todos ao mesmo tempo para fazer uso máximo de sobrecarga envolvida com a rede.
 2. **Encapsula o trabalho** &ndash; o código para executar o trabalho de plano de fundo deve ser encapsulado em um componente distinto que pode ser executado independentemente da interface do usuário e seja relativamente fácil reagendar se o trabalho não for concluída por algum motivo.
 
 O Dispatcher de trabalho Firebase é uma biblioteca do Google que fornece uma API fluente para simplificar o trabalho de agendamento em segundo plano. Ele é destinado a ser a substituição para o Gerenciador de nuvem do Google. O Dispatcher de trabalho Firebase consiste das seguintes APIs:
@@ -66,7 +65,7 @@ Para começar a usar o Dispatcher de trabalho Firebase, primeiro adicione o [pac
 
 Depois de adicionar a biblioteca de Firebase Dispatcher de trabalho, crie um `JobService` classe e, em seguida, agendar a execução com uma instância do `FirebaseJobDispatcher`.
 
-### <a name="creating-a-jobservice"></a>Criando um `JobService`
+### <a name="creating-a-jobservice"></a>Criando um JobService
 
 Todo trabalho executado pela biblioteca Firebase Dispatcher de trabalho deve ser feito em um tipo que estende o `Firebase.JobDispatcher.JobService` classe abstrata. Criando um `JobService` é muito semelhante à criação de um `Service` com o framework Android: 
 
@@ -74,7 +73,7 @@ Todo trabalho executado pela biblioteca Firebase Dispatcher de trabalho deve ser
 2. Decore a subclasse com o `ServiceAttribute`. Embora não seja estritamente necessário, é recomendável definir explicitamente o `Name` parâmetro para ajudar na depuração de `JobService`. 
 3. Adicionar uma `IntentFilter` para declarar o `JobService` no **AndroidManifest.xml**. Isso também ajudará a biblioteca de Dispatcher de trabalho Firebase localizar e invocar o `JobService`.
 
-O código a seguir é um exemplo das mais simples `JobService` para um aplicativo:
+O código a seguir é um exemplo das mais simples `JobService` para um aplicativo usando a TPL assincronamente realizar algum trabalho:
 
 ```csharp
 [Service(Name = "com.xamarin.fjdtestapp.DemoJob")]
@@ -85,11 +84,14 @@ public class DemoJob : JobService
 
     public override bool OnStartJob(IJobParameters jobParameters)
     {
-        Log.Debug(TAG, "DemoJob::OnStartJob");
-        // Note: This runs on the main thread. Anything that takes longer than 16 milliseconds
-         // should be run on a seperate thread.
-        
-        return false; // return false because there is no more work to do.
+        Task.Run(() =>
+        {
+            // Work is happening asynchronously (code omitted)
+                       
+        });
+
+        // Return true because of the asynchronous work
+        return true;  
     }
 
     public override bool OnStopJob(IJobParameters jobParameters)
@@ -101,7 +103,7 @@ public class DemoJob : JobService
 }
 ```
 
-### <a name="creating-a-firebasejobdispatcher"></a>Criando um `FirebaseJobDispatcher`
+### <a name="creating-a-firebasejobdispatcher"></a>Criando um FirebaseJobDispatcher
 
 Antes de qualquer trabalho pode ser agendado, é necessário criar um `Firebase.JobDispatcher.FirebaseJobDispatcher` objeto. O `FirebaseJobDispatcher` é responsável por agendar uma `JobService`. O trecho de código a seguir é uma maneira de criar uma instância do `FirebaseJobDispatcher`: 
  
@@ -121,7 +123,7 @@ FirebaseJobDispatcher dispatcher = context.CreateJobDispatcher();
 
 Uma vez o `FirebaseJobDispatcher` foi instanciado, é possível criar um `Job` e executar o código de `JobService` classe. O `Job` é criado por um `Job.Builder` do objeto e será abordado na próxima seção.
 
-### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>Criando um `Firebase.JobDispatcher.Job` com o `Job.Builder`
+### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>Criando um Firebase.JobDispatcher.Job com o Job.Builder
 
 O `Firebase.JobDispatcher.Job` classe é responsável por encapsulando os metadados necessários para executar um `JobService`. Um`Job` contém informações como qualquer restrição que deve ser atendida antes de executar o trabalho, se o `Job` for recorrente, ou gatilhos que fará com que o trabalho a ser executado.  Como mínimo, um `Job` deve ter um _marca_ (uma cadeia de caracteres exclusiva que identifica o trabalho para o `FirebaseJobDispatcher`) e o tipo do `JobService` que deve ser executado. O Dispatcher de trabalho Firebase instanciará o `JobService` quando for hora para executar o trabalho.  Um `Job` é criada usando uma instância do `Firebase.JobDispatcher.Job.JobBuilder` classe. 
 
@@ -140,7 +142,7 @@ O `Job.Builder` executará algumas verificações de validação básicos nos va
 * Um `Job` será agendado para ser executado assim que possível.
 * A estratégia de repetição padrão para um `Job` é usar um _retirada exponencial_ (discutido em mais detalhes abaixo na seção [definindo um RetryStrategy](#Setting_a_RetryStrategy))
 
-### <a name="scheduling-a-job"></a>Agendando um `Job`
+### <a name="scheduling-a-job"></a>Agendar um trabalho
 
 Depois de criar o `Job`, ela precisa ser agendada com o `FirebaseJobDispatcher` antes de ser executado. Há dois métodos para agendar um `Job`:
 
@@ -173,7 +175,7 @@ Os seguintes tópicos serão discutidos mais nas seções a seguir.
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-parameters-to-a-job"></a>Passando parâmetros para um trabalho
+#### <a name="passing-jarameters-to-a-job"></a>Passando jarameters para um trabalho
 
 Parâmetros são passados para um trabalho, criando um `Bundle` que é passado junto com o `Job.Builder.SetExtras` método:
 
@@ -219,8 +221,6 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 <a name="Setting_Job_Triggers" />
-
-#### <a name="setting-job-triggers"></a>Gatilhos de trabalho de configuração
 
 O `JobTrigger` fornece orientação para o sistema operacional sobre quando o trabalho deve ser iniciada. Um `JobTrigger` tem um _executar janela_ que define um horário agendado quando o `Job` deve ser executado. A janela de execução tem um _iniciar janela_ valor e um _janela final_ valor. A janela de início é o número de segundos que o dispositivo deve aguardar antes de executar o trabalho e o valor de janela final é o número máximo de segundos a aguardar antes de executar o `Job`. 
 
@@ -283,7 +283,7 @@ O método retornará um valor inteiro:
 
 ## <a name="summary"></a>Resumo
 
-Este guia abordou como usar o Dispatcher de trabalho Firebase para executar o trabalho de maneira inteligente em segundo plano. Ele discutiu como encapsular o trabalho a ser executado como um `JobService` e como o `FirebaseJobDispatcher` para agendar esse trabalho, especificando os critérios com um `JobTrigger` e como as falhas devem ser tratadas com um `RetryStrategy`.
+Este guia abordou como usar o Dispatcher de trabalho Firebase para executar o trabalho de maneira inteligente em segundo plano. Ele discutiu como encapsular o trabalho a ser executado como um `JobService` e como usar o `FirebaseJobDispatcher` para agendar esse trabalho, especificando os critérios com um `JobTrigger` e como as falhas devem ser tratadas com um `RetryStrategy`.
 
 
 ## <a name="related-links"></a>Links relacionados

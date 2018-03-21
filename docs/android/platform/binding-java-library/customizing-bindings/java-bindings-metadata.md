@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="java-bindings-metadata"></a>Java Bindings Metadata
 
@@ -313,7 +313,7 @@ O **EnumFields.xml** arquivo contém o mapeamento entre Java `int` constantes e 
 </mapping>
 ```
 
-Aqui, levamos classe Java `SKRealReachSettings` e definido um enum c# chamado `SKRealReachSettings` no namespace `Skobbler.Ngx.Map.RealReach`. O `field` entradas define o nome da constante Java (exemplo `UNIT\_SECOND`), o nome da entrada de enum (exemplo `Second`) e o valor de inteiro representado por duas entidades (exemplo `0`). 
+Aqui, levamos classe Java `SKRealReachSettings` e definido um enum c# chamado `SKMeasurementUnit` no namespace `Skobbler.Ngx.Map.RealReach`. O `field` entradas define o nome da constante Java (exemplo `UNIT_SECOND`), o nome da entrada de enum (exemplo `Second`) e o valor de inteiro representado por duas entidades (exemplo `0`). 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Define os métodos Getter/Setter usando EnumMethods.xml
 
@@ -328,7 +328,7 @@ Considerando a `SKRealReachSettings` enumeração definida acima, o seguinte **E
 </mapping>
 ```
 
-A primeira `method` linha mapeia o valor de retorno do Java `getMeasurementUnit` método para o `SKRealReachSettings` enum. A segunda `method` linha mapeia o primeiro parâmetro do `setMeasurementUnit` à mesma enumeração.
+A primeira `method` linha mapeia o valor de retorno do Java `getMeasurementUnit` método para o `SKMeasurementUnit` enum. A segunda `method` linha mapeia o primeiro parâmetro do `setMeasurementUnit` à mesma enumeração.
 
 Todas essas alterações em vigor, você pode usar o código a seguir no xamarin para definir o `MeasurementUnit`: 
 

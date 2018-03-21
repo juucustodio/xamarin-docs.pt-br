@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/21/2016
-ms.openlocfilehash: c6fb404919621e1b22217b4461597ae07a5624c4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3ce0fd2b83599fca7f38c161bbd2137254b75bd5
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xaml-compilation"></a>Compilação de XAML
 
@@ -56,7 +56,7 @@ public class HomePage : ContentPage
 Neste exemplo, verificando o XAML para tempo de compilação de `HomePage` classe será executada e erros são relatados como parte do processo de compilação.
 
 > [!NOTE]
-> O `XamlCompilation` atributo e o `XamlCompilationOptions` enumeração residem no `Xamarin.Forms.Xaml0` namespace, que deve ser importado para usá-los.
+> O `XamlCompilation` atributo e o `XamlCompilationOptions` enumeração residem no `Xamarin.Forms.Xaml` namespace, que deve ser importado para usá-los.
 
 
 ## <a name="related-links"></a>Links relacionados

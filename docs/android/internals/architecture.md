@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9834da444032622cc3547e7c99ca3de0e41bb603
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="architecture"></a>Arquitetura
 
@@ -33,7 +33,7 @@ Para obter mais informações sobre como as classes Android se comunicam com as 
 
 Pacotes de aplicativos do Android são contêineres ZIP com um *. Apk* extensão de arquivo. Pacotes de aplicativos xamarin têm a mesma estrutura e layout pacotes Android normal, com as seguintes adições:
 
--   Os assemblies do aplicativo (que contém o IL) são *armazenado* descompactados dentro de *assemblies* pasta. Durante o processo de inicialização na versão cria o *. Apk* é *mmap()* ed para o processo e os assemblies são carregados na memória. Isso permite a inicialização do aplicativo mais rápida, como assemblies não precisam ser extraído antes da execução. - *Observação:* informações de localização do Assembly como [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/) e [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
+-   Os assemblies do aplicativo (que contém o IL) são *armazenado* descompactados dentro de *assemblies* pasta. Durante o processo de inicialização na versão cria o *. Apk* é *mmap()* ed para o processo e os assemblies são carregados na memória. Isso permite a inicialização de aplicativo mais rápida, como assemblies não precisam ser extraído antes da execução. - *Observação:* informações de localização do Assembly como [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/) e [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
     *não pode ser confiado* versão compilações. Eles não existem como entradas distintas do sistema de arquivos, e não tiverem nenhum local utilizável.
 
 
