@@ -9,10 +9,10 @@ author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
 ms.openlocfilehash: caee0d685838f7c0a54e19611fdf72df5730c037
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Criar aplicativos móveis com a edição de primeiro do catálogo xamarin. Forms
 
