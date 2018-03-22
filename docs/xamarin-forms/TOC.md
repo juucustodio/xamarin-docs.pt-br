@@ -180,6 +180,7 @@
 ### [Seletor](user-interface/picker/index.md)
 #### [Definir a propriedade ItemsSource de um seletor](user-interface/picker/populating-itemssource.md)
 #### [Adicionar dados à coleção de itens do seletor](user-interface/picker/populating-items.md)
+### [Slider](user-interface/slider.md)
 ### [Estilos](user-interface/styles/index.md)
 #### [Introdução](user-interface/styles/introduction.md)
 #### [Estilos explícitos](user-interface/styles/explicit.md)
