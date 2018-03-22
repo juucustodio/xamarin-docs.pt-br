@@ -1,6 +1,6 @@
 ---
-title: "Modos de exibição do xamarin. Forms"
-description: "Xamarin. Forms exibições são os blocos de construção de interfaces de usuário móvel de plataforma cruzada."
+title: Modos de exibição do xamarin. Forms
+description: Xamarin. Forms exibições são os blocos de construção de interfaces de usuário móvel de plataforma cruzada.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
@@ -8,8 +8,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: f7d27c5226741ec2b105633206ebaa0ac73d9a7b
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 45dc110104d7bb064aff1c883f65d894cbe6402f
+ms.sourcegitcommit: c3abb91d1a944de07d1b2b0878b02752c768d722
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/22/2018
@@ -100,7 +100,7 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 
 |     |     |
 | --- | --- |
-| [`Switch`](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) assume a forma de um comutador ligado/desligado para permitir que o usuário selecione um valor booliano. O [ `IsToggled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Switch.IsToggled/) propriedade é o estado do comutador e o [ `Toggled` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Switch.Toggled/) evento é acionado quando o estado é alterado.<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) | [![Exemplo de switch](views-images/Switch.png "alternar exemplo")](views-images/Stepper-Large.png#lightbox "alternar de exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
+| [`Switch`](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) assume a forma de um comutador ligado/desligado para permitir que o usuário selecione um valor booliano. O [ `IsToggled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Switch.IsToggled/) propriedade é o estado do comutador e o [ `Toggled` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Switch.Toggled/) evento é acionado quando o estado é alterado.<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) | [![Exemplo de switch](views-images/Switch.png "alternar exemplo")](views-images/Switch-Large.png#lightbox "alternar de exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
 |     |     |
 
 ### <a name="datepicker"></a>DatePicker
