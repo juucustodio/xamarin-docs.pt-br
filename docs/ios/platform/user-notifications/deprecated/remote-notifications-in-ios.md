@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 8e90bc3974247066a714cb44b6648a83cdb58cf5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="push-notifications-in-ios"></a>Notificações por push no iOS
 
 _Esta seção abordará as notificações por push no iOS. Ele apresenta o serviço de Gateway de notificações por Push Apple e a função que ele desempenha na publicação notificações a aplicativos iOS. Ele explica como criar os certificados de segurança necessárias para habilitar notificações por push e discutir. Por fim esta seção aborda algumas das tarefas de manutenção que servidores de aplicativo devem executar para controlar os dispositivos móveis do cliente._
 
 > [!IMPORTANT]
-> **Observação:** as informações nesta seção se refere ao iOS 9 e anterior, ele foi deixado aqui para dar suporte a versões anteriores do iOS. Para iOS 10 e posterior, consulte o [guia estrutura de notificação do usuário](~/ios/platform/user-notifications/index.md) para dar suporte a Local e remoto de notificação em um dispositivo iOS.
+> As informações nesta seção se refere ao iOS 9 e anterior, ele foi deixado aqui para dar suporte a versões anteriores do iOS. Para iOS 10 e posterior, consulte o [guia estrutura de notificação do usuário](~/ios/platform/user-notifications/index.md) para dar suporte a Local e remoto de notificação em um dispositivo iOS.
 
 Notificações por push devem ser mantidas em breves e contenham apenas dados suficientes para notificar o aplicativo móvel que ele deve contatar o aplicativo de servidor para uma atualização. Por exemplo, quando o novo email chega, o aplicativo de servidor somente notifique o aplicativo móvel que o novo email chegou. A notificação não conterá o novo email em si. O aplicativo móvel seria recuperar novos emails do servidor quando é apropriado
 

@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: dab1f5d571473fbbdb12ef78eed3788165c3f0a6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82f85808da6776f2f718b21b2e87ff6d4d8087fd
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-the-parent-application"></a>Trabalhando com o aplicativo pai
 
 _Compartilhamento de dados entre o aplicativo iOS e inspecionar no watchOS 1_
 
 > [!IMPORTANT]
-> **Observação:** acessar o aplicativo pai usando os exemplos a seguir só funciona em aplicativos de inspeção watchOS 1.
+> Acessar o aplicativo pai usando os exemplos a seguir só funciona em aplicativos de inspeção watchOS 1.
 
 
 Há diferentes maneiras de se comunicar entre o aplicativo de inspeção e que ele é fornecido com o aplicativo do iOS:

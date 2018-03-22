@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 34f2e249c5474997b2e2e179285f455c425739cf
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="wide-color"></a>Cores de largura
 
@@ -191,7 +191,7 @@ Apple tem as seguintes sugestões para os formatos de arquivo e perfis de cor us
 - Exporte ativos de imagem como arquivos PNG de 16 bits com um perfil de "Exibição P3" ICC incorporado.
 
 > [!IMPORTANT]
-> **Observação:** usando o **Salvar para Web** ou **exportar ativos** recursos encontrados no software de edição de imagens mais populares _não_ para imagens de cores de largura desde Esses recursos não foram atualizados para dar suporte as especificações de formato de arquivo necessário ainda.
+> Usando o **Salvar para Web** ou **exportar ativos** recursos encontrados no software de edição de imagens mais populares _não_ para imagens de cores de largura, desde que esses recursos não foram atualizado para suportar as especificações de formato de arquivo necessário ainda.
 
 ### <a name="supporting-wide-color-with-asset-catalogs"></a>Dando suporte a ampla cor com catálogos de ativo
 

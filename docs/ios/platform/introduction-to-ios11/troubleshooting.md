@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: 7d282d851d1112af75e856045fd4138d5f0869f7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4d1aaa2e6750ee8d51da5c45612c79ef4c9c6b32
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 
@@ -26,7 +26,7 @@ As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usa
 - [Fóruns e StackOverflow](#Forums-and-StackOverflow)
 
 > [!IMPORTANT]
-> **Observação:** Xamarin Studio não funciona com o Xcode 9.
+> Xamarin Studio não funciona com o Xcode 9.
 > [Atualize para o Visual Studio para Mac](https://www.visualstudio.com/vs/).
 
 <a name="Reporting-Bugs" />

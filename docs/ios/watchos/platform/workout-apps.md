@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 77bad4c31ad0cb11476c656aa495707d2a94aa8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2282a340811d9932f9df3a1343b22ffc35247e54
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="workout-apps"></a>Aplicativos de ginástica
 
@@ -472,7 +472,7 @@ Novidade para watchOS 3, são o movimento em pausa (`HKWorkoutEventType.MotionPa
 Quando o aplicativo recebe um evento de movimento em pausa, ele deve interromper a coleta de dados até que o usuário retoma o movimento e o evento retoma a movimentação é recebido. Aplicativo de aplicativo não deve pausar a sessão de treinamento em resposta a um evento de movimento em pausa.
 
 > [!IMPORTANT]
-> **Observação:** os eventos de movimento em pausa e retomada de movimento só há suporte para o tipo de atividade RunningWorkout (`HKWorkoutActivityType.Running`).
+> Os eventos de movimento em pausa e retomada de movimento só há suporte para o tipo de atividade RunningWorkout (`HKWorkoutActivityType.Running`).
 
 Novamente, esses eventos podem ser tratados por meio da substituição de `DidGenerateEvent` método o `HKWorkoutSessionDelegate`:
 
@@ -649,7 +649,7 @@ Dê uma olhada em como esse processo funciona:
 3. Usando o passado na configuração de treinamento, o aplicativo watchOS 3 inicia uma nova sessão de treinamento (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> **Observação:** para o aplicativo de iPhone pai iniciar um treinamento sobre o Apple Watch, o aplicativo watchOS 3 deve ter habilitado executando o plano de fundo. Consulte [habilitando em execução em segundo plano](#Enabling-Background-Running) acima para obter mais detalhes.
+> Para o aplicativo de iPhone pai iniciar um treinamento sobre o Apple Watch, o aplicativo watchOS 3 deve ter habilitado executando o plano de fundo. Consulte [habilitando em execução em segundo plano](#Enabling-Background-Running) acima para obter mais detalhes.
 
 Esse processo é muito semelhante ao processo de iniciar uma sessão de treinamento no aplicativo watchOS 3 diretamente. No iPhone, use o seguinte código:
 
@@ -764,7 +764,7 @@ Contar todas as informações apresentadas neste documento, um aplicativo de tre
 3. **watchOS 3 `OutdoorRunDelegate.cs`**  -um personalizado `HKWorkoutSessionDelegate` para manipular eventos para o treinamento.
 
 > [!IMPORTANT]
-> **Observação:** o código mostrado nas seções a seguir inclui somente as partes necessárias para implementar os recursos novos e aprimorados fornecidos nos aplicativos de ginástica watchOS 3. Todo código de suporte e o código para apresentar e atualizar a interface do usuário não é incluídos, mas pode ser facilmente criado por outras watchOS documentações a seguir.<p/>
+> O código mostrado nas seções a seguir inclui somente as partes necessárias para implementar os recursos novos e aprimorados fornecidos nos aplicativos de ginástica watchOS 3. Todo código de suporte e o código para apresentar e atualizar a interface do usuário não é incluídos, mas pode ser facilmente criado por outras watchOS documentações a seguir.<p/>
 
 
 

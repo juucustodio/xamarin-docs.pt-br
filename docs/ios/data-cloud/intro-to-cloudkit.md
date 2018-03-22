@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: c4ee5c0457dd1faea74cbbc30dd2d0f42087a8d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -43,7 +43,7 @@ CloudKit dá suporte ao conceito de bancos de dados públicos e privados. Bancos
 CloudKit oferece suporte a dados estruturados e dados em massa. Ele é capaz de lidar com grandes transferências de arquivos diretamente. CloudKit cuida de transferência eficiente de grandes arquivos de e para o iCloud servidores em segundo plano, liberando o desenvolvedor se concentre em outras tarefas.
 
 > [!NOTE]
-> **Observação:** é importante observar que CloudKit um _tecnologia de transporte_. Ele não fornece qualquer persistência; Ele apenas permite que um aplicativo enviar e receber informações de servidores com eficiência.
+> É importante observar que CloudKit um _tecnologia de transporte_. Ele não fornece qualquer persistência; Ele apenas permite que um aplicativo enviar e receber informações de servidores com eficiência.
 
 Redação deste artigo, Apple está inicialmente fornecendo CloudKit gratuitamente com um limite de alta capacidade de armazenamento e largura de banda. Para obter maior projetos ou aplicativos com uma grande base de usuários, Apple tem com dica de que uma escala de preço acessível será fornecida.
 
@@ -239,7 +239,7 @@ As referências são expostas no CloudKit Framework por meio de `CKReference` cl
 Referências fornecem o mecanismo por trás em cascata exclui. Se um registro pai é excluído do banco de dados, os registros filho (conforme especificado em uma relação) serão excluídos automaticamente do banco de dados.
 
 > [!NOTE]
-> **Observação**: pendente ponteiros são uma possibilidade ao usar CloudKit. Por exemplo, quando o aplicativo obtidos de uma lista de ponteiros de registros, selecionado um registro e, em seguida, uma solicitação para o registro, o registro não pode existir no banco de dados. Um aplicativo deve ser codificado para lidar com essa situação normalmente.
+> Ponteiros pendentes são uma possibilidade ao usar CloudKit. Por exemplo, quando o aplicativo obtidos de uma lista de ponteiros de registros, selecionado um registro e, em seguida, uma solicitação para o registro, o registro não pode existir no banco de dados. Um aplicativo deve ser codificado para lidar com essa situação normalmente.
 
 Embora não seja necessário, faça referências são preferenciais ao trabalhar com o CloudKit Framework. Apple tiver ajustado o sistema para tornar isso o tipo mais eficiente de referência.
 
@@ -395,7 +395,7 @@ Três coisas a observar sobre o código acima:
 
 
 > [!NOTE]
-> **Observação**: devido à natureza "perda" das comunicações de rede móvel, em que conexões constantemente são descartados ou interrompida, uma das considerações primeiro o desenvolvedor deve fazer ao trabalhar com CloudKit é tratamento de erros.
+> Devido à natureza "perda" das comunicações de rede móvel, em que conexões constantemente são descartados ou interrompida, uma das considerações primeiro o desenvolvedor deve fazer ao trabalhar com CloudKit é tratamento de erros.
 
 ### <a name="fetching-a-record"></a>Busca de um registro
 
@@ -560,7 +560,7 @@ Por fim, uma notificação por push deve ser enviada para todos os dispositivos 
 As assinaturas são expostas no CloudKit Framework por meio de `CKSubscription` classe. Eles combinam um tipo de registro ( `RecordType`), um predicado ( `NSPredicate`) e uma notificação por Push da Apple ( `Push`).
 
 > [!NOTE]
-> **Observação**: CloudKit envios por push são aumentados ligeiramente conforme eles contêm uma carga que contém informações específicas de CloudKit como o que causou o envio por push acontecer.
+> Envios de CloudKit ligeiramente são aumentados pois eles contêm uma carga que contém informações específicas de CloudKit como o que causou o envio por push acontecer.
 
 #### <a name="how-subscriptions-work"></a>Como funcionam as assinaturas
 
@@ -678,7 +678,7 @@ Como esta é proveniente iCloud, há uma rica fazendo o armazenamento de informa
 Cada contêiner pelo contêiner, uma ID de usuário exclusiva, gerada aleatoriamente é criada e associada à conta do iCloud do usuário (endereço de email). Essa ID de usuário é retornado para o aplicativo e pode ser usado de qualquer forma, o desenvolvedor que desejar.
 
 > [!NOTE]
-> **Observação**: diferentes aplicativos em execução no mesmo dispositivo para o mesmo usuário iCloud terá diferentes IDs de usuário porque eles estiverem conectados a diferentes contêineres CloudKit.
+> Diferentes aplicativos em execução no mesmo dispositivo para o mesmo usuário iCloud terá diferentes IDs de usuário porque eles estão conectados a diferentes contêineres CloudKit.
 
 O seguinte código obtém a ID de usuário CloudKit para o conectado no momento no iCloud do usuário do dispositivo:
 
@@ -810,7 +810,7 @@ O desenvolvedor pode usar esse recurso para fazer alterações em um esquema dur
 Antes de implantar o aplicativo, o desenvolvedor pode migrar o esquema e dados para o ambiente de produção usando **CloudKit painel**. Quando em execução no ambiente de produção, o servidor impede que um aplicativo alterando o esquema por meio de programação. O desenvolvedor poderá fazer alterações com **CloudKit painel** , mas as tentativas de adicionar campos a um registro no resultado do ambiente de produção em erros.
 
 > [!NOTE]
-> **Observação:** iOS simulador funciona apenas com o **ambiente de desenvolvimento**. Quando o desenvolvedor está pronto para testar um aplicativo em um **ambiente de produção**, um dispositivo iOS física é necessário.
+> O iOS simulador funciona apenas com o **ambiente de desenvolvimento**. Quando o desenvolvedor está pronto para testar um aplicativo em um **ambiente de produção**, um dispositivo iOS física é necessário.
 
 
 ## <a name="shipping-a-cloudkit-enabled-app"></a>Aplicativo habilitado para envio de um CloudKit

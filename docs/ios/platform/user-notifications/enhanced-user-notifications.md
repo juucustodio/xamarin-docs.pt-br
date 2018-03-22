@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a5dbd65cc32ed63c0fa6f8abe3a13ffee4e9df63
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50553cb1dc5f7ea782c0f13e32f60d7b6ce3e181
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enhanced-user-notifications"></a>Notificações de usuário aprimorada
 
@@ -558,7 +558,7 @@ Para implementar uma extensão de serviço em um aplicativo xamarin, faça o seg
 -----
 
 > [!IMPORTANT]
-> Observação: O identificador de pacote para a extensão do serviço deve corresponder o identificador de pacote do aplicativo principal com `.appnameserviceextension` acrescentado ao final. Por exemplo, se o aplicativo principal tiver um identificador de pacote de `com.xamarin.monkeynotify`, a extensão do serviço deve ter um identificador de pacote de `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Isso deve ser definido automaticamente quando a extensão é adicionada à solução. 
+> O identificador de pacote para a extensão do serviço deve corresponder o identificador de pacote do aplicativo principal com `.appnameserviceextension` acrescentado ao final. Por exemplo, se o aplicativo principal tiver um identificador de pacote de `com.xamarin.monkeynotify`, a extensão do serviço deve ter um identificador de pacote de `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Isso deve ser definido automaticamente quando a extensão é adicionada à solução. 
 
 Há uma classe principal na extensão de serviço de notificação de que precisará ser modificada para fornecer a funcionalidade necessária. Por exemplo:
 

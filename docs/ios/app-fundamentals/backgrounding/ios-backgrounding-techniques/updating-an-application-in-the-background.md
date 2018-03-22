@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7f7cfcd320fcb38a9b08dfd8fe7e0fae7ff808ec
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>Atualizando um aplicativo em segundo plano
 
@@ -79,7 +79,7 @@ Quando terminamos conteúdo de atualização, deixamos que o sistema operacional
 Aplicativos que usam a busca em segundo plano podem fazer chamadas para atualizar a interface do usuário do plano de fundo. Quando o usuário abre o aplicativo, a interface do usuário será atualizado e exibir o conteúdo novo. Isso também atualizará o instantâneo de alternador de aplicativo do aplicativo, para que o usuário pode ver quando o aplicativo tem conteúdo novo.
 
 > [!IMPORTANT]
-> **Observação**: uma vez `PerformFetch` é chamado, o aplicativo tem aproximadamente 30 segundos para iniciar o download de conteúdo novo e, em seguida, chamar o bloco do manipulador de conclusão. Se isso levar muito tempo, o aplicativo será encerrado. Considere o uso de busca em segundo plano com o _o serviço de transferência em segundo plano_ durante o download de mídia ou outros arquivos grandes.
+> Uma vez `PerformFetch` é chamado, o aplicativo tem aproximadamente 30 segundos para iniciar o download de conteúdo novo e, em seguida, chamar o bloco do manipulador de conclusão. Se isso levar muito tempo, o aplicativo será encerrado. Considere o uso de busca em segundo plano com o _o serviço de transferência em segundo plano_ durante o download de mídia ou outros arquivos grandes.
 
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
@@ -132,7 +132,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 Notificações remotas devem ser usadas para atualizações não frequentes com conteúdo que é essencial para a funcionalidade do aplicativo. Para obter mais informações sobre notificações remotas, consulte o Xamarin [notificações por Push no iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) guia.
 
 > [!IMPORTANT]
-> **Observação**: porque o mecanismo de atualização em notificações remoto baseia-se em busca de segundo plano, o aplicativo deve disparar o download de conteúdo novo e chamar o bloco do manipulador de conclusão dentro de 30 segundos para receber a notificação ou será de iOS Encerre o aplicativo. Considere o emparelhamento remoto notificações com _o serviço de transferência em segundo plano_ durante o download de mídia ou outros arquivos grandes em segundo plano.
+> Como o mecanismo de atualização em notificações remoto baseia-se em busca de segundo plano, o aplicativo deve disparar o download de conteúdo novo e chamar o bloco do manipulador de conclusão dentro de 30 segundos para receber a notificação ou iOS para encerrar o aplicativo. Considere o emparelhamento remoto notificações com _o serviço de transferência em segundo plano_ durante o download de mídia ou outros arquivos grandes em segundo plano.
 
 
 ### <a name="silent-remote-notifications"></a>Notificações remotas silenciosas
@@ -156,7 +156,7 @@ No entanto, APNs permitirá notificações silenciosas "se aproveitam" junto com
  [![](updating-an-application-in-the-background-images/silent.png "Notificações regulares podem ser usadas para notificações silenciosas armazenadas por push do APNs para o dispositivo, conforme ilustrado pelo diagrama")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
-> **Observação**: Apple incentiva os desenvolvedores a enviar notificações por push silenciosa sempre que o aplicativo requer e permitem os APNs agendar sua entrega.
+> Apple incentiva os desenvolvedores a enviar notificações por push silenciosa sempre que o aplicativo requer e permitem que os APNs agendar sua entrega.
 
 
 Nesta seção, falamos sobre as várias opções para atualizar conteúdo em segundo plano para executar tarefas que não cabem em uma categoria de plano de fundo necessário. Agora, vamos ver algumas dessas APIs em ação.

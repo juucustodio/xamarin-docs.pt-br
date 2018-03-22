@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0e271fb78cfd225f9ccdae9a515685e89bfd7ac2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 76787ecda1c2cd043b81482dcdbe3751d012ef74
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="implementing-sirikit"></a>Implementando SiriKit
 
@@ -211,7 +211,7 @@ Devido à segurança de estrito Apple colocou em torno do framework SiriKit, qua
 
 Faça o seguinte no seu Mac:
 
-1. Em um navegador da web, navegue até [http://developer.apple.com](http://developer.apple.com) e de log em sua conta.
+1. Em um navegador da web, navegue até [ http://developer.apple.com ](http://developer.apple.com) e de log em sua conta.
 2. Clique em **certificados**, **identificadores** e **perfis**.
 3. Selecione **perfis de provisionamento** e selecione **IDs de aplicativo**, em seguida, clique no  **+**  botão.
 4. Insira um **nome** para o novo perfil.
@@ -246,7 +246,7 @@ Faça o seguinte no seu Mac:
 22. Clique no botão **OK** para salvar as alterações.
 
 > [!IMPORTANT]
-> **Observação:** SiriKit teste só funciona em um iOS real 10 dispositivos de Hardware e não no iOS 10 simulador. Se o aplicativo xamarin no hardware real habilitado para ter problemas ao instalar um SiriKit, certifique-se de que os direitos necessários, a ID do aplicativo, o identificador de assinatura e o perfil de provisionamento de tem sido configurado corretamente no Portal do desenvolvedor da Apple e Visual Studio para Mac.
+> Teste SiriKit só funciona em um iOS real 10 dispositivos de Hardware e não no iOS 10 simulador. Se o aplicativo xamarin no hardware real habilitado para ter problemas ao instalar um SiriKit, certifique-se de que os direitos necessários, a ID do aplicativo, o identificador de assinatura e o perfil de provisionamento de tem sido configurado corretamente no Portal do desenvolvedor da Apple e Visual Studio para Mac.
 
 ### <a name="requesting-siri-authorization"></a>Solicitar autorização Siri
 
@@ -432,7 +432,7 @@ namespace MonkeyChat
 ```
 
 > [!IMPORTANT]
-> **Observação:** Siri trata vocabulário personalizado como dicas e incorporará tanta da terminologia possível. No entanto, espaço vocabulário personalizado é limitado tornando importante registrar _somente_ a terminologia que pode ser confusa, manter, portanto, o número total de termos registrados ao mínimo.
+> Siri trata vocabulário personalizado como dicas e incorporará tanta da terminologia possível. No entanto, espaço vocabulário personalizado é limitado tornando importante registrar _somente_ a terminologia que pode ser confusa, manter, portanto, o número total de termos registrados ao mínimo.
 
 Para obter mais informações, consulte nosso [referência de vocabulário específicas do usuário](~/ios/platform/sirikit/understanding-sirikit.md) da Apple [referência de vocabulário personalizada especificando](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
@@ -587,7 +587,7 @@ Para adicionar um `AppIntentVocabulary.plist` arquivo ao projeto de aplicativo, 
 -----
 
 > [!IMPORTANT]
-> **Observação:** o `AppIntentVocabulary.plist` será registrado com Siri no teste de dispositivos durante o desenvolvimento e ele podem levar algum tempo para Siri incorporar o vocabulário personalizado. Como resultado, o testador precisará aguardar alguns minutos antes de tentar testar vocabulário específico do aplicativo quando ele foi atualizado.
+> O `AppIntentVocabulary.plist` será registrado com Siri no teste de dispositivos durante o desenvolvimento e ele podem levar algum tempo para Siri incorporar o vocabulário personalizado. Como resultado, o testador precisará aguardar alguns minutos antes de tentar testar vocabulário específico do aplicativo quando ele foi atualizado.
 
 Para obter mais informações, consulte nosso [referência de vocabulário específicas do aplicativo](~/ios/platform/sirikit/understanding-sirikit.md) da Apple [referência de vocabulário personalizada especificando](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
@@ -1013,7 +1013,7 @@ Siri também passará um manipulador de conclusão que o aplicativo precisar ret
 Layout de interface do usuário da extensão de interface do usuário de tentativas no Designer de iOS. Clique duas vezes a extensão `MainInterface.storyboard` arquivo o **Solution Explorer** para abri-lo para edição. Arraste em todos os elementos de interface de usuário necessários para criar a Interface do usuário e salve as alterações.
 
 > [!IMPORTANT]
-> **Observação:** enquanto é possível adicionar elementos interativos, como `UIButtons` ou `UITextFields` para a extensão de interface do usuário de intenção `UIViewController`, esses são estritamente proibidos como a UI de intenção de não interativo e o usuário não conseguirá interagir com eles.
+> Embora seja possível adicionar elementos interativos, como `UIButtons` ou `UITextFields` para a extensão de interface do usuário de intenção `UIViewController`, esses são estritamente proibidos como a UI de intenção de não interativo e o usuário não será capaz de interagir com eles.
 
 ### <a name="wire-up-the-user-interface"></a>A Interface do usuário durante a transmissão
 

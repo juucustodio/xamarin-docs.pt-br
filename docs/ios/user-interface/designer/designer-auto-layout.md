@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff19048504ee76db614306adebb71b7237139091
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Designer de Xamarin para iOS
 
@@ -88,7 +88,7 @@ Para criar uma restrição, selecione um identificador e arraste-o em algum luga
 Observe as três linhas verdes tracejadas entre os dois botões. As linhas verdes indicam *áreas para soltar*, ou os atributos de outros elementos para o qual é possível restringir. Na captura de tela acima, os outros dois botões oferecem 3 áreas para soltar vertical ( *inferior*, *centerY*, *superior*) para restringir o nosso botão. A linha tracejada verde na parte superior do modo de exibição significa que o controlador de exibição oferece uma restrição na parte superior do modo de exibição, e na caixa verde sólida significa que o controlador de exibição oferece uma restrição abaixo guia layout superior.
 
 > [!IMPORTANT]
-> **Observação**: guias de Layout são tipos especiais de destinos de restrição que permitem a criação de restrições superior e inferior que levam em conta a presença de barras de sistema, como barras de status ou as barras de ferramentas. Um dos principais usos é ter um aplicativo compatível entre iOS 6 e iOS 7 desde que a versão mais recente tem o modo de exibição de contêiner estendendo abaixo da barra de status. Para obter mais informações sobre a guia de layout superior, consulte o [documentação da Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
+> Guias de layout são tipos especiais de destinos de restrição que nos permitem criar superior e restrições de inferior que levam em conta a presença de barras de sistema, como barras de status ou as barras de ferramentas. Um dos principais usos é ter um aplicativo compatível entre iOS 6 e iOS 7 desde que a versão mais recente tem o modo de exibição de contêiner estendendo abaixo da barra de status. Para obter mais informações sobre a guia de layout superior, consulte o [documentação da Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
 
 
 

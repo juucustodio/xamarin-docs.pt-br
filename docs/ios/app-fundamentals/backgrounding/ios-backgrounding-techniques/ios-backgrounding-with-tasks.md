@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ad75dfac55add7e03ffbdb910e0e62ebd0fd6c18
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding com tarefas
 
@@ -43,7 +43,7 @@ UIApplication.SharedApplication.EndBackgroundTask(taskID);
 O processo de registro pares uma tarefa com um identificador exclusivo, `taskID`e, em seguida, organize-os na correspondência de `BeginBackgroundTask` e `EndBackgroundTask` chamadas. Para gerar o identificador, podemos fazer uma chamada para o `BeginBackgroundTask` método sobre o `UIApplication` de objeto e, em seguida, iniciar a tarefa de execução longa, geralmente em um novo thread. Quando a tarefa for concluída, podemos chamar `EndBackgroundTask` e passar o mesmo identificador. Isso é importante porque iOS para encerrar o aplicativo se um `BeginBackgroundTask` chamada não tem uma correspondência `EndBackgroundTask`.
 
 > [!IMPORTANT]
-> **Observação**: tarefas de plano de fundo-safe podem ser executadas no thread principal ou em um thread em segundo plano, dependendo das necessidades do aplicativo.
+> Tarefas do plano de fundo-safe podem executar no thread principal ou em um thread em segundo plano, dependendo das necessidades do aplicativo.
 
 
 ## <a name="performing-tasks-during-didenterbackground"></a>Realizar tarefas durante DidEnterBackground
@@ -65,7 +65,7 @@ public override void DidEnterBackground (UIApplication application) {
 Começamos, substituindo o `DidEnterBackground` método no `AppDelegate`, onde é registrar nossa tarefa via `BeginBackgroundTask` como fizemos no exemplo anterior. Em seguida, podemos gerar um novo thread e executar a nossa tarefa de longa duração. Observe que o `EndBackgroundTask` é agora feita chamada de dentro da tarefa de execução longa, desde o `DidEnterBackground` método será já devolvidos.
 
 > [!IMPORTANT]
-> **Observação**: iOS usa um [watchdog mecanismo](http://developer.apple.com/library/ios/qa/qa1693/_index.html) para garantir que a interface de usuário do aplicativo permanece responsivo. Um aplicativo que leva muito tempo em `DidEnterBackground` responderá na interface de usuário. Iniciar tarefas sejam executadas em segundo plano permite `DidEnterBackground` para retornar de maneira oportuna, mantendo a interface do usuário responsivo e impedindo que o watchdog eliminando o aplicativo.
+> iOS usa um [watchdog mecanismo](http://developer.apple.com/library/ios/qa/qa1693/_index.html) para garantir que a interface de usuário do aplicativo permanece responsivo. Um aplicativo que leva muito tempo em `DidEnterBackground` responderá na interface de usuário. Iniciar tarefas sejam executadas em segundo plano permite `DidEnterBackground` para retornar de maneira oportuna, mantendo a interface do usuário responsivo e impedindo que o watchdog eliminando o aplicativo.
 
 
 ## <a name="handling-background-task-time-limits"></a>Tratamento de limites de tempo de tarefa de plano de fundo
@@ -153,7 +153,7 @@ else {
 ```
 
 > [!IMPORTANT]
-> **Observação**: Evite fazer chamadas para atualizar a interface do usuário do plano de fundo no código do iOS 6 compatíveis, como iOS 6 não oferece suporte a atualizações de interface do usuário do plano de fundo e encerrar o aplicativo.
+> Evite fazer chamadas para atualizar a interface do usuário do plano de fundo no código do iOS 6 compatíveis, como iOS 6 não oferece suporte a atualizações de interface do usuário do plano de fundo e encerrar o aplicativo.
 
 
 O `NSURLSession` API inclui um conjunto avançado de recursos para lidar com a autenticação, gerenciar transferências com falha e relatar erros de cliente - mas não no lado do servidor -. Ele ajuda a ponte que interrupções na tarefa executar hora introduzida no iOS 7 e também fornece suporte para transferir arquivos grandes de maneira rápida e confiável. A próxima seção explora Este segundo recurso.

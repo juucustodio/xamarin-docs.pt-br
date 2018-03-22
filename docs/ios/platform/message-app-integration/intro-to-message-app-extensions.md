@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 083920aba3c8dc83b157b591e194c43935dcc566
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="message-app-extension-basics"></a>Noções básicas de extensão do aplicativo de mensagem
 
@@ -87,7 +87,7 @@ Para uma imagem a ser incluído em um pacote de etiqueta, ele deve atender aos s
 - Imagens não podem ser menor do que 100 x 100 pontos ou maior que aponta 206 x 206.
 
 > [!IMPORTANT]
-> **Observação:** imagens adesivo sempre devem ser fornecidas no `@3x` resolução no intervalo de 300 x 300 para 618 x 618 pixel. O sistema gerará automaticamente o `@2x` e `@1x` versões em tempo de execução conforme necessário.
+> Imagens de etiqueta sempre devem ser fornecidas no `@3x` resolução no intervalo de 300 x 300 para 618 x 618 pixel. O sistema gerará automaticamente o `@2x` e `@1x` versões em tempo de execução conforme necessário.
 
 Apple sugere os ativos de imagem de etiqueta contra várias diferentes planos de fundo (por exemplo, branco, preto, vermelho, amarelo e vários coloridas) e fotos acima, para garantir que elas são a melhor em todas as situações possíveis de teste.
 

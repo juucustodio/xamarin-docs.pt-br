@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a8ae55f9cc3e2dd4818dec96a35017c76cc9623
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1b36d3ba8601d125d0a17173efb12c249224e78
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="notifications-in-xamarinios"></a>Notificações no xamarin
 
 _Esta seção mostra como implementar notificações de locais em xamarin. Ele explica os vários elementos de interface do usuário de uma notificação de iOS e discutem a API do envolvidos com a criação e exibindo uma notificação._
 
 > [!IMPORTANT]
-> **Observação:** as informações nesta seção se refere ao iOS 9 e anterior, ele foi deixado aqui para dar suporte a versões anteriores do iOS. Para iOS 10 e posterior, consulte o [guia estrutura de notificação do usuário](~/ios/platform/user-notifications/index.md) para dar suporte a Local e remoto de notificação em um dispositivo iOS.
+> As informações nesta seção se refere ao iOS 9 e anterior, ele foi deixado aqui para dar suporte a versões anteriores do iOS. Para iOS 10 e posterior, consulte o [guia estrutura de notificação do usuário](~/ios/platform/user-notifications/index.md) para dar suporte a Local e remoto de notificação em um dispositivo iOS.
 
 iOS tem três modos para indicar ao usuário que uma notificação foi recebida:
 
@@ -78,7 +78,7 @@ notification.SoundName = UILocalNotification.DefaultSoundName;
 Por que as diretrizes de Interface Humana Apple, se uma notificação toca um som, ele deve também ser acompanhado por um alerta para ajudar o usuário a identificar o aplicativo que gerou o alerta ou uma notificação. Além disso, se o som tiver mais de 30 segundos, iOS reproduzirá o padrão som em vez disso.
 
 > [!IMPORTANT]
-> **Observação**: há um bug no simulador iOS que irá disparar a notificação de delegado duas vezes. Esse problema não deve ocorrer ao executar o aplicativo em um dispositivo.
+> Há um bug no simulador iOS que irá disparar a notificação de delegado duas vezes. Esse problema não deve ocorrer ao executar o aplicativo em um dispositivo.
 
 ## <a name="handling-notifications"></a>Manipulando notificações
 

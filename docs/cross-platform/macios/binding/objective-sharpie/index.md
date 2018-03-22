@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: bcb7be862537a002e5a80462702ed1f2f8497cda
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 08796d38301ba9c6ae15c3ddfe700b1cd2166ace
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="objective-sharpie"></a>Objetivo Sharpie
 
@@ -34,17 +34,13 @@ Funciona analisando os arquivos de cabeçalho de uma biblioteca nativa para mape
 Objetivo Sharpie usa arquivos de cabeçalho de análise de Clang, para que a associação é exato e completo possível. Isso pode reduzir significativamente o tempo e esforço necessário para produzir uma associação de qualidade.
 
 > [!IMPORTANT]
-> **Aviso:** Sharpie objetivo é uma ferramenta para desenvolvedores do Xamarin experientes com conhecimento avançado de Objective-C (e, por extensão, C). Antes de tentar associar uma biblioteca Objective-C, você deve ter um conhecimento sólido de como criar a biblioteca nativa na linha de comando (e uma boa compreensão de como funciona a biblioteca nativa).
-
-
+> Objetivo Sharpie é uma ferramenta para desenvolvedores do Xamarin experientes com conhecimento avançado de Objective-C (e, por extensão, C). Antes de tentar associar uma biblioteca Objective-C, você deve ter um conhecimento sólido de como criar a biblioteca nativa na linha de comando (e uma boa compreensão de como funciona a biblioteca nativa).
 
 ## <a name="history"></a>Histórico
 
 Nós foram desenvolvendo e usando o objetivo Sharpie internamente em Xamarin nos últimos três anos. Apresenta a potência do objetivo Sharpie, APIs introduzido no xamarin e Xamarin.Mac desde iOS 8, Mac OS X 10.10 e watchOS 2.0 foi inicializados completamente com o objetivo de Sharpie. Xamarin depende muito objetivo Sharpie internamente para criar seus próprios produtos.
 
 No entanto, o objetivo Sharpie é uma ferramenta muito avançada que requer conhecimento avançado de Objective-C e C, como usar o compilador clang na linha de comando e bibliotecas nativas como geralmente são colocadas juntos. Devido a essa barra alta, percebemos que, com uma GUI assistente define as expectativas erradas, e como tal, objetivo Sharpie atualmente só está disponível como uma ferramenta de linha de comando.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -43,7 +43,7 @@ A seguir é necessárias para concluir as etapas apresentadas neste artigo:
 - **iOS 8 (ou superior) dispositivo** – um dispositivo iOS executando a versão mais recente do iOS 8 ou superior para teste.
 
 > [!IMPORTANT]
-> **Observação:** Kit de integridade foi introduzido no iOS 8. Atualmente, o Kit de integridade não está disponível no simulador iOS e depuração requer conexão a um dispositivo iOS físicos.
+> Kit de integridade foi introduzido no iOS 8. Atualmente, o Kit de integridade não está disponível no simulador iOS e depuração requer conexão a um dispositivo iOS físicos.
 
 
 
@@ -216,7 +216,7 @@ O trabalho de `ValidateAuthorization()` é criar o conjunto de `HKObjectTypes` q
 O `ReactToHealthCarePermissions()` retorno de chamada será chamado depois que o usuário interagiu com a caixa de diálogo de permissões e é passado duas informações: um `bool` valor que será `true` se o usuário interagiu com a caixa de diálogo de permissões e um `NSError`que, se não nulo, indica algum tipo de erro associado apresentar a caixa de diálogo de permissões.
 
 > [!IMPORTANT]
-> **Observação:** para esclarecer sobre os argumentos para esta função: o _êxito_ e _erro_ parâmetros não indicam se o usuário tem permissão para acessar dados do Kit de integridade! Eles apenas indicam que o usuário tem a oportunidade de permitir o acesso aos dados.
+> Para ser claro sobre os argumentos para esta função: o _êxito_ e _erro_ parâmetros não indicam se o usuário tem permissão para acessar dados do Kit de integridade! Eles apenas indicam que o usuário tem a oportunidade de permitir o acesso aos dados.
 
 Para confirmar se o aplicativo tem acesso aos dados, o `HKHealthStore.GetAuthorizationStatus()` for usado, passando `HKQuantityTypeIdentifierKey.HeartRate`. O aplicativo com base no status retornado, habilita ou desabilita a capacidade de inserir dados. Não há nenhuma experiência de usuário padrão para lidar com uma negação de acesso e há muitas opções possíveis. No aplicativo de exemplo, o status é definido em um `HeartRateModel` objeto singleton que, por sua vez, gera eventos relevantes.
 
@@ -404,7 +404,7 @@ O simulador de iOS não oferece suporte para o Kit de integridade. Depuração d
 Anexe um dispositivo de desenvolvimento provisionado corretamente iOS 8 para seu sistema. Selecione-o como o destino de implantação no Visual Studio para Mac e no menu, escolha **Executar > Depurar**.
 
 > [!IMPORTANT]
-> **Observação:** erros relacionados ao provisionamento serão superficial neste momento. Para solucionar problemas, examine a criação e o provisionamento de uma seção de aplicativo do Kit de integridade acima. Os componentes são: 
+> Erros relacionados ao provisionamento serão superficial neste momento. Para solucionar problemas, examine a criação e o provisionamento de uma seção de aplicativo do Kit de integridade acima. Os componentes são: 
 >
 > - **Centro de desenvolvimento do iOS** -ID de aplicativo explícita & Kit de integridade habilitada perfil de provisionamento. 
 > - **Opções de projeto** -identificador de pacote (ID do aplicativo explícita) e o perfil de provisionamento.

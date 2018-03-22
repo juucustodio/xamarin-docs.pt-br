@@ -6,11 +6,11 @@ ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 43b357eecb0974884db645a0b2e5c8467ddf3b5d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 723a9c4a052f7f432ba0f32ec501af3221b2696f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-reference-counting-system"></a>Novo sistema de contagem de referência
 
@@ -46,7 +46,7 @@ Observe que essas opções foram removidas em versões mais recentes do Visual S
 
     
 > [!IMPORTANT]
-> **Observação:** uma versão anterior deste recurso já existe como MonoTouch 5.2 mas estava disponível apenas para **sgen** como uma visualização experimental. Esta versão nova e aprimorada agora também está disponível para o **Boehm** coletor de lixo.
+> Uma versão anterior deste recurso já existe como MonoTouch 5.2 mas estava disponível apenas para **sgen** como uma visualização experimental. Esta versão nova e aprimorada agora também está disponível para o **Boehm** coletor de lixo.
 
 
 Historicamente tem havido dois tipos de objetos gerenciados pelo xamarin: aqueles que foram simplesmente um wrapper em torno de um objeto nativo (objetos de ponto a ponto) e aqueles que estendido ou incorporado a nova funcionalidade (objetos derivados) - normalmente, mantendo o estado na memória extra. Anteriormente era possível que podemos pode ampliar um objeto de ponto a ponto com estado (por exemplo, adicionando um manipulador de eventos em c#), mas que deixamos que o objeto vá sem referência e, em seguida, coletados. Isso pode causar uma falha posteriormente (por exemplo, se o tempo de execução Objective-C chamado de volta para o objeto gerenciado).

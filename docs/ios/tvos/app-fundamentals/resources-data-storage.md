@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 768ee4a2f33475b5327bf9c0fd006f1da580d836
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e72c013516de5bcf97e2e9f58a7a4f5cd87c730b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="resources-and-data-storage"></a>Armazenamento de dados e recursos
 
@@ -35,7 +35,7 @@ Cada aplicativo tvOS é fornecido um diretório de cache temporário que seus re
 Como resultado, seu aplicativo não pode confiar no conteúdo baixado anteriormente estavam disponíveis na próxima vez que ele é iniciado. Seu aplicativo Xamarin.tvOS sempre deve verificar a existência dos recursos exigidos e baixá-los conforme necessário.
 
 > [!IMPORTANT]
-> **Observação:** enquanto você tem a capacidade de fazer o download de outros recursos conforme necessário e ativos, Apple previne consumindo todo o espaço no cache do aplicativo, pois isso pode levar a resultados imprevisíveis.
+> Enquanto você tem a capacidade de fazer o download de outros recursos conforme necessário e ativos, Apple previne consumindo todo o espaço no cache do aplicativo, pois isso pode levar a resultados imprevisíveis.
 
 
 
@@ -70,7 +70,7 @@ Esses recursos podem continuar a ser armazenado em cache na Apple TV ao longo de
 Use o Xcode para criar pacotes de conteúdo relacionado (como todos os ativos de jogo nível 2) associados com uma marca de recurso oferecem. Mais tarde seu aplicativo irá solicitar recursos sob demanda, especificando essa marca de recurso. Seu aplicativo deve apresentar uma interface do usuário para o usuário informando que o conteúdo está sendo descarregado. Para obter mais informações, consulte da Apple [guia de recursos sob demanda](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083).
 
 > [!IMPORTANT]
-> **Observação:** deve ter cuidado para encontrar o equilíbrio correto entre o número de vezes que o aplicativo deve baixar os recursos sob demanda e o tamanho dos downloads individuais. Usuário pode se tornar frustrado com seu aplicativo se jogos é interrompido constantemente para baixar o conteúdo novo ou se um único download leva muito tempo.
+> Tome cuidado para encontrar o equilíbrio correto entre o número de vezes que o aplicativo deve baixar os recursos sob demanda e o tamanho dos downloads individuais. Usuário pode se tornar frustrado com seu aplicativo se jogos é interrompido constantemente para baixar o conteúdo novo ou se um único download leva muito tempo.
 
 
 
@@ -85,7 +85,7 @@ Este artigo abordou as limitações de armazenamento de tamanho, recursos e dado
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

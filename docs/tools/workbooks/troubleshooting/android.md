@@ -6,11 +6,11 @@ ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: eb188abb3e757f6f66af7758ced311ae1236d3ce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 530abec733ec1d842559bf9c898217a8e45465aa
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solucionando problemas de pastas de trabalho do Xamarin Android
 
@@ -25,7 +25,8 @@ Você deve ter um emulador que executa o Android 5.0 ou posterior. Não há supo
 
 Leia [nossa documentação sobre como configurar os emuladores Android] [ android-emu] se você não estiver familiarizado com o processo.
 
-**Observação:** pastas de trabalho 1.1 e anteriores serão tente (e falha!) para uso ARM emuladores se elas estiverem disponíveis. Para contornar isso, emulador de inicialização x86 de sua escolha antes de abrir ou criar uma pasta de trabalho do Android. Pastas de trabalho sempre preferirá para se conectar a um emulador em execução, desde que ele é compatível.
+> [!NOTE]
+> Pastas de trabalho 1.1 e anteriores serão tente (e falha!) para uso ARM emuladores se elas estiverem disponíveis. Para contornar isso, emulador de inicialização x86 de sua escolha antes de abrir ou criar uma pasta de trabalho do Android. Pastas de trabalho sempre preferirá para se conectar a um emulador em execução, desde que ele é compatível.
 
 ## <a name="workbooks-wont-load"></a>Não é possível carregar pastas de trabalho
 
@@ -33,7 +34,7 @@ Leia [nossa documentação sobre como configurar os emuladores Android] [ androi
 
 Primeiro, verifique se o emulador tem acesso à rede de trabalho totalmente testando qualquer site da Web no navegador do emulador do Windows.
 
-### <a name="visual-studio-android-emulator-cannot-connect-to-internet"></a>Emulador Android do Visual Studio não pode se conectar à internet
+### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>Emulador Android do Visual Studio não pode se conectar à internet
 
 Se o emulador não tem acesso à rede, você precisará seguir estas etapas para corrigir o comutador de rede do Hyper-V. Se você alternar entre as redes Wi-Fi com frequência, talvez seja necessário repetir essa periodicamente:
 

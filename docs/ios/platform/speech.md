@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 33e27043c3738c5213b17786e5a88fb30a7fc017
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e868c0ee71688e208c5217d9f5a89ea3acec988c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 
@@ -127,7 +127,7 @@ Para fornecer necessários `NSSpeechRecognitionUsageDescription` chave no `Info.
 -----
 
 > [!IMPORTANT]
-> **Observação:** falha fornecer qualquer um dos itens acima `Info.plist` chaves (`NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription`) pode resultar no aplicativo com falha sem aviso ao tentar acessar o reconhecimento de fala ou microfone de áudio em tempo real.
+> Falha ao fornecer qualquer um dos itens acima `Info.plist` chaves (`NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription`) pode resultar no aplicativo com falha sem aviso ao tentar acessar o reconhecimento de fala ou microfone de áudio em tempo real.
 
 
 
@@ -186,7 +186,7 @@ O `RequestAuthorization` método o `SFSpeechRecognizer` classe solicitar permiss
 Um `SFSpeechRecognizerAuthorizationStatus` resultado é retornado para o `RequestAuthorization` rotina de retorno de chamada do método que pode ser usada para executar uma ação com base na permissão do usuário. 
 
 > [!IMPORTANT]
-> **Observação:** Apple sugere esperar até que o usuário iniciou uma ação no aplicativo que exige o reconhecimento de fala antes de solicitar essa permissão.
+> Apple sugere esperar até que o usuário iniciou uma ação no aplicativo que exige o reconhecimento de fala antes de solicitar essa permissão.
 
 ### <a name="recognizing-pre-recorded-speech"></a>Reconhecimento de fala previamente registrada
 
@@ -373,7 +373,7 @@ RecognitionTask.Cancel ();
 É importante chamar `RecognitionTask.Cancel` se o usuário cancelar a conversão para liberar a memória e processador do dispositivo.
 
 > [!IMPORTANT]
-> **Observação:** Falha ao fornecer o `NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription` `Info.plist` chaves podem resultar no aplicativo com falha sem aviso ao tentar acessar o reconhecimento de fala ou microfone de áudio em tempo real (`var node = AudioEngine.InputNode;`). Consulte o **fornecendo uma descrição de uso** seção acima para obter mais informações.
+> Falha ao fornecer o `NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription` `Info.plist` chaves podem resultar no aplicativo com falha sem aviso ao tentar acessar o reconhecimento de fala ou microfone de áudio em tempo real (`var node = AudioEngine.InputNode;`). Consulte o **fornecendo uma descrição de uso** seção acima para obter mais informações.
 
 ## <a name="speech-recognition-limits"></a>Limites de reconhecimento de fala
 

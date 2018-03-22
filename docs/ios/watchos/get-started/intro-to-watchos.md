@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2276b67fc29f2752e4b178168a12e6e980b788d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fbf430e16506bdcf89ea3e280d42f27b0406f153
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-watchos"></a>Introdução ao watchOS
 
 > [!NOTE]
-> **Observação:** Check-out de [Introdução ao watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md) para obter uma visão geral dos recursos mais recentes.
+> Check-out de [Introdução ao watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md) para obter uma visão geral dos recursos mais recentes.
 
 ## <a name="about-watchos"></a>Sobre watchOS
 

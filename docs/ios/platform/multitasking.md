@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0783372cd36d5a4984d09ee055257d525e7becb1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="multitasking-for-ipad"></a>Multitarefa para iPad
 
@@ -205,7 +205,7 @@ Consulte o exemplo [MultiTask aplicativo](http://developer.xamarin.com/samples/m
 
 Mesmo para aplicativos que já estão usando guias de design e práticas recomendadas de iOS 8, o gerenciamento eficiente de recursos ainda pode ser um problema. No iOS 9, os aplicativos não têm uso exclusivo de memória, CPU ou outros recursos do sistema.
 
-Como resultado, você deve ajustar seu aplicativo xamarin para usar os recursos do sistema efetivamente ou fica disponível para encerramento em situações de memória baixa. Isso é verdadeiro igualmente dos aplicativos de multitarefa, desde que um segundo aplicativo pode ser executado em um painel Slide sobre ou uma imagem na janela de imagem que exigem recursos extras ou fazendo com que a taxa de atualização para ficarem abaixo de 60 quadros por segundo.
+Como resultado, você deve ajustar seu aplicativo xamarin para usar os recursos do sistema efetivamente ou fica disponível para encerramento em situações de memória baixa. Isso é verdadeiro igualmente aplicativos recusar multitarefa, desde que um segundo aplicativo pode ser executado em um painel Slide sobre ou uma imagem na janela de imagem que exigem recursos extras ou fazendo com que a taxa de atualização para ficarem abaixo de 60 quadros por segundo.
 
 Considere as seguintes ações de usuário e suas implicações:
 
@@ -223,19 +223,16 @@ Consulte da Apple [guia de eficiência de energia para aplicativos iOS](https://
 
 <a name="Opting-Out-of-Multitasking" />
 
-## <a name="opting-out-of-multitasking"></a>Aceitar-Out de multitarefa
+## <a name="opting-out-of-multitasking"></a>Recusando multitarefa
 
 Enquanto Apple sugere que todos os aplicativos do iOS 9 suportam multitarefa, pode haver razões muito específicas para um aplicativo não muito, como jogos ou aplicativos de câmera que exigem a tela inteira para funcionar corretamente.
 
 Para o aplicativo xamarin recusar sendo executado em qualquer um Slide Out painel ou no modo de exibição de divisão, editar o projeto **Info. plist** de arquivos e verificar **requer a tela inteira**:
 
-[![](multitasking-images/fullscreen01.png "Aceitar-Out de multitarefa")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "Recusando multitarefa")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
-> **Observação:** enquanto Opting-Out de multitarefa impede que o seu aplicativo está sendo executado no Slide Out ou no modo de divisão, ele faz **não** impedir que outro aplicativo está sendo executado em Slide Out ou uma imagem no vídeo de imagem da exibição junto com seu aplicativo.
-
-
-
+> Enquanto recusando multitarefa impede que seu aplicativo está sendo executado no Slide Out ou no modo de divisão, ela não impede que outro aplicativo está sendo executado em Slide Out ou uma imagem na imagem de vídeo da exibição junto com seu aplicativo.
 
 <a name="Disabling-PIP-Video-Playback" />
 
@@ -243,7 +240,7 @@ Para o aplicativo xamarin recusar sendo executado em qualquer um Slide Out paine
 
 Na maioria das situações, seu aplicativo deve permitir que o usuário executar qualquer conteúdo de vídeo, ele exibe em uma imagem na janela flutuante de imagem. No entanto, pode haver situações em que isso pode não ser desejado, como vídeos de jogo cena recortado.
 
-Para sair do PIP de reprodução de vídeo, faça o seguinte em seu aplicativo:
+Para recusar a reprodução de vídeo de PIP, faça o seguinte em seu aplicativo:
 
  - Se você estiver usando um `AVPlayerViewController` para exibir o vídeo, defina o `AllowsPictureInPicturePlayback` propriedade `false`.
  - Se você estiver usando o `AVPlayerLayer` para exibir o vídeo, não criar uma instância de um `AVPictureInPictureController`.

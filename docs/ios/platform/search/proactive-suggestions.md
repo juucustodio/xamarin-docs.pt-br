@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e7252aa89e2514653fc730c7221d22cc053d2e24
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>Introdução ao sugestões proativos
 
@@ -68,7 +68,7 @@ Se um aplicativo de compartilhamento jornada usa o [MKDirectionsRequest](https:/
 Se o aplicativo só dá suporte a jornada de compartilhamento, a sugestão de sistema começaria com *"Obter uma jornada para..."*, se houver suporte para outros tipos de roteamento direção (como Walking ou bicicleta), o sistema usará *"Obter o caminho para..."*
 
 > [!IMPORTANT]
-> **Observação:** o [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) objeto que recebe o aplicativo não pode incluir informações de longitude e latitude e exigirá geocodificação.
+> O [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) objeto que recebe o aplicativo não pode incluir informações de longitude e latitude e exigirá geocodificação.
 
 ## <a name="implementing-proactive-suggestions"></a>Implementar sugestões proativos
 

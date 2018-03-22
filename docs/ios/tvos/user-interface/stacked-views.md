@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: efc0da0b0f0a800069efb00a402361a8b0cd7f1d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-stacked-view"></a>Trabalhando com exibição empilhada
 
@@ -76,7 +76,7 @@ Se o `BaselineRelativeArrangement` é de propriedade `true`, as subexibições s
 * Um modo de exibição de pilha Horizontal usará seu subexibição mais alta para ambas as a primeira e a última linha de base. Se o modo de exibição mais alto também é uma exibição de pilha, ele usará sua subexibição mais alta como a linha de base.
 
 > [!IMPORTANT]
-> **Observação:** alinhamento de linha de base não funciona em tamanhos de subexibição ampliada ou compactado como a linha de base será calculada para a posição errada. Para o alinhamento da linha de base, certifique-se de que o modo de exibição de secundário **altura** coincide com a exibição de conteúdo intrínseco **altura**.
+> Alinhamento de linha de base não funciona em tamanhos de subexibição ampliada ou compactado como a linha de base será calculada para a posição errada. Para o alinhamento da linha de base, certifique-se de que o modo de exibição de secundário **altura** coincide com a exibição de conteúdo intrínseco **altura**.
 
 
 
@@ -149,7 +149,7 @@ Há vários tipos de layout que funcionam bem com controles de exibição de pil
 -----
 
 > [!IMPORTANT]
-> **Observação:** Observação: Embora seja possível atribuir ações como `TouchUpInside` para um elemento de interface do usuário (como um `UIButton`) no iOS Designer ao criar um manipulador de eventos, ele nunca será chamado porque Apple TV não tem um toque de suporte ou tela sensível ao toque eventos. Você sempre deve usar o padrão `Action Type` durante a criação de ações para tvOS elementos da interface do usuário.
+> Embora seja possível atribuir ações como `TouchUpInside` para um elemento de interface do usuário (como um `UIButton`) no iOS Designer ao criar um manipulador de eventos, ele nunca será chamado porque Apple TV não tem um toque de tela ou oferecer suporte a eventos de toque. Você sempre deve usar o padrão `Action Type` durante a criação de ações para tvOS elementos da interface do usuário.
 
 Para obter mais informações sobre como trabalhar com Storyboards, consulte nosso [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 

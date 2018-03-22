@@ -8,68 +8,72 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8c336799a4d46359a78432837101dad43b572aea
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: c333fd18e306c50bbfd41377638470cb45954883
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="api-design"></a>Projeto de API
 
 Além das principais bibliotecas de classes Base que fazem parte do Mono, [xamarin](http://www.xamarin.com/iOS) fornecido com associações para iOS várias APIs para permitir que os desenvolvedores criem aplicativos do iOS nativo com Mono.
 
-No núcleo do xamarin, há um mecanismo de interoperabilidade que une o mundo com o mundo Objective-C como c#, bem como associações para o iOS APIs com base em C como CoreGraphics e [OpenGLES](#OpenGLES).
+No núcleo do xamarin, há um mecanismo de interoperabilidade que une o mundo c# com o mundo Objective-C, bem como as associações para o iOS APIs com base em C como CoreGraphics e [OpenGL ES](#OpenGLES).
 
-O tempo de execução de nível baixo para se comunicar com o código Objective-C está no [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). Sobre esta, ligações de [Foundation](#MonoTouch.Foundation), CoreFoundation e [UIKit](#MonoTouch.UIKit) são fornecidos.
+O tempo de execução de nível baixo para se comunicar com o código Objective-C está em [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). Sobre esta, ligações de [Foundation](#MonoTouch.Foundation), CoreFoundation, e [UIKit](#MonoTouch.UIKit) são fornecidos.
 
 ## <a name="design-principles"></a>Princípios de design
 
-Estes são alguns dos nossos princípios de design para a associação xamarin (eles também se aplicam a Xamarin.Mac, as associações Mono para Objective-C nos X):
+Estes são alguns dos nossos princípios de design para as ligações de xamarin (eles também se aplicam a Xamarin.Mac, as associações Mono para Objective-C em macOS):
 
-- Siga as diretrizes de Design de estrutura
+- Siga o [diretrizes de Design de estrutura](https://docs.microsoft.com/dotnet/standard/design-guidelines)
 - Permitir que os desenvolvedores a classes de subclasse Objective-C:
 
   - Derivar de uma classe existente
-  - Chamar um construtor base à cadeia
+  - Chame o construtor para a cadeia de base
   - Substituindo métodos deve ser feito com o sistema de substituição do #
+  - Subclassificação deve funcionar com c# construtores padrão
 
-- Subclasse deve funcionar com c# construtores padrão
 - Não exponha os desenvolvedores seletores Objective-C
 - Fornecem um mecanismo para chamar a biblioteca de arbitrário Objective-C
 - Fazer tarefas comuns de Objective-C fácil e é difícil possíveis de tarefas Objective-C
 - Expõe propriedades Objective-C como propriedades do c#
-- Expor uma API com rigidez de tipos:
-- Aumentar a segurança de tipo
-- Minimizar erros de tempo de execução
-- Obter IDE intellisense em tipos de retorno
-- Permite a documentação de pop-up IDE
+- Expor uma API fortemente tipados:
+
+  - Aumentar a segurança de tipo
+  - Minimizar erros de tempo de execução
+  - Obter IDE IntelliSense em tipos de retorno
+  - Permite a documentação de pop-up IDE
+
 - Incentivamos a exploração no IDE das APIs:
+
+  - Por exemplo, em vez de exposição de uma matriz de tipo fraco assim:
+    
+    ```objc
+    NSArray *getViews
+    ```
+    Expor um tipo forte, como este:
+    
+    ```csharp
+    NSView [] Views { get; set; }
+    ```
+    
+    Isso permite que o Visual Studio para Mac para fazer o preenchimento automático ao procurar a API, toda a `System.Array` operações disponíveis no valor retornado e permite que o valor de retorno participar de LINQ.
+
 - Tipos c# nativo:
 
-    - Exemplo: em vez de exposição a matriz de tipo fraco assim:
-        ```
-        NSArray *getViews
-        ```
-        podemos expô-los com tipos fortes, como este:
-    
-        ```
-        NSView [] Views { get; set; }
-        ```
-    
-    Isso permite que o Visual Studio para Mac para fazer o preenchimento automático ao procurar a API e também permite que todos os `System.Array` operações disponíveis no valor retornado e permite que o valor de retorno participar de LINQ
+  - [`NSString` se torna `string`](~/ios/internals/api-design/nsstring.md)
+  - Ativar `int` e `uint` parâmetros que devem ter sido enums em c# enumerações e c# enumerações com `[Flags]` atributos
+  - Em vez de tipo neutra `NSArray` objetos, expor matrizes como matrizes fortemente tipada.
+  - Eventos e notificações, dar aos usuários uma escolha entre:
 
-- [NSString torna-se a cadeia de caracteres](~/ios/internals/api-design/nsstring.md)
-- Ativar int e uint parâmetros que devem ter sido enums como c# enumerações e c# enumerações com atributos de [Flags]
-- Em vez de objetos do tipo neutra NSArray expor matrizes como matriz fortemente tipada.
-- Eventos e notificações, fornecer aos usuários uma escolha entre:
-
-    - Versão fortemente tipada é o padrão
-    - Versão sem rigidez de tipos para casos de uso avançado
+    - Uma versão fortemente tipada por padrão
+    - Uma versão do tipo fraco para casos de uso avançado
 
 - Compatíveis com o padrão de delegado Objective-C:
 
     - Sistema de eventos do c#
-    - Expor c# delegados (lambdas, métodos anônimos e System. Delegate) para Objective-C APIs como "blocos"
+    - Expor c# delegados (lambdas, métodos anônimos, e `System.Delegate`) para Objective-C APIs como blocos
 
 ### <a name="assemblies"></a>Assemblies
 

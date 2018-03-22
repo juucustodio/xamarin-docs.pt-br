@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 24fc64d1bd04cb1ebefb9bf9a359efb395b45074
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Criando Interfaces do usuário do iOS em código
 
@@ -620,7 +620,7 @@ Para obter mais informações sobre como criar uma tela de inicialização, cons
 - [Gerenciando as telas de inicialização com Storyboards](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]
-> **Observação:** a partir do iOS 9, a Apple recomenda que Storyboards devem ser usadas como o principal método de criação de uma tela Iniciar.
+> A partir do iOS 9, a Apple recomenda que Storyboards devem ser usadas como o principal método de criação de uma tela Iniciar.
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>Criando uma imagem de inicialização para pré-iOS 8 aplicativos
 
@@ -629,7 +629,7 @@ Uma imagem estática pode ser usada além de um .xib ou tela inicial de Storyboa
 Esta imagem estática pode ser definida no arquivo Info. plist ou como um catálogo de ativos (para iOS 7) em seu aplicativo. Você precisará fornecer imagens separadas para cada tamanho de dispositivo (320 x 480, 960 x 640, 640 x 1136) que pode ser executado em seu aplicativo. Para obter mais informações sobre tamanhos de tela Iniciar, exiba o [imagens da tela Iniciar](~/ios/app-fundamentals/images-icons/launch-screens.md) guia.
 
 > [!IMPORTANT]
-> **Observação:** se seu aplicativo não tiver nenhuma tela Iniciar, você pode perceber que ele não cabe totalmente na tela. Se esse for o caso, assegure-se de incluir, pelo menos, uma imagem de 640 x 1136 chamada `Default-568@2x.png` para seu Info. plist. 
+> Se seu aplicativo não tiver nenhuma tela Iniciar, você pode perceber que ele não cabe totalmente na tela. Se esse for o caso, assegure-se de incluir, pelo menos, uma imagem de 640 x 1136 chamada `Default-568@2x.png` para seu Info. plist. 
 
 
 

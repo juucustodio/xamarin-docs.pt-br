@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e20c9f068fe92e0dd711e0c20d31d713a0d03f0d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 46a0920efc8d80db7f3783654630f65086907f50
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="advanced-user-notifications"></a>Notificações de usuário avançado
 
@@ -145,7 +145,7 @@ As notificações remoto apresentada acima, além de anexos de mídia também t�
 Suporte a notificação no iOS 10 anexos de mídia de imagens (estático e GIFs), áudio, vídeo e o sistema exibirá automaticamente a interface do usuário personalizada correto para cada um desses tipos de anexos quando a notificação é apresentada ao usuário.
 
 > [!NOTE]
-> **Observação:** deve ter cuidado para otimizar o tamanho do mídia e o tempo necessário para baixar a mídia do servidor remoto (ou para montar a mídia para notificações Local) como o sistema impõe limites rígidos tanto durante a execução de serviço do aplicativo Extensão. Por exemplo, considere a possibilidade de enviar uma versão reduzida da imagem ou um pequeno clipe de um vídeo para ser apresentado na notificação.
+> Tome cuidado para otimizar o tamanho do media e o tempo necessário para baixar a mídia do servidor remoto (ou para montar a mídia para notificações Local) como o sistema impõe limites rígidos tanto ao executar extensão de serviço do aplicativo. Por exemplo, considere a possibilidade de enviar uma versão reduzida da imagem ou um pequeno clipe de um vídeo para ser apresentado na notificação.
 
 ## <a name="creating-custom-user-interfaces"></a>Criando Interfaces de usuário personalizada
 
@@ -299,7 +299,7 @@ Em uma situação em que a interface do usuário de notificação personalizada 
 Para criar a interface do usuário personalizada da extensão de conteúdo de notificação, clique duas vezes o `MainInterface.storyboard` arquivo para abri-lo para edição no iOS Designer, arraste os elementos que você precisa criar a interface desejada (como `UILabels` e `UIImageViews`).
 
 > [!NOTE]
-> **Observação:** a interface do usuário de notificação _não_ suporte controles interativos, como campos de texto ou botões em uma extensão de conteúdo de notificação. Enquanto eles podem ser adicionados para o storyboard, o usuário não poderá interagir com eles. Para adicionar a interação do usuário para uma interface de usuário de notificação personalizada, use ações personalizadas.
+> A interface do usuário de notificação _não_ suporte controles interativos, como campos de texto ou botões em uma extensão de conteúdo de notificação. Enquanto eles podem ser adicionados para o storyboard, o usuário não poderá interagir com eles. Para adicionar a interação do usuário para uma interface de usuário de notificação personalizada, use ações personalizadas.
 
 Depois que a interface do usuário foi disposto e os controles necessários expostos ao código c#, abra o `NotificationViewController.cs` para edição e modificar o `DidReceiveNotification` para popular a interface do usuário quando o usuário expande a notificação. Por exemplo:
 

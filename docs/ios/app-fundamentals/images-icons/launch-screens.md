@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/19/2018
-ms.openlocfilehash: 54ec41636f491708ea72585d3889fbbca85c8eb1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e07a6b72f2821e8cc65e0b0d690dbadf1a6713b6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="launch-screens"></a>Inicie a telas
 
@@ -179,7 +179,7 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um Storyboard especial unific
 -----
 
 > [!NOTE]
-> **Observação**: um Storyboard usado como uma tela Iniciar _deve_ incluem elementos de interface do usuário somente simples, internos e **não é possível** fazer os cálculos ou derivar de uma classe personalizada.
+> Um Storyboard usado como uma tela Iniciar _deve_ incluem elementos de interface do usuário somente simples, internos e **não é possível** fazer os cálculos ou derivar de uma classe personalizada.
 
 Para obter mais informações sobre como criar uma tela iniciar com um Storyboard unificado, consulte o [dinâmico telas iniciar](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) seção o [Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guia.
 

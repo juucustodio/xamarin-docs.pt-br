@@ -7,11 +7,11 @@ ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4a8f1632076a12b1737ba8294ac8b2f28f19dc77
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25b9d6c0eebd51a7b47b31c35fb3d5b56e45c3b3
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="document-picker"></a>Seletor de documento
 
@@ -221,7 +221,7 @@ Usando a junção no diagrama acima:
 Usando a junção o aplicativo não tem mais para abrir uma fonte de dados para monitorar o local e as alterações de arquivo baseada em nuvem. Agora que o aplicativo pode depender `NSMetadataQuery` diretamente.
 
 > [!IMPORTANT]
-> **Observação**: junção só funciona se o aplicativo está usando a coordenação de arquivo como apresentado na seção acima. Se a coordenação de arquivo não está sendo usada, as APIs padrão o comportamento de iOS 8 pre existente.
+> Junção só funciona se o aplicativo está usando a coordenação de arquivo como apresentado na seção acima. Se a coordenação de arquivo não está sendo usada, as APIs padrão o comportamento de iOS 8 pre existente.
 
 
 
@@ -465,7 +465,7 @@ Faça o seguinte:
 6.  Clique duas vezes em `Entitlements.plist` no **Solution Explorer** para abri-lo no editor.
 
     > [!IMPORTANT]
-> **Observação**: no Visual Studio, talvez seja necessário abrir o editor de direitos clicando nele, selecionando **abrir com...** e selecionando o Editor de lista de propriedades
+    > No Visual Studio pode precisar abrir o editor de direitos clicando nele, selecionando **abrir com...** e selecionando o Editor de lista de propriedades
 
 7.  Verificar **habilitar iCloud** , **iCloud documentos** , **armazenamento de chave-valor** e **CloudKit** .
 8.  Verifique se o **contêiner** existe para o aplicativo (como criado acima). Exemplo: `iCloud.com.your-company.AppName`
@@ -793,7 +793,7 @@ namespace DocPicker
 ```
 
 > [!IMPORTANT]
-> **Observação**: O código acima inclui o código da seção de detecção e Listar documentos acima. Ele é apresentado aqui em sua totalidade, como seria em um aplicativo real. Para simplificar, este exemplo funciona com um único arquivo embutido (`test.txt`) apenas.
+> O código acima inclui o código da seção de detecção e Listar documentos acima. Ele é apresentado aqui em sua totalidade, como seria em um aplicativo real. Para simplificar, este exemplo funciona com um único arquivo embutido (`test.txt`) apenas.
 
 O código acima expõe vários iCloud unidade atalhos para torná-las mais fáceis de trabalhar com o restante do aplicativo.
 
@@ -902,7 +902,7 @@ if (presentationPopover!=null) {
 ```
 
 > [!IMPORTANT]
-> **Observação**: O desenvolvedor deve chamar o `StartAccessingSecurityScopedResource` método o `NSUrl` antes de um documento externo pode ser acessado. O `StopAccessingSecurityScopedResource` método deve ser chamado para liberar o bloqueio de segurança assim que o documento foi carregado.
+> O desenvolvedor deve chamar o `StartAccessingSecurityScopedResource` método o `NSUrl` antes de um documento externo pode ser acessado. O `StopAccessingSecurityScopedResource` método deve ser chamado para liberar o bloqueio de segurança assim que o documento foi carregado.
 
 ### <a name="sample-output"></a>Saída de Exemplo
 
@@ -1134,7 +1134,7 @@ No Mac OS X Yosemite, Apple não fornece as versões anteriores compatibilidade 
 Depois que uma conta de usuário tiver sido migrada para iCloud unidade, somente dispositivos usando o iCloud unidade poderá propagar alterações para documentos entre os dispositivos.
 
 > [!IMPORTANT]
-> **Observação**: desenvolvedores devem estar cientes de que os novos recursos abordados neste artigo só estarão disponíveis se a conta do usuário foi migrada para iCloud unidade. 
+> Os desenvolvedores devem estar cientes de que os novos recursos abordados neste artigo só estarão disponíveis se a conta do usuário foi migrada para iCloud unidade. 
 
 ## <a name="summary"></a>Resumo
 

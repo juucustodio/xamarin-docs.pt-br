@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fe1358d330c2a0fd94016853cedeabe094c394da
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>Trabalhando com foco e navegação
 
@@ -123,7 +123,7 @@ Para elementos personalizados que herdam de `UIView` ou `UIViewController`, voc�
 Para solicitar que o mecanismo de foco move o foco volta para o `PreferredFocusedView` elemento de interface do usuário, chamada de `SetNeedsUpdateFocus` método do controlador de exibição.
 
 > [!IMPORTANT]
-> **Observação:** chamando `SetNeedsUpdateFocus` somente terá efeito se o controlador de exibição que ele está sendo chamado em contém a exibição que tem o foco no momento.
+> Chamando `SetNeedsUpdateFocus` somente terá efeito se o controlador de exibição que ele está sendo chamado em contém a exibição que tem o foco no momento.
 
 
 

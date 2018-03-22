@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/25/2017
-ms.openlocfilehash: 7329e8ddb5b86adcf6e1efaa805149012be8853c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1dbff32b113bd1c3a6b2058a34c73977c59c9e5
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-xamarinmac-works"></a>Como funciona o Xamarin.Mac
 
@@ -109,7 +109,7 @@ AOT está habilitado no Xamarin.Mac clicando duas vezes o **nome do projeto** no
 ![Adicionando AOT a argumentos adicionais mmp](how-it-works-images/aot01.png "adicionando AOT para argumentos adicionais mmp")
 
 > [!IMPORTANT]
-> AVISO! Habilitando AOT compilação aumenta consideravelmente o tempo de compilação, às vezes até vários minutos, mas pode melhorar os tempos de inicialização de aplicativo por uma média de 20%. Como resultado, compilação AOT deve ser habilitada apenas na **versão** compilações de um aplicativo Xamarin.Mac.
+> Habilitando AOT compilação aumenta consideravelmente o tempo de compilação, às vezes até vários minutos, mas pode melhorar os tempos de inicialização de aplicativo por uma média de 20%. Como resultado, compilação AOT deve ser habilitada apenas na **versão** compilações de um aplicativo Xamarin.Mac.
 
 ### <a name="aot-compilation-options"></a>Opções de compilação de AOT
 

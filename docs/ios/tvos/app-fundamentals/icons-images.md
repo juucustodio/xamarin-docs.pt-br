@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons-and-images"></a>Trabalhando com imagens e ícones
 
@@ -28,7 +28,7 @@ Criando cativante ícones e imagens são uma parte crítica do desenvolvimento d
 - [Definindo imagens de projeto Xamarin.tvOS](#Setting-Xamarin.tvOS-Project-Images) -abrange as etapas necessárias para configurar a imagem de inicialização e o ícone do aplicativo para seu aplicativo Xamarin.tvOS.
 
 > [!IMPORTANT]
-> **Observação:** todas as imagens na Apple TV estão na resolução 1 x (`@1x`) e você deve _somente_ usar imagens desse tamanho. Incluindo maior, gráficos de resolução mais alta não só levam tempo para baixar e usar mais memória e armazenamento, mas precisa ser redimensionada dinamicamente em tempo de execução e afetará negativamente o desempenho do desenho.
+> Todas as imagens na Apple TV estão na resolução 1 x (`@1x`) e você deve _somente_ usar imagens desse tamanho. Incluindo maior, gráficos de resolução mais alta não só levam tempo para baixar e usar mais memória e armazenamento, mas precisa ser redimensionada dinamicamente em tempo de execução e afetará negativamente o desempenho do desenho.
 
 <a name="Launch-Image" />
 
@@ -79,7 +79,7 @@ Contém imagens em camadas de dois (2) a cinco (5) separar camadas que são comb
 [![](icons-images-images/layered01.png "Diagrama de ordenados Z de imagens em camadas")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
-> **Observação:** imagens em camadas são necessárias para os ícones do aplicativo e opcionais para outros [itens Focusable é](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (como a imagem de prateleira superior). No entanto, a Apple sugere usando imagens em camadas para qualquer imagem que pode receber o foco em seu aplicativo.
+> Imagens em camadas são necessárias para os ícones do aplicativo e opcionais para outros [itens Focusable é](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (como a imagem de prateleira superior). No entanto, a Apple sugere usando imagens em camadas para qualquer imagem que pode receber o foco em seu aplicativo.
 
 
 

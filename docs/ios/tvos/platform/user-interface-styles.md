@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-user-interface-styles"></a>Novos estilos de interface do usuário
 
@@ -101,7 +101,7 @@ Além disso, as coleções de característica têm os seguintes recursos no tvOS
 - Um aplicativo tvOS pode lidar com a característica de conjunto de alterações, substituindo o `TraitCollectionDidChange` método de um `UIView` ou `UIViewController` classe.
 
 > [!IMPORTANT]
-> **Observação:** totalmente não oferece suporte para a visualização inicial de Xamarin.tvOS para tvOS 10 `UIUserInterfaceStyle` para `UITraitCollection` ainda. Suporte completo será adicionado em uma versão futura.
+> Totalmente não oferece suporte para a visualização inicial de Xamarin.tvOS para tvOS 10 `UIUserInterfaceStyle` para `UITraitCollection` ainda. Suporte completo será adicionado em uma versão futura.
 
 
 
@@ -124,7 +124,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> **Observação:** Infelizmente, a visualização de Xamarin.tvOS para tvOS 10 não suportam totalmente `UIUserInterfaceStyle` para `UITraitCollection`, portanto, esse tipo de personalização ainda não está disponível. Suporte completo será adicionado em uma versão futura.
+> Infelizmente, a visualização de Xamarin.tvOS para tvOS 10 não suportam totalmente `UIUserInterfaceStyle` para `UITraitCollection`, portanto, esse tipo de personalização ainda não está disponível. Suporte completo será adicionado em uma versão futura.
 
 <a name="Responding-to-Theme-Changes-Directly" />
 

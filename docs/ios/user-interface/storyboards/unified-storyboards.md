@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="unified-storyboards"></a>Storyboards unificadas
 
@@ -581,7 +581,7 @@ O Designer do iOS confirmará que o desenvolvedor quiser converter o formato do 
  [![](unified-storyboards-images/sizeclass02.png "O uso de alerta de Classes de tamanho")](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
-> **Observação**: Layout automático também deve ser verificada para Classes de tamanho funcionar corretamente.
+> Layout automático também deve ser verificado para Classes de tamanho funcionar corretamente.
 
 ### <a name="generic-device-types"></a>Tipos de dispositivos genéricos
 
@@ -630,7 +630,7 @@ Consulte a seção de tamanho de classe deste artigo para obter mais informaçõ
 Se o desenvolvedor usou storyboards antes, eles estarão familiarizados com os tipos de segue existente de **Push**, **Modal** e **Popover**. Quando o tamanho de Classes estão habilitado em um arquivo de Storyboard unificado, os seguintes adaptável atender tipos (que correspondem a nova API de controlador de exibição discutida acima) são disponibilizados: **Mostrar** e **Mostrar detalhes** .
 
 > [!IMPORTANT]
-> **Observação**: Classes de tamanho quando estão habilitados, todos os existentes segues será ser convertidos nos tipos de novo.
+> Quando o tamanho de Classes estão habilitado, todos os existentes segues será ser convertidos nos tipos de novo.
 
 Veja o exemplo de um iOS 8 aplicativo que usa um Storyboard unificada com um controlador de exibição de divisão que tem um menu de navegação de jogo simples no modo de exibição mestre. Se o usuário clica em um botão de menu, o controlador de exibição do item selecionado deve ser mostrado na seção detalhes do controlador de exibição de divisão quando em execução em um iPad. Em um iPhone, controlador de exibição do item deve ser enviado para a pilha de navegação.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5e4bbc22403c6c0bfa5c8dc7ac4e3a39545051d4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>Recursos de segurança e privacidade de iOS
 
@@ -44,7 +44,7 @@ Foram feitas as seguintes alterações gerais de segurança e privacidade no iOS
 Aplicativos executados em iOS 10 (ou posterior) estaticamente devem declarar sua intenção para acessar informações do usuário ou recursos específicos, inserindo uma ou mais chaves de privacidade em seus `Info.plist` arquivos explicam para o usuário por que o aplicativo deseja acessar.
 
 > [!IMPORTANT]
-> **Observação** aplicativos que não fornecem as chaves necessárias serão silenciosamente encerradas pelo sistema quando eles tentam acessar um dos recursos restritos ou informações do usuário, _sem erro_! Se um aplicativo é iniciado com falha inesperada no iOS 10, certifique-se de que todos os `Info.plist` foram especificados.
+> Aplicativos que não fornecem as chaves necessárias serão silenciosamente encerradas pelo sistema quando eles tentam acessar um dos recursos restritos ou informações do usuário, _sem erro_! Se um aplicativo é iniciado com falha inesperada no iOS 10, certifique-se de que todos os `Info.plist` foram especificados.
 
 A seguir privacidade relacionada à chaves estão disponíveis:
 
@@ -109,7 +109,7 @@ Para definir qualquer uma das chaves de privacidade, faça o seguinte:
 -----
 
 > [!IMPORTANT]
-> **Observação:** no exemplo fornecido acima, Falha ao definir o `NSHomeKitUsageDescription` chave no `Info.plist` arquivo resultaria no aplicativo _silenciosamente falhando_ (que está sendo fechado pelo sistema em tempo de execução) sem erro quando executado no iOS 10 (ou maior).
+> No exemplo fornecido acima, Falha ao definir o `NSHomeKitUsageDescription` chave no `Info.plist` arquivo resultaria no aplicativo _silenciosamente falhando_ (que está sendo fechado pelo sistema em tempo de execução) sem erro quando executado no iOS 10 (ou superior).
 
 <a name="Summary" />
 

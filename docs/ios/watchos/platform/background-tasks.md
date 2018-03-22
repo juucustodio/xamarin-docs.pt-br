@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 83841e62d863bf4be4edef5c0b6b7d486f192f4d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8fd2b5069e175a68ff7609e75775db1929507582
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="background-tasks"></a>Tarefas em Segundo Plano
 
@@ -143,7 +143,7 @@ Novamente, o sistema emitirá um `WKSnapshotRefreshBackgroundTask` para que o ap
 Quando o aplicativo marca o `WKSnapshotRefreshBackgroundTask` concluída, o sistema automaticamente tirar um instantâneo da interface de usuário do aplicativo.
 
 > [!IMPORTANT]
-> **Observação:** é importante sempre agendar um ` WKSnapshotRefreshBackgroundTask` depois que o aplicativo recebeu dados novos e atualizados sua Interface de usuário ou o usuário não verá as informações de modificação.
+> É importante sempre agendar um ` WKSnapshotRefreshBackgroundTask` depois que o aplicativo recebeu dados novos e atualizados sua Interface de usuário ou o usuário não verá as informações de modificação.
 
 
 
@@ -630,7 +630,7 @@ Aplicativos que tiverem sido fixados para encaixe podem ocorrer o seguinte:
 O último aplicativo executou o usuário será considerado o _usados recentemente_ aplicativo e ocupará o último slot no encaixe. A partir daí, existe usuário pode escolher para fixá-lo permanentemente o encaixe. O mais recentemente usada será tratada como qualquer outro aplicativo favorito o usuário já foi fixado de encaixe.
 
 > [!IMPORTANT]
-> **Observação:** aplicativos que foram adicionados apenas para a tela inicial não terá nenhum agendamento regular. Para receber um agendamento regular e plano de fundo das atualizações, um aplicativo _deve_ ser adicionado ao encaixe.
+> Aplicativos que foram adicionados apenas para a tela inicial não terá nenhum agendamento regular. Para receber um agendamento regular e plano de fundo das atualizações, um aplicativo _deve_ ser adicionado ao encaixe.
 
 Conforme descrito anteriormente neste documento, os instantâneos são muito importantes watchOS 3 como eles funcionam como imagens de visualização e de inicialização para o aplicativo. Se o usuário estabelece em um aplicativo de encaixe, ele expandir para tela inteira, insira o primeiro plano e iniciar a execução, portanto, é fundamental que o instantâneo seja atualizado.
 

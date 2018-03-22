@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 9c6bbf27d4c8227d96e372e91e1ccf2c9e841ff8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0f59e8f5e732a45f7e6148a08de80fffc56dbb26
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-navigation-controllers"></a>Trabalhando com os controladores de navegação
 
@@ -25,7 +25,7 @@ Barras de navegação pode ser adicionadas à parte superior das exibições par
 Além disso, com o título (que é exibido no centro), barras de navegação pode conter um ou mais botões da barra de navegação (`UIBarButtonItem`) à esquerda e direita da barra.
 
 > [!IMPORTANT]
-> **Observação:** barras de navegação são totalmente transparentes por padrão. Tome cuidado para garantir que o conteúdo da barra de navegação esteja legível o conteúdo abaixo dele. Por exemplo, quando o conteúdo em um modo de exibição de tabela ou uma coleção rola sob ele.
+> Barras de navegação são totalmente transparentes por padrão. Tome cuidado para garantir que o conteúdo da barra de navegação esteja legível o conteúdo abaixo dele. Por exemplo, quando o conteúdo em um modo de exibição de tabela ou uma coleção rola sob ele.
 
 
 
@@ -77,7 +77,7 @@ Além disso, com o título (que é exibido no centro), barras de navegação pod
 -----
 
 > [!IMPORTANT]
-> **Observação:** enquanto é possível atribuir eventos como `TouchUpInside` para um elemento de interface do usuário (como um UIButton) no Designer do iOS, ele nunca será chamado porque Apple TV não tem um toque de tela ou oferecer suporte a eventos de toque. Você sempre deve usar o `Primary Action` eventos durante a criação de manipuladores de eventos para tvOS elementos da interface do usuário.
+> Embora seja possível atribuir eventos como `TouchUpInside` para um elemento de interface do usuário (como um UIButton) no Designer do iOS, ele nunca será chamado porque Apple TV não tem um toque de tela ou oferecer suporte a eventos de toque. Você sempre deve usar o `Primary Action` eventos durante a criação de manipuladores de eventos para tvOS elementos da interface do usuário.
 
 
 

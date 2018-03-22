@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5cd2671bb66aa89117012fe394bb724f7e22e1a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-3d-touch"></a>Introdução ao 3D Touch
 
@@ -65,7 +65,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 O `MaximumPossibleForce` propriedade retorna o maior valor possível para o `Force` propriedade do [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) com base no que o aplicativo está em execução no dispositivo iOS.
 
 > [!IMPORTANT]
-> **Observação:** alterações na pressão fará com que o `TouchesMoved` evento ser gerado, mesmo se o X / coordenadas Y não foram alterados. Devido a essa alteração no comportamento, seus aplicativos iOS devem estar preparados para a `TouchesMoved` evento a ser invocado com mais frequência e o x / coordenadas Y para ser o mesmo que o último `TouchesMoved` chamar.
+> Alterações na pressão fará com que o `TouchesMoved` evento ser gerado, mesmo se o X / coordenadas Y não foram alterados. Devido a essa alteração no comportamento, seus aplicativos iOS devem estar preparados para a `TouchesMoved` evento a ser invocado com mais frequência e o x / coordenadas Y para ser o mesmo que o último `TouchesMoved` chamar.
 
 
 
@@ -281,7 +281,7 @@ Aqui nós está definindo dois itens de ação rápida estáticos com as seguint
 * `UIApplicationShortcutItemType` -É um valor de cadeia de caracteres que serão usadas para identificar o item em nosso aplicativo. Consulte a seguinte seção para obter mais informações.
 
 > [!IMPORTANT]
-> **Observação:** itens de ação rápida de atalho que são definidas no `Info.plist` arquivo não pode ser acessado com o `Application.ShortcutItems` propriedade. Eles apenas são passados para o `HandleShortcutItem` manipulador de eventos. 
+> Itens de atalho ação rápidas que são definidas no `Info.plist` arquivo não pode ser acessado com o `Application.ShortcutItems` propriedade. Eles apenas são passados para o `HandleShortcutItem` manipulador de eventos. 
 
 
 

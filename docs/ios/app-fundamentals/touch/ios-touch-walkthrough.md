@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c806eb51be5f585f2c94b438f6ca31a70aaa7551
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 04c7a7235665e14fd128a3a70951168c1914c112
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough--using-touch-in-ios"></a>Instruções passo a passo – usando toque no iOS
 
@@ -92,12 +92,12 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
         }
     }
     ```
+    
     Esse método funciona através da verificação de um `UITouch` de objeto e se ele existe executam alguma ação com base no qual ocorreu o toque:
 
     * _Dentro de TouchImage_ – exibir o texto `Touches Began` em um rótulo e mudar a imagem.
     * _Dentro de DoubleTouchImage_ – alterar a imagem exibida se o gesto foi um toque duplo.
     * _Dentro de DragImage_ – definir um sinalizador que indica que o toque foi iniciado. O método `TouchesMoved` usará esse sinalizador para determinar se `DragImage` devem ser movidos pela tela ou não, como podemos ver na próxima etapa.
-
 
     O código acima lida apenas com ajustes individuais, ainda há um comportamento se o usuário está movendo o dedo na tela. Para responder a movimentação, implementar `TouchesMoved` conforme mostrado no código a seguir:
 
@@ -192,7 +192,7 @@ Siga estas etapas para implementar reconhecedores de gestos:
 
 1. Edite o arquivo **GestureViewController.cs** e adicione a seguinte variável da instância:
 
-    ```chsarp
+    ```csharp
     #region Private Variables
     private bool imageHighlighted = false;
     private RectangleF originalImageFrame = RectangleF.Empty;
@@ -204,7 +204,7 @@ O reconhecedor de gestos panorâmica usará o `originalImageFrame` para calcular
 
 1. Adicione o seguinte método ao controlador:
 
-    ```chsarp
+    ```csharp
     private void WireUpDragGestureRecognizer()
     {
         // Create a new tap gesture
@@ -223,7 +223,7 @@ Observe que nós atribuímos um destino para o gesto na forma do método `Handle
 
 1. Para implementar HandleDrag, adicione o seguinte código para o controlador:
 
-    ```chsarp
+    ```csharp
     private void HandleDrag(UIPanGestureRecognizer recognizer)
     {
         // If it's just began, cache the location of the image
@@ -250,7 +250,7 @@ Observe que nós atribuímos um destino para o gesto na forma do método `Handle
 
 1. Adicionar um `UITapGestureRecognizer` que alterará a imagem que está sendo exibida no DoubleTouchImage. Adicione o seguinte método para o `GestureViewController` controlador:
 
-    ```chsarp
+    ```csharp
     private void WireUpTapGestureRecognizer()
     {
         // Create a new tap gesture
@@ -286,7 +286,7 @@ Observe que nós atribuímos um destino para o gesto na forma do método `Handle
 
 1. A final coisa que precisamos fazer é modificar `ViewDidLoad` para que ele chama os métodos que acabamos de adicionar. Alterar ViewDidLoad para que ele se parece com o código a seguir:
 
-    ```chsarp
+    ```csharp
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
@@ -324,7 +324,7 @@ Siga estas etapas para criar um reconhecedor de gestos personalizados:
 
 1. Adicionar uma nova classe ao projeto nomeado `CheckmarkGestureRecognizer`e torná-lo a se parecer com o código a seguir:
 
-    ```chsarp
+    ```csharp
     using System;
     using CoreGraphics;
     using Foundation;
@@ -444,7 +444,7 @@ Agora a classe pode começar do zero próxima vez que o usuário interage com o 
 
 1. Agora que definimos um reconhecedor de gestos personalizados (`CheckmarkGestureRecognizer`) edite o **CustomGestureViewController.cs** e adicione as seguintes variáveis de dois instância:
 
-    ```chsarp
+    ```csharp
     #region Private Variables
     private bool isChecked = false;
     private CheckmarkGestureRecognizer checkmarkGesture;
@@ -453,7 +453,7 @@ Agora a classe pode começar do zero próxima vez que o usuário interage com o 
 
 1. Para criar uma instância e configurar nosso reconhecedor de gestos, adicione o seguinte método ao controlador:
 
-    ```chsarp
+    ```csharp
     private void WireUpCheckmarkGestureRecognizer()
     {
         // Create the recognizer
@@ -482,7 +482,7 @@ Agora a classe pode começar do zero próxima vez que o usuário interage com o 
 
 1. Editar `ViewDidLoad` para que ele chama `WireUpCheckmarkGestureRecognizer`, conforme mostrado no trecho de código a seguir:
 
-    ```chsarp
+    ```csharp
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();

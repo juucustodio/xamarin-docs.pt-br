@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b8d3fc920610b357520dfebddb79492c44d4781c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="stack-view"></a>Exibição de pilha
 
@@ -62,7 +62,7 @@ Sendo que:
 Ao trabalhar com uma exibição de pilha, você pode pensar a **alinhamento** como o **X** e **Y** local do modo de exibição secundário e o **distribuição** como o **Altura** e **largura**.
 
 > [!IMPORTANT]
-> **Observação:** `UIStackView` foi projetado como um modo de exibição do contêiner não renderização e como tal, não é desenhado à tela como outros subclasses de `UIView`. Para definir propriedades, como `BackgroundColor` ou substituindo `DrawRect` não terá nenhum efeito visual.
+> `UIStackView` foi projetado como um modo de exibição do contêiner não renderização e como tal, não é desenhado à tela como outros subclasses de `UIView`. Para definir propriedades, como `BackgroundColor` ou substituindo `DrawRect` não terá nenhum efeito visual.
 
 Continue para layout de interface do aplicativo adicionando um rótulo, ImageView, dois botões e um modo de exibição de pilha Horizontal para que se assemelha ao seguinte:
 
@@ -209,7 +209,7 @@ Se o `BaselineRelativeArrangement` é de propriedade `true`, as subexibições s
  - Um modo de exibição de pilha Horizontal usará seu subexibição mais alta para ambas as a primeira e a última linha de base. Se o modo de exibição mais alto também é uma exibição de pilha, ele usará sua subexibição mais alta como a linha de base.
 
 > [!IMPORTANT]
-> **Observação:** alinhamento de linha de base não funciona em tamanhos de subexibição ampliada ou compactado como a linha de base será calculada para a posição errada. Para o alinhamento da linha de base, certifique-se de que o modo de exibição de secundário **altura** coincide com a exibição de conteúdo intrínseco **altura**.
+> Alinhamento de linha de base não funciona em tamanhos de subexibição ampliada ou compactado como a linha de base será calculada para a posição errada. Para o alinhamento da linha de base, certifique-se de que o modo de exibição de secundário **altura** coincide com a exibição de conteúdo intrínseco **altura**.
 
 ### <a name="common-stack-view-uses"></a>Usos comuns de modo de exibição de pilha
 

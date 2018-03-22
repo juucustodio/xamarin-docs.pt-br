@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: a0b0ca9857e706a9a84f1c661f7f6ff294e112c1
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 85c05145ce2490468ac5d5fb9b8524853d46a9e3
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introdução ao Storyboards
 
@@ -60,7 +60,7 @@ No mouse, um menu será exibido permitindo que nós escolha a ação para nosso 
 [![](images/16new.png "A lista suspensa ação atender com Classes de tamanho")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> **Observação:** se você estiver usando o VMWare para a máquina Virtual do Windows, clique em Ctrl for mapeada como o _clique_ botão do mouse por padrão. Para criar um Segue, edite suas preferências de teclado por meio de **preferências** > **de teclado e Mouse** > **atalhos do Mouse** e remapear o **Botão secundário** conforme ilustrado abaixo:
+> Se você estiver usando o VMWare para a máquina Virtual do Windows, clique em Ctrl for mapeada como o _clique_ botão do mouse por padrão. Para criar um Segue, edite suas preferências de teclado por meio de **preferências** > **de teclado e Mouse** > **atalhos do Mouse** e remapear o **Botão secundário** conforme ilustrado abaixo:
 > 
 > [![](images/image22.png "Configurações de preferência de teclado e Mouse")](images/image22.png#lightbox)
 > 

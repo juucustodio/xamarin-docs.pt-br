@@ -6,11 +6,11 @@ ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c4eed99533ba1aca1bd5ba23078866909330b542
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c0369fe52897a2557a92fd56ebcd816b8427faf7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introdução ao Backgrounding no iOS
 
@@ -67,7 +67,7 @@ O seletor de exibição do aplicativo é um recurso de controle importante intro
 Usando o seletor de exibição do aplicativo, os usuários podem rolar pelos instantâneos de todos os aplicativos backgrounded e suspensos. Ao tocar em um aplicativo inicia no primeiro plano. Passar o dedo para cima remove o plano de fundo, encerrando o processo do aplicativo. Nós o conduziremos detalhadamente o alternador de aplicativo no [demonstração de ciclo de vida do aplicativo do iOS](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) na próxima seção.
 
 > [!IMPORTANT]
-> **Observação**: O alternador de aplicativo não mostra a diferença entre aplicativos backgrounded e foram suspensos.
+> O seletor de exibição do aplicativo não mostra a diferença entre aplicativos backgrounded e foram suspensos.
 
 
 

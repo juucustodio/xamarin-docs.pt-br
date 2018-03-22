@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 67635b6a04579246467184cdff8d9f277b36ecc4
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0c1253391673e48f81c12b80719db485d276013d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>Noções básicas sobre os conceitos de SiriKit
 
@@ -274,7 +274,7 @@ A extensão de interface do usuário de tentativas será sempre exibida juntamen
 Há alguns casos em que o aplicativo pode substituir as informações que Siri exibe para o usuário por padrão, como mensagens ou onde o aplicativo pode substituir a experiência de padrão com um personalizado para o aplicativo é mapeado.
 
 > [!IMPORTANT]
-> **Observação:** enquanto é possível adicionar elementos interativos, como `UIButtons` ou `UITextFields` para a extensão de interface do usuário de intenção `UIViewController`, esses são estritamente proibidos como a UI de intenção de não interativo e o usuário não conseguirá interagir com eles.
+> Embora seja possível adicionar elementos interativos, como `UIButtons` ou `UITextFields` para a extensão de interface do usuário de intenção `UIViewController`, esses são estritamente proibidos como a UI de intenção de não interativo e o usuário não será capaz de interagir com eles.
 
 É totalmente opcional para o aplicativo fornecer uma extensão de interface do usuário intenção desde que o Siri contém um conjunto padrão de interface do usuário para cada tipo de intenção. Além disso, as interfaces de tentativas da interface do usuário estão disponíveis apenas para certos propósitos que Apple foi considerado seria útil para o usuário.
 
@@ -320,7 +320,7 @@ O aplicativo também precisa atualizar Siri imediatamente quando vocabulário es
 Além disso, o aplicativo _deve_ excluir informações de vocabulário Siri imediatamente desde que um usuário pode se tornar upset se eles excluído uma informação, mas Siri ainda estava reconhecendo-ele horas ou dias mais tarde.
 
 > [!IMPORTANT]
-> **Observação:** o aplicativo deve remover completamente o vocabulário específico do usuário do Siri se o usuário optar por redefinir o aplicativo ou se eles logout.
+> O aplicativo deve remover completamente o vocabulário específico do usuário do Siri se o usuário optar por redefinir o aplicativo ou se eles logout.
 
 ## <a name="sirikit-permissions"></a>Permissões de SiriKit
 

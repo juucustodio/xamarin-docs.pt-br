@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: 557521bc3bce41b9023acbf31a344a57cb63d2a1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6331912eedcd52df45c0d25d83a5b599c55ca7d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -146,12 +146,10 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 A classe deve herdar de `INExtension`, e como o exemplo vai manipular listas e notas de tentativas, ele também implementa `IINNotebookDomainHandling`.
 
 > [!NOTE]
-> **Observação sobre nomenclatura:** há uma convenção no .NET para interfaces para ser prefixados com uma letra maiuscula `I`, que cumpre o Xamarin quando a associação de protocolos do SDK do iOS.
->
-> Xamarin também preserva os nomes de tipo do iOS e Apple usa os dois primeiros caracteres em nomes de tipo para refletir a estrutura que um tipo pertence.
->
-> Para o `Intents` framework, os tipos são prefixados com `IN*` (por exemplo. `INExtension`), mas são _não_ interfaces.
-> Ele também segue protocolos (que se tornam interfaces em c#) terminar com dois `I`s, como `IINAddTasksIntentHandling`.
+> - Há uma convenção no .NET para interfaces para ser prefixados com uma letra maiuscula `I`, que cumpre o Xamarin quando a associação de protocolos do SDK do iOS.
+> - Xamarin também preserva os nomes de tipo do iOS e Apple usa os dois primeiros caracteres em nomes de tipo para refletir a estrutura que um tipo pertence.
+> - Para o `Intents` framework, os tipos são prefixados com `IN*` (por exemplo. `INExtension`), mas são _não_ interfaces.
+> - Ele também segue protocolos (que se tornam interfaces em c#) terminar com dois `I`s, como `IINAddTasksIntentHandling`.
 
 #### <a name="handling-intents"></a>Tratamento de tentativas
 

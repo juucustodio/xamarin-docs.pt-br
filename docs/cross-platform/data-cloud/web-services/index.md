@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 48489ca7dc28dcc14a7810b15dc1ffa1fd4f7cf4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f619123fec036dfe919e977b4f218e8d235f0b82
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-web-services"></a>Introdução aos serviços Web
 
@@ -29,8 +29,8 @@ Este artigo aborda os seguintes tópicos:
 Para clientes que usam o xamarin. Forms, há exemplos completos usando cada uma dessas tecnologias no [xamarin. Forms Web Services](~/xamarin-forms/data-cloud/index.md) documentação.
 
 > [!IMPORTANT]
-> **Observação para xamarin:** no iOS 9, segurança de transporte do aplicativo (ATS) impõe conexões seguras entre os recursos de internet (como o servidor de back-end do aplicativo) e o aplicativo, impedindo assim a divulgação acidental de informações confidenciais. Como ATS está habilitado por padrão em aplicativos criados para o iOS 9, todas as conexões serão sujeitos a requisitos de segurança ATS. Se as conexões não atender a esses requisitos, eles falham com uma exceção.
-
+> No iOS 9, a segurança de transporte do aplicativo (ATS) impõe conexões seguras entre os recursos de internet (como o servidor de back-end do aplicativo) e o aplicativo, impedindo assim a divulgação acidental de informações confidenciais.
+> Como ATS está habilitado por padrão em aplicativos criados para o iOS 9, todas as conexões serão sujeitos a requisitos de segurança ATS. Se as conexões não atender a esses requisitos, eles falham com uma exceção.
 
 Você pode recusar ATS se não for possível usar o `HTTPS` de protocolo e proteger a comunicação para recursos da internet. Isso pode ser obtido pela atualização do aplicativo **Info. plist** arquivo. Para obter mais informações, consulte [segurança de transporte do aplicativo](~/ios/app-fundamentals/ats.md).
 
@@ -191,7 +191,7 @@ client.GetAsync<CustomersResponse>("",
 ```
 
 > [!IMPORTANT]
-> **Observação:** enquanto ferramentas como ServiceStack e RestSharp facilitam a chamada e consumir REST de serviços, às vezes, é incomum para consumir XML ou JSON que não estão em conformidade com o padrão de _DataContract_ serialização convenções. Se necessário, invocar a solicitação e lidar com a serialização apropriada explicitamente usando a biblioteca de ServiceStack.Text discutida abaixo.
+> Embora ferramentas como ServiceStack e RestSharp facilitam a chamada e consumir REST de serviços, às vezes, é incomum para consumir XML ou JSON que não estão em conformidade com o padrão de _DataContract_ convenções de serialização. Se necessário, invocar a solicitação e lidar com a serialização apropriada explicitamente usando a biblioteca de ServiceStack.Text discutida abaixo.
 
 
 <a name="Options_for_consuming_RESTful_data" />

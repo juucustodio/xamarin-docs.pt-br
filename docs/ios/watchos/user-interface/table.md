@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c55ba4fb90181aaa1aa8ec52e2fcb3e2b2cc76d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="table-control"></a>Controle de tabela
 
@@ -51,7 +51,8 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 ```
 
 > [!IMPORTANT]
-> **Observação**: linhas da tabela não virtualizadas que estão em iOS. Tente limitar o número de linhas (Apple recomenda menos de 20).
+> Linhas da tabela não virtualizadas que estão em iOS. Tente limitar o número de linhas (Apple recomenda menos de 20).
+
 Depois que as linhas foram criadas, você precisará preencher cada célula (como `GetCell` faria no iOS). Este trecho de código a partir de [WatchTables exemplo](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) atualiza o rótulo em cada linha
 
 ```csharp
@@ -62,7 +63,7 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> **Observação:** usando `SetNumberOfRows` e, em seguida, um loop por meio do usando `GetRowController` faz com que toda a tabela a ser enviado para o relógio. Em exibições subsequentes da tabela, se você precisar adicionar ou remover linhas específicas usam `InsertRowsAt` e `RemoveRowsAt` para melhorar o desempenho.
+> Usando `SetNumberOfRows` e, em seguida, um loop por meio do usando `GetRowController` faz com que toda a tabela a ser enviado para o relógio. Em exibições subsequentes da tabela, se você precisar adicionar ou remover linhas específicas usam `InsertRowsAt` e `RemoveRowsAt` para melhorar o desempenho.
 
 
 ## <a name="respond-to-taps"></a>Responder a toques
@@ -148,7 +149,7 @@ watchOS 3 introduziu um novo recurso para tabelas: a capacidade de percorrer as 
 ![](table-images/table-scroll-sml.png "Exemplo de detalhes de paginação vertical") ![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
-> **Aviso:** esse recurso está apenas disponível ao editar o storyboard no construtor de Interface do Xcode.
+> Este recurso está apenas disponível ao editar o storyboard no construtor de Interface do Xcode.
 
 Para habilitar esse recurso, selecione o `WKInterfaceTable` na superfície de design e escala de **paginação Vertical de detalhes** opção:
 

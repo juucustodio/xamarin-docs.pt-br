@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 69c4b25e17c31d57701f99e84f6f686c65dc7028
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="interactive-workbooks"></a>Pastas de trabalho interativas
 
@@ -32,7 +32,7 @@ Janela de edição de código fornece conclusão de código, a coloração de si
 
 [ ![](workbook-images/inspector-0.6.0-repl-small.png "Janela de edição de código fornece conclusão de código, a coloração de sintaxe, embutido em tempo real de diagnóstico e suporte de instrução de várias linhas")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Xamarin pastas de trabalho são salvos em um `.workbook` arquivo, que é um arquivo de CommonMark com alguns metadados na parte superior (consulte [tipos de arquivo de pastas de trabalho](#Workbooks_Files_Types) para obter mais detalhes sobre como as pastas de trabalho podem ser salvos).
+Xamarin pastas de trabalho são salvos em um `.workbook` arquivo, que é um arquivo de CommonMark com alguns metadados na parte superior (consulte [tipos de arquivo de pastas de trabalho](#workbooks-files-types) para obter mais detalhes sobre como as pastas de trabalho podem ser salvos).
 
 ### <a name="nuget-package-support"></a>Suporte de pacote do NuGet
 
@@ -132,7 +132,7 @@ O diretório deve conter um `index.workbook` arquivo, que é a pasta de trabalho
 Se um texto sem formatação `.workbook` que faz referência a recursos do mesmo diretório de arquivo é aberto em pastas de trabalho 0.99.3 ou posterior, quando ele for salvo, ele será convertido em um `.workbook` pacote. Isso é verdadeiro no Mac e Windows.
 
 > [!NOTE]
-> **Observação:** os usuários do Windows abrirá o `package.workbook\index.workbook` arquivo diretamente, mas, caso contrário, o pacote comportará da mesma no Mac.
+> Os usuários do Windows abrirá o `package.workbook\index.workbook` arquivo diretamente, mas, caso contrário, o pacote comportará da mesma no Mac.
 
 ### <a name="archives"></a>Arquivos mortos
 

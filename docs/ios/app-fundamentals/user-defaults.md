@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 73f3beb87fffcb37ef3e36d54f634c3bc62da538
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-user-defaults"></a>Trabalhando com os padrões do usuário
 
@@ -32,7 +32,7 @@ Como mencionado acima, padrões do usuário (`NSUserDefaults`) pode ser adiciona
 Quando seu aplicativo é executado pela primeira vez, `NSUserDefaults` lê as chaves e valores de padrões de dados de usuário do aplicativo e os armazena em cache na memória para evitar a abrir e ler o banco de dados cada vez que um valor é necessário. 
 
 > [!IMPORTANT]
-> **Observação**: Apple não recomenda mais que a chamada de desenvolvedor de `Synchronize` método para sincronizar o cache de memória com o banco de dados diretamente. Em vez disso, ele será chamado automaticamente em intervalos periódicos para manter o cache na memória em sincronia com o banco de dados de padrões do usuário.
+> Apple não recomenda mais que a chamada de desenvolvedor de `Synchronize` método para sincronizar o cache de memória com o banco de dados diretamente. Em vez disso, ele será chamado automaticamente em intervalos periódicos para manter o cache na memória em sincronia com o banco de dados de padrões do usuário.
 
 O `NSUserDefaults` classe contém diversos métodos de conveniência para ler e gravar valores de preferência para tipos de dados comuns, como: cadeia de caracteres, inteiro, float, booliano e URLs. Outros tipos de dados podem ser arquivados usando `NSData`, em seguida, lido ou gravado no banco de dados padrão do usuário. Para obter mais informações, consulte da Apple [preferências e configurações do guia de programação](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -127,7 +127,7 @@ plist.SetBool(useHeader, "UseHeader");
 ```
 
 > [!IMPORTANT]
-> **Observação:** quando seu aplicativo é executado pela primeira vez, `NSUserDefaults` lê as chaves e valores de padrões de dados de usuário do aplicativo e os armazena em cache na memória para evitar a abrir e ler o banco de dados cada vez que um valor é necessário.
+> Quando seu aplicativo é executado pela primeira vez, `NSUserDefaults` lê as chaves e valores de padrões de dados de usuário do aplicativo e os armazena em cache na memória para evitar a abrir e ler o banco de dados cada vez que um valor é necessário.
 
 
 

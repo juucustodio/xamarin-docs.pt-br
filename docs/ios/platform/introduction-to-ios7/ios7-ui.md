@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3d70aff4df91120402e2987598b8973172b46245
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 visão geral sobre a Interface do usuário
 
@@ -173,7 +173,7 @@ Consulte o [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-up
 O valor de deslocamento é gerado dinamicamente depois que o modo de exibição foi adicionado à hierarquia, tentativa de ler `TopLayoutGuide` e `BottomLayoutGuide` valores em `ViewDidLoad` retornará 0. Calcular o valor após a exibição carregada - por exemplo, no `ViewDidLayoutSubviews`.
 
 > [!IMPORTANT]
-> **Observação**: `TopLayoutGuide` e `BottomLayoutGuide` são preteridos no iOS 11 em favor do novo layout de área de segurança. Apple declararam que é compatível com a versão iOS anterior ao iOS 11 usando a área de segurança. Para obter mais informações, consulte o [atualizar seu aplicativo para iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) guia.
+> `TopLayoutGuide` e `BottomLayoutGuide` são preteridos no iOS 11 em favor do novo layout de área de segurança. Apple declararam que é compatível com a versão iOS anterior ao iOS 11 usando a área de segurança. Para obter mais informações, consulte o [atualizar seu aplicativo para iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) guia.
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
@@ -252,7 +252,7 @@ Por exemplo, a captura de tela a seguir mostra o efeito de alterar a cor do mati
 A cor do matiz pode ser aplicada a imagens bem quando o `RenderingMode` é definido como `UIImageRenderingMode.AlwaysTemplate`.
 
 > [!IMPORTANT]
-> Observação: Cor do matiz não pode ser definida usando `UIAppearance`.
+> Cor do matiz não pode ser definida usando `UIAppearance`.
 
 
 ### <a name="dynamic-type"></a>Tipo dinâmico

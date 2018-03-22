@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 71f076bb0dc7d552a041d48a6ce531dcff444de6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Um aplicativo Xamarin.Mac de modo seguro
 
@@ -174,7 +174,7 @@ Em seguida, precisamos selecionar a nova ID do aplicativo e perfil de provisiona
 6. Clique o **feito** botão.
 
 > [!IMPORTANT]
-> **Observação:** talvez você precise sair e reiniciar o Visual Studio para Mac para obtê-lo para reconhecer a nova ID do aplicativo e perfil de provisionamento que foi instalado com o Xcode.
+> Você terá que fechar e reiniciar o Visual Studio para Mac para obtê-lo para reconhecer a nova ID do aplicativo e perfil de provisionamento que foi instalado com o Xcode.
 
 #### <a name="troubleshooting-provisioning-issues"></a>Solucionando problemas de provisionamento
 
@@ -308,7 +308,7 @@ O diretório de contêiner de aplicativo do aplicativo um Xamarin.Mac tem as seg
 - Para _caixa de sapatos_ tipos de aplicativos (como o aplicativo de fotos da Apple), o conteúdo do usuário passará para o contêiner.
 
 > [!IMPORTANT]
-> **Observação:** Infelizmente, Xamarin.Mac não tem 100% de cobertura de API ainda (ao contrário de xamarin), como resultado o `NSHomeDirectory` API não foi mapeada na versão atual do Xamarin.Mac.
+> Infelizmente, Xamarin.Mac não tem 100% de cobertura de API ainda (ao contrário de xamarin), como resultado o `NSHomeDirectory` API não foi mapeada na versão atual do Xamarin.Mac.
 
 Como solução temporária, você pode usar o código a seguir:
 
@@ -413,7 +413,7 @@ Quando o usuário importa um arquivo de recurso para o projeto (por meio de um `
 Um indicador de Document-Scoped podem ser resolvido por qualquer aplicativo que pode abrir os dados de indicador e o próprio documento. Isso dá suporte a portabilidade, permitindo que o usuário enviar os arquivos de projeto para outro usuário e ter todos os indicadores funcionam bem para eles.
 
 > [!IMPORTANT]
-> **Observação:** um Bookman Document-Scoped pode _somente_ apontar para um único arquivo e não uma pasta e arquivo não pode estar em um local usado pelo sistema (como `/private` ou `/Library`).
+> Um indicador de Document-Scoped pode _somente_ apontar para um único arquivo e não uma pasta e arquivo não pode estar em um local usado pelo sistema (como `/private` ou `/Library`).
 
 #### <a name="using-security-scoped-bookmarks"></a>Usando indicadores com escopo de segurança
 
@@ -428,7 +428,7 @@ Usando o tipo de indicador Security-Scoped, requer que você execute as seguinte
 Depois de liberar o acesso a um recurso, você precisará retornar para a etapa 4 novamente para restabelecer o acesso. Se o aplicativo Xamarin.Mac for reiniciado, você deve retornar à etapa 3 e resolver novamente o indicador.
 
 > [!IMPORTANT]
-> **Observação:** Falha ao liberar o acesso aos recursos da URL Security-Scoped fará com que um aplicativo Xamarin.Mac apresentam vazamento de recursos do Kernel. Como resultado, o aplicativo não poderá adicionar locais de sistema de arquivos a seu contêiner até que ele seja reiniciado.
+> Falha ao liberar o acesso aos recursos da URL Security-Scoped fará com que um aplicativo Xamarin.Mac apresentam vazamento de recursos do Kernel. Como resultado, o aplicativo não poderá adicionar locais de sistema de arquivos a seu contêiner até que ele seja reiniciado.
 
 ### <a name="the-app-sandbox-and-code-signing"></a>O aplicativo de proteção e a assinatura de código
 
@@ -493,7 +493,7 @@ Criando um aplicativo de Xamarin.Mac para a área restrita de aplicativo normalm
 6. Implemente uma estratégia de migração.
 
 > [!IMPORTANT]
-> **Observação:** devem não apenas área restrita do executável principal no pacote de aplicativos, mas também todos os auxiliares incluídos ferramenta no pacote ou aplicativo. Isso é necessário para qualquer aplicativo distribuído de Mac App Store e, se possível, deve ser feito para qualquer outra forma de distribuição de aplicativos.
+> Você deve colocar somente não executável principal no pacote de aplicativos, mas também todos os auxiliares incluídos ferramenta no pacote ou aplicativo. Isso é necessário para qualquer aplicativo distribuído de Mac App Store e, se possível, deve ser feito para qualquer outra forma de distribuição de aplicativos.
 
 Para obter uma lista de todos os binários do executável no pacote do aplicativo um Xamarin.Mac, digite o seguinte comando no Terminal:
 
