@@ -1,6 +1,6 @@
 ---
-title: "Provisionamento automático"
-description: "Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso da Assinatura automática no Visual Studio para Mac para solicitar certificados e perfis de desenvolvimento."
+title: Provisionamento automático
+description: Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso da Assinatura automática no Visual Studio para Mac para solicitar certificados e perfis de desenvolvimento.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 271d9e3f7ae04f03a132ae2fd0ebf531fe52578c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="automatic-provisioning"></a>Provisionamento automático
 
@@ -24,7 +24,7 @@ _Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvol
 - Xcode 9 ou posterior
 
 > [!IMPORTANT]
->  Este guia mostra como usar o Visual Studio para Mac para configurar um dispositivo da Apple para implantação e como implantar um aplicativo. Para obter etapas manuais de como fazer isso ou para fazer isso com o Visual Studio no Windows, é recomendável que você siga as etapas detalhadas no guia de [provisionamento manual](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+> Este guia mostra como usar o Visual Studio para Mac para configurar um dispositivo da Apple para implantação e como implantar um aplicativo. Para obter etapas manuais de como fazer isso ou para fazer isso com o Visual Studio no Windows, é recomendável que você siga as etapas detalhadas no guia de [provisionamento manual](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
 
 ## <a name="enabling-automatic-signing"></a>Habilitando a Assinatura automática
 

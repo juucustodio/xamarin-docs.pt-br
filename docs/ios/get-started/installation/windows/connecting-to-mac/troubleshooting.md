@@ -1,6 +1,6 @@
 ---
-title: "Solução de problemas de conexão"
-description: "Este guia fornece etapas de solução de problemas que podem ser encontrados usando o novo gerenciador de conexões, incluindo problemas de conectividade e de SSH."
+title: Solução de problemas de conexão
+description: Este guia fornece etapas de solução de problemas que podem ser encontrados usando o novo gerenciador de conexões, incluindo problemas de conectividade e de SSH.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d33f4ba5512985d62575885d44fdcebced8b61ed
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connection-troubleshooting"></a>Solução de problemas de conexão
 
@@ -72,26 +72,34 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
 
 7. Depois de confirmar o endereço IP do Mac, tente executar um `ping` nesse endereço no `cmd.exe` no Windows:
 
-        ping 10.1.8.95
-
+    ```
+    ping 10.1.8.95
+    ```
+    
     Se o ping falhar, o Mac não estará _roteável_ do computador Windows. Esse problema precisa ser resolvido no nível de configuração de rede local entre os 2 computadores. Certifique-se de que os dois computadores estejam na mesma Rede Local.
 
 8. Em seguida, teste se o cliente `ssh` do OpenSSH pode conectar-se com êxito no Mac do Windows. Uma maneira de instalar este programa é instalar o [Git para Windows](https://git-for-windows.github.io/). Em seguida, você pode iniciar um prompt de comando **Git Bash** e tentar fazer `ssh` no Mac com seu nome de usuário e endereço IP:
 
-        ssh amyb@10.1.8.95
-
+    ```bash
+    ssh amyb@10.1.8.95
+    ```
+    
 <a name="stepnine" />
 
 9. Se **a etapa 8 for bem-sucedida**, você poderá tentar executar um comando simples, como o `ls` através da conexão:
 
-        ssh amyb@10.1.8.95 'ls'
-
+    ```bash
+    ssh amyb@10.1.8.95 'ls'
+    ```
+    
     Isso deve listar o conteúdo de seu diretório base no Mac. Se o comando `ls` funcionar corretamente, mas a conexão do Visual Studio ainda falhar, você poderá verificar a seção "[Problemas conhecidos e limitações](#knownissues)" sobre as complicações específicas do Xamarin. Se nenhum desses corresponder ao seu problema, [registre um novo relatório de bugs](https://bugzilla.xamarin.com/newbug) e anexe os logs descritos em "[Verificar arquivos de Log detalhado](#verboselogs)".
 
 10. Se **etapa 8 falhar**, você poderá executar o seguinte comando no Terminal do Mac para ver se o servidor SSH está aceitando _alguma_ conexão:
 
-        ssh localhost
-
+    ```bash
+    ssh localhost
+    ```
+    
 11. Se a etapa 8 falhar, mas a **etapa 10 tiver êxito**, então o problema mais provável é a porta 22 no host de build do Mac, que não está acessível no Windows devido à configuração da rede. Possíveis problemas de configuração incluem:
 
     - As configurações de firewall do OS X estão desautorizando a conexão. Certifique-se de verificar novamente a etapa 3.
@@ -161,8 +169,10 @@ Causas relatadas:
 
     5. Adicione a seguinte linha na parte inferior do arquivo:
 
-            UseDNS no
-
+        ```
+        UseDNS no
+        ```
+        
     6. Remova todas as linhas que dizem `UseDNS yes` para certificar-se de que a nova configuração entrará em vigor.
 
     7. Salve o arquivo.
@@ -179,16 +189,20 @@ Se os arquivos de log mostram um problema durante as etapas "Instalação", "Car
 
 1. Execute o seguinte comando no Terminal no Mac:
 
-        open "$HOME/Library/Caches/Xamarin"
-
+    ```bash
+    open "$HOME/Library/Caches/Xamarin"
+    ```
+    
 2. Pressione Control e clique na pasta **XMA** e selecione **Mover para Lixeira**:
 
     [![](troubleshooting-images/troubleshooting-image8.png "Mover a pasta XMA para a Lixeira")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. Há um cache no Windows também que pode ajudar a limpar. Abra um prompt de comando como administrador no Windows:
 
-        del %localappdata%\Temp\Xamarin\XMA
-
+    ```
+    del %localappdata%\Temp\Xamarin\XMA
+    ```
+    
 ## <a name="warning-messages"></a>Mensagens de aviso
 
 Esta seção discute algumas mensagens que podem aparecer nas Janela de Saída e nos logs que você geralmente pode ignorar.
@@ -230,7 +244,7 @@ Se a Janela de Saída não tem informações suficientes para diagnosticar o pro
 1. Inicie o Visual Studio.
 
     > [!IMPORTANT]
->  Observe que **.svclogs** não são habilitados por padrão. Para acessá-los, será necessário iniciar o Visual Studio com logs detalhados, conforme explicado no guia [Logs de Versão](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs). Para obter mais informações, consulte o blog [Solução de problemas de extensões com o log de atividades](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/).
+    > Observe que **.svclogs** não são habilitados por padrão. Para acessá-los, será necessário iniciar o Visual Studio com logs detalhados, conforme explicado no guia [Logs de Versão](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs). Para obter mais informações, consulte o blog [Solução de problemas de extensões com o log de atividades](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/).
 
 2. Tente conectar-se ao host de build.
 
@@ -272,7 +286,7 @@ Se os arquivos de log normais ainda não fornecerem informações suficientes pa
 
     ```bash
     grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
-    ```
+   ```
 
 Se esses arquivos de log detalhados não fornecerem pistas suficientes para resolver diretamente o problema, [registre um novo relatório de bugs](https://bugzilla.xamarin.com/newbug) e anexe o arquivo .zip da etapa 5 e o arquivo .log da etapa 6.
 

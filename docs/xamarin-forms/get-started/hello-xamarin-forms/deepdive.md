@@ -7,33 +7,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 3259e9b2bc9be52e8c19acce2dd031ad9046019b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ea02b4329d5a27e47a89f21b475bb5f6d9dea175
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xamarinforms-deep-dive"></a>Aprofundamento no Xamarin.Forms
 
 No [Início rápido do Xamarin.Forms](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md), o aplicativo Phoneword foi criado. Este artigo analisa o que foi criado para entender os fundamentos de como os aplicativos Xamarin.Forms funcionam.
-
-Os seguintes tópicos são analisados:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-- Introdução ao Visual Studio – Introdução ao Visual Studio e criando um novo aplicativo Xamarin.Forms.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-- Introdução ao Visual Studio para Mac – Introdução ao Visual Studio para Mac e criando um novo aplicativo do Xamarin.Forms.
-
------
-
-- Anatomia de um aplicativo Xamarin.Forms – Apresentação das partes essenciais de um aplicativo Xamarin.Forms.
-- Conceitos básicos de arquitetura e aplicativo – como o aplicativo é iniciado em cada plataforma.
-- IU (interface do usuário) – criar interfaces do usuário no Xamarin.Forms.
-- Conceitos adicionais introduzidos no Phoneword – breves descrições dos conceitos adicionais usados no aplicativo Phoneword.
-- Teste e implantação – concluir o aplicativo com conselhos sobre testes, implantação, geração de arte e muito mais.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -52,6 +34,14 @@ Os projetos são:
 - Phoneword.iOS – esse projeto contém o código específico do iOS e é o ponto de entrada para o aplicativo iOS.
 - Phoneword.UWP – esse projeto contém código específico da UWP (Plataforma Universal do Windows) e é o ponto de entrada para o aplicativo UWP.
 
+## <a name="anatomy-of-a-xamarinforms-application"></a>Anatomia de um aplicativo Xamarin.Forms
+
+A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET Standard Phoneword no Visual Studio:
+
+![](deepdive-images/vs/net-standard-project.png "Conteúdo do projeto do .NET Standard Phoneword")
+
+O projeto tem um nó **Dependências** que contém os nós **NuGet** e **SDK**. O nó **NuGet** contém o pacote do NuGet Xamarin.Forms que foi adicionado ao projeto e o nó **SDK** contém o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes do NuGet que definem o .NET Standard.
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Introdução ao Visual Studio para Mac
@@ -68,19 +58,7 @@ Os projetos são:
 - Phoneword.Droid – esse projeto contém o código específico do Android e é o ponto de entrada para aplicativos Android.
 - Phoneword.iOS – esse projeto contém o código específico do iOS e é o ponto de entrada para aplicativos iOS.
 
------
-
 ## <a name="anatomy-of-a-xamarinforms-application"></a>Anatomia de um aplicativo Xamarin.Forms
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET Standard Phoneword no Visual Studio:
-
-![](deepdive-images/vs/net-standard-project.png "Conteúdo do projeto do .NET Standard Phoneword")
-
-O projeto tem um nó **Dependências** que contém os nós **NuGet** e **SDK**. O nó **NuGet** contém o pacote do NuGet Xamarin.Forms que foi adicionado ao projeto e o nó **SDK** contém o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes do NuGet que definem o .NET Standard.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 A captura de tela a seguir mostra o conteúdo do projeto PCL Phoneword no Visual Studio para Mac:
 
@@ -202,8 +180,6 @@ A substituição `OnCreate` inicializa a estrutura do Xamarin.Forms ao chamar o 
 
 ## <a name="universal-windows-platform"></a>Plataforma Universal do Windows
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 Em aplicativos UWP (Plataforma Universal do Windows), o método `Init` que inicializa a estrutura Xamarin.Forms é chamado da classe `App`:
 
 ```csharp
@@ -230,13 +206,11 @@ namespace Phoneword.UWP
     }
 }
 ```
+
 O aplicativo Xamarin.Forms é carregado com o método `LoadApplication`.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-Os aplicativos da Plataforma Universal do Windows (UWP) podem ser criados com o Xamarin.Forms, mas somente usando o Visual Studio no Windows.
-
------
+> [!NOTE]
+> Os aplicativos da Plataforma Universal do Windows (UWP) podem ser criados com o Xamarin.Forms, mas somente usando o Visual Studio no Windows.
 
 ## <a name="user-interface"></a>Interface do Usuário
 
@@ -302,43 +276,52 @@ O aplicativo Phoneword para Xamarin.Forms introduziu vários conceitos não abor
 
 - Habilitar e desabilitar botões. Um [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) pode ser ativado ou desativado alterando sua propriedade [`IsEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/). Por exemplo, o seguinte código de exemplo desabilita o `callButton`:
 
-        callButton.IsEnabled = false;
+    ```csharp
+    callButton.IsEnabled = false;
+    ```
 
 - Exibindo uma caixa de diálogo de alerta. Quando o usuário pressiona a chamada **Botão**, o aplicativo Phoneword mostra uma *Caixa de Diálogo de Alerta* com a opção de fazer ou cancelar uma chamada. O método [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/System.String/) é usado para criar a caixa de diálogo, como mostrado no código de exemplo a seguir:
 
-        await this.DisplayAlert (
-                "Dial a Number",
-                "Would you like to call " + translatedNumber + "?",
-                "Yes",
-                "No");
+    ```csharp
+    await this.DisplayAlert (
+            "Dial a Number",
+            "Would you like to call " + translatedNumber + "?",
+            "Yes",
+            "No");
+    ```
 
 - Acessando recursos nativos por meio da classe [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/). O aplicativo Phoneword usa a classe `DependencyService` para resolver a interface `IDialer` para implementações de discagem de telefone específicas da plataforma, como mostra o código de exemplo a seguir do projeto Phoneword:
 
-        async void OnCall (object sender, EventArgs e)
-        {
-            ...
-            var dialer = DependencyService.Get<IDialer> ();
-            ...
-        }
+    ```csharp
+    async void OnCall (object sender, EventArgs e)
+    {
+        ...
+        var dialer = DependencyService.Get<IDialer> ();
+        ...
+    }
+    ```
 
   Para saber mais sobre a classe [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/), consulte [Acessando recursos nativos por meio do DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 - Fazendo uma chamada telefônica com uma URL. O aplicativo Phoneword usa `OpenURL` para inicializar o aplicativo de telefone do sistema. A URL consiste em um prefixo `tel:` seguido pelo número de telefone a ser chamado, como mostra o exemplo de código a seguir do projeto iOS:
 
-        return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
+    ```csharp
+    return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
+    ```
 
 - Ajustando o layout da plataforma. A classe [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) permite aos desenvolvedores personalizar o layout e a funcionalidade do aplicativo por plataforma, conforme mostra o exemplo de código a seguir que usa outros valores [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) nas plataformas para exibir corretamente a cada página:
 
-        <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                     ...>
-            <ContentPage.Padding>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS" Value="20, 40, 20, 20" />
-                    <On Platform="Android, WinPhone, Windows" Value="20" />
-                </OnPlatform>
-            </ContentPage.Padding>
-            ...
-        </ContentPage>
+    ```xaml
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" ... >
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="20, 40, 20, 20" />
+                <On Platform="Android, WinPhone, Windows" Value="20" />
+            </OnPlatform>
+        </ContentPage.Padding>
+        ...
+    </ContentPage>
+    ```
 
   Para saber mais sobre os ajustes de plataforma, consulte [Device Class](~/xamarin-forms/platform/device.md) (Classe de Dispositivo).
 
