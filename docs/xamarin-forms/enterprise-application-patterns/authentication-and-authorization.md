@@ -1,5 +1,5 @@
 ---
-title: "Autenticação e autorização"
+title: Autenticação e autorização
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 5f27c1acefa63ee26184b8997594630e24cb0acc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 16cd5571a8c3b0e179046351e9996e55b040a9de
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authentication-and-authorization"></a>Autenticação e autorização
 
@@ -21,7 +21,7 @@ Há muitas abordagens para a integração de autenticação e autorização em u
 
 ## <a name="authentication"></a>Autenticação
 
-A autenticação é necessária quando um aplicativo precisa saber a identidade do usuário atual. Mecanismo de principal do ASP.NET Core para identificar os usuários é o sistema de associação do ASP.NET Core Identity, que armazena informações de usuário em um repositório de dados configurado pelo desenvolvedor. Normalmente, esse repositório de dados será um repositório EntityFramework, embora repositórios personalizados ou pacotes de terceiros podem ser usados para armazenar informações de identidade no armazenamento do Azure, documentos ou outros locais.
+A autenticação é necessária quando um aplicativo precisa saber a identidade do usuário atual. Mecanismo de principal do ASP.NET Core para identificar os usuários é o sistema de associação do ASP.NET Core Identity, que armazena informações de usuário em um repositório de dados configurado pelo desenvolvedor. Normalmente, esse repositório de dados será um repositório EntityFramework, embora repositórios personalizados ou pacotes de terceiros podem ser usados para armazenar informações de identidade no armazenamento do Azure, o banco de dados do Azure Cosmos ou outros locais.
 
 Para cenários de autenticação que fazem usam de um repositório de dados de usuário local, e que persiste as informações de identidade entre solicitações por meio de cookies (como é comum em aplicativos web ASP.NET MVC), a identidade do ASP.NET Core é uma solução adequada. No entanto, os cookies nem sempre são uma maneira natural de persistência e transmissão de dados. Por exemplo, um aplicativo web do ASP.NET Core que expõe pontos de extremidade RESTful que são acessados de um aplicativo móvel normalmente precisa usar a autenticação de token de portador, desde que os cookies não podem ser usados neste cenário. No entanto, os tokens de portador facilmente podem ser recuperados e incluídos no cabeçalho de autorização de solicitações da web feitas do aplicativo móvel.
 

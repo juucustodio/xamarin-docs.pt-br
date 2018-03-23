@@ -1,6 +1,6 @@
 ---
 title: Pesquisando dados com a pesquisa do Azure
-description: "Pesquisa do Azure é um serviço de nuvem que fornece a indexação e consulta de recursos para os dados carregados. Isso remove os requisitos de infraestrutura e as complexidades de algoritmo de pesquisa normalmente associadas ao implementar a funcionalidade de pesquisa em um aplicativo. Este artigo demonstra como usar a biblioteca de pesquisa do Microsoft Azure para integrar a pesquisa do Azure em um aplicativo xamarin. Forms."
+description: Pesquisa do Azure é um serviço de nuvem que fornece a indexação e consulta de recursos para os dados carregados. Isso remove os requisitos de infraestrutura e as complexidades de algoritmo de pesquisa normalmente associadas ao implementar a funcionalidade de pesquisa em um aplicativo. Este artigo demonstra como usar a biblioteca de pesquisa do Microsoft Azure para integrar a pesquisa do Azure em um aplicativo xamarin. Forms.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: bf6b9f8aaa07e934a1e707b85ecaa24e4f3d99bf
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 24db1404e218eea86356f9bbc004e7d5850c2e7a
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="searching-data-with-azure-search"></a>Pesquisando dados com a pesquisa do Azure
 
@@ -119,7 +119,7 @@ searchClient.Indexes.Delete(Constants.Index);
 
 Depois de definir o índice, é possível carregar os dados usando um dos dois modelos:
 
-- **Modelo de pull** – dados periodicamente é incluídos do DocumentDB do Azure, o banco de dados do SQL Azure, o armazenamento de BLOBs do Azure ou SQL Server hospedado em uma máquina Virtual do Azure.
+- **Modelo de pull** – dados periodicamente é incluídos do banco de dados do Azure Cosmos, banco de dados do SQL Azure, armazenamento de BLOBs do Azure ou SQL Server hospedado em uma máquina Virtual do Azure.
 - **Modelo de push** – programaticamente os dados são enviados para o índice. Este é o modelo adotado neste artigo.
 
 Um `SearchIndexClient` instância deve ser criada para importar dados para o índice. Isso pode ser feito usando o `SearchServiceClient.Indexes.GetClient` método, conforme demonstrado no exemplo de código a seguir:

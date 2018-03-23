@@ -1,6 +1,6 @@
 ---
 title: Imagens
-description: "Imagens podem ser compartilhadas entre plataformas com xamarin. Forms, eles podem ser carregados especificamente para cada plataforma ou podem ser baixadas para exibição."
+description: Imagens podem ser compartilhadas entre plataformas com xamarin. Forms, eles podem ser carregados especificamente para cada plataforma ou podem ser baixadas para exibição.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 440ee997b075b5c89504dcf20171fa3c8713e1ce
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b2cc302cf45527319bb22a4942290e0b0ac414d7
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="images"></a>Imagens
 
@@ -24,7 +24,7 @@ Imagens específicas da plataforma também são necessárias para ícones e tela
 
 Este documento aborda os seguintes tópicos:
 
-- [ **Imagens locais** ](#Local_Images) -exibindo imagens fornecido com o aplicativo, incluindo a resolução de resoluções nativas como iOS Retina ou Android versões de alto DPI de uma imagem.
+- [ **Imagens locais** ](#Local_Images) -exibindo imagens fornecido com o aplicativo, incluindo a resolução de resoluções nativas como iOS versões de alto DPI de Retina, Android ou UWP de uma imagem.
 - [ **Imagens incorporadas** ](#Embedded_Images) -exibindo imagens inseridas como um recurso de assembly.
 - [ **Baixado imagens** ](#Downloading_Images) - baixar e exibir imagens.
 - [ **Ícones e telas iniciais** ](#Icons_and_splashscreens) -ícones específicos de plataforma e imagens de inicialização.
@@ -94,15 +94,17 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>Resoluções nativas (Retina e alto DPI)
 
-IOS e Android plataformas incluem suporte para resoluções de imagem diferente, onde o sistema operacional escolhe a imagem apropriada em tempo de execução com base nos recursos do dispositivo. Xamarin. Forms usa APIs das plataformas nativo para carregar imagens locais, portanto ele automaticamente dá suporte a soluções alternativas se os arquivos estão corretamente nomeados e localizados no projeto.
+iOS, Android, Windows Phone e UWP incluem suporte para resoluções de imagem diferente, onde o sistema operacional escolhe a imagem apropriada em tempo de execução com base nos recursos do dispositivo. Xamarin. Forms usa APIs das plataformas nativo para carregar imagens locais, portanto ele automaticamente dá suporte a soluções alternativas se os arquivos estão corretamente nomeados e localizados no projeto.
 
 A melhor maneira de gerenciar imagens desde iOS 9 é arrastar imagens para cada resolução necessária para o conjunto de imagem do catálogo de ativos apropriado. Para obter mais informações, consulte [adicionar imagens a um conjunto de imagem de catálogo Asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Antes do iOS 9, versões de retina da imagem podem ser colocadas no **recursos** pasta - dois e três vezes a resolução com um  **@2x**  ou  **@3x** sufixos de nome de arquivo antes da extensão de arquivo (por exemplo, **myimage@2x.png**). No entanto, esse método de trabalhar com imagens em um aplicativo iOS foi substituído pela Apple. Para obter mais informações, consulte [tamanhos de imagem e nomes de arquivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
+Antes do iOS 9, versões de retina da imagem podem ser colocadas no **recursos** pasta - dois e três vezes a resolução com um **@2x** ou **@3x**sufixos de nome de arquivo antes da extensão de arquivo (por exemplo, **myimage@2x.png**). No entanto, esse método de trabalhar com imagens em um aplicativo iOS foi substituído pela Apple. Para obter mais informações, consulte [tamanhos de imagem e nomes de arquivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
 Imagens de resolução alternativo Android devem ser colocadas em [diretórios especialmente chamado](http://developer.android.com/guide/practices/screens_support.html) no projeto do Android, conforme mostrado na seguinte captura de tela:
 
 [![Local da imagem de resolução de vários Android](images-images/xs-highdpisolution-sml.png "local da imagem de resolução de vários Android")](images-images/xs-highdpisolution.png#lightbox "local da imagem de resolução de vários Android")
+
+Nomes de arquivo de imagem de UWP e Windows Phone [pode ser com o sufixo `.scale-xxx` antes da extensão de arquivo](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), onde `xxx` é a porcentagem de dimensionamento aplicado ao ativo, por exemplo, **myimage.scale-200.png**. Imagens, em seguida, podem ser chamadas para no código ou XAML sem o modificador de escala, por exemplo, apenas **myimage.png**. A plataforma selecionará a escala mais próxima do ativo apropriado com base em DPI atual da exibição.
 
 ### <a name="additional-controls-that-display-images"></a>Controles adicionais que exibem imagens
 
@@ -168,7 +170,7 @@ As capturas de tela a seguir mostram o resultado de exibição de uma imagem ins
 Porque não há nenhum conversor de tipo interno de `string` para `ResourceImageSource`, esses tipos de imagens não podem ser carregados nativamente pelo XAML. Em vez disso, uma extensão de marcação XAML personalizada simple pode ser gravada para carregar imagens usando um **ID de recurso** especificado em XAML:
 
 ```csharp
-[ContentProperty ("Source")]
+[ContentProperty (nameof(Source))]
 public class ImageResourceExtension : IMarkupExtension
 {
  public string Source { get; set; }
@@ -179,6 +181,7 @@ public class ImageResourceExtension : IMarkupExtension
    {
      return null;
    }
+   
    // Do your translation lookup here, using whatever method you require
    var imageSource = ImageSource.FromResource(Source);
 

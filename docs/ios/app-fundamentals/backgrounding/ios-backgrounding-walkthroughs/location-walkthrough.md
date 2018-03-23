@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: dfae07d36c67c12d254cd70c22acb01b2fc1c9b0
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: efdabc5450b186c89785ee3cb19a3decdd6c2064
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="walkthrough---using-background-location"></a>Passo a passo - usando o local do plano de fundo
 
@@ -28,7 +28,6 @@ Este passo a passo explica alguma chave backgrounding conceitos, incluindo Regis
 
     No Gerenciador de soluções, clique duas vezes no **Info. plist** arquivo para abri-lo e role até o final da lista. Marque ambos o **habilitar modos de segundo plano** e **local atualizações** caixas de seleção.
 
-
     No Visual Studio para Mac, ele se parecerá com algo assim:
 
     [![](location-walkthrough-images/image7.png "Marque os modos de plano de fundo habilitar e as caixas de seleção de local de atualizações")](location-walkthrough-images/image7.png#lightbox)
@@ -38,7 +37,7 @@ Este passo a passo explica alguma chave backgrounding conceitos, incluindo Regis
     ```xml
     <key>UIBackgroundModes</key>
     <array>
-        <string>location</string>
+      <string>location</string>
     </array>
     ```
 
