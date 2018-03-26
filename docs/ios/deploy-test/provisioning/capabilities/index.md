@@ -1,6 +1,6 @@
 ---
 title: Trabalhando com capacidades
-description: "A adição de capacidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para todas as capacidades."
+description: A adição de capacidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para todas as capacidades.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c038aba3989046e6df062e97ae7f777ae6238ade
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ffc694e2f513d61cf32e94d8dc3bae17c887521b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-capabilities"></a>Trabalhando com capacidades
 
@@ -58,7 +58,7 @@ Esta seção explica como usar o provisionamento automático do Visual Studio pa
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **OBSERVAÇÃO**: nem todas as funcionalidades podem ser adicionadas e gerenciadas no Visual Studio para Mac. A lista a seguir contém os recursos compatíveis:
+> Nem todas as funcionalidades podem ser adicionadas e gerenciadas no Visual Studio para Mac. A lista a seguir contém os recursos compatíveis:
 >
 >* HealthKit 
 >* HomeKit 
@@ -198,7 +198,7 @@ Agora, crie um perfil de provisionamento que contenha essa ID do aplicativo. Sig
     ![Opções do projeto do Visual Studio para Mac](images/image16.png)
 
 > [!IMPORTANT]
-> Observação: talvez você também precise definir as chaves de direito no arquivo Entitlement.plist e as chaves de privacidade no arquivo Info.plist. Mais informações sobre esses direitos são fornecidas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
+> Talvez você também precise definir as chaves de direito no arquivo Entitlement.plist e as chaves de privacidade no arquivo Info.plist. Mais informações sobre esses direitos são fornecidas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
 
 <a name="nextsteps" />
 
@@ -220,7 +220,7 @@ A lista a seguir detalha alguns dos problemas mais comuns que podem criar obstá
 -   Verifique se os perfis de provisionamento e IDs do aplicativo foram instaladas e que **Info.plist** do aplicativo (no projeto Xamarin) está usando uma das IDs do aplicativo configuradas acima.
 -   Verifique se o arquivo **Entitlements.plist** do aplicativo (no projeto Xamarin) tem o serviço correto habilitado.
 -   Verifique se as chaves de privacidade apropriadas estão definidas no info.plist
--   Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. **Observação:** essa _não_ é a configuração padrão para builds de depuração e do simulador do iOS.
+-   Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de depuração e do simulador do iOS.
 
 <a name="summary" />
 
