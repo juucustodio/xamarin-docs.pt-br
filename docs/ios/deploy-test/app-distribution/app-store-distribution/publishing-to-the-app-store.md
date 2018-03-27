@@ -1,6 +1,6 @@
 ---
 title: Publicando na App Store
-description: "Este artigo mostra como configurar, compilar e publicar um aplicativo Xamarin.iOS para distribuição através da App Store. Ele inclui um guia passo a passo que aborda como preparar seu aplicativo para distribuição, como usar ferramentas da Apple para enviar seu aplicativo para análise e, finalmente, como publicar seu aplicativo na App Store."
+description: Este artigo mostra como configurar, compilar e publicar um aplicativo Xamarin.iOS para distribuição através da App Store. Ele inclui um guia passo a passo que aborda como preparar seu aplicativo para distribuição, como usar ferramentas da Apple para enviar seu aplicativo para análise e, finalmente, como publicar seu aplicativo na App Store.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ef8fafb923dcad936ce0a049e715cdd163ea7222
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publicando na App Store
 
@@ -185,7 +185,7 @@ Agora que o seu aplicativo Xamarin.iOS configurado corretamente, é possível fa
 
 
 > [!NOTE]
-> Observação: embora as configurações antigas _App Store_ e _Ad Hoc_ tenham sido removidas de todos os projetos de modelo do Visual Studio para Mac, você pode achar que projetos mais antigos ainda incluam essas configurações. Se esse for o caso, você poderá continuar a usar a configuração **App Store | Dispositivo** na etapa 1 da lista acima.
+> Embora as configurações antigas _App Store_ e _Ad Hoc_ tenham sido removidas de todos os projetos de modelo do Visual Studio para Mac, você pode descobrir que projetos mais antigos ainda incluem essas configurações. Se esse for o caso, você poderá continuar a usar a configuração **App Store | Dispositivo** na etapa 1 da lista acima.
 
 ### <a name="sign-and-distribute-your-app"></a>Assinar e distribuir seu aplicativo
 
@@ -309,7 +309,7 @@ Com a compilação de distribuição criada e arquivada, agora você está pront
 ## <a name="submitting-your-app-to-apple"></a>Enviando seu aplicativo para a Apple
 
 > [!NOTE]
-> Observação: a Apple alterou recentemente seu processo de verificação de aplicativos iOS e pode rejeitar aplicativos com o `iTunesMetadata.plist` incluído no IPA. Se você encontrar o erro `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"`, a solução alternativa descrita [aqui](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1) deverá resolver o problema.
+> A Apple alterou recentemente seu processo de verificação de aplicativos iOS e pode rejeitar aplicativos com o `iTunesMetadata.plist` incluído no IPA. Se você encontrar o erro `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"`, a solução alternativa descrita [aqui](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1) deverá resolver o problema.
 
 Com a compilação de distribuição concluída, você está pronto para enviar o seu aplicativo iOS para a Apple para análise e lançamento na App Store.
 

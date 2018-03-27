@@ -1,6 +1,6 @@
 ---
-title: "Distribuição Ad-Hoc"
-description: "Este documento fornece uma visão geral das técnicas de distribuição Ad Hoc que são usados principalmente para testar aplicativos Xamarin.iOS com um grande grupo de pessoas."
+title: Distribuição Ad-Hoc
+description: Este documento fornece uma visão geral das técnicas de distribuição Ad Hoc que são usados principalmente para testar aplicativos Xamarin.iOS com um grande grupo de pessoas.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d01130989336ada855e936a6597b517fab5ee69
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e0db9df11436cf1613ac5eacdf293245f99b8855
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ad-hoc-distribution"></a>Distribuição Ad-Hoc
 
@@ -39,7 +39,7 @@ Mesmo se você pretende liberar um aplicativo Xamarin.iOS para implantação int
 A próxima seção descreverá como configurar com um Certificado de Distribuição e um Perfil de Provisionamento de Distribuição.
 
 > [!NOTE]
->  Observação: somente administradores e agentes de equipe podem criar certificados de distribuição e perfis de provisionamento.
+> Somente administradores e agentes de equipe podem criar certificados de distribuição e perfis de provisionamento.
 
 <a name="createcertificate" />
 

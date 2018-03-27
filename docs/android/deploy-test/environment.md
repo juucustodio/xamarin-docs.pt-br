@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: ee612d4a8982a6ae505b4d329b9abbc84624a1e0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 66f4dcf14cd179795e9a23bccabe4289d74c7c5b
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente do Xamarin.Android
 
@@ -36,7 +36,7 @@ Os comentários são linhas que começam com `#`. Linhas em branco são ignorada
 
 Se a *chave* começa com uma letra maiúscula, *chave* é tratada como uma variável de ambiente e **setenv**(3) é usado para definir a variável de ambiente para o *valor* especificado durante a inicialização do processo.
 
-Se a *chave* começa com uma letra minúscula, a *chave* é tratada como uma propriedade do sistema Android e *valor* é o *valor padrão*: propriedades do sistema Android que controlam o comportamento de execução do Xamarin.Android são pesquisadas primeiro do servidor de propriedade do sistema Android e, se nenhum valor está presente, o valor especificado no arquivo de ambiente é usado. Isso é para permitir que `adb shell setprop` seja usado para substituir valores provenientes do arquivo de ambiente para fins de diagnóstico.
+Se a *chave* começa com uma letra minúscula, a *chave* é tratada como uma propriedade do sistema Android e *valor* é o *valor padrão*: propriedades do sistema Android que controlam o comportamento de execução do Xamarin.Android são pesquisadas primeiro do repositório de propriedades do sistema Android e, se nenhum valor está presente, o valor especificado no arquivo de ambiente é usado. Isso é para permitir que `adb shell setprop` seja usado para substituir valores provenientes do arquivo de ambiente para fins de diagnóstico.
 
 ## <a name="xamarinandroid-environment-variables"></a>Variáveis de ambiente do Xamarin.Android
 
@@ -45,9 +45,9 @@ O Xamarin.Android é compatível com a variável `XA_HTTP_CLIENT_HANDLER_TYPE`, 
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
-O tipo qualificado por assembly que deve herdar de [HttpMessageHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpmessagehandler(v=vs.118).aspx) e é construído por meio do [construtor padrão `HttpClient()`](https://msdn.microsoft.com/en-us/library/hh138077(v=vs.118).aspx).
+O tipo qualificado por assembly que deve herdar de [HttpMessageHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1) e é construído por meio do [construtor padrão `HttpClient()`](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor).
 
-No Xamarin.Android 6.1, essa variável de ambiente não é definida por padrão e [HttpClientHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpclienthandler(v=vs.118).aspx) é usada.
+No Xamarin.Android 6.1, essa variável de ambiente não é definida por padrão e [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1) é usada.
 
 Como alternativa, o valor `Xamarin.Android.Net.AndroidClientHandler` pode ser especificado para usar [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/) para acesso à rede, o que *pode* permitir o uso do TLS 1.2 quando o Android é compatível com ele.
 
@@ -169,4 +169,4 @@ MONO_LOG_LEVEL=
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Segurança da camada de transporte](~/cross-platform/app-fundamentals/transport-layer-security.md)
+- [Transport Layer Security](~/cross-platform/app-fundamentals/transport-layer-security.md)

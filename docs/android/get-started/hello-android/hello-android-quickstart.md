@@ -1,6 +1,6 @@
 ---
-title: "Hello, Android: início rápido"
-description: "Neste guia de duas partes, você compilará seu primeiro aplicativo Xamarin.Android (usando o Visual Studio ou o Visual Studio para Mac) e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentaremos ferramentas, conceitos e etapas necessários para criar e implantar um aplicativo Xamarin.Android."
+title: 'Hello, Android: início rápido'
+description: Neste guia de duas partes, você compilará seu primeiro aplicativo Xamarin.Android (usando o Visual Studio ou o Visual Studio para Mac) e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentaremos ferramentas, conceitos e etapas necessários para criar e implantar um aplicativo Xamarin.Android.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 58197ae9f7c05ab9a838555ba5ab496550a16bce
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: bbe243b108be6e0060ba9067db58a9875c7b5153
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: início rápido
 
@@ -72,7 +72,7 @@ Dê um nome ao novo projeto `Phoneword`. Clique em **OK** para criar o novo proj
 ### <a name="creating-the-layout"></a>Criando o layout
 
 Depois da criação do novo projeto, expanda a pasta **Recursos** e, em seguida, a pasta **Layout** no **Gerenciador de Soluções**.
-Clique duas vezes em **Main.axml** para abri-lo no Designer do Android. Este é o arquivo de layout da tela do aplicativo:
+Clique duas vezes em **Main.axml** para abri-lo no Designer Android. Este é o arquivo de layout da tela do aplicativo:
 
 [![Abrir Main.axml](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
 
@@ -209,7 +209,7 @@ namespace Phoneword
 }
 ```
 
-Obtenha uma referência para os controles criados no arquivo de layout por meio do Designer do Android. Adicione o seguinte código dentro do método `OnCreate` após a chamada para `SetContentView`:
+Obtenha uma referência para os controles criados no arquivo de layout por meio do Designer Android. Adicione o seguinte código dentro do método `OnCreate` após a chamada para `SetContentView`:
 
 ```csharp
 // Get our UI controls from the loaded layout
@@ -305,7 +305,7 @@ Na caixa de diálogo **Configurar seu novo Aplicativo Android**, deixe os nomes 
 ### <a name="creating-the-layout"></a>Criando o layout
 
 Depois de criar o novo projeto, expanda a pasta **Recursos** e, em seguida, a pasta **Layout** no painel **Solução**.
-Clique duas vezes em **Main.axml** para abri-lo no Designer do Android. Este é o arquivo de layout da tela quando ele for exibido no Designer Android:
+Clique duas vezes em **Main.axml** para abri-lo no Designer Android. Este é o arquivo de layout da tela quando ele for exibido no Designer Android:
 
 [![Abrir Main.axml](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
 
@@ -446,7 +446,7 @@ namespace Phoneword
 }
 ```
 
-Em seguida, uma referência é necessária para os controles que foram criados no arquivo de layout com o Designer do Android. Adicione o seguinte código dentro do método `OnCreate` (após a chamada para `SetContentView`):
+Em seguida, uma referência é necessária para os controles que foram criados no arquivo de layout com o Designer Android. Adicione o seguinte código dentro do método `OnCreate` (após a chamada para `SetContentView`):
 
 ```csharp
 // Get our UI controls from the loaded layout

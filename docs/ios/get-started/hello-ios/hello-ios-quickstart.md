@@ -1,6 +1,6 @@
 ---
 title: Hello, iOS
-description: "Este guia de duas partes descreve como compilar um aplicativo básico do Xamarin.iOS usando o Visual Studio para Mac ou Visual Studio e desenvolver uma compreensão dos fundamentos de desenvolvimento do aplicativos iOS com Xamarin. Ele apresentará conceitos, ferramentas e etapas necessárias para compilar e implantar um aplicativo Xamarin.iOS."
+description: Este guia de duas partes descreve como compilar um aplicativo básico do Xamarin.iOS usando o Visual Studio para Mac ou Visual Studio e desenvolver uma compreensão dos fundamentos de desenvolvimento do aplicativos iOS com Xamarin. Ele apresentará conceitos, ferramentas e etapas necessárias para compilar e implantar um aplicativo Xamarin.iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 7b1d56c62fe54d5b1e196e20e1a6989b542da1be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a26bb42ee0abcec70d17633152dd12bd200a737
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="helloios-quickstart"></a>Guia de início rápido do Hello.iOS
 
@@ -90,7 +90,7 @@ Na Tela de Inicialização, clique em **Novo Projeto...** para criar uma nova so
   ![](hello-ios-quickstart-images/image8new.png "Arraste um Rótulo para a área da superfície de design no centro")
 
   > [!NOTE]
-> **Observação:** você pode abrir o painel **Propriedades** ou a **Caixa de Ferramentas** a qualquer momento navegando para **Exibir > Painéis**.
+  > Você pode abrir o painel **Propriedades** ou a **Caixa de Ferramentas** a qualquer momento navegando para **Exibir > Painéis**.
 
 9. Pegue as alças dos *Controles de Arraste* (os círculos ao redor do controle) e torne o rótulo mais largo:
 
@@ -268,9 +268,8 @@ Na Tela de Inicialização, clique em **Novo Projeto...** para criar uma nova so
 
   ![](hello-ios-quickstart-images/image27new.png "Pressione Iniciar")
 
-
   > [!NOTE]
-> **Observação:** no momento, devido a um requisito da Apple, pode ser necessário ter um certificado de desenvolvimento ou *identidade de assinatura* para poder compilar código para o dispositivo ou simulador. Siga as etapas no [guia Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar isso.
+  > No momento, devido a um requisito da Apple, pode ser necessário ter um certificado de desenvolvimento ou *identidade de assinatura* para poder compilar código para o dispositivo ou simulador. Siga as etapas no [guia Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar isso.
 
 28. Isso inicializará o aplicativo no Simulador do iOS:
 
@@ -289,7 +288,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 **Observação**: este passo a passo usa o Visual Studio Enterprise 2017 em uma máquina virtual do Windows 10. Sua instalação pode diferir desta, desde que atenda aos requisitos acima, mas lembre-se de que algumas capturas de tela podem ser diferentes para sua instalação.
 
 > [!NOTE]
-> **Antes de continuar com este passo a passo**, você já _deve_ estar conectado ao Mac do Visual Studio. Isso ocorre porque o Xamarin.iOS depende das ferramentas da Apple para compilar e iniciar o iOS Designer e os aplicativos. Para obter a configuração, siga as etapas do guia [Conectar-se ao Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+> Antes de continuar com este passo a passo, você já deve estar conectado ao Mac do Visual Studio. Isso ocorre porque o Xamarin.iOS depende das ferramentas da Apple para compilar e iniciar o iOS Designer e os aplicativos. Para obter a configuração, siga as etapas do guia [Conectar-se ao Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Inicialize o Visual Studio no menu **Iniciar**:
 
@@ -333,7 +332,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
   ![](hello-ios-quickstart-images/vs-image10.png "Altere a propriedade Texto do rótulo para `Inserir um Phoneword`")
 
   > [!NOTE]
-> **Observação**: você pode abrir **Propriedades** ou a **Caixa de Ferramentas** a qualquer momento navegando para o menu **Exibir**.
+  > Você pode abrir **Propriedades** ou a **Caixa de Ferramentas** a qualquer momento navegando para o menu **Exibir**.
 
 
 9. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até o **Campo de Texto** ter a mesma largura que o **Rótulo**:
@@ -377,7 +376,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
   ![](hello-ios-quickstart-images/vs-image19.png "Adicione uma nova classe chamada PhoneTranslator")
 
   > [!IMPORTANT]
-> Selecione o modelo "class" que tem C# no ícone. Caso contrário, você não poderá fazer referência a essa nova classe.
+  > Selecione o modelo "class" que tem C# no ícone. Caso contrário, você não poderá fazer referência a essa nova classe.
 
 
 17. Isso cria uma nova classe C#. Remova todo o código de modelo e substitua-o pelo código a seguir:

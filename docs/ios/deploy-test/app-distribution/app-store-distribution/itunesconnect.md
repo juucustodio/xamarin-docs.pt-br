@@ -1,6 +1,6 @@
 ---
 title: Configurando um aplicativo no iTunes Connect
-description: "Este artigo aborda as etapas necessárias para configurar e manter um aplicativo Xamarin.iOS no iTunes Connect para que ele possa ser liberado para distribuição na App Store."
+description: Este artigo aborda as etapas necessárias para configurar e manter um aplicativo Xamarin.iOS no iTunes Connect para que ele possa ser liberado para distribuição na App Store.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: dc21b21e28de155aa7a0e7b5cf9734e752cce9a2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 3d5c84aee12c374317a797aa41446630a441f6df
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurando um aplicativo no iTunes Connect
 
@@ -198,7 +198,7 @@ Esta seção do registro de aplicativo do iTunes Connect fornece a ID exclusiva 
 ### <a name="app-icon"></a>Ícone do aplicativo
 
 > [!IMPORTANT]
->  **Observação**: os Ícones de Aplicativos não são mais enviados pelo iTunes Connect. Eles devem ser enviados pela imagem **AppIcon** definida no arquivo **Assets.xcassets** do seu projeto. Para obter mais informações, confira o guia [Ícone da App Store](~/ios/app-fundamentals/images-icons/app-store-icon.md).
+>  Os Ícones de Aplicativos não são mais enviados pelo iTunes Connect. Eles devem ser enviados pela imagem **AppIcon** definida no arquivo **Assets.xcassets** do seu projeto. Para obter mais informações, confira o guia [Ícone da App Store](~/ios/app-fundamentals/images-icons/app-store-icon.md).
 
 O ícone do aplicativo é a aparência do seu aplicativo para os usuários, portanto, ele deve ser fácil de lembrar e ter boa aparência em um tamanho pequeno. Ícones memoráveis são limpos, simples e imediatamente reconhecíveis.
 

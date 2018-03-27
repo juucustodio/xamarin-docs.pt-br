@@ -1,6 +1,6 @@
 ---
 title: 'Hello, iOS: aprofundamento'
-description: "Este guia de duas partes descreve como compilar um aplicativo básico do Xamarin.iOS usando o Visual Studio para Mac ou Visual Studio e desenvolver uma compreensão dos fundamentos de desenvolvimento do aplicativos iOS com Xamarin. Ele apresentará conceitos, ferramentas e etapas necessárias para compilar e implantar um aplicativo Xamarin.iOS."
+description: Este guia de duas partes descreve como compilar um aplicativo básico do Xamarin.iOS usando o Visual Studio para Mac ou Visual Studio e desenvolver uma compreensão dos fundamentos de desenvolvimento do aplicativos iOS com Xamarin. Ele apresentará conceitos, ferramentas e etapas necessárias para compilar e implantar um aplicativo Xamarin.iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 500c3d1c6f38427a921097a0c3104254ec5cb263
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Aprofundamento no Hello, iOS
 
@@ -306,7 +306,7 @@ public partial class ViewController : UIViewController
 O `ViewController` agora conduz as interações da hierarquia de exibição de conteúdo associadas a esse controlador de exibição no storyboard. Em seguida, você aprenderá sobre a função do controlador de exibição de gerenciar as exibições por meio da introdução de um processo chamado ciclo de vida de exibição.
 
 > [!NOTE]
-> **Observação:** para telas puramente visuais que não exigem interação do usuário, a propriedade **Classe** pode ser deixada em branco no **Painel Propriedades**. Isso define a classe subjacente do controlador de exibição como a implementação padrão de um `UIViewController`, o que é apropriado se você não planeja adicionar código personalizado.
+> Para telas puramente visuais que não exigem interação do usuário, a propriedade **Classe** pode ser deixada em branco no **Painel Propriedades**. Isso define a classe subjacente do controlador de exibição como a implementação padrão de um `UIViewController`, o que é apropriado se você não planeja adicionar código personalizado.
 
 ### <a name="view-lifecycle"></a>Ciclo de vida de exibição
 
@@ -416,7 +416,7 @@ O Simulador iOS é uma maneira rápida de testar um aplicativo. O Simulador tem 
 Um dispositivo leva tempo para provisionar e requer uma Conta de Desenvolvedor Apple. O guia [Provisionamento de dispositivo](~/ios/get-started/installation/device-provisioning/index.md) fornece instruções completas de como preparar um dispositivo para o desenvolvimento.
 
 > [!NOTE]
-> **Observação:** atualmente, devido a um requisito da Apple, é necessário ter um certificado de desenvolvimento ou _identidade de assinatura_ para compilar código para o dispositivo ou simulador. Siga as etapas no [guia Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar isso.
+> Atualmente, devido a um requisito da Apple, é necessário ter um certificado de desenvolvimento ou _identidade de assinatura_ para compilar código para o dispositivo ou simulador. Siga as etapas no [guia Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar isso.
 
 Depois que o dispositivo é configurado você pode implantar para ele conectando-o, alterando o destino na barra de ferramentas de build para o dispositivo iOS e pressionando **Iniciar** ( **Reproduzir**) conforme ilustrado pela captura de tela a seguir:
 
