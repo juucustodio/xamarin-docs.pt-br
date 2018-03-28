@@ -1,16 +1,16 @@
 ---
-title: "Limitações"
+title: Limitações
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 43b099e8ddd6acc3e8cc4ce94580313a39a0c686
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c099797f0687f198ed220c1bd366bd93ab6c6e99
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="limitations"></a>Limitações
 
@@ -25,7 +25,7 @@ Estas são as limitações de xamarin em comparação comparadas a área de trab
 
 Ao contrário do .NET/tradicional Mono, no iPhone estaticamente compilação do código antecipadamente em vez de ser compilado sob demanda por um compilador JIT.
 
-Do mono [AOT completo](http://www.mono-project.com/AOT#Full_AOT) tecnologia tem algumas limitações em relação ao genéricos, eles são causados porque nem todos os possíveis instanciação genérica pode ser determinada com antecedência no tempo de compilação. Isso não é um problema para tempos de execução .NET ou Mono regulares, como o código sempre é compilado em tempo de execução usando a apenas em compilador de tempo. Mas isso representa um desafio para um compilador estático como xamarin.
+Do mono [AOT completo](http://www.mono-project.com/docs/advanced/aot/#full-aot) tecnologia tem algumas limitações em relação ao genéricos, eles são causados porque nem todos os possíveis instanciação genérica pode ser determinada com antecedência no tempo de compilação. Isso não é um problema para tempos de execução .NET ou Mono regulares, como o código sempre é compilado em tempo de execução usando a apenas em compilador de tempo. Mas isso representa um desafio para um compilador estático como xamarin.
 
 Alguns dos problemas comuns que os desenvolvedores, incluem:
 
@@ -117,13 +117,10 @@ Mas funciona bem, a API de reflexão inteira, incluindo Type. GetType ("someClas
 
 Em Mono essas pontes são implementados por Just-in-Time compilador. Quando usa o compilador antecipada de tempo exigido por iPhone existem duas limitações importantes neste ponto:
 
--  Você deve sinalizar todos os seus métodos de retorno de chamada com o [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/MonoPInvokeCallbackAttribute/) 
+-  Você deve sinalizar todos os seus métodos de retorno de chamada com o [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
 -  Os métodos precisam ser métodos estáticos, não há suporte para a instância métodos. 
-
-
  
- <a name="No_Remoting" />
-
+<a name="No_Remoting" />
 
 ## <a name="no-remoting"></a>Nenhuma comunicação remota
 

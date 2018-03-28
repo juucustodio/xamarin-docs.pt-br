@@ -1,6 +1,6 @@
 ---
-title: "Associação de uma biblioteca de Java"
-description: "Comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo; Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin, criando uma biblioteca de associações."
+title: Associação de uma biblioteca de Java
+description: Comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo; Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin, criando uma biblioteca de associações.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 47e32a68b7b10a2d02ee41a9abf234be6f002f7b
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="binding-a-java-library"></a>Associação de uma biblioteca de Java
 
@@ -145,5 +145,5 @@ Os seguintes guias de cenário de associação podem ajudá-lo a associar a uma 
 ## <a name="related-links"></a>Links relacionados
 
 - [Trabalhando com JNI](~/android/platform/java-integration/working-with-jni.md)
-- [Metadados GAPI](http://www.mono-project.com/GAPI#Metadata)
+- [Metadados GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [Usar bibliotecas nativas](~/android/platform/native-libraries.md)

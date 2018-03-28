@@ -1,6 +1,6 @@
 ---
-title: "Adicionando inteligência com serviços Cognitivos"
-description: "Serviços Cognitivos da Microsoft são um conjunto de APIs, SDKs e serviços disponíveis para os desenvolvedores a criar aplicativos mais inteligente adicionando recursos, como reconhecimento facial, reconhecimento de fala e compreensão de idioma. Este artigo fornece uma introdução ao aplicativo de exemplo que demonstra como invocar algumas das APIs Microsoft cognitivas serviço."
+title: Adicionando inteligência com serviços Cognitivos
+description: Serviços Cognitivos da Microsoft são um conjunto de APIs, SDKs e serviços disponíveis para os desenvolvedores a criar aplicativos mais inteligente adicionando recursos, como reconhecimento facial, reconhecimento de fala e compreensão de idioma. Este artigo fornece uma introdução ao aplicativo de exemplo que demonstra como invocar algumas das APIs Microsoft cognitivas serviço.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: c309fb6936296dc181e499c91770ab8891121e9c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: fd67629b9e8d0057ccf3b95b9e84ff1d16acbd7b
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Adicionando inteligência com serviços Cognitivos
 
@@ -23,12 +23,12 @@ _Serviços Cognitivos da Microsoft são um conjunto de APIs, SDKs e serviços di
 O exemplo a seguir é um aplicativo de lista de tarefas que fornece funcionalidade para:
 
 - Exiba uma lista de tarefas.
-- Adicionar e editar tarefas por meio do teclado virtual, ou realizando o reconhecimento de fala com a API do Bing fala. Para obter mais informações sobre como executar o reconhecimento de fala, consulte [reconhecimento de fala, usando a API do Bing fala](speech-recognition.md).
+- Adicionar e editar tarefas por meio do teclado virtual, ou realizando o reconhecimento de fala com a API de fala da Microsoft. Para obter mais informações sobre como executar o reconhecimento de fala, consulte [reconhecimento de fala, usando a API de fala Microsoft](speech-recognition.md).
 - Tarefas de verificação usando a API do Bing ortográfica Verifique a ortografia. Para obter mais informações, consulte [verificação ortográfica usando a API do Bing ortográfica verificar](spell-check.md).
 - Converte tarefas do inglês para o alemão, usando a API do conversor. Para obter mais informações, consulte [conversão de texto usando a API de conversor](text-translation.md).
 - Exclua tarefas.
 - Defina o status da tarefa para 'done'.
-- Taxa de aplicativo com reconhecimento de emoção, usando a API de emoção. Para obter mais informações, consulte [emoção reconhecimento usando a API de emoção](emotion-recognition.md).
+- O aplicativo com reconhecimento de emoção, usando a API de Face de taxa. Para obter mais informações, consulte [emoção reconhecimento usando a API de Face](emotion-recognition.md).
 
 Tarefas são armazenadas em um banco de dados local do SQLite. Para obter mais informações sobre como usar um banco de dados local do SQLite, consulte [trabalhando com um banco de dados Local](~/xamarin-forms/app-fundamentals/databases.md).
 
@@ -36,7 +36,7 @@ O `TodoListPage` é exibida quando o aplicativo é iniciado. Esta página exibe 
 
 ![](images/sample-application-1.png "TodoListPage")
 
-Novos itens podem ser criados, basta clicar no  *+*  botão, que navega para o `TodoItemPage`. Essa página também pode ser navegada, selecionando uma tarefa:
+Novos itens podem ser criados, basta clicar no *+* botão, que navega para o `TodoItemPage`. Essa página também pode ser navegada, selecionando uma tarefa:
 
 ![](images/sample-application-2.png "TodoItemPage")
 
@@ -46,7 +46,7 @@ Clicar no botão de smilies no `TodoListPage` navega para o `RateAppPage`, que �
 
 ![](images/sample-application-3.png "RateAppPage")
 
-O `RateAppPage` permite que o usuário tirar uma foto do seu face, que é enviada para a API de emoção com a emoção retornada que está sendo exibida.
+O `RateAppPage` permite que o usuário tirar uma foto dos seus consumidores, que é enviada para a API de Face com a emoção retornada que está sendo exibida.
 
 ## <a name="understanding-the-application-anatomy"></a>Noções básicas sobre a anatomia do aplicativo
 
@@ -73,7 +73,7 @@ O aplicativo de exemplo usa os seguintes pacotes do NuGet:
 
 - `Microsoft.Net.Http` – fornece o `HttpClient` classe para fazer solicitações sobre HTTP.
 - `Newtonsoft.Json` – Fornece uma estrutura JSON para .NET.
-- `Microsoft.ProjectOxford.Emotion` – uma biblioteca de cliente para acessar a API de emoção.
+- `Microsoft.ProjectOxford.Face` – uma biblioteca de cliente para acessar a API de Face.
 - `PCLStorage` – Fornece um conjunto de arquivos local da plataforma cruzada APIs de e/s.
 - `sqlite-net-pcl` – Fornece armazenamento de banco de dados SQLite.
 - `Xam.Plugin.Media` – Fornece pegando de foto de plataforma cruzada e APIs de separação.
@@ -117,11 +117,10 @@ O `IAudioRecorderService` interface é implementada pelo `AudioRecorderService` 
 
 O aplicativo de exemplo invoca os seguintes serviços cognitivas da Microsoft:
 
-- API de voz do Bing. Para obter mais informações, consulte [reconhecimento de fala, usando a API do Bing fala](speech-recognition.md).
+- Microsoft Speech API. Para obter mais informações, consulte [reconhecimento de fala, usando a API de fala Microsoft](speech-recognition.md).
 - Verificação de ortografia Bing API. Para obter mais informações, consulte [verificação ortográfica usando a API do Bing ortográfica verificar](spell-check.md).
 - Traduz API. Para obter mais informações, consulte [conversão de texto usando a API de conversor](text-translation.md).
-- Emoção API. Para obter mais informações, consulte [emoção reconhecimento usando a API de emoção](emotion-recognition.md).
-
+- API de face. Para obter mais informações, consulte [emoção reconhecimento usando a API de Face](emotion-recognition.md).
 
 ## <a name="related-links"></a>Links relacionados
 

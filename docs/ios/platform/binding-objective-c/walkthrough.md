@@ -1,6 +1,6 @@
 ---
-title: "Passo a passo: Associação de uma biblioteca de Objective-C do iOS"
-description: "Este artigo fornece uma explicação passo a passo prática de criação de uma associação xamarin para uma biblioteca Objective-C existente, InfColorPicker. Ele aborda tópicos como compilar uma biblioteca estática de Objective-C, associação e usando a associação em um aplicativo xamarin."
+title: 'Passo a passo: Associação de uma biblioteca de Objective-C do iOS'
+description: Este artigo fornece uma explicação passo a passo prática de criação de uma associação xamarin para uma biblioteca Objective-C existente, InfColorPicker. Ele aborda tópicos como compilar uma biblioteca estática de Objective-C, associação e usando a associação em um aplicativo xamarin.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e4619f5b1d3f888b2557cf894aaa83106504766f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 44ed651413d66866f131a294158525440278b291
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Passo a passo: Associação de uma biblioteca de Objective-C do iOS
 
@@ -94,7 +94,7 @@ Com as ferramentas de linha de comando instalado, estamos prontos para continuar
 Neste passo a passo, vamos abordar as etapas a seguir:
 
 - **[Criar uma biblioteca estática](#Creating_A_Static_Library)**  -esta etapa envolve a criação de uma biblioteca estática do **InfColorPicker** código Objective-C. A biblioteca estática terá o `.a` extensão de arquivo e será inserido no assembly .NET do projeto de biblioteca.
-- **[Criar um projeto de associação xamarin](#Create_a_Xamarin.iOS_Binding_Project)**  -assim que tivermos uma biblioteca estática, usaremos-lo para criar um projeto de associação xamarin. O projeto de vinculação consiste de biblioteca estática que acabamos de criar e metadados na forma de código em c# que explica como a API Objective-C pode ser usada. Esses metadados é conhecido como as definições de API. Vamos usar  **[objetivo Sharpie](#Using_Objective_Sharpie)**  para nos ajudar a criar as definições de API.
+- **[Criar um projeto de associação xamarin](#Create_a_Xamarin.iOS_Binding_Project)**  -assim que tivermos uma biblioteca estática, usaremos-lo para criar um projeto de associação xamarin. O projeto de vinculação consiste de biblioteca estática que acabamos de criar e metadados na forma de código em c# que explica como a API Objective-C pode ser usada. Esses metadados é conhecido como as definições de API. Vamos usar **[objetivo Sharpie](#Using_Objective_Sharpie)** para nos ajudar a criar as definições de API.
 - **[Normalizar as definições de API](#Normalize_the_API_Definitions)**  - Sharpie objetivo faz um excelente trabalho para nos ajudar a, mas ele não pode fazer tudo. Vamos discutir algumas alterações que precisamos fazer as definições de API antes que possam ser usados.
 - **[Use a biblioteca de ligação](#Using_the_Binding)**  -por fim, vamos criar um aplicativo xamarin para mostrar como usar nosso projeto de associação recém-criada.
 
@@ -159,7 +159,7 @@ A primeira etapa é para adicionar o código-fonte InfoColorPicker para a biblio
 
     [![](walkthrough-images/image16b.png "Expanda a seção de Link binário com bibliotecas")](walkthrough-images/image16b.png#lightbox)
 
-13. Use o  **+**  para abrir a caixa de diálogo que permite adicionar as estruturas de quadros necessários listados acima:
+13. Use o **+** para abrir a caixa de diálogo que permite adicionar as estruturas de quadros necessários listados acima:
 
     [![](walkthrough-images/image16c.png "Adicionar que as estruturas de quadros necessários listados acima")](walkthrough-images/image16c.png#lightbox)
 
@@ -183,7 +183,7 @@ Criar uma fat binário é um processo de três etapas:
 
 Embora essas três etapas simples, e talvez seja necessário repeti-los no futuro, quando a biblioteca Objective-C recebe atualizações ou se exigimos correções de bugs. Se você decidir automatizar estas etapas, isso simplificará o suporte do projeto de vinculação de iOS e manutenção futura.
 
-Há muitas ferramentas disponíveis para automatizar tarefas - um script de shell, [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/Microsoft.Build), e [fazer](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando é instalado as ferramentas de linha de comando do Xcode, podemos também instalado Verifique, de forma que é o sistema de compilação que será usado para este passo a passo. Aqui está uma **Makefile** que você pode usar para criar uma biblioteca compartilhada de multi-arquitetura que funcione em um dispositivo iOS e o simulador para qualquer biblioteca:
+Há muitas ferramentas disponíveis para automatizar tarefas - um script de shell, [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), e [fazer](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando é instalado as ferramentas de linha de comando do Xcode, podemos também instalado Verifique, de forma que é o sistema de compilação que será usado para este passo a passo. Aqui está uma **Makefile** que você pode usar para criar uma biblioteca compartilhada de multi-arquitetura que funcione em um dispositivo iOS e o simulador para qualquer biblioteca:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild

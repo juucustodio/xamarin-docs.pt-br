@@ -1,5 +1,5 @@
 ---
-title: "Associação de bibliotecas Objective-C"
+title: Associação de bibliotecas Objective-C
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
@@ -7,17 +7,17 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 29b846453396d37adc689fe49e80299e8f35bbe2
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 3b1894555c27e368fc80cc4ebaa1f6b40446e2aa
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="binding-objective-c-libraries"></a>Associação de bibliotecas Objective-C
 
 Ao trabalhar com xamarin ou Xamarin.Mac, você pode encontrar casos em que você deseja consumir uma biblioteca de Objective-C de terceiros. Nessas situações, você pode usar os projetos de associação Xamarin para criar uma associação do c# para as bibliotecas Objective-C nativo. O projeto usa as mesmas ferramentas que usamos para colocar as APIs de Mac e iOS em c#.
 
-Este documento descreve como associar APIs Objective-C, se você estiver associando apenas as APIs de C, você deve usar o mecanismo padrão do .NET para isso, [a estrutura de P/Invoke](http://mono-project.com/Dllimport).
+Este documento descreve como associar APIs Objective-C, se você estiver associando apenas as APIs de C, você deve usar o mecanismo padrão do .NET para isso, [a estrutura de P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/).
 Detalhes sobre como vincular estaticamente uma biblioteca C estão disponíveis no [vinculação bibliotecas nativas](~/ios/platform/native-interop.md) página.
 
 Consulte o nosso complementar [guia de referência de tipos de associação](~/cross-platform/macios/binding/binding-types-reference.md).

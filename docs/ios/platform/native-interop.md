@@ -1,5 +1,5 @@
 ---
-title: "Fazendo referência a bibliotecas nativas"
+title: Fazendo referência a bibliotecas nativas
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/28/2016
-ms.openlocfilehash: 9299d2b37825298d3defa18a9f5137e11b29f6ce
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 99e565c2268bec6d80c4976e604333cbd2f160a3
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="referencing-native-libraries"></a>Fazendo referência a bibliotecas nativas
 
@@ -105,7 +105,7 @@ Se sua biblioteca nativa contém código de C++, você também deve transmitir o
 
 <a name="Accessing_C_Methods_from_C#" />
 
-## <a name="accessing-c-methods-from-c35"></a>Acessando C métodos de C &#35;
+## <a name="accessing-c-methods-from-c35"></a>Acessar os métodos de C do C&#35;
 
 Há dois tipos de bibliotecas nativas disponível no iOS:
 
@@ -114,7 +114,7 @@ Há dois tipos de bibliotecas nativas disponível no iOS:
 -  Bibliotecas estáticas que são fornecidos com o seu aplicativo.
 
 
-Para acessar os métodos definidos em um deles, use [funcionalidade de P/Invoke do Mono](http://www.mono-project.com/Interop_with_Native_Libraries) que é a mesma tecnologia que você deseja usar no .NET, que é aproximadamente:
+Para acessar os métodos definidos em um deles, use [funcionalidade de P/Invoke do Mono](http://www.mono-project.com/docs/advanced/pinvoke/) que é a mesma tecnologia que você deseja usar no .NET, que é aproximadamente:
 
 -  Determinar qual função de C que você deseja invocar
 -  Determinar sua assinatura

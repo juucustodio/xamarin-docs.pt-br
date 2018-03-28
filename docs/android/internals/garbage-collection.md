@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: db277f20e63a59690ffaa8a8544ff9540578d3f5
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: e27e9577957229f347b217a8920eac239799da15
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="garbage-collection"></a>Coleta de Lixo
 
-Xamarin usa da Mono [coletor de lixo geracional simples](http://www.mono-project.com/Compacting_GC). Este é um coletor de lixo de varredura marca com duas gerações e um *espaço de objeto grande*, com dois tipos de coleções: 
+Xamarin usa da Mono [coletor de lixo geracional simples](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/). Este é um coletor de lixo de varredura marca com duas gerações e um *espaço de objeto grande*, com dois tipos de coleções: 
 
 -   Coleções secundárias (coleta Gen0 heap) 
 -   Coleções principais (objeto grande e coleta Gen1 espaço heaps). 
