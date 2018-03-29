@@ -1,6 +1,6 @@
 ---
 title: Visualizador XAML para xamarin. Forms
-description: "Consulte os layouts de xamarin. Forms renderizados conforme você digita!"
+description: Consulte os layouts de xamarin. Forms renderizados conforme você digita!
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a7a9c4fed92cb4ed8c8c12e97129bc8379037acb
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizador XAML para xamarin. Forms
 
@@ -26,17 +26,19 @@ Há mais informações no [notas de versão](https://developer.xamarin.com/relea
 
 ## <a name="getting-started"></a>Guia de Introdução
 
-### <a name="visual-studio-for-mac-on-mac"></a>O Visual Studio para Mac no Mac
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Use o **exibição > outras janelas > Visualizador xamarin. Forms** menu do Visual Studio para abrir a janela de visualização. Use o **Janela > novo grupo de guias Vertical** menu para posicioná-la lado a lado.
+
+[![Visualização do controle ListView no Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "visualizador Forms no Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "visualizador Forms no Visual Studio")
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 O **visualização** botão pode ser exibido no editor do mouse em um arquivo XAML e selecionando **abrir com > Visualizador XAML**. O painel de visualização, em seguida, pode ser mostrado ou ocultado pressionando o **visualização** botão no canto superior direito de qualquer janela de documento XAML:
 
 [![Visualização do controle ListView no Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "visualizador Forms no Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox "visualizador Forms no Visual Studio para Mac")
 
-### <a name="visual-studio-on-windows"></a>Visual Studio no Windows
-
-Use o **exibição > outras janelas > Visualizador xamarin. Forms** menu do Visual Studio para abrir a janela de visualização. Use o **Janela > novo grupo de guias Vertical** menu para posicioná-la lado a lado.
-
-[![Visualização do controle ListView no Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "visualizador Forms no Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "visualizador Forms no Visual Studio")
+-----
 
 ## <a name="xaml-preview-options"></a>Opções de visualização do XAML
 

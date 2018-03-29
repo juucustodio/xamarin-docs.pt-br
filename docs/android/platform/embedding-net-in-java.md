@@ -7,12 +7,12 @@ ms.assetid: A489EEF3-1008-4257-BF63-FE21D8C23821
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 1a25f4bc39e39ce58a07ed399082bf13284c16e9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/28/2018
+ms.openlocfilehash: f0da12d739c6003257d3acf9ccefdec7e36f5349
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="embedding-net-in-java"></a>Inserindo .NET em Java
 
@@ -25,7 +25,7 @@ Para usar o 4000 Embeddinator com Java no Android, você precisará do seguinte:
 
 -   **O Android Studio** &ndash; [Android Studio 3. x](https://developer.android.com/studio/preview/index.html) ou posterior deve ser instalado.
 
--   **Xamarin** &ndash; [xamarin 7.4.99](https://jenkins.mono-project.com/view/Xamarin.Android/job/xamarin-android/lastSuccessfulBuild/Azure/) ou posterior deve ser instalado.
+-   **Xamarin** &ndash; [xamarin 7.5](https://www.visualstudio.com/xamarin/) ou posterior deve ser instalado.
 
 -   **Java Developer Kit** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior deve ser instalado.
 

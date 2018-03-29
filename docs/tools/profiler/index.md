@@ -1,6 +1,6 @@
 ---
 title: Criador de perfil do Xamarin
-description: "Este guia explora os principais recursos do criador de perfil Xamarin. Ele procure no criadores de perfil, a criação de perfil e quando elas devem ser usadas e em um fluxo de trabalho padrão Xamarin aplicativos de criação de perfil."
+description: Este guia explora os principais recursos do criador de perfil Xamarin. Ele procure no criadores de perfil, a criação de perfil e quando elas devem ser usadas e em um fluxo de trabalho padrão Xamarin aplicativos de criação de perfil.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: e5c17c53c154eb4da4ec76e567c1c73695de7e35
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7c44541c56d7b1a00a704cfc66812d5537ec83c4
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -48,7 +48,7 @@ Este guia examina os cenários comuns de criação de perfil e apresenta o criad
 ## <a name="download-and-install"></a>Baixar e instalar
 
 > [!NOTE]
-> **Observação:** você precisará ser um assinante do Visual Studio Enterprise para desbloquear esse recurso em um Visual Studio Enterprise no Windows ou o Visual Studio para Mac em um Mac.
+> **Observação:** você precisará ser um [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) assinante para desbloquear esse recurso em um Visual Studio Enterprise no Windows ou o Visual Studio para Mac em um Mac.
 
 O criador de perfil do Xamarin é um aplicativo autônomo e está integrado com o Visual Studio para Mac e o Visual Studio habilitar a criação de perfil de dentro do IDE.
 
@@ -60,10 +60,6 @@ Baixe o pacote de instalação para sua plataforma:
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 Após o download, inicie o instalador para adicionar o criador de perfil Xamarin ao seu sistema.
-
-Integração de IDE está disponível em todas as versões de pré-lançamento do Xamarin.
-No entanto, [Visual Studio Enterprise](https://www.xamarin.com/compare-visual-studio) é necessário para a criação de perfil.
-
 
 
 ## <a name="profilers-and-profiling"></a>Criadores de perfis e criação de perfil

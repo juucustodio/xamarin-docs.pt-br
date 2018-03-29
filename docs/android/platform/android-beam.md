@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08d15095c8d1d08a65f18d5ad867efdd89d3b795
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="android-beam"></a>Emitir Android
 
-Emitir Android é uma nova tecnologia de comunicação NFC (curta distância) no Android 4 que permite que aplicativos compartilhe informações via NFC quando nas proximidades.
+Emitir Android é uma tecnologia de comunicação NFC (curta distância) introduzida no Android 4.0 que permite que aplicativos compartilhe informações via NFC quando nas proximidades.
 
 [![Diagrama que ilustra dois dispositivos nas proximidades compartilhando informações](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 

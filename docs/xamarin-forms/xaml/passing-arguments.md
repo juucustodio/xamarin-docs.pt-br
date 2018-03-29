@@ -1,6 +1,6 @@
 ---
 title: Passando argumentos em XAML
-description: "Este artigo demonstra como usar os atributos XAML que podem ser usados para passar argumentos para construtores não padrão, para chamar os métodos de fábrica e para especificar o tipo de um argumento genérico."
+description: Este artigo demonstra como usar os atributos XAML que podem ser usados para passar argumentos para construtores não padrão, para chamar os métodos de fábrica e para especificar o tipo de um argumento genérico.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2016
-ms.openlocfilehash: a30dd9b33466ac6907322f8c6b586c012452a44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 232f60bb7afca7acf73e63bd7e11e1b6ec47fbd2
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="passing-arguments-in-xaml"></a>Passando argumentos em XAML
 
@@ -135,7 +135,7 @@ O [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) estru
 </BoxView>
 ```
 
-O número de elementos dentro de `x:Arguments` marca e os tipos desses elementos devem coincidir com os argumentos do método de fábrica que está sendo chamado. O [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) método de fábrica requer quatro [ `Int32` ](https://developer.xamarin.com/api/type/System.Int32/) parâmetros, que representam os valores de vermelhos, verdes, azuis e alfa, variando de 0 a 255 respectivamente. O [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) método de fábrica requer quatro [ `Double` ](https://developer.xamarin.com/api/type/System.Double/) parâmetros, que representam o matiz, saturação, luminosidade e os valores alfa, variando de 0 a 1 respectivamente. O [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) método de fábrica exige um [ `String` ](https://developer.xamarin.com/api/type/System.String/) que representa o hexadecimal (A) de cor RGB.
+O número de elementos dentro de `x:Arguments` marca e os tipos desses elementos devem coincidir com os argumentos do método de fábrica que está sendo chamado. O [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) método de fábrica requer quatro [ `Int32` ](https://docs.microsoft.com/dotnet/api/system.int32) parâmetros, que representam os valores de vermelhos, verdes, azuis e alfa, variando de 0 a 255 respectivamente. O [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) método de fábrica requer quatro [ `Double` ](https://docs.microsoft.com/dotnet/api/system.double) parâmetros, que representam o matiz, saturação, luminosidade e os valores alfa, variando de 0 a 1 respectivamente. O [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) método de fábrica exige um [ `String` ](https://docs.microsoft.com/dotnet/api/system.string) que representa o hexadecimal (A) de cor RGB.
 
 As capturas de tela a seguir mostram o resultado de chamar cada [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) método de fábrica com os valores de argumento especificado:
 

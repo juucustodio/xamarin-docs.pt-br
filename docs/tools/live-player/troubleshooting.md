@@ -1,5 +1,5 @@
 ---
-title: "Solução de problemas"
+title: Solução de problemas
 description: Problemas conhecidos com o Xamarin Live Player e como corrigi-los.
 ms.topic: article
 ms.prod: xamarin
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
-ms.openlocfilehash: d7c5bedb03d7c869be65e3c704bac58a9cdfcbbd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ab075cad0c3f3456ed23f3eb175dcdb3aa493510
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 
@@ -35,12 +35,92 @@ Ocorre quando o dispositivo móvel que executa Xamarin Live Player não está na
 
 **"IOException: não é possível ler dados de conexão de transporte: operação de soquete sem bloqueio bloquearia"**
 
-Esse erro geralmente é ocorreu quando o dispositivo móvel que executa Xamarin Live Player não está na mesma rede do computador que executa o IDE; Isso geralmente ocorre ao se conectar a um dispositivo que foi anteriormente emparelhado com êxito.
+Esse erro geralmente é ocorreu quando o dispositivo móvel que executa Xamarin Live Player não está na mesma rede que o computador executando o Visual Studio; Isso geralmente ocorre ao se conectar a um dispositivo que foi anteriormente emparelhado com êxito.
 
 * Verifique se o dispositivo e o computador estão na mesma rede Wi-Fi.
 * A rede pode ser bem protegida (por exemplo, algumas redes corporativas), bloqueando as portas necessárias pelo Xamarin Live Player. As portas a seguir são necessárias para o Player de Live Xamarin:
   * 37847 – acesso à rede interna 
   * 8090 – acesso à rede externo
+
+## <a name="manually-configure-device"></a>Configurar o dispositivo manualmente
+
+Se você não pode conectar a seu dispositivo por Wi-Fi pode tentar configurar manualmente seu dispositivo por meio do arquivo de configuração, com as seguintes etapas:
+
+**Etapa 1: Abrir o arquivo de configuração**
+
+Vá até a pasta de dados do aplicativo:
+
+* Windows: **%userprofile%\AppData\Roaming**
+* macOS: **~/Users/$USER/.config**
+
+Essa pasta, você encontrará **PlayerDeviceList.xml** se não existir, você precisará criar um.
+
+**Etapa 2: Obter o endereço IP**
+
+No aplicativo Xamarin ao vivo Player, vá para **sobre > teste de Conexão > Iniciar o teste de Conexão**.
+
+Tome nota do endereço IP, será necessário o endereço IP listado quando você configurar seu dispositivo.
+
+**Etapa 3: Obter o código de emparelhamento**
+
+Dentro do toque de Player de Live Xamarin **par** ou **par novamente**, em seguida, pressione **insira manualmente**. Um código numérico será exibido, que você precisará atualizar o arquivo de configuração.
+
+**Etapa 4: Gerar um GUID**
+
+Vá para: https://www.guidgenerator.com/online-guid-generator.aspx e gerar um novo guid e certifique-se de letras maiusculas é no.
+
+
+**Etapa 5: Configurar o dispositivo**
+
+Abra o **PlayerDeviceList.xml** backup em um editor, como o Visual Studio ou o código do Visual Studio. Você precisa configurar seu dispositivo manualmente neste arquivo. Por padrão, o arquivo deve conter o seguinte vazio `Devices` elemento XML:
+
+```xml
+<DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Devices>
+
+</Devices>
+</DeviceList>
+```
+
+**Adicione um dispositivo iOS:**
+
+```xml
+<PlayerDevice>
+<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
+<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
+<Name>iPhone Player</Name>
+<Platform>iOS</Platform>
+<AndroidApiLevel>0</AndroidApiLevel>
+<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
+<HostEndPoint />
+<NeedsAppInstall>false</NeedsAppInstall>
+<IsSimulator>false</IsSimulator>
+<SimulatorIdentifier />
+<LastConnectTimeUtc>2018-01-08T20:36:03.9492291Z</LastConnectTimeUtc>
+</PlayerDevice>
+```
+
+
+**Adicione dispositivo Android:**
+
+```xml
+<PlayerDevice>
+<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
+<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
+<Name>Android Player</Name>
+<Platform>Android</Platform>
+<AndroidApiLevel>24</AndroidApiLevel>
+<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
+<HostEndPoint />
+<NeedsAppInstall>false</NeedsAppInstall>
+<IsSimulator>false</IsSimulator>
+<SimulatorIdentifier />
+<LastConnectTimeUtc>2018-01-08T20:34:42.2332328Z</LastConnectTimeUtc>
+</PlayerDevice>
+```
+
+**Feche e reabra o Visual Studio.** Seu dispositivo deve aparecem na lista.
+
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>Mensagem "não é possível localizar tipo ou namespace" no IDE
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 6b0d62a9026c1248a66166e75ed41bb0148547a6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d666bb9a7749845265d50b86e46ef78e2036cb69
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-live-player-app"></a>Aplicativo de Player ao vivo do Xamarin
 
@@ -20,17 +20,19 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="get-the-app"></a>Obtenha o aplicativo
 
-### <a name="xamarin-live-player-for-android"></a>Player de Xamarin ao vivo para Android
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
 Xamarin Live Player está disponível para o Android da Google Play:
 
 [ ![Disponível no Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 Para dispositivos Android sem Google Play Player Xamarin ao vivo está disponível por meio de [HockeyApp](https://aka.ms/xlp-hockeyapp) distribuição. Além disso, a visualização inicial compilações para Android pode ser instalado diretamente do Google Play por optar pelo [programa beta aberto](https://play.google.com/apps/testing/com.xamarin.live)
 
-### <a name="xamarin-live-player-for-ios"></a>Xamarin Live Player para iOS
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
 Recomendamos que os usuários ingressem o [aplicativo Xamarin ao vivo Player _iOS visualização_ ](https://aka.ms/liveplayeralpha) Aproveite o acesso rápido às melhorias mais recentes por meio de TestFlight.
 
-
+-----
 
 ## <a name="using-the-app"></a>Usando o aplicativo
 
@@ -44,7 +46,7 @@ Quando você pressiona **par para o Visual Studio**, use a câmera para verifica
 
 ![Captura de tela do scanner de código de barras do iOS](player-images/scan-iphone-sml.png) ![Captura de tela do scanner de código de barras Android](player-images/scan-android-sml.png)
 
-Se a conexão for bem-sucedida, o código deve ser executado no dispositivo quase imediatamente (como o exemplo de Calculadora):
+Se a conexão for bem-sucedida, o código deve ser executado no dispositivo quase imediatamente (como o [exemplo Calculadora](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
 
 ![Aplicativo de exemplo do cálculo em execução no dispositivo](player-images/basic-calculator-iphone-sml.png)
 
@@ -52,7 +54,7 @@ Se a conexão for bem-sucedida, o código deve ser executado no dispositivo quas
 
 Pressione o botão informações **(i)** na parte inferior do aplicativo para revelar o **opções** menu:
 
-![Captura de tela do menu Opções](player-images/options.png)
+[ ![Captura de tela do menu Opções](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Logs
 
@@ -64,13 +66,13 @@ Exibir logs para diagnosticar problemas.
 * Informações de versão.
 * Envie comentários.
 
-![Captura de tela das configurações](player-images/settings.png)
+[ ![Captura de tela das configurações](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>Gerenciamento de dispositivos
 
 Para conectar um dispositivo pela primeira vez, siga as instruções em [requisitos & instalação](~/tools/live-player/install.md). Você pode combinar vários dispositivos (por exemplo, um iOS e um Android) e gerenciá-los por meio do IDE.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 No Visual Studio, escolha **Ferramentas > Xamarin Live Player > Gerenciar dispositivos...**
 
@@ -84,7 +86,7 @@ Esta janela permite que você faça o seguinte:
 
 Você também pode acessar essa janela da lista de dispositivos.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 No Visual Studio para Mac, escolha **Ferramentas > (Xamarin Live Player) gerenciar dispositivos...**
 
