@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "Documentação do Xamarin"
-description: "O Xamarin permite compilar aplicativos nativos para Android, iOS e macOS usando interfaces de usuário específicas à plataforma e o código .NET. Xamarin.Forms permite que você compile aplicativos nativos, com o código de interface do usuário compartilhado escrito em C# ou XAML."
+hide_bc: true
+title: Documentação do Xamarin
+description: O Xamarin permite compilar aplicativos nativos para Android, iOS e macOS usando interfaces de usuário específicas à plataforma e o código .NET. Xamarin.Forms permite que você compile aplicativos nativos, com o código de interface do usuário compartilhado escrito em C# ou XAML.
 featureFlags:
 - clicktale
 ms.openlocfilehash: d73b8165fc1a71fbfe3202f694c4653788ccfb28
