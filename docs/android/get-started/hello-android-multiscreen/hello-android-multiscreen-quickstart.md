@@ -1,6 +1,6 @@
 ---
-title: "Multitela Hello, Android: início rápido"
-description: "Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android."
+title: 'Multitela Hello, Android: início rápido'
+description: Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 159bd2435a1d2b5252e0fd1b9d525cdf6cfa7207
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2913508159787f6d369f5e55f879addfc1b2ba4f
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: início rápido
 
@@ -126,7 +126,7 @@ public class MainActivity : Activity
 }
 ```
 
-Na classe `MainActivity`, adicione o código a seguir para registrar o botão **Histórico de Conversão** (coloque esta linha após a declaração `translationHistory`):
+Na classe `MainActivity`, adicione o código a seguir para registrar o botão **Histórico de Conversão** (coloque esta linha após a declaração `translateButton`):
 
 ```csharp
 Button translationHistoryButton = FindViewById<Button> (Resource.Id.TranslationHistoryButton);

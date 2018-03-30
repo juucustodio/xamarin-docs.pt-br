@@ -1,6 +1,6 @@
 ---
 title: Windows
-description: "Este artigo aborda a trabalhar com janelas e painéis em um aplicativo Xamarin.Mac. Descreve Criando janelas e painéis em Xcode e construtor de Interface, carregá-las do storyboards e .xib arquivos e trabalhar com eles por meio de programação."
+description: Este artigo aborda a trabalhar com janelas e painéis em um aplicativo Xamarin.Mac. Descreve Criando janelas e painéis em Xcode e construtor de Interface, carregá-las do storyboards e .xib arquivos e trabalhar com eles por meio de programação.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4b8de30cecb738fecb13616a3b796c0b4fa5a51a
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows"></a>Windows
 
@@ -20,7 +20,7 @@ _Este artigo aborda a trabalhar com janelas e painéis em um aplicativo Xamarin.
 
 Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, você tem acesso para as mesmas janelas e painéis que um desenvolvedor trabalhando em *Objective-C* e *Xcode* does. Como Xamarin.Mac se integra diretamente com o Xcode, você pode usar do Xcode _Interface construtor_ para criar e manter o Windows e os painéis (ou, opcionalmente, criá-los diretamente no código do c#).
 
-Com base em seu objetivo, um aplicativo Xamarin.Mac pode apresentar uma ou mais janelas na tela para gerenciar e coordenar as informações que ele exibe e funciona com. As funções principais do windows são:
+Com base na sua finalidade, um aplicativo Xamarin.Mac pode apresentar uma ou mais janelas na tela para gerenciar e coordenar as informações que ele exibe e funciona com. As principais funções de uma janela são:
 
 1. Para fornecer uma área na qual controles e modos de exibição podem ser colocados e gerenciados.
 2. Para aceitar e responder a eventos em resposta à interação do usuário com o teclado e mouse.

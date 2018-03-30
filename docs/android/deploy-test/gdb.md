@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 246dd135b8a6e8a60bca9ba38e91ca8fd2d43674
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -163,7 +163,7 @@ Um probleminha: o destino `_Gdb` do MSBuild finalizará quaisquer instâncias de
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` não funciona
 
-A função `mono_pmip` (útil para [obter registros de ativação gerenciados](http://www.mono-project.com/Debugging#Debugging_with_GDB)) é exportada do `libmonosgen-2.0.so`, cujo pull não é efetuado pelo destino `_Gdb` atualmente. (Isso será corrigido em uma versão futura.)
+A função `mono_pmip` (útil para [obter registros de ativação gerenciados](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) é exportada do `libmonosgen-2.0.so`, cujo pull não é efetuado pelo destino `_Gdb` atualmente. (Isso será corrigido em uma versão futura.)
 
 Para habilitar a chamada a funções localizadas em `libmonosgen-2.0.so`, copie-o do dispositivo de destino para o diretório `gdb-symbols`:
 
