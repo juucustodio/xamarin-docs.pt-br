@@ -1,6 +1,6 @@
 ---
-title: "Criando um projeto de CocosSharp de várias plataformas"
-description: "Este passo a passo mostra como criar uma nova solução CocosSharp várias plataformas. O resultado deste passo a passo é um Visual Studio para solução de Mac que inclui três projetos: um projeto de biblioteca de classes portátil, um projeto específico do Android e um projeto específico do iOS. O projeto resultante exibirá uma tela em branco vazia quando executado."
+title: Criando um projeto de CocosSharp de várias plataformas
+description: 'Este passo a passo mostra como criar uma nova solução CocosSharp várias plataformas. O resultado deste passo a passo é um Visual Studio para solução de Mac que inclui três projetos: um projeto de biblioteca de classes portátil, um projeto específico do Android e um projeto específico do iOS. O projeto resultante exibirá uma tela em branco vazia quando executado.'
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 37C97693-B0A8-4064-97B6-A6FAB5BA4FB7
@@ -9,10 +9,10 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
 ms.openlocfilehash: 2906035ce9bd44d111b89ccfe7443896775315b7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="creating-a-multi-platform-cocossharp-project"></a>Criando um projeto de CocosSharp de várias plataformas
 
