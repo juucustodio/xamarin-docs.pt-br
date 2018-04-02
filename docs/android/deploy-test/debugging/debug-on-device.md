@@ -1,6 +1,6 @@
 ---
 title: Depurar no dispositivo
-description: "Este artigo explica como depurar um aplicativo Xamarin.Android em um dispositivo Android físico."
+description: Este artigo explica como depurar um aplicativo Xamarin.Android em um dispositivo Android físico.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d340c3da220deacdb5606547a084e55d80c817e7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: df6d2b246d4f0298ff31228b5db82084a55a8dd4
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="debug-on-device"></a>Depurar no dispositivo
 
@@ -20,7 +20,7 @@ _Este artigo explica como depurar um aplicativo Xamarin.Android em um dispositiv
 
 ## <a name="debug-on-device-overview"></a>Visão geral de depuração no dispositivo
 
-É possível depurar um Xamarin.Android em um dispositivo Android usando o Visual Studio para Mac ou o Visual Studio. Antes de depurar um dispositivo, ele deve ser [instalado para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md) e conectado ao seu PC ou Mac.
+É possível depurar um aplicativo Xamarin.Android em um dispositivo Android usando o Visual Studio para Mac ou o Visual Studio. Antes de depurar um dispositivo, ele deve ser [instalado para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md) e conectado ao seu PC ou Mac.
 
 
 ## <a name="debug-application"></a>Depurar aplicativo
