@@ -1,6 +1,6 @@
 ---
 title: Desempenho de plataforma cruzada
-description: "Há muitas técnicas para aumentar o desempenho dos aplicativos compilados com a plataforma Xamarin. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo. Esse artigo descreve e aborda essas técnicas."
+description: Há muitas técnicas para aumentar o desempenho dos aplicativos compilados com a plataforma Xamarin. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo. Esse artigo descreve e aborda essas técnicas.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e8b597221e806c2338d6f1965d3d151f998a3011
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -352,7 +352,7 @@ Independentemente da resolução da imagem, os recursos de imagem de exibição 
 
 ## <a name="reduce-the-application-activation-period"></a>Reduzir o período de ativação do aplicativo
 
-Todos os aplicativos têm um *período de ativação*, que é o tempo entre quando o aplicativo é iniciado e quando o aplicativo está pronto para uso. Esse período de ativação fornece aos usuários sua primeira impressão do aplicativo e, portanto, é importante reduzir o período de ativação e a percepção de usuários, para que eles obtenham uma primeira impressão favorável do aplicativo.
+Todos os aplicativos têm um *período de ativação*, que é o tempo entre quando o aplicativo é iniciado e quando o aplicativo está pronto para uso. O período de ativação permite que os usuários tenham a primeira impressão do aplicativo. Portanto, é importante reduzir o período de ativação e a percepção que os usuários têm dele, para que o aplicativo cause uma primeira impressão favorável.
 
 Antes de um aplicativo exibir sua interface do usuário inicial, ele deve fornecer uma tela inicial para indicar ao usuário que o aplicativo está sendo iniciado. Se o aplicativo não puder exibir rapidamente sua interface do usuário inicial, a tela inicial deverá usada para informar ao usuário o progresso durante o período de ativação, a fim de oferecer uma garantia de que o aplicativo não parou. Essa garantia pode ser uma barra de progresso ou um controle semelhante.
 
