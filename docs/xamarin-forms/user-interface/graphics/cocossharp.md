@@ -1,6 +1,6 @@
 ---
 title: Usando CocosSharp em xamarin. Forms
-description: "CocosSharp pode ser usado para adicionar forma precisa, imagem e processamento de texto a um aplicativo para visualização avançada"
+description: CocosSharp pode ser usado para adicionar forma precisa, imagem e processamento de texto a um aplicativo para visualização avançada
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 395defa300da7b8f68746162d877a4fdb17ded9e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 83852b6b2d7324ae6aaf6b1dbf86a6ef7f9ac509
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Usando CocosSharp em xamarin. Forms
 
@@ -197,7 +197,7 @@ O gráfico a seguir pode ajudar a visualizar uma hierarquia CocosSharp típica:
 
 ![](cocossharp-images/image4.png "Hierarquia de CocosSharp típico")
 
-Apenas um `CCScene` podem estar ativas simultaneamente. A maioria dos jogos usar várias `CCLayer` instâncias de classificação de conteúdo, mas o aplicativo usa apenas um. Da mesma forma, a maioria dos jogos usar vários objetos visual, mas apenas teremos um em nosso aplicativo. Uma mais detalhada a discussão sobre o CocosSharp hierarquia visual pode ser encontrada no [passo a passo do jogo saltando](~/graphics-games/cocossharp/first-game/index.md).
+Apenas um `CCScene` podem estar ativas simultaneamente. A maioria dos jogos usar várias `CCLayer` instâncias de classificação de conteúdo, mas o aplicativo usa apenas um. Da mesma forma, a maioria dos jogos usar vários objetos visual, mas apenas teremos um em nosso aplicativo. Uma mais detalhada a discussão sobre o CocosSharp hierarquia visual pode ser encontrada no [BouncingGame passo a passo](~/graphics-games/cocossharp/bouncing-game.md).
 
 Inicialmente o `GameScene` classe está quase vazia – vamos apenas criar para satisfazer a referência em `HomePage`. Adicionar uma nova classe ao seu PCL denominado `GameScene`. Ele deve herdar do `CCScene` classe da seguinte maneira:
 

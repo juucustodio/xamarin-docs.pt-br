@@ -1,6 +1,6 @@
 ---
-title: "Detalhes do jogo vão fruity"
-description: "Este guia examina o jogo vão Fruity, que abordam conceitos de desenvolvimento de jogos como física, gerenciamento de conteúdo, estado do jogo e projeto de jogo e CocosSharp comuns."
+title: Detalhes de jogo vão Fruity
+description: Este guia examina o jogo vão Fruity, que abordam conceitos de desenvolvimento de jogos como física, gerenciamento de conteúdo, estado do jogo e projeto de jogo e CocosSharp comuns.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 307fdec697f2b94ddfdfe0c380e02fd69e197132
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d37b289249e5c9e2c23b45c998d1e24960637ba6
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="fruity-falls-game-details"></a>Detalhes do jogo vão fruity
+# <a name="fruity-falls-game-details"></a>Detalhes de jogo vão Fruity
 
 _Este guia examina o jogo vão Fruity, que abordam conceitos de desenvolvimento de jogos como física, gerenciamento de conteúdo, estado do jogo e projeto de jogo e CocosSharp comuns._
 
@@ -22,7 +22,7 @@ Fruity vão é um jogo simple baseado em física, em que o player classifica fru
 
 ![](fruity-falls-images/image1.png "O objetivo do jogo é ganhar quantos pontos possível sem deixar uma queda de frutas para o agrupamento incorreto, terminando o jogo")
 
-Fruity vão estende os conceitos apresentados a [BouncingGame guia](~/graphics-games/cocossharp/first-game/index.md) adicionando o seguinte:
+Fruity vão estende os conceitos apresentados a [BouncingGame guia](~/graphics-games/cocossharp/bouncing-game.md) adicionando o seguinte:
 
  - Conteúdo na forma de PNGs
  - Física avançadas
@@ -32,20 +32,20 @@ Fruity vão estende os conceitos apresentados a [BouncingGame guia](~/graphics-g
  - Organização de código usando o jogos entidades
  - Projeto de jogo voltada para o valor de repetição e divertido
 
-Enquanto o BouncingGame focalizado apresentando os principais conceitos de CocosSharp, vão Fruity mostra como colocá-lo juntos em um produto acabado de jogo. Como este guia faz referência a BouncingGame, os leitores devem primeiro se familiarizar com o [BouncingGame guia](~/graphics-games/cocossharp/first-game/index.md) antes de ler este guia.
+Enquanto o [BouncingGame guia](~/graphics-games/cocossharp/bouncing-game.md) foco apresentando os principais conceitos de CocosSharp, vão Fruity mostra como colocá-lo juntos em um produto acabado de jogo. Como este guia faz referência a BouncingGame, os leitores devem primeiro se familiarizar com o [BouncingGame guia](~/graphics-games/cocossharp/bouncing-game.md) antes de ler este guia.
 
 Este guia abrange a implementação e design de Fruity vão para fornecer informações para ajudá-lo a fazer seu próprio jogo. Ele abrange os seguintes tópicos:
 
 
-- [Classe GameController](#GameController_Class)
-- [Entidades de jogo](#Game_Entities)
-- [Gráficos de frutas](#Fruit_Graphics)
-- [Física](#Physics)
-- [Conteúdo de jogo](#Game_Content)
-- [GameCoefficients](#GameCoefficients)
+- [Classe GameController](#gamecontroller-class)
+- [Entidades de jogo](#game-entities)
+- [Gráficos de frutas](#fruit-graphics)
+- [Física](#physics)
+- [Conteúdo de jogo](#game-content)
+- [GameCoefficients](#gamecoefficients)
 
 
-# <a name="gamecontroller-class"></a>Classe GameController
+## <a name="gamecontroller-class"></a>Classe GameController
 
 O projeto Fruity PCL cai inclui um `GameController` classe que é responsável por criar uma instância do jogo e movendo entre nos bastidores. Essa classe é usada para o iOS e Android projetos para eliminar código duplicado.
 
@@ -79,7 +79,7 @@ GameView.DesignResolution = new CCSizeI (width, height);
 Por fim, o `GameController` classe fornece um método estático que pode ser chamado por qualquer `CCGameScene` para fazer a transição para outro `CCScene`. Esse método é usado para percorrer o `TitleScene` e `GameScene`.
 
 
-# <a name="game-entities"></a>Entidades de jogo
+## <a name="game-entities"></a>Entidades de jogo
 
 Fruity vão faz uso do padrão da entidade para a maioria dos objetos de jogo. Uma explicação detalhada sobre esse padrão pode ser encontrada no [guia de entidades em CocosSharp](~/graphics-games/cocossharp/entities.md).
 
@@ -107,7 +107,7 @@ public Fruit ()
 ```
 
 
-## <a name="fruit-graphics"></a>Gráficos de frutas
+### <a name="fruit-graphics"></a>Gráficos de frutas
 
 O `CreateFruitGraphic` método cria um `CCSprite` instância e adiciona-o para o `Fruit`. O `IsAntialiased` propriedade é definida como false para dar uma olhada em como pixels de jogo. Esse valor é definido como false em todos os `CCSprite` e `CCLabel` instâncias em todo o jogo:
 
@@ -179,7 +179,7 @@ O `extraPointsLabel` cor é ajustada para manter o contraste com a imagem de fru
 ![](fruity-falls-images/image4.png "A cor de extraPointsLabel é ajustada para manter o contraste com a imagem de frutas e seu valor PositionY é ajustado para centralizar o CCLabel em de frutas CCSprite")
 
 
-## <a name="collision"></a>Colisão
+### <a name="collision"></a>Colisão
 
 Fruity vão implementa uma solução de conflito personalizada usando objetos na pasta de geometria:
 
@@ -218,17 +218,17 @@ private void CreateCollision()
 }
 ```
 
-Lógica de colisão é abordada [posteriormente neste guia](#Collision).
+Lógica de colisão é abordada [posteriormente neste guia](#collision).
 
 
-# <a name="physics"></a>Física
+## <a name="physics"></a>Física
 
 Física em vão Fruity pode ser separadas em duas categorias: movimentação e a colisão. 
 
 
-## <a name="movement-using-velocity-and-acceleration"></a>Usando a velocidade e aceleração de movimento
+### <a name="movement-using-velocity-and-acceleration"></a>Usando a velocidade e aceleração de movimento
 
-Usa vão Fruity `Velocity` e `Acceleration` valores para controlar o movimento de suas entidades, como o [BouncingGame](~/graphics-games/cocossharp/first-game/index.md). Entidades implementam sua lógica de movimentação em um método chamado `Activity`, que é chamado uma vez por quadro. Por exemplo, podemos ver a implementação de movimentação no `Fruit` classe `Activity` método:
+Usa vão Fruity `Velocity` e `Acceleration` valores para controlar o movimento de suas entidades, como o [BouncingGame](~/graphics-games/cocossharp/bouncing-game.md). Entidades implementam sua lógica de movimentação em um método chamado `Activity`, que é chamado uma vez por quadro. Por exemplo, podemos ver a implementação de movimentação no `Fruit` classe `Activity` método:
 
 ```csharp
 public void Activity(float frameTimeInSeconds)
@@ -274,7 +274,7 @@ public void HandleInput(CCPoint touchPoint)
 }
 ```
 
-## <a name="collision"></a>Colisão
+### <a name="collision"></a>Colisão
 
 Fruity vão implementa semirealista colisão entre fruta e outros objetos collidable, como o `Paddle` e `GameScene.Splitter`. Para ajudar a depurar colisão, áreas de colisão vão Fruity podem ficar visíveis, alterando o `GameCoefficients.ShowDebugInfo` no `GameCoefficients.cs` arquivo:
 
@@ -330,7 +330,8 @@ private void PerformCollision()
 }
 ```
 
-### <a name="fruitvsborders"></a>FruitVsBorders
+#### <a name="fruitvsborders"></a>FruitVsBorders
+
 `FruitVsBorders` colisão executa sua própria lógica de colisão em vez de depender da lógica contidas em uma classe diferente. Essa diferença existe porque a colisão entre frutas e bordas da tela não é perfeitamente sólida – é possível fruta sejam empurradas para fora da borda da tela pela movimentação raquete cuidado. Frutas serão Elástico fora da tela quando atingida com a raquete, mas se o player envia lentamente frutas moverá além da borda e da tela:
 
 
@@ -352,7 +353,8 @@ private void FruitVsBorders(Fruit fruit)
 }
 ```
 
-### <a name="fruitvsbins"></a>FruitVsBins
+#### <a name="fruitvsbins"></a>FruitVsBins
+
 O `FruitVsBins` método é responsável por verificar se qualquer frutas caiu em um os dois compartimentos. Nesse caso, o player concedido pontos (se a correspondência de cores de frutas/bin), ou o jogo termina (se as cores não correspondem):
 
 
@@ -380,7 +382,8 @@ private void FruitVsBins(Fruit fruit)
 }
 ```
 
-### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle e FruitPolygonCollision
+#### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle e FruitPolygonCollision
+
 Frutas versus raquete e frutas versus divisor (a área separando os dois compartimentos) colisão ambos contam com o `FruitPolygonCollision` método. Esse método tem três partes:
 
 1. Testar se os objetos colidem
@@ -419,7 +422,7 @@ A matemática por trás de lógica de colisão contidas no `Polygon` e `Collisio
  
 
 
-# <a name="game-content"></a>Conteúdo de jogo
+## <a name="game-content"></a>Conteúdo de jogo
 
 A arte do Fruity fica imediatamente distingue o jogo do BouncingGame. Enquanto os designs de jogos são semelhantes, players verá uma diferença na aparência dois jogos imediatamente. Gamers geralmente decida se deseja experimentar um jogo, seus visuais. Portanto, é extremamente importante que os desenvolvedores investirem recursos fazer visualmente atraentes jogo.
 
@@ -432,7 +435,7 @@ A arte do vão Fruity foi criada com as seguintes metas:
  - Capacidade de criar efeitos visuais simples sem animações intenso de recursos
 
 
-## <a name="content-location"></a>Local do conteúdo
+### <a name="content-location"></a>Local do conteúdo
 
 Fruity vão inclui todo seu conteúdo na pasta imagens no projeto Android:
 
@@ -445,9 +448,9 @@ Estes arquivos são vinculados no projeto de iOS para evitar a duplicação, e p
 Vale a pena observar que o conteúdo não está contido dentro de **Ld** ou **Hd** pastas, que fazem parte do modelo CocosSharp padrão. O **Ld** e **Hd** pastas destinam-se a ser usado para jogos que fornecem dois conjuntos de conteúdo — um para dispositivos de baixa resolução, como para dispositivos de resolução mais alta, como tablets e celulares. A arte vão Fruity é intencionalmente criada com um como pixels estética, portanto ele não precisa fornecer conteúdo para diferentes tamanhos de tela. Portanto, o **Ld** e **Hd** pastas foram completamente removidas do projeto.
 
 
-## <a name="gamescene-layering"></a>GameScene camadas
+### <a name="gamescene-layering"></a>GameScene camadas
 
-Como mencionado anteriormente neste guia, o GameScene é responsável por todas as instanciação do objeto de jogo, posicionamento e lógica entre objetos (como colisão). Todos os objetos são adicionados a um dos quatro `CCLayer` instâncias:
+Como mencionado anteriormente neste guia, o `GameScene` é responsável por todos os instanciação do objeto de jogo, posicionando e lógica entre objetos (como colisão). Todos os objetos são adicionados a um dos quatro `CCLayer` instâncias:
 
 
 ```csharp
@@ -488,7 +491,7 @@ private void CreateBackground()
 ```
 
 
-## <a name="vine-entity"></a>Vine Entity
+### <a name="vine-entity"></a>Entidade videira
 
 O `Vine` entidade é usada exclusivamente para conteúdo – ela não tem nenhum impacto em jogos. Ele é composto de vinte `CCSprite` instâncias, um número selecionado por tentativa e erro para certificar-se de que o videira sempre alcança a parte superior da tela:
 
@@ -557,7 +560,7 @@ public void Activity(float frameTimeInSeconds)
 Observe que uma pequena quantidade de rotação é adicionada de volta ao videira por meio de `vineAngle` coeficiente. Esse valor pode ser alterado para ajustar a quantidade de vines girar.
 
 
-# <a name="gamecoefficients"></a>GameCoefficients
+## <a name="gamecoefficients"></a>GameCoefficients
 
 Cada jogo bom é o produto de iteração, portanto vão Fruity inclui uma classe chamada `GameCoefficients` que controla como o jogo. Essa classe contém expressivas variáveis que são usadas em todo o jogo para controle física, layout, gerando e pontuação.
 
@@ -606,7 +609,7 @@ public static class GameCoefficients
 ```
 
 
-# <a name="conclusion"></a>Conclusão
+## <a name="conclusion"></a>Conclusão
 
 Este guia explorou o jogo Fruity cairá. Ele coberto conceitos, incluindo conteúdo, física e gerenciamento de estado do jogo.
 

@@ -1,6 +1,6 @@
 ---
-title: "Manipulações de toque"
-description: "Transformações de matriz de uso para implementar toque arrastando esmagamento e rotação"
+title: Manipulações de toque
+description: Transformações de matriz de uso para implementar toque arrastando esmagamento e rotação
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 90be80d42c20ca7509037b5f59b34cc1bddde6de
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 1fbc9826b9edd3d4c8f7e4b47c3ea835d5625343
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="touch-manipulations"></a>Manipulações de toque
 
@@ -691,5 +691,5 @@ O código executa um loop pela coleção e exibe a pilha de bitmaps desde o iní
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Invocação de eventos de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

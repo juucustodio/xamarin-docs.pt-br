@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 3c12ccd5dc77dd7dff9d4eab07eeaf04c6b2c161
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 494c69700ed0b12b4c9151b9a1b04ea091ebfa57
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -40,7 +40,7 @@ ListView tem um número de componentes disponíveis para ativar a funcionalidade
 
 ![](images/grouping-depth.png "ListView com dados agrupados")
 
-- **[Células](customizing-cell-appearance.md)**  &ndash; dados em uma ListView são apresentados em células. Cada célula corresponde a uma linha de dados. Não há arebuilt células para escolha, ou você pode definir sua própria célula personalizado. Células internas e personalizadas podem ser usado/definido em XAML ou em código.
+- **[Células](customizing-cell-appearance.md)**  &ndash; dados em uma ListView são apresentados em células. Cada célula corresponde a uma linha de dados. Há células internas à sua escolha ou você pode definir sua própria célula personalizado. Células internas e personalizadas podem ser usado/definido em XAML ou em código.
   - **[Internos](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; criados nas células, especialmente TextCell e ImageCell, pode ser ótimo desempenho, pois eles correspondem aos controles nativos em cada plataforma.
     - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; exibe uma cadeia de caracteres de texto, opcionalmente com o texto detalhado. Texto detalhado é renderizado como uma segunda linha em uma fonte menor com uma cor de ênfase.
     - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; exibe uma imagem com texto. Aparece como um TextCell com uma imagem à esquerda.

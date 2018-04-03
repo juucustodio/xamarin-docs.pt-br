@@ -1,6 +1,6 @@
 ---
-title: "Três maneiras para desenhar um arco"
-description: "Saiba como usar SkiaSharp para definir arcos de três maneiras diferentes"
+title: Três maneiras para desenhar um arco
+description: Saiba como usar SkiaSharp para definir arcos de três maneiras diferentes
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 739efa994f172a7a1de82ac02d1c10b0d80f4c30
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 86623886e2429cbf2f076fbe4583301edf684262
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três maneiras para desenhar um arco
 
@@ -310,7 +310,7 @@ public class InteractivePage : ContentPage
 }
 ```
 
-A classe `TangentArcPage` é derivada de `InteractivePage`. O construtor o [ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) arquivo é responsável por criar uma instância e inicializar o `touchPoints` matriz e configuração `baseCanvasView` (em `InteractivePage`) para o `SKCanvasView` objeto instanciado no [ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) arquivo:
+O `TangentArcPage` classe deriva de `InteractivePage`. O construtor o [ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) arquivo é responsável por criar uma instância e inicializar o `touchPoints` matriz e configuração `baseCanvasView` (em `InteractivePage`) para o `SKCanvasView` objeto instanciado no [ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) arquivo:
 
 ```csharp
 public partial class TangentArcPage : InteractivePage
@@ -670,4 +670,4 @@ Embora as conexões entre os arcos e linhas retas são matematicamente suaves, a
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

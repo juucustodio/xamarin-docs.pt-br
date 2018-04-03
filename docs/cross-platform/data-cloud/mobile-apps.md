@@ -1,18 +1,18 @@
 ---
 title: Microsoft Azure Mobile Apps
-description: "Exemplos e código de baixa para a documentação do portal do Azure."
+description: Exemplos e código de baixa para a documentação do portal do Azure.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
 ms.technology: xamarin-cross-platform
-author: asb3993
-ms.author: amburns
-ms.date: 03/23/2017
-ms.openlocfilehash: fb3c26b7d090ca42328c61192c794dec1544d1d3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: conceptdev
+ms.author: crdun
+ms.date: 04/02/2017
+ms.openlocfilehash: 7a5ae0013da4a5ac049df71437dc5c6b960c49b1
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="microsoft-azure-mobile-apps"></a>Microsoft Azure Mobile Apps
 
@@ -34,37 +34,39 @@ Validate and modify data    http://go.microsoft.com/fwlink/p/?LinkId=331330
 -->
 
 
-Esses links são para a documentação do Xamarin disponível no [aplicativos móveis do Azure](https://azure.microsoft.com/en-us/documentation/services/app-service/mobile/) site.
-Adicionando funcionalidade do Azure para um Xamarin aplicativo é tão simple quanto baixando o [de cliente móvel do Azure](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
+Esses links são para a documentação do Xamarin disponível no [aplicativos móveis do Azure](https://docs.microsoft.com/azure/app-service-mobile/) site.
+Adicionando funcionalidade do Azure para um aplicativo Xamarin baixando o [de cliente móvel do Azure](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 
 ## <a name="working-with-the-xamarin-azure-component"></a>Trabalhando com o componente Xamarin Azure
 
-Documentação geral [trabalhar com a biblioteca de cliente Xamarin (componente)](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-dotnet-how-to-use-client-library/) realizar várias tarefas com aplicativos móveis do Azure. Esta página contém vários trechos de código de exemplo, sem as explicações detalhadas e exemplos disponíveis em cada um dos artigos de instruções passo a passo listados abaixo.
+Documentação geral [trabalhar com a biblioteca de cliente Xamarin (componente)](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-dotnet-how-to-use-client-library) realizar várias tarefas com aplicativos móveis do Azure. Esta página contém vários trechos de código de exemplo, sem as explicações detalhadas e exemplos disponíveis em cada um dos artigos de instruções passo a passo listados abaixo.
 
 ## <a name="getting-started"></a>Guia de Introdução
 
 Este artigo fornece instruções passo a passo para obter seu primeiro aplicativo do Xamarin Azure em funcionamento.
 Ele abrange a criar um novo aplicativo móvel do Azure no portal do e, em seguida, baixar e executar o aplicativo pré-configurado.
 
--  [iOS](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-ios-get-started/)
--  [Android](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-android-get-started/)
--  [Xamarin.Forms](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-forms-get-started/)
+-  [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started/)
+-  [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started/)
+-  [Xamarin.Forms](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started)
 
-## <a name="validate-modify-and-augment-data-in-scripts"></a>Validar, modificar e aumentar os dados em Scripts
+<!--
+## Validate, Modify and Augment Data in Scripts
 
-Demonstra como adicionar scripts de servidor a tabelas de dados de serviços móveis do Azure para implementar a validação do lado do servidor e outras funcionalidades.
+Demonstrates how to add server-side scripts to Azure Mobile Services data tables to implement server-side validation and other functionality.
 
 -  [iOS](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
 -  [Android](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+-->
 
+<!--
+## Add Paging to Data
 
-## <a name="add-paging-to-data"></a>Adicionar paginação a dados
-
-Um exemplo rápido de grandes conjuntos de dados usando Skip() e Take() de paginação.
+A quick example of paging large sets of data using Skip() and Take().
 
 -  [iOS](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
 -  [Android](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
-
+-->
 
 ## <a name="get-started-with-users"></a>Introdução a usuários
 
@@ -85,16 +87,16 @@ Um exemplo de código de back-ends Javascript
 
 Siga as instruções para configurar notificações por push nos sites Apple e Google e, em seguida, enviar uma notificação por push de serviços móveis do Azure para um dispositivo.
 
--  [iOS](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-ios-get-started-push/)
--  [Android](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-android-get-started-push/)
+-  [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started-push)
+-  [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started-push)
 
 
 ## <a name="get-started-with-notification-hubs"></a>Introdução aos Hubs de notificação
 
 Instruções completas para configurar notificações por push nos sites Apple e Google, configure o Hub de notificação do Azure e, em seguida, gerar notificações por push para dispositivos.
 
--  [iOS](http://azure.microsoft.com/en-us/documentation/articles/partner-xamarin-notification-hubs-ios-get-started/)
--  [Android](http://azure.microsoft.com/en-us/documentation/articles/partner-xamarin-notification-hubs-android-get-started/)
+-  [iOS](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started)
+-  [Android](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm)
 
 
 
@@ -104,8 +106,10 @@ Instruções completas para configurar notificações por push nos sites Apple e
 - [GetStartedWithData (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/Azure/GetStartedWithData)
 - [GetStartedWithUsers (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/Azure/GetStartedWithUsers)
 - [GetStartedWithPush (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/Azure/GetStartedWithPush)
-- [ValidateModifyData (sample)](https://github.com/xamarin/mobile-samples/tree/master/Azure/ValidateModifyData)
 - [Hubs de notificação (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/Azure/NotificationHubs)
-- [Exemplo do Azure PCL (por @paulbatum) (amostra)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
 - [Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
 - [Caminho de aprendizado de aplicativos móveis do Azure](https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/)
+
+<!--
+- [ValidateModifyData (sample)](https://github.com/xamarin/mobile-samples/tree/master/Azure/ValidateModifyData)
+-->

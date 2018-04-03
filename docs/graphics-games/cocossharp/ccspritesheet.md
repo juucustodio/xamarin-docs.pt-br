@@ -8,20 +8,20 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: ec8a641fbd15f826e92ada62f65b17dd46b369e4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2bb5b98b5c93fb625ce645692d8a3ccb3d143b
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="improving-framerate-with-ccspritesheet"></a>Melhorando a taxa de quadros com CCSpriteSheet
+# <a name="improving-frame-rate-with-ccspritesheet"></a>Melhorando a taxa de quadros com CCSpriteSheet
 
 _CCSpriteSheet fornece funcionalidade para combinar e usar muitos arquivos de imagem em uma textura. Reduzir a contagem de textura pode melhorar os tempos de carregamento do jogo e taxa de quadros._
 
 Muitos jogos exigem esforços de otimização está funcionando e carregar rapidamente em hardware móvel. O `CCSpriteSheet` classe pode ajudar a solucionar muitos problemas de desempenho comuns encontrados por CocosSharp jogos. Este guia aborda problemas comuns de desempenho e como resolvê-los usando o `CCSpriteSheet` classe.
 
 
-# <a name="what-is-a-sprite-sheet"></a>O que é uma folha de entidade gráfica?
+## <a name="what-is-a-sprite-sheet"></a>O que é uma folha de entidade gráfica?
 
 Um *folha da entidade gráfica*, que pode também ser chamado como uma *atlas textura*, é uma imagem que combina várias imagens em um arquivo. Isso pode melhorar o desempenho de tempo de execução, bem como os tempos de carregamento de conteúdo.
 
@@ -30,7 +30,7 @@ Por exemplo, a imagem a seguir é uma folha de entidade gráfica simples criada 
 ![](ccspritesheet-images/image1.png "As imagens individuais podem ser de qualquer tamanho, e a folha da entidade gráfica resultante não é necessária para ser totalmente preenchido")
 
 
-## <a name="render-states"></a>Estados de processamento
+### <a name="render-states"></a>Renderizar Estados
 
 Objetos CocosSharp Visual (como `CCSprite`) simplificar o código de renderização por código de renderização API gráfico tradicional como MonoGame ou OpenGL, que exigem a criação de buffers de vértices (conforme descrito no tópico a [desenho gráficos 3D com Vértices em MonoGame](~/graphics-games/monogame/3d/part2.md) guia). Apesar de sua simplicidade, CocosSharp não eliminar o custo da configuração de *renderizar estados*, que são o número de vezes que o código de renderização deve alternar texturas ou outros estados de renderização.
 
@@ -62,7 +62,7 @@ Estados de processamento podem ser difíceis de otimizar porque a ordem de desen
 
 Claro, a situação ideal é ter um estado de processamento único, mesmo tendo várias imagens. Jogos CocosSharp podem fazer isso por combinar todas as imagens em um único arquivo, o carregamento de um arquivo (juntamente com seu que acompanha **. plist** arquivo) em um `CCSpriteSheet`. Usando o `CCSpriteSheet` classe torna-se ainda mais importante para jogos que têm um grande número de imagens, ou que tenham muito complicado layouts. 
 
-## <a name="load-times"></a>Tempos de carregamento
+### <a name="load-times"></a>Tempos de carregamento
 
 Combinando várias imagens em um arquivo também melhora os tempos de carregamento do jogo para vários motivos:
 
@@ -70,9 +70,9 @@ Combinando várias imagens em um arquivo também melhora os tempos de carregamen
  - Carregando arquivos menos significa menos sobrecarga por arquivo, como análise dos cabeçalhos. PNG
  - Carregando arquivos menos requer menos tempo de busca, que é importante para a mídia de disco como DVDs e unidades de disco rígido do computador tradicional
 
-# <a name="using-ccspritesheet-in-code"></a>Usando CCSpriteSheet em código
+## <a name="using-ccspritesheet-in-code"></a>Usando CCSpriteSheet em código
 
-Para criar um `CCSpriteSheet` instância, o código deve fornecer uma imagem e um arquivo que define as regiões de imagem a ser usado para cada quadro. A imagem pode ser carregada como um **. PNG** ou **.xnb** arquivo (se usar o [pipeline conteúdo](~/graphics-games/cocossharp/content-pipeline/index.md)). O arquivo de definição de quadros é um **. plist** arquivo que pode ser criado manualmente ou *TexturePacker* (que discutiremos abaixo).
+Para criar um `CCSpriteSheet` instância, o código deve fornecer uma imagem e um arquivo que define as regiões de imagem a ser usado para cada quadro. A imagem pode ser carregada como um **. PNG** ou **.xnb** arquivo (se usar o [Pipeline conteúdo](~/graphics-games/cocossharp/content-pipeline/index.md)). O arquivo de definição de quadros é um **. plist** arquivo que pode ser criado manualmente ou *TexturePacker* (que discutiremos abaixo).
 
 O aplicativo de exemplo que [pode ser baixado em](https://developer.xamarin.com/samples/mobile/SpriteSheetDemo/), cria o `CCSpriteSheet` de um **. PNG** e **. plist** arquivo usando o seguinte código:
 
@@ -110,7 +110,7 @@ CCSprite sprite = new CCSprite (frame);
 Como o `CCSprite` construtor pode levar uma `CCSpriteFrame` parâmetro, o código nunca precisa investigar os detalhes do `CCSpriteFrame`, como quais textura usa ou a região da imagem na folha de entidade gráfica mestre.
 
 
-#  <a name="creating-a-sprite-sheet-plist"></a>Criar uma entidade gráfica da folha. plist
+## <a name="creating-a-sprite-sheet-plist"></a>Criando uma folha de entidade gráfica. plist
 
 O arquivo. plist é um arquivo baseado em xml, que pode ser criado e editado manualmente. Da mesma forma, os programas de edição de imagem pode ser usada para combinar vários arquivos em um arquivo maior. Desde a criação e manutenção de folhas de entidade gráfica podem ser muito demoradas, veremos o programa TexturePacker que pode exportar os arquivos no formato CocosSharp. TexturePacker oferece um livre e uma versão de "Pro" e está disponível para Windows e Mac OS. O restante deste guia pode ser seguido usando a versão gratuita. 
 
@@ -124,13 +124,13 @@ Arquivos de imagem (como **. PNG**) podem ser adicionadas ao TexturePacker, arra
 
 Para exportar uma folha de entidade gráfica, clique o **folha da entidade gráfica de publicação** botão e selecione um local para a folha da entidade gráfica. TexturePacker salvará um arquivo. plist e um arquivo de imagem.
 
-Para usar os arquivos resultantes, adicione o. PNG e. plist para um projeto CocosSharp. Para obter informações sobre como adicionar arquivos a projetos de CocosSharp, consulte o [Implementando o guia de BouncingGame](~/graphics-games/cocossharp/first-game/part2.md). Depois que os arquivos são adicionados, podem ser carregados em um `CCSpriteSheet` conforme mostrado anteriormente no código acima:
+Para usar os arquivos resultantes, adicione o. PNG e. plist para um projeto CocosSharp. Para obter informações sobre como adicionar arquivos a projetos de CocosSharp, consulte o [BouncingGame guia](~/graphics-games/cocossharp/bouncing-game.md). Depois que os arquivos são adicionados, podem ser carregados em um `CCSpriteSheet` conforme mostrado anteriormente no código acima:
 
 ```csharp
 CCSpriteSheet sheet = new CCSpriteSheet ("sheet.plist", "sheet.png"); 
 ```
 
-## <a name="considerations-for-maintaining-a-texturepacker-sprite-sheet"></a>Considerações para manter uma planilha de entidade TexturePacker gráfica
+### <a name="considerations-for-maintaining-a-texturepacker-sprite-sheet"></a>Considerações para manter uma planilha de entidade gráfica TexturePacker
 
 Como jogos são desenvolvidos, artistas podem adicionar, remover ou modificar arte. Qualquer alteração requer uma folha da entidade atualizada gráfica. As considerações a seguir podem facilitar a manutenção de folha da entidade gráfica:
 
@@ -144,7 +144,7 @@ Como jogos são desenvolvidos, artistas podem adicionar, remover ou modificar ar
 
     ![](ccspritesheet-images/image10.png "Para incluir caminhos de pastas, clique em Mostrar Avançado na seção de dados e verifique o nome da pasta coloque")
 
-# <a name="summary"></a>Resumo
+## <a name="summary"></a>Resumo
 
 Este guia aborda como criar e usar o `CCSpriteSheet` classe. Ele também aborda como criar arquivos que podem ser carregados no `CCSpriteSheet` instâncias usando o programa TexturePacker.
 

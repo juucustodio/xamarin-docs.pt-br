@@ -1,4 +1,5 @@
 ---
+redirect_url: /xamarin/cross-platform/internals/available-assemblies/
 title: Recursos internos
 description: Detalhes do funcionamento interno do SDK do Xamarin.
 ms.topic: article
@@ -8,11 +9,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: ebbe886c3a32f189d9f2b105bf204f55c6359ab2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: a047676af9e463b024153584f8012adf1be8ec01
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="internals"></a>Recursos internos
 

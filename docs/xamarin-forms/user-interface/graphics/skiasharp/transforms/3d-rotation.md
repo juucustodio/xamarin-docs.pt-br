@@ -1,6 +1,6 @@
 ---
-title: "Rotações 3D"
-description: "Use transformações não afins para girar objetos 2D em espaço 3D."
+title: Rotações 3D
+description: Use transformações não afins para girar objetos 2D em espaço 3D.
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: a959278b5de72792b23e46372b1333362bed91c8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a7d76bfad6a34bcd43b304a6ea4a8f9210e3550c
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="3d-rotations"></a>Rotações 3D
 
@@ -539,4 +539,4 @@ Essa rotação 3D é colocada entre várias transformações 2D para mover o Cen
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

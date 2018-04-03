@@ -1,6 +1,6 @@
 ---
-title: "Linhas e limites de traço"
-description: "Saiba como usar SkiaSharp para desenhar linhas com extremidades diferentes de traço"
+title: Linhas e limites de traço
+description: Saiba como usar SkiaSharp para desenhar linhas com extremidades diferentes de traço
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 341d850709ff27f4dc397cee3bb2fc5f73c0ec3c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 96b8a990f4644d5e4c9c8ffe6cdb6c173c50657c
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Linhas e limites de traço
 
@@ -36,7 +36,7 @@ A aparência do inicia e termina de linhas é chamada um *terminação de linha*
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 
-Esses são ilustrados melhor com um programa de exemplo. A segunda seção da página inicial do [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa começa com uma página chamada **traço Caps** com base no [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Essa página define uma `PaintSurface` manipulador de eventos que percorre três membros do `SKStrokeCap` enumeração, exibindo o nome do membro de enumeração e desenhar uma linha usando esse limite de traço:
+Esses são ilustrados melhor com um programa de exemplo. A segunda seção da página inicial do [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa começa com uma página chamada **traço Caps** com base no [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Essa página define uma `PaintSurface` manipulador de eventos que percorre três membros do `SKStrokeCap` enumeração, exibindo o nome do membro de enumeração e desenhar uma linha usando esse limite de traço:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -244,4 +244,4 @@ Se linhas são conectadas ou não é um aspecto fundamental de trabalhar com cam
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

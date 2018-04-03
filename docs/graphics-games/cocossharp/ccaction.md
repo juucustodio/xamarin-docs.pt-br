@@ -1,6 +1,6 @@
 ---
-title: "Animação com CCAction"
-description: "A classe CCAction simplifica adicionar animações CocosSharp jogos. Essas animações podem ser usadas para implementar a funcionalidade de ou para adicionar polonês."
+title: Animação com CCAction
+description: A classe CCAction simplifica adicionar animações CocosSharp jogos. Essas animações podem ser usadas para implementar a funcionalidade de ou para adicionar polonês.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74DBD02A-6F10-4104-A61B-08CB49B733FB
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 2852cf0e141e8239cee8dbe580576f4571c919a3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e64789f4e86dbcd47fc760fd9d4d7fb61c76121
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="animating-with-ccaction"></a>Animação com CCAction
 
@@ -23,7 +23,7 @@ _A classe CCAction simplifica adicionar animações CocosSharp jogos. Essas anim
 Este guia usa um projeto chamado **ActionProject** que [pode ser baixado em](https://developer.xamarin.com/samples/mobile/CCAction). Este guia usa o `CCDrawNode` classe, que é abordado a [geometria desenho com CCDrawNode](~/graphics-games/cocossharp/ccdrawnode.md) guia.
 
 
-# <a name="running-the-actionproject"></a>Executando o ActionProject
+## <a name="running-the-actionproject"></a>Executando o ActionProject
 
 **ActionProject** é uma solução de CocosSharp que pode ser criada para iOS e Android. Ele serve como um exemplo de código de como usar o `CCAction` classe e como uma demonstração em tempo real do common `CCAction` implementações.
 
@@ -39,8 +39,7 @@ Quando você clica os rótulos no lado esquerdo altera o tipo de `CCAction` é e
 
 ![](ccaction-images/image3.gif "Clique o rótulo de posição para percorrer os diferentes valores que podem ser alterados")
 
-
-# <a name="common-variable-changing-ccactions"></a>CCActions comuns de alteração de variável 
+## <a name="common-variable-changing-ccaction-classes"></a>Classes de CCAction comuns para alterar a variável
 
 O **ActionProject** usa os seguintes `CCAction`-herança de classes, que fazem parte do CocosSharp:
 
@@ -94,13 +93,13 @@ Cada um dos tipos listados acima termina com a palavra *para* que significa que 
 "A" classe também possuem uma versão "Por", que adicionará o valor do argumento para o valor atual no `CCNode`. Por exemplo, criando uma `CCMoveBy` com uma posição X = 100 e Y = 200 resultará no `CCNode` instância que está sendo movida para as unidades de direito 100 e 200 unidades da posição em que ele se encontrava quando a ação foi iniciada.
 
 
-# <a name="easing-actions"></a>Ações de atenuação
+## <a name="easing-actions"></a>Ações de atenuação
 
 Por padrão, irá realizar ações de alteração de variável *interpolação linear* – a ação será movido para o valor desejado a uma taxa constante. Se a interpolação *posição* linearmente, o objeto mover imediatamente será iniciar e parar de se mover no início e no final da ação, e sua velocidade permanecerá constante como a ação é executada. 
 
 Interpolação não linear é menos gritante e adiciona um elemento de polonês, portanto CocosSharp oferece uma variedade de atenuação as ações que podem ser usadas para modificar ações de alteração de variável.
 
-No **ActionProject** exemplo, é possível alternar entre esses tipos de ações de atenuação clicando no rótulo da segunda (que assume como padrão  **<None>** ):
+No **ActionProject** exemplo, é possível alternar entre esses tipos de ações de atenuação clicando no rótulo da segunda (que assume como padrão **<None>**):
 
 ![](ccaction-images/image4.gif "O usuário pode alternar entre esses tipos de ações de atenuação clicando no rótulo da segunda")
 
@@ -128,35 +127,35 @@ Conforme mostrado pelo aplicativo, facilitando mesmo exata pode ser aplicada a o
 ![](ccaction-images/image5.gif "Atenuação mesmo exata pode ser aplicada a outras ações de configuração de variável como CCRotateTo")
 
 
-# <a name="easing-in-out-and-inout"></a>Atenuação In, Out e InOut
+## <a name="easing-in-out-and-inout"></a>Atenuação In, Out e InOut
 
 Todas as ações de atenuação tem `In`, `Out`, ou `InOut` anexado ao tipo de atenuação. Esses termos referem-se quando a atenuação é aplicado: `In` significa atenuação será aplicada no início, `Out` significa no final, e `InOut` significa tanto no início e término.
 
 Um `In` facilitando a ação afetará a forma como uma variável é aplicada em toda a interpolação inteira (tanto no início e no final), mas geralmente as características mais reconhecíveis da ação de atenuação ocorrerá no início. Da mesma forma, `Out` atenuação ações são caracterizadas por seu comportamento no final de interpolação. Por exemplo, `CCEaseBounceOut` resultará em um objeto saltando no final da ação.
 
 
-## <a name="out"></a>Out
+### <a name="out"></a>Out
 
 `Out` atenuação geralmente aplica as alterações mais perceptíveis no final de interpolação. Por exemplo, `CCEaseExponentialOut` reduzirá a taxa de alteração da variável de alteração que se aproximar o valor de destino:
 
 ![](ccaction-images/image6.gif "CCEaseExponentialOut reduzirá a taxa de alteração da variável de alteração conforme ela se aproxima o valor de destino")
 
 
-## <a name="in"></a>No
+### <a name="in"></a>No
 
 `In` atenuação geralmente se aplica a alteração mais perceptível no início de interpolação. Por exemplo, `CCEaseExponentialIn` moverá mais lentamente no início da ação:
 
 ![](ccaction-images/image7.gif "CCEaseExponentialIn moverá mais lentamente no início da ação")
 
 
-## <a name="inout"></a>Entrada/saída
+### <a name="inout"></a>Entrada/saída
 
 `InOut` Geralmente aplica as alterações mais perceptíveis no início e fim. `InOut` atenuação é geralmente simétrica. Por exemplo, `CCEaseExponentialInOut` moverá lentamente no início e no final da ação:
 
 ![](ccaction-images/image8.gif "CCEaseExponentialInOut moverá lentamente no início e no final da ação")
 
 
-# <a name="implementing-a-custom-ccaction"></a>Implementando um CCAction personalizado
+## <a name="implementing-a-custom-ccaction"></a>Implementando um CCAction personalizado
 
 Todas as classes que já discutimos até agora são incluídas no CocosSharp para fornecer funcionalidade comum. Personalizar `CCAction` implementações podem fornecer flexibilidade adicional. Por exemplo, um `CCAction` que controla a taxa de preenchimento de uma barra de experiência pode ser usado para que a barra de experiência perfeita aumenta sempre que o usuário ganha experiência.
 
@@ -226,7 +225,7 @@ O LineWidthAction pode ser combinado com qualquer ação atenuação para altera
 ![](ccaction-images/image9.gif "O LineWidthAction pode ser combinado com qualquer ação atenuação para alterar a largura da linha de várias maneiras, conforme mostrado nesta animação")
 
 
-## <a name="interpolation-and-the-update-method"></a>Interpolação e o método de atualização
+### <a name="interpolation-and-the-update-method"></a>Interpolação e o método de atualização
 
 A lógica única, além de armazenar valores nas classes acima, reside no `LineWidthState.Update` método. O `startWidth` variável armazena a largura do destino `LineNode` no início da ação e o `deltaWidth` variável armazena quanto o valor será alterado ao longo da ação.
 
@@ -247,7 +246,7 @@ castedTarget.Width = startWidth + deltaWidth * 1;
 O `time` geralmente será valor entre 0 e 1 - mas não sempre - e `Update` implementações não devem presumir que esses limites. Alguns métodos de atenuação (como `CCEaseBackIn` e `CCEaseBackOut`) fornecerá um valor de hora fora do intervalo de 0 a 1.
 
 
-# <a name="conclusion"></a>Conclusão
+## <a name="conclusion"></a>Conclusão
 
 Interpolação e atenuação são uma parte fundamental da criação de um jogo elegante, especialmente ao criar interfaces do usuário. Este guia aborda como usar `CCActions` para interpolar valores padrão, como a posição e a rotação, bem como valores personalizados. O `LineWidthState` e `LineWidthAction` classes mostram como implementar uma ação personalizada.
 

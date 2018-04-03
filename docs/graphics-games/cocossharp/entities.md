@@ -1,6 +1,6 @@
 ---
 title: Entidades em CocosSharp
-description: "O padrão de entidade é uma maneira eficiente de organizar o código de jogo. Ele melhora a legibilidade, torna mais fácil de manter, o código e aproveita a funcionalidade interna de pai/filho."
+description: O padrão de entidade é uma maneira eficiente de organizar o código de jogo. Ele melhora a legibilidade, torna mais fácil de manter, o código e aproveita a funcionalidade interna de pai/filho.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1D3261CE-AC96-4296-8A53-A76A42B927A8
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: fe722ce75f0322ab60bb6fd967ff2c498b2e7b20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bb4af0f76f6b266cad4eb969d987a346b7396aa9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="entities-in-cocossharp"></a>Entidades em CocosSharp
 
@@ -34,7 +34,7 @@ O jogo concluído será assim:
 ![](entities-images/image1.png "O jogo concluído se parecerá com")
 
 
-# <a name="introduction-to-game-entities"></a>Introdução às entidades de jogo
+## <a name="introduction-to-game-entities"></a>Introdução às entidades de jogos
 
 Entidades de jogo são classes que definem objetos que precisam de lógica de processamento, colisão, física ou inteligência artificial. Felizmente, as entidades presentes na base de código do jogo geralmente correspondem os objetos conceituais em um jogo. Quando for verdadeiro, identificar as entidades necessárias em um jogo é mais fácil possível. 
 
@@ -51,7 +51,7 @@ Por exemplo, um espaço com tema [solucionar 'em o jogo](http://en.wikipedia.org
 Essas entidades seria suas próprias classes do jogo e cada instância exigem pouca ou nenhuma instalação além de instanciação.
 
 
-# <a name="general-vs-specific-entity-types"></a>Vs gerais. Tipos de entidade específico
+## <a name="general-vs-specific-entity-types"></a>Geral vs. tipos de entidade específico
 
 Uma das primeiras perguntas enfrentadas pelos desenvolvedores de jogos usando um sistema de entidade é quanto para generalizar suas entidades. Implementações mais específico define classes para cada tipo de entidade, mesmo se eles diferem por algumas características. Sistemas mais gerais combinar grupos de entidades em uma classe e permitir que instâncias de ser personalizado.
 
@@ -84,7 +84,7 @@ O nível do generalização usado depende de várias considerações, incluindo:
 Para simplificar, usaremos uma abordagem de baseado em classe específica com uma única entidade de remessa e marcadores para este tutorial.
 
 
-# <a name="project-setup"></a>Configuração de projeto
+## <a name="project-setup"></a>Configuração de projeto
 
 Antes de começarmos a implementar nosso entidades, é preciso criar um projeto. Usaremos os modelos de projeto CocosSharp para simplificar a criação do projeto. [Verifique esta postagem](http://forums.xamarin.com/discussion/26822/cocossharp-project-templates-for-xamarin-studio) para obter informações sobre como criar um projeto de CocosSharp do Visual Studio para modelos de Mac. O restante deste guia usará o nome do projeto **EntityProject**.
 
@@ -110,14 +110,14 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 Para obter mais informações sobre como lidar com CocosSharp resoluções, consulte nosso [guia tratamento várias resoluções no CocosSharp](~/graphics-games/cocossharp/resolutions.md).
 
 
-# <a name="adding-content-to-the-project"></a>Adicionar conteúdo ao projeto
+## <a name="adding-content-to-the-project"></a>Adicionar conteúdo ao projeto
 
 Quando nosso projeto tiver sido criado, vamos adicionar os arquivos contidos em [o arquivo zip conteúdo](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Entities.zip?raw=true). Para fazer isso, baixe o arquivo zip e descompacte-o. Adicione os **ship.png** e **bullet.png** para o **conteúdo** pasta. O **conteúdo** pasta será dentro do **ativos** pasta no Android e será a raiz do projeto em iOS. Depois de adicionado, veremos que ambos os arquivos no **conteúdo** pasta:
 
 ![](entities-images/image2.png "Depois de adicionado, ambos os arquivos devem estar na pasta de conteúdo")
 
 
-# <a name="creating-the-ship-entity"></a>Criar a entidade de remessa
+## <a name="creating-the-ship-entity"></a>Criar a entidade de remessa
 
 O `Ship` classe será a entidade de primeiro do nosso jogo. Para adicionar um `Ship` classe, primeiro crie uma pasta chamada **entidades** no nível raiz do projeto. Adicionar uma nova classe de **entidades** pasta chamada `Ship`:
 
@@ -179,16 +179,16 @@ Se executarmos nosso jogo que agora veremos nossa entidade de remessa:
 ![](entities-images/image4.png "Ao executar o jogo, será exibida a entidade de remessa")
 
 
-## <a name="why-inherit-from-ccnode-instead-of-ccsprite"></a>Por que herdam CCNode em vez de CCSprite?
+### <a name="why-inherit-from-ccnode-instead-of-ccsprite"></a>Por que herdam CCNode em vez de CCSprite?
 
 Neste ponto nosso `Ship` classe é um wrapper simple para um `CCSprite` instância. Como `CCSprite` também herda de `CCNode`, pode ter herdada diretamente de `CCSprite`, que seriam reduziu o código em `Ship.cs`. Além disso, herdando diretamente `CCSprite` reduz o número de objetos na memória e pode melhorar o desempenho, reduzir a árvore de dependência.
 
 Apesar desses benefícios, que é herdado de `CCNode` para ocultar alguns do `CCSprite` propriedades de cada instância. Por exemplo, o `Texture` propriedade não deve ser modificada fora do `Ship` classe e herdando `CCNode` permite ocultar essa propriedade. Os membros públicos de nosso entidades tornam-se especialmente importantes conforme um jogo cresce e os desenvolvedores adicionais são adicionados a uma equipe.
 
 
-# <a name="adding-input-to-the-ship"></a>Adicionando a entrada para a entrega
+## <a name="adding-input-to-the-ship"></a>Adicionando a entrada para a entrega
 
-Agora que navio está visível na tela, estaremos adicionando entrada. Nossa abordagem será semelhante a abordagem a [Introdução ao guia de CocosSharp](~/graphics-games/cocossharp/first-game/part2.md), exceto que estamos colocando o código de movimentação no `Ship` classe em vez de em que o contém `CCLayer` ou `CCScene`.
+Agora que navio está visível na tela, estaremos adicionando entrada. Nossa abordagem será semelhante a abordagem a [BouncingGame guia](~/graphics-games/cocossharp/bouncing-game.md), exceto que estamos colocando o código de movimentação no `Ship` classe em vez de em que o contém `CCLayer` ou `CCScene`.
 
 Adicione o código ao `Ship` para movê-lo para onde quer que o usuário é tocar na tela de suporte:
 
@@ -230,7 +230,7 @@ public class Ship : CCNode
 Muitos solucionar 'em backup jogos implementar uma velocidade máxima, imitando movimentação tradicional baseadas em controlador. Dito isso, basta implementaremos movimentação imediata para manter o código mais curto.
 
 
-# <a name="creating-the-bullet-entity"></a>Criar a entidade de marcador
+## <a name="creating-the-bullet-entity"></a>Criar a entidade de marcador
 
 A segunda entidade em nosso jogo simple é uma entidade para a exibição de marcadores. Assim como o `Ship` entidade, o `Bullet` entidade conterá um `CCSprite` para que ele apareça na tela. A lógica de movimentação é diferente em que ele não é dependente de entrada do usuário para a movimentação de; em vez disso, `Bullet` instâncias se movem em uma linha reta usando propriedades de velocidade.
 
@@ -288,7 +288,7 @@ Além de alterar o arquivo usado para o `CCSprite` para `bullet.png`, o código 
 O `Schedule` método permite adicionar delegados seja chamado a cada quadro. Nesse caso, estamos adicionando o `ApplyVelocity` método para que move nosso marcador de acordo com seus valores de velocidade. O `Schedule` leva um `Action<float>`, onde o parâmetro float Especifica a quantidade de tempo (em segundos) desde o último quadro, podemos usar para implementar a movimentação de tempo. Desde o tempo de valor é medido em segundos, em seguida, os valores de velocidade representam movimentação em *pixels por segundo*.
 
 
-# <a name="adding-bullets-to-gamelayer"></a>Adicionando marcadores para GameLayer
+## <a name="adding-bullets-to-gamelayer"></a>Adicionando marcadores para GameLayer
 
 Antes de adicionar qualquer `Bullet` instâncias ao nosso jogo faremos um contêiner, especificamente um `List<Bullet>`. Modificar o `GameLayer` para que ela inclua uma lista com marcadores:
 
@@ -422,14 +422,14 @@ Agora podemos executar o jogo e consulte o `Ship` acertar `Bullet` instâncias:
 ![](entities-images/image1.png "Executar o jogo e o envio será ser acertar instâncias de marcador")
 
 
-# <a name="why-gamelayer-has-ship-and-bullets-members"></a>Por que GameLayer tem membros de remessa e marcadores
+## <a name="why-gamelayer-has-ship-and-bullets-members"></a>Por que GameLayer tem membros de remessa e marcadores
 
 Nosso `GameLayer` classe define dois campos para manter referências a instâncias da entidade (`ship` e `bullets`), mas não faz nada com eles. Além disso, a entidades são responsáveis por seu próprios comportamento como a movimentação e a solução. Então por que adicionamos `ship` e `bullets` campos `GameLayer`?
 
 O motivo adicionamos esses membros é que exija lógica em uma implementação de jogo completo a `GameLayer` para a interação entre as diferentes entidades. Por exemplo, o jogo pode ser desenvolvido adicional para incluir inimigos que podem ser destruídos pelo player. Esses inimigos devem estar contidos em um `List` no `GameLayer`e lógica para testar se `Bullet` instâncias entrar em conflito com os inimigos seriam executados no `GameLayer` também. Em outras palavras, o `GameLayer` é a raiz *proprietário* da entidade de todas as instâncias e ele é responsável por interações entre instâncias de entidade.
 
 
-# <a name="bullet-destruction-considerations"></a>Considerações de destruição de marcador
+## <a name="bullet-destruction-considerations"></a>Considerações de destruição de marcador
 
 Nosso jogo atualmente não tem código para destruir `Bullet` instâncias. Cada `Bullet` instância tem lógica para mover na tela, mas ainda não adicionamos nenhum código para destruir qualquer fora da tela `Bullet` instâncias.
 
@@ -437,8 +437,7 @@ Além disso, a destruição do `Bullet` instâncias não podem estar na `GameLay
 
 A solução mais simples é expandir a responsabilidade da classe de fábrica para dar suporte a destruição. Em seguida, a fábrica pode ser notificada sobre uma instância de entidade que está sendo destruída, que pode ser tratada por outros objetos, como o `GameLayer` removendo a instância da entidade de sua lista. 
 
-
-# <a name="summary"></a>Resumo
+## <a name="summary"></a>Resumo
 
 Este guia mostra como criar entidades CocosSharp, herdando a `CCNode` classe. Essas entidades são objetos independentes, tratamento de criação de seus próprios visuais e lógica personalizada. Este guia designa o código pertence dentro de uma entidade (movimentação e criação de outras entidades) do código que pertence o contêiner de entidade raiz (colisão e outra lógica de interação de entidade).
 

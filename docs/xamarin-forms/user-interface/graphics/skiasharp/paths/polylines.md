@@ -1,6 +1,6 @@
 ---
-title: "Polilinhas e equações paramétricas"
-description: "Use SkiaSharp para processar qualquer linha que você pode definir com equações paramétricas"
+title: Polilinhas e equações paramétricas
+description: Use SkiaSharp para processar qualquer linha que você pode definir com equações paramétricas
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: e40fd215d23e7da6f1356bba17fac84ce91007ae
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: dce14ead2de6a21b99209ed12fbb99729734149a
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinhas e equações paramétricas
 
@@ -117,4 +117,4 @@ Observe que o `SKPath` é criado em um `using` bloco. Isso `SKPath` consome mais
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

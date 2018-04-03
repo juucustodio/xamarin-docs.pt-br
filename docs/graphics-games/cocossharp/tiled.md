@@ -1,6 +1,6 @@
 ---
 title: Usando lado a lado com CocosSharp
-description: "Lado a lado é uma poderosa, flexível e o aplicativo consolidado para a criação de bloco ortogonal e isométrico mapeia para jogos. CocosSharp fornece integração interna para o formato de arquivo nativo do lado a lado."
+description: Lado a lado é uma poderosa, flexível e o aplicativo consolidado para a criação de bloco ortogonal e isométrico mapeia para jogos. CocosSharp fornece integração interna para o formato de arquivo nativo do lado a lado.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 5a469a372a9299712be7aef46c51f3d644946535
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 68afa9d175140fd5104e83282a2f72c47625d882
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>Usando lado a lado com CocosSharp
 
@@ -30,7 +30,7 @@ Quando terminar, terá a seguinte demonstração:
 ![](tiled-images/image1.png "O aplicativo de demonstração criado seguindo as etapas neste guia")
 
 
-# <a name="the-purpose-of-tile-maps"></a>A finalidade de mapas de bloco
+## <a name="the-purpose-of-tile-maps"></a>A finalidade de mapas de bloco
 
 Mapas de bloco tem existido no desenvolvimento de jogos para décadas, mas ainda normalmente são usados em jogos 2D para eficiência e esthetics. Mapas de bloco são capazes de atingir um alto nível de eficiência por meio de seu uso de conjuntos de bloco – usado pelo bloco mapas de imagem de origem. Um conjunto de bloco é uma coleção de imagens combinados em um arquivo. Embora os conjuntos de bloco consultem imagens usadas em mapas de bloco, arquivos que contêm várias imagens menores também são chamados de folhas de entidade gráfica ou entidade gráfica mapas no desenvolvimento de jogos. É possível visualizar como conjuntos de bloco são usados com a adição de uma grade para o conjunto de bloco que será usado em nossa demonstração:
 
@@ -43,7 +43,7 @@ Mapas de bloco organizar os blocos individuais de conjuntos de bloco. Devemos ob
 ![](tiled-images/image4.png "Esta imagem mostra as combinações possíveis usando o mesmo conjunto de bloco")
 
 
-# <a name="working-with-tmx-files"></a>Trabalhando com arquivos de .tmx
+## <a name="working-with-tmx-files"></a>Trabalhando com arquivos de .tmx
 
 O formato de arquivo .tmx é um arquivo XML criado pelo aplicativo lado a lado, que pode ser [baixado gratuitamente no site do lado a lado](http://www.mapeditor.org/). O formato de arquivo .tmx armazena as informações de mapas de bloco. Normalmente, um jogo terá um arquivo de .tmx para cada área separada ou nível.
 
@@ -80,7 +80,7 @@ Se executarmos o jogo veremos o mapa de bloco aparecerá no canto inferior esque
 ![](tiled-images/image6.png "Se o jogo for executado, o mapa de bloco aparecerá no canto inferior esquerdo da tela")
 
 
-# <a name="considerations-for-rendering-pixel-art"></a>Considerações para a renderização de arte de Pixel
+## <a name="considerations-for-rendering-pixel-art"></a>Considerações para a renderização de arte de pixel
 
 Arte de pixel, no contexto do desenvolvimento de jogos de vídeo, refere-se a arte visual 2D que é normalmente criado pelo disponível e geralmente é baixa resolução. Arte de pixel pode ser restrictively tempo para criar, para conjuntos de bloco de arte de pixel geralmente incluem blocos de baixa resolução, como 16 ou 32 pixels de largura e altura. Se não dimensionado em tempo de execução, arte de pixel geralmente é muito pequeno para tablets e celulares mais modernos.
 
@@ -161,7 +161,7 @@ Agora o mapa do bloco não aparecerão confuso:
 ![](tiled-images/image8.png "Agora o mapa do bloco não aparecerão indefinido")
 
 
-# <a name="using-tile-properties-at-runtime"></a>Usando propriedades de bloco em tempo de execução
+## <a name="using-tile-properties-at-runtime"></a>Usando propriedades de bloco em tempo de execução
 
 Até agora, temos um `CCTileMap` carregando um arquivo .tmx e exibi-lo, mas não temos como interagir com ele. Especificamente, determinados blocos (por exemplo, nossa tórax Tesouro) precisam ter lógica personalizada. Veremos passo a passo sobre como detectar propriedades personalizadas de bloco e várias maneiras de reagir a essas propriedades depois de identificado em tempo de execução.
 
@@ -175,7 +175,7 @@ Se as propriedades de tórax Tesouro não aparecer, clique com botão direito no
 
 ![](tiled-images/image10.png "Se as propriedades de tórax Tesouro não aparecer, clique com botão direito no tórax Tesouro e selecione Propriedades de bloco")
 
-Propriedades de lado a lado são implementadas com um nome e um valor. Para adicionar uma propriedade, clique o  **+**  botão, digite o nome **IsTreasure**, clique em **Okey**, em seguida, insira o valor **true**: 
+Propriedades de lado a lado são implementadas com um nome e um valor. Para adicionar uma propriedade, clique o **+** botão, digite o nome **IsTreasure**, clique em **Okey**, em seguida, insira o valor **true**: 
 
 ![](tiled-images/image11.png "Para adicionar uma propriedade, clique no botão, digite o nome IsTreasure, clique em Okey e insira o valor true")
 
@@ -273,7 +273,7 @@ A maioria do código é auto-explicativo, mas deve discutiremos a manipulação 
 Em outras palavras, o tórax Tesouro beneficiará sendo uma entidade em vez de ser um bloco simple no `CCTileMap`. Para obter mais informações sobre entidades de jogos, consulte o [guia de entidades em CocosSharp](~/graphics-games/cocossharp/entities.md).
 
 
-# <a name="summary"></a>Resumo
+## <a name="summary"></a>Resumo
 
 Este passo a passo aborda como carregar arquivos de .tmx criados pelo lado a lado em um aplicativo CocosSharp. Ele mostra como modificar a resolução de aplicativo para levar em conta a arte de pixel de baixa resolução e como localizar blocos por suas propriedades executar lógica personalizada, como a criação de instâncias de entidade.
 

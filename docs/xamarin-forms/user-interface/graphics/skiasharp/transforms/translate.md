@@ -1,6 +1,6 @@
 ---
-title: "A transformação de conversão"
-description: "Saiba como usar a transformação de conversão a ser deslocado SkiaSharp gráficos"
+title: A transformação de conversão
+description: Saiba como usar a transformação de conversão a ser deslocado SkiaSharp gráficos
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: cac2479af2778af6043a85583f9d7b518748d7da
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 771fde301a8585f25d7d83c7bf0451cf6e0cf8e9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="the-translate-transform"></a>A transformação de conversão
 
@@ -36,7 +36,7 @@ Esses argumentos podem ser negativos. Um segundo [ `Translate` ](https://develop
 public void Translate (SKPoint point)
 ```
 
-O **acumulados traduzir** página do [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa de exemplo demonstra que várias chamadas do `Translate` método são cumulativas. O [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe exibe 20 versões do mesmo retângulo, cada um deslocamento do retângulo anterior apenas o suficiente para que eles stretch ao longo da diagonal. Aqui está o `PaintSurface` manipulador de eventos:
+O **acumulados traduzir** página do [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa de exemplo demonstra que várias chamadas do `Translate` método são cumulativas. O [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe exibe 20 versões do mesmo retângulo, cada um deslocamento do retângulo anterior apenas o suficiente para que eles stretch ao longo da diagonal. Aqui está o `PaintSurface` manipulador de eventos:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -303,4 +303,4 @@ Observe que a estrela mantém a mesma orientação à medida que ele gira em tor
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

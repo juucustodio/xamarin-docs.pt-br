@@ -1,6 +1,6 @@
 ---
-title: "Animação básica"
-description: "Descubra como animar SkiaSharp elementos gráficos"
+title: Animação básica
+description: Descubra como animar SkiaSharp elementos gráficos
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 347ecf72356915714200835263e38519c1ad8a13
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d9eea30e1d9e55101975e59ba9d259fba909ca0f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="basic-animation"></a>Animação básica
 
@@ -22,7 +22,7 @@ _Descubra como animar SkiaSharp elementos gráficos_
 
 ![](animation-images/animationexample.png "Vários círculos concêntricos aparentemente expandindo no centro da")
 
-O **Pulsating elipse** página o [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa anima dois eixos de uma elipse para que ele parece ser pulsating, e você ainda pode controlar o taxa desse pulsation:
+O **Pulsating elipse** página o [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa anima dois eixos de uma elipse para que ele parece ser pulsating, e você ainda pode controlar o taxa desse pulsation:
 
 
 O [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) arquivo instancia um xamarin. Forms `Slider` e um `Label` para exibir o valor atual do controle deslizante. Essa é uma maneira comum para integrar um `SKCanvasView` com outros modos de exibição do xamarin. Forms:
@@ -251,4 +251,4 @@ O resultado é que a imagem está com o mesmo ao `t` é igual a 0, como quando `
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

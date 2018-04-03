@@ -1,6 +1,6 @@
 ---
-title: "A transformação de escala"
-description: "Descobrir a transformação de escala SkiaSharp para objetos para vários tamanhos de dimensionamento"
+title: A transformação de escala
+description: Descobrir a transformação de escala SkiaSharp para objetos para vários tamanhos de dimensionamento
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 39e2084bf9ca888d6e39fc5f02a455d3500e568c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: b89e7472a332ed5cd518a26bc54af59f12b19c2a
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
@@ -345,4 +345,4 @@ O código também exibirá estrela dez vezes mais, cada vez que o dimensionament
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

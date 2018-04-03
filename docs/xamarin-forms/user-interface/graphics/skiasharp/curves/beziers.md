@@ -1,6 +1,6 @@
 ---
-title: "Três tipos de curvas de Bézier"
-description: "Explorar como usar SkiaSharp para renderizar cúbicas, quadráticas e conic curvas de Bézier"
+title: Três tipos de curvas de Bézier
+description: Explorar como usar SkiaSharp para renderizar cúbicas, quadráticas e conic curvas de Bézier
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: cea9951f22fbcf0ff07a8e2244a9bc00819ada24
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de Bézier
 
@@ -437,7 +437,7 @@ public void ConicTo (Single x1, Single y1, Single x2, Single y2, Single weight)
 
 Observe o último `weight` parâmetro.
 
-O **curva Conic** página permite fazer experiências com esses curvas. A classe `ConicCurvePage` é derivada de `InteractivePage`. O [ **ConicCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml) arquivo instancia um `Slider` para selecionar um valor de peso entre – 2 e 2. O [ **ConicCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml.cs) arquivo code-behind cria três `TouchPoint` objetos e o `PaintSurface` manipulador simplesmente renderiza a curva resultante com as linhas tangentes ao controle pontos:
+O **curva Conic** página permite fazer experiências com esses curvas. O `ConicCurvePage` classe deriva de `InteractivePage`. O [ **ConicCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml) arquivo instancia um `Slider` para selecionar um valor de peso entre – 2 e 2. O [ **ConicCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml.cs) arquivo code-behind cria três `TouchPoint` objetos e o `PaintSurface` manipulador simplesmente renderiza a curva resultante com as linhas tangentes ao controle pontos:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -553,4 +553,4 @@ Mas, definir o ângulo de 180 graus, e a falha de matemática.
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
