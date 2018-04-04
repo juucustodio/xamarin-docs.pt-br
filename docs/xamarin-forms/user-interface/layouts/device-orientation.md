@@ -1,18 +1,17 @@
 ---
-title: "Orientação do dispositivo"
-description: "Entenda como dispor aplicativos uma aparência excelentes na orientações retrato e paisagem."
-ms.topic: article
+title: Orientação do dispositivo
+description: Entenda como dispor aplicativos uma aparência excelentes na orientações retrato e paisagem.
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: cb17c224fc6102d9e0dc25853c2222734299647a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 9d1b10925f1455c303950eff342764b1fbc9275d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
@@ -88,9 +87,9 @@ Xamarin dá suporte a várias opções para especificar a orientação:
 - **ReversePortrait** &ndash; faz com que o aplicativo para usar a orientação retrato, voltados para a direção oposta de normal para aparecer "cabeça para baixo."
 - **FullSensor** &ndash; faz com que o aplicativo dependem de dados de sensor para selecionar a orientação correta (sem o possível 4).
 - **FullUser** &ndash; faz com que o aplicativo para usar as preferências do usuário orientação. Se a rotação automática estiver habilitada, todas as 4 orientações podem ser usadas.
-- **UserLandscape** &ndash;  _\[não tem suporte\]_  faz com que o aplicativo para usar a orientação de paisagem, a menos que o usuário tenha a rotação automática habilitada, caso em que ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
-- **UserPortrait** &ndash;  _\[não tem suporte\]_  faz com que o aplicativo para usar a orientação retrato, a menos que o usuário tenha a rotação automática habilitada, caso em que ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
-- **Bloqueado** &ndash;  _\[não tem suporte\]_  faz com que o aplicativo para usar a orientação da tela física que ele estiver na inicialização, sem responder a alterações no dispositivo do orientação. Esta opção interromperá a compilação.
+- **UserLandscape** &ndash; _\[não tem suporte\]_ faz com que o aplicativo para usar a orientação de paisagem, a menos que o usuário tenha a rotação automática habilitada, caso em que ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
+- **UserPortrait** &ndash; _\[não tem suporte\]_ faz com que o aplicativo para usar a orientação retrato, a menos que o usuário tenha a rotação automática habilitada, caso em que ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
+- **Bloqueado** &ndash; _\[não tem suporte\]_ faz com que o aplicativo para usar a orientação da tela física que ele estiver na inicialização, sem responder a alterações no dispositivo do orientação. Esta opção interromperá a compilação.
 
 Observe que as APIs do Android native fornecem muito controle sobre como a orientação é gerenciada, incluindo opções contradigam explicitamente o usuário expresso preferências.
 

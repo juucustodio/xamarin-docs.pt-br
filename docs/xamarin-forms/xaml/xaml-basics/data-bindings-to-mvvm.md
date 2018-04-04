@@ -1,18 +1,17 @@
 ---
-title: "Parte 5. De associações de dados para o modelo MVVM"
-description: "O padrão de arquitetura Model-View-ViewModel (MVVM) foi criado com XAML em mente. O padrão impõe uma separação entre três camadas de software, a interface do usuário XAML, chamada de exibição; os dados subjacentes, chamados de modelo; e um intermediário entre o modo de exibição e o modelo, chamado ViewModel. O modo de exibição e o ViewModel geralmente são conectados por meio de ligações de dados definidas no arquivo XAML. BindingContext para o modo de exibição normalmente é uma instância do ViewModel."
-ms.topic: article
+title: Parte 5. De associações de dados para o modelo MVVM
+description: O padrão de arquitetura Model-View-ViewModel (MVVM) foi criado com XAML em mente. O padrão impõe uma separação entre três camadas de software, a interface do usuário XAML, chamada de exibição; os dados subjacentes, chamados de modelo; e um intermediário entre o modo de exibição e o modelo, chamado ViewModel. O modo de exibição e o ViewModel geralmente são conectados por meio de ligações de dados definidas no arquivo XAML. BindingContext para o modo de exibição normalmente é uma instância do ViewModel.
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 207bf7649d588f973b400cb452d9d8b246955cdb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 95cd79a4bd6da47757cfeb12a2862ccb5a66fee2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. De associações de dados para o modelo MVVM
 

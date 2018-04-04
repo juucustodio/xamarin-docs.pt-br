@@ -1,18 +1,17 @@
 ---
-title: "Solução de problemas"
-description: "Este artigo fornece várias dicas de solução de problemas para trabalhar com tvOS 10 em aplicativos de Xamarin.tvOS."
-ms.topic: article
+title: Solução de problemas
+description: Este artigo fornece várias dicas de solução de problemas para trabalhar com tvOS 10 em aplicativos de Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d45b9ed04d3ae4815d408d82068e588a2cbcc6f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8875e658ead17820655a2401079627875c14958b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 
@@ -20,7 +19,7 @@ _Este artigo fornece várias dicas de solução de problemas para trabalhar com 
 
 As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usar tvOS 10 com Xamarin.tvOS e a solução para esses problemas:
 
-- [Loja de aplicativos](#App-Store)
+- [App Store](#App-Store)
 - [Compatibilidade binária](#Binary-Compatibility)
 - [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
@@ -92,5 +91,5 @@ Problemas Conhecidos:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [O que há de novo no tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

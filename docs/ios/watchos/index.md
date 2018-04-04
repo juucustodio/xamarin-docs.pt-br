@@ -1,18 +1,17 @@
 ---
 title: watchOS
 description: Compilar aplicativos para a Apple Watch com o Xamarin
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 062c53a855051e70329ec18f6c69253b5ee68e7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5634306836b5fe0255a5d4cdf49013441206dd5f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="watchos"></a>watchOS
 
@@ -28,19 +27,19 @@ _Compilar aplicativos para a Apple Watch com o Xamarin_
 * [Informações de instalação](~/ios/watchos/get-started/installation.md) – suporte de inspecionar o sistema operacional do Xamarin está disponível em nossa versão estável, mas é considerado uma "visualização".
 * Criar seu [primeiro aplicativo watchOS](~/ios/watchos/get-started/hello-watch.md) usando Xamarin.
 
-##  <a name="user-interfaceioswatchosuser-interfaceindexmd"></a>[Interface do usuário](~/ios/watchos/user-interface/index.md)
+##  <a name="user-interfaceioswatchosuser-interfaceindexmd"></a>[Interface do Usuário](~/ios/watchos/user-interface/index.md)
 
 Visão geral dos controles incluídos no aplicativo de exemplo catálogo de Kit de observação, incluindo o [imagem](~/ios/watchos/user-interface/image.md), [tabela](~/ios/watchos/user-interface/menu.md) [menu](~/ios/watchos/user-interface/menu.md), e [entrada de texto](~/ios/watchos/user-interface/text-input.md) controles.
 
-## <a name="platform-featuresplatformindexmd"></a>[Recursos de plataforma](platform/index.md)
+## <a name="platform-featuresplatformindexmd"></a>[Recursos da plataforma](platform/index.md)
 
 Como incluir recursos específicos do watchOS como [notificações](~/ios/watchos/platform/notifications.md) e [complicações](~/ios/watchos/platform/complications.md) em aplicativos de inspeção.
 
-##  <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[Conceitos básicos de aplicativo](~/ios/watchos/app-fundamentals/index.md)
+##  <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[Conceitos básicos do aplicativo](~/ios/watchos/app-fundamentals/index.md)
 
 Trabalhando com diferentes aspectos do watchOS API, incluindo o [pai aplicativo](~/ios/watchos/app-fundamentals/parent-app.md), [ícones](~/ios/watchos/app-fundamentals/icons.md), [layout](~/ios/watchos/app-fundamentals/layout.md), [navegação](~/ios/watchos/app-fundamentals/navigation.md), [tamanhos de tela](~/ios/watchos/app-fundamentals/screen-sizes.md), e [configurações](~/ios/watchos/app-fundamentals/settings.md).
 
-##  <a name="deployment-and-testingioswatchosdeploy-testindexmd"></a>[Implantação e teste](~/ios/watchos/deploy-test/index.md)
+##  <a name="deployment-and-testingioswatchosdeploy-testindexmd"></a>[Implantação e Teste](~/ios/watchos/deploy-test/index.md)
 
 Lista de verificação e instruções para implantar aplicativos do Apple Watch dispositivos, de teste e a loja de aplicativos.
 

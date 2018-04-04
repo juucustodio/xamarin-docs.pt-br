@@ -1,7 +1,6 @@
 ---
-title: "Extensões do iOS"
-description: "Introduzido no iOS 8, as extensões são widgets que são apresentados pelo iOS em contextos padrão, como no Centro de notificação, quando o usuário solicita um teclado personalizado, ou quando eles foto edição. Todas as extensões são instaladas em conjunto com um aplicativo de contêiner e são ativadas de um ponto de extensão específica em um aplicativo Host."
-ms.topic: article
+title: Extensões do iOS
+description: Introduzido no iOS 8, as extensões são widgets que são apresentados pelo iOS em contextos padrão, como no Centro de notificação, quando o usuário solicita um teclado personalizado, ou quando eles foto edição. Todas as extensões são instaladas em conjunto com um aplicativo de contêiner e são ativadas de um ponto de extensão específica em um aplicativo Host.
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: ccd83f4b31da555aa9c8ec34501a8656ce0a5032
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: af52db5f1add040af025f2134f0e9a7b3936f4f2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-extensions"></a>Extensões do iOS
 

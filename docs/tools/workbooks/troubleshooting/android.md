@@ -1,16 +1,15 @@
 ---
 title: Solucionando problemas de pastas de trabalho do Xamarin Android
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 530abec733ec1d842559bf9c898217a8e45465aa
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 03c775f6f14263878f9f4a4633ba72931b233b17
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solucionando problemas de pastas de trabalho do Xamarin Android
 

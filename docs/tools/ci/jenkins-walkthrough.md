@@ -1,18 +1,17 @@
 ---
 title: Usando Jenkins com Xamarin
-description: "Este guia mostra como configurar Jenkins como um servidor de integração contínua e automatizar a compilação de aplicativos móveis criados com o Xamarin. Descreve como instalar Jenkins nos X, configurá-lo e configurar os trabalhos para compilar aplicativos xamarin e xamarin quando as alterações são confirmadas para o sistema de gerenciamento de código fonte."
-ms.topic: article
+description: Este guia mostra como configurar Jenkins como um servidor de integração contínua e automatizar a compilação de aplicativos móveis criados com o Xamarin. Descreve como instalar Jenkins nos X, configurá-lo e configurar os trabalhos para compilar aplicativos xamarin e xamarin quando as alterações são confirmadas para o sistema de gerenciamento de código fonte.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: f183eb487b49d60c896bef9c90c711cd3da846b7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Usando Jenkins com Xamarin
 
@@ -103,7 +102,7 @@ Neste ponto Jenkins foi instalado. No entanto, se quisermos criar aplicativos m�
 
 ### <a name="installing-plugins"></a>Instalando o plug-ins
 
-Quando o instalador Jenkins.App for concluído, ele será iniciar Jenkins e iniciar o navegador da web com a URL http://localhost:8080, conforme mostrado na captura de tela abaixo:
+Quando o instalador Jenkins.App for concluída, ela será iniciar Jenkins e iniciar o navegador da web com a URL http://localhost:8080, conforme mostrado na captura de tela abaixo:
 
  [![](jenkins-walkthrough-images/image10.png "8080, conforme mostrado nesta captura de tela")](jenkins-walkthrough-images/image10.png#lightbox)
 

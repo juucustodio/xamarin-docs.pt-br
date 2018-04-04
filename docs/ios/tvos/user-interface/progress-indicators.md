@@ -1,18 +1,17 @@
 ---
 title: Trabalhando com indicadores de progresso
 description: Este artigo aborda criando e trabalhando com indicadores de progresso dentro de um aplicativo Xamarin.tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c021550e17cf8206d59102856a11c72000ad06aa
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 96fc3ea0aa802f62bd697b34f7bd504eb445a4f6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-progress-indicators"></a>Trabalhando com indicadores de progresso
 

@@ -1,18 +1,17 @@
 ---
-title: "Introdução ao iOS 9"
-description: "Este artigo apresenta todas as APIs e recursos disponíveis no iOS 9 novos e modificados para desenvolvedores do xamarin."
-ms.topic: article
+title: Introdução ao iOS 9
+description: Este artigo apresenta todas as APIs e recursos disponíveis no iOS 9 novos e modificados para desenvolvedores do xamarin.
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5b26989603695cfb309fba5a5318f7ef4d2460e2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 10ed9154b92e6f13dd71f83cf4fed47585dc795f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -212,7 +211,7 @@ Consulte também as partes do iOS desses exemplos (complementar Mac OS X versõe
 
 - [Exemplos do iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Introdução ao 3D Touch](~/ios/platform/3d-touch.md)
-- [Segurança de transporte do aplicativo](~/ios/app-fundamentals/ats.md)
+- [Segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md)
 - [Multitarefa para iPad](~/ios/platform/multitasking.md)
 - [Contatos e contatos da interface do usuário](~/ios/platform/contacts.md)
 - [Novas APIs de pesquisa](~/ios/platform/search/index.md)
@@ -221,7 +220,7 @@ Consulte também as partes do iOS desses exemplos (complementar Mac OS X versõe
 - [Aprimoramentos de jogos](~/ios/platform/gaming/index.md)
 - [Introdução ao HomeKit](~/ios/platform/homekit.md)
 - [Introdução à entrega](~/ios/platform/handoff.md)
-- [Alterações de estrutura adicional iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [Alterações de estrutura adicionais do iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [Solução de problemas](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
 - [O que há de novo no iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

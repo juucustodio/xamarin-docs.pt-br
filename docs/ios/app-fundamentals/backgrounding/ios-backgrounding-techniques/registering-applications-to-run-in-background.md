@@ -1,17 +1,16 @@
 ---
 title: Registrando aplicativos sejam executados em segundo plano
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5fcb41f4f60adc8ca5be761c2b9a7449387a89d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 58ee68f765372094d68c3cf30ed6a631a67fe313
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="registering-applications-to-run-in-the-background"></a>Registrando aplicativos sejam executados em segundo plano
 

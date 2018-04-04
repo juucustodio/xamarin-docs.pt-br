@@ -1,18 +1,17 @@
 ---
 title: Windows
 description: Este artigo aborda a trabalhar com janelas e painéis em um aplicativo Xamarin.Mac. Descreve Criando janelas e painéis em Xcode e construtor de Interface, carregá-las do storyboards e .xib arquivos e trabalhar com eles por meio de programação.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4b8de30cecb738fecb13616a3b796c0b4fa5a51a
-ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
+ms.openlocfilehash: f45bc69b74d98c7b9130f2caeaee91b184c38d87
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="windows"></a>Windows
 

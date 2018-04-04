@@ -1,18 +1,17 @@
 ---
 title: Estilos
-description: "Usando estilos para personalizar a aparência"
-ms.topic: article
+description: Usando estilos para personalizar a aparência
 ms.prod: xamarin
 ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 934948579e5f3fb19c7afe49f4e86a1ef255b77f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a19f7597ee17282bc8b41e7f0e7e3ade2361a50
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="styles"></a>Estilos
 

@@ -1,17 +1,16 @@
 ---
 title: iOS 9 compatibilidade
-description: "Mesmo se você não planeja adicionar recursos do iOS 9 no seu aplicativo imediatamente, você deve recompilar seus aplicativos com a versão mais recente do Xamarin."
-ms.topic: article
+description: Mesmo se você não planeja adicionar recursos do iOS 9 no seu aplicativo imediatamente, você deve recompilar seus aplicativos com a versão mais recente do Xamarin.
 ms.prod: xamarin
 ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 3f52ef88224e65f12502c9fbf82e240233890a82
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: b7cbec3f064e6000f991fb0f9ce256415f6ce5dd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 compatibilidade
 

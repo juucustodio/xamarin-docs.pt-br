@@ -1,18 +1,17 @@
 ---
-title: "Vinculação de aplicativo no Android"
-description: "Este guia aborda como Android 6.0 oferece suporte a aplicativo vinculação, uma técnica que permite que aplicativos móveis responder a URLs de sites. Ele abordará vinculando o aplicativo é, a implementação de vinculação de aplicativo em um aplicativo do Android 6.0 e como configurar um site para conceder permissões ao aplicativo móvel para um domínio."
-ms.topic: article
+title: Vinculação de aplicativo no Android
+description: Este guia aborda como Android 6.0 oferece suporte a aplicativo vinculação, uma técnica que permite que aplicativos móveis responder a URLs de sites. Ele abordará vinculando o aplicativo é, a implementação de vinculação de aplicativo em um aplicativo do Android 6.0 e como configurar um site para conceder permissões ao aplicativo móvel para um domínio.
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2ef6b8044387d759e26d05c1468caaad7efb9bdc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
 
@@ -56,7 +55,7 @@ Configurar links de aplicativo no Android 6.0 envolve duas etapas principais:
 É necessário configurar um filtro intenção que mapeia um URI (ou um conjunto de URIs de possíveis) de um site para uma atividade em um aplicativo do Android. Em xamarin, essa relação é estabelecida pelo adorno de uma atividade com o [IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). O filtro intenção deve declarar as seguintes informações:
 
 * **`Intent.ActionView`** &ndash; Isso registrará o filtro tentativa para responder a solicitações para exibir informações
-* **`Categories`** &ndash;  O filtro intenção deve registrar os dois  **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)**  e  **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)**  para poder corretamente lidar com a URL da web.
+* **`Categories`** &ndash;  O filtro intenção deve registrar os dois **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)** e **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)** para poder corretamente lidar com a URL da web.
 * **`DataScheme`** &ndash; O filtro intenção deve declarar `http` e/ou `https`. Esses são os esquemas válidos apenas dois.
 * **`DataHost`** &ndash; Este é o domínio que os URIs será proveniente de.
 * **`DataPathPrefix`** &ndash; Este é um caminho opcional para recursos no site.

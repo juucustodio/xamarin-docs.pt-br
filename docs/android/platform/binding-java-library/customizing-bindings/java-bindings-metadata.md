@@ -1,18 +1,17 @@
 ---
 title: Java Bindings Metadata
-description: "O código c# em xamarin chama bibliotecas Java por meio de ligações, que são um mecanismo que abstrai os detalhes de nível inferior que são especificados em Java nativo Interface (JNI). Xamarin fornece uma ferramenta que gera essas associações. Essa ferramenta permite que o controle do desenvolvedor como uma associação é criada usando metadados, que permite que os procedimentos, como modificar os namespaces e renomeação de membros. Este documento discute como funciona a metadados, resume os atributos que os metadados oferece suporte e explica como resolver problemas de associação, modificando esses metadados."
-ms.topic: article
+description: O código c# em xamarin chama bibliotecas Java por meio de ligações, que são um mecanismo que abstrai os detalhes de nível inferior que são especificados em Java nativo Interface (JNI). Xamarin fornece uma ferramenta que gera essas associações. Essa ferramenta permite que o controle do desenvolvedor como uma associação é criada usando metadados, que permite que os procedimentos, como modificar os namespaces e renomeação de membros. Este documento discute como funciona a metadados, resume os atributos que os metadados oferece suporte e explica como resolver problemas de associação, modificando esses metadados.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 6dea13fcda43cad22b8bea9838bbcb23b97820c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-bindings-metadata"></a>Java Bindings Metadata
 
@@ -246,7 +245,7 @@ Altera o tipo de retorno de um método. Isso não altera o atributo de retorno (
 
 ### <a name="obfuscated"></a>ofuscado
 
-Ferramentas que ofuscar bibliotecas Java podem interferir com o gerador de associação xamarin e sua capacidade de gerar classes de wrapper do c#. Características de classes ofuscados incluem: * inclui o nome da classe um  **$** , ou seja, **um. ' $Class** * o nome da classe é totalmente comprometido de letras minúsculas, ou seja,  **a.class**
+Ferramentas que ofuscar bibliotecas Java podem interferir com o gerador de associação xamarin e sua capacidade de gerar classes de wrapper do c#. Características de classes ofuscados incluem: * inclui o nome da classe um **$**, ou seja, **um. ' $Class** * o nome da classe é totalmente comprometido de letras minúsculas, ou seja,  **a.class**
 
 Este trecho de código é um exemplo de como gerar um tipo c# "não ofuscado":
 

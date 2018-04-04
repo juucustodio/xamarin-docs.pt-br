@@ -1,18 +1,17 @@
 ---
-title: "Verificando a orientação do dispositivo"
-description: "Use DependencyService para orientação do dispositivo de acesso de código compartilhado"
-ms.topic: article
+title: Verificando a orientação do dispositivo
+description: Use DependencyService para orientação do dispositivo de acesso de código compartilhado
 ms.prod: xamarin
 ms.assetid: 5F60975F-47DB-4361-B97C-2290D6F77D2F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: d23f29fbfb51473ff5f89f27c0bfd621cfffbce0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b8392dad578f94380e90da24cbf44120d38f754d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="checking-device-orientation"></a>Verificando a orientação do dispositivo
 

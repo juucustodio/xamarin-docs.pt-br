@@ -1,18 +1,17 @@
 ---
-title: "Modos de exibição nativos em c#"
-description: "Exibições nativo do iOS, Android e UWP podem ser referenciadas diretamente do xamarin. Forms páginas criadas usando o c#. Este artigo demonstra como adicionar exibições nativo para um layout de xamarin. Forms criado usando c# e como substituir o layout dos modos de exibição personalizados para corrigir seu uso da API de medição."
-ms.topic: article
+title: Modos de exibição nativos em c#
+description: Exibições nativo do iOS, Android e UWP podem ser referenciadas diretamente do xamarin. Forms páginas criadas usando o c#. Este artigo demonstra como adicionar exibições nativo para um layout de xamarin. Forms criado usando c# e como substituir o layout dos modos de exibição personalizados para corrigir seu uso da API de medição.
 ms.prod: xamarin
 ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 0c4014ecda0501e9309a17901c439444e4b48e86
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7979e43cdde60b1b0248118e591c096295847acb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-views-in-c"></a>Modos de exibição nativos em c#
 

@@ -1,28 +1,27 @@
 ---
-title: Recursos de plataforma
+title: Recursos da plataforma
 description: Conceitos e recursos de aplicativos de plataforma cruzada.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 26b33b1fbf546f734e6661380f63b574cccbcae5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1699c8bde336c040253a5560a2979de8b3fabf5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="platform-features"></a>Recursos de plataforma
+# <a name="platform-features"></a>Recursos da plataforma
 
 Esta seção contém documentos que explicam alguns conceitos e recursos mais avançados do aplicativo de plataforma cruzada.
 
-##  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Visão geral de suporte assíncrono](~/cross-platform/platform/async.md)
+##  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
 
 Versão 5 do c# introduziu duas novas palavras-chave para expressar operações assíncronas: async e await. Essas palavras-chave permitem que você escrever código simple que utiliza a biblioteca paralela de tarefas para executar operações de longa execução (como o acesso à rede) em outro thread e acessar facilmente os resultados após a conclusão. As versões mais recentes do xamarin e xamarin suportam async e await - este documento fornece explicações e um exemplo de como usar a nova sintaxe com o Xamarin.
 
-## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Recursos de 6 de linguagem c#](~/cross-platform/platform/csharp-six.md)
+## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Recursos de linguagem C# 6](~/cross-platform/platform/csharp-six.md)
 
 A versão mais recente da linguagem c# – versão 6 – continua a evoluir o idioma para ter menos clichê, mais clareza e mais consistência. Sintaxe de inicialização de limpeza, a capacidade de usar `await` na `catch/finally` blocos e os condicionais nulos `?` operador são especialmente úteis.
 

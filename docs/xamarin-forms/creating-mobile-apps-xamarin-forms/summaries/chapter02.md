@@ -1,23 +1,22 @@
 ---
-title: "Resumo do capítulo 2. Anatomia de um aplicativo"
-ms.topic: article
+title: Resumo do capítulo 2. Anatomia de um aplicativo
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: f1569911eb47f28ea6aee2313d01e07c801746df
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c206b124349614db7249609707bd22e8a4efe6d8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Resumo do capítulo 2. Anatomia de um aplicativo
 
 Em um aplicativo xamarin. Forms, os objetos que ocupam espaço na tela são conhecidos como *elementos visuais*, encapsulados pelo [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) classe. Elementos visuais podem ser divididos em três categorias correspondente a essas classes:
 
-- [Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)
+- [Página](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)
 - [Layout](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/)
 - [Exibir](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)
 

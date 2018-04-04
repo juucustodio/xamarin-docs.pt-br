@@ -1,17 +1,16 @@
 ---
-title: "Resumo do capítulo 12. Estilos"
-ms.topic: article
+title: Resumo do capítulo 12. Estilos
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9563bc811250038e8932067280a8e5292a379077
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: bb26c5d93bc9945ad43ed62d7feba2bc851e510e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="summary-of-chapter-12-styles"></a>Resumo do capítulo 12. Estilos
 

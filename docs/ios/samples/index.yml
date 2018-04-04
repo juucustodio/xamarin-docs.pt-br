@@ -2,18 +2,18 @@
 documentType: LandingData
 title: Exemplos do Xamarin.iOS
 metadata:
-  description: "Aplicativos de exemplo de Xamarin.iOS de plataforma cruzada para desenvolvedores móveis."
+  description: Aplicativos de exemplo de Xamarin.iOS de plataforma cruzada para desenvolvedores móveis.
   author: conceptdev
   ms.author: crdun
   ms.date: 02/17/2018
-  ms.topic: article
-  ms.openlocfilehash: b0c3efa12cbeb045104b2ce823cbf57cd1f56f75
-  ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+  ms.topic: sample
+  ms.openlocfilehash: 9a22147adbcd59fe7168af8e717d065d6d27b85e
+  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/12/2018
+  ms.lasthandoff: 04/04/2018
 abstract:
-  description: "Aplicativos de exemplo de Xamarin.iOS e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin."
+  description: Aplicativos de exemplo de Xamarin.iOS e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin.
   menu:
     items:
     - href: https://developer.xamarin.com/samples/ios/all/
@@ -26,43 +26,43 @@ sections:
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/
-      html: "Demonstração de realidade aumentada ARKit para colocar objetos em superfícies detectadas."
+      html: Demonstração de realidade aumentada ARKit para colocar objetos em superfícies detectadas.
       image:
         src: images/arkit.png
         href: https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/
       title: ARKit (iOS 11)
     - href: https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/
-      html: "Novos recursos do iOS 11 no MapKit: marcadores de divisão e agrupamento com base no nível de zoom."
+      html: 'Novos recursos do iOS 11 no MapKit: marcadores de divisão e agrupamento com base no nível de zoom.'
       image:
         src: images/mapkit.png
         href: https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/
       title: MapKit (iOS 11)
     - href: https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/
-      html: "Estrutura Vision do iOS 11 e CoreML, usando um modelo treinado com o Serviço de Visão Personalizada do Azure."
+      html: Estrutura Vision do iOS 11 e CoreML, usando um modelo treinado com o Serviço de Visão Personalizada do Azure.
       image:
         src: images/coremlazure.png
         href: https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/
       title: CoreML e Azure (iOS 11)
     - href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
-      html: "Como usar controladores e propriedades de exibição ContactsUI."
+      html: Como usar controladores e propriedades de exibição ContactsUI.
       image:
         src: images/contacts.png
         href: https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/
       title: QuickContacts
     - href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
-      html: "Conjunto de controles de interface do usuário disponível no watchOS."
+      html: Conjunto de controles de interface do usuário disponível no watchOS.
       image:
         src: images/watchos.png
         href: https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/
-      title: "Catálogo do WatchKit"
+      title: Catálogo do WatchKit
     - href: https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/
-      html: "Demonstra como usar diversas exibições e controles na estrutura UIKit do tvOS."
+      html: Demonstra como usar diversas exibições e controles na estrutura UIKit do tvOS.
       image:
         src: images/tvosui.png
         href: https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/
-      title: "Catálogo de interface do usuário do tvOS"
+      title: Catálogo de interface do usuário do tvOS
     - href: https://developer.xamarin.com/samples/ios/all/
-      html: "O conjunto completo de aplicativos de exemplo e demonstrações de código do Xamarin.iOS."
+      html: O conjunto completo de aplicativos de exemplo e demonstrações de código do Xamarin.iOS.
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/ios/all/

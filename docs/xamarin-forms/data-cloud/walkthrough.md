@@ -1,18 +1,17 @@
 ---
-title: "Noções básicas sobre o exemplo"
-description: "Este tópico fornece um passo a passo do aplicativo de exemplo xamarin. Forms que demonstra como se comunicar com serviços web diferentes. Enquanto cada serviço web usa um aplicativo de exemplo separados, eles são funcionalmente semelhantes e compartilharem classes comuns."
-ms.topic: article
+title: Noções básicas sobre o exemplo
+description: Este tópico fornece um passo a passo do aplicativo de exemplo xamarin. Forms que demonstra como se comunicar com serviços web diferentes. Enquanto cada serviço web usa um aplicativo de exemplo separados, eles são funcionalmente semelhantes e compartilharem classes comuns.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-the-sample"></a>Noções básicas sobre o exemplo
 
@@ -56,7 +55,7 @@ O projeto PCL para cada aplicativo também consiste em um número de arquivos im
 
 A maioria dos aplicativos de exemplo contém pelo menos duas páginas:
 
-- **TodoListPage** – esta página exibe uma lista de `TodoItem` instâncias e um ícone de tique se o `TodoItem.Done` é de propriedade `true`. Clicar em um item navega para o `TodoItemPage`. Além disso, novos itens podem ser criados clicando no  *+*  símbolo.
+- **TodoListPage** – esta página exibe uma lista de `TodoItem` instâncias e um ícone de tique se o `TodoItem.Done` é de propriedade `true`. Clicar em um item navega para o `TodoItemPage`. Além disso, novos itens podem ser criados clicando no *+* símbolo.
 - **TodoItemPage** – esta página exibe os detalhes para selecionado `TodoItem`e permite que ela seja editada, salvo, excluído e falado.
 
 Além disso, alguns aplicativos de exemplo contêm páginas adicionais que são usadas para gerenciar o processo de autenticação de usuário.

@@ -1,18 +1,17 @@
 ---
-title: "Implementando um modo de exibição"
-description: "Controles de interface de usuário personalizada do xamarin. Forms devem derivar da classe de exibição, que é usada para colocar controles na tela e layouts. Este artigo demonstra como criar um renderizador personalizado para um controle personalizado do xamarin. Forms que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo."
-ms.topic: article
+title: Implementando um modo de exibição
+description: Controles de interface de usuário personalizada do xamarin. Forms devem derivar da classe de exibição, que é usada para colocar controles na tela e layouts. Este artigo demonstra como criar um renderizador personalizado para um controle personalizado do xamarin. Forms que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo.
 ms.prod: xamarin
 ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-a-view"></a>Implementando um modo de exibição
 

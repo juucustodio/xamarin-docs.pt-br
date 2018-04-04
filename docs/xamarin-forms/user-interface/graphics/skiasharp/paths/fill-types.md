@@ -1,18 +1,17 @@
 ---
 title: Os tipos de preenchimento do caminho
 description: Descobrir os efeitos de diferentes possíveis com tipos de preenchimento do caminho SkiaSharp
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 16471c10028c2e4bc91e1cfc1bddeed153680d49
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 88b9dacef7a77d5f18908bdcb696e5172ceaa8c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 

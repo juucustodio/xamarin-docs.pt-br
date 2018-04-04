@@ -1,18 +1,17 @@
 ---
-title: "Localização"
+title: Localização
 description: Aplicativos xamarin. Forms podem ser localizados usando arquivos de recursos do .NET.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 7cae53187c9bc35d55f34dca664e28280cdab062
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="localization"></a>Localização
 
@@ -760,7 +759,7 @@ Esta captura de tela mostra o aplicativo de exemplo do iOS com o idioma específ
 
 ![](localization-images/ios-resources.png "Diretórios de projetos de localização do iOS")
 
-Cada pasta de idioma contém uma cópia de **flag.png**localizado para esse idioma. Se nenhuma imagem for fornecida, o sistema operacional padrão será a imagem na pasta de idioma padrão. Para suporte de Retina completo, você deve fornecer  **@2x**  e  **@3x**  cópias de cada imagem.
+Cada pasta de idioma contém uma cópia de **flag.png**localizado para esse idioma. Se nenhuma imagem for fornecida, o sistema operacional padrão será a imagem na pasta de idioma padrão. Para suporte de Retina completo, você deve fornecer **@2x** e **@3x** cópias de cada imagem.
 
 #### <a name="app-name"></a>Nome do Aplicativo
 

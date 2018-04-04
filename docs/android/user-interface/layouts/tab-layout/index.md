@@ -1,18 +1,17 @@
 ---
 title: Layouts com guias
-description: "Uma visão geral dos Layouts com guias no Android"
-ms.topic: article
+description: Uma visão geral dos Layouts com guias no Android
 ms.prod: xamarin
 ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/23/2017
-ms.openlocfilehash: 02a425c8276524accc088b53c1099e7c2e28d828
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4095944bb630637a2e761af18796dacdef17785c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tabbed-layouts"></a>Layouts com guias
 

@@ -1,17 +1,16 @@
 ---
 title: Trabalhando com tamanhos de tela
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 81e0a9c8d65e354704f01ce70b8eb0b1b67f993f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 600b3de6cbf31bd4c3221eb1bf81eda7b4678c09
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-screen-sizes"></a>Trabalhando com tamanhos de tela
 

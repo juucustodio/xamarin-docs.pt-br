@@ -1,18 +1,17 @@
 ---
-title: "Serviços de localização"
-description: "Este guia apresenta o reconhecimento de local em aplicativos Android e ilustra como obter o local do usuário usando a API do serviço local do Android, bem como o provedor local mescladas disponível com a API de serviços do Google local."
-ms.topic: article
+title: Serviços de localização
+description: Este guia apresenta o reconhecimento de local em aplicativos Android e ilustra como obter o local do usuário usando a API do serviço local do Android, bem como o provedor local mescladas disponível com a API de serviços do Google local.
 ms.prod: xamarin
 ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="location-services"></a>Serviços de localização
 

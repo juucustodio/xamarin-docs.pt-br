@@ -1,18 +1,17 @@
 ---
-title: "Criando uma Face do relógio"
-description: "Este guia explica como implementar um serviço de face de inspecionar personalizado para desgaste Android. São fornecidas instruções passo a passo para a criação de um extraído para o serviço de face inspecionar digital, seguido por mais de código para criar uma face do relógio de estilo analógico."
-ms.topic: article
+title: Criando uma Face do relógio
+description: Este guia explica como implementar um serviço de face de inspecionar personalizado para desgaste Android. São fornecidas instruções passo a passo para a criação de um extraído para o serviço de face inspecionar digital, seguido por mais de código para criar uma face do relógio de estilo analógico.
 ms.prod: xamarin
 ms.assetid: 4D3F9A40-A820-458D-A12A-D784BB11F643
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c02755cc3ff5b46a5a97b6c14185794d8ad538d8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-watch-face"></a>Criando uma Face do relógio
 

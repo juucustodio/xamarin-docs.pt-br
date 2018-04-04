@@ -1,18 +1,17 @@
 ---
-title: "Exibições de coleção"
-description: "Exibições de coleção permitem que o conteúdo a ser exibido usando layouts arbitrários. Eles permitem criar facilmente layouts de grade fora da caixa, e também dar suporte a layouts personalizados."
-ms.topic: article
+title: Exibições de coleção
+description: Exibições de coleção permitem que o conteúdo a ser exibido usando layouts arbitrários. Eles permitem criar facilmente layouts de grade fora da caixa, e também dar suporte a layouts personalizados.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7048eb9c478d7ae10787e158f18b764b258da171
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="collection-views"></a>Exibições de coleção
 
@@ -140,7 +139,7 @@ Decoração exibições são puramente visual que pode ser exibido em um `UIColl
 
 ## <a name="data-source"></a>fonte de dados
 
-Assim como acontece com outras partes do iOS, como `UITableView` e `MKMapView`, `UICollectionView` obtém seus dados de um *fonte de dados*, que é exposto no xamarin por meio de  **`UICollectionViewDataSource`**  classe. Essa classe é responsável por fornecer conteúdo para o `UICollectionView` como:
+Assim como acontece com outras partes do iOS, como `UITableView` e `MKMapView`, `UICollectionView` obtém seus dados de um *fonte de dados*, que é exposto no xamarin por meio de **`UICollectionViewDataSource`** classe. Essa classe é responsável por fornecer conteúdo para o `UICollectionView` como:
 
 -  **Células** – retornado de `GetCell` método.
 -  **Modos de exibição suplementares** – retornado de `GetViewForSupplementaryElement` método.

@@ -1,16 +1,16 @@
 ---
-title: "Erro IBTool: Não foi possível concluir a operação."
-ms.topic: article
+title: 'Erro IBTool: Não foi possível concluir a operação.'
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A804EBC4-2BBF-4A98-A4E8-A455DB2E8A17
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: dd668859428da1abfa3a8e46a0810b2de6645fe2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4647227ad208bfa968f8282a966220a09ab7f4a6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Erro IBTool: Não foi possível concluir a operação.
 
@@ -54,7 +54,7 @@ Você pode alterar esse elemento e adicionar um `LogicalName` para que a imagem 
 </BundleResource>
 ```
 
-No Visual Studio para Mac os `LogicalName` também podem ser definidas usando o `Resource ID` campo para a imagem em **exibição > preenche > propriedades**. (Consulte também: [http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
+No Visual Studio para Mac os `LogicalName` também podem ser definidas usando o `Resource ID` campo para a imagem em **exibição > preenche > propriedades**. (Consulte também: [ http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
 
 Após essa alteração, você precisará atualizar o storyboard e `.xib` arquivos para usar os novos caminhos de imagem de nível superior. O Visual Studio para Mac atualizará automaticamente a lista de autocompletions para o `Image` propriedade no Designer de iOS. No Visual Studio, você precisará editar o caminho manualmente. O Designer do iOS, em seguida, exibirá isso como uma imagem ausente, mas o projeto irá criar e executar corretamente.
 

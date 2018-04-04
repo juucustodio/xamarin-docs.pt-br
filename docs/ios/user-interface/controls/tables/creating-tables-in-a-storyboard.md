@@ -1,18 +1,17 @@
 ---
 title: Trabalhando com tabelas no Designer de iOS
-description: "Nas seções anteriores, podemos explorados desenvolvendo com tabelas. Nesse ponto, a seção quinta e último, vamos agregar o que aprendeu até o momento e criar um aplicativo de lista básico usando um Storyboard."
-ms.topic: article
+description: Nas seções anteriores, podemos explorados desenvolvendo com tabelas. Nesse ponto, a seção quinta e último, vamos agregar o que aprendeu até o momento e criar um aplicativo de lista básico usando um Storyboard.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 869719b1d3514fee4b45f61dcdb34a0bcf54f7b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabalhando com tabelas no Designer de iOS
 
@@ -115,7 +114,7 @@ Em seguida, você precisará criar um botão que adicionará novas tarefas, conf
 Faça o seguinte: 
 
 -  Arraste um **Item de botão de barra** da caixa de ferramentas para a _lado direito da barra de navegação_.
--  No **propriedades de preenchimento**, em **Item de botão de barra** selecione **identificador: adicionar** (para torná-lo um  *+*  botão de mais). 
+-  No **propriedades de preenchimento**, em **Item de botão de barra** selecione **identificador: adicionar** (para torná-lo um *+* botão de mais). 
 -  Dê a ele um nome para que possa ser identificado no código em um estágio posterior. Observe que você precisa dar um nome de classe de controlador de exibição de raiz (por exemplo **ItemViewController**) para permitir que você defina o nome do item de botão de barra.
 
 

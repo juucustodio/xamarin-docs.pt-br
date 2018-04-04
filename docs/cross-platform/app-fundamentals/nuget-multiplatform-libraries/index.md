@@ -1,18 +1,17 @@
 ---
 title: Projetos do NuGet (Nugetizer 3000)
-description: "Crie automaticamente os pacotes do NuGet para compartilhar código entre plataformas, usando o 'Nugetizer 3000'!"
-ms.topic: article
+description: Crie automaticamente os pacotes do NuGet para compartilhar código entre plataformas, usando o 'Nugetizer 3000'!
 ms.prod: xamarin
 ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017
-ms.openlocfilehash: 49e7c00feb697d25d61a5e09b051c41945c260c6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2ef8bfc15aaa2e66683c38584f05b94d20a2a9c3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="nuget-projects-nugetizer-3000"></a>Projetos do NuGet (Nugetizer 3000)
 

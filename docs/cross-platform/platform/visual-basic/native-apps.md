@@ -1,18 +1,17 @@
 ---
 title: Visual Basic.NET em Xamarin iOS e Android
-description: "XThis passo a passo demonstra como criar aplicativos nativos de xamarin e xamarin que utilizam a lógica de negócios escrita em Visual Basic.NET."
-ms.topic: article
+description: XThis passo a passo demonstra como criar aplicativos nativos de xamarin e xamarin que utilizam a lógica de negócios escrita em Visual Basic.NET.
 ms.prod: xamarin
 ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 95817c2ec22c4c27f0f4a933db54105614e54030
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c922102d20eb103eb265d8a7bcb418e5187296a5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Visual Basic.NET em Xamarin iOS e Android
 

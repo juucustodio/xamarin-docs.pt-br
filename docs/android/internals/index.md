@@ -1,18 +1,17 @@
 ---
-title: "Conceitos avançados e internos"
-description: "Arquitetura subjacente atrás de xamarin e do design de API."
-ms.topic: article
+title: Conceitos avançados e internos
+description: Arquitetura subjacente atrás de xamarin e do design de API.
 ms.prod: xamarin
 ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 10/13/2017
-ms.openlocfilehash: d120398d4c59e51cee8da5e8ed2fbe0994ceca76
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 517e21f2decd0dabbd03d752f13831a891ad7138
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-concepts-and-internals"></a>Conceitos avançados e internos
 
@@ -23,7 +22,7 @@ Este artigo explica a arquitetura subjacente por trás de um aplicativo xamarin.
 
 
 
-##  <a name="api-designandroidinternalsapi-designmd"></a>[Projeto de API](~/android/internals/api-design.md)
+##  <a name="api-designandroidinternalsapi-designmd"></a>[Design de API](~/android/internals/api-design.md)
 
 Além das bibliotecas de classes Base que fazem parte do Mono principais, xamarin fornecido com associações para várias APIs Android permitir que os desenvolvedores criem aplicativos Android nativos com Mono.
 

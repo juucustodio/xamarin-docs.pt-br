@@ -1,18 +1,17 @@
 ---
 title: Gatilhos
-description: "Responder a alterações de interface do usuário com XAML"
-ms.topic: article
+description: Responder a alterações de interface do usuário com XAML
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: abfea1dae2699f7d40f2e27285cf8dab3db9400c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3b0cba75c8a62d571e82abb3bd2e27cac1e0d075
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="triggers"></a>Gatilhos
 
@@ -164,7 +163,7 @@ As propriedades expostas pela ação do gatilho podem ser definidas na declaraç
 
 Tenha cuidado ao compartilhamento de gatilhos em uma `ResourceDictionary`, uma instância será compartilhada entre os controles para qualquer estado que está configurado de uma vez se aplicará a todos eles.
 
-Observe que não têm suporte para os disparadores de evento `EnterActions` e `ExitActions` [descrito abaixo](#enterexit).   
+Observe que não têm suporte para os disparadores de evento `EnterActions` e `ExitActions` [descrito abaixo](#enterexit).
 
 <a name="multi" />
 

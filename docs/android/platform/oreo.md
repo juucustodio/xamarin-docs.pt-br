@@ -1,7 +1,6 @@
 ---
 title: Recursos de Oreos
-description: "Como começar a usar o xamarin para desenvolver aplicativos para a versão mais recente do Android."
-ms.topic: article
+description: Como começar a usar o xamarin para desenvolver aplicativos para a versão mais recente do Android.
 ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
@@ -9,11 +8,11 @@ ms.custom: video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 03be7b624ffa9dd8774f291b96be27499cccab2b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a7a8a96ff22cf02d04ffdfff684d454d1a28024
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="oreo-features"></a>Recursos de Oreos
 

@@ -1,18 +1,17 @@
 ---
-title: "Notificações de locais"
-description: "Esta seção mostra como implementar notificações de locais em xamarin. Ele explica os vários elementos de interface do usuário de uma notificação de Android e discute a API do envolvidos com a criação e exibindo uma notificação."
-ms.topic: article
+title: Notificações de locais
+description: Esta seção mostra como implementar notificações de locais em xamarin. Ele explica os vários elementos de interface do usuário de uma notificação de Android e discute a API do envolvidos com a criação e exibindo uma notificação.
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: f13515326bd75f2b2c15e2b6059e6f829814ea5c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 97c8372656f0cbfa5b8f7bb12d15b00feac4b5c3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="local-notifications"></a>Notificações de locais
 

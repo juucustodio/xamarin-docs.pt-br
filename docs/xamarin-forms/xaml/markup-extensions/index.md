@@ -1,18 +1,17 @@
 ---
-title: "Extensões de marcação XAML"
-description: "Estenda o intervalo de fontes do qual XAML atributos são definidos"
-ms.topic: article
+title: Extensões de marcação XAML
+description: Estenda o intervalo de fontes do qual XAML atributos são definidos
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 11889115b65608c750690c33052a9c86f7081e25
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b81bc4b31edd1d8b8f5f43f97885c38e889dd32c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xaml-markup-extensions"></a>Extensões de marcação XAML
 
@@ -46,11 +45,11 @@ Qualquer configuração de atributo entre chaves é *sempre* uma extensão de ma
 
 Este artigo é dividido em duas partes:
 
-## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Consumindo extensões de marcação XAML](consuming.md)  
+## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Consumo de extensões de marcação XAML](consuming.md)  
 
 Use as extensões de marcação XAML definidas em xamarin. Forms.
 
-## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Criando extensões de marcação XAML](creating.md) 
+## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Criação de extensões de marcação XAML](creating.md) 
 
 Escreva suas próprias extensões de marcação XAML personalizados.
 
@@ -60,6 +59,6 @@ Escreva suas próprias extensões de marcação XAML personalizados.
 
 - [Extensões de marcação (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 - [Capítulo de extensões de marcação XAML do catálogo xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
-- [Dicionários de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinâmicos](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)

@@ -1,18 +1,17 @@
 ---
-title: "Passo a passo - usando notificações Local no xamarin"
-description: "Nesta seção examinaremos como usar notificações locais em um aplicativo xamarin. Demonstrar os conceitos básicos de criação e publicação de uma notificação que será exibida em um alerta quando recebidas pelo aplicativo."
-ms.topic: article
+title: Passo a passo - usando notificações Local no xamarin
+description: Nesta seção examinaremos como usar notificações locais em um aplicativo xamarin. Demonstrar os conceitos básicos de criação e publicação de uma notificação que será exibida em um alerta quando recebidas pelo aplicativo.
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 846b292aed73a4980f4ce711ecefe4382fa7a321
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: bb133d16f12249cbd31e4fce2b227162b4b28333
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Passo a passo - usando notificações Local no xamarin
 

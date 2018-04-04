@@ -1,17 +1,17 @@
 ---
-title: "Dicas de Solução de Problemas"
-ms.topic: article
+title: Dicas de Solução de Problemas
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 015fff63c612c3acf29681b90c1e945c5e460034
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 961f9f38687790343f225d95c74e00e98f594c28
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-tips"></a>Dicas de Solução de Problemas
 
@@ -200,7 +200,7 @@ Há quatro mensagens de consequência:
 -  Destruição de referência fraca global: essas são as linhas que começam com *-w-* .
 
 
-Em todas as mensagens, o *grefc* valor é a contagem de referências globais que criou o xamarin, enquanto o *grefwc* valor é a contagem de referências globais que criou o xamarin. O *tratar* ou *identificador obj* valor é o valor do identificador JNI e o caractere após o '  */* ' é o tipo de valor de identificador: */L* para referência local, */G* para referências globais, e */W* para referências fracas e global.
+Em todas as mensagens, o *grefc* valor é a contagem de referências globais que criou o xamarin, enquanto o *grefwc* valor é a contagem de referências globais que criou o xamarin. O *tratar* ou *identificador obj* valor é o valor do identificador JNI e o caractere após o ' */*' é o tipo de valor de identificador: */L* para referência local, */G* para referências globais, e */W* para referências fracas e global.
 
 Como parte do processo de GC, referências globais (+ + g) são convertidos em referências fracas e globais (fazendo com que a propriedades + w + e - g-), um GC lado Java é iniciado e, em seguida, a referência fraca de global é verificada para ver se ele foi coletado. Se ele ainda estiver ativo, um novo gref é criado em torno de referência fraca (+ g +, -w-), caso contrário, a referência fraca é destruída (-w).
 
@@ -270,7 +270,7 @@ Isso deve proporcionar a você em funcionamento. Se você continuar tendo proble
 
 ## <a name="receiving-activation-incomplete-error-message"></a>Recebendo ' mensagem de erro incompleta de ativação
 
-Esse problema pode ocorrer ao usar o xamarin para Visual Studio. Para resolver esse problema, envie os logs do seguinte local para  *contact@xamarin.com* .
+Esse problema pode ocorrer ao usar o xamarin para Visual Studio. Para resolver esse problema, envie os logs do seguinte local para *contact@xamarin.com*.
 
 -  Local do log: **% LocalAppData %\\Xamarin\\Logs**
 
@@ -301,7 +301,7 @@ Para fazer isso, localize sua plataforma de escolha abaixo e siga as etapas:
 5. Insira suas credenciais
 6. Verifique se há atualizações
 
-Se essa mensagem de erro continuar a aparecer, envie um e-mail  **contact@xamarin.com** .
+Se essa mensagem de erro continuar a aparecer, envie um e-mail **contact@xamarin.com**.
 
 
 

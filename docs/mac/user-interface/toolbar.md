@@ -1,18 +1,17 @@
 ---
 title: Barras de ferramentas
-description: "Este artigo descreve como trabalhar com barras de ferramentas em um aplicativo Xamarin.Mac. Ele aborda as barras de ferramentas de criação e manutenção no Xcode e construtor de Interface, expondo-os para o código e trabalhar com eles por meio de programação."
-ms.topic: article
+description: Este artigo descreve como trabalhar com barras de ferramentas em um aplicativo Xamarin.Mac. Ele aborda as barras de ferramentas de criação e manutenção no Xcode e construtor de Interface, expondo-os para o código e trabalhar com eles por meio de programação.
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 92b90f8d4655ea89b67e81f3235b6fd9b6d92833
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 729c5c69d80c52047585d1026d7c675f3267f34e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="toolbars"></a>Barras de ferramentas
 

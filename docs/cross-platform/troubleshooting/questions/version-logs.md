@@ -1,17 +1,17 @@
 ---
-title: "Onde posso encontrar meu logs e informações de versão?"
-ms.topic: article
+title: Onde posso encontrar meu logs e informações de versão?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d6ab8b939b7a6f8c7e66985a8c4238064ee1543
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a669daf5361e35305182922cdcb7c6a1fb92db47
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Onde posso encontrar meu logs e informações de versão?
 
@@ -214,7 +214,7 @@ Consulte também o [o Log de depuração do Android](~/android/deploy-test/debug
 
 **Janela > dispositivos > ${DeviceName}**
 
-Relatórios de falha estão disponíveis sob o **Exibir Logs de dispositivo** botão. O log do sistema para o dispositivo aparece na parte inferior da janela em seta divulgação <img alt="Disclosure arrow" src="https://kb.xamarin.com/customer/portal/attachments/382618" style="width: 15px; height: 12px;" />.
+Relatórios de falha estão disponíveis sob o **Exibir Logs de dispositivo** botão. O log do sistema para o dispositivo aparece na parte inferior da janela em direção a divulgação de informações <img alt="Disclosure arrow" src="https://kb.xamarin.com/customer/portal/attachments/382618" style="width: 15px; height: 12px;" />.
 
 #### <a name="xcode-5"></a>Xcode 5
 

@@ -1,18 +1,17 @@
 ---
-title: "iOS 7 visão geral sobre a Interface do usuário"
-description: "iOS 7 apresenta uma grande quantidade de alterações na interface do usuário. Este artigo destaca algumas das alterações maiores, a aparência visual de controles e APIs que dão suporte ao novo design."
-ms.topic: article
+title: iOS 7 visão geral sobre a Interface do usuário
+description: iOS 7 apresenta uma grande quantidade de alterações na interface do usuário. Este artigo destaca algumas das alterações maiores, a aparência visual de controles e APIs que dão suporte ao novo design.
 ms.prod: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3d70aff4df91120402e2987598b8973172b46245
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3f5ea8abd41e718f9ac947c5acb290dffe400ddd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 visão geral sobre a Interface do usuário
 

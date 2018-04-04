@@ -1,18 +1,17 @@
 ---
-title: "Instalação e Configuração"
-description: "Este artigo explica as etapas de instalação e os detalhes de configuração necessárias para preparar seu computador e dispositivos para o desenvolvimento de desgaste Android. No final deste artigo, você terá um trabalho de instalação desgaste xamarin integrada ao Visual Studio para Mac e/ou Microsoft Visual Studio, e você estará pronto para começar a criar seu primeiro aplicativo xamarin desgaste."
-ms.topic: article
+title: Instalação e Configuração
+description: Este artigo explica as etapas de instalação e os detalhes de configuração necessárias para preparar seu computador e dispositivos para o desenvolvimento de desgaste Android. No final deste artigo, você terá um trabalho de instalação desgaste xamarin integrada ao Visual Studio para Mac e/ou Microsoft Visual Studio, e você estará pronto para começar a criar seu primeiro aplicativo xamarin desgaste.
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 012f563dcdaa70e33d641a4d8fb52df1622c260a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 86ed62075f5c39eaf7b0e348020f4a9361764727
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setup-and-installation"></a>Instalação e Configuração
 
@@ -33,7 +32,7 @@ O exemplo a seguir é necessário para criar aplicativos baseados em Xamarin And
 Você pode continuar a usar [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se você estiver desenvolvendo especificamente para API nível 23 ou anterior.
 
 > [!IMPORTANT]
-> Xamarin não oferece suporte para JDK 9.
+> O Xamarin.Android não é compatível com o JDK 9.
 
 ## <a name="installation"></a>Instalação
 

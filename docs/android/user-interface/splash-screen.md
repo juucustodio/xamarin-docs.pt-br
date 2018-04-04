@@ -1,18 +1,17 @@
 ---
 title: Splash Screen
-description: "Um aplicativo do Android leva algum tempo para iniciar, especialmente quando o aplicativo é iniciado pela primeira vez em um dispositivo. Uma tela inicial pode exibir o início até o progresso para o usuário ou para indicar a identidade visual."
-ms.topic: article
+description: Um aplicativo do Android leva algum tempo para iniciar, especialmente quando o aplicativo é iniciado pela primeira vez em um dispositivo. Uma tela inicial pode exibir o início até o progresso para o usuário ou para indicar a identidade visual.
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 9f88899d390f7f268f1b2f435617dc952f9eb205
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="splash-screen"></a>Splash Screen
 

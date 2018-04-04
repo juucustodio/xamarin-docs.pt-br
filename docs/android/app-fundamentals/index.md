@@ -1,18 +1,17 @@
 ---
-title: "Conceitos básicos de aplicativo"
+title: Conceitos básicos de aplicativo
 description: Conceitos fundamentais do aplicativo
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 4abb8c823c62bc62fd2e6f717cc1b5bde9057e4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfb31fa6cac7c4848054cd58a1e144c2ac944262
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Conceitos básicos de aplicativo
 
@@ -59,7 +58,7 @@ Você pode usar o suporte de ferramentas incorporado ao Visual Studio para Mac o
 
 
 
-##  <a name="graphics-and-animationandroidapp-fundamentalsgraphics-and-animationmd"></a>[Animação e elementos gráficos](~/android/app-fundamentals/graphics-and-animation.md)
+##  <a name="graphics-and-animationandroidapp-fundamentalsgraphics-and-animationmd"></a>[Gráficos e animação](~/android/app-fundamentals/graphics-and-animation.md)
 
 Android fornece uma estrutura muito diferentes e avançada para dar suporte a animações e gráficos 2D. Este documento apresenta estas estruturas e discute como criar animações e elementos gráficos personalizados e usá-los em um aplicativo xamarin.
 

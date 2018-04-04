@@ -1,18 +1,17 @@
 ---
-title: "Trabalhando com modos de exibição de tabela"
-description: "Este artigo aborda criando e trabalhando com modos de exibição de tabela e controladores de exibição de tabela dentro de um aplicativo Xamarin.tvOS."
-ms.topic: article
+title: Trabalhando com modos de exibição de tabela
+description: Este artigo aborda criando e trabalhando com modos de exibição de tabela e controladores de exibição de tabela dentro de um aplicativo Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: af562ac03f2cd5f293f99c7509000499ad5deaa4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8864e85e4d657fc242f6c06b21c815f62055c9f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-table-views"></a>Trabalhando com modos de exibição de tabela
 

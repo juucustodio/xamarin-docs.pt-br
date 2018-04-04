@@ -1,18 +1,17 @@
 ---
-title: "Instruções passo a passo - Criando uma interface do usuário com guias com TabHost"
-description: "Este artigo traz orientações durante a criação de uma interface de usuário com guias em xamarin usando a API TabHost."
-ms.topic: article
+title: Instruções passo a passo - Criando uma interface do usuário com guias com TabHost
+description: Este artigo traz orientações durante a criação de uma interface de usuário com guias em xamarin usando a API TabHost.
 ms.prod: xamarin
 ms.assetid: AD6E2173-974E-477C-940F-0CAB5E53326D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ca9a3f3d31707205cdcd4e0d8e74fa303ccba047
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>Instruções passo a passo - Criando uma interface do usuário com guias com TabHost
 

@@ -1,18 +1,17 @@
 ---
 title: Verificando o Status da bateria
-description: "Usar DependencyService nativamente para acessar as informações da bateria para cada plataforma"
-ms.topic: article
+description: Usar DependencyService nativamente para acessar as informações da bateria para cada plataforma
 ms.prod: xamarin
 ms.assetid: CF1C5A73-84ED-407D-BDC5-EB1D83D2D3DB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 78832c396f8968769f3134728cd435555aecbc8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3f098e7f403a4f5e9fd924b8745348197cd4f843
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="checking-battery-status"></a>Verificando o Status da bateria
 

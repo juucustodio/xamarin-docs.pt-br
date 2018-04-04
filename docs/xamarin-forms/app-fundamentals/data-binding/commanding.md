@@ -1,18 +1,17 @@
 ---
 title: A Interface de comando
-description: "Implementar o `Command` propriedade com associações de dados"
-ms.topic: article
+description: Implementar o `Command` propriedade com associações de dados
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 0456742ca30257670375e3ae781dcdc49707e2ce
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 7f8b40624b9434347f69a473eed3bdff5c1d3d33
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="the-command-interface"></a>A Interface de comando
 

@@ -1,18 +1,17 @@
 ---
-title: "Introdução ao desenvolvimento de jogos com MonoGame"
-description: "Este passo a passo de várias parte mostra como criar um aplicativo simples de 2D usando MonoGame.  Ele aborda o jogo comuns do jogo conceitos de programação, como gráficos, de entrada, entidades e física."
-ms.topic: article
+title: Introdução ao desenvolvimento de jogos com MonoGame
+description: Este passo a passo de várias parte mostra como criar um aplicativo simples de 2D usando MonoGame.  Ele aborda o jogo comuns do jogo conceitos de programação, como gráficos, de entrada, entidades e física.
 ms.prod: xamarin
 ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 8161920139413cd1b28adcebaf56e6d8265120ef
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9fb19b86ca303f8be3506d267dd75dc9db6cfca6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introdução ao desenvolvimento de jogos com MonoGame
 

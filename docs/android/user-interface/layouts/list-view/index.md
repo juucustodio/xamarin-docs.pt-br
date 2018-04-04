@@ -1,18 +1,17 @@
 ---
 title: ListView
-description: "ListView é um componente importante da interface do usuário dos aplicativos do Android; ele é usado em qualquer lugar da lista curta de opções de menu para listas longas de contatos ou Favoritos do internet. Ele fornece uma maneira simples para apresentar uma lista de rolagem de linhas que pode ser formatado com um estilo interno ou personalizado extensivamente."
-ms.topic: article
+description: ListView é um componente importante da interface do usuário dos aplicativos do Android; ele é usado em qualquer lugar da lista curta de opções de menu para listas longas de contatos ou Favoritos do internet. Ele fornece uma maneira simples para apresentar uma lista de rolagem de linhas que pode ser formatado com um estilo interno ou personalizado extensivamente.
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2018
-ms.openlocfilehash: 4225e45ecfe4a4a2cdb7e75b94823fc8fcd29fc4
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 8499b9f186c12df22518893b6677cab22f0a3568
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="listview"></a>ListView
 

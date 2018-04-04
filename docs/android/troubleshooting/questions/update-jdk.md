@@ -1,18 +1,18 @@
 ---
-title: "Como faço para atualizar a versão do Java Development Kit (JDK)?"
-description: "Este artigo ilustra como atualizar a versão do Java Development Kit (JDK) no Windows e Mac."
-ms.topic: article
+title: Como faço para atualizar a versão do Java Development Kit (JDK)?
+description: Este artigo ilustra como atualizar a versão do Java Development Kit (JDK) no Windows e Mac.
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 126d4b2eaf1c2408704c0f2d11c2f88a7c25f406
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dcfc5e406e60ac72fb1ca1e9cfb0395d17074b2c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Como faço para atualizar a versão do Java Development Kit (JDK)?
 

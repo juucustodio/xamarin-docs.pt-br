@@ -1,18 +1,17 @@
 ---
-title: "Conceitos básicos de aplicativo"
+title: Conceitos básicos de aplicativo
 description: Conceitos fundamentais do aplicativo
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: c5b823370e5b65fbcf9ba366cb89c05e003b1a89
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f5bd66cfcfb6ee06abac7bec9151e7325ebb32a2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Conceitos básicos de aplicativo
 

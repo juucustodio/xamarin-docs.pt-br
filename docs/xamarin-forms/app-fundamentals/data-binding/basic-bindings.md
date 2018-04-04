@@ -1,18 +1,17 @@
 ---
-title: "Associações básicas"
-description: "O contexto de associação, fontes e destinos de vinculação de dados"
-ms.topic: article
+title: Associações básicas
+description: O contexto de associação, fontes e destinos de vinculação de dados
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b82c0471985306962133c3bf7b084b49d5588bb6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 065258acacb8469b90dd2ca04286f0686dc90063
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="basic-bindings"></a>Associações básicas
 

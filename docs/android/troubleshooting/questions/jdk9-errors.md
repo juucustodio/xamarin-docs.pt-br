@@ -1,18 +1,18 @@
 ---
 title: Xamarin e JDK 9
 description: Este artigo explica como resolver erros de Java Development Kit (JDK) 9 em xamarin.
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7DCF0985-F77D-4A68-AC54-10C9846E189A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 9e1dd2fac015783e06bad6656f09a687f3abba2c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8857823884447f22b7bc5535f43369671d3285bc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinandroid-and-jdk-9"></a>Xamarin e JDK 9
 

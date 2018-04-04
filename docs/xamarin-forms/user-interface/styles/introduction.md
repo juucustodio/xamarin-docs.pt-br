@@ -1,18 +1,17 @@
 ---
-title: "Introdução aos estilos"
-description: "Estilos permitem a aparência de elementos visuais para serem personalizados. Estilos definidos para um tipo específico e contenham valores para as propriedades disponíveis nesse tipo."
-ms.topic: article
+title: Introdução aos estilos
+description: Estilos permitem a aparência de elementos visuais para serem personalizados. Estilos definidos para um tipo específico e contenham valores para as propriedades disponíveis nesse tipo.
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ce5a7976f5bac68ca01b30a8d437aa83b8360580
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 453c4d6edafd6493272f8ca0435fcc86e2f3b2f7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-styles"></a>Introdução aos estilos
 

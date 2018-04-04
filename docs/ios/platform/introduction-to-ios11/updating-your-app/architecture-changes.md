@@ -1,18 +1,17 @@
 ---
-title: "Alterações de arquitetura"
+title: Alterações de arquitetura
 description: Explorando os novos recursos do iOS 11
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e233d83eb9c5cb360add36da100963b95e54514
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6dd874fd803d2b3de21b0b604cbc2bafa5bf1aec
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="architecture-changes"></a>Alterações de arquitetura
 

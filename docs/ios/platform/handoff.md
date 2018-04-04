@@ -1,17 +1,16 @@
 ---
 title: Entrega
-description: "Este artigo abrange trabalhando com entrega em um aplicativo xamarin para transferir as atividades do usuário entre os aplicativos em execução no usuário 's outros dispositivos."
-ms.topic: article
+description: Este artigo abrange trabalhando com entrega em um aplicativo xamarin para transferir as atividades do usuário entre os aplicativos em execução no usuário 's outros dispositivos.
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bb665c7ffd4241fac14be13ebd8f113d11afd417
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="handoff"></a>Entrega
 
@@ -463,7 +462,7 @@ Esse arquivo JSON contém um dicionário que especifica uma lista de IDs de apli
 }
 ```
 
-Para assinar o arquivo JSON (para que ele tenha o correto `Content-Type` de `application/pkcs7-mime`), use o **Terminal** aplicativo e um `openssl` com um certificado e chave emitido por uma autoridade de certificação confiada para iOS (consulte [ http://support.Apple.com/kb/ht5012](http://support.apple.com/kb/ht5012) para obter uma lista). Por exemplo:
+Para assinar o arquivo JSON (para que ele tenha o correto `Content-Type` de `application/pkcs7-mime`), use o **Terminal** aplicativo e um `openssl` com um certificado e chave emitido por uma autoridade de certificação confiada para iOS (consulte [ http://support.apple.com/kb/ht5012 ](http://support.apple.com/kb/ht5012) para obter uma lista). Por exemplo:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",

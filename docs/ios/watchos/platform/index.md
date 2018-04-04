@@ -1,20 +1,19 @@
 ---
-title: Recursos de plataforma
-description: "Recursos de específicos de Apple Watch para incluir em aplicativos de watchOS."
-ms.topic: article
+title: Recursos da plataforma
+description: Recursos de específicos de Apple Watch para incluir em aplicativos de watchOS.
 ms.prod: xamarin
 ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 16e779761aa164ea9890547e3baca527a3592021
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b90c799f2635221a2c19bda426c501737600f88
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="platform-features"></a>Recursos de plataforma
+# <a name="platform-features"></a>Recursos da plataforma
 
 _Recursos de específicos de Apple Watch para incluir em aplicativos de watchOS._
 
@@ -43,7 +42,7 @@ Saiba como fornecer tratamento em seu aplicativo de inspeção de notificação 
 Adicione suporte complicativo para exibir os dados atualizados na face do relógio.
 
 
-## <a name="proactive-suggestionsioswatchosplatformproactive-suggestionsmd"></a>[Sugestões proativos](~/ios/watchos/platform/proactive-suggestions.md)
+## <a name="proactive-suggestionsioswatchosplatformproactive-suggestionsmd"></a>[Sugestões proativas](~/ios/watchos/platform/proactive-suggestions.md)
 
 watchOS 3 permite que o aplicativo proativamente apresentar informações ao usuário em contextos de dado. Para dar suporte a esse recurso, o [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) agora inclui o `MapItem` propriedade que permite que o aplicativo forneça informações de local para uso posterior por outros aplicativos.
 

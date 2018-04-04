@@ -1,18 +1,17 @@
 ---
-title: "Padrões de aplicativo empresarial usando eBook xamarin. Forms"
-description: "Diretrizes de arquitetura para desenvolvimento de aplicativos de empresa xamarin. Forms testáveis adaptáveis e sustentáveis"
-ms.topic: article
+title: Padrões de aplicativo empresarial usando eBook xamarin. Forms
+description: Diretrizes de arquitetura para desenvolvimento de aplicativos de empresa xamarin. Forms testáveis adaptáveis e sustentáveis
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 7ed546ac975ce1956d94d509486e4cfb25d28100
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: b7f69e987eb4f628dfaf5422bc1ce52108d90634
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Padrões de aplicativo empresarial usando eBook xamarin. Forms
 
@@ -40,7 +39,7 @@ Injeção de dependência habilita desacoplar tipos concretos do código que dep
 
 Contêineres de injeção de dependência reduzem o acoplamento entre objetos, fornecendo um recurso de instância de classe e gerenciar seu tempo de vida com base na configuração do contêiner. Durante a criação de objetos, o contêiner injeta quaisquer dependências que requer que o objeto nele. Se essas dependências ainda não tem sido criadas, o contêiner cria e suas dependências é resolvido primeiro.
 
-## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[Comunicação entre livremente acoplada componentes](communicating-between-loosely-coupled-components.md)
+## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[Comunicação entre componentes flexíveis](communicating-between-loosely-coupled-components.md)
 
 O xamarin. Forms [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/) classe implementa a publicação-assinatura padrão, permitindo que a comunicação baseada em mensagens entre componentes inconvenientes vincular por referências de objeto e do tipo. Esse mecanismo permite Publicadores e assinantes para se comunicar sem ter uma referência uns aos outros, ajudando a reduzir as dependências entre componentes, permitindo também que os componentes ser desenvolvidos e testados independentemente.
 
@@ -56,7 +55,7 @@ Qualquer aplicativo que aceita a entrada de usuários deve garantir que a entrad
 
 No contexto do modelo do modelo-ViewModel (MVVM) padrão, um modelo de exibição ou modelo geralmente precisará executar a validação de dados e sinalizar erros de validação para o modo de exibição para que o usuário poderá corrigi-los.
 
-## <a name="configuration-managementconfiguration-managementmd"></a>[Gerenciamento de configuração](configuration-management.md)
+## <a name="configuration-managementconfiguration-managementmd"></a>[Gerenciamento de configurações](configuration-management.md)
 
 As configurações permitem a separação de dados que define o comportamento de um aplicativo de código, permitindo que o comportamento a ser alterado sem recriar o aplicativo. Configurações do aplicativo são dados que um aplicativo cria e gerencia e as configurações do usuário são as configurações personalizáveis de um aplicativo que afetam o comportamento do aplicativo e não requerem frequente ajuste novamente.
 

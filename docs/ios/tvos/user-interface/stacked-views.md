@@ -1,18 +1,17 @@
 ---
-title: "Trabalhando com exibição empilhada"
-description: "Este artigo aborda criando e trabalhando com exibição empilhada dentro de um aplicativo Xamarin.tvOS."
-ms.topic: article
+title: Trabalhando com exibição empilhada
+description: Este artigo aborda criando e trabalhando com exibição empilhada dentro de um aplicativo Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: efc0da0b0f0a800069efb00a402361a8b0cd7f1d
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a6300e4da47022199c0503e6be63b0c90f15654d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-stacked-view"></a>Trabalhando com exibição empilhada
 

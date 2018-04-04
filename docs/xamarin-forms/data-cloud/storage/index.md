@@ -1,18 +1,17 @@
 ---
 title: Armazenando arquivos na nuvem
-description: "Armazenamento do Azure é uma solução de armazenamento de nuvem escalonáveis que pode ser usada para armazenar dados estruturados e não estruturados."
-ms.topic: article
+description: Armazenamento do Azure é uma solução de armazenamento de nuvem escalonáveis que pode ser usada para armazenar dados estruturados e não estruturados.
 ms.prod: xamarin
 ms.assetid: 2C0EDFCE-6DB4-4BF6-B978-E64614AC9DB6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 62057a9c00d2d35cb085421f6f021b20247e64b0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3e44fcc2dfadf6c06e78df956615087a4468d5d2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="storing-files-in-the-cloud"></a>Armazenando arquivos na nuvem
 

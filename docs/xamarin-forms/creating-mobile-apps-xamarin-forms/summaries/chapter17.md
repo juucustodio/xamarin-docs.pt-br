@@ -1,17 +1,16 @@
 ---
-title: "Resumo do capítulo 17. Controle de grade"
-ms.topic: article
+title: Resumo do capítulo 17. Controle de grade
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 4f76b1060ee8a672319683525470aee00e3db001
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 6aad4da944393caf404af96e50330ce1bf8a14d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumo do capítulo 17. Controle de grade
 

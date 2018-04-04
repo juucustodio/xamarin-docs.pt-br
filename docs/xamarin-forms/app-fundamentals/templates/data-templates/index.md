@@ -1,18 +1,17 @@
 ---
 title: Modelos de dados
-description: "Um DataTemplate usado para especificar a aparência dos dados em controles com suporte e normalmente associa aos dados a serem exibidos."
-ms.topic: article
+description: Um DataTemplate usado para especificar a aparência dos dados em controles com suporte e normalmente associa aos dados a serem exibidos.
 ms.prod: xamarin
 ms.assetid: 838F4BDB-B719-457F-8633-27E9B267A2A0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 99a00c98471ae85af2a8cba2e1e52444370a9332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 14de42acd1bde00df146a9fe5d772366735ed295
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data-templates"></a>Modelos de dados
 

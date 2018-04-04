@@ -1,18 +1,17 @@
 ---
 title: Solução de problemas
 description: Problemas conhecidos com o Xamarin Live Player e como corrigi-los.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
-ms.openlocfilehash: ab075cad0c3f3456ed23f3eb175dcdb3aa493510
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: f9d5d0e4a2217d48577c60940fb027b3a77416d2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 

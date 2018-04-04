@@ -1,18 +1,17 @@
 ---
 title: Reconhecimento de fala
-description: "Este artigo apresenta a nova API de fala e mostra como implementá-la em um aplicativo xamarin dá suporte ao reconhecimento de fala contínua e transcrever da fala (fluxos de áudio ao vivo ou gravados) em texto."
-ms.topic: article
+description: Este artigo apresenta a nova API de fala e mostra como implementá-la em um aplicativo xamarin dá suporte ao reconhecimento de fala contínua e transcrever da fala (fluxos de áudio ao vivo ou gravados) em texto.
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e868c0ee71688e208c5217d9f5a89ea3acec988c
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: fa010f57d163cabe544176608cff2eb6efe872ad
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="speech-recognition"></a>Reconhecimento de fala
 

@@ -1,18 +1,17 @@
 ---
-title: "Estrutura de notificações de usuário"
-description: "Este artigo aborda todas as maneiras que a notificação de usuários foram aprimorada por iOS 10 e como usá-los em um aplicativo xamarin."
-ms.topic: article
+title: Estrutura de notificações de usuário
+description: Este artigo aborda todas as maneiras que a notificação de usuários foram aprimorada por iOS 10 e como usá-los em um aplicativo xamarin.
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/01/2016
-ms.openlocfilehash: 1ab0a4add92db21c352dbaeadc71a3ff1e3d0cf9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 9b8671fe54f4017e81d7151cc42ea9df2bf9fa05
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-notifications-framework"></a>Estrutura de notificações de usuário
 

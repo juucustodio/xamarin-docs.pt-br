@@ -1,18 +1,17 @@
 ---
 title: Configurar seu aplicativo tvOS no iTunes conectar
-description: "Este artigo fornece um guia complementar para o iOS configurar seu aplicativo na iTunes conectar-se para as configurações específicas de tvOS."
-ms.topic: article
+description: Este artigo fornece um guia complementar para o iOS configurar seu aplicativo na iTunes conectar-se para as configurações específicas de tvOS.
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b6fad9eadbff272f86f9e426e3f6eb5d48847127
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d082a980572349da1b7e6155b3aa4de41512796f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configurar seu aplicativo tvOS no iTunes conectar
 

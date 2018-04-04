@@ -1,18 +1,17 @@
 ---
 title: Trabalhando com listas de propriedades
-description: "Este documento apresenta o Visual Studio para o editor de lista (. plist) de propriedade gráfica e avançados do Mac para trabalhar com info. plist e Entitlements.plist. Ele ilustra os ícones de configuração e imagens de inicialização para aplicativos do iOS do Visual Studio para Mac."
-ms.topic: article
+description: Este documento apresenta o Visual Studio para o editor de lista (. plist) de propriedade gráfica e avançados do Mac para trabalhar com info. plist e Entitlements.plist. Ele ilustra os ícones de configuração e imagens de inicialização para aplicativos do iOS do Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 778e70f6817b71e5910aa85425d46261dfe9c803
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f6ee7a606243f5d21d827546b528ca5d9d3f0281
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-property-lists"></a>Trabalhando com listas de propriedades
 

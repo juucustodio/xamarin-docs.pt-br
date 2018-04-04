@@ -1,18 +1,17 @@
 ---
-title: "Implantação e Teste"
+title: Implantação e Teste
 description: Dispositivos de teste e carregando a loja de aplicativos
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4c5b9fcbfaabbfc78da1064396dc3fec2d3fde8d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 47c63a01d435626fd1637b6ed5f5bb1755c717af
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
 

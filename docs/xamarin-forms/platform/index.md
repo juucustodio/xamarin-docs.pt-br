@@ -1,20 +1,19 @@
 ---
-title: Recursos de plataforma
-description: "Tirar proveito dos recursos específicos da plataforma com xamarin. Forms"
-ms.topic: article
+title: Recursos da plataforma
+description: Tirar proveito dos recursos específicos da plataforma com xamarin. Forms
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 950cc4a8611b05c22825ef89a85827fa0d3e5f7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="platform-features"></a>Recursos de plataforma
+# <a name="platform-features"></a>Recursos da plataforma
 
 Xamarin. Forms é extensível e permite que você incorpore recursos específicos de plataforma usando [efeitos](~/xamarin-forms/app-fundamentals/effects/index.md), [renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), o [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md), o [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md)e muito mais.
 
@@ -38,11 +37,11 @@ Alguns estilos de iOS podem ser executados por meio de **Info. plist** e `UIAppe
 
 Xamarin. Forms agora tem suporte para aplicativos macOS visualização.
 
-## <a name="native-formsnative-formsmd"></a>[Formulários nativo](native-forms.md)
+## <a name="native-formsnative-formsmd"></a>[Formulários nativos](native-forms.md)
 
 Formulários nativo permitem xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal).
 
-## <a name="native-viewsnative-viewsindexmd"></a>[Modos de exibição nativo](native-views/index.md)
+## <a name="native-viewsnative-viewsindexmd"></a>[Exibições nativas](native-views/index.md)
 
 Exibições nativo do iOS, Android e a plataforma Universal do Windows podem ser referenciadas diretamente do xamarin. Forms. Propriedades e manipuladores de eventos podem ser definidos em exibições nativo, e eles podem interagir com exibições xamarin. Forms.
 

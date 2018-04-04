@@ -1,18 +1,17 @@
 ---
-title: "Implantação e Teste"
-description: "Como testar seu aplicativo de desgaste em um dispositivo Android (ou emulador) e prepará-lo para implantação."
-ms.topic: article
+title: Implantação e Teste
+description: Como testar seu aplicativo de desgaste em um dispositivo Android (ou emulador) e prepará-lo para implantação.
 ms.prod: xamarin
 ms.assetid: 3D8E5A97-F719-4E8C-B777-108DFF20C91F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/19/2017
-ms.openlocfilehash: f80be1c61d28ce73342399a0b4f2346007cd14de
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e6472b3bf07750338d9ada7ca62f0a5c9e2c8a7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
 
@@ -23,7 +22,7 @@ Quando o aplicativo estiver pronto, o último tópico explica como preparar seu 
 
 Como depurar um aplicativo xamarin desgaste no emulador do SDK do Android.
 
-## <a name="debug-on-a-wear-deviceandroidweardeploy-testdebug-on-devicemd"></a>[Depurar em um dispositivo de desgaste](~/android/wear/deploy-test/debug-on-device.md)
+## <a name="debug-on-a-wear-deviceandroidweardeploy-testdebug-on-devicemd"></a>[Depurar em um dispositivo Wear](~/android/wear/deploy-test/debug-on-device.md)
 
 Como configurar um dispositivo Android, para que os aplicativos xamarin desgaste podem ser implantados a ele diretamente do Visual Studio ou Visual Studio para Mac.
 

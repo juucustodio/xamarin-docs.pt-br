@@ -1,18 +1,17 @@
 ---
 title: Controles
-description: "Blocos de construção para a criação de Interfaces de usuário do xamarin"
-ms.topic: article
+description: Blocos de construção para a criação de Interfaces de usuário do xamarin
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 25afd284fc88df4f23aaa3dfa1f47a3dc4fee551
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8994a8988c0e32e85aedcd9110e3583195843862
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="controls"></a>Controles
 
@@ -26,7 +25,7 @@ Xamarin expõe todos os controles de interface de usuário nativa (widgets) forn
 ![Barra de ação de exemplo](images/action-bar.png)
 
 
-## <a name="auto-completeandroiduser-interfacecontrolsauto-completemd"></a>[Preenchimento automático](~/android/user-interface/controls/auto-complete.md)
+## <a name="auto-completeandroiduser-interfacecontrolsauto-completemd"></a>[Preenchimento Automático](~/android/user-interface/controls/auto-complete.md)
 
 `AutoCompleteTextView` é um elemento de exibição de texto editável que mostre sugestões de preenchimento automaticamente enquanto o usuário está digitando. A lista de sugestões é exibida em uma lista suspensa menu no qual o usuário pode escolher um item para substituir o conteúdo da caixa de edição com.
 
@@ -76,7 +75,7 @@ O *barra de navegação* fornece controles de navegação em dispositivos que n�
 ![Barra de navegação de exemplo](images/navigation-bar.png)
 
 
-## <a name="pickersandroiduser-interfacecontrolspickersindexmd"></a>[Seletores de](~/android/user-interface/controls/pickers/index.md)
+## <a name="pickersandroiduser-interfacecontrolspickersindexmd"></a>[Seletores](~/android/user-interface/controls/pickers/index.md)
 
 *Seletores de* são elementos de interface do usuário que permitem ao usuário selecionar uma data ou hora usando caixas de diálogo que são fornecidas pelo Android.
 

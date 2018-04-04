@@ -1,17 +1,16 @@
 ---
-title: "Etapa 2. Configurar o acesso de serviço para aplicativos móveis"
-ms.topic: article
+title: Etapa 2. Configurar o acesso de serviço para aplicativos móveis
 ms.prod: xamarin
 ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: a679d404eace121b38463e35350b8b85ec08b1e0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f530f578b297af36ae010c25c87dbffa2d31cb2b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>Etapa 2. Configurar o acesso de serviço para aplicativos móveis
 

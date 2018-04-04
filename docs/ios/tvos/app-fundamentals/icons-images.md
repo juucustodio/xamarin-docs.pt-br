@@ -1,18 +1,17 @@
 ---
-title: "Trabalhando com imagens e ícones"
-description: "Este artigo aborda a criação e trabalho com ícones e imagens dentro de um aplicativo Xamarin.tvOS."
-ms.topic: article
+title: Trabalhando com imagens e ícones
+description: Este artigo aborda a criação e trabalho com ícones e imagens dentro de um aplicativo Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-icons-and-images"></a>Trabalhando com imagens e ícones
 
@@ -122,7 +121,7 @@ Apple criado o [da Parallax visualizador](http://itunespartner.apple.com/assets/
 
 [![](icons-images-images/layered03.png "O Visualizador da Parallax")](icons-images-images/layered03.png#lightbox)
 
-Enquanto visualiza uma imagem em camadas, você pode usar o mouse para girar a imagem e visualizar o efeito da Parallax. Use o  **+**  (mais) e  **-**  (botões para adicionar e remover camadas menos).
+Enquanto visualiza uma imagem em camadas, você pode usar o mouse para girar a imagem e visualizar o efeito da Parallax. Use o **+** (mais) e **-** (botões para adicionar e remover camadas menos).
 
 Ao criar uma nova imagem em camadas, podem ser exportado no formato LSR e incluído no pacote do aplicativo.
 

@@ -1,18 +1,17 @@
 ---
-title: "Uma introdução ao UrhoSharp"
-description: "Isso fornece uma breve introdução aos conceitos por trás de UrhoSharp"
-ms.topic: article
+title: Uma introdução ao UrhoSharp
+description: Isso fornece uma breve introdução aos conceitos por trás de UrhoSharp
 ms.prod: xamarin
 ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 280ff20a6b45e4bfde984fc9c068e5c95276f9e9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 243498e1d5a24a0a6b8d1e911b374df61dfa6971
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="an-introduction-to-urhosharp"></a>Uma introdução ao UrhoSharp
 

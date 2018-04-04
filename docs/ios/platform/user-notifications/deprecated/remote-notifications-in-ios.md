@@ -1,18 +1,17 @@
 ---
-title: "Notificações por push no iOS"
-description: "Esta seção abordará as notificações por push no iOS. Ele apresenta o serviço de Gateway de notificações por Push Apple e a função que ele desempenha na publicação notificações a aplicativos iOS. Ele explica como criar os certificados de segurança necessárias para habilitar notificações por push e discutir. Por fim esta seção aborda algumas das tarefas de manutenção que servidores de aplicativo devem executar para controlar os dispositivos móveis do cliente."
-ms.topic: article
+title: Notificações por push no iOS
+description: Esta seção abordará as notificações por push no iOS. Ele apresenta o serviço de Gateway de notificações por Push Apple e a função que ele desempenha na publicação notificações a aplicativos iOS. Ele explica como criar os certificados de segurança necessárias para habilitar notificações por push e discutir. Por fim esta seção aborda algumas das tarefas de manutenção que servidores de aplicativo devem executar para controlar os dispositivos móveis do cliente.
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="push-notifications-in-ios"></a>Notificações por push no iOS
 
@@ -51,7 +50,7 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
     [![](remote-notifications-in-ios-images/image6new.png "Navegue até a seção de IDs de aplicativo e criar uma nova ID de aplicativo")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  Quando você clicar no  **+**  botão, você poderá inserir a descrição e um identificador de pacote para a ID do aplicativo, conforme mostrado na seguinte captura de tela:
+3.  Quando você clicar no **+** botão, você poderá inserir a descrição e um identificador de pacote para a ID do aplicativo, conforme mostrado na seguinte captura de tela:
 
     [![](remote-notifications-in-ios-images/image7new.png "Insira a descrição e um identificador de pacote para a ID de aplicativo")](remote-notifications-in-ios-images/image7new.png#lightbox)
 

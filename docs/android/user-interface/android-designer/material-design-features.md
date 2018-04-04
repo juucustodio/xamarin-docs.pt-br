@@ -1,18 +1,17 @@
 ---
 title: Recursos de material de Design
-description: "Este tópico descreve os recursos do Designer que tornam mais fácil para os desenvolvedores criarem layouts de Material compatível com Design. Esta seção apresenta e explica como usar a grade de Material, a paleta de cores de Material, a escala tipográficas e o Editor de tema."
-ms.topic: article
+description: Este tópico descreve os recursos do Designer que tornam mais fácil para os desenvolvedores criarem layouts de Material compatível com Design. Esta seção apresenta e explica como usar a grade de Material, a paleta de cores de Material, a escala tipográficas e o Editor de tema.
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 9c1797398fba580ab7f34526b10e1da455eb2dc5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a764efe7f2cadd8c777f8427c0220e45eec662c9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="material-design-features"></a>Recursos de material de Design
 

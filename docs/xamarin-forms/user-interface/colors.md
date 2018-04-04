@@ -1,18 +1,17 @@
 ---
 title: Cores
-description: "Xamarin. Forms fornece uma classe de cor de plataforma cruzada flexível."
-ms.topic: article
+description: Xamarin. Forms fornece uma classe de cor de plataforma cruzada flexível.
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 9c40d99d80766c5d32a76e424e902bd1b7d141ba
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8d6276a96d591363c88be4ff7edd8a9d039fb29d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="colors"></a>Cores
 

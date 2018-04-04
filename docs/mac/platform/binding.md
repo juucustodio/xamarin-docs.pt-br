@@ -1,18 +1,17 @@
 ---
-title: "Bibliotecas de Mac de associação"
-description: "Links neste guia para outros documentos que descrevem como criar associações para Objective-C librariesl"
-ms.topic: article
+title: Bibliotecas de Mac de associação
+description: Links neste guia para outros documentos que descrevem como criar associações para Objective-C librariesl
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/13/2017
-ms.openlocfilehash: 918c02542ee861b44411c29b01510a92659dee42
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c70a34acbdac6339a96000a2f987d4ac4f3d6a45
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-mac-libraries"></a>Bibliotecas de Mac de associação
 
@@ -27,7 +26,7 @@ Siga estes links para saber mais sobre associação bibliotecas Objective-C em X
   descreve todos os atributos disponíveis para autores de associação para orientar o processo de geração de associação.
 
 
-<a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objetivo Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
+<a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 -------------------
 
 Objetivo Sharpie é uma ferramenta de linha de comando para inicializar a primeira passagem de uma associação.
@@ -41,5 +40,5 @@ Consulte o [exemplo XMBindingExample Mac](https://github.com/xamarin/mac-samples
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Associação Objective-C](~/cross-platform/macios/binding/index.md)
+- [Associação do Objective-C](~/cross-platform/macios/binding/index.md)
 - [Associação de bibliotecas do iOS](~/ios/platform/binding-objective-c/index.md)

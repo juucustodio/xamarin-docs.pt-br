@@ -1,18 +1,17 @@
 ---
 title: Dicionários de recursos
 description: Recursos XAML são definições de objetos que podem ser usados mais de uma vez. Um dicionário de recurso permite que os recursos a serem definidos em um único local e reutilizadas em um aplicativo xamarin. Forms. Este artigo explica como criar e consumir um dicionário de recurso e como mesclar dicionários de recursos.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: aa3ae9fed67b6cd7521e5c59edcb54f05cc6b7c5
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 37e38f2c4297d5acd148a7e6d1bec5569fe8c51c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-dictionaries"></a>Dicionários de recursos
 

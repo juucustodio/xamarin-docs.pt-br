@@ -1,7 +1,6 @@
 ---
-title: "C# 6 novos recursos visão geral"
-description: "A versão mais recente da linguagem c# – versão 6 – continua a evoluir o idioma para ter menos clichê, mais clareza e mais consistência. Sintaxe de inicialização de limpeza, a capacidade de usar aguardar em blocos catch/finally e null-condicional? operador são especialmente úteis."
-ms.topic: article
+title: C# 6 novos recursos visão geral
+description: A versão mais recente da linguagem c# – versão 6 – continua a evoluir o idioma para ter menos clichê, mais clareza e mais consistência. Sintaxe de inicialização de limpeza, a capacidade de usar aguardar em blocos catch/finally e null-condicional? operador são especialmente úteis.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.technology: xamarin-cross-platform
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 80456287c92913b048b73f40d2db6dcb16cc270d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2a189a19280576876e5d5a6a4fa34d2d00cab330
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-6-new-features-overview"></a>C# 6 novos recursos visão geral
 
@@ -52,7 +51,7 @@ O Visual Studio para Mac atualiza automaticamente a instalação Mono em seu sis
 
 Os usuários do Windows devem ter [Visual Studio 2015 ou 2017 ^](https://www.visualstudio.com/) instalado para compilar o código c# 6 (mesmo se você escolher o Xamarin Studio para Windows como seu IDE).
 
-^ ou  *[Microsoft Build Tools 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)*  para o comando de linha compilação ou servidores de compilação, por exemplo.
+^ ou *[Microsoft Build Tools 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)* para o comando de linha compilação ou servidores de compilação, por exemplo.
 
 ## <a name="using-c-6"></a>Usando o c# 6
 

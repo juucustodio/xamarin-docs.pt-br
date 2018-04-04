@@ -1,18 +1,17 @@
 ---
-title: "Passando parâmetros para um efeito"
-description: "Parâmetros de efeito podem ser definidos por propriedades, habilitando o efeito para ser reutilizado. Parâmetros podem ser passados para o efeito, especificando valores para cada propriedade ao instanciar o efeito."
-ms.topic: article
+title: Passando parâmetros para um efeito
+description: Parâmetros de efeito podem ser definidos por propriedades, habilitando o efeito para ser reutilizado. Parâmetros podem ser passados para o efeito, especificando valores para cada propriedade ao instanciar o efeito.
 ms.prod: xamarin
 ms.assetid: F6429859-6EF7-48BE-A0CB-8F42B8A75215
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 06de17e978dd30152f66fada36007ccf2189a1ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a199c7907c24f3a97fd4f01b64eb2e858e5c5d52
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passing-parameters-to-an-effect"></a>Passando parâmetros para um efeito
 

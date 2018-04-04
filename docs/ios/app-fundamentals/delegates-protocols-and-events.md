@@ -1,18 +1,17 @@
 ---
 title: Eventos, protocolos e delegados
-description: "Este artigo apresenta as tecnologias de iOS chave usadas para receber retornos de chamada e preencher os controles de interface de usuário com dados. Essas tecnologias são eventos, protocolos e delegados. Este artigo explica o que cada um deles for e como cada um é usada no c#. Ele demonstra como xamarin usa controles de iOS para expor familiares eventos de .NET, bem como xamarin oferece suporte para conceitos de Objective-C como protocolos e delegados (delegados Objective-C não devem ser confundidos com c# delegados). Este artigo também fornece exemplos que mostram como os protocolos são usados – como a base para delegados Objective-C e em cenários de não delegado."
-ms.topic: article
+description: Este artigo apresenta as tecnologias de iOS chave usadas para receber retornos de chamada e preencher os controles de interface de usuário com dados. Essas tecnologias são eventos, protocolos e delegados. Este artigo explica o que cada um deles for e como cada um é usada no c#. Ele demonstra como xamarin usa controles de iOS para expor familiares eventos de .NET, bem como xamarin oferece suporte para conceitos de Objective-C como protocolos e delegados (delegados Objective-C não devem ser confundidos com c# delegados). Este artigo também fornece exemplos que mostram como os protocolos são usados – como a base para delegados Objective-C e em cenários de não delegado.
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 69296992c503d536a4160f172022c7ce5578812f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="events-protocols-and-delegates"></a>Eventos, protocolos e delegados
 

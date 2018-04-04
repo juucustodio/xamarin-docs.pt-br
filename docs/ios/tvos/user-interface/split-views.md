@@ -1,18 +1,17 @@
 ---
-title: "Trabalhando com os controladores de exibição de divisão"
-description: "Este artigo aborda criando e trabalhando com controladores de exibição de divisão dentro de um aplicativo Xamarin.tvOS."
-ms.topic: article
+title: Trabalhando com os controladores de exibição de divisão
+description: Este artigo aborda criando e trabalhando com controladores de exibição de divisão dentro de um aplicativo Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86a7690d4cf7291a4e44507a6250e3469c8f7ed2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25151eb2929e2bc61dba27a9937ffdf4ee224626
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-split-view-controllers"></a>Trabalhando com os controladores de exibição de divisão
 

@@ -1,18 +1,17 @@
 ---
 title: Armazenamento de dados e recursos
 description: Este artigo aborda o trabalho com recursos e armazenamento de dados persistentes em um aplicativo Xamarin.tvOS.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C56B5046-D2C0-4B63-9CE0-ADAA0EFD368A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: e72c013516de5bcf97e2e9f58a7a4f5cd87c730b
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: b4d96ef50498b454da583a955169b9d51c29dd01
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resources-and-data-storage"></a>Armazenamento de dados e recursos
 

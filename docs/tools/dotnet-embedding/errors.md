@@ -1,21 +1,20 @@
 ---
-title: "Erros de inserção de .NET"
-ms.topic: article
+title: Erros de inserção de .NET
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 90d30b92069bcd6a5c008fa8009c0392c4d26473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64caaf6610d9f9193a686d91b4731cd4d4953fa6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="em0xxx-binding-error-messages"></a>EM0xxx: mensagens de erro de associação
 
-Por exemplo parâmetros, ambiente
+Por exemplo, parâmetros, ambiente
 
 <!-- 0xxx: the generator itself, e.g. parameters, environment -->
 <h3><a name="EM0000"/>EM0000: Erro inesperado - preencha um relatório de erros em https://github.com/mono/Embeddinator-4000/issues</h3>
@@ -68,7 +67,7 @@ Este é um problema conhecido que pretendemos corrigir em uma versão futura do 
 
 A ferramenta não pôde mesclar as estruturas mencionadas na mensagem de erro, porque não há um arquivo comum entre eles.
 
-Isso pode indicar um bug em 4000 Embeddinator; Envie um relatório de erros em [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) com um caso de teste.
+Isso pode indicar um bug em 4000 Embeddinator; Envie um relatório de erros em [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) com um caso de teste.
 
 <h3><a name="EM0011"/>EM0011: O assembly `X` não existe.</h3>
 
@@ -104,7 +103,7 @@ A sintaxe fornecida para a opção de linha de comando `A` não pôde ser analis
 
 Essa mensagem de erro é relatada quando ocorre falha na verificação de consistência interna em Embeddinator-4000.
 
-Isso indica um bug no Embeddinator-4000; Envie um relatório de erros em [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) com um caso de teste.
+Isso indica um bug no Embeddinator-4000; Envie um relatório de erros em [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) com um caso de teste.
 
 
 <!-- 1xxx: code processing -->
@@ -141,7 +140,7 @@ Observação: Recursos com suporte evoluirá com novas versões da ferramenta.
 
 <h3><a name="EM1021"/>Construtor `C` tem valores padrão para o qual nenhuma wrapper é gerado.</h3>
 
-Este é um **aviso** que os parâmetros padrão do construtor `C` não está gerando qualquer código extra. A causa mais comum é que um método existente já tem a mesma assinatura. Por exemplo no .net, é possível ter:
+Este é um **aviso** que os parâmetros padrão do construtor `C` não está gerando qualquer código extra. A causa mais comum é que um método existente já tem a mesma assinatura. Por exemplo, no .net, é possível ter:
 
 ```
 public class MyType {
@@ -173,7 +172,7 @@ Observação: Recursos com suporte evoluirá com novas versões da ferramenta.
 
 <h3><a name="EM1032"/>Método `M` tem valores padrão para o qual nenhuma wrapper é gerado.</h3>
 
-Este é um **aviso** que os parâmetros padrão do método `M` não está gerando qualquer código extra. A causa mais comum é que um método existente já tem a mesma assinatura. Por exemplo no .net, é possível ter:
+Este é um **aviso** que os parâmetros padrão do método `M` não está gerando qualquer código extra. A causa mais comum é que um método existente já tem a mesma assinatura. Por exemplo, no .net, é possível ter:
 
 ```
 public class MyType {

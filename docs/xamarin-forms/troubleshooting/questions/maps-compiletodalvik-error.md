@@ -1,17 +1,17 @@
 ---
-title: "Por que meu projeto Xamarin.Forms.Maps Android falha com erro INESPERADO de nível superior COMPILETODALVIK?"
-ms.topic: article
+title: Por que meu projeto Xamarin.Forms.Maps Android falha com erro INESPERADO de nível superior COMPILETODALVIK?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C0251EB1-F509-47AD-98D6-846AF46425E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 41cb955ba22a83d0ae2a11ac5c5a114b465ca9b2
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9df9e348440b9dd4b18b3859d64cbe47bd05b24c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>Por que meu projeto Xamarin.Forms.Maps Android falha com erro INESPERADO de nível superior COMPILETODALVIK?
 

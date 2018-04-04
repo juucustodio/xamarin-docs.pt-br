@@ -1,17 +1,16 @@
 ---
-title: "Parte 4 - lidar com várias plataformas"
-ms.topic: article
+title: Parte 4 - lidar com várias plataformas
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 21cd08ad2eb9c78ba1bcd6b31400a38266c65e51
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 8de540e736bee32c9ee98476bcdc3c5b1100f0f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 - lidar com várias plataformas
 

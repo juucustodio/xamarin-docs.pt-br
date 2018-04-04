@@ -1,18 +1,17 @@
 ---
 title: PhotoKit
-description: "Kit de fotos permite que aplicativos consultar a biblioteca de imagens do sistema e criar a interface do usuário personalizada para exibir e modificar seu conteúdo."
-ms.topic: article
+description: Kit de fotos permite que aplicativos consultar a biblioteca de imagens do sistema e criar a interface do usuário personalizada para exibir e modificar seu conteúdo.
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 1f316979c3262883fc58df93de1afb1167fd36ce
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c721064f62f8e2255de2b4ea2d0438e3ed630d39
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="photokit"></a>PhotoKit
 

@@ -1,18 +1,17 @@
 ---
 title: HealthKit
-description: "HealthKit é uma estrutura introduzida no iOS 8 que fornece um repositório de dados seguro, centralizado e coordenado para informações relacionadas à integridade. O sistema operacional garante a privacidade e segurança de informações de integridade e, com o aplicativo de integridade, um painel para o usuário. Com a permissão do usuário, os aplicativos podem ler e gravar uma ampla variedade de informações de integridade."
-ms.topic: article
+description: HealthKit é uma estrutura introduzida no iOS 8 que fornece um repositório de dados seguro, centralizado e coordenado para informações relacionadas à integridade. O sistema operacional garante a privacidade e segurança de informações de integridade e, com o aplicativo de integridade, um painel para o usuário. Com a permissão do usuário, os aplicativos podem ler e gravar uma ampla variedade de informações de integridade.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -69,14 +68,14 @@ A criação de um valor explícito **ID do aplicativo** e adequados **perfil de 
 
 As atuais **IDs de aplicativo** são listados no [certificados, identificadores e perfis](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) seção no Centro de desenvolvimento. Geralmente, essa lista mostrará **ID** valores de `*`, indicando que o **ID do aplicativo** - **nome** pode ser usado com qualquer número de sufixos. Tais *Wildcard App IDs* não pode ser usado com o Kit de integridade.
  
-Para criar uma explícita **ID do aplicativo**, clique no  **+**  botão no canto superior direito para o **registrar a ID do aplicativo do iOS** página:
+Para criar uma explícita **ID do aplicativo**, clique no **+** botão no canto superior direito para o **registrar a ID do aplicativo do iOS** página:
 
 
 [![](healthkit-images/image02.png "Registrando um aplicativo no Portal do desenvolvedor Apple")](healthkit-images/image02.png#lightbox)
 
 Conforme mostrado na imagem acima, depois de criar uma descrição do aplicativo, use o **explícita App ID** seção para criar uma ID para o seu aplicativo. No **serviços de aplicativos** seção, verifique **integridade Kit** no **habilitar serviços** seção.
 
-Quando terminar, pressione a **continuar** botão para registrar o **ID do aplicativo** em sua conta. Você será levado de volta o **certificados, identificadores e perfis** página. Clique em **perfis de provisionamento** levá-lo à lista de perfis de provisionamento atual e, em seguida, clique no  **+**  botão no canto superior direito para o **adicionar iOS Perfil de provisionamento** página. Selecione o **o desenvolvimento de aplicativos do iOS** opção e clique em **continuar** para obter o **selecione ID do aplicativo** página. Aqui, selecione explícita **ID do aplicativo** que você especificou anteriormente:
+Quando terminar, pressione a **continuar** botão para registrar o **ID do aplicativo** em sua conta. Você será levado de volta o **certificados, identificadores e perfis** página. Clique em **perfis de provisionamento** levá-lo à lista de perfis de provisionamento atual e, em seguida, clique no **+** botão no canto superior direito para o **adicionar iOS Perfil de provisionamento** página. Selecione o **o desenvolvimento de aplicativos do iOS** opção e clique em **continuar** para obter o **selecione ID do aplicativo** página. Aqui, selecione explícita **ID do aplicativo** que você especificou anteriormente:
 
 
 [![](healthkit-images/image03.png "Selecione a ID do aplicativo explícita")](healthkit-images/image03.png#lightbox)

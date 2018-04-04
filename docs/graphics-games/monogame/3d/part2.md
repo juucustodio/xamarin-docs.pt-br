@@ -1,18 +1,17 @@
 ---
-title: "Desenho de gráficos 3D com vértices no MonoGame"
-description: "MonoGame dá suporte ao uso de matrizes de vértices para definir como um objeto 3D é renderizado em uma base por ponto. Os usuários podem tirar proveito de matrizes de vértice para criar geometria dinâmica, implementar efeitos especiais e melhorar a eficiência de seu processamento por meio de remoção."
-ms.topic: article
+title: Desenho de gráficos 3D com vértices no MonoGame
+description: MonoGame dá suporte ao uso de matrizes de vértices para definir como um objeto 3D é renderizado em uma base por ponto. Os usuários podem tirar proveito de matrizes de vértice para criar geometria dinâmica, implementar efeitos especiais e melhorar a eficiência de seu processamento por meio de remoção.
 ms.prod: xamarin
 ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 1b139e460a4841f2174df166bf50bb276802d8d3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 25a05bcd094011042b3dc33a1b837460d5893be0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Desenho de gráficos 3D com vértices no MonoGame
 

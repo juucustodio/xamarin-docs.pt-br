@@ -1,18 +1,17 @@
 ---
-title: "Recursos de segurança e privacidade de iOS"
-description: "Este artigo aborda o trabalho com segurança e privacidade no iOS e como eles afetam um aplicativo xamarin."
-ms.topic: article
+title: Recursos de segurança e privacidade de iOS
+description: Este artigo aborda o trabalho com segurança e privacidade no iOS e como eles afetam um aplicativo xamarin.
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5e4bbc22403c6c0bfa5c8dc7ac4e3a39545051d4
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 2ce6dadf2236c326fcbc2021509795182329010e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>Recursos de segurança e privacidade de iOS
 

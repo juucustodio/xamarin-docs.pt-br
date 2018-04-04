@@ -2,18 +2,18 @@
 documentType: LandingData
 title: Exemplos de Xamarin.Mac
 metadata:
-  description: "Aplicativos de exemplo do Xamarin.Mac multiplataforma para desenvolvedores móveis."
+  description: Aplicativos de exemplo do Xamarin.Mac multiplataforma para desenvolvedores móveis.
   author: conceptdev
   ms.author: crdun
   ms.date: 02/27/2018
-  ms.topic: article
-  ms.openlocfilehash: b367917c1605ccb6e50a55621521b56942ef8f54
-  ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+  ms.topic: sample
+  ms.openlocfilehash: f29128999930e7120a84ab61c6e3bb1154084410
+  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/28/2018
+  ms.lasthandoff: 04/04/2018
 abstract:
-  description: "Aplicativos de exemplo do Xamarin.Mac e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin."
+  description: Aplicativos de exemplo do Xamarin.Mac e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin.
   menu:
     items:
     - href: https://developer.xamarin.com/samples/mac/all/
@@ -26,31 +26,31 @@ sections:
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/mac/Hello_Mac/
-      html: "Aplicativo Olá, Mundo, para começar no desenvolvimento para Mac."
+      html: Aplicativo Olá, Mundo, para começar no desenvolvimento para Mac.
       image:
         src: images/hellomac.png
         href: https://developer.xamarin.com/samples/mac/Hello_Mac/
       title: Hello, Mac
     - href: https://developer.xamarin.com/samples/mac/MacControls/
-      html: "Exemplos de controle de interface do usuário para aplicativos do Mac."
+      html: Exemplos de controle de interface do usuário para aplicativos do Mac.
       image:
         src: images/controls.png
         href: https://developer.xamarin.com/samples/mac/MacControls/
       title: MacControls
     - href: https://developer.xamarin.com/samples/mac/MacImages/
-      html: "Exemplos de controle de interface do usuário para aplicativos do Mac."
+      html: Exemplos de controle de interface do usuário para aplicativos do Mac.
       image:
         src: images/images.png
         href: https://developer.xamarin.com/samples/mac/MacImages/
       title: MacImages
     - href: https://developer.xamarin.com/samples/mac/SourceWriter/
-      html: "Editor simples que fornece suporte para preenchimento de código e realce de sintaxe."
+      html: Editor simples que fornece suporte para preenchimento de código e realce de sintaxe.
       image:
         src: images/sourcewriter.png
         href: https://developer.xamarin.com/samples/mac/SourceWriter/
       title: SourceWriter
     - href: https://developer.xamarin.com/samples/mac/all/
-      html: "O conjunto completo de aplicativos de exemplo e demonstrações de código do Xamarin.Mac."
+      html: O conjunto completo de aplicativos de exemplo e demonstrações de código do Xamarin.Mac.
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/mac/all/

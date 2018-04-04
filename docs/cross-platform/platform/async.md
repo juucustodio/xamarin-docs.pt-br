@@ -1,18 +1,17 @@
 ---
-title: "Visão geral da assincronia"
-description: "A versão mais recente da linguagem c# – versão 5 – introduzido duas novas palavras-chave para expressar operações assíncronas: async e await. Essas palavras-chave permitem que você escrever código simple que utiliza a biblioteca paralela de tarefas para executar operações de longa execução (como o acesso à rede) em outro thread e acessar facilmente os resultados após a conclusão. As versões mais recentes do xamarin e xamarin suportam async e await - este documento fornece explicações e um exemplo de como usar a nova sintaxe com o Xamarin."
-ms.topic: article
+title: Visão geral da assincronia
+description: 'A versão mais recente da linguagem c# – versão 5 – introduzido duas novas palavras-chave para expressar operações assíncronas: async e await. Essas palavras-chave permitem que você escrever código simple que utiliza a biblioteca paralela de tarefas para executar operações de longa execução (como o acesso à rede) em outro thread e acessar facilmente os resultados após a conclusão. As versões mais recentes do xamarin e xamarin suportam async e await - este documento fornece explicações e um exemplo de como usar a nova sintaxe com o Xamarin.'
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4762612075a866581339b198552b8e26c9a1f6fa
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ecad6259cb0d472ac39afb0a6be980d4582812c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="async-support-overview"></a>Visão geral do suporte assíncrono
 

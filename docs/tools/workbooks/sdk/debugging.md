@@ -1,16 +1,15 @@
 ---
-title: "Integrações de depuração"
-ms.topic: article
+title: Integrações de depuração
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: a0873c6b902e29174da5e27a09e8f580d6d69eb7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: eaf391c399aa80de0174189ec68a2cca70125895
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debugging-integrations"></a>Integrações de depuração
 

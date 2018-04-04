@@ -1,18 +1,17 @@
 ---
 title: Dispatcher de trabalho firebase
 description: Este guia descreve como agendar o trabalho em segundo plano usando a biblioteca de Firebase trabalho Dispatcher do Google.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/20/2018
-ms.openlocfilehash: 20fc48c5d308a64d88308562a18e961c288b5669
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 124823238968ab21c1e55818ba5b99d2bb0c0bf8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho firebase
 

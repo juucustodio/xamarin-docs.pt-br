@@ -1,18 +1,17 @@
 ---
 title: Noções básicas de bitmap
 description: Carregue os bitmaps de várias fontes e exibi-los.
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 689fb1f7a386362c01dac9af845f2d95c47e1b2f
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: b86068c2ed5063c25f76e81fdf477550b1437984
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bitmap-basics"></a>Noções básicas de bitmap
 

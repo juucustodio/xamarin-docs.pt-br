@@ -1,18 +1,17 @@
 ---
 title: Principais NFC
-description: "Marcas de leitura próximo campo NFC (comunicação) usando iOS 11"
-ms.topic: article
+description: Marcas de leitura próximo campo NFC (comunicação) usando iOS 11
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2016
-ms.openlocfilehash: 72c19ef09843c137514983b1d7ee7104e3cb32c5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: db0c417c1c79a988821a93b1cf20d94161f5c47a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="core-nfc"></a>Principais NFC
 

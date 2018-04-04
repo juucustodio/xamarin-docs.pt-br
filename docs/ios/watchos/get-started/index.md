@@ -1,18 +1,17 @@
 ---
-title: "Introdução ao watchOS"
-description: "Introdução ao watchOS e como criar aplicativos de inspeção"
-ms.topic: article
+title: Introdução ao watchOS
+description: Introdução ao watchOS e como criar aplicativos de inspeção
 ms.prod: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2013f694dcfcc7b2e71def55bc42df7e93ca7a25
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7eabcb9a9ea300eccf34737e634168defe2948e7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started-with-watchos"></a>Introdução ao watchOS
 
@@ -22,7 +21,7 @@ _Introdução ao watchOS e como criar aplicativos de inspeção_
 
 Visão geral do ciclo de vida do aplicativo, watchOS, interface do usuário e limitações.
 
-## <a name="setup--installationioswatchosget-startedinstallationmd"></a>[Instalação e configuração](~/ios/watchos/get-started/installation.md)
+## <a name="setup--installationioswatchosget-startedinstallationmd"></a>[Configuração e instalação](~/ios/watchos/get-started/installation.md)
 
 Como criar, construir e iniciar um novo projeto de watchOS.
 Você também pode ler sobre o [identificadores e referências de projeto](~/ios/watchos/get-started/project-references.md) especialmente, que são configurados para soluções watchOS.

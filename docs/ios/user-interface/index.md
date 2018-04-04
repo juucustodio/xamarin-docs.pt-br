@@ -1,18 +1,17 @@
 ---
-title: "Interface do Usuário"
-description: "Incluindo controles, o designer e princípios de design UX geral cobertura de experiência do usuário (UX)."
-ms.topic: article
+title: Interface do Usuário
+description: Incluindo controles, o designer e princípios de design UX geral cobertura de experiência do usuário (UX).
 ms.prod: xamarin
 ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: 896b92b9520e7aa85c6d62e02cb1355c9757f0d6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a3d88c2698ebd290929ceca842c28b3a43aed6e0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>Interface do Usuário
 
@@ -25,7 +24,7 @@ Criamos um designer para o formato de storyboard do iOS que está totalmente int
 
 Um Storyboard é uma representação visual da aparência e o fluxo do aplicativo. Xamarin introduziu um Designer para permitir que aplicativos xamarin tirar proveito dos storyboards, você pode projetar a tela do aplicativo visualmente e acessar modos de exibição, controladores e segues com c# para obter mais controle. Você também pode consultar [neste guia](~/ios/user-interface/designer/introduction.md) para uma explicação e instruções passo a passo do Xamarin Designer para iOS
 
-## <a name="user-interface-in-iosiosuser-interfaceios-uiindexmd"></a>[Interface do usuário do iOS](~/ios/user-interface/ios-ui/index.md)
+## <a name="user-interface-in-iosiosuser-interfaceios-uiindexmd"></a>[Interface do usuário no iOS](~/ios/user-interface/ios-ui/index.md)
 
 Abrange trabalhando com a Interface do usuário do iOS em um aplicativo xamarin, incluindo: API de aparência, criando objetos de Interface do usuário, opções de Layout, fornecendo comentários Haptic e trabalhar com o Thread de interface de usuário.
 

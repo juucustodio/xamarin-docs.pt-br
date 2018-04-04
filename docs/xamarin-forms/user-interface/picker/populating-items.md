@@ -1,18 +1,17 @@
 ---
-title: "Adicionando dados à coleção de itens do seletor"
-description: "O modo de exibição de seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor de dados adicionando-o à coleção de itens e como responder a seleção de item pelo usuário."
-ms.topic: article
+title: Adicionando dados à coleção de itens do seletor
+description: O modo de exibição de seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor de dados adicionando-o à coleção de itens e como responder a seleção de item pelo usuário.
 ms.prod: xamarin
 ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 3468e38d8ef46dfef870a05bf72d93c28195dae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 63a72861895f79d2d0154297f88610ddb8bb8beb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adicionando dados à coleção de itens do seletor
 

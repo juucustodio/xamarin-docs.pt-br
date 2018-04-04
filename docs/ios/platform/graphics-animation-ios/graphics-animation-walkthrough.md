@@ -1,18 +1,17 @@
 ---
 title: Passo a passo - usando CoreGraphics e CoreAnimation
-description: "Este artigo passo a passo demonstra como criar um aplicativo que usa gráficos principais e principais de animação. Ele mostra como desenhar na tela em resposta a toque de usuário, bem como animar uma imagem em um caminho."
-ms.topic: article
+description: Este artigo passo a passo demonstra como criar um aplicativo que usa gráficos principais e principais de animação. Ele mostra como desenhar na tela em resposta a toque de usuário, bem como animar uma imagem em um caminho.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c62601ff446c114e97e9d4c2ded3727d08220095
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f857accfcdec4cb60e781936d1d0836dbf8d6ffb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="drawing-and-animating-along-a-path"></a>Desenho e animação em um demarcador
 
@@ -183,6 +182,6 @@ Neste artigo, vamos percorreu um exemplo que vinculados conceitos de animação 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Animação de núcleo](~/ios/platform/graphics-animation-ios/core-animation.md)
-- [Gráficos de núcleo](~/ios/platform/graphics-animation-ios/core-graphics.md)
+- [Animação principal](~/ios/platform/graphics-animation-ios/core-animation.md)
+- [Gráficos principais](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Receitas de animação de núcleo](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

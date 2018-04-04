@@ -1,18 +1,17 @@
 ---
-title: "Solucionando problemas de associações"
-description: "Este artigo resume vários erros comuns que podem ocorrer durante a geração de associações, junto com as possíveis causas e as maneiras sugeridas para resolvê-los."
-ms.topic: article
+title: Solucionando problemas de associações
+description: Este artigo resume vários erros comuns que podem ocorrer durante a geração de associações, junto com as possíveis causas e as maneiras sugeridas para resolvê-los.
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: da6286eed091114c117c723f462bbb8cac77034b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-bindings"></a>Solucionando problemas de associações
 
@@ -51,7 +50,7 @@ Depois de você ter descompilado biblioteca do Android, examine o código-fonte.
 
 - **As classes que têm características de ofuscação** &ndash; características das classes ofuscados incluem:
 
-    - O nome de classe inclui um  **$** , ou seja, **um. ' $Class**
+    - O nome de classe inclui um **$**, ou seja, **um. ' $Class**
     - O nome da classe é totalmente comprometido de letras minúsculas, ou seja, **a.class**      
 
 - **`import` instruções para bibliotecas não referenciadas** &ndash; identificar a biblioteca não referenciada e adicionar essas dependências para o projeto de associação xamarin com um **ação de compilação** de **ReferenceJar**  ou **EmbedddedReferenceJar**.

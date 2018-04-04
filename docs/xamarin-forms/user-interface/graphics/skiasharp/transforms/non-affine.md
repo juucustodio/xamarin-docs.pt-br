@@ -1,18 +1,17 @@
 ---
 title: Transformações não afins
 description: Criar ponto de Vista e efeitos de diminuição com a terceira coluna da matriz de transformação
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: ae61774a53136af3350d63658470cfb4607026db
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 52bed94724d330b74a9604c54fcfebad1e562267
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="non-affine-transforms"></a>Transformações não afins
 

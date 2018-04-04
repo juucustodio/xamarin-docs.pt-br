@@ -1,17 +1,16 @@
 ---
-title: "Trabalhando com localização"
-description: "Adaptar seus aplicativos watchOS para vários idiomas"
-ms.topic: article
+title: Trabalhando com localização
+description: Adaptar seus aplicativos watchOS para vários idiomas
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-localization"></a>Trabalhando com localização
 
@@ -86,13 +85,13 @@ Quando o storyboard é renderizado no relógio, os valores corretos serão autom
 
 #### <a name="storyboard-images"></a>Imagens de storyboard
 
-A solução de exemplo também inclui um  **gradient@2x.png**  imagem em cada pasta de idioma. Essa imagem pode ser diferente para cada idioma (por exemplo. pode ter inserido texto que precisa de conversão, ou use localizado iconografia).
+A solução de exemplo também inclui um **gradient@2x.png** imagem em cada pasta de idioma. Essa imagem pode ser diferente para cada idioma (por exemplo. pode ter inserido texto que precisa de conversão, ou use localizado iconografia).
 
 Basta definir a imagem **imagem** propriedade no storyboard e a imagem correta será renderizada no relógio de acordo com o idioma selecionado pelo usuário.
 
 ![](localization-images/storyboard-image.png "Defina as imagens de propriedade de imagem no storyboard")
 
-Observação: porque todas as inspeções Apple tem exibe Retina, somente o  **@2x**  versão da imagem é necessária. Você não precisa especificar  **@2x**  no storyboard.
+Observação: porque todas as inspeções Apple tem exibe Retina, somente o **@2x** versão da imagem é necessária. Você não precisa especificar **@2x** no storyboard.
 
 ### <a name="watch-extension"></a>Assista a extensão
 
@@ -130,7 +129,7 @@ Imagens que são preenchidas, o código podem ser definidas de duas maneiras.
   displayImage.SetImage("gradient"); // image in Watch App (as shown above)
   ```
 
-2. Você pode mover uma imagem da extensão para a inspeção usando `FromBundle` e o aplicativo escolherá automaticamente a imagem correta para a seleção do idioma do usuário. Na solução de exemplo é uma imagem  **language@2x.png**  em cada idioma pasta e ele é exibido em `DetailController` usando o seguinte código:
+2. Você pode mover uma imagem da extensão para a inspeção usando `FromBundle` e o aplicativo escolherá automaticamente a imagem correta para a seleção do idioma do usuário. Na solução de exemplo é uma imagem **language@2x.png** em cada idioma pasta e ele é exibido em `DetailController` usando o seguinte código:
 
   ```csharp
   using (var image = UIImage.FromBundle ("language")) {
@@ -138,7 +137,7 @@ Imagens que são preenchidas, o código podem ser definidas de duas maneiras.
   }
   ```
 
-  Observe que você não precisa especificar o  **@2x**  ao fazer referência ao nome do arquivo da imagem.
+  Observe que você não precisa especificar o **@2x** ao fazer referência ao nome do arquivo da imagem.
 
 O segundo método também é aplicável se você baixar uma imagem de um servidor remoto para renderizar na inspeção; No entanto nesse caso você deve garantir que a imagem que você baixar é localizada corretamente de acordo com as preferências do usuário.
 

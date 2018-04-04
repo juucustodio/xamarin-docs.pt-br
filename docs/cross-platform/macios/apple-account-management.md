@@ -1,17 +1,16 @@
 ---
 title: Gerenciamento de conta da Apple
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: c0d328e784b0a12b0df1a6b2bf5b990ffa461da5
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 21af0ef09644f39f9be42788b3d8f4977a2143d3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="apple-account-management"></a>Gerenciamento de conta da Apple
 
@@ -50,7 +49,7 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Para 
 
     ![Opções de conta de desenvolvedor da Apple](apple-account-management-images/image1.png)
 
-2. Pressione a  **+**  botão para exibir a entrada na caixa de diálogo, conforme descrito abaixo: 
+2. Pressione a **+** botão para exibir a entrada na caixa de diálogo, conforme descrito abaixo: 
 
     ![caixa de diálogo FastLane.](apple-account-management-images/image2.png)
 

@@ -1,16 +1,16 @@
 ---
-title: "Pode adicionar ou remover arquivos de um arquivo de IPA depois de criá-lo no Visual Studio?"
-ms.topic: article
+title: Pode adicionar ou remover arquivos de um arquivo de IPA depois de criá-lo no Visual Studio?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be792c95de7aa66d64278e47b2ca6b354e611273
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8b61ba38491b2085233dd1b30a82bc57d2baaed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Pode adicionar ou remover arquivos de um arquivo de IPA depois de criá-lo no Visual Studio?
 
@@ -86,4 +86,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 E o processo de verificação da App Store relatará uma mensagem de erro semelhante:
 
-> Erro ITMS-90035: "assinatura inválida. Um recurso lacrado está ausente ou inválido. O binário no caminho [iPhoneApp1.app/iPhoneApp1] contém uma assinatura inválida. Certifique-se de que ter entrado seu aplicativo com um certificado de distribuição, e não um certificado ad hoc ou um certificado de desenvolvimento. Verifique se as configurações de assinatura de código no Xcode estão corretas no nível de destino (ou substituir os valores no nível de projeto). Além disso, verifique se o pacote que você está carregando foi criado usando um destino de versão no Xcode, não um destino do simulador. Se você tiver certeza de que as configurações de assinatura de código estão corretas, selecione "Limpar tudo" no Xcode, exclua o diretório "build" no localizador e recriar sua versão de destino. Para obter mais informações, consulte [https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> Erro ITMS-90035: "assinatura inválida. Um recurso lacrado está ausente ou inválido. O binário no caminho [iPhoneApp1.app/iPhoneApp1] contém uma assinatura inválida. Certifique-se de que ter entrado seu aplicativo com um certificado de distribuição, e não um certificado ad hoc ou um certificado de desenvolvimento. Verifique se as configurações de assinatura de código no Xcode estão corretas no nível de destino (ou substituir os valores no nível de projeto). Além disso, verifique se o pacote que você está carregando foi criado usando um destino de versão no Xcode, não um destino do simulador. Se você tiver certeza de que as configurações de assinatura de código estão corretas, selecione "Limpar tudo" no Xcode, exclua o diretório "build" no localizador e recriar sua versão de destino. Para obter mais informações, consulte [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

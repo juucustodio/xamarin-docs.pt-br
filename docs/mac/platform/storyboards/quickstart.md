@@ -1,18 +1,17 @@
 ---
-title: "Início rápido storyboards"
-description: "Obtendo iniciada construção macOS interfaces de usuário com storyboards."
-ms.topic: article
+title: Início rápido storyboards
+description: Obtendo iniciada construção macOS interfaces de usuário com storyboards.
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: fe3a93557509aba4b33b1470879cd2504ed0f2a2
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0c366de844b119736763f7d419d6bc9bb3fbfc0a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="starting-a-new-storyboard-based-project"></a>Iniciar um novo Storyboard com base no projeto
 

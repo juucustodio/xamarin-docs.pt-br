@@ -1,18 +1,17 @@
 ---
 title: HomeKit
-description: "HomeKit é a estrutura da Apple para controlar os dispositivos de automação inicial. Este artigo apresenta HomeKit e abrange Configurando Acessórios de teste no simulador acessório HomeKit e gravar um aplicativo simples do xamarin para interagir com esses Acessórios."
-ms.topic: article
+description: HomeKit é a estrutura da Apple para controlar os dispositivos de automação inicial. Este artigo apresenta HomeKit e abrange Configurando Acessórios de teste no simulador acessório HomeKit e gravar um aplicativo simples do xamarin para interagir com esses Acessórios.
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 02116e8e11cb6ff050e2c885338777e1fd25c4cb
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5699465330a4d2a5b983ec7661f80c1ed4f14bde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="homekit"></a>HomeKit
 
@@ -104,7 +103,7 @@ Para iniciar o simulador de acessório HomeKit e criar algumas Acessórios virtu
 1. Na pasta de aplicativos, inicie o simulador de acessório HomeKit: 
 
     [![](homekit-images/simulator02.png "O simulador HomeKit acessório")](homekit-images/simulator02.png#lightbox)
-2. Clique o  **+**  botão e selecione **novo acessório...** : 
+2. Clique o **+** botão e selecione **novo acessório...** : 
 
     [![](homekit-images/simulator03.png "Adicionar um novo acessório")](homekit-images/simulator03.png#lightbox)
 3. Preencha as informações sobre o novo Acessórios e clique no **concluir** botão: 

@@ -1,18 +1,17 @@
 ---
-title: "Qualificadores de recursos e opções de visualização"
-description: "Este tópico explica como definir recursos que serão usados somente quando alguns valores de qualificador são correspondidas. Um exemplo simples é um recurso de cadeia de caracteres do idioma qualificado. Um recurso de cadeia de caracteres pode ser definido como padrão, com outros recursos alternativos definidos para ser usado para idiomas adicionais. Todos os tipos de recurso podem ser qualificados, incluindo o layout em si."
-ms.topic: article
+title: Qualificadores de recursos e opções de visualização
+description: Este tópico explica como definir recursos que serão usados somente quando alguns valores de qualificador são correspondidas. Um exemplo simples é um recurso de cadeia de caracteres do idioma qualificado. Um recurso de cadeia de caracteres pode ser definido como padrão, com outros recursos alternativos definidos para ser usado para idiomas adicionais. Todos os tipos de recurso podem ser qualificados, incluindo o layout em si.
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: bff6d917fc4ce65daed329f15d6648bbfe0dd069
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bc9eb145b6d9ed7bd441d625f533c5cbbd87fccd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificadores de recursos e opções de visualização
 

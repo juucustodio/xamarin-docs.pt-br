@@ -1,18 +1,17 @@
 ---
 title: Implantando a loja de aplicativos
-description: "Implantação de aplicativos de inspeção para a loja de aplicativos"
-ms.topic: article
+description: Implantação de aplicativos de inspeção para a loja de aplicativos
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: c5b89570fdd3df80d39c6621fcd12a23babed9ee
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a3c68a0720fbe18f35731cf1a19248c00f748877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deploying-to-the-app-store"></a>Implantando a loja de aplicativos
 
@@ -177,7 +176,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Verifique se você tem a versão mais recente do Visual Studio para Mac e que sua **AppIcons.appiconset** contém um conjunto completo de imagens. Se você ainda estiver vendo este erro, exiba a origem do **Contents.json** para confirmar que ele contém uma entrada para todas as imagens. Como alternativa, depois que você garantiu que você está usando a versão mais recente do Xamarin, exclua e recrie o **AppIcons.appiconset**.
 
 > [!IMPORTANT]
-> Há um bug conhecido no Visual Studio para suporte de ícone de observação do Mac: ele espera uma imagem de pixel de 88 x 88 o  **29x29@3x**  imagem (que deve ser 87 x 87 pixels).
+> Há um bug conhecido no Visual Studio para suporte de ícone de observação do Mac: ele espera uma imagem de pixel de 88 x 88 o **29x29@3x** imagem (que deve ser 87 x 87 pixels).
 
 
 Você não pode corrigir isso no Visual Studio para Mac - editar o ativo de imagem no Xcode ou editar manualmente o **Contents.json** arquivo (para corresponder [Este exemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).

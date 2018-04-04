@@ -1,17 +1,16 @@
 ---
-title: "Fontes de vídeo de associação para o player"
-ms.topic: article
+title: Fontes de vídeo de associação para o player
 ms.prod: xamarin
 ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 209b301c44da9bbb52ad8bf7fe867811a9b7617f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bebf6fd905dd374822eb6974b28f1ac92a36c1bc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-video-sources-to-the-player"></a>Fontes de vídeo de associação para o player
 

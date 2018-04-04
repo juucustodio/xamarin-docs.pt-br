@@ -1,18 +1,17 @@
 ---
 title: Implementando com fragmentos
-description: "Android 3.0 apresentou fragmentos. Os fragmentos são componentes independentes e modulares usados para ajudar a solucionar a complexidade da produção de aplicativos que podem ser executados em telas de tamanhos diferentes. Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin e como dar suporte a fragmentos em 3.0 dispositivos previamente Android."
-ms.topic: article
+description: Android 3.0 apresentou fragmentos. Os fragmentos são componentes independentes e modulares usados para ajudar a solucionar a complexidade da produção de aplicativos que podem ser executados em telas de tamanhos diferentes. Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin e como dar suporte a fragmentos em 3.0 dispositivos previamente Android.
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 81f1f992de450ee62c4c1d2e80da858b024be594
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-with-fragments"></a>Implementando com fragmentos
 

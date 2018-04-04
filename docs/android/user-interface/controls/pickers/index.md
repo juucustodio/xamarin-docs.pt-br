@@ -1,18 +1,17 @@
 ---
 title: Seletores de
-description: "Usando caixas de diálogo Android internas para consultar o usuário para a data e hora"
-ms.topic: article
+description: Usando caixas de diálogo Android internas para consultar o usuário para a data e hora
 ms.prod: xamarin
 ms.assetid: 57C86933-3F04-47DD-9839-72D522D73330
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 36a246f77865d9b6f0f1a3583d475ea2062f885e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: de9c77cd1ea96727f5fbf10d11ff99c0aec5fe74
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="pickers"></a>Seletores de
 

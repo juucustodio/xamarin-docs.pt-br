@@ -1,18 +1,17 @@
 ---
 title: Controles
-description: "Xamarin expõe todos os objetos de interface de usuário nativa fornecidos pela Apple. Eles são adicionados facilmente a aplicativos xamarin usando o iOS Designer, construtor de Interface do Xcode ou programaticamente. Independentemente do método escolhido, xamarin expõe todas as propriedades do objeto de interface de usuário e métodos em c#."
-ms.topic: article
+description: Xamarin expõe todos os objetos de interface de usuário nativa fornecidos pela Apple. Eles são adicionados facilmente a aplicativos xamarin usando o iOS Designer, construtor de Interface do Xcode ou programaticamente. Independentemente do método escolhido, xamarin expõe todas as propriedades do objeto de interface de usuário e métodos em c#.
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: d661cf873baad43a51b40fb59fecd5bc298bcac4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82b2998319d4e78ee4f58a6d024032a509724537
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="controls"></a>Controles
 
@@ -36,7 +35,7 @@ Exibições de coleção, disponíveis no `UICollectionView` da classe, são um 
 
 Adicionando imagens ao seu aplicativo requer duas etapas: primeiro, adicionar imagens ao projeto. em seguida, adicione controles e código para exibi-los em uma tela. Consulte o [trabalhando com imagens](~/ios/app-fundamentals/images-icons/index.md) do artigo para obter mais cobertura da imagem tratamento em xamarin.
 
-## <a name="manual-camera-controlsintro-to-manual-camera-controlsmd"></a>[Controles de câmera manual](intro-to-manual-camera-controls.md)
+## <a name="manual-camera-controlsintro-to-manual-camera-controlsmd"></a>[Controles de câmera manuais](intro-to-manual-camera-controls.md)
 
 Os controles de câmera Manual, fornecida pelo `AVFoundation Framework` no iOS 8, permitir que um aplicativo móvel assumir o controle completo sobre a câmera de um dispositivo iOS. Esse nível refinado de controle pode ser usado para criar aplicativos de câmera nível professional e fornecer composições artista ajustando os parâmetros da câmera ao tirar uma imagem ou um vídeo ainda.
 
@@ -54,7 +53,7 @@ O controle de seletor exibe o controle de 'roda como' que contém uma lista de r
 
 Um usuário específico caso para selecionadores-a para definir a data e / ou hora. Para fornecer esse Apple criou uma subclasse personalizada de UIPickerView chamado UIDatePicker.
 
-## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[Progresso e indicadores de atividade](progress-activity-indicator.md)
+## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[Indicadores de progresso e de atividade](progress-activity-indicator.md)
 
 iOS fornece duas maneiras principais para indicar o progresso em seu aplicativo: indicadores de atividade (incluindo um determinado _rede_ indicador de atividade) e barras de progresso.
 
@@ -78,7 +77,7 @@ sua seção apresenta as classes usadas para criar e exibir tabelas e fornece ex
 
 Aceitar entrada de texto do usuário é realizada com o `UITextField` para entradas de linha única e UITextView para várias linhas de texto editável. Você pode arrastar um desses controles em uma tela e clique duas vezes para definir o texto inicial.
 
-## <a name="tab-bars-and-tab-bar-controllerscreating-tabbed-applicationsmd"></a>[Barras de guia e barra de guias controladores](creating-tabbed-applications.md)
+## <a name="tab-bars-and-tab-bar-controllerscreating-tabbed-applicationsmd"></a>[Barras de guia e controladores de barra de guias](creating-tabbed-applications.md)
 
 aplicativos do iOS usando uma interface de usuário de guia de navegação são criados usando a classe UITabBarController. Este artigo examinaremos como configurar um aplicativo com guias que contém vários controladores e exibições. Em seguida, examinaremos como carregar um UITabBarController quando não for o controlador de raiz, como após uma tela de logon.
 

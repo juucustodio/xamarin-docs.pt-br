@@ -1,17 +1,16 @@
 ---
-title: "Controles personalizados de transporte de vídeo"
-ms.topic: article
+title: Controles personalizados de transporte de vídeo
 ms.prod: xamarin
 ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5463a91dba5840ebe655aa1509d9f98e73643d26
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-video-transport-controls"></a>Controles personalizados de transporte de vídeo
 
@@ -521,19 +520,19 @@ namespace FormsVideoLibrary.UWP
 
 Usando caracteres Unicode para simbólicos **reproduzir**, **pausar**, e **parar** imagens é problemático. O [diversas técnicas](https://unicode-table.com/en/blocks/miscellaneous-technical/) seção do padrão Unicode define três caracteres de símbolo aparentemente apropriadas para essa finalidade. Elas são:
 
-- 0x23F5 (preto médio direita triângulo) ou & #x23F5; para **reproduzir**
-- 0x23F8 (barra vertical dupla) ou & #x23F8; para **pausar**
-- 0x23F9 (quadrado preto) ou & #x23F9; para **parar**
+- 0x23F5 (preto médio direita triângulo) ou &#x23F5; para **reproduzir**
+- 0x23F8 (barra vertical dupla) ou &#x23F8; para **pausar**
+- 0x23F9 (quadrado preto) ou &#x23F9; para **parar**
 
 Independentemente como esses símbolos exibida no navegador (e navegadores diferentes tratá-los de maneiras diferentes), eles não são exibidos consistentemente as plataformas com suporte de xamarin. Forms. No iOS e dispositivos UWP, o **pausar** e **parar** caracteres têm uma aparência gráfica, com um plano de fundo azul 3D e um plano de fundo branco. Isso não é o caso no Android, onde o símbolo é simplesmente azul. No entanto, o ponto de código 0x23F5 para **reproduzir** não tem a mesma aparência de UWP, e é nem mesmo tem suporte no iOS e Android.
 
 Por esse motivo, o ponto de código 0x23F5 não pode ser usado para **reproduzir**. É um substituto bom:
 
-- 0x25B6 (triângulo preto apontando para a direita) ou & #x25B6; para **reproduzir**
+- 0x25B6 (triângulo preto apontando para a direita) ou &#x25B6; para **reproduzir**
 
 Isso é compatível com todas as plataformas de três exceto que é um triângulo preto simples que não se assemelha a aparência 3D de **pausar** e **parar**. Uma possibilidade é seguem o ponto de código 0x25B6 com um código de grade:
 
-- 0x25B6 seguido por 0xFE0F (variante 16) ou & #x25B6; & #xFE0F; para **reproduzir**
+- 0x25B6 seguido por 0xFE0F (variante 16) ou &#x25B6; &#xFE0F; para **reproduzir**
 
 Este é o que é usado na marcação mostrada abaixo. No iOS, ele fornece o **reproduzir** símbolo a mesma aparência 3D que o **pausar** e **parar** botões, mas a variante não funciona no Android e o UWP.
 

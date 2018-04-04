@@ -1,18 +1,17 @@
 ---
 title: Usando SkiaSharp em xamarin. Forms
 description: Use SkiaSharp para gráficos 2D em seus aplicativos xamarin. Forms
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/11/2017
-ms.openlocfilehash: 2183601ca6e642b2fb21f640ed4fddfe2c300dc8
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: e3444411c80ecaee105cce7c10f7bec7583dc2a5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-skiasharp-in-xamarinforms"></a>Usando SkiaSharp em xamarin. Forms
 

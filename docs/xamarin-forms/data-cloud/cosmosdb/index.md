@@ -1,18 +1,17 @@
 ---
 title: Armazenamento de dados em um banco de dados de documento
 description: Um banco de dados de documento de banco de dados do Azure Cosmos é um banco de dados NoSQL que fornece acesso de baixa latência para documentos JSON, oferecendo um serviço de banco de dados rápida, altamente disponível e dimensionável para aplicativos que necessitam de replicação global e escala contínua.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F050E9D0-8CC3-4E75-8960-0D8273769E7C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: d09e5188cb4d37c1db5bb0fce1c4689bcb961b11
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: d39625d28d2e9bb8f6f3e35241adb520104047b7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="storing-data-in-a-document-database"></a>Armazenamento de dados em um banco de dados de documento
 

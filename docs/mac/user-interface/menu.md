@@ -1,18 +1,17 @@
 ---
 title: Menus
-description: "Este artigo aborda o trabalho com menus em um aplicativo Xamarin.Mac. Ele descreve a criar e manter menus e itens de menu no Xcode e o construtor de Interface e trabalhar com eles por meio de programação."
-ms.topic: article
+description: Este artigo aborda o trabalho com menus em um aplicativo Xamarin.Mac. Ele descreve a criar e manter menus e itens de menu no Xcode e o construtor de Interface e trabalhar com eles por meio de programação.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 52a9fc206a2c303d13d80be4de743d98056f7684
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="menus"></a>Menus
 
@@ -439,7 +438,7 @@ Em seguida, clique duas vezes no arquivo de storyboard do aplicativo no **soluç
 
 ![O Inspetor de atributos](menu-images/action01.png "Inspetor de atributos")
 
-Clique o  **+**  botão na parte inferior da **atributos Inspetor** para adicionar uma nova ação personalizada:
+Clique o **+** botão na parte inferior da **atributos Inspetor** para adicionar uma nova ação personalizada:
 
 ![Adicionando uma nova ação](menu-images/action02.png "adicionando uma nova ação")
 

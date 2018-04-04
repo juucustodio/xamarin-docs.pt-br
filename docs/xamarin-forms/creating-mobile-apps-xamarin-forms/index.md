@@ -1,18 +1,17 @@
 ---
 title: Criar aplicativos móveis com a edição de primeiro do catálogo xamarin. Forms
 description: Saiba xamarin. Forms com a versão eletrônica do catálogo de aplicativos do Mobile criando por Charles Petzold.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
-ms.openlocfilehash: caee0d685838f7c0a54e19611fdf72df5730c037
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 6e98adc4cc9dbf1ef6483d552d859b4925d51fe9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Criar aplicativos móveis com a edição de primeiro do catálogo xamarin. Forms
 

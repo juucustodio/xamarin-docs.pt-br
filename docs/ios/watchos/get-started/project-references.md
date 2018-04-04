@@ -1,18 +1,17 @@
 ---
-title: "Referências de Projeto"
-description: "Explicação da relação entre o aplicativo iOS, o aplicativo de inspeção e a extensão de inspeção."
-ms.topic: article
+title: Referências de Projeto
+description: Explicação da relação entre o aplicativo iOS, o aplicativo de inspeção e a extensão de inspeção.
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2fd39ed46a070d091f0fd5480cc782d319ec15bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f3573e8b578ca567ea9d7360eb132aead4c24f37
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="project-references"></a>Referências de Projeto
 

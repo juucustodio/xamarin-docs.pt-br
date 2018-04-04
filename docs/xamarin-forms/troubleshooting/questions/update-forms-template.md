@@ -1,17 +1,17 @@
 ---
-title: "Pode atualizar o modelo de padrão de xamarin. Forms a um pacote NuGet mais recente?"
-ms.topic: article
+title: Pode atualizar o modelo de padrão de xamarin. Forms a um pacote NuGet mais recente?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 160FBE13-26EB-4B4F-9248-A5CBE58FDD7F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: c626e8b4a01a55fac5d2c07f0c511241056c2774
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: fce595d7722dcd053f6fc9dcad84dc9a921e55b3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>Pode atualizar o modelo de padrão de xamarin. Forms a um pacote NuGet mais recente?
 
@@ -41,5 +41,5 @@ Este guia usa o modelo xamarin. Forms PCL como um exemplo, mas o mesmo método g
 
 7.  Copie a pasta do novo modelo de backup compactado para a nova pasta de "Aplicativos móveis".
 
-8.  Baixe o pacote do NuGet que corresponde à versão da etapa 3. Por exemplo, [http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (Consulte também [http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)) e copie-o para na subpasta apropriada da pasta de extensões Xamarin Visual Studio:
+8.  Baixe o pacote do NuGet que corresponde à versão da etapa 3. Por exemplo, [ http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529 ](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (Consulte também [ http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file ](http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)) e copie-o para a subpasta apropriada da pasta de extensões Xamarin Visual Studio:
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\Packages`

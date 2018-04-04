@@ -1,5 +1,5 @@
 #<a name="---"></a>---
-título: "Parte 6 – testes e App Store aprovações" MS. Topic: artigo MS. prod: MS. AssetID do xamarin: 46E0578A-7EB9-C105-ABB0-A043E501F36B MS. Technology: xamarin multiplataforma autor: asb3993 Author: amburns MS. Date: 23/03/2017
+título: "Parte 6 – testes e App Store aprovações" MS. prod: MS. AssetID do xamarin: 46E0578A-7EB9-C105-ABB0-A043E501F36B MS. Technology: xamarin multiplataforma autor: asb3993 Author: amburns MS. Date: 23/03/2017
 ---
 
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 - teste e aprovações de loja de aplicativos

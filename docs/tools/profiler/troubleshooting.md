@@ -1,18 +1,17 @@
 ---
-title: "Criador de perfil do Xamarin de solução de problemas"
-description: "O criador de perfil do Xamarin de solução de problemas"
-ms.topic: article
+title: Criador de perfil do Xamarin de solução de problemas
+description: O criador de perfil do Xamarin de solução de problemas
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: a6858a38575b723e81dea5e08b27a129f07e44b8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4844c999ceddcee89d4f45f6e41dd4c7f2caf054
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Criador de perfil do Xamarin de solução de problemas
 

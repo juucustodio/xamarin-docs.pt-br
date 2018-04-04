@@ -1,18 +1,17 @@
 ---
 title: Criando macOS modernos aplicativos
-description: "Este artigo aborda várias dicas, recursos e técnicas de que um desenvolvedor pode usar para compilar um aplicativo moderno macOS em Xamarin.Mac."
-ms.topic: article
+description: Este artigo aborda várias dicas, recursos e técnicas de que um desenvolvedor pode usar para compilar um aplicativo moderno macOS em Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 446db5c04849ac6fa320f3fe3b7e22b3d10bf9cf
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4eb4ff4a9e4784d816e2cbe8734e0422573cad92
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="building-modern-macos-apps"></a>Criando macOS modernos aplicativos
 

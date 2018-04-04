@@ -1,18 +1,17 @@
 ---
 title: Criando um ControlTemplate
-description: "Modelos de controle podem ser definidos no nível do aplicativo ou nível de página. Este artigo demonstra como criar e consumir os modelos de controle."
-ms.topic: article
+description: Modelos de controle podem ser definidos no nível do aplicativo ou nível de página. Este artigo demonstra como criar e consumir os modelos de controle.
 ms.prod: xamarin
 ms.assetid: A9AEB052-FBF5-4589-9BD4-6D6F62BED7F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 53309be2712f14c79b84c2eabb519b86dd73a404
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e8a0695969609a4b0bbeb38896adae9a7c16ed07
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-controltemplate"></a>Criando um ControlTemplate
 

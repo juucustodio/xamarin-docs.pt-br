@@ -1,18 +1,17 @@
 ---
 title: Plug-ins
 description: Adicionar facilmente a funcionalidade nativa para aplicativos xamarin. Forms
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2016
-ms.openlocfilehash: ad338e655c1aeb475122c837ca5c805e491f84bc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5770d13c46998872752820b7a0cbb222a04c3ff8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="plugins"></a>Plug-ins
 
@@ -35,7 +34,7 @@ Também é possível criar e publicar seu próprio plug-ins como pacotes do Nuge
 
 Por exemplo, a lista de plug-ins abaixo são todos os software livre, e eles correspondem aos exemplos no [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md) seção:
 
-- **Texto em fala** por James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech) e [NuGet  ](https://www.nuget.org/packages/Xam.Plugin.Battery)
+- **Texto em fala** por James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech) e [NuGet](https://www.nuget.org/packages/Xam.Plugin.Battery)
 - **Status da bateria** por James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery) e [NuGet](https://www.nuget.org/packages/Xam.Plugins.TextToSpeech/)
 
 Esses projetos Github podem fornecer um bom ponto de partida para criar seu próprio plug-ins de plataforma cruzada, assim como estas instruções para [criar um plug-in para Xamarin](https://github.com/xamarin/plugins#create-a-plugin-for-xamarin).

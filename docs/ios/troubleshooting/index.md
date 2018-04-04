@@ -1,17 +1,17 @@
 ---
-title: "Solução de problemas"
-description: "Documentos nesta seção abordam recursos específicos para solução de problemas com o xamarin. Solução de problemas"
-ms.topic: article
+title: Solução de problemas
+description: Documentos nesta seção abordam recursos específicos para solução de problemas com o xamarin. Solução de problemas
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1DE5E667-A671-47CE-A0AC-F0D8B00ACFCE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c58cf88379871a17c3da501d551b5e6a9dd3380f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b3cee70e6283ec945cdc87caff86fc09b48e6a9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 

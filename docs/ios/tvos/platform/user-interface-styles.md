@@ -1,18 +1,17 @@
 ---
-title: "Novos estilos de interface do usuário"
-description: "Este artigo aborda a luz e temas escuro de interface do usuário que Apple foi adicionado ao tvOS 10 e como implementá-los em um aplicativo Xamarin.tvOS."
-ms.topic: article
+title: Novos estilos de interface do usuário
+description: Este artigo aborda a luz e temas escuro de interface do usuário que Apple foi adicionado ao tvOS 10 e como implementá-los em um aplicativo Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: da75a99e842b13d42251cdd1c5195ec66ff4a513
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="new-user-interface-styles"></a>Novos estilos de interface do usuário
 
@@ -186,7 +185,7 @@ Apple adicionou os seguintes recursos ao editar tvOS Storyboards no construtor d
 
 * O desenvolvedor pode especificar diferentes variações de elementos de Interface de usuário com base no tema da interface do usuário no **Inspetor de atributo**:
     
-    * Várias propriedades agora tem um  **+**  ao lado deles que pode ser clicado para adicionar uma versão específica do tema de interface do usuário: 
+    * Várias propriedades agora tem um **+** ao lado deles que pode ser clicado para adicionar uma versão específica do tema de interface do usuário: 
 
         [![](user-interface-styles-images/theme08.png "Adicionar uma versão específica do tema de interface do usuário")](user-interface-styles-images/theme08.png#lightbox) 
     

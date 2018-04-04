@@ -1,18 +1,17 @@
 ---
 title: Mapas
 description: Este artigo descreve como usar mapas e local com xamarin. Ele abrange desde utilizando o aplicativo de mapas internos usando o Google mapeia Android API V2 diretamente.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: bb166c78e15ea91408a2a52b4da78cfa884f7621
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e57dc07aefbd1c80a53f4225f5f44fe72a9ddb9a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="maps"></a>Mapas
 
@@ -34,7 +33,7 @@ Primeiro, explique como aproveitar o aplicativo de mapas internos do Android e c
 
 - [MapsAndLocationDemo_v3 (sample)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [Ciclo de vida da atividade](~/android/app-fundamentals/activity-lifecycle/index.md)
-- [Obter um Google mapeia a chave de API](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
+- [Obter uma chave de API do Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [Complemento de APIs do Google](http://code.google.com/android/add-ons/google-apis/reference/index.html?com/google/android/maps/package-summary.html)
 - [Lista de propósitos: Invocar aplicativos do Google em dispositivos Android](http://developer.android.com/guide/appendix/g-app-intents.html)
 - [Local e mapas](http://developer.android.com/guide/topics/location/index.html)

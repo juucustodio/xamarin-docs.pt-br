@@ -1,18 +1,17 @@
 ---
-title: "Testes em dispositivos de inspeção"
-description: "Implantação de aplicativos para teste em seu Apple Watch"
-ms.topic: article
+title: Testes em dispositivos de inspeção
+description: Implantação de aplicativos para teste em seu Apple Watch
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="testing-on-watch-devices"></a>Testes em dispositivos de inspeção
 
@@ -26,7 +25,7 @@ Depois que você seguiu o [etapas de implantação](~/ios/watchos/deploy-test/in
 
 ## <a name="devices"></a>Dispositivos
 
-Testando aplicativos do iOS em um iPhone real ou iPad sempre exigiu o dispositivo a ser registrada no Centro de desenvolvimento. A lista de dispositivos tem esta aparência (clique no sinal de adição  **+**  para adicionar um novo dispositivo):
+Testando aplicativos do iOS em um iPhone real ou iPad sempre exigiu o dispositivo a ser registrada no Centro de desenvolvimento. A lista de dispositivos tem esta aparência (clique no sinal de adição **+** para adicionar um novo dispositivo):
 
 ![](device-images/devices-sml.png "A lista de dispositivos tem esta aparência")
 

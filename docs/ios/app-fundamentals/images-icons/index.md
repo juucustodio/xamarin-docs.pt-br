@@ -1,18 +1,17 @@
 ---
-title: "Imagens e ícones"
-description: "Esta seção inclui uma variedade de artigos que abrangem a trabalhar com imagens em um aplicativo xamarin, como usá-los como ícones, inicie telas ou incluindo-os em controles e fornecer ícones para tipos de documento personalizadas."
-ms.topic: article
+title: Imagens e ícones
+description: Esta seção inclui uma variedade de artigos que abrangem a trabalhar com imagens em um aplicativo xamarin, como usá-los como ícones, inicie telas ou incluindo-os em controles e fornecer ícones para tipos de documento personalizadas.
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 904ba5db84101651d10605fadf8e8861db0ddc1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fd191c898d5bb015d2d394d42db1049bb0128fb7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="images-and-icons"></a>Imagens e ícones
 
@@ -42,7 +41,7 @@ Este artigo aborda incluindo um ativo de imagem em um aplicativo xamarin e exibi
 
 Cobre este artigo incluindo e gerenciando um ativo de imagem em um aplicativo xamarin para ser usado como um ícone de aplicativo.
 
-## <a name="alternate-app-iconsiosapp-fundamentalsimages-iconsalternate-app-iconsmd"></a>[Ícones de aplicativo alternativo](~/ios/app-fundamentals/images-icons/alternate-app-icons.md)
+## <a name="alternate-app-iconsiosapp-fundamentalsimages-iconsalternate-app-iconsmd"></a>[Ícones de aplicativos alternativos](~/ios/app-fundamentals/images-icons/alternate-app-icons.md)
 
 Apple tenha adicionado vários aprimoramentos para o iOS 10.3 que permitem que um aplicativo gerenciar seu ícone:
 
@@ -52,11 +51,11 @@ Apple tenha adicionado vários aprimoramentos para o iOS 10.3 que permitem que u
  - `SetAlternameIconName` -Use esse método para alternar o ícone do aplicativo para o ícone alternativo fornecido.
 
 
-## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Inicie a telas](~/ios/app-fundamentals/images-icons/launch-screens.md)
+## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Telas de Inicialização](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 Este artigo aborda o uso de um tipo especial de Storyboard para fornecer uma tela de inicialização universal para cada tamanho de dispositivo do iOS e a resolução.
 
-## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Tipos de documento personalizadas](~/ios/app-fundamentals/images-icons/custom-document-types.md)
+## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Tipos de documento personalizado](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
 Cobre este artigo incluindo e gerenciando um ativo de imagem em um aplicativo xamarin para ser usado como um ícone de tipo de documento personalizadas.
 

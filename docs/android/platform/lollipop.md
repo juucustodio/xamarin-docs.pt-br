@@ -1,18 +1,17 @@
 ---
 title: Recursos de pirulito
-description: "Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 5.0 (pirulito). Esses recursos incluem um novo estilo de interface de usuário chamado tema de Material, bem como novos recursos de suporte, como animações, sombras de exibição e tonalidade drawable. Android 5.0 também inclui notificações aprimoradas, dois novos widgets de interface do usuário, um novo Agendador de trabalho e uma série de novas APIs para melhorar o armazenamento, rede, conectividade e recursos de multimídia."
-ms.topic: article
+description: Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 5.0 (pirulito). Esses recursos incluem um novo estilo de interface de usuário chamado tema de Material, bem como novos recursos de suporte, como animações, sombras de exibição e tonalidade drawable. Android 5.0 também inclui notificações aprimoradas, dois novos widgets de interface do usuário, um novo Agendador de trabalho e uma série de novas APIs para melhorar o armazenamento, rede, conectividade e recursos de multimídia.
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: de6829a0a698133ad9002ead1cd7c534a30b1f6c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cdef611525abbe4f066959c0ac56380b1c617747
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lollipop-features"></a>Recursos de pirulito
 

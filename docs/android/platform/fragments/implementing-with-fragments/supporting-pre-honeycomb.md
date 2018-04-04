@@ -1,17 +1,16 @@
 ---
-title: "Suporte Android pré-Honeycomb usando pacotes de suporte"
-ms.topic: article
+title: Suporte Android pré-Honeycomb usando pacotes de suporte
 ms.prod: xamarin
 ms.assetid: DACD0C14-5DDF-7BDE-6844-80550D301307
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 109c1e0f16d3a288160b64ec6ff833e5b31c4efd
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 75e12821d96b98037c568fb5dac69ba53a507670
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="supporting-pre-honeycomb-android-using-support-packages"></a>Suporte Android pré-Honeycomb usando pacotes de suporte
 

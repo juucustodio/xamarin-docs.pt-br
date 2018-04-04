@@ -1,18 +1,17 @@
 ---
 title: Barra de ferramentas
-description: "A barra de ferramentas é um componente de barra de ação que fornece mais flexibilidade do que a barra de ação padrão: ele pode ser colocado em qualquer lugar no aplicativo, seu tamanho pode ser alterado e ele pode usar um esquema de cores diferente do tema do aplicativo. Além disso, cada tela do aplicativo pode ter várias barras de ferramentas."
-ms.topic: article
+description: 'A barra de ferramentas é um componente de barra de ação que fornece mais flexibilidade do que a barra de ação padrão: ele pode ser colocado em qualquer lugar no aplicativo, seu tamanho pode ser alterado e ele pode usar um esquema de cores diferente do tema do aplicativo. Além disso, cada tela do aplicativo pode ter várias barras de ferramentas.'
 ms.prod: xamarin
 ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08fa00b539bd5baca4f5d61b04419a76a4a72ab1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="toolbar"></a>Barra de ferramentas
 

@@ -1,18 +1,17 @@
 ---
 title: Trabalhando com tipos nativos em aplicativos de plataforma cruzada
-description: "Este artigo aborda o uso do iOS novos tipos unificado API nativa (nint, nuint, nfloat) em um aplicativo de plataforma cruzada onde o código é compartilhado com dispositivos iOS não, como Android ou sistemas operacionais do Windows Phone."
-ms.topic: article
+description: Este artigo aborda o uso do iOS novos tipos unificado API nativa (nint, nuint, nfloat) em um aplicativo de plataforma cruzada onde o código é compartilhado com dispositivos iOS não, como Android ou sistemas operacionais do Windows Phone.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 2e177afa9124095f00edacbeb71512d5cd9bb219
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b32cb68174183fd094f72a7ab20f7ed52b278ee
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Trabalhando com tipos nativos em aplicativos de plataforma cruzada
 
@@ -249,7 +248,7 @@ Neste artigo, nós temos consulte quando devemos usar os tipos de dados nativos 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [API unificada](~/cross-platform/macios/unified/index.md)
+- [API Unificada](~/cross-platform/macios/unified/index.md)
 - [Tipos nativos](~/cross-platform/macios/nativetypes.md)
 - [Opções de compartilhamento de código](~/cross-platform/app-fundamentals/code-sharing.md)
 - [Exemplo de compartilhamento de código](https://developer.xamarin.com/samples/mobile/SharingCode/)

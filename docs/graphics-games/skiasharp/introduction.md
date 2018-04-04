@@ -1,18 +1,17 @@
 ---
-title: "Uma introdução ao SkiaSharp"
-description: "Isso fornece uma breve introdução aos conceitos por trás de SkiaSharp"
-ms.topic: article
+title: Uma introdução ao SkiaSharp
+description: Isso fornece uma breve introdução aos conceitos por trás de SkiaSharp
 ms.prod: xamarin
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 747c158460b23b91e4c2986d212802528cdd3979
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: 0e5a0cbbf5490b0fa0ffaca9be40d8e9357fce5a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="an-introduction-to-skiasharp"></a>Uma introdução ao SkiaSharp
 

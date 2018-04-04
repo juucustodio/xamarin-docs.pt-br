@@ -1,18 +1,17 @@
 ---
-title: "Sugestões proativos"
-description: "Este artigo mostra como usar pró-ativo sugestões em um aplicativo watchOS 3 para o contrato de unidade, permitindo que o sistema proativamente apresentar informações úteis automaticamente para o usuário."
-ms.topic: article
+title: Sugestões proativos
+description: Este artigo mostra como usar pró-ativo sugestões em um aplicativo watchOS 3 para o contrato de unidade, permitindo que o sistema proativamente apresentar informações úteis automaticamente para o usuário.
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f22be43f814865c3c14e12aa2aec3a8dbce09b7a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="proactive-suggestions"></a>Sugestões proativos
 

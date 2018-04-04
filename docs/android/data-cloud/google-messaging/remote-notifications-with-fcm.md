@@ -1,18 +1,17 @@
 ---
-title: "Notificações remotas com Firebase mensagens de nuvem"
-description: "Este passo a passo fornece uma explicação passo a passo de como usar mensagens de nuvem Firebase para implementar notificações remotas (também chamadas de notificações por push) em um aplicativo xamarin. Ele ilustra como implementar várias classes que são necessários para as comunicações com o sistema de mensagens de nuvem com a Firebase (FCM), fornece exemplos de como configurar o manifesto do Android para acessar FCM e demonstra o downstream de mensagens usando o Firebase Console."
-ms.topic: article
+title: Notificações remotas com Firebase mensagens de nuvem
+description: Este passo a passo fornece uma explicação passo a passo de como usar mensagens de nuvem Firebase para implementar notificações remotas (também chamadas de notificações por push) em um aplicativo xamarin. Ele ilustra como implementar várias classes que são necessários para as comunicações com o sistema de mensagens de nuvem com a Firebase (FCM), fornece exemplos de como configurar o manifesto do Android para acessar FCM e demonstra o downstream de mensagens usando o Firebase Console.
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notificações remotas com Firebase mensagens de nuvem
 

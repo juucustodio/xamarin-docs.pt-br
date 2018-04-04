@@ -1,18 +1,17 @@
 ---
 title: Ciclo de vida de atividade
-description: "Atividades são um componente fundamental dos aplicativos do Android e eles podem existir em vários estados diferentes. O ciclo de vida da atividade começa com instanciação e termina com a destruição e inclui muitos estados entre. Quando uma atividade muda de estado, o método de evento de ciclo de vida apropriado é chamado, notificando a atividade de alteração de estado iminente e permitindo que ele executar o código para adaptar-se a alteração. Este artigo examina o ciclo de vida de atividades e explica a responsabilidade se uma atividade tem durante cada uma dessas alterações de estado para ser parte de um aplicativo com bom comportamento e confiável."
-ms.topic: article
+description: Atividades são um componente fundamental dos aplicativos do Android e eles podem existir em vários estados diferentes. O ciclo de vida da atividade começa com instanciação e termina com a destruição e inclui muitos estados entre. Quando uma atividade muda de estado, o método de evento de ciclo de vida apropriado é chamado, notificando a atividade de alteração de estado iminente e permitindo que ele executar o código para adaptar-se a alteração. Este artigo examina o ciclo de vida de atividades e explica a responsabilidade se uma atividade tem durante cada uma dessas alterações de estado para ser parte de um aplicativo com bom comportamento e confiável.
 ms.prod: xamarin
 ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/28/2018
-ms.openlocfilehash: 335e63ce5a36cbd0172744a35c82920853b82e5c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f35f3e59d8b669795ade3d370894e45866cea1ff
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de atividade
 

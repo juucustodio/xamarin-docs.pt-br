@@ -1,18 +1,17 @@
 ---
 title: Usando CocosSharp em xamarin. Forms
 description: CocosSharp pode ser usado para adicionar forma precisa, imagem e processamento de texto a um aplicativo para visualização avançada
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 83852b6b2d7324ae6aaf6b1dbf86a6ef7f9ac509
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 5fcc3405780e0c5e8a0e8d32caf35abf59808c8e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Usando CocosSharp em xamarin. Forms
 

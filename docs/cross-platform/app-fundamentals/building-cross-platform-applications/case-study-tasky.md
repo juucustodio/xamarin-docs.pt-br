@@ -1,18 +1,17 @@
 ---
 title: 'Estudo de caso: Tasky'
-description: "Este documento descreve como os princípios de criando aplicativos de plataforma cruzada foram aplicados no aplicativo de exemplo Tasky portátil. Ele toca no design de aplicativo móvel, escrevendo código comum para reutilização e implementação de projetos específicos de plataforma que o iOS, Android e Windows Phone plataformas de destino."
-ms.topic: article
+description: Este documento descreve como os princípios de criando aplicativos de plataforma cruzada foram aplicados no aplicativo de exemplo Tasky portátil. Ele toca no design de aplicativo móvel, escrevendo código comum para reutilização e implementação de projetos específicos de plataforma que o iOS, Android e Windows Phone plataformas de destino.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 5b16fe1d6dab776af31e0aff97a00065517550ec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="case-study-tasky"></a>Estudo de caso: Tasky
 

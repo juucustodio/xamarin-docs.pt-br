@@ -1,18 +1,17 @@
 ---
-title: "Conceitos básicos de aplicativo"
-description: "Explorando os conceitos básicos do desenvolvimento do xamarin. Forms"
-ms.topic: article
+title: Conceitos básicos de aplicativo
+description: Explorando os conceitos básicos do desenvolvimento do xamarin. Forms
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: afa3bf25b1448d98c49c95a66bd0f4dc55bde39e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a53c15ebad6081dae2ebc4bd782bcc3644620fe
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Conceitos básicos de aplicativo
 
@@ -32,7 +31,7 @@ O `Application` classe `OnStart`, `OnSleep`, e `OnResume` métodos, bem como dos
 
 Controles de interface do usuário podem ser facilmente estendidos sem subclassificação usando comportamentos para adicionar funcionalidade.
 
-## <a name="custom-rendererscustom-rendererindexmd"></a>[Processadores personalizados](custom-renderer/index.md)
+## <a name="custom-rendererscustom-rendererindexmd"></a>[Renderizadores personalizados](custom-renderer/index.md)
 
 Renderiza personalizadas permitem que os desenvolvedores 'override' o processamento padrão de controles xamarin. Forms para personalizar sua aparência e comportamento em cada plataforma (usando SDKs nativo, se desejado).
 

@@ -1,18 +1,17 @@
 ---
 title: Designer Android
-description: "Este artigo aborda os recursos do Designer xamarin. Ele aborda as Noções básicas do designers, mostrando como usar o Designer para dispor widgets visualmente e como editar propriedades. Ele também mostra como usar o Designer para trabalhar com recursos e interfaces de usuário em várias configurações, como temas, idiomas e as configurações do dispositivo, bem como projetar para modos de exibição alternativos como retrato e paisagem."
-ms.topic: article
+description: Este artigo aborda os recursos do Designer xamarin. Ele aborda as Noções básicas do designers, mostrando como usar o Designer para dispor widgets visualmente e como editar propriedades. Ele também mostra como usar o Designer para trabalhar com recursos e interfaces de usuário em várias configurações, como temas, idiomas e as configurações do dispositivo, bem como projetar para modos de exibição alternativos como retrato e paisagem.
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 20da09895bae759c77e96300d798267881a7cbfd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-designer"></a>Designer Android
 

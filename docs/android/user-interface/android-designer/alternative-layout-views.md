@@ -1,18 +1,17 @@
 ---
-title: "Modos de exibição de Layout alternativo"
-description: "Este tópico explica como os layouts podem ser com controle de versão usando os qualificadores de recursos. Por exemplo, pode haver uma versão de um layout que é usado somente quando o dispositivo estiver no modo paisagem e uma versão de layout é apenas para o modo retrato."
-ms.topic: article
+title: Modos de exibição de Layout alternativo
+description: Este tópico explica como os layouts podem ser com controle de versão usando os qualificadores de recursos. Por exemplo, pode haver uma versão de um layout que é usado somente quando o dispositivo estiver no modo paisagem e uma versão de layout é apenas para o modo retrato.
 ms.prod: xamarin
 ms.assetid: 5EBF51FC-9048-F0CF-624A-D8782A91C1FD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: c2df60a79ea3b5a0ff226cfaade0440db13fd5ea
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d2228169ed5d8575c9e332c85d963fca0400dea8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alternative-layout-views"></a>Modos de exibição de Layout alternativo
 

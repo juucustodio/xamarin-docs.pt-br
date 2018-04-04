@@ -1,25 +1,24 @@
 ---
-title: Recursos de plataforma
+title: Recursos da plataforma
 description: Componentes de chave do macOS plataforma
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 3e18863ae91e76325a088c83fc2c11b9d6fa1125
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2bebc42cd3b5db7dba20066e90f294e621b1e4ac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="platform-features"></a>Recursos de plataforma
+# <a name="platform-features"></a>Recursos da plataforma
 
 Documentos nesta seção abordam trabalhar com recursos chave específica de plataforma do macOS em um aplicativo Xamarin.Mac.
 
 
-## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introdução ao macOS Serra](~/mac/platform/introduction-to-macos-sierra/index.md)
+## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introdução ao macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 
 macOS Serra é a versão mais recente do sistema operacional de desktop da Apple para Mac. Este documento aborda as alterações do Mac OS X El Capitan e como implementá-los em um aplicativo Xamarin.Mac.
 

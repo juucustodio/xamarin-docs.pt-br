@@ -1,18 +1,17 @@
 ---
-title: "Trabalhando com tabelas e células"
+title: Trabalhando com tabelas e células
 description: Exibindo dados usando UITableView com xamarin
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: f6abcaa3a771954785df83e80c7e46dd200e6986
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1cda3632a75c7e462e763a34fdb5b586237b670
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-and-cells"></a>Trabalhando com tabelas e células
 
@@ -33,9 +32,9 @@ Esses artigos terão uma visão completa de trabalhar com tabelas, incluindo:
 
  [Tabela partes &amp; funcionalidade](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
 
- [Populando uma tabela com dados](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
+ [Preencher uma tabela com dados](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
 
- [Personalizando a aparência de uma tabela](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
+ [Personalizar a aparência de uma tabela](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
  [Edição](~/ios/user-interface/controls/tables/editing.md)
  
@@ -43,7 +42,7 @@ Esses artigos terão uma visão completa de trabalhar com tabelas, incluindo:
 
  [Criando tabelas em um Storyboard](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
- [Altura da linha de dimensionamento automático](~/ios/user-interface/controls/tables/autosizing-row-height.md)
+ [Dimensionamento automático da altura da linha](~/ios/user-interface/controls/tables/autosizing-row-height.md)
 
 
 ## <a name="related-links"></a>Links relacionados

@@ -1,18 +1,17 @@
 ---
-title: "Sincronização de dados Offline com aplicativos móveis do Azure"
-description: "Sincronização offline permite que os usuários interagem com um aplicativo móvel, exibir, adicionar ou modificar dados, mesmo que não tem uma conexão de rede. As alterações são armazenadas em um banco de dados local e depois que o dispositivo estiver online, as alterações podem ser sincronizadas com a instância os aplicativos móveis do Azure. Este artigo explica como adicionar a funcionalidade de sincronização offline para um aplicativo xamarin. Forms."
-ms.topic: article
+title: Sincronização de dados Offline com aplicativos móveis do Azure
+description: Sincronização offline permite que os usuários interagem com um aplicativo móvel, exibir, adicionar ou modificar dados, mesmo que não tem uma conexão de rede. As alterações são armazenadas em um banco de dados local e depois que o dispositivo estiver online, as alterações podem ser sincronizadas com a instância os aplicativos móveis do Azure. Este artigo explica como adicionar a funcionalidade de sincronização offline para um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: DBB343B0-2709-4C20-A669-5522B9956D9B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: 965d4987c154acc5a2f95d4ca622266ebdc2a1c2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b083bb83dbc7266f749c4adc660a8bfb431df795
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Sincronização de dados Offline com aplicativos móveis do Azure
 

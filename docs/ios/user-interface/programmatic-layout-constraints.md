@@ -1,18 +1,17 @@
 ---
-title: "Restrições de Layout através de programação"
-description: "Este guia apresenta restrições de Layout automático de trabalhar com iOS em código c# em vez de criá-las no Designer de iOS."
-ms.topic: article
+title: Restrições de Layout através de programação
+description: Este guia apresenta restrições de Layout automático de trabalhar com iOS em código c# em vez de criá-las no Designer de iOS.
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 774d6e6ecdb081650c6f008b1ac83c397f788d5b
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 093101d09f5ffff637b034b3b4794aa6e785a0df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="programmatic-layout-constraints"></a>Restrições de Layout através de programação
 

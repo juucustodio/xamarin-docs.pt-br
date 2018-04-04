@@ -1,18 +1,17 @@
 ---
-title: "Páginas xamarin. Forms"
-description: "Páginas xamarin. Forms representam as telas de aplicativos móveis de plataforma cruzada."
-ms.topic: article
+title: Páginas xamarin. Forms
+description: Páginas xamarin. Forms representam as telas de aplicativos móveis de plataforma cruzada.
 ms.prod: xamarin
 ms.assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 5f979d2dbb894107d8d606ec1f41de44c294cdd3
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: bc1345bfaaf02464e2cf1ea0b3aceb28eb91e1d4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-pages"></a>Páginas xamarin. Forms
 

@@ -1,17 +1,16 @@
 ---
 title: Suporte do UrhoSharp Android
-description: "Recursos para UrhoSharp e configuração específica do Android."
-ms.topic: article
+description: Recursos para UrhoSharp e configuração específica do Android.
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: f99b8d2d9f779bc0cf14d76c110d9769ec49ad53
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2d0eb183817a84b982149736fa24f9ec56c1753e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp-android-support"></a>Suporte do UrhoSharp Android
 

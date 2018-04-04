@@ -1,18 +1,17 @@
 ---
 title: Fala de Android
 description: Este artigo aborda os conceitos básicos de como usar o namespace Android.Speech muito eficiente. Desde sua criação, Android foi capaz de reconhecer fala e saída como texto. É um processo relativamente simples. Para converter texto em fala, no entanto, o processo é mais envolvido, não apenas o mecanismo de fala precisa ser levado em conta, mas também os idiomas disponíveis e instalados no sistema de texto em fala (TTS).
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/02/2018
-ms.openlocfilehash: acc64fee37e1a6046991355389a09a29e1889993
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: bdaa9bf09485c06551a2df15a2e3a4b410a53e75
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-speech"></a>Fala de Android
 

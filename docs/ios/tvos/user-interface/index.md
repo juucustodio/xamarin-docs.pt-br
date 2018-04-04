@@ -1,18 +1,17 @@
 ---
-title: "Interface do Usuário"
-description: "Cobertura de experiência geral do usuário (UX), incluindo controles de Interface do usuário (IU), use do Xcode Interface Builder e princípios de design UX ao trabalhar com Xamarin.tvOS."
-ms.topic: article
+title: Interface do Usuário
+description: Cobertura de experiência geral do usuário (UX), incluindo controles de Interface do usuário (IU), use do Xcode Interface Builder e princípios de design UX ao trabalhar com Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c77cc6f9954c5fb7d1a303748efc5c3182a0c138
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a30bd02a9545717175daf1381730afce6b72218d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>Interface do Usuário
 
@@ -74,7 +73,7 @@ Este artigo aborda criando e trabalhando com textos e campos de pesquisa dentro 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -1,18 +1,17 @@
 ---
 title: Recursos de Bean Jelly
-description: "Este documento fornece uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4.1. Esses recursos incluem: aprimorada notificações, atualizações de emissão Android para compartilhar arquivos grandes, as atualizações para a descoberta de rede de multimídia, ponto a ponto, animações, novas permissões."
-ms.topic: article
+description: 'Este documento fornece uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4.1. Esses recursos incluem: aprimorada notificações, atualizações de emissão Android para compartilhar arquivos grandes, as atualizações para a descoberta de rede de multimídia, ponto a ponto, animações, novas permissões.'
 ms.prod: xamarin
 ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 136484644779ac40e661f50ff19cf15884c864c2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1d8068ccfc8d0f159a88704370261ec5f20d8b7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="jelly-bean-features"></a>Recursos de Bean Jelly
 

@@ -1,18 +1,17 @@
 ---
-title: "Caixas de diálogo"
-description: "Este artigo aborda a trabalhar com caixas de diálogo e janelas modais em um aplicativo Xamarin.Mac. Ele descreve como criar janelas modais no construtor de Interface e Xcode, trabalhando com caixas de diálogo padrão e interagir com esses controles em código c#."
-ms.topic: article
+title: Caixas de diálogo
+description: Este artigo aborda a trabalhar com caixas de diálogo e janelas modais em um aplicativo Xamarin.Mac. Ele descreve como criar janelas modais no construtor de Interface e Xcode, trabalhando com caixas de diálogo padrão e interagir com esses controles em código c#.
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 661874ae8599fed35ce10213fece383eb81de94d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: cd0b57cc40d3f7cffd4d5711ec04a7225be870e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="dialogs"></a>Caixas de diálogo
 

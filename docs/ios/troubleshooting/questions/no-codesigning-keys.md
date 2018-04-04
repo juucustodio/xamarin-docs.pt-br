@@ -1,16 +1,16 @@
 ---
-title: "Por que minha compilação iOS falhar com: nenhum código válido iPhone chaves de assinatura encontrada no conjunto de chaves?"
-ms.topic: article
+title: 'Por que minha compilação iOS falhar com: nenhum código válido iPhone chaves de assinatura encontrada no conjunto de chaves?'
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9DF24C46-D521-4112-9B21-52EA4E8D90D0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6a853bc7186647dbdae1d5d12f3b185d302a8088
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5334e3009906896644caa47c715f912fa379c627
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Por que minha compilação iOS falhar com: nenhum código válido iPhone chaves de assinatura encontrada no conjunto de chaves?
 

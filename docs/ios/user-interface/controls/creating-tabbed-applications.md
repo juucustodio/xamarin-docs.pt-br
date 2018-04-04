@@ -1,18 +1,17 @@
 ---
 title: Barras de guia e barra de guias controladores
-description: "aplicativos do iOS usando uma interface de usuário de guia de navegação são criados usando a classe UITabBarController. Este artigo examinaremos como configurar um aplicativo com guias que contém vários controladores e exibições. Em seguida, examinaremos como carregar um UITabBarController quando não for o controlador de raiz, como após uma tela de logon."
-ms.topic: article
+description: aplicativos do iOS usando uma interface de usuário de guia de navegação são criados usando a classe UITabBarController. Este artigo examinaremos como configurar um aplicativo com guias que contém vários controladores e exibições. Em seguida, examinaremos como carregar um UITabBarController quando não for o controlador de raiz, como após uma tela de logon.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 702a5986c9249eec38868895f55ef6f63b534b9b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tab-bars-and-tab-bar-controllers"></a>Barras de guia e barra de guias controladores
 

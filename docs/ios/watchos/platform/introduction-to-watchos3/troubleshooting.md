@@ -1,18 +1,17 @@
 ---
-title: "watchOS 3 solução de problemas"
-description: "Este artigo fornece várias dicas de solução de problemas para trabalhar com watchOS 3 em aplicativos Xamarin Apple Watch."
-ms.topic: article
+title: watchOS 3 solução de problemas
+description: Este artigo fornece várias dicas de solução de problemas para trabalhar com watchOS 3 em aplicativos Xamarin Apple Watch.
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 02ec4c3c9827f7cfac48184eb12491faaa0c92c8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 159c6a6dadcaa325abc7fd747abc9b2ba2f26a9c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="watchos-3-troubleshooting"></a>watchOS 3 solução de problemas
 

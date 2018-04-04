@@ -1,18 +1,17 @@
 ---
-title: "Pilha de HttpClient e seletor de implementação de SSL/TLS para Android"
-description: "Os seletores de pilha HttpClient e implementação de SSL/TLS determinam a implementação de HttpClient e SSL/TLS que será usada por seus aplicativos xamarin."
-ms.topic: article
+title: Pilha de HttpClient e seletor de implementação de SSL/TLS para Android
+description: Os seletores de pilha HttpClient e implementação de SSL/TLS determinam a implementação de HttpClient e SSL/TLS que será usada por seus aplicativos xamarin.
 ms.prod: xamarin
 ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/09/2018
-ms.openlocfilehash: 5c63bda11a57c0f27efa1db6f0455b25f7da531b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2bc9b2a454b306f0794ef3704daa7e0fe6d04ef8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pilha de HttpClient e seletor de implementação de SSL/TLS para Android
 

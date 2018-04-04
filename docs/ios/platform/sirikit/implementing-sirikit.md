@@ -1,18 +1,17 @@
 ---
 title: Implementando SiriKit
-description: "Este artigo aborda as etapas necessárias para implementar SiriKit suporte em um aplicativos xamarin."
-ms.topic: article
+description: Este artigo aborda as etapas necessárias para implementar SiriKit suporte em um aplicativos xamarin.
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 76787ecda1c2cd043b81482dcdbe3751d012ef74
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5fdc05de19799ce7b553428c23f860186909bcbb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-sirikit"></a>Implementando SiriKit
 
@@ -213,14 +212,14 @@ Faça o seguinte no seu Mac:
 
 1. Em um navegador da web, navegue até [ http://developer.apple.com ](http://developer.apple.com) e de log em sua conta.
 2. Clique em **certificados**, **identificadores** e **perfis**.
-3. Selecione **perfis de provisionamento** e selecione **IDs de aplicativo**, em seguida, clique no  **+**  botão.
+3. Selecione **perfis de provisionamento** e selecione **IDs de aplicativo**, em seguida, clique no **+** botão.
 4. Insira um **nome** para o novo perfil.
 5. Insira um **ID do pacote** seguir Apple nomes da recomendação.
 6. Role para baixo até o **serviços de aplicativos** seção, selecione **SiriKit** e clique no **continuar** botão: 
 
     [![](implementing-sirikit-images/setup03.png "Selecione SiriKit")](implementing-sirikit-images/setup03.png#lightbox)
 7. Verifique se todas as configurações, em seguida, **enviar** ID. o App
-8. Selecione **perfis de provisionamento** > **desenvolvimento**, clique no  **+**  botão, selecione o **ID da Apple**, em seguida, clique em **continuar**.
+8. Selecione **perfis de provisionamento** > **desenvolvimento**, clique no **+** botão, selecione o **ID da Apple**, em seguida, clique em **continuar**.
 9. Clique em selecionar **todos os**, em seguida, clique em **continuar**.
 10. Clique em **Selecionar tudo** novamente, em seguida, clique em **continuar**.
 11. Insira um **nome do perfil** usando o Apple de nomeação sugestões, em seguida, clique em **continuar**.
@@ -462,16 +461,16 @@ Para adicionar um `AppIntentVocabulary.plist` arquivo ao projeto de aplicativo, 
 
     [![](implementing-sirikit-images/plist01.png "Adicionar uma lista de propriedades")](implementing-sirikit-images/plist01.png#lightbox) 
 2. Clique duas vezes o `AppIntentVocabulary.plist` arquivo o **Gerenciador de soluções** para abri-lo para edição.
-3. Clique o  **+**  para adicionar uma chave, defina o **nome** para `ParameterVocabularies` e **tipo** para `Array`:
+3. Clique o **+** para adicionar uma chave, defina o **nome** para `ParameterVocabularies` e **tipo** para `Array`:
 
     [![](implementing-sirikit-images/plist02.png "Defina o nome como ParameterVocabularies e o tipo de matriz")](implementing-sirikit-images/plist02.png#lightbox)
-4. Expanda `ParameterVocabularies` e clique no  **+**  botão e defina o **tipo** para `Dictionary`:
+4. Expanda `ParameterVocabularies` e clique no **+** botão e defina o **tipo** para `Dictionary`:
 
     [![](implementing-sirikit-images/plist03.png "Defina o tipo de dicionário")](implementing-sirikit-images/plist03.png#lightbox)
-5. Clique o  **+**  para adicionar uma nova chave, defina o **nome** para `ParameterNames` e **tipo** para `Array`:
+5. Clique o **+** para adicionar uma nova chave, defina o **nome** para `ParameterNames` e **tipo** para `Array`:
 
     [![](implementing-sirikit-images/plist04.png "Defina o nome como ParameterNames e o tipo de matriz")](implementing-sirikit-images/plist04.png#lightbox)
-6. Clique o  **+**  para adicionar uma nova chave com o **tipo** de `String` e o valor como um dos nomes de parâmetro disponíveis. Por exemplo, `INStartWorkoutIntent.workoutName`:
+6. Clique o **+** para adicionar uma nova chave com o **tipo** de `String` e o valor como um dos nomes de parâmetro disponíveis. Por exemplo, `INStartWorkoutIntent.workoutName`:
 
     [![](implementing-sirikit-images/plist05.png "A chave INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05.png#lightbox)
 7. Adicionar o `ParameterVocabulary` chave para o `ParameterVocabularies` chave com o **tipo** de `Array`:
@@ -526,16 +525,16 @@ Para adicionar um `AppIntentVocabulary.plist` arquivo ao projeto de aplicativo, 
 
     [![](implementing-sirikit-images/plist01w.png "Adicionar um novo Info. plist")](implementing-sirikit-images/plist01w.png#lightbox) 
 2. Clique duas vezes o `AppIntentVocabulary.plist` arquivo o **Gerenciador de soluções** para abri-lo para edição.
-3. Clique o  **+**  para adicionar uma chave, defina o **nome** para `ParameterVocabularies` e **tipo** para `Array`:
+3. Clique o **+** para adicionar uma chave, defina o **nome** para `ParameterVocabularies` e **tipo** para `Array`:
 
     [![](implementing-sirikit-images/plist02w.png "Defina o nome como ParameterVocabularies e o tipo de matriz")](implementing-sirikit-images/plist02w.png#lightbox)
-4. Expanda `ParameterVocabularies` e clique no  **+**  botão e defina o **tipo** para `Dictionary`:
+4. Expanda `ParameterVocabularies` e clique no **+** botão e defina o **tipo** para `Dictionary`:
 
     [![](implementing-sirikit-images/plist03w.png "Defina o tipo de dicionário")](implementing-sirikit-images/plist03w.png#lightbox)
-5. Clique o  **+**  para adicionar uma nova chave, defina o **nome** para `ParameterNames` e **tipo** para `Array`:
+5. Clique o **+** para adicionar uma nova chave, defina o **nome** para `ParameterNames` e **tipo** para `Array`:
 
     [![](implementing-sirikit-images/plist04w.png "Defina o nome como ParameterNames e o tipo de matriz")](implementing-sirikit-images/plist04w.png#lightbox)
-6. Clique o  **+**  para adicionar uma nova chave com o **tipo** de `String` e o valor como um dos nomes de parâmetro disponíveis. Por exemplo, `INStartWorkoutIntent.workoutName`:
+6. Clique o **+** para adicionar uma nova chave com o **tipo** de `String` e o valor como um dos nomes de parâmetro disponíveis. Por exemplo, `INStartWorkoutIntent.workoutName`:
 
     [![](implementing-sirikit-images/plist05w.png "A chave INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05w.png#lightbox)
 7. Adicionar o `ParameterVocabulary` chave para o `ParameterVocabularies` chave com o **tipo** de `Array`:

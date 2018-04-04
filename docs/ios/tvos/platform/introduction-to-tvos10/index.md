@@ -1,18 +1,17 @@
 ---
-title: "Introdução às tvOS 10"
-description: "Este artigo apresenta todas as APIs e recursos disponíveis no tvOS 10 novos e modificados para desenvolvedores de Xamarin.tvOS."
-ms.topic: article
+title: Introdução às tvOS 10
+description: Este artigo apresenta todas as APIs e recursos disponíveis no tvOS 10 novos e modificados para desenvolvedores de Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: CB9C1EC8-6008-43AD-977E-976AE7C73DD8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8bc379e507287cd609dca8440b1210b7f1514114
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 642a851cbfc0450ee8f5f5c4d798c40778e3d3dd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-tvos-10"></a>Introdução às tvOS 10
 
@@ -88,5 +87,5 @@ Nenhum APIs ou estruturas foram substituídas pelo tvOS 10. Consulte da Apple [t
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [O que há de novo no tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

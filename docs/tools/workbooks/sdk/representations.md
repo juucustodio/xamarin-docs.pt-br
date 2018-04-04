@@ -1,16 +1,15 @@
 ---
-title: "Representações em pastas de trabalho do Xamarin"
-ms.topic: article
+title: Representações em pastas de trabalho do Xamarin
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: a311bace159a450dc27e15baa8ef1c260a90c36e
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: f0fdc4f5145fc9a80f63b251a8a8927486fcd894
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="representations-in-xamarin-workbooks"></a>Representações em pastas de trabalho do Xamarin
 

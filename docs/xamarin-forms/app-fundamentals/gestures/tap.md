@@ -1,18 +1,17 @@
 ---
 title: Adicionando um reconhecedor de gestos de gestos de toque
-description: "O gesto de toque é usado para detecção de toque e é implementado com a classe TapGestureRecognizer."
-ms.topic: article
+description: O gesto de toque é usado para detecção de toque e é implementado com a classe TapGestureRecognizer.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: d767b50d98b88e6b97a07caffcc103c70cfda428
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c015ce4b24a1e00b4369a8e98d1381b570557a9c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-a-tap-gesture-gesture-recognizer"></a>Adicionando um reconhecedor de gestos de gestos de toque
 

@@ -1,18 +1,17 @@
 ---
 title: Integração de texto e elementos gráficos
 description: Consulte como determinar o tamanho da cadeia de caracteres de texto renderizado integrar texto SkiaSharp gráficos
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1607fe31785b6793175dfb61e1e12e34429aa089
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 1e8ad47867fb1821df1e427aa777ead1a7da19a0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="integrating-text-and-graphics"></a>Integração de texto e elementos gráficos
 

@@ -1,18 +1,17 @@
 ---
-title: "Autenticação de usuários com um serviço de SimpleDB Amazon"
-description: "Amazon SimpleDB não tem seu próprio sistema de permissões com base em recursos. Em vez disso, a autenticação em relação a um provedor de identidade pode ser usada para garantir que os usuários só tenham acesso aos seus próprios dados no domínio SimpleDB. Este artigo explica como restringir o acesso dos usuários para seus próprios dados SimpleDB."
-ms.topic: article
+title: Autenticação de usuários com um serviço de SimpleDB Amazon
+description: Amazon SimpleDB não tem seu próprio sistema de permissões com base em recursos. Em vez disso, a autenticação em relação a um provedor de identidade pode ser usada para garantir que os usuários só tenham acesso aos seus próprios dados no domínio SimpleDB. Este artigo explica como restringir o acesso dos usuários para seus próprios dados SimpleDB.
 ms.prod: xamarin
 ms.assetid: 797C91A5-9720-4DAC-89D8-5C85996584C8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: ac4c788b4bd48991d7628d892ad1ece3d2451228
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 592e957e0c64e7189d6f01f1ba0f23da074c4bec
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>Autenticação de usuários com um serviço de SimpleDB Amazon
 

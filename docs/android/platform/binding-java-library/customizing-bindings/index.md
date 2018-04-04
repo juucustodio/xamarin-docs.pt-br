@@ -1,18 +1,17 @@
 ---
-title: "Personalizando associações"
-description: "Você pode personalizar uma associação xamarin editando os metadados que controla o processo de ligação. Essas modificações manuais geralmente são necessárias para resolver erros de compilação e formatação a API resultante para que seja mais consistente com o c# / .NET. Esses guias explicam como usar JavaDoc para recuperar os nomes dos parâmetros de método, como modificar os metadados e a estrutura de metadados."
-ms.topic: article
+title: Personalizando associações
+description: Você pode personalizar uma associação xamarin editando os metadados que controla o processo de ligação. Essas modificações manuais geralmente são necessárias para resolver erros de compilação e formatação a API resultante para que seja mais consistente com o c# / .NET. Esses guias explicam como usar JavaDoc para recuperar os nomes dos parâmetros de método, como modificar os metadados e a estrutura de metadados.
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 09/25/2017
-ms.openlocfilehash: 14372c3ca42d1ba4a8ade1248f3c5f3210cc7e46
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bb4f3b24be2072cb8b33893899a23951ace63607
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-bindings"></a>Personalizando associações
 

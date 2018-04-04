@@ -1,18 +1,17 @@
 ---
-title: "Instruções passo a passo - salvar o estado de atividade"
-description: "Nós abordamos a teoria por trás de salvar o estado no guia de ciclo de vida da atividade; Agora, vamos examinar um exemplo."
-ms.topic: article
+title: Instruções passo a passo - salvar o estado de atividade
+description: Nós abordamos a teoria por trás de salvar o estado no guia de ciclo de vida da atividade; Agora, vamos examinar um exemplo.
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e282eeb8732bd5294da4ec4e3fe337e81107c8f3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Instruções passo a passo - salvar o estado de atividade
 

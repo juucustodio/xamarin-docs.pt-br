@@ -1,18 +1,17 @@
 ---
 title: UrhoSharp - mecanismo 3D/2D
-description: "UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar animadas cenas 2D e 3D para seus aplicativos usando geometrias, materiais, luzes e câmeras."
-ms.topic: article
+description: UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar animadas cenas 2D e 3D para seus aplicativos usando geometrias, materiais, luzes e câmeras.
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 747c38c4a279b740bf52645c00df85ea9357f4a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c8df53d90ab1245aecff3eab1393c009b7910aa5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp - mecanismo 3D/2D
 
@@ -26,7 +25,7 @@ UrhoSharp é distribuído como um pacote do NuGet que pode ser instalado no Visu
 
 Este artigo fornece uma visão geral de UrhoSharp e seus recursos de visualização 3D e para uso em jogos 3D simples.
 
-##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[Usando UrhoSharp](~/graphics-games/urhosharp/using.md)
+##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[Uso do UrhoSharp](~/graphics-games/urhosharp/using.md)
 
 Este documento descreve os conceitos básicos de UrhoSharp que você usaria para criar um jogo ou criar uma visualização 3D para seu aplicativo.
 
@@ -62,7 +61,7 @@ Esta documentação contém conteúdo original do Xamarin Inc, mas desenha exten
 
 ## <a name="license"></a>Licença
 
-A licença UrhoSharp está disponível no [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
+A licença UrhoSharp está disponível do [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
 
 
 
