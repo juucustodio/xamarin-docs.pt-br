@@ -1,18 +1,17 @@
 ---
-title: "Introdução ao iOS 6"
+title: Introdução ao iOS 6
 description: iOS 6 inclui uma variedade de novas tecnologias para desenvolver aplicativos que xamarin 6 oferece aos desenvolvedores do c#.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e1232c96f5ea978c8adc640160a1e9b7e42663d8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8f3be80ffb8156c24c96b03fda8eac3907ca88bd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-6"></a>Introdução ao iOS 6
 
