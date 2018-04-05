@@ -7,11 +7,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 7ea99612f85a853bcd045b773df0a01f33427a89
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="svg-path-data"></a>Dados de caminho SVG
 
@@ -147,7 +147,7 @@ Estático [ `SKPath.ParseSvgPathData` ](https://developer.xamarin.com/api/member
 
 O [ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) método é útil para a obtenção de dados de caminho SVG de uma já existente `SKPath` objeto transferir para outro programa ou para armazenar em um formato de arquivo de texto como XML. (O `ToSvgPathData` método não será demonstrado no código de exemplo neste artigo.) Fazer *não* esperar `ToSvgPathData` para retornar uma cadeia de caracteres correspondente exatamente as chamadas de método que criou o caminho. Em particular, você descobrirá que arcos são convertidos em vários `QuadTo` comandos, e como eles são exibidos nos dados de caminho retornados de `ToSvgPathData`.
 
-O **caminho dados Hello** página spells a palavra "HELLO" usando dados de caminho SVG. Tanto o `SKPath` e `SKPaint` objetos são definidos como campos de [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) classe:
+O **caminho dados Hello** página spells a palavra "HELLO" usando dados de caminho SVG. Tanto o `SKPath` e `SKPaint` objetos são definidos como campos de [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) classe:
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -218,7 +218,7 @@ O caminho preenche a tela, que é mais razoável quando exibido no modo paisagem
 
 [![](path-data-images/pathdatahello-small.png "Captura de tela tripla do caminho dados Hello página")](path-data-images/pathdatahello-large.png#lightbox "tripla captura de tela de caminho dados Hello página")
 
-O **caminho dados Cat** página é semelhante. Os objetos de caminho e paint são definidos como campos de [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe:
+O **caminho dados Cat** página é semelhante. Os objetos de caminho e paint são definidos como campos de [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe:
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -291,7 +291,7 @@ Aqui está o programa em execução em todas as três plataformas:
 
 Normalmente, quando um `SKPath` objeto é definido como um campo, o contorno do caminho deve ser definido no construtor ou outro método. Ao usar dados de caminho SVG, no entanto, você viu que o caminho pode ser especificado inteiramente na definição do campo.
 
-O anteriores **feio relógio de analógico** exemplo no [ **a girar transformar** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) artigo exibido os ponteiros do relógio como linhas simples. O **bastante o relógio analógico** programa abaixo substitui essas linhas com `SKPath` objetos definidos como campos no [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) classe junto com `SKPaint` objetos:
+O anteriores **feio relógio de analógico** exemplo no [ **a girar transformar** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) artigo exibido os ponteiros do relógio como linhas simples. O **bastante o relógio analógico** programa abaixo substitui essas linhas com `SKPath` objetos definidos como campos no [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) classe junto com `SKPaint` objetos:
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage

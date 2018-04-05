@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 3a828baccda83822237d2564d771bcd89c9099e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2881148631435c9082b42cad0e784100b010b46
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-basics"></a>Noções básicas de caminho
 
@@ -50,7 +50,7 @@ O `R` significa *relativo*. Eles têm a mesma sintaxe que os métodos correspond
 
 Um contorno termina com outra chamada para `MoveTo` ou `RMoveTo`, que inicia uma nova delimitação ou uma chamada para `Close`, que fecha o contorno. O `Close` método automaticamente acrescenta uma linha reta do ponto atual para o primeiro ponto do contorno e marca o caminho como fechado, o que significa que ele será renderizado sem qualquer caps traçado.
 
-A diferença entre delimitações abertas e fechadas é ilustrada no **dois contornos triângulo** página, que usa um `SKPath` objeto com dois contornos para processar dois triângulos. O contorno primeiro é aberto e o segundo é fechado. Aqui está o [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe:
+A diferença entre delimitações abertas e fechadas é ilustrada no **dois contornos triângulo** página, que usa um `SKPath` objeto com dois contornos para processar dois triângulos. O contorno primeiro é aberto e o segundo é fechado. Aqui está o [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -122,7 +122,7 @@ Assim como a aparência de início e de término de uma linha é definida por um
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) uma junção arredondada
 - [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) uma junção embaralhados desativado
 
-O **traço junções** página mostra essas três traçar junções com código semelhante do **traço Caps** página. Este é o `PaintSurface` manipulador de eventos de [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe:
+O **traço junções** página mostra essas três traçar junções com código semelhante do **traço Caps** página. Este é o `PaintSurface` manipulador de eventos de [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

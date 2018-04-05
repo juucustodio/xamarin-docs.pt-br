@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 32eefb0607bc06602098fdc5cfb11aa5e46c80d0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Linhas e limites de traço
 
@@ -35,7 +35,7 @@ A aparência do inicia e termina de linhas é chamada um *terminação de linha*
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 
-Esses são ilustrados melhor com um programa de exemplo. A segunda seção da página inicial do [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa começa com uma página chamada **traço Caps** com base no [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Essa página define uma `PaintSurface` manipulador de eventos que percorre três membros do `SKStrokeCap` enumeração, exibindo o nome do membro de enumeração e desenhar uma linha usando esse limite de traço:
+Esses são ilustrados melhor com um programa de exemplo. A segunda seção da página inicial do [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa começa com uma página chamada **traço Caps** com base no [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Essa página define uma `PaintSurface` manipulador de eventos que percorre três membros do `SKStrokeCap` enumeração, exibindo o nome do membro de enumeração e desenhar uma linha usando esse limite de traço:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -107,7 +107,7 @@ O `points` parâmetro é uma matriz de `SKPoint` valores e `mode` é um membro d
 - [`Lines`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Lines/) para se conectar a cada par de pontos
 - [`Polygon`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Polygon/) para se conectar a todos os pontos consecutivos
 
-O **várias linhas** página demonstra esse método. O [ `MultipleLinesPage` arquivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) cria dois `Picker` exibições que permitem que você selecione um membro do `SKPointMode` enumeração e um membro do `SKStrokeCap` enumeração:
+O **várias linhas** página demonstra esse método. O [ `MultipleLinesPage` arquivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) cria dois `Picker` exibições que permitem que você selecione um membro do `SKPointMode` enumeração e um membro do `SKStrokeCap` enumeração:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

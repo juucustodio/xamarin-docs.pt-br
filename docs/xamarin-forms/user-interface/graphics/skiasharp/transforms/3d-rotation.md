@@ -7,11 +7,11 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 47daca2ab94f718aeb5ce474c87edce3c3bd77a4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="3d-rotations"></a>Rotações 3D
 
@@ -221,7 +221,7 @@ Quando objetos 2D são girados com um ângulo positivo em torno do eixo Y, em se
 
 Ao usar `SKMatrix44`, executar todas as operações de perspectiva e a rotação 3D multiplicando vários `SKMatrix44` valores. Em seguida, é possível extrair uma matriz bidimensional de 3 por 3 a 4 por 4 matriz usando o [ `Matrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/) propriedade o `SKMatrix44` classe. Essa propriedade retorna um familiar `SKMatrix` valor.
 
-O **rotação 3D** página permite fazer experiências com rotação 3D. O [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) arquivo cria quatro controles deslizantes para definir a rotação em torno dos eixos X, Y e Z e para definir um valor de profundidade:
+O **rotação 3D** página permite fazer experiências com rotação 3D. O [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) arquivo cria quatro controles deslizantes para definir a rotação em torno dos eixos X, Y e Z e para definir um valor de profundidade:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -302,7 +302,7 @@ O **rotação 3D** página permite fazer experiências com rotação 3D. O [ **R
 
 Observe que o `depthSlider` é inicializada com um `Minimum` valor de 250. Isso implica que o objeto 2D que está sendo girado aqui tem coordenadas X e Y, restritas a um círculo definido por um raio de 250 pixels ao redor da origem. Qualquer rotação do objeto em espaço 3D sempre resultará em valores de coordenada menor do que 250.
 
-O [ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) arquivo code-behind carrega em um bitmap que possui 300 pixels quadrados:
+O [ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) arquivo code-behind carrega em um bitmap que possui 300 pixels quadrados:
 
 ```csharp
 public partial class Rotation3DPage : ContentPage

@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 4097aea4079555b26b586db5ec63fa261d5e7946
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 47f5a6fdcfb6ee795f84ca8e19c0954b68a2fae9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-effects"></a>Efeitos de caminho
 
@@ -50,7 +50,7 @@ O **animado texto pontilhado** página é semelhante ao **texto descritas** pág
 
 [![](effects-images/animateddottedtext-small.png "Tripla captura de tela da página de animação texto pontilhado")](effects-images/animateddottedtext-large.png#lightbox "tripla captura de tela da página de animação texto pontilhado")
 
-O [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) classe começa definindo algumas constantes e também substitui o `OnAppearing` e `OnDisappearing` métodos para a animação:
+O [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) classe começa definindo algumas constantes e também substitui o `OnAppearing` e `OnDisappearing` métodos para a animação:
 
 ```csharp
 public class AnimatedDottedTextPage : ContentPage
@@ -158,7 +158,7 @@ O **Dot / traço Morph** programa anima padrão de traço em si para que os tra�
 
 [![](effects-images/dotdashmorph-small.png "Tripla captura de tela da página ponto traço Morph")](effects-images/dotdashmorph-large.png#lightbox "tripla captura de tela da página ponto traço Morph")
 
-O [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) substituições de classe a `OnAppearing` e `OnDisappearing` métodos apenas o programa anterior, mas a classe define o `SKPaint` objeto como um campo:
+O [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) substituições de classe a `OnAppearing` e `OnDisappearing` métodos apenas o programa anterior, mas a classe define o `SKPaint` objeto como um campo:
 
 ```csharp
 public class DotDashMorphPage : ContentPage
@@ -287,7 +287,7 @@ O [ `SKPath1DPathEffectStyle` ](https://developer.xamarin.com/api/type/SkiaSharp
 
 O `Translate` membro faz com que o caminho para permanecer na mesma posição que ele seja replicado ao longo de uma linha ou curva. Para `Rotate`, o caminho for girado com base em uma tangente para a curva. O caminho tem sua orientação normal para as linhas horizontais. `Morph` é semelhante ao `Rotate` exceto pelo fato do demarcador em si também está curvado para corresponder a curvatura da linha que está sendo traçada.
 
-O **1 D efeito** página demonstra essas três opções. O [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) arquivo define um seletor que contém três itens correspondentes aos três membros da enumeração:
+O **1 D efeito** página demonstra essas três opções. O [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) arquivo define um seletor que contém três itens correspondentes aos três membros da enumeração:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -323,7 +323,7 @@ O **1 D efeito** página demonstra essas três opções. O [ **OneDimensionalPat
 </ContentPage>
 ```
 
-O [ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) arquivo code-behind define três `SKPathEffect` objetos como campos. Eles são criados usando `SKPathEffect.Create1DPath` com `SKPath` os objetos criados com `SKPath.ParseSvgPathData`. A primeira é uma caixa simple, o segundo é uma forma de losango e o terceiro é um retângulo. Eles são usados para demonstrar os estilos de três efeito:
+O [ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) arquivo code-behind define três `SKPathEffect` objetos como campos. Eles são criados usando `SKPathEffect.Create1DPath` com `SKPath` os objetos criados com `SKPath.ParseSvgPathData`. A primeira é uma caixa simple, o segundo é uma forma de losango e o terceiro é um retângulo. Eles são usados para demonstrar os estilos de três efeito:
 
 ```csharp
 public partial class OneDimensionalPathEffectPage : ContentPage
@@ -422,7 +422,7 @@ Localizando o valor correto de *um* ajustar o catenary para as dimensões de pá
 
 COSH (w/2/a) = 1 + h / a
 
-O método a seguir no [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpora que Igualdade consultando as duas expressões à esquerda e à direita do sinal de igual como `left` e `right`. Para valores pequenos de *um*, `left` é maior do que `right`; para valores grandes de *um*, `left` é menor que `right`. O `while` loop restringe em um valor ideal de *um*:
+O método a seguir no [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpora que Igualdade consultando as duas expressões à esquerda e à direita do sinal de igual como `left` e `right`. Para valores pequenos de *um*, `left` é maior do que `right`; para valores grandes de *um*, `left` é menor que `right`. O `while` loop restringe em um valor ideal de *um*:
 
 ```csharp
 float FindOptimumA(float width, float height)
@@ -551,7 +551,7 @@ O **Esteira** página cria um caminho semelhante a uma faixa de transportadora a
 
 A (0, 0) de ponto de caminho o bucket é o identificador, portanto, quando o `phase` argumento é animado, os buckets parecem giram em torno de Esteira talvez escopo backup água na parte inferior e descarte-o na parte superior.
 
-O [ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) classe implementa animação com substituições do `OnAppearing` e `OnDisappearing` métodos. O caminho para o bucket é definido no construtor da página:
+O [ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) classe implementa animação com substituições do `OnAppearing` e `OnDisappearing` métodos. O caminho para o bucket é definido no construtor da página:
 
 ```csharp
 public class ConveyorBeltPage : ContentPage
@@ -712,7 +712,7 @@ O `width` argumento especifica a largura do traço das linhas de hachura. O `mat
 
 Por padrão, as linhas de hachura são horizontais. Se o `matrix` parâmetro contém rotação, as linhas de hachura são giradas no sentido horário.
 
-O **hachura de preenchimento** página demonstra o efeito de caminho. O [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) classe define três efeitos de caminho como campos, o primeiro para as linhas de hachura horizontal com uma largura de 3 pixels com um fator escala indicando que eles são espaçados 6 pixels de distância. A separação entre as linhas, portanto, tem 3 pixels. O efeito de caminho segundo é para linhas de hachura vertical com uma largura de 6 pixels espaçados 24 pixels de distância (portanto a separação é 18 pixels), e a terceira é para linhas de Hachura diagonal 12 pixels largura espaçadas 36 pixels de distância. 
+O **hachura de preenchimento** página demonstra o efeito de caminho. O [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) classe define três efeitos de caminho como campos, o primeiro para as linhas de hachura horizontal com uma largura de 3 pixels com um fator escala indicando que eles são espaçados 6 pixels de distância. A separação entre as linhas, portanto, tem 3 pixels. O efeito de caminho segundo é para linhas de hachura vertical com uma largura de 6 pixels espaçados 24 pixels de distância (portanto a separação é 18 pixels), e a terceira é para linhas de Hachura diagonal 12 pixels largura espaçadas 36 pixels de distância. 
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -812,7 +812,7 @@ O `SKMatrix` fatores de dimensionamento indicam o espaçamento horizontal e vert
 
 O caminho replicado é alinhado com as bordas esquerda e superiores da tela, em vez da área que está sendo preenchido. Você pode substituir esse comportamento, fornecendo os fatores de conversão entre 0 e os fatores de dimensionamento para especificar deslocamentos horizontal e vertical dos lados esquerdos e superiores.
 
-O **caminho bloco preencher** página demonstra o efeito de caminho. O caminho usado para a área de lado a lado é definido como um campo de [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) classe. A coordenadas horizontal e vertical variam de –40 a 40, que significa que esse caminho é 80 pixels quadrados: 
+O **caminho bloco preencher** página demonstra o efeito de caminho. O caminho usado para a área de lado a lado é definido como um campo de [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) classe. A coordenadas horizontal e vertical variam de –40 a 40, que significa que esse caminho é 80 pixels quadrados: 
 
 ```csharp
 public class PathTileFillPage : ContentPage
@@ -868,7 +868,7 @@ public static SKPathEffect CreateCorner (Single radius)
 
 Embora o único argumento é denominado `radius` você deve configurá-lo para metade o raio de canto desejado. (Isso é uma característica do código Skia subjacente).
 
-Aqui está o `PaintSurface` manipulador no [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) classe:
+Aqui está o `PaintSurface` manipulador no [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -944,7 +944,7 @@ O **tremulação experimentar** página permite fazer experiências com valores 
 
 [![](effects-images/jitterexperiment-small.png "Captura de tela da página de teste de variação de tripla")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
 
-O programa é straightfoward. O [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) arquivo cria dois `Slider` elementos e um `SKCanvasView`:
+O programa é straightfoward. O [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) arquivo cria dois `Slider` elementos e um `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -1000,7 +1000,7 @@ O programa é straightfoward. O [ **JitterExperimentPage.xaml** ](https://github
 </ContentPage>
 ```
 
-O `PaintSurface` manipulador no [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) arquivo code-behind é chamado sempre que uma `Slider` o valor é alterado. Ele chama `SKPathEffect.CreateDiscrete` usando os dois `Slider` valores e a usa para traçar um retângulo:
+O `PaintSurface` manipulador no [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) arquivo code-behind é chamado sempre que uma `Slider` o valor é alterado. Ele chama `SKPathEffect.CreateDiscrete` usando os dois `Slider` valores e a usa para traçar um retângulo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1031,7 +1031,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Você pode usar esse efeito de preenchimento, caso em que o contorno da área preenchida está sujeito a esses desvios aleatórios. O **texto tremulação** página demonstra como usar esse efeito de caminho para exibir o texto. A maior parte do código no `PaintSurface` manipulador do [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) classe dedicada ao dimensionamento e centralizar o texto:
+Você pode usar esse efeito de preenchimento, caso em que o contorno da área preenchida está sujeito a esses desvios aleatórios. O **texto tremulação** página demonstra como usar esse efeito de caminho para exibir o texto. A maior parte do código no `PaintSurface` manipulador do [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) classe dedicada ao dimensionamento e centralizar o texto:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1086,7 +1086,7 @@ Um uso básico desse método não abrange os efeitos de caminho. Se o `SKPaint` 
 
 Por exemplo, se o `src` caminho é um círculo simple do radius 500 e o `SKPaint` objeto Especifica a largura do traço de 100, o `dst` caminho se torne dois círculos concêntricos, uma com um raio de 450 e o outro com um raio de 550. O método é chamado `GetFillPath` porque preenchendo isso `dst` caminho é o mesmo que traça o `src` caminho. Mas você também pode traçar o `dst` caminho para ver os contornos do caminho.
 
-O **toque, a estrutura de tópicos, o caminho** demonstra isso. O `SKCanvasView` e `TapGestureRecognizer` são instanciados no [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) arquivo. O [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) arquivo code-behind define três `SKPaint` objetos como campos, duas para traçar com larguras de 100 e 20 e o terceiro para preenchimento de traços:
+O **toque, a estrutura de tópicos, o caminho** demonstra isso. O `SKCanvasView` e `TapGestureRecognizer` são instanciados no [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) arquivo. O [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) arquivo code-behind define três `SKPaint` objetos como campos, duas para traçar com larguras de 100 e 20 e o terceiro para preenchimento de traços:
 
 ```csharp
 public partial class TapToOutlineThePathPage : ContentPage
@@ -1239,7 +1239,7 @@ Um uso óbvio de `CreateSum` é definir um `SKPaint` objeto que preenche um cami
 
 [![](effects-images/catsinframe-small.png "Captura de tela da página gatos no quadro tripla")](effects-images/catsinframe-large.png#lightbox "tripla captura de tela da página gatos no quadro")
 
-O [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) classe começa com a definição de vários campos. Você pode reconhecer o primeiro campo do [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe o [ **SVG caminho dados** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) artigo. O segundo caminho baseia-se em uma linha e um arco padrão Guirlanda do quadro de:
+O [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) classe começa com a definição de vários campos. Você pode reconhecer o primeiro campo do [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe o [ **SVG caminho dados** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) artigo. O segundo caminho baseia-se em uma linha e um arco padrão Guirlanda do quadro de:
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1353,7 +1353,7 @@ Os algoritmos atrás os efeitos de caminho sempre causam o caminho inteiro usado
 
 É comum usar `SKPathEffect.CreateCompose` para adicionar alguns variação para outro efeito de caminho. Certamente, você pode experimentar por conta própria, mas aqui está um exemplo um pouco diferentes:
 
-O **hachura tracejadas** preenche uma elipse com linhas de hachura que são tracejadas. A maior parte do trabalho no [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) classe é executada imediatamente as definições de campo. Esses campos definem um efeito de traço e um efeito de hachura. Eles são definidos como `static` porque eles são referenciados em um `SKPathEffect.CreateCompose` chamar no `SKPaint` definição:
+O **hachura tracejadas** preenche uma elipse com linhas de hachura que são tracejadas. A maior parte do trabalho no [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) classe é executada imediatamente as definições de campo. Esses campos definem um efeito de traço e um efeito de hachura. Eles são definidos como `static` porque eles são referenciados em um `SKPathEffect.CreateCompose` chamar no `SKPaint` definição:
 
 ```csharp
 public class DashedHatchLinesPage : ContentPage
