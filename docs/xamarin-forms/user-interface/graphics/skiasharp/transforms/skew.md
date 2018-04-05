@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: c9f5f9f20296b1c2443a8addeebd4d12ccaa1ab4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-skew-transform"></a>A transformação de distorção
 
@@ -39,7 +39,7 @@ public void Skew (SKPoint skew)
 
 No entanto, é improvável que você estará usando um destes dois métodos em isolamento.
 
-O **distorcer experimentar** página lhe permite fazer experiências com a diferença de valores que variam entre – 10 e 10. Uma cadeia de caracteres de texto é posicionada no canto superior esquerdo da página, com distorção valores obtidos nas duas `Slider` elementos. Aqui está o `PaintSurface` manipulador no [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) classe:
+O **distorcer experimentar** página lhe permite fazer experiências com a diferença de valores que variam entre – 10 e 10. Uma cadeia de caracteres de texto é posicionada no canto superior esquerdo da página, com distorção valores obtidos nas duas `Slider` elementos. Aqui está o `PaintSurface` manipulador no [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -109,7 +109,7 @@ Você pode achar mais fácil especificando distorção como um ângulo de inclin
 
 A taxa do turno 150 pixels para 100 pixels vertical é a tangente do ângulo de que, neste exemplo 56.3 graus.
 
-O arquivo XAML do **experiência de ângulo de inclinação** página é semelhante do **ângulo de inclinação** página exceto que o `Slider` elementos variam de – 90 a 90 graus. O [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) arquivo code-behind centraliza o texto na página e usa `Translate` para definir um centro de inclinação para o centro da página. Uma breve `SkewDegrees` método na parte inferior do código converte ângulos para inclinar valores:
+O arquivo XAML do **experiência de ângulo de inclinação** página é semelhante do **ângulo de inclinação** página exceto que o `Slider` elementos variam de – 90 a 90 graus. O [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) arquivo code-behind centraliza o texto na página e usa `Translate` para definir um centro de inclinação para o centro da página. Uma breve `SkewDegrees` método na parte inferior do código converte ângulos para inclinar valores:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -154,7 +154,7 @@ Como um ângulo abordagens de 90 graus positivos ou negativos, a tangente aborda
 
 [![](skew-images/skewangleexperiment-small.png "Captura de tela da página de teste de ângulo de inclinação tripla")](skew-images/skewangleexperiment-large.png#lightbox "tripla captura de tela da página de teste de ângulo de inclinação")
 
-Uma pequena inclinação de horizontal negativa pode imitar o texto em itálico ou Oblíquo, como o **texto oblíqua** demonstra da página. O [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe mostra como isso é feito:
+Uma pequena inclinação de horizontal negativa pode imitar o texto em itálico ou Oblíquo, como o **texto oblíqua** demonstra da página. O [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe mostra como isso é feito:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

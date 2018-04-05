@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 998c804f02eed808c0a1493b054e754a7670aa70
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 82ac4ea49462c7520219e1a621ea3946297b1b45
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 
@@ -31,7 +31,7 @@ O artigo [ **caminhos e texto** ](~/xamarin-forms/user-interface/graphics/skiash
 
 O [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) pode ajudar a classe. O [construtor](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) aceita um `SKPath` argumento e o [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) propriedade revela seu comprimento.
 
-Isso é demonstrado no **comprimento de caminho** sample, que se baseia o **curva de Bézier** página. O [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) arquivo deriva `InteractivePage` e inclui uma interface de toque:
+Isso é demonstrado no **comprimento de caminho** sample, que se baseia o **curva de Bézier** página. O [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) arquivo deriva `InteractivePage` e inclui uma interface de toque:
 
 ```xaml
 <local:InteractivePage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -52,7 +52,7 @@ Isso é demonstrado no **comprimento de caminho** sample, que se baseia o **curv
 </local:InteractivePage>
 ```
 
-O [ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) arquivo code-behind permite que você mova quatro pontos de toque para definir os pontos de extremidade e pontos de uma curva de Bézier cúbica de controle. Três campos de definem uma cadeia de caracteres de texto, um `SKPaint` objeto e calculada largura do texto:
+O [ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) arquivo code-behind permite que você mova quatro pontos de toque para definir os pontos de extremidade e pontos de uma curva de Bézier cúbica de controle. Três campos de definem uma cadeia de caracteres de texto, um `SKPaint` objeto e calculada largura do texto:
 
 ```csharp
 public partial class PathLengthPage : InteractivePage
@@ -242,7 +242,7 @@ Algumas das informações de `SKPoint` matriz é redundante. Por exemplo, se um 
 
 O verbo problemático, no entanto, é `Close`. Este comando desenha uma linha reta da posição atual para o início do contorno estabelecido anteriormente pelo `Move` comando. Idealmente, o `Close` verbo deve fornecer esses dois pontos em vez de apenas um ponto. O que é pior é que o ponto que acompanha o `Close` verbo sempre é (0, 0). Isso significa que quando você enumera através de um caminho, você provavelmente precisará manter o `Move` ponto e a posição atual.
 
-Estático [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe contém diversos métodos que convertem os três tipos de curvas de Bézier em uma série de linhas retas pequenas que se aproximam a curva. (As fórmulas paramétricos foram apresentadas no artigo [ **tipos de três das curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) O `Interpolate` método divide uma linha reta em várias linhas curtas que são apenas uma unidade de comprimento:
+Estático [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe contém diversos métodos que convertem os três tipos de curvas de Bézier em uma série de linhas retas pequenas que se aproximam a curva. (As fórmulas paramétricos foram apresentadas no artigo [ **tipos de três das curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) O `Interpolate` método divide uma linha reta em várias linhas curtas que são apenas uma unidade de comprimento:
 
 ```csharp
 static class PathExtensions
@@ -426,7 +426,7 @@ O **GlobularText** exemplo usa esse método de extensão para quebrar o texto ao
 
 [![](information-images/globulartext-small.png "Captura de tela da página de texto Globular tripla")](information-images/globulartext-large.png#lightbox "tripla captura de tela da página de texto Globular")
 
-O [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) construtor da classe executa essa transformação. Ele cria um `SKPaint` de objeto para o texto e, em seguida, obtém um `SKPath` de objeto o `GetTextPath` método. Este é o caminho passado para o `CloneWithTransform` método de extensão juntamente com uma função de transformação: 
+O [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) construtor da classe executa essa transformação. Ele cria um `SKPaint` de objeto para o texto e, em seguida, obtém um `SKPath` de objeto o `GetTextPath` método. Este é o caminho passado para o `CloneWithTransform` método de extensão juntamente com uma função de transformação: 
 
 ```csharp
 public class GlobularTextPage : ContentPage

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 88b9dacef7a77d5f18908bdcb696e5172ceaa8c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
@@ -32,7 +32,7 @@ Os algoritmos de contorno e par-ímpares determinam se qualquer área fechada é
 
 Com vários caminhos de rotina, o algoritmo contorno geralmente preenche todas as áreas embutidas de um caminho. O algoritmo par-ímpar geralmente produz resultados mais interessantes.
 
-O exemplo clássico é uma estrela de cinco pontas, conforme demonstrado no **Five-Pointed estrela** página. O [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) arquivo cria dois `Picker` modos de exibição para selecionar o caminho de preencher o tipo e se o caminho é traçado preenchido ou ambos e em qual ordem:
+O exemplo clássico é uma estrela de cinco pontas, conforme demonstrado no **Five-Pointed estrela** página. O [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) arquivo cria dois `Picker` modos de exibição para selecionar o caminho de preencher o tipo e se o caminho é traçado preenchido ou ambos e em qual ordem:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

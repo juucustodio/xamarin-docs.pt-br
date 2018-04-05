@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: 77005665d163e7f9f62325b94cc5c779a7873f78
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c0b793a495278d91429045d7e396917d02c1412e
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="paths-and-text"></a>Caminhos e texto
 
@@ -45,7 +45,7 @@ Uma dessas tarefas é de recorte. O **recorte texto** página cria um demarcador
 
 [![](text-paths-images/clippingtext-small.png "Tripla captura de tela da página de recorte texto")](text-paths-images/clippingtext-large.png#lightbox "tripla captura de tela da página de texto de recorte")
 
-O [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) construtor da classe carrega o bitmap que é armazenado como um recurso incorporado no **mídia** pasta da solução:
+O [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) construtor da classe carrega o bitmap que é armazenado como um recurso incorporado no **mídia** pasta da solução:
 
 ```csharp
 public class ClippingTextPage : ContentPage
@@ -126,7 +126,7 @@ O **texto caminho efeito** página converte um caractere único e comercial em u
 
 [![](text-paths-images/textpatheffect-small.png "Tripla captura de tela da página de texto caminho efeito")](text-paths-images/textpatheffect-large.png#lightbox "tripla captura da página do efeito de caminho de texto")
 
-Volume de trabalho no [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe ocorre no construtor e campos. Os dois `SKPaint` objetos definidos como campos são usados para finalidades diferentes: A primeira (denominado `textPathPaint`) é usado para converter o e comercial com um `TextSize` de 50 para um caminho para o efeito de caminho 1D. O segundo (`textPaint`) é usado para exibir a versão maior do e comercial com o efeito desse caminho. Por esse motivo, o `Style` de pintura Este segundo objeto é definido como `Stroke`, mas o `StrokeWidth` propriedade não está definida como essa propriedade não é necessária ao usar um efeito de caminho 1D:
+Volume de trabalho no [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe ocorre no construtor e campos. Os dois `SKPaint` objetos definidos como campos são usados para finalidades diferentes: A primeira (denominado `textPathPaint`) é usado para converter o e comercial com um `TextSize` de 50 para um caminho para o efeito de caminho 1D. O segundo (`textPaint`) é usado para exibir a versão maior do e comercial com o efeito desse caminho. Por esse motivo, o `Style` de pintura Este segundo objeto é definido como `Stroke`, mas o `StrokeWidth` propriedade não está definida como essa propriedade não é necessária ao usar um efeito de caminho 1D:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -213,7 +213,7 @@ Normalmente o [ `GetFillPath` ](https://developer.xamarin.com/api/member/SkiaSha
 
 Você também pode chamar `GetFillPath` no caminho retornado de `GetTextPath` , mas primeiro talvez não seja totalmente se esse procuraria o seguinte.
 
-O **caractere da estrutura de tópicos descreve** página demonstra a técnica. É o código relevante no `PaintSurface` manipulador do [ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs) classe.
+O **caractere da estrutura de tópicos descreve** página demonstra a técnica. É o código relevante no `PaintSurface` manipulador do [ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs) classe.
 
 O construtor começa criando um `SKPaint` objeto chamado `textPaint` com um `TextSize` propriedade com base no tamanho da página. Isso é convertido em um caminho usando o `GetTextPath` método. Os argumentos de coordenadas para `GetTextPath` center efetivamente o caminho na tela:
 
@@ -287,7 +287,7 @@ O texto especificado no primeiro argumento é feito para executar no caminho esp
 
 Esse método não têm recursos para fornecer orientação sobre como configurar o `TextSize` propriedade `SKPaint` para tornar o texto dimensionado perfeitamente para executados desde o início do caminho até o fim. Às vezes, você pode descobrir esse tamanho de texto por conta própria. Outras vezes, você precisará usar as funções de medição de caminho para ser descrita no artigo futuras.
 
-O **texto Circular** programa quebra o texto em torno de um círculo. É fácil determinar a circunferência de um círculo, portanto, é fácil dimensionar o texto de acordo com exatamente. O `PaintSurface` manipulador do [ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) classe calcula um raio de um círculo com base no tamanho da página. Torna-se de que círculo `circularPath`:
+O **texto Circular** programa quebra o texto em torno de um círculo. É fácil determinar a circunferência de um círculo, portanto, é fácil dimensionar o texto de acordo com exatamente. O `PaintSurface` manipulador do [ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) classe calcula um raio de um círculo com base no tamanho da página. Torna-se de que círculo `circularPath`:
 
 ```csharp
 public class CircularTextPage : ContentPage
