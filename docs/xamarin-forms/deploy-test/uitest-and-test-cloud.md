@@ -1,18 +1,17 @@
 ---
 title: Automatizar os testes do Xamarin.Forms com o Xamarin.UITest e o App Center
-description: "O componente UITest do Xamarin pode ser usado com o Xamarin.Forms para gravar testes de interface do usuário a serem executados na nuvem em centenas de dispositivos."
-ms.topic: article
+description: O componente UITest do Xamarin pode ser usado com o Xamarin.Forms para gravar testes de interface do usuário a serem executados na nuvem em centenas de dispositivos.
 ms.prod: xamarin
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/31/2016
-ms.openlocfilehash: 78788524c1afdda127762049018ca769926f729e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f671f31dcc0aaf339a7c9f3d6465f4777a8f7f7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="automate-xamarinforms-testing-with-xamarinuitest-and-app-center"></a>Automatizar os testes do Xamarin.Forms com o Xamarin.UITest e o App Center
 
@@ -76,7 +75,7 @@ Xamarin.Calabash.Start();
 O assembly Calabash faz uso de APIs não públicas da Apple, o que fará com que os aplicativos sejam rejeitados pela App Store. No entanto, o vinculador Xamarin.iOS removerá o assembly Calabash da IPA final se ela não tiver sido referenciada de forma explícita do código.
 
 > [!NOTE]
->  Os builds da versão não têm a variável do compilador `ENABLE_TEST_CLOUD`, que fará com que o assembly Calabash seja removido do pacote do aplicativo. No entanto, os builds da depuração têm a diretiva de compilador definida, impedindo que o vinculador remova o assembly.
+>  Os builds da versão não têm a variável do compilador `ENABLE_TEST_CLOUD`, que fará com que o assembly Calabash seja removido do lote de aplicativo. No entanto, os builds da depuração têm a diretiva de compilador definida, impedindo que o vinculador remova o assembly.
 
 A captura de tela a seguir mostra a variável do compilador `ENABLE_TEST_CLOUD` definida para os builds da depuração:
 

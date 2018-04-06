@@ -1,18 +1,17 @@
 ---
 title: Emulador do Visual Studio Android
 description: Este guia explica como configurar e usar o Emulador do Visual Studio Android para desenvolver aplicativos Xamarin.Android no Visual Studio 2015.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: a31d90e6d5abd574eb6187953082e1b70f66a113
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/30/2018
+ms.openlocfilehash: bcc88ba4c46aa9abe9038d6ea65bc9c17f337da6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="visual-studio-android-emulator"></a>Emulador do Visual Studio Android
 
@@ -21,6 +20,9 @@ _Este guia explica como configurar e usar o Android Emulator do Visual Studio pa
 ## <a name="visual-studio-android-emulator-overview"></a>Visão geral do Android Emulator do Visual Studio
 
 O Microsoft Visual Studio 2015 inclui um emulador do Android que pode ser usado como um destino para depurar um aplicativo Xamarin.Android: *Emulador do Visual Studio para Android*. Esse emulador usa os recursos do Hyper-V do seu computador de desenvolvimento, resultando em inicialização e tempos de execução mais rápidos que no emulador padrão fornecido com o SDK do Android. O Emulador do Visual Studio para Android pode ser usado como uma alternativa ao emulador do SDK do Android padrão ao desenvolver um aplicativo Xamarin.Android.
+
+> [!NOTE]
+> O Android Emulator do Visual Studio é compatível apenas com o Visual Studio 2015 &ndash; ele não funciona com o Visual Studio 2017.
 
 Este guia explica como inicializar o emulador do Microsoft Android do Visual Studio para testar seu aplicativo e descreve os diversos recursos disponíveis no emulador. Você aprenderá a selecionar *perfis de dispositivo* (semelhantes a definições de dispositivo no emulador do SDK do Android padrão) para simular tipos diferentes de dispositivos com Android. Finalmente, uma seção de solução de problemas explica soluções alternativas e armadilhas comuns.
 
