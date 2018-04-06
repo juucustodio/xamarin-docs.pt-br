@@ -1,18 +1,17 @@
 ---
 title: Desinstalando o Xamarin
 description: Desinstalando produtos Xamarin de um computador
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 2c2ba84167924916c3bec27379d33c47e8dab360
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 98c10aae9e281600201570ea1fc8bb023286164d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalando o Xamarin
 
@@ -66,7 +65,7 @@ rm -rf ~/Library/XamarinStudio-*
 
 ### <a name="uninstall-mono-sdk-mdk"></a>Desinstalar o SDK do Mono (MDK)
 
-O Mono é uma implementação de software livre do .NET Framework da Microsoft usada por todos os Produtos Xamarin — Xamarin.iOS, Xamarin.Android e Xamarin.Mac para permitir o desenvolvimento dessas plataformas em C#.
+O Mono é uma implementação de software livre do .NET Framework da Microsoft usada por todos os Produtos Xamarin — Xamarin.iOS, Xamarin. Android e Xamarin.Mac para permitir o desenvolvimento dessas plataformas em C#.
 
 > [!IMPORTANT]
 > Há outros aplicativos fora do Xamarin que também usam Mono, como o Unity. Certifique-se de que não há outras dependências no Mono antes de desinstalá-lo.
@@ -107,7 +106,7 @@ O SDK do Java (JDK) não precisa ser desinstalado, pois já está pré-empacotad
 ### <a name="uninstall-xamarinios"></a>Desinstalar o Xamarin.iOS
 
 O Xamarin.iOS permite desenvolvimento de aplicativos iOS usando C# ou F# com o Xamarin Studio em um Mac.
-O Host de Build do Xamarin também foi instalado automaticamente com versões anteriores do Xamarin.iOS para permitir o desenvolvimento do iOS no Visual Studio. Para desinstalar ambos de um computador, siga as etapas abaixo:
+O Host de Build do Xamarin também foi instalado automaticamente com versões anteriores do Xamarin iOS para permitir o desenvolvimento do iOS no Visual Studio. Para desinstalar ambos de um computador, siga as etapas abaixo:
 
 Use os seguintes comandos no Terminal para remover todos os arquivos do Xamarin.iOS de um sistema de arquivos:
 

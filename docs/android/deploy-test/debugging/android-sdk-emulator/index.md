@@ -1,18 +1,17 @@
 ---
 title: Emulador do SDK do Android
 description: Este guia explica como usar o Emulador do SDK do Android do Google com o Visual Studio.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8913bb90-1340-409d-b7bb-71a06914923a
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 956b9e4e280545c8e11925697fced4b9d4e40693
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bdae9f2189f91a6768419fd930a4ad5ce4b6e0ad
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-sdk-emulator"></a>Emulador do SDK do Android
 

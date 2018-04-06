@@ -1,18 +1,17 @@
 ---
 title: Xamarin para Desenvolvedores Java
-description: "Caso seja um desenvolvedor de Java, você está no caminho certo para aproveitar as suas habilidades e código existente na plataforma Xamarin, enquanto obtém os benefícios da reutilização de código do C#. Você descobrirá que a sintaxe do C# é muito semelhante à sintaxe do Java e que ambas as linguagens fornecem recursos muito semelhantes. Além disso, você descobrirá recursos exclusivos do C# que facilitarão suas tarefas de desenvolvimento."
-ms.topic: article
+description: Caso seja um desenvolvedor de Java, você está no caminho certo para aproveitar as suas habilidades e código existente na plataforma Xamarin, enquanto obtém os benefícios da reutilização de código do C#. Você descobrirá que a sintaxe do C# é muito semelhante à sintaxe do Java e que ambas as linguagens fornecem recursos muito semelhantes. Além disso, você descobrirá recursos exclusivos do C# que facilitarão suas tarefas de desenvolvimento.
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 7abcaa218c6755a58e6f35e982a1144060df0b3b
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 29fc698e6ed1cfe02ce329813342916d5e7a1651
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para Desenvolvedores Java
 

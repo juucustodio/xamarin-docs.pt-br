@@ -1,18 +1,17 @@
 ---
-title: "Opções do vinculador do Xamarin.Mac"
-description: "A vinculação é uma poderosa ferramenta de otimização que reduz o tamanho do seu aplicativo, removendo o código não utilizado."
-ms.topic: article
+title: Opções do vinculador do Xamarin.Mac
+description: A vinculação é uma poderosa ferramenta de otimização que reduz o tamanho do seu aplicativo, removendo o código não utilizado.
 ms.prod: xamarin
 ms.assetid: F03176C3-F8D4-4DE8-870C-7F27D8CE525A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: bee5f86682048fcd72d2212706c188c894eb148a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f98953574f33612395500787a09351d2ba451802
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinmac-linker-options"></a>Opções do vinculador do Xamarin.Mac
 

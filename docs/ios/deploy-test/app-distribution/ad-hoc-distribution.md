@@ -1,18 +1,17 @@
 ---
 title: Distribuição Ad-Hoc
 description: Este documento fornece uma visão geral das técnicas de distribuição Ad Hoc que são usados principalmente para testar aplicativos Xamarin.iOS com um grande grupo de pessoas.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e0db9df11436cf1613ac5eacdf293245f99b8855
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 9b862a39d8fb8fe079b83b8842281fad5ec903e4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ad-hoc-distribution"></a>Distribuição Ad-Hoc
 

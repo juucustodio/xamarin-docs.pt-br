@@ -1,17 +1,16 @@
 ---
 title: Início rápido da multitela do Xamarin.Forms
-ms.topic: article
-ms.prod: xamarin
+ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 96a0ce0c2c53c1ede01afd743514c16d16f5b54e
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 268622ff8bc7ff05771096549ed694c57139366d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Início rápido da multitela do Xamarin.Forms
 
@@ -202,7 +201,7 @@ Estenda o aplicativo Phoneword da seguinte maneira:
     </ContentPage>      
     ```
 
-    Salve as alterações em **CallHistoryPage.xaml** escolhendo **Arquivo > Salvar** (ou pressionando **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **CallHistoryPage.xaml** escolhendo **Arquivo > Salvar** (ou pressionando **& #8984; + S**) e feche o arquivo.
 
 6. No **Painel de Soluções**, clique duas vezes em **App.xaml.cs** para abri-lo:
 
@@ -233,7 +232,7 @@ Estenda o aplicativo Phoneword da seguinte maneira:
     }
     ```
 
-    Salve as alterações em **App.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **App.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **& #8984; + S**) e feche o arquivo.
 
 8. No **Painel de Soluções**, clique duas vezes em **MainPage.xaml** para abri-lo:
 
@@ -253,7 +252,7 @@ Estenda o aplicativo Phoneword da seguinte maneira:
     </StackLayout>
     ```
 
-    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 10. No **Painel de Soluções**, clique duas vezes em **MainPage.xaml.cs** para abri-lo:
 
@@ -290,7 +289,7 @@ Estenda o aplicativo Phoneword da seguinte maneira:
     }
     ```
 
-    Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 12. No Visual Studio para Mac, selecione o item de menu **Compilar > Compilar Tudo** (ou pressione **&#8984; + B**). O aplicativo será criado e uma mensagem de êxito será exibida na barra de ferramentas do Visual Studio para Mac:
 

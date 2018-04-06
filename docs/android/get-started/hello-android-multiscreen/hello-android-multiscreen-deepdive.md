@@ -1,18 +1,18 @@
 ---
 title: 'Multitela do Hello, Android: aprofundamento'
-description: "Neste guia de duas partes, o aplicativo Phoneword básico (criado no guia Hello, Android) é expandido para processar uma segunda tela. Ao longo do caminho, são apresentados os Blocos de Construção de Aplicativo Android básico. Um aprofundamento na arquitetura Android está incluído para ajudá-lo a desenvolver uma melhor compreensão da estrutura de aplicativo e da funcionalidade do Android."
-ms.topic: article
+description: Neste guia de duas partes, o aplicativo Phoneword básico (criado no guia Hello, Android) é expandido para processar uma segunda tela. Ao longo do caminho, são apresentados os Blocos de Construção de Aplicativo Android básico. Um aprofundamento na arquitetura Android está incluído para ajudá-lo a desenvolver uma melhor compreensão da estrutura de aplicativo e da funcionalidade do Android.
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f1c19d43aa1f9010307df3fb954ac1029221ccd4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Multitela do Hello, Android: aprofundamento
 

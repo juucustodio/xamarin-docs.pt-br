@@ -1,18 +1,17 @@
 ---
-title: "Onde está meu Mac?"
-description: "Instruções para configurar seu Mac para o Visual Studio compilar projetos do Xamarin.iOS"
-ms.topic: article
+title: Onde está meu Mac?
+description: Instruções para configurar seu Mac para o Visual Studio compilar projetos do Xamarin.iOS
 ms.prod: xamarin
 ms.assetid: 4f792690-b3b1-4d56-a5e2-363b4f246059
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 491d7cea4b88fa44bb15e76dd92ecd5216ce9984
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f3e2988c9700549db24ad69277df9e412c99caed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="wheres-my-mac"></a>Onde está meu Mac?
 

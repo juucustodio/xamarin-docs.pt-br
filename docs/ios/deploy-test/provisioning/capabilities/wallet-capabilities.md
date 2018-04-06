@@ -1,18 +1,17 @@
 ---
 title: Funcionalidades da Carteira
-description: "A adição de capacidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades da Carteira."
-ms.topic: article
+description: A adição de capacidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades da Carteira.
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 952fa7dfa93c1dcb45eafe4eec08c73d2a8571eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f41ba2b693b37f39ea49f62e322932537014a317
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="wallet-capabilities"></a>Funcionalidades da Carteira
 

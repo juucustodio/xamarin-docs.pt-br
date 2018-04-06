@@ -1,18 +1,17 @@
 ---
 title: Analisar aplicativos Xamarin.iOS com o Instrumentos
 description: Como usar o Instrumentos em um aplicativo Xamarin.iOS em um dispositivo ou no simulador.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 9a5dc7839b1669e51e79efc0f02111eae8987b95
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a5c44531a8f05529b169390f25b2946133411098
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Analisar aplicativos Xamarin.iOS com o Instrumentos
 

@@ -1,18 +1,17 @@
 ---
 title: Google Emulator Manager
 description: Como criar e gerenciar dispositivos virtuais Android usando o Google Emulator Manager
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0C0BBEC0-C84A-4558-B905-4EF81FCD62F9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 1e90ebe55dbec9fdcc57b9eaab99e614fdc5cbbc
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a399aa1c314f1e93377a7831b430e563d9fd1b13
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="google-emulator-manager"></a>Google Emulator Manager
 

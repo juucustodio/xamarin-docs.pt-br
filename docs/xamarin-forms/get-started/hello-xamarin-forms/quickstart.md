@@ -1,17 +1,17 @@
 ---
 title: Início rápido do Xamarin.Forms
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 7c90b5bcca5a6b8d2a4b52c166ae6884646a61d2
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: a1adaa20bb649dd51547e3bff74e60e0d5c001af
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Início rápido do Xamarin.Forms
 
@@ -535,7 +535,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
     </ContentPage>
     ```
 
-    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 9. No **Painel de Soluções**, clique duas vezes em **MainPage.xaml.cs** para abri-lo:
 
@@ -589,7 +589,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
     > [!NOTE]
     > Tentar compilar o aplicativo neste ponto resultará em erros que serão corrigidos mais tarde.
 
-    Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 11. No **Painel de Soluções**, clique duas vezes em **App.xaml.cs** para abri-lo:
 
@@ -630,7 +630,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
     }
     ```
 
-    Salve as alterações em **Phoneword.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **Phoneword.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 13. No **Painel de Soluções**, selecione o projeto **Phoneword**, clique com botão direito do mouse e selecione **Adicionar > Novo arquivo...**:
 
@@ -696,7 +696,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
     }
     ```
 
-    Salve as alterações em **PhoneTranslator.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **PhoneTranslator.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 16. No **Painel de Soluções**, selecione o projeto **Phoneword**, clique com botão direito do mouse e selecione **Adicionar > Novo arquivo...**:
 
@@ -717,7 +717,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
         }
     }
     ```
-    Salve as alterações em **IDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **IDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
     > [!NOTE]
     > Agora o código comum para o aplicativo está concluído. O código de discagem do telefone específico da plataforma agora será implementado como um [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
@@ -752,7 +752,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
     }
     ```
 
-    Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 22. No **Painel de Soluções**, selecione o projeto **Phoneword.Droid**, clique com botão direito do mouse e selecione **Adicionar > Novo arquivo...**:
 
@@ -811,7 +811,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
     }
     ```
 
-    Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 25. No **Painel de Soluções**, no projeto **Phoneword.Droid**, clique duas vezes em **MainActivity.cs** para abri-lo, remova todo o código de modelo e substitua-o pelo código a seguir:
 
@@ -852,7 +852,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
 
     ![](quickstart-images/xs/android-manifest-changed.png "Habilitar a Permissão de CallPhone")
 
-    Salve as alterações em **AndroidManifest.xml** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **AndroidManifest.xml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 28. No **Painel de Soluções**, remova a classe **PhonewordPage** do projeto **Phoneword**. Essa página foi adicionada automaticamente quando o projeto foi criado e não é mais necessária.
 29. No Visual Studio para Mac, selecione o item de menu **Compilar > Compilar Tudo** (ou pressione **&#8984; + B**). O aplicativo será criado e uma mensagem de êxito será exibida na barra do Visual Studio para Mac.

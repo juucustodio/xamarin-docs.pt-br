@@ -1,18 +1,17 @@
 ---
-title: "Implantação e Teste"
-description: "Os guias desta seção explicam como testar um aplicativo, otimizar seu desempenho, prepará-lo para lançamento, assiná-lo com um certificado e publicá-lo em uma loja de aplicativos"
-ms.topic: article
+title: Implantação e Teste
+description: Os guias desta seção explicam como testar um aplicativo, otimizar seu desempenho, prepará-lo para lançamento, assiná-lo com um certificado e publicá-lo em uma loja de aplicativos
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 5ddc2a258ad09de2cdd8214dceb533441812ae54
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7453af3721cbdb6b93d884322cee1cd5115c317
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
 

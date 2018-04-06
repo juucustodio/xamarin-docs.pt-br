@@ -1,18 +1,17 @@
 ---
-title: "Configuração do aplicativo Mac"
-description: "Este guia explica como configurar um aplicativo Xamarin.Mac para publicação."
-ms.topic: article
+title: Configuração do aplicativo Mac
+description: Este guia explica como configurar um aplicativo Xamarin.Mac para publicação.
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 0bc64d0b03aa4f80b19ea098904dc1e2155313f6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e47ff676b4dd02d5312a74fb699ed594b5e0f944
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="mac-app-configuration"></a>Configuração do aplicativo Mac
 

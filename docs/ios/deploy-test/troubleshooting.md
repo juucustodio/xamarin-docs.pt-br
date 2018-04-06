@@ -1,18 +1,17 @@
 ---
-title: "Solução de problemas"
-description: "Dicas e truques para criar uma implantação suave"
-ms.topic: article
+title: Solução de problemas
+description: Dicas e truques para criar uma implantação suave
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 174d1cf974c39420b932d494d5b28c62d7fd1eb1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fe7425bbf6440317cc856d2c727874298f66bc33
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 

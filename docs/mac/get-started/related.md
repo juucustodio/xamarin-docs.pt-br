@@ -1,18 +1,17 @@
 ---
-title: "Documentação relacionada"
-description: "Links para documentação adicional para desenvolvedores macOS."
-ms.topic: article
+title: Documentação relacionada
+description: Links para documentação adicional para desenvolvedores macOS.
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 000061d8ed884f1eb248517c6131ec49134cb8a1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ff26747a395b48163dbabf0b058f28427182d41a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="related-documentation"></a>Documentação relacionada
 
