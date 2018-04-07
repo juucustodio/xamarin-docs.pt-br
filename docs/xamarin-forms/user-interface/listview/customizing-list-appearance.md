@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: ff36deff996a92fca512158252c64e5c29046be9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="list-appearance"></a>Aparência de lista
 
@@ -117,14 +117,12 @@ Observe que temos:
 - Alterado o `ListView`do `ItemsSource` à lista agrupada
 
 ### <a name="customizing-grouping"></a>Personalizando o agrupamento
-Agora que já vimos como implementar básica de agrupamento em ListView, vamos ver como personalizar a exibição de cabeçalhos de grupo.
 
-Semelhante ao modo como o `ListView` tem um `ItemTemplate` para definir como as linhas são exibidas, `ListView` tem um `GroupHeaderTemplate`. Este é um exemplo de ListView acima, com um modelo de cabeçalho de grupo personalizadas:
+Se o agrupamento tiver sido habilitado na lista, o cabeçalho de grupo também pode ser personalizado.
 
-![](customizing-list-appearance-images/grouping-depth.png "ListView com GroupHeaderTemplate personalizado")
+Semelhante ao modo como o `ListView` tem um `ItemTemplate` para definir como as linhas são exibidas, `ListView` tem um `GroupHeaderTemplate`. 
 
-
-Aqui está como realizar esse design em XAML:
+Um exemplo de personalização de cabeçalho de grupo em XAML é mostrado aqui:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>

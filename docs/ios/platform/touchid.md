@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6ec46a5e098ba14925102211a27fcce8c27970e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="touch-id"></a>ID de toque
 
@@ -121,47 +121,46 @@ Nas seções anteriores, examinamos a teoria por trás de acesso e autenticaçã
 
 Então, vamos adicionar alguns autenticação de ID de toque para nosso aplicativo. Este passo a passo, vamos usar o [tabela Storyboard](https://developer.xamarin.com/samples/StoryboardTable/) exemplo. Queremos garantir que somente o proprietário do dispositivo pode adicionar algo a essa lista, nós não desejamos para ocupar, permitindo que qualquer pessoa que adicionar um item!
 
-1.  Baixe o exemplo e execute-o no Visual Studio para Mac.
-2.  Clique duas vezes em `MainStoryboard.Storyboard` para abrir o exemplo no Designer de iOS. Com este exemplo, queremos adicionar uma nova tela de nosso aplicativo, que controlará a autenticação. Isso irá antes atual `MasterViewController`.
-3.  Arraste um novo **View Controller** do **caixa de ferramentas** para o **superfície de Design**. Definir isso como o **raiz View Controller** por **Ctrl + arrastar** do **navegação controlador**:
+1. Baixe o exemplo e execute-o no Visual Studio para Mac.
+2. Clique duas vezes em `MainStoryboard.Storyboard` para abrir o exemplo no Designer de iOS. Com este exemplo, queremos adicionar uma nova tela de nosso aplicativo, que controlará a autenticação. Isso irá antes atual `MasterViewController`.
+3. Arraste um novo **View Controller** do **caixa de ferramentas** para o **superfície de Design**. Definir isso como o **raiz View Controller** por **Ctrl + arrastar** do **navegação controlador**:
 
     [![](touchid-images/image4.png "Defina o controlador de exibição de raiz")](touchid-images/image4.png#lightbox)
 4.  Nomeie o novo controlador de exibição `AuthenticationViewController`.
-5.  Em seguida, arraste um botão e colocá-lo no `AuthenticationViewController`. Chamar essa `AuthenticateButton`e dê a ele o texto `Add a Chore`.
-6.  Criar um evento no `AuthenticateButton` chamado `AuthenticateMe`.
-7.  Criar um manual atender de `AuthenticationViewController` clicando na barra preta na parte inferior e **Ctrl + arrastar** da barra de para o `MasterViewController` e escolhendo **push** (ou **Mostrar** Se estiver usando classes de tamanho):
+5. Em seguida, arraste um botão e colocá-lo no `AuthenticationViewController`. Chamar essa `AuthenticateButton`e dê a ele o texto `Add a Chore`.
+6. Criar um evento no `AuthenticateButton` chamado `AuthenticateMe`.
+7. Criar um manual atender de `AuthenticationViewController` clicando na barra preta na parte inferior e **Ctrl + arrastar** da barra de para o `MasterViewController` e escolhendo **push** (ou **Mostrar** Se estiver usando classes de tamanho):
 
     [![](touchid-images/image5.png "Arraste na barra de para o MasterViewController e optando por push ou mostrar")](touchid-images/image6.png#lightbox)
-8.  Clique em atender recém-criado e atribua o identificador `AuthenticationSegue`, conforme ilustrado abaixo:
+8. Clique em atender recém-criado e atribua o identificador `AuthenticationSegue`, conforme ilustrado abaixo:
 
     [![](touchid-images/image7.png "Definir o identificador de segue AuthenticationSegue")](touchid-images/image7.png#lightbox)
-9.  Adicione o seguinte código ao `AuthenticationViewController`:
+9. Adicione o seguinte código ao `AuthenticationViewController`:
 
-    ```
+    ```csharp
     partial void AuthenticateMe (UIButton sender)
-        {
-            var context = new LAContext();
-            NSError AuthError;
-            var myReason = new NSString("To add a new chore");
+    {
+        var context = new LAContext();
+        NSError AuthError;
+        var myReason = new NSString("To add a new chore");
 
-
-            if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
-                var replyHandler = new LAContextReplyHandler((success, error) => {
-
-                    this.InvokeOnMainThread(()=>{
-                        if(success){
-                            Console.WriteLine("You logged in!");
-                            PerformSegue("AuthenticationSegue", this);
-                        }
-                        else{
-                            //Show fallback mechanism here
-                        }
-                    });
-
+        if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
+            var replyHandler = new LAContextReplyHandler((success, error) => {
+                this.InvokeOnMainThread(()=> {
+                    if(success)
+                    {
+                        Console.WriteLine("You logged in!");
+                        PerformSegue("AuthenticationSegue", this);
+                    }
+                    else
+                    {
+                        // Show fallback mechanism here
+                    }
                 });
-                context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
-            };
-        }
+            });
+            context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
+        };
+    }
     ```
 
 Isso é todo o código que necessário para implementar a autenticação de ID de toque usando a autenticação Local. As linhas destacadas na imagem abaixo mostram o uso da autenticação Local:
