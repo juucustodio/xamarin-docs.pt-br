@@ -166,7 +166,6 @@
 ### [Usar bibliotecas nativas](platform/native-libraries.md)
 ### [Renderscript](platform/renderscript.md)
 ## [Serviços de dados e de nuvem](data-cloud/index.md)
-### [Serviços conectados do Azure](~/cross-platform/data-cloud/connected-services.md?context=xamarin/android)
 ### [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android)
 #### [Introdução](~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/android)
 ##### [Etapa 1. Registrar](~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/android)
