@@ -83,7 +83,6 @@
 ### [Pilha de HttpClient e seletor de implementação SSL/TLS](macios/http-stack.md)
 ## [Solução de problemas](troubleshooting/index.md)
 ### [Perguntas frequentes](troubleshooting/questions/index.md)
-#### [Posso usar o Visual Studio 2017 Release Candidate com Xamarin?](troubleshooting/questions/visualstudio-2017-rc.md)
 #### [Como posso exibir as bibliotecas com suporte em um PCL?](troubleshooting/questions/pcl-support-libraries.md)
 #### [API de reflexão de PCL](troubleshooting/questions/pcl-reflection.md)
 #### [Estudo de caso de PCL: como posso resolver problemas relacionados a System.Diagnostics.Tracing para o pacote NuGet de Fluxo de Dados de TPL da Microsoft?](troubleshooting/questions/pcl-case-study.md)
@@ -96,6 +95,14 @@
 #### [Quando e como eu devo criar um relatório de bugs?](troubleshooting/questions/howto-file-bug.md)
 #### [Por que não há suporte para Jenkins no Xamarin?](troubleshooting/questions/xamarin-jenkins.md)
 #### [Quais configurações do projeto são necessárias para o depurador?](troubleshooting/questions/debugger-settings.md)
+
+### Perguntas sobre o Visual Studio
+#### [Implantar caixas de seleção desabilitadas no Configuration Manager](troubleshooting/questions/deploy-checkboxes.md)
+#### [Extensões do Visual Studio ausentes após a instalação](troubleshooting/questions/missing-vs-extensions.md)
+#### [Como executar uma desinstalação completa do Xamarin para Visual Studio?](troubleshooting/questions/uninstall-xamarin-vs.md)
+#### [Como posso coletar as pilhas de chamadas atuais do processo do Visual Studio?](troubleshooting/questions/vs-callstack.md)
+#### [Por que o Visual Studio não inclui meu projeto de biblioteca referenciado no build?](troubleshooting/questions/vs-config-manager.md)
+
 ### [Atualizar referências de componentes para NuGet](troubleshooting/component-nuget.md)
 ### [Opções com suporte](troubleshooting/support-options.md)
 ### [Perguntas sobre licença herdadas](troubleshooting/legacy-licenses/index.md)
