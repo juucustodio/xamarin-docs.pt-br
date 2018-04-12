@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
 ms.openlocfilehash: 592e957e0c64e7189d6f01f1ba0f23da074c4bec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/12/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>Autenticação de usuários com um serviço de SimpleDB Amazon
 

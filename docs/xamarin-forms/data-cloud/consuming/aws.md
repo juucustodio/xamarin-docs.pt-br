@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
 ms.openlocfilehash: 1602319dbf5a5d00ac5de75f2d438b9aea692699
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/12/2018
 ---
 # <a name="consuming-an-amazon-simpledb-service"></a>Consumir um serviço de SimpleDB Amazon
 
@@ -199,5 +199,5 @@ Este artigo explicou como usar o AWS SDK para .NET para consultar, criar e subst
 - [Amazon Web Services SDK guia do desenvolvedor do Xamarin](http://docs.aws.amazon.com/mobile/sdkforxamarin/developerguide/)
 - [Amazon Cognito Identity](http://docs.aws.amazon.com/cognito/devguide/identity/)
 - [Documentação do desenvolvedor de SimpleDB Amazon](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html)
-- [AmazonSimpleDBClient Class](http://docs.aws.amazon.com/sdkfornet1/latest/apidocs/html/T_Amazon_SimpleDB_AmazonSimpleDBClient.htm)
+- [Classe AmazonSimpleDBClient](http://docs.aws.amazon.com/sdkfornet1/latest/apidocs/html/T_Amazon_SimpleDB_AmazonSimpleDBClient.htm)
 - [Amazon Web Services SDK para .NET](https://www.nuget.org/packages?q=Tags%3A%22aws-sdk-v3%22)
