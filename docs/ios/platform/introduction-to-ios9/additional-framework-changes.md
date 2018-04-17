@@ -6,17 +6,17 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5561cccfd0968c309526aae1e5dc90831ca681b4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0ae286ddbc61f48cbdd257dc453a2d9680bba703
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações de estruturas adicionais iOS 9
 
 _Este artigo aborda as alterações adicionais, secundárias ou melhorias em estruturas existentes para iOS 9._
 
-[![](additional-framework-changes-images/ios9-sml.png "iOS 9 Logo")](additional-framework-changes-images/ios9.png#lightbox)
+[![](additional-framework-changes-images/ios9-sml.png "iOS 9 logotipo")](additional-framework-changes-images/ios9.png#lightbox)
 
 Além das alterações principais para iOS, a Apple tem feitas modificações e melhorias para várias estruturas existentes no iOS 9.
 
@@ -64,6 +64,9 @@ Para obter mais informações, consulte os seguintes documentos:
 - [Referência de JS CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) -documentação de CloudKit JS da Apple.
 - [Referência de serviços Web CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) -referência da Apple que descreve a interface HTTP para CloudKit.
 - [Catálogo de CloudKit: Uma introdução ao CloudKit (Cocoa e JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) -aplicativo de exemplo da Apple usando CloudKit e CloudKit JS.
+
+> [!IMPORTANT]
+> Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com a norma de proteção de dados geral (GDPR) da União Europeia.
 
 ## <a name="foundation-framework-additions"></a>Adições de estrutura de base
 

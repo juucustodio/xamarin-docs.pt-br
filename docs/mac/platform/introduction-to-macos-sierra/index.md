@@ -7,11 +7,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ab373d708d47ad7c3dbbf4507284be04a1f9934
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3b8211e4c38fd37040fab5b35be4709d4b926c91
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>Introdução ao macOS Serra
 
@@ -64,6 +64,9 @@ A estrutura CloudKit foi expandida em macOS serra para permitir que usuário rap
 CloudKit fornece uma interface de usuário completo para enviar e aceitar convites de registro compartilhados e o usuário tem controle de leitura/gravação completa sobre as pessoas que têm acesso para os registros.
 
 Para obter mais informações, consulte da Apple [CloudKit Framework referência](https://developer.apple.com/reference/clockkit) e [CloudKit JS Framework referência](https://developer.apple.com/reference/cloudkitjs).
+
+> [!IMPORTANT]
+> Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com a norma de proteção de dados geral (GDPR) da União Europeia.
 
 <a name="Safari-App-Extensions-Support" />
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: df0e188efd2791b03a63c31b715ed1da77079230
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc34cf265885708fa6392936a8dbc9d82796e2fd
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="authenticating-access-to-web-services"></a>Autenticando o acesso a serviços Web
 
@@ -36,11 +36,6 @@ B2C de diretório ativo do Azure é uma solução de gerenciamento de identidade
 ## <a name="integrating-azure-active-directory-b2c-with-azure-mobile-appsazure-ad-b2c-mobile-appmd"></a>[Integração do Azure Active Directory B2C com Aplicativos Móveis do Azure](azure-ad-b2c-mobile-app.md)
 
 B2C de diretório ativo do Azure pode ser usado para gerenciar o fluxo de trabalho de autenticação para aplicativos móveis do Azure. Com essa abordagem, a experiência de gerenciamento de identidade está totalmente definida na nuvem e pode ser modificada sem alterar o código do aplicativo móvel. Este artigo demonstra como usar o Azure Active Directory B2C para fornecer autenticação e autorização para uma instância de aplicativos do Azure Mobile xamarin. Forms.
-
-## <a name="authenticating-users-with-an-amazon-simpledb-serviceawsmd"></a>[Autenticação de usuários com um serviço de SimpleDB Amazon](aws.md)
-
-Amazon SimpleDB não tem seu próprio sistema de permissões com base em recursos. Em vez disso, a autenticação em relação a um provedor de identidade pode ser usada para garantir que os usuários só tenham acesso aos seus próprios dados no domínio SimpleDB. Este artigo explica como restringir o acesso dos usuários para seus próprios dados SimpleDB.
-
 
 ## <a name="related-links"></a>Links relacionados
 

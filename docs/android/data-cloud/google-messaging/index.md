@@ -1,19 +1,19 @@
 ---
-title: Google Messaging
+title: Mensagens do Google
 description: Esta seção contém guias que descrevem como implementar aplicativos xamarin usando serviços de mensagens do Google.
 ms.prod: xamarin
 ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: f68b4dc12586d482fd9d3f8901bf3fd09469b0bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: cf1eaec3dfee7c3457a4614147c9b5564843b2a7
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="google-messaging"></a>Google Messaging
+# <a name="google-messaging"></a>Mensagens do Google
 
 _Esta seção contém guias que descrevem como implementar aplicativos xamarin usando serviços de mensagens do Google._
 
@@ -28,6 +28,10 @@ Este passo a passo fornece uma explicação passo a passo de como usar mensagens
 ## <a name="google-cloud-messaginggoogle-cloud-messagingmd"></a>[Google Cloud Messaging](google-cloud-messaging.md)
 
 Esta seção fornece uma visão geral de como o Google Cloud Messaging (GCM) encaminha mensagens entre seu aplicativo e um servidor de aplicativo, e fornece um procedimento passo a passo para adquirir credenciais para que seu aplicativo pode usar os serviços do GCM. (Observe que o GCM foi substituído por FCM).
+
+> [!NOTE]
+> GCM foi substituído por [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
+> GCM APIs de cliente e servidor [foram preteridos](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) e não estará disponível assim que 11 de abril de 2019.
 
 ## <a name="remote-notifications-with-google-cloud-messagingremote-notifications-with-gcmmd"></a>[Notificações remotas com o Google Cloud Messaging](remote-notifications-with-gcm.md)
 

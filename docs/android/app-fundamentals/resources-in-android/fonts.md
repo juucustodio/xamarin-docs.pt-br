@@ -5,15 +5,14 @@ ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/09/2018
-ms.openlocfilehash: d4ad9dde4004440985ff247d2f986ede385f981f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/13/2018
+ms.openlocfilehash: 086576ea7d806bb0768fbe4563df7fca99244ccb
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fonts"></a>Fontes
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -41,7 +40,7 @@ A biblioteca de suporte Android v26 será backport suporte para o nível de API 
             app:fontStyle="normal" 
             app:fontWeight="400" />
 
-</font-family>    
+</font-family>
 ```
 
 Como as fontes são fornecidas para um aplicativo Android de forma adequada, podem ser aplicadas a um widget de interface de usuário definindo o [ `fontFamily` atributo](https://developer.android.com/reference/android/widget/TextView.html#attr_android:fontFamily). Por exemplo, o trecho a seguir demonstra como exibir uma fonte em um TextView:
@@ -49,8 +48,8 @@ Como as fontes são fornecidas para um aplicativo Android de forma adequada, pod
 ```xml
 <TextView
     android:text="The quick brown fox jumped over the lazy dog."
-    android:fontFamily="@font/caveat_bold"
-    app:fontFamily="@font/caveat_bold"
+    android:fontFamily="@font/sourcesanspro_regular"
+    app:fontFamily="@font/sourcesanspro_regular"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
@@ -58,14 +57,12 @@ Como as fontes são fornecidas para um aplicativo Android de forma adequada, pod
 
 Este guia primeiro descrevem como usar fontes como um recurso Android e vá para discutir como baixar fontes em tempo de execução.
 
-
 ## <a name="fonts-as-a-resource"></a>Fontes como um recurso
 
 Empacotamento de uma fonte em um APK Android garante que ele esteja sempre disponível para o aplicativo. Um arquivo de fonte (qualquer um. TTF ou um. Arquivo OTF) é adicionado a um aplicativo xamarin assim como qualquer outro recurso, copiando os arquivos para um subdiretório no **recursos** pasta de um projeto xamarin. Recursos de fontes são mantidos em um **fonte** subpasta do **recursos** pasta do projeto. 
 
-
 > [!NOTE]
->  As fontes devem ter um **ação de compilação** de **AndroidResource** ou eles não serão empacotados no APK final. A ação de compilação deve ser definida automaticamente pelo IDE.
+> As fontes devem ter um **ação de compilação** de **AndroidResource** ou eles não serão empacotados no APK final. A ação de compilação deve ser definida automaticamente pelo IDE.
 
 Quando há muitos arquivos de fonte semelhantes (por exemplo, a mesma fonte com pesos diferentes ou estilos) é possível agrupá-los em uma família de fontes.
 
@@ -75,7 +72,7 @@ Quando há muitos arquivos de fonte semelhantes (por exemplo, a mesma fonte com 
 
 Uma família de fontes é um conjunto de fontes com estilos e pesos diferentes. Por exemplo, pode haver arquivos de fontes separadas para fontes em negrito ou itálicos. A família de fontes é definida por `font` elementos em um arquivo XML que é mantido no **recursos/fonte** directory. Cada família de fonte deve ter seu próprio arquivo XML.
 
-Para criar uma uma família de fontes, primeiro adicione todas as fontes para a **recursos/fonte** pasta. Em seguida, crie um novo arquivo XML na pasta de fonte para a família de fontes. Esse arquivo XML terá uma raiz `font-family` elemento que contém um ou mais `font` elementos. Cada `font` elemento declara os atributos de uma fonte. 
+Para criar uma uma família de fontes, primeiro adicione todas as fontes para a **recursos/fonte** pasta. Em seguida, crie um novo arquivo XML na pasta de fonte para a família de fontes. O nome do arquivo XML não tem afinidade ou relação às fontes que está sendo referenciadas; o arquivo de recurso pode ser qualquer nome de arquivo de recurso legal de Android. Esse arquivo XML terá uma raiz `font-family` elemento que contém um ou mais `font` elementos. Cada `font` elemento declara os atributos de uma fonte.
 
 O XML a seguir está um exemplo de uma família de fontes para a _fontes Sans Pro_ fonte que define vários pesos de fonte diferente. Isso é salvo como arquivo de **recursos/fonte** pasta denominada **sourcesanspro.xml**:
 
@@ -86,7 +83,7 @@ O XML a seguir está um exemplo de uma família de fontes para a _fontes Sans Pr
     <font android:font="@font/sourcesanspro_regular" 
           android:fontStyle="normal" 
           android:fontWeight="400"
-          app:font="@font/sourcesanspro_" 
+          app:font="@font/sourcesanspro_regular" 
           app:fontStyle="normal" 
           app:fontWeight="400" />
     <font android:font="@font/sourcesanspro_bold" 
@@ -112,8 +109,8 @@ O `fontStyle` atributo tem dois valores possíveis:
 O `fontWeight` atributo corresponde a CSS `font-weight` de atributos e refere-se para a espessura da fonte. Este é um valor no intervalo de 100 900. A lista a seguir descreve os valores de peso de fonte comuns e seu nome:
 
 * **Thin** &ndash; 100
-* **Extra Light** &ndash; 200
-* **Light** &ndash; 300
+* **Muito leve** &ndash; 200
+* **Luz** &ndash; 300
 * **Normal** &ndash; 400
 * **Médio** &ndash; 500
 * **Semi negrito** &ndash; 600
@@ -136,7 +133,6 @@ Depois que tiver sido definida uma família de fontes, ele pode ser usado declar
     />
 ```
 
-
 ### <a name="programmatically-assigning-fonts"></a>Atribuindo programaticamente fontes
 
 As fontes podem ser definidas programaticamente, usando o [ `Resources.GetFont` ](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int)) método para recuperar um [ `Typeface` ](https://developer.android.com/reference/android/graphics/Typeface.html) objeto. Vários modos de exibição tem um `TypeFace` propriedade que pode ser usada para atribuir a fonte para o widget. Este trecho de código mostra como definir programaticamente a fonte em um TextView:
@@ -154,14 +150,13 @@ var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceSt
 textView1.Typeface = typeface;
 ```
 
-
 ## <a name="downloading-fonts"></a>Download de fontes
 
 Em vez de fontes de pacote como um recurso de aplicativo, o Android pode baixar fontes de uma fonte remota. Isso terá o efeito desejado de reduzir o tamanho do APK. 
 
 Fontes são baixadas com a Ajuda de um _provedor de fonte_. Esse é um provedor de conteúdo especializado que gerencia o download e cache de fontes para todos os aplicativos no dispositivo. 8.0 Android inclui um provedor de fonte para fazer o download de fontes do [Google fonte repositório](http://fonts.google.com). Este provedor de fonte padrão é backported 14 de nível de API com a biblioteca de suporte Android v26.
- 
- Quando um aplicativo faz uma solicitação para uma fonte, o provedor de fonte primeiro verifica se a fonte já está no dispositivo. Caso contrário, ele tentará baixar a fonte. Se a fonte não pode ser baixado, Android, em seguida, usará a fonte padrão do sistema. Quando a fonte foi baixada, ele estará disponível para todos os aplicativos no dispositivo, não apenas o aplicativo que fez a solicitação inicial.
+
+Quando um aplicativo faz uma solicitação para uma fonte, o provedor de fonte primeiro verifica se a fonte já está no dispositivo. Caso contrário, ele tentará baixar a fonte. Se a fonte não pode ser baixado, Android, em seguida, usará a fonte padrão do sistema. Quando a fonte foi baixada, ele estará disponível para todos os aplicativos no dispositivo, não apenas o aplicativo que fez a solicitação inicial.
 
 Quando é feita uma solicitação para fazer o download de uma fonte, o aplicativo não consultar diretamente o provedor de fonte. Em vez disso, os aplicativos usarão uma instância do [ `FontsContract` ](https://developer.android.com/reference/android/provider/FontsContract.html) API (ou o [ `FontsContractCompat` ](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html) se o 26 de biblioteca de suporte está sendo usado).  
 
@@ -184,19 +179,18 @@ Independentemente de qual abordagem é usada, os arquivos de recursos que devem 
              app:fontProviderPackage="com.google.android.gms" 
              app:fontProviderQuery="VT323"
              app:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
-    >
+>
 </font-family>
 ```
 
 O `font-family` elemento contém os seguintes atributos, declarando as informações que o Android requer para baixar as fontes:
- 
+
 1. **fontProviderAuthority** &ndash; a autoridade do provedor de fonte a ser usada para a solicitação.
 2. **fontPackage** &ndash; o pacote para o provedor de fonte a ser usada para a solicitação. Isso é usado para verificar a identidade do provedor.
 3. **fontQuery** &ndash; isso é uma cadeia de caracteres que ajuda o provedor de fonte localize a fonte solicitada. Obter detalhes sobre a consulta de fonte são específicas para o provedor de fonte. O [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) classe no [fontes carregáveis](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) aplicativo de exemplo fornece algumas informações sobre o formato de consulta para fontes da coleção Google fontes Abrir fonte.
 4. **fontProviderCerts** &ndash; com a lista de conjuntos de hash para os certificados que o provedor deve ser assinado com uma matriz de recursos.
 
 Uma vez definidas as fontes, talvez seja necessário fornecer informações sobre o _certificados fonte_ envolvido com o download.
-
 
 ### <a name="font-certificates"></a>Certificados de fonte
 
@@ -226,7 +220,6 @@ Por exemplo, o XML a seguir é denominado **Resources/values/fonts_cert.xml** e 
 
 Com esses arquivos de recursos em vigor, o aplicativo é capaz de baixar as fontes.
 
-
 ### <a name="declaring-downloadable-fonts-as-resources"></a>Declarando fontes para download como recursos
 
 Listando as fontes que pode ser baixadas no **AndroidManifest.XML**, Android assincronamente baixará as fontes quando o aplicativo é iniciado pela primeira vez. A fonte do próprios são listados em um arquivo de recurso de matriz, semelhante a este: 
@@ -238,14 +231,13 @@ Listando as fontes que pode ser baixadas no **AndroidManifest.XML**, Android ass
         <item>@font/vt323</item>
     </array>
 </resources>
-```        
+```
 
 Para baixar essas fontes, eles precisam ser declarados em **AndroidManifest.XML** adicionando `meta-data` como um filho de `application` elemento. Por exemplo, se as fontes para download são declaradas em um arquivo de recurso no **Resources/values/downloadable_fonts.xml**, em seguida, teria este trecho de código a ser adicionado ao manifesto: 
 
 ```xml
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
-
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>Baixar uma fonte com as APIs de fonte
 
@@ -269,17 +261,16 @@ No trecho anterior `FontToDownload` é uma consulta que ajudarão a fonte da col
 Antes de passar o `FontRequest` para o `FontContractCompat.RequestFont` método, há dois objetos que devem ser criados:
 
 * **`FontsContractCompat.FontRequestCallback`** &ndash; Esta é uma classe abstrata que deve ser estendida. É um retorno de chamada que será invocado quando `RequestFont` é concluído. Um aplicativo xamarin deve subclasse `FontsContractCompat.FontRequestCallback` e substituir o `OnTypefaceRequestFailed` e `OnTypefaceRetrieved`, fornecendo as ações a serem realizadas quando o download falha ou for bem-sucedida respectivamente.
-* **`Handler`** &ndash; Este é um `Handler` que será usado pelo `RequestFont` para baixá-la em um thread, se necessário. As fontes devem **não** ser baixado no thread da interface do usuário.  
+* **`Handler`** &ndash; Este é um `Handler` que será usado pelo `RequestFont` para baixá-la em um thread, se necessário. As fontes devem **não** ser baixado no thread da interface do usuário.
 
 Este trecho de código é um exemplo de uma classe do c# que assincronamente baixará uma fonte da coleção de fontes de Google Open Source. Ele implementa o `FontRequestCallback` de interface e gera um evento c# quando `FontRequest` foi concluída. 
-
 
 ```csharp
 public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
 {
     // A very simple font query; replace as necessary
     public static readonly String FontToDownload = "Courgette";
-    
+
     Android.OS.Handler Handler = null;
 
     public event EventHandler<FontDownloadEventArg> FontDownloaded = delegate
@@ -305,7 +296,7 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
         base.OnTypefaceRetrieved(typeface);
         FontDownloaded(this, new FontDownloadEventArg(typeface));
     }
-    
+
     Handler GetHandlerThreadHandler()
     {
         if (Handler == null)
@@ -335,9 +326,8 @@ public class FontDownloadEventArg : EventArgs
 }
 ```
 
-
-
 Para usar esse assistente, um novo `FontDownloadHelper` é criado, e é atribuído a um manipulador de eventos:  
+
 ```csharp
 var fontHelper = new FontDownloadHelper();
 
@@ -348,11 +338,9 @@ fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
-
 ## <a name="summary"></a>Resumo
 
-Este guia discutidos as novas APIs no Android 8.0 para dar suporte a fontes como recursos e fontes para download. Ele descreveu como incorporar as fontes existentes em um APK e usá-los em um layout. Ele também mostrou como 8.0 Android oferece suporte a fontes de download de um provedor de fonte, programaticamente ou declarando os fonte metadados em arquivos de recurso. 
-
+Este guia discutidos as novas APIs no Android 8.0 para dar suporte a fontes como recursos e fontes para download. Ele descreveu como incorporar as fontes existentes em um APK e usá-los em um layout. Ele também mostrou como 8.0 Android oferece suporte a fontes de download de um provedor de fonte, programaticamente ou declarando os fonte metadados em arquivos de recurso.
 
 ## <a name="related-links"></a>Links relacionados
 

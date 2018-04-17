@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: c9e7c920855d2002f52d05e28c5225f301cd62b1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a62d4621a8f3ace64401d64e35c806317a591c03
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -30,6 +30,9 @@ Há quatro tipos de armazenamento disponíveis:
 - **Arquivos e diretórios individuais** - para gerenciamento de muitos arquivos diferentes diretamente no sistema de arquivos.
 
 Este documento aborda os dois primeiros tipos - pares chave-valor e subclasses UIDocument - e como usar esses recursos em xamarin.
+
+> [!IMPORTANT]
+> Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com a norma de proteção de dados geral (GDPR) da União Europeia.
 
 ## <a name="requirements"></a>Requisitos
 

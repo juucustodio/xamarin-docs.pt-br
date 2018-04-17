@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 33ceff4549e4afbb1e5fecf3bd380fdb9a3df5f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4765b91bdc1f64be7e2ea67622db7af8634f1347
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -20,6 +20,9 @@ _iCloud APIs permitem que aplicativos do iOS 8 armazenar dados no iCloud, com su
 A estrutura CloudKit simplifica o desenvolvimento de aplicativos que iCloud de acesso. Isso inclui a recuperação de dados de aplicativo e direitos de ativo e ser capaz de armazenar com segurança informações do aplicativo. Esse kit oferece aos usuários uma camada de anonimato permitindo o acesso a aplicativos com sua IDs de iCloud sem compartilhar informações pessoais.
 
 Os desenvolvedores podem se concentrar em seus aplicativos do lado do cliente e permitem iCloud eliminar a necessidade de escrever lógica do aplicativo do lado do servidor. CloudKit fornece autenticação, bancos de dados públicos e privados e os dados estruturados e os serviços de armazenamento de ativos.
+
+> [!IMPORTANT]
+> Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com a norma de proteção de dados geral (GDPR) da União Europeia.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -149,7 +152,7 @@ Aqui estão as diferenças entre os tipos de banco de dados:
 ||Banco de dados público|Banco de dados particular|
 |---|--- |--- |
 |**Tipo de dados**|Dados compartilhados|Dados do usuário atual|
-|**Quota**|Contabilizada na cota do desenvolvedor|Contabilizada na cota do usuário|
+|**Cota**|Contabilizada na cota do desenvolvedor|Contabilizada na cota do usuário|
 |**Permissões padrão**|World legível|Usuário legível|
 |**Editar permissões**|iCloud painel funções por meio de um nível de registro de classe|N/D|
 

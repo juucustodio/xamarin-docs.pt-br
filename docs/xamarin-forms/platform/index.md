@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="platform-features"></a>Recursos da plataforma
 
@@ -33,9 +33,17 @@ Como usar o `Device` classe para criar o comportamento específico de plataforma
 
 Alguns estilos de iOS podem ser executados por meio de **Info. plist** e `UIAppearance` API. Este guia inclui exemplos de como incluir iOS 9 recursos para o aplicativo do iOS de uma solução xamarin. Forms, incluindo pesquisa do Spotlight Core.
 
+## <a name="gtkgtkmd"></a>[GTK](gtk.md)
+
+Xamarin. Forms agora tem suporte para aplicativos GTK # visualização.
+
 ## <a name="macmacmd"></a>[Mac](mac.md)
 
 Xamarin. Forms agora tem suporte para aplicativos macOS visualização.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin. Forms agora tem suporte para aplicativos do Windows Presentation Foundation (WPF) visualização.
 
 ## <a name="native-formsnative-formsmd"></a>[Formulários nativos](native-forms.md)
 
@@ -58,7 +66,7 @@ Há uma ampla variedade de código-fonte aberto plug-ins disponíveis no Github,
 Xamarin. Forms tem suporte para quatro tipos diferentes de projeto do Windows:
 
 * Windows Phone 8 Silverlight (original Windows plataforma suportada por xamarin. Forms),
-* Windows Phone 8.1 (WinRT),
+* Windows Phone 8.1 (WinRT)
 * Windows 8.1 (WinRT), e
 * Plataforma universal do Windows (Windows 10).
 
