@@ -6,14 +6,13 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 80d2402329020002a43e1f9dd7b518e2ce74747c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d8995946966020955a1d9378dea631387ed5f4bd
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-embedding-limitations"></a>Limitações de incorporação de .NET
-
 
 Este documento explica as limitações de inserção de .NET (Embeddinator-4000) e, sempre que possível, fornece soluções alternativas para eles.
 

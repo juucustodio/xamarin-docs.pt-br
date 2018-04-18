@@ -6,11 +6,12 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: cdb32c0fe9aa1a267bda5768b9026667723d694c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 03/29/2017
+ms.openlocfilehash: 7d54203fe391af6acde70f4c2a073b7f71332c91
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-urhosharp"></a>Usando UrhoSharp
 
@@ -20,7 +21,7 @@ Antes de escrever seu primeiro jogo, você deseja obter familiarize com os conce
 
 <a name="scenenodescomponentsandcameras"/>
 
-# <a name="scenes-nodes-components-and-cameras"></a>Nos bastidores, nós, componentes e câmeras
+## <a name="scenes-nodes-components-and-cameras"></a>Nos bastidores, nós, componentes e câmeras
 
 O modelo de cena pode ser descrito como um gráfico de cena baseado em componente. A cena consiste em uma hierarquia de nós de cena, a partir do nó raiz, que também representa a cena inteira. Cada [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) tem uma transformação 3D (posição, rotação e escala), um nome, uma ID, além de um número arbitrário de componentes.  Componentes de colocar um nó de vida, eles podem tornar a adicionar uma representação visual ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), eles podem emitir um som ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), podem fornecer um limite de colisão e assim por diante.
 
@@ -28,7 +29,7 @@ Você pode criar o segundo plano e nós de instalação usando o [Urho Editor](#
 
 Além de configurar sua cena, será necessário instalar um [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), é o que determina o que irá obter mostrado ao usuário.
 
-## <a name="setting-up-your-scene"></a>Configurando seu cena
+### <a name="setting-up-your-scene"></a>Configurando seu cena
 
 Você normalmente deve criar este formulário seu método de início:
 
@@ -52,7 +53,7 @@ planeObject.Model = ResourceCache.GetModel ("Models/Plane.mdl");
 planeObject.SetMaterial(ResourceCache.GetMaterial("Materials/StoneTiled.xml"));
 ```
 
-## <a name="components"></a>Componentes
+### <a name="components"></a>Componentes
 
 Renderizar objetos 3D, reprodução de som, física e lógica de script atualizações estiverem todas habilitadas, criando diferentes componentes em nós chamando [ `CreateComponent<T>()` ](https://developer.xamarin.com/api/member/Urho.Node.CreateComponent%3CT%3E/p/Urho.CreateMode/System.UInt32/).  Por exemplo, configuração de seu nó e o componente leve como este:
 
@@ -82,11 +83,11 @@ Componentes comuns como [ `Light` ](https://developer.xamarin.com/api/type/Urho.
 
 A biblioteca vem com uma ampla variedade de componentes que você pode anexar a seus nós para colocá-los à vida: elementos visíveis ao usuário (modelos), sons, corpos rígidos, as formas de colisão, câmeras, fontes de luz, emissores de partícula e muito mais.
 
-## <a name="shapes"></a>Formas
+### <a name="shapes"></a>Formas
 
 Como uma conveniência, várias formas estão disponíveis como nós simples no namespace Urho.Shapes.  Isso inclui caixas, esferas, cones, cilindros e planos.
 
-## <a name="camera-and-viewport"></a>Câmera e visor
+### <a name="camera-and-viewport"></a>Câmera e visor
 
 Assim como a luz, câmeras são componentes, portanto, será necessário associar o componente a um nó, isso é feito como este:
 
@@ -104,7 +105,7 @@ Renderer.SetViewPort (0, new Viewport (Context, scene, camera, null))
 
 E agora você deve ser capaz de ver os resultados de sua criação.
 
-## <a name="identification-and-scene-hierarchy"></a>Hierarquia de identificação e cena
+### <a name="identification-and-scene-hierarchy"></a>Hierarquia de identificação e cena
 
 Ao contrário de nós, os componentes não têm nomes; componentes no mesmo nó só são identificados por seu tipo e o índice na lista de componentes do nó, que é preenchida na ordem de criação, por exemplo, você pode recuperar o [ `Light` ](https://developer.xamarin.com/api/type/Urho.Light) componente fora do `lightNode` objeto como essa acima:
 
@@ -128,13 +129,13 @@ Observe que [ `Scene` ](https://developer.xamarin.com/api/type/Urho.Node/)do pro
 
 Também é possível criar um `Node` que não pertence a uma cena. Isso é útil por exemplo com uma câmera movendo uma cena que pode ser carregado ou salvo, porque, em seguida, a câmera não serão salvas com a cena real e não será destruída quando cena é carregada. No entanto, observe que Criando componentes de geometria, física ou script em um nó desanexado e, em seguida, movê-lo em uma cena posteriormente fará com que esses componentes não funcione corretamente.
 
-## <a name="scene-updates"></a>Atualizações de cena
+### <a name="scene-updates"></a>Atualizações de cena
 
 Uma cena cujas atualizações estão habilitadas (padrão) será atualizado automaticamente em cada iteração do loop principal.  O aplicativo [ `SceneUpdate` ](https://developer.xamarin.com/api/event/Urho.Scene.SceneUpdate/) manipulador de eventos é chamado nela.
 
 Nós e componentes que podem ser excluídos da atualização de cena por desabilitá-las, consulte [ `Enabled` ](https://developer.xamarin.com/api/member/Urho.Node.Enabled).  O comportamento depende do componente específico, mas, por exemplo a desabilitação de um componente drawable também torna invisível, enquanto a desabilitação de um componente de origem som retira a ele. Se um nó for desabilitado, todos os seus componentes são tratados como desativado, independentemente de seu próprio estado habilitar/desabilitar.
 
-# <a name="adding-behavior-to-your-components"></a>Adicionando o comportamento para os seus componentes
+## <a name="adding-behavior-to-your-components"></a>Adicionando o comportamento para os seus componentes
 
 É a melhor maneira de estruturar o jogo tornar o seu próprio componente que encapsulam um ator ou elemento em jogo.  Isso faz com que o recurso self contido, os ativos usados para exibi-la, para seu comportamento.
 
@@ -142,7 +143,7 @@ A maneira mais simples de adicionar um comportamento a um componente é usar aç
 
 Como alternativa, você pode controlar exatamente o que acontece com o componente Atualizando as propriedades do componente em cada quadro (discutido na seção de comportamento com base no quadro).
 
-## <a name="actions"></a>Ações
+### <a name="actions"></a>Ações
 
 Você pode adicionar um comportamento a nós muito facilmente usando as ações.  Ações alter várias propriedades de nó e executá-los em um período de tempo ou repeti-los várias vezes com uma curva de animação determinado.
 
@@ -182,7 +183,7 @@ No exemplo acima, a nuvem moverá e desaparecer ao mesmo tempo.
 
 Você observará que eles estão usando c# await, que permite que você pense linearmente o comportamento que você deseja obter.
 
-## <a name="basic-actions"></a>Ações básicas
+### <a name="basic-actions"></a>Ações básicas
 
 Estas são as ações com suporte no UrhoSharp:
 
@@ -191,12 +192,12 @@ Estas são as ações com suporte no UrhoSharp:
 * Dimensionamento de nós: [ `ScaleTo` ](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo), [`ScaleBy`](https://developer.xamarin.com/api/type/Urho.Actions.ScaleBy)
 * Nós de cor: [ `FadeIn` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeIn), [ `FadeTo` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeTo), [ `FadeOut` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeOut), [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [`Blink`](https://developer.xamarin.com/api/type/Urho.Actions.Blink)
 * Tonalidade: [ `TintTo` ](https://developer.xamarin.com/api/type/Urho.Actions.TintTo), [`TintBy`](https://developer.xamarin.com/api/type/Urho.Actions.TintBy)
-* Instants: [`Hide`](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [`Show`](https://developer.xamarin.com/api/type/Urho.Actions.Show), [`Place`](https://developer.xamarin.com/api/type/Urho.Actions.Place), [`RemoveSelf`](https://developer.xamarin.com/api/type/Urho.Actions.RemoveSelf), [`ToggleVisibility`](https://developer.xamarin.com/api/type/Urho.Actions.ToggleVisibility)
+* Instants: [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [ `Show` ](https://developer.xamarin.com/api/type/Urho.Actions.Show), [ `Place` ](https://developer.xamarin.com/api/type/Urho.Actions.Place), [ `RemoveSelf` ](https://developer.xamarin.com/api/type/Urho.Actions.RemoveSelf), [`ToggleVisibility`](https://developer.xamarin.com/api/type/Urho.Actions.ToggleVisibility)
 * Loop: [ `Repeat` ](https://developer.xamarin.com/api/type/Urho.Actions.Repeat), [ `RepeatForever` ](https://developer.xamarin.com/api/type/Urho.Actions.RepeatForever), [`ReverseTime`](https://developer.xamarin.com/api/type/Urho.Actions.ReverseTime)
 
 Outros recursos avançados incluem uma combinação da [ `Spawn` ](https://developer.xamarin.com/api/type/Urho.Actions.Spawn) e [ `Sequence` ](https://developer.xamarin.com/api/type/Urho.Actions.Sequence) ações.
 
-## <a name="easing---controlling-the-speed-of-your-actions"></a>Atenuação - controlando a velocidade de suas ações
+### <a name="easing---controlling-the-speed-of-your-actions"></a>Atenuação - controlando a velocidade de suas ações
 
 Atenuação é uma maneira que direciona a maneira que a animação será Desdobrar e pode fazer muito mais agradável suas animações.  Por padrão as ações terá um comportamento linear, por exemplo um [ `MoveTo` ](https://developer.xamarin.com/api/type/Urho.Actions.MoveTo) ação teria um movimento muito robótico.  Você pode encapsular suas ações em uma ação de atenuação para alterar o comportamento, por exemplo, o que seria lentamente iniciar a movimentação, acelerar e lenta chega ao fim ([`EasyInOut`](https://developer.xamarin.com/api/type/Urho.Actions.EasyInOut)).
 
@@ -212,7 +213,7 @@ Há muitos modos de atenuação, o gráfico a seguir mostra os vários tipos de 
 
 ![Modos de atenuação](using-images/easing.png "este gráfico mostra os vários tipos de atenuação e seu comportamento no valor do objeto que estão controlando durante o período de tempo")
 
-## <a name="using-actions-and-async-code"></a>Usando ações e código assíncrono
+### <a name="using-actions-and-async-code"></a>Usando ações e código assíncrono
 
 No seu [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/) subclasse, você deverá apresentar um método assíncrono que prepara o comportamento do seu componente e unidades a funcionalidade para ele.
 Em seguida, você seria invocar esse método usando o c# `await` palavra-chave de outra parte do seu programa, ou seu `Application.Start` método ou em resposta a um ponto de usuário ou o texto em seu aplicativo.
@@ -267,7 +268,7 @@ class Robot : Component {
 
 No `Launch` método acima três ações são iniciadas: o robô entra em cena, esta ação irá alterar o local do nó em um período de 0.6 segundo.  Como essa é uma opção assíncrono, isso acontecerá simultaneamente como a próxima instrução que é a chamada para `MoveRandomly`.  Esse método irá alterar a posição do robô em paralelo em um local aleatório.  Isso é obtido executando duas ações compostas, a movimentação para um novo local e voltar ao valor original posicionar e repita a operação enquanto o robô permanece ativo.  E, para tornar as coisas mais interessantes, o robô irá manter acertar simultaneamente.  A solução só começará a cada 0,1 segundos.
 
-## <a name="frame-based-behavior-programming"></a>Programação de comportamento com base no quadro
+### <a name="frame-based-behavior-programming"></a>Programação de comportamento com base no quadro
 
 Se você quiser controlar o comportamento do seu componente em uma base por quadro, em vez de usar as ações, você deveria fazer é substituir a [ `OnUpdate` ](https://developer.xamarin.com/api/member/Urho.Component.OnUpdate) método de sua [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component) subclasse.  Esse método é chamado uma vez por quadro e é invocado apenas se você definir a propriedade ReceiveSceneUpdates como true.
 
@@ -299,7 +300,7 @@ var rotator = new Rotator() { RotationSpeed = rotationSpeed };
 boxNode.AddComponent (rotator);
 ```
 
-## <a name="combining-styles"></a>A combinação de estilos
+### <a name="combining-styles"></a>A combinação de estilos
 
 Você pode usar o modelo assíncrono/ação com base para a programação muito o comportamento que é ótimo para disparar e esquecer o estilo de programação, mas você pode também ajustar seu comportamento de componente para também executar um código de atualização em cada quadro.
 
@@ -316,7 +317,7 @@ Por exemplo, na demonstração SamplyGame isso é usado no `Enemy` classe codifi
     }
 ```
 
-# <a name="loading-and-saving-scenes"></a>Carregar e salvar o segundo plano
+## <a name="loading-and-saving-scenes"></a>Carregar e salvar o segundo plano
 
 Segundo plano pode ser carregados e salvos em formato XML; Consulte as funções [ `LoadXml` ](https://developer.xamarin.com/api/member/Urho.Scene.LoadXml) e [ `SaveXML()` ](https://developer.xamarin.com/api/member/Urho.Scene.SaveXml). Quando uma cena é carregada, todo o conteúdo existente nele (nós filho e componentes) é removido primeiro. Nós e componentes que são marcados temporárias com a `Temporary` propriedade não serão salvas. O serializador manipula todos os componentes internos e propriedades, mas não é inteligente o suficiente para lidar com propriedades personalizadas e campos definidos em suas subclasses de componente. No entanto, ele fornece dois métodos virtuais para isso:
 
@@ -355,7 +356,7 @@ class MyComponent : Component {
 }
 ```
 
-## <a name="object-prefabs"></a>Objeto Prefabs
+### <a name="object-prefabs"></a>Objeto Prefabs
 
 Apenas carregar ou salvar o plano inteiro não é flexível o suficiente para jogos onde novos objetos devem ser criados dinamicamente. Por outro lado, a criação de objetos complexos e definindo suas propriedades no código também será entediantes. Por esse motivo, também é possível salvar um nó da cena que incluirá seus nós filho, componentes e atributos. Esses convenientemente posteriormente podem ser carregados como um grupo.  Esse é o objeto salvo é conhecido como um prefab. Há três maneiras de fazer isso:
 
@@ -374,7 +375,7 @@ using (var file = new File(Context, prefabPath, FileMode.Read))
 }
 ```
 
-# <a name="events"></a>Eventos
+## <a name="events"></a>Eventos
 
 UrhoObjects gerar uma série de eventos, eles são apresentados como c# eventos em várias classes que gerá-los.  Além de c#-modelo baseado em evento, também é possível usar um o `SubscribeToXXX` métodos que permitem que você se inscrever e manter um token de assinatura que você possa usar posteriormente para cancelar a assinatura.  A diferença é que o primeiro permitirá muitos chamadores assinar, enquanto a segunda só permite uma, mas permite o estilo de lambda melhor abordagem para ser usado e ainda, permite a fácil remoção da assinatura.  Eles são mutuamente exclusivos.
 
@@ -421,7 +422,7 @@ public void override Start ()
 
 O parâmetro recebido pelo manipulador de eventos é uma classe de argumentos de evento com rigidez de tipos que serão específicos para cada evento e contém a carga do evento.
 
-# <a name="responding-to-user-input"></a>Responder à entrada do usuário
+## <a name="responding-to-user-input"></a>Responder à entrada do usuário
 
 Você pode assinar vários eventos, como pressionamentos de tecla pressionada, assinar o evento e responder à entrada sendo entregue:
 
@@ -459,7 +460,7 @@ protected override void OnUpdate(float timeStep)
 }
 ```
 
-# <a name="resources-assets"></a>Recursos (ativos)
+## <a name="resources-assets"></a>Recursos (ativos)
 
 Os recursos incluem a maioria das coisas em UrhoSharp que são carregadas do armazenamento em massa durante a inicialização ou o tempo de execução:
 
@@ -492,13 +493,13 @@ Recursos também podem criados manualmente e armazenados no cache de recursos, c
 
 Orçamentos de memória podem ser definidos por tipo de recurso: se recursos consomem mais memória do que o permitido, os recursos mais antigos serão removidos do cache se não estiver em uso mais. Por padrão os orçamentos de memória estão definidos como ilimitados.
 
-## <a name="bringing-3d-models-and-images"></a>Colocando modelos 3D e imagens
+### <a name="bringing-3d-models-and-images"></a>Colocando modelos 3D e imagens
 
 Urho3D tenta usar formatos de arquivo existentes sempre que possível e definir os formatos de arquivo personalizados somente quando absolutamente necessário, como modelos (*.mdl) e das animações (*. ani). Para esses tipos de ativos, Urho fornece um conversor - [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) que podem consumir muitos formatos populares de 3D como fbx dae, 3ds e obj, etc.
 
 Também há um suplemento útil para Blender [ https://github.com/reattiva/Urho3D-Blender ](https://github.com/reattiva/Urho3D-Blender) que pode exportar seus ativos Blender no formato adequado para Urho3D.
 
-## <a name="background-loading-of-resources"></a>Carregamento em segundo plano de recursos
+### <a name="background-loading-of-resources"></a>Carregamento em segundo plano de recursos
 
 Normalmente, quando a solicitação de recursos usando um do `ResourceCache`do `Get` método, elas são carregadas imediatamente no thread principal, que pode levar vários milissegundos para todas as etapas necessárias (carregar arquivo do disco, analisar dados, carregar GPU se necessário ) e, portanto, pode resultar em descartes de taxa de quadros.
 
@@ -510,7 +511,7 @@ Finalmente o tempo máximo (em milissegundos) gasto cada quadro no terminar plan
 
 <a name="sound"/>
 
-# <a name="sound"></a>Som
+## <a name="sound"></a>Som
 
 Som é uma parte importante do jogo e a estrutura de UrhoSharp fornece uma maneira de reprodução de sons em jogo.  Tocar sons, anexando um [ `SoundSource` ](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource/) componente um [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node) e, em seguida, reproduzir um arquivo nomeado de seus recursos.
 
@@ -526,7 +527,7 @@ soundSource.AutoRemove = true;
 
 <a name="particles"/>
 
-# <a name="particles"></a>Partículas
+## <a name="particles"></a>Partículas
 
 Partículas fornecem uma maneira simple de adicionar alguns efeitos simples e econômicos para seu aplicativo.  Você pode consumir partículas armazenadas em formato PEX, usando ferramentas como [ http://onebyonedesign.com/flash/particleeditor/ ](http://onebyonedesign.com/flash/particleeditor/).
 
@@ -561,22 +562,19 @@ E esta é sua aparência se você usar uma textura em blocos:
 
 ![Partículas com uma textura caixa](using-images/image-2.png "e esta é sua aparência se usando uma textura em blocos")
 
-# <a name="multithreading-support"></a>Suporte multithread
+## <a name="multithreading-support"></a>Suporte multithread
 
 UrhoSharp é uma biblioteca de thread único.  Isso significa que você não deve tentar invocar métodos em UrhoSharp de um thread em segundo plano, ou você corre o risco de corrupção do estado do aplicativo e provavelmente a falha de seu aplicativo.
 
 Se você quiser executar algum código em segundo plano e, em seguida, atualizar Urho componentes da interface do usuário principal, você pode usar o [ `Application.InvokeOnMain(Action)` ](https://developer.xamarin.com/api/member/Urho.Application.InvokeOnMain) método.  Além disso, você pode use c# await e o .NET APIs para garantir que o código seja executado no thread de apropriada de tarefas.
 
-
-# <a name="urhoeditor"></a>UrhoEditor
+## <a name="urhoeditor"></a>UrhoEditor
 
 Você pode baixar o Editor Urho para sua plataforma do [Urho site](http://urho3d.github.io/), vá para Downloads e escolher a versão mais recente.
 
-# <a name="copyrights"></a>Direitos autorais
+## <a name="copyrights"></a>Direitos autorais
 
 Esta documentação contém conteúdo original do Xamarin Inc, mas desenha extensivamente na documentação do código-fonte aberto para o projeto Urho3D e contém capturas de tela do projeto Cocos2D.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

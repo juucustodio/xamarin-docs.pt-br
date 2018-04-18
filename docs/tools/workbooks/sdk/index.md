@@ -5,17 +5,18 @@ ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: bc8ae0304e5b044cc1a898820d0ac33e33dfec0d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 03/30/2017
+ms.openlocfilehash: ad7341776c2f37d4eb6238a26d5b12ee9e340ff7
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>Guia de Introdução com as pastas de trabalho do Xamarin SDK
 
 Este documento fornece um guia rápido de Introdução ao desenvolvimento integrações para pastas de trabalho do Xamarin. Isso funcionará com as pastas de trabalho do Xamarin estável, mas **carregar integrações por meio de pacotes do NuGet só tem suporte em pastas de trabalho 1.3**, no canal alfa no momento da gravação.
 
-# <a name="general-overview"></a>Visão geral
+## <a name="general-overview"></a>Visão geral
 
 Integrações de pastas de trabalho do Xamarin são pequenas bibliotecas que usam o [ `Xamarin.Workbooks.Integrations` NuGet] [ nuget] SDK para integrar com o Xamarin pastas de trabalho e o Inspetor de agentes para fornecer experiências aprimoradas.
 

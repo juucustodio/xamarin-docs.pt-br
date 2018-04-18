@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 6a721eedc278864b79d5f2b3cb16fb7075bfb15d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1c1d8e24ecea2e1606f7f134aaa5ecf619e155c6
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Instalação do Xamarin Player ao vivo
 
@@ -129,4 +129,4 @@ Se você tiver problemas ou não pode se conectar, consulte [limitações e solu
 
 - [Limitações](~/tools/live-player/limitations.md)
 - [Solução de problemas](~/tools/live-player/troubleshooting.md)
-- [Exemplos do Xamarin Player ao vivo](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Exemplos do Xamarin Player ao vivo](~/tools/live-player/samples.md)

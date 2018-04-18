@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 77f9873259a2a44426007c50efbd7ff83c8a0ccb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizador XAML para xamarin. Forms
 
@@ -33,7 +33,7 @@ Use o **exibição > outras janelas > Visualizador xamarin. Forms** menu do Visu
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-O **visualização** botão pode ser exibido no editor do mouse em um arquivo XAML e selecionando **abrir com > Visualizador XAML**. O painel de visualização, em seguida, pode ser mostrado ou ocultado pressionando o **visualização** botão no canto superior direito de qualquer janela de documento XAML:
+O **visualização** botão pode ser exibido no editor do mouse em um arquivo XAML e selecionando **abrir com > Visualizador de formulários**. O painel de visualização, em seguida, pode ser mostrado ou ocultado pressionando o **visualização** botão no canto superior direito de qualquer janela de documento XAML:
 
 [![Visualização do controle ListView no Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "visualizador Forms no Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox "visualizador Forms no Visual Studio para Mac")
 

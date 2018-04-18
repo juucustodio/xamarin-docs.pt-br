@@ -7,17 +7,17 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 243498e1d5a24a0a6b8d1e911b374df61dfa6971
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6c46d7648d1f1bb8863abe092bae5c44850d3cf1
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="an-introduction-to-urhosharp"></a>Uma introdução ao UrhoSharp
 
 _Isso fornece uma breve introdução aos conceitos por trás de UrhoSharp_
 
-![](introduction-images/urhosharp-icon.png "UrhoSharp é um poderoso mecanismo de jogo 3D para desenvolvedores do Xamarin e .NET")
+![Logotipo de UrhoSharp](introduction-images/urhosharp-icon.png)
 
 UrhoSharp é um poderoso mecanismo de jogo 3D para desenvolvedores do Xamarin e do .NET.  Ele é semelhante em espírito ao SceneKit e SpriteKit da Apple e incluir física, navegação, rede e muito mais enquanto ainda está sendo várias plataformas.
 
@@ -25,7 +25,7 @@ UrhoSharp é um poderoso mecanismo de jogo 3D para desenvolvedores do Xamarin e 
 
 UrhoSharp é um mecanismo de jogo com muitas funções sem a necessidade de:
 
- - Processamento de gráficos 3D Avançado
+- Processamento de gráficos 3D Avançado
 - [Física simulação](https://developer.xamarin.com/api/namespace/Urho.Physics/) (usando a biblioteca de marcador)
 - [Tratamento de cena](https://developer.xamarin.com/api/type/Urho.Scene/)
 - Suporte de Async/await
@@ -38,15 +38,15 @@ UrhoSharp é um mecanismo de jogo com muitas funções sem a necessidade de:
 - [Geração de forma convexa para detecção de colisão](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) (usando StanHull)
 - [Reprodução de áudio](https://developer.xamarin.com/api/namespace/Urho.Audio/) (com **libvorbis**)
 
-# <a name="getting-started"></a>Guia de Introdução
+## <a name="getting-started"></a>Guia de Introdução
 
 UrhoSharp convenientemente é distribuído como um [pacote NuGet](https://www.nuget.org/) e ele pode ser adicionado a seus projetos c# ou F # destino Windows, Mac, Android ou iOS.  O NuGet inclui tanto as bibliotecas necessárias para executar o programa, bem como os ativos básicos (CoreData) usados pelo mecanismo.
 
-## <a name="urho-as-a-portable-class-library"></a>Urho como uma biblioteca de classes portátil
+### <a name="urho-as-a-portable-class-library"></a>Urho como uma biblioteca de classes portátil
 
 O pacote de Urho pode ser consumido de um projeto específico da plataforma ou de um projeto de biblioteca de classes portátil, permitindo que você reutilize todo o código em todas as plataformas.  Isso significa que tudo o que você precisa fazer em cada plataforma gravar seu ponto de entrada específico de plataforma e, em seguida, transfere o controle para o código de jogo compartilhado.
 
-## <a name="samples"></a>Exemplos
+### <a name="samples"></a>Exemplos
 
 Você pode obter uma amostra para os recursos do Urho abrindo no Visual Studio para Mac ou o Visual Studio a solução de exemplo de:
 
@@ -68,7 +68,7 @@ O exemplo a seguir mostra o que o mecanismo é capaz de fazer:
 
 Enquanto os outros exemplos mostram as propriedades individuais de cada exemplo.
 
-# <a name="basic-structure"></a>Estrutura básica
+## <a name="basic-structure"></a>Estrutura básica
 
 O jogo deve subclasse o [ `Application` ](https://developer.xamarin.com/api/type/Urho.Application/) classe, isso é onde você irá configurar seu jogo (no [ `Setup` ](https://developer.xamarin.com/api/member/Urho.Application.Setup/) método) e inicie o jogo (no [ `Start` ](https://developer.xamarin.com/api/member/Urho.Application.Start) método).  Em seguida, você pode construir sua interface de usuário principal.  Vamos percorrer uma pequena amostra que mostra as APIs para configurar uma cena 3D, alguns elementos de interface do usuário e anexar um comportamento simple a ela.
 
@@ -98,7 +98,7 @@ class MySample : Application {
         UI.Root.AddChild(helloText);
 
         // Create a top-level scene, must add the Octree
-    // to visualize any 3D content.
+        // to visualize any 3D content.
         var scene = new Scene();
         scene.CreateComponent<Octree>();
         // Box
@@ -133,7 +133,9 @@ Vamos explica o que está acontecendo aqui.
 
 Para iniciar seu aplicativo, você chama a função de inicialização do mecanismo, seguida por criar uma nova instância da classe seu aplicativo, como este:
 
-    new MySample().Run();
+```csharp
+new MySample().Run();
+```
 
 O tempo de execução invocará o `Setup` e `Start` métodos para você.  Se você substituir `Setup` você pode configurar os parâmetros do mecanismo (não mostrado neste exemplo).
 
@@ -141,50 +143,56 @@ Você deve substituir `Start` como isso iniciará o jogo.  Esse método você ca
 
 O trecho de código a seguir usa a estrutura de interface do usuário para criar um elemento de texto e adicioná-lo ao seu aplicativo:
 
-        // UI text
-        var helloText = new Text()
-        {
-            Value = "Hello World from UrhoSharp",
-            HorizontalAlignment = HorizontalAlignment.Center,
-            VerticalAlignment = VerticalAlignment.Center
-        };
-        helloText.SetColor(new Color(0f, 1f, 1f));
-        helloText.SetFont(
-            font: ResourceCache.GetFont("Fonts/Font.ttf"),
-            size: 30);
-        UI.Root.AddChild(helloText);
+```csharp
+// UI text
+var helloText = new Text()
+{
+    Value = "Hello World from UrhoSharp",
+    HorizontalAlignment = HorizontalAlignment.Center,
+    VerticalAlignment = VerticalAlignment.Center
+};
+helloText.SetColor(new Color(0f, 1f, 1f));
+helloText.SetFont(
+    font: ResourceCache.GetFont("Fonts/Font.ttf"),
+    size: 30);
+UI.Root.AddChild(helloText);
+```
 
 A estrutura de interface do usuário está lá fornecer uma interface de usuário do jogo simples e funciona com a adição de novos nós para o [ `UI.Root` ](https://developer.xamarin.com/api/property/Urho.Gui.UI.Root/) nó.
 
-A segunda parte de nossos exemplos de instalações de cena principal.  Isso envolve uma série de etapas, criar uma cena 3D, criando uma caixa 3D na tela, adicionando uma luz, uma câmera e um visor.  Esses são explorados mais detalhadamente na seção "[cena, nós, componentes e câmeras](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras)"
+A segunda parte de nossos exemplos de instalações de cena principal.  Isso envolve uma série de etapas, criar uma cena 3D, criando uma caixa 3D na tela, adicionando uma luz, uma câmera e um visor.  Esses são explorados mais detalhadamente na seção [cena, nós, componentes e câmeras](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
 
 A terceira parte de nosso exemplo dispara algumas das ações.  As ações são receitas que descrevem um efeito específico e criado uma vez que eles podem ser executadas por um nó sob demanda chamando o [ `RunActionAsync` ](https://developer.xamarin.com/api/member/Urho.Node.RunActionsAsync) método em um `Node`.
 
 A primeira ação dimensiona a caixa com um efeito saltitante e segunda gira a caixa para sempre:
 
-    await boxNode.RunActionsAsync(
-        new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
+```csharp
+await boxNode.RunActionsAsync(
+    new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
+```
 
 Acima mostram como é a primeira ação que criamos um [ `ScaleTo` ](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo/) ação, isso é simplesmente uma receita que indica que você deseja dimensionar por um segundo para o valor de uma propriedade a escala de um nó.  Essa ação é encapsulada por sua vez com uma ação de atenuação, de [ `EaseBounceOut` ](https://developer.xamarin.com/api/type/Urho.Actions.EaseBounceInOut/) ação.  As ações de atenuação distorcem a execução de uma ação do linear e aplicam um efeito, nesse caso é o efeito de saltando-out.
 Para que nossa receita poderia ser escrita como:
 
-    var recipe = new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1));
+```csharp
+var recipe = new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1));
+```
 
 Quando a receita tiver sido criada, executamos a receita:
 
-    await boxNode.RunActionsAsync (recipe)
+```csharp
+await boxNode.RunActionsAsync (recipe)
+```
 
 A espera indica que o deseja retomar a execução após essa linha quando a ação é concluída.  Quando a ação for concluída, disparar a segunda animação.
 
 O [UrhoSharp usando](~/graphics-games/urhosharp/using.md) documento explora mais detalhadamente os conceitos por trás de Urho e como estruturar seu código para criar um jogo.
 
-# <a name="copyrights"></a>Direitos autorais
+## <a name="copyrights"></a>Direitos autorais
 
 Esta documentação contém conteúdo original do Xamarin Inc, mas desenha extensivamente na documentação do código-fonte aberto para o projeto Urho3D e contém capturas de tela do projeto Cocos2D.
 
-
-
-## <a name="related-links"></a>Links relacionados
+### <a name="related-links"></a>Links relacionados
 
 - [Pasta de trabalho do planeta Terra](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook)
 - [Explorar a pasta de trabalho de coordenadas](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook)

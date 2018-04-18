@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 5b4e3ab12a74b0f70866dc9f41593bfd5bcec0e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95ac9912f0ff6788a2a633b3f8d3495e286030f1
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Escolhendo uma foto na biblioteca de imagens
 
@@ -48,7 +48,7 @@ Essa interface é implementada em todas as plataformas usando código específic
 
 ## <a name="ios-implementation"></a>Implementação do iOS
 
-A implementação do iOS do `IPicturePicker` interface usos de [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) conforme descrito no [ **escolher uma foto da galeria** ](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/) receita e [código de exemplo](https://github.com/xamarin/recipes/tree/master/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
+A implementação do iOS do `IPicturePicker` interface usos de [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) conforme descrito no [ **escolher uma foto da galeria** ](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/) receita e [código de exemplo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
 
 A implementação do iOS está contida no [ `PicturePickerImplementation` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) classe no projeto do iOS do código de exemplo. Para tornar essa classe visível para o `DependencyService` manager, a classe deve ser identificada com um [`assembly`] atributo de tipo `Dependency`, e a classe deve ser público e implementar explicitamente o `IPicturePicker` interface:
 
@@ -146,7 +146,7 @@ Um aplicativo do iOS requer a permissão do usuário para acessar a biblioteca d
 
 ## <a name="android-implementation"></a>Implementação do Android
 
-A implementação do Android usa a técnica descrita a [ **selecionar uma imagem** ](https://developer.xamarin.com/recipes/android/other_ux/pick_image/) receita e o [código de exemplo](https://github.com/xamarin/recipes/tree/master/android/other_ux/pick_image). No entanto, o método é chamado quando o usuário selecionou uma imagem da biblioteca de imagens é um `OnActivityResult` substituição em uma classe que deriva de `Activity`. Por esse motivo, o normal [ `MainActivity` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) classe no projeto do Android tem sido complementada com um campo, uma propriedade e uma substituição do `OnActivityResult` método:
+A implementação do Android usa a técnica descrita a [ **selecionar uma imagem** ](https://developer.xamarin.com/recipes/android/other_ux/pick_image/) receita e o [código de exemplo](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image). No entanto, o método é chamado quando o usuário selecionou uma imagem da biblioteca de imagens é um `OnActivityResult` substituição em uma classe que deriva de `Activity`. Por esse motivo, o normal [ `MainActivity` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) classe no projeto do Android tem sido complementada com um campo, uma propriedade e uma substituição do `OnActivityResult` método:
 
 ```csharp
 public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity

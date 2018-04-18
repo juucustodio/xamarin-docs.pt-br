@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 9fb19b86ca303f8be3506d267dd75dc9db6cfca6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c94ed2e06ee57b67745b6a02692df2360aeb9754
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introdução ao desenvolvimento de jogos com MonoGame
 
@@ -27,16 +27,16 @@ No final deste passo a passo, estamos terá criado um jogo simple em que o playe
 
 O exemplo a seguir mostra o resultado deste passo a passo:
 
-![](images/image1.gif "O aplicativo que será criado no passo a passo")
+![Animação de caractere de jogos do exemplo seguinte o mouse](images/image1.gif)
 
-# <a name="monogame-and-xna"></a>Monogame e XNA
+## <a name="monogame-and-xna"></a>Monogame e XNA
 
 A biblioteca MonoGame destina-se para simular a biblioteca do XNA da Microsoft em sintaxe e funcionalidade.  Todos os objetos MonoGame existem sob o namespace Microsoft.Xna – permitindo que grande parte do código XNA ser usado em MonoGame sem modificação. 
 
 Os desenvolvedores familiarizados com o XNA já estarão familiarizados com a sintaxe do MonoGame e os desenvolvedores para obter informações adicionais sobre como trabalhar com MonoGame será capazes de fazer referência existente on-line XNA passo a passo, documentação da API e discussões.
 
 
-# <a name="walkthrough-parts"></a>Partes de instruções passo a passo
+## <a name="walkthrough-parts"></a>Partes de instruções passo a passo
 
 - [Parte 1 – criar um projeto de MonoGame de plataforma cruzada](~/graphics-games/monogame/introduction/part1.md)
 - [Parte 2 – implementar o WalkingGame](~/graphics-games/monogame/introduction/part2.md)
@@ -45,7 +45,7 @@ Os desenvolvedores familiarizados com o XNA já estarão familiarizados com a si
 
 - [Projeto de MonoGame WalkingGame (exemplo)](https://developer.xamarin.com/samples/mobile/WalkingGameMG/)
 - [IOS XNB fontes](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
-- [XNB Fonts Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
+- [XNB fontes Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
 - [MonoGame Android NuGet](https://www.nuget.org/packages/MonoGame.Framework.Android/)
 - [IOS MonoGame NuGet](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [Documentação da API do MonoGame](http://www.monogame.net/documentation/?page=main)

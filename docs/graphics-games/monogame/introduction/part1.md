@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0cd12f23f8cb269b2a41a08bf641db08e18fb82b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1c859c5a8d8c5d8b0539d4158895e816d47d3d5e
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1 – Criando uma MonoGame de plataforma cruzada
 
@@ -21,42 +21,36 @@ MonoGame permite o desenvolvimento de jogos de plataforma cruzada com grande par
 
 Quando terminamos, vamos ter um projeto que tem a estrutura apropriada para a execução de lógica de atualização de jogo e lógica de desenho de 30 quadros por segundo do jogo. Ele pode ser usado como o projeto de base para qualquer projeto MonoGame. Nosso projeto será assim quando executado:
 
-![](part1-images/image1.png "O projeto terá esta aparência quando executado")
+![Tela azul em branco](part1-images/image1.png)
 
-
-# <a name="adding-monogame-to-visual-studio-for-mac"></a>Adicionando MonoGame para o Visual Studio para Mac
+## <a name="adding-monogame-to-visual-studio-for-mac"></a>Adicionando MonoGame para o Visual Studio para Mac
 
 MonoGame pode ser adicionado como um suplemento para o Visual Studio para Mac. No Mac, selecione **Visual Studio para Mac** > **Gerenciador de suplementos...**  . No Windows, ferramentas de select * * * * > **Gerenciador de suplementos...**  . Selecione o **galeria** guia, expanda o **desenvolvimento de jogos** categoria e selecione **MonoGame Addin**, em seguida, clique em **instalar**:
 
-![](part1-images/image2.png "Selecione a guia galeria, expanda a categoria de desenvolvimento de jogos e selecione MonoGame suplemento e clique em instalar")
+![O Visual Studio para a Galeria de extensões de Mac selecionando MonoGame](part1-images/image2.png)
 
 > [!IMPORTANT]
 > **Observação**: se o **desenvolvimento de jogos** seção não aparece no Gerenciador de suplementos, manualmente, você pode baixar e instalar a versão mais recente aqui: http://www.monogame.net/downloads/. Talvez seja necessário reiniciar o Visual Studio para Mac para que os modelos sejam exibidos.
 
-
-
 Uma vez instalado, MonoGame modelos aparecerão no Visual Studio para Mac, conforme veremos na próxima seção.
 
-
-# <a name="creating-a-new-solution"></a>Criar uma nova solução
+## <a name="creating-a-new-solution"></a>Criar uma nova solução
 
 No Visual Studio para selecionar Mac **arquivo > nova solução**. No **novo projeto** caixa de diálogo, clique em **diversos**, role até a **geral** seção, selecione o * * aplicativo Universal Mobile de MonoGame * * opção e clique em Avançar.
 
-![](part1-images/image3.png "Na caixa de diálogo Novo projeto, clique em diversos, role até a seção geral, selecione a opção do aplicativo móvel do Universal MonoGame e clique em Avançar")
+![Nova caixa de diálogo de projeto, criando um aplicativo de MonoGame](part1-images/image3.png)
 
 Nomeie o projeto WalkingGame e clique em criar:
 
-![](part1-images/image4.png "Nomeie o projeto WalkingGame e clique em criar")
+![Nova caixa de diálogo de projeto, escolhendo um nome e local](part1-images/image4.png)
 
 Agora, nosso projeto será executado assim como qualquer outra iOS ou Android projeto. O projeto deve ser executado exibindo um plano de fundo espinheiro azul:
 
-![](part1-images/image5.png "O projeto deve ser executado exibindo um plano de fundo espinheiro azul")
+![Plano de fundo azul de aplicativo em branco](part1-images/image5.png)
 
-
-# <a name="fixing-android-compile-errors"></a>Corrigindo erros de compilação Android
+## <a name="fixing-android-compile-errors"></a>Corrigindo erros de compilação Android
 
 A versão atual dos modelos do MonoGame inclui alguns erros de sintaxe em do Android `Activity1.cs` arquivo. Para corrigir esses problemas, substitua o `OnCreate` função com o seguinte:
-
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -69,8 +63,7 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-
-# <a name="summary"></a>Resumo
+## <a name="summary"></a>Resumo
 
 Este passo a passo abordou como criar um projeto de MonoGame de plataforma cruzada usando o Visual Studio para Mac. O resultado é uma tela azul vazia. Este projeto pode ser usado como o ponto de partida para qualquer jogo Android e iOS.
 
