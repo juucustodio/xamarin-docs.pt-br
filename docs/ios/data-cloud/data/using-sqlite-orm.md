@@ -1,16 +1,17 @@
 ---
-title: Usando SQLite.NET
+title: Usando SQLite.NET com iOS
+description: A biblioteca de SQLite.NET PCL NuGet fornece um mecanismo de acesso de dados simples para aplicativos xamarin.
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/18/2018
-ms.openlocfilehash: 8d68df2c29afe828482da7c5747b30dc5d30a5de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/18/2018
+ms.openlocfilehash: e7287a4f6b4e3f1203f6181c900c05565d9b5050
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="using-sqlitenet"></a>Usando SQLite.NET
 
@@ -21,32 +22,47 @@ ORM significa mapeamento relacional objeto – uma API que permite que você sal
 
 ## <a name="usage"></a>Uso
 
-Adicionar o [SQLite.net PCL NuGet pacote](https://www.nuget.org/packages/sqlite-net-pcl/), ao seu projeto - ele dá suporte a uma variedade de plataformas, incluindo iOS, Android e Windows.
+Para incluir a biblioteca SQLite.NET em um aplicativo Xamarin, adicione o seguinte pacote NuGet ao seu projeto:
 
-  [![](using-sqlite-orm-images/image1a-sml.png "Pacote do SQLite.NET NuGet")](using-sqlite-orm-images/image1a.png#lightbox)
+- **Nome do pacote:** PCL SQLite net
+- **Autor:** Frank A. Krueger
+- **ID:** sqlite-net-pcl
+- **URL:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+[![Pacote do SQLite.NET NuGet](using-sqlite-orm-images/image1a-sml.png "pacote SQLite.NET NuGet")](using-sqlite-orm-images/image1a.png#lightbox)
+
+> [!TIP]
+> Há um número de diferentes pacotes SQLite — Certifique-se de escolher o correto (ele não pode ser o primeiro resultado na pesquisa).
 
 Uma vez que a biblioteca de SQLite.NET disponível, siga estas três etapas para usá-lo para acessar um banco de dados:
 
-
 1. **Adicionar um uso instrução** -adicione a seguinte instrução para os arquivos c# onde o acesso a dados é necessário:
 
-        using SQLite;
+    ```csharp
+    using SQLite;
+    ```
 
 1. **Criar um banco de dados em branco** -uma referência de banco de dados pode ser criada, passando o caminho do arquivo que o construtor da classe SQLiteConnection. Você não precisa verificar se o arquivo já existir, ele será criado automaticamente se necessário, caso contrário, o arquivo de banco de dados existente será aberto.
 
-        var db = new SQLiteConnection (dbPath);
+    ```csharp
+    var db = new SQLiteConnection (dbPath);
+    ```
 
     A variável dbPath deve ser determinada de acordo com as regras discutidas anteriormente neste documento.
 
 1. **Salvar dados** - uma vez que você criou um objeto SQLiteConnection, o banco de dados de comandos são executados chamando seus métodos, como CreateTable e Insert assim:
 
-        db.CreateTable<Stock> ();
-        db.Insert (newStock); // after creating the newStock object
+    ```csharp
+    db.CreateTable<Stock> ();
+    db.Insert (newStock); // after creating the newStock object
+    ```
 
 1. **Recuperar dados** - para recuperar um objeto (ou uma lista de objetos) use a seguinte sintaxe:
 
-        var stock = db.Get<Stock>(5); // primary key id of 5
-        var stockList = db.Table<Stock>();
+    ```csharp
+    var stock = db.Get<Stock>(5); // primary key id of 5
+    var stockList = db.Table<Stock>();
+    ```
 
 ## <a name="basic-data-access-sample"></a>Exemplo de acesso de dados básicos
 
@@ -54,14 +70,13 @@ O *DataAccess_Basic* código de exemplo para este documento esta aparência quan
 
 **iOS**
 
- ![](using-sqlite-orm-images/image2.png "exemplo de SQLite.NET do iOS")
+ [![exemplo de SQLite.NET do iOS](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
 
 O exemplo de código a seguir mostra uma interação do banco de dados inteiro usando a biblioteca de SQLite.NET para encapsular o acesso de banco de dados subjacente. Ele mostra:
 
 1.  Criar o arquivo de banco de dados
 1.  Inserir alguns dados por meio da criação de objetos e, em seguida, salvá-las
 1.  Consultando os dados
-
 
 Você precisará incluir esses namespaces:
 
@@ -187,7 +202,6 @@ Para alterar o modo de threading, chame `SqliteConnection.SetConfig`. Por exempl
 ```csharp
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
-
 
 ## <a name="related-links"></a>Links relacionados
 

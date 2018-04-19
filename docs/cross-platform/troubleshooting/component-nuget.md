@@ -7,28 +7,21 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 11/22/2017
-ms.openlocfilehash: a76adab41e9f7de5abb391e69a5b27783e0c3a63
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/18/2018
+ms.openlocfilehash: e3adee1b56b833442a8c927672cf903d45d03e84
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>Atualizar referências de componentes para NuGet
 
-_Substitua as referências de componente com pacotes do NuGet para obsoleta seus aplicativos._
+> [!NOTE]
+> Xamarin componentes não são mais suportados no Visual Studio e deve ser substituídos por pacotes do NuGet. Siga as instruções abaixo para remover manualmente as referências de componentes de seus projetos.
 
-Este guia explica como atualizar as soluções existentes de Xamarin para alterar referências de componentes para pacotes do NuGet.
+Consulte as instruções para adicionar pacotes do NuGet em [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) ou [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-- [Componentes que contêm pacotes do NuGet](#contain)
-- [Componentes com substituições do NuGet](#replace)
-
-A maioria dos componentes se enquadram em uma das categorias acima.
-Se você estiver usando um componente que não parece ter um pacote do NuGet equivalente, leia o [componentes sem um caminho de migração do NuGet](#require-update) seção abaixo.
-
-Consulte essas páginas para obter mais instruções para adicionar pacotes do NuGet em [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) ou [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
-
-## <a name="opening-a-project-containing-a-component"></a>Abrir um projeto que contém o componente
+## <a name="manually-removing-component-references"></a>Remover manualmente as referências de componentes
 
 Em novembro de 2017, era [anunciada](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) que o armazenamento do componente Xamarin seriam suspensos. Em um esforço para continuar com a sunsetting de componentes, a versão 15.6 do Visual Studio e a versão 7.4 do Visual Studio para Mac não suportam componentes no seu projeto. 
 
@@ -40,7 +33,7 @@ Se você carregar um projeto no Visual Studio, a seguinte caixa de diálogo ser�
 
 Para remover um componente do seu projeto:
 
-1. Abra o arquivo. csproj. Para fazer isso, clique no nome do projeto e selecione **descarregar projeto**. 
+1. Abra o **. csproj** arquivo. Para fazer isso, clique no nome do projeto e selecione **descarregar projeto**. 
 
 2. Clique novamente no projeto descarregado e selecione **Editar {your-projeto-name} csproj**.
 
@@ -100,9 +93,21 @@ Para remover um componente do seu projeto:
 
 3. Remova as referências a `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover todo o `ItemGroup`
 
-4. Repita as etapas acima para cada projeto na solução. 
+4. Repita as etapas acima para cada projeto na solução.
 
 -----
+
+> [!WARNING]
+> As instruções a seguir só funcionam com versões anteriores do Visual Studio.
+> O **componentes** nó não está mais disponível nas versões atuais de 2017 do Visual Studio ou Visual Studio para Mac.
+
+As seções a seguir explicam como atualizar as soluções existentes de Xamarin para alterar referências de componentes para pacotes do NuGet.
+
+- [Componentes que contêm pacotes do NuGet](#contain)
+- [Componentes com substituições do NuGet](#replace)
+
+A maioria dos componentes se enquadram em uma das categorias acima.
+Se você estiver usando um componente que não parece ter um pacote do NuGet equivalente, leia o [componentes sem um caminho de migração do NuGet](#require-update) seção abaixo.
 
 <a name="contain" />
 
@@ -147,14 +152,12 @@ Observe que o **pacotes** guia provavelmente estará vazia:
 
 _Pode conter dependências do NuGet, mas eles podem ser ignorados._
 
-
 Para confirmar uma substituição existe pacote do NuGet, pesquise [NuGet.org](https://www.nuget.org/packages), usando o nome do componente, ou pelo autor.
 
 Por exemplo, você pode encontrar o popular **sqlite-net-pcl** pacote procurando por:
 
 - [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) – o nome do produto.
 - [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) – perfil do autor.
-
 
 ### <a name="updating-the-solution"></a>Atualizando a solução
 

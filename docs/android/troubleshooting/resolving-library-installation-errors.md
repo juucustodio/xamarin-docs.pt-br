@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 6f280a90994ff40ebd8a07d2cab49ddc2b3d6ca1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a54c69ff708ff7438ef1a8fd14c17e77b5375039
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="resolving-library-installation-errors"></a>Resolvendo erros de instalação da biblioteca
 
@@ -161,7 +161,8 @@ Use as seguintes etapas para baixar **m2repository** e instalar seu conteúdo:
 
 8.  Verifique se que todos os arquivos são copiados. O **inserido** diretório agora deve conter os arquivos como **. jar**, **. aar**, e **.pom**.
 
-9.  Descompacte qualquer extraído **. aar** arquivos. No Windows, acrescente um **. zip** extensão para o **. aar** de arquivos, clique duas vezes e selecione **extrair tudo...** , em seguida, remova o **. zip** extensão. Em macOS, descompacte o **. aar** arquivo usando o **Descompacte** comando no Terminal (por exemplo, **Descompacte file.aar**).
+9.  Descompacte o conteúdo de qualquer extraído **. aar** arquivos para o **inserido** directory. No Windows, acrescente um **. zip** extensão para o **. aar** de arquivo, abra-o e copie o conteúdo para o **inserido** directory.
+    Em macOS, descompacte o **. aar** arquivo usando o **Descompacte** comando no Terminal (por exemplo, **Descompacte file.aar**).
 
 Neste ponto, você instalou manualmente os componentes ausentes e o projeto deve compilar sem erros. Se não, verifique se você baixou o **m2repository** **. zip** arquivar a versão que corresponde exatamente à versão na mensagem de erro e verifique se que você tenha instalado o seu conteúdo no Corrija locais, conforme descrito nas etapas acima. 
 
