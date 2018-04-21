@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 0a4bab44cfa260060c990949b45d3f5e6b103d0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6a848023febcb7fc65cf6616aeae3b43b39262
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensagens de erro Xamarin.Mac (mmp)
 
@@ -363,7 +363,7 @@ Consulte https://msdn.microsoft.com/en-us/library/x0w2664k.aspx para obter mais 
 
 <!-- 5104 used by mtouch -->
 
-### <a name="mm52xx-linking"></a>MM52xx: linking
+### <a name="mm52xx-linking"></a>MM52xx: vinculando
 
 <a name="MM5202" />
 

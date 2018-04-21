@@ -6,17 +6,16 @@ ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/19/2018
-ms.openlocfilehash: 75d42da4ba01aaefded0081da02b8e1651695f46
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/20/2018
+ms.openlocfilehash: 9c17641312384634983c2cbb34fa923a9416c9f7
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusão em xamarin
 
 _Esta seção discute como usar um receptor de difusão._
-
 
 ## <a name="broadcast-receiver-overview"></a>Visão geral do receptor de difusão
 
@@ -55,7 +54,7 @@ public class SampleReceiver : BroadcastReceiver
     public override void OnReceive(Context context, Intent intent)
     {
         // Do stuff here.
-        
+
         String value = intent.GetStringExtra("key");
     }
 }
@@ -97,9 +96,9 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Aplicativos que se destinam a 8.0 Android (API nível 26) ou superior não pode estaticamente registrar uma difusão implícita. Aplicativos estaticamente ainda podem se registrar para uma transmissão explícita. Há uma pequena lista de difusões implícitas que são isentos dessa restrição. Essas exceções são descritas no [implícita exceções difusão](https://developer.android.com/guide/components/broadcast-exceptions.html) guia na documentação do Android. Aplicativos que estão interessados em transmissões implícita devem fazer isso dinamicamente usando a `RegisterReceiver` método. Isso é descrito a seguir.  
+Aplicativos que se destinam a 8.0 Android (API nível 26) ou superior não pode estaticamente registrar uma difusão implícita. Aplicativos estaticamente ainda podem se registrar para uma transmissão explícita. Há uma pequena lista de difusões implícitas que são isentos dessa restrição. Essas exceções são descritas no [implícita exceções difusão](https://developer.android.com/guide/components/broadcast-exceptions.html) guia na documentação do Android. Aplicativos que estão interessados em transmissões implícita devem fazer isso dinamicamente usando a `RegisterReceiver` método. Isso é descrito a seguir.
 
-### <a name="context-registering-a-broadcast-receiver"></a>Registro de contexto de um receptor de difusão 
+### <a name="context-registering-a-broadcast-receiver"></a>Registro de contexto de um receptor de difusão
 
 Contexto de registro (também conhecido como registro dinâmico) de um destinatário é executado invocando o `RegisterReceiver` método e o receptor difusão devem ser cancelado com uma chamada para o `UnregisterReceiver` método. Para evitar o vazamento de recursos, é importante cancelar o registro o receptor quando ele não é mais relevante para o contexto (a atividade ou serviço). Por exemplo, um serviço pode transmitir uma tentativa para informar uma atividade que as atualizações estão disponíveis para serem exibidos ao usuário. Quando a atividade for iniciado, ele seria registrar para os propósitos. Quando a atividade é movida para o plano de fundo e não mais visível para o usuário, ele deve cancelar o registro o receptor porque a interface do usuário para exibir as atualizações não estiver mais visível. O trecho de código a seguir é um exemplo de como registrar e cancelar o registro de um receptor de difusão no contexto de uma atividade:
 
@@ -108,22 +107,22 @@ Contexto de registro (também conhecido como registro dinâmico) de um destinat�
 public class MainActivity: Activity 
 {
     MySampleBroadcastReceiver receiver;
-    
+
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
         receiver = new MySampleBroadcastReceiver()
-        
+
         // Code omitted for clarity
     }
-    
+
     protected override OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
-    
+
     protected override OnPause() 
     {
         UnregisterReceiver(receiver);
@@ -150,28 +149,32 @@ Uma difusão pode ser publicada para todos os aplicativos instalados no disposit
    ```
 
     Este trecho de código é outro exemplo de como enviar uma transmissão usando o `Intent.SetAction` método para identificar a ação:
-    
+
     ```csharp 
     Intent intent = new Intent();
     intent.SetAction("com.xamarin.example.TEST");
     intent.PutExtra("key", "value");
     SendBroadcast(intent);
     ```
-   
+
 2. **Context.SendOrderedBroadcast** &ndash; este é o método é muito semelhante ao `Context.SendBroadcast`, com a diferença é que a intenção será publicado quando para destinatários na ordem em que o recievers foram registrados.
-   
+
 ### <a name="localbroadcastmanager"></a>LocalBroadcastManager
 
-O [v4 da biblioteca de suporte de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) fornece uma classe auxiliar chamada [ `LocalBroadcastManager` ](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html). O `LocalBroadcastManager` destina-se a aplicativos que não deseja enviar ou receber transmissões de outros aplicativos no dispositivo. O `LocalBroadcastManager` publicará somente mensagens dentro do contexto do aplicativo. Outros aplicativos no dispositivo não podem receber as mensagens que são publicadas com o `LocalBroadcastManager`. 
+O [v4 da biblioteca de suporte de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) fornece uma classe auxiliar chamada [ `LocalBroadcastManager` ](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html). O `LocalBroadcastManager` destina-se a aplicativos que não deseja enviar ou receber transmissões de outros aplicativos no dispositivo. O `LocalBroadcastManager` publicará somente mensagens dentro do contexto do aplicativo e apenas os destinatários difusão que estão registrados com o `LocalBroadcastManager`. Este trecho de código é um exemplo de registro de um receptor de difusão com `LocalBroadcastManager`:
 
-Este trecho de código mostra como despachar uma intenção usando o `LocalBroadcastManager`:
+```csharp
+Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this). RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
+```
+
+Outros aplicativos no dispositivo não podem receber as mensagens que são publicadas com o `LocalBroadcastManager`. Este trecho de código mostra como despachar uma intenção usando o `LocalBroadcastManager`:
 
 ```csharp
 Intent message = new Intent("com.xamarin.example.TEST");
 // If desired, pass some values to the broadcast receiver.
 intent.PutExtra("key", "value");
 Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast(message);
-``` 
+```
 
 ## <a name="related-links"></a>Links relacionados
 
@@ -179,7 +182,7 @@ Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast
 - [Context.RegisterReceiver](https://developer.xamarin.com/api/member/Android.Content.Context.RegisterReceiver/p/Android.Content.BroadcastReceiver/Android.Content.IntentFilter/System.String/Android.OS.Handler/)
 - [Context.SendBroadcast](https://developer.xamarin.com/api/member/Android.Content.Context.SendBroadcast/p/Android.Content.Intent/)
 - [Context.UnregisterReceiver](https://developer.xamarin.com/api/member/Android.Content.Context.UnregisterReceiver/p/Android.Content.BroadcastReceiver/)
-- [Intent](https://developer.xamarin.com/api/type/Android.Content.Intent/)
+- [Tentativa de](https://developer.xamarin.com/api/type/Android.Content.Intent/)
 - [IntentFilter](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)
 - [LocalBroadcastManager](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html#sendBroadcast(android.content.Intent))
 - [Notificações de locais no Android](~/android/app-fundamentals/notifications/local-notifications.md)

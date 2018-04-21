@@ -1,18 +1,18 @@
 ---
-title: Usando o ADO.NET
+title: Usando o ADO.NET com iOS
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4bf908c51deefea4e8a7e76fbf18b1aea5edee03
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7d8478c363da1e4362a8a837dafba7f9cf85872e
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="using-adonet"></a>Usando o ADO.NET
+# <a name="using-adonet-with-ios"></a>Usando o ADO.NET com iOS
 
 Xamarin tem suporte interno para o banco de dados SQLite que está disponível no iOS, expostos usando a sintaxe familiar ADO.NET. Usar essas APIs exige que você escrever instruções SQL que são processadas pelo SQLite, tais como `CREATE TABLE`, `INSERT` e `SELECT` instruções.
 
@@ -32,7 +32,7 @@ Para usar o access SQLite por meio do ADO.NET, você deve adicionar `System.Data
 
 Clique com botão direito **referências > Editar referências...**  , em seguida, clique para selecionar os assemblies necessários.
 
-## <a name="about-monodatasqlite"></a>About Mono.Data.Sqlite
+## <a name="about-monodatasqlite"></a>Sobre Mono.Data.Sqlite
 
 Usaremos o `Mono.Data.Sqlite.SqliteConnection` classe para criar um arquivo de banco de dados em branco e, em seguida, criar uma instância de `SqliteCommand` objetos que podemos usar para executar instruções SQL no banco de dados.
 

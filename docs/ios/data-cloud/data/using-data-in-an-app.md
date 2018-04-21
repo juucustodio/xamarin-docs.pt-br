@@ -1,18 +1,18 @@
 ---
-title: Usando dados de um aplicativo
+title: Usando dados de um aplicativo iOS
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 3366b78479712dffee74448dcc51e193cd07564d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eded0918c6994481cdc82fe7662a985ea243b24d
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="using-data-in-an-app"></a>Usando dados de um aplicativo
+# <a name="using-data-in-an-ios-app"></a>Usando dados de um aplicativo iOS
 
 O **DataAccess_Adv** exemplo mostra um aplicativo de trabalho que permite que a entrada do usuário e *CRUD* funcionalidade de banco de dados (criar, ler, atualizar e excluir). O aplicativo consiste em duas telas: uma lista e um formulário de entrada de dados. Todo o código de acesso de dados é reutilizável no iOS e Android sem modificação.
 
