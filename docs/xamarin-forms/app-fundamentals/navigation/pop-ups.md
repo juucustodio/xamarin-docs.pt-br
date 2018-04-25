@@ -1,4 +1,4 @@
----
+﻿---
 title: Exibindo pop-ups
 description: Xamarin. Forms fornece dois elementos de interface de usuário pop o tipo – um alerta e uma folha de ação. Este artigo demonstra como usar a planilha de alerta e a ação APIs para solicitar aos usuários perguntas simples e orientar os usuários por meio de tarefas.
 ms.prod: xamarin
