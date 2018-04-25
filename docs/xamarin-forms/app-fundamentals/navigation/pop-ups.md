@@ -1,4 +1,4 @@
----
+﻿---
 title: Exibindo pop-ups
 description: Xamarin. Forms fornece dois elementos de interface de usuário pop o tipo – um alerta e uma folha de ação. Este artigo demonstra como usar a planilha de alerta e a ação APIs para solicitar aos usuários perguntas simples e orientar os usuários por meio de tarefas.
 ms.prod: xamarin
@@ -17,7 +17,7 @@ ms.lasthandoff: 04/04/2018
 
 _Xamarin. Forms fornece dois elementos de interface de usuário pop o tipo – um alerta e uma folha de ação. Este artigo demonstra como usar a planilha de alerta e a ação APIs para solicitar aos usuários perguntas simples e orientar os usuários por meio de tarefas._
 
-Exibindo um alerta ou solicitando que um usuário faça uma escolha é uma tarefa comum de interface do usuário. Xamarin. Forms tem dois métodos [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) classe para interagir com o usuário por meio de um pop-up: [ `DisplayAlert` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) e [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/). Eles são processados com controles nativos apropriados em cada plataforma.
+Exibindo um alerta ou solicitando que um usuário faça uma escolha é uma tarefa comum de interface do usuário. Xamarin. Forms tem dois métodos [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) classe para interagir com o usuário por meio de um pop-up: [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) e [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/). Eles são processados com controles nativos apropriados em cada plataforma.
 
 ## <a name="displaying-an-alert"></a>Exibir um alerta
 
@@ -31,7 +31,7 @@ DisplayAlert ("Alert", "You have been alerted", "OK");
 
 Este exemplo não coleta informações do usuário. O alerta é exibido modalmente e depois descartada o usuário continua interagindo com o aplicativo.
 
-O [ `DisplayAlert` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) método também pode ser usado para capturar a resposta do usuário, apresentando dois botões e retornando um `boolean`. Para obter uma resposta de um alerta, forneça o texto para ambos os botões e `await` o método. Depois que o usuário seleciona uma das opções que de resposta será retornada ao seu código. Observe o `async` e `await` palavras-chave no código de exemplo abaixo:
+O [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) método também pode ser usado para capturar a resposta do usuário, apresentando dois botões e retornando um `boolean`. Para obter uma resposta de um alerta, forneça o texto para ambos os botões e `await` o método. Depois que o usuário seleciona uma das opções que de resposta será retornada ao seu código. Observe o `async` e `await` palavras-chave no código de exemplo abaixo:
 
 ```csharp
 async void OnAlertYesNoClicked (object sender, EventArgs e)
@@ -73,7 +73,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou usando a folha de alerta e ação APIs para solicitar aos usuários perguntas simples e orientar os usuários por meio de tarefas. Xamarin. Forms tem dois métodos [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) classe para interagir com o usuário por meio de um pop-up: [ `DisplayAlert` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) e [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/), e eles são ambos renderizada com controles nativos apropriados em cada plataforma.
+Este artigo demonstrou usando a folha de alerta e ação APIs para solicitar aos usuários perguntas simples e orientar os usuários por meio de tarefas. Xamarin. Forms tem dois métodos [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) classe para interagir com o usuário por meio de um pop-up: [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) e [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/), e eles são ambos renderizada com controles nativos apropriados em cada plataforma.
 
 
 
