@@ -21,7 +21,7 @@ Exibindo um alerta ou solicitando que um usuário faça uma escolha é uma taref
 
 ## <a name="displaying-an-alert"></a>Exibir um alerta
 
-Todas as plataformas com suporte de xamarin. Forms têm um pop-up modal para alertar o usuário ou fazer perguntas simples deles. Para exibir esses alertas no xamarin. Forms, use o [ `DisplayAlert` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) método em qualquer [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). A linha de código a seguir mostra uma mensagem simples para o usuário:
+Todas as plataformas com suporte de xamarin. Forms têm um pop-up modal para alertar o usuário ou fazer perguntas simples deles. Para exibir esses alertas no xamarin. Forms, use o [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/) método em qualquer [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). A linha de código a seguir mostra uma mensagem simples para o usuário:
 
 ```csharp
 DisplayAlert ("Alert", "You have been alerted", "OK");
@@ -45,9 +45,9 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 ## <a name="guiding-users-through-tasks"></a>Orientando os usuários por meio de tarefas
 
-O [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) é um elemento de interface do usuário comum em iOS. O xamarin. Forms [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) método permite que você inclua esse controle nos aplicativos entre plataformas, renderização alternativas nativo no Android e Windows Phone.
+O [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) é um elemento de interface do usuário comum em iOS. O xamarin. Forms [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) método permite que você inclua esse controle nos aplicativos entre plataformas, renderização alternativas nativo no Android e Windows Phone.
 
-Para exibir uma folha de ação, `await` [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) em qualquer [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), passando a mensagem e o botão rótulos como cadeias de caracteres. O método retorna o rótulo de cadeia de caracteres do botão que foi clicado pelo usuário. Um exemplo simples é mostrado aqui:
+Para exibir uma folha de ação, `await` [`DisplayActionSheet`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) em qualquer [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), passando a mensagem e o botão rótulos como cadeias de caracteres. O método retorna o rótulo de cadeia de caracteres do botão que foi clicado pelo usuário. Um exemplo simples é mostrado aqui:
 
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
