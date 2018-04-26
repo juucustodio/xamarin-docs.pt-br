@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c6a5233c9cdc043986f106712895439fa008b41
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-file-system"></a>Trabalhando com o sistema de arquivos
 
@@ -77,7 +77,7 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-Consulte a documentação do MSDN para o [System](http://msdn.microsoft.com/en-us/library/system.xml.aspx) namespace para obter mais informações sobre [serialização](http://msdn.microsoft.com/en-us/library/system.xml.serialization.aspx). Você também deve revisar o [xamarin documentação](~/ios/deploy-test/linker.md) no vinculador – normalmente você precisará adicionar o `[Preserve]` de atributo para classes que deseja serializar.
+Consulte a documentação do MSDN para o [System](http://msdn.microsoft.com/library/system.xml.aspx) namespace para obter mais informações sobre [serialização](http://msdn.microsoft.com/library/system.xml.serialization.aspx). Você também deve revisar o [xamarin documentação](~/ios/deploy-test/linker.md) no vinculador – normalmente você precisará adicionar o `[Preserve]` de atributo para classes que deseja serializar.
 
  <a name="Creating_Files_and_Directories" />
 
@@ -102,7 +102,7 @@ var directoryname = Path.Combine (documents, "NewDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-Para obter mais informações sobre o namespace System.IO, consulte o [documentação MSDN](http://msdn.microsoft.com/en-us/library/system.io.aspx).
+Para obter mais informações sobre o namespace System.IO, consulte o [documentação MSDN](http://msdn.microsoft.com/library/system.io.aspx).
 
 
 ### <a name="serializing-json"></a>Serialização Json

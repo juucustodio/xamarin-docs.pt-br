@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 13868864813a2f120857fb6347924197e374638c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ab449a58cc87699b97a1ade7721a08f771c4f55d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-azure"></a>Microsoft Azure
 
@@ -31,7 +31,7 @@ O novo [serviços conectados](connected-services.md) recurso do Visual Studio pa
 Há um conjunto de [documentação de aplicativos do Azure Mobile](~/cross-platform/data-cloud/mobile-apps.md) que orienta você durante o processo de implementação de [de cliente móvel do Azure](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 Xamarin também oferece pacotes do NuGet um sistema de mensagens do Azure para [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) e [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) para ajudar a implementar notificações por push entre plataformas.
 
-Configurar seus aplicativos no [portal dos serviços de aplicativo do Azure](https://portal.azure.com/) para acessar APIs da Web, aplicativos móveis, armazenamento e muito mais. Saiba mais sobre [como serviços de aplicativos são diferentes](http://azure.microsoft.com/en-us/updates/whats-new-with-azure-app-service/) e observe em [esses vídeos da Microsoft](http://azure.microsoft.com/en-us/campaigns/azure-march-announcement/).
+Configurar seus aplicativos no [portal dos serviços de aplicativo do Azure](https://portal.azure.com/) para acessar APIs da Web, aplicativos móveis, armazenamento e muito mais. Saiba mais sobre [como serviços de aplicativos são diferentes](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) e observe em [esses vídeos da Microsoft](http://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## <a name="active-directory-authentication"></a>Autenticação do Active Directory
 
@@ -58,7 +58,7 @@ Além de [exemplos de documentação](https://github.com/xamarin/mobile-samples/
 - [MyShoppe](https://github.com/jamesmontemagno/MyShoppe) -aplicativos móveis do Azure.
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) – exemplo para o [arquitetura série](https://www.microsoft.com/net/learn/architecture) de livros eletrônicos.
-- [MyDriving](https://azure.microsoft.com/en-us/campaigns/mydriving/) – Azure + IoT amostras da compilação 2016.
+- [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT amostras da compilação 2016.
 
 
 ## <a name="related-links"></a>Links relacionados

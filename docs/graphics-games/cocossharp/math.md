@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: ae1300936a24ac1381496eaaf78aefb875bd5ed6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33573d14d77f0582caca7d1e71b839563a3dd110
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="2d-math-with-cocossharp"></a>Matemática 2D com CocosSharp
 
@@ -264,7 +264,7 @@ Esse código resulta no seguinte comportamento:
 
 `System.Math.Atan2` pode ser usado para converter um deslocamento em um ângulo. O nome da função `Atan2` vêm o arco tangente de função trigonométrica. O sufixo "2", essa função diferencia do padrão `Atan` função, que corresponde a estritamente o comportamento de matemático de arco tangente. Arco tangente é uma função que retorna um valor entre -90 e + 90 graus (ou equivalente em radianos). Muitos aplicativos, incluindo jogos, geralmente exigem um total de 360 graus de valores, portanto, o `Math` classe inclui `Atan2` para atender a essa necessidade.
 
-Observe que o código acima passa o parâmetro Y primeiro, em seguida, o parâmetro X, ao chamar o `Atan2` método. Isso é com versões anteriores do X, Y ordenação de coordenadas de posição normal. Para obter mais informações [consulte a documentação de Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx).
+Observe que o código acima passa o parâmetro Y primeiro, em seguida, o parâmetro X, ao chamar o `Atan2` método. Isso é com versões anteriores do X, Y ordenação de coordenadas de posição normal. Para obter mais informações [consulte a documentação de Atan2](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx).
 
 Também vale a pena observar que o valor de retorno de `Atan2` é em radianos, que é usada para medir ângulos de outra unidade. Este guia não abrange os detalhes de radianos, mas tenha em mente que todas as funções trigonométricas o `System.Math` namespace usar radianos, portanto, todos os valores devem ser convertidos em graus antes de serem usados em objetos CocosSharp. Para obter mais informações em radianos podem ser encontradas [na página do Wikipedia radianos](http://en.wikipedia.org/wiki/Radian).
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b7604633a5dfad6134d7b549299194ab6707a865
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da827c5bdd25bf841f5396b10d1eeb70e132dfeb
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="api-design"></a>Projeto de API
 
@@ -693,7 +693,7 @@ Xamarin tem um coletor de lixo cuidará de liberação de recursos para você qu
 
 Expondo o `IDisposable` interface é uma maneira conveniente de ajudar os desenvolvedores na liberação de objetos que podem encapsular grandes blocos de memória (por exemplo, um `UIImage` pode parecer com apenas um ponteiro inocente, mas pode estar apontando para uma imagem de 2 megabytes ) e outros recursos importantes e finitos (como um buffer de decodificação de vídeo).
 
-NSObject implementa a interface IDisposable e também o [padrão Dispose .NET](http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx). Isso permite que os desenvolvedores que subclasse NSObject para substituir o comportamento de Dispose e liberar seus próprios recursos sob demanda. Por exemplo, considere esse controlador de exibição que mantém em torno de um grupo de imagens:
+NSObject implementa a interface IDisposable e também o [padrão Dispose .NET](http://msdn.microsoft.com/library/fs2xkftw.aspx). Isso permite que os desenvolvedores que subclasse NSObject para substituir o comportamento de Dispose e liberar seus próprios recursos sob demanda. Por exemplo, considere esse controlador de exibição que mantém em torno de um grupo de imagens:
 
 ```csharp
 class MenuViewController : UIViewController {

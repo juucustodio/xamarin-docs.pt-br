@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ad18382a7143c7b1cc6bbecb3867c042512eb562
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6de16095d9e1267587a050e8081f87f896f3153e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-web-services"></a>Introdução aos serviços Web
 
@@ -22,7 +22,7 @@ Para funcionar corretamente, muitos aplicativos móveis são dependentes na nuve
 Este artigo aborda os seguintes tópicos:
 
 - [Serviços REST](#rest)
-- [ASP.Net Web Services (ASMX)](#asmx)
+- [Serviços Web do ASP.Net (ASMX)](#asmx)
 - [Serviços WCF](#wcf)
 
 Para clientes que usam o xamarin. Forms, há exemplos completos usando cada uma dessas tecnologias no [xamarin. Forms Web Services](~/xamarin-forms/data-cloud/index.md) documentação.
@@ -337,7 +337,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 O biblioteca paralela de tarefas (TPL) pode simplificar o processo de consumir um par de métodos begin/end APM encapsulando as operações assíncronas no mesmo `Task` objeto. Esse encapsulamento é fornecido por várias sobrecargas do `Task.Factory.FromAsync` método. Esse método cria um `Task` que executa o `TodoService.EndGetTodoItems` método uma vez o `TodoService.BeginGetTodoItems` método é concluído, com o `null` parâmetro indicando que nenhum dado está sendo passado para o `BeginGetTodoItems` delegar. Por fim, o valor da `TaskCreationOptions` enumeração Especifica que o comportamento padrão para a criação e execução de tarefas deve ser usado.
 
-Para obter mais informações sobre o APM, consulte [modelo de programação assíncrona](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx) e [TPL e estrutura de programação assíncrona tradicional .NET](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx) no MSDN.
+Para obter mais informações sobre o APM, consulte [modelo de programação assíncrona](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) e [TPL e estrutura de programação assíncrona tradicional .NET](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) no MSDN.
 
 Para obter mais informações sobre como consumir um serviço ASMX, consulte [consumir um serviço Web do ASP.NET (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md).
 
@@ -364,7 +364,7 @@ Para obter mais informações sobre como usar a plataforma Xamarin para consumir
 
 Um *proxy* devem ser geradas para consumir um serviço WCF, que permite que o aplicativo se conecte ao serviço. O proxy é construído por consumo metadados de serviço que define os métodos e a configuração de serviço associado. Esses metadados são expostos na forma de um documento WSDL Web Services Description Language () que é gerada pelo serviço da web. O proxy pode ser criado usando o provedor de referência de serviço Web do Microsoft WCF no Visual Studio de 2017 para adicionar uma referência de serviço para o serviço web a uma biblioteca do .NET padrão.
 
-Uma alternativa para criar o proxy usando o provedor de referência de serviço Web do Microsoft WCF no Visual Studio de 2017 é usar a ferramenta de utilitário de metadados do ServiceModel (svcutil.exe). Para obter mais informações, consulte [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
+Uma alternativa para criar o proxy usando o provedor de referência de serviço Web do Microsoft WCF no Visual Studio de 2017 é usar a ferramenta de utilitário de metadados do ServiceModel (svcutil.exe). Para obter mais informações, consulte [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
@@ -416,7 +416,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 O biblioteca paralela de tarefas (TPL) pode simplificar o processo de consumir um par de métodos begin/end APM encapsulando as operações assíncronas no mesmo `Task` objeto. Esse encapsulamento é fornecido por várias sobrecargas do `Task.Factory.FromAsync` método. Esse método cria um `Task` que executa o `TodoServiceClient.EndGetTodoItems` método uma vez o `TodoServiceClient.BeginGetTodoItems` método é concluído, com o `null` parâmetro indicando que nenhum dado está sendo passado para o `BeginGetTodoItems` delegar. Por fim, o valor da `TaskCreationOptions` enumeração Especifica que o comportamento padrão para a criação e execução de tarefas deve ser usado.
 
-Para obter mais informações sobre o APM, consulte [modelo de programação assíncrona](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx) e [TPL e estrutura de programação assíncrona tradicional .NET](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx) no MSDN.
+Para obter mais informações sobre o APM, consulte [modelo de programação assíncrona](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) e [TPL e estrutura de programação assíncrona tradicional .NET](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) no MSDN.
 
 Para obter mais informações sobre como consumir um serviço WCF, consulte [consumir um serviço de Web do Windows Communication Foundation (WCF)](~/xamarin-forms/data-cloud/consuming/wcf.md).
 
@@ -462,5 +462,5 @@ Este guia demonstrou como utilizar tecnologias de serviço web diferente. Os tó
 
 - [Exemplo de WebServices](https://developer.xamarin.com/samples/mobile/WebServices/WebServiceSamples/)
 - [Serviços Web no xamarin. Forms](~/xamarin-forms/data-cloud/index.md)
-- [Ferramenta de utilitário de metadados ServiceModel (svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
-- [BasicHttpBinding](http://msdn.microsoft.com/en-us/library/system.servicemodel.basichttpbinding.aspx)
+- [Ferramenta de utilitário de metadados ServiceModel (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [BasicHttpBinding](http://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

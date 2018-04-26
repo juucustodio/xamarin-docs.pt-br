@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 690edabd53752ff0347fdb232a4bbfcb1ba6e84d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="case-study-tasky"></a>Estudo de caso: Tasky
 
@@ -166,7 +166,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
 #### <a name="locking-to-prevent-concurrent-access"></a>O bloqueio para impedir o acesso simultâneo
 
-Um [bloqueio](http://msdn.microsoft.com/en-us/library/c5kehkcz(v=vs.100).aspx) é implementado no `TaskItemDatabase` classe para evitar o acesso simultâneo ao banco de dados. Isso é para garantir o acesso simultâneo de diversos threads é serializado (caso contrário, um componente de interface do usuário pode tentar ler o banco de dados ao mesmo tempo em que um thread em segundo plano é atualizá-lo). Um exemplo de como o bloqueio é implementado é mostrado aqui:
+Um [bloqueio](http://msdn.microsoft.com/library/c5kehkcz(v=vs.100).aspx) é implementado no `TaskItemDatabase` classe para evitar o acesso simultâneo ao banco de dados. Isso é para garantir o acesso simultâneo de diversos threads é serializado (caso contrário, um componente de interface do usuário pode tentar ler o banco de dados ao mesmo tempo em que um thread em segundo plano é atualizá-lo). Um exemplo de como o bloqueio é implementado é mostrado aqui:
 
 ```csharp
 static object locker = new object ();
@@ -233,7 +233,7 @@ Tasky o modelo é o `TaskItem` classe e `TaskItemManager` implementa o padrão d
 
  <a name="Façade" />
 
-#### <a name="faade"></a>Façade
+#### <a name="faade"></a>Fachada
 
  `TaskItemManager` encapsula o `DAL.TaskItemRepository` para fornecer Get, salvar e excluir os métodos que serão referenciados pelo aplicativo e camadas de interface do usuário.
 

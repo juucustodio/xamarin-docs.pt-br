@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: f94959062f01a363319494eb510f1a6e42fe36b6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 52f4c51258d1b635adcd697bccb7dd553acc0d5e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="localization"></a>Localização
 
@@ -110,7 +110,7 @@ Se os dados forem sendo de entrada do usuário do aplicativo, analisá-lo usando
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Consulte o [Analisando cadeias de caracteres numéricas](http://msdn.microsoft.com/en-us/library/xbtzcc4w(v=vs.110).aspx) e [análise Date and Time Strings](http://msdn.microsoft.com/en-us/library/2h3syy57(v=vs.110).aspx) artigos do MSDN para obter informações adicionais.
+Consulte o [Analisando cadeias de caracteres numéricas](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) e [análise Date and Time Strings](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) artigos do MSDN para obter informações adicionais.
 
 <a name="rtl" />
 
@@ -130,7 +130,7 @@ IOS e Android suportam a layouts da direita para esquerda e renderização de fo
 
 Idiomas diferentes definem a ordem de classificação de seus alfabetos diferente, mesmo quando eles usam o mesmo conjunto de caracteres.
 
-Consulte o [detalhes de comparação de cadeia de caracteres](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) na [práticas recomendadas para usar cadeias de caracteres no .NET Framework](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx) para obter um exemplo onde o idioma (CultureInfo) afeta a ordem de classificação.
+Consulte o [detalhes de comparação de cadeia de caracteres](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) na [práticas recomendadas para usar cadeias de caracteres no .NET Framework](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) para obter um exemplo onde o idioma (CultureInfo) afeta a ordem de classificação.
 
 É improvável que os recursos de banco de dados internos nas plataformas móveis dará suporte a ordenação para que pode ser necessário para implementar o código adicional em sua lógica de negócios de classificação de idioma específico.
 
@@ -187,7 +187,7 @@ As dicas a seguir o ajudará a produzir cadeias de caracteres que são mais fác
 
 Às vezes, os desenvolvedores de usam a abordagem de tentar especificar palavras únicas ou sentença 'trechos de código' para que eles podem usá-los novamente em todo o aplicativo. Por exemplo, para o texto "você tem 5 mensagens." eles podem especificar seguintes cadeias de caracteres de conversão
 
-**Bad**:
+**Incorreta**:
 
 ```csharp
 "You have"
@@ -198,7 +198,7 @@ As dicas a seguir o ajudará a produzir cadeias de caracteres que são mais fác
 
 e, em seguida, tentar criar frase correta dinamicamente no código usando a concatenação de cadeia de caracteres:
 
-**Bad**:
+**Incorreta**:
 
 ```csharp
 "You have" + " " + numMsgs + " " + "messages"
@@ -312,4 +312,4 @@ Continue a ler os detalhes técnicos para a plataforma que você está interessa
 
 - [Visão geral de localização da Apple](https://developer.apple.com/internationalization/)
 - [Lista de verificação de localização do Android](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [Práticas recomendadas para o desenvolvimento de aplicativos prontos para o mundo (MSDN)](http://msdn.microsoft.com/en-us/library/w7x1y988%28v=vs.90%29.aspx)
+- [Práticas recomendadas para o desenvolvimento de aplicativos prontos para o mundo (MSDN)](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
