@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 0187b65e4c10e7cc03715a997a90fbddab9bd532
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xamarinios-errors"></a>Erros de xamarin
 
@@ -163,12 +163,12 @@ Mtouch não reconhece o argumento de linha de comando mencionado na mensagem de 
 
 Há várias opções para mtouch que não podem ser usados simultaneamente:
 
--  --logdev
+-  – logdev
 -  – installdev
 -  – killdev
--  --launchdev
--  --launchdebug
--  --launchsim
+-  – launchdev
+-  – launchdebug
+-  – launchsim
 
 <a name="MT0020" />
 
@@ -631,7 +631,7 @@ porque `my/path.o` não é um nome de arquivo válido devido ao caractere separa
 
 <a name="MT0109" />
 
-### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109: O assembly '{0}' foi carregado de um caminho diferente do caminho fornecido (fornecidos o caminho: \\{1 \\}, o caminho real: 2}).
+### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109: O assembly '{0}' foi carregado de um caminho diferente do caminho fornecido (fornecidos o caminho: {1}, caminho real: {2}).
 
 Este é um aviso indicando que um assembly referenciado pelo aplicativo foi carregado de um local diferente do solicitado.
 
@@ -840,7 +840,7 @@ Esse aviso provavelmente pode ser ignorado; no caso de problemas de registrar um
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Mensagens de erro relacionados ao projeto
 
-### <a name="mt10xx-installer--mtouch"></a>MT10xx: Installer / mtouch
+### <a name="mt10xx-installer--mtouch"></a>MT10xx: Instalador / mtouch
 
 <!--
  MT1xxx file copy / symlinks (project related)
@@ -968,13 +968,13 @@ Na maioria dos casos que serão mostradas para obter mais informações sobre a 
 
 <a name="MT1021" />
 
-### <a name="mt1021-could-not-copy-the-file--to--2"></a>MT1021: Não foi possível copiar o arquivo '\*'para'\*': 2}
+### <a name="mt1021-could-not-copy-the-file--to--2"></a>MT1021: Não foi possível copiar o arquivo '\*'para'\*': {2}
 
 Não foi possível copiar um arquivo. A mensagem de erro da operação de cópia tem mais informações sobre o erro.
 
 <a name="MT1022" />
 
-### <a name="mt1022-could-not-copy-the-directory--to--2"></a>MT1022: Não foi possível copiar o diretório '\*'para'\*': 2}
+### <a name="mt1022-could-not-copy-the-directory--to--2"></a>MT1022: Não foi possível copiar o diretório '\*'para'\*': {2}
 
 Não foi possível copiar um diretório. A mensagem de erro da operação de cópia tem mais informações sobre o erro.
 
@@ -1653,11 +1653,11 @@ O assembly que está causando o problema é denominado na mensagem de erro. Para
 
 <a name="MT2104" />
 
-### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104: Não é possível vincular o assembly '{0}' porque é o modo misto.
+### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104: Não é possível vincular o assembly '{0}' como o modo misto.
 
 Assemblies de modo misto não podem ser processados pelo vinculador.
 
-Consulte https://msdn.microsoft.com/en-us/library/x0w2664k.aspx para obter mais informações sobre assemblies de modo misto.
+Consulte https://msdn.microsoft.com/library/x0w2664k.aspx para obter mais informações sobre assemblies de modo misto.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: Mensagens de erro AOT
 
@@ -1721,7 +1721,7 @@ Desabilite o suporte de Bitcode ou habilitar LLVM.
 
 ## <a name="mt4xxx-code-generation-error-messages"></a>MT4xxx: Mensagens de erro de geração de código
 
-### <a name="mt40xx-main"></a>MT40xx: Main
+### <a name="mt40xx-main"></a>MT40xx: principal
 
 <!--
  MT4xxx code generation
@@ -1740,7 +1740,7 @@ Ocorreu um erro ao gerar main.m. Registre um bug no [ http://bugzilla.xamarin.co
 
 Falha ao compilar o código gerado para os métodos P/Invoke. Envie um relatório de erros em [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 
-### <a name="mt41xx-registrar"></a>MT41xx: Registrar
+### <a name="mt41xx-registrar"></a>MT41xx: registrador
 
 <!--
   MT41xx registrar.m
@@ -2060,7 +2060,7 @@ Verifique se o `Register` atributo da classe gerenciada mencionado na mensagem d
 
 <a name="MT4161" />
 
-### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: O registrador encontrada uma estrutura sem suporte '\*': todos os campos em uma estrutura também devem ser estruturas (campo '\*' com tipo '2}' não é uma estrutura).
+### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: O registrador encontrada uma estrutura sem suporte '\*': todos os campos em uma estrutura também devem ser estruturas (campo '\*'com tipo'{2}' não é uma estrutura).
 
 O registrador de encontrar uma estrutura com campos sem suporte.
 
@@ -2068,7 +2068,7 @@ Todos os campos em uma estrutura que é exposto para Objective-C também devem s
 
 <a name="MT4162" />
 
-### <a name="mt4162-the-type--used-as--2-is-not-available-in---it-was-introduced-in---please-build-with-a-newer--sdk-usually-done-by-using-the-most-recent-version-of-xcode"></a>MT4162: O tipo '\*' (usada como * 2}) não está disponível no * * (foi introduzido em * *)\* Compile com uma versão mais recente * SDK (geralmente feita usando a versão mais recente do Xcode.
+### <a name="mt4162-the-type--used-as--2-is-not-available-in---it-was-introduced-in---please-build-with-a-newer--sdk-usually-done-by-using-the-most-recent-version-of-xcode"></a>MT4162: O tipo '\*' (usada como * {2}) não está disponível no * * (foi introduzido em * *)\* Compile com uma versão mais recente * SDK (geralmente feita usando a versão mais recente do Xcode.
 
 O registrador encontrado um tipo que não está incluído no SDK do atual.
 
@@ -2945,7 +2945,7 @@ Isso geralmente indica um bug no xamarin; Registre um bug no [ http://bugzilla.x
 
 <a name="MT8013" />
 
-### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: O DelegateProxyAttribute inválido para o valor de retorno para o método *.*: DelegateType (2}) especifica um tipo sem um campo 'Handler'. Registre um bug no http://bugzilla.xamarin.com.
+### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: O DelegateProxyAttribute inválido para o valor de retorno para o método *.*: DelegateType ({2}) especifica um tipo sem um campo 'Handler'. Registre um bug no http://bugzilla.xamarin.com.
 
 O atributo DelegateProxy para o método em questão é inválido.
 
@@ -2953,7 +2953,7 @@ Isso geralmente indica um bug no xamarin; Registre um bug no [ http://bugzilla.x
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: O DelegateProxyAttribute inválido para o valor de retorno para o método *.*: O DelegateType (2}) campo 'Handler' é nulo. Registre um bug no http://bugzilla.xamarin.com.
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: O DelegateProxyAttribute inválido para o valor de retorno para o método *.*: do DelegateType a ({2}) campo 'Handler' é nulo. Registre um bug no http://bugzilla.xamarin.com.
 
 O atributo DelegateProxy para o método em questão é inválido.
 
@@ -2961,7 +2961,7 @@ Isso geralmente indica um bug no xamarin; Registre um bug no [ http://bugzilla.x
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: O DelegateProxyAttribute inválido para o valor de retorno para o método *.*: O DelegateType (2}) campo 'Handler' não é um delegado, que é um *. Registre um bug no http://bugzilla.xamarin.com.
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: O DelegateProxyAttribute inválido para o valor de retorno para o método *.*: do DelegateType a ({2}) o campo 'Handler' não é um delegado, que é um *. Registre um bug no http://bugzilla.xamarin.com.
 
 O atributo DelegateProxy para o método em questão é inválido.
 

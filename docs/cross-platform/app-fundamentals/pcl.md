@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: feef0a4083d2455cc189ddab6ed22762c044d848
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 799ee198f776b963bb8779d71bacc322001e2882
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introdução às bibliotecas de classes portátil
 
@@ -55,7 +55,7 @@ Isso inclui os perfis são combinações de:
 -  Windows Phone 8
 -  Aplicativos UWP
 
-Você pode ler mais sobre os recursos dos perfis diferentes em [site da Microsoft](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx) e veja outro membro da comunidade [resumo do perfil PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) que inclui suporte para informações de estrutura e outras observações.
+Você pode ler mais sobre os recursos dos perfis diferentes em [site da Microsoft](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) e veja outro membro da comunidade [resumo do perfil PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) que inclui suporte para informações de estrutura e outras observações.
 
 
 
@@ -429,4 +429,4 @@ Este artigo tem brevemente discutidos os benefícios e armadilhas de bibliotecas
 - [Portátil Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [Projetos compartilhados](~/cross-platform/app-fundamentals/shared-projects.md)
 - [Opções de compartilhamento de código](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Desenvolvimento de plataforma cruzada com o .NET Framework (Microsoft)](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+- [Desenvolvimento de plataforma cruzada com o .NET Framework (Microsoft)](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

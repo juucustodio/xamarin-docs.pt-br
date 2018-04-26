@@ -5,11 +5,11 @@ ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6d178231cd45d3b251a26c47abd47bf22b6c2716
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="threading"></a>Threading
 
@@ -17,7 +17,7 @@ O tempo de execução do xamarin oferece aos desenvolvedores acesso para o .NET 
 
 
 
-Xamarin recomenda que você use o [biblioteca paralela de tarefas](http://msdn.microsoft.com/en-us/library/dd460717.aspx) (TPL) para a criação de aplicativos por alguns motivos:
+Xamarin recomenda que você use o [biblioteca paralela de tarefas](http://msdn.microsoft.com/library/dd460717.aspx) (TPL) para a criação de aplicativos por alguns motivos:
 -  O Agendador TPL padrão delegará a execução da tarefa ao pool de threads, que por sua vez dinamicamente aumentar o número de threads necessário, pois o processo é executado, evitando um cenário onde muitos threads acabarem competindo por tempo de CPU. 
 -  É mais fácil pensar sobre as operações em termos de TPL tarefas. Pode facilmente manipulá-los, agendá-los, serializar sua execução ou iniciar muitas em paralelo com um conjunto sofisticado de APIs. 
 -  É a base para a programação com as novo c# async extensões de linguagem. 

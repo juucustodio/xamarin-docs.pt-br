@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 036dbc6a33126d4ade1a68e853ca6ddb4b7c83cc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0df51429ea9655b0a72d9f4c1e413fa7e37410ac
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="app-search-enhancements"></a>Aprimoramentos da pesquisa do aplicativo
 
@@ -107,7 +107,7 @@ Para habilitar esse recurso, faça o seguinte:
 1. Crie uma extensão de aplicativo de mensagem.
 2. Adicionar o `com.apple.developer.associated-domains` autorizações do aplicativo e incluir uma lista de domínios da web que hospedam as imagens que está compartilhando a mensagem da extensão do aplicativo. Para cada domínio, especifique o `spotlight-image-search` service.
 3. Adicionar um `apple-app-site-association` arquivo para o site que está hospedando as imagens. Esse arquivo contém um dicionário para a `spotlight-image-search` de serviço e inclui a ID do aplicativo, que é o prefixo de ID de equipe ou aplicativo seguido por identificação do pacote. O arquivo pode conter até 500 caminhos e padrões que serão indexados por destaque e incluídos nas pesquisas de imagem populares. Para obter mais informações, consulte da Apple [criar e carregar o arquivo de associação](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW4) documentação.
-4. Permitir Applebot rastrear os sites da Web. Consulte da Apple [sobre Applebot](https://support.apple.com/en-us/HT204683) documentação.
+4. Permitir Applebot rastrear os sites da Web. Consulte da Apple [sobre Applebot](https://support.apple.com/HT204683) documentação.
 
 Consulte nossa [integração do aplicativo de mensagens](~/ios/platform/message-app-integration/index.md) documentação para obter mais detalhes.
 
