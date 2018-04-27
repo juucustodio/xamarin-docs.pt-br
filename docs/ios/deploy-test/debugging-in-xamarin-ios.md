@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8848dd20683163cd42215fe496dd7ff6a9e9f0c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e2e32170de258f46eb5a926db35bce33c0ca64de
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging"></a>Depuração
 
@@ -164,7 +164,7 @@ Elas são:
 - **Intervir (F10)** – isso também executará a próxima linha de código. Se a próxima linha é uma chamada de função, Intervir parará na primeira linha da função, permitindo que você continue a depuração da função linha a linha. Se a próxima linha não for uma função, ela se comportará como Passar.
 - **Sair (Shift + F11)** – isso retornará para a linha na qual a função atual foi chamada.
 
-Para obter uma documentação mais detalhada sobre Depuração, confira [Navegar pelo Código com o Depurador do Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Para obter uma documentação mais detalhada sobre Depuração, confira [Navegar pelo Código com o Depurador do Visual Studio](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 -----
 

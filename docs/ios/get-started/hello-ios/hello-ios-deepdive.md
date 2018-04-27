@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5ca2918a0348254407fcbfff030def6c36af4988
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71bfccdcab73b651f458dd8d9c5396bffd55004b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Aprofundamento no Hello, iOS
 
@@ -85,7 +85,7 @@ O Visual Studio organiza o código em _Soluções_ e *Projetos*. Uma solução �
 
 No passo a passo [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md), você criou uma solução chamada **Phoneword** e colocou um projeto iOS – **Phoneword_iOS** – dentro dela. Os itens dentro do projeto incluem:
 
--  **Referências** – contém os assemblies necessários para compilar e executar o aplicativo. Expanda o diretório para ver a assemblies do .NET como [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx), System.Core e [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx), bem como uma referência ao assembly do Xamarin.iOS do Xamarin.
+-  **Referências** – contém os assemblies necessários para compilar e executar o aplicativo. Expanda o diretório para ver a assemblies do .NET como [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx), System.Core e [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx), bem como uma referência ao assembly do Xamarin.iOS do Xamarin.
 -  **Pacotes** – o diretório Pacotes contém pacotes do NuGet prontos.
 -  **Recursos** – A pasta Recursos armazena outras mídias.
 -  **Main.cs** – isso contém o ponto de entrada principal do aplicativo. Para iniciar o aplicativo, o nome da classe principal do aplicativo, a `AppDelegate`, é passado.
