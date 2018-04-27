@@ -7,10 +7,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
 ms.openlocfilehash: 55bd4bdcfde4c91ad5c9b94bef486207466e135d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-a-windows-phone-app"></a>Adicionar um aplicativo do Windows Phone
 
@@ -36,7 +36,7 @@ Xamarin.Forms.Forms.Init (e); // requires LaunchActivatedEventArgs
 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated) {}
 ```
 
- 5 . Editar **MainPage. XAML** -altere o elemento raiz `<Page` para `<forms:WindowsPhonePage` *e* definir o `xmlns:forms` que ele usa:
+ 5. Editar **MainPage. XAML** -altere o elemento raiz `<Page` para `<forms:WindowsPhonePage` *e* definir o `xmlns:forms` que ele usa:
 
 ```xaml
 <forms:WindowsPhonePage
@@ -46,13 +46,13 @@ if (e.PreviousExecutionState == ApplicationExecutionState.Terminated) {}
 </forms:WindowsPhonePage>
 ```
 
- 6 . Editar **MainPage.xaml.cs** para remover o `: PhonePage` especificador de herança para o nome da classe.
+ 6. Editar **MainPage.xaml.cs** para remover o `: PhonePage` especificador de herança para o nome da classe.
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": PhonePage"
 ```
 
- 7 . Ainda no **MainPage.xaml.cs**, adicionar o `LoadApplication` chamar o `MainPage` construtor (em torno da linha 28) para iniciar o aplicativo xamarin. Forms:
+ 7. Ainda no **MainPage.xaml.cs**, adicionar o `LoadApplication` chamar o `MainPage` construtor (em torno da linha 28) para iniciar o aplicativo xamarin. Forms:
 
 ```csharp
 // below this existing line
@@ -61,9 +61,9 @@ this.InitializeComponent();
 LoadApplication(new YOUR_NAMESPACE.App());
 ```
 
-8 . Clique duas vezes em **Package. appxmanifest** para definir esses recursos que costumam ser necessários:
+8. Clique duas vezes em **Package. appxmanifest** para definir esses recursos que costumam ser necessários:
 
   * Internet (Cliente e Servidor) &
 
-9 . Finalmente, adicione qualquer recurso local (por exemplo. arquivos de imagem) dos projetos existentes de plataforma que são necessários.
+9. Finalmente, adicione qualquer recurso local (por exemplo. arquivos de imagem) dos projetos existentes de plataforma que são necessários.
 
