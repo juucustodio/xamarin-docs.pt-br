@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 67e392bb3672e54a1e2fe709af9cf5deb3dae5e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c9cf700ea798ac316e806c40cb90eedc7ded9fa5
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-text-to-speech"></a>Implementação de texto em fala
 
@@ -20,7 +20,7 @@ Este artigo vai guiá-lo ao criar um aplicativo de plataforma cruzada usa [ `Dep
 - **[Criar a Interface](#Creating_the_Interface)**  &ndash; entender como a interface é criada no código compartilhado.
 - **[iOS implementação](#iOS_Implementation)**  &ndash; saber como implementar a interface em código nativo para iOS.
 - **[Implementação do Android](#Android_Implementation)**  &ndash; saber como implementar a interface em código nativo para o Android.
-- **[Implementação do Windows](#WindowsImplementation)**  &ndash; saber como implementar a interface em código nativo para Windows Phone e o Windows UWP (plataforma Universal).
+- **[Implementação de UWP](#WindowsImplementation)**  &ndash; saber como implementar a interface em código nativo para o Windows UWP (plataforma Universal).
 - **[Implementando em código compartilhado](#Implementing_in_Shared_Code)**  &ndash; aprender a usar `DependencyService` para chamar a implementação nativa de código compartilhado.
 
 O aplicativo usando `DependencyService` terá a seguinte estrutura:
@@ -122,9 +122,9 @@ O `[assembly]` atributo registra a classe como uma implementação do `ITextToSp
 
 <a name="WindowsImplementation" />
 
-## <a name="windows-phone-and-universal-windows-platform-implementation"></a>Windows Phone e a implementação da plataforma Universal do Windows
+## <a name="universal-windows-platform-implementation"></a>Implementação da plataforma universal do Windows
 
-Windows Phone e a plataforma Universal do Windows tem uma API de fala no `Windows.Media.SpeechSynthesis` namespace. A única limitação é que se lembrar de escala de **microfone** recurso no manifesto, caso contrário, acesso a fala APIs estão bloqueados.
+A plataforma Universal do Windows tem uma API de fala no `Windows.Media.SpeechSynthesis` namespace. A única limitação é que se lembrar de escala de **microfone** recurso no manifesto, caso contrário, acesso a fala APIs estão bloqueados.
 
 ```csharp
 [assembly:Dependency(typeof(TextToSpeechImplementation))]
@@ -165,7 +165,7 @@ public MainPage ()
 }
 ```
 
-Executar este aplicativo no iOS, Android, ou as plataformas do Windows e pressionando que o botão resultará no aplicativo falar com você, usando a SDK de fala nativo em cada plataforma.
+Executar este aplicativo no iOS, Android ou o UWP e pressionando o botão resultará no aplicativo falar com você, usando a SDK de fala nativo em cada plataforma.
 
  ![iOS e Android botão de texto em fala](text-to-speech-images/running.png "exemplo de texto em fala")
 

@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: d75c5714e53961ff5704c72b5508514f8cd2e898
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bcd277145de13a95a0b19aa4945b02078af52978
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout para aplicativos de Desktop e Tablet
 
@@ -18,7 +18,7 @@ Xamarin. Forms oferece suporte a todos os tipos de dispositivo disponíveis em p
 
 * iPads,
 * Tablets Android,
-* Tablets Windows e computadores desktop (executando o Windows 8.1 ou Windows 10).
+* Tablets Windows e computadores desktop (executando o Windows 10).
 
 Esta página descreve brevemente:
 
@@ -53,12 +53,7 @@ Examine o [recursos Android](~/android/app-fundamentals/resources-in-android/ind
 
 ### <a name="windows-tablets-and-desktops"></a>Áreas de trabalho e Tablets Windows
 
-Para dar suporte a tablets e computadores desktop que executam o Windows, você precisará usar um dos dois tipos de projeto com suporte:
-
-* [Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md) -
-  cria aplicativos especificamente para Windows 8.1 tablets e desktops.
-* [Suporte do Windows UWP](~/xamarin-forms/platform/windows/installation/universal.md) -
-  cria aplicativos universais que são executados no Windows 10 telefones, tablets e áreas de trabalho.
+Para dar suporte a tablets e computadores desktop que executam o Windows, você precisará usar [suporte do Windows UWP](~/xamarin-forms/platform/windows/installation/index.md), que cria aplicativos universais que são executados no Windows 10.
 
 Aplicativos executados em computadores e tablets Windows podem ser redimensionados para dimensões arbitrários além para tela cheia está em execução.
 
@@ -87,7 +82,7 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 Essa abordagem pode ser expandida para fazer alterações significativas em layouts de página individuais ou até mesmo para renderizar páginas completamente diferentes em telas maiores.
 
-### <a name="leveraging-masterdetailpage"></a>Leveraging MasterDetailPage
+### <a name="leveraging-masterdetailpage"></a>Aproveitando MasterDetailPage
 
 O [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) é ideal para telas maiores, especialmente no iPad em que ele usa o [ `UISplitViewController` ](https://developer.xamarin.com/api/type/UIKit.UISplitViewController/) para fornecer uma experiência de iOS nativo.
 

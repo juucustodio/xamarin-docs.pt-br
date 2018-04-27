@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc5b24474230fd2b2477f020ac24cd72996d7b1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
@@ -47,7 +47,7 @@ O layout de um [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamar
 
 - No iOS, uma barra de navegação está presente na parte superior da página que exibe um título, e que possui um *novamente* botão retorna à página anterior.
 - No Android, uma barra de navegação está presente na parte superior da página que exibe um título, um ícone e um *novamente* botão retorna à página anterior. O ícone é definido no `[Activity]` atributo decora o `MainActivity` classe no projeto específico da plataforma Android.
-- No Windows Phone, uma barra de navegação está presente na parte superior da página que exibe um título. Windows Phone não tem o *novamente* botão na barra de navegação porque na tela *novamente* botão estiver presente na parte inferior da tela.
+- Na plataforma Universal do Windows, uma barra de navegação está presente na parte superior da página que exibe um título. 
 
 Em todas as plataformas, o valor de [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) propriedade será exibida como o título da página.
 
@@ -320,7 +320,7 @@ Este artigo demonstrou como usar o [ `NavigationPage` ](https://developer.xamari
 
 - [Navegação de página](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
 - [Hierarchical (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
-- [PassingData (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
+- [PassingData (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
 - [LoginFlow (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
 - [Como criar uma entrada no fluxo de tela no exemplo xamarin. Forms (vídeo do Xamarin University)](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
 - [Como criar uma entrada no fluxo de tela xamarin. Forms (vídeo do Xamarin University)](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)

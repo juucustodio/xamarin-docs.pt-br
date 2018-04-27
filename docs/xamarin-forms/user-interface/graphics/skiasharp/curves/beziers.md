@@ -7,11 +7,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: c5142a3abcc6d461bc277faeb02e3aacd9727bca
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 7b7bd83c474c7e0d32a693e06b5f12696ec5efa2
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de Bézier
 
@@ -92,7 +92,7 @@ Aqui, ele é executado em todas as três plataformas:
 
 Matematicamente, a curva é um polinômio cúbico. A curva cruza uma linha reta em três pontos no máximo. No ponto de início, a curva é sempre uma linha reta desde o início de tangente para e, na mesma direção, aponte para o primeiro ponto de controle. No ponto de extremidade, a curva é sempre uma linha reta do segundo controle de tangente para e, na mesma direção, aponte para o ponto de extremidade.
 
-A curva de Bézier cúbica sempre é delimitada por um quadrilátero convexo conectando os quatro pontos. Isso é chamado de um *forma convexa*. Se os pontos de controle residem na linha reta entre o início e o ponto de extremidade, a curva de Bézier processa como uma linha reta. Mas a curva também pode cruzar com, como mostra a captura de tela do dispositivo móvel do Windows.
+A curva de Bézier cúbica sempre é delimitada por um quadrilátero convexo conectando os quatro pontos. Isso é chamado de um *forma convexa*. Se os pontos de controle residem na linha reta entre o início e o ponto de extremidade, a curva de Bézier processa como uma linha reta. Mas a curva também pode cruzar com, como mostra a captura de tela de terceira.
 
 Um contorno de caminho pode conter várias curvas de Bézier cúbicas conectadas, mas a conexão entre duas curvas de Bézier cúbicas será suave somente se os seguintes três pontos são colinear (ou seja, permanecer em uma linha reta):
 
@@ -104,7 +104,7 @@ No próximo artigo em [ **SVG caminho dados** ](~/xamarin-forms/user-interface/g
 
 Às vezes, é útil saber subjacentes equações paramétricas que renderizam uma curva cúbica de Bézier. Para *t* variando de 0 a 1, equações paramétricas são da seguinte maneira:
 
-x(t) = (1 – t)³x₀ + 3t(1 – t)²x₁ + 3t²(1 – t)x₂ + t³x₃
+x(t) = (1 – t) ³x₀ + 3t (1 – t) ²x₁ + 3t² (1 – t) x₂ + t³x₃
 
 y(t) = (1 – t) ³y₀ + 3t (1 – t) ²y₁ + 3t² (1 – t) y₂ + t³y₃
 
@@ -208,7 +208,7 @@ Aqui está o programa em execução em plataformas de três com três ângulos d
 
 [![](beziers-images/beziercirculararc-small.png "Captura de tela da página de Bézier em arco Circular tripla")](beziers-images/beziercirculararc-large.png#lightbox "tripla captura de tela da página de Bézier em arco Circular")
 
-Examinar atentamente a tela do Windows Mobile e você verá que a curva de Bézier em especial do desvio de um semicírculo quando o ângulo é 180 graus, mas a tela de iOS mostra que parece se ajustar um trimestre-círculo bem quando o ângulo é 90 graus.
+Examinar atentamente a captura de tela de terceira, e você verá que a curva de Bézier em especial do desvio de um semicírculo quando o ângulo é 180 graus, mas a tela de iOS mostra que parece se ajustar um trimestre-círculo bem quando o ângulo é 90 graus.
 
 Calcular as coordenadas dos pontos de controle é muito fácil quando o círculo trimestre é orientado por assim:
 
@@ -345,7 +345,7 @@ Aqui está o símbolo de infinito em todas as três plataformas:
 
 A curva de Bézier quadrática tem o ponto de controle de apenas um, e a curva é definida por apenas três pontos: o ponto inicial, o ponto de controle e o ponto de extremidade. Equações paramétricas são muito semelhantes a curva cúbica de Bézier, exceto que o expoente mais alto é 2, portanto, a curva é um polinômio quadrático:
 
-x(t) = (1 – t)²x₀ + 2t(1 – t)x₁ + t²x₂
+x(t) = (1 – t) ²x₀ + 2t (1 – t) x₁ + t²x₂
 
 y(t) = (1 – t) ²y₀ + 2t (1 – t) y₁ + t²y₂
 
@@ -414,13 +414,13 @@ A curva de Bézier conic &mdash; também conhecido como a racional curva Bézier
 
 As equações paramétricos para X e Y são taxas que compartilham o mesmo denominador. Aqui está a equação para o denominador para *t* variando de 0 a 1 e um valor de peso de *w*:
 
-d(t) = (1 – t)² + 2wt(1 – t) + t²
+d(t) = (1 – t) ² + 2wt(1 – t) + t²
 
 Em teoria, uma quadrática racional pode envolver três valores de peso separado, um para cada uma das três condições, mas eles podem ser simplificados para apenas um valor de peso o termo intermediária.
 
 Equações paramétricas para as coordenadas X e Y são semelhantes a equações paramétricas para o Bézier quadrática, exceto que o termo intermediária também inclui o valor de peso, e a expressão é dividida pelo denominador:
 
-x(t) = ((1 – t)²x₀ + 2wt(1 – t)x₁ + t²x₂)) ÷ d(t)
+x(t) = ((1 – t) ²x₀ + 2wt (1 – t) x₁ + t²x₂)) ÷ d(t)
 
 y(t) = ((1 – t) ²y₀ + 2wt (1 – t) y₁ + t²y₂)) ÷ d(t)
 
@@ -552,4 +552,4 @@ Mas, definir o ângulo de 180 graus, e a falha de matemática.
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

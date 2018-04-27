@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 1e1039f513534885dffe9fef348d567243651e22
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 5c9eed8f48a40bc7feaadd0c644610f691713e9b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="app-class"></a>Classe de aplicativo
 
@@ -26,7 +26,7 @@ Ele também expõe [métodos de ciclo de vida](~/xamarin-forms/app-fundamentals/
 Dependendo do modelo escolhido, o `App` classe pode ser definida em uma das duas maneiras:
 
 * **C#**, ou
-* **XAML & C#**
+* **XAML E C#**
 
 Para criar um **aplicativo** usando XAML, o padrão de classe **aplicativo** classe deve ser substituída por uma XAML **aplicativo** classe e o code-behind associado, conforme mostrado no exemplo de código a seguir:
 
@@ -149,7 +149,7 @@ Essa classe é instanciada em cada projeto específico da plataforma e passada p
 O código para cada plataforma é mostrado nas seções a seguir. Os modelos mais recentes de solução do xamarin. Forms já contenham todo esse código, pré-configurado para seu aplicativo.
 
 
-### <a name="ios-project"></a>iOS Project
+### <a name="ios-project"></a>Projeto do iOS
 
 O iOS `AppDelegate` classe agora herda de `FormsApplicationDelegate`. É necessário:
 
@@ -173,7 +173,7 @@ public partial class AppDelegate :
 }
 ```
 
-### <a name="android-project"></a>Android Project
+### <a name="android-project"></a>Projeto Android
 
 O Android `MainActivity` agora herda de `FormsApplicationActivity`. No `OnCreate` substituir o `LoadApplication` método for chamado com uma instância do `App` classe.
 
@@ -198,70 +198,9 @@ public class MainActivity :
 > Há uma versão mais recente [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) classe base que pode ser usado para oferecer melhor suporte a estrutura de Material Android.
 > Isso se tornará o modelo Android padrão no futuro, mas você pode seguir [estas instruções](~/xamarin-forms/platform/android/appcompat.md) para atualizar seus aplicativos Android existentes.
 
-
-### <a name="windows-phone-project"></a>Windows Phone Project
-
-A página principal do projeto do Windows Phone (baseado em Silverlight) deve herdar de `FormsApplicationPage`. Isso significa que o XAML e c# para `MainPage` referência a `FormsApplicationPage` classe como mostrado.
-
-O XAML usa um espaço para nome personalizado para que reflita o elemento raiz de `FormsApplicationPage` classe:
-
-```xaml
-<winPhone:FormsApplicationPage
-   ...
-   xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"
-    ...>
-</winPhone:FormsApplicationPage>
-```
-
-C# herda o `FormsApplicationPage` classe e chamadas `LoadApplication` para criar uma instância do seu xamarin. Forms `App`. Observe que é uma boa prática usar explicitamente o namespace do aplicativo para qualificar o `App` como aplicativos do Windows Phone também têm seus próprios `App` classe não relacionado com o xamarin. Forms.
-
-```csharp
-public partial class MainPage :
-    global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new YOUR_APP_NAMESPACE.App()); // new in 1.3, use the correct namespace
-    }
- }
-```
-
-### <a name="windows-81-project"></a>Windows 8.1 Project
-
-Página principal na [Windows 8.1 (baseado em WinRT)](~/xamarin-forms/platform/windows/installation/tablet.md) projetos agora devem herdar de `WindowsPage`. Isso significa que o XAML para `MainPage` referência a `WindowsPage` classe conforme mostrado:
-
-O XAML usa um espaço para nome personalizado para que reflita o elemento raiz de `FormsApplicationPage` classe:
-
-```xaml
-<forms:WindowsPage
-   ...
-   xmlns:forms="using:Xamarin.Forms.Platform.WinRT"
-   ...>
-</forms:WindowsPage>
-```
-
-Construção do c# code-behind deve chamar `LoadApplication` para criar uma instância do seu xamarin. Forms `App`. Observe que é uma boa prática usar explicitamente o namespace do aplicativo para qualificar o `App` como aplicativos UWP também têm seus próprios `App` classe não relacionado com o xamarin. Forms.
-
-```csharp
-public partial class MainPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        LoadApplication(new YOUR_APP_NAMESPACE.App());
-    }
- }
-```
-
-Observe que `Forms.Init()` deve ser chamado **App.xaml.cs** em torno da linha 65.
-
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>Projeto universal do Windows (UWP) para Windows 10
 
-[Projeto universal do Windows](~/xamarin-forms/platform/windows/installation/universal.md) suporte de xamarin. Forms está atualmente em visualização.
+Consulte [projetos de instalação do Windows](~/xamarin-forms/platform/windows/installation/index.md) para obter informações sobre o suporte UWP no xamarin. Forms.
 
 A página principal do projeto UWP deve herdar de `WindowsPage`. Isso significa que o XAML e c# para `MainPage` referência a `FormsApplicationPage` classe como mostrado.
 

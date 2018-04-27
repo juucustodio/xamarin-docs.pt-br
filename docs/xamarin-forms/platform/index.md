@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: be131bdbfeceabd72494708cdfe9a263da9bbbd8
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="platform-features"></a>Recursos da plataforma
 
@@ -63,11 +63,4 @@ Há uma ampla variedade de código-fonte aberto plug-ins disponíveis no Github,
 
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
-Xamarin. Forms tem suporte para quatro tipos diferentes de projeto do Windows:
-
-* Windows Phone 8 Silverlight (original Windows plataforma suportada por xamarin. Forms),
-* Windows Phone 8.1 (WinRT)
-* Windows 8.1 (WinRT), e
-* Plataforma universal do Windows (Windows 10).
-
-Esta seção descreve as diferenças entre elas e como adicioná-los a uma solução existente do xamarin. Forms.
+Xamarin. Forms tem suporte para o Windows UWP (plataforma Universal) no Windows 10. Este artigo descreve como adicionar um um projeto UWP a uma solução existente do xamarin. Forms.

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 909a04398043a3c2f0c30e4da82d174a6bfaf148
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00d52aa69372ab5ec3073e2355a43521b515ca8b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="modal-pages"></a>Páginas modais
 
@@ -100,7 +100,7 @@ No entanto, a ordem exata que esses eventos ocorrem é dependente de plataforma.
 
 ### <a name="disabling-the-back-button"></a>Desabilitar o botão Voltar
 
-No Android e Windows Phone, o usuário pode sempre retornar à página anterior pressionando padrão *novamente* botão no dispositivo. Se a página modal exige que o usuário concluir uma tarefa autossuficiente antes de sair da página, o aplicativo deve desabilitar o *novamente* botão. Isso pode ser feito por meio da substituição de [ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) método na página modal. Para obter mais informações, consulte [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) do catálogo do Charles Petzold xamarin. Forms.
+No Android, o usuário pode sempre retornar à página anterior pressionando padrão *novamente* botão no dispositivo. Se a página modal exige que o usuário concluir uma tarefa autossuficiente antes de sair da página, o aplicativo deve desabilitar o *novamente* botão. Isso pode ser feito por meio da substituição de [ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) método na página modal. Para obter mais informações, consulte [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) do catálogo do Charles Petzold xamarin. Forms.
 
 ### <a name="animating-page-transitions"></a>Animação de transições de página
 
@@ -260,4 +260,4 @@ Este artigo demonstrou como navegar em páginas modais. Uma página modal incent
 
 - [Navegação de página](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
 - [Modal (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
-- [PassingData (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
+- [PassingData (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)

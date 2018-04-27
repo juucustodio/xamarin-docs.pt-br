@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 9d822444196479dabd19f43f45f289117f64c05e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964e2302c290930ec62752e51e7de388cb42ee32
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-listview"></a>Personalizando uma ListView
 
 _Xamarin. Forms ListView é uma exibição que exibe uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula os controles de lista específica de plataforma e layouts de célula nativo, permitindo mais controle sobre o desempenho do controle de lista nativo._
 
-Cada exibição xamarin. Forms tem um processador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) é processado por um aplicativo xamarin. Forms, no iOS a `ListViewRenderer` classe é instanciada, que por sua vez instancia um nativo `UITableView` controle. Na plataforma Android, o `ListViewRenderer` classe instancia um nativo `ListView` controle. No Windows Phone e o Windows UWP (plataforma Universal), o `ListViewRenderer` classe instancia um nativo `ListView` controle. Para obter mais informações sobre o processador e classes de controle nativo que mapeiam xamarin. Forms controles, consulte [Classes de Base de processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada exibição xamarin. Forms tem um processador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) é processado por um aplicativo xamarin. Forms, no iOS a `ListViewRenderer` classe é instanciada, que por sua vez instancia um nativo `UITableView` controle. Na plataforma Android, o `ListViewRenderer` classe instancia um nativo `ListView` controle. Sobre o Windows UWP (plataforma Universal), o `ListViewRenderer` classe instancia um nativo `ListView` controle. Para obter mais informações sobre o processador e classes de controle nativo que mapeiam xamarin. Forms controles, consulte [Classes de Base de processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 O diagrama a seguir ilustra o relacionamento entre o [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) controle e os controles nativo correspondentes que implementação-la:
 
@@ -467,15 +467,15 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 
 O método cria uma nova instância do `NativeAndroidListViewAdapter` classe que fornece dados para o nativo `ListView` controlar, contanto que o associável `NativeListView.Items` propriedade foi alterada.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Criando o renderizador personalizado no Windows Phone e UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Criando o renderizador personalizado em UWP
 
-O exemplo de código a seguir mostra o renderizador personalizado para o Windows Phone e UWP:
+O exemplo de código a seguir mostra o renderizador personalizado para UWP:
 
 ```csharp
-[assembly: ExportRenderer (typeof(NativeListView), typeof(NativeWinPhoneListViewRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeListView), typeof(NativeUWPListViewRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneListViewRenderer : ListViewRenderer
+    public class NativeUWPListViewRenderer : ListViewRenderer
     {
         ListView listView;
 
@@ -564,4 +564,4 @@ Este artigo demonstrou como criar um renderizador personalizado que encapsula os
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CustomRendererListView (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)
+- [CustomRendererListView (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)

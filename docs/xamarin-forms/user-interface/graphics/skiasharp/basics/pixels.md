@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 95f782fd4670782217d8ce4bc055341747a71170
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Unidades independentes de dispositivo e pixels
 
@@ -102,7 +102,7 @@ Aqui está o programa em execução em todas as três plataformas:
 
 Como você pode ver, o `CanvasSize` propriedade do `SKCanvasView` e o `Size` propriedade o `SKImageInfo` valor estão consistentes em reporting as dimensões de pixel. O `Height` e `Width` propriedades do `SKCanvasView` xamarin. Forms propriedades e o tamanho da exibição nas unidades independentes de dispositivo definidas pela plataforma de relatório.
 
-O simulador de iOS 7 à esquerda tem 2 pixels por unidade independente de dispositivo, o Android 5 Nexus no centro tem 3 pixels por unidade e o 925 de Lumia Nokia à direita tem 2,25 pixels por unidade. Que por que simples círculo mostrado parece anterior sobre o mesmo tamanho no iPhone e Windows phone, mas é menor no telefone Android.
+O simulador de iOS 7 à esquerda tem 2 pixels por unidade independente de dispositivo e o Android 5 Nexus no centro tem 3 pixels por unidade. É por isso que o círculo simple mostrado anteriormente tem tamanhos diferentes em diferentes plataformas.
 
 Se você preferir trabalhar inteiramente em unidades independentes de dispositivo, você pode fazer isso definindo o `IgnorePixelScaling` propriedade o `SKCanvasView` para `true`. No entanto, você pode não gostar dos resultados. SkiaSharp renderiza os gráficos em uma menor superfície de dispositivo, com um tamanho de pixel igual ao tamanho da exibição em unidades independentes de dispositivo. (Por exemplo, SkiaSharp usaria uma superfície de exibição de 360 x 512 pixels em 5 a Nexus.) Ele, em seguida, sobe essa imagem em tamanho, resultando em jaggies bitmap notável.
 
@@ -164,4 +164,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -5,12 +5,12 @@ ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: f4be88a1eabb3fa3cca733690a3f097a03516272
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 9ce1d790f5dea00ac47d5639ae8424793006445a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="architecture"></a>Arquitetura
 
@@ -70,7 +70,7 @@ Deve ser tomado quando descartar gerenciados Callable Wrappers se a instância p
 Pode ser chamado de wrapper gerenciado subclasses são onde toda a lógica específica do aplicativo "interessante" pode residir. Esses incluem custom [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) subclasses (como o [atividade1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) tipo no modelo de projeto padrão). (Especificamente, eles são qualquer *Java.Lang.Object* subclasses que *não* contêm um [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) atributo personalizado ou [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) é *false*, que é o padrão.)
 
 Gerenciados como callable wrappers, gerenciados subclasses callable wrapper também contêm uma referência global, acessível por meio de [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propriedade. Assim como com callable wrappers do gerenciado, referências globais podem ser liberadas explicitamente chamando [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
-Ao contrário de encapsuladores que pode ser chamadas, *muito cuidadoso* devem ser tomadas antes de descartar nesses casos, como *Dispose ()*espelhamento da instância interromperá o mapeamento entre a instância de Java (uma instância de um Android Callable Wrapper) e a instância gerenciada.
+Ao contrário de encapsuladores que pode ser chamadas, *muito cuidadoso* devem ser tomadas antes de descartar nesses casos, como *Dispose ()* espelhamento da instância interromperá o mapeamento entre a instância de Java (uma instância de um Android Callable Wrapper) e a instância gerenciada.
 
 
 ### <a name="java-activation"></a>Ativação de Java
@@ -115,11 +115,7 @@ Ordem de eventos:
 
 11. O *LogTextBox (contexto, IAttributeSet, int)* construtor executa *na mesma instância criada (7)* .
 
-12. ...
-
-
-Se (IntPtr, JniHandleOwnership) não é possível encontrar o construtor, um [System. MissingMethodException](https://developer.xamarin.com/api/type/System.MissingMethodException/) será lançada.
-
+12. Se (IntPtr, JniHandleOwnership) construtor não pode ser encontrado, em seguida, um System. MissingMethodException] (https://developer.xamarin.com/api/type/System.MissingMethodException/) será lançada.
 
 <a name="Premature_Dispose_Calls" />
 

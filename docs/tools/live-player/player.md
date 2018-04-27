@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 2ddaba4541af52ae119fbf504fdcc66ba357c113
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e3205d83ba207322d4c53c4c6e98d4890ad48a77
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarin-live-player-app"></a>Aplicativo de Player ao vivo do Xamarin
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 04/04/2018
 
 Xamarin Live Player está disponível para o Android da Google Play:
 
-[ ![Disponível no Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[![Disponível no Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 Para dispositivos Android sem Google Play Player Xamarin ao vivo está disponível por meio de [HockeyApp](https://aka.ms/xlp-hockeyapp) distribuição. Além disso, a visualização inicial compilações para Android pode ser instalado diretamente do Google Play por optar pelo [programa beta aberto](https://play.google.com/apps/testing/com.xamarin.live)
 
@@ -53,19 +53,19 @@ Se a conexão for bem-sucedida, o código deve ser executado no dispositivo quas
 
 Pressione o botão informações **(i)** na parte inferior do aplicativo para revelar o **opções** menu:
 
-[ ![Captura de tela do menu Opções](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![Captura de tela do menu Opções](player-images/options-sml.png)](player-images/options.png#lightbox)
 
-### <a name="logs"></a>Logs
+### <a name="logs"></a>logs
 
 Exibir logs para diagnosticar problemas.
 
 ### <a name="settings"></a>Configurações
 
-* Alternar a exibição de erros de compilação e tempo de execução.
-* Informações de versão.
-* Envie comentários.
+- Alternar a exibição de erros de compilação e tempo de execução.
+- Informações de versão.
+- Envie comentários.
 
-[ ![Captura de tela das configurações](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![Captura de tela das configurações](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>Gerenciamento de dispositivos
 
@@ -107,9 +107,8 @@ Você também pode acessar essa janela da lista de dispositivos:
 
 Se você tiver qualquer consulte problemas [limitações e solução de problemas](~/tools/live-player/troubleshooting.md).
 
-
 ## <a name="related-links"></a>Links relacionados
 
 - [Limitações](~/tools/live-player/limitations.md)
 - [Solução de problemas](~/tools/live-player/troubleshooting.md)
-- [Exemplos do Xamarin Player ao vivo](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Exemplos do Xamarin Player ao vivo](samples.md)

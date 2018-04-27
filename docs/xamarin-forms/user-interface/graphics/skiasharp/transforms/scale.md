@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: b4a36e15bd5db72ef113748282175c6d31a95966
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
@@ -167,7 +167,7 @@ O canto superior esquerdo do retângulo arredondado é posicionado `margin` pixe
 
 [![](scale-images/centeredscale-small.png "Tripla captura de tela da página de escala centralizada")](scale-images/centeredscale-large.png#lightbox "tripla captura de tela da página de escala centralizada")
 
-O `Slider` elementos deste programa tem um intervalo de &ndash;10 a 10. Como você pode ver, valores negativos de vertical escala (como no Android tela no centro) causam objetos Inverter em torno do eixo horizontal que passa através do centro da escala. Valores negativos de horizontal para escala (como a tela do Windows à direita) causam objetos Inverter em torno do eixo vertical que passa através do centro da escala.
+O `Slider` elementos deste programa tem um intervalo de &ndash;10 a 10. Como você pode ver, valores negativos de vertical escala (como no Android tela no centro) causam objetos Inverter em torno do eixo horizontal que passa através do centro da escala. Valores negativos de horizontal para escala (como a tela UWP à direita) causam objetos Inverter em torno do eixo vertical que passa através do centro da escala.
 
 Esta versão quarto do `Scale` método é realmente um atalho. Talvez você queira ver como isso funciona, substituindo o `Scale` método nesse código com o seguinte:
 
@@ -344,4 +344,4 @@ O código também exibirá estrela dez vezes mais, cada vez que o dimensionament
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 52c86c63c328729211c4fbd22bd10b5eb1e56615
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="fonts"></a>Fontes
 
@@ -51,9 +51,9 @@ label.FontSize = 24;
 Você também pode usar o `NamedSize` enumeração que tem quatro opções internas; Xamarin. Forms escolhe o melhor tamanho de cada plataforma.
 
 -  **Micro**
--  **Small**
+-  **Pequeno**
 -  **Médio**
--  **Large**
+-  **Grande**
 
 
 O `NamedSize` enumeração pode ser usado sempre que um `FontSize` pode ser especificado usando o `Device.GetNamedSize` método para converter o valor de uma `double`:
@@ -70,7 +70,7 @@ Estilos de fonte, como **negrito** e *itálico* podem ser definidas no `FontAttr
 
 -  **Nenhum**
 -  **Negrito**
--  **Italic**
+-  **Itálico**
 
 O `FontAttribute` enumeração pode ser usada da seguinte maneira (você pode especificar um único atributo ou `OR` -los juntos):
 
@@ -166,7 +166,7 @@ O `FormattedString` classe também pode ser usada em XAML, como mostrado aqui:
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="MarkerFelt-Thin" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>
@@ -178,7 +178,7 @@ Ao especificar uma face de fonte personalizada, é sempre uma boa ideia usar `On
 
 ## <a name="using-a-custom-font"></a>Usando uma fonte personalizada
 
-Usando uma fonte que não sejam de tipos internos requer alguma codificação específica de plataforma. Esta captura de tela mostra a fonte personalizada **Lobster** de [fontes do código-fonte aberto do Google](https://www.google.com/fonts) renderizado no iOS, Android e Windows Phone usando xamarin. Forms.
+Usando uma fonte que não sejam de tipos internos requer alguma codificação específica de plataforma. Esta captura de tela mostra a fonte personalizada **Lobster** de [fontes do código-fonte aberto do Google](https://www.google.com/fonts) renderizado usando xamarin. Forms.
 
  [![A fonte personalizada no iOS e Android](fonts-images/custom-sml.png "personalizado fontes exemplo")](fonts-images/custom.png#lightbox "exemplo de fontes personalizadas")
 
@@ -240,7 +240,7 @@ Você também pode usar [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/de
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Lobster-Regular" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>

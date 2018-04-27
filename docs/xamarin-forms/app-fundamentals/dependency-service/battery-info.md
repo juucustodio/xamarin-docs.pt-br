@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 3f098e7f403a4f5e9fd924b8745348197cd4f843
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b437b42c1cb4dd8cbe7612a680032d84e852ff6
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="checking-battery-status"></a>Verificando o Status da bateria
 
@@ -22,7 +22,6 @@ Como xamarin. Forms não inclui a funcionalidade para verificar o status da bate
 - **[Criar a Interface](#Creating_the_Interface)**  &ndash; entender como a interface é criada no código compartilhado.
 - **[iOS implementação](#iOS_Implementation)**  &ndash; saber como implementar a interface em código nativo para iOS.
 - **[Implementação do Android](#Android_Implementation)**  &ndash; saber como implementar a interface em código nativo para o Android.
-- **[Implementação do Windows Phone](#Windows_Phone_Implementation)**  &ndash; saber como implementar a interface em código nativo para Windows Phone.
 - **[Implementação da plataforma Windows universal](#UWPImplementation)**  &ndash; saber como implementar a interface em código nativo para o Windows UWP (plataforma Universal).
 - **[Implementando em código compartilhado](#Implementing_in_Shared_Code)**  &ndash; aprender a usar `DependencyService` para chamar a implementação nativa de código compartilhado.
 
@@ -311,74 +310,6 @@ namespace DependencyServiceSample.Droid
 
 Este atributo registra a classe como uma implementação do `IBattery` interface, o que significa que `DependencyService.Get<IBattery>` pode ser usado no código compartilhado pode criar uma instância dela.
 
-<a name="Windows_Phone_Implementation" />
-
-## <a name="windows-phone-implementation"></a>Implementação do Windows Phone
-
-Essa implementação é mais limitada que as versões do Android e iOS porque a API de energia do Windows Phone oferece menos informações que os equivalentes do Android e iOS.
-
-```csharp
-using System;
-using Windows.ApplicationModel.Core;
-using DependencyServiceSample.WinPhone;
-
-namespace DependencyServiceSample.WinPhone
-{
-  public class BatteryImplementation : IBattery
-  {
-    private int last;
-    private BatteryStatus status = BatteryStatus.Unknown;
-
-    public BatteryImplementation()
-    {
-      last = DefaultBattery.RemainingChargePercent;
-    }
-
-    Windows.Phone.Devices.Power.Battery battery;
-    private Windows.Phone.Devices.Power.Battery DefaultBattery
-    {
-      get { return battery ?? (battery = Windows.Phone.Devices.Power.Battery.GetDefault()); }
-    }
-    public int RemainingChargePercent
-    {
-      get
-      { return DefaultBattery.RemainingChargePercent; }
-    }
-
-    public  BatteryStatus Status
-    {
-      get { return status; }
-    }
-
-    public PowerSource PowerSource
-    {
-      get
-      {
-        if (status == BatteryStatus.Full || status == BatteryStatus.Charging)
-          return PowerSource.Ac;
-
-        return PowerSource.Battery;
-      }
-    }
-  }
-}
-```
-
-Adicione esse `[assembly]` atributo acima da classe (e fora de todos os namespaces que foram definidos), incluindo quaisquer `using` instruções.
-
-```csharp
-using System;
-using Windows.ApplicationModel.Core;
-using DependencyServiceSample.WinPhone;
-
-[assembly: Xamarin.Forms.Dependency (typeof (BatteryImplementation))]
-namespace DependencyServiceSample.WinPhone {
-  public class BatteryImplementation : IBattery {
-    ...
-```
-
-Este atributo registra a classe como uma implementação do `IBattery` interface, o que significa que `DependencyService.Get<IBattery>` pode ser usado no código compartilhado para criar uma instância dele.
-
 <a name="UWPImplementation" />
 
 ## <a name="universal-windows-platform-implementation"></a>Implementação da plataforma universal do Windows
@@ -537,7 +468,7 @@ public MainPage ()
 }
 ```
 
-Executar este aplicativo no iOS, Android ou plataformas Windows e pressionando o botão resultará no texto do botão de atualização para refletir o status atual de energia do dispositivo.
+Executar este aplicativo no iOS, Android, ou UWP e pressionando o botão resultará no texto do botão de atualização para refletir o status atual de energia do dispositivo.
 
 ![](battery-info-images/battery.png "Exemplo de Status da bateria")
 

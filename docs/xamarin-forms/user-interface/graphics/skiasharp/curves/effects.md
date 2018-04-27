@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 9bdad3e7d3e16dfe906f96bce2b92cdb9ee6260a
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 76192f48bedebb183c64c83e34c3908cc85d591c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="path-effects"></a>Efeitos de caminho
 
@@ -414,7 +414,7 @@ Procure muito próxima e você verá que esses não são realmente círculos. Ca
 
 Uma cadeia ou o cabo da distribuição uniforme de peso trava na forma de um catenary. Um arch criado na forma de um catenary invertido se beneficia de uma distribuição uniforme de pressão de peso de um arco. O catenary tem uma descrição de matemática aparentemente simple:
 
-y = a · cosh(x / a)
+y = um · COSH(x / a)
 
 O *cosh* é a função cosseno hiperbólico. Para *x* igual a 0, *cosh* é igual a zero e *y* é igual a *um*. Que é o centro da catenary. Como o *cosseno* função *cosh* será considerada *mesmo*, o que significa que *cosh(–x)* é igual a *cosh(x)*, e aumentam os valores para aumentar os argumentos positivos ou negativos. Esses valores descrevem as curvas que formam os lados do catenary.
 
@@ -854,7 +854,7 @@ No `PaintSurface` manipulador, o `SKPathEffect.Create2DPath` chamadas define o e
 
 O dimensionamento da captura de tela original faz com que alguns distorção, particularmente na tela do Android.
 
-Observe que esses blocos sempre aparecem inteiros e nunca são truncados. Exceto na tela do Windows 10 Mobile, não é mesmo evidente a área de preenchimento é um retângulo arredondado. Se você deseja truncar esses blocos para uma área específica, use um caminho de recorte.
+Observe que esses blocos sempre aparecem inteiros e nunca são truncados. Sobre as duas primeiras capturas de tela, não é mesmo evidente a área de preenchimento é um retângulo arredondado. Se você deseja truncar esses blocos para uma área específica, use um caminho de recorte.
 
 Tente definir a `Style` propriedade o `SKPaint` do objeto para `Stroke`, e você verá os blocos individuais descritos em vez de ser preenchido.
 
@@ -927,7 +927,7 @@ Você pode usar esse efeito com traçado ou preenchimento com base no `Style` pr
 
 Você verá que este Heptágono arredondado é idêntico ao programa anterior. Se você precisar de mais convencer que o raio de canto é realmente 100 em vez da 50 especificado no `SKPathEffect.CreateCorner` chamada, você pode remover o comentário a instrução final no programa e consulte um círculo de raio de 100 sobreposto no canto.
 
-## <a name="random-jitter"></a>Random Jitter
+## <a name="random-jitter"></a>Variação aleatória
 
 Às vezes, as linhas retas sem falhas de elementos gráficos do computador não são exatamente o que você deseja e um pouco aleatoriedade é desejada. Nesse caso, você desejará tente o [ `SKPathEffect.CreateDiscrete` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDiscrete/p/System.Single/System.Single/System.UInt32/) método:
 
@@ -1414,4 +1414,4 @@ Agora que você viu efeitos de caminho que variam de simples pontos e hífens pa
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

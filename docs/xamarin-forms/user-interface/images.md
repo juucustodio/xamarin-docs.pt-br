@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: ddbcb74d34f09c7bb60891148bd50b36bc5094c3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5e8ad5ba3bdfa61ae1b2f4404016f204a8c1747c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="images"></a>Imagens
 
@@ -58,7 +58,6 @@ Arquivos de imagem podem ser adicionados para cada projeto de aplicativo e refer
 
 - **iOS** - o preferencial a maneira de gerenciar e suporte a imagens, pois é usar o iOS 9 **conjuntos de imagem do catálogo de ativos**, que deve conter todas as versões de uma imagem que são necessárias para dar suporte a vários dispositivos e dimensionar fatores para um aplicativo. Para obter mais informações, consulte [adicionar imagens a um conjunto de imagem de catálogo Asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 - **Android** -colocar imagens no **recursos/drawable** diretório com **ação de compilação: AndroidResource**. Versões de DPI alto e baixo de uma imagem também podem ser fornecidas (adequadamente denominado **recursos** subdiretórios, como **drawable ldpi**, **drawable hdpi**e **drawable xhdpi**).
-- **Windows Phone** -colocar imagens no diretório de raiz do aplicativo com **ação de compilação: conteúdo**.
 - **Windows UWP (plataforma universal)** -colocar imagens no diretório de raiz do aplicativo com **ação de compilação: conteúdo**.
 
 > [!IMPORTANT]
@@ -93,7 +92,7 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>Resoluções nativas (Retina e alto DPI)
 
-iOS, Android, Windows Phone e UWP incluem suporte para resoluções de imagem diferente, onde o sistema operacional escolhe a imagem apropriada em tempo de execução com base nos recursos do dispositivo. Xamarin. Forms usa APIs das plataformas nativo para carregar imagens locais, portanto ele automaticamente dá suporte a soluções alternativas se os arquivos estão corretamente nomeados e localizados no projeto.
+iOS, Android e UWP incluem suporte para resoluções de imagem diferente, onde o sistema operacional escolhe a imagem apropriada em tempo de execução com base nos recursos do dispositivo. Xamarin. Forms usa APIs das plataformas nativo para carregar imagens locais, portanto ele automaticamente dá suporte a soluções alternativas se os arquivos estão corretamente nomeados e localizados no projeto.
 
 A melhor maneira de gerenciar imagens desde iOS 9 é arrastar imagens para cada resolução necessária para o conjunto de imagem do catálogo de ativos apropriado. Para obter mais informações, consulte [adicionar imagens a um conjunto de imagem de catálogo Asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
@@ -103,7 +102,7 @@ Imagens de resolução alternativo Android devem ser colocadas em [diretórios e
 
 [![Local da imagem de resolução de vários Android](images-images/xs-highdpisolution-sml.png "local da imagem de resolução de vários Android")](images-images/xs-highdpisolution.png#lightbox "local da imagem de resolução de vários Android")
 
-Nomes de arquivo de imagem de UWP e Windows Phone [pode ser com o sufixo `.scale-xxx` antes da extensão de arquivo](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), onde `xxx` é a porcentagem de dimensionamento aplicado ao ativo, por exemplo, **myimage.scale-200.png**. Imagens, em seguida, podem ser chamadas para no código ou XAML sem o modificador de escala, por exemplo, apenas **myimage.png**. A plataforma selecionará a escala mais próxima do ativo apropriado com base em DPI atual da exibição.
+Nomes de arquivo de imagem UWP [pode ser com o sufixo `.scale-xxx` antes da extensão de arquivo](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), onde `xxx` é a porcentagem de dimensionamento aplicado ao ativo, por exemplo, **myimage.scale 200.png**. Imagens, em seguida, podem ser chamadas para no código ou XAML sem o modificador de escala, por exemplo, apenas **myimage.png**. A plataforma selecionará a escala mais próxima do ativo apropriado com base em DPI atual da exibição.
 
 ### <a name="additional-controls-that-display-images"></a>Controles adicionais que exibem imagens
 

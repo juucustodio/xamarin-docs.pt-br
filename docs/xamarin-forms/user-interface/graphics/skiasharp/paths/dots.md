@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 1e295ac424c311472ff175d4627c5fb12641d31f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dots-and-dashes"></a>Pontos e traços
 
@@ -164,7 +164,7 @@ Para contornar esse problema ao usar um limite de traço de `Square` ou `Round`,
 - {30, 10} se torna {20, 20} para uma linha tracejada
 - {10, 10, 30, 10} ficar {0, 20, 20, 20} por uma linha pontilhada e tracejada
 
-Limitar a mostra a tela Windows pontilhado e tracejado da linha para um traço do `Round`. O `Round` cap traço geralmente fornece melhor a aparência de pontos e traços nas linhas espessa.
+Limitar a mostra a tela UWP pontilhado e tracejado da linha para um traço do `Round`. O `Round` cap traço geralmente fornece melhor a aparência de pontos e traços nas linhas espessa.
 
 Até o momento nenhuma referência foi feita do segundo parâmetro para o `SKPathEffect.CreateDash` método. Esse parâmetro é chamado `phase` e ela se refere a um deslocamento dentro do padrão de traço e ponto de início da linha. Por exemplo, se a matriz de traço é {10, 10} e o `phase` for 10, a linha começa com um intervalo, em vez de um ponto.
 
@@ -220,4 +220,4 @@ Você viu como desenhar linhas e definir curvas usando equações paramétricas.
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

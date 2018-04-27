@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: a153791893f99a472c3fcf91a205bf91ed971e13
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -53,7 +53,7 @@ Para saber mais sobre como personalizar células em uma ListView, consulte [pers
 ListView oferece suporte a vários estilos de interação, incluindo:
 
 - **[Puxe para atualizar](interactivity.md#Pull_to_Refresh)**  &ndash; ListView suporta puxe para atualizar em cada plataforma.
-- **[Ações de contexto](interactivity.md#Context_Actions)**  &ndash; ListView dá suporte a planos de ação em itens individuais em uma lista. Por exemplo, você pode implementar o dedo para a ação no iOS, ou toque longa ações no Android e Windows Phone.
+- **[Ações de contexto](interactivity.md#Context_Actions)**  &ndash; ListView dá suporte a planos de ação em itens individuais em uma lista. Por exemplo, você pode implementar o dedo para a ação no iOS, ou toque longa ações no Android.
 - **[Seleção de](interactivity.md#selectiontaps)**  &ndash; você pode escutar seleções e contíguas providências quando uma linha é tocada.
 
 ![](images/context-default.png "ListView com ações de contexto")
@@ -70,5 +70,5 @@ Para saber mais sobre os recursos de interatividade do ListView, consulte [açõ
 - [Agrupamento (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 - [Exibição personalizada do processador (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/WorkingWithListviewNative)
 - [ListView interatividade (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
-- [iOS Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-ios.workbook)
-- [Android Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-android.workbook)
+- [pasta de trabalho do iOS](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-ios.workbook)
+- [Pasta de trabalho do Android](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-android.workbook)

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-an-entry"></a>Personalizando uma entrada
 
 _O controle de entrada do xamarin. Forms permite uma única linha de texto a ser editado. Este artigo demonstra como criar um renderizador personalizado para o controle de entrada, permitindo que os desenvolvedores substituir a renderização nativo padrão com sua próprias personalização específica de plataforma._
 
-Cada controle xamarin. Forms tem um processador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controle é processado por um aplicativo xamarin. Forms, no iOS a `EntryRenderer` classe é instanciada, que por sua vez instancia um nativo `UITextField` controle. Na plataforma Android, o `EntryRenderer` classe instancia um `EditText` controle. No Windows Phone e o Windows UWP (plataforma Universal), o `EntryRenderer` classe instancia um `TextBox` controle. Para obter mais informações sobre o processador e classes de controle nativo que mapeiam xamarin. Forms controles, consulte [Classes de Base de processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada controle xamarin. Forms tem um processador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controle é processado por um aplicativo xamarin. Forms, no iOS a `EntryRenderer` classe é instanciada, que por sua vez instancia um nativo `UITextField` controle. Na plataforma Android, o `EntryRenderer` classe instancia um `EditText` controle. Sobre o Windows UWP (plataforma Universal), o `EntryRenderer` classe instancia um `TextBox` controle. Para obter mais informações sobre o processador e classes de controle nativo que mapeiam xamarin. Forms controles, consulte [Classes de Base de processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 O diagrama a seguir ilustra o relacionamento entre o [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controle e os controles nativo correspondentes que implementação-la:
 
@@ -178,13 +178,13 @@ namespace CustomRenderer.Android
 
 A chamada para a classe base `OnElementChanged` método instancia um Android `EditText` controle, com uma referência para o controle que está sendo atribuído ao renderizador de `Control` propriedade. A cor de plano de fundo é definida como verde-claro com o `Control.SetBackgroundColor` método.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Criando o renderizador personalizado no Windows Phone e UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Criando o renderizador personalizado em UWP
 
-O exemplo de código a seguir mostra o renderizador personalizado para o Windows Phone e UWP:
+O exemplo de código a seguir mostra o renderizador personalizado para UWP:
 
 ```csharp
 [assembly: ExportRenderer(typeof(MyEntry), typeof(MyEntryRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class MyEntryRenderer : EntryRenderer
     {

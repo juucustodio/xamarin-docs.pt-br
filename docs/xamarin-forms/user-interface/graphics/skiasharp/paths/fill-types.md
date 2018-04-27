@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: d22ebf0e150c064835fa73765a65025f10ef4c2a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
@@ -165,7 +165,7 @@ Normalmente, o tipo de preenchimento do caminho deve afetar apenas preenchimento
 
 [![](fill-types-images/fivepointedstar-small.png "Captura de tela da página Five-Pointed estrela tripla")](fill-types-images/fivepointedstar-large.png#lightbox "tripla captura de tela da página Five-Pointed estrela")
 
-As Android e Windows mobile capturas de tela mostram os efeitos de par-ímpares e contorno típicos, mas a ordem de traço e preenchimento também afeta os resultados.
+As capturas de tela do Android e UWP mostram os efeitos de par-ímpares e contorno típicos, mas a ordem de traço e preenchimento também afeta os resultados.
 
 O algoritmo de contorno depende a direção que é desenhada. Normalmente quando você estiver criando um caminho, você pode controlar direção como especificar o que é desenhada de um ponto para outro. No entanto, o `SKPath` classe também define os métodos, como `AddRect` e `AddCircle` que desenhar contornos inteiros. Para controlar como esses objetos são desenhados, os métodos incluem um parâmetro de tipo [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), que tem dois membros:
 
@@ -222,4 +222,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

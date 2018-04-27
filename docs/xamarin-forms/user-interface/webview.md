@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: a96c57b66e5debbbb7318c22e33a21eb9b998395
-ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
+ms.openlocfilehash: ed37e723d4b1a7997890c41886df8d117425e270
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="webview"></a>WebView
 
@@ -33,12 +33,12 @@ Este guia é composto das seguintes seções:
 WebView vem com suporte para os seguintes tipos de conteúdo:
 
 - Sites HTML e CSS &ndash; WebView tem total suporte para sites da Web escritos usando HTML e CSS, incluindo suporte a JavaScript.
-- Documentos &ndash; como WebView é implementado usando componentes nativos em cada plataforma, WebView é capaz de Mostrar documentos que podem ser exibidos em cada plataforma. Isso significa que os arquivos PDF funcionarão no iOS e Android, mas não o Windows Phone.
+- Documentos &ndash; como WebView é implementado usando componentes nativos em cada plataforma, WebView é capaz de Mostrar documentos que podem ser exibidos em cada plataforma. Isso significa que os arquivos PDF funcionarão no iOS e Android.
 - Cadeias de caracteres HTML &ndash; WebView pode mostrar cadeias de caracteres HTML da memória.
 - Arquivos locais &ndash; WebView pode apresentar qualquer um dos tipos de conteúdo acima inserido no aplicativo.
 
 > [!NOTE]
-> `WebView` no Windows e Windows Phone não dá suporte do Silverlight, Flash ou os controles ActiveX, mesmo se eles são compatíveis com o Internet Explorer nessa plataforma.
+> `WebView` no Windows não oferece suporte do Silverlight, Flash ou os controles ActiveX, mesmo se eles são compatíveis com o Internet Explorer nessa plataforma.
 
 ### <a name="websites"></a>Sites
 
@@ -231,28 +231,9 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
 }
 ```
 
-#### <a name="windows-phone"></a>Windows Phone
+#### <a name="universal-windows-platform"></a>Plataforma Universal do Windows
 
-No Windows Phone, coloque HTML, CSS e imagens na raiz do projeto com a ação de compilação definida como *conteúdo* conforme demonstrado abaixo:
-
-![](webview-images/windows-vs.png "Arquivos locais no Windows Phone")
-
-No Windows Phone, o `BaseUrl` deve ser definido como `""`:
-
-```csharp
-[assembly: Dependency (typeof(BaseUrl_Windows))]
-namespace WorkingWithWebview.Windows {
-  public class BaseUrl_Windows : IBaseUrl {
-    public string Get() {
-      return "";
-    }
-  }
-}
-```
-
-#### <a name="windows-runtime-and-universal-windows-platform"></a>Tempo de execução do Windows e a plataforma Universal do Windows
-
-Em projetos de tempo de execução do Windows e Windows UWP (plataforma Universal), colocar HTML, CSS e imagens na raiz do projeto com a ação de compilação definida como *conteúdo*.
+Em projetos do Windows UWP (plataforma Universal), colocar HTML, CSS e imagens na raiz do projeto com a ação de compilação definida como *conteúdo*.
 
 O `BaseUrl` deve ser definido como `"ms-appx-web:///"`:
 
@@ -402,14 +383,11 @@ WebView no Android, por padrão é tão rápida quanto o navegador interno.
 
 O [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) usa o mecanismo de renderização do Microsoft Edge. Dispositivos de área de trabalho e tablet devem ver o mesmo desempenho como usando o navegador de borda em si.
 
-O `WebBrowser` controle no Windows Phone 8 e Windows Phone 8.1 oferece recursos de suporte a HTML5 mais recente não e geralmente pode ter um baixo desempenho. Esteja ciente de como os sites serão exibidos no Windows Phone `WebView`. Não é suficiente testar no Internet Explorer.
-
 ## <a name="permissions"></a>Permissões
 
 Para que `WebView` para trabalhar, assegure-se de que as permissões são definidas para cada plataforma. Observe que, em algumas plataformas `WebView` funcionará no modo de depuração, mas não quando compilado para versão. Isso ocorre porque algumas permissões, como aquelas para acesso à internet no Android, são definidos por padrão pelo Visual Studio para Mac quando no modo de depuração.
 
-- **Windows Phone 8.0** &ndash; requer `ID_CAP_WEBBROWSERCOMPONENT` para o controle e `ID_CAP_NETWORKING` para acesso à internet.
-- **Windows Phone 8.1 e UWP** &ndash; requer a capacidade de Internet (cliente e servidor) ao exibir o conteúdo de rede.
+- **UWP** &ndash; requer a capacidade de Internet (cliente e servidor) ao exibir o conteúdo de rede.
 - **Android** &ndash; requer `INTERNET` apenas ao exibir o conteúdo da rede. Conteúdo local não requer nenhuma permissão especial.
 - **iOS** &ndash; não exige nenhuma permissão especial.
 

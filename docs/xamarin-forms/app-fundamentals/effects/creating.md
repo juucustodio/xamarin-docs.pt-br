@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 773636cf879439477a6f71e44f13ae66b8f10ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6138bd1f9211248b3a260795c2ef9d3db87580be
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="creating-an-effect"></a>Criando um efeito
 
@@ -43,7 +43,7 @@ Um [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) cont
 
 As seções a seguir abordam a implementação específica de plataforma do `FocusEffect` classe.
 
-## <a name="ios-project"></a>iOS Project
+## <a name="ios-project"></a>Projeto do iOS
 
 O seguinte exemplo de código mostra o `FocusEffect` implementação para o projeto iOS:
 
@@ -96,7 +96,7 @@ O `OnAttached` método define o `BackgroundColor` propriedade do controle para l
 
 O `OnElementPropertyChanged` substituição responde às alterações de propriedade ligável no controle xamarin. Forms. Quando o [ `IsFocused` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsFocused/) alterações de propriedade, o `BackgroundColor` propriedade do controle é alterada em branco se o controle tem foco, caso contrário, ele é alterado para roxo claro. Essa funcionalidade é encapsulada em um `try` / `catch` bloquear caso não tem o controle o efeito é anexado a um `BackgroundColor` propriedade.
 
-## <a name="android-project"></a>Android Project
+## <a name="android-project"></a>Projeto Android
 
 O seguinte exemplo de código mostra o `FocusEffect` implementação para o projeto Android:
 
@@ -150,17 +150,17 @@ O `OnAttached` chamadas de método de `SetBackgroundColor` método para definir 
 
 O `OnElementPropertyChanged` substituição responde às alterações de propriedade ligável no controle xamarin. Forms. Quando o [ `IsFocused` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsFocused/) alterações de propriedade, a cor de plano de fundo do controle é alterada em branco se o controle tem foco, caso contrário, ele é alterado para verde-claro. Essa funcionalidade é encapsulada em um `try` / `catch` bloquear caso não tem o controle o efeito é anexado a um `BackgroundColor` propriedade.
 
-## <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone e projetos de plataforma Universal do Windows
+## <a name="universal-windows-platform-projects"></a>Projetos de plataforma universal do Windows
 
-O seguinte exemplo de código mostra o `FocusEffect` implementação para os projetos do Windows Phone e Windows UWP (plataforma Universal):
+O seguinte exemplo de código mostra o `FocusEffect` implementação para projetos do Windows UWP (plataforma Universal):
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinRT;
+using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
 [assembly: ExportEffect(typeof(FocusEffect), "FocusEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
     {
@@ -256,7 +256,7 @@ Este artigo demonstrou como criar um efeito que altera a cor de fundo de [ `Entr
 ## <a name="related-links"></a>Links relacionados
 
 - [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
+- [Efeito](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
 - [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
 - [Efeito de cor de plano de fundo (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/)
 - [Efeito de foco (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)

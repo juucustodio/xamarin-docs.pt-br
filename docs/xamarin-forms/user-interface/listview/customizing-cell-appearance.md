@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: df0e113f0c76ea9bde58da7a7ceccd50edd5b227
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="cell-appearance"></a>Aparência de célula
 
@@ -62,8 +62,6 @@ TextCells são renderizados como controles nativos em tempo de execução, para 
 - `TextColor` &ndash; a cor do texto
 - `DetailColor` &ndash; a cor do texto de detalhes
 - `ImageSource` &ndash; a imagem a ser exibida ao lado do texto
-
-Observe que, durante o direcionamento do Windows Phone 8.1, `ImageCell` não dimensionará imagens por padrão. Além disso, observe que o Windows Phone 8.1 é a única plataforma em que detalhe o texto é apresentado na mesma cor e fonte como texto principal por padrão. Windows Phone 8.0 renderiza `ImageCell` conforme mostrado abaixo:
 
 ![](customizing-cell-appearance-images/image-cell-default.png "Exemplo de ImageCell padrão")
 

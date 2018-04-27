@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 58f5a64f85dbe5a6889e6ff598c14fdfd9b0a5df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da3025f2616c91488ec70e25836351b08e957494
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-contentpage"></a>Personalizando um ContentPage
 
 _Um ContentPage é um elemento visual que exibe uma única e ocupa a maior parte da tela. Este artigo demonstra como criar um renderizador personalizado para a página de ContentPage, permitindo que os desenvolvedores substituir a renderização nativo padrão com sua próprias personalização específica de plataforma._
 
-Cada controle xamarin. Forms tem um processador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) é processado por um aplicativo xamarin. Forms, no iOS a `PageRenderer` classe é instanciada, que por sua vez instancia um nativo `UIViewController` controle. Na plataforma Android, o `PageRenderer` classe instancia um `ViewGroup` controle. No Windows Phone e o Windows UWP (plataforma Universal), o `PageRenderer` classe instancia um `FrameworkElement` controle. Para obter mais informações sobre o processador e classes de controle nativo que mapeiam xamarin. Forms controles, consulte [Classes de Base de processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada controle xamarin. Forms tem um processador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) é processado por um aplicativo xamarin. Forms, no iOS a `PageRenderer` classe é instanciada, que por sua vez instancia um nativo `UIViewController` controle. Na plataforma Android, o `PageRenderer` classe instancia um `ViewGroup` controle. Sobre o Windows UWP (plataforma Universal), o `PageRenderer` classe instancia um `FrameworkElement` controle. Para obter mais informações sobre o processador e classes de controle nativo que mapeiam xamarin. Forms controles, consulte [Classes de Base de processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 O diagrama a seguir ilustra o relacionamento entre o [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) e os controles nativo correspondentes que implementação-la:
 
@@ -197,57 +197,6 @@ namespace CustomRenderer.Droid
 A chamada para a classe base `OnElementChanged` método instancia um Android `ViewGroup` controle, que é um grupo de modos de exibição. O fluxo ao vivo câmera só é processado desde que o processador não estiver anexado a um elemento xamarin. Forms existente, e desde que existe uma instância de página que está sendo renderizado pelo renderizador personalizado.
 
 A página, em seguida, é personalizada com a invocação de uma série de métodos que usam o `Camera` API para fornecer a transmissão ao vivo de câmera e a capacidade de capturar uma foto, antes de `AddView` método é invocado para adicionar a câmera em tempo real fluxo de interface do usuário para o `ViewGroup`.
-
-### <a name="creating-the-page-renderer-on-windows-phone"></a>Criando o renderizador de página no Windows Phone
-
-O exemplo de código a seguir mostra o renderizador de página para a plataforma Windows Phone:
-
-```csharp
-[assembly: ExportRenderer (typeof(CameraPage), typeof(CameraPageRenderer))]
-namespace CustomRenderer.WinPhone81
-{
-    public class CameraPageRenderer : PageRenderer
-    {
-        ...
-
-        protected override void OnElementChanged (VisualElementChangedEventArgs e)
-        {
-            base.OnElementChanged (e);
-
-            if (e.OldElement != null || Element == null) {
-                return;
-            }
-
-            try {
-                ...
-                var container = ContainerElement as Canvas;
-
-                SetupUserInterface ();
-                SetupEventHandlers ();
-                SetupLiveCameraStream ();
-                container.Children.Add (page);
-            }
-            ...
-        }
-
-        protected override Size ArrangeOverride(Size finalSize)
-        {
-            page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
-            return finalSize;
-        }
-        ...
-    }
-}
-```
-
-A chamada para a classe base `OnElementChanged` método instancia um Windows Phone `Canvas` controle, no qual a página é renderizada. O fluxo ao vivo câmera só é processado desde que o processador não estiver anexado a um elemento xamarin. Forms existente, e desde que existe uma instância de página que está sendo renderizado pelo renderizador personalizado.
-
-Na plataforma Windows Phone, uma referência de tipo para a página nativo que está sendo usada na plataforma pode ser acessada por meio de `ContainerElement` propriedade, com o `Canvas` controlar sendo a referência de tipo para o `FrameworkElement`. A página, em seguida, é personalizada com a invocação de uma série de métodos que usam o `MediaCapture` API para fornecer a transmissão ao vivo de câmera e a capacidade de capturar uma foto antes da página personalizada é adicionada para o `Canvas` para exibição.
-
-Ao implementar um renderizador personalizado que é derivada de `PageRenderer` em tempo de execução do Windows, o `ArrangeOverride` método também deve ser implementado para organizar os controles da página, porque o processador de base não sabe o que fazer com elas. Caso contrário, resultados de uma página em branco. Portanto, no exemplo de `ArrangeOverride` chamadas de método de `Arrange` método na `Page` instância.
-
-> [!NOTE]
-> É importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo do Windows Phone 8.1 WinRT. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte o `CleanUpCaptureResourcesAsync` método no projeto do Windows Phone na solução de exemplo, e [início rápido: captura de vídeo usando a API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Criando o renderizador de página em UWP
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 511a7052b07a853279f91211b3e3b1219f125c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d16c45b7f7cb7eef67a905b6fbcb9b8675b0b2ba
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview-interactivity"></a>Interatividade de ListView
 
@@ -53,12 +53,10 @@ Com seleção habilitado:
 
 ![](interactivity-images/selection-default.png "ListView com seleção habilitada")
 
-Observe que, no Windows Phone, algumas células, incluindo `SwitchCell` não atualizar seu estado visual em resposta a seleção.
-
 <a name="Context_Actions" />
 
 ## <a name="context-actions"></a>Ações de contexto
-Geralmente, os usuários desejam agir em um item em uma `ListView`. Por exemplo, considere uma lista de endereços de email no aplicativo de email. No iOS, você pode passar para excluir uma mensagem e no Windows Phone, você pode pressionar uma mensagem longa e, em seguida, excluí-lo:
+Geralmente, os usuários desejam agir em um item em uma `ListView`. Por exemplo, considere uma lista de endereços de email no aplicativo de email. No iOS, você pode passar para excluir uma mensagem:
 
 ![](interactivity-images/context-default.png "ListView com ações de contexto")
 
@@ -149,8 +147,6 @@ Puxe para atualizar como o usuário está recebendo:
 ![](interactivity-images/refresh-start.png "Recepção de ListView para atualização em andamento")
 
 Puxe para atualizar como o usuário foi lançado de pull. Isso é que o usuário vê enquanto você estiver atualizando a lista: ![ ] (interactivity-images/refresh-in-progress.png "ListView Pull para atualização completa")
-
-Observe que a partir do xamarin. Forms 1.4.3, puxe para atualizar não é suportado no Windows Phone 8.1. No Windows phone 8, puxe para atualizar não é um recurso de plataforma nativo, portanto uma implementação de atualização de pull é fornecida pelo xamarin. Forms. Por fim, lembre-se que puxe para atualizar não funcionará no Windows Phone, se todos os elementos na lista podem se ajustar na tela (em outras palavras, se a rolagem vertical não é necessário).
 
 ListView expõe alguns eventos que permitem a você responder a eventos de atualização de pull.
 

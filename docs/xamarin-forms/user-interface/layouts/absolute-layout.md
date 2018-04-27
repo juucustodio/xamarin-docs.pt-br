@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: d07026fbcc43a43a9f26d85ad15d5a4e3165e2ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 110c608558059ba0f207b4cff343b428125e1784
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -282,11 +282,7 @@ O código acima resulta no layout a seguir:
 
 ![](absolute-layout-images/abs.png "AbsoluteLayout complexo")
 
-Observe que, devido a uma diferença em como os botões são renderizados pelo Windows Phone, alguns dos círculos foram substituídas por boxviews na captura de tela do Windows Phone.
-
 Observe que `AbsoluteLayout`s estiverem aninhados, como em alguns casos aninhamento layouts pode ser mais fácil do que apresentar todos os elementos do layout do mesmo.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

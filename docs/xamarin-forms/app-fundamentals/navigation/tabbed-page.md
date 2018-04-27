@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 11287d38ec0e01e068ca385c92e6a6efdc323aeb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4210f672cdc68acc45b1f547dcc2e6933298df93
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tabbed-page"></a>Página com guias
 
@@ -39,7 +39,6 @@ O layout de um [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.F
     > [!NOTE]
   > Observe que, ao usar AppCompat no Android, cada guia também exibirá um ícone. Além disso, o `TabbedPageRenderer` de AppCompat Android tem um substituível `SetTabIcon` método que pode ser usado para carregar os ícones de guia de um personalizado `Drawable`. Essa substituição é torna possível usar as imagens de SVG como ícones em uma `TabbedPage`.
 
-- No Windows Phone, a lista de guias é exibida na parte superior da tela e a área de detalhes está abaixo. Na guia nomes são automaticamente convertidos em minúsculas e o usuário pode rolar a coleção de guias se houver muito grande para caber na tela.
 - No Windows tablet-fatores de forma, as guias não estão sempre visíveis e os usuários precisam passe o dedo para baixo (ou com o botão direito do mouse, se tiverem um mouse anexado) para exibir as guias em um `TabbedPage` (conforme mostrado abaixo).
 
 ![](tabbed-page-images/windows-tabs.png "Guias de TabbedPage no Windows")

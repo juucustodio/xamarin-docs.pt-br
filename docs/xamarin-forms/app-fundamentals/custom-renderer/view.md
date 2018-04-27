@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8ab35b3ec13c76e1e00da6e3265e3e337e37b7e
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-view"></a>Implementando um modo de exibição
 
 _Controles de interface de usuário personalizada do xamarin. Forms devem derivar da classe de exibição, que é usada para colocar controles na tela e layouts. Este artigo demonstra como criar um renderizador personalizado para um controle personalizado do xamarin. Forms que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo._
 
-Cada exibição xamarin. Forms tem um processador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) é processado por um aplicativo xamarin. Forms no iOS, o `ViewRenderer` classe é instanciada, que por sua vez instancia um nativo `UIView` controle. Na plataforma Android, o `ViewRenderer` classe instancia um nativo `View` controle. No Windows Phone e o Windows UWP (plataforma Universal), o `ViewRenderer` classe instancia um nativo `FrameworkElement` controle. Para obter mais informações sobre o processador e classes de controle nativo que mapeiam xamarin. Forms controles, consulte [Classes de Base de processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada exibição xamarin. Forms tem um processador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) é processado por um aplicativo xamarin. Forms no iOS, o `ViewRenderer` classe é instanciada, que por sua vez instancia um nativo `UIView` controle. Na plataforma Android, o `ViewRenderer` classe instancia um nativo `View` controle. Sobre o Windows UWP (plataforma Universal), o `ViewRenderer` classe instancia um nativo `FrameworkElement` controle. Para obter mais informações sobre o processador e classes de controle nativo que mapeiam xamarin. Forms controles, consulte [Classes de Base de processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 O diagrama a seguir ilustra o relacionamento entre o [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) e os controles nativo correspondentes que implementação-la:
 
@@ -263,13 +263,13 @@ namespace CustomRenderer.Droid
 
 Desde que o `Control` é de propriedade `null`, o `SetNativeControl` método é chamado para instanciar um novo `CameraPreview` controlar e atribuir uma referência a ele para o `Control` propriedade. O `CameraPreview` o controle é específico da plataforma personalizado que usa o `Camera` API para fornecer o fluxo de visualização da câmera. O `CameraPreview` controle, em seguida, é configurado, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms. Essa configuração envolve a criação de um novo nativo `Camera` de objeto para acessar uma câmera de hardware específico e registrar um manipulador de eventos para processar o `Click` evento. Por sua vez este manipulador de mensagens irá interromper e iniciar a visualização do vídeo quando ele é tocado. O `Click` evento é não inscrito em se o elemento xamarin. Forms o processador está anexado a alterações.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Criando o renderizador personalizado no Windows Phone e UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Criando o renderizador personalizado em UWP
 
-O exemplo de código a seguir mostra o renderizador personalizado para o Windows Phone e UWP:
+O exemplo de código a seguir mostra o renderizador personalizado para UWP:
 
 ```csharp
 [assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
@@ -317,7 +317,7 @@ namespace CustomRenderer.WinPhone81
 Desde que o `Control` é de propriedade `null`, um novo `CaptureElement` é instanciada e `InitializeAsync` método é chamado, que usa o `MediaCapture` API para fornecer o fluxo de visualização da câmera. O `SetNativeControl` método é chamado para atribuir uma referência para o `CaptureElement` de instância para o `Control` propriedade. O `CaptureElement` controlar expõe um `Tapped` evento é manipulado pelo `OnCameraPreviewTapped` método para parar e iniciar a visualização do vídeo quando ele é tocado. O `Tapped` evento está inscrito quando o renderizador personalizado é anexado a um novo elemento xamarin. Forms e não inscrito em apenas quando o elemento que o processador é anexado a alterações.
 
 > [!NOTE]
-> É importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo de UWP ou Windows Phone. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte e [início rápido: captura de vídeo usando a API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) para aplicativos de tempo de execução do Windows, e [exibir a visualização de câmera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) para aplicativos UWP.
+> É importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo de UWP. Falha ao fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, consulte [exibir a visualização de câmera](/windows/uwp/audio-video-camera/simple-camera-preview-access/).
 
 ## <a name="summary"></a>Resumo
 

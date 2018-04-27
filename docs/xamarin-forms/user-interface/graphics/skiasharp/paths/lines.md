@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 24bf7bd7fb2aa51968a96bdbf808030604665c26
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Linhas e limites de traço
 
@@ -235,7 +235,7 @@ O iPhone na esquerda mostra como o `SKPointMode.Points` faz com que o membro de 
 
 Quando você usar `SKPointMode.Lines`, conforme mostrado na tela Android no centro, o `DrawPoints` método desenha uma linha entre cada par de `SKPoint` valores, usando a terminação de linha especificada, nesse caso `Round`.
 
-O dispositivo móvel Windows mostra o resultado da `SKPointMode.Polygon` valor. Uma linha é desenhada entre os pontos sucessivos na matriz, mas se você observar em conjunto, você verá que essas linhas não estão conectadas. Cada uma dessas linhas separadas inicia e termina com o limite de linha especificado. Se você selecionar o `Round` caps, as linhas podem parecer estar conectado, mas não realmente estão conectados.
+A captura de tela UWP mostra o resultado da `SKPointMode.Polygon` valor. Uma linha é desenhada entre os pontos sucessivos na matriz, mas se você observar em conjunto, você verá que essas linhas não estão conectadas. Cada uma dessas linhas separadas inicia e termina com o limite de linha especificado. Se você selecionar o `Round` caps, as linhas podem parecer estar conectado, mas não realmente estão conectados.
 
 Se linhas são conectadas ou não é um aspecto fundamental de trabalhar com caminhos de gráficos.
 
@@ -243,4 +243,4 @@ Se linhas são conectadas ou não é um aspecto fundamental de trabalhar com cam
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
