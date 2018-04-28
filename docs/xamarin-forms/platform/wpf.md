@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2018
-ms.openlocfilehash: 51aad1643709a96c56ccad8187a53f47a65a9dac
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 2e2bbf12cd7b4abab4609349b549fde1bcea09e8
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-platform-setup"></a>Instalação de plataforma do WPF
 
@@ -57,7 +57,7 @@ Siga estas instruções para adicionar um aplicativo WPF que serão executados n
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
     ```
 
-    Agora, altere o `Window` marca para `wpf:FormsApplcationPage`. Alterar o `Title` definindo como o nome do seu aplicativo, por exemplo, **BoxViewClock**. O arquivo XAML completo deve ter esta aparência:
+    Agora, altere o `Window` marca para `wpf:FormsApplicationPage`. Alterar o `Title` definindo como o nome do seu aplicativo, por exemplo, **BoxViewClock**. O arquivo XAML completo deve ter esta aparência:
 
     ```xaml
     <wpf:FormsApplicationPage x:Class="BoxViewClock.WPF.MainWindow"

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 37ecc76d9774b3f375af92f2a00c6c687358f065
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="cell-appearance"></a>Aparência de célula
 
@@ -70,7 +70,7 @@ TextCells são renderizados como controles nativos em tempo de execução, para 
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>Células personalizadas
-Quando as células internas não fornecerem o layout necessário, células personalizadas implementado o layout necessário. Por exemplo, você talvez queira apresentar uma célula com dois rótulos que têm o mesmo peso. Um `LabelCell` seria suficiente porque a `LabelCell` tem um rótulo que for menor. A maioria das personalizações de célula adicionam dados somente leitura adicionais (como rótulos adicionais, imagens ou outras informações de exibição).
+Quando as células internas não fornecerem o layout necessário, células personalizadas implementado o layout necessário. Por exemplo, você talvez queira apresentar uma célula com dois rótulos que têm o mesmo peso. Um `TextCell` seria suficiente porque a `TextCell` tem um rótulo que for menor. A maioria das personalizações de célula adicionam dados somente leitura adicionais (como rótulos adicionais, imagens ou outras informações de exibição).
 
 Todas as células personalizadas devem derivar de [ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), a mesma classe base que todos os a célula interna tipos de uso.
 

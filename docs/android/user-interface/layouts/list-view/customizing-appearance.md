@@ -5,12 +5,12 @@ ms.assetid: B09AD282-2C4F-D71E-6806-9B1EF05C2CD4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 71557cc0adb123cd4556c3d35add314f44f30da1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/26/2018
+ms.openlocfilehash: f4d737e31304a88f3ec293f90267a35ed1f2c7a5
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="customizing-a-listviews-appearance"></a>Personalizando a aparência de um ListView
 
@@ -106,7 +106,7 @@ Para exibir uma passagem esses Acessórios a ID de recurso necessária de layout
 ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItemChecked, items);
 ```
 
-O `ListView` se dá suporte aos modos de seleção diferente, independentemente do acessório que está sendo exibido. Para evitar confusão, use `Single` modo de seleção com `Checked` e `SingleChoice` Acessórios e `Multiple` modo com o `MultipleChoice` estilo. O modo de seleção é controlado pelo `ChoiceMode` propriedade o `ListView`.
+O `ListView` se dá suporte aos modos de seleção diferente, independentemente do acessório que está sendo exibido. Para evitar confusão, use `Single` modo de seleção com `SingleChoice` Acessórios e `Checked` ou `Multiple` modo com o `MultipleChoice` estilo. O modo de seleção é controlado pelo `ChoiceMode` propriedade o `ListView`.
 
 
 ### <a name="handling-api-level"></a>Tratamento de nível de API
@@ -386,6 +386,6 @@ Android tenta melhorar o desempenho de `ListView` rolagem armazenando informaç�
 
 ## <a name="related-links"></a>Links relacionados
 
-- [BuiltInViews (sample)](https://developer.xamarin.com/samples/BuiltInViews/)
+- [BuiltInViews (exemplo)](https://developer.xamarin.com/samples/BuiltInViews/)
 - [AccessoryViews (exemplo)](https://developer.xamarin.com/samples/AccessoryViews/)
 - [CustomRowView (exemplo)](https://developer.xamarin.com/samples/CustomRowView/)
