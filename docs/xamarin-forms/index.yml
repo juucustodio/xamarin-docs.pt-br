@@ -7,13 +7,13 @@ metadata:
   ms.author: crdun
   ms.date: 04/25/2018
   ms.topic: landing-page
-  ms.openlocfilehash: cf57fed4ab3e7036176e2c430226f5e2f5a34536
-  ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+  ms.openlocfilehash: 20178c7ff96dbdd7353d92f454f3231ad89ba3eb
+  ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/26/2018
+  ms.lasthandoff: 04/27/2018
 abstract:
-  description: O Xamarin.Forms expõe a um kit completo de ferramentas de interface do usuário entre plataformas para desenvolvedores de .NET. Compile aplicativos totalmente nativos para Android, iOS e Windows usando C# no Visual Studio.
+  description: O Xamarin.Forms expõe a um kit completo de ferramentas de interface do usuário entre plataformas para desenvolvedores de .NET. Crie aplicativos totalmente nativos para Android, iOS e Plataforma Universal do Windows usando C# no Visual Studio.
   menu:
     items:
     - href: ~/xamarin-forms/samples/
@@ -30,7 +30,7 @@ sections:
 - title: Introdução
   items:
   - type: paragraph
-    text: Aprenda a compilar seu primeiro aplicativo Xamarin.Forms com Xamarin e C#, direcionado para Android, iOS e Windows.
+    text: Saiba como criar seu primeiro aplicativo Xamarin.Forms com Xamarin e C#, direcionado para Android, iOS e Plataforma Universal do Windows.
   - type: list
     style: icon48
     items:
