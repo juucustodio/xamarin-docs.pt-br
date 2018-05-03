@@ -16,6 +16,7 @@
 #### [Parte 4. Conceitos básicos da associação de dados](xaml/xaml-basics/data-binding-basics.md)
 #### [Parte 5. De associações de dados a MVVM](xaml/xaml-basics/data-bindings-to-mvvm.md)
 ### [compilação de XAML](xaml/xamlc.md)
+### [Recarregamento dinâmico](xaml/live-reload.md)
 ### [Visualizador de XAML](xaml/xaml-previewer.md)
 ### [Namespaces XAML](xaml/namespaces.md)
 ### [Extensões de marcação XAML](xaml/markup-extensions/index.md)

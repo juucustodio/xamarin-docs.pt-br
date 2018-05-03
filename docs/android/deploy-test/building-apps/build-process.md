@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 2833c645a07a3717d9baeeec11e5fa7f9087725a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -52,7 +52,7 @@ O Fast Deployment é habilitado por padrão e pode ser desabilitado em builds de
 O processo de build do Xamarin.Android baseia-se no MSBuild, que também é o formato de arquivo de projeto usado pelo Visual Studio para Mac e pelo Visual Studio.
 Em geral, os usuários não precisarão editar os arquivos do MSBuild manualmente &ndash; o IDE cria projetos totalmente funcionais e os atualiza com eventuais alterações feitas, além de invocar destinos de build automaticamente conforme necessário. 
 
-Usuários avançados talvez queiram fazer coisas não compatíveis com a interface gráfica do IDE, portanto, o processo de build pode ser personalizado editando-se o arquivo de projeto diretamente. Esta página documenta somente os recursos e personalizações específicos do Xamarin.Android &ndash; muitas outras coisas são possíveis com os itens, propriedades e destinos normais do MSBuild. 
+Usuários avançados talvez queiram realizar ações sem suporte na interface gráfica do IDE, portanto, o processo de build pode ser personalizado editando-se o arquivo de projeto diretamente. Esta página documenta somente os recursos e personalizações específicos do Xamarin.Android &ndash; muitas outras coisas são possíveis com os itens, propriedades e destinos normais do MSBuild. 
 
 <a name="Build_Targets" />
 
@@ -91,7 +91,7 @@ Propriedades do MSBuild controlam o comportamento dos destinos. Elas são especi
 
     - **PdbOnly**: os símbolos "PDB" são gerados. O pacote do aplicativo *não* será depurável.
 
-    Se `DebugType` não está definida ou é uma cadeia de caracteres vazia, a propriedade `DebugSymbols` controla se o aplicativo é ou não depurável.
+    Se `DebugType` não está definida ou é uma cadeia de caracteres vazia, a propriedade `DebugSymbols` controla se o Aplicativo é depurável.
 
 
 ### <a name="install-properties"></a>Propriedades de instalação
@@ -110,7 +110,7 @@ Propriedades de instalação controlam o comportamento dos destinos `Install` e 
 ### <a name="packaging-properties"></a>Propriedades de empacotamento
 
 Propriedades de empacotamento controlam a criação do pacote Android e são usadas pelos destinos `Install` e `SignAndroidPackage`.
-As [propriedades de assinatura](#Signing_Properties) também são relevantes ao empacotar aplicativos de versão.
+As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao empacotar aplicativos de Versão.
 
 
 -   **AndroidApkSigningAlgorithm** &ndash; Um valor de cadeia de caracteres que especifica o algoritmo de assinatura para usar com `jarsigner -sigalg`.
@@ -238,7 +238,7 @@ As [propriedades de assinatura](#Signing_Properties) também são relevantes ao 
 
 -   **AndroidSdkBuildToolsVersion** &ndash; o pacote de ferramentas de build do Android SDK fornece as ferramentas **aapt** e **zipalign**, entre outras. Várias versões diferentes do pacote de ferramentas de build podem ser instaladas simultaneamente. O pacote de ferramentas de build escolhido para empacotamento é criado procurando e usando uma versão de ferramentas de build "preferencial", se uma está presente; se a versão "preferencial" *não* está presente, o pacote de ferramentas de build com a versão mais alta entre os instalados é usado.
 
-    A propriedade de MSBuild `$(AndroidSdkBuildToolsVersion)` contém a versão das ferramentas de build preferencial. O sistema de build do Xamarin.Android fornece um valor padrão em `Xamarin.Android.Common.targets`, o qual pode ser substituído no arquivo de projeto para escolher uma versão de ferramentas de build alternativa se, por exemplo, o aapt mais recente está falhando e sabe-se que uma versão anterior do aapt funciona.
+    A propriedade do MSBuild `$(AndroidSdkBuildToolsVersion)` contém a versão das ferramentas de build preferencial. O sistema de build do Xamarin.Android fornecerá um valor padrão em `Xamarin.Android.Common.targets`, que poderá ser substituído no arquivo de projeto para escolher uma versão de ferramentas de build alternativa se, por exemplo, o aapt mais recente estiver falhando enquanto uma versão anterior do aapt sabidamente funciona.
 
 -   **AndroidSupportedAbis** &ndash; uma propriedade de cadeia de caracteres que contém uma lista delimitada por ponto e vírgula (`;`) de ABIs que devem ser incluídos no `.apk`.
 
@@ -264,9 +264,9 @@ As [propriedades de assinatura](#Signing_Properties) também são relevantes ao 
 
     Essa propriedade deve ser `True` para builds de versão e `False` para builds de depuração. Ele *pode* precisar ser `True` em builds de depuração se o Fast Deployment não é compatível com o dispositivo de destino.
 
-    Quando essa propriedade é `False`, a propriedade `$(AndroidFastDeploymentType)` do MSBuild também controla o que é inserido no `.apk`, o que pode afetar os tempos de implantação e de rebuild.
+    Quando essa propriedade é `False`, a propriedade `$(AndroidFastDeploymentType)` do MSBuild também controla o que será inserido no `.apk`, o que pode afetar os tempos de implantação e de recompilação.
 
--   **EnableLLVM** &ndash; uma propriedade booliana que determina se o LLVM será ou não usado ao compilar assemblies Ahead of Time em código nativo.
+-   **EnableLLVM** &ndash; Uma propriedade booliana que determina se o LLVM será ou não usado ao compilar assemblies Ahead of Time em código nativo.
 
     O suporte para essa propriedade foi adicionado no Xamarin.Android 5.1.
 
@@ -326,13 +326,13 @@ As [propriedades de assinatura](#Signing_Properties) também são relevantes ao 
     Alguns exemplos: se `abi` for `armeabi` e `versionCode` no manifesto for `123`, `{abi}{versionCode}` produzirá um versionCode de `1123` quando `$(AndroidCreatePackagePerAbi)` for True; caso contrário, gerará um valor de 123.
     Se `abi` é `x86_64` e `versionCode` no manifesto é `44`. Isso produzirá `544` quando `$(AndroidCreatePackagePerAbi)` for True; caso contrário, gerará um valor de `44`.
 
-    Se nós incluíssemos uma cadeia de caracteres de formato de preenchimento esquerdo `{abi}{versionCode:0000}`, isso produziria `50044` porque estamos aplicando preenchimento esquerdo ao `versionCode` com `0`. Alternativamente, você pode usar o preenchimento decimal como `{abi}{versionCode:D4}`, que tem o mesmo efeito do exemplo anterior.
+    Se nós incluíssemos uma cadeia de caracteres de formato de preenchimento esquerdo `{abi}{versionCode:0000}`, isso produziria `50044` porque estamos aplicando preenchimento esquerdo ao `versionCode` com `0`. Como alternativa, você pode usar o preenchimento decimal como `{abi}{versionCode:D4}`, que tem o mesmo efeito do exemplo anterior.
 
     Somente os formatos de cadeias de caracteres de preenchimento '0' e 'Dx' são compatíveis, já que o valor PRECISA ser um inteiro.
     
-    Itens de chave pré-definidos
+    Itens chave pré-definidos
 
-    -   **abi** &ndash; insere a abi direcionada para o aplicativo
+    -   **abi** &ndash; Insere a abi direcionada para o aplicativo
         -   1 &ndash; `armeabi`
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
@@ -341,11 +341,11 @@ As [propriedades de assinatura](#Signing_Properties) também são relevantes ao 
 
     -   **minSDK** &ndash; insere o valor mínimo compatível do SDK encontrado no `AndroidManifest.xml`, ou então `11` se não há nenhum definido.
 
-    -   **versionCode** &ndash; usa o código da versão diretamente do `Properties\AndroidManifest.xml`. 
+    -   **versionCode** &ndash; Usa o código da versão diretamente do `Properties\AndroidManifest.xml`. 
 
     Você pode definir itens personalizados usando a propriedade `$(AndroidVersionCodeProperties)` (definida a seguir).
 
-    Por padrão o valor será definido como `{abi}{versionCode:D6}`. Se um desenvolvedor quiser manter o comportamento anterior, você poderá substituir o padrão configurando a propriedade `$(AndroidUseLegacyVersionCode)` como `true`
+    Por padrão o valor será definido como `{abi}{versionCode:D6}`. Se um desenvolvedor quiser manter o comportamento anterior, você poderá configurar a propriedade `$(AndroidUseLegacyVersionCode)` como `true` para substituir o padrão
 
     Adicionado no Xamarin.Android 7.2.
 
@@ -576,7 +576,7 @@ Os arquivos com essa ação do build serão tratados de forma semelhante aos rec
 
 A ação de build `Content` normal não é compatível (pois ainda não descobrimos como dar suporte a ela sem uma etapa de primeira execução de custo possivelmente alto).
 
-Começando pelo Xamarin.Android 5.1, uma eventual tentativa de usar a ação de build `@(Content)` resultará em um aviso `XA0101`.
+Começando com o Xamarin.Android 5.1, tentar usar a ação de build `@(Content)` resultará em um aviso `XA0101`.
 
 ### <a name="linkdescription"></a>LinkDescription
 

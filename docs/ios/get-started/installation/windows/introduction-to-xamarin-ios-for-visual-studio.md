@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introdução ao Xamarin.iOS para Visual Studio
 
@@ -36,39 +36,25 @@ Há alguns requisitos que devem ser seguidos ao desenvolver para iOS no Visual S
 
 Há várias opções de configuração disponíveis para você escolher a que funciona melhor para suas necessidades de desenvolvimento. Elas estão listadas abaixo:
 
--  Usar um Mac como seu computador de desenvolvimento principal e executar uma Máquina Virtual Windows com Visual Studio instalado. É recomendável usar o software de VM como [Parallels](http://www.parallels.com/products/desktop/) ou [VMWare](http://www.vmware.com/products/fusion/).
--  Usar um Mac apenas como um Host de Build. Nesse cenário, estaria simplesmente conectado à mesma rede que um computador Windows com as ferramentas [necessárias](~/cross-platform/get-started/installation/windows.md#installation) instaladas.
+-  Usar um Mac como seu computador de desenvolvimento principal e executar uma máquina virtual Windows com Visual Studio instalado. É recomendável usar o software de VM como [Parallels](http://www.parallels.com/products/desktop/) ou [VMWare](http://www.vmware.com/products/fusion/).
+-  Usar um Mac apenas como um host de build. Nesse cenário, estaria conectado à mesma rede que um computador Windows com as ferramentas [necessárias](~/cross-platform/get-started/installation/windows.md#installation) instaladas.
 
 
 Em qualquer caso, você deve seguir estas etapas:
 
-- [Instalar as ferramentas do Xamarin.iOS no host Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Configurar seu Mac](~/ios/get-started/installation/windows/index.md#configuring)
+- [Instalar o Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 - [Instalar as ferramentas Xamarin no Windows](~/cross-platform/get-started/installation/windows.md)
-
-Para desenvolver com o Xamarin no Visual Studio, você deve estar usando, **no mínimo**, o Visual Studio 2015 Professional ou superior. O Xamarin **não funcionará** com Express Editions do Visual Studio, pois elas não dão suporte a suplementos.
 
 ## <a name="connecting-to-the-mac"></a>Conectando-se ao Mac
 
-Você pode se conectar a seu host de build Mac usando o ícone na barra de ferramentas do Visual Studio (desde que um aplicativo iOS esteja aberto):
+Para conectar o Visual Studio em seu host de build do Mac, siga as instruções no guia [Emparelhar Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Ícone Conectar-se ao Mac")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
-
-Ou navegando para **Ferramentas > Opções** no Visual Studio e selecionando **Xamarin > Configurações do iOS**:
-
- [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "Opção do iOS")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
-
-Você pode alterar o Host de Build de Mac clicando no botão **Localizar Agente Mac do Xamarin**. É exibida a tela a seguir para atualizar o Host de Build do Mac:
-
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Caixa de diálogo Agente Mac do Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## <a name="visual-studio-toolbar-overview"></a>Visão geral da barra de ferramentas do Visual Studio
 
 O Xamarin iOS para o Visual Studio adiciona itens à barra de ferramentas padrão e à nova barra de ferramentas do iOS.
 As funções dessas barras de ferramentas são explicadas abaixo.
-
-
 
 ### <a name="standard-toolbar"></a>Barra de ferramentas padrão
 
@@ -174,7 +160,7 @@ Para adicionar objetos à exibição, use o painel **Caixa de Ferramentas** para
 
 ### <a name="device-logging"></a>Registro de dispositivo
 
-Os blocos de log do Android e do iOS são unificados no Visual Studio 2015 e versões posteriores
+Os blocos de log do Android e do iOS são unificados no Visual Studio 2017.
 
 A nova janela de ferramentas de Log do Dispositivo para Visual Studio permite mostrar logs de dispositivos Android e iOS. Ela pode ser exibida executando qualquer um dos seguintes comandos:
 

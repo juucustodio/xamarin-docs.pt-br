@@ -1,6 +1,6 @@
 ---
 title: Introdução ao Xamarin.Forms
-description: Xamarin.Forms é um kit de ferramentas de interface do usuário de plataforma cruzada que permite que os desenvolvedores criem, com eficiência, layouts de interface de usuário nativos que possam ser compartilhados entre iOS, Android, Windows Phone, e aplicativos da plataforma Windows universal. Esta série introduz noções básicas do desenvolvimento do Xamarin.Forms e aborda a compilação de aplicativos multitela e multiplataforma.
+description: Xamarin.Forms é um kit de ferramentas de interface do usuário multiplataforma que permite que os desenvolvedores criem, com eficiência, layouts de interface de usuário nativos que possam ser compartilhados entre iOS, Android e aplicativos da Plataforma Universal do Windows. Esta série introduz noções básicas do desenvolvimento do Xamarin.Forms e aborda a compilação de aplicativos multitela e multiplataforma.
 ms.prod: xamarin
 ms.assetid: d87d7232-242c-4ec4-81e9-36103d7e8fcf
 ms.technology: xamarin-forms
@@ -8,15 +8,15 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 58c0fa2041c106f697166891c0e88a409283c17f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da5547de1f21b1f02462f47a4e6ffee43dd0d1bf
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="getting-started-with-xamarinforms"></a>Introdução ao Xamarin.Forms
 
-_Xamarin.Forms é um kit de ferramentas de interface do usuário de plataforma cruzada que permite que os desenvolvedores criem, com eficiência, layouts de interface de usuário nativos que possam ser compartilhados entre iOS, Android, Windows Phone, e aplicativos da Plataforma Universal do Windows. Esta série introduz noções básicas do desenvolvimento do Xamarin.Forms e aborda a compilação de aplicativos multitela e multiplataforma._
+_Xamarin.Forms é um kit de ferramentas de interface do usuário multiplataforma que permite que os desenvolvedores criem, com eficiência, layouts de interface de usuário nativos que possam ser compartilhados entre iOS, Android e aplicativos da Plataforma Universal do Windows. Esta série introduz noções básicas do desenvolvimento do Xamarin.Forms e aborda a compilação de aplicativos multitela e multiplataforma._
 
 Para obter uma visão geral da instalação e práticas recomendadas de instalação aplicáveis ao desenvolvimento de plataforma cruzada, consulte [Requisitos e instalação do](installation.md) [Xamarin.Forms](~/cross-platform/get-started/installation/index.md).
 
