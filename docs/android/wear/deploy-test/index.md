@@ -1,17 +1,17 @@
 ---
-title: Implantação e Teste
-description: Como testar seu aplicativo de desgaste em um dispositivo Android (ou emulador) e prepará-lo para implantação.
+title: OS aplicativos de uso de teste, otimização e implantação
+description: Como testar seu aplicativo de sistema operacional de uso em um dispositivo Android (ou emulador) e prepará-lo para implantação.
 ms.prod: xamarin
 ms.assetid: 3D8E5A97-F719-4E8C-B777-108DFF20C91F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/19/2017
-ms.openlocfilehash: e6472b3bf07750338d9ada7ca62f0a5c9e2c8a7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 9e35b383c77e246d453f03c4b6cdac7c01d32ace
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
 

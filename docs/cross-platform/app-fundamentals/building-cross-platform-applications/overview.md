@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: b3b15736b5ec750e0b8db078cf428a7f573bc435
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e4a55829e35329a50b2e121311b0102328e6fea9
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cross-platform-applications-overview"></a>Criação de visão geral de aplicativos de plataforma cruzada /
 
@@ -25,7 +25,7 @@ Xamarin não é apenas uma "gravação-uma vez, executadas em qualquer lugar" pl
 Aqui está um resumo dos principais pontos para a criação de aplicativos de plataforma cruzada do Xamarin:
 
 -   **Usar o c#** -gravar seus aplicativos em c#. Código existente escrito em c# pode ser movido para o iOS e Android usando o Xamarin facilmente e obviamente usado em aplicativos do Windows.
--   **Usar padrões de design MVC ou MVVVM** -desenvolver a Interface do usuário do seu aplicativo usando o padrão de modelo/exibição/controlador. Projetar seu aplicativo usando uma abordagem de modelo/exibição/controlador ou uma abordagem de modelo/exibição/ViewModel onde há uma separação clara entre o modelo de"" e o restante. Determinar quais partes do seu aplicativo irá usar elementos de interface do usuário nativo de cada plataforma (iOS, Android, Windows, Mac) e usar isso como uma diretriz para dividir seu aplicativo em dois componentes: "Principal" e "Interface de usuário".
+-   **Usar padrões de design MVC ou MVVM** -desenvolver a Interface do usuário do seu aplicativo usando o padrão de modelo/exibição/controlador. Projetar seu aplicativo usando uma abordagem de modelo/exibição/controlador ou uma abordagem de modelo/exibição/ViewModel onde há uma separação clara entre o modelo de"" e o restante. Determinar quais partes do seu aplicativo irá usar elementos de interface do usuário nativo de cada plataforma (iOS, Android, Windows, Mac) e usar isso como uma diretriz para dividir seu aplicativo em dois componentes: "Principal" e "Interface de usuário".
 -   **Criar interfaces do usuário nativo** -cada aplicativo específicas do sistema operacional fornece uma camada de interface de usuário diferente (implementado no c# com a Ajuda das ferramentas de design de interface do usuário nativo):
 
 1.  No iOS, use as APIs UIKit para criar aplicativos atraentes nativo, utilizando, opcionalmente, o designer do iOS do Xamarin para criar sua interface do usuário visualmente.

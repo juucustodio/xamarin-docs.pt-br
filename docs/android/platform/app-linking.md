@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2ef6b8044387d759e26d05c1468caaad7efb9bdc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 84185bb616597ee62a35c1acacc5e3664f500c21
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
 
@@ -68,8 +68,8 @@ O exemplo a seguir mostra como usar o [IntentFilterAttribute](https://developer.
               Categories = new[] { Intent.CategoryBrowsable, Intent.CategoryDefault },
               DataScheme = "http",
               DataHost = "recipe-app.com",
-              DataPathPrefix = "/recipe"),
-              AutoVerify=true]
+              DataPathPrefix = "/recipe",
+              AutoVerify=true)]
 public class RecipeActivity : Activity
 {
     // Code for the activity omitted

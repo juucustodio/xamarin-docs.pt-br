@@ -1,18 +1,18 @@
 ---
-title: Projeto de API
+title: Princípios de Design de API do xamarin
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: a9c0b02457f006f75dc5b6f0a52e68865d620f67
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 611046954e8ef359476d2bd12a69f04041d869f1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="api-design"></a>Projeto de API
+# <a name="xamarinandroid-api-design-principles"></a>Princípios de Design de API do xamarin
 
 
 ## <a name="overview"></a>Visão geral
@@ -59,7 +59,6 @@ Estes são alguns dos nossos princípios de design para a associação xamarin
     - Expor c# delegados (lambdas, métodos anônimos e System. Delegate) em vez de interfaces de método único quando apropriado e aplicável.
 
     - Fornecem um mecanismo para chamar a biblioteca de Java arbitrária ( [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)).
-
 
 
 ## <a name="assemblies"></a>Assemblies

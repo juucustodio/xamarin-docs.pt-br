@@ -1,16 +1,16 @@
 ---
-title: .NET inserindo no Android
+title: Compartilhando o código do .NET com o Java e aplicativos do Android
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.date: 03/28/2018
-ms.openlocfilehash: 3a9e5f0b99659763b54f318c1eeeab9f4b545ffb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 4d7eeada2b24ff63eb179c78ed6fd5038eae31a6
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="net-embedding-on-android"></a>.NET inserindo no Android
 

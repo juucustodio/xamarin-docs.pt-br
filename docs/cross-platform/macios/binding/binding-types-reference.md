@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 9364b4c56951ac9ebd3870e4afe41a40f9e1f455
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e064eda3db9aa0156869cf1c7392823553af9bd2
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-types-reference-guide"></a>Guia de referência de tipos de associação
 
@@ -1136,12 +1136,12 @@ public NSObject this [NSObject idx] {
 
 Esse atributo sinaliza o campo existente para uma propriedade a ser anotado com o .NET `[ThreadStatic]` atributo. Isso é útil se o campo for uma variável estática de thread.
 
-### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (Xamarin.iOS 6.0.6)
+### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (xamarin 6.0.6)
 
 Esse atributo faz um exceções do método suporte nativo (Objective-C).
 Em vez de chamar `objc_msgSend` diretamente, a invocação passará por um trampoline personalizado que captura exceções ObjectiveC e empacota-los em exceções gerenciadas.
 
-No momento apenas alguns `objc_msgSend` assinaturas têm suporte (você vai descobrir se uma assinatura não tem suporte quando a vinculação nativo de um aplicativo que usa a associação falhará com um monotouch_ ausente*_objc_msgSend* símbolo), mas mais podem ser adicionada à solicitação.
+No momento apenas alguns `objc_msgSend` assinaturas têm suporte (você vai descobrir se uma assinatura não tem suporte quando a vinculação nativo de um aplicativo que usa a associação falhará com um monotouch_ ausente *_objc_msgSend* símbolo), mas mais podem ser adicionada à solicitação.
 
 
 ### <a name="newattribute"></a>Novoatributo
@@ -1493,7 +1493,7 @@ Esse atributo é aplicado aos tipos de parâmetro nas declarações de delegado 
 
 Isso é normalmente usado para retornos de chamada que são definidos como esta no objetivo-c:
 
-```csharp
+```objc
 typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 
@@ -1647,7 +1647,7 @@ interface MyMutableString {
 
 ## <a name="enum-attributes"></a>Atributos Enum
 
-Mapeamento de `NSString` constantes para valores de enumeração é uma maneira fácil de criar o melhor API do .NET. It:
+Mapeamento de `NSString` constantes para valores de enumeração é uma maneira fácil de criar o melhor API do .NET. Ele:
 
 * permite a conclusão de código ser mais útil, mostrando **somente** os valores corretos para a API;
 * Adiciona o tipo de segurança, você não pode usar outro `NSString` constante em um contexto incorreto; e

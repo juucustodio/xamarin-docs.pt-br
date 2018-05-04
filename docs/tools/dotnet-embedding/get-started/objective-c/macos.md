@@ -6,14 +6,13 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f75ced921cd240e280b5dd6f7366ccceefb5e40e
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 3620312ff3fbf9d7aa879ae6d318f0b39eec386a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-macos"></a>Guia de Introdução ao macOS
-
 
 ## <a name="what-you-will-need"></a>Você precisará
 
@@ -27,7 +26,7 @@ Primeiro, crie um exemplo do mundo Olá simples em c#.
 
 Abra o Visual Studio para Mac, crie um novo projeto de biblioteca de classes do Mac denominado **saudação do csharp**e salvá-lo para **~/Projects/hello-from-csharp**.
 
-Substitua o código no `MyClass.cs` arquivo com o trecho a seguir:
+Substitua o código no **MyClass.cs** arquivo com o trecho a seguir:
 
 ```csharp
 using AppKit;
@@ -44,7 +43,9 @@ Compile o projeto. O assembly resultante será salvo como **~/Projects/hello-fro
 
 ### <a name="bind-the-managed-assembly"></a>Associar o assembly gerenciado
 
-Execute o embeddinator para criar uma estrutura de nativo para o assembly gerenciado:
+Uma vez que um assembly gerenciado, associá-lo invocando a incorporação de .NET.
+
+Conforme descrito no [instalação](~/tools/dotnet-embedding/get-started/install/install.md) guia, isso pode ser feito como etapa de pós-compilação do seu projeto, com um destino personalizado do MSBuild ou manualmente:
 
 ```shell
 cd ~/Projects/hello-from-csharp
@@ -93,4 +94,4 @@ Por fim, execute o projeto Xcode e semelhante a esta será exibida:
 
 ![Saudação de exemplo em c# em execução no simulador](macos-images/hello-from-csharp-mac.png)
 
-Está disponível um exemplo mais completo e um [aqui](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).
+Um exemplo mais completo e um [estão disponíveis aqui](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

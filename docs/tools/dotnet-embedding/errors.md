@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
-ms.openlocfilehash: 0bc4451d8eb93b826fc673bc4e163c9b7b68c36e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 677242ea12f8fd87d82f337eafd96a1743ad806a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="net-embedding-errors"></a>Erros de inserção de .NET
 
@@ -92,7 +92,7 @@ Este é um problema conhecido que pretendemos corrigir em uma versão futura do 
 
 A ferramenta não pôde mesclar as estruturas mencionadas na mensagem de erro, porque não há um arquivo comum entre eles.
 
-Isso pode indicar um bug em 4000 Embeddinator; Envie um relatório de erros em [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) com um caso de teste.
+Isso pode indicar um erro na inserção de .NET; Envie um relatório de erros em [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) com um caso de teste.
 
 <a name="EM0011" />
 
@@ -142,9 +142,9 @@ A sintaxe fornecida para a opção de linha de comando `A` não pôde ser analis
 
 ### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: Erro interno *. Envie um relatório de erros com um caso de teste (https://github.com/mono/Embeddinator-4000/issues).
 
-Essa mensagem de erro é relatada quando ocorre falha na verificação de consistência interna em Embeddinator-4000.
+Essa mensagem de erro é relatada quando ocorre falha na verificação de consistência interna na inserção do .NET.
 
-Isso indica um bug no Embeddinator-4000; Envie um relatório de erros em [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) com um caso de teste.
+Isso indica um erro na inserção de .NET; Envie um relatório de erros em [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) com um caso de teste.
 
 <!-- 1xxx: code processing -->
 
@@ -189,7 +189,7 @@ public class MyType {
 }
 ```
 
-Em tais casos apenas dois gerados `init` seletores serão criados, ambos os chamar mono, mas não continuará a existir nenhum wrapper para o mais tarde.
+Em tais casos apenas dois gerados `init` seletores serão criados, ambos os chamar Mono, mas não continuará a existir nenhum wrapper para o mais tarde.
 
 <a name="EM1030" />
 
@@ -224,7 +224,7 @@ public class MyType {
 }
 ```
 
-Em tais casos apenas dois gerados `increment` seletores serão criados, ambos os chamar mono, mas não continuará a existir nenhum wrapper para o mais tarde.
+Em tais casos apenas dois gerados `increment` seletores serão criados, ambos os chamar Mono, mas não continuará a existir nenhum wrapper para o mais tarde.
 
 <a name="EM1033" />
 
@@ -236,7 +236,7 @@ Este é um **aviso** que o método `M` não é gerada porque outro método expõ
 
 ### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034: Método de extensão `M` não é gerado dentro de uma categoria, porque eles não podem ser criados em tipo primitivo `T`. Um método estático normal foi gerado.
 
-Este é um **aviso** que tipo de um método de extensão em um primivite (por exemplo, `System.Int32`) foi encontrado. ObjC não é possível criar categorias em tipo primitivo. Em vez disso, o gerador de produzirá um método estático normal.
+Este é um **aviso** que tipo de um método de extensão em um primivite (por exemplo, `System.Int32`) foi encontrado. Em Objective-C não é possível criar categorias em tipo primitivo. Em vez disso, o gerador de produzirá um método estático normal.
 
 <a name="EM1040" />
 
@@ -286,7 +286,7 @@ Este é um **aviso** elemento `E` não é gerada como seu nome está em conflito
 
 Este é um **aviso** destino `E` é considerado sem suporte de xamarin e Xamarin.Mac casos de uso. 
 
-Consumo de bibliotecas de Embeddinator estáticos ou dinâmicos pode exigir etapas adicionais de trabalho ou ajustes e deve ser evitado na maioria dos casos de uso.
+Consumo de bibliotecas .NET inserindo estáticos ou dinâmicos pode exigir etapas adicionais de trabalho ou ajustes e deve ser evitado na maioria dos casos de uso.
 
 Considere remover o `--target` parâmetro ou passe `--target=framework` em vez disso.
 

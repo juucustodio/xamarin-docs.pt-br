@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f5e778ef9ba31c1a9e880b9fc66c2e48ddb2420c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 505c2902f2b8d112597b4b9b9b07282a7810db68
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="net-embedding"></a>.NET Embedding
 
@@ -21,15 +21,17 @@ Inserindo .NET permite que seu código existente do .NET (c#, F # e outros) a se
 
 Isso significa que, se você tiver uma biblioteca .NET que você deseja usar de seu aplicativo iOS existente, você pode fazer isso.   Ou, se você quiser vinculá-lo a uma biblioteca C++ nativo, você também pode fazer isso.   Ou consumir código .NET do Java.
 
+Inserindo .NET se baseia o [Embeddinator 4000](https://github.com/mono/Embeddinator-4000) projeto de software livre.
+
 ## <a name="environments-and-languages"></a>Ambientes e idiomas
 
-A ferramenta é cientes o ambiente que será usado, bem como o idioma que irá consumi-lo.   Por exemplo, a plataforma iOS não permite a compilação do just-in-time (JIT), para que o embeddinator estaticamente compilará o código .NET em código nativo que pode ser usado no iOS.  Outros ambientes permitem a compilação JIT, e esses ambientes, podemos aceitar a compilação JIT.
+A ferramenta é cientes o ambiente que será usado, bem como o idioma que irá consumi-lo.   Por exemplo, a plataforma iOS não permite a compilação do just-in-time (JIT), para que .NET inserindo estaticamente compilar o código do .NET em código nativo que pode ser usado no iOS.  Outros ambientes permitem a compilação JIT, e esses ambientes, podemos aceitar a compilação JIT.
 
 Ele oferece suporte a vários consumidores de idioma, ele reproduz o código .NET como código idiomática no idioma de destino.   Esta é a lista de idiomas com suporte no momento:
 
-- [**Objective-C** ](objective-c/index.md) – mapeando .NET para APIs de idiomática Objective-C.
-- [**Java** ](android/index.md) – mapeando .NET para APIs idiomática de Java.
-- **C**: o mapeamento do .NET para um orientada a objeto como as APIs de C.
+- [**Objective-C** ](objective-c/index.md) – mapeando .NET para APIs de idiomática Objective-C
+- [**Java** ](android/index.md) – mapeando .NET para APIs de Java idiomática
+- [**C** ](get-started/c.md) – mapeamento .NET orientada a objeto como as APIs de C
 
 Mais idiomas virão posteriormente.
 
@@ -37,11 +39,10 @@ Mais idiomas virão posteriormente.
 
 Para começar, verifique se um dos nossos guias para cada um dos idiomas com suporte no momento:
 
-- [**Objective-C** ](get-started/objective-c/index.md) – abrange macOS e iOS.
-- [**Java** ](get-started/java/index.md) – abrange macOS e Android.
-- [**C** ](get-started/c.md) – aborda linguagem C em plataformas de área de trabalho.
-
+- [**Objective-C** ](get-started/objective-c/index.md) – abrange macOS e iOS
+- [**Java** ](get-started/java/index.md) – abrange macOS e Android
+- [**C** ](get-started/c.md) – aborda linguagem C em plataformas de área de trabalho
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Embeddinator-4000 on GitHub](https://github.com/mono/Embeddinator-4000)
+- [Embeddinator-4000 no GitHub](https://github.com/mono/Embeddinator-4000)

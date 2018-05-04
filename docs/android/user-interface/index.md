@@ -1,17 +1,17 @@
 ---
-title: Interface do Usuário
+title: Criando a Interface do usuário com xamarin
 description: Criando Interfaces de usuário para aplicativos xamarin
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/18/2017
-ms.openlocfilehash: 152f5551e2f539e8ab93121c35c2acca7eb7f2e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: d8311b97c24a032a7c7d4377b11b5045caafdee6
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-interface"></a>Interface do Usuário
 

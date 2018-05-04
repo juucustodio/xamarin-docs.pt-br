@@ -1,18 +1,18 @@
 ---
-title: 4000 Embeddinator práticas recomendadas para ObjC
+title: .NET para incorporar as práticas recomendadas para Objective-C
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: ca5face9865c60fabe8359c2bf356d5d5555f517
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 9f31190d54b187e1dc298fe1c2a8d443862f10de
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="embeddinator-4000-best-practices-for-objc"></a>4000 Embeddinator práticas recomendadas para ObjC
+# <a name="net-embedding-best-practices-for-objective-c"></a>Inserindo .NET práticas recomendadas para Objective-C
 
 Este é um rascunho e pode não ser em sincronia com os recursos atualmente suportada pela ferramenta. Esperamos que este documento será evoluir separadamente e, eventualmente, corresponde a ferramenta final, ou seja, será sugerimos melhores abordagens de longo prazo - soluções alternativas não imediatas.
 
@@ -106,7 +106,7 @@ Essa regra de nomenclatura não tiver correspondência com o mundo .NET GC; um m
 
 ## <a name="exceptions"></a>Exceções
 
-É bastante commont no .NET para usar exceções extensivamente para relatar erros. No entanto, eles são lentas e não bastante idêntico em ObjC. Sempre que possível, você deve ocultá-los do desenvolvedor Objective-C.
+É muito comum no .NET para usar exceções extensivamente para relatar erros. No entanto, eles são lento e não bastante idêntico em objetivo-C. Sempre que possível, você deve ocultá-los do desenvolvedor Objective-C.
 
 Por exemplo, o .NET `Try` padrão será muito mais fácil de consumir do código Objective-C:
 
@@ -138,6 +138,6 @@ O gerador de seguem o mesmo `return nil` padrão gerado `init*` métodos. Se uma
 
 Objective-C não permite que os operadores para ser sobrecarregado como c#, para que eles são convertidos para seletores de classe.
 
-["Amigável"](/dotnet/standard/design-guidelines/operator-overloads/) método nomeado são gerados em vez do operador sobrecargas quando encontrado e pode produzir um mais fáceis de consumir API.
+["Amigável"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) métodos nomeados são gerados em vez do operador sobrecargas quando encontrado e pode produzir um mais fáceis de consumir API.
 
 Classes que substituem os operadores `==` e/ou `!=` deve substituir o método Equals (Object) padrão.

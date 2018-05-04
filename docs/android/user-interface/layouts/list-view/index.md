@@ -1,17 +1,17 @@
 ---
-title: ListView
+title: Usando o ListView em xamarin
 description: ListView é um componente importante da interface do usuário dos aplicativos do Android; ele é usado em qualquer lugar da lista curta de opções de menu para listas longas de contatos ou Favoritos do internet. Ele fornece uma maneira simples para apresentar uma lista de rolagem de linhas que pode ser formatado com um estilo interno ou personalizado extensivamente.
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2018
-ms.openlocfilehash: 8499b9f186c12df22518893b6677cab22f0a3568
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: c5c8222df16b265f3b44f3ee3fcd9053d827cf6a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -214,9 +214,9 @@ Este conjunto de tópicos introduzido `ListView` e fornecidos alguns exemplos de
 ## <a name="related-links"></a>Links relacionados
 
 - [AccessoryViews (exemplo)](https://developer.xamarin.com/samples/AccessoryViews/)
-- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/BasicTableAndroid/)
+- [BasicTableAndroid (exemplo)](https://developer.xamarin.com/samples/BasicTableAndroid/)
 - [BasicTableAdapter (exemplo)](https://developer.xamarin.com/samples/BasicTableAdapter/)
-- [BuiltInViews (sample)](https://developer.xamarin.com/samples/BuiltInViews/)
+- [BuiltInViews (exemplo)](https://developer.xamarin.com/samples/BuiltInViews/)
 - [CustomRowView (exemplo)](https://developer.xamarin.com/samples/CustomRowView/)
 - [FastScroll (exemplo)](https://developer.xamarin.com/samples/FastScroll/)
 - [SectionIndex (exemplo)](https://developer.xamarin.com/samples/SectionIndex/)

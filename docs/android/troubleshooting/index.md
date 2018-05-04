@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas
+title: Solução de problemas com o xamarin
 description: Documentos nesta seção abordam recursos específicos para solução de problemas com Android.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,12 +7,12 @@ ms.assetid: 54583AB3-FE6D-4357-B4FC-CBC48B7EDEE4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 77a77dbaef5bb794070cd60e73e42724c7321af3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 539d67f679b45a94a7c6db5552ba9a34d2bd442f
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 
