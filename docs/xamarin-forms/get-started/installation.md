@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/19/2018
-ms.openlocfilehash: d2125c1ddaa3edc3e2ee76d8e03e384efdca42c6
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: ce3f2bcf6acc36239fc431bb7f5edece15d2e139
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarinforms-requirements"></a>Requisitos do Xamarin.Forms
 
@@ -26,7 +26,7 @@ Aplicativos Xamarin.Forms podem ser gravados para os seguintes sistemas operacio
 -  iOS 8 ou superior
 -  Android 4.0.3 (API 15) ou superior ([mais detalhes](#android))
 -  Plataforma Universal do Windows do Windows 10 ([mais detalhes](#windows10))
--  WinRT do Windows 8.1/Windows Phone 8.1 ([mais detalhes](#windows))
+-  *Windows 8.1/Windows Phone 8.1 WinRT (PRETERIDO)*
 -  *Windows Phone 8 Silverlight (PRETERIDO)*
 
 Supõe-se que os desenvolvedores estejam familiarizados com [Bibliotecas de Classes Portáteis](~/cross-platform/app-fundamentals/pcl.md) e [Projetos Compartilhados](~/cross-platform/app-fundamentals/shared-projects.md).
@@ -57,20 +57,11 @@ Além disso, a versão de destino/compilação para projetos do Android **deve**
 
 -----
 
-
 <a name="windows10" />
 
 ### <a name="universal-windows-platform"></a>Plataforma Universal do Windows
 
-Projetos da UWP do Windows 10 não são adicionados quando uma solução é criada no macOS. Para obter instruções de como adicionar esses projetos a uma solução existente, consulte [Adicionando um Aplicativo da UWP (Plataforma Universal do Windows)](~/xamarin-forms/platform/windows/installation/universal.md).
-
-
-<a name="windows" />
-
-### <a name="windows-81--windows-phone-81-winrt"></a>WinRT do Windows 8.1/Windows Phone 8.1
-
-Projetos do WinRT do Windows 8.1/Windows Phone 8.1 não são adicionados quando uma solução é criada no macOS. Para obter instruções de como adicionar esses projetos a uma solução existente, consulte [Adicionando um aplicativo Windows Phone](~/xamarin-forms/platform/windows/installation/phone.md) e [Adicionando um aplicativo do Windows](~/xamarin-forms/platform/windows/installation/tablet.md).
-
+Projetos da UWP do Windows 10 não são adicionados quando uma solução é criada no macOS. Para obter instruções sobre como adicionar esses projetos a uma solução existente, confira [Configurar projetos do Windows](~/xamarin-forms/platform/windows/installation/index.md).
 
 ## <a name="development-system-requirements"></a>Requisitos do sistema de desenvolvimento
 
@@ -98,5 +89,4 @@ O desenvolvimento de aplicativos Xamarin.Forms para UWP requer:
 * [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 
 Projetos da UWP são incluídos em soluções Xamarin.Forms criadas no Visual Studio 2015 e no Visual Studio 2017.
-Você também pode [adicionar um aplicativo UWP (Plataforma Universal do Windows)](~/xamarin-forms/platform/windows/installation/universal.md) a uma solução Xamarin.Forms existente.
-
+Você também pode [adicionar um aplicativo UWP (Plataforma Universal do Windows)](~/xamarin-forms/platform/windows/installation/index.md) a uma solução Xamarin.Forms existente.
