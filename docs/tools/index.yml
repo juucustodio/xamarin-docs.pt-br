@@ -2,24 +2,24 @@
 documentType: LandingData
 title: Ferramentas do Xamarin
 metadata:
-  description: "Ferramentas para melhorar a experiência de desenvolvimento do Xamarin."
+  description: Ferramentas para melhorar a experiência de desenvolvimento do Xamarin.
   author: conceptdev
   ms.author: crdun
   ms.date: 02-17-2018
   ms.topic: landing-page
-  ms.openlocfilehash: 61fa7aa174a4c5681f36b11d808cd02fc3c5908b
-  ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+  ms.openlocfilehash: b1f47f67677c2618b89b52ab2c015a8a4da48f95
+  ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/15/2018
+  ms.lasthandoff: 05/04/2018
 abstract:
-  description: "Ferramentas para melhorar a experiência de desenvolvimento do Xamarin."
+  description: Ferramentas para melhorar a experiência de desenvolvimento do Xamarin.
   menu:
     items:
     - href: https://visualstudio.com/
       text: Visual Studio
     - href: https://developer.xamarin.com/releases/#mac
-      text: "Notas de Versão"
+      text: Notas de Versão
 sections:
 - title: Ferramentas
   items:
@@ -28,13 +28,13 @@ sections:
     className: cardsC
     items:
     - href: ~/tools/live-player/index.md
-      html: "Introdução ao Xamarin em minutos, usando o aplicativo Live Player com o Visual Studio."
+      html: Introdução ao Xamarin em minutos, usando o aplicativo Live Player com o Visual Studio.
       image:
         src: ~/media/index/xamarin-tools-live-player.svg?branch=master
         href: ~/tools/live-player/index.md
       title: Xamarin Live Player
     - href: ~/tools/inspector/index.md
-      html: "Entender e depurar sua interface de usuário."
+      html: Entender e depurar sua interface de usuário.
       image:
         src: ~/media/index/xamarin-tools-inspector.svg?branch=master
         href: ~/tools/inspector/index.md
@@ -58,17 +58,11 @@ sections:
         href: ~/tools/profiler/index.md
       title: Criador de perfil do Xamarin
     - href: ~/tools/dotnet-embedding/index.md
-      html: "Permite que seu código .NET existente seja consumido a partir de outras linguagens de programação."
+      html: Permite que seu código .NET existente seja consumido a partir de outras linguagens de programação.
       image:
         src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
         href: ~/tools/dotnet-embedding/index.md
       title: .NET Embedding
-    - href: https://developer.xamarin.com/testcloud/
-      html: Teste seu aplicativo em qualquer dispositivo.
-      image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/team-services-agile-track.svg
-        href: https://developer.xamarin.com/testcloud/
-      title: Xamarin Test Cloud
 - title: Plataformas
   items:
   - type: list
@@ -77,13 +71,13 @@ sections:
     items:
     - title: Xamarin.Forms
       href: ~/xamarin-forms/index.md
-      html: "<p><a href=\"~/xamarin-forms/get-started/index.md\">Introdução</a><br /><a href=\"~/xamarin-forms/app-fundamentals/index.md\">Conceitos básicos do aplicativo</a><br /><a href=\"~/xamarin-forms/user-interface/index.md\">Interface do usuário</a><br /><a href=\"~/xamarin-forms/platform/index.md\">Recursos da plataforma</a><br /><a href=\"~/xamarin-forms/deploy-test/index.md\">Implantação e Teste</a><br /><a href=\"~/xamarin-forms/xaml/index.md\">XAML</a><br /><a href=\"~/xamarin-forms/data-cloud/index.md\">Serviços de dados e de nuvem</a><br /><a href=\"~/xamarin-forms/internals/index.md\">Conceitos avançados e recursos internos</a></p>"
+      html: <p><a href="~/xamarin-forms/get-started/index.md">Introdução</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interface do usuário</a><br /><a href="~/xamarin-forms/platform/index.md">Recursos da plataforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/xamarin-forms/internals/index.md">Conceitos avançados e recursos internos</a></p>
     - title: Android
       href: ~/android/index.md
-      html: "<p><a href=\"~/android/get-started/index.md\">Introdução</a><br /><a href=\"~/android/app-fundamentals/index.md\">Conceitos básicos do aplicativo</a><br /><a href=\"~/android/user-interface/index.md\">Interface do usuário</a><br /><a href=\"~/android/platform/index.md\">Recursos da plataforma</a><br /><a href=\"~/android/deploy-test/index.md\">Implantação e Teste</a><br /><a href=\"~/android/data-cloud/index.md\">Serviços de dados e de nuvem</a><br /><a href=\"~/android/internals/index.md\">Conceitos avançados e recursos internos</a></p>"
+      html: <p><a href="~/android/get-started/index.md">Introdução</a><br /><a href="~/android/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/android/user-interface/index.md">Interface do usuário</a><br /><a href="~/android/platform/index.md">Recursos da plataforma</a><br /><a href="~/android/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/android/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/android/internals/index.md">Conceitos avançados e recursos internos</a></p>
     - title: iOS
       href: ~/ios/index.md
-      html: "<p><a href=\"~/ios/get-started/index.md\">Introdução</a><br /><a href=\"~/ios/app-fundamentals/index.md\">Conceitos básicos do aplicativo</a><br /><a href=\"~/ios/user-interface/index.md\">Interface do usuário</a><br /><a href=\"~/ios/platform/index.md\">Recursos da plataforma</a><br /><a href=\"~/ios/deploy-test/index.md\">Implantação e Teste</a><br /><a href=\"~/ios/data-cloud/index.md\">Serviços de dados e de nuvem</a><br /><a href=\"~/ios/internals/index.md\">Conceitos avançados e recursos internos</a></p>"
+      html: <p><a href="~/ios/get-started/index.md">Introdução</a><br /><a href="~/ios/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/ios/user-interface/index.md">Interface do usuário</a><br /><a href="~/ios/platform/index.md">Recursos da plataforma</a><br /><a href="~/ios/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/ios/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/ios/internals/index.md">Conceitos avançados e recursos internos</a></p>
     - title: Mac
       href: ~/mac/index.md
-      html: "<p><a href=\"~/mac/get-started/index.md\">Introdução</a><br /><a href=\"~/mac/app-fundamentals/index.md\">Conceitos básicos do aplicativo</a><br /><a href=\"~/mac/user-interface/index.md\">Interface do usuário</a><br /><a href=\"~/mac/platform/index.md\">Recursos da plataforma</a><br /><a href=\"~/mac/deploy-test/index.md\">Implantação e Teste</a><br /><a href=\"~/mac/internals/index.md\">Conceitos avançados e recursos internos</a></p>"
+      html: <p><a href="~/mac/get-started/index.md">Introdução</a><br /><a href="~/mac/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/mac/user-interface/index.md">Interface do usuário</a><br /><a href="~/mac/platform/index.md">Recursos da plataforma</a><br /><a href="~/mac/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/mac/internals/index.md">Conceitos avançados e recursos internos</a></p>

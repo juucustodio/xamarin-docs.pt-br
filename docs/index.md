@@ -5,11 +5,11 @@ title: Documentação do Xamarin
 description: O Xamarin permite compilar aplicativos nativos para Android, iOS e macOS usando interfaces de usuário específicas à plataforma e o código .NET. Xamarin.Forms permite que você compile aplicativos nativos, com o código de interface do usuário compartilhado escrito em C# ou XAML.
 featureFlags:
 - clicktale
-ms.openlocfilehash: de03c1bd1b7874e6a837fbbb9e88a353f19afca5
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: a2f8c6ddedcff89f357ed8a984954d9f91c0477f
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -831,12 +831,12 @@ ms.lasthandoff: 04/03/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
+                                                        <img alt="Sharing Code" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Conceitos básicos de aplicativo</h3>
-                                                    <p>Saiba mais sobre os conceitos básicos da produção de código compartilhável para tarefas básicas como tratamento de arquivos, imagens etc.</p>
+                                                    <h3>Compartilhando código</h3>
+                                                    <p>Confira as diferentes opções para compartilhar códigos e bibliotecas entre Android, iOS e Windows.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -850,12 +850,12 @@ ms.lasthandoff: 04/03/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
+                                                        <img alt="Language Support" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Recursos da plataforma</h3>
-                                                    <p>Trabalhar com recursos específicos à plataforma, como FaceID e ARKit e as adições mais recentes para iOS.</p>
+                                                    <h3>Suporte ao idioma</h3>
+                                                    <p>É possível gravar projetos Xamarin em C# e F# e consumir bibliotecas gravadas em VB. Também há suporte para os modelos Razor.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -873,8 +873,8 @@ ms.lasthandoff: 04/03/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Implantação e Teste</h3>
-                                                    <p>Compilar e implantar aplicativos para várias plataformas.</p>
+                                                    <h3>Depuração e desempenho</h3>
+                                                    <p>Dicas para melhorar seu aplicativo, seja qual for a plataforma de destino.</p>
                                                 </div>
                                             </div>
                                         </div>

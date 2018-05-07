@@ -7,25 +7,20 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 4156d712b91ad069d482debdf0731be8b649287a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2018
+ms.openlocfilehash: b5de9d673a348ddd4b939ae387257f835b37117a
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Alterações nas Ferramentas do SDK do Android
 
 _Alterações em como o SDK do Android gerencia os níveis de API e os AVDs instalado._
 
-## <a name="changes-to--android-sdk-tooling"></a>Alterações em ferramentas do SDK do Android
+## <a name="changes-to-android-sdk-tooling"></a>Alterações em ferramentas do SDK do Android
 
-Em versões atuais das ferramentas do SDK para o Android, o Google removeu os gerenciadores de AVD e SDK existentes em favor de novas ferramentas de CLI (Interface de linha de comando). O primeiro **android** programa foi removido e os gerenciadores de GUI (Interface gráfica do usuário) no Visual Studio para Mac e versões mais antigas do Xamarin para Visual Studio deixará de funcionar após a versão 25.2.5 de ferramentas do SDK do Android.
-
-
-![Menu Android do IDE do Visual Studio](sdk-cli-tooling-changes-images/android-ide-menu.png)
-
-Tentativa de usar o **android** programa por meio da linha de comando resultará em uma mensagem de erro semelhante à seguinte:
+Em versões recentes das ferramentas do SDK para o Android, o Google removeu os gerenciadores de AVD e SDK existentes em favor de novas ferramentas de CLI (Interface de linha de comando). O **android** programa foi removido e os gerenciadores de Google GUI (Interface gráfica do usuário) no Visual Studio para Mac e versões mais antigas do Xamarin para Visual Studio deixará de funcionar após a versão 25.2.5 de ferramentas do SDK do Android. Por exemplo, a tentativa de usar o **android** programa por meio da linha de comando resultará em uma mensagem de erro semelhante à seguinte:
 
 ```shell
 The "android" command is deprecated.
@@ -34,11 +29,21 @@ For command-line tools, use tools\bin\sdkmanager.bat
 and tools\bin\avdmanager.bat
 ```
 
-Portanto, você precisará usar as ferramentas CLI para gerenciar e atualizar os emuladores e o SDK do Android.
+As seções a seguir explicam como gerenciar o SDK do Android e dispositivos Virtual Android usando o SDK do Android 25.3.0 e posterior.
+
+### <a name="ui-tools"></a>Ferramentas de interface do usuário
+
+Visual Studio e o Visual Studio para Mac agora fornecem Xamarin substituições para os gerenciadores de descontinuados baseado em GUI do Google:
+
+-   Para baixar as ferramentas do SDK do Android, plataformas e outros componentes que você precisa para desenvolver aplicativos xamarin, use o [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md) em vez do Gerenciador de SDK herdados Google.
+
+-   Para criar e configurar dispositivos Virtual Android, use o [Gerenciador de dispositivos Android Xamarin](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) em vez do Gerenciador de emulador herdados Google.
+
+Essas ferramentas são funcionalmente equivalentes para o Google baseada em GUI e gerentes, elas substituem.
 
 ### <a name="cli-tools"></a>Ferramentas CLI
 
-Os seguintes programas fazem a interface de linha de comando para as ferramentas do SDK do Android:
+Como alternativa, você pode usar ferramentas CLI para gerenciar e atualizar os emuladores e o SDK do Android. Os seguintes programas fazem a interface de linha de comando para as ferramentas do SDK do Android:
 
 #### <a name="sdkmanager"></a>sdkmanager
 
@@ -64,6 +69,7 @@ Você ainda pode usar a GUI do original executando o **android** programa dentro
 ## <a name="related-links"></a>Links relacionados
 
 - [Configuração do SDK do Android](~/android/get-started/installation/android-sdk.md)
+- [Gerenciador de dispositivos Android](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
 - [Noções básicas sobre nível da API do Android](~/android/app-fundamentals/android-api-levels.md)
 - [Notas de Versão das SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
