@@ -1,65 +1,55 @@
 ---
-title: Implementando com fragmentos
-description: Android 3.0 apresentou fragmentos. Os fragmentos são componentes independentes e modulares usados para ajudar a solucionar a complexidade da produção de aplicativos que podem ser executados em telas de tamanhos diferentes. Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin e como dar suporte a fragmentos em 3.0 dispositivos previamente Android.
+title: Implementando fragmentos - passo a passo
+description: Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin.
+ms.topic: tutorial
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 81f1f992de450ee62c4c1d2e80da858b024be594
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/26/2018
+ms.openlocfilehash: 92c68298d7abd2570efd89e12d7cfb6364e90972
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="implementing-with-fragments"></a>Implementando com fragmentos
+# <a name="implementing-fragments---walkthrough"></a>Implementando fragmentos - passo a passo
 
-_Android 3.0 apresentou fragmentos. Os fragmentos são componentes independentes e modulares usados para ajudar a solucionar a complexidade da produção de aplicativos que podem ser executados em telas de tamanhos diferentes. Este artigo explica como usar os fragmentos para desenvolver aplicativos xamarin e como dar suporte a fragmentos em 3.0 dispositivos previamente Android._
-
+_Os fragmentos são componentes independentes e modulares, que podem ajudar a resolver a complexidade de aplicativos Android que dispositivos com uma variedade de tamanhos de tela de destino. Este artigo explica como criar e usar fragmentos ao desenvolver aplicativos xamarin._
 
 ## <a name="overview"></a>Visão geral
 
-Nesta seção, examinaremos como criar um aplicativo que será exibida uma lista de opções de Shakespeare e uma cotação de cada atividade selecionada. Nosso aplicativo utilizará os fragmentos de forma que podemos pode definir nossos componentes de interface do usuário em um único local, mas, em seguida, usá-los em diferentes fatores forma. Por exemplo, as capturas de tela a seguir mostram o aplicativo em execução em um tablet 10", bem como em um telefone:
+Nesta seção, você verá como criar e usar os fragmentos em um aplicativo xamarin. Este aplicativo exibirá os títulos de várias ações por William Shakespeare em uma lista. Quando o usuário toca no título de um jogo, o aplicativo exibirá uma citação do que são executados em uma atividade separada:
 
-[![Capturas de tela de exemplo de aplicativo em execução no tablet e telefone](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
+[![Aplicativo em execução em um telefone Android no modo retrato](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
-Esta seção aborda os seguintes tópicos:
+Quando o telefone for girado para modo paisagem, alterará a aparência do aplicativo: lista de opções e aspas aparecerá na mesma atividade. Quando uma opção é selecionada, as aspas serão exibidos na mesma atividade:
 
-- **Criando fragmentos** &ndash; mostra como criar um fragmento para exibir uma lista de opções de Shakespeare e outro fragmento para exibir uma cotação de cada atividade.
+[![Aplicativo em execução em um telefone Android no modo paisagem](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-- **Suporte a diferentes tamanhos de telas** &ndash; mostra como o aplicativo para aproveitar os maiores tamanhos de tela de layout.
+Por fim, se o aplicativo estiver em execução em um tablet:
 
-- **Usando o pacote de suporte Android** &ndash; implementa o pacote de suporte Android e, em seguida, faz algumas pequenas alterações para as atividades no aplicativo, permitindo que ele seja executado em versões anteriores do Android.
+[![Aplicativo em execução em um tablet Android](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
 
+Este aplicativo de exemplo pode adaptar facilmente a diferentes fatores forma e orientações com alterações mínimas de código usando fragmentos e [Layouts alternativos](/xamarin/android/app-fundamentals/resources-in-android/alternate-resources).
 
-## <a name="requirements"></a>Requisitos
+Os dados para o aplicativo continuará a existir em duas matrizes de cadeia de caracteres que são embutidos em código no aplicativo como matrizes de cadeia de caracteres do c#. Cada uma das matrizes servirá como a fonte de dados para um fragmento.  Uma matriz conterá o nome de alguns recursos por Shakespeare e outra matriz conterá uma citação do que são executados. Quando o aplicativo é iniciado, ele exibirá os nomes de reprodução em um `ListFragment`. Quando o usuário clica em um jogo de `ListFragment`, o aplicativo é iniciado outra atividade que exibirá a cotação.
 
-Este passo a passo requer xamarin 4.0 ou superior. Também será necessário instalar o pacote de suporte Android, conforme descrito na documentação de fragmentos.
+A interface do usuário para o aplicativo consistirá em dois layouts, um para retrato e outro para o modo de paisagem. Em tempo de execução Android determinará qual layout para carregar com base na orientação do dispositivo e fornecerá um que o layout para a atividade para processar. Toda a lógica para responder a cliques do usuário e exibir os dados estarão contidas em fragmentos. As atividades no aplicativo existem apenas como contêineres que hospedarão os fragmentos.
 
+Este passo a passo será dividida em duas guias. O [primeira parte](./walkthrough.md) vai se concentrar nas partes principais do aplicativo. Um único conjunto de layouts (otimizado para o modo de retrato) será criado, junto com dois fragmentos e duas atividades:
 
-## <a name="introduction"></a>Introdução
+1. `MainActivity` &nbsp; Essa é a atividade de inicialização para o aplicativo.
+1. `TitlesFragment` &nbsp; Este fragmento exibirá uma lista de títulos de recursos que foram gravados por William Shakespeare. Ele será hospedado por `MainActivity`.
+1. `PlayQuoteActivity` &nbsp; `TitlesFragment` iniciará o `PlayQuoteActivity` em resposta ao usuário selecionar uma opção em `TitlesFragment`.
+1. `PlayQuoteFragment` &nbsp; Este fragmento exibirá uma cotação de uma opção por William Shakespeare. Ele será hospedado por `PlayQuoteActivity`.
 
-No exemplo, criaremos nesta seção, as atividades não contém a lógica para carregar a lista, respondendo a seleção do usuário ou exibindo a citação para a ação selecionada. Essa lógica existe em fragmentos individuais.
-Colocando essa lógica em fragmentos em si, podemos pode interromper o fluxo de trabalho do aplicativo para oferecer suporte a telas grandes com uma atividade ou telas pequenas com várias atividades sem precisar escrever uma lógica diferente para cada atividade. Em um tablet, ambos os fragmentos será em uma atividade. Em um telefone, os fragmentos serão hospedados em atividades diferentes.
-
-Este aplicativo inclui as seguintes partes:
-
- **MainActivity** – exibe um ou ambos os fragmentos, dependendo do tamanho da tela. Essa é a atividade de inicialização.
-
- **TitlesFragment** – exibe uma lista de opções de Shakespeare na qual o usuário pode selecionar.
-
- **DetailsFragment** – exibe a cotação da ação selecionada.
-
- **DetailsActivity** – hospeda e exibe o DetailsFragment.
-Esta atividade é usada pelos dispositivos com telas pequenas, como telefones.
-
-
+O [segunda parte deste passo a passo](./walkthrough-landscape.md) discutir adicionando um layout alternativo (otimizado para o modo de paisagem), que exibe ambos os fragmentos na tela. Além disso, algumas pequenas alterações de código serão feitas para o código de forma que o aplicativo adaptará seu comportamento para o número de fragmentos que simultaneamente são exibidos na tela.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [FragmentsWalkthrough (exemplo)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
 - [Visão geral do Designer](~/android/user-interface/android-designer/index.md)
-- [Exemplos de xamarin: Honeycomb Galeria](https://developer.xamarin.com/samples/HoneycombGallery/)
 - [Implementação de fragmentos](http://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Pacote de suporte](http://developer.android.com/sdk/compatibility-library.html)

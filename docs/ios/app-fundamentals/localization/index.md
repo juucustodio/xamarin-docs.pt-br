@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 96ee8343bb2b99fdc0be9437aaa7737a70b8c19c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ee04614a500618846ad3acf2a38f279351d6e9d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ios-localization"></a>Localização do iOS
 
@@ -19,7 +19,7 @@ _Este documento abrange os recursos de localização do SDK do iOS e como acess�
 
 Consulte o [codificações de internacionalização](encodings.md) para obter instruções sobre como páginas de código/conjuntos de caracteres em aplicativos que devem processar dados não Unicode.
 
-## <a name="ios-platform-features"></a>Recursos de plataforma do iOS
+## <a name="ios-platform-features"></a>Recursos da plataforma iOS
 
 Esta seção descreve alguns dos recursos de localização em iOS. Vá para o [próxima seção](#basics) para ver exemplos e código específico.
 
@@ -359,5 +359,5 @@ Você pode aprender mais sobre i18n e L10n para aplicativos de plataforma cruzad
 - [Tasky (localizada storyboard) (amostra)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Guia de localização da Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [Visão geral de localização de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md)
-- [Localização do xamarin. Forms](~/xamarin-forms/app-fundamentals/localization.md)
+- [Localização do xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localização do Android](~/android/app-fundamentals/localization.md)

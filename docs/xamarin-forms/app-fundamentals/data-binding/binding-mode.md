@@ -4,14 +4,14 @@ description: Controle o fluxo de informações entre origem e destino
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: fdcba9b680bd548371883788af9e4eda755d91df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: charlespetzold
+ms.author: chape
+ms.date: 05/01/2018
+ms.openlocfilehash: 1aa612d8b855158f09bc0aeaad1520a44b3d9637
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-mode"></a>Modo de associação
 
@@ -58,6 +58,7 @@ O modo de associação é especificado com um membro do [ `BindingMode` ](https:
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; os dados inseridos ambas as direções entre origem e destino
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; dados vão de origem para destino
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; dados vai do destino para origem
+- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; dados vão de origem para destino, mas somente quando o `BindingContext` alterações (novas com o xamarin. Forms 3.0)
 
 Todas as propriedades vinculáveis tem um padrão de associação de modo que é definido quando a propriedade associável é criada, e que está disponível a [ `DefaultBindingMode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/) propriedade o `BindableProperty` objeto. Esse modo de associação padrão indica o modo em vigor quando essa propriedade é um destino de associação de dados.
 
@@ -94,6 +95,15 @@ As propriedades vinculáveis somente leitura têm um modo de associação padrã
 - `SelectedItem` propriedade de `ListView`
 
 A lógica que é uma associação no `SelectedItem` propriedade deve resultar na definição de fonte de associação. Um exemplo mais adiante neste artigo substitui esse comportamento.
+
+### <a name="one-time-bindings"></a>Associações de uso únicas
+
+Várias propriedades têm um modo de associação padrão de `OneTime`. Elas são:
+
+- `IsTextPredictionEnabled` propriedade de `Entry`
+- `Text`, `BackgroundColor`, e `Style` propriedades de `Span`.
+
+Destino de propriedades com um modo de associação de `OneTime` são atualizados somente quando o contexto de associação é alterado. Para associações nessas propriedades de destino, isso simplifica a infraestrutura de associação porque não é necessário monitorar alterações nas propriedades de origem.
 
 ## <a name="viewmodels-and-property-change-notifications"></a>ViewModels e notificações de alteração de propriedade
 
@@ -198,6 +208,8 @@ public class HslColorViewModel : INotifyPropertyChanged
 Quando o `Color` alterações de propriedade, estático `GetNearestColorName` método o `NamedColor` classe (também está incluído no **DataBindingDemos** solução) obtém o nome de cor mais próximo e define o `Name` propriedade. Isso `Name` propriedade tem uma particular `set` acessador, portanto, não pode ser definida de fora da classe.
 
 Quando um ViewModel é definido como uma origem de associação, a infraestrutura de associação anexa um manipulador para o `PropertyChanged` evento. Dessa forma, a associação pode ser notificada sobre as alterações nas propriedades e, em seguida, pode definir as propriedades de destino de valores alterados.
+
+No entanto, quando uma propriedade de destino (ou o `Binding` definição em uma propriedade de destino) tem um `BindingMode` de `OneTime`, não é necessário para a infraestrutura de associação anexar um manipulador no `PropertyChanged` evento. A propriedade de destino é atualizada somente quando o `BindingContext` alterações e não quando altera a propriedade de origem. 
 
 O **seletor de cores simples** arquivo XAML instancia o `HslColorViewModel` no dicionário de recursos e a inicializa a página de `Color` propriedade. O `BindingContext` propriedade o `Grid` é definido como um `StaticResource` extension para fazer referência a esse recurso de associação:
 

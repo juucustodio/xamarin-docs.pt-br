@@ -6,12 +6,12 @@ ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 9958682ce9e356692f451900d7dca0e343b244da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: bd8a95afc5bdd5aed958913d63f9b6cfe853677e
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-user-notifications"></a>Notificações de usuário avançado
 
@@ -181,10 +181,10 @@ Para implementar uma interface de usuário de notificação de usuário personal
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Abra a solução do aplicativo no Visual Studio para Mac.
-2. Clique com botão direito no nome da solução no **Solution Explorer** e selecione **adicionar** > **adicionar novo projeto**.
-3. Selecione **iOS** > **extensões** > **extensões de conteúdo de notificação**: 
+2. Clique com botão direito no nome da solução no **Solution Explorer** e selecione **Adicionar > Novo projeto...** .
+3. Selecione **Visual C# > extensões do iOS > extensão de conteúdo de notificação**:
 
-    [![](advanced-user-notifications-images/notify01w.png "Selecione as extensões de conteúdo de notificação")](advanced-user-notifications-images/notify01w.png#lightbox)
+    [![](advanced-user-notifications-images/notify01.w157-sml.png "Selecione as extensões de conteúdo de notificação")](advanced-user-notifications-images/notify01.w157.png#lightbox)
 4. Insira um **nome** para a extensão e clique no **Okey** botão.
 
 -----

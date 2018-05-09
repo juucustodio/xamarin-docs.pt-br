@@ -6,12 +6,12 @@ ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 9fd3ff17dc9af3fd30a7d5b31e8cea7ff8669a51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2017
+ms.openlocfilehash: b27d415240f3b8cd25c4bc54f6d176c50e42a250
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="enhanced-user-notifications"></a>Notificações de usuário aprimorada
 
@@ -548,10 +548,10 @@ Para implementar uma extensão de serviço em um aplicativo xamarin, faça o seg
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Abra a solução do aplicativo no Visual Studio.
-2. Clique com botão direito no nome da solução no **Solution Explorer** e selecione **adicionar** > **adicionar novo projeto**.
-3. Selecione **iOS** > **extensões** > **extensões de serviços de notificação**: 
+2. Clique com botão direito no nome da solução no **Solution Explorer** e selecione **Adicionar > Novo projeto...** .
+3. Selecione **Visual C# > extensões do iOS > extensão do serviço de notificação**:
 
-    [![](enhanced-user-notifications-images/extension01w.png "Selecione as extensões de serviços de notificação")](enhanced-user-notifications-images/extension01w.png#lightbox)
+    [![](enhanced-user-notifications-images/extension01.w157-sml.png "Selecione as extensões de serviços de notificação")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
 4. Insira um **nome** para a extensão e clique no **Okey** botão.
 
 -----

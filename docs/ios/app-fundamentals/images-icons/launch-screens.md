@@ -1,17 +1,17 @@
 ---
-title: Inicie a telas
+title: Iniciar telas para aplicativos xamarin
 description: Este artigo explica como criar um aplicativo da tela Iniciar para todos os dispositivos iOS, em qualquer resolução e orientação, usando um Storyboard de unificado único.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/19/2018
-ms.openlocfilehash: 991c2f30bcca1969e336f7269ad2a22ce6245b95
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2018
+ms.openlocfilehash: d5a267bfa8655a9b9c6d4dba9d8cf9d16624ba9b
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="launch-screens"></a>Inicie a telas
 
@@ -96,17 +96,19 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um Storyboard especial unific
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Crie um novo projeto. No Visual Studio, selecione **arquivo > Novo > projeto**e, em seguida, escolha **único aplicativo de exibição (iPhone)**:
-    
-    ![A janela novo projeto, com um único aplicativo de exibição (iPhone) selecionada](launch-screens-images/launch01-vs.png)
+1. Crie um novo projeto. No Visual Studio, selecione **arquivo > Novo > projeto > Visual C# > iPhone & iPad > iOS App (Xamarin)**:
 
-    - Nome do projeto, escolha um local e selecione **Okey**.
+    ![A janela novo projeto, com iOS (Xamarin) do aplicativo selecionada](launch-screens-images/launch01.w157.png)
+
+    Selecione o **único aplicativo de exibição** modelo e depois clique em **Okey**:
+
+    ![Modelo de aplicativo de modo único](launch-screens-images/launch01-2.w157.png)
 
 2. Se **recursos > LaunchScreen.xib** existe o **Solution Explorer**, excluí-la clicando duas vezes no arquivo e escolher **excluir**. Esse arquivo será substituído com um Storyboard na próxima etapa.
 
 3. Crie um Storyboard para usar como a tela Iniciar. No **Solution Explorer**, com o botão direito no projeto e escolha **Adicionar > Novo Item...**  seguido por **Storyboard vazio**. Nome a este Storyboard **LaunchScreen.storyboard** e clique em **adicionar**:
 
-    ![A janela Adicionar Novo Item com vazio Storyboard selecionado](launch-screens-images/launch03-vs.png)
+    ![A janela Adicionar Novo Item com vazio Storyboard selecionado](launch-screens-images/launch03.w157.png)
 
 4. Configurar o projeto para usar **LaunchScreen.storyboard** como seu Storyboard de tela Iniciar:
 
@@ -119,7 +121,7 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um Storyboard especial unific
 
     - No **Gerenciador de soluções**, com o botão direito em **catálogos ativo** e selecione **adicionar o catálogo de ativos**. Nomeie esse novo catálogo de ativos **ativos**:
 
-    ![A janela Adicionar Novo Item com o catálogo de ativos selecionados](launch-screens-images/launch05-vs.png)
+    ![A janela Adicionar Novo Item com o catálogo de ativos selecionados](launch-screens-images/launch05.w157.png)
 
     - Adicionar um novo conjunto de imagem para o **ativos** catálogo de ativos, conforme descrito no [adicionar imagens a um conjunto de imagem de catálogo do Asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md) seção o [exibindo uma imagem](~/ios/app-fundamentals/images-icons/displaying-an-image.md) guia.
 

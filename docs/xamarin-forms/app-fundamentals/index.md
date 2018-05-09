@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 5a53c15ebad6081dae2ebc4bd782bcc3644620fe
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2bd050e6eba33b543c52a80bb42b184200164c14
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="application-fundamentals"></a>Conceitos básicos de aplicativo
 
@@ -51,7 +51,7 @@ Efeitos de permitir que os controles nativos em cada plataforma para personaliza
 
 O xamarin. Forms [ `GestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) classe oferece suporte a gestos de panorâmica, aperto e toque em controles de interface do usuário.
 
-## <a name="localizationlocalizationmd"></a>[Localização](localization.md)
+## <a name="localizationlocalizationindexmd"></a>[Localização](localization/index.md)
 
 A estrutura interna de localização do .NET pode ser usada para criar aplicativos multilíngues de plataforma cruzada com xamarin. Forms.
 

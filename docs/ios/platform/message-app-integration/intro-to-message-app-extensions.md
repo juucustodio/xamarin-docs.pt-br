@@ -6,12 +6,12 @@ ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/16/2017
-ms.openlocfilehash: 492b06420d27f902faf7240003ebe5e16416a5cb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2017
+ms.openlocfilehash: 73ca0974a42bf661a89327148b68341114297084
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-app-extension-basics"></a>Noções básicas de extensão do aplicativo de mensagem
 
@@ -131,11 +131,12 @@ Para criar uma experiência de etiqueta personalizada, faça o seguinte:
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Inicie o Visual Studio.
-2. Abra a solução para adicionar uma extensão de aplicativo de mensagem. 
-3. Selecione **iOS** > **extensões** > **iMessage extensão** e clique no **próximo** botão: 
+2. Abra a solução para adicionar uma extensão de aplicativo de mensagem.
+3. Selecione * * iOS extensões > iMessage extensão (iOS) * * e clique no **próximo** botão:
 
-    [![](intro-to-message-app-extensions-images/message01w.png "Selecione iMessage extensão")](intro-to-message-app-extensions-images/message01.png#lightbox)
-4. Insira um **nome de extensão** e clique no **Okey** botão
+    [![Selecione iMessage extensão (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
+
+4. Insira um **nome** e clique no **Okey** botão
 
 -----
 
@@ -166,7 +167,7 @@ Faça o seguinte:
 1. No **Solution Explorer**, com o botão direito no nome do projeto de extensão e selecione **adicionar** > **novo arquivo...**   >  **iOS | Apple Watch** > **Interface controlador**.
 2. Digite `StickerBrowserViewController` para o **nome** e clique no **novo** botão: 
 
-    [![](intro-to-message-app-extensions-images/browser01w.png "Digite StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.png#lightbox)
+    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Digite StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
 3. Abra o `StickerBrowserViewController.cs` arquivo para edição.
 
 -----

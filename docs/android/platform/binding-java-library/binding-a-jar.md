@@ -6,12 +6,12 @@ ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 2d9f2198dbb88e7614944ac73729a4e6eca42647
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-a-jar"></a>Associação de um. JAR
 
@@ -81,7 +81,7 @@ Antes de começar as etapas abaixo, faça o download [2.x.x.jar picasso](http://
 
 Primeiro, crie um novo projeto de biblioteca de associações. No Visual Studio para Mac ou o Visual Studio, crie uma nova solução e selecione o *biblioteca associações Android* modelo. (As capturas de tela neste passo a passo usam o Visual Studio, mas o Visual Studio para Mac é muito semelhante). Nome da solução **JarBinding**: 
 
-[![Criar projeto de biblioteca de JarBinding](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
+[![Criar projeto de biblioteca de JarBinding](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
 O modelo inclui uma **Jars** pasta em que você adicionar seu. JAR(s) para o projeto de biblioteca de associações. Clique com botão direito do **Jars** pasta e selecione **Adicionar > Existing Item**: 
 
@@ -130,7 +130,7 @@ Nas etapas a seguir, vamos criar um aplicativo mínimo que usa a biblioteca de a
 
 Primeiro, crie um novo aplicativo xamarin que consome a biblioteca de associações. A solução e selecione **adicionar novo projeto**; nome do novo projeto **BindingTest**. Estamos criando este aplicativo na mesma solução que a biblioteca de associações para simplificar este passo a passo; No entanto, o aplicativo que consome a biblioteca de associações em vez disso, pode residir em uma solução diferente: 
 
-[![Adicionar novo projeto BindingTest](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
+[![Adicionar novo projeto BindingTest](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
 Com o botão direito do **referências** nó do **BindingTest** do projeto e selecione **adicionar referência...** :
 

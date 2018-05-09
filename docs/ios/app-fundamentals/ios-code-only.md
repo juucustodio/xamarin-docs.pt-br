@@ -6,12 +6,12 @@ ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 7e8460d2c946159a9869322d6d4944d213d3d801
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: e2f377b11cfb1ff5027cc704de694184d2208c97
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Criando Interfaces do usuário do iOS em código
 
@@ -33,9 +33,7 @@ O diagrama a seguir ilustra as relações entre a janela, exibições, subexibi�
 
 [![](ios-code-only-images/image9.png "Este diagrama ilustra as relações entre a janela, modos de exibição, sub-visualizações e View Controller")](ios-code-only-images/image9.png#lightbox)
 
-
 Essas hierarquias de modo de exibição podem ser criadas usando o [Xamarin Designer para iOS](~/ios/user-interface/designer/index.md) no Visual Studio para Mac, porém é recomendável ter um entendimento fundamental de como trabalhar inteiramente no código. Este artigo explica alguns pontos básicos para colocá-lo e em execução com o desenvolvimento de interface de usuário somente código.
-
 
 -----
 
@@ -45,16 +43,17 @@ Essas hierarquias de modo de exibição podem ser criadas usando o [Xamarin Desi
 
 ## <a name="ios-blank-project-template"></a>Modelo de projeto em branco do iOS
 
-Primeiro, crie um projeto do iOS no Visual Studio usando o iPhone **projeto em branco** modelo, mostrado abaixo, que entenderemos para adicionar controladores e exibições.
+Primeiro, crie um projeto do iOS no Visual Studio usando o **arquivo > Novo projeto > Visual C# > iPhone & iPad > (Xamarin) do aplicativo iOS** projeto, como mostrado abaixo:
 
+[![Caixa de diálogo Novo projeto](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 
-[![](ios-code-only-images/blankapp-vs.png "Caixa de diálogo Novo projeto")](ios-code-only-images/blankapp-vs.png#lightbox)
+Selecione o **aplicativo em branco** modelo de projeto:
 
+[![Selecione uma caixa de diálogo de modelo](ios-code-only-images/blankapp-2.w157-sml.png)](ios-code-only-images/blankapp-2.w157.png#lightbox)
 
 O modelo de projeto vazio adiciona 4 arquivos ao projeto:
 
-
-[![](ios-code-only-images/empty-project.png "Arquivos de projeto")](ios-code-only-images/empty-project.png#lightbox)
+[![Arquivos de projeto](ios-code-only-images/empty-project.w157-sml.png "arquivos de projeto")](ios-code-only-images/empty-project.w157.png#lightbox)
 
 
 1. **Appdelegate. CS** -contém um `UIApplicationDelegate` subclasse, `AppDelegate` , que é usada para manipular eventos de aplicativo do iOS. A janela do aplicativo é criada no `AppDelegate`do `FinishedLaunching` método.
@@ -99,18 +98,12 @@ As etapas a seguir orientam você pelo removendo o Storyboard de um aplicativo.
             return true;
         }
 
+O código que foi adicionado para o `FinishedLaunching` método na etapa 5 acima, é a quantidade mínima de código necessário para criar uma janela para seu aplicativo iOS.
+
 
 -----
 
-## <a name="creating-a-window"></a>Criar uma janela
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-O código que foi adicionado para o `FinishedLaunching` método na etapa 3 acima, é a quantidade mínima de código necessário para criar uma janela para seu aplicativo iOS.  
-
------
 
 aplicativos iOS são criados usando o [padrão MVC](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller). A primeira tela que exibe um aplicativo é criada a partir do controlador de exibição de raiz da janela. Consulte o [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) guia para obter mais detalhes sobre o MVC padrão em si.
 
@@ -223,7 +216,7 @@ Adicionar uma nova classe chamada `CustomViewController` conforme mostrado abaix
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](ios-code-only-images/customviewcontroller.png "Adicionar uma nova classe chamada CustomViewController")](ios-code-only-images/customviewcontroller.png#lightbox)
+[![](ios-code-only-images/customviewcontroller.w157-sml.png "Adicionar uma nova classe chamada CustomViewController")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 

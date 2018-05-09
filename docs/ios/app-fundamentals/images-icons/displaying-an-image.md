@@ -6,12 +6,12 @@ ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 8afc15a75b6d34d9b3f094fe2c92f2b6623ee63f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/24/2018
+ms.openlocfilehash: f1f733fa91be7bf76e19896e78809d18494891d3
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="displaying-an-image"></a>Exibir uma imagem
 
@@ -66,6 +66,7 @@ Ao usar um **imagem definida** no Designer de iOS, basta selecionar o nome do co
 1. Abra o catálogo de ativos do **Solution Explorer**e no canto superior esquerdo, clique no **mais** botão:
 
     ![](displaying-an-image-images/asset5.png "Clique no sinal de adição botão")
+
 2. Selecione **Adicionar conjunto de imagem** e o editor de imagem definida será exibido para o novo conjunto de imagem. A partir daqui, arraste imagens para cada um dos diferentes dispositivos e e resoluções necessárias. (Observação: que essas resoluções para as resoluções especificadas no [tamanhos de imagem e nomes de arquivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md) documento):
 
     ![](displaying-an-image-images/asset7.png "O editor de conjunto de imagens")

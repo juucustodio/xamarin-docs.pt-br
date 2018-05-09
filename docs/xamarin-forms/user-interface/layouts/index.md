@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2f57ac5b5b54b2606618c5e59fb544cae7c77e88
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="layouts"></a>Layouts
 
@@ -28,6 +28,7 @@ Cada controle de layout é descrito abaixo, bem como detalhes sobre como lidar c
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash; usado para organizar exibições definindo coordenadas & tamanho em termos de valores absolutos ou taxas. AbsoluteLayout pode ser usado para modos de exibição da camada, bem como ancorá-los para a esquerda, direita ou centralizado.
 * **[RelativeLayout](relative-layout.md)**  &ndash; usado para organizar exibições definindo restrições em relação a dimensões e a posição de seu pai.
 * **[Grade](grid.md)**  &ndash; usado para organizar exibições em uma grade. Linhas e colunas podem ser especificadas em termos de valores absolutos ou taxas.
+* **[FlexLayout](flex-layout.md)**  &ndash; usado para organizar exibições horizontal ou verticalmente com quebra automática.
 * **[ScrollView](scroll-view.md)**  &ndash; usado para fornecer a rolagem quando um modo de exibição não couber completamente dentro dos limites da tela.
 * **[LayoutOptions](layout-options.md)**  &ndash; definir o alinhamento e a expansão de um modo de exibição, em relação ao seu pai.
 * **[Entrada transparência](#input_transparency)**  &ndash; Especifica se um elemento recebe entrada.
@@ -59,6 +60,23 @@ Para obter um exemplo de quando `StackLayout` seria uma boa opção, considere u
   <Button HorizontalOptions="End" Text="Button" />
 </StackLayout>
 ```
+
+### <a name="flexlayoutflex-layoutmd"></a>[FlexLayout](flex-layout.md)
+
+O `FlexLayout` é semelhante ao `StackLayout` exibir exibições filho horizontal ou verticalmente:
+
+```xaml
+<FlexLayout Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+        
+    <Label Text="FlexLayout in Action" />
+    <Button Text="Button" />
+    <Label Text="Another Label" />
+</FlexLayout>
+```
+
+No entanto, se houver muitos filhos para caber em uma única linha ou columm, `FlexLayout` também é capaz de encapsulamento esses modos de exibição. `FlexLayout` se baseia no módulo de Layout de caixa flexível de CSS e tem muitas das mesmas opções internas para posicionamento e alinhamento de seus filhos.
 
 ### <a name="absolutelayoutabsolute-layoutmd"></a>[AbsoluteLayout](absolute-layout.md)
 

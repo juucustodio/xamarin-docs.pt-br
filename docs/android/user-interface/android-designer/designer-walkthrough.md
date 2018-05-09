@@ -6,12 +6,12 @@ ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/29/2018
-ms.openlocfilehash: ea3d4a7f848847d6a9f7341faec47294a4cab3f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/10/2018
+ms.openlocfilehash: 8d1dc410d5336d9c2505a18720cc7f734e838c39
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-android-designer"></a>Usando o Designer de Android
 
@@ -36,9 +36,9 @@ A primeira etapa é criar um novo projeto de xamarin.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Inicie o Visual Studio e clique em **novo projeto...**  , em seguida, escolha o **Visual C\# > Android > aplicativo em branco (Android)** modelo:
+Inicie o Visual Studio e clique em **novo projeto...**  , em seguida, escolha o **Visual C\# > Android > aplicativo do Android (Xamarin)** modelo:
 
-[![Aplicativo do Android em branco](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
+[![Aplicativo do Android em branco](designer-walkthrough-images/vs/01-android-app-sml.w157.png)](designer-walkthrough-images/vs/01-android-app.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -74,7 +74,7 @@ Vamos criar um **LinearLayout** que usaremos para manter nossos usuário element
 
 No Visual Studio, clique com botão direito **recursos/layout** no **Solution Explorer** e selecione **Adicionar > Novo Item...** . No **Adicionar Novo Item** caixa de diálogo, selecione **Layout Android**. Nomeie o arquivo **ListItem.axml** e clique em **adicionar**:
 
-[![Novo layout](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
+[![Novo layout](designer-walkthrough-images/vs/03-new-layout-sml.w157.png)](designer-walkthrough-images/vs/03-new-layout.w157.png#lightbox)
 
 O novo **ListItem** layout é exibido no Designer:
 

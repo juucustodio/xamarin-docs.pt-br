@@ -6,12 +6,12 @@ ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
-ms.openlocfilehash: f8032966b49f6f023642b0d1338e8c5d740b66e0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/10/2018
+ms.openlocfilehash: bc535160816ad186baaa5e802eceb6ae40347d75
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Guia de Introdução com XAML
 
@@ -23,9 +23,9 @@ Para começar a editar o arquivo XAML primeiro, use o Visual Studio ou o Visual 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-No Windows, use o Visual Studio para selecionar **arquivo > Novo > projeto** no menu. No **novo projeto** caixa de diálogo, selecione **Visual C# > plataforma cruzada** à esquerda e, em seguida, **aplicativo da plataforma cruzada (xamarin. Forms ou nativo)** da lista no centro. 
+No Windows, use o Visual Studio para selecionar **arquivo > Novo > projeto** no menu. No **novo projeto** caixa de diálogo, selecione **Visual C# > plataforma cruzada** à esquerda e, em seguida, **aplicativo móvel (xamarin. Forms)** da lista no centro. 
 
-![](get-started-with-xaml-images/win/newprojectdialog.png "Caixa de diálogo Novo projeto")
+![](get-started-with-xaml-images/win/newprojectdialog.w157.png "Caixa de diálogo Novo projeto")
 
 Selecione um local para a solução, dê a ele um nome de **XamlSamples** (ou que preferir) e pressione **Okey**.
 
@@ -226,7 +226,7 @@ Verifique se o programa ainda compila e implanta antes de continuar.
 
 Para adicionar outros baseados em XAML `ContentPage` classes ao seu projeto, selecione o **XamlSamples** PCL do projeto e invocar o **projeto > Adicionar Novo Item** item de menu. À esquerda do **Adicionar Novo Item** caixa de diálogo, selecione **Visual C#** e **xamarin. Forms**. Selecione a lista **página de conteúdo** (não **página de conteúdo (c#)**, que cria uma página de código somente ou **exibição de conteúdo**, que não é uma página). Nomeie a página, por exemplo, **HelloXamlPage.xaml**:
 
-![](get-started-with-xaml-images/win/addnewitemdialog.png "Adicionar caixa de diálogo Novo Item")
+![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "Adicionar caixa de diálogo Novo Item")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 

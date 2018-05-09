@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 2178d567f1ccfe803ebce8b7b623c31c290999bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fec14b0f7328bee1d0866ba02f28202e8d63e8cb
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started"></a>Guia de Introdução
 
@@ -42,6 +42,10 @@ Este documento explica *como o Xamarin funciona* em alto nível e vincula, por m
 ###  <a name="introduction-to-the-mobile-software-development-lifecyclecross-platformget-startedintroduction-to-mobile-sdlcmd"></a>[Introdução ao ciclo de vida de desenvolvimento de software móvel](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
 
 Este artigo aborda o ciclo de vida de desenvolvimento de software em relação a aplicativos móveis e discute algumas das considerações necessárias ao criar projetos móveis. Para desenvolvedores que querem começar diretamente a compilar, este guia pode ser ignorado e lido posteriormente para obter um entendimento mais completo do desenvolvimento móvel.
+
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Compilar aplicativos de plataforma cruzada](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+
+Ao escolher o Xamarin e ter alguns pontos em mente ao projetar e desenvolver aplicativos móveis, você poderá realizar um compartilhamento de código expressivo entre plataformas móveis, reduzir o tempo de lançamento no mercado, aproveitar talentos existentes, atender à demanda de acesso móvel dos clientes e reduzir a complexidade multiplataforma. &nbsp;Este documento descreve as principais diretrizes para aproveitar essas vantagens em aplicativos utilitários e de produtividade.
 
 ###  <a name="introducing-visual-studio-for-machttpsdocsmicrosoftcomvisualstudiomac"></a>[Introdução do Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/)
 

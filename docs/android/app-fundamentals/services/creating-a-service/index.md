@@ -5,12 +5,12 @@ ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/01/2018
-ms.openlocfilehash: d1e0fdb1c4b159b6db283d7b9b3be673b73a0ee0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: 00785ad161f5f05fd70b059bb0a3f1c8d6c31f97
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-service"></a>Criando um serviço
 
@@ -82,8 +82,8 @@ A próxima etapa é examinar como iniciar um serviço e, em seguida, ir para exa
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **Intenção implícita** &ndash; esse tipo de intenção de forma flexível identifica o de ação que deve ser executada, mas o serviço exato para concluir essa ação é desconhecido. Uma tentativa implícita pode ser pensada como uma letra que é abordado "Preocupação de maio de TI para Whom...".
-    Android examinarão o conteúdo da intenção e determinar se há um serviço existente que corresponde a intenção.
+-   **Intenção implícita** &ndash; esse tipo de intenção de forma flexível identifica da ação que o usuário deseja executar, mas o serviço exato para concluir essa ação é desconhecido. Uma tentativa implícita pode ser pensada como uma letra que é abordado "Preocupação de maio de TI para Whom...".
+    Android examinar o conteúdo da intenção e determinar se há um serviço existente que corresponda a intenção.
 
     Um _filtro intenção_ é usado para ajudar a encontrar a intenção implícita com um serviço registrado. Um filtro a intenção é um elemento XML que é adicionado ao **AndroidManifest.xml** que contém os metadados necessários para ajudar a encontrar um serviço com uma intenção implícita.
 

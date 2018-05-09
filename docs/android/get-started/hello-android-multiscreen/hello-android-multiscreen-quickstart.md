@@ -7,12 +7,12 @@ ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 67644caedd268aac45a86c03a69ba017976fc103
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/30/2018
+ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: início rápido
 
@@ -108,10 +108,11 @@ Nesta aula, você está criando um `ListActivity` e preenchendo-o programaticame
 
 ### <a name="adding-translation-history-code"></a>Adicionando código de histórico de conversão
 
-Este aplicativo coleta números de telefone (que o usuário tenha convertido na primeira tela) e os transfere para a segunda tela. Os números de telefone são armazenados como uma lista de cadeias de caracteres. Para dar suporte às listas, adicione a seguinte política `using` à parte superior da classe `MainActivity`:
+Este aplicativo coleta números de telefone (que o usuário tenha convertido na primeira tela) e os transfere para a segunda tela. Os números de telefone são armazenados como uma lista de cadeias de caracteres. Para permitir listas (e intenções, que serão usadas mais tarde), adicione as seguintes diretivas `using` na parte superior de **MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Em seguida, crie uma lista vazia que pode ser preenchida com números de telefone.
@@ -246,10 +247,11 @@ Nesta aula, um `ListActivity` é criado e preenchido programaticamente, portanto
 
 ### <a name="adding-translation-history-code"></a>Adicionando código de histórico de conversão
 
-Este aplicativo coleta números de telefone (que o usuário tenha convertido na primeira tela) e os transfere para a segunda tela. Os números de telefone são armazenados como uma lista de cadeias de caracteres. Para dar suporte às listas, adicione a seguinte política `using` à parte superior da classe `MainActivity`:
+Este aplicativo coleta números de telefone (que o usuário tenha convertido na primeira tela) e os transfere para a segunda tela. Os números de telefone são armazenados como uma lista de cadeias de caracteres. Para permitir listas (e intenções, que serão usadas mais tarde), adicione as seguintes diretivas `using` na parte superior de **MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Em seguida, crie uma lista vazia que pode ser preenchida com números de telefone. A classe `MainActivity` terá a seguinte aparência:
