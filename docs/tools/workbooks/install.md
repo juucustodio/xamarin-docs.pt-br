@@ -3,14 +3,13 @@ title: Requisitos e instalação de pastas de trabalho
 description: Como baixar, instalar e usar pastas de trabalho do Xamarin.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 68cac91a9b430d2abd138c0bb8bd334b65986329
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4d3217140605be8567d70e6dcf63d60a02e6b2fb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisitos e instalação de pastas de trabalho
 
@@ -102,7 +101,7 @@ Se você estiver tendo problemas para se conectar a seu iOS ou Android pasta de 
 - Nome do dispositivo que você está tentando se conectar a
 - Versão do sistema operacional do dispositivo
 - Android: Verifique se você está usando uma arquitetura x86 emulador
-- Android: A plataforma de emulador que você está usando? Google Emulator?
+- Android: A plataforma de emulador que você está usando? Emulador do Google?
   Emulador do Android do Visual Studio? Player de Xamarin Android?
 - iOS no Windows: qual versão do iOS remoto Xamarin simulador você tenha instalado (Verifique **adicionar ou remover programas** na **painel de controle**)?
 - iOS no Windows:. forneça informações de versão de plataforma para o host de compilação do Mac

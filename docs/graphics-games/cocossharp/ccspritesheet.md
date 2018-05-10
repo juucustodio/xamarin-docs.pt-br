@@ -3,15 +3,14 @@ title: Melhorando a taxa de quadros com CCSpriteSheet
 description: CCSpriteSheet fornece funcionalidade para combinar e usar muitos arquivos de imagem em uma textura. Reduzir a contagem de textura pode melhorar os tempos de carregamento do jogo e taxa de quadros.
 ms.prod: xamarin
 ms.assetid: A1334030-750C-4C60-8B84-1A8A54B0D00E
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 9487ddf5ccdb1d0caf820b10446eaff0f80a97ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b0f58554b26b1a5334970b8c1288234acbf8db7
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="improving-frame-rate-with-ccspritesheet"></a>Melhorando a taxa de quadros com CCSpriteSheet
 

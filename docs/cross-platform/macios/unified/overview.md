@@ -3,15 +3,14 @@ title: Visão geral da API unificada
 description: O novo estilo API torna mais fácil para compartilhar código entre Mac e iOS, bem como permitindo que você oferecer suporte a 32 e 64 bits aplicativos com os mesmos binários.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c36682ba038c18dfb872e76f338ea1d9881cca10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0bdbf4a41ad5737603fccc7e78bc588a2f3acee3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="unified-api-overview"></a>Visão geral da API unificada
 

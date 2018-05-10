@@ -6,16 +6,18 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/20/2018
-ms.openlocfilehash: 124823238968ab21c1e55818ba5b99d2bb0c0bf8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/08/2018
+ms.openlocfilehash: a714ac55c3a49b91cb21e3ba1793b9bccd7d1be2
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho firebase
 
 _Este guia descreve como agendar o trabalho em segundo plano usando a biblioteca de Firebase trabalho Dispatcher do Google._
+
+![Firebase Dispatcher de trabalho no modo de visualização](~/media/shared/preview.png)
 
 ## <a name="overview"></a>Visão geral
 
@@ -60,9 +62,13 @@ O Dispatcher de trabalho Firebase requer o nível de API do Android 9 ou superio
 
 ## <a name="using-the-firebase-job-dispatcher-library-in-xamarinandroid"></a>Usando a biblioteca de Dispatcher de trabalho de Firebase em xamarin
 
-Para começar a usar o Dispatcher de trabalho Firebase, primeiro adicione o [pacote Xamarin.Firebase.JobDispatcher NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher/0.6.0-beta1) ao projeto xamarin. Pesquisar o NuGet Package Manager para o **Xamarin.Firebase.Jobdispatcher** pacote.  
+Para começar a usar o Dispatcher de trabalho Firebase, primeiro adicione o [pacote Xamarin.Firebase.JobDispatcher NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) ao projeto xamarin. Pesquisar o NuGet Package Manager para o **Xamarin.Firebase.JobDispatcher** pacote (que ainda está em pré-lançamento).
 
 Depois de adicionar a biblioteca de Firebase Dispatcher de trabalho, crie um `JobService` classe e, em seguida, agendar a execução com uma instância do `FirebaseJobDispatcher`.
+
+> [!NOTE]
+> A associação atual para o Dispatcher de trabalho Firebase tem como alvo uma versão antiga da biblioteca. O é um [bug conhecido [(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] que impede que a associação seja atualizado para uma versão mais recente do Dispatcher de trabalho Firebase de destino.
+
 
 ### <a name="creating-a-jobservice"></a>Criando um JobService
 
@@ -287,8 +293,9 @@ Este guia abordou como usar o Dispatcher de trabalho Firebase para executar o tr
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin.Firebase.JobDispatcher NuGet](https://www.nuget.org/packages/Xamarin.FirebaseJobDispatcher)
-- [firebase-job-dispatcher on GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
-- [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
+- [Gerador de associações falha com erro FATAL exceção sem tratamento: System. ArgumentNullException: o valor não pode ser nulo.](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
+- [Xamarin.Firebase.JobDispatcher NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
+- [firebase-trabalho dispatcher no GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
+- [Associação de Xamarin.Firebase.JobDispatcher](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
 - [Agendamento de trabalho inteligente](https://developer.android.com/topic/performance/scheduling.html)
 - [Android bateria e otimizações de memória - 2016 de e/s do Google (vídeo)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)

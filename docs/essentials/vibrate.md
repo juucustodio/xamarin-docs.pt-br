@@ -2,15 +2,14 @@
 title: Vibração Xamarin.Essentials
 description: A classe vibração permite iniciar e interromper a funcionalidade de vibrate para uma quantidade de tempo desejada.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: e0358b95dbed5dc2bc6cb087a458034845cb8487
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 53271f3cee06f33cea4fa0bd28d3cff1baf0cd3e
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-vibration"></a>Vibração Xamarin.Essentials
 

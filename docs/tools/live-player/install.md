@@ -3,15 +3,14 @@ title: Instalação do Xamarin Player ao vivo
 description: Editar e testar aplicativos em tempo real em seu dispositivo iOS ou Android
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 1c1d8e24ecea2e1606f7f134aaa5ecf619e155c6
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 0f343e253a57de33d7e19e648862e6d11fa5af5f
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Instalação do Xamarin Player ao vivo
 

@@ -2,15 +2,14 @@
 title: Xamarin.Essentials bússola
 description: A classe Compass permite monitorar o título do Norte magnética do dispositivo.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 9e0d0a709006a0d185a0c79b7b03d1672f06c4b6
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 2f720b4d4861c4969ad9726c7eef876c53217c2b
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials bússola
 

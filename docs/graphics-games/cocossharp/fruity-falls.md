@@ -3,15 +3,14 @@ title: Detalhes de jogo vão Fruity
 description: Este guia examina o jogo vão Fruity, que abordam conceitos de desenvolvimento de jogos como física, gerenciamento de conteúdo, estado do jogo e projeto de jogo e CocosSharp comuns.
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 2138e27c1097e014f302cc0b9de0fa411bed89fc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 19b57d41fdf8aa4f8a749cf4979755161a0e7e51
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="fruity-falls-game-details"></a>Detalhes de jogo vão Fruity
 

@@ -3,15 +3,14 @@ title: UrhoSharp - mecanismo 3D/2D
 description: UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar animadas cenas 2D e 3D para seus aplicativos usando geometrias, materiais, luzes e câmeras.
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 564d106cc0192e818b87342ae0590e20afe507ae
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 1ce02be5661b35b36b0508d4bee89448e7447777
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp - mecanismo 3D/2D
 

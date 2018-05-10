@@ -2,15 +2,14 @@
 title: Atualizando aplicativos existentes para a API unificada
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: ca14d35bcc167bd35cf1ec9e822e86421579b7b8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 588c01ef9f9ee014592c9d8dc72f2b8be20dfee3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Atualizando aplicativos existentes para a API unificada
 
@@ -24,7 +23,7 @@ ms.lasthandoff: 04/04/2018
 
 Universidade de Xamarin tem um vídeo disponível gratuitamente no **atualização para o iOS API unificada**. Visite [Xamarin University raios palestras](http://university.xamarin.com/lightninglectures) assistir!
 
-[ ![](updating-apps-images/xamu-video-sml.png "Xamarin University")](http://university.xamarin.com/lightninglectures)
+[ ![](updating-apps-images/xamu-video-sml.png "Universidade de Xamarin")](http://university.xamarin.com/lightninglectures)
 
 Há três etapas para atualizar seus aplicativos:
 
@@ -40,7 +39,7 @@ Guias específicas estão disponíveis para cada produto para ajudá-lo a atuali
 
 Aplicativos xamarin existentes podem ser atualizados para a API de Unificação de mensagens usando a ferramenta de migração automatizada criada para o Visual Studio para Mac. Algumas correções adicionais poderão ser necessárias, conforme explicado em [estas instruções](~/cross-platform/macios/unified/updating-ios-apps.md) e [dicas](~/cross-platform/macios/unified/updating-tips.md).
 
-###  <a name="xamarinmac-appscross-platformmaciosunifiedupdating-mac-appsmd"></a>[Xamarin.Mac apps](~/cross-platform/macios/unified/updating-mac-apps.md)
+###  <a name="xamarinmac-appscross-platformmaciosunifiedupdating-mac-appsmd"></a>[Aplicativos Xamarin.Mac](~/cross-platform/macios/unified/updating-mac-apps.md)
 
 Aplicativos Xamarin.Mac existentes podem ser atualizados para a API de Unificação de mensagens usando a ferramenta de migração automatizada criada para o Visual Studio para Mac. Algumas correções adicionais poderão ser necessárias, conforme explicado em [estas instruções](~/cross-platform/macios/unified/updating-mac-apps.md) e [dicas](~/cross-platform/macios/unified/updating-tips.md).
 

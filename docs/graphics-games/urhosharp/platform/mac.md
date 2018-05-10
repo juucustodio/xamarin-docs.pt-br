@@ -3,15 +3,14 @@ title: Suporte a Mac UrhoSharp
 description: Programa de instalação específicas do Mac e recursos UrhoSharp.
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: ed396097f55f5f4a2f8a3b718b324919d0f8daea
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: c7210cbd5586df9018c2779bf0b92aa7c1c56e89
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="urhosharp-mac-support"></a>Suporte a Mac UrhoSharp
 

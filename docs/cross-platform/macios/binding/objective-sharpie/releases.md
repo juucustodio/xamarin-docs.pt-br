@@ -2,15 +2,14 @@
 title: Histórico de versões
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: a9eb4b1ea958f2756eb2a21ee44d0d0dfcf8b931
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9a29b131af706b9dedc808a156cdfaffa4173882
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="release-history"></a>Histórico de versões
 
@@ -70,7 +69,7 @@ ms.lasthandoff: 04/04/2018
 * [bxc #27849](https://bugzilla.xamarin.com/show_bug.cgi?id=27849): Certifique-se de `using ObjCRuntime;` é produzido quando `ArgumentSemantic` é usado.
 * [bxc #27850](https://bugzilla.xamarin.com/show_bug.cgi?id=27850): Certifique-se de `using System.Runtime.InteropServices;` é produzido quando `DllImport` é usado.
 * [bxc #27852](https://bugzilla.xamarin.com/show_bug.cgi?id=27852): padrão `DllImport` para carregar símbolos de `__Internal`.
-* [bxc &#27848;](https://bugzilla.xamarin.com/show_bug.cgi?id=27848): ignorar declarações de contêiner Objective-C declarado de avanço.
+* [bxc 27848 #](https://bugzilla.xamarin.com/show_bug.cgi?id=27848): ignorar declarações de contêiner Objective-C declarado de avanço.
 * [bxc #27846](https://bugzilla.xamarin.com/show_bug.cgi?id=27846): associar tipos de protocolo com um único qualificação como interfaces concretas (`id<Foo>` como `Foo` em vez de `Foundation.NSObject<Foo>`).
 * [bxc #28037](https://bugzilla.xamarin.com/show_bug.cgi?id=28037): associar `UInt32`, `UInt64`, e `Int64` literais como `Int32` para descartar o `u` e/ou `uL` sufixos quando os valores com segurança se adaptam ao `Int32`.
 * [bxc #28038](https://bugzilla.xamarin.com/show_bug.cgi?id=28038): corrija o mapeamento de nome de enum quando o nome original do native começa com um `k` prefixo.

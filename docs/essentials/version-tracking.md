@@ -2,15 +2,14 @@
 title: Controle de versão Xamarin.Essentials
 description: A classe VersionTracking permite verificar a versão de aplicativos e os números de versão junto com ver informações adicionais tal como se fosse a primeira vez que o aplicativo já aberto ou para a versão atual, obtém as informações de compilação anterior e muito mais.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: ec9d62589ddfb270d5c8a5321b3bc733fc597e4b
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 41e0b704715b648e642f4a4c99554ff3f085a39a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-version-tracking"></a>Controle de versão Xamarin.Essentials
 

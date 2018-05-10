@@ -8,11 +8,11 @@ ms.custom: video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4a7a8a96ff22cf02d04ffdfff684d454d1a28024
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3eb3bdd7b060b661d5202c63a879f1c88d2ccdcb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="oreo-features"></a>Recursos de Oreos
 
@@ -190,7 +190,7 @@ Depois que você usar **avdmanager** para criar seu dispositivo virtual, ele ser
 
 -----
 
-Para obter mais informações sobre como configurar um emulador Android para teste e depuração, consulte [emulador do Android SDK](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Para obter mais informações sobre como configurar um emulador Android para teste e depuração, consulte [emulador Android da Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 Se você estiver usando um dispositivo físico, como uma ligação ou um Pixel, você pode atualizar seu dispositivo por meio de automático sobre as atualizações de ondas de rádio ou baixar uma imagem do sistema e flash seu dispositivo diretamente. Para obter mais informações sobre como atualizar manualmente seu dispositivo para Oreos Android, consulte [imagens de fábrica do Nexus e dispositivos de Pixel](https://developers.google.com/android/images).
 

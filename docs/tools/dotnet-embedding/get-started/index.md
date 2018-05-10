@@ -2,15 +2,14 @@
 title: Introdução ao .NET inserindo
 ms.prod: xamarin
 ms.assetid: AF8A4798-EBDD-4E73-997B-C3D4FC5E9685
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: e7924b4a582fd670062ae0cf8205bebce1fb00c8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: af73de4c9f27cfab34b22e726248723da3d1ee58
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="getting-started-with-net-embedding"></a>Introdução ao .NET inserindo
 

@@ -3,15 +3,14 @@ title: Requisitos e instalação de Inspetor
 description: Como baixar, instalar e usar o Inspetor de Xamarin.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 93f42eef8d76074f6b672bc5a663e8f8f1d2ef80
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bbd5c64f53e191d5ac629e20df87c2b7ca4ec00
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="inspector-installation-and-requirements"></a>Requisitos e instalação de Inspetor
 
@@ -126,7 +125,7 @@ Para Android e iOS, é essencial que sabemos que dispositivo você está depuran
 - Nome do dispositivo, conforme mostrado em seu IDE
 - Versão do sistema operacional do dispositivo
 - Android: Verifique se você está usando uma arquitetura x86 emulador
-- Android: A plataforma de emulador que você está usando? Google Emulator? Emulador do Android do Visual Studio? Player de Xamarin Android?
+- Android: A plataforma de emulador que você está usando? Emulador do Google? Emulador do Android do Visual Studio? Player de Xamarin Android?
 - O aplicativo que você está depurando corretamente aparecem e funcionam no dispositivo?
 - O dispositivo tem conectividade de rede (seleção por meio do navegador da web)?
 

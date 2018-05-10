@@ -3,15 +3,14 @@ title: Animação com CCAction
 description: A classe CCAction simplifica adicionar animações CocosSharp jogos. Essas animações podem ser usadas para implementar a funcionalidade de ou para adicionar polonês.
 ms.prod: xamarin
 ms.assetid: 74DBD02A-6F10-4104-A61B-08CB49B733FB
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 21d7cd17d7d08f05e044f648fc09b71b7a837065
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b6209816f741423f40945a0fe4391fe921cb35de
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="animating-with-ccaction"></a>Animação com CCAction
 

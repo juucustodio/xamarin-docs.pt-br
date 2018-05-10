@@ -3,15 +3,14 @@ title: Modos de exibição HTML de construção usando modelos Razor
 description: " Usar uma página da Web de tela inteira para renderizar HTML pode ser uma maneira simple e eficiente para processar a formatação complexa de uma maneira de plataforma cruzada, especialmente se você já tiver o HTML, CSS e Javascript de um projeto de site."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: fa361e48f8f7e236a3295deda2d80a02ef06b34d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 48d7778bf3225401f2819909ae6be320cfa881e3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>Modos de exibição HTML de construção usando modelos Razor
 
@@ -373,7 +372,7 @@ Esta seção explica como usar a construir seu próprio aplicativo híbrido usan
 
 - **Android > aplicativo > aplicativo WebView Android**
 - **iOS > aplicativo > aplicativo WebView**
-- **ASP.NET MVC Project**
+- **Projeto ASP.NET MVC**
 
 
 
@@ -483,7 +482,7 @@ HTML pode ser ótimo para criação de protótipos e exibir os tipos de coisas w
 
 Os modos de exibição da web no modelo podem ser aumentados facilmente com controles específicos de plataforma – simplesmente editar os **MainStoryboard.storyboard** no designer de iOS ou **Resources/layout/Main.axml** no Android.
 
-### <a name="razortodo-sample"></a>RazorTodo Sample
+### <a name="razortodo-sample"></a>Exemplo de RazorTodo
 
 O [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo) repositório contém duas soluções separadas para mostrar as diferenças entre um aplicativo totalmente controlados por HTML e um aplicativo que combina o HTML com controles nativos:
 

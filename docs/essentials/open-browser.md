@@ -2,15 +2,14 @@
 title: Abrir Xamarin.Essentials navegador
 description: A classe de navegador permite que um aplicativo abrir um link da web no navegador preferencial sistema otimizado ou navegador externo.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: e8e1a6973e7928032b2aa8669d36325b93671624
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: fe5b1de83d30a6de15afa35e5884f8be5462b07b
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-browser"></a>Navegador de Xamarin.Essentials
 

@@ -2,15 +2,14 @@
 title: Preferências de Xamarin.Essentials
 description: A classe de preferências salva as preferências de aplicativo em um repositório de chave/valor.
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3886432f51125508349fd7815ac374cb0339c254
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 6cca9413cee40fde5b8bb8967db52db7a3a3382f
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-preferences"></a>Preferências de Xamarin.Essentials
 

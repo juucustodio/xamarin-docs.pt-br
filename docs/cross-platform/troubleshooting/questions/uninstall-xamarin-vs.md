@@ -3,15 +3,14 @@ title: Como executar uma desinstalação completa do Xamarin para Visual Studio?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: 49577961026d9895912d2848975e71a9f7eebbd8
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 99fde9330498ee62d3cf6b5910c2cbfae39cfdeb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>Como executar uma desinstalação completa do Xamarin para Visual Studio?
 

@@ -3,15 +3,14 @@ title: Extensões do Visual Studio ausentes após a instalação
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2017
-ms.openlocfilehash: 72870b9bf6ff6c3068ee037e6405e4ec03546cd6
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: e47cfc4de77a6310a81867eefb07c3c1e5cc7060
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Extensões do Visual Studio ausentes após a instalação
 
