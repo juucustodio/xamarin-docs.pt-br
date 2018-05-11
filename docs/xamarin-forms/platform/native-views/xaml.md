@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 6dbad7352a089f482fa3a396505507da58771cef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 24e7f29e42607d4a2c957cf85dad15f659d3618e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-xaml"></a>Modos de exibição nativo em XAML
 
@@ -74,7 +74,7 @@ Propriedades vinculáveis e propriedades vinculáveis anexadas podem também ser
 Construtores de widget Android geralmente exigem o Android `Context` objeto como um argumento e isso podem ser disponibilizados através de uma propriedade estática no `MainActivity` classe. Portanto, ao criar um widget Android em XAML, o `Context` objeto geralmente deve ser passado para o construtor do widget usando o `x:Arguments` atributo com um `x:Static` extensão de marcação. Para obter mais informações, consulte [passar argumentos para exibições nativo](#passing_arguments).
 
 > [!NOTE]
-> Observe que uma exibição nativo com a nomenclatura `x:Name` não é possível em um projeto de biblioteca de classe portátil (PCL) ou um projeto de ativo compartilhado (SAP). Isso irá gerar uma variável do tipo nativo, o que causará um erro de compilação. No entanto, os modos nativo podem ser ajustados em `ContentView` instâncias e recuperados no arquivo code-behind, desde que um SAP está sendo usado. Para obter mais informações, consulte [referindo-se a uma exibição nativa de código](#native_view_code).
+> Observe que uma exibição nativo com a nomenclatura `x:Name` não é possível em um projeto de biblioteca .NET padrão ou um projeto de ativo compartilhado (SAP). Isso irá gerar uma variável do tipo nativo, o que causará um erro de compilação. No entanto, os modos nativo podem ser ajustados em `ContentView` instâncias e recuperados no arquivo code-behind, desde que um SAP está sendo usado. Para obter mais informações, consulte [referindo-se a uma exibição nativa de código](#native_view_code).
 
 <a name="native_bindings" />
 
@@ -285,7 +285,7 @@ O iOS e Android botões nativos compartilham o mesmo `OnButtonTap` manipulador d
 
 ## <a name="subclassing-native-views"></a>Subclasses de exibições nativo
 
-Muitos iOS e Android exibições nativo não são adequadas para criar uma instância em XAML, porque eles usam métodos, em vez de propriedades, para configurar o controle. A solução para esse problema é nativo modos de exibição de subclasse de wrappers que definem uma API amigável XAML mais que usa propriedades para o controle de instalação, e que usa eventos independente de plataforma. Os modos de exibição nativo encapsulados podem ser colocados em um projeto de ativo compartilhado (SAP) e colocados entre as diretivas de compilação condicional, ou colocados em projetos específicos de plataforma e referenciados do XAML em um projeto de biblioteca de classe portátil (PCL).
+Muitos iOS e Android exibições nativo não são adequadas para criar uma instância em XAML, porque eles usam métodos, em vez de propriedades, para configurar o controle. A solução para esse problema é nativo modos de exibição de subclasse de wrappers que definem uma API amigável XAML mais que usa propriedades para o controle de instalação, e que usa eventos independente de plataforma. Os modos nativo encapsulados podem ser colocados em um projeto de ativo compartilhado (SAP) e colocados entre as diretivas de compilação condicional, ou colocados em projetos específicos de plataforma e referenciados do XAML em um projeto de biblioteca .NET padrão.
 
 O exemplo de código a seguir demonstra uma página xamarin. Forms que consome uma subclasse exibições nativo:
 
@@ -489,7 +489,7 @@ Este artigo demonstrou como consumir nativo modos de exibição de arquivos XAML
 
 - [NativeSwitch (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
 - [Forms2Native (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/Forms2Native/)
-- [NativeViewInsideContentView (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeViewInsideContentView/)
-- [SubclassedNativeControls (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/SubclassedNativeControls/)
+- [NativeViewInsideContentView (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeViewInsideContentView/)
+- [SubclassedNativeControls (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/SubclassedNativeControls/)
 - [Formulários nativos](~/xamarin-forms/platform/native-forms.md)
 - [Passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md)

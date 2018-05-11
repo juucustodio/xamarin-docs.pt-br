@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 5e8ad5ba3bdfa61ae1b2f4404016f204a8c1747c
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: caa7884920e842a8f83e2b0fdb5e0fa4b358ca8e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="images"></a>Imagens
 
@@ -39,7 +39,7 @@ Xamarin. Forms usa o [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.
 
 - [`FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) -Requer um nome de arquivo ou caminho de arquivo que pode ser resolvido em cada plataforma.
 - [`FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) -Requer um objeto Uri, por exemplo.  `new Uri("http://server.com/image.jpg")` .
-- [`FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) -Requer um identificador de recurso para um arquivo de imagem inserido no aplicativo ou PCL, com um **compilar ação: EmbeddedResource**.
+- [`FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) -Requer um identificador de recurso para um arquivo de imagem inserido no aplicativo ou projeto de biblioteca do .NET padrão, com um **compilar ação: EmbeddedResource**.
 - [`FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) -Requer um fluxo que fornece dados de imagem.
 
 O [ `Aspect` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) propriedade determina como a imagem será dimensionada para caber na área de exibição:

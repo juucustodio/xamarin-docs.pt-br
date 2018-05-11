@@ -3,15 +3,14 @@ title: Desempenho de plataforma cruzada
 description: Há muitas técnicas para aumentar o desempenho dos aplicativos compilados com a plataforma Xamarin. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo. Esse artigo descreve e aborda essas técnicas.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 98b4b4a9e7bc28dd444cfdcb1afdfbe64cb1aee0
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f011a92b4789da7328827f184449fd957abdf3ba
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -168,7 +167,7 @@ O campo `handler` mantém a referência para o método anônimo e é usado para 
 ## <a name="use-weak-references-to-prevent-immortal-objects"></a>Usar referências fracas para impedir a criação de objetos imortais
 
 > [!NOTE]
-> Os desenvolvedores iOS devem revisar a documentação sobre [evitar referências circulares no iOS](~/ios/deploy-test/performance.md#avoidcircularreferences) para garantir que os aplicativos usem a memória com eficiência.
+> Os desenvolvedores iOS devem revisar a documentação sobre [evitar referências circulares no iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references) para garantir que os aplicativos usem a memória com eficiência.
 
 <a name="lazy" />
 

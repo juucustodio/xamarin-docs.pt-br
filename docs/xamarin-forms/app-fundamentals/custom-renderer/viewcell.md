@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fd96770caf92eb30e669133f592f5d780146be59
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-viewcell"></a>Personalizando um ViewCell
 
@@ -65,13 +65,13 @@ public class NativeCell : ViewCell
   }
 }
 ```
-O `NativeCell` classe é criada no projeto de biblioteca (PCL) de classes portátil e define a API para a célula personalizada. A célula personalizada expõe `Name`, `Category`, e `ImageFilename` propriedades que podem ser exibidas por meio de associação de dados. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+O `NativeCell` classe é criada no projeto da biblioteca .NET padrão e define a API para a célula personalizada. A célula personalizada expõe `Name`, `Category`, e `ImageFilename` propriedades que podem ser exibidas por meio de associação de dados. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 <a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>Consumindo a célula personalizada
 
-O `NativeCell` célula personalizado pode ser referenciada em Xaml no projeto PCL declarando um namespace para seu local e usando o prefixo de namespace no elemento de célula personalizado. O seguinte exemplo de código mostra como o `NativeCell` célula personalizada pode ser consumida por uma página XAML:
+O `NativeCell` célula personalizado pode ser referenciada em Xaml no projeto da biblioteca .NET padrão declarando um namespace para seu local e usando o prefixo de namespace no elemento de célula personalizado. O seguinte exemplo de código mostra como o `NativeCell` célula personalizada pode ser consumida por uma página XAML:
 
 ```xaml
 <ContentPage ...

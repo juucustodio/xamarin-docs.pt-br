@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: af0dbef84d8ceb178fe5c1ac6fc7194c178141dc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementando um HybridWebView
 
@@ -74,7 +74,7 @@ public class HybridWebView : View
 }
 ```
 
-O `HybridWebView` controle personalizado é criado no projeto de biblioteca (PCL) de classes portátil e define a seguinte API para o controle:
+O `HybridWebView` controle personalizado é criado no projeto da biblioteca .NET padrão e define a seguinte API para o controle:
 
 - Um `Uri` propriedade que especifica o endereço da página da web a ser carregado.
 - Um `RegisterAction` método registra um `Action` com o controle. A ação registrada será chamada do JavaScript contido no arquivo HTML referenciado por meio de `Uri` propriedade.
@@ -85,7 +85,7 @@ O `HybridWebView` controle personalizado é criado no projeto de biblioteca (PCL
 
 ## <a name="consuming-the-hybridwebview"></a>Consumindo o HybridWebView
 
-O `HybridWebView` controle personalizado pode ser referenciado em XAML no projeto PCL declarando um namespace para seu local e usando o prefixo de namespace do controle personalizado. O seguinte exemplo de código mostra como o `HybridWebView` controle personalizado pode ser consumido por uma página XAML:
+O `HybridWebView` controle personalizado pode ser referenciado em XAML no projeto da biblioteca .NET padrão declarando um namespace para seu local e usando o prefixo de namespace do controle personalizado. O seguinte exemplo de código mostra como o `HybridWebView` controle personalizado pode ser consumido por uma página XAML:
 
 ```xaml
 <ContentPage ...

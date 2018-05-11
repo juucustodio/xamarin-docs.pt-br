@@ -7,11 +7,11 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: 104a3adb5d59bc7feafa3c993290247b749ce312
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação XAML
 
@@ -386,13 +386,13 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-Você precisará de declarações de namespace XML adicionais para acessar outras classes. Cada declaração de namespace XML adicional define um novo prefixo. Para acessar classes locais para o aplicativo compartilhado PCL, tais como `AppConstants`, os programadores do XAML geralmente usam o prefixo `local`. A declaração de namespace deve indicar o nome do namespace CLR (Common Language Runtime), também conhecido como o nome de namespace de .NET, que é o nome que aparece em c# `namespace` definição ou em um `using` diretiva:
+Você precisará de declarações de namespace XML adicionais para acessar outras classes. Cada declaração de namespace XML adicional define um novo prefixo. Para acessar classes locais para a biblioteca .NET padrão de aplicativo compartilhado, como `AppConstants`, os programadores do XAML geralmente usam o prefixo `local`. A declaração de namespace deve indicar o nome do namespace CLR (Common Language Runtime), também conhecido como o nome de namespace de .NET, que é o nome que aparece em c# `namespace` definição ou em um `using` diretiva:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-Você também pode definir as declarações de namespace XML para namespaces do .NET em qualquer assembly que referencia o PCL. Por exemplo, aqui está uma `sys` prefixo para o .NET padrão `System` namespace, que é o **mscorlib** assembly, que uma vez significava "Microsoft Common biblioteca de objetos em tempo de execução", mas agora significa "multilíngue padrão Objeto em tempo de execução biblioteca comum." Como esse é outro assembly, você deve também especificar o nome do assembly, nesse caso **mscorlib**:
+Você também pode definir as declarações de namespace XML para namespaces do .NET em qualquer assembly que faz referência a biblioteca do .NET padrão. Por exemplo, aqui está uma `sys` prefixo para o .NET padrão `System` namespace, que é o **mscorlib** assembly, que uma vez significava "Microsoft Common biblioteca de objetos em tempo de execução", mas agora significa "multilíngue padrão Objeto em tempo de execução biblioteca comum." Como esse é outro assembly, você deve também especificar o nome do assembly, nesse caso **mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"

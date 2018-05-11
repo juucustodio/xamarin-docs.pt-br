@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: b760f5e1d37f4bc8cc6af063552b974afa435d56
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: c9bc532902e9cfcc080220a05e41401e893783e4
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-a-custom-theme"></a>Criando um tema personalizado
 
@@ -68,7 +68,7 @@ O código para esse efeito é fornecido abaixo - para referenciá-lo corretament
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-pcl-or-shared-project"></a>Código c# PCL ou do projeto compartilhado
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Código c# no projeto compartilhado ou projeto de biblioteca padrão do .NET
 
 O código para criar uma curva round `BoxView` usa [efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
 O raio de canto é aplicado usando um `BindableProperty` e é implementado, aplicando um [efeito](~/xamarin-forms/app-fundamentals/effects/index.md). O efeito requer código específico da plataforma no [iOS](#ios) e [Android](#android) projetos (mostrados abaixo).

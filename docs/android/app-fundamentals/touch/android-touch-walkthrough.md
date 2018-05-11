@@ -5,12 +5,12 @@ ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/02/2018
-ms.openlocfilehash: ae4d5b0b8cd384a11d130bc9258894e1cf4cfa36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/09/2018
+ms.openlocfilehash: 625ba800ce498f80c0344c67e26bd79360de4002
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Passo a passo - usando toque no Android
 
@@ -38,7 +38,7 @@ A primeira atividade, o exemplo de toque, mostrará como usar manipuladores de e
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
     {
         string message;
-        switch (touchEventArgs.Event.Action & MotionEventArgs.Mask)
+        switch (touchEventArgs.Event.Action & MotionEventActions.Mask)
         {
             case MotionEventActions.Down:
             case MotionEventActions.Move:
@@ -344,13 +344,11 @@ Para os fins deste passo a passo, a biblioteca de gestos já foi criada usando a
 
     Agora desenhe uma marca de seleção na tela e o bitmap que está sendo exibido deverá ser semelhante ao mostrado nas capturas de tela seguinte:
 
-    [![Desenhar a marca de seleção](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
-    [![reconhecido marca de seleção](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
+    [![Marca de seleção desenhada, marca de seleção é reconhecida](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
 
     Por fim, desenhe um rabisco na tela. A caixa de seleção deve alterar novamente para a imagem original, conforme mostrado nessas capturas de tela:
 
-    [![Rabisco na tela](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
-    [![imagem Original é exibida](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
+    [![Rabisco na tela, imagem original é exibido](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 Agora você tem uma compreensão de como integrar o toque e gestos em um aplicativo do Android usando o xamarin.
 

@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: de08e686fc07595b75016b9266f57b12831e9822
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0985fb533969a331ceee62f490bae600de9f189c
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mac-platform-setup"></a>Instalação da plataforma de Mac
 
@@ -41,7 +41,7 @@ Siga estas instruções para adicionar um aplicativo do Mac que serão executado
 
 5. No projeto de Mac, clique duas vezes em **pacotes > Adicionar pacotes de...**  para adicionar o [Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet. Você também deve atualizar os outros projetos nesta versão.
 
-6. No projeto de Mac, clique duas vezes em **referências** e adicione uma referência ao projeto xamarin. Forms (projeto compartilhado ou PCL).
+6. No projeto de Mac, clique duas vezes em **referências** e adicione uma referência ao projeto xamarin. Forms (projeto de biblioteca de projeto compartilhado ou padrão do .NET).
 
   ![Adicione uma referência ao projeto de código compartilhado xamarin. Forms](mac-images/references-sml.png)
 
@@ -152,7 +152,7 @@ Nem todos os recursos do xamarin. Forms forem concluídos nesta visualização; 
 * OpenGLRenderer
 * Seletor – implementação Bindable/observável
 * TabbedPage – BarBackgroundColor, BarTextColor
-* TableView – UnevenRows
+* Modo de tabela – UnevenRows
 * ViewCell – IsEnabled, ForceUpdateSize
 * WebView – a maioria dos WebNavigationEvents
 

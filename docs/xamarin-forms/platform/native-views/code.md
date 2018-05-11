@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 46284fd1b0863f904e9f24f125aef75fe3eb8caa
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c3a79947b02e0f877fd4ea1b0ddb72486c222719
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-c"></a>Modos de exibição nativos em c#
 
@@ -19,7 +19,7 @@ _Exibições nativo do iOS, Android e UWP podem ser referenciadas diretamente do
 
 ## <a name="overview"></a>Visão geral
 
-Qualquer controle de xamarin. Forms permite `Content` para ser definido, ou que tenha um `Children` coleção, pode adicionar modos de exibição específicos da plataforma. Por exemplo, um iOS `UILabel` podem ser adicionados diretamente para o [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) propriedade, ou o [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) coleção. No entanto, observe que essa funcionalidade requer o uso de `#if` define em soluções de projeto compartilhado do xamarin. Forms e não está disponível de soluções de biblioteca de classe portátil xamarin. Forms (PCL).
+Qualquer controle de xamarin. Forms permite `Content` para ser definido, ou que tenha um `Children` coleção, pode adicionar modos de exibição específicos da plataforma. Por exemplo, um iOS `UILabel` podem ser adicionados diretamente para o [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) propriedade, ou o [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) coleção. No entanto, observe que essa funcionalidade requer o uso de `#if` define em soluções de projeto compartilhado do xamarin. Forms e não está disponível de soluções de biblioteca xamarin. Forms .NET padrão.
 
 As capturas de tela a seguir demonstram específico da plataforma exibições com foi adicionado a um xamarin. Forms [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 

@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="device-class"></a>Classe de dispositivo
 
@@ -155,7 +155,7 @@ O [exemplo Maps](https://github.com/xamarin/xamarin-forms-samples/blob/master/Wo
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
-O `Device` classe também tem um `StartTimer` método que fornece uma maneira simples para disparar tarefas dependentes de tempo que funciona no xamarin. Forms código comuns (incluindo PCLs). Passar um `TimeSpan` para definir o intervalo e retornar `true` para manter a execução do temporizador ou `false` para interrompê-lo após a chamada atual.
+O `Device` classe também tem um `StartTimer` método que fornece uma maneira simples para disparar tarefas dependentes de tempo que funciona em código comum do xamarin. Forms, incluindo uma biblioteca .NET padrão. Passar um `TimeSpan` para definir o intervalo e retornar `true` para manter a execução do temporizador ou `false` para interrompê-lo após a chamada atual.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () => {
@@ -184,7 +184,7 @@ Observe que usando os métodos `async/await` não precisa usar `BeginInvokeOnMai
 
 ## <a name="summary"></a>Resumo
 
-O xamarin. Forms `Device` classe permite controle refinado layouts e funcionalidade em uma base por plataforma - código (PCL ou projetos compartilhados), mesmo em comum.
+O xamarin. Forms `Device` classe permite controle refinado layouts e funcionalidade em uma base por plataforma - código (projetos de biblioteca .NET padrão ou projetos compartilhados), mesmo em comum.
 
 
 ## <a name="related-links"></a>Links relacionados

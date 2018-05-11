@@ -7,24 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: a9fb90794ec74c46019fd2b4f41d90a2635909cd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fb6620e160af4c2c844fa694649c95abdac123f9
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="controls-reference"></a>Referência de Controles
 
 _Uma descrição de todos os elementos visuais usado para construir um aplicativo xamarin. Forms._
 
-A interface visual de um aplicativo xamarin. Forms é construída de objetos que são mapeados para controles nativos de cada plataforma de destino. Isso permite que aplicativos específicos de plataforma para iOS, Android e a plataforma Universal do Windows usar o xamarin. Forms código contido em um [biblioteca de classes portátil](~/cross-platform/app-fundamentals/pcl.md), um [biblioteca padrão do .NET](~/cross-platform/app-fundamentals/net-standard.md), ou um [ Projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
+A interface visual de um aplicativo xamarin. Forms é construída de objetos que são mapeados para controles nativos de cada plataforma de destino. Isso permite que aplicativos específicos de plataforma para iOS, Android e a plataforma Universal do Windows usar o xamarin. Forms código contido em um [biblioteca padrão do .NET](~/cross-platform/app-fundamentals/net-standard.md) ou um [projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
 
 Os quatro grupos de controle principal usados para criar a interface do usuário de um aplicativo xamarin. Forms são mostrados neste quatro artigo:
 
-- [**Pages**](pages.md)
+- [**Páginas**](pages.md)
 - [**Layouts**](layouts.md)
-- [**Views**](views.md)
-- [**Cells**](cells.md)
+- [**Modos de exibição**](views.md)
+- [**Células**](cells.md)
 
 Geralmente, uma página xamarin. Forms ocupa a tela inteira. Normalmente, a página contém um layout, que contém exibições e possivelmente outros layouts. As células são componentes especializados usados na conexão com [ `TableView` ](views.md#tableView) e [ `ListView` ](views.md#listView).
 

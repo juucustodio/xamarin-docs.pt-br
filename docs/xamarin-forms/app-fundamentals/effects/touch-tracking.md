@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: eb4ed3df4ea1f9e6aacf1c875eab17908d73cb7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e363cae4dd72a25e4768395410d4e56a8db30eba
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="invoking-events-from-effects"></a>Invocação de eventos de efeitos
 
@@ -49,7 +49,7 @@ Por esse motivo, o efeito de controle de toque descrito neste artigo implementa 
 
 ## <a name="the-touch-tracking-effect-api"></a>A API de efeito do controle de toque
 
-O [ **Touch demonstrações do efeito de controle** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) exemplo contém as classes (e uma enumeração) que implementa o controle de baixo nível toque. Esses tipos pertencem ao namespace `TouchTracking` e começar com a palavra `Touch`. O **TouchTrackingEffectDemos** projeto de biblioteca de classes portátil inclui o `TouchActionType` enumeração para o tipo de evento de toque:
+O [ **Touch demonstrações do efeito de controle** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) exemplo contém as classes (e uma enumeração) que implementa o controle de baixo nível toque. Esses tipos pertencem ao namespace `TouchTracking` e começar com a palavra `Touch`. O **TouchTrackingEffectDemos** projeto de biblioteca .NET padrão inclui o `TouchActionType` enumeração para o tipo de evento de toque:
 
 ```csharp
 public enum TouchActionType
@@ -65,7 +65,7 @@ public enum TouchActionType
 
 Todas as plataformas também incluem um evento que indica que o evento de toque foi cancelado.
 
-O `TouchEffect` classe o PCL deriva da `RoutingEffect` e define um evento chamado `TouchAction` e um método chamado `OnTouchAction` que invoca o `TouchAction` evento:
+O `TouchEffect` deriva de classe na biblioteca do .NET padrão `RoutingEffect` e define um evento chamado `TouchAction` e um método chamado `OnTouchAction` que invoca o `TouchAction` evento:
 
 ```csharp
 public class TouchEffect : RoutingEffect
@@ -87,7 +87,7 @@ public class TouchEffect : RoutingEffect
 
 Observe também o `Capture` propriedade. Para capturar eventos de toque, um aplicativo deve definir essa propriedade como `true` antes de uma `Pressed` eventos. Caso contrário, os eventos de toque se comportam como as da plataforma Universal do Windows.
 
-O `TouchActionEventArgs` classe o PCL contém todas as informações que acompanha cada evento:
+O `TouchActionEventArgs` classe na biblioteca do .NET padrão contém todas as informações que acompanha cada evento:
 
 ```csharp
 public class TouchActionEventArgs : EventArgs
@@ -112,7 +112,7 @@ public class TouchActionEventArgs : EventArgs
 
 Um aplicativo pode usar o `Id` propriedade para controlar dedos individuais. Observe o `IsInContact` propriedade. Esta propriedade é sempre `true` para `Pressed` eventos e `false` para `Released` eventos. Ele também é sempre `true` para `Moved` eventos no iOS e Android. O `IsInContact` propriedade pode ser `false` para `Moved` eventos sobre a plataforma Universal do Windows quando a execução do programa na área de trabalho e o ponteiro do mouse se move sem um botão pressionado.
 
-Você pode usar o `TouchEffect` classe em seus próprios aplicativos, incluindo o arquivo no projeto PCL da solução e adicionando uma instância para o `Effects` coleção de qualquer elemento xamarin. Forms. Anexar um manipulador para o `TouchAction` evento para obter os eventos de toque.
+Você pode usar o `TouchEffect` classe em seus próprios aplicativos, incluindo o arquivo no projeto de biblioteca .NET padrão da solução e adicionando uma instância para o `Effects` coleção de qualquer elemento xamarin. Forms. Anexar um manipulador para o `TouchAction` evento para obter os eventos de toque.
 
 Para usar `TouchEffect` em seu próprio aplicativo, você também precisará as implementações de plataforma incluídas no **TouchTrackingEffectDemos** solução.
 
@@ -151,7 +151,7 @@ public class TouchEffect : PlatformEffect
         // Get the Windows FrameworkElement corresponding to the Element that the effect is attached to
         frameworkElement = Control == null ? Container : Control;
 
-        // Get access to the TouchEffect class in the PCL
+        // Get access to the TouchEffect class in the .NET Standard library
         effect = (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
@@ -203,7 +203,7 @@ public class TouchEffect : PlatformEffect
 }
 ```
 
-`OnPointerPressed` também verifica o valor da `Capture` propriedade na classe efeito no PCL e chamadas `CapturePointer` se for `true`.
+`OnPointerPressed` também verifica o valor da `Capture` propriedade na classe efeito na biblioteca .NET padrão e chamadas `CapturePointer` se for `true`.
 
  Outros manipuladores de eventos UWP são ainda mais simples:
 
@@ -267,7 +267,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 
             idToEffectDictionary.Add(id, this);
 
-            capture = pclTouchEffect.Capture;
+            capture = libTouchEffect.Capture;
             break;
 
 ```
@@ -278,7 +278,7 @@ O item é removido do `idToEffectDictionary` quando o dedo é liberado na tela. 
 void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
 {
     // Get the method to call for firing events
-    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.pclTouchEffect.OnTouchAction;
+    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.libTouchEffect.OnTouchAction;
 
     // Get the location of the pointer within the view
     touchEffect.view.GetLocationOnScreen(twoIntArray);

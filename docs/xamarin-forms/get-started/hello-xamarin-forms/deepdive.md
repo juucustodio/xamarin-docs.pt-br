@@ -6,12 +6,12 @@ ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
-ms.openlocfilehash: e254aa14f5889cee6b5bee452f5275fd579eb8fc
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/10/2018
+ms.openlocfilehash: 9bb368ca72909489ca267794035a4c4d0883f109
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinforms-deep-dive"></a>Aprofundamento no Xamarin.Forms
 
@@ -54,7 +54,7 @@ O Visual Studio para Mac segue a prática do Visual Studio de organizar o códig
 
 Os projetos são:
 
-- Phoneword – esse projeto é o projeto PCL (biblioteca de classes portátil) que contém todos os códigos compartilhados e interfaces do usuário compartilhadas.
+- Phoneword – esse projeto é o projeto da biblioteca do .NET Standard que contém todos os códigos compartilhados e interfaces do usuário compartilhadas.
 - Phoneword.Droid – esse projeto contém o código específico do Android e é o ponto de entrada para aplicativos Android.
 - Phoneword.iOS – esse projeto contém o código específico do iOS e é o ponto de entrada para aplicativos iOS.
 
@@ -94,7 +94,7 @@ Um aplicativo Xamarin.Forms é arquitetado da mesma forma que um aplicativo trad
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-Um aplicativo Xamarin.Forms é arquitetado da mesma forma que um aplicativo tradicional de plataforma cruzada. O código compartilhado normalmente é colocado em uma PCL (Biblioteca de Classes Portátil) e aplicativos específicos de plataforma consome o código compartilhado. O diagrama a seguir mostra uma visão geral dessa relação para o aplicativo Phoneword:
+Um aplicativo Xamarin.Forms é arquitetado da mesma forma que um aplicativo tradicional de plataforma cruzada. O código compartilhado normalmente é colocado em uma biblioteca do .NET Standard e aplicativos específicos de plataforma consomem o código compartilhado. O diagrama a seguir mostra uma visão geral dessa relação para o aplicativo Phoneword:
 
 ![](deepdive-images/xs/architecture.png "Arquitetura do Phoneword")
 

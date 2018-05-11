@@ -7,39 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: b6ea988aa8c058fe5a92a17e9b72f81e0ccb12db
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: aed240dd403957e5935666d4179a6d642c411b86
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setup-windows-projects"></a>Projetos de instalação do Windows
 
 _Adicionando novos projetos do Windows a uma solução existente do xamarin. Forms_
 
 Soluções antigas do xamarin. Forms (ou aquelas criadas em macOS) não terá a projetos de aplicativo do Windows UWP (plataforma Universal). Portanto, você precisará adicionar manualmente um projeto UWP para compilar um aplicativo do Windows 10 (UWP).
-
-<a name="pcl" />
-
-## <a name="update-the-pcl-profile"></a>Atualizar o perfil PCL
-
-Se seu aplicativo xamarin. Forms existente usou o modelo de biblioteca de classe portátil (PCL), você deve atualizar seu perfil.
-
-1. **Clique com botão direito > propriedades** (as configurações existentes podem ser diferentes)
-
-  ![](images/targets.png "Destinos PCL")
-
-2. Clique no **alterar...**  botão
-
-3. Verifique se o **Windows 8** e **Windows Phone 8.1** estão selecionadas (e **Silveright do Windows Phone** é *desmarcada*):
-
-  ![](images/pcl.png "Opções de destino PCL")
-
-4. Pressione **Okey** e salve as alterações.
-
-Isso equivale a **perfil 111** se você estiver configurando o PCL no Visual Studio para Mac usando a lista suspensa.
-
-  ![](images/pcl-xs.png "Perfil PCL 111")
 
 ## <a name="add-a-universal-windows-platform-app"></a>Adicione um Windows Universal aplicativo de plataforma
 
@@ -65,7 +43,7 @@ Siga estas instruções para adicionar um aplicativo UWP que será executado em 
 
   [![](universal-images/configuration-sml.png "Janela do Gerenciador de configuração")](universal-images/configuration.png#lightbox "janela do Gerenciador de configuração")
 
- 5. Clique com botão direito no projeto e selecione **Adicionar > referência** e criar uma referência ao projeto de aplicativo xamarin. Forms (PCL, .NET padrão ou projeto compartilhado).
+ 5. Clique com botão direito no projeto e selecione **Adicionar > referência** e criar uma referência ao projeto de aplicativo xamarin. Forms (.NET padrão ou projeto compartilhado).
 
   ![](universal-images/addref-sml.png "Caixa de diálogo Gerenciador de referências")
 

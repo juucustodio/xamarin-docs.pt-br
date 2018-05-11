@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 353575bad91c9bade0207a0aa271d9de7ec50240
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 04d3d99a5d85dd77c93e9b926e8952cc3d8a771e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um Pin de mapa
 
@@ -47,7 +47,7 @@ public class CustomMap : Map
 }
 ```
 
-O `CustomMap` controle é criado no projeto de biblioteca (PCL) de classes portátil e define a API para o mapa personalizado. O mapa personalizado expõe o `CustomPins` propriedade que representa a coleção de `CustomPin` objetos que serão processados pelo controle de mapa nativo em cada plataforma. O `CustomPin` é mostrada no exemplo de código a seguir:
+O `CustomMap` controle é criado no projeto da biblioteca .NET padrão e define a API para o mapa personalizado. O mapa personalizado expõe o `CustomPins` propriedade que representa a coleção de `CustomPin` objetos que serão processados pelo controle de mapa nativo em cada plataforma. O `CustomPin` é mostrada no exemplo de código a seguir:
 
 ```csharp
 public class CustomPin : Pin
@@ -62,7 +62,7 @@ Essa classe define um `CustomPin` como herança de propriedades do [ `Pin` ](htt
 
 ## <a name="consuming-the-custom-map"></a>Consumindo o mapa personalizado
 
-O `CustomMap` controle pode ser referenciado em XAML no projeto PCL declarando um namespace para seu local e usando o prefixo de namespace do controle de mapa personalizado. O seguinte exemplo de código mostra como o `CustomMap` controle pode ser consumido por uma página XAML:
+O `CustomMap` controle pode ser referenciado em XAML no projeto da biblioteca .NET padrão declarando um namespace para seu local e usando o prefixo de namespace do controle de mapa personalizado. O seguinte exemplo de código mostra como o `CustomMap` controle pode ser consumido por uma página XAML:
 
 ```xaml
 <ContentPage ...
@@ -322,7 +322,7 @@ void OnCalloutAccessoryControlTapped (object sender, MKMapViewAccessoryTappedEve
 }
 ```
 
-Este método abre um navegador da web e navega para o endereço armazenado no `CustomMKAnnotationView.Url` propriedade. Observe que o endereço foi definido durante a criação de `CustomPin` coleção do projeto PCL.
+Este método abre um navegador da web e navega para o endereço armazenado no `CustomMKAnnotationView.Url` propriedade. Observe que o endereço foi definido durante a criação de `CustomPin` coleção do projeto de biblioteca .NET padrão.
 
 <a name="Deselecting_the_Annotation" />
 
@@ -499,7 +499,7 @@ void OnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEventArgs e)
 }
 ```
 
-Este método abre um navegador da web e navega para o endereço armazenado no `Url` propriedade recuperada `CustomPin` instância para o `Marker`. Observe que o endereço foi definido durante a criação de `CustomPin` coleção do projeto PCL.
+Este método abre um navegador da web e navega para o endereço armazenado no `Url` propriedade recuperada `CustomPin` instância para o `Marker`. Observe que o endereço foi definido durante a criação de `CustomPin` coleção do projeto de biblioteca .NET padrão.
 
 Para obter mais informações sobre como personalizar um `MapView` da instância, consulte [API Maps](~/android/platform/maps-and-location/maps/maps-api.md).
 
@@ -645,7 +645,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 }
 ```
 
-Este método abre um navegador da web e navega para o endereço armazenado no `Url` propriedade o `CustomPin` instância. Observe que o endereço foi definido durante a criação de `CustomPin` coleção do projeto PCL.
+Este método abre um navegador da web e navega para o endereço armazenado no `Url` propriedade o `CustomPin` instância. Observe que o endereço foi definido durante a criação de `CustomPin` coleção do projeto de biblioteca .NET padrão.
 
 Para obter mais informações sobre como personalizar um `MapControl` da instância, consulte [mapas e visão geral do local](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) no MSDN.
 
@@ -657,6 +657,6 @@ Este artigo demonstrou como criar um renderizador personalizado para o `Map` con
 ## <a name="related-links"></a>Links relacionados
 
 - [Controle de mapas](~/xamarin-forms/user-interface/map.md)
-- [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
+- [Mapas de iOS](~/ios/user-interface/controls/ios-maps/index.md)
 - [API de mapas](~/android/platform/maps-and-location/maps/maps-api.md)
 - [Pin personalizado (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)

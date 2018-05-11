@@ -2,15 +2,14 @@
 title: Criar novos projetos de biblioteca específica de plataforma para NuGet
 ms.prod: xamarin
 ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 0f244e614a40e444139d51a9466ccc7225a7fe68
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 901dbe032d62047668f265e8c7f79593b3fbfcce
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>Criar novos projetos de biblioteca específica de plataforma para NuGet
 

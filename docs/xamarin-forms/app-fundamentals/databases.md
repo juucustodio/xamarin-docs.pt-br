@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: 95c5f482e1bf3e55fa4c6fef18b1dbe6274f33e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="local-databases"></a>Bancos de dados locais
 
@@ -19,7 +19,7 @@ _Xamarin. Forms oferece suporte a aplicativos controlados por banco de dados usa
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin. Forms aplicativos podem usar o [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) pacote para incorporar as operações de banco de dados em código compartilhado referenciando o `SQLite` classes que acompanham o NuGet. Operações de banco de dados podem ser definidas no projeto de biblioteca de classe portátil (PCL) da solução xamarin. Forms, com projetos de plataforma específica retornando um caminho para onde o banco de dados será armazenado.
+Xamarin. Forms aplicativos podem usar o [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) pacote para incorporar as operações de banco de dados em código compartilhado referenciando o `SQLite` classes que acompanham o NuGet. Operações de banco de dados podem ser definidas no projeto biblioteca .NET padrão da solução xamarin. Forms, com projetos de plataforma específica retornando um caminho para onde o banco de dados será armazenado.
 
 O que o acompanha [aplicativo de exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) é um aplicativo simples da lista de tarefas. As capturas de tela a seguir mostram como o exemplo é exibido em cada plataforma:
 
@@ -43,7 +43,7 @@ Há um número de pacotes do NuGet com nomes semelhantes, o pacote correto tem e
 
 - **Criado por:** Frank A. Krueger
 - **ID:** sqlite-net-pcl
-- **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 Depois que a referência foi adicionada, escreva uma interface para abstrair a funcionalidade específica de plataforma, que é para determinar o local do arquivo de banco de dados. A interface usada no exemplo define um método único:
 
@@ -126,7 +126,7 @@ Todo o código de acesso a dados é gravado no projeto PCL para ser compartilhad
 
 <a name="PCL_iOS" />
 
-### <a name="ios-project"></a>iOS Project
+### <a name="ios-project"></a>Projeto do iOS
 
 Para configurar o aplicativo iOS, adicione o mesmo pacote de NuGet para o projeto iOS usando o *NuGet* janela:
 
@@ -160,7 +160,7 @@ Observe que o código inclui o `assembly:Dependency` atributo para que essa impl
 
 <a name="PCL_Android" />
 
-### <a name="android-project"></a>Android Project
+### <a name="android-project"></a>Projeto Android
 
 Para configurar o aplicativo do Android, adicione o mesmo pacote de NuGet para o projeto Android usando o *NuGet* janela:
 

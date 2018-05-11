@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 7cb2a79fffda40f09ee75a12d6287b162566741d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b16d146c5ad1097f38c41763a3ae111e7439256f
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xaml-standard-preview"></a>Padrão XAML (visualização)
 
@@ -22,7 +22,7 @@ Siga estas etapas para fazer experiências com XAML padrão no xamarin. Forms:
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Baixe o [visualizar o pacote do NuGet aqui](https://aka.ms/xf-xamlstandard-nuget).
-2. Adicionar o **Xamarin.Forms.Alias** pacote NuGet para seus projetos PCL xamarin. Forms, .NET padrão e plataforma.
+2. Adicionar o **Xamarin.Forms.Alias** pacote NuGet para seus projetos de plataforma e xamarin. Forms .NET padrão.
 3. Inicializar o pacote com `Alias.Init()`
 4. Adicionar um `xmlns:a` referência `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. Use os tipos em XAML - consulte o [referência controles](controls.md) para obter mais informações.
@@ -30,7 +30,7 @@ Siga estas etapas para fazer experiências com XAML padrão no xamarin. Forms:
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Baixe o [visualizar o pacote do NuGet aqui](https://aka.ms/xf-xamlstandard-nuget).
-2. Adicionar o **Xamarin.Forms.Alias** pacote NuGet para seus projetos PCL xamarin. Forms, .NET padrão e plataforma.
+2. Adicionar o **Xamarin.Forms.Alias** pacote NuGet para seus projetos de plataforma e xamarin. Forms .NET padrão.
 3. Inicializar o pacote com `Alias.Init()`
 4. Adicionar um `xmlns:a` referência `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. Use os tipos em XAML - consulte o [referência controles](controls.md) para obter mais informações.

@@ -6,15 +6,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: a9dbf77b85fe7f39c152d4dfb33bdd44c72dca40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 89c424ee80a4ebf6363a836e752b72ee9bc5cd5a
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="loading-application-resource-videos"></a>Vídeos de recursos do aplicativo de carregamento
 
-Os renderizadores personalizados para o `VideoPlayer` exibição são capazes de reproduzir arquivos de vídeo inseridos nos projetos individuais de plataforma como recursos do aplicativo. No entanto, a versão atual do `VideoPlayer` não é possível acessar os recursos inseridos em uma biblioteca de classes portátil.
+Os renderizadores personalizados para o `VideoPlayer` exibição são capazes de reproduzir arquivos de vídeo inseridos nos projetos individuais de plataforma como recursos do aplicativo. No entanto, a versão atual do `VideoPlayer` não é possível acessar os recursos inseridos em uma biblioteca .NET padrão.
 
 Para carregar esses recursos, criar uma instância de `ResourceVideoSource` definindo o `Path` propriedade para o nome de arquivo (ou a pasta e nome de arquivo) do recurso. Como alternativa, você pode chamar estático `VideoSource.FromResource` método para fazer referência ao recurso. Em seguida, defina o `ResourceVideoSource` o objeto para o `Source` propriedade `VideoPlayer`. 
 

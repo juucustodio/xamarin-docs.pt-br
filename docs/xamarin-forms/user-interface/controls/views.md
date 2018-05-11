@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: b690b4aed315a78d95d9e0e7444257f0fc2c4a78
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b370c27a212f876231764851c894bf683ae460c3
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -53,7 +53,7 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 
 |     |     |
 | --- | --- |
-| [`OpenGLView`](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/) exibe gráficos OpenGL em projetos Android e iOS. Não há nenhum suporte para a plataforma Universal do Windows. Projetos Android e iOS exigem uma referência para o **OpenTK 1.0** assembly ou o **OpenTK** assembly versão 1.0.0.0. `OpenGLView` é mais fácil de usar em um projeto compartilhado; Se usada em uma biblioteca PCL ou .NET padrão, uma dependência de serviço também será necessária (conforme mostrado no código de exemplo).<br /><br />Esse é o recurso apenas gráficos incorporado xamarin. Forms, mas um aplicativo xamarin. Forms também pode renderizar elementos gráficos usando [ `CocosSharp` ](~/xamarin-forms/user-interface/graphics/cocossharp.md), [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), ou [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/)<br /><br /> | [![Exemplo de OpenGLView](views-images/OpenGLView.png "OpenGLView exemplo")](views-images/OpenGLView-Large.png#lightbox "OpenGLView exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) com [por trás do código](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+| [`OpenGLView`](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/) exibe gráficos OpenGL em projetos Android e iOS. Não há nenhum suporte para a plataforma Universal do Windows. Projetos Android e iOS exigem uma referência para o **OpenTK 1.0** assembly ou o **OpenTK** assembly versão 1.0.0.0. `OpenGLView` é mais fácil de usar em um projeto compartilhado; Se usada em uma biblioteca .NET padrão, uma dependência de serviço também será necessária (conforme mostrado no código de exemplo).<br /><br />Esse é o recurso apenas gráficos incorporado xamarin. Forms, mas um aplicativo xamarin. Forms também pode renderizar elementos gráficos usando [ `CocosSharp` ](~/xamarin-forms/user-interface/graphics/cocossharp.md), [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), ou [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/)<br /><br /> | [![Exemplo de OpenGLView](views-images/OpenGLView.png "OpenGLView exemplo")](views-images/OpenGLView-Large.png#lightbox "OpenGLView exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) com [por trás do código](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="map"></a>Mapa
@@ -178,7 +178,7 @@ Essas duas classes derivam o [ `InputView` ](https://developer.xamarin.com/api/t
 
 <a name="tableView" />
 
-### <a name="tableview"></a>TableView
+### <a name="tableview"></a>Modo de tabela
 
 |     |     |
 | --- | --- |

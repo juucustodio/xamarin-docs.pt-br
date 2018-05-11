@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 316a6b9e9ce65dfb3c19d611f1b4976709546b5f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9efdc8376d9970cb429654e3d3aa2eef75ac2996
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-the-platform-video-players"></a>Criando os players de vídeo de plataforma
 
@@ -18,7 +18,7 @@ O [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/c
 
 ## <a name="the-video-player"></a>O player de vídeo
 
-O [ `VideoPlayer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) classe é parte do **VideoPlayerDemos** biblioteca de classes portátil (PCL) que é compartilhada entre as plataformas. Deriva de `View`:
+O [ `VideoPlayer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) classe é parte do **VideoPlayerDemos** biblioteca .NET padrão que é compartilhada entre as plataformas. Deriva de `View`:
 
 ```csharp
 using System;

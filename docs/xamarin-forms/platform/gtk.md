@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: a601e74cc274fd57bb2be9af3562b3a7290d7047
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 275ec851a2fd8e96adecfeca5daf6a66add7bd92
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="gtk-platform-setup"></a>Instalação da plataforma GTK #
 
@@ -34,7 +34,7 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 1. No Visual Studio de 2017, clique no nome da solução em **Solution Explorer** e escolha **Adicionar > Novo projeto...** .
 
-2. No **novo projeto** janela, selecione esquerda **Visual C#** e **área de trabalho clássica do Windows**. Na lista de tipos de projeto, escolha **biblioteca de classes (.NET Framework)**e certifique-se de que o **Framework** suspenso é definido como um mínimo de 4.7 do .NET Framework.
+2. No **novo projeto** janela, selecione esquerda **Visual C#** e **área de trabalho clássica do Windows**. Na lista de tipos de projeto, escolha **biblioteca de classes (.NET Framework)** e certifique-se de que o **Framework** suspenso é definido como um mínimo de 4.7 do .NET Framework.
 
 3. Digite um nome para o projeto com uma **GTK** extensão, por exemplo **GameOfLife.GTK**. Clique o **procurar** botão, selecione a pasta que contém a plataforma de outros projetos e pressione **Selecionar pasta**. Isso colocará o projeto GTK no mesmo diretório que os outros projetos na solução.
 
@@ -56,7 +56,7 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 6. No **Solution Explorer**, com o botão direito no nome da solução e selecione **gerenciar pacotes NuGet para solução**. Selecione o **atualização** guia e o **xamarin. Forms** pacote. Selecione todos os projetos e atualizá-los para a mesma versão do xamarin. Forms usado pelo projeto GTK.
 
-7. No **Solution Explorer**, clique duas vezes em **referências** no projeto GTK. No **Gerenciador de referências** caixa de diálogo, selecione **projetos** à esquerda e verifique a caixa de seleção adjacente ao projeto .NET padrão, PCL ou compartilhado:
+7. No **Solution Explorer**, clique duas vezes em **referências** no projeto GTK. No **Gerenciador de referências** caixa de diálogo, selecione **projetos** à esquerda e verifique a caixa de seleção adjacente ao projeto compartilhado ou padrão do .NET:
 
     ![Referência ao projeto compartilhado](gtk-images/win/reference-shared-project.png "referência ao projeto compartilhado")
 
@@ -129,7 +129,7 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 6. Atualize os outros projetos de plataforma para usar a mesma versão do xamarin. Forms usada pelo projeto GTK.
 
-7. No **solução preenchimento**, com o botão direito em **referências > Editar referências...**  para o GTK do projeto e adicione uma referência ao projeto xamarin. Forms (.NET padrão, PCL ou projeto compartilhado).
+7. No **solução preenchimento**, com o botão direito em **referências > Editar referências...**  para o GTK do projeto e adicione uma referência ao projeto xamarin. Forms (.NET padrão ou projeto compartilhado).
 
     ![Referência ao projeto compartilhado](gtk-images/mac/reference-shared-project.png "referência ao projeto compartilhado")
 

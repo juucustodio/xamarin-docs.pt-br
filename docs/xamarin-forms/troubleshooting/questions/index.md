@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: c0c8a6f4736bdcbb028425296f2e05dd500294d9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5a36c6ab14fdc7bfc5916456670be9c8fe4476ff
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 
 
 ## <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-packageupdate-forms-templatemd"></a>[Posso atualizar o modelo padrão Xamarin.Forms para um pacote NuGet mais recente?](update-forms-template.md)
-Este guia usa o modelo xamarin. Forms PCL como um exemplo, mas o mesmo método geral também funcionará para o modelo de projeto compartilhado do xamarin. Forms. 
+Este guia usa o modelo de biblioteca xamarin. Forms .NET padrão como um exemplo, mas o mesmo método geral também funcionará para o modelo de projeto compartilhado do xamarin. Forms. 
 
 ## <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-filesforms-xaml-designermd"></a>[Por que o designer XAML do Visual Studio não funciona para arquivos XAML do Xamarin.Forms?](forms-xaml-designer.md)
 Xamarin. Forms atualmente não dá suporte a designers visuais para arquivos XAML.
