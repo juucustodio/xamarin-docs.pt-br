@@ -1,23 +1,23 @@
 ---
 title: Formulários nativo
-description: Formulários nativos permitem derivado xamarin. Forms ContentPage páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir páginas ContentPage derivadas que são adicionadas diretamente ao projeto ou de uma biblioteca de classe portátil (PCL), a biblioteca padrão do .NET ou o projeto compartilhado. Este artigo explica como utilizar páginas ContentPage derivadas que são adicionadas diretamente ao projetos nativos e como navegar entre eles.
+description: Formulários nativos permitem derivado xamarin. Forms ContentPage páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir páginas ContentPage derivadas que são adicionadas diretamente ao projeto ou de uma biblioteca .NET padrão, biblioteca padrão do .NET ou projeto compartilhado. Este artigo explica como utilizar páginas ContentPage derivadas que são adicionadas diretamente ao projetos nativos e como navegar entre eles.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 9d0d4e69228ce8a1d9944833bff80b22ea5f9ddd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb7aa9a7071f9ac7bef0dce5790a3fe74302cfb4
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-forms"></a>Formulários nativo
 
-_Formulários nativos permitem derivado xamarin. Forms ContentPage páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir páginas ContentPage derivadas que são adicionadas diretamente ao projeto ou de uma biblioteca de classe portátil (PCL), a biblioteca padrão do .NET ou o projeto compartilhado. Este artigo explica como utilizar páginas ContentPage derivadas que são adicionadas diretamente ao projetos nativos e como navegar entre eles._
+_Formulários nativos permitem derivado xamarin. Forms ContentPage páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir páginas ContentPage derivadas que são adicionadas diretamente ao projeto ou de uma biblioteca .NET padrão, biblioteca padrão do .NET ou projeto compartilhado. Este artigo explica como utilizar páginas ContentPage derivadas que são adicionadas diretamente ao projetos nativos e como navegar entre eles._
 
-Normalmente, um aplicativo xamarin. Forms inclui uma ou mais páginas que derivam de [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/), e essas páginas são compartilhadas por todas as plataformas em PCL, biblioteca padrão do .NET ou projeto compartilhado. No entanto, formulários nativo permite `ContentPage`-derivado páginas a serem adicionadas diretamente a aplicativos nativos do xamarin, xamarin e UWP. Em comparação com a ter o projeto nativo consumir `ContentPage`-páginas derivadas de PCL, biblioteca padrão do .NET ou projeto compartilhado, a vantagem de adição de páginas diretamente para projetos nativos é que as páginas podem ser estendidas com exibições nativo. Exibições nativo, em seguida, podem ser nomeadas em XAML com `x:Name` e referenciados no code-behind. Para obter mais informações sobre modos de exibição nativo, consulte [exibições nativo](~/xamarin-forms/platform/native-views/index.md).
+Normalmente, um aplicativo xamarin. Forms inclui uma ou mais páginas que derivam de [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/), e essas páginas são compartilhadas por todas as plataformas em um projeto de biblioteca .NET padrão ou compartilhado. No entanto, formulários nativo permite `ContentPage`-derivado páginas a serem adicionadas diretamente a aplicativos nativos do xamarin, xamarin e UWP. Em comparação com a ter o projeto nativo consumir `ContentPage`-páginas derivadas de um projeto de biblioteca .NET padrão ou projeto compartilhado, a vantagem de adição de páginas diretamente para projetos nativos é que as páginas podem ser estendidas com exibições nativo. Exibições nativo, em seguida, podem ser nomeadas em XAML com `x:Name` e referenciados no code-behind. Para obter mais informações sobre modos de exibição nativo, consulte [exibições nativo](~/xamarin-forms/platform/native-views/index.md).
 
 O processo para consumir um xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-página derivada em um projeto nativo é o seguinte:
 
@@ -30,7 +30,7 @@ O processo para consumir um xamarin. Forms [ `ContentPage` ](https://developer.x
 Xamarin. Forms devem ser inicializados chamando o `Forms.Init` método antes de um projeto nativo pode construir um [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-página derivada. Escolher quando fazer isso basicamente depende de quando for mais conveniente em seu fluxo de aplicativo – pode ser executada na inicialização do aplicativo, ou simplesmente antes do `ContentPage`-página derivada é construído. Neste artigo, e os aplicativos de exemplo fornecido, o `Forms.Init` método é chamado na inicialização do aplicativo.
 
 > [!NOTE]
-> O **NativeForms** solução de aplicativo de exemplo não contém projetos xamarin. Forms. Em vez disso, ele consiste em um projeto de xamarin, um projeto de xamarin e um projeto UWP. Cada projeto é um projeto nativo que usa formulários nativo para consumir [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado de páginas. No entanto, não há nenhum motivo por que os projetos nativo não podem consumir `ContentPage`-derivado páginas de um PCL, a biblioteca padrão do .NET ou o projeto compartilhado.
+> O **NativeForms** solução de aplicativo de exemplo não contém projetos xamarin. Forms. Em vez disso, ele consiste em um projeto de xamarin, um projeto de xamarin e um projeto UWP. Cada projeto é um projeto nativo que usa formulários nativo para consumir [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado de páginas. No entanto, não há nenhum motivo por que os projetos nativo não podem consumir `ContentPage`-derivado páginas em um projeto de biblioteca .NET padrão ou compartilhado.
 
 Ao usar formulários nativo, xamarin. Forms recursos como [ `DependencyService` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/), [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/)e o mecanismo de associação de dados, todo o trabalho ainda.
 
@@ -108,7 +108,7 @@ public void NavigateToCallHistoryPage()
 
 O `NavigateToCallHistoryPage` método converte o xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado de página para um `UIViewController` com o `CreateViewController` método de extensão e conjuntos a `Title` propriedade do `UIViewController`. O `UIViewController` , em seguida, é colocado na `UINavigationController` pelo `PushViewController` método. Portanto, a interface do usuário definido no xamarin. Forms `CallHistoryPage` classe será exibida, conforme mostrado na seguinte captura de tela:
 
-[![](native-forms-images/ios-callhistorypage.png "iOS CallHistoryPage")](native-forms-images/ios-callhistorypage-large.png#lightbox "iOS CallHistoryPage")
+[![](native-forms-images/ios-callhistorypage.png "iOS CallHistoryPage")](native-forms-images/ios-callhistorypage-large.png#lightbox "CallHistoryPage do iOS")
 
 Quando o `CallHistoryPage` é exibido, tocar a parte de trás seta será exibida a `UIViewController` para o `CallHistoryPage` classe o `UINavigationController`, retornando o usuário para o `UIViewController` para o `PhonewordPage` classe.
 
@@ -160,7 +160,7 @@ Para obter mais informações sobre fragmentos, consulte [fragmentos](~/android/
 
 Uma vez o `OnCreate` método executado, a interface do usuário definido no xamarin. Forms `PhonewordPage` classe será exibida, conforme mostrado na seguinte captura de tela:
 
-[![](native-forms-images/android-phonewordpage.png "Android PhonewordPage")](native-forms-images/android-phonewordpage-large.png#lightbox "Android PhonewordPage")
+[![](native-forms-images/android-phonewordpage.png "Android PhonewordPage")](native-forms-images/android-phonewordpage-large.png#lightbox "PhonewordPage Android")
 
 Interagir com a interface do usuário, por exemplo, tocando em uma [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/), resultará em manipuladores de eventos de `PhonewordPage` por trás do código em execução. Por exemplo, quando um usuário toca o **histórico de chamadas** botão, o manipulador de eventos a seguir é executado:
 
@@ -349,7 +349,7 @@ Para obter mais informações sobre o suporte de navegação regressiva UWP, con
 
 ## <a name="summary"></a>Resumo
 
-Formulários nativo permitem xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir `ContentPage`-derivado páginas que são adicionadas diretamente ao projeto, ou de um PCL, a biblioteca padrão do .NET ou o projeto compartilhado. Este artigo explicou como consumir `ContentPage`-derivado páginas que são adicionadas diretamente aos projetos nativos e como navegar entre eles.
+Formulários nativo permitem xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir `ContentPage`-derivado páginas que são adicionadas diretamente ao projeto ou em um projeto de biblioteca .NET padrão ou compartilhado. Este artigo explicou como consumir `ContentPage`-derivado páginas que são adicionadas diretamente aos projetos nativos e como navegar entre eles.
 
 
 ## <a name="related-links"></a>Links relacionados

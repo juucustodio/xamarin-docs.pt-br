@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c93681c3bfd8de8d813cbe98a7ac28b3ee8b74fc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-an-entry"></a>Personalizando uma entrada
 
@@ -43,13 +43,13 @@ public class MyEntry : Entry
 }
 ```
 
-O `MyEntry` controle é criado no projeto de biblioteca (PCL) de classes portátil e é simplesmente uma [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controle. Personalização do controle será realizada no renderizador personalizado, portanto nenhuma implementação adicional é necessário o `MyEntry` controle.
+O `MyEntry` controle é criado no projeto da biblioteca .NET padrão e é simplesmente uma [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) controle. Personalização do controle será realizada no renderizador personalizado, portanto nenhuma implementação adicional é necessário o `MyEntry` controle.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Consumindo o controle personalizado
 
-O `MyEntry` controle pode ser referenciado em XAML no projeto PCL declarando um namespace para seu local e usando o prefixo de namespace no elemento de controle. O seguinte exemplo de código mostra como o `MyEntry` controle pode ser consumido por uma página XAML:
+O `MyEntry` controle pode ser referenciado em XAML no projeto da biblioteca .NET padrão declarando um namespace para seu local e usando o prefixo de namespace no elemento de controle. O seguinte exemplo de código mostra como o `MyEntry` controle pode ser consumido por uma página XAML:
 
 ```xaml
 <ContentPage ...
