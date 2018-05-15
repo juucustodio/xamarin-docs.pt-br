@@ -5,11 +5,11 @@ ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: e7993a8febe0cb03bbe3dec4cbd5897e7730213f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 984f6f5eeeba3d5c8162ab6ce0c83dbf03981b5f
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-battery"></a>Bateria Xamarin.Essentials
 
@@ -138,5 +138,5 @@ public class BatteryTest
 
 ## <a name="api"></a>API
 
-- [Código-fonte da bateria](https://github.com/xamarin/Essentials/tree/master/Essentials/Battery)
+- [Código-fonte da bateria](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
 - [Documentação da API de bateria](xref:Xamarin.Essentials.Battery)

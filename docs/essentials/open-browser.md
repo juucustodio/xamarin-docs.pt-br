@@ -5,11 +5,11 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: fe5b1de83d30a6de15afa35e5884f8be5462b07b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b7d04bec569e911df75af999f980da07c868e18f
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-browser"></a>Navegador de Xamarin.Essentials
 
@@ -70,5 +70,5 @@ O navegador do usuário padrão será iniciado sempre independentemente do `Brow
 
 ## <a name="api"></a>API
 
-- [Código de origem do navegador](https://github.com/xamarin/Essentials/tree/master/Essentials/Browser)
+- [Código de origem do navegador](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
 - [Documentação da API do navegador](xref:Xamarin.Essentials.Browser)

@@ -5,11 +5,11 @@ ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 53271f3cee06f33cea4fa0bd28d3cff1baf0cd3e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 68b064d9824a82ea733c7c8bef0c2d43f0a04283
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-vibration"></a>Vibração Xamarin.Essentials
 
@@ -107,5 +107,5 @@ catch (Exception ex)
 
 ## <a name="api"></a>API
 
-- [Código-fonte vibração](https://github.com/xamarin/Essentials/tree/master/Essentials/Vibration)
+- [Código-fonte vibração](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
 - [Documentação da API de vibração](xref:Xamarin.Essentials.Vibration)

@@ -7,22 +7,26 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 020a5a2182458e759626b9bdbf45b62b6e13d71a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 31660ff1255878dbae15bda601da8e628aabd459
+ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>Atualizar referências de componentes para NuGet
 
-> [!NOTE]
+> [!IMPORTANT]
+> O armazenamento de componentes foi descontinuado a partir de 15 de maio de 2018 (esse feriado foi originalmente [anunciada](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) em novembro de 2017).
+>
 > Xamarin componentes não são mais suportados no Visual Studio e deve ser substituídos por pacotes do NuGet. Siga as instruções abaixo para remover manualmente as referências de componentes de seus projetos.
 
 Consulte as instruções para adicionar pacotes do NuGet em [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) ou [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
+Uma lista de popular Xamarin [plug-ins e bibliotecas](https://github.com/xamarin/XamarinComponents/blob/master/README.md) está disponível para ajudar a encontrar alternativas para componentes que não estão disponíveis como pacakges do NuGet.
+
 ## <a name="manually-removing-component-references"></a>Remover manualmente as referências de componentes
 
-Em novembro de 2017, era [anunciada](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) que o armazenamento do componente Xamarin seriam suspensos. Em um esforço para continuar com a sunsetting de componentes, a versão 15.6 do Visual Studio e a versão 7.4 do Visual Studio para Mac não suportam componentes no seu projeto. 
+A versão 15.6 do Visual Studio e a versão 7.4 do Visual Studio para Mac não dão suporte ao protocolo componentes em seu projeto. 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -199,6 +203,6 @@ Muitos fornecedores de componente ainda estão trabalhando na migração para o 
 
 
 ## <a name="related-links"></a>Links relacionados
-
+- [Lista de bibliotecas e Xamarin Plugins populares](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Instalar e usar um pacote do NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [Incluindo um pacote do NuGet (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

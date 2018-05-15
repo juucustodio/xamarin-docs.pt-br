@@ -5,11 +5,11 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 80503c5e887538bca40a19c7b26b981850d2bd92
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dde3f7f160d796afe3184ef1d61d8b437ec09ea8
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-email"></a>Email Xamarin.Essentials
 
@@ -58,5 +58,5 @@ public class EmailTest
 
 ## <a name="api"></a>API
 
-- [Código de origem do email](https://github.com/xamarin/Essentials/tree/master/Essentials/Email)
+- [Código de origem do email](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
 - [Documentação da API de email](xref:Xamarin.Essentials.Email)

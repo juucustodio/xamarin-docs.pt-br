@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/11/2018
+ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="splash-screen"></a>Splash Screen
 
@@ -152,6 +152,74 @@ public class MainActivity : AppCompatActivity
     // Code omitted for brevity
 }
 ```
+
+## <a name="landscape-mode"></a>Modo paisagem
+
+A tela inicial implementada nas etapas anteriores serão exibidos corretamente no modo retrato e paisagem. No entanto, em alguns casos é necessário ter telas separado para os modos retrato e paisagem (por exemplo, se a imagem de abertura é a tela inteira).
+
+Para adicionar uma tela inicial para o modo de paisagem, use as seguintes etapas:
+
+1. No **recursos/drawable** pasta, adicionar a versão do cenário da imagem de tela inicial que você deseja usar. Neste exemplo, **splash_logo_land.png** é a versão do cenário do logotipo que foi usada nos exemplos acima (utiliza mensagens preta em vez de azul).
+
+2. No **recursos/drawable** pasta, crie uma versão de cenário do `layer-list` drawable que foi definido anteriormente (por exemplo, **splash_screen_land.xml**). Nesse arquivo, defina o caminho de bitmap para a versão de paisagem da imagem na tela inicial. No exemplo a seguir, **splash_screen_land.xml** usa **splash_logo_land.png**:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+      <item>
+        <color android:color="@color/splash_background"/>
+      </item>
+      <item>
+        <bitmap
+            android:src="@drawable/splash_logo_land"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+      </item>
+    </layer-list>
+
+    ```
+
+3.  Criar o **valores/recursos-Terra** pasta se ela ainda não existir.
+
+4.  Adicionar os arquivos **Colors** e **style.xml** para **valores Terra** (eles podem ser copiados e modificados do existente **values/colors.xml**e **values/style.xml** arquivos).
+
+5.  Modificar **valores-Terra/style.xml** para que ele usa a versão de cenário de drawable para `windowBackground`. Neste exemplo, **splash_screen_land.xml** é usado:
+
+    ```xml
+    <resources>
+      <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+      </style>
+        <style name="MyTheme" parent="MyTheme.Base">
+      </style>
+      <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_land</item>
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:windowFullscreen">true</item>  
+        <item name="android:windowContentOverlay">@null</item>  
+        <item name="android:windowActionBar">true</item>  
+      </style>
+    </resources>
+    ```
+
+6.  Modificar **valores-Terra/Colors** para configurar as cores que você deseja usar para a versão de paisagem da tela inicial. Neste exemplo, a cor de fundo do logotipo é alterada para amarelo para o modo de paisagem:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+      <color name="primary">#2196F3</color>
+      <color name="primaryDark">#1976D2</color>
+      <color name="accent">#FFC107</color>
+      <color name="window_background">#F5F5F5</color>
+      <color name="splash_background">#FFFF00</color>
+    </resources>
+    ```
+
+7.  Compilar e executar o aplicativo novamente. Gira o dispositivo para o modo de paisagem enquanto a tela inicial ainda é exibida. Altera a tela inicial para a versão de cenário:
+
+    [![Rotação da tela inicial para o modo de paisagem](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+
+
+Observe que o uso de uma tela inicial do modo de paisagem sempre não fornecer uma experiência perfeita. Por padrão, o Android inicia o aplicativo no modo retrato e faz a transição para o modo de paisagem, mesmo se o dispositivo já está no modo paisagem. Como resultado, se o aplicativo é iniciado enquanto o dispositivo estiver no modo paisagem, o dispositivo apresenta brevemente a tela inicial de retrato e, em seguida, anima a rotação de retrato para a tela inicial do cenário. Infelizmente, essa transição inicial de retrato para paisagem ocorre mesmo quando `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` é especificada nos sinalizadores da atividade inicial. A melhor maneira de contornar essa limitação é criar uma imagem de tela de abertura única que renderiza corretamente nos modos retrato e paisagem.
 
 
 ## <a name="summary"></a>Resumo

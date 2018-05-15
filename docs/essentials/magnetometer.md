@@ -5,11 +5,11 @@ ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: bb9bd656c809b05c49a27f7b3dab2a64ff7b7e94
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 054a3081aab3b0337336ad7f856532caa41d70fe
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-magnetometer"></a>Magnetômetro Xamarin.Essentials
 
@@ -79,5 +79,5 @@ Todos os dados são retornados em microteslas.
 
 ## <a name="api"></a>API
 
-- [Código-fonte magnetômetro](https://github.com/xamarin/Essentials/tree/master/Essentials/Magnetometer)
+- [Código-fonte magnetômetro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
 - [Documentação da API de magnetômetro](xref:Xamarin.Essentials.Magnetometer)
