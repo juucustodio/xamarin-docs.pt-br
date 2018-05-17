@@ -1,35 +1,46 @@
 ---
 title: Provisionamento automático
-description: Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso da Assinatura automática no Visual Studio para Mac para solicitar certificados e perfis de desenvolvimento.
+description: Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso da assinatura automática para solicitar certificados e perfis de desenvolvimento.
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 11/17/2017
-ms.openlocfilehash: 01818d2870c7cf59a0f15385dbb3565f07400ff0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/06/2018
+ms.openlocfilehash: 0e2ce758da2951efa0508e76cdf4eaac5384fa6b
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-provisioning"></a>Provisionamento automático
 
-_Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso da assinatura automática no Visual Studio para Mac para solicitar certificados e perfis de desenvolvimento._
+_Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso da assinatura automática para solicitar certificados e perfis de desenvolvimento._
 
 ## <a name="requirements"></a>Requisitos
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 - Visual Studio para Mac 7.3 ou posterior
 - Xcode 9 ou posterior
 
-> [!IMPORTANT]
-> Este guia mostra como usar o Visual Studio para Mac para configurar um dispositivo da Apple para implantação e como implantar um aplicativo. Para obter etapas manuais de como fazer isso ou para fazer isso com o Visual Studio no Windows, é recomendável que você siga as etapas detalhadas no guia de [provisionamento manual](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+- Visual Studio 2017 versão 15.7 (ou superior)
+
+Você também precisa estar emparelhado com um host de build do Mac que tem o seguinte:
+
+- Xcode 9 ou posterior
+
+-----
 
 ## <a name="enabling-automatic-signing"></a>Habilitando a Assinatura automática
 
-Antes de iniciar o processo de assinatura automática, é necessário garantir que você tem uma ID Apple no Visual Studio para Mac, conforme descrito no guia [Gerenciamento da conta da Apple](~/cross-platform/macios/apple-account-management.md). Depois de adicionar um ID Apple, será possível usar qualquer _Equipe_ associada. Isso permite que certificados, perfis e outras IDs sejam feitas com relação à equipe. A ID da equipe também é usada para criar um prefixo para uma ID do aplicativo que será incluída no perfil de provisionamento. Isso permite que a Apple verifique que você é quem diz que ser.
+Antes de iniciar o processo de assinatura automática, você deve adicionar uma ID Apple ao Visual Studio, conforme descrito no guia [Gerenciamento de conta da Apple](~/cross-platform/macios/apple-account-management.md). Depois de adicionar um ID Apple, será possível usar qualquer _Equipe_ associada. Isso permite que certificados, perfis e outras IDs sejam feitas com relação à equipe. A ID da equipe também é usada para criar um prefixo para uma ID do aplicativo que será incluída no perfil de provisionamento. Isso permite que a Apple verifique que você é quem diz que ser.
 
 Para assinar seu aplicativo automaticamente para implantação em um dispositivo iOS, faça o seguinte:
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Abra o projeto iOS no Visual Studio para Mac.
 
@@ -47,11 +58,31 @@ Para assinar seu aplicativo automaticamente para implantação em um dispositivo
 
     Se a assinatura automática falhar, o **Painel de assinatura automática** exibirá o motivo do erro.
 
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+1. Emparelhe o Visual Studio 2017 com um Mac conforme descrito no guia [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+
+2. Abra as opções de Provisionamento selecionando **Projeto > Propriedades de Provisionamento…**
+
+3. Selecione o esquema **Provisionamento Automático**:
+
+    ![Seleção do esquema automático](automatic-provisioning-images/prov4.png)
+
+4. Selecione sua equipe na caixa de combinação **Equipe** para iniciar o processo de assinatura automática.
+
+    ![Seleção da equipe](automatic-provisioning-images/prov3.png)
+
+4. Isso inicia o processo de assinatura automática. Em seguida, o Visual Studio tenta gerar a ID do aplicativo, o perfil de provisionamento e a identidade de assinatura para usar esses artefatos para a assinatura. É possível ver o processo de geração na saída do build:
+
+    ![Saída do build mostrando a geração de artefatos](automatic-provisioning-images/prov5.png)
+
+-----
+
 ## <a name="triggering-automatic-provisioning"></a>Disparando o provisionamento automático
 
 Quando a assinatura automática tiver sido habilitada, o Visual Studio para Mac atualizará esses artefatos, se necessário, quando qualquer uma das seguintes ações ocorrem:
 
-* Um dispositivo iOS for conectado ao seu Mac
+* Um dispositivo iOS é conectado ao seu Mac
     - Isso verifica automaticamente se o dispositivo está registrado no Portal do Desenvolvedor da Apple. Se ele não estiver, será adicionado, e um novo perfil de provisionamento que o contenha será gerado.
 * A ID do Pacote do seu aplicativo é alterada
     - Isso atualiza a ID do aplicativo. É criado um novo perfil de provisionamento que contém esta ID do aplicativo.

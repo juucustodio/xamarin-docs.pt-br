@@ -6,12 +6,12 @@ ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 07/15/2017
-ms.openlocfilehash: e04ebd041c64d474fafe12c387f558e740773c98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/06/2018
+ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="device-provisioning"></a>Provisionamento de Dispositivo
 
@@ -47,23 +47,14 @@ Essas etapas garantem que tudo o que é criado ou usado durante o processo de de
 
 <a name="Provisioning_Profile" />
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
 ## <a name="provisioning-your-device"></a>Provisionando o dispositivo
 
-Há duas maneiras de provisionar seu dispositivo iOS com o Visual Studio para Mac:
+Há duas maneiras de provisionar o dispositivo iOS:
 
-* **Automaticamente (Recomendado)** – Selecione a opção **Gerenciar assinatura automaticamente** no arquivo Info.plist para que o Visual Studio para Mac crie e gerencie automaticamente suas Identidades de assinatura, IDs do Aplicativo e Perfis de provisionamento.  Para obter informações sobre como gerenciar automaticamente o provisionamento, consulte o guia [Provisionamento automático](automatic-provisioning.md). Essa é a maneira recomendada para provisionar um dispositivo iOS.
+* **Automaticamente (Recomendado)** – Selecione o esquema **Provisionamento Automático** no projeto para que o Visual Studio crie e gerencie automaticamente as identidades de assinatura, as IDs de aplicativo e os perfis de provisionamento. Para obter informações sobre como gerenciar automaticamente o provisionamento, consulte o guia [Provisionamento automático](automatic-provisioning.md). Essa é a maneira recomendada para provisionar um dispositivo iOS.
 
 * **Manualmente** – Identidades de assinatura, IDs do Aplicativo e Perfis de provisionamento podem ser criados e gerenciados por meio do Portal do Desenvolvedor da Apple, conforme descrito no guia [Provisionamento manual](manual-provisioning.md). Esses artefatos podem ser gerenciados conforme descrito no guia [Gerenciamento de Conta da Apple](~/cross-platform/macios/apple-account-management.md).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-## <a name="provisioning-your-device"></a>Provisionando o dispositivo
-
-Para obter as etapas sobre como configurar um dispositivo Apple para implantação e implantar um aplicativo com o Visual Studio no Windows, é recomendado seguir as etapas detalhadas no guia de [provisionamento manual](manual-provisioning.md).
-
------
 
 <a name="appservices" />
 
@@ -74,9 +65,6 @@ A Apple fornece uma seleção de serviços de aplicativos especiais, também cha
 * Crie uma ID do aplicativo com os serviços de aplicativo necessários.
 * Crie um novo [perfil de provisionamento](#Provisioning_Profile) que contenha essa ID do aplicativo.
 * Definir direitos no projeto Xamarin.iOS
-
-> [!NOTE]
-> Atualmente, os perfis de provisionamento criados no Visual Studio para Mac não levarão em conta os direitos selecionados nos projetos (Entitlements.plist). Essa funcionalidade será adicionada em versões futuras do IDE. Se você precisar usar os Serviços de Aplicativos, é recomendável que você siga as instruções no guia de [Provisionamento Manual](manual-provisioning.md).
 
 ## <a name="related-links"></a>Links relacionados
 

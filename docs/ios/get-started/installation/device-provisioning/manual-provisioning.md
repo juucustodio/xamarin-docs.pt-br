@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 3f321366b3afc814aef1c586af2707b1caeef4c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f604d41990a7a592a3d5207e7a12075c35ae661f
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="manual-provisioning"></a>Provisionamento manual
 
@@ -254,7 +254,10 @@ Se isso estiver definido como **Automático**, o Visual Studio para Mac selecion
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Conecte o dispositivo em um Mac.
+> [!IMPORTANT]
+> Antes de começar, lembre-se de selecionar **Provisionamento Manual** em **Projeto > Propriedades de Provisionamento…**.
+
+1. Conecte o dispositivo ao host de build do Mac.
 2. No **Info.plist** do projeto, verifique se o identificador do pacote corresponde à ID do aplicativo:
 
   ![](manual-provisioning-images/servicevs01.png "Inserindo um identificador")

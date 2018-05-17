@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/11/2018
-ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
-ms.translationtype: HT
+ms.date: 05/14/2018
+ms.openlocfilehash: 6200a04bb4d82174d36a48beab7c63709ac39187
+ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="splash-screen"></a>Splash Screen
 
@@ -159,7 +159,7 @@ A tela inicial implementada nas etapas anteriores serão exibidos corretamente n
 
 Para adicionar uma tela inicial para o modo de paisagem, use as seguintes etapas:
 
-1. No **recursos/drawable** pasta, adicionar a versão do cenário da imagem de tela inicial que você deseja usar. Neste exemplo, **splash_logo_land.png** é a versão do cenário do logotipo que foi usada nos exemplos acima (utiliza mensagens preta em vez de azul).
+1. No **recursos/drawable** pasta, adicionar a versão do cenário da imagem de tela inicial que você deseja usar. Neste exemplo, **splash_logo_land.png** é a versão do cenário do logotipo que foi usada nos exemplos acima (utiliza mensagens branca em vez de azul).
 
 2. No **recursos/drawable** pasta, crie uma versão de cenário do `layer-list` drawable que foi definido anteriormente (por exemplo, **splash_screen_land.xml**). Nesse arquivo, defina o caminho de bitmap para a versão de paisagem da imagem na tela inicial. No exemplo a seguir, **splash_screen_land.xml** usa **splash_logo_land.png**:
 
@@ -176,7 +176,6 @@ Para adicionar uma tela inicial para o modo de paisagem, use as seguintes etapas
             android:gravity="center"/>
       </item>
     </layer-list>
-
     ```
 
 3.  Criar o **valores/recursos-Terra** pasta se ela ainda não existir.
@@ -201,7 +200,7 @@ Para adicionar uma tela inicial para o modo de paisagem, use as seguintes etapas
     </resources>
     ```
 
-6.  Modificar **valores-Terra/Colors** para configurar as cores que você deseja usar para a versão de paisagem da tela inicial. Neste exemplo, a cor de fundo do logotipo é alterada para amarelo para o modo de paisagem:
+6.  Modificar **valores-Terra/Colors** para configurar as cores que você deseja usar para a versão de paisagem da tela inicial. Neste exemplo, a cor de fundo do logotipo é alterada para azul para o modo de paisagem:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -210,7 +209,7 @@ Para adicionar uma tela inicial para o modo de paisagem, use as seguintes etapas
       <color name="primaryDark">#1976D2</color>
       <color name="accent">#FFC107</color>
       <color name="window_background">#F5F5F5</color>
-      <color name="splash_background">#FFFF00</color>
+      <color name="splash_background">#3498DB</color>
     </resources>
     ```
 

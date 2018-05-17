@@ -1,5 +1,5 @@
 ---
-title: Hello, iOS
+title: Olá, Guia de Início Rápido do iOS
 description: Este guia de duas partes descreve como compilar um aplicativo básico do Xamarin.iOS usando o Visual Studio para Mac ou Visual Studio e desenvolver uma compreensão dos fundamentos de desenvolvimento do aplicativos iOS com Xamarin. Ele apresentará conceitos, ferramentas e etapas necessárias para compilar e implantar um aplicativo Xamarin.iOS.
 ms.topic: quickstart
 ms.prod: xamarin
@@ -7,19 +7,18 @@ ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/23/2017
-ms.openlocfilehash: dc9b86845dc91c7fb8ec3a88a5862e5e9f6de18d
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.date: 05/02/2017
+ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="helloios-quickstart"></a>Guia de início rápido do Hello.iOS
 
 Este guia descreve como criar um aplicativo que converte um número de telefone alfanumérico inserido pelo usuário em numérico e, em seguida, chama esse número. O aplicativo final tem esta aparência:
 
  [![](hello-ios-quickstart-images/image1.png "O aplicativo de Início Rápido Hello.iOS")](hello-ios-quickstart-images/image1.png#lightbox)
-
 
 <a name="Requirements" />
 
@@ -42,7 +41,7 @@ O [guia de Instalação do Mac do Xamarin.iOS](~/ios/get-started/installation/ma
 
 O Xamarin.iOS funciona com as seguintes configurações:
 
--  Versão mais recente do Visual Studio 2015 ou 2017 Professional ou superior no Windows 7 ou superior, combinada com um host de build Mac que atenda às especificações acima.
+-  Versão mais recente do Visual Studio 2017 Community, Professional ou Enterprise no Windows 7 ou superior, emparelhada com um host de build do Mac que atenda às especificações acima.
 
 O [Guia de instalação do Xamarin.iOS no Windows](~/ios/get-started/installation/windows/index.md) está disponível para fornecer instruções de instalação passo a passo.
 
@@ -63,7 +62,6 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 Na Tela de Inicialização, clique em **Novo Projeto...** para criar uma nova solução do Xamarin.iOS:
 
 ![](hello-ios-quickstart-images/image3new.png "Solução de iOS")
-
 
 2. Na **caixa de diálogo Nova Solução**, escolha o modelo **iOS > Aplicativo > Aplicativo de Exibição Única**, garantindo que C# esteja selecionado. Clique em **Avançar**:
 
@@ -294,51 +292,42 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
   ![](hello-ios-quickstart-images/image001-.png "A Tela inicial")
 
-  Na caixa de pesquisa em **Nova Solução**, insira _Aplicativo de Exibição Única_ e selecione **Aplicativo de Exibição Única (iPhone)** para criar uma nova solução Xamarin.iOS:
+  Crie uma solução Xamarin.iOS selecionando **Arquivo > Novo > Projeto... > Visual C# > iPhone e iPad > Aplicativo iOS (Xamari**:
 
-  ![](hello-ios-quickstart-images/image002-.png "Adicionar um aplicativo de Exibição única")
+  ![Selecione o tipo de projeto do aplicativo iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Select iOS App (Xamarin) project type")
 
+  Na próxima caixa de diálogo que aparece, selecione o modelo **Aplicativo de Modo de Exibição Único** e pressione **OK** para criar o projeto:
 
-2. Nomeie o Projeto e a Solução `Phoneword`, conforme ilustrado abaixo:
+  ![Selecione o modelo de projeto de Modo de Exibição Único](hello-ios-quickstart-images/image002-2.w157.png "Select Single View project template")
 
-  ![](hello-ios-quickstart-images/vs-image3.png "Nomeie o projeto como PhonewordiOS e a nova solução como Phoneword")
-
-
-3. Pressione **OK** para criar o novo Projeto
-
-4. Confirme se o ícone do Xamarin Mac Agent na barra de ferramentas está verde.
+1. Confirme se o ícone do Xamarin Mac Agent na barra de ferramentas está verde.
 
     ![Confirme se o ícone do Xamarin Mac Agent na barra de ferramentas está verde](hello-ios-quickstart-images/vs-image4.png)
 
     Caso contrário, significa que não há nenhuma conexão com o host do build do Mac, siga as etapas no [guia de configuração](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para se conectar.
 
-
-5. Abra o arquivo **Main.storyboard** no iOS Designer clicando duas vezes no **Gerenciador de Soluções**:
+1. Abra o arquivo **Main.storyboard** no iOS Designer clicando duas vezes no **Gerenciador de Soluções**:
 
   ![](hello-ios-quickstart-images/vs-image7.png "O Designer de iOS")
 
-6. Abra a guia **Caixa de Ferramentas**, digite "rótulo" na barra de pesquisa e arraste um **Rótulo** para a superfície de design (a área no centro):
+1. Abra a guia **Caixa de Ferramentas**, digite "rótulo" na barra de pesquisa e arraste um **Rótulo** para a superfície de design (a área no centro):
 
   ![](hello-ios-quickstart-images/vs-image8.png "Arraste um Rótulo para a área da superfície de design no centro")
 
-
-7. Em seguida, pegue as alças dos *Controles de Arraste* e torne o rótulo mais largo:
+1. Em seguida, pegue as alças dos *Controles de Arraste* e torne o rótulo mais largo:
 
   ![](hello-ios-quickstart-images/vs-image9.png "Torne o rótulo mais largo")
 
-
-8. Com o **Rótulo** selecionado na superfície de design, use as **Janelas de Propriedades** para alterar a propriedade **Texto** do **Rótulo** para “Inserir um Phoneword:”
+1. Com o **Rótulo** selecionado na superfície de design, use as **Janelas de Propriedades** para alterar a propriedade **Texto** do **Rótulo** para “Inserir um Phoneword:”
 
   ![](hello-ios-quickstart-images/vs-image10.png "Altere a propriedade Texto do rótulo para `Inserir um Phoneword`")
 
   > [!NOTE]
   > Você pode abrir **Propriedades** ou a **Caixa de Ferramentas** a qualquer momento navegando para o menu **Exibir**.
 
-
-9. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até o **Campo de Texto** ter a mesma largura que o **Rótulo**:
+1. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até o **Campo de Texto** ter a mesma largura que o **Rótulo**:
 
   ![](hello-ios-quickstart-images/vs-image12.png "Ajuste a largura até o Campo de texto ter a mesma largura que o Rótulo")
-
 
 10. Com o **Campo de Texto** selecionado na superfície de design, no **Campo de Texto**, altere a propriedade **Nome** na seção Identidade de **Propriedades** para `PhoneNumberText` e altere a propriedade **Texto** para “1-855-XAMARIN”:
 
@@ -371,9 +360,9 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
   ![](hello-ios-quickstart-images/vs-image18.png "Adicione algum código para converter números de telefone de alfanuméricos em numéricos")
 
 
-16. Na caixa de diálogo **Novo Arquivo**, selecione **Apple > Classe** e nomeie o novo arquivo `PhoneTranslator`:
+16. Na caixa de diálogo **Adicionar Novo Item** (clique com o botão direito do mouse no projeto e escolha Adicionar > Novo Item...), selecione **Apple > Classe** e o nome do novo arquivo `PhoneTranslator`:
 
-  ![](hello-ios-quickstart-images/vs-image19.png "Adicione uma nova classe chamada PhoneTranslator")
+  ![](hello-ios-quickstart-images/vs-image19.w157.png "Adicione uma nova classe chamada PhoneTranslator")
 
   > [!IMPORTANT]
   > Selecione o modelo "class" que tem C# no ícone. Caso contrário, você não poderá fazer referência a essa nova classe.

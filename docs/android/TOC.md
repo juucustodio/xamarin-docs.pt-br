@@ -81,8 +81,6 @@
 #### [GridLayout](user-interface/layouts/grid-layout.md)
 #### [Layouts com guias](user-interface/layouts/tab-layout/index.md)
 ##### [Guias de navegação com a ActionBar](user-interface/layouts/tab-layout/with-action-bar.md)
-##### [Visão geral de TabHost](user-interface/layouts/tab-layout/tab-host.md)
-##### [Criar uma interface do usuário com guias com TabHost](user-interface/layouts/tab-layout/creating-a-tabbed-ui.md)
 ### [Controles](user-interface/controls/index.md)
 #### [ActionBar](user-interface/controls/action-bar.md)
 #### [Preenchimento Automático](user-interface/controls/auto-complete.md)

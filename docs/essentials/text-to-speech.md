@@ -5,17 +5,17 @@ ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2fcb97eafda15a73e2b7e5441f1d6c94f75af0ce
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b2c9ed50c48aee6343a20ddb28c49e1bd05d2153
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials texto em fala
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **TextToSpeech** classe permite que um aplicativo utilizar interna nos mecanismos de texto em fala falar texto back do dispositivo e também para linguagens de consulta disponíveis que o mecanismo pode dar suporte.
+O **TextToSpeech** classe permite que um aplicativo utilizar o nos mecanismos de texto em fala falar texto back do dispositivo e também para linguagens de consulta disponíveis que o mecanismo pode dar suporte.
 
 ## <a name="using-text-to-speech"></a>Usando texto em fala
 
@@ -45,7 +45,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Esse método usa em um CancellationToken opcional para interromper a expressão um que é iniciado. 
+Esse método usa em um CancellationToken opcional para interromper a expressão depois que ela é iniciada. 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -115,7 +115,7 @@ Os seguintes valores com suporte para esses parâmetros são:
 
 ### <a name="speech-locales"></a>Localidades de fala
 
-Cada plataforma oferece localidades para falar back texto em vários idiomas e acentos. Cada plataforma tem outro códigos e maneiras de especificar isso, o que faz com que Essentials fornece uma plataforma cruzada `Locale` classe e uma maneira para consultá-los com `GetLocalesAsync`.
+Cada plataforma oferece localidades para falar back texto em vários idiomas e acentos. Cada plataforma tem diferentes códigos e maneiras de especificar isso, o que faz com que Essentials fornece uma plataforma cruzada `Locale` classe e uma maneira para consultá-los com `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -143,5 +143,5 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [Código-fonte TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Essentials/TextToSpeech)
+- [Código-fonte TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
 - [Documentação da API TextToSpeech](xref:Xamarin.Essentials.TextToSpeech)
