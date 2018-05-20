@@ -1,21 +1,21 @@
 ---
 title: Formulários nativo
-description: Formulários nativos permitem derivado xamarin. Forms ContentPage páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir páginas ContentPage derivadas que são adicionadas diretamente ao projeto ou de uma biblioteca .NET padrão, biblioteca padrão do .NET ou projeto compartilhado. Este artigo explica como utilizar páginas ContentPage derivadas que são adicionadas diretamente ao projetos nativos e como navegar entre eles.
+description: Formulários nativos permitem derivado xamarin. Forms ContentPage páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir páginas ContentPage derivadas que são adicionadas diretamente ao projeto ou de uma biblioteca .NET padrão, um projeto compartilhado ou uma biblioteca .NET padrão. Este artigo explica como utilizar páginas ContentPage derivadas que são adicionadas diretamente ao projetos nativos e como navegar entre eles.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: bb7aa9a7071f9ac7bef0dce5790a3fe74302cfb4
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: a103d360221650ee4f679ee285dbedd65e62f947
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="native-forms"></a>Formulários nativo
 
-_Formulários nativos permitem derivado xamarin. Forms ContentPage páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir páginas ContentPage derivadas que são adicionadas diretamente ao projeto ou de uma biblioteca .NET padrão, biblioteca padrão do .NET ou projeto compartilhado. Este artigo explica como utilizar páginas ContentPage derivadas que são adicionadas diretamente ao projetos nativos e como navegar entre eles._
+_Formulários nativos permitem derivado xamarin. Forms ContentPage páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal). Projetos nativos podem consumir páginas ContentPage derivadas que são adicionadas diretamente ao projeto ou de uma biblioteca .NET padrão, um projeto compartilhado ou uma biblioteca .NET padrão. Este artigo explica como utilizar páginas ContentPage derivadas que são adicionadas diretamente ao projetos nativos e como navegar entre eles._
 
 Normalmente, um aplicativo xamarin. Forms inclui uma ou mais páginas que derivam de [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/), e essas páginas são compartilhadas por todas as plataformas em um projeto de biblioteca .NET padrão ou compartilhado. No entanto, formulários nativo permite `ContentPage`-derivado páginas a serem adicionadas diretamente a aplicativos nativos do xamarin, xamarin e UWP. Em comparação com a ter o projeto nativo consumir `ContentPage`-páginas derivadas de um projeto de biblioteca .NET padrão ou projeto compartilhado, a vantagem de adição de páginas diretamente para projetos nativos é que as páginas podem ser estendidas com exibições nativo. Exibições nativo, em seguida, podem ser nomeadas em XAML com `x:Name` e referenciados no code-behind. Para obter mais informações sobre modos de exibição nativo, consulte [exibições nativo](~/xamarin-forms/platform/native-views/index.md).
 

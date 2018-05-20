@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: dea5aaa16891893f649d5ec56f3e6b1ee9a18683
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: abfe22683de024f056d7798dc3ac2de13ebd953e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cpu-architectures"></a>Arquitetura de CPU
 
@@ -29,7 +29,7 @@ Para obter mais informações sobre como isso funciona, consulte [dispositivos d
 
 Normalmente, você selecionar uma arquitetura (ou arquiteturas) quando seu aplicativo está configurado para **versão**. Quando seu aplicativo está configurado para **depurar**, o **usar tempo de execução compartilhado** e **implantação rápida do uso** opções são habilitadas, o que desabilitar seleção explícita de arquitetura.
 
-No Visual Studio, clique duas vezes em **propriedades** em seu projeto no **Solution Explorer** e selecione o **opções Android** página. Clique o **empacotamento** guia e verifique **usar tempo de execução compartilhado** está desabilitado (a desativação dessa opção permite que você selecione explicitamente quais ABIs para dar suporte a). Clique o **avançado** guia e, em **propriedades avançadas**, verifique as arquiteturas que você deseja dar suporte:
+No Visual Studio, clique com botão direito no projeto sob o **Solution Explorer** e selecione **propriedades**. Sob o **opções Android** página seleção o **propriedades de empacotamento** seção e verifique **usar tempo de execução compartilhado** está desabilitado (a desativação dessa opção permite que você explicitamente Selecione quais ABIs para dar suporte a). Clique o **avançado** botão e, em **arquiteturas compatíveis**, verifique as arquiteturas que você deseja dar suporte:
 
 [![Selecionando armeabi e armeabi v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 

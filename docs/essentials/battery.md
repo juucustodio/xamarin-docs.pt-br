@@ -5,11 +5,11 @@ ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 984f6f5eeeba3d5c8162ab6ce0c83dbf03981b5f
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 171f65f0ab26faaacddbd8fef37056d7f892d973
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="xamarinessentials-battery"></a>Bateria Xamarin.Essentials
 
@@ -107,7 +107,7 @@ switch (source)
 }
 ```
 
-Sempre que qualquer um dos chagne de propriedades da bateria um evento é acionado:
+Sempre que qualquer uma das propriedades da bateria alterar um evento é acionado:
 
 ```csharp
 public class BatteryTest

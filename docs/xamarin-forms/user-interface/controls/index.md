@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: fb6620e160af4c2c844fa694649c95abdac123f9
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 270904b87b1e37d4c4a74d997af50517fd6ffc5f
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="controls-reference"></a>Referência de Controles
 
 _Uma descrição de todos os elementos visuais usado para construir um aplicativo xamarin. Forms._
 
-A interface visual de um aplicativo xamarin. Forms é construída de objetos que são mapeados para controles nativos de cada plataforma de destino. Isso permite que aplicativos específicos de plataforma para iOS, Android e a plataforma Universal do Windows usar o xamarin. Forms código contido em um [biblioteca padrão do .NET](~/cross-platform/app-fundamentals/net-standard.md) ou um [projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
+A interface visual de um aplicativo xamarin. Forms é construída de objetos que são mapeados para controles nativos de cada plataforma de destino. Isso permite que aplicativos específicos de plataforma para iOS, Android e a plataforma Universal do Windows usar o xamarin. Forms código contido em um [biblioteca .NET padrão](~/cross-platform/app-fundamentals/net-standard.md) ou um [projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
 
 Os quatro grupos de controle principal usados para criar a interface do usuário de um aplicativo xamarin. Forms são mostrados neste quatro artigo:
 

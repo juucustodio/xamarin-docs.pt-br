@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 3201c3161d66163cabffdb36465356192bdd3843
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: ff9814291d5a28ec9e0bbb3c2a6fc6cce5d8ee25
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="right-to-left-localization"></a>Localização da direita para esquerda
 
@@ -105,7 +105,7 @@ Os recursos de idioma necessário devem ser especificados no `<Resources>` nó d
 </Resources>
 ```
 
-Além disso, UWP requer que a cultura do padrão do aplicativo é explicitamente definida na biblioteca padrão do .NET. Isso pode ser feito definindo o `NeutralResourcesLanguage` atributo `AssemblyInfo.cs`, ou em outra classe, para a cultura padrão:
+Além disso, UWP requer que a cultura do padrão do aplicativo é explicitamente definida na biblioteca do .NET padrão. Isso pode ser feito definindo o `NeutralResourcesLanguage` atributo `AssemblyInfo.cs`, ou em outra classe, para a cultura padrão:
 
 ```csharp
 using System.Resources;

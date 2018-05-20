@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: c626008012ccdab2f8ed2c719b34a45471598d47
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 23cdc1871511fa75ba2686213d135822ca0fb971
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Consumir um serviço Web do Windows Communication Foundation (WCF)
 
@@ -44,15 +44,15 @@ O serviço WCF fornece as seguintes operações:
 |--- |--- |--- |
 |GetTodoItems|Obter uma lista de itens pendentes|
 |CreateTodoItem|Criar um novo item de tarefas pendentes|Um XML serializado TodoItem|
-|EditTodoItem|Atualizar um item de tarefas pendentes|Um XML serializado TodoItem|
-|DeleteTodoItem|Excluir um item de tarefas pendentes|Um XML serializado TodoItem|
+|EditTodoItem|Atualizar um item pendente|Um XML serializado TodoItem|
+|DeleteTodoItem|Excluir um item pendente|Um XML serializado TodoItem|
 
 Para obter mais informações sobre o modelo de dados usado no aplicativo, consulte [modelagem de dados](~/xamarin-forms/data-cloud/walkthrough.md).
 
 > [!NOTE]
 > O aplicativo de exemplo consome o serviço WCF hospedado Xamarin que fornece acesso somente leitura para o serviço web. Portanto, as operações que criar, atualizar e excluam dados não alterará os dados consumidos no aplicativo. No entanto, uma versão de núcleo do serviço ASMX está disponível na **TodoWCFService** pasta no aplicativo de exemplo que acompanha. Nesta versão de núcleo do total do WCF serviço permite criar, atualizar, ler e excluir o acesso aos dados.
 
-Um *proxy* devem ser geradas para consumir um serviço WCF, que permite que o aplicativo se conecte ao serviço. O proxy é construído por consumo metadados de serviço que define os métodos e a configuração de serviço associado. Esses metadados são expostos na forma de um documento WSDL Web Services Description Language () que é gerada pelo serviço da web. O proxy pode ser criado usando o provedor de referência de serviço Web do Microsoft WCF no Visual Studio de 2017 para adicionar uma referência de serviço para o serviço web a uma biblioteca do .NET padrão. Uma alternativa para criar o proxy usando o provedor de referência de serviço Web do Microsoft WCF no Visual Studio de 2017 é usar a ferramenta de utilitário de metadados do ServiceModel (svcutil.exe). Para obter mais informações, consulte [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
+Um *proxy* devem ser geradas para consumir um serviço WCF, que permite que o aplicativo se conecte ao serviço. O proxy é construído por consumo metadados de serviço que define os métodos e a configuração de serviço associado. Esses metadados são expostos na forma de um documento WSDL Web Services Description Language () que é gerada pelo serviço da web. O proxy pode ser criado usando o provedor de referência de serviço Web do Microsoft WCF no Visual Studio de 2017 para adicionar uma referência de serviço para o serviço web a uma biblioteca .NET padrão. Uma alternativa para criar o proxy usando o provedor de referência de serviço Web do Microsoft WCF no Visual Studio de 2017 é usar a ferramenta de utilitário de metadados do ServiceModel (svcutil.exe). Para obter mais informações, consulte [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
 
 As classes de proxy gerado fornecem métodos para consumir os serviços web que usam o padrão de design de modelo de programação assíncrona (APM). Nesse padrão, uma operação assíncrona é implementada como dois métodos chamados *BeginOperationName* e *EndOperationName*, que começam e terminam a operação assíncrona.
 
