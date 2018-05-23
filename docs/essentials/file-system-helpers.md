@@ -5,11 +5,11 @@ ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 871d164df982d1d170e8ba5bffd3bd6600a4cdda
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 14aabc319fefdbad86f29a9d27ce39b59da35e3e
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Auxiliares do sistema de arquivo Xamarin.Essentials
 
@@ -31,7 +31,7 @@ Para obter o diretório do aplicativo para armazenar **dados armazenados em cach
 var cacheDir = FileSystem.CacheDirectory;
 ```
 
-Para obter diredctory de nível superior do aplicativo para todos os arquivos que não são arquivos de dados do usuário. Esses arquivos são feitos com o sistema operacional do framework de sincronização. Ver os detalhes de implementação de plataforma abaixo.
+Para obter o diretório de nível superior do aplicativo para todos os arquivos que não são arquivos de dados do usuário. Esses arquivos são feitos com o sistema operacional do framework de sincronização. Ver os detalhes de implementação de plataforma abaixo.
 
 ```csharp
 var mainDir = FileSystem.AppDataDirectory;
@@ -54,7 +54,7 @@ Para abrir um arquivo que está incluído no pacote do aplicativo:
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 - **CacheDirectory** – retorna a [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir) do contexto atual.
-- **AppDataDirectory** – retorna a [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) do contexto atual e tem o backup usando [Autu Backup](https://developer.android.com/guide/topics/data/autobackup.html) iniciando no API 23 e acima.
+- **AppDataDirectory** – retorna a [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) do contexto atual e tem o backup usando [Backup automático](https://developer.android.com/guide/topics/data/autobackup.html) iniciando no API 23 e acima.
 
 Adicionar qualquer arquivo para o **ativos** pasta do Android do projeto e marcar a ação de compilação como **AndroidAsset** para usá-lo com `OpenAppPackageFileAsync`.
 

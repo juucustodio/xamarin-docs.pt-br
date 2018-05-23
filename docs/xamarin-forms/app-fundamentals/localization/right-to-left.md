@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: ff9814291d5a28ec9e0bbb3c2a6fc6cce5d8ee25
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 92ca58374292c829df4098274abae870b355a7b0
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="right-to-left-localization"></a>Localização da direita para esquerda
 
@@ -24,7 +24,7 @@ _Localização da direita para esquerda adiciona suporte para a direção do flu
 Direção do fluxo é a direção na qual os elementos de interface do usuário na página são verificados pelos olhos. Alguns idiomas, como árabe e hebraico, exigem que os elementos de interface do usuário são dispostos em uma direção de fluxo da direita para esquerda. Isso pode ser feito definindo o [ `VisualElement.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade. Esta propriedade obtém ou define a direção na qual fluxo de elementos de interface do usuário em qualquer elemento pai que controlem seu layout e deve ser definido como um do [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valores de enumeração:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 Definindo o [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade [ `RightToLeft` ](xref:Xamarin.Forms.FlowDirection.RightToLeft) em um elemento geralmente define o alinhamento à direita, a ordem de leitura da direita para esquerda e o layout do controle de fluxo de direita para esquerda:

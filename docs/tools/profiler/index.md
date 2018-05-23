@@ -6,11 +6,11 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 7e28e2513b74faa884fb7bc3d7194f1b02844734
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 81c6a5682fc91b49a0f7495f06e7f7b6d3f76330
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -24,33 +24,12 @@ O criador de perfil do Xamarin tem um número de instrumentos disponíveis para 
 
 Este guia examina os cenários comuns de criação de perfil e apresenta o criador de perfil como uma ferramenta para ajudar a analisar e otimizar aplicativos iOS e Android.
 
-## <a name="contents"></a>Conteúdo
-
-- [Baixar e instalar](#Download_and_Install)
-- [Criadores de perfis e criação de perfil](#Profilers_and_Profiling)
-- [Xamarin Profiler](#Xamarin_Profiler)
-- [Suporte do criador de perfil](#Profiler_Support)
-- [Noções básicas sobre o criador de perfil](#Profiler_Basics)
-    - [Permitindo a criação de perfil em seu aplicativo](#Allowing_Profiling_in_your_App)
-    - [Iniciar o criador de perfil](#Launching_the_Profiler)
-        - [Iniciando do Visual Studio para Mac](#Launching_from_Xamarin_Studio)
-        - [Iniciando do Visual Studio](#Launching_from_Visual_Studio)
-        - [Salvando e carregando sessões do criador de perfil](#Saving_and_Loading_Profiler_Sessions)
-        - [Instrumentos e recursos do criador de perfil](#Profiler_Features)
-    - [Alocações](#Allocations)
-    - [Criador de perfil de tempo](#Time_Profiler)
-    - [Ciclos](#Cycles)
-- [Aplicativos de criação de perfil](#Profiling_Applications)
-- [Resumo](#Summary)
-
 ## <a name="download-and-install"></a>Baixar e instalar
 
 > [!NOTE]
-> **Observação:** você precisará ser um [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) assinante para desbloquear esse recurso em um Visual Studio Enterprise no Windows ou o Visual Studio para Mac em um Mac.
+> Você precisará ser um [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) assinante para desbloquear esse recurso em um Visual Studio Enterprise no Windows ou o Visual Studio para Mac em um Mac.
 
 O criador de perfil do Xamarin é um aplicativo autônomo e está integrado com o Visual Studio para Mac e o Visual Studio habilitar a criação de perfil de dentro do IDE.
-
-### <a name="download"></a>Baixar
 
 Baixe o pacote de instalação para sua plataforma:
 
@@ -58,7 +37,6 @@ Baixe o pacote de instalação para sua plataforma:
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 Após o download, inicie o instalador para adicionar o criador de perfil Xamarin ao seu sistema.
-
 
 ## <a name="profilers-and-profiling"></a>Criadores de perfis e criação de perfil
 
@@ -199,7 +177,6 @@ Você pode carregar *.mlpd* arquivos para o criador de perfil, abra o aplicativo
 
 Para obter mais informações, consulte [gerar arquivos de .mlpd ](~/tools/profiler/troubleshooting.md#gen_mlpd).
 
-
 ## <a name="profiler-features"></a>Recursos do criador de perfil
 
 O criador de perfil do Xamarin é composta de cinco seções, conforme ilustrado abaixo:
@@ -298,7 +275,6 @@ O gráfico, conforme mostrado na captura de tela abaixo, exibe o número de amos
 
 -----
 
-
 - **Árvore de chamadas** – mostra o período de tempo gasto em cada método:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
@@ -340,24 +316,7 @@ Se você criar o perfil de um aplicativo com qualquer outra configuração, voc�
 
 -----
 
-
 Selecione **atualização** para continuar.
-
-<!---
-## Profiling Android Applications
-
-
-Due to the recent inclusion of the profiling libraries into any new Android project template, you will find that when profiling any legacy applications you are greeted with the message dialog above.
-
-You will need to enable this to make sure that the profiling libraries are included in your Android application, for debug builds. This should not be checked for release builds as it creates overhead.
-
-
-## Profiling iOS Applications
-
-### Profiling tvOS
-
-## Profiling Mac Applications
--->
 
 ### <a name="sgen-garbage-collector-and-profiling"></a>Coletor de lixo SGen e criação de perfil
 
@@ -374,7 +333,6 @@ Para obter mais informações sobre gerenciamento de memória, consulte o [memó
 ## <a name="summary"></a>Resumo
 
 Este guia vimos que criação de perfil é e como ele é vantajoso para o desenvolvedor. Em seguida, apresentamos o criador de perfil do Xamarin, fornecer algumas informações de histórico e em funcionamento. Finalmente, percorrido os recursos do criador de perfil Xamarin e explorou as alocações e instrumentos do criador de perfil de tempo.
-
 
 ## <a name="related-links"></a>Links relacionados
 

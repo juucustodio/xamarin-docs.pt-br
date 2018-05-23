@@ -6,11 +6,11 @@ ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: b5301e499a3b85087f19449f8a25b107b8ec1e4b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Player de ao vivo Xamarin para xamarin. Forms
 
@@ -22,7 +22,7 @@ O Player de Live Xamarin foi projetado como um guia de introdução de proteçã
 
 [![Player de ao vivo de Xamarin: Código, teste de varredura,](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. Baixe o aplicativo pelo fluxo de [instalação Xamarin Live Player](install.md) instruções.
+1. Baixe o aplicativo de acordo com o [instalação Xamarin Live Player](install.md) instruções.
 2. Habilitar o *Xamarin Live Player* na **preferências**, em seguida, selecione o dispositivo do **dispositivos** lista.
 2. Gerencie dispositivos Live Player para digitalizar um código QR para ligar o dispositivo para o Visual Studio.
 3. O aplicativo é executado diretamente em seu telefone ou tablet.

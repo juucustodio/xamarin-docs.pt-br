@@ -5,13 +5,13 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: ead498113f432e766fbd77ae2f01bc67c2273b60
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: bf0fa7d2caf7c8857bc1272f4471def04100383f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials geocodificação
+# <a name="xamarinessentials-geolocation"></a>Localização geográfica do Xamarin.Essentials
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
@@ -19,7 +19,7 @@ O **geolocalização** classe fornece APIs para recuperar as coordenadas atuais 
 
 ## <a name="getting-started"></a>Guia de Introdução
 
-Para acessar o **geolocalização** funcionalidade a seguinte configuração específica de plataforma é necessária.
+Para acessar o **geolocalização** funcionalidade, a seguinte configuração de plataforma específica é necessária:
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -35,9 +35,9 @@ Abra o **AssemblyInfo.cs** arquivo sob o **propriedades** pasta e adicionar:
 [assembly: UsesFeature("android.hardware.location.network", Required = false)]
 ```
 
-OU atualize o manifesto do Android:
+Ou atualize o manifesto do Android:
 
-Abra o **AndroidManifest.xml** arquivo sob o **propriedades** pasta e adicione o seguinte dentro do **manifesto** nó.
+Abra o **AndroidManifest.xml** arquivo sob o **propriedades** pasta e adicione o seguinte dentro do **manifesto** nó:
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -47,15 +47,15 @@ Abra o **AndroidManifest.xml** arquivo sob o **propriedades** pasta e adicione o
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-Ou clique com o botão direito no projeto Android e abra as propriedades do projeto. Em **manifesto do Android** encontrar o **as permissões necessárias:** área e verifique se o **ACCESS_COARSE_LOCATION** e **ACCESS_FINE_LOCATION**permissões. Isso atualizará automaticamente o **AndroidManifest.xml** arquivo.
+Ou clique com botão direito no projeto Android e abra as propriedades do projeto. Em **manifesto do Android** encontrar o **as permissões necessárias:** área e verifique se o **ACCESS_COARSE_LOCATION** e **ACCESS_FINE_LOCATION**permissões. Isso atualizará automaticamente o **AndroidManifest.xml** arquivo.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Seu aplicativo é necessário ter chaves no seu **Info. plist** para NSLocationWhenInUseUsageDescription para acessar o local do dispositivo.
+Seu aplicativo **Info. plist** deve conter o `NSLocationWhenInUseUsageDescription` chave para acessar o local do dispositivo.
 
 Abra o editor plist e adicionar o **privacidade - local quando em uso descrição do uso** propriedade e um valor para exibir o usuário de preenchimento.
 
-OU editar o arquivo-o manualmente e adicione o seguinte:
+Ou editar o arquivo-o manualmente e adicione o seguinte:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -64,7 +64,7 @@ OU editar o arquivo-o manualmente e adicione o seguinte:
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Você deve definir o `Location` permissão para o aplicativo. Isso pode ser feito por abrir o **Package. appxmanifest** e selecing o **recursos** guia e a verificação de **local**.
+Você deve definir o `Location` permissão para o aplicativo. Isso pode ser feito abrindo o **Package. appxmanifest** e selecing o **recursos** guia e a verificação de **local**.
 
 -----
 
@@ -104,7 +104,7 @@ catch (Exception ex)
 }
 ```
 
-Para consultar o dispositivo atual [local](xref:Xamarin.Essentials.Location) coordenadas a `GetLocationAsync` pode ser usado. É recomendável para passar um completo `GeolocationRequest` e `CancellationToken` pois ele pode demorar algum tempo para obter o local do dispositivo.
+Para consultar o dispositivo atual [local](xref:Xamarin.Essentials.Location) coordenadas, a `GetLocationAsync` pode ser usado. É melhor passar um completo `GeolocationRequest` e `CancellationToken` pois ele pode demorar algum tempo para obter o local do dispositivo.
 
 ```csharp
 try
@@ -133,7 +133,7 @@ catch (Exception ex)
 
 ## <a name="geolocation-accuracy"></a>Precisão de localização geográfica
 
-A tabela a seguir descreve a precisão por plataforma
+A tabela a seguir descreve a precisão por plataforma:
 
 ### <a name="lowest"></a>O menor
 
