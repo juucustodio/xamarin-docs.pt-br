@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/16/2018
-ms.openlocfilehash: ac3df50a67dcf6ad813d549479db42856acc2ce1
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: e2f9b23bb298b0bb01f7e5491963daed4521ac9c
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="pair-to-mac"></a>Emparelhar com Mac
 
@@ -244,3 +244,5 @@ Este artigo descreveu como usar o Emparelhar com Mac para conectar o Visual Stud
 - [Agente de build do Xamarin Mac – Palestra rápida da Xamarin University](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introdução ao Xamarin.iOS para Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Simulador remoto de iOS para Windows](~/tools/ios-simulator.md)
+- [Implantação sem fio](~/ios/deploy-test/wireless-deployment.md)
+
