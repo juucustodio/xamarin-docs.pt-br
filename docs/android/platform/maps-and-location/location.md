@@ -6,12 +6,12 @@ ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/22/2018
+ms.openlocfilehash: b509f6892b27afa053a6ee913826d913d7ad54a8
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="location-services"></a>Serviços de localização
 
@@ -83,9 +83,15 @@ O provedor de mescladas local é o modo preferido para aplicativos do Android re
  
 A API de provedor mescladas local fornece uma variedade de outras ferramentas para capacitar os aplicativos com reconhecimento de local, incluindo o isolamento geográfico e monitoramento de atividades. Nesta seção, vamos nos concentrar Noções básicas sobre como configurar o `LocationClient`, estabelecendo provedores e obter o local do usuário.
 
-O provedor local mescladas faz parte do [Google executar serviços](http://developer.android.com/google/play-services/index.html). O pacote de serviços do Google reproduzir deve ser instalado e configurado corretamente no aplicativo para a API de provedor local mescladas para trabalhar, e o dispositivo deve ter o APK Google reproduzir Services instalado.
+O provedor local mescladas faz parte do [Google executar serviços](http://developer.android.com/google/play-services/index.html).
+O pacote de serviços do Google reproduzir deve ser instalado e configurado corretamente no aplicativo para a API de provedor local mescladas para trabalhar, e o dispositivo deve ter o APK Google reproduzir Services instalado.
 
-Antes de um xamarin aplicativo pode usar o provedor local mescladas, ela deve adicionar o **Xamarin.GooglePlayServices.Maps** ao projeto.
+Antes de um xamarin aplicativo pode usar o provedor local mescladas, ela deve adicionar o **Xamarin.GooglePlayServices.Maps** pacote ao projeto. Além disso, os seguintes `using` instruções devem ser adicionadas para arquivos de origem que referenciam as classes descritas abaixo:
+
+```csharp
+using Android.Gms.Common;
+using Android.Gms.Location;
+```
 
 ### <a name="checking-if-google-play-services-is-installed"></a>Verificando se os serviços do Google reproduzir está instalado
 

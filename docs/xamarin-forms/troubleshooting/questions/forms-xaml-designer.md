@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 1f82f16429ca23a4ba6806f775310dd90126096e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43088beba6c6a86330cac164856be98d88f07fe2
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>Por que o designer XAML do Visual Studio não funciona para arquivos XAML xamarin. Forms?
 
@@ -22,3 +22,5 @@ Xamarin. Forms atualmente não dá suporte a designers visuais para arquivos XAM
 Essa limitação é descrita no [visão geral](~/xamarin-forms/xaml/xaml-basics/index.md#Overview) seção o [xamarin. Forms Noções básicas de XAML](~/xamarin-forms/xaml/xaml-basics/index.md) guia:
 
 > "Não há ainda um designer visual para gerar o XAML em aplicativos xamarin. Forms, XAML para que todos os deve ser manual".
+
+No entanto, o Visualizador de XAML xamarin. Forms pode ser exibido selecionando a **exibição > outras janelas > Visualizador xamarin. Forms** opção de menu.
