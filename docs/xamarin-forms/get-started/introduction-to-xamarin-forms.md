@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 9f7c9d1b410d9d1d699644148903fdc6cfeec4fd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c2e37de65cf7be461543704b67249dfa9833dba8
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Uma Introdução ao Xamarin.Forms
 
@@ -21,7 +21,7 @@ _O Xamarin.Forms é uma abstração de kit de ferramentas de interface do usuár
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin.Forms é uma estrutura que permite aos desenvolvedores criar interfaces do usuário de plataforma cruzada rapidamente. Ele fornece sua própria abstração de interface do usuário que será renderizada usando controles nativos no iOS, Android, ou a UWP (Plataforma Universal do Windows). Isso significa que os aplicativos podem compartilhar uma grande parte do seu código de interface do usuário e ainda manter a aparência nativa da plataforma de destino.
+Xamarin.Forms é uma estrutura que permite aos desenvolvedores criar interfaces do usuário de plataforma cruzada rapidamente. Ele fornece uma abstração própria de interface do usuário que será renderizada usando controles nativos das plataformas iOS, Android, ou UWP (Plataforma Universal do Windows). Isso significa que os aplicativos podem compartilhar uma grande parte do seu código de interface do usuário e ainda manter a aparência nativa da plataforma de destino.
 
 O Xamarin.Forms permite prototipagem rápida de aplicativos que podem evoluir ao longo do tempo para aplicativos complexos. Já que os aplicativos Xamarin.Forms são aplicativos nativos, eles não têm as limitações de outros conjuntos de ferramentas como área restrita de navegador, APIs limitadas ou baixo desempenho. Aplicativos escritos usando Xamarin.Forms são capazes de utilizar qualquer um dos recursos da API ou da plataforma subjacente, assim como (mas não se limitando a) CoreMotion, PassKit e StoreKit no iOS, NFC e Google Play Services no Android e Blocos no Windows. Além disso, é possível criar aplicativos que terão partes da sua interface do usuário criadas com Xamarin.Forms, enquanto outras partes serão criadas usando o kit de ferramentas da interface do usuário nativa.
 

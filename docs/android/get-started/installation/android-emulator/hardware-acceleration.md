@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/10/2018
-ms.openlocfilehash: b5c20eb9f40bb4c4981d6b60b9fd4bc75fd29336
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 2f0bb6f1371b9ce1b925b876851d58f3c4d01419
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Aceleração de Hardware do Android Emulator
 
@@ -46,9 +46,9 @@ Para começar a usar o Hyper-V e o Google Android Emulator:
 
     Talvez seja necessário reiniciar o Windows depois de habilitar o Hyper-V e a Plataforma de Hipervisor do Windows.
 
-3. **Instale o [Visual Studio 15.8 Preview 1](https://aka.ms/hyperv-emulator-dl)** &ndash; Essa versão do Visual Studio dá suporte ao IDE para iniciar o Google Android Emulator com suporte para o Hyper-V.
+3. **Instale o [Visual Studio 15.8 Preview 1 ou posterior](https://www.visualstudio.com/vs/preview/)** &ndash; Essa versão do Visual Studio é compatível com IDE para iniciar o Google Android Emulator com suporte para o Hyper-V.
 
-4. **Instale o pacote do Google Android Emulator 27.2.7 ou superior** &ndash; Para instalar esse pacote, acesse **Ferramentas > Android > Gerenciador de SDK do Android** no Visual Studio. Selecione a guia **Ferramentas** e verifique se a versão do componente Android Emulator é pelo menos a 27.2.7.
+4. **Instale o pacote do Google Android Emulator 27.2.7 ou posterior** &ndash; Para instalar esse pacote, acesse **Ferramentas > Android > Gerenciador do SDK do Android** no Visual Studio. Selecione a guia **Ferramentas** e verifique se a versão do componente Android Emulator é pelo menos a 27.2.7.
 
     [![Caixa de diálogo SDKs e Ferramentas do Android](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
 

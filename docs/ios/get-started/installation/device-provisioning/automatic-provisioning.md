@@ -6,12 +6,12 @@ ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 05/06/2018
-ms.openlocfilehash: 0e2ce758da2951efa0508e76cdf4eaac5384fa6b
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.date: 05/22/2018
+ms.openlocfilehash: d324e469ba392b14c635990d607bf04c949ad5db
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="automatic-provisioning"></a>Provisionamento automático
 
@@ -37,6 +37,14 @@ Você também precisa estar emparelhado com um host de build do Mac que tem o se
 ## <a name="enabling-automatic-signing"></a>Habilitando a Assinatura automática
 
 Antes de iniciar o processo de assinatura automática, você deve adicionar uma ID Apple ao Visual Studio, conforme descrito no guia [Gerenciamento de conta da Apple](~/cross-platform/macios/apple-account-management.md). Depois de adicionar um ID Apple, será possível usar qualquer _Equipe_ associada. Isso permite que certificados, perfis e outras IDs sejam feitas com relação à equipe. A ID da equipe também é usada para criar um prefixo para uma ID do aplicativo que será incluída no perfil de provisionamento. Isso permite que a Apple verifique que você é quem diz que ser.
+
+> [!IMPORTANT]
+> Para começar, entre no [iTunes Connect](https://itunesconnect.apple.com/) ou no site do [appleid.apple.com](https://appleid.apple.com) e confirme se você aceitou as políticas de conta mais recentes da Apple. Quando solicitado, conclua as etapas para aceitar novos contratos de conta da Apple. Se não aceitar o contrato de privacidade de maio de 2018, você receberá o seguinte alerta quando tentar provisionar o dispositivo:
+> ```
+> Unexpected authentication failure. Reason: {
+> "authType" : "sa"
+>}
+>```
 
 Para assinar seu aplicativo automaticamente para implantação em um dispositivo iOS, faça o seguinte:
 
