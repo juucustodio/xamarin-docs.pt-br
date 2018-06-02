@@ -6,11 +6,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 78783089303eba09b0ee36534b0078b82674a1c6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689535"
 ---
 # <a name="touch-in-ios"></a>Toque no iOS
 
@@ -117,7 +118,7 @@ Reconhecedores de gestos consideravelmente podem simplificar e reduzir o esforç
 
 Xamarin fornece a classe `UIGestureRecognizer` como uma classe base para os seguintes identificadores de gesto internos:
 
--  *UITapGesturesRecognizer* – isso é para um ou mais toques.
+-  *UITapGestureRecognizer* – isso é para um ou mais toques.
 -  *UIPinchGestureRecognizer* – Pinching e propagação dedos separados.
 -  *UIPanGestureRecognizer* – panorâmica ou arrastar.
 -  *UISwipeGestureRecognizer* – passar o dedo em qualquer direção.

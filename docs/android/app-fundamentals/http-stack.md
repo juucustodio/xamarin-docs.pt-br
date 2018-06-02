@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: bedcf0603fffc9886155881f91972203104ba155
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 765c51346ac63a00838fec52bde87b38091e2dd9
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689468"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pilha de HttpClient e seletor de implementação de SSL/TLS para Android
 
@@ -89,9 +90,9 @@ A escolha entre `AndroidClientHandler` e `HttpClientHandler` depende das necessi
 
 Começando com o xamarin 8.3, `HttpClientHandler` padrões chato SSL (`btls`) como o provedor subjacente do TLS. O provedor chato SSL TLS oferece as seguintes vantagens:
 
--   Ele dá suporte a TLS 1.2.
+-   Ele dá suporte a TLS 1.2 +.
 -   Ele dá suporte a todas as versões de Android.
--   Ele fornece suporte a TLS 1.2 para ambos `HttpClient` e `WebClient`.
+-   Ele fornece suporte a TLS 1.2 + para ambos `HttpClient` e `WebClient`.
 
 A desvantagem do uso de SSL chato como o provedor TLS subjacente é que ele pode aumentar o tamanho do APK resultante (adiciona cerca de 1MB de tamanho APK adicional por ABI com suporte).
 

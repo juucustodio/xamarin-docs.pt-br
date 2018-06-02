@@ -6,12 +6,13 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2017
-ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.date: 05/31/2018
+ms.openlocfilehash: d97fc792e2eb14f7e432d377811d1318c99b9602
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689442"
 ---
 # <a name="local-databases"></a>Bancos de dados locais
 
@@ -33,17 +34,20 @@ Esta seção mostra como adicionar pacotes do SQLite.Net NuGet a uma solução x
 
 <a name="XamarinForms_PCL_Project" />
 
-### <a name="xamarinsforms-pcl-project"></a>Projeto Xamarins.Forms PCL
+### <a name="xamarinsforms-net-standard-or-pcl-project"></a>Projeto PCL ou Xamarins.Forms .NET padrão
 
-Para adicionar SQLite suporte a um projeto PCL xamarin. Forms, use a função de pesquisa do NuGet para localizar **sqlite-net-pcl** e instale o pacote:
+Para adicionar SQLite suporte a um projeto xamarin. Forms, use a função de pesquisa do NuGet para localizar **sqlite-net-pcl** e instale o pacote:
 
-![](databases-images/vs2017-sqlite-pcl-nuget.png "Adicionar o pacote do NuGet SQLite.NET PCL")
+![Adicionar o pacote do NuGet SQLite.NET PCL](databases-images/vs2017-sqlite-pcl-nuget.png "adicionar o pacote do NuGet SQLite.NET PCL")
 
 Há um número de pacotes do NuGet com nomes semelhantes, o pacote correto tem estes atributos:
 
 - **Criado por:** Frank A. Krueger
 - **ID:** sqlite-net-pcl
 - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+> [!TIP]
+> Use o **sqlite-net-pcl** NuGet mesmo em projetos .NET padrão.
 
 Depois que a referência foi adicionada, escreva uma interface para abstrair a funcionalidade específica de plataforma, que é para determinar o local do arquivo de banco de dados. A interface usada no exemplo define um método único:
 
@@ -130,7 +134,7 @@ Todo o código de acesso a dados é gravado no projeto PCL para ser compartilhad
 
 Para configurar o aplicativo iOS, adicione o mesmo pacote de NuGet para o projeto iOS usando o *NuGet* janela:
 
-![](databases-images/vsmac-sqlite-nuget.png "Adicionar o pacote do NuGet SQLite.NET PCL")
+![Adicionar o pacote do NuGet SQLite.NET PCL](databases-images/vsmac-sqlite-nuget.png "adicionar o pacote do NuGet SQLite.NET PCL")
 
 É o único código necessário o `IFileHelper` implementação que determina o caminho do arquivo de dados. O código a seguir coloca o arquivo de banco de dados SQLite no **/bancos de dados biblioteca** pasta dentro de proteção do aplicativo. Consulte o [iOS trabalhando com o sistema de arquivos](~/ios/app-fundamentals/file-system.md) documentação para obter mais informações sobre os diretórios diferentes que estão disponíveis para armazenamento.
 
@@ -138,21 +142,21 @@ Para configurar o aplicativo iOS, adicione o mesmo pacote de NuGet para o projet
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.iOS
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
+      string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+      string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
 
-            if (!Directory.Exists(libFolder))
-            {
-                Directory.CreateDirectory(libFolder);
-            }
+      if (!Directory.Exists(libFolder))
+      {
+        Directory.CreateDirectory(libFolder);
+      }
 
-            return Path.Combine(libFolder, filename);
-        }
+      return Path.Combine(libFolder, filename);
     }
+  }
 }
 ```
 
@@ -172,14 +176,14 @@ Depois que tiver sido adicionada a esta referência, o único código necessári
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.Droid
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            return Path.Combine(path, filename);
-        }
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+        return Path.Combine(path, filename);
     }
+  }
 }
 ```
 
@@ -189,7 +193,7 @@ namespace Todo.Droid
 
 Para configurar o aplicativo de UWP, adicione o mesmo pacote de NuGet para o projeto UWP usando o *NuGet* janela:
 
-![](databases-images/vs2017-sqlite-uwp-nuget.png "Adicionar o pacote do NuGet SQLite.NET PCL")
+![Adicionar o pacote do NuGet SQLite.NET PCL](databases-images/vs2017-sqlite-uwp-nuget.png "adicionar o pacote do NuGet SQLite.NET PCL")
 
 Depois que a referência é adicionada, implementar a `IFileHelper` interface usando o específico da plataforma `Windows.Storage` API para determinar o caminho do arquivo de dados.
 
@@ -200,23 +204,21 @@ using Windows.Storage;
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.UWP
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
-        }
+      return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
     }
+  }
 }
-
 ```
 
 ## <a name="summary"></a>Resumo
 
 Xamarin. Forms oferece suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, o que torna possível carregar e salvar objetos no código compartilhado.
 
-Este artigo se concentra em **acessando** um banco de dados SQLite usando xamarin. Forms. Para obter mais informações sobre como trabalhar com SQLite.Net em si, consulte o [acesso a dados: usando SQLite.NET](~/cross-platform/app-fundamentals/index.md) documentação. Grande parte do código SQLite.Net é compartilhável em todas as plataformas; Configurando apenas o local do arquivo de banco de dados SQLite exige a funcionalidade específica de plataforma.
-
+Este artigo se concentra em **acessando** um banco de dados SQLite usando xamarin. Forms. Para obter mais informações sobre como trabalhar com SQLite.Net em si, consulte o [SQLite.NET no Android](~/android/data-cloud/data-access/using-sqlite-orm.md) ou [SQLite.NET no iOS](~/ios/data-cloud/data/using-sqlite-orm.md) documentação. Grande parte do código SQLite.Net é compartilhável em todas as plataformas; Configurando apenas o local do arquivo de banco de dados SQLite exige a funcionalidade específica de plataforma.
 
 ## <a name="related-links"></a>Links relacionados
 
