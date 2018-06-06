@@ -1,18 +1,20 @@
 ---
-title: Personalizando a aparência de uma tabela
+title: Personalizando a aparência de uma tabela no xamarin
+description: Este documento descreve como personalizar a aparência da tabela no xamarin. Ele discute os estilos de célula, Acessórios, separadores de célula e layouts de célula personalizado.
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: a447c59e7384ce7da168efdd018bc23c2abb25c2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03383c69afb6afa9282d44751475d74fdcd92d4a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789948"
 ---
-# <a name="customizing-a-tables-appearance"></a>Personalizando a aparência de uma tabela
+# <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizando a aparência de uma tabela no xamarin
 
 A maneira mais simples para alterar a aparência de uma tabela é usar um estilo de célula diferente. Você pode alterar o estilo de célula é usado durante a criação de cada célula de `UITableViewSource`do `GetCell` método.
 

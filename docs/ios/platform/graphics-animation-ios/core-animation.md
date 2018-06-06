@@ -1,5 +1,5 @@
 ---
-title: Animação de núcleo
+title: Animação de núcleo no xamarin
 description: Este artigo examina a estrutura de animação principal, mostrando como ela permite alto desempenho, animações suaves na UIKit, e como usá-lo diretamente para o controle de animação de nível inferior.
 ms.prod: xamarin
 ms.assetid: D4744147-FACB-415B-8155-3A6B3C35E527
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b89b93a90e13072e36140b79081b90dcde1cdb05
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5cc6019ed148b870e38659eb30ac7f2738481a50
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786808"
 ---
-# <a name="core-animation"></a>Animação de núcleo
+# <a name="core-animation-in-xamarinios"></a>Animação de núcleo no xamarin
 
 _Este artigo examina a estrutura de animação principal, mostrando como ela permite alto desempenho, animações suaves na UIKit, e como usá-lo diretamente para o controle de animação de nível inferior._
 

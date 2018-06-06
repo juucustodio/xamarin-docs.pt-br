@@ -1,20 +1,21 @@
 ---
-title: Novas APIs de pesquisa
+title: APIs de pesquisa em xamarin
 description: Este artigo aborda usando as novas APIs de pesquisa do aplicativo fornecido pelo iOS 9 para permitir que os usuários procurar informações e recursos em seus aplicativos xamarin.
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5dcd3d9665befaa82fd0f5677a4a662f633ed45b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc62ad34af0b9b98f0475599a08946122badd21e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788170"
 ---
-# <a name="new-search-apis"></a>Novas APIs de pesquisa
+# <a name="search-apis-in-xamarinios"></a>APIs de pesquisa em xamarin
 
-_Este artigo aborda usando as novas APIs de pesquisa do aplicativo fornecido pelo iOS 9 para permitir que os usuários procurar informações e recursos em seus aplicativos xamarin._
+_Este artigo aborda usando as APIs de pesquisa do aplicativo fornecido pelo iOS 9 para permitir que usuários procurar informações e recursos em seus aplicativos xamarin._
 
 A pesquisa foi expandida no iOS 9 para fornecer excelentes maneiras de acessar informações e recursos dentro de um aplicativo xamarin. Conteúdo do aplicativo usando as novas APIs de pesquisa do aplicativo, é feito pesquisável através de destaque e Safari resultados da pesquisa, entrega e Siri lembretes e sugestões. Isso permite que os usuários a acessar rapidamente informações profundas dentro de seu aplicativo e atividades.
 

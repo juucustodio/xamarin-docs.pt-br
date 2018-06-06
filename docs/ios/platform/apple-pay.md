@@ -1,24 +1,23 @@
 ---
-title: Apple Pay
+title: Pagamento da Apple no xamarin
 description: Este guia explora a configuração do ambiente de xamarin para uso com o pagamento da Apple para pagar por bens físicos, como alimentos, entretenimento e membros por meio do seu aplicativo. Ele inclui informações sobre os identificadores necessários, certificados e direitos.
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: fc7c247e5edcdc25d53c34c922801a5497b8c367
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7033373cddb2503e5912eb17b1e72ece759cc3ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786685"
 ---
-# <a name="apple-pay"></a>Apple Pay
+# <a name="apple-pay-in-xamarinios"></a>Pagamento da Apple no xamarin
 
 _Este guia explora a configuração do ambiente de xamarin para uso com o pagamento da Apple para pagar por bens físicos, como alimentos, entretenimento e membros por meio do seu aplicativo. Ele inclui informações sobre os identificadores necessários, certificados e direitos._
 
-
 Pagamento da Apple foi introduzido junto com iOS 8, permitindo que os usuários pagar por bens físicos como alimentos, entretenimento e membros por meio de seus dispositivos iOS. Ele está disponível no iPhone 6 e iPhone 6 Plus e também pode ser emparelhado com o Apple Watch para compras na loja. Quando usado em um iPhone, ele usa o ID de toque como uma maneira de confirmar e autorizar transações de débito ou de crédito do usuário.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,7 +40,6 @@ As estruturas usadas também são uma diferença importante; [PassKit](https://d
 
 Com o pagamento da Apple, Apple [estados](https://developer.apple.com/apple-pay/Getting-Started-with-Apple-Pay.pdf) [que ele "não] cobra usuários, desenvolvedores ou comerciantes usar pagamento da Apple para pagamentos". Em comparação, IAP tem uma taxa de 30% para cada transação. Além disso, com o pagamento da Apple, a transação não passa pelo Apple Afinal, em vez disso, ele passa por meio de uma plataforma de pagamento.
 
-
 ## <a name="using-a-payment-processor-platform"></a>Usando uma plataforma de processador de pagamento
 
 Uma das partes fundamentais do pagamento da Apple é o processamento de pagamentos. Embora seja possível fazer isso sozinho, requer conhecimento significativo de criptografia
@@ -53,7 +51,6 @@ Duas opções incluem:
 - **Distribuição** -Inscreva-se em [Stripe.com](https://stripe.com/) para acessar suas APIs.
 
 - **JudoPay** -check-out de seus [Xamarin código de exemplo no github](https://github.com/Judopay/Xamarin-Sample-App)e registre-se em [JudoPay.com](https://www.judopay.com/).
-
 
 ## <a name="provisioning-for-apple-pay"></a>O provisionamento de pagamento da Apple
 
@@ -70,13 +67,11 @@ Configurar um aplicativo para usar o pagamento da Apple requer a instalação no
 5. Adicione direitos de pagamento da Apple:
     - Selecione o direito de pagamento da Apple, conforme detalhado [aqui](~/ios/deploy-test/provisioning/entitlements.md), ou adicione manualmente o par chave/valor no arquivo de [aqui](~/ios/deploy-test/provisioning/entitlements.md)
 
-
 ## <a name="working-with-apple-pay"></a>Trabalhando com pagamento da Apple
 
 Apple fez várias melhorias para pagamento da Apple iOS 10 que permitem que o usuário faça pagamentos seguros de sites e por meio da interação com Siri e mapas.
 
 Com o iOS 10, várias novas APIs foram adicionadas que funcionam com iOS e watchOS para dar suporte a redes de pagamento dinâmico e um novo ambiente de teste de área restrita.
-
 
 ### <a name="apple-pay-website-integration"></a>Integração do site de pagamento da Apple
 
@@ -122,7 +117,6 @@ Para ativar o novo ambiente de teste, faça o seguinte:
 ## <a name="summary"></a>Resumo
 
 Neste artigo, vamos explorou os itens diferentes que precisam usar o pagamento da Apple dentro de seu aplicativo. Vimos como criar uma ID de loja e como ele é usado dentro de **Entitlements.plist**, que deve ser modificado manualmente.
-
 
 ## <a name="related-links"></a>Links relacionados
 

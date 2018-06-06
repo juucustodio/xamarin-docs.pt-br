@@ -1,19 +1,20 @@
 ---
-title: Introdução ao 3D Touch
-description: Este artigo aborda o uso do novo iPhone 6s e iPhone 6s Plus 3D Touch gestos em seu aplicativo.
+title: Introdução ao 3D Touch em xamarin
+description: Este artigo descreve como usar gestos de toque 3D introduzidos com o iPhone 6s e iPhone 6s Plus. Esses gestos habilitar sensibilidade à pressão, inspeção e pop e ações rápidas.
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a0d89315b82f4931538cdabe64aade7986b2a42e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f6eb71409317661cdd571c708db062e06e63ff55
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786577"
 ---
-# <a name="introduction-to-3d-touch"></a>Introdução ao 3D Touch
+# <a name="introduction-to-3d-touch-in-xamarinios"></a>Introdução ao 3D Touch em xamarin
 
 _Este artigo aborda o uso do novo iPhone 6s e iPhone 6s Plus 3D Touch gestos em seu aplicativo._
 

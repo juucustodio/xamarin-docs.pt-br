@@ -6,12 +6,13 @@ ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/02/2018
-ms.openlocfilehash: d1fc8a1c511e86615108d1df841c28256f23191f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/30/2018
+ms.openlocfilehash: df359fae545079c7ac1d7106ec86e9297f183f90
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732769"
 ---
 # <a name="which-android-sdk-packages-should-i-install"></a>Quais pacotes de SDK do Android deve instalar?
 
@@ -42,11 +43,8 @@ Só precisa instalar o SDK de plataforma para API 23
 Necessário instalar o SDK plataformas para 15 da API e 23. Observe que você não precisa instalar os níveis de API entre o mínimo e o destino (mesmo se você estiver pacotes para os níveis de API).
 
 ## <a name="system-images"></a>Imagens do sistema
-Eles apenas são necessários se você deseja usar os emuladores Android fora da caixa do Google. 
 
-- [Como configurar o emulador padrão](~/android/get-started/installation/android-emulator/index.md)
-
-- [Como acelerar o emulador padrão](~/android/get-started/installation/android-emulator/index.md)
+Eles apenas são necessários se você deseja usar os emuladores Android fora da caixa do Google. Para obter mais informações, consulte [configuração do emulador do Android](~/android/get-started/installation/android-emulator/index.md)
 
 ## <a name="extras"></a>Extras
 O Android Extras SDK geralmente não são necessários; mas é útil estar ciente delas, pois eles podem ser necessários dependendo de seu caso de uso.

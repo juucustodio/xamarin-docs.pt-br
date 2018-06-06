@@ -1,20 +1,19 @@
 ---
 title: Acessar a Graph API
-description: Usando o Active Directory para consultar a API do Graph usando o Xamarin
+description: Este documento descreve como adicionar autenticação do Active Directory do Azure para um aplicativo móvel criado com o Xamarin.
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e177ac680a100a2723732c2ee7252ea0c16ea972
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c43dfa79831f22e55490b27c3c360602ae717627
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781124"
 ---
 # <a name="accessing-the-graph-api"></a>Acessar a Graph API
-
-_Usando o Active Directory para consultar a API do Graph usando o Xamarin_
 
 Siga estas etapas para usar a API do Graph de dentro de um aplicativo Xamarin:
 

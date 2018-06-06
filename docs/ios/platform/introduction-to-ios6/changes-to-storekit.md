@@ -1,5 +1,5 @@
 ---
-title: Alterações StoreKit
+title: Alterações no StoreKit iOS 6
 description: 'iOS 6 apresenta duas alterações para a API do Kit de armazenamento: a capacidade de exibir iTunes (e loja de aplicativos/iBookstore) onde Apple hospedará os arquivos para download de opção de compra de produtos de dentro de seu aplicativo e um aplicativo no novo. Este documento explica como implementar esses recursos com xamarin.'
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a7a70c3f84518141cf44d630fb4137051d0c866
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ff717d1e4ea7da947d5534f1ce790b58d84fdfd4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787686"
 ---
-# <a name="changes-to-storekit"></a>Alterações StoreKit
+# <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit iOS 6
 
 _iOS 6 apresenta duas alterações para a API do Kit de armazenamento: a capacidade de exibir iTunes (e loja de aplicativos/iBookstore) onde Apple hospedará os arquivos para download de opção de compra de produtos de dentro de seu aplicativo e um aplicativo no novo. Este documento explica como implementar esses recursos com xamarin._
 
@@ -142,8 +143,8 @@ Os resultados também incluirá outros metadados, incluindo informações de exi
 
 Estes são alguns exemplos:
 
--   **aplicativo de iBooks*- [http://itunes.apple.com/search?term=ibooks&amp;entidade = software&amp;país = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
--   **Ponto e o adversário iBook*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entidade = ebook&amp;país = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
+-   **aplicativo de iBooks*- [http://itunes.apple.com/search?term=ibooks&amp; entidade = software&amp;país = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
+-   **Ponto e o adversário iBook*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entidade = ebook&amp;país = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
 
 
 ### <a name="enterprise-partner-feed"></a>Feed de parceiro do Enterprise

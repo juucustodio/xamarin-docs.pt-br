@@ -1,18 +1,20 @@
 ---
-title: Transições de controlador de exibição
+title: Transições de controlador de exibição no xamarin
+description: Este documento descreve como personalizar animadas transições entre os controladores de exibição em aplicativos xamarin.
 ms.prod: xamarin
 ms.assetid: CB3AC8E2-8A47-4839-AFA5-AE33047BB26C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 253a2556872ea9186eec832a84f4cfff9cb1c209
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 35795002310cd79a1897061fe6e3e41b48b45b4d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790442"
 ---
-# <a name="view-controller-transitions"></a>Transições de controlador de exibição
+# <a name="view-controller-transitions-in-xamarinios"></a>Transições de controlador de exibição no xamarin
 
 UIKit adiciona suporte para personalizar a transição animada que ocorre quando a apresentação de controladores de exibição. Esse suporte está incluído com controladores internos, bem como os controladores personalizados que herdam diretamente `UIViewController`. Além disso, `UICollectionViewController` tira proveito de personalização de transição de controlador para aproveitar as transições animadas em layouts de modo de exibição de coleção.
 

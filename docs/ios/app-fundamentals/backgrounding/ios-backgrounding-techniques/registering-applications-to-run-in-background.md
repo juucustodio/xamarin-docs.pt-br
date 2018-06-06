@@ -1,18 +1,20 @@
 ---
-title: Registrando aplicativos sejam executados em segundo plano
+title: Registrando aplicativos xamarin para ser executado em segundo plano
+description: Este documento descreve como registrar um aplicativo xamarin para ser executado em segundo plano. Ele discute áudio aplicativos, VoIP aplicativos, externos Acessórios e bluetooth e muito mais.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 58ee68f765372094d68c3cf30ed6a631a67fe313
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f4774f6b4f5412c44dc985bd40129a178b1e813c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783669"
 ---
-# <a name="registering-applications-to-run-in-the-background"></a>Registrando aplicativos sejam executados em segundo plano
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrando aplicativos xamarin para ser executado em segundo plano
 
 Registrando tarefas individuais para o plano de fundo privilégios funciona para alguns aplicativos, mas o que acontece se um aplicativo constantemente é chamado para realizar tarefas importantes de longa duração, como na obtenção de instruções para o usuário por meio de GPS? Aplicativos como estes devem ser registrados em vez disso, como aplicativos conhecidos do plano de fundo necessário.
 

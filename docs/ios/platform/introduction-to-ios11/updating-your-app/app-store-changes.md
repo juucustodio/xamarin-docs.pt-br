@@ -1,21 +1,20 @@
 ---
-title: Alterações de loja de aplicativos
-description: Explorando os novos recursos do iOS 11
+title: Alterações de loja de aplicativos em iOS 11
+description: Este documento explora as alterações para a loja de aplicativos em iOS 11. Ele aborda o ícone de armazenamento de um aplicativo, promovidas compras de no aplicativo, a página produto redesenhado, comunicação de cliente e versões em fases.
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 9c9355c047d2e7083ca787f473515163d8e6f5f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59f5d2c0c05ec2950ae7cc74e4f5aaa2565020f0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787384"
 ---
-# <a name="app-store-changes"></a>Alterações de loja de aplicativos
-
-_Explorando os novos recursos do iOS 11_
+# <a name="app-store-changes-in-ios-11"></a>Alterações de loja de aplicativos em iOS 11
 
 IOS App Store teve uma reestruturação completa, que não só permite aos usuários navegar com eficiência o armazenamento, mas também permite que você, como desenvolvedor, promover o seu aplicativo aos usuários. Esses promoções incluem as atualizações para compras no aplicativo e a página do produto. iOS 11 também adiciona atualizações sobre como se comunicar com os usuários, como adicionar o ícone do aplicativo e a versão do seu aplicativo para o público.
 

@@ -1,5 +1,5 @@
 ---
-title: Sobreposições e anotações
+title: As anotações e sobreposições em xamarin
 description: Este artigo apresenta instruções passo a passo mostra como trabalhar com os recursos de anotação e sobreposição do Kit de mapa. Ele mostra como adicionar um mapa a um aplicativo que exibe uma anotação e sobreposição no local da conferência Xamarin evoluir 2013.
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 9defbade6fafefb26d87e88665c491b3a559c1ae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7d224f034afc9b841bbf82b2b15b92db2d7820c7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789574"
 ---
-# <a name="annotations-and-overlays--walkthrough"></a>As anotações e sobreposições – passo a passo
+# <a name="annotations-and-overlays-in-xamarinios"></a>As anotações e sobreposições em xamarin
 
 O aplicativo que vamos construir neste passo a passo é mostrado abaixo:
 
@@ -288,4 +289,4 @@ Neste artigo vimos adicionar uma anotação a um mapa, bem como adicionar uma so
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstração de mapa (exemplo)](https://developer.xamarin.com/samples/monotouch/MapDemo/)
-- [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
+- [Mapas de iOS](~/ios/user-interface/controls/ios-maps/index.md)

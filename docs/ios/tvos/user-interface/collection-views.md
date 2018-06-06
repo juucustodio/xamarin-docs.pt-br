@@ -1,21 +1,20 @@
 ---
-title: Trabalhando com exibições de coleção
-description: Este artigo aborda criando e trabalhando com exibições de coleção dentro de um aplicativo Xamarin.tvOS.
+title: Trabalhando com tvOS exibições de coleção em Xamarin
+description: Este documento descreve como trabalhar com exibições de coleção em um aplicativo de tvOS criados com o Xamarin. Ele aborda layouts do modo de coleta, criação de células e modos de exibição suplementares, respondendo a eventos de usuário e muito mais.
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7fa38aa81e5929bdc88ceebd153d86cfcd92f20e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b411ac6bb8d1492511f9e5d2234731ae64c3a82
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789272"
 ---
-# <a name="working-with-collection-views"></a>Trabalhando com exibições de coleção
-
-_Este artigo aborda criando e trabalhando com exibições de coleção dentro de um aplicativo Xamarin.tvOS._
+# <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabalhando com tvOS exibições de coleção em Xamarin
 
 Exibições de coleção permitem para um grupo de conteúdo deve ser exibido usando layouts arbitrários. Usando o suporte interno, que permitem os layouts de grade ou linear de facilitar a criação, enquanto também suporta layouts personalizados.
 

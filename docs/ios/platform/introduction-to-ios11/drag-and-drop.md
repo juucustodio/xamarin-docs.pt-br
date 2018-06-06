@@ -1,19 +1,20 @@
 ---
-title: Arrastar e soltar
-description: Implementação de arrastar e soltar para iOS 11
+title: Arrastar e soltar no xamarin
+description: Este documento descreve como implementar arrastar e soltar em aplicativos xamarin usando as APIs do iOS 11. Em particular, ele discute Habilitar arrastar e soltar no UITableView.
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/05/2016
-ms.openlocfilehash: fa6fcb2c4f5f17011307b31e4644889d066b71a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7c41f96dae88047e64ec1e74838e3efab55958cc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786958"
 ---
-# <a name="drag-and-drop"></a>Arrastar e soltar
+# <a name="drag-and-drop-in-xamarinios"></a>Arrastar e soltar no xamarin
 
 _Implementação de arrastar e soltar para iOS 11_
 

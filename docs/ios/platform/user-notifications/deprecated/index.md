@@ -1,26 +1,25 @@
 ---
-title: Tecnologias de notificação preterido
+title: Tecnologias de notificação preterido no xamarin
+description: Este documento descreve as tecnologias de notificação do iOS que foram substituídas em favor da estrutura de notificações do usuário, introduzida no iOS 10.
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2016
-ms.openlocfilehash: eff1d999e705aa493d0481e34ead3b9b81d434f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4becc5e296fb6e2496d9ffd863f7137419480262
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788547"
 ---
-# <a name="deprecated-notification-technologies"></a>Tecnologias de notificação preterido
+# <a name="deprecated-notification-technologies-in-xamarinios"></a>Tecnologias de notificação preterido no xamarin
 
 Esta seção mostra como implementar local e notificações por push xamarin. Ele explica os vários elementos de interface do usuário de uma notificação de iOS e discutem a API do envolvidos com a criação e exibindo uma notificação.
 
 > [!IMPORTANT]
 > As informações nesta seção se refere ao iOS 9 e anterior, ele foi deixado aqui para dar suporte a versões anteriores do iOS. Para iOS 10 e posterior, consulte o [guia estrutura de notificação do usuário](~/ios/platform/user-notifications/index.md) para dar suporte a Local e remoto de notificação em um dispositivo iOS.
-
-
-
 
 ## <a name="sections"></a>Seções
 

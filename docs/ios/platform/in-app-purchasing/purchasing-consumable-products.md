@@ -1,18 +1,20 @@
 ---
-title: Comprar produtos de consumo
+title: Comprar produtos consumíveis em xamarin
+description: Este documento descreve os produtos de consumo no xamarin. Produtos de consumo são partes de uso único de recursos, como moeda do jogo.
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c2c84c044ff41cced2c97e414502faff45341ec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9c53af1055736512c42f83a58011b7b3a42bcd5b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786971"
 ---
-# <a name="purchasing-consumable-products"></a>Comprar produtos de consumo
+# <a name="purchasing-consumable-products-in-xamarinios"></a>Comprar produtos consumíveis em xamarin
 
 Produtos de consumo são mais simples de implementar, pois não há nenhum requisito 'restore'. Eles são úteis para produtos como moeda do jogo ou um pedaço de uso único de funcionalidade. Os usuários novamente podem comprar produtos consumíveis por e-failover novamente.
 
@@ -23,8 +25,6 @@ O código de exemplo que acompanha este documento demonstra produtos internos �
 [![A visualização de processo de compra](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  O fluxo de trabalho básico é:   
-   
-   
    
  1. O aplicativo adiciona um `SKPayment` para a fila. Se necessário, o usuário será solicitado a fornecer sua ID Apple e solicitado a confirmar o pagamento.   
    

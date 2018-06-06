@@ -1,18 +1,20 @@
 ---
-title: Geração de código .xib
+title: Geração de código de .xib em xamarin
+description: Este documento descreve como xamarin gera código para mapear arquivos .xib para c#, tornando controles visuais acessível por meio de programação.
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b887dbf09693452f62f744669ad9713927020cea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 064e17393747a36cd761cb2464e3239cfc17141c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786142"
 ---
-# <a name="xib-code-generation"></a>Geração de código .xib
+# <a name="xib-code-generation-in-xamarinios"></a>Geração de código de .xib em xamarin
 
 > [!IMPORTANT]
 >  Este documento explica o Visual Studio para a integração do Mac com o construtor de Interface do Xcode apenas, como ações e saídas não são usadas no Designer de Xamarin para iOS. Para obter mais informações sobre o Designer do iOS, examine o [iOS Designer](~/ios/user-interface/designer/index.md) documento.
@@ -31,7 +33,7 @@ Classes personalizadas podem ser definidas em um **.xib** arquivo usando o coman
 
 ## <a name="generating-code"></a>Gerando código
 
-Para qualquer **{0} .xib** arquivo com uma ação de compilação de *página*, se um **{0}.xib.designer.cs** arquivo também existe no projeto, o Visual Studio para Mac irá gerar classes parciais do para todas as classes de usuário, ele pode encontrar no arquivo de designer do **.xib** arquivo, com saídas de propriedades e métodos parciais para todas as ações. Geração de código está habilitada com a presença desse arquivo.
+Para qualquer  **{0}.xib** arquivo com uma ação de compilação de *página*, se um  **{0}. xib.designer.cs** arquivo também existe no projeto, o Visual Studio para Mac irá gerar classes parciais no arquivo de designer para todas as classes de usuário em encontre o **.xib** arquivo, com saídas de propriedades e métodos parciais para todas as ações. Geração de código está habilitada com a presença desse arquivo.
 
 O arquivo de designer é automaticamente atualizado quando o **.xib** arquivo alterações e o Visual Studio para Mac recupera o foco. O arquivo de designer não deve ser modificado manualmente, como alterações serão substituída próxima vez que o Visual Studio para atualizações do Mac o arquivo.
 
@@ -49,7 +51,7 @@ Classes parciais designers não se destinam a ser usado como-é. Saídas são pa
 
 A razão para isso é a necessidade de flexibilidade. Por exemplo, várias classes de code-behind podem subclasse que um comum gerenciados classe abstrata, que herda da classe para ser uma subclasse por IB.
 
-É convencional colocar essas em um **{0}.xib.cs** ao lado do arquivo a **{0}.xib.designer.cs** arquivo de designer.
+É convencional colocar essas em um  **{0}. xib.cs** ao lado do arquivo de  **{0}. xib.designer.cs** arquivo de designer.
 
 <a name="generated" />
 

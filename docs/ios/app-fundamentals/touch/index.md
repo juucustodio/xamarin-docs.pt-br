@@ -1,22 +1,20 @@
 ---
-title: Toque
-description: Telas sensíveis ao toque em muitos dos dispositivos atuais permitem que usuários rápida e eficientemente interagir com dispositivos de uma maneira natural e intuitiva. Essa interação não está limitada apenas a detecção de toque simples – é possível usar gestos também. Por exemplo, o gesto de pinçagem para aplicar zoom é um exemplo comum disso – por esmagamento uma parte da tela com dois dedos, que o usuário pode ampliar ou reduzir. Este guia examina toque e gestos em iOS.
+title: Tratamento de toque em aplicativos xamarin
+description: Links neste documento em guias que descrevem como trabalhar com o toque, multitoque, gestos e 3D toque em um aplicativo xamarin.
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: f34b502e3c0d67f33d41bc489f7ec1d93356af99
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb8dce8b13345c13a6f95ae7784bd135e7d1f1f5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784149"
 ---
-# <a name="touch"></a>Toque
-
-_Telas sensíveis ao toque em muitos dos dispositivos atuais permitem que usuários rápida e eficientemente interagir com dispositivos de uma maneira natural e intuitiva. Essa interação não está limitada apenas a detecção de toque simples – é possível usar gestos também. Por exemplo, o gesto de pinçagem para aplicar zoom é um exemplo comum disso – por esmagamento uma parte da tela com dois dedos, que o usuário pode ampliar ou reduzir. Este guia examina toque e gestos em iOS._
-
+# <a name="handling-touch-in-xamarinios-apps"></a>Tratamento de toque em aplicativos xamarin
 
 Como outras plataformas móveis, iOS possui um número de formas de lidar com toque. Ela pode suportar multitoque — muitos pontos de contato na tela — e gestos complexas. Este guia apresenta alguns conceitos, bem como os particularities da implementação de toque e gestos em iOS.
 
@@ -38,8 +36,6 @@ Este guia serve como introdução ao toque no iOS. Para obter mais informações
 
 * [3D Touch](~/ios/platform/3d-touch.md)
 * [Fornecer comentários hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

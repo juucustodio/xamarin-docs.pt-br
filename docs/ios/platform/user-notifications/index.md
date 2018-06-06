@@ -1,28 +1,26 @@
 ---
-title: Estrutura de notificações de usuário
-description: Este artigo aborda todas as maneiras que a notificação de usuários foram aprimorada por iOS 10 e como usá-los em um aplicativo xamarin.
+title: Estrutura de notificações de usuário no xamarin
+description: Links para documentos que descrevem a estrutura de notificações de usuário e como usá-lo para enviar e receber notificações de locais e remotas em um aplicativo xamarin.
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/01/2016
-ms.openlocfilehash: 9b8671fe54f4017e81d7151cc42ea9df2bf9fa05
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a57f136e8b97736598cde899e028dfbb55b62e35
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788300"
 ---
-# <a name="user-notifications-framework"></a>Estrutura de notificações de usuário
-
-_Este artigo aborda todas as maneiras que a notificação de usuários foram aprimorada por iOS 10 e como usá-los em um aplicativo xamarin._
+# <a name="user-notifications-framework-in-xamarinios"></a>Estrutura de notificações de usuário no xamarin
 
 Novo para o iOS 10, a notificação do usuário framework permite a entrega e a manipulação de notificações de locais e remotas. Usando essa estrutura, o aplicativo ou extensão do aplicativo pode agendar a entrega de notificações locais, especificando um conjunto de condições, como local ou a hora do dia.
 
 Além disso, o aplicativo ou extensão pode receber (e potencialmente modificar) locais e remotas notificações como elas são entregues para o dispositivo iOS do usuário.
 
 A nova estrutura de interface do usuário de notificação de usuário permite que o aplicativo ou extensão do aplicativo para personalizar a aparência de notificações de locais e remotas quando eles são apresentados ao usuário.
-
 
 ## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notificações de usuário aprimoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
@@ -31,7 +29,6 @@ Este artigo apresenta todas as maneiras que as notificações de usuário foram 
 ## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notificações de usuário avançadas](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
 Este artigo usa uma análise mais profunda sobre a nova estrutura de notificações de usuário e como aproveitar ao máximo-lo em um aplicativo xamarin.
-
 
 ## <a name="related-links"></a>Links relacionados
 

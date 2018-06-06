@@ -1,17 +1,19 @@
 ---
-title: 'Exemplos de F #'
+title: 'Exemplos de F # para Xamarin'
+description: 'F # pode ser usado para criar aplicativos Xamarin. Esses links do documento para iOS, Mac e xamarin. Forms vários projetos de aplicativo Xamarin escritos em F # de exemplo.'
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 30b27a68e8b69c2e431b172ffa4e7e5bbcc942e0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 316ec2d6991adbb187b7158f9bf9e0c1426e3c7d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781014"
 ---
-# <a name="f-samples"></a>Exemplos de F #
+# <a name="f-samples-for-xamarin"></a>Exemplos de F # para Xamarin
 
 Esta página contém links para alguns exemplos de F # usando Xamarin.
 

@@ -1,18 +1,19 @@
 ---
-title: Backgrounding
+title: Backgrounding em xamarin
 description: Plano de fundo de processamento ou backgrounding é o processo de permitir que aplicativos executar tarefas em segundo plano enquanto outro aplicativo está em execução em primeiro plano. Este guia serve como uma introdução ao processamento de iOS em segundo plano.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ae3e732008c6503f511dc4be9cad874ecfe1272d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b22f3ef3276129f7f46c23cc1d06666f151f5ac4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783536"
 ---
-# <a name="backgrounding"></a>Backgrounding
+# <a name="backgrounding-in-xamarinios"></a>Backgrounding em xamarin
 
 _Plano de fundo de processamento ou backgrounding é o processo de permitir que aplicativos executar tarefas em segundo plano enquanto outro aplicativo está em execução em primeiro plano. Este guia serve como uma introdução ao processamento de iOS em segundo plano._
 
@@ -39,7 +40,7 @@ Neste guia, apresentamos as diferentes maneiras de fazer o processamento em segu
 ## <a name="related-links"></a>Links relacionados
 
 - [Backgrounding no Android](~/android/app-fundamentals/services/index.md)
-- [LifecycleDemo (sample)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
+- [LifecycleDemo (exemplo)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
 - [Local (exemplo)](https://developer.xamarin.com/samples/monotouch/Location/)
 - [Transferência em segundo plano simples (exemplo)](https://developer.xamarin.com/samples/monotouch/SimpleBackgroundTransfer/)
 - [Execução de plano de fundo do iOS](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

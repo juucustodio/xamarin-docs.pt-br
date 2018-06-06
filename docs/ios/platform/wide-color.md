@@ -1,19 +1,20 @@
 ---
-title: Cores de largura
-description: Este artigo aborda as cores de largura e como ele pode ser usado em um aplicativo xamarin ou Xamarin.Mac.
+title: Cores de largura no xamarin
+description: Este documento aborda as cores de largura e como ele pode ser usado em um aplicativo xamarin ou Xamarin.Mac. Ele também fornece uma visão geral dos muitos conceitos importantes relacionados a cor como espaços de cores, canais e primários.
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 5f56b396715159cbc1539ae9a7f30cc7ad2236bf
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 173919e0d5feda6ab7d34895cc834c5f36d737a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788775"
 ---
-# <a name="wide-color"></a>Cores de largura
+# <a name="wide-color-in-xamarinios"></a>Cores de largura no xamarin
 
 _Este artigo aborda as cores de largura e como ele pode ser usado em um aplicativo xamarin ou Xamarin.Mac._
 

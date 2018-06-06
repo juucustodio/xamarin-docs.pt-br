@@ -1,21 +1,20 @@
 ---
-title: Nos bastidores
-description: Um inspecionar o funcionamento interno do Xamarin.Mac
+title: Nos bastidores em Xamarin.Mac
+description: Links este documento para várias guias que descrevem o funcionamento interno de Xamarin.Mac. Discutem documentos vinculados à frente de compilação, a arquitetura de Xamarin.Mac e o registrador de Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 84974D75-0CCE-4455-AA38-00DE68AE33B6
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: 74721e880bb0d3ada3f3940a4074d06f55601c0e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c940252a675c38247d2c5bb374b9c30237222bda
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792483"
 ---
-# <a name="under-the-hood"></a>Nos bastidores
-
-_Um inspecionar o funcionamento interno do Xamarin.Mac_
+# <a name="under-the-hood-in-xamarinmac"></a>Nos bastidores em Xamarin.Mac
 
 ## <a name="ahead-of-time-compilation-aotaotmd"></a>[Em frente de compilação (AOT)](aot.md)
 

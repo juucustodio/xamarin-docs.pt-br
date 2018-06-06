@@ -1,16 +1,17 @@
 ---
 title: Referência de GamePad MonoGame
-description: GamePad é uma classe padrão e de plataforma cruzada para acessar dispositivos de entrada em MonoGame.
+description: Este documento descreve GamePad, uma classe de plataforma cruzada para acessar dispositivos de entrada em MonoGame. Ele aborda como ler a entrada do gamepad e fornece exemplos de código.
 ms.prod: xamarin
 ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0746cc0153e9e00309b7227ff3e8a683cdc46835
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f8a833dbab2b8a69f328cd26cb69db84f3083222
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783318"
 ---
 # <a name="monogame-gamepad-reference"></a>Referência de GamePad MonoGame
 

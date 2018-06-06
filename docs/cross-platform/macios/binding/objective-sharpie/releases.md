@@ -1,17 +1,19 @@
 ---
-title: Histórico de versões
+title: Histórico de lançamento do objetivo Sharpie
+description: Este documento descreve o histórico de versão de Sharpie objetivo, a ferramenta usada para automatizar a criação de associações do c# para código Objective-C.
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 9a29b131af706b9dedc808a156cdfaffa4173882
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a173df769068a3834dfdc314675254af1f3594ed
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781725"
 ---
-# <a name="release-history"></a>Histórico de versões
+# <a name="objective-sharpie-release-history"></a>Histórico de lançamento do objetivo Sharpie
 
 ## <a name="34-october-11-2017"></a>3.4 (11 de outubro de 2017)
 

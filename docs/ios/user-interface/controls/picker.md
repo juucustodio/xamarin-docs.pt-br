@@ -1,19 +1,20 @@
 ---
-title: Seletor
-description: Este guia aborda criando e trabalhando com processos de escolhas em um aplicativo xamarin.
+title: Controle de seletor de xamarin
+description: Este documento descreve como criar e trabalhar com controles de seletor de em um aplicativo xamarin. Ele aborda como implementar um seletor de código e no Designer de iOS.
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: e213124e870f1cca96a6078fd26bc7eeb1af55a1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7f46d354af86027d1e2656171c6595562d3555a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789906"
 ---
-# <a name="picker"></a>Seletor
+# <a name="picker-control-in-xamarinios"></a>Controle de seletor de xamarin
 
 O controle de seletor exibe o controle de 'roda como' que contém uma lista de rolagem de valores com o valor selecionado está sendo realçada. Os usuários gire a roda para selecionar a opção que desejarem.
 

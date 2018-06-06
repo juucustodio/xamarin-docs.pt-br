@@ -1,17 +1,18 @@
 ---
 title: Atualizar referências de componentes para NuGet
-description: Substitua as referências de componente com pacotes do NuGet para obsoleta seus aplicativos.
+description: Este documento descreve como substituir suas referências de componente com pacotes do NuGet para obsoleta seus aplicativos, como o armazenamento do componente Xamarin foi descontinuado.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: e9c056d37577a280b66bb3aa7ded19e966bca43b
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 34f2f5149be63af6abe5aaab197472d067122069
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782028"
 ---
 # <a name="updating-component-references-to-nuget"></a>Atualizar referências de componentes para NuGet
 

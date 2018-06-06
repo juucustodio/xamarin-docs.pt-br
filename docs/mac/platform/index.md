@@ -1,22 +1,22 @@
 ---
-title: Recursos da plataforma
-description: Componentes de chave do macOS plataforma
+title: macOS recursos de plataforma
+description: 'Este documento contém links para guias que descrevem macOS importantes e recursos da plataforma Xamarin.Mac: OpenTK, Storyboards, extensões e muito mais.'
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 2bebc42cd3b5db7dba20066e90f294e621b1e4ac
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792208"
 ---
-# <a name="platform-features"></a>Recursos da plataforma
+# <a name="macos-platform-features"></a>macOS recursos de plataforma
 
 Documentos nesta seção abordam trabalhar com recursos chave específica de plataforma do macOS em um aplicativo Xamarin.Mac.
-
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introdução ao macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 

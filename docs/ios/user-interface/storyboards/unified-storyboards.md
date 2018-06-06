@@ -1,21 +1,20 @@
 ---
-title: Storyboards unificadas
-description: Storyboards unificados permitem iOS developer criar a interface do usuário com um storyboard único, em vez de vários storyboards, para cobrir o intervalo de expansão de tamanhos de tela do dispositivo. Este artigo foi projetado para dar uma visão mais profunda sobre a operação do storyboard unificada em xamarin.
+title: Storyboards unificadas em xamarin
+description: Este documento descreve storyboards unificadas em xamarin. Storyboards unificadas permitem aos desenvolvedores oferecer suporte a vários tamanhos de tela com a definição de uma única interface.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6d3324a6485f2d240ec339f6ce7f03aafe51c80c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792015"
 ---
-# <a name="unified-storyboards"></a>Storyboards unificadas
-
-_Storyboards unificados permitem iOS developer criar a interface do usuário com um storyboard único, em vez de vários storyboards, para cobrir o intervalo de expansão de tamanhos de tela do dispositivo. Este artigo foi projetado para dar uma visão mais profunda sobre a operação do storyboard unificada em xamarin._
+# <a name="unified-storyboards-in-xamarinios"></a>Storyboards unificadas em xamarin
 
 iOS 8 inclui um mecanismo de novo, mais simples de usar para criar a interface do usuário — o storyboard unificado. Com um único storyboard para abranger todos os tamanhos de tela de hardware diferente, rápidas e ágeis exibições podem ser criadas em um "design-uma vez, use-muitos" estilo.
 
@@ -679,7 +678,7 @@ E, quando o aplicativo é executado no iPhone simulador, o elemento está ausent
 
  [![](unified-storyboards-images/exclude05.png "O elemento ausente quando o aplicativo em execução no simulador de iPhone")](unified-storyboards-images/exclude05.png#lightbox)
 
-Para remover um caso de exclusão de um elemento, basta selecionar o elemento no **superfície de Design**, role até a parte inferior da **propriedade Explorer** e clique no **-**botão ao lado de caso para remover.
+Para remover um caso de exclusão de um elemento, basta selecionar o elemento no **superfície de Design**, role até a parte inferior da **propriedade Explorer** e clique no **-** botão ao lado de caso para remover.
 
 Para ver uma implementação de Storyboards unificado, examine o `UnifiedStoryboard` Xamarin iOS 8 aplicativo anexado a este documento de exemplo.
 

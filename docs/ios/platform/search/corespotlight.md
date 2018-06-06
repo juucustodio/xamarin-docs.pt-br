@@ -1,18 +1,20 @@
 ---
-title: Pesquisa com destaque de núcleo
+title: Pesquisa com núcleo destaque em xamarin
+description: Este documento descreve como usar Core destaque em um aplicativo xamarin para fornecer links para conteúdo no aplicativo. Ele discute como criar, restaurar, atualizar e excluir itens de pesquisados.
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0074cfcdc4a80f66f64d12f8e5c0a5e81ab2b8a1
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: a8bc3aaa43d7830b0a3baa0768d495458b1ecfad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788033"
 ---
-# <a name="search-with-core-spotlight"></a>Pesquisa com destaque de núcleo
+# <a name="search-with-core-spotlight-in-xamarinios"></a>Pesquisa com núcleo destaque em xamarin
 
 Destaque de núcleo é uma nova estrutura para iOS 9 que apresenta uma API de banco de dados semelhantes para adicionar, editar ou excluir links para conteúdos dentro de seu aplicativo. Itens que foram adicionados usando Core Spotlight estarão disponíveis na pesquisa do Spotlight no dispositivo iOS.
 

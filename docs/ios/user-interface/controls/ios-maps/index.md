@@ -1,21 +1,20 @@
 ---
-title: Mapas
-description: iOS inclui o MapKit framework, o que torna mais fácil adicionar mapeado para um aplicativo. Usando o Kit de mapa, aplicativos iOS podem adicionar mapas interativos que dão suporte a recursos como Panorâmica e zoom, mostrando o local do usuário e gráficos avançados em camadas em um mapa. Este artigo analisa em vários recursos do Kit de mapa, mostrando como tirar proveito deles para compilar geográficos recursos em um aplicativo
+title: Mapas no xamarin
+description: Este documento descreve a estrutura de MapKit do iOS e como ele é usado com xamarin. Ele aborda como adicionar um mapa, estilo, Panorâmica e zoom, trabalhar com o local do usuário, adicionar anotações, trabalhar com textos explicativos e sobreposições e realizar pesquisa local.
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3649c8eb9c8c1a82940b8e2eece7d2bfd005d024
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790224"
 ---
-# <a name="maps"></a>Mapas
-
-_iOS inclui o MapKit framework, o que torna mais fácil adicionar mapeado para um aplicativo. Usando o Kit de mapa, aplicativos iOS podem adicionar mapas interativos que dão suporte a recursos como Panorâmica e zoom, mostrando o local do usuário e gráficos avançados em camadas em um mapa. Este artigo analisa em vários recursos do Kit de mapa, mostrando como tirar proveito deles para compilar geográficos recursos em um aplicativo_
+# <a name="maps-in-xamarinios"></a>Mapas no xamarin
 
 Mapas são um recurso comum em todos os sistemas operacionais móveis modernos. iOS oferece suporte a mapeamento nativamente por meio da estrutura de Kit de mapa. Com o Kit de mapa, aplicativos podem facilmente adicionar mapas avançados e interativos. Esses mapas podem ser personalizados de várias maneiras, como adicionar anotações para marcar locais em um mapa e sobreposição de elementos gráficos de formas arbitrárias. Kit de mapa ainda tem suporte interno para mostrar o local atual de um dispositivo.
 

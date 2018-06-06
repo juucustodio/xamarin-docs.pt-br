@@ -1,22 +1,22 @@
 ---
-title: Pesquisa e aprimoramentos de Widget de tela inicial
-description: Este artigo aborda os aprimoramentos de que Apple tornou-se ao sistema de Widget no iOS 10.
+title: Pesquisa e Home aprimoramentos de Widget de tela no iOS 10
+description: Este documento descreve os aprimoramentos de que Apple fez o Widgets no iOS 10, incluindo atualizações para pesquisa e widgets da tela inicial.
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e7a64738f29ab2b5c62659d721beb50db7c9adb5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8383f167f8c85459e996b83368281fa243317948
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788105"
 ---
-# <a name="search-and-home-screen-widget-enhancements"></a>Pesquisa e aprimoramentos de Widget de tela inicial
+# <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Pesquisa e Home aprimoramentos de Widget de tela no iOS 10
 
 _Este artigo aborda os aprimoramentos de que Apple tornou-se ao sistema de Widget no iOS 10._
-
 
 Apple introduziu várias melhorias para o sistema de Widget para garantir que os widgets uma aparência excelentes em qualquer plano de fundo que existe no iOS a nova tela de bloqueio 10. Além disso, widgets agora contém um [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) propriedade que permite ao desenvolvedor descrever a quantidade de conteúdo está disponível e permite que o usuário expandir e recolher o conteúdo.
 

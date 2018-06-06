@@ -1,5 +1,5 @@
 ---
-title: Ícones de documento personalizadas
+title: Ícones de documento personalizadas no xamarin
 description: Cobre este artigo incluindo e gerenciando um ativo de imagem em um aplicativo xamarin para ser usado como um ícone de tipo de documento personalizadas.
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/23/2017
-ms.openlocfilehash: b369667bd728f7c8b6e8bcfed9cf5bca2916bf69
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 415500050e4e957ca635c4b18004716dd44a162d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784143"
 ---
-# <a name="custom-document-icons"></a>Ícones de documento personalizadas
+# <a name="custom-document-icons-in-xamarinios"></a>Ícones de documento personalizadas no xamarin
 
 _Cobre este artigo incluindo e gerenciando um ativo de imagem em um aplicativo xamarin para ser usado como um ícone de tipo de documento personalizadas._
 

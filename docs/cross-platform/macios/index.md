@@ -1,20 +1,19 @@
 ---
 title: Apple plataforma (iOS e Mac)
-description: Nesta seção, abordaremos estratégias para compartilhar código entre seus projetos xamarin e Xamarin.Mac.
+description: 'Este documento descreve vários tópicos relacionados ao desenvolvimento do xamarin e Xamarin.Mac: código de compartilhamento, a API unificada, associação Objective-C bibliotecas, referências nativo, tipos nativos e muito mais.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 3c01ff4af699dd0374729b638470d1ef34aa7022
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b40758fa562e57415cd3c0818763ef0a7ce5dcca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781527"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Apple plataforma (iOS e Mac)
-
-_Nesta seção, abordaremos estratégias para compartilhar código entre seus projetos xamarin e Xamarin.Mac._
 
 ## <a name="code-sharing"></a>Compartilhamento de código
 
@@ -48,8 +47,6 @@ Xamarin permite que você coloque bibliotecas nativas em seus aplicativos com as
 
 ## <a name="native-referencesnative-referencesmd"></a>[Referências nativas](native-references.md)
 
-
-
 ##  <a name="macios-native-typesnativetypesmd"></a>[Tipos nativos iOS/Mac](nativetypes.md)
 
 Para oferecer suporte de 32 e 64 bits código transparente de c# e F #, estamos introduzindo novos tipos de dados.   Saiba mais sobre eles aqui.
@@ -62,7 +59,6 @@ O que você precisa saber para dar suporte a 32 e 64 bits de aplicativos.
 
 Este artigo aborda o uso do iOS novos tipos nativos de API unificada (`nint`, `nuint`, `nfloat`) em um aplicativo de plataforma cruzada onde o código é compartilhado com dispositivos iOS não, como Android ou sistemas operacionais do Windows Phone.
 Ele fornece informações sobre quando os tipos nativos devem ser usados e fornece várias soluções possíveis para casos em que o novo tipo deve ser usado com o código de plataforma cruzada.
-
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Pilha de HttpClient e seletor de implementação SSL/TLS](http-stack.md)
 

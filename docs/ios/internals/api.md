@@ -1,17 +1,19 @@
 ---
-title: API
+title: Visão geral da API xamarin
+description: Links esse documento até a documentação de referência de API do Xamarin, um guia que descreve o design de API de xamarin e uma lista de assemblies que estão disponíveis para uso no desenvolvimento do Xamarin.
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2ce97ecc75dd59c0851db22431529ef819f37ea7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 81c30af4d7c95960344015ed6dcfd868deda06af
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786129"
 ---
-# <a name="api"></a>API
+# <a name="xamarinios-api-overview"></a>Visão geral da API xamarin
 
 Xamarin expõe um c# CIL associação para a API CocoaTouch e também fornece acesso a APIs de CIL ECMA e várias outras APIs do .NET.
 

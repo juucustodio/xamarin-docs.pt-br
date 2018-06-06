@@ -1,5 +1,5 @@
 ---
-title: Passo a passo - usando CoreGraphics e CoreAnimation
+title: Usando gráficos principais e principais de animação em xamarin
 description: Este artigo passo a passo demonstra como criar um aplicativo que usa gráficos principais e principais de animação. Ele mostra como desenhar na tela em resposta a toque de usuário, bem como animar uma imagem em um caminho.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f857accfcdec4cb60e781936d1d0836dbf8d6ffb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7a4399a5d62e2000c2a15a65da8e0e427dc039e0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787049"
 ---
-# <a name="drawing-and-animating-along-a-path"></a>Desenho e animação em um demarcador
+# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Usando gráficos principais e principais de animação em xamarin
 
 Para este passo a passo, vamos desenhar um demarcador usando gráficos de núcleo em resposta a entrada por toque. Em seguida, adicionaremos um `CALayer` que contém uma imagem será animado ao longo do caminho.
 

@@ -1,5 +1,5 @@
 ---
-title: Introdução ao sugestões proativos
+title: Introdução ao pró-ativo sugestões em xamarin
 description: Este artigo mostra como usar sugestões pró-ativo no aplicativo xamarin ao contrato de unidade, permitindo que o sistema proativamente apresentar informações úteis automaticamente para o usuário.
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b06dbf0e8e108616adb4f77910267aaa1ac71f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f736e9dda00546ddef7cf03457813c7e3d10882b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788007"
 ---
-# <a name="introduction-to-proactive-suggestions"></a>Introdução ao sugestões proativos
+# <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introdução ao pró-ativo sugestões em xamarin
 
 _Este artigo mostra como usar sugestões pró-ativo no aplicativo xamarin ao contrato de unidade, permitindo que o sistema proativamente apresentar informações úteis automaticamente para o usuário._
 
@@ -479,7 +480,7 @@ Se o usuário visitou esta página no Safari e, em seguida, alternar para outro 
 
 Safari extrairá tudo em uma página da web que segue a qualquer uma das propriedades de esquema a seguir:
 
-- **PostalAddress**
+- **Endereço**
 - **GeoCoordinates**
 - Uma propriedade de telefone.
 

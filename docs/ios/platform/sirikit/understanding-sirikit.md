@@ -1,17 +1,18 @@
 ---
 title: Noções básicas sobre os conceitos de SiriKit
-description: Este artigo aborda os principais conceitos que serão necessários para trabalhar com SiriKit em um aplicativo xamarin.
+description: Este documento descreve os principais conceitos necessários para trabalhar com SiriKit em um aplicativo xamarin. Por exemplo, ele discute tentativas e extensões de propósitos da interface do usuário, SiriKit permissões, criar uma ótima experiência e muito mais.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 56325345204cd2017d688375d9d51c5c83f15e26
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 62b612f2e2725e5856a39e1d4d3fc1288282167a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788924"
 ---
 # <a name="understanding-sirikit-concepts"></a>Noções básicas sobre os conceitos de SiriKit
 

@@ -1,5 +1,5 @@
 ---
-title: Exibição de pilha
+title: Exibições de pilha em xamarin
 description: Este artigo aborda usando o novo controle de UIStackView em um aplicativo xamarin para gerenciar um conjunto de sub-visualizações em uma pilha organizada horizontal ou verticalmente.
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: aec1c4ceb562f528d6bcef7e4de0f2708952d2a5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790094"
 ---
-# <a name="stack-view"></a>Exibição de pilha
+# <a name="stack-views-in-xamarinios"></a>Exibições de pilha em xamarin
 
 _Este artigo aborda usando o novo controle de UIStackView em um aplicativo xamarin para gerenciar um conjunto de sub-visualizações em uma pilha organizada horizontal ou verticalmente._
 

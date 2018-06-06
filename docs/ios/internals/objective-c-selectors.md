@@ -1,17 +1,19 @@
 ---
-title: Seletores de Objective-C
+title: Seletores de Objective-C em xamarin
+description: Este documento aborda como interagir com os seletores de Objective-C do c#. Ele descreve como invocar seletores e considerações técnicas que devem ser levadas em conta ao fazer isso.
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 60f107bda29b351c119f5702b0ca797d7d16b0b1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25276851879ba828361d3236cbf7896cf748588c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787029"
 ---
-# <a name="objective-c-selectors"></a>Seletores de Objective-C
+# <a name="objective-c-selectors-in-xamarinios"></a>Seletores de Objective-C em xamarin
 
 O idioma Objective-C é baseado no *seletores*. Um seletor é uma mensagem que pode ser enviada a um objeto ou um *classe*. [Xamarin](~/ios/internals/api-design/index.md) mapas de instância seletores para métodos de instância e classe seletores para métodos estáticos.
 
@@ -141,7 +143,7 @@ Quando você tiver um nome de seletor, você pode criar um [ObjCRuntime.Selector
 
 <a name="Calling_objc_msgSend()" />
 
-### <a name="calling-objcmsgsend"></a>Calling objc_msgSend()
+### <a name="calling-objcmsgsend"></a>Chamar objc_msgSend()
 
  `objc_msgSend()` é usado para enviar uma mensagem (seletor) para um objeto. Essa família de funções tem pelo menos dois argumentos obrigatórios: o destino de seletor (uma instância ou o identificador de classe), o seletor de si mesmo e, em seguida, nenhum argumento necessário para o seletor de específico. Os argumentos de instância e o seletor devem ser `System.IntPtr`, e todos os argumentos restantes devem corresponder ao tipo de seletor de espera, por exemplo, um `nint` para um `int`, ou um `System.IntPtr` para todos os `NSObject`-tipos derivados. Use o [NSObject.Handle](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) propriedade para obter um `IntPtr` para uma instância de tipo Objective-C.
 

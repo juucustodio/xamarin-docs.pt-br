@@ -1,18 +1,19 @@
 ---
-title: CocosSharp
-description: Links neste documento para vários artigos sobre desenvolvimento de jogos com CocosSharp.
+title: Mecanismo de jogos 2D CocosSharp
+description: Links neste documento para vários artigos sobre desenvolvimento de jogos com CocosSharp. O conteúdo vinculado descreve aplicativos de amostra, desenho, animação e muito mais.
 ms.prod: xamarin
 ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2018
-ms.openlocfilehash: a188863cf57706e3f9dd6c8f4d2d3e60b2591e0b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 34d22b6e9d8c671e38fbadab0edafa2f57c566e7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783240"
 ---
-# <a name="cocossharp"></a>CocosSharp
+# <a name="cocossharp-2d-game-engine"></a>Mecanismo de jogos 2D CocosSharp
 
 _CocosSharp é uma biblioteca para a construção de jogos 2D usando c# e F #. É uma porta .NET do mecanismo de Cocos2D popular._
 

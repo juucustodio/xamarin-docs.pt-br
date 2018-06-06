@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 84106cf8f699616fae772a6f149681840abca0e5
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733042"
 ---
 # <a name="user-interface"></a>Interface do Usuário
 
@@ -24,6 +25,10 @@ Xamarin. Forms inclui sua própria infra-estrutura de animação é simples para
 ## <a name="boxviewboxviewmd"></a>[BoxView](boxview.md)
 
 O `BoxView` é apenas um retângulo colorido simple, mas ele pode ser usado para itens decorativos, rudimentares gráficos e para a obtenção de entrada por toque interativo.
+
+## <a name="buttonbuttonmd"></a>[Button](button.md)
+
+O `Button` responde a um toque ou clique em que direciona um aplicativo para executar uma tarefa específica.
 
 ## <a name="colorscolorsmd"></a>[Cores](colors.md)
 
@@ -85,7 +90,7 @@ Xamarin. Forms tem vários modos de exibição para apresentar e receber texto. 
 
 Xamarin. Forms temas definem uma aparência visual específica para controles padrão. Quando você adicionar um tema ao dicionário de recursos do aplicativo, irá alterar a aparência dos controles padrão.
 
-## <a name="visual-state-managervisual-state-managermd"></a>[Gerenciador de estado Visual](visual-state-manager.md)
+## <a name="visual-state-managervisual-state-managermd"></a>[Visual State Manager](visual-state-manager.md)
 
 O Gerenciador de estado Visual fornece uma maneira estruturada de disparam alterações na interface do usuário do código, incluindo layout que se adapte às alterações na orientação do dispositivo ou tamanho.
 

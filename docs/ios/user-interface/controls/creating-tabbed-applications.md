@@ -1,21 +1,20 @@
 ---
-title: Barras de guia e barra de guias controladores
-description: aplicativos do iOS usando uma interface de usuário de guia de navegação são criados usando a classe UITabBarController. Este artigo examinaremos como configurar um aplicativo com guias que contém vários controladores e exibições. Em seguida, examinaremos como carregar um UITabBarController quando não for o controlador de raiz, como após uma tela de logon.
+title: Barras de guia e controladores de barra de guias no xamarin
+description: Este documento descreve os controladores de barra de guia de iOS e como usá-los com xamarin. Ele demonstra como configurar um UITabBarController, trabalhar com imagens, defina valores de notificação, trabalhar com eventos e muito mais.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d8b096774e60ec0e0b69e109fa5da53c25e66d25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789752"
 ---
-# <a name="tab-bars-and-tab-bar-controllers"></a>Barras de guia e barra de guias controladores
-
-_aplicativos do iOS usando uma interface de usuário de guia de navegação são criados usando a classe UITabBarController. Este artigo examinaremos como configurar um aplicativo com guias que contém vários controladores e exibições. Em seguida, examinaremos como carregar um UITabBarController quando não for o controlador de raiz, como após uma tela de logon._
+# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barras de guia e controladores de barra de guias no xamarin
 
 Aplicativos com guias são usados no iOS para dar suporte a interfaces de usuário em várias telas podem ser acessadas em nenhuma ordem específica. Por meio de `UITabBarController` classe aplicativos facilmente podem incluir suporte para esses cenários de multi-tela. `UITabBarController` cuida do gerenciamento de vários tela, permitindo que o desenvolvedor do aplicativo para se concentrar nos detalhes de cada tela.
 

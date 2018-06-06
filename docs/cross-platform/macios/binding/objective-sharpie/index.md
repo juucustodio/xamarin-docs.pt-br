@@ -1,18 +1,19 @@
 ---
-title: Objetivo Sharpie
+title: Criando associações com objetivo Sharpie
 description: Esta seção fornece uma introdução ao objetivo Sharpie, ferramenta de linha de comando do Xamarin usada para automatizar o processo de criação de uma associação a uma biblioteca Objective-C
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 62e75b3c987e48ea80291d790ef5e70e944725b0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ae644038aa8b54f0d57b61767882dec8754040c8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780751"
 ---
-# <a name="objective-sharpie"></a>Objetivo Sharpie
+# <a name="creating-bindings-with-objective-sharpie"></a>Criando associações com objetivo Sharpie
 
 _Esta seção fornece uma introdução ao objetivo Sharpie, ferramenta de linha de comando do Xamarin usada para automatizar o processo de criação de uma associação a uma biblioteca Objective-C_
 

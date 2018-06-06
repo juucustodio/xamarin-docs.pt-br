@@ -1,18 +1,20 @@
 ---
-title: Edição
+title: Edição de tabelas com xamarin
+description: Este documento descreve como editar tabelas em xamarin. Ele discute passe o dedo para excluir, o modo de edição e inserção de linha.
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 161de0209217dde671b976afad90eaad18d8c7b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28ebf1157a1bfc9f7bd910fd11365b29cecb9529
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789984"
 ---
-# <a name="editing"></a>Edição
+# <a name="editing-tables-with-xamarinios"></a>Edição de tabelas com xamarin
 
 Recursos de edição de tabela são habilitados por substituir métodos em um `UITableViewSource` subclasse. O comportamento de edição mais simples é o gesto de passar para exclusão que pode ser implementado com um único método de substituição.
 Edição mais complexos (incluindo mover linhas) pode ser feito com a tabela no modo de edição.

@@ -1,21 +1,20 @@
 ---
-title: Notificações de usuário avançado
-description: Este artigo usa uma análise mais profunda sobre a nova estrutura de notificações de usuário e como aproveitar ao máximo-lo em um aplicativo xamarin.
+title: Notificações de usuário avançado no xamarin
+description: Este artigo usa uma análise mais profunda sobre a estrutura de notificações do usuário, introduzida no iOS 10. Ele aborda as notificações de usuário, a interface de notificação do usuário, anexos de mídia, interfaces do usuário personalizadas e muito mais.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: bd8a95afc5bdd5aed958913d63f9b6cfe853677e
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 09a73ebc3dab90e6342a45c0f1fb5a40184d18a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788516"
 ---
-# <a name="advanced-user-notifications"></a>Notificações de usuário avançado
-
-_Este artigo usa uma análise mais profunda sobre a nova estrutura de notificações de usuário e como aproveitar ao máximo-lo em um aplicativo xamarin._
+# <a name="advanced-user-notifications-in-xamarinios"></a>Notificações de usuário avançado no xamarin
 
 Novo para o iOS 10, a notificação do usuário framework permite a entrega e a manipulação de notificações de locais e remotas. Usando essa estrutura, um aplicativo ou extensão do aplicativo pode agendar a entrega de notificações locais, especificando um conjunto de condições, como local ou a hora do dia.
 

@@ -1,6 +1,6 @@
 ---
-title: Solução de problemas
-description: Este artigo abrange sabe problemas que você pode encontrar ao trabalhar com o suporte do Xamarin tvOS.
+title: Solução de problemas tvOS aplicativos criados com o Xamarin
+description: Este artigo fornece diversas dicas para ajudar a solucionar problemas durante o desenvolvimento de um aplicativo tvOS criado com o Xamarin. Ele descreve o problema conhecido e erros específicos.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86106fa5ca53e93ccffb4dd141914c01ab65a506
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e69157cf9c8a9b9405e31edb2906754328653ccb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789197"
 ---
-# <a name="troubleshooting"></a>Solução de problemas
+# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solução de problemas tvOS aplicativos criados com o Xamarin
 
 _Este artigo abrange sabe problemas que você pode encontrar ao trabalhar com o suporte do Xamarin tvOS._
 

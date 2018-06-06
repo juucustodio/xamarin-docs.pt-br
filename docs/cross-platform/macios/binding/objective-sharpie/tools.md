@@ -1,18 +1,19 @@
 ---
-title: Ferramentas e comandos
-description: Visão geral das ferramentas incluídas com o objetivo Sharpie e os argumentos de linha de comando para usá-los.
+title: Comandos e ferramentas de Sharpie objetivo
+description: Este documento fornece uma visão geral das ferramentas incluídas com o objetivo de Sharpie e os argumentos de linha de comando para usar com eles.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 0e333ce7c336d13c8b55326a5d51a64092885dfd
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9ef566559249caca75281d9490d5314e08e26d44
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781059"
 ---
-# <a name="tools--commands"></a>Ferramentas e comandos
+# <a name="objective-sharpie-tools--commands"></a>Comandos e ferramentas de Sharpie objetivo
 
 _Visão geral das ferramentas incluídas com o objetivo Sharpie e os argumentos de linha de comando para usá-los._
 

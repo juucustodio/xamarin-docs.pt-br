@@ -1,19 +1,20 @@
 ---
-title: Linguagens e padrões comuns
-description: Este documento descreve o padrão model-view-controller, padrões de dados de origem e o delegado e protocolos.
+title: Padrões e os idiomas em Xamarin.Mac comuns
+description: Este documento descreve os padrões comuns de design usados na criação de aplicativos Xamarin.Mac. Ele aborda o padrão model-view-controller, padrões de dados de origem e o delegado e protocolos.
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/17/2016
-ms.openlocfilehash: cf499c555ddbefbdb5a7fae3ae8929a17e0d0cd7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f6bba5575edf2dcbddbd354b590e03f9fed06291
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791531"
 ---
-# <a name="common-patterns-and-idioms"></a>Linguagens e padrões comuns
+# <a name="common-patterns-and-idioms-in-xamarinmac"></a>Padrões e os idiomas em Xamarin.Mac comuns
 
 Ao longo das APIs de Apple expostos por meio do c#, determinados idiomas e os padrões surgem repetidamente. Se você tiver experiência com programação com xamarin, eles podem parecer familiares. Documentação geralmente fará referência a esses padrões e as linguagens repetidamente, para que ter uma compreensão sólida deles ajudará você a compreender a documentação que você encontrar.
 

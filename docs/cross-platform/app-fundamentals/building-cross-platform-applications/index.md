@@ -1,24 +1,23 @@
 ---
-title: Criando aplicativos de plataforma cruzada /
+title: Criando aplicativos de plataforma cruzada
 description: Em um resumo mais seis partes, esta seção discute como criar aplicativos usando a plataforma de desenvolvimento do Xamarin – de Noções básicas sobre o funcionamento do Xamarin para criar aplicativos móveis e, em seguida, testar e implantar para as várias lojas de aplicativos.
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: fba13ab921949cd2361e78535d5ffc96952a1336
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3966b731531d617f105583210334a23071a6802b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780168"
 ---
-# <a name="sharing-code-options"></a>Opções de compartilhamento de código
+# <a name="building-cross-platform-applications"></a>Criando aplicativos de plataforma cruzada
 
 Há duas opções para compartilhar código entre aplicativos móveis de plataforma cruzada: projetos de ativo compartilhado e bibliotecas de classes portáteis. Essas opções são [discutidos aqui](~/cross-platform/app-fundamentals/code-sharing.md); obter mais informações sobre [bibliotecas de classes portáteis](~/cross-platform/app-fundamentals/pcl.md) e [projetos compartilhados](~/cross-platform/app-fundamentals/shared-projects.md) também está disponível.
 
 <a name="Sections" />
-
-## <a name="building-cross-platform-mobile-apps"></a>Criação de aplicativos móveis de plataforma cruzada /
 
  [Visão geral](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
@@ -36,13 +35,11 @@ Há duas opções para compartilhar código entre aplicativos móveis de platafo
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
-
 ## <a name="case-studies"></a>Estudos de caso
 
 Os princípios descritos neste documento são colocados em prática no aplicativo de exemplo *Tasky*, bem como [pré-criadas aplicativos](https://xamarin.com/prebuilt) como [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
 
  <a name="Tasky" />
-
 
 ### <a name="tasky"></a>Tasky
 
@@ -53,7 +50,6 @@ Ele demonstra os conceitos básicos da criação de um aplicativo de plataforma 
 
 Leitura de [Tasky estudo de caso](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
-
 ## <a name="summary"></a>Resumo
 
 Esta seção apresenta as ferramentas de desenvolvimento de aplicativo do Xamarin e discute como criar aplicativos que usam múltiplas plataformas móveis.
@@ -63,8 +59,6 @@ Ele abrange uma arquitetura em camadas que o código estruturas para reutilizaç
 São fornecidos exemplos de funções de aplicativo comuns (como operações de arquivo e de rede) e como eles podem ser criados de uma maneira de plataforma cruzada.
 
 Finalmente, ele brevemente discute testes e fornece referências a um estudo de caso que coloca esses princípios em ação.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

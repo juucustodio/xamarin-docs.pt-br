@@ -1,25 +1,27 @@
 ---
-title: Tipos nativos
+title: Tipos nativos para iOS e macOS
+description: Este documento descreve como o Unified API do Xamarin mapeia tipos de .NET para tipos nativos 32 bits e 64 bits, conforme necessário com base na arquitetura de destino de compilação.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 4d11d053cf4471a98cbba0f7c97be3bef39276fb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fc2b91a9265fcf09e4f58d5de27a1fdef9350b2d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781098"
 ---
-# <a name="native-types"></a>Tipos nativos
+# <a name="native-types-for-ios-and-macos"></a>Tipos nativos para iOS e macOS
 
-No núcleo da diferença, Mac e iOS APIs use um tipos de dados específicos de arquitetura sempre 32 bits em plataformas de 32 bits e 64 bits em plataformas de 64 bits.
+Mac e iOS APIs usam tipos de dados específicos de arquitetura sempre 32 bits em plataformas de 32 bits e 64 bits em plataformas de 64 bits.
 
 Por exemplo, Objective-C mapeia o `NSInteger` tipo de dados `int32_t` em sistemas de 32 bits e para `int64_t` em sistemas de 64 bits.
 
-Para corresponder a esse comportamento, em nossa API unificada, estamos substituindo os usos anteriores `int` (que no .NET é definida como sendo sempre `System.Int32`) para um novo tipo de dados: `System.nint`.  Você pode pensar "n" como significado "nativo" para digitar o número inteiro nativo da plataforma.
+Para corresponder a esse comportamento, em nossa API unificada, estamos substituindo os usos anteriores `int` (que no .NET é definida como sendo sempre `System.Int32`) para um novo tipo de dados: `System.nint`. Você pode pensar "n" como significado "nativo" para digitar o número inteiro nativo da plataforma.
 
-Com esses novos tipos de dados, o mesmo código de origem é compilado para 32 bits, 32 bits e 64 bits ou 64 bits, dependendo dos sinalizadores de compilação.
+Com esses novos tipos de dados, o mesmo código de origem é compilado para arquiteturas de 32 bits e 64 bits, dependendo dos sinalizadores de compilação.
 
 ## <a name="new-data-types"></a>Novos tipos de dados
 
@@ -35,7 +37,7 @@ Escolhemos a esses nomes para permitir que seu código c# pesquisar mais ou meno
 
 ### <a name="implicit-and-explicit-conversions"></a>Conversões implícitas e explícitas
 
-O design de novos tipos de dados destina-se a permitir que um único arquivo fonte c# naturalmente usar armazenamento de bit de 32 ou 64 dependendo da plataforma do host e as configurações de compilação.
+O design de novos tipos de dados destina-se a permitir que um único arquivo fonte c# naturalmente usar armazenamento de bit de 32 ou 64 dependendo da plataforma de host e as configurações de compilação.
 
 Isso necessário para criar um conjunto de conversões implícitas e explícitas de e para os tipos de dados específicos de plataforma para os tipos de dados de ponto flutuante e integral do .NET.
 

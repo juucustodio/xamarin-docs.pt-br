@@ -1,23 +1,22 @@
 ---
-title: Implementando SiriKit
-description: Este artigo aborda as etapas necessárias para implementar SiriKit suporte em um aplicativos xamarin.
+title: Implementando SiriKit em xamarin
+description: Este documento descreve as etapas necessárias para implementar SiriKit suporte em um aplicativos xamarin. Ele discute as extensões de propósitos e extensões de propósitos da interface do usuário.
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: a4f38e93cae3c9577a0b1e32067da2cfd2e4796d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: f0e5e05828305bd3656d70105b6e2ad06f9fdc81
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788843"
 ---
-# <a name="implementing-sirikit"></a>Implementando SiriKit
+# <a name="implementing-sirikit-in-xamarinios"></a>Implementando SiriKit em xamarin
 
 _Este artigo aborda as etapas necessárias para implementar SiriKit suporte em um aplicativos xamarin._
-
-
 
 Novo para iOS 10, SiriKit permite que um aplicativo xamarin fornecer os serviços que são acessíveis para o usuário usando o Siri e o aplicativo de mapas em um dispositivo iOS. Este artigo aborda as etapas necessárias para implementar SiriKit suporte nos aplicativos do xamarin adicionando a extensões de propósitos necessárias, extensões de interface do usuário de tentativas e vocabulário.
 

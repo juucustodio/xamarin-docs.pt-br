@@ -6,12 +6,13 @@ ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 9be9b91a0ed7e7607469bf8d74087b6f93677559
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732977"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Depurar desgaste Android em um emulador
 
@@ -23,7 +24,7 @@ Desenvolvimento de aplicativos do Android desgaste requer executando o aplicativ
 
 ## <a name="configure-the-google-android-emulator"></a>Configurar o emulador do Google Android
 
-Para executar seu aplicativo desgaste em um emulador, você deve instalar o emulador do Android SDK do Android e configurá-lo para uso Android. Para informações de geral de emulador do Android SDK instalação e configuração, consulte [emulador Android da Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Para executar seu aplicativo desgaste em um emulador, você deve instalar o emulador do Android SDK do Android e configurá-lo para uso Android. Para informações de geral de emulador do Android SDK instalação e configuração, consulte [configuração do emulador Android](~/android/get-started/installation/android-emulator/index.md).
 
 Quando você cria um dispositivo virtual desgaste, selecione um perfil de dispositivo Android desgaste (como **Android desgaste quadrado**). Para melhorar o desempenho, use o desgaste **x86** CPU/ABI como mostrado neste exemplo:
 

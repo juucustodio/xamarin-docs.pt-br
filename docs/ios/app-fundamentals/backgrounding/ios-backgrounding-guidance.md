@@ -1,15 +1,17 @@
 ---
 title: iOS Backgrounding orientação
+description: Este diagramas apresentadas neste documento fornecem orientação sobre quais das muitas opções de backgrounding do iOS deve ser escolhida para uma necessidade específica.
 ms.prod: xamarin
 ms.assetid: BC629536-F179-4EC2-AD72-8F45081F8EE0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b51b8a8bd72d14ad68055047603f041278e252c3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 26766aac66789497d8db266123b768527093ecf4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783887"
 ---
 # <a name="ios-backgrounding-guidance"></a>iOS Backgrounding orientação
 

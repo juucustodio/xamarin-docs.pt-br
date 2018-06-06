@@ -1,18 +1,19 @@
 ---
-title: Detalhes específicos de plataforma SkiaSharp
-description: Obter detalhes sobre como colocar o conteúdo de SKSurface em seu aplicativo nativo.
+title: Específico da plataforma SkiaSharp anotações
+description: Este documento descreve específico da plataforma detalhes relevantes para SkiaSharp. Ele fornece o código de exemplo para iOS, Android, macOS, Windows e xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 3f40c7ea0b118816b7be373617795db9158c1450
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: bcec8f2c850396f45cba795555b924d3cbc4ef22
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783523"
 ---
-# <a name="platform-specific-integration"></a>Integração de plataforma específica
+# <a name="skiasharp-platform-specific-notes"></a>Específico da plataforma SkiaSharp anotações
 
 Os exemplos a seguir alocar buffers de imagem manualmente, isso é feito para ilustrar um padrão comum de plataforma que é desenhar em um buffer RBGA existente fornecido pela plataforma.
 

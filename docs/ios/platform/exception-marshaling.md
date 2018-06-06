@@ -1,19 +1,20 @@
 ---
-title: Marshaling de exceção
-description: Xamarin contém novos eventos para ajudar a responder a exceções, particularmente em código nativo.
+title: Exceção Marshaling no xamarin
+description: Este documento descreve como trabalhar com exceções nativas e gerenciadas em um aplicativo xamarin. Ele aborda problemas que podem ocorrer e uma solução para esses problemas.
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/05/2017
-ms.openlocfilehash: bb9c16985d958772193093434350435ce477956a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dcf1074aacb6d139d107dac01fa86f459831d5f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786737"
 ---
-# <a name="exception-marshaling"></a>Marshaling de exceção
+# <a name="exception-marshaling-in-xamarinios"></a>Exceção Marshaling no xamarin
 
 _Xamarin contém novos eventos para ajudar a responder a exceções, particularmente em código nativo._
 
@@ -108,7 +109,7 @@ Aqui, somente quadros gerenciados são quadros 8-10, mas a exceção gerenciada 
 
 Exemplo de código:
 
-``` objective-c
+```objc
 -(id) setObject: (id) object forKey: (id) key
 {
     @try {
@@ -124,7 +125,7 @@ E o `@finally` cláusula não será executada porque o tempo de execução Mono 
 
 Uma variação disso é lançar uma exceção gerenciada em código gerenciado e, em seguida, desenrolamento por meio de quadros nativos para obter o primeiro gerenciados `catch` cláusula:
 
-``` csharp
+```csharp
 class AppDelegate : UIApplicationDelegate {
     public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
     {

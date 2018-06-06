@@ -1,17 +1,18 @@
 ---
-title: Informações do dispositivo Xamarin.Essentials
-description: A classe DeviceInfo fornece informações sobre o dispositivo, o aplicativo está sendo executado.
+title: 'Xamarin.Essentials: Informações do dispositivo'
+description: Este documento descreve a classe de DeviceInfo Xamarin.Essentials, que fornece informações sobre o dispositivo que o aplicativo está em execução no.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a398f2697b03cec26f2c786b11e7a3c332cb5f63
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: b7246afca19607ef2f70288d4643696f4ac35d52
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782392"
 ---
-# <a name="xamarinessentials-device-information"></a>Informações do dispositivo Xamarin.Essentials
+# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informações do dispositivo
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 

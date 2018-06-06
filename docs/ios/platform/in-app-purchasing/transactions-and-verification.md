@@ -1,18 +1,20 @@
 ---
-title: Verificação e transações
+title: Transações e verificação em xamarin
+description: Este documento descreve como permitir a restauração de compras passadas em um aplicativo xamarin. Ele também discute maneiras de proteger compras e produtos de servidor fornecido.
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c8d86d0ce3119b3e104a65a170ab141484af44a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2cb38df4bbabc3534f5c90c7695569d68349ccc3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786919"
 ---
-# <a name="transactions-and-verification"></a>Verificação e transações
+# <a name="transactions-and-verification-in-xamarinios"></a>Transações e verificação em xamarin
 
 ## <a name="restoring-past-transactions"></a>Restaurando após transações
 
@@ -191,17 +193,17 @@ Porque o servidor remoto requer alguma forma de validação que uma solicitaçã
    
  10. O aplicativo permite que o produto e, em seguida, chama do StoreKit `FinishTransaction`. O aplicativo, em seguida, opcionalmente, pode exibir o conteúdo adquirido (por exemplo, mostrar a primeira página de um livro adquirido ou problema de revista).
 
-Uma implementação alternativa para arquivos de conteúdo muito grande de produto pode envolver simplesmente armazenando a confirmação de transação na etapa &#9; para que a transação pode ser concluída rapidamente e fornecer uma interface de usuário para o usuário baixar o conteúdo real do produto em algum momento mais tarde. A solicitação de download subsequente pode enviar novamente o recebimento armazenado para acessar o arquivo de conteúdo de produto necessária.
+Uma implementação alternativa para arquivos de conteúdo muito grande de produto pode envolver simplesmente armazenando a confirmação de transação na etapa 9 # para que a transação pode ser concluída rapidamente e fornecer uma interface de usuário para o usuário baixar o conteúdo real do produto em algum momento mais tarde. A solicitação de download subsequente pode enviar novamente o recebimento armazenado para acessar o arquivo de conteúdo de produto necessária.
 
 ### <a name="writing-server-side-receipt-verification-code"></a>Escrevendo código de verificação de recebimento do lado do servidor
 
-Validar um recebimento no código do lado do servidor pode ser feito com uma HTTP POST solicitação/resposta simples que abrange as etapas #5 a &#8; no diagrama de fluxo de trabalho.   
+Validar um recebimento no código do lado do servidor pode ser feito com uma HTTP POST solicitação/resposta simples que abrange as etapas #5 a 8 # no diagrama de fluxo de trabalho.   
    
    
    
- Extrair o `SKPaymentTansaction.TransactionReceipt` propriedade no aplicativo. Estes são os dados que precisam ser enviada ao iTunes para verificação (etapa &#5;).
+ Extrair o `SKPaymentTansaction.TransactionReceipt` propriedade no aplicativo. Estes são os dados que precisam ser enviada ao iTunes para verificação (etapa 5 #).
 
-Base64 codifica dos dados de confirmação de transação (a etapa &#5; ou #6).
+Base64 codifica dos dados de confirmação de transação (a etapa 5 # ou #6).
 
 Crie uma carga JSON simple como este:
 
@@ -228,7 +230,7 @@ Consulte da Apple [verificando recebimentos de repositório](https://developer.a
 
 #### <a name="using-aspnet"></a>Usando o ASP.NET
 
-Para desenvolvedores do c#, há um projeto de código-fonte aberto útil chamado [APNS-Sharp](https://github.com/Redth/APNS-Sharp) que inclui o código de verificação de recebimento que funciona no ASP.NET. Em particular, o `Receipt.cs` e `ReceiptVerification.cs` arquivos de [ `Jdsoft.Apple.AppStore` ](https://github.com/Redth/APNS-Sharp/tree/master/JdSoft.Apple.AppStore) diretório pode ser adicionado a um site do .NET para implementar facilmente etapas #6 a &#8; do diagrama de fluxo de trabalho Server-Delivered produtos.   
+Para desenvolvedores do c#, há um projeto de código-fonte aberto útil chamado [APNS-Sharp](https://github.com/Redth/APNS-Sharp) que inclui o código de verificação de recebimento que funciona no ASP.NET. Em particular, o `Receipt.cs` e `ReceiptVerification.cs` arquivos de [ `Jdsoft.Apple.AppStore` ](https://github.com/Redth/APNS-Sharp/tree/master/JdSoft.Apple.AppStore) diretório pode ser adicionado a um site do .NET para implementar facilmente etapas #6 a 8 # do diagrama de fluxo de trabalho Server-Delivered produtos.   
    
    
    

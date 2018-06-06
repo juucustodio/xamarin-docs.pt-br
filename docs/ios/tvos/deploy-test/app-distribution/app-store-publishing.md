@@ -1,21 +1,20 @@
 ---
 title: Publicação para Apple TV App Store
-description: Este artigo mostra como configurar, criar e publicar um aplicativo Xamarin.tvOS para distribuição por meio da Apple TV App Store. Ele inclui um guia passo a passo que aborda como preparar seu aplicativo para distribuição, como usar ferramentas da Apple para enviar seu aplicativo para revisão e, finalmente, como publicar seu aplicativo à loja de aplicativos Apple TV.
+description: Este documento descreve como publicar um aplicativo à loja de aplicativos Apple TV. Ele discute como configurar, provisionar, criar e enviar um aplicativo tvOS criado com o Xamarin.
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c72b161845f6d8492a47d95e51a80cf0b4f30271
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac905caaf0bdefe7f0c5502be0bd63102ca5a813
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789298"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Publicação para Apple TV App Store
-
-_Este artigo mostra como configurar, criar e publicar um aplicativo Xamarin.tvOS para distribuição por meio da Apple TV App Store. Ele inclui um guia passo a passo que aborda como preparar seu aplicativo para distribuição, como usar ferramentas da Apple para enviar seu aplicativo para revisão e, finalmente, como publicar seu aplicativo à loja de aplicativos Apple TV._
 
 Em ordem distribuir aplicativos para todos os dispositivos da Apple TV, Apple requer que os aplicativos a serem publicadas por meio de *Apple TV App Store*, fazendo o local de compra de um único para aplicativos tvOS de loja de aplicativos. Os desenvolvedores de muitos tipos de aplicativos pode em letras maiusculas no sucesso em grandes quantidades desse ponto de distribuição. Aplicativo da loja da Apple TV é uma solução completa, oferecendo os desenvolvedores de aplicativos sistemas de distribuição e o pagamento.
 

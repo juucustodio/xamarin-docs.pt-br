@@ -1,19 +1,20 @@
 ---
-title: Pesquisa de marcação da Web
-description: Adicionando os resultados da pesquisa baseada na web que podem vincular de volta ao seu aplicativo.
+title: Pesquisa com a marcação da Web em xamarin
+description: Este documento descreve como criar resultados de pesquisa baseada na web que têm links para um aplicativo xamarin. Ele aborda como habilitar o conteúdo da web, indexação, tornando o site do seu aplicativo detectável, usando faixas de aplicativo inteligentes, links universal e muito mais.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: bc3446419ef0e469f7184d60fe8876cd2e5da520
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 438a65de3eb78f849493e3478bce5522a325d0cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787988"
 ---
-# <a name="search-with-web-markup"></a>Pesquisa de marcação da Web
+# <a name="search-with-web-markup-in-xamarinios"></a>Pesquisa com a marcação da Web em xamarin
 
 Para aplicativos que fornecem acesso a seu conteúdo por meio de um site da web (não apenas de dentro do aplicativo), conteúdo da web pode ser marcado com links especiais que serão rastreadas pela Apple e fornecer a vinculação profunda para seu aplicativo no dispositivo do iOS 9 do usuário.
 

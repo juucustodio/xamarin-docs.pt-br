@@ -1,5 +1,5 @@
 ---
-title: Noções básicas de extensão do aplicativo de mensagem
+title: Noções básicas de extensão do aplicativo de mensagem no xamarin
 description: Este artigo mostra como incluir uma extensão de aplicativo de mensagem em uma solução de xamarin que integra o aplicativo de mensagens e apresenta novos recursos para o usuário.
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 73ca0974a42bf661a89327148b68341114297084
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: bc06d73543b9e0bd1e8715fc722b0a95af7d9f07
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787904"
 ---
-# <a name="message-app-extension-basics"></a>Noções básicas de extensão do aplicativo de mensagem
+# <a name="message-app-extension-basics-in-xamarinios"></a>Noções básicas de extensão do aplicativo de mensagem no xamarin
 
 _Este artigo mostra como incluir uma extensão de aplicativo de mensagem em uma solução de xamarin que integra o aplicativo de mensagens e apresenta novos recursos para o usuário._
 

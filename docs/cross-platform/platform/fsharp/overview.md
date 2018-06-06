@@ -1,16 +1,17 @@
 ---
 title: 'Guia de Introdução com F #'
-description: 'F # é uma fortemente tipada linguagem de programação funcional projetada para ser executado no .NET'
+description: 'Este documento descreve como saber F # e usá-lo para criar aplicativos Xamarin com 2017 do Visual Studio e o Visual Studio para Mac.'
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 07082ed68e1257679b6296470d276b61a9f39f00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fb11feb2d3af537e1b21470a4cc10ec16f49bf77
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781771"
 ---
 # <a name="getting-started-with-f35"></a>Guia de Introdução com F&#35;
 

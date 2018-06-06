@@ -1,18 +1,20 @@
 ---
-title: Estruturas compatíveis e sem suportadas
+title: Estruturas compatíveis e sem suportadas no tvOS
+description: 'Para ajudar a esclarecer os recursos disponíveis para aplicativos tvOS, este documento fornece duas listas de estruturas de Apple: aqueles suportados pelo tvOS e não oferece suporte para tvOS.'
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 4b368a8e4d449d8fa8d0d29dab19d227bb6eee4c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8ba33d028263385eca50f8174124bbe629e3f951
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789116"
 ---
-# <a name="supported-and-unsupported-frameworks"></a>Estruturas compatíveis e sem suportadas
+# <a name="supported-and-unsupported-frameworks-in-tvos"></a>Estruturas compatíveis e sem suportadas no tvOS
 
 <a name="Supported-Frameworks" />
 
@@ -41,7 +43,7 @@ Esta é uma lista de estruturas de fornecidas pela Apple para uso em seus aplica
 * Foundation
 * GameController
 * GameKit
-* GamePlay
+* Jogos
 * GLKit
 * ImageIO
 * MachO
@@ -56,7 +58,7 @@ Esta é uma lista de estruturas de fornecidas pela Apple para uso em seus aplica
 * OpenGES
 * SceneKit
 * Segurança
-* simd
+* SIMD
 * SpriteKit
 * StoreKit
 * SystemConfiguration
@@ -71,7 +73,7 @@ Esta é uma lista de estruturas de fornecidas pela Apple para uso em seus aplica
 A seguir está uma lista de estruturas que são suportados pelo iOS 9, mas foram removidos do suporte tvOS 9 pela Apple e, portanto, não pode ser usado em seus aplicativos Xamarin.tvOS:
 
 * Contas
-* AddressBook
+* Catálogo de endereços
 * AddressBookUI
 * AssetsLibrary
 * Contatos

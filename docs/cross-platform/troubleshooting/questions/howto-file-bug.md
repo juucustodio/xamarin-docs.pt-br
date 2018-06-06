@@ -1,15 +1,17 @@
 ---
 title: Quando e como eu arquivo um relatório de erros?
+description: Este documento descreve quando, onde e como para o relatório de erro. Ele também fornece as práticas recomendadas que permitem aos engenheiros para melhor diagnosticar o problema do relatório de erros.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: d5471195b5051725b41b8f28b3959db362297669
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 08a782e9637442a43e9c63305ddf161403519169
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781937"
 ---
 # <a name="when-and-how-should-i-file-a-bug-report"></a>Quando e como eu arquivo um relatório de erros?
 

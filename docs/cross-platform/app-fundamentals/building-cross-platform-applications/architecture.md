@@ -1,15 +1,17 @@
 ---
 title: Parte 2 - arquitetura
+description: Este documento descreve os padrões de arquitetura úteis para a criação de aplicativos de plataforma cruzada. Ele discute camadas de aplicativo típico (camada de dados, camada de acesso a dados, etc.) e padrões comuns de software móvel (MVVM, MVC, etc.)
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: 94cd2ae09da2e36f8855d95dda883cd3b7819e5b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ebcfe8880a826c552d55e7a5567271a5a764fa1d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780868"
 ---
 # <a name="part-2---architecture"></a>Parte 2 - arquitetura
 

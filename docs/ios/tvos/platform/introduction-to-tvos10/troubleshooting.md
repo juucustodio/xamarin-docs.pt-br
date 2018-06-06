@@ -1,29 +1,28 @@
 ---
-title: Solução de problemas
-description: Este artigo fornece várias dicas de solução de problemas para trabalhar com tvOS 10 em aplicativos de Xamarin.tvOS.
+title: Solução de problemas tvOS 10 aplicativos criados com o Xamarin
+description: Este artigo fornece várias dicas de solução de problemas para trabalhar com tvOS 10 em aplicativos Xamarin. Ele descreve os problemas relacionados à loja de aplicativos, compatibilidade binária, CFNetwork HttpProtocol, CloudKit, imagem principal, NSUserActivity e UIKit.
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8875e658ead17820655a2401079627875c14958b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4332caca2804da52bb565fe382932af691c39dab
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788804"
 ---
-# <a name="troubleshooting"></a>Solução de problemas
+# <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solução de problemas tvOS 10 aplicativos criados com o Xamarin
 
-_Este artigo fornece várias dicas de solução de problemas para trabalhar com tvOS 10 em aplicativos de Xamarin.tvOS._
-
-As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usar tvOS 10 com Xamarin.tvOS e a solução para esses problemas:
+As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usar tvOS 10 com o Xamarin e a solução para esses problemas:
 
 - [App Store](#App-Store)
 - [Compatibilidade binária](#Binary-Compatibility)
-- [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
+- [Protocolo HTTP de CFNetwork](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [CoreImage](#CoreImage)
+- [Imagem principal](#CoreImage)
 - [NSUserActivity](#NSUserActivity)
 - [UIKit](#UIKit)
 
@@ -50,7 +49,7 @@ Problemas Conhecidos:
 
 <a name="CFNetwork-HTTP-Protocol" />
 
-## <a name="cfnetwork-http-protocol"></a>CFNetwork HTTP Protocol
+## <a name="cfnetwork-http-protocol"></a>Protocolo HTTP de CFNetwork
 
 O `HTTPBodyStream` propriedade o `NSMutableURLRequest` classe deve ser definida como um fluxo não aberto desde `NSURLConnection` e `NSURLSession` agora estritamente impõe esse requisito.
 
@@ -62,7 +61,7 @@ Operações de execução demorada retornará um _"Você não tem permissão par
 
 <a name="CoreImage" />
 
-## <a name="coreimage"></a>CoreImage
+## <a name="core-image"></a>Imagem principal
 
 O `CIImageProcessor` API agora dá suporte a uma contagem de imagens de entrada arbitrário. `CIImageProcessor` API que foi incluído na versão beta do tvOS 10 1 será removida.
 
@@ -84,10 +83,6 @@ Problemas Conhecidos:
  - tvOS 10 requer que o desenvolvedor chamar `base.AwakeFromNib` quando subclasses `UIViewController` e substituindo o `AwakeFromNib` método.
  - Aplicativos com personalizado `UIView` subclasses substituam `LayoutSubviews` e sujos o layout antes de chamar `base.LayoutSubviews` pode disparar um loop infinito de layout no tvOS 10.
  - Ativos de direção específica ou flippable imagens não são quando atribuído a nenhum inversão `UIButton` objetos.
-
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,11 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 4e3e090d826aa46d503f8c612250fd5122bc703e
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733029"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de associação de dados
 
@@ -388,7 +389,7 @@ Aqui está o resultado:
 
 [![](data-binding-basics-images/listview3.png "Associação a uma coleção com um DataTemplate e conversores")](data-binding-basics-images/listview3-large.png#lightbox "associação a uma coleção com um DataTemplate e conversores")
 
-O `ListView` é bastante sofisticado lidar com as alterações que podem ocorrer dinamicamente em subjacente dados, mas somente se seguir etapas específicas. Se a coleção de itens atribuídos ao `ItemsSource` propriedade do `ListView` alterações durante o tempo de execução — que se itens podem ser adicionados a ou removido da coleção — use um `ObservableCollection` classe para esses itens. `ObservableCollection` implementa o `INotifyCollectionChanged` interface, e `ListView` instalará um manipulador para o `CollectionChanged` evento.
+O `ListView` é bastante sofisticado lidar com as alterações que podem ocorrer dinamicamente nos dados subjacentes, mas somente se você seguir etapas específicas. Se a coleção de itens atribuídos ao `ItemsSource` propriedade do `ListView` alterações durante o tempo de execução — que se itens podem ser adicionados a ou removido da coleção — use um `ObservableCollection` classe para esses itens. `ObservableCollection` implementa o `INotifyCollectionChanged` interface, e `ListView` instalará um manipulador para o `CollectionChanged` evento.
 
 Se alteram propriedades de itens se durante o tempo de execução, os itens na coleção devem implementar a `INotifyPropertyChanged` alterações de interface e o sinal para valores de propriedade usando o `PropertyChanged` evento. Isso é demonstrado na próxima parte desta série, [parte 5. De associação de dados para o modelo MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 

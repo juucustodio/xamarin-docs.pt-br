@@ -1,19 +1,20 @@
 ---
-title: Exibições da Web
-description: Desambiguação opções de exibição da web do iOS
+title: Modos de exibição da Web em xamarin
+description: Este documento descreve as várias maneiras que um aplicativo xamarin pode exibir o conteúdo da web. Ele discute UIWebView, WKWebView, SFSafariViewController, Safari e segurança de transporte do aplicativo.
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 787b5594476b3a1b5b3f6a0e8151a98c97443d00
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f720eae68415ab9efe021e53c9da4875209cd221
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790490"
 ---
-# <a name="web-views"></a>Exibições da Web
+# <a name="web-views-in-xamarinios"></a>Modos de exibição da Web em xamarin
 
 Durante o tempo de vida do iOS Apple lançou várias maneiras para os desenvolvedores de aplicativos incorporar a funcionalidade de modo de exibição da web em seus aplicativos. A maioria dos usuários utilizam o navegador da web Safari interno em seu dispositivo iOS e, portanto, esperar que a funcionalidade de modo de exibição web de outros aplicativos é consistente com essa experiência. Eles esperam que os mesmos movimentos de trabalho, o desempenho para ser o mesmo em par e a funcionalidade.
 

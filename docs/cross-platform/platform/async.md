@@ -1,20 +1,21 @@
 ---
-title: Visão geral da assincronia
-description: 'A versão mais recente da linguagem c# – versão 5 – introduzido duas novas palavras-chave para expressar operações assíncronas: async e await. Essas palavras-chave permitem que você escrever código simple que utiliza a biblioteca paralela de tarefas para executar operações de longa execução (como o acesso à rede) em outro thread e acessar facilmente os resultados após a conclusão. As versões mais recentes do xamarin e xamarin suportam async e await - este documento fornece explicações e um exemplo de como usar a nova sintaxe com o Xamarin.'
+title: Visão geral do suporte assíncrono
+description: Este documento descreve a programação com async e await conceitos apresentados em c# 5 para tornar mais fácil de escrever código assíncrono.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 5d6bb9581a4429502d9a70385b3ee2ff056f30ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 22878695d93ae79bbbfe1b99961587ff0bf957be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782002"
 ---
 # <a name="async-support-overview"></a>Visão geral do suporte assíncrono
 
-_A versão mais recente da linguagem c# – versão 5 – introduzido duas novas palavras-chave para expressar operações assíncronas: async e await. Essas palavras-chave permitem que você escrever código simple que utiliza a biblioteca paralela de tarefas para executar operações de longa execução (como o acesso à rede) em outro thread e acessar facilmente os resultados após a conclusão. As versões mais recentes do xamarin e xamarin suportam async e await - este documento fornece explicações e um exemplo de como usar a nova sintaxe com o Xamarin._
+_C# 5 introduzidos duas palavras-chave para simplificar a programação assíncrona: async e await. Essas palavras-chave permitem que você escrever código simple que utiliza a biblioteca paralela de tarefas para executar operações de longa execução (como o acesso à rede) em outro thread e acessar facilmente os resultados após a conclusão. As versões mais recentes do xamarin e xamarin suportam async e await - este documento fornece explicações e um exemplo de como usar a nova sintaxe com o Xamarin._
 
 O suporte assíncrono do Xamarin é criado na base Mono 3.0 e atualiza o perfil de API seja de uma versão de dispositivos móveis do Silverlight para ser uma versão de dispositivos móveis do .NET 4.5.
 

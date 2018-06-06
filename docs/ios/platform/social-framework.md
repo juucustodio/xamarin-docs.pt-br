@@ -1,5 +1,5 @@
 ---
-title: Estrutura social
+title: Estrutura sociais do xamarin
 description: A estrutura Social fornece uma API unificada para interagir com redes sociais, incluindo o Facebook e Twitter, bem como SinaWeibo para os usuários na China.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 334e05ad653d766b48f7f6028a1e98b0a0548c0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b7269282b18adc46f53b708a0af4934a1621d23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788189"
 ---
-# <a name="social-framework"></a>Estrutura social
+# <a name="social-framework-in-xamarinios"></a>Estrutura sociais do xamarin
 
 _A estrutura Social fornece uma API unificada para interagir com redes sociais, incluindo o Facebook e Twitter, bem como SinaWeibo para os usuários na China._
-
 
 Usando a estrutura Social permite que aplicativos a interagir com redes sociais de uma única API sem a necessidade de gerenciar a autenticação. Ele inclui um sistema fornecido controlador de exibição para compor postagens, bem como uma abstração que permite que API da cada rede social de consumo por HTTP.
 

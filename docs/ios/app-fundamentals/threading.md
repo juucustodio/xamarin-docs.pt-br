@@ -1,17 +1,19 @@
 ---
-title: Threading
+title: Threading no xamarin
+description: Este documento descreve como usar as APIs System.Threading em um aplicativo xamarin. Ele aborda a biblioteca paralela de tarefas, criação de aplicativos responsivos e coleta de lixo.
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 05d015d8d255ccc8c6230b1a89e098e187b22b37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784911"
 ---
-# <a name="threading"></a>Threading
+# <a name="threading-in-xamarinios"></a>Threading no xamarin
 
 O tempo de execução do xamarin oferece aos desenvolvedores acesso para o .NET threading de APIs, ambos explicitamente ao usar threads (`System.Threading.Thread, System.Threading.ThreadPool`) e implicitamente ao usar os padrões de delegado assíncrona ou os métodos BeginXXX, bem como o total a variedade de APIs que oferecem suporte a Biblioteca paralela de tarefas.
 

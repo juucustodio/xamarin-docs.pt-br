@@ -1,22 +1,20 @@
 ---
-title: Trabalhando com exibição empilhada
-description: Este artigo aborda criando e trabalhando com exibição empilhada dentro de um aplicativo Xamarin.tvOS.
+title: Trabalhando com exibições de empilhada tvOS em Xamarin
+description: Este documento descreve como trabalhou com tvOS empilhadas exibições em um aplicativo compilado com o Xamarin. Ele fornece uma visão geral dos modos de exibição empilhadas e descreve o Layout automático, posicionar e dimensionar uma exibição empilhada, usos comuns, integração com Storyboards e mais.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a6300e4da47022199c0503e6be63b0c90f15654d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e718e525c23e78fbf846209602a07bf0f3f386e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789366"
 ---
-# <a name="working-with-stacked-view"></a>Trabalhando com exibição empilhada
-
-_Este artigo aborda criando e trabalhando com exibição empilhada dentro de um aplicativo Xamarin.tvOS._
-
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabalhando com exibições de empilhada tvOS em Xamarin
 
 O controle de exibição de pilha (`UIStackView`) aproveita o poder do Layout automático e Classes de tamanho para gerenciar uma pilha de sub-visualizações, horizontal ou verticalmente, que responde dinamicamente às alterações de conteúdo e o tamanho da tela do dispositivo Apple TV.
 

@@ -1,20 +1,23 @@
 ---
-title: Solução de problemas
+title: Solução de problemas do Xamarin
+description: Esse links de documento para o conteúdo respostas para perguntas frequentes sobre o desenvolvimento do Xamarin, descreve como atualizar referências de componentes para o NuGet, discute as opções de suporte e respostas a perguntas específicas.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 5e8a28f85e947cffeaf6a0aac544e10f7e4eae8a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7a10a20290872005233bfffd5ec861f7372be4a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782057"
 ---
-# <a name="troubleshooting"></a>Solução de problemas
+# <a name="xamarin-troubleshooting"></a>Solução de problemas do Xamarin
 
 ## <a name="general-issues"></a>Problemas gerais
+
 ### <a name="frequently-asked-questionsquestionsindexmd"></a>[Perguntas frequentes](questions/index.md)
 
 Perguntas frequentes sobre a plataforma de Xamarin e as respostas específicas para o Visual Studio.

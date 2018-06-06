@@ -1,21 +1,19 @@
 ---
-title: Introdução ao MonoTouch.Dialog
-description: O MonoTouch.Dialog (MT. D) o Kit de ferramentas é uma estrutura indispensável para rápido desenvolvimento de interface do usuário no xamarin de aplicativos. MT. D torna rápido e fácil definir o aplicativo complexo da interface do usuário usando uma abordagem declarativa, em vez do tédio de controladores de navegação, tabelas, etc. Além disso, MT. D tem um conjunto flexível de APIs que fornecer aos desenvolvedores um controle total ou entrega abordagem, bem como recursos adicionais, como o carregamento da imagem de plano de fundo de puxe para atualizar, procure o suporte e a geração dinâmica de interface do usuário por meio de dados JSON. Este guia apresenta as diferentes maneiras de trabalhar com MT. D e, em seguida, examina profundamente uso avançado.
+title: Introdução ao MonoTouch.Dialog para xamarin
+description: Este documento descreve MonoTouch.Dialog (MT. D), uma estrutura de desenvolvimento da interface do usuário declarativa rápida com xamarin. Ele discute como usar as APIs MonoTouch.Dialog para criar uma interface no código ou JSON e usar recursos como puxe para atualizar, pesquisa, carregamento de imagem de plano de fundo e muito mais.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6511d8deed1800a8ae655f749feccd249bf4a8c0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790832"
 ---
-# <a name="introduction-to-monotouchdialog"></a>Introdução ao MonoTouch.Dialog
-
-_O MonoTouch.Dialog (MT. D) o Kit de ferramentas é uma estrutura indispensável para rápido desenvolvimento de interface do usuário no xamarin de aplicativos. MT. D torna rápido e fácil definir o aplicativo complexo da interface do usuário usando uma abordagem declarativa, em vez do tédio de controladores de navegação, tabelas, etc. Além disso, MT. D tem um conjunto flexível de APIs que fornecer aos desenvolvedores um controle total ou entrega abordagem, bem como recursos adicionais, como o carregamento da imagem de plano de fundo de puxe para atualizar, procure o suporte e a geração dinâmica de interface do usuário por meio de dados JSON. Este guia apresenta as diferentes maneiras de trabalhar com MT. D e, em seguida, examina profundamente uso avançado._
-
+# <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introdução ao MonoTouch.Dialog para xamarin
 
 MonoTouch.Dialog, conhecido como MT. D para resumir, é um kit de ferramentas de desenvolvimento da interface do usuário rápida que permite aos desenvolvedores criar telas de aplicativo e a navegação usando informações, em vez do tédio de criação de controladores de exibição, tabelas, etc. Como tal, ele fornece uma simplificação significativa de redução de desenvolvimento e o código de interface do usuário. Por exemplo, considere a captura de tela a seguir:
 

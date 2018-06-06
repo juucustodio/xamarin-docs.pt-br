@@ -1,15 +1,17 @@
 ---
 title: Parte 1 – Noções básicas sobre a plataforma Xamarin
+description: Este documento descreve a plataforma Xamarin em um nível alto, olhando para o processo de compilação, acesso SDK de plataforma, compartilhamento de código, criação de interface do usuário, os designers visuais e muito mais.
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 10d1b0786d5ca0b42b6e6c3e2f2a08edb7a37591
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 40183e5f18ee589adaf2ea903f6948293c8680f7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781888"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1 – Noções básicas sobre a plataforma Xamarin
 

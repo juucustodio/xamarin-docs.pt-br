@@ -1,21 +1,20 @@
 ---
-title: Tarefas em Segundo Plano
-description: Use o novo watchOS tarefas em segundo plano 3 para garantir que um aplicativo de inspeção sempre tenha os últimos dados e instantâneos de encaixe.
+title: watchOS tarefas em segundo plano em Xamarin
+description: Este documento descreve como usar tarefas em segundo plano com watchOS em Xamarin, dê uma olhada em tipos de tarefas em segundo plano, o uso de recursos, a implementação de tarefas em segundo plano, agendamento, melhores práticas e muito mais.
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 0279aed1e694e3b38dcb8189819d88740c37b6ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ab53d4aea32cf41c492e286c18cbe85a619889a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792034"
 ---
-# <a name="background-tasks"></a>Tarefas em Segundo Plano
-
-_Use o novo watchOS tarefas em segundo plano 3 para garantir que um aplicativo de inspeção sempre tenha os últimos dados e instantâneos de encaixe._
+# <a name="watchos-background-tasks-in-xamarin"></a>watchOS tarefas em segundo plano em Xamarin
 
 Com watchOS 3, há três maneiras principais que um aplicativo de inspeção pode manter as informações atualizadas: 
 

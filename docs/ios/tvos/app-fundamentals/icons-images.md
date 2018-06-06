@@ -1,21 +1,20 @@
 ---
-title: Trabalhando com imagens e ícones
-description: Este artigo aborda a criação e trabalho com ícones e imagens dentro de um aplicativo Xamarin.tvOS.
+title: Trabalhando com tvOS ícones e imagens no Xamarin
+description: Este documento descreve como trabalhar com imagens em um aplicativo de tvOS criados com o Xamarin e ícones. Ele aborda as imagens de inicialização, imagens em camadas, o ícone do aplicativo e muito mais.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59cbc53acf3ab7da12826b9d3cffb821631a0500
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788791"
 ---
-# <a name="working-with-icons-and-images"></a>Trabalhando com imagens e ícones
-
-_Este artigo aborda a criação e trabalho com ícones e imagens dentro de um aplicativo Xamarin.tvOS._
+# <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabalhando com tvOS ícones e imagens no Xamarin
 
 Criando cativante ícones e imagens são uma parte crítica do desenvolvimento de uma experiência de usuário envolventes para seus aplicativos da Apple TV. Este guia aborda as etapas necessárias para criar e incluir os ativos de gráficos necessários para seus aplicativos Xamarin.tvOS:
 
@@ -238,7 +237,7 @@ O conteúdo é apresentado como uma única lista rolagem horizontal do conteúdo
 
 Os seguintes tamanhos de conteúdo serão necessários:
 
-||Poster (2:3)|Square (1:1)|HDTV (16:9)|
+||Cartaz (2:3)|Quadrado (1:1)|HDTV (16:9)|
 |---|---|---|---|
 |Tamanho real|404x608px|608x608px|908x512px|
 |Tamanho da zona de segurança|380x570px|570x570px|852x479px|

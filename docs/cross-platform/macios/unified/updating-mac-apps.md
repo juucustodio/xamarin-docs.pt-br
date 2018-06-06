@@ -1,20 +1,19 @@
 ---
 title: Atualizando aplicativos existentes do Mac
-description: Siga estas etapas para atualizar um aplicativo Xamarin.Mac existente para usar a API unificada.
+description: Este documento descreve as etapas que devem ser seguidas para atualizar um aplicativo Xamarin.Mac da API clássica para a API unificada.
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a2e3df4db13ccbf8001b762bf29a3eb53cacd35a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 5e6034b079bba5e884872e4f2096d677fd3641d0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782405"
 ---
 # <a name="updating-existing-mac-apps"></a>Atualizando aplicativos existentes do Mac
-
-_Siga estas etapas para atualizar um aplicativo Xamarin.Mac existente para usar a API unificada._
 
 Atualizar um aplicativo existente para usar a API unificada requer alterações no próprio arquivo do projeto, bem como para os namespaces e as APIs usadas no código do aplicativo.
 

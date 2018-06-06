@@ -1,26 +1,26 @@
 ---
-title: Assinaturas e relatórios
+title: Assinaturas e relatórios no xamarin
+description: Este documento descreve não renovar assinaturas, assinaturas gratuitas, assinaturas automática renovável e usando iTunes Connect para relatar esses itens.
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7ba47e8f0ec114845c14269e81bb7f078a5d4936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e0873107a60b48e5ebfd8e159f3bf3b85d02867
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787023"
 ---
-# <a name="subscriptions-and-reporting"></a>Assinaturas e relatórios
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>Assinaturas e relatórios no xamarin
 
 ## <a name="about-non-renewing-subscriptions"></a>Sobre assinaturas não renovar
 
 Assinaturas renovando não se destinam a produtos que representam a venda de um serviço com uma restrição de tempo, como (acesso de uma semana para um aplicativo de navegação) ou acesso de tempo limitado a um arquivo de dados.   
    
-   
-   
- Principais diferenças entre as assinaturas não renovar e outros tipos de produto:
+Principais diferenças entre as assinaturas não renovar e outros tipos de produto:
 
 -  A definição de produto no iTunes conectar não inclui o termo. O código do aplicativo deve ser capaz de inferir o período de validade da identificação do produto. 
 -  Eles podem ser adquiridos várias vezes (como um produto consumível). Aplicativos são necessárias para gerenciar o termo/expiração de assinatura e a renovação e impedir que o usuário comprar assinaturas sobrepostas. 

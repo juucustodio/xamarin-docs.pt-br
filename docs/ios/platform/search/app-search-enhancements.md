@@ -1,5 +1,5 @@
 ---
-title: Aprimoramentos da pesquisa do aplicativo
+title: Aprimoramentos de pesquisa do aplicativo do xamarin
 description: Este artigo aborda os aprimoramentos Apple fez a pesquisa do aplicativo no iOS 10 e como implementá-los no xamarin.
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 0df51429ea9655b0a72d9f4c1e413fa7e37410ac
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 06c405a15c26e02908d609bc27cac2c0509e5028
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787878"
 ---
-# <a name="app-search-enhancements"></a>Aprimoramentos da pesquisa do aplicativo
+# <a name="app-search-enhancements-in-xamarinios"></a>Aprimoramentos de pesquisa do aplicativo do xamarin
 
 _Este artigo aborda os aprimoramentos Apple fez a pesquisa do aplicativo no iOS 10 e como implementá-los no xamarin._
 

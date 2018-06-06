@@ -1,29 +1,26 @@
 ---
-title: Referências nativo
-description: Referências nativo fornece a capacidade de inserir uma estrutura nativo em um projeto xamarin ou Xamarin.Mac ou associação.
+title: Native iOS, Mac e projetos de associações de referências
+description: Referências nativo fornece a capacidade de inserir uma estrutura nativo em um projeto de associação, Xamarin.Mac ou xamarin.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c56e392420debb21998363cfffa288aec51691ea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3a497d0bb4674014b8063cb1fbc91eec6e7ae5ea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781712"
 ---
-# <a name="native-references"></a>Referências nativo
+# <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referências nativo no iOS, Mac e associações de projetos
 
 _Referências nativo fornece a capacidade de inserir uma estrutura nativo em um projeto xamarin ou Xamarin.Mac ou associação._
-
 
 Desde o iOS 8.0 foi possível criar uma estrutura incorporada para compartilhar código entre as extensões de aplicativo e o aplicativo principal no Xcode. Usando o recurso de referência nativa será possível consumir essas estruturas inseridas (criadas com o Xcode) em xamarin.
  
 > [!IMPORTANT]
 > Referências nativo não será possível criar estruturas inseridas de qualquer tipo de xamarin ou Xamarin.Mac projetos, permitir apenas para o consumo de estruturas existentes de nativo (Objective-C).
-
-
-
 
 <a name="Terminology" />
 

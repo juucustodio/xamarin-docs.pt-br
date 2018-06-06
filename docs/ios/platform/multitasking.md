@@ -1,5 +1,5 @@
 ---
-title: Multitarefa para iPad
+title: Multitarefa para iPad em xamarin
 description: iOS 9 dá suporte a dois aplicativos em execução ao mesmo tempo, usando o slide ou modo divisão. Ele também dá suporte a imagem na imagem de reprodução de vídeo.
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 553fd6e45df897037d6ad90ef9211eef0bf27aae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7eacd9ece067d2ddf6363c0551055daa3df4433a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787949"
 ---
-# <a name="multitasking-for-ipad"></a>Multitarefa para iPad
+# <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarefa para iPad em xamarin
 
 _iOS 9 dá suporte a dois aplicativos em execução ao mesmo tempo, usando o slide ou modo divisão. Ele também dá suporte a imagem na imagem de reprodução de vídeo._
 
@@ -127,8 +128,8 @@ Em iPads que dão suporte a Slide sobre e modo divisão, você pode terminar com
 | **Orientação** | **Aplicativo primário** | **Aplicativo secundário** |
 |--- |--- |--- |
 | **Retrato** |75% da tela<br />Compact Horizontal<br />Regular Vertical|25% da tela<br />Compact Horizontal<br />Regular Vertical|
-| **Landscape** |75% da tela<br />Regular Horizontal<br />Regular Vertical|25% da tela<br />Compact Horizontal<br />Regular Vertical|
-| **Landscape** |50% da tela<br />Compact Horizontal<br />Regular Vertical|50% da tela<br />Compact Horizontal<br />Regular Vertical|
+| **Paisagem** |75% da tela<br />Regular Horizontal<br />Regular Vertical|25% da tela<br />Compact Horizontal<br />Regular Vertical|
+| **Paisagem** |50% da tela<br />Compact Horizontal<br />Regular Vertical|50% da tela<br />Compact Horizontal<br />Regular Vertical|
 
 O exemplo [MuliTask](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) aplicativo, se a tela inteira é executado em um iPad no modo paisagem, ele apresentará a lista e o modo de exibição de detalhes ao mesmo tempo:
 

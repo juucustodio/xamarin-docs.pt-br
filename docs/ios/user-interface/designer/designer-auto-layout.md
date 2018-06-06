@@ -1,21 +1,20 @@
 ---
 title: Layout automático com o Designer de Xamarin para iOS
-description: Este guia apresenta novas restrições fluxo de trabalho disponível no Designer de Xamarin para iOS e iOS Layout automático.
+description: Este guia apresenta iOS Layout automático e descreve como usar o Designer do Xamarin para iOS para criar e editar usando restrições de layouts. Ele também aborda as restrições de modificação no código, animar alterações de restrição e muito mais.
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2023483f817c365d2cfad6945b281d630317693b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 876bf3de19d2bcce7d951facc92d5b05a928cd38
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790195"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Designer de Xamarin para iOS
-
-_Este guia apresenta novas restrições fluxo de trabalho disponível no Designer de Xamarin para iOS e iOS Layout automático._
 
 Layout automático (também chamado de "adaptável layout") é uma abordagem de design responsivo. Ao contrário do sistema de layout de transição, onde o local de cada elemento é codificado para um ponto na tela, o Layout automático é sobre *relações* -as posições de elementos em relação a outros elementos na superfície de design. A essência do Layout automático é a ideia de restrições ou regras que definem o posicionamento de um elemento ou um conjunto de elementos no contexto de outros elementos na tela. Como os elementos não estão vinculados a uma posição específica na tela, restrições ajudam a criar um layout adaptável que parece bom em diferentes tamanhos de telas e orientações de dispositivo.
 

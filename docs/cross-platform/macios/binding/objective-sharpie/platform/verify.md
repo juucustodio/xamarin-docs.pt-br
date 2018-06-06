@@ -1,18 +1,19 @@
 ---
-title: Verifique se os atributos
+title: Objetivo Sharpie verificar atributos
+description: Este documento descreve o atributo [verificar] gerado pelo Sharpie objetivo. O atributo [verificar] realça a desenvolvedores de onde eles devem verificar saída do objetivo Sharpie manualmente.
 ms.prod: xamarin
 ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: b9409b4351ed9233db0edf8e2dd9f516b9727fe0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 96e5bafc14c2d3aba03ccc137151a83ee8afeef9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780705"
 ---
-# <a name="verify-attributes"></a>Verifique se os atributos
-
+# <a name="objective-sharpie-verify-attributes"></a>Objetivo Sharpie verificar atributos
 
 Você descobrirá com frequência que associações produzidas por objetivo Sharpie serão anotadas com a `[Verify]` atributo. Esses atributos indicam que você deve _verificar_ que Sharpie objetivo foi a ação correta, comparando a associação com a declaração original do C/Objective-C (que será fornecida em um comentário acima da declaração associada).
 
@@ -27,7 +28,7 @@ Depois de verificar que a associação é corrigir ou corrigido-o para correto, 
 
 O argumento de dica fornecido para o atributo pode ser cruzado referenciada com a documentação a seguir. Documentação para qualquer produzido `[Verify]` atributos serão fornecidos no console também após a associação.
 
-|Verifique se a dica|Descrição|
+|`[Verify]` Dica de|Descrição|
 |---|---|
 |InferredFromPreceedingTypedef|O nome dessa declaração foi inferido pela convenção comum dos imediatamente precedentes `typedef` no código nativo de origem original. Verifique se o nome deduzido correto, pois essa convenção é ambígua.|
 |ConstantsInterfaceAssociation|Não há nenhuma maneira de prova para determinar com qual interface Objective-C, uma declaração de variável externa pode ser associada. Essas instâncias são associadas como `[Field]` propriedades em uma interface parcial em uma interface perto por, concreto, para produzir uma API mais intuitiva, possivelmente, eliminando as constantes interface completamente.|

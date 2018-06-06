@@ -1,21 +1,20 @@
 ---
-title: Eventos, protocolos e delegados
-description: Este artigo apresenta as tecnologias de iOS chave usadas para receber retornos de chamada e preencher os controles de interface de usuário com dados. Essas tecnologias são eventos, protocolos e delegados. Este artigo explica o que cada um deles for e como cada um é usada no c#. Ele demonstra como xamarin usa controles de iOS para expor familiares eventos de .NET, bem como xamarin oferece suporte para conceitos de Objective-C como protocolos e delegados (delegados Objective-C não devem ser confundidos com c# delegados). Este artigo também fornece exemplos que mostram como os protocolos são usados – como a base para delegados Objective-C e em cenários de não delegado.
+title: Eventos, protocolos e delegados no xamarin
+description: Este documento descreve como trabalhar com eventos, protocolos e delega em xamarin. Esses conceitos fundamentais são onipresentes no desenvolvimento do xamarin.
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0e4c23bffe689c9218da2f43b97d98f348513ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784004"
 ---
-# <a name="events-protocols-and-delegates"></a>Eventos, protocolos e delegados
-
-_Este artigo apresenta as tecnologias de iOS chave usadas para receber retornos de chamada e preencher os controles de interface de usuário com dados. Essas tecnologias são eventos, protocolos e delegados. Este artigo explica o que cada um deles for e como cada um é usada no c#. Ele demonstra como xamarin usa controles de iOS para expor familiares eventos de .NET, bem como xamarin oferece suporte para conceitos de Objective-C como protocolos e delegados (delegados Objective-C não devem ser confundidos com c# delegados). Este artigo também fornece exemplos que mostram como os protocolos são usados – como a base para delegados Objective-C e em cenários de não delegado._
+# <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventos, protocolos e delegados no xamarin
 
 Xamarin usa os controles para expor os eventos para a maioria das interações do usuário.
 Aplicativos xamarin consomem esses eventos da mesma forma como os aplicativos tradicionais do .NET. Por exemplo, a classe xamarin UIButton tem um evento chamado TouchUpInside e consome este evento, como se foram a essa classe e o evento em um aplicativo .NET.
@@ -28,15 +27,13 @@ Neste artigo, você saberá mais sobre estes tópicos, fornecendo uma base sóli
 -  **Protocolos** – aprender quais protocolos estão e como eles são usados e criando um exemplo que fornece dados para uma anotação de mapa.
 -  **Delegados** – aprendizado sobre delegados Objective-C estender o exemplo de mapa para manipular a interação do usuário que inclui uma anotação, em seguida, a diferença entre os delegados fortes e fracos e quando usar cada um de aprendizado.
 
-
 Para ilustrar os protocolos e delegados, criaremos um aplicativo simples de mapa que adiciona uma anotação a um mapa, conforme mostrado aqui:
 
  [![](delegates-protocols-and-events-images/01-map.png "Um exemplo de um aplicativo simples de mapa que adiciona uma anotação a um mapa") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "uma anotação de exemplo adicionada a um mapa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Antes de lidar com esse aplicativo, vamos começar examinando o UIKit eventos .NET.
 
- <a name=".NET_Events_with_UIKit" />
-
+<a name=".NET_Events_with_UIKit" />
 
 ## <a name="net-events-with-uikit"></a>Eventos do .NET com UIKit
 
@@ -47,7 +44,6 @@ aButton.TouchUpInside += (o,s) => {
     Console.WriteLine("button touched");
 };
 ```
-
 Você também pode implementar isso com um estilo 2.0 método anônimo c# como esta:
 
 ```csharp

@@ -1,15 +1,17 @@
 ---
 title: Guia de referência de tipos de associação
+description: Este guia de referência descreve vários atributos e conceitos que são necessárias para entender quando criar associações do c# para bibliotecas Objective-C.
 ms.prod: xamarin
 ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 35e3a645a3a7f837c87d88a156051d39f49dc4ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3de85a1e3c84366a2059a8f7c479c20ce873508d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782164"
 ---
 # <a name="binding-types-reference-guide"></a>Guia de referência de tipos de associação
 

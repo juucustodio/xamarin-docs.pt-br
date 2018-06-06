@@ -1,21 +1,20 @@
 ---
-title: Notificações de usuário aprimorada
-description: Este artigo aborda todas as maneiras que a notificação de usuários foram aprimorada por iOS 10 e como usá-los em um aplicativo xamarin.
+title: Notificações de usuário aprimorada no xamarin
+description: Este artigo descreve a estrutura de notificações do usuário, introduzida no iOS 10. Ele aborda as notificações de locais, notificações remotas, gerenciamento de notificação, ações de notificação e muito mais.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: b27d415240f3b8cd25c4bc54f6d176c50e42a250
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 29c529d57d35b0ab2b7bf2e80f8d295a8d059c5e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788648"
 ---
-# <a name="enhanced-user-notifications"></a>Notificações de usuário aprimorada
-
-_Este artigo aborda todas as maneiras que a notificação de usuários foram aprimorada por iOS 10 e como usá-los em um aplicativo xamarin._
+# <a name="enhanced-user-notifications-in-xamarinios"></a>Notificações de usuário aprimorada no xamarin
 
 Novo para o iOS 10, a notificação do usuário framework permite a entrega e a manipulação de notificações de locais e remotas. Usando essa estrutura, um aplicativo ou extensão do aplicativo pode agendar a entrega de notificações locais, especificando um conjunto de condições, como local ou a hora do dia.
 

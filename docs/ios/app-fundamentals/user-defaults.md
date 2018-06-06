@@ -1,19 +1,20 @@
 ---
-title: Trabalhando com os padrões do usuário
-description: Este artigo aborda o trabalho com NSUserDefault para salvar as configurações padrão em um aplicativo ou extensão do iOS Xamarin.
+title: Trabalhando com os padrões do usuário em xamarin
+description: Este artigo aborda o trabalho com NSUserDefaults para salvar as configurações padrão em um aplicativo Xamarin iOS ou extensão. Ele descreve NSUserDefaults em um nível alto e discute como ler e gravar valores.
 ms.prod: xamarin
 ms.assetid: DAE7FFC4-B8C9-4D9E-886A-9B2388452EEB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: aa28e7d5636b06c8ab1e46457537431b5d1c7f1a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3befe77e990887773d408a3b9b6ec2e8cd371540
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784602"
 ---
-# <a name="working-with-user-defaults"></a>Trabalhando com os padrões do usuário
+# <a name="working-with-user-defaults-in-xamarinios"></a>Trabalhando com os padrões do usuário em xamarin
 
 _Este artigo aborda o trabalho com NSUserDefault para salvar as configurações padrão em uma extensão ou Xamarin.iOS App._
 

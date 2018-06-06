@@ -1,21 +1,20 @@
 ---
-title: Criando controles personalizados
-description: Este artigo descreve como criar controles personalizados e trabalhar com eles no construtor de Interface.
+title: Criando controles personalizados no Xamarin.Mac
+description: Este documento descreve como criar controles personalizados em Xamarin.Mac. Ele mostra como criar o controle personalizado, acompanhar seu estado, desenhar sua interface, responder à entrada do usuário e usar o controle em um aplicativo.
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e1ab3977df96e241fa2a5a80f6cabd74d7d775f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e4c2b2c9ee7bae3d6489fec6b22881653ec53043
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792672"
 ---
-# <a name="creating-custom-controls"></a>Criação de controles personalizados
-
-_Este artigo descreve como criar controles personalizados e trabalhar com eles no construtor de Interface._
+# <a name="creating-custom-controls-in-xamarinmac"></a>Criando controles personalizados no Xamarin.Mac
 
 Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, você tem acesso ao mesmo usuário que controla um desenvolvedor trabalhando em *Objective-C*, *Swift* e *Xcode* does . Como Xamarin.Mac se integra diretamente com o Xcode, você pode usar do Xcode _Interface construtor_ para criar e manter seus controles de usuário (ou, opcionalmente, criá-los diretamente no código do c#).
 

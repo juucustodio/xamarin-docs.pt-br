@@ -6,12 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: cc6cb282565e08f7ce4401e5317fba518a74a8f3
-ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
+ms.date: 05/30/2018
+ms.openlocfilehash: 762a604186cf8657ce2f3732081cd82612b1b7ef
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732990"
 ---
 # <a name="ios-platform-specifics"></a>iOS específicos de plataforma
 
@@ -29,6 +30,7 @@ No iOS, xamarin. Forms contém as seguintes especificações de plataforma:
 - Definir a visibilidade da barra de status em um [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). Para obter mais informações, consulte [definindo a visibilidade da barra de Status em uma página](#set_status_bar_visibility).
 - Controlar se uma [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) trata um gesto de toque ou passá-lo para seu conteúdo. Para obter mais informações, consulte [atrasar ajustes conteúdo em um ScrollView](#delay_content_touches).
 - Definindo o estilo do separador em um [ `ListView` ](xref:Xamarin.Forms.ListView). Para obter mais informações, consulte [definindo o estilo do separador em ListView](#listview-separatorstyle).
+- Desabilitar o modo de cor herdados em tem suporte [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obter mais informações, consulte [desabilitar o modo de cor herdado](#legacy-color-mode).
 
 <a name="blur" />
 
@@ -506,6 +508,47 @@ O resultado é que a especificada [ `SeparatorStyle` ](xref:Xamarin.Forms.Platfo
 
 > [!NOTE]
 > Quando o estilo do separador foi definido `FullWidth`, ele não pode ser alterado para `Default` em tempo de execução.
+
+<a name="legacy-color-mode" />
+
+## <a name="disabling-legacy-color-mode"></a>Desabilitar o modo de cor herdado
+
+Algumas das exibições de xamarin. Forms apresentam um modo de cor herdado. Nesse modo, quando o [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) propriedade do modo de exibição está definida como `false`, o modo de exibição substituirá as cores definidas pelo usuário com as cores padrão de nativo para o estado desabilitado. Versões anteriores a compatibilidade, esse modo herdado cor permanece o comportamento padrão para exibições com suporte.
+
+Essa plataforma específica desabilita nesse modo herdado de cor, para que permaneçam de cores definidas em uma exibição pelo usuário mesmo quando o modo de exibição está desabilitado. Ele é consumido em XAML, definindo o [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsLegacyColorModeEnabledProperty) anexado propriedade `false`:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button Text="Button"
+                TextColor="Blue"
+                BackgroundColor="Bisque"
+                ios:VisualElement.IsLegacyColorModeEnabled="False" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+Como alternativa, ele pode ser consumido de c# usando a API fluente:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+_legacyColorModeDisabledButton.On<iOS>().SetIsLegacyColorModeEnabled(false);
+```
+
+O `VisualElement.On<iOS>` método Especifica que este específica de plataforma será executado apenas no iOS. O [ `VisualElement.SetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Boolean)) método, no [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usada para controlar se o modo de cor herdado está desabilitado. Além disso, o [ `VisualElement.GetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})) método pode ser usado para retornar se o modo de cor herdado está desabilitado.
+
+O resultado é que o modo de cor herdado pode ser desabilitado, para que as cores definidas em uma exibição pelo usuário permanecem mesmo quando o modo de exibição está desativado:
+
+![](ios-images/legacy-color-mode-disabled.png "Modo herdado cor desabilitado")
+
+> [!NOTE]
+> Ao definir um [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) em uma exibição, o modo de cor herdados completamente será ignorado. Para obter mais informações sobre estados visuais, consulte [o Gerenciador de estado Visual xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="summary"></a>Resumo
 

@@ -1,5 +1,5 @@
 ---
-title: PassKit
+title: PassKit em xamarin
 description: Carteira é um aplicativo iOS do sistema que armazena e exibe os códigos de barras e outras informações para vincular a transações do cliente em seu telefone com 'reais'.
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: f1c8ac92c5ff7eed5116587ed13755ddee74a877
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0a4fd39e312cf96ac59eae97b1212f001c4ef799
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788342"
 ---
-# <a name="passkit"></a>PassKit
+# <a name="passkit-in-xamarinios"></a>PassKit em xamarin
 
 _Carteira é um aplicativo iOS do sistema que armazena e exibe os códigos de barras e outras informações para vincular a transações do cliente em seu telefone com 'reais'._
 
@@ -459,7 +460,7 @@ As seguintes classes de passar Kit estão disponíveis para aplicativos acessem 
 -  **PKPass** – uma instância de uma passagem.
 -  **PKPassLibrary** – fornece a API para acessar os passos no dispositivo.
 -  **PKAddPassesViewController** – usado para exibir uma passagem para o usuário salve em seu bolso.
--  **PKAddPassesViewControllerDelegate** – Xamarin.iOS developers
+-  **PKAddPassesViewControllerDelegate** – os desenvolvedores do xamarin
 
 
 ## <a name="example"></a>Exemplo

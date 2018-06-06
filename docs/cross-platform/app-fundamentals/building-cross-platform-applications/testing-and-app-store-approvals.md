@@ -1,15 +1,17 @@
 ---
 title: Parte 6 - teste e aprovações de loja de aplicativos
+description: Este documento descreve como testar um aplicativo de plataforma cruzada no dispositivo, gerenciar casos de teste, automatizar testes, executar testes de unidade e realizar o processo de envio do aplicativo.
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: cae577ffb901f4c1196b0e997561825526409117
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 0faf7c9e4ff7c96cdfd25ab6d6658726ef247b32
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781641"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 - teste e aprovações de loja de aplicativos
 

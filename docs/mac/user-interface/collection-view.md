@@ -1,5 +1,5 @@
 ---
-title: Exibições de coleção
+title: Exibições de coleção em Xamarin.Mac
 description: Este artigo descreve o funcionamento com exibições de coleção em um aplicativo Xamarin.Mac. Ele abrange a criar e manter as exibições de coleção no Xcode e o construtor de Interface e trabalhar com eles por meio de programação.
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/24/2017
-ms.openlocfilehash: f391a9df8a0d4012637c503bc95c6de2185dd2f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8e354b1ce273b10758a7d8c1361055b972839943
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792551"
 ---
-# <a name="collection-views"></a>Exibições de coleção
+# <a name="collection-views-in-xamarinmac"></a>Exibições de coleção em Xamarin.Mac
 
 _Este artigo descreve o funcionamento com exibições de coleção em um aplicativo Xamarin.Mac. Ele abrange a criar e manter as exibições de coleção no Xcode e o construtor de Interface e trabalhar com eles por meio de programação._
 

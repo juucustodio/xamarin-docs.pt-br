@@ -1,21 +1,20 @@
 ---
-title: Trabalhando com controle de página
-description: Este artigo aborda criando e trabalhando com controle de página dentro de um aplicativo Xamarin.tvOS.
+title: Trabalhando com tvOS controles de página em Xamarin
+description: Este documento descreve como trabalhar com controles de página tvOS em um aplicativo compilado com o Xamarin. Fornece uma descrição detalhada dos controles da página, descreve como configurá-las em storyboards e examina como responder a eventos de alteração de página.
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1cb07c050aeb2ee72e34048baab991df2d5775d0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bf020f230afc2eb2a09d863424bd4eb56ea1bde6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789152"
 ---
-# <a name="working-with-page-control"></a>Trabalhando com controle de página
-
-_Este artigo aborda criando e trabalhando com controle de página dentro de um aplicativo Xamarin.tvOS._
+# <a name="working-with-tvos-page-controls-in-xamarin"></a>Trabalhando com tvOS controles de página em Xamarin
 
 Às vezes, talvez seja necessário exibir uma série de páginas ou imagens em seu aplicativo Xamarin.tvOS. Um controle de página foi projetado para mostrar claramente a página de um usuário estiver no número máximo de páginas. Um controle de página exibe uma série de pontos em um escuro, oval em forma de plano de fundo. A página atual será exibido um ponto preenchido, todas as outras páginas mostram como pontos vazios. O controle de página recortará os pontos mais externos, se houver muito grande para caber na área de seu plano de fundo.
 
@@ -72,9 +71,6 @@ Apple tem as sugestões a seguir ao usar um controle de página:
 
 > [!IMPORTANT]
 > Embora seja possível atribuir eventos como `TouchUpInside` para um elemento de interface do usuário (como um UIButton) no Designer do iOS, ele nunca será chamado porque Apple TV não tem um toque de tela ou oferecer suporte a eventos de toque. Você sempre deve usar o `Primary Action` eventos durante a criação de manipuladores de eventos para tvOS elementos da interface do usuário.
-
-
-
 
 Editar seu controlador de exibição (exemplo `ViewController.cs`) e adicione o código para manipular as páginas que está sendo alteradas. Por exemplo:
 

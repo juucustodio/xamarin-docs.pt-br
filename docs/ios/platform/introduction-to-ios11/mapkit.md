@@ -1,16 +1,18 @@
 ---
 title: Novos recursos no MapKit no iOS 11
+description: 'Este documento descreve novos recursos MapKit iOS 11: agrupamento marcadores, no botão bússola, o modo de exibição de escala e o botão de controle de usuário.'
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: 3b1ac8015a86292f00f26133277ead2f211dca33
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f73078a2dcbaeefeb5608ce7ec1e2c12b261acad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787400"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>Novos recursos no MapKit no iOS 11
 

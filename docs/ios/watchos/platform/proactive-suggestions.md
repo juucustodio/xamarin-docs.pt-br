@@ -1,5 +1,5 @@
 ---
-title: Sugestões proativos
+title: watchOS pró-ativo sugestões em Xamarin
 description: Este artigo mostra como usar pró-ativo sugestões em um aplicativo watchOS 3 para o contrato de unidade, permitindo que o sistema proativamente apresentar informações úteis automaticamente para o usuário.
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f22be43f814865c3c14e12aa2aec3a8dbce09b7a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33dccd00e07062e040c2707826ef62b764e11a0e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791274"
 ---
-# <a name="proactive-suggestions"></a>Sugestões proativos
+# <a name="watchos-proactive-suggestions-in-xamarin"></a>watchOS pró-ativo sugestões em Xamarin
 
 _Este artigo mostra como usar pró-ativo sugestões em um aplicativo watchOS 3 para o contrato de unidade, permitindo que o sistema proativamente apresentar informações úteis automaticamente para o usuário._
 
 
-Novo para watchOS 3, modos de notícias presentes pró-ativo sugestões para os usuários a se comunicar com aplicativos xamarin por proativamente apresentam informações úteis automaticamente para o usuário em momentos apropriados.
+Novo para watchOS 3, modos de notícias presentes pró-ativo sugestões para os usuários a se comunicar com um aplicativo xamarin por proativamente apresentam informações úteis automaticamente para o usuário em momentos apropriados.
 
 
 ## <a name="about-proactive-suggestions"></a>Sobre sugestões proativos

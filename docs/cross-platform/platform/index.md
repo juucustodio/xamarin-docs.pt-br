@@ -1,22 +1,22 @@
 ---
-title: Suporte ao idioma
-description: Conceitos e recursos de aplicativos de plataforma cruzada.
+title: Suporte a idiomas no Xamarin de programação
+description: 'Este documento descreve várias linguagens de programação com suporte de Xamarin. Ele discute c#, F #, portátil Visual Basic.NET e modelos Razor.'
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 18d7e93d686f369dec4a98b5b5f6c77679119091
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 715f63a0be54ba3342bd63c1c76d89656313359a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781670"
 ---
-# <a name="language-support"></a>Suporte ao idioma
-
-Esta seção contém documentos que explicam alguns conceitos e recursos mais avançados do aplicativo de plataforma cruzada.
+# <a name="programming-language-support-in-xamarin"></a>Suporte a idiomas no Xamarin de programação
 
 ## <a name="c"></a>C# 
+
 ###  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
 
 Versão 5 do c# introduziu duas novas palavras-chave para expressar operações assíncronas: async e await. Essas palavras-chave permitem que você escrever código simple que utiliza a biblioteca paralela de tarefas para executar operações de longa execução (como o acesso à rede) em outro thread e acessar facilmente os resultados após a conclusão. As versões mais recentes do xamarin e xamarin suportam async e await - este documento fornece explicações e um exemplo de como usar a nova sintaxe com o Xamarin.

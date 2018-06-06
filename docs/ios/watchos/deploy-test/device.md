@@ -1,19 +1,20 @@
 ---
-title: Testes em dispositivos de inspeção
-description: Implantação de aplicativos para teste em seu Apple Watch
+title: Apple Watch dispositivos de teste
+description: Este documento descreve como implantar um aplicativo watchOS criado com o Xamarin para teste em um Apple Watch real. Ele discute dispositivos, o provisionamento de perfis, teste e fornece algumas dicas de solução de problemas.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a960d81d41ff127fa3316e6190dfbf4881305c02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790855"
 ---
-# <a name="testing-on-watch-devices"></a>Testes em dispositivos de inspeção
+# <a name="testing-on-apple-watch-devices"></a>Apple Watch dispositivos de teste
 
 Depois que você seguiu o [etapas de implantação](~/ios/watchos/deploy-test/index.md) para criar grupos de aplicativos e de IDs de aplicativo (se necessário), use as instruções nesta página para:
 

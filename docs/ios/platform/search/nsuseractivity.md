@@ -1,18 +1,20 @@
 ---
-title: Pesquisa com NSUserActivity
+title: Pesquisa com NSUserActivity em xamarin
+description: Este documento descreve como indexar um NSUserActivity, tornando pesquisáveis em destaque e Safari. Ele discute como responder a seleção de um NSUserActivity nos resultados da pesquisa.
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 803fcce359bbe27ea19901afa766f5b7f4692e0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4b053f66e9b6b7715cbe52c4e43d9db32db48f4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788202"
 ---
-# <a name="search-with-nsuseractivity"></a>Pesquisa com NSUserActivity
+# <a name="search-with-nsuseractivity-in-xamarinios"></a>Pesquisa com NSUserActivity em xamarin
 
 `NSUserActivity` foi introduzido no iOS 8 e é usado para fornecer os dados para entrega.
 Ele permite que você crie atividades em partes específicas do aplicativo que pode ser passado para outra instância do seu aplicativo em execução em um dispositivo iOS diferentes. O dispositivo de recepção pode continuar a atividade iniciada no dispositivo anterior, separando direita onde o usuário parou. Para obter mais informações sobre o uso de entrega, consulte nosso [Introdução à entrega](~/ios/platform/handoff.md) documentação.

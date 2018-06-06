@@ -1,5 +1,5 @@
 ---
-title: HomeKit
+title: HomeKit em xamarin
 description: HomeKit é a estrutura da Apple para controlar os dispositivos de automação inicial. Este artigo apresenta HomeKit e abrange Configurando Acessórios de teste no simulador acessório HomeKit e gravar um aplicativo simples do xamarin para interagir com esses Acessórios.
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 5699465330a4d2a5b983ec7661f80c1ed4f14bde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0dfc6e9ba5098df66a72292d6c8b89ea1bbd1f97
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787455"
 ---
-# <a name="homekit"></a>HomeKit
+# <a name="homekit-in-xamarinios"></a>HomeKit em xamarin
 
 _HomeKit é a estrutura da Apple para controlar os dispositivos de automação inicial. Este artigo apresenta HomeKit e abrange Configurando Acessórios de teste no simulador acessório HomeKit e gravar um aplicativo simples do xamarin para interagir com esses Acessórios._
 
@@ -421,7 +422,7 @@ O `HMCharacteristicType` enum fornece um conjunto de valores de metadados de car
  - LockManagementAutoSecureTimeout
  - LockManagementControlPoint
  - LockMechanismLastKnownAction
- - Logs
+ - logs
  - Fabricante
  - Modelo
  - MotionDetected

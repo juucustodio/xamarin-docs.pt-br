@@ -1,34 +1,32 @@
 ---
-title: Recursos da plataforma
-description: Documentos nesta seção abordam recursos específicos para iOS.
+title: Recursos da plataforma iOS
+description: Esse links do documento para várias guias que descrevem os recursos introduzidos em várias versões do iOS e outros recursos de plataforma do iOS.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/15/2017
-ms.openlocfilehash: 0a76ed52f52de144bb3da1e7be6e215ce0dfe0ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95053faa4bab0a65660772aeea39405e4a80a042
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787081"
 ---
-# <a name="platform-features"></a>Recursos da plataforma
+# <a name="ios-platform-features"></a>Recursos da plataforma iOS
 
 ##  <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[Introdução ao iOS 11](~/ios/platform/introduction-to-ios11/index.md)
 
 Como instalar e começar a usar o Xcode 9 beta e a visualização de suporte para 11 de iOS do Xamarin.
 
-
 ##  <a name="introduction-to-ios-10iosplatformintroduction-to-ios10indexmd"></a>[Introdução ao iOS 10](~/ios/platform/introduction-to-ios10/index.md)
 
 IOS da Apple 10 inclui várias APIs e serviços que permitem que você desenvolva aplicativos com novos recursos e funcionalidades novos. Com iOS 10, os aplicativos têm novas habilidades como a extensão de mapas, mensagens, telefone e Siri. Esta seção mostra como aproveitar esses recursos em um aplicativo xamarin.
 
-
 ##  <a name="introduction-to-ios-9iosplatformintroduction-to-ios9indexmd"></a>[Introdução ao iOS 9](~/ios/platform/introduction-to-ios9/index.md)
 
 Esta seção define as alterações feitas no iOS 9, ao atualizar do iOS 8 e como usar esses recursos em um aplicativo xamarin.
-
 
 ##  <a name="introduction-to-ios-8iosplatformintroduction-to-ios8md"></a>[Introdução ao iOS 8](~/ios/platform/introduction-to-ios8.md)
 
@@ -147,8 +145,6 @@ Novo para o iOS 10, a notificação do usuário framework permite a entrega e a 
 ##  <a name="wide-coloriosplatformwide-colormd"></a>[Cores amplas](~/ios/platform/wide-color.md)
 
 iOS 10 e macOS Serra aprimora o suporte para formatos de pixel do intervalo estendido e espaços de toda a gama de cores em todo o sistema, incluindo estruturas, como gráficos de núcleo, imagem principal, sistema operacional e AVFoundation. Suporte para dispositivos com telas de cores de largura é facilitado mais fornecendo esse comportamento em toda a pilha do gráfico inteiro.
-
-
 
 ##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[Associação do Objective-C](binding-objective-c/index.md)
 

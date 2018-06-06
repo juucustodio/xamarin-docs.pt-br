@@ -1,21 +1,20 @@
 ---
-title: Criando Interfaces do usuário do iOS em código
-description: Xamarin fornece dois métodos de criação de uma Interface de usuário para seu aplicativo – com o Designer de Xamarin para iOS ou em código. Este artigo examina como criar interfaces de usuário do iOS inteiramente no código. Ele mostra como iniciar a partir de um modelo de projeto para criar uma tela do aplicativo em um controlador, criando uma hierarquia de modos de exibição de UIKit. Depois, aborda como criar modos de exibição personalizados que podem ser carregados em um controlador.
+title: Criando Interfaces do usuário do iOS no código em xamarin
+description: Este documento descreve como usar código para criar uma interface de usuário para um aplicativo xamarin. Ele discute exibir controladores, criando uma hierarquia de exibição, tratando uma rotação e muito mais.
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: e2f377b11cfb1ff5027cc704de694184d2208c97
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 5e8abc2cea2e2ca8abfada8bc85379d93d183768
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784628"
 ---
-# <a name="creating-ios-user-interfaces-in-code"></a>Criando Interfaces do usuário do iOS em código
-
-_Xamarin fornece dois métodos de criação de uma Interface de usuário para seu aplicativo – com o Designer de Xamarin para iOS ou em código. Este artigo examina como criar interfaces de usuário do iOS inteiramente no código. Ele mostra como iniciar a partir de um modelo de projeto para criar uma tela do aplicativo em um controlador, criando uma hierarquia de modos de exibição de UIKit. Em seguida, ele discute como criar modos de exibição personalizados que podem ser carregados em um controlador._
+# <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Criando Interfaces do usuário do iOS no código em xamarin
 
 A interface do usuário de um aplicativo do iOS é como uma vitrine eletrônica – o aplicativo normalmente obtém de uma janela, mas ele pode preencher a janela de com como muitos objetos em que ele precisa, e as organizações e os objetos podem ser alteradas dependendo o que o aplicativo deseja exibir. Os objetos nesse cenário – as coisas que o usuário vê – são chamados de exibições. Para criar uma única tela em um aplicativo, os modos de exibição são empilhados uns sobre os outros em uma hierarquia de exibição de conteúdo e a hierarquia é gerenciada por um único controlador de exibição. Aplicativos com várias telas têm várias hierarquias de exibição de conteúdo, cada uma com seu próprio controlador de exibição; o aplicativo coloca as exibições na janela para criar uma hierarquia de exibição de conteúdo diferente com base na tela na qual o usuário está.
 

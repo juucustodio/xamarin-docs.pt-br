@@ -1,21 +1,20 @@
 ---
-title: Ícones de aplicativo
-description: Cobre este artigo incluindo e gerenciando um ativo de imagem em um aplicativo xamarin para ser usado como um ícone de aplicativo.
+title: Ícones de aplicativo em xamarin
+description: 'Este documento descreve como trabalhar com vários ícones de aplicativo em xamarin: o ícone do aplicativo em si, os ícones de destaque, ícones de configurações e arte final do iTunes.'
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 3bf9286fe641d836f0877bfe2e17263bf9d7356e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c07f2573aa8ac6e28b2cd6bff56a773e6206aea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783991"
 ---
-# <a name="application-icons"></a>Ícones de aplicativo
-
-_Cobre este artigo incluindo e gerenciando um ativo de imagem em um aplicativo xamarin para ser usado como um ícone de aplicativo._
+# <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo em xamarin
 
 Os tópicos a seguir serão abordados em detalhes:
 
@@ -45,7 +44,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPhone: iOS 9 e 10 (iPhone 6 e 7 mais)**
 
-    ||3x|
+    ||x 3|
     |---|---|
     |Ícone do Aplicativo|180x180|
     |Destaque|120x120|
@@ -53,7 +52,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPhone: iOS 7 e 8**
 
-    ||1x|2x|
+    ||1 x|x 2|
     |---|---|---|
     |Ícone do Aplicativo|60x60<sup>1</sup>|120x120|
     |Destaque|40x40<sup>2</sup>|80x80|
@@ -61,7 +60,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPhone: iOS 5 e 6**
 
-    ||1x|2x|
+    ||1 x|x 2|
     |---|---|---|
     |Ícone do Aplicativo|57 x 57|114x114|
     |Destaque|29 x 29|58x58|
@@ -79,7 +78,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPad: iOS 7 & 8**
 
-    ||1x|2x|
+    ||1 x|x 2|
     |---|---|---|
     |Ícone do Aplicativo|76 x 76|152x152|
     |Destaque|40 x 40|80x80|
@@ -87,7 +86,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPad: iOS 5 & 6**
 
-    ||1x|2x|
+    ||1 x|x 2|
     |---|---|---|
     |Ícone do Aplicativo|72 x 72|144x144|
     |Destaque|50 x 50|100x100|
@@ -114,7 +113,7 @@ Para usar um catálogo de ativos, faça o seguinte:
 
 1. Clique duas vezes o `Info.plist` arquivo o **Gerenciador de soluções** para abri-lo para edição.
 2. Role para baixo até o **ícones de aplicativo** seção.
-3. Do **fonte** suspensa lista, certifique-se de **AppIcons** é selecionado: 
+3. Do **fonte** suspensa lista, certifique-se de **AppIcon** é selecionado: 
 
     ![](app-icons-images/migrate01.png "Certifique-se de que AppIcons está selecionado")
 4. Do **Solution Explorer**, clique duas vezes o `Assets.xcassets` arquivo para abri-lo para edição: 

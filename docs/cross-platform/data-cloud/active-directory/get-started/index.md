@@ -1,16 +1,17 @@
 ---
 title: Azure Active Directory
-description: Registrar um aplicativo para usar o Active Directory do Azure
+description: Este documento descreve as etapas que devem ser seguidas para permitir que um aplicativo móvel autenticar com o Active Directory do Azure.
 ms.prod: xamarin
 ms.assetid: 70B3C2AB-CB4D-420C-9CFA-20CCFA0E3C78
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: decc069bd2fe31d54c886793ae4c94935b23ad02
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ca33422817f19dbb0a04e8870800d3f5efa8af2a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780055"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
 

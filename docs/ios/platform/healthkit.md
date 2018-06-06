@@ -1,21 +1,20 @@
 ---
-title: HealthKit
-description: HealthKit é uma estrutura introduzida no iOS 8 que fornece um repositório de dados seguro, centralizado e coordenado para informações relacionadas à integridade. O sistema operacional garante a privacidade e segurança de informações de integridade e, com o aplicativo de integridade, um painel para o usuário. Com a permissão do usuário, os aplicativos podem ler e gravar uma ampla variedade de informações de integridade.
+title: HealthKit em xamarin
+description: Este documento descreve HealthKit, uma estrutura introduzida no iOS 8 que fornece um repositório de dados seguro, centralizado e coordenado para informações relacionadas à integridade. Ele discute como provisionar um aplicativo HealthKit e como escrever código que usa a estrutura de HealthKit.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06c0231bbb9aa7b82b92e0a8c2157b8be9c8b05b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787527"
 ---
-# <a name="healthkit"></a>HealthKit
-
-_HealthKit é uma estrutura introduzida no iOS 8 que fornece um repositório de dados seguro, centralizado e coordenado para informações relacionadas à integridade. O sistema operacional garante a privacidade e segurança de informações de integridade e, com o aplicativo de integridade, um painel para o usuário. Com a permissão do usuário, os aplicativos podem ler e gravar uma ampla variedade de informações de integridade._
+# <a name="healthkit-in-xamarinios"></a>HealthKit em xamarin
 
 Kit de integridade fornece um repositório de dados seguro para as informações do usuário relacionados à integridade. Aplicativos de Kit de integridade podem, com a permissão explícita, ler e gravar este repositório de dados e receber notificações quando os dados pertinentes são adicionados. Aplicativos podem apresentar os dados ou usuário pode usar o aplicativo de integridade fornecido da Apple para exibir um painel de todos os seus dados.
 

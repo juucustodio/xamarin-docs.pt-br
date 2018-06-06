@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials lâmpada
-description: A classe de lâmpada tem a capacidade de ativar ou desativar a câmera do dispositivo flash transformá-la em uma lâmpada.
+title: 'Xamarin.Essentials: lâmpada'
+description: Este documento descreve a classe de lâmpada Xamarin.Essentials, que tem a capacidade de ativar ou desativar a câmera do dispositivo flash transformá-la em uma lâmpada.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0fe07f60502b27322db9486f3382b8f67d50945b
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: a5c559653bff38c692f0b1d881d5d8f4cac3d383
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782418"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials lâmpada
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: lâmpada
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 

@@ -1,21 +1,20 @@
 ---
-title: Estruturas
-description: Este documento contém estruturas Xamarin.Mac com suporte.
+title: Estruturas de Xamarin.Mac
+description: Este documento contém as várias estruturas macOS disponíveis para uso durante o desenvolvimento de aplicativos do Mac com Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 7e3ccfd9f23fa5c9c158ff49f0961b5140084d06
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8b4dc591d9fd606e9ee3ef6e34d9d29f44263392
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792284"
 ---
-# <a name="frameworks"></a>Estruturas
-
-&nbsp;
+# <a name="xamarinmac-frameworks"></a>Estruturas de Xamarin.Mac
 
 Há suporte para as seguintes estruturas macOS Xamarin.Mac:
 
@@ -23,7 +22,7 @@ Há suporte para as seguintes estruturas macOS Xamarin.Mac:
 -  Acelerar
 -  Contas
 -  AVKit
--  AddressBook 
+-  Catálogo de endereços 
 -  AppKit 
 -  AudioToolbox 
 -  AudioUnit 

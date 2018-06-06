@@ -1,18 +1,20 @@
 ---
-title: Fazendo referência a bibliotecas nativas
+title: Fazendo referência a bibliotecas nativas em xamarin
+description: Este documento descreve como vincular bibliotecas nativas do C em um aplicativo xamarin. Descreve como criar bibliotecas nativas universais e acesso aos métodos de C do c#.
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/28/2016
-ms.openlocfilehash: 4d58e869dc1357faef71ea88ed6b5ea30aaf960d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb27ba8b2d9c1b66448f22b7f80f17ba2e483544
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787718"
 ---
-# <a name="referencing-native-libraries"></a>Fazendo referência a bibliotecas nativas
+# <a name="referencing-native-libraries-in-xamarinios"></a>Fazendo referência a bibliotecas nativas em xamarin
 
 Xamarin dá suporte à vinculação com bibliotecas nativas do C e bibliotecas Objective-C. Este documento descreve como vincular suas bibliotecas C nativo com o seu projeto xamarin. Para obter informações sobre como fazer o mesmo para bibliotecas Objective-C, consulte nosso [associação Objective-C tipos](~/ios/platform/binding-objective-c/index.md) documento.
 

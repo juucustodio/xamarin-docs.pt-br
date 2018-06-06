@@ -1,19 +1,20 @@
 ---
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
 title: Plataforma cruzada para desenvolvedores de área de trabalho
-description: Xamarin permite criar aplicativos para Windows, Android, iOS e Mac usando suas habilidades de Windows Forms ou WPF.
+description: Links este documento em várias guias que descrevem xamarin. Forms para desenvolvedores do WPF e do Windows Forms. O conteúdo vinculado explora o ciclo de vida do aplicativo, controles de interface do usuário, portar diretrizes e exemplos.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 0794d931dd57971efcbd0ea5b42159e3524ea6b0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 21c74b8c0ccaffb2b3b8205a3bdda9101b99f072
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779948"
 ---
 # <a name="cross-platform-for-desktop-developers"></a>Plataforma cruzada para desenvolvedores de área de trabalho
 
-Esta seção contém informações para ajudar os desenvolvedores do WPF e do Windows. Forms para aprender o desenvolvimento de aplicativos móveis com o Xamarin, por seu conhecimento existente de referências cruzadas e experiência para linguagens móveis e fornece exemplos de portar aplicativos de desktop para celular.
+Esta seção contém informações para ajudar os desenvolvedores do WPF e do Windows Forms para aprender o desenvolvimento de aplicativos móveis com o Xamarin, por seu conhecimento existente de referências cruzadas e experiência para linguagens móveis e fornece exemplos de portar aplicativos de desktop para celular.
 
 ## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Comparação de ciclo de vida do aplicativo](lifecycle.md)
 

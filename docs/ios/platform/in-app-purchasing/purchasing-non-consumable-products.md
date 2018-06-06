@@ -1,18 +1,20 @@
 ---
-title: Comprar produtos não consumíveis
+title: Comprar produtos não consumíveis no xamarin
+description: Este documento descreve os produtos não consumíveis no xamarin, que são recursos adquiridos por um usuário que permanecem disponíveis por tempo indeterminado, independentemente do dispositivo.
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0a581dc222e43f8d4742bd52dc56dc691449a8f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: db193493ea11a7963fe5fc57f0c45978c26a7a74
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786945"
 ---
-# <a name="purchasing-non-consumable-products"></a>Comprar produtos não consumíveis
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Comprar produtos não consumíveis no xamarin
 
 Não consumível produtos são 'propriedade' pelo cliente. A expectativa é que eles sempre terão acesso a eles, mesmo se o dispositivo é perdido ou roubado ou comprar um novo. Eles são úteis para manuais, problemas de revista, níveis de jogos, filtros de fotos, 'recursos do pro', etc. Depois que um usuário comprou um produto não consumíveis, eles nunca precisarão pague-lo novamente. Se seu código acidentalmente permite que eles tente, StoreKit mostrará uma mensagem que já foi comprado.
 

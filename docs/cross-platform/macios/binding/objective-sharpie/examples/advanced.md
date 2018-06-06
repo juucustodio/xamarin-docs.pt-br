@@ -1,21 +1,21 @@
 ---
 title: Avançado (manual) exemplo do mundo Real
+description: Este documento descreve como usar a saída de xcodebuild como a entrada para o objetivo Sharpie, que fornece informações sobre o que faz objetivo Sharpie nos bastidores.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 82bca525433e5c8fea3a29250afb83962f2e64fc
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7af9700a9b661280c2ee32a1f65cdc01234cbe37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781250"
 ---
 # <a name="advanced-manual-real-world-example"></a>Avançado (manual) exemplo do mundo Real
 
-
 **Este exemplo usa o [biblioteca POP do Facebook](https://github.com/facebook/pop).**
-
 
 Esta seção aborda uma abordagem mais avançada para associação, onde usaremos da Apple `xcodebuild` ferramenta para criar primeiro um projeto POP e, em seguida, deduzir manualmente a entrada para o objetivo Sharpie. Essencialmente, isso abrange o objetivo Sharpie fazendo nos bastidores na seção anterior.
 

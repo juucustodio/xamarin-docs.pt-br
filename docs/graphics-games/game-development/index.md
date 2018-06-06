@@ -1,20 +1,19 @@
 ---
 title: Introdução ao desenvolvimento de jogos com o Xamarin
-description: A natureza do desenvolvimento de jogos pode diferir consideravelmente o desenvolvimento de outros tipos de aplicativos. Este artigo é uma introdução ao desenvolvimento de jogos com tecnologias que podem ser usadas com xamarin e xamarin. Ele fornece uma discussão detalhada sobre como jogos são feitos e uma amostra de tecnologias disponíveis para uso com o xamarin e xamarin.
+description: Este documento fornece uma visão geral do desenvolvimento de jogos com o Xamarin, que descreve como jogos são feitos e uma amostra de tecnologias disponíveis para uso com o xamarin e xamarin.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 543d3e2d4e53d1b88213ac82689073a9fb925820
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b1bd6d011cdc10352ce3b9258da7e16c2899d2d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783910"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introdução ao desenvolvimento de jogos com o Xamarin
-
-_A natureza do desenvolvimento de jogos pode diferir consideravelmente o desenvolvimento de outros tipos de aplicativos. Este artigo é uma introdução ao desenvolvimento de jogos com tecnologias que podem ser usadas com xamarin e xamarin. Ele fornece uma discussão detalhada sobre como jogos são feitos e uma amostra de tecnologias disponíveis para uso com o xamarin e xamarin._
 
 Desenvolvimento de jogos pode ser muito interessante, especialmente considerando como é fácil pode ser para publicar seu trabalho em plataformas móveis. Este artigo aborda os conceitos e tecnologias relacionadas ao desenvolvimento de jogos que ajudará você a criam jogos, se seu objetivo é criar um AAA de alta qualidade jogos ou apenas para o programa para diversão.
 

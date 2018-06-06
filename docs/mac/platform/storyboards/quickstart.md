@@ -1,19 +1,20 @@
 ---
-title: Início rápido storyboards
-description: Obtendo iniciada construção macOS interfaces de usuário com storyboards.
+title: Storyboards no Xamarin.Mac – início rápido
+description: Este documento fornece uma introdução de início rápido para a criação de interfaces de usuário com storyboards no Xamarin.Mac de macOS. Descreve como criar um segue e criar uma janela de preferências.
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 0c366de844b119736763f7d419d6bc9bb3fbfc0a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2bf91a51a55583e2ba8ca1fc09eb3dcd0d9986cf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792564"
 ---
-# <a name="starting-a-new-storyboard-based-project"></a>Iniciar um novo Storyboard com base no projeto
+# <a name="storyboards-in-xamarinmac--quick-start"></a>Storyboards no Xamarin.Mac – início rápido
 
 Como introdução rápida ao uso de Storyboards para definir a Interface do usuário do aplicativo um Xamarin.Mac, vamos começar um novo projeto de Xamarin.Mac. Selecione **Aplicativo** > **Mac** > **Aplicativo Cocoa** e clique no botão **Avançar**:
 

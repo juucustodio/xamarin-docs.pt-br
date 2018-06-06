@@ -1,19 +1,20 @@
 ---
-title: ID de toque
-description: ID de toque é uma tecnologia de autenticação de impressão digital biométrica da Apple.
+title: ID de toque em xamarin
+description: Este documento descreve como usar o Touch ID, tecnologia de autenticação de impressão digital biométrica da Apple, em aplicativos xamarin.
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: b5db80d280d7ad3c43a438d5caae57fbd1928896
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788573"
 ---
-# <a name="touch-id"></a>ID de toque
+# <a name="touch-id-in-xamarinios"></a>ID de toque em xamarin
 
 ID de toque foi introduzido no iOS 7 como um meio de autenticação do usuário - semelhante a uma senha. No entanto, era limitado para desbloquear o dispositivo, usando o armazenamento de aplicativo, usando o iTunes e autenticar o conjunto de chaves iCloud somente.
 

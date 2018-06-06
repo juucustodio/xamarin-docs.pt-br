@@ -1,30 +1,31 @@
 ---
-title: PhotoKit
-description: Kit de fotos permite que aplicativos consultar a biblioteca de imagens do sistema e criar a interface do usuário personalizada para exibir e modificar seu conteúdo.
+title: PhotoKit em xamarin
+description: Este documento descreve PhotoKit, discutir seus objetos de modelo, como dados de modelo de consulta e salvar as alterações para a biblioteca de fotos.
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: c721064f62f8e2255de2b4ea2d0438e3ed630d39
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4aeeec5b96e24c654407ad672930c0cb78592450
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787891"
 ---
-# <a name="photokit"></a>PhotoKit
+# <a name="photokit-in-xamarinios"></a>PhotoKit em xamarin
 
-_Kit de fotos permite que aplicativos consultar a biblioteca de imagens do sistema e criar a interface do usuário personalizada para exibir e modificar seu conteúdo._
-
-Kit de fotografia é uma nova estrutura que permite que aplicativos consultar a biblioteca de imagens do sistema e criar interfaces do usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui um número de classes que representam os ativos de vídeo e imagem, bem como coleções de ativos como álbuns e pastas.
+PhotoKit é uma nova estrutura que permite que aplicativos consultar a biblioteca de imagens do sistema e criar interfaces do usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui um número de classes que representam os ativos de vídeo e imagem, bem como coleções de ativos como álbuns e pastas.
 
 ## <a name="model-objects"></a>Objetos de modelo
-Kit de foto representa esses ativos em que ele chama objetos de modelo. Os objetos de modelo que representam as fotos e vídeos em si são do tipo `PHAsset`. Um `PHAsset` contém metadados, como o tipo de mídia do ativo e sua data de criação.
+
+PhotoKit representa esses ativos em que ele chama objetos de modelo. Os objetos de modelo que representam as fotos e vídeos em si são do tipo `PHAsset`. Um `PHAsset` contém metadados, como o tipo de mídia do ativo e sua data de criação.
 Da mesma forma, o `PHAssetCollection` e `PHCollectionList` classes contêm metadados sobre coleções de ativo e listas de coleção respectivamente. Coleções de ativos são grupos de ativos, como todas as fotos e vídeos para um determinado ano. Da mesma forma, as listas de coleção são grupos de coleções de ativo, como fotos e vídeos, agrupados por ano.
 
 ## <a name="querying-model-data"></a>Consultar dados do modelo
-Kit de foto facilita a dados de modelo de consulta por meio de uma variedade de métodos de busca. Por exemplo, para recuperar todas as imagens, você poderia chamar `PFAsset.Fetch`, passando o `PHAssetMediaType.Image` tipo de mídia.
+
+PhotoKit facilita para os dados de modelo de consulta por meio de uma variedade de métodos de busca. Por exemplo, para recuperar todas as imagens, você poderia chamar `PFAsset.Fetch`, passando o `PHAssetMediaType.Image` tipo de mídia.
 
     PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 

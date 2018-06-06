@@ -1,19 +1,20 @@
 ---
-title: Solução de problemas
-description: Este artigo fornece várias dicas de solução de problemas para trabalhar com iOS 9 em aplicativos xamarin.
+title: Xamarin 9 – solução de problemas
+description: Este artigo fornece várias dicas de solução de problemas para trabalhar com iOS 9 no xamarin. Dicas abordam a análise de XML, simuladores, restrições de layout, problemas de rede e muitos outros tópicos.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44d737efcf5092eb4b27d5311271005de65318b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787657"
 ---
-# <a name="troubleshooting"></a>Solução de problemas
+# <a name="xamarinios-9--troubleshooting"></a>Xamarin 9 – solução de problemas
 
 _Este artigo fornece várias dicas de solução de problemas para trabalhar com iOS 9 em aplicativos xamarin._
 
@@ -190,8 +191,6 @@ Há pelo menos duas soluções possíveis para esse problema:
 Com xamarin, é possível fazer a inicialização de exibição ou controlador de exibição dentro dos construtores que são chamados quando algo é exposto em código gerenciado, mas quebras iOS design.
 
 Em geral você deve inicializar tudo o que pode chamar novamente código Objective-C do construtor desde que você não pode ter certeza de que não quando ele será chamado. Que também significa que há um melhores locais (outros ctor) ou chamadas para substituir (como Objective-C não possui eventos) onde essa inicialização deve ser feita.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -1,20 +1,21 @@
 ---
-title: Usando o MonoGame PipelineTool
-description: A ferramenta de Pipeline MonoGame é usada para criar e gerenciar projetos de conteúdo MonoGame. Os arquivos em projetos de conteúdo são processados pela ferramenta Monogame Pipeline e gerados como arquivos .xnb para uso em aplicativos CocosSharp e MonoGame.
+title: Usando a ferramenta de Pipeline de MonoGame
+description: A ferramenta de Pipeline MonoGame é usada para criar e gerenciar projetos de conteúdo MonoGame. Os arquivos em projetos de conteúdo são processados pela ferramenta MonoGame Pipeline e gerados como arquivos .xnb para uso em aplicativos CocosSharp e MonoGame.
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 50e6c611e285cde9184eed242353ad08b2a941ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 347cb7e9d417f97cb6e8d78e67b1c76a378cd188
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783280"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Usando a ferramenta de Pipeline de MonoGame
 
-_A ferramenta de Pipeline MonoGame é usada para criar e gerenciar projetos de conteúdo MonoGame. Os arquivos em projetos de conteúdo são processados pela ferramenta Monogame Pipeline e gerados como arquivos .xnb para uso em aplicativos CocosSharp e MonoGame._
+_A ferramenta de Pipeline MonoGame é usada para criar e gerenciar projetos de conteúdo MonoGame. Os arquivos em projetos de conteúdo são processados pela ferramenta MonoGame Pipeline e gerados como arquivos .xnb para uso em aplicativos CocosSharp e MonoGame._
 
 A ferramenta de Pipeline MonoGame fornece um ambiente fácil de usar para converter arquivos de conteúdo em **.xnb** arquivos para uso em aplicativos CocosSharp e MonoGame. Para obter informações sobre pipelines de conteúdo e porque eles são úteis no desenvolvimento de jogos, consulte [esta introdução em pipelines de conteúdo](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 

@@ -1,17 +1,19 @@
 ---
-title: Novo sistema de contagem de referência
+title: Nova referência de contagem de sistema em xamarin
+description: Este documento descreve o sistema, habilitado em todos os aplicativos xamarin por padrão de contagem de referência aprimorada do Xamarin.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 00a792fb6ee55d5937046ebb321ffcb3aa8bdbd5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f2e40ca1fdd4a02d62e45004b75f3abefda781a5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786246"
 ---
-# <a name="new-reference-counting-system"></a>Novo sistema de contagem de referência
+# <a name="new-reference-counting-system-in-xamarinios"></a>Nova referência de contagem de sistema em xamarin
 
 Xamarin 9.2.1 introduziu a referência avançada sistema para todos os aplicativos de contagem por padrão. Ele pode ser usado para eliminar muitos problemas de memória que eram difíceis de rastrear e corrigir em versões anteriores do xamarin.
 

@@ -1,15 +1,17 @@
 ---
 title: Limitações de incorporação de .NET
+description: Este documento descreve as limitações de inserção do .NET, a ferramenta que permite que você consuma código .NET em outras linguagens de programação.
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 8ea3e7c6ff2fc28700c46109a814fc5da6958500
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fdd3ac4cd57ac7f79f9071d62e758625b30f05dd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794118"
 ---
 # <a name="net-embedding-limitations"></a>Limitações de incorporação de .NET
 

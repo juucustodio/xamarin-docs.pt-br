@@ -1,16 +1,18 @@
 ---
 title: Alterações de Web no iOS 11
+description: Este documento aborda as alterações feitas WebKit e a estrutura de serviços do Safari no iOS 11. Descreve como trabalhar com atualizações em SFSafariViewController e novos recursos no WKWebView de estilo.
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/12/2016
-ms.openlocfilehash: 5cbf1d2f6c7b8a110cb65cad81df18f9f0568fda
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f5876a9d201950ebac45e8b1f786b0e97452a7f1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787442"
 ---
 # <a name="web-changes-in-ios-11"></a>Alterações de Web no iOS 11
 

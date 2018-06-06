@@ -1,17 +1,19 @@
 ---
-title: Guia de Introdução
+title: Guia de Introdução com objetivo Sharpie
+description: Este documento fornece uma visão geral do objetivo Sharpie, a ferramenta usada para automatizar a criação de associações do c# para código Objective-C.
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 5f61d0794e1f5a38370f0d840504720043f69590
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a0431f8952055a55be24ae5f85381a4295206a40
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781810"
 ---
-# <a name="getting-started"></a>Guia de Introdução
+# <a name="getting-started-with-objective-sharpie"></a>Guia de Introdução com objetivo Sharpie
 
 > [!IMPORTANT]
 > Objetivo Sharpie é uma ferramenta para desenvolvedores do Xamarin experientes com conhecimento avançado de Objective-C (e, por extensão, C). Antes de tentar associar uma biblioteca Objective-C, você deve ter um conhecimento sólido de como criar a biblioteca nativa na linha de comando (e uma boa compreensão de como funciona a biblioteca nativa).

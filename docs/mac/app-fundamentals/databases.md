@@ -1,5 +1,5 @@
 ---
-title: Bancos de dados
+title: Bancos de dados em Xamarin.Mac
 description: Este artigo aborda o uso de chave-valor observando para permitir a associação de dados entre bancos de dados SQLite e elementos de interface do usuário no construtor de Interface do Xcode e codificação de chave-valor. Ele também aborda o uso do ORM SQLite.NET para fornecer acesso a dados SQLite.
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 33c1ab7092669bb1dbd4e7bfae628b58a0bf3726
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3bc40824396aba78b2645bf9701e8e0e659c8b0a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791986"
 ---
-# <a name="databases"></a>Bancos de dados
+# <a name="databases-in-xamarinmac"></a>Bancos de dados em Xamarin.Mac
 
 _Este artigo aborda o uso de chave-valor observando para permitir a associação de dados entre bancos de dados SQLite e elementos de interface do usuário no construtor de Interface do Xcode e codificação de chave-valor. Ele também aborda o uso do ORM SQLite.NET para fornecer acesso a dados SQLite._
 

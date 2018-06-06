@@ -1,19 +1,20 @@
 ---
-title: Armazenamento de dados e recursos
-description: Este artigo aborda o trabalho com recursos e armazenamento de dados persistentes em um aplicativo Xamarin.tvOS.
+title: tvOS recursos e armazenamento de dados em Xamarin
+description: Este artigo descreve como trabalhar com recursos e o armazenamento de dados persistentes em um aplicativo de tvOS criado com o Xamarin. Ele aborda os recursos de armazenamento e sob demanda de dados no iCloud.
 ms.prod: xamarin
 ms.assetid: C56B5046-D2C0-4B63-9CE0-ADAA0EFD368A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8103dcc1c2e1e8c2375a86d51580b1ea3fcce432
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: aa14ac08763a48b5f4f9a9522e8b10c652e513c4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788830"
 ---
-# <a name="resources-and-data-storage"></a>Armazenamento de dados e recursos
+# <a name="tvos-resources-and-data-storage-in-xamarin"></a>tvOS recursos e armazenamento de dados em Xamarin
 
 _Este artigo aborda o trabalho com recursos e armazenamento de dados persistentes em um aplicativo Xamarin.tvOS._
 
@@ -57,7 +58,7 @@ Como resultado, seu aplicativo Xamarin.tvOS deve armazenar os dados de usuários
 - **CloudKit** - o para o armazenamento das maiores informações (maiores que 1 MB), use o Framework de CloudKit da Apple. Ao contrário do iCloud armazenamento KVS, CloudKit dados podem ser compartilhados entre todos os usuários do seu aplicativo (bem como sendo particular a um único usuário). Formulário obter mais informações, consulte nosso [Introdução ao CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) da Apple ou a documentação [início rápido do CloudKit](https://developer.apple.com/library/prerelease/tvos/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987).
 
 > [!IMPORTANT]
-> Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com a norma de proteção de dados geral (GDPR) da União Europeia.
+> A Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com o GDPR (Regulamento Geral sobre a Proteção de Dados) da União Europeia.
 
 <a name="On-Demand-Resources" />
 

@@ -1,20 +1,19 @@
 ---
 title: Assemblies disponíveis
-description: Assemblies disponíveis no xamarin, xamarin e Xamarin.Mac
+description: Este documento lista os assemblies disponíveis para uso em xamarin, xamarin e Xamarin.Mac. Também links para documentação sobre as bibliotecas padrão do .NET e bibliotecas de classes portáteis.
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: ef1dde061ffce4082922cc2eb2af1ae9b045aedd
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b73a818d3864c7c4d1d776e104d95090e87f5877
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781901"
 ---
 # <a name="available-assemblies"></a>Assemblies disponíveis
-
-_Assemblies disponíveis no xamarin, xamarin e Xamarin.Mac_
 
 Xamarin, xamarin e Xamarin.Mac todos os fornecidos com dezenas de assemblies. Assim como o Silverlight é um subconjunto estendido dos assemblies do .NET da área de trabalho, plataformas Xamarin também é um subconjunto estendido de vários Silverlight e área de trabalho assemblies do .NET.
 

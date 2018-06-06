@@ -1,20 +1,20 @@
 ---
-title: Trabalhando com tabelas e células
-description: Exibindo dados usando UITableView com xamarin
+title: Trabalhar com tabelas e células em xamarin
+description: Links este documento em várias guias que descrevem como exibir dados com o controle de UITableView em um aplicativo xamarin.
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: a1cda3632a75c7e462e763a34fdb5b586237b670
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ebdad2cc8e3083bee5acc127660b5641f42c731f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790010"
 ---
-# <a name="working-with-tables-and-cells"></a>Trabalhando com tabelas e células
-
+# <a name="working-with-tables-and-cells-in-xamarinios"></a>Trabalhar com tabelas e células em xamarin
 
 Esta seção apresenta as classes usadas para criar e exibir tabelas e fornece exemplos de como usá-los em xamarin. Ele aborda usando a aparência padrão para tabelas, personalizando o layout, Implementando edição e usando o Designer do iOS Xamarin para criar uma tabela visualmente. Às vezes, a exibição, obviamente, é uma lista de linhas (como o aplicativo de música) e outras vezes é difícil reconhecer o controle de tabela (como editar no aplicativo contatos ou uma conversa em aplicativos de mensagens).
 
@@ -26,7 +26,6 @@ Esses artigos terão uma visão completa de trabalhar com tabelas, incluindo:
 -   **Exibindo dados em tabelas** – demonstra como criar e popular uma tabela, use diferentes estilos de tabela e de célula e evitar problemas de memória por objetos de célula de reciclagem. 
 -   **O uso avançado** – criação personalizadas células e usando os recursos de edição da classe UITableView. 
 -   **Criar uma tabela visualmente** – usando o Designer de Xamarin para iOS para criar uma interface orientada a tabela com um Storyboard. 
-
 
 ## <a name="contents"></a>Conteúdo
 
@@ -43,7 +42,6 @@ Esses artigos terão uma visão completa de trabalhar com tabelas, incluindo:
  [Criando tabelas em um Storyboard](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
  [Dimensionamento automático da altura da linha](~/ios/user-interface/controls/tables/autosizing-row-height.md)
-
 
 ## <a name="related-links"></a>Links relacionados
 

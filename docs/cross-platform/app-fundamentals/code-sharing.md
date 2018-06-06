@@ -1,16 +1,17 @@
 ---
-title: Opções de compartilhamento de código
+title: Visão geral do código do compartilhamento
 description: 'Este documento compara os diferentes métodos de compartilhamento de código entre projetos de plataforma cruzada: projetos compartilhados, bibliotecas de classes portáteis e .NET padrão, incluindo as vantagens e desvantagens de cada um.'
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: de2e24b1746568510c84fb163efa8562ab47cf00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 37b6465c06361f8e33c0ed191d08dbcc22cb16ce
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781418"
 ---
 # <a name="sharing-code-overview"></a>Visão geral do código do compartilhamento
 

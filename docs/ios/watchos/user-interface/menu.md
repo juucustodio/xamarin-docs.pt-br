@@ -1,18 +1,20 @@
 ---
-title: Controle de menu (toque Force)
+title: watchOS controle de Menu (forçar Touch) no Xamarin
+description: Este documento descreve como usar o gesto de toque de força watchOS em Xamarin. Ele discute como responder a um toque de força, como adicionar um menu e alterar os itens de menu.
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4895f140acbc8a622cfb91c2fe9db6c5e9d9d1d7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4b973b925b99189416087224644c376864c56871
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791339"
 ---
-# <a name="menu-control-force-touch"></a>Controle de menu (toque Force)
+# <a name="watchos-menu-control-force-touch-in-xamarin"></a>watchOS controle de Menu (forçar Touch) no Xamarin
 
 Assista que Kit fornece um gesto de tocar força que dispara um menu, quando implementada em uma tela do aplicativo de inspeção.
 

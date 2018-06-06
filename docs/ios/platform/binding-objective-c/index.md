@@ -1,6 +1,6 @@
 ---
 title: Associação de bibliotecas do iOS
-description: Como criar bibliotecas nativas do iOS (e CocoaPods) acessível em aplicativos Xamarin.
+description: Este documento descreve como criar c# associações para o código Objective-C, tornando possível consumir bibliotecas nativas e CocoaPods em um aplicativo xamarin.
 ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
@@ -8,15 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 268900c7ab7b317b0b20f4c1ead2360fd6f9bbf0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b054595568a34616a01f2c3f3c7d85f968c3f1fa
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787156"
 ---
 # <a name="binding-ios-libraries"></a>Associação de bibliotecas do iOS
-
-_Como criar bibliotecas nativas do iOS (e CocoaPods) acessível em aplicativos Xamarin._
 
 Siga estes links para saber mais sobre associação de bibliotecas Objective-C e CocoaPods para xamarin e Xamarin.Mac:
 

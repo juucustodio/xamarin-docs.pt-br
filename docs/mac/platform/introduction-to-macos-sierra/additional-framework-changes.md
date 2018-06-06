@@ -1,21 +1,20 @@
 ---
 title: MacOS adicionais Serra Framework alterações
-description: Este artigo aborda as alterações adicionais, secundárias ou melhorias em estruturas existentes para macOS Serra.
+description: Este documento descreve as pequenas alterações e aprimoramentos introduzidos no macOS Serra as estruturas existentes. Ele examina alterações framework acelere, AppKit, AVFoundation, dados de núcleo, imagem principal, Foundation e muito mais.
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a1bc12629a84e9a06cc80882d141bf6a0c2f0c52
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3cfa2e9bcb0be4d65462914215045c9c7f01da5b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792587"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>MacOS adicionais Serra Framework alterações
-
-_Este artigo aborda as alterações adicionais, secundárias ou melhorias em estruturas existentes para macOS Serra._
 
 <a name="Accelerate-Framework-Enhancements" />
 
@@ -29,7 +28,7 @@ O aprimoramento a seguir foram feitas para a estrutura de acelerar macOS Serra:
 
 <a name="AppKit-Framework-Enhancements" />
 
-## <a name="appkit-framework-enhancements"></a>Aprimoramentos do Appkit Framework
+## <a name="appkit-framework-enhancements"></a>Aprimoramentos do AppKit Framework
 
 O aprimoramento a seguir foram feitas para a estrutura de AppKit macOS Serra:
 

@@ -1,16 +1,17 @@
 ---
 title: Suporte do UrhoSharp Android
-description: Recursos para UrhoSharp e configuração específica do Android.
+description: Este documento descreve a configuração específica do Android e informações relacionadas ao recurso UrhoSharp. Em particular, ele discute as arquiteturas com suporte, como criar um projeto, configurando e iniciando Urho e personalizadas a incorporação de Urho.
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 008afb060729b6d1badf47db7eafedbe631326df
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6e489f52712989b5f94fa52d5ec6f22a13ce6252
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783775"
 ---
 # <a name="urhosharp-android-support"></a>Suporte do UrhoSharp Android
 

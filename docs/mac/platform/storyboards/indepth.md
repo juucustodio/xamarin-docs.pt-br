@@ -1,19 +1,20 @@
 ---
-title: Trabalhando com Storyboards
-description: Compilando macOS interfaces de usuário com storyboards usando Xcode.
+title: Trabalhando com Storyboards no Xamarin.Mac
+description: Este documento descreve como trabalhar com storyboards no Xamarin.Mac, examinar como carregá-los do código, o ciclo de vida do controlador de exibição, a cadeia de Respondente, segues, controladores de janela, reconhecedores de gestos e muito mais.
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b72affd9b101b0a139301fec9f2bed343310507
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 72986ed4247c3b6f66f6f1813d74bf0a95d0de53
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792834"
 ---
-# <a name="storyboards"></a>Storyboards
+# <a name="working-with-storyboards-in-xamarinmac"></a>Trabalhando com Storyboards no Xamarin.Mac
 
 Um storyboard define todos da interface do usuário para um determinado aplicativo dividido em uma visão geral das funções de seus controladores de exibição. No construtor de Interface do Xcode, cada um desses controladores reside em seu próprio cena.
 

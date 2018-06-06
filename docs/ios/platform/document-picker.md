@@ -1,20 +1,19 @@
 ---
-title: Seletor de documento
-description: O controlador de exibição de documento seletor concede aos usuários acesso aos arquivos fora da área de segurança do aplicativo. É um mecanismo simples para compartilhamento de documentos entre aplicativos. Ele também permite que os fluxos de trabalho mais complexos, porque os usuários possam editar um único documento com vários aplicativos. Este artigo fornece uma introdução ao usar o seletor de documento em um aplicativo xamarin e as alterações nos documentos iCloud necessárias para dar suporte a ele.
+title: Seletor de documento no xamarin
+description: Este documento descreve o seletor de documento do iOS e explica como usá-lo em xamarin. Ele usa uma olhada no iCloud, documentos, código de instalação comum, extensões de provedor de documento e muito mais.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: d9b98611c7d269e590ce6fe2ce0270ef71dacf1e
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: efa1b589ad4afe26d8b87c3db1777660b3e27be6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786880"
 ---
-# <a name="document-picker"></a>Seletor de documento
-
-_O controlador de exibição de documento seletor concede aos usuários acesso aos arquivos fora da área de segurança do aplicativo. É um mecanismo simples para compartilhamento de documentos entre aplicativos. Ele também permite que os fluxos de trabalho mais complexos, porque os usuários possam editar um único documento com vários aplicativos. Este artigo fornece uma introdução ao usar o seletor de documento em um aplicativo xamarin e as alterações nos documentos iCloud necessárias para dar suporte a ele._
+# <a name="document-picker-in-xamarinios"></a>Seletor de documento no xamarin
 
 O seletor de documento permite que documentos sejam compartilhados entre aplicativos. Esses documentos podem ser armazenados no iCloud ou no diretório do aplicativo um diferente. Documentos compartilhados por meio do conjunto de [documento provedor extensões](~/ios/platform/extensions.md) o usuário instalou em seu dispositivo. 
 
@@ -39,7 +38,7 @@ Para implementar os novos recursos do seletor de documento, as seguintes altera�
 -  dispositivos iOS podem acessar o conteúdo da pasta iCloud do Mac OS.
 
 > [!IMPORTANT]
-> Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com a norma de proteção de dados geral (GDPR) da União Europeia.
+> A Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com o GDPR (Regulamento Geral sobre a Proteção de Dados) da União Europeia.
 
 ## <a name="what-is-a-document"></a>O que é um documento?
 
