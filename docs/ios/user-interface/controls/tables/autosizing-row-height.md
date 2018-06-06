@@ -1,18 +1,20 @@
 ---
-title: Altura da linha de dimensionamento automático
+title: Altura da linha de dimensionamento automático no xamarin
+description: Este documento descreve como adicionar a aplicativos xamarin linhas da tabela de exibição cujas alturas variam com base no conteúdo. Ele aborda o layout de célula no Designer de iOS e a altura de redimensionamento automático habilitação.
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 73e16c3381b639645463e3e8aaeed35224b67861
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c6beb112947f5423de200fd5c8957ef28dd48f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789961"
 ---
-# <a name="auto-sizing-row-height"></a>Altura da linha de dimensionamento automático
+# <a name="auto-sizing-row-height-in-xamarinios"></a>Altura da linha de dimensionamento automático no xamarin
 
 A partir do iOS 8, Apple adicionado a capacidade de criar uma exibição de tabela (`UITableView`) que pode automaticamente aumentar ou diminuir a altura de uma determinada linha com base no tamanho do seu conteúdo usando as restrições, Classes de tamanho e Layout automático.
 

@@ -1,5 +1,5 @@
 ---
-title: Controles padrão
+title: Controles padrão em Xamarin.Mac
 description: Este artigo aborda o trabalho com os controles AppKit padrão como botões, rótulos, campos de texto, caixas de seleção e segmentada controles em um aplicativo Xamarin.Mac. Ele descreve adicioná-los a uma interface com o construtor de Interface e interagir com eles no código.
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3fe155508b60cbe502c3beca58426528d6f49c9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9d110d0d7a46d431ea6fca50caffe05903ddce2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793039"
 ---
-# <a name="standard-controls"></a>Controles padrão
+# <a name="standard-controls-in-xamarinmac"></a>Controles padrão em Xamarin.Mac
 
 _Este artigo aborda o trabalho com os controles AppKit padrão como botões, rótulos, campos de texto, caixas de seleção e segmentada controles em um aplicativo Xamarin.Mac. Ele descreve adicioná-los a uma interface com o construtor de Interface e interagir com eles no código._
 

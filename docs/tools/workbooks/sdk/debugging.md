@@ -1,15 +1,17 @@
 ---
 title: Integrações de depuração
+description: Este documento descreve como depurar integrações de pastas de trabalho do Xamarin, do lado do agente e no lado do cliente no Windows e Mac.
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: f36ce595a739667a91d557c4cd896146c5614f51
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fa8806345a364a70535a91b2ba99e3bfee8d47bc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794014"
 ---
 # <a name="debugging-integrations"></a>Integrações de depuração
 

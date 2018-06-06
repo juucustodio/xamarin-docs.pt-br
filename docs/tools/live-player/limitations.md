@@ -1,18 +1,19 @@
 ---
-title: Limitações
-description: Algumas limitações do Player Live Xamarin
+title: Limitações do Player ao vivo do Xamarin
+description: Este documento descreve as limitações do Player Xamarin ao vivo. Discute os requisitos de dispositivo, ele funciona com tipos de projeto e outros tópicos de diversos recursos.
 ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: a3aea31f32e3bf6227cce2e3340e3d04828472a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ea71391382f9e1ecb80cbf5f2d5bf127e0d6d1be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793669"
 ---
-# <a name="limitations"></a>Limitações
+# <a name="limitations-of-xamarin-live-player"></a>Limitações do Player ao vivo do Xamarin
 
 ![Recurso de visualização](~/media/shared/preview.png)
 
@@ -36,6 +37,7 @@ O aplicativo Xamarin ao vivo Player suporta os seguintes dispositivos:
 Há algumas limitações sobre as coisas que xamarin Live Player pode executar, incluindo os itens a seguir:
 
 ### <a name="xamarinforms"></a>Xamarin.Forms
+
 - Não há suporte para processadores personalizados.
 - Não há suporte para efeitos.
 - Não há suporte para controles personalizados com propriedades vinculáveis personalizado.
@@ -44,9 +46,11 @@ Há algumas limitações sobre as coisas que xamarin Live Player pode executar, 
 - Não há suporte para o catálogo de ativos no iOS.
 
 ### <a name="other-project-types"></a>Outros tipos de projeto
+
 - Player dinâmica não se destina para nativo Android ou iOS projetos (usam XML Android ou Storyboards para a interface do usuário).
 
 ### <a name="misc"></a>Diversos
+
 - Suporte limitado para reflexão (atualmente afeta alguns NuGets populares, como SQLite e Json.NET). Outros NuGets ainda podem ter suporte.
 - Algumas classes de sistema não podem ser substituídos (por exemplo, você não pode implementar uma subclasse).
 - Alguns recursos de plataforma que exigem o provisionamento não funcionam no aplicativo Xamarin ao vivo Player (no entanto tiver sido configurada para operações comuns, como acesso de galeria de fotos).
@@ -55,7 +59,6 @@ Há algumas limitações sobre as coisas que xamarin Live Player pode executar, 
 - Cenários avançados com interfaces e classes genéricas personalizadas podem não ter suporte.
 
 Relate problemas adicionais em [bugzilla](https://aka.ms/live-player-report-issue).
-
 
 ## <a name="related-links"></a>Links relacionados
 

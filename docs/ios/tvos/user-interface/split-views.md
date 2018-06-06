@@ -1,22 +1,20 @@
 ---
-title: Trabalhando com os controladores de exibição de divisão
-description: Este artigo aborda criando e trabalhando com controladores de exibição de divisão dentro de um aplicativo Xamarin.tvOS.
+title: Trabalhando com tvOS exibir controladores de divisão em Xamarin
+description: Este documento descreve como trabalhar com tvOS dividir exibições em um aplicativo compilado com o Xamarin. Ele fornece uma visão geral de controladores de exibição de divisão, como usá-los com storyboards, acessar os modos de exibição mestre e de detalhes e mostrar e ocultar o modo de exibição mestre.
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 25151eb2929e2bc61dba27a9937ffdf4ee224626
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2dd07cd8a4e92d6d39be50ba670441d965ed4d13
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789425"
 ---
-# <a name="working-with-split-view-controllers"></a>Trabalhando com os controladores de exibição de divisão
-
-_Este artigo aborda criando e trabalhando com controladores de exibição de divisão dentro de um aplicativo Xamarin.tvOS._
-
+# <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabalhando com tvOS exibir controladores de divisão em Xamarin
 
 Um controlador de exibição de divisão apresenta e gerencia um mestre e o controlador de exibição de detalhes-lado a lado, na tela ao mesmo tempo. Exibir controladores de divisão são usados para apresentar conteúdo Focusable é persistente no modo de exibição mestre (seção menor à esquerda) e relacionados detalhes na exibição de detalhes (seção maior à direita).
 

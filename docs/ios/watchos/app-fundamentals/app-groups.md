@@ -1,18 +1,20 @@
 ---
-title: Trabalhando com grupos de aplicativos
+title: Trabalhando com watchOS grupos de aplicativos em Xamarin
+description: Este documento descreve os grupos de aplicativos e seu uso em um aplicativo watchOS. Ele discute como configurar um grupo de aplicativos, implantação, Entitlements.plist considerações e requisitos de provisionamento.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 341f6b4f5049a39817f2923901472f35b254bead
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5736b25af3993e2da794422a1a6f040461532497
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790673"
 ---
-# <a name="working-with-app-groups"></a>Trabalhando com grupos de aplicativos
+# <a name="working-with-watchos-app-groups-in-xamarin"></a>Trabalhando com watchOS grupos de aplicativos em Xamarin
 
 
 Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado. Grupos de aplicativo podem ser usados para dados como:

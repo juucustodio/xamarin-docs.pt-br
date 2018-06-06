@@ -1,17 +1,18 @@
 ---
 title: Introdução ao watchOS
-description: Visão geral da estrutura de solução de watchOS e limitações
+description: Este documento fornece uma visão geral de watchOS, que descreve o ciclo de vida do aplicativo, tipos de interface do usuário, tamanhos de tela, limitações e muito mais.
 ms.prod: xamarin
 ms.assetid: 99c316d6-6707-40f6-bec9-801d05888759
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 0a0adbab54fc134eaf2e69cc8088713e54b15d3b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 87edc24daab3239626cb904357bd2d45ce868970
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791303"
 ---
 # <a name="introduction-to-watchos"></a>Introdução ao watchOS
 

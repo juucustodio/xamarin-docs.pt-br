@@ -1,28 +1,26 @@
 ---
 title: Alterações de estruturas adicionais tvOS 10
-description: Este artigo aborda as alterações adicionais, secundárias ou melhorias em estruturas existentes para tvOS 10.
+description: Este documento descreve as pequenas alterações e aprimoramentos para as estruturas existentes no iOS 10. Ele aborda as atualizações AVFoundation, AVKit, dados principais, gráficos de núcleo, Foundation, GameKit, GameplayKit e muito mais.
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c53726b91a0cd3e79041b9b1d51e9f7fbb1c79bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 326fb6a23048ba3d3e1d33f42c8da2fff8544c25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788869"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Alterações de estruturas adicionais tvOS 10
-
-_Este artigo aborda as alterações adicionais, secundárias ou melhorias em estruturas existentes para tvOS 10._
-
 
 Além das alterações principais para tvOS, Apple fez melhorias para várias estruturas existentes e modificações tvOS 10.
 
 <a name="AV-Foundation-Framework" />
 
-## <a name="av-foundation-framework-additions"></a>Adições de Framework AV Foundation
+## <a name="avfoundation-framework-additions"></a>Adições de AVFoundation Framework
 
 A estrutura AVFoundation inclui os seguintes aprimoramentos:
 

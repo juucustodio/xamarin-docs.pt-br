@@ -1,21 +1,20 @@
 ---
-title: Introdução ao Storyboards
-description: Um Storyboard é uma representação visual da aparência e o fluxo do aplicativo. Xamarin introduziu um Designer para permitir que aplicativos xamarin tirar proveito dos storyboards, você pode projetar a tela do aplicativo visualmente e acessar modos de exibição, controladores e segues com c# para obter mais controle.
+title: Introdução ao Storyboards no xamarin
+description: Este documento fornece uma introdução a storyboards no xamarin. Ele descreve como um storyboard é usado para definir uma interface do usuário, segues e como usar o Designer do iOS para editar arquivos de storyboard.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 647bd7d339dc56978752f7ab29de30cf8acb7e07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3366da2f5dc869c7b075bf32be238a1ebd3145d7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790962"
 ---
-# <a name="introduction-to-storyboards"></a>Introdução ao Storyboards
-
-_Um Storyboard é uma representação visual da aparência e o fluxo do aplicativo. Xamarin introduziu um Designer para permitir que aplicativos xamarin tirar proveito dos storyboards, você pode projetar a tela do aplicativo visualmente e acessar modos de exibição, controladores e segues com c# para obter mais controle._
+# <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução ao Storyboards no xamarin
 
 Neste guia, explicaremos um Storyboard que é e examinar alguns dos principais componentes – como Segues. Vamos examinar como Storyboards podem ser criados e usados, e quais são as vantagens que eles têm para um desenvolvedor.
 

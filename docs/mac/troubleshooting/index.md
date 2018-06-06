@@ -1,6 +1,6 @@
 ---
 title: Solução de problemas de Xamarin.Mac
-description: Documentos nesta seção abordam recursos específicos para solução de problemas com Xamarin.Mac.
+description: Links neste documento para um guia que descreve dicas de solução de problemas gerais para o desenvolvimento de Xamarin.Mac e outra guia que lista os erros gerados por mmp, a ferramenta de que os pacotes de assemblies em um aplicativo do Mac.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EB81B998-6931-4CD3-8BB0-4679D5B5F39A
@@ -8,11 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 0d9134002c4c597a8a64bc6a52937da615783c75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 16ca64d4dec5ab27955c8c251c2a361541291d6a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792623"
 ---
 # <a name="xamarinmac-troubleshooting"></a>Solução de problemas de Xamarin.Mac 
 

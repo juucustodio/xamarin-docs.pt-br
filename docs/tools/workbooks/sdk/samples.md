@@ -1,15 +1,17 @@
 ---
 title: Integrações de exemplo
+description: Links neste documento para exemplos que demonstram integrações de pastas de trabalho do Xamarin. Exemplos vinculados trabalham com SkiaSharp e a renderização de representação.
 ms.prod: xamarin
 ms.assetid: 327DAD2E-1F76-4EB5-BCD0-9E7384D99E48
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 62d8cf14d6deb9c59297b708221dec10ca009f7f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 75d88af4c294a35d45f05724eb96ce822cddf126
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793965"
 ---
 # <a name="sample-integrations"></a>Integrações de exemplo
 

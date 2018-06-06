@@ -1,18 +1,20 @@
 ---
-title: Trabalhando com entrada de texto
+title: Trabalhando com watchOS entrada de texto em Xamarin
+description: Este documento descreve a entrada de texto watchOS em Xamarin. Ele aborda o PresentTextInputController método, escrevendo, texto sem formatação, emojis e ditado.
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9dec6f754590abf6db8829f555376b423b7a7da7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da668333b3549c92264af7d4da4941ac6b5bf865
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791378"
 ---
-# <a name="working-with-text-input"></a>Trabalhando com entrada de texto
+# <a name="working-with-watchos-text-input-in-xamarin"></a>Trabalhando com watchOS entrada de texto em Xamarin
 
 O Apple Watch não oferece um teclado para os usuários de entrada de texto, no entanto, ele oferece suporte a algumas alternativas amigável para inspecionar:
 
@@ -69,7 +71,7 @@ O resultado sempre é retornado como um `NSObject` que pode ser convertido em um
 
 Há dois tipos de emoji:
 
-- Regular Unicode emoji
+- Regular emoji de Unicode
 - Imagens animadas
 
 Quando o usuário escolhe um emoji Unicode, ele é retornado como uma cadeia de caracteres.

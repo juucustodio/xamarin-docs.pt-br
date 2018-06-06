@@ -1,22 +1,20 @@
 ---
-title: Siri remoto e controladores de Bluetooth
-description: Este artigo aborda o suporte os novos controladores de jogo Siri remoto e Bluetooth em seus aplicativos Xamarin.tvOS.
+title: Siri remoto e controladores Bluetooth para tvOS em Xamarin
+description: Este artigo descreve como trabalhar com o Siri remoto e os controladores de jogo Bluetooth em tvOS aplicativos escritos com o Xamarin.
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b5893278acad999efd94c89f1ca923100f5cf7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc2abed202f8b2e6993890ca4e6b3c6875522e5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789184"
 ---
-# <a name="siri-remote-and-bluetooth-controllers"></a>Siri remoto e controladores de Bluetooth
-
-_Este artigo aborda o suporte os novos controladores de jogo Siri remoto e Bluetooth em seus aplicativos Xamarin.tvOS._
-
+# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri remoto e controladores Bluetooth para tvOS em Xamarin
 
 Os usuários do seu aplicativo Xamarin.tvOS não interagirá com sua interface diretamente como com iOS onde eles tocar imagens na tela do dispositivo, mas indiretamente de entre o espaço usando o [Siri remoto](#The-Siri-Remote).
 
@@ -43,7 +41,7 @@ Siri remoto tem os seguintes recursos e usos esperados dentro de seu aplicativo 
 |**Superfície de toque**<br />Passe o dedo para navegar, pressionar para selecionar e mantenha menus contextuais.|**Passe o dedo/toque**<br />Navegação da interface do usuário entre os itens de controle.<br /><br />**Clique em**<br />Ativa o item (em foco) selecionado.|**Passe o dedo/toque**<br />Depende do projeto de jogo e pode ser usado como um bloco de D tocando as bordas.<br /><br />**Clique em**<br />Execute a função do botão principal.|
 |**Menu**<br />Pressione para retornar à tela anterior ou menu.|Retorna a tela anterior e sai à tela de início para Apple TV de tela de aplicativo principal.|Pausar e retomar o jogo, para retornar à tela anterior e fecha a tela inicial para Apple TV na tela principal do aplicativo.|
 |**Siri/pesquisa**<br />Em países com Siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|N/D|N/D|
-|**Play/Pause**<br />Reproduzir e pausar mídia ou fornece uma função secundária em aplicativos.|Inicia a reprodução de mídia e pausar ou retomar a reprodução.|Executa a função do botão secundário ou ignora o vídeo de Introdução (se existir).|
+|**Executar/pausar**<br />Reproduzir e pausar mídia ou fornece uma função secundária em aplicativos.|Inicia a reprodução de mídia e pausar ou retomar a reprodução.|Executa a função do botão secundário ou ignora o vídeo de Introdução (se existir).|
 |**Início**<br />Pressione para retornar à tela inicial, clique duas vezes para exibir os aplicativos em execução, pressione e segure a suspensão do dispositivo.|N/D|N/D|
 |**Volume**<br />Controles anexado volume equipamentos de áudio/vídeo.|N/D|N/D|
 
@@ -75,9 +73,6 @@ Além disso, pressionamentos de botão de menu podem ser detectados com um recon
 
 > [!IMPORTANT]
 > Você deve **sempre** atribuir uma função ao botão Play/Pause no controle remoto. Ter um botão não funcionais pode tornar seu aplicativo a ser interrompido para o usuário final. Se você não tiver uma função válida para este botão, atribua a mesma função que o botão principal (clique na superfície de toque).
-
-
-
 
 <a name="Gestures-and-Storyboards" />
 

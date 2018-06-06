@@ -1,21 +1,20 @@
 ---
 title: Introdução ao watchOS 4
-description: Novos recursos disponíveis para desenvolvedores que usam o Xamarin para watchOS 4.
+description: Este documento fornece uma introdução de alto nível para watchOS 4, que descreve os novos recursos que estão disponíveis para desenvolvedores do Xamarin.
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2017
-ms.openlocfilehash: d3377b503273dc84cfe07227c4b007c8e073f1a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 550cf57f6b89a8fd5726ae55cb5eaaa54d6d2692
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791261"
 ---
 # <a name="introduction-to-watchos-4"></a>Introdução ao watchOS 4
-
-_Novos recursos disponíveis para desenvolvedores que usam o Xamarin para watchOS 4._
 
 Novos recursos de acesso de watchOS 4 em seus aplicativos:
 
@@ -29,7 +28,6 @@ Alterações ocorridas desde watchOS 3:
 
 * Código do aplicativo e executado em um único processo de interface do usuário.
 * Permissão de local pode ser concedida no relógio (sem necessidade de solicitar o usuário aceite em seu telefone).
-
 
 ## <a name="related-links"></a>Links relacionados
 

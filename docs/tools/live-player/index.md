@@ -1,16 +1,17 @@
 ---
-title: Player ao vivo para xamarin. Forms
-description: Inicie o aprendizado Xamarin rapidamente, criar e executar aplicativos no seu dispositivo Android ou iOS.
+title: Player de ao vivo Xamarin para xamarin. Forms
+description: Este documento aborda o Player de Live Xamarin para xamarin. Forms, que descreve a instalação, o aplicativo Xamarin ao vivo Player, amostras a ser usado com o Xamarin Live Player, limitações e solução de problemas.
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 79cf2c790789963189d3eedd6645a6b6ae6503b6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793132"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Player de ao vivo Xamarin para xamarin. Forms
 
@@ -46,7 +47,6 @@ Xamarin Live Player tem algumas restrições sobre quais recursos ele pode ofere
 ## <a name="troubleshootingtroubleshootingmd"></a>[Solução de problemas](troubleshooting.md)
 
 Encontre ajuda se algo der errado.
-
 
 ## <a name="related-links"></a>Links relacionados
 

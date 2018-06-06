@@ -1,5 +1,5 @@
 ---
-title: Modos de exibição de tabela
+title: Exibições de tabela em Xamarin.Mac
 description: Este artigo aborda a trabalhar com modos de exibição de tabela em um aplicativo Xamarin.Mac. Descreve criando modos de exibição de tabela no Xcode e construtor de Interface e interagir com eles no código.
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c274405613f079cb61ad9c96497a9effdc7173f5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da26810869f23b8861ffb4409248c56bff12a521
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793224"
 ---
-# <a name="table-views"></a>Modos de exibição de tabela
+# <a name="table-views-in-xamarinmac"></a>Exibições de tabela em Xamarin.Mac
 
 _Este artigo aborda a trabalhar com modos de exibição de tabela em um aplicativo Xamarin.Mac. Descreve criando modos de exibição de tabela no Xcode e construtor de Interface e interagir com eles no código._
 

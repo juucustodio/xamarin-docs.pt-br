@@ -1,21 +1,20 @@
 ---
-title: Passo a passo - usando controles personalizados com o Designer de Xamarin para iOS
-description: Este artigo fornece instruções passo a passo mostra como criar um controle personalizado e usá-lo no Designer de Xamarin para iOS. Ele mostra como fazer um controle disponíveis na caixa de ferramentas do designer, portanto ele pode ser arrastar/removido em uma exibição. Além disso, ele mostra como implementar um controle para que ele renderiza corretamente no tempo de execução e tempo de design, bem como criar propriedades que podem ser definidas em tempo de design.
+title: Usando controles personalizados com o Designer do iOS
+description: Este documento descreve como criar um controle personalizado e usá-lo com o Designer de Xamarin para iOS. Ele mostra como tornar o controle disponíveis na caixa de ferramentas do Designer do iOS, implementar o controle para que ele renderiza corretamente e tempo de design e muito mais.
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 4a7fb6cba82b52f2a3506df7a36b4813a88ff583
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dae675d65cb2be93ac828a1aebe560354630ab54
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790159"
 ---
-# <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>Passo a passo - usando controles personalizados com o Designer de Xamarin para iOS
-
-_Este artigo fornece instruções passo a passo mostra como criar um controle personalizado e usá-lo no Designer de Xamarin para iOS. Ele mostra como fazer um controle disponíveis na caixa de ferramentas do designer, portanto ele pode ser arrastar/removido em uma exibição. Além disso, ele mostra como implementar um controle para que ele renderiza corretamente no tempo de execução e tempo de design, bem como criar propriedades que podem ser definidas em tempo de design._
+# <a name="using-custom-controls-with-the-ios-designer"></a>Usando controles personalizados com o Designer do iOS
 
 ## <a name="requirements"></a>Requisitos
 

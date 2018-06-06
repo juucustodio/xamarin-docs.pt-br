@@ -1,18 +1,20 @@
 ---
-title: Criando objetos de Interface do usuário
+title: Criando objetos de Interface do usuário no xamarin
+description: Este documento fornece uma visão geral de como criar uma interface do usuário em xamarin. Ele aborda o iOS Designer, Xcode Interface Builder, c# e storyboards.
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 5229beb7a882049daf58d3a3e62da6fed25a1f48
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c688dcdf7498b0a2860d1878d893beae4f5cf8fc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790146"
 ---
-# <a name="creating-user-interface-objects"></a>Criando objetos de Interface do usuário
+# <a name="creating-user-interface-objects-in-xamarinios"></a>Criando objetos de Interface do usuário no xamarin
 
 Grupos de Apple relacionadas das funções "estruturas", que correspondem aos namespaces xamarin. `UIKit` é o namespace que contém todos os controles de interface de usuário para iOS.
 
@@ -21,7 +23,6 @@ Sempre que seu código precisa para fazer referência a um controle de interface
 ```csharp
 using UIKit;
 ```
-
 
 Todos os controles discutidos neste capítulo estão no namespace UIKit e nome de cada classe de controle de usuário tem o `UI` prefixo.
 

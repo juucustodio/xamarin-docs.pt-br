@@ -1,20 +1,19 @@
 ---
 title: Pastas de trabalho interativas
-description: Use pastas de trabalho para criar documentos em tempo real com o código c# para testar, ensino, treinamento ou explorar.
+description: Este documento descreve como usar pastas de trabalho do Xamarin para criar documentos em tempo real que contém o código c# para experimentar, ensino, treinamento ou explorar.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: de88bbc9bc45b8a6326924d964bdd9385acb82aa
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fa79aae9af2cd90741a54a5b3abc17910fcb181d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794170"
 ---
 # <a name="interactive-workbooks"></a>Pastas de trabalho interativas
-
-_Use pastas de trabalho para criar documentos em tempo real com o código c# para testar, ensino, treinamento ou explorar._
 
 Você pode usar pastas de trabalho como um aplicativo autônomo, separado do seu IDE.
 

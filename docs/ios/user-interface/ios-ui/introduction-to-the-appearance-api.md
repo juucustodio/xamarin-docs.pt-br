@@ -1,5 +1,5 @@
 ---
-title: Aparência de API
+title: Aparência de API em xamarin
 description: iOS permite aplicar as configurações de propriedade visual em um nível de classe estática em vez de em objetos individuais para que a alteração se aplica a todas as instâncias desse controle no aplicativo.
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7c7e4909cc12f49411c527af12fc0e4855979804
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 02b33550451506ef4756f0f7d4400b4f98cef368
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790247"
 ---
-# <a name="appearance-api"></a>Aparência de API
+# <a name="appearance-api-in-xamarinios"></a>Aparência de API em xamarin
 
 _iOS permite aplicar as configurações de propriedade visual em um nível de classe estática em vez de em objetos individuais para que a alteração se aplica a todas as instâncias desse controle no aplicativo._
 

@@ -1,18 +1,20 @@
 ---
-title: Pastas de trabalho de exemplo
+title: Pastas de trabalho do Xamarin – exemplos
+description: Links neste documento para pastas de trabalho de exemplo para usar ao aprender a usar pastas de trabalho do Xamarin. Pastas de trabalho vinculadas demonstram OpenGL, UrhoSharp e propriedade animação em xamarin.
 ms.prod: xamarin
 ms.assetid: DE1609F8-0D39-4EA0-8666-0468FCF77ACC
 ms.custom: xamu-video
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 83b4f56ea64c80c5aa1f040acc26b567a9b66e70
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1ebc4d12801deea42219fad060e70b8c24ad179c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793762"
 ---
-# <a name="sample-workbooks"></a>Pastas de trabalho de exemplo
+# <a name="xamarin-workbooks--samples"></a>Pastas de trabalho do Xamarin – exemplos
 
 > [!NOTE]
 > Uma variedade de exemplos estão disponíveis em [developer.xamarin.com/workbooks](https://developer.xamarin.com/workbooks/).

@@ -1,21 +1,19 @@
 ---
-title: 'Passo a passo: Criando um aplicativo usando a API de reflexão'
-description: Além da API de elementos, MonoTouch.Dialog (MT. D) também inclui uma API de reflexão com base em atributo. Criando telas com MT. faz com que a API de reflexão D tão fácil quanto a decoração de classes com atributos. Este artigo fornece um passo a passo mostra como criar um aplicativo usando a API de reflexão.
+title: Criando um aplicativo xamarin usando a API de reflexão
+description: Este documento descreve a MonoTouch.Dialog com base em atributo reflexão API, que cria com base em classes decorados com atributos de interface do usuário.
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e56eaeccb2e09d9f1ad84245bf41e2a4bf1b56f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c60d2a8ca58fe807dc340125d0db21b6f9ddff9f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790503"
 ---
-# <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>Passo a passo: Criando um aplicativo usando a API de reflexão
-
-_Além da API de elementos, MonoTouch.Dialog (MT. D) também inclui uma API de reflexão com base em atributo. Criando telas com MT. faz com que a API de reflexão D tão fácil quanto a decoração de classes com atributos. Este artigo fornece um passo a passo mostra como criar um aplicativo usando a API de reflexão._
-
+# <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Criando um aplicativo xamarin usando a API de reflexão
 
 O MT. API de reflexão D permite que classes ser decorado com atributos que MT. D usa para criar telas automaticamente. A API de reflexão fornece uma associação entre essas classes e o que é exibido na tela. Embora essa API não fornece um controle refinado do que os elementos de API, ele reduz a complexidade criando automaticamente a hierarquia de elementos com base em decoração de classe.
 
@@ -36,7 +34,6 @@ Vejamos um exemplo para ilustrar como usar a API de reflexão. Neste exemplo, cr
  [![](reflection-api-walkthrough-images/01-expense-entry.png "Neste exemplo, criaremos uma tela de entrada de dados simples como mostrado aqui")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
-
 
 ## <a name="creating-a-class-with-mtd-attributes"></a>Criando uma classe com MT. Atributos de D
 

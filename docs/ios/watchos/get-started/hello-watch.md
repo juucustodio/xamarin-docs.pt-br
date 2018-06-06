@@ -1,19 +1,20 @@
 ---
-title: Olá, inspecionar
-description: Introdução ao Xamarin e watchOS
+title: Olá, watchOS – passo a passo
+description: Este documento fornece um passo a passo da criação de um aplicativo simples watchOS usando Xamarin. Descreve como trabalhar no Visual Studio e o Visual Studio para Mac, trabalhar com storyboards e responder a eventos no código.
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/14/2016
-ms.openlocfilehash: 2281fa801d32e8d8934767ae090503ca523d7eff
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00d6080429450dce2c0491fa385cf4f179befba6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790991"
 ---
-# <a name="hello-watch"></a>Olá, inspecionar
+# <a name="hello-watchos--walkthrough"></a>Olá, watchOS – passo a passo
 
 Depois de ter criado uma solução seguindo as etapas em [instalação e configuração](~/ios/watchos/get-started/installation.md), você terá 3 projetos:
 
@@ -130,13 +131,11 @@ Agora, abra **InterfaceController.cs** (*não* InterfaceController.designer.cs) 
 
 ```csharp
 int clickCount = 0;
-
 partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 {
   var msg = String.Format("Clicked {0} times", ++clickCount);
   myLabel.SetText(msg);
 }
-
 ```
 
 Esse código deve ser relativamente transparente: a variável de instância `clickCount` é incrementado toda vez que a função `OnButtonPress` é chamado. O texto da `myLabel` é alterado para refletir essa contagem; `myLabel`, obviamente, é o nome de uma das saídas de que você criou no XCode. O `partial` função é a implementação da função associada com o nome da ação que você especificou.

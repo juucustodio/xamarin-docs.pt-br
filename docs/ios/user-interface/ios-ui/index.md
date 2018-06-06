@@ -1,19 +1,20 @@
 ---
-title: Interface do usuário do iOS
-description: Abrange a trabalhar com a Interface do usuário do iOS em um aplicativo xamarin.
+title: Interfaces de usuário no iOS
+description: Links neste documento em guias que descrevem como criar interfaces do usuário no aplicativo xamarin. Os guias vinculados abrangem a API de aparência, criando objetos de interface do usuário, opções de layout e muito mais.
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: dd07ba6853901c93ad26b371ea88b7d39c37d3f7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a51d3f57106a282ed72b45dedf356739244e247f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790361"
 ---
-# <a name="user-interface-in-ios"></a>Interface do usuário do iOS
+# <a name="user-interfaces-in-ios"></a>Interfaces de usuário no iOS
 
 ## <a name="appearance-apiintroduction-to-the-appearance-apimd"></a>[API de Aparência](introduction-to-the-appearance-api.md)
 

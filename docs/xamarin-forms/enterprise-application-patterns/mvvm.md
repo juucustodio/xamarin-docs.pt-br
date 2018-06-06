@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 32a7a7dd50edcc3eefe76429ddb1e5581447993e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793940"
 ---
 # <a name="mvvm"></a>MVVM
 
@@ -175,7 +176,7 @@ Essa abordagem tem a vantagem de um aplicativo tem uma única classe que é resp
 
 Todos os modelo de exibição e classes de modelo que são acessíveis para um modo de exibição devem implementar o `INotifyPropertyChanged` interface. Implementar essa interface em uma classe de modelo ou um modelo de exibição permite que a classe fornecer notificações de alteração para controles de associação de dados no modo de exibição quando o valor da propriedade subjacente é alterado.
 
-Aplicativo deve ser projetado para o uso correto de notificação de alteração de propriedade, atendendo aos seguintes requisitos:
+Aplicativos devem ser projetados para o uso correto de notificação de alteração de propriedade, atendendo aos seguintes requisitos:
 
 -   Sempre gerar um `PropertyChanged` evento se alterações de valor da propriedade de um público. Não suponha que aumentar o `PropertyChanged` evento pode ser ignorado devido a dados de Conhecimento de como a associação de XAML ocorre.
 -   Sempre gerar um `PropertyChanged` evento para qualquer calculado propriedades cujos valores são usados por outras propriedades na exibição de modelo ou modelo.
@@ -366,4 +367,4 @@ Usando o modelo MVVM padrão, a interface do usuário do aplicativo e a lógica 
 ## <a name="related-links"></a>Links relacionados
 
 - [Baixar eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (amostra)](https://github.com/dotnet-architecture/eShopOnContainers)

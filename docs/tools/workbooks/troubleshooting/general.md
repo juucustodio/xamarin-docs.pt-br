@@ -1,14 +1,16 @@
 ---
 title: Problemas conhecidos e soluções alternativas
+description: Este documento descreve problemas conhecidos e soluções alternativas para pastas de trabalho do Xamarin. Ele aborda problemas CultureInfo, JSON e muito mais.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 186faf3fc4f93d1c9a4af9e3e9f72afd569fed8b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b6dc3b119d3e85369a71638f2519b2ef0c85446c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794027"
 ---
 # <a name="known-issues--workarounds"></a>Problemas conhecidos e soluções alternativas
 
@@ -56,7 +58,7 @@ Há um [bugs no editor Monaco] [ monaco-bug] no Safari/WebKit, que é usado no a
 
 ## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Processadores SkiaSharp estão ausentes no 1.3 de pastas de trabalho
 
-A partir de pastas de trabalho 1.3, removemos os renderizadores de SkiaSharp que enviamos em pastas de trabalho 0.99.0, favor SkiaSharp fornecendo as processadores de si mesmo, usando nosso [SDK] [/ guias/cross-platform/pastas de trabalho/sdk /].
+A partir de pastas de trabalho 1.3, removemos os renderizadores de SkiaSharp que enviamos em pastas de trabalho 0.99.0, favor SkiaSharp fornecendo as processadores de si mesmo, usando nosso [SDK](~/tools/workbooks/sdk/index.md).
 
 ### <a name="workaround"></a>Solução alternativa
 

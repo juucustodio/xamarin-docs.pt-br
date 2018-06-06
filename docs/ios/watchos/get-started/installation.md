@@ -1,19 +1,20 @@
 ---
-title: Instalação e Configuração
-description: Configurando para desenvolver para watchOS
+title: Instalação e uso watchOS em Xamarin
+description: Este documento descreve como instalar e usar watchOS com Xamarin. Ele aborda a instalação, o projeto watchOS estrutura, como usar o designer do iOS, a integração do Xcode e fornece dicas de solução de problemas.
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/05/2017
-ms.openlocfilehash: 976b7a78b70522e6ca9942c286792b53e4f11ae5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea0c7b6a68077cde83fa211e4e6f3432b3e39d5c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791232"
 ---
-# <a name="installation"></a>Instalação
+# <a name="installing-and-using-watchos-in-xamarin"></a>Instalação e uso watchOS em Xamarin
 
 watchOS 4 requer macOS Serra (10.12) com o Xcode 9.
 

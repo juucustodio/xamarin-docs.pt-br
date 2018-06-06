@@ -1,6 +1,6 @@
 ---
 title: watchOS solução de problemas
-description: Problemas conhecidos e soluções alternativas para problemas de desenvolvimento watchOS.
+description: Este documento aborda problemas conhecidos e soluções alternativas para o desenvolvimento de watchOS com Xamarin. Ele descreve imagens com problemas, adicionar manualmente os arquivos do controlador de interface, iniciar um aplicativo de inspeção de linha de comando e muito mais.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
@@ -8,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6e7a7dd09d65b88831136662d8718886aaf483c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4e84028336669738c40da9e37cd22f32ba11dfc1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791759"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS solução de problemas
 

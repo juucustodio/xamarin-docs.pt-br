@@ -1,22 +1,20 @@
 ---
-title: Trabalhando com botões
-description: Este artigo aborda criando e trabalhando com botões dentro de um aplicativo Xamarin.tvOS.
+title: Trabalhando com botões tvOS Xamarin
+description: Este documento descreve como trabalhar com os botões em um aplicativo de tvOS criado com o Xamarin. Ele discute como trabalhar com os botões em código e em storyboards, e ele examina como Estilizar um botão.
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: e915e96690fe67f0e704ec558313427f01753438
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3de732e9eee696ce21ffc5526afd44f29695a313
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789379"
 ---
-# <a name="working-with-buttons"></a>Trabalhando com botões
-
-_Este artigo aborda criando e trabalhando com botões dentro de um aplicativo Xamarin.tvOS._
-
+# <a name="working-with-tvos-buttons-in-xamarin"></a>Trabalhando com botões tvOS Xamarin
 
 Usar uma instância de `UIButton` classe para criar um botão Focusable é selecionável em uma janela tvOS. Quando o usuário seleciona um botão, ele envia uma mensagem de ação para o objeto de destino permitir responder seu aplicativo Xamarin.tvOS o usuário de entrada do.
 

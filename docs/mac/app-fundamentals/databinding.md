@@ -1,5 +1,5 @@
 ---
-title: Associação de dados e a codificação de chave-valor
+title: Associação de dados e a codificação de chave-valor em Xamarin.Mac
 description: Este artigo aborda o uso de chave-valor de codificação e chave-valor observando para permitir a associação de dados para os elementos de interface do usuário no construtor de Interface do Xcode.
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 48ee5d4e4a0a53de49fbba46d79424e03af6fe5c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 88567e47f488a94fcf7334584a678c9689b83306
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792132"
 ---
-# <a name="data-binding-and-key-value-coding"></a>Associação de dados e a codificação de chave-valor
+# <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Associação de dados e a codificação de chave-valor em Xamarin.Mac
 
 _Este artigo aborda o uso de chave-valor de codificação e chave-valor observando para permitir a associação de dados para os elementos de interface do usuário no construtor de Interface do Xcode._
 

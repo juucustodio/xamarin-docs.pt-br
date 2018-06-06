@@ -1,21 +1,20 @@
 ---
-title: Fornecendo comentários Haptic
-description: Este artigo aborda os novos tipos de comentários haptic disponível no iOS 10 e como implementá-los no xamarin.
+title: Fornecendo comentários Haptic em xamarin
+description: Este documento descreve como fornecer comentários haptic em um aplicativo xamarin. Ele discute UIImpactFeedbackGenerator, UINotificationFeedbackGenerator e UISelectionFeedbackGenerator.
 ms.prod: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f2d1bd73ea764cd5bf56775abd7c7357b039bc79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0dae6d6f50423474fbfebad5d630000e2160f6a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790182"
 ---
-# <a name="providing-haptic-feedback"></a>Fornecendo comentários Haptic
-
-_Este artigo aborda os novos tipos de comentários haptic disponível no iOS 10 e como implementá-los no xamarin._
+# <a name="providing-haptic-feedback-in-xamarinios"></a>Fornecendo comentários Haptic em xamarin
 
 <a name="Overview" />
 

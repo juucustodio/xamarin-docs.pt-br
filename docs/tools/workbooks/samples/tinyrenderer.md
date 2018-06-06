@@ -1,15 +1,17 @@
 ---
 title: Pastas de trabalho TinyRenderer
+description: Este documento descreve as pastas de trabalho TinyRenderer, que são compatíveis com OpenGL. Essas pastas de trabalho executadas no Windows e Mac.
 ms.prod: xamarin
 ms.assetid: E4E17836-94C2-436F-ADD8-104AC574D22B
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: fc0716fc3babd0b2ee835b839ae816f2cb815b0f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 10704044042ea38dd3a5297c46371f9f9c27936c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794131"
 ---
 # <a name="tinyrenderer-workbooks"></a>Pastas de trabalho TinyRenderer
 
@@ -31,7 +33,6 @@ Uma série de pastas de trabalho que explicam como OpenGL funciona, que é execu
 [![](tinyrenderer-images/tinyrenderer-sml.png "Exemplo de processamento de wireframe")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 O código c# nessas pastas de trabalho baseia-se este software livre [código C++](https://github.com/ssloy/tinyrenderer) e o texto deste [wiki](https://github.com/ssloy/tinyrenderer/wiki/). Agradecemos que o trabalho original está disponível sob uma licença que permitiu transformá-lo em um conjunto de pastas de trabalho.
-
 
 ## <a name="related-links"></a>Links relacionados
 

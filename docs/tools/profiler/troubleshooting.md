@@ -1,20 +1,19 @@
 ---
 title: Criador de perfil do Xamarin de solução de problemas
-description: O criador de perfil do Xamarin de solução de problemas
+description: Este documento fornece informações de solução de problemas relacionadas ao criador de perfil Xamarin. Ele descreve os problemas relacionados ao registro em log e diagnóstico, o IDE e outros tópicos.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 9e2f9a35f37513ce0cb785f2bd922aeccf42dd8e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 247a18cf7f645ea90d100cb3f4900f30ac7754cc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793843"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Criador de perfil do Xamarin de solução de problemas
-
-_O criador de perfil do Xamarin de solução de problemas_
 
 ## <a name="logging-and-diagnostics"></a>Registro em log e diagnóstico
 
@@ -25,6 +24,7 @@ A equipe do Xamarin pode ajudar a rastrear problemas se você nos fornecer infor
 - O **.mlpd** que está sendo gerado para a sessão de criação de perfil (veja abaixo).
 
 ### <a name="getting-log-outputs"></a>Obtendo as saídas de Log
+
 No Mac os logs são salvos para `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
 
 No Windows, eles são salvos em `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` , inclua o log mais recente sempre que você enviar um problema.
@@ -49,7 +49,6 @@ O **.mlpd** para uma sessão atual também pode ser salvas escolhendo **arquivo 
 
 ![](troubleshooting-images/image17-vs.png "Salvando arquivo .mlpd no Visual Studio")
 
-
 É importante observar que **.mlpd** contêm muitas informações e o tamanho do arquivo será grande.
 
 ## <a name="troubleshooting"></a>Solução de problemas
@@ -70,7 +69,6 @@ Verifique as configurações a seguir para resolver esse problema:
 - Certifique-se de que você está conectado no e corretamente autenticados.
 - [Visual Studio] Você deve estar usando [Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/) e ter uma licença válida do Enterprise.
 
-
 #### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>Eu recebo um erro ao tentar iniciar o criador de perfil
 
 Se você executar nesta caixa de erro ao usar o criador de perfil do Visual Studio:
@@ -83,14 +81,11 @@ Se você executar nesta caixa de erro ao usar o criador de perfil do Visual Stud
 
 Se você tiver um thread que você deseja observar especificamente, seria ideal para nomear o segmento com o início muito de sua criação para que obter get `ThreadName` em vez de `0x0`. Por exemplo definir o nome de thread como a interface do usuário, você pode usar o código a seguir:
 
-
 ```csharp
 RunOnUiThread (() => {
   Thread.CurrentThread.Name  = "UI";
 });
 ```
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

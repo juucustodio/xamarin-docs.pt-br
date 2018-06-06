@@ -1,14 +1,16 @@
 ---
 title: Atalhos de teclado do Editor de pastas de trabalho do Xamarin
+description: Este documento descreve os atalhos de teclado disponíveis para uso no editor de pastas de trabalho do Xamarin. Em particular, ele examina a chave de retorno é usada de várias maneiras.
 ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 1258a40a527ab47cee78b17454ac818e53c60ad2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b0ba268367ebf6a9eb55bd00dd84014de247649b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793898"
 ---
 # <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Atalhos de teclado do Editor de pastas de trabalho do Xamarin
 

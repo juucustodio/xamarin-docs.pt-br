@@ -1,16 +1,17 @@
 ---
 title: .NET Embedding
-description: 'Inserindo .NET permite que seu código existente do .NET (c#, F # e outros) para ser consumido de outras linguagens de programação'
+description: 'Inserindo .NET permite que seu código existente do .NET (c#, F # e outros) para ser consumido pelo código escrito em outras linguagens de programação.'
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f6edf25faa00bc7c90a52b76a6e90168ccd85b32
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 16f59498a49d10a43e04989136d8835bf78bd89d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793110"
 ---
 # <a name="net-embedding"></a>.NET Embedding
 
@@ -24,7 +25,7 @@ Inserindo .NET se baseia o [Embeddinator 4000](https://github.com/mono/Embeddina
 
 ## <a name="environments-and-languages"></a>Ambientes e idiomas
 
-A ferramenta é cientes o ambiente que será usado, bem como o idioma que irá consumi-lo.   Por exemplo, a plataforma iOS não permite a compilação do just-in-time (JIT), para que .NET inserindo estaticamente compilar o código do .NET em código nativo que pode ser usado no iOS.  Outros ambientes permitem a compilação JIT, e esses ambientes, podemos aceitar a compilação JIT.
+A ferramenta é cientes o ambiente que será usado, bem como o idioma que irá consumi-lo.   Por exemplo, a plataforma iOS não permite a compilação do just-in-time (JIT), para que .NET inserindo estaticamente compilar o código do .NET em código nativo que pode ser usado no iOS.  Outros ambientes permitem que a compilação JIT e nesses ambientes, podemos aceitar compilação JIT.
 
 Ele oferece suporte a vários consumidores de idioma, ele reproduz o código .NET como código idiomática no idioma de destino.   Esta é a lista de idiomas com suporte no momento:
 

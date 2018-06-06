@@ -1,15 +1,16 @@
 ---
 title: Requisitos e instalação de pastas de trabalho
-description: Como baixar, instalar e usar pastas de trabalho do Xamarin.
+description: Este documento descreve como baixar e instalar pastas de trabalho do Xamarin, discutir os requisitos de sistema e plataformas com suporte.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 4d3217140605be8567d70e6dcf63d60a02e6b2fb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b5e94a9b0bc3b9e9f141ad9fd262d29e01eb8a10
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793815"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisitos e instalação de pastas de trabalho
 

@@ -1,21 +1,20 @@
 ---
-title: Trabalhando com o controlador de barra de guias
-description: Este artigo aborda criando e trabalhando com o controlador de barra de guia dentro de um aplicativo Xamarin.tvOS.
+title: Trabalhando com tvOS guia barra controladores Xamarin
+description: Este documento descreve como trabalhar com os controladores de barra de guia em um aplicativo de tvOS criados com o Xamarin. Ele fornece um alto nível sobre a exibição de barras de guia e aborda itens da barra de guia, integração de storyboard e itens da barra de guia.
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1536e37830f3b2a1e2a83c7bf5039909062d092b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea782fc8d6a2ccef2cdd687ec467be6d49793fc0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789314"
 ---
-# <a name="working-with-tab-bar-controller"></a>Trabalhando com o controlador de barra de guias
-
-_Este artigo aborda criando e trabalhando com o controlador de barra de guia dentro de um aplicativo Xamarin.tvOS._
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabalhando com tvOS guia barra controladores Xamarin
 
 Para muitos tipos de aplicativos tvOS, navegação principal é apresentada como uma barra de guias em execução na parte superior da tela. O usuário obtém esquerda e direita entre a lista de categorias possíveis e a área de conteúdo abaixo as alterações para refletir a seleção do usuário.
 

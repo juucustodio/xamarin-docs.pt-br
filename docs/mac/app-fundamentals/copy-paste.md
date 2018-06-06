@@ -1,5 +1,5 @@
 ---
-title: Copiar e colar
+title: Copie e cole no Xamarin.Mac
 description: Este artigo aborda o trabalho com a área de trabalho para fornecer a copiar e colar em um aplicativo Xamarin.Mac. Ele mostra como trabalhar com tipos de dados padrão que podem ser compartilhados entre vários aplicativos e como oferecer suporte a dados personalizados em um determinado aplicativo.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cf81666403f687ce997e20f6f5f097dc9fcf1421
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: becdec771949584919595c84b13ae9e05bfd377b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791891"
 ---
-# <a name="copy-and-paste"></a>Copiar e colar
+# <a name="copy-and-paste-in-xamarinmac"></a>Copie e cole no Xamarin.Mac
 
 _Este artigo aborda o trabalho com a área de trabalho para fornecer a copiar e colar em um aplicativo Xamarin.Mac. Ele mostra como trabalhar com tipos de dados padrão que podem ser compartilhados entre vários aplicativos e como oferecer suporte a dados personalizados em um determinado aplicativo._
 
@@ -1279,7 +1280,7 @@ Este artigo obteve uma visão detalhada de como trabalhar com a área de trabalh
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MacCopyPaste (sample)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
+- [MacCopyPaste (exemplo)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Guia de programação de área de trabalho](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [macOS diretrizes de Interface Humana](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
