@@ -1,21 +1,22 @@
 ---
-title: Controles deslizantes, comutadores e controles segmentados
+title: Controles deslizantes, comutadores e controles segmentados em xamarin
+description: Este documento aborda slides, comutadores e controles segmentados em xamarin, que descreve como trabalhar com eles por meio de programação e o Designer do iOS.
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3c98ea19b3f925e71f72b09d5356286d676a9f71
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a5d9e76c41eba4e16cab041daa67d3a5d8a584
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790023"
 ---
-# <a name="sliders-switches-and-segmented-controls"></a>Controles deslizantes, comutadores e controles segmentados
+# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, comutadores e controles segmentados em xamarin
 
 <a name="Sliders" />
-
 
 ## <a name="sliders"></a>Controles deslizantes
 

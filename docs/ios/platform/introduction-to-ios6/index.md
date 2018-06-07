@@ -1,17 +1,18 @@
 ---
 title: Introdução ao iOS 6
-description: iOS 6 inclui uma variedade de novas tecnologias para desenvolver aplicativos que xamarin 6 oferece aos desenvolvedores do c#.
+description: Links neste documento em guias que descrevem os recursos introduzidos no iOS 6. Exibições de coleção, PassKit, a estrutura Social, e as alterações StoreKit são discutidas.
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8f3be80ffb8156c24c96b03fda8eac3907ca88bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cf623c7788137106ddbb2c23c69465f205a5a400
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787608"
 ---
 # <a name="introduction-to-ios-6"></a>Introdução ao iOS 6
 
@@ -28,12 +29,12 @@ Este documento lista alguns dos novos recursos mais interessantes que estão dis
 Exibições de coleção permitem que o conteúdo a ser exibido usando layouts arbitrários. Eles permitem criar facilmente layouts de grade fora da caixa, e dar suporte a layouts personalizados também. Para obter mais informações consulte, o [Introdução às exibições de coleção](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md)guia.
 
 
-## <a name="introduction-to-pass-kitiosplatformpasskitmd"></a>[Introdução ao passar Kit](~/ios/platform/passkit.md)
+## <a name="introduction-to-passkitiosplatformpasskitmd"></a>[Introdução ao PassKit](~/ios/platform/passkit.md)
 
-A estrutura de passar Kit permite que os aplicativos a interagir com passa digitais que é gerenciadas no aplicativo de senha. Para obter mais informações consulte, o [Introdução ao guia de passar Kit](~/ios/platform/passkit.md).
+A estrutura de PassKit permite que os aplicativos a interagir com passa digitais que é gerenciadas no aplicativo de senha. Para obter mais informações consulte, o [Introdução ao guia de passar Kit](~/ios/platform/passkit.md).
 
 
-##  <a name="introduction-to-event-kitiosplatformeventkitmd"></a>[Introdução ao Kit de evento](~/ios/platform/eventkit.md)
+##  <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[Introdução ao EventKit](~/ios/platform/eventkit.md)
 
 A estrutura EventKit fornece uma maneira de acessar os calendários, calendário de eventos e dados lembretes que armazena o banco de dados do calendário. Acesso a calendários e calendário de eventos está disponível desde o iOS 4, mas iOS 6 agora expõe o acesso aos dados de lembretes. Para obter mais informações, consulte o [,](~/ios/platform/eventkit.md) [ntroduction para EventKit](~/ios/platform/eventkit.md) guia.
 
@@ -43,7 +44,7 @@ A estrutura EventKit fornece uma maneira de acessar os calendários, calendário
 A estrutura Social fornece uma API unificada para interagir com redes sociais, incluindo o Facebook e Twitter, bem como SinaWeibo para os usuários na China. Para obter mais informações consulte, o [Introdução ao Framework Social](~/ios/platform/social-framework.md) guia.
 
 
-##  <a name="changes-to-store-kitchanges-to-storekitmd"></a>[Alterações no armazenamento de Kit](changes-to-storekit.md)
+##  <a name="changes-to-storekitchanges-to-storekitmd"></a>[Alterações no StoreKit](changes-to-storekit.md)
 
 Apple apresentou dois novos recursos no Kit de armazenamento: comprar e baixar iTunes ou conteúdo de loja de aplicativos a partir do seu aplicativo e hospeda os arquivos de conteúdo para compras no aplicativo!. Para obter mais informações consulte, o [alterações Store Kit](changes-to-storekit.md) guia.
 
