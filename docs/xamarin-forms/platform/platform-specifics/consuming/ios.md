@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/30/2018
-ms.openlocfilehash: 762a604186cf8657ce2f3732081cd82612b1b7ef
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: dbcf97248c1d4537319691f6e18e0d41c931f423
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732990"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848259"
 ---
 # <a name="ios-platform-specifics"></a>iOS específicos de plataforma
 
@@ -43,8 +43,8 @@ Essa plataforma específica é usada para desfocar o conteúdo em camadas abaixo
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
   ...
   <AbsoluteLayout HorizontalOptions="Center">
-    <Image Source="monkeyface.png" />
-    <BoxView x:Name="boxView" ios:VisualElement.BlurEffect="ExtraLight" HeightRequest="300" WidthRequest="300" />
+      <Image Source="monkeyface.png" />
+      <BoxView x:Name="boxView" ios:VisualElement.BlurEffect="ExtraLight" HeightRequest="300" WidthRequest="300" />
   </AbsoluteLayout>
   ...
 </ContentPage>

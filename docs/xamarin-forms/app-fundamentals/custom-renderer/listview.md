@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0d1afc2c14b19bbd03244affed494405776a3c99
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 69640c1cdea6d7dbe3ec82dacbc77991c7b28c99
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847394"
 ---
 # <a name="customizing-a-listview"></a>Personalizando uma ListView
 
@@ -73,15 +74,15 @@ O `NativeListView` controle personalizado pode ser referenciado em Xaml no proje
     ...>
     ...
     <ContentPage.Content>
-        <Grid>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*" />
-          </Grid.RowDefinitions>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
           <Label Text="{x:Static local:App.Description}" HorizontalTextAlignment="Center" />
-          <local:NativeListView Grid.Row="1" x:Name="nativeListView" ItemSelected="OnItemSelected" VerticalOptions="FillAndExpand" />
-        </Grid>
-    </ContentPage.Content>
+            <local:NativeListView Grid.Row="1" x:Name="nativeListView" ItemSelected="OnItemSelected" VerticalOptions="FillAndExpand" />
+          </Grid>
+      </ContentPage.Content>
 </ContentPage>
 ```
 

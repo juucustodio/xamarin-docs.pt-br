@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: f38e4bc9ecd66c1dc33e53fa5c9046ff363802e6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42d5da5c4171347de8c4befc773e498803fd9f36
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848441"
 ---
 # <a name="styles"></a>Estilos
 
@@ -156,4 +157,4 @@ Para garantir a acessibilidade, certifique-se de que os estilos internos são us
 - [Criando aplicativos móveis com o xamarin. Forms, capítulo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Estilos](~/xamarin-forms/user-interface/styles/index.md)
 - [Texto (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Style](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
+- [Estilo](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)

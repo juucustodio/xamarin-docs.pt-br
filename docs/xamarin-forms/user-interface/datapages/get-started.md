@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 5774d91dad7b733a03219dcce1434798f70d4564
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: d5e73839f889234c816bfff08f3e46dade8dffc9
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34846835"
 ---
 # <a name="getting-started-with-datapages"></a>Guia de Introdução ao DataPages
 

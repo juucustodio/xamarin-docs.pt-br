@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
-ms.openlocfilehash: 280ca523d3e3b4f5037d626cc5fd0bd5b31d0e8b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f14479d353d24910f66afd35f968a232ec31657c
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847277"
 ---
 # <a name="adding-ios-specific-formatting"></a>Adicionando formatação específico do iOS
 
@@ -43,7 +44,7 @@ O resultado é mostrado no trecho de tela abaixo. Observe que os itens da barra 
 
 O ideal é a barra de status também é branca - algo que podemos fazer diretamente no projeto de iOS. Adicione as seguintes entradas para o **Info. plist** para forçar a barra de status para ser branco:
 
-![](theme-images/info-plist.png "iOS Info.plist Entries")
+![](theme-images/info-plist.png "Entradas de info. plist do iOS")
 
 ou editar correspondente **Info. plist** arquivo diretamente para incluir:
 

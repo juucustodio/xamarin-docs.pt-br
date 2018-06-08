@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 30c828ebfa84b6f3cb289c0aa89deb26d13d76a4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 912733dabd5a1baa00f1b88e59c5fe305b375605
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34846813"
 ---
 # <a name="datapages-controls-reference"></a>Referência de controles DataPages
 
@@ -69,7 +70,7 @@ O `HeroImage` controle tem quatro propriedades:
 
 <a name="listitem" />
 
-### <a name="listitem"></a>ListItem
+### <a name="listitem"></a>Item de lista
 
 O `ListItem` o layout do controle é semelhante ao native iOS e Android lista ou tabela de linhas, porém ela também pode ser usada como um modo de exibição normal. No exemplo de código abaixo dela é mostrado hospedado dentro de um `StackLayout`, mas também pode ser usado em controles de lista de scolling de associação de dados.
 
@@ -204,27 +205,27 @@ Observe que alguns valores consultem `StaticResource`s – eles serão definidos
         <On Platform="iOS, Android" Value="13" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Color" x:Key="CardViewTextTextColor">
+<OnPlatform x:TypeArguments="Color"    x:Key="CardViewTextTextColor">
         <On Platform="iOS" Value="{StaticResource iOSCardViewTextTextColor}" />
         <On Platform="Android" Value="{StaticResource AndroidCardViewTextTextColor}" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Thickness" x:Key="CardViewTextlMargin">
+<OnPlatform x:TypeArguments="Thickness"    x:Key="CardViewTextlMargin">
         <On Platform="iOS" Value="12,10,12,4" />
         <On Platform="Android" Value="20,0,20,5" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Color" x:Key="CardViewDetailTextColor">
+<OnPlatform x:TypeArguments="Color"    x:Key="CardViewDetailTextColor">
         <On Platform="iOS" Value="{StaticResource iOSCardViewDetailTextColor}" />
         <On Platform="Android" Value="{StaticResource AndroidCardViewDetailTextColor}" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Thickness" x:Key="CardViewDetailMargin">
+<OnPlatform x:TypeArguments="Thickness"    x:Key="CardViewDetailMargin">
         <On Platform="iOS" Value="12,0,10,12" />
         <On Platform="Android" Value="20,0,20,20" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Color" x:Key="CardViewBackgroundColor">
+<OnPlatform x:TypeArguments="Color"    x:Key="CardViewBackgroundColor">
         <On Platform="iOS" Value="{StaticResource iOSCardViewBackgroundColor}" />
         <On Platform="Android" Value="{StaticResource AndroidCardViewBackgroundColor}" />
 </OnPlatform>
@@ -239,7 +240,7 @@ Observe que alguns valores consultem `StaticResource`s – eles serão definidos
         <On Platform="Android" Value="4" />
 </OnPlatform>
 
-<OnPlatform x:TypeArguments="Color" x:Key="CardViewShadowColor">
+<OnPlatform x:TypeArguments="Color"    x:Key="CardViewShadowColor">
         <On Platform="iOS, Android" Value="#CDCDD1" />
 </OnPlatform>
 ```

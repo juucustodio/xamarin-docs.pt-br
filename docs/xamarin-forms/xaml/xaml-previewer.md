@@ -6,12 +6,13 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 02/24/2017
-ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.date: 05/31/2018
+ms.openlocfilehash: 9b87145773bf16b15c391c5c5d6d136b7aa76e39
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848350"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizador XAML para xamarin. Forms
 
@@ -55,6 +56,17 @@ As opções na parte superior do painel de visualização são:
 Alguns layouts podem ser difíceis de visualizar sem dados associados a controles de interface de usuário. Para tornar a visualização mais úteis, atribua alguns dados estáticos para os controles por fixar um contexto de associação (seja no code-behind ou usando XAML).
 
 Consulte de James Montemagno [postagem de blog sobre como adicionar dados de tempo de design](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) para ver como vincular a um ViewModel estático em XAML.
+
+## <a name="detecting-design-mode"></a>Detectando o modo de Design
+
+Estático [ `DesignMode.IsDesignModeEnabled` ](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) propriedade pode ser examinada para determinar se o aplicativo está em execução no visualizador. Isso permite que você especifique o código que será executado somente quando o aplicativo é executado no visualizador:
+
+```csharp
+if (DesignMode.IsDesignModeEnabled)
+{
+  // Previewer only code  
+}
+```
 
 ## <a name="troubleshooting"></a>Solução de problemas
 

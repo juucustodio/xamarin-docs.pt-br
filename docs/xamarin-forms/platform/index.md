@@ -6,12 +6,13 @@ ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/20/2017
-ms.openlocfilehash: be131bdbfeceabd72494708cdfe9a263da9bbbd8
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/06/2018
+ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847625"
 ---
 # <a name="platform-features"></a>Recursos da plataforma
 
@@ -41,10 +42,6 @@ Xamarin. Forms agora tem suporte para aplicativos GTK # visualização.
 
 Xamarin. Forms agora tem suporte para aplicativos macOS visualização.
 
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
-
-Xamarin. Forms agora tem suporte para aplicativos do Windows Presentation Foundation (WPF) visualização.
-
 ## <a name="native-formsnative-formsmd"></a>[Formulários nativos](native-forms.md)
 
 Formulários nativo permitem xamarin. Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado páginas a serem consumidos por projetos nativos do xamarin, xamarin e Windows UWP (plataforma Universal).
@@ -61,6 +58,14 @@ Específicos de plataforma permitem consumir funcionalidade só está disponíve
 
 Há uma ampla variedade de código-fonte aberto plug-ins disponíveis no Github, Nuget e o armazenamento do componente Xamarin para ajudar a estender aplicativos xamarin. Forms.
 
+## <a name="tizentizenmd"></a>[Tizen](tizen.md)
+
+Tizen .NET permite que você crie aplicativos do .NET com xamarin. Forms e Tizen .NET framework.
+
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
 Xamarin. Forms tem suporte para o Windows UWP (plataforma Universal) no Windows 10. Este artigo descreve como adicionar um um projeto UWP a uma solução existente do xamarin. Forms.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin. Forms agora tem suporte para aplicativos do Windows Presentation Foundation (WPF) visualização.

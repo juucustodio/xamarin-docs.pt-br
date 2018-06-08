@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: eaa57e90ef71f13a53737aa6540e5b5bd9126ad2
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 7171142951a2893233233bb8a1c44c5a84c57b5c
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848194"
 ---
 # <a name="localization"></a>Localização
 
@@ -386,7 +387,7 @@ public class Localize : UsingResxLocalization.ILocalize
             switch (iOSLanguage)
             {
                 case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
-                case "ms-SG":   // "Malaysian (Singapore)" not supported .NET culture
+                case "ms-SG":    // "Malaysian (Singapore)" not supported .NET culture
                     netLanguage = "ms"; // closest supported
                     break;
                 case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture

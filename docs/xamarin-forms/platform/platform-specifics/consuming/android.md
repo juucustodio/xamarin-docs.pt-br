@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/30/2018
-ms.openlocfilehash: 05f1fc6158e9a20892ab4a4b49b33e4eac6bc5e5
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 705c3037505b61bfb364772187e0ce8ead14b27f
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733055"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847765"
 ---
 # <a name="android-platform-specifics"></a>Especificações de plataforma Android
 

@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/19/2018
-ms.openlocfilehash: 2e942d1085822fee935ae0f23f2253f23d49a43d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 92eabbec31b654f1aefcffb99ec2ed14062e8681
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847371"
 ---
 # <a name="creating-android-services"></a>Criar serviços do Android
 
@@ -21,11 +22,11 @@ _Este guia aborda os serviços de xamarin, que são componentes do Android que p
 
 Aplicativos móveis não são como os aplicativos de desktop. Áreas de trabalho têm grandes quantidades de recursos, como o estado real da tela, memória, espaço de armazenamento e uma fonte de alimentação conectado, não dispositivos móveis. Essas restrições forçar aplicativos móveis para se comportar de maneira diferente. Por exemplo, a tela pequena em um dispositivo móvel normalmente significa que apenas um aplicativo (ou seja, atividade) é visível no momento. Outras atividades são movidas para o plano de fundo e enviados por push para um estado suspenso em que eles não podem executar qualquer trabalho. No entanto, apenas porque é um aplicativo do Android no plano de fundo não significa que é impossível para o aplicativo continuar trabalhando. 
 
-Aplicativos do Android são compostos de pelo menos quatro componentes principais: _atividades_, _difusão receptores_, _provedores de conteúdo_e _Serviços_. Atividades são a base de muitos aplicativos Android ótimos, porque eles fornecem a interface do usuário que permite que um usuário interage com o aplicativo. No entanto, quando se trata de execução simultânea ou trabalho em segundo plano, atividades nem sempre são a melhor opção.
+Aplicativos do Android são compostos de pelo menos um dos quatro componentes principais: _atividades_, _difusão receptores_, _provedores de conteúdo_e _Serviços_. Atividades são a base de muitos aplicativos Android ótimos, porque eles fornecem a interface do usuário que permite que um usuário interage com o aplicativo. No entanto, quando se trata de execução simultânea ou trabalho em segundo plano, atividades nem sempre são a melhor opção.
  
 O mecanismo principal para o trabalho em segundo plano no Android é o _service_. Um serviço Android é um componente que foi projetado para realizar algum trabalho sem uma interface do usuário. Um serviço pode baixar um arquivo, reproduzir música ou aplicar um filtro a uma imagem. Serviços também podem ser usados para comunicação entre processos (_IPC_) entre aplicativos do Android. Por exemplo um aplicativo do Android pode usar o serviço de player de música de outro aplicativo ou um aplicativo pode expor dados (como informações de contato da pessoa) para outros aplicativos por meio de um serviço. 
 
-Serviços e a capacidade de executar o trabalho em segundo plano, serão essenciais para fornecer uma interface do usuário simples e flexível. Todos os aplicativos Android têm um _thread principal_ (também conhecido como um _thread de interface do usuário_) nos quais as atividades são executadas. Para manter o dispositivo de resposta, Android deve ser capaz de atualizar a interface do usuário em uma taxa de 60 quadros por segundo. Se um aplicativo do Android executa a quantidade de trabalho no thread principal, Android descartará quadros, que por sua vez faz com que a interface do usuário seja exibido um (também conhecido como _janky_). Isso significa que qualquer trabalho realizado no thread da interface do usuário deve ser concluída no período de tempo entre dois quadros, aproximadamente 16 milissegundos (1 segundo a cada 60 quadros). 
+Serviços e a capacidade de executar o trabalho em segundo plano, serão essenciais para fornecer uma interface do usuário simples e flexível. Todos os aplicativos Android têm um _thread principal_ (também conhecido como um _thread de interface do usuário_) nos quais as atividades são executadas. Para manter o dispositivo de resposta, Android deve ser capaz de atualizar a interface do usuário em uma taxa de 60 quadros por segundo. Se um aplicativo do Android executa muito trabalho no thread principal, Android descartará quadros, que por sua vez faz com que a interface do usuário seja exibido um (também conhecido como _janky_). Isso significa que qualquer trabalho realizado no thread da interface do usuário deve ser concluída no período de tempo entre dois quadros, aproximadamente 16 milissegundos (1 segundo a cada 60 quadros). 
 
 Para resolver esse problema, um desenvolvedor pode usar threads em uma atividade para executar um trabalho que bloquearia a interface do usuário. No entanto, isso pode causar problemas. É bem possível que o Android destruir e a recrie as várias instâncias da atividade. No entanto, o Android não destruirá os threads, o que podem resultar em perdas de memória automaticamente. Um exemplo perfeito é quando o [dispositivo for girado](~/android/app-fundamentals/handling-rotation.md) &ndash; Android tentará destrói a instância da atividade e, em seguida, recrie um novo:
 

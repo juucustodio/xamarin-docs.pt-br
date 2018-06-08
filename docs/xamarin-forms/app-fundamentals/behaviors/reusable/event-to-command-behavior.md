@@ -1,5 +1,5 @@
 ---
-title: Reusable EventToCommandBehavior
+title: EventToCommandBehavior reutilizável
 description: Comportamentos podem ser usados para associar a controles que não foram projetados para interagir com os comandos de comandos. Este artigo demonstra como usar um comportamento xamarin. Forms para invocar um comando quando um evento é acionado.
 ms.prod: xamarin
 ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 530c47703d72a3d199a35dbf04f4a0b3851921b9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e89400c74c3d1afbf8954d0f88387c5967ebd534
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848209"
 ---
-# <a name="reusable-eventtocommandbehavior"></a>Reusable EventToCommandBehavior
+# <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizável
 
 _Comportamentos podem ser usados para associar a controles que não foram projetados para interagir com os comandos de comandos. Este artigo demonstra como usar um comportamento xamarin. Forms para invocar um comando quando um evento é acionado._
 
@@ -126,7 +127,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
       resolvedParameter = Converter.Convert (eventArgs, typeof(object), null, null);
     } else {
       resolvedParameter = eventArgs;
-    }       
+    }        
 
     if (Command.CanExecute (resolvedParameter)) {
       Command.Execute (resolvedParameter);

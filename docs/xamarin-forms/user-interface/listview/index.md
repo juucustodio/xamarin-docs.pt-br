@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7beb9e66a6e6bc29de36fcd605c5daa0098e75a2
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848532"
 ---
 # <a name="listview"></a>ListView
 
@@ -41,8 +42,8 @@ ListView tem um número de componentes disponíveis para ativar a funcionalidade
 
 - **[Células](customizing-cell-appearance.md)**  &ndash; dados em uma ListView são apresentados em células. Cada célula corresponde a uma linha de dados. Há células internas à sua escolha ou você pode definir sua própria célula personalizado. Células internas e personalizadas podem ser usado/definido em XAML ou em código.
   - **[Internos](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; criados nas células, especialmente TextCell e ImageCell, pode ser ótimo desempenho, pois eles correspondem aos controles nativos em cada plataforma.
-    - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; exibe uma cadeia de caracteres de texto, opcionalmente com o texto detalhado. Texto detalhado é renderizado como uma segunda linha em uma fonte menor com uma cor de ênfase.
-    - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; exibe uma imagem com texto. Aparece como um TextCell com uma imagem à esquerda.
+       - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; exibe uma cadeia de caracteres de texto, opcionalmente com o texto detalhado. Texto detalhado é renderizado como uma segunda linha em uma fonte menor com uma cor de ênfase.
+       - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; exibe uma imagem com texto. Aparece como um TextCell com uma imagem à esquerda.
   - **[Células personalizadas](customizing-cell-appearance.md#customcells)**  &ndash; células personalizado são excelentes quando você precisa apresentar dados complexos. Por exemplo, uma exibição personalizada pode ser usada para apresentar uma lista de músicas, incluindo álbum e artista:
 
 ![](images/image-cell-default.png "ListView com ImageCells")

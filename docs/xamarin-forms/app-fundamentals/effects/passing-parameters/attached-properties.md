@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 5bca36189100942e21d1d750dd156dab0cf45fc4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2ad27289fb7a4d34b9a951c8132f0147577dfc55
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847911"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 

@@ -6,12 +6,13 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 035365a22c487039ff811756d91ca0a8d392d628
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.date: 05/31/2018
+ms.openlocfilehash: 317d4f140daeccc525c4267fca43e6164a8f7827
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848311"
 ---
 # <a name="editor"></a>Editor
 
@@ -26,7 +27,7 @@ O `Editor` controle é usado para aceitar a entrada de várias linha. Este artig
 
 ### <a name="setting-and-reading-text"></a>Configuração e lendo texto
 
-Editor, como outros modos de apresentação de texto, expõe a `Text` propriedade. `Text` pode ser usado para definir e ler o texto apresentado pelo `Editor`. O exemplo a seguir demonstra a definição de texto em XAML:
+O `Editor`, como outros modos de apresentação de texto, expõe a `Text` propriedade. Essa propriedade pode ser usada para definir e ler o texto apresentado pelo `Editor`. O exemplo a seguir mostra a configuração de `Text` propriedade em XAML:
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -44,6 +45,20 @@ Para ler o texto, acessar o `Text` propriedade em c#:
 var text = MyEditor.Text;
 ```
 
+### <a name="limiting-input-length"></a>Limitar tamanho de entrada
+
+O [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) propriedade pode ser usada para limitar o tamanho permitido para o [ `Editor` ](xref:Xamarin.Forms.Editor). Essa propriedade deve ser definida como um número inteiro positivo:
+
+```xaml
+<Editor ... MaxLength="10" />
+```
+
+```csharp
+var editor = new Editor { ... MaxLength = 10 };
+```
+
+Um [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) valor da propriedade de 0 indica que nenhuma entrada será permitida e um valor de `int.MaxValue`, que é o valor padrão para um [ `Editor` ](xref:Xamarin.Forms.Editor), indica que há nenhum limite efetivo do número de caracteres que podem ser inseridos.
+
 ### <a name="keyboards"></a>Teclados
 
 O teclado é apresentado quando os usuários interagem com um `Editor` podem ser definidas programaticamente por meio de [ ``Keyboard`` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Keyboard/) propriedade.
@@ -58,6 +73,23 @@ As opções para o tipo de teclado são:
 - **URL** &ndash; usado para a inserção de caminhos de arquivo & endereços da web
 
 Há um [exemplo de cada teclado](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) em nossa seção de receitas.
+
+### <a name="enabling-and-disabling-spell-checking"></a>Habilitar e desabilitar a verificação de ortografia
+
+O [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propriedade controla se verificação ortográfica está habilitada. Por padrão, a propriedade é definida como `true`. Como o usuário insere texto, erros de ortografia são indicados.
+
+No entanto, para alguns cenários de entrada de texto, como inserir um nome de usuário, a verificação ortográfica fornece uma experiência negativa e, portanto devem ser desativados, definindo o [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propriedade `false`:
+
+```xaml
+<Editor ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var editor = new Editor { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> Quando o [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) está definida como `false`e um teclado personalizado não está sendo usado, o verificador ortográfico nativo será desabilitado. No entanto, se um [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) tem foi conjunto que desabilita ortográfica verificação, como [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), o `IsSpellCheckEnabled` propriedade será ignorada. Portanto, a propriedade não pode ser usada para habilitar a verificação ortográfica para um `Keyboard` que desabilita explicitamente a ele.
 
 ### <a name="colors"></a>Cores
 

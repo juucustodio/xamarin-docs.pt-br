@@ -6,24 +6,25 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 2e40effa7bc54b7b7cf73edaa882256fed521a95
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/31/2018
+ms.openlocfilehash: a45a4edb93920cfe1d0289da44ee664e41c25cf1
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847842"
 ---
 # <a name="entry"></a>Entrada
 
 _Texto de uma linha ou a senha de entrada_
 
-Xamarin. Forms `Entry` é usado para entrada de texto de linha única. `Entry`, como o modo de exibição do Editor, dá suporte a vários tipos de teclado. Além disso, `Entry` pode ser usado como um campo de senha.
+O xamarin. Forms `Entry` é usado para entrada de texto de linha única. O `Entry`, como o `Editor` exibir, dá suporte a vários tipos de teclado. Além disso, o `Entry` pode ser usado como um campo de senha.
 
 ## <a name="display-customization"></a>Personalização de exibição
 
 ### <a name="setting-and-reading-text"></a>Configuração e lendo texto
 
-Entrada, como outros modos de apresentação de texto, expõe a `Text` propriedade. `Text` pode ser usado para definir e ler o texto apresentado pelo `Entry`. O exemplo a seguir demonstra como definir o texto em XAML:
+O `Entry`, como outros modos de apresentação de texto, expõe a `Text` propriedade. Essa propriedade pode ser usada para definir e ler o texto apresentado pelo `Entry`. O exemplo a seguir mostra a configuração de `Text` propriedade em XAML:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -44,6 +45,20 @@ var text = MyEntry.Text;
 > [!NOTE]
 > A largura de uma `Entry` podem ser definidas, definindo seu `WidthRequest` propriedade. Não dependem da largura de uma `Entry` que está sendo definido com base no valor de seu `Text` propriedade.
 
+### <a name="limiting-input-length"></a>Limitar tamanho de entrada
+
+O [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) propriedade pode ser usada para limitar o tamanho permitido para o [ `Entry` ](xref:Xamarin.Forms.Entry). Essa propriedade deve ser definida como um número inteiro positivo:
+
+```xaml
+<Entry ... MaxLength="10" />
+```
+
+```csharp
+var entry = new Entry { ... MaxLength = 10 };
+```
+
+Um [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) valor da propriedade de 0 indica que nenhuma entrada será permitida e um valor de `int.MaxValue`, que é o valor padrão para um [ `Entry` ](xref:Xamarin.Forms.Entry), indica que há nenhum limite efetivo do número de caracteres que podem ser inseridos.
+
 ### <a name="keyboards"></a>Teclados
 
 O teclado é apresentado quando os usuários interagem com um `Entry` podem ser definidas programaticamente por meio de `Keyboard` propriedade.
@@ -58,6 +73,23 @@ As opções para o tipo de teclado são:
 - **URL** &ndash; usado para inserir os caminhos de arquivo e endereços da web
 
 Há um [exemplo de cada teclado](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) em nossa seção de receitas.
+
+### <a name="enabling-and-disabling-spell-checking"></a>Habilitar e desabilitar a verificação de ortografia
+
+O [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propriedade controla se verificação ortográfica está habilitada. Por padrão, a propriedade é definida como `true`. Como o usuário insere texto, erros de ortografia são indicados.
+
+No entanto, para alguns cenários de entrada de texto, como inserir um nome de usuário, a verificação ortográfica fornece uma experiência negativa e, portanto devem ser desativados, definindo o [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propriedade `false`:
+
+```xaml
+<Entry ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var entry = new Entry { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> Quando o [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) está definida como `false`e um teclado personalizado não está sendo usado, o verificador ortográfico nativo será desabilitado. No entanto, se um [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) tem foi conjunto que desabilita ortográfica verificação, como [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), o `IsSpellCheckEnabled` propriedade será ignorada. Portanto, a propriedade não pode ser usada para habilitar a verificação ortográfica para um `Keyboard` que desabilita explicitamente a ele.
 
 ### <a name="placeholders"></a>Espaços reservados
 
