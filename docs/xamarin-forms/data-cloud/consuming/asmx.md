@@ -1,17 +1,18 @@
 ---
 title: Consumir um serviço Web do ASP.NET (ASMX)
-description: ASMX fornece a capacidade de criar serviços web que enviam mensagens usando o protocolo de acesso de objeto simples (SOAP). SOAP é um protocolo independente de plataforma e independente de linguagem para criar e acessar serviços da web. Não é necessário que os consumidores de um serviço ASMX sabe nada sobre a plataforma, um modelo de objeto ou uma linguagem de programação usada para implementar o serviço. Eles só precisam entender como enviar e receber mensagens SOAP. Este artigo demonstra como consumir um serviço ASMX SOAP de um aplicativo xamarin. Forms.
+description: Este artigo demonstra como consumir um serviço ASMX SOAP de um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: c45f0de039abc3f98b7c269f183e2883a495910b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6ec8168a8da64dbf3dfeb805856a4d91c9ec78ca
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242057"
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Consumir um serviço Web do ASP.NET (ASMX)
 
@@ -42,8 +43,8 @@ O serviço ASMX fornece as seguintes operações:
 |--- |--- |--- |
 |GetTodoItems|Obter uma lista de itens pendentes|
 |CreateTodoItem|Criar um novo item de tarefas pendentes|Um XML serializado TodoItem|
-|EditTodoItem|Atualizar um item de tarefas pendentes|Um XML serializado TodoItem|
-|DeleteTodoItem|Excluir um item de tarefas pendentes|Um XML serializado TodoItem|
+|EditTodoItem|Atualizar um item pendente|Um XML serializado TodoItem|
+|DeleteTodoItem|Excluir um item pendente|Um XML serializado TodoItem|
 
 Para obter mais informações sobre o modelo de dados usado no aplicativo, consulte [modelagem de dados](~/xamarin-forms/data-cloud/walkthrough.md).
 

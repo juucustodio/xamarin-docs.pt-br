@@ -1,20 +1,20 @@
 ---
-title: BoxView
-description: Use um retângulo colorido para decoração, gráficos e interação.
+title: BoxView xamarin. Forms
+description: Este artigo explica como usar um retângulo colorido para decoração, gráficos e interação em um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 356d0effe55638902b6ee599a0d9fb7e9b8ade2d
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: edb2785362f2cc7377d9adb0c1a89a6fa2b08111
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848402"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244309"
 ---
-# <a name="boxview"></a>BoxView
+# <a name="xamarinforms-boxview"></a>BoxView xamarin. Forms
 
 [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) renderiza um retângulo simple de cor, altura e largura especificada. Você pode usar `BoxView` para a decoração, rudimentares gráficos e para interação com o usuário por meio de toque.
 
@@ -45,7 +45,7 @@ O `Color` é de propriedade do tipo `Color`; a propriedade pode ser definida par
 
 O `WidthRequest` e `HeightRequest` propriedades desempenham uma função somente se o `BoxView` é *irrestrita* no layout. Este é o caso quando o contêiner de layout precisa saber o filho do tamanho, por exemplo, quando o `BoxView` é um filho de uma célula de dimensionamento automático no `Grid` layout. Um `BoxView` também é irrestrita quando seu `HorizontalOptions` e `VerticalOptions` propriedades são definidas como valores diferentes de `LayoutOptions.Fill`. Se o `BoxView` irrestrita, mas o `WidthRequest` e `HeightRequest` propriedades não estão definidas e, em seguida, a largura ou altura são definidas com valores padrão de 40 unidades, ou cerca de 1/4 polegadas em dispositivos móveis.
 
-O `WidthRequest` e `HeightRequest` propriedades são ignoradas se o `BoxView` é *restrita* no layout, nesse caso o contêiner de layout impõe seu próprio tamanho de `BoxView`. 
+O `WidthRequest` e `HeightRequest` propriedades são ignoradas se o `BoxView` é *restrita* no layout, nesse caso o contêiner de layout impõe seu próprio tamanho de `BoxView`.
 
 Um `BoxView` pode ser restrita em uma dimensão e irrestrita no outro. Por exemplo, se o `BoxView` é um filho de um vertical `StackLayout`, a dimensão vertical do `BoxView` é irrestrita e sua dimensão horizontal geralmente é restrito. Mas há exceções para a dimensão horizontal: se o `BoxView` tem seu `HorizontalOptions` propriedade definida como algo diferente de `LayoutOptions.Fill`, em seguida, a dimensão horizontal também é irrestrita. Também é possível que o `StackLayout` para ter uma dimensão horizontal irrestrita, caso em que o `BoxView` também será irrestrita horizontalmente.
 
@@ -60,7 +60,7 @@ O [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxVi
     <BoxView Color="CornflowerBlue"
              WidthRequest="160"
              HeightRequest="160"
-             VerticalOptions="Center" 
+             VerticalOptions="Center"
              HorizontalOptions="Center" />
 
 </ContentPage>
@@ -149,7 +149,7 @@ Também é possível usar um `BoxView` se pareça com um HTML `hr` elemento (reg
 <BoxView HeightRequest="3" />
 ```
 
-Por fim, você pode desenhar uma linha vertical em um lado de um parágrafo de texto colocando ambos os `BoxView` e `Label` em um horizontal `StackLayout`. Nesse caso, a altura do `BoxView` é o mesmo que a altura de `StackLayout`, que é controlado pela altura do `Label`: 
+Por fim, você pode desenhar uma linha vertical em um lado de um parágrafo de texto colocando ambos os `BoxView` e `Label` em um horizontal `StackLayout`. Nesse caso, a altura do `BoxView` é o mesmo que a altura de `StackLayout`, que é controlado pela altura do `Label`:
 
 ```xaml
 <StackLayout Orientation="Horizontal">
@@ -242,7 +242,7 @@ public class NamedColor
 }
 ```
 
-Os visuais de programa são descritos no arquivo XAML. O `ItemsSource` propriedade o `ListView` é definido como estático `NamedColor.All` propriedade, o que significa que o `ListView` exibe todos os individuais `NamedColor` objetos: 
+Os visuais de programa são descritos no arquivo XAML. O `ItemsSource` propriedade o `ListView` é definido como estático `NamedColor.All` propriedade, o que significa que o `ListView` exibe todos os individuais `NamedColor` objetos:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -290,7 +290,7 @@ Os visuais de programa são descritos no arquivo XAML. O `ItemsSource` proprieda
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-</ContentPage> 
+</ContentPage>
 ```
 
 O `NamedColor` objetos são formatados pelo `ViewCell` objeto é definido como o modelo de dados do `ListView`. Esse modelo inclui uma `BoxView` cujo `Color` propriedade está vinculada a `Color` propriedade do `NamedColor` objeto.
@@ -388,15 +388,15 @@ public partial class MainPage : ContentPage
     static readonly int[, ,] numberPatterns = new int[10, 7, 5]
     {
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 1, 1}, { 1, 0, 1, 0, 1}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 1, 1}, { 1, 0, 1, 0, 1},
             { 1, 1, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 1, 0, 0}, { 0, 1, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0}, 
+            { 0, 0, 1, 0, 0}, { 0, 1, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0},
             { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0},
             { 0, 0, 1, 0, 0}, { 0, 1, 0, 0, 0}, { 1, 1, 1, 1, 1}
         },
         {
@@ -404,27 +404,27 @@ public partial class MainPage : ContentPage
             { 0, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 0, 1, 0}, { 0, 0, 1, 1, 0}, { 0, 1, 0, 1, 0}, { 1, 0, 0, 1, 0}, 
+            { 0, 0, 0, 1, 0}, { 0, 0, 1, 1, 0}, { 0, 1, 0, 1, 0}, { 1, 0, 0, 1, 0},
             { 1, 1, 1, 1, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 0, 1, 0}
         },
         {
-            { 1, 1, 1, 1, 1}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, { 0, 0, 0, 0, 1}, 
+            { 1, 1, 1, 1, 1}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, { 0, 0, 0, 0, 1},
             { 0, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 1, 1, 0}, { 0, 1, 0, 0, 0}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, 
+            { 0, 0, 1, 1, 0}, { 0, 1, 0, 0, 0}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0},
             { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 1, 1, 1, 1, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 1, 0, 0}, 
+            { 1, 1, 1, 1, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 1, 0, 0},
             { 0, 1, 0, 0, 0}, { 0, 1, 0, 0, 0}, { 0, 1, 0, 0, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0},
             { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 1}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 1},
             { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 1, 1, 0, 0}
         },
     };
@@ -528,24 +528,24 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Este programa usa o posicionamento relativo e o recurso de dimensionamento de `AbsoluteLayout`. A largura e altura de cada `BoxView` são definidos como valores fracionários, especificamente 85% 1 dividido pelo número de pontos horizontais e verticais. As posições também são definidas para valores fracionários. 
+Este programa usa o posicionamento relativo e o recurso de dimensionamento de `AbsoluteLayout`. A largura e altura de cada `BoxView` são definidos como valores fracionários, especificamente 85% 1 dividido pelo número de pontos horizontais e verticais. As posições também são definidas para valores fracionários.
 
 Porque todas as posições e os tamanhos são relativas ao tamanho total do `AbsoluteLayout`, o `SizeChanged` manipulador para a página precisa configurar um `HeightRequest` do `AbsoluteLayout`:
 
 ```csharp
 public partial class MainPage : ContentPage
 {
-    
+
     ···
-    
+
     void OnPageSizeChanged(object sender, EventArgs args)
     {
         // No chance a display will have an aspect ratio > 41:7
         absoluteLayout.HeightRequest = vertDots * Width / horzDots;
     }
-    
+
     ···
-    
+
 }
 ```
 
@@ -556,9 +556,9 @@ O código final o `MainPage` cores dos pontos de cada dígito e processa o retor
 ```csharp
 public partial class MainPage : ContentPage
 {
-   
+
     ···
- 
+
     bool OnTimer()
     {
         DateTime dateTime = DateTime.Now;
@@ -596,7 +596,7 @@ Um relógio de matriz de pontos pode parecer ser um aplicativo óbvio de `BoxVie
 
 [![O relógio de BoxView](boxview-images/boxviewclock-small.png "BoxView relógio")](boxview-images/boxviewclock-large.png#lightbox "BoxView relógio")
 
-Todos os elementos visuais a [ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/) programa são filhos de um `AbsoluteLayout`. Esses elementos são dimensionados usando o `LayoutBounds` propriedade anexada e girado usando o `Rotation` propriedade. 
+Todos os elementos visuais a [ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/) programa são filhos de um `AbsoluteLayout`. Esses elementos são dimensionados usando o `LayoutBounds` propriedade anexada e girado usando o `Rotation` propriedade.
 
 Os três `BoxView` elementos para os ponteiros do relógio são instanciados no arquivo XAML, mas não posicionados ou tamanho:
 
@@ -613,13 +613,13 @@ Os três `BoxView` elementos para os ponteiros do relógio são instanciados no 
 
     <AbsoluteLayout x:Name="absoluteLayout"
                     SizeChanged="OnAbsoluteLayoutSizeChanged">
-        
+
         <BoxView x:Name="hourHand"
                  Color="Black" />
-        
+
         <BoxView x:Name="minuteHand"
                  Color="Black" />
-        
+
         <BoxView x:Name="secondHand"
                  Color="Black" />
     </AbsoluteLayout>
@@ -631,9 +631,9 @@ O construtor do arquivo code-behind instancia o 60 `BoxView` elementos para as m
 ```csharp
 public partial class MainPage : ContentPage
 {
-      
+
     ···
- 
+
     BoxView[] tickMarks = new BoxView[60];
 
     public MainPage()
@@ -649,9 +649,9 @@ public partial class MainPage : ContentPage
 
         Device.StartTimer(TimeSpan.FromSeconds(1.0 / 60), OnTimerTick);
     }
-  
+
     ···
- 
+
 }
 ```
 
@@ -678,9 +678,9 @@ public partial class MainPage : ContentPage
     static readonly HandParams secondParams = new HandParams(0.02, 1.1, 0.85);
     static readonly HandParams minuteParams = new HandParams(0.05, 0.8, 0.9);
     static readonly HandParams hourParams = new HandParams(0.125, 0.65, 0.9);
- 
+
     ···
- 
+
  }
 ```
 
@@ -689,9 +689,9 @@ O `SizeChanged` manipulador determina o centro e o raio do `AbsoluteLayout`e, em
 ```csharp
 public partial class MainPage : ContentPage
 {
- 
+
     ···
- 
+
     void OnAbsoluteLayoutSizeChanged(object sender, EventArgs args)
     {
         // Get the center and radius of the AbsoluteLayout.
@@ -729,9 +729,9 @@ public partial class MainPage : ContentPage
         // Set the AnchorY property for rotations.
         boxView.AnchorY = handParams.Offset;
     }
- 
+
     ···
- 
+
 }
 ```
 
@@ -742,9 +742,9 @@ Os ponteiros são girados na função de retorno de chamada timer:
 ```csharp
 public partial class MainPage : ContentPage
 {
- 
+
     ···
-     
+
     bool OnTimerTick()
     {
         // Set rotation angles for hour and minute hands.

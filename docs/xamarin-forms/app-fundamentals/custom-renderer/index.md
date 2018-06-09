@@ -1,19 +1,20 @@
 ---
-title: Processadores personalizados
-description: Interfaces de usuário do xamarin. Forms renderizadas usando controles nativos da plataforma de destino, permitindo que os aplicativos xamarin. Forms manter a aparência apropriada para cada plataforma. Processadores personalizados permitem que os desenvolvedores substituem esse processo para personalizar a aparência e comportamento de controles xamarin. Forms em cada plataforma.
+title: Processadores xamarin. Forms personalizado
+description: Processadores personalizados permitem que os desenvolvedores substituem a renderização de controles nativos em cada plataforma, para personalizar a aparência e comportamento de controles xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 6a2ee4b09426e6b4ff6dac7e1fd5221fc5b6d750
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a88462052906e68fd85a07161e8b5bb63a61e69d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239884"
 ---
-# <a name="custom-renderers"></a>Processadores personalizados
+# <a name="xamarinforms-custom-renderers"></a>Processadores xamarin. Forms personalizado
 
 _Interfaces de usuário do xamarin. Forms renderizadas usando controles nativos da plataforma de destino, permitindo que os aplicativos xamarin. Forms manter a aparência apropriada para cada plataforma. Processadores personalizados permitem que os desenvolvedores substituem esse processo para personalizar a aparência e comportamento de controles xamarin. Forms em cada plataforma._
 
@@ -55,7 +56,7 @@ Este artigo demonstra como criar um renderizador personalizado para um `HybridWe
 
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[Implementando um player de vídeo](video-player/index.md)
 
-Este artigo mostra como gravar renderizadores para implementar um personalizado `VideoPlayer` controle que pode reproduzir vídeos da web, vídeos incorporados como recursos de aplicativo ou vídeos armazenados na biblioteca de vídeo no dispositivo do usuário. Várias técnicas são demonstradas, incluindo a implementação de métodos e propriedades vinculáveis somente leitura. 
+Este artigo mostra como gravar renderizadores para implementar um personalizado `VideoPlayer` controle que pode reproduzir vídeos da web, vídeos incorporados como recursos de aplicativo ou vídeos armazenados na biblioteca de vídeo no dispositivo do usuário. Várias técnicas são demonstradas, incluindo a implementação de métodos e propriedades vinculáveis somente leitura.
 
 
 ## <a name="related-links"></a>Links relacionados

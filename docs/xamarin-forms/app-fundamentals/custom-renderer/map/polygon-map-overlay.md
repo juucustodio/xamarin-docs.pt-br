@@ -1,18 +1,18 @@
 ---
 title: Realce uma região em um mapa
-description: Este artigo explicou como adicionar uma sobreposição de polígono para um mapa, para realçar uma região no mapa. Polígonos são uma forma fechada e tem seus interiores preenchidos.
+description: Este artigo explica como adicionar uma sobreposição de polígono para um mapa, para realçar uma região no mapa. Polígonos são uma forma fechada e tem seus interiores preenchidos.
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: e0ffa1948bb7dd0996dd21793237df550a32aa70
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b38ff41415477a8898ee3bd9593f983c705d949e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848324"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241784"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Realce uma região em um mapa
 

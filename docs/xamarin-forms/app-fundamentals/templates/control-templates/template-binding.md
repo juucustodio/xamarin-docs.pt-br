@@ -1,5 +1,5 @@
 ---
-title: Associação de um ControlTemplate
+title: Associação de um ControlTemplate xamarin. Forms
 description: Associações de modelo permitem associar controles em um modelo de controle de dados para as propriedades públicas, permitindo que os valores de propriedade em controles no modelo de controle a ser alterado facilmente. Este artigo demonstra como usar associações de modelo para executar associação de dados a partir de um modelo de controle.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b2904d06d0982fb30e9a989f03f22b726b9772e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 99d798ce2c74da0cf7fa0d497128db628a12ead5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847170"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241575"
 ---
-# <a name="binding-from-a-controltemplate"></a>Associação de um ControlTemplate
+# <a name="binding-from-a-xamarinforms-controltemplate"></a>Associação de um ControlTemplate xamarin. Forms
 
 _Associações de modelo permitem associar controles em um modelo de controle de dados para as propriedades públicas, permitindo que os valores de propriedade em controles no modelo de controle a ser alterado facilmente. Este artigo demonstra como usar associações de modelo para executar associação de dados a partir de um modelo de controle._
 

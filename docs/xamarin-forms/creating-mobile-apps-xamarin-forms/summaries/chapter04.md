@@ -1,16 +1,18 @@
 ---
 title: Resumo do capítulo 4. A pilha de rolagem
+description: 'Criando aplicativos móveis com o xamarin. Forms: Resumo do capítulo 4. A pilha de rolagem'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 09a9d21b7979e0eb3f12d3b1207f2185e059f65c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1af3632d226ce894c1d856f665d6482f45d61f16
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241136"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumo do capítulo 4. A pilha de rolagem
 

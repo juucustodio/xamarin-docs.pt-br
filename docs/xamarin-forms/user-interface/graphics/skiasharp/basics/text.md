@@ -1,17 +1,18 @@
 ---
 title: Integração de texto e elementos gráficos
-description: Consulte como determinar o tamanho da cadeia de caracteres de texto renderizado integrar texto SkiaSharp gráficos
+description: Este artigo explica como determinar o tamanho da cadeia de caracteres de texto renderizado para integrar o texto com gráficos SkiaSharp em aplicativos xamarin. Forms e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: dec1997d16afa1cb8235c47b125b113d7ff80a4d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: eb3724c3520153a83e37932f8be0735337e27a4f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243652"
 ---
 # <a name="integrating-text-and-graphics"></a>Integração de texto e elementos gráficos
 
@@ -168,4 +169,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

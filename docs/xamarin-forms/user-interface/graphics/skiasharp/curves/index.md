@@ -1,17 +1,18 @@
 ---
 title: Caminhos e SkiaSharp curvas
-description: Saiba como usar SkiaSharp desenhar curvas e usar recursos de caminho
+description: Este artigo explica como usar SkiaSharp desenhar curvas e usar recursos de caminho em aplicativos xamarin. Forms e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 2b730690e508c29e9bee45ccfdd05d5dd6e92d7b
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 9bfab147b526a6c67aa295c61e334d75627f3ca3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243854"
 ---
 # <a name="skiasharp-curves-and-paths"></a>Caminhos e SkiaSharp curvas
 
@@ -53,4 +54,4 @@ Obter informações sobre os caminhos e enumerar o conteúdo
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

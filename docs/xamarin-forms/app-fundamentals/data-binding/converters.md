@@ -1,19 +1,20 @@
 ---
-title: Conversores de valor de associação
-description: Converter valores dentro de associação de dados
+title: Conversores de valor de associação xamarin. Forms
+description: Este artigo explica como converter valores dentro de uma associação de dados do xamarin. Forms implementando um conversor de valor (que é também conhecido como um conversor de associação ou conversor de valor de associação).
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 260db2372977202df3d73e32645a358066146b40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5bd52d43ef93013537f30c7d5e0c31cbf336d07
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241823"
 ---
-# <a name="binding-value-converters"></a>Conversores de valor de associação
+# <a name="xamarinforms-binding-value-converters"></a>Conversores de valor de associação xamarin. Forms
 
 Associações de dados geralmente transferir dados de uma propriedade de origem para uma propriedade de destino e, em alguns casos de propriedade de destino para a propriedade de origem. Essa transferência é simples quando as propriedades de origem e destino são do mesmo tipo, ou quando um tipo pode ser convertido para o outro tipo por meio de uma conversão implícita. Quando esse não for o caso, uma conversão de tipo deve ser realizadas.
 

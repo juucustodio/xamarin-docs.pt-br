@@ -1,17 +1,18 @@
 ---
 title: Consumir um serviço Web do Windows Communication Foundation (WCF)
-description: O WCF é a estrutura unificada da Microsoft para criar aplicativos orientados a serviços. Ele permite aos desenvolvedores compilar aplicativos distribuídos seguros, confiáveis, transacionados e interoperáveis. Este artigo demonstra como consumir um serviço WCF simples protocolo (SOAP) de um aplicativo xamarin. Forms.
+description: Este artigo demonstra como consumir um serviço WCF simples protocolo (SOAP) de um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 23cdc1871511fa75ba2686213d135822ca0fb971
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 05092a3648ac4c37dfd8d712184176a544979ede
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241198"
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Consumir um serviço Web do Windows Communication Foundation (WCF)
 

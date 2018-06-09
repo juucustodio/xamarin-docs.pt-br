@@ -1,16 +1,18 @@
 ---
 title: Acessar a biblioteca de vídeos do dispositivo
+description: Este artigo explica como acessar a biblioteca de vídeos do dispositivo em um aplicativo de player de vídeo, usando o xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d0f58a4a53d41c23e993f8b8b89b3fca44e0733d
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 7e9f7ad93ae8828155847b923cb2779b3146f63e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240694"
 ---
 # <a name="accessing-the-devices-video-library"></a>Acessar a biblioteca de vídeos do dispositivo
 

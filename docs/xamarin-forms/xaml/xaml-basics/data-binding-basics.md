@@ -1,18 +1,18 @@
 ---
 title: Parte 4. Noções básicas de associação de dados
-description: Associações de dados permitem que propriedades de dois objetos a serem vinculados para que a alteração de uma causa uma alteração no outro. Essa é uma ferramenta muito valiosa e enquanto associações de dados podem ser definidas inteiramente no código, XAML fornece atalhos e conveniência. Consequentemente, uma das extensões de marcação mais importantes no xamarin. Forms é associação.
+description: Associações de dados permitem que propriedades de dois objetos a serem vinculados para que a alteração de uma causa uma alteração no outro.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 117ddd033faedda871c33ba10c246739309e2e86
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733029"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245944"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de associação de dados
 
@@ -86,7 +86,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 As propriedades podem estar em uma linha ou separados em várias linhas:
 
 ```csharp
-Text="{Binding Value, 
+Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -102,13 +102,13 @@ Aqui está o programa em execução:
 
 [![](data-binding-basics-images/sliderbinding.png "Associações de exibição para exibição")](data-binding-basics-images/sliderbinding-large.png#lightbox "associações de exibição para exibição ")
 
-## <a name="the-binding-mode"></a>O modo de associação 
+## <a name="the-binding-mode"></a>O modo de associação
 
 Um único modo de exibição pode ter associações de dados em várias de suas propriedades. No entanto, cada modo de exibição pode ter apenas um `BindingContext`, portanto, várias associações de dados nessa exibição devem ser todas fazer referência às propriedades do mesmo objeto.
 
 A solução para esse e outros problemas envolve o `Mode` propriedade, que é definida como um membro do `BindingMode` enumeração:
 
-- `Default` 
+- `Default`
 - `OneWay` — valores são transferidos da origem para o destino
 - `OneWayToSource` — valores são transferidos do destino para a origem
 - `TwoWay` — valores são transferidos ambas as direções entre origem e destino
@@ -324,7 +324,7 @@ Muito melhor. Agora tudo o que é necessário é melhore o modelo de item com ma
 </ContentPage>
 ```
 
-Observe o uso de `OnPlatform` para definir o tamanho de um `BoxView` e a altura do `ListView` linhas. Embora os valores para todas as plataformas de três forem iguais, a marcação pode ser facilmente adaptada para outros valores ajustar a exibição. 
+Observe o uso de `OnPlatform` para definir o tamanho de um `BoxView` e a altura do `ListView` linhas. Embora os valores para todas as plataformas de três forem iguais, a marcação pode ser facilmente adaptada para outros valores ajustar a exibição.
 
 ## <a name="binding-value-converters"></a>Conversores de valor de associação
 
@@ -366,7 +366,7 @@ namespace XamlSamples
 }
 ```
 
-O `ConvertBack` método não desempenha uma função neste programa porque as associações são apenas uma maneira de origem ao destino. 
+O `ConvertBack` método não desempenha uma função neste programa porque as associações são apenas uma maneira de origem ao destino.
 
 Uma associação faz referência a um conversor de associação com o `Converter` propriedade. Um conversor de associação também pode aceitar um parâmetro especificado com o `ConverterParameter` propriedade. Para alguns versatilidade, isso é como o multiplicador é especificado. O conversor de associação verifica se o parâmetro conversor válido `double` valor.
 

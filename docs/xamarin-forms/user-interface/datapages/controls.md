@@ -1,17 +1,18 @@
 ---
 title: Referência de controles DataPages
+description: Este artigo apresenta os controles que estão disponíveis no pacote de NuGet de DataPages xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 912733dabd5a1baa00f1b88e59c5fe305b375605
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: c907d55f09d334e167c831a19f9d0edc4c97732f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846813"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243123"
 ---
 # <a name="datapages-controls-reference"></a>Referência de controles DataPages
 

@@ -1,18 +1,18 @@
 ---
 title: Modos de exibição do xamarin. Forms
-description: Xamarin. Forms exibições são os blocos de construção de interfaces de usuário móvel de plataforma cruzada.
+description: Xamarin. Forms exibições são os blocos de construção de interfaces de usuário móvel de plataforma cruzada. Este artigo lista as exibições que estão incluídas no xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: aafad29a30130c9ec088121e03a986034f002e1c
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 414df933716c7ce5d9422e8a2b9be89ba7eff3a9
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733081"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243512"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -80,7 +80,7 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 | [`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) Exibe uma área para o usuário para o tipo de uma cadeia de caracteres de texto e um botão (ou uma chave de teclado) que sinaliza o aplicativo para realizar uma pesquisa. O [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.Text/) propriedade fornece acesso para o texto e o [ `SearchButtonPressed` ](https://developer.xamarin.com/api/event/Xamarin.Forms.SearchBar.SearchButtonPressed/) evento indica que o botão foi pressionado.<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) | [![Exemplo de SearchBar](views-images/SearchBar.png "SearchBar exemplo")](views-images/SearchBar-Large.png#lightbox "SearchBar exemplo")<br /> [O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) com [por trás do código](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) |
 |     |     |
 
-## <a name="views-for-setting-values"></a>Modos de exibição para definir valores 
+## <a name="views-for-setting-values"></a>Modos de exibição para definir valores
 
 ### <a name="slider"></a>Controle deslizante
 
@@ -96,7 +96,7 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 | [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) permite que o usuário selecione um `double` valor de um intervalo de valores com incremento especificado com o [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Minimum/), [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Maximum/), e [ `Increment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) propriedades.<br /><br />[Documentação da API](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) | [![Exemplo de seletor](views-images/Stepper.png "exemplo seletor")](views-images/Stepper-Large.png#lightbox "seletor de exemplo")<br />[O código c# para essa página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
-### <a name="switch"></a>Alternar 
+### <a name="switch"></a>Alternar
 
 |     |     |
 | --- | --- |

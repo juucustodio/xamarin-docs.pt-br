@@ -1,20 +1,20 @@
 ---
-title: Ciclo de vida do aplicativo
-description: Como responder ao ciclo de vida do aplicativo
+title: Ciclo de vida de aplicativo xamarin. Forms
+description: Este artigo explica como responder a vida do aplicativo, incluindo métodos de ciclo de vida, eventos de navegação de página e eventos de navegação modal.
 ms.prod: xamarin
 ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: a22ad8f3f272212f5c7f088ba2112f2771ff4a7f
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: fb651494b63a77ede47dd246ee054b5c67af2a35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846338"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240263"
 ---
-# <a name="app-lifecycle"></a>Ciclo de vida do aplicativo
+# <a name="xamarinforms-app-lifecycle"></a>Ciclo de vida de aplicativo xamarin. Forms
 
 O [ `Application` ](xref:Xamarin.Forms.Application) classe base oferece os seguintes recursos:
 

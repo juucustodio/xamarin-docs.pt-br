@@ -1,20 +1,20 @@
 ---
-title: Interface do Usuário
-description: Como usar os modos de exibição fornecidos pelo xamarin. Forms
+title: Exibições de Interface do usuário do xamarin. Forms
+description: Este artigo apresenta os conceitos que podem ser usados ao criar uma interface do usuário em um aplicativo xamarin. Forms e controles.
 ms.prod: xamarin
 ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 84106cf8f699616fae772a6f149681840abca0e5
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 55c461a7dee26462e0b9daebeb10e47afa4e5f6f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733042"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244364"
 ---
-# <a name="user-interface"></a>Interface do Usuário
+# <a name="xamarinforms-user-interface-views"></a>Exibições de Interface do usuário do xamarin. Forms
 
 _Como usar os modos de exibição fornecidos pelo xamarin. Forms_
 

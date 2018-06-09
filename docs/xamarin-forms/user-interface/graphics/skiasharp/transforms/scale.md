@@ -1,17 +1,18 @@
 ---
 title: A transformação de escala
-description: Descobrir a transformação de escala SkiaSharp para objetos para vários tamanhos de dimensionamento
+description: Thhis artigo explora a transformação de escala SkiaSharp para dimensionamento de objetos para vários tamanhos e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: b4a36e15bd5db72ef113748282175c6d31a95966
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 9008e95a7cd6caf7ab2346ff4e2364a4efef0d65
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244669"
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 

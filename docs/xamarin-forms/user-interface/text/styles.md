@@ -1,33 +1,25 @@
 ---
-title: Estilos
-description: Estilo do texto em xamarin. Forms
+title: Estilos de texto xamarin. Forms
+description: Este artigo explica como texto de estilo em aplicativos xamarin. Forms. Estilos podem ser definidos uma vez e usados por vários modos de exibição, mas um estilo só pode ser usado com modos de exibição de um tipo.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 42d5da5c4171347de8c4befc773e498803fd9f36
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b8cc6493c3574180e7938050075c5a70ecebeebf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848441"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245316"
 ---
-# <a name="styles"></a>Estilos
+# <a name="xamarinforms-text-styles"></a>Estilos de texto xamarin. Forms
 
-_Estilo do texto em xamarin. Forms_
-
+_Estilo de texto em xamarin. Forms_
 
 Estilos podem ser usados para ajustar a aparência de rótulos, entradas e editores. Estilos podem ser definidos uma vez e usados por vários modos de exibição, mas um estilo só pode ser usado com modos de exibição de um tipo.
 Estilos podem ser atribuídos um `Key` e aplicadas seletivamente usando um controle específico `Style` propriedade.
-
-Este artigo aborda os seguintes tópicos:
-
-- **[Os estilos internos](#Built-In_Styles)**  &ndash; usar estilos internos para exibições com base em texto de estilo em todo o seu aplicativo.
-- **[Estilos personalizados](#Custom_Styles)**  &ndash; definir estilos personalizados quando as opções integradas não são suficientes.
-- **[Aplicando estilos](#Applying_Styles)**  &ndash; aplicar estilos internos e personalizados a seus modos de exibição.
-- **[Acessibilidade](#Accessibility)**  &ndash; Certifique-se de que o texto respeita as configurações de acessibilidade.
 
 <a name="Built-In_Styles" />
 

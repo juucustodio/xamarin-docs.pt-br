@@ -1,17 +1,18 @@
 ---
 title: Consumindo extensões de marcação XAML
-description: Use as extensões de marcação XAML disponível em xamarin. Forms
+description: Este artigo explica como usar extensões de marcação XAML xamarin. Forms para aprimorar a eficiência e a flexibilidade de XAML, permitindo que os atributos do elemento a ser definido de uma variedade de fontes.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 25eada483e8bd2ce95cb3101dfe873ea38b283ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 278677d45f997ac446c2a20967dc3501179bf8da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245931"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumindo extensões de marcação XAML
 
@@ -448,7 +449,7 @@ Em seguida, você descobre que para uma da `Label` elementos, você deseja que t
 
 Aqui está o programa em execução em plataformas de três:
 
-[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png#lightbox "x:Null Demo")
+[![Demonstração de X:Null](consuming-images/nulldemo-small.png "X:Null demonstração")](consuming-images/nulldemo-large.png#lightbox "X:Null demonstração")
 
 Observe que quatro do `Label` elementos têm uma fonte serif, mas o centro `Label` tem a fonte de sans-serif padrão.
 

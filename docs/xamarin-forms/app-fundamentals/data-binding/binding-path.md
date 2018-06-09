@@ -1,19 +1,20 @@
 ---
-title: Caminho de associação
-description: Usar associações de dados para membros da coleção e acesso subpropriedades
+title: Caminho de associação xamarin. Forms
+description: Este artigo explica como usar associações de dados xamarin. Forms para acessar subpropriedades e membros da coleção com a propriedade do caminho da classe de associação.
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: f75cfcf4bfd5ffa71699f62b30145b732421d964
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d7c3b1ba991380451b4a82c389c4d46e950bc914
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240467"
 ---
-# <a name="binding-path"></a>Caminho de associação
+# <a name="xamarinforms-binding-path"></a>Caminho de associação xamarin. Forms
 
 Em todos os exemplos de associação de dados da anteriores, o [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) propriedade o `Binding` classe (ou o [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) propriedade do `Binding` extensão de marcação) foi definida para uma única propriedade. Ele é, na verdade, é possível definir `Path` para um *subpropriedade* (uma propriedade de uma propriedade), ou a um membro de uma coleção.
 
@@ -29,7 +30,7 @@ O `Time` propriedade de `TimePicker` é do tipo `TimeSpan`, mas talvez você que
 {Binding Source={x:Reference timePicker},
          Path=Time.TotalSeconds}
 ```
-         
+
 O `Time` é de propriedade do tipo `TimeSpan`, que tem um `TotalSeconds` propriedade. O `Time` e `TotalSeconds` propriedades são simply conectadas com um ponto. Os itens a `Path` cadeia de caracteres sempre se referem às propriedades e não aos tipos dessas propriedades.
 
 Exemplo e vários outros são mostrados no **variações de caminho** página:
@@ -50,7 +51,7 @@ Exemplo e vários outros são mostrados no **variações de caminho** página:
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Margin="10, 0">
         <TimePicker x:Name="timePicker" />
 
@@ -61,7 +62,7 @@ Exemplo e vários outros são mostrados no **variações de caminho** página:
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children.Count,
                               StringFormat='There are {0} children in this StackLayout'}" />
-        
+
         <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
                               Path=DateTimeFormat.DayNames[3],
                               StringFormat='The middle day of the week is {0}'}" />
@@ -156,7 +157,7 @@ Que exibe o tipo de fonte de associação, ou `DataBindingDemos.PathVariationsPa
 
 O tipo do `Content` propriedade agora é revelada ser `Xamarin.Forms.StackLayout`. Adicionar o `Children` propriedade para o `Path` e o tipo é `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, que é uma classe interna para xamarin. Forms, mas, obviamente, um tipo de coleção. Adicionar um índice para que e o tipo é `Xamarin.Forms.Label`. Continue dessa maneira.
 
-Como xamarin. Forms processa o caminho de associação, ele instala um `PropertyChanged` manipulador em qualquer objeto no caminho que implementa o `INotifyPropertyChanged` interface. Por exemplo, a associação final reage a uma alteração na primeira `Label` porque o `Text` alterações de propriedade. 
+Como xamarin. Forms processa o caminho de associação, ele instala um `PropertyChanged` manipulador em qualquer objeto no caminho que implementa o `INotifyPropertyChanged` interface. Por exemplo, a associação final reage a uma alteração na primeira `Label` porque o `Text` alterações de propriedade.
 
 Se uma propriedade no caminho de associação não implementa `INotifyPropertyChanged`, as alterações a essa propriedade serão ignoradas. Algumas alterações inteiramente podem invalidar o caminho de associação, então você deve usar essa técnica somente quando a cadeia de caracteres de propriedades e subpropriedades nunca se tornam inválidos.
 

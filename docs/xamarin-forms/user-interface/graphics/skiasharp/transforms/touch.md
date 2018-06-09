@@ -1,17 +1,18 @@
 ---
 title: Manipulações de toque
-description: Transformações de matriz de uso para implementar toque arrastando esmagamento e rotação
+description: Este artigo explica como usar transformações de matriz para implementar toque arrastando esmagamento e rotação e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: e8e5cc7b1a00f9822c4cbb4859a02b7546102ca0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a53fe287e74070adb22c2a7c67d4b7cc10b35d3e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244280"
 ---
 # <a name="touch-manipulations"></a>Manipulações de toque
 
@@ -753,9 +754,9 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-Isso `SKMatrix` objeto é modificado pela lógica de toque mostrada abaixo. 
+Isso `SKMatrix` objeto é modificado pela lógica de toque mostrada abaixo.
 
-O restante do arquivo code-behind é o `TouchEffect` manipulador de eventos. Ele começa a localização atual do dedo para a conversão um `SKPoint` valor. Para o `Pressed` verifica se o manipulador de tipo de ação, que nenhum outro dedo é tocar na tela, e se o dedo está dentro dos limites do bitmap. 
+O restante do arquivo code-behind é o `TouchEffect` manipulador de eventos. Ele começa a localização atual do dedo para a conversão um `SKPoint` valor. Para o `Pressed` verifica se o manipulador de tipo de ação, que nenhum outro dedo é tocar na tela, e se o dedo está dentro dos limites do bitmap.
 
 A parte essencial do código é um `if` instrução que envolvem duas chamadas para o `Math.Pow` método. Este matemática verifica se o local de dedo está fora de uma elipse que preenche o bitmap. Nesse caso, que é uma operação de escala. O dedo estiver perto de um dos cantos do bitmap e um ponto dinâmico for determinado que o canto oposto. Se o dedo estiver dentro essa elipse, é uma operação de panorâmica regular:
 
@@ -901,5 +902,5 @@ Esse código efetivamente divide a área do bitmap na forma de losango interiore
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Invocação de eventos de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

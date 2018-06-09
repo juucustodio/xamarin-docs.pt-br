@@ -1,28 +1,22 @@
 ---
 title: Orientação do dispositivo
-description: Entenda como dispor aplicativos uma aparência excelentes na orientações retrato e paisagem.
+description: Este artigo explica como aplicativos de xamarin. Forms de layout que uma aparência excelente na orientações retrato e paisagem.
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 95049e2d44b369bfa879226e17d2bad20b7b5408
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 9245a17423d97887d2032856b10427685b25c29b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848129"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244345"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
 É importante considerar como seu aplicativo será usado e como a orientação de paisagem pode ser incorporada para melhorar a experiência do usuário. Layouts individuais podem ser criados para acomodar várias orientações e melhor usa o espaço disponível. No nível do aplicativo, rotação pode ser desabilitada ou habilitada.
-
-Este artigo guiará você durante a criação de aplicativos que aproveitam os recursos de orientação do dispositivo e tem as seguintes seções:
-
-- **[Controlando a orientação](#Controlling_Orientation)**  &ndash; entender como controlar a orientação no nível do aplicativo em cada plataforma.
-- **[Reagir a alterações na orientação](#Reacting_to_Changes_in_Orientation)**  &ndash; aprender a ser notificado sobre e reagir a, as alterações na orientação.
-- **[Layout dinâmico](#Responsive_Layout)**  &ndash; aprender a criar layouts automaticamente funcionam em orientações paisagem e retrato.
 
 <a name="Controlling_Orientation" />
 

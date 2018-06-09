@@ -1,16 +1,18 @@
 ---
 title: Resumo do capítulo 17. Controle de grade
+description: 'Criando aplicativos móveis com o xamarin. Forms: Resumo do capítulo 17. Controle de grade'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 6aad4da944393caf404af96e50330ce1bf8a14d9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 55418f24b1519dcab3b107f23976d50b401c813b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240942"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumo do capítulo 17. Controle de grade
 

@@ -1,18 +1,20 @@
 ---
-title: DataPages
+title: Xamarin. Forms DataPages
+description: Este artigo apresenta DataPages xamarin. Forms, que fornecem uma API para rapidamente e facilmente associar uma fonte de dados para exibições predefinidas.
 ms.prod: xamarin
 ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e83efcd71eb9427f0b63749e8885a991a206febe
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2a74b636a41a72b26776157a774f0a33ef45a075
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243324"
 ---
-# <a name="datapages"></a>DataPages
+# <a name="xamarinforms-datapages"></a>Xamarin. Forms DataPages
 
 ![](~/media/shared/preview.png "Esta API está atualmente em visualização")
 
@@ -39,7 +41,7 @@ A visualização tem algumas fontes de dados predefinidos disponíveis para uso:
 
 * **JsonDataSource**
 * **AzureDataSource** (separe Nuget)
-* **AzureEasyTableDataSource** (separate Nuget)
+* **AzureEasyTableDataSource** (separe Nuget)
 
 Consulte o [guia de Introdução](get-started.md) para um exemplo usando um `JsonDataSource`.
 
@@ -72,4 +74,3 @@ A infraestrutura do xamarin. Forms interage com uma fonte de dados usando as seg
 
 Há dois métodos `MaskKey` e `UnmaskKey` que pode ser usado para ocultar (ou Mostrar) propriedades de item de dados (ie. impedir que eles sejam renderizados).
 A chave corresponde de uma propriedade nomeada no objeto de item de dados.
-

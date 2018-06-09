@@ -1,20 +1,20 @@
 ---
-title: Herança de estilo
-description: Estilos podem herdar de outros estilos para reduzir a duplicação e habilitar a reutilização.
+title: Herança de estilo no xamarin. Forms
+description: Estilos podem herdar de outros estilos para reduzir a duplicação e habilitar a reutilização. Este artigo explica como executar a herança de estilo em um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 7b489e90daec2659a6d11b2776731582bdf368ff
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: aff47769fad065e03de4c62af1be1d67b903eb0a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848415"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245088"
 ---
-# <a name="style-inheritance"></a>Herança de estilo
+# <a name="style-inheritance-in-xamarinforms"></a>Herança de estilo no xamarin. Forms
 
 _Estilos podem herdar de outros estilos para reduzir a duplicação e habilitar a reutilização._
 

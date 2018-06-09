@@ -1,17 +1,18 @@
 ---
 title: Autenticação de usuários com aplicativos móveis do Azure
-description: Aplicativos móveis do Azure usam uma variedade de provedores de identidade externa para dar suporte a autenticação e autorização de usuários do aplicativo, incluindo o Facebook, Google, Microsoft, Twitter e Active Directory do Azure. Permissões podem ser definidas em tabelas para restringir o acesso a somente os usuários autenticados. Este artigo explica como usar os aplicativos móveis do Azure para gerenciar o processo de autenticação em um aplicativo xamarin. Forms.
+description: Este artigo explica como usar os aplicativos móveis do Azure para gerenciar o processo de autenticação em um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: D50D6F56-8B19-44E7-81F3-E0E1C6E240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 5f5c69601c11a3c0d25bc804c60883841b0fb30d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fc6206a22d7527ea38a39ab034c424bfe7730abb
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241709"
 ---
 # <a name="authenticating-users-with-azure-mobile-apps"></a>Autenticação de usuários com aplicativos móveis do Azure
 

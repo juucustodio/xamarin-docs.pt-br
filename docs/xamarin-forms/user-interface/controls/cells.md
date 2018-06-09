@@ -1,23 +1,24 @@
 ---
 title: Células xamarin. Forms
-description: Xamarin. Forms células podem ser adicionadas ao ListViews e TableViews.
+description: Xamarin. Forms células podem ser adicionadas ao ListViews e TableViews. Este artigo lista as células incluídas no xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: dbc28f3d58b43bb53db39da2dcdf1ba722169264
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0947027b43eacd0bac269ebf7a779746e0d22866
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243350"
 ---
 # <a name="xamarinforms-cells"></a>Células xamarin. Forms
 
 _Xamarin. Forms células podem ser adicionadas ao ListViews e TableViews._
 
-Um *célula* é um elemento especializado usado para itens em uma tabela e descreve como cada item em uma lista deve ser processado. O [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) classe derivada de [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/), do qual [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) também deriva. Uma célula não em si é um elemento visual. em vez disso, é um modelo para criar um elemento visual. 
+Um *célula* é um elemento especializado usado para itens em uma tabela e descreve como cada item em uma lista deve ser processado. O [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) classe derivada de [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/), do qual [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) também deriva. Uma célula não em si é um elemento visual. em vez disso, é um modelo para criar um elemento visual.
 
 `Cell` é usado exclusivamente com [ `ListView` ](views.md#listView) e [ `TableView` ](views.md#tableView) controles. Para saber como usar e personalizar células, consulte o [ `ListView` ](~/xamarin-forms/user-interface/listview/index.md) e [ `TableView` ](~/xamarin-forms/user-interface/tableview.md) documentação.
 

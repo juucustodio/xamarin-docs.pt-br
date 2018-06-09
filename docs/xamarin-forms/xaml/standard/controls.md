@@ -1,17 +1,18 @@
 ---
 title: Controles do XAML padrão (visualização)
-description: Como começar a explorar a visualização de padrão de XAML no xamarin. Forms
+description: Este artigo explora os controles XAML padrão disponíveis no xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 287E6631-D1C5-46C5-8905-AB53D34E365D
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 2fc7fb9581f344e0d54bd9f690d334eda78cc97a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b01d0773f0c2150db575875b770957eb6452f41
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245560"
 ---
 # <a name="xaml-standard-preview-controls"></a>Controles do XAML padrão (visualização)
 
@@ -39,13 +40,13 @@ Também é uma lista de controles que têm novos nomes de propriedade e enumera�
 
 |Controles de xamarin. Forms com as propriedades atualizadas|Propriedade xamarin. Forms ou enum|XAML padrão equivalente|
 |--- |--- |--- |
-|Button, Entry, Label, DatePicker, Editor, SearchBar, TimePicker|TextColor|Primeiro plano|
+|Botão, entrada, rótulo, DatePicker, Editor, SearchBar, TimePicker|textColor|Primeiro plano|
 |VisualElement|BackgroundColor|Plano de fundo *|
 |Seletor de botão|BorderColor OutlineColor|BorderBrush|
 |Botão|BorderWidth|BorderThickness|
 |ProgressBar|Progresso|Valor|
-|Button, Entry, Label, Editor, SearchBar, Span, Font|FontAttributesBold, itálico, None|FontStyleItalic, Normal|
-|Button, Entry, Label, Editor, SearchBar, Span, Font|FontAttributes|FontWeights * negrito, Normal|
+|Botão, entrada, rótulo, Editor, SearchBar, alcance, fonte|FontAttributesBold, itálico, None|FontStyleItalic, Normal|
+|Botão, entrada, rótulo, Editor, SearchBar, alcance, fonte|FontAttributes|FontWeights * negrito, Normal|
 |InputView|KeyboardDefault, Url, número, telefone, texto, bate-papo, Email|InputScopeNameValue * padrão, Url, número, TelephoneNumber, texto, bate-papo, EmailNameOrAddress|
 |StackPanel|StackOrientation|Orientação *|
 

@@ -1,20 +1,20 @@
 ---
-title: Modo de tabela
-description: Apresente menus de rolagem, configurações e formulários de entrada.
+title: Modo de tabela xamarin. Forms
+description: Este artigo explica como usar a classe de modo de tabela xamarin. Forms para apresentar os menus de rolagem, configurações e formulários de entrada de aplicativos.
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 312472fdfae65bc62b76f4295a13760236dededc
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 5ad1db6a073b5a6d0199aa586230cb55a9d4a925
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847651"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244852"
 ---
-# <a name="tableview"></a>Modo de tabela
+# <a name="xamarinforms-tableview"></a>Modo de tabela xamarin. Forms
 
 [Modo de tabela](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) é um modo de exibição para exibir listas roláveis de dados ou opções onde há linhas que não compartilham o mesmo modelo. Ao contrário de [ListView](~/xamarin-forms/user-interface/listview/index.md), modo de tabela não tem o conceito de um `ItemsSource`, portanto, itens devem ser adicionados como filhos manualmente.
 

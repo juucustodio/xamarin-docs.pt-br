@@ -1,19 +1,20 @@
 ---
-title: Plug-ins
-description: Adicionar facilmente a funcionalidade nativa para aplicativos xamarin. Forms
+title: Consumindo e criando plug-ins do xamarin. Forms
+description: Este artigo explica como consumir e criar plug-ins do xamarin. Forms. Plug-ins são normalmente usadas para expor facilmente os recursos de plataforma nativo.
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2016
-ms.openlocfilehash: 5770d13c46998872752820b7a0cbb222a04c3ff8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dff9fad0da30475a0fb91c0af76a25ea50d34439
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242551"
 ---
-# <a name="plugins"></a>Plug-ins
+# <a name="consuming-and-creating-xamarinforms-plugins"></a>Consumindo e criando plug-ins do xamarin. Forms
 
 Há muitos recursos de plataforma nativo que existem em todas as plataformas, mas tem APIs ligeiramente diferentes. Os desenvolvedores escrever plug-ins para criar uma interface de plataforma cruzada abstrata para os recursos que eles também poderão compartilhar com outras pessoas.
 
@@ -23,7 +24,7 @@ Esses recursos incluem: status da bateria, bússola, sensores de movimento, loca
 
 Comunidade do Xamarin criou muitos plug-ins de plataforma cruzada compatível com o xamarin. Forms - uma grande coleção pode ser encontrada em:
 
-[**Xamarin Plugins**](https://github.com/xamarin/plugins)
+[**Plug-ins do Xamarin**](https://github.com/xamarin/plugins)
 
 Para obter um guia para adicionar pacotes do NuGet ao seu projeto, consulte nosso passo a passo sobre [incluindo um pacote do NuGet em seu projeto](/visualstudio/mac/nuget-walkthrough/).
 

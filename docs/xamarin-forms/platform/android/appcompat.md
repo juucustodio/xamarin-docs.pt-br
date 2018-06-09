@@ -1,17 +1,18 @@
 ---
 title: Adicionando AppCompat e Design de Material
-description: Siga estas etapas para converter aplicativos do Android xamarin. Forms existentes para usar AppCompat e Material de Design
+description: Este artigo explica como converter aplicativos do Android xamarin. Forms existentes para usar AppCompat e Material de Design.
 ms.prod: xamarin
 ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: 8f9820b863274453cff7e4124df683fb8518a978
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c2eed44a7c684b91ceed4493a83ff3b4e1578b5f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242915"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Adicionando AppCompat e Design de Material
 
@@ -79,7 +80,7 @@ Um estilo adicional deve ser incluído no **v21 valores** pasta aplicar propried
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Update AndroidManifest.xml
+### <a name="4-update-androidmanifestxml"></a>4. Atualizar AndroidManifest.xml
 
 Para garantir que esse novo tema informações são tema usado, definido o **AndroidManifest** arquivo adicionando `android:theme="@style/MyTheme"` (deixe o resto do XML como ele era).
 

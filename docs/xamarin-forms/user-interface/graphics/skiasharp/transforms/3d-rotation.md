@@ -1,19 +1,20 @@
 ---
-title: Rotações 3D
-description: Use transformações não afins para girar objetos 2D em espaço 3D.
+title: Rotações 3D em SkiaSharp
+description: Este artigo explica como usar transformações não afins rotação 2D objetos em espaço 3D e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: ad4bce6eff7df65185fc3bd754c747fd0db0c9f1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244293"
 ---
-# <a name="3d-rotations"></a>Rotações 3D
+# <a name="3d-rotations-in-skiasharp"></a>Rotações 3D em SkiaSharp
 
 _Use transformações não afins para girar objetos 2D em espaço 3D._
 
@@ -72,11 +73,11 @@ w' = M14·x + M24·y + M34·z + M44
 
 Para converter essas coordenadas do espaço 3D onde W é igual a 1, x', y', e z 'coordenadas são todos divididas pelo w':
 
-x" = x' / w'
+x"= x' / ' w'
 
 y"= y' / ' w'
 
-z" = z' / w'
+z"= z' / ' w'
 
 w" = w' / w' = 1
 
@@ -170,7 +171,7 @@ w' = M14·x + M24·y + M44
 
 Além disso, o z' coordenada é irrelevante bem aqui. Quando um objeto 3D é exibido em um sistema de gráficos 2D, estiver recolhida a um objeto bidimensional, ignorando os valores de coordenada Z. As fórmulas de transformação são realmente apenas esses dois:
 
-x" = x' / w'
+x"= x' / ' w'
 
 y"= y' / ' w'
 
@@ -538,4 +539,4 @@ Essa rotação 3D é colocada entre várias transformações 2D para mover o Cen
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

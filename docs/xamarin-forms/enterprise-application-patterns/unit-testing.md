@@ -1,18 +1,20 @@
 ---
-title: Teste de unidade
+title: Aplicativos de empresa de teste de unidade
+description: Este capítulo explica como os testes de unidade é executada no aplicativo móvel do eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 57201a32f5ffc0ae962f6db851a25a737e1cb17d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06cd89e0b0871eac723e8580340173f77821e4ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242525"
 ---
-# <a name="unit-testing"></a>Teste de unidade
+# <a name="unit-testing-enterprise-apps"></a>Aplicativos de empresa de teste de unidade
 
 Aplicativos móveis têm problemas específicos que a área de trabalho e aplicativos baseados na web não precisam se preocupar sobre. Usuários móveis variam por dispositivos que eles usam, por conectividade de rede, a disponibilidade de serviços e uma variedade de outros fatores. Portanto, os aplicativos móveis devem ser testados como eles serão usados no mundo real para melhorar sua qualidade, confiabilidade e desempenho. Há muitos tipos de testes que devem ser executados em um aplicativo, incluindo testes de unidade, testes de integração e teste com testes sendo a forma mais comum de teste de unidade de interface do usuário.
 
@@ -227,4 +229,4 @@ Testando modelos e exibir modelos de aplicativos MVVM é idêntico de outras cla
 ## <a name="related-links"></a>Links relacionados
 
 - [Baixar eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (amostra)](https://github.com/dotnet-architecture/eShopOnContainers)

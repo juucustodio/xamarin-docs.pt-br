@@ -1,16 +1,18 @@
 ---
 title: Resumo do Capítulo 26. Layouts personalizados
+description: 'Criando aplicativos móveis com o xamarin. Forms: Resumo do Capítulo 26. Layouts personalizados'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5d2dc3e809026a36d186c9a582fcd047f6be24fe
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1c8fec34c0bc7f38d360f76122d851ae653ce15e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241165"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Resumo do Capítulo 26. Layouts personalizados
 

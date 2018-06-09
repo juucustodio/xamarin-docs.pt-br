@@ -1,6 +1,6 @@
 ---
-title: Layouts
-description: Dispor os modos de exibição na tela.
+title: Layouts de xamarin. Forms
+description: Xamarin. Forms tem vários layouts e recursos para organizar o conteúdo na tela, e este artigo explica-los.
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
@@ -8,15 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 2f57ac5b5b54b2606618c5e59fb544cae7c77e88
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: d11e0e286c25f11c24dc788be8d1c29155261b7a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244884"
 ---
-# <a name="layouts"></a>Layouts
+# <a name="layouts-in-xamarinforms"></a>Layouts de xamarin. Forms
 
-Xamarin. Forms tem vários layouts e recursos para organizar o conteúdo na tela. 
+Xamarin. Forms tem vários layouts e recursos para organizar o conteúdo na tela.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
@@ -69,7 +70,7 @@ O `FlexLayout` é semelhante ao `StackLayout` exibir exibições filho horizonta
 <FlexLayout Direction="Column"
             AlignItems="Center"
             JustifyContent="SpaceEvenly">
-        
+
     <Label Text="FlexLayout in Action" />
     <Button Text="Button" />
     <Label Text="Another Label" />

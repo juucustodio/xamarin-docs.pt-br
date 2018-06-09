@@ -1,20 +1,20 @@
 ---
-title: Seletor
-description: O modo de exibição de seletor é um controle para selecionar um item de texto de uma lista de dados.
+title: Seletor de xamarin. Forms
+description: O seletor de xamarin. Forms exibe uma lista curta de itens, na qual o usuário pode selecionar um item. Este artigo explica como usar a classe do seletor para selecionar um item de texto em uma lista de dados.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 7f0050351ca28d7f8afeb82a85e82e51d399824b
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 82ae36a7be139e2a93d0e5c43c4bad355c49f217
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847492"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245033"
 ---
-# <a name="picker"></a>Seletor
+# <a name="xamarinforms-picker"></a>Seletor de xamarin. Forms
 
 _O modo de exibição de seletor é um controle para selecionar um item de texto de uma lista de dados._
 

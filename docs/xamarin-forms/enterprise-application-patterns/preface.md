@@ -1,18 +1,20 @@
 ---
-title: Prefácio
+title: Prefácio para desenvolvimento de aplicativos da empresa
+description: Este capítulo fornece um prefácio para padrões de aplicativo da empresa usando o xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: e9dd5f663fc98ac1e869721517e9a3d0fb2033bb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242362"
 ---
-# <a name="preface"></a>Prefácio
+# <a name="preface-to-enterprise-app-development"></a>Prefácio para desenvolvimento de aplicativos da empresa
 
 Este livro eletrônico fornece orientação sobre a criação de aplicativos de empresa de plataforma cruzada usando xamarin. Forms. Xamarin. Forms é um kit de ferramentas de interface do usuário de plataforma cruzada que permite aos desenvolvedores criar facilmente usuário nativo layouts de interface que podem ser compartilhados entre plataformas, incluindo o Windows UWP (plataforma Universal), iOS e Android. Ele fornece uma solução abrangente para os negócios ao funcionário (B2E), empresas (B2B) e empresas para aplicativos de consumidor (B2C), fornecendo a capacidade de compartilhar o código em todas as plataformas de destino e ajudando a reduzir o custo total de propriedade (TCO).
 
@@ -42,4 +44,4 @@ Fique à vontade para encaminhar este guia membros da equipe para ajudar a garan
 ## <a name="related-links"></a>Links relacionados
 
 - [Baixar eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (amostra)](https://github.com/dotnet-architecture/eShopOnContainers)

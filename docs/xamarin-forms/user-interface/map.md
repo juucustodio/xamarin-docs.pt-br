@@ -1,19 +1,20 @@
 ---
-title: Mapa
-description: Xamarin. Forms usa o mapa nativo APIs em cada plataforma.
+title: Mapa de xamarin. Forms
+description: Este artigo explica como usar a classe de mapa xamarin. Forms para usar o mapa nativo APIs em cada plataforma para fornecer que um familiar mapeia a experiência dos usuários.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6063732e08680974b8d4a2358bfd85b176b36aec
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 9bd4c810db0397d84803be7c38f625b9b047c3da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245469"
 ---
-# <a name="map"></a>Mapa
+# <a name="xamarinforms-map"></a>Mapa de xamarin. Forms
 
 _Xamarin. Forms usa o mapa nativo APIs em cada plataforma._
 
@@ -80,7 +81,7 @@ Para acessar os serviços de localização no iOS, você deve definir as seguint
 - iOS 10 e versões anteriores
     - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – Para usar serviços de localização quando o aplicativo está em uso
     - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – Para usar serviços de localização em todos os momentos    
-    
+
 Para dar suporte a iOS 11 e versões anteriores, você pode incluir todos os três chaves: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, e `NSLocationAlwaysUsageDescription`.
 
 A representação XML para essas chaves no **Info. plist** é mostrado abaixo. Você deve atualizar o `string` valores para refletir como o aplicativo está usando as informações de local:

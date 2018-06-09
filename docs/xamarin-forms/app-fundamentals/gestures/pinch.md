@@ -1,18 +1,18 @@
 ---
 title: Adicionando um reconhecedor de gestos de aperto
-description: O gesto de pinçagem é usado para executar o zoom interativa e é implementado com a classe PinchGestureRecognizer. Um cenário comum para o gesto de pinçagem é executar o zoom interativo de uma imagem no local de aperto. Isso é feito, dimensionando o conteúdo do visor e é demonstrado neste artigo.
+description: Este artigo explica como usar o gesto de pinçagem para executar o zoom interativo de uma imagem no local de aperto.
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: b2348a1f0dfacc4a7a0e37f5c9041a07217ff802
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 3600a8bf059bf29429cce35a233cc6618daa4d79
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846107"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241771"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>Adicionando um reconhecedor de gestos de aperto
 

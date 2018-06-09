@@ -1,18 +1,18 @@
 ---
 title: Criando específicos de plataforma
-description: Fornecedores podem criar suas próprias especificações de plataforma com efeitos. Um efeito fornece a funcionalidade específica, em seguida, é exposta por meio de uma plataforma específica. O resultado é um efeito que pode ser mais facilmente consumido por meio de XAML e uma API fluente de código. Este artigo demonstra como expor um efeito por meio de uma plataforma específica.
+description: Este artigo demonstra como expor um efeito por meio de uma plataforma específica.
 ms.prod: xamarin
 ms.assetid: 0D0E6274-6EF2-4D40-BB77-3D8E53BCD24B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: dcd22dd0d4e281245a1f6598d9a58d24a97b1f20
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a07ff2e206a08ee40355733ab2c1026f29de2f2f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848142"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242778"
 ---
 # <a name="creating-platform-specifics"></a>Criando específicos de plataforma
 

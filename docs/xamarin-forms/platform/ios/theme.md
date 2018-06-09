@@ -1,17 +1,18 @@
 ---
 title: Adicionando formatação específico do iOS
+description: Este artigo explica como definir a aparência de específico do iOS sem usar um renderizador personalizado xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: CE50E207-D092-4D88-8439-1B51F178E7ED
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
-ms.openlocfilehash: f14479d353d24910f66afd35f968a232ec31657c
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 74a3cdc340cb09e8adf15ed0dd09315c985d18b5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847277"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243525"
 ---
 # <a name="adding-ios-specific-formatting"></a>Adicionando formatação específico do iOS
 

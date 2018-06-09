@@ -1,6 +1,6 @@
 ---
 title: Enviar notificações por Push de aplicativos móveis do Azure
-description: Hubs de notificação do Azure oferecem uma infraestrutura de push escalonável para enviar notificações por push de qualquer back-end para qualquer plataforma móvel, eliminando a complexidade de um back-end precisar se comunicar com sistemas de notificação de plataforma diferente. Este artigo explica como usar Hubs de notificação do Azure para enviar notificações por push de uma instância dos aplicativos móveis do Azure para um aplicativo xamarin. Forms.
+description: Este artigo explica como usar Hubs de notificação do Azure para enviar notificações por push de uma instância dos aplicativos móveis do Azure para um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: A1EF400F-73F4-43E9-A0C3-1569A0F34A3B
 ms.technology: xamarin-forms
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 28aba0ec33dc88e3e87f51fbdd28d5ec8a72d3c3
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d5bf0e614ef3777bc956e66c0b737bfb8a5b9e0c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847596"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243760"
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Enviar notificações por Push de aplicativos móveis do Azure
 

@@ -1,20 +1,20 @@
 ---
-title: Recursos da plataforma
-description: Tirar proveito dos recursos específicos da plataforma com xamarin. Forms
+title: Recursos de plataforma xamarin. Forms
+description: Este guia explica como tirar proveito dos recursos específicos de plataforma em aplicativos xamarin. Forms usando uma variedade de técnicas.
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2018
-ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 2e8eb19411799e7723be338e9e3f6df35058eb8c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847625"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242794"
 ---
-# <a name="platform-features"></a>Recursos da plataforma
+# <a name="xamarinforms-platform-features"></a>Recursos de plataforma xamarin. Forms
 
 Xamarin. Forms é extensível e permite que você incorpore recursos específicos de plataforma usando [efeitos](~/xamarin-forms/app-fundamentals/effects/index.md), [renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), o [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md), o [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md)e muito mais.
 

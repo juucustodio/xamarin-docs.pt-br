@@ -1,5 +1,5 @@
 ---
-title: Associação de dados
+title: Associação de dados do xamarin. Forms
 description: Associação de dados é a técnica de vincular as propriedades de dois objetos para que as alterações em uma propriedade são refletidas automaticamente na outra propriedade. Associação de dados é uma parte integrante da arquitetura do aplicativo Model-View-ViewModel (MVVM).
 ms.prod: xamarin
 ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ee8481696b0ef85aec949c6def7767e57eb99e17
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5ea5dcb5b108da52634f131fd36a91ba82f7da4
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240347"
 ---
-# <a name="data-binding"></a>Associação de dados
+# <a name="xamarinforms-data-binding"></a>Associação de dados do xamarin. Forms
 
 _Associação de dados é a técnica de vincular as propriedades de dois objetos para que as alterações em uma propriedade são refletidas automaticamente na outra propriedade. Associação de dados é uma parte integrante da arquitetura do aplicativo Model-View-ViewModel (MVVM)._
 

@@ -1,16 +1,18 @@
 ---
 title: Resumo do capítulo 14. Layout absoluto
+description: 'Criando aplicativos móveis com o xamarin. Forms: Resumo do capítulo 14. Layout absoluto'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 87feb17f79dadb0eb8da271f7c072e4a9753381c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8fe8f8bb0ba3204a312f3d91bc59b8fa3f7c03a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241397"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Resumo do capítulo 14. Layout absoluto
 
@@ -83,7 +85,7 @@ Um atributo em XAML que consiste em um nome de classe, um ponto e um nome de pro
 
 ## <a name="overlays"></a>Sobreposições
 
-Você pode usar `AbsoluteLayout` para construir um *sobreposição*, que abrange a página com outros controles, talvez para proteger o usuário interaja com os controles normais na página. 
+Você pode usar `AbsoluteLayout` para construir um *sobreposição*, que abrange a página com outros controles, talvez para proteger o usuário interaja com os controles normais na página.
 
 O [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) exemplo demonstra essa técnica e também demonstra o [ `ProgressBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/), que exibe a extensão à qual um programa foi concluída uma tarefa.
 

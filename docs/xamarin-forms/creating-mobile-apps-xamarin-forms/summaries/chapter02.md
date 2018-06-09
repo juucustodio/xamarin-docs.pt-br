@@ -1,16 +1,18 @@
 ---
 title: Resumo do capítulo 2. Anatomia de um aplicativo
+description: 'Criando aplicativos móveis com o xamarin. Forms: Resumo do capítulo 2. Anatomia de um aplicativo'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 81bcc8e2f8627264820a859123e1be1a9f960a92
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 208cf28341ceaa43d1c56b4f5086dc98febee6be
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242741"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Resumo do capítulo 2. Anatomia de um aplicativo
 
@@ -142,11 +144,11 @@ O `Device.OnPlatform` métodos são usados para executar código específico da 
 
 O `Device.OnPlatform` métodos, o `Device.OS` propriedade e o `TargetPlatform` enumeração são todos agora preterido. Em vez disso, use o [ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) propriedade e comparar o `string` valor com os seguintes campos estáticos de retorno:
 
-- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), a cadeia de caracteres "iOS" 
+- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), a cadeia de caracteres "iOS"
 - [`Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/), a cadeia de caracteres "Android"
 - [`UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/), a cadeia de caracteres "UWP", que faz referência para a plataforma de tempo de execução do Windows
 - [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Windows/), a cadeia de caracteres "Windows" para o tempo de execução do Windows (Windows 8.1 e Windows Phone 8.1)
-- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), a cadeia de caracteres "WinPhone" para o Windows Phone 8.0 
+- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), a cadeia de caracteres "WinPhone" para o Windows Phone 8.0
 
 O [ `Device.Idiom` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.Idiom/) está relacionada a propriedade estática somente leitura. Isso retorna um membro do [ `TargetIdiom` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetIdiom/), que tem estes membros:
 

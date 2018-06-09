@@ -1,20 +1,20 @@
 ---
-title: Usando o selecionador de data
-description: Um modo de exibição xamarin. Forms permite que o usuário selecione uma data
+title: DatePicker xamarin. Forms
+description: O selecionador de data é xamarin. Forms que permite que o usuário selecione uma data. Este artigo explica como consumir um DatePicker em um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 09b0bd788d9ac436e0270b447556ad2b0a848f99
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 9cbc87637df088a4989d3602a7d1d126adf86385
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848558"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243639"
 ---
-# <a name="using-datepicker"></a>Usando o selecionador de data
+# <a name="xamarinforms-datepicker"></a>DatePicker xamarin. Forms
 
 _Um modo de exibição xamarin. Forms permite que o usuário selecione uma data_
 

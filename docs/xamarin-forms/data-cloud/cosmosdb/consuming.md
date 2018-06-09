@@ -1,6 +1,6 @@
 ---
 title: Consumo de um banco de dados de documento de banco de dados do Cosmos do Azure
-description: Um banco de dados de documento de banco de dados do Azure Cosmos é um banco de dados NoSQL que fornece acesso de baixa latência para documentos JSON, oferecendo um serviço de banco de dados rápida, altamente disponível e dimensionável para aplicativos que necessitam de replicação global e escala contínua. Este artigo explica como usar a biblioteca de cliente .NET padrão do Azure Cosmos DB para integrar um banco de dados de documento de banco de dados do Azure Cosmos em um aplicativo xamarin. Forms.
+description: Este artigo explica como usar a biblioteca de cliente .NET padrão do Azure Cosmos DB para integrar um banco de dados de documento de banco de dados do Azure Cosmos em um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
 ms.technology: xamarin-forms
@@ -8,11 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: a4656b5eb9a8159f1b3dc39c8cf62509101d219e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6e797eaad98f6fac66876aaebecd7ae53ad9dbab
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242499"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Consumo de um banco de dados de documento de banco de dados do Cosmos do Azure
 

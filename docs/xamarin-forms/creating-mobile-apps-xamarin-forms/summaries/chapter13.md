@@ -1,16 +1,18 @@
 ---
 title: Resumo do capítulo 13. Bitmaps
+description: 'Criando aplicativos móveis com o xamarin. Forms: Resumo do capítulo 13. Bitmaps'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 76551057abc1abdd150591c0a1be39e9f68c4278
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d95e801f6a239e894c1f6baa68015659af9eba35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241549"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumo do capítulo 13. Bitmaps
 
@@ -156,7 +158,7 @@ Os projetos de tempo de execução do Windows oferecem suporte a um bitmap de no
 
 - MyImage.scale-200.jpg em 320 pixels quadrados
 
-Somente alguns porcentagens são válidas. Os programas de exemplo para este catálogo incluem apenas imagens com **escala 200** sufixos, mas modelos de solução atuais xamarin. Forms incluem **escala 100**, **escala 125**, **escala 150**, e **400 escala**. 
+Somente alguns porcentagens são válidas. Os programas de exemplo para este catálogo incluem apenas imagens com **escala 200** sufixos, mas modelos de solução atuais xamarin. Forms incluem **escala 100**, **escala 125**, **escala 150**, e **400 escala**.
 
 Ao adicionar bitmaps para os projetos de plataforma, o **ação de compilação** deve ser:
 

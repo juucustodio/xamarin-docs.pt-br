@@ -1,19 +1,20 @@
 ---
-title: Tema escuro
+title: Tema escuro xamarin. Forms
+description: Este artigo explica como utilizar o tema escuro xamarin. Forms em um aplicativo.
 ms.prod: xamarin
 ms.assetid: 43A3798D-6F05-4734-AF5E-97235B46D9B9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 676ed2d5f99c1f39904b2afe045cee21c0eab09c
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 1fc329f506afde04b0dc59dc637d999865aafbe1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847258"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245918"
 ---
-# <a name="dark-theme"></a>Tema escuro
+# <a name="xamarinforms-dark-theme"></a>Tema escuro xamarin. Forms
 
 ![](~/media/shared/preview.png "Esta API está atualmente em visualização")
 
@@ -69,4 +70,3 @@ Aqui está um exemplo de botões e rótulos no tema escuro, junto com a marcaç�
 ```
 
 O [lista completa de classes internas](~/xamarin-forms/user-interface/themes/index.md) mostra quais estilos disponíveis para alguns controles comuns.
-

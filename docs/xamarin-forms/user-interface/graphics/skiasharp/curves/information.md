@@ -1,17 +1,18 @@
 ---
 title: Enumeração e informações de caminho
-description: Obter informações sobre os caminhos e enumerar o conteúdo
+description: Este artigo explica como obter informações sobre os caminhos de SkiaSharp e enumerar o conteúdo e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 82ac4ea49462c7520219e1a621ea3946297b1b45
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 53d1fce20a0e3bc75ba34ab84b2549211567e222
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243786"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 
@@ -27,7 +28,7 @@ Também, às vezes, é útil obter todas as operações de desenho e pontos que 
 
 ## <a name="getting-the-path-length"></a>Obtendo o comprimento do caminho
 
-O artigo [ **caminhos e texto** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) você viu como usar o [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) método para desenhar uma cadeia de caracteres de texto cuja base segue o curso de um caminho. Mas e se você deseja dimensionar o texto para que ele se ajuste o caminho com precisão? Para desenhar texto em torno de um círculo, isso é fácil porque a circunferência de um círculo é mais simple calcular. Mas a circunferência de uma elipse ou o comprimento de uma curva de Bézier não é tão simple. 
+O artigo [ **caminhos e texto** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) você viu como usar o [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) método para desenhar uma cadeia de caracteres de texto cuja base segue o curso de um caminho. Mas e se você deseja dimensionar o texto para que ele se ajuste o caminho com precisão? Para desenhar texto em torno de um círculo, isso é fácil porque a circunferência de um círculo é mais simple calcular. Mas a circunferência de uma elipse ou o comprimento de uma curva de Bézier não é tão simple.
 
 O [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) pode ajudar a classe. O [construtor](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) aceita um `SKPath` argumento e o [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) propriedade revela seu comprimento.
 
@@ -151,7 +152,7 @@ public class UnicycleHalfPipePage : ContentPage
     };
 
     SKPath unicyclePath = SKPath.ParseSvgPathData(
-        "M 0 0" + 
+        "M 0 0" +
         "A 25 25 0 0 0 0 -50" +
         "A 25 25 0 0 0 0 0 Z" +
         "M 0 -25 L 0 -100" +
@@ -179,7 +180,7 @@ public class UnicycleHalfPipePage : ContentPage
         using (SKPath pipePath = new SKPath())
         {
             pipePath.MoveTo(50, 50);
-            pipePath.CubicTo(0, 1.25f * info.Height, 
+            pipePath.CubicTo(0, 1.25f * info.Height,
                              info.Width - 0, 1.25f * info.Height,
                              info.Width - 50, 50);
 
@@ -197,7 +198,7 @@ public class UnicycleHalfPipePage : ContentPage
                 t = (float)((1 - Math.Cos(t * 2 * Math.PI)) / 2);
 
                 SKMatrix matrix;
-                pathMeasure.GetMatrix(t * length, out matrix, 
+                pathMeasure.GetMatrix(t * length, out matrix,
                                       SKPathMeasureMatrixFlags.GetPositionAndTangent);
 
                 canvas.SetMatrix(matrix);
@@ -426,7 +427,7 @@ O **GlobularText** exemplo usa esse método de extensão para quebrar o texto ao
 
 [![](information-images/globulartext-small.png "Captura de tela da página de texto Globular tripla")](information-images/globulartext-large.png#lightbox "tripla captura de tela da página de texto Globular")
 
-O [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) construtor da classe executa essa transformação. Ele cria um `SKPaint` de objeto para o texto e, em seguida, obtém um `SKPath` de objeto o `GetTextPath` método. Este é o caminho passado para o `CloneWithTransform` método de extensão juntamente com uma função de transformação: 
+O [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) construtor da classe executa essa transformação. Ele cria um `SKPaint` de objeto para o texto e, em seguida, obtém um `SKPath` de objeto o `GetTextPath` método. Este é o caminho passado para o `CloneWithTransform` método de extensão juntamente com uma função de transformação:
 
 ```csharp
 public class GlobularTextPage : ContentPage
@@ -453,9 +454,9 @@ public class GlobularTextPage : ContentPage
 
                 globePath = textPath.CloneWithTransform((SKPoint pt) =>
                 {
-                    double longitude = (Math.PI / textPathBounds.Width) * 
+                    double longitude = (Math.PI / textPathBounds.Width) *
                                             (pt.X - textPathBounds.Left) - Math.PI / 2;
-                    double latitude = (Math.PI / textPathBounds.Height) * 
+                    double latitude = (Math.PI / textPathBounds.Height) *
                                             (pt.Y - textPathBounds.Top) - Math.PI / 2;
 
                     longitude *= 0.75;
@@ -510,4 +511,4 @@ Essa é uma técnica muito versátil. Se a matriz de efeitos de caminho descrito
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

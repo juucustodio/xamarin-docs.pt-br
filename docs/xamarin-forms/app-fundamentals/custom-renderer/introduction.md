@@ -1,17 +1,18 @@
 ---
 title: Introdução aos renderizadores personalizados
-description: Processadores personalizados fornecem uma abordagem avançada para personalizar a aparência e comportamento de controles xamarin. Forms. Eles podem ser usados para estilo pequenas alterações ou layout de específico de plataforma sofisticada e personalização de comportamento. Este artigo fornece uma introdução aos renderizadores personalizados e descreve o processo de criação de um renderizador personalizado.
+description: Este artigo fornece uma introdução aos renderizadores personalizados e descreve o processo de criação de um renderizador personalizado.
 ms.prod: xamarin
 ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: b394c64fe6e2bfb9e5e7ee0e00d8c0366d6bd93e
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: fa22be081433bdd0c59a0d921511d3f3d83d4448
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241758"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introdução aos renderizadores personalizados
 

@@ -1,20 +1,20 @@
 ---
-title: AbsoluteLayout
-description: Use AbsoluteLayout para criar interfaces do usuário perfeita de pixel.
+title: AbsoluteLayout xamarin. Forms
+description: Este artigo explica como usar a classe AbsoluteLayout xamarin. Forms para criar interfaces do usuário perfeita de pixel. Esta classe posiciona e tamanhos de elementos filho proporcionais ao seu próprio tamanho e posição ou por valores absolutos.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 506a9a4916cf2cf9105d59f56648e339d664a3d2
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f36334bca9e7401f35d4b6181b47c0f64923f652
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848377"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244450"
 ---
-# <a name="absolutelayout"></a>AbsoluteLayout
+# <a name="xamarinforms-absolutelayout"></a>AbsoluteLayout xamarin. Forms
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) posiciona e tamanhos de elementos filho proporcionais ao seu próprio tamanho e posição ou por valores absolutos. Modos de exibição filho podem ser posicionados e dimensionados usando proporcionais valores ou valores estáticos e proporcional e valores estáticos podem ser combinados.
 

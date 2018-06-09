@@ -1,18 +1,18 @@
 ---
 title: Criar um Layout personalizado
-description: Xamarin. Forms define quatro classes de layout – StackLayout, AbsoluteLayout, RelativeLayout e grade, e cada organiza seus filhos de forma diferente. No entanto, às vezes, é necessário organizar o conteúdo de página usando um layout que não foi fornecido pelo xamarin. Forms. Este artigo explica como escrever uma classe de layout personalizado e demonstra uma classe de WrapLayout sensíveis à orientação que organiza os seus filhos horizontalmente na página e, em seguida, ajusta a exibição de filhos subsequentes para linhas adicionais.
+description: Este artigo explica como escrever uma classe de layout personalizado e demonstra uma classe de WrapLayout sensíveis à orientação que organiza os seus filhos horizontalmente na página e, em seguida, ajusta a exibição de filhos subsequentes para linhas adicionais.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f2a443ded0d6b41db237e9842cd80e016bb5251
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f225a80a1c386668b71d1cdd47409eb017f19033
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847739"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244929"
 ---
 # <a name="creating-a-custom-layout"></a>Criar um Layout personalizado
 

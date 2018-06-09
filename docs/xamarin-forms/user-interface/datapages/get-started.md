@@ -1,17 +1,18 @@
 ---
 title: Guia de Introdução ao DataPages
+description: Este artigo explica como começar a criação de uma página simple controlada por dados usando DataPages xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d5e73839f889234c816bfff08f3e46dade8dffc9
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 1fb8a06111271d453c578cd3d2db97ec8689c995
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846835"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243071"
 ---
 # <a name="getting-started-with-datapages"></a>Guia de Introdução ao DataPages
 
@@ -21,7 +22,7 @@ ms.locfileid: "34846835"
 > DataPages requer um [xamarin. Forms tema](~/xamarin-forms/user-interface/themes/index.md) referência para processar.
 
 
-Para começar a criação de uma página simples de unidade de dados usando a visualização DataPages, siga as etapas abaixo. Essa usa demonstração um estilo codificado ("eventos") na visualização compilações funciona apenas com o formato JSON específico no código.
+Para começar a criação de uma página simple controlada por dados usando a visualização DataPages, siga as etapas abaixo. Essa usa demonstração um estilo codificado ("eventos") na visualização compilações funciona apenas com o formato JSON específico no código.
 
 [![](get-started-images/demo-sml.png "Aplicativo de exemplo DataPages")](get-started-images/demo.png#lightbox "DataPages exemplo de aplicativo")
 

@@ -1,18 +1,18 @@
 ---
 title: Navegação hierárquica
-description: A classe NavigationPage fornece uma experiência de Navegação hierárquica em que o usuário é capaz de navegar pelas páginas, frente e para trás, conforme desejado. A classe implementa navegação como uma pilha último a entrar, primeiro a sair (UEPS) dos objetos de página. Este artigo demonstra como usar a classe NavigationPage para executar a navegação em uma pilha de páginas.
+description: Este artigo demonstra como usar a classe NavigationPage para executar a navegação em uma pilha de último a entrar, primeiro a sair (UEPS) páginas.
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 49be5b812c5ef66907e7ebf74906c25bfbb076b6
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 20dfb6e935d08c35da73a81fb401a613aa6c9bac
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847157"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242450"
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
@@ -48,7 +48,7 @@ O layout de um [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamar
 
 - No iOS, uma barra de navegação está presente na parte superior da página que exibe um título, e que possui um *novamente* botão retorna à página anterior.
 - No Android, uma barra de navegação está presente na parte superior da página que exibe um título, um ícone e um *novamente* botão retorna à página anterior. O ícone é definido no `[Activity]` atributo decora o `MainActivity` classe no projeto específico da plataforma Android.
-- Na plataforma Universal do Windows, uma barra de navegação está presente na parte superior da página que exibe um título. 
+- Na plataforma Universal do Windows, uma barra de navegação está presente na parte superior da página que exibe um título.
 
 Em todas as plataformas, o valor de [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) propriedade será exibida como o título da página.
 

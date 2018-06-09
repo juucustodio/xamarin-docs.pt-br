@@ -1,19 +1,20 @@
 ---
-title: Recursos de plataforma Android
-description: Adicionando funcionalidade específica do Android para aplicativos xamarin. Forms
+title: Recursos da plataforma Android
+description: Este artigo explica como adicionar a funcionalidade específica do Android para aplicativos xamarin. Forms e enfoca o Material de Design.
 ms.prod: xamarin
 ms.assetid: E24168F3-0138-4814-86EA-B467F6B8A545
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2016
-ms.openlocfilehash: 3648f6f5f576a77bf7887668352c4f3d11f3906d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2eada518586f222d200ec19aeddc65107d7603b3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242398"
 ---
-# <a name="android-platform-features"></a>Recursos de plataforma Android
+# <a name="android-platform-features"></a>Recursos da plataforma Android
 
 ## <a name="platform-support"></a>Suporte de plataforma
 

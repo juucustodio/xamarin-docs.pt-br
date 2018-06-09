@@ -1,19 +1,20 @@
 ---
-title: Dados de caminho SVG
-description: Definir caminhos usando cadeias de caracteres de texto no formato de gráficos vetoriais escalonáveis
+title: Dados de caminho SVG em SkiaSharp
+description: Este artigo explica como definir caminhos SkiaSharp usando cadeias de caracteres de texto no formato de gráficos vetoriais escalonáveis e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 0453374c59c3b12842b7fb1524cc150329d84b7f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243968"
 ---
-# <a name="svg-path-data"></a>Dados de caminho SVG
+# <a name="svg-path-data-in-skiasharp"></a>Dados de caminho SVG em SkiaSharp
 
 _Definir caminhos usando cadeias de caracteres de texto no formato de gráficos vetoriais escalonáveis_
 
@@ -430,4 +431,4 @@ Algo especial é feito com o ponteiro de segundo, no entanto. Porque o relógio 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

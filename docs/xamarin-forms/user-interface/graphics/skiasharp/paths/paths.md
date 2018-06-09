@@ -1,19 +1,20 @@
 ---
-title: Noções básicas de caminho
-description: Explorar o objeto SkiaSharp SKPath para a combinação de linhas e curvas conectadas
+title: Noções básicas do caminho no SkiaSharp
+description: Este artigo explora o objeto SkiaSharp SKPath para a combinação de linhas e curvas conectadas e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b2881148631435c9082b42cad0e784100b010b46
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 2fc492f723a7a009da506d241ddf2e8459908633
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244039"
 ---
-# <a name="path-basics"></a>Noções básicas de caminho
+# <a name="path-basics-in-skiasharp"></a>Noções básicas do caminho no SkiaSharp
 
 _Explorar o objeto SkiaSharp SKPath para a combinação de linhas e curvas conectadas_
 
@@ -196,4 +197,4 @@ A junção de esquadria consiste em um ponto de curva em que as linhas se conect
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

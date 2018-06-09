@@ -1,20 +1,20 @@
 ---
-title: Aparência de célula
-description: Explore as opções de apresentação de dados, aproveitando a conveniência de ListView.
+title: Personalizando a aparência da célula de ListView
+description: Este artigo explora opções para apresentar dados em aplicativos xamarin. Forms, aproveitando as vantagens da conveniência do controle ListView.
 ms.prod: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 14ef4abe773512f76d9823809270f27b1a0ad1a3
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 86447afbabca1384f9e46f5128a9dc00253a798c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848454"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244750"
 ---
-# <a name="cell-appearance"></a>Aparência de célula
+# <a name="customizing-listview-cell-appearance"></a>Personalizando a aparência da célula de ListView
 
 ListView apresenta listas roláveis que podem ser personalizadas com o uso de `ViewCell`s. `ViewCells` pode ser usado para exibir texto e imagens, que indica um estado de verdadeiro/falso e receber entrada do usuário.
 

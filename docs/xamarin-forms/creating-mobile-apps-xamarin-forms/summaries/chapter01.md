@@ -1,22 +1,24 @@
 ---
 title: Resumo do capítulo 1. Como xamarin. Forms se encaixa?
+description: 'Criando aplicativos móveis com o xamarin. Forms: Resumo do capítulo 1. Como xamarin. Forms se encaixa?'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 534c36a16acdc10ffb6f6b6703296a672875286e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2897229b0749b1a6ead805d6ad063603a77f8f0d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240454"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumo do capítulo 1. Como xamarin. Forms se encaixa?
 
 Um dos trabalhos mais desagradáveis na programação é portar o código de base de uma plataforma para outra, principalmente se essa plataforma envolve uma linguagem de programação diferente. Há uma tentativa ao portar o código para refatorá-lo bem, mas se ambas as plataformas devem ser mantidas em paralelo, em seguida, as diferenças entre as duas bases de código dificultará manutenção futura.
 
-## <a name="cross-platform-mobile-development"></a>Desenvolvimento móvel em plataforma cruzada
+## <a name="cross-platform-mobile-development"></a>Desenvolvimento móvel multiplataforma
 
 Esse problema é comum quando direcionando plataformas móveis. No momento, houver duas principais plataformas móveis, a família de Apple de iPhones e iPads que executam o sistema operacional iOS e o sistema operacional Android que é executado em uma variedade de telefones e tablets. Outra plataforma significativa é Windows UWP da Microsoft (plataforma Universal), que permite que um único programa de destino do Windows 10 e Windows 10 Mobile.
 

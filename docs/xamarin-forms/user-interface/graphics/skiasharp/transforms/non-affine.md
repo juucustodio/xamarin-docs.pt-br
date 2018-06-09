@@ -1,17 +1,18 @@
 ---
 title: Transformações não afins
-description: Criar ponto de Vista e efeitos de diminuição com a terceira coluna da matriz de transformação
+description: Este artigo explica como criar perspectiva e efeitos diminuição com a terceira coluna da matriz de transformação e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 8c3d39038fbaf5ed6601102a0aa16860c7a5a7a6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 03c5b0dcbb7870e38991d7e0f4c7ac4feebfcf4e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244227"
 ---
 # <a name="non-affine-transforms"></a>Transformações não afins
 
@@ -39,13 +40,13 @@ x' = ScaleX·x + SkewX·y + TransX
 
 y' = SkewY·x + ScaleY·y + TransY
 
-z` = Persp0·x + Persp1·y + Persp2
+z' = Persp0·x + Persp1·y + Persp2
 
 A regra fundamental do uso de uma matriz de 3 por 3 para transformações bidimensionais é que tudo permanece no plano onde Z é igual a 1. A menos que `Persp0` e `Persp1` são 0, e `Persp2` é igual a 1, a transformação moveu as coordenadas Z desse plano.
 
 Para restaurar esse uma transformação bidimensional, as coordenadas devem ser movidas de volta para esse plano. Outra etapa é necessária. O x', y', e z 'valores devem ser divididos por z':
 
-x" = x' / z'
+x"= x' / z'
 
 y"= y' / z'
 
@@ -59,7 +60,7 @@ No entanto, quando a exibição de gráficos, você deseja evitar o processament
 
 Nessa equação, você não deseja que o valor de z' se torna zero:
 
-z` = Persp0·x + Persp1·y + Persp2
+z' = Persp0·x + Persp1·y + Persp2
 
 O `Persp2` célula pode ser zero ou não zero. Se `Persp2` for zero, z' é zero para o ponto (0, 0), e que normalmente não é desejável porque esse ponto é muito comum em gráficos bidimensionais. Se `Persp2` é igual a zero, não há nenhuma perda de generalidade se `Persp2` é fixo em 1. Por exemplo, se você determinar que `Persp2` deve ser 5, em seguida, você pode simplesmente dividir todas as células na matriz por 5, que torna `Persp2` igual a 1 e o resultado será o mesmo.
 
@@ -469,4 +470,4 @@ Outro uso de transformações não afim é simular a elementos gráficos tridime
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

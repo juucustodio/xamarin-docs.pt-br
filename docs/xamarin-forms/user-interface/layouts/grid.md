@@ -1,20 +1,20 @@
 ---
-title: Grade
-description: Apresentar modos de exibição em grade.
+title: Grade de xamarin. Forms
+description: Este artigo explica como usar a classe xamarin. Forms grade para apresentar modos de exibição em grade, que possuem linhas e colunas.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 6ff36f511c5194017afd34601fc9ea2f89b1e2d4
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848103"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245147"
 ---
-# <a name="grid"></a>Grade
+# <a name="xamarinforms-grid"></a>Grade de xamarin. Forms
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) dá suporte à organização exibições em linhas e colunas. Linhas e colunas podem ser definidas para ter tamanhos proporcionais ou tamanhos absolutos. O `Grid` layout não deve ser confundido com tabelas tradicionais e não se destina a apresentar dados tabulares. `Grid` não tem o conceito de linha, coluna ou célula de formatação. Ao contrário das tabelas HTML, `Grid` destina-se somente para dispor conteúdo.
 

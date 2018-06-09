@@ -1,16 +1,18 @@
 ---
 title: Recursos de plataforma do Windows
+description: Este artigo explica o suporte de plataforma do Windows que está disponível em xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 5056caf9ae5d9b738ec8de8cb42b7a7d7a7b110f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 26511f6e3e0ba09830bb85d1ad6ec30072d53866
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242928"
 ---
 # <a name="windows-platform-features"></a>Recursos de plataforma do Windows
 

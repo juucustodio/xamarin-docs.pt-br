@@ -1,19 +1,20 @@
 ---
-title: Transformações de matriz
-description: Aprofundar-se em transformações SkiaSharp com a matriz de transformação versátil
+title: Transformações de matriz em SkiaSharp
+description: Este artigo descreve mais profundo a transformações SkiaSharp com a matriz de transformação versátil e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 90fadf0081f86e7739d75c0710caeaf1775c423e
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 816a5f47a4a4f5c01a1fb20b5c8e7a2fc83a64b0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244871"
 ---
-# <a name="matrix-transforms"></a>Transformações de matriz
+# <a name="matrix-transforms-in-skiasharp"></a>Transformações de matriz em SkiaSharp
 
 _Aprofundar-se em transformações SkiaSharp com a matriz de transformação versátil_
 
@@ -280,7 +281,7 @@ SKMatrix.PreConcat(ref A, ref B);
 
 Essas chamadas executam a seguinte operação:
 
-A = B × A
+A = B × UM
 
 As versões dessas chamadas de método com todos os `ref` argumentos são um pouco mais eficientes para chamar as implementações subjacentes, mas pode ser confuso para alguém ler seu código e supondo-se que qualquer coisa com um `ref` argumento modificado pelo método. Além disso, muitas vezes é conveniente passar um argumento que é um resultado de uma da `Make` métodos, por exemplo:
 
@@ -358,7 +359,7 @@ SKMatrix.PostConcat(ref A, C);
 
 Isso é uma série de multiplicações sucessivas, portanto, o resultado é da seguinte maneira:
 
-A × B × C
+UM × B × C
 
 As multiplicações consecutivas ajudam a entender o que faz cada transformação. A transformação de escala aumenta o tamanho das coordenadas de caminho por um fator de 3, para que as coordenadas variam de –300 para 300. A transformação de rotação gira estrela em torno de sua origem. A transformação de conversão, em seguida, ele muda por direito de 300 pixels e para baixo, para que todas as coordenadas que se tornam positivas.
 
@@ -652,4 +653,4 @@ Valores diferentes de zero de `Persp0` e `Persp1` resultar em transformações q
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

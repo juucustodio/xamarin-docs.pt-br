@@ -1,16 +1,18 @@
 ---
 title: Injeção de dependência
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers usa injeção de dependência desacoplar tipos concretos do código que depende desses tipos.
 ms.prod: xamarin
 ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 8db8e5b756fe770bdf292ec03c28eb5ed54acf9e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fb225349b9ffb1c950486a817897b3c26c6ffbe4
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242564"
 ---
 # <a name="dependency-injection"></a>Injeção de dependência
 
@@ -199,4 +201,4 @@ Autofac facilita a criação de aplicativos acoplados de forma flexível e forne
 ## <a name="related-links"></a>Links relacionados
 
 - [Baixar eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (amostra)](https://github.com/dotnet-architecture/eShopOnContainers)

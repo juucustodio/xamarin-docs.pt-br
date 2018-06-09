@@ -1,20 +1,20 @@
 ---
-title: Rotular
-description: Exibir o texto no xamarin. Forms
+title: Rótulo do xamarin. Forms
+description: Este artigo explica como usar a classe de rótulo xamarin. Forms para exibir texto único e de várias linha em aplicativos.
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e0caa12136feb84d22ec4b90b84f3f92a601e0c0
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: e9f99ace64e013dfa681e497b9d33376d79555ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847505"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245492"
 ---
-# <a name="label"></a>Rotular
+# <a name="xamarinforms-label"></a>Rótulo do xamarin. Forms
 
 _Exibir o texto no xamarin. Forms_
 

@@ -1,5 +1,5 @@
 ---
-title: Funções de easing
+title: Funções de atenuação no xamarin. Forms
 description: Xamarin. Forms inclui uma classe de atenuação que permite que você especifique uma função de transferência que controla como animações acelerar ou diminuir conforme estejam em execução. Este artigo demonstra como utilizar as funções de atenuação predefinidas e como criar funções personalizadas de atenuação.
 ms.prod: xamarin
 ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: e9171b885bdf5958b6969719301a1d7dad51d95b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9398a1b9cf4e5f6fd18f2213a7cf55e9cbb93ef0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243136"
 ---
-# <a name="easing-functions"></a>Funções de easing
+# <a name="easing-functions-in-xamarinforms"></a>Funções de atenuação no xamarin. Forms
 
 _Xamarin. Forms inclui uma classe de atenuação que permite que você especifique uma função de transferência que controla como animações acelerar ou diminuir conforme estejam em execução. Este artigo demonstra como utilizar as funções de atenuação predefinidas e como criar funções personalizadas de atenuação._
 

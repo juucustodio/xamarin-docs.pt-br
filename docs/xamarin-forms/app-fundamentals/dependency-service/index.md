@@ -1,5 +1,5 @@
 ---
-title: DependencyService
+title: DependencyService xamarin. Forms
 description: Xamarin. Forms permite aos desenvolvedores definir o comportamento em projetos de plataforma específica. DependencyService, em seguida, localiza a implementação da plataforma adequada, permitindo que o código compartilhado acessar a funcionalidade nativa.
 ms.prod: xamarin
 ms.assetid: 403479F2-6751-41F2-ADCE-3AF595062FE4
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 58ba2cb896ad8a63ea2232246772e24e32301483
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a017cfaa6f96c95f4b501f189fe778fbd5ece3f2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241619"
 ---
-# <a name="dependencyservice"></a>DependencyService
+# <a name="xamarinforms-dependencyservice"></a>DependencyService xamarin. Forms
 
 _Xamarin. Forms permite aos desenvolvedores definir o comportamento em projetos de plataforma específica. DependencyService, em seguida, localiza a implementação da plataforma adequada, permitindo que o código compartilhado acessar a funcionalidade nativa._
 

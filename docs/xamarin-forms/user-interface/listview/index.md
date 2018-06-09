@@ -1,20 +1,20 @@
 ---
-title: ListView
-description: Apresente os dados interativos visualmente atrativos, listas.
+title: Xamarin. Forms ListView
+description: Este guia apresenta ListView xamarin. Forms, que pode ser usado para apresentar dados interativas visualmente atrativos, listas.
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 7beb9e66a6e6bc29de36fcd605c5daa0098e75a2
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f73e7b70749a7a6913856d8c753db63a6d0a2bbe
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848532"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244994"
 ---
-# <a name="listview"></a>ListView
+# <a name="xamarinforms-listview"></a>Xamarin. Forms ListView
 
 ListView é um modo de exibição de apresentação de listas de dados, especialmente listas longas que requerem a rolagem. Este guia mostrará como usar ListView:
 

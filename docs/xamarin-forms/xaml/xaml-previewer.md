@@ -1,18 +1,18 @@
 ---
 title: Visualizador XAML para xamarin. Forms
-description: Consulte os layouts de xamarin. Forms renderizados conforme você digita!
+description: Este artigo explica como usar o Visualizador de XAML para ver os layouts de xamarin. Forms renderizados conforme você digita. O Visualizador de XAML está disponível no Visual Studio de 2017 e o Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b87145773bf16b15c391c5c5d6d136b7aa76e39
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 25c8e1a34f8be5ab2f8491e75fa5aac470d55bc8
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848350"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245853"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizador XAML para xamarin. Forms
 

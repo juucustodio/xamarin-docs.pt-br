@@ -1,18 +1,18 @@
 ---
 title: Adicionando um reconhecedor de gestos panorâmica
-description: O gesto de Panorâmica é usado para detectar arrastando e é implementado com a classe PanGestureRecognizer. Um cenário comum para o movimento panorâmico é horizontal e verticalmente, arraste uma imagem, para que todo o conteúdo de imagem podem ser exibidos quando ele está sendo exibido em um visor menor do que as dimensões da imagem. Isso é feito movendo a imagem dentro do visor e é demonstrado neste artigo.
+description: Este artigo explica como usar um gesto de panorâmica para horizontalmente e verticalmente, arraste uma imagem, para que todo o conteúdo de imagem podem ser exibidos quando ele está sendo exibido em um visor menor do que as dimensões da imagem.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 1f564fe14be0bcda08722bad11c9c5bd8152687a
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d3e4dfc57678ff75fb8f9761360748d94aeefcc2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846325"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239978"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Adicionando um reconhecedor de gestos panorâmica
 

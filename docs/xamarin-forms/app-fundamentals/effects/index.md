@@ -1,19 +1,20 @@
 ---
-title: Efeitos
-description: Interfaces de usuário do xamarin. Forms renderizadas usando controles nativos da plataforma de destino, permitindo que os aplicativos xamarin. Forms manter a aparência apropriada para cada plataforma. Efeitos permitem que os controles nativos em cada plataforma para serem personalizados sem precisar recorrer a uma implementação personalizada de processador.
+title: Efeitos do xamarin. Forms
+description: Efeitos permitem que os controles nativos em cada plataforma para serem personalizados sem precisar recorrer a uma implementação personalizada de processador.
 ms.prod: xamarin
 ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 63d7750294321a28dbde833f72fe6b7277ada397
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc1c600aa6d5ede079fe0af83370393d4f0e298f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239690"
 ---
-# <a name="effects"></a>Efeitos
+# <a name="xamarinforms-effects"></a>Efeitos do xamarin. Forms
 
 _Interfaces de usuário do xamarin. Forms renderizadas usando controles nativos da plataforma de destino, permitindo que os aplicativos xamarin. Forms manter a aparência apropriada para cada plataforma. Efeitos permitem que os controles nativos em cada plataforma para serem personalizados sem precisar recorrer a uma implementação personalizada de processador._
 

@@ -1,19 +1,20 @@
 ---
-title: Validação
+title: Validação em aplicativos da empresa
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers executa a validação de entrada do usuário. Isso inclui especificar regras de validação, disparar a validação e exibir erros de validação.
 ms.prod: xamarin
 ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 484f3b3d45e41d0dd0406681250ac90943a1cdde
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 6a7f244b78d5b48dd219f59f1191993d62663bbf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847583"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243171"
 ---
-# <a name="validation"></a>Validação
+# <a name="validation-in-enterprise-apps"></a>Validação em aplicativos da empresa
 
 Qualquer aplicativo que aceita a entrada de usuários deve garantir que a entrada é válida. Um aplicativo poderia, por exemplo, verificar para a entrada que contém somente caracteres em um intervalo específico, é de um determinado comprimento ou corresponde a um formato específico. Sem validação, um usuário pode fornecer dados que faz com que o aplicativo falhe. Validação impõe regras de negócio e impede que um invasor insira dados mal-intencionados.
 

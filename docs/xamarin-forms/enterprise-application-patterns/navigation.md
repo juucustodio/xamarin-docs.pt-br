@@ -1,18 +1,20 @@
 ---
-title: Navegação
+title: Navegação de aplicativo corporativo
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers executa navegação do primeiro modelo de exibição de modelos de exibição.
 ms.prod: xamarin
 ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: aa2e2858e3bb8e435ec3f38bb3d5b249eaa6cba4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ac9f3200440001752c07ad45fdaaf2b1d9ba6a5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243675"
 ---
-# <a name="navigation"></a>Navegação
+# <a name="enterprise-app-navigation"></a>Navegação de aplicativo corporativo
 
 Xamarin. Forms inclui suporte para a navegação de página, que geralmente resulta de interação do usuário com a interface do usuário ou do aplicativo como resultado das alterações de estado interno controlada por lógica. No entanto, navegação pode ser complexa para implementar em aplicativos que usam o padrão Model-View-ViewModel (MVVM), que devem ser atendidos os seguintes desafios:
 
@@ -308,4 +310,4 @@ Este capítulo apresentado uma `NavigationService` classe, que é usada para exe
 ## <a name="related-links"></a>Links relacionados
 
 - [Baixar eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (amostra)](https://github.com/dotnet-architecture/eShopOnContainers)
