@@ -1,5 +1,5 @@
 ---
-title: Xamarin e JDK 9
+title: Xamarin e Java Development Kit 9
 description: Este artigo explica como resolver erros de Java Development Kit (JDK) 9 em xamarin.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,14 +7,15 @@ ms.assetid: 7DCF0985-F77D-4A68-AC54-10C9846E189A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 8857823884447f22b7bc5535f43369671d3285bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/18/2018
+ms.openlocfilehash: 529062f820cd682dc6a9c22f706dbceecef1c836
+ms.sourcegitcommit: 57f9a9ba2f199697cb75e7be67f1a372c35a861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36269667"
 ---
-# <a name="xamarinandroid-and-jdk-9"></a>Xamarin e JDK 9
+# <a name="xamarinandroid-and-java-development-kit-9"></a>Xamarin e Java Development Kit 9
 
 _Este artigo explica como resolver erros de Java Development Kit (JDK) 9 em xamarin._
 
@@ -52,10 +53,12 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
 
 Se o JDK 9 estiver instalado, você deve instalar o Java JDK 8 (1.8). Para obter informações sobre como instalar o JDK 8, consulte [como atualizar a versão do Java Development Kit (JDK)?](~/android/troubleshooting/questions/update-jdk.md)
 
+Observe que você não precisa desinstalar o JDK 9; No entanto, deve verificar se o Xamarin está usando JDK 8 em vez de JDK 9. No Visual Studio, clique em **Ferramentas > Opções > Xamarin > configurações do Android**. Se **Java Development Kit local** não está definido como um local do JDK 8 (como **c:\\arquivos de programa\\Java\\jdk1.8.0_111**), clique em **alteração**  e defina-o para o local onde o JDK 8 está instalado. No Visual Studio para Mac, navegue até **Preferências > projetos > locais SDK > Android > SDK de Java (JDK)** e clique em **procurar** para atualizar este caminho.
+
 ## <a name="known-issues-with-jdk-9"></a>Problemas conhecidos com o JDK 9
 
 ### <a name="apksigner"></a>apksigner
 
 Há um problema conhecido com apksigner e JDK 9 no qual o `apksigner.bat` arquivo invoca o `apksigner.jar` com `-Djava.ext.dirs` em vez de `-classpath` que espera JDK 9. É recomendável usar o JDK 8 (1.8). Para obter informações sobre como instalar o JDK 8, consulte [como atualizar a versão do Java Development Kit (JDK)?](~/android/troubleshooting/questions/update-jdk.md)
 
-Após a desinstalação do JDK 9, certifique-se de que o caminho a seguir não está definido no seu `PATH` variável de ambiente que apontará para o JDK 9: `C:\ProgramData\Oracle\Java\javapath`. Após a remoção, `java -version` em uma linha de comando deve mostrar o JDK 8.
+Se você tiver instalado o JDK 9, certifique-se de que o caminho a seguir não está definido no seu `PATH` variável de ambiente que apontará para o JDK 9: `C:\ProgramData\Oracle\Java\javapath`. Após a remoção, `java-version` em uma linha de comando deve mostrar o JDK 8.

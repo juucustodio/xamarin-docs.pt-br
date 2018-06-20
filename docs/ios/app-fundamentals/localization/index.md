@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 06758fd8fac62a63c309b173738a8ee889716143
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7f05243196a9b916ac5c7b73df957262604ccb11
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785260"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268804"
 ---
 # <a name="localization-in-xamarinios"></a>Localização em xamarin
 
@@ -55,6 +55,16 @@ A localidade atual pode ser consultada por qualquer uma das duas maneiras:
 - `NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier`
 
 O primeiro valor pode ser armazenados em cache pelo sistema operacional e portanto pode nem sempre reflete a localidade do usuário atualmente selecionada. Use o valor de segundo para obter o local selecionado no momento.
+
+> [!NOTE]
+> Mono (o tempo de execução .NET na qual se baseia o xamarin) e iOS do Apple APIs não oferecem suporte a conjuntos idênticos de combinações de idioma/região.
+> Por isso, é possível selecionar uma combinação de idioma/região no iOS **configurações** aplicativo que não é mapeado para um valor válido em Mono. Por exemplo, a configuração de idioma de um iPhone para inglês e sua região Espanha fará com que as seguintes APIs produzir valores diferentes:
+> 
+> - `CurrentThead.CurrentCulture`: en-US (Mono API)
+> - `CurrentThread.CurrentUICulture`: en-US (Mono API)
+> - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (API de Apple)
+>
+> Como usa Mono `CurrentThread.CurrentUICulture` para selecionar recursos e `CurrentThread.CurrentCulture` para formatar datas e moedas, localização com base em Mono (por exemplo, com arquivos. resx) não pode produzir resultados esperados para essas combinações de idioma/região. Nessas situações, dependem de APIs da Apple para localizar conforme necessário.
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 

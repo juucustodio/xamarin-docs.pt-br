@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: b5e94a9b0bc3b9e9f141ad9fd262d29e01eb8a10
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: a35038a948a89889bbf067a453b7465c1a6a7b49
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793815"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268986"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisitos e instalação de pastas de trabalho
 
@@ -43,8 +44,8 @@ ms.locfileid: "34793815"
 
 |Plataforma de aplicativos|Suporte de sistema operacional|Observações|
 |--- |--- |--- |
-|Mac (unificado)|Só tem suporte no Mac|
-|iOS (Unified)|Suporte para Mac e Windows|Xamarin 11.0 e Xcode 9.0 ou posterior devem ser instalado no Mac. Executar o iOS pastas de trabalho no Windows requer um host de compilação de Mac executando todos os itens acima e o [simulador de iOS remoto](~/tools/ios-simulator.md) instalado no Windows.|
+|Mac|Só tem suporte no Mac|
+|iOS|Suporte para Mac e Windows|Xamarin 11.0 e Xcode 9.0 ou posterior devem ser instalado no Mac. Executar o iOS pastas de trabalho no Windows requer um host de compilação de Mac executando todos os itens acima e o [simulador de iOS remoto](~/tools/ios-simulator.md) instalado no Windows.|
 |Android|Suporte para Mac e Windows|Deve usar o emulador do Google, o Visual Studio ou o Xamarin Android, com um dispositivo virtual > = 5.0|
 |WPF|Só tem suporte no Windows|
 |Console (.NET Framework)|Suporte para Mac e Windows|
@@ -114,7 +115,7 @@ Se você estiver tendo problemas para se conectar a seu iOS ou Android pasta de 
 
 ### <a name="windows"></a>Windows
 
-Dependendo de como você adquiriu & Inspetor de pastas de trabalho, você terá que executar dois procedimentos de desinstalação. Verifique se ambos para desinstalar completamente o software.
+Dependendo de como você adquiriu as pastas de trabalho, você terá que executar dois procedimentos de desinstalação. Verifique se ambos para desinstalar completamente o software.
 
 #### <a name="visual-studio-installer"></a>Instalador do Visual Studio
 
@@ -122,19 +123,19 @@ Se você tiver o Visual Studio de 2017, abra **instalador do Visual Studio**e ex
 
 #### <a name="system-uninstall"></a>Desinstalação do sistema
 
-Se você instalou & Inspetor de pastas de trabalho por conta própria com um instalador baixado, ela precisará ser desinstalado usando o **aplicativos e recursos** página de configurações do sistema no Windows 10 ou via **adicionar ou remover programas**no painel de controle em versões anteriores do Windows.
+Se você instalou as pastas de trabalho por conta própria com um instalador baixado, ela precisará ser desinstalado usando o **aplicativos e recursos** página de configurações do sistema no Windows 10 ou por meio de **adicionar ou remover programas** no controle Painel em versões anteriores do Windows.
 
 > **Iniciar > Configurações > sistema > aplicativos e recursos**
 
-![](install-images/windows-remove.png "Pastas de trabalho do Xamarin e Inspetor conforme listado em &quot;aplicativos &amp; recursos&quot;")
+![](install-images/windows-remove.png "Pastas de trabalho do Xamarin conforme listado em &quot;aplicativos &amp; recursos&quot;")
 
-**Você ainda deve seguir o procedimento para o instalador do Visual Studio certificar-se de pastas de trabalho & Inspetor não obter reinstalado sem seu conhecimento.**
+**Você ainda deve seguir o procedimento para o instalador do Visual Studio verificar se as pastas de trabalho não obter reinstalado sem seu conhecimento.**
 
 <a name="uninstall-macos" />
 
 ### <a name="macos"></a>macOS
 
-Começando com [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), pastas de trabalho do Xamarin & Inspetor podem ser desinstalados de um terminal executando:
+Começando com [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin pastas de trabalho podem ser desinstaladas de um terminal executando:
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -153,7 +154,7 @@ Para versões mais antigas, será necessário remover manualmente o seguinte:
 
 ## <a name="downgrading"></a>Fazendo downgrade
 
-O identificador de pacote para **aplicativos/Xamarin Workbooks.app** alterado de `com.xamarin.Inspector` para `com.xamarin.Workbooks` na versão 1.4 para facilitar uma divisão futura dos instaladores de pastas de trabalho do Xamarin & Inspetor.
+O identificador de pacote para **aplicativos/Xamarin Workbooks.app** alterado de `com.xamarin.Inspector` para `com.xamarin.Workbooks` na versão 1.4, como pastas de trabalho e o Inspetor agora estão totalmente divididas.
 
 Devido a um erro no instaladores mais antigas, não é possível fazer downgrade versões 1.4 ou mais recentes usando o 1.3.2 ou instaladores mais antigos.
 

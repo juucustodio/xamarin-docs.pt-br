@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 7af9700a9b661280c2ee32a1f65cdc01234cbe37
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 811b783d33a20e23a7e807861e19355a1c372b84
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781250"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209395"
 ---
 # <a name="advanced-manual-real-world-example"></a>Avançado (manual) exemplo do mundo Real
 
@@ -19,7 +19,7 @@ ms.locfileid: "34781250"
 
 Esta seção aborda uma abordagem mais avançada para associação, onde usaremos da Apple `xcodebuild` ferramenta para criar primeiro um projeto POP e, em seguida, deduzir manualmente a entrada para o objetivo Sharpie. Essencialmente, isso abrange o objetivo Sharpie fazendo nos bastidores na seção anterior.
 
-```csharp
+```
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -29,7 +29,7 @@ $ cd pop
 
 Como a biblioteca POP tem um projeto Xcode (`pop.xcodeproj`), podemos usar apenas `xcodebuild` criem POP. Esse processo por sua vez pode gerar arquivos de cabeçalho que talvez seja necessário analisar Sharpie objetivo. É por isso criando antes de associação é importante. Ao criar `xcodebuild` Certifique-se de que você passa o mesmo identificador SDK e arquitetura que você pretende passar para o objetivo Sharpie (e lembre-se de que objetivo Sharpie 3.0 normalmente pode fazer isso para você!):
 
-```csharp
+```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
@@ -54,7 +54,7 @@ Haverá muita saída de informações de compilação no console do como parte d
 
 Agora você está pronto para associar POP. Sabemos que queremos desenvolver para o SDK `iphoneos8.1` com o `arm64` arquitetura e que os arquivos de cabeçalho nos preocupamos estão em `build/Headers` sob o check-out de git POP. Se podemos examinar o `build/Headers` diretório, você verá um número de arquivos de cabeçalho:
 
-```csharp
+```
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -66,7 +66,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 Se observarmos `POP.h`, podemos ver o arquivo de cabeçalho principal de nível superior da biblioteca é `#import`s outros arquivos. Por isso, basta passar `POP.h` para Sharpie objetivo, e clang fará o restante em segundo plano:
 
-```csharp
+```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64

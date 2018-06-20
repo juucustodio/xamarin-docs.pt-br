@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: fa8806345a364a70535a91b2ba99e3bfee8d47bc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 6e37b1ac3d0fb78b5737ebe97b5a28ab40adb648
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794014"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269051"
 ---
 # <a name="debugging-integrations"></a>Integrações de depuração
 
@@ -23,8 +23,8 @@ Na macOS, mensagens de log são exibidas no menu de Visualizador de log (**Janel
 
 O log de cliente estiver nos locais a seguir no macOS e Windows:
 
-- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 Uma coisa a serem consideradas é que, ao carregar integrações via o usual `#r` mecanismo durante o desenvolvimento, o conjunto de integração será retirado como um _dependência_ da pasta de trabalho e empacotado com ele, se for um caminho absoluto não usado. Isso pode causar alterações apareçam não se propague, como se a recriação de integração não fez nada.
 
@@ -39,7 +39,7 @@ Ambos os conjuntos de ferramentas permitem exibir origem TypeScript/JavaScript, 
 Para habilitar as ferramentas de desenvolvedor para pastas de trabalho do Xamarin Mac, execute o comando a seguir em seu terminal:
 
 ```shell
-defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
+defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
 e, em seguida, reinicie o Xamarin pastas de trabalho. Quando você fizer isso, você deverá ver **elemento inspecionar** aparecer no seu menu de contexto e um novo **desenvolvedor** painel estarão disponível nas preferências de pastas de trabalho. Essa opção permite que você escolha se deseja que as ferramentas de desenvolvedor abertas durante a inicialização:

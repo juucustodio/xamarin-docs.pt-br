@@ -6,13 +6,13 @@ ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 07/10/2017
-ms.openlocfilehash: faa4998869b918caaf5bc4252dc81a5745199c93
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 06/18/2018
+ms.openlocfilehash: 25299bc3b56c2fbb748db202e43e75be183cce66
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245827"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209291"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Namespaces XAML no xamarin. Forms
 
@@ -43,11 +43,12 @@ A tabela a seguir descreve o `x` atributos do namespace xamarin. Forms com supor
 |`x:Arguments`|Especifica argumentos de construtor para um construtor não padrão, ou para uma declaração de objeto do método de fábrica.|
 |`x:Class`|Especifica o nome de namespace e classe para uma classe definida em XAML. O nome da classe deve corresponder ao nome de classe do arquivo code-behind. Observe que esse constructo só pode aparecer no elemento raiz de um arquivo XAML.|
 |`x:FactoryMethod`|Especifica um método de fábrica que pode ser usado para inicializar um objeto.|
+|`x:FieldModifier`|Especifica o nível de acesso para campos gerados para elementos XAML nomeados.|
 |`x:Key`|Especifica uma chave exclusiva definida pelo usuário para cada recurso em um `ResourceDictionary`. O valor da chave é usado para recuperar o recurso XAML e normalmente é usado como argumento para o `StaticResource` extensão de marcação.|
 |`x:Name`|Especifica um nome de objeto de tempo de execução para o elemento XAML. Configuração `x:Name` é semelhante ao declarar uma variável no código.|
 |`x:TypeArguments`|Especifica os argumentos de tipo genérico para o construtor de um tipo genérico.|
 
-Para obter mais informações sobre o `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` atributos, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
+Para obter mais informações sobre o `x:FieldModifier` de atributo, consulte [modificadores de campo](~/xamarin-forms/xaml/field-modifiers.md). Para obter mais informações sobre o `x:Arguments`, `x:FactoryMethod`, e `x:TypeArguments` atributos, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 Em XAML, declarações de namespace herdam do elemento pai para o elemento filho. Portanto, ao definir um namespace no elemento raiz de um arquivo XAML, todos os elementos dentro desse arquivo herdam a declaração de namespace.
 

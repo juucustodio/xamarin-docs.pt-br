@@ -7,12 +7,13 @@ ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: dcfc5e406e60ac72fb1ca1e9cfb0395d17074b2c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/18/2018
+ms.openlocfilehash: 979bf4572e0e0865c2254c3e1c2f707c8eecae8d
+ms.sourcegitcommit: 57f9a9ba2f199697cb75e7be67f1a372c35a861b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36269654"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Como faço para atualizar a versão do Java Development Kit (JDK)?
 
@@ -38,7 +39,7 @@ Xamarin usa Java Development Kit (JDK) para integrar o SDK do Android para a cri
 
 4.  Abra o Visual Studio e atualize o **local do Kit de desenvolvimento Java** para apontar para o novo JDK em **Ferramentas > Opções > Xamarin > configurações do Android > local do Java Development Kit > alteração**:
 
-    ![Configuração do caminho para o JDK na página de configuração de Android de opções do IDE](update-jdk-images/image4.png)
+    [![Configuração do caminho para o JDK na página de configuração de Android de opções do IDE](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Certifique-se de reiniciar o Visual Studio depois de atualizar o local.
 
