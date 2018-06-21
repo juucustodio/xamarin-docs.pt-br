@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/21/2018
-ms.openlocfilehash: b9c15357895bae64176ef34a848b968917035f3d
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: c2e6a5624baba251061bcd324fcb849e3d95ebfd
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291029"
 ---
 # <a name="resource-dictionaries"></a>Dicionários de recursos
 
@@ -251,7 +252,7 @@ Quando for mesclado [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictiona
 
 1. Os recursos locais para o dicionário de recursos.
 1. Os recursos contidos no dicionário de recurso que foi mesclado via preterido [ `MergedWith` ](xref:Xamarin.Forms.ResourceDictionary.MergedWith) propriedade.
-1. Os recursos contidos nos dicionários de recursos que foram mesclados por meio de `MergedDictionaries` coleção, na ordem em que eles estão listados no `MergedDictionaries` propriedade.
+1. Os recursos contidos nos dicionários de recursos que foram mesclados por meio de `MergedDictionaries` coleção, na ordem inversa estão listados no `MergedDictionaries` propriedade.
 
 > [!NOTE]
 > Pesquisar dicionários de recursos pode ser uma tarefa de computação intensa, se um aplicativo contém vários dicionários de recursos grandes. Portanto, para evitar pesquisas desnecessárias, você deve garantir que cada página em um aplicativo usa apenas os dicionários de recursos que são apropriados para a página.

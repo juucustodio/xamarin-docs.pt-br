@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 7171142951a2893233233bb8a1c44c5a84c57b5c
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 47ea437be8a1570517f37cc59aab17431c5af7f0
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848194"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291319"
 ---
 # <a name="localization"></a>Localização
 
@@ -44,6 +44,9 @@ Uma das partes principais de globalização de um aplicativo está criando a int
 Neste documento, examinaremos como usar arquivos RESX para armazenar as cadeias de caracteres e recuperá-los para exibição a preferência do usuário.
 
 Os exemplos de destino idiomas inglês, francês, espanhol, alemão, chinês, japonês, russo e português (Brasil). Aplicativos podem ser convertidos em apenas ou como vários idiomas conforme necessário.
+
+> [!NOTE]
+> Na plataforma Universal do Windows, os arquivos RESW devem ser usados para localização de notificação por push, em vez de arquivos RESX. Para obter mais informações, consulte [UWP localização](/windows/uwp/design/globalizing/globalizing-portal/).
 
 ### <a name="adding-resources"></a>Adição de recursos
 
@@ -458,6 +461,8 @@ Depois que você tiver implementado o serviço de dependência e atualizada **In
 > De [seus documentos](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"usar pt como a ID de idioma para português como ele é usado no Brasil e pt-PT como a ID de idioma para português como ele é usado no Portugal"_.
 > Isso significa que, quando português é escolhido em um local não padrão, o idioma de fallback será português (Brasil) no iOS, a menos que o código é escrito para alterar esse comportamento (como o `ToDotnetFallbackLanguage` acima).
 
+Para obter mais informações sobre a localização do iOS, consulte [iOS localização](~/ios/app-fundamentals/localization/index.md).
+
 #### <a name="android-application-project"></a>Projeto de Aplicativo Android
 
 Android expõe o local selecionado no momento por meio de `Java.Util.Locale.Default`e também usa um separador de sublinhado em vez de um traço (que é substituído pelo código a seguir). Adicione essa implementação de serviço de dependência para o projeto de aplicativo do Android:
@@ -548,11 +553,12 @@ namespace UsingResxLocalization.Android
 >
 > Os desenvolvedores devem modificar a `iOSToDotnetLanguage` e `ToDotnetFallbackLanguage` métodos para lidar com casos específicos necessários para seus idiomas com suporte.
 
-
 Depois que esse código foi adicionado ao projeto de aplicativo do Android, ele poderá ser exibido automaticamente as cadeias de caracteres traduzidas.
 
 > [!NOTE]
 >️ **Aviso:** se as cadeias de caracteres traduzidas estiver trabalhando em compilações versão Android, mas não durante a depuração, clique duas vezes no **projeto Android** e selecione **opções > compilar > Android Criar** e certifique-se de que o **a rápida implantação de assembly** não está marcada. Essa opção faz com que os problemas com o carregamento de recursos e não deve ser usada se você estiver testando aplicativos localizados.
+
+Para obter mais informações sobre localização Android, consulte [localização Android](~/android/app-fundamentals/localization.md).
 
 #### <a name="universal-windows-platform"></a>Plataforma Universal do Windows
 
@@ -573,6 +579,8 @@ Isso informa o Gerenciador de recursos de cultura do padrão do aplicativo, port
 Depois de atualizar os projetos específicos de plataforma como mostrado acima e recompilar o aplicativo com arquivos RESX traduzidos, traduções atualizadas estão disponíveis em cada aplicativo. Aqui está uma captura de tela de convertido em chinês simplificado, o exemplo de código:
 
 ![](text-images/simple-example-hans.png "Interfaces de plataforma cruzada convertidas em chinês simplificado")
+
+Para obter mais informações sobre localização de UWP, consulte [UWP localização](/windows/uwp/design/globalizing/globalizing-portal/).
 
 ## <a name="localizing-xaml"></a>Localizando o XAML
 
@@ -713,7 +721,7 @@ Todas as plataformas serão resolvida automaticamente as referências de imagem 
 
 ### <a name="ios-application-project"></a>Projeto de Aplicativo iOS
 
-iOS usa um padrão de nomeação de chamadas de projetos de localização ou **.lproj** diretórios contêm recursos de imagem e a cadeia de caracteres. Esses diretórios podem conter versões localizadas de imagens usadas no aplicativo e também o **InfoPlist.strings** arquivo que pode ser usado para localizar o nome do aplicativo.
+iOS usa um padrão de nomeação de chamadas de projetos de localização ou **.lproj** diretórios contêm recursos de imagem e a cadeia de caracteres. Esses diretórios podem conter versões localizadas de imagens usadas no aplicativo e também o **InfoPlist.strings** arquivo que pode ser usado para localizar o nome do aplicativo. Para obter mais informações sobre a localização do iOS, consulte [iOS localização](~/ios/app-fundamentals/localization/index.md).
 
 #### <a name="images"></a>Imagens
 
@@ -737,7 +745,7 @@ Quando o aplicativo é executado, o nome do aplicativo e a imagem são ambos loc
 
 ### <a name="android-application-project"></a>Projeto de Aplicativo Android
 
-Android segue um esquema diferente para armazenar imagens localizadas usando diferentes **drawable** e **cadeias de caracteres** diretórios com um sufixo de código de idioma. Quando um código de localidade de quatro letras é necessário (por exemplo, zh-TW ou pt-BR), observe que o Android requer um adicional **r** seguintes dash/anterior a localidade do código (por exemplo. zh-rTW ou pt rBR).
+Android segue um esquema diferente para armazenar imagens localizadas usando diferentes **drawable** e **cadeias de caracteres** diretórios com um sufixo de código de idioma. Quando um código de localidade de quatro letras é necessário (por exemplo, zh-TW ou pt-BR), observe que o Android requer um adicional **r** seguintes dash/anterior a localidade do código (por exemplo. zh-rTW ou pt rBR). Para obter mais informações sobre localização Android, consulte [localização Android](~/android/app-fundamentals/localization.md).
 
 #### <a name="images"></a>Imagens
 
@@ -773,7 +781,7 @@ Agora, o aplicativo localiza o nome do aplicativo e a imagem. Aqui está uma cap
 
 ### <a name="universal-windows-platform-application-projects"></a>Projetos de aplicativo de plataforma universal do Windows
 
-A plataforma Universal do Windows possui uma infraestrutura de recurso que simplifica a localização de imagens e o nome do aplicativo.
+A plataforma Universal do Windows possui uma infraestrutura de recurso que simplifica a localização de imagens e o nome do aplicativo. Para obter mais informações sobre localização de UWP, consulte [UWP localização](/windows/uwp/design/globalizing/globalizing-portal/).
 
 #### <a name="images"></a>Imagens
 
@@ -796,5 +804,6 @@ Imagens geralmente são tratadas de forma específica de plataforma para aprovei
 - [Localização de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md)
 - [Localização do iOS](~/ios/app-fundamentals/localization/index.md)
 - [Localização do Android](~/android/app-fundamentals/localization.md)
+- [Localização de UWP](/windows/uwp/design/globalizing/globalizing-portal/)
 - [Usando a classe CultureInfo (MSDN)](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
 - [Localizando e usando recursos para uma cultura específica (MSDN)](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
