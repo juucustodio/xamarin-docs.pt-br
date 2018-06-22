@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33921658"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Parte 2 – implementar o WalkingGame
 

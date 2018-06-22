@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33919391"
 ---
 # <a name="where-are-the-components-stored-on-my-machine"></a>Onde os componentes são armazenados no meu computador?
 
