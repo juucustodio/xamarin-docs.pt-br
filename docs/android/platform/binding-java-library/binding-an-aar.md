@@ -12,6 +12,7 @@ ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33798701"
 ---
 # <a name="binding-an-aar"></a>Associação de um. AAR
 

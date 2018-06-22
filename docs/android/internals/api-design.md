@@ -11,6 +11,7 @@ ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32437172"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Princípios de Design de API do xamarin
 

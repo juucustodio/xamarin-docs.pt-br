@@ -11,6 +11,7 @@ ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "31647028"
 ---
 # <a name="using-data-in-an-app"></a>Usando dados de um aplicativo
 

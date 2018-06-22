@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30775478"
 ---
 # <a name="how-can-i-reenable-developer-options-after-updating-ios"></a>Como é possível reabilitar opções do desenvolvedor após a atualização de iOS?
 

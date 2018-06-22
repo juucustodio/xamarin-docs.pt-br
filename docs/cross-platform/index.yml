@@ -12,6 +12,7 @@ metadata:
   ms.translationtype: HT
   ms.contentlocale: pt-BR
   ms.lasthandoff: 05/03/2018
+  ms.locfileid: "32436379"
 abstract:
   description: O Xamarin fornece uma solução de desenvolvimento de plataforma cruzada para dispositivos móveis, tablet e de desktop. Esta seção abrange detalhes que se aplicam a todas as plataformas de destino.
   menu:

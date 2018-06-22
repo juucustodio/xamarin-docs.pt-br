@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30764002"
 ---
 # <a name="where-can-i-set-my-android-sdk-locations"></a>Onde posso configurar meu locais do SDK do Android?
 
