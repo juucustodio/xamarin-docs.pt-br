@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30769800"
 ---
 # <a name="working-with-the-android-manifest"></a>Trabalhando com o manifesto do Android
 

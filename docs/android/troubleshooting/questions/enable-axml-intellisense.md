@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30774877"
 ---
 # <a name="how-do-i-enable-intellisense-in-android-axml-files"></a>Como habilitar o Intellisense em arquivos .axml Android?
 

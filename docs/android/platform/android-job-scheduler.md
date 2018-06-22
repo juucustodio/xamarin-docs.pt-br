@@ -12,6 +12,7 @@ ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/21/2018
+ms.locfileid: "30005682"
 ---
 # <a name="android-job-scheduler"></a>Agendador de trabalhos do Android
 

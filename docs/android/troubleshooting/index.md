@@ -13,6 +13,7 @@ ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32436512"
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 

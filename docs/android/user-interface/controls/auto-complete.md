@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30764444"
 ---
 # <a name="auto-complete"></a>Preenchimento automático
 
@@ -192,4 +193,4 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 *Partes desta página são modificações com base no trabalho criado e compartilhado pelo Android Abrir projeto de origem e usada de acordo com condições descritas no* 
  [ *Creative Commons 2.5 atribuição de licença* ](http://creativecommons.org/licenses/by/2.5/) *. Este tutorial se baseia o* 
  [ *tutorial Android Auto Complete*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
-*.*
+ *.*
