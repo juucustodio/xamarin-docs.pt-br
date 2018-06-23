@@ -5,12 +5,12 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: d9fd5b5fd0d4dc29f4d2531521370618f97e3846
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4909cb3b874b1397fad10c92d8d655fadcbe8d85
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783152"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321334"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Armazenamento seguro
 
@@ -78,13 +78,13 @@ Todos os valores criptografados serão removidos quando o aplicativo é desinsta
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[Conjunto de chaves](https://developer.xamarin.com/api/type/Android.Security.KeyChain/) é usado para armazenar valores com segurança em dispositivos iOS.  O `SecRecord` usado para armazenar o valor tem um `Service` valor definido como **.xamarinessentials [seu-aplicativo--ID do pacote]**.
+[Conjunto de chaves](https://developer.xamarin.com/api/type/Security.SecKeyChain/) é usado para armazenar valores com segurança em dispositivos iOS.  O `SecRecord` usado para armazenar o valor tem um `Service` valor definido como **.xamarinessentials [seu-aplicativo--ID do pacote]**.
 
 Em alguns casos os dados do conjunto de chaves estão sincronizados com o iCloud e desinstalar o aplicativo não pode remover os valores seguros de iCloud e outros dispositivos do usuário.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/en-us/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) é usado para valores de encryped com segurança em dispositivos UWP.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) é usado para valores de encryped com segurança em dispositivos UWP.
 
 Encryped valores são armazenados em `ApplicationData.Current.LocalSettings`, dentro de um contêiner com o nome de **.xamarinessentials [seu-aplicativo-ID]**.
 
