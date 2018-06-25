@@ -1,15 +1,17 @@
 ---
 title: Depuração de vários processos
+description: Este documento descreve como usar o Visual Studio para Mac para depurar vários processos em execução ao mesmo tempo. Por exemplo, esse recurso pode ser usado para depurar um aplicativo móvel e um projeto de serviço Web simultaneamente.
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c1f2781477c04e79ad190f0067d685af1c0a4119
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d20e6e0fd567d0aa0febe21bfe12a5237049b22a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781846"
 ---
 # <a name="multi-process-debugging"></a>Depuração de vários processos
 

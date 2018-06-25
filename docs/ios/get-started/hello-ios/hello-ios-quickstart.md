@@ -1,6 +1,6 @@
 ---
-title: Olá, Guia de Início Rápido do iOS
-description: Este guia de duas partes descreve como compilar um aplicativo básico do Xamarin.iOS usando o Visual Studio para Mac ou Visual Studio e desenvolver uma compreensão dos fundamentos de desenvolvimento do aplicativos iOS com Xamarin. Ele apresentará conceitos, ferramentas e etapas necessárias para compilar e implantar um aplicativo Xamarin.iOS.
+title: Olá, iOS – Guia de Início Rápido
+description: Este passo a passo demonstra como criar um aplicativo Xamarin.iOS simples chamado Olá, iOS. Dessa forma, ele apresenta as ferramentas fundamentais e os conceitos que devem ser compreendidos para criar aplicativos Xamarin.iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: d9f5894f03bbfaa2145aec462dbd0ede7774354a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785980"
 ---
-# <a name="helloios-quickstart"></a>Guia de início rápido do Hello.iOS
+# <a name="hello-ios--quickstart"></a>Olá, iOS – Guia de Início Rápido
 
 Este guia descreve como criar um aplicativo que converte um número de telefone alfanumérico inserido pelo usuário em numérico e, em seguida, chama esse número. O aplicativo final tem esta aparência:
 

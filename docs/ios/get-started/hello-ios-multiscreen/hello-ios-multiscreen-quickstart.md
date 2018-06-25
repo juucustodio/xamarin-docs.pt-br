@@ -1,6 +1,6 @@
 ---
-title: Multitela Hello, iOS
-description: Neste guia de duas partes, podemos expandir o aplicativo Phoneword criado no guia do Hello, iOS para processar uma segunda tela. Ao longo do caminho, apresentaremos o padrão de design Modelo-Exibição-Controlador, implementaremos nossa primeira navegação de iOS e desenvolveremos um entendimento mais profundo da estrutura e da funcionalidade do aplicativo iOS.
+title: Olá, iOS Multitela – Guia de Início Rápido
+description: Este documento demonstra como expandir o aplicativo de exemplo Phoneword para adicionar uma segunda tela, descrevendo o padrão modelo-exibição-controlador, a navegação do iOS e outros conceitos de desenvolvimento fundamentais do iOS ao longo da leitura.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 3b59b942b3c256418d60436a1c4ba8b4aea14aa4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 469032dc7caa46c6a89b350dc37bc9a93366066a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785665"
 ---
-# <a name="helloios-multiscreen-quickstart"></a>Início rápido do multitela Hello.iOS
+# <a name="hello-ios-multiscreen--quickstart"></a>Olá, iOS Multitela – Guia de Início Rápido
 
 Esta parte do passo a passo adicionará uma segunda tela ao aplicativo Phoneword que exibirá um histórico dos números de telefone chamados com o aplicativo. O aplicativo final terá uma segunda tela exibindo o histórico de chamadas, como ilustrado pela seguinte captura de tela:
 

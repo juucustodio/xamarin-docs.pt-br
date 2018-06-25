@@ -1,21 +1,20 @@
 ---
 title: Analisar aplicativos Xamarin.iOS com o Instrumentos
-description: Como usar o Instrumentos em um aplicativo Xamarin.iOS em um dispositivo ou no simulador.
+description: Este documento descreve como usar o aplicativo Instruments da Apple para analisar um aplicativo Xamarin.iOS instalado em um dispositivo ou um simulador.
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a5c44531a8f05529b169390f25b2946133411098
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25129d532af0b146afedf28865649ffc9e38ee17
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785595"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Analisar aplicativos Xamarin.iOS com o Instrumentos
-
-_Como usar o Instrumentos em um aplicativo Xamarin.iOS em um dispositivo ou no simulador._
 
 O **Instrumentos** do Xcode é uma ferramenta que pode ser usada para analisar aplicativos Xamarin.iOS em um dispositivo ou no simulador. O Mono usa seu modelo Just-in-Time para compilar o código e o Instrumentos não interpreta bem esses tipos de dados, portanto, pode ser difícil trabalhar com saídas de aplicativos com base em simulador que usam o Instrumentos.
 Por causa desse problema, este guia se concentrará em como usar o aplicativo do desenvolvedor para interpretar a saída do Instrumentos neste documento.

@@ -1,23 +1,23 @@
 ---
-title: mtouch
+title: Usando mtouch para o agrupar aplicativos Xamarin.iOS
+description: Este documento descreve a mtouch, uma ferramenta que orienta muitas das etapas necessárias para transformar um aplicativo Xamarin.iOS em um pacote, iniciá-lo no simulador e implantá-lo em um dispositivo físico.
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 933ad24a8778ffbee3a1b6089c6ebcf33d26bf84
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9aaa79f929898f6765b97ab0a0c4a30a271d945a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784947"
 ---
-# <a name="mtouch"></a>mtouch
-
+# <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Usando mtouch para o agrupar aplicativos Xamarin.iOS
 
 Aplicativos do iPhone são enviados como pacotes de aplicativo. Estes são os diretórios com a extensão `.app` que contêm seu código, dados, arquivos de configuração e um manifesto que usa o iPhone para saber mais sobre o seu aplicativo.
 
 O processo de transformar um executável .NET em um aplicativo geralmente é controlado pelo comando `mtouch`, uma ferramenta que se integra a muitas das etapas necessárias para transformar o aplicativo em um pacote. Essa ferramenta também é usada para iniciar o aplicativo no simulador e implantar o software em um dispositivo iPhone ou iPod Touch real.
-
 
 ## <a name="detailed-instructions"></a>Instruções detalhadas
 

@@ -1,5 +1,5 @@
 ---
-title: Usando TestFlight
+title: Usando TestFlight para distribuir aplicativos Xamarin.iOS
 description: O TestFlight agora é de propriedade da Apple e é a principal maneira de fazer o teste beta de seus aplicativos Xamarin.iOS. Este artigo o orientará por todas as etapas do Processo de TestFlight – do upload do aplicativo até o trabalho com o iTunes Connect.
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5a6e90aab3aae408d4daace81875e44f075818bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: efb0a59ac43ca3e0c4959caa8478a51512e29a3a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785681"
 ---
-# <a name="using-testflight"></a>Usando TestFlight
+# <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
 _O TestFlight agora é propriedade da Apple, e é a principal maneira de fazer o teste beta de seus aplicativos Xamarin.iOS. Este artigo o orientará por todas as etapas do Processo de TestFlight – do upload do aplicativo até o trabalho com o iTunes Connect._
 

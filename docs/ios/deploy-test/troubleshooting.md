@@ -1,19 +1,20 @@
 ---
-title: Solução de problemas
-description: Dicas e truques para criar uma implantação suave
+title: Teste e implantação do Xamarin.iOS – solução de problemas
+description: Este documento fornece dicas de solução de problemas relacionadas à assinatura de código e provisionamento, ao TestFlight e à cópia do lote de aplicativo do iOS do host de build do Mac para o Windows.
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: fe7425bbf6440317cc856d2c727874298f66bc33
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 056b9ba5c1625093cd7fdd2914fa5df919a2f426
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785379"
 ---
-# <a name="troubleshooting"></a>Solução de problemas
+# <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Teste e implantação do Xamarin.iOS – solução de problemas
 
 ## <a name="code-signing--provisioning"></a>Assinatura de Código e Provisionamento
 
@@ -32,7 +33,6 @@ Assinatura de Código e Provisionamento com iOS podem ser bastante complicados e
 * Certifique-se de que todos os certificados e as chaves privadas correspondentes estejam disponíveis. Para cada equipe será necessário obter um certificado de desenvolvedor (para instalar aplicativos em um dispositivo próprio) e um certificado de distribuição (para instalar em outros dispositivos)
 
 * Reinicie o Xcode e o Visual Studio para Mac/Visual Studio quando um novo Perfil de Provisionamento ou Certificado for instalado.
-
 
 ## <a name="testflight"></a>TestFlight
 

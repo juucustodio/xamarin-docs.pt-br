@@ -1,5 +1,5 @@
 ---
-title: Funcionalidades do Apple Pay
+title: Recursos Apple Pay no Xamarin.iOS
 description: A adição de capacidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades do Apple Pay.
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c389dc4831009d760e4a6a810b5b3c01637c822e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a3d2e6179dde1583e0fd4d175c46582bed9a2e07
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785064"
 ---
-# <a name="apple-pay-capabilities"></a>Funcionalidades do Apple Pay
+# <a name="apple-pay-capabilities-in-xamarinios"></a>Recursos Apple Pay no Xamarin.iOS
 
 _A adição de funcionalidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades do Apple Pay._
 

@@ -1,23 +1,21 @@
 ---
 title: Desempenho de plataforma cruzada
-description: Há muitas técnicas para aumentar o desempenho dos aplicativos compilados com a plataforma Xamarin. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo. Esse artigo descreve e aborda essas técnicas.
+description: Este documento descreve várias técnicas que podem ser usadas para melhorar o desempenho de um aplicativo móvel. Ele aborda o Criador de Perfil, o recurso IDisposable, as referências fracas, o coletor de lixo SGen, as técnicas de redução de tamanho e muito mais.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: f011a92b4789da7328827f184449fd957abdf3ba
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 66234bb44bb0cae9580c119c6029603a528f882e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781976"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
-_Há muitas técnicas para aumentar o desempenho dos aplicativos compilados com a plataforma Xamarin. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo. Esse artigo descreve e aborda essas técnicas._
-
 O baixo desempenho de aplicativo se apresenta de várias maneiras. Ele pode fazer com que o aplicativo pareça não responder, deixar a rolagem lenta ou reduzir a vida útil da bateria. No entanto, a otimização do desempenho engloba mais do que apenas a implementação de um código eficiente. A experiência do usuário quanto ao desempenho do aplicativo também deve ser considerada. Por exemplo, garantir que as operações sejam executadas sem impedir o usuário de realizar outras atividades pode ajudar a melhorar a experiência do usuário.
-
 
 <a name="profiler" />
 

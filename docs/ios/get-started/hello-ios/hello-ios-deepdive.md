@@ -1,6 +1,6 @@
 ---
-title: 'Hello, iOS: aprofundamento'
-description: Este guia de duas partes descreve como compilar um aplicativo básico do Xamarin.iOS usando o Visual Studio para Mac ou Visual Studio e desenvolver uma compreensão dos fundamentos de desenvolvimento do aplicativos iOS com Xamarin. Ele apresentará conceitos, ferramentas e etapas necessárias para compilar e implantar um aplicativo Xamarin.iOS.
+title: Olá, iOS – análise detalhada
+description: Este documento faz uma análise mais detalhada do aplicativo de exemplo Olá, iOS, considerando sua arquitetura, a interface do usuário, a hierarquia de exibição de conteúdo, os testes, a implantação e muito mais.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 71bfccdcab73b651f458dd8d9c5396bffd55004b
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f7869f572bfd6f6c8a0bc710c6e28671c22ad7eb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786394"
 ---
-# <a name="hello-ios-deep-dive"></a>Aprofundamento no Hello, iOS
+# <a name="hello-ios--deep-dive"></a>Olá, iOS – análise detalhada
 
 O passo a passo de início rápido, introduziu os procedimentos para compilar e executar um aplicativo básico do Xamarin.iOS. Agora é hora de desenvolver uma compreensão mais profunda de como funcionam os aplicativos iOS para que você possa criar programas mais sofisticados. Este guia examina as etapas no passo a passo Hello, iOS para habilitar a compreensão dos conceitos fundamentais do desenvolvimento de aplicativos iOS.
 
 Os seguintes tópicos são explorados neste artigo:
-
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 

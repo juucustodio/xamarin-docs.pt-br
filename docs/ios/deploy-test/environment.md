@@ -1,17 +1,19 @@
 ---
-title: Ambiente
+title: Ambiente de execução para aplicativos Xamarin.iOS
+description: Este documento descreve como configurar variáveis de ambiente temporárias e permanentes para um aplicativo Xamarin.iOS. As variáveis podem ser especificadas nas propriedades de um projeto ou como argumentos adicionais para a ferramenta de empacotamento mtouch.
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bc06ce3f3a26842340ce6e19741a8a7dfe8f086d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 246c65729f9327dd1ccf549603b4c2b1feb023e8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784960"
 ---
-# <a name="environment"></a>Ambiente
+# <a name="execution-environment-for-xamarinios-apps"></a>Ambiente de execução para aplicativos Xamarin.iOS
 
 O *ambiente de execução* é o conjunto de variáveis de ambiente que influenciam a execução do programa. Variáveis de ambiente podem ser definidas temporariamente nas propriedades do projeto ou permanentemente especificando argumentos adicionais para a ferramenta de empacotamento mtouch.
 

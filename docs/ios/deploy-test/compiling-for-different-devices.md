@@ -1,18 +1,20 @@
 ---
-title: Compilar para dispositivos diferentes
+title: Compilar para diferentes dispositivos no Xamarin.iOS
+description: Este documento descreve várias opções de configuração de build que podem ser usadas para personalizar um build do Xamarin.iOS para diferentes dispositivos.
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 039e0a931613ec79ccd6f2b13bc18ae6b80f5195
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b1bfab36646256eee706316c70004aef8399994
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784839"
 ---
-# <a name="compiling-for-different-devices"></a>Compilar para dispositivos diferentes
+# <a name="compiling-for-different-devices-in-xamarinios"></a>Compilar para diferentes dispositivos no Xamarin.iOS
 
 As propriedades de build do executável podem ser configuradas da página de propriedades **Build do iOS** do projeto, que é encontrada clicando-se com o botão direito do mouse no nome do projeto e navegando-se até **Opções > Build do iOS** no Visual Studio para Mac, e em **Propriedades** no Visual Studio:
 

@@ -1,16 +1,18 @@
 ---
 title: Início rápido da multitela do Xamarin.Forms
+description: Este artigo explica como estender o aplicativo Phoneword ao adicionar uma segunda tela para controlar o histórico de chamadas do aplicativo.
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 066f084187a486ca2f88882890b5e9ad277b8cff
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c931b4f74fbfbbb7396e492cb7ad7ae5d0097bad
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242385"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Início rápido da multitela do Xamarin.Forms
 
@@ -57,7 +59,7 @@ Estenda o aplicativo Phoneword da seguinte maneira:
 
     Salve as alterações em **CallHistoryPage.xaml** ao pressionar **CTRL+S** e feche o arquivo.
 
-5. No **Gerenciador de Soluções**, clique duas vezes em para **App.xaml.cs** abri-lo:
+5. No **Gerenciador de Soluções**, clique duas vezes no arquivo **App.xaml.cs** no projeto compartilhado **Phoneword** para abri-lo:
 
     ![](quickstart-images/vs/open-app-class.png "Abrir App.xaml.cs")
 
@@ -88,7 +90,7 @@ Estenda o aplicativo Phoneword da seguinte maneira:
 
     Salve as alterações em **App.xaml.cs** ao pressionar **CTRL + S** e feche o arquivo.
 
-7. No **Gerenciador de Soluções**, clique duas vezes em **MainPage.xaml** para abri-lo:
+7. No **Gerenciador de Soluções**, clique duas vezes no arquivo **MainPage.xaml** no projeto compartilhado **Phoneword** para abri-lo:
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "Abrir MainPage.xaml")
 

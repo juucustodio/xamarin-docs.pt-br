@@ -1,19 +1,20 @@
 ---
-title: Implantação sem fio
-description: Este recurso permite a implantação em dispositivos iOS ou Apple TV por meio de uma conexão de rede
+title: Implantação sem fio para aplicativos Xamarin.iOS e tvOS
+description: Este documento descreve como implantar sem fio um aplicativo Xamarin.iOS em um dispositivo iOS por meio do Visual Studio para Mac ou do Visual Studio 2017.
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/09/2018
-ms.openlocfilehash: b331ea61915b4f202aa971658a5a54d1a8038d64
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ade7eb7ff26fec8df616401801585e499ddf4206
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785512"
 ---
-# <a name="wireless-deployment"></a>Implantação sem fio
+# <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implantação sem fio para aplicativos Xamarin.iOS e tvOS
 
 Uma parte importante do fluxo de trabalho do desenvolvedor é a implantação em um dispositivo. O Xcode 9 introduziu a opção de implantação em um dispositivo iOS ou Apple TV por meio de uma rede, em vez de exigir instalações físicas sempre que você quiser implantar e depurar o aplicativo. Esse recurso foi introduzido nas versões do Visual Studio para Mac 7.4 e do Visual Studio 15.6.
 

@@ -1,21 +1,20 @@
 ---
 title: Distribuição da App Store
-description: Este documento aborda os requisitos para distribuição à App Store da Apple.
+description: Este documento descreve como distribuir um aplicativo Xamarin.iOS na App Store. Ele discute como criar um certificado de distribuição, como criar uma perfil de provisionamento de distribuição e como configurar o iTunes Connect e enviar o aplicativo.
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 7a38c77dde7a66f2db194cd8888a2c32a3529a9a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42d287285fc9b8842dfb0c86b627d1d5c84189e1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784810"
 ---
 # <a name="app-store-distribution"></a>Distribuição da App Store
-
-_Este documento aborda os requisitos para distribuição à App Store da Apple._
 
 Depois que um aplicativo Xamarin.iOS foi desenvolvido, a próxima etapa do ciclo de vida de desenvolvimento de software é distribuir o aplicativo aos usuários usando a iTunes App Store. Essa é a maneira mais comum de distribuir aplicativos. Ao publicar um aplicativo na App Store da Apple, ele pode ser disponibilizado a consumidores em todo o mundo.
 

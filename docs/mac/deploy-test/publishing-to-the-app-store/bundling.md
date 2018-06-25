@@ -1,19 +1,20 @@
 ---
 title: Agrupamento para Mac App Store
-description: Este guia ensina como agrupar um aplicativo Xamarin.Mac para publicação na Mac App Store.
+description: Este documento descreve como agrupar um aplicativo Xamarin.Mac para publicação na Mac App Store. Ele aborda as opções de assinatura de código e de criação.
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 88d813331dfce437f3668ada8f008bbbd5fdc3de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3aeda97fa4a5a63d51623335c0721026b2394d2f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792054"
 ---
-# <a name="bundle-for-mac-app-store"></a>Pacote para Mac App Store
+# <a name="bundling-for-the-mac-app-store"></a>Agrupamento para Mac App Store
 
 Esta seção descreve as noções básicas da criação de um aplicativo para lançamento no Mac App Store usando o Visual Studio para Mac. Com base nos recursos adicionais (como acesso iCloud e notificações por push), outras instalações, que vão além do escopo deste artigo, podem ser necessárias.
 

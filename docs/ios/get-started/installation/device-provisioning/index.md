@@ -1,21 +1,20 @@
 ---
-title: Provisionamento de Dispositivo
-description: Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia mostrará a solicitação de certificados de desenvolvimento e perfis, o trabalho com serviços de aplicativos e a implantação de um aplicativo no dispositivo.
+title: Provisionamento de dispositivos para o Xamarin.iOS
+description: Este documento descreve como provisionar um dispositivo para que ele possa ser usado para testar um aplicativo. Ele também aborda como configurar um aplicativo para que ele possa usar recursos como notificações por push.
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785782"
 ---
-# <a name="device-provisioning"></a>Provisionamento de Dispositivo
-
-_Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia mostrará a solicitação de certificados de desenvolvimento e perfis, o trabalho com serviços de aplicativos e a implantação de um aplicativo no dispositivo._
+# <a name="device-provisioning-for-xamarinios"></a>Provisionamento de dispositivos para o Xamarin.iOS
 
 Ao desenvolver um aplicativo Xamarin.iOS, é essencial testá-lo implantando o aplicativo em um dispositivo físico, além do simulador. Problemas de desempenho e bugs exclusivos de dispositivos podem ocorrer durante a execução em um dispositivo, devido a limites de hardware como memória ou conectividade de rede. Para testar em um dispositivo físico, o dispositivo deve ser *provisionado* e a Apple deve ser informada de que o dispositivo será usado para teste.
 

@@ -1,15 +1,17 @@
 ---
 title: Instalando o Xamarin no Visual Studio 2017
+description: Este documento descreve como instalar o Xamarin no Visual Studio 2017. Ele aborda os requisitos, o processo de instalação e a verificação da instalação.
 ms.prod: xamarin
 ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: 8aad42717d2408f97d40f5d244d797727ea12588
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 419addde14d5be99833b4611a4af2a1be8756b9d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781472"
 ---
 # <a name="installing-xamarin-in-visual-studio-2017"></a>Instalando o Xamarin no Visual Studio 2017
 

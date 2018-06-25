@@ -1,21 +1,20 @@
 ---
-title: Publicando na App Store
-description: Este artigo mostra como configurar, compilar e publicar um aplicativo Xamarin.iOS para distribuição através da App Store. Ele inclui um guia passo a passo que aborda como preparar seu aplicativo para distribuição, como usar ferramentas da Apple para enviar seu aplicativo para análise e, finalmente, como publicar seu aplicativo na App Store.
+title: Publicando aplicativos Xamarin.iOS na App Store
+description: Este documento descreve como configurar, compilar e publicar um aplicativo Xamarin.iOS para distribuição na App Store.
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 5d78cb81f27ce7478719ff9f11f4eb38fddc3981
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785694"
 ---
-# <a name="publishing-to-the-app-store"></a>Publicando na App Store
-
-_Este artigo mostra como configurar, compilar e publicar um aplicativo Xamarin.iOS para distribuição através da App Store. Ele inclui um guia passo a passo que aborda como preparar seu aplicativo para distribuição, como usar ferramentas da Apple para enviar seu aplicativo para análise e, finalmente, como publicar seu aplicativo na App Store._
+# <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicando aplicativos Xamarin.iOS na App Store
 
 Para distribuir aplicativos para todos os dispositivos iOS, a Apple exige que os aplicativos sejam publicados por meio da *App Store*, tornando a App Store o local de compra único para aplicativos iOS. Com mais de 500.000 aplicativos na loja, os desenvolvedores de muitos tipos de aplicativos tiraram proveito do enorme sucesso desse único ponto de distribuição. A App Store é uma solução pronta para uso, que oferece sistemas de distribuição e pagamento aos desenvolvedores de aplicativos.
 

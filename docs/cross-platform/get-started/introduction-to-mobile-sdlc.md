@@ -1,20 +1,19 @@
 ---
 title: Introdução ao ciclo de vida de desenvolvimento de software móvel
-description: Este artigo aborda o ciclo de vida de desenvolvimento de software em relação a aplicativos móveis e discute algumas das considerações necessárias ao criar projetos móveis. Para desenvolvedores que querem começar diretamente a compilar, este guia pode ser ignorado e lido posteriormente para obter um entendimento mais completo do desenvolvimento móvel.
+description: Este documento descreve o ciclo de vida de desenvolvimento de software móvel, oferecendo informações sobre o design da experiência do usuário, o design da interface do usuário, o desenvolvimento, a estabilização, a distribuição e muito mais.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: c93a063c9c933e1b9f397d172115471473cf8f35
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 8a95f89ad41ab793d8c26631f1a967180b4c1779
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782327"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introdução ao ciclo de vida de desenvolvimento de software móvel
-
-_Este artigo aborda o ciclo de vida de desenvolvimento de software em relação a aplicativos móveis e discute algumas das considerações necessárias ao criar projetos móveis. Para desenvolvedores que querem começar diretamente a compilar, este guia pode ser ignorado e lido posteriormente para obter um entendimento mais completo do desenvolvimento móvel._
 
 Criar aplicativos móveis pode ser tão fácil quanto abrir o IDE, reunir alguns elementos, fazer alguns testes rápidos e enviar para uma App Store – tudo em uma tarde. Ou pode ser um processo extremamente complexo que envolve um design inicial rigoroso, teste de usabilidade, teste de garantia de qualidade em milhares de dispositivos, um ciclo de vida completo beta e, em seguida, implantação de várias maneiras diferentes.
 

@@ -1,21 +1,20 @@
 ---
-title: Guia de Introdução
-description: Aprenda a desenvolver aplicativos móveis do zero para implantação com esses guias detalhados.
+title: Introdução ao Xamarin
+description: Este documento apresenta links para vários guias que descrevem como começar no desenvolvimento do Xamarin. O conteúdo vinculado descreve como criar um primeiro aplicativo, fornece uma introdução geral ao desenvolvimento móvel e faz uma breve apresentação sobre treinamento no Xamarin University.
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: de5b1499f95e6703e0c11adb1f76e1717a494e33
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3873236c64f1288a896c40d468f06b60f532a431
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780790"
 ---
-# <a name="getting-started"></a>Guia de Introdução
-
-_Aprenda a desenvolver aplicativos móveis do zero para implantação com esses guias detalhados._
+# <a name="getting-started-with-xamarin"></a>Introdução ao Xamarin
 
 Antes de começar, confira o [requisitos de sistema](requirements.md) e as [instruções de instalação](installation/index.md) para verificar se tudo está pronto para começar.
 

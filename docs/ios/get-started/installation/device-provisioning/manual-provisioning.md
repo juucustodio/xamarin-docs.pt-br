@@ -1,21 +1,22 @@
 ---
-title: Provisionamento manual
-description: Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia mostrará a solicitação de certificados de desenvolvimento e perfis, o trabalho com serviços de aplicativos e a implantação de um aplicativo no dispositivo.
+title: Provisionamento manual para o Xamarin.iOS
+description: Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso do provisionamento manual para configurar certificados e perfis de desenvolvimento.
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: f604d41990a7a592a3d5207e7a12075c35ae661f
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: c0404a1fd8f7e878638b9483c65c637f6b4faa66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786097"
 ---
-# <a name="manual-provisioning"></a>Provisionamento manual
+# <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
-_Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia mostrará a solicitação de certificados de desenvolvimento e perfis, o trabalho com serviços de aplicativos e a implantação de um aplicativo no dispositivo._
+_Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso do provisionamento manual para configurar certificados e perfis de desenvolvimento._
 
 <a name="signingidentity" />
 

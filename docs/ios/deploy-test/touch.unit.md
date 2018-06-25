@@ -1,18 +1,20 @@
 ---
-title: Teste de unidade
+title: Teste de unidade de aplicativos Xamarin.iOS
+description: Este documento fornece uma visão geral de como fazer teste de unidade de um aplicativo Xamarin.iOS. Ele descreve como criar um projeto de teste de unidade, escrever testes e executar testes.
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3129302cbb2fbe9e2757986317da0ec30601b492
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ce2b452d50222ac3561dab5b76915b7ae634934b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785457"
 ---
-# <a name="unit-testing"></a>Teste de unidade
+# <a name="unit-testing-xamarinios-apps"></a>Teste de unidade de aplicativos Xamarin.iOS
 
 Este documento descreve como criar testes de unidade para seus projetos do Xamarin.iOS.
 Os testes de unidade com o Xamarin.iOS são feitos usando a estrutura Touch.Unit que inclui um executor de teste iOS, bem como uma versão modificada do NUnit chamado [Touch.Unit](https://github.com/xamarin/Touch.Unit) que fornece um conjunto familiar de APIs para gravar testes de unidade.

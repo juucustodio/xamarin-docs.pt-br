@@ -1,6 +1,6 @@
 ---
-title: Multitela Hello, iOS
-description: Neste guia de duas partes, podemos expandir o aplicativo Phoneword criado no guia do Hello, iOS para processar uma segunda tela. Ao longo do caminho, apresentaremos o padrão de design Modelo-Exibição-Controlador, implementaremos nossa primeira navegação de iOS e desenvolveremos um entendimento mais profundo da estrutura e da funcionalidade do aplicativo iOS.
+title: Olá, iOS multitela – análise detalhada
+description: Este documento usa uma análise mais detalhada sobre o aplicativo Phoneword expandido, com maiores considerações sobre o padrão modelo-exibição-controlador, sobre a navegação do iOS além de outros conceitos de desenvolvimento do iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 6f3c02bf3e5def0ad4acdb82e4c8a2606159846a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785652"
 ---
-# <a name="hello-ios-multiscreen-deep-dive"></a>Aprofundamento nas multitelas do Hello, iOS
+# <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
 
 No passo a passo de Início Rápido, compilamos e executamos nosso primeiro aplicativo Xamarin.iOS multitela. Agora é hora de desenvolver uma compreensão mais profunda da arquitetura e da navegação do iOS.
 

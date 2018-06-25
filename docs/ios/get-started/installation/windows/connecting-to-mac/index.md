@@ -1,19 +1,20 @@
 ---
-title: Emparelhar com Mac
-description: Este guia descreve como usar o Emparelhar com Mac para conectar o Visual Studio 2017 a um host de build do Mac.
+title: Emparelhar com Mac para o desenvolvimento do Xamarin.iOS
+description: Este guia descreve como usar o Emparelhar com Mac para conectar o Visual Studio 2017 a um host de build do Mac. Ele aborda como habilitar o acesso remoto no Mac, conectar-se ao Mac com o Visual Studio 2017, adicionar manualmente um host de build do Mac no computador Windows e muito mais.
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 04/16/2018
-ms.openlocfilehash: e2f9b23bb298b0bb01f7e5491963daed4521ac9c
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 05/29/2018
+ms.openlocfilehash: c4e28c1f3e058977d6f9072b70f17717a2b27585
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786071"
 ---
-# <a name="pair-to-mac"></a>Emparelhar com Mac
+# <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com Mac para o desenvolvimento do Xamarin.iOS
 
 _Este guia descreve como usar o Emparelhar com Mac para conectar o Visual Studio 2017 a um host de build do Mac._
 
@@ -38,6 +39,7 @@ O Emparelhar com Mac permite o seguinte fluxo de trabalho de desenvolvimento:
 - É possível usar a linha de comando do Windows para criar aplicativos iOS.
 
 > [!NOTE]
+> 
 > Antes de seguir as instruções neste guia, conclua as seguintes etapas: 
 > 
 > - Em um computador Windows, [instale o Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)
@@ -161,6 +163,7 @@ A partir do [Visual Studio 2017 versão 15.6](https://docs.microsoft.com/visuals
 > [!IMPORTANT]
 > - O Emparelhar com Mac não instala o Xcode. É necessário instalá-lo manualmente no host de build do Mac. Ele é necessário para o desenvolvimento do Xamarin.iOS.
 > - O provisionamento automático do Mac exige que o acesso remoto esteja habilitado no Mac, e o Mac deve ser acessível pela rede para o computador Windows. Consulte [Habilitar acesso remoto no Mac](#enable-remote-login-on-the-mac) para obter mais detalhes.
+> - O provisionamento automático do Mac requer 3 GB de espaço livre no Mac para instalar o Xamarin.iOS.
 
 O Emparelhar com Mac executa instalações/atualizações de software necessárias quando o Visual Studio 2017 está [se conectando ao Mac](#connect-to-the-mac-from-visual-studio-2017).
 

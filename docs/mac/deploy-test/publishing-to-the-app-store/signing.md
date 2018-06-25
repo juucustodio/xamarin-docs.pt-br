@@ -1,19 +1,20 @@
 ---
-title: Entrar com a ID de desenvolvedor
-description: Este guia explica como assinar um aplicativo Xamarin.Mac com a ID do Desenvolvedor para publicação.
+title: Assinar aplicativos Xamarin.Mac com uma ID de Desenvolvedor
+description: Este documento descreve como assinar um aplicativo Xamarin.Mac com uma ID de desenvolvedor para que ele possa ser distribuído fora da Mac App Store. Ele aborda as opções de assinatura de código e de criação.
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1a2726ec46ac51ae9848b318798afba74183360c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 130766ef7f9ab8e311db97a7209f4ec62a2ceee4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792297"
 ---
-# <a name="sign-with-developer-id"></a>Entrar com a ID de desenvolvedor
+# <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Assinar aplicativos Xamarin.Mac com uma ID de Desenvolvedor
 
 Se o desenvolvedor planeja distribuir um aplicativo diretamente aos usuários macOS, a Apple recomenda que a assinatura de código seja feita com sua ID de desenvolvedor para que ele possa ser instalado em sistemas macOS com o **GateKeeper** habilitado. Se o aplicativo não tiver sido assinado, o **GateKeeper** impedirá que os usuários instalem uma mensagem de alerta (eles podem ignorar essa restrição mantendo pressionada a tecla Control ao iniciar).
 

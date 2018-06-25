@@ -1,17 +1,18 @@
 ---
 title: Carregar na Mac App Store
-description: Este guia ensina como fazer upload de aplicativos Xamarin.Mac para publicação na Mac App Store.
+description: Este documento descreve como usar o iTunes Connect para fazer upload de um aplicativo do Xamarin.Mac na Mac App Store. Ele aborda as informações exigidas pelo iTunes Connect para concluir o processo.
 ms.prod: xamarin
 ms.assetid: 30cd0e47-1b2e-47ef-93f6-4bed20b15c03
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4ddbbdc32ecb2de4f9dcb89162bc38803fa7159e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e51171f0f5153f48237ebe76e393c2077453bbd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792158"
 ---
 # <a name="upload-to-mac-app-store"></a>Carregar na Mac App Store
 

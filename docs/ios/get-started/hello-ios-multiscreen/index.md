@@ -1,6 +1,6 @@
 ---
 title: Multitela Hello, iOS
-description: Neste guia de duas partes, podemos expandir o aplicativo Phoneword criado no guia do Hello, iOS para processar uma segunda tela. Ao longo do caminho, apresentaremos o padrão de design Modelo-Exibição-Controlador, implementaremos nossa primeira navegação de iOS e desenvolveremos um entendimento mais profundo da estrutura e da funcionalidade do aplicativo iOS.
+description: Este documento contém links para instruções passo a passo que expandem o aplicativo de exemplo Phoneword para adicionar uma segunda tela. As explicações passo a passo exploram o padrão de design modelo-exibição-controlador, a navegação do iOS e outros conceitos fundamentais de desenvolvimento do iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
@@ -8,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 95be7bd39aced5dad680efbae0bd7e0f4d040f7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 573ab05c066c7ecd064942ba502634c97224d1d7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786029"
 ---
 # <a name="hello-ios-multiscreen"></a>Multitela Hello, iOS
 
@@ -22,10 +23,7 @@ Na primeira parte deste guia, adicionaremos uma segunda tela ao aplicativo Phone
 
 ##  <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Parte 2: Aprofundamento](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
-
-
 Na segunda parte deste documento, vamos examinar o que criamos e discutir a arquitetura, navegação e outros novos conceitos de iOS que ocorrem ao longo do caminho.
-
 
 ## <a name="related-links"></a>Links relacionados
 

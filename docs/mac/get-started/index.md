@@ -1,19 +1,20 @@
 ---
-title: Introdução ao Mac
-description: Introdução ao Xamarin.Mac
+title: Introdução ao Xamarin.Mac
+description: Este documento contém links para guias que descrevem como instalar o Xamarin.Mac e fornecem um passo a passo de como criar um aplicativo de exemplo do Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 6CE7C634-6495-3517-B004-21C9EBF4C462
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 66bd2509c6b35d4391a9d04ad955b4a22cd9d39a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1ef978abac220f4ea20264922a85fc6dd0a006c3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792252"
 ---
-# <a name="getting-started-with-mac"></a>Introdução ao Mac
+# <a name="getting-started-with-xamarinmac"></a>Introdução ao Xamarin.Mac
 
 ##  <a name="installationmacget-startedinstallationmd"></a>[Instalação](~/mac/get-started/installation.md)
 
