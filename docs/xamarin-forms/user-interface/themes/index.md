@@ -49,7 +49,7 @@ Essas capturas de tela mostram esses controles com:
 * Tema claro (apenas diferenças sutis que devem não ter nenhum tema)
 * Tema escuro
 
-![](images/standard-none-sml.png "Controles sem temas") ![ ] (images/standard-light-sml.png "controles com tema claro") ![ ] (images/standard-dark-sml.png "controles com tema escuro")
+![](images/standard-none-sml.png "Controles sem temas") ![](images/standard-light-sml.png "controles com tema claro") ![](images/standard-dark-sml.png "controles com tema escuro")
 
 <a name="styleclass" />
 
@@ -69,7 +69,7 @@ O [Light](light.md) e [escuro](dark.md) ambos os temas definem três aparências
 
 Isso renderiza com claro e escuro da seguinte maneira:
 
-![](images/boxview-light-sml.png "BoxView com um tema claro StyleClass") ![ ] (images/boxview-dark-sml.png "BoxView com StyleClass um tema escuro")
+![](images/boxview-light-sml.png "BoxView com um tema claro StyleClass") ![](images/boxview-dark-sml.png "BoxView com StyleClass um tema escuro")
 
 <a name="builtin" />
 
