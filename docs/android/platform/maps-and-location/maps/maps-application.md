@@ -1,19 +1,20 @@
 ---
-title: Aplicativo de mapas
+title: Iniciar o aplicativo de mapas
+description: Como iniciar o aplicativo de mapas interno de dentro de seu aplicativo xamarin.
 ms.prod: xamarin
 ms.assetid: 929EACB8-8950-50E1-093C-43FB5F1F1CD5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/05/2017
-ms.openlocfilehash: b94c65c079b28fe042a42ec04357c11f3516d205
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: d15b6e544f58f03272c711236b579ca568e09539
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765549"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935016"
 ---
-# <a name="maps-application"></a>Aplicativo de mapas
+# <a name="launching-the-maps-application"></a>Iniciar o aplicativo de mapas
 
 É a maneira mais simples para trabalhar com mapas em xamarin aproveitar o aplicativo de mapas internos mostrado abaixo:
 

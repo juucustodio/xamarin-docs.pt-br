@@ -1,17 +1,18 @@
 ---
 title: Obter um Google mapeia a chave de API
+description: Como obter uma chave de API do Google mapeia para adicionar funcionalidade é mapeado para seu aplicativo.
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/20/2018
-ms.openlocfilehash: 5a162ba15bbb6d6dcdf7debe01fb12b3b08a843e
-ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
+ms.date: 06/25/2018
+ms.openlocfilehash: 365bc56c70ef903622c3a4583a30460f907b4ec9
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36309784"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935048"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Obter um Google mapeia a chave de API
 

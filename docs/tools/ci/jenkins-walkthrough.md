@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 7e9069c698f82e9ec9c5009286c2a36b6722b7a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8094f1ab78252e6d6bd8f5991bcb567b36ed1e9b
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793938"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935338"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Usando Jenkins com Xamarin
 
@@ -385,7 +385,7 @@ Depois que todas as ações de compilação estão em vigor, é uma boa prática
 
 ### <a name="submitting-tests-to-test-cloud"></a>Envio de testes para a nuvem de teste
 
-Testes automatizados podem ser enviados para a nuvem de teste usando comandos do shell. Para obter mais informações sobre como configurar uma execução de teste no Xamarin Test Cloud, temos guias para o uso de [Xamarin.UITest](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/) ou [Calabash](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/).
+Testes automatizados podem ser enviados para a nuvem de teste usando comandos do shell. Para obter mais informações sobre como configurar uma execução de teste no Xamarin Test Cloud, consulte este guia para usar [Xamarin.UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
 
 
 ## <a name="summary"></a>Resumo

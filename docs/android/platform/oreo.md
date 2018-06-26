@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 3776a0554e5ae496f9e39612ec9bab971c6f1f88
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: a23072427a74119bfa339fea8a695cd13b775685
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732756"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935097"
 ---
 # <a name="oreo-features"></a>Recursos de Oreos
 
@@ -191,7 +191,7 @@ Depois que você usar **avdmanager** para criar seu dispositivo virtual, ele ser
 
 -----
 
-Para obter mais informações sobre como configurar um emulador Android para teste e depuração, consulte [depuração com o emulador Android da Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Para obter mais informações sobre como configurar um emulador Android para teste e depuração, consulte [depuração no emulador do Android](~/android/deploy-test/debugging/debug-on-emulator.md).
 
 Se você estiver usando um dispositivo físico, como uma ligação ou um Pixel, você pode atualizar seu dispositivo por meio de automático sobre as atualizações de ondas de rádio ou baixar uma imagem do sistema e flash seu dispositivo diretamente. Para obter mais informações sobre como atualizar manualmente seu dispositivo para Oreos Android, consulte [imagens de fábrica do Nexus e dispositivos de Pixel](https://developers.google.com/android/images).
 

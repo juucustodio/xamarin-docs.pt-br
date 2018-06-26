@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 32338bc89df2ef7ee4426482b1967861f0c0e058
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: e7279c03c730e95f211b555e5b832942c19ea8aa
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33921944"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935409"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usando a cidade de equipe com o Xamarin
 
@@ -142,7 +142,7 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 Quando o teste é executado, os resultados de teste serão retornados na forma de um arquivo XML de estilo de NUnit chamado **report.xml**. TeamCity exibirá as informações no Log de compilação.
 
-Para obter mais informações sobre como enviar UITests à nuvem de teste, consulte o guia do Xamarin em [enviando testes para teste nuvem](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/).
+Para obter mais informações sobre como enviar UITests à nuvem de teste, consulte este guia em [Xamarin.UITests preparar para carregar](/appcenter/test-cloud/preparing-for-upload/uitest/).
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Enviando Calabash testes para testar a nuvem
 
@@ -207,6 +207,5 @@ Em seguida, abordamos como criar um projeto no TeamCity que irá enfileirar uma 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Envio de testes para nuvem Xamarin Test (UITest)](https://developer.xamarin.com~/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)
-- [Envio de testes para nuvem Xamarin Test (Calabash)](https://developer.xamarin.com~/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)
+- [Preparando Xamarin.UITests fpr carregamento](/appcenter/test-cloud/preparing-for-upload/uitest/)
 - [Instalando e configurando TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

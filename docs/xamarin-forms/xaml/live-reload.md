@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 756f0570ce792450cfcaf6b1c5161a95a6cb80c8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848298"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935422"
 ---
 # <a name="xamarin-live-reload"></a>Recarregar ao vivo do Xamarin
 
@@ -119,6 +119,7 @@ Nº Na verdade, você pode até mesmo iniciar todos os destinos seu aplicativo c
 ## <a name="known-issues"></a>Problemas Conhecidos
 
 * Só tem suporte no Visual Studio.
+* Vinculação deve ser definida como **Link não** ou **Link Framework SDKs somente** 
 * Recarregar os recursos de todo o aplicativo (ou seja, **App** ou compartilhados dicionários de recursos), navegação de aplicativo é redefinida. Isso será corrigido na próxima versão de visualização.
 * Editando o XAML enquanto depuração UWP pode causar uma falha de tempo de execução. Solução alternativa: Use **iniciar sem depuração (Ctrl + F5)** em vez de **iniciar depuração (F5)**.
 

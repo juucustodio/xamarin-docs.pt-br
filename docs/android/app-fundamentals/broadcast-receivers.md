@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: 9c17641312384634983c2cbb34fa923a9416c9f7
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 6b2e316eaf67e51801be4fcd670e80ec81c8ff08
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31646697"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935393"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusão em xamarin
 
@@ -25,7 +25,7 @@ Um _receptor difusão_ é um componente do Android que permite que um aplicativo
 Android identifica dois tipos de difusões:
 
 * **Difusão explícita** &ndash; esses tipos de difusões direcione um aplicativo específico. O uso mais comum de uma difusão explícita é iniciar uma atividade. Um exemplo de uma difusão explícito quando um aplicativo precisa para discar um número de telefone. ele enviará uma intenção que tem como alvo o aplicativo de telefone no Android e passar ao longo do número de telefone a ser discado. Android, em seguida, encaminhe a intenção para o aplicativo de telefone.
-* **Implícita broadcase** &ndash; essas difusões são despachados para todos os aplicativos no dispositivo. Um exemplo de uma difusão implícita é o `ACTION_POWER_CONNECTED` intenção. A intenção é publicada sempre que Android detecta que a bateria do dispositivo está carregando. Android roteará essa intenção a todos os aplicativos que foram registrados para este evento.
+* **Difusão implícita** &ndash; essas difusões são despachados para todos os aplicativos no dispositivo. Um exemplo de uma difusão implícita é o `ACTION_POWER_CONNECTED` intenção. A intenção é publicada sempre que Android detecta que a bateria do dispositivo está carregando. Android roteará essa intenção a todos os aplicativos que foram registrados para este evento.
 
 O receptor de difusão é uma subclasse do `BroadcastReceiver` devem substituir o tipo e o [ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/) método. Android executará `OnReceive` no thread principal, então esse método deve ser projetado para ser executado rapidamente. Tome cuidado ao reproduzir threads no `OnReceive` porque Android pode encerrar o processo quando o método é concluído. Se um receptor de difusão deve executar o trabalho de longa execução, é recomendável agendar uma _trabalho_ usando o `JobScheduler` ou _Firebase trabalho Dispatcher_. Agendar o trabalho com um trabalho será discutido em uma guia separada.
 

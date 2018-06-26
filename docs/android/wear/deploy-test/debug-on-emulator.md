@@ -6,13 +6,13 @@ ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 9be9b91a0ed7e7607469bf8d74087b6f93677559
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/21/2018
+ms.openlocfilehash: baa8df87caf2c05d7b6202d5160c930e51656e10
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732977"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36934972"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Depurar desgaste Android em um emulador
 
@@ -22,7 +22,7 @@ _Esses artigos explicam como depurar um aplicativo xamarin desgaste em um emulad
 
 Desenvolvimento de aplicativos do Android desgaste requer executando o aplicativo no hardware físico ou usando um simulador ou emulador. O uso de hardware é a melhor abordagem, mas nem sempre a mais prática. Em muitos casos, pode ser mais simples e mais econômica para simular/emular hardware desgaste Android usando um emulador, conforme descrito abaixo. Se você não estiver familiarizado com o processo de implantação e execução de aplicativos Android desgaste, consulte [desgaste Hello,](~/android/wear/get-started/hello-wear.md).
 
-## <a name="configure-the-google-android-emulator"></a>Configurar o emulador do Google Android
+## <a name="configure-the-android-emulator"></a>Configurar o emulador Android
 
 Para executar seu aplicativo desgaste em um emulador, você deve instalar o emulador do Android SDK do Android e configurá-lo para uso Android. Para informações de geral de emulador do Android SDK instalação e configuração, consulte [configuração do emulador Android](~/android/get-started/installation/android-emulator/index.md).
 
@@ -48,4 +48,4 @@ O emulador pode ser deixado em execução, não é necessário desligá-lo e rei
  
 ## <a name="summary"></a>Resumo
  
-Este guia explicou como configurar o emulador Android da Google para desenvolvimento de desgaste e iniciar um dispositivo virtual desgaste para depuração.
+Este guia explicou como configurar o emulador Android para o desenvolvimento de desgaste e iniciar um dispositivo virtual desgaste para depuração.
