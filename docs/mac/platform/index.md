@@ -7,16 +7,27 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 539ec976e3ea28aa2e017318022bd102f2c03ae5
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792208"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066878"
 ---
 # <a name="macos-platform-features"></a>macOS recursos de plataforma
 
 Documentos nesta seção abordam trabalhar com recursos chave específica de plataforma do macOS em um aplicativo Xamarin.Mac.
+
+## <a name="introduction-to-macos-mojavemacplatformintroduction-to-macos-mojaveindexmd"></a>[Introdução ao macOS Mojave](~/mac/platform/introduction-to-macos-mojave/index.md)
+
+> [!WARNING]
+> MacOS do Xamarin suporte Mojave está atualmente em visualização, o que significa que pode conter bugs, não é concluída de recurso e pode ser alterado. Usá-lo para experimentação somente.
+
+Este documento fornece uma visão geral dos recursos novos e atualizados no macOS Mojave que está disponíveis para uso ao criar aplicativos Xamarin.Mac.
+
+## <a name="introduction-to-macos-high-sierramacplatformintroduction-to-macos-high-sierraindexmd"></a>[Introdução ao macOS Serra alta](~/mac/platform/introduction-to-macos-high-sierra/index.md)
+
+Este documento descreve recursos novos e aprimorados macOS Serra alta.
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introdução ao macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 
@@ -30,7 +41,6 @@ Consulte o [página de solução de problemas](~/cross-platform/macios/binding/t
 ## <a name="introduction-to-opentkmacplatformopentkmd"></a>[Introdução ao OpenTK](~/mac/platform/opentk.md)
 
 OpenTK (Abra o Toolkit) é uma avançada de baixo nível c# biblioteca que facilita o trabalho com OpenGL, OpenCL e OpenAL. OpenTK pode ser usado para jogos, aplicativos científicos ou outros projetos que exigem gráficos 3D, a funcionalidade de áudio ou computacional. Este artigo fornece uma breve introdução ao uso de OpenTK em um aplicativo Xamarin.Mac.
-
 
 ## <a name="introduction-to-storyboardsmacplatformstoryboardsindexmd"></a>[Introdução ao Storyboards](~/mac/platform/storyboards/index.md)
 

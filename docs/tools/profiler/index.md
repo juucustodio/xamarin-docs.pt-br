@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
 ms.date: 06/03/2018
-ms.openlocfilehash: 42a8a2e3751d111f6ba8ccbea32e0446460f9a29
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8882cb9cd84940e12865a730f75e36ecbaf9b6f0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793869"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066670"
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -28,7 +28,7 @@ Este guia examina os cenários comuns de criação de perfil e apresenta o criad
 ## <a name="download-and-install"></a>Baixar e instalar
 
 > [!NOTE]
-> Você precisará ser um [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) assinante para desbloquear esse recurso em um Visual Studio Enterprise no Windows ou o Visual Studio para Mac em um Mac.
+> Você precisará ser um [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) assinante para desbloquear esse recurso em um Visual Studio Enterprise no Windows ou o Visual Studio para Mac em um Mac.
 
 O criador de perfil do Xamarin é um aplicativo autônomo e está integrado com o Visual Studio para Mac e o Visual Studio habilitar a criação de perfil de dentro do IDE.
 

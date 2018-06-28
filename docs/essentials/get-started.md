@@ -5,12 +5,12 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f0f6eebbd12041a7be2d8e2dc00a9146b40d675f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a42086f70eb81a761358655b3effb9f8f934c8d4
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783068"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37067255"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introdução ao Xamarin.Essentials
 
@@ -63,6 +63,10 @@ Xamarin.Essentials está disponível como um pacote NuGet que pode ser adicionad
 5. Xamarin.Essentials requer configuração específica de plataforma:
 
     # <a name="androidtabandroid"></a>[Android](#tab/android)
+
+    Xamarin.Essentials oferece suporte a uma versão do Android mínimo do 4.4, correspondente ao nível de API 19, mas a versão do Android para compilação de destino deve ser 8.1, correspondente ao nível de API 27. (No Visual Studio, essas duas versões são definidas na caixa de diálogo Propriedades do projeto para o projeto Android, na guia do manifesto do Android. No Visual Studio para Mac, elas são definidas na caixa de diálogo Opções de projeto para o projeto Android, na guia aplicativo do Android.) 
+    
+    Xamarin.Essentials instala a versão 27.0.2 das bibliotecas de Xamarin.Android.Support requer. Outras bibliotecas de Xamarin.Android.Support que seu aplicativo requer também devem ser atualizadas para a versão 27.0.2 usando o NuGet package manager. Todas as bibliotecas de Xamarin.Android.Support usadas pelo seu aplicativo deve ser o mesmo e deve ser pelo menos versão 27.0.2. Consulte o [página de solução](troubleshooting.md) se você tiver problemas ao adicionar o Xamarin.Essentials NuGet ou atualizar NuGets em sua solução.
 
     O projeto Android `MainLauncher` ou qualquer `Activity` que é iniciado Xamarin.Essentials deve ser inicializado no `OnCreate` método:
 

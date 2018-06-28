@@ -6,12 +6,12 @@ ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: 84ef5d047b3f70635d74ef5bee7741a7447db677
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 53871a5311cdba824b0bddca37dd5c416d06e272
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793211"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066803"
 ---
 # <a name="getting-started-with-java"></a>Guia de Introdução com Java
 
@@ -35,10 +35,10 @@ Para Windows:
 
 Para o Android:
 
-* [Xamarin 7.5](https://www.visualstudio.com/xamarin/) ou posterior
+* [Xamarin 7.5](https://visualstudio.microsoft.com/xamarin/) ou posterior
 * [O Android Studio 3. x](https://developer.android.com/studio/index.html) com Java 1.8
 
-Você pode usar [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/) para editar e compilar o código c#.
+Você pode usar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/) para editar e compilar o código c#.
 
 > [!NOTE]
 > Versões anteriores do Xcode, Visual Studio, xamarin, Android Studio e Mono _pode_ funcionar, mas não testado e sem suporte.

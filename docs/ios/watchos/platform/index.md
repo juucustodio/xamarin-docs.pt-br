@@ -1,22 +1,30 @@
 ---
-title: watchOS recursos de plataforma
+title: recursos da plataforma watchOS
 description: Links este documento em várias guias que descrevem os recursos da plataforma watchOS como pagamento da Apple, notificações, complicações, pró-ativo sugestões, aplicativos de treinamento e muito mais.
 ms.prod: xamarin
 ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/13/2016
-ms.openlocfilehash: 8ad4dc52c3bca0f54adb64bb97acaa23aeb1e590
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/25/2018
+ms.openlocfilehash: 16d10dd69223f404aac7c933302992a1544461e9
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791276"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066608"
 ---
-# <a name="watchos-platform-features"></a>watchOS recursos de plataforma
+# <a name="watchos-platform-features"></a>recursos da plataforma watchOS
 
-_Recursos de específicos de Apple Watch para incluir em aplicativos de watchOS._
+Links este documento em várias guias que descrevem os recursos da plataforma watchOS como pagamento da Apple, notificações, complicações, pró-ativo sugestões, aplicativos de treinamento e muito mais.
+
+## <a name="introduction-to-watchos-4introduction-to-watchos4md"></a>[Introdução ao watchOS 4](introduction-to-watchos4.md)
+
+Este documento fornece uma visão geral dos recursos adicionados e atualizados em watchOS 4.
+
+## <a name="introduction-to-watchos-3introduction-to-watchos3indexmd"></a>[Introdução ao watchOS 3](introduction-to-watchos3/index.md)
+
+Este artigo descreve as APIs de novas e atualizadas em watchOS 3.
 
 ## <a name="apple-pay-enhancementsioswatchosplatformapple-paymd"></a>[Aprimoramentos de pagamento da Apple](~/ios/watchos/platform/apple-pay.md)
 
@@ -26,24 +34,15 @@ WatchOS 3, a estrutura de PassKit foi expandida para permitir que o suporte para
 
 watchOS 3 apresenta várias tarefas em segundo plano que um aplicativo pode usar para atualizar suas informações de garantir que ele tenha o conteúdo, o usuário precisa antes de abri-lo.
 
-## <a name="introduction-to-watchos-4introduction-to-watchos4md"></a>[Introdução ao watchOS 4](introduction-to-watchos4.md)
-
-Novos recursos do watchOS 4.
-
-## <a name="introduction-to-watchos-3introduction-to-watchos3indexmd"></a>[Introdução ao watchOS 3](introduction-to-watchos3/index.md)
-
-Este artigo apresenta todas as APIs de novas e modificadas disponíveis no watchOS 3 para desenvolvedores do Xamarin.
-
-##  <a name="notificationsnotificationsmd"></a>[Notificações](notifications.md)
+## <a name="notificationsnotificationsmd"></a>[Notificações](notifications.md)
 
 Saiba como fornecer tratamento em seu aplicativo de inspeção de notificação personalizada.
 
-##  <a name="complicationscomplicationsmd"></a>[Complicações](complications.md)
+## <a name="complicationscomplicationsmd"></a>[Complicações](complications.md)
 
 Adicione suporte complicativo para exibir os dados atualizados na face do relógio.
 
-
-## <a name="proactive-suggestionsioswatchosplatformproactive-suggestionsmd"></a>[Sugestões proativas](~/ios/watchos/platform/proactive-suggestions.md)
+## <a name="proactive-suggestionsioswatchosplatformproactive-suggestionsmd"></a>[Sugestões proativos](~/ios/watchos/platform/proactive-suggestions.md)
 
 watchOS 3 permite que o aplicativo proativamente apresentar informações ao usuário em contextos de dado. Para dar suporte a esse recurso, o [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) agora inclui o `MapItem` propriedade que permite que o aplicativo forneça informações de local para uso posterior por outros aplicativos.
 

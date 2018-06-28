@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935422"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066644"
 ---
 # <a name="xamarin-live-reload"></a>Recarregar ao vivo do Xamarin
 
@@ -28,7 +28,7 @@ Recarregar ao vivo está disponível atualmente apenas no Visual Studio de 2017.
 
 ## <a name="requirements"></a>Requisitos
 
-* [Visual Studio 2017 versão 15,7 ou superior](https://www.visualstudio.com/vs/) ou superior com o **desenvolvimento móvel com o .NET** carga de trabalho.
+* [Visual Studio 2017 versão 15,7 ou superior](https://visualstudio.microsoft.com/vs/) ou superior com o **desenvolvimento móvel com o .NET** carga de trabalho.
 * [Xamarin. Forms 3.0.0 ou acima](https://www.nuget.org/packages/Xamarin.Forms/) ou superior.
 
 ## <a name="getting-started"></a>Guia de Introdução

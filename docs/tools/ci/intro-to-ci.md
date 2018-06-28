@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: topgenorth
 ms.author: toopge
 ms.date: 07/19/2017
-ms.openlocfilehash: 333e672b054c38370847338e9a4ffad94c90bb5d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 67fc32fc9f79d54274642fbab2d0c2f8afd14d8c
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793656"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066501"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introdução à integração contínua com o Xamarin
 
@@ -48,14 +48,14 @@ Há um ecossistema amplo de ferramentas comerciais e de código-fonte aberto pro
 
 ### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services e o Team Foundation Server
 
-[Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs) (VSTS) e [Team Foundation Server](http://msdn.microsoft.com/vstudio/ff637362.aspx) (TFS) são serviços, rastreamento de tarefas, planejamento do agile e relatório ferramentas e versão de compilação de ferramentas de colaboração da Microsoft para a integração contínua controle. Com controle de versão, VSTS e TFS pode trabalhar com seu próprio sistema (controle de versão do Team Foundation ou TFVC) ou com projetos hospedados no GitHub.
+[Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/) (VSTS) e [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) são serviços, rastreamento de tarefas, planejamento do agile e relatório ferramentas e versão de compilação de ferramentas de colaboração da Microsoft para a integração contínua controle. Com controle de versão, VSTS e TFS pode trabalhar com seu próprio sistema (controle de versão do Team Foundation ou TFVC) ou com projetos hospedados no GitHub.
 
  - Visual Studio Team Services fornece serviços por meio da nuvem. Sua principal vantagem é que ele não requer hardware dedicado ou infraestrutura e pode ser acessado de qualquer lugar por meio de navegadores da web e ferramentas populares de desenvolvimento como o Visual Studio, tornando-o atraente para equipes que estão geograficamente distribuído. É gratuito para equipes de cinco desenvolvedores ou menos, após o qual licenças adicionais podem ser adquiridas para acomodar uma equipe crescente.
  - TFS é projetado para servidores do Windows local e acessado por meio de uma rede local ou uma conexão VPN para a rede. Sua vantagem principal é totalmente controlar a configuração dos servidores de compilação e pode instalar qualquer software ou serviço adicional é necessários. TFS tem uma edição Express básica gratuita para pequenas equipes.
 
 TFS e VSTS é integrado com o Visual Studio e permitir que os desenvolvedores realizar tarefas de CI de dentro de um único IDE conforto e controle de versão de muitos. O plug-in do Team Explorer Everywhere para Eclipse (veja abaixo) também está disponível. O Visual Studio para Mac não oferece nenhum suporte para o TFS ou VSTS.
 
-Sistema de compilação do Visual Studio Team Service tem suporte direto para projetos de Xamarin, em que você criar uma definição de compilação para cada plataforma de destino (Android, iOS e Windows). A licença apropriada do Xamarin é necessária para cada definição de compilação. Também é possível conectar-se a um local, compatíveis com o Xamarin TFS build server para Visual Studio Team Services para essa finalidade. Com essa configuração, compilações que estão na fila para VSTS serão delegadas ao servidor local. Para obter detalhes, consulte [implantar e configurar um servidor de compilação](https://msdn.microsoft.com/library/ms181712.aspx). Como alternativa, você pode usar outra ferramenta de compilação como Jenkins ou equipe cidade.
+Sistema de compilação do Visual Studio Team Service tem suporte direto para projetos de Xamarin, em que você criar uma definição de compilação para cada plataforma de destino (Android, iOS e Windows). A licença apropriada do Xamarin é necessária para cada definição de compilação. Também é possível conectar-se a um local, compatíveis com o Xamarin TFS build server para Visual Studio Team Services para essa finalidade. Com essa configuração, compilações que estão na fila para VSTS serão delegadas ao servidor local. Para obter detalhes, consulte [implantar e configurar um servidor de compilação](https://docs.microsoft.com/vsts/pipelines/agents/agents?view=vsts). Como alternativa, você pode usar outra ferramenta de compilação como Jenkins ou equipe cidade.
 
 Um resumo de todos os recursos de gerenciamento de ciclo de vida do aplicativo (ALM) do Visual Studio, o Visual Studio Team Services e o Team Foundation Server, consulte [Application Lifecycle Management com aplicativos Xamarin](https://msdn.microsoft.com/library/mt162217(v=vs.140).aspx) no MSDN.
 
@@ -107,7 +107,7 @@ Também é possível vincular a um servidor TFS local a um projeto do Visual Stu
 
 ### <a name="visual-studio-team-services-and-jenkins"></a>Jenkins e do visual Studio Team Services
 
-Se você usar Jenkins para criar seus aplicativos, você pode armazenar o seu código no Visual Studio Team Services ou o Team Foundation Server e continuar a usar Jenkins para as compilações de CI. Você pode disparar um build Jenkins quando você enviar por push código ao seu projeto de equipe repositório Git ou opção de código ao TFVC. Para obter detalhes, consulte [Jenkins com o Visual Studio Team Services](https://www.visualstudio.com/docs/marketplace/integrate/service-hooks/services/jenkins).
+Se você usar Jenkins para criar seus aplicativos, você pode armazenar o seu código no Visual Studio Team Services ou o Team Foundation Server e continuar a usar Jenkins para as compilações de CI. Você pode disparar um build Jenkins quando você enviar por push código ao seu projeto de equipe repositório Git ou opção de código ao TFVC. Para obter detalhes, consulte [Jenkins com o Visual Studio Team Services](https://docs.microsoft.com/en-us/vsts/service-hooks/services/jenkins?view=vsts).
 
 [![](intro-to-ci-images/intro04-small.png "Se você usar Jenkins para criar seus aplicativos, você pode armazenar seu código no Visual Studio Team Services ou o Team Foundation Server e continuar a usar Jenkins para as compilações de CI")](intro-to-ci-images/intro04.png#lightbox)
 
