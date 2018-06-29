@@ -5,12 +5,12 @@ ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 78ed943a0fa7ca0cb249a4ac030ea6b52dcfb537
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 2c02188b5282949559e0abc5fa1b61b6b451fc8e
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782931"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080423"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: magnetômetro
 
@@ -77,6 +77,8 @@ Todos os dados são retornados em microteslas.
 - **Jogo** – taxa adequado para jogos (não é garantidos para retornar no thread de interface do usuário).
 - **Normal** – taxa padrão adequada para alterações de orientação da tela.
 - **Interface do usuário** – taxa adequado para a interface de usuário geral.
+
+Se o manipulador de eventos não é garantido para executar no thread da interface do usuário e se o manipulador de eventos precisa acessar elementos de interface do usuário, use o [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) método para executar esse código no thread da interface do usuário.
 
 ## <a name="api"></a>API
 

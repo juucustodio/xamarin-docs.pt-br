@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 5fec06fd6f0c13a75040d940a11811ef97c3bcc3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782733"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080421"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -44,8 +44,11 @@ Siga os guias para integrar esses recursos Xamarin.Essentials em seus aplicativo
 * [Localização geográfica](geolocation.md?context=xamarin/xamarin-forms) – recuperar o local de GPS do dispositivo.
 * [Giroscópio](gyroscope.md?context=xamarin/xamarin-forms) – controle de rotação ao redor de três eixos de principal do dispositivo.
 * [Magnetômetro](magnetometer.md?context=xamarin/xamarin-forms) – detectar a orientação do dispositivo em relação ao campo de magnética da Terra.
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – executar código no thread principal do aplicativo. 
 * [Abra o navegador](open-browser.md?context=xamarin/xamarin-forms) – rapidamente e facilmente, abra um navegador para um site específico.
+* [Sensor de orientação](orientation-sensor.md?context=xamarin/xamarin-forms) – recuperar a orientação do dispositivo em três espaço bidimensional.
 * [Discagem telefônica](phone-dialer.md?context=xamarin/xamarin-forms) – abrir a discagem telefônica.
+* [Energia](power.md?context=xamarin/xamarin-forms) – obter o status de economia de energia do dispositivo.
 * [Preferências](preferences.md?context=xamarin/xamarin-forms) – rapidamente e facilmente adicionar preferências persistentes.
 * [Bloqueio de tela](screen-lock.md?context=xamarin/xamarin-forms) – manter a tela do dispositivo ativo.
 * [Armazenamento seguro](secure-storage.md?context=xamarin/xamarin-forms) – com segurança armazenar dados.
