@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 444559672f25b13b7d3a769d6de4bd6384174965
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268882"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066462"
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalando o Xamarin
 
@@ -269,7 +269,7 @@ Para desinstalar completamente o Visual Studio 2017, escolha **Desinstalar** no 
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 e anteriores
 
-Para desinstalar completamente o Visual Studio 2015, use [a resposta de suporte em visualstudio.com](https://www.visualstudio.com/vs/support/vs2015/uninstall-visual-studio-2015/).
+Para desinstalar completamente o Visual Studio 2015, use [a resposta de suporte em visualstudio.com](https://visualstudio.microsoft.com/vs/support/vs2015/uninstall-visual-studio-2015/).
 
 O Xamarin pode ser desinstalado de um computador Windows por meio do **Painel de Controle**. Navegue até **Programas e Recursos** ou **Programas > Desinstalar um Programa** conforme ilustrado abaixo:
 
