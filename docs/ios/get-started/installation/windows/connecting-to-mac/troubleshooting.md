@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e371b4aecdd7b40c33e4596fec3c3ca7691bb42c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 575e6705679539af6d3e5fae3ffc5721d9f79ba6
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786181"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291042"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solução de problemas de conexão de um host de build do Xamarin.iOS
 
@@ -91,7 +91,7 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
     ssh amyb@10.1.8.95 'ls'
     ```
     
-    Isso deve listar o conteúdo de seu diretório base no Mac. Se o comando `ls` funcionar corretamente, mas a conexão do Visual Studio ainda falhar, você poderá verificar a seção "[Problemas conhecidos e limitações](#knownissues)" sobre as complicações específicas do Xamarin. Se nenhum desses corresponder ao seu problema, [registre um novo relatório de bugs](https://bugzilla.xamarin.com/newbug) e anexe os logs descritos em "[Verificar arquivos de Log detalhado](#verboselogs)".
+    Isso deve listar o conteúdo de seu diretório base no Mac. Se o comando `ls` funcionar corretamente, mas a conexão do Visual Studio ainda falhar, você poderá verificar a seção "[Problemas conhecidos e limitações](#knownissues)" sobre as complicações específicas do Xamarin. Se nenhuma das opções servir para o seu problema, envie um novo relatório de bug na Comunidade de Desenvolvedores acessando **Ajuda > Enviar Comentários > Relatar um problema** no Visual Studio e anexe os logs descritos em [Verificar os Arquivos de Log Detalhados](#verboselogs).
 
 10. Se **etapa 8 falhar**, você poderá executar o seguinte comando no Terminal do Mac para ver se o servidor SSH está aceitando _alguma_ conexão:
 

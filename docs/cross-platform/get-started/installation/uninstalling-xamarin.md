@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: d5cf15b8ecd225fb75a3cfa0017cb84bc13cce1b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 444559672f25b13b7d3a769d6de4bd6384174965
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782015"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268882"
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalando o Xamarin
 
@@ -27,7 +27,7 @@ Este guia pode ser usado para desinstalar cada produto individualmente ao navega
 - [Xamarin.Android](#uninstallandroid)
 - [Xamarin.iOS](#uninstallios)
 - [Xamarin.Mac](#uninstallmac)
-- [Inspector e Workbooks](#uninstallworkbooks)
+- [Pastas de trabalho](#uninstallworkbooks)
 - [Xamarin Profiler](#uninstallprofiler)
 - [Instalador](#uninstallinstaller)
 
@@ -146,9 +146,9 @@ rm -rf ~/Library/Xamarin.Mac
 
 <a name="uninstallworkbooks" />
 
-### <a name="uninstall-workbooks-and-inspector"></a>Desinstalar o Workbooks e o Inspector
+### <a name="uninstall-workbooks"></a>Desinstalar o Workbooks
 
-Para remover o Xamarin Inspector e o Workbooks versão 1.2.2 e superior, use os seguintes comandos no Terminal:
+Para remover o Xamarin Workbooks versão 1.2.2 e superiores, use os seguintes comandos no Terminal:
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall

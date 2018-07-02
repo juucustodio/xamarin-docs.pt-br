@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 29fc698e6ed1cfe02ce329813342916d5e7a1651
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 92bcfc888c52f9f74c8484295666da8f5ef7a14c
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209330"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para Desenvolvedores Java
 
@@ -50,7 +51,7 @@ No entanto, há várias diferenças entre Java e C#. Por exemplo:
 
 -   O Java não é compatível com diretivas de pré-processador como `#define`.
 
--   O Java não é compatível com tipos de inteiro sem sinal, enquanto o C oferece tipos de inteiro sem sinal como `ulong`, `uint`, `ushort` e `byte`.
+-   O Java não é compatível com tipos de inteiro sem sinal, enquanto o C# oferece tipos de inteiro sem sinal como `ulong`, `uint`, `ushort` e `byte`.
 
 -   O Java não é compatível com a sobrecarga de operador; no C#, você pode sobrecarregar operadores e conversões.
 

@@ -7,13 +7,13 @@ ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2018
-ms.openlocfilehash: 011ec94aca4e5110c704b83cb24cf6260338dfbd
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 06/13/2018
+ms.openlocfilehash: 7c8eee5fc7075f23221c06dab29b83b1d5e01ffc
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35243620"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269064"
 ---
 # <a name="xamarinforms-deep-dive"></a>Aprofundamento no Xamarin.Forms
 
@@ -62,15 +62,11 @@ Os projetos são:
 
 ## <a name="anatomy-of-a-xamarinforms-application"></a>Anatomia de um aplicativo Xamarin.Forms
 
-A captura de tela a seguir mostra o conteúdo do projeto PCL Phoneword no Visual Studio para Mac:
+A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET Standard Phoneword no Visual Studio para Mac:
 
-![](deepdive-images/xs/pcl-project.png "Conteúdo do projeto PCL Phoneword")
+![](deepdive-images/xs/library-project.png "Conteúdo do projeto de biblioteca do .NET Standard Phoneword")
 
-O projeto consiste em três pastas:
-
-- **Referências** – contém os assemblies necessários para compilar e executar o aplicativo. Expandir a pasta do Subconjunto Portátil .NET revela referências aos assemblies do .NET, como [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx), System.Core e [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx). Expandir a pasta **Pacotes de Origem** revela referências aos assemblies Xamarin.Forms.
-- **Pacotes** – o diretório Pacotes aloja pacotes [NuGet](https://www.nuget.org) que simplificam o processo de usar bibliotecas de terceiros em seu aplicativo. Esses pacotes podem ser atualizados para as versões mais recentes clicando com o botão direito do mouse na pasta e selecionando a opção de atualização no menu pop-up.
-- **Propriedades** – contém **AssemblyInfo.cs**, um arquivo de metadados de assembly do .NET. É uma boa prática preencher esse arquivo com algumas informações básicas sobre seu aplicativo. Para saber mais sobre esse arquivo, confira [Classe AssemblyInfo](http://msdn.microsoft.com/library/microsoft.visualbasic.applicationservices.assemblyinfo(v=vs.110).aspx) no MSDN.
+O projeto tem um nó **Dependências** que contém os nós **NuGet** e **SDK**. O nó **NuGet** contém o pacote do NuGet Xamarin.Forms que foi adicionado ao projeto e o nó **SDK** contém o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes do NuGet que definem o .NET Standard.
 
 -----
 
@@ -81,7 +77,6 @@ O projeto também consiste em vários arquivos:
 - **IDialer.cs** – a interface `IDialer`, que especifica que o método `Dial` deve ser fornecido por qualquer classe de implementação.
 - **MainPage. XAML** – a marcação XAML para a classe `MainPage`, que define a interface do usuário para a página exibida quando o aplicativo é iniciado.
 - **MainPage.xaml.cs** – o code-behind para a classe `MainPage`, que contém a lógica de negócios executada quando o usuário interage com a página.
-- **packages.config** – (somente Visual Studio para Mac) um arquivo XML que contém informações sobre os pacotes do NuGet usados pelo projeto para rastrear os pacotes necessários e suas respectivas versões. O Visual Studio para Mac e o Visual Studio podem ser configurados para restaurar automaticamente quaisquer pacotes do NuGet ausentes ao compartilhar o código-fonte com outros usuários. O conteúdo desse arquivo é controlado pelo gerenciador de pacotes NuGet e não deve ser editado manualmente.
 - **PhoneTranslator.cs** – a lógica de negócios responsável por converter uma palavra de telefone em um número de telefone, que é invocado de **MainPage.xaml.cs**.
 
 Para saber mais sobre a anatomia de um aplicativo Xamarin.iOS, consulte [Anatomia de um aplicativo Xamarin.iOS](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy). Para saber mais sobre a anatomia de um aplicativo Xamarin.Android, consulte [Anatomia de um aplicativo Xamarin.Android](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy).
@@ -99,8 +94,6 @@ Um aplicativo Xamarin.Forms é arquitetado da mesma forma que um aplicativo trad
 Um aplicativo Xamarin.Forms é arquitetado da mesma forma que um aplicativo tradicional de plataforma cruzada. O código compartilhado normalmente é colocado em uma biblioteca do .NET Standard e aplicativos específicos de plataforma consomem o código compartilhado. O diagrama a seguir mostra uma visão geral dessa relação para o aplicativo Phoneword:
 
 ![](deepdive-images/xs/architecture.png "Arquitetura do Phoneword")
-
-Para obter mais informações sobre PCLs, consulte [Introduction to Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md) (Introdução às bibliotecas de classes portáteis).
 
 -----
 
@@ -153,23 +146,26 @@ A substituição `FinishedLaunching` inicializa a estrutura do Xamarin.Forms ao 
 
 ### <a name="android"></a>Android
 
-Para inicializar a página inicial do Xamarin.Forms no Android, o projeto Phoneword.Droid inclui código que cria uma `Activity` com o atributo `MainLauncher`, com a atividade herdando da classe `FormsApplicationActivity`, como mostra o código de exemplo a seguir:
+Para inicializar a página inicial do Xamarin.Forms no Android, o projeto Phoneword.Droid inclui código que cria uma `Activity` com o atributo `MainLauncher`, com a atividade herdando da classe `FormsAppCompatActivity`, como mostra o código de exemplo a seguir:
 
 ```csharp
 namespace Phoneword.Droid
 {
-    [Activity(Label = "Phoneword",
-              Icon = "@drawable/icon",
+    [Activity(Label = "Phoneword", 
+              Icon = "@mipmap/icon", 
+              Theme = "@style/MainTheme", 
               MainLauncher = true,
               ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         internal static MainActivity Instance { get; private set; }
 
         protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(bundle);
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
+            base.OnCreate(bundle);
             Instance = this;
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());

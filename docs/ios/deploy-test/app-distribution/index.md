@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 83c58fa430a0cf21e8b86e56b9dea04b3cad6d82
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 815277e9a4f9384d92bf17376f426cacd40dbc9f
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784762"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209434"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Visão geral da distribuição de aplicativos Xamarin.iOS
 
@@ -35,6 +35,9 @@ Todos esses cenários exigem que os aplicativos sejam provisionados usando o *pe
 <a name="App_Store_Distribution"/>
 
 ## <a name="app-store-distribution"></a>Distribuição da App Store
+
+> [!IMPORTANT]
+> A Apple [indicou](https://developer.apple.com/news/?id=05072018a) que, a partir de julho de 2018, todos os aplicativos e atualizações enviados à App Store deverão ter sido criados com o SDK do iOS 11 e [ser compatíveis com à exibição do iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
 
 Essa é a maneira principal que aplicativos iOS são distribuídos para consumidores em dispositivos iOS. Todos os aplicativos enviados à App Store exigem aprovação da Apple.
 
