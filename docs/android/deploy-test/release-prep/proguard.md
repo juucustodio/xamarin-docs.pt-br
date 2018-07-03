@@ -1,27 +1,27 @@
 ---
 title: ProGuard
-description: ProGuard é um redutor de arquivo de classe Java, otimizador, ofuscador e pré-verificador. Ele detecta e remove o código não utilizado, analisa e otimiza o código de bytes e ofusca classes e membros de classe. Este guia explica como funciona o ProGuard, como habilitá-lo em seu projeto e como configurá-lo. Ele também fornece vários exemplos de configurações do ProGuard.
+description: O Xamarin.Android ProGuard é um redutor, otimizador e pré-verificador de arquivo de classe Java. Ele detecta e remove o código não utilizado, analisa e otimiza o código de bytes. Este guia explica como funciona o ProGuard, como habilitá-lo em seu projeto e como configurá-lo. Ele também fornece vários exemplos de configurações do ProGuard.
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: e65c78633ae91318bd8e9cce949bac9cc12675c0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771438"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321370"
 ---
 # <a name="proguard"></a>ProGuard
 
-_O ProGuard é um redutor, otimizador, ofuscador e pré-verificador de arquivo de classe Java. Ele detecta e remove o código não utilizado, analisa e otimiza o código de bytes e ofusca classes e membros de classe. Este guia explica como funciona o ProGuard, como habilitá-lo em seu projeto e como configurá-lo. Ele também fornece vários exemplos de configurações do ProGuard._
+_O Xamarin.Android ProGuard é um redutor, otimizador e pré-verificador de arquivo de classe Java. Ele detecta e remove o código não utilizado, analisa e otimiza o código de bytes. Este guia explica como funciona o ProGuard, como habilitá-lo em seu projeto e como configurá-lo. Ele também fornece vários exemplos de configurações do ProGuard._
 
 
 ## <a name="overview"></a>Visão geral
 
-O ProGuard detecta e remove classes não utilizadas, campos, métodos e atributos de seu aplicativo empacotado. Ele pode fazer o mesmo para bibliotecas referenciadas (isso pode ajudar a evitar o limite de referência de 64k). A ferramenta ProGuard do SDK do Android também otimiza o código de bytes, remove as instruções de código não utilizado e ofusca as classes, campos e métodos restantes com nomes mais curtos. O ProGuard lê **jars de entrada** e, em seguida, diminui, otimiza, ofusca e verifica previamente. Ele grava os resultados em um ou mais **jars de saída**. 
+O ProGuard detecta e remove classes não utilizadas, campos, métodos e atributos de seu aplicativo empacotado. Ele pode fazer o mesmo para bibliotecas referenciadas (isso pode ajudar a evitar o limite de referência de 64k). A ferramenta ProGuard do SDK do Android também otimiza código de bytes e remove instruções de código não utilizadas. O ProGuard lê **jars de entrada** e, em seguida, reduz, otimiza e os verifica previamente. Ele grava os resultados em um ou mais **jars de saída**. 
 
 O ProGuard processa o APK de entrada usando as seguintes etapas: 
 
@@ -30,7 +30,7 @@ O ProGuard processa o APK de entrada usando as seguintes etapas:
 2.  **Etapa de otimização** &ndash; O ProGuard otimiza ainda mais o código. 
     Entre outras otimizações, classes e métodos que não são pontos de entrada podem ser transformados em final, particular ou estático, e os parâmetros não usados podem ser removidos e alguns métodos podem ser embutidos. 
 
-3.  **Etapa de ofuscação** &ndash; O ProGuard renomeia classes e membros de classe que não são pontos de entrada. Manter os pontos de entrada garante que eles ainda possam ser acessados por seus nomes originais. 
+3.  **Etapa de ofuscação** &ndash; No desenvolvimento nativo do Android, o ProGuard renomeia classes e membros de classe que não são pontos de entrada. Manter os pontos de entrada garante que eles ainda possam ser acessados por seus nomes originais. No entanto, não há suporte para esta etapa no Xamarin.Android porque o aplicativo é compilado para o IL (Linguagem Intermediária).
 
 4.  **Etapa de pré-verificação** &ndash; Realiza verificações nos códigos de byte Java antes do tempo de execução e anota os arquivos de classe para o benefício da VM Java. Esta é a única etapa em que não é preciso saber os pontos de entrada. 
 

@@ -1,17 +1,18 @@
 ---
 title: Log de depuração do Android
+description: Como usar o log de depuração para depurar aplicativos Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/04/2018
-ms.openlocfilehash: e0e22fe35dc5042a7b3c895a250803e936611629
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.date: 06/22/2018
+ms.openlocfilehash: 442606f456e6f42ee178cd93253883a1d9de52c4
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "30822876"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935211"
 ---
 # <a name="android-debug-log"></a>Log de depuração do Android
 
@@ -22,7 +23,7 @@ Um truque muito comum que os desenvolvedores usam para depurar seus aplicativos 
 A ferramenta **Log de Depuração** fornece uma maneira de visualizar a saída do log durante a depuração de um aplicativo através do Visual Studio. O log de depuração suporta os seguintes dispositivos:
 
 -   acessórios, tablets e telefones Android físicos.
--   Um dispositivo Virtual Android em execução no emulador do Google Android. 
+-   Um dispositivo Virtual Android em execução no Android Emulator. 
 
 > [!NOTE]
 > A ferramenta **Log de Depuração** não funciona com o Xamarin Live Player.

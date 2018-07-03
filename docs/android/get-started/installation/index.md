@@ -1,17 +1,18 @@
 ---
 title: Instalando e configurando o Xamarin.Android
+description: Como instalar e configurar o Xamarin.Android para funcionar com o Visual Studio.
 ms.prod: xamarin
 ms.assetid: 4BE549B8-5696-2BA7-DA32-8C0EE90A879D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/25/2018
-ms.openlocfilehash: b2f83c8f8ab6ab730a586b30394454f6bf6f6ba9
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/22/2018
+ms.openlocfilehash: 5991c907b85188581db105a8db9d17460954f56f
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33947502"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935484"
 ---
 # <a name="setup-and-installation"></a>Instalação e Configuração
 
@@ -32,7 +33,7 @@ O Visual Studio tem um Gerenciador de SDK do Android que substitui o Gerenciador
 
 ## <a name="android-emulator-setupandroidget-startedinstallationandroid-emulatorindexmd"></a>[Instalação do Android Emulator](~/android/get-started/installation/android-emulator/index.md)
 
-Estes artigos explicam como configurar o Google Android Emulator para testar e depurar aplicativos Xamarin.Android.
+Estes artigos explicam como configurar o Android Emulator para teste e depuração de aplicativos Xamarin.Android.
 
 ## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Configuração de Dispositivo Android](~/android/get-started/installation/set-up-device-for-development.md)
 

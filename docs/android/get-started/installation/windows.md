@@ -6,13 +6,13 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 545636bc38240bc17837a661416702ec259caf45
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: 1eb8d4ec9ad60f0f9e81676920df4d950a875088
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732600"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066436"
 ---
 # <a name="windows-installation"></a>Instalação do Windows
 
@@ -68,9 +68,9 @@ Você pode usar o Gerenciador de SDK do Android do Google para instalar as vers�
 
 Para saber mais sobre o uso do Gerenciador de SDK do Android do Xamarin, consulte [Instalação do SDK do Android](~/android/get-started/installation/android-sdk.md).
 
-### <a name="google-android-emulator"></a>Google Android Emulator
+### <a name="android-emulator"></a>Emulador do Android
 
-O [Google Android Emulator](https://developer.android.com/studio/run/emulator) pode ser uma ferramenta útil para desenvolver e testar aplicativos Xamarin.Android. Por exemplo, um dispositivo físico, como um tablet, talvez não esteja prontamente disponível durante o desenvolvimento ou um desenvolvedor pode querer executar alguns testes de integração no computador antes de confirmar o código.
+O [Android Emulator](https://developer.android.com/studio/run/emulator) pode ser uma ferramenta útil para desenvolver e testar um aplicativo Xamarin.Android. Por exemplo, um dispositivo físico, como um tablet, talvez não esteja prontamente disponível durante o desenvolvimento ou um desenvolvedor pode querer executar alguns testes de integração no computador antes de confirmar o código.
 
 Emular um dispositivo Android em um computador envolve os seguintes componentes:
 
@@ -83,10 +83,10 @@ Emular um dispositivo Android em um computador envolve os seguintes componentes:
 1. Hyper-V do Microsoft &ndash; Disponível em computadores que executam a Atualização de abril do Windows 10.
 2. HAXM (Hardware Accelerated Execution Manager) da Intel &ndash; Disponível em computadores x86 que executam o OS X, o macOS ou versões antigas do Windows.
 
-Para obter mais informações sobre o Google Android Emulator, o Hyper-V e o HAXM, confiram o guia [Aceleração de hardware para desempenho do emulador](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
+Para obter mais informações sobre o Android Emulator, o Hyper-V e o HAXM, consulte o guia [Aceleração de hardware para desempenho do emulador](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
 > [!NOTE]
-> Em versões anteriores do Windows, o HAXM não é compatível com o Hyper-V. Nesse cenário, é necessário [desabilitar o Hyper-V](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v) ou usar as imagens de emulador mais lentas que não têm as otimizações para x86.
+> Em versões anteriores do Windows, o HAXM não é compatível com o Hyper-V. Nesse cenário, é necessário [desabilitar o Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) ou usar as imagens de emulador mais lentas que não têm as otimizações para x86.
 
 
 <a name="device" />
@@ -118,7 +118,7 @@ A próxima etapa é dar uma olhada nos tutoriais [Olá, Android](~/android/get-s
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Baixar o Visual Studio](https://www.visualstudio.com/vs/)
+- [Baixar o Visual Studio](https://visualstudio.microsoft.com/vs/)
 - [Instalar as Ferramentas do Visual Studio para Xamarin](~/cross-platform/get-started/installation/windows.md)
 - [Requisitos do sistema](~/cross-platform/get-started/requirements.md)
 - [Configuração do SDK do Android](~/android/get-started/installation/android-sdk.md)
