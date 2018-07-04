@@ -11,7 +11,7 @@
 ### [Introdução ao desenvolvimento móvel](get-started/introduction-to-mobile-development.md)
 ### [Introdução ao SDLC móvel](get-started/introduction-to-mobile-sdlc.md)
 
-### [Criando aplicativos de plataforma cruzada](app-fundamentals/building-cross-platform-applications/index.md)
+### [Compilar aplicativos de plataforma cruzada](app-fundamentals/building-cross-platform-applications/index.md)
 #### [Visão geral](app-fundamentals/building-cross-platform-applications/overview.md)
 #### [Parte 1 – Noções básicas sobre a plataforma Xamarin Mobile](app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 #### [Parte 2 – Arquitetura](app-fundamentals/building-cross-platform-applications/architecture.md)
@@ -89,5 +89,4 @@
 #### [Por que o Visual Studio não inclui meu projeto de biblioteca referenciado no build?](troubleshooting/questions/vs-config-manager.md)
 
 ### [Atualizar referências de componentes para NuGet](troubleshooting/component-nuget.md)
-### [Opções com suporte](troubleshooting/support-options.md)
 ## [Amostras](samples/index.yml)
