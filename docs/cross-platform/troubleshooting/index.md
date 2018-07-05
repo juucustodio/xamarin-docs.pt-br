@@ -1,18 +1,18 @@
 ---
 title: Solução de problemas do Xamarin
-description: Esse links de documento para o conteúdo respostas para perguntas frequentes sobre o desenvolvimento do Xamarin, descreve como atualizar referências de componentes para o NuGet, discute as opções de suporte e respostas a perguntas específicas.
+description: Este documento leva ao conteúdo que responde a perguntas frequentes sobre o desenvolvimento do Xamarin, descreve como atualizar referências de componentes para NuGet, discute as opções de suporte e Encontre respostas para perguntas específicas do produto.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
 author: asb3993
 ms.author: amburns
-ms.date: 02/18/2018
-ms.openlocfilehash: 7a10a20290872005233bfffd5ec861f7372be4a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 05/10/2018
+ms.openlocfilehash: fe2cfacaa8658357a1c6629b1c1e8676efebd452
+ms.sourcegitcommit: 90be517ed7a1dbd221da5be5d1a7228d36f164d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782057"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792547"
 ---
 # <a name="xamarin-troubleshooting"></a>Solução de problemas do Xamarin
 
@@ -20,15 +20,11 @@ ms.locfileid: "34782057"
 
 ### <a name="frequently-asked-questionsquestionsindexmd"></a>[Perguntas frequentes](questions/index.md)
 
-Perguntas frequentes sobre a plataforma de Xamarin e as respostas específicas para o Visual Studio.
+Perguntas frequentes sobre a plataforma Xamarin e respostas específicas para o Visual Studio.
 
 ### <a name="updating-component-references-to-nugetcomponent-nugetmd"></a>[Atualizar referências de componentes para NuGet](component-nuget.md)
 
-Como atualizar as soluções existentes de Xamarin para alterar referências de componentes para pacotes do NuGet.
-
-### <a name="support-optionssupport-optionsmd"></a>[Opções com suporte](support-options.md)
-
-Opções de suporte para produtos do Xamarin.
+Como atualizar as soluções existentes do Xamarin para alterar referências de componentes para pacotes do NuGet.
 
 ## <a name="product-specific-questions"></a>Perguntas específicas
 

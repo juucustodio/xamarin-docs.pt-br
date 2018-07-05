@@ -1,22 +1,22 @@
 ---
 title: 'Xamarin.Essentials: vibração'
-description: Este documento descreve a classe de vibração Xamarin.Essentials, que lhe permite iniciar e interromper a funcionalidade de vibrate para uma quantidade de tempo desejada.
+description: Este documento descreve a classe de vibração Xamarin.Essentials, que permite iniciar e parar a funcionalidade de Vibrar por uma quantidade de tempo desejada.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2a2902ca4eac8b889f6875580d7cb4ea352803a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1de464d289bc684015e5fb8489683e3134535b70
+ms.sourcegitcommit: cb69bdb469db0b3118e365d71114091c6febb027
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782915"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37406765"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: vibração
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **vibração** classe permite iniciar e interromper a funcionalidade de vibrate para uma quantidade de tempo desejada.
+O **vibração** classe permite iniciar e interromper a funcionalidade de Vibrar para uma quantidade de tempo desejada.
 
 ## <a name="getting-started"></a>Guia de Introdução
 
@@ -24,9 +24,9 @@ Para acessar o **vibração** funcionalidade a seguinte configuração específi
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-A permissão Vibrate é necessária e deve ser configurada no projeto Android. Isso pode ser adicionado das seguintes maneiras:
+A permissão de Vibrar é obrigatório e deve ser configurada no projeto do Android. Isso pode ser adicionado das seguintes maneiras:
 
-Abra o **AssemblyInfo.cs** arquivo sob o **propriedades** pasta e adicionar:
+Abra o **AssemblyInfo.cs** do arquivo sob o **propriedades** pasta e adicione:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
@@ -34,13 +34,13 @@ Abra o **AssemblyInfo.cs** arquivo sob o **propriedades** pasta e adicionar:
 
 OU atualize o manifesto do Android:
 
-Abra o **AndroidManifest.xml** arquivo sob o **propriedades** pasta e adicione o seguinte dentro do **manifesto** nó.
+Abra o **androidmanifest. XML** arquivo sob o **propriedades** pasta e adicione o seguinte dentro do **manifesto** nó.
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-Ou clique com o botão direito no projeto Android e abra as propriedades do projeto. Em **manifesto do Android** encontrar o **as permissões necessárias:** área e verifique se o **VIBRATE** permissão. Isso atualizará automaticamente o **AndroidManifest.xml** arquivo.
+Ou clique com botão direito no projeto do Android e abra as propriedades do projeto. Sob **manifesto do Android** localizar o **permissões necessárias:** área e verifique se o **VIBRAR** permissão. Isso atualizará automaticamente a **androidmanifest. XML** arquivo.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -54,7 +54,7 @@ Nenhuma configuração adicional necessária.
 
 ## <a name="using-vibration"></a>Usando Vibração
 
-Adicione uma referência a Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -103,8 +103,9 @@ catch (Exception ex)
 
 | Plataforma | Diferença |
 | --- | --- |
-| iOS | Sempre vibra para 500 milissegundos. |
-| iOS | Não é possível cancelar vibração. |
+| iOS | Somente vibra quando o dispositivo estiver definido como "Vibrar no anel". |
+| iOS | Sempre vibra por 500 milissegundos. |
+| iOS | Não é possível cancelar a vibração. |
 
 ## <a name="api"></a>API
 
