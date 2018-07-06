@@ -1,60 +1,65 @@
 ---
-title: Guia de Introdução com objetivo Sharpie
-description: Este documento fornece uma visão geral do objetivo Sharpie, a ferramenta usada para automatizar a criação de associações do c# para código Objective-C.
+title: Introdução ao objetivo Sharpie
+description: Este documento fornece uma visão geral do objetivo Sharpie, a ferramenta usada para automatizar a criação de associações c# para o código Objective-C.
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: a0431f8952055a55be24ae5f85381a4295206a40
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: da8c51c4ba4df74afac950bbff867221e7307d6e
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781810"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854773"
 ---
-# <a name="getting-started-with-objective-sharpie"></a>Guia de Introdução com objetivo Sharpie
+# <a name="getting-started-with-objective-sharpie"></a>Introdução ao objetivo Sharpie
 
 > [!IMPORTANT]
-> Objetivo Sharpie é uma ferramenta para desenvolvedores do Xamarin experientes com conhecimento avançado de Objective-C (e, por extensão, C). Antes de tentar associar uma biblioteca Objective-C, você deve ter um conhecimento sólido de como criar a biblioteca nativa na linha de comando (e uma boa compreensão de como funciona a biblioteca nativa).
+> Objetivo Sharpie é uma ferramenta para desenvolvedores experientes do Xamarin com conhecimento avançado de Objective-C (e, por extensão, C). Antes de tentar associar uma biblioteca Objective-C, você deve ter um conhecimento sólido sobre como criar a biblioteca nativa na linha de comando (e uma boa compreensão de como funciona a biblioteca nativa).
 
 <a name="installing" />
 
-## <a name="installing-objective-sharpie"></a>Instalando o objetivo Sharpie
+## <a name="installing-objective-sharpie"></a>Instalando Sharpie objetivo
 
-Objetivo Sharpie atualmente é uma ferramenta de linha de comando autônoma para Mac OS X 10.10 e mais recente e é _não é um produto totalmente compatível com Xamarin_. Ele só deve ser usado por desenvolvedores avançados para ajudar a criar um projeto de associação para um 3ª parte biblioteca Objective-C.
+Objetivo Sharpie atualmente é uma ferramenta de linha de comando autônoma para o Mac OS X 10.10 e versões mais recentes e é _não é um produto Xamarin totalmente compatível com_. Ele só deve ser usado por desenvolvedores experientes para ajudá-lo na criação de um projeto de associação para uma 3ª biblioteca Objective-C de terceiros.
 
-Sharpie objetivo pode ser baixado como um instalador de pacote X do sistema operacional padrão.
-Execute o instalador e siga todas as instruções na tela do Assistente de instalação:
+Objetivo Sharpie pode ser baixado como um instalador de pacote padrão dos X.
+Execute o instalador e siga todos os prompts na tela do Assistente de instalação:
 
 - **Versão atual: 3.4**
   - [Baixe a versão mais recente](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
-  - [Fórum de anúncio](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
+  - [Comunicado de Fórum](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
 > [!TIP]
 > Use o `sharpie update` comando para atualizar para a versão mais recente.
 
-## <a name="basic-walkthrough"></a>Instruções passo a passo básico
+## <a name="basic-walkthrough"></a>Instruções passo a passo básica
 
-Objetivo Sharpie é uma ferramenta de linha de comando fornecido por Xamarin que ajuda a criar as definições de necessária para associar uma biblioteca de Objective-C 3ª parte para c#.
-Mesmo ao usar Sharpie objetivo, o desenvolvedor *será* precisa modificar os arquivos gerados após a conclusão da Sharpie objetivo para solucionar problemas que não podem ser tratados automaticamente pela ferramenta.
+Objetivo Sharpie é uma ferramenta de linha de comando fornecida por Xamarin que ajuda a criar as definições necessárias para associar uma biblioteca de Objective-C de terceiros 3ª a c#.
+Mesmo ao usar Sharpie objetivo, o desenvolvedor *serão* precisa modificar os arquivos gerados após a conclusão do objetivo Sharpie para solucionar problemas que não pôde ser tratados automaticamente pela ferramenta.
 
-Sempre que possível, o objetivo Sharpie será anotar APIs com que ele tem alguma dúvida sobre como vincular corretamente (muitas construções em código nativo são ambíguas).
+Sempre que possível, o objetivo Sharpie será anotar APIs com o qual ele tem alguma dúvida sobre como vincular corretamente (muitas construções em código nativo são ambíguas).
 Essas anotações aparecerá como [ `[Verify]` atributos](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md).
 
 A saída do objetivo Sharpie é um par de arquivos - [ `ApiDefinition.cs` e `StructsAndEnums.cs` ](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) -que pode ser usado para criar um projeto de associação que compila em uma biblioteca que você pode usar em aplicativos Xamarin.
 
 > [!IMPORTANT]
-> Objetivo Sharpie vem com um **principais** regra para o uso correto: você deve absolutamente passar os argumentos de linha de comando de compilador clang correto para garantir a análise adequada. Isso ocorre porque o Sharpie de objetivo de fase de análise é simplesmente uma ferramenta [implementados com relação a libtooling clang API](http://clang.llvm.org/docs/LibTooling.html).
+> Objetivo Sharpie vem com uma **principais** regra para o uso correto: você absolutamente necessário transmitir a ela os argumentos de linha de comando do compilador clang corretos para garantir a análise adequada. Isso ocorre porque o Sharpie de objetivo de fase de análise é simplesmente uma ferramenta [implementados com relação o API do libtooling clang](http://clang.llvm.org/docs/LibTooling.html).
 
-Isso significa que o objetivo Sharpie tem todo o poder do Clang (o compilador C/objetivo-C/C++ que realmente compila a biblioteca nativa, que você deve vincular) e todo o seu conhecimento interno sobre os arquivos de cabeçalho para a associação.
-Em vez de converter analisada [AST](http://en.wikipedia.org/wiki/Abstract_syntax_tree) para o código de objeto, objetivo Sharpie converte o AST para um c# associação "scaffold" adequado para a entrada para o `bmac` e `btouch` Xamarin ferramentas de associação.
+Isso significa que o objetivo Sharpie tem todo o poder do Clang (o compilador C/Objective-C/C++ que, na verdade, compila a biblioteca nativa, que você deve vincular) e todo o seu conhecimento interno dos arquivos de cabeçalho para a associação.
+Em vez de converter o analisado [AST](http://en.wikipedia.org/wiki/Abstract_syntax_tree) para o código de objeto, objetivo Sharpie converte o AST para um c# associação "scaffold" adequado para a entrada para o `bmac` e `btouch` ferramentas de ligação do Xamarin.
 
-Se objetivo Sharpie erro durante a análise, isso significa que clang com erros out durante sua análise fase tentando construir a AST e você precisa descobrir o motivo.
+Se objetivo Sharpie erros durante a análise, isso significa que clang apresentaram durante sua análise na fase de tentativa de construir a AST e você precisa descobrir o porquê.
 
-**NOVO!** tentativas de versão 3.0 abordar algumas dessa complexidade, dando suporte a projetos Xcode diretamente. Se uma biblioteca nativa de um projeto válido do Xcode objetivo Sharpie pode avaliar o projeto para um destino especificado e a configuração para deduzir os sinalizadores de compilador e arquivos de cabeçalho de entrada necessário.
+**NOVO!** tentativas de versão 3.0 abordar algumas dessa complexidade, oferecendo suporte a projetos do Xcode diretamente. Se uma biblioteca nativa tem um projeto válido do Xcode, objetivo Sharpie pode avaliar o projeto para uma configuração para deduzir os arquivos de cabeçalho de entrada necessárias e os sinalizadores de compilador e de destino especificado.
 
-Se nenhum projeto Xcode estiver disponível, você precisará estar mais familiarizados com o projeto ao deduzir os arquivos de cabeçalho de entrada corretos, caminhos de pesquisa do arquivo de cabeçalho e outros sinalizadores de compilador necessário. É importante observar que os sinalizadores de compilador usados para criar a biblioteca nativa são os mesmos que deve ser passado para o objetivo Sharpie. Este é um processo mais manual e que exigem um pouco de familiaridade com a compilação de código nativo na linha de comando com a cadeia de ferramentas Clang.
+Se nenhum projeto do Xcode estiver disponível, você precisará estar mais familiarizados com o projeto por deduzir os arquivos de cabeçalho de entrada corretos, caminhos de pesquisa do arquivo de cabeçalho e outros sinalizadores de compilador necessárias. É importante perceber que os sinalizadores de compilador usados para criar a biblioteca nativa são as mesmas que deve ser passado para o objetivo Sharpie. Isso é um processo mais manual e que exigem um pouco de familiaridade com a compilação de código nativo na linha de comando com a cadeia de ferramentas Clang.
 
-**NOVO!** versão 3.0 também apresenta uma ferramenta para facilmente associação [CocoaPods](https://cocoapods.org) por meio de `sharpie pod` comando.
-Se estiver interessado na biblioteca está disponível como um CocoaPod, é recomendável que iniciar tentando associar CocoaPod com objetivo Sharpie (em vez de tentar associar diretamente em relação à fonte).
+**NOVO!** versão 3.0 também apresenta uma ferramenta para associar facilmente [CocoaPods](https://cocoapods.org) por meio de `sharpie pod` comando.
+Se a biblioteca que você está interessado está disponível como um CocoaPod, recomendamos que você comece pela tentativa de associar o CocoaPod com objetivo Sharpie (em vez de tentar vincular com relação à fonte diretamente).
+
+## <a name="related-links"></a>Links relacionados
+
+- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

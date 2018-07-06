@@ -5,12 +5,12 @@ ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 1de464d289bc684015e5fb8489683e3134535b70
-ms.sourcegitcommit: cb69bdb469db0b3118e365d71114091c6febb027
+ms.openlocfilehash: ca21f43631c261cd384f9049f30f0fa29e2ca44e
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37406765"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855163"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: vibração
 
@@ -101,11 +101,21 @@ catch (Exception ex)
 
 ## <a name="platform-differences"></a>Diferenças de plataforma
 
-| Plataforma | Diferença |
-| --- | --- |
-| iOS | Somente vibra quando o dispositivo estiver definido como "Vibrar no anel". |
-| iOS | Sempre vibra por 500 milissegundos. |
-| iOS | Não é possível cancelar a vibração. |
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Não há diferenças de plataforma.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+* Somente vibra quando o dispositivo estiver definido como "Vibrar no anel".
+* Sempre vibra por 500 milissegundos.
+* Não é possível cancelar a vibração.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Não há diferenças de plataforma.
+
+-----
 
 ## <a name="api"></a>API
 
