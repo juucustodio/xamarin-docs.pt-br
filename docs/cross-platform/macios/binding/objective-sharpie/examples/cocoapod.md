@@ -1,24 +1,24 @@
 ---
-title: Exemplo do mundo real usando CocoaPods
+title: Exemplo do mundo real usando o CocoaPods
 description: Este documento demonstra como usar Sharpie de objetivo de gerar automaticamente as definições de associação do c# de um CocoaPod.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2018
-ms.openlocfilehash: 026b2c46f7c294d4ac4a110376131ec83c7c112e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: bac34f662e24c6b08a67cd8da1f41b37b43b3faf
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33947388"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855202"
 ---
-# <a name="real-world-example-using-cocoapods"></a>Exemplo do mundo real usando CocoaPods
+# <a name="real-world-example-using-cocoapods"></a>Exemplo do mundo real usando o CocoaPods
 
 > [!NOTE]
 > Este exemplo usa o [AFNetworking CocoaPod](https://cocoapods.org/pods/AFNetworking).
 
-Novo na versão 3.0, o objetivo Sharpie oferece suporte à associação CocoaPods e mesmo inclui um comando (`sharpie pod`) para fazer o download, configurando e criando CocoaPods muito fácil. Você deve [se familiarizar com CocoaPods](https://cocoapods.org) em geral antes de usar esse recurso.
+Novo na versão 3.0, objetivo Sharpie oferece suporte à associação CocoaPods e até mesmo inclui um comando (`sharpie pod`) para fazer o download, configurando e CocoaPods muito fácil de criar. Você deve [você se familiarizar com os CocoaPods](https://cocoapods.org) em geral antes de usar esse recurso.
 
 ## <a name="creating-a-binding-for-a-cocoapod"></a>Criando uma associação para um CocoaPod
 
@@ -67,13 +67,13 @@ Sending stats
 ** 🍻 Success! You can now use other `sharpie podn`  commands.
 ```
 
-Depois que seu CocoaPod foi configurado, agora você pode criar a associação:
+Depois que o CocoaPod foi configurado, agora você pode criar a associação:
 
 ```bash
 $ sharpie pod bind
 ```
 
-Isso resultará no projeto CocoaPod Xcode sendo criado e, em seguida, avaliada e analisados por objetivo Sharpie. Um lote de saída do console será gerado, mas deve resultar na definição de associação no final:
+Isso resultará no projeto CocoaPod Xcode que está sendo criado e, em seguida, avaliados e analisadas pelo Sharpie objetivo. Um lote de saída do console será gerado, mas deve resultar na definição de associação no final:
 
 ```bash
 (... lots of build output ...)
@@ -89,9 +89,10 @@ Done.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Depois de gerar o **ApiDefinitions.cs** e **StructsAndEnums.cs** arquivos, veja a documentação a seguir para gerar um assembly para usar em seus aplicativos:
+Depois de gerar o **ApiDefinitions.cs** e **StructsAndEnums.cs** arquivos, examine a documentação a seguir para gerar um assembly para usar em seus aplicativos:
 
-- [Visão geral da associação Objective-C](~/cross-platform/macios/binding/overview.md)
-- [Associação de bibliotecas Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [Passo a passo: Associação de uma biblioteca do iOS Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
-
+- [Visão geral da associação de Objective-C](~/cross-platform/macios/binding/overview.md)
+- [Associação de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
+- [Passo a passo: Associando uma biblioteca do iOS Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
