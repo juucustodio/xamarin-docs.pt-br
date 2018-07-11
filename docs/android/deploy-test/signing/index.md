@@ -1,32 +1,30 @@
 ---
 title: Assinatura do Pacote de Aplicativos Android
+description: Como assinar o APK (pacote de aplicativo Android) para publicação
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/21/2018
-ms.openlocfilehash: 6a4164ea4a56ee7c1b3c1abd05f7b1bb95aede4f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 07/02/2018
+ms.openlocfilehash: 4afcf42750cd9366bfd9fa5855fe1e7c0f114162
+ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458795"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403306"
 ---
 # <a name="signing-the-android-application-package"></a>Assinatura do Pacote de Aplicativos Android
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Em [Preparar um Aplicativo para Lançamento](~/android/deploy-test/release-prep/index.md), o **Gerenciador de Arquivo Morto** foi usado para build do aplicativo e colocá-lo em um arquivo morto para assinatura e publicação. Esta seção explica como criar uma identidade de assinatura do Android, a criar um novo certificado de assinatura para aplicativos Android e a publicar o *ad-hoc* de aplicativo arquivado no disco. O APK resultante pode ter o sideload realizado em dispositivos Android sem passar por uma loja de aplicativos.
 
-Esta seção descreve o fluxo de trabalho de publicação integrado para assinar o APK fornecido pelo Visual Studio. Em [Preparar um Aplicativo para Lançamento](~/android/deploy-test/release-prep/index.md), o **Gerenciador de Arquivo Morto** foi usado para build do aplicativo e colocá-lo em um arquivo morto para assinatura e publicação. Esta seção explica como criar uma identidade de assinatura do Android, a criar um novo certificado de assinatura para aplicativos Android e a publicar o *ad-hoc* de aplicativo arquivado no disco.
-O APK resultante pode ter o sideload realizado em dispositivos Android sem passar por uma loja de aplicativos.
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Em [Arquivar para Publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **Canal de Distribuição** apresentou duas opções de distribuição. Selecione **Ad Hoc**:
 
 [![Caixa de diálogo Canal de Distribuição](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-Nesta seção, vamos usar o fluxo de trabalho de publicação integrado do Visual Studio para Mac para assinar o APK. Em [Preparar um Aplicativo para Lançamento](~/android/deploy-test/release-prep/index.md), o **Gerenciador de Arquivo Morto** foi usado para build do aplicativo e colocá-lo em um arquivo morto para assinatura e publicação. Nesta seção, aprenderemos a criar uma identidade de assinatura do Android, a criar um novo certificado de assinatura para aplicativos Android e a publicar o *ad-hoc* de aplicativo arquivado no disco. O APK resultante pode ter o sideload realizado em dispositivos Android sem passar por uma loja de aplicativos.
 
 Em [Arquivar para Publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **Assinar e Distribuir...** nos apresentou duas opções de distribuição. Selecione **Ad-Hoc** e clique em **Próximo**:
 
@@ -58,14 +56,14 @@ O exemplo a seguir ilustra o tipo de informação que deve ser fornecido. Clique
 
 O repositório de chaves resultante reside no seguinte local:
 
-**C:\\Usuários\\*NOMEDEUSUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+**C:\\Usuários\\*NOMEDEUSUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*ALIAS*\\*ALIAS*.keystore**
 
-Por exemplo, as etapas acima podem criar uma nova chave de assinatura no seguinte local:
+Por exemplo, ao usar **chimp** como alias, as etapas acima podem criar uma nova chave de assinatura no seguinte local:
 
-**C:\\Usuários\\*NOMEDEUSUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+**C:\\Usuários\\*NOMEDEUSUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 > [!NOTE]
-> Não deixe de fazer backup do arquivo de repositório de chaves resultante em um local seguro &ndash; isso não está incluído na solução. Se perder seu arquivo de repositório de chaves (por exemplo, porque passou a usar outro computador ou reinstalou o Windows), você não conseguirá assinar seu aplicativo com o mesmo certificado das versões anteriores.
+> Não deixe de fazer backup do arquivo de repositório de chaves resultante e da senha em um local seguro &ndash; isso não está incluído na solução. Se perder seu arquivo de repositório de chaves (por exemplo, porque passou a usar outro computador ou reinstalou o Windows), você não conseguirá assinar seu aplicativo com o mesmo certificado das versões anteriores.
 
 Para obter mais informações sobre o repositório de chaves, consulte [Localizando sua Assinatura MD5 ou SHA1 do Repositório de Chaves](~/android/deploy-test/signing/keystore-signature.md).
 
@@ -89,7 +87,7 @@ Por exemplo, as etapas acima podem criar uma nova chave de assinatura no seguint
 
 
 > [!NOTE]
-> Não deixe de fazer backup do arquivo de repositório de chaves resultante em um local seguro &ndash; isso não está incluído na solução. Se perder seu arquivo de repositório de chaves (por exemplo, porque passou a usar outro computador ou reinstalou o Mac), você não conseguirá assinar seu aplicativo com o mesmo certificado das versões anteriores.
+> Não deixe de fazer backup do arquivo de repositório de chaves resultante e da senha em um local seguro &ndash; isso não está incluído na solução. Se perder seu arquivo de repositório de chaves (por exemplo, porque passou a usar outro computador ou reinstalou o macOS), você não conseguirá assinar seu aplicativo com o mesmo certificado das versões anteriores.
 
 Para obter mais informações sobre o repositório de chaves, consulte [Localizando sua Assinatura MD5 ou SHA1 do Repositório de Chaves](~/android/deploy-test/signing/keystore-signature.md).
 
