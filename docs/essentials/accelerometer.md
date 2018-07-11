@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: acelerômetro'
-description: A classe acelerômetro Xamarin.Essentials permite monitorar sensor do acelerômetro do dispositivo, que indica a aceleração do dispositivo em três espaço bidimensional.
+description: A classe Accelerometer Xamarin.Essentials permite que você monitore o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo em três espaço dimensional.
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 8229a372659e7918457a9d2f358b871e1a3f5978
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.openlocfilehash: 15e2cb69806f281e88e226b7bcd87a20e149d508
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080422"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947303"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: acelerômetro
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **acelerômetro** classe permite que você monitore o sensor de acelerômetro do dispositivo que indica a aceleração do dispositivo em três espaço bidimensional.
+O **acelerômetro** classe permite que você monitore o sensor de acelerômetro do dispositivo que indica a aceleração do dispositivo em três espaço dimensional.
 
 ## <a name="using-accelerometer"></a>Usando o acelerômetro
 
-Adicione uma referência a Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de acelerômetro funciona chamando o `Start` e `Stop` métodos para escuta de alterações para a aceleração. As alterações são enviadas através de `ReadingChanged` eventos. Aqui está o exemplo de uso:
+A funcionalidade do acelerômetro funciona chamando o `Start` e `Stop` métodos para ouvir alterações para a aceleração. Todas as alterações são enviadas de volta pelo `ReadingChanged` eventos. Aqui está o exemplo de uso:
 
 ```csharp
 
@@ -69,30 +69,23 @@ public class AccelerometerTest
 }
 ```
 
-Leituras acelerômetro são relatadas de volta no G. Um G é uma unidade de gravitação forçar igual ao exercida pelo campo gravitacional da Terra (9.81 m/s ^ 2).
+Leituras do acelerômetro são relatadas de volta no G. A G é uma unidade de gravidade forçar igual àquela exercida pelo campo de gravitacional da Terra (9,81 m/s ^ 2).
 
-O sistema de coordenadas é definido em relação à tela do telefone em sua orientação padrão. Os eixos não são alternados quando alterações de orientação da tela do dispositivo.
+O sistema de coordenadas é definido em relação à tela do telefone em sua orientação padrão. Os eixos não são trocados quando alterações de orientação da tela do dispositivo.
 
-O eixo X é horizontal e aponta para a direita, o eixo Y é vertical e pontos de e o eixo Z aponta para fora da face frontal da tela. Nesse sistema, coordenadas atrás da tela tem valores de Z negativos.
+O eixo X é horizontal e aponta para a direita, o eixo Y é vertical e aponta para cima e o eixo Z aponta em direção a parte externa da face frontal da tela. Nesse sistema, as coordenadas atrás da tela têm valores de Z negativos.
 
 Exemplos:
 
-* Quando o dispositivo está simples em uma tabela e é enviado em seu lado esquerdo para a direita, o valor de aceleração de x é positivo.
+* Quando o dispositivo encontra-se simples em uma tabela e é enviada por push em seu lado esquerdo para a direita, o valor de aceleração de x é positivo.
 
-* Quando o dispositivo está simples em uma tabela, o valor de aceleração é + 1,00 G ou (+ 9.81 m/s ^ 2), que corresponde a aceleração do dispositivo (0 m/s ^ 2) a força da gravidade de subtração (-9.81 m/s ^ 2) e normalizado como G.
+* Quando o dispositivo encontra-se simples em uma tabela, o valor de aceleração é G + 1,00 ou (+ 9,81 m/s ^ 2), que correspondem à aceleração do dispositivo (0 m/s ^ 2) menos a força da gravidade (-9,81 m/s ^ 2) e normalizado como G.
 
-* Quando o dispositivo está simples em uma tabela e é enviado para o sky com uma aceleração de um m/s ^ 2, o valor de aceleração é igual a 9.81 + que correspondem à aceleração do dispositivo (+ um m/s ^ 2) a força da gravidade de subtração (-9.81 m/s ^ 2) e normalizado em G. 
+* Quando o dispositivo encontra-se simples em uma tabela e é enviada por push para o céu com uma aceleração de um m/s ^ 2, o valor de aceleração é igual a + 9.81 correspondentes para a aceleração do dispositivo (+ um m/s ^ 2) menos a força da gravidade (-9,81 m/s ^ 2) e normalizados em G. 
 
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[Sensor de velocidade](xref:Xamarin.Essentials.SensorSpeed)
-
-- **Mais rápido** – obter os dados de sensor mais rápido possível (não é garantido para retornar no thread de interface do usuário).
-- **Jogo** – taxa adequado para jogos (não é garantidos para retornar no thread de interface do usuário).
-- **Normal** – taxa padrão adequada para alterações de orientação da tela.
-- **Interface do usuário** – taxa adequado para a interface de usuário geral.
-
-Se o manipulador de eventos não é garantido para executar no thread da interface do usuário e se o manipulador de eventos precisa acessar elementos de interface do usuário, use o [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) método para executar esse código no thread da interface do usuário.
+[!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
-- [Código-fonte acelerômetro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [Código-fonte do acelerômetro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
 - [Documentação da API do acelerômetro](xref:Xamarin.Essentials.Accelerometer)
