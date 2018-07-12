@@ -1,6 +1,6 @@
 ---
-title: Padrão XAML (visualização)
-description: Este artigo explica como começar a explorar a visualização de padrão de XAML no xamarin. Forms.
+title: XAML Standard (visualização)
+description: Este artigo explica como começar a explorar a visualização padrão de XAML no xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 24382DF1-BE70-4608-B86F-B79FB23E4A78
 ms.technology: xamarin-forms
@@ -8,33 +8,33 @@ author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
 ms.openlocfilehash: 61e0fa2587ce9a8794dbd32ff9de1f13da857342
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38838004"
 ---
-# <a name="xaml-standard-preview"></a>Padrão XAML (visualização)
+# <a name="xaml-standard-preview"></a>XAML Standard (visualização)
 
 ![Visualizar](~/media/shared/preview.png)
 
-Siga estas etapas para fazer experiências com XAML padrão no xamarin. Forms:
+Siga estas etapas para fazer experiências com o padrão de XAML no xamarin. Forms:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Baixe o [visualizar o pacote do NuGet aqui](https://aka.ms/xf-xamlstandard-nuget).
-2. Adicionar o **Xamarin.Forms.Alias** pacote NuGet para seus projetos de plataforma e xamarin. Forms .NET padrão.
+2. Adicione a **Xamarin.Forms.Alias** pacote do NuGet para seus projetos xamarin. Forms .NET Standard e plataforma.
 3. Inicializar o pacote com `Alias.Init()`
 4. Adicionar um `xmlns:a` referência `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
-5. Use os tipos em XAML - consulte o [referência controles](controls.md) para obter mais informações.
+5. Use os tipos no XAML - consulte o [referência controles](controls.md) para obter mais informações.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Baixe o [visualizar o pacote do NuGet aqui](https://aka.ms/xf-xamlstandard-nuget).
-2. Adicionar o **Xamarin.Forms.Alias** pacote NuGet para seus projetos de plataforma e xamarin. Forms .NET padrão.
+2. Adicione a **Xamarin.Forms.Alias** pacote do NuGet para seus projetos xamarin. Forms .NET Standard e plataforma.
 3. Inicializar o pacote com `Alias.Init()`
 4. Adicionar um `xmlns:a` referência `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
-5. Use os tipos em XAML - consulte o [referência controles](controls.md) para obter mais informações.
+5. Use os tipos no XAML - consulte o [referência controles](controls.md) para obter mais informações.
 
 -----
 
@@ -71,10 +71,10 @@ O XAML a seguir demonstra alguns controles XAML padrão que está sendo usados e
 ```
 
 > [!NOTE]
-> Exigir o xmlns `a:` prefixo em controles XAML padrão é uma limitação de visualização atual.
+> Exigir que o xmlns `a:` prefixo em controles XAML padrão é uma limitação da visualização atual.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Visualização NuGet](https://aka.ms/xf-xamlstandard-nuget)
+- [NuGet de visualização](https://aka.ms/xf-xamlstandard-nuget)
 - [Referência de controles](controls.md)

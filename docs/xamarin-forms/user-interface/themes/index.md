@@ -1,6 +1,6 @@
 ---
-title: Temas de xamarin. Forms
-description: Este artigo apresenta xamarin. Forms temas, que definem a aparência visual específica para modos de exibição padrão.
+title: Temas do xamarin. Forms
+description: Este artigo apresenta os temas do xamarin. Forms, que definem as aparências específicas para modos de exibição padrão.
 ms.prod: xamarin
 ms.assetid: 3DFB7C55-69F6-4980-A501-588719143482
 ms.technology: xamarin-forms
@@ -8,28 +8,28 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 0f49eeba072d6aeb7ead40d5d56d4af9e9bf5e27
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38814700"
 ---
-# <a name="xamarinforms-themes"></a>Temas de xamarin. Forms
+# <a name="xamarinforms-themes"></a>Temas do xamarin. Forms
 
-![](~/media/shared/preview.png "Esta API está atualmente em visualização")
+![](~/media/shared/preview.png "Essa API está atualmente em versão prévia")
 
-Xamarin. Forms temas foram lançados no Evolve 2016 e estão disponíveis como uma visualização para os clientes tente e fornecer comentários.
+Temas do xamarin. Forms foram lançados no Evolve 2016 e estão disponíveis como uma visualização para que os clientes experimentar e fornecer comentários.
 
-Um tema é adicionado a um aplicativo xamarin. Forms, incluindo o **Xamarin.Forms.Theme.Base** pacote Nuget, além de um pacote adicional que define um tema específico (por exemplo. Xamarin.Forms.Theme.Light) ou outro um tema local pode ser definido para o aplicativo.
+Um tema é adicionado a um aplicativo xamarin. Forms, incluindo o **Xamarin.Forms.Theme.Base** de pacote do Nuget, além de um pacote adicional que define um tema específico (por exemplo. Xamarin.Forms.Theme.Light) ou outro um tema local pode ser definido para o aplicativo.
 
-Consulte o [tema claro](light.md) e [tema escuro](dark.md) páginas para obter instruções sobre como adicioná-los a um aplicativo ou check-out de [tema personalizado de exemplo](custom.md).
+Consulte a [tema claro](light.md) e [tema escuro](dark.md) páginas para obter instruções sobre como adicioná-los a um aplicativo ou fazer check-out a [tema personalizado de exemplo](custom.md).
 
-**IMPORTANTE:** você também deve seguir as etapas para [carregar assemblies de tema (abaixo)](#loadtheme) adicionando um código clichê para o iOS `AppDelegate` e Android `MainActivity`. Isso será aprimorado em uma versão futura de visualização.
+**IMPORTANTE:** você também deve seguir as etapas a serem [carregar assemblies de tema (abaixo)](#loadtheme) adicionando um código clichê para o iOS `AppDelegate` e Android `MainActivity`. Isso será melhorado em uma versão de visualização futura.
 
 
-## <a name="control-appearance"></a>Controlar a aparência
+## <a name="control-appearance"></a>Aparência do controle
 
-O [Light](light.md) e [escuro](dark.md) ambos os temas definem uma aparência visual específica para controles padrão. Quando você adicionar um tema ao dicionário de recursos do aplicativo, irá alterar a aparência dos controles padrão.
+O [Light](light.md) e [escuro](dark.md) ambos os temas definem uma aparência visual específica para os controles padrão. Depois que você adiciona um tema para o dicionário de recursos do aplicativo, a aparência dos controles padrão será alterado.
 
 A marcação XAML a seguir mostra alguns controles comuns:
 
@@ -55,7 +55,7 @@ Essas capturas de tela mostram esses controles com:
 
 ## <a name="styleclass"></a>StyleClass
 
-O `StyleClass` propriedade permite que a aparência do modo de exibição a ser alterada de acordo com uma definição fornecida por um tema.
+O `StyleClass` propriedade permite que a aparência do modo de exibição a ser alterado de acordo com uma definição fornecida por um tema.
 
 O [Light](light.md) e [escuro](dark.md) ambos os temas definem três aparências diferentes para um `BoxView`: `HorizontalRule`, `Circle`, e `Rounded`. Essa marcação mostra três diferentes `BoxView`s com classes diferentes de estilo aplicadas:
 
@@ -75,7 +75,7 @@ Isso renderiza com claro e escuro da seguinte maneira:
 
 ## <a name="built-in-classes"></a>Classes internas
 
-Além de estilo automaticamente comuns controla a luz e temas escuros atualmente suportam as seguintes classes que podem ser aplicadas, definindo o `StyleClass` nesses controles:
+Além de definir o estilo automaticamente comum controla a luz e temas escuros atualmente suportam as seguintes classes que podem ser aplicadas, definindo o `StyleClass` nesses controles:
 
 **BoxView**
 
@@ -96,7 +96,7 @@ Além de estilo automaticamente comuns controla a luz e temas escuros atualmente
 * Êxito
 * Info
 * Aviso
-* Risco
+* Perigo
 * Link
 * Pequeno
 * Grande
@@ -116,11 +116,11 @@ Além de estilo automaticamente comuns controla a luz e temas escuros atualmente
 
 ### <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>Não foi possível carregar arquivo ou assembly 'Xamarin.Forms.Theme.Light' ou uma de suas dependências
 
-Na versão de visualização, temas não poderá carregar em tempo de execução. Adicione o código mostrado abaixo, os projetos relevantes para corrigir esse erro.
+Na versão de visualização, temas podem não ser capazes de carregar no tempo de execução. Adicione o código mostrado abaixo nos projetos relevantes para corrigir esse erro.
 
 **iOS**
 
-No **appdelegate. CS** adicione as seguintes linhas depois de `LoadApplication`
+No **AppDelegate.cs** adicione as seguintes linhas depois de `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);

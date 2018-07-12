@@ -1,26 +1,26 @@
 ---
 title: 'Xamarin.Essentials: Exibir informações de dispositivo'
-description: Este documento descreve a classe de DeviceDisplay Xamarin.Essentials, que fornece métricas de tela do dispositivo no qual o aplicativo está sendo executado.
+description: Este documento descreve a classe de DeviceDisplay Xamarin.Essentials, que fornece métricas de tela do dispositivo no qual o aplicativo está em execução.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 3060d56e14fb0d3801a96ec0fe6e24c9efda4dac
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080307"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38816510"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Exibir informações de dispositivo
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **DeviceDisplay** classe fornece informações sobre as métricas da tela do dispositivo, o aplicativo está em execução no.
+O **DeviceDisplay** classe fornece informações sobre as métricas de tela do dispositivo, o aplicativo está sendo executado.
 
 ## <a name="using-devicedisplay"></a>Usando DeviceDisplay
 
-Adicione uma referência a Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -28,7 +28,7 @@ using Xamarin.Essentials;
 
 ## <a name="screen-metrics"></a>Métricas de tela
 
-Além das informações básicas de dispositivos de **DeviceDisplay** classe contém informações sobre a tela e a orientação do dispositivo.
+Além das informações básicas do dispositivo a **DeviceDisplay** classe contém informações sobre a tela e a orientação do dispositivo.
 
 ```csharp
 // Get Metrics
@@ -50,7 +50,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-O **DeviceDisplay** classe também expõe um evento que pode ser assinado que é disparado sempre que qualquer tela métricas alterações:
+O **DeviceDisplay** classe também expõe um evento que pode ser assinado que é disparado sempre que quaisquer alterações de métricas de tela:
 
 ```csharp
 public class ScreenMetricsTest

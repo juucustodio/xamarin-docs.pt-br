@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: Informações do dispositivo'
-description: Este documento descreve a classe de DeviceInfo Xamarin.Essentials, que fornece informações sobre o dispositivo que o aplicativo está em execução no.
+description: Este documento descreve a classe DeviceInfo Xamarin.Essentials, que fornece informações sobre o dispositivo, o aplicativo está sendo executado.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: b7246afca19607ef2f70288d4643696f4ac35d52
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782392"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831481"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informações do dispositivo
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **DeviceInfo** classe fornece informações sobre o dispositivo que o aplicativo está em execução no.
+O **DeviceInfo** classe fornece informações sobre o dispositivo, o aplicativo está sendo executado.
 
 ## <a name="using-deviceinfo"></a>Usando DeviceInfo
 
-Adicione uma referência a Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-As informações a seguir são exibidas por meio da API:
+As informações a seguir são expostas por meio da API:
 
 ```csharp
 // Device Model (SMG-950U)
@@ -60,9 +60,9 @@ var deviceType = DeviceInfo.DeviceType;
 - **DeviceInfo.Platforms.UWP** – UWP
 - **DeviceInfo.Platforms.Unsupported** – sem suporte
 
-## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idiomas](xref:Xamarin.Essentials.DeviceInfo.Idioms)
+## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Expressões](xref:Xamarin.Essentials.DeviceInfo.Idioms)
 
-`DeviceInfo.Idiom` Correlaciona uma cadeia de caracteres constante que é mapeado para o tipo de dispositivo que o aplicativo está em execução. Os valores podem ser verificados com o `Idioms` classe:
+`DeviceInfo.Idiom` Correlaciona uma cadeia de caracteres constante que é mapeado para o tipo de dispositivo, o aplicativo está em execução. Os valores podem ser verificados com o `Idioms` classe:
 
 - **DeviceInfo.Idioms.Phone** – telefone
 - **DeviceInfo.Idioms.Tablet** – Tablet
@@ -72,7 +72,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="device-type"></a>Tipo de dispositivo
 
-`DeviceInfo.DeviceType` Correlaciona uma enumeração para determinar se o aplicativo está executando em um físico ou dispositivo virtual. Um dispositivo virtual é um simulador ou emulador do Windows.
+`DeviceInfo.DeviceType` Correlaciona uma enumeração para determinar se o aplicativo está em execução no físico ou dispositivo virtual. Um dispositivo virtual é um simulador ou emulador.
 
 ## <a name="api"></a>API
 

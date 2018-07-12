@@ -1,5 +1,5 @@
 ---
-title: Controles do XAML padrão (visualização)
+title: Controles do XAML Standard (visualização)
 description: Este artigo explora os controles XAML padrão disponíveis no xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 287E6631-D1C5-46C5-8905-AB53D34E365D
@@ -8,23 +8,23 @@ author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
 ms.openlocfilehash: 1b01d0773f0c2150db575875b770957eb6452f41
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245560"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38843937"
 ---
-# <a name="xaml-standard-preview-controls"></a>Controles do XAML padrão (visualização)
+# <a name="xaml-standard-preview-controls"></a>Controles do XAML Standard (visualização)
 
 ![Visualizar](~/media/shared/preview.png)
 
-Esta página lista os controles de XAML padrão disponível na visualização, juntamente com seu controle xamarin. Forms equivalente.
+Esta página lista os controles XAML padrão disponíveis na visualização, juntamente com seu controle equivalente do xamarin. Forms.
 
-Também é uma lista de controles que têm novos nomes de propriedade e enumeração em XAML padrão.
+Também é uma lista de controles que têm novos nomes de propriedade e de enumeração no XAML padrão.
 
 ## <a name="controls"></a>Controles
 
-|Xamarin.Forms|Padrão XAML|
+|Xamarin.Forms|XAML Standard|
 |--- |--- |
 |Quadro|Borda|
 |Seletor|ComboBox|
@@ -38,16 +38,16 @@ Também é uma lista de controles que têm novos nomes de propriedade e enumera�
 
 ## <a name="properties-and-enumerations"></a>Propriedades e enumerações
 
-|Controles de xamarin. Forms com as propriedades atualizadas|Propriedade xamarin. Forms ou enum|XAML padrão equivalente|
+|Controles do xamarin. Forms com as propriedades atualizadas|Propriedade do xamarin. Forms ou enumeração|Equivalente XAML padrão|
 |--- |--- |--- |
-|Botão, entrada, rótulo, DatePicker, Editor, SearchBar, TimePicker|textColor|Primeiro plano|
+|Botão, entrada, rótulo, DatePicker, Editor, SearchBar, TimePicker|TextColor|Primeiro plano|
 |VisualElement|BackgroundColor|Plano de fundo *|
-|Seletor de botão|BorderColor OutlineColor|BorderBrush|
+|Seletor de botão|BorderColor, OutlineColor|BorderBrush|
 |Botão|BorderWidth|BorderThickness|
 |ProgressBar|Progresso|Valor|
-|Botão, entrada, rótulo, Editor, SearchBar, alcance, fonte|FontAttributesBold, itálico, None|FontStyleItalic, Normal|
-|Botão, entrada, rótulo, Editor, SearchBar, alcance, fonte|FontAttributes|FontWeights * negrito, Normal|
-|InputView|KeyboardDefault, Url, número, telefone, texto, bate-papo, Email|InputScopeNameValue * padrão, Url, número, TelephoneNumber, texto, bate-papo, EmailNameOrAddress|
+|Botão, entrada, rótulo, Editor, SearchBar, Span, fonte|FontAttributesBold, itálico, None|FontStyleItalic, Normal|
+|Botão, entrada, rótulo, Editor, SearchBar, Span, fonte|FontAttributes|FontWeights * negrito, Normal|
+|InputView|KeyboardDefault, Url, número, telefone, texto, bate-papo, envie um Email|InputScopeNameValue * padrão, Url, número, TelephoneNumber, texto, bate-papo, EmailNameOrAddress|
 |StackPanel|StackOrientation|Orientação *|
 
 > [!IMPORTANT]
@@ -55,4 +55,4 @@ Também é uma lista de controles que têm novos nomes de propriedade e enumera�
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Visualização NuGet](https://aka.ms/xf-xamlstandard-nuget)
+- [NuGet de visualização](https://aka.ms/xf-xamlstandard-nuget)

@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: texto em fala'
-description: A classe TextToSpeech Xamarin.Essentials habilita um aplicativo utilizar interna nos mecanismos de texto em fala falar texto back do dispositivo e também para linguagens de consulta disponíveis que o mecanismo pode dar suporte.
+description: A classe TextToSpeech no habilita Xamarin.Essentials um aplicativo utilizar internos nos mecanismos de texto em fala para falar texto back do dispositivo e também a linguagens de consulta disponíveis que o mecanismo pode dar suporte.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 9383411074bc43af1034138aadbb6ac5494c2c01
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38815655"
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: texto em fala
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **TextToSpeech** classe permite que um aplicativo utilizar o nos mecanismos de texto em fala falar texto back do dispositivo e também para linguagens de consulta disponíveis que o mecanismo pode dar suporte.
+O **TextToSpeech** classe permite que um aplicativo utilizar internos nos mecanismos de texto em fala para falar texto back do dispositivo e também a linguagens de consulta disponíveis que o mecanismo pode dar suporte.
 
 ## <a name="using-text-to-speech"></a>Usando texto em fala
 
-Adicione uma referência a Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de texto em fala funciona chamando o `SpeakAsync` método com parâmetros opcionais, texto e retorna após a expressão. 
+A funcionalidade de texto em fala funciona chamando o `SpeakAsync` método com texto e parâmetros opcionais e retorna depois que a expressão foi concluída. 
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -46,7 +46,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Esse método usa em um CancellationToken opcional para interromper a expressão depois que ela é iniciada. 
+Esse método usa um CancellationToken opcional para interromper a expressão depois que ele for iniciado. 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -66,7 +66,7 @@ public void CancelSpeech()
 }
 ```
 
-Texto em fala enfileirará automaticamente solicitações de fala do mesmo thread. 
+Texto em fala colocará em fila automaticamente solicitações de fala do mesmo thread. 
 
 ```csharp
 bool isBusy = false;
@@ -90,7 +90,7 @@ public void SpeakMultiple()
 }
 ```
 
-### <a name="speech-settings"></a>Configurações de voz
+### <a name="speech-settings"></a>Configurações de fala
 
 Para obter mais controle sobre como o áudio é falado novamente com `SpeakSettings` que permite definir o Volume, a densidade e a localidade.
 
@@ -111,12 +111,12 @@ Os seguintes valores com suporte para esses parâmetros são:
 
 | Parâmetro | Mínimo | Máximo |
 | --- | :---: | :---: |
-| Tom | 0 | 2.0 |
+| Densidade | 0 | 2.0 |
 | Volume | 0 | 1.0 |
 
 ### <a name="speech-locales"></a>Localidades de fala
 
-Cada plataforma oferece localidades para falar back texto em vários idiomas e acentos. Cada plataforma tem diferentes códigos e maneiras de especificar isso, o que faz com que Essentials fornece uma plataforma cruzada `Locale` classe e uma maneira para consultá-los com `GetLocalesAsync`.
+Cada plataforma oferece localidades para falar texto voltar em vários idiomas e acentos. Cada plataforma tem diferentes códigos e maneiras de especificar isso, razão pela qual Essentials fornece uma plataforma cruzada `Locale` classe e uma maneira para consultá-los com `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -140,7 +140,7 @@ public async Task SpeakNow()
 ## <a name="limitations"></a>Limitações
 
 - Fila de expressão não é garantida se chamados por vários threads.
-- Não há suporte oficial para reprodução de áudio do plano de fundo.
+- Oficialmente, não há suporte para reprodução de áudio em segundo plano.
 
 ## <a name="api"></a>API
 

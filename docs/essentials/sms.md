@@ -6,11 +6,11 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: a93a67b83ea8f435a5e3ad5d26e1d6cbbb7092f7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783081"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38815591"
 ---
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS
 
@@ -20,7 +20,7 @@ O **Sms** classe permite que um aplicativo para abrir o aplicativo de SMS padrã
 
 ## <a name="using-sms"></a>Usando o Sms
 
-Adicione uma referência a Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -52,5 +52,5 @@ public class SmsTest
 
 ## <a name="api"></a>API
 
-- [Código de origem do SMS](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
-- [Documentação da API do SMS](xref:Xamarin.Essentials.Sms)
+- [Código-fonte do SMS](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
+- [Documentação da API de SMS](xref:Xamarin.Essentials.Sms)

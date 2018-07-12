@@ -1,38 +1,38 @@
 ---
 title: 'Xamarin.Essentials: Controle de versão'
-description: A classe VersionTracking Xamarin.Essentials permite que você verifique a versão de aplicativos e números de versão junto com ver informações adicionais tal como se fosse a primeira vez que o aplicativo já aberto ou para a versão atual, obtém a compilação anterior informações e muito mais.
+description: A classe VersionTracking Xamarin.Essentials lhe permite verificar a versão de aplicativos e números de compilação junto com a ver informações adicionais tais como se fosse a primeira vez o aplicativo aberto nunca ou para a versão atual, obtém a compilação anterior informações e muito mais.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 2c092d6767045f0af956c5dab74801077dadb51f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782996"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38815642"
 ---
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Controle de versão
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **VersionTracking** classe permite que você verifique a versão de aplicativos e números de compilação junto com ver informações adicionais tal como se fosse a primeira vez que o aplicativo já aberto ou para a versão atual, obtém anterior informações de compilação e muito mais.
+O **VersionTracking** classe permite que você verifique a versão de aplicativos e números de compilação junto com a ver informações adicionais tais como se fosse a primeira vez que o aplicativo aberto nunca ou para a versão atual, obtém anterior informações de compilação e muito mais.
 
 ## <a name="using-version-tracking"></a>Usando o controle de versão
 
-Adicione uma referência a Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Na primeira vez que você usar o **VersionTracking** classe iniciará a versão atual de controle. Você deve chamar `Track` antecipada somente em seu aplicativo cada vez que ele é carregado para garantir que as informações de versão atual são controladas:
+Na primeira vez que você usar o **VersionTracking** classe iniciará a versão atual do controle. Você deve chamar `Track` antecipada somente em seu aplicativo sempre que ele é carregado para garantir que as informações de versão atual são rastreadas:
 
 ```csharp
 VersionTracking.Track();
 ```
 
-Após a inicial `Track` é chamado de informações de versão podem ser lido:
+Após a inicial `Track` é chamado de informações de versão podem ser lidos:
 
 ```csharp
 
@@ -70,11 +70,11 @@ var versionHistory = VersionTracking.VersionHistory;
 var buildHistory = VersionTracking.BuildHistory;
 ```
 
-## <a name="platform-implementation-specifics"></a>Detalhes de implementação de plataforma
+## <a name="platform-implementation-specifics"></a>Particularidades de implementação de plataforma
 
-Todas as informações de versão são armazenadas usando o [preferências](preferences.md) API no Xamarin.Essentials e é armazenado com um nome de arquivo de **.xamarinessentials [seu-aplicativo--ID do pacote]**.
+Todas as informações de versão são armazenadas usando o [preferências](preferences.md) API no Xamarin.Essentials e é armazenado com um nome de arquivo do **.xamarinessentials [YOUR-APP-pacote-ID]**.
 
-Desinstalar o aplicativo fará com que o _LocalSettings_e a versão de todas as informações a ser removido do controle.
+Desinstalar o aplicativo fará com que o _LocalSettings_e a versão de todas as informações a serem removidos do controle.
 
 ## <a name="api"></a>API
 

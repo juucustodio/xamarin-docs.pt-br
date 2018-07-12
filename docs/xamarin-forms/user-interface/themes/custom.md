@@ -8,25 +8,25 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 018193cf0b198fd87f0f09cbfeba52e9d2a0f68b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245562"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38838164"
 ---
 # <a name="creating-a-custom-xamarinforms-theme"></a>Criando um tema personalizado xamarin. Forms
 
-![](~/media/shared/preview.png "Esta API está atualmente em visualização")
+![](~/media/shared/preview.png "Essa API está atualmente em versão prévia")
 
-Além de adicionar um tema de um pacote do Nuget (como o [Light](~/xamarin-forms/user-interface/themes/light.md) e [escuro](~/xamarin-forms/user-interface/themes/dark.md) temas), você pode criar seus próprios recursos temas de dicionário que podem ser referenciados em seu aplicativo.
+Além de adicionar um tema de um pacote Nuget (como o [Light](~/xamarin-forms/user-interface/themes/light.md) e [escuro](~/xamarin-forms/user-interface/themes/dark.md) temas), você pode criar seus próprios recursos temas de dicionário que podem ser referenciados em seu aplicativo.
 
 ## <a name="example"></a>Exemplo
 
-Os três `BoxView`s mostrado no [página temas](~/xamarin-forms/user-interface/themes/index.md) são denominados de acordo com as três classes definidas nos dois temas para download.
+Os três `BoxView`s mostrada na [página de temas](~/xamarin-forms/user-interface/themes/index.md) são denominados de acordo com as três classes definidas nos dois temas para download.
 
-Para entender como eles funcionam, a marcação a seguir cria um estilo equivalente que você pode adicionar diretamente ao seu **App**.
+Para entender como eles funcionam, a marcação a seguir cria um estilo equivalente que você poderá adicionar diretamente para seu **App. XAML**.
 
-Observe o `Class` atributo `Style` (em vez do [ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) atributo disponível em versões anteriores do xamarin. Forms).
+Observação o `Class` de atributo para `Style` (em vez de [ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) atributo disponível em versões anteriores do xamarin. Forms).
 
 ```xml
 <ResourceDictionary>
@@ -64,16 +64,16 @@ Observe o `Class` atributo `Style` (em vez do [ `x:Key` ](~/xamarin-forms/user-i
 ```
 
 Você observará que o `Rounded` classe se refere a um efeito personalizado `CornerRadius`.
-O código para esse efeito é fornecido abaixo - para referenciá-lo corretamente um personalizado `xmlns` devem ser adicionados para o **App**do elemento raiz:
+O código para esse efeito é fornecido abaixo - referenciá-lo corretamente um personalizado `xmlns` deve ser adicionado para o **App. XAML**do elemento raiz:
 
 ```csharp
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Código c# no projeto compartilhado ou projeto de biblioteca padrão do .NET
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Código c# no projeto compartilhado ou projeto de biblioteca .NET Standard
 
-O código para criar uma curva round `BoxView` usa [efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
-O raio de canto é aplicado usando um `BindableProperty` e é implementado, aplicando um [efeito](~/xamarin-forms/app-fundamentals/effects/index.md). O efeito requer código específico da plataforma no [iOS](#ios) e [Android](#android) projetos (mostrados abaixo).
+O código para a criação de um canto de round `BoxView` usa [efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
+O raio do canto é aplicado usando um `BindableProperty` e é implementado pela aplicação de uma [efeito](~/xamarin-forms/app-fundamentals/effects/index.md). O efeito requer código específico da plataforma na [iOS](#ios) e [Android](#android) projetos (mostrados abaixo).
 
 ```csharp
 namespace ThemesDemo
@@ -257,8 +257,8 @@ namespace ThemesDemo.Droid
 
 ## <a name="summary"></a>Resumo
 
-Um tema personalizado pode ser criado definindo estilos para cada controle que requer a aparência personalizada. Vários estilos para um controle devem ser distinguidos por diferentes `Class` atributos no dicionário de recursos e, em seguida, aplicada definindo o `StyleClass` atributo no controle.
+Um tema personalizado pode ser criado com a definição de estilos para cada controle que exige a aparência personalizada. Vários estilos para um controle devem ser diferenciados por diferentes `Class` atributos no dicionário de recursos e, em seguida, aplicada definindo o `StyleClass` atributo no controle.
 
-Também pode utilizar um estilo [efeitos](~/xamarin-forms/app-fundamentals/effects/index.md) para personalizar a aparência de um controle.
+Também pode utilizar um estilo [efeitos](~/xamarin-forms/app-fundamentals/effects/index.md) para personalizar ainda mais a aparência de um controle.
 
-[Estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md) (sem o um `x:Key` ou `Style` atributo) continuam a ser aplicado a todos os controles que correspondem a `TargetType`.
+[Estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md) (sem qualquer um uma `x:Key` ou `Style` atributo) continuam a ser aplicado a todos os controles que correspondam a `TargetType`.
