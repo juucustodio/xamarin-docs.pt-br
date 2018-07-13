@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: bae3e7323596cc88f2b76aceeb5a4d1df4ce2d0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f62842c3b2aea93d28303b7f47c5d50df6381387
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774376"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998414"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: aprofundamento
 
@@ -98,9 +98,9 @@ Uma solução chamada **Phoneword** foi criada e o projeto Android **Phoneword**
 
 Examine os itens dentro do projeto para ver cada pasta e sua finalidade:
 
--   **Propriedades** &ndash; contém o arquivo [AndroidManifest.xml](~/android/platform/android-manifest.md), que descreve todos os requisitos para o aplicativo Xamarin.Android, incluindo nome, número de versão e permissões. A pasta **Propriedades** também hospeda o [AssemblyInfo.cs](http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.applicationservices.assemblyinfo(v=vs.110).aspx), um arquivo de metadados de assembly do .NET. É uma boa prática preencher esse arquivo com algumas informações básicas sobre seu aplicativo.
+-   **Propriedades** &ndash; contém o arquivo [AndroidManifest.xml](~/android/platform/android-manifest.md), que descreve todos os requisitos para o aplicativo Xamarin.Android, incluindo nome, número de versão e permissões. A pasta **Propriedades** também hospeda o [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo), um arquivo de metadados de assembly do .NET. É uma boa prática preencher esse arquivo com algumas informações básicas sobre seu aplicativo.
 
--   **Referências** &ndash; contém os assemblies necessários para compilar e executar o aplicativo. Se você expandir o diretório de referências, verá referências aos assemblies do .NET como [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx), System.Core e [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx), bem como uma referência ao assembly do Mono.Android do Xamarin.
+-   **Referências** &ndash; contém os assemblies necessários para compilar e executar o aplicativo. Se você expandir o diretório de referências, verá referências aos assemblies do .NET como [System](xref:System), System.Core e [System.Xml](xref:System.Xml), bem como uma referência ao assembly do Mono.Android do Xamarin.
 
 
 -   **Ativos** &ndash; contém os arquivos que o aplicativo precisa executar incluindo arquivos de texto, arquivos de dados locais e fontes. Os arquivos incluídos aqui são acessíveis por meio da classe `Assets` gerada. Para obter mais informações sobre ativos Android, veja o guia [Uso de ativos do Android](~/android/app-fundamentals/resources-in-android/android-assets.md) do Xamarin.

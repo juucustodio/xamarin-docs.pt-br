@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32019705"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998219"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -76,7 +76,7 @@ Os destinos de build a seguir são definidos para projetos de Xamarin.Android:
 
 ## <a name="build-properties"></a>Propriedades de build
 
-Propriedades do MSBuild controlam o comportamento dos destinos. Elas são especificadas no arquivo de projeto, por exemplo, **MyApp.csproj**, dentro de um [elemento PropertyGroup do MSBuild](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx). 
+Propriedades do MSBuild controlam o comportamento dos destinos. Elas são especificadas no arquivo de projeto, por exemplo, **MyApp.csproj**, dentro de um [elemento PropertyGroup do MSBuild](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
 
 -   **Configuration** &ndash; especifica a configuração de build a ser usada, como "Debug" ou "Release". A propriedade Configuration é usada para determinar os valores padrão de outras propriedades que determinam o comportamento de destino. Configurações adicionais podem ser criadas dentro de seu IDE.
 
@@ -86,7 +86,7 @@ Propriedades do MSBuild controlam o comportamento dos destinos. Elas são especi
 
 -   **DebugSymbols** &ndash; um valor booliano que determina se o pacote Android é *depurável*, em combinação com a propriedade `$(DebugType)`. Um pacote depurável contém símbolos de depuração, define o atributo `//application/@android:debuggable` para `true` e adiciona automaticamente a permissão `INTERNET` para um depurador possa ser anexado ao processo. Um aplicativo é depurável se `DebugSymbols` é `True` *e* `DebugType` é a cadeia de caracteres vazia ou `Full`.
 
--   **DebugType** &ndash; especifica o [tipo de símbolos de depuração](http://msdn.microsoft.com/en-us/library/s5c8athz.aspx) para gerar como parte do build, o que também afeta se o aplicativo é ou não depurável. Os possíveis valores incluem:
+-   **DebugType** &ndash; especifica o [tipo de símbolos de depuração](https://docs.microsoft.com/visualstudio/msbuild/csc-task) para gerar como parte do build, o que também afeta se o aplicativo é ou não depurável. Os possíveis valores incluem:
 
     - **Full**: todos os símbolos são gerados. Se a propriedade do MSBuild `DebugSymbols` também é `True`, o pacote do aplicativo é depurável.
 
@@ -484,7 +484,7 @@ Para usar o armazenamento de chaves gerado acima, use o grupo de propriedades:
 
 ## <a name="build-actions"></a>Ações de Build
 
-*Ações de build* são [aplicadas a arquivos](http://msdn.microsoft.com/en-us/library/bb629388.aspx) dentro do projeto e controlam como o arquivo é processado. 
+*Ações de build* são [aplicadas a arquivos](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) dentro do projeto e controlam como o arquivo é processado. 
 
 <a name="AndroidEnvironment" />
 

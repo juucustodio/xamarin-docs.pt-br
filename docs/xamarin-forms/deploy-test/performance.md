@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 37d99add473203d90cb1b420536827e34e834a2b
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: d7719f231a6d70594985a1158340104d68367ffe
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209317"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998597"
 ---
 # <a name="xamarinforms-performance"></a>Desempenho do Xamarin.Forms
 
@@ -59,7 +59,7 @@ O XAMLC é desabilitado por padrão para garantir a compatibilidade com versões
 
 ## <a name="choose-the-correct-layout"></a>Escolher o layout correto
 
-Um layout que é capaz de exibir vários filhos, mas que tem apenas um único filho, é um desperdício. Por exemplo, o seguinte exemplo de código mostra um [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) com um único filho:
+Um layout que é capaz de exibir vários filhos, mas que tem apenas um único filho, é um desperdício. Por exemplo, o seguinte exemplo de código mostra um [`StackLayout`](xref:Xamarin.Forms.StackLayout) com um único filho:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -73,7 +73,7 @@ Um layout que é capaz de exibir vários filhos, mas que tem apenas um único fi
 </ContentPage>
 ```
 
-Isso é um desperdício e o elemento [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) deve ser removido, conforme mostrado no exemplo de código a seguir:
+Isso é um desperdício e o elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) deve ser removido, conforme mostrado no exemplo de código a seguir:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -85,7 +85,7 @@ Isso é um desperdício e o elemento [`StackLayout`](https://developer.xamarin.c
 </ContentPage>
 ```
 
-Além disso, não tente reproduzir a aparência de um layout específico usando combinações de outros layouts, pois isso resulta na execução de cálculos de layout desnecessários. Por exemplo, não tente reproduzir um layout [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) usando uma combinação de instâncias [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). O código a seguir mostra um exemplo dessa má prática:
+Além disso, não tente reproduzir a aparência de um layout específico usando combinações de outros layouts, pois isso resulta na execução de cálculos de layout desnecessários. Por exemplo, não tente reproduzir um layout [`Grid`](xref:Xamarin.Forms.Grid) usando uma combinação de instâncias [`StackLayout`](xref:Xamarin.Forms.StackLayout). O código a seguir mostra um exemplo dessa má prática:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -115,7 +115,7 @@ Além disso, não tente reproduzir a aparência de um layout específico usando 
 </ContentPage>
 ```
 
-Isso é um desperdício porque cálculos de layout desnecessário são executados. Em vez disso, o layout desejado pode ser melhor obtido usando um [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), conforme mostra o exemplo de código a seguir:
+Isso é um desperdício porque cálculos de layout desnecessário são executados. Em vez disso, o layout desejado pode ser melhor obtido usando um [`Grid`](xref:Xamarin.Forms.Grid), conforme mostra o exemplo de código a seguir:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -163,7 +163,7 @@ Os renderizadores rápidos reduzem os custos de renderização e inflação dos 
 
 ## <a name="reduce-unnecessary-bindings"></a>Reduzir associações desnecessárias
 
-Não use associações para conteúdo que pode ser facilmente definido estaticamente. Não há nenhuma vantagem em associar dados que não precisam ser associados, pois associações não são econômicas. Por exemplo, a configuração `Button.Text = "Accept"` tem menos sobrecarga do que a associação [`Button.Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Text/) para uma propriedade ViewModel `string` com valor “Aceitar”.
+Não use associações para conteúdo que pode ser facilmente definido estaticamente. Não há nenhuma vantagem em associar dados que não precisam ser associados, pois associações não são econômicas. Por exemplo, a configuração `Button.Text = "Accept"` tem menos sobrecarga do que a associação [`Button.Text`](xref:Xamarin.Forms.Button.Text) para uma propriedade ViewModel `string` com valor “Aceitar”.
 
 <a name="optimizelayout" />
 
@@ -171,36 +171,36 @@ Não use associações para conteúdo que pode ser facilmente definido estaticam
 
 O Xamarin.Forms 2 introduziu um mecanismo de layout otimizado que afeta as atualizações de layout. Para obter o melhor desempenho possível do layout, siga estas diretrizes:
 
-- Reduzir a profundidade das hierarquias de layout especificando os valores de propriedade [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/), permitindo a criação de layouts com menos exibições de encapsulamento. Para saber mais, consulte [Margens e preenchimento](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
-- Ao usar um [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), tente garantir que o menor número de linhas e colunas possível seja definido para o tamanho [`Auto`](https://developer.xamarin.com/api/property/Xamarin.Forms.GridLength.Auto/). Cada linha ou coluna dimensionada automaticamente fará o mecanismo de layout realizar cálculos de layout adicionais. Em vez disso, use linhas e colunas de tamanho fixo, se possível. Como alternativa, defina linhas e colunas para ocupar uma quantidade proporcional de espaço com o valor de enumeração [`GridUnitType.Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/), desde que a árvore pai siga essas diretrizes de layout.
-- Não defina as propriedades [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) e [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) de um layout, a menos que necessário. Os valores padrão de [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/) e [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) permitem a melhor otimização de layout. Alterar essas propriedades tem um custo e consome memória, mesmo ao configurá-las como os valores padrão.
-- Evite usar um [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) sempre que possível. Isso resultará em a CPU precisar realizar significativamente mais trabalho.
-- Ao usar um [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), evite usar a propriedade [`AbsoluteLayout.AutoSize`](https://developer.xamarin.com/api/property/Xamarin.Forms.AbsoluteLayout.AutoSize/) sempre que possível.
-- Ao usar um [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), garanta que apenas um filho seja definido como [`LayoutOptions.Expands`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/). Essa propriedade garante que o filho especificado ocupe o maior espaço que o `StackLayout` pode dar a ele e é um desperdício executar esses cálculos mais de uma vez.
-- Não chame nenhum dos métodos da classe [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/), uma vez que eles resultam na execução de cálculos de layout de alto custo. Em vez disso, é provável que o comportamento de layout desejado possa ser obtido configurando as propriedades [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/) e [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/). Como alternativa, subclasse da classe [`Layout<View>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) para obter o comportamento de layout desejado.
-- Não atualize nenhuma instância [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) com mais frequência do que o necessário, pois a alteração do tamanho do rótulo pode resultar no recálculo de todo o layout de tela.
-- Não defina a propriedade [`Label.VerticalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/), a menos que necessário.
-- Defina o [`LineBreakMode`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.LineBreakMode/) de quaisquer instâncias [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) como [`NoWrap`](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.NoWrap/) sempre que possível.
+- Reduzir a profundidade das hierarquias de layout especificando os valores de propriedade [`Margin`](xref:Xamarin.Forms.View.Margin), permitindo a criação de layouts com menos exibições de encapsulamento. Para saber mais, consulte [Margens e preenchimento](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+- Ao usar um [`Grid`](xref:Xamarin.Forms.Grid), tente garantir que o menor número de linhas e colunas possível seja definido para o tamanho [`Auto`](xref:Xamarin.Forms.GridLength.Auto). Cada linha ou coluna dimensionada automaticamente fará o mecanismo de layout realizar cálculos de layout adicionais. Em vez disso, use linhas e colunas de tamanho fixo, se possível. Como alternativa, defina linhas e colunas para ocupar uma quantidade proporcional de espaço com o valor de enumeração [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star), desde que a árvore pai siga essas diretrizes de layout.
+- Não defina as propriedades [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) e [`HorizontalOptions`](xref:Xamarin.Forms.View.VerticalOptions) de um layout, a menos que necessário. Os valores padrão de [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) e [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) permitem a melhor otimização de layout. Alterar essas propriedades tem um custo e consome memória, mesmo ao configurá-las como os valores padrão.
+- Evite usar um [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) sempre que possível. Isso resultará em a CPU precisar realizar significativamente mais trabalho.
+- Ao usar um [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout), evite usar a propriedade [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) sempre que possível.
+- Ao usar um [`StackLayout`](xref:Xamarin.Forms.StackLayout), garanta que apenas um filho seja definido como [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands). Essa propriedade garante que o filho especificado ocupe o maior espaço que o `StackLayout` pode dar a ele e é um desperdício executar esses cálculos mais de uma vez.
+- Não chame nenhum dos métodos da classe [`Layout`](xref:Xamarin.Forms.Layout), uma vez que eles resultam na execução de cálculos de layout de alto custo. Em vez disso, é provável que o comportamento de layout desejado possa ser obtido configurando as propriedades [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY). Como alternativa, subclasse da classe [`Layout<View>`](xref:Xamarin.Forms.Layout`1) para obter o comportamento de layout desejado.
+- Não atualize nenhuma instância [`Label`](xref:Xamarin.Forms.Label) com mais frequência do que o necessário, pois a alteração do tamanho do rótulo pode resultar no recálculo de todo o layout de tela.
+- Não defina a propriedade [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment), a menos que necessário.
+- Defina o [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) de quaisquer instâncias [`Label`](xref:Xamarin.Forms.Label) como [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap) sempre que possível.
 
 <a name="optimizelistview" />
 
 ## <a name="optimize-listview-performance"></a>Otimizar o desempenho da ListView
 
-Ao usar um controle [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/), há várias experiências de usuário que devem ser otimizadas:
+Ao usar um controle [`ListView`](xref:Xamarin.Forms.ListView), há várias experiências de usuário que devem ser otimizadas:
 
 - **Inicialização** – o intervalo de tempo que começa quando o controle é criado e termina quando itens são mostrados na tela.
 - **Rolagem** – a capacidade de rolar pela lista e garantir que a interface do usuário não fique atrasada com relação a gestos de toque.
 - **Interação** para adicionar, excluir e selecionar itens.
 
-O controle [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) requer um aplicativo para fornecer dados e modelos de célula. Como isso é feito terá um grande impacto sobre o desempenho do controle. Para obter mais informações, consulte [Desempenho da ListView](~/xamarin-forms/user-interface/listview/performance.md).
+O controle [`ListView`](xref:Xamarin.Forms.ListView) requer um aplicativo para fornecer dados e modelos de célula. Como isso é feito terá um grande impacto sobre o desempenho do controle. Para obter mais informações, consulte [Desempenho da ListView](~/xamarin-forms/user-interface/listview/performance.md).
 
 <a name="optimizeimages" />
 
 ## <a name="optimize-image-resources"></a>Otimizar os recursos de imagem
 
-Exibir recursos de imagem pode aumentar significativamente o volume de memória do aplicativo. Portanto, eles só devem ser criados quando necessário e devem ser liberados assim que o aplicativo não exigi-los mais. Por exemplo, se um aplicativo estiver exibindo uma imagem lendo seus dados de um fluxo, certifique-se de que esse fluxo seja criado somente quando necessário e liberado quando não for mais necessário. Isso pode ser feito criando o fluxo quando a página é criada ou quando o evento [`Page.Appearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) é acionado e, em seguida, descartando o fluxo quando o evento [`Page.Disappearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Disappearing/) é acionado.
+Exibir recursos de imagem pode aumentar significativamente o volume de memória do aplicativo. Portanto, eles só devem ser criados quando necessário e devem ser liberados assim que o aplicativo não exigi-los mais. Por exemplo, se um aplicativo estiver exibindo uma imagem lendo seus dados de um fluxo, certifique-se de que esse fluxo seja criado somente quando necessário e liberado quando não for mais necessário. Isso pode ser feito criando o fluxo quando a página é criada ou quando o evento [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) é acionado e, em seguida, descartando o fluxo quando o evento [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) é acionado.
 
-Ao fazer o download de uma imagem para exibição com o método [`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/), armazene em cache a imagem baixada garantindo que a propriedade [`UriImageSource.CachingEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.CachingEnabled/) esteja definida como `true`. Para saber mais, consulte [Trabalhando com imagens](~/xamarin-forms/user-interface/images.md).
+Ao fazer o download de uma imagem para exibição com o método [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)), armazene em cache a imagem baixada garantindo que a propriedade [`UriImageSource.CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled) esteja definida como `true`. Para saber mais, consulte [Trabalhando com imagens](~/xamarin-forms/user-interface/images.md).
 
 Para saber mais, consulte [Otimizar recursos de imagem](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages).
 
@@ -208,9 +208,9 @@ Para saber mais, consulte [Otimizar recursos de imagem](~/cross-platform/deploy-
 
 ## <a name="reduce-the-visual-tree-size"></a>Reduzir o tamanho da árvore visual
 
-Reduzir o número de elementos em uma página tornará a renderização da página mais rápida. Há duas técnicas principais para realizar essa tarefa. A primeira é ocultar elementos que não estão visíveis. A propriedade [`IsVisible`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsVisible/) de cada elemento determina se o elemento deve fazer parte da árvore visual ou não. Portanto, se um elemento não estiver visível porque está oculto atrás de outros elementos, remova o elemento ou defina sua propriedade `IsVisible` como `false`.
+Reduzir o número de elementos em uma página tornará a renderização da página mais rápida. Há duas técnicas principais para realizar essa tarefa. A primeira é ocultar elementos que não estão visíveis. A propriedade [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) de cada elemento determina se o elemento deve fazer parte da árvore visual ou não. Portanto, se um elemento não estiver visível porque está oculto atrás de outros elementos, remova o elemento ou defina sua propriedade `IsVisible` como `false`.
 
-A segunda técnica é remover elementos desnecessários. Por exemplo, o código a seguir mostra um layout da página que exibe uma série de elementos [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/):
+A segunda técnica é remover elementos desnecessários. Por exemplo, o código a seguir mostra um layout da página que exibe uma série de elementos [`Label`](xref:Xamarin.Forms.Label):
 
 ```xaml
 <ContentPage.Content>
@@ -330,5 +330,5 @@ Esse artigo descreveu e discutiu técnicas para aumentar o desempenho dos aplica
 - [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
 - [Compactação de Layout](~/xamarin-forms/user-interface/layouts/layout-compression.md)
 - [Exemplo de redimensionador de imagem do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/XamFormsImageResize/)
-- [XamlCompilation](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilation/)
-- [XamlCompilationOptions](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationOptions/)
+- [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
+- [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)
