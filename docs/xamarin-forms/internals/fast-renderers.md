@@ -1,48 +1,48 @@
 ---
-title: Processadores xamarin. Forms Fast
-description: Este artigo apresenta renderizadores rápidos, que reduzem os custos de processamento de um controle xamarin. Forms no Android e inflação por mesclar a hierarquia resultante do controle nativo.
+title: Renderizadores de xamarin. Forms Fast
+description: Este artigo apresenta os renderizadores rápidos, o que reduz os custos de renderização de um controle xamarin. Forms no Android e inflação nivelando a hierarquia de controle nativo resultante.
 ms.prod: xamarin
 ms.assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 40cc095da41aaae5cb474987d8b03f7cf4a17322
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e4b060c703077e140e0f0d2f8c4c2b824c890e8d
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243055"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997103"
 ---
-# <a name="xamarinforms-fast-renderers"></a>Processadores xamarin. Forms Fast
+# <a name="xamarinforms-fast-renderers"></a>Renderizadores de xamarin. Forms Fast
 
-_Este artigo apresenta renderizadores rápidos, que reduzem os custos de processamento de um controle xamarin. Forms no Android e inflação por mesclar a hierarquia resultante do controle nativo._
+_Este artigo apresenta os renderizadores rápidos, o que reduz os custos de renderização de um controle xamarin. Forms no Android e inflação nivelando a hierarquia de controle nativo resultante._
 
-Tradicionalmente, a maioria dos renderizadores do controle original no Android é compostas de dois modos de exibição:
+Tradicionalmente, a maioria dos renderizadores de controle original no Android é compostas de dois modos de exibição:
 
-- Controle de um nativo, como um `Button` ou `TextView`.
-- Um contêiner `ViewGroup` que lida com algumas do trabalho de layout, manipulação de gesto e outras tarefas.
+- Controlar um nativo, como uma `Button` ou `TextView`.
+- Um contêiner `ViewGroup` que lida com algumas das outras tarefas, tratamento de gesto e o trabalho de layout.
 
-No entanto, essa abordagem tem uma implicação de desempenho, em que dois modos de exibição são criados para cada controle lógico, o que resulta em uma árvore visual mais complexa que não exige mais memória e mais processamento para renderizar na tela.
+No entanto, essa abordagem tem uma implicação de desempenho que dois modos de exibição são criados para cada controle lógico, o que resulta em uma árvore visual mais complexa que exige mais memória e mais processamento para renderizar na tela.
 
-Processadores rápidos reduzem os custos de processamento de um controle xamarin. Forms e inflação em uma única exibição. Portanto, em vez de criar dois modos de exibição e adicioná-los à árvore de exibição, somente um é criado. Isso melhora o desempenho criando menos objetos, que por sua vez significa uma árvore de exibição menos complexa, e menos uso de memória (que também resulta em menos pausas de coleta de lixo).
+Os renderizadores rápidos reduzem os custos de renderização de um controle xamarin. Forms e inflação em uma única exibição. Portanto, em vez de criar dois modos de exibição e adicioná-los à árvore de exibição, somente um é criado. Isso melhora o desempenho criando menos objetos, que por sua vez, significa que uma árvore de exibição menos complexa, e menos uso de memória (que também resulta em menos pausas na coleta de lixo).
 
-Processadores rápidos estão disponíveis para os seguintes controles em xamarin. Forms 2.4 no Android:
+Os renderizadores rápidos estão disponíveis para os seguintes controles no xamarin. Forms 2.4 no Android:
 
-- [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)
-- [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)
-- [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)
+- [`Button`](xref:Xamarin.Forms.Button)
+- [`Image`](xref:Xamarin.Forms.Image)
+- [`Label`](xref:Xamarin.Forms.Label)
 
-Funcionalmente, esses processadores rápidos não são diferentes para os renderizadores originais. No entanto, eles são atualmente experimentais e só pode ser usados ao adicionar a seguinte linha de código para o `MainActivity` classe antes de chamar `Forms.Init`:
+Funcionalmente, esses renderizadores rápidos não são diferentes para os renderizadores originais. No entanto, eles atualmente são experimentais e só pode ser usados, adicionando a seguinte linha de código para seus `MainActivity` classe antes de chamar `Forms.Init`:
 
 ```csharp
 Forms.SetFlags("FastRenderers_Experimental");
 ```
 
 > [!NOTE]
-> Renderizadores rápidos só são aplicáveis para o aplicativo compat Android back-end, para que essa configuração será ignorada em atividades de compatibilidade de aplicativo pré.
+> Os renderizadores rápidos só são aplicáveis para o aplicativo compat Android back-end, portanto, essa configuração será ignorada em atividades de compatibilidade de aplicativo pré.
 
-Melhorias de desempenho irá variar para cada aplicativo, dependendo da complexidade do layout. Por exemplo, melhorias de desempenho de x2 são possíveis ao rolar por um [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) contendo milhares de linhas de dados, onde as células em cada linha são feitas dos controles que usam processadores rápidas, o que resulta em visivelmente rolagem mais suave.
+Melhorias de desempenho irá variar para cada aplicativo, dependendo da complexidade do layout. Por exemplo, melhorias de desempenho de x2 são possíveis ao rolar por um [ `ListView` ](xref:Xamarin.Forms.ListView) que contém milhares de linhas de dados, em que as células em cada linha são compostas de controles que usam os renderizadores rápidos, o que resulta em visivelmente rolagem mais suave.
 
 
 ## <a name="related-links"></a>Links relacionados

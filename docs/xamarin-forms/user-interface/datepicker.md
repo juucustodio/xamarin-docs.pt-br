@@ -7,29 +7,29 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 31422f1067473ccb49a681098bd0809c451e7369
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 553957bfa06c7b7a9c5261e426ebee4190de5ebb
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935352"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994920"
 ---
 # <a name="xamarinforms-datepicker"></a>DatePicker do xamarin. Forms
 
 _Um modo de exibição do xamarin. Forms que permite ao usuário selecionar uma data_
 
-O xamarin. Forms [ `DatePicker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) invoca o controle de seletor de data da plataforma e permite que o usuário selecione uma data. `DatePicker` define oito propriedades:
+O xamarin. Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) invoca o controle de seletor de data da plataforma e permite que o usuário selecione uma data. `DatePicker` define oito propriedades:
 
-- [`MinimumDate`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MinimumDate/) do tipo [ `DateTime` ](https://developer.xamarin.com/api/type/System.DateTime/), cujo padrão é o primeiro dia do ano de 1900.
-- [`MaximumDate`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MaximumDate/) do tipo `DateTime`, qual o padrão é o último dia do ano 2100.
-- [`Date`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Date/) do tipo `DateTime`, a data selecionada, cujo padrão é o valor [ `DateTime.Today` ](https://developer.xamarin.com/api/property/System.DateTime.Today/).
-- [`Format`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Format/) do tipo `string`, um [padrão](/dotnet/standard/base-types/standard-date-and-time-format-strings/) ou [personalizado](/dotnet/standard/base-types/custom-date-and-time-format-strings/) .NET formatação de cadeia de caracteres, que assume como padrão "D", de longa data padrão.
-- [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.TextColor/) do tipo [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/), a cor usada para exibir a data selecionada, cujo padrão é [ `Color.Default` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/).
+- [`MinimumDate`](xref:Xamarin.Forms.DatePicker.MinimumDate) do tipo [ `DateTime` ](xref:System.DateTime), cujo padrão é o primeiro dia do ano de 1900.
+- [`MaximumDate`](xref:Xamarin.Forms.DatePicker.MaximumDate) do tipo `DateTime`, qual o padrão é o último dia do ano 2100.
+- [`Date`](xref:Xamarin.Forms.DatePicker.Date) do tipo `DateTime`, a data selecionada, cujo padrão é o valor [ `DateTime.Today` ](xref:System.DateTime.Today).
+- [`Format`](xref:Xamarin.Forms.DatePicker.Format) do tipo `string`, um [padrão](/dotnet/standard/base-types/standard-date-and-time-format-strings/) ou [personalizado](/dotnet/standard/base-types/custom-date-and-time-format-strings/) .NET formatação de cadeia de caracteres, que assume como padrão "D", de longa data padrão.
+- [`TextColor`](xref:Xamarin.Forms.DatePicker.TextColor) do tipo [ `Color` ](xref:Xamarin.Forms.Color), a cor usada para exibir a data selecionada, cujo padrão é [ `Color.Default` ](xref:Xamarin.Forms.Color.Default).
 - [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes) do tipo [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes), cujo padrão é [ `FontAtributes.None` ](xref:Xamarin.Forms.FontAttributes.None).
 - [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily) do tipo `string`, cujo padrão é `null`.
 - [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize) do tipo `double`, cujo padrão é de -1,0.
 
-O `DatePicker` dispara uma [ `DateSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.DatePicker.DateSelected/) evento quando o usuário seleciona uma data.
+O `DatePicker` dispara uma [ `DateSelected` ](xref:Xamarin.Forms.DatePicker.DateSelected) evento quando o usuário seleciona uma data.
 
 > [!WARNING]
 > Ao definir `MinimumDate` e `MaximumDate`, verifique se `MinimumDate` sempre é menor que ou igual a `MaximumDate`. Caso contrário, `DatePicker` gerarão uma exceção.
@@ -192,4 +192,4 @@ Depois de duas datas forem selecionadas, o aplicativo exibe o número de dias en
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de DaysBetweenDates](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
-- [API de DatePicker](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)
+- [API de DatePicker](xref:Xamarin.Forms.DatePicker)

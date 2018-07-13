@@ -1,67 +1,67 @@
 ---
 title: Opções de layout no xamarin. Forms
-description: Cada exibição xamarin. Forms tem propriedades HorizontalOptions e VerticalOptions, do tipo LayoutOptions. Este artigo explica o efeito de cada valor de LayoutOptions no alinhamento e expansão de um modo de exibição.
+description: Cada modo de exibição do xamarin. Forms tem as propriedades HorizontalOptions e propriedades VerticalOptions, do tipo LayoutOptions. Este artigo explica o efeito que cada valor LayoutOptions tem sobre o alinhamento e a expansão de um modo de exibição.
 ms.prod: xamarin
 ms.assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: dc15c05bf3633ef2ae5f71754290a7bd768dc836
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 1ede5f75925a3dafa93062d147fa349ff91f07d2
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245684"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995304"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Opções de layout no xamarin. Forms
 
-_Cada exibição xamarin. Forms tem propriedades HorizontalOptions e VerticalOptions, do tipo LayoutOptions. Este artigo explica o efeito de cada valor de LayoutOptions no alinhamento e expansão de um modo de exibição._
+_Cada modo de exibição do xamarin. Forms tem as propriedades HorizontalOptions e propriedades VerticalOptions, do tipo LayoutOptions. Este artigo explica o efeito que cada valor LayoutOptions tem sobre o alinhamento e a expansão de um modo de exibição._
 
 ## <a name="overview"></a>Visão geral
 
-O [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estrutura encapsula as preferências de layout dois:
+O [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estrutura encapsula duas as preferências de layout:
 
-- **Alinhamento** – o modo de exibição preferencial do alinhamento, que determina sua posição e o tamanho do layout de seu pai.
-- **Expansão** – usada somente por um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)e indica se o modo de exibição deve usar o espaço extra, se estiver disponível.
+- **Alinhamento** – o modo de exibição preferencial do alinhamento, que determina sua posição e tamanho dentro do seu layout pai.
+- **Expansão** – usada somente por um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)e indica se o modo de exibição deve usar o espaço extra, se ele estiver disponível.
 
-Essas preferências de layout podem ser aplicadas a um [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/), relativo a seu pai, definindo a [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) ou [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedade das `View` para um dos campos de público a [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estrutura. Os campos públicos são da seguinte maneira:
+Essas preferências de layout podem ser aplicadas a um [ `View` ](xref:Xamarin.Forms.View), em relação a seu pai, definindo o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) ou [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedade das `View` dentre os campos públicos do [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estrutura. Os campos públicos são da seguinte maneira:
 
-- [`Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/)
-- [`Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/)
-- [`End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/)
-- [`Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/)
-- [`StartAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/)
-- [`CenterAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.CenterAndExpand/)
-- [`EndAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.EndAndExpand/)
-- [`FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)
+- [`Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+- [`StartAndExpand`](xref:Xamarin.Forms.LayoutOptions.StartAndExpand)
+- [`CenterAndExpand`](xref:Xamarin.Forms.LayoutOptions.CenterAndExpand)
+- [`EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
+- [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
 O `Start`, `Center`, `End`, e `Fill` campos são usados para definir o alinhamento do modo de exibição do layout do pai:
 
-- Para alinhamento horizontal, [ `Start` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/) posições a [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) no lado esquerdo do layout do pai e para o alinhamento vertical, ele posiciona o `View` na parte superior das layout de pai.
-- Para o alinhamento horizontal e vertical, [ `Center` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/) horizontal ou verticalmente centraliza o [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/).
-- Para o alinhamento horizontal, [ `End` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/) posições de [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) no lado direito do layout do pai e para o alinhamento vertical, ele posiciona o `View` na parte inferior do layout do pai.
-- Para o alinhamento horizontal, [ `Fill` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/) garante que o [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ocupa a largura do layout do pai e para o alinhamento vertical, ele garante que o `View` preenche o altura do layout do pai.
+- Para alinhamento horizontal, [ `Start` ](xref:Xamarin.Forms.LayoutOptions.Start) posições a [ `View` ](xref:Xamarin.Forms.View) no lado esquerdo do layout pai e o alinhamento vertical, ela posiciona o `View` na parte superior das layout pai.
+- Para o alinhamento horizontal e vertical, [ `Center` ](xref:Xamarin.Forms.LayoutOptions.Center) horizontal ou verticalmente centraliza as [ `View` ](xref:Xamarin.Forms.View).
+- Para o alinhamento horizontal, [ `End` ](xref:Xamarin.Forms.LayoutOptions.End) posições a [ `View` ](xref:Xamarin.Forms.View) no lado direito do layout pai e o alinhamento vertical, ela posiciona o `View` na parte inferior do layout pai.
+- Para o alinhamento horizontal, [ `Fill` ](xref:Xamarin.Forms.LayoutOptions.Fill) garante que o [ `View` ](xref:Xamarin.Forms.View) preenche a largura do layout pai e o alinhamento vertical, garante que o `View` preenche o altura do layout pai.
 
-O `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, e `FillAndExpand` valores são usados para definir a preferência de alinhamento, e se o modo de exibição ocupam mais espaço se estiver disponível dentro do pai [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/).
+O `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, e `FillAndExpand` valores são usados para definir a preferência de alinhamento, e se o modo de exibição será ocupam mais espaço, se disponível dentro do pai [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
 
 > [!NOTE]
-> O valor padrão de um modo de exibição [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) e [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedades é [ `LayoutOptions.Fill` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/).
+> O valor padrão de um modo de exibição [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades é [ `LayoutOptions.Fill` ](xref:Xamarin.Forms.LayoutOptions.Fill).
 
 <a name="alignment" />
 
 ## <a name="alignment"></a>Alinhamento
 
-Alinhamento controla como um modo de exibição é posicionado no layout de seu pai quando o layout do pai contém espaço não utilizado (ou seja, o layout de pai é maior do que o tamanho combinado de todos os seus filhos).
+Alinhamento de controles como um modo de exibição é posicionado dentro de seu layout pai quando o layout pai contém espaço não utilizado (ou seja, o layout do pai é maior do que o tamanho combinado de todos os seus filhos).
 
-Um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) somente respeita o `Start`, `Center`, `End`, e `Fill` [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) campos em exibições filho que estão na direção oposta para o `StackLayout` orientação. Portanto, o filho exibições na orientação vertical `StackLayout` pode definir seus [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propriedades para um do `Start`, `Center`, `End`, ou `Fill` campos. Da mesma forma, o filho exibições em uma orientação horizontal `StackLayout` pode definir seus [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedades para um do `Start`, `Center`, `End`, ou `Fill` campos.
+Um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) somente respeita o `Start`, `Center`, `End`, e `Fill` [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) campos em modos de exibição filho que estão na direção oposta para o `StackLayout` orientação. Portanto, o filho exibições dentro de uma orientação vertical `StackLayout` pode definir seus [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) as propriedades para um dos `Start`, `Center`, `End`, ou `Fill` campos. Da mesma forma, o filho exibições dentro de uma orientação horizontal `StackLayout` pode definir seus [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) as propriedades para um dos `Start`, `Center`, `End`, ou `Fill` campos.
 
-Um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) não respeita a `Start`, `Center`, `End`, e `Fill` [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) campos em exibições filho que estão na mesma direção o `StackLayout` orientação. Portanto, uma orientação vertical `StackLayout` ignora o `Start`, `Center`, `End`, ou `Fill` campos se eles estiverem definidos no [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedades dos modos de exibição do filho. Da mesma forma, uma orientação horizontal `StackLayout` ignora o `Start`, `Center`, `End`, ou `Fill` campos se eles estiverem definidos no [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propriedades dos modos de exibição do filho.
+Um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) não respeita a `Start`, `Center`, `End`, e `Fill` [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) campos em modos de exibição filho que estão na mesma direção o `StackLayout` orientação. Portanto, uma orientação vertical `StackLayout` ignora os `Start`, `Center`, `End`, ou `Fill` campos se eles são definidos na [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades de exibições filho. Da mesma forma, um orientado horizontalmente `StackLayout` ignora os `Start`, `Center`, `End`, ou `Fill` campos se elas são definidas no [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propriedades de exibições filho.
 
 > [!NOTE]
-> [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/) geralmente substituições tamanho solicitações especificadas usando o [ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) e [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) propriedades.
+> [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) geralmente substituições dimensionar solicitações especificadas usando o [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) e [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) propriedades.
 
-O exemplo de código XAML a seguir demonstra uma orientação vertical [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) onde cada filho [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) define seu [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propriedade para um dos campos de alinhamento de quatro a [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estrutura:
+O exemplo de código XAML a seguir demonstra uma orientação vertical [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) onde cada filho [ `Label` ](xref:Xamarin.Forms.Label) define seu [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propriedade para um dos campos de alinhamento de quatro a [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estrutura:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">
@@ -91,22 +91,22 @@ Content = new StackLayout
 
 O código resulta no layout mostrado nas capturas de tela seguir:
 
-[![](layout-options-images/alignment.png "Opções de alinhamento de Layout")](layout-options-images/alignment-large.png#lightbox "opções de alinhamento de Layout")
+[![](layout-options-images/alignment.png "Opções de Layout de alinhamento")](layout-options-images/alignment-large.png#lightbox "opções de Layout de alinhamento")
 
 <a name="expansion" />
 
 ## <a name="expansion"></a>Expansão
 
-Expansão controla se uma exibição ocupam mais espaço, se disponível, dentro de um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). Se o `StackLayout` contém espaço não utilizado (ou seja, o `StackLayout` é maior do que o tamanho combinado de todos os seus filhos), o espaço não utilizado é compartilhado igualmente por todos os modos de filho que solicitam expansão definindo suas [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/)ou [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedades para um [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) campo que usa o `AndExpand` sufixo. Observe que, quando todo o espaço no `StackLayout` é usado, as opções de expansão não têm nenhum efeito.
+Expansão controla se um modo de exibição ocupará mais espaço, se disponível, dentro de um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). Se o `StackLayout` contém espaço não utilizado (ou seja, o `StackLayout` é maior do que o tamanho combinado de todos os seus filhos), o espaço não utilizado é compartilhado igualmente por todas as exibições filho que solicitam a expansão, definindo suas [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions)ou [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades para um [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) campo que usa o `AndExpand` sufixo. Observe que, quando todo o espaço no `StackLayout` é usado, as opções de expansão não têm nenhum efeito.
 
-Um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) só pode expandir os modos de exibição filho na direção de sua orientação. Portanto, uma orientação vertical `StackLayout` pode expandir exibições filho que definam seus [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedades para um do `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, ou `FillAndExpand` campos, se o `StackLayout` contém espaço não utilizado. Da mesma forma, uma orientação horizontal `StackLayout` pode expandir exibições filho que definam seus [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propriedades para um do `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, ou `FillAndExpand` campos, se o `StackLayout` contém espaço não utilizado.
+Um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) só pode expandir os modos de exibição filho na direção de sua orientação. Portanto, uma orientação vertical `StackLayout` pode expandir os modos de exibição filho que definirem seus [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades para um dos `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, ou `FillAndExpand` campos, se o `StackLayout` contém espaço não utilizado. Da mesma forma, um orientado horizontalmente `StackLayout` pode expandir os modos de exibição filho definirem seus [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propriedades para um da `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, ou `FillAndExpand` campos, se o `StackLayout` contém espaço não utilizado.
 
-Um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) não é possível expandir exibições filho na direção oposta à sua orientação. Portanto, na orientação vertical `StackLayout`, a definição de [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propriedade em uma exibição de filho para [ `StartAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/) tem o mesmo efeito que definir a propriedade como [ `Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/).
+Um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) não é possível expandir os modos de exibição filho na direção oposta à sua orientação. Portanto, na orientação vertical `StackLayout`, definindo o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propriedade em um modo de exibição filho [ `StartAndExpand` ](xref:Xamarin.Forms.LayoutOptions.StartAndExpand) tem o mesmo efeito que definir a propriedade como [ `Start`](xref:Xamarin.Forms.LayoutOptions.Start).
 
 > [!NOTE]
-> Observe que habilitar expansão não altera o tamanho de uma exibição, a menos que ele usa [ `LayoutOptions.FillAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/).
+> Observe que habilitar a expansão não altera o tamanho de um modo de exibição, a menos que ele usa [ `LayoutOptions.FillAndExpand` ](xref:Xamarin.Forms.LayoutOptions.FillAndExpand).
 
-O exemplo de código XAML a seguir demonstra uma orientação vertical [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) onde cada filho [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) define seu [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedade para um dos campos da expansão de quatro a [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estrutura:
+O exemplo de código XAML a seguir demonstra uma orientação vertical [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) onde cada filho [ `Label` ](xref:Xamarin.Forms.Label) define seu [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedade para um dos campos de expansão de quatro a [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estrutura:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">
@@ -148,15 +148,15 @@ O código resulta no layout mostrado nas capturas de tela seguir:
 
 [![](layout-options-images/expansion.png "Opções de Layout de expansão")](layout-options-images/expansion-large.png#lightbox "opções de Layout de expansão")
 
-Cada [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) ocupam a mesma quantidade de espaço dentro de [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). No entanto, apenas o último `Label`, que define seu [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propriedade [ `FillAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) tem um tamanho diferente. Além disso, cada `Label` é separado por um vermelho pequeno [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/), que permite que o espaço de `Label` ocupa para ser exibidos com facilidade.
+Cada [ `Label` ](xref:Xamarin.Forms.Label) ocupa a mesma quantidade de espaço dentro de [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). No entanto, somente o último `Label`, que define seu [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedade a ser [ `FillAndExpand` ](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) tem um tamanho diferente. Além disso, cada `Label` é separado por um pequeno vermelho [ `BoxView` ](xref:Xamarin.Forms.BoxView), que permite que o espaço de `Label` ocupa para ser facilmente exibidos.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo explicou o efeito que cada [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) tem valor de estrutura no alinhamento e expansão de uma exibição, em relação ao seu pai. O `Start`, `Center`, `End`, e `Fill` campos são usados para definir o alinhamento do modo de exibição do layout do pai e o `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, e `FillAndExpand` campos são usados para definir a preferência de alinhamento e para determinar se o modo de exibição ocupam mais espaço, se disponível, dentro de um [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/).
+Este artigo explicou o efeito que cada [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) valor estrutura tem sobre o alinhamento e a expansão de uma exibição, relativo ao seu pai. O `Start`, `Center`, `End`, e `Fill` campos são usados para definir o alinhamento do modo de exibição do layout do pai e o `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, e `FillAndExpand` campos são usados para definir a preferência de alinhamento e para determinar se o modo de exibição ocupará mais espaço, se disponível, dentro de um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [LayoutOptions (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
-- [LayoutOptions](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/)
+- [LayoutOptions (amostra)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
+- [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

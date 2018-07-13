@@ -1,36 +1,36 @@
 ---
 title: Noções básicas de bitmap no SkiaSharp
-description: Este artigo explica como carregar bitmaps em SkiaSharp de várias fontes e exibi-los em aplicativos xamarin. Forms e demonstra isso com o código de exemplo.
+description: Este artigo explica como carregar bitmaps em SkiaSharp de várias fontes e exibi-los nos aplicativos xamarin. Forms e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 291f08afb95c70e9f9fccc02e1fd7353cf107213
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: dec6fa1534f14836ae98677ad33e280ff510fb97
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244380"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995176"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Noções básicas de bitmap no SkiaSharp
 
-_Carregue os bitmaps de várias fontes e exibi-los._
+_Carregar bitmaps de várias fontes e exibi-los._
 
-O suporte de bitmaps em SkiaSharp é muito extenso. Este artigo aborda apenas os fundamentos &mdash; como carregar bitmaps e como exibi-los:
+O suporte de bitmaps em SkiaSharp é muito extenso. Este artigo aborda apenas as Noções básicas &mdash; como carregar bitmaps e como exibi-los:
 
 ![](bitmaps-images/bitmapssample.png "A exibição de dois bitmaps")
 
-Um bitmap SkiaSharp é um objeto do tipo [ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). Há muitas maneiras de criar um bitmap, mas este artigo restringe-se para o [ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/SkiaSharp.SKStream/) método, que carrega o bitmap de um [ `SKStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStream/) objeto que faz referência a um arquivo de bitmap. É conveniente usar o [ `SKManagedStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKManagedStream/) classe que deriva de `SKStream` porque ele tem um construtor que aceite um .NET [ `Stream` ](https://developer.xamarin.com/api/type/System.IO.Stream/) objeto.
+Um bitmap de SkiaSharp é um objeto do tipo [ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). Há várias maneiras para criar um bitmap, mas este artigo restringe-se para o [ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/SkiaSharp.SKStream/) método, que carrega o bitmap de um [ `SKStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStream/) objeto que faz referência a um arquivo de bitmap. É conveniente usar o [ `SKManagedStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKManagedStream/) classe que deriva de `SKStream` porque ele tem um construtor que aceita um .NET [ `Stream` ](xref:System.IO.Stream) objeto.
 
-O **Bitmaps básico** página o **SkiaSharpFormsDemos** programa demonstra como carregar bitmaps de três fontes diferentes:
+O **Bitmaps básica** página na **SkiaSharpFormsDemos** programa demonstra como carregar bitmaps de três fontes diferentes:
 
 - Na Internet
 - De um recurso incorporado no executável
 - Da biblioteca de fotos do usuário
 
-Três `SKBitmap` objetos essas três fontes são definidos como campos de [ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs) classe:
+Três `SKBitmap` objetos para essas três fontes são definidos como campos na [ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs) classe:
 
 ```csharp
 public class BasicBitmapsPage : ContentPage
@@ -55,7 +55,7 @@ public class BasicBitmapsPage : ContentPage
 
 ## <a name="loading-a-bitmap-from-the-web"></a>Carregar um Bitmap da Web
 
-Para carregar um bitmap com base em uma URL, você pode usar o [ `WebRequest` ](https://developer.xamarin.com/api/type/System.Net.WebRequest/) classe, conforme mostrado no código a seguir executado no `BasicBitmapsPage` construtor. Aqui, a URL aponta para uma área no site da web Xamarin com alguns exemplos de bitmaps. Um pacote no site da web permite anexar uma especificação para redimensionar o bitmap para uma largura específica:
+Para carregar um bitmap com base em uma URL, você pode usar o [ `WebRequest` ](xref:System.Net.WebRequest) classe, conforme mostrado no código a seguir executado no `BasicBitmapsPage` construtor. Aqui, a URL aponta para uma área no site do Xamarin com alguns exemplos de bitmaps. Um pacote no site da web permite acrescentar uma especificação para redimensionar o bitmap para uma largura específica:
 
 ```csharp
 Uri uri = new Uri("http://developer.xamarin.com/demo/IMG_3256.JPG?width=480");
@@ -85,15 +85,15 @@ request.BeginGetResponse((IAsyncResult arg) =>
 }, null);
 ```
 
-Quando o bitmap foi baixado com êxito, o método de retorno de chamada passada para o `BeginGetResponse` execuções do método. O `EndGetResponse` chamada deve estar em um `try` bloquear no caso de erro. O `Stream` obtido do objeto `GetResponseStream` não é adequado em algumas plataformas, então o conteúdo de bitmap é copiado para um `MemoryStream` objeto. Neste ponto, o `SKManagedStream` objeto pode ser criado. Agora faz referência ao arquivo de bitmap, que é provavelmente um arquivo JPEG ou PNG. O `SKBitmap.Decode` método decodifica o arquivo de bitmap e armazena os resultados em um formato SkiaSharp interno.
+Quando o bitmap foi baixado com êxito, o método de retorno de chamada passada para o `BeginGetResponse` execuções de método. O `EndGetResponse` chamada precisa estar em um `try` bloquear no caso de erro. O `Stream` objeto obtido `GetResponseStream` não é adequado em algumas plataformas, para que o conteúdo de bitmap é copiado para um `MemoryStream` objeto. Neste ponto, o `SKManagedStream` objeto pode ser criado. Agora faz referência ao arquivo de bitmap, o que provavelmente é um arquivo JPEG ou PNG. O `SKBitmap.Decode` método decodifica o arquivo de bitmap e armazena os resultados em um formato de SkiaSharp interno.
 
-O método de retorno de chamada transmitido para `BeginGetResponse` executa depois que o construtor concluiu a execução, o que significa que o `SKCanvasView` precisa ser invalidados para permitir que o `PaintSurface` manipulador para atualizar a exibição. No entanto, o `BeginGetResponse` retorno de chamada é executado em um thread secundário de execução, portanto, é necessário usar `Device.BeginInvokeOnMainThread` para executar o `InvalidateSurface` método no thread de interface do usuário.
+O método de retorno de chamada passado para `BeginGetResponse` é executado depois que o construtor finalizou a execução, que significa que o `SKCanvasView` precisa ser invalidada para permitir que o `PaintSurface` manipulador para atualizar a exibição. No entanto, o `BeginGetResponse` retorno de chamada é executado em um thread secundário da execução, portanto, é necessário usar `Device.BeginInvokeOnMainThread` para executar o `InvalidateSurface` método no thread de interface do usuário.
 
 ## <a name="loading-a-bitmap-resource"></a>Carregar um recurso de Bitmap
 
-Em termos de código, a abordagem mais fácil para carregar os bitmaps incluem um recurso de bitmap diretamente em seu aplicativo. O **SkiaSharpFormsDemos** programa inclui uma pasta denominada **mídia** que contém um arquivo de bitmap chamado **monkey.png**. No **propriedades** caixa de diálogo para esse arquivo, você deve fornecer um arquivo um **ação de compilação** de **recurso incorporado**!
+Em termos de código, a abordagem mais fácil para carregar os bitmaps está incluindo um recurso de bitmap diretamente em seu aplicativo. O **SkiaSharpFormsDemos** programa inclui uma pasta chamada **mídia** que contém um arquivo de bitmap chamado **monkey.png**. No **propriedades** caixa de diálogo para esse arquivo, você deve fornecer um arquivo de um **Build Action** de **Embedded Resource**!
 
-Cada recurso inserido tem um *ID de recurso* que consiste no nome do projeto, a pasta e o nome do arquivo, todos os conectados por períodos: **SkiaSharpFormsDemos.Media.monkey.png**. Você pode obter acesso a este recurso, especificando o recurso ID como um argumento para o [ `GetManifestResourceStream` ](https://developer.xamarin.com/api/member/System.Reflection.Assembly.GetManifestResourceStream/p/System.String/) método o [ `Assembly` ](https://developer.xamarin.com/api/type/System.Reflection.Assembly/) classe:
+Cada recurso inserido tem um *ID do recurso* que consiste no nome do projeto, a pasta e o nome do arquivo, tudo conectado por períodos: **SkiaSharpFormsDemos.Media.monkey.png**. Você pode obter acesso a esse recurso com a especificação desse recurso ID como um argumento para o [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método da [ `Assembly` ](xref:System.Reflection.Assembly) classe:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";
@@ -106,15 +106,15 @@ using (SKManagedStream skStream = new SKManagedStream(stream))
 }
 ```
 
-Isso `Stream` objeto pode ser convertido diretamente em um `SKManagedStream` objeto.
+Isso `Stream` objeto pode ser convertido diretamente para um `SKManagedStream` objeto.
 
 ## <a name="loading-a-bitmap-from-the-photo-library"></a>Carregar um Bitmap da biblioteca de fotos
 
-Também é possível que o usuário carregar uma foto da biblioteca de imagens do dispositivo. Este recurso não é fornecido pelo xamarin. Forms em si. O trabalho exigir uma dependência de serviço, como descrito no artigo [uma foto de separação da biblioteca de imagens](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md).
+Também é possível que o usuário carregar uma foto da biblioteca de imagens do dispositivo. Esse recurso não é fornecido pelo xamarin. Forms em si. O trabalho exigir um serviço de dependência, como descrito no artigo [escolhendo uma foto na biblioteca de imagens](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md).
 
-O **IPicturePicker.cs** de arquivo e os três **PicturePickerImplementation.cs** arquivos de artigo foram copiados para vários projetos do **SkiaSharpFormsDemos**solução e recebe novos nomes de namespace. Além disso, o Android **MainActivity.cs** arquivo tiver sido modificado, conforme descrito no artigo e o projeto iOS tem permissão para acessar a biblioteca de fotos com duas linhas na parte inferior do **Info. plist**  arquivo.
+O **IPicturePicker.cs** arquivo e os três **PicturePickerImplementation.cs** arquivos desse artigo foram copiados para os diversos projetos do **SkiaSharpFormsDemos**solução e considerando os novos nomes de namespace. Além disso, o Android **MainActivity.cs** arquivo foi modificado conforme descrito no artigo e o projeto do iOS tem permissão para acessar a biblioteca de fotos com duas linhas ao final de **Info. plist**  arquivo.
 
-O `BasicBitmapsPage` construtor adiciona um `TapGestureRecognizer` para o `SKCanvasView` para ser notificado de toques. Ao receber um toque, o `Tapped` manipulador obtém acesso ao serviço de dependência do seletor de imagem e chamadas `GetImageStreamAsync`. Se um `Stream` objeto é retornado, em seguida, o conteúdo é copiado em um `MemoryStream`, conforme solicitado pelo algumas das plataformas. O restante do código é semelhante às duas outras técnicas:
+O `BasicBitmapsPage` construtor adiciona um `TapGestureRecognizer` para o `SKCanvasView` para ser notificado de toques. Após o recebimento de um toque, o `Tapped` manipulador obtém acesso ao serviço de dependência do seletor de imagem e chamadas `GetImageStreamAsync`. Se um `Stream` objeto é retornado e, em seguida, o conteúdo é copiado para um `MemoryStream`, conforme necessário por algumas das plataformas. O restante do código é semelhante às outras duas técnicas:
 
 ```csharp
 // Add tap gesture recognizer
@@ -145,21 +145,21 @@ tapRecognizer.Tapped += async (sender, args) =>
 canvasView.GestureRecognizers.Add(tapRecognizer);
 ```
 
-Observe que o `Tapped` chamadas do manipulador de `InvalidateSurface` método do `SKCanvasView` objeto. Isso gera uma nova chamada para o `PaintSurface` manipulador.
+Observe que o `Tapped` chamadas do manipulador a `InvalidateSurface` método o `SKCanvasView` objeto. Isso gera uma nova chamada para o `PaintSurface` manipulador.
 
 ## <a name="displaying-the-bitmaps"></a>Exibindo os Bitmaps
 
-O `PaintSurface` manipulador precisa exibir três bitmaps. O manipulador pressupõe que o telefone está no modo retrato e a tela se divide verticalmente em três partes iguais.
+O `PaintSurface` manipulador precisa exibir três bitmaps. O manipulador pressupõe que o telefone está no modo retrato e divide a tela verticalmente em três partes iguais.
 
-O bitmap primeiro é exibido com mais simples [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/) método. Você precisa especificar são as coordenadas X e Y, onde o canto superior esquerdo do bitmap deve ser posicionado:
+O bitmap primeiro é exibido com a forma mais simples [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/) método. Você só precisa especificar são as coordenadas X e Y em que o canto superior esquerdo do bitmap é posicionado:
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, Single x, Single y, SKPaint paint = null)
 ```
 
-Embora um `SKPaint` parâmetro for definido, ele tem um valor padrão de `null` e você pode ignorá-lo. Os pixels do bitmap simplesmente são transferidos para os pixels da superfície de exibição com um mapeamento a um.
+Embora uma `SKPaint` parâmetro é definido, ele tem um valor padrão de `null` e você pode ignorá-lo. Os pixels do bitmap simplesmente são transferidos para os pixels da superfície de exibição com um mapeamento individual.
 
-Um programa pode obter as dimensões de pixel de um bitmap com o [ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/) e [ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/) propriedades. Essas propriedades permitem que o programa calcular as coordenadas para posicionar o bitmap no centro da terceira superior da tela:
+Um programa pode obter as dimensões de pixel de um bitmap com o [ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/) e [ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/) propriedades. Essas propriedades permitem que o programa calcular as coordenadas para posicionar o bitmap no centro do terceiro superior da tela:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -188,7 +188,7 @@ public void DrawBitmap (SKBitmap bitmap, SKRect dest, SKPaint paint = null)
 
 Uma terceira versão do [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/) tem duas `SKRect` argumentos para especificar um subconjunto retangular do bitmap para exibição, mas essa versão não é usado neste artigo.
 
-Aqui está o código para exibir o bitmap carregado de um bitmap de recurso inserido:
+Aqui está o código para exibir o bitmap carregado de um bitmap do recurso inserido:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -203,11 +203,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-O bitmap é ampliado para as dimensões do retângulo, o motivo pelo qual o monkey é ampliado horizontalmente nessas capturas de tela:
+O bitmap é esticado para as dimensões do retângulo, por isso, o monkey horizontalmente é alongado nessas capturas de tela:
 
 [![](bitmaps-images/basicbitmaps-small.png "Uma captura de tela tripla da página básica Bitmaps")](bitmaps-images/basicbitmaps-large.png#lightbox "uma tripla captura de tela da página básica Bitmaps")
 
-A terceira imagem &mdash; que você pode ver somente se você executar o programa e carregar uma foto de sua própria biblioteca de imagens &mdash; também é exibido dentro de um retângulo, mas o retângulo posição e tamanho são ajustados para manter a taxa de proporção do bitmap. Esse cálculo é um pouco mais envolvido porque ele requer o cálculo de um fator com base no tamanho do bitmap e o retângulo de destino de escala e centralizar o retângulo nessa área:
+A terceira imagem &mdash; que você pode ver apenas se você executar o programa e carregar uma foto da sua própria biblioteca de imagens &mdash; também é exibido dentro de um retângulo, mas o retângulo posição e tamanho são ajustados para manter a taxa de proporção do bitmap. Esse cálculo é um pouco mais complicado porque ele requer o cálculo de um fator com base no tamanho do retângulo de destino e o bitmap de escala e centralizando o retângulo nessa área:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -242,11 +242,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Se nenhum bitmap ainda tenha sido carregado da biblioteca de imagens, em seguida, o `else` bloco exibe algum texto para solicitar ao usuário para toque na tela.
+Se ainda tiver sido carregado sem bitmap da biblioteca de imagens, em seguida, a `else` bloco exibirá algum texto para solicitar que o usuário tocar a tela.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Escolhendo uma foto na biblioteca de imagens](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

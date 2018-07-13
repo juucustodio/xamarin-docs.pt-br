@@ -1,54 +1,54 @@
 ---
 title: Extensões de marcação XAML
-description: Este artigo explica como usar extensões de marcação XAML xamarin. Forms para estender o poder e flexibilidade de XAML, permitindo que os atributos do elemento a ser definido de fontes diferentes cadeias de caracteres de texto literal.
+description: O artigo explica como usar extensões de marcação de XAML de xamarin. Forms para estender o poder e flexibilidade do XAML, permitindo que os atributos do elemento a ser definido de fontes diferentes cadeias de caracteres de texto literal.
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: c6f1853c5864eed8484e7746755c6fa80a28a49b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: d507ff3c74de6bb4ea36c1a7b7dc2cd5dd60823b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245879"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996734"
 ---
 # <a name="xaml-markup-extensions"></a>Extensões de marcação XAML
 
-Extensões de marcação XAML ajudam a estender o poder e flexibilidade de XAML, permitindo que os atributos do elemento a ser definido de fontes diferentes cadeias de caracteres de texto literal.
+Extensões de marcação XAML ajudam a estender o poder e flexibilidade do XAML, permitindo que os atributos do elemento a ser definido de fontes diferentes cadeias de caracteres de texto literal.
 
-Por exemplo, normalmente você definir o `Color` propriedade `BoxView` esta aparência:
+Por exemplo, normalmente você defina as `Color` propriedade de `BoxView` semelhante a esta:
 
 ```xaml
 <BoxView Color="Blue" />
 ```
 
-Ou, você pode configurá-lo para um valor de cor RGB hexadecimal:
+Ou, você pode defini-lo como um valor hexadecimal de cor RGB:
 
 ```xaml
 <BoxView Color="#FF0080" />
 ```
 
-Em ambos os casos, a cadeia de caracteres de texto é definido como o `Color` atributo é convertido em um `Color` valor pelo [ `ColorTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ColorTypeConverter/) classe.
+Em ambos os casos, a cadeia de caracteres de texto é definida como o `Color` atributo será convertido em um `Color` valor pela [ `ColorTypeConverter` ](xref:Xamarin.Forms.ColorTypeConverter) classe.
 
-Talvez você prefira em vez disso definir o `Color` de um valor armazenado em um dicionário de recurso, ou o valor de uma propriedade estática de uma classe que você criou ou uma propriedade de tipo de atributo `Color` de outro elemento na página, ou construído a partir de Separe os valores de matiz, saturação e luminosidade.
+Talvez você prefira em vez disso, defina as `Color` de um valor armazenado em um dicionário de recurso, ou o valor de uma propriedade estática de uma classe que você criou ou uma propriedade de tipo de atributo `Color` de outro elemento na página, ou construídos a partir de Separe os valores de matiz, saturação e luminosidade.
 
-Todas essas opções são possíveis usando extensões de marcação XAML. Mas não deixe a frase "extensões de marcação" assustar você: extensões de marcação XAML são *não* extensões para XML. Mesmo com extensões de marcação XAML, XAML é sempre XML válido.
+Todas essas opções são possíveis usando extensões de marcação XAML. Mas não deixe que a frase "extensões de marcação" assustam você: extensões de marcação XAML são *não* extensões para XML. Mesmo com extensões de marcação XAML, o XAML é sempre XML legal.
 
-Uma extensão de marcação é apenas uma maneira diferente de expressar um atributo de um elemento. Extensões de marcação XAML são normalmente identificadas por uma configuração de atributo que é colocada entre chaves:
+Uma extensão de marcação é realmente apenas uma maneira diferente para expressar um atributo de um elemento. Extensões de marcação XAML são geralmente identificadas por uma configuração de atributo que é colocada entre chaves:
 
 ```xaml
 <BoxView Color="{StaticResource themeColor}" />
 ```
 
-Qualquer configuração de atributo entre chaves é *sempre* uma extensão de marcação XAML. No entanto, como você verá, extensões de marcação XAML podem ser referenciadas sem o uso de chaves.
+Qualquer configuração de atributo entre chaves é *sempre* uma extensão de marcação XAML. No entanto, como você verá, extensões de marcação XAML também podem ser referenciadas sem o uso de chaves.
 
-Este artigo é dividido em duas partes:
+Este artigo está dividido em duas partes:
 
 ## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Consumo de extensões de marcação XAML](consuming.md)  
 
-Use as extensões de marcação XAML definidas em xamarin. Forms.
+Use as extensões de marcação XAML definidas no xamarin. Forms.
 
 ## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Criação de extensões de marcação XAML](creating.md)
 
@@ -58,8 +58,8 @@ Escreva suas próprias extensões de marcação XAML personalizados.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Extensões de marcação (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
-- [Capítulo de extensões de marcação XAML do catálogo xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Extensões de marcação (amostra)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Capítulo de extensões de marcação XAML do xamarin. Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinâmicos](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)

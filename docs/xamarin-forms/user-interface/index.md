@@ -1,18 +1,18 @@
 ---
 title: Exibições de Interface do usuário do xamarin. Forms
-description: Este artigo apresenta os conceitos que podem ser usados ao criar uma interface do usuário em um aplicativo xamarin. Forms e controles.
+description: Este artigo apresenta os controles e conceitos que podem ser usados durante a criação de uma interface do usuário em um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 55c461a7dee26462e0b9daebeb10e47afa4e5f6f
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: a89bce4f35a73d0b881fd38b2ae246d2eb86ef7b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244364"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996815"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Exibições de Interface do usuário do xamarin. Forms
 
@@ -20,55 +20,55 @@ _Como usar os modos de exibição fornecidos pelo xamarin. Forms_
 
 ## <a name="animationanimationindexmd"></a>[Animação](animation/index.md)
 
-Xamarin. Forms inclui sua própria infra-estrutura de animação é simples para criar animações simples, enquanto também sendo versátil o suficiente para criar animações complexas.
+Xamarin. Forms inclui sua própria infraestrutura de animação que é muito simples para a criação de animações simples, embora também seja suficientemente versátil para criar animações complexas.
 
 ## <a name="boxviewboxviewmd"></a>[BoxView](boxview.md)
 
-O `BoxView` é apenas um retângulo colorido simple, mas ele pode ser usado para itens decorativos, rudimentares gráficos e para a obtenção de entrada por toque interativo.
+O `BoxView` é apenas um retângulo colorido simple, mas ele pode ser usado para itens decorativos, gráficos rudimentares e para a obtenção de entrada por toque interativa.
 
 ## <a name="buttonbuttonmd"></a>[Button](button.md)
 
-O `Button` responde a um toque ou clique em que direciona um aplicativo para executar uma tarefa específica.
+O `Button` responde a um toque ou clique que direciona um aplicativo para executar uma tarefa específica.
 
 ## <a name="colorscolorsmd"></a>[Cores](colors.md)
 
-Definindo e usando cores entre plataformas podem ser complicados quando cada plataforma tem seu próprio padrões e padrões.
+Definindo e usando cores entre plataformas podem ser complicados quando cada plataforma tem seus próprios padrões e os padrões.
 
 ## <a name="controls-referencecontrolsindexmd"></a>[Referência de controles](controls/index.md)
 
-Este documento é uma referência rápida para os modos de exibição da interface do usuário que compõem a estrutura do xamarin. Forms, como [páginas](~/xamarin-forms/user-interface/controls/pages.md), [Layouts](~/xamarin-forms/user-interface/controls/layouts.md), [exibições](~/xamarin-forms/user-interface/controls/views.md) e [células](~/xamarin-forms/user-interface/controls/cells.md).
+Este documento é uma referência rápida para os modos de exibição da interface do usuário que compõem a estrutura do xamarin. Forms, tal como [páginas](~/xamarin-forms/user-interface/controls/pages.md), [Layouts](~/xamarin-forms/user-interface/controls/layouts.md), [modos de exibição](~/xamarin-forms/user-interface/controls/views.md) e [células](~/xamarin-forms/user-interface/controls/cells.md).
 
 ## <a name="datapagesdatapagesindexmd"></a>[DataPages](datapages/index.md)
 
-DataPages fornecem uma API para rapidamente e facilmente associar uma fonte de dados para exibições predefinidas. Itens de lista e as páginas detalhes automaticamente processará os dados e ser personalizadas usando temas.
+DataSourceControl fornece uma API para rápida e facilmente vincular uma fonte de dados para exibições predefinidas. Itens de lista e páginas de detalhes renderização automaticamente os dados e ser personalizadas usando temas.
 
 ## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
 
-O `DatePicker` permite que um usuário selecione uma data em um intervalo especificado. Ele é implementado usando o seletor de data com suporte da plataforma específica que o programa é executado em.
+O `DatePicker` permite que um usuário selecione uma data dentro do intervalo especificado. Ele é implementado usando o seletor de datas com suporte na plataforma específica que o programa é executado em.
 
 ## <a name="graphicsgraphicsindexmd"></a>[Elementos gráficos](graphics/index.md)
 
-Como incorporar gráficos e visuais do mecanismo de jogo em um aplicativo xamarin. Forms.
+Como incorporar elementos gráficos e visuais do mecanismo de jogo em um aplicativo xamarin. Forms.
 
 ## <a name="imagesimagesmd"></a>[Imagens](images.md)
 
-Imagens podem ser compartilhadas entre plataformas com xamarin. Forms, eles podem ser carregados especificamente para cada plataforma ou podem ser baixadas para exibição.
+Imagens podem ser compartilhadas entre plataformas com o xamarin. Forms, podem ser carregados especificamente para cada plataforma ou podem ser baixados para exibição.
 
 ## <a name="layoutslayoutsindexmd"></a>[Layouts](layouts/index.md)
 
-Xamarin. Forms tem vários layouts para organizar conteúdos na tela. `StackLayout`, `Grid`, `FlexLayout`, `AbsoluteLayout`, `ScrollView`, e `RelativeLayout` cada um pode ser usada para criar interfaces do usuário visualmente atrativos, capacidade de resposta.
+Xamarin. Forms tem vários layouts para organizar conteúdos na tela. `StackLayout`, `Grid`, `FlexLayout`, `AbsoluteLayout`, `ScrollView`, e `RelativeLayout` cada um pode ser usada para criar interfaces do usuário atraentes e dinâmicos.
 
 ## <a name="listviewlistviewindexmd"></a>[ListView](listview/index.md)
 
-Xamarin. Forms fornece um controle de exibição de lista para exibir linhas de rolagem de dados. O controle inclui ações contextuais, `HasUnevenRows` dimensionamento automático, personalização de separador, puxe para atualizar e cabeçalhos e rodapés.
+Xamarin. Forms fornece um controle de exibição de lista para exibir a rolagem de linhas de dados. O controle inclui ações contextuais, `HasUnevenRows` o dimensionamento automático, personalização de separador, puxar para atualizar e cabeçalhos e rodapés.
 
 ## <a name="mapsmapmd"></a>[Mapas](map.md)
 
-Adicionar mapas requer alguma configuração específica de plataforma e um download do pacote do NuGet adicional. Mapas e marcadores de pin podem ser adicionados em apenas algumas linhas de código após a configuração é feita.
+Adicionar mapas requer um download adicional de pacote do NuGet e algumas configurações específicas da plataforma. Mapas e marcadores de pin que podem ser adicionados em apenas algumas linhas de código depois que a configuração é feita.
 
 ## <a name="pickerpickerindexmd"></a>[Seletor](picker/index.md)
 
-O [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) exibição é um controle para selecionar um item de texto de uma lista de dados.
+O [ `Picker` ](xref:Xamarin.Forms.Picker) exibição é um controle para selecionar um item de texto em uma lista de dados.
 
 ## <a name="sliderslidermd"></a>[Slider](slider.md)
 
@@ -76,30 +76,30 @@ O `Slider` permite que um usuário selecione um valor numérico de um intervalo 
 
 ## <a name="stylesstylesindexmd"></a>[Estilos](styles/index.md)
 
-Fonte, cor e outros atributos podem ser agrupados em estilos que podem ser compartilhados entre os controles, layouts ou o aplicativo inteiro usando ResourceDictionaries.
+Fonte, cor e outros atributos podem ser agrupados em estilos que podem ser compartilhados entre os controles, layouts ou todo o aplicativo usando ResourceDictionaries.
 
 ## <a name="tableviewtableviewmd"></a>[TableView](tableview.md)
 
-O modo de exibição de tabela é semelhante a uma exibição de lista, mas em vez de sendo projetadas para listas longas de dados é destinado a telas de estilo de entrada de dados de rolagem controles ou menus simples de rolagem.
+O modo de exibição de tabela é semelhante a uma exibição de lista, mas em vez de que está sendo criado para listas longas de dados destina-se para telas de estilo de entrada de dados de rolagem controles ou menus simples de rolagem.
 
 ## <a name="texttextindexmd"></a>[Texto](text/index.md)
 
-Xamarin. Forms tem vários modos de exibição para apresentar e receber texto. Modos de exibição de texto podem ser formatados e personalizados para plataformas. Configurações de fonte específica podem habilitar a compatibilidade com os recursos de acessibilidade.
+Xamarin. Forms tem vários modos de exibição para apresentar e receber texto. Modos de exibição de texto podem ser formatados e personalizados para as plataformas. Configurações de fonte específico podem habilitar a compatibilidade com os recursos de acessibilidade.
 
 ## <a name="themesthemesindexmd"></a>[Temas](themes/index.md)
 
-Xamarin. Forms temas definem uma aparência visual específica para controles padrão. Quando você adicionar um tema ao dicionário de recursos do aplicativo, irá alterar a aparência dos controles padrão.
+Temas do xamarin. Forms definem uma aparência visual específica para os controles padrão. Depois que você adiciona um tema para o dicionário de recursos do aplicativo, a aparência dos controles padrão será alterado.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Visual State Manager](visual-state-manager.md)
 
-O Gerenciador de estado Visual fornece uma maneira estruturada de disparam alterações na interface do usuário do código, incluindo layout que se adapte às alterações na orientação do dispositivo ou tamanho.
+O Gerenciador de estado Visual fornece uma maneira estruturada para disparar alterações na interface do usuário do código, incluindo layout que se adapta às alterações na orientação do dispositivo ou tamanho.
 
 ## <a name="webviewwebviewmd"></a>[WebView](webview.md)
 
-Xamarin. Forms usa o controle de navegador da web nativo em cada plataforma e podem exibir cadeias de caracteres Html geradas, recursos locais e sites.
+Xamarin. Forms usa o controle de navegador da web nativos em cada plataforma e pode exibir cadeias de caracteres Html geradas, recursos locais e sites.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Introdução ao Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Galeria xamarin. Forms (exemplo)](https://developer.xamarin.com/samples/FormsGallery/)
+- [Galeria de xamarin. Forms (amostra)](https://developer.xamarin.com/samples/FormsGallery/)

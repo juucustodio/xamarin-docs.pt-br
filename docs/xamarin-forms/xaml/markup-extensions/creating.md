@@ -1,32 +1,32 @@
 ---
 title: Criando extensões de marcação XAML
-description: Este artigo explica como definir suas próprias extensões de marcação XAML xamarin. Forms personalizados. Uma extensão de marcação XAML é uma classe que implementa a interface IMarkupExtension IMarkupExtension.
+description: Este artigo explica como definir suas próprias extensões de marcação XAML de xamarin. Forms personalizados. Uma extensão de marcação XAML é uma classe que implementa a interface IMarkupExtension IMarkupExtension.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: b185ea3b7260ff2be8a4dec5dc713f24dc6e6095
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: d4b3d5c65ddf8be433d1f8e182774aa839f60357
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245697"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995590"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Criando extensões de marcação XAML
 
-No nível de programação, uma extensão de marcação XAML é uma classe que implementa o [ `IMarkupExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) ou [ `IMarkupExtension<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interface. Você pode explorar o código-fonte das extensões de marcação padrão descrito abaixo no [ **MarkupExtensions** diretório](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) do repositório do GitHub xamarin. Forms.
+No nível de programação, uma extensão de marcação XAML é uma classe que implementa o [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) ou [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface. Você pode explorar o código-fonte das extensões de marcação padrão descrito abaixo na [ **MarkupExtensions** diretório](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) do repositório GitHub do xamarin. Forms.
 
-Também é possível definir suas próprias extensões de marcação XAML personalizados derivando de `IMarkupExtension` ou `IMarkupExtension<T>`. Se a extensão de marcação obtém um valor de um tipo específico, use o formulário genérico. Este é o caso com várias extensões de marcação do xamarin. Forms:
+Também é possível definir suas próprias extensões de marcação XAML personalizados derivando `IMarkupExtension` ou `IMarkupExtension<T>`. Use o formulário genérico se a extensão de marcação obtém um valor de um tipo específico. Esse é o caso com várias das extensões de marcação do xamarin. Forms:
 
-- `TypeExtension` derivado de `IMarkupExtension<Type>`
-- `ArrayExtension` derivado de `IMarkupExtension<Array>`
-- `DynamicResourceExtension` derivado de `IMarkupExtension<DynamicResource>`
-- `BindingExtension` derivado de `IMarkupExtension<BindingBase>`
-- `ConstraintExpression` derivado de `IMarkupExtension<Constraint>`
+- `TypeExtension` deriva de `IMarkupExtension<Type>`
+- `ArrayExtension` deriva de `IMarkupExtension<Array>`
+- `DynamicResourceExtension` deriva de `IMarkupExtension<DynamicResource>`
+- `BindingExtension` deriva de `IMarkupExtension<BindingBase>`
+- `ConstraintExpression` deriva de `IMarkupExtension<Constraint>`
 
-Os dois `IMarkupExtension` interfaces definir apenas um método cada, denominado `ProvideValue`:
+Os dois `IMarkupExtension` interfaces definir apenas um método de cada um, chamado `ProvideValue`:
 
 ```csharp
 public interface IMarkupExtension
@@ -40,13 +40,13 @@ public interface IMarkupExtension<out T> : IMarkupExtension
 }
 ```
 
-Como `IMarkupExtension<T>` deriva `IMarkupExtension` e inclui o `new` palavra-chave na `ProvideValue`, ele contém ambos os `ProvideValue` métodos.
+Uma vez que `IMarkupExtension<T>` deriva `IMarkupExtension` e inclui o `new` palavra-chave na `ProvideValue`, contém os `ProvideValue` métodos.
 
-Extensões de marcação XAML com frequência, definem as propriedades que contribuem para o valor de retorno. (A exceção óbvia é `NullExtension`, no qual `ProvideValue` simplesmente retorna `null`.) O `ProvideValue` método tem um único argumento de tipo `IServiceProvider` que serão discutidos neste artigo.
+Com muita frequência, extensões de marcação XAML definem propriedades que contribuem para o valor de retorno. (É a óbvia exceção `NullExtension`, no qual `ProvideValue` simplesmente retorna `null`.) O `ProvideValue` método tem um único argumento do tipo `IServiceProvider` que será discutido neste artigo.
 
-## <a name="a-markup-extension-for-specifying-color"></a>Uma extensão de marcação para especificar cores
+## <a name="a-markup-extension-for-specifying-color"></a>Para especificar a cor de uma extensão de marcação
 
-A seguinte extensão de marcação XAML permite que você construa uma `Color` valor usando componentes de matiz, saturação e luminosidade. Ele define quatro propriedades para os quatro componentes de cor, inclusive um componente alfa que é inicializado como 1. A classe derivada de `IMarkupExtension<Color>` para indicar uma `Color` valor de retorno:
+A seguinte extensão de marcação XAML permite que você construa uma `Color` usando componentes de matiz, saturação e luminosidade de valor. Ele define quatro propriedades para os quatro componentes de cor, incluindo um componente alfa que é inicializado como 1. A classe deriva `IMarkupExtension<Color>` para indicar um `Color` retornar valor:
 
 ```csharp
 public class HslColorExtension : IMarkupExtension<Color>
@@ -71,9 +71,9 @@ public class HslColorExtension : IMarkupExtension<Color>
 }
 ```
 
-Porque `IMarkupExtension<T>` deriva `IMarkupExtension`, a classe deve conter dois `ProvideValue` métodos, que retorna `Color` e outra que retorna `object`, mas o segundo método pode simplesmente chamar o primeiro método.
+Porque `IMarkupExtension<T>` deriva `IMarkupExtension`, a classe deve conter dois `ProvideValue` métodos, que retorna `Color` e outro que retorna `object`, mas o segundo método pode simplesmente chamar o primeiro método.
 
-O **demonstração de cor HSL** página mostra uma variedade de maneiras que `HslColorExtension` pode aparecer em um arquivo XAML para especificar a cor de um `BoxView`:
+O **demonstração de cor HSL** página mostra uma variedade de formas `HslColorExtension` pode aparecer em um arquivo XAML para especificar a cor de um `BoxView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -115,15 +115,15 @@ O **demonstração de cor HSL** página mostra uma variedade de maneiras que `Hs
 </ContentPage>
 ```
 
-Observe que, quando `HslColorExtension` é uma marca XML, as quatro propriedades são definidas como atributos, mas quando ele aparece entre chaves, as quatro propriedades são separadas por vírgulas sem aspas. Os valores padrão para `H`, `S`, e `L` são 0 e o valor padrão de `A` é 1, portanto, essas propriedades podem ser omitidas se você deseja que eles são definidos como valores padrão. O último exemplo mostra um exemplo onde a luminosidade é 0, que normalmente resulta em preto, mas o canal alfa é 0,5, portanto, ele é metade transparente e aparece cinza no plano de fundo branco da página:
+Observe que, quando `HslColorExtension` é uma marca XML, as quatro propriedades são definidas como atributos, mas quando ela aparecer entre chaves, as quatro propriedades são separadas por vírgulas sem aspas. Os valores padrão para `H`, `S`, e `L` são 0 e o valor padrão de `A` é 1, portanto, essas propriedades podem ser omitidas se você deseja que eles são definidos como valores padrão. O último exemplo mostra um exemplo onde a luminosidade é 0, que normalmente resulta em preto, mas o canal alfa é 0,5, para que ele é parcialmente transparente e aparece cinza o plano de fundo branca da página:
 
 [![Demonstração de cor HSL](creating-images/hslcolordemo-small.png "demonstração de cor HSL")](creating-images/hslcolordemo-large.png#lightbox "demonstração de cor HSL")
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>Uma extensão de marcação para acessar os Bitmaps
 
-O argumento `ProvideValue` é um objeto que implementa o [ `IServiceProvider` ](https://developer.xamarin.com/api/type/System.IServiceProvider/) interface, que é definido no .NET `System` namespace. Essa interface possui um membro, um método chamado `GetService` com um `Type` argumento.
+O argumento `ProvideValue` é um objeto que implementa o [ `IServiceProvider` ](xref:System.IServiceProvider) interface, que é definida no .NET `System` namespace. Essa interface tem um membro, um método chamado `GetService` com um `Type` argumento.
 
-O `ImageResourceExtension` classe mostrado abaixo mostra um uso possíveis de `IServiceProvider` e `GetService` para obter um `IXmlLineInfoProvider` objeto que pode fornecer informações de linhas e de caracteres que indica onde um determinado erro foi detectado. Nesse caso, uma exceção é gerada quando o `Source` propriedade não foi definida:
+O `ImageResourceExtension` classe mostrado a seguir mostra um uso possível dos `IServiceProvider` e `GetService` para obter um `IXmlLineInfoProvider` objeto que pode fornecer informações de linha e o caractere que indica onde um determinado erro foi detectado. Nesse caso, uma exceção é gerada quando o `Source` propriedade não foi definida:
 
 ```csharp
 [ContentProperty("Source")]
@@ -152,9 +152,9 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` é útil quando um arquivo XAML precisa acessar um arquivo de imagem armazenado como um recurso incorporado no projeto da biblioteca .NET padrão. Ele usa o `Source` propriedade chamar estático `ImageSource.FromResource` método. Esse método requer um nome de recurso totalmente qualificado, que consiste o nome do assembly, o nome da pasta e o nome do arquivo separados por pontos. O `ImageResourceExtension` não precisa do nome de assembly parte porque ele obtém o nome do assembly usando a reflexão e adiciona-o para o `Source` propriedade. Independentemente, `ImageSource.FromResource` deve ser chamado a partir do assembly que contém o bitmap, o que significa que essa extensão de recurso XAML não pode ser parte de uma biblioteca externa, a menos que as imagens também estão na biblioteca. (Consulte o [ **imagens inseridas** ](~/xamarin-forms/user-interface/images.md#embedded_images) artigo para obter mais informações sobre como acessar bitmaps armazenados como recursos incorporados.)
+`ImageResourceExtension` é útil quando um arquivo XAML precisa acessar um arquivo de imagem armazenado como um recurso incorporado no projeto da biblioteca .NET Standard. Ele usa o `Source` propriedade para chamar estático `ImageSource.FromResource` método. Esse método requer um nome de recurso totalmente qualificado, que consiste o nome do assembly, o nome da pasta e o nome do arquivo separados por pontos. O `ImageResourceExtension` não precisa do nome do assembly parte porque ele obtém o nome do assembly usando reflexão e anexa-o para o `Source` propriedade. Independentemente disso, `ImageSource.FromResource` deve ser chamado a partir do assembly que contém o bitmap, o que significa que essa extensão de recurso XAML não pode ser parte de uma biblioteca externa, a menos que as imagens também são nessa biblioteca. (Consulte a [ **imagens inseridas** ](~/xamarin-forms/user-interface/images.md#embedded_images) artigo para obter mais informações sobre como acessar os bitmaps armazenados como recursos incorporados.)
 
-Embora `ImageResourceExtension` requer o `Source` propriedade a ser definida, o `Source` propriedade é indicada em um atributo, como a propriedade de conteúdo da classe. Isso significa que o `Source=` parte da expressão entre chaves pode ser omitido. No **demonstração de recurso de imagem** página, o `Image` elementos buscar duas imagens usando o nome de pasta e o nome do arquivo separados por pontos:
+Embora `ImageResourceExtension` exige as `Source` propriedade seja definida, o `Source` propriedade é indicada em um atributo, como a propriedade de conteúdo da classe. Isso significa que o `Source=` parte da expressão entre chaves pode ser omitido. No **demonstração do recurso de imagem** página, o `Image` elementos buscar duas imagens usando o nome de pasta e o nome do arquivo separados por pontos:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -180,11 +180,11 @@ Embora `ImageResourceExtension` requer o `Source` propriedade a ser definida, o 
 
 Aqui está o programa em execução em todas as três plataformas:
 
-[![Demonstração de recurso de imagem](creating-images/imageresourcedemo-small.png "demonstração de recurso de imagem")](creating-images/imageresourcedemo-large.png#lightbox "demonstração de recurso de imagem")
+[![Demonstração do recurso de imagem](creating-images/imageresourcedemo-small.png "demonstração de recursos de imagem")](creating-images/imageresourcedemo-large.png#lightbox "demonstração do recurso de imagem")
 
-## <a name="service-providers"></a>Provedores de serviços
+## <a name="service-providers"></a>Provedores de serviço
 
-Usando o `IServiceProvider` argumento `ProvideValue`, extensões de marcação XAML podem obter acesso a informações úteis sobre o arquivo XAML no qual está sendo usados. Mas, para usar o `IServiceProvider` argumento com êxito, você precisa saber que tipo de serviços estão disponíveis em contextos específicos. A melhor maneira de entender esse recurso é estudando o código-fonte das extensões de marcação XAML existentes no [ **MarkupExtensions** pasta](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) no repositório no GitHub xamarin. Forms. Lembre-se de que alguns tipos de serviços são internos ao xamarin. Forms.
+Usando o `IServiceProvider` argumento para `ProvideValue`, extensões de marcação XAML podem obter acesso a informações úteis sobre o arquivo XAML no qual eles estão sendo usados. Mas, para usar o `IServiceProvider` argumento com êxito, você precisa saber que tipo de serviços estão disponíveis em contextos específicos. A melhor maneira de entender esse recurso está estudando o código-fonte das extensões de marcação XAML existentes na [ **MarkupExtensions** pasta](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) no repositório do xamarin. Forms no GitHub. Lembre-se de que alguns tipos de serviços são internos ao xamarin. Forms.
 
 Em algumas extensões de marcação XAML, esse serviço pode ser útil:
 
@@ -192,16 +192,16 @@ Em algumas extensões de marcação XAML, esse serviço pode ser útil:
  IProvideValueTarget provideValueTarget = serviceProvider.GetService(typeof(IProvideValueTarget)) as IProvideValueTarget;
 ```
 
-O `IProvideValueTarget` interface define duas propriedades, `TargetObject` e `TargetProperty`. Quando essas informações são obtidas no `ImageResourceExtension` classe `TargetObject` é o `Image` e `TargetProperty` é um `BindableProperty` de objeto para o `Source` propriedade de `Image`. Essa é a propriedade na qual a extensão de marcação XAML foi definida.
+O `IProvideValueTarget` interface define duas propriedades, `TargetObject` e `TargetProperty`. Quando essas informações são obtidas na `ImageResourceExtension` classe, `TargetObject` é o `Image` e `TargetProperty` é um `BindableProperty` do objeto para o `Source` propriedade do `Image`. Essa é a propriedade no qual a extensão de marcação XAML foi definida.
 
-O `GetService` chamada com um argumento de `typeof(IProvideValueTarget)` , na verdade, retorna um objeto do tipo `SimpleValueTargetProvider`, que é definido no `Xamarin.Forms.Xaml.Internals` namespace. Se você converter o valor de retorno `GetService` para esse tipo, você também pode acessar um `ParentObjects` propriedade, que é uma matriz que contém o `Image` elemento, o `Grid` pai e o `ImageResourceDemoPage` pai do `Grid`.
+O `GetService` chamada com um argumento `typeof(IProvideValueTarget)` , na verdade, retorna um objeto do tipo `SimpleValueTargetProvider`, que é definido no `Xamarin.Forms.Xaml.Internals` namespace. Se você converter o valor de retorno `GetService` a esse tipo, você também pode acessar uma `ParentObjects` propriedade, que é uma matriz que contém o `Image` elemento, o `Grid` pai e o `ImageResourceDemoPage` pai do `Grid`.
 
 ## <a name="conclusion"></a>Conclusão
 
-Extensões de marcação XAML desempenham um papel importante em XAML, estendendo a capacidade de definir os atributos de uma variedade de fontes. Além disso, se as extensões de marcação XAML existentes não fornecerem exatamente o que você precisa, você também pode escrever seus próprios.
+Extensões de marcação XAML desempenham um papel vital em XAML ao estender a capacidade de definir os atributos de uma variedade de fontes. Além disso, se as extensões de marcação XAML existentes não fornecerem exatamente o que você precisa, você também pode escrever seus próprios.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Extensões de marcação (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
-- [Capítulo de extensões de marcação XAML do catálogo xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Extensões de marcação (amostra)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Capítulo de extensões de marcação XAML do xamarin. Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

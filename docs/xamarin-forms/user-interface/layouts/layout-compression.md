@@ -1,33 +1,33 @@
 ---
 title: Compactação de Layout
-description: Compactação de layout remove especificados layouts da árvore visual em uma tentativa de melhorar o desempenho de renderização da página. Este artigo explica como habilitar a compactação de layout e os benefícios que ela pode colocar.
+description: Compactação de layout remove os layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização da página. Este artigo explica como habilitar a compactação de layout e os benefícios que ele pode trazer.
 ms.prod: xamarin
 ms.assetid: da9e1b26-9d31-4762-94c3-4039f306b7f2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 9c698d539ab671ee2a033ae5943a46e0cc870f76
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ba9be51daa32be1034e2bdfafafe80c45d00d83c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30791120"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995218"
 ---
 # <a name="layout-compression"></a>Compactação de Layout
 
-_Compactação de layout remove especificados layouts da árvore visual em uma tentativa de melhorar o desempenho de renderização da página. Este artigo explica como habilitar a compactação de layout e os benefícios que ela pode colocar._
+_Compactação de layout remove os layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização da página. Este artigo explica como habilitar a compactação de layout e os benefícios que ele pode trazer._
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin. Forms executa layout usando duas séries de chamadas de método recursiva:
+Xamarin. Forms executa usando duas séries de chamadas de método recursiva de layout:
 
-- Layout começa na parte superior da árvore visual de uma página, e ele passa todas as ramificações da árvore visual para abranger todos os elementos visuais em uma página. Elementos que são pais de outros elementos são responsáveis por dimensionamento e posicionamento de seus filhos em relação a mesmos.
-- Invalidação é o processo pelo qual uma alteração em um elemento em uma página dispara um novo ciclo de layout. Elementos são considerados inválidos quando eles não tem mais o tamanho correto ou a posição. Cada elemento na árvore visual que possui filhos é alertado sempre que um de seus filhos tamanhos é alterado. Portanto, uma alteração no tamanho de um elemento na árvore visual pode causar alterações de ondulação a árvore.
+- Layout começa na parte superior da árvore visual com uma página, e ele passa todas as ramificações da árvore visual para abranger todos os elementos visuais em uma página. Elementos que são pais de outros elementos são responsáveis por redimensionar e posicionar seus filhos em relação a mesmos.
+- Invalidação de é o processo pelo qual uma alteração em um elemento em uma página dispara um novo ciclo de layout. Elementos são considerados inválidos quando eles não terão mais o tamanho correto ou a posição. Todos os elementos na árvore visual que tem filhos é alertado sempre que um de seus filhos altera tamanhos. Portanto, uma alteração no tamanho de um elemento na árvore visual pode causar alterações ripple acima na árvore.
 
-Para obter mais informações sobre como o xamarin. Forms executa o layout, consulte [criar um Layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md).
+Para obter mais informações sobre como o xamarin. Forms executa o layout, consulte [criação de um Layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md).
 
-O resultado do processo de layout é uma hierarquia de controles nativos. No entanto, essa hierarquia inclui renderizadores de contêiner adicionais e wrappers para renderizadores de plataforma, aumentando ainda mais a exibir hierarquia de aninhamento. Quanto maior o nível de aninhamento, maior a quantidade de trabalho xamarin. Forms precisa executar para exibir uma página. Para layouts complexos, a hierarquia de exibição pode ser profundo e abrangente, com vários níveis de aninhamento.
+O resultado do processo de layout é uma hierarquia de controles nativos. No entanto, essa hierarquia inclui os renderizadores de contêiner adicional e wrappers para renderizadores de plataforma, aumentando ainda mais a hierarquia de exibição de aninhamento. O maior o nível de aninhamento, maior a quantidade de trabalho que o xamarin. Forms deve executar para exibir uma página. Para layouts complexos, a hierarquia de exibição pode ser profundo e abrangente, com vários níveis de aninhamento.
 
 Por exemplo, considere o seguinte botão do aplicativo de exemplo para fazer logon no Facebook:
 
@@ -53,18 +53,18 @@ Esse botão é especificado como um controle personalizado com a hierarquia de e
 </ContentView>
 ```
 
-A hierarquia de exibição aninhada resultante pode ser examinada com [Xamarin Inspetor](~/tools/inspector/index.md). No Android, a hierarquia de exibição aninhada contém 17 exibições:
+A hierarquia de exibição aninhada resultante poderá ser examinada com [Xamarin Inspector](~/tools/inspector/index.md). No Android, a hierarquia de exibição aninhada contém exibições de 17:
 
-![](layout-compression-images/no-compression.png "Exibir hierarquia de botão do Facebook")
+![](layout-compression-images/no-compression.png "Hierarquia de exibição do botão do Facebook")
 
-Compactação de layout, que está disponível para xamarin. Forms aplicativos nas plataformas Android e iOS, tem como objetivo para mesclar a exibição de aninhamento removendo especificados layouts da árvore visual, o que pode melhorar o desempenho de renderização da página. O benefício de desempenho que é fornecido varia dependendo da complexidade de uma página, a versão do sistema operacional que está sendo usado e o dispositivo no qual o aplicativo está sendo executado. No entanto, os maiores ganhos de desempenho serão observados em versões mais antigas.
+Compactação de layout, que está disponível para aplicativos xamarin. Forms nas plataformas Android e iOS, tem como objetivo para mesclar a exibição de aninhamento, removendo os layouts especificados da árvore visual, que pode melhorar o desempenho de renderização da página. O benefício de desempenho que é fornecido varia dependendo da complexidade de uma página, a versão do sistema operacional que está sendo usado e o dispositivo no qual o aplicativo está em execução. No entanto, os maiores ganhos de desempenho serão observados em versões mais antigas.
 
 > [!NOTE]
-> Embora este artigo enfoca os resultados da aplicação de compactação de layout no Android, é igualmente aplicável para iOS.
+> Embora este artigo se concentra nos resultados da aplicação de compactação de layout no Android, é igualmente aplicável para iOS.
 
 ## <a name="layout-compression"></a>Compactação de Layout
 
-Em XAML, a compactação de layout pode ser habilitada definindo o `CompressedLayout.IsHeadless` anexado a propriedade `true` em uma classe de layout:
+No XAML, a compactação de layout pode ser habilitada definindo o `CompressedLayout.IsHeadless` anexado à propriedade `true` em uma classe de layout:
 
 ```xaml
 <StackLayout CompressedLayout.IsHeadless="true">
@@ -72,16 +72,16 @@ Em XAML, a compactação de layout pode ser habilitada definindo o `CompressedLa
 </StackLayout>   
 ```
 
-Como alternativa, ela pode ser habilitada em c#, especificando a instância do layout como o primeiro argumento para o `CompressedLayout.SetIsHeadless` método:
+Como alternativa, ele pode ser habilitado em c#, especificando a instância de layout como o primeiro argumento para o `CompressedLayout.SetIsHeadless` método:
 
 ```csharp
 CompressedLayout.SetIsHeadless(stackLayout, true);
 ```
 
 > [!IMPORTANT]
-> Como a compactação de layout remove um layout da árvore visual, não é adequado para layouts que tem uma aparência visual ou que obter entrada por toque. Portanto, layouts que definir [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) propriedades (como [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/), [ `IsVisible` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsVisible/), [ `Rotation` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Rotation/), [ `Scale` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/) e [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/)) ou aceitar gestos não são candidatos para layout compactação. No entanto, a habilitação da compactação de layout em um layout que define as propriedades de aparência visual ou que aceita gestos, não resultará em um erro de compilação ou tempo de execução. Em vez disso, será aplicada a compactação de layout e propriedades de aparência visual e reconhecimento de gesto, serão recusadas.
+> Uma vez que a compactação de layout remove um layout da árvore visual, não é adequado para layouts que têm uma aparência visual, ou que obtêm entrada por toque. Portanto, layouts que defina [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) propriedades (como [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor), [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible), [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation), [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale), [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX) e [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) ou que aceitar gestos, não são candidatos para o layout compactação. No entanto, a habilitação da compactação de layout em um layout que define as propriedades de aparência visual, ou que aceita a gestos, não resultará em um erro de compilação ou tempo de execução. Em vez disso, compactação de layout será aplicada e as propriedades de aparência visual e reconhecimento de gesto, falharão silenciosamente.
 
-Para o botão do Facebook, compactação de layout pode ser habilitada nas classes de três layout:
+Para o botão do Facebook, compactação de layout pode ser habilitada nas classes de layout de três:
 
 ```xaml
 <StackLayout CompressedLayout.IsHeadless="true">
@@ -96,29 +96,29 @@ Para o botão do Facebook, compactação de layout pode ser habilitada nas class
 
 No Android, isso resulta em uma hierarquia de exibição aninhada de 14 exibições:
 
-![](layout-compression-images/layout-compression.png "Exibir hierarquia de botão do Facebook com compactação de Layout")
+![](layout-compression-images/layout-compression.png "Hierarquia de exibição para o botão do Facebook com compactação de Layout")
 
-Em comparação com a hierarquia de exibição aninhada de 17 exibições, isso representa uma redução no número de modos de exibição de 17%. Apesar dessa redução pode aparecer insignificante, a redução de exibição em uma página inteira pode ser mais significativa.
+Em comparação com a hierarquia de exibição aninhada original das exibições de 17, isso representa uma redução no número de modos de exibição de 17%. Embora essa redução pode aparecer insignificante, a redução de modo de exibição ao longo de uma página inteira pode ser mais significativa.
 
 ### <a name="fast-renderers"></a>Renderizadores Rápidos
 
-Processadores rápidos reduzem os custos de renderização de controles xamarin. Forms no Android e inflação mesclar a hierarquia resultante de modo nativo. Isso aprimora o desempenho criando menos objetos, que por sua vez, resulta em uma árvore visual menos complexa e menos uso de memória. Para obter mais informações sobre renderizadores rápidas, consulte [processadores rápidos](~/xamarin-forms/internals/fast-renderers.md).
+Renderizadores rápidos reduzem os custos de renderização de controles do xamarin. Forms no Android e inflação nivelando a hierarquia resultante de modo nativo. Isso aprimora o desempenho criando menos objetos, que por sua vez, resulta em uma árvore visual menos complexa e menos uso de memória. Para obter mais informações sobre renderizadores rápidos, consulte [os renderizadores rápidos](~/xamarin-forms/internals/fast-renderers.md).
 
-Para o botão do Facebook no aplicativo de amostra, combinar renderizadores rápidos e compactação de layout produz uma hierarquia de exibição aninhada de 8 exibições:
+Para o botão do Facebook no aplicativo de exemplo, a combinação de compactação de layout e os renderizadores rápidos produz uma hierarquia de exibição aninhada de exibições de 8:
 
-![](layout-compression-images/layout-compression-with-fast-renderers.png "Exibir hierarquia de botão do Facebook com compactação de Layout e processadores rápidos")
+![](layout-compression-images/layout-compression-with-fast-renderers.png "Hierarquia de exibição do botão do Facebook com compactação de Layout e os renderizadores rápidos")
 
-Em comparação com a hierarquia de exibição aninhada de 17 exibições, isso representa uma redução de 52%.
+Em comparação com a hierarquia de exibição aninhada original das exibições de 17, isso representa uma redução de 52%.
 
-O aplicativo de exemplo contém uma página extraída de um aplicativo real. Sem compactação de layout e renderizadores rápidos, a página produz uma hierarquia aninhada de exibição de 130 exibições no Android. Habilitando renderizadores rápidos e compactação de layout em classes de layout apropriada reduz a hierarquia de exibição aninhada a 70 modos de exibição, uma redução de 46%.
+O aplicativo de exemplo contém uma página extraída de um aplicativo real. Sem compactação de layout e os renderizadores rápidos, a página produz uma hierarquia de exibição aninhada de 130 exibições no Android. Habilitando os renderizadores rápidos e compactação de layout em classes de layout adequado reduz a hierarquia de exibição aninhada a 70 modos de exibição, uma redução de 46%.
 
 ## <a name="summary"></a>Resumo
 
-Compactação de layout remove especificados layouts da árvore visual em uma tentativa de melhorar o desempenho de renderização da página. O benefício de desempenho que isso oferece varia dependendo da complexidade de uma página, da versão do sistema operacional que está sendo usado e do dispositivo no qual o aplicativo está sendo executado. No entanto, os maiores ganhos de desempenho serão observados em versões mais antigas.
+Compactação de layout remove os layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização da página. O benefício de desempenho que isso oferece varia dependendo da complexidade de uma página, da versão do sistema operacional que está sendo usado e do dispositivo no qual o aplicativo está sendo executado. No entanto, os maiores ganhos de desempenho serão observados em versões mais antigas.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Criar um layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutcompression/)
+- [LayoutCompression (amostra)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutcompression/)

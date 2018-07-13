@@ -1,35 +1,35 @@
 ---
-title: Cores em xamarin. Forms
-description: Xamarin. Forms fornece uma classe de cor de plataforma cruzada flexível. Este artigo explica a funcionalidade fornecida pela classe cor e como usá-lo.
+title: Cores no xamarin. Forms
+description: Xamarin. Forms fornece uma classe flexível de cor de plataforma cruzada. Este artigo explica a funcionalidade fornecida pela classe cor e como usá-lo.
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 45adcb8a0fe25e729211e8b166be51ce2c4d93bd
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 1017f108d6808155cac84e98a811a30d09afa134
+ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243012"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38986077"
 ---
-# <a name="colors-in-xamarinforms"></a>Cores em xamarin. Forms
+# <a name="colors-in-xamarinforms"></a>Cores no xamarin. Forms
 
-_Xamarin. Forms fornece uma classe de cor de plataforma cruzada flexível._
+_Xamarin. Forms fornece uma classe flexível de cor de plataforma cruzada._
 
-Este artigo apresenta as várias maneiras de `Color` classe pode ser usada em xamarin. Forms.
+Este artigo apresenta as várias maneiras do `Color` classe pode ser usada no xamarin. Forms.
 
 O `Color` classe fornece vários métodos para criar uma instância de cor
 
--  **Chamado cores** -uma coleção de comuns cores nomeadas, inclusive `Red`, `Green`, e `Blue`.
--  **FromHex** -valor semelhante à sintaxe usada em HTML, por exemplo, "00FF00" da cadeia de caracteres. Alfa é opcionalmente pode ser especificado como o primeiro par de caracteres ("CC00FF00").
--  **FromHsla** -matiz, saturação e luminosidade `double` valores, com um valor alfa opcional (0,0 1.0).
--  **FromRgb** -vermelho, verde e azul `int` valores (0-255).
--  **FromRgba** -verde, vermelho, azul e alfa `int` valores (0-255).
+-  **Chamado Colors** -uma coleção de comuns cores nomeadas, incluindo `Red`, `Green`, e `Blue`.
+-  **FromHex** -valor semelhante à sintaxe usada em HTML, por exemplo, "00FF00" cadeia de caracteres. Alfa é opcionalmente pode ser especificado como o primeiro par de caracteres ("CC00FF00").
+-  **FromHsla** -matiz, saturação e luminosidade `double` valores, com valor de alfa opcional (0.0-1.0).
+-  **FromRgb** -vermelho, verde e azul `int` valores (0 a 255).
+-  **FromRgba** -vermelho, verde, azul e alfa `int` valores (0 a 255).
 -  **FromUint** -definir uma única `double` valor que representa **argb**.
 
-Eis algumas cores de exemplo, com o `BackgroundColor` de alguns rótulos usando diferentes variações da sintaxe permitido:
+Eis aqui algumas cores de exemplo, atribuídos para o `BackgroundColor` de alguns rótulos usando diferentes variações da sintaxe permitido:
 
 ```csharp
 var red    = new Label { Text = "Red",   BackgroundColor = Color.Red };
@@ -45,15 +45,15 @@ var @default = new Label    { Text = "Default",    BackgroundColor = Color.Defau
 var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accent };
 ```
 
-Essas cores são mostradas em cada plataforma abaixo. Observe a cor final - `Accent` -é uma cor blue-ish para iOS e Android; esse valor é definido por xamarin. Forms.
+Essas cores são mostrados em cada plataforma abaixo. Observe a cor final - `Accent` -é uma cor blue-ish para iOS e Android; esse valor é definido pelo xamarin. Forms.
 
  [![Demonstração de cor](colors-images/colors-sml.png "demonstração de cor")](colors-images/colors.png#lightbox "demonstração de cor")
 
 ## <a name="colordefault"></a>Color.Default
 
-Use o `Default` para definir (ou defina novamente) um valor de cor para o padrão de plataforma (Noções básicas sobre que representa uma cor subjacente diferente em cada plataforma para cada propriedade).
+Use o `Default` para definir um valor de cor para o padrão de plataforma (Noções básicas sobre que isso representa uma cor subjacente diferente em cada plataforma para cada propriedade) (ou defina novamente uma).
 
-Os desenvolvedores podem usar esse valor para definir um `Color` propriedade mas deve **não** consultar essa instância para seu componente valores RGB (eles prontos para -1).
+Os desenvolvedores podem usar esse valor para definir um `Color` propriedade, mas deve **não** consultar essa instância para o seu componente valores RGB (eles são todos definidos como -1).
 
 ## <a name="colortransparent"></a>Color.Transparent
 
@@ -61,17 +61,17 @@ Defina a cor para limpar.
 
 ## <a name="coloraccent"></a>Color.Accent
 
-No iOS e Android, esta instância é definida como uma cor de contraste que é visível no plano de fundo padrão, mas não é o mesmo que a cor de texto padrão.
+No iOS e Android desta instância é definida como uma cor contrastante que está visível na tela de fundo padrão, mas não é o mesmo que a cor do texto padrão.
 
 ## <a name="additional-methods"></a>Métodos adicionais
 
 `Color` instâncias incluem métodos adicionais que podem ser usados para criar novas cores:
 
--  **AddLuminosity** -retorna uma nova cor modificando a luminosidade pelo delta fornecido.
--  **WithHue** -retorna uma nova cor, substituindo o matiz com o valor fornecido.
+-  **AddLuminosity** -retorna uma nova cor, modificando a luminosidade pelo delta fornecido.
+-  **WithHue** -retorna uma nova cor, substituindo o hue com o valor fornecido.
 -  **WithLuminosity** -retorna uma nova cor, substituindo a luminosidade com o valor fornecido.
 -  **WithSaturation** -retorna uma nova cor, substituindo a saturação com o valor fornecido.
--  **MultiplyAlpha** -retorna uma nova cor modificando alfa, multiplicá-lo pelo valor alfa fornecido.
+-  **MultiplyAlpha** -retorna uma nova cor, modificando o alfa, multiplicá-lo pelo valor alfa fornecido.
 
 ## <a name="implicit-conversions"></a>Conversões implícitas
 
@@ -90,7 +90,7 @@ Xamarin.Forms.Color xfColor2 = sdColor;
 
 ## <a name="deviceruntimeplatform"></a>Device.RuntimePlatform
 
-Este trecho de código usa o `Device.RuntimePlatform` propriedade seletivamente definir a cor de um `ActivityIndicator`:
+Este trecho de código usa o `Device.RuntimePlatform` propriedade para definir seletivamente a cor de um `ActivityIndicator`:
 
 ```csharp
 ActivityIndicator activityIndicator = new ActivityIndicator
@@ -100,9 +100,9 @@ ActivityIndicator activityIndicator = new ActivityIndicator
 };
 ```
 
-## <a name="using-from-xaml"></a>Uso do XAML
+## <a name="using-from-xaml"></a>Usando do XAML
 
-Também podem ser referenciadas facilmente cores em XAML usando nomes de cor definida ou as representações hexadecimais mostradas aqui:
+Cores também podem ser facilmente referenciadas em XAML usando os nomes de cor definidos ou as representações hexa mostradas aqui:
 
 ```xaml
 <Label Text="Sea color" BackgroundColor="Aqua" />
@@ -112,12 +112,15 @@ Também podem ser referenciadas facilmente cores em XAML usando nomes de cor def
 <Label Text="Tiny Alpha plus RGB" BackgroundColor="#C0F0" />
 ```
 
+> [!NOTE]
+> Ao usar a compilação de XAML, nomes de cores diferenciam maiusculas de minúsculas e, portanto, podem ser escritos em letras minúsculas. Para obter mais informações sobre a compilação de XAML, consulte [compilação XAML](~/xamarin-forms/xaml/xamlc.md).
+
 ## <a name="summary"></a>Resumo
 
-O xamarin. Forms `Color` classe é usada para criar referências de cores com reconhecimento de plataforma. Ele pode ser usado no código compartilhado e XAML.
+O xamarin. Forms `Color` classe é usada para criar referências de cores de reconhecimento de plataforma. Ele pode ser usado no código compartilhado e XAML.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [ColorsSample](https://developer.xamarin.com/samples/WorkingWithColors)
-- [Seletor de associável (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
+- [Seletor de associável (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)

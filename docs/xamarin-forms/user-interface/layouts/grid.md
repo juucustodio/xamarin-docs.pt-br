@@ -1,64 +1,64 @@
 ---
 title: Grade de xamarin. Forms
-description: Este artigo explica como usar a classe xamarin. Forms grade para apresentar modos de exibição em grade, que possuem linhas e colunas.
+description: Este artigo explica como usar a classe de grade do xamarin. Forms para apresentar exibições em grades, que possuem linhas e colunas.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 01dd59d5e94b473316b03f9035d38305fad42880
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245147"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994496"
 ---
 # <a name="xamarinforms-grid"></a>Grade de xamarin. Forms
 
-[`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) dá suporte à organização exibições em linhas e colunas. Linhas e colunas podem ser definidas para ter tamanhos proporcionais ou tamanhos absolutos. O `Grid` layout não deve ser confundido com tabelas tradicionais e não se destina a apresentar dados tabulares. `Grid` não tem o conceito de linha, coluna ou célula de formatação. Ao contrário das tabelas HTML, `Grid` destina-se somente para dispor conteúdo.
+[`Grid`](xref:Xamarin.Forms.Grid) dá suporte à organização exibições em linhas e colunas. Linhas e colunas podem ser definidas para ter tamanhos proporcionais ou tamanhos absolutos. O `Grid` layout não deve ser confundido com tabelas tradicionais e não se destina a apresentar dados tabulares. `Grid` não tem o conceito de linha, coluna ou célula de formatação. Ao contrário das tabelas HTML, `Grid` destina-se puramente para dispor o conteúdo.
 
-[![](grid-images/layouts-sml.png "Layouts de xamarin. Forms")](grid-images/layouts.png#lightbox "xamarin. Forms Layouts")
+[![](grid-images/layouts-sml.png "Xamarin. Forms Layouts")](grid-images/layouts.png#lightbox "Layouts do xamarin. Forms")
 
-Este artigo aborda:
+Este artigo abordará:
 
-- **[Finalidade](#Purpose)**  &ndash; usos comuns `Grid`.
-- **[Uso](#Usage)**  &ndash; como usar `Grid` para obter o design desejado.
+- **[Finalidade](#Purpose)**  &ndash; usos comuns do `Grid`.
+- **[Uso](#Usage)**  &ndash; como usar `Grid` para alcançar o design desejado.
   - **[Linhas e colunas](#Rows_and_Columns)**  &ndash; especificar linhas e colunas para o `Grid`.
-  - **[Colocando exibições](#Placing_Views)**  &ndash; adicionar modos de exibição em grade em linhas e colunas específicas.
-  - **[Espaçamento](#Spacing)**  &ndash; configurar os espaços entre as linhas e colunas.
-  - **[Intervalos](#Spans)**  &ndash; configurar elementos se estenda por várias linhas ou colunas.
+  - **[Colocação de modos de exibição](#Placing_Views)**  &ndash; adicionar modos de exibição para a grade em linhas e colunas específicas.
+  - **[Espaçamento](#Spacing)**  &ndash; configurar os espaços entre linhas e colunas.
+  - **[Spans](#Spans)**  &ndash; configurar elementos para abranger várias linhas ou colunas.
 
 ![](grid-images/grid.png "Exploração de grade")
 
 ## <a name="purpose"></a>Finalidade
 
-`Grid` pode ser usado para organizar exibições em uma grade. Isso é útil em um número de casos:
+`Grid` pode ser usado para organizar os modos de exibição em uma grade. Isso é útil em um número de casos:
 
-- Organizando botões em um aplicativo de cálculo
-- Organizando botões/opções em uma grade, como o iOS ou Android telas inicial
+- Organizando botões em um aplicativo de Calculadora
+- Organizando botões/escolhas em uma grade, como o iOS ou Android telas iniciais
 - Organizando os modos de exibição para que eles sejam de tamanho igual em uma dimensão (como em algumas barras de ferramentas)
 
 ## <a name="usage"></a>Uso
 
-Ao contrário das tabelas tradicionais, `Grid` não deduzir o número e os tamanhos de linhas e colunas do conteúdo. Em vez disso, `Grid` tem `RowDefinitions` e `ColumnDefinitions` coleções. Mantenha a definições de quantas linhas e colunas serão dispostas. As exibições são adicionadas à `Grid` com a linha especificada e os índices de coluna, que identificar quais linhas e colunas seja colocado em um modo de exibição.
+Ao contrário das tabelas tradicionais, `Grid` não deduz o número e os tamanhos de linhas e colunas do conteúdo. Em vez disso, `Grid` tem `RowDefinitions` e `ColumnDefinitions` coleções. Eles mantêm as definições de quantas linhas e colunas serão dispostas. As exibições são adicionadas à `Grid` com a linha especificada e os índices de coluna, que identificam quais linhas e colunas de um modo de exibição deve ser colocado em.
 
 <a name="Rows_and_Columns" />
 
 ### <a name="rows-and-columns"></a>Linhas e colunas
 
-Informações de linha e coluna são armazenadas em `Grid`do `RowDefinitions`  &  `ColumnDefinitions` propriedades, que são cada coleções de [ `RowDefinition` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RowDefinition/) e [ `ColumnDefinition` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ColumnDefinition/)objetos, respectivamente. `RowDefinition` tem uma propriedade única, `Height`, e `ColumnDefinition` tem uma propriedade única, `Width`. As opções para altura e largura são da seguinte maneira:
+Informações de linha e coluna são armazenadas no `Grid`do `RowDefinitions`  &  `ColumnDefinitions` propriedades, que são coleções de cada de [ `RowDefinition` ](xref:Xamarin.Forms.RowDefinition) e [ `ColumnDefinition` ](xref:Xamarin.Forms.ColumnDefinition)objetos, respectivamente. `RowDefinition` tem uma única propriedade, `Height`, e `ColumnDefinition` tem uma propriedade única, `Width`. As opções para altura e largura são da seguinte maneira:
 
-- **Auto** &ndash; automaticamente os tamanhos para ajustar o conteúdo da linha ou coluna. Especificado como [ `GridUnitType.Auto` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/) em c# ou como `Auto` em XAML.
-- **Proportional(*)** &ndash; tamanhos de linhas e colunas como uma proporção o espaço restante. Especificado como um valor e `GridUnitType.Star` em c# e como `#*` em XAML, com `#` sendo o valor desejado. Especificando uma linha ou coluna com `*` fará com que ele preencher o espaço disponível.
-- **Absoluto** &ndash; tamanhos de colunas e linhas com valores de altura e largura fixas, específicos. Especificado como um valor e `GridUnitType.Absolute` em c# e como `#` em XAML, com `#` sendo o valor desejado.
+- **Auto** &ndash; automaticamente os tamanhos para ajustar o conteúdo da linha ou coluna. Especificado como [ `GridUnitType.Auto` ](xref:Xamarin.Forms.GridUnitType) em c# ou como `Auto` em XAML.
+- **Proportional(*)** &ndash; dimensiona as colunas e linhas como uma proporção de espaço restante. Especificado como um valor e `GridUnitType.Star` em c# e como `#*` em XAML, com `#` sendo o valor desejado. Especificando uma linha/coluna com `*` fará com que ela preencher o espaço disponível.
+- **Absoluto** &ndash; dimensiona as colunas e linhas com valores de altura e largura fixas, específicos. Especificado como um valor e `GridUnitType.Absolute` em c# e como `#` em XAML, com `#` sendo o valor desejado.
 
 > [!NOTE]
-> Os valores de largura de colunas são definidos como ' * ' por padrão em xamarin. Forms, que garante que a coluna preencherá o espaço disponível.
+> Os valores de largura de colunas são definidos como ' * ' por padrão no xamarin. Forms, que garante que a coluna preencherá o espaço disponível.
 
-Considere um aplicativo que precisa de três linhas e duas colunas. A linha inferior deve ser exatamente 200px altura e a linha superior precisa ser duas vezes altura da linha do meio. A coluna da esquerda deve ser grande o suficiente para ajustar o conteúdo e a coluna da direita deve preencher o espaço restante.
+Considere um aplicativo que precisa de três linhas e duas colunas. A linha inferior precisa ser exatamente 200px altura e a linha superior precisa ser duas vezes com a altura da linha intermediária. A coluna à esquerda deve ser grande o suficiente para caber o conteúdo e a coluna à direita precisa preencher o espaço restante.
 
-Em XAML:
+No XAML:
 
 ```xaml
 <Grid>
@@ -88,15 +88,15 @@ grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) }
 
 ### <a name="placing-views-in-a-grid"></a>Colocando exibições em uma grade
 
-Para colocar os modos de exibição em um `Grid` você precisará adicioná-los como filhos na grade, em seguida, especificar quais linhas e colunas pertencem.
+Para colocar os modos de exibição em um `Grid` você precisará adicioná-los como filhos na grade, e em seguida, especificar quais linhas e colunas eles pertencem.
 
-Em XAML, use `Grid.Row` e `Grid.Column` em cada exibição individual para especificar o posicionamento. Observe que `Grid.Row` e `Grid.Column` especificar local com base na lista de base zero de linhas e colunas. Isso significa que em uma 4x4 grade, a célula superior esquerda (0,0) e a célula inferior direita é (3,3).
+No XAML, use `Grid.Row` e `Grid.Column` em cada exibição individual para especificar o posicionamento. Observe que `Grid.Row` e `Grid.Column` especificar local com base nas listas de base zero de linhas e colunas. Isso significa que, em uma 4x4 grade, a célula superior esquerda é (0,0) e a célula inferior direita é (3,3).
 
-O `Grid` mostrado abaixo contém quatro células:
+O `Grid` mostrado a seguir contém quatro células:
 
 ![](grid-images/label-grid.png "Grade com quatro modos de exibição")
 
-Em XAML:
+No XAML:
 
 ```xaml
 <Grid>
@@ -138,7 +138,7 @@ grid.Children.Add(bottomRight, 1, 1);
 
 O código acima cria a grade com quatro rótulos, duas colunas e duas linhas. Observe que cada rótulo terá o mesmo tamanho e que as linhas se expandem para usar todo o espaço disponível.
 
-No exemplo acima, as exibições são adicionadas para o [ `Grid.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Grid.Children/) coleção usando o [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) sobrecarga que especifica os argumentos esquerdo e superiores. Ao usar o [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) durante a sobrecarga que especifica à esquerda, direita, superior e argumentos de parte inferior esquerda e superiores argumentos sempre fará referência às células dentro de [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), à direita e argumentos inferior podem aparecer para se referir a células que estão fora de `Grid`. Isso ocorre porque o argumento da direita sempre deve ser maior que o argumento da esquerda e o argumento inferior sempre deve ser maior que o argumento superior. O exemplo a seguir mostra o código equivalente usando `Add` sobrecargas:
+No exemplo acima, as exibições são adicionadas para o [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) coleção usando o [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) sobrecarga que especifica os argumentos left e top. Ao usar o [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) durante a sobrecarga que especifica para a esquerda, direita, superior e argumentos de parte inferior, esquerda e argumentos superior sempre fará referência às células dentro a [ `Grid` ](xref:Xamarin.Forms.Grid), à direita e argumentos de parte inferior podem aparecer para se referir às células que estão fora de `Grid`. Isso ocorre porque o argumento à direita sempre deve ser maior que o argumento esquerdo e o argumento inferior sempre deve ser maior que o argumento superior. O exemplo a seguir mostra o código equivalente usando os dois `Add` sobrecargas:
 
 ```csharp
 // left, top
@@ -156,7 +156,7 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2);
 
 ### <a name="spacing"></a>Espaçamento
 
-`Grid` possui propriedades para controlar o espaçamento entre linhas e colunas.  As propriedades a seguir estão disponíveis para personalizar o `Grid`:
+`Grid` tem propriedades para controlar o espaçamento entre linhas e colunas.  As seguintes propriedades estão disponíveis para personalizar o `Grid`:
 
 - **ColumnSpacing** &ndash; a quantidade de espaço entre colunas.
 - **RowSpacing** &ndash; a quantidade de espaço entre as linhas.
@@ -182,17 +182,17 @@ grid.ColumnDefnitions.Add(new ColumnDefinition { Width = new GridLength (1, Grid
 
 ### <a name="spans"></a>Intervalos
 
-Geralmente, ao trabalhar com uma grade, há um elemento que deve ocupar mais de uma linha ou coluna. Considere um aplicativo de cálculo simples:
+Geralmente, ao trabalhar com uma grade, há um elemento que deve ocupar mais de uma linha ou coluna. Considere um aplicativo de calculadora simples:
 
-![](grid-images/calculator.png "Aplicativo de Calulator")
+![](grid-images/calculator.png "Aplicativo Calulator")
 
-Observe que o botão 0 abrange duas colunas, assim como nas calculadoras internas para cada plataforma. Isso é feito usando o `ColumnSpan` propriedade, que especifica quantas colunas de um elemento deve ocupar. O XAML para esse botão:
+Observe que o botão 0 abrange duas colunas, assim como em que as calculadoras internos para cada plataforma. Isso é feito usando o `ColumnSpan` propriedade, que especifica quantas colunas um elemento deve ocupar. O XAML para esse botão:
 
 ```xaml
 <Button Text = "0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
 ```
 
-E no c#:
+E, em c#:
 
 ```csharp
 Button zeroButton = new Button { Text = "0" };
@@ -200,9 +200,9 @@ controlGrid.Children.Add (zeroButton, 0, 4);
 Grid.SetColumnSpan (zeroButton, 2);
 ```
 
-Observe que no código, métodos estáticos a `Grid` classe são usadas para realizar alterações posicionamento, inclusive nas `ColumnSpan` e `RowSpan`. Também Observe que, ao contrário de outras propriedades que podem ser definidas a qualquer momento, propriedades definidas usando os métodos estáticos devem já estar na grade antes que sejam alteradas.
+Observe que no código, métodos estáticos do `Grid` classe são usados para executar alterações de posicionamento, incluindo as alterações `ColumnSpan` e `RowSpan`. Também Observe que, ao contrário de outras propriedades que podem ser definidas a qualquer momento, as propriedades definidas usando os métodos estáticos já devem estar na grade antes que sejam alteradas.
 
-O XAML completo para o aplicativo de calculadora acima é o seguinte:
+O XAML completo para o aplicativo Calculadora acima é da seguinte maneira:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -294,7 +294,7 @@ BackgroundColor="#404040">
 </ContentPage>
 ```
 
-Observe que tanto o rótulo na parte superior da grade e o botão zero são occuping mais de uma coluna. Embora um layout semelhante pode ser obtido usando a grade aninhada, o `ColumnSpan`  &  `RowSpan` abordagem é mais simples.
+Observe que tanto o rótulo na parte superior da grade e o botão zero são occuping mais de uma coluna. Embora um layout semelhante pode ser obtido usando grades aninhadas, a `ColumnSpan`  &  `RowSpan` abordagem é mais simples.
 
 A implementação do c#:
 
@@ -383,7 +383,7 @@ public CalculatorGridCode ()
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Criando aplicativos móveis com o xamarin. Forms, capítulo 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
-- [Grade](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)
-- [Layout (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Exemplo de BusinessTumble (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Criação de aplicativos móveis com xamarin. Forms, capítulo 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
+- [Grade](xref:Xamarin.Forms.Grid)
+- [Layout (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+- [Exemplo de BusinessTumble (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
