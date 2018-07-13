@@ -1,37 +1,37 @@
 ---
-title: Realce uma região em um mapa
-description: Este artigo explica como adicionar uma sobreposição de polígono para um mapa, para realçar uma região no mapa. Polígonos são uma forma fechada e tem seus interiores preenchidos.
+title: Realçar uma região em um mapa
+description: Este artigo explica como adicionar uma sobreposição de polígono a um mapa, para realçar uma região do mapa. Polígonos são uma forma fechada e tem seus interiores preenchido.
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: b38ff41415477a8898ee3bd9593f983c705d949e
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 0a11e9c25922531727ad2fee3bbed9c8d4e2b80c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241784"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998128"
 ---
-# <a name="highlighting-a-region-on-a-map"></a>Realce uma região em um mapa
+# <a name="highlighting-a-region-on-a-map"></a>Realçar uma região em um mapa
 
-_Este artigo explicou como adicionar uma sobreposição de polígono para um mapa, para realçar uma região no mapa. Polígonos são uma forma fechada e tem seus interiores preenchidos._
+_Este artigo explicou como adicionar uma sobreposição de polígono a um mapa, para realçar uma região do mapa. Polígonos são uma forma fechada e tem seus interiores preenchido._
 
 ## <a name="overview"></a>Visão geral
 
-Uma sobreposição é um gráfico em camadas em um mapa. Sobreposições de suporte para desenho conteúdo gráfico com o mapa é dimensionado conforme ele aparece ampliado. As capturas de tela a seguir mostram o resultado da adição de uma sobreposição de polígono para um mapa:
+Uma sobreposição é um gráfico em camadas em um mapa. Sobreposições de dar suporte a conteúdo de desenho gráfico que pode ser dimensionado com o mapa conforme ele aparece ampliado. As capturas de tela a seguir mostram o resultado da adição de uma sobreposição de polígono a um mapa:
 
 ![](polygon-map-overlay-images/screenshots.png)
 
-Quando um [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) controle é processado por um aplicativo xamarin. Forms, no iOS a `MapRenderer` classe é instanciada, que por sua vez instancia um nativo `MKMapView` controle. Na plataforma Android, o `MapRenderer` classe instancia um nativo `MapView` controle. Sobre o Windows UWP (plataforma Universal), o `MapRenderer` classe instancia um nativo `MapControl`. O processo de renderização pode ser tomado aproveitar para implementar as personalizações do mapa específico da plataforma, criando um renderizador personalizado para um `Map` em cada plataforma. O processo para fazer isso é como segue:
+Quando um [ `Map` ](xref:Xamarin.Forms.Maps.Map) controle é processado por um aplicativo xamarin. Forms, no iOS o `MapRenderer` classe é instanciada, que por sua vez cria uma instância de um nativo `MKMapView` controle. Na plataforma Android, o `MapRenderer` classe instancia um nativo `MapView` controle. Na Universal Windows Platform (UWP), o `MapRenderer` classe instancia um nativo `MapControl`. O processo de renderização pode ser aproveitado para implementar as personalizações do mapa específicas da plataforma, criando um renderizador personalizado para um `Map` em cada plataforma. O processo para fazer isso é o seguinte:
 
-1. [Criar](#Creating_the_Custom_Map) um mapa personalizado xamarin. Forms.
+1. [Criar](#Creating_the_Custom_Map) um mapa personalizado do xamarin. Forms.
 1. [Consumir](#Consuming_the_Custom_Map) o mapa personalizado do xamarin. Forms.
 1. [Personalizar](#Customizing_the_Map) o mapa, criando um renderizador personalizado para o mapa em cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) deve ser inicializada e configurada antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) deve ser inicializado e configurado antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 Para obter informações sobre como personalizar um mapa usando um renderizador personalizado, consulte [Personalizando um Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
@@ -39,7 +39,7 @@ Para obter informações sobre como personalizar um mapa usando um renderizador 
 
 ### <a name="creating-the-custom-map"></a>Criando o mapa personalizado
 
-Criar uma subclasse do [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) classe, que adiciona um `ShapeCoordinates` propriedade:
+Criar uma subclasse do [ `Map` ](xref:Xamarin.Forms.Maps.Map) classe, que adiciona um `ShapeCoordinates` propriedade:
 
 ```csharp
 public class CustomMap : Map
@@ -53,13 +53,13 @@ public class CustomMap : Map
 }
 ```
 
-O `ShapeCoordinates` propriedade armazenará uma coleção de coordenadas que definem a região realçada.
+O `ShapeCoordinates` propriedade irá armazenar uma coleção de coordenadas que definem a região seja realçado.
 
 <a name="Consuming_the_Custom_Map" />
 
 ### <a name="consuming-the-custom-map"></a>Consumindo o mapa personalizado
 
-Consumir o `CustomMap` controle declarando uma instância na instância de página do XAML:
+Consumir o `CustomMap` controle declarando uma instância na instância de página XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -72,7 +72,7 @@ Consumir o `CustomMap` controle declarando uma instância na instância de pági
 </ContentPage>
 ```
 
-Como alternativa, consumir o `CustomMap` controle declarando uma instância na instância de página c#:
+Como alternativa, consumir o `CustomMap` controle declarando uma instância na instância de página do c#:
 
 ```csharp
 public class MapPageCS : ContentPage
@@ -108,17 +108,17 @@ public partial class MapPage : ContentPage
 }
 ```
 
-Essa inicialização especifica uma série de coordenadas de latitude e longitude, para definir a região do mapa a ser realçado. Ele, em seguida, posiciona o modo de exibição do mapa com o [ `MoveToRegion` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)/) método, o que altera a posição e o nível de zoom do mapa, criando um [ `MapSpan` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/) de um [ `Position` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/) e um [ `Distance` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/).
+Essa inicialização especifica uma série de coordenadas de latitude e longitude, para definir a região do mapa a ser realçado. Ele, em seguida, posiciona a exibição do mapa com o [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) método, que altera a posição e o nível de zoom do mapa com a criação de uma [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan) de uma [ `Position` ](xref:Xamarin.Forms.Maps.Position) e uma [ `Distance` ](xref:Xamarin.Forms.Maps.Distance).
 
 <a name="Customizing_the_Map" />
 
-### <a name="customizing-the-map"></a>Personalizando o mapa
+### <a name="customizing-the-map"></a>Personalizar o mapa
 
-Agora deve ser adicionado a um renderizador personalizado para cada projeto de aplicativo para adicionar a sobreposição de polígono do mapa.
+Agora deve ser adicionado a um renderizador personalizado para cada projeto de aplicativo para adicionar a sobreposição de polígono no mapa.
 
 #### <a name="creating-the-custom-renderer-on-ios"></a>Criando o renderizador personalizado no iOS
 
-Criar uma subclasse do `MapRenderer` classe e substituir seu `OnElementChanged` método para adicionar a sobreposição de polígono:
+Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` método para adicionar a sobreposição de polígono:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -168,12 +168,12 @@ namespace MapOverlay.iOS
 
 Esse método executa a configuração a seguir, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms:
 
-- O `MKMapView.OverlayRenderer` está definida como um delegado correspondente.
-- A coleção de coordenadas de latitude e longitude são recuperadas do `CustomMap.ShapeCoordinates` propriedade e armazenada como uma matriz de `CLLocationCoordinate2D` instâncias.
+- O `MKMapView.OverlayRenderer` estiver definida como um delegado correspondente.
+- A coleção de coordenadas de latitude e longitude são recuperados do `CustomMap.ShapeCoordinates` propriedade e armazenados como uma matriz de `CLLocationCoordinate2D` instâncias.
 - O polígono é criado chamando estático `MKPolygon.FromCoordinates` método, que especifica a latitude e longitude de cada ponto.
-- O polígono é adicionado ao mapa chamando o `MKMapView.AddOverlay` método. Este método fecha automaticamente o polígono ao desenhar uma linha que conecta o primeiro e último pontos.
+- O polígono é adicionado ao mapa chamando o `MKMapView.AddOverlay` método. Esse método fecha automaticamente o polígono desenhando uma linha que conecta o primeiro e último pontos.
 
-Em seguida, implementar a `GetOverlayRenderer` método para personalizar a renderização da sobreposição de:
+Em seguida, implemente o `GetOverlayRenderer` método para personalizar a renderização da sobreposição:
 
 ```csharp
 public class CustomMapRenderer : MapRenderer
@@ -199,7 +199,7 @@ public class CustomMapRenderer : MapRenderer
 
 #### <a name="creating-the-custom-renderer-on-android"></a>Criando o renderizador personalizado no Android
 
-Criar uma subclasse do `MapRenderer` classe e substituir seu `OnElementChanged` e `OnMapReady` métodos para adicionar a sobreposição de polígono:
+Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` e `OnMapReady` métodos para adicionar a sobreposição de polígono:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -249,11 +249,11 @@ namespace MapOverlay.Droid
 }
 ```
 
-O `OnElementChanged` método recupera a coleção de coordenadas de latitude e longitude do `CustomMap.ShapeCoordinates` propriedade e os armazena em uma variável de membro. Depois, ele chama o `MapView.GetMapAsync` método, que obtém subjacente `GoogleMap` que está vinculado à exibição, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms. Uma vez o `GoogleMap` instância estiver disponível, o `OnMapReady` método será chamado, onde o polígono é criado por instanciar uma `PolygonOptions` objeto que especifica a latitude e longitude de cada ponto. O polígono é adicionado ao mapa chamando o `NativeMap.AddPolygon` método. Este método fecha automaticamente o polígono ao desenhar uma linha que conecta o primeiro e último pontos.
+O `OnElementChanged` método recupera a coleção de coordenadas de latitude e longitude do `CustomMap.ShapeCoordinates` propriedade e os armazena em uma variável de membro. Em seguida, ele chama o `MapView.GetMapAsync` método, que obtém subjacente `GoogleMap` que está vinculada à exibição, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms. Uma vez a `GoogleMap` instância está disponível, o `OnMapReady` método será invocado, em que o polígono é criar uma instância de um `PolygonOptions` objeto que especifica a latitude e longitude de cada ponto. O polígono é adicionado ao mapa chamando o `NativeMap.AddPolygon` método. Esse método fecha automaticamente o polígono desenhando uma linha que conecta o primeiro e último pontos.
 
-#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Criando o renderizador personalizado na plataforma Universal do Windows
+#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Criando o renderizador personalizado na plataforma Windows Universal
 
-Criar uma subclasse do `MapRenderer` classe e substituir seu `OnElementChanged` método para adicionar a sobreposição de polígono:
+Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` método para adicionar a sobreposição de polígono:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -293,19 +293,19 @@ namespace MapOverlay.UWP
 }
 ```
 
-Esse método executa as operações a seguir, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms:
+Esse método executa as seguintes operações, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms:
 
-- A coleção de coordenadas de latitude e longitude são recuperadas do `CustomMap.ShapeCoordinates` propriedade e convertido em um `List` de `BasicGeoposition` coordenadas.
-- O polígono é criado pela instanciação de um `MapPolygon` objeto. O `MapPolygon` classe é usada para exibir uma forma de vários pontos no mapa, definindo seu `Path` propriedade para um `Geopath` objeto que contém as coordenadas da forma.
-- O polígono é renderizado no mapa, adicionando-o para o `MapControl.MapElements` coleção. Observe que o polígono será fechado automaticamente ao desenhar uma linha que conecta o primeiro e último pontos.
+- A coleção de coordenadas de latitude e longitude são recuperados do `CustomMap.ShapeCoordinates` propriedade e convertido em um `List` de `BasicGeoposition` coordenadas.
+- O polígono é criar uma instância de um `MapPolygon` objeto. O `MapPolygon` classe é usada para exibir uma forma de vários pontos no mapa, definindo seu `Path` propriedade para um `Geopath` objeto que contém as coordenadas da forma.
+- O polígono é renderizado no mapa, adicionando-o para o `MapControl.MapElements` coleção. Observe que o polígono serão automaticamente fechado desenhando uma linha que conecta o primeiro e último pontos.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo explicou como adicionar uma sobreposição de polígono para um mapa, para realçar uma região do mapa. Polígonos são uma forma fechada e tem seus interiores preenchidos.
+Este artigo explicou como adicionar uma sobreposição de polígono a um mapa, para realçar uma região do mapa. Polígonos são uma forma fechada e tem seus interiores preenchido.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Sobreposição de mapa de polígono (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
+- [Sobreposição de mapa de polígono (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
 - [Personalizar um Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
-- [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)
+- [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

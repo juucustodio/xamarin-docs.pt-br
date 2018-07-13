@@ -1,38 +1,38 @@
 ---
-title: Implementação de texto em fala
-description: Este artigo explica como usar a classe DependencyService xamarin. Forms para chamar a API de texto em fala nativo de cada plataforma.
+title: Implementando o texto em fala
+description: Este artigo explica como usar a classe do xamarin. Forms DependencyService para chamar a API de texto em fala nativo de cada plataforma.
 ms.prod: xamarin
 ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 5d9e7c74878ea6a095ba28a80fe1307493acbed5
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: d39902f2269d3eb241b48831b8eb1b181ff11e7a
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241050"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997537"
 ---
-# <a name="implementing-text-to-speech"></a>Implementação de texto em fala
+# <a name="implementing-text-to-speech"></a>Implementando o texto em fala
 
-Este artigo vai guiá-lo ao criar um aplicativo de plataforma cruzada usa [ `DependencyService` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) para acessar as APIs de fala nativo:
+Este artigo vai guiá-lo conforme você cria um aplicativo de plataforma cruzada que usa [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) para acessar APIs nativas do texto em fala:
 
-- **[Criar a Interface](#Creating_the_Interface)**  &ndash; entender como a interface é criada no código compartilhado.
-- **[iOS implementação](#iOS_Implementation)**  &ndash; saber como implementar a interface em código nativo para iOS.
-- **[Implementação do Android](#Android_Implementation)**  &ndash; saber como implementar a interface em código nativo para o Android.
-- **[Implementação de UWP](#WindowsImplementation)**  &ndash; saber como implementar a interface em código nativo para o Windows UWP (plataforma Universal).
-- **[Implementando em código compartilhado](#Implementing_in_Shared_Code)**  &ndash; aprender a usar `DependencyService` para chamar a implementação nativa de código compartilhado.
+- **[Criando a Interface](#Creating_the_Interface)**  &ndash; entender como a interface é criada em código compartilhado.
+- **[Implementação do iOS](#iOS_Implementation)**  &ndash; Saiba como implementar a interface em código nativo para iOS.
+- **[Implementação do Android](#Android_Implementation)**  &ndash; Saiba como implementar a interface em código nativo para Android.
+- **[Implementação de UWP](#WindowsImplementation)**  &ndash; Saiba como implementar a interface em código nativo para Universal Windows Platform (UWP).
+- **[Implementando em código compartilhado](#Implementing_in_Shared_Code)**  &ndash; Saiba como usar `DependencyService` para chamar a implementação nativa a partir do código compartilhado.
 
 O aplicativo usando `DependencyService` terá a seguinte estrutura:
 
-![](text-to-speech-images/tts-diagram.png "Estrutura de aplicativo DependencyService")
+![](text-to-speech-images/tts-diagram.png "Estrutura de aplicativo do DependencyService")
 
 <a name="Creating_the_Interface" />
 
 ## <a name="creating-the-interface"></a>Criando a Interface
 
-Primeiro, crie uma interface no código compartilhado que expressa a funcionalidade que você pretende implementar. Neste exemplo, a interface contém um único método, `Speak`:
+Primeiro, crie uma interface no código compartilhado que expresse a funcionalidade que você planeja implementar. Neste exemplo, a interface contém um único método, `Speak`:
 
 ```csharp
 public interface ITextToSpeech
@@ -41,7 +41,7 @@ public interface ITextToSpeech
 }
 ```
 
-Codificando a essa interface no código compartilhado permitirá que o aplicativo xamarin. Forms acessar a APIs de fala em cada plataforma.
+Codificação em relação a essa interface no código compartilhado permitirá que o aplicativo xamarin. Forms acessar a APIs de fala em cada plataforma.
 
 > [!NOTE]
 > Classes que implementam a interface devem ter um construtor sem parâmetros para trabalhar com o `DependencyService`.
@@ -50,7 +50,7 @@ Codificando a essa interface no código compartilhado permitirá que o aplicativ
 
 ## <a name="ios-implementation"></a>Implementação do iOS
 
-A interface deve ser implementada em cada projeto de aplicativo específico da plataforma. Observe que a classe tem um construtor sem parâmetros para que o `DependencyService` pode criar novas instâncias.
+A interface deve ser implementada em cada projeto de aplicativo específico da plataforma. Observe que a classe tem um construtor sem parâmetros, de modo que o `DependencyService` pode criar novas instâncias.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
@@ -84,7 +84,7 @@ O `[assembly]` atributo registra a classe como uma implementação do `ITextToSp
 
 ## <a name="android-implementation"></a>Implementação do Android
 
-O código do Android é mais complexo do que a versão do iOS: requer a classe de implementação para herdar de específico do Android `Java.Lang.Object` e implementar o `IOnInitListener` interface também. Ele também requer acesso ao contexto atual do Android, que é exposto pelo `MainActivity.Instance` propriedade.
+O código do Android é mais complexo do que a versão do iOS: ele exige a implementação da classe para herdar de específicas do Android `Java.Lang.Object` e implementar o `IOnInitListener` interface também. Ele também exige acesso ao contexto Android atual, que é exposto pelo `MainActivity.Instance` propriedade.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
@@ -125,7 +125,7 @@ O `[assembly]` atributo registra a classe como uma implementação do `ITextToSp
 
 ## <a name="universal-windows-platform-implementation"></a>Implementação da plataforma universal do Windows
 
-A plataforma Universal do Windows tem uma API de fala no `Windows.Media.SpeechSynthesis` namespace. A única limitação é que se lembrar de escala de **microfone** recurso no manifesto, caso contrário, acesso a fala APIs estão bloqueados.
+A plataforma Universal do Windows tem uma API de fala no `Windows.Media.SpeechSynthesis` namespace. A única limitação é lembrar-se de marcar a **microfone** recurso no manifesto, caso contrário, acesso ao reconhecimento do fala APIs são bloqueadas.
 
 ```csharp
 [assembly:Dependency(typeof(TextToSpeechImplementation))]
@@ -149,7 +149,7 @@ O `[assembly]` atributo registra a classe como uma implementação do `ITextToSp
 
 ## <a name="implementing-in-shared-code"></a>Implementando em código compartilhado
 
-Agora podemos escrever e testar o código compartilhado que acessa a interface de texto em fala. Esta página simple inclui um botão que dispara a funcionalidade de fala. Ele usa o `DependencyService` para obter uma instância do `ITextToSpeech` interface &ndash; em tempo de execução, esta instância será a implementação específica de plataforma que tenha acesso completo para o SDK nativo.
+Agora podemos escrever e testar o código compartilhado que acessa a interface do texto em fala. Esta página simple inclui um botão que dispara a funcionalidade de fala. Ele usa o `DependencyService` para obter uma instância das `ITextToSpeech` interface &ndash; em tempo de execução essa instância será a implementação específica da plataforma que tem acesso completo para o SDK nativo.
 
 ```csharp
 public MainPage ()
@@ -166,13 +166,13 @@ public MainPage ()
 }
 ```
 
-Executar este aplicativo no iOS, Android ou o UWP e pressionando o botão resultará no aplicativo falar com você, usando a SDK de fala nativo em cada plataforma.
+Executando esse aplicativo no iOS, Android ou a UWP e pressionando o botão resultará no aplicativo para você, usando o SDK da fala nativo em cada plataforma de fala.
 
  ![iOS e Android botão de texto em fala](text-to-speech-images/running.png "exemplo de texto em fala")
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Usando DependencyService (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [Usando o DependencyService (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [DependencyServiceSample](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
 - [Pasta de trabalho de texto em fala](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/text-to-speech/text-to-speech.workbook)

@@ -1,21 +1,21 @@
 ---
-title: System. Data no xamarin
-description: Este documento descreve como usar o System. Data e Mono.Data.Sqlite.dll para acessar dados SQLite em um aplicativo xamarin.
+title: System. Data no xamarin. IOS
+description: Este documento descreve como usar o System. Data e Mono.Data.Sqlite.dll para acessar dados do SQLite em um aplicativo xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f20bdbdb9fe0d25e1ba545633e271af912aab3ba
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 183079c150ad4df05424d4dbf2980a307a889352
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784710"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997192"
 ---
-# <a name="systemdata-in-xamarinios"></a>System. Data no xamarin
+# <a name="systemdata-in-xamarinios"></a>System. Data no xamarin. IOS
 
-Xamarin 8.10 adiciona suporte para [System. Data](https://developer.xamarin.com/api/namespace/System.Data/), incluindo o `Mono.Data.Sqlite.dll` provedor ADO.NET. O suporte inclui a adição dos seguintes [assemblies](~/cross-platform/internals/available-assemblies.md):
+Adiciona o suporte para xamarin. IOS 8.10 [System. Data](xref:System.Data), incluindo o `Mono.Data.Sqlite.dll` provedor ADO.NET. O suporte inclui a adição dos seguintes [assemblies](~/cross-platform/internals/available-assemblies.md):
 
 -  `System.Data.dll`
 -  `System.Data.Service.Client.dll`
@@ -27,17 +27,17 @@ Xamarin 8.10 adiciona suporte para [System. Data](https://developer.xamarin.com/
 
 ## <a name="example"></a>Exemplo
 
-O programa a seguir cria um banco de dados `Documents/mydb.db3`, e se o banco de dados anteriormente não existe, ela será preenchido com dados de exemplo. O banco de dados é então consultado, com a saída gravada em `stderr`.
+O programa a seguir cria um banco de dados `Documents/mydb.db3`, e se o banco de dados anteriormente não existe, ela é preenchida com dados de exemplo. O banco de dados é consultado, com a saída gravada `stderr`.
 
 ### <a name="add-references"></a>Adicionar referências
 
-Primeiro, clique duas vezes no **referências** nó e escolha **Editar referências...**  , em seguida, selecione `System.Data` e `Mono.Data.Sqlite`:
+Clique duas vezes em primeiro lugar, o **referências** nó e escolha **Editar referências...**  , em seguida, selecione `System.Data` e `Mono.Data.Sqlite`:
 
 [![](system.data-images/edit-references-sml.png "Adicionando novas referências")](system.data-images/edit-references.png#lightbox)
 
 ### <a name="sample-code"></a>Código de exemplo
 
-O código a seguir mostra um exemplo simples de criar uma tabela e inserindo linhas usando comandos SQL inseridos:
+O código a seguir mostra um exemplo simples de criar uma tabela e inserindo linhas usando comandos do embedded SQL:
 
 ```csharp
 using System;
@@ -107,12 +107,12 @@ class Demo {
 ```
 
 > [!IMPORTANT]
-> Conforme mencionado no exemplo de código acima, é uma prática inadequada para inserir cadeias de caracteres em comandos SQL, porque ele faz com que seu código vulnerável a [injeção SQL](http://en.wikipedia.org/wiki/SQL_injection).
+> Conforme mencionado no exemplo de código acima, é uma prática inadequada para inserir cadeias de caracteres em comandos SQL, pois ele torna o código vulnerável a [injeção de SQL](http://en.wikipedia.org/wiki/SQL_injection).
 
 
 ### <a name="using-command-parameters"></a>Usando parâmetros de comando
 
-O código a seguir mostra como usar parâmetros de comando para inserir o texto inserido pelo usuário com segurança no banco de dados (mesmo se o texto contém caracteres especiais do SQL como o apóstrofo único):
+O código a seguir mostra como usar parâmetros de comando para inserir o texto inserido pelo usuário com segurança no banco de dados (mesmo se o texto contiver caracteres especiais do SQL como o apóstrofo único):
 
 ```csharp
 // user input from Textbox control
@@ -139,34 +139,34 @@ Ambos **System. Data** e **Mono.Data.Sqlite** estão faltando algumas funcionali
 
 ### <a name="systemdata"></a>System.Data
 
-Funcionalidade ausente do **System.Data.dll** consiste em:
+Funcionalidade ausente do **dll** consiste em:
 
--  Qualquer coisa que exigem [System. CodeDom](https://developer.xamarin.com/api/namespace/System.CodeDom/) (por exemplo,  [System.Data.TypedDataSetGenerator](https://developer.xamarin.com/api/type/System.Data.TypedDataSetGenerator/) )
--  Arquivo de configuração XML suporte (por exemplo  [System.Data.Common.DbProviderConfigurationHandler](https://developer.xamarin.com/api/type/System.Data.Common.DbProviderConfigurationHandler/) )
--   [System.Data.Common.DbProviderFactories](https://developer.xamarin.com/api/type/System.Data.Common.DbProviderFactories/) (depende do suporte de arquivo de configuração XML)
--   [System.Data.OleDb](https://developer.xamarin.com/api/namespace/System.Data.OleDb/)
--   [System.Data.Odbc](https://developer.xamarin.com/api/namespace/System.Data.Odbc/)
--  O `System.EnterpriseServices.dll` dependência foi *removido* de `System.Data.dll` , resultando na remoção do [SqlConnection.EnlistDistributedTransaction(ITransaction)](https://developer.xamarin.com/api/member/System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction/(System.EnterpriseServices.ITransaction)) método.
+-  Qualquer coisa que exigem [System. CodeDom](xref:System.CodeDom) (por exemplo,  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
+-  Configuração XML (por exemplo, suporte a arquivos  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
+-   [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depende de suporte de arquivo de configuração XML)
+-   [System.Data.OleDb](xref:System.Data.OleDb)
+-   [System.Data.Odbc](xref:System.Data.Odbc)
+-  O `System.EnterpriseServices.dll` dependência foi *removido* partir `System.Data.dll` , resultando na remoção da [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) método.
 
 
 <a name="Mono.Data.Sqlite" />
 
 ### <a name="monodatasqlite"></a>Mono.Data.Sqlite
 
-Enquanto isso, **Mono.Data.Sqlite.dll** não sofreu nenhuma alteração de código fonte, mas em vez disso, pode ser o host de um número de *tempo de execução* problemas desde `Mono.Data.Sqlite.dll` associa SQLite 3.5. iOS 8, enquanto isso, é fornecido com SQLite 3.8.5. Basta dizer, algumas coisas que foram alterados entre as duas versões.
+Enquanto isso, **Mono.Data.Sqlite.dll** sofreu sem alterações de código fonte, mas em vez disso, pode ser o host de um número de *tempo de execução* problemas desde `Mono.Data.Sqlite.dll` associa SQLite 3.5. iOS 8, enquanto isso, é fornecido com o SQLite 3.8.5. Basta dizer, algumas coisas tenham mudado entre as duas versões.
 
-A versão mais antiga do iOS fornecidas com as seguintes versões do SQLite:
+Enviar uma versão mais antiga do iOS com as seguintes versões do SQLite:
 
 - **iOS 7** -versão 3.7.13.
 - **iOS 6** -versão 3.7.13.
 - **iOS 5** -versão 3.7.7.
 - **iOS 4** -versão 3.6.22.
 
-Por exemplo, os problemas mais comuns parecem estar relacionados a consulta de esquema de banco de dados, determinar em tempo de execução que existem colunas em uma determinada tabela, como `Mono.Data.Sqlite.SqliteConnection.GetSchema` (substituindo [DbConnection.GetSchema](https://developer.xamarin.com/api/member/System.Data.Common.DbConnection.GetSchema/)) e `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` ( substituindo [DbDataReader.GetSchemaTable](https://developer.xamarin.com/api/member/System.Data.Common.DbDataReader.GetSchemaTable/)). Em resumo, parece que algo usando [DataTable](https://developer.xamarin.com/api/type/System.Data.DataTable/) é improvável de funcionar.
+Por exemplo, os problemas mais comuns que parecem estar relacionados à consulta de esquema de banco de dados, determinar no tempo de execução que existem colunas em uma determinada tabela, como `Mono.Data.Sqlite.SqliteConnection.GetSchema` (substituindo [DbConnection.GetSchema](xref:System.Data.Common.DbConnection.GetSchema) e `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (substituindo [DbDataReader.GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). Em resumo, parece que tudo usando [DataTable](xref:System.Data.DataTable) provavelmente não funcionará.
 
 <a name="Data_Binding" />
 
 ## <a name="data-binding"></a>Associação de dados
 
-Não há suporte para associação de dados no momento.
+Não há suporte para a vinculação de dados no momento.
 

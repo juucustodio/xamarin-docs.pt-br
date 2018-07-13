@@ -1,37 +1,37 @@
 ---
-title: Realce uma rota em um mapa
-description: Este artigo explica como adicionar uma sobreposição de polilinha a um mapa. Uma sobreposição de polilinha é uma série de segmentos de linha conectada que normalmente são usados para mostrar uma rota em um mapa, formulário ou qualquer forma que é necessário.
+title: Realçar uma rota em um mapa
+description: Este artigo explica como adicionar uma sobreposição de polilinha em um mapa. Uma sobreposição de polilinha é uma série de segmentos de linha conectados que normalmente são usados para mostrar uma rota em um mapa, ou formulário de qualquer forma que é necessário.
 ms.prod: xamarin
 ms.assetid: FBFDC715-1654-4188-82A0-FC522548BCFF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 8b80f9569e9377ca76798911cda64d8c0ee28d93
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 786f050495d4682b719178f2723c482929544678
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846637"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998713"
 ---
-# <a name="highlighting-a-route-on-a-map"></a>Realce uma rota em um mapa
+# <a name="highlighting-a-route-on-a-map"></a>Realçar uma rota em um mapa
 
-_Este artigo explica como adicionar uma sobreposição de polilinha a um mapa. Uma sobreposição de polilinha é uma série de segmentos de linha conectada que normalmente são usados para mostrar uma rota em um mapa, formulário ou qualquer forma que é necessário._
+_Este artigo explica como adicionar uma sobreposição de polilinha em um mapa. Uma sobreposição de polilinha é uma série de segmentos de linha conectados que normalmente são usados para mostrar uma rota em um mapa, ou formulário de qualquer forma que é necessário._
 
 ## <a name="overview"></a>Visão geral
 
-Uma sobreposição é um gráfico em camadas em um mapa. Sobreposições de suporte para desenho conteúdo gráfico com o mapa é dimensionado conforme ele aparece ampliado. As capturas de tela a seguir mostram o resultado da adição de uma sobreposição de polilinha a um mapa:
+Uma sobreposição é um gráfico em camadas em um mapa. Sobreposições de dar suporte a conteúdo de desenho gráfico que pode ser dimensionado com o mapa conforme ele aparece ampliado. As capturas de tela a seguir mostram o resultado da adição de uma sobreposição de polilinha em um mapa:
 
 ![](polyline-map-overlay-images/screenshots.png)
 
-Quando um [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) controle é processado por um aplicativo xamarin. Forms, no iOS a `MapRenderer` classe é instanciada, que por sua vez instancia um nativo `MKMapView` controle. Na plataforma Android, o `MapRenderer` classe instancia um nativo `MapView` controle. Sobre o Windows UWP (plataforma Universal), o `MapRenderer` classe instancia um nativo `MapControl`. O processo de renderização pode ser tomado aproveitar para implementar as personalizações do mapa específico da plataforma, criando um renderizador personalizado para um `Map` em cada plataforma. O processo para fazer isso é como segue:
+Quando um [ `Map` ](xref:Xamarin.Forms.Maps.Map) controle é processado por um aplicativo xamarin. Forms, no iOS o `MapRenderer` classe é instanciada, que por sua vez cria uma instância de um nativo `MKMapView` controle. Na plataforma Android, o `MapRenderer` classe instancia um nativo `MapView` controle. Na Universal Windows Platform (UWP), o `MapRenderer` classe instancia um nativo `MapControl`. O processo de renderização pode ser aproveitado para implementar as personalizações do mapa específicas da plataforma, criando um renderizador personalizado para um `Map` em cada plataforma. O processo para fazer isso é o seguinte:
 
-1. [Criar](#Creating_the_Custom_Map) um mapa personalizado xamarin. Forms.
+1. [Criar](#Creating_the_Custom_Map) um mapa personalizado do xamarin. Forms.
 1. [Consumir](#Consuming_the_Custom_Map) o mapa personalizado do xamarin. Forms.
 1. [Personalizar](#Customizing_the_Map) o mapa, criando um renderizador personalizado para o mapa em cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) deve ser inicializada e configurada antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) deve ser inicializado e configurado antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 Para obter informações sobre como personalizar um mapa usando um renderizador personalizado, consulte [Personalizando um Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
@@ -39,7 +39,7 @@ Para obter informações sobre como personalizar um mapa usando um renderizador 
 
 ### <a name="creating-the-custom-map"></a>Criando o mapa personalizado
 
-Criar uma subclasse do [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) classe, que adiciona um `RouteCoordinates` propriedade:
+Criar uma subclasse do [ `Map` ](xref:Xamarin.Forms.Maps.Map) classe, que adiciona um `RouteCoordinates` propriedade:
 
 ```csharp
 public class CustomMap : Map
@@ -53,13 +53,13 @@ public class CustomMap : Map
 }
 ```
 
-O `RouteCoordinates` propriedade armazenará uma coleção de coordenadas que definem a rota para ser realçado.
+O `RouteCoordinates` propriedade irá armazenar uma coleção de coordenadas que definem a rota seja realçado.
 
 <a name="Consuming_the_Custom_Map" />
 
 ### <a name="consuming-the-custom-map"></a>Consumindo o mapa personalizado
 
-Consumir o `CustomMap` controle declarando uma instância na instância de página do XAML:
+Consumir o `CustomMap` controle declarando uma instância na instância de página XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -72,7 +72,7 @@ Consumir o `CustomMap` controle declarando uma instância na instância de pági
 </ContentPage>
 ```
 
-Como alternativa, consumir o `CustomMap` controle declarando uma instância na instância de página c#:
+Como alternativa, consumir o `CustomMap` controle declarando uma instância na instância de página do c#:
 
 ```csharp
 public class MapPageCS : ContentPage
@@ -108,17 +108,17 @@ public partial class MapPage : ContentPage
 }
 ```
 
-Essa inicialização especifica uma série de coordenadas de latitude e longitude, para definir a rota no mapa a ser realçado. Ele, em seguida, posiciona o modo de exibição do mapa com o [ `MoveToRegion` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)/) método, o que altera a posição e o nível de zoom do mapa, criando um [ `MapSpan` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/) de um [ `Position` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/) e um [ `Distance` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/).
+Essa inicialização especifica uma série de coordenadas de latitude e longitude, para definir a rota no mapa seja realçado. Ele, em seguida, posiciona a exibição do mapa com o [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) método, que altera a posição e o nível de zoom do mapa com a criação de uma [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan) de uma [ `Position` ](xref:Xamarin.Forms.Maps.Position) e uma [ `Distance` ](xref:Xamarin.Forms.Maps.Distance).
 
 <a name="Customizing_the_Map" />
 
-### <a name="customizing-the-map"></a>Personalizando o mapa
+### <a name="customizing-the-map"></a>Personalizar o mapa
 
 Agora deve ser adicionado a um renderizador personalizado para cada projeto de aplicativo para adicionar a sobreposição de polilinha ao mapa.
 
 #### <a name="creating-the-custom-renderer-on-ios"></a>Criando o renderizador personalizado no iOS
 
-Criar uma subclasse do `MapRenderer` classe e substituir seu `OnElementChanged` método para adicionar a sobreposição de polilinha:
+Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` método para adicionar a sobreposição de polilinha:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -166,12 +166,12 @@ namespace MapOverlay.iOS
 
 Esse método executa a configuração a seguir, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms:
 
-- O `MKMapView.OverlayRenderer` está definida como um delegado correspondente.
-- A coleção de coordenadas de latitude e longitude são recuperadas do `CustomMap.RouteCoordinates` propriedade e armazenada como uma matriz de `CLLocationCoordinate2D` instâncias.
-- A polilinha é criada chamando estático `MKPolyline.FromCoordinates` método, que especifica a latitude e longitude de cada ponto.
-- A polilinha é adicionada ao mapa chamando o `MKMapView.AddOverlay` método.
+- O `MKMapView.OverlayRenderer` estiver definida como um delegado correspondente.
+- A coleção de coordenadas de latitude e longitude são recuperados do `CustomMap.RouteCoordinates` propriedade e armazenados como uma matriz de `CLLocationCoordinate2D` instâncias.
+- A polyline é criado chamando estático `MKPolyline.FromCoordinates` método, que especifica a latitude e longitude de cada ponto.
+- A polyline é adicionado ao mapa chamando o `MKMapView.AddOverlay` método.
 
-Em seguida, implementar a `GetOverlayRenderer` método para personalizar a renderização da sobreposição de:
+Em seguida, implemente o `GetOverlayRenderer` método para personalizar a renderização da sobreposição:
 
 ```csharp
 public class CustomMapRenderer : MapRenderer
@@ -197,7 +197,7 @@ public class CustomMapRenderer : MapRenderer
 
 #### <a name="creating-the-custom-renderer-on-android"></a>Criando o renderizador personalizado no Android
 
-Criar uma subclasse do `MapRenderer` classe e substituir seu `OnElementChanged` e `OnMapReady` métodos para adicionar a sobreposição de polilinha:
+Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` e `OnMapReady` métodos para adicionar a sobreposição de polilinha:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -246,11 +246,11 @@ namespace MapOverlay.Droid
 }
 ```
 
-O `OnElementChanged` método recupera a coleção de coordenadas de latitude e longitude do `CustomMap.RouteCoordinates` propriedade e os armazena em uma variável de membro. Depois, ele chama o `MapView.GetMapAsync` método, que obtém subjacente `GoogleMap` que está vinculado à exibição, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms. Uma vez o `GoogleMap` instância estiver disponível, o `OnMapReady` método será chamado, onde a polilinha é criada por instanciar uma `PolylineOptions` objeto que especifica a latitude e longitude de cada ponto. A polilinha é adicionada ao mapa chamando o `NativeMap.AddPolyline` método.
+O `OnElementChanged` método recupera a coleção de coordenadas de latitude e longitude do `CustomMap.RouteCoordinates` propriedade e os armazena em uma variável de membro. Em seguida, ele chama o `MapView.GetMapAsync` método, que obtém subjacente `GoogleMap` que está vinculada à exibição, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms. Uma vez a `GoogleMap` instância está disponível, o `OnMapReady` método será invocado, onde a polyline é criar uma instância de um `PolylineOptions` objeto que especifica a latitude e longitude de cada ponto. A polyline, em seguida, é adicionado ao mapa chamando o `NativeMap.AddPolyline` método.
 
-#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Criando o renderizador personalizado na plataforma Universal do Windows
+#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Criando o renderizador personalizado na plataforma Windows Universal
 
-Criar uma subclasse do `MapRenderer` classe e substituir seu `OnElementChanged` método para adicionar a sobreposição de polilinha:
+Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` método para adicionar a sobreposição de polilinha:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -289,19 +289,19 @@ namespace MapOverlay.UWP
 }
 ```
 
-Esse método executa as operações a seguir, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms:
+Esse método executa as seguintes operações, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms:
 
-- A coleção de coordenadas de latitude e longitude são recuperadas do `CustomMap.RouteCoordinates` propriedade e convertido em um `List` de `BasicGeoposition` coordenadas.
-- A polilinha é criada pela instanciação de um `MapPolyline` objeto. O `MapPolygon` classe é usada para exibir uma linha do mapa, definindo seu `Path` propriedade para um `Geopath` objeto que contém as coordenadas de linha.
-- A polilinha é renderizada no mapa, adicionando-o para o `MapControl.MapElements` coleção.
+- A coleção de coordenadas de latitude e longitude são recuperados do `CustomMap.RouteCoordinates` propriedade e convertido em um `List` de `BasicGeoposition` coordenadas.
+- A polyline é criar uma instância de um `MapPolyline` objeto. O `MapPolygon` classe é usada para exibir uma linha do mapa, definindo seu `Path` propriedade para um `Geopath` objeto que contém as coordenadas de linha.
+- A polyline é renderizado no mapa, adicionando-o para o `MapControl.MapElements` coleção.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo explicou como adicionar uma sobreposição de polilinha a um mapa, para mostrar uma rota em um mapa, ou qualquer forma necessária de formulário.
+Este artigo explicou como adicionar um mapa, para mostrar uma rota em um mapa, ou formulário de qualquer forma que é necessário uma sobreposição de polilinha.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Mapa de polilinha Ovlerlay (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
+- [Mapa de polilinha Ovlerlay (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
 - [Personalizar um Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
-- [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)
+- [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

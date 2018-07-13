@@ -1,45 +1,45 @@
 ---
-title: Assemblies com suporte Xamarin para tvOS
-description: Para ajudar a esclarecer os recursos disponíveis para aplicativos tvOS, este documento fornece uma lista de assemblies de suporte para o Xamarin para tvOS desenvolvimento.
+title: Com suporte de assemblies do Xamarin para tvOS
+description: Para ajudar a esclarecer os recursos disponíveis para aplicativos de tvOS, este documento fornece uma lista de assemblies de suporte para o Xamarin para desenvolvimento de tvOS.
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 217ec5ea81b304555bcaf19e53c8132628628627
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 89f2d4b1a4b58f49ab859d3603433427d05c7393
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788817"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996555"
 ---
-# <a name="assemblies-supported-by-xamarin-for-tvos"></a>Assemblies com suporte Xamarin para tvOS
+# <a name="assemblies-supported-by-xamarin-for-tvos"></a>Com suporte de assemblies do Xamarin para tvOS
 
 ## <a name="supported-assemblies"></a>Assemblies com suporte
 
-Esta é uma lista dos assemblies do suporte para o Xamarin para seus aplicativos Xamarin.tvOS. A lista detalhada desses esteja listada abaixo.  Alguns omissões importantes incluem `System.EnterpriseServices`, a pilha do ASP.NET e Windows. Forms.
+Esta é uma lista dos assemblies de suporte para o Xamarin para seus aplicativos xamarin. tvos. A lista detalhada desses esteja listada abaixo.  Incluem alguns notáveis omissões `System.EnterpriseServices`, a pilha do ASP.NET e Windows. Forms.
 
 |Assembly|Added|Compatibilidade de API|
 |---|---|---|
 |Mono.CompilerServices.SymbolWriter.dll|1.0|Para autores de compilador.|
-|Mono.Data.Sqlite.dll|1.2|Provedor ADO.NET para SQLite; consulte [limitações](~/ios/data-cloud/system.data.md).|
-|Mono.Data.Tds.dll|1.2|Suporte de protocolo TDS; usado para [SqlClient](https://developer.xamarin.com/api/namespace/System.Data.SqlClient/) suportem [System. Data](~/ios/data-cloud/system.data.md).|
+|Mono.Data.Sqlite.dll|1.2|Provedor ADO.NET para SQLite; ver [limitações](~/ios/data-cloud/system.data.md).|
+|Mono.Data.Tds.dll|1.2|Suporte de protocolo TDS; usado para [System.Data.SqlClient](xref:System.Data.SqlClient) suportem [System. Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|APIs de criptografia.|
-|monotouch.dll|1.0|Este assembly contém o [c# associação para a API CocoaTouch](https://developer.xamarin.com/api/root/ios-unified/).|
+|monotouch.dll|1.0|Esse assembly contém o [c# associação para a API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
 |mscorlib.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|OpenTK.dll|1.0|O objeto OpenGL/OpenAL orientada a APIs, [estendidos para oferecer suporte a dispositivo iPhone](https://developer.xamarin.com/api/namespace/OpenGLES/).|
+|OpenTK.dll|1.0|APIs, orientado ao objeto de OpenGL/OpenAL [estendida para oferecer suporte a dispositivos iPhone](https://developer.xamarin.com/api/namespace/OpenGLES/).|
 |System.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), além de tipos dos namespaces a seguir: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
 |System.Core.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.Data.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx), [com algumas funcionalidades removidas](~/ios/data-cloud/system.data.md).|
-|System.Data.Service.Client.dll|3. x|Cliente oData completo.|
-|System.Drawing|1.0|System. Drawing API - somente API clássica.<br />_Não há suporte para System. Drawing na API unificada para o Xamarin.Mac .NET 4.5 ou estruturas móveis._|
+|System.Data.Service.Client.dll|3. x|Cliente oData completa.|
+|System.Drawing|1.0|System. Drawing API - API clássica apenas.<br />_Não há suporte para System. Drawing na API unificada do xamarin. Mac .NET 4.5 ou estruturas móveis._|
 |System.Json.dll|1.1|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.Runtime.Serialization.dll|?|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) de pilha como presentes no [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) de pilha como presente no [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.ServiceModel.Web.dll|?|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), além de tipos dos namespaces a seguir: <ul><li>Sistema</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
-|System.Transactions.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); faz parte do [System. Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) suporte.|
-|System.Web.Services|1.1|[Os serviços da Web básico](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) do perfil do .NET 3.5, com os recursos de servidor removido.|
+|System.Transactions.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); faz parte do [System. Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) dão suporte.|
+|System.Web.Services|1.1|[Serviços básicos da Web](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) do perfil .NET 3.5, com os recursos de servidor removido.|
 |System.Xml.dll|1.0|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|
 |System.Xml.Linq.dll|1.0|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|
 
@@ -47,10 +47,10 @@ Esta é uma lista dos assemblies do suporte para o Xamarin para seus aplicativos
 
 ## <a name="portable-class-libraries"></a>Bibliotecas de Classes Portáteis
 
-As associações de Mac, além de Xamarin.tvOS pode consumir [bibliotecas de classes portáteis do .NET](~/cross-platform/app-fundamentals/pcl.md).
+Além das associações de Mac, xamarin. tvos pode consumir [bibliotecas de classes portátil .NET](~/cross-platform/app-fundamentals/pcl.md).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

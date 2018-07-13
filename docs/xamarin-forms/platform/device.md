@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: ff707cdf73665ae07881d2d17ec837a4cfacaca0
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: c706d50962fb707208203a97374d4ae26f141ebf
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935365"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998245"
 ---
 # <a name="xamarinforms-device-class"></a>Classe de dispositivo do xamarin. Forms
 
@@ -24,11 +24,11 @@ Além dos métodos e propriedades para o código de destino em tipos específico
 
 ## <a name="providing-platform-specific-values"></a>Fornecer valores específicos da plataforma
 
-Antes do xamarin. Forms 2.3.4, a plataforma que o aplicativo estava em execução no poderia ser obtida examinando os [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) propriedade e compará-lo para o [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), e [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) valores de enumeração. Da mesma forma, um dos [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) sobrecargas pode ser usadas para fornecer valores específicos da plataforma para um controle.
+Antes do xamarin. Forms 2.3.4, a plataforma que o aplicativo estava em execução no poderia ser obtida examinando os [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) propriedade e compará-lo para o [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), e [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) valores de enumeração. Da mesma forma, um dos [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas pode ser usadas para fornecer valores específicos da plataforma para um controle.
 
-No entanto, desde o xamarin. Forms 2.3.4 essas APIs foram preteridas e substituídas. O [ `Device` ](xref:Xamarin.Forms.Device) classe agora contém constantes de cadeia de caracteres pública que identificam as plataformas – [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( preterido), `Device.WinRT` (preterido) [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), e [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). Da mesma forma, o [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) sobrecargas foram substituídas com o [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) e [ `On` ](xref:Xamarin.Forms.On) APIs.
+No entanto, desde o xamarin. Forms 2.3.4 essas APIs foram preteridas e substituídas. O [ `Device` ](xref:Xamarin.Forms.Device) classe agora contém constantes de cadeia de caracteres pública que identificam as plataformas – [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( preterido), `Device.WinRT` (preterido) [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), e [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). Da mesma forma, o [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas foram substituídas com o [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) APIs.
 
-No c#, valores específicos de plataforma podem ser fornecidos com a criação de um `switch` declaração sobre a [ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) propriedade e, em seguida, fornecendo `case` instruções para as plataformas necessárias:
+No c#, valores específicos de plataforma podem ser fornecidos com a criação de um `switch` declaração sobre a [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) propriedade e, em seguida, fornecendo `case` instruções para as plataformas necessárias:
 
 ```csharp
 double top;
@@ -46,7 +46,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-O [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) e [ `On` ](xref:Xamarin.Forms.On) classes fornecem a mesma funcionalidade em XAML:
+O [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) classes fornecem a mesma funcionalidade em XAML:
 
 ```xaml
 <StackLayout>
@@ -60,7 +60,7 @@ O [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatfo
 </StackLayout>
 ```
 
-O [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) classe é uma classe genérica e deve ser instanciado com um `x:TypeArguments` atributo que corresponde ao tipo de destino. No [ `On` ](xref:Xamarin.Forms.On) classe, o [ `Platform` ](xref:Xamarin.Forms.On.Platform) atributo pode aceitar um único `string` valor ou vários delimitada por vírgula `string` valores.
+O [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) classe é uma classe genérica e deve ser instanciado com um `x:TypeArguments` atributo que corresponde ao tipo de destino. No [ `On` ](xref:Xamarin.Forms.On) classe, o [ `Platform` ](xref:Xamarin.Forms.On.Platform) atributo pode aceitar um único `string` valor ou vários delimitada por vírgula `string` valores.
 
 > [!IMPORTANT]
 > Fornecendo um incorreto `Platform` valor no atributo de `On` classe não resultará em erro. Em vez disso, o código será executado sem o valor específico da plataforma que está sendo aplicado.
@@ -75,6 +75,7 @@ O `Device.Idiom` pode ser usado para alterar layouts ou funcionalidade dependend
 -  **Tablet** – iPad, dispositivos Windows e dispositivos Android mais de 600 quedas ^
 -  **Área de trabalho** – somente retornado no [aplicativos da UWP](~/xamarin-forms/platform/windows/installation/index.md) em computadores desktop do Windows 10 (retorna `Phone` em dispositivos móveis do Windows, incluindo em cenários de continuidade)
 -  **TV** – dispositivos Tizen TV
+-  **Assista** – Tizen dispositivos de inspeção
 -  **Não há suporte para** – não utilizados
 
 *^ dips não é necessariamente a contagem de pixel físico*
@@ -172,7 +173,7 @@ Se o código dentro do temporizador interage com a interface do usuário (como d
 
 ## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
 
-Elementos da interface do usuário nunca devem ser acessados por threads em segundo plano, como o código em execução em um temporizador ou um manipulador de conclusão para operações assíncronas, como solicitações da web. Qualquer código em segundo plano que precisa atualizar a interface do usuário deve ser encapsulado dentro de [ `BeginInvokeOnMainThread` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/). Este é o equivalente de `InvokeOnMainThread` no iOS, `RunOnUiThread` no Android, e `Dispatcher.RunAsync` na plataforma Universal do Windows.
+Elementos da interface do usuário nunca devem ser acessados por threads em segundo plano, como o código em execução em um temporizador ou um manipulador de conclusão para operações assíncronas, como solicitações da web. Qualquer código em segundo plano que precisa atualizar a interface do usuário deve ser encapsulado dentro de [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)). Este é o equivalente de `InvokeOnMainThread` no iOS, `RunOnUiThread` no Android, e `Dispatcher.RunAsync` na plataforma Universal do Windows.
 
 O código do xamarin. Forms é:
 

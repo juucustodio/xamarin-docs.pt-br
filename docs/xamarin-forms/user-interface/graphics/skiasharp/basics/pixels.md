@@ -1,38 +1,38 @@
 ---
-title: Unidades independentes de dispositivo e pixels
-description: Este artigo explora as diferenças entre as coordenadas de SkiaSharp e xamarin. Forms e demonstra isso com o código de exemplo.
+title: Pixels e unidades independentes de dispositivo
+description: Este artigo explora as diferenças entre coordenadas de SkiaSharp e xamarin. Forms e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 2c7521fbedf1759c32e18d9c7f2a8fc6f0903587
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: b0655934b0389b06dca5ef6bab3badc0023400b4
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244133"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997368"
 ---
-# <a name="pixels-and-device-independent-units"></a>Unidades independentes de dispositivo e pixels
+# <a name="pixels-and-device-independent-units"></a>Pixels e unidades independentes de dispositivo
 
-_Explorar as diferenças entre as coordenadas de SkiaSharp e xamarin. Forms_
+_Explore as diferenças entre coordenadas de SkiaSharp e xamarin. Forms_
 
-Este artigo explora as diferenças no sistema de coordenadas usado em SkiaSharp e xamarin. Forms. Você pode obter informações para converter entre os dois sistemas de coordenadas e também desenhar gráficos que preenchem uma área específica:
+Este artigo explora as diferenças no sistema de coordenadas usado em SkiaSharp e xamarin. Forms. Você pode obter as informações necessárias para converter entre os dois sistemas de coordenadas e também desenhar gráficos que preenchem uma área específica:
 
-![](pixels-images/screenfillexample.png "Uma elipse que preenche a tela")
+![](pixels-images/screenfillexample.png "Uma elipse que ocupa a tela")
 
-Se você tiver sido programando em xamarin. Forms por algum tempo, você pode ter uma ideia de xamarin. Forms coordenadas e tamanhos. Os círculos desenhados nos dois artigos anteriores podem parecer um pouco pequenos para você.
+Se você tiver Programando no xamarin. Forms por algum tempo, você pode ter uma ideia de tamanhos e as coordenadas do xamarin. Forms. Os círculos desenhados nos dois artigos anteriores podem parecer um pouco pequenos para você.
 
-Esses círculos *são* pequeno em comparação com tamanhos de xamarin. Forms. Por padrão, SkiaSharp desenha em unidades de pixels, enquanto xamarin. Forms bases coordenadas e tamanhos em uma unidade independente de dispositivo estabelecida pela plataforma subjacente. (Para obter mais informações sobre o sistema de coordenadas do xamarin. Forms podem ser encontradas no [capítulo 5. Lidando com tamanhos](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) do catálogo de *criação de aplicativos móveis com o xamarin. Forms*.)
+Os círculos *são* pequeno em comparação com tamanhos de xamarin. Forms. Por padrão, SkiaSharp desenha em unidades de pixels, enquanto o xamarin. Forms baseia as coordenadas e tamanhos em uma unidade independente de dispositivo estabelecida pela plataforma subjacente. (Para obter mais informações sobre o sistema de coordenadas do xamarin. Forms podem ser encontradas no [capítulo 5. Lidando com tamanhos](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) do livro *criação de aplicativos móveis com xamarin. Forms*.)
 
-A página de [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa intitulado **tamanho da superfície** usa SkiaSharp saída de texto para mostrar o tamanho da superfície de exibição de três fontes diferentes:
+A página na [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa intitulado **tamanho da superfície** usa saída de texto de SkiaSharp para mostrar o tamanho da superfície de exibição de três fontes diferentes:
 
-- O xamarin. Forms normal [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) e [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) propriedades do `SKCanvasView` objeto.
+- O xamarin. Forms normal [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) e [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) propriedades do `SKCanvasView` objeto.
 - O [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) propriedade o `SKCanvasView` objeto.
 - O [ `Size` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Size/) propriedade o `SKImageInfo` valor, que é consistente com o `Width` e `Height` propriedades usadas em duas páginas anteriores.
 
-O [ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) classe mostra como exibir esses valores. O construtor salva o `SKCanvasView` objeto como um campo, para que ele possa ser acessado no `PaintSurface` manipulador de eventos:
+O [ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) classe mostra como exibir esses valores. O construtor salva a `SKCanvasView` objeto como um campo, portanto, ela pode ser acessada no `PaintSurface` manipulador de eventos:
 
 ```csharp
 SKCanvasView canvasView;
@@ -53,11 +53,11 @@ public SurfaceSizePage()
 public void DrawText (String text, Single x, Single y, SKPaint paint)
 ```
 
-Especifique a cadeia de caracteres de texto, as coordenadas X e Y onde o texto é começar e um `SKPaint` objeto. A coordenada X Especifica onde posicionada à esquerda do texto, mas tome cuidado com: A coordenada Y Especifica a posição do *linha de base* do texto. Se você já tenha escrito manualmente em papel com linhas, a linha de base é a linha na qual sit caracteres e abaixo decrescem quais descendentes (como aqueles no letras g, p, q e y).
+Você especifica a cadeia de caracteres de texto, as coordenadas X e Y em que o texto deve iniciar e um `SKPaint` objeto. A coordenada X Especifica em que o lado esquerdo do texto é posicionado, mas tome cuidado com: A coordenada Y Especifica a posição do *linha de base* do texto. Se você já escreveu manualmente no papel pautado, a linha de base é a linha na qual caracteres sit e abaixo descendem quais descendentes (como aqueles no letras g, p, q e y).
 
-O `SKPaint` objeto permite que você especifique a cor do texto, a família de fontes e o tamanho do texto. Por padrão, o [ `TextSize` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.TextSize/) propriedade tem um valor de 12, que resulta em texto muito pequeno em dispositivos de alta resolução, como celulares. Em qualquer coisa menos os aplicativos mais simples, você também precisará algumas informações sobre o tamanho do texto que você está exibindo. O `SKPaint` classe define um [ `FontMetrics` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.FontMetrics/) propriedade e vários [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/) métodos, mas menos necessidades especial, o [ `FontSpacing` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.FontSpacing/) propriedade fornece um valor recomendado para linhas sucessivas do espaçamento do texto.
+O `SKPaint` objeto permite que você especifique a cor do texto, a família de fontes e o tamanho do texto. Por padrão, o [ `TextSize` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.TextSize/) propriedade tem um valor de 12, que resulta em texto muito pequenos em alta resolução dispositivos como telefones. Em nada mais simples aplicativos, você também precisará algumas informações sobre o tamanho do texto que você está exibindo. O `SKPaint` classe define um [ `FontMetrics` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.FontMetrics/) propriedade e vários [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/) métodos, mas para necessidades menos sofisticadas, o [ `FontSpacing` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.FontSpacing/) propriedade fornece um valor recomendado para linhas sucessivas de espaçamento de texto.
 
-O seguinte `PaintSurface` manipulador cria um `SKPaint` de objeto para um `TextSize` de 40 pixels, que é a altura desejada vertical do texto da parte superior da ascendentes à parte inferior de descendentes. O `FontSpacing` valor que o `SKPaint` objeto retorna um pouco maior que sobre 47 pixels.
+O seguinte `PaintSurface` manipulador cria um `SKPaint` do objeto para um `TextSize` de 40 pixels, que é a altura desejada vertical do texto na parte superior dos ascendentes na parte inferior do descendentes. O `FontSpacing` valor que o `SKPaint` objeto retorna é um pouco maior do que isso, sobre 47 pixels.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -95,27 +95,27 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-O método começa a primeira linha de texto com uma coordenada X de 20 (para uma pequena margem à esquerda) e uma coordenada Y de `fontSpacing`, que é um pouco mais do que o que é necessário para exibir a altura total da primeira linha do texto na parte superior da superfície de exibição. Após cada chamada para `DrawText`, a coordenada Y aumenta em incrementos de um ou dois de `fontSpacing`.
+O método começa a primeira linha de texto com uma coordenada X de 20 (para uma pequena margem à esquerda) e uma coordenada Y de `fontSpacing`, que é um pouco mais do que o que é necessário para exibir a altura total da primeira linha do texto na parte superior da superfície de exibição. Após cada chamada para `DrawText`, a coordenada Y é aumentada por um ou dois incrementos de `fontSpacing`.
 
 Aqui está o programa em execução em todas as três plataformas:
 
 [![](pixels-images/surfacesize-small.png "Captura de tela da página de tamanho da superfície tripla")](pixels-images/surfacesize-large.png#lightbox "tripla captura de tela da página de tamanho da superfície")
 
-Como você pode ver, o `CanvasSize` propriedade do `SKCanvasView` e o `Size` propriedade o `SKImageInfo` valor estão consistentes em reporting as dimensões de pixel. O `Height` e `Width` propriedades do `SKCanvasView` xamarin. Forms propriedades e o tamanho da exibição nas unidades independentes de dispositivo definidas pela plataforma de relatório.
+Como você pode ver, o `CanvasSize` propriedade do `SKCanvasView` e o `Size` propriedade do `SKImageInfo` valor estão consistentes em relatar as dimensões de pixel. O `Height` e `Width` propriedades do `SKCanvasView` são propriedades do xamarin. Forms e o tamanho da exibição em unidades independentes de dispositivo definidas pela plataforma de relatório.
 
-O simulador de iOS 7 à esquerda tem 2 pixels por unidade independente de dispositivo e o Android 5 Nexus no centro tem 3 pixels por unidade. É por isso que o círculo simple mostrado anteriormente tem tamanhos diferentes em diferentes plataformas.
+O simulador de iOS 7 à esquerda tem 2 pixels por unidade independente de dispositivo e o Android Nexus 5 no centro tem 3 pixels por unidade. É por isso que o círculo simples mostrado anteriormente tem tamanhos diferentes em diferentes plataformas.
 
-Se você preferir trabalhar inteiramente em unidades independentes de dispositivo, você pode fazer isso definindo o `IgnorePixelScaling` propriedade o `SKCanvasView` para `true`. No entanto, você pode não gostar dos resultados. SkiaSharp renderiza os gráficos em uma menor superfície de dispositivo, com um tamanho de pixel igual ao tamanho da exibição em unidades independentes de dispositivo. (Por exemplo, SkiaSharp usaria uma superfície de exibição de 360 x 512 pixels em 5 a Nexus.) Ele, em seguida, sobe essa imagem em tamanho, resultando em jaggies bitmap notável.
+Se você preferir trabalhar inteiramente em unidades independentes de dispositivo, você pode fazer isso definindo a `IgnorePixelScaling` propriedade do `SKCanvasView` para `true`. No entanto, você não pode gostar dos resultados. SkiaSharp renderiza os elementos gráficos em uma superfície menor do dispositivo, com um tamanho de pixel igual ao tamanho da exibição em unidades independentes de dispositivo. (Por exemplo, SkiaSharp usaria uma superfície de exibição de 360 x 512 pixels no Nexus 5.) Escala, em seguida, essa imagem verticalmente em tamanho, resultando em jaggies bitmap perceptível.
 
 Para manter a mesma resolução de imagem, uma solução melhor é escrever suas próprias funções simples para converter entre os dois sistemas de coordenadas.
 
-Além de `DrawCircle` método `SKCanvas` também define duas `DrawOval` métodos que desenhar uma elipse. Uma elipse é definida por dois raios, em vez de um único radius. Eles são conhecidos como o *radius principal* e *radius secundária*. O `DrawOval` método desenha uma elipse com os dois raios paralelas aos eixos X e Y. Essa restrição pode ser superada com transformações ou o uso de um caminho de gráficos (para ser abordada posteriormente), mas [isso `DrawOval` método](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/System.Single/System.Single/System.Single/System.Single/SkiaSharp.SKPaint/) nomeia o argumento de dois raios `rx` e `ry` para indicar que eles são paralelos os eixos X e Y:
+Além de `DrawCircle` método, `SKCanvas` também define dois `DrawOval` métodos que desenhar uma elipse. Uma elipse é definida por dois raios em vez de um único raio. Eles são conhecidos como o *radius principais* e o *radius secundárias*. O `DrawOval` método desenha uma elipse com os dois raios paralelas aos eixos X e Y. Essa restrição pode ser superada com transformações ou o uso de um caminho de gráficos (para ser abordada posteriormente), mas [isso `DrawOval` método](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/System.Single/System.Single/System.Single/System.Single/SkiaSharp.SKPaint/) nomeia o argumento de dois raios `rx` e `ry` para indicar que eles são paralelos aos os eixos X e Y:
 
 ```csharp
 public void DrawOval (Single cx, Single cy, Single rx, Single ry, SKPaint paint)
 ```
 
-É possível desenhar uma elipse que preenche a superfície de exibição? O **elipse preencher** página demonstra como. O `PaintSurface` manipulador de eventos a [ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs) classe subtrai metade da largura do traço do `xRadius` e `yRadius` valores para se ajustar a elipse inteira e seu estrutura de tópicos na superfície de exibição:
+É possível desenhar uma elipse que preenche a superfície de exibição? O **preenchimento da elipse** página demonstra como. O `PaintSurface` manipulador de eventos na [ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs) classe subtrai metade da largura do traço do `xRadius` e `yRadius` valores de acordo com a elipse inteira e seu estrutura de tópicos na superfície de exibição:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -140,18 +140,18 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Aqui, ele é executado em três plataformas:
+Aqui ele está em execução nas três plataformas:
 
 [![](pixels-images/ellipsefill-small.png "Captura de tela da página de tamanho da superfície tripla")](pixels-images/ellipsefill-large.png#lightbox "tripla captura de tela da página de tamanho da superfície")
 
-O [outros `DrawOval` método](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/) tem um [ `SGRect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRect/) argumento, que é um retângulo definido em termos de coordenadas X e Y de seu canto superior esquerdo e o canto inferior direito. A elipse preenche esse retângulo, o que sugere que ele poderá usá-lo no **elipse preencher** página assim:
+O [outras `DrawOval` método](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/) tem um [ `SGRect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRect/) argumento, que é um retângulo definido em termos de coordenadas X e Y de seu canto superior esquerdo e o canto inferior direito. A elipse preenche esse retângulo, que sugere que talvez seja possível usá-lo na **preenchimento da elipse** página como esta:
 
 ```csharp
 SKRect rect = new SKRect(0, 0, info.Width, info.Height);
 canvas.DrawOval(rect, paint);
 ```
 
-No entanto, que trunca todas as bordas da estrutura de tópicos da elipse quatro lados. Você precisa ajustar todos os `SKRect` argumentos de construtor com base no `strokeWidth` para fazer isso funcionar direito:
+No entanto, que trunca todas as bordas do contorno da elipse nos quatro lados. Você precisa ajustar todos os `SKRect` argumentos de construtor com base no `strokeWidth` para fazer isso funcionar direito:
 
 ```csharp
 SKRect rect = new SKRect(strokeWidth / 2,
@@ -165,4 +165,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

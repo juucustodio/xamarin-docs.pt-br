@@ -1,33 +1,33 @@
 ---
-title: Animação em xamarin. Forms
-description: Xamarin. Forms inclui sua própria infra-estrutura de animação é simples para criar animações simples, enquanto também sendo versátil o suficiente para criar animações complexas.
+title: Animação no xamarin. Forms
+description: Xamarin. Forms inclui sua própria infraestrutura de animação que é muito simples para a criação de animações simples, embora também seja suficientemente versátil para criar animações complexas.
 ms.prod: xamarin
 ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 5bc04f638168a10266c20e278481fc0c513afe48
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: bebb3e32f298a2079069787dba3453e1817cf64f
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245020"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998277"
 ---
-# <a name="animation-in-xamarinforms"></a>Animação em xamarin. Forms
+# <a name="animation-in-xamarinforms"></a>Animação no xamarin. Forms
 
-_Xamarin. Forms inclui sua própria infra-estrutura de animação é simples para criar animações simples, enquanto também sendo versátil o suficiente para criar animações complexas._
+_Xamarin. Forms inclui sua própria infraestrutura de animação que é muito simples para a criação de animações simples, embora também seja suficientemente versátil para criar animações complexas._
 
-As classes de animação xamarin. Forms destino diferentes propriedades de elementos visuais, com uma animação típica progressivamente alterar uma propriedade de um valor para outro em um período de tempo. Observe que não há nenhuma interface XAML para as classes de animação xamarin. Forms. No entanto, animações podem ser encapsuladas em [comportamentos](~/xamarin-forms/app-fundamentals/behaviors/index.md) e depois referenciado do XAML.
+As classes de animação do xamarin. Forms diferentes propriedades de elementos visuais, de destino com uma animação típica progressivamente alterar uma propriedade de um valor para outro durante um período de tempo. Observe que não há nenhuma interface XAML para as classes de animação do xamarin. Forms. No entanto, as animações podem ser encapsuladas em [comportamentos](~/xamarin-forms/app-fundamentals/behaviors/index.md) e, em seguida, referenciado do XAML.
 
 ## <a name="simple-animationssimplemd"></a>[Animações simples](simple.md)
 
-O [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) classe fornece métodos de extensão que podem ser usados para construir animações simples que girar, redimensionar, traduzam e desaparecerem [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) instâncias. Este artigo demonstra como criar e Cancelar animações usando o `ViewExtensions` classe.
+O [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) classe fornece métodos de extensão que podem ser usados para construir animações simples que giram, dimensionarem, traduzam e fade [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) instâncias. Este artigo demonstra como criar e cancelar as animações usando o `ViewExtensions` classe.
 
 ## <a name="easing-functionseasingmd"></a>[Funções de easing](easing.md)
 
-Xamarin. Forms inclui um [ `Easing` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Easing/) classe que permite que você especifique uma função de transferência que controla como acelerar animações ou lento que estejam em execução. Este artigo demonstra como utilizar as funções de atenuação predefinidas e como criar funções personalizadas de atenuação.
+Xamarin. Forms inclui um [ `Easing` ](xref:Xamarin.Forms.Easing) classe que permite que você especifique uma função de transferência que controla como as animações acelerar ou diminuir como elas estão em execução. Este artigo demonstra como utilizar as funções de easing predefinidas e como criar funções de easing personalizadas.
 
 ## <a name="custom-animationscustommd"></a>[Animações personalizadas](custom.md)
 
-O [ `Animation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/) classe é o bloco de construção de todas as animações xamarin. Forms, com os métodos de extensão no [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) classe para criar um ou mais `Animation` objetos. Este artigo demonstra como usar o `Animation` classe para criar e Cancelar animações, sincronizar várias animações e criar animações personalizadas que animar propriedades que não são de animação pelos métodos de animação existente.
+O [ `Animation` ](xref:Xamarin.Forms.Animation) classe é o bloco de construção de todas as animações de xamarin. Forms, com os métodos de extensão no [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) classe criando um ou mais `Animation` objetos. Este artigo demonstra como usar o `Animation` classe para criar e Cancelar animações, sincronizar várias animações e criar animações personalizadas que animar propriedades que não estão animadas pelos métodos de animação existentes.

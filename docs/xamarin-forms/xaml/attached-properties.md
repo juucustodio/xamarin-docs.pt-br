@@ -1,46 +1,46 @@
 ---
 title: Propriedades anexadas
-description: Este artigo fornece uma introdução às propriedades anexadas e demonstra como criar e consumi-los.
+description: Este artigo fornece uma introdução para propriedades anexadas e demonstra como criar e consumi-los.
 ms.prod: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: e0ecff37eaf615321c7fcdce35e334db89ae631a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 981e59fe3ba8c63d0f6c6a067ceb9f338a02da8f
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245892"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997319"
 ---
 # <a name="attached-properties"></a>Propriedades anexadas
 
-_Uma propriedade anexada é um tipo especial de propriedade associável, definido em uma classe, mas anexado a outros objetos e reconhecível em XAML, como um atributo que contém uma classe e um nome de propriedade separado por um ponto. Este artigo fornece uma introdução às propriedades anexadas e demonstra como criar e consumi-los._
+_Uma propriedade anexada é um tipo especial de propriedade associável, definido em uma classe, mas anexado a outros objetos e reconhecível no XAML como um atributo que contém uma classe e um nome de propriedade separados por um período. Este artigo fornece uma introdução para propriedades anexadas e demonstra como criar e consumi-los._
 
 ## <a name="overview"></a>Visão geral
 
-Anexado propriedades ativar um objeto para atribuir um valor para uma propriedade que não define sua própria classe. Por exemplo, podem usar elementos de filho anexado propriedades para informar o seu elemento pai de como eles devem ser apresentados na interface do usuário. O [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) controle permite que a linha e coluna de um filho seja especificado definindo a `Grid.Row` e `Grid.Column` propriedades anexadas. `Grid.Row` e `Grid.Column` são propriedades anexadas porque eles são definidos em elementos que são filhos de um `Grid`, em vez de no `Grid` em si.
+Anexado a habilitação de propriedades para atribuir um valor para uma propriedade de sua própria classe não define um objeto. Por exemplo, filho, elementos podem usar propriedades para informar o usuário de seu elemento pai como devem ser apresentados na interface do usuário anexadas. O [ `Grid` ](xref:Xamarin.Forms.Grid) controle permite que a linha e coluna de um filho seja especificado definindo a `Grid.Row` e `Grid.Column` propriedades anexadas. `Grid.Row` e `Grid.Column` são propriedades anexadas, porque eles são definidos em elementos que são filhos de um `Grid`, em vez de no `Grid` em si.
 
 Propriedades vinculáveis devem ser implementadas como propriedades anexadas nos seguintes cenários:
 
-- Quando há necessidade de ter um mecanismo de configuração de propriedade disponível para as classes que a definição de classe.
-- Quando a classe representa um serviço que precisa ser facilmente integrado com as outras classes.
+- Quando é necessário ter um mecanismo de configuração de propriedade disponível para classes diferentes da definição de classe.
+- Quando a classe representa um serviço que precisa ser facilmente integrados com outras classes.
 
-Para obter mais informações sobre as propriedades vinculáveis, consulte [propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md).
+Para obter mais informações sobre propriedades vinculáveis, consulte [propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md).
 
-## <a name="creating-and-consuming-an-attached-property"></a>Criação e uso de uma propriedade anexada
+## <a name="creating-and-consuming-an-attached-property"></a>Criar e consumir uma propriedade anexada
 
-O processo de criação de uma propriedade anexada é o seguinte:
+O processo para a criação de uma propriedade anexada é da seguinte maneira:
 
-1. Criar um [ `BindableProperty` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) instância com uma da [ `CreateAttached` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.CreateAttached/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) sobrecargas do método.
+1. Criar uma [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) instância com um dos [ `CreateAttached` ](xref:Xamarin.Forms.BindableProperty.CreateAttached*) sobrecargas de método.
 1. Fornecer `static` `Get` *PropertyName* e `Set` *PropertyName* métodos como acessadores para a propriedade anexada.
 
-### <a name="creating-a-property"></a>Criar uma propriedade
+### <a name="creating-a-property"></a>Criação de uma propriedade
 
-Ao criar uma propriedade anexada para uso em outros tipos, a classe onde a propriedade é criada tem derivar [ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/). No entanto, o *destino* acessadores de propriedade deve ser do ou derivar do [ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/).
+Ao criar uma propriedade anexada para uso em outros tipos, a classe em que a propriedade é criada não precisa derivar [ `BindableObject` ](xref:Xamarin.Forms.BindableObject). No entanto, o *alvo* propriedade para acessadores deve ser do ou derivar dele [ `BindableObject` ](xref:Xamarin.Forms.BindableObject).
 
-Uma propriedade anexada pode ser criada, declarando um `public static readonly` propriedade do tipo [ `BindableProperty` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/). A propriedade associável deve ser definida para o valor retornado de uma da [ `BindableProperty.CreateAttached` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableProperty.CreateAttached/p/System.String/System.Type/System.Type/System.Object/Xamarin.Forms.BindingMode/Xamarin.Forms.BindableProperty+ValidateValueDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangedDelegate/Xamarin.Forms.BindableProperty+BindingPropertyChangingDelegate/Xamarin.Forms.BindableProperty+CoerceValueDelegate/Xamarin.Forms.BindableProperty+CreateDefaultValueDelegate/) sobrecargas do método. A declaração deve estar dentro do corpo da classe de propriedade, mas fora de qualquer definição de membros.
+Uma propriedade anexada pode ser criada, declarando uma `public static readonly` propriedade do tipo [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty). A propriedade associável deve ser definida para o valor retornado de um dos [ `BindableProperty.CreateAttached` ](xref:Xamarin.Forms.BindableProperty.CreateAttached(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) sobrecargas de método. A declaração deve ser dentro do corpo da classe proprietária, mas fora das definições de membro.
 
 O código a seguir mostra um exemplo de uma propriedade anexada:
 
@@ -49,19 +49,19 @@ public static readonly BindableProperty HasShadowProperty =
   BindableProperty.CreateAttached ("HasShadow", typeof(bool), typeof(ShadowEffect), false);
 ```
 
-Isso cria uma propriedade anexada denominada `HasShadow`, do tipo `bool`. A propriedade pertence a `ShadowEffect` classe e tem um valor padrão de `false`. A convenção de nomenclatura para propriedades anexadas é que o identificador de propriedade anexada deve corresponder ao nome de propriedade especificado no `CreateAttached` método com "Property" anexada a ele. Portanto, no exemplo acima, o identificador de propriedade anexada é `HasShadowProperty`.
+Isso cria uma propriedade anexada nomeada `HasShadow`, do tipo `bool`. A propriedade pertencente a `ShadowEffect` de classe e tem um valor padrão de `false`. A convenção de nomenclatura para propriedades anexadas é que o identificador da propriedade anexada deve corresponder ao nome de propriedade especificado no `CreateAttached` método, com "Propriedade" acrescentada a ela. Portanto, no exemplo acima, o identificador da propriedade anexada é `HasShadowProperty`.
 
-Para obter mais informações sobre como criar propriedades vinculáveis, incluindo os parâmetros que podem ser especificados durante a criação, consulte [criação e uso de uma propriedade ligável](~/xamarin-forms/xaml/bindable-properties.md#consuming-bindable-property).
+Para obter mais informações sobre como criar propriedades vinculáveis, incluindo os parâmetros que podem ser especificados durante a criação, consulte [criando e consumindo uma propriedade vinculável](~/xamarin-forms/xaml/bindable-properties.md#consuming-bindable-property).
 
 ### <a name="creating-accessors"></a>Criação de acessadores
 
-Estático `Get` *PropertyName* e `Set` *PropertyName* métodos são necessários como acessadores para a propriedade anexada, caso contrário, o sistema de propriedade será possível usar o propriedade anexada. O `Get` *PropertyName* acessador deve estar de acordo com a seguinte assinatura:
+Estática `Get` *PropertyName* e `Set` *PropertyName* métodos são necessários como acessadores para a propriedade anexada, caso contrário, o sistema de propriedades não poderá usar o propriedade anexada. O `Get` *PropertyName* acessador deve estar de acordo com a seguinte assinatura:
 
 ```csharp
 public static valueType GetPropertyName(BindableObject target)
 ```
 
-O `Get` *PropertyName* acessador deve retornar o valor contido no correspondente `BindableProperty` campo para a propriedade anexada. Isso pode ser conseguido chamando o [ `GetValue` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.GetValue/p/Xamarin.Forms.BindableProperty/) método, passando o identificador de propriedade ligável no qual obter o valor e, em seguida, converter o valor resultante para o tipo exigido.
+O `Get` *PropertyName* acessador deve retornar o valor contido no correspondente `BindableProperty` campo para a propriedade anexada. Isso pode ser obtido chamando o [ `GetValue` ](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) método, passando o identificador de propriedade associável no qual obter o valor e, em seguida, converter o valor resultante para o tipo solicitado.
 
 O `Set` *PropertyName* acessador deve estar de acordo com a seguinte assinatura:
 
@@ -69,9 +69,9 @@ O `Set` *PropertyName* acessador deve estar de acordo com a seguinte assinatura:
 public static void SetPropertyName(BindableObject target, valueType value)
 ```
 
-O `Set` *PropertyName* acessador deve definir o valor correspondente `BindableProperty` campo para a propriedade anexada. Isso pode ser conseguido chamando o [ `SetValue` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) método, passando o identificador de propriedade ligável no qual definir o valor e o valor a ser definido.
+O `Set` *PropertyName* acessador deve definir o valor correspondente `BindableProperty` campo para a propriedade anexada. Isso pode ser obtido chamando o [ `SetValue` ](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) método, passando o identificador de propriedade associável no qual definir o valor e o valor a ser definido.
 
-Para ambos os acessadores de *destino* objeto deve ser do ou derivar do [ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/).
+Para ambos os acessadores, o *alvo* objeto deve ser de, ou derivar dele [ `BindableObject` ](xref:Xamarin.Forms.BindableObject).
 
 O exemplo de código a seguir mostra os acessadores para o `HasShadow` propriedade anexada:
 
@@ -89,9 +89,9 @@ public static void SetHasShadow (BindableObject view, bool value)
 
 ### <a name="consuming-an-attached-property"></a>Consumindo uma propriedade anexada
 
-Quando uma propriedade anexada tiver sido criada, ele pode ser consumido de código ou XAML. Em XAML, isso é obtido declarando um namespace com um prefixo, com a declaração de namespace que indica o nome do namespace Common Language Runtime (CLR) e, opcionalmente, um nome de assembly. Para obter mais informações, consulte [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md).
+Quando uma propriedade anexada tiver sido criada, ele pode ser consumido de XAML ou código. No XAML, isso é feito declarando um namespace com um prefixo, com a declaração de namespace que indica o nome do namespace de Common Language Runtime (CLR) e, opcionalmente, um nome de assembly. Para obter mais informações, consulte [Namespaces de XAML](~/xamarin-forms/xaml/namespaces.md).
 
-O exemplo de código a seguir demonstra um namespace XAML para um tipo personalizado que contém uma propriedade anexada, que é definida dentro do mesmo assembly como o código do aplicativo que faz referência o tipo personalizado:
+O exemplo de código a seguir demonstra um namespace XAML para um tipo personalizado que contém uma propriedade anexada, que é definida dentro do mesmo assembly como o código do aplicativo que está fazendo referência ao tipo personalizado:
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:EffectsDemo" ...>
@@ -99,7 +99,7 @@ O exemplo de código a seguir demonstra um namespace XAML para um tipo personali
 </ContentPage>
 ```
 
-A declaração de namespace é usada ao definir a propriedade anexada em um controle específico, como demonstrado no exemplo de código XAML a seguir:
+A declaração de namespace é usada ao configurar a propriedade anexada em um controle específico, como demonstrado no exemplo de código XAML a seguir:
 
 ```xaml
 <Label Text="Label Shadow Effect" local:ShadowEffect.HasShadow="true" />
@@ -112,9 +112,9 @@ var label = new Label { Text = "Label Shadow Effect" };
 ShadowEffect.SetHasShadow (label, true);
 ```
 
-### <a name="consuming-an-attached-property-with-a-style"></a>Uma propriedade anexada com um estilo de consumo
+### <a name="consuming-an-attached-property-with-a-style"></a>Consumindo uma propriedade anexada com um estilo
 
-Propriedades anexadas também podem ser adicionadas a um controle por um estilo. Mostra o exemplo seguinte do código XAML um *explícita* estilo que usa o `HasShadow` anexado a propriedade, o que pode ser aplicada a [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) controles:
+Propriedades anexadas também podem ser adicionadas a um controle por um estilo. Mostra o exemplo de código XAML abaixo uma *explícita* estilo que usa o `HasShadow` anexados a propriedade, que pode ser aplicada a [ `Label` ](xref:Xamarin.Forms.Label) controles:
 
 ```xaml
 <Style x:Key="ShadowEffectStyle" TargetType="Label">
@@ -124,7 +124,7 @@ Propriedades anexadas também podem ser adicionadas a um controle por um estilo.
 </Style>
 ```
 
-O [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) pode ser aplicado a um [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) definindo seu [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) propriedade para a `Style` instância usando o `StaticResource`extensão de marcação, como demonstrado no exemplo de código a seguir:
+O [ `Style` ](xref:Xamarin.Forms.Style) pode ser aplicado a um [ `Label` ](xref:Xamarin.Forms.Label) definindo seu [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedade para o `Style` instância usando o `StaticResource`extensão de marcação, conforme demonstrado no exemplo de código a seguir:
 
 ```xaml
 <Label Text="Label Shadow Effect" Style="{StaticResource ShadowEffectStyle}" />
@@ -134,17 +134,17 @@ Para obter mais informações sobre estilos, consulte [estilos](~/xamarin-forms/
 
 ## <a name="advanced-scenarios"></a>Cenários avançados
 
-Ao criar uma propriedade anexada, há um número de parâmetros opcionais que podem ser definidas para habilitar cenários avançados de propriedade anexada. Isso inclui a detecção de alterações de propriedade, validando valores de propriedade e forçar o uso de valores de propriedade. Para obter mais informações, consulte [cenários avançados](~/xamarin-forms/xaml/bindable-properties.md#advanced).
+Ao criar uma propriedade anexada, há um número de parâmetros opcionais que podem ser definidas para habilitar cenários avançados de propriedade anexada. Isso inclui a detecção de alterações de propriedade, validando valores de propriedade e coerção de valores de propriedade. Para obter mais informações, consulte [cenários avançados de](~/xamarin-forms/xaml/bindable-properties.md#advanced).
 
 ## <a name="summary"></a>Resumo
 
-Este artigo apresentou uma introdução para propriedades anexadas e demonstrou como criar e consumi-los. Uma propriedade anexada é um tipo especial de propriedade associável, definida em uma classe, mas reconhecível em XAML e anexado a outros objetos como atributos que contêm uma classe e um nome de propriedade separado por um ponto.
+Este artigo fornece uma introdução para propriedades anexadas e demonstrou como criar e consumi-los. Uma propriedade anexada é um tipo especial de propriedade associável, definido em uma classe, mas anexado a outros objetos e reconhecível no XAML como atributos que contêm uma classe e um nome de propriedade separados por um período.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md)
 - [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Efeito de sombra (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
-- [BindableProperty](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/)
-- [BindableObject](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/)
+- [Efeito de sombra (amostra)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [BindableProperty](xref:Xamarin.Forms.BindableProperty)
+- [BindableObject](xref:Xamarin.Forms.BindableObject)

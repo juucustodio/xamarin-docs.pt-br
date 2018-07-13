@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: b190498911867d29b63d839f56613fb1b80fe56f
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: bce3a60f3647a537906cfa11fc1dcfcc6f5cf365
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935141"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998596"
 ---
 # <a name="xamarinforms-carousel-page"></a>Página de carrossel do xamarin. Forms
 
@@ -20,11 +20,11 @@ _CarouselPage o xamarin. Forms é uma página que os usuários podem passe o ded
 
 ## <a name="overview"></a>Visão geral
 
-As capturas de tela a seguir mostram uma [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) em cada plataforma:
+As capturas de tela a seguir mostram uma [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) em cada plataforma:
 
 ![](carousel-page-images/thirdpage.png "CarouselPage Thid Item")
 
-O layout de um [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) é idêntico em cada plataforma. As páginas podem ser navegadas por meio de passando o dedo da direita para a esquerda para navegar para frente por meio da coleção e passando o dedo para esquerda para a direita para navegar para trás por meio da coleção. As capturas de tela a seguir mostram a primeira página em um [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) instância:
+O layout de um [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) é idêntico em cada plataforma. As páginas podem ser navegadas por meio de passando o dedo da direita para a esquerda para navegar para frente por meio da coleção e passando o dedo para esquerda para a direita para navegar para trás por meio da coleção. As capturas de tela a seguir mostram a primeira página em um [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) instância:
 
 ![](carousel-page-images/firstpage.png "CarouselPage primeiro Item")
 
@@ -36,26 +36,26 @@ Passar o dedo da direita para esquerda novamente move para a terceira página, e
 
 <!--
 > [!NOTE]
-> The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselView/) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
+> The [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](xref:Xamarin.Forms.CarouselView) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
 -->
 
 ## <a name="creating-a-carouselpage"></a>Criando um CarouselPage
 
-Duas abordagens podem ser usadas para criar uma [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/):
+Duas abordagens podem ser usadas para criar uma [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage):
 
-- [Popular](#Populating_a_CarouselPage_with_a_Page_Collection) as `CarouselPage` com uma coleção de filhos [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instâncias.
-- [Atribua](#Populating_a_CarouselPage_with_a_Template) uma coleção para o [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) propriedade e atribuir uma [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) para o [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) propriedade para retornar [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instâncias de objetos na coleção.
+- [Popular](#Populating_a_CarouselPage_with_a_Page_Collection) as `CarouselPage` com uma coleção de filhos [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instâncias.
+- [Atribua](#Populating_a_CarouselPage_with_a_Template) uma coleção para o [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) propriedade e atribuir uma [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para o [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) propriedade para retornar [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instâncias de objetos na coleção.
 
 Com as duas abordagens, a `CarouselPage` será, em seguida, exibir cada página por sua vez, com uma interação de passe o dedo para mover para a próxima página a ser exibido.
 
 > [!NOTE]
-> Um [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) só podem ser populados com [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instâncias, ou `ContentPage` derivados.
+> Um [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) só podem ser populados com [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instâncias, ou `ContentPage` derivados.
 
 <a name="Populating_a_CarouselPage_with_a_Page_Collection" />
 
 ### <a name="populating-a-carouselpage-with-a-page-collection"></a>Populando um CarouselPage com uma coleção de página
 
-Mostra o exemplo de código XAML abaixo uma [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) que exibe três [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instâncias:
+Mostra o exemplo de código XAML abaixo uma [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) que exibe três [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instâncias:
 
 ```xaml
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -139,20 +139,20 @@ public class MainPageCS : CarouselPage
 }
 ```
 
-Cada [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) simplesmente exibe um [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) para uma cor específica e um [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) dessa cor.
+Cada [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) simplesmente exibe um [ `Label` ](xref:Xamarin.Forms.Label) para uma cor específica e um [ `BoxView` ](xref:Xamarin.Forms.BoxView) dessa cor.
 
 > [!NOTE]
-> O [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) não oferece suporte a virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `CarouselPage` contém muitos elementos filho.
+> O [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) não oferece suporte a virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `CarouselPage` contém muitos elementos filho.
 
-Se um [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) é incorporada a [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) página de um [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), a [ `MasterDetailPage.IsGestureEnabled` ](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) propriedade deve ser definida como `false` para evitar conflitos de gesto entre o `CarouselPage` e o `MasterDetailPage`.
+Se um [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) é incorporada a [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) página de um [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage), a [ `MasterDetailPage.IsGestureEnabled` ](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) propriedade deve ser definida como `false` para evitar conflitos de gesto entre o `CarouselPage` e o `MasterDetailPage`.
 
-Para obter mais informações sobre o [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/), consulte [Capítulo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) de xamarin. Forms livro Charles Petzold.
+Para obter mais informações sobre o [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage), consulte [Capítulo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) de xamarin. Forms livro Charles Petzold.
 
 <a name="Populating_a_CarouselPage_with_a_Template" />
 
 ### <a name="populating-a-carouselpage-with-a-template"></a>Populando um CarouselPage com um modelo
 
-Mostra o exemplo de código XAML abaixo uma [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) construído atribuindo um [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) para o [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) propriedade a retornar páginas para objetos na coleção:
+Mostra o exemplo de código XAML abaixo uma [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) construído atribuindo um [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para o [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) propriedade a retornar páginas para objetos na coleção:
 
 ```xaml
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -176,7 +176,7 @@ Mostra o exemplo de código XAML abaixo uma [ `CarouselPage` ](https://developer
 </CarouselPage>
 ```
 
-O [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) é preenchida com dados, definindo o [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) propriedade no construtor para o arquivo code-behind:
+O [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) é preenchida com dados, definindo o [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) propriedade no construtor para o arquivo code-behind:
 
 ```csharp
 public MainPage ()
@@ -186,7 +186,7 @@ public MainPage ()
 }
 ```
 
-O exemplo de código a seguir mostra o equivalente [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) criado em c#:
+O exemplo de código a seguir mostra o equivalente [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) criado em c#:
 
 ```csharp
 public class MainPageCS : CarouselPage
@@ -236,18 +236,18 @@ public class MainPageCS : CarouselPage
 }
 ```
 
-Cada [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) simplesmente exibe um [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) para uma cor específica e um [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) dessa cor.
+Cada [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) simplesmente exibe um [ `Label` ](xref:Xamarin.Forms.Label) para uma cor específica e um [ `BoxView` ](xref:Xamarin.Forms.BoxView) dessa cor.
 
 > [!NOTE]
-> O [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) não oferece suporte a virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `CarouselPage` contém muitos elementos filho.
+> O [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) não oferece suporte a virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `CarouselPage` contém muitos elementos filho.
 
-Se um [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) é incorporada a [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) página de um [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), a [ `MasterDetailPage.IsGestureEnabled` ](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) propriedade deve ser definida como `false` para evitar conflitos de gesto entre o `CarouselPage` e o `MasterDetailPage`.
+Se um [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) é incorporada a [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) página de um [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage), a [ `MasterDetailPage.IsGestureEnabled` ](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) propriedade deve ser definida como `false` para evitar conflitos de gesto entre o `CarouselPage` e o `MasterDetailPage`.
 
-Para obter mais informações sobre o [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/), consulte [Capítulo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) de xamarin. Forms livro Charles Petzold.
+Para obter mais informações sobre o [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage), consulte [Capítulo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) de xamarin. Forms livro Charles Petzold.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou como usar um [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) para navegar por meio de uma coleção de páginas. O `CarouselPage` é uma página que os usuários podem passe o dedo de lado a lado para navegar entre páginas de conteúdo, semelhante a uma galeria.
+Este artigo demonstrou como usar um [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) para navegar por meio de uma coleção de páginas. O `CarouselPage` é uma página que os usuários podem passe o dedo de lado a lado para navegar entre páginas de conteúdo, semelhante a uma galeria.
 
 
 ## <a name="related-links"></a>Links relacionados
@@ -255,4 +255,4 @@ Este artigo demonstrou como usar um [ `CarouselPage` ](https://developer.xamarin
 - [Variedades de página](~/xamarin-forms/user-interface/controls/pages.md)
 - [CarouselPage (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/CarouselPage/)
 - [CarouselPageTemplate (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/CarouselPageTemplate/)
-- [CarouselPage](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)
+- [CarouselPage](xref:Xamarin.Forms.CarouselPage)
