@@ -1,45 +1,45 @@
 ---
 title: A Interface de comando do xamarin. Forms
-description: Este artigo explica como implementar a propriedade do comando com associações de dados xamarin. Forms. A interface de comando fornece uma abordagem alternativa à implementação de comandos que é muito mais adequada para a arquitetura MVVM.
+description: Este artigo explica como implementar a propriedade Command com ligações de dados do xamarin. Forms. A interface de comando fornece uma abordagem alternativa à implementação de comandos que é muito mais adequada para a arquitetura MVVM.
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 37fe5bbcfa3dbc6aa5483c89b49c1698a00ecbb6
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: b18d042e34146a72b488da9017648a430c9cd353
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241306"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996367"
 ---
 # <a name="the-xamarinforms-command-interface"></a>A Interface de comando do xamarin. Forms
 
-Na arquitetura do Model-View-ViewModel (MVVM), associações de dados são definidas entre as propriedades no ViewModel, que geralmente é uma classe que deriva de `INotifyPropertyChanged`e as propriedades no modo de exibição, que geralmente é o arquivo XAML. Às vezes, um aplicativo tem necessidades que vão além essas associações de propriedade exigindo que o usuário inicie os comandos que afetam algo no ViewModel. Esses comandos geralmente são sinalizados por cliques de botão ou dedo toques e tradicionalmente, eles são processados no arquivo code-behind em um manipulador para o `Clicked` evento o `Button` ou o `Tapped` eventos de um `TapGestureRecognizer`.
+Na arquitetura Model-View-ViewModel (MVVM), associações de dados são definidas entre as propriedades no ViewModel, que geralmente é uma classe que deriva de `INotifyPropertyChanged`e as propriedades no modo de exibição, que geralmente é o arquivo XAML. Às vezes, um aplicativo tem necessidades que vão além dessas associações de propriedade ao exigir que o usuário inicie os comandos que afetam algo no ViewModel. Esses comandos geralmente são sinalizados por cliques de botão ou dedo toques e tradicionalmente, eles são processados no código code-behind em um manipulador para o `Clicked` eventos do `Button` ou o `Tapped` eventos de um `TapGestureRecognizer`.
 
-A interface de comando fornece uma abordagem alternativa à implementação de comandos que é muito mais adequada para a arquitetura MVVM. O ViewModel em si pode conter comandos, que são métodos que são executados em reação a uma atividade específica no modo de exibição, como um `Button` clique em. Associações de dados definidas entre esses comandos e o `Button`.
+A interface de comando fornece uma abordagem alternativa à implementação de comandos que é muito mais adequada para a arquitetura MVVM. O ViewModel em si pode conter comandos, que são métodos que são executados em reação a uma atividade específica no modo de exibição, como um `Button` clique. Associações de dados são definidas entre esses dois comandos e o `Button`.
 
 Para permitir que uma associação de dados entre um `Button` e um ViewModel, o `Button` define duas propriedades:
 
-- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) do tipo <xref:System.Windows.Input.ICommand>
-- [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.CommandParameter/) do tipo `Object`
+- [`Command`](xref:Xamarin.Forms.Button.Command) do tipo <xref:System.Windows.Input.ICommand>
+- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) do tipo `Object`
 
-Para usar a interface de comando, você define uma associação de dados que tem como alvo o `Command` propriedade o `Button` onde a fonte é uma propriedade no ViewModel do tipo `ICommand`. O ViewModel contém código associado que `ICommand` propriedade que é executada quando o botão é clicado. Você pode definir `CommandParameter` para dados arbitrários para distinguir entre vários botões se todos eles estiverem associados ao mesmo `ICommand` propriedade no ViewModel.
+Para usar a interface de comando, você define uma associação de dados que tem como alvo o `Command` propriedade do `Button` onde a fonte é uma propriedade no ViewModel do tipo `ICommand`. O ViewModel contém código associado que `ICommand` propriedade que é executada quando o botão é clicado. Você pode definir `CommandParameter` para dados arbitrários para distinguir entre vários botões se eles são todos associados ao mesmo `ICommand` propriedade no ViewModel.
 
-O `Command` e `CommandParameter` propriedades também são definidas por classes a seguir:
+O `Command` e `CommandParameter` propriedades também são definidas pelos seguintes classes:
 
-- [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/) e, portanto, [ `ToolbarItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/), que é derivado de `MenuItem`
-- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) e, portanto, [ `ImageCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/), que é derivado de `TextCell`
-- [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)
+- [`MenuItem`](xref:Xamarin.Forms.MenuItem) e, portanto, [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem), que é derivada de `MenuItem`
+- [`TextCell`](xref:Xamarin.Forms.TextCell) e, portanto, [ `ImageCell` ](xref:Xamarin.Forms.ImageCell), que é derivada de `TextCell`
+- [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)
 
-[`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) define uma [ `SearchCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommand/) propriedade do tipo `ICommand` e um [ `SearchCommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommandParameter/) propriedade. O [ `RefreshCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RefreshCommand/) propriedade [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) também é do tipo `ICommand`.
+[`SearchBar`](xref:Xamarin.Forms.SearchBar) define uma [ `SearchCommand` ](xref:Xamarin.Forms.SearchBar.SearchCommand) propriedade do tipo `ICommand` e um [ `SearchCommandParameter` ](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) propriedade. O [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand) propriedade do [ `ListView` ](xref:Xamarin.Forms.ListView) também é do tipo `ICommand`.
 
-Todos esses comandos podem ser tratados dentro de um ViewModel de forma que não depende do objeto de interface de usuário específica no modo de exibição.
+Todos esses comandos podem ser tratados dentro de um ViewModel, de forma que não depende do objeto específico da interface do usuário no modo de exibição.
 
 ## <a name="the-icommand-interface"></a>A Interface ICommand
 
-O <xref:System.Windows.Input.ICommand> interface não é parte do xamarin. Forms. Ele é definido em vez disso, no [Input](xref:System.Windows.Input) namespace e consiste em dois métodos e um evento:
+O <xref:System.Windows.Input.ICommand> interface não faz parte do xamarin. Forms. Ela é definida em vez disso, nos [Input](xref:System.Windows.Input) namespace e consiste em dois métodos e um evento:
 
 ```csharp
 public interface ICommand
@@ -52,41 +52,41 @@ public interface ICommand
 }
 ```
 
-Para usar a interface de comando, o ViewModel contém propriedades do tipo `ICommand`:
+Para usar a interface de comando, o ViewModel contém as propriedades de tipo `ICommand`:
 
 ```csharp
 public ICommand MyCommand { private set; get; }
 ```
 
-O ViewModel também deve fazer referência a uma classe que implementa o `ICommand` interface. Essa classe será descrita em breve. No modo de exibição, o `Command` propriedade de um `Button` está associado a essa propriedade:
+O ViewModel também deve fazer referência a uma classe que implementa o `ICommand` interface. Essa classe será descrita em breve. No modo de exibição, o `Command` propriedade de um `Button` é associado a essa propriedade:
 
 ```xaml
 <Button Text="Execute command"
         Command="{Binding MyCommand}" />
 ```
 
-Quando o usuário pressiona o `Button`, o `Button` chama o `Execute` método no `ICommand` objeto associado a seu `Command` propriedade. Essa é a parte mais simples da interface de comando.
+Quando o usuário pressiona o `Button`, o `Button` chamadas a `Execute` método na `ICommand` objeto associado a seu `Command` propriedade. Essa é a parte mais simples da interface de comando.
 
-O `CanExecute` método é mais complexo. Quando a associação for definida no `Command` propriedade do `Button`, e quando a associação de dados é alterado de alguma forma, o `Button` chamadas a `CanExecute` método no `ICommand` objeto. Se `CanExecute` retorna `false`, em seguida, o `Button` desabilita a mesmo. Isso indica que o comando específico está disponível ou é inválido.
+O `CanExecute` método é mais complexo. Quando a associação for definida na `Command` propriedade do `Button`, e quando a associação de dados é alterado de alguma forma, o `Button` chamadas a `CanExecute` método no `ICommand` objeto. Se `CanExecute` retorna `false`, em seguida, a `Button` desabilita em si. Isso indica que o comando em particular está atualmente disponível ou é inválido.
 
-O `Button` também anexa um manipulador no `CanExecuteChanged` evento `ICommand`. O evento é acionado de dentro de ViewModel. Quando esse evento é disparado, o `Button` chamadas `CanExecute` novamente. O `Button` habilita a mesmo se `CanExecute` retorna `true` e desabilita a mesmo se `CanExecute` retorna `false`.
+O `Button` também anexa um manipulador em de `CanExecuteChanged` eventos de `ICommand`. O evento é acionado de dentro do ViewModel. Quando esse evento é disparado, o `Button` chamadas `CanExecute` novamente. O `Button` ativa em si se `CanExecute` retorna `true` e desativado se `CanExecute` retorna `false`.
 
 > [!IMPORTANT]
-> Não use o `IsEnabled` propriedade `Button` se você estiver usando a interface de comando.  
+> Não use o `IsEnabled` propriedade de `Button` se você estiver usando a interface de comando.  
 
 ## <a name="the-command-class"></a>A classe de comando
 
-Quando o ViewModel define uma propriedade do tipo `ICommand`, ViewModel também deve conter ou fazer referência a uma classe que implementa o `ICommand` interface. Essa classe deve conter ou fazer referência a `Execute` e `CanExecute` métodos e acionar o `CanExecuteChanged` evento sempre que o `CanExecute` método pode retornar um valor diferente.
+Quando seu ViewModel define uma propriedade do tipo `ICommand`, o ViewModel também deve conter ou fazer referência a uma classe que implementa o `ICommand` interface. Essa classe deve conter ou fazer referência a `Execute` e `CanExecute` métodos e acionar o `CanExecuteChanged` evento sempre que o `CanExecute` método pode retornar um valor diferente.
 
-Você pode escrever essa classe, ou você pode usar uma classe que alguém tenha gravado. Porque `ICommand` faz parte do Microsoft Windows, ele está sendo usado por anos com aplicativos MVVM do Windows. Usando uma classe do Windows que implementa `ICommand` permite que você compartilhe seus ViewModels entre aplicativos do Windows e xamarin. Forms.
+Você pode escrever uma classe desse tipo, ou você pode usar uma classe que alguém tenha gravado. Porque `ICommand` faz parte do Microsoft Windows, ele tem sido usado por anos com aplicativos MVVM do Windows. Usando uma classe do Windows que implementa `ICommand` permite que você compartilhe seus ViewModels entre aplicativos do Windows e aplicativos xamarin. Forms.
 
-Se não for um problema de compartilhamento ViewModels entre o Windows e xamarin. Forms, você pode usar o [ `Command` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Command/) ou [ `Command<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Command%3CT%3E/) classe incluída no xamarin. Forms para implementar o `ICommand`interface. Essas classes permitem que você especifique os corpos do `Execute` e `CanExecute` métodos em construtores de classe. Use `Command<T>` quando você usa o `CommandParameter` propriedade para distinguir entre vários modos de exibição associada ao mesmo `ICommand` propriedade e o mais simples `Command` classe quando que não é um requisito.
+Se não for um problema de compartilhamento ViewModels entre o Windows e xamarin. Forms, você pode usar o [ `Command` ](xref:Xamarin.Forms.Command) ou [ `Command<T>` ](xref:Xamarin.Forms.Command`1) classe incluída no xamarin. Forms para implementar o `ICommand`interface. Essas classes permitem que você especifique os corpos do `Execute` e `CanExecute` métodos em construtores de classe. Use `Command<T>` quando você usa o `CommandParameter` propriedade para distinguir entre vários modos de exibição associada à mesma `ICommand` propriedade e o mais simples `Command` classe quando que não é um requisito.
 
-## <a name="basic-commanding"></a>Ordenar básico
+## <a name="basic-commanding"></a>Comandos básicos
 
-O **entrada pessoa** página o [ **demonstrações de associação de dados** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) programa demonstra alguns comandos simples implementados em um ViewModel.
+O **entrada pessoa** página de [ **demonstrações de associação de dados** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) programa demonstra alguns comandos simples, implementados em um ViewModel.
 
-O `PersonViewModel` define três propriedades chamadas `Name`, `Age`, e `Skills` que definem uma pessoa. Essa classe faz *não* conter `ICommand` propriedades:
+O `PersonViewModel` define três propriedades chamadas `Name`, `Age`, e `Skills` que definem uma pessoa. Essa classe faz *não* conter nenhum `ICommand` propriedades:
 
 ```csharp
 public class PersonViewModel : INotifyPropertyChanged
@@ -137,7 +137,7 @@ public class PersonViewModel : INotifyPropertyChanged
 }
 ```
 
-O `PersonCollectionViewModel` mostrado abaixo cria novos objetos do tipo `PersonViewModel` e permite que o usuário preencher os dados. Para essa finalidade, a classe define propriedades `IsEditing` do tipo `bool` e `PersonEdit` do tipo `PersonViewModel`. Além disso, a classe define três propriedades do tipo `ICommand` e uma propriedade chamada `Persons` do tipo `IList<PersonViewModel>`:
+O `PersonCollectionViewModel` mostrado a seguir cria novos objetos do tipo `PersonViewModel` e permite que o usuário preencha os dados. Para essa finalidade, a classe define propriedades `IsEditing` do tipo `bool` e `PersonEdit` do tipo `PersonViewModel`. Além disso, a classe define três propriedades do tipo `ICommand` e uma propriedade chamada `Persons` do tipo `IList<PersonViewModel>`:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -186,9 +186,9 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-Essa lista abreviada não inclui o construtor da classe, que é onde as três propriedades de tipo `ICommand` são definidos, que será mostrado em breve. Observe que as alterações para as três propriedades de tipo `ICommand` e `Persons` propriedade não resultam em `PropertyChanged` eventos que está sendo acionados. Essas propriedades são definidas quando a classe é criada e não são alterados posteriormente.
+Essa listagem abreviada não inclui o construtor da classe, que é onde as três propriedades do tipo `ICommand` são definidos, que será mostrado em breve. Observe que muda para as três propriedades do tipo `ICommand` e o `Persons` propriedade não resultam em `PropertyChanged` eventos que estão sendo acionados. Essas propriedades são definidos quando a classe é criada e não são alterados depois disso.
 
-Antes de examinar o construtor do `PersonCollectionViewModel` classe, vamos analisar o arquivo XAML para o **entrada pessoa** programa. Ele contém um `Grid` com seus `BindingContext` propriedade definida como o `PersonCollectionViewModel`. O `Grid` contém um `Button` com o texto **novo** com seu `Command` propriedade associada para o `NewCommand` um formulário de entrada com propriedades de propriedade no ViewModel, associada ao `IsEditing` propriedade, como bem como propriedades de `PersonViewModel`, e mais dois botões associado para o `SubmitCommand` e `CancelCommand` propriedades de ViewModel. O último `ListView` exibe a coleção de pessoas já inserido:
+Antes de examinar o construtor do `PersonCollectionViewModel` classe, vamos examinar o arquivo XAML para o **entrada pessoa** programa. Ele contém um `Grid` com seus `BindingContext` propriedade definida como o `PersonCollectionViewModel`. O `Grid` contém uma `Button` com o texto **New** com seu `Command` propriedade associada ao `NewCommand` um formulário de entrada com propriedades de propriedade no ViewModel, vinculada ao `IsEditing` propriedade, como bem como propriedades do `PersonViewModel`, e mais dois botões associados para o `SubmitCommand` e `CancelCommand` propriedades do ViewModel. O último `ListView` exibe a coleção de pessoas já inserido:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -275,17 +275,17 @@ Antes de examinar o construtor do `PersonCollectionViewModel` classe, vamos anal
 </ContentPage>
 ```
 
-Aqui está como funciona: O usuário primeiro pressionar o **novo** botão. Isso permite que o formulário de entrada, mas desabilita a **novo** botão. Em seguida, o usuário insere um nome, idade e as habilidades. A qualquer momento durante a edição, o usuário pode pressionar a **Cancelar** botão para recomeçar. Somente quando um nome e um tempo de vida válido tem sido inseridos é o **enviar** botão habilitado. Pressionar isso **enviar** botão transfere a pessoa para a coleção exibida pelo `ListView`. Após um o **Cancelar** ou **enviar** botão for pressionado, o formulário de entrada é limpo e o **novo** botão é habilitado novamente.
+Aqui está como ele funciona: O usuário primeiro pressionar o **New** botão. Isso permite que o formulário de entrada, mas desabilita os **New** botão. O usuário insere, em seguida, um nome, idade e habilidades. A qualquer momento durante a edição, o usuário pode pressionar o **Cancelar** botão recomeçar. Somente quando um nome e uma idade válida foram inseridos é o **enviar** botão habilitado. Pressionar isso **Submit** botão transfere a pessoa para a coleção exibida pelo `ListView`. Depois de uma a **Cancelar** ou **enviar** botão é pressionado, o formulário de entrada é limpo e o **New** botão é habilitado novamente.
 
-A tela de iOS à esquerda mostra o layout antes de um tempo de vida válido é inserido. O Android e UWP telas mostram a **enviar** botão habilitada depois que tiver sido definida uma idade:
+A tela do iOS à esquerda mostra o layout antes de um tempo de vida válido for inserido. O Android e UWP telas mostram a **enviar** botão habilitado após a configuração de uma idade:
 
-[![Entrada pessoa](commanding-images/personentry-small.png "entrada pessoa")](commanding-images/personentry-large.png#lightbox "entrada pessoa")
+[![Entrada da pessoa](commanding-images/personentry-small.png "entrada pessoa")](commanding-images/personentry-large.png#lightbox "entrada pessoa")
 
-O programa não tem nenhum recurso para edição de entradas existentes e não salvar as entradas quando você navegar para fora da página.
+O programa não tem nenhum recurso para editar entradas existentes e não salva as entradas quando você navega para fora da página.
 
-Toda a lógica para o **novo**, **enviar**, e **Cancelar** botões é tratado no `PersonCollectionViewModel` através de definições do `NewCommand`, `SubmitCommand`, e `CancelCommand` propriedades. O construtor do `PersonCollectionViewModel` define essas três propriedades para objetos do tipo `Command`.  
+Toda a lógica para o **New**, **enviar**, e **Cancelar** botões é tratado no `PersonCollectionViewModel` através de definições do `NewCommand`, `SubmitCommand`, e `CancelCommand` propriedades. O construtor do `PersonCollectionViewModel` define essas três propriedades para objetos do tipo `Command`.  
 
-Um [construtor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command.Command/p/System.Action/System.Func%7BSystem.Boolean%7D/) do `Command` classe permite que você passe os argumentos de tipo `Action` e `Func<bool>` correspondente para o `Execute` e `CanExecute` métodos. É mais fácil definir essas ações e funções como diretamente de funções de lambda no `Command` construtor. Aqui está a definição do `Command` de objeto para o `NewCommand` propriedade:
+Um [construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) da `Command` classe permite que você passe argumentos de tipo `Action` e `Func<bool>` correspondente para o `Execute` e `CanExecute` métodos. É mais fácil de definir essas ações e funções como lamda funções diretamente no `Command` construtor. Aqui está a definição do `Command` do objeto para o `NewCommand` propriedade:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -329,13 +329,13 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-Quando o usuário clica o **novo** botão, o `execute` função passada para o `Command` construtor é executado. Isso cria um novo `PersonViewModel` de objeto, define um manipulador naquele objeto `PropertyChanged` , define `IsEditing` para `true`e chama o `RefreshCanExecutes` método definido após o construtor.
+Quando o usuário clica o **New** botão, o `execute` função passada para o `Command` construtor é executado. Isso cria uma nova `PersonViewModel` de objeto, define um manipulador naquele objeto `PropertyChanged` evento, define `IsEditing` ao `true`e chama o `RefreshCanExecutes` método definido após o construtor.
 
-Além de implementar o `ICommand` interface, o `Command` classe também define um método chamado `ChangeCanExecute`. O ViewModel deve chamar `ChangeCanExecute` para um `ICommand` propriedade sempre que qualquer coisa acontece que pode alterar o valor de retorno de `CanExecute` método. Uma chamada para `ChangeCanExecute` faz com que o `Command` classe para disparar o `CanExecuteChanged` método. O `Button` anexou um manipulador para o evento e responde chamando `CanExecute` novamente e, em seguida, permitindo que se baseia no valor de retorno do método.
+Além de implementar o `ICommand` interface, o `Command` classe também define um método chamado `ChangeCanExecute`. O ViewModel deve chamar `ChangeCanExecute` para um `ICommand` propriedade sempre que qualquer coisa acontece que pode alterar o valor de retorno de `CanExecute` método. Uma chamada para `ChangeCanExecute` faz com que o `Command` classe para acionar o `CanExecuteChanged` método. O `Button` anexou um manipulador para o evento e responde chamando `CanExecute` novamente e, em seguida, permitindo que se baseia no valor de retorno desse método.
 
-Quando o `execute` método `NewCommand` chamadas `RefreshCanExecutes`, o `NewCommand` propriedade obtém uma chamada para `ChangeCanExecute`e o `Button` chamadas a `canExecute` método, que agora retorna `false` porque o `IsEditing`propriedade agora é `true`.
+Quando o `execute` método de `NewCommand` chamadas `RefreshCanExecutes`, o `NewCommand` propriedade recebe uma chamada para `ChangeCanExecute`e o `Button` chamadas a `canExecute` método, que agora retorna `false` porque o `IsEditing`agora é de propriedade `true`.
 
-O `PropertyChanged` manipulador para o novo `PersonViewModel` objeto chamadas a `ChangeCanExecute` método `SubmitCommand`. Aqui está como essa propriedade do comando é implementada:
+O `PropertyChanged` manipulador para o novo `PersonViewModel` chamadas do objeto de `ChangeCanExecute` método de `SubmitCommand`. Aqui está como essa propriedade de comando é implementada:
 
 
 ```csharp
@@ -374,9 +374,9 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-O `canExecute` funcionar para `SubmitCommand` é chamado sempre que há uma propriedade alterada no `PersonViewModel` do objeto que está sendo editado. Ele retorna `true` somente quando o `Name` propriedade é pelo menos um caractere, e `Age` é maior que 0. Nesse momento, o **enviar** botão fica habilitado.
+O `canExecute` função para `SubmitCommand` é chamado sempre que houver uma propriedade alterada no `PersonViewModel` do objeto que está sendo editado. Ele retorna `true` somente quando o `Name` propriedade é pelo menos um caractere de comprimento, e `Age` é maior que 0. Nesse momento, o **enviar** botão fica habilitado.
 
-O `execute` funcionar para **enviar** remove o manipulador de propriedade alterada a `PersonViewModel`, adiciona o objeto para o `Persons` coleção e retorna todos os itens a condições inicias.
+O `execute` funcionar por **enviar** remove o manipulador de propriedade alterada do `PersonViewModel`, adiciona o objeto para o `Persons` coleção e retorna todos os itens para condições iniciais.
 
 O `execute` funcionar para o **Cancelar** botão faz tudo o que o **enviar** botão faz execept adicionar o objeto à coleção:
 
@@ -410,21 +410,21 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-O `canExecute` método `true` a qualquer momento uma `PersonViewModel` está sendo editado.
+O `canExecute` retorn `true` a qualquer momento uma `PersonViewModel` está sendo editado.
 
-Essas técnicas podem ser adaptadas para cenários mais complexos: uma propriedade em `PersonCollectionViewModel` pode ser associado ao `SelectedItem` propriedade o `ListView` para edição de itens existentes e um **excluir** botão foi adicionado para excluir Esses itens.
+Essas técnicas pode ser adaptadas para cenários mais complexos: uma propriedade em `PersonCollectionViewModel` pode ser associado ao `SelectedItem` propriedade do `ListView` para a edição de itens existentes e um **excluir** botão pode ser adicionado ao excluir Esses itens.
 
-Não é necessário definir o `execute` e `canExecute` métodos como funções de lambda. Você pode gravá-los em métodos privados regulares no ViewModel e fazer referência a eles no `Command` construtores. No entanto, essa abordagem tendem a resultar em uma grande quantidade de métodos que são referenciados apenas uma vez no ViewModel.
+Não é necessário definir as `execute` e `canExecute` métodos como funções lambda. Você pode gravá-las em métodos privados regulares no ViewModel e referenciá-los no `Command` construtores. No entanto, essa abordagem tendem a resultar em uma grande quantidade de métodos que são referenciados apenas uma vez no ViewModel.
 
 ## <a name="using-command-parameters"></a>Usando parâmetros de comando
 
 Às vezes, é conveniente para um ou mais botões (ou outros objetos de interface do usuário) compartilhar o mesmo `ICommand` propriedade no ViewModel. Nesse caso, você usa o `CommandParameter` propriedade para distinguir entre os botões.
 
-Você pode continuar a usar o `Command` classe para esses `ICommand` propriedades. A classe define um [construtor alternativo](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command.Command/p/System.Action%7BSystem.Object%7D/System.Func%7BSystem.Object,System.Boolean%7D/) que aceita `execute` e `canExecute` métodos com parâmetros de tipo `Object`. Isso é como o `CommandParameter` é passado para esses métodos.
+Você pode continuar a usar o `Command` classe essas compartilhado `ICommand` propriedades. A classe define um [construtor alternativo](xref:Xamarin.Forms.Command.%23ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean})) que aceita `execute` e `canExecute` métodos com parâmetros de tipo `Object`. Isso é como o `CommandParameter` é passado para esses métodos.
 
-No entanto, ao usar `CommandParameter`, é mais fácil de usar o genérico [ `Command<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Command%3CT%3E/) classe para especificar o tipo do objeto definido como `CommandParameter`. O `execute` e `canExecute` métodos que você especificar tem parâmetros de tipo.
+No entanto, ao usar `CommandParameter`, é mais fácil de usar o genérico [ `Command<T>` ](xref:Xamarin.Forms.Command`1) classe para especificar o tipo do objeto definido como `CommandParameter`. O `execute` e `canExecute` métodos que você especificar têm parâmetros desse tipo.
 
-O **teclado Decimal** página ilustra essa técnica, mostrando como implementar um teclado para inserir números decimais. O `BindingContext` para o `Grid` é um `DecimalKeypadViewModel`. O `Entry` propriedade esse ViewModel é associada ao `Text` propriedade de um `Label`. Todos os `Button` objetos estão associados a vários comandos no ViewModel: `ClearCommand`, `BackspaceCommand`, e `DigitCommand`:
+O **teclado Decimal** página ilustra essa técnica, mostrando como implementar um teclado numérico para inserir números decimais. O `BindingContext` para o `Grid` é um `DecimalKeypadViewModel`. O `Entry` propriedade desse ViewModel é associada ao `Text` propriedade de um `Label`. Todos os `Button` objetos são associados a vários comandos no ViewModel: `ClearCommand`, `BackspaceCommand`, e `DigitCommand`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -527,7 +527,7 @@ O **teclado Decimal** página ilustra essa técnica, mostrando como implementar 
 </ContentPage>
 ```
 
-Os botões de 11 para o ponto decimal e de 10 dígitos compartilham uma associação a `DigitCommand`. O `CommandParameter` faz distinção entre esses botões. O valor definido `CommandParameter` geralmente é o mesmo que o texto exibido pelo botão, exceto o ponto decimal, que é exibido com um caractere de ponto no meio para fins de esclarecimento.
+Os botões de 11 para o ponto decimal e de 10 dígitos compartilham uma associação a `DigitCommand`. O `CommandParameter` faz distinção entre esses botões. O valor definido como `CommandParameter` geralmente é o mesmo que o texto exibido pelo botão, exceto para o ponto decimal, que, para fins de esclarecimento, é exibido com um caractere de ponto no meio.
 
 Aqui está o programa em ação:
 
@@ -535,7 +535,7 @@ Aqui está o programa em ação:
 
 Observe que o botão para o ponto decimal em todos os três capturas de tela está desabilitado porque o número inserido já contém um ponto decimal.
 
-O `DecimalKeypadViewModel` define uma `Entry` propriedade do tipo `string` (que é a única propriedade que dispara um `PropertyChanged` eventos) e três propriedades do tipo `ICommand`:
+O `DecimalKeypadViewModel` define uma `Entry` propriedade do tipo `string` (que é a única propriedade que dispara uma `PropertyChanged` eventos) e três propriedades do tipo `ICommand`:
 
 ```csharp
 public class DecimalKeypadViewModel : INotifyPropertyChanged
@@ -570,7 +570,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 }
 ```
 
-O botão correspondente a `ClearCommand` está sempre habilitada e simplesmente define a entrada de volta para "0":
+O botão correspondente a `ClearCommand` está sempre habilitado e simplesmente define a entrada de volta para "0":
 
 ```csharp
 public class DecimalKeypadViewModel : INotifyPropertyChanged
@@ -602,9 +602,9 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 }
 ```
 
-Como o botão sempre está habilitado, não é necessário especificar um `canExecute` argumento o `Command` construtor.
+Como o botão sempre está habilitado, não é necessário especificar uma `canExecute` argumento no `Command` construtor.
 
-A lógica para inserir números e BACKSPACE é um pouco difícil, porque se nenhum dígito tiverem sido inserido, então o `Entry` propriedade é a cadeia de caracteres "0". Se o usuário digita mais zeros, em seguida, o `Entry` ainda contém apenas um zero. Se o usuário digitar qualquer outro dígito, esse dígito substitui o zero. Porém, se o usuário digita um ponto decimal antes de qualquer dígito, em seguida, `Entry` é a cadeia de caracteres "0".
+A lógica para inserir números e BACKSPACE é um pouco complicado, porque se nenhum dígito tiverem sido inserido, então o `Entry` propriedade é a cadeia de caracteres "0". Se o usuário digita mais zeros, em seguida, a `Entry` ainda contém apenas um zero. Se o usuário digitar qualquer outro dígito, esse dígito substitui o zero. Mas se o usuário digita um ponto decimal, antes de qualquer outro dígito, em seguida, `Entry` é a cadeia de caracteres "0".
 
 O **Backspace** botão é habilitado apenas quando o tamanho da entrada é maior que 1, ou se `Entry` não é igual à cadeia de caracteres "0":
 
@@ -643,9 +643,9 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 }
 ```
 
-A lógica para o `execute` funcionar para o **Backspace** botão garante que o `Entry` é pelo menos uma cadeia de caracteres de "0".
+A lógica para o `execute` funcionar para o **Backspace** botão garante que o `Entry` é pelo menos uma cadeia de caracteres "0".
 
-O `DigitCommand` propriedade está associada aos botões de 11, cada um dos quais identifica-se com o `CommandParameter` propriedade. O `DigitCommand` pode ser definido como uma instância do normal `Command` classe, mas do mais fácil de usar o `Command<T>` classe genérica. Ao usar a interface de comando com XAML, o `CommandParameter` propriedades geralmente são cadeias de caracteres, e esse é o tipo do argumento genérico. O `execute` e `canExecute` funções, em seguida, tem argumentos de tipo `string`:
+O `DigitCommand` propriedade está associada aos 11 botões, cada um dos quais identifica-se com o `CommandParameter` propriedade. O `DigitCommand` poderia ser definido como uma instância normais `Command` classe, mas ele do mais fácil de usar o `Command<T>` classe genérica. Ao usar a interface de comando com XAML, o `CommandParameter` propriedades geralmente são cadeias de caracteres, e que é o tipo de argumento genérico. O `execute` e `canExecute` funções têm, em seguida, os argumentos de tipo `string`:
 
 ```csharp
 public class DecimalKeypadViewModel : INotifyPropertyChanged
@@ -679,19 +679,19 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 }
 ```
 
-O `execute` método anexa o argumento de cadeia de caracteres para o `Entry` propriedade. No entanto, se o resultado começa com um zero (mas não um zero e um ponto decimal), em seguida, esse zero inicial deve ser removido usando o `Substring` função.
+O `execute` método acrescenta o argumento de cadeia de caracteres para o `Entry` propriedade. No entanto, se o resultado começa com um zero (mas não um zero e um ponto decimal), em seguida, esse zero inicial deve ser removido usando o `Substring` função.
 
-O `canExecute` método `false` somente se o argumento é o ponto decimal (indicando que o ponto decimal está sendo pressionado) e `Entry` já contém um ponto decimal.
+O `canExecute` retorn `false` somente se o argumento é o ponto decimal (indicando que o ponto decimal está sendo pressionado) e `Entry` já contém um ponto decimal.
 
-Todos os a `execute` chamada de métodos `RefreshCanExecutes`, que, em seguida, chama `ChangeCanExecute` para ambos `DigitCommand` e `ClearCommand`. Isso garante que o ponto decimal e botões backspace estão habilitados ou desabilitados com base na sequência atual de dígitos inseridos.
+Todos os as `execute` chamada de métodos `RefreshCanExecutes`, que chama `ChangeCanExecute` para ambos `DigitCommand` e `ClearCommand`. Isso garante que o ponto decimal e botões backspace estão habilitados ou desabilitados com base na sequência de dígitos inseridas atual.
 
 ## <a name="adding-commands-to-existing-views"></a>Adicionando comandos a modos de exibição existentes
 
-Se você quiser usar a interface de comando com modos de exibição que não dão suporte a ele, é possível usar um comportamento xamarin. Forms que converte um evento em um comando. Isso é descrito no artigo [ **reutilizável EventToCommandBehavior**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
+Se você quiser usar a interface de comando com modos de exibição que não dão suporte a ele, é possível usar um comportamento de xamarin. Forms que converte um evento em um comando. Isso é descrito no artigo [ **reutilizável EventToCommandBehavior**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
 
-## <a name="asynchronous-commanding-for-navigation-menus"></a>Assíncrona de comandos de menu de navegação
+## <a name="asynchronous-commanding-for-navigation-menus"></a>Assíncrona dos comandos para os Menus de navegação
 
-Comando é conveniente para a implementação de menus de navegação, como no [ **demonstrações de associação de dados** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) programa em si. Esta é uma parte de **MainPage. XAML**:
+Comandos são conveniente para implementar os menus de navegação, como a mostrada na [ **demonstrações de associação de dados** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) de programa em si. Aqui está parte do **MainPage. XAML**:
 
 
 ```xaml
@@ -729,9 +729,9 @@ Comando é conveniente para a implementação de menus de navegação, como no [
 </ContentPage>
 ```
 
-Ao usar o comando com XAML, `CommandParameter` propriedades geralmente são definidas como cadeias de caracteres. No entanto, nesse caso, uma extensão de marcação XAML é usada para que o `CommandParameter` é do tipo `System.Type`.
+Ao usar comandos com XAML, `CommandParameter` propriedades geralmente são definidas como cadeias de caracteres. No entanto, nesse caso, uma extensão de marcação XAML é usada para que o `CommandParameter` é do tipo `System.Type`.
 
-Cada `Command` propriedade é associada a uma propriedade denominada `NavigateCommand`. Se a propriedade está definida no arquivo code-behind, **MainPage.xaml.cs**:
+Cada `Command` propriedade é associada a uma propriedade chamada `NavigateCommand`. Se a propriedade está definida no arquivo code-behind, **MainPage.xaml.cs**:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -754,19 +754,19 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Os conjuntos de construtor o `NavigateCommand` propriedade para um `execute` método que instancia o `System.Type` parâmetro e, em seguida, navega para ele. Porque o `PushAsync` chamada requer um `await` operador, o `execute` método deve ser sinalizado como assíncronas. Isso é feito com o `async` palavra-chave antes da lista de parâmetros.
+O construtor define a `NavigateCommand` propriedade para um `execute` método que instancia o `System.Type` parâmetro e, em seguida, navega até ela. Porque o `PushAsync` chamada requer um `await` operador, o `execute` método deve ser sinalizado como assíncronos. Isso é feito com o `async` palavra-chave antes da lista de parâmetros.
 
-O construtor também define o `BindingContext` da página a mesmo para que as associações de referenciam a `NavigateCommand` nessa classe.
+O construtor também define o `BindingContext` da página para si mesmo para que as associações de fazer referência a `NavigateCommand` nessa classe.
 
-A ordem do código nesse construtor faz diferença: O `InitializeComponent` chamada faz com que o XAML ser analisada, mas no momento a associação a uma propriedade denominada `NavigateCommand` não pode ser resolvido porque `BindingContext` é definido como `null`. Se o `BindingContext` está definida no construtor *antes de* `NavigateCommand` for definida, a associação pode ser resolvido quando `BindingContext` for definido, mas nesse momento, `NavigateCommand` ainda é `null`. Configuração `NavigateCommand` depois `BindingContext` não tem efeito na associação porque uma alteração `NavigateCommand` não dispara uma `PropertyChanged` evento e a associação não sabe que `NavigateCommand` agora é válido.
+A ordem do código nesse construtor faz uma diferença: os `InitializeComponent` chamada faz com que o XAML a ser analisada, mas no momento a associação a uma propriedade denominada `NavigateCommand` não pode ser resolvida porque `BindingContext` é definido como `null`. Se o `BindingContext` é definido no construtor *antes de* `NavigateCommand` for definido, a associação pode ser resolvido quando `BindingContext` estiver definido, mas, nesse momento, `NavigateCommand` ainda é `null`. Definindo `NavigateCommand` após `BindingContext` não terá nenhum efeito sobre a associação, porque uma alteração `NavigateCommand` não dispara uma `PropertyChanged` evento e a associação não sabe que `NavigateCommand` agora é válido.
 
-Configurar ambos `NavigateCommand` e `BindingContext` (em qualquer ordem) antes da chamada para `InitializeComponent` funcionará, pois ambos os componentes da associação são definidos quando o analisador XAML encontra a definição da associação.
+Configurando ambos `NavigateCommand` e `BindingContext` (em qualquer ordem) antes da chamada a `InitializeComponent` funcionará porque ambos os componentes da associação são definidos quando o analisador XAML encontra a definição de associação.
 
-Associações de dados às vezes podem ser difícil, mas como você viu nesta série de artigos, eles são poderoso e versátil e ajudam muito para organizar seu código, separando a lógica subjacente da interface do usuário.
+Associações de dados, às vezes, podem ser complicadas, mas como você viu nesta série de artigos, eles são poderoso e versátil e ajudam muito para organizar seu código, separando a lógica subjacente da interface do usuário.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 - [Capítulo de associação de dados do catálogo de xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)
