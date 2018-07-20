@@ -1,5 +1,4 @@
 # [Criação de aplicativos móveis com Xamarin.Forms Book](index.md)
-## [Resumos de capítulo](summaries/index.md)
 ## [1. Como o Xamarin.Forms se encaixa?](summaries/chapter01.md)
 ## [2. Anatomia de um aplicativo](summaries/chapter02.md)
 ## [3. Aprofundamento no texto](summaries/chapter03.md)
