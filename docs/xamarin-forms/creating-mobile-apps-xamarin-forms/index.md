@@ -1,29 +1,28 @@
 ---
-title: Criar aplicativos móveis com a edição de primeiro do catálogo xamarin. Forms
-description: Aprenda o desenvolvimento de aplicativo xamarin. Forms com a versão eletrônica do catálogo de aplicativos do Mobile criando por Charles Petzold.
+title: Criando aplicativos móveis com xamarin. Forms book
+description: Aprenda sobre o desenvolvimento de aplicativo do xamarin. Forms com a versão eletrônica da criação de aplicativos móveis com xamarin. Forms livro de Charles Petzold.
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/03/2016
-ms.openlocfilehash: 84ed08419c49617ee0fcde57682e512ecb9ee6d7
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 07/19/2018
+ms.openlocfilehash: cf85f8d64026b436c7552033525b9d0f381fd687
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241696"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156971"
 ---
-# <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Criar aplicativos móveis com a edição de primeiro do catálogo xamarin. Forms
+# <a name="creating-mobile-apps-with-xamarinforms-book"></a>Criando aplicativos móveis com xamarin. Forms book
 
-<p><img src="Images/Cover-sml.png" title="Criando aplicativos móveis com o catálogo de xamarin. Forms" align="left" />Catálogo de mais recente de Charles Petzold - <i>criação de aplicativos móveis com o xamarin. Forms</i> - foi enviada para pressionar (eletrônico) e agora está disponível para download!</p>
+<p><img src="Images/Cover-sml.png" title="Criando aplicativos móveis com xamarin. Forms Book" align="left" />O livro <i>criação de aplicativos móveis com xamarin. Forms</i> , de Charles Petzold, é um guia para aprender a escrever aplicativos xamarin. Forms. O único pré-requisito é o conhecimento da linguagem de programação c#. O livro oferece uma exploração extensiva na interface do usuário do xamarin. Forms e também aborda a animação, MVVM, gatilhos, comportamentos, layouts personalizados, renderizadores personalizados e muito mais. 
 
-Isso *primeira edição* tem 27 capítulos e abrange xamarin. Forms&nbsp;2. x, incluindo animação, MVVM, gatilhos, comportamentos, layouts personalizados, processadores personalizados e muito mais.
-Capítulo 28 agora também está disponível online entre os capítulos individuais listados abaixo.
+O livro foi publicado na primavera de 2016 e não tiver sido atualizado desde então. Há muito o no livro valioso que permanece, mas alguns dos [material está desatualizado](#ways-in-which-the-book-is-outdated), e alguns tópicos não são totalmente correto ou foi concluído. 
 
-## <a name="download-ebook-for-free"></a>Baixar livro eletrônico grátis
+## <a name="download-ebook-for-free"></a>Baixe o livro eletrônico gratuito
 
-Baixe o formato preferencial eBook do Microsoft Virtual Academy:
+Baixe o seu formato de livro eletrônico preferencial da Microsoft Virtual Academy:
 
 *    [**PDF (56Mb)**](https://aka.ms/xamebook)
 
@@ -31,214 +30,101 @@ Baixe o formato preferencial eBook do Microsoft Virtual Academy:
 
 *    [**Kindle edition (325Mb)**](https://aka.ms/xamebook/mobi)
 
+Você também pode [Baixe capítulos individuais](#download-chapters-and-summaries) como arquivos PDF.
+
 ## <a name="samples"></a>Exemplos
 
-Os exemplos são [disponível no github](https://github.com/xamarin/xamarin-forms-book-samples)e incluem [xamarin. Forms para Windows](~/xamarin-forms/platform/windows/index.md) projetos para UWP para Windows 10, Windows Phone 8.1 e Windows 8.1.
+Os exemplos estão [disponível no github](https://github.com/xamarin/xamarin-forms-book-samples)e incluem projetos para iOS, Android e Universal Windows Platform (UWP). (Xamarin. Forms não é compatível com Windows 10 Mobile, mas os aplicativos xamarin. Forms serão executado na área de trabalho do Windows 10.)
 
 ## <a name="chapter-summaries"></a>Resumos de capítulo
 
-On-line [resumos de capítulo](summaries/index.md) descrevem o conteúdo de cada capítulo com links para exemplos do github e APIs.
+Resumos de capítulo estão disponíveis na [tabela de capítulo](#download-chapters-and-summaries) mostrados abaixo. Esses resumos descrevem o conteúdo de cada capítulo e incluem vários tipos de links:
 
-## <a name="download-individual-chapters"></a>Baixar capítulos individuais
+- Links para os reais capítulos do livro (na parte inferior da página) e artigos relacionados
 
-<table style="border:0px; box-shadow:0 0px 0px" cellpadding="0" cellspacing="2" border="0" width="85%">
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 1. Como funciona o ajuste de xamarin. Forms?</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch01-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter01.md">Resumo</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 2. Anatomia de um aplicativo</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter02.md">Resumo</a></td>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 3. Aprofundar no texto</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter03.md">Resumo</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 4. A pilha de rolagem</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter04.md">Resumo</a></td>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 5. Lidar com tamanhos</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter05.md">Resumo</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 6. Cliques de botão</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter06.md">Resumo</a></td>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 7. XAML vs. Código</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter07.md">Resumo</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 8. Código e XAML em harmonia</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter08.md">Resumo</a></td>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 9. Chamadas de API específica de plataforma</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter09.md">Resumo</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 10. Extensões de marcação XAML</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter10.md">Resumo</a></td>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 11. A infraestrutura vinculável</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter11.md">Resumo</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 12. Estilos</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter12.md">Resumo</a></td>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 13. Bitmaps</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter13.md">Resumo</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 14. Layout absoluto</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter14.md">Resumo</a></td>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 15. A Interface interativa</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter15.md">Resumo</a></td>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 16. Associação de dados</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter16.md">Resumo</a></td>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 17. Controle de grade</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter17.md">Resumo</a></td></tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 18. MVVM</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter18.md">Resumo</a></td></tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 19. Exibições de coleção</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter19.md">Resumo</a></td></tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 20. E/s assíncrona e arquivo</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter20.md">Resumo</a></td></tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 21. Transformações</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter21.md">Resumo</a></td></tr>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 22. Animação</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter22.md">Resumo</a></td></tr>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>23 de capítulo. Gatilhos e comportamentos</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter23.md">Resumo</a></td></tr>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 24. Navegação de página</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter24.md">Resumo</a></td></tr>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 25. Variedades de página</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter25.md">Resumo</a></td></tr>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>26 de capítulo. Layouts personalizados</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter26.md">Resumo</a></td></tr>
-</tr>
-<tr style="background:#ecf0f1">
-  <td style="border:0px;">
-    <h4>Capítulo 27. Processadores personalizados</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter27.md">Resumo</a></td></tr>
-</tr>
-<tr style="background:#f8f9fa">
-  <td style="border:0px;">
-    <h4>Capítulo 28. Local e mapas</h4>
-  </td>
-  <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf">Baixar PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="summaries/chapter28.md">Resumo</a></td></tr>
-</tr>
-</table>
+- Links para todos os exemplos de [ **xamarin-forms-samples livro** ](https://github.com/xamarin/xamarin-forms-book-samples) repositório do GitHub
 
+- Links para a documentação da API para obter descrições mais detalhadas de classes xamarin. Forms, estruturas, propriedades, enumerações e assim por diante
 
+Esses resumos também indicam quando pode ser o material no capítulo [um pouco desatualizada](#ways-in-which-the-book-is-outdated). 
+
+## <a name="download-chapters-and-summaries"></a>Baixe capítulos e resumos
+
+| Capítulo | Texto completo | Resumo |
+| ------- | ------------- | ------- |
+| Capítulo 1. Como o ajuste do xamarin. Forms? | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch01-Apr2016.pdf) | [Resumo](summaries/chapter01.md) |
+| Capítulo 2. Anatomia de um aplicativo | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf) | [Resumo](summaries/chapter02.md) |
+| Capítulo 3. Aprofundamento no texto | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf) | [Resumo](summaries/chapter03.md) |
+| Capítulo 4. Rolagem da pilha | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf) | [Resumo](summaries/chapter04.md) |
+| Capítulo 5. Lidando com tamanhos | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf) | [Resumo](summaries/chapter05.md) |
+| Capítulo 6. Cliques de botão | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf) | [Resumo](summaries/chapter06.md) |
+| Capítulo 7. XAML vs. Código | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf) | [Resumo](summaries/chapter07.md) |
+| Capítulo 8. Código e XAML em harmonia | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf) | [Resumo](summaries/chapter08.md) |
+| Capítulo 9. Chamadas à API específicas da plataforma | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf) | [Resumo](summaries/chapter09.md) |
+| Capítulo 10. Extensões de marcação XAML | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf) | [Resumo](summaries/chapter10.md) |
+| Capítulo 11. A infraestrutura associável | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf) | [Resumo](summaries/chapter11.md) |
+| Capítulo 12. Estilos | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf) | [Resumo](summaries/chapter12.md) |
+| Capítulo 13. Bitmaps | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf) | [Resumo](summaries/chapter13.md) |
+| Capítulo 14. Layout absoluto | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf) | [Resumo](summaries/chapter14.md) |
+| Capítulo 15. A Interface interativa | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf) | [Resumo](summaries/chapter15.md) |
+| Capítulo 16. Associação de dados | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf) | [Resumo](summaries/chapter16.md) |
+| Capítulo 17. Domínio da grade | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf) | [Resumo](summaries/chapter17.md) |
+| Capítulo 18. MVVM | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf) | [Resumo](summaries/chapter18.md) |
+| Capítulo 19. Exibições de coleção | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf) | [Resumo](summaries/chapter19.md) |
+| Capítulo 20. E/s assíncrona e de arquivo | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) | [Resumo](summaries/chapter20.md) |
+| Capítulo 21. Transformações | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf) | [Resumo](summaries/chapter21.md) |
+| Capítulo 22. Animação | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) | [Resumo](summaries/chapter22.md) |
+| Capítulo 23. Gatilhos e comportamentos | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf) | [Resumo](summaries/chapter23.md) |
+| Capítulo 24. Navegação de página | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf) | [Resumo](summaries/chapter24.md) |
+| Capítulo 25. Variedades de página | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf) | [Resumo](summaries/chapter25.md) |
+| Capítulo 26. Layouts personalizados | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf) | [Resumo](summaries/chapter26.md) |
+| Capítulo 27. Renderizadores personalizados | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) | [Resumo](summaries/chapter27.md) |
+| Capítulo 28. Localização e mapas | [Baixar PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf) | [Resumo](summaries/chapter28.md) |
+
+## <a name="ways-in-which-the-book-is-outdated"></a>Maneiras em que o livro está desatualizado
+
+Desde a publicação da <i>criação de aplicativos móveis com xamarin. Forms</i>, vários recursos novos foram adicionados ao xamarin. Forms. Esses novos recursos são descritos nos artigos individuais a [xamarin. Forms](/xamarin/) documentação. 
+
+Outras alterações fizeram parte do conteúdo do livro fiquem desatualizados:
+
+### <a name="net-standard-20-libraries-have-replaced-portable-class-libraries"></a>Bibliotecas do .NET standard 2.0 substituíram as bibliotecas de classes portáteis
+
+Em geral, um aplicativo xamarin. Forms usa uma biblioteca para compartilhar código entre diferentes plataformas. Originalmente, essa foi uma biblioteca de classe portátil (PCL). Há muitas referências a PCLs em todo o catálogo e os resumos de capítulo. 
+
+Biblioteca de classes portátil foi substituída por uma biblioteca .NET Standard 2.0, conforme descrito no artigo [suporte no xamarin. Forms do .NET Standard 2.0](~/xamarin-forms/internals/net-standard.md). Todos os [código de exemplo](https://github.com/xamarin/xamarin-forms-book-samples) do livro foi atualizado para usar bibliotecas .NET Standard 2.0.
+
+A maioria das informações no livro sobre a função de biblioteca de classes portátil permanece o mesmo para uma biblioteca .NET Standard 2.0. Uma diferença é que apenas uma PCL tem um numérico "perfil". Além disso, há algumas vantagens em bibliotecas do .NET Standard 2.0. Por exemplo, o capítulo 20 [Async e/s de arquivo](summaries/chapter20.md) descreve como usar as plataformas subjacentes para executar e/s de arquivo. Isso não é mais necessário. A biblioteca do .NET Standard 2.0 oferece suporte a familiar [System.IO](xref:System.IO) classes para todas as plataformas do xamarin. Forms.
+
+A biblioteca .NET Standard 2.0 também permite que os aplicativos xamarin. Forms usar [ `HttpClient` ](xref:System.Net.Http.HttpClient) para acessar os arquivos pela Internet em vez de [ `WebRequest` ](xref:System.Net.WebRequest) ou outras classes.
+
+### <a name="the-role-of-xaml-has-been-elevated"></a>A função do XAML foi promovida
+
+<i>Criando aplicativos móveis com xamarin. Forms</i> começa descrevendo como escrever aplicativos xamarin. Forms usando a linguagem c#. O de Extensible Application Markup Language (XAML) não é introduzido até [capítulo 7. XAML vs. Código](summaries/chapter07.md). 
+
+Agora, a XAML tem um papel muito maior no xamarin. Forms. Os modelos de solução do xamarin. Forms distribuídos com o Visual Studio criam arquivos de página baseados em XAML. Um desenvolvedor usando o xamarin. Forms deve se familiarizar com o XAML mais cedo possível. O [linguagem de marcação de aplicativo extensível (XAML)](~/xamarin-forms/xaml/index.md) seção da documentação do xamarin. Forms contém vários artigos sobre XAML para você começar.
+
+### <a name="supported-platforms"></a>Plataformas com suporte 
+
+Xamarin. Forms não oferece mais suporte do Windows 8.1 e Windows Phone 8.1. 
+
+O livro, às vezes, faz referência à _tempo de execução do Windows_. Esse é um termo que abrange a API do Windows usada em várias versões do Windows e Windows Phone. As versões mais recentes do xamarin. Forms restringe-se para dar suporte a plataforma Universal do Windows, que é a API para o Windows 10 e Windows 10 Mobile.
+
+Uma biblioteca .NET Standard 2.0 não oferece suporte a qualquer versão do Windows 10 Mobile. Portanto, um aplicativo xamarin. Forms usando uma biblioteca .NET Standard não será executado em um dispositivo Windows 10 Mobile. Aplicativos de xamarin. Forms continuarão sendo executados no Windows 10 desktop, versões 10.0.16299.0 e acima. 
+
+Xamarin. Forms tem suporte de visualização para o [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), e [Tizen](/xamarin-forms/platform/tizen.md) plataformas.
+
+### <a name="chapter-summaries"></a>Resumos de capítulo
+
+Os resumos de capítulo incluem as informações relacionadas a alterações no xamarin. Forms, pois o livro foi escrito. Eles costumam ser na forma de anotações:
+
+> [!NOTE] 
+> Observações sobre cada página indicam onde o xamarin. Forms foi bifurcado do material apresentado no livro.
+
+### <a name="samples"></a>Exemplos
+
+No [ **xamarin-forms-samples livro** ](https://github.com/xamarin/xamarin-forms-book-samples) repositório do GitHub, o **código original do livro** branch contém exemplos de programa consistentes com o catálogo. O **mestre** branch contém projetos que foram atualizados para remover APIs preteridas e refletir APIs aprimoradas. Além disso, o Android projetos na **mestre** branch foram atualizados para o Android [Design de Material via AppCompat](~/xamarin-forms/platform/android/index.md) e geralmente exibirá texto preto em um plano de fundo branco.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Blog de pressione MS](https://blogs.msdn.microsoft.com/microsoft_press/2016/03/31/free-ebook-creating-mobile-apps-with-xamarin-forms/)
-- [Exemplos de primeira edição](https://github.com/xamarin/xamarin-forms-book-samples)
+- [Blog do MS Press](https://blogs.msdn.microsoft.com/microsoft_press/2016/03/31/free-ebook-creating-mobile-apps-with-xamarin-forms/)
+- [Código de exemplo do livro](https://github.com/xamarin/xamarin-forms-book-samples)

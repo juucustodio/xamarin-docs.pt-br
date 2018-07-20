@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3ef8f14bd60cf612408bb9e3885ef319d3efc8c5
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998329"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156568"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumo do capítulo 3. Aprofundamento no texto
 
@@ -100,8 +100,6 @@ Por fim, duas propriedades somente leitura estáticas definem valor de cor espec
 - iOS: texto escuro no plano de fundo claro
 - Android: Texto em um plano de fundo escuro (no livro) ou texto escuro no plano de fundo claro de luz (para o Design de Material via AppCompat na **mestre** branch do repositório de código de exemplo)
 - UWP: Texto escuro no plano de fundo claro
-- Windows 8.1: O texto claro em um plano de fundo escuro
-- Windows Phone 8.1: O texto claro em um plano de fundo escuro
 
 O `Color.Accent` valor resulta em uma cor específica da plataforma (e, às vezes, selecionável pelo usuário) que é visível em um fundo claro ou escuro.
 

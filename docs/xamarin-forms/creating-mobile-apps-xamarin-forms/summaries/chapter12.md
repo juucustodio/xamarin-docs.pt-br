@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3bab1d4b61f146f8caa005e9148df745c91a3ebd
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: 8ee169d15c4b5060f2a7696bfebd314ed7029570
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998167"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156935"
 ---
 # <a name="summary-of-chapter-12-styles"></a>Resumo do capítulo 12. Estilos
 
@@ -93,8 +93,6 @@ Seis campos são do tipo `string` e podem ser usados como chaves de dicionário 
 - [`ListItemDetailTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyleKey) igual a "ListItemDetailTextStyle"
 
 Esses estilos são ilustrados pela [ **DeviceStylesList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DeviceStylesList) exemplo.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

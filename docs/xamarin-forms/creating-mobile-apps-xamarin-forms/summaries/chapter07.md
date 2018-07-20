@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 02e4ea44d87360deed361d161759fa3a2808100f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: d04012d5d2ea6a7617d5c7559aa3e1532dad15d1
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995151"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156906"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumo do capítulo 7. XAML versus código
+
+> [!NOTE] 
+> Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Xamarin. Forms dá suporte a uma linguagem de marcação baseada em XML chamada o de Extensible Application Markup Language ou XAML (pronunciada "zammel"). XAML fornece uma alternativa para c# na definição do layout da interface do usuário de um aplicativo xamarin. Forms e definir associações entre os elementos de interface do usuário e os dados subjacentes.
 
@@ -35,6 +38,9 @@ No XAML, classes e os objetos criados a partir delas são expressas como element
 ## <a name="adding-a-xaml-page-to-your-project"></a>Adicionando uma página XAML ao seu projeto
 
 Uma biblioteca de classes portátil do xamarin. Forms pode conter uma página XAML quando ele é criado, ou você pode adicionar uma página XAML para um projeto existente. Na caixa de diálogo para adicionar um novo item, escolha o item que se refere a uma página XAML, ou `ContentPage` e XAML. (Não um `ContentView`.)
+
+> [!NOTE] 
+> Opções do Visual Studio foram alteradas desde que este capítulo foi escrito.
 
 Dois arquivos são criados: um arquivo XAML com a extensão de nome de arquivo. XAML e um arquivo c# com a extensão. xaml.cs. O arquivo do c# é conhecido como o *de lógica* do arquivo XAML. O arquivo code-behind é uma definição de classe parcial que deriva de `ContentPage`. No momento da compilação, o XAML é analisado e outra definição de classe parcial é gerada para a mesma classe. Essa classe gerada inclui um método chamado `InitializeComponent` que é chamado do construtor de arquivo code-behind.
 
@@ -72,10 +78,9 @@ O [ **TextVariations** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
  [![Captura de tela tripla de variações de texto de compartilhamento](images/ch07fg03-small.png "variações de texto formatado")](images/ch07fg03-large.png#lightbox "variações de texto formatado")
 
-
-
 ## <a name="related-links"></a>Links relacionados
 
 - [Capítulo 7 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
 - [Exemplos do capítulo 7](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 - [Capítulo 7 F # de exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
+- [Noções básicas de XAML](~/xamarin-forms/xaml/xaml-basics/index.md)

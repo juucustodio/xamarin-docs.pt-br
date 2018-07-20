@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: c4ad067778203759a54ed8141db0b82602e40f6c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: 083cb4ed57df989a55a26394cbf8440d53a9e769
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997446"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156641"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Resumo do capítulo 16. Associação de dados
+
+> [!NOTE] 
+> Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Os programadores muitas vezes descobrem escrever manipuladores de eventos que detectam quando uma propriedade de um objeto foi alterado e usá-lo para alterar o valor de uma propriedade em outro objeto. Esse processo pode ser automatizado com a técnica de *vinculação de dados*. Associações de dados geralmente são definidas em XAML e se tornam parte da definição da interface do usuário.
 
@@ -85,6 +88,9 @@ Defina a [ `Mode` ](xref:Xamarin.Forms.BindingBase.Mode) propriedade do `Binding
 - [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) para que as alterações na origem e destino afetam uns aos outros
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default) Para usar o [ `DefaultBindingMode` ](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) especificado quando o destino `BindableProperty` foi criado. Se nenhum for especificado, o padrão será `OneWay` para propriedades vinculáveis normais, e `OneWayToSource` para propriedades vinculáveis somente leitura.
 
+> [!NOTE]
+> O `BindingMode` enumeração agora também inclui `OnTime` para a aplicação de uma associação somente quando o contexto de associação é alterado e não quando a propriedade de origem é alterada.
+
 As propriedades que devem ser os destinos das vinculações de dados em cenários do MVVM geralmente têm uma `DefaultBindingMode` de `TwoWay`. Elas são:
 
 - `Value` propriedade de `Slider` e `Stepper`
@@ -137,3 +143,4 @@ O [ **NewCheckBoxDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 - [Capítulo 16 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf)
 - [Exemplos do capítulo 16](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
+- [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)

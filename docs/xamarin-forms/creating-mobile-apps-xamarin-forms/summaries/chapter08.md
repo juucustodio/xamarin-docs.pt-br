@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: b08355db6cc90381b16f51ce7bf23be8e8bd4e14
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: 1aa5226e1e6867f77eea4d7679650e8d62f5b981
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994527"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156984"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Resumo do capítulo 8. Código e XAML em harmonia
 
@@ -75,10 +75,9 @@ O [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) gera [ `Ta
 
 Mas o **MonkeyTap** programa realmente precisa de som. (Consulte [próximo capítulo](chapter09.md).)
 
-
-
 ## <a name="related-links"></a>Links relacionados
 
 - [Texto completo do capítulo 8 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf)
 - [Exemplos do capítulo 8](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
 - [Capítulo 8 F # de exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
+- [Passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md)

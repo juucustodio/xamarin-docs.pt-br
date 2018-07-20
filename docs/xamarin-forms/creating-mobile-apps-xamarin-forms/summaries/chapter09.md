@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 8a035da3dec468df291a19849ca89964c6707589
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: e7b2eea22758155db7d79fa26f3376e16cf16a45
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994751"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39157010"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Resumo do capítulo 9. Chamadas à API específicas da plataforma
+
+> [!NOTE] 
+> Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Às vezes, é necessário executar algum código que varia por plataforma. Este capítulo explora as técnicas.
 
@@ -32,19 +35,20 @@ Uma abordagem mais estruturada para a execução de código específico da plata
 
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService e a biblioteca de classes portátil
 
-Uma biblioteca normalmente não é possível acessar classes em projetos de aplicativos. Essa restrição parece impedir que a técnica mostrada **PlatInfoSap2** sejam usados em uma PCL. No entanto, o xamarin. Forms contém uma classe chamada [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) que usa reflexão do .NET para acessar as classes públicas no projeto de aplicativo do PCL.
+> [!NOTE] 
+> Bibliotecas de classes portáteis foram substituídas por bibliotecas .NET Standard. O código de exemplo do livro foi convertido para usar bibliotecas padrão do .NET.
 
-O PCL deve definir um `interface` com os membros que ele precisa usar em cada plataforma. Em seguida, cada uma das plataformas contém uma implementação dessa interface. A classe que implementa a interface deve ser identificada com uma [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) no nível de assembly.
+Uma biblioteca normalmente não é possível acessar classes em projetos de aplicativos. Essa restrição parece impedir que a técnica mostrada **PlatInfoSap2** sejam usados em uma biblioteca. No entanto, o xamarin. Forms contém uma classe chamada [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) que usa a reflexão do .NET para acessar as classes públicas no projeto de aplicativo da biblioteca.
 
-O PCL, em seguida, usa o genérico [ `Get` ](xref:Xamarin.Forms.DependencyService.Get*) método `DependencyService` para obter uma instância da classe de plataforma que implementa a interface.
+A biblioteca deve definir um `interface` com os membros que ele precisa usar em cada plataforma. Em seguida, cada uma das plataformas contém uma implementação dessa interface. A classe que implementa a interface deve ser identificada com uma [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) no nível de assembly.
+
+A biblioteca, em seguida, usa o genérico [ `Get` ](xref:Xamarin.Forms.DependencyService.Get*) método `DependencyService` para obter uma instância da classe de plataforma que implementa a interface.
 
 Isso é demonstrado na [ **DisplayPlatformInfo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) exemplo.
 
 ## <a name="platform-specific-sound-generation"></a>Geração de som específica da plataforma
 
 O [ **MonkeyTapWithSound** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) exemplo adiciona o alarme sonoro para o **MonkeyTap** programa acessando recursos de geração de som em cada plataforma.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

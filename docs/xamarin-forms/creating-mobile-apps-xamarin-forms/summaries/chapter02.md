@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: d1daceba29e45adf64947c89555cc4e75a850d32
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/17/2018
+ms.openlocfilehash: fe6a8c3d17cf1fe6f489f6425bbdaa3cd30f390a
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995271"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156672"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Resumo do capítulo 2. Anatomia de um aplicativo
+
+> [!NOTE] 
+> Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Em um aplicativo xamarin. Forms, os objetos que ocupam espaço na tela são conhecidos como *elementos visuais*, encapsulado pelo [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe. Elementos visuais podem ser divididos em três categorias correspondentes a essas classes:
 
@@ -28,7 +31,12 @@ Este capítulo demonstra como criar um aplicativo se concentrando na [ `Label` ]
 
 ## <a name="say-hello"></a>Diga Olá
 
-Com a plataforma Xamarin instalado, você pode criar uma nova solução xamarin. Forms no Visual Studio ou Visual Studio para Mac. O [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) solução usa uma biblioteca de classes portátil para o código comum. Ele demonstra uma solução xamarin. Forms criada no Visual Studio sem modificações. A solução consiste em seis projetos (o último dois dos quais não são criadas com os modelos de solução do xamarin. Forms atuais):
+Com a plataforma Xamarin instalado, você pode criar uma nova solução xamarin. Forms no Visual Studio ou Visual Studio para Mac. O [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) solução usa uma biblioteca de classes portátil para o código comum. 
+
+> [!NOTE] 
+> Bibliotecas de classes portáteis foram substituídas por bibliotecas .NET Standard. O código de exemplo do livro foi convertido para usar bibliotecas padrão do .NET.
+
+Este exemplo demonstra uma solução xamarin. Forms criada no Visual Studio sem modificações. A solução consiste em seis projetos:
 
 - [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello), uma biblioteca de classe portátil (PCL) compartilhado por outros projetos
 - [**Hello.Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid), um projeto de aplicativo para Android
@@ -37,13 +45,19 @@ Com a plataforma Xamarin instalado, você pode criar uma nova solução xamarin.
 - [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), um projeto de aplicativo para Windows 8.1
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), um projeto de aplicativo para Windows Phone 8.1
 
+> [!NOTE] 
+> Xamarin. Forms não oferece suporte a Windows 8.1, Windows Phone 8.1 ou Windows 10 Mobile, mas os aplicativos xamarin. Forms são executados no Windows 10 desktop. 
+
 Você pode tornar o projeto de inicialização, a qualquer um desses projetos de aplicativo e, em seguida, compilar e executar o programa em um dispositivo ou simulador.
 
-Em muitos dos seus programas do xamarin. Forms, você não modificar os projetos de aplicativo. Eles geralmente permanecem stubs pequenas apenas para iniciar o programa. A maioria de seu foco será a biblioteca de classes portátil comuns a todos os aplicativos.
+Em muitos dos seus programas do xamarin. Forms, você não modificar os projetos de aplicativo. Eles geralmente permanecem stubs pequenas apenas para iniciar o programa. A maioria de seu foco será a biblioteca comum para todos os aplicativos.
 
 ## <a name="inside-the-files"></a>Dentro dos arquivos
 
 Os elementos visuais exibidos pelo **Hello** programa são definidos no construtor do [ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) classe. `App` deriva da classe xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application).
+
+> [!NOTE] 
+> Os modelos de solução do Visual Studio para xamarin. Forms criam uma página com um arquivo XAML. XAML não é abordada neste livro até [capítulo 7](chapter07.md).
 
 O **referências** seção o **Hello** projeto PCL inclui os seguintes assemblies do xamarin. Forms:
 
@@ -60,21 +74,20 @@ O **referências** seções dos projetos de cinco aplicativo incluem assemblies 
 - **Xamarin.Forms.Platform.WinRT.Tablet**
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
+> [!NOTE] 
+> O **referências** seções desses projetos não listam os assemblies. Em vez disso, o arquivo de projeto contém um **PackageReference** marcas referenciando o pacote do NuGet xamarin. Forms. O **referências** seção em listas do Visual Studio a **xamarin. Forms** do pacote em vez dos assemblies do xamarin. Forms. 
+
 Cada um dos projetos de aplicativo contém uma chamada para estático `Forms.Init` método no `Xamarin.Forms` namespace. Isso inicializa a biblioteca xamarin. Forms. Uma versão diferente do `Forms.Init` é definida para cada plataforma. As chamadas para esse método podem ser encontradas nas seguintes classes:
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
 - UWP: [ `App` classe, `OnLaunched` método](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
-- Windows 8.1: [ `App` classe, `OnLaunched` método](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Windows/App.xaml.cs#L65)
-- Windows Phone 8.1: [ `App` classe, `OnLaunched` método](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.WinPhone/App.xaml.cs#L67)
 
-Além disso, cada plataforma deve instanciar a `App` classe local na PCL. Isso ocorre em uma chamada para `LoadApplication` nas seguintes classes:
+Além disso, cada plataforma deve instanciar a `App` classe local na biblioteca compartilhada. Isso ocorre em uma chamada para `LoadApplication` nas seguintes classes:
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
 - UWP: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.UWP/MainPage.xaml.cs)
-- Windows 8.1: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Windows/MainPage.xaml.cs)
-- Windows Phone 8.1: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.WindowsPhone/MainPage.xaml.cs)
 
 Caso contrário, esses projetos de aplicativo são programas de "não fazer nada" normal.
 
@@ -82,30 +95,20 @@ Caso contrário, esses projetos de aplicativo são programas de "não fazer nada
 
 É possível criar uma solução xamarin. Forms com o código comum em uma biblioteca de classe portátil (PCL) ou um projeto de ativo compartilhado (SAP). Para criar uma solução do SAP, selecione a opção de Shared no Visual Studio. O [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) solução demonstra o modelo SAP sem modificações.
 
-Os pacotes de abordagem PCL todas as comuns de código em um projeto de biblioteca referenciado pelos projetos de aplicativo de plataforma. Com a abordagem do SAP, o código comum efetivamente existe em todos os projetos de aplicativo de plataforma e é compartilhado entre elas.
+> [!NOTE] 
+> Bibliotecas de classes portáteis foi substituída por bibliotecas .NET Standard. O código de exemplo do livro foi convertido para usar bibliotecas padrão do .NET. Caso contrário, as bibliotecas PCL e .NET Standard são conceitualmente muito semelhantes.
 
-A maioria dos desenvolvedores de xamarin. Forms prefiro a abordagem PCL. Neste livro, a maioria das soluções é PCL. Aqueles que usam SAP incluem uma **Sap** sufixo no nome do projeto.
+Os pacotes de abordagem de biblioteca todas as comuns de código em um projeto de biblioteca referenciado pelos projetos de aplicativo de plataforma. Com a abordagem do SAP, o código comum efetivamente existe em todos os projetos de aplicativo de plataforma e é compartilhado entre elas.
 
-Para dar suporte a todas as plataformas do xamarin. Forms, a versão do .NET usado pelo PCL deve acomodar as seguintes plataformas:
-
-- .NET Framework 4.5
-- Windows 8
-- Windows Phone 8.1
-- Xamarin.Android
-- Xamarin.iOS
-- Xamarin. IOS (clássico)
-
-Isso é conhecido como PC perfil 111.
+A maioria dos desenvolvedores de xamarin. Forms prefiro a abordagem de biblioteca. Neste livro, a maioria das soluções de usa uma biblioteca. Aqueles que usam SAP incluem uma **Sap** sufixo no nome do projeto.
 
 Com a abordagem do SAP o código no projeto compartilhado pode executar código diferente para várias plataformas usando diretivas de pré-processador c# (`#if`, #`elif`, e `#endif`) com esses predefinido identificadores:
 
 - iOS: `__IOS__`
 - Android: `__ANDROID__`
 - UWP: `WINDOWS_UWP`
-- Windows 8.1: `WINDOWS_APP`
-- Windows Phone 8.1: `WINDOWS_PHONE_APP`
 
-Em uma PCL, você pode determinar qual plataforma você está executando em tempo de execução, como você verá neste capítulo.
+Em uma biblioteca compartilhada, você pode determinar qual plataforma você está executando em tempo de execução, como você verá neste capítulo.
 
 ## <a name="labels-for-text"></a>Rótulos de texto
 
@@ -138,17 +141,13 @@ O `Device.OnPlatform` métodos são usados para executar o código específico d
 
 - [`iOS`](xref:Xamarin.Forms.TargetPlatform.iOS)
 - [`Android`](xref:Xamarin.Forms.TargetPlatform.Android)
-- [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) para todos os dispositivos UWP, Windows Phone 8.1 e Windows 8.1.
-- [`WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone), anteriormente usado para identificar o Windows Phone 8.0, mas é agora não utilizada
-- [`Other`](xref:Xamarin.Forms.TargetPlatform.Other) não é usado
+- [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) para dispositivos UWP.
 
 O `Device.OnPlatform` métodos, o `Device.OS` propriedade e o `TargetPlatform` enumeração são todos preterido. Em vez disso, use o [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) propriedade e comparar o `string` retornar valor com os seguintes campos estáticos:
 
 - [`iOS`](xref:Xamarin.Forms.Device.iOS), a cadeia de caracteres "iOS"
 - [`Android`](xref:Xamarin.Forms.Device.Android), a cadeia de caracteres "Android"
-- [`UWP`](xref:Xamarin.Forms.Device.UWP), a cadeia de caracteres "UWP", referindo-se para a plataforma de tempo de execução do Windows
-- `Windows`, a cadeia de caracteres "Windows" para o tempo de execução do Windows (Windows 8.1 e Windows Phone 8.1, preterida)
-- `WinPhone`, a cadeia de caracteres "WinPhone" para o Windows Phone 8.0 (preterido)
+- [`UWP`](xref:Xamarin.Forms.Device.UWP), a cadeia de caracteres "UWP", referindo-se à plataforma Universal do Windows
 
 O [ `Device.Idiom` ](xref:Xamarin.Forms.Device.Idiom) está relacionada a propriedade estática de somente leitura. Isso retorna um membro de [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom), que tem estes membros:
 
@@ -157,7 +156,7 @@ O [ `Device.Idiom` ](xref:Xamarin.Forms.Device.Idiom) está relacionada a propri
 - [`Phone`](xref:Xamarin.Forms.TargetIdiom.Phone)
 - [`Unsupported`](xref:Xamarin.Forms.TargetIdiom.Unsupported) não é usado
 
-Para iOS e Android, o corte entre `Tablet` e `Phone` é uma largura de retrato de unidades de 600. Para a plataforma Windows, `Desktop` indica um aplicativo UWP em execução no Windows 10 `Tablet` é um programa do Windows 8.1, e `Phone` indica um aplicativo UWP em execução no Windows 10 ou um aplicativo do Windows Phone 8.1.
+Para iOS e Android, o corte entre `Tablet` e `Phone` é uma largura de retrato de unidades de 600. Para a plataforma Windows, `Desktop` indica um aplicativo UWP em execução no Windows 10, e `Phone` indica um aplicativo UWP em execução no aplicativo do Windows 10.
 
 ## <a name="solution-3a-set-margin-on-the-label"></a>Solução 3a. Definir margem no rótulo
 
@@ -199,8 +198,6 @@ Você pode centralizar o texto (ou coloque-o em oito outros locais na página), 
 - [`End`](xref:Xamarin.Forms.TextAlignment.End), que significa que a parte direita ou inferior (dependendo da orientação)
 
 Essas duas propriedades são definidas somente pelo `Label`, enquanto a `HorizontalAlignment` e `VerticalAlignment` propriedades são definidas pelos `View` e herdada por todas as `View` derivados. Os resultados visuais podem parecer semelhantes, mas eles são muito diferentes, como demonstra o capítulo seguinte.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 
