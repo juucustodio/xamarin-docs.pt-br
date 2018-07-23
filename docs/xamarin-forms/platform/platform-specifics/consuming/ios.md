@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 68a38fc43cd744e0382f35baa83643a9f0f7e53d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: ab810a2fdfc659e2f5f24d2646c044e9c8638258
+ms.sourcegitcommit: 3697c2aa4208fe2ac954a8c0297394d3bcb53ede
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998980"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175184"
 ---
-# <a name="ios-platform-specifics"></a>Especificidades da plataforma do iOS
+# <a name="ios-platform-specifics"></a>Especificidades da plataforma do iOS 
 
 _Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo demonstra como utilizar as iOS-especificidades da plataforma que são criadas no xamarin. Forms._
 
@@ -620,7 +620,7 @@ O resultado é que uma sombra pode ser habilitada em um [ `VisualElement` ](xref
 
 Quando um [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) é anexado a um modo de exibição dentro de uma exibição de rolagem, todos a panorâmica de gestos são capturados pelo `PanGestureRecognizer` e não serão passados para o modo de exibição de rolagem. Portanto, o modo de exibição de rolagem não mais será rolada.
 
-Este específicos da plataforma permite que um `PanGestureRecognizer` em uma exibição de rolagem para capturar e compartilhar o gesto de panorâmica com o modo de exibição de rolagem. Ele é consumido em XAML, definindo o [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.pangesturerecognizershouldrecognizesimultaneouslyproperty?view=xamarin-forms) anexado à propriedade `true`:
+Este específicos da plataforma permite que um `PanGestureRecognizer` em uma exibição de rolagem para capturar e compartilhar o gesto de panorâmica com o modo de exibição de rolagem. Ele é consumido em XAML, definindo o [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) anexado à propriedade `true`:
 
 ```xaml
 <Application ...
@@ -640,7 +640,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 Xamarin.Forms.Application.Current.On<iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
 ```
 
-O `Application.On<iOS>` método Especifica que este específicos da plataforma serão executado apenas no iOS. O [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.setpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) método, no [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usada para controlar se um reconhecedor de gestos em uma exibição da rolagem panorâmica capturar o gesto de panorâmica, ou capturar e compartilhar a panorâmica com o modo de exibição de rolagem do gesto. Além disso, o [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.getpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) método pode ser usado para retornar se o gesto de Panorâmica é compartilhado com o modo de exibição de rolagem que contém o [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer).
+O `Application.On<iOS>` método Especifica que este específicos da plataforma serão executado apenas no iOS. O [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.SetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application},System.Boolean)) método, no [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usada para controlar se um reconhecedor de gestos em uma exibição da rolagem panorâmica capturar o gesto de panorâmica, ou capturar e compartilhar a panorâmica com o modo de exibição de rolagem do gesto. Além disso, o [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.GetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application})) método pode ser usado para retornar se o gesto de Panorâmica é compartilhado com o modo de exibição de rolagem que contém o [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer).
 
 Portanto, com essa específicos da plataforma habilitado, quando um [ `ListView` ](xref:Xamarin.Forms.ListView) contém um [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer), ambos o `ListView` e o `PanGestureRecognizer` receberá o gesto de Panorâmica e processá-lo. No entanto, com essa específicos da plataforma desabilitado, quando um `ListView` contém uma `PanGestureRecognizer`, o `PanGestureRecognizer` capturará o gesto de Panorâmica e processá-lo e o `ListView` não receberá o gesto de panorâmica.
 
