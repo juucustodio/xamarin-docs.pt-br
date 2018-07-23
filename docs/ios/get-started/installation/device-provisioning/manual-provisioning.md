@@ -7,29 +7,30 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: c0404a1fd8f7e878638b9483c65c637f6b4faa66
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd0afe03adbd021717a88cd4409e3e1351ba9b50
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786097"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111180"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
 _Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvolvimento do iOS é provisionar seu dispositivo iOS. Este guia explora o uso do provisionamento manual para configurar certificados e perfis de desenvolvimento._
 
-<a name="signingidentity" />
+> [!NOTE]
+> As instruções nesta página são relevantes para desenvolvedores que têm acesso pago ao Programa de Desenvolvedor da Apple. Se tiver uma conta gratuita, confira o guia de [Provisionamento gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md) para obter mais informações sobre testes no dispositivo.
 
-## <a name="creating-a-signing-identity"></a>Criando uma Identidade de Assinatura
+## <a name="creating-a-signing-identity"></a>Criando uma identidade de assinatura
 
 A primeira etapa na configuração de um dispositivo de desenvolvimento é criar uma identidade de assinatura. Uma identidade de assinatura consiste em duas coisas:
 
 - Um certificado de desenvolvimento
 - Uma chave privada
 
-Certificados de desenvolvimento e as [chaves](#keypairs) associadas são essenciais para um desenvolvedor do iOS: eles estabelecem sua identidade com a Apple e associam você a um determinado dispositivo e um perfil para desenvolvimento, algo semelhante a colocar sua assinatura digital em seus aplicativos. A Apple busca certificados controlar o acesso aos dispositivos que você tem permissão para implantar.
+Certificados de desenvolvimento e as [chaves](#understanding-certificate-key-pairs) associadas são essenciais para um desenvolvedor do iOS: eles estabelecem sua identidade com a Apple e associam você a um determinado dispositivo e um perfil para desenvolvimento, algo semelhante a colocar sua assinatura digital em seus aplicativos. A Apple busca certificados controlar o acesso aos dispositivos que você tem permissão para implantar.
 
-Equipes de desenvolvimento, certificados e perfis podem ser gerenciados acessando a seção [Certificados, identificadores e perfis](https://developer.apple.com/account/overview.action) da Central de Membros da Apple. A Apple exige que você tenha uma identidade de assinatura para compilar seu código para o dispositivo ou simulador.  
+É possível gerenciar equipes, certificados e perfis de desenvolvimento acessando a seção [Certificates, Identifiers & Profiles (Certificados, identificadores e perfis)](https://developer.apple.com/account/overview.action) (logon necessário) da Member Center (Central de Associados) da Apple. A Apple exige que você tenha uma identidade de assinatura para compilar seu código para o dispositivo ou simulador.  
 
 > [!IMPORTANT]
 > É importante observar que você só pode ter dois certificados de desenvolvimento do iOS em um determinado momento. Se você precisar criar mais, será necessário revogar um existente. Um computador usando um certificado revogado não poderá assinar seu aplicativo.
@@ -69,8 +70,6 @@ Para gerar uma identidade de assinatura, faça o seguinte:
 8. Clique duas vezes no certificado baixado para iniciar o Acesso ao Conjunto de Chaves e abrir o painel **Meus Certificados**, mostrando os novos certificados e a chave privada associada:
 
     [![](manual-provisioning-images/keychain.png "O Certificado no Acesso do conjunto de chaves")](manual-provisioning-images/keychain.png#lightbox)
-
-<a name="keypairs" />
 
 ### <a name="understanding-certificate-key-pairs"></a>Entendendo pares de chaves de certificado
 
@@ -135,7 +134,6 @@ Ao criar um perfil de provisionamento para desenvolvimento, devemos especificar 
 Repita as etapas acima para qualquer dispositivo iOS que será usado para testar ou depurar um aplicativo Xamarin.iOS.
 
 Depois de adicionar o dispositivo ao portal do desenvolvedor, é necessário criar um perfil de provisionamento e adicionar o dispositivo a ele.
-
 
 <a name="provisioningprofile" />
 
@@ -220,7 +218,7 @@ Os novos certificados ou perfis de provisionamento estarão disponíveis no Visu
 
 <a name="appservices" />
 
-## <a name="provisioning-for-application-services"></a>Provisionando para Serviços de Aplicativos
+## <a name="provisioning-for-application-services"></a>Provisionamento para serviços de aplicativo
 
 A Apple fornece uma seleção de serviços de aplicativos especiais, também chamada de recursos, que podem ser ativados para o aplicativo Xamarin.iOS. Esses serviços de aplicativos devem ser configurados tanto no Portal de Provisionamento iOS, quando a **ID do aplicativo** é criada, quanto no arquivo **Entitlements.plist**, que é parte do projeto do aplicativo Xamarin.iOS. Para obter informações sobre como adicionar serviços de aplicativo no seu aplicativo, consulte os guias [Introdução aos recursos](~/ios/deploy-test/provisioning/capabilities/index.md) e [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
 
@@ -228,9 +226,7 @@ A Apple fornece uma seleção de serviços de aplicativos especiais, também cha
 * Crie um novo [perfil de provisionamento](#provisioningprofile) que contenha essa ID do aplicativo.
 * Definir direitos no projeto Xamarin.iOS
 
-<a name="deploy" />
-
-## <a name="deploying-to-a-device"></a>Implantação em um dispositivo
+## <a name="deploying-to-a-device"></a>Implantando em um dispositivo
 
 Neste momento, o provisionamento já deve estar concluído e o aplicativo pronto para ser implantado no dispositivo. Para fazer isso, siga as etapas abaixo:
 
@@ -276,7 +272,6 @@ Se isso estiver definido como **Automático**, o Visual Studio para Mac selecion
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou as etapas necessárias para configurar o ambiente de desenvolvimento para Xamarin.iOS. Ele explorou como o código de um aplicativo é assinado com informações sobre o desenvolvedor, sua equipe, os dispositivos nos quais um aplicativo pode ser executado e a ID do aplicativo individual.
-
 
 ## <a name="related-links"></a>Links relacionados
 

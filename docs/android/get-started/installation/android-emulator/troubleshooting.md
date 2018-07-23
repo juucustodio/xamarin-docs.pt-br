@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/22/2018
-ms.openlocfilehash: 241f38cbfe013776b2e36b8102ae4b90cf610d80
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 1d13a3dae509fea4a2e955c4ad206a81a57e75ed
+ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935276"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39067328"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solução de problemas do Android Emulator
 
@@ -88,7 +88,7 @@ Desabilite os avisos de desempenho se preferir não os ver. No Visual Studio, cl
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-A partir do Visual Studio para Mac build 7.2 (build 559) ou posterior, uma caixa de diálogo de aviso de desempenho será exibida quando você implantar o aplicativo no Android Emulator pela primeira vez. Essas caixas de diálogo de aviso estão explicadas abaixo.
+A partir do Visual Studio para Mac versão 7.2 (build 559), uma caixa de diálogo de aviso de desempenho poderá ser exibida quando você implantar o aplicativo no Android Emulator pela primeira vez. Essas caixas de diálogo de aviso estão explicadas abaixo.
 
 ### <a name="haxm-is-not-installed"></a>O HAXM não Está Instalado
 

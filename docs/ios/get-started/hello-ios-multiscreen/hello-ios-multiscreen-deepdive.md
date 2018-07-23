@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785652"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111219"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
 
@@ -24,7 +24,7 @@ Então nos aprofundamos no Controlador de Navegação e aprendemos a usá-lo par
 
 <a name="Model_View_Controller" />
 
-## <a name="model-view-controller-mvc"></a>MVC (Modelo – Exibição – Controlador)
+## <a name="model-view-controller-mvc"></a>MVC (Modelo-Exibição-Controlador)
 
 No tutorial [Hello, iOS](~/ios/get-started/hello-ios/index.md), aprendemos que aplicativos iOS têm apenas uma *Janela* para a qual controladores de exibição são responsáveis por carregar suas *Hierarquias de Exibição de Conteúdo*. No segundo passo a passo do Phoneword, adicionamos uma segunda tela ao nosso aplicativo e enviamos alguns dados (uma lista de números de telefone) entre as duas telas, conforme ilustra o diagrama a seguir:
 
@@ -43,7 +43,6 @@ O padrão MVC é útil porque fornece uma separação lógica entre diferentes p
 > [!NOTE]
 > O padrão MVC é análogo, de modo amplo, à estrutura de páginas ASP.NET ou aplicativos WPF. Nesses exemplos, a exibição é o componente de fato responsável por descrever a interface do usuário e corresponde à página ASPX (HTML) no ASP.NET ou XAML em um aplicativo WPF. O Controlador é o componente responsável por gerenciar a exibição, que corresponde ao code-behind em ASP.NET ou WPF.
 
-
 ### <a name="model"></a>Modelo
 
 O objeto de Modelo normalmente é uma representação específica do aplicativo de dados a serem exibidos ou inseridos na Exibição. O modelo geralmente costuma ser de modo amplo – por exemplo, em nosso aplicativo **Phoneword_iOS**, a lista de números de telefone (representados como uma lista de cadeias de caracteres) é o Modelo. Se estivéssemos compilando um aplicativo de plataforma cruzada, poderíamos escolher compartilhar o código do **PhonewordTranslator** entre nossos aplicativos Android e iOS. Podemos pensar nesse código compartilhado como o Modelo também.
@@ -54,7 +53,6 @@ Em alguns casos, a parte do Modelo do MVC pode estar vazia. Por exemplo, podemos
 
 > [!NOTE]
 > Na literatura de alguns, a parte do Modelo do padrão MVC pode referir-se a todo o back-end do aplicativo e não apenas aos dados exibidos na interface do usuário. Neste guia, usamos uma interpretação moderna do Modelo, mas a distinção não é particularmente importante.
-
 
 ### <a name="view"></a>Exibir
 
@@ -68,7 +66,7 @@ Controladores também podem gerenciar outros Controladores. Por exemplo, um Cont
 
 ## <a name="navigation-controller"></a>Controlador de navegação
 
-No aplicativo Phoneword, usamos um *Controlador de Navegação* para ajudar a gerenciar a navegação entre várias telas. O Controlador de Navegação é um `UIViewController` especializado representado pela classe `UINavigationController`. Em vez de gerenciar uma única Hierarquia de Exibição de Conteúdo, o Controlador de Navegação gerencia outros Controladores de Exibição, bem como sua própria Hierarquia de Exibição de Conteúdo especial na forma de uma barra de ferramentas de navegação que inclui um título, o botão de voltar e outros recursos opcionais.
+No aplicativo Phoneword, usamos um Controlador de navegação para ajudar a gerenciar a navegação entre diversas telas. O Controlador de Navegação é um `UIViewController` especializado representado pela classe `UINavigationController`. Em vez de gerenciar uma única Hierarquia de Exibição de Conteúdo, o Controlador de Navegação gerencia outros Controladores de Exibição, bem como sua própria Hierarquia de Exibição de Conteúdo especial na forma de uma barra de ferramentas de navegação que inclui um título, o botão de voltar e outros recursos opcionais.
 
 O Controlador de Navegação é comum em aplicativos iOS e fornece navegação para aplicativos iOS padrão, como o aplicativo **Configurações**, conforme ilustrado pela captura de tela abaixo:
 
@@ -86,29 +84,26 @@ O Controlador de Navegação atende a três funções principais:
     [![](hello-ios-multiscreen-deepdive-images/03.png "Este diagrama ilustra a retirada de uma carta da pilha")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Fornece uma Barra de Título** – a parte superior do **Controlador de Navegação** é chamada de *Barra de Título*. Ele é responsável por exibir o título do Controlador de Exibição, conforme ilustrado pelo diagrama a seguir:  
+-  **Fornece uma Barra de título** – a parte superior do Controlador de navegação é chamada de *Barra de título*. Ele é responsável por exibir o título do Controlador de Exibição, conforme ilustrado pelo diagrama a seguir:  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "A Barra de Título é responsável por exibir o título do Controlador de Exibição")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
+### <a name="root-view-controller"></a>Controlador de exibição raiz
 
-
-
-### <a name="root-view-controller"></a>Controlador de exibição de raiz
-
-Um **Controlador de Navegação** não gerencia uma Hierarquia de Exibição de Conteúdo, portanto, não tem nada para exibir por conta própria.
-Em vez disso, um **Controlador de Navegação** é associado a um *Controlador de Exibição de Raiz*:
+Um Controlador de navegação não gerencia uma Hierarquia de exibição de conteúdo e, portanto, não tem nada para exibir por conta própria.
+Em vez disso, o Controlador de navegação é associado a um *Controlador de exibição raiz*:
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "Um Controlador de Navegação é pareado com um Controlador de Exibição de Raiz")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-O Controlador de Exibição de Raiz representa o primeiro Controlador de Exibição na pilha do **Controlador de Navegação** e a Hierarquia de Exibição de Conteúdo do Controlador de Exibição de Raiz é a primeira Hierarquia de Exibição de Conteúdo a ser carregada na Janela. Se desejamos colocar todo o aplicativo na pilha do Controlador de Navegação, podemos transferir o Segue Sourceless para o **Controlador de Navegação** e definir nosso Controlador de Exibição da primeira tela como o Controlador de Exibição de Raiz, como fizemos no aplicativo Phoneword:
+O Controlador de exibição raiz representa o primeiro Controlador de exibição na pilha do Controlador de navegação, e a Hierarquia de exibição de conteúdo do Controlador de exibição raiz é a primeira Hierarquia de exibição de conteúdo a ser carregada na Janela. Para colocar todo o aplicativo na pilha do Controlador de navegação, é possível transferir o Segue Sourceless para o Controlador de navegação e definir o Controlador de exibição da primeira tela como o Controlador de exibição raiz, como fizemos no aplicativo Phoneword:
 
  [![](hello-ios-multiscreen-deepdive-images/06.png "O Sourceless Segoe define o Controlador de Exibição de primeiras telas como o Controlador de Exibição de Raiz")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
-### <a name="additional-navigation-options"></a>Opções Adicionais de Navegação
+### <a name="additional-navigation-options"></a>Opções de navegação adicionais
 
-O **Controlador de Navegação** é uma maneira comum de processar a navegação no iOS, mas não é a única opção. Um [Controlador de Barra de Guia](~/ios/user-interface/controls/creating-tabbed-applications.md) pode dividir um aplicativo em diferentes áreas funcionais; um [Controlador de Exibição Dividida](https://developer.xamarin.com/recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) pode criar Exibições Mestre/Detalhadas; e um [Controlador de Navegação do Submenu](http://components.xamarin.com/view/flyoutnavigation) cria navegação que o usuário pode acessar com um gesto de passar do lado pela lateral. Tudo isso pode ser combinado com um **Controlador de Navegação** para uma maneira intuitiva de apresentar conteúdo.
+O Controlador de navegação é uma maneira comum de lidar com a navegação no iOS, mas não é a única opção. Por exemplo, um [Controlador de barra de guia](~/ios/user-interface/controls/creating-tabbed-applications.md) pode dividir um aplicativo em diferentes áreas funcionais e um [Controlador de exibição dividida](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) pode ser usado para criar exibições mestre/detalhadas. Combinar Controladores de navegação com esses outros paradigmas de navegação possibilita várias maneiras flexíveis de apresentar o conteúdo no iOS e de navegar nele.
 
-## <a name="handling-transitions"></a>Processando transições
+## <a name="handling-transitions"></a>Lidando com transições
 
 No passo a passo do Phoneword, tratamos da transição entre os dois Controladores de Exibição de duas maneiras diferentes – primeiro com um Storyboard Segue e, em seguida, programaticamente. Vamos explorar ambas as opções mais detalhadamente.
 
@@ -202,7 +197,6 @@ O aplicativo Phoneword introduziu vários conceitos não abordados neste guia. E
 -  **Controlador de Exibição de Tabela** – o `CallHistoryController` é um Controlador de Exibição de Tabela. Um Controlador de Exibição de Tabela contém uma Exibição de Tabela, o layout mais comum e a ferramenta de exibição de dados no iOS. Tabelas estão além do escopo deste guia. Para saber mais sobre Controladores de Exibição de Tabela, consulte o guia [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md) (Trabalhando com Tabelas e Células).
 -   **ID do Storyboard** – definir a ID do Storyboard cria uma classe de Controlador de Exibição em Objective-C, que contém o code-behind para o Controlador de Exibição no Storyboard. Usamos a ID do Storyboard para localizar a classe Objective-C e instanciar o Controlador de Exibição no Storyboard. Para saber mais sobre IDs de Storyboard, consulte o guia [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introdução a Storyboards).
 
-
 ## <a name="summary"></a>Resumo
 
 Parabéns, você concluiu seu primeiro aplicativo iOS multitela!
@@ -210,7 +204,6 @@ Parabéns, você concluiu seu primeiro aplicativo iOS multitela!
 Neste guia, apresentamos o padrão MVC e o utilizamos para criar um aplicativo com várias telas. Também exploramos Controladores de Navegação e sua função na potencialização da navegação do iOS. Agora você tem a base sólida necessária para começar a desenvolver seus próprios aplicativos Xamarin.iOS.
 
 Em seguida, vamos aprender a compilar aplicativos de plataforma cruzada com Xamarin com os guias [Introdução ao desenvolvimento móvel](~/cross-platform/get-started/introduction-to-mobile-development.md) e [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) (Compilando aplicativos de plataforma cruzada).
-
 
 ## <a name="related-links"></a>Links relacionados
 

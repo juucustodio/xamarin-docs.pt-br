@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 571b5bb37ee10bb83dceef058613f955a8b7bff9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3525541ba0795f4e0b174b155c0ca219e3257bac
+ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772894"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39067354"
 ---
 # <a name="publishing-to-google-play"></a>Publicando no Google Play
 
@@ -165,7 +165,7 @@ A próxima seção explica como criar um novo projeto de API do Google e gerar a
 
 O Visual Studio para Mac tem um fluxo de trabalho integrado para a publicação de aplicativos no Google Play. Se estiver usando uma versão do Xamarin Studio anterior à 5.9, você deverá carregar manualmente seu APK por meio do Console de Desenvolvedor do Google Play e, em seguida, usar a caixa de diálogo **Publicar no Google Play** para as atualizações de APK subsequentes. Além disso, você deve ter pelo menos um APK já carregado antes de usar a **Publicar no Google Play**. Se ainda não carregou seu primeiro APK, você deverá carregá-lo manualmente. Para obter informações sobre como carregar um APK manualmente, consulte [Carregar manualmente o APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
 
-[Criar um Novo Certificado](~/android/deploy-test/signing/index.md#newcert) tratou da criação de um novo certificado para assinar aplicativos Android. As etapas a seguir descrevem como publicar um aplicativo Xamarin.Android no Google Play:
+[Criar um Novo Certificado](~/android/deploy-test/signing/index.md#newcert) abordou a criação de um novo certificado para assinar aplicativos Android. As etapas a seguir descrevem como publicar um aplicativo Xamarin.Android no Google Play:
 
 1. Entre na sua conta de Desenvolvedor do Google Play para criar um novo projeto vinculado à sua conta de Desenvolvedor do Google Play.
 2. Crie um _Cliente OAuth_ que autentica o seu aplicativo.

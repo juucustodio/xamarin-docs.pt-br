@@ -6,95 +6,142 @@ ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 03/19/2017
-ms.openlocfilehash: 623f79f482170c6b1d8ecdb642afb2fc7acf061d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 07/16/2018
+ms.openlocfilehash: 22ac17e211562eccbc49cc213e06079e77dd08c0
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786016"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111151"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Provisionamento gratuito para aplicativos Xamarin.iOS
 
-_Com o lançamento do Xcode 7 da Apple, surgiu uma alteração importante para todos os desenvolvedores de iOS e Mac: provisionamento gratuito._
+O provisionamento gratuito permite que desenvolvedores do Xamarin.iOS implantem e testem seus aplicativos em dispositivos iOS **sem** fazer parte do **Programa de Desenvolvedor da Apple**.
+Embora testes em simuladores sejam valiosos e convenientes, também é essencial testar os aplicativos em dispositivos iOS físicos para garantir que eles funcionam corretamente sob restrições de memória, armazenamento e conectividade de rede do mundo real.
 
-O provisionamento gratuito permite que os desenvolvedores implantem seu aplicativo Xamarin.iOS em seu dispositivo iOS **sem** fazer parte de qualquer **Programa de Desenvolvedor da Apple**. Isso é extremamente vantajoso para desenvolvedores, já que testes em um dispositivo permitem muitos benefícios em relação aos testes no simulador, incluindo, mas sem limitação, a memória, armazenamento, conectividade de rede, entre outros.
+Para usar o provisionamento gratuito para implantar um aplicativo em um dispositivo:
 
-O provisionamento sem uma conta de Desenvolvedor da Apple deve ser executado por meio do Xcode, que cria uma *Identidade de Assinatura* (que contém um certificado de desenvolvedor e chave privada) e um *Perfil de Provisionamento* (que contém uma ID do Aplicativo explícita e o UDID do seu dispositivo iOS conectado).
+- Use o Xcode para criar a *identidade de assinatura* (certificado de desenvolvedor e chave privada) e o *perfil de provisionamento* (contendo uma ID do aplicativo explícita e a UDID de um dispositivo iOS conectado) necessários.
+- Use a identidade de assinatura e o perfil de provisionamento criados pelo Xcode no Visual Studio para Mac ou no Visual Studio 2017 para implantar seu aplicativo Xamarin.iOS.
+
+> [!IMPORTANT]
+> O [provisionamento automático](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) permite que o Visual Studio para Mac ou o Visual Studio 2017 configure automaticamente um dispositivo para testes de desenvolvedor. No entanto, o provisionamento automático não é compatível com o provisionamento gratuito. Para usar o provisionamento automático, você precisa ter uma conta paga do Programa de Desenvolvedor da Apple.
 
 ## <a name="requirements"></a>Requisitos
 
-Para aproveitar a implantação de aplicativos do seu Xamarin.iOS em um dispositivo com provisionamento gratuito, você deve estar usando o Xcode 7 ou superior.
+Para implantar seus aplicativos Xamarin.iOS em um dispositivo com provisionamento gratuito:
 
-**A ID Apple que está sendo usada não deve estar conectada a nenhum Programa de Desenvolvedor da Apple.**
+- A ID da Apple usada não pode estar conectada a nenhum Programa de Desenvolvedor da Apple.
+- Seu aplicativo Xamarin.iOS precisa usar uma ID do aplicativo explícita, não uma ID do aplicativo curinga.
+- O identificador do pacote usado em seu aplicativo Xamarin.iOS precisa ser exclusivo e não pode ter sido usado em outro aplicativo anteriormente. Identificadores de pacote usados com o provisionamento gratuito **não podem** ser usados novamente.
+- Caso já tenha distribuído um aplicativo, você não poderá implantar esse aplicativo com o provisionamento gratuito.
+- Se seu aplicativo utilizar os Serviços de Aplicativos, você precisará criar um perfil de provisionamento de acordo com o que está detalhado no guia de [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#appservices). 
 
-A ID do pacote usada em seu aplicativo deve ser exclusiva e não pode ter sido usada em outro aplicativo anteriormente. NENHUMA ID de pacote usada com provisionamento gratuito pode ser usada novamente. Caso já tenha distribuído um aplicativo, você não poderá provisionar este aplicativo com o provisionamento gratuito. 
+Confira a seção [Limitações](#limitations) deste documento para obter mais informações sobre as limitações associadas ao provisionamento gratuito e consulte os [Guias de distribuição de aplicativos](~/ios/deploy-test/app-distribution/index.md) para obter mais informações sobre a distribuição de aplicativos iOS.
 
-Consulte os [guias de Distribuição de Aplicativos](~/ios/deploy-test/app-distribution/index.md) para obter mais informações.
+## <a name="testing-on-device-with-free-provisioning"></a>Testes em dispositivos com provisionamento gratuito
 
-Caso seu aplicativo utilize os Serviços de Aplicativos, você precisará criar um perfil de provisionamento conforme detalhado no guia de [provisionamento do dispositivo](~/ios/get-started/installation/device-provisioning/index.md#appservices). Você pode ver mais limitações na [seção relevante](#limitations) abaixo.
+Siga as etapas abaixo para testar seu aplicativo Xamarin.iOS com o provisionamento gratuito.
 
+### <a name="use-xcode-to-create-a-signing-identity-and-provisioning-profile"></a>Use o Xcode para criar uma identidade de assinatura e um perfil de provisionamento
 
-## <a name="a-namelaunching--launching-your-app"></a><a name="launching" /> Iniciar seu Aplicativo
-
-Para usar o provisionamento gratuito a fim de implantar um aplicativo em um dispositivo, você utilizará o Xcode para criar os perfis de provisionamento e de identidade de assinatura e, em seguida, usará o Visual Studio para Mac ou o Visual Studio para escolher o perfil correto para assinar nosso aplicativo. Siga o passo a passo abaixo para fazer isso:
-
-1. Se você não tiver uma ID Apple, crie um em [appleid.apple.com](https://appleid.apple.com/account).
+1. Se não tiver uma ID da Apple, [crie uma](https://appleid.apple.com).
 2. Abra o Xcode e navegue até **Xcode > Preferências**.
 3. Em **Contas**, use o botão **+** para adicionar sua ID Apple existente. Deve ter uma aparência semelhante à captura de tela a seguir:
 
-  [![](free-provisioning-images/launchapp1.png "Xcode > Preferências > Contas")](free-provisioning-images/launchapp1.png#lightbox)
+    ![Preferências do Xcode – Contas](free-provisioning-images/launchapp1.png "Preferências do Xcode – Contas")
 
-4. Conecte o dispositivo iOS que deseja implantar e crie um novo projeto do iOS de exibição única em branco no Xcode. Defina a lista suspensa **Equipe** como a ID da Apple que você acabou de adicionar. Ele deve ter um formato semelhante a `your name (Personal Team - your Apple ID)`:
+4. Feche as preferências do Xcode.
+5. Conecte o dispositivo iOS no qual gostaria de implantar o aplicativo.
+6. No Xcode, crie um novo projeto. Escolha **Arquivo > Novo > Projeto** e selecione **Aplicativo de Exibição Única**.
+7. Na caixa de diálogo do novo projeto, defina **Equipe** como a ID da Apple que você acabou de adicionar. Na lista suspensa, ela deve ser semelhante a **Seu nome (Equipe pessoal)**:
 
-  [![](free-provisioning-images/launchapp2.png "Criar a Identidade de Assinatura")](free-provisioning-images/launchapp2.png#lightbox)
+    ![Criar um novo aplicativo](free-provisioning-images/launchapp2.png "Criar um novo aplicativo")
 
-5. Na seção **Geral > Identidade**, certifique-se de que o Identificador de Pacote corresponde _exatamente_ ao Identificador de Pacote de seu aplicativo Xamarin.iOS e verifique se o destino da implantação é igual ou menor que o dispositivo iOS conectado. Esta etapa é extremamente importante, pois o Xcode criará somente um perfil de provisionamento com uma ID do Aplicativo explícita:
+8. Após o novo projeto ter sido criado, escolha um esquema de build do Xcode direcionado para seu dispositivo iOS (em vez de um simulador).
 
-  [![](free-provisioning-images/launchapp5.png "Criar um perfil de provisionamento com uma ID de aplicativo explícito")](free-provisioning-images/launchapp5.png#lightbox)
+    ![Selecionar um esquema de build do Xcode](free-provisioning-images/xcodescheme.png "Selecionar um esquema de build do Xcode")
 
-6. Na seção Assinatura, selecione **Gerenciar Assinatura Automaticamente** e escolha sua equipe na lista suspensa:
+9. Abra as configurações de projeto do aplicativo selecionando seu nó de nível superior no **Navegador de Projeto** do Xcode.
+10. Em **Geral > Identidade**, certifique-se de que o **Identificador de Pacote** _corresponda exatamente_ ao identificador de pacote de seu aplicativo Xamarin.iOS.
 
-  [![](free-provisioning-images/launchapp6.png "Selecione Gerenciar Assinatura Automaticamente e escolha sua equipe na lista suspensa")](free-provisioning-images/launchapp6.png#lightbox)
+    ![Definir um identificador de pacote](free-provisioning-images/launchapp5.png "Definir um identificador de pacote")
 
-7. A etapa anterior gerará automaticamente um perfil de provisionamento e uma identidade de assinatura para você. Você pode exibi-los clicando no ícone de informações ao lado do perfil de provisionamento:
+    > [!IMPORTANT]
+    > O Xcode criará um perfil de provisionamento somente para uma ID do aplicativo explícita, e ela precisa ser idêntica à ID do aplicativo Xamarin.iOS.
+    > Se elas forem diferentes, você não poderá usar o provisionamento gratuito para implantar o aplicativo Xamarin.iOS.
 
-  [![](free-provisioning-images/launchapp7.png "Exibir o perfil de provisionamento")](free-provisioning-images/launchapp7.png#lightbox)
+11. Em **Informações de Implantação**, certifique-se de que o destino da implantação tenha uma versão igual ou inferior à versão do iOS instalada em seu dispositivo iOS conectado.
+12. Em **Assinatura**, selecione **Gerenciar assinatura automaticamente** e selecione sua equipe na lista suspensa:
 
-8. Para testar o Xcode, implante o aplicativo em branco em seu dispositivo ao clicar no botão de execução.
+    ![Gerenciar assinatura automaticamente](free-provisioning-images/launchapp6.png "Gerenciar assinatura automaticamente")
 
-9. Volte para o IDE, com o mesmo dispositivo conectado e clique com o botão direito do mouse no nome do seu projeto Xamarin.iOS para abrir a caixa de diálogo **Opções de Projeto**. Navegue até a seção de Assinatura do Pacote iOS e defina explicitamente sua identidade de assinatura e seu perfil de provisionamento:
+    O Xcode gerará automaticamente um perfil de provisionamento e uma identidade de assinatura para você. Você pode exibi-los clicando no ícone de informações ao lado do perfil de provisionamento:
 
-  [![](free-provisioning-images/launchapp8.png "Definir a identidade de assinatura e o perfil de provisionamento")](free-provisioning-images/launchapp8.png#lightbox)
+    ![Exibir o perfil de provisionamento](free-provisioning-images/launchapp7.png "Exibir o perfil de provisionamento")
 
-Se você não conseguir ver sua identidade de assinatura ou o perfil de provisionamento correto no seu IDE, poderá ser necessário reiniciá-lo.
+    > [!TIP]
+    > Se ocorrer uma falha quando o Xcode tentar gerar um perfil de provisionamento, verifique se o esquema de build do Xcode selecionado atualmente tem como destino o dispositivo iOS conectado em vez de um simulador.
 
+13. Para testar o Xcode, implante o aplicativo em branco em seu dispositivo ao clicar no botão de execução.
 
-## <a name="a-namelimitations-limitations"></a><a name="limitations" />Limitações
+### <a name="deploy-your-xamarinios-app"></a>Implantar seu aplicativo Xamarin.iOS
 
-A Apple impôs uma série de limitações sobre quando e como você pode usar o provisionamento gratuito para executar seu aplicativo em um dispositivo iOS, garantindo que você possa implantar somente no *seu* dispositivo. Elas estão listadas nesta seção.
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-O acesso ao iTunes Connect também é limitado e, portanto, serviços como a publicação na App Store e no TestFlight não estão disponíveis para desenvolvedores que provisionam gratuitamente seus aplicativos. Uma Conta de Desenvolvedor da Apple (Empresarial ou Pessoal) é necessária para distribuir pelos meios Internos e Ad Hoc.
+1. Conecte seu dispositivo iOS ao host de build do Mac via USB ou usando uma conexão [sem fio](~/ios/deploy-test/wireless-deployment.md).
+2. No **Painel de Soluções** do Visual Studio para Mac, clique duas vezes em **Info.plist**.
+3. Em **Assinatura**, selecione **Provisionamento Manual**.
+4. Clique no botão **Assinatura de Pacote do iOS…** .
+5. Em **Configuração**, selecione **Depurar**.
+6. Em **Plataforma**, selecione **iPhone**.
+7. Selecione a **Identidade de Assinatura** criada pelo Xcode.
+8. Selecione o **Perfil de Provisionamento** criado pelo Xcode.
 
-Os Perfis de Provisionamento criados dessa forma expirarão após uma semana e as Identidades de Assinatura depois de um ano. Além disso, os perfis de provisionamento serão criados somente com IDs de Aplicativos explícitos e, portanto, você precisará seguir as instruções [acima](#launching) para cada aplicativo que deseja instalar.
+    ![Definir a identidade de assinatura e o perfil de provisionamento](free-provisioning-images/launchapp8.png "Definir a identidade de assinatura e o perfil de provisionamento")
 
-Também não é possível realizar o provisionamento para a maioria dos serviços de aplicativo com o provisionamento gratuito. Isso inclui:
+    > [!TIP]
+    > Se você não vir sua identidade de assinatura ou o perfil de provisionamento correto, poderá ser necessário reiniciar o Visual Studio para Mac.
 
-- Apple Pay
-- Game Center
-- iCloud
-- Compras no Aplicativo
-- Notificações por Push
-- Wallet (era Passbook)
+9. Clique em **OK** para salvar e fechar as **Opções de Projeto**.
+10. Selecione seu dispositivo iOS e execute o aplicativo.
 
-Uma lista completa é fornecida pela Apple em seu guia de [Recursos com Suporte](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html#//apple_ref/doc/uid/TP40012582-CH38-SW1). Para provisionar seu aplicativo para uso com serviços de aplicativos, visite os guias [Trabalhando com capacidades](~/ios/deploy-test/provisioning/capabilities/index.md).
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
+1. Verifique se o Visual Studio 2017 foi [emparelhado com um host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Conecte seu dispositivo iOS ao host de build do Mac via USB ou usando uma conexão [sem fio](~/ios/deploy-test/wireless-deployment.md).
+3. No **Gerenciador de Soluções** do Visual Studio 2017, clique com o botão direito do mouse no projeto Xamarin.iOS e selecione **Propriedades**.
+4. Navegue até **Assinatura de Pacote do iOS**.
+5. Em **Configuração**, selecione **Depurar**.
+6. Em **Plataforma**, selecione **iPhone**.
+7. Selecione **Provisionamento manual**.
+8. Selecione a **Identidade de Assinatura** criada pelo Xcode.
+9. Selecione o **Perfil de Provisionamento** criado pelo Xcode.
+    
+    ![Definir a identidade de assinatura e o perfil de provisionamento](free-provisioning-images/setprofile-w157.png "Definir a identidade de assinatura e o perfil de provisionamento")
+
+    > [!TIP]
+    > O Xcode criou essa identidade de assinatura e esse perfil de provisionamento e os armazenou em seu host de build do Mac. Eles são acessíveis para o Visual Studio 2017, pois ele foi [emparelhado](~/ios/get-started/installation/windows/connecting-to-mac/index.md) com o host de build do Mac. Se não estiverem listados, talvez você precise reiniciar o Visual Studio 2017.
+
+10. Salve e feche as propriedades do projeto.
+11. Selecione seu dispositivo iOS e execute o aplicativo.
+
+-----
+
+## <a name="limitations"></a>Limitações
+
+A Apple impôs uma série de limitações de quando e como você pode usar o provisionamento gratuito para executar seu aplicativo em um dispositivo iOS, garantindo que você possa implantar somente em *seu* dispositivo:
+
+- O acesso ao iTunes Connect é limitado e, portanto, serviços como a publicação na App Store e no TestFlight não estão disponíveis para desenvolvedores que provisionam seus aplicativos gratuitamente. Uma Conta de Desenvolvedor da Apple (Empresarial ou Pessoal) é necessária para distribuir pelos meios Internos e Ad Hoc.
+- Perfis de provisionamento criados com o provisionamento gratuito expiram após uma semana e as identidades de assinatura após um ano. 
+- Como o Xcode cria perfis de provisionamento somente para IDs de Aplicativos explícitas, você precisará seguir as [instruções acima](#testing-on-device-with-free-provisioning) para cada aplicativo que quiser instalar.
+- Para a maioria dos serviços de aplicativo, não é possível fazer o provisionamento usando o provisionamento gratuito. Isso inclui Apple Pay, Game Center, iCloud, compras no aplicativo, Notificações por Push e Wallet. A Apple fornece uma lista completa de recursos em [Supported capabilities (iOS)](https://help.apple.com/developer-account/#/dev21218dfd6) (Recursos compatíveis [iOS]). Para provisionar seu aplicativo para uso com serviços de aplicativo, visite os guias [Trabalhando com recursos](~/ios/deploy-test/provisioning/capabilities/index.md).
 
 ## <a name="summary"></a>Resumo
 
-Este guia explorou as vantagens e limitações do uso de provisionamento gratuito para instalar aplicativos em um dispositivo iOS. Também percorreu, passo a passo, o uso do provisionamento gratuito para instalar um aplicativo Xamarin.iOS.
+Este guia explorou as vantagens e limitações do uso do provisionamento gratuito para instalar aplicativos em um dispositivo iOS. Ele forneceu uma explicação passo a passo que demonstrou como usar o provisionamento gratuito para instalar um aplicativo Xamarin.iOS.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/index.md)
-- [Provisionando para Serviços de Aplicativos](~/ios/get-started/installation/device-provisioning/index.md#appservices)
+- [Provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md)
+- [Provisionamento para serviços de aplicativo](~/ios/get-started/installation/device-provisioning/index.md#appservices)
