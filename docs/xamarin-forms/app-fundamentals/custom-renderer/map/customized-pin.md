@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4fee67f08e86c40709aa226c40c0f7721dc26800
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998281"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203079"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um Pin de mapa
 
@@ -240,7 +240,7 @@ O `GetViewForAnnotation` método é chamado quando o local da anotação se torn
 O `GetViewForAnnotation` método aceita um `IMKAnnotation` que contém os dados da anotação e retorna um `MKAnnotationView` para exibição no mapa e é mostrado no exemplo de código a seguir:
 
 ```csharp
-MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 {
     MKAnnotationView annotationView = null;
 
@@ -273,12 +273,12 @@ Esse método garante que a anotação será exibida como uma imagem personalizad
 1. O `GetCustomPin` método é chamado para retornar os dados personalizados de pin da anotação.
 1. Para conservar a memória, modo de exibição da anotação é colocado em pool para reutilização com a chamada para [ `DequeueReusableAnnotation` ](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
 1. O `CustomMKAnnotationView` classe estende a `MKAnnotationView` classe com `Id` e `Url` as propriedades que correspondem às propriedades idênticas no `CustomPin` instância. Uma nova instância dos `CustomMKAnnotationView` é criada, desde que a anotação é `null`:
-  - O `CustomMKAnnotationView.Image` estiver definida como a imagem que representará a anotação no mapa.
-  - O `CustomMKAnnotationView.CalloutOffset` estiver definida como um `CGPoint` que especifica que o texto explicativo será centralizado acima a anotação.
-  - O `CustomMKAnnotationView.LeftCalloutAccessoryView` estiver definida como uma imagem de um monkey que será exibido à esquerda do título da anotação e do endereço.
-  - O `CustomMKAnnotationView.RightCalloutAccessoryView` estiver definida como uma *informações* botão aparecerá à direita do título da anotação e do endereço.
-  - O `CustomMKAnnotationView.Id` estiver definida como o `CustomPin.Id` propriedade retornada pelo `GetCustomPin` método. Isso permite que a anotação a ser identificado para que ele tenha [balão pode ser personalizado](#Selecting_the_Annotation), se desejado.
-  - O `CustomMKAnnotationView.Url` estiver definida como o `CustomPin.Url` propriedade retornada pelo `GetCustomPin` método. A URL será direcionada quando o usuário [toca no botão exibido na exibição de acessório texto explicativo certa](#Tapping_on_the_Right_Callout_Accessory_View).
+    - O `CustomMKAnnotationView.Image` estiver definida como a imagem que representará a anotação no mapa.
+    - O `CustomMKAnnotationView.CalloutOffset` estiver definida como um `CGPoint` que especifica que o texto explicativo será centralizado acima a anotação.
+    - O `CustomMKAnnotationView.LeftCalloutAccessoryView` estiver definida como uma imagem de um monkey que será exibido à esquerda do título da anotação e do endereço.
+    - O `CustomMKAnnotationView.RightCalloutAccessoryView` estiver definida como uma *informações* botão aparecerá à direita do título da anotação e do endereço.
+    - O `CustomMKAnnotationView.Id` estiver definida como o `CustomPin.Id` propriedade retornada pelo `GetCustomPin` método. Isso permite que a anotação a ser identificado para que ele tenha [balão pode ser personalizado](#Selecting_the_Annotation), se desejado.
+    - O `CustomMKAnnotationView.Url` estiver definida como o `CustomPin.Url` propriedade retornada pelo `GetCustomPin` método. A URL será direcionada quando o usuário [toca no botão exibido na exibição de acessório texto explicativo certa](#Tapping_on_the_Right_Callout_Accessory_View).
 1. O [ `MKAnnotationView.CanShowCallout` ](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) estiver definida como `true` para que o texto explicativo seja exibido quando a anotação é tocada.
 1. A anotação é retornada para a exibição do mapa.
 
