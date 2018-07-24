@@ -310,6 +310,7 @@
 ## [Conceitos avançados e recursos internos](internals/index.md)
 ### [Renderizadores Rápidos](internals/fast-renderers.md)
 ### [.NET Standard](internals/net-standard.md)
+### [Resolução de dependência](internals/dependency-resolution.md)
 ## [Solução de problemas](troubleshooting/index.md)
 ### [Perguntas frequentes](troubleshooting/questions/index.md)
 #### [Posso atualizar o modelo padrão Xamarin.Forms para um pacote NuGet mais recente?](troubleshooting/questions/update-forms-template.md)
