@@ -1,34 +1,34 @@
 ---
-title: Controles deslizantes, comutadores e controles segmentados em xamarin
-description: Este documento aborda slides, comutadores e controles segmentados em xamarin, que descreve como trabalhar com eles por meio de programação e o Designer do iOS.
+title: Controles deslizantes, comutadores e controles segmentados no xamarin. IOS
+description: Este documento discute slides, comutadores e controles segmentados em xamarin. IOS, que descrevem como trabalhar com eles por meio de programação e o Designer do iOS.
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 09a5d9e76c41eba4e16cab041daa67d3a5d8a584
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7df79cb6f225326dda6656fa9dfe9534e35f2457
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790023"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241985"
 ---
-# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, comutadores e controles segmentados em xamarin
+# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, comutadores e controles segmentados no xamarin. IOS
 
 <a name="Sliders" />
 
 ## <a name="sliders"></a>Controles deslizantes
 
-O controle deslizante permite simples seleção de um valor numérico em um intervalo. O padrão para um valor entre 0 e 1, mas esses limites podem ser personalizados.
+Permite o controle deslizante simples seleção de um valor numérico em um intervalo. O controle padrão é um valor entre 0 e 1, mas esses limites podem ser personalizados.
 
  [![](slider-switch-segmented-controls-images/image25a.png "Controle deslizante")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 Captura de tela a seguir mostra as propriedades que podem ser editadas no Designer:
 
- [![](slider-switch-segmented-controls-images/image26a.png "Propriedades de controle deslizante")](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image26a.png "Propriedades do controle deslizante")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
-Você pode definir esses valores no código conforme mostrado abaixo, incluindo fiação um manipulador para exibir o valor selecionado em um `UILabel` controle:
+Você pode definir esses valores no código, conforme mostrado abaixo, incluindo conectando um manipulador para exibir o valor selecionado no momento em um `UILabel` controle:
 
 ```csharp
 slider1.MinValue = -1;
@@ -50,21 +50,21 @@ O controle deslizante personalizado tem esta aparência:
  [![](slider-switch-segmented-controls-images/image27a.png "Controle deslizante personalizado")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Atualmente, há um [bug](http://stackoverflow.com/a/19496179) fazendo com que o `ThumbTint` para não processar em tempo de execução, conforme o esperado. Você pode adicionar a seguinte linha de código **antes de** o código acima como uma solução alternativa. [[Fonte](http://stackoverflow.com/a/21396794)]:
+> Atualmente, há uma [bug](http://stackoverflow.com/a/19496179) causando o `ThumbTint` para não processar em tempo de execução, conforme o esperado. Você pode adicionar a seguinte linha de código **antes de** o código acima como uma solução alternativa. [[Origem](http://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
-> Você pode usar qualquer imagem, como ele será substituído, mas verifique se ele é colocado _na_ diretório de recursos e é chamado em seu código.
+> Você pode usar qualquer imagem, pois ele será substituído, mas verifique se ele é colocado _em_ o diretório de recursos e é chamado em seu código.
 
 <a name="Switch" />
 
 ## <a name="switch"></a>Alternar
 
-iOS usa o `UISwitch` um booliano que pode ser representado por um botão de opção em outras plataformas de entrada. O usuário pode manipular o controle movendo o *thumb* entre o **ativar/desativar** posições.
+o iOS usa o `UISwitch` como um valor booliano que pode ser representado por um botão de opção em outras plataformas de entrada. O usuário pode manipular o controle, movendo o *thumb* entre o **ativar/desativar** posições.
 
  [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
-Personalizar a aparência do comutador no **propriedades de preenchimento** do designer, o que permitirá a você controlar o estado padrão, **ativar/desativar tonalidade** cores e uma **on/off imagem**. Isso é ilustrado na imagem abaixo:
+A aparência do comutador pode ser personalizada do **painel de propriedades** do designer, que permitirá a você controlar o estado padrão, **ativar/desativar tonalidade** cores e uma **on/off imagem**. Isso é ilustrado na imagem abaixo:
 
  [![](slider-switch-segmented-controls-images/image29a.png "Propriedades do comutador")](slider-switch-segmented-controls-images/image29a.png#lightbox)
 
@@ -79,7 +79,7 @@ switch1.On = true;
 
 ## <a name="segmented-controls"></a>Controles segmentados
 
-Um controle segmentado é uma maneira organizada para permitir que os usuários interajam com um pequeno número de opções. Está disposto horizontalmente e cada segmento funciona como um botão separado. Ao usar o Designer, o controle segmentado podem ser encontrado em **Ferramentas > controles**e deve ser semelhante a imagem a seguir:
+Um controle segmentado é uma maneira organizada para permitir que os usuários interajam com um pequeno número de opções. Ele é disposto horizontalmente e cada segmento funciona como um botão separado. Ao usar o Designer, o controle segmentado podem ser encontrado em **caixa de ferramentas > controles**e deve se parecer com a imagem a seguir:
 
  [![](slider-switch-segmented-controls-images/segmentedcontrol.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
 
@@ -87,13 +87,13 @@ Permite que um recurso exclusivo do Designer para cada segmento a ser selecionad
 
  [![](slider-switch-segmented-controls-images/segmentedcontrolselection.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
 
-Isso permite que o painel de propriedades a serem usadas para controlar com mais precisão as propriedades de cada segmento. Você pode ver as propriedades editáveis na captura de tela abaixo:
+Isso permite que o painel de propriedades a ser usado para controlar com mais precisão as propriedades de cada segmento. Você pode ver as propriedades editáveis na captura de tela abaixo:
 
  [![](slider-switch-segmented-controls-images/segmentedcontrolproperties.png "Controle segmentado")](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
 
-Deve-se observar que o estilo de controle segmentado foi preterido no iOS7 e, portanto, ajustar as opções para isso em um aplicativo iOS7 não terá efeito.
+Ele deve observar que o estilo de controle segmentado foi preterido no iOS7 e, portanto, ajuste as opções para isso em um aplicativo iOS7 não terá efeito.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Controles (exemplo)](https://developer.xamarin.com/samples/Controls/)
-- [Controlador de alerta](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/)
+- [Controles (amostra)](https://developer.xamarin.com/samples/Controls/)
+- [Controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)
