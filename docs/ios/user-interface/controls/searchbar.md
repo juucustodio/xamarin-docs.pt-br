@@ -1,34 +1,34 @@
 ---
-title: Barras de pesquisa no xamarin
-description: Este documento descreve como usar barras de pesquisa em xamarin. Ele discute como criar barras de pesquisa e programaticamente em um storyboard.
+title: Barras de pesquisa no xamarin. IOS
+description: Este documento descreve como usar as barras de pesquisa no xamarin. IOS. Ele aborda como criar barras de pesquisa por meio de programação e em um storyboard.
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: cd78c58ecb119c437296a0befe1d319d8837edae
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: fdd9fe647f1a2f63b2a86a64ad92d1e71d6fcd2e
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789919"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242073"
 ---
-# <a name="search-bars-in-xamarinios"></a>Barras de pesquisa no xamarin
+# <a name="search-bars-in-xamarinios"></a>Barras de pesquisa no xamarin. IOS
 
 O UISearchBar é usado para pesquisar por meio de uma lista de valores. 
 
 Ele contém três componentes principais: 
 
-- Um campo usado para inserir texto. Os usuários podem usar essa opção para inserir seu termo de pesquisa.
+- Um campo usado para inserir texto. Os usuários podem utilizar essa opção para inserir seu termo de pesquisa.
 - Um botão Limpar, remover qualquer texto do campo de pesquisa.
-- Um botão Cancelar, para a função de pesquisa de saída.
+- Um botão Cancelar, para a função de pesquisa de sair.
 
 ![Barra de pesquisa](searchbar-images/image1.png)
 
 ## <a name="implementing-the-search-bar"></a>Implementando a barra de pesquisa
 
-Para implementar o início da barra de pesquisa, criando um novo:
+Para implementar o início da barra de pesquisa pela instanciação de um novo:
 
 ```csharp
 searchBar = new UISearchBar();
@@ -65,7 +65,7 @@ searchBar.SearchButtonClicked += (sender, e) => {
             };
 ```
 
-Para obter informações sobre como gerenciar a apresentação da barra de pesquisa e os resultados de pesquisa, consulte o [pesquisa controlador ](https://developer.xamarin.com/recipes/ios/content_controls/search-controller/) receita.
+Para obter informações sobre como gerenciar a apresentação dos resultados da pesquisa e barra de pesquisa, consulte o [pesquisa controlador ](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) receita.
 
 ## <a name="using-the-search-bar-in-the-designer"></a>Usando a barra de pesquisa no Designer
 
@@ -74,28 +74,28 @@ O Designer oferece duas opções para a implementação de uma barra de pesquisa
 - Barra de pesquisa
 - Barra de pesquisa com o controlador de exibição de pesquisa (preterido)
 
-![Controles de barra de pesquisa no designer](searchbar-images/image2.png)
+![Controles da barra de pesquisa no designer](searchbar-images/image2.png)
 
 Use o painel de propriedade para definir propriedades na barra de pesquisa
 
-![Designer de propriedades de barra de pesquisa](searchbar-images/image3.png)
+![Designer de propriedades da barra de pesquisa](searchbar-images/image3.png)
 
 Essas propriedades são explicadas abaixo:
 
-- **Prompt de texto, o espaço reservado,** – essas propriedades são usadas para sugerir e instruir como os usuários devem usar a barra de pesquisa. Por exemplo, se seu aplicativo exibida uma lista de repositórios você pode usar a propriedade prompt para informar que os usuários podem "inserir uma cidade, nome de texto ou código postal"
-- **Pesquisar estilo** – você pode definir a barra de pesquisa para ser **Prominent** ou **mínimo**. Usar o proeminentes será tonalizar tudo na tela, exceto para a pesquisa de barras, fazendo com que o foco seja desenhada para a barra de pesquisa. A barra de pesquisa de estilo mínimo serão mesclados com seu ambiente.
-- **Recursos** – habilitar essas propriedades exibe apenas o elemento de interface do usuário. A funcionalidade deve ser implementada para esses, gerando o evento correto, conforme detalhado no [documentos de API de barra de pesquisa](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
-    - Mostra os resultados da pesquisa / botão Marcadores – mostra um ícone de resultados de pesquisa ou indicadores na barra de pesquisa
+- **Prompt de texto, o espaço reservado,** – essas propriedades são usadas para sugerir e instruir como os usuários devem usar a barra de pesquisa. Por exemplo, se seu aplicativo exibida uma lista de repositórios você poderia usar a propriedade prompt para aconselha que os usuários podem "inserir uma cidade, o nome de história ou o código postal"
+- **Estilo de pesquisa** – você pode definir a barra de pesquisa para ser **Prominent** ou **mínimo**. Usar o destaque será tonalizar tudo na tela, exceto para a barra de pesquisa, fazendo com que o foco a ser desenhado à barra de pesquisa. A barra de pesquisa de estilo mínimo será mescla com seu ambiente.
+- **Recursos** – permitindo que essas propriedades exibe apenas o elemento de interface do usuário. A funcionalidade deve ser implementada para eles, gerando o evento correto conforme detalhado no [documentos de API da barra de pesquisa](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
+    - Mostra os resultados da pesquisa / indicadores botão – será exibido um ícone de resultados de pesquisa ou indicadores na barra de pesquisa
     - Mostra o botão Cancelar – permite que os usuários para sair a função de pesquisa. É recomendável que essa opção é selecionada.
-    - Mostra a barra de escopo – Isso permite que os usuários limitar o escopo da pesquisa. Por exemplo, ao pesquisar no aplicativo de música o usuário pode selecionar se desejam pesquisar Apple música ou sua biblioteca de música específica ou artista. Para exibir várias opções, adicione uma matriz de títulos para o **ScopeBarTitles** propriedade.
+    - Mostra a barra de escopo – Isso permite que os usuários limitar o escopo da pesquisa. Por exemplo, ao pesquisar no aplicativo de música o usuário pode selecionar se desejarem pesquisar Apple Music ou sua biblioteca para uma determinada música ou artista. Para exibir várias opções, adicione uma matriz de títulos para o **ScopeBarTitles** propriedade.
     ![Títulos de escopo de barra de pesquisa](searchbar-images/image4.png)
 
-- **O comportamento do texto** – essas opções são usadas para tratar como a entrada do usuário é formatada quando eles são digitando. Capitalização definirá o início de cada palavra ou frase, ou todos os caracteres como letras maiusculas. Correção e verificação ortográfica com solicitam ao usuário grafias sugeridos de palavras como tipo por eles.
-- **Teclado** – controla o estilo de teclado exibido para a entrada e, portanto, quais chaves estão disponíveis no teclado. Isso inclui o número preenchimento, preenchimento de telefone, Email, URL junto com outras opções.
-- **Aparência** – controla o estilo de aparência do teclado e serão ambos escuro ou claro com tema.
-- **Retorna a chave** – alterar o rótulo na chave de retorno para refletir melhor a ação que será executada. Valores com suporte incluem Go, junção, Avançar, rota, concluído e a pesquisa.
-- **Proteger** – indica se a entrada é mascarada (como uma entrada de senha).
+- **Comportamento de texto** – essas opções são usadas para tratar como a entrada do usuário é formatada quando eles estão digitando. Capitalização definirá o início de cada palavra ou frase, ou todos os caracteres como letras maiusculas. Correção e verificação ortográfica com solicitar que o usuário ortografias sugeridas de palavras enquanto digitam.
+- **Teclado** – o estilo de teclado de controles exibidos para a entrada e, portanto, quais teclas estão disponíveis no teclado. Isso inclui o teclado de número, teclado do telefone, Email, URL junto com outras opções.
+- **Aparência** – controla o estilo de aparência do teclado e serão ambos escuro ou tema de luz.
+- **Retornar a chave** – alterar o rótulo em que a tecla Return para refletir melhor a ação que será executada. Valores com suporte incluem Go, junção, Avançar, rota, feito e pesquisa.
+- **Proteger** – identifica se a entrada é mascarada (por exemplo, para uma entrada de senha).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Controlador de pesquisa](https://developer.xamarin.com/recipes/ios/content_controls/search-controller/)
+- [Controlador de pesquisa](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller)

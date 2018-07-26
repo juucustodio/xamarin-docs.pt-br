@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: f6ca8f0900c8bc325cc49a7484dabe5bf2534257
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7f0e1c27f7d6a62dc43ac447c4f796d685a6cd91
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999052"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241205"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
@@ -91,7 +91,7 @@ Na Universal Windows Platform (UWP), as orientações com suporte são definidas
 
 ## <a name="reacting-to-changes-in-orientation"></a>Reagir a alterações na orientação
 
-Xamarin. Forms não oferece quaisquer eventos nativos para notificar seu aplicativo de alterações de orientação no código compartilhado. No entanto, o `SizeChanged` eventos do `Page` é acionada quando a largura ou altura do `Page` alterações. Quando a largura do `Page` é maior que a altura, o dispositivo estiver no modo paisagem. Para obter mais informações, consulte [exibir uma imagem com base na orientação da tela](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/).
+Xamarin. Forms não oferece quaisquer eventos nativos para notificar seu aplicativo de alterações de orientação no código compartilhado. No entanto, o `SizeChanged` eventos do `Page` é acionada quando a largura ou altura do `Page` alterações. Quando a largura do `Page` é maior que a altura, o dispositivo estiver no modo paisagem. Para obter mais informações, consulte [exibir uma imagem com base na orientação da tela](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
 
 > [!NOTE]
 > Há um pacote de NuGet existente e gratuito para receber notificações de alterações de orientação no código compartilhado. Consulte a [repositório GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) para obter mais informações.
@@ -475,4 +475,4 @@ Observe o seguinte:
 - [Layout (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [Exemplo de BusinessTumble (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
 - [Layout dinâmico (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
-- [Exibir uma imagem com base na orientação da tela](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)
+- [Exibir uma imagem com base na orientação da tela](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2017
-ms.openlocfilehash: 292b0814cba446c97042ba1fe52ad9414ba74760
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: ac9a90373878035ffa8ac0be9da8993bf189b6b3
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203053"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241247"
 ---
 # <a name="advanced-concepts--internals"></a>Conceitos avançados e recursos internos
 
@@ -26,4 +26,4 @@ Este artigo explica como converter um aplicativo xamarin. Forms para usar o .NET
 
 ## <a name="dependency-resolutiondependency-resolutionmd"></a>[Resolução de dependência](dependency-resolution.md)
 
-Este artigo explica como injetar um método de resolução de dependência em xamarin. Forms, para que o contêiner de injeção de dependência do aplicativo tem controle sobre a construção e o tempo de vida de renderizadores personalizados, efeitos, e `DependencyService` implementações.
+Este artigo explica como injetar um método de resolução de dependência em xamarin. Forms para que o contêiner de injeção de dependência do aplicativo tem controle sobre a construção e o tempo de vida de renderizadores personalizados, efeitos, e `DependencyService` implementações.

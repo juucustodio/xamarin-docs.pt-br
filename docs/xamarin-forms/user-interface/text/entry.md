@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/16/2018
-ms.openlocfilehash: 57304f2f07a0834c31e32bb89a4742a2de7e861c
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: 272887f0abb0785f959c542e65789d7645a583f1
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202988"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241219"
 ---
 # <a name="xamarinforms-entry"></a>Entrada do xamarin. Forms
 
@@ -84,7 +84,7 @@ O código c# equivalente é:
 var entry = new Entry { Keyboard = Keyboard.Chat };
 ```
 
-Exemplos de cada teclado podem ser encontrados em nossa [receitas](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) repositório.
+Exemplos de cada teclado podem ser encontrados em nossa [receitas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) repositório.
 
 O [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe também tem uma [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) método de fábrica que pode ser usado para personalizar um teclado, especificando o comportamento de letras maiusculas, verificação ortográfica e sugestão. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) valores de enumeração conforme especificado como argumentos para o método, com um personalizado `Keyboard` que está sendo retornado. O `KeyboardFlags` enumeração contém os seguintes valores:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: f0b21277b91c44edbb574aece92664de2e49a65a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4715685fdf417ba2d08f9ae3d36d6e691fa701fa
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996354"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242453"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementar um HybridWebView
 
@@ -488,4 +488,4 @@ Este artigo demonstrou como criar um renderizador personalizado para um `HybridW
 ## <a name="related-links"></a>Links relacionados
 
 - [CustomRendererHybridWebView (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
-- [Chamada de c# do JavaScript](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript/)
+- [Chamada de c# do JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
