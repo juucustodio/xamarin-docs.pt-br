@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 1292db3534570dace90639958a3d5be9f6466716
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 886cc1de87bd8225bd0389d2e7b84b546ffb39d7
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765240"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241491"
 ---
 # <a name="gdb"></a>GDB
 
@@ -145,7 +145,7 @@ O suporte a `gdb` requer três coisas:
 2.  Depuração de Aplicativo habilitada.
 3.  Um `gdbserver` acessível.
 
-A permissão `INTERNET` é habilitada por padrão em aplicativos de depuração. Se ela não ainda estiver presente no seu aplicativo, você poderá adicioná-la editando **Properties/AndroidManifest.xml** ou editando as [Propriedades do Projeto](https://developer.xamarin.com/recipes/android/general/projects/add_permissions_to_android_manifest/).
+A permissão `INTERNET` é habilitada por padrão em aplicativos de depuração. Se ela não ainda estiver presente no seu aplicativo, você poderá adicioná-la editando **Properties/AndroidManifest.xml** ou editando as [Propriedades do Projeto](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
 A depuração de aplicativo pode ser habilitada configurando a propriedade de atributo personalizado [ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/) para `true`, ou editando **Properties/AndroidManifest.xml** e definindo o atributo `//application/@android:debuggable` para `true`:
 

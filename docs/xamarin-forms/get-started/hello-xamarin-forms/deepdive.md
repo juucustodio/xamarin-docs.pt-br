@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: f51992ec5311bdf0c7df7478651398f6ed8491a9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7eff7f4413b533caadcf2aa8b5eed8c4ab65449d
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996227"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242219"
 ---
 # <a name="xamarinforms-deep-dive"></a>Aprofundamento no Xamarin.Forms
 
@@ -79,7 +79,7 @@ O projeto também consiste em vários arquivos:
 - **MainPage.xaml.cs** – o code-behind para a classe `MainPage`, que contém a lógica de negócios executada quando o usuário interage com a página.
 - **PhoneTranslator.cs** – a lógica de negócios responsável por converter uma palavra de telefone em um número de telefone, que é invocado de **MainPage.xaml.cs**.
 
-Para saber mais sobre a anatomia de um aplicativo Xamarin.iOS, consulte [Anatomia de um aplicativo Xamarin.iOS](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy). Para saber mais sobre a anatomia de um aplicativo Xamarin.Android, consulte [Anatomia de um aplicativo Xamarin.Android](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy).
+Para saber mais sobre a anatomia de um aplicativo Xamarin.iOS, consulte [Anatomia de um aplicativo Xamarin.iOS](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy-of-a-xamarinios-application). Para saber mais sobre a anatomia de um aplicativo Xamarin.Android, consulte [Anatomia de um aplicativo Xamarin.Android](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy).
 
 ## <a name="architecture-and-application-fundamentals"></a>Arquitetura e conceitos básicos de aplicativo
 
@@ -325,7 +325,7 @@ O aplicativo Phoneword para Xamarin.Forms introduziu vários conceitos não abor
 
 ## <a name="testing-and-deployment"></a>Teste e implantação
 
-Tanto o Visual Studio para Mac quanto o Visual Studio oferecem várias opções para testar e implantar um aplicativo. Depurar aplicativos é uma parte comum do ciclo de vida de desenvolvimento de aplicativo e ajuda a diagnosticar problemas de código. Para saber mais, consulte [Definir um ponto de interrupção](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/), [Percorrer o código](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/) e [Enviar as informações para a janela de log](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/).
+Tanto o Visual Studio para Mac quanto o Visual Studio oferecem várias opções para testar e implantar um aplicativo. Depurar aplicativos é uma parte comum do ciclo de vida de desenvolvimento de aplicativo e ajuda a diagnosticar problemas de código. Para saber mais, consulte [Definir um ponto de interrupção](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [Percorrer o código](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) e [Enviar as informações para a janela de log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
 Simuladores são um bom lugar para começar a implantar e testar um aplicativo e eles apresentam recursos úteis para testar aplicativos. No entanto, os usuários não consumirão o aplicativo final em um simulador, assim, os aplicativos devem ser testados em dispositivos reais antecipadamente e com frequência. Para saber mais sobre o provisionamento de dispositivo iOS, consulte [Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/index.md). Para saber mais sobre o provisionamento de dispositivo Android, consulte [Configurar o dispositivo para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md).
 

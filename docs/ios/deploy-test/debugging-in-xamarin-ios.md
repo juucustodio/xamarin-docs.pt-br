@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 494dfad0ba3d26147604ce1bca1de49fac318811
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4b21a69e49c8c7fd79de8edac9858c4714657f1c
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785428"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242310"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
@@ -30,7 +30,7 @@ O depurador Xamarin.iOS usa o [Depurador Flexível Mono](http://www.mono-project
 
 ## <a name="setting-breakpoints"></a>Configuração de pontos de interrupção
 
-Quando estiver pronto para iniciar a depuração de seu aplicativo, a primeira etapa é [definir pontos de interrupção em seu aplicativo](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). Isso é feito clicando na área de margem do editor, ao lado do número de linha de código em que você deseja interromper:
+Quando estiver pronto para iniciar a depuração de seu aplicativo, a primeira etapa é [definir pontos de interrupção em seu aplicativo](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Isso é feito clicando na área de margem do editor, ao lado do número de linha de código em que você deseja interromper:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -121,7 +121,7 @@ Então você pode inserir a condição sob a qual você deseja que o ponto de in
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Para definir um ponto de interrupção condicional no Visual Studio 2015, primeiro [defina um ponto de interrupção regular](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). Clique com o botão direito do mouse no ponto de interrupção para exibir seu menu de contexto:
+Para definir um ponto de interrupção condicional no Visual Studio 2015, primeiro [defina um ponto de interrupção regular](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Clique com o botão direito do mouse no ponto de interrupção para exibir seu menu de contexto:
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "O menu de contexto do ponto de interrupção")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
@@ -241,6 +241,6 @@ Depois de fazer isso, você pode iniciar o aplicativo e intervir em qualquer uma
 
 - [Depuração com Xamarin](/visualstudio/mac/debugging/)
 - [Visualizações de dados](/visualstudio/mac/data-visualizations/)
-- [Definir um Ponto de Interrupção](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)
-- [Percorrer o Código](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/)
-- [Informações de Saída para a Janela de Log](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)
+- [Definir um Ponto de Interrupção](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
+- [Percorrer o Código](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)
+- [Informações de Saída para a Janela de Log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)
