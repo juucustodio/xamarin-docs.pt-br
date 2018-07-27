@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/23/2018
-ms.openlocfilehash: 8235b6fb5fda2a414cf192dd66007d1d02f232aa
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2379c8ddc4bea6dd97bc4febd055dd8dfef39beb
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242375"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270482"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Resolução de dependência no xamarin. Forms
 
@@ -111,7 +111,7 @@ Quando um aplicativo usa um método de resolução de dependência para resolver
 
 Após o registro de tipo de um projeto de plataforma, o `IContainer` objeto deve ser criado, o que é realizado chamando o `BuildContainer` método. Este método invoca do Autofac `Build` método no `ContainerBuilder` instância, que cria um novo contêiner de injeção de dependência que contém os registros que foram feitos.
 
-Nas seções a seguirem, uma `Logger` classe, que implementa o `ILogger` interface, é injetado em construtores de classe. O `Logger` classe implementa o log simples funcionalidade usando o `Debug.WriteLine` método e é usado para demonstrar como os serviços possam ser injetados em renderizadores personalizados, efeitos, e [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) implementações.
+Nas seções a seguirem, uma `Logger` classe que implementa o `ILogger` interface é injetado em construtores de classe. O `Logger` classe implementa o log simples funcionalidade usando o `Debug.WriteLine` método e é usado para demonstrar como os serviços possam ser injetados em renderizadores personalizados, efeitos, e [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) implementações.
 
 ### <a name="registering-custom-renderers"></a>Registrando renderizadores personalizados
 

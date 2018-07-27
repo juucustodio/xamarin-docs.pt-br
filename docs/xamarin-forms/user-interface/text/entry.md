@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/16/2018
-ms.openlocfilehash: 272887f0abb0785f959c542e65789d7645a583f1
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 5ccd2a653e5190df11a58477905e868b25878e44
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241219"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270106"
 ---
 # <a name="xamarinforms-entry"></a>Entrada do xamarin. Forms
 
@@ -86,7 +86,7 @@ var entry = new Entry { Keyboard = Keyboard.Chat };
 
 Exemplos de cada teclado podem ser encontrados em nossa [receitas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) repositório.
 
-O [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe também tem uma [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) método de fábrica que pode ser usado para personalizar um teclado, especificando o comportamento de letras maiusculas, verificação ortográfica e sugestão. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) valores de enumeração conforme especificado como argumentos para o método, com um personalizado `Keyboard` que está sendo retornado. O `KeyboardFlags` enumeração contém os seguintes valores:
+O [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe também tem uma [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) método de fábrica que pode ser usado para personalizar um teclado, especificando o comportamento de letras maiusculas, verificação ortográfica e sugestão. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) valores de enumeração são especificados como argumentos para o método, com um personalizado `Keyboard` que está sendo retornado. O `KeyboardFlags` enumeração contém os seguintes valores:
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – Não há recursos são adicionados ao teclado.
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – indica que a primeira letra da primeira palavra de cada frase inserida serão automaticamente maiusculas.

@@ -1,150 +1,140 @@
 ---
 title: Visão geral do código do compartilhamento
-description: 'Este documento compara os diferentes métodos de compartilhamento de código entre projetos de plataforma cruzada: projetos compartilhados, bibliotecas de classes portáteis e .NET padrão, incluindo as vantagens e desvantagens de cada um.'
+description: 'Este documento compara os diferentes métodos de compartilhar código entre projetos de plataforma cruzada: projetos compartilhados, bibliotecas de classes portáteis e .NET Standard, incluindo as vantagens e desvantagens de cada um.'
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
-author: asb3993
-ms.author: amburns
-ms.date: 03/23/2017
-ms.openlocfilehash: 37b6465c06361f8e33c0ed191d08dbcc22cb16ce
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: conceptdev
+ms.author: crdun
+ms.date: 07/18/2018
+ms.openlocfilehash: 82a73619e4c0507e8857cc91d88ababa870013de
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781418"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270466"
 ---
 # <a name="sharing-code-overview"></a>Visão geral do código do compartilhamento
 
-_Este documento compara os diferentes métodos de compartilhamento de código entre projetos de plataforma cruzada: projetos compartilhados, bibliotecas de classes portáteis e .NET padrão, incluindo as vantagens e desvantagens de cada um._
+_Este documento compara os diferentes métodos de compartilhar código entre projetos de plataforma cruzada: .NET Standard, projetos compartilhados e bibliotecas de classes portáteis, incluindo as vantagens e desvantagens de cada um._
 
-Há três métodos alternativos para compartilhar código entre aplicativos de plataforma cruzada:
+Há três métodos para compartilhar código entre aplicativos de plataforma cruzada:
 
--   [**Projetos compartilhados** ](#Shared_Projects) – o tipo de projeto de ativo compartilhado usado para organizar seu código-fonte e usar diretivas de compilador #if conforme necessário para gerenciar os requisitos de plataforma específica.
--   [**Bibliotecas de classes portáteis** ](#Portable_Class_Libraries) – criar direcionar uma biblioteca de classe portátil (PCL) as plataformas que você deseja dar suporte e usar Interfaces para fornecer a funcionalidade específica de plataforma.
--   [**Bibliotecas padrão do .NET** ](#Net_Standard) – projetos .NET padrão funcionam da mesma forma para PCLs, exigir o uso de Interfaces para inserir a funcionalidade específica de plataforma.
+- [**.NET standard Libraries** ](#Net_Standard) – projetos do .NET Standard pode implementar código sejam compartilhadas entre várias plataformas e pode acessar um grande número de APIs do .NET (dependendo da versão). Conjuntos de implementar de standard 1.0-1.6 do .NET cada vez maior de APIs, enquanto o .NET Standard 2.0 fornece a melhor cobertura do.
+- [**Projetos compartilhados** ](#Shared_Projects) – Use o tipo de projeto de ativo compartilhado para organizar seu código-fonte e usar `#if` diretivas de compilador conforme necessário para gerenciar os requisitos específicos da plataforma.
+- [**Bibliotecas de classes portáteis** ](#Portable_Class_Libraries) (preterido) – bibliotecas de classes portáteis (PCLs) pode direcionar várias plataformas com uma superfície de API comum e usar Interfaces para fornecer a funcionalidade específica da plataforma. PCLs são preteridas nas versões mais recentes do Visual Studio &ndash; usar em vez disso, o .NET Standard.
 
-A meta de uma estratégia de compartilhamento de código é dar suporte a arquitetura mostrada neste diagrama, em que uma única base de código pode ser utilizado pelas várias plataformas.
+O objetivo de uma estratégia de compartilhamento de código é dar suporte a arquitetura mostrada neste diagrama, em que uma única base de código pode ser utilizado pelas várias plataformas.
 
- ![](code-sharing-images/conceptualarchitecture.png "Arquitetura de aplicativos de código compartilhado")
+ ![Compartilhado a arquitetura de aplicativos de código](code-sharing-images/conceptualarchitecture.png "compartilhado a arquitetura de aplicativos de código")
 
-Este artigo compara os três métodos para ajudar a escolher o tipo de projeto certo para seus aplicativos.
+Este artigo compara os métodos disponíveis para ajudá-lo a escolher o tipo de projeto certo para seus aplicativos.
+
+<a name="Net_Standard" />
+
+## <a name="net-standard-libraries"></a>Bibliotecas do .NET standard
+
+[.NET standard](~/cross-platform/app-fundamentals/net-standard.md) bibliotecas fornecem um conjunto bem definido de bibliotecas de classes base que pode ser referenciado em diferentes tipos de projeto, incluindo projetos de plataforma cruzada como xamarin. Android e xamarin. IOS. .NET standard 2.0 é recomendada para compatibilidade máxima com o código existente do .NET Framework.
+
+![Diagrama do .NET standard](code-sharing-images/netstandard.png "diagrama .NET Standard")
+
+### <a name="benefits"></a>Benefícios
+
+- Permite que você compartilhe código entre vários projetos.
+- Operações de refatoração sempre atualizam referências de todos os afetados.
+- Uma área de superfície maior do .NET Base classe Library (BCL) está disponível que os perfis PCL. Em particular, o .NET Standard 2.0 tem quase a mesma superfície de API do .NET Framework e é recomendado para novos aplicativos e portabilidade PCLs existentes.
+
+### <a name="disadvantages"></a>Desvantagens
+
+- Não é possível usar diretivas de compilador, como `#if __IOS__`.
+
+### <a name="remarks"></a>Comentários
+
+O .NET standard é [semelhante à PCL](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries), mas com um modelo mais simples para suporte de plataforma e um número maior de classes da BCL.
 
 <a name="Shared_Projects" />
 
 ## <a name="shared-projects"></a>Projetos compartilhados
 
-A abordagem mais simples para o compartilhamento de arquivos de código é usar um [projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
+[Projetos compartilhados](~/cross-platform/app-fundamentals/shared-projects.md) contêm arquivos de código e ativos que são incluídos em qualquer projeto que faz referência a eles. Projetos de compartilhamento não produzem saída compilada por conta própria.
 
-Esta captura de tela mostra um arquivo de solução que contém três projetos de aplicativo (para o Android, iOS e Windows Phone), com um **compartilhado** projeto que contém comuns c# arquivos código-fonte:
+Esta captura de tela mostra um arquivo de solução contendo três projetos de aplicativo (para Android, iOS e Windows), com um **compartilhado** projeto que contém a comum c# arquivos de código fonte:
 
- ![](code-sharing-images/sharedsolution.png "Solução de projeto compartilhado")
+![Solução de projeto compartilhado](code-sharing-images/sharedsolution.png "solução de projeto compartilhado")
 
-A arquitetura conceitual é mostrada no diagrama a seguir, onde cada projeto inclui todos os arquivos de origem compartilhada:
+A arquitetura conceitual é mostrada no diagrama a seguir, onde cada projeto inclui todos os arquivos de código-fonte compartilhado:
 
- ![](code-sharing-images/sharedassetproject.png "Diagrama de projeto de compartilhado")
-
+![Diagrama de projeto compartilhado](code-sharing-images/sharedassetproject.png "diagrama de projeto compartilhado")
 
 ### <a name="example"></a>Exemplo
 
-Um aplicativo de plataforma cruzada que dá suporte a iOS, Android e Windows Phone exigiria um projeto de aplicativo para cada plataforma. O código comum reside no projeto compartilhado.
+Um aplicativo de plataforma cruzada que oferece suporte a iOS, Android e Windows exigiria um projeto de aplicativo para cada plataforma. O código comum reside no projeto compartilhado.
 
-Uma solução de exemplo conterá as seguintes pastas e projetos (nomes de projeto foi escolhido para expressividade, seus projetos não precisará seguir estas diretrizes de nomenclatura):
+Um exemplo de solução conteria as pastas e os projetos (nomes de projeto foi escolhido para expressividade, seus projetos não precisa seguir essas diretrizes de nomenclatura) a seguir:
 
--   **Compartilhado** – projeto compartilhado que contém o código comum a todos os projetos.
--   **AppAndroid** – projeto de aplicativo xamarin.
--   **AppiOS** – projeto de aplicativo xamarin.
--   **AppWinPhone** – projeto de aplicativo do Windows Phone.
+- **Compartilhado** – projeto compartilhado que contém o código comum a todos os projetos.
+- **AppAndroid** – projeto de aplicativo do xamarin. Android.
+- **AppiOS** – projeto de aplicativo do xamarin. IOS.
+- **AppWindows** – projeto de aplicativo do Windows.
 
-
-Dessa forma os projetos de três aplicativos estão compartilhando o mesmo código-fonte (os arquivos c# no compartilhado). As edições no código compartilhado serão compartilhadas entre todos os três projetos.
-
+Dessa forma, os projetos de aplicativo de três estão compartilhando o mesmo código-fonte (arquivos do c# no compartilhado). Todas as edições no código compartilhado serão compartilhadas entre todos os três projetos.
 
 ### <a name="benefits"></a>Benefícios
 
--  Permite que você compartilhe código em vários projetos.
--  Código compartilhado pode ser ramificado com base na plataforma usando diretivas de compilador (por exemplo. usando `#if __ANDROID__` , conforme discutido no [criando aplicativos de plataforma cruzada](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) documento).
--  Projetos de aplicativo podem incluir referências de específico de plataforma que pode utilizar o código compartilhado (como o uso de `Community.CsharpSqlite.WP7` no exemplo Tasky para Windows Phone).
-
-
+- Permite que você compartilhe código entre vários projetos.
+- Código compartilhado pode ser ramificado com base na plataforma usando diretivas de compilador (por exemplo. usando o `#if __ANDROID__` , conforme discutido em de [criando aplicativos de plataforma cruzada](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) documento).
+- Projetos de aplicativos podem incluir referências específicas da plataforma que o código compartilhado pode utilizar (como o uso de `Community.CsharpSqlite.WP7` na amostra Tasky para Windows Phone).
 
 ### <a name="disadvantages"></a>Desvantagens
 
--  Ao contrário da maioria dos outros tipos de projeto, um projeto compartilhado não tem nenhum assembly de 'produzidos'. Durante a compilação, os arquivos são tratados como parte do projeto de referência e compilados no assembly. Se você quiser compartilhar seu código como um assembly, em seguida, bibliotecas de classes portáteis ou .NET padrão são a melhor solução.
--  Refatorações que afetam o código dentro de diretivas de compilador 'inactive' não atualizará o código.
+- Refatorações que afetam o código dentro de diretivas de compilador 'inactive' não atualizará o código dentro dessas diretivas.
+- Ao contrário da maioria dos outros tipos de projeto, um projeto compartilhado não tem nenhum assembly de 'output'. Durante a compilação, os arquivos são tratados como parte do projeto de referência e compilados no assembly. Se você quiser compartilhar seu código como um assembly, em seguida, .NET Standard ou bibliotecas de classes portáteis são uma solução melhor.
 
-
- <a name="Shared_Remarks" />
+<a name="Shared_Remarks" />
 
 ### <a name="remarks"></a>Comentários
 
-Uma boa solução para desenvolvedores de aplicativos, escrevendo código que é destinado somente para o compartilhamento em seu aplicativo (e não distribuir para outros desenvolvedores).
+Uma boa solução para os desenvolvedores de aplicativos que escrever um código que é destinado apenas para o compartilhamento no seu aplicativo (e não para distribuição a outros desenvolvedores).
 
- <a name="Portable_Class_Libraries" />
-
+<a name="Portable_Class_Libraries" />
 
 ## <a name="portable-class-libraries"></a>Bibliotecas de Classes Portáteis
 
+> [!TIP]
+> Bibliotecas do .NET standard 2.0 são recomendadas para bibliotecas de classes portáteis.
 
-Bibliotecas de classes portáteis são [discutidos em detalhes aqui](~/cross-platform/app-fundamentals/pcl.md).
+São bibliotecas de classes portáteis [abordado em detalhes aqui](~/cross-platform/app-fundamentals/pcl.md).
 
- ![](code-sharing-images/portableclasslibrary.png "Diagrama de biblioteca de classes portátil")
-
-
-### <a name="benefits"></a>Benefícios
-
--  Permite que você compartilhe código em vários projetos.
--  Operações de refatoração sempre atualizam afetadas todas as referências.
-
-
-### <a name="disadvantages"></a>Desvantagens
-
--  Não é possível usar diretivas de compilador.
--  Somente um subconjunto do .NET framework está disponível para uso, determinado pelo perfil selecionado (consulte a [Introdução ao PCL](~/cross-platform/app-fundamentals/pcl.md) para obter mais informações).
-
-
-### <a name="remarks"></a>Comentários
-
-Uma boa solução se você planeja compartilhar o assembly resultante com outros desenvolvedores.
-
-
-
-<a name="Net_Standard" />
-
-## <a name="net-standard-libraries"></a>Bibliotecas padrão do .NET
-
-.NET padrão é [discutidos em detalhes aqui](~/cross-platform/app-fundamentals/net-standard.md).
-
-![](code-sharing-images/netstandard.png "Diagrama de .NET padrão")
+![Diagrama de biblioteca de classes portátil](code-sharing-images/portableclasslibrary.png "diagrama da biblioteca de classes portátil")
 
 ### <a name="benefits"></a>Benefícios
 
--  Permite que você compartilhe código em vários projetos.
--  Operações de refatoração sempre atualizam afetadas todas as referências.
--  Uma área de superfície maior do .NET biblioteca BCL (Base Class) está disponível que os perfis PCL.
+- Permite que você compartilhe código entre vários projetos.
+- Operações de refatoração sempre atualizam referências de todos os afetados.
 
 ### <a name="disadvantages"></a>Desvantagens
 
- -  Não é possível usar diretivas de compilador.
+- Bibliotecas do .NET Standard preterida nas versões mais recentes do Visual Studio, são recomendadas em vez disso. Consulte este [explicação das diferenças](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries) entre PCL e .NET Standard.
+- Não é possível usar diretivas de compilador.
+- Somente um subconjunto do .NET framework está disponível para uso, determinadas pelo perfil selecionado (consulte a [Introdução à PCL](~/cross-platform/app-fundamentals/pcl.md) para obter mais informações).
 
 ### <a name="remarks"></a>Comentários
 
-.NET padrão é semelhante a PCL, mas com um modelo mais simples para suporte de plataforma e um número maior de classes de BCL.
-
-
+Modelo PCL é considerado preterida nas versões mais recentes do Visual Studio.
 
 ## <a name="summary"></a>Resumo
 
-O código de compartilhamento estratégia que você escolher será determinado pelas plataformas de que destino. Escolha um método que funciona melhor para seu projeto.
+O escolha da estratégia de compartilhamento de código será determinado pelas plataformas de que destino. Escolha um método que funciona melhor para seu projeto.
 
-PCL ou .NET padrão são boas opções para a criação de bibliotecas de código compartilhável (especialmente publicação NuGet). Projetos compartilhados funcionam bem para os desenvolvedores de aplicativos que planeja usar muitas funcionalidades específicas de plataforma em seus aplicativos de plataforma cruzada.
+.NET standard é a melhor opção para a criação de bibliotecas de código compartilhável (especialmente a publicação no NuGet). Projetos compartilhados funcionam bem para os desenvolvedores de aplicativos que planeja usar muita funcionalidade específica da plataforma em seus aplicativos de plataforma cruzada.
 
+Embora projetos PCL continuem a ter suporte no Visual Studio, .NET Standard é recomendado para novos projetos.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativos de plataforma cruzada construção (documento principal)](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+- [Aplicativos de plataforma cruzada da construção (documento principal)](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Bibliotecas de classes portáteis](~/cross-platform/app-fundamentals/pcl.md)
 - [Projetos compartilhados](~/cross-platform/app-fundamentals/shared-projects.md)
 - [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
 - [Estudo de caso: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Exemplo tasky (github)](https://github.com/xamarin/mobile-samples/tree/master/Tasky)
-- [Exemplo tasky usando PCL (github)](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable)
+- [Exemplo de tasky usando PCL (github)](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable)
