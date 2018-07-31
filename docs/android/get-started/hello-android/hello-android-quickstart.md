@@ -7,13 +7,13 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 9e4349b807c98e6f5cfbc55fa57153f99054d474
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 07/20/2018
+ms.openlocfilehash: beb90587e0d720de7770056c8b51264099edecdc
+ms.sourcegitcommit: fb55eba393e43bcc9e9d1fef9ef1f1310e99f620
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732460"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39189015"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: início rápido
 
@@ -49,15 +49,8 @@ Antes de começar, baixe e descompacte o conjunto [Ícones e telas de inicializa
 
 ## <a name="configuring-emulators"></a>Configurando emuladores
 
-Se estiver usando o emulador de SDK do Android da Google, recomendamos que você configure o emulador para usar a aceleração de hardware. As instruções para configurar a aceleração de hardware estão disponíveis em [Aceleração de hardware para desempenho do emulador](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
+Se estiver usando o emulador do Android, recomendamos configurá-lo para usar a aceleração de hardware. As instruções para configurar a aceleração de hardware estão disponíveis em [Aceleração de hardware para desempenho do emulador](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-Se você estiver usando o Emulador de Android do Visual Studio, Hyper-V deverá ser habilitado no computador. Para saber mais sobre como configurar o Emulador de Android do Visual Studio, consulte [System Requirements for the Visual Studio Emulator for Android](https://msdn.microsoft.com/en-us/library/mt228280.aspx) (Requisitos do sistema para o Emulador de Android do Visual Studio).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
------
 
 ## <a name="walkthrough"></a>Passo a passo
 
@@ -66,16 +59,20 @@ Se você estiver usando o Emulador de Android do Visual Studio, Hyper-V deverá 
 Inicie o Visual Studio.  Clique em **Arquivo > Novo > Projeto** para criar um novo projeto.
 
 Na caixa de diálogo **Novo Projeto**, clique no modelo **Aplicativo Android**.
-Dê um nome ao novo projeto `Phoneword`. Clique em **OK** para criar o novo projeto:
+Dê um nome ao novo projeto `Phoneword`. Clique em **OK**:
 
-[ ![O novo projeto é Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.w157.png)](hello-android-quickstart-images/vs/02-new-project-name.w157.png#lightbox)
+[ ![O novo projeto é Phoneword](hello-android-quickstart-images/vs/01-new-project-name-w157-sml.png)](hello-android-quickstart-images/vs/01-new-project-name-w157.png#lightbox)
+
+Na caixa de diálogo **Novo Aplicativo Android**, clique em **Aplicativo em Branco** e clique em **OK** para criar o novo projeto:
+
+[![Selecione o modelo Aplicativo em Branco](hello-android-quickstart-images/vs/02-blank-app-w157-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w157.png#lightbox)
 
 ### <a name="creating-the-layout"></a>Criando o layout
 
 Depois da criação do novo projeto, expanda a pasta **Recursos** e, em seguida, a pasta **Layout** no **Gerenciador de Soluções**.
-Clique duas vezes em **Main.axml** para abri-lo no Designer do Android. Este é o arquivo de layout da tela do aplicativo:
+Clique duas vezes em **activity_main.axml** para abri-lo no Designer Android. Este é o arquivo de layout da tela do aplicativo:
 
-[![Abrir Main.axml](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
+[![Abrir a atividade main.axml](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
 
 Na **Caixa de Ferramentas** (a área à esquerda), insira `text` no campo de pesquisa e arraste um widget **Texto (Grande)** para a superfície de design (a área no centro):
 
@@ -115,7 +112,7 @@ A próxima etapa é adicionar algum código para converter números de telefone 
 
 Na caixa de diálogo **Adicionar Novo Item**, selecione **Visual C# > Código > Arquivo de Código** e nomeie o novo arquivo de código **PhoneTranslator.cs**:
 
-[![Adicionar PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.w157.png)](hello-android-quickstart-images/vs/14-add-class.w157.png#lightbox)
+[![Adicionar PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml-w157.png)](hello-android-quickstart-images/vs/14-add-class-w157.png#lightbox)
 
 Isso cria uma nova classe C# vazia. Insira o seguinte código nesse arquivo:
 
@@ -287,6 +284,8 @@ Por fim, teste o aplicativo ao executá-lo em um dispositivo ou emulador Android
 
 [ ![Captura de tela do aplicativo quando ele está concluído](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
+
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Inicialize o Visual Studio para Mac na pasta **Aplicativos** ou **Destaque**. 
@@ -418,7 +417,7 @@ Salve as alterações no arquivo **PhoneTranslator.cs** escolhendo **Arquivo > S
 A próxima etapa é adicionar código para conectar a interface do usuário adicionando código de apoio à classe `MainActivity`.
 Clique duas vezes em **MainActivity.cs** no **Painel de Soluções** para abri-lo.
 
-Comece adicionando um manipulador de eventos no botão **Converter**. Na classe `MainActivity` localize o método `OnCreate`. Adicione o código do botão dentro de `OnCreate`, abaixo das chamadas `base.OnCreate(bundle)` e `SetContentView (Resource.Layout.Main)`. Remova o botão de modelo no código de tratamento para que o método `OnCreate` seja semelhante ao seguinte:
+Comece adicionando um manipulador de eventos no botão **Converter**. Na classe `MainActivity` localize o método `OnCreate`. Adicione o código do botão dentro de `OnCreate`, abaixo das chamadas `base.OnCreate(bundle)` e `SetContentView (Resource.Layout.Main)`. Remova qualquer código de tratamento de botão existente (ou seja, código que faça referência a `Resource.Id.myButton` e crie um manipulador de cliques para ele) para que o método `OnCreate` seja semelhante ao seguinte:
 
 ```csharp
 using System;

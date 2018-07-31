@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 87f59e9f0c2150291a43cdfee4fe6c5dfc2058f8
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066462"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203118"
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalando o Xamarin
 
@@ -253,14 +253,14 @@ Para desinstalar completamente o Visual Studio 2017, escolha **Desinstalar** no 
 > [!IMPORTANT]
 > Se houver duas (ou mais) instâncias do Visual Studio instaladas SxS (lado a lado), como uma versão de lançamento e uma versão prévia, desinstalar uma instância poderá remover algumas funcionalidades do Xamarin de outras instâncias do Visual Studio, incluindo:
 >
-> - Criador de perfil do Xamarin
+> - Xamarin Profiler
 > - Pastas de trabalho/Inspetor do Xamarin
 > - Simulador do iOS remoto do Xamarin
 > - SDK do Bonjour da Apple
 >
 > Sob determinadas condições, a desinstalação de uma das instâncias SxS pode resultar na remoção incorreta desses recursos. Isso poderá prejudicar o desempenho da plataforma Xamarin nas instâncias do Visual Studio que permanecerem no sistema após a desinstalação da instância SxS.
 >
->Isso é resolvido com a execução da opção **Reparar** no instalador do Visual Studio, que reinstalará os componentes ausentes.
+>Isso é resolvido executando a opção **Reparar** no instalador do Visual Studio, o que irá reinstalar os componentes ausentes.
 
 
 ## <a name="uninstalling-older-and-unsupported-products"></a>Desinstalando produtos mais antigos e sem suporte
