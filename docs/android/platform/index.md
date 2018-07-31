@@ -6,13 +6,13 @@ ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/23/2018
-ms.openlocfilehash: 762df7322607588344d570830dafc745a89ea165
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.date: 07/27/2018
+ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39211998"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351558"
 ---
 # <a name="platform-features"></a>Recursos da plataforma
 
@@ -45,6 +45,10 @@ Android 3.0 introduziu fragmentos, mostrando como dar suporte a designs mais fle
 
 Este guia discute como dá suporte a Android 6.0 _aplicativo-vinculando_, uma técnica que permite que aplicativos móveis responda a URLs nos sites. Ele abordará como implementar a vinculação de aplicativo em um aplicativo do Android 6.0 e como configurar um site da Web para conceder permissões ao aplicativo móvel para lidar com links de aplicativo para o domínio.
 
+
+##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Visualização de P Android](~/android/platform/android-p.md)
+
+Este artigo fornece uma descrição dos novos recursos na visualização de P do Android, explica como preparar o xamarin. Android para desenvolvimento Android P e fornece código de exemplo que ilustra como usar os principais recursos do Android P em aplicativos xamarin. Android.
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)

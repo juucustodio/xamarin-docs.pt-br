@@ -1,26 +1,27 @@
 ---
-title: Atalhos de teclado do Editor de pastas de trabalho do Xamarin
-description: Este documento descreve os atalhos de teclado disponíveis para uso no editor de pastas de trabalho do Xamarin. Em particular, ele examina a chave de retorno é usada de várias maneiras.
+title: Atalhos de teclado do Editor de pastas de trabalho de Xamarin
+description: Este documento descreve os atalhos de teclado disponíveis para uso no editor de pastas de trabalho do Xamarin. Em particular, ele examina a tecla Return é usada de várias maneiras.
 ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: b0ba268367ebf6a9eb55bd00dd84014de247649b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 03/30/2017
+ms.openlocfilehash: c2b4a8c1bcb8f7b88ab2ae1e2906b1c9c702b76a
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793898"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351672"
 ---
-# <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Atalhos de teclado do Editor de pastas de trabalho do Xamarin
+# <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Atalhos de teclado do Editor de pastas de trabalho de Xamarin
 
 ## <a name="the-return-key-and-its-nuances"></a>A chave de retorno e seus nuances
 
-A tabela a seguir descreve as várias associações de chave para a execução de código e redução de criação. Levamos muito cuidado ao escolher a sensatas e consistentes associações de chave que são familiares e fluido.
+A tabela a seguir descreve as várias associações de teclas para executar o código e a criação de markdown. Tomamos muito cuidado ao escolher as associações de teclas adequadas e consistentes que são familiares e fluida.
 
-|Chave de associação|Célula de código|Redução de célula|
+|Associação de chave|Célula de código|Célula de markdown|
 |--- |--- |--- |
-|<kbd>Return</kbd>|<p>Se o cursor estiver no final da célula buffer e a célula podem ser analisados com êxito, ele será executado e os resultados serão exibidos abaixo do buffer e uma nova célula de código será inserida e voltada para a célula após a célula executada.</p><p>Se a análise não for bem-sucedida, uma nova linha será inserida no buffer. Diagnóstico do compilador não será produzido se a análise não for bem-sucedida.</p>|<p><kbd>Retornar</kbd> apresenta um comportamento diferente dependendo do contexto de Markdown no cursor.</p><ul><li>Se o cursor estiver em um bloco de código de Markdown, uma nova linha literal é inserida.</li><li>Se o cursor estiver em um bloco de lista de Markdown, criar um novo item de lista ou dividir o item atual da lista.</li><li>Se o cursor estiver em qualquer outro tipo de bloco de Markdown, crie um novo bloco de parágrafo ou dividir o bloco atual.</li></ul>|
-|<dl><dt>Mac</dt><dd><kbd>Command‑Return</kbd></dd><dt>Win</dt><dd><kbd>Control‑Return</kbd></dd></dl>|<p>Sempre tenta analisar e executar o conteúdo da célula. Se a compilação for bem-sucedida, os resultados (incluindo exceções de execução) serão exibidos abaixo do buffer, e se não houver nenhuma célula subsequente, um novo será criado e foco.</p><p>Se não houver nenhum erro de compilação, diagnóstico será exibido e o buffer será concentre-se com a posição do cursor inalterada.</p>|Insere e concentra-se uma nova célula código após a célula atual de redução.|
-|<dl><dt>Mac</dt><dd><kbd>Command‑Shift‑Return</kbd><dd><dt>Win</dt><dd><kbd>Control‑Shift‑Return</kbd></dd></dl>|Insere e concentra-se uma nova célula markdown após a célula atual.|Mesmo comportamento <kbd>retornar</kbd>|
+|<kbd>Return</kbd>|<p>Se o cursor estiver no final da célula de buffer e a célula podem ser analisadas com êxito, ele será executado e resultados serão exibidos abaixo do buffer e uma nova célula de código será inserida e voltada para a célula após a célula executada.</p><p>Se a análise não é bem-sucedido, uma nova linha será inserida no buffer. Diagnóstico do compilador não será produzido se a análise não for bem-sucedida.</p>|<p><kbd>Retornar</kbd> exibe um comportamento diferente dependendo do contexto Markdown na posição do cursor.</p><ul><li>Se o cursor estiver em um bloco de código de Markdown, uma nova linha literal é inserida.</li><li>Se o cursor estiver em um bloco de lista de Markdown, crie um novo item de lista ou dividir o item de lista atual.</li><li>Se o cursor estiver em qualquer outro tipo de bloco de Markdown, crie um novo bloco de parágrafo ou dividir o bloco atual.</li></ul>|
+|<dl><dt>Mac</dt><dd><kbd>Command‑Return</kbd></dd><dt>Win</dt><dd><kbd>Control‑Return</kbd></dd></dl>|<p>Sempre tenta analisar e executar o conteúdo da célula. Se a compilação for bem-sucedida, os resultados (incluindo as exceções de execução) serão exibidos abaixo do buffer, e se não houver nenhuma célula subsequente, um novo será criado e com foco.</p><p>Se houver quaisquer erros de compilação, o diagnóstico será exibido e o buffer permanecerá com o objetivo com a posição do cursor inalterada.</p>|Insere e concentra-se uma nova célula de código após a célula atual de markdown.|
+|<dl><dt>Mac</dt><dd><kbd>Command‑Shift‑Return</kbd><dd><dt>Win</dt><dd><kbd>Control‑Shift‑Return</kbd></dd></dl>|Insere e concentra-se uma nova célula de markdown após a célula atual.|Mesmo comportamento que <kbd>retornar</kbd>|
 |<kbd>Shift‑Return</kbd>|Sempre insere uma nova linha, independentemente do local do cursor ou conteúdo.|Insere uma quebra de linha definida dentro do bloco de Markdown atual.|

@@ -1,47 +1,47 @@
 ---
-title: Guia de Introdução com iOS 11
-description: Este documento descreve as etapas que devem ser concluídas para começar a desenvolver aplicativos iOS 11. Ele aborda como baixar o Xcode e atualizar 2017 do Visual Studio.
+title: Introdução ao iOS 11
+description: Este documento descreve as etapas que devem ser concluídas para começar a desenvolver aplicativos iOS 11. Ele aborda como baixar o Xcode e atualizar o Visual Studio 2017.
 ms.prod: xamarin
 ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/19/2016
-ms.openlocfilehash: 494ffa4ffef09eedf2ce38f33e2e2b216a9417bb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 09/19/2017
+ms.openlocfilehash: 00316b253392e6f2d5dde1a2cad4f0f9baf76375
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786906"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350843"
 ---
-# <a name="getting-started-with-ios-11"></a>Guia de Introdução com iOS 11
+# <a name="getting-started-with-ios-11"></a>Introdução ao iOS 11
 
 _Baixe e instale o Xcode 9_
 
 > [!NOTE]
-> iOS 11, tvOS 11 e watchOS 4 exigem Xcode 9.
+> iOS 11, tvOS 11 e watchOS 4 exigem o Xcode 9.
 >
-> O Visual Studio para Mac também é necessário - você não pode usar o Xcode 9 com Xamarin Studio.
+> O Visual Studio para Mac também é necessário - você não pode usar o Xcode 9 com o Xamarin Studio.
 
-## <a name="download-and-install"></a>Baixar e instalar
+## <a name="download-and-install"></a>Baixe e instale
 
 Siga estas etapas para garantir que você está pronto para trabalhar com o iOS mais recente, tvOS e watchOS recursos:
 
-1. **Instalar o Xcode mais recente** – [baixar](https://developer.apple.com/download/) e instale a versão mais recente do _9 Xcode_.
+1. **Instalar a mais recente do Xcode** – [Baixe](https://developer.apple.com/download/) e instale a versão mais recente do _Xcode 9_.
 
-2. **Execute primeiro Xcode** – Xcode executar uma vez, antes de atualizar e executando o Visual Studio para Mac, conforme ele instala algumas Ferram que Xamarin requer que a primeira vez que ele é executado.
+2. **Execute primeiro Xcode** – Xcode executado uma vez, antes de atualizar e executando o Visual Studio para Mac, conforme ele instala algumas ferramentas que Xamarin requer na primeira vez que ele é executado.
 
-3. **Atualização para a versão estável mais recente** – siga as instruções de [9 Xcode versão blog](https://releases.xamarin.com/stable-release-15-3-5-with-xcode-9-support/).
+3. **Atualização para a versão estável mais recente** – siga as instruções sobre a [blog de versão do Xcode 9](https://releases.xamarin.com/stable-release-15-3-5-with-xcode-9-support/).
 
-4. _(opcional)_  **Instalar o Beta do iOS mais recente para o Hardware Apple real** – testar iOS 11 em todos os dispositivos iOS físicos, [baixar](https://developer.apple.com/download/) e instale a versão beta de iOS em seus dispositivos.
+4. _(opcional)_  **Instalar o Beta mais recente do iOS para o Hardware real da Apple** – para iOS 11 em qualquer dispositivo iOS físico, de teste [baixar](https://developer.apple.com/download/) e instale a versão beta do iOS em seus dispositivos.
 
 
-### <a name="visual-studio-2017-on-windows"></a>Visual Studio de 2017 no Windows
+### <a name="visual-studio-2017-on-windows"></a>Visual Studio 2017 no Windows
 
-Depois de instalar o Xcode 9 no seu Mac, siga os links no [9 Xcode versão blog](https://releases.xamarin.com/stable-release-15-3-5-with-xcode-9-support/) para instalar o **Xamarin.VS 4.7** extensão para o Visual Studio de 2017 no Windows.
+Depois de instalar o Xcode 9 no seu Mac, siga os links na [blog de versão do Xcode 9](https://releases.xamarin.com/stable-release-15-3-5-with-xcode-9-support/) para instalar o **4.7 VS** extensão para o Visual Studio 2017 no Windows.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Baixe o Xcode 9](https://developer.apple.com/download/)
-- [Baixe o xamarin 11](https://releases.xamarin.com/stable-release-15-3-5-with-xcode-9-support/)
+- [Baixar o Xcode 9](https://developer.apple.com/download/)
+- [Baixe o xamarin. IOS 11](https://releases.xamarin.com/stable-release-15-3-5-with-xcode-9-support/)

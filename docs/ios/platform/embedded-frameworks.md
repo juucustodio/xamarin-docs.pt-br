@@ -1,76 +1,77 @@
 ---
-title: Estruturas inseridas no xamarin
-description: Este documento descreve como compartilhar código com estruturas inseridas em um aplicativo xamarin. Isso pode ser feito com a ferramenta de mtouch ou referências nativo.
+title: Estruturas incorporadas no xamarin. IOS
+description: Este documento descreve como compartilhar código com estruturas incorporadas em um aplicativo xamarin. IOS. Isso pode ser feito com a ferramenta mtouch ou referências nativas.
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e42f0940fe3fc132c9d381907aad5afbe474c4ad
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/05/2018
+ms.openlocfilehash: cce5356fd1d3d9a5cf16370a4843c3541b00a7c0
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787286"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351428"
 ---
-# <a name="embedded-frameworks-in-xamarinios"></a>Estruturas inseridas no xamarin
+# <a name="embedded-frameworks-in-xamarinios"></a>Estruturas incorporadas no xamarin. IOS
 
 _Este documento descreve como os desenvolvedores de aplicativos podem incorporar estruturas de usuário em seus aplicativos._
 
-Com o iOS 8.0 Apple tornou possível criar uma estrutura incorporada para compartilhar código entre as extensões de aplicativo e o aplicativo principal no Xcode.
+Com o iOS 8.0 Apple agora é possível criar uma estrutura inserida para compartilhar código entre extensões de aplicativo e o aplicativo principal no Xcode.
 
-Xamarin 9.0 adiciona suporte para o uso dessas estruturas inseridas (criadas com o Xcode) em aplicativos xamarin. *Ele irá **não** ser possível criar estruturas inseridas de qualquer tipo de projetos de xamarin, consomem apenas as estruturas existentes nativo (Objective-C).*
+Xamarin. IOS 9.0 adiciona suporte para consumir essas estruturas incorporadas (criadas com o Xcode) em aplicativos xamarin. IOS. *Ele irá **não** ser possível criar estruturas incorporadas de qualquer tipo de projetos xamarin. IOS, apenas consumir as estruturas existentes nativas (Objective-C).*
 
-Há duas maneiras para consumir estruturas em xamarin:
+Há duas maneiras de consumir estruturas no xamarin. IOS:
 
-- Passar a estrutura para a ferramenta mtouch, adicionando o seguinte para os argumentos adicionais mtouch do projeto **iOS compilação** opções:
+- Passe a estrutura para a ferramenta mtouch, adicionando o seguinte para os argumentos adicionais do mtouch do projeto **Build do iOS** opções:
 
   ```csharp
   --framework:/Path/To/My.Framework
   ```
 
-  Isso deve ser definida para cada configuração de projeto.
+  Isso deve ser definido para cada configuração de projeto.
 
-- Adicione referências nativo no menu de contexto
+- Adicionar referências nativas no menu de contexto
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-Clique com botão direito no projeto e navegue para adicionar referências nativo
+Clique com botão direito no projeto e navegue para adicionar referências nativas
 
-![](embedded-frameworks-images/xam-native-refs.png "Selecione Adicionar referências de nativo no Visual Studio para Mac")
+![](embedded-frameworks-images/xam-native-refs.png "Selecione Adicionar referências de nativos no Visual Studio para Mac")
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Clique com botão direito no projeto e navegue para adicionar referências nativo
+Clique com botão direito no projeto e navegue para adicionar referências nativas
 
-![](embedded-frameworks-images/vs-native-refs.png "Selecione Adicionar referências de nativo no Visual Studio")
+![](embedded-frameworks-images/vs-native-refs.png "Selecione Adicionar referências de nativos no Visual Studio")
 
 -----
 
-  Isso funciona para todas as configurações.
+  Isso funcionará para todas as configurações.
 
-Em versões futuras do Visual Studio para Mac e as ferramentas Xamarin para Visual Studio será possível consumir estruturas de dentro do IDE (sem editar manualmente os arquivos de projeto).
+Em versões futuras do Visual Studio para Mac e as ferramentas do Xamarin para Visual Studio, será possível consumir as estruturas de dentro do IDE (sem editar manualmente os arquivos de projeto).
 
-Alguns projetos de exemplo podem ser encontrados em [github](https://github.com/rolfbjarne/embedded-frameworks)
+Alguns projetos de exemplo podem ser encontrados no [github](https://github.com/rolfbjarne/embedded-frameworks)
 
 ## <a name="limitations"></a>Limitações
 
-- Estruturas inseridas só têm suporte em [unificada](~/cross-platform/macios/unified/index.md) projetos.
-- Estruturas inseridas têm suporte apenas em projetos com um destino de implantação pelo menos o iOS 8.0.
-- Se uma extensão requer uma estrutura inserida, o aplicativo de contêiner também deve ter uma referência para a estrutura, caso contrário que o framework não será incluído no pacote de aplicativo.
+- Somente há suporte para estruturas incorporadas em [unificado](~/cross-platform/macios/unified/index.md) projetos.
+- Estruturas incorporadas têm suporte apenas em projetos com um destino de implantação pelo menos o iOS 8.0.
+- Se uma extensão requer uma estrutura inserida, o aplicativo de contêiner também deve ter uma referência para a estrutura, caso contrário, que a estrutura não será incluída no pacote de aplicativo.
 
-## <a name="the-mono-runtime"></a>O tempo de execução Mono
+## <a name="the-mono-runtime"></a>Tempo de execução Mono
 
-Internamente, xamarin tira proveito desse recurso para vincular com o tempo de execução Mono como uma estrutura, em vez de vincular o tempo de execução Mono estaticamente para cada extensão e o aplicativo de contêiner.
+Internamente, xamarin. IOS tira proveito desse recurso para vincular com o tempo de execução Mono, como uma estrutura, em vez de vincular o tempo de execução Mono estaticamente em cada extensão e o aplicativo de contêiner.
 
-Isso é feito automaticamente se o aplicativo de contêiner é um aplicativo unificada, ela contém extensões e a implantação de destino é o iOS 8.0 ou superior.
+Isso é feito automaticamente se o aplicativo de contêiner é um aplicativo unificado, ele contém extensões e a implantação de destino é o iOS 8.0 ou superior.
 
-Aplicativos sem extensões ainda serão vinculado com o tempo de execução Mono estaticamente, porque não há uma penalidade de tamanho para o uso de uma estrutura se houver apenas um aplicativo que fazem referência a ele.
+Aplicativos sem extensões ainda serão vinculado com o tempo de execução Mono estaticamente, porque há uma penalidade de tamanho para usar uma estrutura, se houver apenas um aplicativo fazendo referência a ela.
 
-Esse comportamento pode ser substituído pelo desenvolvedor do aplicativo, adicionando o seguinte como um argumento mtouch adicionais no iOS do projeto opções de compilação:
+Esse comportamento pode ser substituído pelo desenvolvedor do aplicativo, adicionando o seguinte como um argumento de adicionais do mtouch em Opções de Build do iOS do projeto:
 
-- `--mono:static`: Links com o tempo de execução Mono estaticamente.
-- `--mono:framework`: Links com o tempo de execução Mono como uma estrutura.
+- `--mono:static`: Vincula estaticamente com tempo de execução Mono.
+- `--mono:framework`: Links com o tempo de execução Mono, como uma estrutura.
 
-Um cenário para vincular com o tempo de execução Mono como uma estrutura mesmo para aplicativos sem extensões é diminuir o tamanho do executável, para solucionar quaisquer restrições de tamanho que Apple impõe no executável. Para referência, o tempo de execução Mono adiciona aproximadamente 1,7 MB por arquitetura (como de xamarin 8.12, porém seu varia entre versões e até mesmo entre aplicativos). A estrutura Mono adiciona aproximadamente 2.3MB por arquitetura, o que significa que, para um aplicativo de arquitetura única sem qualquer extensão, tornando o link do aplicativo com o tempo de execução Mono resultante como uma estrutura de reduzir o executável por ~1.7MB, mas adicionar um framework ~2.3MB, em uma ~0.6MB maior aplicativo juntas.
+Um cenário para vinculação com o tempo de execução Mono, como uma estrutura, mesmo para aplicativos sem extensões é diminuir o tamanho do executável, para superar a quaisquer restrições de tamanho que Apple impõe sobre o executável. Para referência, o tempo de execução Mono adiciona aproximadamente de 1,7 MB por arquitetura (como do xamarin. IOS 8.12, porém seu varia entre as versões e até mesmo entre os aplicativos). A estrutura Mono adiciona aproximadamente 2.3MB por arquitetura, o que significa que, para um aplicativo single-arquitetura sem qualquer extensão, tornando o link de aplicativo com o tempo de execução Mono resultante como uma estrutura de reduzir o executável por ~1.7MB, mas adicione uma estrutura ~2.3MB, em uma ~0.6MB maior aplicativo juntas.
 

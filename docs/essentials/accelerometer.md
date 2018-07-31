@@ -5,12 +5,12 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 15e2cb69806f281e88e226b7bcd87a20e149d508
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: b5a24e214eb129b4d53b94586632791c8827447b
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947303"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353835"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: acelerômetro
 
@@ -33,7 +33,7 @@ A funcionalidade do acelerômetro funciona chamando o `Start` e `Stop` métodos 
 public class AccelerometerTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public AccelerometerTest()
     {
@@ -41,7 +41,7 @@ public class AccelerometerTest
         Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
     }
 
-    void Accelerometer_ReadingChanged(AccelerometerChangedEventArgs e)
+    void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
     {
         var data = e.Reading;
         Console.WriteLine($"Reading: X: {data.Acceleration.X}, Y: {data.Acceleration.Y}, Z: {data.Acceleration.Z}");
@@ -81,7 +81,7 @@ Exemplos:
 
 * Quando o dispositivo encontra-se simples em uma tabela, o valor de aceleração é G + 1,00 ou (+ 9,81 m/s ^ 2), que correspondem à aceleração do dispositivo (0 m/s ^ 2) menos a força da gravidade (-9,81 m/s ^ 2) e normalizado como G.
 
-* Quando o dispositivo encontra-se simples em uma tabela e é enviada por push para o céu com uma aceleração de um m/s ^ 2, o valor de aceleração é igual a + 9.81 correspondentes para a aceleração do dispositivo (+ um m/s ^ 2) menos a força da gravidade (-9,81 m/s ^ 2) e normalizados em G. 
+* Quando o dispositivo encontra-se simples em uma tabela e é enviada por push para o céu com uma aceleração de um m/s ^ 2, o valor de aceleração é igual a + 9.81 correspondentes para a aceleração do dispositivo (+ um m/s ^ 2) menos a força da gravidade (-9,81 m/s ^ 2) e normalizados em G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

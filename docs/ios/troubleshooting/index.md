@@ -1,29 +1,30 @@
 ---
-title: Solução de problemas do xamarin
-description: Links neste documento para vários recursos que fornecem informações sobre solução de xamarin, uma lista de possíveis erros ao criar aplicativos xamarin e perguntas frequentes.
+title: Solução de problemas de xamarin. IOS
+description: Este documento leva a vários recursos que fornecem informações sobre solução de xamarin. IOS, uma lista de possíveis erros ao criar aplicativos xamarin. IOS e perguntas frequentes.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1DE5E667-A671-47CE-A0AC-F0D8B00ACFCE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5ba0da3ffaf7c4a3e8b5dbb439e01385406f9e0c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 07/27/2018
+ms.openlocfilehash: cc8ac2c1492388723cb13c81bd72114c6b0df43c
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788498"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351038"
 ---
-# <a name="troubleshooting-xamarinios"></a>Solução de problemas do xamarin
+# <a name="troubleshooting-xamarinios"></a>Solução de problemas de xamarin. IOS
 
-##  <a name="troubleshootingiostroubleshootingtroubleshootingmd"></a>[Solução de problemas](~/ios/troubleshooting/troubleshooting.md)
+## <a name="troubleshootingiostroubleshootingtroubleshootingmd"></a>[Solução de problemas](~/ios/troubleshooting/troubleshooting.md)
 
 Dicas e truques de solução de problemas
 
-##  <a name="xamarinios-errorsiostroubleshootingmtouch-errorsmd"></a>[Erros de xamarin](~/ios/troubleshooting/mtouch-errors.md)
+## <a name="xamarinios-errorsiostroubleshootingmtouch-errorsmd"></a>[Erros do xamarin. IOS](~/ios/troubleshooting/mtouch-errors.md)
 
-Um guia de referência de erros, mostrando os erros mais comuns que podem ocorrer ao usar o xamarin no Visual Studio para Mac
+Um guia de referência de erros, mostrando os erros mais comuns que podem ocorrer ao usar o xamarin. IOS no Visual Studio para Mac
 
 ## <a name="frequently-asked-questionsquestionsindexmd"></a>[Perguntas frequentes](questions/index.md)
 
-Xamarin Solucionando problemas de perguntas frequentes.
+Xamarin. IOS, solução de problemas de perguntas frequentes.

@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 07/16/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: fc4f851d25837690cd3412ca142a52b1312a08b3
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270196"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351737"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Parceiros de consultoria para entregar soluções móveis certificados
 
@@ -112,6 +112,7 @@ _Listadas por local primário, muitos parceiros fornecem serviços entre as bord
 |[Interknowlogy](http://www.interknowlogy.com/)|SAN Diego, CA, EUA|Um líder mundial em desenvolvimento de aplicativos personalizados, InterKnowlogy aproveita tecnologias atuais e emergentes, para fornecer experiências de conexão por toque, gestos e voz|
 |[Soluções de Intouch](http://www.intouchsol.com )|Overland Park, KS, EUA; Londres, Reino Unido; Chicago, IL, EUA; Nova York, Nova York, EUA|Somos uma agência Digital à esquerda dentro do espaço de saúde e Pharma|
 |[iTexico](http://www.itexico.com)|Austin, Texas, EUA|iTexico é uma empresa de tecnologia de software global que se concentra em ajudar empresas com o desenvolvimento móvel em todo o projeto ' Äôs ciclo de vida por meio de terceirização nearshore.|
+|[JBS](https://www.jbssolutions.com)|Pensilvânia, EUA|JBS é um provedor de soluções de software personalizado.|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto, CA, EUA; Chicago, IL, EUA; ! Tão baixo, OH, EUA; Seongnam-si, Gyeonggi-não, Coreia do Sul|Kaonsoft é uma empresa de software inovador que fornece soluções completas de ponta a ponta para criar aplicativos de mobilidade para entre plataformas de enterprise.|
 |[Katalyst Technologies Inc. ](http://www.katalysttech.com )|Evanston, IL, EUA; Atlanta, GA, EUA; Mumbai, Índia, Maharashtra; Hyderabad, Índia, Telangana; Pune, Maharashtra, Índia|Na Katalyst, acreditamos que a tecnologia realmente pode ser um habilitador. Que tem por empresas líderes pode confiar para não apenas fornecer produtos e serviços, mas também alterar o modo de que operação de seu negócio principal por meio de soluções personalizadas, o impacto que abrangem a empresa.|
 |[Kleio Technology LLC](http://kleiotechnology.com)|Royal Palm pela praia, FL|Tradicionalmente, trabalhamos em uma instrução, marca e identidades. podemos estudar o problema de negócios de um cliente abordá-lo no design, a experiência do usuário e a estratégia de conteúdo. Ajudamos a Business para alcançar as necessidades do cliente e torná-lo lucrativo|

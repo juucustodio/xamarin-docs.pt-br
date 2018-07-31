@@ -1,47 +1,47 @@
 ---
-title: Núcleo NFC na xamarin
-description: Este documento descreve como ler próximo marcas de comunicação de campo em xamarin usando as APIs do iOS 11.
+title: Core NFC no xamarin. IOS
+description: Este documento descreve como ler perto de marcas de comunicação de campo no xamarin. IOS usando as APIs apresentadas no iOS 11.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/25/2016
-ms.openlocfilehash: c42048f9c00238fb73e354ea86322c3d19bae601
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 09/25/2017
+ms.openlocfilehash: 1381a4564f93fd091f181949454df3f06b31ae6b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787371"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350827"
 ---
-# <a name="core-nfc-in-xamarinios"></a>Núcleo NFC na xamarin
+# <a name="core-nfc-in-xamarinios"></a>Core NFC no xamarin. IOS
 
-_Marcas de leitura próximo campo NFC (comunicação) usando iOS 11_
+_Marcas de leitura (NFC comunicação) usando o iOS 11_
 
-CoreNFC é uma nova estrutura no iOS 11 que fornece acesso para o _comunicação a curta distância_ rádio (NFC) para ler as marcas de dentro de aplicativos. Ele funciona no iPhone 7, mais de 7, 8, 8 Plus e X.
+CoreNFC é uma nova estrutura no iOS 11, o que fornece acesso para o _comunicação a curta distância_ radio (NFC) para ler as marcas de dentro de aplicativos. Ele funciona no iPhone 7, Plus 7, 8, 8, além disso e X.
 
-O leitor de marca NFC em dispositivos iOS oferece suporte a todos os tipos de marcas NFC 1 a 5 que contêm _formato de troca de dados NFC_ informações (NDEF).
+O leitor de marca NFC em dispositivos iOS dá suporte a todos os tipos de marcas NFC 1 a 5 que contêm _formato de troca de dados de NFC_ informações (NDEF).
 
 Há algumas restrições a serem consideradas:
 
-- CoreNFC somente dá suporte a marca de leitura (não gravar ou formatação).
-- Verificações de marca devem ser iniciado pelo usuário e o tempo limite depois de 60 segundos.
+- CoreNFC dá suporte apenas a marca de leitura (não gravar ou formatação).
+- Verificações de marca devem ser iniciada pelo usuário e o tempo limite depois de 60 segundos.
 - Aplicativos devem ser visíveis em primeiro plano para a varredura.
 - CoreNFC só pode ser testado em dispositivos reais (não no simulador).
 
-Esta página descreve a configuração necessária para usar CoreNFC e mostra como usar a API usando o ["TFCTagReader" código de exemplo](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/).
+Esta página descreve a configuração necessária para usar CoreNFC e mostra como usar a API usando o [código de exemplo "TFCTagReader"](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/).
 
 ## <a name="configuration"></a>Configuração
 
 Para habilitar CoreNFC, você deve configurar três itens em seu projeto:
 
-- Um **Info. plist** chave de privacidade.
-- Um **Entitlements.plist** entrada.
-- Um perfil de provisionamento com **leitura de marcas NFC** recurso.
+- Uma **Info. plist** chave de privacidade.
+- Uma **Entitlements. plist** entrada.
+- Um perfil de provisionamento com **leitura de marca NFC** funcionalidade.
 
 ### <a name="infoplist"></a>Info.plist
 
-Adicionar o **NFCReaderUsageDescription** chave de privacidade e texto, que é exibido ao usuário enquanto a verificação está ocorrendo. Usar uma mensagem apropriada para seu aplicativo (por exemplo, explique a finalidade da varredura):
+Adicione a **NFCReaderUsageDescription** chave de privacidade e de texto, que é exibido ao usuário durante a verificação. Usar uma mensagem apropriada para seu aplicativo (por exemplo, explique a finalidade da verificação):
 
 ```xml
 <key>NFCReaderUsageDescription</key>
@@ -50,7 +50,7 @@ Adicionar o **NFCReaderUsageDescription** chave de privacidade e texto, que é e
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-Seu aplicativo deve solicitar a **próximo a leitura de marcas de comunicações do campo** recurso usando o seguinte chave/valor par nos seus **Entitlements.plist**:
+O aplicativo deve solicitar a **perto de leitura de marca de comunicações do campo** funcionalidade usando a seguinte chave/valor par nos seus **Entitlements. plist**:
 
 ```xml
 <key>com.apple.developer.nfc.readersession.formats</key>
@@ -61,26 +61,26 @@ Seu aplicativo deve solicitar a **próximo a leitura de marcas de comunicações
 
 ### <a name="provisioning-profile"></a>Perfil de provisionamento
 
-Criar um novo **ID do aplicativo** e certifique-se de que o **leitura de marcas NFC** serviço está marcado:
+Criar um novo **ID do aplicativo** e certifique-se de que o **leitura da marca NFC** serviço está marcado:
 
-[![Página nova ID de aplicativo de Portal do desenvolvedor com leitura de marcas NFC selecionado](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![Página nova ID de aplicativo do Portal do desenvolvedor com a leitura de marca NFC selecionado](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
-Você deve, em seguida, criar um novo perfil de provisionamento para essa ID do aplicativo, baixe e instalá-lo em seu desenvolvimento de Mac.
+Você deve, em seguida, criar um novo perfil de provisionamento para essa ID do aplicativo, em seguida, baixar e instalá-lo no desenvolvimento do seu Mac.
 
-## <a name="reading-a-tag"></a>Ler uma marca
+## <a name="reading-a-tag"></a>Leitura de uma marca
 
-Depois da configuração do seu projeto, adicione `using CoreNFC;` à parte superior do arquivo e siga estas três etapas para implementar NFC marca a funcionalidade de leitura:
+Depois de configurar seu projeto, adicione `using CoreNFC;` na parte superior do arquivo e siga estas três etapas para implementar o NFC funcionalidade de leitura de marca:
 
 ### <a name="1-implement-infcndefreadersessiondelegate"></a>1. Implementar `INFCNdefReaderSessionDelegate`
 
-A interface tem dois métodos a serem implementados:
+A interface possui dois métodos a serem implementados:
 
-- `DidDetect` – Chamado quando uma marca foi lida com êxito.
-- `DidInvalidate` – Chamado quando ocorre um erro ou o tempo de limite de 60 segundos for alcançado.
+- `DidDetect` – Chamado quando uma marca é lido com êxito.
+- `DidInvalidate` – Chamados quando ocorre um erro ou o tempo de limite de 60 segundos for alcançado.
 
 #### <a name="diddetect"></a>DidDetect
 
-No código de exemplo, cada mensagem digitalizada é adicionada a um modo de exibição de tabela:
+No código de exemplo, cada mensagem examinada é adicionada a uma exibição de tabela:
 
 ```csharp
 public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
@@ -96,7 +96,7 @@ public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
 }
 ```
 
-Esse método pode ser chamado várias vezes (e uma matriz de mensagens pode ser passada) se a sessão permite que várias leituras de marca. Isso é definido usando o terceiro parâmetro do `Start` método (explicado em [etapa 2](#step2)).
+Esse método pode ser chamado várias vezes (e uma matriz de mensagens pode ser passada em) se a sessão permite que várias leituras de marca. Isso é definido usando o terceiro parâmetro do `Start` método (explicado [etapa 2](#step2)).
 
 #### <a name="didinvalidate"></a>DidInvalidate
 
@@ -104,10 +104,10 @@ Invalidação pode ocorrer por vários motivos:
 
 - Ocorreu um erro durante a verificação.
 - O aplicativo parou de ser em primeiro plano.
-- O usuário optou por cancelar a verificação.
+- O usuário optou por cancelar o exame.
 - A varredura foi cancelada pelo aplicativo.
 
-O código a seguir mostra como tratar o erro:
+O código a seguir mostra como manipular um erro:
 
 ```csharp
 public void DidInvalidate(NFCNdefReaderSession session, NSError error)
@@ -127,7 +127,7 @@ Depois que uma sessão foi invalidada, um novo objeto de sessão deve ser criado
 
 ### <a name="2-start-an-nfcndefreadersession"></a>2. Iniciar um `NFCNdefReaderSession`
 
-Verificando deve começar com uma solicitação de usuário, como um pressionamento do botão.
+Verificação deve começar com uma solicitação de usuário, como um pressionamento de botão.
 O código a seguir cria e inicia uma sessão de verificação:
 
 ```csharp
@@ -137,16 +137,16 @@ Session?.BeginSession();
 
 Os parâmetros para o `NFCNdefReaderSession` construtor são da seguinte maneira:
 
-- `delegate` – Uma implementação de `INFCNdefReaderSessionDelegate`. No código de exemplo, o representante é implementado no controlador de exibição de tabela, portanto `this` é usado como o parâmetro de representante.
-- `queue` – A fila retornos de chamada são tratados em. Ele pode ser `null`, nesse caso, não deixe de usar o `DispatchQueue.MainQueue` ao atualizar os controles de interface do usuário (conforme mostrado no exemplo).
-- `invalidateAfterFirstRead` – Quando `true`, a varredura é interrompida após a primeira verificação bem-sucedida; quando `false` verificação continuará e retornados vários resultados até que a verificação for cancelada ou o tempo de limite de 60 segundos for alcançado.
+- `delegate` – Uma implementação de `INFCNdefReaderSessionDelegate`. No código de exemplo, o delegado é implementado no controlador de exibição de tabela, portanto `this` é usado como o parâmetro delegado.
+- `queue` – A fila retornos de chamada são tratados. Ele pode ser `null`, neste caso, certifique-se de usar o `DispatchQueue.MainQueue` ao atualizar os controles de interface do usuário (conforme mostrado no exemplo).
+- `invalidateAfterFirstRead` – Quando `true`, a verificação é interrompida após a primeira verificação bem-sucedida; quando `false` verificação continuará e retornados vários resultados até que a verificação for cancelada ou o tempo de limite de 60 segundos for alcançado.
 
 
-### <a name="3-cancel-the-scanning-session"></a>3. Cancela a sessão de verificação
+### <a name="3-cancel-the-scanning-session"></a>3. Cancelar a sessão de verificação
 
 O usuário pode cancelar a sessão de verificação por meio de um botão fornecido pelo sistema na interface do usuário:
 
-![Botão Cancelar durante a verificação](corenfc-images/scan-cancel-sml.png)
+![Botão Cancelar ao examinar o](corenfc-images/scan-cancel-sml.png)
 
 O aplicativo por meio de programação pode cancelar a verificação chamando o `InvalidateSession` método:
 
@@ -154,14 +154,14 @@ O aplicativo por meio de programação pode cancelar a verificação chamando o 
 Session.InvalidateSession();
 ```
 
-Em ambos os casos, o representante `DidInvalidate` método será chamado.
+Em ambos os casos, o delegado `DidInvalidate` método será chamado.
 
 ## <a name="summary"></a>Resumo
 
-CoreNFC permite que seu aplicativo ler dados de marcas NFC. Ele oferece suporte à leitura de uma variedade de formatos de marca (tipos NDEF 1 a 5), mas não suporta gravar ou formatação.
+CoreNFC permite que seu aplicativo ler dados de marcas NFC. Ele dá suporte à leitura de uma variedade de formatos de marca (tipos NDEF 1 a 5), mas não suporta gravar ou formatação.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [NFCTagReader (exemplo)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
-- [Introdução ao núcleo NFC (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/718/)
+- [NFCTagReader (amostra)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
+- [Introdução ao Core NFC (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/718/)

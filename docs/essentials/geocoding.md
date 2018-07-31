@@ -5,18 +5,18 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 063adba82d96e7fcc64d7ec49a0c0133e1cef8ef
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: a4d6e4d9b32e665893d82693a3c858630b63d372
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831442"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353669"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: geocodificação
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **geocodificação** classe fornece APIs para geocodificar um placemark um coordenadas posicionais e reverter geocode coordincates para um placemark.
+O **geocodificação** classe fornece APIs para geocodificar um placemark um coordenadas posicionais e reverter geocode coordenadas para um placemark.
 
 ## <a name="getting-started"></a>Guia de Introdução
 
@@ -32,7 +32,7 @@ Nenhuma configuração adicional necessária.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Uma chave de API do Bing maps é necessário para usar funcationality de geocodificação. Inscreva-se um livre [Bing Maps](https://www.bingmapsportal.com/) conta. Sob **minha conta > Minhas chaves** criar uma nova chave e preencha as informações com base em seu tipo de aplicativo (que deve ser **públicas de aplicativos Windows (UWP, 8.x e anteriores)** para aplicativos UWP).
+Uma chave de API do Bing Maps é necessária para usar a funcionalidade de geocodificação. Inscreva-se um livre [Bing Maps](https://www.bingmapsportal.com/) conta. Sob **minha conta > Minhas chaves** criar uma nova chave e preencha as informações com base em seu tipo de aplicativo (que deve ser **públicas de aplicativos Windows (UWP, 8.x e anteriores)** para aplicativos UWP).
 
 No início na vida de seu aplicativo antes de chamar qualquer **geocodificação** métodos defina a chave de API:
 
@@ -70,11 +70,11 @@ catch (FeatureNotSupportedException fnsEx)
 }
 catch (Exception ex)
 {
-    // Handle exception that may have occured in geocoding
+    // Handle exception that may have occurred in geocoding
 }
 ```
 
-A altitude nem sempre está disponível. Se não estiver disponível, o `Altitude` propriedade pode ser `null` ou o valor pode ser zero. Se a altitude estiver disponível, o valor é em metros acima acima do nível do mar. 
+A altitude nem sempre está disponível. Se não estiver disponível, o `Altitude` propriedade pode ser `null` ou o valor pode ser zero. Se a altitude estiver disponível, o valor é em metros acima acima do nível do mar.
 
 Obtendo [placemarks](xref:Xamarin.Essentials.Placemark) para um conjunto existente de coordenadas:
 

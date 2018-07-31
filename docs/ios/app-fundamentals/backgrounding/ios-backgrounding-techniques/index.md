@@ -1,24 +1,25 @@
 ---
-title: iOS Backgrounding técnicas
-description: 'Este documento contém links para guias que descrevem várias técnicas backgrounding no iOS: tarefas em segundo plano, o serviço de transferência em segundo plano, busca em segundo plano e notificações remotas.'
+title: Técnicas de Backgrounding do iOS
+description: 'Este documento contém links para guias que descrevem várias técnicas de backgrounding no iOS: notificações remotas, serviço de transferência em segundo plano, busca em segundo plano e tarefas em segundo plano.'
 ms.prod: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ebf3c07a319a79994093f89f8e54f4cba7402533
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 03/18/2017
+ms.openlocfilehash: 33c4613e3698556b41a0d01acf2a4ac359ca5dd8
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783749"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350963"
 ---
-# <a name="ios-backgrounding-techniques"></a>iOS Backgrounding técnicas
+# <a name="ios-backgrounding-techniques"></a>Técnicas de Backgrounding do iOS
 
-As seções a seguir, exploraremos os seguintes recursos de iOS junto com as opções de backgrounding existentes:
+As seções a seguir, vamos explorar os seguintes recursos do iOS junto com as opções de backgrounding existentes:
 
--  [Tarefas do plano de fundo oportunista](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md#background_tasks_in_iOS_7) -preservar a vida útil da bateria, executando tarefas em segundo plano em partes oportunistas quando o dispositivo está ativo para outros tipos de processamento.
+-  [Tarefas de plano de fundo oportunista](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md#background_tasks_in_iOS_7) -preservar a vida útil da bateria, executando tarefas em segundo plano em partes oportunistas quando o dispositivo está ativo para outros tipos de processamento.
 -  [O serviço de transferência do plano de fundo](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md#background-transfers) - confiável carregar e baixar arquivos, independentemente do tamanho de arquivo ou o status de rede.
 -  [Busca de plano de fundo](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md#background_fetch) -atualizar um aplicativo do plano de fundo em intervalos determinados pelo sistema.
--  [Notificações remotas](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md#remote_notifications) -notificações por push de uso para disparar atualizações de conteúdo em segundo plano antes do usuário abre o aplicativo, com uma opção para notificar o usuário ou atualizar silenciosamente.
--  **Atualizações de interface do usuário do plano de fundo** - preparar o aplicativo da interface do usuário para o usuário e atualizar o instantâneo do aplicativo, todos os do plano de fundo.
+-  [Notificações remotas](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md#remote_notifications) -notificações por push de uso para disparar as atualizações de conteúdo em segundo plano antes do usuário abre o aplicativo, com uma opção para notificar o usuário ou atualizar silenciosamente.
+-  **Atualizações da interface do usuário do plano de fundo** - preparar o aplicativo da interface do usuário para o usuário e atualizar o instantâneo do aplicativo, tudo a partir de segundo plano.
