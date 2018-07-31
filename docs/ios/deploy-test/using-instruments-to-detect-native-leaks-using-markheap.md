@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 25129d532af0b146afedf28865649ffc9e38ee17
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9b6168eba91a87af88891b9e07e3dd395301cc48
+ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785595"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182202"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Analisar aplicativos Xamarin.iOS com o Instrumentos
 
@@ -27,11 +27,11 @@ O Instrumentos do Xcode só é executado em um Mac.
 
 Selecione o dispositivo e execute o aplicativo Instrumentos:
 
-1.  Abra o projeto Xamarin.iOS no Visual Studio para Mac.
-2.  Selecione a configuração **Depurar|iPhone**.
-3.  Conecte um dispositivo iOS ao computador.
-4.  No menu **Executar**, selecione **Carregar no Dispositivo**. Agora o aplicativo será compilado e carregado no dispositivo.
-5.  No menu **Ferramentas**, selecione **Inicializar Instrumentos**.
+1. Abra o projeto Xamarin.iOS no Visual Studio para Mac.
+2. Selecione a configuração **Depurar|iPhone**.
+3. Conecte um dispositivo iOS ao computador.
+4. No menu **Executar**, selecione **Carregar no Dispositivo**. Agora o aplicativo será compilado e carregado no dispositivo.
+5. No menu **Ferramentas**, selecione **Inicializar Instrumentos**.
 
 
 O Instrumentos será aberto e exibirá a caixa de diálogo a seguir:
@@ -65,4 +65,4 @@ Este guia mostrou como iniciar os Instrumentos do Xcode para monitorar um aplica
 ## <a name="related-links"></a>Links relacionados
 
 - [Passo a passo do Instrumentos](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Coleta de lixo do Xamarin.iOS](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Coleta de lixo do Xamarin.iOS (publicação do blog)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

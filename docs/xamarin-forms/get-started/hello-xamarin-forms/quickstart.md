@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 5b5f8c80e49d66ed3bd8b008c975d1cfeda93ed4
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 7399cab611b726eb7bb72928f504086fb842fb74
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38832378"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242427"
 ---
 # <a name="xamarinforms-quickstart"></a>Início rápido do Xamarin.Forms
 
@@ -306,7 +306,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
     }
     ```
 
-    Salve as alterações em **PhoneDialer.cs** pressionando **CTRL + S** e feche o arquivo.
+    Observe que esse código pressupõe que você esteja usando a API do Android mais recente. Salve as alterações em **PhoneDialer.cs** pressionando **CTRL + S** e feche o arquivo.
 
 21. Em **Gerenciador de Soluções**, no projeto **Phoneword.Android**, clique duas vezes em **MainActivity.cs** para abri-lo, remova todo o código de modelo e substitua-o pelo código a seguir:
 
@@ -443,7 +443,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
 
 34. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **Phoneword.Android** e selecione **Definir como Projeto de Inicialização**.
 35. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para inicializar o aplicativo em um emulador do Android.
-36. Se você tiver um dispositivo iOS e atender aos requisitos de sistema do Mac para o desenvolvimento do Xamarin.Forms, use uma técnica semelhante para implantar o aplicativo no dispositivo iOS. Como alternativa, implante o aplicativo para o [simulador remoto de iOS](~/tools/ios-simulator.md).
+36. Se você tiver um dispositivo iOS e atender aos requisitos do sistema do Mac para o desenvolvimento do Xamarin.Forms, use uma técnica semelhante para implantar o aplicativo no dispositivo iOS. Como alternativa, implante o aplicativo para o [simulador remoto de iOS](~/tools/ios-simulator.md).
 
     Observação: não há suporte para chamadas telefônicas em todos os simuladores.
 
@@ -729,7 +729,7 @@ Crie o aplicativo Phoneword da seguinte maneira:
     }
     ```
 
-    Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
+    Observe que esse código pressupõe que você esteja usando a API do Android mais recente. Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 21. No **Painel de Soluções**, no projeto **Phoneword.Droid**, clique duas vezes em **MainActivity.cs** para abri-lo, remova todo o código de modelo e substitua-o pelo código a seguir:
 

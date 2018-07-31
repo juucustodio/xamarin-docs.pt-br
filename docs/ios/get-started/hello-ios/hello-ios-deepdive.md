@@ -1,5 +1,5 @@
 ---
-title: Olá, iOS – análise detalhada
+title: Hello, iOS – Aprofundamento
 description: Este documento faz uma análise mais detalhada do aplicativo de exemplo Olá, iOS, considerando sua arquitetura, a interface do usuário, a hierarquia de exibição de conteúdo, os testes, a implantação e muito mais.
 ms.topic: quickstart
 ms.prod: xamarin
@@ -8,38 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f7869f572bfd6f6c8a0bc710c6e28671c22ad7eb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 16920f27a1830dc6a3ab1a3cb0a267eb3b1d90ea
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786394"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203017"
 ---
-# <a name="hello-ios--deep-dive"></a>Olá, iOS – análise detalhada
+# <a name="hello-ios--deep-dive"></a>Hello, iOS – Aprofundamento
 
 O passo a passo de início rápido, introduziu os procedimentos para compilar e executar um aplicativo básico do Xamarin.iOS. Agora é hora de desenvolver uma compreensão mais profunda de como funcionam os aplicativos iOS para que você possa criar programas mais sofisticados. Este guia examina as etapas no passo a passo Hello, iOS para habilitar a compreensão dos conceitos fundamentais do desenvolvimento de aplicativos iOS.
-
-Os seguintes tópicos são explorados neste artigo:
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-- **Introdução ao Visual Studio para Mac** – Introdução ao Visual Studio para Mac e criando um novo aplicativo.
-- **Anatomia de um aplicativo Xamarin.iOS** – Apresentação das partes essenciais de um aplicativo Xamarin.iOS.
-- **Arquitetura e os conceitos básicos sobre aplicativos** – uma análise das partes de um aplicativo iOS e da relação entre eles.
-- **IU (interface do usuário)** – criação de interfaces do usuário com o Designer do iOS.
-- **Controladores de exibição e o ciclo de vida de exibição** – uma introdução para o ciclo de vida de exibição e gerenciamento de hierarquias de exibição de conteúdo com o controlador de exibição.
-- **Testes, implantação e toques finais** – conclua o aplicativo com conselhos sobre testes, implantação, criação de arte final e muito mais.
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-- **Introdução ao Visual Studio** – Introdução ao Visual Studio e criando um novo aplicativo.
-- **Anatomia de um aplicativo Xamarin.iOS** – Apresentação das partes essenciais de um aplicativo Xamarin.iOS.
-- **Arquitetura e os conceitos básicos sobre aplicativos** – uma análise das partes de um aplicativo iOS e da relação entre eles.
-- **IU (interface do usuário)** – criação de interfaces do usuário com o Designer do iOS.
-- **Controladores de exibição e o ciclo de vida de exibição** – uma introdução para o ciclo de vida de exibição e gerenciamento de hierarquias de exibição de conteúdo com o controlador de exibição.
-- **Testes, implantação e toques finais** – conclua o aplicativo com conselhos sobre testes, implantação, criação de arte final e muito mais.
-
------
 
 Este guia ajudará você a desenvolver as habilidades e o conhecimento necessário para criar um aplicativo iOS de uma única tela. Depois que trabalhar com ele, você deverá compreender as diferentes partes de um aplicativo Xamarin.iOS e como elas se encaixam.
 
@@ -64,8 +42,6 @@ O Visual Studio organiza o código em _Soluções_ e *Projetos*. Uma solução �
 ![](hello-ios-deepdive-images/vs-image30.png "Uma captura de tela da solução inicial")
 
 -----
-
-<a name="anatomy" />
 
 ## <a name="anatomy-of-a-xamarinios-application"></a>Anatomia de um aplicativo Xamarin.iOS
 
@@ -157,7 +133,7 @@ namespace Phoneword_iOS
 
 Depois que o aplicativo define sua janela, ele pode começar a carregar a interface do usuário. A próxima seção explora a criação da interface do usuário.
 
-## <a name="user-interface"></a>Interface do Usuário
+## <a name="user-interface"></a>Interface do usuário
 
 A interface do usuário de um aplicativo iOS é como uma vitrine – o aplicativo normalmente obtém uma Janela, mas ele pode preencher a janela com o número de objetos que precisar e as disposições e objetos podem ser alterados dependendo do que o aplicativo deseja exibir. Os objetos nesse cenário – as coisas que o usuário vê – são chamados de exibições. Para criar uma única tela em um aplicativo, as exibições são empilhadas umas sobre as outras em uma *hierarquia de exibição de conteúdo* e a hierarquia é gerenciada por um único controlador de exibição. Aplicativos com várias telas têm várias hierarquias de exibição de conteúdo, cada uma com seu próprio controlador de exibição; o aplicativo coloca as exibições na janela para criar uma hierarquia de exibição de conteúdo diferente com base na tela na qual o usuário está.
 
@@ -322,7 +298,7 @@ Estes são os métodos de ciclo de vida básicos e suas funções:
 
 Quando o código personalizado é adicionado a qualquer estágio do ciclo de vida, a *implementação base* desse método de ciclo de vida deve ser *substituída*. Isso é realizado usando-se para derivação o método de ciclo de vida existente (que já tem algum código anexado a ele) e estendendo-o com código adicional. A implementação base é chamada de dentro do método para certificar-se de que o código original é executado antes do novo código. Um exemplo disso é demonstrado na próxima seção.
 
-Para obter mais informações sobre como trabalhar com controladores de exibição, consulte o [Guia de programação de controlador de exibição para iOS](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ViewLoadingandUnloading/ViewLoadingandUnloading.html) da Apple e a [referência do UIViewController](https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html).
+Para obter mais informações sobre como trabalhar com controladores de exibição, consulte o [Guia de programação de controlador de exibição para iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) da Apple e a [referência do UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc).
 
 ### <a name="responding-to-user-interaction"></a>Respondendo à interação do usuário
 
@@ -379,7 +355,7 @@ O aplicativo Phoneword introduziu vários conceitos não abordados neste guia. E
     CallButton.SetTitle ("Call", UIControlState.Normal);
     ```
 - **Habilitar e desabilitar botões** – **botões** podem estar em um estado `Enabled` ou `Disabled`. Um **botão** desabilitado não responderá à entrada do usuário. Por exemplo, o código a seguir desabilita o `CallButton`: CallButton.Enabled = false; para obter mais informações sobre botões, consulte o guia [botões](~/ios/user-interface/controls/buttons.md).
-- **Ignorar o teclado** – quando a usuário toca no campo de texto, o iOS exibe o teclado para permitir que o usuário insira a entrada. Infelizmente, não há nenhuma funcionalidade interna para ignorar o teclado. O código a seguir é adicionado para o `TranslateButton` para ignorar o teclado quando o usuário pressiona o `TranslateButton`: PhoneNumberText.ResignFirstResponder (); Para outro exemplo de como ignorar o teclado, consulte a receita [Ignorar o teclado](https://developer.xamarin.com/recipes/ios/input/keyboards/dismiss_the_keyboard).
+- **Ignorar o teclado** – quando a usuário toca no campo de texto, o iOS exibe o teclado para permitir que o usuário insira a entrada. Infelizmente, não há nenhuma funcionalidade interna para ignorar o teclado. O código a seguir é adicionado para o `TranslateButton` para ignorar o teclado quando o usuário pressiona o `TranslateButton`: PhoneNumberText.ResignFirstResponder (); Para outro exemplo de como ignorar o teclado, consulte a receita [Ignorar o teclado](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard).
 - **Realizar chamada telefônica com URL** – no aplicativo Phoneword, um esquema de URL da Apple é usado para inicializar o aplicativo de telefone do sistema. O esquema de URL personalizado consiste em uma "tel:" prefixo e o número de telefone traduzido, conforme ilustrado pelo código a seguir:
 
     ```csharp
@@ -399,7 +375,7 @@ O aplicativo Phoneword introduziu vários conceitos não abordados neste guia. E
                 }
     ```
 
-Para obter mais informações sobre exibições de alertas do iOS, consulte a [receita do controlador de alerta](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/).
+Para obter mais informações sobre exibições de alertas do iOS, consulte a [receita do controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller).
 
 ## <a name="testing-deployment-and-finishing-touches"></a>Testes, implantação e toques finais
 
@@ -407,11 +383,11 @@ Ambos o Visual Studio para Mac e o Visual Studio oferecem várias opções para 
 
 ### <a name="debugging-tools"></a>Ferramentas de depuração
 
-Algumas vezes, Problemas no código do aplicativo são difíceis de diagnosticar. Para ajudar a diagnosticar problemas de código complexos, você poderia [definir um ponto de interrupção](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/), [examinar o código passo a passo](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/) ou [enviar informações para a janela de Log](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/).
+Algumas vezes, Problemas no código do aplicativo são difíceis de diagnosticar. Para ajudar a diagnosticar problemas de código complexos, você poderia [definir um ponto de interrupção](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [examinar o código passo a passo](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) ou [enviar informações para a janela de Log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
 ### <a name="deploy-to-a-device"></a>Implantar em um dispositivo
 
-O Simulador iOS é uma maneira rápida de testar um aplicativo. O Simulador tem uma série de otimizações úteis para testes, inclusive local fictício, [simulação de movimento](https://developer.xamarin.com/recipes/ios/multitasking/test_location_changes_in_simulator/) e muito mais. No entanto, os usuários não consumirão aplicativo final em um simulador. Todos os aplicativos devem ser testados em dispositivos reais antecipadamente e com frequência.
+O Simulador iOS é uma maneira rápida de testar um aplicativo. O Simulador tem uma série de otimizações úteis para testes, inclusive local fictício, [simulação de movimento](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) e muito mais. No entanto, os usuários não consumirão aplicativo final em um simulador. Todos os aplicativos devem ser testados em dispositivos reais antecipadamente e com frequência.
 
 Um dispositivo leva tempo para provisionar e requer uma Conta de Desenvolvedor Apple. O guia [Provisionamento de dispositivo](~/ios/get-started/installation/device-provisioning/index.md) fornece instruções completas de como preparar um dispositivo para o desenvolvimento.
 
@@ -464,5 +440,5 @@ No [próximo tutorial na série Introdução](~/ios/get-started/hello-ios-multis
 ## <a name="related-links"></a>Links relacionados
 
 - [Hello, iOS (amostra)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [Diretrizes da interface humana do iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)
+- [Diretrizes da interface humana do iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
+- [Portal de provisionamento do iOS](http://developer.apple.com/account/#/overview)
