@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: f2bccc9140c4c1c9d5d543a4240178f9301852bb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 54fdec74a6e1d0aee71ec0ca6809a5b40680de9f
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997355"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360806"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin. Forms ScrollView
 
@@ -22,11 +22,11 @@ ms.locfileid: "38997355"
 
 Este artigo aborda:
 
-- **[Finalidade](#Purpose)**  &ndash; a finalidade de `ScrollView` e quando ele é usado.
-- **[Uso](#Usage)**  &ndash; como usar `ScrollView` na prática.
-- **[As propriedades](#Properties)**  &ndash; propriedades públicas que podem ser lidos e modificadas.
-- **[Métodos](#Methods)**  &ndash; métodos públicos que podem ser chamados para rolar a exibição.
-- **[Eventos](#Events)**  &ndash; eventos que podem ser usados para ouvir as alterações nos Estados da exibição.
+- **[Finalidade](#purpose)**  &ndash; a finalidade de `ScrollView` e quando ele é usado.
+- **[Uso](#usage)**  &ndash; como usar `ScrollView` na prática.
+- **[As propriedades](#properties)**  &ndash; propriedades públicas que podem ser lidos e modificadas.
+- **[Métodos](#methods)**  &ndash; métodos públicos que podem ser chamados para rolar a exibição.
+- **[Eventos](#events)**  &ndash; eventos que podem ser usados para ouvir as alterações nos Estados da exibição.
 
 ## <a name="purpose"></a>Finalidade
 
