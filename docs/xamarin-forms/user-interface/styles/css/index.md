@@ -392,13 +392,7 @@ As propriedades CSS a seguir são suportadas pelo xamarin. Forms (no **valores**
 |`padding-right`|`Layout`, `Page`| _Duplo_ \| `initial` |`padding-right: 2;`|
 |`padding-bottom`|`Layout`, `Page`| _Duplo_ \| `initial` |`padding-bottom: 6;`|
 |`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `right` \| `center` \| `start` \| `end` \| `initial`. `left` e `right` devem ser evitados em ambientes da direita para esquerda.| `text-align: right;`|
-|`visibility`|`VisualElement`|`true`\|`visible`\|`false`
-  \|
-  `hidden`
-  \|
-  `collapse`
-  \|
-  `initial `|`visibility: hidden;`|
+|`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial `|`visibility: hidden;`|
 |`width`|`VisualElement`|_Duplo_ \| `initial`|`min-width: 320;`|
 
 > [!NOTE]
