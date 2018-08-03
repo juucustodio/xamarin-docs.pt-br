@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 22ac17e211562eccbc49cc213e06079e77dd08c0
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 0f2418994e02c9e83506071f14901d22af4b8a66
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111151"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353315"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Provisionamento gratuito para aplicativos Xamarin.iOS
 
@@ -35,7 +35,7 @@ Para implantar seus aplicativos Xamarin.iOS em um dispositivo com provisionament
 - Seu aplicativo Xamarin.iOS precisa usar uma ID do aplicativo explícita, não uma ID do aplicativo curinga.
 - O identificador do pacote usado em seu aplicativo Xamarin.iOS precisa ser exclusivo e não pode ter sido usado em outro aplicativo anteriormente. Identificadores de pacote usados com o provisionamento gratuito **não podem** ser usados novamente.
 - Caso já tenha distribuído um aplicativo, você não poderá implantar esse aplicativo com o provisionamento gratuito.
-- Se seu aplicativo utilizar os Serviços de Aplicativos, você precisará criar um perfil de provisionamento de acordo com o que está detalhado no guia de [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#appservices). 
+- Se seu aplicativo utilizar os Serviços de Aplicativos, você precisará criar um perfil de provisionamento de acordo com o que está detalhado no guia de [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services). 
 
 Confira a seção [Limitações](#limitations) deste documento para obter mais informações sobre as limitações associadas ao provisionamento gratuito e consulte os [Guias de distribuição de aplicativos](~/ios/deploy-test/app-distribution/index.md) para obter mais informações sobre a distribuição de aplicativos iOS.
 
@@ -144,4 +144,4 @@ Este guia explorou as vantagens e limitações do uso do provisionamento gratuit
 ## <a name="related-links"></a>Links relacionados
 
 - [Provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md)
-- [Provisionamento para serviços de aplicativo](~/ios/get-started/installation/device-provisioning/index.md#appservices)
+- [Provisionamento para serviços de aplicativo](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)
