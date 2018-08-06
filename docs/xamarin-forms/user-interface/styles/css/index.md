@@ -371,9 +371,7 @@ As propriedades CSS a seguir são suportadas pelo xamarin. Forms (no **valores**
 |`border-color`|`Button`, `Frame`|_Cor_ \| `initial`|`border-color: #9acd32;`|
 |`border-width`|`Button`|_Duplo_ \| `initial` |`border-width: .5;`|
 |`color`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`|_Cor_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
-|`direction`|`VisualElement`|`ltr`\|`rtl`\|`inherit`
-  \|
-  `initial` |`direction: rtl;`|
+|`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_Cadeia de caracteres_ \| `initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_duplo_ \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold`\|`italic`\|`initial` |`font-style: bold;`|
