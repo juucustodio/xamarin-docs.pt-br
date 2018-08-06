@@ -22,7 +22,7 @@ ms.locfileid: "34788661"
 Notificações por push devem ser mantidas em breves e contenham apenas dados suficientes para notificar o aplicativo móvel que ele deve contatar o aplicativo de servidor para uma atualização. Por exemplo, quando o novo email chega, o aplicativo de servidor somente notifique o aplicativo móvel que o novo email chegou. A notificação não conterá o novo email em si. O aplicativo móvel seria recuperar novos emails do servidor quando é apropriado
 
 No Centro de push de notificações no iOS é o *Apple Push notificação Gateway Service (APNS)*. Este é um serviço fornecido pela Apple que é responsável por notificações de roteamentos de um servidor de aplicativos para dispositivos iOS.
-A imagem a seguir ilustra a topologia de notificação por push para iOS: ![ ] (remote-notifications-in-ios-images/image4.png "esta imagem ilustra a topologia de notificação por push para iOS")
+A imagem a seguir ilustra a topologia de notificação por push para iOS: ![](remote-notifications-in-ios-images/image4.png "esta imagem ilustra a topologia de notificação por push para iOS")
 
 Remoto as próprias notificações são cadeias de caracteres que seguem o formato formatadas em JSON e protocolos especificados na [a carga de notificação](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) seção o [Local e enviar notificação de guia de programação](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)no [documentação do desenvolvedor iOS](https://developer.apple.com/devcenter/ios/index.action).
 

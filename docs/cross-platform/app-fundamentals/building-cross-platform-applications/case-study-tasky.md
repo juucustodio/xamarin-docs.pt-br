@@ -479,7 +479,7 @@ Os aplicativos resultantes se parecer com isso em cada plataforma:
 
 O aplicativo usa o design de interface de usuário padrão do iOS, como o botão 'Adicionar' sendo posicionado na barra de navegação e o uso interno **mais (+)** ícone. Ele também usa o padrão `UINavigationController` botão 'Voltar' comportamento e dá suporte a 'passe o dedo para excluir' na tabela.
 
- [![](case-study-tasky-images/ios-taskylist.png "Ele também usa o comportamento do botão Voltar de UINavigationController padrão e suporta passe o dedo para exclusão na tabela") ](case-study-tasky-images/ios-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/ios-taskylist.png "também usa o padrão UINavigationController fazer o comportamento do botão e dá suporte a passe o dedo para exclusão na tabela")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![](case-study-tasky-images/ios-taskylist.png "Ele também usa o comportamento do botão Voltar de UINavigationController padrão e suporta passe o dedo para exclusão na tabela")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "também usa o padrão UINavigationController fazer o comportamento do botão e dá suporte a passe o dedo para exclusão na tabela")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
  <a name="Android" />
 
@@ -495,7 +495,7 @@ O aplicativo do Android usa controles internos, incluindo o layout interno para 
 
 O aplicativo do Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior.
 
- [![](case-study-tasky-images/wp-taskylist.png "O aplicativo do Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior") ](case-study-tasky-images/wp-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/wp-taskylist.png "do Windows Phone o aplicativo usa o padrão layout, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [![](case-study-tasky-images/wp-taskylist.png "O aplicativo do Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "do Windows Phone o aplicativo usa o padrão layout, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary" />
 

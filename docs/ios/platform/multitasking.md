@@ -19,7 +19,7 @@ ms.locfileid: "34787949"
 
 _iOS 9 dá suporte a dois aplicativos em execução ao mesmo tempo, usando o slide ou modo divisão. Ele também dá suporte a imagem na imagem de reprodução de vídeo._
 
-![](multitasking-images/about02-sml.png "Exemplo de tela de dividir") ![ ] (multitasking-images/about03-sml.png "imagem na imagem exemplo")
+![](multitasking-images/about02-sml.png "Exemplo de tela de dividir") ![](multitasking-images/about03-sml.png "imagem na imagem exemplo")
 
 iOS 9 adiciona suporte de multitarefa para dois aplicativos em execução ao mesmo tempo no iPad específicos de hardware. Multitarefa para iPad é suportada por meio dos seguintes recursos:
 

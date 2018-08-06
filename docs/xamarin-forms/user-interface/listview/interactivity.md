@@ -157,7 +157,7 @@ Pull para atualizar como o usuário está obtendo:
 
 ![](interactivity-images/refresh-start.png "ListView Pull para atualizar em andamento")
 
-Pull para atualizar como o usuário lançou o pull. Isso é que o usuário vê enquanto você estiver atualizando a lista: ![ ] (interactivity-images/refresh-in-progress.png "Pull de ListView para atualização concluída")
+Pull para atualizar como o usuário lançou o pull. Isso é que o usuário vê enquanto você estiver atualizando a lista: ![](interactivity-images/refresh-in-progress.png "Pull de ListView para atualização concluída")
 
 ListView expõe alguns eventos que permitem que você responda a eventos de puxar para atualizar.
 

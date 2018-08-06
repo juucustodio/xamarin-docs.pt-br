@@ -63,7 +63,7 @@ var userName = shared.StringForKey ("name_preference");
 
 Usuários irão interagir com as configurações através do novo **Apple Watch** aplicativo em seu iPhone. Este aplicativo permite que o usuário Mostrar/ocultar aplicativos na inspeção e também editar as configurações expostas usando o **Watch.bundle configurações**.
 
-![](settings-images/applewatch-1.png "Exemplo de configurações do aplicativo") ![ ] (settings-images/applewatch-2.png "exemplo de configurações de aplicativo")
+![](settings-images/applewatch-1.png "Exemplo de configurações do aplicativo") ![](settings-images/applewatch-2.png "exemplo de configurações de aplicativo")
 
 
 

@@ -21,7 +21,7 @@ MT. D oferece suporte a criar interfaces de usuário declarados em JSON. Quando 
 
 MT. D oferece suporte a gama completa de recursos que estão disponíveis na API de elementos ao usar o JSON. Por exemplo, o aplicativo na seguinte captura de tela é completamente declarado usando JSON:
 
-[![](json-element-walkthrough-images/01-load-from-file.png "Por exemplo, o aplicativo nesta captura de tela é declarado completamente usando JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png "por exemplo, o aplicativo nesta captura de tela é declarado completamente usando JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
+[![](json-element-walkthrough-images/01-load-from-file.png "Por exemplo, o aplicativo nesta captura de tela é declarado completamente usando JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png "por exemplo, o aplicativo nesta captura de tela é declarado completamente usando JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Vamos examinar novamente o exemplo a partir o [passo a passo de API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, mostrando como adicionar uma tela de detalhes da tarefa usando JSON.
 

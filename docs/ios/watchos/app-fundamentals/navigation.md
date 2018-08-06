@@ -49,7 +49,7 @@ Telas modais podem ser uma única cena ou use um layout de página.
 
 Apresenta o segundo plano como uma pilha que pode ser navegado através de, semelhante à forma como `UINavigationController` funciona em iOS. Segundo plano pode ser inserido na pilha de navegação e retirados (programaticamente ou por seleção de usuário).
 
-![](navigation-images/hierarchy-1.png "Segundo plano pode ser enviado para a pilha de navegação") ![ ] (navigation-images/hierarchy-2.png "segundo plano pode ser exibido da pilha de navegação")
+![](navigation-images/hierarchy-1.png "Segundo plano pode ser enviado para a pilha de navegação") ![](navigation-images/hierarchy-2.png "segundo plano pode ser exibido da pilha de navegação")
 
 Assim como acontece com iOS, dedo esquerda-borda navega de volta para o controlador pai em uma pilha de Navegação hierárquica.
 
@@ -94,7 +94,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 Interfaces com base em página passe à esquerda para a direita, semelhante ao modo `UIPageViewController` funciona em iOS. Pontos de indicador são exibidos na parte inferior da tela para mostrar a página é exibida no momento.
 
-![](navigation-images/paged-1.png "Exemplo de primeira página") ![ ] (navigation-images/paged-2.png "página segundo exemplo") ![ ] (navigation-images/paged-5.png "quinta página de exemplo")
+![](navigation-images/paged-1.png "Exemplo de primeira página") ![](navigation-images/paged-2.png "página segundo exemplo") ![](navigation-images/paged-5.png "quinta página de exemplo")
 
 
 Para fazer a interface do usuário principal de seu aplicativo de inspeção de uma interface baseada em página, use `ReloadRootControllers` com uma matriz de controladores de interface e contextos:

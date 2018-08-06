@@ -113,7 +113,7 @@ Pelo menos um RootElement é necessária para iniciar o processo de MonoTouch.
 
 Se um RootElement é inicializada com um valor de elemento/seção esse valor é usado para localizar um filho do elemento que fornecerá um resumo da configuração, que é processado no lado direito da tela. Por exemplo, a captura de tela abaixo mostra uma tabela à esquerda, com uma célula que contém o título da tela de detalhes à direita, "Sobremesas", juntamente com o valor do Deserto selecionado.
 
- [![](images/image4.png "Esta captura de tela mostra uma tabela à esquerda com uma célula que contém o título da tela de detalhes à direita, sobremesas, juntamente com o valor do Deserto selecionado") ](images/image4.png#lightbox) [ ![ ] (images/image5.png "isso captura de tela abaixo mostra uma tabela à esquerda com uma célula que contém o título da tela de detalhes à direita, sobremesas, juntamente com o valor do Deserto selecionado")](images/image5.png#lightbox)
+ [![](images/image4.png "Esta captura de tela mostra uma tabela à esquerda com uma célula que contém o título da tela de detalhes à direita, sobremesas, juntamente com o valor do Deserto selecionado")](images/image4.png#lightbox) [![](images/image5.png "isso captura de tela abaixo mostra uma tabela à esquerda com uma célula que contém o título da tela de detalhes à direita, sobremesas, juntamente com o valor do Deserto selecionado")](images/image5.png#lightbox)
 
 Elementos raiz também podem ser usados dentro de seções para disparar o carregamento de uma nova página de configuração aninhada, conforme mostrado acima. Quando usado nesse modo a legenda fornecida é usada enquanto renderizada dentro de uma seção e também é usada como o título para a subpágina. Por exemplo:
 
