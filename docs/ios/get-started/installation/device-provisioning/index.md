@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f0d6d2343350455a101033aced7cec0c31695503
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785782"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353224"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Provisionamento de dispositivos para o Xamarin.iOS
 
@@ -29,7 +29,6 @@ Antes de implantar o aplicativo em um dispositivo, você precisa ter uma assinat
 - **Programa de Desenvolvedores da Apple** – independentemente de você ser um indivíduo ou representante de uma organização, o Programa de Desenvolvedores da Apple permite a você desenvolver, testar e distribuir aplicativos.
 - **Programa Corporativo de Desenvolvedores da Apple** – o programa corporativo é mais adequado para organizações que desejam desenvolver e distribuir aplicativos apenas internamente. Membros do programa Enterprise não têm acesso ao iTunes Connect e os aplicativos criados não podem ser publicados na App Store.
 
-
 Para se registrar para qualquer um desses programas, visite o [Portal de Desenvolvedores da Apple](https://developer.apple.com/programs/enroll/). Observe que, para se registrar como um desenvolvedor da Apple, é necessário ter uma [ID Apple](https://appleid.apple.com/). Este guia foi criado assumindo que você **é** um membro de um Programa de Desenvolvedores da Apple.
 
 Como alternativa, a Apple introduziu o [Provisionamento gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md) no Xcode 7, que permite que um aplicativo seja executado em um dispositivo *sem* ser membro do Programa de Desenvolvedores da Apple. Há uma série de limitações ao provisionar desse modo, conforme detalhado [aqui](~/ios/get-started/installation/device-provisioning/free-provisioning.md#limitations).
@@ -44,9 +43,7 @@ Ao implantar um aplicativo em um dispositivo, um perfil de provisionamento tamb�
 
 Essas etapas garantem que tudo o que é criado ou usado durante o processo de desenvolvimento, incluindo os aplicativos e dispositivos, pode ser rastreado de volta a uma conta de Desenvolvedor da Apple.
 
-<a name="Provisioning_Profile" />
-
-## <a name="provisioning-your-device"></a>Provisionando o dispositivo
+## <a name="provisioning-your-device"></a>Provisionar o dispositivo
 
 Há duas maneiras de provisionar o dispositivo iOS:
 
@@ -54,15 +51,12 @@ Há duas maneiras de provisionar o dispositivo iOS:
 
 * **Manualmente** – Identidades de assinatura, IDs do Aplicativo e Perfis de provisionamento podem ser criados e gerenciados por meio do Portal do Desenvolvedor da Apple, conforme descrito no guia [Provisionamento manual](manual-provisioning.md). Esses artefatos podem ser gerenciados conforme descrito no guia [Gerenciamento de Conta da Apple](~/cross-platform/macios/apple-account-management.md).
 
-
-<a name="appservices" />
-
 ## <a name="provisioning-for-application-services"></a>Provisionando para Serviços de Aplicativos
 
 A Apple fornece uma seleção de serviços de aplicativos especiais, também chamada de recursos, que podem ser ativados para o aplicativo Xamarin.iOS. Esses serviços de aplicativos devem ser configurados tanto no Portal de Provisionamento iOS, quando a **ID do aplicativo** é criada, quanto no arquivo **Entitlements.plist**, que é parte do projeto do aplicativo Xamarin.iOS. Para obter informações sobre como adicionar serviços de aplicativo no seu aplicativo, consulte os guias [Introdução aos recursos](~/ios/deploy-test/provisioning/capabilities/index.md) e [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
 
 * Crie uma ID do aplicativo com os serviços de aplicativo necessários.
-* Crie um novo [perfil de provisionamento](#Provisioning_Profile) que contenha essa ID do aplicativo.
+* Crie um novo [perfil de provisionamento](#provisioning-your-device) que contenha essa ID do aplicativo.
 * Definir direitos no projeto Xamarin.iOS
 
 ## <a name="related-links"></a>Links relacionados

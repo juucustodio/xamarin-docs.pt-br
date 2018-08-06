@@ -409,8 +409,8 @@ Quando a página que contém o `WrapLayout` aparecer, de forma assíncrona, o ap
 As capturas de tela a seguir mostram o `WrapLayout` depois é girada para a orientação paisagem:
 
 ![](custom-images/landscape-ios.png "Captura de tela de cenário de aplicativo do iOS de exemplo")
-![](custom-images/landscape-android.png "tela de paisagem de aplicativo Android do exemplo") 
- ![ ] (custom-images/landscape-uwp.png " Captura de tela do exemplo UWP aplicativo paisagem")
+![](custom-images/landscape-android.png "tela de paisagem de aplicativo Android do exemplo")
+![](custom-images/landscape-uwp.png " Captura de tela do exemplo UWP aplicativo paisagem")
 
 O número de colunas em cada linha depende do tamanho da foto, a largura da tela e o número de pixels por unidade independente de dispositivo. O [ `Image` ](xref:Xamarin.Forms.Image) elementos de forma assíncrona carregar as fotos e, portanto, o `WrapLayout` classe receberá chamadas frequentes para seus [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método conforme cada `Image` elemento recebe um novo tamanho com base na foto carregada.
 
