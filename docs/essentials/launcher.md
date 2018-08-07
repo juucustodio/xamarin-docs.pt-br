@@ -5,12 +5,12 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/25/2018
-ms.openlocfilehash: 3ab820ece127558c1a5ca8b13c05fc4d6f20646e
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: 252bb873c1494265aafb2285057490ca29ce7419
+ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353925"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39573627"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: inicializador
 
@@ -31,7 +31,7 @@ Para usar a iniciador funcionalidade chamada a `OpenAsync` método e passar em u
 ```csharp
 public class LauncherTest
 {
-    public async Task OpenRideShare()
+    public async Task OpenRideShareAsync()
     {
         var supportsUri = await Launcher.CanOpenAsync("lyft://");
         if (supportsUri)
