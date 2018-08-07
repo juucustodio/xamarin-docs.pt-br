@@ -18,7 +18,7 @@ ms.locfileid: "34791245"
 
 watchOS fornece um [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) controle para exibir imagens e animações simples. Alguns controles também podem ter uma imagem de plano de fundo (por exemplo, botões, grupos e controladores de interface).
 
-![](image-images/image-walkway.png "Imagem mostrando a Apple Watch") ![ ] (image-images/image-animation.png "Apple Watch com animação simples")
+![](image-images/image-walkway.png "Imagem mostrando a Apple Watch") ![](image-images/image-animation.png "Apple Watch com animação simples")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 Use imagens de catálogo de ativos para adicionar imagens a aplicativos de Kit de inspeção.

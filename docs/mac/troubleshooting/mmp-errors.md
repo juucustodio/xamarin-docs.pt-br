@@ -254,7 +254,7 @@ Uma solução de última straw seria usar uma versão mais antiga do Xamarin.Mac
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: Referenciada por {0}.{1}     * * Esta mensagem está relacionada ao MM2006 * *
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: Referenciada por {0}.{1}     ** Esta mensagem está relacionada ao MM2006 **
 
 <a name="MM2010" />
 
@@ -266,7 +266,7 @@ Uma solução de última straw seria usar uma versão mais antiga do Xamarin.Mac
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Apenas as primeiras {0} de {1} "Referenciado por" avisos apresentados. * * Esta mensagem relacionada a 2009 * *
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Apenas as primeiras {0} de {1} "Referenciado por" avisos apresentados. ** Esta mensagem relacionada a 2009 \*\*
 
 <a name="MM2013" />
 
@@ -274,7 +274,7 @@ Uma solução de última straw seria usar uma versão mais antiga do Xamarin.Mac
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.Mac extensões não dão suporte a vinculação. A solicitação de vinculação será ignorada. * * Esta mensagem está obsoleta em XM 3.6 + * *
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.Mac extensões não dão suporte a vinculação. A solicitação de vinculação será ignorada. ** Esta mensagem está obsoleta em XM 3.6 + \*\*
 
 <!-- 2015 used by mtouch -->
 
