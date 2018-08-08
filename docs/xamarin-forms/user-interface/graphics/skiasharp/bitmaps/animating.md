@@ -2,17 +2,17 @@
 title: Animando bitmaps de SkiaSharp
 description: Saiba como executar a animação de bitmap ao sequencialmente exibindo uma série de bitmaps e renderizar os arquivos GIF animados.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: charlespetzold
 ms.author: chape
 ms.date: 07/12/2018
-ms.openlocfilehash: 731f6f7b0caf0103303502385497c24b9cdbd724
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 45a009757d84aa98acc41f6cd2bf672c8472c5bb
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131148"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615571"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animando bitmaps de SkiaSharp
 

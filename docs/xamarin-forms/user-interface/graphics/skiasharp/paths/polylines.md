@@ -1,40 +1,40 @@
 ---
 title: Polilinhas e equações paramétricas
-description: Este artigo explica como para uso SkiaSharp para processar qualquer linha você pode definir com equações paramétricas e demonstra isso com o código de exemplo.
+description: Este artigo explica como para usar SkiaSharp para processar qualquer linha, você pode definir com equações paramétricas e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9539a21b7dbc91da63795639610886233ed705be
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 9118ca8e23e4c4a9023a1add89e26c4484979c8f
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245303"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615789"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinhas e equações paramétricas
 
-_Use SkiaSharp para processar qualquer linha que você pode definir com equações paramétricas_
+_Usar SkiaSharp para processar qualquer linha que você pode definir com equações paramétricas_
 
-Na parte posterior deste guia, você verá os vários métodos que `SKPath` define para processar determinados tipos de curvas. No entanto, às vezes, é necessário desenhar um tipo de curva não é diretamente compatível com `SKPath`. Nesse caso, você pode usar uma polilinha (uma coleção de linhas conectadas) para desenhar qualquer curva que você pode definir matematicamente. Se você fizer as linhas pequeno o suficiente e inúmeros suficiente, o resultado será semelhante a uma curva. Este espiral é realmente 3.600 pequenas linhas:
+Em uma parte posterior deste guia, você verá os vários métodos que `SKPath` define para processar determinados tipos de curvas. No entanto, às vezes, é necessário desenhar um tipo de curva que não é diretamente compatível com `SKPath`. Nesse caso, você pode usar uma polilinha (uma coleção de linhas conectadas) para desenhar qualquer curva que você pode definir matematicamente. Se você fizer as linhas pequeno o suficiente e inúmeros suficiente, o resultado se parecerá com uma curva. Este espiral é realmente 3.600 pequenas linhas:
 
 ![](polylines-images/spiralexample.png "Uma espiral")
 
-Geralmente é melhor definir uma curva em termos de um par de equações paramétricas. Essas são as equações de coordenadas X e Y que dependem de uma terceira variável, às vezes chamada de `t` por tempo. Por exemplo, as seguintes equações paramétricas definem um círculo com raio 1 centralizada no ponto (0, 0) para *t* de 0 a 1:
+Geralmente é melhor definir uma curva em termos de um par de equações paramétricas. Esses são equações para coordenadas X e Y que dependem de uma variável de terceiro, às vezes chamada de `t` por tempo. Por exemplo, as seguintes equações paramétricas definem um círculo com um raio de 1 centralizado no ponto (0, 0) para *t* de 0 a 1:
 
  x = cos(2πt) y = sin(2πt)
 
- Se você quiser um raio maior que 1, simplesmente pode multiplicar valores o seno e o cosseno que radius e se você precisar mover o centro para outro local, adicione esses valores:
+ Se você quiser um raio maior do que 1, simplesmente pode multiplicar os valores do seno e cosseno por esse radius e se você precisar mover o centro em outro local, adicione esses valores:
 
  x = xCenter + radius·cos(2πt) y = yCenter + radius·sin(2πt)
 
-Para uma elipse com paralelo os eixos horizontal e vertical, dois raios envolvidos:
+Para uma elipse com o paralelo de eixos horizontal e vertical, dois raios estão envolvidos:
 
 x = xCenter + xRadius·cos(2πt) y = yCenter + yRadius·sin(2πt)
 
-Em seguida, você pode colocar o código SkiaSharp equivalente em um loop que calcula os vários pontos e adiciona as a um caminho. O código a seguir SkiaSharp cria um `SKPath` objeto para uma elipse que preenche a superfície de exibição. O loop ciclos diretamente por meio de 360 graus. O centro é metade de largura e altura da superfície de exibição e então são os dois raios:
+Em seguida, você pode colocar o código equivalente do SkiaSharp em um loop que calcula os vários pontos e adiciona-os para um caminho. O código de SkiaSharp a seguir cria um `SKPath` objeto para uma elipse que preenche a superfície de exibição. O loop ciclos diretamente por meio de 360 graus. O centro é metade da largura e altura da superfície de exibição e, portanto, são os dois raios:
 
 ```csharp
 SKPath path = new SKPath();
@@ -57,11 +57,11 @@ for (float angle = 0; angle < 360; angle += 1)
 path.Close();
 ```
 
-Isso resulta em uma elipse definida pelo 360 pequenas linhas. Quando ele for renderizado, ela aparece suave.
+Isso resulta em uma elipse definida por 360 pequenas linhas. Quando ela é processada, ele aparece suave.
 
-Naturalmente, você não precisa criar uma elipse usando uma polilinha porque `SKPath` inclui um `AddOval` método que faz isso para você. Mas talvez você queira desenhar um objeto visual que não é fornecido pelo `SKPath`.
+Obviamente, você não precisa criar uma ellipse usando uma polilinha porque `SKPath` inclui um `AddOval` método que faz isso para você. Mas você pode desenhar um objeto visual que não é fornecido pela `SKPath`.
 
-O **Archimedean espiral** página tiver um código que é semelhante ao código de elipse, mas com uma diferença fundamental. Ele executa um loop em torno de 360 graus do círculo 10 vezes, continuamente ajustando o radius:
+O **Archimedean espiral** possui código similares ou o código da elipse, mas com uma diferença fundamental. Ele executa um loop em torno de 360 graus do círculo 10 vezes, ajustando continuamente o radius:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -107,7 +107,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-O resultado também é chamado um *espiral aritmético* porque o deslocamento entre cada loop é constante:
+O resultado também é chamado de um *espiral aritmético* porque o deslocamento entre cada loop é constante:
 
 [![](polylines-images/archimedeanspiral-small.png "Captura de tela da página Archimedean espiral tripla")](polylines-images/archimedeanspiral-large.png#lightbox "tripla captura de tela da página Archimedean espiral")
 
@@ -117,4 +117,4 @@ Observe que o `SKPath` é criado em um `using` bloco. Isso `SKPath` consome mais
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

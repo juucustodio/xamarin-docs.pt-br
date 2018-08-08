@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/08/2018
-ms.openlocfilehash: 865a06e9fa430e195ce4ea3c6088785d9513dbf6
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+ms.openlocfilehash: 4e1249b7a9c1e9797cbc758c3bd1b83f87d47431
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39030698"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615142"
 ---
 # <a name="introduction-to-ios-12"></a>Introdução ao iOS 12
 
@@ -21,11 +21,12 @@ ms.locfileid: "39030698"
 > [!WARNING]
 > Suporte a 12 do Xamarin iOS está atualmente em visualização, o que significa que ele pode conter bugs, não é todos os recursos, e pode ser alterado. Usá-lo apenas para experimentação.
 
-> [!NOTE]
-> - Examine os [guia de Introdução](get-started.md) guia para obter instruções sobre como começar a criar aplicativos iOS 12 com Xamarin.
-> - Para obter mais informações, leia a visualização do Xamarin [postagem de blog de versão](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
 Este documento fornece uma descrição detalhada de algumas APIs do iOS 12 para visualização do Xamarin, qual versão fornece associações c#.
+
+Para começar a criar aplicativos iOS 12 com Xamarin, dê uma olhada:
+
+- O [guia de Introdução](get-started.md)
+- A visualização de Xamarin [postagem no blog de versão](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
 
 ## <a name="arkit-2"></a>ARKit 2
 
@@ -69,8 +70,12 @@ iOS 11.3 introduzido [registros de saúde](https://www.apple.com/healthcare/heal
 
 No iOS 12, os aplicativos de iMessage dão suporte a contextos de apresentação, que permitem que os aplicativos executados como um aplicativo iMessage normal ou no contexto de uma foto ou um efeito de vídeo.
 
+## <a name="vision-framework"></a>Estrutura Vision
+
+A estrutura de visão inclui um detector de face aprimorados que pode detectar faces em várias orientações. Além disso, as revisões de solicitação agora podem ser usadas para selecionar uma revisão do algoritmo de framework visão específica.
+
 ## <a name="related-links"></a>Links relacionados
 
 - [Prepare-se para iOS 12 (Apple)](https://developer.apple.com/ios/)
 - [iOS 12 Preview (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Versão prévia do Xamarin [postagem no blog de versão](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Versão prévia do Xamarin [postagem no blog de versão](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

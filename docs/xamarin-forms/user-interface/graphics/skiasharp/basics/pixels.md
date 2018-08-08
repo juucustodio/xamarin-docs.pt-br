@@ -2,17 +2,17 @@
 title: Pixels e unidades independentes de dispositivo
 description: Este artigo explora as diferenças entre coordenadas de SkiaSharp e xamarin. Forms e demonstra isso com o código de exemplo.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: b0655934b0389b06dca5ef6bab3badc0023400b4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: b75eb1185e58de4e0524acd634a49e69142a324b
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997368"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615295"
 ---
 # <a name="pixels-and-device-independent-units"></a>Pixels e unidades independentes de dispositivo
 

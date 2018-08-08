@@ -2,31 +2,31 @@
 title: A transformação de distorção
 description: Este artigo explica como a transformação de distorção pode criar objetos gráficos inclinados em SkiaSharp e demonstra isso com o código de exemplo.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: 8a0d17f5cdc790aed2bd8fd671563378d5d523b1
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 951fc02dfff1721c1391c5d0c8a21452a156cfdb
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244075"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615347"
 ---
 # <a name="the-skew-transform"></a>A transformação de distorção
 
 _Veja como a transformação de distorção pode criar objetos gráficos inclinados em SkiaSharp_
 
-Em SkiaSharp, a transformação de distorção giram objetos gráficos, como sombra nesta imagem:
+No SkiaSharp, a transformação de distorção inclina objetos gráficos, como sombra nesta imagem:
 
-![](skew-images/skewexample.png "Um exemplo de inclinação do programa distorcer texto de sombra")
+![](skew-images/skewexample.png "Um exemplo de inclinação do programa de distorção de texto de sombra")
 
 A distorção transforma retângulos em parallelograms, mas uma elipse distorcida ainda é uma elipse.
 
-Embora xamarin. Forms define propriedades de conversão, dimensionar e rotações, não há nenhuma propriedade correspondente no xamarin. Forms para distorção.
+Embora o xamarin. Forms define propriedades de translação, dimensionamento e as rotações, não há nenhuma propriedade correspondente no xamarin. Forms para distorção.
 
-O [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/System.Single/System.Single/) método `SKCanvas` aceita dois argumentos de inclinação horizontal e vertical distorcer:
+O [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/System.Single/System.Single/) método `SKCanvas` aceita dois argumentos para distorção horizontal e vertical distorção:
 
 ```csharp
 public void Skew (Single xSkew, Single ySkew)
@@ -38,9 +38,9 @@ Um segundo [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanva
 public void Skew (SKPoint skew)
 ```
 
-No entanto, é improvável que você estará usando um destes dois métodos em isolamento.
+No entanto, é improvável que você esteja usando qualquer um desses dois métodos em isolamento.
 
-O **distorcer experimentar** página lhe permite fazer experiências com a diferença de valores que variam entre – 10 e 10. Uma cadeia de caracteres de texto é posicionada no canto superior esquerdo da página, com distorção valores obtidos nas duas `Slider` elementos. Aqui está o `PaintSurface` manipulador no [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) classe:
+O **distorcer experimentar** página permite que você experimente a distorção de valores que variam entre – 10 e 10. Uma cadeia de caracteres de texto é posicionada no canto superior esquerdo da página, com valores de distorção obtidos dos dois `Slider` elementos. Aqui está o `PaintSurface` manipulador na [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -68,27 +68,27 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Valores de `xSkew` argumento de deslocamento para a parte inferior do texto à direita para valores positivos ou à esquerda dos valores negativos. Valores de `ySkew` Deslocar à direita do texto para baixo para valores negativos ou valores positivos:
+Valores da `xSkew` argumento deslocar a parte inferior do texto à direita para valores positivos ou à esquerda para valores negativos. Valores de `ySkew` shift direita do texto para baixo para valores positivos ou para valores negativos:
 
-[![](skew-images/skewexperiment-small.png "Tripla captura de tela da página de teste distorcer")](skew-images/skewexperiment-large.png#lightbox "tripla captura de tela da página de teste distorcer")
+[![](skew-images/skewexperiment-small.png "Tripla captura de tela da página de teste de distorção")](skew-images/skewexperiment-large.png#lightbox "tripla captura de tela da página de teste de distorção")
 
-Se `xSkew` é negativo do `ySkew`, o resultado é a rotação, mas também dimensionado um pouco como indica a exibição UWP.
+Se `xSkew` é o negativo de `ySkew`, o resultado é a rotação, mas também em escala um pouco como indica a exibição UWP.
 
 As fórmulas de transformação são da seguinte maneira:
 
-x' = x + xSkew · y
+x' = x + xSkew reforçado y
 
-y' = ySkew · x + y
+y' = ySkew reforçado x + y
 
-Por exemplo, para um positivo `xSkew` valor transformado `x'` aumenta o valor como `y` aumenta. É o que causa a inclinação.
+Por exemplo, para um positivo `xSkew` valor transformado `x'` aumenta o valor como `y` aumenta. Esse é o que faz com que a inclinação.
 
-Se um pixels de triângulo 200 largura e 100 pixels de altura é posicionado com seu canto superior esquerdo no ponto (0, 0) e é processado com um `xSkew` valor de 1,5, os seguintes resultados paralelogramo:
+Se um pixels de triângulo 200 largura e 100 pixels de altura é posicionado com seu canto superior esquerdo no ponto (0, 0) e é renderizado com um `xSkew` valor de 1,5, os seguintes resultados paralelogramo:
 
 ![](skew-images/skeweffect.png "O efeito da transformação de distorção em um retângulo")
 
-As coordenadas da borda inferior tem `y` valores de 100, portanto, é deslocado 150 pixels à direita.
+As coordenadas da borda inferior tem `y` valores de 100, portanto, ele é deslocado 150 pixels para a direita.
 
-Para obter valores diferentes de zero de `xSkew` ou `ySkew`, somente o ponto (0, 0) permanece o mesmo. Esse ponto pode ser considerado o centro da inclinação. Se você precisar centro da inclinação para ser algo mais (que é geralmente o caso), não há nenhum `Skew` método que fornece que. Você precisará combinar explicitamente `Translate` chamadas com o `Skew` chamar. Para centralizar a inclinação na `px` e `py`, fazer as chamadas seguintes:
+Para valores diferentes de zero da `xSkew` ou `ySkew`, somente o ponto (0, 0) permanece o mesmo. Desse ponto pode ser considerado o centro da inclinação. Se você precisar o centro da inclinação para ser algo mais (que é geralmente o caso), há nenhuma `Skew` método que fornece que. Você precisará combinar explicitamente `Translate` chamadas com o `Skew` chamar. Para centralizar a distorção na `px` e `py`, faça as seguintes chamadas:
 
 ```csharp
 canvas.Translate(px, py);
@@ -96,21 +96,21 @@ canvas.Skew(xSkew, ySkew);
 canvas.Translate(-px, -py);
 ```
 
-As fórmulas de transformação composto são:
+As fórmulas de transformação composta são:
 
-x' = x + xSkew · (y – py)
+x' = x + xSkew reforçado (y – py)
 
-y' = ySkew · (x – px) + y
+y' = ySkew reforçado (x – px) + y
 
-Se `ySkew` for zero, e você estiver especificando somente um valor diferente de zero de `xSkew`, em seguida, `px` valor não é usado. O valor é irrelevante e da mesma forma para `ySkew` e `py`.
+Se `ySkew` for zero, e você está apenas especificando um valor diferente de zero `xSkew`, em seguida, `px` valor não é usado. O valor é irrelevante e da mesma forma para `ySkew` e `py`.
 
-Você pode achar mais fácil especificando distorção como um ângulo de inclinação, como o ângulo α neste diagrama:
+Você pode achar mais fácil especificar distorção como um ângulo de inclinação, como o ângulo α neste diagrama:
 
 ![](skew-images/skewangleeffect.png "O efeito da transformação de distorção em um retângulo com um ângulo de inclinação indicado")
 
-A taxa do turno 150 pixels para 100 pixels vertical é a tangente do ângulo de que, neste exemplo 56.3 graus.
+A proporção do turno 150 pixels para a vertical de 100 pixels é a tangente do ângulo de que, neste exemplo 56.3 graus.
 
-O arquivo XAML do **experiência de ângulo de inclinação** página é semelhante do **ângulo de inclinação** página exceto que o `Slider` elementos variam de – 90 a 90 graus. O [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) arquivo code-behind centraliza o texto na página e usa `Translate` para definir um centro de inclinação para o centro da página. Uma breve `SkewDegrees` método na parte inferior do código converte ângulos para inclinar valores:
+O arquivo XAML do **experimento de ângulo de inclinação** página é semelhante ao **ângulo de inclinação** página, exceto que o `Slider` elementos variam de – 90 a 90 graus. O [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) centraliza o texto na página de código code-behind e usa `Translate` para definir um centro de inclinação para o centro da página. Um breve `SkewDegrees` método na parte inferior do código converte ângulos para distorcer valores:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -151,11 +151,11 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 }
 ```
 
-Como um ângulo abordagens de 90 graus positivos ou negativos, a tangente abordagens infinito, mas ângulos até aproximadamente 80 graus mais ou menos são úteis:
+Como se aproxima de um ângulo positivos ou negativos 90 graus, a tangente se aproxima de infinito, mas ângulos até cerca de 80 graus ou isso podem ser usados:
 
-[![](skew-images/skewangleexperiment-small.png "Captura de tela da página de teste de ângulo de inclinação tripla")](skew-images/skewangleexperiment-large.png#lightbox "tripla captura de tela da página de teste de ângulo de inclinação")
+[![](skew-images/skewangleexperiment-small.png "Captura de tela da página de teste do ângulo de inclinação tripla")](skew-images/skewangleexperiment-large.png#lightbox "tripla captura de tela da página de teste do ângulo de inclinação")
 
-Uma pequena inclinação de horizontal negativa pode imitar o texto em itálico ou Oblíquo, como o **texto oblíqua** demonstra da página. O [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe mostra como isso é feito:
+Uma distorção horizontal de negativa pequeno pode imitar o texto em itálico ou Oblíquo, como o **oblíqua texto** página demonstra. O [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe mostra como isso é feito:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -187,11 +187,11 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 }
 ```
 
-O `TextAlign` propriedade `SKPaint` é definido como `Center`. Sem quaisquer transformações a `DrawText` chamar pelas coordenadas de (0, 0) seria posicionar o texto com o centro da linha de base horizontal no canto superior esquerdo. O `SkewDegrees` inclina o texto horizontalmente 20 graus em relação à linha de base. O `Translate` chamada move o centro da linha de base do texto horizontal para o centro da tela:
+O `TextAlign` propriedade de `SKPaint` é definido como `Center`. Sem quaisquer transformações a `DrawText` chamar com coordenadas de (0, 0) seria posicionar o texto com o centro horizontal da linha de base no canto superior esquerdo. O `SkewDegrees` inclina o texto horizontalmente 20 graus em relação à linha de base. O `Translate` chamada move o centro horizontal da linha de base do texto para o centro da tela:
 
 [![](skew-images/obliquetext-small.png "Captura de tela da página de texto oblíqua tripla")](skew-images/obliquetext-large.png#lightbox "tripla captura de tela da página de texto oblíqua")
 
-O **distorcer texto de sombra** página demonstra como usar uma combinação de uma escala de distorção e vertical de 45 graus para fazer uma sombra de texto que giram fora do texto. Aqui está a parte pertinente do `PaintSurface` manipulador:
+O **distorcer texto de sombra** página demonstra como usar uma combinação de uma escala de distorção e vertical de 45 graus para fazer uma sombra de texto que se inclina para longe do texto. Aqui está a parte pertinente do `PaintSurface` manipulador:
 
 ```csharp
 using (SKPaint textPaint = new SKPaint())
@@ -222,20 +222,20 @@ using (SKPaint textPaint = new SKPaint())
 
 A sombra será exibido primeiro e, em seguida, o texto:
 
-[![](skew-images/skewshadowtext1-small.png "Tripla captura de tela da página de texto de sombra distorcer")](skew-images/skewshadowtext1-large.png#lightbox "tripla captura de tela da página distorcer texto de sombra")
+[![](skew-images/skewshadowtext1-small.png "Tripla captura de tela da página de texto de sombra distorcer")](skew-images/skewshadowtext1-large.png#lightbox "tripla captura de tela da página de texto de sombra de distorção")
 
-A coordenada vertical é passado para o `DrawText` método indica a posição do texto em relação à linha de base. É a coordenada vertical mesmo usada para o Centro de inclinação. Essa técnica não funcionará se a cadeia de caracteres de texto contém descendentes. Por exemplo, substitua a palavra "estranha" para "Sombra" e aqui 's o resultado:
+A coordenada vertical é passado para o `DrawText` método indica a posição do texto em relação à linha de base. Essa é a coordenada vertical mesma usada para o Centro de inclinação. Essa técnica não funcionará se a cadeia de caracteres de texto contém descendentes. Por exemplo, substitua a palavra "estranha" para "Sombra" e aqui 's o resultado:
 
-[![](skew-images/skewshadowtext2-small.png "Captura de tela de tripla da página distorcer sombra texto com uma palavra alternativa com descendentes")](skew-images/skewshadowtext2-large.png#lightbox "tripla captura de tela da página distorcer sombra texto com uma palavra alternativa com descendentes")
+[![](skew-images/skewshadowtext2-small.png "Captura de tela da página de texto de sombra distorcer com uma palavra alternativa com descendentes tripla")](skew-images/skewshadowtext2-large.png#lightbox "tripla captura de tela da página de texto de sombra distorcer com uma palavra alternativa com descendentes")
 
-Sombra de texto ainda estão alinhadas na linha de base, mas apenas o efeito parece incorreto. Para corrigi-lo, você precisa obter os limites de texto:
+O sombra e o texto ainda estão alinhadas na linha de base, mas o efeito apenas se parece errado. Para corrigi-lo, você precisará obter os limites de texto:
 
 ```csharp
 SKRect textBounds = new SKRect();
 textPaint.MeasureText(text, ref textBounds);
 ```
 
-O `Translate` chamadas precisam ser ajustadas pela altura do descendentes:
+O `Translate` chamadas devem ser ajustados pela altura dos descendentes:
 
 ```csharp
 canvas.Translate(xText, yText + textBounds.Bottom);
@@ -246,10 +246,10 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 Agora, a sombra estende da parte inferior dos descendentes:
 
-[![](skew-images/skewshadowtext3-small.png "Captura de tela de tripla da página de texto de sombra distorcer ajustes para os descendentes")](skew-images/skewshadowtext3-large.png#lightbox "tripla captura de tela da página de texto de sombra distorcer ajustes para os descendentes")
+[![](skew-images/skewshadowtext3-small.png "Captura de tela da página de texto de sombra distorcer com ajustes para os descendentes tripla")](skew-images/skewshadowtext3-large.png#lightbox "tripla captura de tela da página de texto de sombra distorcer com ajustes para os descendentes")
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

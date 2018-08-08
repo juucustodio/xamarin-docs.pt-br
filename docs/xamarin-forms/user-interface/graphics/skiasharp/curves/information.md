@@ -1,38 +1,38 @@
 ---
 title: Enumeração e informações de caminho
-description: Este artigo explica como obter informações sobre os caminhos de SkiaSharp e enumerar o conteúdo e demonstra isso com o código de exemplo.
+description: Este artigo explica como obter informações sobre caminhos de SkiaSharp e enumerar o conteúdo e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 53d1fce20a0e3bc75ba34ab84b2549211567e222
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 65c614e9a6eb26bc0d027a4a67bec19b036d0a70
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243786"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615269"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 
 _Obter informações sobre os caminhos e enumerar o conteúdo_
 
-O [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) classe define várias propriedades e métodos que permitem que você obtenha informações sobre o caminho. O [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) e [ `TightBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.TightBounds/) propriedades (e métodos relacionados) obter as métrica dimensões de um caminho. O [ `Contains` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Contains/p/System.Single/System.Single/) método permite que você determine se um determinado ponto está dentro de um caminho.
+O [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) classe define várias propriedades e métodos que permitem que você obtenha informações sobre o caminho. O [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) e [ `TightBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.TightBounds/) propriedades (e métodos relacionados) obtêm as dimensões de métrica de um caminho. O [ `Contains` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Contains/p/System.Single/System.Single/) método permite que você determine se um determinado ponto está dentro de um caminho.
 
-Às vezes é útil determinar o comprimento total de todas as linhas e curvas que compõem um caminho. Isso não é uma tarefa de maneira algorítmica simple, portanto toda uma classe denominada [ `PathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) é dedicado a ele.
+Às vezes é útil para determinar o comprimento total de todas as linhas e curvas que compõem um caminho. Isso não é uma tarefa algoritmicamente simple, portanto, toda uma classe denominada [ `PathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) é dedicada a ele.
 
-Também, às vezes, é útil obter todas as operações de desenho e pontos que compõem um caminho. Primeiro, esse recurso pode parecer desnecessário: se o programa tiver criado o caminho, o programa já sabe o conteúdo. No entanto, você viu que caminhos também podem ser criados por [efeitos de caminho](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e convertendo [cadeias de caracteres de texto em caminhos](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). Você também pode obter todas as operações de desenho e pontos que compõem esses caminhos. Uma possibilidade é aplicar uma transformação de algoritmo para todos os pontos. Isso permite que as técnicas, como quebra de texto em um hemisfério:
+Também, às vezes, é útil obter todas as operações de desenho e pontos que compõem um caminho. A princípio, esse recurso pode parecer desnecessário: se o programa tiver criado o caminho, o programa já sabe o conteúdo. No entanto, você viu que caminhos também podem ser criados por [efeitos de caminho](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e convertendo [cadeias de caracteres de texto em demarcadores](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). Você também pode obter todas as operações de desenho e pontos que compõem esses caminhos. Uma possibilidade é aplicar uma transformação algorítmica para todos os pontos. Isso permite que as técnicas como quebra automática de texto em torno de um hemisfério:
 
 ![](information-images/pathenumerationsample.png "Texto encapsulado em um hemisfério")
 
 ## <a name="getting-the-path-length"></a>Obtendo o comprimento do caminho
 
-O artigo [ **caminhos e texto** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) você viu como usar o [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) método para desenhar uma cadeia de caracteres de texto cuja base segue o curso de um caminho. Mas e se você deseja dimensionar o texto para que ele se ajuste o caminho com precisão? Para desenhar texto em torno de um círculo, isso é fácil porque a circunferência de um círculo é mais simple calcular. Mas a circunferência de uma elipse ou o comprimento de uma curva de Bézier não é tão simple.
+Neste artigo [ **caminhos e texto** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) você viu como usar o [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) método para desenhar uma cadeia de caracteres de texto cuja linha de base segue o curso de um caminho. Mas e se você deseja dimensionar o texto para que ele se adapta o caminho com precisão? Para desenhar texto em torno de um círculo, isso é fácil porque a circunferência de um círculo é simple calcular. Mas a circunferência de uma elipse ou o comprimento de uma curva de Bézier não é tão simple.
 
-O [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) pode ajudar a classe. O [construtor](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) aceita um `SKPath` argumento e o [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) propriedade revela seu comprimento.
+O [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) classe pode ajudar. O [construtor](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) aceita um `SKPath` argumento e o [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) propriedade revela seu comprimento.
 
-Isso é demonstrado no **comprimento de caminho** sample, que se baseia o **curva de Bézier** página. O [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) arquivo deriva `InteractivePage` e inclui uma interface de toque:
+Isso é demonstrado na **comprimento do caminho** exemplo, que se baseia o **curva de Bézier** página. O [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) arquivo deriva `InteractivePage` e inclui uma interface de toque:
 
 ```xaml
 <local:InteractivePage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -53,7 +53,7 @@ Isso é demonstrado no **comprimento de caminho** sample, que se baseia o **curv
 </local:InteractivePage>
 ```
 
-O [ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) arquivo code-behind permite que você mova quatro pontos de toque para definir os pontos de extremidade e pontos de uma curva de Bézier cúbica de controle. Três campos de definem uma cadeia de caracteres de texto, um `SKPaint` objeto e calculada largura do texto:
+O [ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) arquivo code-behind permite que você mova os quatro pontos de toque para definir os pontos de extremidade e pontos de uma curva de Bézier cúbica de controle. Três campos de definem uma cadeia de caracteres de texto, um `SKPaint` objeto e uma largura calculada do texto:
 
 ```csharp
 public partial class PathLengthPage : InteractivePage
@@ -74,7 +74,7 @@ public partial class PathLengthPage : InteractivePage
 
 O `baseTextWidth` campo é a largura do texto com base em um `TextSize` configuração de 10.
 
-O `PaintSurface` manipulador desenha a curva de Bézier e tamanhos, em seguida, o texto para se ajustar ao longo de seu comprimento total:
+O `PaintSurface` manipulador desenha a curva de Bézier e tamanhos, em seguida, o texto a ser ajustado ao longo de seu tamanho total:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -108,15 +108,15 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-O `Length` propriedade recém-criado `SKPathMeasure` objeto obtém o comprimento do caminho. Isso é dividido pelo `baseTextWidth` valor (que é a largura do texto com base em um tamanho de texto de 10) e, em seguida, multiplicado pelo tamanho da base de texto de 10. O resultado é um novo tamanho de texto para exibir o texto ao longo desse caminho:
+O `Length` propriedade de recém-criado `SKPathMeasure` objeto obtém o comprimento do caminho. Isso é dividido pelo `baseTextWidth` valor (que é a largura do texto com base em um tamanho de texto de 10) e, em seguida, multiplicado pelo tamanho da base de texto de 10. O resultado é um novo tamanho de texto para exibir o texto ao longo desse caminho:
 
-[![](information-images/pathlength-small.png "Captura de tela da página de comprimento de caminho tripla")](information-images/pathlength-large.png#lightbox "tripla captura de tela da página de comprimento de caminho")
+[![](information-images/pathlength-small.png "Tripla captura de tela da página de comprimento de caminho")](information-images/pathlength-large.png#lightbox "tripla captura de tela da página do comprimento do caminho")
 
-Como a curva de Bézier obtém maior ou menor, você pode ver o tamanho do texto alterar.
+Conforme a curva de Bézier fica mais ou menos, você pode ver o tamanho do texto alterar.
 
-## <a name="traversing-the-path"></a>Como percorrer o caminho
+## <a name="traversing-the-path"></a>Percorrer o caminho
 
-`SKPathMeasure` pode fazer mais do que apenas a medida o comprimento do caminho. Para qualquer valor entre zero e o comprimento do caminho, um `SKPathMeasure` objeto pode obter a posição do caminho e a tangente a curva de caminho nesse ponto. A tangente está disponível como um vetor na forma de um `SKPoint` de objeto ou como uma rotação encapsulada em uma `SKMatrix` objeto. Aqui estão os métodos de `SKPathMeasure` que obter essas informações flexível e de várias maneiras:
+`SKPathMeasure` pode fazer mais do que apenas a medida do comprimento do caminho. Para qualquer valor entre zero e o comprimento do caminho, uma `SKPathMeasure` objeto pode obter a posição do caminho e a tangente da curva do caminho naquele ponto. A tangente está disponível como um vetor na forma de um `SKPoint` do objeto ou como uma rotação encapsulado em um `SKMatrix` objeto. Aqui estão os métodos de `SKPathMeasure` que obter essas informações de maneiras variadas e flexíveis:
 
 ```csharp
 Boolean GetPosition (Single distance, out SKPoint position)
@@ -134,11 +134,11 @@ O [ `SKPathMeasureMatrixFlags` ](https://developer.xamarin.com/api/type/SkiaShar
 - [`GetTangent`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathMeasureMatrixFlags.GetPositionAndTangent/)
 - [`GetPositionAndTangent`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathMeasureMatrixFlags.GetPositionAndTangent/)
 
-O **Pipe monociclo metade** página anima uma figura de ponteiro em um monociclo que parece andar e para trás ao longo de uma curva cúbica de Bézier:
+O **Pipe monociclo metade** página anima uma figura de pilha em um monociclo que parece andar e para trás ao longo de uma curva de Bézier cúbica:
 
-[![](information-images/unicyclehalfpipe-small.png "Tripla captura da página do Pipe monociclo metade")](information-images/unicyclehalfpipe-large.png#lightbox "tripla captura de tela da página monociclo metade Pipe")
+[![](information-images/unicyclehalfpipe-small.png "Tripla captura de tela da página Pipe monociclo metade")](information-images/unicyclehalfpipe-large.png#lightbox "tripla captura de tela da página Pipe monociclo metade")
 
-O `SKPaint` objeto usado para traçar o pipe metade e o monociclo é definido como um campo de [ `UnicycleHalfPipePage` ]() classe. Também é definido é o `SKPath` objeto para o monociclo:
+O `SKPaint` objeto usado para traçar o pipe de meia e o monociclo é definido como um campo de [ `UnicycleHalfPipePage` ]() classe. Também é definido é o `SKPath` objeto para o monociclo:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -163,7 +163,7 @@ public class UnicycleHalfPipePage : ContentPage
 }
 ```
 
-A classe contém as substituições padrão da `OnAppearing` e `OnDisappearing` métodos para animação. O `PaintSurface` manipulador cria o caminho para o pipe metade e, em seguida, desenha. Um `SKPathMeasure` objeto é criado com base no caminho:
+A classe contém substituições de padrão de `OnAppearing` e `OnDisappearing` métodos para animação. O `PaintSurface` manipulador cria o caminho para o pipe do semestre e, em seguida, desenha-lo. Um `SKPathMeasure` objeto, em seguida, é criado com base nesse caminho:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -209,15 +209,15 @@ public class UnicycleHalfPipePage : ContentPage
 }
 ```
 
-O `PaintSurface` manipulador calcula um valor de `t` que varia de 0 para 1 a cada cinco segundos. Ele usa o `Math.Cos` função para converter isso para um valor de `t` que varia de 0 a 1 e de volta para 0, onde 0 corresponde ao monociclo no início na parte superior esquerda, ao 1 corresponde à monociclo no canto superior direito. A função cosseno faz com que a velocidade seja mais lentos na parte superior do pipe e mais rápido na parte inferior.
+O `PaintSurface` manipulador calcula um valor de `t` que vai de 0 a 1 a cada cinco segundos. Ele usa o `Math.Cos` função para convertê-lo em um valor de `t` que varia de 0 a 1 e de volta para 0, onde 0 corresponde para o monociclo no início na parte superior esquerda, enquanto 1 corresponde ao monociclo no canto superior direito. A função cosseno faz com que a velocidade seja mais lenta na parte superior do pipe e mais rápido na parte inferior.
 
-Observe que esse valor de `t` devem ser multiplicados pelo comprimento do caminho para o primeiro argumento para `GetMatrix`. A matriz é então aplicada para o `SKCanvas` objeto para desenhar o caminho monociclo.
+Observe que esse valor de `t` deve ser multiplicado pelo comprimento de caminho para o primeiro argumento para `GetMatrix`. A matriz é então aplicada ao `SKCanvas` objeto para o caminho monociclo de desenho.
 
-## <a name="enumerating-the-path"></a>Enumerar o caminho
+## <a name="enumerating-the-path"></a>Enumerando o caminho
 
-Dois inseridos classes de `SKPath` permitem enumerar o conteúdo do caminho. Essas classes são [ `SKPath.Iterator` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+Iterator/) e [ `SKPath.RawIterator` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+RawIterator/). As duas classes são muito semelhantes, mas `SKPath.Iterator` pode eliminar elementos no caminho com um comprimento zero ou perto de comprimento zero. O `RawIterator` é usado no exemplo a seguir.
+Dois inseridos classes de `SKPath` permitem enumerar o conteúdo do caminho. Essas classes são [ `SKPath.Iterator` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+Iterator/) e [ `SKPath.RawIterator` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+RawIterator/). As duas classes são muito semelhantes, mas `SKPath.Iterator` pode eliminar elementos no caminho com comprimento zero ou perto de comprimento zero. O `RawIterator` é usado no exemplo a seguir.
 
-Você pode obter um objeto do tipo `SKPath.RawIterator` chamando o [ `CreateRawIterator` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CreateRawIterator()/) método `SKPath`. Enumerar através do caminho é feito chamando repetidamente o [ `Next` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath+RawIterator.Next/p/SkiaSharp.SKPoint[]/) método. Passá-lo para uma matriz de quatro `SKPoint` valores:
+Você pode obter um objeto do tipo `SKPath.RawIterator` chamando o [ `CreateRawIterator` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CreateRawIterator()/) método de `SKPath`. Enumerando através do caminho é realizado repetidamente chamando o [ `Next` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath+RawIterator.Next/p/SkiaSharp.SKPoint[]/) método. Passar a ele uma matriz de quatro `SKPoint` valores:
 
 ```csharp
 SKPoint[] points = new SKPoint[4];
@@ -225,7 +225,7 @@ SKPoint[] points = new SKPoint[4];
 SKPathVerb pathVerb = rawIterator.Next(points);
 ```
 
-O `Next` método retorna um membro do [ `SKPathVerb` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathVerb/) enumeração. Esses valores indicam o comando de desenho específico no caminho. O número de pontos válidos inserido na matriz depende deste verb:
+O `Next` método retorna um membro de [ `SKPathVerb` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathVerb/) enumeração. Esses valores indicam que o comando de desenho específico no caminho. O número de pontos válidos inserido na matriz depende esse verbo:
 
 - [`Move`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Move/) com um único ponto
 - [`Line`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Line/) com dois pontos
@@ -237,13 +237,13 @@ O `Next` método retorna um membro do [ `SKPathVerb` ](https://developer.xamarin
 
 O `Done` verbo indica que a enumeração foi concluída.
 
-Observe que não há nenhum `Arc` verbos. Isso indica que todos os arcos são convertidos em curvas de Bézier quando adicionado ao caminho.
+Observe que há nenhum `Arc` verbos. Isso indica que todos os arcos são convertidos em curvas de Bézier quando adicionado ao caminho.
 
-Algumas das informações de `SKPoint` matriz é redundante. Por exemplo, se um `Move` verbo é seguido por um `Line` verbo e, em seguida, o primeiro dos dois pontos que acompanham o `Line` é o mesmo que o `Move` ponto. Na prática, essa redundância é muito útil. Quando você obtém um `Cubic` verbo, ele é acompanhado por todos os quatro pontos que definem a curva de Bézier cúbica. Você não precisa manter a atual posição estabelecida pelo verbo anterior.
+Algumas das informações no `SKPoint` matriz é redundante. Por exemplo, se um `Move` verbo é seguido por um `Line` verbo e, em seguida, o primeiro dos dois pontos que acompanham o `Line` é o mesmo que o `Move` apontar. Na prática, essa redundância é muito útil. Quando chegar um `Cubic` verbo, ela é acompanhada por todos os quatro pontos que definem a curva de Bézier cúbica. Você não precisa manter a posição atual estabelecida pelo verbo anterior.
 
-O verbo problemático, no entanto, é `Close`. Este comando desenha uma linha reta da posição atual para o início do contorno estabelecido anteriormente pelo `Move` comando. Idealmente, o `Close` verbo deve fornecer esses dois pontos em vez de apenas um ponto. O que é pior é que o ponto que acompanha o `Close` verbo sempre é (0, 0). Isso significa que quando você enumera através de um caminho, você provavelmente precisará manter o `Move` ponto e a posição atual.
+O verbo problemático, no entanto, é `Close`. Esse comando desenha uma linha reta da posição atual para o início da delimitação estabelecida anteriormente pelo `Move` comando. O ideal é que o `Close` verbo deve fornecer esses dois pontos em vez de apenas um ponto. O que é pior é que o ponto que acompanha o `Close` verbo sempre é (0, 0). Isso significa que quando você enumerar por meio de um caminho, você provavelmente precisará reter o `Move` ponto e a posição atual.
 
-Estático [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe contém diversos métodos que convertem os três tipos de curvas de Bézier em uma série de linhas retas pequenas que se aproximam a curva. (As fórmulas paramétricos foram apresentadas no artigo [ **tipos de três das curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) O `Interpolate` método divide uma linha reta em várias linhas curtas que são apenas uma unidade de comprimento:
+Estático [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe contém vários métodos que convertem os três tipos de curvas de Bézier em uma série de linhas retas pequenas que se aproximam da curva. (As fórmulas paramétricas eram apresentadas neste artigo [ **tipos de três das curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) O `Interpolate` método divide uma linha reta em várias linhas curtas que são apenas uma unidade de comprimento:
 
 ```csharp
 static class PathExtensions
@@ -328,9 +328,9 @@ static class PathExtensions
 }
 ```
 
-Todos esses métodos são referenciados no método de extensão `CloneWithTransform` mostrado abaixo. Esse método clona um caminho, enumerando os comandos de caminho e criar um novo caminho com base nos dados. No entanto, o novo caminho consiste apenas em `MoveTo` e `LineTo` chamadas. Todas as linhas retas e curvas sejam reduzidas a uma série de linhas pequenas.
+Todos esses métodos são referenciados do método de extensão `CloneWithTransform` mostrado abaixo. Esse método clona um caminho, enumerando os comandos de caminho e construir um novo caminho com base nos dados. No entanto, o novo caminho consiste apenas `MoveTo` e `LineTo` chamadas. Todas as linhas retas e curvas sejam reduzidas a uma série de linhas pequenas.
 
-Ao chamar `CloneWithTransform`, passe para o método uma `Func<SKPoint, SKPoint>`, que é uma função com um `SKPaint` parâmetro retorna um `SKPoint` valor. Essa função é chamada para cada ponto de aplicar uma transformação de algoritmo personalizada:
+Ao chamar `CloneWithTransform`, você passa para o método de um `Func<SKPoint, SKPoint>`, que é uma função com um `SKPaint` parâmetro retorna um `SKPoint` valor. Essa função é chamada para cada ponto de aplicar uma transformação algorítmica personalizada:
 
 ```csharp
 static class PathExtensions
@@ -419,7 +419,7 @@ static class PathExtensions
 }
 ```
 
-Porque o caminho clonado será reduzido para linhas retas pequenas, a função de transformação tem a capacidade de converter linhas retas em curvas.
+Porque o caminho clonado é reduzido para pequenas linhas retas, a função de transformação tem a capacidade de converter linhas retas em curvas.
 
 Observe que o método retém o primeiro ponto de cada delimitação na variável chamada `firstPoint` e a posição atual depois de cada comando de desenho na variável `lastPoint`. Eles são necessários para construir o fechamento de final de linha quando um `Close` verbo é encontrado.
 
@@ -427,7 +427,7 @@ O **GlobularText** exemplo usa esse método de extensão para quebrar o texto ao
 
 [![](information-images/globulartext-small.png "Captura de tela da página de texto Globular tripla")](information-images/globulartext-large.png#lightbox "tripla captura de tela da página de texto Globular")
 
-O [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) construtor da classe executa essa transformação. Ele cria um `SKPaint` de objeto para o texto e, em seguida, obtém um `SKPath` de objeto o `GetTextPath` método. Este é o caminho passado para o `CloneWithTransform` método de extensão juntamente com uma função de transformação:
+O [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) construtor da classe executa essa transformação. Ele cria um `SKPaint` do objeto para o texto e, em seguida, obtém um `SKPath` objeto o `GetTextPath` método. Esse é o caminho passado para o `CloneWithTransform` método de extensão juntamente com uma função de transformação:
 
 ```csharp
 public class GlobularTextPage : ContentPage
@@ -474,7 +474,7 @@ public class GlobularTextPage : ContentPage
 }
 ```
 
-A função de transformação primeiro calcula dois valores denominados `longitude` e `latitude` que variam de – π/2 na parte superior e esquerda do texto, a π/2 à direita e inferior do texto. Esses valores no intervalo de não visualmente satisfatória, eles são reduzidos multiplicando 0,75; (Tente o código sem esses ajustes. O texto torna-se muito obscuros no Norte e Sul polos e muito fino dos lados.) Essas coordenadas esféricas tridimensionais são convertidas para bidimensional `x` e `y` coordenadas por fórmulas padrão.
+A função de transformação primeiro calcula dois valores denominados `longitude` e `latitude` que variam de – π/2 na parte superior e esquerda do texto, a π/2 à direita e inferior do texto. O intervalo desses valores não é visualmente satisfatório, para que eles são reduzidos pela multiplicação por 0,75. (Tente o código sem esses ajustes. O texto se torna muito fino nas laterais e muito obscuro no Centro-Norte e Sul polos.) Essas coordenadas esféricas tridimensionais são convertidas para bidimensional `x` e `y` coordenadas por fórmulas padrão.
 
 O novo caminho é armazenado como um campo. O `PaintSurface` manipulador, em seguida, simplesmente precisa centralizar e dimensionar o caminho para exibi-la na tela:
 
@@ -506,9 +506,9 @@ public class GlobularTextPage : ContentPage
 }
 ```
 
-Essa é uma técnica muito versátil. Se a matriz de efeitos de caminho descrito no [ **caminho efeitos** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) artigo bastante não engloba algo sensação deve ser incluída, essa é uma maneira para preencher as lacunas.
+Essa é uma técnica muito versáteis. Se a matriz de efeitos de caminho é descrito na [ **efeitos de caminho** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) artigo bastante não abrange algo sentiram a deve ser incluída, essa é uma maneira para preencher as lacunas.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,23 +1,24 @@
 ---
-title: Específico da plataforma SkiaSharp anotações
-description: Este documento descreve específico da plataforma detalhes relevantes para SkiaSharp. Ele fornece o código de exemplo para iOS, Android, macOS, Windows e xamarin. Forms.
+title: Notas específicas da plataforma SkiaSharp
+description: Este documento descreve detalhes específicos da plataforma relevantes para SkiaSharp. Ele fornece o código de exemplo para iOS, Android, macOS, Windows e xamarin. Forms.
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: bcec8f2c850396f45cba795555b924d3cbc4ef22
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 05c6ae6553a2e869b9eb7e038abd7b1c34350551
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783523"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615802"
 ---
-# <a name="skiasharp-platform-specific-notes"></a>Específico da plataforma SkiaSharp anotações
+# <a name="skiasharp-platform-specific-notes"></a>Notas específicas da plataforma SkiaSharp
 
-Os exemplos a seguir alocar buffers de imagem manualmente, isso é feito para ilustrar um padrão comum de plataforma que é desenhar em um buffer RBGA existente fornecido pela plataforma.
+Os exemplos a seguir alocar os buffers de imagem manualmente, isso é feito para ilustrar um padrão comum de plataforma que é desenhar em um buffer RBGA existente fornecido pela plataforma.
 
-Você não precisa usar este idioma se você não deseja.  Há uma sobrecarga que irá criar e gerenciar o armazenamento de backup para a imagem para você.
+Você não precisa usar essa linguagem se você não quiser.  Há uma sobrecarga que criará e gerenciará o armazenamento de backup para a sua imagem para você.
 
 ## <a name="ios"></a>iOS
 
@@ -99,7 +100,7 @@ try {
 }
 ```
 
-## <a name="windows-desktop--mac-desktop"></a>Área de trabalho do Windows / área de trabalho de Mac
+## <a name="windows-desktop--mac-desktop"></a>Área de trabalho do Windows / área de trabalho do Mac
 
 ```csharp
 var width = Width;
@@ -118,8 +119,8 @@ using (var bitmap = new Bitmap(width, height, PixelFormat.Format32bppPArgb)) {
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Para incluir SkiaSharp no seu xamarin. Forms aplicativos Consulte o guia de [usando SkiaSharp em xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
+Consulte o guia para incluir SkiaSharp no seu xamarin. Forms aplicativos [usar SkiaSharp em xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [IOS SkiaSharp pasta de trabalho](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)
+- [Pasta de trabalho de iOS de SkiaSharp](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)

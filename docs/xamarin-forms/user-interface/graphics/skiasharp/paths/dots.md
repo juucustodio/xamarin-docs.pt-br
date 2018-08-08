@@ -1,36 +1,36 @@
 ---
-title: Pontos e hífens em SkiaSharp
-description: Este artigo explora como mestre a complexidade do desenho linhas pontilhadas e tracejadas no SkiaSharp e demonstra isso com o código de exemplo.
+title: Pontos e traços em SkiaSharp
+description: Este artigo explora como dominar as complicações do desenho linhas pontilhadas e tracejadas no SkiaSharp e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5571f2d1824cef72e192a19d15f9af03276f7523
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 7c336e6b5224f61ff84eb39652788b23f52b806e
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243867"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615412"
 ---
-# <a name="dots-and-dashes-in-skiasharp"></a>Pontos e hífens em SkiaSharp
+# <a name="dots-and-dashes-in-skiasharp"></a>Pontos e traços em SkiaSharp
 
-_A complexidade do desenho linhas pontilhadas e tracejadas no SkiaSharp do mestre_
+_Dominar as complicações do desenho linhas pontilhadas e tracejadas no SkiaSharp_
 
-SkiaSharp permite que você desenhar linhas que não são sólidos, mas em vez disso, são compostos de pontos e traços:
+SkiaSharp permite desenhar linhas que não sejam sólidos, mas em vez disso, são compostos de pontos e traços:
 
 ![](dots-images/dottedlinesample.png "Linha pontilhada")
 
-Você pode fazer isso uma *efeito*, que é uma instância do [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) classe definida como o [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) propriedade de `SKPaint`. Você pode criar um caminho de efeito (ou combinar caminho efeitos) usando o estático `Create` métodos definidos pelo `SKPathEffect`.
+Você fazer isso com uma *efeito de caminho*, que é uma instância das [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) classe definida como o [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) propriedade do `SKPaint`. Você pode criar um caminho de efeito (ou combinar efeitos de caminho) usando o estático `Create` métodos definidos pelo `SKPathEffect`.
 
-Para desenhar linhas tracejadas ou pontilhadas, você deve usar o [ `SKPathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) método estático. Há dois argumentos: primeiro, isso é uma matriz de `float` valores que indicam os comprimentos de pontos e hífens e o comprimento dos espaços entre eles. Essa matriz deve ter um número par de elementos, e deve haver pelo menos dois elementos. (Pode haver nenhum elemento na matriz, mas que resulta em uma linha sólida.) Se houver dois elementos, a primeira é o comprimento de um ponto ou traço e o segundo é o comprimento do espaço antes do próximo ponto ou traço. Se há mais de dois elementos, eles são nesta ordem: tracejado comprimento, comprimento do intervalo, o comprimento de traço, comprimento do intervalo e assim por diante.
+Para desenhar linhas tracejadas ou pontilhadas, use o [ `SKPathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) método estático. Há dois argumentos: primeiro, isso é uma matriz de `float` valores que indicam os comprimentos dos pontos e traços e o comprimento dos espaços entre elas. Essa matriz deve ter um número par de elementos, e deve haver pelo menos dois elementos. (Pode haver zero elementos na matriz, mas que resulte em uma linha sólida.) Se houver dois elementos, a primeira é o comprimento de um ponto ou traço e o segundo é o comprimento da lacuna antes do próximo ponto ou traço. Se há mais de dois elementos, eles são nesta ordem: traço comprimento, comprimento da lacuna, comprimento do traço, tamanho do intervalo e assim por diante.
 
-Em geral, você desejará certificar os comprimentos de traço e espaço múltiplo da largura do traço. Se a largura do traço é de 10 pixels, por exemplo, em seguida, a matriz {10, 10} desenhará uma linha pontilhada onde as pontos e espaços são do mesmo comprimento que a espessura do traço.
+Em geral, você vai querer fazer os comprimentos de traço e gap um múltiplo da largura do traço. Se a largura do traço é de 10 pixels, por exemplo, em seguida, a matriz {10, 10} desenhará uma linha pontilhada onde as pontos e os espaços são o mesmo tamanho que a espessura do traço.
 
-No entanto, o `StrokeCap` configuração o `SKPaint` objeto também afeta a esses pontos e hífens. Como você verá em breve, que tem um impacto sobre os elementos dessa matriz.
+No entanto, o `StrokeCap` configuração do `SKPaint` objeto também afeta esses pontos e traços. Como você verá em breve, que tem um impacto sobre os elementos dessa matriz.
 
-Pontilhado e tracejadas são demonstradas no **pontos e hífens** página. O [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) arquivo cria dois `Picker` exibições, uma para permitindo que você selecione um limite de traço e a segunda para selecionar uma matriz de traço:
+Linhas tracejadas são demonstradas no e pontilhadas a **por pontos e traços** página. O [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) arquivo instancia dois `Picker` modos de exibição, um para permitindo que você selecione um limite do traço e o segundo para selecionar uma matriz de traço:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -91,9 +91,9 @@ Pontilhado e tracejadas são demonstradas no **pontos e hífens** página. O [ *
 </ContentPage>
 ```
 
-Os três primeiros itens de `dashArrayPicker` supor que a largura do traço é de 10 pixels. O {10, 10} matriz é para uma linha pontilhada, {30, 10} é para uma linha tracejada e {10, 10, 30, 10} é para uma linha de ponto-e-traço. (As outras três serão discutidas em breve.)
+Os primeiros três itens a `dashArrayPicker` supor que a largura do traço é de 10 pixels. O {10, 10} é de matriz para uma linha pontilhada, {30, 10} é para uma linha tracejada e {10, 10, 30, 10} é para uma linha de traço e ponto. (As outras três serão discutidas em breve.)
 
-O [ `DotsAndDashesPage` arquivo code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contém o `PaintSurface` manipulador de eventos e alguns rotinas auxiliares para acessar o `Picker` modos de exibição:
+O [ `DotsAndDashesPage` arquivo code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contém o `PaintSurface` manipulador de eventos e algumas rotinas auxiliares para acessar o `Picker` modos de exibição:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -153,23 +153,23 @@ float[] GetPickerArray(Picker picker)
 }
 ```
 
-Nas capturas de tela seguir, a tela de iOS na extremidade esquerda mostra uma linha pontilhada:
+Nas capturas de tela seguir, a tela do iOS na extrema esquerda mostra uma linha pontilhada:
 
-[![](dots-images/dotsanddashes-small.png "Captura de tela da página de pontos e hífens tripla")](dots-images/dotsanddashes-large.png#lightbox "tripla captura de tela da página de pontos e traços")
+[![](dots-images/dotsanddashes-small.png "Captura de tela da página de pontos e traços tripla")](dots-images/dotsanddashes-large.png#lightbox "tripla captura de tela da página de pontos e traços")
 
-No entanto, a tela Android também deve para mostrar uma linha pontilhada usando a matriz {10, 10}, mas em vez disso, a linha é sólida. O que aconteceu? O problema é que a tela Android também tem uma configuração de limites de traço de `Square`. Isso estende a todos os traços pela metade da largura do traço, fazendo com que eles preencher as lacunas.
+No entanto, a tela do Android também deve para mostrar uma linha pontilhada usando a matriz {10, 10}, mas em vez disso, a linha é sólida. O que aconteceu? O problema é que a tela do Android também tem uma configuração de limites do traço de `Square`. Isso estende a todos os traços pela metade da largura do traço, fazendo com que eles preencher as lacunas.
 
-Para contornar esse problema ao usar um limite de traço de `Square` ou `Round`, você deve diminuir os comprimentos de traço na matriz, o comprimento de traço (às vezes, resultando em um comprimento de traço de 0) e aumentar os comprimentos de intervalo, o comprimento do traço. Isso é como as três finais tracejado matrizes no `Picker` foram calculados no arquivo XAML:
+Para contornar esse problema ao usar um limite do traço de `Square` ou `Round`, você deve diminuir os comprimentos de traço na matriz, o comprimento do traço (às vezes, resultando em um comprimento do traço de 0) e aumentar os comprimentos de lacuna pelo comprimento do traço. Isso é como os três finais traço matrizes no `Picker` foram calculados no arquivo XAML:
 
-- {10, 10} se torna {0, 20} para uma linha pontilhada
-- {30, 10} se torna {20, 20} para uma linha tracejada
-- {10, 10, 30, 10} ficar {0, 20, 20, 20} por uma linha pontilhada e tracejada
+- {10, 10} torna-se {0, 20} para uma linha pontilhada
+- {30, 10} torna-se {20, 20} para uma linha tracejada
+- {10, 10, 30, 10} se torna a {0, 20, 20, 20} para uma linha pontilhada e tracejada
 
-Limitar a mostra a tela UWP pontilhado e tracejado da linha para um traço do `Round`. O `Round` cap traço geralmente fornece melhor a aparência de pontos e traços nas linhas espessa.
+Mostra a tela UWP que tracejado linha para um traço e pontilhadas limite de `Round`. O `Round` limite do traço, geralmente oferece a melhor aparência de pontos e traços em linhas grossa.
 
-Até o momento nenhuma referência foi feita do segundo parâmetro para o `SKPathEffect.CreateDash` método. Esse parâmetro é chamado `phase` e ela se refere a um deslocamento dentro do padrão de traço e ponto de início da linha. Por exemplo, se a matriz de traço é {10, 10} e o `phase` for 10, a linha começa com um intervalo, em vez de um ponto.
+Até agora não há menção foi feita do segundo parâmetro para o `SKPathEffect.CreateDash` método. Esse parâmetro é chamado `phase` e ele se refere a um deslocamento dentro do padrão de ponto-e-traço, para o início da linha. Por exemplo, se a matriz de traço é {10, 10} e o `phase` é 10 e, em seguida, a linha começa com uma lacuna em vez de um ponto.
 
-Uma aplicação interessante do `phase` parâmetro é de uma animação. O **animado em** página é semelhante de **Archimedean espiral** página, exceto que o [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) classe anima a `phase` parâmetro. A página também demonstra outra abordagem para animação. O exemplo anterior do [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) usado o `Task.Delay` método para controlar a animação. Em vez disso, este exemplo usa o xamarin. Forms `Device.Timer` método:
+Uma aplicação interessante do `phase` parâmetro está em uma animação. O **animada espiral** página é semelhante ao **Archimedean espiral** página, exceto que o [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) animado pela classe o `phase` parâmetro. A página também demonstra outra abordagem para animação. O exemplo anterior do [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) usado o `Task.Delay` método para controlar a animação. Em vez disso, este exemplo usa o xamarin. Forms `Device.Timer` método:
 
 
 ```csharp
@@ -211,14 +211,14 @@ protected override void OnAppearing()
 }
 ```
 
-Naturalmente, você terá que, na verdade, execute o programa para ver a animação:
+É claro, você terá de realmente executar o programa para ver a animação:
 
-[![](dots-images/animatedspiral-small.png "Captura de tela da página de animação em tripla")](dots-images/animatedspiral-large.png#lightbox "tripla captura de tela da página em animado")
+[![](dots-images/animatedspiral-small.png "Captura de tela da página espiral animada tripla")](dots-images/animatedspiral-large.png#lightbox "tripla captura de tela da página espiral animado")
 
-Você viu como desenhar linhas e definir curvas usando equações paramétricas. Uma seção a ser publicado posteriormente aborda os vários tipos de curvas que `SKPath` oferece suporte.
+Agora, você já viu como desenhar linhas e definir curvas usando equações paramétricas. Uma seção a ser publicado posteriormente abordará os vários tipos de curvas que `SKPath` dá suporte.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
