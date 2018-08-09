@@ -1,35 +1,35 @@
 ---
-title: Guia de Introdução do iOS
-description: Este documento descreve como começar a usar a inserção do .NET com iOS. Ele discute os requisitos e apresenta um aplicativo de exemplo para demonstrar como associar um assembly gerenciado e usar a saída em um projeto no Xcode.
+title: Introdução ao iOS
+description: Este documento descreve como começar a usar a incorporação do .NET com o iOS. Ele discute os requisitos e apresenta um aplicativo de exemplo para demonstrar como associar um assembly gerenciado e usar a saída em um projeto do Xcode.
 ms.prod: xamarin
 ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 683f448c3e0cdba1bbe3ba68f0db3225675f5830
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: d61eb8f1ad1def764c8552b2f047aa46cd712018
+ms.sourcegitcommit: ef04a4ae1b19c1854a8e4e8315516d4030f4bbd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066891"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39654822"
 ---
-# <a name="getting-started-with-ios"></a>Guia de Introdução do iOS
+# <a name="getting-started-with-ios"></a>Introdução ao iOS
 
 ## <a name="requirements"></a>Requisitos
 
-Além dos requisitos de nossos [guia de Introdução ao Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guia, você também precisará:
+Além dos requisitos de nossos [Introdução ao Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guia, você também precisará:
 
-* [Xamarin 10.11](https://visualstudio.microsoft.com/xamarin/) ou posterior
+* [Xamarin. IOS 10.11](https://visualstudio.microsoft.com/xamarin/) ou posterior
 
 ## <a name="hello-world"></a>Hello world
 
-Primeiro, crie um exemplo do mundo Olá simples em c#.
+Primeiro, crie um exemplo simples de Olá do mundo em c#.
 
-### <a name="create-c-sample"></a>Criar o exemplo em c#
+### <a name="create-c-sample"></a>Criar o exemplo de c#
 
-Abra o Visual Studio para Mac, crie um novo projeto de biblioteca de classes do iOS, nomeie-o **saudação do csharp**e salvá-lo para **~/Projects/hello-from-csharp**.
+Abra o Visual Studio para Mac, crie um novo projeto de biblioteca de classes do iOS, nomeie- **hello-de-csharp**e salvá-lo no **~/Projects/hello-from-csharp**.
 
-Substitua o código no **MyClass.cs** arquivo com o trecho a seguir:
+Substitua o código na **MyClass.cs** arquivo com o trecho a seguir:
 
 ```csharp
 using UIKit;
@@ -42,38 +42,38 @@ public class MyUIView : UITextView
 }
 ```
 
-Compile o projeto e o assembly resultante será salvo como **~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll**.
+Compilar o projeto e o assembly resultante será salvo como **~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll**.
 
 ### <a name="bind-the-managed-assembly"></a>Associar o assembly gerenciado
 
-Uma vez que um assembly gerenciado, associá-lo invocando a incorporação de .NET.
+Quando você tiver um assembly gerenciado, associá-lo ao invocar a incorporação do .NET.
 
-Conforme descrito no [instalação](~/tools/dotnet-embedding/get-started/install/install.md) guia, isso pode ser feito como etapa de pós-compilação do seu projeto, com um destino personalizado do MSBuild ou manualmente:
+Conforme descrito na [instalação](~/tools/dotnet-embedding/get-started/install/install.md) guia, isso pode ser feito como etapa de pós-compilação no seu projeto, com um destino MSBuild personalizado, ou manualmente:
 
 ```shell
 cd ~/Projects/hello-from-csharp
 objcgen ~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll --target=framework --platform=iOS --outdir=output -c --debug
 ```
 
-A estrutura será colocada em **~/Projects/hello-from-csharp/output/hello-from-csharp.framework**.
+A estrutura será colocada na **~/Projects/hello-from-csharp/output/hello-from-csharp.framework**.
 
-### <a name="use-the-generated-output-in-an-xcode-project"></a>Use a saída gerada em um projeto no Xcode
+### <a name="use-the-generated-output-in-an-xcode-project"></a>Usar a saída gerada em um projeto do Xcode
 
-Abrir o Xcode, crie um único aplicativo de exibição do novo iOS, nomeie- **saudação do csharp**e selecione o **Objective-C** idioma.
+Abra o Xcode, crie um novo aplicativo de exibição única do iOS, nomeie- **hello-de-csharp**e selecione o **Objective-C** idioma.
 
-Abra o **~/Projects/hello-from-csharp/output** diretório no localizador, selecione **saudação do csharp.framework**, arraste-o para o projeto Xcode e solte-o imediatamente acima a **saudação do csharp**  pasta do projeto.
+Abra o **~/Projects/hello-from-csharp/output** diretório no Finder, selecione **hello de csharp.framework**, arraste-o para o projeto do Xcode e solte-o imediatamente acima a **hello-de-csharp**  pasta do projeto.
 
-! [Arrastar e soltar do framework] Images/Hello-from-CSharp-IOS-Drag-drop-Framework.png)
+![Arrastar e soltar do framework](ios-images/hello-from-csharp-ios-drag-drop-framework.png)
 
-Certifique-se de **copiar itens se necessário** estiver marcada na caixa de diálogo pop-up e, em seguida, clique em **concluir**.
+Certifique-se **copiar itens se necessário** está marcada na caixa de diálogo pop-up e clique em **concluir**.
 
 ![Copiar itens se necessário](ios-images/hello-from-csharp-ios-copy-items-if-needed.png)
 
-Selecione o **saudação do csharp** do projeto e navegue até o **saudação do csharp** do destino **guia geral**. No **incorporado binário** seção, adicione **saudação do csharp.framework**.
+Selecione o **hello-de-csharp** do projeto e navegue até a **hello-de-csharp** do destino **guia geral**. No **binários inseridos** seção, adicione **hello de csharp.framework**.
 
 ![Binários inseridos](ios-images/hello-from-csharp-ios-embedded-binaries.png)
 
-Abra **ViewController.m**e substitua o conteúdo com:
+Abra **Viewcontroller**e substitua o conteúdo com:
 
 ```objective-c
 #import "ViewController.h"
@@ -93,12 +93,12 @@ Abra **ViewController.m**e substitua o conteúdo com:
 @end
 ```
 
-Inserindo .NET não suporta atualmente bitcode no iOS, que é habilitado para alguns modelos de projeto Xcode. 
+Incorporação do .NET não suporta atualmente bitcode no iOS, que é habilitado para alguns modelos de projeto do Xcode. 
 
-Desabilite-o em suas configurações de projeto:
+Para desabilitá-lo nas configurações do projeto:
 
-![Opção Bitcode](../../images/ios-bitcode-option.png)
+![Opção de Bitcode](../../images/ios-bitcode-option.png)
 
-Por fim, execute o projeto Xcode e semelhante a esta será exibida:
+Por fim, execute o projeto do Xcode e semelhante ao seguinte será exibida:
 
-![Saudação de exemplo em c# em execução no simulador](ios-images/hello-from-csharp-ios.png)
+![Olá do exemplo de c# em execução no simulador](ios-images/hello-from-csharp-ios.png)
