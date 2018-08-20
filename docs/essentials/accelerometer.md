@@ -1,32 +1,32 @@
 ---
-title: 'Xamarin.Essentials: acelerômetro'
-description: A classe Accelerometer Xamarin.Essentials permite que você monitore o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo em três espaço dimensional.
+title: 'Xamarin.Essentials: Acelerômetro'
+description: A classe Acelerômetro do Xamarin.Essentials permite monitorar o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo no espaço tridimensional.
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: b5a24e214eb129b4d53b94586632791c8827447b
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 53e7ca70184270662d27043387da836ad44432fe
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353835"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40184423"
 ---
-# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: acelerômetro
+# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: Acelerômetro
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **acelerômetro** classe permite que você monitore o sensor de acelerômetro do dispositivo que indica a aceleração do dispositivo em três espaço dimensional.
+A classe **Acelerômetro** permite monitorar o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo no espaço tridimensional.
 
-## <a name="using-accelerometer"></a>Usando o acelerômetro
+## <a name="using-accelerometer"></a>Uso do acelerômetro
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade do acelerômetro funciona chamando o `Start` e `Stop` métodos para ouvir alterações para a aceleração. Todas as alterações são enviadas de volta pelo `ReadingChanged` eventos. Aqui está o exemplo de uso:
+A funcionalidade do Acelerômetro chama os métodos `Start` e `Stop` e escuta as alterações na aceleração. Todas as alterações são enviadas de volta por meio do evento `ReadingChanged`. Veja um exemplo de uso:
 
 ```csharp
 
@@ -48,7 +48,7 @@ public class AccelerometerTest
         // Process Acceleration X, Y, and Z
     }
 
-    public void ToggleAcceleromter()
+    public void ToggleAccelerometer()
     {
         try
         {
@@ -69,19 +69,19 @@ public class AccelerometerTest
 }
 ```
 
-Leituras do acelerômetro são relatadas de volta no G. A G é uma unidade de gravidade forçar igual àquela exercida pelo campo de gravitacional da Terra (9,81 m/s ^ 2).
+As leituras do acelerômetro são registradas em G. A G, uma unidade de força gravitacional equivalente à exercida pelo campo gravitacional da Terra (9,81 m/s2).
 
-O sistema de coordenadas é definido em relação à tela do telefone em sua orientação padrão. Os eixos não são trocados quando alterações de orientação da tela do dispositivo.
+O sistema de coordenadas é definido em relação à tela do telefone na orientação padrão. Os eixos não são trocados quando a orientação da tela do dispositivo é alterada.
 
-O eixo X é horizontal e aponta para a direita, o eixo Y é vertical e aponta para cima e o eixo Z aponta em direção a parte externa da face frontal da tela. Nesse sistema, as coordenadas atrás da tela têm valores de Z negativos.
+O eixo X é horizontal e aponta para a direita; o eixo Y é vertical e aponta para cima; o eixo Z aponta para a parte externa da face frontal da tela. Nesse sistema, as coordenadas atrás da tela têm valores de Z negativos.
 
 Exemplos:
 
-* Quando o dispositivo encontra-se simples em uma tabela e é enviada por push em seu lado esquerdo para a direita, o valor de aceleração de x é positivo.
+* Quando o dispositivo estiver em uma superfície plana e for empurrado da esquerda para a direita, o valor de aceleração x será positivo.
 
-* Quando o dispositivo encontra-se simples em uma tabela, o valor de aceleração é G + 1,00 ou (+ 9,81 m/s ^ 2), que correspondem à aceleração do dispositivo (0 m/s ^ 2) menos a força da gravidade (-9,81 m/s ^ 2) e normalizado como G.
+* Quando o dispositivo estiver em uma superfície plana, o valor de aceleração será +1,00 G ou (+9,81 m/s2), o que corresponde à aceleração do dispositivo (0 m/s2) menos a força da gravidade (-9,81 m/s2) e normalizado em G.
 
-* Quando o dispositivo encontra-se simples em uma tabela e é enviada por push para o céu com uma aceleração de um m/s ^ 2, o valor de aceleração é igual a + 9.81 correspondentes para a aceleração do dispositivo (+ um m/s ^ 2) menos a força da gravidade (-9,81 m/s ^ 2) e normalizados em G.
+* Quando o dispositivo estiver em uma superfície plana e for empurrado para cima com uma aceleração de A m/s2, o valor da aceleração será igual a A + 9,81, o que corresponde à aceleração do dispositivo (+A m/s2) menos a força da gravidade (-9,81 m/s2) e normalizado em G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
