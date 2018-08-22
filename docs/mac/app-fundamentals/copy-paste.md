@@ -1,73 +1,73 @@
 ---
-title: Copie e cole no Xamarin.Mac
-description: Este artigo aborda o trabalho com a área de trabalho para fornecer a copiar e colar em um aplicativo Xamarin.Mac. Ele mostra como trabalhar com tipos de dados padrão que podem ser compartilhados entre vários aplicativos e como oferecer suporte a dados personalizados em um determinado aplicativo.
+title: Copie e cole no xamarin. Mac
+description: Este artigo aborda o trabalho com a área de trabalho para fornecer a copiar e colar em um aplicativo xamarin. Mac. Ele mostra como trabalhar com tipos de dados padrão que podem ser compartilhados entre vários aplicativos e como dar suporte a dados personalizados dentro de um determinado aplicativo.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: becdec771949584919595c84b13ae9e05bfd377b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 728e0264f7da8f3adfef360dd473772dd7e28a11
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791891"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251079"
 ---
-# <a name="copy-and-paste-in-xamarinmac"></a>Copie e cole no Xamarin.Mac
+# <a name="copy-and-paste-in-xamarinmac"></a>Copie e cole no xamarin. Mac
 
-_Este artigo aborda o trabalho com a área de trabalho para fornecer a copiar e colar em um aplicativo Xamarin.Mac. Ele mostra como trabalhar com tipos de dados padrão que podem ser compartilhados entre vários aplicativos e como oferecer suporte a dados personalizados em um determinado aplicativo._
+_Este artigo aborda o trabalho com a área de trabalho para fornecer a copiar e colar em um aplicativo xamarin. Mac. Ele mostra como trabalhar com tipos de dados padrão que podem ser compartilhados entre vários aplicativos e como dar suporte a dados personalizados dentro de um determinado aplicativo._
 
 ## <a name="overview"></a>Visão geral
 
-Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, você tem acesso à mesma área de trabalho (copiar e colar) suporte que tem um desenvolvedor que trabalha em Objective-C.
+Ao trabalhar com c# e .NET em um aplicativo xamarin. Mac, você tem acesso para a mesma área de trabalho (copiar e colar) o suporte que tem um desenvolvedor que trabalha em Objective-C.
 
-Neste artigo vamos abordar as duas principais maneiras de usar a área de trabalho em um aplicativo de Xamarin.Mac:
+Neste artigo vamos abordar duas principais maneiras de se usar a área de trabalho em um aplicativo xamarin. Mac:
 
-1. **Tipos de dados padrão** -uma vez que as operações de área de trabalho são normalmente executadas entre os dois aplicativos não relacionados, nenhum aplicativo sabe os tipos de dados que oferece suporte a outros. Para maximizar o potencial de compartilhamento, a área de trabalho pode conter várias representações de um determinado item (usando um conjunto padrão de tipos de dados), isso permite que o aplicativo de consumidor escolher a versão que é mais adequada para suas necessidades.
-2. **Dados personalizados** - para dar suporte a cópia e colagem de dados complexos em seu Xamarin.Mac que você pode definir um tipo de dados personalizado que será manipulado por área de trabalho. Por exemplo, um aplicativo de desenho do vetor que permite ao usuário copiar e colar formas complexas que são compostas de vários tipos de dados e pontos.
+1. **Tipos de dados padrão** -uma vez que as operações de área de trabalho são normalmente realizadas entre dois aplicativos não relacionados, nenhum aplicativo sabe que os tipos de dados com suporte para o outro. Para maximizar o potencial de compartilhamento, a área de trabalho pode conter várias representações de um determinado item (usando um conjunto padrão de tipos de dados comuns), isso permite que o aplicativo de consumo escolher a versão que é mais adequada para suas necessidades.
+2. **Dados personalizados** - para dar suporte a cópia e colagem de dados complexos dentro do seu xamarin. MAC que você pode definir um tipo de dados personalizados que é manipulado pela área de trabalho. Por exemplo, um aplicativo de desenho de vetor que permite ao usuário copiar e colar formas complexas que são compostas de vários tipos de dados e pontos.
 
 [![Exemplo de aplicativo em execução](copy-paste-images/intro01.png "exemplo de aplicativo em execução")](copy-paste-images/intro01-large.png#lightbox)
 
-Neste artigo, vamos abordar os fundamentos de trabalhar com a área de trabalho em um aplicativo de Xamarin.Mac para dar suporte a copiar e colar operações. É altamente recomendável que você leia o [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, especificamente o [Introdução ao construtor da Interface e Xcode](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) e [tomadas e ações](~/mac/get-started/hello-mac.md#Outlets_and_Actions) seções, como ele aborda os principais conceitos e técnicas que será usado neste artigo.
+Neste artigo, abordaremos os fundamentos de trabalhar com a área de trabalho em um aplicativo xamarin. Mac para dar suporte a copiar e colar operações. É altamente recomendável que você trabalhe por meio de [Hello, Mac](~/mac/get-started/hello-mac.md) pela primeira vez, especificamente o artigo a [Introdução ao Interface Builder e Xcode](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [saídas e ações](~/mac/get-started/hello-mac.md#outlets-and-actions) seções, como ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
-Talvez você queira dar uma olhada a [classes expondo c# / métodos para Objective-C](~/mac/internals/how-it-works.md) seção o [Xamarin.Mac internos](~/mac/internals/how-it-works.md) de documento, ele explica o `Register` e `Export` atributos usado para conectar as classes c# objetos Objective-C e a interface do usuário elementos.
+Talvez você queira dar uma olhada o [classes expondo c# / métodos para Objective-C](~/mac/internals/how-it-works.md) seção o [recursos internos de xamarin. Mac](~/mac/internals/how-it-works.md) documentar Além disso, ele explica o `Register` e `Export` atributos usado para conectar suas classes de c# a objetos de Objective-C e da interface do usuário elementos.
 
-## <a name="getting-started-with-the-pasteboard"></a>Guia de Introdução com a área de trabalho
+## <a name="getting-started-with-the-pasteboard"></a>Introdução à área de trabalho
 
-A área de trabalho apresenta um mecanismo padronizado para a troca de dados em um determinado aplicativo ou entre aplicativos. O uso típico para uma área de trabalho em um aplicativo de Xamarin.Mac é tratar copiar e colar operações, no entanto, também há suporte para um número de outras operações (como arrastar e soltar e serviços do aplicativo).
+A área de trabalho apresenta um mecanismo padronizado para troca de dados em um determinado aplicativo ou entre aplicativos. O uso típico para uma área de trabalho em um aplicativo xamarin. MAC é lidar com copiar e colar operações, no entanto, também há suporte para um número de outras operações (por exemplo, arrastar e soltar e serviços do aplicativo).
 
-Para obter rapidamente o plano, vamos começar com uma introdução simples e prática usando áreas de trabalho em um aplicativo Xamarin.Mac. Posteriormente, forneceremos uma explicação detalhada de como funciona a área de trabalho e os métodos usados.
+Para começar a funcionar rapidamente, vamos começar com uma introdução simple e prática para usando áreas de trabalho em um aplicativo xamarin. Mac. Posteriormente, forneceremos uma explicação detalhada sobre como funciona a área de trabalho e os métodos usados.
 
-Neste exemplo, estamos criando um aplicativo simples de documento com base em que gerencia uma janela que contém uma exibição de imagem. O usuário poderá copiar e colar imagens entre documentos no aplicativo e para ou de outros aplicativos ou várias janelas de dentro do mesmo aplicativo.
+Neste exemplo, estamos criando um aplicativo de documento simples com base em que gerencia uma janela que contém uma exibição de imagem. O usuário será capaz de copiar e colar imagens entre documentos no aplicativo e para ou de outros aplicativos ou várias janelas de dentro do mesmo aplicativo.
 
 ### <a name="creating-the-xamarin-project"></a>Criando o projeto do Xamarin
 
-Primeiro, vamos criar um novo aplicativo de Xamarin.Mac documento com base em que é será adicionando copiar e colar o suporte para.
+Primeiro, vamos criar um novo aplicativo xamarin. MAC de documento com base em que podemos será adição de uma cópia e cole o suporte para.
 
 Faça o seguinte:
 
 1. Inicie o Visual Studio para Mac e clique no **novo projeto...**  link.
-2. Selecione **Mac** > **aplicativo** > **Cocoa aplicativo**, em seguida, clique no **próximo** botão: 
+2. Selecione **Mac** > **App** > **aplicativo Cocoa**, em seguida, clique o **próxima** botão: 
 
-    [![Criar um novo projeto de aplicativo Cocoa](copy-paste-images/sample01.png "criar um novo projeto de aplicativo Cocoa")](copy-paste-images/sample01-large.png#lightbox)
-3. Digite `MacCopyPaste` para o **nome do projeto** e manter tudo como padrão. Clique em Avançar: 
+    [![Criar um novo projeto de aplicativo do Cocoa](copy-paste-images/sample01.png "criando um novo projeto de aplicativo Cocoa")](copy-paste-images/sample01-large.png#lightbox)
+3. Insira `MacCopyPaste` para o **nome do projeto** e manter todo o resto como padrão. Clique em Avançar: 
 
-    [![Configurar o nome do projeto](copy-paste-images/sample01a.png "definindo o nome do projeto")](copy-paste-images/sample01a-large.png#lightbox)
+    [![Configurando o nome do projeto](copy-paste-images/sample01a.png "definindo o nome do projeto")](copy-paste-images/sample01a-large.png#lightbox)
 
 4. Clique o **criar** botão: 
 
-    [![Confirmar as novas configurações de projeto](copy-paste-images/sample02.png "confirmar as novas configurações de projeto")](copy-paste-images/sample02-large.png#lightbox)
+    [![Confirmando as novas configurações de projeto](copy-paste-images/sample02.png "confirmando as novas configurações de projeto")](copy-paste-images/sample02-large.png#lightbox)
 
 ### <a name="add-an-nsdocument"></a>Adicionar um NSDocument
 
-Em seguida, adicionaremos personalizado `NSDocument` classe que atuará como o armazenamento de plano de fundo de interface do usuário do aplicativo. Ele conterá uma única imagem de exibição e saber como copiar uma imagem de exibição para a área de trabalho padrão e como capturar uma imagem da área de trabalho padrão e exibi-lo no modo de exibição de imagem.
+Em seguida, adicionaremos personalizado `NSDocument` classe que atuará como o armazenamento de plano de fundo para a interface do usuário do aplicativo. Ele conterá uma única exibição de imagem e saber como copiar uma imagem de exibição para a área de trabalho padrão e como capturar uma imagem da área de trabalho padrão e exibi-lo no modo de exibição de imagem.
 
-Com o botão direito no projeto Xamarin.Mac no **solução preenchimento** e selecione **adicionar** > **novo arquivo.** :
+Clique com botão direito no projeto xamarin. MAC na **painel de soluções** e selecione **Add** > **novo arquivo...** :
 
 ![Adicionando um NSDocument ao projeto](copy-paste-images/sample03.png "adicionando um NSDocument ao projeto")
 
-Digite `ImageDocument` para o **Nome** e clique no botão **Novo**. Editar o **ImageDocument.cs** classe e torná-lo a aparência a seguir:
+Digite `ImageDocument` para o **Nome** e clique no botão **Novo**. Editar o **ImageDocument.cs** de classe e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -189,7 +189,7 @@ public bool ImageAvailableOnPasteboard {
 }
 ```
 
-O código a seguir copia uma imagem da exibição anexado imagem na área de trabalho padrão:
+O código a seguir copia uma imagem do modo de exibição da imagem anexada na área de trabalho padrão:
 
 ```csharp
 [Export("CopyImage:")]
@@ -229,7 +229,7 @@ public void CopyImage(NSObject sender) {
 }
 ```
 
-E o código a seguir cola uma imagem da área de trabalho padrão e o exibe no modo de exibição de imagem anexado (se a área de trabalho contém uma imagem válida):
+E o código a seguir cola uma imagem de área de trabalho padrão e o exibe na exibição da imagem anexada (se a área de trabalho contém uma imagem válida):
 
 ```csharp
 [Export("PasteImage:")]
@@ -259,27 +259,27 @@ public void PasteImage(NSObject sender) {
 }
 ```
 
-Com este documento em vigor, vamos criar a interface do usuário para o aplicativo Xamarin.Mac.
+Com este documento no lugar, vamos criar a interface do usuário para o aplicativo xamarin. Mac.
 
 ### <a name="building-the-user-interface"></a>Criando a interface do usuário
 
-Clique duas vezes o **Main.storyboard** arquivo para abri-lo no Xcode. Em seguida, adicione uma barra de ferramentas e uma imagem bem e configurá-los da seguinte maneira:
+Clique duas vezes o **Main. Storyboard** arquivo para abri-lo no Xcode. Em seguida, adicione uma barra de ferramentas e uma imagem bem e configurá-los da seguinte maneira:
 
-[![As ferramentas de edição](copy-paste-images/sample04.png "as ferramentas de edição")](copy-paste-images/sample04-large.png#lightbox)
+[![A barra de ferramentas de edição](copy-paste-images/sample04.png "a barra de ferramentas de edição")](copy-paste-images/sample04-large.png#lightbox)
 
-Adicionar uma cópia e colagem **Item da barra de ferramentas de imagem** para o lado esquerdo da barra de ferramentas. Usaremos isso como atalhos para copiar e colar no menu Editar. Em seguida, adicione quatro **itens da barra de ferramentas de imagem** para o lado direito da barra de ferramentas. Vamos usar essas para preencher a imagem bem com algumas imagens padrão.
+Adicione uma cópia e cole **Item de barra de ferramentas de imagem** para o lado esquerdo da barra de ferramentas. Usaremos isso como atalhos de copiar e colar no menu Editar. Em seguida, adicione quatro **itens de barra de ferramentas de imagem** para o lado direito da barra de ferramentas. Vamos usar essas para preencher a imagem bem com algumas imagens padrão.
 
 Para obter mais informações sobre como trabalhar com barras de ferramentas, consulte nosso [barras de ferramentas](~/mac/user-interface/toolbar.md) documentação.
 
-Em seguida, vamos expor o tomadas e ações para os itens da barra de ferramentas e a imagem a seguir também:
+Em seguida, vamos expor as saídas e ações para os itens da barra de ferramentas e a imagem a seguir também:
 
-[![Criando ações e tomadas](copy-paste-images/sample05.png "Criando ações e saídas")](copy-paste-images/sample05-large.png#lightbox)
+[![Criando saídas e ações](copy-paste-images/sample05.png "criando saídas e ações")](copy-paste-images/sample05-large.png#lightbox)
 
-Para obter mais informações sobre como trabalhar com tomadas e ações, consulte o [tomadas e ações](~/mac/get-started/hello-mac.md#Outlets_and_Actions) seção do nosso [Hello, Mac](~/mac/get-started/hello-mac.md) documentação.
+Para obter mais informações sobre como trabalhar com saídas e ações, consulte a [saídas e ações](~/mac/get-started/hello-mac.md#outlets-and-actions) seção do nosso [Hello, Mac](~/mac/get-started/hello-mac.md) documentação.
 
-### <a name="enabling-the-user-interface"></a>Habilitar a interface do usuário
+### <a name="enabling-the-user-interface"></a>Habilitando a interface do usuário
 
-Com nossa interface do usuário criado no Xcode e nosso elemento de interface do usuário expostos por meio de saídas e as ações, é preciso adicionar o código para habilitar a interface do usuário. Clique duas vezes o **ImageWindow.cs** de arquivos no **preenchimento de solução** e torná-lo a aparência a seguir:
+Com nossa interface de usuário criada no Xcode e o nosso elemento de interface do usuário expostos por meio de saídas e ações, precisamos adicionar o código para habilitar a interface do usuário. Clique duas vezes o **ImageWindow.cs** arquivo na **painel de soluções** e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -395,9 +395,9 @@ namespace MacCopyPaste
 }
 ```
 
-Vamos dar uma olhada nesse código em detalhes abaixo.
+Vamos dar uma olhada neste código em detalhes abaixo.
 
-Primeiro, expomos uma ocorrência da `ImageDocument` classe que criamos acima:
+Primeiro, vamos expor uma instância da `ImageDocument` classe que criamos acima:
 
 ```csharp
 private ImageDocument _document;
@@ -414,9 +414,9 @@ public ImageDocument Document {
 }
 ```
 
-Usando `Export`, `WillChangeValue` e `DidChangeValue`, temos a instalação do `Document` propriedade para permitir a codificação de chave-valor e associação de dados no Xcode.
+Usando `Export`, `WillChangeValue` e `DidChangeValue`, configuramos o `Document` propriedade para permitir a codificação de chave-valor e associação de dados no Xcode.
 
-Podemos também expor a imagem da imagem que também adicionamos à nossa interface do usuário no Xcode com a seguinte propriedade:
+Podemos também expor a imagem a partir da imagem que também adicionamos à nossa interface do usuário no Xcode com a seguinte propriedade:
 
 ```csharp
 public ViewController ImageViewController {
@@ -433,7 +433,7 @@ public NSImage Image {
 }
 ```
 
-Quando a janela principal é carregada e exibida, podemos criar uma instância do nosso `ImageDocument` classe e anexar a imagem da interface do usuário para ela com o código a seguir:
+Quando a janela principal é carregada e exibida, podemos criar uma instância do nosso `ImageDocument` de classe e anexar a imagem da interface do usuário também a ele com o código a seguir:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -448,7 +448,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-Por fim, em resposta ao usuário clicar nos itens da barra de ferramentas copiar e colar, chamamos a instância do `ImageDocument` classe para realizar o trabalho real:
+Por fim, em resposta ao usuário clicar nos itens da barra de ferramentas de copiar e colar, chamamos a instância da `ImageDocument` classe para fazer o trabalho real:
 
 ```csharp
 partial void CopyImage (NSObject sender) {
@@ -460,11 +460,11 @@ partial void PasteImage (Foundation.NSObject sender) {
 }
 ```
 
-### <a name="enabling-the-file-and-edit-menus"></a>Habilitando os menus arquivo e editar
+### <a name="enabling-the-file-and-edit-menus"></a>Habilitando os menus de arquivo e editar
 
-A última coisa que precisamos fazer é habilitar o **novo** item de menu a **arquivo** menu (para criar novas instâncias de nossa janela principal) e habilitar o **Recortar**, **cópia**  e **colar** itens de menu do **editar** menu.
+A última coisa que precisamos fazer é habilitar o **New** item de menu a **arquivo** menu (para criar novas instâncias de nossa janela principal) e habilitar o **Recortar**, **cópia**  e **colar** itens de menu dos **editar** menu.
 
-Para habilitar o **novo** menu Editar item, o **appdelegate. CS** de arquivo e adicione o seguinte código:
+Para habilitar o **New** menu Editar item, o **AppDelegate.cs** arquivo e adicione o código a seguir:
 
 ```csharp
 public int UntitledWindowCount { get; set;} =1;
@@ -484,9 +484,9 @@ void NewDocument (NSObject sender) {
 }
 ```
 
-Para obter mais informações, consulte o [trabalhando com várias janelas](~/mac/user-interface/window.md) seção do nosso [Windows](~/mac/user-interface/window.md) documentação.
+Para obter mais informações, consulte o [trabalhando com o Windows vários](~/mac/user-interface/window.md) seção do nosso [Windows](~/mac/user-interface/window.md) documentação.
 
-Para habilitar o **Recortar**, **cópia** e **colar** editar itens de menu, o **appdelegate. CS** de arquivo e adicione o seguinte código:
+Para habilitar o **Recortar**, **cópia** e **colar** editar itens de menu, o **AppDelegate.cs** arquivo e adicione o código a seguir:
 
 ```csharp
 [Export("copy:")]
@@ -535,21 +535,21 @@ void PasteImage (NSObject sender)
 }
 ```
 
-Para cada item de menu, obter a janela atual, mais alta, chave e convertê-lo para nosso `ImageWindow` classe:
+Para cada item de menu, obter a janela atual, mais alta, chave e convertê-lo em nosso `ImageWindow` classe:
 
 ```csharp
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-A partir daí, podemos chamar o `ImageDocument` instância da classe de janela para lidar com a cópia e colagem ações. Por exemplo: 
+A partir daí, chamamos o `ImageDocument` instância da classe dessa janela para lidar com a cópia e ações de colar. Por exemplo: 
 
 ```csharp
 window.Document.CopyImage (sender);
 ```
 
-Como só queremos **Recortar**, **cópia** e **colar** itens de menu a ser acessado se houver dados na área de trabalho padrão ou a imagem da janela ativa atual da imagem.
+Como só queremos **Recortar**, **cópia** e **colar** itens de menu a ser acessado se não houver dados na área de trabalho padrão ou a imagem bem da janela ativa atual da imagem.
 
-Vamos adicionar um **EditMenuDelegate.cs** arquivo ao projeto Xamarin.Mac e torná-lo a aparência a seguir:
+Vamos adicionar um **EditMenuDelegate.cs** arquivo ao projeto xamarin. Mac e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -602,7 +602,7 @@ namespace MacCopyPaste
 
 Novamente, podemos obter a janela atual, mais alta e usar seu `ImageDocument` instância da classe para ver se os dados de imagem necessário existem. Em seguida, usamos o `MenuWillHighlightItem` método para habilitar ou desabilitar cada item com base nesse estado.
 
-Editar o **appdelegate. CS** de arquivo e verifique o `DidFinishLaunching` método aparência semelhante ao seguinte:
+Editar o **AppDelegate.cs** do arquivo e verifique o `DidFinishLaunching` método são semelhantes ao seguinte:
  
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -613,95 +613,95 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-Primeiro, Desabilitaremos a automático de habilitação e desabilitação de itens de menu no menu Editar. Em seguida, podemos anexar uma instância do `EditMenuDelegate` classe que criamos acima.
+Primeiro, Desabilitaremos automática habilitando e desabilitando dos itens de menu no menu Editar. Em seguida, podemos anexar a uma instância da `EditMenuDelegate` classe que criamos acima.
 
 Para obter mais informações, consulte nosso [Menus](~/mac/user-interface/menu.md) documentação.
 
-### <a name="testing-the-app"></a>O aplicativo de teste
+### <a name="testing-the-app"></a>Testar o aplicativo
 
-Tudo em vigor, você está pronto para testar o aplicativo. Compilar e executar o aplicativo e a interface principal é exibida:
+Com tudo instalado, você está pronto para testar o aplicativo. Compilar e executar o aplicativo e a interface principal é exibida:
 
-![Executando o aplicativo](copy-paste-images/run01.png "executando o aplicativo")
+![Execução do aplicativo](copy-paste-images/run01.png "executando o aplicativo")
 
-Observe que, se você abrir o menu Editar, **Recortar**, **cópia** e **colar** estão desabilitados porque não há nenhuma imagem na imagem bem ou na área de trabalho padrão:
+Observe que, se você abrir o menu Editar, **Recortar**, **cópia** e **colar** estão desabilitadas porque não há nenhuma imagem na imagem bem ou na área de trabalho padrão:
 
 ![Abrindo o menu Editar](copy-paste-images/run02.png "abrindo o menu Editar")
 
-Se você adicionar uma imagem para a imagem bem e reabrir o menu Editar, os itens agora serão habilitados:
+Se você adicionar uma imagem à imagem bem e reabrir o menu Editar, os itens agora serão habilitados:
 
-![Mostrando os itens de menu Editar estão habilitados](copy-paste-images/run03.png "mostrando os itens de menu Editar estão habilitados")
+![Mostrando os itens de menu de edição estão habilitadas](copy-paste-images/run03.png "mostrando os itens de menu de edição estão habilitados")
 
-Se você copiar a imagem e selecione **novo** no menu Arquivo, você pode colar essa imagem em nova janela:
+Se você copiar a imagem e selecione **New** no menu Arquivo, você pode colar essa imagem em nova janela:
 
-![Colando uma imagem em uma nova janela](copy-paste-images/run04.png "colando uma imagem em uma nova janela")
+![Colar uma imagem em uma nova janela](copy-paste-images/run04.png "colando uma imagem em uma nova janela")
 
-Nas seções a seguir, vamos dar uma olhada detalhada como trabalhar com a área de trabalho em um aplicativo Xamarin.Mac.
+Nas seções a seguir, vamos dar uma visão detalhada de como trabalhar com a área de trabalho em um aplicativo xamarin. Mac.
 
 ## <a name="about-the-pasteboard"></a>Sobre a área de trabalho
 
-Em macOS (anteriormente conhecida como OS X) a área de trabalho (`NSPasteboard`) dão suporte para os processos do servidor de vários serviços de aplicativos e como copiar e colar, arrastar e soltar. As seções a seguir, levaremos detalhadamente vários conceitos principais de área de trabalho.
+No macOS (anteriormente conhecido como o OS X) a área de trabalho (`NSPasteboard`) dão suporte para processos do servidor de vários serviços de aplicativos e, como copiar e colar, arrastar e soltar. Nas seções a seguir, vamos dar uma olhada nas várias principais conceitos de área de trabalho.
 
 ### <a name="what-is-a-pasteboard"></a>O que é uma área de trabalho?
 
-O `NSPasteboard` classe fornece um mecanismo padronizado para trocar informações entre aplicativos ou dentro de um determinado aplicativo. A função principal da área de trabalho é para manipular as operações de copiar e colar:
+O `NSPasteboard` classe fornece um mecanismo padronizado para a troca de informações entre aplicativos ou dentro de um determinado aplicativo. A função principal de uma área de trabalho é para lidar com operações de copiar e colar:
 
 1. Quando o usuário seleciona um item em um aplicativo e usa o **Recortar** ou **cópia** item de menu, um ou mais representações do item selecionado são colocadas na área de trabalho.
-2. Quando o usuário utiliza o **colar** item de menu (dentro do mesmo aplicativo ou outro), a versão dos dados que ele possa manipular é copiada da área de trabalho e adicionada ao aplicativo.
+2. Quando o usuário utiliza o **colar** item de menu (dentro do mesmo aplicativo ou um diferente), a versão dos dados que pode manipular é copiada da área de trabalho e adicionada ao aplicativo.
 
-Usa menos óbvia de área de trabalho incluem localizar, arrastar, arrastar e soltar e operações de serviços de aplicativo:
+Usos de área de trabalho menos óbvios incluem find, arrastar, arrastar e soltar e as operações dos serviços de aplicativos:
 
-- Quando o usuário inicia uma operação de arrastar, os dados de arrastar são copiados para a área de trabalho. Se a operação de arrastar termina com uma queda em outro aplicativo, o que o aplicativo copia os dados da área de trabalho.
-- Serviços de tradução, os dados a ser convertido são copiados para a área de trabalho, o aplicativo solicitante. O serviço de aplicativo, recupera os dados da área de trabalho, faz a conversão, em seguida, cola os dados de volta na área de trabalho.
+- Quando o usuário inicia uma operação de arrastar, arrastar dados são copiados para a área de trabalho. Se a operação de arrastar termina com uma queda em outro aplicativo, o que o aplicativo copia os dados de área de trabalho.
+- Serviços de tradução, os dados a ser traduzido são copiados para a área de trabalho pelo aplicativo solicitante. O serviço de aplicativo, recupera os dados da área de trabalho, faz a conversão, em seguida, cola os dados de volta na área de trabalho.
 
-Em sua forma mais simples, áreas de trabalho são usadas para mover dados dentro de um determinado aplicativo ou entre aplicativos e, portanto, existem em uma área especial memória global fora do processo do aplicativo. Embora os conceitos das áreas de trabalho são facilmente grasps, há vários detalhes mais complexos que devem ser consideradas. Eles serão abordados em detalhes abaixo.
+Em sua forma mais simples, áreas de trabalho são usadas para mover dados dentro de um determinado aplicativo ou entre aplicativos e, portanto, existem em uma área de memória global especial fora do processo do aplicativo. Embora os conceitos das áreas de trabalho são facilmente grasps, há vários detalhes mais complexos que devem ser consideradas. Eles serão abordados em detalhes abaixo.
 
 ### <a name="named-pasteboards"></a>Áreas de trabalho nomeadas
 
-Área de trabalho pode ser público ou privado e pode ser usada para uma variedade de propósitos dentro de um aplicativo ou entre vários aplicativos. macOS fornece vários padrão áreas de trabalho, cada um com um uso específico e bem definido:
+Uma área de trabalho pode ser público ou privado e pode ser usada para uma variedade de finalidades dentro de um aplicativo ou entre vários aplicativos. macOS fornece vários padrão áreas de trabalho, cada um com um uso específico, bem definido:
 
 - `NSGeneralPboard` -A área de trabalho padrão para **Recortar**, **cópia** e **colar** operações.
-- `NSRulerPboard` -Oferece suporte a **Recortar**, **cópia** e **colar** operações em **réguas**.
-- `NSFontPboard` -Oferece suporte a **Recortar**, **cópia** e **colar** operações em `NSFont` objetos.
-- `NSFindPboard` -Oferece suporte a aplicativos específicos localizar painéis que podem compartilhar o texto de pesquisa.
-- `NSDragPboard` -Oferece suporte a **arrastar e soltar** operações.
+- `NSRulerPboard` – Dá suporte a **Recortar**, **cópia** e **colar** operações nos **réguas**.
+- `NSFontPboard` – Dá suporte a **Recortar**, **cópia** e **colar** operações em `NSFont` objetos.
+- `NSFindPboard` – Dá suporte a específicos do aplicativo encontrar painéis que podem compartilhar o texto de pesquisa.
+- `NSDragPboard` – Dá suporte a **arrastar e soltar** operações.
 
-Na maioria das situações, você usará uma das áreas de trabalho da sistema definido. Mas, pode haver situações que exigem que você crie suas próprias áreas de trabalho. Nessas situações, você pode usar o `FromName (string name)` método o `NSPasteboard` classe para criar uma área de trabalho personalizada com o nome fornecido.
+Para a maioria das situações, você usará uma das áreas de trabalho definidos pelo sistema. Mas talvez haja situações que exigem que você crie seus próprios áreas de trabalho. Nessas situações, você pode usar o `FromName (string name)` método da `NSPasteboard` classe para criar uma área de trabalho personalizada com o nome fornecido.
 
-Opcionalmente, você pode chamar o `CreateWithUniqueName` método o `NSPasteboard` classe para criar uma área de trabalho exclusivamente nomeada.
+Opcionalmente, você pode chamar o `CreateWithUniqueName` método da `NSPasteboard` classe para criar uma área de trabalho exclusivamente nomeada.
 
 ### <a name="pasteboard-items"></a>Itens de área de trabalho
 
-Cada parte dos dados que um aplicativo gravar em uma área de trabalho é considerado um _Item de área de trabalho_ e área de trabalho pode conter vários itens ao mesmo tempo. Dessa forma, um aplicativo pode gravar várias versões dos dados sendo copiados para a área de trabalho (por exemplo, texto sem formatação e texto formatado) e o aplicativo de recuperação podem ler apenas os dados que ele possa processar (como o texto sem formatação somente).
+Cada parte dos dados que um aplicativo grava uma área de trabalho é considerado um _Item de área de trabalho_ e uma área de trabalho pode conter vários itens ao mesmo tempo. Dessa forma, um aplicativo pode gravar várias versões dos dados sendo copiados para uma área de trabalho (por exemplo, texto sem formatação e texto formatado) e o aplicativo ao recuperar podem ler somente os dados que ele possa processar (por exemplo, o texto sem formatação somente).
 
-### <a name="data-representations-and-uniform-type-identifiers"></a>Identificadores de tipo uniforme e representações de dados
+### <a name="data-representations-and-uniform-type-identifiers"></a>Identificadores de tipo de uniforme e representações de dados
 
-Operações de área de trabalho geralmente levam aplicativos ocorre entre dois (ou mais) que não têm nenhum conhecimento de si ou os tipos de dados que cada um pode manipular. Conforme mencionado na seção acima, para maximizar o potencial de compartilhamento de informações, uma área de trabalho pode conter várias representações dos dados sendo copiados e colados.
+Operações de área de trabalho normalmente levam aplicativos ocorre entre dois (ou mais) que têm nenhum conhecimento sobre uns aos outros ou os tipos de dados que cada um pode manipular. Conforme mencionado na seção acima, para maximizar o potencial para compartilhar informações, uma área de trabalho pode conter várias representações dos dados sendo copiados e colados.
 
-Cada representação é identificada por meio de um Uniform tipo identificador (utilitário), que é nada mais que uma cadeia de caracteres simple que identifica exclusivamente o tipo de data que está sendo apresentado (para obter mais informações, consulte da Apple [uniforme visão geral de identificadores de tipo ](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) documentação). 
+Cada representação é identificada por meio de um Uniform tipo identificador UTI (), que é nada mais do que uma simple cadeia de caracteres que identifica exclusivamente o tipo de data que está sendo apresentado (para obter mais informações, consulte da Apple [uniforme visão geral de identificadores de tipo ](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) documentação). 
 
-Se você estiver criando um tipo de dados personalizado (por exemplo, um objeto de desenho em um vetor de desenho de aplicativo), você pode criar seu próprios utilitário para identificá-lo na cópia exclusivamente e operações de colagem.
+Se você estiver criando um tipo de dados personalizado (por exemplo, um objeto de desenho em um aplicativo de desenho de vetor), você pode criar seu próprios UTI para identificá-lo na cópia exclusivamente e operações de colagem.
 
-Quando um aplicativo se prepara para colar dados copiados da área de trabalho, ele deve localizar a representação que melhor atenda às suas habilidades (se houver). Normalmente, esse será o tipo mais rico disponível (por exemplo formatado texto para um aplicativo de processamento de texto), voltando para formulários simples disponíveis como necessário (texto sem formatação para um editor de texto simples).
+Quando um aplicativo se prepara para colar dados copiados da área de trabalho, ele deve localizar a representação que melhor atenda às suas capacidades (se houver alguma). Normalmente, esse será o tipo mais avançado disponível (por exemplo formatado texto para um aplicativo de processamento de texto), voltando para as formas mais simples disponíveis como necessário (texto sem formatação para um editor de texto simples).
 
 <a name="Promised_Data" />
 
 ### <a name="promised-data"></a>Dados prometidos
 
-Em geral, você deve fornecer tantas representações dos dados sendo copiados possível para maximizar o compartilhamento entre aplicativos. No entanto, devido a restrições de memória ou tempo, pode ser impraticável grave, na verdade, cada tipo de dados na área de trabalho.
+Em termos gerais, você deve fornecer tantos representações dos dados sendo copiados possível para maximizar o compartilhamento entre aplicativos. No entanto, devido a restrições de tempo ou memória, talvez seja impossível escrever, na verdade, cada tipo de dados para a área de trabalho.
 
-Nessa situação, você pode colocar a primeira representação de dados na área de trabalho e o aplicativo receptor pode solicitar uma representação diferente, que pode ser gerado no imediatamente antes da operação de colagem.
+Nessa situação, você pode colocar a primeira representação de dados na área de trabalho e o aplicativo de recebimento pode solicitar uma representação diferente, que pode ser gerado no imediatamente antes da operação de colagem.
 
-Quando você colocar o item inicial na área de trabalho, você especificará que um ou mais outras representações disponíveis são fornecidos por um objeto que está de acordo com o `NSPasteboardItemDataProvider` interface. Esses objetos fornecerá as representações extras sob demanda, conforme solicitado pelo aplicativo receptor.
+Quando você coloca o item inicial na área de trabalho, você especificará se uma ou mais das outras representações disponíveis são fornecidos por um objeto que está de acordo com o `NSPasteboardItemDataProvider` interface. Esses objetos fornecerá as representações extras sob demanda, conforme solicitado pelo aplicativo de recebimento.
 
 ### <a name="change-count"></a>Contagem de alteração
 
-Cada área de trabalho mantém uma _contagem de alteração_ que incrementos de cada vez que um novo proprietário é declarada. Um aplicativo pode determinar se o conteúdo da área de trabalho foram alterados desde a última vez que ele examinado verificando o valor de contagem de alteração.
+Cada área de trabalho mantém uma _contagem de alteração_ que é incrementada sempre que um novo proprietário é declarada. Um aplicativo pode determinar se o conteúdo da área de trabalho foram alterados desde a última vez que ela examinou verificando o valor de contagem de alteração.
 
-Use o `ChangeCount` e `ClearContents` métodos do `NSPasteboard` classe para modificar a contagem de alteração da área de trabalho especificada.
+Use o `ChangeCount` e `ClearContents` métodos do `NSPasteboard` classe para modificar a contagem de alteração da área de trabalho determinada.
 
-## <a name="copying-data-to-a-pasteboard"></a>Copiando dados em uma área de trabalho
+## <a name="copying-data-to-a-pasteboard"></a>Copiando dados para uma área de trabalho
 
-Você pode executar uma operação de cópia primeiro acessar uma área de trabalho, limpar qualquer conteúdo existente e gravar quantas representações dos dados que são necessárias para a área de trabalho.
+Você pode executar uma operação de cópia primeiro acessando uma área de trabalho, limpar qualquer conteúdo existente e escrever tantas representações dos dados conforme são necessárias para a área de trabalho.
 
 Por exemplo:
 
@@ -716,24 +716,24 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new NSImage[] {image});
 ```
 
-Normalmente, você apenas escreverá para a área de trabalho geral, como fizemos no exemplo acima. Qualquer objeto que você enviar para o `WriteObjects` método *deve* está de acordo com o `INSPasteboardWriting` interface. Várias classes internas (como `NSString`, `NSImage`, `NSURL`, `NSColor`, `NSAttributedString`, e `NSPasteboardItem`) automaticamente em conformidade com esta interface.
+Normalmente, você apenas escrevo para a área de trabalho geral, como fizemos no exemplo acima. Qualquer objeto que você enviar para o `WriteObjects` método *deve* estar de acordo com o `INSPasteboardWriting` interface. Várias, classes internas (como `NSString`, `NSImage`, `NSURL`, `NSColor`, `NSAttributedString`, e `NSPasteboardItem`) automaticamente em conformidade com essa interface.
 
-Se você estiver escrevendo uma classe personalizada de dados para a área de trabalho deve seguir o `INSPasteboardWriting` interface ou ser encapsulada em uma instância do `NSPasteboardItem` classe (consulte o [tipos de dados personalizados](#Custom_Data_Types) seção abaixo).
+Se você estiver escrevendo uma classe personalizada de dados para a área de trabalho ele deve estar em conformidade com o `INSPasteboardWriting` interface ou ser encapsuladas em uma instância da `NSPasteboardItem` classe (consulte a [tipos de dados personalizados](#Custom_Data_Types) seção abaixo).
 
-## <a name="reading-data-from-a-pasteboard"></a>Lendo dados de área de trabalho
+## <a name="reading-data-from-a-pasteboard"></a>Ler os dados da área de trabalho
 
-Como mencionado acima, para maximizar a possibilidade de compartilhar dados entre aplicativos, várias representações dos dados copiados podem ser gravadas para a área de trabalho. É até o aplicativo de recebimento para selecionar a versão mais rico possível para seus recursos (se houver).
+Como mencionado acima, para maximizar o potencial para compartilhar dados entre aplicativos, várias representações dos dados copiados podem ser gravadas para a área de trabalho. É até o aplicativo de recebimento para selecionar a versão mais completa possível para seus recursos (se houver alguma).
 
 ### <a name="simple-paste-operation"></a>Operação de colagem simples
 
 Ler dados da área de trabalho usando o `ReadObjectsForClasses` método. Ela exigirá dois parâmetros:
 
-1. Uma matriz de `NSObject` com base em tipos de classe que você deseja ler a partir da área de trabalho. Você deve solicitá-lo com o tipo de dados mais desejado em primeiro lugar, com qualquer tipos restantes em decrescente de preferência.
-2. Um dicionário que contém as restrições adicionais (como limitar a tipos específicos de conteúdo de URL) ou um dicionário vazio se nenhum restrições adicionais forem necessárias.
+1. Uma matriz de `NSObject` com base em tipos de classe que você deseja ler a partir da área de trabalho. Você deve solicitá-lo com o tipo de dados mais desejado em primeiro lugar, com quaisquer tipos restantes em decrescente de preferência.
+2. Um dicionário que contém as restrições adicionais (por exemplo, limitando a tipos específicos de conteúdo de URL) ou um dicionário vazio se não há restrições adicionais são necessárias.
 
-O método retorna uma matriz de itens que atendem aos critérios que são transmitidos e, portanto, no máximo contém o mesmo número de tipos de dados que são solicitadas. também é possível que haja nenhum dos tipos solicitados e uma matriz vazia será retornada.
+O método retorna uma matriz de itens que atendem aos critérios que são passados e, portanto, contém o mesmo número de tipos de dados que são solicitados no máximo. também é possível que haja nenhum dos tipos solicitados e uma matriz vazia será retornada.
 
-Por exemplo, o código a seguir verifica se um `NSImage` existe na área de trabalho geral e o exibe em uma imagem bem se ele faz:
+Por exemplo, o código a seguir verifica se um `NSImage` existe na área de trabalho geral e o exibe em uma imagem bem se isso acontecer:
 
 ```csharp
 [Export("PasteImage:")]
@@ -763,18 +763,18 @@ public void PasteImage(NSObject sender) {
 }
 ```
 
-### <a name="requesting-multiple-data-types"></a>Solicitando vários tipos de dados
+### <a name="requesting-multiple-data-types"></a>Solicitar vários tipos de dados
 
-Com base no tipo de aplicativo Xamarin.Mac que está sendo criado, ele pode ser capaz de lidar com várias representações dos dados que estão sendo colados. Nessa situação, existem dois cenários para recuperar dados de área de trabalho:
+Com base no tipo de aplicativo xamarin. MAC que está sendo criado, ele pode ser capaz de lidar com várias representações dos dados que estão sendo colados. Nessa situação, há dois cenários para recuperar dados de área de trabalho:
 
-1. Faça uma única chamada para o `ReadObjectsForClasses` método e fornecer uma matriz de todas as representações que desejar (na ordem preferencial).
-2. Fazer várias chamadas para o `ReadObjectsForClasses` método solicitando um conjunto diferente de tipos de cada vez.
+1. Fazer uma chamada única para o `ReadObjectsForClasses` método e fornecendo uma matriz de todas as representações que desejar (na ordem preferencial).
+2. Fazer várias chamadas para o `ReadObjectsForClasses` método solicitando uma matriz diferente dos tipos de cada vez.
 
-Consulte o **simples operação de colagem** seção acima para obter mais detalhes sobre como recuperar dados da área de trabalho.
+Consulte a **simples operação de colagem** seção acima para obter mais detalhes sobre como recuperar dados de uma área de trabalho.
 
-### <a name="checking-for-existing-data-types"></a>Procurando tipos de dados existentes
+### <a name="checking-for-existing-data-types"></a>Verificação de tipos de dados existentes
 
-Há ocasiões em que talvez você queira verificar se a área de trabalho contém uma representação de dados sem realmente ler os dados da área de trabalho (como habilitar o **colar** item de menu apenas quando houver dados válidos).
+Há momentos em que você talvez queira verificar se uma área de trabalho contém uma representação de dados fornecido sem realmente lê os dados da área de trabalho (como habilitar o **colar** item de menu apenas quando houver dados válidos).
 
 Chamar o `CanReadObjectForClasses` método da área de trabalho para ver se ele contém um determinado tipo.
 
@@ -793,25 +793,25 @@ public bool ImageAvailableOnPasteboard {
 }
 ```
 
-### <a name="reading-urls-from-the-pasteboard"></a>Lendo urls de área de trabalho
+### <a name="reading-urls-from-the-pasteboard"></a>Lendo as urls de área de trabalho
 
-Com base na função de um determinado aplicativo de Xamarin.Mac, pode ser necessária para ler os URLs de área de trabalho, mas somente se eles atenderem a um determinado conjunto de critérios (como apontam para URLs de um tipo de dados específico ou arquivos). Nessa situação, você pode especificar critérios de pesquisa adicionais usando o segundo parâmetro do `CanReadObjectForClasses` ou `ReadObjectsForClasses` métodos.
+Com base na função de um determinado aplicativo xamarin. Mac, pode ser necessária para ler as URLs de área de trabalho, mas somente se atenderem a um determinado conjunto de critérios (por exemplo, que aponta para arquivos ou URLs de um tipo de dados específico). Nessa situação, você pode especificar critérios de pesquisa adicionais usando o segundo parâmetro do `CanReadObjectForClasses` ou `ReadObjectsForClasses` métodos.
 
 <a name="Custom_Data_Types" />
 
 ## <a name="custom-data-types"></a>Tipos de dados personalizados
 
-Há ocasiões em que você precisará salvar seus próprios tipos personalizados para a área de trabalho de um aplicativo Xamarin.Mac. Por exemplo, um vetor de aplicativo que permite ao usuário copiar e colar objetos de desenho de desenho.
+Há vezes em que você precisa salvar seus próprios tipos personalizados para a área de trabalho de um aplicativo xamarin. Mac. Por exemplo, um vetor de aplicativo que permite ao usuário para copiar e colar objetos de desenho de desenho.
 
-Nessa situação, você precisará criar sua classe personalizada de dados, de modo que ele herda de `NSObject` e ele segue algumas interfaces (`INSCoding`, `INSPasteboardWriting` e `INSPasteboardReading`). Opcionalmente, você pode usar um `NSPasteboardItem` para encapsular os dados a serem copiados ou colados.
+Nessa situação, você precisará criar sua classe personalizada de dados, de modo que ela herda `NSObject` e sigam algumas interfaces (`INSCoding`, `INSPasteboardWriting` e `INSPasteboardReading`). Opcionalmente, você pode usar um `NSPasteboardItem` para encapsular os dados a serem copiados ou colados.
 
 Ambas as opções serão abordadas em detalhes abaixo.
 
 ### <a name="using-a-custom-class"></a>Usando uma classe personalizada
 
-Nesta seção, será expandindo o exemplo simples de um aplicativo que são criados no início deste documento e adicionando uma classe personalizada para rastrear informações sobre a imagem que estamos copiando e colando entre as janelas.
+Nesta seção vamos ser expandindo o aplicativo de exemplo simples que criamos no início deste documento e adicionando uma classe personalizada para rastrear informações sobre a imagem que estamos copiando e colando entre as janelas.
 
-Adicionar uma nova classe ao projeto e chamá-lo **ImageInfo.cs**. Edite o arquivo e torná-lo a seguinte aparência:
+Adicione uma nova classe ao projeto e chamá-lo **ImageInfo.cs**. Edite o arquivo e torná-lo a seguinte aparência:
 
 ```csharp
 using System;
@@ -925,11 +925,11 @@ namespace MacCopyPaste
     
 ```
 
-As seções a seguir levaremos uma visão detalhada dessa classe.
+Nas seções a seguir vamos dar uma visão detalhada dessa classe.
 
-#### <a name="inheritance-and-interfaces"></a>Interfaces e herança
+#### <a name="inheritance-and-interfaces"></a>Herança e interfaces
 
-Antes de uma classe personalizada de dados pode ser gravada ou lidos da área de trabalho, ele deve estar de acordo com o `INSPastebaordWriting` e `INSPasteboardReading` interfaces. Além disso, ele deve herdar de `NSObject` e também estar de acordo com o `INSCoding` interface:
+Antes de uma classe personalizada de dados pode ser gravada ou lidos de uma área de trabalho, ele deve estar em conformidade com o `INSPastebaordWriting` e `INSPasteboardReading` interfaces. Além disso, ele deve herdar de `NSObject` e também estar em conformidade com o `INSCoding` interface:
 
 ```csharp
 [Register("ImageInfo")]
@@ -949,11 +949,11 @@ public string ImageType { get; set; }
 
 Estamos expondo os dois campos de dados que essa classe conterá - nome da imagem e seu tipo (jpg, png, etc.). 
 
-Para obter mais informações, consulte o [classes expondo c# / métodos para Objective-C](~/mac/internals/how-it-works.md) seção o [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) documentação, explica o `Register` e `Export` atributos usado para conectar as classes c# objetos Objective-C e a interface do usuário elementos.
+Para obter mais informações, consulte o [classes expondo c# / métodos para Objective-C](~/mac/internals/how-it-works.md) seção o [recursos internos de xamarin. Mac](~/mac/internals/how-it-works.md) documentação, explica a `Register` e `Export` atributos usado para conectar suas classes de c# a objetos de Objective-C e da interface do usuário elementos.
 
 #### <a name="constructors"></a>Construtores
 
-Dois construtores (corretamente expostas para Objective-C) serão necessárias para nossa classe personalizada de dados para que ele possa ser lido da área de trabalho:
+Dois construtores (expostos de forma adequada para Objective-C) serão necessárias para nossa classe de dados personalizados para que ele possa ser lido de uma área de trabalho:
 
 ```csharp
 [Export ("init")]
@@ -974,17 +974,17 @@ public ImageInfo(NSCoder decoder) {
 }
 ```
 
-Primeiro, expomos o _vazio_ construtor sob o método Objective-C padrão `init`.
+Primeiro, vamos expor os _vazio_ construtor sob o método de Objective-C padrão do `init`.
 
-Em seguida, expomos um `NSCoding` construtor compatível que será usado para criar uma nova instância do objeto da área de trabalho ao colar sob o nome exportado do `initWithCoder`.
+Em seguida, vamos expor uma `NSCoding` compatível com construtor que será usado para criar uma nova instância do objeto da área de trabalho ao colar abaixo do nome exportado do `initWithCoder`.
 
-Este construtor aceita um `NSCoder` (conforme criado por uma `NSKeyedArchiver` quando gravado para a área de trabalho), extrai os dados do par chave/valor e salva-o para os campos de propriedade da classe de dados.
+Este construtor aceita um `NSCoder` (conforme criado por um `NSKeyedArchiver` quando gravados para a área de trabalho), extrai os dados de par chave/valor e salva-o para os campos de propriedade da classe de dados.
 
-#### <a name="writing-to-the-pasteboard"></a>Gravando para a área de trabalho
+#### <a name="writing-to-the-pasteboard"></a>Escrevendo para a área de trabalho
 
-Conforme o `INSPasteboardWriting` interface, precisamos expõe dois métodos e, opcionalmente, um método de terceiro, para que a classe pode ser gravada para a área de trabalho.
+Conforme o `INSPasteboardWriting` interface, que é necessário para expor dois métodos e, opcionalmente, um terceiro método, para que a classe pode ser escrita para a área de trabalho.
 
-Primeiro, precisamos informar a área de trabalho qual tipo de dados representações que a classe personalizada pode ser gravada em:
+Primeiro, precisamos dizer a área de trabalho qual tipo de dados representações de que a classe personalizada pode ser gravada em:
 
 ```csharp
 [Export ("writableTypesForPasteboard:")]
@@ -994,9 +994,9 @@ public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) 
 }
 ```
 
-Cada representação é identificada por meio de um Uniform tipo identificador (utilitário), que é nada mais que uma cadeia de caracteres simple que identifica exclusivamente o tipo de dados que está sendo apresentados (para obter mais informações, consulte da Apple [uniforme visão geral de identificadores de tipo ](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) documentação).
+Cada representação é identificada por meio de um Uniform tipo identificador UTI (), que é nada mais do que uma simple cadeia de caracteres que identifica exclusivamente o tipo de dados que está sendo apresentados (para obter mais informações, consulte da Apple [uniforme visão geral de identificadores de tipo ](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) documentação).
 
-Para nosso formato personalizado, estamos criando nosso própria utilitário: "com.xamarin.image-info" (Observe que em notação inversa assim como um identificador de aplicativo). Nossa classe também é capaz de gravar uma cadeia de caracteres padrão para a área de trabalho (`public.text`). 
+Para nosso formato personalizado, estamos criando nosso próprio UTI: "com.xamarin.image-info" (Observe que está na notação inversa assim como um identificador de aplicativo). Nossa classe também é capaz de gravar uma cadeia de caracteres padrão para a área de trabalho (`public.text`). 
 
 Em seguida, precisamos criar o objeto no formato solicitado realmente gravados para a área de trabalho:
 
@@ -1017,7 +1017,7 @@ public virtual NSObject GetPasteboardPropertyListForType (string type) {
 }
 ```
 
-Para o `public.text` tipo, estamos retornando um simples formatada `NSString` objeto. Para personalizado `com.xamarin.image-info` tipo, estamos usando um `NSKeyedArchiver` e `NSCoder` interface para codificar a classe de dados personalizado para um arquivo de par chave/valor. Será necessário implementar o método a seguir para manipular, na verdade, a codificação:
+Para o `public.text` tipo, estamos retornando um simples formatada `NSString` objeto. Para o personalizado `com.xamarin.image-info` tipo, estamos usando um `NSKeyedArchiver` e o `NSCoder` interface para codificar a classe de dados personalizado para um arquivo de par chave/valor. Precisamos implementar o seguinte método para manipular, na verdade, a codificação:
 
 ```csharp
 [Export ("encodeWithCoder:")]
@@ -1029,9 +1029,9 @@ public void EncodeTo (NSCoder encoder) {
 }
 ```
 
-Os pares chave/valor individuais são gravados para o codificador e serão possível decodificar o segundo construtor que adicionamos acima.
+Os pares chave/valor individuais são escritos para o codificador e serão decodificados usando o segundo construtor que adicionamos acima.
 
-Opcionalmente, é possível incluir o método a seguir para definir as opções ao gravar dados para a área de trabalho:
+Opcionalmente, podemos incluir o seguinte método para definir as opções ao gravar dados para a área de trabalho:
 
 ```csharp
 [Export ("writingOptionsForType:pasteboard:"), CompilerGenerated]
@@ -1040,9 +1040,9 @@ public virtual NSPasteboardWritingOptions GetWritingOptionsForType (string type,
 }
 ```
 
-Atualmente, apenas o `WritingPromised` opção está disponível e deve ser usada quando um determinado tipo é prometido apenas e não é realmente gravado para a área de trabalho. Para obter mais informações, consulte o [dados prometido](#Promised_Data) seção acima.
+Atualmente, apenas o `WritingPromised` opção está disponível e deve ser usada quando um determinado tipo é prometido apenas e não realmente gravado para a área de trabalho. Para obter mais informações, consulte o [dados prometidos](#Promised_Data) seção acima.
 
-Com esses métodos em vigor, o código a seguir pode ser usado para gravar nossa classe personalizada para a área de trabalho:
+Com esses métodos em vigor, o código a seguir pode ser usado para gravar a nossa classe personalizada para a área de trabalho:
 
 ```csharp
 // Get the standard pasteboard
@@ -1055,11 +1055,11 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new ImageInfo[] { Info });
 ```
 
-#### <a name="reading-from-the-pasteboard"></a>Leitura de área de trabalho
+#### <a name="reading-from-the-pasteboard"></a>Lendo da área de trabalho
 
-Conforme o `INSPasteboardReading` interface, que é necessário para expor os três métodos para que a classe de dados personalizados pode ser lidos da área de trabalho.
+Conforme o `INSPasteboardReading` interface, precisamos expõe três métodos para que a classe de dados personalizados pode ser lidos na área de trabalho.
 
-Primeiro, precisamos informar a área de trabalho qual tipo de dados representações que a classe personalizada pode ler da área de transferência:
+Primeiro, precisamos dizer a área de trabalho qual tipo de dados representações de que a classe personalizada pode ler da área de transferência:
 
 ```csharp
 [Export ("readableTypesForPasteboard:")]
@@ -1069,9 +1069,9 @@ public static string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard){
 }
 ```
 
-Novamente, eles são definidos como UTIs simples e são os mesmos tipos que definimos no **gravação para a área de trabalho** seção acima.
+Novamente, eles são definidos como UTIs simples e são os mesmos tipos que definimos na **escrevendo para a área de trabalho** seção acima.
 
-Em seguida, precisamos informar a área de trabalho _como_ cada um dos tipos de utilitário será lida usando o método a seguir:
+Em seguida, precisamos dizer à área de trabalho _como_ cada um dos tipos do UTI serão lidos usando o seguinte método:
 
 ```csharp
 [Export ("readingOptionsForType:pasteboard:")]
@@ -1090,9 +1090,9 @@ public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, 
 }
 ```
 
-Para o `com.xamarin.image-info` tipo, estamos informando a área de trabalho para decodificar o par chave/valor que são criados com o `NSKeyedArchiver` gravar quando a classe para a área de trabalho chamando o `initWithCoder:` construtor que adicionamos à classe.
+Para o `com.xamarin.image-info` tipo, estamos dizendo a área de trabalho para decodificar o par chave/valor que criamos com o `NSKeyedArchiver` gravar quando a classe para a área de trabalho chamando o `initWithCoder:` construtor que adicionamos à classe.
 
-Por fim, precisamos adicionar o método a seguir para ler as outras representações de dados do utilitário de área de trabalho:
+Por fim, precisamos adicionar o seguinte método para ler as outras representações de dados UTI de área de trabalho:
 
 ```csharp
 [Export ("initWithPasteboardPropertyList:ofType:")]
@@ -1109,7 +1109,7 @@ public NSObject InitWithPasteboardPropertyList (NSObject propertyList, string ty
 }
 ```
 
-Com todos esses métodos em vigor, a classe de dados personalizados pode ser lidos da área de trabalho usando o seguinte código:
+Com todos esses métodos em vigor, a classe de dados personalizados pode ser lidos na área de trabalho usando o seguinte código:
 
 ```csharp
 // Initialize the pasteboard
@@ -1131,13 +1131,13 @@ if (ok) {
 
 ### <a name="using-a-nspasteboarditem"></a>Usando um NSPasteboardItem
 
-Pode haver vezes quando você precisa gravar itens personalizados para a área de trabalho que não garantem a criação de uma classe personalizada ou para fornecer dados em um formato comum, conforme necessário. Nessas situações, você pode usar um `NSPasteboardItem`.
+Pode haver vezes quando você precisa gravar itens personalizados para a área de trabalho que não garantem a criação de uma classe personalizada ou deseja fornecer dados em um formato comum, conforme necessário. Nessas situações, você pode usar um `NSPasteboardItem`.
 
-A `NSPasteboardItem` fornece um controle refinado sobre os dados que foi criados para a área de trabalho e foi projetados para acesso temporário - ele deve ser descartado após ele ter sido gravado para a área de trabalho.
+Um `NSPasteboardItem` fornece controle refinado sobre os dados que são gravados para a área de trabalho e são projetados para acesso temporário - ele deverá ser descartado após ele ter sido gravado para a área de trabalho.
 
 #### <a name="writing-data"></a>Gravação de dados
 
-Para gravar dados personalizados para um `NSPasteboardItem` você precisará fornecer um personalizado `NSPasteboardItemDataProvider`. Adicionar uma nova classe ao projeto e chamá-lo **ImageInfoDataProvider.cs**. Edite o arquivo e torná-lo a seguinte aparência:
+Para gravar os dados personalizados para um `NSPasteboardItem` você precisará fornecer um personalizado `NSPasteboardItemDataProvider`. Adicione uma nova classe ao projeto e chamá-lo **ImageInfoDataProvider.cs**. Edite o arquivo e torná-lo a seguinte aparência:
 
 ```csharp
 using System;
@@ -1200,7 +1200,7 @@ namespace MacCopyPaste
 }
 ```
 
-Como foi feito com a classe de dados personalizado, é preciso usar o `Register` e `Export` diretivas para expô-lo para o objetivo-C. A classe deve herdar de `NSPasteboardItemDataProvider` e deve implementar o `FinishedWithDataProvider` e `ProvideDataForType` métodos.
+Como fizemos com a classe de dados personalizados, precisamos usar o `Register` e `Export` diretivas para expô-lo para Objective-C. A classe deve herdar de `NSPasteboardItemDataProvider` e deve implementar a `FinishedWithDataProvider` e `ProvideDataForType` métodos.
 
 Use o `ProvideDataForType` método para fornecer os dados que serão encapsulados no `NSPasteboardItem` da seguinte maneira:
 
@@ -1220,7 +1220,7 @@ public override void ProvideDataForType (NSPasteboard pasteboard, NSPasteboardIt
 }
 ```
 
-Nesse caso, estamos armazenar duas informações sobre nossa imagem (nome e ImageType) e gravar os para uma cadeia de caracteres simple (`public.text`).
+Nesse caso, estamos armazenando os dois tipos de informação sobre nossa imagem (nome e ImageType) e gravando-os para uma cadeia de caracteres simple (`public.text`).
 
 Tipo de gravar os dados para a área de trabalho, use o seguinte código:
 
@@ -1242,7 +1242,7 @@ if (ok) {
 }
 ```
 
-#### <a name="reading-data"></a>Lendo dados
+#### <a name="reading-data"></a>Leitura de dados
 
 Para ler os dados da área de trabalho, use o seguinte código:
 
@@ -1274,13 +1274,13 @@ if (ok) {
 
 ## <a name="summary"></a>Resumo
 
-Este artigo obteve uma visão detalhada de como trabalhar com a área de trabalho em um aplicativo de Xamarin.Mac para dar suporte a copiar e colar operações. Primeiro, ele introduziu um exemplo simples para se familiarizar com as operações de áreas de trabalho padrão. Em seguida, ela levou uma visão detalhada da área de trabalho e como ler e gravar dados dele. Finalmente, ele visto usando um tipo de dados personalizados para dar suporte a cópia e colagem de tipos de dados complexos em um aplicativo.
+Este artigo apresentou uma visão detalhada de como trabalhar com a área de trabalho em um aplicativo xamarin. Mac para dar suporte a copiar e colar operações. Primeiro, ele introduziu um exemplo simples para se familiarizar com as operações de áreas de trabalho padrão. Em seguida, levou a uma visão detalhada de área de trabalho e como ler e gravar dados dele. Por fim, ele examinou usando um tipo de dados personalizados para dar suporte a cópia e colagem dos tipos de dados complexos dentro de um aplicativo.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MacCopyPaste (exemplo)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
+- [MacCopyPaste (amostra)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [Guia de programação de área de trabalho](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
-- [macOS diretrizes de Interface Humana](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Guia de programação em área de trabalho](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
+- [Diretrizes de Interface humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
