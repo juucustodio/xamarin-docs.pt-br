@@ -86,7 +86,7 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="uitabbar"></a>UITabBar
 
-Por padrão, o ícone da barra de guia selecionada em uma [ `TabbedPage` ](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md) seria azul:
+Por padrão, o ícone da barra de guia selecionada em uma [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md) seria azul:
 
 ![](theme-images/tabbar-default.png "Ícone de barra de guia no TabbedPage do iOS padrão")
 
@@ -112,7 +112,7 @@ UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 
 Essas capturas de tela de dois mostram o padrão `UISwitch` controle à esquerda e a versão personalizada (configuração `Appearance`) à direita na [exemplo de tarefas pendentes](https://developer.xamarin.com/samples/xamarin-forms/Todo/):
 
-![](theme-images/switch-default.png "Cor UISwitch padrão") ![ ] (theme-images/switch-custom.png "personalizado UISwitch cor")
+![](theme-images/switch-default.png "Cor UISwitch padrão") ![](theme-images/switch-custom.png "personalizado UISwitch cor")
 
 ### <a name="other-controls"></a>Outros controles
 
