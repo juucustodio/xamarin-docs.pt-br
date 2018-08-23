@@ -111,7 +111,7 @@ public partial class HelloBitmapPage : ContentPage
 
 O `PaintSurface` manipulador processa o bitmap várias vezes em linhas e colunas da exibição. Observe que o `Clear` método na `PaintSurface` manipulador tem um argumento de `SKColors.Aqua`, quais cores de plano de fundo da superfície de exibição:
 
-[![Olá, Bitmap! ] (drawing-images/HelloBitmap.png "Hello, Bitmap!")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![Olá, Bitmap! ](drawing-images/HelloBitmap.png "Hello, Bitmap!")](drawing-images/HelloBitmap-Large.png#lightbox)
 
 A aparência da tela de fundo aqua revela que o bitmap é transparente, exceto para o texto.
 
