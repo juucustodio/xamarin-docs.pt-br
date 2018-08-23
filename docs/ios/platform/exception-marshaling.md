@@ -76,7 +76,7 @@ try {
 
 Isso ocorre porque o unwinder de pilha Objective-C não conhece o gerenciado `catch` cláusula e não será o `finally` cláusula ser executada.
 
-Quando o exemplo de código acima _é_ eficaz, é porque Objective-C tem um método de notificação de exceções sem tratamento do Objective-C, [ `NSSetUncaughtExceptionHandler` ] [ 2], que Xamarin e use Xamarin.Mac e nesse ponto tenta converter todas as exceções Objective-C para exceções gerenciadas.
+Quando o exemplo de código acima _é_ eficaz, é porque Objective-C tem um método de notificação de exceções sem tratamento do Objective-C, [`NSSetUncaughtExceptionHandler`][2], que Xamarin e use Xamarin.Mac e nesse ponto tenta converter todas as exceções Objective-C para exceções gerenciadas.
 
 ## <a name="scenarios"></a>Cenários
 
