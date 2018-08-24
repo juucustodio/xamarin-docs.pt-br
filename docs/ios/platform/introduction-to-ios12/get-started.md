@@ -19,7 +19,7 @@ ms.locfileid: "39615168"
 ![Visualizar](~/media/shared/preview.png)
 
 > [!WARNING]
-> Suporte do Xamarin para iOS 12, tvOS 12 e SDKs do watchOS 5 distribuídos com o Xcode 10 está atualmente em preview , o que significa que ele pode conter bugs, não está completo e pode ser alterado. Usá-lo apenas para experimentação.
+> Suporte do Xamarin para iOS 12, tvOS 12 e SDKs do watchOS 5 distribuídos com o Xcode 10 está atualmente em versão prévia, o que significa que ele pode conter bugs, não está completo e pode ser alterado. Usá-lo apenas para experimentação.	
 
 Este documento descreve como preparar-se para criar aplicativos Xamarin que chamam APIs lançadas com o Xcode 10. Ele aborda como baixar o Xcode 10 e atualizar o Visual Studio para Mac e Visual Studio 2017.
 
