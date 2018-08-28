@@ -762,7 +762,7 @@ Para adicionar um novo painel, faça o seguinte:
 5. Excluir a janela existente e arraste um painel do **Inspetor de biblioteca** no a **Editor de Interface**: 
 
     [![](window-images/panels01.png "Excluindo a janela existente")](window-images/panels01.png#lightbox)
-6. O painel de gancho até o **o proprietário do arquivo*-**janela*- **tomada**: 
+6. O painel de gancho até o **o proprietário do arquivo*- **janela*- **tomada**: 
 
     [![](window-images/panels02.png "Arrastando para ligar o painel")](window-images/panels02.png#lightbox)
 7. Alterne para o **Inspetor de identidade** e defina a classe do painel para `DocumentPanel`: 
