@@ -31,7 +31,7 @@ Este documento descreve como preparar-se para criar aplicativos Xamarin que cham
 
 3. **Atualizar o Visual Studio para Mac e Visual Studio 2017** – siga as instruções do [blog de versão](https://releases.xamarin.com/preview-release-xcode-10-beta-5/) para instalar a versão prévia do Xamarin.
 
-4. _(opcional)_  **Instalar o beta mais recente do iOS nos dispositivos iOS** – para teste de dispositivos de aplicativos que usam APIs introduzidas com o 10 Xcode, can de desenvolvedores da Apple registrado [baixar](https://developer.apple.com/download) e instale a versão mais recente betas do desenvolvedor em seus dispositivos.
+4. _(opcional)_ **Instalar o beta mais recente do iOS nos dispositivos iOS** – para teste de aplicativos que usam APIs introduzidas com o Xcode 10, desenvolvedores registrados na Apple podem [baixar](https://developer.apple.com/download) e instalar a versão beta mais recente para desenvolvedores em seus dispositivos.
 
    > [!TIP]
    > Mesmo se seu aplicativo não usa novas APIs, certifique-se de criá-lo com os SDKs mais recentes do Xcode 10 e testá-lo para certificar-se de que tudo está funcionando conforme o esperado. Se um aplicativo não chamar novas APIs, você pode recompilá-lo com esses novos SDKs e testá-lo em dispositivos que ainda não foram atualizados para o novo sistema operacional.
