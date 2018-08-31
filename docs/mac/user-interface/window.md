@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: b60b8a6a7c56347d6abf71f8c5149ddd556d3da8
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "40251080"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows no xamarin. Mac
@@ -762,7 +762,7 @@ Para adicionar um novo painel, faça o seguinte:
 5. Excluir a janela existente e arraste um painel do **Inspetor de biblioteca** no a **Editor de Interface**: 
 
     [![](window-images/panels01.png "Excluindo a janela existente")](window-images/panels01.png#lightbox)
-6. O painel de gancho até o **o proprietário do arquivo*- **janela*- **tomada**: 
+6. O painel de gancho até a **o proprietário do arquivo** - **janela** - **tomada**: 
 
     [![](window-images/panels02.png "Arrastando para ligar o painel")](window-images/panels02.png#lightbox)
 7. Alterne para o **Inspetor de identidade** e defina a classe do painel para `DocumentPanel`: 
