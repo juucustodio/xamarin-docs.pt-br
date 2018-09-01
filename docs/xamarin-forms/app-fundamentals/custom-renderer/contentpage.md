@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "38995736"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizar um ContentPage
@@ -197,7 +197,7 @@ namespace CustomRenderer.Droid
 
 A chamada para a classe base `OnElementChanged` método cria uma instância de um Android `ViewGroup` controle, que é um grupo de modos de exibição. O fluxo ao vivo câmera só é processado desde que o renderizador não estiver anexado a um elemento existente do xamarin. Forms, e desde que exista uma instância de página que está sendo processado, o renderizador personalizado.
 
-A página é personalizada, em seguida, invocando uma série de métodos que usam o `Camera` API para fornecer a transmissão ao vivo da câmera e a capacidade de capturar uma foto, antes o `AddView` método é invocado para adicionar a câmera ao vivo transmitir a interface do usuário para o `ViewGroup`.
+A página é personalizada, em seguida, invocando uma série de métodos que usam o `Camera` API para fornecer a transmissão ao vivo da câmera e a capacidade de capturar uma foto, antes o `AddView` método é invocado para adicionar a câmera ao vivo transmitir a interface do usuário para o `ViewGroup`. Observe que no Android também é necessário substituir o `OnLayout` método para executar operações de medida e o layout no modo de exibição. Para obter mais informações, consulte o [exemplo de renderizador ContentPage](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Criando o renderizador de página na UWP
 
