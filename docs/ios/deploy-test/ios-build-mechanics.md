@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: df84e78709b0ff16087c4bb9816c5d45f6ec33ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
+ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772351"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780497"
 ---
 # <a name="ios-build-mechanics"></a>Mecânica de Compilação do iOS
 
@@ -97,7 +97,7 @@ Levando em consideração as informações acima, a lista abaixo fornece algumas
 - Dicas Adicionais
   - Prefira Compilar a Recompilar, porque Recompilar limpa antes de compilar. A limpeza pode demorar muito tempo para remover as referências que podem ser usadas.
   - Aproveite o fato de que o simulador não impõe a área restrita. Ter recursos grandes como vídeos ou outros ativos no projeto pode criar operações de cópia de arquivos dispendiosas sempre que o aplicativo é inicializado no simulador. Evite essas operações dispendiosas colocando os arquivos no diretório base e faça referência a eles no seu aplicativo pelo caminho completo.  
-  - Em caso de dúvida, use o sinalizador `–time –time` para medir sua alteração
+  - Em caso de dúvida, use o sinalizador `--time --time` para medir sua alteração
 
 A captura de tela abaixo ilustra como definir essas opções para o simulador nas opções do iOS:
 
@@ -137,7 +137,7 @@ Minimizar o tamanho do aplicativo também pode reduzir o tempo de compilação. 
 O que evitar:
 
 - Binários FAT (depuração) 
-- Desabilitar o vinculador `–nolink` 
+- Desabilitar o vinculador `--nolink` 
 - Desabilitar a remoção 
   - Símbolos `--nosymbolstrip` 
   - IL (versão) `--nostrip`.  
@@ -151,7 +151,7 @@ Dicas adicionais
 - Evitar a implantação de arquivos estáticos grandes em cada compilação (depuração) 
   - Use UIFileSharingEnabled (info.plist) 
     - Os ativos podem ser carregados uma vez 
-- Em caso de dúvida, use o sinalizador `–time –time` para medir sua alteração
+- Em caso de dúvida, use o sinalizador `--time --time` para medir sua alteração
 
 A captura de tela abaixo ilustra como definir essas opções para o simulador nas opções do iOS:
 
