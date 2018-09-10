@@ -6,13 +6,13 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/03/2018
-ms.openlocfilehash: 92b2eec32aed27e630ac68f3522aa3b40cfc940a
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.date: 08/09/2018
+ms.openlocfilehash: 55b6c10a9014b89534c37faeac2faf84f02339cd
+ms.sourcegitcommit: b6f3e55d4f3dcdc505abc8dc9241cff0bb5bd154
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514484"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780528"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurando o SDK do Android para o Xamarin.Android
 
@@ -36,7 +36,7 @@ Para usar o Gerenciador de SDK do Android do Xamarin, serão necessários:
 
 - Visual Studio 2017 (edição Community, Professional ou Enterprise). Visual Studio 2017 versão 15.7 ou posterior.
 
-- Ferramentas do Visual Studio para Xamarin versão 4.10.0 ou posterior. 
+- As Ferramentas do Visual Studio para Xamarin versão 4.10.0 ou posterior (instaladas como parte da carga de trabalho de **Desenvolvimento mobile com .NET**). 
 
 O Gerenciador do SDK do Android do Xamarin não é compatível com o Visual Studio 2015. Os usuários do Visual Studio 2015 devem usar as ferramentas do Gerenciador de SDK fornecidas pelo Google no SDK do Android.
 
@@ -120,13 +120,13 @@ Clique em **Aceitar** se estiver de acordo com os termos e condições. Essa cai
 
 ### <a name="respository-selection"></a>Seleção de repositório
 
-Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Sem suporte)**:
+Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)**:
 
 [![Selecionar repositório do Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
 Quando o repositório do Google é selecionado, os pacotes adicionais que não estavam disponíveis anteriormente poderão aparecer na guia **Plataformas**. (Na captura de tela acima, a **Plataforma do SDK do Android 28** foi adicionada alterando para o repositório do Google.) O uso do repositório do Google não tem suporte e, portanto, não é recomendado para o desenvolvimento cotidiano.
 
-Para voltar a usar o repositório de plataformas e ferramentas com suporte, clique em **Microsoft (Recomendado)**. Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
+Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)**. Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
