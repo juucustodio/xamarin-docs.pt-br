@@ -4,29 +4,21 @@ description: Este documento fornece um alto nível de visão geral dos recursos 
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: 5cbec23aa81a4637a18f83d9955a78183dadaa21
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: f7fb8cc379a070b848c5154c9c1d4fbfc8186266
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615191"
 ---
 # <a name="introduction-to-tvos-12"></a>Introdução ao tvOS 12
 
-![Visualizar](~/media/shared/preview.png)
+Este documento fornece uma visão geral dos novo e atualizado tvOS 12.
 
-> [!WARNING]
-> Suporte de 12 de tvOS do Xamarin está atualmente em visualização, o que significa que ele pode conter bugs, não é todos os recursos, e pode ser alterado. Usá-lo apenas para experimentação.
-
-Este documento fornece uma visão geral dos novo e atualizado do tvOS 12 recursos para visualização do Xamarin que a versão atualmente fornece associações c#.
-
-Para começar a criar aplicativos de 12 de tvOS com o Xamarin, dê uma olhada:
-
-- O [guia de Introdução](~/ios/platform/introduction-to-ios12/get-started.md)
-- A visualização de Xamarin [postagem no blog de versão](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+Para começar a criar aplicativos de 12 de tvOS com o Xamarin, dê uma olhada a [guia de Introdução](~/ios/platform/introduction-to-ios12/get-started.md).
 
 ## <a name="tvuikit"></a>TVUIKit
 
@@ -48,10 +40,13 @@ A estrutura de visão inclui um detector de face aprimorados que pode detectar f
 
 A estrutura de linguagem Natural permite que os aplicativos executar vários tipos de análise de linguagem. Por exemplo, ele pode ser usado para identificar partes da fala e determinar o idioma representado por um bloco de texto.
 
+## <a name="deprecations"></a>Substituições
+
+Com tvOS 12, a Apple preteriu OpenGL ES [encoraja os desenvolvedores](https://developer.apple.com/tvos/whats-new/) adotar Bare Metal.
+
 ## <a name="related-links"></a>Links relacionados
 
 - [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS – o desenvolvedor da Apple (Apple)](https://developer.apple.com/tvos/)
 - [O que há de novo no tvOS 12 (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Versão prévia do Xamarin [postagem no blog de versão](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

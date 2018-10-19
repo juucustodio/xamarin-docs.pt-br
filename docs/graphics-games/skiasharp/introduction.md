@@ -1,24 +1,24 @@
 ---
-title: Uma introdução ao SkiaSharp
+title: Exemplos de independente de plataforma de SkiaSharp
 description: Este documento fornece uma breve introdução aos conceitos de SkiaSharp. Em particular, discute como obter e um SKCanvas de desenho.
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
-author: charlespetzold
-ms.author: chape
-ms.date: 09/14/2017
-ms.openlocfilehash: eb4a391c52c598c6d276b75028337bf54455e7b4
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/03/2018
+ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615479"
 ---
-# <a name="an-introduction-to-skiasharp"></a>Uma introdução ao SkiaSharp
+# <a name="skiasharp-platform-independent-examples"></a>Exemplos de independente de plataforma de SkiaSharp
 
-_Isso fornece uma breve introdução aos conceitos por trás de SkiaSharp_
+_Isso fornece uma breve introdução independente de plataforma para os conceitos por trás de SkiaSharp_
 
-SkiaSharp fornece uma gráficos 2D avançada e poderosa API que pode ser usada para renderizar em buffers 2D.  Você pode usar esses implementar elementos da interface do usuário personalizada e gráficos 2D que podem ser incorporados ao seu aplicativo.  SkiaSharp é uma associação do .NET para o [Skia](https://skia.org) biblioteca e herda os recursos e a capacidade desta biblioteca.
+SkiaSharp fornece uma gráficos 2D avançada e poderosa API que pode ser usada para renderizar em buffers 2D.  Você pode usar esses implementar elementos da interface do usuário personalizada e gráficos 2D que podem ser incorporados ao seu aplicativo. SkiaSharp é uma associação do .NET para o [Skia](https://skia.org) biblioteca e herda os recursos e a capacidade desta biblioteca.
 
 A biblioteca está disponível como uma plataforma cruzada [pacote do NuGet](https://www.nuget.org/packages/SkiaSharp), você pode adicioná-lo ao seu projeto, adicionando a referência do NuGet.
 
@@ -95,7 +95,7 @@ using (var paint = new SKPaint ()) {
 }
 ```
 
-### <a name="drawing-bitmaps"></a>Desenho Bitmaps
+### <a name="drawing-bitmaps"></a>Desenho bitmaps
 
 ```csharp
 Stream fileStream = File.OpenRead ("MyImage.png");
@@ -135,9 +135,4 @@ using (var paint = new SKPaint()) {
 
 ## <a name="more-information"></a>Mais informações
 
-Para obter mais informações sobre como usar SkiaSharp podem ser encontradas no [documentação da API online](https://developer.xamarin.com/api/namespace/SkiaSharp/)
-
-
-## <a name="related-links"></a>Links relacionados
-
-- [Pasta de trabalho de iOS de SkiaSharp](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)
+Para obter mais informações sobre como usar SkiaSharp podem ser encontradas no [documentação da API](https://docs.microsoft.com/dotnet/api/skiasharp)

@@ -4,29 +4,29 @@ description: Este artigo aprofunda em transformações de SkiaSharp com a matriz
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: 8d5f1a08f7e1bff5ca2f9b696463bc03340476af
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 07b6a13a8bba1e30db1d69e49aa87420bbbdf601
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615425"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Transformações de matriz no SkiaSharp
 
 _Aprofunde-se em transformações de SkiaSharp com a matriz de transformação versátil_
 
-Todas as transformações aplicadas para o `SKCanvas` objeto são consolidados em uma única instância do [ `SKMatrix` ](https://developer.xamarin.com/api/type/SkiaSharp.SKMatrix/) estrutura. Isso é uma matriz de transformação de 3 por 3 standard semelhante aos descritos em todos os sistemas de gráficos 2D modernos.
+Todas as transformações aplicadas para o `SKCanvas` objeto são consolidados em uma única instância do [ `SKMatrix` ](xref:SkiaSharp.SKMatrix) estrutura. Isso é uma matriz de transformação de 3 por 3 standard semelhante aos descritos em todos os sistemas de gráficos 2D modernos.
 
 Como você viu, você pode usar transformações em SkiaSharp sem saber sobre a transformação de matriz, mas a matriz de transformação é importante de uma perspectiva teórica, e é fundamental ao usar transformações para modificar caminhos ou para lidar com a entrada por toque complexas, ambos quais são demonstradas neste artigo e a próxima.
 
 ![](matrix-images/matrixtransformexample.png "Um bitmap sujeito a uma transformação afim")
 
-A matriz de transformação atual aplicada para o `SKCanvas` está disponível a qualquer momento acessando a somente leitura [ `TotalMatrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.TotalMatrix/) propriedade. Você pode definir uma nova transformação de matriz usando o [ `SetMatrix` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.SetMatrix/p/SkiaSharp.SKMatrix/) método e você pode restaurar essa matriz de transformação para valores padrão chamando [ `ResetMatrix` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ResetMatrix/).
+A matriz de transformação atual aplicada para o `SKCanvas` está disponível a qualquer momento acessando a somente leitura [ `TotalMatrix` ](xref:SkiaSharp.SKCanvas.TotalMatrix) propriedade. Você pode definir uma nova transformação de matriz usando o [ `SetMatrix` ](xref:SkiaSharp.SKCanvas.SetMatrix(SkiaSharp.SKMatrix)) método e você pode restaurar essa matriz de transformação para valores padrão chamando [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix).
 
-A única outra `SKCanvas` membro que funciona diretamente com a transformação de matriz da tela está [ `Concat` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Concat/p/SkiaSharp.SKMatrix@/) que concatena duas matrizes multiplicando-los juntos.
+A única outra `SKCanvas` membro que funciona diretamente com a transformação de matriz da tela está [ `Concat` ](xref:SkiaSharp.SKCanvas.Concat(SkiaSharp.SKMatrix@)) que concatena duas matrizes multiplicando-los juntos.
 
 A matriz de transformação de padrão é a matriz de identidade e consiste em 1 na diagonais células e todos os outros lugares 0:
 
@@ -36,7 +36,7 @@ A matriz de transformação de padrão é a matriz de identidade e consiste em 1
 | 0  0  1 |
 </pre>
 
-Você pode criar uma matriz de identidade usando estático [ `SKMatrix.MakeIdentity` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeIdentity()/) método:
+Você pode criar uma matriz de identidade usando estático [ `SKMatrix.MakeIdentity` ](xref:SkiaSharp.SKMatrix.MakeIdentity) método:
 
 ```csharp
 SKMatrix matrix = SKMatrix.MakeIdentity();
@@ -142,15 +142,15 @@ Quando α é de 0 graus, é a matriz de identidade. Quando α é 180 graus, a ma
 |  0   0   1 |
 </pre>
 
-Uma rotação de 180 graus é equivalente a inversão de um objeto horizontalmente e verticalmente, que também pode ser feito definindo os fatores de dimensionamento de – 1.
+Uma rotação de 180 graus é equivalente a inversão de um objeto horizontalmente e verticalmente, que também é feito por fatores de dimensionamento de configuração de – 1.
 
-Todos esses tipos de transformações são classificados como *afim* transforma. Transformações afins nunca envolvem a terceira coluna da matriz, que permanece com os valores padrão de 0, 0 e 1. O artigo [transformações não afins](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md) discute as transformações não afins.
+Todos esses tipos de transformações são classificados como *afim* transforma. Transformações afins nunca envolvem a terceira coluna da matriz, que permanece com os valores padrão de 0, 0 e 1. O artigo [ **transformações não afins** ](non-affine.md) discute as transformações não afins.
 
 ## <a name="matrix-multiplication"></a>Multiplicação de matriz
 
-Uma grande vantagem com usando a matriz de transformação é que transformações de composição podem ser obtidas pela multiplicação de matriz, que geralmente é referenciada na documentação como SkiaSharp *concatenação*. Muitos dos métodos relacionados à transformação na `SKCanvas` se referir a pré-""concatenação ou "pré-concat." Refere-se a ordem de multiplicação, que é importante porque uma multiplicação de matriz não é comutativa.
+Uma vantagem significativa com usando a matriz de transformação é que transformações de composição podem ser obtidas pela multiplicação de matriz, que geralmente é referenciada na documentação como SkiaSharp *concatenação*. Muitos dos métodos relacionados à transformação na `SKCanvas` se referir a pré-""concatenação ou "pré-concat." Refere-se a ordem de multiplicação, que é importante porque uma multiplicação de matriz não é comutativa.
 
-Por exemplo, a documentação para o [ `Translate` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/System.Single/System.Single/) método diz que ele "Pré-concats a matriz atual com a tradução especificada,", enquanto a documentação para o [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) método diz que ele "Pré-concats a matriz atual com a escala especificada."
+Por exemplo, a documentação para o [ `Translate` ](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) método diz que ele "Pré-concats a matriz atual com a tradução especificada,", enquanto a documentação para o [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) método diz que ele "Pré-concats a matriz atual com a escala especificada."
 
 Isso significa que a transformação especificada pela chamada de método é o multiplicador (o operando esquerdo) e a matriz de transformação atual é o multiplicando (o operando direito).
 
@@ -206,7 +206,7 @@ As três matrizes de transformação são multiplicadas na ordem inversa de como
 | –px  –py  1 |   |  0   0   1 |   | px  py  1 |   | px–px·sx  py–py·sy  1 |
 </pre>
 
-### <a name="the-skmatrix-structure"></a>A estrutura SKMatrix
+## <a name="the-skmatrix-structure"></a>A estrutura SKMatrix
 
 O `SKMatrix` estrutura define nove propriedades de leitura/gravação do tipo `float` correspondente a nove células da matriz de transformação:
 
@@ -216,9 +216,9 @@ O `SKMatrix` estrutura define nove propriedades de leitura/gravação do tipo `f
 │ TransX  TransY  Persp2 │
 </pre>
 
-`SKMatrix` também define uma propriedade chamada [ `Values` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix.Values/) do tipo `float[]`. Essa propriedade pode ser usada para definir ou obter os valores de uma só vez na ordem de nove `ScaleX`, `SkewX`, `TransX`, `SkewY`, `ScaleY`, `TransY`, `Persp0`, `Persp1`, e `Persp2`.
+`SKMatrix` também define uma propriedade chamada [ `Values` ](xref:SkiaSharp.SKMatrix.Values) do tipo `float[]`. Essa propriedade pode ser usada para definir ou obter os valores de uma só vez na ordem de nove `ScaleX`, `SkewX`, `TransX`, `SkewY`, `ScaleY`, `TransY`, `Persp0`, `Persp1`, e `Persp2`.
 
-O `Persp0`, `Persp1`, e `Persp2` células são discutidas no artigo [transformações não afins](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md). Se essas células têm seus valores padrão de 0, 0 e 1, a transformação é multiplicada por um ponto de coordenada como este:
+O `Persp0`, `Persp1`, e `Persp2` células são discutidas no artigo [ **transformações não afins**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md). Se essas células têm seus valores padrão de 0, 0 e 1, a transformação é multiplicada por um ponto de coordenada como este:
 
 <pre>
               │ ScaleX  SkewY   0 │
@@ -236,16 +236,16 @@ Essa é a transformação afim bidimensional completa. A transformação afim pr
 
 O `SKMatrix` estrutura define vários métodos estáticos para criar `SKMatrix` valores. Elas retornam `SKMatrix` valores:
 
-- [`MakeTranslation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeTranslation/p/System.Single/System.Single/)
-- [`MakeScale`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeScale/p/System.Single/System.Single/)
-- [`MakeScale`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeScale/p/System.Single/System.Single/System.Single/System.Single/) com um ponto dinâmico
-- [`MakeRotation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotation/p/System.Single/) para um ângulo em radianos
-- [`MakeRotation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotation/p/System.Single/System.Single/System.Single/) para um ângulo em radianos, com um ponto dinâmico
-- [`MakeRotationDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotationDegrees/p/System.Single/)
-- [`MakeRotationDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotationDegrees/p/System.Single/System.Single/System.Single/) com um ponto dinâmico
-- [`MakeSkew`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeSkew/p/System.Single/System.Single/)
+- [`MakeTranslation`](xref:SkiaSharp.SKMatrix.MakeTranslation(System.Single,System.Single))
+- [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single))
+- [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single,System.Single,System.Single)) com um ponto dinâmico
+- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single)) para um ângulo em radianos
+- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single,System.Single,System.Single)) para um ângulo em radianos, com um ponto dinâmico
+- [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single))
+- [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single,System.Single,System.Single)) com um ponto dinâmico
+- [`MakeSkew`](xref:SkiaSharp.SKMatrix.MakeSkew(System.Single,System.Single))
 
-`SKMatrix` também define vários métodos estáticos que concatenar duas matrizes, que significa multiplicá-los. Esses métodos são nomeados `Concat`, `PostConcat`, e `PreConcat`, e há duas versões de cada um. Esses métodos não têm nenhum valor de retorno; em vez disso, eles fazem referência existente `SKMatrix` valores por meio de `ref` argumentos. No exemplo a seguir `A`, `B`, e `R` (para "resultado") são todas `SKMatrix` valores.
+`SKMatrix` também define vários métodos estáticos que concatenar duas matrizes, que significa multiplicá-los. Esses métodos são nomeados [ `Concat` ](xref:SkiaSharp.SKMatrix.Concat*), [ `PostConcat` ](xref:SkiaSharp.SKMatrix.PostConcat*), e [ `PreConcat` ](xref:SkiaSharp.SKMatrix.PreConcat*), e há duas versões de cada um. Esses métodos não têm nenhum valor de retorno; em vez disso, eles fazem referência existente `SKMatrix` valores por meio de `ref` argumentos. No exemplo a seguir `A`, `B`, e `R` (para "resultado") são todas `SKMatrix` valores.
 
 Os dois `Concat` métodos são chamados como este:
 
@@ -283,7 +283,7 @@ Essas chamadas de executam a seguinte operação:
 
 A = B × UM
 
-As versões dessas chamadas de método com todos os `ref` argumentos são um pouco mais eficientes para chamar as implementações subjacentes, mas ele pode ser confuso para alguém leem seu código e supondo que tudo que for um `ref` argumento é modificados pelo método. Além disso, muitas vezes é conveniente passar um argumento que é um resultado de uma da `Make` métodos, por exemplo:
+As versões desses métodos com todos os `ref` argumentos são um pouco mais eficientes para chamar as implementações subjacentes, mas ele pode ser confuso para alguém leem seu código e supondo que tudo que for um `ref` argumento for modificado por o método. Além disso, muitas vezes é conveniente passar um argumento que é um resultado de uma da `Make` métodos, por exemplo:
 
 ```csharp
 SKMatrix result;
@@ -299,7 +299,7 @@ Isso cria a matriz a seguir:
 │ 100  100  1 │
 </pre>
 
-Essa é a transformação de escala multiplicada pela transformação de conversão. Nesse caso específico, o `SKMatrix` estrutura fornece um atalho com um método denominado [ `SetScaleTranslate` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.SetScaleTranslate/p/System.Single/System.Single/System.Single/System.Single/):
+Essa é a transformação de escala multiplicada pela transformação de conversão. Nesse caso específico, o `SKMatrix` estrutura fornece um atalho com um método denominado [ `SetScaleTranslate` ](xref:SkiaSharp.SKMatrix.SetScaleTranslate(System.Single,System.Single,System.Single,System.Single)):
 
 ```csharp
 SKMatrix R = new SKMatrix();
@@ -322,7 +322,7 @@ SKMatrix.RotateDegrees(ref R, degrees, px, py);
 
 Esses métodos fazem *não* concatenar uma transformação a uma transformação existente. Os métodos de definir todas as células da matriz. Eles são funcionalmente idênticos do `MakeRotation` e `MakeRotationDegrees` métodos, exceto que eles não instancie a `SKMatrix` valor.
 
-Suponha que você tenha um `SKPath` objeto que você deseja exibir, mas você prefere que ele tem uma orientação um pouco diferente, ou um ponto central diferente. Você pode modificar todas as coordenadas desse caminho chamando o [ `Transform` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Transform/p/SkiaSharp.SKMatrix/) método `SKPath` com um `SKMatrix` argumento. O **transformar caminho** página demonstra como fazer isso. O [ `PathTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/PathTransformPage.cs) referências de classe a `HendecagramPath` objeto em um campo, mas usa seu construtor para aplicar uma transformação para o caminho:
+Suponha que você tenha um `SKPath` objeto que você deseja exibir, mas você prefere que ele tem uma orientação um pouco diferente, ou um ponto central diferente. Você pode modificar todas as coordenadas desse caminho chamando o [ `Transform` ](xref:SkiaSharp.SKPath.Transform(SkiaSharp.SKMatrix)) método `SKPath` com um `SKMatrix` argumento. O **transformar caminho** página demonstra como fazer isso. O [ `PathTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/PathTransformPage.cs) referências de classe a `HendecagramPath` objeto em um campo, mas usa seu construtor para aplicar uma transformação para o caminho:
 
 ```csharp
 public class PathTransformPage : ContentPage
@@ -347,7 +347,7 @@ public class PathTransformPage : ContentPage
 }
 ```
 
-O `HendecagramPath` objeto tem um centro em (0, 0), e os onze pontos da estrela estendem para fora de que a Central de pelas unidades de 100 em todas as direções. Isso significa que o caminho tem coordenadas positivas e negativas. O **transformar caminho** página prefere trabalhar com uma estrela três vezes como grandes e com todas as coordenadas positivas. Além disso, ele não quer um ponto da estrela para apontar diretamente para cima. Ele quer em vez disso, para um ponto da estrela para apontar diretamente para baixo. (Como a estrela tem onze pontos, ele não é possível ter ambos.) Isso requer girando a estrela em 360 graus dividido por 22.
+O `HendecagramPath` objeto tem um centro em (0, 0) e 11 pontos da estrela estender para fora de que a Central de pelas unidades de 100 em todas as direções. Isso significa que o caminho tem coordenadas positivas e negativas. O **transformar caminho** página prefere trabalhar com uma estrela três vezes como grandes e com todas as coordenadas positivas. Além disso, ele não quer um ponto da estrela para apontar diretamente para cima. Ele quer em vez disso, para um ponto da estrela para apontar diretamente para baixo. (Como a estrela tem 11 pontos, ele não é possível ter ambos.) Isso requer girando a estrela em 360 graus dividido por 22.
 
 O construtor cria um `SKMatrix` objeto de três transformações separados usando o `PostConcat` método com o padrão a seguir, onde A, B e C são instâncias de `SKMatrix`:
 
@@ -410,7 +410,7 @@ O construtor deste programa aplica-se a matriz para o caminho com a chamada a se
 transformedPath.Transform(matrix);
 ```
 
-O caminho faz *não* manter essa matriz como uma propriedade. Em vez disso, ele se aplica a transformação para todas as coordenadas do caminho. Se `Transform` é chamado novamente, a transformação é aplicada novamente e a única maneira que você pode voltar é por meio da aplicação de outra matriz que desfaz a transformação. Felizmente, o `SKMatrix` estrutura define uma [ `TryInverse` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix/) método que obtém a matriz que reverte uma determinada matriz:
+O caminho faz *não* manter essa matriz como uma propriedade. Em vez disso, ele se aplica a transformação para todas as coordenadas do caminho. Se `Transform` é chamado novamente, a transformação é aplicada novamente e a única maneira que você pode voltar é por meio da aplicação de outra matriz que desfaz a transformação. Felizmente, o `SKMatrix` estrutura define uma [ `TryInvert` ](xref:SkiaSharp.SKMatrix.TryInvert*) método que obtém a matriz que reverte uma determinada matriz:
 
 ```csharp
 SKMatrix inverse;
@@ -435,7 +435,7 @@ SKRect transformedRect = matrix.MapRect(rect);
 
 Se você usar o último método que, tenha em mente que o `SKRect` estrutura não é capaz de representar um retângulo girado. O método só faz sentido um `SKMatrix` valor que representa a translação e dimensionamento.
 
-### <a name="interactive-experimentation"></a>Experimentação interativa
+## <a name="interactive-experimentation"></a>Experimentação interativa
 
 É uma maneira de ter uma ideia de transformação afim interativamente movendo três cantos de um bitmap na tela e vendo quais transformação de resultados. Essa é a ideia por trás do **afim Mostrar** página. Esta página requer duas outras classes que também são usados em outras demonstrações:
 
@@ -592,9 +592,9 @@ A tela do iOS abaixo mostra o bitmap quando a página é carregada pela primeira
 
 Embora pareça como se os pontos de toque arraste os cantos do bitmap, que é apenas uma ilusão. A matriz calculada a partir de pontos de toque transforma o bitmap para que os cantos coincidam com os pontos de toque.
 
-Ele é mais natural para que os usuários mover, redimensionar e girar os bitmaps não arrastando os cantos, mas usando um ou dois dedos diretamente no objeto de arrastar, aperto em giram. Isso é abordado no próximo artigo [manipulação de toque](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md).
+Ele é mais natural para que os usuários mover, redimensionar e girar os bitmaps não arrastando os cantos, mas usando um ou dois dedos diretamente no objeto de arrastar, aperto em giram. Isso é abordado no próximo artigo [ **manipulação de toque**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md).
 
-### <a name="the-reason-for-the-3-by-3-matrix"></a>O motivo para a matriz de 3 por 3
+## <a name="the-reason-for-the-3-by-3-matrix"></a>O motivo para a matriz de 3 por 3
 
 Ele pode ser esperado que um sistema de gráficos bidimensionais exigiria apenas uma matriz de transformação de 2 a 2:
 
@@ -646,10 +646,10 @@ O `SKMatrix` estrutura em SkiaSharp define propriedades para a terceira linha:
               │ TransX  TransY  Persp2 │
 </pre>
 
-Valores diferentes de zero da `Persp0` e `Persp1` resultar em transformações que mover objetos, desativar o plano bidimensional em que Z é igual a 1. O que acontece quando esses objetos são movidos de volta para esse plano é abordado no artigo sobre [transformações não afins](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
+Valores diferentes de zero da `Persp0` e `Persp1` resultar em transformações que mover objetos, desativar o plano bidimensional em que Z é igual a 1. O que acontece quando esses objetos são movidos de volta para esse plano é abordado no artigo sobre [ **transformações não afins**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

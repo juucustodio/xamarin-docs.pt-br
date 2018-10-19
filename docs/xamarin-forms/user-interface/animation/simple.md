@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: 124fc311d5e2c8c89353ba813df60f0bf1d0b34a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 61a7d2261ac35621482e9810a0fdb69a6061ae6a
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38997065"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Animações simples no xamarin. Forms
@@ -89,6 +89,9 @@ Esse código é animado a [ `Image` ](xref:Xamarin.Forms.Image) instância pelo 
 As capturas de tela a seguir mostram o dimensionamento em andamento em cada plataforma:
 
 ![](simple-images/scaleto.png "Animação de colocação em escala")
+
+> [!NOTE]
+> O [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe define também [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) e [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) propriedades, que podem dimensionar o `VisualElement` forma diferente no direções horizontal e vertical. Essas propriedades podem ser animadas com o [ `Animation` ](xref:Xamarin.Forms.Animation) classe. Para obter mais informações, consulte [animações personalizadas no xamarin. Forms](custom.md).
 
 ### <a name="relative-scaling"></a>Relativo ao dimensionamento
 
