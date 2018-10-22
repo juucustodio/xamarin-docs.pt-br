@@ -12,7 +12,6 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/31/2018
 ms.locfileid: "39360996"
 ---
-
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
