@@ -1,6 +1,6 @@
 ---
 title: Introdução ao Xamarin.Forms
-description: Este guia apresenta noções básicas do desenvolvimento do Xamarin.Forms e aborda a compilação de aplicativos multitela e multiplataforma.
+description: Xamarin.Forms é um kit de ferramentas de interface do usuário multiplataforma que permite que os desenvolvedores criem, com eficiência, layouts de interface de usuário nativos que possam ser compartilhados entre iOS, Android e aplicativos da Plataforma Universal do Windows. Esta série introduz noções básicas do desenvolvimento do Xamarin.Forms e aborda a compilação de aplicativos multitela e multiplataforma.
 ms.prod: xamarin
 ms.assetid: d87d7232-242c-4ec4-81e9-36103d7e8fcf
 ms.technology: xamarin-forms
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 6ac76f41fc0646107102e0d5e59609c0f3969511
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: da5547de1f21b1f02462f47a4e6ffee43dd0d1bf
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35242427"
+ms.lasthandoff: 04/27/2018
+ms.locfileid: "32024320"
 ---
 # <a name="getting-started-with-xamarinforms"></a>Introdução ao Xamarin.Forms
 
