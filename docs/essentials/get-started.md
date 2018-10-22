@@ -12,7 +12,6 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353770"
 ---
-
 # <a name="get-started-with-xamarinessentials"></a>Introdução ao Xamarin.Essentials
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
