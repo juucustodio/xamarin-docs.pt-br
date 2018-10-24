@@ -22,7 +22,7 @@ Android, iOS e UWP oferecem exclusivas do sistema operacional e as APIs que os d
 
 ## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Introdução ao Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
 
-Siga as [guia de Introdução](get-started.md) para instalar o **Xamarin.Essentials** pacote do NuGet em seu novo ou existente de xamarin. Forms, Android, iOS ou projetos da UWP.
+Siga o [guia de Introdução](get-started.md) para instalar o pacote NuGet **Xamarin.Essentials** em seu novo projeto ou existente de xamarin. Forms, Android, iOS ou UWP.
 
 ## <a name="feature-guides"></a>Guias de recursos
 
@@ -30,7 +30,7 @@ Siga os guias para integrar esses recursos Xamarin.Essentials em seus aplicativo
 
 * [Acelerômetro](accelerometer.md?context=xamarin/xamarin-forms) – recuperar dados da aceleração do dispositivo em três espaço dimensional.
 * [Informações do aplicativo](app-information.md?context=xamarin/xamarin-forms) – descubra informações sobre o aplicativo.
-* [Bateria](battery.md?context=xamarin/xamarin-forms) – facilmente detectar o nível de bateria, o código-fonte e o estado
+* [Bateria](battery.md?context=xamarin/xamarin-forms) – facilmente detectar o nível de bateria, fonte de energia e o estado
 * [Área de transferência](clipboard.md?context=xamarin/xamarin-forms) – rapidamente e facilmente definir ou ler o texto na área de transferência.
 * [Bússola](compass.md?context=xamarin/xamarin-forms) – bússola do Monitor para que as alterações.
 * [Conectividade](connectivity.md?context=xamarin/xamarin-forms) – verificar o estado de conectividade e detectar alterações.
@@ -53,16 +53,16 @@ Siga os guias para integrar esses recursos Xamarin.Essentials em seus aplicativo
 * [Energia](power.md?context=xamarin/xamarin-forms) – obter o status de economia de energia do dispositivo.
 * [Preferências](preferences.md?context=xamarin/xamarin-forms) – rapidamente e facilmente adicionar preferências persistentes.
 * [Bloqueio de tela](screen-lock.md?context=xamarin/xamarin-forms) – manter a tela do dispositivo ativo.
-* [Armazenamento seguro](secure-storage.md?context=xamarin/xamarin-forms) – com segurança armazenar dados.
+* [Armazenamento seguro](secure-storage.md?context=xamarin/xamarin-forms) – armazenar dados com segurança.
 * [SMS](sms.md?context=xamarin/xamarin-forms) – criar uma mensagem SMS para enviar.
-* [Texto em fala](text-to-speech.md?context=xamarin/xamarin-forms) – Vocalize texto no dispositivo.
-* [Controle de versão](version-tracking.md?context=xamarin/xamarin-forms) – controlar a versão de aplicativos e os números de compilação.
-* [Vibrar](vibrate.md?context=xamarin/xamarin-forms) – faça com que o dispositivo Vibrar.
+* [Texto em fala](text-to-speech.md?context=xamarin/xamarin-forms) – Vocalizar texto no dispositivo.
+* [Controle de versão](version-tracking.md?context=xamarin/xamarin-forms) – controlar as versões do aplicativo e os números de compilação.
+* [Vibrar](vibrate.md?context=xamarin/xamarin-forms) – faça com que o dispositivo Vibre.
 
 ## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[Solução de problemas](troubleshooting.md?context=xamarin/xamarin-forms)
 
-Encontre ajuda se você estiver encontrando problemas.
+Encontre ajuda se você estiver tendo problemas.
 
 ## <a name="api-documentationxrefxamarinessentials"></a>[Documentação da API](xref:Xamarin.Essentials)
 
-Navegue a documentação de API para todos os recursos de Xamarin.Essentials.
+Navegue na documentação de API para todos os recursos de Xamarin.Essentials.
