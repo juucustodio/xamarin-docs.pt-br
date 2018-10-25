@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 16d1970b5e9d8f9c2b7c8be875c81136525c4fb7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: b52f249b184d49731fd5decdb5877c70e29a3b84
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38998066"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Associações do xamarin. Forms Basic
@@ -197,6 +197,9 @@ A tela do iOS à esquerda mostra como a tela aparece quando a página é exibida
 O problema é que o `Slider` tem um valor inicial de 0. Isso faz com que o `Scale` propriedade do `Label` também seja definida como 0, substituindo o valor padrão de 1. Isso resulta no `Label` sendo inicialmente invisível. Como demonstram as capturas de tela do Android e plataforma Universal do Windows (UWP), você pode manipular o `Slider` para tornar o `Label` aparecer novamente, mas seu desaparecimento inicial é desconcertante.
 
 Você descobrirá na [próximo artigo](binding-mode.md) como evitar esse problema, inicializando o `Slider` do valor padrão da `Scale` propriedade.
+
+> [!NOTE]
+> O [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe define também [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) e [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) propriedades, que podem dimensionar o `VisualElement` forma diferente no direções horizontal e vertical.
 
 O **associação de XAML alternativa** página mostra a associação equivalente inteiramente em XAML:
 

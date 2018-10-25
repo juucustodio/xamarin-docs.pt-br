@@ -4,54 +4,54 @@ description: Este artigo explora o objeto de SkiaSharp SKPath para combinar linh
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 3c07614c12fb503638d3d5e63b24eb5367ba691a
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 2980884c94bfa2cddbef89e8a2e5f6aaf778d033
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615529"
 ---
 # <a name="path-basics-in-skiasharp"></a>Noções básicas de caminho no SkiaSharp
 
 _Explorar o objeto de SkiaSharp SKPath para combinar linhas e curvas conectadas_
 
-Uma da impactam mais importantes do caminho gráfico é a capacidade de definir quando várias linhas devem ser conectadas e quando eles não devem estar conectados. A diferença pode ser bastante visível, como demonstram as partes superiores desses dois triângulos:
+Um dos recursos mais importantes do caminho gráfico é a capacidade de definir quando várias linhas devem ser conectadas e quando eles não devem estar conectados. A diferença pode ser significativa, como demonstram as partes superiores desses dois triângulos:
 
 ![](paths-images/connectedlinesexample.png "Dois triângulos que mostra a diferença entre as linhas conectadas e desconectadas")
 
-Um caminho gráfico é encapsulado pela [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) objeto. Um caminho é uma coleção de um ou mais *delimitações*. Cada contorno é uma coleção de *conectados* linhas retas e curvas. Delimitações não estão conectadas entre si, mas eles podem se sobrepor visualmente. Às vezes, uma única delimitação pode se sobrepor em si.
+Um caminho gráfico é encapsulado pela [ `SKPath` ](xref:SkiaSharp.SKPath) objeto. Um caminho é uma coleção de um ou mais *delimitações*. Cada contorno é uma coleção de *conectados* linhas retas e curvas. Delimitações não estão conectadas entre si, mas eles podem se sobrepor visualmente. Às vezes, uma única delimitação pode se sobrepor em si.
 
 Um contorno geralmente começa com uma chamada para o método a seguir `SKPath`:
 
-- `MoveTo` para iniciar uma nova delimitação
+- [`MoveTo`](SkiaSharp.SKPath.MoveTo*) para iniciar uma nova delimitação
 
 O argumento para esse método é um único ponto, você pode expressar como um `SKPoint` de valor ou como separado de X e Y coordena. O `MoveTo` chamada estabelece um ponto no início de uma inicial e da delimitação *ponto atual*. Você pode chamar os métodos a seguir para continuar a delimitação com uma linha ou curva do ponto atual para um ponto especificado no método, que então se torna o novo ponto atual:
 
-- `LineTo` Para adicionar uma linha reta ao caminho
-- `ArcTo` Para adicionar um arco, que é uma linha na circunferência de um círculo ou elipse
-- `CubicTo` Para adicionar uma spline de Bézier cúbica
-- `QuadTo` Para adicionar uma spline de Bézier quadrática
-- `ConicTo` Para adicionar um racional spline de Bézier quadrático, que pode processar com precisão as seções de conic (elipses, parábolas e hipérboles)
+- [`LineTo`](SkiaSharp.SKPath.LineTo*) Para adicionar uma linha reta ao caminho
+- [`ArcTo`](SkiaSharp.SKPath.ArcTo*) Para adicionar um arco, que é uma linha na circunferência de um círculo ou elipse
+- [`CubicTo`](SkiaSharp.SKPath.CubicTo*) Para adicionar uma spline de Bézier cúbica
+- [`QuadTo`](SkiaSharp.SKPath.QuadTo*) Para adicionar uma spline de Bézier quadrática
+- [`ConicTo`](SkiaSharp.SKPath.ConicTo*) Para adicionar um racional spline de Bézier quadrático, que pode processar com precisão as seções de conic (elipses, parábolas e hipérboles)
 
 Nenhum desses cinco métodos contêm todas as informações necessárias para descrever a linha ou curva. Cada um desses cinco métodos funciona em conjunto com o ponto atual estabelecido pela chamada de método imediatamente anterior a ele. Por exemplo, o `LineTo` método adiciona uma linha reta para a delimitação com base no ponto atual, portanto, o parâmetro para `LineTo` é apenas um único ponto.
 
 O `SKPath` classe também define métodos que têm os mesmos nomes que esses seis métodos, mas com um `R` no início:
 
-- `RMoveTo`
-- `RLineTo`
-- `RArcTo`
-- `RCubicTo`
-- `RQuadTo`
-- `RConicTo`
+- [`RMoveTo`]((SkiaSharp.SKPath.RMoveTo*))
+- [`RLineTo`](SkiaSharp.SKPath.RLineTo*)
+- [`RArcTo`](SkiaSharp.SKPath.RArcTo*)
+- [`RCubicTo`](SkiaSharp.SKPath.RCubicTo*)
+- [`RQuadTo`](SkiaSharp.SKPath.RQuadTo*)
+- [`RConicTo`](SkiaSharp.SKPath.RConicTo*)
 
-O `R` signifca *relativo*. Eles têm a mesma sintaxe que os métodos correspondentes sem o `R` , mas são relativos ao ponto atual. Essas ferramentas são úteis para desenhar partes semelhantes de um caminho em um método que você chamar várias vezes.
+O `R` signifca *relativo*. Esses métodos têm a mesma sintaxe que os métodos correspondentes sem o `R` , mas são relativos ao ponto atual. Essas ferramentas são úteis para desenhar partes semelhantes de um caminho em um método que você chamar várias vezes.
 
 Um contorno termina com outra chamada para `MoveTo` ou `RMoveTo`, que inicia uma nova delimitação ou uma chamada para `Close`, que fecha a delimitação. O `Close` método automaticamente acrescenta uma linha reta do ponto atual para o primeiro ponto da delimitação e marca o caminho como fechado, o que significa que ele será renderizado sem qualquer caps do traço.
 
-A diferença entre delimitações abertas e fechadas é ilustrada na **dois contornos de triângulo** página, que usa um `SKPath` objeto com dois contornos para renderizar dois triângulos. A primeira delimitação é aberta e o segundo é fechado. Aqui está o [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe:
+A diferença entre delimitações abertas e fechadas é ilustrada na **dois contornos de triângulo** página, que usa um `SKPath` objeto com dois contornos para renderizar dois triângulos. A primeira delimitação é aberta e o segundo é fechado. Aqui está o [ `TwoTriangleContoursPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -97,31 +97,31 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-A delimitação primeiro consiste em uma chamada para [ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) usando coordenadas X e Y em vez de uma `SKPoint` valor, seguido por três chamadas para [ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) para desenhar os três lados das triângulo. A segunda delimitação tem apenas duas chamadas para `LineTo` , mas ela é concluída a delimitação com uma chamada para [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), que fecha a delimitação. A diferença é significativa:
+A delimitação primeiro consiste em uma chamada para [ `MoveTo` ](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) usando coordenadas X e Y em vez de uma `SKPoint` valor, seguido por três chamadas para [ `LineTo` ](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) para desenhar os três lados das triângulo. A segunda delimitação tem apenas duas chamadas para `LineTo` , mas ela é concluída a delimitação com uma chamada para [ `Close` ](xref:SkiaSharp.SKPath.Close), que fecha a delimitação. A diferença é significativa:
 
 [![](paths-images/twotrianglecontours-small.png "Tripla captura de tela da página de dois contornos de triângulo")](paths-images/twotrianglecontours-large.png#lightbox "tripla captura de tela da página de dois contornos de triângulo")
 
 Como você pode ver, a primeira delimitação é, obviamente, uma série de três linhas conectadas, mas final não se conectar com o início. As duas linhas se sobrepor na parte superior. A segunda delimitação, obviamente, foi fechada e era realizada com um número menor `LineTo` chama porque o `Close` método adiciona automaticamente uma linha final para fechar a delimitação.
 
-`SKCanvas` define apenas um [ `DrawPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawPath/p/SkiaSharp.SKPath/SkiaSharp.SKPaint/) método, que, nesta demonstração, é chamado duas vezes para preencher e traçar o demarcador. Todos os contornos são preenchidas, mesmo aqueles que não estão fechados. Para fins de preenchimento de caminhos não fechados, é considerada uma linha reta para existir entre os pontos inicial e final das delimitações. Se você remover a última `LineTo` da primeira delimitação ou remover o `Close` chamada da delimitação segundo, cada delimitação terão apenas dois lados, mas serão ser preenchido como se fosse um triângulo.
+`SKCanvas` define apenas um [ `DrawPath` ](xref:SkiaSharp.SKCanvas.DrawPath(SkiaSharp.SKPath,SkiaSharp.SKPaint)) método, que, nesta demonstração, é chamado duas vezes para preencher e traçar o demarcador. Todos os contornos são preenchidas, mesmo aqueles que não estão fechados. Para fins de preenchimento de caminhos não fechados, é considerada uma linha reta para existir entre os pontos inicial e final das delimitações. Se você remover a última `LineTo` da primeira delimitação ou remover o `Close` chamada da delimitação segundo, cada delimitação terão apenas dois lados, mas serão ser preenchido como se fosse um triângulo.
 
 `SKPath` define vários métodos e propriedades. Os seguintes métodos adicionam delimitações inteiras para o caminho, que pode ser fechado ou não fechado, dependendo do método:
 
-- `AddRect`
-- [`AddRoundedRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddRoundedRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPathDirection/)
-- [`AddCircle`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddCircle/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathDirection/)
-- [`AddOval`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddOval/p/SkiaSharp.SKRect/SkiaSharp.SKPathDirection/)
-- [`AddArc`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) Para adicionar uma curva na circunferência de uma elipse
-- `AddPath` Para adicionar outro caminho para o caminho atual
-- [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) Para adicionar outro caminho na ordem inversa
+- [`AddRect`](xref:SkiaSharp.SKPath.AddRect*)
+- [`AddRoundedRect`](xref:SkiaSharp.SKPath.AddRoundedRect(SkiaSharp.SKRect,System.Single,System.Single,SkiaSharp.SKPathDirection))
+- [`AddCircle`](xref:SkiaSharp.SKPath.AddCircle(System.Single,System.Single,System.Single,SkiaSharp.SKPathDirection))
+- [`AddOval`](xref:SkiaSharp.SKPath.AddOval(SkiaSharp.SKRect,SkiaSharp.SKPathDirection))
+- [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) Para adicionar uma curva na circunferência de uma elipse
+- [`AddPath`](xref:SkiaSharp.SKPath.AddPath*) Para adicionar outro caminho para o caminho atual
+- [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath)) Para adicionar outro caminho na ordem inversa
 
 Tenha em mente que um `SKPath` objeto define apenas uma geometria &mdash; uma série de pontos e conexões. Somente quando um `SKPath` combinada com um `SKPaint` objeto é o caminho renderizado com uma determinada cor, largura do traço e assim por diante. Além disso, tenha em mente que o `SKPaint` objeto passado para o `DrawPath` método define as características de todo o caminho. Se você quiser desenhar algo que exigem várias cores, você deve usar um caminho separado para cada cor.
 
-Assim como a aparência de início e no final de uma linha é definida por um limite do traço, a aparência da conexão entre duas linhas é definida por uma *junção traço*. Você pode especificar isso definindo a [ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) propriedade do `SKPaint` a um membro da [ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) enumeração:
+Assim como a aparência de início e no final de uma linha é definida por um limite do traço, a aparência da conexão entre duas linhas é definida por uma *junção traço*. Você pode especificar isso definindo a [ `StrokeJoin` ](xref:SkiaSharp.SKPaint.StrokeJoin) propriedade do `SKPaint` a um membro da [ `SKStrokeJoin` ](xref:SkiaSharp.SKStrokeJoin) enumeração:
 
-- [`Miter`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Miter/) para uma junção pontuda
-- [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) para uma junção de cantos arredondada
-- [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) para uma junção waited-off
+- `Miter` para uma junção pontuda
+- `Round` para uma junção de cantos arredondada
+- `Bevel` para uma junção waited-off
 
 O **junções de traço** página mostra os três traçar as junções com código semelhante do **traço Caps** página. Esse é o `PaintSurface` manipulador de eventos em de [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe:
 
@@ -191,10 +191,10 @@ Aqui está o programa em execução nas três plataformas:
 
 [![](paths-images/strokejoins-small.png "Tripla captura de tela da página traço une")](paths-images/strokejoins-large.png#lightbox "tripla captura de tela da página de junções de traço")
 
-A junção de Malhete consiste em um ponto de curva na qual as linhas de se conectar. Ao unir duas linhas em um ângulo pequeno, a junção de Malhete pode se tornar muito longa. Para evitar esquadrias excessivamente longo, o comprimento da junção de Malhete é limitado pelo valor da [ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) propriedade `SKPaint`. Uma junção de Malhete que excede esse comprimento é cortada para se tornar uma junção de bisel.
+A junção de Malhete consiste em um ponto de curva na qual as linhas de se conectar. Ao unir duas linhas em um ângulo pequeno, a junção de Malhete pode se tornar muito longa. Para evitar esquadrias excessivamente longo, o comprimento da junção de Malhete é limitado pelo valor da [ `StrokeMiter` ](xref:SkiaSharp.SKPaint.StrokeMiter) propriedade `SKPaint`. Uma junção de Malhete que excede esse comprimento é cortada para se tornar uma junção de bisel.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

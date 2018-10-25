@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38860661"
 ---
 # <a name="xamarin-live-reload"></a>Recarregamento dinâmico do Xamarin
@@ -26,10 +26,12 @@ Como seu aplicativo é compilado ao usar o Live Reload, ele funciona com todas a
 
 Recarregamento dinâmico está disponível atualmente apenas no Visual Studio 2017.
 
+[![Participe de bate-papo em https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## <a name="requirements"></a>Requisitos
 
-* [Visual Studio 2017 versão 15.7 ou posterior](https://visualstudio.microsoft.com/vs/) ou superior com o **desenvolvimento móvel com .NET** carga de trabalho.
-* [Xamarin. Forms 3.0.0 ou acima](https://www.nuget.org/packages/Xamarin.Forms/) ou superior.
+* [Visual Studio 2017 versão 15.7 ou posterior](https://visualstudio.microsoft.com/vs/) com o **desenvolvimento móvel com .NET** carga de trabalho.
+* [Xamarin. Forms 3.0.0 ou acima](https://www.nuget.org/packages/Xamarin.Forms/).
 
 ## <a name="getting-started"></a>Guia de Introdução
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Instalar o recarregamento dinâmico do Xamarin no Visual Studio Marketplace
@@ -121,6 +123,8 @@ Nº Na verdade, você pode até mesmo iniciar todos os seus destinos com suporte
 * Só tem suporte no Visual Studio.
 * Vinculação deve ser definida como **não vincular** ou **vincular somente SDKs de estruturas** 
 * Recarregar os recursos de todo o aplicativo (ou seja, **App. XAML** ou compartilhar dicionários de recursos), navegação de aplicativo é redefinida. Isso será corrigido na próxima versão de visualização.
+* Recarregamento do ContentView atualmente requer recarregar a página que contém. Isso será corrigido na próxima versão de visualização.
+* Elementos que contêm AutomationId podem causar uma falha de recarregar.
 * Editando o XAML enquanto depuração UWP pode causar uma falha de tempo de execução. Solução alternativa: Use **iniciar sem depuração (Ctrl + F5)** em vez de **iniciar depuração (F5)**.
 
 ## <a name="troubleshooting"></a>Solução de problemas

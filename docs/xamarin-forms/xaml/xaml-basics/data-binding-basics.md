@@ -1,40 +1,40 @@
 ---
-title: Parte 4. Noções básicas de associação de dados
-description: Associações de dados permitem que propriedades de dois objetos a serem vinculados para que a alteração de uma causa uma alteração no outro.
+title: Parte 4. Noções básicas de vinculação de dados
+description: Associações de dados permitem que as propriedades de dois objetos a serem vinculadas para que a alteração de uma causa uma alteração no outro.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 117ddd033faedda871c33ba10c246739309e2e86
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ee6571012764e7578fa9ee03493e9f96aa7b45eb
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "35245944"
 ---
-# <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de associação de dados
+# <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de vinculação de dados
 
-_Associações de dados permitem que propriedades de dois objetos a serem vinculados para que a alteração de uma causa uma alteração no outro. Essa é uma ferramenta muito valiosa e enquanto associações de dados podem ser definidas inteiramente no código, XAML fornece atalhos e conveniência. Consequentemente, uma das extensões de marcação mais importantes no xamarin. Forms é associação._
+_Associações de dados permitem que as propriedades de dois objetos a serem vinculadas para que a alteração de uma causa uma alteração no outro. Essa é uma ferramenta muito valiosa, e enquanto as associações de dados podem ser definidas inteiramente no código, XAML fornece atalhos e conveniência. Consequentemente, uma das extensões de marcação mais importantes no xamarin. Forms é associação._
 
 ## <a name="data-bindings"></a>Associações de dados
 
-Propriedades de dois objetos, chamados de conexão de associações de dados de *fonte* e *destino*. No código, duas etapas são necessárias: O `BindingContext` propriedade do objeto de destino deve ser definida para o objeto de origem e o `SetBinding` método (geralmente usado em conjunto com o `Binding` classe) deve ser chamado no objeto de destino para associar uma propriedade que objeto a uma propriedade do objeto de origem.
+Associações de dados se conectar a propriedades de dois objetos, chamados de *fonte* e o *destino*. No código, são necessárias duas etapas: O `BindingContext` propriedade do objeto de destino deve ser definida para o objeto de origem e o `SetBinding` método (geralmente usado em conjunto com o `Binding` classe) deve ser chamado no objeto de destino para associar uma propriedade de que objeto a uma propriedade do objeto de origem.
 
-A propriedade de destino deve ser uma propriedade ligável, o que significa que o objeto de destino deve ser derivado de `BindableObject`. A documentação online do xamarin. Forms indica as propriedades vinculáveis. Uma propriedade de `Label` como `Text` está associado com a propriedade associável `TextProperty`.
+A propriedade de destino deve ser uma propriedade vinculável, o que significa que o objeto de destino deve derivar de `BindableObject`. A documentação do xamarin. Forms online indica quais propriedades são propriedades associáveis. Uma propriedade de `Label` , como `Text` associado com a propriedade associável `TextProperty`.
 
-Na marcação, você também deve executar as duas etapas mesmo que são necessárias no código, exceto pelo fato do `Binding` extensão de marcação assume o lugar do `SetBinding` chamar e `Binding` classe.
+Na marcação, você também deve executar as mesmas duas etapas que são necessárias no código, exceto pelo fato do `Binding` extensão de marcação ocupa o lugar do `SetBinding` chamar e o `Binding` classe.
 
-No entanto, quando você definir associações de dados em XAML, há várias maneiras de definir o `BindingContext` do objeto de destino. Às vezes, ele é definido do arquivo code-behind, às vezes, usando um `StaticResource` ou `x:Static` extensão de marcação e às vezes, como o conteúdo de `BindingContext` marcas de elemento de propriedade.
+No entanto, quando você define vinculações de dados no XAML, há várias maneiras de definir o `BindingContext` do objeto de destino. Às vezes, ele é definido do arquivo code-behind, às vezes, usando um `StaticResource` ou `x:Static` extensão de marcação e às vezes, como o conteúdo de `BindingContext` marcas de elemento de propriedade.
 
-Associações são usadas com mais frequência para conectar os elementos visuais de um programa com um modelo de dados subjacente, normalmente em uma realização da arquitetura do aplicativo MVVM (Model-View-ViewModel), conforme discutido em [parte 5. De associações de dados para o modelo MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), mas outros cenários são possíveis.
+Associações são usadas com mais frequência para conectar os elementos visuais de um programa com um modelo de dados subjacente, geralmente em uma realização da arquitetura MVVM (Model-View-ViewModel) do aplicativo, conforme discutido em [parte 5. De associações de dados a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), mas outros cenários são possíveis.
 
 ## <a name="view-to-view-bindings"></a>Associações de exibição para exibição
 
-Você pode definir associações de dados para vincular as propriedades dos dois modos de exibição na mesma página. Nesse caso, você configura o `BindingContext` do objeto de destino usando o `x:Reference` extensão de marcação.
+Você pode definir associações de dados para vincular as propriedades de dois modos de exibição na mesma página. Nesse caso, você definir a `BindingContext` do objeto de destino usando o `x:Reference` extensão de marcação.
 
-Aqui está um arquivo XAML que contém um `Slider` e dois `Label` modos de exibição, um dos quais é girado pelo `Slider` valor e outro que exibe o `Slider` valor:
+Aqui está um arquivo XAML que contém um `Slider` e duas `Label` modos de exibição, um dos quais é girado, o `Slider` valor e outro que exibe o `Slider` valor:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -65,9 +65,9 @@ Aqui está um arquivo XAML que contém um `Slider` e dois `Label` modos de exibi
 </ContentPage>
 ```
 
-O `Slider` contém um `x:Name` atributo que é referenciado pelos dois `Label` exibições usando o `x:Reference` extensão de marcação.
+O `Slider` contém uma `x:Name` atributo que é referenciado pelas duas `Label` exibições usando o `x:Reference` extensão de marcação.
 
-O `x:Reference` extensão de associação define uma propriedade chamada `Name` para definir como o nome do elemento referenciado, nesse caso `slider`. No entanto, o `ReferenceExtension` classe que define o `x:Reference` extensão de marcação também define uma `ContentProperty` atributo `Name`, que significa que não seja explicitamente necessário. Apenas para a série, o primeiro `x:Reference` inclui "Name =", mas não o segundo:
+O `x:Reference` extensão de associação define uma propriedade chamada `Name` para definir como o nome do elemento referenciado, nesse caso, `slider`. No entanto, o `ReferenceExtension` classe que define o `x:Reference` extensão de marcação também define um `ContentProperty` de atributo para `Name`, que significa que não é explicitamente necessário. Apenas para a variedade, a primeira `x:Reference` inclui "nome =", mas não o segundo:
 
 ```csharp
 BindingContext="{x:Reference Name=slider}"
@@ -75,7 +75,7 @@ BindingContext="{x:Reference Name=slider}"
 BindingContext="{x:Reference slider}"
 ```
 
-O `Binding` extensão de marcação em si pode ter várias propriedades, como o `BindingBase` e `Binding` classe. O `ContentProperty` para `Binding` é `Path`, mas o "caminho =" parte da extensão de marcação pode ser omitido se o caminho é o primeiro item a `Binding` extensão de marcação. O primeiro exemplo tem "caminho =", mas o segundo exemplo omite a ela:
+O `Binding` extensão de marcação em si pode ter várias propriedades, assim como o `BindingBase` e `Binding` classe. O `ContentProperty` para `Binding` é `Path`, mas o "caminho =" parte da extensão de marcação pode ser omitido se o caminho é o primeiro item no `Binding` extensão de marcação. O exemplo primeiro tem "caminho =", mas o segundo exemplo omite a ele:
 
 ```csharp
 Rotation="{Binding Path=Value}"
@@ -92,7 +92,7 @@ Text="{Binding Value,
 
 Fazer o que for conveniente.
 
-Observe o `StringFormat` propriedade no segundo `Binding` extensão de marcação. Xamarin. Forms, associações não executam qualquer conversões implícitas de tipo, e se você precisar exibir um objeto de cadeia de caracteres não como uma cadeia de caracteres, você deve fornecer um conversor de tipo ou usar `StringFormat`. Nos bastidores, estático `String.Format` método é usado para implementar `StringFormat`. Que é potencialmente um problema, porque as especificações de formatação do .NET envolvem chaves, que também são usadas para delimitar as extensões de marcação. Isso cria um risco de confundir o analisador XAML. Para evitar isso, coloque a cadeia de caracteres de formatação inteira entre aspas simples:
+Observe que o `StringFormat` propriedade na segunda `Binding` extensão de marcação. No xamarin. Forms, as associações não executam as conversões de tipo implícito, e se você precisar exibir um objeto de cadeia de caracteres não como uma cadeia de caracteres, você deve fornecer um conversor de tipo ou usar `StringFormat`. Nos bastidores, estático `String.Format` método é usado para implementar `StringFormat`. Que é potencialmente um problema, porque as especificações de formatação .NET envolvem chaves, que também são usadas para delimitar as extensões de marcação. Isso cria um risco de confundir o analisador XAML. Para evitar isso, coloque toda a cadeia de caracteres de formatação em aspas simples:
 
 ```csharp
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -102,20 +102,20 @@ Aqui está o programa em execução:
 
 [![](data-binding-basics-images/sliderbinding.png "Associações de exibição para exibição")](data-binding-basics-images/sliderbinding-large.png#lightbox "associações de exibição para exibição ")
 
-## <a name="the-binding-mode"></a>O modo de associação
+## <a name="the-binding-mode"></a>O modo de ligação
 
-Um único modo de exibição pode ter associações de dados em várias de suas propriedades. No entanto, cada modo de exibição pode ter apenas um `BindingContext`, portanto, várias associações de dados nessa exibição devem ser todas fazer referência às propriedades do mesmo objeto.
+Uma única exibição pode ter associações de dados em várias de suas propriedades. No entanto, cada modo de exibição pode ter apenas um `BindingContext`, portanto, várias associações de dados nessa exibição devem todas as propriedades do mesmo objeto de referência.
 
-A solução para esse e outros problemas envolve o `Mode` propriedade, que é definida como um membro do `BindingMode` enumeração:
+A solução para esse e outros problemas envolve a `Mode` propriedade, que é definida como um membro do `BindingMode` enumeração:
 
 - `Default`
-- `OneWay` — valores são transferidos da origem para o destino
-- `OneWayToSource` — valores são transferidos do destino para a origem
+- `OneWay` — valores que são transferidos da origem ao destino
+- `OneWayToSource` — valores que são transferidos do destino para a fonte
 - `TwoWay` — valores são transferidos ambas as direções entre origem e destino
 
-O programa a seguir demonstra um uso comum de `OneWayToSource` e `TwoWay` modos de ligação. Quatro `Slider` exibições destinam-se ao controle de `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades de um `Label`. A princípio, isso parece como se essas quatro propriedades do `Label` deve ser destinos de vinculação de dados, porque cada um está sendo definida um `Slider`. No entanto, o `BindingContext` de `Label` pode ser apenas um objeto e há quatro controles deslizantes diferente.
+O programa a seguir demonstra um uso comum de `OneWayToSource` e `TwoWay` modos de ligação. Quatro `Slider` modos de exibição destinam-se ao controle de `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades de um `Label`. A princípio, parece como se essas quatro propriedades do `Label` deve ser destinos de vinculação de dados, porque cada um está sendo definida um `Slider`. No entanto, o `BindingContext` de `Label` pode ser apenas um objeto, e há quatro controles deslizantes diferentes.
 
-Por esse motivo, todas as associações são definidas no aparentemente com versões anteriores maneiras: O `BindingContext` de cada um dos quatro controles deslizantes é definido como o `Label`, e as associações são definidas no `Value` propriedades dos controles deslizantes. Usando o `OneWayToSource` e `TwoWay` modos, essas `Value` propriedades podem definir as propriedades de origem, que são o `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades do `Label`:
+Por esse motivo, todas as associações são definidas aparentemente com versões anteriores maneiras: os `BindingContext` de cada um dos quatro controles deslizantes é definido como o `Label`, e as associações são definidas no `Value` propriedades dos controles deslizantes. Usando o `OneWayToSource` e `TwoWay` modos, essas `Value` propriedades podem definir as propriedades da fonte, que são os `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades do `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -194,25 +194,28 @@ Por esse motivo, todas as associações são definidas no aparentemente com vers
 </ContentPage>
 ```
 
-As associações em três do `Slider` modos de exibição são `OneWayToSource`, o que significa que o `Slider` valor faz com que uma alteração na propriedade do seu `BindingContext`, que é o `Label` chamado `label`. Esses três `Slider` exibições causam alterações para o `Rotate`, `RotateX`, e `RotateY` propriedades da `Label`.
+As associações em três da `Slider` modos de exibição são `OneWayToSource`, o que significa que o `Slider` valor faz com que uma alteração na propriedade do seu `BindingContext`, que é o `Label` chamado `label`. Esses três `Slider` modos de exibição causam alterações para o `Rotate`, `RotateX`, e `RotateY` propriedades do `Label`.
 
-No entanto, a associação para o `Scale` é de propriedade `TwoWay`. Isso ocorre porque o `Scale` propriedade tem um valor padrão de 1 e usando um `TwoWay` associação faz com que o `Slider` inicial valor a ser definido para 1 em vez de 0. Se essa associação `OneWayToSource`, o `Scale` propriedade inicialmente deve ser definida como 0 do `Slider` valor padrão. O `Label` não será visível e que pode causar alguma confusão ao usuário.
+No entanto, a associação para o `Scale` é de propriedade `TwoWay`. Isso ocorre porque o `Scale` propriedade tem um valor padrão de 1 e usando um `TwoWay` associação faz com que o `Slider` inicial do valor a ser definido em 1 em vez de 0. Se essa associação foram `OneWayToSource`, o `Scale` propriedade inicialmente seria definida como 0 do `Slider` valor padrão. O `Label` não seria visível e que pode causar alguma confusão ao usuário.
 
- [![](data-binding-basics-images/slidertransforms.png "Versões anteriores associações")](data-binding-basics-images/slidertransforms-large.png#lightbox "com versões anteriores associações")
+ [![](data-binding-basics-images/slidertransforms.png "Com versões anteriores associações")](data-binding-basics-images/slidertransforms-large.png#lightbox "com versões anteriores associações")
+
+ > [!NOTE]
+ > O [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe também tem [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) e [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) propriedades, que dimensionarem o `VisualElement` no eixo x e y respectivamente.
 
 ## <a name="bindings-and-collections"></a>Associações e coleções
 
-Nada ilustra o poder das associações de dados e XAML melhores do que um modelo `ListView`.
+Nada ilustra o poder do XAML e associações de dados melhores do que com um modelo `ListView`.
 
-`ListView` define uma `ItemsSource` propriedade do tipo `IEnumerable`, e exibe os itens na coleção. Esses itens podem ser objetos de qualquer tipo. Por padrão, `ListView` usa o `ToString` método de cada item para exibir esse item. Às vezes, isso é o que você deseja, em muitos casos, `ToString` retorna somente o nome de classe totalmente qualificado do objeto.
+`ListView` define uma `ItemsSource` propriedade do tipo `IEnumerable`, e exibe os itens dessa coleção. Esses itens podem ser objetos de qualquer tipo. Por padrão, `ListView` usa o `ToString` método de cada item para exibir o item. Às vezes, é isso que você deseja, mas em muitos casos, `ToString` retorna somente o nome de classe totalmente qualificado do objeto.
 
-No entanto, os itens a `ListView` coleção pode ser exibida como desejar através do uso de um *modelo*, que envolve uma classe que deriva de `Cell`. O modelo é clonado para cada item a `ListView`, e as associações de dados que foram definidas no modelo são transferidas para os clones individuais.
+No entanto, os itens a `ListView` coleção pode ser exibida como quiser com o uso de um *modelo*, que envolve uma classe que deriva de `Cell`. O modelo for clonado para todos os itens a `ListView`, e as associações de dados que foram definidas no modelo são transferidas para os clones individuais.
 
-Frequentemente, você desejará criar uma célula personalizada para esses itens usando o `ViewCell` classe. Esse processo é um pouco confuso no código, mas em XAML torna-se muito simples.
+Com muita frequência, você desejará criar uma célula personalizada para esses itens usando o `ViewCell` classe. Esse processo é um pouco confuso no código, mas no XAML torna-se muito simples.
 
-O XamlSamples projeto há uma classe chamada `NamedColor`. Cada `NamedColor` objeto tem `Name` e `FriendlyName` propriedades do tipo `string`e um `Color` propriedade do tipo `Color`. Além disso, `NamedColor` tem 141 campos estáticos somente leitura do tipo `Color` correspondente às cores definidas no xamarin. Forms `Color` classe. Cria um construtor estático um `IEnumerable<NamedColor>` coleção que contém `NamedColor` objetos correspondentes a esses campos estáticos e atribui a seu público estático `All` propriedade.
+O XamlSamples projeto há também uma classe chamada `NamedColor`. Cada `NamedColor` objeto tem `Name` e `FriendlyName` propriedades do tipo `string`e um `Color` propriedade do tipo `Color`. Além disso, `NamedColor` tem 141 campos estáticos somente leitura do tipo `Color` correspondente para as cores definidas no xamarin. Forms `Color` classe. Um construtor estático cria um `IEnumerable<NamedColor>` coleção que contém `NamedColor` objetos correspondentes a esses campos estáticos e o atribui a seu público estático `All` propriedade.
 
-Configuração estática `NamedColor.All` propriedade para o `ItemsSource` de um `ListView` é fácil usando o `x:Static` extensão de marcação:
+Configuração estática `NamedColor.All` propriedade para o `ItemsSource` de uma `ListView` é fácil usando o `x:Static` extensão de marcação:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -226,13 +229,13 @@ Configuração estática `NamedColor.All` propriedade para o `ItemsSource` de um
 </ContentPage>
 ```
 
-A exibição resultante estabelece os itens são realmente do tipo `XamlSamples.NamedColor`:
+A exibição resultante estabelece que os itens são realmente do tipo `XamlSamples.NamedColor`:
 
-[![](data-binding-basics-images/listview1.png "Associação a uma coleção")](data-binding-basics-images/listview1-large.png#lightbox "associação a uma coleção")
+[![](data-binding-basics-images/listview1.png "Associando a uma coleção")](data-binding-basics-images/listview1-large.png#lightbox "associando a uma coleção")
 
-Não é mais informações, mas o `ListView` é rolável e selecionável.
+Não é o máximo de informações, mas o `ListView` é rolável e selecionável.
 
-Para definir um modelo para os itens, você desejará separar o `ItemTemplate` propriedade como um elemento de propriedade e defina-o como um `DataTemplate`, que referencia, em seguida, um `ViewCell`. Para o `View` propriedade o `ViewCell` você pode definir um layout de uma ou mais exibições para exibir cada item. Aqui está um exemplo simples:
+Para definir um modelo para os itens, você desejará separar a `ItemTemplate` a propriedade como um elemento de propriedade e defini-lo como um `DataTemplate`, que, em seguida, referencia um `ViewCell`. Para o `View` propriedade do `ViewCell` você pode definir um layout de uma ou mais exibições para exibir cada item. Aqui está um exemplo simples:
 
 ```xaml
 <ListView ItemsSource="{x:Static local:NamedColor.All}">
@@ -248,11 +251,11 @@ Para definir um modelo para os itens, você desejará separar o `ItemTemplate` p
 </ListView>
 ```
 
-O `Label` é definido como o `View` propriedade o `ViewCell`. (O `ViewCell.View` marcas não são necessárias porque o `View` é a propriedade de conteúdo do `ViewCell`.) Essa marcação exibe o `FriendlyName` propriedade de cada `NamedColor` objeto:
+O `Label` é definido como o `View` propriedade do `ViewCell`. (O `ViewCell.View` marcas não são necessárias porque o `View` é a propriedade de conteúdo do `ViewCell`.) Essa marcação exibe a `FriendlyName` propriedade de cada `NamedColor` objeto:
 
-[![](data-binding-basics-images/listview2.png "Associação a uma coleção com um DataTemplate")](data-binding-basics-images/listview2-large.png#lightbox "associação a uma coleção com um DataTemplate")
+[![](data-binding-basics-images/listview2.png "Associando a uma coleção com um DataTemplate")](data-binding-basics-images/listview2-large.png#lightbox "associando a uma coleção com um DataTemplate")
 
-Muito melhor. Agora tudo o que é necessário é melhore o modelo de item com mais informações e a cor real. Para dar suporte a esse modelo, alguns valores e os objetos foram definidos no dicionário de recursos da página:
+Muito melhor. Agora tudo o que precisamos é aprimorar o modelo de item com mais informações e a cor real. Para dar suporte a esse modelo, alguns valores e os objetos foram definidos no dicionário de recursos da página:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -324,13 +327,13 @@ Muito melhor. Agora tudo o que é necessário é melhore o modelo de item com ma
 </ContentPage>
 ```
 
-Observe o uso de `OnPlatform` para definir o tamanho de um `BoxView` e a altura do `ListView` linhas. Embora os valores para todas as plataformas de três forem iguais, a marcação pode ser facilmente adaptada para outros valores ajustar a exibição.
+Observe o uso de `OnPlatform` para definir o tamanho de um `BoxView` e a altura do `ListView` linhas. Embora os valores para todas as três plataformas forem iguais, a marcação pode facilmente ser adaptada para outros valores ajustar a exibição.
 
 ## <a name="binding-value-converters"></a>Conversores de valor de associação
 
-Anterior **ListView demonstração** arquivo XAML exibe o indivíduo `R`, `G`, e `B` propriedades do xamarin. Forms `Color` estrutura. Essas propriedades são do tipo `double` e intervalo de 0 a 1. Se você deseja exibir os valores hexadecimais, você não pode simplesmente usar `StringFormat` com uma especificação de formatação "X2". Isso funciona somente para inteiros e Além disso, o `double` valores precisam ser multiplicado por 255.
+Anterior **demonstração de ListView** arquivo XAML exibe o indivíduo `R`, `G`, e `B` propriedades do xamarin. Forms `Color` estrutura. Essas propriedades são do tipo `double` e intervalo de 0 a 1. Se você quiser exibir os valores hexadecimais, você não pode simplesmente usar `StringFormat` com uma especificação de formatação "X2". Isso funciona apenas para números inteiros e Além disso, o `double` valores precisam ser multiplicado por 255.
 
-Esse pequeno problema foi resolvido com uma *conversor de valor*, também chamado um *conversor de associação*. Esta é uma classe que implementa o `IValueConverter` interface, o que significa que ele tem dois métodos chamados `Convert` e `ConvertBack`. O `Convert` método é chamado quando um valor é transferido da origem para o destino; o `ConvertBack` método é chamado para transferências de destino a fonte em `OneWayToSource` ou `TwoWay` associações:
+Esse pequeno problema foi resolvido com uma *conversor de valor*, também chamado um *conversor de associação*. Essa é uma classe que implementa o `IValueConverter` interface, o que significa que ele tem dois métodos chamados `Convert` e `ConvertBack`. O `Convert` método é chamado quando um valor é transferido da origem para destino; o `ConvertBack` método é chamado para transferências de destino a fonte no `OneWayToSource` ou `TwoWay` associações:
 
 ```csharp
 using System;
@@ -366,9 +369,9 @@ namespace XamlSamples
 }
 ```
 
-O `ConvertBack` método não desempenha uma função neste programa porque as associações são apenas uma maneira de origem ao destino.
+O `ConvertBack` método não desempenham um papel nesse programa porque as associações são apenas uma maneira de origem ao destino.
 
-Uma associação faz referência a um conversor de associação com o `Converter` propriedade. Um conversor de associação também pode aceitar um parâmetro especificado com o `ConverterParameter` propriedade. Para alguns versatilidade, isso é como o multiplicador é especificado. O conversor de associação verifica se o parâmetro conversor válido `double` valor.
+Uma associação faz referência a um conversor de associação com o `Converter` propriedade. Um conversor de associação também pode aceitar um parâmetro especificado com o `ConverterParameter` propriedade. Para alguns versatilidade, isso é como o multiplicador é especificado. O conversor de associação verifica se o parâmetro de conversor para válido `double` valor.
 
 O conversor é instanciado no dicionário de recursos para que ele possa ser compartilhado entre várias associações:
 
@@ -376,7 +379,7 @@ O conversor é instanciado no dicionário de recursos para que ele possa ser com
 <local:DoubleToIntConverter x:Key="intConverter" />
 ```
 
-Associações de três dados fazem referência a essa instância única. Observe que o `Binding` extensão de marcação contém inserida `StaticResource` extensão de marcação:
+Associações de dados de três fazer referência a essa única instância. Observe que o `Binding` extensão de marcação contém inserida `StaticResource` extensão de marcação:
 
 ```xaml
 <Label Text="{Binding Color.R,
@@ -387,22 +390,22 @@ Associações de três dados fazem referência a essa instância única. Observe
 
 Aqui está o resultado:
 
-[![](data-binding-basics-images/listview3.png "Associação a uma coleção com um DataTemplate e conversores")](data-binding-basics-images/listview3-large.png#lightbox "associação a uma coleção com um DataTemplate e conversores")
+[![](data-binding-basics-images/listview3.png "Associando a uma coleção com um DataTemplate e conversores")](data-binding-basics-images/listview3-large.png#lightbox "para uma coleção com um DataTemplate e conversores de associação")
 
-O `ListView` é bastante sofisticado lidar com as alterações que podem ocorrer dinamicamente nos dados subjacentes, mas somente se você seguir etapas específicas. Se a coleção de itens atribuídos ao `ItemsSource` propriedade do `ListView` alterações durante o tempo de execução — que se itens podem ser adicionados a ou removido da coleção — use um `ObservableCollection` classe para esses itens. `ObservableCollection` implementa o `INotifyCollectionChanged` interface, e `ListView` instalará um manipulador para o `CollectionChanged` evento.
+O `ListView` é bastante sofisticados em lidar com alterações que podem ocorrer dinamicamente nos dados subjacentes, mas somente se você seguir etapas específicas. Se a coleção de itens atribuídos à `ItemsSource` propriedade do `ListView` alterações durante o tempo de execução — que, se itens podem ser adicionados a ou removido da coleção — use um `ObservableCollection` classe para esses itens. `ObservableCollection` implementa o `INotifyCollectionChanged` interface, e `ListView` instalará um manipulador para o `CollectionChanged` eventos.
 
-Se alteram propriedades de itens se durante o tempo de execução, os itens na coleção devem implementar a `INotifyPropertyChanged` alterações de interface e o sinal para valores de propriedade usando o `PropertyChanged` evento. Isso é demonstrado na próxima parte desta série, [parte 5. De associação de dados para o modelo MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
+Se as propriedades dos itens em si são alteradas durante o tempo de execução, então os itens na coleção devem implementar o `INotifyPropertyChanged` alterações de interface e o sinal para valores de propriedade usando o `PropertyChanged` eventos. Isso é demonstrado na próxima parte desta série, [parte 5. De associação de dados a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 ## <a name="summary"></a>Resumo
 
-Associações de dados fornecem um mecanismo eficiente para vincular as propriedades entre dois objetos em uma página ou entre objetos visuais e dados subjacentes. Mas quando o aplicativo começa a trabalhar com fontes de dados, um padrão de arquitetura de aplicativos populares começa a surgir como um paradigma de útil. Isso é abordado em [parte 5. De associações de dados para o modelo MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
+Associações de dados fornecem um mecanismo poderoso para vincular as propriedades entre dois objetos dentro de uma página ou entre objetos visuais e os dados subjacentes. Mas quando o aplicativo começa a trabalhar com fontes de dados, um padrão de arquitetura de aplicativo populares começa a surgir como um paradigma úteis. Isso é abordado em [parte 5. De associações de dados a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [Parte 1. Guia de Introdução com XAML (exemplo)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-- [Parte 2. Essenciais de sintaxe XAML (exemplo)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-- [Parte 3. Extensões de marcação XAML (exemplo)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Parte 5. De associação de dados a MVVM (exemplo)](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [Parte 1. Introdução ao XAML (amostra)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [Parte 2. Sintaxe essencial de XAML (amostra)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [Parte 3. Extensões de marcação de XAML (amostra)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [Parte 5. De associação de dados a MVVM (amostra)](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

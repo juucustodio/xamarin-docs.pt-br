@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: e4b060c703077e140e0f0d2f8c4c2b824c890e8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a0054c79bf0f356bcfcc48389a0a28f68f73a48b
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997103"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Renderizadores de xamarin. Forms Fast
@@ -32,6 +32,7 @@ Os renderizadores rápidos estão disponíveis para os seguintes controles no xa
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 
 Funcionalmente, esses renderizadores rápidos não são diferentes para os renderizadores originais. No entanto, eles atualmente são experimentais e só pode ser usados, adicionando a seguinte linha de código para seus `MainActivity` classe antes de chamar `Forms.Init`:
 

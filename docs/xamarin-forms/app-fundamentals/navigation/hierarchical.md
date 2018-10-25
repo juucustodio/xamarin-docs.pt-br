@@ -6,25 +6,17 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: f8f8f9b4e5755e8b1707178fef633321b64e4e94
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/14/2018
+ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994670"
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
 _A classe NavigationPage fornece uma experiência de Navegação hierárquica em que o usuário é capaz de navegar pelas páginas de frente e para trás, conforme desejado. A classe implementa navegação como uma pilha último a entrar, primeiro a sair (UEPS) dos objetos de página. Este artigo demonstra como usar a classe NavigationPage para executar a navegação em uma pilha de páginas._
-
-Este artigo discute os seguintes tópicos:
-
-- [Executar a navegação](#Performing_Navigation) – criando a página de raiz, enviando páginas para a pilha de navegação, exibindo páginas da pilha de navegação e animação de transições de página.
-- [Passagem de dados quando estiver navegando](#Passing_Data_when_Navigating) – passagem de dados por meio de um construtor de página e um `BindingContext`.
-- [Manipulando a pilha de navegação](#Manipulating_the_Navigation_Stack) – manipulando a pilha através da inserção ou remoção de páginas.
-
-## <a name="overview"></a>Visão geral
 
 Para mover de uma página para outra, um aplicativo enviará por push uma nova página para a pilha de navegação, em que ela se tornará a página ativa, conforme mostrado no diagrama a seguir:
 
@@ -312,10 +304,58 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 Desde que as credenciais do usuário estão corretas, o `MainPage` instância é inserida na pilha de navegação antes da página atual. O [ `PopAsync` ](xref:Xamarin.Forms.NavigationPage.PopAsync) , em seguida, o método remove a página atual da pilha de navegação, com o `MainPage` instância tornando-se a página ativa.
 
-## <a name="summary"></a>Resumo
+## <a name="displaying-views-in-the-navigation-bar"></a>Exibindo os modos de exibição na barra de navegação
 
-Este artigo demonstrou como usar o [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) classe para executar a navegação em uma pilha de páginas. Essa classe fornece uma experiência de Navegação hierárquica em que o usuário é capaz de navegar pelas páginas de frente e para trás, conforme desejado. A classe implementa navegação como uma pilha UEPS (último a entrar, primeiro a sair) de objetos [`Page`](xref:Xamarin.Forms.Page).
+Qualquer xamarin. Forms [ `View` ](xref:Xamarin.Forms.View) pode ser exibido na barra de navegação de uma [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Isso é feito definindo a [ `NavigationPage.TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) anexado à propriedade um `View`. Essa propriedade anexada pode ser definida em qualquer [ `Page` ](xref:Xamarin.Forms.Page)e quando o `Page` é enviado por push uma `NavigationPage`, o `NavigationPage` respeitará o valor da propriedade.
 
+O exemplo a seguir, extraído do [exemplo de exibição de título](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/), mostra como definir o [ `NavigationPage.TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) propriedade anexada do XAML:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationPageTitleView.TitleViewPage">
+    <NavigationPage.TitleView>
+        <Slider HeightRequest="44" WidthRequest="300" />
+    </NavigationPage.TitleView>
+    ...
+</ContentPage>
+```
+
+Este é o equivalente C# código:
+
+```csharp
+public class TitleViewPage : ContentPage
+{
+    public TitleViewPage()
+    {
+        var titleView = new Slider { HeightRequest = 44, WidthRequest = 300 };
+        NavigationPage.SetTitleView(this, titleView);
+        ...
+    }
+}
+```
+
+Isso resulta em uma [ `Slider` ](xref:Xamarin.Forms.Slider) que está sendo exibido na barra de navegação na [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage):
+
+[![Controle deslizante TitleView](hierarchical-images/titleview-small.png "TitleView do controle deslizante")](hierarchical-images/titleview-large.png#lightbox "TitleView de controle deslizante")
+
+> [!IMPORTANT]
+> Vários modos de exibição não aparecerão na barra de navegação, a menos que o tamanho da exibição é especificado com o [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriedades. Como alternativa, o modo de exibição pode ser encapsulado em uma [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) com o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades definidas para os valores apropriados.
+
+Observe que, como o [ `Layout` ](xref:Xamarin.Forms.Layout) classe deriva de [ `View` ](xref:Xamarin.Forms.View) classe, o [ `TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) propriedade anexada pode ser definida para exibir um layout classe que contém vários modos de exibição. No iOS e Universal Windows Platform (UWP), não é possível alterar a altura da barra de navegação e, portanto recorte ocorrerá se a exibição na barra de navegação for maior que o tamanho padrão da barra de navegação. No entanto, no Android, a altura da barra de navegação pode ser alterada definindo a [ `NavigationPage.BarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) propriedade associável a uma `double` que representa a nova altura. Para obter mais informações, consulte [definindo a altura da barra de navegação em uma NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/android.md#navigationpage-barheight).
+
+Como alternativa, uma barra de navegação estendido pode ser sugerida, colocando alguns do conteúdo na barra de navegação e outros em uma exibição na parte superior do conteúdo de página que você cor corresponder à barra de navegação. Além disso, no iOS a linha separadora e sombra que está na parte inferior da barra de navegação pode ser removida, definindo o [ `NavigationPage.HideNavigationBarSeparator` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) para a propriedade associável `true`. Para obter mais informações, consulte [ocultando o separador de barra de navegação em uma NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#navigationpage-hideseparatorbar).
+
+> [!NOTE]
+> O [ `BackButtonTitle` ](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty), [ `Title` ](xref:Xamarin.Forms.Page.Title), [ `TitleIcon` ](xref:Xamarin.Forms.NavigationPage.TitleIconProperty), e [ `TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) propriedades podem definir valores que ocupam espaço na barra de navegação. Embora o tamanho da barra de navegação varia de acordo com o tamanho de tela e de plataforma, definir todas essas propriedades poderá resultar em conflitos devido a espaço limitado disponível. Em vez de tentar usar uma combinação dessas propriedades, você pode achar que você pode obter melhor seu design de barra de navegação desejado, definindo apenas o `TitleView` propriedade.
+
+### <a name="limitations"></a>Limitações
+
+Há uma série de limitações a serem consideradas ao exibir uma [ `View` ](xref:Xamarin.Forms.View) na barra de navegação de uma [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage):
+
+- No iOS, modos de exibição é colocado na barra de navegação de um `NavigationPage` aparecem em uma posição diferente dependendo se os títulos grandes estão habilitados. Para obter mais informações sobre como habilitar títulos grandes, consulte [exibir títulos grandes](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#large_title).
+- No Android, colocando os modos de exibição na barra de navegação de um `NavigationPage` só pode ser realizada em aplicativos que usam a compatibilidade de aplicativos.
+- Não é recomendável colocar as exibições grandes e complexas, como [ `ListView` ](xref:Xamarin.Forms.ListView) e [ `TableView` ](xref:Xamarin.Forms.TableView), na barra de navegação de um `NavigationPage`.
 
 ## <a name="related-links"></a>Links relacionados
 
@@ -323,6 +363,7 @@ Este artigo demonstrou como usar o [ `NavigationPage` ](xref:Xamarin.Forms.Navig
 - [Hierarchical (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 - [PassingData (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
 - [LoginFlow (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
+- [TitleView (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
 - [Como criar uma entrada no fluxo de tela do exemplo de xamarin. Forms (vídeo do Xamarin University)](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
 - [Como criar uma entrada no fluxo de tela do xamarin. Forms (vídeo do Xamarin University)](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

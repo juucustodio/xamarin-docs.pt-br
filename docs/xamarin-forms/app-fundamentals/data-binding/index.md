@@ -6,12 +6,12 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/16/2018
-ms.openlocfilehash: 60bf0bdc5f1a4472dfd12424c3cc0375d3f34c24
-ms.sourcegitcommit: 11c1df7594064e4e141470e092e55cc50c138068
+ms.date: 10/23/2018
+ms.openlocfilehash: def97ab77781c7a7156d4c4178097184614f3e8b
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "35240347"
 ---
 # <a name="xamarinforms-data-binding"></a>Associação de dados do xamarin. Forms
@@ -64,6 +64,10 @@ Torna as associações de dados mais robusto definindo valores de fallback a ser
 ## <a name="the-command-interfacecommandingmd"></a>[A interface de comando](commanding.md)
 
 Implementar o `Command` propriedade com associações de dados.
+
+## <a name="compiled-bindingscompiled-bindingsmd"></a>[Associações compiladas](compiled-bindings.md)
+
+Use associações compiladas para melhorar o desempenho de associação de dados.
 
 ## <a name="related-links"></a>Links relacionados
 

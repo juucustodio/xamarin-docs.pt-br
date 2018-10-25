@@ -1,22 +1,22 @@
 ---
 title: DatePicker do xamarin. Forms
-description: O DatePicker é o modo de exibição do xamarin. Forms que permite que o usuário selecione uma data. Este artigo explica como consumir um selecionador de data em um aplicativo xamarin. Forms.
+description: O selecionador de data é um modo de exibição do xamarin. Forms que permite ao usuário selecionar uma data. Este artigo explica como consumir um selecionador de data em um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 553957bfa06c7b7a9c5261e426ebee4190de5ebb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7917510e910223fc6ca276bf47b1878c19557a38
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994920"
 ---
 # <a name="xamarinforms-datepicker"></a>DatePicker do xamarin. Forms
 
-_Um modo de exibição do xamarin. Forms que permite ao usuário selecionar uma data_
+_Uma exibição do xamarin. Forms que permite que o usuário selecione uma data._
 
 O xamarin. Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) invoca o controle de seletor de data da plataforma e permite que o usuário selecione uma data. `DatePicker` define oito propriedades:
 
@@ -184,6 +184,9 @@ Quando o exemplo é primeiro executado, ambos `DatePicker` modos de exibição s
 Tocando em qualquer uma da `DatePicker` exibe invoca o selecionador de data de plataforma. As três plataformas implementam este seletor de data em duas maneiras diferentes, mas cada abordagem é familiar aos usuários da plataforma:
 
 [![Selecione de dias entre datas](datepicker-images/DaysBetweenDatesSelect.png "a selecionar dias entre datas")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "a selecionar dias entre datas")
+
+> [!TIP]
+> No Android, o `DatePicker` caixa de diálogo pode ser personalizada substituindo o `CreateDatePickerDialog` método em um renderizador personalizado. Isso permite, por exemplo, botões adicionais a serem adicionados à caixa de diálogo.
 
 Depois de duas datas forem selecionadas, o aplicativo exibe o número de dias entre essas datas:
 

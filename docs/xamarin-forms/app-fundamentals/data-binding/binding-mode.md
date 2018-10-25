@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/01/2018
-ms.openlocfilehash: a6eaf08d17f70c43f451361e27555a09c39f26a9
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 420c1de0691de419180dd497a9031ea5e7dd1054
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "37935661"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de associação do xamarin. Forms
@@ -312,6 +312,9 @@ Você pode definir o modo de ligação para `OneWayToSource` no **associação d
 ```
 
 Agora o `Slider` é inicializado como 1 (o valor padrão de `Scale`), mas manipulando o `Slider` não afeta o `Scale` propriedade, portanto, isso não é muito útil.
+
+> [!NOTE]
+> O [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe define também [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) e [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) propriedades, que podem dimensionar o `VisualElement` forma diferente no direções horizontal e vertical.
 
 Um aplicativo muito útil de substituir o modo de associação padrão com `TwoWay` envolve o `SelectedItem` propriedade de `ListView`. O modo de associação padrão é `OneWayToSource`. Quando uma associação de dados é definida na `SelectedItem` propriedade para fazer referência a uma propriedade de origem em um ViewModel, então essa propriedade de origem é definida do `ListView` seleção. No entanto, em algumas circunstâncias, você também poderá o `ListView` ser inicializados do ViewModel.
 

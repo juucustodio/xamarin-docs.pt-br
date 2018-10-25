@@ -6,23 +6,25 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 01/05/2018
-ms.openlocfilehash: a630d7c2acb95b7551c9f5f870078a0efcfc075c
-ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
+ms.date: 08/01/2018
+ms.openlocfilehash: e483716952aa97de4411733006f4fa12c3e6da98
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39393666"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação XAML
 
-Extensões de marcação XAML ajudar a aprimorar o poder e flexibilidade do XAML, permitindo que os atributos do elemento a ser definido de uma variedade de fontes. Várias extensões de marcação XAML são parte da especificação do XAML 2009. Eles aparecem nos arquivos XAML com o habitual `x` prefixo de namespace e são normalmente chamados para com esse prefixo. Elas são descritas nas seções a seguir:
+Extensões de marcação XAML ajudar a aprimorar o poder e flexibilidade do XAML, permitindo que os atributos do elemento a ser definido de uma variedade de fontes. Várias extensões de marcação XAML são parte da especificação do XAML 2009. Eles aparecem nos arquivos XAML com o habitual `x` prefixo de namespace e são normalmente chamados para com esse prefixo. Este artigo discute as extensões de marcação a seguir:
 
-- [`x:Static`](#static) &ndash; fazer referência a propriedades estáticas, campos ou membros de enumeração.
-- [`x:Reference`](#reference) &ndash; chamado elementos na página de referência.
-- [`x:Type`](#type) &ndash; Defina um atributo como um `System.Type` objeto.
-- [`x:Array`](#array) &ndash; Construa uma matriz de objetos de um tipo específico.
-- [`x:Null`](#null) &ndash; Defina um atributo como um `null` valor.
+- [`x:Static`](#static) – fazer referência a propriedades estáticas, campos ou membros de enumeração.
+- [`x:Reference`](#reference) – chamada elementos na página de referência.
+- [`x:Type`](#type) – definir um atributo para um `System.Type` objeto.
+- [`x:Array`](#array) – construir uma matriz de objetos de um tipo específico.
+- [`x:Null`](#null) – definir um atributo para um `null` valor.
+- [`OnPlatform`](#onplatform) – Personalizar a aparência da interface do usuário em uma base por plataforma.
+- [`OnIdiom`](#onidiom) – Personalizar a aparência da interface do usuário com base no idioma do dispositivo em que o aplicativo está sendo executado.
 
 Extensões de marcação XAML adicionais historicamente são suportadas pelas outras implementações de XAML e também são suportadas pelo xamarin. Forms. Elas são descritas mais detalhadamente em outros artigos:
 
@@ -453,10 +455,89 @@ Aqui está o programa em execução nas três plataformas:
 
 Observe que quatro dos `Label` elementos têm uma fonte com serifa, mas o centro `Label` tem a fonte sem serifa padrão.
 
+<a name="onplatform" />
+
+## <a name="onplatform-markup-extension"></a>Extensão de marcação OnPlatform
+
+O `OnPlatform` extensão de marcação permite que você personalize a aparência da interface do usuário em uma base por plataforma. Ele fornece a mesma funcionalidade que o [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) classes, mas com uma representação mais concisa.
+
+O `OnPlatform` extensão de marcação dá suporte a [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) classe, que define as propriedades a seguir:
+
+- `Default` do tipo `object`, que você defina como um valor padrão a ser aplicado às propriedades que representam as plataformas.
+- `Android` do tipo `object`, que é definido como um valor a ser aplicado no Android.
+- `GTK` do tipo `object`, que é definido como um valor a ser aplicado em plataformas GTK.
+- `iOS` do tipo `object`, que é definido como um valor a ser aplicado no iOS.
+- `macOS` do tipo `object`, que é definido como um valor a ser aplicado no macOS.
+- `Tizen` do tipo `object`, que é definido como um valor a ser aplicado na plataforma Tizen.
+- `UWP` do tipo `object`, que é definido como um valor a ser aplicado na plataforma Universal do Windows.
+- `WPF` do tipo `object`, que é definido como um valor a ser aplicado na plataforma Windows Presentation Foundation.
+- `Converter` do tipo `IValueConverter`, que podem ser definidas um `IValueConverter` implementação.
+- `ConverterParameter` do tipo `object`, que é definido como um valor para passar para o `IValueConverter` implementação.
+
+> [!NOTE]
+> O analisador XAML permite que o [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) classe deverá ser abreviado como `OnPlatform`.
+
+O `Default` é a propriedade de conteúdo do `OnPlatformExtension`. Portanto, para expressões de marcação XAML expressadas com chaves, você pode eliminar o `Default=` faz parte da expressão fornecida que é o primeiro argumento.
+
+> [!IMPORTANT]
+> O analisador XAML espera que os valores do tipo correto serão fornecidos às propriedades consumindo o `OnPlatform` extensão de marcação. Se a conversão de tipo for necessário, o `OnPlatform` extensão de marcação tentará executá-lo usando os conversores de padrão fornecidos pelo xamarin. Forms. No entanto, há algumas conversões de tipo não podem ser executadas pelos conversores padrão e nesses casos o `Converter` propriedade deve ser definida como um `IValueConverter` implementação.
+
+O **demonstração OnPlatform** página mostra como usar o `OnPlatform` extensão de marcação:
+
+```xaml
+<BoxView Color="{OnPlatform Yellow, iOS=Red, Android=Green, UWP=Blue}"
+         WidthRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"  
+         HeightRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"
+         HorizontalOptions="Center" />
+```
+
+Neste exemplo, todos os três `OnPlatform` expressões usam a versão abreviada do `OnPlatformExtension` nome de classe. Os três `OnPlatform` conjunto de extensões de marcação a [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriedades do [ `BoxView` ](xref:Xamarin.Forms.BoxView) como valores diferentes em iOS, Android e UWP. As extensões de marcação também fornecem valores padrão para essas propriedades nas plataformas que não forem especificadas, eliminando o `Default=` faz parte da expressão. Observe que as propriedades de extensão de marcação que são definidas são separadas por vírgulas.
+
+Aqui está o programa em execução em todas as três plataformas:
+
+[![Demonstração de OnPlatform](consuming-images/onplatformdemo-small.png "demonstração OnPlatform")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform demonstração")
+
+<a name="onidiom" />
+
+## <a name="onidiom-markup-extension"></a>Extensão de marcação OnIdiom
+
+O `OnIdiom` extensões de marcação permite que você personalize a aparência da interface do usuário com base no idioma do dispositivo em que o aplicativo está sendo executado. Ele dá suporte a [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) classe, que define as propriedades a seguir:
+
+- `Default` do tipo `object`, que você defina como um valor padrão a ser aplicado às propriedades que representam as expressões de dispositivo.
+- `Phone` do tipo `object`, que é definido como um valor a ser aplicado em telefones.
+- `Tablet` do tipo `object`, que é definido como um valor a ser aplicado em tablets.
+- `Desktop` do tipo `object`, que é definido como um valor a ser aplicado em plataformas de desktop.
+- `TV` do tipo `object`, que é definido como um valor a ser aplicado em plataformas de TV.
+- `Watch` do tipo `object`, que é definido como um valor a ser aplicado em plataformas de inspeção.
+- `Converter` do tipo `IValueConverter`, que podem ser definidas um `IValueConverter` implementação.
+- `ConverterParameter` do tipo `object`, que é definido como um valor para passar para o `IValueConverter` implementação.
+
+> [!NOTE]
+> O analisador XAML permite que o [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) classe deverá ser abreviado como `OnIdiom`.
+
+O `Default` é a propriedade de conteúdo do `OnIdiomExtension`. Portanto, para expressões de marcação XAML expressadas com chaves, você pode eliminar o `Default=` faz parte da expressão fornecida que é o primeiro argumento.
+
+> [!IMPORTANT]
+> O analisador XAML espera que os valores do tipo correto serão fornecidos às propriedades consumindo o `OnIdiom` extensão de marcação. Se a conversão de tipo for necessário, o `OnIdiom` extensão de marcação tentará executá-lo usando os conversores de padrão fornecidos pelo xamarin. Forms. No entanto, há algumas conversões de tipo não podem ser executadas pelos conversores padrão e nesses casos o `Converter` propriedade deve ser definida como um `IValueConverter` implementação.
+
+O **demonstração OnIdiom** página mostra como usar o `OnIdiom` extensão de marcação:
+
+```xaml
+<BoxView Color="{OnIdiom Yellow, Phone=Red, Tablet=Green, Desktop=Blue}"
+         WidthRequest="{OnIdiom 100, Phone=200, Tablet=300, Desktop=400}"
+         HeightRequest="{OnIdiom 100, Phone=200, Tablet=300, Desktop=400}"
+         HorizontalOptions="Center" />
+```
+
+Neste exemplo, todos os três `OnIdiom` expressões usam a versão abreviada do `OnIdiomExtension` nome de classe. Os três `OnIdiom` conjunto de extensões de marcação a [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriedades do [ `BoxView` ](xref:Xamarin.Forms.BoxView) como valores diferentes em telefone, tablet e expressões da área de trabalho. As extensões de marcação também fornecem valores padrão para essas propriedades em que as linguagens que não forem especificadas, eliminando o `Default=` faz parte da expressão. Observe que as propriedades de extensão de marcação que são definidas são separadas por vírgulas.
+
+Aqui está o programa em execução em todas as três plataformas:
+
+[![Demonstração de OnIdiom](consuming-images/onidiomdemo-small.png "demonstração OnIdiom")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom demonstração")
+
 ## <a name="define-your-own-markup-extensions"></a>Definir suas próprias extensões de marcação
 
 Se você tiver encontrado uma necessidade de uma extensão de marcação XAML que não está disponível no xamarin. Forms, você pode [criar seu próprio](creating.md).
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -6,44 +6,58 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/16/2018
-ms.openlocfilehash: b5069381126db0859508480df5596ed5ec85686f
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.date: 10/04/2018
+ms.openlocfilehash: c98dcc30ac89e3df0338df02e14a32575c0dc847
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39203030"
 ---
 # <a name="xamarinforms-label"></a>Rótulo do xamarin. Forms
 
 _Exibir o texto no xamarin. Forms_
 
-O [ `Label` ](xref:Xamarin.Forms.Label) exibição é usada para exibir o texto, único e de várias linha. Rótulos podem ter fontes personalizadas (famílias, tamanhos e opções) e texto colorido.
+O [ `Label` ](xref:Xamarin.Forms.Label) exibição é usada para exibir o texto, único e de várias linha. Rótulos podem ter as decorações de texto, texto colorido e usar fontes personalizadas (famílias, tamanhos e opções).
 
-<a name="Truncation_and_Wrapping" />
+## <a name="text-decorations"></a>Decorações de texto
 
-## <a name="truncation-and-wrapping"></a>Truncamento e quebra automática
+Decorações de texto sublinhado e tachado podem ser aplicadas a [ `Label` ](xref:Xamarin.Forms.Label) instâncias, definindo o `Label.TextDecoration` propriedade a um ou mais `TextDecoration` membros de enumeração:
 
-Rótulos podem ser definidos para lidar com o texto que não cabe em uma linha em uma das várias maneiras, expostas pelo `LineBreakMode` propriedade. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) é uma enumeração com os seguintes valores:
+- `None`
+- `Underline`
+- `Strikethrough`
 
-- **HeadTruncation** &ndash; trunca o cabeçalho do texto, mostrando o final.
-- **CharacterWrap** &ndash; quebra o texto em uma nova linha em um limite de caractere.
-- **MiddleTruncation** &ndash; exibe o início e fim do texto, com a substituição do meio por reticências.
-- **NoWrap** &ndash; não quebra o texto, exibindo somente texto como pode cabe em uma linha.
-- **TailTruncation** &ndash; mostra o início do texto, truncando final.
-- **WordWrap** &ndash; quebra o texto no limite de palavra.
+O exemplo XAML a seguir demonstra a configuração de `Label.TextDecoration` propriedade:
 
-## <a name="fonts"></a>Fontes
+```xaml
+<Label Text="This is underlined text." TextDecorations="Underline"  />
+<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />
+<Label Text="This is underlined text with strikethrough." TextDecorations="Underline, Strikethrough" />
+```
 
-Para obter mais informações sobre como especificar fontes em uma `Label`, consulte [fontes](~/xamarin-forms/user-interface/text/fonts.md).
+O código c# equivalente é:
+
+```csharp
+var underlineLabel = new Label { Text = "This is underlined text.", TextDecorations = TextDecorations.Underline };
+var strikethroughLabel = new Label { Text = "This is text with strikethrough.", TextDecorations = TextDecorations.Strikethrough };
+var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
+```
+
+As capturas de tela a seguir mostram os `TextDecoration` aplicados a membros da enumeração [ `Label` ](xref:Xamarin.Forms.Label) instâncias:
+
+![](label-images/label-textdecorations.png "Rótulos com as decorações de texto")
+
+> [!NOTE]
+> Decorações de texto também podem ser aplicadas a [ `Span` ](xref:Xamarin.Forms.Span) instâncias. Para obter mais informações sobre o `Span` classe, consulte [texto formatado em](#Formatted_Text).
 
 ## <a name="colors"></a>Cores
 
-`Label`s pode ser definido para usar uma cor de texto personalizado por meio de associável [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) propriedade.
+Rótulos podem ser definidos para usar uma cor de texto personalizado por meio de associável [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) propriedade.
 
 Cuidado especial é necessário para garantir que as cores poderá ser usadas em cada plataforma. Como cada plataforma tem diferentes padrões de cores de plano de fundo e texto, você precisará ter cuidado para escolher um padrão que funciona em cada um.
 
-Use o XAML a seguir para definir a cor do texto de um rótulo:
+O exemplo XAML a seguir define a cor do texto de um `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -51,7 +65,7 @@ Use o XAML a seguir para definir a cor do texto de um rótulo:
              x:Class="TextSample.LabelPage"
              Title="Label Demo">
     <StackLayout Padding="5,10">
-      <Label TextColor="#77d065" FontSize = "20" Text="This is a label." />
+      <Label TextColor="#77d065" FontSize = "20" Text="This is a green label." />
     </StackLayout>
 </ContentPage>
 ```
@@ -66,7 +80,7 @@ public partial class LabelPage : ContentPage
         InitializeComponent ();
 
         var layout = new StackLayout { Padding = new Thickness(5,10) };
-        var label = new Label { Text="This is a label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
+        var label = new Label { Text="This is a green label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
         layout.Children.Add(label);
         this.Content = layout;
     }
@@ -79,13 +93,60 @@ As capturas de tela a seguir mostram o resultado da configuração de `TextColor
 
 Para obter mais informações sobre as cores, consulte [cores](~/xamarin-forms/user-interface/colors.md).
 
+## <a name="fonts"></a>Fontes
+
+Para obter mais informações sobre como especificar fontes em uma `Label`, consulte [fontes](~/xamarin-forms/user-interface/text/fonts.md).
+
+<a name="Truncation_and_Wrapping" />
+
+## <a name="truncation-and-wrapping"></a>Truncamento e quebra automática
+
+Rótulos podem ser definidos para lidar com o texto que não cabe em uma linha em uma das várias maneiras, expostas pelo `LineBreakMode` propriedade. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) é uma enumeração com os seguintes valores:
+
+- **HeadTruncation** &ndash; trunca o cabeçalho do texto, mostrando o final.
+- **CharacterWrap** &ndash; quebra o texto em uma nova linha em um limite de caractere.
+- **MiddleTruncation** &ndash; exibe o início e fim do texto, com a substituição do meio por reticências.
+- **NoWrap** &ndash; não quebra o texto, exibindo somente texto como pode cabe em uma linha.
+- **TailTruncation** &ndash; mostra o início do texto, truncando final.
+- **WordWrap** &ndash; quebra o texto no limite de palavra.
+
+## <a name="displaying-a-specific-number-of-lines"></a>Exibindo um número específico de linhas
+
+O número de linhas exibidas por um [ `Label` ](xref:Xamarin.Forms.Label) pode ser especificada definindo o `Label.MaxLines` propriedade para um `int` valor:
+
+- Quando `MaxLines` é 0, o `Label` respeita o valor da [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) propriedade como mostram apenas uma linha, possivelmente truncada, ou todas as linhas com todo o texto.
+- Quando `MaxLines` for 1, o resultado é idêntico à configuração de [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) propriedade a ser [ `NoWrap` ](xref:Xamarin.Forms.LineBreakMode), [ `HeadTruncation` ](xref:Xamarin.Forms.LineBreakMode), [ `MiddleTruncation` ](xref:Xamarin.Forms.LineBreakMode), ou [ `TailTruncation` ](xref:Xamarin.Forms.LineBreakMode). No entanto, o `Label` respeitará o valor da [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) propriedade em relação ao posicionamento de reticências, se aplicável.
+- Quando `MaxLines` é maior que 1, o `Label` exibirá até o número especificado de linhas, respeitando o valor da [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) propriedade em relação ao posicionamento de reticências, se aplicável. No entanto, definir a `MaxLines` propriedade para um valor maior que 1 não tem nenhum efeito se o [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) estiver definida como [ `NoWrap` ](xref:Xamarin.Forms.LineBreakMode).
+
+O exemplo XAML a seguir demonstra a configuração de `MaxLines` propriedade em um [ `Label` ](xref:Xamarin.Forms.Label):
+
+```xaml
+<Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
+       MaxLines="2" />
+```
+
+O código c# equivalente é:
+
+```csharp
+var label =
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus.", LineBreakMode = LineBreakMode.WordWrap,
+  MaxLines = 2
+};
+```
+
+As capturas de tela a seguir mostram o resultado da configuração de `MaxLines` propriedade como 2, quando o texto é longo o suficiente para ocupar mais de 2 linhas:
+
+![](label-images/label-maxlines.png "Exemplo de MaxLines de rótulo")
+
 <a name="Formatted_Text" />
 
 ## <a name="formatted-text"></a>Texto formatado
 
 Rótulos de expõem uma [ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText) propriedade que permite que a apresentação de texto com várias fontes e cores na mesma exibição.
 
-O `FormattedText` propriedade é do tipo [ `FormattedString` ](xref:Xamarin.Forms.FormattedString), que consiste em um ou mais [ `Span` ](xref:Xamarin.Forms.Span) instâncias, definidas por meio de [ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans) propriedade . Cada `Span` possui as seguintes propriedades:
+O `FormattedText` propriedade é do tipo [ `FormattedString` ](xref:Xamarin.Forms.FormattedString), que consiste em um ou mais [ `Span` ](xref:Xamarin.Forms.Span) instâncias, definidas por meio de [ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans) propriedade . O seguinte `Span` propriedades podem ser usadas para definir a aparência visual:
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) – a cor do plano de fundo span.
 - [`Font`](xref:Xamarin.Forms.Span.Font) – a fonte do texto no trecho.
@@ -93,11 +154,15 @@ O `FormattedText` propriedade é do tipo [ `FormattedString` ](xref:Xamarin.Form
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – a família de fontes ao qual pertence a fonte do texto no trecho.
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – o tamanho da fonte para o texto no trecho.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – a cor do texto no trecho. Essa propriedade está obsoleta e foi substituída pelo `TextColor` propriedade.
+- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -o multiplicador para aplicar a altura de linha padrão da extensão. Para obter mais informações, consulte [altura da linha](#line-height).
 - [`Style`](xref:Xamarin.Forms.Span.Style) – o estilo a ser aplicado para o período.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – o texto da marca span.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – a cor do texto no trecho.
+- `TextDecoration` -as decorações para aplicar ao texto no trecho. Para obter mais informações, consulte [decorações de texto](#text-decorations).
 
-O exemplo XAML a seguir demonstra uma `FormattedText` propriedade consiste em três `Span` instâncias:
+Além disso, o [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) propriedade pode ser usada para definir uma coleção dos reconhecedores de gestos que irá responder a gestos no [ `Span` ](xref:Xamarin.Forms.Span).
+
+O exemplo XAML a seguir demonstra uma `FormattedText` propriedade consiste em três [ `Span` ](xref:Xamarin.Forms.Span) instâncias:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -106,11 +171,15 @@ O exemplo XAML a seguir demonstra uma `FormattedText` propriedade consiste em tr
              Title="Label Demo - XAML">
     <StackLayout Padding="5,10">
         ...
-        <Label>
+        <Label LineBreakMode="WordWrap">
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" />
-                    <Span Text="default, " Style="{DynamicResource BodyStyle}" />
+                    <Span Text="default, " Style="{DynamicResource BodyStyle}">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}" />
+                        </Span.GestureRecognizers>
+                    </Span>
                     <Span Text="italic small." FontAttributes="Italic" FontSize="Small" />
                 </FormattedString>
             </Label.FormattedText>
@@ -130,7 +199,10 @@ public class LabelPageCode : ContentPage
         ...
         var formattedString = new FormattedString ();
         formattedString.Spans.Add (new Span{ Text = "Red bold, ", ForegroundColor = Color.Red, FontAttributes = FontAttributes.Bold });
-        formattedString.Spans.Add (new Span { Text = "default, ", Style = Device.Styles.BodyStyle });
+
+        var span = new Span { Text = "default, " };
+        span.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(async () => await DisplayAlert("Tapped", "This is a tapped Span.", "OK")) });
+        formattedString.Spans.Add(span);
         formattedString.Spans.Add (new Span { Text = "italic small.", FontAttributes = FontAttributes.Italic, FontSize =  Device.GetNamedSize(NamedSize.Small, typeof(Label)) });
 
         layout.Children.Add (new Label { FormattedText = formattedString });
@@ -139,19 +211,93 @@ public class LabelPageCode : ContentPage
 }
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > O [ `Text` ](xref:Xamarin.Forms.Span.Text) propriedade de um `Span` pode ser definido por meio da vinculação de dados. Para obter mais informações, consulte [associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+
+Observe que um [ `Span` ](xref:Xamarin.Forms.Span) também pode responder a qualquer gestos que são adicionados para o período [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) coleção. Por exemplo, uma [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) foi adicionada à segunda `Span` nos exemplos de código acima. Portanto, quando isso `Span` é tocado a `TapGestureRecognizer` responderá executando o `ICommand` definido pelo [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) propriedade. Para obter mais informações sobre os reconhecedores de gestos, consulte [xamarin. Forms gestos](~/xamarin-forms/app-fundamentals/gestures/index.md).
 
 As capturas de tela a seguir mostram o resultado da configuração de `FormattedString` propriedade para três `Span` instâncias:
 
 ![](label-images/formattedtext.png "Exemplo de FormattedText do rótulo")
 
-## <a name="styling-a-label"></a>Definir o estilo de um rótulo
+## <a name="line-height"></a>Altura da linha
 
-As seções anteriores coberto configuração [ `Label` ](xref:Xamarin.Forms.Label) propriedades em uma base por instância. No entanto, os conjuntos de propriedades podem ser agrupados em um estilo que é aplicado consistentemente a um ou vários modos de exibição. Isso pode aumentar a legibilidade do código e fazer alterações de design mais fácil de implementar. Para obter mais informações, consulte [estilos](~/xamarin-forms/user-interface/text/styles.md).
+A altura vertical de um [ `Label` ](xref:Xamarin.Forms.Label) e uma [ `Span` ](xref:Xamarin.Forms.Span) pode ser personalizado definindo o [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) propriedade ou [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) para um `double` valor. No iOS e Android, esses valores são multiplicadores da altura da linha original e na plataforma Universal de Windows (UWP) o `Label.LineHeight` valor da propriedade é um multiplicador de tamanho da fonte do rótulo.
+
+> [!NOTE]
+> - No iOS, o [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) e [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedades alterar a altura da linha de texto que cabem em uma única linha e o texto que é quebrada em várias linhas.
+> - No Android, o [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) e [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedades apenas alterar a altura da linha de texto que é quebrada em várias linhas.
+> - Na UWP, o [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) propriedade altera a altura da linha de texto que é quebrada em várias linhas, e o [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedade não tem nenhum efeito.
+
+O exemplo XAML a seguir demonstra a configuração de [ `LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) propriedade em uma [ `Label` ](xref:Xamarin.Forms.Label):
+
+```xaml
+<Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
+       LineHeight="1.8" />
+```
+
+O código c# equivalente é:
+
+```csharp
+var label =
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus.", LineBreakMode = LineBreakMode.WordWrap,
+  LineHeight = 1.8
+};
+```
+
+As capturas de tela a seguir mostram o resultado da configuração de [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) propriedade para o 1.8:
+
+![](label-images/label-lineheight.png "Exemplo de LineHeight de rótulo")
+
+O exemplo XAML a seguir demonstra a configuração de [ `LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedade em uma [ `Span` ](xref:Xamarin.Forms.Span):
+
+```xaml
+<Label LineBreakMode="WordWrap">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tincidunt sem. Phasellus mollis sit amet turpis in rutrum. Sed aliquam ac urna id scelerisque. "
+                  LineHeight="1.8"/>
+            <Span Text="Nullam feugiat sodales elit, et maximus nibh vulputate id."
+                  LineHeight="1.8" />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+O código c# equivalente é:
+
+```csharp
+var formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tincidunt sem. Phasellus mollis sit amet turpis in rutrum. Sed aliquam ac urna id scelerisque. ",
+  LineHeight = 1.8
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "Nullam feugiat sodales elit, et maximus nibh vulputate id.",
+  LineHeight = 1.8
+});
+var label = new Label
+{
+  FormattedText = formattedString,
+  LineBreakMode = LineBreakMode.WordWrap
+};
+```
+
+As capturas de tela a seguir mostram o resultado da configuração de [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedade para o 1.8:
+
+![](label-images/span-lineheight.png "Exemplo de SPAN LineHeight")
+
+## <a name="styling-labels"></a>Estilo de rótulos
+
+As seções anteriores coberto configuração [ `Label` ](xref:Xamarin.Forms.Label) e [ `Span` ](xref:Xamarin.Forms.Span) propriedades em uma base por instância. No entanto, os conjuntos de propriedades podem ser agrupados em um estilo que é aplicado consistentemente a um ou vários modos de exibição. Isso pode aumentar a legibilidade do código e fazer alterações de design mais fácil de implementar. Para obter mais informações, consulte [estilos](~/xamarin-forms/user-interface/text/styles.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Criação de aplicativos móveis com xamarin. Forms, capítulo 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [Texto (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Criação de aplicativos móveis com xamarin. Forms, capítulo 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [API de rótulo](xref:Xamarin.Forms.Label)
+- [API de alcance](xref:Xamarin.Forms.Span)

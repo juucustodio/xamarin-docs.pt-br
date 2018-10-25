@@ -6,12 +6,12 @@ ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
-ms.openlocfilehash: 813a913c2c2fb27456c9a489c73b16d5892c4b8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/26/2018
+ms.openlocfilehash: 3ae2fb8110b7e0a5c6c85c489897acc1a03be8d8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997046"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin. Forms BoxView
@@ -35,13 +35,16 @@ Este artigo discute os seguintes tópicos:
 
 ## <a name="setting-boxview-color-and-size"></a>Configuração BoxView cor e tamanho
 
-Com muita frequência, você definirá as seguintes três propriedades de `BoxView`:
+Normalmente, você definirá as propriedades a seguir de `BoxView`:
 
 - [`Color`](xref:Xamarin.Forms.BoxView.Color) Para definir sua cor.
+- [`CornerRadius`](xref:Xamarin.Forms.BoxView.CornerRadius) Para definir seu raio de canto.
 - [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) Para definir a largura do `BoxView` em unidades independentes de dispositivo.
 - [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) Para definir a altura do `BoxView`.
 
 O `Color` propriedade é do tipo `Color`; a propriedade pode ser definida para qualquer `Color` valor, incluindo os 141 campos estáticos de somente leitura de chamado colors desde em ordem alfabética `AliceBlue` para `YellowGreen`.
+
+O `CornerRadius` propriedade é do tipo [ `CornerRadius` ](xref:Xamarin.Forms.CornerRadius); a propriedade pode ser definida como um único `double` uniforme por valor de raio de canto, ou um `CornerRadius` estrutura definida por quatro `double` valores que são aplicados a a parte superior esquerda, superior direita, parte inferior esquerda e inferior direita do `BoxView`.
 
 O `WidthRequest` e `HeightRequest` propriedades desempenham uma função somente se o `BoxView` é *irrestrita* no layout. Esse é o caso quando o contêiner de layout precisa saber o filho do tamanho, por exemplo, quando o `BoxView` é um filho de uma célula de dimensionamento automático no `Grid` layout. Um `BoxView` também é irrestrita quando seus `HorizontalOptions` e `VerticalOptions` propriedades são definidas como valores diferentes de `LayoutOptions.Fill`. Se o `BoxView` irrestrita, mas o `WidthRequest` e `HeightRequest` não são definidas e, em seguida, a largura ou altura são definidos como valores padrão de 40 unidades ou cerca de 1/4 polegadas em dispositivos móveis.
 
@@ -58,6 +61,7 @@ O [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxVi
              x:Class="BasicBoxView.MainPage">
 
     <BoxView Color="CornflowerBlue"
+             CornerRadius="10"
              WidthRequest="160"
              HeightRequest="160"
              VerticalOptions="Center"
