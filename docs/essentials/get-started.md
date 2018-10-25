@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: c72c1c66a465075770ce739270cb4b1f2c6fba7a
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353770"
@@ -38,60 +38,60 @@ Xamarin.Essentials está disponível como um pacote do NuGet que pode ser adicio
 
 3. Adicione a **Xamarin.Essentials** pacote do NuGet para cada projeto:
 
-   # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+    # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-   No painel Gerenciador de soluções, clique com o botão direito no nome da solução e selecione **gerenciar pacotes NuGet**. Pesquise **Xamarin.Essentials** e instalar o pacote **todos os** projetos, incluindo bibliotecas de Android, iOS, UWP e .NET Standard.
+    No painel Gerenciador de soluções, clique com o botão direito no nome da solução e selecione **gerenciar pacotes NuGet**. Pesquise **Xamarin.Essentials** e instalar o pacote **todos os** projetos, incluindo bibliotecas de Android, iOS, UWP e .NET Standard.
 
-   > [!TIP]
-   > Verifique a **incluir pré-lançamento** caixa enquanto os [ **Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials) está em versão prévia.
+    > [!TIP]
+    > Verifique a **incluir pré-lançamento** caixa enquanto os [ **Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials) está em versão prévia.
 
-   # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+    # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-   No painel Gerenciador de soluções, clique com o botão direito no nome do projeto e selecione **Adicionar > Adicionar pacotes NuGet...** . Pesquise **Xamarin.Essentials** e instalar o pacote **todos os** projetos, incluindo bibliotecas Android, iOS e .NET Standard.
+    No painel Gerenciador de soluções, clique com o botão direito no nome do projeto e selecione **Adicionar > Adicionar pacotes NuGet...** . Pesquise **Xamarin.Essentials** e instalar o pacote **todos os** projetos, incluindo bibliotecas Android, iOS e .NET Standard.
 
-   > [!TIP]
-   > Verifique a **Mostrar pacotes de pré-lançamento** caixa enquanto os [ **Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials) está em versão prévia.
+    > [!TIP]
+    > Verifique a **Mostrar pacotes de pré-lançamento** caixa enquanto os [ **Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials) está em versão prévia.
 
     -----
 
 4. Adicione uma referência ao Xamarin.Essentials em qualquer classe do c# para referenciar as APIs.
 
-   ```csharp
-   using Xamarin.Essentials;
-   ```
+    ```csharp
+    using Xamarin.Essentials;
+    ```
 
 5. Xamarin.Essentials requer uma configuração específica da plataforma:
 
-   # <a name="androidtabandroid"></a>[Android](#tab/android)
+    # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-   Xamarin.Essentials dá suporte a uma versão mínima do Android do 4.4, correspondente ao nível de API 19, mas a versão do Android de destino de compilação deve ser 8.1, correspondente ao nível 27 da API. (No Visual Studio, essas duas versões são definidas na caixa de diálogo Propriedades do projeto para o projeto Android, na guia do manifesto do Android. No Visual Studio para Mac, eles são definidos na caixa de diálogo Opções de projeto para o projeto Android, na guia aplicativo do Android.)
+    Xamarin.Essentials dá suporte a uma versão mínima do Android do 4.4, correspondente ao nível de API 19, mas a versão do Android de destino de compilação deve ser 8.1, correspondente ao nível 27 da API. (No Visual Studio, essas duas versões são definidas na caixa de diálogo Propriedades do projeto para o projeto Android, na guia do manifesto do Android. No Visual Studio para Mac, eles são definidos na caixa de diálogo Opções de projeto para o projeto Android, na guia aplicativo do Android.) 
+    
+    Xamarin.Essentials instala a versão 27.0.2.1 das bibliotecas Support exigidos por ele. Quaisquer outras bibliotecas de Support requer que seu aplicativo também devem ser atualizadas para a versão 27.0.2.1 usando o Gerenciador de pacotes do NuGet. Todas as bibliotecas de support usadas pelo seu aplicativo deve ser o mesmo e deve ser pelo menos versão 27.0.2.1. Consulte a [página de solução de problemas](troubleshooting.md) se você tiver problemas, adicionando o Xamarin.Essentials NuGet ou atualizando NuGets em sua solução.
 
-   Xamarin.Essentials instala a versão 27.0.2.1 das bibliotecas Support exigidos por ele. Quaisquer outras bibliotecas de Support requer que seu aplicativo também devem ser atualizadas para a versão 27.0.2.1 usando o Gerenciador de pacotes do NuGet. Todas as bibliotecas de support usadas pelo seu aplicativo deve ser o mesmo e deve ser pelo menos versão 27.0.2.1. Consulte a [página de solução de problemas](troubleshooting.md) se você tiver problemas, adicionando o Xamarin.Essentials NuGet ou atualizando NuGets em sua solução.
+    No projeto Android `MainLauncher` ou qualquer `Activity` que é iniciado Xamarin.Essentials deve ser inicializado no `OnCreate` método:
 
-   No projeto Android `MainLauncher` ou qualquer `Activity` que é iniciado Xamarin.Essentials deve ser inicializado no `OnCreate` método:
+    ```csharp
+    Xamarin.Essentials.Platform.Init(this, bundle);
+    ```
 
-   ```csharp
-   Xamarin.Essentials.Platform.Init(this, bundle);
-   ```
+    Para lidar com permissões de tempo de execução no Android, Xamarin.Essentials deve receber qualquer `OnRequestPermissionsResult`. Adicione o seguinte código para todos os `Activity` classes:
 
-   Para lidar com permissões de tempo de execução no Android, Xamarin.Essentials deve receber qualquer `OnRequestPermissionsResult`. Adicione o seguinte código para todos os `Activity` classes:
+    ```csharp
+    public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+    {
+        Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-   ```csharp
-   public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-   {
-       Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+    ```
 
-       base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-   }
-   ```
+    # <a name="iostabios"></a>[iOS](#tab/ios)
 
-   # <a name="iostabios"></a>[iOS](#tab/ios)
+    Nenhuma configuração adicional necessária.
 
-   Nenhuma configuração adicional necessária.
+    # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-   # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
-
-   Nenhuma configuração adicional necessária.
+    Nenhuma configuração adicional necessária.
 
     -----
 

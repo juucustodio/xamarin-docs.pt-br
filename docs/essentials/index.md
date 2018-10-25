@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 07/30/2018
 ms.openlocfilehash: 5c625e32a70e196b5562225bdf985cd4b3a6f5db
 ms.sourcegitcommit: 0e1b64b0aa8fc0e78f0feff3c8b39a4cb8c1da61
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/31/2018
 ms.locfileid: "39360996"
@@ -22,7 +22,7 @@ Android, iOS e UWP oferecem exclusivas do sistema operacional e as APIs que os d
 
 ## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Introdução ao Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
 
-Siga o [guia de Introdução](get-started.md) para instalar o pacote NuGet **Xamarin.Essentials** em seu novo projeto ou existente de xamarin. Forms, Android, iOS ou UWP.
+Siga as [guia de Introdução](get-started.md) para instalar o **Xamarin.Essentials** pacote do NuGet em seu novo ou existente de xamarin. Forms, Android, iOS ou projetos da UWP.
 
 ## <a name="feature-guides"></a>Guias de recursos
 
@@ -56,7 +56,7 @@ Siga os guias para integrar esses recursos Xamarin.Essentials em seus aplicativo
 * [Armazenamento seguro](secure-storage.md?context=xamarin/xamarin-forms) – armazenar dados com segurança.
 * [SMS](sms.md?context=xamarin/xamarin-forms) – criar uma mensagem SMS para enviar.
 * [Texto em fala](text-to-speech.md?context=xamarin/xamarin-forms) – Vocalizar texto no dispositivo.
-* [Controle de versão](version-tracking.md?context=xamarin/xamarin-forms) – controlar as versões do aplicativo e os números de compilação.
+* [Controle de versão](version-tracking.md?context=xamarin/xamarin-forms) – controlar as versões do aplicativo e os números de build.
 * [Vibrar](vibrate.md?context=xamarin/xamarin-forms) – faça com que o dispositivo Vibre.
 
 ## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[Solução de problemas](troubleshooting.md?context=xamarin/xamarin-forms)
