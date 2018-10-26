@@ -1,20 +1,20 @@
 ---
-title: Trabalhando com watchOS grupos de aplicativos em Xamarin
-description: Este documento descreve os grupos de aplicativos e seu uso em um aplicativo watchOS. Ele discute como configurar um grupo de aplicativos, implantação, Entitlements.plist considerações e requisitos de provisionamento.
+title: Trabalhando com grupos de aplicativos no Xamarin do watchOS
+description: Este documento descreve os grupos de aplicativos e seu uso em um aplicativo do watchOS. Ele aborda como configurar um grupo de aplicativos, implantação, Entitlements. plist considerações e requisitos de provisionamento.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 5736b25af3993e2da794422a1a6f040461532497
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 78f6c03f73f0e4d8a74f826dd7bc25bbe325d545
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790673"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103667"
 ---
-# <a name="working-with-watchos-app-groups-in-xamarin"></a>Trabalhando com watchOS grupos de aplicativos em Xamarin
+# <a name="working-with-watchos-app-groups-in-xamarin"></a>Trabalhando com grupos de aplicativos no Xamarin do watchOS
 
 
 Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado. Grupos de aplicativo podem ser usados para dados como:
@@ -29,13 +29,13 @@ O local compartilhado é configurado usando um [grupo de aplicativos](https://de
 
 ### <a name="provisioning"></a>Provisionamento
 
-O grupo do aplicativo terá um identificador, que geralmente é a ID do pacote com um `group.` prefixo. Por exemplo, podemos usar a ID do pacote `com.xamarin.WatchSettings` e o grupo de aplicativo `group.com.xamarin.WatchSettings`.
+O grupo de aplicativos terá um identificador, que normalmente é sua ID do pacote com um `group.` prefixo. Por exemplo, poderíamos usar a ID do pacote `com.xamarin.WatchSettings` e o grupo de aplicativos `group.com.xamarin.WatchSettings`.
 
 [![](app-groups-images/app-group-sml.png "Use com.xamarin.WatchSettings a ID do pacote e o group.com.xamarin.WatchSettings de grupo do aplicativo")](app-groups-images/app-group.png#lightbox)
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-Bem como configurar o perfil de provisionamento, **habilitar grupos de aplicativos** no **Entitlements.plist** e insira a ID que você escolheu:
+Bem como configurar o perfil de provisionamento **habilitar grupos de aplicativos** na **Entitlements. plist** e insira a ID que você escolheu:
 
 [![](app-groups-images/entitlements-sml.png "Configurar o plist e insira a ID")](app-groups-images/entitlements.png#lightbox)
 
@@ -45,10 +45,10 @@ Bem como configurar o perfil de provisionamento, **habilitar grupos de aplicativ
 Certifique-se de configurar o grupo de aplicativo corretamente em seu [implantação](~/ios/watchos/deploy-test/index.md#App_Groups) provisionamento.
 
 
-Para obter mais informações, consulte o [recursos de grupo do aplicativo](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentação.
+Para obter mais informações, consulte o [recursos do grupo de aplicativo](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentação.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Apple compartilhamento de dados com seu aplicativo contém](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
-- [Doc de grupo do aplicativo da Apple](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)
+- [Doc do grupo de aplicativos da Apple](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)

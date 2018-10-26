@@ -4,15 +4,15 @@ description: Este artigo descreve os recursos que podem ser usados para soluçã
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/31/2017
-ms.openlocfilehash: 22b705c742d5dedfd9eb22ed2a040506d9cbf0f3
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: ce0e61bdda9f163b25e5152e7012944765a5ac39
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103010"
 ---
 # <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Dicas de solução de xamarin. IOS e iOS 11
 

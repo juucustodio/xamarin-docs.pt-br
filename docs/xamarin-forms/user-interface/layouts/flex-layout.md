@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: a6c1b0a4e0df1c25f595ca4eb53079c74b84972e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108737"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>O xamarin. Forms FlexLayout
 
@@ -486,7 +486,7 @@ Como o `AlignItems`, o `AlignContent` propriedade também alinha filhos no eixo 
 
 [![A página de teste: Alinhar o conteúdo](flex-layout-images/ExperimentAlignContent.png "alinhar o conteúdo a página de teste:")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
-Na captura de tela da iOS, ambas as linhas estão na parte superior; na captura de tela Android está no Centro de; e a captura de tela de UWP que eles estão na parte inferior. As linhas também podem ser espaçadas de várias maneiras:
+A captura de tela do iOS, ambas as linhas estão na parte superior; na captura de tela Android está no Centro de; e a captura de tela de UWP que eles estão na parte inferior. As linhas também podem ser espaçadas de várias maneiras:
 
 [![A página de teste: Alinhar conteúdo 2](flex-layout-images/ExperimentAlignContent2.png "na página de teste - alinhar conteúdo 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
@@ -606,7 +606,7 @@ O **reduzir experimento** página cria uma `FlexLayout` com uma única linha de 
 
 [![Página de teste a redução](flex-layout-images/ShrinkExperiment.png "página de experimentar a redução")](flex-layout-images/ShrinkExperiment-Large.png#lightbox)
 
-Na captura de tela Android, o `Shrink` valor para a segunda `Label` é definido como 0, e que `Label` é exibido na sua largura completa. Além disso, o quarto `Label` recebe um `Shrink` valor maior do que um e, em seguida, ele foi reduzido. Mostra a captura de tela UWP `Label` elementos que estão sendo fornecidos um `Shrink` valor de 0 para permitir que sejam exibidos em seu tamanho completo, se isso for possível.
+Na captura de tela Android, o `Shrink` valor para a segunda `Label` é definido como 0 e que `Label` é exibido na sua largura completa. Além disso, o quarto `Label` recebe um `Shrink` valor maior do que um e, em seguida, ele foi reduzido. Mostra a captura de tela UWP `Label` elementos que estão sendo fornecidos um `Shrink` valor de 0 para permitir que sejam exibidos em seu tamanho completo, se isso for possível.
 
 Você pode definir ambos os `Grow` e `Shrink` valores para adaptar a situações em que os tamanhos de agregação filho, às vezes, podem ser menor que ou às vezes maior que o tamanho do `FlexLayout`.
 

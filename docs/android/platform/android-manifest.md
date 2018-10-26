@@ -3,15 +3,15 @@ title: Trabalhando com o manifesto do Android
 ms.prod: xamarin
 ms.assetid: CB7CCF60-FEF1-3B28-215F-159391E74347
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 0857b70e6e1d9104f62ec2e26f8edbab385d06f3
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 655f988cc54cf54e346e68109271775dee2918a9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111246"
 ---
 # <a name="working-with-the-android-manifest"></a>Trabalhando com o manifesto do Android
 
@@ -37,7 +37,8 @@ namespace Demo
 }
 ```
 
-Isso resulta em nada que está sendo gerado na **androidmanifest. XML**. Se você quiser que um `<activity/>` elemento a ser gerado, você precisa usar o [ `[Activity]` ](https://developer.xamarin.com/api/type/Android.App.Activity/Attribute) atributo personalizado: 
+Isso resulta em nada que está sendo gerado na **androidmanifest. XML**. Se você quiser um `<activity/>` elemento a ser gerado, você precisa usar o [`[Activity]`](https://developer.xamarin.com/api/type/Android.App.Activity/Attribute) 
+atributo personalizado: 
 
 ```csharp
 namespace Demo
@@ -177,7 +178,10 @@ Na versão versão do manifesto de compilação (no **obj/Debug/android/AndroidM
 
 ### <a name="intent-actions-and-features"></a>Recursos e ações intencionais
 
-O manifesto do Android fornece uma maneira de descrever os recursos de sua atividade. Isso é feito por meio [intenções](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) e o [ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) atributo personalizado. Você pode especificar quais ações são apropriadas para sua atividade com o [ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) construtor e quais categorias são apropriadas com o [ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) propriedade. Pelo menos uma atividade deve ser fornecida (motivo pelo qual as atividades são fornecidas no construtor). `[IntentFilter]` pode ser fornecido várias vezes, e cada uso resulta em um separado `<intent-filter/>` elemento dentro do `<activity/>`. Por exemplo:
+O manifesto do Android fornece uma maneira de descrever os recursos de sua atividade. Isso é feito por meio [intenções](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) e o [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
+atributo personalizado. Você pode especificar quais ações são apropriadas para sua atividade com o [`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
+construtor e quais categorias são apropriadas com o [`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
+propriedade. Pelo menos uma atividade deve ser fornecida (motivo pelo qual as atividades são fornecidas no construtor). `[IntentFilter]` pode ser fornecido várias vezes, e cada uso resulta em um separado `<intent-filter/>` elemento dentro do `<activity/>`. Por exemplo:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

@@ -4,15 +4,15 @@ description: Este documento descreve como usar o ADO.NET como um método para ac
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 83f6059c405b2156270f4359cbba33177861af02
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 9314e1b69df4a5965dfd045d0b4ca3e44f1b9de6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241232"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122289"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Usando o ADO.NET com o xamarin. IOS
 
@@ -22,11 +22,11 @@ Xamarin tem suporte interno para o banco de dados SQLite está disponível no iO
 
 Para usar o access SQLite por meio do ADO.NET, você deve adicionar `System.Data` e `Mono.Data.Sqlite` faz referência ao seu projeto do iOS, conforme mostrado aqui (para exemplos no Visual Studio para Mac e Visual Studio):
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
  ![](using-adonet-images/image4.png "Referências de assembly no Visual Studio para Mac")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
   ![](using-adonet-images/image6.png "Referências de assembly no Visual Studio")
 

@@ -2,21 +2,21 @@
 title: Retornos de chamada no Android
 ms.prod: xamarin
 ms.assetid: F3A7A4E6-41FE-4F12-949C-96090815C5D6
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 3f18516643c00dc67fe533ecab00e1f415eb5c46
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c6eaf4dd90b172053b4b87e3427cfe35213c6727
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33922816"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117132"
 ---
 # <a name="callbacks-on-android"></a>Retornos de chamada no Android
 
-Chamada para Java do c# é uma *arriscado*. Isto significa que há um *padrão* para retornos de chamada do c# para Java; no entanto, é mais complicado do que gostaríamos.
+Chamar ao Java do C# é um pouco uma *negócio arriscado*. Isto significa que há um *padrão* para retornos de chamada de C# para Java; no entanto, é mais complicado do que gostaríamos.
 
-Abordaremos as três opções para fazer chamadas de retorno que fazem mais sentido para Java:
+Abordaremos as três opções para fazer retornos de chamada que façam mais sentido para Java:
 
 - Classes abstratas
 - Interfaces
@@ -24,9 +24,9 @@ Abordaremos as três opções para fazer chamadas de retorno que fazem mais sent
 
 ## <a name="abstract-classes"></a>Classes abstratas
 
-Essa é a rota mais fácil para retornos de chamada, portanto, recomendamos usar `abstract` se apenas ao tentar obter um retorno de chamada trabalhar de forma mais simples.
+Essa é a rota mais fácil para retornos de chamada, portanto, recomendo usar `abstract` se você estiver apenas tentando obter um retorno de chamada trabalhar de forma mais simples.
 
-Vamos começar com uma classe c#, gostaríamos de Java para implementar:
+Vamos começar com um C# classe gostaríamos de Java para implementar:
 
 ```csharp
 [Register("mono.embeddinator.android.AbstractClass")]
@@ -41,15 +41,15 @@ public abstract class AbstractClass : Java.Lang.Object
 }
 ```
 
-Aqui estão os detalhes para que funcione:
+Aqui estão os detalhes para fazer isso funcionar:
 
-- `[Register]` gera um nome de pacote adequado no Java – você receberá um nome de pacote gerado automaticamente sem ele.
-- Subclasses `Java.Lang.Object` sinaliza que a incorporação de .NET para executar a classe por meio do gerador de Java do xamarin.
-- Construtor vazio: é que você deseja usar no código de Java.
-- `(IntPtr, JniHandleOwnership)` construtor: é o que usará xamarin para criar o c#-equivalente de objetos Java.
-- `[Export]` sinaliza o xamarin para expor o método para Java. Também podemos alterar o nome do método, desde que o mundo de Java desejar usar métodos de letras minúsculas.
+- `[Register]` gera um nome de pacote BOM em Java – você receberá um nome de pacote gerado automaticamente sem ele.
+- Criando subclasses `Java.Lang.Object` sinais à inserção de .NET para executar a classe por meio do gerador de Java do xamarin. Android.
+- Construtor vazio: é o que você deseja usar do código Java.
+- `(IntPtr, JniHandleOwnership)` construtor: é o que xamarin. Android usará para criar o C#-equivalentes de objetos Java.
+- `[Export]` sinaliza o xamarin. Android para expor o método para Java. Também podemos alterar o nome do método, uma vez que o mundo Java gosta de usar os métodos de letras minúsculas.
 
-Avançar vamos fazer um método c# para testar o cenário:
+Próxima vamos fazer um C# método para testar o cenário:
 
 ```csharp
 [Register("mono.embeddinator.android.JavaCallbacks")]
@@ -62,11 +62,11 @@ public class JavaCallbacks : Java.Lang.Object
     }
 }
 ```
-`JavaCallbacks` pode ser qualquer classe para testar isso, desde que seja um `Java.Lang.Object`.
+`JavaCallbacks` pode ser qualquer classe para testar isso, desde que ele seja um `Java.Lang.Object`.
 
-Agora, execute a inserção de .NET no assembly .NET para gerar um AAR. Consulte o [guia de Introdução](~/tools/dotnet-embedding/get-started/java/android.md) para obter detalhes.
+Agora, execute a inserção de .NET em seu assembly .NET para gerar um AAR. Consulte a [guia de Introdução](~/tools/dotnet-embedding/get-started/java/android.md) para obter detalhes.
 
-Depois de importar o arquivo AAR Android Studio, vamos escrever um teste de unidade:
+Depois de importar o arquivo AAR para Android Studio, vamos escrever um teste de unidade:
 
 ```java
 @Test
@@ -82,24 +82,24 @@ public void abstractCallback() throws Throwable {
     assertEquals("Java", JavaCallbacks.abstractCallback(callback));
 }
 ```
-Portanto é:
+Portanto, podemos:
 
 - Implementado o `AbstractClass` em Java com um tipo anônimo
-- Certificar-se de que a instância retorna `"Java"` do Java
-- Certificar-se de que a instância retorna `"Java"` do c#
-- Adicionado `throws Throwable`, como c# construtores são marcados com `throws`
+- Verificado se nossa instância retorna `"Java"` do Java
+- Verificado se nossa instância retorna `"Java"` doC#
+- Adicionado `throws Throwable`, já que C# construtores estão marcados com `throws`
 
-Se ocorreu essa unidade de teste como-é, ele falhará com um erro, como:
+Se, executamos este teste de unidade como-está, ele falhará com um erro, como:
 
 ```csharp
 System.NotSupportedException: Unable to find Invoker for type 'Android.AbstractClass'. Was it linked away?
 ```
 
-O que está faltando aqui está uma `Invoker` tipo. Isso é uma subclasse de `AbstractClass` que encaminha c# chamadas para Java. Se um objeto de Java entra no mundo do c# e o tipo equivalente do c# é abstrato, xamarin procura automaticamente um tipo c# com o sufixo `Invoker` para uso em código c#.
+O que está faltando aqui está um `Invoker` tipo. Isso é uma subclasse de `AbstractClass` que encaminha C# chamadas para Java. Se inserir um objeto Java a C# world e o equivalente a C# tipo é abstrato e, em seguida, xamarin. Android procura automaticamente por um C# tipo com o sufixo `Invoker` para uso dentro de C# código.
 
-Xamarin usa esse `Invoker` padrão para projetos de associação de Java entre outras coisas.
+Xamarin. Android usa esse `Invoker` padrão para projetos de associação do Java entre outras coisas.
 
-Aqui está a nossa implementação do `AbstractClassInvoker`:
+Aqui está nossa implementação de `AbstractClassInvoker`:
 ```csharp
 class AbstractClassInvoker : AbstractClass
 {
@@ -143,23 +143,23 @@ class AbstractClassInvoker : AbstractClass
 
 Há um pouco acontecendo aqui, podemos:
 
-- Adicionada uma classe com o sufixo `Invoker` que as subclasses `AbstractClass`
-- Adicionado `class_ref` para manter o JNI fazem referência à classe Java que as subclasses nossa classe c#
+- Adicionada uma classe com o sufixo `Invoker` que pode efetuar subclasses `AbstractClass`
+- Adicionado `class_ref` para manter a referência JNI para a classe Java que pode efetuar subclasses nosso C# classe
 - Adicionado `id_gettext` para manter a referência JNI para Java `getText` método
 - Incluído um `(IntPtr, JniHandleOwnership)` construtor
-- Implementado `ThresholdType` e `ThresholdClass` como um requisito para xamarin saber detalhes sobre o `Invoker`
-- `GetText` necessário para pesquisar o Java `getText` método com a assinatura apropriada de JNI e chamá-lo
+- Implementado `ThresholdType` e `ThresholdClass` como um requisito para xamarin. Android para saber detalhes sobre o `Invoker`
+- `GetText` necessário para pesquisar o Java `getText` método com a assinatura JNI apropriado e chamá-lo
 - `Dispose` é necessário apenas para eliminar a referência para `class_ref`
 
 Depois de adicionar essa classe e gerar um novo AAR, nossa unidade teste passa. Como você pode ver esse padrão para retornos de chamada não é *ideal*, mas poderá ser feito.
 
-Para obter detalhes sobre interoperabilidade de Java, consulte a incrível [xamarin documentação](~/android/platform/java-integration/working-with-jni.md) sobre este assunto.
+Para obter detalhes sobre a interoperabilidade de Java, consulte o incrível [documentação do xamarin. Android](~/android/platform/java-integration/working-with-jni.md) sobre esse assunto.
 
 ## <a name="interfaces"></a>Interfaces
 
-Interfaces são muito semelhante a de classes abstratas, exceto um detalhe: xamarin não gera Java para eles. Isso ocorre porque antes da inserção de .NET, não há muitos cenários em que o Java deve implementar uma interface c#.
+Interfaces são muito parecidas como classes abstratas, exceto um detalhe: xamarin. Android não gera Java para eles. Isso ocorre porque antes da inserção de .NET, não há muitos cenários em que o Java implementaria um C# interface.
 
-Digamos que temos a interface c# a seguir:
+Vamos supor que temos o seguinte C# interface:
 
 ```csharp
 [Register("mono.embeddinator.android.IJavaCallback")]
@@ -170,9 +170,9 @@ public interface IJavaCallback : IJavaObject
 }
 ```
 
-`IJavaObject` sinaliza a incorporação de .NET que esta é uma interface de xamarin, mas, caso contrário, isso é exatamente o mesmo que um `abstract` classe.
+`IJavaObject` sinaliza a incorporação do .NET que essa é uma interface de xamarin. Android, mas caso contrário, isso é exatamente o mesmo que um `abstract` classe.
 
-Desde xamarin atualmente não irá gerar o código Java para esta interface, adicione o Java a seguir ao seu projeto c#:
+Uma vez que o xamarin. Android no momento, não irá gerar o código Java para essa interface, adicione o Java a seguir para seu C# projeto:
 
 ```java
 package mono.embeddinator.android;
@@ -182,7 +182,7 @@ public interface IJavaCallback {
 }
 ```
 
-Você pode colocar o arquivo em qualquer lugar, mas certifique-se de definir a ação de compilação `AndroidJavaSource`. Isso sinalizará .NET inserindo copiá-lo para o diretório apropriado para obter compilados em seu arquivo AAR.
+Você pode colocar o arquivo em qualquer lugar, mas certifique-se de definir sua ação de compilação como `AndroidJavaSource`. Isso sinalizará a incorporação do .NET para copiá-lo para o diretório apropriado que é compilado para o seu arquivo AAR.
 
 Em seguida, o `Invoker` implementação será exatamente o mesmo:
 
@@ -226,7 +226,7 @@ class IJavaCallbackInvoker : Java.Lang.Object, IJavaCallback
 }
 ```
 
-Depois de gerar um arquivo AAR, no Android Studio poderíamos escrever a seguinte unidade de passagem de teste:
+Depois de gerar um arquivo AAR, no Android Studio, poderíamos escrever a seguinte unidade de transmissão de teste:
 
 ```java
 class ConcreteCallback implements IJavaCallback {
@@ -247,9 +247,9 @@ public void interfaceCallback() {
 
 ## <a name="virtual-methods"></a>Métodos virtuais
 
-Substituindo um `virtual` em Java, é possível, mas não uma ótima experiência.
+Substituindo um `virtual` em Java, é possível, mas não é uma ótima experiência.
 
-Vamos supor que você tem a seguinte classe c#:
+Vamos supor que você tenha o seguinte C# classe:
 
 ```csharp
 [Register("mono.embeddinator.android.VirtualClass")]
@@ -264,34 +264,34 @@ public class VirtualClass : Java.Lang.Object
 }
 ```
 
-Se você seguiu o `abstract` exemplo de classe acima, ele funcionará, exceto um detalhe: _xamarin não pesquisar o `Invoker`_ .
+Se você tiver seguido as `abstract` exemplo de classe acima, ele funcionaria, exceto um detalhe: _xamarin. Android não pesquisar a `Invoker`_ .
 
-Para corrigir isso, modifique a classe do c# para ser `abstract`:
+Para corrigir esse problema, modifique o C# à classe `abstract`:
 
 ```csharp
 public abstract class VirtualClass : Java.Lang.Object
 ```
 
-Isso não é ideal, mas ele obtém esse cenário funcione. Xamarin escolherá o `VirtualClassInvoker` e Java pode usar `@Override` no método.
+Isso não é ideal, mas ele obtém esse cenário funcione. Xamarin. Android selecionará o `VirtualClassInvoker` e pode usar o Java `@Override` no método.
 
 ## <a name="callbacks-in-the-future"></a>Retornos de chamada no futuro
 
-Há algumas coisas possível para melhorar a estes cenários:
+Há algumas coisas que pudemos para melhorar a esses cenários:
 
-1. `throws Throwable` no c# construtores é fixa nisso [PR](https://github.com/xamarin/java.interop/pull/170).
-1. Verifique o gerador de Java em xamarin oferecem suporte a interfaces.
-    - Isso remove a necessidade de adicionar o arquivo de origem Java com uma ação de compilação de `AndroidJavaSource`.
-1. Fazer uma maneira para xamarin carregar um `Invoker` para classes virtuais.
-    - Isso elimina a necessidade de marcar a classe em nossa `virtual` exemplo `abstract`.
-1. Gerar `Invoker` classes .NET incorporação automaticamente
-    - Isso vai ser complicada, mas poderá ser feito. Xamarin já está fazendo algo semelhante a este para projetos de associação de Java.
+1. `throws Throwable` no C# construtores é fixa nisso [PR](https://github.com/xamarin/java.interop/pull/170).
+1. Fazer com que o gerador de Java no xamarin. Android dão suporte a interfaces.
+    - Isso remove a necessidade de adicionar o arquivo de origem de Java com uma ação de build `AndroidJavaSource`.
+1. Faça uma maneira para xamarin. Android carregar um `Invoker` para aulas virtuais.
+    - Isso remove a necessidade de marcar a classe em nossa `virtual` exemplo `abstract`.
+1. Gerar `Invoker` classes automaticamente para a inserção do .NET
+    - Isso vai ser complicado, mas poderá ser feito. Xamarin. Android já está fazendo algo semelhante a isto para projetos de associação de Java.
 
-Há muito trabalho a ser feito aqui, mas esses aprimoramentos para incorporar .NET são possíveis.
+Há muito trabalho a ser feito aqui, mas esses aprimoramentos à inserção de .NET são possíveis.
 
 ## <a name="further-reading"></a>Leitura adicional
 
 * [Guia de Introdução no Android](~/tools/dotnet-embedding/get-started/java/android.md)
-* [Pesquisa Android preliminar](~/tools/dotnet-embedding/android/index.md)
-* [Limitações de incorporação de .NET](~/tools/dotnet-embedding/limitations.md)
+* [Pesquisa preliminar de Android](~/tools/dotnet-embedding/android/index.md)
+* [Limitações de incorporação do .NET](~/tools/dotnet-embedding/limitations.md)
 * [Contribuindo para o projeto de código-fonte aberto](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
 * [Descrições e códigos de erro](~/tools/dotnet-embedding/errors.md)

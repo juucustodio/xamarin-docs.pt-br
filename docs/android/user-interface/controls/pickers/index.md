@@ -1,25 +1,25 @@
 ---
-title: Seletores de
-description: Usando caixas de diálogo Android internas para consultar o usuário para a data e hora
+title: Seletores
+description: Usando as caixas de diálogo Android internas ao consultar o usuário de data e hora
 ms.prod: xamarin
 ms.assetid: 57C86933-3F04-47DD-9839-72D522D73330
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: de9c77cd1ea96727f5fbf10d11ff99c0aec5fe74
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: af6e71e83f90be720db75887553e24a99966720c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119809"
 ---
-# <a name="pickers"></a>Seletores de
+# <a name="pickers"></a>Seletores
 
 
-*Seletores de* são elementos de interface do usuário que permitem ao usuário selecionar uma data ou hora usando caixas de diálogo que são fornecidas pelo Android:
+*Selecionadores de* são elementos de interface do usuário que permitem que o usuário escolha uma data ou hora, usando as caixas de diálogo que são fornecidas pelo Android:
 
--   [Seletor de data](~/android/user-interface/controls/pickers/date-picker.md) é usado para selecionar uma data (ano, mês e dia).
+-   [Selecionador de data](~/android/user-interface/controls/pickers/date-picker.md) é usado para selecionar uma data (ano, mês e dia).
 
     ![Seletor de data de exemplo](images/date-picker.png)
 

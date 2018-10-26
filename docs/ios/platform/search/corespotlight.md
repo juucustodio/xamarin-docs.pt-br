@@ -1,28 +1,28 @@
 ---
-title: Pesquisa com núcleo destaque em xamarin
-description: Este documento descreve como usar Core destaque em um aplicativo xamarin para fornecer links para conteúdo no aplicativo. Ele discute como criar, restaurar, atualizar e excluir itens de pesquisados.
+title: Pesquisa de destaque principal no xamarin. IOS
+description: Este documento descreve como usar o destaque principal em um aplicativo xamarin. IOS para fornecem links para conteúdo no aplicativo. Ele discute como criar, restaurar, atualizar e excluir itens pesquisáveis.
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a8bc3aaa43d7830b0a3baa0768d495458b1ecfad
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: fb9ddcc39bd33199dc370897250cd0d74597612f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788033"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110349"
 ---
-# <a name="search-with-core-spotlight-in-xamarinios"></a>Pesquisa com núcleo destaque em xamarin
+# <a name="search-with-core-spotlight-in-xamarinios"></a>Pesquisa de destaque principal no xamarin. IOS
 
-Destaque de núcleo é uma nova estrutura para iOS 9 que apresenta uma API de banco de dados semelhantes para adicionar, editar ou excluir links para conteúdos dentro de seu aplicativo. Itens que foram adicionados usando Core Spotlight estarão disponíveis na pesquisa do Spotlight no dispositivo iOS.
+Destaque principal é uma nova estrutura para iOS 9 que apresenta uma API de banco de dados semelhantes para adicionar, editar ou excluir links para conteúdos dentro do seu aplicativo. Itens que foram adicionados usando o destaque do Core estarão disponíveis na pesquisa do Spotlight no dispositivo iOS.
 
-Para obter um exemplo dos tipos de conteúdo que podem ser indexados com destaque principal, examine aplicativos de mensagens, email, calendário e Observações da Apple. Todos eles utilizam destaque de núcleo para fornecer os resultados da pesquisa.
+Para obter um exemplo dos tipos de conteúdo que podem ser indexadas usando o destaque de núcleo, examinar aplicativos de mensagens, email, calendário e notas da Apple. Todos eles utilizam destaque principal para fornecer os resultados da pesquisa.
 
-## <a name="creating-an-item"></a>Criando um Item
+## <a name="creating-an-item"></a>Criação de um Item
 
-Este é um exemplo de criação de um item e indexá-lo usando Spotlight principais:
+Este é um exemplo de criação de um item e indexando-o usando o destaque do Core:
 
 ```csharp
 using CoreSpotlight;
@@ -45,13 +45,13 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 });
 ```
 
-Essas informações aparecerá como o seguinte em um resultado de pesquisa:
+Essa informação será exibida como o seguinte em um resultado de pesquisa:
 
-[![](corespotlight-images/corespotlight01.png "Visão geral sobre o resultado de pesquisa Spotlight Core")](corespotlight-images/corespotlight01.png#lightbox)
+[![](corespotlight-images/corespotlight01.png "Visão geral de resultados de pesquisa de destaque Core")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>Restauração de um Item
 
-Quando o usuário toca em um item adicionado ao resultado da pesquisa por meio de destaque de núcleo para seu aplicativo, o `AppDelegate` método `ContinueUserActivity` é chamado (esse método também é usado para `NSUserActivity`). Por exemplo:
+Quando o usuário toca em um item adicionado ao resultado da pesquisa por meio de destaque principal para seu aplicativo, o `AppDelegate` método `ContinueUserActivity` é chamado (esse método também é usado para `NSUserActivity`). Por exemplo:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -74,20 +74,20 @@ public override bool ContinueUserActivity (UIApplication application,
 }
 ```
 
-Observe que esse tempo é são seleção para a atividade com um `ActivityType` de `CSSearchableItem.ActionType`.
+Observe que dessa vez estamos seleção para a atividade com um `ActivityType` de `CSSearchableItem.ActionType`.
 
-## <a name="updating-an-item"></a>Atualização de um Item
+## <a name="updating-an-item"></a>Atualizar um Item
 
-Pode haver ocasiões em que um Item de índice são criados com destaque Core precisa ser modificados, como uma alteração no título ou imagem em miniatura é necessária. Para fazer essa alteração, podemos usar o mesmo método que foi usada para criar inicialmente o índice.
-Criamos um novo `CSSearchableItem` usando a mesma ID que foi usada para criar o item e anexar um novo `CSSearchableItemAttributeSet` que contém os atributos modificados:
+Pode haver ocasiões em que um Item do índice que criamos com destaque principal precisa ser modificado, como uma alteração de título ou imagem em miniatura é necessária. Para fazer essa alteração, podemos usar o mesmo método que foi usada para criar inicialmente o índice.
+Podemos criar um novo `CSSearchableItem` usando a mesma ID que foi usada para criar o item e anexar um novo `CSSearchableItemAttributeSet` que contém atributos modificados:
 
 [![](corespotlight-images/corespotlight02.png "Atualizando uma visão geral de Item")](corespotlight-images/corespotlight02.png#lightbox)
 
-Quando esse item é gravado para o índice de pesquisado, o item existente será atualizado com as novas informações.
+Quando esse item é gravada para o índice de pesquisado, o item existente será atualizado com as novas informações.
 
-## <a name="deleting-an-item"></a>Excluir um Item
+## <a name="deleting-an-item"></a>Excluindo um Item
 
-Destaque Core fornece várias maneiras de excluir um item de índice quando ele não é mais necessário.
+Destaque principal fornece várias maneiras de excluir um item de índice quando ele não é mais necessário.
 
 Primeiro, você pode excluir um item por seu identificador, por exemplo:
 
@@ -101,7 +101,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-Em seguida, você pode excluir um grupo de itens do índice por seu nome de domínio. Por exemplo:
+Em seguida, você pode excluir um grupo de itens de índice por seu nome de domínio. Por exemplo:
 
 ```csharp
 // Delete by Domain Name
@@ -124,19 +124,19 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
     }
 });
 ```
-## <a name="additional-core-spotlight-features"></a>Recursos de destaque de núcleo adicional
+## <a name="additional-core-spotlight-features"></a>Recursos do destaque Core adicionais
 
 Destaque principal tem os seguintes recursos que ajudam a manter o índice precisas e atualizadas:
 
-- **Suporte para a atualização do lote** – se seu aplicativo precisa para criar ou modificar um grande grupo de índices ao mesmo tempo, o lote inteiro pode ser enviado para o `Index` método o `CSSearchableIndex` classe em uma chamada.
-- **Responder a alterações de índice** – usando o `CSSearchableIndexDelegate` seu aplicativo pode responder a alterações e notificações do índice de pesquisa.
-- **Aplicar proteção de dados** – usando as classes de proteção de dados, você pode implementar a segurança nos itens que você adicionar ao índice pesquisável usando Spotlight Core.
+- **Suporte de atualização do lote** – se seu aplicativo precisa para criar ou modificar um grande grupo de índices ao mesmo tempo, todo o lote pode ser enviado para o `Index` método o `CSSearchableIndex` classe em uma chamada.
+- **Responder a alterações de índice** – usando o `CSSearchableIndexDelegate` seu aplicativo pode responder a alterações e notificações do índice pesquisável.
+- **Aplicar proteção de dados** – usando as classes de proteção de dados, você pode implementar a segurança nos itens que você adicionar ao índice pesquisável usando o destaque de núcleo.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos do iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
+- [Amostras do iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guia de programação de aplicativo de pesquisa](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

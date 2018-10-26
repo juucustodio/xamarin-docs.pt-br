@@ -4,15 +4,15 @@ description: Este artigo explica como criar um tela de inicialização do aplica
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 40b8c38e89e96223bbf657ff06356d9fb2e9d9b3
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 0ec1defa29a4fe85c4ae3e809d8733e68cc268ac
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251128"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116910"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Inicie as telas para aplicativos xamarin. IOS
 
@@ -28,7 +28,7 @@ Este breve passo a passo descreve como criar uma tela de inicialização com qua
 
 No iOS 8 (e posterior), o desenvolvedor pode criar um Storyboard Unified especial para fornecer a tela de inicialização em vez de usar uma ou mais imagens de inicialização estática. Ao criar o lançamento de um Storyboard no Designer do iOS, use as Classes de tamanho e o Layout automático para definir diferentes layouts para ambientes de exibição diferentes. Usando Classes de tamanho e o Layout automático, o desenvolvedor pode criar uma tela de inicialização única que parece bom em todos os dispositivos e exibir os ambientes.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. No Visual Studio para Mac, criar um novo projeto, selecionando **arquivo > nova solução** e, em seguida, escolhendo **aplicativo de exibição única**: 
 
@@ -95,7 +95,7 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um Storyboard Unified especia
 
 13. Salve as alterações para o Storyboard. Execute o aplicativo em um dispositivo ou simulador, e a tela de inicialização ficará visível enquanto o aplicativo é iniciado.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Crie um novo projeto. No Visual Studio, selecione **arquivo > Novo > projeto > Visual c# > iPhone & iPad > aplicativo iOS (Xamarin)**:
 
@@ -140,7 +140,7 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um Storyboard Unified especia
 
     ![Controlador de exibição de vazia adicionada à superfície de design](launch-screens-images/launch08-vs.png)
 
-9. Defina as **plano de fundo** cor do modo de exibição principal do controlador de exibição. Selecione o modo de exibição clicando no meio do controlador de exibição e ajustar a cor do plano de fundo usando o a **janela de propriedades**:
+9. Defina as **plano de fundo** cor do modo de exibição principal do controlador de exibição. Selecione o modo de exibição clicando no meio do controlador de exibição e ajustar a cor do plano de fundo usando o **janela de propriedades**:
     
     ![Uma única exibição com uma cor de plano de fundo roxo](launch-screens-images/launch09-vs.png)
 
@@ -187,7 +187,7 @@ Para obter mais informações sobre como criar uma tela de inicialização com u
 
 ## <a name="migrating-to-launch-screen-storyboards"></a>Migrando para iniciar Storyboards de tela
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Ao atualizar um aplicativo existente para usar Storyboards para suas telas de inicialização, clique com botão direito do **nome do projeto** na **Gerenciador de soluções** e selecione **Add**  >  **Novo arquivo...** . Selecione **iOS** > **tela de inicialização** e clique no **New** botão:
 
@@ -205,7 +205,7 @@ Para usar o novo Storyboard como uma tela de inicialização, faça o seguinte:
 
     ![](launch-screens-images/storyboard08.png "Definindo a tela de inicialização ao storyboard")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Clique com botão direito no nome do projeto na **Gerenciador de soluções** e selecione **Add** > **novo arquivo...** : 
 

@@ -4,19 +4,19 @@ description: Aprenda a criar bitmaps de SkiaSharp e, em seguida, desenhe nesses 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: c8ddf8c0829cea319dd93dd9c3686b94ed8eb89e
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615584"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109231"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Criando e desenho em bitmaps de SkiaSharp
 
-Você viu como um aplicativo pode carregar bitmaps da Web, de recursos do aplicativo e da biblioteca de fotos do usuário. Também é possível criar novos bitmaps dentro de seu aplicativo. A abordagem mais simples envolve um dos construtores de [ `SKBitmap` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKBitmap.SKBitmap/p/System.Int32/System.Int32/System.Boolean/):
+Você viu como um aplicativo pode carregar bitmaps da Web, de recursos do aplicativo e da biblioteca de fotos do usuário. Também é possível criar novos bitmaps dentro de seu aplicativo. A abordagem mais simples envolve um dos construtores de [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
 ```csharp
 SKBitmap bitmap = new SKBitmap(width, height);
@@ -37,7 +37,7 @@ A segunda abordagem é discutida no artigo [ **acessando Pixels do Bitmap de Ski
 
 ## <a name="drawing-on-the-bitmap"></a>O bitmap de desenho
 
-Desenho na superfície de um bitmap é o mesmo que um monitor de vídeo de desenho. Para desenhar em um monitor de vídeo, você deve obter um `SKCanvas` objeto o `PaintSurface` argumentos do evento. Para desenhar em um bitmap, você cria um `SKCanvas` do objeto usando o [ `SKCanvas` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCanvas.SKCanvas/p/SkiaSharp.SKBitmap/) construtor:
+Desenho na superfície de um bitmap é o mesmo que um monitor de vídeo de desenho. Para desenhar em um monitor de vídeo, você deve obter um `SKCanvas` objeto o `PaintSurface` argumentos do evento. Para desenhar em um bitmap, você cria um `SKCanvas` do objeto usando o [ `SKCanvas` ](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) construtor:
 
 ```csharp
 SKCanvas canvas = new SKCanvas(bitmap);
@@ -123,9 +123,9 @@ A documentação do `Clear` métodos de `SKCanvas` descreve-los com a instruçã
 
 `Clear` existe em duas versões diferentes: 
 
-- O [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear/p/SkiaSharp.SKColor/) método com um `SKColor` parâmetro substitui os pixels da superfície de exibição com pixels dessa cor.
+- O [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) método com um `SKColor` parâmetro substitui os pixels da superfície de exibição com pixels dessa cor.
 
-- O [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear()/) método sem parâmetros substitui os pixels com o [ `SKColors.Empty` ](https://developer.xamarin.com/api/property/SkiaSharp.SKColors.Empty/) cor, que é uma cor em que todos os componentes (vermelho, verde, azul e alfa) são definidos como zero. Às vezes, essa cor é conhecida como "preto transparente".
+- O [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear) método sem parâmetros substitui os pixels com o [ `SKColors.Empty` ](xref:SkiaSharp.SKColors.Empty) cor, que é uma cor em que todos os componentes (vermelho, verde, azul e alfa) são definidos como zero. Às vezes, essa cor é conhecida como "preto transparente".
 
 Chamando `Clear` sem argumentos em um novo bitmap inicializa o bitmap inteiro para ser totalmente transparente. Nada desenhado subsequentemente o bitmap geralmente será opacos ou parcialmente opacos.
 
@@ -151,7 +151,7 @@ Não `Draw` método nunca faz um bitmap mais transparente. Somente `Clear` pode 
 
 ## <a name="bitmap-color-types"></a>Tipos de cores do bitmap
 
-A forma mais simples `SKBitmap` construtor permite que você especifique uma largura de pixel inteiro e a altura do bitmap. Outros `SKBitmap` construtores são mais complexos. Esses construtores exigem argumentos de dois tipos de enumeração: [ `SKColorType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColorType/) e [ `SKAlphaType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKAlphaType/). Outros construtores usam o [ `SKImageInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/) estrutura, que consolida essas informações.
+A forma mais simples `SKBitmap` construtor permite que você especifique uma largura de pixel inteiro e a altura do bitmap. Outros `SKBitmap` construtores são mais complexos. Esses construtores exigem argumentos de dois tipos de enumeração: [ `SKColorType` ](xref:SkiaSharp.SKColorType) e [ `SKAlphaType` ](xref:SkiaSharp.SKAlphaType). Outros construtores usam o [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo) estrutura, que consolida essas informações.
 
 O `SKColorType` enumeração tem 9 membros. Cada um desses membros descreve uma maneira específica de armazenar os pixels do bitmap:
 
@@ -161,7 +161,7 @@ O `SKColorType` enumeração tem 9 membros. Cada um desses membros descreve uma 
 - `Argb4444` &mdash; cada pixel é de 16 bits, 4 para alfa, vermelha, verde e azul
 - `Rgba8888` &mdash; cada pixel é de 32 bits, 8 para vermelho, verde, azul e alfa
 - `Bgra8888` &mdash; cada pixel é de 32 bits, 8 para alfa, vermelho, verde e azul
-- `Index8` &mdash; cada pixel é de 8 bits e representa um índice em um [`SKColorTable`](https://developer.xamarin.com/api/type/SkiaSharp.SKColorTable/)
+- `Index8` &mdash; cada pixel é de 8 bits e representa um índice em um [`SKColorTable`](xref:SkiaSharp.SKColorTable)
 - `Gray8` &mdash; cada pixel é de 8 bits que representa um tom de cinza de preto para branco
 - `RgbaF16` &mdash; cada pixel é de 64 bits, com vermelho, verde, azul e alfa em um formato de ponto flutuante de 16 bits
 
@@ -596,5 +596,5 @@ Outra tarefa comum que pode ser tratada usando técnicas semelhantes é cortar u
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

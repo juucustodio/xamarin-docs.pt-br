@@ -1,21 +1,21 @@
 ---
-title: Gravando aplicativos responsivos
+title: Escrevendo aplicativos responsivos
 ms.prod: xamarin
 ms.assetid: 452DF940-6331-55F0-D130-002822BBED55
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b8c113b67b3fbfa57ca86c72e11ddeb0e4e1a9ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a1642c4cbb790cf09d2a31e629408afc61d5b7ab
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121770"
 ---
-# <a name="writing-responsive-applications"></a>Gravando aplicativos responsivos
+# <a name="writing-responsive-applications"></a>Escrevendo aplicativos responsivos
 
-Uma das chaves para manter uma GUI de resposta é fazer tarefas de longa execução em um thread em segundo plano para a interface gráfica do usuário não sejam bloqueados. Vamos dizer que desejamos calcular um valor a ser exibido para o usuário, mas esse valor tem 5 segundos para calcular:
+Uma das chaves para manter uma GUI responsiva é fazer tarefas de longa execução em um thread em segundo plano para que a interface gráfica do usuário não seja bloqueada. Digamos que queremos calcular um valor a ser exibido para o usuário, mas esse valor leva de 5 segundos para calcular:
 
 ```csharp
 public class ThreadDemo : Activity
@@ -43,7 +43,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-Isso funcionará, mas o aplicativo será "congelar" por 5 segundos enquanto o valor é calculado. Durante esse tempo, o aplicativo não responder a qualquer interação do usuário. Para contornar esse problema, queremos fazer os cálculos em um thread em segundo plano:
+Isso funcionará, mas o aplicativo será "congelar" por 5 segundos enquanto o valor é calculado. Durante esse tempo, o aplicativo não responder a qualquer interação do usuário. Para contornar isso, queremos fazer nossos cálculos em um thread em segundo plano:
 
 ```csharp
 public class ThreadDemo : Activity
@@ -71,7 +71,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-Agora podemos calcular o valor em um thread em segundo plano para que nossa interface gráfica do usuário permanece responsivo durante o cálculo. No entanto, quando o cálculo é feito, nosso aplicativo falha, deixe esse no log:
+Agora, podemos calcular o valor em um thread em segundo plano para que nossa interface gráfica do usuário permaneça responsivo durante o cálculo. No entanto, quando o cálculo é concluído, nosso aplicativo falha, deixe esse no log:
 
 ```shell
 E/mono    (11207): EXCEPTION handling: Android.Util.AndroidRuntimeException: Exception of type 'Android.Util.AndroidRuntimeException' was thrown.
@@ -82,7 +82,7 @@ E/mono    (11207):   at Android.Widget.TextView.set_Text (IEnumerable`1 value)
 E/mono    (11207):   at MonoDroidDebugging.Activity1.SlowMethod ()
 ```
 
-Isso ocorre porque você deve atualizar a interface gráfica do usuário do thread de interface gráfica do usuário. Nosso código atualiza a GUI do thread ThreadPool, fazendo com que o aplicativo falhe. Precisamos para calcular o nosso valor no thread em segundo plano, mas, em seguida, fazer nossa atualização no thread da interface gráfica do usuário, que é tratado com [Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
+Isso ocorre porque você deve atualizar a GUI do thread de GUI. Nosso código atualiza a GUI do thread do ThreadPool, causando a falha no aplicativo. Precisamos calcular nosso valor no thread em segundo plano, mas, em seguida, fazer nossa atualização no thread de GUI, que é tratado com [Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
 
 ```csharp
 public class ThreadDemo : Activity
@@ -110,6 +110,6 @@ public class ThreadDemo : Activity
 }
 ```
 
-Esse código funciona conforme o esperado. Essa interface gráfica do usuário continua respondendo e é atualizada corretamente quando o cálculo é complexos.
+Esse código funciona conforme o esperado. Essa interface gráfica do usuário permanece responsiva e é atualizada corretamente depois que o cálculo é comple.
 
-Observe que essa técnica não é usada apenas para calcular um valor caro. Ele pode ser usado para qualquer tarefa de execução demorada que pode ser feita em segundo plano, como uma chamada de serviço web ou baixar dados da internet.
+Observe que essa técnica não é usada apenas para calcular um valor de caro. Ele pode ser usado para qualquer tarefa de longa execução que pode ser feita em segundo plano, como uma chamada de serviço web ou baixar dados de internet.

@@ -1,31 +1,31 @@
 ---
 title: Introdução aos gráficos 3D com MonoGame
-description: MonoGame oferece uma API flexível e eficiente para exibição de gráficos 3D em tempo real. Ele inclui construções de nível superior para renderização e também o acesso aos recursos de gráfico de baixo nível.
+description: MonoGame oferece uma API flexível e eficiente para a exibição de gráficos 3D em tempo real. Ele inclui construções de nível superior para renderização e também o acesso aos recursos de gráfico de baixo nível.
 ms.prod: xamarin
 ms.assetid: 8706826E-8BA5-4E00-A7D6-4072626E3292
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: b0d8a5b8ae08c460aee4748036ee171a0e84085d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dc0f8b34bbd85d5687431d8a20db4a31c72f5298
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33922308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109621"
 ---
 # <a name="introduction-to-3d-graphics-with-monogame"></a>Introdução aos gráficos 3D com MonoGame
 
-_MonoGame oferece uma API flexível e eficiente para exibição de gráficos 3D em tempo real. Ele inclui construções de nível superior para renderização e também o acesso aos recursos de gráfico de baixo nível._
+_MonoGame oferece uma API flexível e eficiente para a exibição de gráficos 3D em tempo real. Ele inclui construções de nível superior para renderização e também o acesso aos recursos de gráfico de baixo nível._
 
-A API de MonoGame fornece um amplo conjunto de classes para o desenvolvimento de aplicativos e jogos 3D. Ele permite acesso direto ao hardware para obter desempenho máximo, mantendo uma sintaxe idêntica em várias plataformas.
+A API de MonoGame fornece um amplo conjunto de classes para o desenvolvimento de aplicativos e jogos 3D. Ele permite acesso direto ao hardware para máximo desempenho, mantendo uma sintaxe idêntica em várias plataformas.
 
-MonoGame é quase idêntico ao Microsoft do XNA, para que os desenvolvedores experientes com XNA encontrará MonoGame desenvolvimento familiar. Os desenvolvedores que não usou XNA, mas usaram DirectX ou OpenGL para jogos 3D, encontrará muitas das classes e conceitos familiares também.
+MonoGame é quase idêntico ao Microsoft do XNA, para que os desenvolvedores experientes com XNA verá MonoGame de desenvolvimento familiar. Os desenvolvedores que não usou o XNA, mas tem usado o DirectX ou OpenGL para jogos 3D, encontrará muitas das classes e conceitos familiares também.
 
-A primeira seção aborda como adicionar um modelo 3D para seu jogo de um arquivo. fbx. A próxima seção descreve como criar uma câmera 3D que inclui controles comuns, como mover e procurar. A última seção leva se aprofundar o `VertexBuffer` classe que permite maior controle sobre renderização 3D em comparação comparada os modelos de renderização carregado de arquivos. fbx.
+A primeira seção aborda como adicionar um modelo 3D ao seu jogo de um arquivo. fbx. A próxima seção discute como criar uma câmera 3D que inclui controles comuns, como mover e procurando várias partes. A última seção leva a se aprofundar a `VertexBuffer` classe que permite mais controle sobre a renderização 3D, em comparação comparada modelos de renderização carregado de arquivos. fbx.
 
 
 ## <a name="topics"></a>Tópicos
 
 - [Usando a classe de modelo](~/graphics-games/monogame/3d/part1.md)
-- [Gráficos 3D com vértices de desenho](~/graphics-games/monogame/3d/part2.md)
+- [Desenhar gráficos 3D com vértices](~/graphics-games/monogame/3d/part2.md)
 - [Coordenadas 3D](~/graphics-games/monogame/3d/part3.md)

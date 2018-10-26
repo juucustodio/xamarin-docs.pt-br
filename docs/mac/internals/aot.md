@@ -1,46 +1,46 @@
 ---
-title: Xamarin.Mac à frente de compilação
-description: Este documento descreve à frente de compilação em Xamarin.Mac. Compara a compilação JIT de compilação de AOT, explica como habilitar AOT e analisa híbrida AOT.
+title: Xamarin. Mac à frente de compilação de tempo
+description: Este documento descreve à frente de compilação de tempo no xamarin. Mac. Compara a compilação de AOT para a compilação JIT, explica como habilitar a AOT e examina o AOT híbrido.
 ms.prod: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: ec8474293fbb7372529e0f850e2d16db7ebf17be
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: e155a394afd68d9970ee32785f6d0aeda6e2d129
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117247"
 ---
-# <a name="xamarinmac-ahead-of-time-compilation"></a>Xamarin.Mac à frente de compilação
+# <a name="xamarinmac-ahead-of-time-compilation"></a>Xamarin. Mac à frente de compilação de tempo
 
 ## <a name="overview"></a>Visão geral
 
-Em frente (AOT) de tempo de compilação é uma técnica de otimização poderosa para melhorar o desempenho de inicialização. No entanto, isso também afeta o tempo de compilação, o tamanho do aplicativo e a execução do programa de maneiras profundas. Para entender as compensações impõe, vamos nos aprofundar um pouco em compilação e execução de um aplicativo.
+Em frente de tempo (AOT) a compilação é uma técnica de otimização poderosos para melhorar o desempenho de inicialização. No entanto, isso também afeta seu tempo de compilação, o tamanho do aplicativo e a execução do programa maneiras profundas. Para entender as vantagens e desvantagens que ele impõe, vamos nos aprofundar um pouco sobre a compilação e execução de um aplicativo.
 
-Código gravado nas linguagens gerenciadas, como c# e F #, é compilado em uma representação intermediária chamada IL. Essa IL, armazenado em seus assemblies de biblioteca e o programa, é relativamente compacto e portátil entre arquiteturas de processador. IL, no entanto, é apenas um intermediário de conjunto de instruções e, em algum momento que IL precisará ser convertido em código de computador específico ao processador.
+Códigos escritos em linguagens, gerenciadas, como C# e F#, é compilado em uma representação intermediária chamada de IL. Essa IL, armazenado em seus assemblies de biblioteca e o programa, é relativamente compacta e portáteis entre arquiteturas de processador. IL, no entanto, é apenas um intermediário de conjunto de instruções e, em algum momento em que o IL precisará ser traduzido em código de computador específico para o processador.
 
-Há dois pontos no qual esse processamento pode ser feito:
+Há dois pontos em que esse processamento pode ser feito:
 
-- **Just-in-time (JIT)** – durante a inicialização e a execução do seu aplicativo IL é compilado na memória para o código de máquina.
-- **Antecipada de tempo (AOT)** – durante a compilação de IL é compilado e gravado em bibliotecas nativas e armazenado em seu pacote de aplicativo.
+- **Just-in-time (JIT)** – durante a inicialização e execução de seu aplicativo a IL é compilada na memória para o código de máquina.
+- **Antecipada de tempo (AOT)** – durante a compilação de IL é compilado e escrito em bibliotecas nativas e armazenado dentro de seu pacote de aplicativo.
 
 Cada opção tem um número de vantagens e desvantagens:
 
 - **JIT**
-  - **Tempo de inicialização** – compilação JIT deve ser feita na inicialização. Para a maioria dos aplicativos, isso é de 100 ms, mas para aplicativos grandes esse tempo pode ser muito mais.
-  - **Execução** – código como o JIT pode ser otimizado para o processador específico que está sendo usado, um pouco melhor código pode ser gerado. Na maioria dos aplicativos trata alguns pontos percentuais mais rapidamente no máximo.
+  - **Tempo de inicialização** – a compilação JIT deve ser feita na inicialização. Para a maioria dos aplicativos, isso é na ordem de 100 ms, mas para aplicativos grandes, esse tempo pode ser significativamente mais.
+  - **Execução** – código como o JIT pode ser otimizado para o processador específico que está sendo usado, o código um pouco melhor pode ser gerado. Na maioria dos aplicativos trata de alguns pontos percentuais mais rapidamente no máximo.
 - **AOT**
-  - **Tempo de inicialização** – carregar dylibs pré-compilado é significativamente mais rápido que assemblies JIT.
-  - **Espaço em disco** – essas dylibs Entretanto pode levar uma quantidade significativa de espaço em disco. Dependendo de quais conjuntos são AOTed, pode duas vezes ou mais o tamanho da parte do código do seu aplicativo.
-  - **Tempo de compilação** – compilação AOT é significativamente mais lenta que JIT e diminuirá compilações usá-lo. Essa diminuição pode variar de segundos até um minuto ou mais, dependendo do tamanho e o número de assemblies compilados.
-  - **Ofuscação** – como o IL, que é muito mais fácil de reverter a engenharia que código de máquina, não é necessariamente necessário ele pode ser eliminado para ajudar a ofuscar o código confidencial. Isso requer a opção descrevem abaixo "híbrida".
+  - **Tempo de inicialização** – carregar dylibs na pré-compilado é significativamente mais rápida do que os assemblies JIT.
+  - **Espaço em disco** – esses dylibs na podem levar uma quantidade significativa de espaço em disco no entanto. Dependendo de quais assemblies são AOTed, pode duas vezes ou mais o tamanho da parte do código do seu aplicativo.
+  - **Tempo de compilação** – compilação AOT é significativamente mais lenta que JIT e diminuirá compilações usá-lo. Essa diminuição pode variar de segundos até um minuto ou mais, dependendo do tamanho e número de assemblies compilados.
+  - **Ofuscação** – como IL, que é muito mais fácil de reverter a engenharia de que o código de máquina, não é necessariamente obrigatório ele pode ser eliminado para ajudar o ofuscar o código confidencial. Isso requer a opção descrevem abaixo "híbrida".
 
-## <a name="enabling-aot"></a>Habilitando AOT
+## <a name="enabling-aot"></a>Habilitar a AOT
 
-Opções de AOT serão adicionadas ao painel de compilação Mac em uma atualização futura. Até lá, a habilitação do AOT requer passando um argumento de linha de comando por meio do campo "argumentos adicionais mmp" na compilação de Mac. As opções são as seguintes:
+Opções de AOT serão adicionadas ao painel de Build do Mac em uma atualização futura. Até lá, habilitar a AOT requer passando um argumento de linha de comando por meio do campo "argumentos mmp adicionais" no Build do Mac. As opções são as seguintes:
 
 
       --aot[=VALUE]          Specify assemblies that should be AOT compiled
@@ -60,14 +60,14 @@ Opções de AOT serão adicionadas ao painel de compilação Mac em uma atualiza
 
 
 
-## <a name="hybrid-aot"></a>Híbrido AOT
+## <a name="hybrid-aot"></a>AOT híbrido
 
-Durante a execução de um aplicativo macOS o tempo de execução padrão é usando o código de máquina carregados a partir de bibliotecas nativas produzidas pela compilação AOT. No entanto, há algumas áreas do código como trampolines, onde compilação JIT pode produzir resultados significativamente mais otimizados. Isso exige que o IL de assemblies gerenciados para estar disponível. No iOS, os aplicativos são impedidos de qualquer uso da compilação JIT; Esses seção de código são AOT compilado também.
+Durante a execução de um aplicativo do macOS o tempo de execução padrão é usando o código de máquina carregados a partir de bibliotecas nativas produzidas pela compilação AOT. No entanto, há algumas áreas do código como trampolines, em que compilação JIT pode produzir resultados significativamente mais otimizados. Isso exige que o IL de assemblies gerenciados estar disponível. No iOS, os aplicativos são restritos de qualquer uso da compilação JIT; Esses seção de código são AOT compilado também.
 
-A opção híbrida instrui o compilador a ambos os compilação esses seção (como iOS) mas também para supõem que o IL não estará disponível em tempo de execução. Essa IL, em seguida, pode ser removido após a compilação. Conforme observado acima, o tempo de execução será forçado a usar menos otimizadas rotinas em alguns locais.
+Opção híbrida instrui o compilador a ambas as compilação esses seção (como o iOS), mas também para supõem que o IL não estará disponível em tempo de execução. Em seguida, pode ser eliminado essa IL após a compilação. Conforme observado acima, o tempo de execução será forçado a usar menos rotinas otimizadas em alguns locais.
 
 ## <a name="further-considerations"></a>Considerações adicionais
 
-As consequências negativas da escala AOT com os tamanhos e o número de módulos (assemblies) processados. Completa [framework de destino](~/mac/platform/target-framework.md) de exemplo contém um significativamente maior biblioteca BCL (Base Class) que moderno e, portanto, AOT vai demorar significativamente mais tempo e produzir pacotes maiores. Isso é composto por incompatibilidade do framework de destino completo com a vinculação, que extrai o código não utilizado. Considere mover seu aplicativo moderno e habilitar a vinculação para obter melhores resultados.
+As consequências negativas de escala AOT com os tamanhos e o número de assemblies processados. Completo [estrutura de destino](~/mac/platform/target-framework.md) de exemplo contém um significativamente maior biblioteca BCL (Base Class) que moderno e, portanto, AOT vai demorar significativamente mais tempo e produzir pacotes maiores. Isso é complicado por incompatibilidade do framework de destino completo com a vinculação, que remove código não utilizado. Considere a possibilidade de mover seu aplicativo para vinculação moderna e habilitação para obter os melhores resultados.
 
-Um benefício adicional de AOT vem com interações aprimoradas com depuração e criação de perfil toolchains nativo. Desde que a grande maioria da Base de código será compilada antecipadamente, terão nomes de função e símbolos que são mais fáceis de ler em relatórios de falha nativo, criação de perfil e depuração. Funções JIT gerado não têm esses nomes e geralmente aparecem como deslocamentos hexadecimais sem nome que são muito difíceis de resolver.
+Um benefício adicional de AOT vem com interações aprimoradas com depuração nativa e cadeias de ferramentas de criação de perfil. Uma vez que a grande maioria da Base de código será compilada antes do tempo, terão nomes de função e símbolos que são mais fáceis de ler dentro de relatórios de falhas nativas, perfis e depuração. Funções JIT gerado não têm esses nomes e geralmente aparecem como deslocamentos hexadecimais sem nome que são muito difíceis de resolver.

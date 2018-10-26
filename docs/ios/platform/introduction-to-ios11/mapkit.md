@@ -4,15 +4,15 @@ description: 'Este documento descreve novos recursos MapKit no iOS 11: agrupamen
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/30/2017
-ms.openlocfilehash: c060a7bbc8d5968aeaca5f84743cdf22513dfbec
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 3c1b29a4aba03ffe8a3131625ef29cf64766bb6c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116908"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>Novos recursos no MapKit no iOS 11
 

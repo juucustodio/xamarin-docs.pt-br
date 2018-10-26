@@ -1,52 +1,52 @@
 ---
 title: Integrações de depuração
-description: Este documento descreve como depurar integrações de pastas de trabalho do Xamarin, do lado do agente e no lado do cliente no Windows e Mac.
+description: Este documento descreve como depurar integrações de pastas de trabalho do Xamarin, o lado do agente e o lado do cliente no Windows e Mac.
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 6e37b1ac3d0fb78b5737ebe97b5a28ab40adb648
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 86d9c6af93e7f59eb0e819730e46324688df7566
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36269051"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105994"
 ---
 # <a name="debugging-integrations"></a>Integrações de depuração
 
-## <a name="debugging-agent-side-integrations"></a>Depuração integrações do lado do agente
+## <a name="debugging-agent-side-integrations"></a>Integrações do lado do agente de depuração
 
-Depuração no lado do agente integrações melhor é feito usando os métodos de registro em log fornecidos pelo `Log` classe em `Xamarin.Interactive.Logging`. Consulte o [ `API docs` ](https://developer.xamarin.com/api/type/Xamarin.Interactive.Logging.Log/) para os métodos para chamar.
+Integrações do lado do agente de depuração é mais bem efetuada usando os métodos de registro em log fornecidos pela `Log` classe `Xamarin.Interactive.Logging`. Consulte a [ `API docs` ](https://developer.xamarin.com/api/type/Xamarin.Interactive.Logging.Log/) para os métodos para chamar.
 
-Na macOS, mensagens de log são exibidas no menu de Visualizador de log (**Janela > Visualizador de Log**) e no log do cliente. No Windows, as mensagens será só aparecem no log do cliente, pois não há nenhum visualizador de log.
+No macOS, mensagens de log são exibidos no menu de Visualizador de log (**Janela > Visualizador de Log**) e no log do cliente. No Windows, as mensagens só são exibidos no log do cliente, pois não há nenhum visualizador de log.
 
-O log de cliente estiver nos locais a seguir no macOS e Windows:
+É o log do cliente nos seguintes locais no macOS e no Windows:
 
 - Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
-Uma coisa a serem consideradas é que, ao carregar integrações via o usual `#r` mecanismo durante o desenvolvimento, o conjunto de integração será retirado como um _dependência_ da pasta de trabalho e empacotado com ele, se for um caminho absoluto não usado. Isso pode causar alterações apareçam não se propague, como se a recriação de integração não fez nada.
+Uma coisa para estar atento é que, ao carregar integrações por meio de normais `#r` mecanismo durante o desenvolvimento, o assembly de integração será capturado como uma _dependência_ da pasta de trabalho e empacotado com ele, se for um caminho absoluto não usado. Isso pode causar alterações sejam exibidas não propagar, como se recriar a integração não fez nada.
 
-## <a name="debugging-client-side-integrations"></a>Depuração integrações do lado do cliente
+## <a name="debugging-client-side-integrations"></a>Integrações do lado do cliente de depuração
 
-Como as integrações do lado do cliente são escritas em JavaScript e carregadas no nosso superfície do navegador da web (consulte a [arquitetura](~/tools/workbooks/sdk/architecture.md) documentação), a melhor maneira de depurá-los é usando as ferramentas de desenvolvedor WebKit no Mac ou usando o seletor de F12 no Windows .
+Como as integrações do lado do cliente são gravadas em JavaScript e carregadas no nosso superfície do navegador da web (consulte a [arquitetura](~/tools/workbooks/sdk/architecture.md) documentação), a melhor maneira de depurá-los é usando as ferramentas de desenvolvedor do WebKit no Mac ou usando o seletor de F12 no Windows .
 
-Ambos os conjuntos de ferramentas permitem exibir origem TypeScript/JavaScript, definir pontos de interrupção, exibir a saída do console e inspecionar e modificar o DOM.
+Ambos os conjuntos de ferramentas permitem que você exibir código-fonte do TypeScript/JavaScript, definir pontos de interrupção, exibir a saída do console e inspecionar e modificar o DOM.
 
 ### <a name="mac"></a>Mac
 
-Para habilitar as ferramentas de desenvolvedor para pastas de trabalho do Xamarin Mac, execute o comando a seguir em seu terminal:
+Para habilitar as ferramentas de desenvolvedor para pastas de trabalho do Xamarin no Mac, execute o seguinte comando no terminal:
 
 ```shell
 defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
-e, em seguida, reinicie o Xamarin pastas de trabalho. Quando você fizer isso, você deverá ver **elemento inspecionar** aparecer no seu menu de contexto e um novo **desenvolvedor** painel estarão disponível nas preferências de pastas de trabalho. Essa opção permite que você escolha se deseja que as ferramentas de desenvolvedor abertas durante a inicialização:
+e, em seguida, reinicie o Xamarin Workbooks. Quando você fizer isso, você deverá ver **inspecionar elemento** aparecem no seu menu de contexto e uma nova **desenvolvedor** painel estará disponível nas preferências de pastas de trabalho. Essa opção permite que você escolha se deseja que as ferramentas de desenvolvimento abertas na inicialização:
 
 [![Painel do desenvolvedor](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png#lightbox)
 
-Esta preferência é somente para reinicialização também — você precisará reiniciar o cliente de pastas de trabalho para que ele entre em vigor em novas pastas de trabalho. Ativar as ferramentas de desenvolvedor por meio do menu de contexto ou as preferências mostrará a interface de usuário familiar do Safari:
+Essa preferência é somente de reinicialização também — você precisará reiniciar o cliente de pastas de trabalho para que ele entre em vigor em novas pastas de trabalho. Ativar as ferramentas de desenvolvedor por meio do menu de contexto ou as preferências de mostrará a interface do usuário familiar do Safari:
 
 [![Ferramentas de desenvolvimento do Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png#lightbox)
 
@@ -54,14 +54,14 @@ Para obter informações sobre como usar as ferramentas de desenvolvedor do Safa
 
 ### <a name="windows"></a>Windows
 
-No Windows, a equipe do IE fornece uma ferramenta conhecida como "Seletor F12" que é um depurador remoto para instâncias do Internet Explorer incorporados. Você pode encontrar a ferramenta no seguinte local:
+No Windows, a equipe do IE fornece uma ferramenta conhecida como "Seletor de F12" que é um depurador remoto para instâncias do Internet Explorer embedded. Você pode encontrar a ferramenta no seguinte local:
 
 ```shell
 C:\Windows\System32\F12\F12Chooser.exe
 ```
 
-Seletor de execução F12 e você verá a instância incorporada que habilita a superfície de cliente de pastas de trabalho na lista. Escolha o e o familiar F12 ferramentas de depuração do Internet Explorer serão exibida, conectados ao cliente:
+Seletor de execução F12 e você deverá ver a instância incorporada que alimenta a superfície de cliente de pastas de trabalho na lista. Escolha e familiar F12 do Internet Explorer as ferramentas de depuração serão exibida, anexado ao cliente:
 
-[![Ferramentas F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png#lightbox)
+[![Ferramentas de F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png#lightbox)
 
 [webkit-docs]: https://trac.webkit.org/wiki/WebInspector

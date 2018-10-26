@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
 ms.custom: video
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: af560848240fec9558cc63969bcc269eedbd5424
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: e4f0138c0177c046c1e967a3d3625604f73327d6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947280"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103186"
 ---
 # <a name="oreo-features"></a>Recursos do Oreo
 
@@ -58,7 +58,7 @@ Cada uma dessas etapas é explicada nas seções a seguir:
 
 Para adicionar suporte do Android Oreo para o Visual Studio, faça o seguinte:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 -   Se você estiver usando o Visual Studio 2017: 
 
@@ -68,7 +68,7 @@ Para adicionar suporte do Android Oreo para o Visual Studio, faça o seguinte:
 
 -   Se você estiver usando o Visual Studio 2015, nós recomendamos fazer o downgrade de SDK Tools para 25 e usando a GUI do Gerenciador de emulador do Google antigo. Ferramentas do SDK 25 ainda podem ser usadas junto com a API 26, 27 e mais recente e não afetarão o desenvolvimento para novas plataformas. Isso lhe dará uma interface para o gerenciamento do SDK do Android para versões mais antigas do VS.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 -   Atualizar para a versão estável mais recente do Visual Studio 2017 para Mac, conforme explicado em [atualização do Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/update).
 
@@ -82,7 +82,7 @@ Para obter mais informações sobre o suporte de Xamarin para Android Oreo, cons
 
 Para criar um projeto com o xamarin. Android 8.0, primeiro você deve usar o Gerenciador de SDK do Xamarin Android para instalar a plataforma SDK para **Android 8.0 - Oreo** ou posterior. Você também deve instalar as Android SDK Tools 26.0 ou posterior.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Inicie o Gerenciador de SDK (no Visual Studio, clique em **Ferramentas > Android > Gerenciador de SDK do Android**).
 
@@ -94,7 +94,7 @@ Para criar um projeto com o xamarin. Android 8.0, primeiro você deve usar o Ger
 
     [![Selecionando o Android SDK Tools 26 no Gerenciador de SDK do Android](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Inicie o Gerenciador de SDK (no Visual Studio para Mac, clique em **Ferramentas > Gerenciador de SDK**).
 
@@ -121,11 +121,11 @@ Quando você cria um projeto do Android, você deve configurar as configuraçõe
 
 Se você tentar iniciar o Gerenciador de AVD baseado em GUI do Google padrão depois de instalar o Android SDK Tools 26.0 de ou posterior, você pode receber o diálogo de erro a seguir, que pede que você use a ferramenta de Gerenciador de AVD de linha de comando **avdmanager** em vez disso :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Caixa de diálogo de aviso de Gerenciador de emulador do Android](oreo-images/win/03-avd-warning.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Caixa de diálogo de aviso de Gerenciador de emulador do Android](oreo-images/mac/03-avd-warning.png)
 
@@ -141,7 +141,7 @@ Para criar dispositivos virtuais sem o Android Device Manager, siga as etapas na
 
 Para usar **avdmanager** para criar um novo dispositivo virtual, siga estas etapas:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Abra uma janela de Prompt de comando e defina `JAVA_HOME` até o local do SDK do Java em seu computador. Para uma instalação típica do Xamarin, você pode usar o comando a seguir:
 
@@ -168,7 +168,7 @@ Depois que você **avdmanager** para criar o seu dispositivo virtual, ele será 
 
 [![Novo AVD adicionado ao menu suspenso do dispositivo](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1.  Abra uma **Terminal** janela e mudar para o local do diretório de ferramentas do SDK do Android no Mac. Para uma instalação típica do Xamarin, você pode usar o comando a seguir:
 
@@ -182,7 +182,7 @@ Depois que você **avdmanager** para criar o seu dispositivo virtual, ele será 
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-3.  Quando for solicitado com **você deseja criar um perfil de hardware personalizado [não]** você pode inserir **nenhuma** e aceitar o perfil de hardware padrão. Se você disser **Sim**, **avdmanager** solicitará que você com uma lista de perguntas para personalizar o perfil de hardware.
+3.  Quando for solicitado com **você deseja criar um perfil de hardware personalizado [não]** você pode inserir **nenhuma** e aceitar o perfil de hardware padrão. Se você disser **yes**, **avdmanager** solicitará que você com uma lista de perguntas para personalizar o perfil de hardware.
 
 Depois de usar **avdmanager** para criar o seu dispositivo virtual, ele será incluído no menu suspenso do dispositivo:
 

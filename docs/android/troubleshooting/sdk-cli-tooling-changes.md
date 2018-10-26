@@ -1,27 +1,27 @@
 ---
 title: Alterações nas Ferramentas do SDK do Android
-description: Alterações em como o SDK do Android gerencia os níveis de API e os AVDs instalado.
+description: Alterações em como o SDK do Android gerencia o instalado níveis de API e AVDs.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 4e808736fd92fa40ecbf0c24938c0fedd7afcff9
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: dbd3287e7c646be7fd969699eab685906a1c6c1a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112800"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Alterações nas Ferramentas do SDK do Android
 
-_Alterações em como o SDK do Android gerencia os níveis de API e os AVDs instalado._
+_Alterações em como o SDK do Android gerencia o instalado níveis de API e AVDs._
 
-## <a name="changes-to-android-sdk-tooling"></a>Alterações em ferramentas do SDK do Android
+## <a name="changes-to-android-sdk-tooling"></a>Alterações nas ferramentas do SDK do Android
 
-Em versões recentes das ferramentas do SDK para o Android, o Google removeu os gerenciadores de AVD e SDK existentes em favor de novas ferramentas de CLI (Interface de linha de comando). O **android** programa foi removido e os gerenciadores de Google GUI (Interface gráfica do usuário) no Visual Studio para Mac e versões mais antigas do Visual Studio Tools para Xamarin deixará de funcionar após a versão 25.2.5 de ferramentas do SDK do Android. Por exemplo, a tentativa de usar o **android** programa por meio da linha de comando resultará em uma mensagem de erro semelhante à seguinte:
+Em versões recentes do SDK Tools para o Android, o Google removeu os gerenciadores de AVD e SDK existentes em favor de novas ferramentas da CLI (Interface de linha de comando). O **android** programa foi removido e os gerenciadores de Google GUI (Interface gráfica do usuário) no Visual Studio para Mac e as versões mais antigas das ferramentas do Visual Studio para Xamarin deixarão de funcionar anteriores à versão 25.2.5 de do Android SDK Tools. Por exemplo, a tentativa de usar o **android** programa por meio da linha de comando resultará em uma mensagem de erro semelhante à seguinte:
 
 ```shell
 The "android" command is deprecated.
@@ -30,41 +30,41 @@ For command-line tools, use tools\bin\sdkmanager.bat
 and tools\bin\avdmanager.bat
 ```
 
-As seções a seguir explicam como gerenciar o SDK do Android e dispositivos Virtual Android usando o SDK do Android 25.3.0 e posterior.
+As seções a seguir explicam como gerenciar o SDK do Android e dispositivos virtuais Android usando o SDK do Android 25.3.0 e versões posteriores.
 
 ### <a name="ui-tools"></a>Ferramentas de interface do usuário
 
-Visual Studio e o Visual Studio para Mac agora fornecem Xamarin substituições para os gerenciadores de descontinuados baseado em GUI do Google:
+O Visual Studio e Visual Studio para Mac agora fornecem substituições de Xamarin para os gerenciadores de descontinuados baseado em GUI do Google:
 
--   Para baixar as ferramentas do SDK do Android, plataformas e outros componentes que você precisa para desenvolver aplicativos xamarin, use o [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md) em vez do Gerenciador de SDK herdados Google.
+-   Para baixar Android SDK tools, plataformas e outros componentes que você precisa para desenvolver aplicativos xamarin. Android, use o [Gerenciador de SDK do Android Xamarin](~/android/get-started/installation/android-sdk.md) em vez de Google SDK Manager herdado.
 
--   Para criar e configurar dispositivos Virtual Android, use o [Gerenciador de dispositivos Android](~/android/get-started/installation/android-emulator/device-manager.md) em vez do Gerenciador de emulador herdados Google.
+-   Para criar e configurar dispositivos virtuais Android, use o [Gerenciador de dispositivos Android](~/android/get-started/installation/android-emulator/device-manager.md) em vez de Google Emulator Manager herdado.
 
-Essas ferramentas são funcionalmente equivalentes para o Google baseada em GUI e gerentes, elas substituem.
+Essas ferramentas são funcionalmente equivalentes para o Google baseada em GUI e gerentes, eles substituem.
 
-### <a name="cli-tools"></a>Ferramentas CLI
+### <a name="cli-tools"></a>Ferramentas da CLI
 
-Como alternativa, você pode usar ferramentas CLI para gerenciar e atualizar os emuladores e o SDK do Android. Os seguintes programas fazem a interface de linha de comando para as ferramentas do SDK do Android:
+Como alternativa, você pode usar as ferramentas da CLI para gerenciar e atualizar seus emuladores e o SDK do Android. Os seguintes programas agora compõem a interface de linha de comando para as ferramentas do SDK do Android:
 
 #### <a name="sdkmanager"></a>sdkmanager
 
-**Adicionado no:** ferramentas do SDK do Android 25.2.3 (novembro de 2016) e superior.
+**Adicionado no:** Android SDK Tools 25.2.3 (novembro de 2016) e superior.
 
-Há um novo programa chamado **sdkmanager** no **ferramentas/bin** pasta do seu Android SDK. Essa ferramenta é usada para manter o SDK do Android na linha de comando. Para obter mais informações sobre como usar essa ferramenta, consulte [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html).
+Há um novo programa chamado **sdkmanager** na **ferramentas/bin** pasta do SDK do Android. Essa ferramenta é usada para manter o SDK do Android na linha de comando. Para obter mais informações sobre como usar essa ferramenta, consulte [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html).
 
 #### <a name="avdmanager"></a>avdmanager
 
-**Adicionado no:** ferramentas do SDK do Android 25.3.0 (março de 2017) e superior.
+**Adicionado no:** Android SDK Tools 25.3.0 (março de 2017) e superior.
 
-Há um novo programa chamado **avdmanager** no **ferramentas/bin** pasta do seu Android SDK. Essa ferramenta é usada para manter os AVDs para o emulador Android. Para obter mais informações sobre como usar essa ferramenta, consulte [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
+Há um novo programa chamado **avdmanager** na **ferramentas/bin** pasta do SDK do Android. Essa ferramenta é usada para manter os AVDs para o emulador do Android. Para obter mais informações sobre como usar essa ferramenta, consulte [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 
-### <a name="downgrading"></a>Fazendo downgrade
+### <a name="downgrading"></a>Fazer downgrade
 
-Você pode fazer o downgrade seu **ferramentas do SDK do Android** versão instalando uma versão anterior do SDK do Android do [site do desenvolvedor Android](https://developer.android.com/studio/index.html).
+Você pode fazer o downgrade seu **do Android SDK Tools** versão instalando uma versão anterior do SDK do Android a [site do desenvolvedor Android](https://developer.android.com/studio/index.html).
 
-### <a name="using-the-old-gui"></a>Usando a GUI do antiga
+### <a name="using-the-old-gui"></a>Usando a GUI antiga
 
-Você ainda pode usar a GUI do original executando o **android** programa dentro de sua **ferramentas** pasta enquanto você estiver usando **ferramentas do SDK do Android** versão **25.2.5**  ou inferior.
+Você ainda pode usar a GUI do original executando o **android** programa dentro de seu **ferramentas** pasta, desde que você estiver usando **do Android SDK Tools** versão **25.2.5**  ou inferior.
 
 
 ## <a name="related-links"></a>Links relacionados

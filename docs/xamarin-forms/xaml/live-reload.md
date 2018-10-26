@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38860661"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109985"
 ---
 # <a name="xamarin-live-reload"></a>Recarregamento dinâmico do Xamarin
 
@@ -22,11 +22,10 @@ Xamarin Live Reload permite que você **fazer alterações em seu XAML e vê-los
 
 Como seu aplicativo é compilado ao usar o Live Reload, ele funciona com todas as bibliotecas e controles de terceiros. Ao vivo funciona de recarregamento em todas as plataformas do xamarin. Forms dá suporte, incluindo iOS, Android e UWP e funciona em todos os destinos de implantação válido, incluindo dispositivos físicos, emuladores e simuladores.
 
-> [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
-
-Recarregamento dinâmico está disponível atualmente apenas no Visual Studio 2017.
-
-[![Participe de bate-papo em https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> [!NOTE]
+> [Visualização dinâmica recarregar terminou](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
+>
+> Há uma discussão sobre isso na [ ![participe de bate-papo em https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## <a name="requirements"></a>Requisitos
 

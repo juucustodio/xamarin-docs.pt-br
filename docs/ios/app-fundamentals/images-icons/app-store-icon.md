@@ -1,24 +1,24 @@
 ---
-title: Ícones de loja de aplicativos no xamarin
-description: Este documento descreve como usar os catálogos de ativo para gerenciar um ícone de loja de aplicativos para um aplicativo xamarin. Anteriormente, os ícones de loja de aplicativos eram gerenciados com iTunes conectar.
+title: Ícones da App Store no xamarin. IOS
+description: Este documento descreve como usar os catálogos de ativos para gerenciar um ícone da App Store para um aplicativo xamarin. IOS. Anteriormente, os ícones de aplicativo Store eram gerenciados com o iTunes Connect.
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/26/2017
-ms.openlocfilehash: 749dbf01af382a54fe24652706f6a605ac7b20b4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 53e25ae9f4650254f2aaaa03dc8727fae674c9f0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783604"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105877"
 ---
-# <a name="app-store-icons-in-xamarinios"></a>Ícones de loja de aplicativos no xamarin
+# <a name="app-store-icons-in-xamarinios"></a>Ícones da App Store no xamarin. IOS
 
-Antes de 9 Xcode todos os ícones de loja de aplicativos foram adicionados por meio de conectar-se de iTunes. No entanto, isso não é mais o caso. Ícones da App Store agora devem ser incluídos como parte do seu pacote do projeto e adicionadas em um catálogo de ativos. Aplicativos que não contêm um ícone de loja de aplicativos serão rejeitados pela Apple.
+Antes do Xcode 9 todos os ícones da App Store foram adicionados por meio do iTunes Connect. No entanto, isso não é mais o caso. Ícones de aplicativo Store agora devem ser incluídos como parte do seu pacote do projeto e adicionadas a um catálogo de ativos. Aplicativos que não contêm um ícone da App Store serão rejeitados pela Apple.
 
-O ícone de armazenamento de aplicativos é a aparência do seu aplicativo para usuários, portanto ele deve ser fácil de lembrar e exibição bem nesse tamanho pequeno. Ícones memoráveis são limpos, simples e imediatamente reconhecíveis.
+O ícone de Store de aplicativo é a aparência do seu aplicativo para usuários, portanto, ele deve ser fácil de lembrar e exibição bem em um tamanho pequeno. Ícones memoráveis são limpos, simples e imediatamente reconhecíveis.
 
 A Apple sugere as seguintes diretrizes ao criar o ícone do seu aplicativo:
 
@@ -29,30 +29,30 @@ A Apple sugere as seguintes diretrizes ao criar o ícone do seu aplicativo:
 
 Uma imagem de 1.024 x 1.024 pixels é necessária para o ícone do aplicativo que será exibido na App Store.  A Apple declarou que o ícone da App Store no catálogo de ativos não pode ser transparente nem conter um canal alfa.
 
-Para obter mais informações, consulte da Apple [iOS diretrizes de Interface Humana](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/image-size-and-resolution/).
+Para obter mais informações, consulte da Apple [diretrizes de Interface humana do iOS](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/image-size-and-resolution/).
 
-## <a name="adding-an-app-store-icon"></a>Adicionar um ícone de loja de aplicativos
+## <a name="adding-an-app-store-icon"></a>Adicionando um ícone da App Store
 
 Os ícones de Lojas de Aplicativos devem ser entregues agora por um catálogo de ativos. 
 
-Para adicionar um ícone de armazenamento de aplicativo faça o seguinte:
+Para adicionar um ícone da App Store faça o seguinte:
 
-1. Localize o **AppIcon** imagem definida **Assets.xcassets** arquivo do projeto. 
-    - Todos os projetos novos devem ser acompanhadas de uma uma **Assets.xcassets** arquivo que contém um conjunto de imagem AppIcon.
-    - Para adicionar um novo catálogo de ativos, clique com botão direito no projeto e selecione **Adicionar > novo arquivo > Catálogo de ativos**.
-    - Para adicionar um novo um conjunto de imagem do ícone de aplicativo, clique no ícone conjunto área e selecione **ícones de aplicativo & imagens de inicialização > novo ícone de aplicativo**:
+1. Localize o **AppIcon** imagem definido **xcassets** arquivo do seu projeto. 
+    - Todos os novos projetos devem ser acompanhados de um uma **xcassets** arquivo que contém um conjunto de imagens AppIcon.
+    - Para adicionar um novo catálogo de ativos, clique com botão direito no seu projeto e selecione **Adicionar > novo arquivo > Catálogo de ativos**.
+    - Para adicionar um novo um conjunto de imagens de ícone do aplicativo, clique com botão direito no ícone conjunto área e selecione **imagens de inicialização e ícones do aplicativo > novo ícone do aplicativo**:
     
     ![Adicionar nova opção de conjunto de imagem](app-store-icon-images/image1.png)
 
 2. Role até a **App Store** ícone na lista:
 
-    ![Ícone de loja de aplicativos](app-store-icon-images/image2.png)
+    ![Ícone da App Store](app-store-icon-images/image2.png)
 
-3. Clique no ícone e navegue para a imagem de pixel de 1024 x 1024. Salve o catálogo de ativos.
+3. Clique no ícone e navegue para a sua imagem de pixel de 1024 x 1024. Salve o catálogo de ativos.
 
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Gerenciando ícones com catálogos de ativo](~/ios/app-fundamentals/images-icons/app-icons.md#managing)
+- [Gerenciando ícones com catálogos de ativos](~/ios/app-fundamentals/images-icons/app-icons.md#managing)

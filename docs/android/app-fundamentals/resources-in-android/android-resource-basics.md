@@ -3,25 +3,25 @@ title: Noções básicas do recurso do Android
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 207644f5a5d3d346214ba090dcd450e55fde2657
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241312"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110128"
 ---
 # <a name="android-resource-basics"></a>Noções básicas do recurso do Android
 
 Quase todos os aplicativos Android que algum tipo de recursos dentro deles; no mínimo, eles geralmente têm os layouts de interface do usuário na forma de arquivos XML. Quando um aplicativo xamarin. Android é criado, os recursos padrão são configuradas pelo modelo de projeto xamarin. Android:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Arquivos de recurso](android-resource-basics-images/01-resource-files-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Arquivos de recurso](android-resource-basics-images/01-resource-files-xs.png)
  
@@ -44,11 +44,11 @@ Os cinco arquivos que compõem os recursos padrão foram criados na pasta de rec
 
 Criação de recursos é tão simple quanto adicionar arquivos para o diretório para o tipo de recurso em questão. Captura de tela abaixo mostra os recursos de cadeia de caracteres para localidades alemãs foram adicionados a um projeto. Quando **strings. XML** foi adicionado ao arquivo, o **Build Action** foi automaticamente definido como **AndroidResource** pelas ferramentas do xamarin. Android:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Criar ação para definir como AndroidResource de strings. XML](android-resource-basics-images/02-build-action-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Criar ação para definir como AndroidResource de strings. XML](android-resource-basics-images/02-build-action-xs.png)
  

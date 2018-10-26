@@ -1,55 +1,55 @@
 ---
-title: Exibições de coleção em xamarin
-description: Exibições de coleção permitem que o conteúdo a ser exibido usando layouts arbitrários. Eles permitem criar facilmente layouts de grade fora da caixa, e também dar suporte a layouts personalizados.
+title: Exibições de coleção no xamarin. IOS
+description: Exibições de coleção permitem que o conteúdo a ser exibido usando layouts arbitrários. Eles permitem facilmente criar layouts de grade para uso imediato, e também dar suporte a layouts personalizados.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: b9ba2f885364084d6bee67c460b4831c00c7ae55
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8e114f39a01c2243889c53c855acd7fa8061ed09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790621"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114724"
 ---
-# <a name="collection-views-in-xamarinios"></a>Exibições de coleção em xamarin
+# <a name="collection-views-in-xamarinios"></a>Exibições de coleção no xamarin. IOS
 
-_Exibições de coleção permitem que o conteúdo a ser exibido usando layouts arbitrários. Eles permitem criar facilmente layouts de grade fora da caixa, e também dar suporte a layouts personalizados._
+_Exibições de coleção permitem que o conteúdo a ser exibido usando layouts arbitrários. Eles permitem facilmente criar layouts de grade para uso imediato, e também dar suporte a layouts personalizados._
 
-Exibições de coleção, disponíveis no `UICollectionView` da classe, são um novo conceito no iOS 6 que apresentam apresentar vários itens na tela usando layouts. Os padrões para fornecer dados para um `UICollectionView` para criar itens e interagir com os seguinte itens a delegação mesmo e fonte de dados padrões usados no desenvolvimento do iOS.
+Exibições de coleção disponíveis no `UICollectionView` de classe, são um novo conceito no iOS 6 que apresentam apresentar vários itens na tela usando layouts. Os padrões para fornecer dados a um `UICollectionView` para criar itens e interagir com esses acompanhamento de itens a delegação mesma e fonte de dados padrões comumente usados no desenvolvimento do iOS.
 
-No entanto, as exibições de coleção funcionam com um subsistema de layout que seja independente do `UICollectionView` em si. Portanto, basta fornecer um layout diferente pode alterar facilmente a apresentação de uma exibição de coleção.
+No entanto, as exibições de coleção funcionam com um subsistema de layout que é independente do `UICollectionView` em si. Portanto, simplesmente fornecendo um layout diferente pode alterar facilmente a apresentação de uma exibição de coleção.
 
-iOS fornece uma classe de layout chamada `UICollectionViewFlowLayout` que permite que a linha de layouts, como uma grade a ser criado sem trabalho adicional. Além disso, layouts personalizados também podem ser criados permitir qualquer apresentação que você pode imaginar.
+iOS fornece uma classe de layout chamada `UICollectionViewFlowLayout` que permite a layouts com base em linha, como uma grade a ser criado sem trabalho adicional. Além disso, layouts personalizados também podem ser criados que permitem que qualquer apresentação que você pode imaginar.
 
 ## <a name="uicollectionview-basics"></a>Noções básicas de UICollectionView
 
-O `UICollectionView` classe é composta por três itens diferentes:
+O `UICollectionView` classe é composto de três itens diferentes:
 
--  **Células** – exibições controladas por dados para cada item
--  **Modos de exibição suplementares** – exibições controladas por dados associadas a uma seção.
--  **Exibições de decoração** – controlada por exibições criadas por um layout de dados não
+-  **Células** – exibições controlada por dados para cada item
+-  **Modos de exibição suplementares** – modos de exibição controlada por dados associados a uma seção.
+-  **Modos de exibição de decoração** – dados de não controlado por exibições criadas com um layout
 
 ## <a name="cells"></a>Células
 
-As células são objetos que representam um único item no conjunto de dados que está sendo apresentado pela exibição de coleção. Cada célula é uma ocorrência da `UICollectionViewCell` classe, que é composta de três modos de exibição diferentes, conforme mostrado na figura a seguir:
+As células são objetos que representam um único item no conjunto de dados que está sendo apresentado pelo modo de exibição de coleção. Cada célula é uma instância do `UICollectionViewCell` classe, que é composto de três modos de exibição diferentes, conforme mostrado na figura abaixo:
 
  [![](uicollectionview-images/01-uicollectionviewcell.png "Cada célula é composta de três modos de exibição diferentes, conforme mostrado aqui")](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
 
 O `UICollectionViewCell` classe tem as seguintes propriedades para cada um desses modos de exibição:
 
--   `ContentView` – Este modo de exibição contém o conteúdo que apresenta a célula. Ela é processada na ordem z superior na tela.
--   `SelectedBackgroundView` – Células têm suporte interno para seleção. Essa exibição é usada para indicar visualmente se uma célula está selecionada. Ele é renderizado logo abaixo do `ContentView` quando uma célula estiver selecionada.
--   `BackgroundView` – Células também podem exibir um plano de fundo, que é apresentado pelo `BackgroundView` . Essa exibição é renderizada sob o `SelectedBackgroundView` .
+-   `ContentView` – Este modo de exibição contém o conteúdo que apresenta a célula. Ele é processado na ordem z superior na tela.
+-   `SelectedBackgroundView` – As células têm suporte interno para seleção. Essa exibição é usada para indicar visualmente que uma célula está selecionada. Ele é renderizado logo abaixo do `ContentView` quando uma célula é selecionada.
+-   `BackgroundView` – Células também podem exibir um plano de fundo, é apresentado pelo `BackgroundView` . Essa exibição é renderizada sob o `SelectedBackgroundView` .
 
 
-Definindo o `ContentView` , para que seja menor do que o `BackgroundView` e `SelectedBackgroundView`, o `BackgroundView` pode ser usado para quadro visualmente o conteúdo, enquanto o `SelectedBackgroundView` será exibido quando uma célula é selecionada, conforme mostrado abaixo:
+Definindo o `ContentView` , que é menor do que o `BackgroundView` e `SelectedBackgroundView`, o `BackgroundView` pode ser usado para estruturar visualmente o conteúdo, enquanto o `SelectedBackgroundView` será exibido quando uma célula é selecionada, conforme mostrado abaixo:
 
  [![](uicollectionview-images/02-cells.png "Os elementos de célula diferente")](uicollectionview-images/02-cells.png#lightbox)
 
-As células na captura de tela acima são criadas por herança de `UICollectionViewCell` e configuração de `ContentView`, `SelectedBackgroundView` e `BackgroundView` propriedades, respectivamente, conforme mostrado no código a seguir:
+As células na captura de tela acima são criadas por herança de `UICollectionViewCell` e definindo o `ContentView`, `SelectedBackgroundView` e `BackgroundView` propriedades, respectivamente, conforme mostrado no código a seguir:
 
 ```csharp
 public class AnimalCell : UICollectionViewCell
@@ -88,19 +88,19 @@ public class AnimalCell : UICollectionViewCell
 
 ## <a name="supplementary-views"></a>Modos de exibição suplementares
 
-Exibições suplementares são exibições que apresentam informações associadas a cada seção de um `UICollectionView`. Como as células, modos de exibição suplementares são controladas por dados. Quando células apresentam os dados de item de uma fonte de dados, exibições suplementares apresentar os dados de seção, como as categorias do catálogo na estante ou gênero de música em uma biblioteca de música.
+Exibições de suplementares são exibições que apresentam informações associadas a cada seção de um `UICollectionView`. Como as células, suplementares exibições são controladas por dados. Quando células apresentam os dados de item de uma fonte de dados, modos de exibição suplementares apresentar os dados de seção, como as categorias de livro na estante ou o gênero de música em uma biblioteca de música.
 
-Por exemplo, uma exibição suplementares pode ser usada para apresentar um cabeçalho de uma seção específica, como mostrado na figura a seguir:
+Por exemplo, um modo de exibição suplementares pode ser usado para apresentar um cabeçalho para uma seção específica, como mostrado na figura abaixo:
 
- [![](uicollectionview-images/02a-supplementary-view.png "Um modo de exibição suplementares usado para apresentar um cabeçalho de uma seção específica, conforme mostrado aqui")](uicollectionview-images/02a-supplementary-view.png#lightbox)
+ [![](uicollectionview-images/02a-supplementary-view.png "Um modo de exibição suplementares usado para apresentar um cabeçalho para uma seção específica, como mostrado aqui")](uicollectionview-images/02a-supplementary-view.png#lightbox)
 
-Para usar um modo de exibição suplementares, ela precisa primeiro ser registrado no `ViewDidLoad` método:
+Para usar um modo de exibição suplementares, primeiro ele precisa ser registrado no `ViewDidLoad` método:
 
 ```csharp
 CollectionView.RegisterClassForSupplementaryView (typeof(Header), UICollectionElementKindSection.Header, headerId);
 ```
 
-Em seguida, a exibição precisa ser retornadas usando `GetViewForSupplementaryElement`, criado usando `DequeueReusableSupplementaryView`e herda do `UICollectionReusableView`. O trecho de código a seguir produzirá o SupplementaryView mostrado na captura de tela acima:
+Em seguida, o modo de exibição precisa ser retornado usando `GetViewForSupplementaryElement`, criado usando `DequeueReusableSupplementaryView`e que herda de `UICollectionReusableView`. O trecho de código a seguir produzirá o SupplementaryView mostrado na captura de tela acima:
 
 ```csharp
 public override UICollectionReusableView GetViewForSupplementaryElement (UICollectionView collectionView, NSString elementKind, NSIndexPath indexPath)
@@ -112,17 +112,17 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ```
 
-Modos de exibição suplementares são mais genéricos que apenas os cabeçalhos e rodapés.
-Eles podem ser posicionados em qualquer lugar na exibição de coleção e podem ser compostos por todas as exibições, tornando a aparência totalmente personalizável.
+Modos de exibição suplementares são mais genéricos do que apenas os cabeçalhos e rodapés.
+Eles podem ser posicionados em qualquer lugar na exibição de coleção e podem ser compostos por todas as exibições, tornando sua aparência totalmente personalizável.
 
  <a name="Decoration_Views" />
 
 
-## <a name="decoration-views"></a>Exibições de decoração
+## <a name="decoration-views"></a>Modos de exibição de decoração
 
-Decoração exibições são puramente visual que pode ser exibido em um `UICollectionView`. Diferentemente de células e modos de exibição adicionais, eles não são controlada por dados. Eles sempre são criados dentro de subclasse do layout e subsequentemente podem alterar como o layout do conteúdo. Por exemplo, uma exibição de decoração pode ser usada para apresentar um modo de exibição do plano de fundo rola com o conteúdo a `UICollectionView`, conforme mostrado abaixo:
+Decoração modos de exibição são puramente visuais que podem ser exibidos em um `UICollectionView`. Ao contrário das células e suplementares modos de exibição, eles não são controlado por dados. Eles são sempre criados dentro de subclasse de um layout e, posteriormente, podem alterar como o layout do conteúdo. Por exemplo, uma exibição de decoração poderia ser usada para apresentar um modo de exibição do plano de fundo que rola o conteúdo a `UICollectionView`, conforme mostrado abaixo:
 
- [![](uicollectionview-images/02c-decoration-view.png "Exibição de decoração com um plano de fundo vermelho")](uicollectionview-images/02c-decoration-view.png#lightbox)
+ [![](uicollectionview-images/02c-decoration-view.png "Modo de exibição de decoração com fundo vermelho")](uicollectionview-images/02c-decoration-view.png#lightbox)
 
  O trecho de código a seguir altera o plano de fundo para vermelho nas amostras `CircleLayout` classe:
 
@@ -140,23 +140,23 @@ Decoração exibições são puramente visual que pode ser exibido em um `UIColl
 
 ## <a name="data-source"></a>fonte de dados
 
-Assim como acontece com outras partes do iOS, como `UITableView` e `MKMapView`, `UICollectionView` obtém seus dados de um *fonte de dados*, que é exposto no xamarin por meio de **`UICollectionViewDataSource`** classe. Essa classe é responsável por fornecer conteúdo para o `UICollectionView` como:
+Assim como acontece com outras partes do iOS, como `UITableView` e `MKMapView`, `UICollectionView` obtém seus dados de uma *fonte de dados*, que é exposto no xamarin. IOS por meio de **`UICollectionViewDataSource`** classe. Essa classe é responsável por fornecer conteúdo para o `UICollectionView` como:
 
--  **Células** – retornado de `GetCell` método.
--  **Modos de exibição suplementares** – retornado de `GetViewForSupplementaryElement` método.
--  **Número de seções** – retornado de `NumberOfSections` método. O padrão é 1 se não implementado.
--  **Número de itens por seção** – retornado de `GetItemsCount` método.
+-  **Células** – retornados de `GetCell` método.
+-  **Modos de exibição suplementares** – retornados de `GetViewForSupplementaryElement` método.
+-  **Número de seções** – retornados de `NumberOfSections` método. O padrão é 1 se não implementado.
+-  **Número de itens por seção** – retornados de `GetItemsCount` método.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
-Para sua conveniência, o `UICollectionViewController` classe está disponível. Isso é configurado automaticamente para ser tanto o delegado, que é abordado na próxima seção, e a fonte de dados do seu `UICollectionView` exibição.
+Para sua conveniência, o `UICollectionViewController` classe está disponível. Isso é configurado automaticamente para ser tanto o delegado, que é abordado na próxima seção, e da fonte de dados para seu `UICollectionView` modo de exibição.
 
 Assim como acontece com `UITableView`, o `UICollectionView` classe chamará somente a fonte de dados para obter as células para itens que estão na tela.
-Células que aparecem na tela são colocadas em uma fila para reutilização, como mostra a imagem a seguir:
+Células que aparecem na tela são colocadas em uma fila para reutilização, conforme ilustra a imagem a seguir:
 
- [![](uicollectionview-images/03-cell-reuse.png "As células que aparecem na tela são colocadas em uma fila para reutilização como mostrado aqui")](uicollectionview-images/03-cell-reuse.png#lightbox)
+ [![](uicollectionview-images/03-cell-reuse.png "Células que aparecem na tela são colocadas em uma fila para reutilização como mostrado aqui")](uicollectionview-images/03-cell-reuse.png#lightbox)
 
-Reutilização de célula foi simplificada com `UICollectionView` e `UITableView`. Você não precisa criar uma célula diretamente na fonte de dados se um não estiver disponível na fila de reutilização, como as células são registradas com o sistema. Se uma célula não está disponível ao fazer a chamada para a eliminação da fila a célula da fila de reutilização, iOS criará automaticamente com base no tipo ou nib que foi registrado.
-A mesma técnica também está disponível para modos de exibição adicionais.
+Reutilização de célula foi simplificada com o `UICollectionView` e `UITableView`. Você não precisa criar uma célula diretamente na fonte de dados se um não estiver disponível na fila de reutilização, células estão registrados com o sistema. Se uma célula não está disponível ao fazer a chamada para remover da fila na célula da fila de reutilização, iOS criará automaticamente com base no tipo ou nib que foi registrado.
+A mesma técnica também está disponível para exibições suplementares.
 
 Por exemplo, considere o seguinte código que registra o `AnimalCell` classe:
 
@@ -165,7 +165,7 @@ static NSString animalCellId = new NSString ("AnimalCell");
 CollectionView.RegisterClassForCell (typeof(AnimalCell), animalCellId);
 ```
 
-Quando um `UICollectionView` precisa de uma célula porque o item estiver na tela, o `UICollectionView` chama sua fonte de dados `GetCell` método. Semelhante à maneira como isso funciona com UITableView, esse método é responsável por configurar uma célula de dados do backup, o que seriam um `AnimalCell` classe nesse caso.
+Quando um `UICollectionView` precisa de uma célula porque seu item estiver na tela, o `UICollectionView` chama sua fonte de dados `GetCell` método. Semelhante à maneira como isso funciona com UITableView, esse método é responsável por configurar uma célula de dados de backup, o que seriam um `AnimalCell` classe nesse caso.
 
 O código a seguir mostra uma implementação de `GetCell` que retorna um `AnimalCell` instância:
 
@@ -182,32 +182,32 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 }
 ```
 
-A chamada para `DequeReusableCell` é onde a célula ou eliminação enfileirada da fila de reutilização ou, se uma célula não está disponível na fila, criada com base no tipo de registrado na chamada para `CollectionView.RegisterClassForCell`.
+A chamada para `DequeReusableCell` é onde a célula será ser tanto da fila da fila de reutilização ou, se uma célula não está disponível na fila, criada com base no tipo registrado na chamada para `CollectionView.RegisterClassForCell`.
 
-Nesse caso, registrando o `AnimalCell` classe iOS criará um novo `AnimalCell` internamente e retorná-lo quando é feita uma chamada para a eliminação da fila de uma célula, após o qual ele está configurado com a imagem contidas na classe animal e retornados para exibição para o `UICollectionView`.
+Nesse caso, registrando o `AnimalCell` classe, o iOS irá criar um novo `AnimalCell` internamente e retorná-lo quando é feita uma chamada para remover a fila de uma célula, após o qual ele está configurado com a imagem contida na classe animal e retornados para exibição para a `UICollectionView`.
 
  <a name="Delegate" />
 
 
 ### <a name="delegate"></a>delegado
 
-O `UICollectionView` classe usa um delegate do tipo `UICollectionViewDelegate` para dar suporte à interação com o conteúdo a `UICollectionView`. Isso permite o controle de:
+O `UICollectionView` classe usa um delegado do tipo `UICollectionViewDelegate` para dar suporte à interação com o conteúdo a `UICollectionView`. Isso permite o controle de:
 
 -  **Seleção de célula** – determina se uma célula está selecionada.
--  **Realce de célula** – determina se uma célula no momento está sendo alterada.
--  **Menus de célula** – Menu exibido para uma célula em resposta a um gesto pressione longo.
+-  **Realce de célula** – determina se uma célula está atualmente sendo tocada.
+-  **Menus de célula** – Menu é exibido para uma célula em resposta a um gesto de pressionar por mais tempo.
 
 
-Assim como acontece com a fonte de dados, o `UICollectionViewController` é configurado por padrão para ser o representante para a `UICollectionView`.
+Assim como acontece com a fonte de dados, o `UICollectionViewController` é configurado por padrão para ser o delegado para o `UICollectionView`.
 
  <a name="Cell_HighLighting" />
 
 
 #### <a name="cell-highlighting"></a>Realce de célula
 
-Quando uma célula é pressionada, as transições de célula em um estado realçado, e ele não está selecionado até que o usuário levante o dedo da célula. Isso permite que uma alteração temporária a aparência da célula antes de realmente estiver selecionada. Após a seleção, a célula `SelectedBackgroundView` é exibido. A figura abaixo mostra o estado realçado antes que a seleção ocorre:
+Quando uma célula é pressionada, as transições de célula em um estado realçado, e ele não está selecionado até que o usuário levanta o dedo da célula. Isso permite que uma alteração temporária na aparência da célula para que ele realmente é selecionado. Após a seleção, a célula `SelectedBackgroundView` é exibida. A figura abaixo mostra o estado realçado antes que a seleção ocorre:
 
- [![](uicollectionview-images/04-cell-highlight.png "Esta figura mostra o estado realçado antes de ocorre a seleção")](uicollectionview-images/04-cell-highlight.png#lightbox)
+ [![](uicollectionview-images/04-cell-highlight.png "Esta figura mostra o estado realçado antes que a seleção ocorre")](uicollectionview-images/04-cell-highlight.png#lightbox)
 
 Para implementar o realce, o `ItemHighlighted` e `ItemUnhighlighted` métodos do `UICollectionViewDelegate` pode ser usado. Por exemplo, o código a seguir serão aplicadas a um plano de fundo amarelo a `ContentView` quando a célula é realçada e um plano de fundo branco quando não realçado, conforme mostrado na imagem acima:
 
@@ -230,7 +230,7 @@ public override void ItemUnhighlighted (UICollectionView collectionView, NSIndex
 
 #### <a name="disabling-selection"></a>Desabilitar seleção
 
-Seleção é habilitada por padrão em `UICollectionView`. Para desativar a seleção, substituir `ShouldHighlightItem` e retornar false, conforme mostrado abaixo:
+A seleção é habilitada por padrão no `UICollectionView`. Para desativar a seleção, substituir `ShouldHighlightItem` e retornar false, conforme mostrado abaixo:
 
 ```csharp
 public override bool ShouldHighlightItem (UICollectionView collectionView, NSIndexPath indexPath)
@@ -239,40 +239,40 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 }
 ```
 
-Quando o realce é desativado, o processo de selecionar uma célula também seja desabilitado. Além disso, há também uma `ShouldSelectItem` método que controla a seleção diretamente, embora se `ShouldHighlightItem` é implementado e retornará false, `ShouldSelectItem` não for chamado.
+Quando o realce é desabilitado, o processo de selecionar uma célula também seja desabilitado. Além disso, há também uma `ShouldSelectItem` método que controla a seleção diretamente, embora se `ShouldHighlightItem` é implementada e retorna false, `ShouldSelectItem` não é chamado.
 
- `ShouldSelectItem` permite a seleção ser ativada ou desativada em uma base de item a item, quando `ShouldHighlightItem` não está implementado. Ele também permite que realce sem seleção, se `ShouldHighlightItem` é implementado e retorna true, ao `ShouldSelectItem` retorna false.
+ `ShouldSelectItem` permite a seleção ser ativado ou desativado em uma base de item por item, quando `ShouldHighlightItem` não está implementado. Ele também permite que realce sem seleção, se `ShouldHighlightItem` é implementada e retorna true, ao mesmo tempo `ShouldSelectItem` retorna false.
 
  <a name="Cell_Menus" />
 
 
 #### <a name="cell-menus"></a>Menus de célula
 
-Cada célula em uma `UICollectionView` é capaz de mostrar um menu que permite recortar, copiar e colar, opcionalmente, ser suportados. Para criar um menu Editar em uma célula:
+Cada célula em um `UICollectionView` é capaz de mostrar um menu que permite recortar, copiar e colar, opcionalmente, ser suportados. Para criar um menu de edição em uma célula:
 
-1.  Substituir `ShouldShowMenu` e retorna true se o item deve mostrar um menu.
-1.  Substituir `CanPerformAction` e retornar true para todas as ações que pode executar o item, que será qualquer de recortar, copiar ou colar.
-1.  Substituir `PerformAction` para executar a edição, copie da operação de colagem.
+1.  Substituir `ShouldShowMenu` e retornar true se o item deve mostrar um menu.
+1.  Substituir `CanPerformAction` e retornar true para todas as ações que pode executar o item, que será qualquer uma das recortar, copiar ou colar.
+1.  Substituir `PerformAction` para executar a edição, copie de operação de colagem.
 
 
-Captura de tela a seguir mostra o menu quando uma célula é pressionada longa:
+Captura de tela a seguir mostra o menu quando uma célula longa é pressionada:
 
- [![](uicollectionview-images/04a-menu.png "Esta captura de tela mostra o menu quando uma célula longa é pressionada")](uicollectionview-images/04a-menu.png#lightbox)
+ [![](uicollectionview-images/04a-menu.png "Esta captura de tela para mostrar o menu quando uma célula longa é pressionada")](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
 
 
 ## <a name="layout"></a>Layout
 
-`UICollectionView` oferece suporte a um sistema de layout que permite que o posicionamento de todos os seus elementos, células, suplementares exibições e exibições de decoração, para ser gerenciado independentemente do `UICollectionView` em si.
-Usando o sistema de layout, um aplicativo pode dar suporte a layouts, como a grade é visto neste artigo, bem como fornecer layouts personalizados.
+`UICollectionView` dá suporte a um sistema de layout que permite o posicionamento de todos os seus elementos, células, suplementares exibições e exibições de decoração, para ser gerenciado independentemente do `UICollectionView` em si.
+Usando o sistema de layout, um aplicativo pode dar suporte a layouts de como a grade como nós vimos neste artigo, bem como fornecer layouts personalizados.
 
  <a name="Layout_Basics" />
 
 
-### <a name="layout-basics"></a>Noções básicas de layout
+### <a name="layout-basics"></a>Noções básicas do layout
 
-Layouts em uma `UICollectionView` são definidos em uma classe que herda de `UICollectionViewLayout`. A implementação de layout é responsável por criar os atributos de layout para cada item de `UICollectionView`. Há duas maneiras de criar um layout:
+Layouts em uma `UICollectionView` são definidos em uma classe que herda de `UICollectionViewLayout`. A implementação de layout é responsável por criar os atributos de layout para todos os itens a `UICollectionView`. Há duas maneiras de criar um layout:
 
 -  Usar interno `UICollectionViewFlowLayout` .
 -  Forneça um layout personalizado herdando de `UICollectionViewLayout` .
@@ -283,7 +283,7 @@ Layouts em uma `UICollectionView` são definidos em uma classe que herda de `UIC
 
 ### <a name="flow-layout"></a>Layout de fluxo
 
-O `UICollectionViewFlowLayout` classe fornece um layout que é adequado para organizar o conteúdo em uma grade de células como vimos baseada em linha.
+O `UICollectionViewFlowLayout` classe fornece um layout baseado em linha que é adequado para organizar o conteúdo em uma grade de células como vimos.
 
 Para usar um layout de fluxo:
 
@@ -294,23 +294,23 @@ Para usar um layout de fluxo:
 var layout = new UICollectionViewFlowLayout ();
 ```
 
--  Passe a instância para o construtor de `UICollectionView` :
+-  Passe a instância para o construtor do `UICollectionView` :
 
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
 ```
 
-Isso é tudo o que é necessário para o layout do conteúdo em uma grade. Além disso, quando a orientação muda, o `UICollectionViewFlowLayout` manipula reorganizar o conteúdo corretamente, conforme mostrado abaixo:
+Isso é tudo o que é necessário para o layout do conteúdo em uma grade. Além disso, quando a orientação muda, o `UICollectionViewFlowLayout` manipula reorganizar o conteúdo corretamente, como mostrado abaixo:
 
- [![](uicollectionview-images/05-layout-orientation.png "Exemplo das alterações de orientação")](uicollectionview-images/05-layout-orientation.png#lightbox)
+ [![](uicollectionview-images/05-layout-orientation.png "Exemplo de como as alterações de orientação")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
 
 
 #### <a name="section-inset"></a>Inserção de seção
 
-Para fornecer espaço em torno de `UIContentView`, layouts têm um `SectionInset` propriedade do tipo `UIEdgeInsets`. Por exemplo, o código a seguir fornece um buffer de 50 pixels em torno de cada seção de `UIContentView` quando disposto por uma `UICollectionViewFlowLayout`:
+Para fornecer algum espaço em torno de `UIContentView`, layouts têm um `SectionInset` propriedade do tipo `UIEdgeInsets`. Por exemplo, o código a seguir fornece um buffer de 50 pixels em torno de cada seção de `UIContentView` quando apresentados por um `UICollectionViewFlowLayout`:
 
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
@@ -319,26 +319,26 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
 Isso resulta em espaçamento ao redor da seção conforme mostrado abaixo:
 
- [![](uicollectionview-images/06-sectioninset.png "Espaçamento ao redor da seção, como mostrado aqui")](uicollectionview-images/06-sectioninset.png#lightbox)
+ [![](uicollectionview-images/06-sectioninset.png "Espaçamento ao redor da seção como mostrado aqui")](uicollectionview-images/06-sectioninset.png#lightbox)
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
 
-#### <a name="subclassing-uicollectionviewflowlayout"></a>Subclasses UICollectionViewFlowLayout
+#### <a name="subclassing-uicollectionviewflowlayout"></a>Criando subclasses UICollectionViewFlowLayout
 
-Na edição usando `UICollectionViewFlowLayout` diretamente, ele também pode ter subclasses para personalizar o layout do conteúdo ao longo da linha. Por exemplo, isso pode ser usado para criar um layout que não encapsula as células em uma grade, mas em vez disso, cria uma única linha com um efeito de rolagem horizontal, conforme mostrado abaixo:
+Na edição usando `UICollectionViewFlowLayout` diretamente, ele pode também ser uma subclasse para personalizar o layout do conteúdo ao longo da linha. Por exemplo, isso pode ser usado para criar um layout que não encapsula as células em uma grade, mas em vez disso, cria uma única linha com um efeito de rolagem horizontal, conforme mostrado abaixo:
 
  [![](uicollectionview-images/07-line-layout.png "Uma única linha com um efeito de rolagem horizontal")](uicollectionview-images/07-line-layout.png#lightbox)
 
-Para implementar isso subclassificação `UICollectionViewFlowLayout` requer:
+Para implementar isso por meio da criação de subclasses `UICollectionViewFlowLayout` requer:
 
--  Inicializando as propriedades de layout que se aplicam ao layout do próprio ou todos os itens de layout no construtor.
--  Substituindo `ShouldInvalidateLayoutForBoundsChange` , retornando true isso que, quando os limites do `UICollectionView` alterações, o layout das células serão recalculadas. Isso é usado neste caso Certifique-se o código de transformação aplicada para a célula centermost será aplicada durante a rolagem.
--  Substituindo `TargetContentOffset` para tornar o centermost célula snap para o centro do `UICollectionView` como rolagem será interrompido.
+-  Inicializando quaisquer propriedades de layout que se aplicam ao layout em si ou todos os itens no layout no construtor.
+-  Substituindo `ShouldInvalidateLayoutForBoundsChange` , retornando true de forma que, quando dos limites do `UICollectionView` alterações, o layout das células serão recalculadas. Isso é usado nesse caso, verifique se o código para a transformação aplicada à célula centermost será aplicada durante a rolagem.
+-  Substituindo `TargetContentOffset` para tornar o centermost célula snap no centro do `UICollectionView` como paradas de rolagem.
 -  Substituindo `LayoutAttributesForElementsInRect` para retornar uma matriz de `UICollectionViewLayoutAttributes` . Cada `UICollectionViewLayoutAttribute` contém informações sobre como o layout do item específico, incluindo propriedades, como seu `Center` , `Size` , `ZIndex` e `Transform3D` .
 
 
-O código a seguir mostra essa implementação:
+O código a seguir mostra a tal implementação:
 
 ```csharp
 using System;
@@ -414,45 +414,45 @@ namespace SimpleCollectionView
 
 Além de usar `UICollectionViewFlowLayout`, layouts também podem ser totalmente personalizados herdando diretamente da `UICollectionViewLayout`.
 
-Os métodos principais para substituir são:
+Os principais métodos para substituir são:
 
--   `PrepareLayout` – Usado para executar cálculos geométricos inicias que serão utilizados durante o processo de layout.
--   `CollectionViewContentSize` -Retorna o tamanho da área usada para exibir o conteúdo.
--   `LayoutAttributesForElementsInRect` – Como com o exemplo UICollectionViewFlowLayout mostrado anteriormente, esse método é usado para fornecer informações para o `UICollectionView` sobre como layout de cada item. No entanto, diferentemente de `UICollectionViewFlowLayout` , ao criar um layout personalizado, é possível posicionar itens, no entanto, você escolher.
+-   `PrepareLayout` – Usado para executar cálculos geométricos inicias que serão usados em todo o processo de layout.
+-   `CollectionViewContentSize` – Retorna o tamanho da área usada para exibir o conteúdo.
+-   `LayoutAttributesForElementsInRect` – Como no exemplo de UICollectionViewFlowLayout mostrado anteriormente, esse método é usado para fornecer informações para o `UICollectionView` com relação a como layout de cada item. No entanto, diferentemente de `UICollectionViewFlowLayout` , ao criar um layout personalizado, é possível posicionar itens de maneira que quiser.
 
 
-Por exemplo, o mesmo conteúdo pode ser apresentado em um layout circular conforme mostrado abaixo:
+Por exemplo, o mesmo conteúdo pode ser apresentado em um layout circular, conforme mostrado abaixo:
 
- [![](uicollectionview-images/08-circle-layout.png "Um circular personalizado layout conforme mostrado aqui")](uicollectionview-images/08-circle-layout.png#lightbox)
+ [![](uicollectionview-images/08-circle-layout.png "Um personalizado circular layout, como mostrado aqui")](uicollectionview-images/08-circle-layout.png#lightbox)
 
-A coisa avançada sobre layouts é que, para alterar do layout de grade, para um layout de rolagem horizontal e subsequentemente a este layout circular requer somente a classe de layout fornecida para o `UICollectionView` ser alterado. Nada a `UICollectionView`, seu representante ou dados de origem alterações de código em todos os.
+A coisa poderosa sobre layouts é que para alterar do layout de grade, para um layout de rolagem horizontal e, posteriormente, para esse layout circular requer apenas a classe de layout fornecida para o `UICollectionView` ser alterado. Nada a `UICollectionView`, seu delegado ou fonte de dados as alterações de código em todos os.
 
 
 ## <a name="changes-in-ios-9"></a>Alterações no iOS 9
 
 
-No iOS 9, a exibição de coleção (`UICollectionView`) agora oferece suporte a arrasta a reordenação de itens para fora da caixa, adicionando um novo reconhecedor de gestos padrão e vários novos métodos de suporte.
+No iOS 9, a exibição de coleção (`UICollectionView`) agora dá suporte a arrasta a reorganização de itens fora da caixa, adicionando um reconhecedor de gestos padrão novo e vários novos métodos de suporte.
 
-Usando esses novos métodos, você pode implementar facilmente arrastar para reordenar na exibição de coleção e tem a opção de personalizar a aparência de itens durante qualquer estágio do processo de reordenação.
+Usando esses novos métodos, você pode implementar facilmente arrastar para reordenar no modo de exibição de coleção e tem a opção de personalizar a aparência de itens durante qualquer estágio do processo de reordenação.
 
 [![](uicollectionview-images/intro01.png "Um exemplo do processo de reordenação")](uicollectionview-images/intro01.png#lightbox)
 
-Neste artigo, vamos dar uma olhada na implementação de arrastar para reordenar em um aplicativo xamarin, bem como algumas das alterações feitas para o controle de exibição de coleção iOS 9:
+Neste artigo, vamos dar uma olhada na implementação de arrastar para reordenar em um aplicativo xamarin. IOS, bem como algumas das alterações feitas para o controle de exibição de coleção iOS 9:
 
 - [Fácil de reorganização de itens](#Easy-Reordering-of-Items)
-    - [Exemplo simples de reordenação](#Simple-Reordering-Example)
+    - [Exemplo de reordenação simples](#Simple-Reordering-Example)
     - [Usando um reconhecedor de gestos personalizados](#Using-a-Custom-Gesture-Recognizer)
-    - [Layouts personalizados e reordenação](#Custom-Layouts-and-Reording)
+    - [Layouts personalizados e reordenação de](#Custom-Layouts-and-Reording)
 - [Alterações de exibição de coleção](#Collection-View-Changes)
 
 <a name="Easy-Reordering-of-Items" />
 
 ## <a name="reordering-of-items"></a>Reorganização de itens
 
-Como mencionado acima, uma das alterações mais significativas para o modo de exibição de coleção no iOS 9 foi a adição de funcionalidade de arrastar para reordenar fácil fora da caixa.
+Como mencionado acima, uma das alterações mais significativas para a exibição de coleção no iOS 9 foi a adição de funcionalidade de arrastar para reordenar fácil fora da caixa.
 
-No iOS 9, a maneira mais rápida para adicionar a reordenação para uma exibição de coleção é usar um `UICollectionViewController`.
-O controlador de exibição de coleção agora tem um `InstallsStandardGestureForInteractiveMovement` propriedade, que adiciona um padrão *reconhecedor de gestos* que dá suporte a arrastamento para reorganizar os itens na coleção.
+No iOS 9, a maneira mais rápida para adicionar a reordenação de uma exibição de coleção é usar um `UICollectionViewController`.
+O controlador de exibição de coleção agora tem um `InstallsStandardGestureForInteractiveMovement` propriedade, que adiciona um padrão *reconhecedor de gestos* que dá suporte a arrastar para reordenar os itens na coleção.
 Como o valor padrão é `true`, você só precisa implementar o `MoveItem` método o `UICollectionViewDataSource` classe para dar suporte a arrastar para reordenar. Por exemplo:
 
 ```csharp
@@ -464,44 +464,44 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 ```
 <a name="Simple-Reordering-Example" />
 
-### <a name="simple-reordering-example"></a>Exemplo simples de reordenação
+### <a name="simple-reordering-example"></a>Exemplo de reordenação simples
 
-Como um exemplo rápido, iniciar um novo projeto de xamarin e editar o **Main.storyboard** arquivo. Arraste um `UICollectionViewController` na superfície de design:
+Como um exemplo rápido, inicie um novo projeto do xamarin. IOS e editar os **Main. Storyboard** arquivo. Arraste um `UICollectionViewController` na superfície de design:
 
 [![](uicollectionview-images/quick01.png "Adicionando um UICollectionViewController")](uicollectionview-images/quick01.png#lightbox)
 
-Selecione o modo de exibição de coleção (talvez seja mais fácil de fazer isso da estrutura de tópicos do documento). Na guia layout da área de propriedades, defina os seguintes tamanhos, conforme ilustrado na captura de tela abaixo:
+Selecione a exibição de coleção (talvez seja mais fácil de fazer isso na estrutura de tópicos de documento). Na guia layout do painel de propriedades, defina os tamanhos a seguir, conforme ilustrado na captura de tela abaixo:
 
-- **Tamanho da célula**: largura – 60 | Altura – 60
-- **O tamanho do cabeçalho**: largura – 0 | Altura – 0
-- **Tamanho do rodapé**: largura – 0 | Altura – 0
+- **Tamanho de célula**: largura – 60 | Altura – 60
+- **O tamanho do cabeçalho**: largura – 0 | Height: 0
+- **Tamanho do rodapé**: largura – 0 | Height: 0
 - **Espaçamento mínimo**: para células – 8 | Para linhas – 8
-- **Seção inserções**: superior – 16 | Baixo – 16 | Esquerda – 16 | Direita – 16
+- **Seção inserções**: superior – 16 | Inferior – 16 | Esquerda – 16 | Direita – 16
 
-[![](uicollectionview-images/quick04.png "Defina os tamanhos de exibição de coleção")](uicollectionview-images/quick04.png#lightbox)
+[![](uicollectionview-images/quick04.png "Definir tamanhos de exibição de coleção")](uicollectionview-images/quick04.png#lightbox)
 
 Em seguida, edite o padrão de célula:
-    - Alterar sua cor de plano de fundo azul
-    - Adicionar um rótulo para atuar como o título da célula
+    - Alterar sua cor de plano de fundo como azul
+    - Adicione um rótulo para atuar como o título da célula
     - Definir o identificador de reutilização **célula**
 
 [![](uicollectionview-images/quick02.png "Editar a célula padrão")](uicollectionview-images/quick02.png#lightbox)
 
-Adicione restrições para manter o rótulo centralizado dentro da célula como seu tamanho é alterado:
+Adicione restrições para manter o rótulo centralizado dentro da célula, como ele altera o tamanho:
 
-No **propriedade preenchimento** para o _CollectionViewCell_ e defina o **classe** para `TextCollectionViewCell`:
+No **propriedade Pad** para o _CollectionViewCell_ e defina o **classe** para `TextCollectionViewCell`:
 
-[![](uicollectionview-images/quick05.png "Definir a classe como TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
+[![](uicollectionview-images/quick05.png "Defina a classe para TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
 
-Definir o **exibição de coleção reutilizável** para `Cell`:
+Defina as **exibição de coleção reutilizável** para `Cell`:
 
 [![](uicollectionview-images/quick06.png "Definir a exibição de coleção reutilizável a célula")](uicollectionview-images/quick06.png#lightbox)
 
-Por fim, selecione o rótulo e nomeie-o `TextLabel`:
+Por fim, selecione o rótulo e nomeie- `TextLabel`:
 
 [![](uicollectionview-images/quick07.png "rótulo de nome TextLabel")](uicollectionview-images/quick07.png#lightbox)
 
-Editar o `TextCollectionViewCell` classe e adicione as seguintes propriedades.:
+Editar o `TextCollectionViewCell` de classe e adicione as seguintes propriedades.:
 
 ```csharp
 using System;
@@ -528,9 +528,9 @@ namespace CollectionView
 }
 ```
 
-Aqui o `Text` propriedade do rótulo é exposta como o título da célula, portanto ele pode ser definido no código.
+Aqui o `Text` propriedade do rótulo é exposta como o título da célula, portanto, ele pode ser definido no código.
 
-Adicionar uma nova classe do c# para o projeto e chamá-la `WaterfallCollectionSource`. Edite o arquivo e torná-lo a seguinte aparência:
+Adicione um novo C# classe ao projeto e chamá-lo `WaterfallCollectionSource`. Edite o arquivo e torná-lo a seguinte aparência:
 
 ```csharp
 using System;
@@ -597,10 +597,10 @@ namespace CollectionView
 }
 ```
 
-Essa classe será a fonte de dados para nosso exibição de coleção e forneça as informações para cada célula na coleção.
-Observe que o `MoveItem` método é implementado para permitir a arraste itens da coleção a ser reordenada.
+Essa classe será a fonte de dados para nossa exibição de coleção e forneça as informações para cada célula na coleção.
+Observe que o `MoveItem` método é implementado para permitir arrastar itens da coleção a ser reordenadas.
 
-Adicione outra nova classe c# ao projeto e chamá-la `WaterfallCollectionDelegate`. Editar esse arquivo e torná-lo a seguinte aparência:
+Adicione outro novo C# classe ao projeto e chamá-lo `WaterfallCollectionDelegate`. Editar esse arquivo e torná-lo a seguinte aparência:
 
 ```csharp
 using System;
@@ -650,9 +650,9 @@ namespace CollectionView
 }
 ```
 
-Isso irá atuar como o representante para nosso exibição de coleção. Métodos foram substituídos para realçar uma célula, conforme o usuário interage com ele no modo de exibição de coleção.
+Isso irá atuar como o delegado para nossa exibição de coleção. Métodos foram substituídos para realçar uma célula, conforme o usuário interage com ele na exibição de coleção.
 
-Adicionar uma última c# classe ao projeto e chamá-la `WaterfallCollectionView`. Editar esse arquivo e torná-lo a seguinte aparência:
+Adicionar um último C# classe ao projeto e chamá-lo `WaterfallCollectionView`. Editar esse arquivo e torná-lo a seguinte aparência:
 
 ```csharp
 using System;
@@ -687,13 +687,13 @@ namespace CollectionView
 }
 ```
 
-Observe que `DataSource` e `Delegate` que criamos acima são definidos quando o modo de exibição de coleção é construído a partir de seu storyboard (ou **.xib** arquivo).
+Observe que `DataSource` e `Delegate` que criamos acima são definidos quando o modo de exibição de coleção é construído a partir de seu storyboard (ou **. XIB** arquivo).
 
-Editar o **Main.storyboard** novamente e selecione o modo de exibição de coleção e alterne para o **propriedades**. Definir o **classe** para personalizado `WaterfallCollectionView` classe são definidas acima:
+Editar o **Main. Storyboard** novamente e selecione a exibição de coleção e alternar para o **propriedades**. Defina as **classe** personalizadas `WaterfallCollectionView` classe que definimos acima:
 
-Salvar as alterações feitas na interface do usuário e executar o aplicativo.
-Se o usuário seleciona um item da lista e arrasta-o para um novo local, os outros itens serão animar automaticamente conforme se move do caminho do item.
-Quando o usuário solta o item em um novo local, ele será fique nesse local. Por exemplo:
+Salve as alterações feitas na interface do usuário e executar o aplicativo.
+Se o usuário seleciona um item na lista e arrasta-o para um novo local, os outros itens serão animada automaticamente quando eles passam fora do caminho do item.
+Quando o usuário solta o item em um novo local, ele será permaneça para esse local. Por exemplo:
 
 [![](uicollectionview-images/intro01.png "Um exemplo de arrastar um item para um novo local")](uicollectionview-images/intro01.png#lightbox)
 
@@ -701,7 +701,7 @@ Quando o usuário solta o item em um novo local, ele será fique nesse local. Po
 
 ### <a name="using-a-custom-gesture-recognizer"></a>Usando um reconhecedor de gestos personalizados
 
-Em casos onde você não pode usar um `UICollectionViewController` e deve usar uma expressão `UIViewController`, ou se você quiser mais controle sobre o gesto de arrastar e soltar, você pode criar seus próprios reconhecedor de gestos personalizados e adicioná-lo para o modo de exibição de coleção quando o modo de exibição é carregado. Por exemplo:
+Em casos em que você não pode usar um `UICollectionViewController` e deve usar uma expressão `UIViewController`, ou se você quiser aproveitar mais controle sobre o gesto de arrastar e soltar, você pode criar seus próprios reconhecedor de gestos personalizados e adicioná-lo à exibição de coleção quando a exibição for carregada. Por exemplo:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -742,17 +742,17 @@ Aqui, estamos usando vários novos métodos adicionados à exibição de coleç�
  - `BeginInteractiveMovementForItem` -Marca o início de uma operação de movimentação.
  - `UpdateInteractiveMovementTargetPosition` -É enviado como o local do item é atualizado.
  - `EndInteractiveMovement` -Marca o fim de mover um item.
- - `CancelInteractiveMovement` -Marca o usuário cancelar a operação de movimentação.
+ - `CancelInteractiveMovement` U2012 \ marca o usuário cancelar a operação de movimentação.
 
-Quando o aplicativo é executado, a operação de arrastar funciona exatamente como o padrão arraste reconhecedor de gestos que vem com o modo de exibição de coleção.
+Quando o aplicativo é executado, a operação de arrastar funcionará exatamente como o padrão arraste reconhecedor de gestos que vem com a exibição de coleção.
 
 <a name="Custom-Layouts-and-Reording" />
 
-### <a name="custom-layouts-and-reordering"></a>Layouts personalizados e reordenação
+### <a name="custom-layouts-and-reordering"></a>Layouts personalizados e reordenação de
 
-No iOS 9, vários métodos novos foram adicionados para trabalhar com layouts personalizados e arrastar para reordenar em uma exibição de coleção. Para explorar esse recurso, vamos adicionar um layout personalizado à coleção.
+No iOS 9, vários novos métodos foram adicionados para trabalhar com layouts personalizados e arrastar para reordenar em uma exibição de coleção. Para explorar esse recurso, vamos adicionar um layout personalizado à coleção.
 
-Primeiro, adicione uma nova classe c# chamada `WaterfallCollectionLayout` ao projeto. Editá-lo e torná-lo a seguinte aparência:
+Primeiro, adicione um novo C# classe chamada `WaterfallCollectionLayout` ao projeto. Editá-lo e torná-lo a seguinte aparência:
 
 ```csharp
 using System;
@@ -1144,8 +1144,8 @@ namespace CollectionView
 }
 ```
 
-Isso pode ser usado a classe para fornecer um personalizada de duas colunas, o layout do tipo de cascata à exibição da coleção.
-O código usa a codificação de chave-valor (por meio de `WillChangeValue` e `DidChangeValue` métodos) para fornecer a associação de dados para nosso computadas propriedades dessa classe.
+Isso pode ser usado a classe para fornecer um personalizado de duas colunas, o layout do tipo de cascata à exibição de coleção.
+O código usa a codificação de chave-valor (por meio de `WillChangeValue` e `DidChangeValue` métodos) para fornecer associação de dados para nossas propriedades computadas nessa classe.
 
 Em seguida, edite o `WaterfallCollectionSource` e faça as alterações e adições a seguir:
 
@@ -1171,7 +1171,7 @@ public WaterfallCollectionSource (WaterfallCollectionView collectionView)
 
 Isso criará uma altura aleatória para cada um dos itens que serão exibidos na lista.
 
-Em seguida, edite o `WaterfallCollectionView` classe e adicione a seguinte propriedade auxiliar:
+Em seguida, edite o `WaterfallCollectionView` de classe e adicione a seguinte propriedade auxiliar:
 
 ```csharp
 public WaterfallCollectionSource Source {
@@ -1179,7 +1179,7 @@ public WaterfallCollectionSource Source {
 }
 ```
 
-Isso tornará mais fácil de obter na nossa fonte de dados (e a altura do item), do layout personalizado.
+Isso tornará mais fácil de obter na nossa fonte de dados (e as alturas de item) do layout personalizado.
 
 Por fim, edite o controlador de exibição e adicione o seguinte código:
 
@@ -1201,104 +1201,104 @@ public override void AwakeFromNib ()
 }
 ```
 
-Isso cria uma instância do nosso layout personalizado, define o evento para fornecer o tamanho de cada item e anexa o novo layout para nosso exibição de coleção.
+Isso cria uma instância do nosso layout personalizado, define o evento para fornecer o tamanho de cada item e anexa o novo layout para nossa exibição de coleção.
 
-Se executarmos o aplicativo xamarin novamente, o modo de exibição de coleção agora se parecerá com o seguinte:
+Se executarmos o aplicativo xamarin. IOS novamente, a exibição de coleção agora ficará semelhante ao seguinte:
 
-[![](uicollectionview-images/custom01.png "O modo de exibição de coleção será agora assim")](uicollectionview-images/custom01.png#lightbox)
+[![](uicollectionview-images/custom01.png "A exibição de coleção agora ficará assim")](uicollectionview-images/custom01.png#lightbox)
 
-Podemos itens ainda arrastar para reordenar como antes, mas os itens agora serão alterado de tamanho para o novo local quando eles são descartados.
+Podemos pode ainda arrastar para reordenar a itens como antes, mas os itens agora mudará de tamanho de acordo com seu novo local quando eles são descartados.
 
 ## <a name="collection-view-changes"></a>Alterações de exibição de coleção
 
-Nas seções a seguir, vamos dar uma olhada detalhada as alterações feitas em cada classe no modo de exibição de coleção por iOS 9.
+Nas seções a seguir, vamos dar uma visão detalhada das alterações feitas a cada classe na exibição de coleção pelo iOS 9.
 
 ### <a name="uicollectionview"></a>UICollectionView
 
-As adições ou alterações a seguir foram feitas para o `UICollectionView` classe para iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionView` classe para iOS 9:
 
  - `BeginInteractiveMovementForItem` – Marca o início de uma operação de arrastar.
- - `CancelInteractiveMovement` – Informa a coleção de modo que o usuário cancelou a operação de arrastar.
- - `EndInteractiveMovement` – Informa a coleção de modo que o usuário concluiu uma operação de arrastar.
- - `GetIndexPathsForVisibleSupplementaryElements` -Retorna o `indexPath` de um cabeçalho ou rodapé de página em uma seção de exibição de coleção.
- - `GetSupplementaryView` – Retorna determinado cabeçalho ou rodapé.
- - `GetVisibleSupplementaryViews` -Retorna uma lista de todos os visível cabeçalhos e rodapés.
- - `UpdateInteractiveMovementTargetPosition` – Informa a coleção de modo que o usuário foi movido ou está movendo, um item durante uma operação de arrastar.
+ - `CancelInteractiveMovement` – Informa a coleção de modo que o usuário cancelou uma operação de arrastar.
+ - `EndInteractiveMovement` – Informa a coleção de modo que o usuário termina uma operação de arrastar.
+ - `GetIndexPathsForVisibleSupplementaryElements` – Retorna o `indexPath` de um cabeçalho ou rodapé em uma seção de exibição de coleção.
+ - `GetSupplementaryView` – Retorna o determinado cabeçalho ou rodapé.
+ - `GetVisibleSupplementaryViews` – Retorna uma lista de todos os cabeçalho visível e rodapés.
+ - `UpdateInteractiveMovementTargetPosition` – Informa a coleção de modo que o usuário foi movido ou está se movendo, um item durante uma operação de arrastar.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
-As adições ou alterações a seguir foram feitas para o `UICollectionViewController` classe no iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionViewController` classe no iOS 9:
 
  - `InstallsStandardGestureForInteractiveMovement` – Se `true` o reconhecedor de gestos novo que automaticamente dá suporte a arrastar para reordenar será usado.
- - `CanMoveItem` – Informa se um determinado item pode ser reordenada de arrastar o modo de exibição de coleção.
- - `GetTargetContentOffset` – Usado para obter o deslocamento de um item de exibição de determinada coleção.
- - `GetTargetIndexPathForMove` – Obtém o `indexPath` de um determinado item para uma operação de arrastar.
+ - `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
+ - `GetTargetContentOffset` – Usado para obter o deslocamento de um item de exibição de coleção fornecidos.
+ - `GetTargetIndexPathForMove` – Obtém a `indexPath` de um determinado item para uma operação de arrastar.
  - `MoveItem` – Move a ordem de um determinado item na lista.
 
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
-As adições ou alterações a seguir foram feitas para o `UICollectionViewDataSource` classe no iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionViewDataSource` classe no iOS 9:
 
- - `CanMoveItem` – Informa se um determinado item pode ser reordenada de arrastar o modo de exibição de coleção.
+ - `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
  - `MoveItem` – Move a ordem de um determinado item na lista.
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
-As adições ou alterações a seguir foram feitas para o `UICollectionViewDelegate` classe no iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionViewDelegate` classe no iOS 9:
 
- - `GetTargetContentOffset` – Usado para obter o deslocamento de um item de exibição de determinada coleção.
- - `GetTargetIndexPathForMove` – Obtém o `indexPath` de um determinado item para uma operação de arrastar.
+ - `GetTargetContentOffset` – Usado para obter o deslocamento de um item de exibição de coleção fornecidos.
+ - `GetTargetIndexPathForMove` – Obtém a `indexPath` de um determinado item para uma operação de arrastar.
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
-As adições ou alterações a seguir foram feitas para o `UICollectionViewFlowLayout` classe no iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionViewFlowLayout` classe no iOS 9:
 
- - `SectionFootersPinToVisibleBounds` – Prende os rodapés da seção para os limites de exibição de coleção visível.
- - `SectionHeadersPinToVisibleBounds` – Prende os cabeçalhos de seção para os limites de exibição de coleção visível.
+ - `SectionFootersPinToVisibleBounds` – Pen drives os rodapés de seção para os limites de exibição de coleção visível.
+ - `SectionHeadersPinToVisibleBounds` – Pen drives os cabeçalhos de seção para os limites de exibição de coleção visível.
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
-As adições ou alterações a seguir foram feitas para o `UICollectionViewLayout` classe no iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionViewLayout` classe no iOS 9:
 
- - `GetInvalidationContextForEndingInteractiveMovementOfItems` -Retorna o contexto de invalidação do final de uma operação de arrastar quando o usuário concluir a operação de arrastar ou cancele.
- - `GetInvalidationContextForInteractivelyMovingItems` -Retorna o contexto de invalidação no início de uma operação de arrastar.
+ - `GetInvalidationContextForEndingInteractiveMovementOfItems` – Retorna o contexto de invalidação do final de uma operação de arrastar quando o usuário termina a operação de arrastar ou cancela a ele.
+ - `GetInvalidationContextForInteractivelyMovingItems` – Retorna o contexto de invalidação no início de uma operação de arrastar.
  - `GetLayoutAttributesForInteractivelyMovingItem` – Obtém os atributos de Layout para um determinado item ao arrastar um item.
- - `GetTargetIndexPathForInteractivelyMovingItem` -Retorna o `indexPath` do item que é dado momento ao arrastar um item.
+ - `GetTargetIndexPathForInteractivelyMovingItem` – Retorna o `indexPath` do item que é o momento determinado ao arrastar um item.
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
-As adições ou alterações a seguir foram feitas para o `UICollectionViewLayoutAttributes` classe no iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionViewLayoutAttributes` classe no iOS 9:
 
- - `CollisionBoundingPath` -Retorna o caminho de colisão de dois itens durante uma operação de arrastar.
- - `CollisionBoundsType` -Retorna o tipo de colisão (como uma `UIDynamicItemCollisionBoundsType`) que ocorreu durante uma operação de arrastar.
+ - `CollisionBoundingPath` – Retorna o caminho de colisão de dois itens durante uma operação de arrastar.
+ - `CollisionBoundsType` – Retorna o tipo de colisão (como um `UIDynamicItemCollisionBoundsType`) que ocorreu durante uma operação de arrastar.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
-As adições ou alterações a seguir foram feitas para o `UICollectionViewLayoutInvalidationContext` classe no iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionViewLayoutInvalidationContext` classe no iOS 9:
 
- - `InteractiveMovementTarget` -Retorna o item de destino de uma operação de arrastar.
- - `PreviousIndexPathsForInteractivelyMovingItems` -Retorna o `indexPaths` de outros itens envolvidos em um arrastar para reordenar a operação.
- - `TargetIndexPathsForInteractivelyMovingItems` -Retorna o `indexPaths` de itens que serão reordenados como resultado de uma operação de arrastar para reordenar.
+ - `InteractiveMovementTarget` – Retorna o item de destino de uma operação de arrastar.
+ - `PreviousIndexPathsForInteractivelyMovingItems` – Retorna o `indexPaths` de outros itens envolvidos em uma operação de arrastar para reordenar a operação.
+ - `TargetIndexPathsForInteractivelyMovingItems` – Retorna o `indexPaths` de itens que serão reordenados como resultado de uma operação de arrastar para reordenar.
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
-As adições ou alterações a seguir foram feitas para o `UICollectionViewSource` classe no iOS 9:
+Foram feitas as seguintes alterações ou adições para o `UICollectionViewSource` classe no iOS 9:
 
- - `CanMoveItem` – Informa se um determinado item pode ser reordenada de arrastar o modo de exibição de coleção.
- - `GetTargetContentOffset` -Retorna os deslocamentos de itens que serão movidos por meio de uma operação de arrastar para reordenar.
- - `GetTargetIndexPathForMove` -Retorna o `indexPath` de um item que será movido durante uma operação de arrastar para reordenar.
+ - `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
+ - `GetTargetContentOffset` – Retorna os deslocamentos de itens que serão movidos por meio de uma operação de arrastar para reordenar.
+ - `GetTargetIndexPathForMove` – Retorna o `indexPath` de um item que será movido durante uma operação de arrastar para reordenar.
  - `MoveItem` – Move a ordem de um determinado item na lista.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo tem abordadas as alterações às exibições de coleção no iOS 9 e descritos como implementá-los no xamarin.
-Ele trata a implementação de uma ação de arrastar para reordenar simple em uma exibição de coleção; usando um reconhecedor de gestos personalizados com arrastar para reordenar; e como arrastar para reordenar afeta um layout de exibição de coleção personalizados.
+Este artigo tem abordadas as alterações às exibições de coleção no iOS 9 e descreveu como implementá-los no xamarin. IOS.
+Ele abordou a implementação de uma ação de arrastar para reordenar simple em uma exibição de coleção; usando um reconhecedor de gestos personalizados com arrastar para reordenar; e como arrastar para reordenar afeta um layout de exibição de coleção personalizada.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos do iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
-- [Exemplo de modo de exibição de coleção](https://developer.xamarin.com/samples/monotouch/ios9/CollectionView/)
-- [SimpleCollectionView (exemplo)](https://developer.xamarin.com/samples/SimpleCollectionView/)
+- [Amostras do iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
+- [Exemplo de exibição de coleção](https://developer.xamarin.com/samples/monotouch/ios9/CollectionView/)
+- [SimpleCollectionView (amostra)](https://developer.xamarin.com/samples/SimpleCollectionView/)
 - [Eventos, protocolos e delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Trabalhando com tabelas e células](~/ios/user-interface/controls/tables/index.md)

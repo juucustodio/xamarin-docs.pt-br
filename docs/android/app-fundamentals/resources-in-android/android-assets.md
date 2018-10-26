@@ -1,51 +1,51 @@
 ---
-title: Uso de recursos do Android
+title: Usando ativos do Android
 ms.prod: xamarin
 ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 337a1ed82010658adce40e8946ed1b0361fb6094
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1e9a71de7725c8382e133d85977407bcc859fc58
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762991"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114854"
 ---
-# <a name="using-android-assets"></a>Uso de recursos do Android
+# <a name="using-android-assets"></a>Usando ativos do Android
 
-_Ativos_ fornecem uma maneira de incluir arquivos arbitrários como texto, xml, fontes, música e vídeo em seu aplicativo. Se você tentar incluir esses arquivos como "recursos", Android processá-los em seu sistema de recursos e você não poderá obter os dados brutos. Se você quiser acessar os dados inalterados, ativos são uma maneira de fazer isso.
+_Ativos_ fornecem uma maneira de incluir arquivos arbitrários como texto, xml, fontes, música e vídeo em seu aplicativo. Se você tentar incluir esses arquivos como "recursos", o Android processá-los em seu sistema de recursos e não será capaz de obter os dados brutos. Se você quiser acessar os dados inalterados, ativos são uma maneira de fazê-lo.
 
-Ativos adicionados ao seu projeto aparecerá como um sistema de arquivos que pode ler usando seu aplicativo [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/).
-Nesta demonstração simples, vamos adicionar um ativo de arquivo de texto ao nosso projeto, leia-o usando `AssetManager`e o exibe em um TextView.
+Ativos adicionados ao seu projeto serão exibido como um sistema de arquivos que pode ler usando seu aplicativo [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/).
+Nesta simples demonstração, vamos adicionar um ativo de arquivo de texto ao nosso projeto, a leitura usando `AssetManager`e exibi-lo em um TextView.
 
 
 ## <a name="add-asset-to-project"></a>Adicionar ativo ao projeto
 
-Ativos entrar o `Assets` pasta do seu projeto. Adicionar um novo arquivo de texto para essa pasta chamado `read_asset.txt`. Coloque algum texto nele, como "veio de um ativo!".
+Ativos de entrar a `Assets` pasta do seu projeto. Adicione um novo arquivo de texto para essa pasta chamado `read_asset.txt`. Coloque um texto nele, como "Eu VIM de um ativo!".
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-O Visual Studio deve ter definido a **ação de compilação** para esse arquivo para **AndroidAsset**:
+Visual Studio deve ter definido as **ação de compilação** para que esse arquivo **AndroidAsset**:
 
 ![Definir a ação de compilação como AndroidAsset](android-assets-images/asset-properties-vs.png) 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-O Visual Studio para Mac deve ter definido a **ação de compilação** para esse arquivo para **AndroidAsset**:
+Visual Studio para Mac deve ter definido as **ação de compilação** para que esse arquivo **AndroidAsset**:
 
 [![Definir a ação de compilação como AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
-A seleção correta **BuildAction** garante que o arquivo será empacotado no APK em tempo de compilação.
+Selecionar o correto **BuildAction** garante que o arquivo será empacotado no APK no tempo de compilação.
 
 
-## <a name="reading-assets"></a>Ativos de leitura
+## <a name="reading-assets"></a>Leitura de ativos
 
-Ativos são lidos usando um [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/). Uma instância do `AssetManager` está disponível, acessando o [ativos](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) propriedade em um `Android.Content.Context`, como uma atividade.
-No código a seguir, abrimos nossa **read_asset.txt** ativo, leia o conteúdo e exibi-lo usando um TextView.
+Ativos são lidas usando um [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/). Uma instância das `AssetManager` está disponível, acessando a [ativos](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) propriedade em um `Android.Content.Context`, como uma atividade.
+No código a seguir, nós abrimos nossa **read_asset.txt** ativo, leia o conteúdo e exibi-lo usando um TextView.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -80,4 +80,4 @@ Execute o aplicativo e você verá o seguinte:
 ## <a name="related-links"></a>Links relacionados
 
 - [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)
-- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [Contexto](https://developer.xamarin.com/api/type/Android.Content.Context/)

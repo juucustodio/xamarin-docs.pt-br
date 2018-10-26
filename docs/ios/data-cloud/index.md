@@ -1,29 +1,29 @@
 ---
-title: Dados e serviços de nuvem em aplicativos xamarin
-description: Links neste documento em guias que descrevem como trabalhar com dados locais, iCloud e CloudKit em um aplicativo xamarin.
+title: Dados e serviços de nuvem em aplicativos xamarin. IOS
+description: Este documento leva a guias que descrevem como trabalhar com dados locais, iCloud e CloudKit em um aplicativo xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: 945719F7-7CE6-4207-BF0F-23195125FC84
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: a733c1af34b577786a7e18eeafa13da4327dddc6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 21a6c1c0c0ceb5596a056f0818dec39041808504
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117118"
 ---
-# <a name="data-and-cloud-services-in-xamarinios-apps"></a>Dados e serviços de nuvem em aplicativos xamarin
+# <a name="data-and-cloud-services-in-xamarinios-apps"></a>Dados e serviços de nuvem em aplicativos xamarin. IOS
 
 ##  <a name="data-accessiosdata-clouddataindexmd"></a>[Acesso a dados](~/ios/data-cloud/data/index.md)
 
-A maioria dos aplicativos têm alguns requisitos para salvar dados no dispositivo local. A menos que a quantidade de dados é muito pequena, isso geralmente exige um banco de dados e uma camada de dados do aplicativo para gerenciar o acesso ao banco de dados. iOS tem o mecanismo de banco de dados Sqlite "interno" e o acesso aos dados é simplificado pela plataforma do Xamarin que vem com o provedor de dados SQLite.
+A maioria dos aplicativos tem algum requisito para salvar os dados no dispositivo localmente. A menos que a quantidade de dados for muito pequena, isso normalmente requer um banco de dados e uma camada de dados no aplicativo para gerenciar o acesso ao banco de dados. iOS tem o mecanismo de banco de dados Sqlite "incorporado" e o acesso aos dados é simplificado pela plataforma do Xamarin que vem com o provedor de dados SQLite.
 
 ##  <a name="icloudiosdata-cloudintroduction-to-icloudmd"></a>[iCloud](~/ios/data-cloud/introduction-to-icloud.md)
 
-A API de armazenamento no iCloud no iOS 5 permite que aplicativos salvar os documentos do usuário e dados específicos do aplicativo para um local central e acessar esses itens em todos os dispositivos do usuário.
+A API de armazenamento no iCloud no iOS 5 permite que os aplicativos salvar documentos do usuário e dados específicos do aplicativo em um local central e acessar esses itens em todos os dispositivos do usuário.
 
 ##  <a name="cloudkitiosdata-cloudintro-to-cloudkitmd"></a>[CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
 
-A estrutura CloudKit simplifica o desenvolvimento de aplicativos que iCloud de acesso. Isso inclui a recuperação de dados de aplicativo e direitos de ativo e ser capaz de armazenar com segurança informações do aplicativo. Esse kit oferece aos usuários uma camada de anonimato permitindo o acesso a aplicativos com sua IDs de iCloud sem compartilhar informações pessoais.
+A estrutura de CloudKit simplifica o desenvolvimento de aplicativos do iCloud esse acesso. Isso inclui a recuperação de dados de aplicativo e direitos de ativo, bem como sendo capaz de armazenar com segurança informações do aplicativo. Esse kit oferece aos usuários uma camada de anonimato, permitindo o acesso a aplicativos com sua IDs do iCloud sem compartilhar informações pessoais.

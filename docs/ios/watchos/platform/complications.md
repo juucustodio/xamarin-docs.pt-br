@@ -1,37 +1,37 @@
 ---
-title: watchOS complicações em Xamarin
-description: Este documento descreve como trabalhar com complicações watchOS em Xamarin. Ele aborda como adicionar um complicativo, gravando um complicativo, modelos e fornece código de exemplo.
+title: watchOS complicações no Xamarin
+description: Este documento descreve como trabalhar com o watchOS complicações no Xamarin. Ele discute como adicionar um complicativo, escrevendo uma complicação, modelos e fornece código de exemplo.
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/03/2017
-ms.openlocfilehash: 3c69f65091e7d6c83afe34c6d8c06477cc5d133b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 85b0c9b0688e9fb310a8f427018a02fe629404bb
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791833"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117740"
 ---
-# <a name="watchos-complications-in-xamarin"></a>watchOS complicações em Xamarin
+# <a name="watchos-complications-in-xamarin"></a>watchOS complicações no Xamarin
 
-_watchOS permite que os desenvolvedores criem complicações personalizadas para inspecionar as faces_
+_watchOS permite aos desenvolvedores escrever a complicações personalizadas para mostradores de relógio_
 
-Esta página explica os diferentes tipos de complicações disponíveis e como adicionar um complicativo para seu aplicativo watchOS 3.
+Esta página explica os diferentes tipos de complicações disponíveis e como adicionar um complicativo para seu aplicativo do watchOS 3.
 
-Observe que cada aplicativo watchOS pode ter apenas um complicativo.
+Observe que cada aplicativo watchOS só pode ter uma complicação.
 
-Comece lendo [documentos da Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) para determinar se seu aplicativo é adequado para um complicativo. Há 5 `CLKComplicationFamily` tipos de exibição para escolher:
+Comece lendo [documentos da Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) para determinar se seu aplicativo é adequado para uma complicação. Há 5 `CLKComplicationFamily` tipos de exibição à sua escolha:
 
-[![](complications-images/all-complications-sml.png "Os tipos de CLKComplicationFamily 5 disponíveis: Circular pequeno, pequeno Modular, Modular grande, utilitários pequeno, utilitários grande")](complications-images/all-complications.png#lightbox)
+[![](complications-images/all-complications-sml.png "Os tipos de CLKComplicationFamily 5 disponíveis: pequeno Circular, Modular pequeno, Modular grande, utilitárias pequenos, grandes utilitárias")](complications-images/all-complications.png#lightbox)
 
 Aplicativos podem implementar apenas um estilo ou todas as cinco, dependendo dos dados que está sendo exibidos.
-Você também pode dar suporte a viagem, fornecer valores para horas anteriores e/ou futuras como o usuário ativa o coroa Digital.
+Você também pode dar suporte a tempo de viagem, fornecendo valores para futuros e/ou últimas vezes conforme o usuário virar o Crown Digital.
 
 <a name="adding" />
 
-## <a name="adding-a-complication"></a>Adicionar um Complicativo
+## <a name="adding-a-complication"></a>Adicionando uma complicação
 
 ### <a name="configuration"></a>Configuração
 
@@ -39,16 +39,16 @@ Complicações podem ser adicionadas a um aplicativo de inspeção de variáveis
 
 ### <a name="add-new-project"></a>Adicione novo projeto...
 
-O **adicionar novo projeto...**  assistente inclui uma caixa de seleção que criará automaticamente uma classe de controlador do complicativo e configurar o **Info. plist** arquivo:
+O **adicionar novo projeto...**  assistente inclui uma caixa de seleção que criará automaticamente uma classe de controlador de complicação e configurar o **Info. plist** arquivo:
 
-![](complications-images/file-new-project-sml.png "A caixa de seleção incluir Complicativo")
+![](complications-images/file-new-project-sml.png "A caixa de seleção incluir complicação")
 
 ### <a name="existing-projects"></a>Projetos existentes
 
 Para adicionar um complicativo a um projeto existente:
 
 1. Criar um novo **ComplicationController.cs** arquivo de classe e implementar `CLKComplicationDataSource`.
-2. Configurar o aplicativo **Info. plist** exponha do complicativo e identidade quais famílias complicativo têm suporte.
+2. Configurar o aplicativo **Info. plist** para expor a complicação e há suporte para quais famílias de complicação de identidade.
 
 Essas etapas são descritas em mais detalhes abaixo.
 
@@ -56,7 +56,7 @@ Essas etapas são descritas em mais detalhes abaixo.
 
 ### <a name="clkcomplicationdatasource-class"></a>Classe CLKComplicationDataSource
 
-O modelo c# a seguir inclui os métodos mínimo necessários para implementar um `CLKComplicationDataSource`.
+O seguinte C# modelo inclui os métodos mínimos necessários para implementar uma `CLKComplicationDataSource`.
 
 ```csharp
 [Register ("ComplicationController")]
@@ -77,27 +77,27 @@ public class ComplicationController : CLKComplicationDataSource
 }
 ```
 
-Siga o [escrevendo um complicativo](#writing) instruções para adicionar código para essa classe.
+Siga as [escrevendo uma complicação](#writing) instruções para adicionar código para essa classe.
 
 ### <a name="infoplist"></a>Info.plist
 
-A extensão de inspeção **Info. plist** arquivo deve especificar o nome do `CLKComplicationDataSource` e quais famílias complicativo que você deseja dar suporte:
+A extensão de inspeção **Info. plist** arquivo deve especificar o nome da `CLKComplicationDataSource` e quais famílias de complicação que você deseja dar suporte:
 
-[![](complications-images/complications-config-sml.png "Os tipos de família do complicativo")](complications-images/complications-config.png#lightbox)
+[![](complications-images/complications-config-sml.png "Os tipos de família de complicação")](complications-images/complications-config.png#lightbox)
 
-O **classe da fonte de dados** lista de entrada Mostrar nomes de classe que subclasse `CLKComplicationDataSource` subclasse que inclui a lógica do complicativo.
+O **classe de fonte de dados** lista de entrada mostrará os nomes de classe que a subclasse `CLKComplicationDataSource` subclasse que inclui sua lógica de complicação.
 
 ## <a name="clkcomplicationdatasource"></a>CLKComplicationDataSource
 
-Todas as funcionalidades do complicativo é implementada em uma única classe, substituindo métodos o `CLKComplicationDataSource` classe abstrata (que implementa o `ICLKComplicationDataSource` interface).
+Todas as funcionalidades de complicação é implementada em uma única classe, substituindo os métodos do `CLKComplicationDataSource` classe abstrata (que implementa o `ICLKComplicationDataSource` interface).
 
 ### <a name="required-methods"></a>Métodos necessários
 
-Você deve implementar os seguintes métodos para o complicativo executar:
+Você deve implementar os seguintes métodos para a complicação executar:
 
 - `GetPlaceholderTemplate` -A exibição estática usada durante a configuração ou quando o aplicativo não pode fornecer um valor de retorno.
-- `GetCurrentTimelineEntry` -Calcule a exibição correta quando o complicativo está em execução.
-- `GetSupportedTimeTravelDirections` -Retorna opções de `CLKComplicationTimeTravelDirections` como `None`, `Forward`, `Backward`, ou `Forward | Backward`.
+- `GetCurrentTimelineEntry` – Calcule a exibição correta quando a complicação está em execução.
+- `GetSupportedTimeTravelDirections` -Retorna as opções da `CLKComplicationTimeTravelDirections` , como `None`, `Forward`, `Backward`, ou `Forward | Backward`.
 
 ### <a name="privacy"></a>Privacidade
 
@@ -105,17 +105,17 @@ Complicações que exibem dados pessoais
 
 * `GetPrivacyBehavior` - `CLKComplicationPrivacyBehavior.ShowOnLockScreen` Ou `HideOnLockScreen`
 
-Se esse método retornar `HideOnLockScreen` complicativo mostrará a um ícone ou o nome do aplicativo (e não os dados) quando o relógio está bloqueado.
+Se esse método retornar `HideOnLockScreen` e em seguida, a complicação mostrará a um ícone ou o nome do aplicativo (e não qualquer dado) quando o relógio está bloqueado.
 
 ### <a name="updates"></a>Atualizações
 
-- `GetNextRequestedUpdateDate` -Retorna um tempo quando o sistema operacional lado deve consultar o aplicativo para exibir dados de complicativo atualizado.
+- `GetNextRequestedUpdateDate` – Retorne um tempo quando o sistema operacional lado deve consultar o aplicativo para exibir dados de complicação atualizado.
 
 Você também pode forçar uma atualização de seu aplicativo iOS.
 
-### <a name="supporting-time-travel"></a>Suporte a viagem
+### <a name="supporting-time-travel"></a>Suporte a tempo de viagem
 
-Suporte de viagem de tempo é opcional e é controlado pelo `GetSupportedTimeTravelDirections` método. Se ele retorna `Forward`, `Backward`, ou `Forward | Backward` , em seguida, você deve implementar os métodos a seguir
+Suporte de viagem de tempo é opcional e é controlado pelo `GetSupportedTimeTravelDirections` método. Se ele retornar `Forward`, `Backward`, ou `Forward | Backward` e em seguida, você deve implementar os métodos a seguir
 
 - `GetTimelineStartDate`
 - `GetTimelineEndDate`
@@ -124,9 +124,9 @@ Suporte de viagem de tempo é opcional e é controlado pelo `GetSupportedTimeTra
 
 <a name="writing" />
 
-## <a name="writing-a-complication"></a>Escrevendo um Complicativo
+## <a name="writing-a-complication"></a>Escrevendo uma complicação
 
-Intervalo de complicações de dados simples exibir imagem complicada e renderização de dados com suporte de viagem. O código a seguir mostra como criar um complicativo simple, o único modelo.
+Exibir variam de complicações de dados simples para imagem complicada e renderização de dados com suporte de tempo de viagem. O código a seguir mostra como criar uma complicação simple, o único modelo.
 
 <!--
 The [sample]() for this article supports more template styles.
@@ -134,7 +134,7 @@ The [sample]() for this article supports more template styles.
 
 ## <a name="sample-code"></a>Código de exemplo
 
-Este exemplo só oferece suporte a `UtilitarianLarge` modelo, para que só pode ser selecionado em faces inspecionar específicas que oferecem suporte a esse tipo de complicativo. Quando *selecionando* complicações em um relógio, ele exibe **COMPLICATIVO Meus** e quando *executando* exibe o texto **minuto _hora_**   (com uma parte do tempo).
+Este exemplo só oferece suporte a `UtilitarianLarge` modelo, portanto, só pode ser selecionado no mostradores de relógio específicos que dão suporte a esse tipo de complicação. Quando *selecionando* complicações em uma inspeção, ele exibe **COMPLICAÇÃO meu** e quando *executando* ele exibirá o texto **minuto _hora_**   (com uma parte do tempo).
 
 ```csharp
 [Register ("ComplicationController")]
@@ -182,10 +182,10 @@ public class ComplicationController : CLKComplicationDataSource
 
 <a name="templates" />
 
-## <a name="complication-templates"></a>Modelos do complicativo
+## <a name="complication-templates"></a>Modelos de complicação
 
-Há vários modelos diferentes para cada estilo complicativo.
-O **anel** modelos permitem que você exibir um anel de progresso estilo ao redor do complicativo, que pode ser usado para exibir graficamente o andamento ou algum outro valor.
+Há vários modelos diferentes para cada estilo de complicação.
+O **anel** modelos permitem que você exiba um anel de progresso-style em torno de complicação, que pode ser usado para exibir graficamente o andamento ou algum outro valor.
 
 [Documentos de CLKComplicationTemplate da Apple](https://developer.apple.com/reference/clockkit/clkcomplicationtemplate)
 
@@ -204,7 +204,7 @@ Esses nomes de classe de modelo são prefixados com `CLKComplicationTemplateCirc
 
 Esses nomes de classe de modelo são prefixados com `CLKComplicationTemplateModularSmall`:
 
-- **ColumnsText** -exibir uma grade pequena de valores de texto (2 linhas e 2 colunas).
+- **ColumnsText** -exibir uma pequena grade com valores de texto (2 linhas e 2 colunas).
 - **RingImage** -exibir uma única imagem, com um anel de progresso ao redor dele.
 - **RingText** -exibir uma única linha de texto, com um anel de progresso ao redor dele.
 - **SimpleImage** -exibem apenas uma única imagem pequena.
@@ -217,22 +217,22 @@ Esses nomes de classe de modelo são prefixados com `CLKComplicationTemplateModu
 Esses nomes de classe de modelo são prefixados com `CLKComplicationTemplateModularLarge`:
 
 - **Colunas** -exibir uma grade de 3 linhas com 2 colunas, incluindo, opcionalmente, uma imagem à esquerda de cada linha.
-- **StandardBody** -exibir uma cadeia de caracteres de cabeçalho em negrito, com duas linhas de texto sem formatação. O cabeçalho, opcionalmente, pode exibir uma imagem à esquerda.
-- **Tabela** -exibir uma cadeia de caracteres de cabeçalho em negrito, com uma grade de 2 x 2 de texto abaixo dela. O cabeçalho, opcionalmente, pode exibir uma imagem à esquerda.
+- **StandardBody** -exibir uma cadeia de caracteres de cabeçalho em negrito, com duas linhas de texto sem formatação. O cabeçalho, pode exibir uma imagem à esquerda.
+- **Tabela** -exibir uma cadeia de caracteres de cabeçalho em negrito, com uma grade de 2 x 2 de texto abaixo dela. O cabeçalho, pode exibir uma imagem à esquerda.
 - **TallBody** -exibir uma cadeia de caracteres de cabeçalho em negrito, com uma maior fonte única linha de texto abaixo.
 
-### <a name="utilitarian-small"></a>Utilitários pequeno
+### <a name="utilitarian-small"></a>Pequeno utilitárias
 
 Esses nomes de classe de modelo são prefixados com `CLKComplicationTemplateUtilitarianSmall`:
 
 - **Simples** -exibe uma imagem e texto em uma única linha (o texto deve ser curto).
 - **RingImage** -exibir uma única imagem, com um anel de progresso ao redor dele.
 - **RingText** -exibir uma única linha de texto, com um anel de progresso ao redor dele.
-- **Quadrado** -exibir uma imagem de quadrados (40px ou 44px quadrado para a 38 mm ou mm 42 Apple Watch respectivamente).
+- **Quadrado** -exibir uma imagem de quadrados (40px ou 44px quadrada para o 38 mm ou Apple Watch de 42 mm, respectivamente).
 
-### <a name="utilitarian-large"></a>Utilitários grande
+### <a name="utilitarian-large"></a>Utilitárias grande
 
-Há apenas um modelo para esse estilo complicativo: `CLKComplicationTemplateUtilitarianLargeFlat`.
+Há apenas um modelo para esse estilo de complicação: `CLKComplicationTemplateUtilitarianLargeFlat`.
 Ele exibe uma única imagem e texto, tudo em uma única linha.
 
 

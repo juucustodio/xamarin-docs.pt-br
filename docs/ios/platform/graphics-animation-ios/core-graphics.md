@@ -4,15 +4,15 @@ description: Este artigo discute as estruturas de iOS de elementos gráficos pri
 ms.prod: xamarin
 ms.assetid: 4A30F480-0723-4B8A-9049-7CEB6211304A
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 82c54074db722824c56ae3ae86620c804b8d109e
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: f3fe22e56a2c45524923a316ef28e54e5a3cc3f8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241943"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102965"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Gráficos de principal no xamarin. IOS
 

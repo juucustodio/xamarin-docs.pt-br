@@ -4,21 +4,24 @@ description: Como usar o RelativeLayout em um aplicativo xamarin. Android
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: af8d37775a798fc6019106a66df75843a951c108
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+ms.openlocfilehash: af2972ecc92435836a75013e6203ba47c2c04627
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113126"
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
-[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) é um [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) que exibe filho [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) elementos em posições relativas. A posição de um [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) podem ser especificados como relativos a elementos irmãos (por exemplo, como para a esquerda do ou abaixo de um determinado elemento) ou em posições relativas para a [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) área (como alinhado à parte inferior, à esquerda do centro).
+[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) é um [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) que exibe o filho [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+elementos em posições relativas. A posição de um [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) podem ser especificados como relativos a elementos irmãos (por exemplo, como para a esquerda do ou abaixo de um determinado elemento) ou em posições relativas para a [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
+área (como alinhado à parte inferior, à esquerda do centro).
 
-Um [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) é um utilitário muito poderoso para o aninhamento de criação de uma interface de usuário porque ele pode eliminar [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s. Se você estiver usando vários aninhadas [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) grupos, você poderá substituí-los com um único [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/).
+Um [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) é um utilitário muito poderoso para o aninhamento de criação de uma interface de usuário porque ele pode eliminar [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s. Se você estiver usando vários aninhadas [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+grupos, você poderá substituí-los com um único [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/).
 
 Iniciar um novo projeto chamado **HelloRelativeLayout**.
 
@@ -62,7 +65,8 @@ Ao usar um [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.W
 
 Todos os atributos de layout disponíveis são definidos no [ `RelativeLayout.LayoutParams` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/).
 
-Verifique se você carregar esse layout na [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) método:
+Verifique se você carregar esse layout na [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+método:
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)

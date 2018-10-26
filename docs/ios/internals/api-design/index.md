@@ -4,15 +4,15 @@ description: Este documento descreve alguns dos princípios de orientação usad
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 275db96435639a60be89e0e3ddb7fa120a30de1c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: cd25e5c78885f53902c577a900958b842a70219c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996406"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116947"
 ---
 # <a name="xamarinios-api-design"></a>Design de API do xamarin. IOS
 
@@ -494,7 +494,7 @@ public class MyCallbacks : NSObject {
 }
 ```
 
-Os nomes para os métodos c# não são importantes; tudo o que importa são as cadeias de caracteres passadas para o atributo [Export].
+O C# os nomes de métodos não são importantes; tudo o que importa são as cadeias de caracteres passadas para o atributo [Export].
 
 Ao usar esse estilo de programação, certifique-se de que os parâmetros do c# correspondem aos tipos reais que o mecanismo de tempo de execução passará.
 

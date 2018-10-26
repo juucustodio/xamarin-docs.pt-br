@@ -1,23 +1,23 @@
 ---
-title: Introdução ao .NET inserindo
-description: Este documento contém links para várias guias que descrevem como usar o .NET inserindo em C, Java, Android, projetos Objective-C, iOS e macOS.
+title: Introdução a incorporação do .NET
+description: Este documento contém links para vários guias que descrevem como usar o .NET inserindo em C, Java, Android, os projetos de Objective-C, iOS e macOS.
 ms.prod: xamarin
 ms.assetid: AF8A4798-EBDD-4E73-997B-C3D4FC5E9685
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 9829881dcb374b141bdf7fc578266ec66d90315b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 96a80d76afb769dae456e7ff9bdad32b137c6fed
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106202"
 ---
-# <a name="getting-started-with-net-embedding"></a>Introdução ao .NET inserindo
+# <a name="getting-started-with-net-embedding"></a>Introdução a incorporação do .NET
 
 ## <a name="ccmd"></a>[C](c.md)
 
-Inserir o código .NET em seus aplicativos C.
+Inserir o código .NET em seus aplicativos do C.
 
 ## <a name="javajavaindexmd"></a>[Java](java/index.md)
 
@@ -25,11 +25,11 @@ Como inserir em aplicativos Java em várias plataformas.
 
 ### <a name="androidjavaandroidmd"></a>[Android](java/android.md)
 
-Aviso específico do Android para incorporar o código .NET.
+Conselhos específica do Android para a inserção de código .NET.
 
 ## <a name="objective-cobjective-cindexmd"></a>[Objective-C](objective-c/index.md)
 
-Como inserir em objetivo-C.
+Como inserir em Objective-C.
 
 ### <a name="iosobjective-ciosmd"></a>[iOS](objective-c/ios.md)
 
@@ -37,4 +37,4 @@ dicas de específico do iOS para incorporar o código .NET.
 
 ### <a name="macosobjective-cmacosmd"></a>[macOS](objective-c/macos.md)
 
-dicas de macOS específicos para incorporar o código .NET.
+dicas de específicas ao macOS para incorporar o código .NET.

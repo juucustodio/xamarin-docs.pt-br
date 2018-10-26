@@ -1,40 +1,40 @@
 ---
-title: Designer Android
-description: Este artigo aborda os recursos do Designer xamarin. Ele aborda as Noções básicas do designers, mostrando como usar o Designer para dispor widgets visualmente e como editar propriedades. Ele também mostra como usar o Designer para trabalhar com recursos e interfaces de usuário em várias configurações, como temas, idiomas e as configurações do dispositivo, bem como projetar para modos de exibição alternativos como retrato e paisagem.
+title: Xamarin. Android Designer
+description: Este artigo descreve os recursos do Designer de xamarin. Android. Ele explica as Noções básicas do designer, que demonstra como usar o Designer para dispor widgets visualmente e editar as propriedades. Ele também ilustra como usar o Designer para trabalhar com recursos e interfaces do usuário em várias configurações, como temas, linguagens e configurações de dispositivo, bem como projetar para modos de exibição alternativos como retrato e paisagem.
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: 20da09895bae759c77e96300d798267881a7cbfd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 07/25/2018
+ms.openlocfilehash: 1923d11829cf96941c8775f5f6b013116e0f2893
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114504"
 ---
-# <a name="android-designer"></a>Designer Android
+# <a name="xamarinandroid-designer"></a>Xamarin. Android Designer
 
-_Este artigo aborda os recursos do Designer xamarin. Ele aborda as Noções básicas do designers, mostrando como usar o Designer para dispor widgets visualmente e como editar propriedades. Ele também mostra como usar o Designer para trabalhar com recursos e interfaces de usuário em várias configurações, como temas, idiomas e as configurações do dispositivo, bem como projetar para modos de exibição alternativos como retrato e paisagem._
+_Este artigo descreve os recursos do Designer de xamarin. Android. Ele explica as Noções básicas do designer, que demonstra como usar o Designer para dispor widgets visualmente e editar as propriedades. Ele também ilustra como usar o Designer para trabalhar com recursos e interfaces do usuário em várias configurações, como temas, linguagens e configurações de dispositivo, bem como projetar para modos de exibição alternativos como retrato e paisagem._
 
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin dá suporte a um estilo declarativo do design de interface de usuário com base em arquivos XML, bem como a criação de interface do usuário através de programação em código.
-Ao usar a abordagem declarativa, arquivos XML podem ser editados manualmente ou modificados visualmente usando o Designer de xamarin. Uso de um designer permite feedback imediato durante a criação da interface do usuário, acelera o desenvolvimento e torna o processo de criação de interface de usuário menos trabalhoso.
+Xamarin. Android dá suporte a um estilo declarativo do design da interface do usuário com base em arquivos XML, bem como a criação de interface do usuário de programação em código.
+Ao usar a abordagem declarativa, arquivos XML podem ser editados manualmente ou modificados visualmente usando o Designer do xamarin. Android. Uso de um designer permite que o feedback imediato durante a criação da interface do usuário, acelera o desenvolvimento e torna o processo de criação de interface do usuário menos trabalhoso.
 
-Este artigo pesquisas muitos recursos do Designer xamarin. Ele explica:
+Este artigo apresenta uma pesquisa os diversos recursos do Designer de xamarin. Android. Ele explica o seguinte:
 
-1.  Noções básicas do uso do Designer.
+1.  As Noções básicas do uso do Designer.
 2.  As várias partes que compõem o Designer.
-3.  Como carregar um layout de Android para o Designer.
+3.  Como carregar um layout do Android no Designer.
 4.  Como adicionar widgets.
 5.  Como editar as propriedades.
-6.  Como trabalhar com vários recursos e configurações do dispositivo.
-7.  Como modificar uma interface de usuário para modos de exibição alternativos como retrato e paisagem. 
-8.  Como lidar com conflitos que podem surgir ao trabalhar com modos de exibição alternativos. 
-9.  Como usar ferramentas de Design de Material para compilar aplicativos compatíveis com o Material Design.
+6.  Como trabalhar com vários recursos e configurações de dispositivo.
+7.  Como modificar uma interface do usuário para modos de exibição alternativos como retrato e paisagem. 
+8.  Como lidar com conflitos que podem ocorrer ao trabalhar com modos de exibição alternativos. 
+9.  Como usar as ferramentas de Design de Material para compilar aplicativos compatíveis com o Material Design.
 
 
 
@@ -54,7 +54,8 @@ Este artigo pesquisas muitos recursos do Designer xamarin. Ele explica:
 
 ## <a name="summary"></a>Resumo
 
-Este artigo discutido o conjunto de recursos do Designer xamarin. Ele mostrou como começar com o Designer e explicados suas várias partes. Ele descrito como carregar um layout, bem como adicionar e modificar widgets, ambos, usando o **propriedade preenchimento** e embutido na superfície de Designer. Ele também explicou como trabalhar com vários recursos e configurações do dispositivo. Finalmente, ele examinado como usar o Designer para desenvolver interfaces de usuário que são criados especificamente para modos de exibição alternativos, como paisagem e retrato, bem como resolver conflitos que podem surgir entre esses modos de exibição. 
+Esse artigo discutiu o conjunto de recursos do xamarin. Android Designer.
+Ele mostrou como começar com o Designer e explicadas suas várias partes. Ele descreveu como carregar um layout, bem como adicionar e modificar os widgets, usando tanto a **superfície do Designer de** , bem como a **origem** exibição. Ele também explicou como trabalhar com vários recursos e configurações do dispositivo. Por fim, ele examinado como usar o Designer para desenvolver interfaces de usuário que são criados especificamente para modos de exibição alternativos, como paisagem e retrato, bem como resolver conflitos que podem surgir entre esses modos de exibição.
 
 
 

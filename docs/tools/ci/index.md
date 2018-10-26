@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: lobrien
 ms.author: laobri
-ms.date: 10/03/2018
-ms.openlocfilehash: 06392448682a5b3be02562578542919b42242c13
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.date: 10/23/2018
+ms.openlocfilehash: 9171eeb461f2e4d363de6e01ea92fa448f04d41a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34793736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121627"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introdução à integração contínua com o Xamarin
 
@@ -20,6 +20,10 @@ ms.locfileid: "34793736"
 ## <a name="introduction-to-continuous-integrationtoolsciintro-to-cimd"></a>[Introdução à integração contínua](~/tools/ci/intro-to-ci.md)
 
 Esta seção aborda os diferentes componentes envolvidos com a integração contínua e suas relações. Ele descreve os ambientes de integração contínua são discutidos nas seções específicas a seguir.
+
+## <a name="devops-with-xamarintoolscidevopsmd"></a>[DevOps com o Xamarin](~/tools/ci/devops.md)
+
+Esta seção identifica quais recursos de DevOps no Azure e o Visual Studio, você pode esperar que funcionem bem com um projeto Xamarin.
 
 ## <a name="working-with-continuous-integration-environments"></a>Trabalhando com ambientes de integração contínua
 

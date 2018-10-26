@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115404"
 ---
 # <a name="checking-device-orientation"></a>Verificando a orientação do dispositivo
 
@@ -29,7 +29,7 @@ O aplicativo usando `DependencyService` terá a seguinte estrutura:
 ![](device-orientation-images/orientation-diagram.png "Estrutura de aplicativo do DependencyService")
 
 > [!NOTE]
-> É possível detectar se o dispositivo está na orientação retrato ou paisagem em código compartilhado, conforme demonstrado em [Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation de dispositivo). O método descrito neste artigo usa recursos nativos para obter mais informações sobre a orientação, incluindo se o dispositivo está de cabeça para baixo.
+> É possível detectar se o dispositivo está na orientação retrato ou paisagem em código compartilhado, conforme demonstrado [orientação do dispositivo](~/xamarin-forms/user-interface/layouts/device-orientation.md#Reacting_to_Changes_in_Orientation). O método descrito neste artigo usa recursos nativos para obter mais informações sobre a orientação, incluindo se o dispositivo está de cabeça para baixo.
 
 <a name="Creating_the_Interface" />
 
@@ -215,7 +215,7 @@ public MainPage ()
 }
 ```
 
-Executando esse aplicativo no iOS, Android ou as plataformas Windows e pressionar o botão irá resultar no texto do botão Atualizar com a orientação do dispositivo.
+Executando esse aplicativo no iOS, Android ou as plataformas Windows e pressionando o botão resultará no texto do botão Atualizar com a orientação do dispositivo.
 
 ![](device-orientation-images/orientation.png "Exemplo de orientação do dispositivo")
 

@@ -1,27 +1,27 @@
 ---
-title: Suporte do Windows UrhoSharp
-description: Este documento aborda o suporte do Windows para UrhoSharp. Descreve como criar um projeto, configurar e iniciar Urho, integrar com WPF e integrar com UWP.
+title: Suporte do Windows do UrhoSharp
+description: Este documento aborda o suporte ao Windows UrhoSharp. Ele descreve como criar um projeto, configurar e iniciar Urho, integrar com o WPF e integrar com UWP.
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 094eaf0ebe84ce8c1771bd6481ee897463349856
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8aca028ec1015616a9884cd09b7ffa5e04f2e43d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119599"
 ---
-# <a name="urhosharp-windows-support"></a>Suporte do Windows UrhoSharp
+# <a name="urhosharp-windows-support"></a>Suporte do Windows do UrhoSharp
 
-Embora Urho é uma biblioteca de classes portátil, e permite que a mesma API a ser usado na plataforma de vários para seu jogo lógica, você ainda precisa inicializar Urho no driver específico da plataforma e, em alguns casos, convém tirar proveito dos recursos específicos de plataforma .
+Embora Urho é uma biblioteca de classes portátil e permite que a mesma API a ser usado em toda a plataforma de vários para sua lógica do jogo, você ainda precisará inicializar Urho em seu driver específico da plataforma, em alguns casos, você vai querer tirar proveito dos recursos específicos da plataforma .
 
 Nas páginas a seguir, suponha que `MyGame` é uma subclasse do `Application` classe.
 
-**Suporte a arquiteturas:** apenas 64 bits Windows.
+**Arquiteturas com suporte:** apenas de Windows 64 bits.
 
-Você pode ver exemplos completos mostrando como usar isso em nosso [exemplos](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
+Você pode ver exemplos completos que mostram como usar isso em nosso [exemplos](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
 
 ## <a name="standalone-project"></a>Projeto autônomo
 
@@ -42,7 +42,7 @@ new MyGame().Run();
 
 [Exemplo completo](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
 
-## <a name="integrated-with-wpf"></a>Integrado com WPF
+## <a name="integrated-with-wpf"></a>Integrado com o WPF
 
 ### <a name="creating-a-project"></a>Criando um projeto
 
@@ -50,7 +50,7 @@ Criar um projeto WPF, o Urho NuGet de referência e, em seguida, certifique-se d
 
 ### <a name="configuring-and-launching-urho-from-wpf"></a>Configurando e iniciando Urho do WPF
 
-Criar uma subclasse de `Window` e configurar seus ativos assim:
+Criar uma subclasse de `Window` e configurar seus ativos como este:
 
 ```csharp
     public partial class MainWindow : Window
@@ -86,15 +86,15 @@ Criar uma subclasse de `Window` e configurar seus ativos assim:
 
 [Exemplo completo](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
-## <a name="integrated-with-uwp"></a>Integrado com UWP
+## <a name="integrated-with-uwp"></a>Integrado com a UWP
 
 ### <a name="creating-a-project"></a>Criando um projeto
 
-Criar um projeto UWP, fazer referência a Urho NuGet e, em seguida, certifique-se de que você pode localizar os ativos (os diretórios que contém o diretório de dados).
+Crie um projeto UWP, o Urho NuGet de referência e, em seguida, certifique-se de que você pode localizar os ativos (os diretórios que contém o diretório de dados).
 
-### <a name="configuring-and-launching-urho-from-uwp"></a>Configurando e iniciando Urho de UWP
+### <a name="configuring-and-launching-urho-from-uwp"></a>Configurando e iniciando Urho da UWP
 
-Criar uma subclasse de `Window` e configurar seus ativos assim:
+Criar uma subclasse de `Window` e configurar seus ativos como este:
 
 ```csharp
 {
@@ -127,4 +127,4 @@ Criar um projeto do Windows. Forms, o Urho NuGet de referência e, em seguida, c
 
 ### <a name="configuring-and-launching-urho-from-windowsforms"></a>Configurando e iniciando Urho do Windows. Forms
 
-Iniciar Urho do formulário, consulte [exemplo completo](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)
+Inicie o Urho no seu formulário, consulte [exemplo completo](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)

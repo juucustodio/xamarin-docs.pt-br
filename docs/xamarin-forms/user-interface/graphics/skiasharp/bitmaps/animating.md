@@ -4,15 +4,15 @@ description: Saiba como executar a animação de bitmap ao sequencialmente exibi
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 45a009757d84aa98acc41f6cd2bf672c8472c5bb
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 78fcbae8db70a83d7d0a643e0b27f575152e9515
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112541"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animando bitmaps de SkiaSharp
 
@@ -498,15 +498,15 @@ O arquivo code-behind não é generalizado para reproduzir qualquer arquivo GIF 
 
 O uso de SkisSharp para extrair os quadros de um arquivo GIF animado parece não ser documentado em qualquer lugar, portanto, a descrição do código a seguir é mais detalhada do que o normal:
 
-A decodificação do arquivo GIF animado ocorre no construtor da página e exige que o `Stream` objeto referenciando o bitmap a ser usado para criar um `SKManagedStream` objeto e, em seguida, um [ `SKCodec` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCodec/) objeto. O [ `FrameCount` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.FrameCount/) propriedade indica o número de quadros que formam a animação. 
+A decodificação do arquivo GIF animado ocorre no construtor da página e exige que o `Stream` objeto referenciando o bitmap a ser usado para criar um `SKManagedStream` objeto e, em seguida, um [ `SKCodec` ](xref:SkiaSharp.SKCodec) objeto. O [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount) propriedade indica o número de quadros que formam a animação. 
 
 Esses quadros eventualmente são salvos como bitmaps individuais, portanto, usa o construtor `FrameCount` para alocar uma matriz do tipo `SKBitmap` , bem como dois `int` matrizes para a duração de cada quadro e (para facilitar a lógica da animação) o acumulado durações.
 
-O [ `FrameInfo` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.FrameInfo/) propriedade do `SKCodec` classe é uma matriz de [ `SKCodecFrameInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCodecFrameInfo/) valores, um para cada quadro, mas a única coisa que esse programa usa dessa estrutura é o [ `Duration` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodecFrameInfo.Duration/) do quadro em milissegundos.
+O [ `FrameInfo` ](xref:SkiaSharp.SKCodec.FrameInfo) propriedade do `SKCodec` classe é uma matriz de [ `SKCodecFrameInfo` ](xref:SkiaSharp.SKCodecFrameInfo) valores, um para cada quadro, mas a única coisa que esse programa usa dessa estrutura é o [ `Duration` ](xref:SkiaSharp.SKCodecFrameInfo.Duration) do quadro em milissegundos.
 
-`SKCodec` define uma propriedade chamada [ `Info` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.Info/) do tipo [ `SKImageInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/), mas esse `SKImageInfo` valor indica (pelo menos para esta imagem) que o tipo de cor é `SKColorType.Index8`, o que significa que cada pixel é um índice em um tipo de cor. Para evitar que se preocupar com tabelas de cores, o programa usa o [ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Width/) e [ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Height/) informações dessa estrutura para construí-la é possui quatro cores `ImageInfo` valor. Cada `SKBitmap` é criada a partir do que.
+`SKCodec` define uma propriedade chamada [ `Info` ](xref:SkiaSharp.SKCodec.Info) do tipo [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo), mas esse `SKImageInfo` valor indica (pelo menos para esta imagem) que o tipo de cor é `SKColorType.Index8`, o que significa que cada pixel é um índice em um tipo de cor. Para evitar que se preocupar com tabelas de cores, o programa usa o [ `Width` ](xref:SkiaSharp.SKImageInfo.Width) e [ `Height` ](xref:SkiaSharp.SKImageInfo.Height) informações dessa estrutura para construí-la é possui quatro cores `ImageInfo` valor. Cada `SKBitmap` é criada a partir do que.
 
-O `GetPixels` método de `SKBitmap` retorna um `IntPtr` referenciar os bits de pixel desse bitmap. Esses bits de pixel ainda não foram definidas. Que `IntPtr` é passado para um dos [ `GetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCodec.GetPixels/p/SkiaSharp.SKImageInfo/System.IntPtr/SkiaSharp.SKCodecOptions/) métodos de `SKCodec`. Esse método copia o quadro do arquivo GIF no espaço de memória referenciado pelo `IntPtr`. O [ `SKCodecOptions` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCodecOptions.SKCodecOptions/p/System.Int32/System.Boolean/) construtor indica o número de quadro:
+O `GetPixels` método de `SKBitmap` retorna um `IntPtr` referenciar os bits de pixel desse bitmap. Esses bits de pixel ainda não foram definidas. Que `IntPtr` é passado para um dos [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) métodos de `SKCodec`. Esse método copia o quadro do arquivo GIF no espaço de memória referenciado pelo `IntPtr`. O [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions.%23ctor(System.Int32,System.Boolean)) construtor indica o número de quadro:
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -657,6 +657,6 @@ Obviamente, você vai querer executar o programa por conta própria para ver a a
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Animação de Mandelbrot (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/)

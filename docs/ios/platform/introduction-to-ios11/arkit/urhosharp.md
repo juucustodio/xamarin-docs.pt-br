@@ -4,15 +4,15 @@ description: Este documento descreve como configurar um aplicativo ARKit no xama
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 728082eb27684c2176feb2038b7948986ce6a694
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351685"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103888"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Usando o ARKit com UrhoSharp em xamarin. IOS
 
@@ -25,7 +25,7 @@ Esta página explica como conectar-se esses dois mundos juntos para criar aplica
 
 ## <a name="the-basics"></a>Os conceitos básicos
 
-O que queremos fazer é apresentam conteúdo 3D na parte superior do mundo, como visto pelo iPhone.   A ideia é mesclar o conteúdo vindo de câmera do celular com o conteúdo 3D e como o usuário do telefone move sala para garantir que o objeto 3D se comportar da forma é que eles parte da sala: isso é feito com ancoragem os objetos no mundo.
+O que queremos fazer é apresentam conteúdo 3D na parte superior do mundo, como visto pelo iPhone/iPad.   A ideia é mesclar o conteúdo vindo de câmera do dispositivo com o conteúdo 3D e como o usuário do dispositivo se move pela sala para garantir que o objeto 3D se comportar da forma é que eles parte da sala: isso é feito com ancoragem os objetos no mundo.
 
 ![Figura animada no ARKit](urhosharp-images/image1.gif)
 

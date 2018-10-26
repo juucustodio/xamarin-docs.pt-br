@@ -1,37 +1,37 @@
 ---
-title: Trabalhando com watchOS entrada de texto em Xamarin
-description: Este documento descreve a entrada de texto watchOS em Xamarin. Ele aborda o PresentTextInputController método, escrevendo, texto sem formatação, emojis e ditado.
+title: Trabalhando com entrada de texto no Xamarin do watchOS
+description: Este documento descreve a entrada de texto do watchOS no Xamarin. Ele aborda o PresentTextInputController método, escrevendo, texto sem formatação, emojis e ditado.
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: da668333b3549c92264af7d4da4941ac6b5bf865
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 2092b12254008936f2c5b6a7d9dd610ff751e802
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791378"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122355"
 ---
-# <a name="working-with-watchos-text-input-in-xamarin"></a>Trabalhando com watchOS entrada de texto em Xamarin
+# <a name="working-with-watchos-text-input-in-xamarin"></a>Trabalhando com entrada de texto no Xamarin do watchOS
 
-O Apple Watch não oferece um teclado para os usuários de entrada de texto, no entanto, ele oferece suporte a algumas alternativas amigável para inspecionar:
+O Apple Watch não oferece um teclado para os usuários a entrada de texto, no entanto, ele oferece suporte a algumas alternativas de inspeção amigável:
 
-- Selecionar em uma lista predefinida de opções de texto
+- A seleção de uma lista predefinida de opções de texto,
 - Siri ditado,
 - Escolhendo um emoji
-- Rabisco reconhecimento de manuscrito letra por letra (introduzido no watchOS 3).
+- Scribble do reconhecimento de manuscrito de letra por letra (introduzido no watchOS 3).
 
 O simulador não oferece suporte a ditado, mas você ainda pode testar a entrada de texto outras opções do controlador, como rabisco, conforme mostrado aqui:
 
-![](text-input-images/textinput-sml.png "Testando a opção Rabisco")
+![](text-input-images/textinput-sml.png "Testando a opção de rabisco")
 
 Para aceitar a entrada de texto em um aplicativo de inspeção:
 
 1. Crie uma matriz de cadeia de caracteres de opções predefinidas.
-2. Chamar `PresentTextInputController` com a matriz, se deseja permitir emoji ou não e um `Action` que é chamado quando o usuário for concluído.
-3. Em que a ação de conclusão de teste para o resultado de entrada e execute a ação apropriada no aplicativo (possivelmente definindo o valor de texto do rótulo).
+2. Chame `PresentTextInputController` com a matriz, se deseja permitir emoji ou não e um `Action` que é chamado quando o usuário for concluído.
+3. Na ação de conclusão, teste o resultado de entrada e tomar as devidas providências no aplicativo (possivelmente definindo o valor de texto do rótulo para um).
 
 O trecho de código a seguir apresenta três opções predefinidas para o usuário:
 
@@ -49,7 +49,7 @@ PresentTextInputController (suggest, WatchKit.WKTextInputMode.AllowEmoji, (resul
 });
 ```
 
-O `WKTextInputMode` enumeração tem três valores:
+O `WKTextInputMode` enumeração possui três valores:
 
 - Sem formatação
 - AllowEmoji
@@ -61,7 +61,7 @@ Quando o modo simples é definido, o usuário pode escolher:
 
 - Ditado,
 - Rabisco, ou
-- de uma lista predefinida que fornece o aplicativo.
+- em uma lista predefinida que fornece o aplicativo.
 
 [![](text-input-images/plain-scribble-sml.png "Ditado, rabisco, ou de uma lista predefinida que fornece o aplicativo")](text-input-images/plain-scribble.png#lightbox)
 
@@ -71,19 +71,19 @@ O resultado sempre é retornado como um `NSObject` que pode ser convertido em um
 
 Há dois tipos de emoji:
 
-- Regular emoji de Unicode
+- Normal emoji de Unicode
 - Imagens animadas
 
 Quando o usuário escolhe um emoji Unicode, ele é retornado como uma cadeia de caracteres.
 
-Se for selecionada uma imagem animada emoji o `result` na conclusão manipulador conterá um `NSData` objeto que contém o emoji `UIImage`.
+Se uma imagem animada emoji for selecionado o `result` na conclusão manipulador conterá um `NSData` objeto que contém o emoji `UIImage`.
 
-## <a name="accepting-dictation-only"></a>Aceitando ditado somente
+## <a name="accepting-dictation-only"></a>Aceitando o ditado somente
 
-Para levar o usuário diretamente para a tela de ditado sem Mostrar sugestões (ou a opção de rabisco):
+Para levar o usuário diretamente para a tela de ditado sem mostrar qualquer sugestão (ou a opção de rabisco):
 
 - passar uma matriz vazia para a lista de sugestões, e
-- Set `WatchKit.WKTextInputMode.Plain`.
+- Definir `WatchKit.WKTextInputMode.Plain`.
 
 ```csharp
 PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (result) => {
@@ -96,11 +96,11 @@ PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (resu
 });
 ```
 
-Quando o usuário está falando, a tela de observação exibe a tela a seguir que inclui o texto que é entendido (por exemplo "Este é um teste"):
+Quando o usuário está falando, a tela de observação exibe a tela a seguir que inclui o texto, que é entendido (por exemplo "Este é um teste"):
 
-![](text-input-images/dictation.png "Quando o usuário está falando, a tela de inspecionar exibe o texto como é entendido")
+![](text-input-images/dictation.png "Quando o usuário está falando, a tela de observação exibe o texto como ele é compreendido")
 
-Depois que eles pressionarem o **feito** botão, o texto será retornado.
+Quando eles pressionam a **feito** botão, o texto será retornado.
 
 
 

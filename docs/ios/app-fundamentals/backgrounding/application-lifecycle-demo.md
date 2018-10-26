@@ -4,15 +4,15 @@ description: Este documento examina vários eventos de ciclo de vida tratados pe
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/17/2018
-ms.openlocfilehash: 53ae6947cf1483fabe415d6f6521d9384bddb46f
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 3beb511c03b328ecea824bf89355d056df003f3e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111167"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102692"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Demonstração do ciclo de vida do aplicativo para xamarin. IOS
 

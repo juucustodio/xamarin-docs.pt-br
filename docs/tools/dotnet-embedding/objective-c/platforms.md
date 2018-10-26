@@ -1,35 +1,35 @@
 ---
-title: Plataformas Objective-C
-description: Este documento descreve as várias plataformas .NET inserindo pode destinar ao trabalhar com código Objective-C. Ele discute macOS, iOS, tvOS e watchOS.
+title: Plataformas de Objective-C
+description: Este documento descreve as várias plataformas .NET incorporação pode direcionar ao trabalhar com código Objective-C. Ele aborda o macOS, iOS, tvOS e watchOS.
 ms.prod: xamarin
 ms.assetid: 43253BE4-A03A-4646-9A14-32C05174E672
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 6eeb776959d1a2a37d67bfae6603971d0e5a22b7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8091fb4e8328f61f1471d061b51b4735de3c089c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793885"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108868"
 ---
-# <a name="objective-c-platforms"></a>Plataformas Objective-C
+# <a name="objective-c-platforms"></a>Plataformas de Objective-C
 
-Inserindo .NET pode direcionar várias plataformas, ao gerar código Objective-C:
+Incorporação do .NET pode direcionar várias plataformas, ao gerar o código Objective-C:
 
 * macOS
 * iOS
 * tvOS
-* watchOS [ainda não implementada]
+* watchOS [ainda não implementado]
 
-A plataforma está selecionada, passando o `--platform=<platform>` argumento de linha de comando para a incorporação de .NET.
+A plataforma é selecionada, passando o `--platform=<platform>` argumento de linha de comando para incorporação do .NET.
 
-Ao compilar para o iOS, plataformas tvOS e watchOS, inserindo .NET sempre criará uma estrutura que incorpora xamarin, pois xamarin contém muitos códigos de suporte em tempo de execução que é necessário nessas plataformas.
+Ao compilar para iOS, tvOS e watchOS plataformas, incorporação do .NET sempre criará uma estrutura que incorpora o xamarin. IOS, como xamarin. IOS contém muitos códigos de suporte de tempo de execução que é necessário nessas plataformas.
 
-No entanto, ao compilar para a plataforma macOS, é possível escolher se o framework gerado deve incorporar Xamarin.Mac ou não. É possível inserir não Xamarin.Mac se o assembly associado não faz referência a Xamarin.Mac.dll (direta ou indiretamente), e isso é selecionado, passando `--platform=macOS` para a ferramenta de inserção de .NET.
+No entanto, ao compilar para a plataforma macOS, é possível escolher se o framework gerado deve incorporar o xamarin. Mac ou não. É possível inserir não o xamarin. Mac se o assembly associado não faz referência xamarin (direta ou indiretamente), e essa opção é selecionada, passando `--platform=macOS` para a ferramenta de incorporação do .NET.
 
-Se o assembly associado contém uma referência a Xamarin.Mac.dll, é necessário inserir Xamarin.Mac e além do embeddinator deve saber qual estrutura de destino a ser usado.
+Se o assembly associado contiver uma referência ao xamarin, é necessário incorporar o xamarin. Mac e, adicionalmente o embeddinator precisa saber qual estrutura de destino para usar.
 
-Há três possíveis estruturas de destino Xamarin.Mac: `modern` (anteriormente chamado de `mobile`), `full` e `system` (a diferença entre cada um deles é descrita do Xamarin.Mac [framework de destino] [ 1] documentação), e cada um é selecionada, passando `--platform=macOS-modern`, `--platform=macOS-full` ou `--platform=macOS-system` para a ferramenta de inserção de .NET.
+Há três possíveis estruturas de destino de xamarin. Mac: `modern` (anteriormente chamado `mobile`), `full` e `system` (a diferença entre cada um é descrita do xamarin. Mac [estrutura de destino] [ 1] documentação), e cada um é selecionada, passando `--platform=macOS-modern`, `--platform=macOS-full` ou `--platform=macOS-system` para a ferramenta de incorporação do .NET.
 
 [1]: ~/mac/platform/target-framework.md

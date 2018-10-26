@@ -4,14 +4,14 @@ description: Este documento leva a documentação de referência de API do Xamar
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: c6e0e770e844bf186dfb936fb8136b20f2c81daf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 145c109eb127a91a498e8dbe331b230746485d09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102640"
 ---
 # <a name="xamarinios-api-overview"></a>Visão geral da API do xamarin. IOS
 

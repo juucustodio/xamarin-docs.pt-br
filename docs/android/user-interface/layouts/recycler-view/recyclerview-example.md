@@ -4,15 +4,15 @@ description: Um aplicativo de exemplo que demonstra como usar RecyclerView.
 ms.prod: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
-ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
+ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108646"
 ---
 # <a name="a-basic-recyclerview-example"></a>Um exemplo de RecyclerView básico
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 Esse código reside em que a atividade principal `OnCreate` método. O construtor para o Gerenciador de layout requer um *contexto*, portanto, o `MainActivity` é passado usando `this` como mostrado acima.
 
-Em vez de usar o a predefind `LinearLayoutManager`, você pode conectar um Gerenciador de layout personalizado que exibe dois `CardView` itens lado a lado, Implementando um efeito de animação de folheio de página para percorrer a coleção de fotos. Mais adiante neste guia, você verá um exemplo de como modificar o layout, trocando em um Gerenciador de layout diferente.
+Em vez de usar o predefind `LinearLayoutManager`, você pode conectar um Gerenciador de layout personalizado que exibe dois `CardView` itens lado a lado, Implementando um efeito de animação de folheio de página para percorrer a coleção de fotos. Mais adiante neste guia, você verá um exemplo de como modificar o layout, trocando em um Gerenciador de layout diferente.
 
 <a name="view-holder" />
 

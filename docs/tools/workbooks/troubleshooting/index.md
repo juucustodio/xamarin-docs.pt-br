@@ -3,15 +3,15 @@ title: Solução de problemas do Xamarin Workbooks
 description: Este documento leva a vários guias que fornecem informações sobre como trabalhar com pastas de trabalho do Xamarin de solução de problemas. Conteúdo vinculado discute problemas gerais conhecidos, problemas com pastas de trabalho do Android e fornece recursos de suporte.
 ms.prod: xamarin
 ms.assetid: 1706EA2C-7A94-4E30-BD4D-A2F31070554F
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: d3815c8481db3bac6017a48bfd533409a308ad85
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: fcf6f443c86fd1ef0390669621d5c7b7fa748500
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350622"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102848"
 ---
 # <a name="troubleshooting-xamarin-workbooks"></a>Solução de problemas do Xamarin Workbooks
 

@@ -4,15 +4,15 @@ description: Este artigo aborda o uso de chave-valor de codificação e chave-va
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 0adb8cda71ca8803c535679da2aecf00f3fa46a5
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 4a391160f2102fd1f069a45eb7c16aec91dfd7e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251130"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110375"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Vinculação de dados e a codificação de chave-valor no xamarin. Mac
 
@@ -334,7 +334,7 @@ public NSArray People {
 Duas coisas a observar aqui:
 
 1. Usamos uma `NSMutableArray` em vez de uma matriz do c# ou coleção, pois esse é um requisito para associar dados a controles AppKit como padrão **modos de exibição de tabela**, **modos de exibição de estrutura de tópicos** e **coleções** .
-2. Estamos expostos a matriz de funcionários ao convertê-la para um `NSArray` para fins de associação e alterado sua c# os dados formatados como nome, `People`, para um que se espera que a vinculação de dados, `personModelArray` no formulário **{class_name} matriz** (Observação Se o primeiro caractere foi feito letras minúsculas).
+2. Estamos expostos a matriz de funcionários ao convertê-la para um `NSArray` para dados de associação fins e alterado sua C# formatado nome, `People`, para um que se espera que a vinculação de dados, `personModelArray` no formulário **{class_name} matriz**(Observe que o primeiro caractere foi feito letras minúsculas).
 
 Em seguida, precisamos adicionar algumas especialmente nome métodos públicos para dar suporte à **controladores de matriz** e **árvore controladores**:
 

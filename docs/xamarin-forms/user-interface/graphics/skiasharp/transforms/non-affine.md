@@ -4,15 +4,15 @@ description: Este artigo explica como criar perspectiva e efeitos cônico com a 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 13f2a1160d012a6b7720bd84340a1cdd0f991535
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: da5306ed9c301a7229d2fc5e913a4217e844bbba
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116141"
 ---
 # <a name="non-affine-transforms"></a>Transformações não afins
 
@@ -61,6 +61,8 @@ No entanto, ao exibir gráficos, você deseja evitar o processamento de algo com
 Nessa equação, você não deseja que o valor de z' se tornando zero:
 
 z' = Persp0·x + Persp1·y + Persp2
+
+Consequentemente, esses valores têm algumas restrições práticas: 
 
 O `Persp2` célula pode ser zero ou não zero. Se `Persp2` for zero, z' é zero para o ponto (0, 0) e que geralmente não é desejável porque esse ponto é muito comum em gráficos bidimensionais. Se `Persp2` é igual a zero, não há nenhuma perda de generalidade se `Persp2` é fixo em 1. Por exemplo, se você determinar que `Persp2` deve ser 5, em seguida, você pode simplesmente dividir todas as células na matriz por 5, que torna `Persp2` igual a 1 e o resultado será o mesmo.
 
@@ -360,8 +362,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     canvas.Clear();
 
-    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedIndex;
-    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedIndex;
+    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedItem;
+    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedItem;
     float taperFraction = (float)taperFractionSlider.Value;
 
     SKMatrix taperMatrix =
@@ -392,9 +394,9 @@ Estes são alguns exemplos:
 
 [![](non-affine-images/tapertransform-small.png "Tripla captura de tela da página transformar cônico")](non-affine-images/tapertransform-large.png#lightbox "tripla captura de tela da página de diminuição da transformação")
 
-Outro tipo de transformações não afins generalizados é rotação 3D, o que é demonstrada no próximo artigo, [rotações 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
+Outro tipo de transformações não afins generalizados é rotação 3D, o que é demonstrada no próximo artigo, [ **rotações 3D**](3d-rotation.md).
 
-A transformação não afim pode transformar um retângulo em qualquer convexo diamante. Isso é demonstrado pelo **Mostrar Non-afim** página. É muito semelhante ao **afim de mostrar** página da [transformações de matriz](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) do artigo, exceto que ele tem uma quarta `TouchPoint` objeto para manipular o quarto canto do bitmap:
+A transformação não afim pode transformar um retângulo em qualquer convexo diamante. Isso é demonstrado pelo **Mostrar Non-afim** página. É muito semelhante ao **afim de mostrar** página do [ **transformações de matriz** ](matrix.md) do artigo, exceto que ele tem uma quarta `TouchPoint` objeto para manipular a quarta canto do bitmap:
 
 [![](non-affine-images/shownonaffinematrix-small.png "Tripla captura de tela da página mostram não-afim")](non-affine-images/shownonaffinematrix-large.png#lightbox "tripla captura de tela da página mostram não-matriz")
 
@@ -459,14 +461,14 @@ Para facilitar o cálculo, esse método obtém a transformação total como um p
 
 As coordenadas finais à direita são os quatro pontos associados com os pontos de toque de quatro. Essas são as coordenadas finais dos cantos do bitmap.
 
-L e representam a largura e altura do bitmap. A primeira transformação (`S`) simplesmente dimensiona o bitmap a um quadrado de 1 pixel. A segunda transformação é a transformação não afim `N`, e o terceiro é a transformação afim `A`. Essa transformação afim baseia-se nos três pontos, portanto, é exatamente como anteriormente afim [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) método e não envolve a quarta linha com o (a, b) ponto.
+L e representam a largura e altura do bitmap. A primeira transformação `S` simplesmente dimensiona o bitmap a um quadrado de 1 pixel. A segunda transformação é a transformação não afim `N`, e o terceiro é a transformação afim `A`. Essa transformação afim baseia-se nos três pontos, portanto, é exatamente como anteriormente afim [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) método e não envolve a quarta linha com o (a, b) ponto.
 
 O `a` e `b` são calculadas para que a terceira transformação é afim. O código obtém o inverso da transformação afim e, em seguida, usa para mapear o canto inferior direito. Esse é o ponto (a, b).
 
-Outro uso de transformações não afins é imitar a elementos gráficos tridimensionais. No próximo artigo [rotações 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md) você verá como girar um elemento de gráfico bidimensional no espaço 3D.
+Outro uso de transformações não afins é imitar a elementos gráficos tridimensionais. No próximo artigo [ **rotações 3D** ](3d-rotation.md) você verá como girar um elemento de gráfico bidimensional no espaço 3D.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

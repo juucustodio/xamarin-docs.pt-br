@@ -4,15 +4,15 @@ description: Este documento aborda as alterações feitas em WebKit e a estrutur
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/12/2017
-ms.openlocfilehash: 00587e3b49e953b780a49623f081ae798e81fa61
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: ba691a6605dcf7e86a76ed13d4c8ef5f0984ff6e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114685"
 ---
 # <a name="web-changes-in-ios-11"></a>Alterações da Web no iOS 11
 

@@ -3,15 +3,15 @@ title: Introdução ao iOS
 description: Este documento descreve como começar a usar a incorporação do .NET com o iOS. Ele discute os requisitos e apresenta um aplicativo de exemplo para demonstrar como associar um assembly gerenciado e usar a saída em um projeto do Xcode.
 ms.prod: xamarin
 ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: d61eb8f1ad1def764c8552b2f047aa46cd712018
-ms.sourcegitcommit: ef04a4ae1b19c1854a8e4e8315516d4030f4bbd6
+ms.openlocfilehash: 009772ac88ad57bab53fb71c9705b71f0f8acc8b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654822"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118279"
 ---
 # <a name="getting-started-with-ios"></a>Introdução ao iOS
 

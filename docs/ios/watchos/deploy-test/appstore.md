@@ -4,15 +4,15 @@ description: Este documento descreve como implantar aplicativos watchOS criados 
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 90058f5074759fdded5d259004cb40c0cb7ea212
-ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
+ms.openlocfilehash: 7b2f9ab4cf9bad71153d5bdae9ae44ddf091deed
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106358"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Implantando aplicativos do watchOS para a App Store
 

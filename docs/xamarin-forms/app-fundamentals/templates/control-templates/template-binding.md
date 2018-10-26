@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 86de2ad6009365b3debbe1a2310651002b023219
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106423"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Associação a partir de um ControlTemplate de xamarin. Forms
 
@@ -156,13 +156,24 @@ public class HomePageCS : ContentPage
 }
 ```
 
+Você também pode vincular para as propriedades do modelo de exibição diretamente, para que você não precisa declarar `BindableProperty`s para `HeaderText` e `FooterText` sobre o `ContentPage`, ao associar o modelo de controle para Parent.BindingContext. _PropertyName_ p. ex.:
+
+```xaml
+<ControlTemplate x:Key="TealTemplate">
+  <Grid>
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.HeaderText}" ... />
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.FooterText}" ... />
+  </Grid>
+</ControlTemplate>
+```
+
 Para obter mais informações sobre associação de dados para ViewModels, consulte [de associações de dados a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrado usando associações de modelo para realizar a associação de dados de um modelo de controle. Associações do modelo permitem que os controles em um modelo de controle aos dados associar a propriedades públicas, permitindo que os valores de propriedade em controles no modelo de controle a ser alterado facilmente.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

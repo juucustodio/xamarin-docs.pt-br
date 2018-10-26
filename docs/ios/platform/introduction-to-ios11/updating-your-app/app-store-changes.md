@@ -1,105 +1,105 @@
 ---
-title: Alterações de loja de aplicativos em iOS 11
-description: Este documento explora as alterações para a loja de aplicativos em iOS 11. Ele aborda o ícone de armazenamento de um aplicativo, promovidas compras de no aplicativo, a página produto redesenhado, comunicação de cliente e versões em fases.
+title: Alterações de Store de aplicativo no iOS 11
+description: Este documento explora as alterações para a Store do aplicativo no iOS 11. Ele aborda o ícone do aplicativo da loja, promovidas compras de no aplicativo, a página de produto redesenhado, comunicação de cliente e versões em fases.
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 59f5d2c0c05ec2950ae7cc74e4f5aaa2565020f0
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 022d6b5c3f85863352dd1343752e934240b357aa
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787384"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113684"
 ---
-# <a name="app-store-changes-in-ios-11"></a>Alterações de loja de aplicativos em iOS 11
+# <a name="app-store-changes-in-ios-11"></a>Alterações de Store de aplicativo no iOS 11
 
-IOS App Store teve uma reestruturação completa, que não só permite aos usuários navegar com eficiência o armazenamento, mas também permite que você, como desenvolvedor, promover o seu aplicativo aos usuários. Esses promoções incluem as atualizações para compras no aplicativo e a página do produto. iOS 11 também adiciona atualizações sobre como se comunicar com os usuários, como adicionar o ícone do aplicativo e a versão do seu aplicativo para o público.
+No iOS App Store teve uma reformulação completa, que não só permite aos usuários navegar com eficiência o armazenamento, mas também permite que você, como desenvolvedor, para promover seu aplicativo aos usuários. Esses promoções incluem as atualizações para compras no aplicativo e a página do produto. iOS 11 também adiciona as atualizações relacionadas a como se comunicar com os usuários, como adicionar o ícone do aplicativo e como liberar seu aplicativo para o público.
 
 ![Novo layout de armazenamento de aplicativo](app-store-changes-images/image3.jpg)
 
 Loja de aplicativos reprojetada tem as seguintes seções:
 
-- **Hoje** – essa guia inclui aplicativos que são "Escolha do editor" ou um aplicativo. Para promover seu aplicativo aqui preencher informações sobre o [promover](https://developer.apple.com//contact/app-store/promote/) página.
-- **Jogos** – todos os aplicativos que é definido como o **jogo** categoria na iTunes Connect pode ser encontrada nesta guia.
-- **Aplicativos** – este guia apresenta todos os outros aplicativos. Os usuários podem procurar por aplicativos em destaque, categorias, superior paga/livre.
-- **Atualizações** – este aplicativo exibe as atualizações para seus aplicativos. Mesmo se você liberar um aplicativo por meio de [fases versão](#Phased_Release), os usuários ainda podem ir para este guia e baixar a versão mais recente.
+- **Hoje em dia** – essa guia inclui aplicativos que são "opções do editor" ou um aplicativo. Para promover seu aplicativo aqui preencher informações sobre o [promover](https://developer.apple.com//contact/app-store/promote/) página.
+- **Jogos** – todos os aplicativos que é definido como o **jogo** categoria no iTunes Connect pode ser encontrada sob essa guia.
+- **Aplicativos** – este guia apresenta todos os outros aplicativos. Os usuários podem procurar por aplicativos em destaque, categorias, superior pago/free.
+- **Atualizações** – este aplicativo exibe as atualizações para seus aplicativos. Mesmo se você liberar um aplicativo por meio [em fases de lançamento](#Phased_Release), os usuários ainda podem ir para essa guia e baixar a versão mais recente.
 - **Pesquisa** – esta guia permite que os usuários pesquisem em seu aplicativo.
 
-## <a name="store-icon"></a>Ícone de armazenamento
+## <a name="store-icon"></a>Ícone de Store
 
-Ícones de armazenamento (ou marketing ícones) não são gerenciados no iTunes conectar e em vez disso, devem estar contidos como um [catálogo de ativos](~/ios/app-fundamentals/images-icons/app-icons.md) em binário seu aplicativo, como ícones de aplicativo. Um ícone de repositório de 1024 x 1024 no formato PNG deve ser incluído em um catálogo de ativos para envio bem-sucedido de aplicativos do iOS 11.
+Ícones de Store (ou ícones de marketing) não são mais gerenciados no iTunes Connect e, em vez disso, devem estar contidas como um [catálogo de ativos](~/ios/app-fundamentals/images-icons/app-icons.md) no seu binário de aplicativo, semelhante ao ícones do aplicativo. Um ícone de armazenamento de 1024 x 1024 no formato PNG deve ser incluído em um catálogo de ativos após o envio de aplicativos do iOS 11.
 
-Diminuir o aplicativo garante que esse catálogo de ativos adicionais não aumenta o tamanho do aplicativo.
+Diminuir o aplicativo torna-se de que este catálogo de ativos adicionais não aumenta o tamanho do aplicativo.
 
 
-## <a name="in-app-purchases-promoted-in-the-app-store"></a>Compras no aplicativo promovido na loja de aplicativos
+## <a name="in-app-purchases-promoted-in-the-app-store"></a>Compras no aplicativo promovidos na Store do aplicativo
 
-Apple fez compras no aplicativo mais detectáveis na loja de aplicativos. Agora você pode adicionar até 20 _App Store promovido_ compras no aplicativo que agora podem ser encontradas na página de aplicativos, na página de produto do seu aplicativo, ou por meio de pesquisa.
+Apple fez compras no aplicativo mais detectável na Store do aplicativo. Agora você pode adicionar até 20 _Store do aplicativo promovido_ compras no aplicativo que agora podem ser encontradas na página de aplicativos, na página de produto do seu aplicativo ou por meio da pesquisa.
 
-Para que suas compras no aplicativo exibidas na loja de aplicativos, você deve incluir os seguintes dados:
+Para ter suas compras no aplicativo exibidas na Store do aplicativo, você deve incluir os seguintes dados:
 
-- **Imagem** – você precisa fornecer uma imagem especialmente projetada para o ícone que descreve o que faz a compra no aplicativo. Essa imagem deve ser diferente do que o ícone do aplicativo e não pode ser uma captura de tela.
-- **Nome** – o nome só pode ser um máximo de 30 caracteres.
-- **Descrição** – a descrição pode ter somente um máximo de 45 caracteres.
+- **Imagem** – você precisará fornecer uma imagem especialmente desenvolvida para o ícone que descreve o que faz a compra no aplicativo. Essa imagem deve ser diferente do ícone do aplicativo e não pode ser uma captura de tela.
+- **Nome** – o nome só pode conter um máximo de 30 caracteres.
+- **Descrição** – a descrição somente pode ter um máximo de 45 caracteres.
 
-Qualquer promoções de compra no aplicativo estão sujeitos a uma revisão de armazenamento do aplicativo antes de ser publicado.
+Promoções qualquer compra no aplicativo estão sujeitos a uma revisão de repositório do aplicativo antes de ser publicado.
 
-Para tornar suas compras no aplicativo disponíveis para promover, abra o aplicativo e navegue até **recursos > compras no aplicativo**. Vá para o **promoção de repositório do aplicativo (opcional)** seção e adicionar uma imagem de 1024 x 1024 e **salvar**, conforme ilustrado na imagem a seguir:
+Para tornar suas compras no aplicativo disponíveis para promover, abra seu aplicativo e navegue até **recursos > compras no aplicativo**. Vá para o **promoção de Store de aplicativo (opcional)** seção e adicionar uma imagem de 1024 x 1024 e **salvar**, conforme ilustrado na imagem a seguir:
 
-![Seção de promoção de loja de aplicativos em iTune conectar](app-store-changes-images/image4.png)
+![Seção de promoção da App Store no iTune Connect](app-store-changes-images/image4.png)
 
 Você também precisará adicionar o `ShouldAddStorePayment` método para o `SKPaymentTransactionObserver` protocolo em seu aplicativo.
 
-Para obter mais informações sobre promoções de compra no aplicativo, consulte da Apple [promover o no aplicativo compras](https://developer.apple.com/app-store/promoting-in-app-purchases/) página.
+Para obter mais informações sobre promoções de compra no aplicativo, consulte da Apple [promover sua compra de no aplicativo](https://developer.apple.com/app-store/promoting-in-app-purchases/) página.
 
 ## <a name="redesigned-product-page"></a>Página de produto redesenhado
 
-As seguintes alterações foram feitas para a página de produto:
+As seguintes alterações foram feitas para a página do produto:
 
 - Títulos agora estão definidos para um máximo de 30 caracteres
 - Foi adicionado um subtítulo
     - Ele deve ser um breve resumo que complementa o título.
     - Subtítulo deve ter um máximo de 30 caracteres
-- Visualizações de aplicativo
+- Visualizações do aplicativo
     - Agora você pode ter três vídeos ou capturas de tela.
-    - Reprodução de vídeos automática quando um usuário acessa a página.
-    - Para obter mais informações, consulte da Apple [aplicativo visualização](https://developer.apple.com/app-store/app-previews/) página.
+    - Reprodução de vídeos automática quando um usuário visitar a página.
+    - Para obter mais informações, consulte da Apple [versão prévia do aplicativo](https://developer.apple.com/app-store/app-previews/) página.
 - Texto promocional
-    - Esse novo recurso fornece 170 caracteres de texto, permitindo que você descreve as informações de alteração com frequência sobre seu aplicativo.
+    - Esse novo recurso fornece 170 caracteres de texto, permitindo que você descrevem as informações que são alteradas frequentemente sobre seu aplicativo.
     - Ele pode ser atualizado a qualquer momento sem a necessidade de enviar uma nova versão do aplicativo.
 
 ## <a name="customer-communication"></a>Comunicação do cliente
 
-Em 10.3, Apple lançou uma nova maneira para os desenvolvedores a se comunicar diretamente com os usuários do aplicativo por meio da capacidade de responder a revisões. Você pode acessar essa nova funcionalidade no iTunes conectar-se ao procurar por **aplicativo > atividade > classificações e comentários de**, conforme ilustrado na imagem a seguir:
+Em 10.3, Apple lançou uma nova maneira para os desenvolvedores a se comunicar diretamente com usuários do aplicativo por meio da capacidade de responder a revisões. Você pode acessar essa nova funcionalidade no iTunes connect, navegando até **aplicativo > atividade > classificações e revisões**, conforme ilustrado na imagem a seguir:
 
-![Caixa de diálogo mostrando a área para inserir a resposta para comentar](app-store-changes-images/image5.png)
+![Caixa de diálogo mostrando a área para inserir a resposta para fazer um comentário](app-store-changes-images/image5.png)
 
-Há algumas coisas a serem consideradas ao responder a usuários:
+Há algumas coisas a serem consideradas ao responder aos usuários:
 
-- Você somente poderá responder uma vez, mas as duas partes podem editar seus comentários quanto desejarem.
-- Os usuários obterão uma notificação ao responder a um comentário.
-- Conecte-se um novo suporte de cliente função foi criada no iTunes. Os usuários com esta função ou uma função de administrador podem responder aos comentários.
+- Você só pode responder uma vez, mas ambas as partes podem editar seus comentários, tanto quanto quiserem.
+- Os usuários recebem uma notificação quando você responde a um comentário.
+- Um atendimento de nova função foi criada no iTunes connect. Os usuários com essa função ou uma função de administrador podem responder a comentários.
 
 Para obter mais informações, consulte da Apple [responder a revisões](https://developer.apple.com/app-store/responding-to-reviews/) página.
 
 <a name="Phased_Release"/>
 
-## <a name="phased-release"></a>Versão em fases
+## <a name="phased-release"></a>Lançamento em fases
 
-Com o iOS 11, a Apple implementou a opção de versões em fases para atualizações para seu aplicativo. Você pode habilitar as versões em fases permitir que a atualização de aplicativo gradualmente seja liberado para clientes, garantindo que a demanda não sobrecarrega o ambiente de produção.
+Com o iOS 11, a Apple implementou a opção de versões em fases para atualizações para seu aplicativo. Você pode habilitar as versões em fases permitir que a atualização do aplicativo seja liberado gradualmente para clientes, garantindo que a demanda não sobrecarrega o ambiente de produção.
 
-Versões em fases estão habilitados no iTunes conectar. Clique no seu aplicativo na barra lateral, role até a **fases de versão para atualizações automáticas** seção na parte inferior e selecione **fases de atualização de versão com o uso de período de 7 dias versão**:
+Versões em fases estão habilitados no iTunes Connect. Clique em seu aplicativo na barra lateral, role até a **em fases de versão para atualizações automáticas** seção na parte inferior e selecione **lançamento em fases de atualização de versão ao longo do período de 7 dias usando**:
 
-![Mostrando opção fases versão para atualizações automáticas](app-store-changes-images/image6.png)
+![Que mostra a opção de versão para atualizações automáticas em fases](app-store-changes-images/image6.png)
 
-A atualização está disponível imediatamente para download na guia atualizações da App Store. Versões em fases só estão disponíveis para os usuários que têm downloads automáticos selecionados.
+A atualização está disponível imediatamente para download na guia atualizações do Store do aplicativo. Versões em fases estão disponíveis apenas para os usuários que têm downloads automáticos selecionados.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [O que há de novo no iOS 11 (Apple)](https://developer.apple.com/ios/)
-- [Página de produto atualizados App Store (Apple)](https://developer.apple.com/app-store/product-page/)
+- [Página de Store de aplicativo atualizado do produto (Apple)](https://developer.apple.com/app-store/product-page/)
 - [Atualizar seu aplicativo para iOS 11 (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/204/)

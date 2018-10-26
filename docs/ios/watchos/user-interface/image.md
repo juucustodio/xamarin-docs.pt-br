@@ -1,47 +1,47 @@
 ---
-title: watchOS controles de imagem em Xamarin
-description: Este documento descreve como usar os controles de imagem em um aplicativo de watchOS criado com o Xamarin. Ele aborda o controle WKInterfaceImage, o método SetImage, adicionar imagens a uma extensão de observação, animações e muito mais.
+title: Controles de imagem no Xamarin do watchOS
+description: Este documento descreve como usar controles de imagem em um aplicativo do watchOS criado com o Xamarin. Ele aborda o controle WKInterfaceImage, o método SetImage, adicionar imagens a uma extensão de inspeção, animações e muito mais.
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: eb58c587f737a5991a21f0efe9964353a8ab0399
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a9e23f1bfa6099c64a0a60d78ecc3c6283a86a96
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108075"
 ---
-# <a name="watchos-image-controls-in-xamarin"></a>watchOS controles de imagem em Xamarin
+# <a name="watchos-image-controls-in-xamarin"></a>Controles de imagem no Xamarin do watchOS
 
-watchOS fornece um [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) controle para exibir imagens e animações simples. Alguns controles também podem ter uma imagem de plano de fundo (por exemplo, botões, grupos e controladores de interface).
+watchOS fornece um [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) controle para exibir imagens e animações simples. Alguns controles também podem ter uma imagem de plano de fundo (como botões, grupos e controladores de interface).
 
-![](image-images/image-walkway.png "Imagem mostrando a Apple Watch") ![](image-images/image-animation.png "Apple Watch com animação simples")
+![](image-images/image-walkway.png "Imagem mostrando a Apple Watch") ![ ] (image-images/image-animation.png "Apple Watch com animação simples")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 Use imagens de catálogo de ativos para adicionar imagens a aplicativos de Kit de inspeção.
-Somente **@2x** versões serão necessárias, já que todos os Assista dispositivos têm exibe Retina.
+Somente **@2x** versões são obrigatórias, já que todos Assista dispositivos têm exibe Retina.
 
-![](image-images/asset-universal-sml.png "Somente 2 x versões serão necessárias, já que todos os Assista dispositivos têm exibe Retina")
+![](image-images/asset-universal-sml.png "Versões de x apenas 2 são necessárias, desde que todos Assista dispositivos têm exibe Retina")
 
-É uma boa prática para garantir que as imagens se tiverem o tamanho correto para a exibição de inspeção. *Evite* usando imagens incorretamente dimensionadas (aqueles especialmente grandes) e dimensionamento para exibi-los no relógio.
+É uma boa prática para garantir que as imagens em si são o tamanho correto para a exibição da inspeção. *Evite* usando imagens dimensionadas incorretamente (aqueles especialmente grandes) e dimensionamento para exibi-los no relógio.
 
-Você pode usar os tamanhos de Kit de inspeção (38mm e 42mm) em uma imagem do catálogo de ativos para especificar imagens diferentes para cada tamanho de exibição.
+Você pode usar os tamanhos do Kit de inspeção (38mm e 42mm) em uma imagem do catálogo de ativos para especificar imagens diferentes para cada tamanho de exibição.
 
-![](image-images/asset-watch-sml.png "Você pode usar os tamanhos de inspecionar Kit 38mm e mm 42 em uma imagem do catálogo de ativos para especificar imagens diferentes para cada tamanho de exibição")
+![](image-images/asset-watch-sml.png "Você pode usar os tamanhos de inspeção Kit 38mm e 42mm em uma imagem do catálogo de ativos para especificar imagens diferentes para cada tamanho de tela")
 
 
-## <a name="images-on-the-watch"></a>Imagens de inspeção
+## <a name="images-on-the-watch"></a>Imagens no Watch
 
-A maneira mais eficiente para exibir imagens é *incluí-los no projeto de aplicativo de inspeção* e exibi-los usando o `SetImage(string imageName)` método.
+É a maneira mais eficiente para exibir imagens *incluí-los no projeto do aplicativo watch* e exibi-las usando o `SetImage(string imageName)` método.
 
-Por exemplo, o [WatchKitCatalog](https://developer.xamarin.com/samples/WatchKitCatalog/) exemplo tem um número de imagens adicionadas a um catálogo de ativos no projeto de aplicativo de inspeção:
+Por exemplo, o [WatchKitCatalog](https://developer.xamarin.com/samples/WatchKitCatalog/) exemplo tem um número de imagens adicionadas a um catálogo de ativos no projeto do aplicativo watch:
 
-![](image-images/asset-whale-sml.png "O exemplo WatchKitCatalog tem um número de imagens adicionadas a um catálogo de ativos no projeto de aplicativo de inspeção")
+![](image-images/asset-whale-sml.png "O exemplo WatchKitCatalog tem um número de imagens adicionadas a um catálogo de ativos no projeto do aplicativo de inspeção")
 
-Esses podem ser com eficiência carregados e exibidos no watch usando `SetImage` com o parâmetro de nome de cadeia de caracteres:
+Eles podem ser com eficiência carregados e exibidos no watch usando `SetImage` com o parâmetro de nome de cadeia de caracteres:
 
 ```csharp
 myImageControl.SetImage("Whale");
@@ -50,18 +50,18 @@ myOtherImageControl.SetImage("Worry");
 
 ### <a name="background-images"></a>Imagens de plano de fundo
 
-A mesma lógica se aplica a `SetBackgroundImage (string imageName)` no `Button`, `Group`, e `InterfaceController` classes. Melhor desempenho é obtido por armazenar as imagens no próprio aplicativo inspeção.
+A mesma lógica aplica-se para o `SetBackgroundImage (string imageName)` sobre o `Button`, `Group`, e `InterfaceController` classes. Melhor desempenho é obtido ao armazenar as imagens no próprio aplicativo watch.
 
 
 ## <a name="images-in-the-watch-extension"></a>Imagens na extensão de inspeção
 
-Além de carregamento de imagens que são armazenadas no próprio aplicativo watch, você pode enviar imagens do pacote de extensão para o aplicativo de inspeção para exibição (ou você pode fazer o download de imagens de um local remoto e exiba as).
+Além de carregar as imagens armazenadas no próprio aplicativo watch, você pode enviar imagens do pacote de extensão para o aplicativo de inspeção para exibição (ou você poderia fazer o download de imagens de um local remoto e exibi-las).
 
-Para carregar imagens da extensão de observação, crie `UIImage` instâncias e, em seguida, chame `SetImage` com o `UIImage` objeto.
+Para carregar imagens da extensão de inspeção, crie `UIImage` instâncias e, em seguida, chame `SetImage` com o `UIImage` objeto.
 
-Por exemplo, o [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) exemplo tem uma imagem chamada **Bumblebee** no projeto de extensão de inspeção:
+Por exemplo, o [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) exemplo possui uma imagem chamada **Bumblebee** no projeto de extensão de inspeção:
 
-![](image-images/asset-bumblebee-sml.png "O exemplo WatchKitCatalog tem uma imagem chamada Bumblebee no projeto de extensão de inspeção")
+![](image-images/asset-bumblebee-sml.png "O exemplo de WatchKitCatalog tem uma imagem chamada Bumblebee no projeto de extensão de inspeção")
 
 O código a seguir resultará em:
 
@@ -79,11 +79,11 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 Para animar um conjunto de imagens, eles devem sempre começam com o mesmo prefixo e ter um sufixo numérico.
 
-O [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) exemplo tem uma série de imagens numeradas no projeto de aplicativo de observação com o **barramento** prefixo:
+O [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) exemplo tem uma série de imagens numeradas no projeto do aplicativo watch com o **barramento** prefixo:
 
-![](image-images/asset-bus-animation-sml.png "O exemplo WatchKitCatalog tem uma série de imagens numeradas no projeto de aplicativo de observação com o prefixo de barramento")
+![](image-images/asset-bus-animation-sml.png "O exemplo de WatchKitCatalog tem uma série de imagens numeradas no projeto do aplicativo watch com o prefixo de barramento")
 
-Para exibir essas imagens como uma animação, primeiro carregue a imagem usando `SetImage` com o nome de prefixo e, em seguida, chamada `StartAnimating`:
+Para exibir essas imagens como uma animação, primeiro carregue a imagem usando `SetImage` com o nome do prefixo e, em seguida, chamada `StartAnimating`:
 
 ```csharp
 animatedImage.SetImage ("Bus");
@@ -102,9 +102,9 @@ animatedImage.StopAnimating ();
 ## <a name="appendix-caching-images-watchos-1"></a>Apêndice: Cache de imagens (watchOS 1)
 
 > [!IMPORTANT]
-> aplicativos watchOS 3 executado totalmente no dispositivo. As informações a seguir são watchOS 1 apenas para aplicativos.
+> aplicativos watchOS 3 executado totalmente no dispositivo. As informações a seguir destina-se somente a aplicativos watchOS 1.
 
-Se o aplicativo usa repetidamente uma imagem que é armazenada na extensão (ou foi baixada), é possível armazenar em cache a imagem no armazenamento do relógio, para aumentar o desempenho para exibições subsequentes.
+Se o aplicativo usa repetidamente uma imagem que é armazenada na extensão (ou tiver sido baixada), é possível armazenar em cache a imagem no armazenamento do watch, para aumentar o desempenho para exibições subsequentes.
 
 Use o `WKInterfaceDevice`s `AddCachedImage` método para transferir a imagem para o relógio e, em seguida, usar `SetImage` com o parâmetro de nome de imagem como uma cadeia de caracteres para exibi-lo:
 
@@ -123,13 +123,13 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 Você pode consultar o conteúdo do cache de imagem no código usando `WKInterfaceDevice.CurrentDevice.WeakCachedImages`.
 
 
-### <a name="managing-the-cache"></a>Gerenciar o Cache
+### <a name="managing-the-cache"></a>Gerenciamento do Cache
 
-O cache de aproximadamente 20 MB de tamanho. Ele é mantido entre as reinicializações de aplicativo e quando ele está cheia, é sua responsabilidade para limpar arquivos usando `RemoveCachedImage` ou `RemoveAllCachedImages` métodos no `WKInterfaceDevice.CurrentDevice` objeto.
+O cache de cerca de 20 MB de tamanho. Ele é mantido entre as reinicializações de aplicativo, e quando ele está cheia é sua responsabilidade para limpar arquivos usando `RemoveCachedImage` ou `RemoveAllCachedImages` métodos no `WKInterfaceDevice.CurrentDevice` objeto.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [WatchKitCatalog (exemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Doc de imagem da Apple](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/Images.html)
+- [WatchKitCatalog (amostra)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [Documento de imagem da Apple](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/Images.html)

@@ -4,15 +4,15 @@ description: Explore os vários formatos de arquivo com suporte pelo SkiaSharp p
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: e957134ecceee84962e5a4fc153285ea0a2a5906
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 7f34bd5bbab4accaa30c22266dacd30692bf9ccc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107567"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Salvando bitmaps de SkiaSharp em arquivos
 
@@ -40,13 +40,13 @@ A compactação de algoritmos são complexos o suficiente para justificar a dois
 - _decodificar_ &mdash; ler um formato de arquivo de bitmap e descompactá-los
 - _codificar_ &mdash; compactar o bitmap e gravar em um formato de arquivo de bitmap
 
-O [ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/) classe contém vários métodos chamados `Decode` que criam um `SKBitmap` de uma fonte compactada. É tudo que é necessário fornecer um nome de arquivo, fluxo ou matriz de bytes. O decodificador pode determinar o formato de arquivo e entregá-la para a função de decodificação interna adequada.
+O [ `SKBitmap` ](xref:SkiaSharp.SKBitmap) classe contém vários métodos chamados `Decode` que criam um `SKBitmap` de uma fonte compactada. É tudo que é necessário fornecer um nome de arquivo, fluxo ou matriz de bytes. O decodificador pode determinar o formato de arquivo e entregá-la para a função de decodificação interna adequada.
 
-Além disso, o [ `SKCodec` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCodec/) classe tem dois métodos chamados `Create` que pode criar um `SKCodec` do objeto de uma fonte compactada e permitir que um aplicativo para obter mais envolvido no processo de decodificação. (O `SKCodec` classe é mostrada no artigo [ **animando Bitmaps de SkiaSharp** ](animating.md#gif-animation) juntamente com um arquivo GIF animado de decodificação.)
+Além disso, o [ `SKCodec` ](xref:SkiaSharp.SKCodec) classe tem dois métodos chamados `Create` que pode criar um `SKCodec` do objeto de uma fonte compactada e permitir que um aplicativo para obter mais envolvido no processo de decodificação. (O `SKCodec` classe é mostrada no artigo [ **animando Bitmaps de SkiaSharp** ](animating.md#gif-animation) juntamente com um arquivo GIF animado de decodificação.)
 
 Quando estiver codificando um bitmap, mais informações são necessárias: O codificador deve saber o formato de arquivo específico que o aplicativo deseja usar (JPEG ou PNG ou alguma outra coisa). Se um formato com perdas for desejado, a codificação também deve saber o nível de qualidade desejado. 
 
-O `SKBitmap` classe define um [ `Encode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Encode/p/SkiaSharp.SKWStream/SkiaSharp.SKEncodedImageFormat/System.Int32/) método com a seguinte sintaxe:
+O `SKBitmap` classe define um [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) método com a seguinte sintaxe:
 
 ```csharp
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
@@ -54,13 +54,13 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 Esse método é descrito mais detalhadamente em breve. O bitmap codificado é gravado em um fluxo gravável. (O 'W' em `SKWStream` significa "gravável".) O segundo e terceiro argumentos especificam o formato de arquivo e (para formatos com perdas) a qualidade desejada, variando de 0 a 100.
 
-Além disso, o [ `SKImage` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImage/) e [ `SKPixmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPixmap/) classes também definem `Encode` métodos que são um pouco mais versáteis e que talvez você prefira. Você pode criar facilmente uma `SKImage` do objeto de um `SKBitmap` objeto estático de uso [ `SKImage.FromBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKImage.FromBitmap/p/SkiaSharp.SKBitmap/) método. Você pode obter um `SKPixmap` do objeto de um `SKBitmp` do objeto usando o [ `PeekPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.PeekPixels()/) método.
+Além disso, o [ `SKImage` ](xref:SkiaSharp.SKImage) e [ `SKPixmap` ](xref:SkiaSharp.SKPixmap) classes também definem `Encode` métodos que são um pouco mais versáteis e que talvez você prefira. Você pode criar facilmente uma `SKImage` do objeto de um `SKBitmap` objeto estático de uso [ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) método. Você pode obter um `SKPixmap` do objeto de um `SKBitmp` do objeto usando o [ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels) método.
 
-Um dos [ `Encode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKImage.Encode()/) métodos definidos pelo `SKImage` não tem parâmetros e salva automaticamente em um formato PNG. Esse método sem parâmetros é muito fácil de usar.
+Um dos [ `Encode` ](xref:SkiaSharp.SKImage.Encode) métodos definidos pelo `SKImage` não tem parâmetros e salva automaticamente em um formato PNG. Esse método sem parâmetros é muito fácil de usar.
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>Código específico da plataforma para salvar arquivos de bitmap
 
-Quando você codifica uma `SKBitmap` Formatar objeto em um arquivo específico, geralmente será ser deixados com um objeto de fluxo de algum tipo, ou uma matriz de dados. Alguns da `Encode` métodos (incluindo aquele sem parâmetros definido por `SKImage`) retornar um [ `SKData` ](https://developer.xamarin.com/api/type/SkiaSharp.SKData/) objeto, que pode ser convertido em uma matriz de bytes usando o [ `ToArray` ](https://developer.xamarin.com/api/member/SkiaSharp.SKData.ToArray()/) método. Esses dados, em seguida, devem ser salvo em um arquivo. 
+Quando você codifica uma `SKBitmap` Formatar objeto em um arquivo específico, geralmente será ser deixados com um objeto de fluxo de algum tipo, ou uma matriz de dados. Alguns da `Encode` métodos (incluindo aquele sem parâmetros definido por `SKImage`) retornar um [ `SKData` ](xref:SkiaSharp.SKData) objeto, que pode ser convertido em uma matriz de bytes usando o [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) método. Esses dados, em seguida, devem ser salvo em um arquivo. 
 
 Salvar em um arquivo no armazenamento local do aplicativo é muito fácil, porque você pode usar o padrão `System.IO` classes e métodos para essa tarefa. Essa técnica é demonstrada no artigo [ **animando Bitmaps de SkiaSharp** ](animating.md#bitmap-animation) juntamente com a animação de uma série de bitmaps do conjunto de Mandelbrot.
 
@@ -237,13 +237,13 @@ O **funcionalidades** seção o **Package. appxmanifest** arquivo requer **bibli
 
 ## <a name="exploring-the-image-formats"></a>Explorando os formatos de imagem
 
-Aqui está o [ `Encode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Encode/p/SkiaSharp.SKWStream/SkiaSharp.SKEncodedImageFormat/System.Int32/) método `SKImage` novamente:
+Aqui está o [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) método `SKImage` novamente:
 
 ```csharp
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
 ```
 
-[`SKEncodedImageFormat`](https://developer.xamarin.com/api/type/SkiaSharp.SKEncodedImageFormat/) é uma enumeração com membros que se referem a onze formatos de arquivo de bitmap, alguns dos quais são bastante obscuras:
+[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat) é uma enumeração com membros que se referem a onze formatos de arquivo de bitmap, alguns dos quais são bastante obscuras:
 
 - `Astc` &mdash; Compactação de textura escalonável adaptável
 - `Bmp` &mdash; Bitmap do Windows
@@ -688,7 +688,7 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-O **salve** manipulador do botão usa o simplificada [ `Encode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKImage.Encode()/) método de `SKImage`. Este método codifica usando o formato PNG. O `SKImage` objeto é criado com base no `saveBitmap`e o `SKData` objeto contém o arquivo PNG codificado. 
+O **salve** manipulador do botão usa o simplificada [ `Encode` ](xref:SkiaSharp.SKImage.Encode) método de `SKImage`. Este método codifica usando o formato PNG. O `SKImage` objeto é criado com base no `saveBitmap`e o `SKData` objeto contém o arquivo PNG codificado. 
 
 O `ToArray` método de `SKData` obtém uma matriz de bytes. Esse é o que é passado para o `SavePhotoAsync` método, juntamente com um nome de pasta fixo e um nome de arquivo exclusivo construído a partir de data e hora atuais.
 
@@ -704,6 +704,6 @@ O **salve** botão de `SpinPaint` classe é semelhante ao **pintura a dedo** em 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [SpinPaint (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/)

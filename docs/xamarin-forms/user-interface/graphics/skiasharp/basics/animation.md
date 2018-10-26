@@ -4,28 +4,25 @@ description: Este artigo explica como animar elementos gráficos SkiaSharp em ap
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 0ba3d86f52d2e6907f32450d87f30280ade95d3f
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 1357f0be1ba4c15c4046e92f8556c957b9c4bd46
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122231"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animação básica no SkiaSharp
 
 _Descubra como animar a seus gráficos de SkiaSharp_
 
-Você pode animar elementos gráficos de SkiaSharp em xamarin. Forms, fazendo com que o `PaintSurface` método a ser chamado com muita frequência, cada vez que os gráficos de desenho um pouco diferente. Aqui está uma animação mostrada mais adiante neste artigo com círculos concêntricos que aparentemente expandir no centro da:
+Você pode animar elementos gráficos de SkiaSharp em xamarin. Forms, fazendo com que o `PaintSurface` método a ser chamado periodicamente, cada vez que os gráficos de desenho um pouco diferente. Aqui está uma animação mostrada mais adiante neste artigo com círculos concêntricos que aparentemente expandir no centro da:
 
 ![](animation-images/animationexample.png "Vários círculos concêntricos aparentemente expandindo no centro da")
 
-O **elipse Pulsating** página na [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa anima dois eixos de uma elipse para que ele apareça ser pulsating e até mesmo, você pode controlar o taxa deste pulsation:
-
-
-O [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) arquivo cria uma instância de um xamarin. Forms `Slider` e um `Label` para exibir o valor atual do controle deslizante. Essa é uma maneira comum para integrar um `SKCanvasView` com outros modos de exibição do xamarin. Forms:
+O **elipse Pulsating** página na [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa anima dois eixos de uma elipse para que ele apareça ser pulsating e até mesmo, você pode controlar o taxa deste pulsation. O [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) arquivo cria uma instância de um xamarin. Forms `Slider` e um `Label` para exibir o valor atual do controle deslizante. Essa é uma maneira comum para integrar um `SKCanvasView` com outros modos de exibição do xamarin. Forms:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -107,7 +104,7 @@ async Task AnimationLoop()
 
 ```
 
-O `while` loop começa obtendo um tempo de ciclo do `Slider`. Isso é um tempo em segundos, por exemplo, 5. A segunda instrução calcula um valor de `t` para *tempo*. Para um `cycleTime` de 5, `t` aumenta de 0 a 1 a cada 5 segundos. O argumento para o `Math.Sin` função nos intervalos segunda instrução de 0 a 2π a cada 5 segundos. O `Math.Sin` função retorna um valor que varia de 0 para trás de 1 para 0 e, em seguida, &ndash;1 e 0 a cada 5 segundos, mas com valores que mudam mais lentamente quando o valor for próximo a 1 ou -1. O valor 1 é adicionado para que os valores são sempre positivos e, em seguida, ele é dividido por 2, portanto, os valores de intervalos de ½ como 1 para ½ como 0 para ½, mas mais lento quando o valor é de cerca de 1 e 0. Isso é armazenado na `scale` campo e o `SKCanvasView` é invalidado.
+O `while` loop começa obtendo um tempo de ciclo do `Slider`. Isso é um tempo em segundos, por exemplo, 5. A segunda instrução calcula um valor de `t` para *tempo*. Para um `cycleTime` de 5, `t` aumenta de 0 a 1 a cada 5 segundos. O argumento para o `Math.Sin` função nos intervalos segunda instrução de 0 a 2π a cada 5 segundos. O `Math.Sin` função retorna um valor que varia de 0 para trás de 1 para 0 e, em seguida, &ndash;1 e 0 a cada 5 segundos, mas com valores que mudam mais lentamente quando o valor for próximo a 1 ou -1. O valor 1 é adicionado para que os valores são sempre positivos e, em seguida, ele é dividido por 2, portanto, os valores variam de ½ como 1 para ½ como 0 para ½, mas mais lento quando o valor é de cerca de 1 e 0. Isso é armazenado na `scale` campo e o `SKCanvasView` é invalidado.
 
 O `PaintSurface` usa o método isso `scale` valor para calcular os dois eixos da elipse:
 
@@ -146,7 +143,7 @@ O método calcula um raio máximo com base no tamanho da área de exibição e u
 
 Observe que o `SKPaint` objeto é criado em um `using` bloco. Como muitas classes de SkiaSharp `SKPaint` deriva `SKObject`, que é derivada de `SKNativeObject`, que implementa o [ `IDisposable` ](xref:System.IDisposable) interface. `SKPaint` substitui o `Dispose` método para liberar recursos não gerenciados.
 
- Colocando `SKPaint` em um `using` bloco garante que `Dispose` é chamado no final do bloco para liberar esses recursos não gerenciados. Isso acontece mesmo assim quando a memória usada pelo `SKPaint` objeto é liberado pelo coletor de lixo .NET, mas no código de animação, é melhor ser proativo um pouco na liberação de memória de maneira mais ordenada.
+ Colocando `SKPaint` em um `using` bloco garante que `Dispose` é chamado no final do bloco para liberar esses recursos não gerenciados. Isso acontece mesmo assim quando a memória usada pelo `SKPaint` objeto é liberado pelo coletor de lixo .NET, mas no código de animação, é melhor ser proativo na liberação de memória de maneira mais ordenada.
 
  Uma solução melhor nesse caso em particular seria criar duas `SKPaint` objetos de uma vez e salvá-los como campos.
 
@@ -178,7 +175,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-Esse programa usa uma abordagem diferente para a animação com base no xamarin. Forms `Device.StartTimer`. O `t` campo é animado de 0 a 1 cada `cycleTime` milissegundos:
+Esse programa usa uma abordagem diferente para a animação com base no xamarin. Forms `Device.StartTimer` método. O `t` campo é animado de 0 a 1 cada `cycleTime` milissegundos:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -212,7 +209,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-O `PaintSurface` manipulador desenha círculos concêntricos 5 com raios animados. Se o `baseRadius` variável é calculada como 100, em seguida, como `t` é animado de 0 a 1, os raios do aumento de cinco círculos de 0 a 100 e 200, 100, 200 a 300, 300 a 400 e 400 ou 500. Para a maioria dos círculos a `strokeWidth` é 50, mas para o primeiro círculo, o `strokeWidth` anima de 0 a 50. Para a maioria dos círculos, a cor é azul, mas para o círculo último, a cor é animada de azul para transparente:
+O `PaintSurface` manipulador desenha círculos concêntricos cinco com raios animados. Se o `baseRadius` variável é calculada como 100, em seguida, como `t` é animado de 0 a 1, os raios do aumento de cinco círculos de 0 a 100 e 200, 100, 200 a 300, 300 a 400 e 400 ou 500. Para a maioria dos círculos a `strokeWidth` é 50, mas para o primeiro círculo, o `strokeWidth` anima de 0 a 50. Para a maioria dos círculos, a cor é azul, mas para o círculo último, a cor é animada de azul para transparente. Observe o quarto argumento para o `SKColor` construtor que especifica a opacidade:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -250,5 +247,5 @@ O resultado é que a imagem é o mesmo ao `t` é igual a 0, assim como quando `t
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

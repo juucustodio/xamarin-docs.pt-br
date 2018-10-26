@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 34fb58f44e3f341fa34eef512d61f20f5d035a9b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 132f31f4c9426dfceeef38f464231d1545f4db50
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998183"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115166"
 ---
 # <a name="gtk-platform-setup"></a>Instalação de plataforma do GTK #
 
 ![Visualizar](~/media/shared/preview.png)
 
-Xamarin. Forms agora tem suporte para aplicativos do GTK # visualização. O GTK # é um kit de ferramentas de interface gráfica do usuário que vincula o Kit de ferramentas GTK + e uma variedade de bibliotecas GNOME, permitindo o desenvolvimento de aplicativos de gráficos GNONE totalmente nativos usando Mono e .NET. Este artigo demonstra como adicionar um projeto GTK # a uma solução do xamarin. Forms.
+Xamarin. Forms agora tem suporte para aplicativos do GTK # visualização. O GTK # é um kit de ferramentas de interface gráfica do usuário que vincula o Kit de ferramentas GTK + e uma variedade de bibliotecas GNOME, permitindo o desenvolvimento de GNOME totalmente nativo aplicativos de gráficos usando o Mono e .NET. Este artigo demonstra como adicionar um projeto GTK # a uma solução do xamarin. Forms.
 
 Antes de começar, crie uma nova solução xamarin. Forms ou usar uma solução existente do xamarin. Forms, por exemplo, [ **GameOfLife**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife/).
 
@@ -29,7 +29,7 @@ Antes de começar, crie uma nova solução xamarin. Forms ou usar uma solução 
 
 O GTK # para macOS e Linux é instalado como parte do [Mono](http://www.mono-project.com/download/stable/). O GTK # para .NET pode ser instalado no Windows com o [instalador do GTK #](http://www.mono-project.com/download/stable/#download-win).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Siga estas instruções para adicionar um aplicativo do GTK # que será executado na área de trabalho do Windows:
 
@@ -110,7 +110,7 @@ Siga estas instruções para adicionar um aplicativo do GTK # que será executad
 
     ![O GTK # jogo da vida útil](gtk-images/win/gtk-gameoflife.png "GTK # jogo da vida útil")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Siga estas instruções para adicionar um aplicativo do GTK # que será executado na área de trabalho Mac:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: bce3a60f3647a537906cfa11fc1dcfcc6f5cf365
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 48c009b836ac109e0d54cd2fdb036c46e17c4387
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998596"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121497"
 ---
 # <a name="xamarinforms-carousel-page"></a>Página de carrossel do xamarin. Forms
 
@@ -22,7 +22,7 @@ _CarouselPage o xamarin. Forms é uma página que os usuários podem passe o ded
 
 As capturas de tela a seguir mostram uma [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) em cada plataforma:
 
-![](carousel-page-images/thirdpage.png "CarouselPage Thid Item")
+![](carousel-page-images/thirdpage.png "CarouselPage terceiro Item")
 
 O layout de um [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) é idêntico em cada plataforma. As páginas podem ser navegadas por meio de passando o dedo da direita para a esquerda para navegar para frente por meio da coleção e passando o dedo para esquerda para a direita para navegar para trás por meio da coleção. As capturas de tela a seguir mostram a primeira página em um [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) instância:
 
@@ -81,7 +81,7 @@ Mostra o exemplo de código XAML abaixo uma [ `CarouselPage` ](xref:Xamarin.Form
 </CarouselPage>
 ```
 
-O exemplo de código a seguir mostra a interface do usuário equivalente em c#:
+O exemplo de código a seguir mostra a interface do usuário equivalente no C#:
 
 ```csharp
 public class MainPageCS : CarouselPage
@@ -186,7 +186,7 @@ public MainPage ()
 }
 ```
 
-O exemplo de código a seguir mostra o equivalente [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) criado em c#:
+O exemplo de código a seguir mostra o equivalente [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) criado na C#:
 
 ```csharp
 public class MainPageCS : CarouselPage
