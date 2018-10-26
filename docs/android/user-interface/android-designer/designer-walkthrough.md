@@ -1,434 +1,230 @@
 ---
-title: Usando o Designer de Android
-description: Este tópico é um passo a passo do Designer xamarin. Ele demonstra como criar uma interface do usuário para um aplicativo de navegador coloridas; Essa interface do usuário é criado inteiramente no Designer.
+title: Usando o Designer do xamarin. Android
+description: Este artigo é um passo a passo do xamarin. Android Designer. Ele demonstra como criar uma interface do usuário para um aplicativo de navegador de cor pequeno; Essa interface do usuário é criado inteiramente no Designer.
 ms.prod: xamarin
 ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 04/10/2018
-ms.openlocfilehash: 8d1dc410d5336d9c2505a18720cc7f734e838c39
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+author: conceptdev
+ms.author: crdun
+ms.date: 07/25/2018
+ms.openlocfilehash: 1174fe5cb417d4977fd6519086e6c4942e74c10b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33798626"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120263"
 ---
-# <a name="using-the-android-designer"></a>Usando o Designer de Android
+# <a name="using-the-xamarinandroid-designer"></a>Usando o Designer do xamarin. Android
 
-_Este tópico é um passo a passo do Designer xamarin. Ele demonstra como criar uma interface do usuário para um aplicativo de navegador coloridas; Essa interface do usuário é criado inteiramente no Designer._
+_Este artigo é um passo a passo do xamarin. Android Designer. Ele demonstra como criar uma interface do usuário para um aplicativo de navegador de cor pequeno; Essa interface do usuário é criado inteiramente no Designer._
 
 
 ## <a name="overview"></a>Visão geral
 
-Interfaces de usuário do Android podem ser criadas declarativamente usando arquivos XML ou programaticamente, escrevendo código. O Designer de xamarin permite aos desenvolvedores criar e modificar layouts declarativos visualmente, sem a necessidade de lidar com o tédio edição manual de arquivos de XML. O Designer também fornece comentários em tempo real, o que permite ao desenvolvedor a avaliar as alterações de interface do usuário sem precisar reimplantar o aplicativo para um dispositivo ou emulador. Isso pode acelerar o desenvolvimento do Android da interface do usuário bastante. Neste artigo, apresentamos um passo a passo que mostra como usar o Designer do xamarin para criar visualmente uma interface do usuário.
-
+Interfaces de usuário do Android podem ser criados declarativamente usando arquivos XML ou gravando o código de forma programática. O Designer do xamarin. Android permite aos desenvolvedores criar e modificar os layouts declarativos visualmente, sem a necessidade de edição manual dos arquivos XML. O Designer também fornece comentários em tempo real que permite ao desenvolvedor a avaliar as alterações de interface do usuário sem precisar reimplantar o aplicativo para um dispositivo ou em um emulador. Esses recursos de Designer podem acelerar o desenvolvimento de interface do usuário Android tremendamente.
+Este artigo demonstra como usar o Designer do xamarin. Android para criar visualmente uma interface do usuário.
 
 ## <a name="walkthrough"></a>Passo a passo
 
-O objetivo deste passo a passo é usar o Designer de Android para criar uma interface do usuário para um aplicativo de navegador de cor de exemplo que apresenta uma lista de cores, seus nomes e seus valores RGB. Vamos examinar como adicionar widgets a superfície de Design, bem como para dispor esses widgets visualmente. Depois disso, vamos explicar como modificar interativamente na superfície de Design ou usando o Designer de widgets **propriedade preenchimento**. Finalmente, veremos como nosso design aparece ao executar o aplicativo.
-
-Vamos começar!
+O objetivo deste passo a passo é usar o Designer do Android para criar uma interface do usuário para um exemplo de aplicativo de navegador de cor. O aplicativo de navegador de cor apresenta uma lista de cores, seus nomes e valores RGB. Você aprenderá a adicionar widgets para o **superfície de Design** , bem como como dispor esses widgets visualmente. Depois disso, você aprenderá a modificar widgets interativamente na **superfície de Design** ou usando o Designer **propriedades** painel. Por fim, você verá como o design aparece quando o aplicativo é executado em um dispositivo ou emulador.
 
 
-### <a name="creating-a-new-project"></a>Criando um novo projeto
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-A primeira etapa é criar um novo projeto de xamarin.
+### <a name="creating-a-new-project"></a>Criar um novo projeto
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-Inicie o Visual Studio e clique em **novo projeto...**  , em seguida, escolha o **Visual C\# > Android > aplicativo do Android (Xamarin)** modelo:
-
-[![Aplicativo do Android em branco](designer-walkthrough-images/vs/01-android-app-sml.w157.png)](designer-walkthrough-images/vs/01-android-app.w157.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-Inicie o Visual Studio para Mac e clique em **nova solução...** . Escolha o **aplicativo Android** modelo e clique em **próximo**:
-
-[![Aplicativo do Android em branco](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png#lightbox)
-
------
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
+A primeira etapa é criar um novo projeto do xamarin. Android. Inicie o Visual Studio, clique em **novo projeto...** e escolha o **Visual C#\# > Android > aplicativo Android (Xamarin)** modelo.
 Nomeie o novo aplicativo **Designer** e clique em **Okey**.
 
-[![Nome de aplicativo](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png#lightbox)
+[![Aplicativo do Android em branco](designer-walkthrough-images/vs/01-android-app-w158-sml.png)](designer-walkthrough-images/vs/01-android-app-w158.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+No **novo aplicativo Android** caixa de diálogo, escolha **aplicativo em branco** e clique em **Okey**:
 
-Nomeie o novo aplicativo **Designer**. Em **plataformas de destino**, selecione **mais recente e maior** e clique em **próximo**:
+[![Selecionando o modelo de aplicativo do Android em branco](designer-walkthrough-images/vs/02-blank-app-w158-sml.png)](designer-walkthrough-images/vs/02-blank-app-w158.png#lightbox)
 
-[![Nome de aplicativo](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png#lightbox)
 
-Na próxima tela da caixa de diálogo, clique em **criar**.
+### <a name="adding-a-layout"></a>Adicionando um layout
 
------
+A próxima etapa é criar uma **LinearLayout** que irá armazenar elementos de interface do usuário. Clique com botão direito **recursos/layout** na **Gerenciador de soluções** e selecione **Adicionar > Novo Item...** . No **Adicionar Novo Item** caixa de diálogo, selecione **Layout do Android**. Nomeie o arquivo **list_item** e clique em **Add**:
 
+[![Novo layout](designer-walkthrough-images/vs/03-new-layout-w158-sml.png)](designer-walkthrough-images/vs/03-new-layout-w158.png#lightbox)
 
+O novo **list_item** layout será exibido no Designer. Observe que dois painéis são exibidos &ndash; as *superfície de Design* para o **list_item** está visível no painel esquerdo, enquanto seu código-fonte XML é mostrado no painel à direita. Você pode trocar as posições do **superfície de Design** e **fonte** painéis clicando o **painéis de permuta** ícone localizado entre os dois painéis:
 
-### <a name="adding-a-layout"></a>Adicionando um Layout
+[![Exibição do Designer](designer-walkthrough-images/vs/04-designer-view-w158-sml.png)](designer-walkthrough-images/vs/04-designer-view-w158.png#lightbox)
 
-Vamos criar um **LinearLayout** que usaremos para manter nossos usuário elementos da interface.
+Dos **modo de exibição** menu, clique em **Other Windows > Document Outline** para abrir o **Document Outline**. O **Document Outline** mostra que o layout no momento, contém uma única **LinearLayout** widget:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+[![Estrutura de tópicos do documento](designer-walkthrough-images/vs/06-document-outline-w158-sml.png)](designer-walkthrough-images/vs/06-document-outline-w158.png#lightbox)
 
-No Visual Studio, clique com botão direito **recursos/layout** no **Solution Explorer** e selecione **Adicionar > Novo Item...** . No **Adicionar Novo Item** caixa de diálogo, selecione **Layout Android**. Nomeie o arquivo **ListItem.axml** e clique em **adicionar**:
+A próxima etapa é criar a interface do usuário para o aplicativo de navegador de cor dentro deste `LinearLayout`.
 
-[![Novo layout](designer-walkthrough-images/vs/03-new-layout-sml.w157.png)](designer-walkthrough-images/vs/03-new-layout.w157.png#lightbox)
+### <a name="creating-the-list-item-user-interface"></a>Criando a interface de usuário do Item de lista
 
-O novo **ListItem** layout é exibido no Designer:
+Se o **caixa de ferramentas** painel não estiver visível, clique no **caixa de ferramentas** guia à esquerda. No **caixa de ferramentas**, role para baixo até a **imagens e mídia** seção e role mais para baixo até localizar um `ImageView`:
 
-[![Designer de exibição](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png#lightbox)
+[![Localize o ImageView](designer-walkthrough-images/vs/07-locate-imageview-w158-sml.png)](designer-walkthrough-images/vs/07-locate-imageview-w158.png#lightbox)
 
-Clique o **fonte** guia na parte inferior do Designer para exibir a origem XML para este layout:
+Como alternativa, você pode inserir *ImageView* na barra de pesquisa para localizar o `ImageView`:
 
-[![XML Designer](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png#lightbox)
+[![Pesquisa ImageView](designer-walkthrough-images/vs/08-imageview-search-w158-sml.png)](designer-walkthrough-images/vs/08-imageview-search-w158.png#lightbox)
 
-Do **exibição** menu, clique em **outras janelas > esboço de documento** para abrir o **esboço de documento**. O **esboço de documento** mostra que o layout atualmente contém um único **LinearLayout** widget:
+Arraste esta `ImageView` na superfície de Design (isso `ImageView` será usado para exibir uma amostra de cor no aplicativo de navegador de cor):
 
-[![Estrutura de tópicos do documento](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png#lightbox)
+[![ImageView na tela](designer-walkthrough-images/vs/09-imageview-on-canvas-w158-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas-w158.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+Em seguida, arraste uma `LinearLayout (Vertical)` widget do **caixa de ferramentas** no Designer. Observe que um contorno azul indica os limites de adicionado `LinearLayout`. O **Document Outline** mostra que é um filho `LinearLayout`, localizado em `imageView1 (ImageView)`:
 
-No Visual Studio para Mac, clique com botão direito **recursos/layout** no **solução** preenchimento e selecione **Adicionar > novo arquivo...** . No **novo arquivo** caixa de diálogo, selecione **Android > Layout**. Nomeie o arquivo **ListItem** e clique em **novo**:
+[![Contorno azul](designer-walkthrough-images/vs/10-blue-outline-w158-sml.png)](designer-walkthrough-images/vs/10-blue-outline-w158.png#lightbox)
 
-[![Novo layout](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png#lightbox)
+Quando você seleciona os `ImageView` no Designer, o contorno azul se move para envolver o `ImageView`. Além disso, a seleção é movida para `imageView1 (ImageView)` no **Document Outline**:
 
-O novo **ListItem** layout é exibido no Designer:
+[![Selecione ImageView](designer-walkthrough-images/vs/11-select-imageview-w158-sml.png)](designer-walkthrough-images/vs/11-select-imageview-w158.png#lightbox)
 
-[![Designer de exibição](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png#lightbox)
+Em seguida, arraste uma `Text (Large)` widget do **caixa de ferramentas** em que o recém-adicionado `LinearLayout`. Observe que o Designer usa verde realça para indicar onde o novo widget será inserido:
 
-Clique o **fonte** guia na parte inferior do Designer para exibir a origem XML para este layout. Quando você clica o **esboço de documento** guia à direita, ele mostra que o layout atualmente contém um único **LinearLayout** widget:
+[![Destaques de verde](designer-walkthrough-images/vs/12-green-highlight-w158-sml.png)](designer-walkthrough-images/vs/12-green-highlight-w158.png#lightbox)
 
-[![XML Designer](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png#lightbox)
+Em seguida, adicione uma `Text (Small)` widget abaixo o `Text (Large)` widget:
 
------
+[![Adicionar widget de texto pequeno](designer-walkthrough-images/vs/13-add-small-text-w158-sml.png)](designer-walkthrough-images/vs/13-add-small-text-w158.png#lightbox)
 
+Neste ponto, a superfície do Designer deve ser semelhante a captura de tela a seguir:
 
+[![Layout do Designer](designer-walkthrough-images/vs/14-raw-layout-w158-sml.png)](designer-walkthrough-images/vs/14-raw-layout-w158.png#lightbox)
 
-### <a name="creating-the-list-item-user-interface"></a>Criando a Interface de usuário do Item de lista
+Se os dois `textView` widgets não estão dentro `linearLayout1`, você pode arrastá-los para `linearLayout1` no **Document Outline** e posicione-os para que eles apareçam como mostrado na captura de tela anterior (recuado sob `linearLayout1`).
 
-Em seguida, vamos criar a interface do usuário para o aplicativo de navegador de cor.
-Clique o **Designer** guia para retornar à superfície de Design.
-No **caixa de ferramentas**, role para baixo até o **imagens & mídia** seção e examinar cada item até localizar um *ImageView*:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+### <a name="arranging-the-user-interface"></a>Organizando a interface do usuário
 
-[![Localizar ImageView](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Localizar ImageView](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png#lightbox)
-
------
-
-Como alternativa, você pode inserir *ImageView* na barra de pesquisa para localizar o `ImageView` widget:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![Pesquisa ImageView](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Pesquisa ImageView](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png#lightbox)
-
------
-
-Arraste esta `ImageView` na superfície de Design:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![ImageView na tela](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![ImageView na tela](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png#lightbox)
-
------
-
-Isso `ImageView` será usado para exibir uma amostra de cor em nosso aplicativo de navegador de cor.
-
-Em seguida, arraste um `LinearLayout (Vertical)` widget do **caixa de ferramentas** no Designer. Observe que um contorno azul indica os limites do adicionado `LinearLayout`e o **esboço de documento** mostra que ela reside diretamente abaixo `imageView1 (ImageView)`:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![Contorno azul](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Contorno azul](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png#lightbox)
-
------
-
-Quando você seleciona o `ImageView` no Designer, a estrutura de tópicos azul move para envolver a `ImageView`; no **esboço de documento**, move a seleção para `imageView1 (ImageView)`:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![Selecione ImageView](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Selecione ImageView](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png#lightbox)
-
------
-
-Em seguida, arraste um `Text (Large)` widget do **caixa de ferramentas** no recém-adicionado `LinearLayout`. Observe que o Designer usa verde destaca para indicar onde o novo widget será inserido:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![Destaques verdes](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Destaques verdes](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png#lightbox)
-
------
-
-Em seguida, adicione um `Text (Small)` widget abaixo o `Text (Large)` widget:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![Adicionar texto pequeno widget](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Adicionar texto pequeno widget](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png#lightbox)
-
------
-
-Neste ponto, o Designer deve ser semelhante a captura de tela a seguir:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![Layout do Designer](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Layout do Designer](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png#lightbox)
-
------
-
-Se os dois `textView` widgets não estão dentro `linearLayout1`, você pode arrastá-los para `linearLayout1` no **esboço de documento** e posicioná-los para que elas apareçam como mostrado na captura de tela anterior (recuado sob `linearLayout1`).
-
-
-
-### <a name="arranging-the-user-interface"></a>Organizando a Interface do usuário
-
-Vamos modificar a interface do usuário para exibir o `ImageView` à esquerda, com os dois `TextView` widgets empilhada à direita do `ImageView`.
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+A próxima etapa é modificar a interface do usuário para exibir o `ImageView` à esquerda, com os dois `TextView` widgets empilhada à direita do `ImageView`.
 
 1.  Selecione o `ImageView`.
 
-2.  No **janela propriedades**, clique no **categorizado** classificar ícone e role para baixo até o **Layout - ViewGroup** seção.
+2.  No **janela de propriedades**, insira *largura* na pesquisa de caixa e localize **largura de Layout**.
 
-3.  Alterar o `layout_width` definindo como `wrap_content`:
+3.  Alterar o **largura de Layout** definir como `wrap_content`:
 
-![Defina a disposição de conteúdo](designer-walkthrough-images/vs/15-wrap-content.png "conjunto wrap conteúdo")
+![Conteúdo do conjunto de quebra automática de linha](designer-walkthrough-images/vs/15-wrap-content-w158.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+Outra maneira de alterar o `Width` configuração é clicar no triângulo no lado direito do widget para alternar sua configuração de largura para `wrap_content`:
 
-1.  Com o `ImageView` selecionado, clique o **propriedades** guia.
+![Arrastar para definir a largura](designer-walkthrough-images/vs/15b-width-arrow-w158.png)
 
-2.  Logo abaixo do **propriedades** , clique em **Layout**.
+Clique no triângulo novamente retorna o `Width` definindo como `match_parent`. Em seguida, vá para o **Document Outline** painel e selecione a raiz `LinearLayout`:
 
-3.  Role para baixo até **ViewGroup** e altere o `Width` definindo como `wrap_content`:
+[![Selecione a raiz LinearLayout](designer-walkthrough-images/vs/16-root-linearlayout-w158-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout-w158.png#lightbox)
 
-[![Conteúdo do conjunto de wrap](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png#lightbox)
+Com a raiz `LinearLayout` selecionada, retornar para o **propriedades** painel, insira *orientação* para a pesquisa de caixa e localize o **orientação** configuração. Alteração **orientação** para `horizontal`:
 
------
+![Selecione a orientação horizontal](designer-walkthrough-images/vs/17-horizontal-orientation-w158.png)
 
-Outra maneira de alterar o `Width` configuração é clique no triângulo no lado direito do widget para alternar a configuração de sua largura para `wrap_content`:
+Neste ponto, a superfície do Designer deve ser semelhante a captura de tela a seguir.
+Observe que o `TextView` widgets foram movidos para a direita do `ImageView`:
 
-[![Arraste para definir a largura](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png#lightbox)
-
-Clique no triângulo novamente retorna o `Width` definindo como `match_parent`.
-
-Em seguida, alterne para o **esboço de documento** e selecione a raiz `LinearLayout`:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![Selecione raiz LinearLayout](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Selecione raiz LinearLayout](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png#lightbox)
-
------
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-Com a raiz `LinearLayout` selecionada, retornar para o **propriedades** janela, clique no **alfabético** classificar ícone e role até encontrar `orientation`. Alterar o `orientation` definindo como `horizontal`:
-
-![Selecione a orientação horizontal](designer-walkthrough-images/vs/17-horizontal-orientation.png "selecione orientação horizontal")
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-Com a raiz `LinearLayout` selecionada, retornar para o **propriedades** guia e clique em **Widget**. Alterar o `Orientation` definindo como `horizontal`:
-
-[![Selecione a orientação horizontal](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png#lightbox)
-
------
-
-Neste ponto, o Designer deve ser semelhante a captura de tela a seguir:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![Layout do Designer](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Layout do Designer](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png#lightbox)
-
------
-
+[![Layout do Designer](designer-walkthrough-images/vs/18-designer-layout-w158-sml.png)](designer-walkthrough-images/vs/18-designer-layout-w158.png#lightbox)
 
 ### <a name="modifying-the-spacing"></a>Modificando o espaçamento
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+A próxima etapa é modificar as configurações de preenchimento e margem na interface do usuário para fornecer mais espaço entre os widgets. Selecione o `ImageView` na superfície de Design. No **propriedades** painel, digite `min` na caixa de pesquisa. Insira `70dp` para **altura Mín** e `50dp` para **largura mín.**:
 
-Em seguida, modificaremos configurações de preenchimento e margem na interface de usuário para fornecer mais espaço entre os widgets. Selecione o `ImageView`, clique no **categorizado** ícone de pesquisa no **propriedades** janela e role para baixo até o **Layout** seção. Alterar o `Min Height` para `70dp`, o `Min Width` para `50dp`e o `padding` para `10dp`. Isso se aplica preenchimento ao redor de todos os lados do `ImageView` e elongates-verticalmente:
+[![Definir altura e largura](designer-walkthrough-images/vs/18b-set-height-width-sml.png)](designer-walkthrough-images/vs/18b-set-height-width.png#lightbox)
 
-[![Definir preenchimento](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png#lightbox)
+No **propriedades** painel, insira `padding` na pesquisa de caixa e insira `10dp` para **preenchimento**. Eles `minHeight`, `minWidth` e `padding` configurações adicionar preenchimento ao redor de todos os lados do `ImageView` e alongá-la verticalmente. Observe que o XML de layout muda conforme você insere esses valores:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+[![Definir preenchimento](designer-walkthrough-images/vs/19-padding-widths-w158-sml.png)](designer-walkthrough-images/vs/19-padding-widths-w158.png#lightbox)
 
-Em seguida, modificaremos configurações de preenchimento e margem na interface de usuário para fornecer mais espaço entre os widgets. Selecione o `ImageView` e clique no **Layout** guia **propriedades**. Alterar o `Padding` para `10dp`, o `Min Width` para `50dp`e o `Min Height` para `70dp`. Isso se aplica preenchimento ao redor de todos os lados do `ImageView` e elongates-verticalmente:
+Com o botão direito inferior, esquerda e as configurações de preenchimento superior pode ser definida independentemente inserindo valores na **preenchimento inferior**, **preenchimento esquerdo**, **Right Padding**e  **Preenchimento superior** campos, respectivamente.
+Por exemplo, defina a **preenchimento esquerdo** campo `5dp` e o **preenchimento inferior**, **direita de preenchimento**, e **preenchimento superior** campos para `10dp`:
 
-[![Definir preenchimento](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png#lightbox)
+[![Configurações de preenchimento personalizado](designer-walkthrough-images/vs/20-custom-padding-w158-sml.png)](designer-walkthrough-images/vs/20-custom-padding-w158.png#lightbox)
 
------
+Em seguida, ajustar a posição do `LinearLayout` widget que contém os dois `TextView` widgets. No **Document Outline**, selecione `linearLayout1`. No **propriedades** janela, digite `margin` na caixa de pesquisa. Definir **Layout margem inferior**, **Layout margem esquerda**, e **Layout margem superior** para `5dp`. Definir **Layout margem direita** para `0dp`:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-A parte inferior, esquerda, direita e configurações de preenchimento superior pode ser definida independentemente inserindo valores para o `paddingBottom`, `paddingLeft`, `paddingRight`, e `paddingTop` campos, respectivamente.
-Por exemplo, definir a `paddingLeft` campo `5dp` e `paddingBottom`, `paddingRight`, e `paddingTop` campos de `10dp`:
-
-[![Configurações de preenchimento personalizada](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-A parte superior, direita, inferior e configurações de preenchimento à esquerda podem ser definidos independentemente inserindo valores para o `Top`, `Right`, `Bottom`, e `Left` preenchimento de campos, respectivamente. Por exemplo, definir a `Left` para o valor de preenchimento `5dp` e `Top`, `Right`, e `Bottom` preenchimento valores `10dp`. Observe que o `Padding` configuração muda para uma lista separada por vírgulas desses valores:
-
-[![Configurações de preenchimento personalizada](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png#lightbox)
-
------
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-Em seguida, ajustar a posição do `LinearLayout` widget que contém os dois `TextView` widgets. No **esboço de documento**, selecione `linearLayout1`. No **propriedades** janela, role até a **Layout - ViewGroup** seção. Definir `layout_marginBottom`, `layout_marginLeft`, `layout_marginRight`, e `layout_marginTop` para `5dp`, `5dp`, `0dp`, e `5dp` respectivamente:
-
-[![Definir margens](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-Em seguida, ajustar a posição do `LinearLayout` widget que contém os dois `TextView` widgets. No **esboço de documento**, selecione `linearLayout1`. No **propriedades** painel, selecione o **Layout** guia. Role para baixo até o **ViewGroup** seção e defina o `Left`, `Top`, `Right`, e `Bottom` margens para `5dp`, `5dp`, `0dp`, e `5dp` respectivamente:
-
-[![Definir margens](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png#lightbox)
-
------
-
-
+[![Definir margens](designer-walkthrough-images/vs/21-margins-w158-sml.png)](designer-walkthrough-images/vs/21-margins-w158.png#lightbox)
 
 ### <a name="removing-the-default-image"></a>Removendo a imagem padrão
 
-Como estamos usando o `ImageView` para exibir cores (em vez de imagens), vamos remover a origem da imagem padrão adicionada pelo modelo.
+Porque o `ImageView` está sendo usado para exibir cores (em vez de imagens), a próxima etapa é remover a origem da imagem padrão adicionada pelo modelo.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+1.  Selecione o `ImageView` sobre o **superfície do Designer**.
 
-1.  Selecione o `ImageView`.
+2.  Na **propriedades**, insira *src* na caixa de pesquisa.
 
-2.  Em **propriedades**, localize o `src` campo.
+3.  Clique no pequeno quadrado à direita do **Src** propriedade de configuração e selecione **redefinir**:
 
-3.  Limpar o `src` configuração de forma que ela está em branco:
+[![Limpe a configuração de src ImageView](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
 
-![Limpar a configuração de src ImageView](designer-walkthrough-images/vs/22-clear-img-src.png "desmarcar a configuração de src ImageView")
+Isso remove `android:src="@android:drawable/ic_menu_gallery"` da origem XML para que `ImageView`.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+### <a name="adding-a-listview-container"></a>Adicionando um contêiner de ListView
 
-1.  Selecione o `ImageView`.
+Agora que o **list_item** layout é definido, a próxima etapa é adicionar um `ListView` ao layout principal. Isso `ListView` conterá uma lista de **list_item**. 
 
-2.  Clique o **Widget** guia **propriedades**.
+No **Gerenciador de soluções**, abra **Resources/layout/activity_main.axml**. No **caixa de ferramentas**, localize o `ListView` widget e arraste-a para o **superfície de Design**. O `ListView` no Designer, ficará em branco, exceto para as linhas azuis que sua borda de estrutura de tópicos quando ele é selecionado. Você pode exibir o **Document Outline** para verificar se o **ListView** foi adicionado corretamente:
 
-3.  Limpar o `Src` configuração de forma que ela está em branco:
-
-[![Limpar a configuração de src ImageView](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png#lightbox)
-
------
-
-
-### <a name="adding-a-listview-container"></a>Adicionar um contêiner de ListView
-
-Agora que o **ListItem** layout foi definido, vamos adicionar uma `ListView` ao layout do principal. Isso `ListView` conterá uma lista de **ListItems**.
-No **caixa de ferramentas**, localize o `ListView` widget e arraste-o para a superfície de Design. O `ListView` no Designer, ficará em branco, exceto linhas azuis que descrevem sua borda quando ele é selecionado. Você pode exibir o **esboço de documento** para verificar se o **ListView** foi adicionada corretamente:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-![Novo ListView](designer-walkthrough-images/vs/23-new-listview.png "novo ListView")
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Novo ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png#lightbox)
-
------
+[![Novo ListView](designer-walkthrough-images/vs/23-new-listview-w158-sml.png)](designer-walkthrough-images/vs/23-new-listview-w158.png#lightbox)
 
 Por padrão, o `ListView` recebe um `Id` valor `@+id/listView1`.
-Abra o **Widget** guia **propriedades** e altere o `Id` para `@+id/myListView`:
+Embora `listView1` ainda está selecionado na **Document Outline**, abra o **propriedades** painel, clique em **Organizar por**e selecione **categoria**.
+Abra **principal**, localize o **Id** propriedade e altere seu valor para `@+id/myListView`:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+[![Renomeie a id para myListView](designer-walkthrough-images/vs/24-change-id-w158-sml.png)](designer-walkthrough-images/vs/24-change-id-w158.png#lightbox)
 
-![Renomeie o id para myListView](designer-walkthrough-images/vs/24-change-id.png "id de renomeação para myListView")
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Renomeie o id para myListView](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png#lightbox)
-
------
-
-Neste momento, nossa interface do usuário está pronta para uso.
-
-
+Neste ponto, a interface do usuário está pronta para uso.
 
 ### <a name="running-the-application"></a>Executando o aplicativo
-
 
 Abra **MainActivity.cs** e substitua o código a seguir:
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
+using Android.Views;
 using Android.OS;
+using Android.Support.V7.App;
 using System.Collections.Generic;
 
 namespace DesignerWalkthrough
 {
-    [Activity (Label = "DesignerWalkthrough", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    public class MainActivity : AppCompatActivity
     {
-        List<ColorItem> colorItems = new List<ColorItem> ();
+        List<ColorItem> colorItems = new List<ColorItem>();
         ListView listView;
 
-        protected override void OnCreate (Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate (savedInstanceState);
+            base.OnCreate(savedInstanceState);
 
-            SetContentView (Resource.Layout.Main);
-            listView = FindViewById<ListView> (Resource.Id.myListView);
+            // Set our view from the "main" layout resource
+            SetContentView(Resource.Layout.activity_main);
+            listView = FindViewById<ListView>(Resource.Id.myListView);
 
-            colorItems.Add (new ColorItem () { Color = Android.Graphics.Color.DarkRed,
-                                               ColorName = "Dark Red", Code = "8B0000" });
-            colorItems.Add (new ColorItem () { Color = Android.Graphics.Color.SlateBlue,
-                                               ColorName = "Slate Blue", Code = "6A5ACD" });
-            colorItems.Add (new ColorItem () { Color = Android.Graphics.Color.ForestGreen,
-                                               ColorName = "Forest Green", Code = "228B22" });
+            colorItems.Add(new ColorItem()
+            {
+                Color = Android.Graphics.Color.DarkRed,
+                ColorName = "Dark Red",
+                Code = "8B0000"
+            });
+            colorItems.Add(new ColorItem()
+            {
+                Color = Android.Graphics.Color.SlateBlue,
+                ColorName = "Slate Blue",
+                Code = "6A5ACD"
+            });
+            colorItems.Add(new ColorItem()
+            {
+                Color = Android.Graphics.Color.ForestGreen,
+                ColorName = "Forest Green",
+                Code = "228B22"
+            });
 
-            listView.Adapter = new ColorAdapter (this, colorItems);
+            listView.Adapter = new ColorAdapter(this, colorItems);
         }
     }
+
     public class ColorAdapter : BaseAdapter<ColorItem>
     {
         List<ColorItem> items;
@@ -451,13 +247,13 @@ namespace DesignerWalkthrough
         {
             get { return items.Count; }
         }
-        public override View GetView (int position, View convertView, ViewGroup parent)
+        public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = items[position];
 
             View view = convertView;
             if (view == null) // no view to re-use, create new
-                view = context.LayoutInflater.Inflate(Resource.Layout.ListItem, null);
+                view = context.LayoutInflater.Inflate(Resource.Layout.list_item, null);
             view.FindViewById<TextView>(Resource.Id.textView1).Text = item.ColorName;
             view.FindViewById<TextView>(Resource.Id.textView2).Text = item.Code;
             view.FindViewById<ImageView>(Resource.Id.imageView1).SetBackgroundColor(item.Color);
@@ -476,15 +272,261 @@ namespace DesignerWalkthrough
 
 ```
 
-Esse código usa um personalizado `ListView` adaptador para carregar informações de cor e exibir esses dados na interface de usuário que acabamos de criar. Para manter este exemplo curto, as informações de cor são codificado em uma lista, mas o adaptador pode ser modificado para extrair informações de cor de uma fonte de dados ou para o cálculo em tempo real. Para obter mais informações sobre `ListView` adaptadores, consulte [ListViews e adaptadores](~/android/user-interface/layouts/list-view/index.md).
+Esse código usa um `ListView` adaptador para carregar as informações de cor e exibir esses dados na interface do usuário que acabou de ser criado. Para manter a brevidade do exemplo, as informações de cores são embutido no código em uma lista, mas o adaptador pode ser modificado para extrair informações de cor de uma fonte de dados ou para calculá-lo em tempo real. Para obter mais informações sobre `ListView` adaptadores, consulte [ListView](~/android/user-interface/layouts/list-view/index.md).
+
+Crie e execute o aplicativo. Captura de tela a seguir está um exemplo de como o aplicativo é exibido durante a execução em um dispositivo:
+
+[![Captura de tela final](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
+
+
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+
+### <a name="creating-a-new-project"></a>Criar um novo projeto
+
+A primeira etapa é criar um novo projeto do xamarin. Android.
+
+Inicie o Visual Studio para Mac e clique em **novo projeto...** . Escolha o **aplicativo Android** modelo e clique em **próxima**:
+
+[![Aplicativo do Android em branco](designer-walkthrough-images/xs/01-android-app-m75-sml.png)](designer-walkthrough-images/xs/01-android-app-m75.png#lightbox)
+
+Nomeie o novo aplicativo **Designer**. Sob **plataformas de destino**, selecione **melhores e mais recentes** e clique em **próxima**:
+
+[![Nome de aplicativo](designer-walkthrough-images/xs/02-designer-walkthrough-m75-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough-m75.png#lightbox)
+
+Na próxima tela da caixa de diálogo, clique em **criar**.
+
+### <a name="adding-a-layout"></a>Adicionando um layout
+
+A próxima etapa é criar uma **LinearLayout** que irá armazenar elementos de interface do usuário.
+
+No Visual Studio para Mac, clique com botão direito **recursos/layout** na **solução** preenchimento e selecione **Adicionar > novo arquivo...** . No **novo arquivo** caixa de diálogo, selecione **Android > Layout**. Nomeie o arquivo **list_item** e clique em **New**:
+
+[![Novo layout](designer-walkthrough-images/xs/03-new-layout-m75-sml.png)](designer-walkthrough-images/xs/03-new-layout-m75.png#lightbox)
+
+Depois que esse arquivo é adicionado, o novo **list_item** layout é exibido na **superfície de Design** (se você vir a mensagem, *este projeto contém recursos que não foram compilados com êxito, renderização poderá ser afetada*, clique em **compilar > compilar tudo** para compilar o projeto):
+
+[![Exibição do Designer](designer-walkthrough-images/xs/04-designer-view-m75-sml.png)](designer-walkthrough-images/xs/04-designer-view-m75.png#lightbox)
+
+Clique o **origem** guia na parte inferior do Designer para exibir o código-fonte XML para esse layout. Quando você clica o **Document Outline** guia à direita, ele mostra que o layout no momento, contém uma única **LinearLayout** widget:
+
+[![XML Designer](designer-walkthrough-images/xs/05-designer-xml-m75-sml.png)](designer-walkthrough-images/xs/05-designer-xml-m75.png#lightbox)
+
+A próxima etapa é criar a interface do usuário para o aplicativo de navegador de cor.
+
+### <a name="creating-the-list-item-user-interface"></a>Criando a interface de usuário do Item de lista
+
+Clique o **Designer** guia na parte inferior da tela para retornar para o **superfície do Designer de**. No **caixa de ferramentas** painel à direita, role para baixo até a **imagens e mídia** seção e localize `ImageView`:
+
+[![Localize o ImageView](designer-walkthrough-images/xs/06-locate-imageview-m75-sml.png)](designer-walkthrough-images/xs/06-locate-imageview-m75.png#lightbox)
+
+Como alternativa, você pode inserir *ImageView* na barra de pesquisa para localizar o `ImageView`:
+
+[![Pesquisa ImageView](designer-walkthrough-images/xs/07-imageview-search-m75-sml.png)](designer-walkthrough-images/xs/07-imageview-search-m75.png#lightbox)
+
+Arraste esta `ImageView` até o **superfície de Design** (isso `ImageView` será usado para exibir uma amostra de cor no aplicativo de navegador de cor):
+
+[![ImageView na tela](designer-walkthrough-images/xs/08-imageview-on-canvas-m75-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas-m75.png#lightbox)
+
+Em seguida, arraste uma `LinearLayout (Vertical)` widget do **caixa de ferramentas** para o **superfície de Design**. Observe que um contorno azul indica os limites de adicionado `LinearLayout`. O **Document Outline** mostra que é um filho `LinearLayout`, localizado abaixo `imageView1 (ImageView)`:
+
+[![Contorno azul](designer-walkthrough-images/xs/10-blue-outline-m75-sml.png)](designer-walkthrough-images/xs/10-blue-outline-m75.png#lightbox)
+
+Quando você seleciona os `ImageView` no Designer, o contorno azul se move para envolver o `ImageView`. Além disso, a seleção é movida para `imageView1 (ImageView)` no **Document Outline**:
+
+[![Selecione ImageView](designer-walkthrough-images/xs/11-select-imageview-m75-sml.png)](designer-walkthrough-images/xs/11-select-imageview-m75.png#lightbox)
+
+Em seguida, arraste uma `Text (Large)` widget do **caixa de ferramentas** em que o recém-adicionado `LinearLayout`. Observe que, quando você arrasta o mouse para o **superfície de Design**, ele destaca onde o novo widget será inserido.
+O `Text (Large)` widget deve estar localizado dentro `linearLayout1` conforme visto aqui:
+
+[![Adicionar widget de texto grande](designer-walkthrough-images/xs/12-green-highlight-m75-sml.png)](designer-walkthrough-images/xs/12-green-highlight-m75.png#lightbox)
+
+Em seguida, adicione uma `Text (Small)` widget abaixo o `Text (Large)` widget. Neste ponto, o **superfície de Design** deve ser semelhante à seguinte captura de tela:
+
+[![Adicionar widget de texto pequeno](designer-walkthrough-images/xs/13-add-small-text-m75-sml.png)](designer-walkthrough-images/xs/13-add-small-text-m75.png#lightbox)
+
+Se os dois `textView` widgets não estão dentro `linearLayout1`, você pode arrastá-los para `linearLayout1` no **Document Outline** e posicioná-los para que eles sejam exibidos conforme mostrado na captura de tela anterior (recuados sob `linearLayout1`).
+
+
+### <a name="arranging-the-user-interface"></a>Organizando a interface do usuário
+
+A próxima etapa é modificar a interface do usuário para exibir o `ImageView` à esquerda, com os dois `TextView` widgets empilhada à direita do `ImageView`.
+
+1.  Com o `ImageView` selecionado, clique em de **propriedades** guia.
+
+2.  Logo abaixo do **propriedades** , clique em **Layout**.
+
+3.  Role para baixo até **ViewGroup** e altere o `Width` definir como `wrap_content`:
+
+[![Conteúdo do conjunto de quebra automática de linha](designer-walkthrough-images/xs/15-wrap-content-m75-sml.png)](designer-walkthrough-images/xs/15-wrap-content-m75.png#lightbox)
+
+Outra maneira de alterar o `Width` configuração é clicar no triângulo no lado direito do widget para alternar sua configuração de largura para `wrap_content`:
+
+[![Arrastar para definir a largura](designer-walkthrough-images/xs/16-width-arrow-m75-sml.png)](designer-walkthrough-images/xs/16-width-arrow-m75.png#lightbox)
+
+Clique no triângulo novamente retorna o `Width` definindo como `match_parent`. Em seguida, vá para o **Document Outline** painel e selecione a raiz `LinearLayout`:
+
+[![Selecione a raiz LinearLayout](designer-walkthrough-images/xs/17-root-linearlayout-m75-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout-m75.png#lightbox)
+
+Com a raiz `LinearLayout` selecionada, retornar para o **Properties** guia e clique em **Widget**. Alterar o `Orientation` definindo como `horizontal` conforme mostrado abaixo. Neste ponto, o **superfície de Design** deve ser semelhante à seguinte captura de tela. Observe que o `TextView` widgets foram movidos para a direita do `ImageView`:
+
+[![Selecione a orientação horizontal](designer-walkthrough-images/xs/18-horizontal-orientation-m75-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation-m75.png#lightbox)
+
+
+### <a name="modifying-the-spacing"></a>Modificando o espaçamento
+
+A próxima etapa é modificar as configurações de preenchimento e margem na interface do usuário para fornecer mais espaço entre os widgets. Selecione o `ImageView` e clique em de **Layout** guia sob **propriedades**. Alterar o `Min Width` para `50dp`, o `Min Height` à `70dp`e o `Padding` para `10dp`.
+Isso se aplica a preenchimento ao redor de todos os lados do `ImageView` e elongates-la verticalmente:
+
+[![Definir preenchimento](designer-walkthrough-images/xs/20-padding-widths-m75-sml.png)](designer-walkthrough-images/xs/20-padding-widths-m75.png#lightbox)
+
+A parte superior, direita, inferior e as configurações de preenchimento à esquerda podem ser definidas independentemente digitando os valores para o `Top`, `Right`, `Bottom`, e `Left` preenchimento campos, respectivamente. Por exemplo, defina as `Left` para o valor de preenchimento `5dp` e o `Top`, `Right`, e `Bottom` preenchimento valores a serem `10dp`. Observe que o `Padding` configuração muda para uma lista separada por vírgulas destes valores:
+
+[![Configurações de preenchimento personalizado](designer-walkthrough-images/xs/21-custom-padding-m75-sml.png)](designer-walkthrough-images/xs/21-custom-padding-m75.png#lightbox)
+
+Em seguida, ajustar a posição do `LinearLayout` widget que contém os dois `TextView` widgets. No **Document Outline**, selecione `linearLayout1`. No **propriedades** painel, selecione o **Layout** guia. Role para baixo até a **ViewGroup** seção e defina as `Left`, `Top`, `Right`, e `Bottom` margens para `5dp`, `5dp`, `0dp`, e `5dp` respectivamente:
+
+[![Definir margens](designer-walkthrough-images/xs/22-margins-m75-sml.png)](designer-walkthrough-images/xs/22-margins-m75.png#lightbox)
+
+### <a name="removing-the-default-image"></a>Removendo a imagem padrão
+
+Porque o `ImageView` está sendo usado para exibir cores (em vez de imagens), a próxima etapa é remover a origem da imagem padrão adicionada pelo modelo.
+
+1.  Selecione o `ImageView`.
+
+2.  Clique o **Widget** guia sob **propriedades**.
+
+3.  Limpar o `Src` configuração de forma que ele está em branco:
+
+[![Limpe a configuração de src ImageView](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
+
+Isso remove `android:src="@android:drawable/ic_menu_gallery"` da origem XML para que `ImageView`.
+
+### <a name="adding-a-listview-container"></a>Adicionando um contêiner de ListView
+
+Agora que o **list_item** layout é definido, a próxima etapa é adicionar um `ListView` ao layout principal. Isso `ListView` conterá uma lista de **list_item**. 
+
+No **Gerenciador de soluções**, abra **Resources/layout/Main.axml**.
+Clique o `Button` widget (se houver) e excluí-lo. No **caixa de ferramentas**, localize o `ListView` widget e arraste-a para o **superfície de Design**.
+O `ListView` no Designer, ficará em branco, exceto para as linhas azuis que sua borda de estrutura de tópicos quando ele é selecionado. Você pode exibir o **Document Outline** para verificar se o **ListView** foi adicionado corretamente:
+
+[![Novo ListView](designer-walkthrough-images/xs/24-new-listview-m75-sml.png)](designer-walkthrough-images/xs/24-new-listview-m75.png#lightbox)
+
+Por padrão, o `ListView` recebe um `Id` valor `@+id/listView1`.
+Embora `listView1` ainda está selecionado na **Document Outline**, abra o **propriedades** painel, clique em **Organizar por**e selecione **categoria**.
+Abra **principal**, localize o **Id** propriedade e altere seu valor para `@+id/myListView`:
+
+[![Renomeie a id para myListView](designer-walkthrough-images/xs/25-change-id-m75-sml.png)](designer-walkthrough-images/xs/25-change-id-m75.png#lightbox)
+
+Neste ponto, a interface do usuário está pronta para uso.
+
+### <a name="running-the-application"></a>Executando o aplicativo
+
+Abra **MainActivity.cs** e substitua o código a seguir:
+
+```csharp
+using Android.App;
+using Android.Widget;
+using Android.Views;
+using Android.OS;
+using System.Collections.Generic;
+
+namespace DesignerWalkthrough
+{
+    [Activity(Label = "@string/app_name", MainLauncher = true)]
+    public class MainActivity : Activity
+    {
+        List<ColorItem> colorItems = new List<ColorItem>();
+        ListView listView;
+
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+
+            // Set our view from the "main" layout resource
+            SetContentView(Resource.Layout.Main);
+            listView = FindViewById<ListView>(Resource.Id.myListView);
+
+            colorItems.Add(new ColorItem()
+            {
+                Color = Android.Graphics.Color.DarkRed,
+                ColorName = "Dark Red",
+                Code = "8B0000"
+            });
+            colorItems.Add(new ColorItem()
+            {
+                Color = Android.Graphics.Color.SlateBlue,
+                ColorName = "Slate Blue",
+                Code = "6A5ACD"
+            });
+            colorItems.Add(new ColorItem()
+            {
+                Color = Android.Graphics.Color.ForestGreen,
+                ColorName = "Forest Green",
+                Code = "228B22"
+            });
+
+            listView.Adapter = new ColorAdapter(this, colorItems);
+        }
+    }
+
+    public class ColorAdapter : BaseAdapter<ColorItem>
+    {
+        List<ColorItem> items;
+        Activity context;
+        public ColorAdapter(Activity context, List<ColorItem> items)
+            : base()
+        {
+            this.context = context;
+            this.items = items;
+        }
+        public override long GetItemId(int position)
+        {
+            return position;
+        }
+        public override ColorItem this[int position]
+        {
+            get { return items[position]; }
+        }
+        public override int Count
+        {
+            get { return items.Count; }
+        }
+        public override View GetView(int position, View convertView, ViewGroup parent)
+        {
+            var item = items[position];
+
+            View view = convertView;
+            if (view == null) // no view to re-use, create new
+                view = context.LayoutInflater.Inflate(Resource.Layout.list_item, null);
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = item.ColorName;
+            view.FindViewById<TextView>(Resource.Id.textView2).Text = item.Code;
+            view.FindViewById<ImageView>(Resource.Id.imageView1).SetBackgroundColor(item.Color);
+
+            return view;
+        }
+    }
+
+    public class ColorItem
+    {
+        public string ColorName { get; set; }
+        public string Code { get; set; }
+        public Android.Graphics.Color Color { get; set; }
+    }
+}
+```
+
+Esse código usa um `ListView` adaptador para carregar as informações de cor e exibir esses dados na interface do usuário que acabou de ser criado. Para manter a brevidade do exemplo, as informações de cores são embutido no código em uma lista, mas o adaptador pode ser modificado para extrair informações de cor de uma fonte de dados ou para calculá-lo em tempo real. Para obter mais informações sobre `ListView` adaptadores, consulte [ListView](~/android/user-interface/layouts/list-view/index.md).
 
 Crie e execute o aplicativo. Captura de tela a seguir está um exemplo de como o aplicativo é exibido durante a execução em um dispositivo:
 
 [![Captura de tela final](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
+-----
 
 
 ## <a name="summary"></a>Resumo
 
-Neste artigo, percorremos como usar o Designer de xamarin no Visual Studio para Mac para criar uma interface do usuário. Em seguida, demonstramos como criar a interface para um único item em uma lista.
-Ao longo do caminho, vimos como adicionar widgets e dispor-los visualmente, bem como para atribuir recursos e para definir várias propriedades os widgets. Portanto, é ilustrado como a interface que criamos no Designer é executado em um aplicativo de exemplo.
+Este artigo percorreu o processo de usar o Designer do xamarin. Android no Visual Studio para criar uma interface do usuário para um aplicativo básico.
+Ele demonstrou como criar a interface para um único item em uma lista e, em seguida, ele ilustrado como adicionar widgets e expô-los visualmente.
+Ele também explicou como atribuir recursos e, em seguida, definir várias propriedades esses widgets.

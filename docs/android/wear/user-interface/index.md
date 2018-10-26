@@ -1,23 +1,23 @@
 ---
-title: Criar Interface do usuário para o sistema operacional de desgaste com Xamarin.Androi
-description: Criando Interfaces de usuário para OS aplicativos de uso
+title: Criando a Interface do usuário para o sistema operacional de desgaste com Xamarin.Androi
+description: Criando Interfaces do usuário para aplicativos do sistema operacional de desgaste
 ms.prod: xamarin
 ms.assetid: 092A6E08-FB07-4AC2-A5BD-8A9D4E6268D8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: e315bd23aad1cde55081d165a6fcc73cf765ec83
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: ff78b04ced9f0d62531dbfb022b73b928ce373ff
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436083"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118013"
 ---
 # <a name="user-interface"></a>Interface do Usuário
 
-As seções a seguir explicam as várias ferramentas e blocos de construção que são usados para compor as interfaces do usuário em aplicativos Android desgaste.
+As seções a seguir explicam as várias ferramentas e blocos de construção que são usados para compor as interfaces de usuário em aplicativos Android Wear.
  
 ##  <a name="controlsandroidwearuser-interfacecontrolsindexmd"></a>[Controles](~/android/wear/user-interface/controls/index.md)
 
-Explica o Android desgaste controla e fornece links para exemplos que demonstram como usar esses controles.
+Explica o Android Wear específicas controles e fornece links para exemplos que demonstram como usar esses controles.

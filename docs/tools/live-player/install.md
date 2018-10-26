@@ -3,15 +3,15 @@ title: O programa de instalação do Xamarin Live Player
 description: Este documento descreve como configurar o Xamarin Live Player e usá-lo para fazer edições ao vivo em um aplicativo em execução.
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 10fdc09ec946ff57b87ad4749cf6edaf04b5f7e8
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 50cec7fc59d31ec0312894821f8fd071a445ab8f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251113"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123668"
 ---
 # <a name="xamarin-live-player-setup"></a>O programa de instalação do Xamarin Live Player
 

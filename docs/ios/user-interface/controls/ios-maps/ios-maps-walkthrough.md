@@ -1,28 +1,28 @@
 ---
-title: As anotações e sobreposições em xamarin
-description: Este artigo apresenta instruções passo a passo mostra como trabalhar com os recursos de anotação e sobreposição do Kit de mapa. Ele mostra como adicionar um mapa a um aplicativo que exibe uma anotação e sobreposição no local da conferência Xamarin evoluir 2013.
+title: Anotações e sobreposições no xamarin. IOS
+description: Este artigo apresenta instruções passo a passo mostrando como trabalhar com os recursos de anotação e sobreposição do Kit de mapa. Ele mostra como adicionar um mapa a um aplicativo que exibe uma anotação e sobreposição no local da conferência Xamarin evoluir 2013.
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d224f034afc9b841bbf82b2b15b92db2d7820c7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 445661513b0cf79df99d54ed0bb4b0261dd75c2a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789574"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105423"
 ---
-# <a name="annotations-and-overlays-in-xamarinios"></a>As anotações e sobreposições em xamarin
+# <a name="annotations-and-overlays-in-xamarinios"></a>Anotações e sobreposições no xamarin. IOS
 
-O aplicativo que vamos construir neste passo a passo é mostrado abaixo:
+O aplicativo, vamos compilar neste passo a passo é mostrado abaixo:
 
  [![](ios-maps-walkthrough-images/00-map-overlay.png "Um exemplo de aplicativo MapKit")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
  
-Você pode encontrar o código completo no **MapsWalkthroughComplete** pasta dentro de [exemplo de demonstração do mapa](https://developer.xamarin.com/samples/monotouch/MapDemo/).
+Você pode encontrar o código completo na [exemplo de passo a passo de mapas](https://developer.xamarin.com/samples/monotouch/MapsWalkthrough/).
 
-Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome relevante. Podemos começar adicionando o código para o nosso controlador de exibição para exibir o MapView e irá criar novas classes para nosso MapDelegate e as anotações personalizadas. Siga as etapas abaixo para fazer isso:
+Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome relevante. Podemos começar adicionando código ao nosso controlador de exibição para exibir o MapView e, em seguida, criará novas classes para nosso MapDelegate e as anotações personalizadas. Siga as etapas abaixo para fazer isso:
 
 ## <a name="viewcontroller"></a>ViewController
 
@@ -36,7 +36,7 @@ Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome releva
     using CoreGraphics
     ```
 
-1. Adicionar uma `MKMapView` instância variável à classe, juntamente com um `MapDelegate` instância. Vamos criar o `MapDelegate` em breve:
+1. Adicionar um `MKMapView` instância de variável na classe, juntamente com um `MapDelegate` instância. Vamos criar o `MapDelegate` em breve:
 
     ```csharp
     public partial class ViewController : UIViewController
@@ -56,7 +56,7 @@ Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome releva
     }
     ```
 
-    Em seguida, vamos adicionar código para inicializar o map no ' ViewDidLoad ' método.
+    Em seguida, vamos adicionar código para inicializar o mapa no ' ViewDidLoad ' método.
 
 1. No `ViewDidLoad` adicionar código para definir o tipo de mapa, mostrar o local do usuário e permitir que o zoom e panorâmica:
 
@@ -81,14 +81,14 @@ Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome releva
     
     ```
 
-1. Criar uma nova instância da `MapDelegate` e atribuí-la para o `Delegate` do `MKMapView`. Novamente, ela será implcodeent o `MapDelegate` em breve:
+1. Criar uma nova instância da `MapDelegate` e atribuí-lo para o `Delegate` da `MKMapView`. Novamente, vamos implcodeent o `MapDelegate` em breve:
 
     ```csharp
     mapDelegate = new MapDelegate ();
     map.Delegate = mapDelegate;     
     ```
 
-1. A partir do iOS 8, você deve ser solicitar autorização do usuário para usar seu local, portanto, vamos adicionar isso ao nosso exemplo. Primeiro, defina um `CLLocationManager` variável de nível de classe:
+1. A partir do iOS 8, você deve ser solicitando a autorização do usuário para usar seu local, então, vamos adicionar isso ao nosso exemplo. Primeiro, defina um `CLLocationManager` variável de nível de classe:
 
     ```csharp
     CLLocationManager locationManager = new CLLocationManager();
@@ -102,13 +102,13 @@ Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome releva
                 }
     ```
 
-1. Por fim, é preciso editar o **Info. plist** arquivo para informar os usuários do motivo solicitando sua localização. No **fonte** menu o **Info. plist**, adicione a seguinte chave:
+1. Por fim, precisamos editar os **Info. plist** arquivo informar os usuários do motivo para a solicitação de sua localização. No **fonte** menu da **Info. plist**, adicione a seguinte chave:
     
     `NSLocationWhenInUseUsageDescription` 
     
     e a cadeia de caracteres: 
 
-    `Maps Demo`.
+    `Maps Walkthrough Docs Sample`.
 
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs – uma classe para anotações personalizadas
@@ -121,7 +121,7 @@ Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome releva
     using CoreLocation;
     using MapKit;
     
-    namespace MapDemo
+    namespace MapsWalkthrough
     {
         public class ConferenceAnnotation : MKAnnotation
         {
@@ -150,15 +150,15 @@ Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome releva
     }   
     ```
 
-## <a name="viewcontroller---adding-the-annotation-and-overlay"></a>ViewController - Adicionar anotação e sobreposição
+## <a name="viewcontroller---adding-the-annotation-and-overlay"></a>ViewController - adicionando a anotação e sobreposição
 
-1. Com o `ConferenceAnnotation` em vigor, pode adicioná-lo ao mapa. No `ViewDidLoad` método o `ViewController`, adicionar anotação em coordenadas do centro do mapa:
+1. Com o `ConferenceAnnotation` em vigor, pode adicioná-lo ao mapa. Volta a `ViewDidLoad` método da `ViewController`, adicionar a anotação na coordenada do centro do mapa:
 
     ```csharp
     map.AddAnnotations (new ConferenceAnnotation ("Evolve Conference", mapCenter)); 
     ```
 
-1. Também queremos ter uma sobreposição de hotel. Adicione o seguinte código para criar o `MKPolygon` usando as coordenadas de hotel fornecido e adicioná-lo ao mapa pela chamada `AddOverlay`:
+1. Também queremos que têm uma sobreposição do hotel. Adicione o seguinte código para criar o `MKPolygon` usando as coordenadas para o hotel fornecido e adicioná-lo ao mapa por chamada `AddOverlay`:
 
     ```csharp
     // add an overlay of the hotel
@@ -178,12 +178,12 @@ Vamos começar criando um novo **iOS projeto vazio**e dando a ele um nome releva
     
     map.AddOverlay (hotelOverlay);  
     ```
-Isso completa o código em `ViewDidLoad`. Agora, precisamos implementar nosso `MapDelegate` classe para a anotação de criação e modos de exibição de sobreposição respectivamente.
+Isso conclui o código em `ViewDidLoad`. Agora, precisamos implementar nosso `MapDelegate` classe para manipular a criação de anotação e modos de exibição de sobreposição, respectivamente.
 
 
 ## <a name="mapdelegate"></a>MapDelegate
 
-1. Criar uma classe chamada `MapDelegate` que herda de `MKMapViewDelegate` e incluir um `annotationId` variável a ser usado como um identificador de reutilização para a anotação:
+1. Criar uma classe chamada `MapDelegate` que herda de `MKMapViewDelegate` e inclua um `annotationId` variável a ser usado como um identificador de reutilização para a anotação:
 
     ```csharp
     class MapDelegate : MKMapViewDelegate
@@ -192,9 +192,9 @@ Isso completa o código em `ViewDidLoad`. Agora, precisamos implementar nosso `M
         ...
     }
     ```
-    Somente temos uma anotação aqui para o reutilização de código não é estritamente necessário, mas é uma boa prática para incluí-lo.
+    Temos apenas uma anotação aqui para que a reutilização de código não é estritamente necessário, mas é uma boa prática para incluí-lo.
 
-1. Implementar o `GetViewForAnnotation` método para retornar uma exibição para o `ConferenceAnnotation` usando o **conference.png** imagem incluída com este passo a passo:
+1. Implemente a `GetViewForAnnotation` método para retornar uma exibição para o `ConferenceAnnotation` usando o **conference.png** imagem incluída com este passo a passo:
 
     ```csharp
     public override MKAnnotationView GetViewForAnnotation (MKMapView mapView, NSObject annotation)
@@ -220,14 +220,14 @@ Isso completa o código em `ViewDidLoad`. Agora, precisamos implementar nosso `M
     }
     ```
 
-1. Quando o usuário toca na anotação, desejamos exibir uma imagem mostrando a cidade de Austin. Adicione as seguintes variáveis para o `MapDelegate` para a imagem e o modo de exibição para exibi-lo:
+1. Quando o usuário toca na anotação, queremos exibir uma imagem que mostra a cidade de Austin. Adicione as seguintes variáveis para o `MapDelegate` para a imagem e o modo de exibição para exibi-lo:
 
     ```csharp
     UIImageView venueView;
     UIImage venueImage;
     ```
 
-1. Em seguida, para mostrar a imagem quando a anotação é tocada, implemente o `DidSelectAnnotation` método da seguinte maneira:
+1. Em seguida, para mostrar a imagem quando a anotação é tocada, implementar o `DidSelectAnnotation` método da seguinte maneira:
 
     ```csharp
     public override void DidSelectAnnotationView (MKMapView mapView, MKAnnotationView view)
@@ -247,7 +247,7 @@ Isso completa o código em `ViewDidLoad`. Agora, precisamos implementar nosso `M
     }
     ```
 
-1. Para ocultar a imagem quando o usuário cancela a seleção de anotação, toque em qualquer lugar no mapa, implemente o `DidSelectAnnotationView` método da seguinte maneira:
+1. Para ocultar a imagem quando o usuário cancela a seleção de anotação, tocando em qualquer lugar no mapa, implementar o `DidSelectAnnotationView` método da seguinte maneira:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)
@@ -261,7 +261,7 @@ Isso completa o código em `ViewDidLoad`. Agora, precisamos implementar nosso `M
         }
     }
     ```
-    Agora temos o código para a anotação. Tudo o que resta é adicionar código para o `MapDelegate` para criar o modo de exibição para a sobreposição de hotel.
+    Agora temos o código para a anotação em vigor. Tudo o que resta é adicionar código para o `MapDelegate` para criar o modo de exibição para a sobreposição de hotel.
 
 1. Adicione a seguinte implementação de `GetViewForOverlay` para o `MapDelegate`:
 
@@ -277,16 +277,17 @@ Isso completa o código em `ViewDidLoad`. Agora, precisamos implementar nosso `M
     }
     ```
 
-Execute o aplicativo. Agora temos um mapa interativo com uma anotação personalizada e uma sobreposição! Toque na anotação e a imagem de Austin é exibida, conforme mostrado abaixo:
+Execute o aplicativo. Agora temos um mapa interativo com uma anotação de personalizado e uma sobreposição! Toque na anotação e a imagem de Austin é exibida, conforme mostrado abaixo:
 
  [![](ios-maps-walkthrough-images/01-map-image.png "Toque na anotação e a imagem de Austin é exibida")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 
-Neste artigo vimos adicionar uma anotação a um mapa, bem como adicionar uma sobreposição de um polígono especificado. Podemos também demonstraram como adicionar suporte de toque para a anotação para animar uma imagem em um mapa.
+Neste artigo, nós examinamos adicionar uma anotação a um mapa, bem como adicionar uma sobreposição de um polígono especificado. Nós também demonstramos como adicionar suporte a toque para a anotação para animar uma imagem ao longo de um mapa.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstração de mapa (exemplo)](https://developer.xamarin.com/samples/monotouch/MapDemo/)
-- [Mapas de iOS](~/ios/user-interface/controls/ios-maps/index.md)
+- [Exemplo de passo a passo do Maps](https://developer.xamarin.com/samples/monotouch/MapsWalkthrough/)
+- [Amostra de demonstração de mapa](https://developer.xamarin.com/samples/monotouch/MapDemo/)
+- [Mapas do iOS](~/ios/user-interface/controls/ios-maps/index.md)

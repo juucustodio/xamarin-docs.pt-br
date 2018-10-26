@@ -4,15 +4,15 @@ description: Este guia explicará o acesso a arquivos no xamarin. Android
 ms.prod: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5a4ddf606bb71bef10cf99660c198c5a8fdb1b69
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212169"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116791"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>O armazenamento de arquivos e acesso com o xamarin. Android
 
@@ -79,7 +79,7 @@ Para maximizar o compartilhamento de código, os aplicativos xamarin. Android (o
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>Lendo ou gravando em arquivos no armazenamento interno
 
-Qualquer uma da [APIs do c# para gravação](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) para um arquivo são suficientes; tudo o que é necessário é obter o caminho para o arquivo que está no diretório alocado ao aplicativo. É altamente recomendável que o async versões das APIs do .NET são usadas para minimizar quaisquer problemas que podem ser associar com acesso a arquivos bloquear o thread principal.
+Qualquer um dos [ C# APIs para gravação](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) em um arquivo são suficientes; tudo o que é necessário é obter o caminho para o arquivo que está no diretório alocado para o aplicativo. É altamente recomendável que o async versões das APIs do .NET são usadas para minimizar quaisquer problemas que podem ser associar com acesso a arquivos bloquear o thread principal.
 
 Este trecho de código é um exemplo de como escrever um número inteiro em um arquivo de texto UTF-8 para o diretório de armazenamento interno de um aplicativo:
 

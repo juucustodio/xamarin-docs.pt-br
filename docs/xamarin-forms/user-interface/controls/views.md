@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: 52d8d5f6eb38e5cb501d6284d08f7317981e0dcf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 18/10/2018
+ms.openlocfilehash: a51a3bb7726baa9142579a518767dc722870ee06
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998967"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107516"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -93,7 +93,7 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 
 |     |     |
 | --- | --- |
-| [`Stepper`](xref:Xamarin.Forms.Stepper) permite que o usuário selecione uma `double` valor de um intervalo de valores incrementais especificado com o [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum), [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), e [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) propriedades.<br /><br />[Documentação da API](xref:Xamarin.Forms.Stepper) | [![Exemplo de escalonador](views-images/Stepper.png "exemplo escalonador")](views-images/Stepper-Large.png#lightbox "escalonador exemplo")<br />[O código c# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
+| [`Stepper`](xref:Xamarin.Forms.Stepper) permite que o usuário selecione uma `double` valor de um intervalo de valores incrementais especificado com o [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum), [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), e [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) propriedades.<br /><br />[Documentação da API](xref:Xamarin.Forms.Stepper)  / [guia](~/xamarin-forms/user-interface/stepper.md) / [exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) | [![Exemplo de escalonador](views-images/Stepper.png "exemplo escalonador")](views-images/Stepper-Large.png#lightbox "escalonador exemplo")<br />[O código c# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
 ### <a name="switch"></a>Alternar
@@ -114,7 +114,7 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 
 |     |     |
 | --- | --- |
-| [`TimePicker`](xref:Xamarin.Forms.TimePicker) permite que o usuário selecione uma hora com o seletor de tempo de plataforma. O [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) propriedade é o tempo selecionado. Um aplicativo pode monitorar as alterações na `Time` propriedade ao instalar um manipulador para o [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) eventos.<br /><br />[Documentação da API](xref:Xamarin.Forms.TimePicker) | [![Exemplo de TimePicker](views-images/TimePicker.png "exemplo TimePicker")](views-images/TimePicker-Large.png#lightbox "TimePicker exemplo")<br />[O código c# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
+| [`TimePicker`](xref:Xamarin.Forms.TimePicker) permite que o usuário selecione uma hora com o seletor de tempo de plataforma. O [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) propriedade é o tempo selecionado. Um aplicativo pode monitorar as alterações na `Time` propriedade ao instalar um manipulador para o [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) eventos.<br /><br />[Documentação da API](xref:Xamarin.Forms.TimePicker) / [guia](~/xamarin-forms/user-interface/timepicker.md) / [exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker) | [![Exemplo de TimePicker](views-images/TimePicker.png "exemplo TimePicker")](views-images/TimePicker-Large.png#lightbox "TimePicker exemplo")<br />[O código c# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-for-editing-text"></a>Modos de exibição de edição de texto

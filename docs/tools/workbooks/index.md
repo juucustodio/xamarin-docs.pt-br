@@ -1,46 +1,44 @@
 ---
 title: Xamarin Workbooks
-description: Pastas de trabalho de Xamarin fornecem uma mistura de documentação e código que é perfeito para experimentação, aprendizado e criar guias e auxílios de ensino.
+description: Xamarin Workbooks fornecem uma mistura de documentação e código que é perfeito para experimentação, aprendizagem e a criação de guias e materiais de aprendizagem.
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-author: topgenorth
-ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: 57ef9cb3a45dbf1c6271a1475c27fdd38d2fd96b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+author: lobrien
+ms.author: laobri
+ms.date: 10/23/2018
+ms.openlocfilehash: d0aed1b501b86a23d4008ba9618b0e459178ca24
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33922633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121887"
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
-Pastas de trabalho de Xamarin fornecem uma mistura de documentação e código que é perfeito para experimentação, aprendizado e criar guias e auxílios de ensino.
+Xamarin Workbooks fornecem uma mistura de documentação e código que é perfeito para experimentação, aprendizagem e a criação de guias e materiais de aprendizagem.
 
-Criar uma rica c# pasta de trabalho para o Android, iOS, Mac, WPF ou Console e obter resultados ao vivo instantâneos como saber essas APIs.
+Crie uma avançada C# pasta de trabalho para Android, iOS, Mac, WPF, ou Console e obter resultados ao vivo instantânea que você saiba essas APIs.
 
-Pastas de trabalho do Xamarin é um software de código aberto. Desenvolvimento acontece aberta no GitHub. Convidado interessados usuários e desenvolvedores se envolver com o projeto.
+Xamarin Workbooks é um software de código-fonte aberto. Desenvolvimento ocorre em Abrir no GitHub. Nós o convidamos usuários interessados e desenvolvedores a se envolver com o projeto.
 
-<a class="github-button" href="https://github.com/Microsoft/workbooks" data-size="large" aria-label="View Microsoft/workbooks on GitHub">Participe no GitHub!</a>
+[Junte-se no GitHub!](https://github.com/Microsoft/workbooks)
 
-Experimente e informe-nos sobre sua opinião, ou se você [executados em qualquer bug](~/tools/workbooks/install.md#reporting-bugs). Temos um [fórum](https://forums.xamarin.com/categories/inspector) muito!
+Experimente e informe-nos sobre sua opinião, ou se você [executado em todos os bugs](~/tools/workbooks/install.md#reporting-bugs). Temos uma [fórum](https://forums.xamarin.com/categories/inspector) muito!
 
 [![](images/interactive-1.0.0-urho-planet-earth-small.png "Uma pasta de trabalho de UrhoSharp com base em amostra")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## <a name="installation-and-requirementsinstallmd"></a>[Instalação e requisitos](install.md)
 
-Informações sobre a obtenção de pastas de trabalho instaladas no computador Mac ou Windows.
+Obter informações sobre pastas de trabalho instaladas no computador Mac ou Windows.
 
 ## <a name="interactive-workbooksworkbookmd"></a>[Pastas de trabalho interativas](workbook.md)
 
-Uma introdução para como usar pastas de trabalho do Xamarin.
+Uma introdução a como usar o Xamarin Workbooks.
 
-## <a name="samplessamplesindexmd"></a>[Amostras](samples/index.md)
+## <a name="samples"></a>Exemplos
 
-Há uma ampla variedade de [pastas de trabalho de exemplo](https://developer.xamarin.com/workbooks/) disponíveis, incluindo aqueles realçado [aqui](samples/index.md).
+Há uma grande variedade de [pastas de trabalho disponíveis no GitHub exemplo](https://github.com/xamarin/workbooks).
 
 ## <a name="integration-sdksdkindexmd"></a>[SDK de integração](sdk/index.md)
 
-É possível estender o Xamarin pastas de trabalho com processadores e representações de dados personalizados. Integrações são gravadas com c# e TypeScript/JavaScript.
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+É possível estender o Xamarin Workbooks com processadores e representações de dados personalizados. Integrações são gravadas com C# e o TypeScript/JavaScript.

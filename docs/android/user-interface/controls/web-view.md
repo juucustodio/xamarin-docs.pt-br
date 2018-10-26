@@ -3,19 +3,20 @@ title: Exibição da Web
 ms.prod: xamarin
 ms.assetid: 807F214A-166D-B342-0BBA-525517577F6B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 8d7b0e1abc8eb11bf812a111764b9cccfb41e041
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: ae0b67de5856e6baef9a4989a93e65ead2854a62
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241169"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110076"
 ---
 # <a name="web-view"></a>Exibição da Web
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) permite que você crie sua própria janela para exibir páginas da web (ou até mesmo desenvolver um navegador concluído). Neste tutorial, você criará um simples [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) que pode exibir e navegar em páginas da web.
+[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) permite que você crie sua própria janela para exibir páginas da web (ou até mesmo desenvolver um navegador concluído). Neste tutorial, você criará um simples [`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)
+que pode exibir e navegar em páginas da web.
 
 Criar um novo projeto chamado **HelloWebView**.
 
@@ -74,7 +75,8 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-Em seguida, use o seguinte código para o [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) método:
+Em seguida, use o seguinte código para o [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+método:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -118,7 +120,8 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 }
 ```
 
-Isso [ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent)) o método de retorno de chamada será chamado sempre que um botão é pressionado enquanto a atividade está em execução. A condição de usa a [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) verificar se a tecla pressionada é o **volta** botão e se a [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) é realmente capaz de navegar de volta (se ele tem um histórico). Se ambos forem verdadeiros, em seguida, a [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) método é chamado, o que navegará de volta uma etapa a [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) histórico. Retornando `true` indica que o evento foi tratado. Se essa condição não for atendida, o evento é enviado para o sistema.
+Esse [`OnKeyDown(int, KeyEvent)`](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))
+método de retorno de chamada será chamado sempre que um botão é pressionado enquanto a atividade está em execução. A condição de usa a [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) verificar se a tecla pressionada é o **volta** botão e se a [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) é realmente capaz de navegar de volta (se ele tem um histórico). Se ambos forem verdadeiros, em seguida, a [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) método é chamado, o que navegará de volta uma etapa a [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) histórico. Retornando `true` indica que o evento foi tratado. Se essa condição não for atendida, o evento é enviado para o sistema.
 
 Execute o aplicativo novamente. Agora você deve ser capaz de seguir os links e navegar para trás no histórico de página:
 

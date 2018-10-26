@@ -1,71 +1,71 @@
 ---
 title: Resolvendo erros de instalação da biblioteca
-description: Em alguns casos, você pode receber erros ao instalar bibliotecas de suporte do Android. Este guia fornece soluções alternativas para alguns erros comuns.
+description: Em alguns casos, você poderá receber erros ao instalar as bibliotecas de suporte do Android. Este guia fornece soluções alternativas para alguns erros comuns.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: a54c69ff708ff7438ef1a8fd14c17e77b5375039
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: 2ef81cfda92a6497e69f27b0584a97996094b1a4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538085"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107101"
 ---
 # <a name="resolving-library-installation-errors"></a>Resolvendo erros de instalação da biblioteca
 
-_Em alguns casos, você pode receber erros ao instalar bibliotecas de suporte do Android. Este guia fornece soluções alternativas para alguns erros comuns._
+_Em alguns casos, você poderá receber erros ao instalar as bibliotecas de suporte do Android. Este guia fornece soluções alternativas para alguns erros comuns._
 
 ## <a name="overview"></a>Visão geral
 
-Ao criar um projeto de aplicativo xamarin, poderão ocorrer erros de compilação ao Visual Studio ou o Visual Studio para Mac tentar baixar e instalar bibliotecas de dependência. Muitos desses erros são causados por problemas de conectividade de rede, corrupção de arquivos ou problemas de controle de versão. Este guia descreve os erros de instalação de biblioteca de suporte mais comuns e fornece as etapas para resolver esses problemas e obter seu projeto de aplicativo criá-lo novamente. 
+Ao compilar um projeto de aplicativo do xamarin. Android, você poderá receber erros de compilação quando o Visual Studio ou Visual Studio para Mac tentar baixar e instalar as bibliotecas de dependência. Muitos desses erros são causados por problemas de conectividade de rede, arquivo corrompido ou problemas de controle de versão. Este guia descreve os erros de instalação de biblioteca de suporte mais comuns e fornece as etapas para contornar esses problemas e obter seu projeto de aplicativo compilar novamente. 
 
  
  
-## <a name="errors-while-downloading-m2repository"></a>Erros durante o download de m2Repository
+## <a name="errors-while-downloading-m2repository"></a>Erros durante o download m2Repository
 
-Você pode ver **m2repository** erros ao fazer referência a um pacote do NuGet dos serviços do Android bibliotecas de suporte ou o Google Play. Essa mensagem de erro é semelhante à exibida a seguir:
+Você pode ver **m2repository** erros ao fazer referência a um pacote do NuGet dos serviços do Android Support Libraries ou o Google Play. Essa mensagem de erro é semelhante à exibida a seguir:
 
 ```shell
 Download failed. Please download https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip and extract it to the C:\Users\mgm\AppData\Local\Xamarin\Android.Support.v4\22.2.1\content directory.
 ```
 
-Este exemplo é para **android\_m2repository\_r16**, mas você pode ver essa mesma mensagem de erro para uma versão diferente, como **android\_m2repository\_r18**  ou **android\_m2repository\_r25**. 
+Este exemplo destina **android\_m2repository\_r16**, mas você pode ver essa mesma mensagem de erro para uma versão diferente, como **android\_m2repository\_r18**  ou **android\_m2repository\_r25**. 
 
 
 
 ### <a name="automatic-recovery-from-m2repository-errors"></a>Recuperação automática de erros de m2repository 
 
-Geralmente, esse problema pode ser corrigido a biblioteca um problema de exclusão e recriação de acordo com estas etapas: 
+Geralmente, esse problema pode ser remediado ao excluir a biblioteca problemática e recriação de acordo com estas etapas: 
 
-1. Navegue até o diretório de biblioteca de suporte no seu computador:
+1. Navegue até o diretório de biblioteca de suporte em seu computador:
 
-    -   No Windows, bibliotecas de suporte estão localizadas em **c:\\usuários\\_username_\\AppData\\Local\\Xamarin**. 
+    -   No Windows, bibliotecas de suporte estão localizadas em **c:\\os usuários\\_username_\\AppData\\Local\\Xamarin**. 
 
-    -   No Mac OS X, bibliotecas de suporte estão localizadas em **/Users/_username_/.local/share/Xamarin**. 
+    -   No Mac OS X, bibliotecas de suporte estão localizadas em **/Users/_nome de usuário_/.local/share/Xamarin**. 
 
 2. Localize a pasta de biblioteca e a versão correspondente à mensagem de erro. Por exemplo, a pasta de biblioteca e versão para a mensagem de erro acima está localizada em **Android.Support.v4\\22.2.1**:
 
     [![Biblioteca de suporte do local da pasta de exemplo para 22.2.1](resolving-library-installation-errors-images/01-example-location.png)](resolving-library-installation-errors-images/01-example-location.png#lightbox)
 
-3. Exclua o conteúdo da pasta de versão. Certifique-se de remover o **. zip** arquivo, bem como a **conteúdo** e **inserido** subpastas dentro dessa pasta. Para a mensagem de erro de exemplo mostrada acima, os arquivos e subdiretórios mostrados nesta captura de tela (**conteúdo**, **inserido**, e **android_m2repository_r16.zip**) são para excluídos:
+3. Exclua o conteúdo da pasta de versão. Certifique-se de remover o **. zip** arquivo, bem como a **conteúdo** e **embedded** subdiretórios dentro dessa pasta. Para a mensagem de erro de exemplo mostrada acima, os arquivos e subdiretórios mostrados nesta captura de tela (**conteúdo**, **incorporado**, e **android_m2repository_r16.zip**) são para excluídos:
 
-    [![Pasta de biblioteca de suporte a conteúdo de exemplo de 22.2.1](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png#lightbox)
+    [![Conteúdo de exemplo de 22.2.1 dão suporte a pasta de biblioteca](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png#lightbox)
 
-   Observe que é importante excluir o *todo* conteúdo dessa pasta. Embora essa pasta pode conter inicialmente o "ausente" **android\_m2repository\_r16.zip** arquivo, esse arquivo pode ter sido parcialmente baixado ou corrompido.
+   Observe que é importante excluir o *inteira* conteúdo dessa pasta. Embora essa pasta pode conter inicialmente o "ausente" **android\_m2repository\_r16.zip** arquivo, esse arquivo pode ter sido parcialmente baixado ou corrompido.
 
-4. Recompile o projeto &ndash; fizer isso, o processo de compilação fazer o download novamente a biblioteca ausente.
+4. Recompile o projeto &ndash; fizer isso, o processo de compilação baixar novamente a biblioteca ausente.
 
-Na maioria dos casos, essas etapas serão resolver o erro de compilação e permitem que você continue. Se excluir essa biblioteca não resolver o erro de compilação, você deve baixar e instalar manualmente o **android\_m2repository\_r_nn_.zip** arquivo conforme descrito na próxima seção. 
+Na maioria dos casos, essas etapas resolver o erro de build e permitir que você continue. Se excluir essa biblioteca não resolver o erro de build, você deve baixar e instalar manualmente o **android\_m2repository\_r_nn_.zip** conforme descrito na próxima seção do arquivo. 
 
 
 
 ### <a name="manually-downloading-m2repository"></a>Baixar manualmente m2repository
 
-Se você tentou usar as etapas de recuperação automática acima e ainda tiver erros de compilação, você pode baixar manualmente o **android\_m2repository\_r_nn_.zip** arquivo (usando um navegador da web) e instalá-lo de acordo com as seguintes etapas. Esse procedimento também é útil se você não tem acesso à internet no computador de desenvolvimento, mas é possível baixar o arquivo usando um computador diferente. 
+Se você já tentou usar as etapas de recuperação automática acima e ainda houver erros de compilação, você pode baixar manualmente as **android\_m2repository\_r_nn_.zip** arquivo (usando um navegador da web) e instalá-lo de acordo com as seguintes etapas. Esse procedimento também é útil se você não tem acesso à internet no computador de desenvolvimento, mas você é capaz de baixar o arquivo morto usando um computador diferente. 
 
 1.  Baixe o **android\_m2repository\_r_nn_.zip** arquivo que corresponde à mensagem de erro &ndash; links são fornecidos na lista a seguir (juntamente com o hash MD5 correspondente de cada link URL):
 
@@ -105,70 +105,70 @@ Se você tentou usar as etapas de recuperação automática acima e ainda tiver 
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    Se o **m2repository** arquivo não é mostrado nesta tabela, você pode criar a URL de download acrescentando **https://dl-ssl.google.com/android/repository/** com o nome do **m2repository** para baixar. Por exemplo, use  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** baixar **android\_m2repository\_r10.zip**.
+    Se o **m2repository** arquivo morto não é mostrado nesta tabela, você pode criar a URL de download acrescentando **https://dl-ssl.google.com/android/repository/** para o nome da **m2repository** para baixar. Por exemplo, use **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** para baixar **android\_m2repository\_r10.zip**.
 
-2.  Renomeie o arquivo para o hash MD5 correspondente da URL de download, conforme mostrado na tabela acima. Por exemplo, se você tiver baixado **android\_m2repository\_r25.zip**, renomeá-lo como **0B3F1796C97C707339FB13AE8507AF50.zip**. Se o hash MD5 para a URL de download do arquivo baixado não é mostrado na tabela, você pode usar um [online gerador de MD5](http://www.webconfs.com/online-md5-generator.php) para converter a URL em uma cadeia de caracteres de hash MD5. 
+2.  Renomeie o arquivo para o hash MD5 correspondente a URL de download, conforme mostrado na tabela acima. Por exemplo, se você baixou **android\_m2repository\_r25.zip**, renomeie-o como **0B3F1796C97C707339FB13AE8507AF50.zip**. Se o hash MD5 para a URL de download do arquivo baixado não é mostrado na tabela, você pode usar um [gerador de MD5 online](http://www.webconfs.com/online-md5-generator.php) para converter a URL em uma cadeia de caracteres de hash MD5. 
 
-3.  Copie o arquivo para o Xamarin **fechar** pasta: 
+3.  Copie o arquivo para o Xamarin **zips** pasta: 
 
-    -   No Windows, essa pasta está localizada em **c:\\usuários\\***username***\\AppData\\Local\\Xamarin\\fechar**. 
+    -   No Windows, essa pasta está localizada em **c:\\os usuários\\***username***\\AppData\\Local\\Xamarin\\zips**. 
 
-    -   No Mac OS X, essa pasta está localizada em **/Users/***username***/.local/share/Xamarin/zips**. 
+    -   No Mac OS X, essa pasta está localizada em **/Users/***nome de usuário***/.local/share/Xamarin/zips**. 
 
-    Por exemplo, a captura de tela a seguir ilustra o resultado quando **android\_m2repository\_r16.zip** é baixado e renomeado para o hash MD5 do seu URL de download no Windows:
+    Por exemplo, a captura de tela a seguir ilustra o resultado quando **android\_m2repository\_r16.zip** é baixado e renomeado para o hash MD5 de sua URL de download no Windows:
 
-    [![Exemplo de repositório r16.zip que está sendo renomeado para 0595E577D19D31708195A83087881EE6.zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
+    [![Exemplo do repositório r16.zip que está sendo renomeado para 0595E577D19D31708195A83087881EE6.zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
 
-Se esse procedimento não resolver o erro de compilação, você deve baixar manualmente o **android\_m2repository\_r_nn_.zip** de arquivos, descompacte-o e instale o seu conteúdo conforme descrito na próxima seção. 
+Se esse procedimento não resolver o erro de build, você deve baixar manualmente as **android\_m2repository\_r_nn_.zip** de arquivo, descompacte-o e instale o seu conteúdo conforme descrito na próxima seção. 
 
 
 ### <a name="manually-downloading-and-installing-m2repository-files"></a>Manualmente baixando e instalando arquivos m2repository
 
-O processo manual totalmente para a recuperação de **m2repository** erros infere baixando o **android\_m2repository\_r_nn_.zip** arquivo (usando um navegador da web), descompactando ele e copiar seu conteúdo para o diretório de biblioteca de suporte no seu computador. O exemplo a seguir, vamos recuperará desta mensagem de erro: 
+O processo totalmente manual para se recuperar de **m2repository** infere erros baixando o **android\_m2repository\_r_nn_.zip** arquivo (usando um navegador da web), descompactando ele e copiar seu conteúdo para o diretório de biblioteca de suporte em seu computador. No exemplo a seguir, vamos vai se recuperar essa mensagem de erro: 
 
 ```shell
 Unzipping failed. Please download https://dl-ssl.google.com/android/repository/android_m2repository_r25.zip and extract it to the C:\Users\mgm\AppData\Local\Xamarin\Android.Support.v4\23.1.1\content directory.
 ```
 
-Use as seguintes etapas para baixar **m2repository** e instalar seu conteúdo:
+Use as etapas a seguir para baixar **m2repository** e instalar seu conteúdo:
 
-1.  Exclua o conteúdo da pasta biblioteca correspondente à mensagem de erro. Por exemplo, na mensagem de erro acima você excluirá o conteúdo de **c:\\usuários\\***username***\\AppData\\Local\\Xamarin\\ Android.Support.v4\\23.1.1.0**. 
+1.  Exclua o conteúdo da pasta de biblioteca correspondente à mensagem de erro. Por exemplo, na mensagem de erro acima você excluiria o conteúdo do **c:\\os usuários\\***username***\\AppData\\Local\\Xamarin\\ Android.Support.v4\\23.1.1.0**. 
     Conforme descrito anteriormente, você deve excluir todo o conteúdo deste diretório:
 
-    [![Excluindo o conteúdo incorporado e o 23.1.1.0 android_m2repository pastas pasta](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
+    [![Excluindo conteúdo, inserido e o 23.1.1.0 android_m2repository pastas pasta](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
 
-2.  Baixe o **android\_m2repository\_r_nn_.zip** arquivo do Google que corresponde ao erro de mensagem (consulte a tabela na seção anterior para links).
+2.  Baixe o **android\_m2repository\_r_nn_.zip** arquivo do Google que corresponde ao erro da mensagem (consulte a tabela na seção anterior para links).
 
-3.  Extrair essa **. zip** arquivamento em qualquer local (como a área de trabalho). Isso deve criar um diretório que corresponde ao nome do **. zip** arquivamento. Dentro dessa pasta, você deve encontrar uma subpasta chamada **m2repository**: 
+3.  Extrair isso **. zip** arquivar em qualquer local (por exemplo, a área de trabalho). Isso deve criar um diretório que corresponde ao nome da **. zip** arquivo morto. Dentro dessa pasta, você deve encontrar um subdiretório chamado **m2repository**: 
 
     [![pasta m2repository encontrada no arquivo zip extraídos](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png#lightbox)
 
-4.  No diretório de biblioteca com versão limpos na etapa 1, crie novamente o **conteúdo** e **inserido** subdiretórios. Por exemplo, a captura de tela a seguir ilustra **conteúdo** e **inserido** subdiretórios que está sendo criados no **23.1.1.0** pasta **android \_m2repository\_r25.zip**: 
+4.  No diretório de biblioteca com versão limpos na etapa 1, recriar a **conteúdo** e **incorporado** subdiretórios. Por exemplo, a captura de tela a seguir ilustra **conteúdo** e **incorporado** subdiretórios que está sendo criados no **23.1.1.0** pasta para **android \_m2repository\_r25.zip**: 
 
     [![Criar conteúdo e pastas incorporadas no 23.1.1.0 pasta](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png#lightbox)
 
-5.  Cópia **m2repository** da **. zip** para o **conteúdo** diretório que você criou na etapa anterior: 
+5.  Cópia **m2repository** de extraída **. zip** para o **conteúdo** diretório que você criou na etapa anterior: 
 
     [![Captura de tela de m2repository copiado para a pasta 23.1.1.0/content](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)](resolving-library-installation-errors-images/07-copied-m2repository-vs.png#lightbox)
 
-6.  No **. zip** directory, navegue até **m2repository\\com\\android\\suporte\\suporte v4** e abra a pasta correspondente o número de versão criados acima (neste exemplo, **23.1.1**):
+6.  No extraída **. zip** directory, navegue até **m2repository\\com\\android\\suporte\\suporte v4** e abra a pasta correspondente o número de versão criada acima (neste exemplo, **23.1.1**):
 
-    [![Listagem de exemplo de arquivos contidos na pasta support-v4/23.1.1](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png#lightbox)
+    [![Listagem de exemplo dos arquivos contidos na pasta support-v4/23.1.1](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png#lightbox)
 
-7.  Copiar todos os arquivos nessa pasta para o **inserido** diretório criado na etapa 4:
+7.  Copie todos os arquivos nessa pasta para o **embedded** diretório criado na etapa 4:
 
     [![Exemplo de arquivos copiados para a pasta 23.1.1.0/embedded](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
-8.  Verifique se que todos os arquivos são copiados. O **inserido** diretório agora deve conter os arquivos como **. jar**, **. aar**, e **.pom**.
+8.  Verifique se todos os arquivos são copiados. O **incorporado** diretório agora deve conter os arquivos, como **. jar**, **. aar**, e **.pom**.
 
-9.  Descompacte o conteúdo de qualquer extraído **. aar** arquivos para o **inserido** directory. No Windows, acrescente um **. zip** extensão para o **. aar** de arquivo, abra-o e copie o conteúdo para o **inserido** directory.
-    Em macOS, descompacte o **. aar** arquivo usando o **Descompacte** comando no Terminal (por exemplo, **Descompacte file.aar**).
+9.  Descompacte o conteúdo de qualquer extraídos **. aar** arquivos para o **incorporado** directory. No Windows, acrescente uma **. zip** extensão para o **. aar** do arquivo, abri-lo e copiar o conteúdo para o **incorporado** directory.
+    No macOS, descompacte o **. aar** arquivo usando o **Descompacte** comando no Terminal (por exemplo, **Descompacte file.aar**).
 
-Neste ponto, você instalou manualmente os componentes ausentes e o projeto deve compilar sem erros. Se não, verifique se você baixou o **m2repository** **. zip** arquivar a versão que corresponde exatamente à versão na mensagem de erro e verifique se que você tenha instalado o seu conteúdo no Corrija locais, conforme descrito nas etapas acima. 
+Neste ponto, você instalou os componentes ausentes manualmente e seu projeto deve ser compilado sem erros. Se não, verifique se que você tenha baixado o **m2repository** **. zip** arquivar a versão que corresponde exatamente à versão na mensagem de erro e verifique se que você tenha instalado o seu conteúdo no corrigir locais, conforme descrito nas etapas acima. 
 
 
 
 ## <a name="summary"></a>Resumo 
 
-Este artigo explicou como se recuperar de erros comuns que podem ocorrer durante o download automático e a instalação das bibliotecas de dependência. Ele descrito como excluir a biblioteca problemática e recompilar o projeto como uma maneira de baixar novamente e reinstale a biblioteca. Ele descrito como baixar a biblioteca e instalá-lo no **fechar** pasta. Ele também descrito um procedimento mais envolvido para manualmente baixando e instalando os arquivos necessários como uma maneira de solucionar problemas que não podem ser resolvidos por meio de forma automática. 
+Este artigo explicou como se recuperar de erros comuns que podem ocorrer durante o download automático e instalação de bibliotecas de dependência. Ele descreveu como excluir a biblioteca problemática e recompile o projeto como uma maneira de baixar novamente e reinstale a biblioteca. Ele descreveu como baixar a biblioteca e instalá-lo na **zips** pasta. Também descreveu um procedimento mais envolvido para baixando e instalando os arquivos necessários, como uma maneira de contornar os problemas que não podem ser resolvidos por meios automático manualmente. 

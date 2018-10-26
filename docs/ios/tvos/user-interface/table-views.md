@@ -1,26 +1,26 @@
 ---
-title: Trabalhando com tvOS modos de exibição de tabela no Xamarin
-description: Este artigo aborda criando e trabalhando com modos de exibição de tabela e controladores de exibição de tabela dentro de um aplicativo Xamarin.tvOS.
+title: Trabalhando com exibições de tabela no Xamarin do tvOS
+description: Este artigo aborda a projetar e trabalhar com modos de exibição de tabela e controladores de exibição de tabela dentro de um aplicativo xamarin. tvos.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8c74c2cc7598f50e57a6a450823e2b0ebca4b537
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a8b31d9f2e9c8921420b1fd50c4092273962f54b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105890"
 ---
-# <a name="working-with-tvos-table-views-in-xamarin"></a>Trabalhando com tvOS modos de exibição de tabela no Xamarin
+# <a name="working-with-tvos-table-views-in-xamarin"></a>Trabalhando com exibições de tabela no Xamarin do tvOS
 
-_Este artigo aborda criando e trabalhando com modos de exibição de tabela e controladores de exibição de tabela dentro de um aplicativo Xamarin.tvOS._
+_Este artigo aborda a projetar e trabalhar com modos de exibição de tabela e controladores de exibição de tabela dentro de um aplicativo xamarin. tvos._
 
-TvOS, uma exibição de tabela é apresentada como uma única coluna de linhas que podem opcionalmente ser organizadas em grupos de seções de rolagem. Exibições de tabela devem ser usadas quando você precisa exibir uma grande quantidade de dados com eficiência para o usuário, em uma clara para compreender a maneira.
+TvOS, uma exibição de tabela é apresentada como uma única coluna de linhas que opcionalmente podem ser organizadas em grupos de seções de rolagem. Modos de exibição de tabela devem ser usados quando você precisa exibir uma grande quantidade de dados com eficiência para o usuário, em um claro para entender a forma.
 
-Modos de exibição de tabela geralmente são exibidos em um dos lados de uma [modo divisão](~/ios/tvos/user-interface/split-views.md) como navegação com os detalhes do item selecionado exibido no lado oposto:
+Modos de exibição de tabela geralmente são exibidos em um dos lados de uma [modo de exibição dividido](~/ios/tvos/user-interface/split-views.md) como navegação, com os detalhes do item selecionado exibido no lado oposto:
 
 [![](table-views-images/intro01.png "Modo de exibição de tabela de exemplo")](table-views-images/intro01.png#lightbox)
 
@@ -28,128 +28,128 @@ Modos de exibição de tabela geralmente são exibidos em um dos lados de uma [m
 
 ## <a name="about-table-views"></a>Sobre modos de exibição de tabela
 
-Um `UITableView` exibe uma única coluna de linhas roláveis como uma lista hierárquica de informações que podem opcionalmente ser organizadas em grupos de seções: 
+Um `UITableView` exibe uma única coluna de linhas roláveis como uma lista hierárquica de informações que opcionalmente podem ser organizadas em grupos de seções: 
 
 [![](table-views-images/table01.png "Um item selecionado")](table-views-images/table01.png#lightbox)
 
-Apple tem as seguintes sugestões para trabalhar com tabelas:
+Apple tem as sugestões a seguir para trabalhar com tabelas:
 
-- **Estar ciente de largura** -tentar obter o equilíbrio correto em suas larguras de tabela. Se a tabela é muito grande, ele pode ser difícil de varredura de uma distância e poderá levar fora da área de conteúdo disponível. Se a tabela for muito estreita, pode fazer com que as informações sejam truncados ou wrap, novamente isso pode ser difícil para o usuário leiam na sala.
-- **Mostrar tabela conteúdo rapidamente** - para listas grandes de dados, lento, carregar o conteúdo e Iniciar mostrando informações assim que a tabela é apresentada ao usuário. Se a tabela demora para carregar, o usuário poderá perder o interesse em seu aplicativo ou pense que ele está bloqueado para cima.
-- **Informar o usuário de muito conteúdo cargas** - se um tempo de carregamento da tabela longa é inevitável, apresente um [barra de progresso ou indicador de atividade](~/ios/tvos/user-interface/progress-indicators.md) para que eles saibam o aplicativo ainda não bloqueados.
+- **Estar ciente de largura** -tentar obter o equilíbrio correto em suas larguras da tabela. Se a tabela for muito grande, ele pode ser difícil de varredura de uma distância e pode levar para fora da área de conteúdo disponível. Se a tabela for muito estreita, pode fazer com que as informações sejam truncados ou wrap, novamente isso pode ser difícil para o usuário ler de dentro de uma sala.
+- **Mostrar tabela conteúdo rapidamente** - para listas grandes de dados, lento e carregar o conteúdo e começar a mostrar informações assim que a tabela é apresentada ao usuário. Se a tabela para a demora de carga, o usuário poderá perder o interesse em seu aplicativo ou achar que ele está bloqueado para cima.
+- **Informar de muito conteúdo cargas de usuário** - se um tempo de carregamento da tabela longa é inevitável, apresente uma [barra de progresso ou indicador de atividade](~/ios/tvos/user-interface/progress-indicators.md) para que eles saibam que o aplicativo ainda não travou.
 
 <a name="Table-Cell-Types" />
 
 ## <a name="table-view-cell-types"></a>Tipos de célula de exibição de tabela
 
-A `UITableViewCell` é usada para representar as linhas individuais de dados no modo de exibição de tabela. Apple definiu vários tipos de célula de tabela padrão:
+Um `UITableViewCell` é usado para representar as linhas individuais de dados na exibição de tabela. Apple definiu vários tipos de célula de tabela padrão:
 
-- **Padrão** - isso apresenta tipo imagem de uma opção no lado esquerdo da célula e título alinhado à esquerda, à direita. 
-- **Subtítulo** - isso apresenta tipo um título alinhado à esquerda na primeira linha e um menor alinhado à esquerda subtítulo na próxima linha.
-- **O valor 1** -este tipo apresenta um título alinhado à esquerda com um subtítulo colorido mais claras, alinhado à direita na mesma linha.
-- **O valor 2** -este tipo apresenta um título alinhado à direita com um subtítulo colorido mais claras, alinhado à esquerda na mesma linha.
+- **Padrão** – isso apresenta de tipo de imagem uma opção no lado esquerdo da célula e título alinhada à esquerda, à direita. 
+- **Subtítulo** – isso apresenta digite um título alinhada à esquerda na primeira linha e um menor alinhada à esquerda subtítulo na próxima linha.
+- **O valor 1** -esse tipo apresenta um título alinhada à esquerda com um subtítulo colorido mais leves, alinhado à direita na mesma linha.
+- **O valor 2** -esse tipo apresenta um título alinhada à direita com um subtítulo colorido mais leves, alinhado à esquerda na mesma linha.
 
-Todos os tipos de célula de exibição de tabela padrão também oferecem suporte a elementos gráficos, como indicadores de divulgação de informações ou marcas de seleção. 
+Todos os tipos de célula de exibição de tabela padrão também dão suporte a elementos gráficos, como indicadores de divulgação ou marcas de seleção. 
 
-Além disso, você pode definir um **personalizado** tipo de célula de exibição de tabela e apresentar um _protótipo célula_, que você crie no Designer de Interface ou por meio de código.
+Além disso, você pode definir um **personalizado** tipo de célula de exibição de tabela e apresentar uma _protótipo célula_, que você criar no Designer de Interface ou por meio de código.
 
-Apple tem as seguintes sugestões para trabalhar com células do modo de exibição de tabela:
+Apple tem as sugestões a seguir para trabalhar com células de exibição de tabela:
 
-- **Evite texto recorte** -manter as linhas individuais de texto curto para que eles não fim truncado. Truncado palavras ou frases serão difícil para o usuário analisar de dentro de uma sala.
-- **Considere o estado de linha focalizada** – porque uma linha se torna maior, com mais arredondado cantos em foco, você precisa testar a aparência da célula em todos os estados. Texto ou imagens podem se tornar cortados ou examinar o estado de focalizada incorreto.
-- **Usar tabelas editável moderadamente** -mover ou excluir linhas da tabela é mais demorado em tvOS de iOS. Você precisa decidir cuidadosamente se esse recurso adicionará ou distrair de seu aplicativo tvOS.
-- **Criar personalizado célula tipos onde apropriado** - enquanto os tipos internos de célula de exibição de tabela são ótimos para muitas situações, considere a criação de tipos de célula personalizados para obter informações não padrão para fornecer maior controle e melhor apresentar as informações para o usuário.
+- **Evitar recorte texto** -manter as linhas individuais de texto curto para que eles não acabem truncados. Truncado palavras ou frases são difíceis para o usuário analisar de dentro de uma sala.
+- **Considere o estado da linha focalizado** – porque uma linha se torna maior, com mais arredondado cantos quando em foco, você precisa testar a aparência da sua célula em todos os estados. Imagens ou texto podem se tornar cortados ou procurar incorreto no estado focalizado.
+- **Use tabelas editável moderadamente** -mover ou excluir linhas da tabela é mais demorado tvos ao iOS. Você precisa decidir com cuidado se esse recurso adicionará ou for distraí-lo do seu aplicativo tvOS.
+- **Criar personalizado célula tipos onde apropriado** : Embora os tipos internos de célula de exibição de tabela são ótimos para muitas situações, considere a criação de tipos de célula personalizados para obter informações não padrão para fornecer maior controle e apresentar melhor as informações para o usuário.
 
 <a name="Working-With-Table-Views" />
 
-## <a name="working-with-table-views"></a>Trabalhando com modos de exibição de tabela
+## <a name="working-with-table-views"></a>Trabalhando com exibições de tabela
 
-É a maneira mais fácil trabalhar com exibições de tabela em um aplicativo de Xamarin.tvOS criar e modificar sua aparência no Designer de Interface.
+É a maneira mais fácil trabalhar com modos de exibição de tabela em um aplicativo xamarin. tvos criar e modificar sua aparência no Designer de Interface.
 
 Para começar, faça o seguinte:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
     
-1. No Visual Studio para Mac, inicie um novo projeto de aplicativo tvOS e selecione **tvOS** > **aplicativo** > **único aplicativo de exibição** e clique no  **Próxima** botão: 
+1. No Visual Studio para Mac, inicie um novo projeto de aplicativo tvOS e selecione **tvOS** > **App** > **aplicativo de exibição única** e clique no  **Próxima** botão: 
 
-    [![](table-views-images/table02.png "Selecione o aplicativo de modo único")](table-views-images/table02.png#lightbox)
-1. Insira um **nome** para o aplicativo e clique **próximo**: 
+    [![](table-views-images/table02.png "Selecione o aplicativo de exibição única")](table-views-images/table02.png#lightbox)
+1. Insira um **nome** para o aplicativo e clique **próxima**: 
 
     [![](table-views-images/table03.png "Insira um nome para o aplicativo")](table-views-images/table03.png#lightbox)
-1. O ajuste de **nome do projeto** e **nome da solução** ou aceite os padrões e clique no **criar** botão para criar a nova solução: 
+1. O ajuste a **nome do projeto** e **nome da solução** ou aceite os padrões e clique no **criar** botão para criar a nova solução: 
 
-    [![](table-views-images/table04.png "O nome do projeto e solução")](table-views-images/table04.png#lightbox)
-1. No **solução preenchimento**, clique duas vezes o `Main.storyboard` arquivo para abri-lo no Designer de iOS: 
+    [![](table-views-images/table04.png "O nome do projeto e o nome da solução")](table-views-images/table04.png#lightbox)
+1. No **painel de soluções**, clique duas vezes o `Main.storyboard` arquivo para abri-lo no Designer do iOS: 
 
-    [![](table-views-images/table05.png "O arquivo Main.storyboard")](table-views-images/table05.png#lightbox)
-1. Selecione e exclua o **padrão View-Controller**: 
+    [![](table-views-images/table05.png "O arquivo main.")](table-views-images/table05.png#lightbox)
+1. Selecione e exclua as **controlador de exibição padrão**: 
 
     [![](table-views-images/table06.png "Selecione e exclua o controlador de exibição padrão")](table-views-images/table06.png#lightbox)
-1. Selecione um **divisão View Controller** do **caixa de ferramentas** e arraste-o para a superfície de Design.
-1. Por padrão, você obterá um [modo divisão](~/ios/tvos/user-interface/split-views.md) com um **controlador de exibição de navegação** e um **tabela View Controller** no lado esquerdo e um **View Controller** no lado direito. Este é o uso sugerido da Apple de uma exibição de tabela em tvOS: 
+1. Selecione uma **controlador de exibição dividida** da **caixa de ferramentas** e arraste-o para a superfície de Design.
+1. Por padrão, você obterá um [exibição dividida](~/ios/tvos/user-interface/split-views.md) com um **controlador de exibição de navegação** e um **controlador de exibição de tabela** no lado esquerdo e um **docontroladordeexibição** no lado direito. Este é o uso de sugerido da Apple de uma exibição de tabela em tvOS: 
 
-    [![](table-views-images/table08.png "Adicionar um modo de exibição de divisão")](table-views-images/table08.png#lightbox)
-1. Você precisará selecionar todas as partes da exibição de tabela e atribuir a ele um personalizado **nome da classe** no **Widget** guia do **propriedades Explorer** para que você pode acessá-lo mais tarde em c# código. Por exemplo, o **tabela View Controller**: 
+    [![](table-views-images/table08.png "Adicionar uma exibição de divisão")](table-views-images/table08.png#lightbox)
+1. Você precisará selecionar todas as partes da exibição de tabela e atribuir a ele um personalizado **nome da classe** na **Widget** guia dos **Gerenciador de propriedades** para que você pode acessá-lo mais tarde no C#código. Por exemplo, o **controlador de exibição de tabela**: 
 
-    [![](table-views-images/table09.png "Atribua um nome de classe")](table-views-images/table09.png#lightbox)
-1. Certifique-se de que você crie uma classe personalizada para o **controlador de exibição de tabela**, o **tabela exibição** e qualquer **protótipo células**. O Visual Studio para Mac adicionará as classes personalizadas para a árvore de projeto conforme eles são criados: 
+    [![](table-views-images/table09.png "Atribuir um nome de classe")](table-views-images/table09.png#lightbox)
+1. Certifique-se de que você crie uma classe personalizada para o **controlador de exibição de tabela**, o **exibição de tabela** e qualquer **células de protótipo**. O Visual Studio para Mac adicionará as classes personalizadas para a árvore de projeto conforme eles são criados: 
 
     [![](table-views-images/table10.png "As classes personalizadas na árvore do projeto")](table-views-images/table10.png#lightbox)
-1. Em seguida, selecione o modo de exibição de tabela na superfície de Design e ajuste suas propriedades, conforme necessário. Como o número de **protótipo células** e **estilo** (simples ou agrupado): 
+1. Em seguida, selecione o modo de exibição de tabela na superfície de Design e ajuste suas propriedades, conforme necessário. Como o número de **células de protótipo** e o **estilo** (sem formatação ou agrupado): 
 
-    [![](table-views-images/table11.png "A guia de widget")](table-views-images/table11.png#lightbox)
-1. Para cada **protótipo célula**, selecione-o e atribuir uma única **identificador** no **Widget** guia do **propriedades Explorer**. Esta etapa é _muito importante_ como esse identificador será necessário mais tarde ao popular a tabela. Por exemplo `AttrCell`: 
+    [![](table-views-images/table11.png "Na guia de widget")](table-views-images/table11.png#lightbox)
+1. Para cada **célula protótipo**, selecione-o e atribua um único **identificador** no **Widget** guia do **Gerenciador de propriedades**. Esta etapa é _muito importante_ pois você precisará mais tarde esse identificador ao popular a tabela. Por exemplo `AttrCell`: 
 
-    [![](table-views-images/table12.png "A guia de Widget")](table-views-images/table12.png#lightbox)
-1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#Table-View-Cell-Types) via o **estilo** suspensa ou defina-a como **personalizado** e use a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário do **caixa de ferramentas**: 
+    [![](table-views-images/table12.png "Na guia de Widget")](table-views-images/table12.png#lightbox)
+1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#Table-View-Cell-Types) por meio do **estilo** lista suspensa ou defina-o como **personalizado** e usar a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário da **caixa de ferramentas**: 
 
     [![](table-views-images/table13.png "O layout da célula")](table-views-images/table13.png#lightbox)
-1. Atribuir uma única **nome** para cada elemento de interface do usuário no design da célula de protótipo no **Widget** guia do **propriedades Explorer** para que você pode acessá-los mais tarde no código do c#: 
+1. Atribuir um único **nome** a cada elemento de interface do usuário no design de protótipo de célula na **Widget** guia dos **Gerenciador de propriedades** para que você pode acessá-los posteriormente em C# código: 
 
     [![](table-views-images/table14.png "Atribua um nome")](table-views-images/table14.png#lightbox)
 1. Repita a etapa acima para todas as células de protótipo na exibição de tabela.
-1. Em seguida, atribuir classes personalizadas para o restante do seu design de interface do usuário, a exibição de detalhes de layout e atribuir exclusivo **nomes** para cada elemento de interface do usuário nos detalhes da exibição para que você possa acessá-los em c#, bem. Por exemplo: 
+1. Em seguida, atribua as classes personalizadas para o restante do seu design de interface do usuário, a exibição de detalhes do layout e atribuir exclusivo **nomes** a cada elemento de interface do usuário nos detalhes do exibir de forma que você pode acessá-los no C# também. Por exemplo: 
 
     [![](table-views-images/table15.png "O layout da interface do usuário")](table-views-images/table15.png#lightbox)
 1. Salve suas alterações para o Storyboard.
     
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. No Visual Studio, iniciar um novo projeto de aplicativo tvOS e selecione **tvOS** > **único aplicativo de exibição** e digite um nome para seu aplicativo. Clique o **Okey** botão para criar uma nova solução: 
+1. No Visual Studio, inicie um novo projeto de aplicativo tvOS e selecione **tvOS** > **aplicativo de exibição única** e insira um nome para seu aplicativo. Clique o **Okey** botão para criar uma nova solução: 
 
-    [![](table-views-images/table02-vs.png "Selecione o aplicativo de modo único")](table-views-images/table02-vs.png#lightbox)
-1. No **Solution Explorer**, clique duas vezes o `Main.storyboard` arquivo para abri-lo no Designer do iOS: 
+    [![](table-views-images/table02-vs.png "Selecione o aplicativo de exibição única")](table-views-images/table02-vs.png#lightbox)
+1. No **Gerenciador de soluções**, clique duas vezes o `Main.storyboard` arquivo para abri-lo no Designer do iOS: 
 
-    [![](table-views-images/table05-vs.png "O arquivo Main.storyboard")](table-views-images/table05-vs.png#lightbox)
-1. Selecione e exclua o **padrão View-Controller**: 
+    [![](table-views-images/table05-vs.png "O arquivo main.")](table-views-images/table05-vs.png#lightbox)
+1. Selecione e exclua as **controlador de exibição padrão**: 
 
     [![](table-views-images/table06-vs.png "Selecione e exclua o controlador de exibição padrão")](table-views-images/table06-vs.png#lightbox)
-1. Selecione um **divisão View Controller** do **caixa de ferramentas** e arraste-o para a superfície de Design: 
+1. Selecione uma **controlador de exibição dividida** da **caixa de ferramentas** e arraste-o para a superfície de Design: 
 
     [![](table-views-images/table07-vs.png "Um controlador de exibição de divisão")](table-views-images/table07-vs.png#lightbox)
-1. Por padrão, você obterá um [modo divisão](~/ios/tvos/user-interface/split-views.md) com um **controlador de exibição de navegação** e um **tabela View Controller** no lado esquerdo e um **View Controller** no lado direito. Este é o uso sugerido da Apple de uma exibição de tabela em tvOS: 
+1. Por padrão, você obterá um [exibição dividida](~/ios/tvos/user-interface/split-views.md) com um **controlador de exibição de navegação** e um **controlador de exibição de tabela** no lado esquerdo e um **docontroladordeexibição** no lado direito. Este é o uso de sugerido da Apple de uma exibição de tabela em tvOS: 
 
     [![](table-views-images/table08-vs.png "Layout da interface do usuário")](table-views-images/table08-vs.png#lightbox)
-1. Você precisará selecionar todas as partes da exibição de tabela e atribuir a ele um personalizado **nome da classe** no **Widget** guia do **propriedades Explorer** para que você pode acessá-lo mais tarde em c# código. Por exemplo, o **tabela View Controller**: 
+1. Você precisará selecionar todas as partes da exibição de tabela e atribuir a ele um personalizado **nome da classe** na **Widget** guia dos **Gerenciador de propriedades** para que você pode acessá-lo mais tarde no C#código. Por exemplo, o **controlador de exibição de tabela**: 
 
-    [![](table-views-images/table09-vs.png "A guia de Widget")](table-views-images/table09-vs.png#lightbox)
-1. Certifique-se de que você crie uma classe personalizada para o **controlador de exibição de tabela**, o **tabela exibição** e qualquer **protótipo células**. O Visual Studio para Mac adicionará as classes personalizadas para a árvore de projeto conforme eles são criados: 
+    [![](table-views-images/table09-vs.png "Na guia de Widget")](table-views-images/table09-vs.png#lightbox)
+1. Certifique-se de que você crie uma classe personalizada para o **controlador de exibição de tabela**, o **exibição de tabela** e qualquer **células de protótipo**. O Visual Studio para Mac adicionará as classes personalizadas para a árvore de projeto conforme eles são criados: 
 
     [![](table-views-images/table10-vs.png "As classes personalizadas na árvore do projeto")](table-views-images/table10-vs.png#lightbox)
-1. Em seguida, selecione o modo de exibição de tabela na superfície de Design e ajuste suas propriedades, conforme necessário. Como o número de **protótipo células** e **estilo** (simples ou agrupado): 
+1. Em seguida, selecione o modo de exibição de tabela na superfície de Design e ajuste suas propriedades, conforme necessário. Como o número de **células de protótipo** e o **estilo** (sem formatação ou agrupado): 
 
-    [![](table-views-images/table11-vs.png "A guia de Widget")](table-views-images/table11-vs.png#lightbox)
-1. Para cada **protótipo célula**, selecione-o e atribuir uma única **identificador** no **Widget** guia do **propriedades Explorer**. Esta etapa é _muito importante_ como esse identificador será necessário mais tarde ao popular a tabela. Por exemplo `AttrCell`: 
+    [![](table-views-images/table11-vs.png "Na guia de Widget")](table-views-images/table11-vs.png#lightbox)
+1. Para cada **célula protótipo**, selecione-o e atribua um único **identificador** no **Widget** guia do **Gerenciador de propriedades**. Esta etapa é _muito importante_ pois você precisará mais tarde esse identificador ao popular a tabela. Por exemplo `AttrCell`: 
 
-    [![](table-views-images/table12-vs.png "Atribua um identificador")](table-views-images/table12-vs.png#lightbox)
-1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#Table-View-Cell-Types) via o **estilo** suspensa ou defina-a como **personalizado** e use a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário do **caixa de ferramentas**: 
+    [![](table-views-images/table12-vs.png "Atribuir um identificador")](table-views-images/table12-vs.png#lightbox)
+1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#Table-View-Cell-Types) por meio do **estilo** lista suspensa ou defina-o como **personalizado** e usar a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário da **caixa de ferramentas**: 
 
-    [![](table-views-images/table13-vs.png "Menu suspenso de estilo")](table-views-images/table13-vs.png#lightbox)
-1. Atribuir uma única **nome** para cada elemento de interface do usuário no design da célula de protótipo no **Widget** guia do **propriedades Explorer** para que você pode acessá-los mais tarde no código do c#: 
+    [![](table-views-images/table13-vs.png "A lista suspensa de estilo")](table-views-images/table13-vs.png#lightbox)
+1. Atribuir um único **nome** a cada elemento de interface do usuário no design de protótipo de célula na **Widget** guia dos **Gerenciador de propriedades** para que você pode acessá-los posteriormente em C# código: 
 
-    [![](table-views-images/table14-vs.png "A guia de Widget")](table-views-images/table14-vs.png#lightbox)
+    [![](table-views-images/table14-vs.png "Na guia de Widget")](table-views-images/table14-vs.png#lightbox)
 1. Repita a etapa acima para todas as células de protótipo na exibição de tabela.
-1. Em seguida, atribuir classes personalizadas para o restante do seu design de interface do usuário, a exibição de detalhes de layout e atribuir exclusivo **nomes** para cada elemento de interface do usuário nos detalhes da exibição para que você possa acessá-los em c#, bem. Por exemplo: 
+1. Em seguida, atribua as classes personalizadas para o restante do seu design de interface do usuário, a exibição de detalhes do layout e atribuir exclusivo **nomes** a cada elemento de interface do usuário nos detalhes do exibir de forma que você pode acessá-los no C# também. Por exemplo: 
 
     [![](table-views-images/table15.png "O Layout da interface do usuário")](table-views-images/table15.png#lightbox)
 1. Salve suas alterações para o Storyboard.
@@ -160,25 +160,25 @@ Para começar, faça o seguinte:
 
 ## <a name="designing-a-data-model"></a>Criando um modelo de dados
 
-Para tornar o trabalho com as informações que o modo de exibição de tabela exibirá mais fácil e facilitar a apresentação de informações (como o usuário seleciona ou realça as linhas no modo de exibição de tabela), crie uma classe personalizada ou classes para atuar como o modelo de dados para obter as informações apresentadas .
+Para tornar o trabalho com as informações que o modo de exibição de tabela exibirá mais fácil e facilitar a apresentação de informações detalhadas (como o usuário seleciona ou realça as linhas na exibição de tabela), crie uma classe personalizada ou classes para atuar como o modelo de dados para obter as informações apresentadas .
 
-Veja o exemplo de um aplicativo de reservas de viagem que contém uma lista de **cidades**, cada um que contém uma lista exclusiva de **atrações** que o usuário pode selecionar. O usuário poderá marcar um aumento de como um *Favoritos*, selecione obter *direções* para um aumento e *programar um voo* para uma determinada cidade.
+Veja o exemplo de um aplicativo de reservas de viagens que contém uma lista dos **cidades**, cada um que contém uma lista exclusiva de **atrações** que o usuário pode selecionar. O usuário será capaz de marcar uma atração como uma *favorito*, selecione obter *direções* para um aumento e *programar um voo* para uma determinada cidade.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Para criar o modelo de dados para um **atração**, com o botão direito no nome do projeto no **solução preenchimento** e selecione **adicionar** > **novo arquivo...** . Digite `AttractionInformation` para o **nome** e clique no **novo** botão: 
+Para criar o modelo de dados para um **atração**, clique com botão direito no nome do projeto na **painel de soluções** e selecione **Add** > **novo arquivo...** . Insira `AttractionInformation` para o **nome** e clique no **New** botão: 
 
 [![](table-views-images/data01.png "Digite AttractionInformation para o nome")](table-views-images/data01.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Para criar o modelo de dados para um **atração**, com o botão direito no nome do projeto no **Solution Explorer** e selecione **adicionar** > **Novo Item ...** . Selecione **classe** e digite `AttractionInformation` para o **nome** e clique no **adicionar** botão: 
+Para criar o modelo de dados para um **atração**, clique com botão direito no nome do projeto na **Gerenciador de soluções** e selecione **Add** > **Novo Item ...** . Selecione **classe** e insira `AttractionInformation` para o **nome** e clique no **Add** botão: 
 
-[![](table-views-images/data01-vs.png "Selecione a classe e digite AttractionInformation para o nome")](table-views-images/data01-vs.png#lightbox)
+[![](table-views-images/data01-vs.png "Selecione a classe e insira AttractionInformation para o nome")](table-views-images/data01-vs.png#lightbox)
 
 -----
 
-Editar o `AttractionInformation.cs` de arquivo e torná-lo a aparência a seguir:
+Editar o `AttractionInformation.cs` de arquivo e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -212,21 +212,21 @@ namespace tvTable
 
 Essa classe fornece as propriedades para armazenar as informações sobre um determinado **atração**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Em seguida, clique no nome do projeto no **solução preenchimento** novamente e selecione **adicionar** > **novo arquivo...** . Digite `CityInformation` para o **nome** e clique no **novo** botão: 
+Em seguida, clique duas vezes no nome do projeto na **painel de soluções** novamente e selecione **Add** > **novo arquivo...** . Insira `CityInformation` para o **nome** e clique no **New** botão: 
 
 [![](table-views-images/data02.png "Digite CityInformation para o nome")](table-views-images/data02.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Em seguida, clique no nome do projeto no **Solution Explorer** novamente e selecione **adicionar** > **Novo Item...** . Digite `CityInformation` para o **nome** e clique no **adicionar** botão: 
+Em seguida, clique duas vezes no nome do projeto na **Gerenciador de soluções** novamente e selecione **Add** > **Novo Item...** . Insira `CityInformation` para o **nome** e clique no **Add** botão: 
 
 [![](table-views-images/data02-vs.png "Digite CityInformation para o nome")](table-views-images/data02-vs.png#lightbox)
 
 -----
 
-Editar o `CityInformation.cs` de arquivo e torná-lo a aparência a seguir:
+Editar o `CityInformation.cs` de arquivo e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -278,7 +278,7 @@ namespace tvTable
 }
 ```
 
-Essa classe contém todas as informações sobre um destino **City**, uma coleção de **atrações** da cidade e fornece dois métodos auxiliares (`AddAttraction`) para tornar mais fácil adicionar atrações para o Cidade.
+Essa classe contém todas as informações sobre um destino **Cidade**, uma coleção de **atrações** da cidade e fornece dois métodos auxiliares (`AddAttraction`) para torná-lo mais fácil adicionar atrações para o Cidade.
 
 <a name="The-Table-Data-Source" />
 
@@ -286,7 +286,7 @@ Essa classe contém todas as informações sobre um destino **City**, uma coleç
 
 Cada modo de exibição de tabela exige uma fonte de dados (`UITableViewDataSource`) fornecer os dados para a tabela e gerar as linhas necessárias como exigido pela exibição de tabela.
 
-No exemplo acima, clique no nome do projeto no **Solution Explorer**, selecione **adicionar** > **novo arquivo...**  e chamá-lo `AttractionTableDatasource` e clique no **novo** botão a ser criado. Em seguida, edite o `AttractionTableDatasource.cs` de arquivo e torná-lo a aparência a seguir:
+No exemplo acima, clique com botão direito no nome do projeto na **Gerenciador de soluções**, selecione **Add** > **novo arquivo...**  e chamá-lo `AttractionTableDatasource` e clique no **New** botão Criar. Em seguida, edite o `AttractionTableDatasource.cs` de arquivo e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -383,7 +383,7 @@ namespace tvTable
 
 Vamos dar uma olhada em algumas seções da classe em detalhes.
 
-Primeiro, adicionamos uma constante para manter o identificador exclusivo da célula protótipo (esse é o mesmo identificador atribuído no Designer de Interface acima), um atalho para o controlador de exibição de tabela e armazenamento criado para nossos dados:
+Primeiro, adicionamos ter definido uma constante para armazenar o identificador exclusivo da célula protótipo (esse é o mesmo identificador atribuído no Designer de Interface acima), um atalho de volta para o controlador de exibição de tabela e criamos armazenamento para nossos dados:
 
 ```csharp
 const string CellID = "AttrCell";
@@ -391,7 +391,7 @@ public AttractionTableViewController Controller { get; set;}
 public List<CityInformation> Cities { get; set;}
 ```
 
-Em seguida, é salvar o controlador de exibição de tabela, e em seguida, criar e popular nossa fonte de dados (usando os modelos de dados definida acima) quando a classe é criada:
+Em seguida, salvamos o controlador de exibição de tabela, em seguida, criar e preencher nossa fonte de dados (usando os modelos de dados definido acima) quando a classe é criada:
 
 ```csharp
 public AttractionTableDatasource (AttractionTableViewController controller)
@@ -403,7 +403,7 @@ public AttractionTableDatasource (AttractionTableViewController controller)
 }
 ```
 
-Por exemplo, o `PopulateCities` método simplesmente cria objetos de modelo de dados na memória, mas eles podem ser lido facilmente de um serviço web ou de banco de dados em um aplicativo real:
+Por exemplo, o `PopulateCities` método simplesmente cria objetos de modelo de dados na memória, no entanto, eles poderiam facilmente ser lidos de um serviço web ou banco de dados em um aplicativo real:
 
 ```csharp
 public void PopulateCities ()
@@ -428,7 +428,7 @@ public override nint NumberOfSections (UITableView tableView)
 }
 ```
 
-Para **simples** com o estilo de modos de exibição de tabela, sempre retornará 1.
+Para **simples** estilizada modos de exibição de tabela, sempre retornará 1.
 
 O `RowsInSection` método retorna o número de linhas na seção atual:
 
@@ -440,7 +440,7 @@ public override nint RowsInSection (UITableView tableView, nint section)
 }
 ```
 
-Novamente, para **simples** modos de exibição de tabela, retorna o número total de itens na fonte de dados.
+Novamente, para **simples** modos de exibição de tabela, retornar o número total de itens na fonte de dados.
 
 O `TitleForHeader` método retorna o título para uma determinada seção:
 
@@ -452,9 +452,9 @@ public override string TitleForHeader (UITableView tableView, nint section)
 }
 ```
 
-Para uma **simples** exibição da tabela de tipo, deixe o título em branco (`""`).
+Para um **Plain** exibição de tabela de tipo, deixe o título em branco (`""`).
 
-Finalmente, quando solicitado pelo modo de exibição de tabela, criar e preencher uma célula de protótipo usando o `GetCell` método: 
+Por fim, quando solicitado pelo modo de exibição de tabela, criar e preencher uma célula de protótipo usando a `GetCell` método: 
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -476,9 +476,9 @@ Para obter mais informações sobre como trabalhar com um `UITableViewDatasource
 
 ## <a name="the-table-view-delegate"></a>O delegado de modo de exibição de tabela
 
-Cada modo de exibição de tabela requer um delegado (`UITableViewDelegate`) para responder à interação do usuário ou outros eventos do sistema na tabela.
+Cada modo de exibição de tabela exige um delegado (`UITableViewDelegate`) para responder à interação do usuário ou outros eventos do sistema na tabela.
 
-No exemplo acima, clique no nome do projeto no **Solution Explorer**, selecione **adicionar** > **novo arquivo...**  e chamá-lo `AttractionTableDelegate` e clique no **novo** botão a ser criado. Em seguida, edite o `AttractionTableDelegate.cs` de arquivo e torná-lo a aparência a seguir:
+No exemplo acima, clique com botão direito no nome do projeto na **Gerenciador de soluções**, selecione **Add** > **novo arquivo...**  e chamá-lo `AttractionTableDelegate` e clique no **New** botão Criar. Em seguida, edite o `AttractionTableDelegate.cs` de arquivo e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -533,9 +533,9 @@ namespace tvTable
 }
 ```
 
-Vamos dar uma olhada em várias seções dessa classe em detalhes.
+Vamos dar uma olhada em várias seções desta classe em detalhes.
 
-Primeiro, vamos criar um atalho para o controlador de exibição de tabela quando a classe é criada:
+Primeiro, criamos um atalho para o controlador de exibição de tabela quando a classe é criada:
 
 ```csharp
 public AttractionTableViewController Controller { get; set;}
@@ -548,7 +548,7 @@ public AttractionTableDelegate (AttractionTableViewController controller)
 }
 ```
 
-Em seguida, quando uma linha é selecionada (o usuário clica na superfície de toque de remoto a Apple) deseja marcar o **atração** representado pela linha selecionada como um favorito:
+Em seguida, quando uma linha é selecionada (o usuário clica na superfície de toque do remoto a Apple) queremos marcar a **atração** representado pela linha selecionada como um favorito:
 
 ```csharp
 public override void RowSelected (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -561,7 +561,7 @@ public override void RowSelected (UITableView tableView, Foundation.NSIndexPath 
 }
 ```
 
-Em seguida, quando o usuário realça uma linha (, dando a ele foco usando a superfície de toque remoto Apple) que desejamos apresentar os detalhes do **atração** representados por aquela linha na seção detalhes do nosso controlador de exibição de divisão:
+Em seguida, quando o usuário realça uma linha (ao dar a ele foco usando a superfície de toque remoto da Apple) queremos apresentar os detalhes do **atração** representada por essa linha na seção de detalhes do nosso controlador de exibição de divisão:
 
 ```csharp
 public override bool CanFocusRow (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -582,7 +582,7 @@ internal void RaiseAttractionHighlighted (AttractionInformation attraction)
 }
 ```
 
-O `CanFocusRow` método é chamado para cada linha que está prestes a receber o foco no modo de exibição de tabela. Retornar `true` se a linha pode receber foco, ou retornar `false`. No caso do exemplo, criamos um personalizado `AttractionHighlighted` evento será gerado em cada linha, ele recebe o foco.
+O `CanFocusRow` método é chamado para cada linha que está prestes a receber o foco na exibição de tabela. Retornar `true` se a linha pode receber o foco, caso contrário retorne `false`. No caso deste exemplo, criamos um personalizado `AttractionHighlighted` evento será gerado em cada linha conforme ela recebe o foco.
 
 Para obter mais informações sobre como trabalhar com um `UITableViewDelegate`, consulte da Apple [UITableViewDelegate](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40006942) documentação.
 
@@ -590,9 +590,9 @@ Para obter mais informações sobre como trabalhar com um `UITableViewDelegate`,
 
 ## <a name="the-table-view-cell"></a>A célula de exibição de tabela
 
-Para cada célula de protótipo que você adicionou à exibição de tabela no Designer de Interface, você também criou uma instância personalizada da célula de exibição de tabela (`UITableViewCell`) para permitir que você preencher a nova célula (linha) que ele é criado.
+Para cada célula de protótipo que você adicionou à exibição de tabela no Designer de Interface, você também criou uma instância personalizada da célula de exibição de tabela (`UITableViewCell`) para permitir que você popule a nova célula (linha) como ela é criada.
 
-Para o aplicativo de exemplo, clique duas vezes o `AttractionTableCell.cs` arquivo para abri-lo para edição e torná-lo a aparência a seguir:
+Para o aplicativo de exemplo, clique duas vezes o `AttractionTableCell.cs` arquivo para abri-lo para edição e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -677,9 +677,9 @@ Para obter mais informações sobre como trabalhar com um `UITableViewCell`, con
 
 ## <a name="the-table-view-controller"></a>O controlador de exibição de tabela
 
-Um controlador de exibição de tabela (`UITableViewController`) gerencia um modo de exibição de tabela que tenha sido adicionado a um Storyboard via a Interface de Designer.
+Um controlador de exibição de tabela (`UITableViewController`) gerencia uma exibição de tabela que foi adicionado a um Storyboard via a Interface de Designer.
 
-Para o aplicativo de exemplo, clique duas vezes o `AttractionTableViewController.cs` arquivo para abri-lo para edição e torná-lo a aparência a seguir:
+Para o aplicativo de exemplo, clique duas vezes o `AttractionTableViewController.cs` arquivo para abri-lo para edição e torná-lo semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -721,27 +721,27 @@ namespace tvTable
 }
 ```
 
-Vamos examinar mais detalhadamente essa classe. Primeiro, criar atalhos para tornar mais fácil acessar o modo de exibição de tabela `DataSource` e `TableDelegate`. Usaremos as mais tarde para comunicação entre o modo de exibição de tabela no lado esquerdo do modo divisão e a exibição de detalhes no canto direito.
+Vamos examinar mais detalhadamente essa classe. Primeiro, criamos atalhos para torná-lo mais fácil de acessar o modo de exibição de tabela `DataSource` e `TableDelegate`. Vamos usar aqueles mais tarde para comunicação entre o modo de exibição de tabela no lado esquerdo da exibição de divisão e a exibição de detalhes no canto direito.
 
-Finalmente, quando o modo de exibição de tabela é carregado na memória, podemos criar instâncias da `AttractionTableDatasource` e `AttractionTableDelegate` (ambos criado acima) e anexá-los para o modo de exibição de tabela.
+Por fim, quando o modo de exibição de tabela é carregado na memória, podemos criar instâncias do `AttractionTableDatasource` e `AttractionTableDelegate` (ambos criado acima) e anexá-los para o modo de exibição de tabela.
 
 Para obter mais informações sobre como trabalhar com um `UITableViewController`, consulte da Apple [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523) documentação.
 
 <a name="Pulling-it-All-Together" />
 
-## <a name="pulling-it-all-together"></a>Unindo-todos
+## <a name="pulling-it-all-together"></a>Juntando as peças
 
-Conforme mencionado no início deste documento, modos de exibição de tabela geralmente são exibidos em um dos lados de uma [modo divisão](~/ios/tvos/user-interface/split-views.md) como navegação com os detalhes do item selecionado exibido no lado oposto. Por exemplo: 
+Conforme mencionado no início deste documento, exibições de tabela geralmente são exibidas em um dos lados de uma [modo de exibição dividido](~/ios/tvos/user-interface/split-views.md) como navegação, com os detalhes do item selecionado exibido no lado oposto. Por exemplo: 
 
-[![](table-views-images/intro01.png "Aplicativo de exemplo executar")](table-views-images/intro01.png#lightbox)
+[![](table-views-images/intro01.png "Execução do aplicativo de exemplo")](table-views-images/intro01.png#lightbox)
 
-Como esse é um padrão em tvOS, vamos analisar as etapas finais para reunir tudo e ter os lados esquerdos e direito do modo divisão interagem entre si.
+Como esse é um padrão de padrão em tvOS, vejamos as etapas finais para reunir tudo e tem os lados esquerdos e direito da exibição de divisão interagem entre si.
 
 <a name="The-Detail-View" />
 
-### <a name="the-detail-view"></a>O modo de exibição de detalhes
+### <a name="the-detail-view"></a>A exibição de detalhes
 
-No exemplo do aplicativo viagem apresentados a seguir, uma classe personalizada (`AttractionViewController`) é definido para o controlador de exibição padrão apresentado no lado direito da exibição de divisão, como a exibição de detalhes:
+No exemplo de aplicativo de viagem apresentada acima, uma classe personalizada (`AttractionViewController`) está definido para o controlador de exibição padrão exibida no lado direito da exibição de divisão, como a exibição de detalhes:
 
 ```csharp
 using System;
@@ -844,17 +844,17 @@ namespace tvTable
 }
 ```
 
-Aqui, fornecemos o **atração** (`AttractionInformation`) que estão sendo exibidos como uma propriedade e criado um `UpdateUI` método que preenche os Widgets de interface do usuário é adicionado ao modo de exibição no Designer de Interface.
+Aqui, fornecemos a **atração** (`AttractionInformation`) que estão sendo exibidos como uma propriedade e criado um `UpdateUI` método que preenche os Widgets de interface do usuário é adicionado ao modo de exibição no Designer de Interface.
 
 Também definimos um atalho para o controlador de exibição de divisão (`SplitView`) que usaremos para comunicar-se altera de volta para o modo de exibição de tabela (`AcctractionTableView`).
 
-Por fim, ações personalizadas (eventos) foram adicionadas para os três `UIButton` instâncias criadas no Designer de Interface, que permitem que o usuário marcar um aumento de como um _Favoritos_, obter _direções_ para um aumento e _programar um voo_ para uma determinada cidade.
+Por fim, as ações personalizadas (eventos) foram adicionadas para os três `UIButton` instâncias criadas no Designer de Interface, que permitem que o usuário marcar uma atração como uma _favorito_, obter _direções_ para um atração e _programar um voo_ para uma determinada cidade.
 
 <a name="The-Navigation-View-Controller" />
 
 ### <a name="the-navigation-view-controller"></a>O controlador de exibição de navegação
 
-Porque o controlador de exibição de tabela é aninhado em um controlador de exibição de navegação no lado esquerdo do modo divisão, o controlador de exibição de navegação foi atribuído a uma classe personalizada (`MasterNavigationController`) no Designer de Interface e definido da seguinte maneira:
+Porque o controlador de exibição de tabela é aninhado em um controlador de exibição de navegação no lado esquerdo da exibição de divisão, o controlador de exibição de navegação foi atribuído a uma classe personalizada (`MasterNavigationController`) no Designer de Interface e definido da seguinte maneira:
 
 ```csharp
 using System;
@@ -881,7 +881,7 @@ namespace tvTable
 }
 ```
 
-Novamente, esta classe define apenas alguns atalhos para facilitar a comunicação entre os dois lados do controlador de exibição de divisão:
+Novamente, essa classe define apenas alguns atalhos para tornar mais fácil para se comunicar entre os dois lados do controlador de exibição de divisão:
 
 * `SplitView` -É um link para o controlador de exibição de divisão (`MainSpiltViewController`) que o controlador de exibição de navegação pertence.
 * `TableController` -Obtém o controlador de exibição de tabela (`AttractionTableViewController`) que é apresentado como o modo de exibição no controlador de exibição de navegação superior.
@@ -890,7 +890,7 @@ Novamente, esta classe define apenas alguns atalhos para facilitar a comunicaç�
 
 ### <a name="the-split-view-controller"></a>O controlador de exibição de divisão
 
-Como o controlador de exibição de divisão é a base do nosso aplicativo, criamos uma classe personalizada (`MasterSplitViewController`) para ele no Designer de Interface e definiu da seguinte maneira:
+Como o controlador de exibição de divisão é a base do nosso aplicativo, criamos uma classe personalizada (`MasterSplitViewController`) para ele no Designer de Interface e definido-lo da seguinte maneira:
 
 ```csharp
 using System;
@@ -937,21 +937,21 @@ namespace tvTable
 }
 ```
 
-Primeiro, podemos criar atalhos para o **detalhes** lado do modo divisão (`AttractionViewController`) e o **mestre** lado (`MasterNavigationController`). Novamente, isso facilita a comunicação entre os dois lados mais tarde.
+Primeiro, podemos criar atalhos para o **detalhes** lado da exibição de divisão (`AttractionViewController`) e o **mestre** lado (`MasterNavigationController`). Novamente, isso facilita a comunicação entre os dois lados mais tarde.
 
-Em seguida, quando o modo divisão é carregado na memória, podemos anexar o controlador de exibição de divisão para ambos os lados do modo divisão e responder ao usuário realce um aumento na exibição de tabela (`AttractionHighlighted`), exibindo o aumento de novo no **detalhes**  lado do modo divisão.
+Em seguida, quando o modo divisão é carregado na memória, podemos anexar o controlador de exibição de divisão para ambos os lados da exibição de divisão e responder ao usuário realce um aumento na exibição de tabela (`AttractionHighlighted`), exibindo o aumento de novo no **detalhes**  lado do modo divisão.
 
-Consulte o [tvTables](https://developer.xamarin.com/samples/monotouch/tvos/tvTable/) aplicativo de exemplo para uma implantação completa de modos de exibição de tabela dentro de um modo de exibição de divisão.
+Consulte a [tvTables](https://developer.xamarin.com/samples/monotouch/tvos/tvTable/) aplicativo de exemplo para uma implementação completa de exibições de tabela dentro de uma exibição dividida.
 
-## <a name="table-views-in-detail"></a>Modos de exibição de tabela com detalhes
+## <a name="table-views-in-detail"></a>Modos de exibição de tabela em detalhes
 
-Desde tvOS baseia-se do iOS, modos de exibição de tabela e controladores de exibição de tabela são criados e se comportam de maneira semelhante. Para obter mais informações sobre como trabalhar com o modo de exibição de tabela em um aplicativo Xamarin, consulte nosso iOS [trabalhando com tabelas e células](~/ios/user-interface/controls/tables/index.md) documentação.
+Uma vez que tvOS se baseia em iOS, modos de exibição de tabela e controladores de exibição de tabela são projetados e se comportam de maneira semelhante. Para obter mais informações sobre como trabalhar com o modo de exibição de tabela em um aplicativo Xamarin, consulte nosso iOS [trabalhando com tabelas e células](~/ios/user-interface/controls/tables/index.md) documentação.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordou criando e trabalhando com modos de exibição de tabela dentro de um aplicativo Xamarin.tvOS. E tenha apresentado um exemplo de como trabalhar com uma exibição de tabela dentro de uma exibição de divisão, que é o uso típico de uma exibição de tabela em um aplicativo tvOS.
+Este artigo cobriu criando e trabalhando com exibições de tabela dentro de um aplicativo xamarin. tvos. E se apresentou um exemplo de como trabalhar com uma exibição de tabela dentro de uma exibição de divisão, que é o uso típico de uma exibição de tabela em um aplicativo tvOS.
 
 
 
@@ -960,5 +960,5 @@ Este artigo abordou criando e trabalhando com modos de exibição de tabela dent
 - [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -5,22 +5,22 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
-ms.sourcegitcommit: 213b0315f1d6d0791e255794f87512fb253c492f
+ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "34790094"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122667"
 ---
 # <a name="stack-views-in-xamarinios"></a>Modos de exibição de pilha no xamarin. IOS
 
 _Este artigo aborda usando o novo controle UIStackView em um aplicativo xamarin. IOS para gerenciar um conjunto de subexibições em qualquer um uma pilha organizada horizontal ou verticalmente._
 
 > [!IMPORTANT]
-> Observe que embora StackView tenha suporte no iOS Designer, você poderá encontrar bugs de usabilidade ao usar o canal estável. Troca aos canais Beta ou alfa devem aliviar esse problema. Decidimos apresentar neste passo a passo usando o Xcode até que as correções necessárias são implementadas no canal estável.
+> Observe que embora StackView tenha suporte no iOS Designer, você poderá encontrar bugs de usabilidade ao usar o canal estável. Trocar os canais Beta ou alfa deve aliviar esse problema. Decidimos apresentar neste passo a passo usando o Xcode até que as correções necessárias são implementadas no canal estável.
 
 O controle de exibição de pilha (`UIStackView`) aproveita o poder do Layout automático e Classes de tamanho para gerenciar uma pilha de subexibições, horizontal ou verticalmente, que responde dinamicamente para o tamanho de tela e a orientação do dispositivo iOS.
 

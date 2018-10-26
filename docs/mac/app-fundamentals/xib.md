@@ -1,77 +1,77 @@
 ---
-title: arquivos .xib Xamarin.Mac
-description: Este artigo aborda o trabalho com arquivos .xib criados no construtor de Interface do Xcode para criar e manter as interfaces de usuário para um aplicativo Xamarin.Mac.
+title: arquivos. XIB no xamarin. Mac
+description: Este artigo aborda o trabalho com arquivos. XIB criados no construtor de Interface do Xcode para criar e manter interfaces de usuário para um aplicativo xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 3ef536ddb19ed60975368bd022e57c34c6f473dc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 45eeee745b133646aef0f775bc879fa6a5d867c7
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792268"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109426"
 ---
-# <a name="xib-files-in-xamarinmac"></a>arquivos .xib Xamarin.Mac
+# <a name="xib-files-in-xamarinmac"></a>arquivos. XIB no xamarin. Mac
 
-_Este artigo aborda o trabalho com arquivos .xib criados no construtor de Interface do Xcode para criar e manter as interfaces de usuário para um aplicativo Xamarin.Mac._
+_Este artigo aborda o trabalho com arquivos. XIB criados no construtor de Interface do Xcode para criar e manter interfaces de usuário para um aplicativo xamarin. Mac._
 
 > [!NOTE]
-> É a melhor maneira de criar uma interface de usuário para um aplicativo Xamarin.Mac com storyboards. Esta documentação foi deixada no local por razões históricas e para trabalhar com projetos de Xamarin.Mac mais antigos. Para obter mais informações, consulte nosso [Introdução a Storyboards](~/mac/platform/storyboards/index.md) documentação.
+> É a maneira preferencial para criar uma interface do usuário para um aplicativo xamarin. Mac com storyboards. Esta documentação foi deixada em vigor por razões históricas e para trabalhar com projetos mais antigos do xamarin. Mac. Para obter mais informações, consulte nosso [Introdução ao Storyboards](~/mac/platform/storyboards/index.md) documentação.
 
 ## <a name="overview"></a>Visão geral
 
-Ao trabalhar com c# e .NET em um aplicativo de Xamarin.Mac, você tem acesso para os mesmos elementos de interface de usuário e as ferramentas que um desenvolvedor trabalhando em *Objective-C* e *Xcode* does. Como Xamarin.Mac se integra diretamente com o Xcode, você pode usar do Xcode _Interface construtor_ para criar e manter suas interfaces de usuário (ou, opcionalmente, criá-los diretamente no código do c#).
+Ao trabalhar com C# e do .NET em um aplicativo xamarin. Mac, você tem acesso para os mesmos elementos de interface do usuário e as ferramentas de que um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter suas interfaces de usuário (ou, opcionalmente, criá-los diretamente em código c#).
 
-Um arquivo .xib é usado pelo macOS para definir os elementos de interface do usuário do seu aplicativo (como Menus, Windows, exibições, rótulos, campos de texto) que são criadas e mantidas graficamente no construtor de Interface do Xcode.
+Um arquivo. XIB é usado pelo macOS para definir os elementos da interface do usuário do seu aplicativo (por exemplo, Menus, Windows, exibições, rótulos, campos de texto) que são criadas e mantidas graficamente no Interface Builder do Xcode.
 
 [![Um exemplo de aplicativo em execução](xib-images/intro01.png "um exemplo de aplicativo em execução")](xib-images/intro01-large.png#lightbox)
 
-Neste artigo, vamos abordar os fundamentos de trabalhar com arquivos .xib em um aplicativo Xamarin.Mac. É altamente recomendável que você leia o [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, pois ele aborda os principais conceitos e técnicas que será usado neste artigo.
+Neste artigo, abordaremos os fundamentos de trabalhar com arquivos. XIB em um aplicativo xamarin. Mac. É altamente recomendável que você trabalhe por meio de [Hello, Mac](~/mac/get-started/hello-mac.md) artigo primeiro, pois ele abrange conceitos-chave e técnicas que usaremos neste artigo.
 
-Talvez você queira dar uma olhada a [classes expondo c# / métodos para Objective-C](~/mac/internals/how-it-works.md) seção o [Xamarin.Mac internos](~/mac/internals/how-it-works.md) de documento, ele explica o `Register` e `Export` atributos usado para conectar as classes c# objetos Objective-C e a interface do usuário elementos.
+Talvez você queira dar uma olhada o [classes expondo c# / métodos para Objective-C](~/mac/internals/how-it-works.md) seção o [recursos internos de xamarin. Mac](~/mac/internals/how-it-works.md) documentar Além disso, ele explica o `Register` e `Export` atributos usado para conectar suas classes de c# a objetos de Objective-C e da interface do usuário elementos.
 
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Introdução ao Interface Builder e ao Xcode
 
-Como parte do Xcode, Apple criou uma ferramenta chamada de construtor de Interface, que permite que você crie sua Interface de usuário visualmente em um designer. Xamarin.Mac fluently integra com o construtor de Interface, permitindo que você crie sua interface do usuário com as mesmas ferramentas que os usuários de Objective-C.
+Como parte do Xcode, a Apple criou uma ferramenta chamada Interface Builder, que permite que você crie sua Interface do usuário visualmente em um designer. Xamarin. Mac integra-se harmoniosamente ao Interface Builder, permitindo que você crie sua interface do usuário com as mesmas ferramentas que usuários Objective-C.
 
 
 ### <a name="components-of-xcode"></a>Componentes do Xcode
 
-Quando você abre um arquivo .xib no Xcode do Visual Studio para Mac, ele abre com uma **navegador de projeto** à esquerda, o **hierarquia Interface** e **Editor de Interface** no meio e um **propriedades & utilitários** seção à direita:
+Quando você abre um arquivo. XIB no Xcode do Visual Studio para Mac, ele abre com uma **navegador de projeto** à esquerda, o **hierarquia de Interface** e **Editor de Interface** no meio e um **propriedades e utilitários** seção à direita:
 
-[![Os componentes da UI Xcode](xib-images/xcode03.png "os componentes da UI Xcode")](xib-images/xcode03-large.png#lightbox)
+[![Os componentes da UI Xcode](xib-images/xcode03.png "os componentes da UI do Xcode")](xib-images/xcode03-large.png#lightbox)
 
-Vamos dar uma olhada em que cada um desses Xcode seções faz e como eles serão ser usados para criar a interface para seu aplicativo Xamarin.Mac.
+Vamos dar uma olhada no que cada um deles Xcode seções faz e como você irá usá-los para criar a interface para o seu aplicativo xamarin. Mac.
 
 
-#### <a name="project-navigation"></a>Navegação de projeto
+#### <a name="project-navigation"></a>Navegação do projeto
 
-Quando você abre um arquivo de .xib para edição no Xcode, o Visual Studio para Mac cria um arquivo de projeto Xcode em segundo plano para comunicar alterações entre ele mesmo e Xcode. Posteriormente, quando você alternar para o Visual Studio para Mac do Xcode, todas as alterações feitas a este projeto são sincronizadas com o seu projeto Xamarin.Mac pelo Visual Studio para Mac.
+Quando você abre um arquivo. XIB para edição no Xcode, o Visual Studio para Mac cria um arquivo de projeto do Xcode em segundo plano para comunicar alterações entre si e o Xcode. Posteriormente, quando você alterna para o Visual Studio para Mac do Xcode, todas as alterações feitas neste projeto são sincronizadas com o seu projeto xamarin. Mac pelo Visual Studio para Mac.
 
-O **projeto navegação** seção permite que você navegue entre todos os arquivos que compõem esse _shim_ projeto Xcode. Normalmente, você só estará interessado nos arquivos de .xib nesta lista, como **MainMenu.xib** e **MainWindow.xib**.
+O **navegação do projeto** seção permite que você navegue entre todos os arquivos que compõem este _shim_ projeto Xcode. Normalmente, você se interessarão nos arquivos. XIB nessa lista, como **MainMenu.xib** e **MainWindow.xib**.
 
 
 #### <a name="interface-hierarchy"></a>Hierarquia de interface
 
-O **hierarquia Interface** seção permite que você acesse facilmente várias propriedades de chave da Interface do usuário, como seu **espaços reservados** e principal **janela**. Você também pode usar esta seção para acessar elementos individuais (views) que compõem sua interface de usuário e a ajustar a maneira que eles são aninhados arrastando-os dentro da hierarquia.
+O **hierarquia de Interface** seção permite que você acesse facilmente várias propriedades importantes da Interface do usuário, como seu **espaços reservados** e principal **janela**. Você também pode usar esta seção para acessar os elementos individuais (exibições) que fazem backup de sua interface do usuário e a ajustar a maneira como são aninhados arrastando-os pelo dentro da hierarquia.
 
 
 #### <a name="interface-editor"></a>Editor de interface
 
-O **Editor de Interface** seção fornece a superfície no qual você graficamente layout sua Interface do usuário. Você poderá arrastar os elementos do **biblioteca** seção o **propriedades & utilitários** seção para criar o design. Conforme você adiciona elementos de interface do usuário (views) para a superfície de design, eles serão adicionados para o **hierarquia Interface** seção na ordem em que aparecem no **Editor de Interface**.
+O **Editor de Interface** seção fornece a superfície em que você graficamente layout sua Interface do usuário. Você poderá arrastar os elementos do **biblioteca** seção o **propriedades e utilitários** seção para criar o design. Conforme você adiciona elementos de interface do usuário (exibições) para a superfície de design, eles serão adicionados para o **hierarquia de Interface** seção na ordem em que aparecem na **Editor de Interface**.
 
 
 #### <a name="properties--utilities"></a>Propriedades e utilitários
 
-O **propriedades & utilitários** seção é dividida em duas seções principais que trabalharemos com, **propriedades** (também chamado de inspetores) e o **biblioteca**:
+O **propriedades e utilitários** seção é dividida em duas seções principais, trabalharemos com, **Properties** (também chamada de inspetores) e o **biblioteca**:
 
-![Inspetor de](xib-images/xcode04.png "Inspetor")
+![O Inspetor](xib-images/xcode04.png "Inspetor")
 
-Inicialmente nesta seção está quase vazia, no entanto se você selecionar um elemento no **Editor de Interface** ou **hierarquia Interface**, o **propriedades** seção será preenchida informações sobre as propriedades que você pode ajustar e um determinado elemento.
+Inicialmente esta seção está quase vazia, no entanto se você selecionar um elemento na **Editor de Interface** ou **hierarquia de Interface**, o **propriedades** seção será preenchida informações sobre as propriedades que você pode ajustar e um determinado elemento.
 
 Na seção **Propriedades** há 8 diferentes *guias de inspetor*, conforme mostrado na ilustração a seguir:
 
@@ -82,59 +82,59 @@ Da esquerda para a direita, essas guias são:
 -   **Inspetor de Arquivo** – o Inspetor de Arquivo mostra informações do arquivo, como o nome do arquivo e o local do arquivo Xib que está sendo editado.
 -   **Ajuda Rápida** – a guia Ajuda Rápida fornece ajuda contextual com base no que está selecionado no Xcode.
 -   **Inspetor de Identidade** – o Inspetor de Identidade fornece informações sobre a exibição/controle selecionado.
--   **Atributos de Inspetor** – o Inspetor de atributos permite que você personalize vários atributos de controle/exibição selecionada.
--   **Inspetor de tamanho** – o Inspetor de tamanho permite controlar o tamanho e o comportamento do controle selecionado/modo de redimensionamento.
--   **Inspetor de conexões** – o Inspetor de conexões mostra as conexões de saída e a ação dos controles selecionados. Vamos examinar tomadas e ações em breve.
--   **Inspetor de associações** – o Inspetor de associações permite que você configure controles para que seus valores são vinculados automaticamente aos modelos de dados.
--   **Exibir o Inspetor de efeitos** – o Inspetor de efeitos de exibição permite que você especifique os efeitos nos controles, como animações.
+-   **Inspetor de atributos** – o Inspetor de atributos permite que você personalize vários atributos da exibição/controle selecionado.
+-   **Inspetor de tamanho** – o Inspetor de tamanho permite que você controle o tamanho e o comportamento da exibição/controle selecionado.
+-   **Inspetor de conexões** – o Inspetor de conexões mostra as conexões de saída e a ação dos controles selecionados. Vamos examinar saídas e ações daqui a pouco.
+-   **Inspetor de associações** – o Inspetor de associações permite que você configure controles para que seus valores são automaticamente ligados aos modelos de dados.
+-   **Exibir o Inspetor de efeitos** – o Inspetor de efeitos de exibição permite que você especifique efeitos nos controles, como animações.
 
-No **biblioteca** seção, você pode encontrar controles e objetos para colocar graficamente ao designer para criam sua interface do usuário:
+No **biblioteca** seção, você pode encontrar controles e objetos para colocar graficamente no designer para criam sua interface do usuário:
 
-![Um exemplo do Inspetor de biblioteca](xib-images/xcode06.png "um exemplo do Inspetor de biblioteca")
+![Um exemplo de como o Inspetor de biblioteca](xib-images/xcode06.png "um exemplo de como o Inspetor de biblioteca")
 
-Agora que você está familiarizado com o Xcode IDE e o construtor da Interface, vamos examinar usá-lo para criar uma interface do usuário.
+Agora que você está familiarizado com o IDE do Xcode e Interface Builder, vamos dar uma olhada em como usá-lo para criar uma interface do usuário.
 
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Criação e manutenção do windows no Xcode
 
-É o método preferencial para a criação de Interface do usuário do aplicativo um Xamarin.Mac com Storyboards (consulte nossa [Introdução a Storyboards](~/mac/platform/storyboards/index.md) documentação para obter mais informações) e, como resultado, qualquer novo projeto iniciado em Xamarin.Mac será Use Storyboards por padrão.
+O método preferencial para a criação de Interface de um aplicativo xamarin. MAC do usuário é com Storyboards (consulte nosso [Introdução ao Storyboards](~/mac/platform/storyboards/index.md) documentação para obter mais informações) e, como resultado, qualquer novo projeto é iniciado no xamarin. Mac será Por padrão, usam Storyboards.
 
-Para alternar para o usando um .xib baseada em interface do usuário, faça o seguinte:
+Para alternar para usar um. XIB com base da interface do usuário, faça o seguinte:
 
-1. Abra o Visual Studio para Mac e iniciar um novo projeto de Xamarin.Mac.
-2. No **solução preenchimento**, com o botão direito no projeto e selecione **adicionar** > **novo arquivo...**
-3. Selecione **Mac** > **Windows controlador**:
+1. Abra o Visual Studio para Mac e iniciar um novo projeto do xamarin. Mac.
+2. No **painel de soluções**, clique com botão direito no projeto e selecione **Add** > **novo arquivo...**
+3. Selecione **Mac** > **controlador Windows**:
 
-    ![Adicionar um novo controlador de janela](xib-images/setup00.png "adicionando um novo controlador de janela")
-4. Digite `MainWindow` para o nome e clique o **novo** botão:
+    ![Adicionando um novo controlador de janela](xib-images/setup00.png "adicionando um novo controlador de janela")
+4. Insira `MainWindow` para o nome e clique o **New** botão:
 
     ![Adicionando uma nova janela principal](xib-images/setup01.png "adicionando uma nova janela principal")
-5. Clique com botão direito no projeto novamente e selecione **adicionar** > **novo arquivo...**
+5. Clique com botão direito no projeto novamente e selecione **Add** > **novo arquivo...**
 6. Selecione **Mac** > **Menu principal**:
 
     ![Adicionando um novo Menu principal](xib-images/setup02.png "adicionando um novo Menu principal")
-7. Deixe o nome como `MainMenu` e clique no **novo** botão.
-8. No **solução preenchimento** selecionar o **Main.storyboard** de arquivos, clique com botão direito e selecione **remover**:
+7. Deixe o nome como `MainMenu` e clique em de **New** botão.
+8. No **painel de soluções** selecionar a **Main. Storyboard** do arquivo, clique com botão direito e selecione **remover**:
 
     ![Selecionando o storyboard principal](xib-images/setup03.png "selecionando o storyboard principal")
 9. Na caixa de diálogo Remover, clique o **excluir** botão:
 
     ![Confirmar a exclusão](xib-images/setup04.png "confirmar a exclusão")
-10. No **solução preenchimento**, clique duas vezes o **Info. plist** arquivo para abri-lo para edição.
-11. Selecione `MainMenu` do **Interface principal** suspensa:
+10. No **painel de soluções**, clique duas vezes o **Info. plist** arquivo para abri-lo para edição.
+11. Selecione `MainMenu` do **Interface principal** lista suspensa:
 
-    [![Configuração do menu principal](xib-images/setup05.png "configuração do menu principal")](xib-images/setup05-large.png#lightbox)
-12. No **solução preenchimento**, clique duas vezes o **MainMenu.xib** arquivo para abri-lo para edição no construtor de Interface do Xcode.
-13. No **biblioteca Inspetor**, tipo `object` no campo de pesquisa, em seguida, arraste um novo **objeto** na superfície de design:
+    [![Configuração do menu principal](xib-images/setup05.png "definindo o menu principal")](xib-images/setup05-large.png#lightbox)
+12. No **painel de soluções**, clique duas vezes o **MainMenu.xib** arquivo para abri-lo para edição no Interface Builder do Xcode.
+13. No **Inspetor de biblioteca**, digite `object` no campo de pesquisa, em seguida, arraste um novo **objeto** na superfície de design:
 
-    [![Edição do menu principal](xib-images/setup06.png "edição do menu principal")](xib-images/setup06-large.png#lightbox)
-14. No **Inspetor de identidade**, digite `AppDelegate` para o **classe**:
+    [![O menu principal de edição](xib-images/setup06.png "editando o menu principal")](xib-images/setup06-large.png#lightbox)
+14. No **Inspetor de identidade**, insira `AppDelegate` para o **classe**:
 
     [![Selecionando o representante do aplicativo](xib-images/setup07.png "selecionando o representante do aplicativo")](xib-images/setup07-large.png#lightbox)
-15. Selecione **proprietário do arquivo** do **hierarquia de Interface**, alterne para o **Inspetor de Conexão** e arraste uma linha a partir do delegado para o `AppDelegate` **Objeto** acabou de adicionar ao projeto:
+15. Selecione **o proprietário do arquivo** da **hierarquia de Interface**, alterne para o **Inspetor de Conexão** e arraste uma linha do delegado a ser o `AppDelegate` **Objeto** acabou de adicionar ao projeto:
 
     [![Conectando o representante do aplicativo](xib-images/setup08.png "conectando o representante do aplicativo")](xib-images/setup08-large.png#lightbox)
-16. Salvar as alterações e retornar ao Visual Studio para Mac.
+16. Salve as alterações e retorne ao Visual Studio para Mac.
 
 Com todas essas alterações em vigor, edite o **AppDelegate.cs** de arquivo e torná-lo a aparência a seguir:
 
@@ -168,182 +168,182 @@ namespace MacXib
 }
 ```
 
-Agora a janela do aplicativo principal é definida em um **.xib** arquivo incluído automaticamente no projeto ao adicionar um controlador de janela. Para editar o design do windows, no **solução preenchimento**, clique duas vezes o **MainWindow.xib** arquivo:
+Agora, a janela do aplicativo principal é definida em um **. XIB** arquivo incluído automaticamente no projeto ao adicionar um controlador da janela. Para editar seu design do windows, nos **painel de soluções**, clique duas vezes o **MainWindow.xib** arquivo:
 
 ![Selecionando o arquivo MainWindow.xib](xib-images/edit01.png "selecionando o arquivo MainWindow.xib")
 
-Isso abrirá o design de janela no construtor de Interface do Xcode:
+Isso abrirá o design de janela no Interface Builder do Xcode:
 
 [![Editando o MainWindow.xib](xib-images/edit02.png "editando o MainWindow.xib")](xib-images/edit02-large.png#lightbox)
 
 
 ### <a name="standard-window-workflow"></a>Fluxo de trabalho de janela padrão
 
-Para qualquer janela que você criar e trabalhar com seu aplicativo Xamarin.Mac, o processo é basicamente o mesmo:
+Para qualquer janela que você criar e trabalhar com seu aplicativo xamarin. Mac, o processo é basicamente o mesmo:
 
-1. Para o novo windows que não são o padrão automaticamente adicionado ao seu projeto, adicione uma nova definição de janela para o projeto.
-2. Clique duas vezes no arquivo de .xib para abrir o design de janela para edição no construtor de Interface do Xcode.
-3. Definir as propriedades da janela necessária no **Inspetor de atributo** e **Inspetor de tamanho**.
-4. Arraste os controles necessários para criar sua interface e configurá-los no **Inspetor de atributo**.
+1. Para o novo windows que não são o padrão adicionado automaticamente ao seu projeto, adicione uma nova definição de janela para o projeto.
+2. Clique duas vezes no arquivo. XIB para abrir o design de janela para edição no Interface Builder do Xcode.
+3. Definir propriedades de qualquer janela necessária na **Inspetor de atributo** e o **Inspetor de tamanho**.
+4. Arraste os controles necessários para compilar sua interface e configurá-los de **Inspetor de atributo**.
 5. Use o **Inspetor de tamanho** para lidar com o redimensionamento para elementos de interface do usuário.
-6. Expor elementos de interface do usuário da janela para o código c# por meio de saídas e ações.
-7. Salve suas alterações e retorne ao Visual Studio para Mac sincronizar com o Xcode.
+6. Expor elementos de interface do usuário da janela para C# código por meio de saídas e ações.
+7. Salve suas alterações e voltar para o Visual Studio para Mac sincronizar com o Xcode.
 
 
 ### <a name="designing-a-window-layout"></a>Criação de um layout de janela
 
 O processo para dispor de uma Interface do usuário no construtor de Interface é basicamente o mesmo para todos os elementos que você adicionar:
 
-1. Localizar o controle desejado no **Inspetor de biblioteca** e arraste até o **Editor de Interface** e posicione-o.
-2. Definir as propriedades da janela necessária no **Inspetor de atributo**.
+1. Localizar o controle desejado na **Inspetor de biblioteca** e arraste-o para o **Editor de Interface** e posicioná-lo.
+2. Definir propriedades de qualquer janela necessária na **Inspetor de atributo**.
 3. Use o **Inspetor de tamanho** para lidar com o redimensionamento para elementos de interface do usuário.
 4. Se você estiver usando uma classe personalizada, defina-o **Inspetor de identidade**.
-5. Expor os elementos de interface do usuário ao código c# por meio de saídas e ações.
-6. Salve suas alterações e retorne ao Visual Studio para Mac sincronizar com o Xcode.
+5. Apresentar os elementos de interface do usuário para C# código por meio de saídas e ações.
+6. Salve suas alterações e voltar para o Visual Studio para Mac sincronizar com o Xcode.
 
 Por exemplo:
 
 1. No Xcode, arraste um **botão de ação** da **seção Biblioteca**:
 
-    [![Selecione um botão da biblioteca](xib-images/xcode07.png "selecionando um botão da biblioteca")](xib-images/xcode07-large.png#lightbox)
-2. Solte o botão sobre o **janela** no **Editor de Interface**:
+    [![Selecionando um botão da biblioteca](xib-images/xcode07.png "selecionando um botão da biblioteca")](xib-images/xcode07-large.png#lightbox)
+2. Solte o botão sobre o **janela** na **Editor de Interface**:
 
-    [![Adicionar um botão à janela](xib-images/xcode08.png "adicionar um botão à janela")](xib-images/xcode08-large.png#lightbox)
+    [![Adicionando um botão à janela](xib-images/xcode08.png "adicionando um botão à janela")](xib-images/xcode08-large.png#lightbox)
 3. Clique na propriedade **Título** no **Inspetor de atributos** e altere o título do botão para `Click Me`:
 
-    ![Definir os atributos de botão](xib-images/xcode09.png "definindo os atributos de botão")
+    ![Definir os atributos do botão](xib-images/xcode09.png "definindo os atributos do botão")
 4. Arraste um **rótulo** da **seção Biblioteca**:
 
     [![Selecionando um rótulo na biblioteca](xib-images/xcode10.png "selecionando um rótulo na biblioteca")](xib-images/xcode10-large.png#lightbox)
 5. Solte o rótulo na **janela** ao lado do botão no **Editor de interface**:
 
-    [![Adicionar um rótulo para a janela](xib-images/xcode11.png "adicionar um rótulo para a janela")](xib-images/xcode11-large.png#lightbox)
+    [![Adicionando um rótulo para a janela](xib-images/xcode11.png "adicionando um rótulo para a janela")](xib-images/xcode11-large.png#lightbox)
 6. Pegue a alça direita no rótulo e arraste-a até que ela esteja perto da borda da janela:
 
     [![Redimensionando o rótulo](xib-images/xcode12.png "redimensionando o rótulo")](xib-images/xcode12-large.png#lightbox)
-7. Com o rótulo selecionado ainda no **Editor de Interface**, alterne para o **Inspetor de tamanho**:
+7. Com o rótulo ainda selecionado na **Editor de Interface**, alterne para o **Inspetor de tamanho**:
 
     ![Selecionando o Inspetor de tamanho](xib-images/xcode13.png "selecionando o Inspetor de tamanho")
-8. No **caixa dimensionando** clique o **Dim colchete de vermelho** à direita e o **Dim seta Horizontal de vermelho** no Centro de:
+8. No **caixa dimensionando** clique no **Dim colchete de vermelho** à direita e o **Dim seta Horizontal de vermelho** no Centro de:
 
     ![Editar as propriedades de dimensionamento automático](xib-images/xcode14.png "editando as propriedades de dimensionamento automático")
-9. Isso garante que o rótulo será ampliado para ampliar ou reduzir como a janela é redimensionada no aplicativo em execução. O **vermelho colchetes** e a parte superior e esquerda do **caixa dimensionando** caixa informar o rótulo a ser travar determinados X e Y locais.
-10. Salvar as alterações para a Interface do usuário
+9. Isso garante que o rótulo será ampliada para aumentar ou reduzir conforme a janela é redimensionada no aplicativo em execução. O **vermelho colchetes** e a parte superior e esquerda das **dimensionando caixa** caixa informar o rótulo ficar preso às suas X e Y locais.
+10. Salve suas alterações à Interface do usuário
 
-Como você redimensionar e mover os controles, você deve ter notado que o construtor da Interface fornece dicas úteis snap se baseiam em [diretrizes de Interface humana do sistema operacional X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). Essas diretrizes ajudarão você a criar aplicativos de alta qualidade que terão uma aparência familiar para os usuários do Mac.
+Conforme você foram redimensionar e mover controles, você deve ter notado que o Interface Builder fornece dicas úteis de ajuste que se baseiam [diretrizes de Interface humana dos X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). Essas diretrizes ajudarão você a criar aplicativos de alta qualidade que terão uma aparência familiar para os usuários do Mac.
 
-Se você examinar o **hierarquia Interface** seção, observe como o layout e a hierarquia dos elementos que compõem a nossa Interface do usuário são mostrados:
+Se você olhar o **hierarquia de Interface** seção, observe como o layout e a hierarquia dos elementos que compõem nossa Interface do usuário são exibidos:
 
 ![Selecionando um elemento na hierarquia de Interface](xib-images/xcode15.png "selecionando um elemento na hierarquia de Interface")
 
-Aqui você pode selecionar itens para editar ou arraste-a para reordenar os elementos de interface do usuário, se necessário. Por exemplo, se um elemento de interface do usuário estava sendo coberto por outro elemento, você poderia arrastá-lo para a parte inferior da lista para torná-lo o item mais alto na janela de.
+A partir daqui, você pode selecionar itens para editar ou arrastar para reordenar os elementos de interface do usuário se necessário. Por exemplo, se um elemento de interface do usuário estava sendo coberto por outro elemento, você poderia arrastá-lo até a parte inferior da lista para torná-lo o item superior na janela.
 
-Para obter mais informações sobre como trabalhar com o Windows em um aplicativo de Xamarin.Mac, consulte nosso [Windows](~/mac/user-interface/window.md) documentação.
-
-
-## <a name="exposing-ui-elements-to-c-code"></a>Exposição de elementos de interface do usuário ao código c#
-
-Depois de terminar de dispor a aparência da interface do usuário no construtor de Interface, você precisará expor elementos de interface do usuário para que eles possam ser acessados de código c#. Para fazer isso, você estará usando ações e saídas.
+Para obter mais informações sobre como trabalhar com o Windows em um aplicativo xamarin. Mac, consulte nosso [Windows](~/mac/user-interface/window.md) documentação.
 
 
-### <a name="setting-a-custom-main-window-controller"></a>Configurar um controlador personalizado janela principal
+## <a name="exposing-ui-elements-to-c-code"></a>Exposição dos elementos de interface do usuário ao C# código
 
-Para poder criar tomadas e ações para expor elementos de interface do usuário ao código c#, o aplicativo Xamarin.Mac precisará estar usando um controlador de janela personalizada.
+Quando você terminar de dispor a aparência da interface do usuário no construtor de Interface, você precisará expor elementos da interface do usuário para que eles possam ser acessados de C# código. Para fazer isso, você estará usando saídas e ações.
+
+
+### <a name="setting-a-custom-main-window-controller"></a>Configurar um controlador de janela principal personalizada
+
+Para poder criar saídas e ações para expor elementos de interface do usuário ao código c#, o aplicativo xamarin. Mac precisará estar usando um controlador de janela personalizada.
 
 Faça o seguinte:
 
-1. Abra Storyboard do aplicativo no construtor de Interface do Xcode.
+1. Abra o Storyboard do aplicativo no Interface Builder do Xcode.
 2. Selecione o `NSWindowController` na superfície de Design.
-3. Alterne para o **Inspetor de identidade** exibir e insira `WindowController` como o **nome da classe**:
+3. Alterne para o **Inspetor de identidade** exiba e insira `WindowController` como o **nome da classe**:
 
-    [![Editar o nome da classe](xib-images/windowcontroller01.png "editando o nome da classe")](xib-images/windowcontroller01-large.png#lightbox)
-4. Salve suas alterações e retornar ao Visual Studio para Mac sincronizar.
-5. Um **WindowController.cs** arquivo será adicionado ao seu projeto no **solução preenchimento** no Visual Studio para Mac:
+    [![Editar o nome da classe](xib-images/windowcontroller01.png "editando o nome de classe")](xib-images/windowcontroller01-large.png#lightbox)
+4. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar.
+5. Um **WindowController.cs** arquivo será adicionado ao seu projeto na **painel de soluções** no Visual Studio para Mac:
 
     ![O novo nome de classe no Visual Studio para Mac](xib-images/windowcontroller02.png "o novo nome de classe no Visual Studio para Mac")
-6. Reabra o Storyboard no construtor de Interface do Xcode.
+6. Reabra o Storyboard no Interface Builder do Xcode.
 7. O **WindowController.h** arquivo estará disponível para uso:
 
     [![O arquivo. h correspondente no Xcode](xib-images/windowcontroller03.png "o arquivo. h correspondente no Xcode")](xib-images/windowcontroller03-large.png#lightbox)
 
 
-### <a name="outlets-and-actions"></a>Tomadas e ações
+### <a name="outlets-and-actions"></a>Saídas e ações
 
-Quais são tomadas e ações? Na programação tradicional de interface do usuário do .NET, um controle na interface do usuário é exposto automaticamente como uma propriedade quando ele é adicionado. As coisas funcionam de modo diferente no Mac, simplesmente adicionar um controle a um modo de exibição não o torna acessível ao código. O desenvolvedor deve expor explicitamente o elemento de interface do usuário ao código. Em ordem para fazer isso, Apple nos fornece duas opções:
+Quais são saídas e ações? Na programação tradicional de interface do usuário do .NET, um controle na interface do usuário é exposto automaticamente como uma propriedade quando ele é adicionado. As coisas funcionam de modo diferente no Mac, simplesmente adicionar um controle a um modo de exibição não o torna acessível ao código. O desenvolvedor deve expor explicitamente o elemento de interface do usuário ao código. Para fazer isso, Apple nos dá duas opções:
 
--  **Saídas** – saídas são análogas às propriedades. Se você conectar um controle a uma tomada, ele é exposto ao seu código por meio de uma propriedade, então você pode fazer coisas como anexar manipuladores de eventos, chamar métodos em etc.
--  **Ações** – ações são análogas ao padrão de comando no WPF. Por exemplo, quando uma ação é executada em um controle, digamos que um clique de botão, o controle automaticamente chamará um método em seu código. Ações são eficientes e conveniente, porque você pode conectar muitos controles para a mesma ação.
+-  **Saídas** – saídas são análogas às propriedades. Se você conectar um controle a uma tomada, ele é exposto ao seu código por meio de uma propriedade, portanto, você pode fazer coisas como anexar manipuladores de eventos, chamar métodos nele, etc.
+-  **Ações** – ações são análogas ao padrão de comando no WPF. Por exemplo, quando uma ação é executada em um controle, digamos que um clique de botão, o controle chamará automaticamente um método em seu código. Ações são poderosas e conveniente, porque você pode conectar muitos controles à mesma ação.
 
-No Xcode, saídas e as ações são adicionadas diretamente no código por meio de *arrastando o controle*. Mais especificamente, isso significa que para criar uma loja ou uma ação, escolha qual elemento de controle que você deseja adicionar uma loja ou uma ação, mantenha pressionada a **controle** botão no teclado e, em seguida, arraste o controle diretamente em seu código.
+No Xcode, saídas e ações são adicionadas diretamente ao código *arrastando o controle*. Mais especificamente, isso significa que para criar um tomada ou uma ação, você escolha qual elemento de controle que você gostaria de adicionar uma ação ou tomada, mantenha pressionada a **controle** botão no teclado e, em seguida, arrastará o controle diretamente para seu código.
 
-Para desenvolvedores de Xamarin.Mac, isso significa que você arrastar para os arquivos de stub Objective-C que correspondem ao arquivo c# onde você deseja criar a ação ou o. O Visual Studio para Mac criado um arquivo chamado **MainWindow.h** como parte do shim projeto Xcode gerado para usar o construtor de Interface:
+Para desenvolvedores do xamarin. Mac, isso significa que você arrastar arquivos stub do Objective-C que correspondem do C# arquivo onde você deseja criar a ação ou o. O Visual Studio para Mac criou um arquivo chamado **MainWindow.h** como parte do projeto do Xcode do shim gerado para usar o Interface Builder:
 
 [![Um exemplo de um arquivo. h no Xcode](xib-images/xcode16.png "um exemplo de um arquivo. h no Xcode")](xib-images/xcode16-large.png#lightbox)
 
-Este arquivo stub de h reflete o **MainWindow.designer.cs** que é adicionado automaticamente a um projeto de Xamarin.Mac quando um novo `NSWindow` é criado. Esse arquivo será usado para sincronizar as alterações feitas pelo construtor de Interface e é onde criaremos suas saídas e ações para que os elementos de interface do usuário são expostos a código c#.
+Esse arquivo. h de stub espelha o **MainWindow.designer.cs** que é automaticamente adicionado a um projeto xamarin. Mac quando um novo `NSWindow` é criado. Esse arquivo será usado para sincronizar as alterações feitas pelo Interface Builder e é onde podemos criará suas saídas e ações para que os elementos de interface do usuário são expostos ao C# código.
 
 
-#### <a name="adding-an-outlet"></a>Adicionando uma tomada
+#### <a name="adding-an-outlet"></a>Adicionando uma saída
 
-Com uma compreensão básica dos quais são tomadas e ações, vamos criar uma tomada para expor um elemento de interface do usuário ao seu código c#.
+Com uma compreensão básica dos quais são saídas e ações, vamos dar uma olhada na criação de uma tomada para expor um elemento de interface do usuário para seu C# código.
 
 Faça o seguinte:
 
 1. No Xcode, no canto direito superior da tela, clique no botão com o **círculo duplo** para abrir o **Editor assistente**:
 
-    [![Selecionar o Editor de assistente](xib-images/outlet01.png "selecionando o Assistente de Editor")](xib-images/outlet01-large.png#lightbox)
+    [![Selecionando o Editor assistente](xib-images/outlet01.png "selecionando o Editor Assistente")](xib-images/outlet01-large.png#lightbox)
 2. O Xcode mudará para um modo de exibição de divisão com o **Editor de interface** em um lado e um **Editor de código** no outro.
-3. Observe que Xcode automaticamente separada o **MainWindowController.m** arquivo o **Editor de códigos**, que é incorreto. Se você se lembra de nossa discussão sobre o que são tomadas e ações acima, é preciso ter o **MainWindow.h** selecionado.
-4. Na parte superior do **Editor de códigos** clique no **Link automático** e selecione o **MainWindow.h** arquivo:
+3. Observe que Xcode selecionou automaticamente o **MainWindowController.m** arquivo na **Editor de códigos**, que é incorreto. Se você se lembra de nossa discussão sobre o que são saídas e ações acima, é necessário ter o **MainWindow.h** selecionado.
+4. Na parte superior dos **Editor de códigos** clique no **vínculo automático** e selecione o **MainWindow.h** arquivo:
 
-    [![Selecionando o arquivo correto h](xib-images/outlet02.png "selecionando o arquivo correto. h")](xib-images/outlet02-large.png#lightbox)
+    [![Selecionar o arquivo. h correto](xib-images/outlet02.png "selecionando o arquivo. h correto")](xib-images/outlet02-large.png#lightbox)
 5. O Xcode agora deve estar com o arquivo correto selecionado:
 
-    [![O arquivo correto selecionado](xib-images/outlet03.png "o arquivo correto selecionado")](xib-images/outlet03-large.png#lightbox)
-6. **A última etapa era muito importante.** Se você não tiver o arquivo correto selecionado, você não poderá criar tomadas e ações ou se eles serão expostos à classe errado em c#!
-7. No **Editor de Interface**, mantenha pressionada a **controle** chave no teclado e clique e arraste o rótulo que criamos acima para o editor de código logo abaixo o `@interface MainWindow : NSWindow { }` código:
+    [![O arquivo correto selecionado](xib-images/outlet03.png "selecionado arquivo correto")](xib-images/outlet03-large.png#lightbox)
+6. **A última etapa era muito importante.** Se você não tiver selecionado arquivo correto, você não poderá criar saídas e ações ou eles serão expostos à classe errada em C#!
+7. No **Editor de Interface**, mantenha pressionada a **controle** tecla no teclado e clique e arraste o rótulo que criamos acima para o editor de código logo abaixo o `@interface MainWindow : NSWindow { }` código:
 
-    [![Arrastar para criar uma nova loja](xib-images/outlet04.png "arrastar para criar uma nova loja")](xib-images/outlet04-large.png#lightbox)
-8. Uma caixa de diálogo será exibida. Deixe o **Conexão** definida para a loja e inserir `ClickedLabel` para o **nome**:
+    [![Arrastando para criar uma nova saída](xib-images/outlet04.png "arrastando para criar uma nova saída")](xib-images/outlet04-large.png#lightbox)
+8. Uma caixa de diálogo será exibida. Deixe o **Conexão** definido como tomada e insira `ClickedLabel` para o **nome**:
 
     [![Definindo as propriedades de tomada](xib-images/outlet05.png "definindo as propriedades de saída")](xib-images/outlet05-large.png#lightbox)
-9. Clique o **conectar** botão para criar a loja:
+9. Clique o **Connect** botão para criar a saída:
 
-    ![A tomada concluída](xib-images/outlet06.png "a tomada concluída")
+    ![A saída concluída](xib-images/outlet06.png "a tomada concluída")
 10. Salve as alterações no arquivo.
 
 
-#### <a name="adding-an-action"></a>Adicionar uma ação
+#### <a name="adding-an-action"></a>Adicionando uma ação
 
-Em seguida, vamos criar uma ação para expor uma interação do usuário com o elemento de interface do usuário ao seu código c#.
+Em seguida, vamos dar uma olhada na criação de uma ação para expor uma interação do usuário com o elemento de interface do usuário para seu C# código.
 
 Faça o seguinte:
 
-1. Certifique-se de que estão na **Assistente de Editor** e **MainWindow.h** arquivo está visível no **Editor de código**.
-2. No **Editor de Interface**, mantenha pressionada a **controle** chave no teclado e clique e arraste o botão que criamos acima para o editor de código logo abaixo de `@property (assign) IBOutlet NSTextField *ClickedLabel;` código:
+1. Verifique se estamos ainda na **Editor assistente** e o **MainWindow.h** arquivo ficará visível no **Editor de códigos**.
+2. No **Editor de Interface**, mantenha pressionada a **controle** tecla no teclado e clique e arraste o botão que criamos acima para o editor de código logo abaixo o `@property (assign) IBOutlet NSTextField *ClickedLabel;` código:
 
-    [![Arrastar para criar uma ação](xib-images/action01.png "arrastar para criar uma ação")](xib-images/action01-large.png#lightbox)
+    [![Arrastando para criar uma ação](xib-images/action01.png "arrastando para criar uma ação")](xib-images/action01-large.png#lightbox)
 3. Alterar o **Conexão** tipo de ação:
 
     [![Selecione um tipo de ação](xib-images/action02.png "selecionar um tipo de ação")](xib-images/action02-large.png#lightbox)
 4. Digite `ClickedButton` como o **Nome**:
 
-    [![Configurar a ação de](xib-images/action03.png "Configurando a ação")](xib-images/action03-large.png#lightbox)
-5. Clique o **conectar** botão para criar a ação:
+    [![Configurar a ação](xib-images/action03.png "Configurando a ação")](xib-images/action03-large.png#lightbox)
+5. Clique o **Connect** botão para criar a ação:
 
     ![A ação concluída](xib-images/action04.png "a ação concluída")
 6. Salve as alterações no arquivo.
 
-Com sua Interface de usuário com fio-up e expostos ao código c#, alterne para o Visual Studio para Mac e deixá-lo a sincronizar as alterações do Xcode e o construtor de Interface.
+Com sua Interface de usuário conectada e exposta ao C# de código, retorne ao Visual Studio para Mac e deixe-o sincronizar as alterações do Xcode e Interface Builder.
 
 
 ### <a name="writing-the-code"></a>Escrevendo o código
 
-Com a Interface do usuário criado e seus elementos de interface do usuário expostos ao código por meio de saídas e as ações, você está pronto para escrever o código para dar vida a seu programa. Por exemplo, abra o **MainWindow.cs** arquivo para edição, clique duas vezes no **solução preenchimento**:
+Com sua Interface do usuário criada e seus elementos expostos ao código pelas saídas e ações, você está pronto para escrever o código para dar vida a seu programa. Por exemplo, abra o **MainWindow.cs** arquivo para edição clicando nele duas vezes na **painel de soluções**:
 
 [![O arquivo MainWindow.cs](xib-images/code01.png "MainWindow.cs o arquivo")](xib-images/code01-large.png#lightbox)
 
-E adicione o seguinte código para o `MainWindow` classe para trabalhar com a tomada de exemplo criado acima:
+E adicione o seguinte código para o `MainWindow` classe para trabalhar com a tomada de exemplo que você criou acima:
 
 ```csharp
 private int numberOfTimesClicked = 0;
@@ -358,12 +358,12 @@ public override void AwakeFromNib ()
 }
 ```
 
-Observe que o `NSLabel` é acessado no c# pelo nome da direto que você atribuiu no Xcode, quando você criou tomada no Xcode, nesse caso, ele é chamado `ClickedLabel`. Você pode acessar qualquer método ou propriedade do objeto exposto da mesma maneira que faria com qualquer classe c# normal.
+Observe que o `NSLabel` é acessado no C# pelo nome do direct que você atribuiu no Xcode, quando você criou sua tomada no Xcode, nesse caso, ele é chamado `ClickedLabel`. Você pode acessar qualquer método ou propriedade do objeto exposto da mesma maneira que faria com qualquer normal C# classe.
 
 > [!IMPORTANT]
-> Você precisa usar `AwakeFromNib`, em vez de outro método, como `Initialize`, pois `AwakeFromNib` é chamado _depois_ carregados e instanciado a Interface do usuário do arquivo .xib o sistema operacional. Se você tentasse acessar o controle de rótulo antes do arquivo .xib foi totalmente carregada e instanciado, você receberia um `NullReferenceException` erro porque o controle de rótulo não seria criado ainda.
+> Você precisa usar `AwakeFromNib`, em vez de outro método como `Initialize`, porque `AwakeFromNib` é chamado _depois_ o sistema operacional ter carregado e instanciado a Interface do usuário do arquivo. XIB. Se você tentou acessar o controle de rótulo antes do arquivo. XIB ter sido totalmente carregado e instanciado, você obteria um `NullReferenceException` erro porque o controle de rótulo não seria criado ainda.
 
-Em seguida, adicione a seguinte classe parcial para a `MainWindow` classe:
+Em seguida, adicione a seguinte classe parcial para o `MainWindow` classe:
 
 ```csharp
 partial void ClickedButton (Foundation.NSObject sender) {
@@ -373,9 +373,9 @@ partial void ClickedButton (Foundation.NSObject sender) {
 }
 ```
 
-Esse código anexa à ação que você criou no Xcode e o construtor de Interface e será chamado a qualquer momento em que o usuário clica no botão.
+Esse código é anexado à ação que você criou no Xcode e Interface Builder e será chamado sempre que o usuário clica no botão.
 
-Alguns elementos de interface do usuário automaticamente criou em ações, por exemplo, os itens na barra de menus padrão, como o **abrir...**  item de menu (`openDocument:`). No **solução preenchimento**, clique duas vezes no **appdelegate. CS** arquivo para abri-lo para edição e adicione o seguinte código abaixo o `DidFinishLaunching` método:
+Alguns elementos de interface do usuário automaticamente criaram em ações, por exemplo, os itens na barra de menus padrão, como o **abra...**  item de menu (`openDocument:`). No **painel de soluções**, clique duas vezes o **AppDelegate.cs** arquivo para abri-lo para edição e adicione o seguinte código abaixo a `DidFinishLaunching` método:
 
 ```csharp
 [Export ("openDocument:")]
@@ -396,20 +396,20 @@ void OpenDialog (NSObject sender)
 }
 ```
 
-A linha de chave aqui é `[Export ("openDocument:")]`, informa `NSMenu` que o **AppDelegate** tem um método `void OpenDialog (NSObject sender)` que responde a `openDocument:` ação.
+A linha chave aqui é `[Export ("openDocument:")]`, ele informa `NSMenu` que o **AppDelegate** tem um método `void OpenDialog (NSObject sender)` que responde ao `openDocument:` ação.
 
 Para obter mais informações sobre como trabalhar com Menus, consulte nosso [Menus](~/mac/user-interface/menu.md) documentação.
 
 
-## <a name="synchronizing-changes-with-xcode"></a>Sincronizar as alterações com o Xcode
+## <a name="synchronizing-changes-with-xcode"></a>Sincronizando alterações com Xcode
 
-Quando você alternar para o Visual Studio para Mac do Xcode, as alterações feitas no Xcode automaticamente serão sincronizadas com o seu projeto Xamarin.Mac.
+Quando você alterna para o Visual Studio para Mac do Xcode, quaisquer alterações feitas no Xcode serão sincronizadas automaticamente com o seu projeto xamarin. Mac.
 
-Se você selecionar o **MainWindow.designer.cs** no **solução preenchimento** você poderá ver como nosso tomada e a ação de conexão em nosso código do c#:
+Se você selecionar o **MainWindow.designer.cs** na **painel de soluções** você poderá ver como nossa tomada e ação foram conectadas nosso C# código:
 
-[![Alterações de sincronização com o Xcode](xib-images/sync01.png "sincronizar as alterações com o Xcode")](xib-images/sync01-large.png#lightbox)
+[![Sincronizando alterações com Xcode](xib-images/sync01.png "sincronizando alterações com Xcode")](xib-images/sync01-large.png#lightbox)
 
-Observe como as duas definições de **MainWindow.designer.cs** arquivo:
+Observe como as duas definições na **MainWindow.designer.cs** arquivo:
 
 ```csharp
 [Outlet]
@@ -419,39 +419,39 @@ AppKit.NSTextField ClickedLabel { get; set; }
 partial void ClickedButton (Foundation.NSObject sender);
 ```
 
-Alinhar com as definições de **MainWindow.h** arquivo no Xcode:
+Alinhar com as definições na **MainWindow.h** arquivo no Xcode:
 
 ```objc
 @property (assign) IBOutlet NSTextField *ClickedLabel;
 - (IBAction)ClickedButton:(id)sender;
 ```
 
-Como você pode ver, o Visual Studio para Mac escuta as alterações no arquivo. h e sincroniza automaticamente as alterações do respectivo **. designer.cs** arquivo expô-los ao seu aplicativo. Você também pode perceber que **MainWindow.designer.cs** é uma classe parcial, para que o Visual Studio para Mac não precisa modificar **MainWindow.cs** que substituiria as alterações feitas à classe.
+Como você pode ver, o Visual Studio para Mac escuta as alterações no arquivo. h e sincroniza automaticamente essas alterações no respectivo **. designer.cs** arquivo expô-los ao seu aplicativo. Você pode perceber que também **MainWindow.designer.cs** é uma classe parcial, para que o Visual Studio para Mac não precise modificar **MainWindow.cs** que substituiria as alterações feitas à classe.
 
-Normalmente nunca será necessário abrir o **MainWindow.designer.cs** por conta própria, ele foi apresentado aqui apenas para fins educativos.
+Você normalmente nunca precisará abrir o **MainWindow.designer.cs** por conta própria, ele foi apresentado aqui apenas para fins educacionais.
 
 > [!IMPORTANT]
-> Na maioria das situações, o Visual Studio para Mac automaticamente ver todas as alterações feitas no Xcode e sincronizá-los ao seu projeto Xamarin.Mac. Na improvável ocorrência de que a sincronização não aconteça automaticamente, retorne para o Xcode e depois novamente para o Visual Studio para Mac. Isso normalmente dará início a um ciclo de sincronização.
+> Na maioria das situações, o Visual Studio para Mac será automaticamente as alterações feitas no Xcode e sincronizá-los ao seu projeto xamarin. Mac. Na improvável ocorrência de que a sincronização não aconteça automaticamente, retorne para o Xcode e depois novamente para o Visual Studio para Mac. Isso normalmente dará início a um ciclo de sincronização.
 
 
 ## <a name="adding-a-new-window-to-a-project"></a>Adicionando uma nova janela a um projeto
 
-Além da janela do documento principal, talvez seja necessário um aplicativo Xamarin.Mac exibir outros tipos de windows para o usuário, como preferências ou painéis do Inspetor. Ao adicionar uma nova janela a seu projeto você sempre deve usar o **Cocoa janela com controlador** opção, pois isso faz com que o processo de carregar a janela do .xib mais fácil de arquivo.
+Além da janela do documento principal, talvez seja necessário exibir outros tipos de janelas para o usuário, como preferências ou painéis do Inspetor de um aplicativo xamarin. Mac. Ao adicionar uma nova janela do seu projeto você sempre deve usar o **janela do Cocoa com controlador** opção, pois isso faz com que o processo de carregamento a janela da. XIB mais fácil de arquivo.
 
 Para adicionar uma nova janela, faça o seguinte:
 
-1. No **solução preenchimento**, com o botão direito no projeto e selecione **adicionar** > **novo arquivo.** .
-2. Na caixa de diálogo Novo arquivo, selecione **Xamarin.Mac** > **Cocoa janela com controlador**:
+1. No **painel de soluções**, clique com botão direito no projeto e selecione **Add** > **novo arquivo...** .
+2. Na caixa de diálogo Novo arquivo, selecione **xamarin. Mac** > **janela do Cocoa com controlador**:
 
-    ![Adicionar um novo controlador de janela](xib-images/new01.png "adicionando um novo controlador de janela")
+    ![Adicionando um novo controlador de janela](xib-images/new01.png "adicionando um novo controlador de janela")
 3. Digite `PreferencesWindow` para o **Nome** e clique no botão **Novo**.
-4. Clique duas vezes o **PreferencesWindow.xib** arquivo para abri-lo para edição no construtor de Interface:
+4. Clique duas vezes o **PreferencesWindow.xib** arquivo para abri-lo para edição no Interface Builder:
 
     [![Editando a janela no Xcode](xib-images/new02.png "editando a janela no Xcode")](xib-images/new02-large.png#lightbox)
 5. Sua interface de design:
 
-    [![Criando o layout de windows](xib-images/new03.png "criando layout do windows")](xib-images/new03-large.png#lightbox)
-6. Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
+    [![Criando layout do windows](xib-images/new03.png "projetar o layout do windows")](xib-images/new03-large.png#lightbox)
+6. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
 Adicione o seguinte código para **AppDelegate.cs** para exibir a nova janela:
 
@@ -464,35 +464,35 @@ void ShowPreferences (NSObject sender)
 }
 ```
 
-O `var preferences = new PreferencesWindowController ();` linha cria uma nova instância do controlador de janela que carrega a janela do arquivo .xib e inflação-lo. O `preferences.Window.MakeKeyAndOrderFront (this);` linha exibe a nova janela para o usuário.
+O `var preferences = new PreferencesWindowController ();` linha cria uma nova instância do controlador de janela que carrega a janela do arquivo. XIB e descompacta-lo. O `preferences.Window.MakeKeyAndOrderFront (this);` linha exibe a nova janela para o usuário.
 
-Se você executar o código e selecione o **preferências...**  do **aplicativo Menu**, a janela será exibida:
+Se você executar o código e selecione o **preferências...**  do **Menu aplicativo**, a janela será exibida:
 
 ![Executando o aplicativo de exemplo](xib-images/new04.png "executando o aplicativo de exemplo")
 
-Para obter mais informações sobre como trabalhar com o Windows em um aplicativo de Xamarin.Mac, consulte nosso [Windows](~/mac/user-interface/window.md) documentação.
+Para obter mais informações sobre como trabalhar com o Windows em um aplicativo xamarin. Mac, consulte nosso [Windows](~/mac/user-interface/window.md) documentação.
 
 
-## <a name="adding-a-new-view-to-a-project"></a>Adicionando um novo modo de exibição para um projeto
+## <a name="adding-a-new-view-to-a-project"></a>Adicionando um novo modo de exibição a um projeto
 
-Há ocasiões em que é mais fácil dividir o design da janela em diversos arquivos .xib mais gerenciáveis. Por exemplo, como alternar o conteúdo da janela principal, ao selecionar um item da barra de ferramentas em uma **janela Preferências** ou trocar o conteúdo em resposta a um **lista de origem** seleção.
+Há ocasiões em que é mais fácil para decompor o design da sua janela em diversos arquivos. XIB mais gerenciáveis. Por exemplo, como alternar o conteúdo da janela principal, ao selecionar um item da barra de ferramentas em uma **janela Preferências** ou alternando conteúdo em resposta a um **lista origem** seleção.
 
-Ao adicionar um novo modo de exibição para seu projeto você sempre deve usar o **Cocoa exibição com controlador** opção, pois isso faz com que o processo de carregar o modo de exibição do .xib mais fácil de arquivo.
+Ao adicionar um novo modo de exibição ao seu projeto você sempre deve usar o **exibição do Cocoa com controlador** opção, pois isso faz com que o processo de carregar o modo de exibição dos. XIB mais fácil de arquivo.
 
-Para adicionar um novo modo de exibição, faça o seguinte:
+Para adicionar uma nova exibição, faça o seguinte:
 
-1. No **solução preenchimento**, com o botão direito no projeto e selecione **adicionar** > **novo arquivo.** .
-2. Na caixa de diálogo Novo arquivo, selecione **Xamarin.Mac** > **Cocoa exibição com controlador**:
+1. No **painel de soluções**, clique com botão direito no projeto e selecione **Add** > **novo arquivo...** .
+2. Na caixa de diálogo Novo arquivo, selecione **xamarin. Mac** > **exibição do Cocoa com controlador**:
 
-    ![Adicionando uma nova exibição](xib-images/view01.png "adicionando uma nova exibição")
+    ![Adicionando um novo modo de exibição](xib-images/view01.png "adicionando uma nova exibição")
 3. Digite `SubviewTable` para o **Nome** e clique no botão **Novo**.
-4. Clique duas vezes o **SubviewTable.xib** arquivo para abri-lo para edição no construtor de Interface e a Interface do usuário de Design:
+4. Clique duas vezes o **SubviewTable.xib** arquivo para abri-lo para edição no Interface Builder e projetar a Interface do usuário:
 
-    [![Criar o novo modo de exibição no Xcode](xib-images/view02.png "criar o novo modo de exibição no Xcode")](xib-images/view02-large.png#lightbox)
-5. Conectar quaisquer ações necessárias e saídas.
-6. Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
+    [![Criando o novo modo de exibição no Xcode](xib-images/view02.png "criando o novo modo de exibição no Xcode")](xib-images/view02-large.png#lightbox)
+5. Conectar-se de quaisquer ações necessárias e as saídas.
+6. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
-Em seguida edite o **SubviewTable.cs** e adicione o seguinte código para o **AwakeFromNib** arquivo para preencher o novo modo de exibição quando ele é carregado:
+Próxima edição do **SubviewTable.cs** e adicione o seguinte código para o **AwakeFromNib** arquivo para popular o novo modo de exibição quando ele for carregado:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -515,7 +515,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-Adicione um enum para o projeto para controlar qual modo de exibição está sendo exibidas no momento. Por exemplo, **SubviewType.cs**:
+Adicione uma enumeração para o projeto para controlar qual exibição está sendo exibidas no momento. Por exemplo, **SubviewType.cs**:
 
 ```csharp
 public enum SubviewType
@@ -527,13 +527,13 @@ public enum SubviewType
 }
 ```
 
-Edite o arquivo .xib da janela que será o modo de exibição de consumo e exibi-lo. Adicionar um **exibição personalizada** que atuará como o contêiner para o modo de exibição quando ele é carregado na memória pelo código do c# e exponha-lo a uma tomada chamado `ViewContainer`:
+Edite o arquivo. XIB, da janela que será consumindo o modo de exibição e exibi-la. Adicionar um **modo de exibição personalizado** que atuará como o contêiner para o modo de exibição depois que ele é carregado na memória pelo C# de código e expô-lo a uma tomada chamada `ViewContainer`:
 
-[![Criando a tomada necessária](xib-images/view03.png "criando a tomada necessária")](xib-images/view03-large.png#lightbox)
+[![Criando a saída necessária](xib-images/view03.png "criando a saída necessária")](xib-images/view03-large.png#lightbox)
 
-Salve suas alterações e retornar ao Visual Studio para Mac sincronizar com o Xcode.
+Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
-Em seguida, edite o arquivo. cs da janela que deseja exibir o novo modo de exibição (por exemplo, **MainWindow.cs**) e adicione o seguinte código:
+Em seguida, edite o arquivo. cs da janela que exibirá a nova exibição (por exemplo, **MainWindow.cs**) e adicione o seguinte código:
 
 ```csharp
 private SubviewType ViewType = SubviewType.None;
@@ -567,7 +567,7 @@ private void DisplaySubview(NSViewController controller, SubviewType type) {
 }
 ```
 
-Quando é necessário mostrar uma nova exibição carregado de um arquivo .xib no contêiner da janela (a **exibição personalizada** adicionadas acima), esse código, para tratar removendo qualquer exibição existente e trocando-os para uma nova. Parece para vê-lo, que você já tem um modo de exibição, se assim ele remove da tela. Em seguida leva o modo de exibição que foi passado em (como carregado de um controlador de exibição) é redimensionado para caber na área de conteúdo e o adiciona ao conteúdo para exibição.
+Quando precisamos mostrar uma nova exibição carregada de um arquivo. XIB no contêiner da janela (a **modo de exibição personalizado** adicionadas acima), esse código manipula a remoção de qualquer modo de exibição existente e trocando-os para uma nova. Ele procura para vê-lo, que você já tem um modo de exibição, se assim ela a remove da tela. Em seguida, leva a exibição que foi passada em (como carregado de um controlador de exibição) é redimensionado para caber na área de conteúdo e o adiciona ao conteúdo para exibição.
 
 Para exibir uma nova exibição, use o seguinte código:
 
@@ -575,16 +575,16 @@ Para exibir uma nova exibição, use o seguinte código:
 DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 ```
 
-Isso cria uma nova instância do controlador de exibição para a nova exibição a ser exibido, define seu tipo (como especificado pela enumeração adicionada ao projeto) e usa o `DisplaySubview` método adicionado à classe da janela, na verdade, a exibição. Por exemplo:
+Isso cria uma nova instância do controlador de exibição para a nova exibição a ser exibido, define seu tipo (conforme especificado pela enumeração adicionada ao projeto) e usa o `DisplaySubview` adicionado à classe da janela para exibir o modo de exibição do método. Por exemplo:
 
 [![Executando o aplicativo de exemplo](xib-images/view04.png "executando o aplicativo de exemplo")](xib-images/view04-large.png#lightbox)
 
-Para obter mais informações sobre como trabalhar com o Windows em um aplicativo de Xamarin.Mac, consulte nosso [Windows](~/mac/user-interface/window.md) e [caixas de diálogo](~/mac/user-interface/dialog.md) documentação.
+Para obter mais informações sobre como trabalhar com o Windows em um aplicativo xamarin. Mac, consulte nosso [Windows](~/mac/user-interface/window.md) e [caixas de diálogo](~/mac/user-interface/dialog.md) documentação.
 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo obteve uma visão detalhada de como trabalhar com arquivos .xib em um aplicativo Xamarin.Mac. Vimos os diferentes tipos e usa .xib arquivos para criar a Interface do usuário do seu aplicativo, como criar e manter .xib arquivos do Xcode Interface Builder e como trabalhar com arquivos de .xib no código c#.
+Este artigo apresentou uma visão detalhada de como trabalhar com arquivos. XIB em um aplicativo xamarin. Mac. Vimos os diferentes tipos e os usos dos arquivos. XIB para criar a Interface do usuário do seu aplicativo, como criar e manter. XIB arquivos do Xcode Interface Builder e como trabalhar com arquivos. XIB no C# código.
 
 
 ## <a name="related-links"></a>Links relacionados
@@ -595,4 +595,4 @@ Este artigo obteve uma visão detalhada de como trabalhar com arquivos .xib em u
 - [Menus](~/mac/user-interface/menu.md)
 - [Caixas de diálogo](~/mac/user-interface/dialog.md)
 - [Trabalhando com imagens](~/mac/app-fundamentals/image.md)
-- [macOS diretrizes de Interface Humana](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Diretrizes de Interface humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

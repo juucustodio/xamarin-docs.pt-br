@@ -3,38 +3,38 @@ title: Barra de ação
 ms.prod: xamarin
 ms.assetid: 84A79F1F-9E73-4E3E-80FA-B72E5686900B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 29726450e0899177f3223deeade1cb4766d933a5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bb2349f141629478eb2dce995c7cbff5a954069
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30769088"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114607"
 ---
 # <a name="actionbar"></a>Barra de ação
 
 
 ## <a name="overview"></a>Visão geral
 
-Ao usar `TabActivity`, o código para criar os ícones de guia não tem nenhum efeito quando é executado no Framework Android 4.0. Embora funcionalmente funciona como nas versões do Android 2.3, antes do `TabActivity` própria classe foi preterido no 4.0. Foi introduzida uma nova maneira de criar uma interface com guias que usa a barra de ação, que será abordado posteriormente.
+Ao usar `TabActivity`, o código para criar os ícones de guia não tem nenhum efeito quando é executado em relação a estrutura do Android 4.0. Embora funcionalmente ele funciona de forma que nas versões do Android anteriores a 2.3, o `TabActivity` própria classe foi preterida no 4.0. Foi introduzida uma nova maneira de criar uma interface com guias que usa a barra de ação, que será abordado posteriormente.
 
 
 ## <a name="action-bar-tabs"></a>Guias de barra de ação
 
-A barra de ação inclui suporte para adição de interfaces com guias no Android 4.0.
-Captura de tela a seguir mostra um exemplo de tal interface.
+Barra de ação inclui suporte para adicionar interfaces com guias no Android 4.0.
+Captura de tela a seguir mostra um exemplo de uma interface desse tipo.
 
-[![Captura de tela do aplicativo em execução no emulador; duas guias são mostrados](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
+[![Captura de tela do aplicativo em execução em um emulador. duas guias são mostradas](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
-Para criar guias na barra de ação, primeiro precisamos definir seu `NavigationMode` propriedade guias de suporte. No Android 4, um `ActionBar` propriedade está disponível na classe de atividade, que podemos usar para definir o `NavigationMode` como este:
+Para criar guias na barra de ação, primeiro precisamos definir seu `NavigationMode` propriedade para dar suporte a guias. No Android 4, uma `ActionBar` propriedade está disponível na classe de atividade, que podemos usar para definir o `NavigationMode` como este:
 
 ```csharp
 this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 ```
 
-Depois disso, podemos criar uma guia chamando o `NewTab` método na barra de ação. Com esta instância do guia, podemos chamar o `SetText` e `SetIcon` métodos para definir a guia texto do rótulo e ícone; estas chamadas são feitas na ordem em que o código mostrado abaixo:
+Depois que isso for feito, podemos criar uma guia chamando o `NewTab` método na barra de ação. Com essa instância de guia, podemos chamar o `SetText` e `SetIcon` métodos para definir o texto do rótulo da guia e o ícone; estas chamadas são feitas na ordem em que o código mostrado abaixo:
 
 ```csharp
 var tab = this.ActionBar.NewTab ();
@@ -42,7 +42,7 @@ tab.SetText (tabText);
 tab.SetIcon (Resource.Drawable.ic_tab_white);
 ```
 
-Antes que possamos adicionar guia no entanto, é necessário manipular o `TabSelected` evento. Nesse manipulador, podemos criar o conteúdo da guia. Guias de barra de ação são projetados para trabalhar com *fragmentos*, que são classes que representam uma parte da interface do usuário em uma atividade. Neste exemplo, a visualização do fragmento contém um único `TextView`, que podemos aumentar em nosso `Fragment` subclasse assim:
+Antes de podermos Adicionar guia no entanto, precisamos manipular o `TabSelected` eventos. Nesse manipulador, podemos criar o conteúdo da guia. Guias de barra de ação são projetadas para trabalhar com *fragmentos*, que são classes que representam uma parte da interface do usuário em uma atividade. Neste exemplo, o modo de exibição do fragmento contém uma única `TextView`, que podemos inflar em nosso `Fragment` subclasse como este:
 
 ```csharp
 class SampleTabFragment: Fragment
@@ -74,7 +74,7 @@ tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {
 };
 ```
 
-Por fim, podemos adicionar guia à barra de ação chamando o `AddTab` método, como mostra este código:
+Por fim, podemos adicionar guia à barra de ação chamando o `AddTab` método conforme mostrado neste código:
 
 ```csharp
 this.ActionBar.AddTab (tab);
@@ -85,24 +85,24 @@ Para o exemplo completo, consulte o *HelloTabsICS* projeto no código de exemplo
 
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
-O `ShareActionProvider` classe permite que uma ação de compartilhamento assumir o lugar de uma barra de ação. Cuida da criação de uma exibição de ação com uma lista de aplicativos que podem lidar com uma intenção de compartilhamento e mantém um histórico dos aplicativos usados anteriormente para facilitar o acesso a eles posteriormente na barra de ação. Isso permite que aplicativos compartilhem dados por meio de uma experiência de usuário que seja consistente em todo o Android.
+O `ShareActionProvider` classe permite que uma ação de compartilhamento entrar em vigor a partir de uma barra de ação. Ele se encarrega de criar uma exibição de ação com uma lista de aplicativos que podem lidar com uma intenção de compartilhamento e mantém um histórico dos aplicativos usados anteriormente para facilitar o acesso a eles mais tarde na barra de ação. Isso permite que aplicativos compartilhem dados por meio de uma experiência de usuário que seja consistente em Android.
 
 
 ### <a name="image-sharing-example"></a>Exemplo de compartilhamento de imagem
 
-Por exemplo, abaixo está uma captura de tela de uma barra de ação com um item de menu para compartilhar uma imagem (obtido o [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) exemplo). Quando o usuário toca o item de menu na barra de ação, o ShareActionProvider carrega o aplicativo para lidar com uma intenção que é associada com o `ShareActionProvider`. Neste exemplo, o aplicativo de mensagens foi anteriormente usado, para que ela é apresentada na barra de ação.
+Por exemplo, abaixo está uma captura de tela de uma barra de ação com um item de menu para compartilhar uma imagem (tiradas de [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) exemplo). Quando o usuário toca o item de menu na barra de ação, o ShareActionProvider carrega o aplicativo para lidar com uma intenção que está associada com o `ShareActionProvider`. Neste exemplo, o aplicativo de mensagens foi usado anteriormente, portanto, ela é apresentada na barra de ação.
 
-[![Captura de tela de ícone do aplicativo na barra de ação de mensagens](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
+[![Captura de tela do ícone do aplicativo na barra de ação de sistema de mensagens](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 
 Quando o usuário clica no item na barra de ação, o aplicativo de mensagens que contém a imagem compartilhada é iniciado, conforme mostrado abaixo:
 
-[![Captura de tela do aplicativo mensagens exibindo monkey imagem](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+[![Captura de tela do aplicativo de mensagens exibindo monkey imagem](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
 
-### <a name="specifying-the-action-provider-class"></a>Especifica a ação de classe de provedor
+### <a name="specifying-the-action-provider-class"></a>Especifica a ação a classe de provedor
 
-Para usar o `ShareActionProvider`, defina o `android:actionProviderClass` atributo em um item de menu no XML para abrir o menu da barra de ação da seguinte maneira:
+Para usar o `ShareActionProvider`, defina o `android:actionProviderClass` o atributo em um item de menu no XML para o menu da barra de ação da seguinte maneira:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,7 +117,7 @@ Para usar o `ShareActionProvider`, defina o `android:actionProviderClass` atribu
 
 ### <a name="inflating-the-menu"></a>Aumentando o Menu
 
-Para aumentar o menu, podemos substituir `OnCreateOptionsMenu` na subclasse de atividade. Assim que tivermos uma referência para o menu, podemos obter o `ShareActionProvider` do `ActionProvider` propriedade do item de menu e, em seguida, use o método SetShareIntent para definir o `ShareActionProvider`da intenção, conforme mostrado abaixo:
+Para aumentar o menu, podemos substituir `OnCreateOptionsMenu` na subclasse de atividade. Assim que tivermos uma referência para o menu, podemos obter os `ShareActionProvider` do `ActionProvider` propriedade do item de menu e, em seguida, use o método SetShareIntent para definir o `ShareActionProvider`da intenção, conforme mostrado abaixo:
 
 ```csharp
 public override bool OnCreateOptionsMenu (IMenu menu)
@@ -134,7 +134,7 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 
 ### <a name="creating-the-intent"></a>Criando a intenção
 
-O `ShareActionProvider` usará a intenção, passada para o `SetShareIntent` método no código acima, para iniciar a atividade adequada. Nesse caso, criamos uma tentativa para enviar uma imagem usando o código a seguir:
+O `ShareActionProvider` usará a intenção, passada para o `SetShareIntent` método no código acima, para iniciar a atividade adequada. Nesse caso, podemos criar uma intenção para enviar uma imagem usando o código a seguir:
 
 ```csharp
 Intent CreateIntent ()
@@ -147,13 +147,13 @@ Intent CreateIntent ()
 }
 ```
 
-A imagem no exemplo de código acima é incluída como um ativo com o aplicativo e copiada para um local acessível publicamente quando a atividade é criada, para que seja acessível para outros aplicativos, como o aplicativo de mensagens. O código de exemplo que acompanha este artigo contém a fonte completa deste exemplo que ilustra o uso.
+A imagem no exemplo de código acima é incluída como um ativo com o aplicativo e copiada para um local acessível publicamente quando a atividade é criada, para que seja acessível para outros aplicativos, como o aplicativo de mensagens. O código de exemplo que acompanha este artigo contém a fonte completa deste exemplo que ilustram seu uso.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Olá guias ICS (exemplo)](https://developer.xamarin.com/samples/HelloTabsICS/)
-- [Demonstração de ShareActionProvider (exemplo)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
-- [Introdução ao sabor de sorvete Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Olá guias ICS (amostra)](https://developer.xamarin.com/samples/HelloTabsICS/)
+- [Demonstração de ShareActionProvider (amostra)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+- [Apresentando o Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)

@@ -4,15 +4,15 @@ description: Este artigo descreve como trabalhar com barras de ferramentas em um
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 06faaf16ffd0adc64063bfa5a264c1895b9ca9cb
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 6cb17ae0f60390564a8aa6bdb64ea612aae51b55
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251201"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120249"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de ferramentas do xamarin. Mac
 
@@ -168,7 +168,7 @@ As seguintes propriedades estão disponíveis:
 - **Rótulo** -texto a ser exibido para o item na barra de ferramentas
 - **Rótulo de paleta** -texto a ser exibido para o item em de **permitido itens da barra de ferramentas** área
 - **Marca** – um identificador exclusivo opcional que ajuda a identificar o item no código.
-- **Identificador** -define o tipo de item de barra de ferramentas. Um valor personalizado pode ser usado para selecionar um item da barra de ferramentas no código.
+- **Identificador** -define o tipo de item da barra de ferramentas. Um valor personalizado pode ser usado para selecionar um item da barra de ferramentas no código.
 - **Selecionável** -se marcada, o item atuará como um botão liga/desliga.
 
 > [!IMPORTANT]

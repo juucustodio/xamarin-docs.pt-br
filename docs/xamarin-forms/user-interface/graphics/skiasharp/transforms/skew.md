@@ -4,15 +4,15 @@ description: Este artigo explica como a transformação de distorção pode cria
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 951fc02dfff1721c1391c5d0c8a21452a156cfdb
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: ecb07c69b7720f77401bf9bf454ee4b0248ad238
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113814"
 ---
 # <a name="the-skew-transform"></a>A transformação de distorção
 
@@ -22,17 +22,17 @@ No SkiaSharp, a transformação de distorção inclina objetos gráficos, como s
 
 ![](skew-images/skewexample.png "Um exemplo de inclinação do programa de distorção de texto de sombra")
 
-A distorção transforma retângulos em parallelograms, mas uma elipse distorcida ainda é uma elipse.
+A distorção transforma um retângulo em um paralelogramo, mas uma elipse distorcida ainda é uma elipse.
 
 Embora o xamarin. Forms define propriedades de translação, dimensionamento e as rotações, não há nenhuma propriedade correspondente no xamarin. Forms para distorção.
 
-O [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/System.Single/System.Single/) método `SKCanvas` aceita dois argumentos para distorção horizontal e vertical distorção:
+O [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(System.Single,System.Single)) método `SKCanvas` aceita dois argumentos para distorção horizontal e vertical distorção:
 
 ```csharp
 public void Skew (Single xSkew, Single ySkew)
 ```
 
-Um segundo [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/SkiaSharp.SKPoint/) método combina esses argumentos em uma única `SKPoint` valor:
+Um segundo [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(SkiaSharp.SKPoint)) método combina esses argumentos em uma única `SKPoint` valor:
 
 ```csharp
 public void Skew (SKPoint skew)
@@ -72,7 +72,7 @@ Valores da `xSkew` argumento deslocar a parte inferior do texto à direita para 
 
 [![](skew-images/skewexperiment-small.png "Tripla captura de tela da página de teste de distorção")](skew-images/skewexperiment-large.png#lightbox "tripla captura de tela da página de teste de distorção")
 
-Se `xSkew` é o negativo de `ySkew`, o resultado é a rotação, mas também em escala um pouco como indica a exibição UWP.
+Se o `xSkew` valor é o negativo do `ySkew` valor, o resultado é a rotação, mas também dimensionada um pouco como indica a exibição UWP.
 
 As fórmulas de transformação são da seguinte maneira:
 
@@ -102,7 +102,7 @@ x' = x + xSkew reforçado (y – py)
 
 y' = ySkew reforçado (x – px) + y
 
-Se `ySkew` for zero, e você está apenas especificando um valor diferente de zero `xSkew`, em seguida, `px` valor não é usado. O valor é irrelevante e da mesma forma para `ySkew` e `py`.
+Se `ySkew` for zero, então o `px` valor não é usado. O valor é irrelevante e da mesma forma para `ySkew` e `py`.
 
 Você pode achar mais fácil especificar distorção como um ângulo de inclinação, como o ângulo α neste diagrama:
 
@@ -110,7 +110,7 @@ Você pode achar mais fácil especificar distorção como um ângulo de inclina�
 
 A proporção do turno 150 pixels para a vertical de 100 pixels é a tangente do ângulo de que, neste exemplo 56.3 graus.
 
-O arquivo XAML do **experimento de ângulo de inclinação** página é semelhante ao **ângulo de inclinação** página, exceto que o `Slider` elementos variam de – 90 a 90 graus. O [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) centraliza o texto na página de código code-behind e usa `Translate` para definir um centro de inclinação para o centro da página. Um breve `SkewDegrees` método na parte inferior do código converte ângulos para distorcer valores:
+O arquivo XAML do **experimento de ângulo de inclinação** página é semelhante ao **ângulo de inclinação** página, exceto que o `Slider` elementos variam de-90 graus a 90 graus. O [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) centraliza o texto na página de código code-behind e usa `Translate` para definir um centro de inclinação para o centro da página. Um breve `SkewDegrees` método na parte inferior do código converte ângulos para distorcer valores:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -224,7 +224,7 @@ A sombra será exibido primeiro e, em seguida, o texto:
 
 [![](skew-images/skewshadowtext1-small.png "Tripla captura de tela da página de texto de sombra distorcer")](skew-images/skewshadowtext1-large.png#lightbox "tripla captura de tela da página de texto de sombra de distorção")
 
-A coordenada vertical é passado para o `DrawText` método indica a posição do texto em relação à linha de base. Essa é a coordenada vertical mesma usada para o Centro de inclinação. Essa técnica não funcionará se a cadeia de caracteres de texto contém descendentes. Por exemplo, substitua a palavra "estranha" para "Sombra" e aqui 's o resultado:
+A coordenada vertical é passado para o `DrawText` método indica a posição do texto em relação à linha de base. Essa é a coordenada vertical mesma usada para o Centro de inclinação. Essa técnica não funcionará se a cadeia de caracteres de texto contém descendentes. Por exemplo, substitua a palavra "estranha" para "Sombra" e aqui está o resultado:
 
 [![](skew-images/skewshadowtext2-small.png "Captura de tela da página de texto de sombra distorcer com uma palavra alternativa com descendentes tripla")](skew-images/skewshadowtext2-large.png#lightbox "tripla captura de tela da página de texto de sombra distorcer com uma palavra alternativa com descendentes")
 
@@ -251,5 +251,5 @@ Agora, a sombra estende da parte inferior dos descendentes:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

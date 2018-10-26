@@ -1,74 +1,74 @@
 ---
-title: Criando tvOS Interfaces de usuário com o Xamarin
-description: Cobertura de experiência geral do usuário (UX), incluindo controles de Interface do usuário (IU), use do Xcode Interface Builder e princípios de design UX ao trabalhar com Xamarin.tvOS.
+title: Criação de Interfaces do usuário com o Xamarin do tvOS
+description: Cobertura de experiência geral do usuário (UX), incluindo controles de Interface do usuário (IU), use do Xcode Interface Builder e princípios de design da UX ao trabalhar com o xamarin. tvos.
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: bc29510b90a3651f7547f38c234b6e2904016f83
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a519af9e4bddb949b6e0547387d804f1437deb21
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104603"
 ---
-# <a name="building-tvos-user-interfaces-with-xamarin"></a>Criando tvOS Interfaces de usuário com o Xamarin
+# <a name="building-tvos-user-interfaces-with-xamarin"></a>Criação de Interfaces do usuário com o Xamarin do tvOS
 
-_Cobertura de experiência geral do usuário (UX), incluindo controles de Interface do usuário (IU), use do Xcode Interface Builder e princípios de design UX ao trabalhar com Xamarin.tvOS._
+_Cobertura de experiência geral do usuário (UX), incluindo controles de Interface do usuário (IU), use do Xcode Interface Builder e princípios de design da UX ao trabalhar com o xamarin. tvos._
 
-Ao trabalhar com c# e .NET em um tvOS baseados em Xamarin, você tem acesso aos controles de Interface do usuário mesmo que um desenvolvedor trabalhando em Objective-C ou Swift e Xcode. Construtor de Interface do Xcode pode ser usado para criar e manter suas Interfaces de usuário (ou, opcionalmente, criá-los diretamente no código do c#).
+Ao trabalhar com C# e .NET em um tvOS baseados em Xamarin, você tem acesso aos mesmos controles de Interface do usuário que faz um desenvolvedor que trabalha em Objective-C ou Swift e Xcode. Interface Builder do Xcode pode ser usado para criar e manter suas Interfaces de usuário (ou, opcionalmente, criá-los diretamente no C# código).
 
-As guias listadas a seguir fornecem informações detalhadas sobre como trabalhar com elementos de interface do usuário tvOS em um aplicativo Xamarin.tvOS. É altamente recomendável que você leia o [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md) primeiro, pois ele aborda os principais conceitos e técnicas que será usado em cada artigo.
+Os guias listados abaixo oferecem informações detalhadas sobre como trabalhar com elementos de interface do usuário do tvOS em um aplicativo xamarin. tvos. É altamente recomendável que você trabalhe por meio de [Olá, guia de início rápido do tvOS](~/ios/tvos/get-started/hello-tvos.md) primeiro, pois ele abrange conceitos-chave e técnicas que usaremos em cada artigo.
 
 ## <a name="working-with-alertsiostvosuser-interfacealertsmd"></a>[Trabalhando com alertas](~/ios/tvos/user-interface/alerts.md)
 
-Este artigo aborda o trabalho com `UIAlertController` para exibir uma mensagem de alerta para o usuário no Xamarin.tvOS.
+Este artigo aborda o trabalho com `UIAlertController` para exibir uma mensagem de alerta para o usuário no xamarin. tvos.
 
 ## <a name="working-with-buttonsiostvosuser-interfacebuttonsmd"></a>[Trabalhando com botões](~/ios/tvos/user-interface/buttons.md)
 
-Este artigo aborda criando e trabalhando com botões dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com botões dentro de um aplicativo xamarin. tvos.
 
 ## <a name="working-with-collection-viewsiostvosuser-interfacecollection-viewsmd"></a>[Trabalhando com exibições de coleção](~/ios/tvos/user-interface/collection-views.md)
 
-Este artigo aborda criando e trabalhando com exibições de coleção dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com exibições de coleção dentro de um aplicativo xamarin. tvos.
 
 ## <a name="working-with-navigation-barsiostvosuser-interfacenavigation-barsmd"></a>[Trabalhando com barras de navegação](~/ios/tvos/user-interface/navigation-bars.md)
 
-Este artigo aborda criando e trabalhando com barras de navegação dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com barras de navegação dentro de um aplicativo xamarin. tvos.
 
 ## <a name="working-with-page-controlsiostvosuser-interfacepage-controlsmd"></a>[Trabalhando com controles de página](~/ios/tvos/user-interface/page-controls.md)
 
-Este artigo aborda a criação e trabalhar com controles de página dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com controles de página dentro de um aplicativo xamarin. tvos.
 
-## <a name="working-with-progress-indicatorsiostvosuser-interfaceprogress-indicatorsmd"></a>[Trabalhando com indicadores de progresso](~/ios/tvos/user-interface/progress-indicators.md)
+## <a name="working-with-progress-indicatorsiostvosuser-interfaceprogress-indicatorsmd"></a>[Trabalhar com indicadores de progresso](~/ios/tvos/user-interface/progress-indicators.md)
 
-Este artigo aborda criando e trabalhando com indicadores de progresso dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com indicadores de progresso dentro de um aplicativo xamarin. tvos.
 
 ## <a name="working-with-segmented-controlsiostvosuser-interfacesegmented-controlsmd"></a>[Trabalhando com controles segmentados](~/ios/tvos/user-interface/segmented-controls.md)
 
-Este artigo aborda a criação e trabalhar com controles segmentado dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com controles segmentados dentro de um aplicativo xamarin. tvos.
 
 ## <a name="working-with-split-view-controllersiostvosuser-interfacesplit-viewsmd"></a>[Trabalhando com os controladores de exibição de divisão](~/ios/tvos/user-interface/split-views.md)
 
-Este artigo aborda criando e trabalhando com controladores de exibição de divisão dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com controladores de exibição de divisão dentro de um aplicativo xamarin. tvos.
 
 ## <a name="working-with-stack-viewsiostvosuser-interfacestacked-viewsmd"></a>[Trabalhando com exibições de pilha](~/ios/tvos/user-interface/stacked-views.md)
 
-Este artigo aborda criando e trabalhando com exibições de pilha dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com modos de exibição de pilha dentro de um aplicativo xamarin. tvos.
 
 ## <a name="working-with-tab-barsiostvosuser-interfacetab-barsmd"></a>[Trabalhando com barras de guia](~/ios/tvos/user-interface/tab-bars.md)
 
-Este artigo aborda criando e trabalhando com barras de guia dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com barras de guia dentro de um aplicativo xamarin. tvos.
 
-## <a name="working-with-table-viewsiostvosuser-interfacetable-viewsmd"></a>[Trabalhando com modos de exibição de tabela](~/ios/tvos/user-interface/table-views.md)
+## <a name="working-with-table-viewsiostvosuser-interfacetable-viewsmd"></a>[Trabalhando com exibições de tabela](~/ios/tvos/user-interface/table-views.md)
 
-Este artigo aborda criando e trabalhando com modos de exibição de tabela e controladores de exibição de tabela dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com modos de exibição de tabela e controladores de exibição de tabela dentro de um aplicativo xamarin. tvos.
 
-## <a name="working-with-text-and-search-fieldsiostvosuser-interfacetext-fields-and-searchmd"></a>[Trabalhando com textos e campos de pesquisa](~/ios/tvos/user-interface/text-fields-and-search.md)
+## <a name="working-with-text-and-search-fieldsiostvosuser-interfacetext-fields-and-searchmd"></a>[Trabalhando com campos de texto e pesquisa](~/ios/tvos/user-interface/text-fields-and-search.md)
 
-Este artigo aborda criando e trabalhando com textos e campos de pesquisa dentro de um aplicativo Xamarin.tvOS.
+Este artigo aborda a projetar e trabalhar com texto e campos de pesquisa dentro de um aplicativo xamarin. tvos.
 
 
 
@@ -76,6 +76,6 @@ Este artigo aborda criando e trabalhando com textos e campos de pesquisa dentro 
 
 - [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
-- [Criando aplicativos para tvOS com Xamarin (vídeo)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
+- [Criação de aplicativos para tvOS com o Xamarin (vídeo)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

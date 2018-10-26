@@ -1,28 +1,28 @@
 ---
-title: Dedo multitoque xamarin de controle
-description: Este documento descreve como controlar os dedos individuais em gestos de toque vários em um aplicativo xamarin. Ele gira em torno de um exemplo de aplicativo finger-painting.
+title: Dedo multitoque acompanhamento no xamarin. IOS
+description: Este documento descreve como controlar os dedos individuais em gestos multitoque em um aplicativo xamarin. IOS. Ele gira em torno de um exemplo de aplicativo para pintura com dedo.
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 85dbd3c158408026f4ecef5fb2b01c265747140e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a1ddcda84d51b5a8a9220558ddaf9476a2321ee8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784397"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105045"
 ---
-# <a name="multi-touch-finger-tracking-in-xamarinios"></a>Dedo multitoque xamarin de controle
+# <a name="multi-touch-finger-tracking-in-xamarinios"></a>Dedo multitoque acompanhamento no xamarin. IOS
 
 _Este documento demonstra como controlar os eventos de toque de vários dedos_
 
-Há ocasiões em que um aplicativo de multitoque precisa acompanhar dedos individuais conforme se move simultaneamente na tela. Um aplicativo típico é um programa de finger-paint. Você deseja que o usuário possa desenhar com um único dedo, mas também para desenhar punho vários ao mesmo tempo. Como o programa processa vários eventos de toque, ela precisa distinguir entre essas dedos.
+Há vezes quando um aplicativo multitoque necessárias para acompanhar os dedos individuais quando eles passam simultaneamente na tela. Um aplicativo típico é um programa de finger-paint. Você deseja que o usuário seja capaz de desenhar com um único dedo, mas também para desenhar com vários dedos, ao mesmo tempo. Como seu programa processa vários eventos de toque, ele precisa distinguir entre esses dedos.
 
-Quando um dedo toca primeiro na tela, o iOS cria um [ `UITouch` ](https://developer.xamarin.com/api/type/UIKit.UITouch/) objeto para que o dedo. Esse objeto permanece o mesmo como o dedo move na tela e, em seguida, levante na tela, no ponto em que o objeto é descartado. Para manter o controle dos dedos, um programa deve evitar armazenar esses dados `UITouch` diretamente do objeto. Em vez disso, ele pode usar o [ `Handle` ](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) propriedade do tipo `IntPtr` para identificar esses `UITouch` objetos.
+Quando um dedo toca na tela primeiro, o iOS cria uma [ `UITouch` ](https://developer.xamarin.com/api/type/UIKit.UITouch/) objeto para desse dedo. Esse objeto permanece o mesmo como o dedo se move na tela e depois se afasta da tela, no ponto em que o objeto é descartado. Para manter o controle de dedos, um programa deve evitar armazenar isso `UITouch` diretamente do objeto. Em vez disso, ele pode usar o [ `Handle` ](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) propriedade do tipo `IntPtr` exclusivamente para identificar esses `UITouch` objetos.
 
-Quase sempre, um programa que controla os dedos individuais mantém um dicionário para controle de toque. Para um programa do iOS, a chave de dicionário é o `Handle` valor que identifica um determinado dedo. O valor do dicionário depende do aplicativo. No [pintura a dedo](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) programa, cada traço dedo (de toque para liberar) é associado um objeto que contém todas as informações necessárias para processar a linha desenhada com esse dedo. O programa define um pequeno `FingerPaintPolyline` classe para essa finalidade:
+Quase sempre, um programa que acompanha os dedos individuais mantém um dicionário para acompanhamento de toque. Um programa de iOS, a chave do dicionário é o `Handle` valor que identifica um dedo específico. O valor do dicionário depende do aplicativo. No [pintura a dedo](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) programa, cada traço do dedo (desde toque a versão) é associado um objeto que contém todas as informações necessárias para renderizar a linha desenhada desse dedo. O programa define um pequeno `FingerPaintPolyline` classe para essa finalidade:
 
 ```csharp
 class FingerPaintPolyline
@@ -40,24 +40,24 @@ class FingerPaintPolyline
 }
 ```
 
-Cada polilinha tem uma cor, a largura do traço e um gráfico de iOS [ `CGPath` ](https://developer.xamarin.com/api/type/CoreGraphics.CGPath/) objeto acumular e processar vários pontos da linha como ela é desenhada.
+Cada polilinha tem uma cor, uma largura de traço e um gráfico de iOS [ `CGPath` ](https://developer.xamarin.com/api/type/CoreGraphics.CGPath/) objeto acumular e renderizar os vários pontos da linha conforme ela é desenhada.
 
 
-Todo o restante do código mostrado a seguir está contido em um `UIView` derivada denominada `FingerPaintCanvasView`. Classe mantém um dicionário de objetos do tipo `FingerPaintPolyline` durante o tempo que ativamente estão sendo desenhadas por um ou mais dedos:
+Todo o resto do código mostrado a seguir está contido em uma `UIView` derivativo chamado `FingerPaintCanvasView`. Se a classe mantém um dicionário de objetos do tipo `FingerPaintPolyline` durante a hora em que eles estão sendo desenhados ativamente por um ou mais dedos:
 
 ```csharp
 Dictionary<IntPtr, FingerPaintPolyline> inProgressPolylines = new Dictionary<IntPtr, FingerPaintPolyline>();
 ```
 
-Este dicionário permite que o modo de exibição obter rapidamente o `FingerPaintPolyline` informações associadas a cada dedo com base no `Handle` propriedade o `UITouch` objeto.
+Esse dicionário permite que o modo de exibição obter rapidamente o `FingerPaintPolyline` informações associadas com cada dedo com base no `Handle` propriedade do `UITouch` objeto.
 
-O `FingerPaintCanvasView` classe também mantém um `List` objeto para os polilinhas que foram concluídas:
+O `FingerPaintCanvasView` classe também mantém um `List` objeto para as polilinhas que foram concluídas:
 
 ```csharp
 List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 ```
 
-Os objetos nesta `List` estão na mesma ordem em que foram feitos.
+Os objetos nesta `List` estão na mesma ordem que foram desenhadas.
 
 `FingerPaintCanvasView` substitui os cinco métodos definidos pelo `View`:
 
@@ -67,7 +67,7 @@ Os objetos nesta `List` estão na mesma ordem em que foram feitos.
 - [`TouchesCancelled`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesCancelled/p/Foundation.NSSet/UIKit.UIEvent/)
 - [`Draw`](https://developer.xamarin.com/api/member/UIKit.UIView.Draw/p/CoreGraphics.CGRect/)
 
-Vários `Touches` substituições acumulam os pontos que compõem as polilinhas.
+Os vários `Touches` substituições acumulam os pontos que compõem as polilinhas.
 
 O [`Draw`] substituição desenha as polilinhas concluídas e, em seguida, as polilinhas em andamento:
 
@@ -103,7 +103,7 @@ public override void Draw(CGRect rect)
 }
 ```
 
-Cada uma da `Touches` substituições potencialmente relata as ações de vários dedos, indicados por um ou mais `UITouch` objetos armazenados no `touches` argumento do método. O `TouchesBegan` substituições loop através desses objetos. Para cada `UITouch` do objeto, o método cria e inicializa uma nova `FingerPaintPolyline` objeto, incluindo a armazenar o local inicial do dedo obtido o `LocationInView` método. Isso `FingerPaintPolyline` objeto é adicionado ao `InProgressPolylines` dicionário usando o `Handle` propriedade o `UITouch` objeto como uma chave de dicionário:
+Cada um dos `Touches` substituições potencialmente relata as ações de vários dedos, indicados por um ou mais `UITouch` objetos armazenados no `touches` argumento para o método. O `TouchesBegan` substituições loop através desses objetos. Para cada `UITouch` do objeto, o método cria e inicializa uma nova `FingerPaintPolyline` objeto, inclusive armazenar o local inicial do dedo obtido o `LocationInView` método. Isso `FingerPaintPolyline` objeto é adicionado ao `InProgressPolylines` dicionário usando o `Handle` propriedade do `UITouch` objeto como uma chave de dicionário:
 
 ```csharp
 public override void TouchesBegan(NSSet touches, UIEvent evt)
@@ -128,7 +128,7 @@ public override void TouchesBegan(NSSet touches, UIEvent evt)
 
 O método é concluído chamando `SetNeedsDisplay` para gerar uma chamada para o `Draw` substituir e atualizar a tela.
 
-Como o dedo ou dedos movem na tela, o `View` obtém várias chamadas para seu `TouchesMoved` substituir. Essa substituição é da mesma forma percorre o `UITouch` objetos armazenados no `touches` argumento e adiciona o local atual do dedo para o caminho de gráficos:
+À medida que o dedo ou dedos move na tela, o `View` obtém várias chamadas para seus `TouchesMoved` substituir. Essa substituição é da mesma forma percorre os `UITouch` objetos armazenados no `touches` argumento e adiciona o local atual do dedo para o caminho de gráficos:
 
 ```csharp
 public override void TouchesMoved(NSSet touches, UIEvent evt)
@@ -144,9 +144,9 @@ public override void TouchesMoved(NSSet touches, UIEvent evt)
 }
 ```
 
-O `touches` coleção contém apenas aqueles `UITouch` objetos para os dedos que mudaram desde a última chamada a `TouchesBegan` ou `TouchesMoved`. Se você alguma vez precisar `UITouch` objetos correspondentes aos *todos os* dedos atualmente em contato com a tela, essa informação está disponível por meio de `AllTouches` propriedade do `UIEvent` argumento para o método.
+O `touches` coleção contém somente aqueles `UITouch` objetos para os dedos que mudaram desde a última chamada para `TouchesBegan` ou `TouchesMoved`. Se você precisar `UITouch` objetos correspondentes aos *todos os* os dedos atualmente em contato com a tela, essa informação está disponível por meio de `AllTouches` propriedade do `UIEvent` argumento para o método.
 
-O `TouchesEnded` substituição tem dois trabalhos. Adicione o último ponto para o caminho de gráficos e transferir a `FingerPaintPolyline` de objeto o `inProgressPolylines` dicionário para a `completedPolylines` lista:
+O `TouchesEnded` substituição tiver dois trabalhos. Ele deve adicionar o último ponto para o caminho de gráficos e transferir a `FingerPaintPolyline` do objeto do `inProgressPolylines` dicionário para o `completedPolylines` lista:
 
 ```csharp
 public override void TouchesEnded(NSSet touches, UIEvent evt)
@@ -167,7 +167,7 @@ public override void TouchesEnded(NSSet touches, UIEvent evt)
 }
 ```
 
-O `TouchesCancelled` substituição é tratada pelo simplesmente abandonar a `FingerPaintPolyline` objeto no dicionário:
+O `TouchesCancelled` substituição é tratada pelo simplesmente abandonar o `FingerPaintPolyline` objeto no dicionário:
 
 ```csharp
 public override void TouchesCancelled(NSSet touches, UIEvent evt)
@@ -182,15 +182,15 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 }
 ```
 
-Esse processamento permite que o [pintura a dedo](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) programa para controlar os dedos individuais e desenhar os resultados na tela:
+Completamente, esse processamento permite que o [pintura a dedo](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) programa para acompanhar os dedos individuais e desenhar os resultados na tela:
 
-[![](touch-tracking-images/image01.png "Controle dedos individuais e os resultados na tela de desenho")](touch-tracking-images/image01.png#lightbox)
+[![](touch-tracking-images/image01.png "Controle de dedos individuais e os resultados de desenho na tela")](touch-tracking-images/image01.png#lightbox)
 
-Agora você viu como você pode controlar individuais dedos na tela e distinguir entre eles.
+Agora você já viu como controle de dedos individuais na tela e distinguir entre elas.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Guia de Xamarin Android equivalente](~/android/app-fundamentals/touch/touch-tracking.md)
-- [Pintura a dedo (exemplo)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint)
+- [Guia do Xamarin Android equivalente](~/android/app-fundamentals/touch/touch-tracking.md)
+- [Pintura a dedo (amostra)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint)

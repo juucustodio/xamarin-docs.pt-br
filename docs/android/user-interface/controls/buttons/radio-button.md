@@ -3,22 +3,24 @@ title: RadioButton
 ms.prod: xamarin
 ms.assetid: 3C32EA3F-D917-C988-72C5-A17354DA791E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 1267491f2d9b7519f76651df059722420fa8e1eb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: be473580b24dba6b4f08384771e2097d368f8dc8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763108"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123590"
 ---
 # <a name="radiobutton"></a>RadioButton
 
-Nesta seção, você criará dois botões de opção de mutuamente exclusivas (habilitar um desabilita outros), usando o [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) e [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/) widgets. Quando o botão é pressionado, uma mensagem de notificação do sistema será exibida.
+Nesta seção, você criará dois botões de opção de mutuamente exclusivas (habilitar um desabilita o outro), usando o [`RadioGroup`](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/)
+e [`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
+widgets. Quando qualquer botão de opção é pressionado, uma mensagem de notificação do sistema será exibida.
 
 
-Abra o **Resources/layout/Main.axml** de arquivos e adicionar dois [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s, aninhado em uma [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) (dentro a [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+Abra o **Resources/layout/Main.axml** arquivo e adicione dois [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s, aninhada em uma [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) (dentro a [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
 
 ```xml
 <RadioGroup
@@ -36,9 +38,10 @@ Abra o **Resources/layout/Main.axml** de arquivos e adicionar dois [ `RadioButto
 </RadioGroup>
 ```
 
-É importante que o [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s são agrupados pelo [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) elemento para que não mais de um pode ser selecionado por vez. Essa lógica é tratada automaticamente pelo sistema Android. Quando um [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/) dentro de um grupo é selecionado, todas as outras são desmarcadas automaticamente.
+É importante que o [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s são agrupados pela [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) elemento para que não mais de um pode ser selecionado por vez. Essa lógica é tratada automaticamente pelo sistema do Android. Quando um [`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
+dentro de um grupo for selecionado, todos os outros são desmarcados automaticamente.
 
-Para fazer algo quando cada [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/) é selecionado, é necessário gravar um manipulador de eventos:
+Para fazer algo quando cada [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/) é selecionada, precisamos escrever um manipulador de eventos:
 
 ```csharp
 private void RadioButtonClick (object sender, EventArgs e)
@@ -48,10 +51,12 @@ private void RadioButtonClick (object sender, EventArgs e)
 }
 ```
 
-Primeiro, o remetente passado é convertido em um botão de opção.
-Em seguida, um [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) mensagem exibe o texto do botão de opção selecionado.
+Primeiro, o remetente passado for convertido em um botão de opção.
+Em seguida, um [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
+mensagem exibe o texto do botão de opção selecionado.
 
-Agora, na parte inferior do [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle) método, adicione o seguinte:
+Agora, na parte inferior das [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
+método, adicione o seguinte:
 
 ```csharp
 RadioButton radio_red = FindViewById<RadioButton>(Resource.Id.radio_red);
@@ -61,11 +66,13 @@ radio_red.Click += RadioButtonClick;
 radio_blue.Click += RadioButtonClick;
 ```
 
-Isso captura cada o [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s do layout e adiciona o handlerto evento recém-criado.
+Isso captura cada um dos [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s do layout e adiciona o handlerto evento recém-criado.
 
 Execute o aplicativo.
 
-**Dica:** se você precisar alterar o estado por conta própria (como quando carregar um salvo [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), use o [ `Checked` ](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/) setter de propriedade ou [ `Toggle()` ](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/) método.
+**Dica:** se você precisar alterar o estado por conta própria (por exemplo, quando carregar um salvo [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), use o [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+setter de propriedade ou [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+método.
 
-*Partes desta página são modificações com base no trabalho criado e compartilhado pelo Android Abrir projeto de origem e usada de acordo com condições descritas no*
-[*Creative Commons 2.5 atribuição de licença* ](http://creativecommons.org/licenses/by/2.5/). 
+*Partes desta página são modificações com base no trabalho criado e compartilhado por Android Open Source Project e usadas de acordo com os termos descritos na*
+[*2.5 atribuição de licença da Creative Commons* ](http://creativecommons.org/licenses/by/2.5/). 

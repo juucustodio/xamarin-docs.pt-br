@@ -4,15 +4,15 @@ description: Esta seção mostra como implementar notificações locais no xamar
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
-ms.sourcegitcommit: 7ffbecf4a44c204a3fce2a7fb6a3f815ac6ffa21
+ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "39514525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117675"
 ---
 <a name="compatibility"></a>
 
@@ -26,7 +26,7 @@ O Android fornece duas áreas controladas pelo sistema para exibir ícones de no
 
 ![Área de notificação de exemplo em um dispositivo](local-notifications-images/01-notification-shade.png)
 
-Para obter detalhes sobre a notificação, o usuário pode abrir a gaveta de notificação (que se expande cada ícone de notificação para revelar o conteúdo da notificação) e executar todas as ações associadas com as notificações. Captura de tela a seguir mostra uma *gaveta de notificação* que corresponde à área de notificação exibida acima:
+Para obter detalhes sobre a notificação, o usuário pode abrir a gaveta de notificação (que se expande cada ícone de notificação para revelar o conteúdo da notificação) e executar todas as ações associadas com as notificações. A captura de tela a seguir mostra uma *gaveta de notificação* que corresponde à área de notificação exibida acima:
 
 [![Gaveta de notificação de exemplo exibindo três notificações](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
@@ -66,9 +66,9 @@ Opcionalmente, as notificações podem exibir um ícone grande que representa o 
 
 Começando com o Android 5.0, as notificações também podem aparecer na tela de bloqueio:
 
-[![Exemplo de notificação de lockscreen](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
+[![Exemplo de notificação de tela de bloqueio](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
-O usuário pode tocar duas vezes o notificação lockscreen para desbloquear o dispositivo e vá para o aplicativo que originou essa notificação, ou passe o dedo para ignorar a notificação. Os aplicativos podem definir o nível de visibilidade de uma notificação para controlar o que é mostrado na tela de bloqueio e os usuários podem escolher se deseja permitir que conteúdos confidenciais sejam mostrados nas notificações de lockscreen.
+O usuário pode com um toque duplo na notificação de tela de bloqueio para desbloquear o dispositivo e vá para o aplicativo que originou essa notificação, ou passe o dedo para ignorar a notificação. Os aplicativos podem definir o nível de visibilidade de uma notificação para controlar o que é mostrado na tela de bloqueio e os usuários podem escolher se deseja permitir que conteúdos confidenciais sejam mostrados nas notificações da tela de bloqueio.
 
 Android 5.0 introduziu um formato de apresentação da notificação de alta prioridade chamado *Heads-Up*. Notificações de alerta Deslizar para baixo da parte superior da tela por alguns segundos e, em seguida, retreat volta até a área de notificação:
 
@@ -80,7 +80,7 @@ Android inclui suporte para metadados de notificação para que as notificaçõe
 
 -   **Prioridade** &ndash; o nível de prioridade que determina como e quando as notificações são apresentadas. Por exemplo, no Android 5.0, notificações de alta prioridade são exibidas como notificações de alerta.
 
--   **Visibilidade** &ndash; Especifica quanto conteúdo de notificação deve ser exibido quando a notificação será exibida na tela de bloqueio.
+-   **Visibilidade** &ndash; Especifica quanto conteúdo de notificação deve ser exibida quando a notificação será exibida na tela de bloqueio.
 
 -   **Categoria** &ndash; informa o sistema como manipular a notificação em várias circunstâncias, como quando o dispositivo está em *não incomodar* modo.
 
@@ -117,7 +117,7 @@ O **YouTube** duas categorias de notificação de lista do aplicativo que é ins
 
 [![Telas de notificação para o YouTube no Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
-Cada uma dessas categorias corresponde a um canal de notificação. A YouTube aplicativo implementa um **notificações de Download** canal e uma **notificações gerais** channel. O usuário pode tocar **baixar notificações**, que exibe a tela de configurações para o aplicativo de download do canal de notificações:
+Cada uma dessas categorias corresponde a um canal de notificação. A YouTube aplicativo implementa um **notificações de Download** canal e uma **notificações gerais** canal. O usuário pode tocar **baixar notificações**, que exibe a tela de configurações para o aplicativo de download do canal de notificações:
 
 [![Baixe a tela de notificações para o aplicativo do YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
@@ -657,14 +657,14 @@ Como a notificação de "Para o dia de pensamento" é uma notificação de baixa
 
 ### <a name="visibility-settings"></a>Configurações de visibilidade
 
-Começando com o Android 5.0, o *visibilidade* configuração está disponível para controlar quanto conteúdo de notificação é exibida na tela de bloqueio de segura.
+Começando com o Android 5.0, o *visibilidade* configuração está disponível para controlar quanto conteúdo de notificação é exibida na tela de bloqueio seguro.
 Xamarin. Android define as enumerações a seguir para definir a visibilidade de notificação:
 
--   `NotificationVisibility.Public` &ndash; Todo o conteúdo da notificação é exibido na tela de bloqueio de segura.
+-   `NotificationVisibility.Public` &ndash; Todo o conteúdo da notificação é exibido na tela de bloqueio seguro.
 
--   `NotificationVisibility.Private` &ndash; Somente informações essenciais são exibidas na tela de bloqueio de segura (como o ícone de notificação e o nome do aplicativo que postou), mas o restante dos detalhes da notificação estão ocultos. Todas as notificações padrão `NotificationVisibility.Private`.
+-   `NotificationVisibility.Private` &ndash; Somente informações essenciais são exibidas na tela de bloqueio de seguro (como o ícone de notificação e o nome do aplicativo que postou), mas o restante dos detalhes da notificação estão ocultos. Todas as notificações padrão `NotificationVisibility.Private`.
 
--   `NotificationVisibility.Secret` &ndash; Nada é exibido na tela de bloqueio segura, nem mesmo o ícone de notificação. O conteúdo da notificação está disponível somente depois que o usuário desbloqueie o dispositivo.
+-   `NotificationVisibility.Secret` &ndash; Nada é exibido na tela de bloqueio seguro, nem mesmo o ícone de notificação. O conteúdo da notificação está disponível somente depois que o usuário desbloqueie o dispositivo.
 
 Para definir a visibilidade de uma notificação, aplicativos de chamada a `SetVisibility` método da `NotificationCompat.Builder` objeto, passando a configuração de visibilidade. Por exemplo, essa chamada para `SetVisibility` faz com que a notificação `Private`:
 
@@ -672,11 +672,11 @@ Para definir a visibilidade de uma notificação, aplicativos de chamada a `SetV
 builder.SetVisibility (NotificationVisibility.Private);
 ```
 
-Quando um `Private` notificação for lançada, somente o nome e o ícone do aplicativo é exibido na tela de bloqueio de segura. Em vez da mensagem de notificação, o usuário vê "Desbloquear seu dispositivo para ver essa notificação":
+Quando um `Private` notificação for lançada, somente o nome e o ícone do aplicativo é exibido na tela de bloqueio seguro. Em vez da mensagem de notificação, o usuário vê "Desbloquear seu dispositivo para ver essa notificação":
 
 ![Desbloqueie a mensagem de notificação do dispositivo](local-notifications-images/25-lockscreen-private.png)
 
-Neste exemplo, **NotificationsLab** é o nome do aplicativo de origem. Esta versão redigida da notificação é exibida somente quando o lockscreen é segura (ou seja, protegido por senha, padrão ou PIN) &ndash; se o lockscreen não é seguro, todo o conteúdo da notificação está disponível na tela de bloqueio.
+Neste exemplo, **NotificationsLab** é o nome do aplicativo de origem. Esta versão redigida da notificação é exibida somente quando a tela de bloqueio é segura (ou seja, protegido por senha, padrão ou PIN) &ndash; se a tela de bloqueio não for segura, todo o conteúdo da notificação está disponível na tela de bloqueio.
 
 
 ### <a name="category-settings"></a>Configurações de categoria
@@ -755,9 +755,9 @@ if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
 Neste exemplo, o aplicativo **estrutura de destino** é definido como Android 5.0 e o **versão mínima do Android** está definido como **Android 4.1 (API nível 16)**. Porque `SetCategory` está disponível no nível da API 21 e versões posterior, esse código de exemplo chamará `SetCategory` apenas quando ele está disponível &ndash; chamará não `SetCategory` quando o nível de API é menor que 21.
 
 
-### <a name="lockscreen-visibility"></a>Visibilidade de Lockscreen
+### <a name="lock-screen-visibility"></a>Visibilidade da tela de bloqueio
 
-Porque o Android não dava suporte a notificações de lockscreen antes o Android 5.0 (API nível 21), `NotificationCompat.Builder` não oferece suporte a `SetVisibility` método. Conforme explicado acima para `SetCategory`, seu código pode verificar o nível de API em tempo de execução e chame `SetVisiblity` apenas quando ele está disponível:
+Porque o Android não dava suporte a notificações de tela de bloqueio antes de Android 5.0 (API nível 21), `NotificationCompat.Builder` não oferece suporte a `SetVisibility` método. Conforme explicado acima para `SetCategory`, seu código pode verificar o nível de API em tempo de execução e chame `SetVisiblity` apenas quando ele está disponível:
 
 ```csharp
 if ((int) Android.OS.Build.Version.SdkInt >= 21) {
@@ -768,7 +768,7 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 
 ## <a name="summary"></a>Resumo
 
-Este artigo explicou como criar notificações locais no Android. Ele descreveu a anatomia de uma notificação, ele explicou como usar `NotificationCompat.Builder` para criar notificações, como notificações de estilo de ícone grande, *texto grande*, *imagem* e *caixa de entrada*  formatos, como definir configurações de metadados, como prioridade, a visibilidade e a categoria de notificação e como inicializar uma atividade de uma notificação. Este artigo também descreveu como essas configurações de notificação funcionam com o novo Heads-Up, lockscreen, e *não incomodar* recursos introduzidos no Android 5.0. Por fim, você aprendeu a usar `NotificationCompat.Builder` para manter a notificação de compatibilidade com versões anteriores do Android.
+Este artigo explicou como criar notificações locais no Android. Ele descreveu a anatomia de uma notificação, ele explicou como usar `NotificationCompat.Builder` para criar notificações, como notificações de estilo de ícone grande, *texto grande*, *imagem* e *caixa de entrada*  formatos, como definir configurações de metadados, como prioridade, a visibilidade e a categoria de notificação e como inicializar uma atividade de uma notificação. Este artigo também descreveu como essas configurações de notificação funcionam com a novo alerta, tela de bloqueio, e *não incomodar* recursos introduzidos no Android 5.0. Por fim, você aprendeu a usar `NotificationCompat.Builder` para manter a notificação de compatibilidade com versões anteriores do Android.
 
 Para obter diretrizes sobre as notificações de criação para o Android, consulte [notificações](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
