@@ -4,15 +4,15 @@ description: Este artigo aborda incluindo um ativo de imagem em um aplicativo xa
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 4b2bddeb6b04b5c5288f501fce0d6bb03e0b6584
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: b29820cb69702f7570e10a555ebe9e3e0824653f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251145"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104148"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Exibindo uma imagem no xamarin. IOS
 
@@ -22,7 +22,7 @@ _Este artigo aborda incluindo um ativo de imagem em um aplicativo xamarin. IOS e
 
 Ao adicionar uma imagem para uso em um aplicativo xamarin. IOS, o desenvolvedor usará um _catálogo de ativos_ para dar suporte a todos os dispositivos iOS e a resolução necessária por um aplicativo.
 
-Adicionado no iOS 7, **conjuntos de imagem de catálogos de ativos** contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores para um aplicativo de dimensionamento. Em vez de usar o nome de arquivo de ativos de imagem (consulte [imagens independentes de resolução e uma imagem de nomenclatura](~/ios/app-fundamentals/images-icons/displaying-an-image.md)), **conjuntos de imagem** usar um arquivo Json para especificar qual imagem pertence a qual dispositivo e/ou resolução . Essa é a maneira preferencial para gerenciar e dar suporte a imagens no iOS (a partir do iOS 9 ou posterior).
+Adicionado no iOS 7, **conjuntos de imagem de catálogos de ativos** contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores para um aplicativo de dimensionamento. Em vez de usar o nome de arquivo de ativos de imagem **conjuntos de imagem** usar um arquivo Json para especificar qual imagem pertence a qual dispositivo e/ou resolução. Essa é a maneira preferencial para gerenciar e dar suporte a imagens no iOS (a partir do iOS 9 ou posterior).
 
 ## <a name="adding-images-to-an-asset-catalog-image-set"></a>Adicionando imagens a uma imagem do catálogo de ativos definida
 
@@ -30,7 +30,7 @@ Conforme mencionado acima, uma **conjuntos de imagem de catálogos de ativos** c
 
 Para criar um novo conjunto de imagem e adicionar imagens a ele, faça o seguinte:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. No **Gerenciador de soluções**, clique duas vezes o `Assets.xcassets` arquivo para abri-lo para edição:
 
@@ -48,7 +48,7 @@ Ao usar um **imagem conjunto** no Designer do iOS, basta selecionar o nome do co
 
 ![](displaying-an-image-images/imageset06.png "Selecione o nome do conjunto de uma imagem na lista suspensa")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Abra o catálogo de ativos do **Gerenciador de soluções**e, no canto superior esquerdo, clique o **Plus** botão:
 
@@ -88,11 +88,11 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 
 A partir do iOS 8, especial **vetor** foi adicionado à classe **conjuntos de imagem** que permite ao desenvolvedor incluir uma **PDF** formatado imagem vetorial no cassete em vez disso, incluindo arquivos de bitmap individuais em diferentes resoluções. Usando esse método, forneça um arquivo único vetor para o `@1x` resolução (formatada como um arquivo PDF de vetor) e o `@2x` e `@3x` versões do arquivo serão geradas em tempo de compilação e incluídas no pacote do aplicativo.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](displaying-an-image-images/imageset05.png "Imagens vetoriais no editor de catálogos de ativos")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](displaying-an-image-images/asset8.png "Imagens vetoriais no editor de catálogos de ativos")
 
@@ -116,11 +116,11 @@ Com base no design de um aplicativo iOS, pode haver vezes quando o desenvolvedor
 
 Para obter facilmente esse efeito, alterne o _modo de renderização_ do ativo de imagem para **imagem de modelo**:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 [![](displaying-an-image-images/templateimage01.png "O modo de renderização definido como imagem de modelo")](displaying-an-image-images/templateimage01.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](displaying-an-image-images/templateimage01vs.png "O modo de renderização definido como modelo")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
@@ -128,11 +128,11 @@ Para obter facilmente esse efeito, alterne o _modo de renderização_ do ativo d
 
 Do Designer do iOS, atribua o ativo de imagem a um controle de interface do usuário, então, configurar o **tonalidade** para colorir a imagem:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 [![](displaying-an-image-images/templateimage03.png "Defina a tonalidade para colorir a imagem")](displaying-an-image-images/templateimage03.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](displaying-an-image-images/templateimage03vs.png "Defina a tonalidade para colorir a imagem")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
@@ -169,14 +169,14 @@ Ao trabalhar com imagens nos catálogos de ativos pode haver momentos em que uma
 
 Para adicionar um novo catálogo de ativos para o projeto:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Com o botão direito no **nome do projeto** na **Gerenciador de soluções** e selecione **Add** > **novo arquivo...**
 2. Selecione **iOS** > **catálogo de ativos**, digite um **nome** para a coleção e clique no **novo** botão:
 
     ![](displaying-an-image-images/asset01.png "Criando um novo catálogo de ativos")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. No Gerenciador de soluções, clique duas vezes em **catálogos de ativos** pasta e selecione **Adicionar > novo catálogo de ativos**.
 2. Dê um nome e clique em **adicionar**:
@@ -219,7 +219,7 @@ Para obter mais informações sobre ícones e imagens, consulte a documentação
 
 Quando uma imagem foi adicionada a um projeto xamarin. IOS usando um catálogos de ativos, ele poderá ser facilmente exibidos em um Storyboard usando um `UIImageView` no Designer do iOS. Por exemplo, se o ativo de imagem a seguir foram adicionado:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](displaying-an-image-images/display01.png "Foi adicionado um ativo de imagem de exemplo")
 
@@ -242,7 +242,7 @@ Faça o seguinte para exibi-lo em um Storyboard:
 7. Arraste a alça de "T" em forma em cada borda da **modo de exibição de imagem** correspondente no lado da tela para "fixar" a imagem para os lados. Dessa forma, o **modo de exibição de imagem** será reduzido e cresça conforme a tela for redimensionada.
 8. Salve as alterações para o Storyboard.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](displaying-an-image-images/display01vs.png "Foi adicionado um ativo de imagem de exemplo")
 

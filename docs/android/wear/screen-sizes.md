@@ -1,35 +1,35 @@
 ---
-title: Trabalhando com tamanhos de tela no sistema operacional xamarin e desgaste
+title: Trabalhando com tamanhos de tela no sistema operacional do xamarin. Android e o desgaste
 ms.prod: xamarin
 ms.assetid: 77831169-C663-4D42-B742-B8B556B1DA4B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 40e7850ffe239b0ede43e4d0cd3c6da08bce3a40
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 9fc22a3c08b60a8474b006f1c9225155b9705507
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436070"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113112"
 ---
 # <a name="working-with-screen-sizes"></a>Trabalhando com tamanhos de tela
 
-Dispositivos com Android desgaste podem ter um retangular ou uma exibição round, que também pode ter tamanhos diferentes.
+Dispositivos com Android Wear podem ter um retangular ou uma exibição redonda, que também pode ter tamanhos diferentes.
 
-![Exibe as capturas de tela de desgaste retangular e round](screen-sizes-images/moyeu-wear.png)
+![Exibe capturas de tela de desgaste retangular e round](screen-sizes-images/moyeu-wear.png)
 
-## <a name="identifying-screen-type"></a>Identifica o tipo de tela
+## <a name="identifying-screen-type"></a>Identificando o tipo de tela
 
-A biblioteca de suporte de desgaste fornece alguns controles que ajudam a detectam e adaptar-se às formas de tela diferente, como `WatchViewStub` e `BoxInsetLayout`.
+A biblioteca de suporte de desgaste fornece alguns controles que ajudam você a detectam e se adaptar às formas de tela diferentes, tais como `WatchViewStub` e `BoxInsetLayout`.
 
-Lembre-se de que alguns dos outros controles da biblioteca de suporte (como `GridViewPager`) *automaticamente* detectar se a forma de tela e não devem ser adicionados como filhos dos controles descritos abaixo.
+Lembre-se de que alguns dos outros controles da biblioteca de suporte (como `GridViewPager`) *automaticamente* detectar de forma de tela em si e não devem ser adicionados como filhos dos controles descrito abaixo.
 
 ### <a name="watchviewstub"></a>WatchViewStub
 
-Consulte o [WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/) exemplo para detectar o tipo de tela e exibir um layout diferente para cada tipo.
+Consulte a [WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/) exemplo para ver como detectar o tipo de tela e exibir um layout diferente para cada tipo.
 
-O arquivo de layout principal contém um `android.support.wearable.view.WatchViewStub` que faz referência a layouts diferentes para telas retangulares e round usando o `app:rectLayout` e `app:roundLayout` atributos:
+O arquivo de layout principal contém um `android.support.wearable.view.WatchViewStub` que faz referência a diferentes layouts para telas retangulares e redondos usando o `app:rectLayout` e `app:roundLayout` atributos:
 
 ```xml
 <android.support.wearable.view.WatchViewStub
@@ -41,48 +41,48 @@ O arquivo de layout principal contém um `android.support.wearable.view.WatchVie
   app:roundLayout="@layout/round_layout" />
 ```
 
-A solução contém layouts diferentes para cada estilo que será selecionado em tempo de execução:
+A solução contém layouts diferentes para cada estilo que será selecionada no tempo de execução:
 
 ![Arquivos mostrados em recursos/layout](screen-sizes-images/solution.png)
 
 
 ### <a name="boxinsetlayout"></a>BoxInsetLayout
 
-Em vez de criar layouts diferentes para cada tipo de tela, você também pode criar uma exibição única que se adapta a telas retangulares ou round.
+Em vez de criar layouts diferentes para cada tipo de tela, você também pode criar uma única exibição que se adapta às telas retangulares ou redondas.
 
-Isso [exemplo Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) mostra como usar o `BoxInsetLayout` para usar o mesmo layout retangular e round telas.
+Isso [exemplo Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) mostra como usar o `BoxInsetLayout` para usar o mesmo layout em telas retangulares e redondas.
 
 
 ## <a name="wear-ui-designer"></a>Use o Designer de interface do usuário
 
-O Designer Android Xamarin dá suporte a telas de retangulares e round:
+O Designer do Android Xamarin dá suporte a telas retangulares e redondas:
 
-![Selecionar a tela do Android desgaste quadrado no Designer Xamarin Android](screen-sizes-images/design-screen-type.png)
+![Selecionar a tela do Android Wear quadrado no Designer do Android Xamarin](screen-sizes-images/design-screen-type.png)
 
 A superfície de design em estilo retangular é mostrada aqui:
 
-![Superfície de design em estilo retangular](screen-sizes-images/design-rect.png) 
+![Superfície de design no estilo retangular](screen-sizes-images/design-rect.png) 
 
-A superfície de design em estilo round é mostrada aqui:
+A superfície de design no estilo de arredondamento é mostrada aqui:
 
-![Superfície de design no estilo round](screen-sizes-images/design-round.png)
+![Superfície de design no estilo de arredondamento](screen-sizes-images/design-round.png)
 
 
-## <a name="wear-simulator"></a>Usar o simulador
+## <a name="wear-simulator"></a>Simulador de desgaste
 
-O **Gerenciador de emulador do Google** contém definições de dispositivo para os dois tipos de tela. Você pode criar retangulares e round emuladores para testar seu aplicativo.
+O **Google Emulator Manager** contém definições de dispositivo para os dois tipos de tela. Você pode criar retangulares e redondos emuladores para testar seu aplicativo.
 
-![Usar definições de dispositivo mostradas no Gerenciador de emulador do Google](screen-sizes-images/emulator-devices.png)
+![Wear definições de dispositivo mostradas no Gerenciador de emulador do Google](screen-sizes-images/emulator-devices.png)
 
-O emulador será renderizado como este para uma tela retangular:
+O emulador será renderizado da seguinte forma para uma tela retangular:
 
 ![Emulador de renderização de uma tela retangular](screen-sizes-images/recipe-2.png) 
 
-Ele processará assim para uma tela de arredondamento:
+Ele será renderizado da seguinte forma para uma tela arredondada:
 
-![Emulador de renderização de uma tela de arredondamento](screen-sizes-images/recipe-2-round.png)
+![Emulador de renderização de uma tela redonda](screen-sizes-images/recipe-2-round.png)
 
 ## <a name="video"></a>Vídeo
 
-[Aplicativos de tela inteira para Android desgaste](https://www.youtube.com/watch?v=naf_WbtFAlY) de [developers.google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
+[Aplicativos de tela inteira para o Android Wear](https://www.youtube.com/watch?v=naf_WbtFAlY) partir [developers.google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
 

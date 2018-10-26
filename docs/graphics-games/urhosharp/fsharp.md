@@ -3,15 +3,15 @@ title: 'Programação de UrhoSharp com F #'
 description: 'Este documento descreve como criar um aplicativo de UrhoSharp simples hello world usando F # no Visual Studio para Mac.'
 ms.prod: xamarin
 ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 430c4eca7c6dbd7107692246b70ff93bafa44d01
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 99e8f8bf04465d0d61086139ba9889eae141207e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241828"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123083"
 ---
 # <a name="programming-urhosharp-with-f"></a>Programação de UrhoSharp com F #
 

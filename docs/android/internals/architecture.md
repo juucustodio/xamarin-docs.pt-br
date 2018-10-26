@@ -3,15 +3,15 @@ title: Arquitetura
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: e6a30247c13deab871bf230aba53b9963981fd02
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121120"
 ---
 # <a name="architecture"></a>Arquitetura
 
@@ -71,7 +71,7 @@ Tenha cuidado ao descarte gerenciado Callable Wrappers se a instância pode ser 
 As subclasses de wrapper que pode ser chamado gerenciado são em que toda a lógica específica do aplicativo "interessante" pode viver. Eles incluem custom [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) subclasses (como o [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) tipo no modelo de projeto padrão). (Especificamente, eles são qualquer *Java.Lang.Object* subclasses que fazer *não* contêm um [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) atributo personalizado ou [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) está *falso*, que é o padrão.)
 
 Gerenciado como callable wrappers, gerenciados subclasses callable wrapper também contêm uma referência global, acessível por meio de [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propriedade. Assim como com callable wrappers do gerenciado, referências de globais podem ser explicitamente liberadas chamando [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
-Ao contrário de encapsuladores que pode ser chamados, *muito cuidado* devem ser tomadas antes de descartar essas instâncias, como *Dispose ()* ing da instância interromperá o mapeamento entre a instância de Java (uma instância de um Android Callable Wrapper) e a instância gerenciada.
+Ao contrário de encapsuladores que pode ser chamados, *muito cuidado* devem ser tomadas antes de descartar essas instâncias, como *Dispose ()*- ing da instância interromperá o mapeamento entre a instância de Java (uma instância de um Android Callable Wrapper) e a instância gerenciada.
 
 
 ### <a name="java-activation"></a>Ativação de Java
@@ -88,7 +88,7 @@ Há dois cenários em que o *(IntPtr, JniHandleOwnership)* construtor deve ser f
 
 
 Observe que (2) é uma abstração de vazamento. Em Java, como em c#, chamadas para métodos virtuais de um construtor sempre chamar a implementação mais derivada do método. Por exemplo, o [TextView (contexto, AttributeSet, int) construtor](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) invoca o método virtual [TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), que está vinculado como o [ Propriedade TextView.DefaultMovementMethod](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
-Assim, se um tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) fosse (1) [subclasse TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [substituir TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)e (3) [ativar uma instância dela classe por meio de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) substituído *DefaultMovementMethod* propriedade seria invocada antes que o construtor ACW tido a oportunidade de executar e ocorreria antes que o construtor do c# tido a oportunidade de executar.
+Assim, se um tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) fosse (1) [subclasse TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [substituir TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)e (3) [ativar uma instância dela classe por meio de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) substituído *DefaultMovementMethod* propriedade seria invocada antes do construtor ACW tido a oportunidade de ser executado e ocorrerá antes do C# construtor tido a oportunidade Execute.
 
 Isso é suportado pela instanciação de uma instância LogTextBox por meio de [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) construtor quando a instância ACW LogTextBox entra em código gerenciado e, em seguida, invocando o [ LogTextBox (contexto, IAttributeSet, int)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) construtor *na mesma instância* quando o construtor ACW for executado.
 

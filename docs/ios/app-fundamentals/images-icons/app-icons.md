@@ -4,15 +4,15 @@ description: 'Este documento descreve como trabalhar com vários ícones do apli
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: cd67c564461721ade6f3eb269b461ddea5e2d2c4
-ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
+ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39275996"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118507"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no xamarin. IOS
 
@@ -109,7 +109,7 @@ Para ícones, um especial `AppIcon` conjunto de imagens pode ser adicionado para
 
 Para usar um catálogo de ativos, faça o seguinte:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Clique duas vezes o `Info.plist` do arquivo na **Gerenciador de soluções** para abri-lo para edição.
 2. Role para baixo até a **ícones de aplicativo** seção.
@@ -126,7 +126,7 @@ Para usar um catálogo de ativos, faça o seguinte:
 7. Clique o **abrir** botão para incluir a imagem no projeto e defina-o do xcasset.
 8. Repita para todas as imagens necessárias.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Clique duas vezes o **Info. plist** arquivo na **Gerenciador de soluções**:
 
@@ -155,7 +155,7 @@ Para um aplicativo xamarin. IOS existente usando o `Info.plist` para gerenciar s
 
 Faça o seguinte:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Clique duas vezes o `Info.plist` do arquivo na **Gerenciador de soluções** para abri-lo para edição.
 2. Role para baixo até a **ícones de aplicativo** seção.
@@ -166,7 +166,7 @@ Faça o seguinte:
 
      ![](app-icons-images/migrate03.png "O conjunto de imagem AppIcons a xcassets")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Clique duas vezes o `Info.plist` do arquivo na **Gerenciador de soluções** para abri-lo para edição.
 2. Clique no iPhone seção ícones: 
@@ -187,7 +187,7 @@ Se usar o método Ad Hoc de entregar o aplicativo (ou para usuários corporativo
 
 Para especificar a Arte do iTunes, faça o seguinte:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Clique duas vezes o `Info.plist` do arquivo na **Gerenciador de soluções** para abri-lo para edição.
 2. Role até a **arte do iTunes** seção do editor: 
@@ -196,7 +196,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 3. Para qualquer imagem ausente, clique na miniatura no editor, selecione o arquivo de imagem para a arte do iTunes desejada na caixa de diálogo Abrir arquivo e clique no **Okey** botão.
 4. Repita essa etapa até que todos os necessários imagens foram especificadas para o aplicativo.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Clique duas vezes o `Info.plist` do arquivo na **Gerenciador de soluções** para abri-lo para edição.
 

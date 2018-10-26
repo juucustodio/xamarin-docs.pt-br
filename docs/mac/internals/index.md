@@ -1,29 +1,29 @@
 ---
-title: Nos bastidores em Xamarin.Mac
-description: Links este documento para várias guias que descrevem o funcionamento interno de Xamarin.Mac. Discutem documentos vinculados à frente de compilação, a arquitetura de Xamarin.Mac e o registrador de Xamarin.Mac.
+title: Nos bastidores no xamarin. Mac
+description: Este documento leva a vários guias que descrevem o funcionamento interno do xamarin. Mac. Discutem documentos vinculados à frente de compilação de tempo, a arquitetura de xamarin. Mac e o registrador de xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 84974D75-0CCE-4455-AA38-00DE68AE33B6
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: c940252a675c38247d2c5bb374b9c30237222bda
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 872f26febf3abbe4d659773d2bf2d27348c64513
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118767"
 ---
-# <a name="under-the-hood-in-xamarinmac"></a>Nos bastidores em Xamarin.Mac
+# <a name="under-the-hood-in-xamarinmac"></a>Nos bastidores no xamarin. Mac
 
-## <a name="ahead-of-time-compilation-aotaotmd"></a>[Em frente de compilação (AOT)](aot.md)
+## <a name="ahead-of-time-compilation-aotaotmd"></a>[Mais do que a compilação de time (AOT)](aot.md)
 
-Em frente (AOT) de tempo de compilação é uma técnica de otimização poderosa para melhorar o desempenho de inicialização. No entanto, isso também afeta o tempo de compilação, o tamanho do aplicativo e a execução do programa de maneiras profundas, por isso é útil entender como ele funciona.
+Em frente de tempo (AOT) a compilação é uma técnica de otimização poderosos para melhorar o desempenho de inicialização. No entanto, isso também afeta seu tempo de compilação, o tamanho do aplicativo e a execução do programa de maneiras profundas, portanto, vale a pena entender como ele funciona.
 
 ## <a name="mac-architecturearchitecturemd"></a>[Arquitetura do Mac](architecture.md)
 
-Relação do Xamarin.Mac para Objective-C, incluindo conceitos como a compilação, seletores, registradores, abrir o aplicativo e o gerador.
+Relação do xamarin. Mac para Objective-C, incluindo conceitos como compilação, seletores, registradores, inicialização do aplicativo e o gerador.
 
-## <a name="xamarinmac-registrarregistrarmd"></a>[Registrador Xamarin.Mac](registrar.md)
+## <a name="xamarinmac-registrarregistrarmd"></a>[Registrador de xamarin. Mac](registrar.md)
 
-Xamarin.Mac preenche a lacuna entre o mundo gerenciado e o tempo de execução do Cocoa, permitindo que as classes gerenciadas chamar classes não gerenciadas de Objective-C e ser chamado quando ocorrem eventos. O trabalho necessário para realizar essa "mágica" é tratado pelo registrador, mas entender o que está acontecendo "nos bastidores" às vezes pode ser útil.
+Xamarin. Mac preenche a lacuna entre o mundo gerenciado e o tempo de execução do Cocoa, permitindo que as classes gerenciadas chamar a classes não gerenciadas de Objective-C e ser chamado novamente quando ocorrem eventos. O trabalho necessário para realizar essa "mágica" é tratado pelo registrador, mas entender o que está acontecendo "nos bastidores" às vezes pode ser útil.

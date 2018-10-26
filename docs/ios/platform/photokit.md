@@ -1,35 +1,35 @@
 ---
-title: PhotoKit em xamarin
+title: PhotoKit no xamarin. IOS
 description: Este documento descreve PhotoKit, discutir seus objetos de modelo, como dados de modelo de consulta e salvar as alterações para a biblioteca de fotos.
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 4aeeec5b96e24c654407ad672930c0cb78592450
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d59cac9403a244ce553d84e0590b8a9c3d4d2f30
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787891"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102705"
 ---
-# <a name="photokit-in-xamarinios"></a>PhotoKit em xamarin
+# <a name="photokit-in-xamarinios"></a>PhotoKit no xamarin. IOS
 
-PhotoKit é uma nova estrutura que permite que aplicativos consultar a biblioteca de imagens do sistema e criar interfaces do usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui um número de classes que representam os ativos de vídeo e imagem, bem como coleções de ativos como álbuns e pastas.
+PhotoKit é uma nova estrutura que permite aos aplicativos consultar a biblioteca de imagens do sistema e criar interfaces do usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui um número de classes que representam os ativos de vídeo e imagem, bem como coleções de ativos, como pastas e álbuns.
 
 ## <a name="model-objects"></a>Objetos de modelo
 
-PhotoKit representa esses ativos em que ele chama objetos de modelo. Os objetos de modelo que representam as fotos e vídeos em si são do tipo `PHAsset`. Um `PHAsset` contém metadados, como o tipo de mídia do ativo e sua data de criação.
-Da mesma forma, o `PHAssetCollection` e `PHCollectionList` classes contêm metadados sobre coleções de ativo e listas de coleção respectivamente. Coleções de ativos são grupos de ativos, como todas as fotos e vídeos para um determinado ano. Da mesma forma, as listas de coleção são grupos de coleções de ativo, como fotos e vídeos, agrupados por ano.
+PhotoKit representa esses ativos no que chama objetos de modelo. Os objetos de modelo que representam as fotos e vídeos em si são do tipo `PHAsset`. Um `PHAsset` contém metadados, como o tipo de mídia do ativo e sua data de criação.
+Da mesma forma, o `PHAssetCollection` e `PHCollectionList` classes contêm metadados sobre coleções de ativo e listas de coleção, respectivamente. Coleções de ativos são grupos de ativos, como todas as fotos e vídeos para um determinado ano. Da mesma forma, as listas de coleção são grupos de coleções de ativos, como fotos e vídeos, agrupados por ano.
 
 ## <a name="querying-model-data"></a>Consultar dados do modelo
 
-PhotoKit facilita para os dados de modelo de consulta por meio de uma variedade de métodos de busca. Por exemplo, para recuperar todas as imagens, você poderia chamar `PFAsset.Fetch`, passando o `PHAssetMediaType.Image` tipo de mídia.
+PhotoKit torna mais fácil para os dados de modelo de consulta por meio de uma variedade de métodos de busca. Por exemplo, para recuperar todas as imagens, você chamaria `PFAsset.Fetch`, passando o `PHAssetMediaType.Image` tipo de mídia.
 
     PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 
-O `PHFetchResult` instância poderia conter todas as `PFAsset` instâncias representando imagens. Para obter as próprias imagens, use o `PHImageManager` (ou a versão do cache, `PHCachingImageManager`) para fazer uma solicitação para a imagem chamando `RequestImageForAsset`. Por exemplo, o código a seguir recupera uma imagem para cada ativo em um `PHFetchResult` para exibir em uma célula de exibição de coleção:
+O `PHFetchResult` instância poderia conter todas as `PFAsset` instâncias que representam imagens. Para obter as imagens em si, você deve usar o `PHImageManager` (ou a versão de cache `PHCachingImageManager`) para fazer uma solicitação para a imagem chamando `RequestImageForAsset`. Por exemplo, o código a seguir recupera uma imagem para cada ativo em um `PHFetchResult` para exibir em uma célula de exibição de coleção:
 
 
     public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
@@ -46,9 +46,9 @@ Isso resulta em uma grade de imagens, conforme mostrado abaixo:
 
 ![](photokit-images/image4.png "O aplicativo em execução, exibindo uma grade de imagens")
  
-## <a name="saving-changes-to-the-photo-library"></a>Salvar alterações para a biblioteca de fotos
+## <a name="saving-changes-to-the-photo-library"></a>Salvando alterações na biblioteca de fotos
 
-Isso é como lidar com a consulta e leitura de dados. Você também pode escrever as alterações de volta na biblioteca. Como vários aplicativos de interessados são capazes de interagir com a biblioteca de fotos do sistema, você pode registrar um observador para ser notificado sobre alterações usando um PhotoLibraryObserver. Em seguida, quando as alterações chegam, seu aplicativo pode atualizar adequadamente. Por exemplo, aqui está uma implementação simples para recarregar o modo de exibição de coleção acima:
+Isso é como lidar com a consulta e leitura de dados. Você também pode escrever as alterações de volta para a biblioteca. Uma vez que vários aplicativos de interessados são capazes de interagir com a biblioteca de fotos do sistema, você pode registrar um observador para ser notificado de alterações usando um PhotoLibraryObserver. Em seguida, quando as alterações entram, seu aplicativo pode atualizar adequadamente. Por exemplo, aqui está uma implementação simples para recarregar a exibição de coleção acima:
 
     class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
     {
@@ -69,13 +69,13 @@ Isso é como lidar com a consulta e leitura de dados. Você também pode escreve
         }
     }
     
-Para realmente gravar alterações do seu aplicativo, você deve criar uma solicitação de alteração. Cada uma das classes de modelo tem uma classe de solicitação de alteração associada. Por exemplo, para alterar um PHAsset, você cria um PHAssetChangeRequest. As etapas para executar as alterações que são gravadas de volta para a biblioteca de fotos e enviadas à observadores como a mostrada acima são:
+Para realmente gravar alterações de volta do seu aplicativo, você deve criar uma solicitação de alteração. Cada uma das classes de modelo tem uma classe de solicitação de alteração associada. Por exemplo, para alterar um PHAsset, crie um PHAssetChangeRequest. As etapas para realizar as alterações que são gravadas de volta a biblioteca de fotos e enviadas para observadores como a mostrada acima são:
 
 -   Execute a operação de edição.
 -   Salve os dados de imagem filtrada em uma instância de PHContentEditingOutput.
--   Fazer uma solicitação de alteração para publicá-lo de alterações a saída de edição.
+-   Fazer uma solicitação de alteração para publicar o formulário de alterações a saída de edição.
 
-Aqui está um exemplo que grava uma alteração em uma imagem que aplica um filtro de noir imagem principal:
+Aqui está um exemplo que grava uma alteração de volta para uma imagem que aplica um filtro de noir imagem principal:
 
     void ApplyNoirFilter (object sender, EventArgs e)
     {
@@ -114,6 +114,6 @@ Quando o usuário seleciona o botão, o filtro é aplicado:
 
 ![](photokit-images/image5.png "Um exemplo de aplicação do filtro")
  
-E graças PHPhotoLibraryChangeObserver, a alteração será refletida na exibição de coleção quando o utilizador navega de volta:
+E graças à PHPhotoLibraryChangeObserver, a alteração será refletida na exibição de coleção quando o usuário navega de volta:
 
-![](photokit-images/image6.png "A alteração será refletida na exibição de coleção quando o utilizador navega de volta")
+![](photokit-images/image6.png "A alteração será refletida na exibição de coleção quando o usuário navega de volta")

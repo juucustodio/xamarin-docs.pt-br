@@ -1,62 +1,62 @@
 ---
 title: Associação de um projeto de biblioteca do Eclipse
-description: Este passo a passo explica como usar modelos de projeto do xamarin para associar um projeto de biblioteca Android do Eclipse.
+description: Este passo a passo explica como usar modelos de projeto do xamarin. Android para associar um projeto de biblioteca Android do Eclipse.
 ms.prod: xamarin
 ms.assetid: CEE90F8A-164B-4155-813A-7537A665A7E7
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1c3c33f1b958aff5818b26e4408e60f449b46f41
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5887748eda8af89b9215e3e121db592dfa73935
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116596"
 ---
 # <a name="binding-an-eclipse-library-project"></a>Associação de um projeto de biblioteca do Eclipse
 
-_Este passo a passo explica como usar modelos de projeto do xamarin para associar um projeto de biblioteca Android do Eclipse._
+_Este passo a passo explica como usar modelos de projeto do xamarin. Android para associar um projeto de biblioteca Android do Eclipse._
 
 
 ## <a name="overview"></a>Visão geral
 
-Embora. Arquivos AAR estão se tornando a norma para distribuição de biblioteca Android, em alguns casos, é necessário criar uma associação para um *projeto de biblioteca Android*. Projetos de biblioteca Android são projetos Android especiais que contêm código podem ser compartilhado e recursos que podem ser referenciados por projetos de aplicativo do Android. Normalmente, você associa a um projeto de biblioteca Android quando a biblioteca é criada no IDE do Eclipse.
+Embora. Arquivos AAR estão se tornando a norma para distribuição de biblioteca do Android, em alguns casos, é necessário criar uma associação para um *projeto de biblioteca Android*. Projetos de biblioteca Android são projetos Android especiais que contêm código podem ser compartilhado e recursos que podem ser referenciados por projetos de aplicativo Android. Normalmente, você associa a um projeto de biblioteca Android quando a biblioteca for criada no IDE do Eclipse.
 Este passo a passo fornece exemplos de como criar um projeto de biblioteca Android. ZIP da estrutura de diretório de um projeto do Eclipse.
 
-Projetos de biblioteca Android são diferentes dos projetos Android regulares que eles não são compilados em um APK e não são, por conta própria, implantado em um dispositivo. Em vez disso, um projeto de biblioteca Android deve ser referenciada por um projeto de aplicativo do Android. Quando é criado um projeto de aplicativo do Android, o projeto de biblioteca Android é compilado pela primeira vez. O projeto de aplicativo do Android será ser absorvidos para o projeto de biblioteca Android compilado e incluir o código e os recursos em APK para distribuição. Devido a essa diferença, criando uma associação de um projeto de biblioteca Android é ligeiramente diferente da criação de uma associação para um Java. JAR ou. Arquivo AAR.
+Projetos de biblioteca Android são diferentes de projetos Android regulares, em que eles não são compilados em um APK e não são, por conta própria, pode ser implantado em um dispositivo. Em vez disso, um projeto de biblioteca do Android deve ser referenciado por um projeto de aplicativo do Android. Quando um projeto de aplicativo Android é compilado, o projeto de biblioteca Android é compilado pela primeira vez. O projeto de aplicativo Android, em seguida, ser absorvido para o projeto de biblioteca Android compilado e incluem o código e os recursos para o APK para distribuição. Por causa dessa diferença, criando uma associação de um projeto de biblioteca do Android é um pouco diferente de criar uma associação para um Java. JAR ou. Arquivo AAR.
 
 
 
 ## <a name="walkthrough"></a>Passo a passo
 
-Para usar um projeto de biblioteca Android em um projeto de vinculação do xamarin Java primeiro é necessário para compilar o projeto de biblioteca Android no Eclipse. Captura de tela a seguir mostra um exemplo de um projeto de biblioteca Android após a compilação: 
+Para usar um projeto de biblioteca do Android em um projeto de associação do xamarin. Android Java primeiro é necessário para compilar o projeto de biblioteca do Android no Eclipse. Captura de tela a seguir mostra um exemplo de um projeto de biblioteca Android após a compilação: 
 
 [![Exemplo de projeto de biblioteca no Eclipse](binding-a-library-project-images/build-lib-in-eclipse.png)](binding-a-library-project-images/build-lib-in-eclipse.png#lightbox)
 
-Observe que o código-fonte do projeto de biblioteca Android foi compilado para um temporário. Arquivo JAR chamado **android mapviewballoons.jar**, e que os recursos foram copiados para o **res/bin/situação** pasta. 
+Observe que o código-fonte do projeto de biblioteca Android foi compilado para um temporário. Arquivo JAR denominado **android mapviewballoons.jar**, e que os recursos tiverem sido copiados para o **res/bin/Fragmente** pasta. 
 
-Depois que o projeto de biblioteca Android foi compilado no Eclipse, ele pode, em seguida, ser associado usando um projeto de vinculação do xamarin Java. Primeiro um. Deve ser criado o arquivo ZIP que contém o **bin** e **res** pastas do projeto de biblioteca Android. É importante que você remova a intervenção **situação** subdiretório para que os recursos estejam em **bin/res**. Captura de tela a seguir mostra o conteúdo de um tal. Arquivo ZIP: 
+Depois que o projeto de biblioteca Android tiver sido compilado no Eclipse, ele pode então ser associado usando um projeto de associação do xamarin. Android Java. Primeiro um. Deve ser criado o arquivo ZIP que contém o **bin** e **res** pastas do projeto de biblioteca Android. É importante que você remova a intervenção **Fragmente** subdiretório para que os recursos residem na **bin/res**. Captura de tela a seguir mostra o conteúdo de um tal. Arquivo ZIP: 
 
-[![Conteúdo da biblioteca do Android. zip do projeto](binding-a-library-project-images/contents-of-zip-file.png)](binding-a-library-project-images/contents-of-zip-file.png#lightbox)
+[![Conteúdo de. zip de projeto de biblioteca do Android](binding-a-library-project-images/contents-of-zip-file.png)](binding-a-library-project-images/contents-of-zip-file.png#lightbox)
 
-Isso. Arquivo ZIP é adicionado ao projeto de vinculação do xamarin Java, conforme mostrado na seguinte captura de tela:
+Isso. Arquivo ZIP é adicionado ao projeto xamarin. Android Java de associação, conforme mostrado na seguinte captura de tela:
 
-[![ZIP adicionado ao projeto Java de associação](binding-a-library-project-images/zip-in-binding-project.png)](binding-a-library-project-images/zip-in-binding-project.png#lightbox)
+[![ZIP adicionado ao projeto de associação de Java](binding-a-library-project-images/zip-in-binding-project.png)](binding-a-library-project-images/zip-in-binding-project.png#lightbox)
 
-Observe que a ação de compilação da. Arquivo ZIP foi definido automaticamente como **LibraryProjectZip**.
+Observe que a ação de compilação da. Arquivo ZIP foi automaticamente definido como **LibraryProjectZip**.
 
-Se houver algum. Arquivos JAR necessários para o projeto de biblioteca Android, eles devem ser adicionados para o **Jars** pasta do projeto de biblioteca de ligação de Java e o **ação de compilação** definida como **ReferenceJar**. Um exemplo disso pode ser visto na captura de tela abaixo: 
+Caso haja algum. Arquivos JAR necessários para o projeto de biblioteca do Android, eles devem ser adicionados para o **Jars** pasta do projeto de biblioteca de vinculação de Java e o **Build Action** definido como **ReferenceJar**. Um exemplo disso pode ser visto na captura de tela abaixo: 
 
 [![Ação de compilação definido como ReferenceJar](binding-a-library-project-images/set-to-referencejar.png)](binding-a-library-project-images/set-to-referencejar.png#lightbox)
 
-Quando essas etapas forem concluídas, o projeto de vinculação do xamarin Java pode ser usado conforme descrito anteriormente neste documento.
+Quando essas etapas forem concluídas, o projeto de associação do xamarin. Android Java pode ser usado conforme descrito anteriormente neste documento.
 
 > [!NOTE]
-> Não há suporte para a compilação de projetos de biblioteca Android em outros IDEs neste momento. Outros IDEs não pode criar a mesma estrutura de diretório ou arquivos de **bin** pasta do Eclipse. 
+> Não há suporte para a compilação de projetos de biblioteca do Android em outros IDEs neste momento. Outros IDEs não pode criar a mesma estrutura de diretórios ou arquivos na **bin** pasta do Eclipse. 
 
 
 ## <a name="summary"></a>Resumo
 
-Neste artigo, percorremos o processo de associação de um projeto de biblioteca Android. Criamos o projeto de biblioteca Android no Eclipse, em seguida, criamos um arquivo zip do **bin** e **res** pastas do projeto de biblioteca Android. Em seguida, usamos essa zip para criar um projeto de vinculação do xamarin Java. 
+Neste artigo, percorremos o processo de associar um projeto de biblioteca Android. Criamos o projeto de biblioteca do Android no Eclipse, em seguida, criamos um arquivo zip do **bin** e **res** pastas do projeto de biblioteca Android. Em seguida, usamos esse zip para criar um projeto de associação do xamarin. Android Java. 
 

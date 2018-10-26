@@ -1,26 +1,26 @@
 ---
-title: Operações de ponto flutuante em xamarin
-description: Este documento descreve como xamarin lida com operações de ponto flutuante de precisão de 32 bits e 64 bits e discute associados impactos no desempenho.
+title: Operações de ponto flutuante no xamarin. IOS
+description: Este documento descreve como o xamarin. IOS lida com operações de ponto flutuante de precisão 32 bits e 64 bits e discute os impactos associados ao desempenho.
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: ea5d69b52cbd4c76abb236bd1a272633dde440b7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: c5ee1b833e309c78c7338298cbe5c8800afb1ba1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786155"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116232"
 ---
-# <a name="floating-point-operations-in-xamarinios"></a>Operações de ponto flutuante em xamarin
+# <a name="floating-point-operations-in-xamarinios"></a>Operações de ponto flutuante no xamarin. IOS
 
-Por padrão, o xamarin será executar 32 bits e 64 bits operações de ponto flutuante com precisão de 64 bits em ARM.  
+Por padrão, o xamarin. IOS será executar 32 bits e 64 bits operações de ponto flutuante usando precisão de 64 bits em ARM.  
 
-Enquanto esse maior precisão está mais próximo que os desenvolvedores de espera de operações de ponto flutuante em c# na área de trabalho, no dispositivo móvel, que o impacto no desempenho pode ser significativo.
+Enquanto esse maior precisão está perto o que os desenvolvedores esperam de operações de ponto flutuante C# na área de trabalho, em dispositivos móveis, o impacto no desempenho pode ser significativo.
 
-É possível compilar o código ponto flutuante de 32 bits para usar as operações de ponto flutuante de 32 bits.  Para fazer isso, você precisa usar pelo menos 8.10 xamarin e um conjunto na sua iOS basear painel do opções de "mtouch argumentos extras" o seguinte valor de linha de entrada:
+É possível compilar o código de ponto flutuante 32 bits para usar operações de ponto flutuante de 32 bits.  Para fazer isso, você precisa usar pelo menos 8.10 do xamarin. IOS e o conjunto no iOS Criar painel do opções no "mtouch argumentos extras" o seguinte valor de linha de entrada:
 
      --aot-options=-O=float32
 
-Isso informará os compiladores estáticos (compilador de estático interno da Mono, ou a uma potência LLVM) para executar operações de ponto flutuante usando floats de 32 bits.
+Isso informará os compiladores estáticos (compilador de estático interno do Mono, ou aquela energia LLVM) para executar operações de ponto flutuante usando flutuações de 32 bits.

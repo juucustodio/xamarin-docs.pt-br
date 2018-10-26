@@ -4,14 +4,14 @@ description: Este documento descreve MonoTouch (MT. D), uma estrutura para desen
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: bee4b460552c7273021b16955b52ba3d95d3e07c
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: a948d5beca6c09dc77e5c86d3f281851e4839ff0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038398"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107983"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introdução ao MonoTouch para xamarin. IOS
 
@@ -54,7 +54,7 @@ Por exemplo, sempre que uma tabela é necessário, uma fonte de dados é necess�
 MT. 1!d simplifica que encapsulando todo esse código em uma API genérica para criação de tabela. Em seguida, ele fornece uma abstração sobre o que a API que permite que um objeto declarativo facilita ainda mais a sintaxe de associação. Como tal, há duas APIs disponíveis no MT. UNIDADE D:
 
 -   **API de elementos de nível inferior** – o *elementos API* baseia-se na criação de uma árvore hierárquica de elementos que representam as telas e seus componentes. A API de elementos fornece aos desenvolvedores mais flexibilidade e controle para criar interfaces do usuário. Além disso, a API de elementos tem suporte avançado para a definição declarativa via JSON, que permite que tanto declaração incrivelmente rápida, bem como a geração dinâmica de interface do usuário de um servidor. 
--   **API de reflexão de alto nível** – também conhecido como o *associação**API* , nos quais classes são anotadas com dicas de interface do usuário e, em seguida, o MT. D automaticamente cria telas com base nos objetos e fornece uma associação entre o que é exibida (e, opcionalmente, editada) na tela e o objeto base fazendo.   O exemplo acima ilustrado o uso da API de reflexão. Essa API não fornece um controle refinado do que faz os elementos de API, mas reduz ainda mais complexidade criando automaticamente a hierarquia de elementos com base em atributos de classe. 
+-   **API de reflexão de alto nível** – também conhecido como o *associação**API* , nos quais classes são anotadas com dicas de interface do usuário e, em seguida, o MT. D automaticamente cria telas com base nos objetos e fornece uma associação entre o que é exibida (e, opcionalmente, editada) na tela e o objeto base fazendo. O exemplo acima ilustrado o uso da API de reflexão. Essa API não fornece um controle refinado do que faz os elementos de API, mas reduz ainda mais complexidade criando automaticamente a hierarquia de elementos com base em atributos de classe. 
 
 
 MT. 1!d vem empacotado com um grande conjunto de criados em elementos de interface do usuário para a criação de tela, mas ele também reconhece a necessidade de elementos personalizados e layouts de tela Avançado. Como tal, a extensibilidade é que uma primeira classe em destaque preparadas para a API. Os desenvolvedores podem estender os elementos existentes ou criar novos e, em seguida, se integram perfeitamente.

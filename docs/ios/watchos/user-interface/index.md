@@ -1,47 +1,47 @@
 ---
-title: watchOS controles de Interface do usuário em Xamarin
-description: Este documento descreve os vários controles que estão disponíveis para uso nas interfaces do usuário watchOS. Ele fornece uma descrição dos rótulos, botões, opções, controles deslizantes, imagens, separadores, mapas e muito mais.
+title: Controles de Interface do usuário do Xamarin do watchOS
+description: Este documento descreve os vários controles que estão disponíveis para uso nas interfaces do usuário do watchOS. Ele fornece uma descrição de rótulos, botões, comutadores, controles deslizantes, imagens, separadores, mapas e muito mais.
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/19/2016
-ms.openlocfilehash: b56cfed8f045d824996a004539533b27d66c8cb1
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a7be193cee60b40f70b3dd4a840e0a26ccb8c3b2
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791404"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108997"
 ---
-# <a name="watchos-user-interface-controls-in-xamarin"></a>watchOS controles de Interface do usuário em Xamarin
+# <a name="watchos-user-interface-controls-in-xamarin"></a>Controles de Interface do usuário do Xamarin do watchOS
 
-O [ **WatchKitCatalog** ](https://github.com/xamarin/monotouch-samples/tree/master/watchOS/WatchKitCatalog) demonstra vários controles watchOS. Storyboard do aplicativo é mostrada aqui (clique para ampliar):
+O [ **WatchKitCatalog** ](https://github.com/xamarin/monotouch-samples/tree/master/watchOS/WatchKitCatalog) exemplo demonstra vários controles de watchOS. Storyboard do aplicativo é mostrado aqui (clique para ampliar):
 
 [![](images/storyboard-sml.png "Layout de watchOS de exemplo")](images/storyboard.png#lightbox)
 
 Os nomes de todos os controles de programáticos é prefixado com `WKInterface` (por exemplo. `WKInterfaceLabel`, `WKInterfaceButton`).
 
-|Controle|Descrição|captura de tela|
+|Controle|Descrição|Captura de tela|
 |---|---|---|
-|Rotular|Use `SetText` e outras propriedades para controlar a aparência do texto em um controle de rótulo. `NSAttributedString` também é suportado.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/LabelDetailController.cs)|![](Images/label.png)|
-|Botão|Criar e definir propriedades no storyboard. CTRL + arrastar para adicionar um `Action` para implementar um manipulador quando ele for clicado.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ButtonDetailController.cs)|![](Images/button.png)|
-|Alternar|Use `SetOn` para controlar o estado do comutador.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SwitchDetailController.cs)|![](Images/switch.png)|
-|Controle deslizante|Vários estilos diferentes são possíveis.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SliderDetailController.cs)|![](Images/slider.png)|
-|Image|Use `myImage.SetImage("MyWatchImage")` para carregar imagens no watch, ou `WKInterfaceDevice.CurrentDevice.AddCachedImage` -los em cache para uso repetido no relógio.<br />[Documentação do controle de imagem](~/ios/watchos/user-interface/image.md)<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ImageDetailController.cs)|![](Images/image.png)|
-|Separador|Use separadores para ajudar a criar interfaces do usuário de inspeção atraente.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SeparatorDetailController.cs)|![](Images/separator.png)| 
-|Mapa|A imagem do mapa estaticamente é exibida no relógio, mas você pode controlar vários aspectos de sua aparência, incluindo a adição de pins.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MapDetailController.cs)|![](Images/map.png)|
-|Filme & InlineMove|Filmes podem abrir por conta própria ou embutido<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs)|![](Images/movie.png)|
-|Grupo|Use grupos para ajudar a criar interfaces do usuário de inspeção atraente.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GroupDetailController.cs)|![](Images/group.png)|
-|Tabela|Uma versão simplificada de tabelas no iOS. Implementar `DidSelectRow` para responder a seleção do usuário (ou usar um segue).<br />[Documentação de controle de tabela](~/ios/watchos/user-interface/table.md)<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/Table%20Detail%20Controller/TableDetailController.cs)|![](Images/table.png)|
-|Dispositivo|`WKInterfaceDevice.CurrentDevice` inclui propriedades como `ScreenBounds`, `ScreenScale`, e `PreferredContentSizeCategory`.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/DeviceDetailController.cs)|![](Images/device.png)|
-|[Menu](~/ios/watchos/user-interface/menu.md)|Definir o menu pressione force no storyboard e implementar as ações de cada botão no código.<br />[Documentação do menu controle (forçar Touch)](~/ios/watchos/user-interface/menu.md)<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ControllerDetailController.cs)|![](Images/controller.png)|
-|Entrada de Texto|Use `PresentTextInputController` e `WKTextInputMode` enumeração.<br />[Documentação de entrada de texto](~/ios/watchos/user-interface/text-input.md)<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
-|Coroa digital|O coroa Digital pode ser usada para um seletor de unidade ou sua rotação pode ser acompanhada no código.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
-|Gestos|Há quatro tipos de reconhecimento de gesto que podem ser adicionados a uma cena: toque, passe o dedo, Panorâmica e LongPress.<br />[Código do catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
+|Rotular|Use `SetText` e outras propriedades para controlar a aparência do texto em um controle de rótulo. `NSAttributedString` também é suportado.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/LabelDetailController.cs)|![](Images/label.png)|
+|Botão|Criar e definir propriedades no storyboard. CTRL + arrastar para adicionar um `Action` para implementar um manipulador para quando ele for clicado.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ButtonDetailController.cs)|![](Images/button.png)|
+|Alternar|Use `SetOn` para controlar o estado do comutador.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SwitchDetailController.cs)|![](Images/switch.png)|
+|Controle deslizante|Vários estilos diferentes são possíveis.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SliderDetailController.cs)|![](Images/slider.png)|
+|Image|Use `myImage.SetImage("MyWatchImage")` para carregar imagens no watch, ou `WKInterfaceDevice.CurrentDevice.AddCachedImage` -los em cache para uso repetido no relógio.<br />[Documentação do controle de imagem](~/ios/watchos/user-interface/image.md)<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ImageDetailController.cs)|![](Images/image.png)|
+|Separador|Use separadores para ajudar a criar interfaces do usuário de inspeção atraente.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SeparatorDetailController.cs)|![](Images/separator.png)| 
+|Mapa|A imagem do mapa estaticamente é exibida no relógio, mas você pode controlar vários aspectos da sua aparência, incluindo a adição de pinos.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MapDetailController.cs)|![](Images/map.png)|
+|Filme & InlineMove|Filmes podem aberto por conta própria ou embutido<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs)|![](Images/movie.png)|
+|Grupo|Use grupos para ajudar a criar interfaces do usuário de inspeção atraente.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GroupDetailController.cs)|![](Images/group.png)|
+|Tabela|Uma versão simplificada das tabelas no iOS. Implemente `DidSelectRow` para responder a seleção do usuário (ou usar um segue).<br />[Documentação do controle de tabela](~/ios/watchos/user-interface/table.md)<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/Table%20Detail%20Controller/TableDetailController.cs)|![](Images/table.png)|
+|Dispositivo|`WKInterfaceDevice.CurrentDevice` inclui propriedades como `ScreenBounds`, `ScreenScale`, e `PreferredContentSizeCategory`.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/DeviceDetailController.cs)|![](Images/device.png)|
+|[Menu](~/ios/watchos/user-interface/menu.md)|Definir menu pressione força no storyboard e implementar as ações para cada botão no código.<br />[Documentação de menu de controle (Force Touch)](~/ios/watchos/user-interface/menu.md)<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ControllerDetailController.cs)|![](Images/controller.png)|
+|Entrada de Texto|Use `PresentTextInputController` e o `WKTextInputMode` enumeração.<br />[Documentação da entrada de texto](~/ios/watchos/user-interface/text-input.md)<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
+|Coroa digital|O Crown Digital pode ser usado para orientar um seletor ou rotação dele pode ser controlada no código.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
+|Gestos|Há quatro tipos de reconhecimento de gesto que podem ser adicionados a uma cena: Tap, passe o dedo, Panorâmica e LongPress.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [WatchKitCatalog (exemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Referência de API do Kit de inspeção](https://developer.xamarin.com/api/namespace/WatchKit/)
+- [WatchKitCatalog (amostra)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [Assista a referência de API de Kit](https://developer.xamarin.com/api/namespace/WatchKit/)

@@ -4,15 +4,15 @@ description: Documentos nesta seção abordam os recursos específicos do Androi
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 07/27/2018
-ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+author: conceptdev
+ms.author: crdun
+ms.date: 08/21/2018
+ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104694"
 ---
 # <a name="platform-features"></a>Recursos da plataforma
 
@@ -46,9 +46,9 @@ Android 3.0 introduziu fragmentos, mostrando como dar suporte a designs mais fle
 Este guia discute como dá suporte a Android 6.0 _aplicativo-vinculando_, uma técnica que permite que aplicativos móveis responda a URLs nos sites. Ele abordará como implementar a vinculação de aplicativo em um aplicativo do Android 6.0 e como configurar um site da Web para conceder permissões ao aplicativo móvel para lidar com links de aplicativo para o domínio.
 
 
-##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Visualização de P Android](~/android/platform/android-p.md)
+##  <a name="android-9-pieandroidplatformpiemd"></a>[Android pizza 9](~/android/platform/pie.md)
 
-Este artigo fornece uma descrição dos novos recursos na visualização de P do Android, explica como preparar o xamarin. Android para desenvolvimento Android P e fornece código de exemplo que ilustra como usar os principais recursos do Android P em aplicativos xamarin. Android.
+Este artigo fornece uma descrição dos novos recursos no Android pizza, explica como preparar o xamarin. Android para desenvolvimento Android pizza e fornece um aplicativo de exemplo que ilustra como usar as nova pizza Android recorte e notificação de recursos de exibição no Aplicativos xamarin. Android.
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)
@@ -59,14 +59,14 @@ Este artigo fornece uma estrutura de tópicos dos novos recursos no Android Oreo
 
 ##  <a name="android-7-nougatandroidplatformnougatmd"></a>[Android 7 Nougat](~/android/platform/nougat.md)
 
-Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android Nougat 7.0.
+Este artigo fornece uma visão geral dos novos recursos introduzidos no Android Nougat 7.0.
 
 
 
 
 ##  <a name="android-6-marshmallowandroidplatformmarshmallowmd"></a>[Android 6 Marshmallow](~/android/platform/marshmallow.md)
 
-Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android Marshmallow 6.0.
+Este artigo fornece uma visão geral dos novos recursos introduzidos no Android Marshmallow 6.0.
 
 
 
@@ -86,7 +86,7 @@ Android 4.4 (KitKat) vem carregado com uma infinidade de recursos para usuários
 
 ##  <a name="android-41-jelly-beanandroidplatformjelly-beanmd"></a>[Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
-Este documento fornecerá uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4.1. Esses recursos incluem: aprimorada notificações, as atualizações para o compartilhamento de arquivos grandes, as atualizações para a descoberta de rede de multimídia, peer-to-peer, animações, novas permissões Beam do Android.
+Este documento fornecerá uma visão geral dos novos recursos para desenvolvedores que foram introduzidos no Android 4.1. Esses recursos incluem: aprimorada notificações, as atualizações para o compartilhamento de arquivos grandes, as atualizações para a descoberta de rede de multimídia, peer-to-peer, animações, novas permissões Beam do Android.
 
 
 
@@ -98,12 +98,12 @@ Ele cobre várias novas tecnologias de interface de usuário e, em seguida, exam
 
 ##  <a name="working-with-the-android-manifestandroid-manifestmd"></a>[Trabalhando com o manifesto do Android](android-manifest.md)
 
-Este artigo introducts o arquivo androidmanifest. XML, e como ela talvez ser usadas para controlar a funcionalidade e descrevem os requisitos de um Mono para aplicativo Android.
+Este artigo apresenta o arquivo androidmanifest. XML, e como ele talvez ser usado para controlar a funcionalidade e descrevem os requisitos de um Mono para aplicativo Android.
 
 
 ##  <a name="introduction-to-content-providersandroidplatformcontent-providersindexmd"></a>[Introdução aos provedores de conteúdo](~/android/platform/content-providers/index.md)
 
-Um ContentProvider encapsula um repositório de dados e fornece uma API para acessá-lo. O provedor existe como parte de um aplicativo Android que geralmente também fornece uma interface do usuário para exibir e gerenciar os dados. O principal benefício do uso de um provedor de conteúdo é permitir que outros aplicativos acessar facilmente os dados encapsulados usando um objeto de cliente do provedor (chamado de um ContentResolver). Juntos, um provedor de conteúdo e o resolvedor de conteúdo oferecem uma API consistente entre aplicativos para acesso a dados que é simple criar e consumir. Este documento mostra como acessar e criar ContentProviders com xamarin. Android.
+Um ContentProvider encapsula um repositório de dados e fornece uma API para acessá-lo. O provedor existe como parte de um aplicativo Android que também fornece uma interface do usuário para exibir e gerenciar os dados. O principal benefício do uso de um provedor de conteúdo é permitir que outros aplicativos acessar facilmente os dados encapsulados usando um objeto de cliente do provedor (chamado de um ContentResolver). Juntos, um provedor de conteúdo e o resolvedor de conteúdo oferecem uma API consistente entre aplicativos para acesso a dados que é simple criar e consumir. Este documento mostra como acessar e criar ContentProviders com xamarin. Android.
 
 
 

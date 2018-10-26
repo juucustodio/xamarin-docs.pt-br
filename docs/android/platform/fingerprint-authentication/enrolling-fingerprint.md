@@ -1,32 +1,32 @@
 ---
 title: Registrar uma impressão digital
-description: Como definir até um bloqueio de tela e registrar uma impressão digital em um dispositivo Android ou o emulador.
+description: Como definir o backup de um bloqueio de tela e registrar uma impressão digital em um emulador ou dispositivo Android.
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 4faee5decb102d17d9a270b96cef4a12fc9dbef4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 18903a7d8f6c4033dc3ac7c4c0187a247d023bc1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762328"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115907"
 ---
 # <a name="enrolling-a-fingerprint"></a>Registrar uma impressão digital
 
 ## <a name="enrolling-a-fingerprint-overview"></a>Registrar uma visão geral de impressão digital
 
-Só é possível para um aplicativo do Android utilizar autenticação de impressões digitais, se o dispositivo já tiver sido configurado com autenticação de impressões digitais. Este guia sobre como registrar uma impressão digital em um dispositivo Android ou o emulador. Emuladores não tem o hardware real para executar uma verificação de impressão digital, mas é possível simular uma verificação de impressão digital com a Ajuda da ponte de depuração Android (descritas abaixo).  Este guia sobre como habilitar o bloqueio de tela em um dispositivo Android e registrar uma impressão digital para autenticação.
+Só é possível que um aplicativo do Android aproveitar a autenticação por impressão digital se o dispositivo já tiver sido configurado com autenticação por impressão digital. Este guia discute como registrar uma impressão digital em um emulador ou dispositivo Android. Emuladores não tem o hardware real para executar uma verificação de impressão digital, mas é possível simular uma verificação de impressão digital com a Ajuda de que o Android Debug Bridge (descritos abaixo).  Este guia discute como habilitar o bloqueio de tela em um dispositivo Android e registrar uma impressão digital para autenticação.
 
 ## <a name="requirements"></a>Requisitos
 
 Para registrar uma impressão digital, você deve ter um dispositivo Android ou um emulador em execução API nível 23 (Android 6.0).
 
-O uso do Android depurar ponte (ADB) requer familiaridade com o prompt de comando e o **adb** executável deve estar no caminho do seu Bash, o PowerShell, ou ambiente de Prompt de comando.
+O uso do Android Debug Bridge (ADB) requer familiaridade com o prompt de comando e o **adb** executável deve estar no caminho do seu Bash, PowerShell, ou ambiente de Prompt de comando.
 
-## <a name="configuring-a-screen-lock-and-enrolling-a-fingerprint"></a>Configurando um bloqueio de tela e registrando uma impressão digital 
+## <a name="configuring-a-screen-lock-and-enrolling-a-fingerprint"></a>Configurando um bloqueio de tela e registrar uma impressão digital 
 
 Para configurar um bloqueio de tela, execute as seguintes etapas:
 
@@ -36,40 +36,40 @@ Para configurar um bloqueio de tela, execute as seguintes etapas:
 
 2. A próxima tela exibida permitirá que você selecione e configure um dos métodos de segurança de bloqueio de tela: 
 
-    ![Passe o dedo para selecionar, padrão, PIN ou senha](enrolling-fingerprint-images/testing-02.png)
+    ![Selecione passar o dedo, padrão, PIN ou senha](enrolling-fingerprint-images/testing-02.png)
 
-   Selecione e execute um dos métodos de bloqueio de tela disponíveis.
+   Selecione e conclua um dos métodos de bloqueio de tela disponíveis.
 
-3. Depois que o screenlock estiver configurada, retornar para o **Configurações > segurança** página e selecione **impressão digital**:
+3. Depois que o screenlock estiver configurado, retornar para o **Configurações > segurança** página e selecione **impressão digital**:
 
     ![Local da seleção de impressão digital na tela de segurança](enrolling-fingerprint-images/testing-03.png)
 
-4. A partir daí, execute a sequência para adicionar uma impressão digital para o dispositivo:
+4. A partir daí, siga a sequência para adicionar uma impressão digital para o dispositivo:
 
     [![Sequência de capturas de tela para adicionar uma impressão digital para o dispositivo](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
-5. Na tela final, você será solicitado a colocar o dedo sobre o scanner de impressão digital: 
+5. Na tela final, você será solicitado a colocar seu dedo no scanner de impressão digital: 
 
     ![Tela que solicita que você coloque o dedo no sensor do](enrolling-fingerprint-images/testing-05.png)
 
-    Se você estiver usando um dispositivo Android, conclua o processo com o toque com um clique para o scanner. 
+    Se você estiver usando um dispositivo Android, conclua o processo ao tocar em um dedo ao scanner. 
     
     
 ### <a name="simulating-a-fingerprint-scan-on-the-emulator"></a>Simulando uma verificação de impressão digital no emulador
 
-Em um emulador Android, é possível simular uma verificação de impressão digital usando a ponte de depuração do Android. No início de X do sistema operacional uma sessão de Terminal em Windows inicie um prompt de comando ou uma sessão do Powershell e execute `adb`:
+Em um emulador do Android, é possível simular uma verificação de impressão digital usando o Android Debug Bridge. No início dos X uma sessão de Terminal no Windows inicie um prompt de comando ou uma sessão do Powershell e execute `adb`:
 
 ```shell
 $ adb -e emu finger touch 1
 ```
 
-O valor de **1** é o _dedo\_id_ para o dedo foi "verificado". É um inteiro exclusivo que você atribui cada impressão digital virtual. No futuro, quando o aplicativo está em execução você pode executar esse mesmo ADB comando cada vez que o emulador solicita a você uma impressão digital, é possível executar o `adb` de comando e passá-lo a _dedo\_id_ para simular a verificação de impressão digital .
+O valor de **1** é o _dedo\_id_ para o dedo que estava "verificado". Ele é um inteiro exclusivo que você atribui cada virtual por impressão digital. No futuro, quando o aplicativo está em execução, você pode executar esse mesmo ADB comando sempre que o emulador solicita a você para uma impressão digital, você pode executar o `adb` de comando e passe-o _dedo\_id_ para simular a verificação de impressão digital .
 
-Após a conclusão da leitura da impressão digital, o Android notificará que foi adicionada a impressão digital:  
+Após a conclusão da leitura da impressão digital, o Android notificará que a impressão digital foi adicionada:  
 
 ![Tela exibindo a impressão digital adicionado!](enrolling-fingerprint-images/testing-06.png)
 
 ## <a name="summary"></a>Resumo 
 
-Este guia abordada como um bloqueio de tela de instalação e registrar uma impressão digital em um dispositivo Android ou em um emulador Android. 
+Este guia abordou como um bloqueio de tela de instalação e registrar uma impressão digital em um dispositivo Android ou em um emulador do Android. 
 

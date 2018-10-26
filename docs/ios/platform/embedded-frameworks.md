@@ -4,15 +4,15 @@ description: Este documento descreve como compartilhar código com estruturas in
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/05/2018
-ms.openlocfilehash: cce5356fd1d3d9a5cf16370a4843c3541b00a7c0
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: b59fd7c1a9e5f528878b90e1a76fabe5a79bab81
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108230"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Estruturas incorporadas no xamarin. IOS
 
@@ -34,13 +34,13 @@ Há duas maneiras de consumir estruturas no xamarin. IOS:
 
 - Adicionar referências nativas no menu de contexto
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Clique com botão direito no projeto e navegue para adicionar referências nativas
 
 ![](embedded-frameworks-images/xam-native-refs.png "Selecione Adicionar referências de nativos no Visual Studio para Mac")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Clique com botão direito no projeto e navegue para adicionar referências nativas
 

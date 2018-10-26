@@ -4,15 +4,15 @@ description: Este documento descreve como usar tarefas em segundo plano para exe
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 9d304ee64e7716413febc475e721f5eb39043109
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351532"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120990"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding com tarefas
 
@@ -20,7 +20,7 @@ A maneira mais simples de executar backgrounding no iOS é dividir seus requisit
 
 Tarefas em segundo plano podem ser divididas em três categorias:
 
-1.  **Tarefas em segundo plano-Safe** - chamado em qualquer lugar do aplicativo onde você tem uma tarefa você não deseja interrompida, o aplicativo insira o plano de fundo.
+1.  **Tarefas em segundo plano Safe** - chamado em qualquer lugar no aplicativo em que você tem uma tarefa indesejadas interrompida deve o aplicativo inserir o plano de fundo.
 1.  **Tarefas de DidEnterBackground** - chamado durante o `DidEnterBackground` método de ciclo de vida do aplicativo para ajudar a limpeza e o salvamento de estado.
 1.  **Transferências (iOS 7 +) da tela de fundo** -um tipo especial de tarefa em segundo plano usado para executar transferências de rede no iOS 7. Ao contrário das tarefas regulares, transferências em segundo plano não tem um limite de tempo predeterminado.
 

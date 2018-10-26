@@ -3,15 +3,15 @@ title: Usando o ADO.NET com o Android
 ms.prod: xamarin
 ms.assetid: F6ABCEF1-951E-40D8-9EA9-DD79123C2650
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 9e0c1be2e37355242db2fb70857d90127c3b5259
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 4b22b15cfe5aaa836b65fc75f847b88c8e00e80b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242206"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106995"
 ---
 # <a name="using-adonet-with-android"></a>Usando o ADO.NET com o Android
 
@@ -21,11 +21,11 @@ Xamarin tem suporte interno para o banco de dados SQLite que está disponível n
 
 Para usar o access SQLite por meio do ADO.NET, você deve adicionar `System.Data` e `Mono.Data.Sqlite` faz referência ao seu projeto Android, conforme mostrado aqui:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin) 
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows) 
 
 ![Referências do Android no Visual Studio](using-adonet-images/image7.png "faz referência a Android no Visual Studio") 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac) 
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos) 
 
 ![Referências do Android no Visual Studio para Mac](using-adonet-images/image5.png "Android faz referência no Visual Studio para Mac") 
 

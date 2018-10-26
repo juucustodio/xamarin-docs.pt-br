@@ -6,13 +6,13 @@ ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 47cd79611cfeaf48c0422772d8f3e75eb57ba771
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/04/2018
+ms.openlocfilehash: b8e851e735fa39d015e22ce511c39ad825bc97c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996047"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119977"
 ---
 # <a name="xamarinforms-tableview"></a>Modo de tabela do xamarin. Forms
 
@@ -216,7 +216,67 @@ O c# acima está fazendo muito. Vamos dividi-lo:
 
 Observe que uma classe para a célula personalizada nunca é definida. Em vez disso, o `ViewCell`da propriedade de exibição é definida para uma determinada instância de `ViewCell`.
 
+## <a name="row-height"></a>Altura da linha
 
+O [ `TableView` ](xref:Xamarin.Forms.TableView) classe tem duas propriedades que podem ser usadas para alterar a altura da linha de células:
+
+- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) – Define a altura de cada linha para um `int`.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) – linhas têm diferentes alturas se definido como `true`. Observe que, ao definir essa propriedade como `true`, as alturas das linhas automaticamente serão calculadas e aplicadas pelo xamarin. Forms.
+
+Quando a altura do conteúdo em uma célula em uma [ `TableView` ](xref:Xamarin.Forms.TableView) for alterado, a linha de altura é atualizada implicitamente no Android e Universal Windows Platform (UWP). No entanto, no iOS ele deve ser forçado a atualizar definindo a [ `HasUnevenRows` ](xref:Xamarin.Forms.TableView.HasUnevenRows) propriedade `true` e chamando o [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) método.
+
+A exemplo XAML a seguir mostra uma [ `TableView` ](xref:Xamarin.Forms.TableView) que contém um [ `ViewCell` ](xref:Xamarin.Forms.ViewCell):
+
+```xaml
+<ContentPage ...>
+    <TableView ...
+               HasUnevenRows="true">
+        <TableRoot>
+            ...
+            <TableSection ...>
+                ...
+                <ViewCell x:Name="_viewCell"
+                          Tapped="OnViewCellTapped">
+                    <Grid Margin="15,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Tap this cell." />
+                        <Label x:Name="_target"
+                               Grid.Row="1"
+                               Text="The cell has changed size."
+                               IsVisible="false" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
+```
+
+Quando o [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) é tocado, o `OnViewCellTapped` manipulador de eventos é executado:
+
+```csharp
+void OnViewCellTapped(object sender, EventArgs e)
+{
+    _target.IsVisible = !_target.IsVisible;
+    _viewCell.ForceUpdateSize();
+}
+```
+
+O `OnViewCellTapped` manipulador de eventos mostra ou oculta a segunda [ `Label` ](xref:Xamarin.Forms.Label) no [ `ViewCell` ](xref:Xamarin.Forms.ViewCell)e atualiza explicitamente o tamanho da célula, chamando o [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) método.
+
+As capturas de tela a seguir mostram a célula antes da que está sendo tocado após:
+
+![](tableview-images/cell-beforeresize.png "ViewCell antes que está sendo redimensionada")
+
+Capturas de tela as seguir mostram a célula depois sendo tocado após:
+
+![](tableview-images/cell-afterresize.png "ViewCell depois que está sendo redimensionada")
+
+> [!IMPORTANT]
+> Há uma grande possibilidade de degradação do desempenho se esse recurso está sendo usado em excesso.
 
 ## <a name="related-links"></a>Links relacionados
 

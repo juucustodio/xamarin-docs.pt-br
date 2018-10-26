@@ -1,24 +1,24 @@
 ---
-title: iOS Backgrounding explicações passo a passo
-description: Links neste documento para instruções passo a passo que demonstre como usar informações de localização em um aplicativo backgrounded e como usar o serviço de transferência em segundo plano e NSURLSession.
+title: instruções passo a passo de Backgrounding do iOS
+description: Este documento leva a instruções passo a passo que demonstram como usar informações de localização em um aplicativo backgrounded e como usar NSURLSession e o serviço de transferência em segundo plano.
 ms.prod: xamarin
 ms.assetid: D4937080-7865-48C0-8FE5-310E90229BC3
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 94e9370f5bda5aaf78bf67fd7da0d7450c6fbe5d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: e0da7dcdaa41dec244ff81a6ee6a9a9ed99c02e6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783620"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116869"
 ---
-# <a name="ios-backgrounding-walkthroughs"></a>iOS Backgrounding explicações passo a passo
+# <a name="ios-backgrounding-walkthroughs"></a>instruções passo a passo de Backgrounding do iOS
 
 ##  <a name="walkthrough---using-background-locationiosapp-fundamentalsbackgroundingios-backgrounding-walkthroughslocation-walkthroughmd"></a>[Passo a passo: usar o local em segundo plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md)
 
-Neste exemplo, vamos criar um iOS aplicativo local que imprime as informações sobre nosso local atual latitude, longitude e outros parâmetros - na tela. Este aplicativo demonstrará como executar corretamente atualizações local enquanto o aplicativo está ativo ou Backgrounded.
+Neste exemplo, criamos um iOS aplicativo local que imprime informações sobre nosso local atual - latitude, longitude e outros parâmetros - na tela. Este aplicativo será demonstram como executar corretamente as atualizações de local enquanto o aplicativo está ativo ou Backgrounded.
 
 ##  <a name="walkthrough---using-background-transfer-service-and-nsurlsessioniosapp-fundamentalsbackgroundingios-backgrounding-walkthroughsbackground-transfer-walkthroughmd"></a>[Passo a passo:usar NSURLSession e Serviço de Transferência em Segundo Plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md)
 
-Neste passo a passo, usamos o serviço de transferência em segundo plano e `NSURLSession` API disparar baixar uma imagem grande que continua a fazer o download quando o aplicativo está em segundo plano.
+Neste passo a passo, podemos usar o serviço de transferência em segundo plano e `NSURLSession` API para iniciar o download de uma imagem grande que continua a baixar quando o aplicativo está em segundo plano.

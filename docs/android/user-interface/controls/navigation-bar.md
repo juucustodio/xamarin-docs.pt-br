@@ -3,37 +3,37 @@ title: Barra de navegação
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 476e73906e4fbe01847740f90a8da701768b29db
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ce80fab39c814204631c5cc408c3f0ee99a329e6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762806"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110551"
 ---
 # <a name="navigation-bar"></a>Barra de navegação
 
-Android 4 introduziu um novo recurso de interface de usuário de sistema chamado um *barra de navegação*, que fornece controles de navegação em dispositivos que não incluem os botões de hardware para **início**, **novamente** , e **Menu**.
-Captura de tela a seguir mostra a barra de navegação de um dispositivo do Nexus primo:
+Android 4 introduziu um novo recurso de interface de usuário de sistema chamado um *barra de navegação*, que fornece controles de navegação em dispositivos que não incluem botões de hardware para **Home**, **novamente** , e **Menu**.
+Captura de tela a seguir mostra a barra de navegação de um dispositivo Nexus primo:
 
- [![Exemplo de uma barra de navegação do Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
+ [![Exemplo de uma barra de navegação em Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
-Vários sinalizadores novo estão disponíveis que controlam a visibilidade da barra de navegação e seus controles, bem como a visibilidade da barra de sistema que foi introduzido no Android 3. Os sinalizadores são definidos no `Android.View.View` classe e estão listadas abaixo:
+Vários sinalizadores novos estão disponíveis que controlam a visibilidade da barra de navegação e seus controles, bem como a visibilidade da barra de sistema que foi introduzido no Android 3. Os sinalizadores são definidos na `Android.View.View` de classe e estão listadas abaixo:
 
--   `SystemUiFlagVisible` &ndash; Barra de navegação torna visível. 
+-   `SystemUiFlagVisible` &ndash; A barra de navegação torna visível. 
 -   `SystemUiFlagLowProfile` &ndash; DIMS controles na barra de navegação. 
 -   `SystemUiFlagHideNavigation` &ndash; Oculta a barra de navegação. 
 
 
-Esses sinalizadores podem ser aplicados a qualquer exibição na hierarquia do modo de exibição, definindo o `SystemUiVisibility` propriedade. Se vários modos de exibição têm esta propriedade definida, o sistema combina com uma operação OR e os aplica desde que a janela na qual os sinalizadores são definidos retém o foco. Quando você remove uma exibição, os sinalizadores que definido também serão removidos.
+Esses sinalizadores podem ser aplicados a qualquer exibição na hierarquia de exibição, definindo o `SystemUiVisibility` propriedade. Se vários modos de exibição tem essa propriedade definida, o sistema combina com uma operação OR e os aplica desde que a janela na qual os sinalizadores são definidos mantém o foco. Quando você remove uma exibição, os sinalizadores que ele foi definido também serão removidos.
 
-O exemplo a seguir mostra um aplicativo simples, onde os botões altera o `SystemUiVisibility`:
+O exemplo a seguir mostra um aplicativo simples em que clicar em qualquer um dos botões altera o `SystemUiVisibility`:
 
- [![Capturas de tela demonstra visíveis, baixo perfil e SystemUiVisibility oculto](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
+ [![Capturas de tela demonstrando Visible, baixo perfil e SystemUiVisibility oculto](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
-O código para alterar o `SystemUiVisibility` define a propriedade em uma `TextView` de cada botão Clique manipulador de eventos, conforme mostrado abaixo:
+O código para alterar o `SystemUiVisibility` define a propriedade em um `TextView` de cada botão Clique manipulador de eventos, como mostrado abaixo:
 
 ```csharp
 var tv = FindViewById<TextView> (Resource.Id.systemUiFlagTextView);
@@ -56,7 +56,7 @@ visibleButton.Click += delegate {
 }
 ```
 
-Além disso, um `SystemUiVisibility` alterar gera um `SystemUiVisibilityChange` eventos. Assim como a configuração de `SystemUiVisibility` propriedade, um manipulador para o `SystemUiVisibilityChange` evento pode ser registrado para qualquer exibição na hierarquia. Por exemplo, o código abaixo usa o `TextView` instância a ser registrada para o evento:
+Além disso, uma `SystemUiVisibility` alterar gera um `SystemUiVisibilityChange` eventos. Assim como a configuração de `SystemUiVisibility` propriedade, um manipulador para o `SystemUiVisibilityChange` evento pode ser registrado para qualquer exibição na hierarquia. Por exemplo, o código a seguir usa o `TextView` instância a ser registrada para o evento:
 
 ```csharp
 tv.SystemUiVisibilityChange +=
@@ -70,5 +70,5 @@ tv.SystemUiVisibilityChange +=
 ## <a name="related-links"></a>Links relacionados
 
 - [SystemUIVisibilityDemo (sample)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
-- [Introdução ao sabor de sorvete Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Apresentando o Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)

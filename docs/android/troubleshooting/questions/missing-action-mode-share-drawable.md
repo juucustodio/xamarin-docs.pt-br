@@ -1,26 +1,26 @@
 ---
-title: "Android.Support.v7.AppCompat - nenhum recurso encontrado que coincide com o nome fornecido: attr 'android: actionModeShareDrawable'"
+title: "Android.Support.v7.AppCompat – nenhum recurso encontrado que corresponde ao nome fornecido: attr 'android: actionModeShareDrawable'"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5814069C-FC43-41DE-B5A5-024D05E59929
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 07655587642c3e1aa94d035e76f6f6758340546d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fea681ac3b99abed09d3d3e745bd4bf6015970df
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774890"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112410"
 ---
-# <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat - nenhum recurso encontrado que coincide com o nome fornecido: attr 'android: actionModeShareDrawable'
+# <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat – nenhum recurso encontrado que corresponde ao nome fornecido: attr 'android: actionModeShareDrawable'
 
-1. Certifique-se de que baixar os mais recentes extras, bem como o Android 5.0 (API 21) SDK por meio do Gerenciador de SDK do Android.
+1. Certifique-se de que baixar os mais recentes extras, bem como o Android 5.0 SDK por meio do Gerenciador de SDK do Android (API 21).
 
-2. Certifique-se de que você está compilando seu aplicativo com compileSdkVersion definido como 21. Você pode definir opcionalmente o targetSdkVersion como 21 também.
+2. Certifique-se de que você está compilando seu aplicativo com compileSdkVersion definido como 21. Você pode definir opcionalmente o targetSdkVersion para 21 também.
 
-3. Se você precisar de uma versão anterior, como a API 19, baixe a versão do respectiva encontrada na página do Nuget:
+3. Se você precisar de uma versão anterior, como a API 19, faça o download da respectiva versão encontrada na página do Nuget:
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 

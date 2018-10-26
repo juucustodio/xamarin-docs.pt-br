@@ -1,61 +1,61 @@
 ---
-title: SpriteKit em xamarin
-description: Este documento descreve SpriteKit, estrutura de gráficos 2D da Apple que integra SceneKit, incorpora física e a animação, inclui suporte para a iluminação e sombreamento e muito mais. SpriteKit pode ser usado para criar jogos 2D.
+title: SpriteKit no xamarin. IOS
+description: Este documento descreve o SpriteKit, a estrutura de gráficos 2D da Apple que se integra com o SceneKit, incorpora a animação e física, inclui suporte para a iluminação e sombreamento e muito mais. SpriteKit pode ser usado para criar jogos 2D.
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: b74b5a722aab240b55ed96bea2a33b162d7817eb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: ef1e9a98b76166f4ee5638d1ab9762896d1e3bc8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121640"
 ---
-# <a name="spritekit-in-xamarinios"></a>SpriteKit em xamarin
+# <a name="spritekit-in-xamarinios"></a>SpriteKit no xamarin. IOS
 
-SpriteKit, a estrutura de gráficos 2D da Apple, tem alguns novos recursos interessantes do iOS 8 e OS X Yosemite. Isso inclui a integração com SceneKit, suporte de sombreador, iluminação, sombras, restrições, geração de mapa normal e aprimoramentos de física. Em particular, os novos recursos de física facilitam muito a adicionar efeitos realistas para um jogo.
+SpriteKit, a estrutura de gráficos 2D da Apple, tem alguns novos recursos interessantes no iOS 8 e nos X Yosemite. Isso inclui a integração com o SceneKit, suporte de sombreador, iluminação, sombras, restrições, geração de mapa normal e aprimoramentos de física. Em particular, os novos recursos de física tornam muito fácil adicionar efeitos realistas para um jogo.
 
 ## <a name="physics-bodies"></a>Corpos de física
 
-SpriteKit inclui um 2D, física rígida corpo API. Cada entidade gráfica tem um corpo física associada (`SKPhysicsBody`) que define as propriedades de física, como em massa e fricção, bem como a geometria do corpo do mundo física.
+SpriteKit inclui um 2D, física de um corpo rígido API. Cada sprite tem um corpo de física associada (`SKPhysicsBody`) que define as propriedades de física, como em massa e atrito, bem como a geometria do corpo do mundo física.
 
-## <a name="creating-a-physics-body-from-a-texture"></a>Criando um corpo física de uma textura
-SpriteKit agora dá suporte a derivação de corpo de uma entidade gráfica física de sua textura. Isso facilita a implementar colisões mais natural.
+## <a name="creating-a-physics-body-from-a-texture"></a>Criando um corpo de física de uma textura
+SpriteKit agora dá suporte ao derivar o corpo de física de um sprite de sua textura. Isso torna mais fácil de implementar colisões mais natural.
 
 Por exemplo, observe na colisão a seguir como a banana e monkey colidem quase na superfície de cada imagem:
  
 ![](spritekit-images/image13.png "O banana e monkey colidem quase na superfície de cada imagem")
 
-SpriteKit possibilita a criação de tal um corpo física com uma única linha de código. Basta chamar `SKPhysicsBody.Create` com a textura e o tamanho: entidade gráfica. PhysicsBody = SKPhysicsBody.Create (entidade gráfica. Textura, entidade gráfica. Tamanho);
+SpriteKit possibilita criar tal um corpo de física com uma única linha de código. Basta chamar `SKPhysicsBody.Create` com o tamanho e a textura: sprite. PhysicsBody = SKPhysicsBody.Create (sprite. Textura, sprite. Tamanho);
 
-## <a name="alpha-threshold"></a>Limite alfa
+## <a name="alpha-threshold"></a>Limite de alfa
 
-Além de simplesmente definir o `PhysicsBody` propriedade diretamente a geometria derivada de textura, aplicativos podem definir e o limite alfa para controlar como a geometria é derivada. 
+Além de simplesmente definir o `PhysicsBody` propriedade diretamente à geometria derivada de textura, os aplicativos podem definir e o limite de alfa para controlar como a geometria é derivada. 
 
-O limite alfa define o valor mínimo de alfa que um pixel deve ter para ser incluído no corpo da física resultante. Por exemplo, o código a seguir resulta em um corpo física ligeiramente diferentes:
+O limite de alfa define o valor alfa mínimo, que um pixel deve ter para ser incluído no corpo da física resultante. Por exemplo, o código a seguir resulta em um corpo de física ligeiramente diferente:
 
 ```chsarp
 sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, 0.7f, sprite.Size);
 ```
 
-O efeito de ajustar o limite alfa assim fine-tunes a colisão anterior, que o monkey cai quando conflito com o banana:
+O efeito das alterações do limite alfa assim ajusta a colisão anterior, o, de modo que o monkey diminui ao longo do quando colidam o banana:
 
-![](spritekit-images/image14.png "O monkey cai quando conflito com o banana")
+![](spritekit-images/image14.png "O monkey diminui ao longo do quando colidam o banana")
  
-## <a name="physics-fields"></a>Campos física
+## <a name="physics-fields"></a>Campos de física
 
-Outro importante acréscimo ao SpriteKit é compatível com o novo campo física. Elas permitem que você adicionar itens, como campos de vortex, campos de gravidade radial e campos de spring para mencionar apenas alguns.
+Outra ótima adição à SpriteKit é o novo campo física dão suporte. Elas permitem que você adicionar itens, como campos vortex, campos de gravidade radial e spring para mencionar apenas alguns.
 
-Campos física são criados usando a classe SKFieldNode, que é adicionada a uma cena assim como qualquer outro `SKNode`. Há uma variedade de métodos de fábrica em `SKFieldNode` para criar campos física diferente. Você pode criar um campo de spring chamando `SKFieldNode.CreateSpringField()`, um campo de gravidade radial chamando `SKFieldNode.CreateRadialGravityField()`, e assim por diante.
+Campos de física são criados usando a classe SKFieldNode, que é adicionada a uma cena como qualquer outro `SKNode`. Há uma variedade de métodos de fábrica em `SKFieldNode` para criar campos de física diferente. Você pode criar um campo de spring chamando `SKFieldNode.CreateSpringField()`, um campo de gravidade radial chamando `SKFieldNode.CreateRadialGravityField()`e assim por diante.
 
 `SKFieldNode` também tem propriedades para controlar os atributos de campo, como a força do campo, a região de campo e a atenuação de força de campo.
 
-## <a name="spring-field"></a>Campo de Spring
+## <a name="spring-field"></a>Campo do Spring
 
-Por exemplo, o código a seguir cria um campo de spring e o adiciona à cena:
+Por exemplo, o código a seguir cria um campo de spring e adiciona à cena:
 
 ```csharp
 SKFieldNode fieldNode = SKFieldNode.CreateSpringField ();
@@ -66,7 +66,7 @@ fieldNode.Region = new SKRegion(Frame.Size);
 AddChild (fieldNode);
 ```
 
-Você pode adicionar sprites e definir suas `PhysicsBody` propriedades para que o campo física afetará os sprites, assim como o código a seguir quando o usuário toca a tela:
+Você pode, em seguida, adicione sprites e defina seus `PhysicsBody` propriedades para que o campo física afetará os sprites, como o código a seguir faz quando o usuário toca na tela:
 
 ```csharp
 public override void TouchesBegan (NSSet touches, UIEvent evt)
@@ -83,9 +83,9 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 }
 ```
 
-Isso faz com que o bananas oscilar como um spring ao redor do nó de campo:
+Isso faz com que o bananas oscilar, como uma mola ao redor do nó de campo:
 
-![](spritekit-images/image15.png "Os bananas oscilar como um spring ao redor do nó de campo")
+![](spritekit-images/image15.png "Os bananas oscilar, como uma mola ao redor do nó de campo")
  
 ## <a name="radial-gravity-field"></a>Campo de gravidade Radial
 
@@ -99,6 +99,6 @@ fieldNode.Strength = 10.0f;
 fieldNode.Falloff = 1.0f;
 ```
 
-Isso resulta em um campo diferente de força, onde os bananas são extraídas radialmente sobre o campo de:
+Isso resulta em um campo de força diferente, onde os bananas são extraídos radialmente sobre o campo:
 
-![](spritekit-images/image16.png "Os bananas são extraídas radialmente ao redor do campo")
+![](spritekit-images/image16.png "Os bananas são extraídos radialmente em torno do campo")

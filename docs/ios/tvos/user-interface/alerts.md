@@ -1,51 +1,51 @@
 ---
-title: Trabalhando com alertas tvOS Xamarin
-description: Este documento descreve como trabalhar com alertas tvOS Xamarin. Ele discute exibindo um alerta, adicionando campos de texto e uma classe auxiliar.
+title: Trabalhando com alertas de tvOS no Xamarin
+description: Este documento descreve como trabalhar com alertas de tvOS no Xamarin. Ele aborda exibindo um alerta, adicionando campos de texto e uma classe auxiliar.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: b5125f150a4d57ed27041da2944f4c161434cf93
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 13c5ae3fac76ec1ec1a0ade135d5919403066226
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111274"
 ---
-# <a name="working-with-tvos-alerts-in-xamarin"></a>Trabalhando com alertas tvOS Xamarin
+# <a name="working-with-tvos-alerts-in-xamarin"></a>Trabalhando com alertas de tvOS no Xamarin
 
-_Este artigo aborda o trabalho com UIAlertController para exibir uma mensagem de alerta para o usuário no Xamarin.tvOS._
+_Este artigo aborda o trabalho com UIAlertController para exibir uma mensagem de alerta para o usuário no xamarin. tvos._
 
-Se você precisar chamar a atenção do usuário tvOS ou peça permissão para executar uma ação destrutiva (como excluir um arquivo), você pode apresentar uma mensagem de alerta usando o `UIAlertViewController`:
+Se você precisar obter a atenção do usuário do tvOS ou peça permissão para executar uma ação destrutiva (como excluir um arquivo), você pode apresentar uma mensagem de alerta usando o `UIAlertViewController`:
 
 [![](alerts-images/alert01.png "Um exemplo UIAlertViewController")](alerts-images/alert01.png#lightbox)
 
-Se a adição para exibir uma mensagem, você pode adicionar botões e campos de texto para um alerta para permitir que o usuário responder às ações e fornecer comentários.
+Se a adição ao exibir uma mensagem, você pode adicionar botões e campos de texto a um alerta para permitir que o usuário responder às ações e fornecer comentários.
 
 <a name="About-Alerts" />
 
 ## <a name="about-alerts"></a>Sobre alertas
 
-Como mencionado acima, os alertas são usados para chamar a atenção do usuário e informá-los do estado do seu aplicativo ou solicitação de comentários. Alertas devem apresentar um título, opcionalmente, eles podem ter uma mensagem e um ou mais botões ou campos de texto.
+Como mencionado acima, os alertas são usados para obter a atenção do usuário e informá-los do estado do seu aplicativo ou solicitação de comentários. Alertas devem apresentar um título, pode, opcionalmente, ter uma mensagem e um ou mais botões ou campos de texto.
 
 [![](alerts-images/alert04.png "Um exemplo de alerta")](alerts-images/alert04.png#lightbox)
 
-Apple tem as seguintes sugestões para trabalhar com alertas:
+Apple tem as sugestões a seguir para trabalhar com alertas:
 
-- **Usar alertas moderadamente** -alertas interromper o fluxo do usuário com o aplicativo e interromper a experiência do usuário e como tal, só deve ser usados em situações importantes, como notificações de erro, compras no aplicativo e ações. 
-- **Fornece opções úteis** - se o alerta apresenta opções para o usuário, seu deve garantir que cada opção oferece informações importantes e fornece ações úteis para o usuário.
+- **Use alertas com moderação** -alertas e afetar o fluxo do usuário com o aplicativo interromper a experiência do usuário e como tal, só deve ser usados em situações importantes, como notificações de erro, compras no aplicativo e as ações destrutivas. 
+- **Fornece opções úteis** - se o alerta apresenta opções para o usuário, sua deve garantir que cada opção oferece informações essenciais e fornece ações úteis para o usuário.
 
 <a name="Alert-Titles-and-Messages" />
 
 ### <a name="alert-titles-and-messages"></a>Títulos e mensagens de alerta
 
-Apple tem as seguintes sugestões para apresentar o título e a mensagem opcional de um alerta:
+Apple tem as seguintes sugestões para apresentar o título e mensagem opcional de um alerta:
 
-- **Usar títulos Multiword** -título de um alerta deve obter o ponto da situação em claramente permanecendo ainda simples. Um título de palavra única raramente fornece informações suficientes.
-- **Usar títulos descritivos que não exigem uma mensagem** - sempre que possível, considere a possibilidade de fazer o título do alerta descritivo suficiente que o texto da mensagem opcional não é necessária. 
-- **Verifique a mensagem de um curto, uma frase completa** - se a mensagem opcional é necessária para obter o ponto do alerta em, mantê-lo mais simples possível e torná-la uma frase completa com a capitalização correta e pontuação.
+- **Use títulos Multiword** -título de um alerta deve obter o ponto da situação entre claramente permanecendo ainda simples. Um título de palavra única raramente fornece informações suficientes.
+- **Use títulos descritivos que não exigem uma mensagem** – sempre que possível, considere tornar o título do alerta descritivo suficiente que o texto da mensagem opcional não é necessária. 
+- **Verifique a mensagem uma breve, a frase completa** - se a mensagem opcional é necessária para obter o ponto do alerta entre, mantê-lo o mais simples possível e torná-lo uma frase completa com a capitalização correta e pontuação.
 
 <a name="Alert-Buttons" />
 
@@ -53,15 +53,15 @@ Apple tem as seguintes sugestões para apresentar o título e a mensagem opciona
 
 Apple tem a seguinte sugestão para adicionar botões a um alerta:
 
-- **Limite de dois botões** - sempre que possível, limitar o alerta a um máximo de dois botões. Os alertas de botão único fornecem informações, mas nenhuma ação. Dois alertas de botão fornecem um simples opção Sim/não de ação.
-- **Use Succinct, títulos de botão lógica** -simples títulos de botão de palavras de um ou dois que claramente descrevem a ação do botão funcionam melhor. Para obter mais informações, consulte nosso [trabalhando com botões](~/ios/tvos/user-interface/buttons.md) documentação.
+- **Limite de dois botões** – sempre que possível, limite o alerta a um máximo de dois botões. Os alertas de botão único fornecem informações, mas nenhuma ação. Dois alertas de botão fornecem um simples Sim/não choice da ação.
+- **Use Succinct, títulos de botão lógico** -simples, um ou dois títulos de botão de palavra que descrevem claramente a ação do botão funcionam melhor. Para obter mais informações, consulte nosso [trabalhando com botões](~/ios/tvos/user-interface/buttons.md) documentação.
 - **Claramente marca botões destrutiva** - para botões que executam uma ação destrutiva (como excluir um arquivo) claramente marcá-los com o `UIAlertActionStyle.Destructive` estilo.
 
 <a name="Displaying-an-Alert" />
 
-## <a name="displaying-an-alert"></a>Exibir um alerta
+## <a name="displaying-an-alert"></a>Exibindo um alerta
 
-Para exibir um alerta, você cria uma instância do `UIAlertViewController` e configurá-lo adicionando ações (botões) e selecionando o estilo do alerta. Por exemplo, o código a seguir exibe um alerta de Okey/Cancelar:
+Para exibir um alerta, você pode criar uma instância do `UIAlertViewController` e configurá-lo a adicionar ações (botões) e selecionando o estilo do alerta. Por exemplo, o código a seguir exibe um alerta de Okey/Cancelar:
 
 ```csharp
 const string title = "A Short Title is Best";
@@ -88,13 +88,13 @@ alertController.AddAction (cancelAction);
 PresentViewController (alertController, true, null);
 ```
 
-Vamos dar uma olhada nesse código em detalhes. Primeiro, criamos um novo alerta com o título especificado e a mensagem:
+Vamos dar uma olhada neste código detalhadamente. Primeiro, criamos um novo alerta com o título especificado e a mensagem:
 
 ```csharp
 UIAlertController.Create (title, message, UIAlertControllerStyle.Alert)
 ```
 
-Em seguida, para cada botão que você deseja exibir no alerta, criamos uma ação definindo o título do botão, o estilo e a ação que desejamos assumir se o botão for pressionado:
+Em seguida, para cada botão que desejamos exibir no alerta, criamos uma ação definindo o título do botão, seu estilo e a ação que desejamos assumir se o botão for pressionado:
 
 ```csharp
 UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ => 
@@ -106,24 +106,24 @@ UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
 O `UIAlertActionStyle` enum permitem que você defina o estilo do botão como um dos seguintes:
 
 - **Padrão** -botão será o botão padrão selecionado quando o alerta é exibido.
-- **Cancelar** -botão é o botão Cancelar para o alerta.
-- **Destrutiva** -realça o botão como uma ação destrutiva, como excluir um arquivo. Atualmente, tvOS renderiza o botão destrutivo com um plano de fundo vermelho.
+- **Cancelar** -o botão é o botão Cancelar para o alerta.
+- **Destrutiva** -realça o botão como uma ação destrutiva, como a exclusão de um arquivo. Atualmente, tvOS renderiza o botão destrutivo com um plano de fundo vermelho.
 
-O `AddAction` método adiciona a ação em questão para o `UIAlertViewController` e, finalmente, o `PresentViewController (alertController, true, null)` método exibe o alerta específico para o usuário.
+O `AddAction` método adiciona a ação em questão para o `UIAlertViewController` e, finalmente, o `PresentViewController (alertController, true, null)` método exibe o alerta especificado ao usuário.
 
 <a name="Adding-Text-Fields" />
 
 ## <a name="adding-text-fields"></a>Adicionando campos de texto
 
-Além de adicionar ações (botões) para o alerta, você pode adicionar campos de texto para o alerta para permitir que o usuário preencha informações como IDs de usuário e senhas:
+Além de adicionar ações (botões) para o alerta, você pode adicionar campos de texto para o alerta para permitir que o usuário preencha informações como as IDs de usuário e senhas:
 
 [![](alerts-images/alert02.png "Campo de texto em um alerta")](alerts-images/alert02.png#lightbox)
 
-Se o usuário selecionar o campo de texto, o teclado tvOS padrão será exibido, permitindo que ele insira um valor para o campo:
+Se o usuário selecionar o campo de texto, o teclado de tvOS padrão será exibido, permitindo que eles a inserir um valor para o campo:
 
 [![](alerts-images/alert03.png "Inserindo texto")](alerts-images/alert03.png#lightbox)
 
-O código a seguir exibe um alerta de Okey/cancelar um único campo de texto para inserir um valor:
+O código a seguir exibe um alerta de Okey/Cancelar com um único campo de texto para inserir um valor:
 
 ```csharp
 UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
@@ -160,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-O `AddTextField` método adiciona um novo campo de texto para o alerta que você pode configurar definindo propriedades, como o espaço reservado para texto (o texto que aparece quando o campo está vazio), o valor de texto padrão e o tipo de teclado. Por exemplo:
+O `AddTextField` método adiciona um novo campo de texto para o alerta que você pode configurar, em seguida, definindo as propriedades, como o espaço reservado para texto (o texto que aparece quando o campo estiver vazio), o valor de texto padrão e o tipo de teclado. Por exemplo:
 
 ```csharp
 // Initialize field
@@ -172,7 +172,7 @@ field.ReturnKeyType = UIReturnKeyType.Done;
 field.ClearButtonMode = UITextFieldViewMode.WhileEditing;
 ```
 
-Para que podemos pode agir sobre o valor do campo de texto, podemos também são salvar uma cópia do usando o seguinte código:
+Para que podemos pode atuar no valor do campo de texto, podemos também são salvar uma cópia do usando o seguinte código:
 
 ```csharp
 UITextField field = null;
@@ -190,9 +190,9 @@ Depois que o usuário inseriu um valor no campo de texto, podemos usar o `field`
 
 <a name="Alert-View-Controller-Helper-Class" />
 
-## <a name="alert-view-controller-helper-class"></a>Classe do auxiliar de controlador de exibição de alerta
+## <a name="alert-view-controller-helper-class"></a>Classe de auxiliar de controlador de exibição de alerta
 
-Como exibir tipos simples, comuns de alertas usando `UIAlertViewController` pode resultar em uma grande quantidade de código duplicado, você pode usar uma classe auxiliar para reduzir a quantidade de código repetitivo. Por exemplo:
+Como exibir tipos simples e comuns de alertas usando `UIAlertViewController` pode resultar em uma grande quantidade de código duplicado, você pode usar uma classe auxiliar para reduzir a quantidade de código repetitivo. Por exemplo:
 
 ```csharp
 using System;
@@ -329,7 +329,7 @@ namespace UIKit
 }
 ```
 
-O uso dessa classe, como exibir e responder aos alertas simples podem ser feitos da seguinte maneira:
+O uso dessa classe, exibir e responder aos alertas simples podem ser feitos da seguinte maneira:
 
 ```csharp
 #region Custom Actions
@@ -366,7 +366,7 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordou trabalhar com `UIAlertController` para exibir uma mensagem de alerta para o usuário no Xamarin.tvOS. Primeiro, ele mostrou como exibir um alerta simples e adicione botões. Em seguida, ele mostrou como adicionar campos de texto a um alerta. Finalmente, ele mostrou como usar uma classe auxiliar para reduzir a quantidade de código repetitivo necessário para exibir um alerta.
+Este artigo cobriu trabalhar com `UIAlertController` para exibir uma mensagem de alerta para o usuário no xamarin. tvos. Primeiro, ele mostrou como exibir um alerta simples e adicione os botões. Em seguida, ele mostrou como adicionar campos de texto a um alerta. Por fim, ele mostrou como usar uma classe auxiliar para reduzir a quantidade de código repetitivo necessária para exibir um alerta.
 
 
 
@@ -374,5 +374,5 @@ Este artigo abordou trabalhar com `UIAlertController` para exibir uma mensagem d
 
 - [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS guias de Interface Humana](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

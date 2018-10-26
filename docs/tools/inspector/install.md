@@ -1,32 +1,32 @@
 ---
-title: Requisitos e instalação de Inspetor
-description: Este documento descreve como instalar o Inspetor de Xamarin e discute o sistema operacional com suporte, IDEs e plataformas de aplicativo.
+title: Requisitos e instalação do Inspetor
+description: Este documento descreve como instalar o Xamarin Inspector e discute o sistema operacional com suporte, IDEs e plataformas de aplicativo.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 690329aa1577c66b3aa2794342a8e367477d3a74
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 2357003e3a855981f053c48a596b932d9ba36d90
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066917"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104943"
 ---
-# <a name="inspector-installation-and-requirements"></a>Requisitos e instalação de Inspetor
+# <a name="inspector-installation-and-requirements"></a>Requisitos e instalação do Inspetor
 
 ## <a name="download-and-installation"></a>Download e instalação
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-1. Baixe e instale o [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) e selecione o **desenvolvimento móvel com o .NET** carga de trabalho.
-1. [Entrar](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) para ativar sua assinatura do Enterprise.
+1. Baixe e instale [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) e selecione o **desenvolvimento móvel com .NET** carga de trabalho.
+1. [Entrar](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) para ativar sua assinatura Enterprise.
 1. [Inspecionar](~/tools/inspector/inspect.md) seu próprio aplicativo!
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-1. Baixe e instale o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/).
-1. [Entrar](https://docs.microsoft.com/visualstudio/mac/activation) para ativar sua assinatura do Enterprise.
+1. Baixe e instale [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/).
+1. [Entrar](https://docs.microsoft.com/visualstudio/mac/activation) para ativar sua assinatura Enterprise.
 1. [Inspecionar](~/tools/inspector/inspect.md) seu próprio aplicativo!
 
 -----
@@ -35,26 +35,26 @@ ms.locfileid: "37066917"
 
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 
-- **Mac** -OS X 10.11 ou maior
-- **Windows** -Windows 7 ou superior (com o Internet Explorer 11 ou superior e o .NET 4.6.1 ou posterior)
+- **Mac** -OS X 10.11 ou superior
+- **Windows** -Windows 7 ou superior (com o Internet Explorer 11 ou superior e o .NET 4.6.1 ou superior)
 
 ### <a name="supported-ides"></a>IDEs com suporte
 
 - Visual Studio para Mac
-- Visual Studio de 2017 com **desenvolvimento móvel com o .NET** carga de trabalho
+- Visual Studio 2017 com **desenvolvimento móvel com .NET** carga de trabalho
 
-Inspeção de aplicativo em tempo real está disponível para os clientes corporativos.
+Inspeção de aplicativo em tempo real está disponível para clientes empresariais.
 
 <a name="supported-platforms" />
 
 ### <a name="supported-app-platforms"></a>Plataformas com suporte do aplicativo
 
-|Plataforma de aplicativos|Suporte IDE|Observações|
+|Plataforma de aplicativo|Suporte ao IDE|Observações|
 |--- |--- |--- |
 |Mac|Só tem suporte no Visual Studio para Mac|
-|iOS|Com suporte no Visual Studio de 2017 e o Visual Studio para Mac| |
-|Android|Com suporte no Visual Studio de 2017 e o Visual Studio para Mac|Devem ter como destino Android > = 4.0.3, com **fastdev** habilitado.<br />Deve usar o Google, o Visual Studio ou o Xamarin Android emuladores. Android 7 emuladores não podem permitir a inspeção neste momento.|
-|WPF|Só tem suporte no Visual Studio de 2017|
+|iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| |
+|Android|Com suporte no Visual Studio 2017 e Visual Studio para Mac|Deve ter como destino Android > = 4.0.3, com **fastdev** habilitado.<br />Deve usar os emuladores do Google, o Visual Studio ou o Xamarin Android. Emuladores do Android 7 podem não permitir a inspeção neste momento.|
+|WPF|Só tem suporte no Visual Studio 2017|
 
 <a name="reporting-bugs" />
 
@@ -72,8 +72,8 @@ Essas informações são essenciais.
 
 O Visual Studio para Mac
 
-- **O Visual Studio > sobre o Visual Studio > Mostrar detalhes > Copiar informações**
-- Cole o relatório de erros
+- **Visual Studio > sobre o Visual Studio > Mostrar detalhes > Copiar informações**
+- Cole no relatório de bugs
 
 Visual Studio
 
@@ -89,7 +89,7 @@ Cliente de Inspetor
 - Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
 - Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
-1.4 também inclui a capacidade de selecionar o arquivo de log no localizador (macOS) ou no Explorer (Windows) diretamente no menu principal:
+1.4 também apresenta a capacidade de selecionar o arquivo de log no Finder (macOS) ou o Explorer (Windows) diretamente no menu principal:
 
 - **Ajuda > revelar o arquivo de Log**
 
@@ -100,23 +100,23 @@ O Visual Studio para Mac
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- O conteúdo do Visual Studio **saída** painel pode também ser informativo.
+- O conteúdo do Visual Studio **saída** painel também pode ser informativo.
 
-### <a name="project-settings"></a>Configurações de projeto
+### <a name="project-settings"></a>Configurações do projeto
 
-Se você pode anexar o **. csproj** para o projeto que você está tentando inspecionar, seria extremamente úteis. Isso é mais fácil do que perguntando sobre configurações individuais.
+Se você pode anexar a **. csproj** para o projeto que você está tentando inspecionar, seria extremamente útil. Isso é mais fácil do que fazer sobre as configurações individuais.
 
 Confirme também que você está na configuração de depuração.
 
 ### <a name="selected-devices"></a>Dispositivos selecionados
 
-Para Android e iOS, é essencial que sabemos que dispositivo você está depurando quando deseja inspecionar. Precisamos saber:
+Para Android e iOS, é vital que sabemos qual dispositivo você está depurando quando você deseja inspecionar. Precisamos saber:
 
-- Nome do dispositivo, conforme mostrado em seu IDE
+- Nome do dispositivo, conforme mostrado no seu IDE
 - Versão do sistema operacional do dispositivo
-- Android: Verifique se você está usando uma arquitetura x86 emulador
-- Android: A plataforma de emulador que você está usando? Emulador do Google? Emulador do Android do Visual Studio? Player de Xamarin Android?
-- O aplicativo que você está depurando corretamente aparecem e funcionam no dispositivo?
+- Android: Verificar se você está usando um x86 emulator
+- Android: A plataforma de emulador que você está usando? Emulador do Google? Emulador do Android do Visual Studio? Xamarin Android Player?
+- O aplicativo que você está depurando corretamente aparecer e o dispositivo de função?
 - O dispositivo tem conectividade de rede (seleção por meio do navegador da web)?
 
 [client-bugs]: https://github.com/Microsoft/workbooks/issues/new

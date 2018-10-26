@@ -3,15 +3,15 @@ title: Solução de problemas de pastas de trabalho do Xamarin no Android
 description: Este documento fornece dicas de solução de problemas para trabalhar com pastas de trabalho do Xamarin no Android. Ele aborda o suporte do emulador, pastas de trabalho que não é possível carregar e outros tópicos.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: b0333e1a40570374ee6218b7a848d2dd1c06b872
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: a93288829ff99027a4b33e7720a7f849df37e9b1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112605"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solução de problemas de pastas de trabalho do Xamarin no Android
 

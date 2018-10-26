@@ -4,15 +4,15 @@ description: Este artigo explica como usar transformações não afins para gira
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 84ebdd007d17eaf0bcfc1be119cb4130299503bc
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 750f357819a85077b3f272a7a10cbd3928186681
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615659"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110284"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotações 3D em SkiaSharp
 
@@ -24,7 +24,7 @@ Uma aplicação muito comum de transformações não afins está simulando a rot
 
 Esse trabalho envolve a trabalhar com rotações tridimensionais e, em seguida, derivando uma não afim `SKMatrix` transformação que executa esses rotações 3D.
 
-É difícil desenvolver isso `SKMatrix` transformação trabalhar exclusivamente em duas dimensões. O trabalho se torna muito mais fácil quando esta matriz de 3 por 3 é derivado de uma matriz de 4 por 4 usada em gráficos 3D. SkiaSharp inclui o [ `SKMatrix44` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.PreConcat/p/SkiaSharp.SKMatrix44/) classe para essa finalidade, mas algumas informações básicas em gráficos 3D é necessária para compreender as rotações 3D e a matriz de transformação de 4 por 4.
+É difícil desenvolver isso `SKMatrix` transformação trabalhar exclusivamente em duas dimensões. O trabalho se torna muito mais fácil quando esta matriz de 3 por 3 é derivado de uma matriz de 4 por 4 usada em gráficos 3D. SkiaSharp inclui o [ `SKMatrix44` ](xref:SkiaSharp.SKMatrix44) classe para essa finalidade, mas algumas informações básicas em gráficos 3D é necessária para compreender as rotações 3D e a matriz de transformação de 4 por 4.
 
 Um sistema de coordenadas tridimensional adiciona um terceiro eixo chamado Z. conceitualmente, o eixo Z é ângulos retos na tela. Pontos de coordenadas no espaço 3D são indicados com três números: (x, y, z). Em 3D do sistema de coordenadas usado neste artigo, aumentar os valores de X são para a direita e aumentar os valores de Y ficarão inativos, assim como em duas dimensões. Aumentar os valores Z positivos sair da tela. A origem é o canto superior esquerdo, assim como nos gráficos 2D. Você pode pensar a tela como um plano XY com o eixo Z com ângulos retos desse plano.
 
@@ -48,7 +48,7 @@ Ao trabalhar com uma matriz 4 por 4, é conveniente identificar as células com 
 |  M41  M42  M43  M44  |
 </pre>
 
-No entanto, o SkiaSharp `Matrix44` classe é um pouco diferente. A única maneira de definir ou obter os valores de célula individual `SKMatrix44` está usando o [ `Item` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Item/p/System.Int32/System.Int32/) indexador. Os índices de linha e coluna são com base em zero e não baseado em um, e as linhas e colunas são trocadas. A célula M14 no diagrama acima é acessada usando o indexador `[3, 0]` em um `SKMatrix44` objeto.
+No entanto, o SkiaSharp `Matrix44` classe é um pouco diferente. A única maneira de definir ou obter os valores de célula individual `SKMatrix44` está usando o [ `Item` ](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32)) indexador. Os índices de linha e coluna são com base em zero e não baseado em um, e as linhas e colunas são trocadas. A célula M14 no diagrama acima é acessada usando o indexador `[3, 0]` em um `SKMatrix44` objeto.
 
 Em um sistema de elementos gráficos 3D, um ponto 3D (x, y, z) é convertido em uma matriz de 1 por 4 de multiplicação de matriz de transformação de 4 por 4:
 
@@ -112,7 +112,7 @@ Rotação em torno do eixo Z é o mesmo gráficos 2D:
 
 A direção de rotação é indicada de destro/canhoto do sistema de coordenadas. Este é um sistema canhoto, portanto, se você apontar o polegar da mão esquerda para aumentar os valores para um eixo específico — para a direita para a rotação em torno do eixo X, para baixo para a rotação em torno do eixo Y e na sua direção para a rotação em torno do eixo Z —, em seguida, a curva de yo outros dedos indica a direção de rotação para ângulos positivos.
 
-`SKMatrix44` tenha generalizado estática [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) e [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) métodos que permitem que você especifique o eixo em torno da qual ocorrerá a rotação:
+`SKMatrix44` tenha generalizado estática [ `CreateRotation` ](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) e [ `CreateRotationDegrees` ](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) métodos que permitem que você especifique o eixo em torno da qual ocorrerá a rotação:
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
@@ -220,7 +220,7 @@ y"= y / ((sin (α) / profundidade) ·x + 1)
 
 Quando objetos 2D são girados com um ângulo positivo em torno do eixo Y, em seguida, positivo valores X recuam ao plano de fundo ao negativo valores X vir em primeiro plano. Os valores de X parecem se aproximar do eixo Y (que é controlado pelo valor do cosseno) como coordenadas mais distante do eixo Y se torna menor ou maior à medida que eles se afastar do visualizador ou mais perto do visualizador.
 
-Ao usar `SKMatrix44`, realize todas as operações de perspectiva e a rotação 3D multiplicando vários `SKMatrix44` valores. Em seguida, você pode extrair uma matriz bidimensional de 3 por 3 de 4 por 4 matriz usando o [ `Matrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/) propriedade do `SKMatrix44` classe. Essa propriedade retorna um familiar `SKMatrix` valor.
+Ao usar `SKMatrix44`, realize todas as operações de perspectiva e a rotação 3D multiplicando vários `SKMatrix44` valores. Em seguida, você pode extrair uma matriz bidimensional de 3 por 3 de 4 por 4 matriz usando o [ `Matrix` ](xref:SkiaSharp.SKMatrix44.Matrix) propriedade do `SKMatrix44` classe. Essa propriedade retorna um familiar `SKMatrix` valor.
 
 O **rotação 3D** página permite que você experimente a rotação 3D. O [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) arquivo instancia quatro controles deslizantes para definir a rotação em torno dos eixos X, Y e Z e para definir um valor de profundidade:
 
@@ -441,7 +441,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-O `OnAppearing` substituição define três xamarin. Forms `Animation` objetos para animar a `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campos em taxas diferentes. Observe que os períodos dessas animações são definidos como primo números — 5 segundos, 7 segundos e 11 segundos — portanto, a combinação geral somente se repete a cada 385 segundos ou mais de 10 minutos:
+O `OnAppearing` substituição define três xamarin. Forms `Animation` objetos para animar a `xRotationDegrees`, `yRotationDegrees`, e `zRotationDegrees` campos em taxas diferentes. Observe que os períodos dessas animações são definidos para preparar os números (5 segundos, 7 segundos e 11 segundos) para que a combinação geral somente se repete a cada 385 segundos ou mais de 10 minutos:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -536,5 +536,5 @@ Essa rotação 3D é colocada entre várias transformações 2D para mover o Cen
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

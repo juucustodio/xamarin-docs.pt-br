@@ -6,13 +6,13 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
-ms.openlocfilehash: c706d50962fb707208203a97374d4ae26f141ebf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/01/2018
+ms.openlocfilehash: 084c0c292cb7e527d74c77937bc69f76fc8c0658
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114308"
 ---
 # <a name="xamarinforms-device-class"></a>Classe de dispositivo do xamarin. Forms
 
@@ -28,7 +28,7 @@ Antes do xamarin. Forms 2.3.4, a plataforma que o aplicativo estava em execuçã
 
 No entanto, desde o xamarin. Forms 2.3.4 essas APIs foram preteridas e substituídas. O [ `Device` ](xref:Xamarin.Forms.Device) classe agora contém constantes de cadeia de caracteres pública que identificam as plataformas – [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( preterido), `Device.WinRT` (preterido) [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), e [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). Da mesma forma, o [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas foram substituídas com o [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) APIs.
 
-No c#, valores específicos de plataforma podem ser fornecidos com a criação de um `switch` declaração sobre a [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) propriedade e, em seguida, fornecendo `case` instruções para as plataformas necessárias:
+No C#, valores específicos de plataforma podem ser fornecidos com a criação de um `switch` instrução sobre o [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) propriedade e, em seguida, fornecendo `case` instruções para as plataformas necessárias:
 
 ```csharp
 double top;
@@ -60,16 +60,18 @@ O [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Form
 </StackLayout>
 ```
 
-O [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) classe é uma classe genérica e deve ser instanciado com um `x:TypeArguments` atributo que corresponde ao tipo de destino. No [ `On` ](xref:Xamarin.Forms.On) classe, o [ `Platform` ](xref:Xamarin.Forms.On.Platform) atributo pode aceitar um único `string` valor ou vários delimitada por vírgula `string` valores.
+O [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) é uma classe genérica que deve ser instanciada com um `x:TypeArguments` atributo que corresponde ao tipo de destino. No [ `On` ](xref:Xamarin.Forms.On) classe, o [ `Platform` ](xref:Xamarin.Forms.On.Platform) atributo pode aceitar um único `string` valor ou vários delimitada por vírgula `string` valores.
 
 > [!IMPORTANT]
 > Fornecendo um incorreto `Platform` valor no atributo de `On` classe não resultará em erro. Em vez disso, o código será executado sem o valor específico da plataforma que está sendo aplicado.
+
+Como alternativa, o `OnPlatform` extensão de marcação pode ser usada em XAML para personalizar a aparência da interface do usuário em uma base por plataforma. Para obter mais informações, consulte [extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
 
 <a name="Device_Idiom" />
 
 ## <a name="deviceidiom"></a>Device.Idiom
 
-O `Device.Idiom` pode ser usado para alterar layouts ou funcionalidade dependendo do dispositivo em que o aplicativo está sendo executado. O [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) enumeração contém os seguintes valores:
+O `Device.Idiom` propriedade pode ser usada para alterar os layouts ou funcionalidade dependendo do dispositivo em que o aplicativo está em execução no. O [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) enumeração contém os seguintes valores:
 
 -  **Telefone** – iPhone, iPod touch e dispositivos Android mais estreitos do que 600 quedas ^
 -  **Tablet** – iPad, dispositivos Windows e dispositivos Android mais de 600 quedas ^
@@ -80,7 +82,7 @@ O `Device.Idiom` pode ser usado para alterar layouts ou funcionalidade dependend
 
 *^ dips não é necessariamente a contagem de pixel físico*
 
-`Idiom` é especialmente útil para a criação de layouts que tiram proveito de telas maiores, como este:
+O `Idiom` propriedade é especialmente útil para a criação de layouts que tiram proveito de telas maiores, como este:
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone) {
@@ -89,6 +91,25 @@ if (Device.Idiom == TargetIdiom.Phone) {
     // layout views horizontally for a larger display (tablet or desktop)
 }
 ```
+
+O [ `OnIdiom` ](xref:Xamarin.Forms.OnIdiom`1) classe fornece a mesma funcionalidade em XAML:
+
+```xaml
+<StackLayout>
+    <StackLayout.Margin>
+        <OnIdiom x:TypeArguments="Thickness">
+            <OnIdiom.Phone>0,20,0,0</OnIdiom.Phone>
+            <OnIdiom.Tablet>0,40,0,0</OnIdiom.Tablet>
+            <OnIdiom.Desktop>0,60,0,0</OnIdiom.Desktop>
+        </OnIdiom>
+    </StackLayout.Margin>
+    ...
+</StackLayout>
+```
+
+O [ `OnIdiom` ](xref:Xamarin.Forms.OnPlatform`1) é uma classe genérica que deve ser instanciada com um `x:TypeArguments` atributo que corresponde ao tipo de destino.
+
+Como alternativa, o `OnIdiom` extensão de marcação pode ser usada em XAML para personalizar a aparência da interface do usuário com base no idioma do dispositivo em que o aplicativo está sendo executado. Para obter mais informações, consulte [extensão de marcação OnIdiom](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
@@ -104,7 +125,7 @@ No XAML, o [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirec
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
 ```
 
-O código equivalente em c# é:
+O código equivalente no C# é:
 
 ```csharp
 this.FlowDirection = Device.FlowDirection;
@@ -129,7 +150,7 @@ O [ `Styles` propriedade](~/xamarin-forms/user-interface/styles/index.md) conté
 
 ## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 
-`GetNamedSize` pode ser usado ao definir [ `FontSize` ](~/xamarin-forms/user-interface/text/fonts.md) em código c#:
+`GetNamedSize` pode ser usado ao definir [ `FontSize` ](~/xamarin-forms/user-interface/text/fonts.md) em C# código:
 
 ```csharp
 myLabel.FontSize = Device.GetNamedSize (NamedSize.Small, myLabel);
