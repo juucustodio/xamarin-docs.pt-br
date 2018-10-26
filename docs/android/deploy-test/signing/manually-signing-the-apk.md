@@ -3,15 +3,15 @@ title: Assinando manualmente o APK
 ms.prod: xamarin
 ms.assetid: 08549E1C-7F04-4D20-9E7A-794B9D09FD12
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9e1b168b7212f093b50a36c40550fba2e7d63e77
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9340aaae56da9314c20658b2b05570505fbd742
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30767229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111402"
 ---
 # <a name="manually-signing-the-apk"></a>Assinando manualmente o APK
 
@@ -53,14 +53,14 @@ A única solução para o problema causado por um repositório de chaves perdido
 
 ### <a name="create-a-new-keystore"></a>Criar um Novo Repositório de Chaves
 
-A criação de um novo repositório de chaves requer a ferramenta da linha de comando [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html) do SDK do Java. O trecho a seguir é um exemplo de como usar **keytool** (substitua `<my-filename>` pelo nome do arquivo para o repositório de chaves e `<key-name>` pelo nome da chave no repositório de chaves):
+A criação de um novo repositório de chaves requer a ferramenta da linha de comando [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html) do SDK do Java. O snippet a seguir é um exemplo de como usar **keytool** (substitua `<my-filename>` pelo nome do arquivo para o repositório de chaves e `<key-name>` pelo nome da chave no repositório de chaves):
 
 ```shell
 $ keytool -genkeypair -v -keystore <filename>.keystore -alias <key-name> -keyalg RSA \
           -keysize 2048 -validity 10000
 ```
 
-A primeira coisa que o **keytool** solicitará é a senha do repositório de chaves. Em seguida, pedirá algumas informações para ajudar na criação da chave. O trecho de código a seguir é um exemplo da criação de uma nova chave chamada `publishingdoc` que será armazenada no arquivo `xample.keystore`:
+A primeira coisa que o **keytool** solicitará é a senha do repositório de chaves. Em seguida, pedirá algumas informações para ajudar na criação da chave. O snippet a seguir é um exemplo da criação de uma nova chave chamada `publishingdoc` que será armazenada no arquivo `xample.keystore`:
 
 ```shell
 $ keytool -genkeypair -v -keystore xample.keystore -alias publishingdoc -keyalg RSA -keysize 2048 -validity 10000
@@ -116,7 +116,7 @@ $ ls $ANDROID_HOME/build-tools/25.0.3/apksigner
 /Users/tom/android-sdk-macosx/build-tools/25.0.3/apksigner*
 ```
 
-O trecho a seguir supõe que o **apksigner** esteja acessível pela variável de ambiente `PATH`. Ele assinará um APK usando o alias de chave `publishingdoc` contido no arquivo **xample.keystore**:
+O snippet a seguir supõe que o **apksigner** esteja acessível pela variável de ambiente `PATH`. Ele assinará um APK usando o alias de chave `publishingdoc` contido no arquivo **xample.keystore**:
 
 ```shell
 $ apksigner sign --ks xample.keystore --ks-key-alias publishingdoc mono.samples.helloworld.apk

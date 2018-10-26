@@ -3,15 +3,15 @@ title: Carregando o APK Manualmente
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 3bfddb315d74e6282004edeb10a35271dce3b9c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6ef208957d8dae229ebb8aee2304444b7d18fe
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771028"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111272"
 ---
 # <a name="manually-uploading-the-apk"></a>Carregando o APK Manualmente
 
@@ -165,7 +165,7 @@ Quando os usuários buscam por aplicativos no site do Google Play, eles podem pe
 -   [supports-screen](http://developer.android.com/guide/topics/manifest/supports-screens-element.html)&ndash; O Google Play usará os atributos para determinar se um aplicativo poderá ser implantado em um dispositivo com base no tamanho da tela. 
     O Google Play pressupõe que o Android pode adaptar um layout menor a telas maiores, mas não vice-versa. Desse modo, um aplicativo que declara o suporte para telas normais aparecerá em pesquisas por telas grandes, mas não em pesquisas por telas pequenas. Se um aplicativo Xamarin.Android não fornecer um elemento `<supports-screen>` no arquivo de manifesto, o Google Play presumirá que todos os atributos têm valor true e que o aplicativo dá suporte a todos os tamanhos de tela. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 
--   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html)&ndash; Este elemento de manifesto é usado para solicitar determinados recursos de hardware, como o tipo de teclado, dispositivos de navegação, uma tela sensível ao toque, etc. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
+-   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html)&ndash; Este elemento de manifesto é usado para solicitar determinados recursos de hardware, como o tipo de teclado, dispositivos de navegação, uma tela sensível ao toque, etc. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml. 
 
 -   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html)&ndash; Este elemento de manifesto declara os recursos de hardware ou software que um dispositivo deve ter para que o aplicativo funcione. Esse atributo é apenas informativo. O Google Play não exibirá o aplicativo em dispositivos que não satisfaçam esse filtro. Ainda é possível instalar o aplicativo por outros meios (manualmente ou baixando). Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 

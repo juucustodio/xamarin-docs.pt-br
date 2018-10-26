@@ -4,27 +4,27 @@ description: Como assinar o APK (pacote de aplicativo Android) para publicação
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: 4afcf42750cd9366bfd9fa5855fe1e7c0f114162
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+ms.openlocfilehash: f05de5185f224f8606f38011d8f307ed62d64541
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403306"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112865"
 ---
 # <a name="signing-the-android-application-package"></a>Assinatura do Pacote de Aplicativos Android
 
 Em [Preparar um Aplicativo para Lançamento](~/android/deploy-test/release-prep/index.md), o **Gerenciador de Arquivo Morto** foi usado para build do aplicativo e colocá-lo em um arquivo morto para assinatura e publicação. Esta seção explica como criar uma identidade de assinatura do Android, a criar um novo certificado de assinatura para aplicativos Android e a publicar o *ad-hoc* de aplicativo arquivado no disco. O APK resultante pode ter o sideload realizado em dispositivos Android sem passar por uma loja de aplicativos.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Em [Arquivar para Publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **Canal de Distribuição** apresentou duas opções de distribuição. Selecione **Ad Hoc**:
 
 [![Caixa de diálogo Canal de Distribuição](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Em [Arquivar para Publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **Assinar e Distribuir...** nos apresentou duas opções de distribuição. Selecione **Ad-Hoc** e clique em **Próximo**:
 
@@ -38,7 +38,7 @@ Em [Arquivar para Publicação](~/android/deploy-test/release-prep/index.md#arch
 
 ## <a name="create-a-new-certificate"></a>Criar um Novo Certificado
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Depois que o **Ad-Hoc** for selecionado, o Visual Studio abrirá a página **Identidade de Assinatura** da caixa de diálogo conforme mostrado na próxima captura de tela. Para publicar o .APK, ele deve primeiro ser assinado com uma chave de assinatura (também conhecida como um certificado).
 
@@ -67,7 +67,7 @@ Por exemplo, ao usar **chimp** como alias, as etapas acima podem criar uma nova 
 
 Para obter mais informações sobre o repositório de chaves, consulte [Localizando sua Assinatura MD5 ou SHA1 do Repositório de Chaves](~/android/deploy-test/signing/keystore-signature.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Depois de clicar em **Ad-Hoc**, o Visual Studio para Mac abre a caixa de diálogo **Identidade de Assinatura do Android** conforme mostrado na próxima captura de tela. Para publicar o .APK, ele deve primeiro ser assinado com uma chave de assinatura (também conhecida como um certificado). Se um certificado já existir, clique no botão **Importar uma Chave Existente** para importá-lo e, em seguida, vá até [Assinar o APK](#signapkxs). Caso contrário, clique no botão **Criar uma Nova Chave** para criar um novo certificado: 
 
@@ -97,7 +97,7 @@ Para obter mais informações sobre o repositório de chaves, consulte [Localiza
 
 ## <a name="sign-the-apk"></a>Assinar o APK
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Ao clicar em **Criar**, um novo repositório de chaves (contendo um novo certificado) será salvo e listado em **Identidade de Assinatura** conforme mostrado na seguinte captura de tela. Para publicar um aplicativo no Google Play, clique em **Cancelar** e vá até [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 Para publicar *ad hoc*, selecione a identidade de assinatura usada para assinar e clique em **Salvar Como** para publicar o aplicativo para distribuição independente. Por exemplo, a identidade de assinatura **chimp** (criada anteriormente) é selecionada nesta captura de tela:
@@ -121,7 +121,7 @@ A seguinte captura de tela mostra um exemplo de aplicativo pronto para publicar,
 
 [![APK mostrado no Windows Explorer](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 
 Conforme visto aqui, um novo certificado foi adicionado ao repositório de chaves. Para publicar um aplicativo no Google Play, clique em **Cancelar** e vá até [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).

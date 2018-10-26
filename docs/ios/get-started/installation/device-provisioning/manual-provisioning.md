@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: dd0afe03adbd021717a88cd4409e3e1351ba9b50
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 3f74144f85cc045b4ea9807d3d818677e33539f2
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111180"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123460"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
@@ -73,11 +73,11 @@ Para gerar uma identidade de assinatura, faça o seguinte:
 
 ### <a name="understanding-certificate-key-pairs"></a>Entendendo pares de chaves de certificado
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 O Perfil do Desenvolvedor contém certificados, suas chaves associadas e eventuais perfis de provisionamento associados à conta. Existem na realidade duas versões de um Perfil do Desenvolvedor – uma está no Portal do Desenvolvedor, a outra reside em um Mac local. A diferença entre os dois é o tipo de chaves que contêm: _o perfil no Portal armazena todas as chaves públicas associadas com os certificados, enquanto a cópia no seu Mac local contém todas as chaves privadas_. Para que os certificados sejam válidos, os pares de chaves devem ser correspondentes. Mantenha um backup do perfil do desenvolvedor no Mac local, porque se as chaves privadas forem perdidas, todos os certificados e perfis de provisionamento precisarão ser regenerados.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 O Perfil do Desenvolvedor contém certificados, suas chaves associadas e eventuais perfis de provisionamento associados à conta. Existem na realidade duas versões de um Perfil do Desenvolvedor – uma está no Portal do Desenvolvedor, a outra reside em um Mac. A diferença entre os dois é o tipo de chaves que contêm: _o perfil no Portal armazena todas as chaves públicas associadas com os certificados, enquanto a cópia no seu Mac contém todas as chaves privadas_. Para que os certificados sejam válidos, os pares de chaves devem ser correspondentes. Mantenha um backup do perfil do desenvolvedor no Mac do Host de Build do Xamarin, porque se as chaves privadas forem perdidas, todos os certificados e perfis de provisionamento precisarão ser regenerados.
 
@@ -204,12 +204,12 @@ Certificados e perfis de provisionamento que foram criados no Portal de Desenvol
 
 Os novos certificados ou perfis de provisionamento estarão disponíveis no Visual Studio para Mac ou Visual Studio e prontos para uso.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 > [!IMPORTANT]
 > Pode ser necessário parar e reiniciar o Visual Studio para Mac para que ele exiba certificados novos ou modificados ou perfis atualizados pelo Xcode.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > Pode ser necessário parar e reiniciar o Visual Studio para que ele exiba certificados novos ou modificados ou perfis atualizados pelo Xcode.
@@ -230,7 +230,7 @@ A Apple fornece uma seleção de serviços de aplicativos especiais, também cha
 
 Neste momento, o provisionamento já deve estar concluído e o aplicativo pronto para ser implantado no dispositivo. Para fazer isso, siga as etapas abaixo:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 > [!IMPORTANT]
 > Antes de começar, verifique se selecionou **Provisionamento manual** em **Info.plist**.
@@ -249,7 +249,7 @@ Se isso estiver definido como **Automático**, o Visual Studio para Mac selecion
 4. Certifique-se de definir a configuração de build para **iPhone** / **iPad**, em vez do simulador.
 5. Clique em **Executar** no Visual Studio para Mac e exiba o aplicativo em execução no dispositivo.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > Antes de começar, lembre-se de selecionar **Provisionamento Manual** em **Projeto > Propriedades de Provisionamento…**.

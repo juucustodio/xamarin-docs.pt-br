@@ -4,15 +4,15 @@ description: Este documento descreve como implantar sem fio um aplicativo Xamari
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 02/09/2018
-ms.openlocfilehash: ade7eb7ff26fec8df616401801585e499ddf4206
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118897"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implantação sem fio para aplicativos Xamarin.iOS e tvOS
 
@@ -26,14 +26,14 @@ A implantação sem fio está disponível como um recurso no Visual Studio para 
 
 Para usar a implantação sem fio, você deve ter o seguinte:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 - macOS 10.12.4
 - A versão mais recente do Visual Studio para Mac
 - Xcode 9.0 ou posterior
 - Um dispositivo com iOS 11.0 ou tvOS 11.0 e posterior
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - A versão mais recente do Visual Studio
 - Um dispositivo com iOS 11.0 ou tvOS 11.0 e posterior

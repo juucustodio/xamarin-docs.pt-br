@@ -4,15 +4,15 @@ description: O Xamarin.Android ProGuard é um redutor, otimizador e pré-verific
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 998232119159c5dc3a284dd51d55dc381271a4e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321370"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117389"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -323,11 +323,11 @@ A seguinte mensagem de erro pode ser exibida quando o ProGuard lê o arquivo de 
 
 Esse problema geralmente ocorre no Windows, pois o arquivo `.cfg` tem codificação incorreta. O ProGuard não processa BOM _(Marca de Ordem de Byte)_ que possa estar presente em arquivos de texto. Se houver um BOM, o ProGuard será encerrado com o erro acima. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para evitar esse problema, edite o arquivo de configuração personalizada de um editor de texto que permitirá que o arquivo seja salvo sem um BOM. Para resolver esse problema, verifique se o seu editor de texto tem sua codificação definida como `UTF-8`. Por exemplo, o editor de texto [Notepad++](https://notepad-plus-plus.org/) pode salvar arquivos sem BOM ao selecionar a **Codificação&gt; no UTF-8 Sem BOM** ao salvar o arquivo. 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para evitar esse problema, salve o arquivo de configuração personalizado por meio de um editor de texto que permita omitir a BOM. 
 

@@ -4,26 +4,26 @@ description: Este documento descreve várias opções de configuração de build
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 1b1bfab36646256eee706316c70004aef8399994
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: aac558f52423132bef53f1754307e743c69f6f22
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784839"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121198"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Compilar para diferentes dispositivos no Xamarin.iOS
 
 As propriedades de build do executável podem ser configuradas da página de propriedades **Build do iOS** do projeto, que é encontrada clicando-se com o botão direito do mouse no nome do projeto e navegando-se até **Opções > Build do iOS** no Visual Studio para Mac, e em **Propriedades** no Visual Studio:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 
 [![](compiling-for-different-devices-images/image1.png "A página de propriedades do Build do iOS do projeto")](compiling-for-different-devices-images/image1.png#lightbox) 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](compiling-for-different-devices-images/image1a.png "A página de propriedades do Build do iOS do projeto")](compiling-for-different-devices-images/image1a.png#lightbox)
 

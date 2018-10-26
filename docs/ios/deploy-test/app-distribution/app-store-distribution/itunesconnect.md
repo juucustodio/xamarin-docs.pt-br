@@ -4,20 +4,20 @@ description: Este artigo aborda as etapas necessárias para configurar e manter 
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 05492f866bb083326ef1eccb8db3d624d8dc4806
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: 97b3e5323329d2df024e05f1829b12b239b37299
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103033"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurando um aplicativo no iTunes Connect
 
 > [!IMPORTANT]
-> A Apple [indicou](https://developer.apple.com/news/?id=05072018a) que, a partir de julho de 2018, todos os aplicativos e atualizações enviadas à App Store deverão ter sido criados com o SDK do iOS 11 e [ser compatíveis com à exibição do iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> A Apple [indicou](https://developer.apple.com/news/?id=05072018a) que, a partir de julho de 2018, todos os aplicativos e atualizações enviados à App Store deverão ter sido criados com o SDK do iOS 11 e [ser compatíveis com à exibição do iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
 
 O iTunes Connect é um pacote de ferramentas baseadas na Web para gerenciamento dos aplicativos iOS na App Store, entre outras coisas. Um aplicativo Xamarin.iOS precisará ser corretamente definido e configurado no iTunes Connect antes de ser enviado à Apple para análise e, por fim, ser lançado para venda ou lançado como um aplicativo gratuito na App Store.
 

@@ -3,15 +3,15 @@ title: Preparar um aplicativo para lançamento
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 18c49afdd08921b81573da94c23e66f1dd48a25f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a8858839c51e519ac50dd59d223a6c15cee9e6bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32020420"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123447"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -42,13 +42,13 @@ Cada uma dessas etapas é descrita abaixo em mais detalhes.
 
 É altamente recomendável que cada aplicativo Xamarin.Android especifique um ícone do aplicativo. Alguns mercados de aplicativo não permitirão que um aplicativo Android seja ser publicado sem um. O atributo `Icon` propriedade do `Application` é usado para especificar o ícone do aplicativo de um projeto Xamarin.Android.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 No Visual Studio 2015 e posteriores, especifique o ícone do aplicativo por meio da seção **Manifesto do Android** do projeto **Propriedades**, conforme é mostrado na seguinte captura de tela:
 
 [![Definir o ícone do aplicativo](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 No Visual Studio para Mac, também é possível especificar o ícone do aplicativo usando a seção **Aplicativo Android** de **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
 
@@ -56,7 +56,7 @@ No Visual Studio para Mac, também é possível especificar o ícone do aplicati
 
 -----
 
-Nesses exemplos, `@drawable/icon` refere-se a um arquivo de ícone localizado em **Resources/drawable/icon.png** (a extensão **.png** não está incluída no nome do recurso). Esse atributo também pode ser declarado no arquivo **Properties\AssemblyInfo.cs**, conforme mostrado neste trecho de código de exemplo:
+Nesses exemplos, `@drawable/icon` refere-se a um arquivo de ícone localizado em **Resources/drawable/icon.png** (a extensão **.png** não está incluída no nome do recurso). Esse atributo também pode ser declarado no arquivo **Properties\AssemblyInfo.cs**, conforme mostrado neste snippet de exemplo:
 
 ```csharp
 [assembly: Application(Icon = "@drawable/icon")]
@@ -75,13 +75,13 @@ Controle de versão é importante para a distribuição e manutenção de aplica
 
 -   **Nome da versão** &ndash; Uma cadeia de caracteres usada apenas para comunicação de informações ao usuário sobre a versão do aplicativo (como instalado em um dispositivo específico). O nome da versão será exibido aos usuários ou no Google Play. Essa cadeia de caracteres não é usada internamente pelo Android. O nome da versão pode ser qualquer valor de cadeia de caracteres que ajude um usuário a identificar o build instalado no dispositivo. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionName`. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 No Visual Studio, esses valores podem ser definidos na seção **Manifesto Android** do projeto **Propriedades**, conforme mostrado na seguinte captura de tela:
 
 [![Definir o número de versão](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Esses valores podem ser definidos na seção **Compilar > Aplicativo Android** em **Opções de Projeto** conforme mostrado na seguinte captura de tela:
 
@@ -104,7 +104,7 @@ O modo Versão desativa o tempo de execução compartilhado e ativa a vinculaç�
 
 -   Configuração: Somente Assemblies do SDK &ndash; Xamarin.Android 4.2.5 Tamanho = 3 MB.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Defina opções de vinculador por meio da seção **Opções do Android** das **Propriedades** do projeto:
 
@@ -119,7 +119,7 @@ O menu suspenso **Vinculação** fornece as seguintes opções para controlar o 
 
 -   **Assemblies de Usuário e do SDK** &ndash; Isso vinculará todos os assemblies exigidos pelo aplicativo e não apenas os exigidos pelo Xamarin.Android.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Defina as opções do vinculador por meio da guia **Vinculador** na seção **Build do Android** de **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
 
@@ -146,11 +146,11 @@ O ProGuard é não uma alternativa ao vinculador do Xamarin.Android. O vinculado
 
 Quando **Habilitar ProGuard** está marcado, o Xamarin.Android executa a ferramenta ProGuard no APK resultante. Um arquivo de configuração do ProGuard é gerado e usado pelo ProGuard no momento da build. O Xamarin. Android também dá suporte a ações de build personalizadas em *ProguardConfiguration*. Você pode adicionar um arquivo de configuração ProGuard personalizado ao projeto, clicar com o botão direito do mouse nele e selecioná-lo como uma ação de build, conforme mostrado neste exemplo: 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Ação de build do ProGuard](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 [![Ação de build do ProGuard](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
@@ -190,7 +190,7 @@ Observe que as compilações de depuração definem automaticamente algumas perm
 
 ### <a name="application-protection-with-dotfuscator"></a>Proteção de aplicativo com o Dotfuscator
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Mesmo com [depuração desabilitada](#Disable_Debugging), os invasores ainda poderão reempacotar um aplicativo, adicionando ou removendo permissões ou opções de configuração. Isso permite que eles façam engenharia reversa, depurem ou adulterem o aplicativo.
 O [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) poderá ser usado para ofuscar o código gerenciado e injetar código de detecção do estado de segurança de tempo de execução em um aplicativo Xamarin.Android no momento da compilação para detectar e responder se o aplicativo estiver em execução em um dispositivo desbloqueado por rooting.
@@ -200,7 +200,7 @@ O Dotfuscator CE está incluído no Visual Studio, no entanto, somente o Visual 
 Para configurar o Dotfuscator CE, consulte [Using Dotfuscator Community Edition with Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator) (Como usar o Dotfuscator Community Edition com o Xamarin).
 Quando estiver configurado, o Dotfuscator CE protegerá automaticamente cada build criado.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Mesmo com [depuração desabilitada](#Disable_Debugging), os invasores ainda poderão reempacotar um aplicativo, adicionando ou removendo permissões ou opções de configuração. Isso permite que eles façam engenharia reversa, depurem ou adulterem o aplicativo.
 Embora o [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) não tenha suporte no Visual Studio para Mac, é possível usá-lo com o Visual Studio para ofuscar o código gerenciado e injetar código de detecção do estado de segurança de tempo de execução em um aplicativo Xamarin.Android no momento do build para detectar e responder se o aplicativo está em execução em um dispositivo desbloqueado por rooting.
@@ -241,13 +241,13 @@ O _compilador de otimização LLVM_ criará código compilado mais rápido e men
 
 ## <a name="set-packaging-properties"></a>Definir propriedades de empacotamento
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 As propriedades de empacotamento podem ser definidas na seção **Opções do Android** das **Propriedades** do projeto, conforme mostrado na seguinte captura de tela:
 
 [![Propriedades de empacotamento](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 As propriedades de empacotamento podem ser definidas em **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
 
@@ -280,13 +280,13 @@ Para obter mais informações sobre Multi-Dex, consulte [Configurar aplicativos 
 
 ## <a name="compile"></a>Compilar
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Depois de concluir todas as etapas acima, o aplicativo estará pronto para build. Selecione **Compilar > Recompilar Solução** para verificar se o build é bem-sucedido no modo Liberação. Observe que esta etapa ainda não produz um APK.
 
 [Assinatura do Pacote do Aplicativo](~/android/deploy-test/signing/index.md) trata do empacotamento e da assinatura em mais detalhes.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Depois de concluir todas as etapas acima, compile o aplicativo (selecione **Compilar > Compilar Tudo**) para verificar se o build é bem-sucedido no modo Liberação. Observe que esta etapa ainda não produz um APK.
 
@@ -297,7 +297,7 @@ Depois de concluir todas as etapas acima, compile o aplicativo (selecione **Comp
 
 ## <a name="archive-for-publishing"></a>Arquivo morto para publicação
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para começar o processo de publicação, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione o item de menu de contexto **Arquivar...**:
 
@@ -356,7 +356,7 @@ A caixa de diálogo **Canal de Distribuição** mostra informações sobre o apl
 
 * O **Google Play** &ndash; publica um APK assinado para o Google Play. Prossiga para [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para saber como assinar e publicar um APK na Google Play Store.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para começar o processo de publicação, selecione **Compilar > Arquivo Morto para Publicação**:
 

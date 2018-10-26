@@ -4,15 +4,15 @@ description: Este artigo explica como depurar um aplicativo Xamarin.Android em u
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1848bb624bf5f4bd627441a17fd077843c94edb9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c30beadf7c2de618952bdf0cd5c03e7ceee2845
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109699"
 ---
 # <a name="debug-on-device"></a>Depurar no dispositivo
 
@@ -27,7 +27,7 @@ _Este artigo explica como depurar um aplicativo Xamarin.Android em um dispositiv
 
 Quando um dispositivo é conectado ao computador, a depuração de um aplicativo Xamarin.Android é feito da mesma forma como qualquer outro produto Xamarin ou aplicativo .NET. Verifique se a configuração **Depurar** e o dispositivo externo estão selecionados no IDE; isso garantirá que os símbolos de depuração necessários estejam disponíveis e que o IDE possa se conectar ao aplicativo em execução: 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Configuração de depuração selecionada](debug-on-device-images/image1-vs.png)
 
@@ -39,7 +39,7 @@ Depois que o dispositivo foi selecionado, o Xamarin.Android conectará ao dispos
 
 ![Ponto de interrupção atingido](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Configuração de depuração selecionada](debug-on-device-images/image1-xs.png)
 

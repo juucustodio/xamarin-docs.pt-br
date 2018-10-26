@@ -4,15 +4,15 @@ description: Este guia explica como iniciar e depurar aplicativos no Visual Stud
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 9e0eade7a2e033838f78f24270ec2bf9d4abc171
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: e40178e43cfcfd261434fab9dd5ca0a9061d3f59
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113775"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Depurando no Android Emulator
 
@@ -25,7 +25,7 @@ O Android Emulator (instalado como parte da carga de trabalho **Desenvolvimento 
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Usando um dispositivo virtual pré-configurado
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 O Visual Studio inclui dispositivos virtuais pré-configurados que aparecem no menu suspenso do dispositivo. Por exemplo, na seguinte captura de tela do Visual Studio 2017, vários dispositivos virtuais pré-configurados estão disponíveis:
 
@@ -48,7 +48,7 @@ Se o projeto Xamarin.Android estiver usando um nível de Estrutura de destino in
 Você pode clicar em **Alterar Destino Android Mínimo** para alterar a Versão mínima do Android do projeto de forma que ela corresponda ao nível da API dos dispositivos virtuais disponíveis. Você também pode usar o [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md) para criar novos dispositivos virtuais que dão suporte ao nível da API de destino.
 Antes de configurar dispositivos virtuais para um novo nível da API, você precisa instalar as imagens do sistema correspondente para esse nível da API (consulte [Configurando o SDK do Android para o Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 O Visual Studio para Mac inclui dispositivos virtuais pré-configurados que aparecem no menu suspenso do dispositivo. Por exemplo, na seguinte captura de tela, dois dispositivos virtuais pré-configurados estão disponíveis:
 
@@ -73,11 +73,11 @@ Para modificar os dispositivos virtuais (ou criar novos), você deve usar o [And
 
 Perto da parte superior do Visual Studio, há um menu suspenso que pode ser usado para selecionar o modo de **Depuração** ou **Versão**. Escolher a opção **Depuração** faz com que o depurador seja anexado ao processo do aplicativo em execução no emulador depois que o aplicativo é iniciado. Escolher o modo **Versão** desabilita o depurador (no entanto, você ainda poderá executar o aplicativo e usar as instruções de log para depuração). Depois de escolher um dispositivo virtual no menu suspenso do dispositivo, selecione o modo de **Depuração** ou **Versão** e, em seguida, clique no botão Executar para executar o aplicativo:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Modos de Depuração e Versão, botão Executar](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 [![Modos de Depuração e Versão, botão Executar](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 

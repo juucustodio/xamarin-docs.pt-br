@@ -3,15 +3,15 @@ title: Publicação Independente
 ms.prod: xamarin
 ms.assetid: 6FB4DEF2-01AD-C5FE-0950-CE1BF088A9C6
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 2cb2167f534251e15455e11b6a2c85f53fb48b8c
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 04cc7a911290d3c2f92fc1bbef474822d2891b2b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066995"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114542"
 ---
 # <a name="publishing-independently"></a>Publicação Independente
 
@@ -67,7 +67,7 @@ Instalação manual é uma terceira opção de instalação de aplicativos. Para
 O dispositivo Android deve estar conectado com um cabo USB no computador.
 Computadores com Windows também podem exigir drivers USB adicionais do fornecedor do telefone para serem reconhecidos pelo **adb**. Instruções de instalação para esses drivers adicionais de USB estão além do escopo deste documento.
 
-Antes de emitir qualquer comando **adb**, é útil saber quais instâncias de emuladores ou dispositivos estão conectados, caso haja algum. É possível ver uma lista do que está conectado por meio do comando `devices`, conforme demonstrado no seguinte trecho de código:
+Antes de emitir qualquer comando **adb**, é útil saber quais instâncias de emuladores ou dispositivos estão conectados, caso haja algum. É possível ver uma lista do que está conectado por meio do comando `devices`, conforme demonstrado no seguinte snippet:
 
 ```shell
 $ adb devices
@@ -81,7 +81,7 @@ Depois de confirmar os dispositivos conectados, o aplicativo pode ser instalado,
 $ adb install <path-to-apk>
 ```
 
-O trecho de código a seguir mostra um exemplo de instalação de um aplicativo em um dispositivo conectado:
+O snippet a seguir mostra um exemplo de instalação de um aplicativo em um dispositivo conectado:
 
 ```shell
 $ adb install helloworld.apk
@@ -105,7 +105,7 @@ Será necessário desinstalar o aplicativo do dispositivo. Primeiro, execute o c
 adb uninstall <package_name>
 ```
 
-O trecho de código a seguir é um exemplo de desinstalação de um aplicativo:
+O snippet a seguir é um exemplo de desinstalação de um aplicativo:
 
 ```shell
 $ adb uninstall mono.samples.helloworld
