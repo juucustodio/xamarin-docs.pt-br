@@ -1,0 +1,37 @@
+items:
+- name: Livro eletrônico de padrões de aplicativo empresarial
+  href: index.md
+  items:
+  - name: Prefácio
+    href: preface.md
+  - name: Introdução
+    href: introduction.md
+  - name: MVVM
+    displayName: Model, View, ViewModel
+    href: mvvm.md
+  - name: Injeção de dependência
+    displayName: DI
+    href: dependency-injection.md
+  - name: Comunicação entre componentes flexíveis
+    href: communicating-between-loosely-coupled-components.md
+  - name: Navegação
+    href: navigation.md
+  - name: Validação
+    href: validation.md
+  - name: Gerenciamento de configurações
+    href: configuration-management.md
+  - name: Microsserviços em contêineres
+    href: containerized-microservices.md
+  - name: Autenticação e autorização
+    href: authentication-and-authorization.md
+  - name: Acesso a dados remotos
+    href: accessing-remote-data.md
+  - name: Teste de unidade
+    href: unit-testing.md
+  expanded: true
+ms.openlocfilehash: bbe9a87553babb954e37138458d1f07b95c1f443
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110418"
