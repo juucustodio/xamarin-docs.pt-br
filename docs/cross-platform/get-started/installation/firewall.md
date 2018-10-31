@@ -5,12 +5,12 @@ ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: asb3993
 ms.author: amburns
-ms.date: 12/02/2016
-ms.openlocfilehash: dab4aeccd58da22736aea3139f11cbdff259ef7b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 10/05/2018
+ms.openlocfilehash: 68689ce7d92a038d0724e1441f68fddcb1d0bba8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "34781085"
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Instruções de configuração de firewall do Xamarin
@@ -25,35 +25,31 @@ Para que os produtos Xamarin sejam instalados e funcionem corretamente, determin
 
 Os seguintes endereços conhecidos precisarão ser adicionados para que o software seja instalado corretamente ao usar a versão mais recente do instalador do Xamarin:
 
--  xamarin.com (manifestos do instalador)
--  dl.xamarin.com (Local de download do pacote)
--  dl.google.com (para baixar o SDK do Android)
--  download.oracle.com (JDK)
--  visualstudio.com (Local de download dos pacotes de instalação)
--  go.microsoft.com (Resolução da URL de instalação)
--  aka.ms (Resolução da URL de instalação)
+- xamarin.com (manifestos do instalador)
+- dl.xamarin.com (Local de download do pacote)
+- dl.google.com (para baixar o SDK do Android)
+- download.oracle.com (JDK)
+- visualstudio.com (Local de download dos pacotes de instalação)
+- go.microsoft.com (Resolução da URL de instalação)
+- aka.ms (Resolução da URL de instalação)
 
 Se você estiver usando um Mac e encontrar problemas de instalação do Xamarin.Android, verifique se o macOS pode baixar o Java.
 
+### <a name="nuget-including-xamarinforms"></a>NuGet (incluindo o Xamarin.Forms)
 
-### <a name="components-store-and-nuget-including-xamarinforms"></a>Repositório de Componentes e NuGet (incluindo Xamarin.Forms)
+Os seguintes endereços precisarão ser adicionados para acessar o NuGet (o Xamarin.Forms é empacotado como um NuGet):
 
-Os seguintes endereços precisarão ser adicionados para acessar o Repositório de Componentes do Xamarin ou NuGet (o Xamarin.Forms é empacotado como um NuGet):
-
--  components.xamarin.com (para usar o Repositório de Componentes do Xamarin)
--  xampubdl.blob.core.windows.net (hospeda downloads do Repositório de Componentes)
--  www\.nuget.org (para acessar o NuGet)
--  az320820.vo.msecnd.net (downloads do NuGet)
--  dl-ssl.google.com (componentes do Google)
-
+- www\.nuget.org (para acessar o NuGet)
+- az320820.vo.msecnd.net (downloads do NuGet)
+- dl-ssl.google.com (componentes do Google para Android e Xamarin.Forms)
 
 ### <a name="software-updates"></a>Atualizações de software
 
 Os seguintes endereços precisarão ser adicionados para garantir que as atualizações de software possam ser baixadas corretamente:
 
--  software.xamarin.com (serviço do atualizador)
--  download.visualstudio.microsoft.com
--  dl.xamarin.com
+- software.xamarin.com (serviço do atualizador)
+- download.visualstudio.microsoft.com
+- dl.xamarin.com
 
 ## <a name="xamarin-mac-agent"></a>Agente do Mac do Xamarin
 

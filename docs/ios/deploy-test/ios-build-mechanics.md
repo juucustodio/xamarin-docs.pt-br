@@ -4,15 +4,15 @@ description: Este guia explora como determinar o ritmo dos seus aplicativos e co
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104837"
 ---
 # <a name="ios-build-mechanics"></a>Mecânica de Compilação do iOS
 
@@ -27,7 +27,7 @@ A velocidade de compilação do Xamarin também pode ser afetada por vários rec
 
 ## <a name="timing-apps"></a>Sincronizar aplicativos
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Mac:
 
@@ -40,7 +40,7 @@ Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Ma
 7. Exibir os resultados de diagnóstico no Painel de Erros (Exibição > Painéis > Erros) clicando no botão de Resultado de Compilação
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Mac:
 
@@ -69,7 +69,7 @@ Total time: 1554 ms
 
 As ferramentas do Xamarin, tecnicamente, funcionam em qualquer Mac que possa executar o OS X 10.10 Yosemite ou posterior. No entanto, as experiências de desenvolvedor e tempos de compilação podem ser prejudicados pelo desempenho do Mac.
 
-No estado desconectado, o Visual Studio no Windows só realizará a fase de compilação do C# e não tentará executar a vinculação ou compilação AOT, empacotar o aplicativo em um pacote _.app_ ou conectar-se ao pacote de aplicativos. (A fase de compilação do C# raramente é um gargalo de desempenho.) Tente identificar em que parte do pipeline a compilação está lenta, fazendo a compilando diretamente no host de compilação do Mac no Visual Studio para Mac.
+No estado desconectado, o Visual Studio no Windows só realizará a fase de compilação do C# e não tentará executar a vinculação ou compilação AOT, empacotar o aplicativo em um pacote _.app_ nem conectar-se ao pacote de aplicativos. (A fase de compilação do C# raramente é um gargalo de desempenho.) Tente identificar em que parte do pipeline a compilação está lenta, fazendo a compilando diretamente no host de compilação do Mac no Visual Studio para Mac.
 
 
 Além disso, um dos locais mais comuns para a lentidão é a conexão de rede entre o computador Windows e o host de compilação do Mac. Isso pode ocorrer devido a um obstáculo físico na rede, usar uma conexão sem fio ou ter que viajar por um computador saturado (como um serviço Mac na nuvem).
@@ -131,7 +131,7 @@ Minimizar o tamanho do aplicativo também pode reduzir o tempo de compilação. 
   - Compilar uma única arquitetura (por exemplo, ARM64) é mais rápido do que um binário FAT (por exemplo, ARMv7 + ARM64)
   - Evite otimizar arquivos PNG ao depurar
   - Considere Vincular todos os assemblies. Otimizar cada assembly 
-  - Desabilite a criação de símbolos de depuração usando `--dsym=false`. No entanto, saiba que desabilitar essa opção significa que os relatórios de falhas só poderão ser simbolizados na máquina que compilou o aplicativo e somente se o aplicativo não tiver sido eliminado.
+  - Desabilite a criação de símbolos de depuração usando `--dsym=false`. No entanto, saiba que desabilitar essa opção significa que os relatórios de falhas só poderão ser simbolizados na máquina que compilou o aplicativo e somente se o aplicativo não tiver sido eliminado.
 
  
 O que evitar:

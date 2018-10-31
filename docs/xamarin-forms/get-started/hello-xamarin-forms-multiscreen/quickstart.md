@@ -1,18 +1,19 @@
 ---
 title: Início rápido da multitela do Xamarin.Forms
 description: Este artigo explica como estender o aplicativo Phoneword ao adicionar uma segunda tela para controlar o histórico de chamadas do aplicativo.
+zone_pivot_groups: platform
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: a4e27f1810a16b5d13838d2e2c1067950586fab3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 957c3e0d3b0637c8b536d920a05397bc711dfb7d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123473"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Início rápido da multitela do Xamarin.Forms
 
@@ -20,9 +21,9 @@ O início rápido demonstra como estender o aplicativo Phoneword ao adicionar um
 
 [![](quickstart-images/intro-app-examples-sml.png "Aplicativo Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Aplicativo Phoneword")
 
-Estenda o aplicativo Phoneword da seguinte maneira:
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="update-the-app-with-visual-studio"></a>Atualizar um aplicativo com o Visual Studio
 
 1. Inicie o Visual Studio. Na página inicial, clique em **Abrir Projeto...** e, na caixa de diálogo **Abrir Projeto**, selecione o arquivo de solução para o projeto Phoneword:
 
@@ -160,11 +161,15 @@ Estenda o aplicativo Phoneword da seguinte maneira:
 
 13. No **Gerenciador de Soluções**, clique com botão direito do mouse no projeto **Phoneword.Droid** e selecione **Definir como Projeto de Inicialização**.
 14. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para inicializar o aplicativo em um emulador do Android.
-15. Se você tiver um dispositivo iOS e atender aos requisitos de sistema do Mac para o desenvolvimento do Xamarin.Forms, use uma técnica semelhante para implantar o aplicativo no dispositivo iOS. Como alternativa, implante o aplicativo para o [simulador remoto de iOS](~/tools/ios-simulator.md).
+15. Se você tiver um dispositivo iOS e atender aos requisitos de sistema do Mac para o desenvolvimento do Xamarin.Forms, use uma técnica semelhante para implantar o aplicativo no dispositivo iOS. Como alternativa, implante o aplicativo para o [simulador remoto de iOS](~/tools/ios-simulator/index.md).
 
-    Observação: não há suporte para chamadas telefônicas em todos os simuladores.
+    > [!NOTE]
+    > Não há suporte para chamadas telefônicas em emuladores de dispositivo.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
+
+## <a name="update-the-app-with-visual-studio-for-mac"></a>Atualizar um aplicativo com o Visual Studio para Mac
 
 1. Inicialize o Visual Studio para Mac. Na página inicial, clique em **Abrir...** e, na caixa de diálogo, selecione o arquivo de solução para o projeto Phoneword:
 
@@ -314,12 +319,12 @@ Estenda o aplicativo Phoneword da seguinte maneira:
 
     ![](quickstart-images/xs/phone-result-android.png "Android Emulator")
 
-    Observação: não há suporte para chamadas telefônicas em emuladores de Android.
+    > [!NOTE]
+    > Não há suporte para chamadas telefônicas em emuladores de dispositivo.
 
------
+::: zone-end
 
 Parabéns por concluir um aplicativo Xamarin.Forms multitela. O [próximo tópico](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md) deste guia analisa as etapas seguidas para entender a navegação de página e a associação de dados usando o Xamarin.Forms.
-
 
 ## <a name="related-links"></a>Links relacionados
 

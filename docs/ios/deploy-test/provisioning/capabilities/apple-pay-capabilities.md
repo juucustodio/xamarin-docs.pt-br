@@ -4,15 +4,15 @@ description: A adição de capacidades a um aplicativo geralmente requer uma con
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: a3d2e6179dde1583e0fd4d175c46582bed9a2e07
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c7a2d347970d4edfe713edab264647fb644ff74a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785064"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112332"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Recursos Apple Pay no Xamarin.iOS
 
@@ -40,11 +40,11 @@ A ID do comerciante é usada para informar o Apple Pay que você pode aceitar pa
 
 2.  Em **Identificadores**, selecione **IDs do comerciante** e, em seguida, escolha **+** para criar uma nova ID do comerciante:  
 
-3.  Preencha o formulário ilustrado abaixo, com uma nova descrição e um novo identificador. A descrição torna a ID identificável para você e pode ser alterada posteriormente. O identificador deve ser exclusivo para você e deve começar com a cadeia de caracteres `merchant`. A Apple recomenda que o identificador esteja no seguinte formato: `merchant.com.[Your-App-Name]`:
+3.  Preencha o formulário ilustrado abaixo, com uma nova descrição e um novo identificador. A descrição torna a ID identificável para você e pode ser alterada posteriormente. O identificador deve ser exclusivo para você e deve começar com a cadeia de caracteres `merchant`. A Apple recomenda que o identificador esteja no seguinte formato: `merchant.com.[Your-App-Name]`:
    
     ![Detalhes da nova ID do comerciante](apple-pay-capabilities-images/image58.png)
 
-4.  Confirme os detalhes e **Registre** sua ID: 
+4.  Confirme os detalhes e **Registre** sua ID: 
     
     ![Confirmação de ID do comerciante](apple-pay-capabilities-images/image59.png)
 
@@ -154,6 +154,6 @@ A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.
 * Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
-* Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de depuração e do simulador do iOS.
+* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de Depuração e do Simulador do iOS.
 
 Se você encontrar problemas com serviços de aplicativos, consulte a seção [Solução de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) do guia principal.

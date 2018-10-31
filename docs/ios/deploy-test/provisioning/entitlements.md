@@ -1,44 +1,43 @@
 ---
-title: Trabalhando com direitos no Xamarin.iOS
+title: Trabalhar com direitos no Xamarin.iOS
 description: Direitos são capacidades especiais do aplicativo e permissões de segurança concedidas a aplicativos que estão configurados corretamente para usá-las.
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/15/2017
-ms.openlocfilehash: 7e5ace306b580ba76986e89367de84e5bfd9cc40
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 08/13/2018
+ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103407"
 ---
-# <a name="working-with-entitlements-in-xamarinios"></a>Trabalhando com direitos no Xamarin.iOS
+# <a name="working-with-entitlements-in-xamarinios"></a>Trabalhar com direitos no Xamarin.iOS
 
 _Direitos são capacidades especiais do aplicativo e permissões de segurança concedidas a aplicativos que estão configurados corretamente para usá-las._
 
 No iOS, aplicativos são executados em uma _área restrita_, que fornece um conjunto de regras que limitam o acesso entre o aplicativo e certos recursos do sistema ou dados de usuário. _Direitos_ são usados para solicitar que o sistema expanda a área restrita para fornecer capacidades adicionais ao aplicativo.
 
-Para estender as capacidades do aplicativo, um direito deve ser fornecido no arquivo Entitlements.plist do aplicativo. Somente determinadas capacidades podem ser estendidas e elas estão listadas no guia [Trabalhando com capacidades](~/ios/deploy-test/provisioning/capabilities/index.md) e descritas [abaixo](#keyreference). Os direitos são transmitidos para o sistema como um par chave-valor e, geralmente, é necessário apenas um por capacidade. As chaves e os valores específicos estão descritos na seção [Referência de chave de direito](#keyreference) mais adiante neste guia.
+Para estender as capacidades do aplicativo, um direito deve ser fornecido no arquivo Entitlements.plist do aplicativo. Somente determinadas capacidades podem ser estendidas e elas estão listadas no guia [Trabalhando com capacidades](~/ios/deploy-test/provisioning/capabilities/index.md) e descritas [abaixo](#entitlement-key-reference). Os direitos são transmitidos para o sistema como um par chave-valor e, geralmente, é necessário apenas um por capacidade. As chaves e os valores específicos estão descritos na seção [Referência de chave de direito](#entitlement-key-reference) mais adiante neste guia.
 O Visual Studio para Mac e o Visual Studio fornecem uma interface clara para adicionar direitos em um aplicativo Xamarin.iOS por meio do editor de Entitlements.plist.
 Este guia apresenta o editor de Entitlements.plist e como usá-lo. Ele também fornece uma referência de todos os direitos que podem ser adicionados a um projeto do iOS para cada capacidade.
 
 ## <a name="entitlements-and-provisioning"></a>Direitos e provisionamento
 
-
-O arquivo Entitlements.plist é usado para especificar direitos e é usado para assinar o lote de aplicativo.
+O arquivo Entitlements.plist é usado para especificar direitos e é usado para assinar o pacote de aplicativo.
 
 No entanto, certo provisionamento adicional é necessário para garantir que o aplicativo seja assinado por código da forma correta. O perfil de provisionamento usado deve conter uma ID do aplicativo com a capacidade necessária habilitada. Para obter informações de como fazer isso, consulte o guia [Trabalhando com capacidades](~/ios/deploy-test/provisioning/capabilities/index.md).
 
 > [!IMPORTANT]
-> O arquivo Entitlements.plist ajuda a preencher as propriedades corretas de um aplicativo usando capacidades, mas não pode gerar um perfil de provisionamento porque não está vinculado a uma conta de desenvolvedor da Apple. Você ainda precisará gerar um perfil de provisionamento usando o portal do desenvolvedor para implantar e distribuir o aplicativo.
+> O arquivo Entitlements.plist ajuda a preencher as propriedades corretas de um aplicativo usando funcionalidades, mas não pode gerar um perfil de provisionamento porque não está vinculado a uma conta de desenvolvedor da Apple. Você ainda precisará gerar um perfil de provisionamento usando o portal do desenvolvedor para implantar e distribuir o aplicativo.
 
 ## <a name="set-entitlements-in-a-xamarinios-project"></a>Definir direitos em um projeto Xamarin.iOS
 
 Além de selecionar e configurar os serviços de aplicativo necessários ao definir a ID do aplicativo, os direitos também devem ser configurados no projeto Xamarin.iOS editando os arquivos **Info.plist** e **Entitlements.plist**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para configurar os direitos no Visual Studio para Mac, faça o seguinte:
 
@@ -55,7 +54,7 @@ Para configurar os direitos no Visual Studio para Mac, faça o seguinte:
 5. Selecione e configure os direitos necessários (se houver) para o aplicativo Xamarin.iOS de maneira que eles correspondam à configuração definida quando a ID do aplicativo foi criada.
 6. Salve as alterações no arquivo **Entitlements.plist**.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para configurar os direitos no Visual Studio, faça o seguinte:
 
@@ -74,10 +73,7 @@ Para configurar os direitos no Visual Studio, faça o seguinte:
 5. Selecione e configure os direitos necessários (se houver) para o aplicativo Xamarin.iOS de maneira que eles correspondam à configuração definida quando a ID do aplicativo foi criada.
 6. Salve as alterações no arquivo **Entitlements.plist**.
 
-
 -----
-
-<a name="add-new" />
 
 ## <a name="adding-a-new-entitlementsplist-file"></a>Adicionando um novo arquivo Entitlements.plist
 
@@ -91,8 +87,6 @@ Para adicionar um arquivo Entitlements.plist no Xamarin.iOS, faça o seguinte:
 2.  Na caixa de diálogo Novo Arquivo, selecione **iOS > Lista de Propriedades** e nomeie-a como Direitos:
 
     ![Caixa de diálogo Novo Arquivo](entitlements-images/image2.png)
-
-<a name="keyreference" />
 
 ## <a name="entitlement-key-reference"></a>Referência de chave de direito
 
@@ -150,11 +144,11 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 ### <a name="push-notifications"></a>Notificações por Push
 
 - **Chave**: aps-environment
-- **Cadeia de caracteres**: `production` ou `development`
+- **Cadeia de caracteres**: `development` ou `production`
 
 ### <a name="siri"></a>Siri
 
-- **Descrição**: o SiriKit permite que um aplicativo iOS forneça serviços acessíveis aos aplicativos Siri e Mapas em um dispositivo iOS, usando Extensões de Aplicativo e as novas estruturas Intents e IU de Intents. Para obter mais informações, consulte o guia Introdução ao SiriKit.
+- **Descrição**: o SiriKit permite que um aplicativo iOS forneça serviços acessíveis ao Siri e ao aplicativo de Mapas em um dispositivo iOS usando Extensões de Aplicativo e as novas estruturas de Intenções e interface do usuário de Intenções. Para obter mais informações, consulte o guia Introdução ao SiriKit.
     - **Chave**: com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>VPN pessoal
@@ -203,6 +197,12 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 - **Descrição**: o uso da Configuração de Acessório Sem Fio permite que seu aplicativo configure acessórios MFi Wi-Fi
     - **Chave**: com.apple.external-accessory.wireless-configuration
     - **Booliano**: sim
+
+### <a name="classkit"></a>ClassKit
+
+- **Descrição**: o ClassKit permite que professores vejam o progresso do aluno em atividades atribuídas em seu aplicativo.
+    - **Chave**: com.apple.developer.ClassKit-environment
+    - **Cadeia de caracteres**: `development` ou `production`
 
 ## <a name="summary"></a>Resumo
 

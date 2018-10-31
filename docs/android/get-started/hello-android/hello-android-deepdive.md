@@ -1,72 +1,72 @@
 ---
 title: 'Hello, Android: aprofundamento'
 description: Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentaremos ferramentas, conceitos e etapas necessários para criar e implantar um aplicativo Xamarin.Android.
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/07/2018
-ms.openlocfilehash: 3aa70469c5916a22a22d7857c62a4b46c1637124
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+author: conceptdev
+ms.author: crdun
+ms.date: 10/05/2018
+ms.openlocfilehash: cdd0a792a76fa411fdc010c3d662a3d1acc2f373
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108802"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: aprofundamento
 
 _Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentaremos ferramentas, conceitos e etapas necessários para criar e implantar um aplicativo Xamarin.Android._
 
-## <a name="hello-android-deep-dive"></a>Aprofundamento no Hello, Android
-
 Em [Início rápido do Hello, Android](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md), você compilou e executou seu primeiro aplicativo Xamarin.Android. Agora é hora de desenvolver uma compreensão mais profunda de como funcionam os aplicativos Android para que você possa criar programas mais sofisticados. Este guia examina as etapas que você seguiu no passo a passo Hello, Android, para que você possa entender o que você fez e comece a desenvolver um entendimento fundamental do desenvolvimento de aplicativos Android.
 
 Este guia citará os tópicos a seguir:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
--   **Introdução ao Visual Studio** &ndash; introdução ao Visual Studio e criação de um novo aplicativo Xamarin.Android.
+- **Introdução ao Visual Studio** &ndash; introdução ao Visual Studio e criação de um novo aplicativo Xamarin.Android.
 
--   **Anatomia de um aplicativo Xamarin.Android** – Apresentação das partes essenciais de um aplicativo Xamarin.Android.
+- **Anatomia de um aplicativo Xamarin.Android** – apresentação das partes essenciais de um aplicativo Xamarin.Android.
 
--   **Noções básicas de arquitetura e conceitos básicos de aplicativos** &ndash; Introdução às atividades, o manifesto do Android e o desenvolvimento Android em linhas gerais.
+- **Noções básicas de arquitetura e conceitos básicos de aplicativos** &ndash; introdução às atividades, ao manifesto do Android e ao desenvolvimento em Android em linhas gerais.
 
--   **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Designer do Android.
+- **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Designer Android.
 
--   **Atividades e o ciclo de vida da atividade** &ndash; uma introdução ao ciclo de vida da atividade e à preparação da interface do usuário em código.
+- **Atividades e o ciclo de vida da atividade** &ndash; uma introdução ao ciclo de vida da atividade e à preparação da interface do usuário em código.
 
--   **Testes, implantação e toques finais** &ndash; conclua o aplicativo com conselhos sobre testes, implantação, criação de arte final e muito mais.
+- **Testes, implantação e toques finais** &ndash; conclua o aplicativo tirando proveito de conselhos sobre testes, implantação, criação de arte final e muito mais.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
--   **Introdução ao Visual Studio para Mac** &ndash; Introdução ao Xamarin Studio e criação de um novo aplicativo Xamarin.Android.
+- **Introdução ao Visual Studio para Mac** &ndash; introdução ao Visual Studio para Mac e criação de um novo aplicativo do Xamarin.Android.
 
--   **Anatomia de um aplicativo Xamarin.Android** &ndash; Apresentação das partes essenciais de um aplicativo Xamarin.Android.
+- **Anatomia de um aplicativo Xamarin.Android** &ndash; apresentação das partes essenciais de um aplicativo Xamarin.Android.
 
--   **Noções básicas de arquitetura e conceitos básicos de aplicativos** &ndash; Introdução às atividades, o manifesto do Android e o desenvolvimento Android em linhas gerais.
+- **Noções básicas de arquitetura e conceitos básicos de aplicativos** &ndash; introdução às atividades, ao manifesto do Android e ao desenvolvimento em Android em linhas gerais.
 
--   **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Designer do Android.
+- **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Designer Android.
 
--   **Atividades e o ciclo de vida da atividade** &ndash; uma introdução ao ciclo de vida da atividade e à preparação da interface do usuário em código.
+- **Atividades e o ciclo de vida da atividade** &ndash; uma introdução ao ciclo de vida da atividade e à preparação da interface do usuário em código.
 
--   **Testes, implantação e toques finais** &ndash; conclua o aplicativo com conselhos sobre testes, implantação, criação de arte final e muito mais.
+- **Testes, implantação e toques finais** &ndash; conclua o aplicativo tirando proveito de conselhos sobre testes, implantação, criação de arte final e muito mais.
 
------
-
+::: zone-end
 
 Este guia ajudará você a desenvolver as habilidades e o conhecimento necessário para criar um aplicativo Android de uma única tela. Depois que trabalhar com ele, você deverá compreender as diferentes partes de um aplicativo Xamarin.Android e como elas se encaixam.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ## <a name="introduction-to-visual-studio"></a>Introdução ao Visual Studio
 
 O Visual Studio é um IDE avançado da Microsoft. Ele conta com um designer visual totalmente integrado, um editor de texto que inclui ferramentas de refatoração, um navegador de assembly, integração de código-fonte e muito mais. Neste guia, você aprenderá a usar algumas funcionalidades básicas do Visual Studio com o plug-in Xamarin.
 
-O Visual Studio organiza o código em _Soluções_ e _Projetos_. Uma solução é um contêiner que pode conter um ou mais Projetos. Um projeto pode ser um aplicativo (por exemplo, para iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo **Phoneword**, você adicionou um novo Projeto Android usando o modelo **Aplicativo Android** para a solução **Phoneword** criada no guia [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md). 
+O Visual Studio organiza o código em _Soluções_ e _Projetos_. Uma solução é um contêiner que pode conter um ou mais Projetos. Um projeto pode ser um aplicativo (por exemplo, para iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo **Phoneword**, você adicionou um novo Projeto Android usando o modelo **Aplicativo Android** para a solução **Phoneword** criada no guia [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Introdução ao Visual Studio para Mac
 
@@ -74,38 +74,38 @@ O Visual Studio para Mac é um IDE de software livre gratuito semelhante ao Visu
 
 O Visual Studio para Mac segue a prática do Visual Studio de organizar o código em _Soluções_ e _Projetos_. Uma solução é um contêiner que pode conter um ou mais Projetos. Um projeto pode ser um aplicativo (por exemplo, para iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo **Phoneword**, você adicionou um novo Projeto Android usando o modelo **Aplicativo Android** para a solução **Phoneword** criada no guia [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
------
+::: zone-end
 
 <a name="anatomy" />
 
 ## <a name="anatomy-of-a-xamarinandroid-application"></a>Anatomia de um aplicativo Xamarin.Android
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 A captura de tela a seguir lista o conteúdo da solução. Este é o Gerenciador de Soluções, que contém a estrutura de diretórios e todos os arquivos associados à solução:
 
 [![Gerenciador de Soluções](hello-android-deepdive-images/vs/02-solution-structure-sml.png)](hello-android-deepdive-images/vs/02-solution-structure.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 A captura de tela a seguir lista o conteúdo da solução. Este é o Painel de Soluções, que contém a estrutura de diretórios e todos os arquivos associados à solução:
 
 [![Painel da Solução](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
 
------
+::: zone-end
 
 Uma solução chamada **Phoneword** foi criada e o projeto Android **Phoneword** foi colocado dentro dela.
 
 Examine os itens dentro do projeto para ver cada pasta e sua finalidade:
 
--   **Propriedades** &ndash; contém o arquivo [AndroidManifest.xml](~/android/platform/android-manifest.md), que descreve todos os requisitos para o aplicativo Xamarin.Android, incluindo nome, número de versão e permissões. A pasta **Propriedades** também hospeda o [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo), um arquivo de metadados de assembly do .NET. É uma boa prática preencher esse arquivo com algumas informações básicas sobre seu aplicativo.
+- **Propriedades** &ndash; contém o arquivo [AndroidManifest.xml](~/android/platform/android-manifest.md), que descreve todos os requisitos para o aplicativo Xamarin.Android, incluindo nome, número de versão e permissões. A pasta **Propriedades** também hospeda o [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo), um arquivo de metadados de assembly do .NET. É uma boa prática preencher esse arquivo com algumas informações básicas sobre seu aplicativo.
 
--   **Referências** &ndash; contém os assemblies necessários para compilar e executar o aplicativo. Se você expandir o diretório de referências, verá referências aos assemblies do .NET como [System](xref:System), System.Core e [System.Xml](xref:System.Xml), bem como uma referência ao assembly do Mono.Android do Xamarin.
+- **Referências** &ndash; contém os assemblies necessários para compilar e executar o aplicativo. Se você expandir o diretório de referências, verá referências aos assemblies do .NET como [System](xref:System), System.Core e [System.Xml](xref:System.Xml), bem como uma referência ao assembly do Mono.Android do Xamarin.
 
+- **Ativos** &ndash; contém os arquivos que o aplicativo precisa executar incluindo arquivos de texto, arquivos de dados locais e fontes. Os arquivos incluídos aqui são acessíveis por meio da classe `Assets` gerada. Para obter mais informações sobre ativos Android, veja o guia [Uso de ativos do Android](~/android/app-fundamentals/resources-in-android/android-assets.md) do Xamarin.
 
--   **Ativos** &ndash; contém os arquivos que o aplicativo precisa executar incluindo arquivos de texto, arquivos de dados locais e fontes. Os arquivos incluídos aqui são acessíveis por meio da classe `Assets` gerada. Para obter mais informações sobre ativos Android, veja o guia [Uso de ativos do Android](~/android/app-fundamentals/resources-in-android/android-assets.md) do Xamarin.
-
--   **Recursos** &ndash; contém recursos de aplicativo como cadeias de caracteres, imagens e layouts. Você pode acessar esses recursos em código por meio da classe `Resource` gerada. O guia [Recursos do Android](~/android/app-fundamentals/resources-in-android/index.md) fornece mais detalhes sobre o diretório **Resources**. O modelo de aplicativo também inclui um guia conciso para os recursos no arquivo **AboutResources.txt**.
+- **Recursos** &ndash; contém recursos de aplicativo como cadeias de caracteres, imagens e layouts. Você pode acessar esses recursos em código por meio da classe `Resource` gerada. O guia [Recursos do Android](~/android/app-fundamentals/resources-in-android/index.md) fornece mais detalhes sobre o diretório **Resources**. O modelo de aplicativo também inclui um guia conciso para os recursos no arquivo **AboutResources.txt**.
 
 ### <a name="resources"></a>Recursos
 
@@ -113,24 +113,31 @@ O diretório **Recursos** contém quatro pastas chamadas **drawable** (desenháv
 
 Os itens estão resumidos na tabela abaixo:
 
--   **desenhável** &ndash; os diretórios desenháveis contêm [recursos desenháveis](http://developer.android.com/guide/topics/resources/drawable-resource.html) como imagens e bitmaps.
+- **desenhável** &ndash; os diretórios desenháveis contêm [recursos desenháveis](http://developer.android.com/guide/topics/resources/drawable-resource.html), como imagens e bitmaps.
 
--   **mipmap** &ndash; O diretório mipmap contém arquivos desenháveis para diferentes densidades de ícones do inicializador. No modelo padrão, o diretório desenhável contém o arquivo de ícone do aplicativo, **Icon.png**.
+- **mipmap** &ndash; O diretório mipmap contém arquivos desenháveis para diferentes densidades de ícones do inicializador. No modelo padrão, o diretório desenhável contém o arquivo de ícone do aplicativo, **Icon.png**.
 
 
--   **layout** &ndash; o diretório layout contém _arquivos do Designer do Android_ (.axml) que definem a interface do usuário para cada tela ou atividade. O modelo cria um layout padrão chamado **Main.axml**.
+::: zone pivot="windows"
 
--   **values** &ndash; esse diretório contém arquivos XML que armazenam valores simples como cadeias de caracteres, inteiros e cores. O modelo cria um arquivo para armazenar valores de cadeia de caracteres chamados **Strings.xml**.
+- **layout** &ndash; o diretório layout contém _arquivos do Designer do Android_ (.axml) que definem a interface do usuário para cada tela ou atividade. O modelo cria um layout padrão chamado **activity_main.axml**.
 
--   **Resource.designer.cs** &ndash; também conhecido como a classe `Resource`, esse arquivo é uma classe parcial que contém as IDs exclusivas atribuídas a cada recurso. Ele é criado automaticamente pelas ferramentas do Xamarin.Android e regenerado quando necessário. Esse arquivo deve não ser editado manualmente, pois o Xamarin.Android substituirá todas as alterações manuais que forem feitas.
+::: zone-end
+::: zone pivot="macos"
 
+- **layout** &ndash; o diretório layout contém _arquivos do Designer do Android_ (.axml) que definem a interface do usuário para cada tela ou atividade. O modelo cria um layout padrão chamado **Main.axml**.
+
+::: zone-end
+
+- **values** &ndash; esse diretório contém arquivos XML que armazenam valores simples como cadeias de caracteres, inteiros e cores. O modelo cria um arquivo para armazenar valores de cadeia de caracteres chamados **Strings.xml**.
+
+- **Resource.designer.cs** &ndash; também conhecido como a classe `Resource`, esse arquivo é uma classe parcial que contém as IDs exclusivas atribuídas a cada recurso. Ele é criado automaticamente pelas ferramentas do Xamarin.Android e regenerado quando necessário. Esse arquivo deve não ser editado manualmente, pois o Xamarin.Android substituirá todas as alterações manuais que forem feitas.
 
 ## <a name="app-fundamentals-and-architecture-basics"></a>Noções básicas de arquitetura e conceitos básicos de aplicativos
 
 Aplicativos do Android não têm nenhum ponto de entrada único, ou seja, não há nenhuma linha de código individual no aplicativo que o sistema operacional chame para iniciar o aplicativo. Em vez disso, um aplicativo é iniciado quando Android instancia uma de suas classes, período durante o qual o Android carrega o processo do aplicativo inteiro na memória.
 
 Esse recurso exclusivo do Android pode ser extremamente útil ao projetar aplicativos complicados ou interagir com o sistema operacional Android. No entanto, essas opções também tornam o Android complexo ao lidar com um cenário básico como o do aplicativo **Phoneword**. Por esse motivo, a exploração da arquitetura Android é dividida em dois. Este guia analisa em detalhes um aplicativo que usa o ponto de entrada mais comum para um aplicativo do Android: a primeira tela. Em [Multitela do Hello, Android](~/android/get-started/hello-android-multiscreen/index.md), todas as complexidades da arquitetura Android são exploradas conforme diferentes maneiras de iniciar um aplicativo são discutidas.
-
 
 ### <a name="phoneword-scenario---starting-with-an-activity"></a>Cenário do Phoneword – início de uma atividade
 
@@ -144,54 +151,51 @@ Já que não há nenhuma progressão linear em um aplicativo do Android (você p
 
 As próximas seções exploram as relações entre as diversas partes do aplicativo **Phoneword**, o que deve fornecer uma compreensão melhor do diagrama acima. Essa exploração começa com a interface do usuário, pois ela aborda os arquivos de layout e do Designer do Android.
 
-
 ## <a name="user-interface"></a>Interface do Usuário
 
-`Main.axml` é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Designer do Android (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **Main.axml** no IDE, ele abrirá o editor visual para arquivos de layout do Android chamado de *Designer do Android*:
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+**activity_main.axml** é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Designer do Android (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **activity_main.axml** no IDE, ele abre o editor visual de arquivos de layout do Android, chamado *Designer Android*:
 
 [![Designer Android](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-[![Designer Android](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
-
------
-
 No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/TranslateButton`:
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 [![Configuração de ID de TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Configuração de ID de TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
+
+**Main.axml** é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Designer do Android (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **Main.axml** no IDE, ele abrirá o editor visual para arquivos de layout do Android chamado de *Designer do Android*:
+
+[![Designer Android](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
+
+No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/TranslateButton`:
 
 [![Configuração de ID de TranslateButton](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
------
+::: zone-end
 
 Quando você define a propriedade `id` do **TranslateButton**, o Designer Android mapeia o controle **TranslateButton** para a classe `Resource` e atribui a ele a *ID de recurso* `TranslateButton`. Esse mapeamento de controle visual para classe torna possível localizar e usar o **TranslateButton** e outros controles no código do aplicativo. Isso será abordado em mais detalhes ao separar o código que acionar os controles. Tudo que você precisa saber por enquanto é que a representação de código de um controle está vinculada à representação visual do controle no designer pela propriedade `id`.
 
-
-### <a name="source-view"></a>Modo Código-Fonte
+### <a name="source-view"></a>Exibição de fonte
 
 Tudo que está definido na área de design é traduzido em XML para o Xamarin.Android usar. O Designer do Android fornece uma exibição do código-fonte que contém o XML que foi gerado do designer visual. Você pode exibir esse XML alternando para o painel **Código-fonte** no canto inferior esquerdo da exibição de designer, conforme ilustrado na captura de tela abaixo:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 [![Exibição de fonte de designer](hello-android-deepdive-images/vs/05-source-view-sml.png "Exibição de fonte de designer")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 [![Exibição de fonte de designer](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
 
------
+::: zone-end
 
 Esse código-fonte XML deve conter os elementos **Texto (Grande)**, **Texto Sem Formatação** e dois elementos de **Botão**. Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
 
 As ferramentas e os conceitos por trás da parte visual da interface do usuário foram agora abordados. Em seguida, é hora de se aprofundar no código que aciona a interface do usuário conforme as atividades e o ciclo de vida da atividade são explorados.
-
 
 ## <a name="activities-and-the-activity-lifecycle"></a>Atividades e ciclo de vida da atividade
 
@@ -199,8 +203,7 @@ A classe `Activity` contém o código que acionar a interface do usuário.
 A atividade é responsável por responder à interação do usuário e criar uma experiência de usuário dinâmica.
 Esta seção apresenta a classe `Activity`, discute o ciclo de vida de atividade e apresenta o código que aciona a interface do usuário no aplicativo **Phoneword**.
 
-
-### <a name="activity-class"></a>Classe de Atividade
+### <a name="activity-class"></a>Classe de atividade
 
 O aplicativo **Phoneword** tem apenas uma tela (Atividade). A classe que aciona a tela é chamada `MainActivity` e reside no arquivo **MainActivity.cs**. O nome `MainActivity` não tem nenhum significado especial no Android &ndash; embora a convenção seja nomear a primeira atividade em um aplicativo como `MainActivity`, não faz diferença para o Android se ela for nomeada diferentemente.
 
@@ -220,7 +223,7 @@ A propriedade `MainLauncher` indica ao Android para exibir essa atividade quando
 
 Agora que os conceitos básicos de `MainActivity` foram abordados, é hora de se aprofundar no código da atividade, introduzindo o _Ciclo de vida da atividade_.
 
-### <a name="activity-lifecycle"></a>Ciclo de vida de atividade
+### <a name="activity-lifecycle"></a>Ciclo de vida da atividade
 
 No Android, as atividades passam por diferentes estágios de um ciclo de vida, dependendo de suas interações com o usuário. Atividades podem ser criadas, iniciadas e colocadas em pausa, retomadas e destruídas e assim por diante. A classe `Activity` contém métodos que o sistema chama em determinados pontos no ciclo de vida da tela. O diagrama a seguir ilustra uma vida típica de uma atividade, bem como alguns dos métodos de ciclo de vida correspondentes:
 
@@ -228,17 +231,15 @@ No Android, as atividades passam por diferentes estágios de um ciclo de vida, d
 
 Substituindo `Activity` métodos de ciclo de vida, você pode controlar como a atividade é carregada, como ela reage ao usuário e até mesmo o que acontece depois que ela desaparece da tela do dispositivo. Por exemplo, você pode substituir os métodos de ciclo de vida no diagrama acima para executar algumas tarefas importantes:
 
--   **OnCreate** &ndash; cria exibições, inicializa variáveis e executa outras tarefas de preparação que devem ser realizadas antes que o usuário veja a atividade. Este método é chamado apenas uma vez quando a atividade é carregada na memória. 
+- **OnCreate** &ndash; cria exibições, inicializa variáveis e executa outras tarefas de preparação que devem ser realizadas antes que o usuário veja a atividade. Este método é chamado apenas uma vez quando a atividade é carregada na memória. 
 
--   **OnResume** &ndash; executa as tarefas que devem ocorrer sempre que a atividade retornar para a tela do dispositivo. 
+- **OnResume** &ndash; executa as tarefas que devem ocorrer sempre que a Atividade retornar para a tela do dispositivo.
 
--   **OnPause** &ndash; executa as tarefas que devem ocorrer sempre que a atividade sair da tela do dispositivo.
+- **OnPause** &ndash; executa as tarefas que devem ocorrer sempre que a Atividade sair da tela do dispositivo.
 
-
-Quando você adiciona código personalizado para um método de ciclo de vida no `Activity`, você *substitui* a *implementação base* desse método de ciclo de vida. Você aproveita o método de ciclo de vida existente (que já tem algum código anexado) e amplia esse método com seu próprio código. Você chama a implementação base de dentro do método para garantir que o código original seja executado antes do novo código. Um exemplo disso é ilustrado na próxima seção. 
+Quando você adiciona código personalizado para um método de ciclo de vida no `Activity`, você *substitui* a *implementação base* desse método de ciclo de vida. Você aproveita o método de ciclo de vida existente (que já tem algum código anexado) e amplia esse método com seu próprio código. Você chama a implementação base de dentro do método para garantir que o código original seja executado antes do novo código. Um exemplo disso é ilustrado na próxima seção.
 
 O ciclo de vida da atividade é uma parte importante e complexa do Android. Se você gostaria de saber mais sobre as atividades após concluir a série _Introdução_, leia o guia [Ciclo de vida da atividade](~/android/app-fundamentals/activity-lifecycle/index.md). Neste guia, o próximo item em foco é o primeiro estágio do ciclo de vida de atividade, `OnCreate`.
-
 
 ### <a name="oncreate"></a>OnCreate
 
@@ -255,13 +256,28 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Designer Android. Para carregar a interface do usuário, chame `SetContentView` e passe o *nome do recurso de layout* para o arquivo de layout: `Main.axml`. O layout está localizado em `Resource.Layout.Main`:
+::: zone pivot="windows"
+
+No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Designer Android. Para carregar a interface do usuário, chame `SetContentView` e passe para ele o *nome do recurso de layout* para o arquivo de layout: **activity_main.axml**. O layout está localizado em `Resource.Layout.activity_main`:
+
+```csharp
+SetContentView (Resource.Layout.activity_main);
+```
+
+Quando o `MainActivity` é iniciado, ele cria uma exibição com base no conteúdo do arquivo **activity_main.axml**.
+
+::: zone-end
+::: zone pivot="macos"
+
+No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Designer Android. Para carregar a interface do usuário, chame `SetContentView` e passe para ele o *nome do recurso de layout* para o arquivo de layout: **Main.axml**. O layout está localizado em `Resource.Layout.Main`:
 
 ```csharp
 SetContentView (Resource.Layout.Main);
 ```
 
 Quando `MainActivity` é iniciado, ele cria uma exibição com base no conteúdo do arquivo **Main.axml**. Observe que o nome do arquivo de layout é correspondente ao nome da atividade &ndash; *Main*.axml é o layout da atividade *Main*. Isso não é necessário do ponto de vista do Android, mas quando você começar a adicionar mais telas ao aplicativo, você descobrirá que essa convenção de nomenclatura facilita corresponder o arquivo de código ao arquivo de layout.
+
+::: zone-end
 
 Depois que o arquivo de layout é preparado, você pode começar a pesquisar controles.
 Para pesquisar um controle, chame `FindViewById` e passar a ID de recurso do controle:
@@ -273,7 +289,6 @@ TextView translatedPhoneWord = FindViewById<TextView>(Resource.Id.TranslatedPhon
 ```
 
 Agora que você tem referências para os controles no arquivo de layout, você pode começar a programá-los para responder à interação do usuário.
-
 
 ### <a name="responding-to-user-interaction"></a>Respondendo à interação do usuário
 
@@ -299,11 +314,9 @@ translateButton.Click += (sender, e) =>
 
 Ambos o Visual Studio para Mac e o Visual Studio oferecem várias opções para testar e implantar um aplicativo. Esta seção aborda as opções de depuração, demonstra o teste de aplicativos em um dispositivo e apresenta ferramentas para a criação de ícones do aplicativo personalizados para diferentes densidades de tela.
 
-
 ### <a name="debugging-tools"></a>Ferramentas de depuração
 
 Problemas no código do aplicativo podem ser difíceis de diagnosticar. Para ajudar a diagnosticar problemas de código complexos, você pode [definir um ponto de interrupção](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [examinar o código passo a passo](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) ou [enviar informações para a janela de Log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
-
 
 ### <a name="deploy-to-a-device"></a>Implantar em um dispositivo
 
@@ -311,24 +324,24 @@ O emulador é um bom começo para implantar e testar um aplicativo, mas os usuá
 
 Antes de um dispositivo Android poder ser usado para testar aplicativos, ele precisa ser configurado para desenvolvimento. O guia [Configurar o dispositivo para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md) fornece instruções completas de como se preparar um dispositivo para o desenvolvimento.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 Depois que o dispositivo estiver configurado, você poderá implantar nele conectando-o, selecionando-o na caixa de diálogo **Selecionar Dispositivo** e iniciando o aplicativo:
 
 ![Selecionar dispositivo de depuração](hello-android-deepdive-images/vs/06-select-device.png "Selecionar dispositivo de depuração")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 Depois que o dispositivo estiver configurado, você poderá implantar nele conectando-o, pressionando **Iniciar (reproduzir)**, selecionando-o na caixa de diálogo **Selecionar Dispositivo** e pressionando **OK**:
 
 [![Selecionar dispositivo de depuração](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
------
+::: zone-end
 
 Isso inicia o aplicativo no dispositivo:
 
 [![Insira Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
-
 
 ### <a name="set-icons-for-different-screen-densities"></a>Definir ícones para diferentes densidades de tela
 
@@ -338,15 +351,16 @@ Dispositivos Android vêm em diferentes tamanhos e resoluções de tela e nem to
 
 Como precaução para isso, é recomendável adicionar ícones de resoluções diferentes à pasta **Resources**. O Android fornece versões diferentes da pasta **mipmap** para lidar com ícones do inicializador de diferentes densidades, incluindo *mdpi* para telas de densidade média, *hdpi* para telas de densidade alta e *xhdpi*, *xxhdpi* e *xxxhdpi* para telas de densidade muito alta. Ícones de tamanhos variados são armazenados nas pastas **mipmap-** apropriadas:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ![pastas mipmap](hello-android-deepdive-images/vs/07-mipmap-folders.png "pastas mipmap")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="windows"
 
 [![Pastas mipmap](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
------
+::: zone-end
 
 O Android selecionará o ícone com a densidade apropriada:
 
@@ -356,37 +370,36 @@ O Android selecionará o ícone com a densidade apropriada:
 
 Nem todo mundo tem um designer disponível para criar os ícones personalizados e imagens de inicialização que um aplicativo precisa para se destacar. Aqui estão várias abordagens alternativas para gerar a arte final personalizada para o aplicativo:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
--   [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Um gerador baseado na Web e usado no navegador para todos os tipos de ícones do Android, com links para outras ferramentas úteis da comunidade. Ele funciona melhor no Google Chrome.
+- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Um gerador baseado na Web e usado no navegador para todos os tipos de ícones do Android, com links para outras ferramentas úteis da comunidade. Ele funciona melhor no Google Chrome.
 
--   Visual Studio &ndash; você pode usar isso para criar um conjunto de ícones simples para seu aplicativo diretamente no IDE.
+- Visual Studio &ndash; você pode usar isso para criar um conjunto de ícones simples para seu aplicativo diretamente no IDE.
 
--   [Glyphish](http://www.glyphish.com/) &ndash; conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
+- [Glyphish](http://www.glyphish.com/) &ndash; conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
 
--   [Fiverr](http://www.fiverr.com/) &ndash; escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente.
+- [Fiverr](http://www.fiverr.com/) &ndash; escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
--   [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Um gerador baseado na Web e usado no navegador para todos os tipos de ícones do Android, com links para outras ferramentas úteis da comunidade. Ele funciona melhor no Google Chrome.
+- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Um gerador baseado na Web e usado no navegador para todos os tipos de ícones do Android, com links para outras ferramentas úteis da comunidade. Ele funciona melhor no Google Chrome.
 
--   [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; O Sketch é um aplicativo do Mac para a criação de interfaces do usuário, ícones e muito mais. Este é o aplicativo que foi usado para criar o conjunto de Ícones e imagens de inicialização para aplicativos Xamarin. O Sketch 3 está disponível na loja de aplicativos e custa aproximadamente US$ 80. Você pode experimentar a [Ferramenta Sketch](http://bohemiancoding.com/sketch/tool/) gratuita também.
+- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; O Sketch é um aplicativo do Mac para a criação de interfaces do usuário, ícones e muito mais. Este é o aplicativo que foi usado para criar o conjunto de Ícones e imagens de inicialização para aplicativos Xamarin. O Sketch 3 está disponível na loja de aplicativos e custa aproximadamente US$ 80. Você pode experimentar a [Ferramenta Sketch](http://bohemiancoding.com/sketch/tool/) gratuita também.
 
--   [Pixelmator](http://www.pixelmator.com/) &ndash; uma imagem versátil editando o aplicativo para Mac que custa aproximadamente US$ 30.
+- [Pixelmator](http://www.pixelmator.com/) &ndash; um aplicativo de edição de imagem versátil para Mac que custa aproximadamente US$ 30.
 
--   [Glyphish](http://www.glyphish.com/) &ndash; conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
+- [Glyphish](http://www.glyphish.com/) &ndash; conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
 
--   [Fiverr](http://www.fiverr.com/) &ndash; escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente.
+- [Fiverr](http://www.fiverr.com/) &ndash; escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente.
 
------
+::: zone-end
 
 Para obter mais informações sobre tamanhos de ícones e requisitos, consulte o guia [Recursos do Android](~/android/app-fundamentals/resources-in-android/index.md).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="macos"
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="adding-google-play-services-packages"></a>Adicionando Pacotes do Google Play Services
+### <a name="adding-google-play-services-packages"></a>Adicionando pacotes do Google Play Services
 
 O _Google Play Services_ é um conjunto de bibliotecas de complementos que permite aos desenvolvedores Android tirar proveito dos recursos mais recentes do Google como o Google Maps, Google Cloud Messaging e cobrança no aplicativo.
 Anteriormente, as associações para todas as bibliotecas do Google Play Services eram fornecidas pelo Xamarin na forma de um único pacote &ndash; do Visual Studio para Mac em diante, uma caixa de diálogo de novo projeto está disponível para selecionar quais pacotes do Google Play Services incluir em seu aplicativo.
@@ -403,7 +416,7 @@ Quando você seleciona um serviço e clica em **Adicionar Pacote**, o Visual Stu
 
 [![Aceitação da licença](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png#lightbox)
 
------
+::: zone-end
 
 ## <a name="summary"></a>Resumo
 

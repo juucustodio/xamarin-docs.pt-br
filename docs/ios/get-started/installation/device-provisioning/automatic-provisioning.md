@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/22/2018
-ms.openlocfilehash: a0c3179dc8e349c23d5521230e0957d1be9384ec
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 5cb388df6223ebfe0a196e7db38495bf7723943f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986181"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110642"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 
@@ -20,12 +20,12 @@ _Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvol
 
 ## <a name="requirements"></a>Requisitos
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 - Visual Studio para Mac 7.3 ou posterior
 - Xcode 9 ou posterior
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - Visual Studio 2017 versão 15.7 (ou superior)
 
@@ -40,16 +40,20 @@ Você também precisa estar emparelhado com um host de build do Mac que tem o se
 Antes de iniciar o processo de assinatura automática, você deve adicionar uma ID Apple ao Visual Studio, conforme descrito no guia [Gerenciamento de conta da Apple](~/cross-platform/macios/apple-account-management.md). Depois de adicionar um ID Apple, será possível usar qualquer _Equipe_ associada. Isso permite que certificados, perfis e outras IDs sejam feitas com relação à equipe. A ID da equipe também é usada para criar um prefixo para uma ID do aplicativo que será incluída no perfil de provisionamento. Isso permite que a Apple verifique que você é quem diz que ser.
 
 > [!IMPORTANT]
-> Para começar, entre no [iTunes Connect](https://itunesconnect.apple.com/) ou no site do [appleid.apple.com](https://appleid.apple.com) e confirme se você aceitou as políticas de conta mais recentes da Apple. Quando solicitado, conclua as etapas para aceitar novos contratos de conta da Apple. Se não aceitar o contrato de privacidade de maio de 2018, você receberá o seguinte alerta quando tentar provisionar o dispositivo:
+> Para começar, entre no [iTunes Connect](https://itunesconnect.apple.com/) ou no site do [appleid.apple.com](https://appleid.apple.com) e confirme se você aceitou as políticas de conta mais recentes da Apple. Quando solicitado, conclua as etapas para aceitar novos contratos de conta da Apple. Se não aceitar o contrato de privacidade de maio de 2018, você verá um dos seguintes alertas quando tentar provisionar o dispositivo:
 > ```
 > Unexpected authentication failure. Reason: {
 > "authType" : "sa"
->}
->```
+> }
+> ```
+> ou
+> ```
+> Authentication Service Is Unavailable
+> ```
 
 Para assinar seu aplicativo automaticamente para implantação em um dispositivo iOS, faça o seguinte:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Abra o projeto iOS no Visual Studio para Mac.
 
@@ -67,7 +71,7 @@ Para assinar seu aplicativo automaticamente para implantação em um dispositivo
 
     Se a assinatura automática falhar, o **Painel de assinatura automática** exibirá o motivo do erro.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Emparelhe o Visual Studio 2017 com um Mac conforme descrito no guia [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
@@ -99,6 +103,30 @@ Quando a assinatura automática tiver sido habilitada, o Visual Studio para Mac 
     - Essa funcionalidade será adicionada à ID do aplicativo, e um novo perfil de provisionamento com a ID do aplicativo atualizada será gerado.
     - Nem todas as funcionalidades são compatíveis no momento. Para obter mais informações sobre as compatíveis, confira o guia [Trabalhando com funcionalidades](~/ios/deploy-test/provisioning/capabilities/index.md).
 
+## <a name="wildcard-app-ids"></a>IDs de Aplicativo Curinga
+
+Começando com o Visual Studio para Mac 7.6, o provisionamento automático tentará, por padrão, criar e usar a ID do Aplicativo curinga e um perfil de provisionamento, em vez de criar a ID do Aplicativo com base no **Identificador de Pacote** especificado em **Info.plist**. IDs de Aplicativo Curinga reduzem o número de perfis e de IDs mantidos no Portal do Desenvolvedor da Apple.
+
+Em alguns casos, os direitos do aplicativo exigem uma ID do Aplicativo explícita. Os seguintes direitos não dão suporte a IDs de Aplicativo curinga:
+
+- Grupos de Aplicativos
+- Domínios Associados
+- Apple Pay
+- Game Center
+- HealthKit
+- HomeKit
+- Ponto de acesso
+- Compra no aplicativo
+- Multipath
+- NFC
+- VPN pessoal
+- Notificações por Push
+- Configuração de Acessório sem Fio
+
+Se o aplicativo usar um desses direitos, o Visual Studio para Mac tentará criar uma ID do aplicativo explícita (em vez de uma curinga).
+
+> [!NOTE]
+> Atualmente, o provisionamento automático com IDs de Aplicativo curinga está disponível apenas no Visual Studio para Mac.
 
 ## <a name="related-links"></a>Links relacionados
 

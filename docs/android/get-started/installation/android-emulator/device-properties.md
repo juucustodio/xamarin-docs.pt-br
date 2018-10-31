@@ -1,25 +1,27 @@
 ---
 title: Editar propriedades do Dispositivo Virtual Android
 description: Este artigo explica como usar o Android Device Manager para editar as propriedades de perfil de um dispositivo virtual Android.
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/30/2018
-ms.openlocfilehash: 75ac85c67825e5db1b663d00f10eee6d093bfc1f
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 9007157cfd96b82a5781b3bdc3ffb4fe63f4e422
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733236"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119612"
 ---
 # <a name="editing-android-virtual-device-properties"></a>Editar propriedades do Dispositivo Virtual Android
 
 _Este artigo explica como usar o Android Device Manager para editar as propriedades de perfil de um dispositivo virtual Android._
 
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="android-device-manager-on-windows"></a>Android Device Manager no Windows
 
 O **Android Device Manager** é compatível com a edição de propriedades de perfis individuais de dispositivos virtuais Android. As telas **Novo Dispositivo** e **Editar Dispositivo** listam as propriedades do dispositivo virtual na primeira coluna, com os valores correspondentes de cada propriedade na segunda coluna (como mostrado neste exemplo): 
 
@@ -41,8 +43,10 @@ Ao selecionar uma propriedade, uma descrição detalhada é exibida à direita. 
 
     ![Alterar uma propriedade de inteiro](device-properties-images/win/03-integer-value.png)
 
+::: zone-end
+::: zone pivot="macos"
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+## <a name="android-device-manager-on-macos"></a>Android Device Manager no macOS
 
 O **Android Device Manager** é compatível com a edição de propriedades de perfis individuais de dispositivos virtuais Android. As telas **Novo Dispositivo** e **Editar Dispositivo** listam as propriedades do dispositivo virtual na primeira coluna, com os valores correspondentes de cada propriedade na segunda coluna (como mostrado neste exemplo): 
 
@@ -64,7 +68,7 @@ Ao selecionar uma propriedade, uma descrição detalhada é exibida à direita. 
 
     ![Alterar uma propriedade de inteiro](device-properties-images/mac/03-integer-value.png)
 
------
+::: zone-end
 
 A tabela a seguir mostra uma explicação detalhada das propriedades listadas nas telas **Novo Dispositivo** e **Editor de Dispositivos**:
 

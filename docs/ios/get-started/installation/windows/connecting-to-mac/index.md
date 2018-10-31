@@ -4,15 +4,15 @@ description: Este guia descreve como usar o Emparelhar com Mac para conectar o V
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: c4e28c1f3e058977d6f9072b70f17717a2b27585
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d55760f1fdd6912b973cc1e7a65415a0f2c6eb47
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786071"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104083"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com Mac para o desenvolvimento do Xamarin.iOS
 
@@ -246,6 +246,6 @@ Este artigo descreveu como usar o Emparelhar com Mac para conectar o Visual Stud
 - [Solução de problemas de conexão](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
 - [Agente de build do Xamarin Mac – Palestra rápida da Xamarin University](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introdução ao Xamarin.iOS para Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
-- [Simulador remoto de iOS para Windows](~/tools/ios-simulator.md)
+- [Simulador remoto de iOS para Windows](~/tools/ios-simulator/index.md)
 - [Implantação sem fio](~/ios/deploy-test/wireless-deployment.md)
 

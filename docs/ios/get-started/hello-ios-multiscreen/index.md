@@ -5,25 +5,25 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: 573ab05c066c7ecd064942ba502634c97224d1d7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 0e3a37364b5715650fc893ec4549749b0788087a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119768"
 ---
 # <a name="hello-ios-multiscreen"></a>Multitela Hello, iOS
 
-##  <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Parte 1: início rápido](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
+## <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Parte 1: início rápido](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
 
-Na primeira parte deste guia, adicionaremos uma segunda tela ao aplicativo Phoneword para controlar o histórico de números chamados usando o aplicativo.
+A primeira parte deste guia adiciona uma segunda tela ao aplicativo de exemplo Phoneword para controlar o histórico de números inseridos.
 
-##  <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Parte 2: Aprofundamento](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
+## <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Parte 2: Aprofundamento](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
-Na segunda parte deste documento, vamos examinar o que criamos e discutir a arquitetura, navegação e outros novos conceitos de iOS que ocorrem ao longo do caminho.
+A segunda parte deste documento explica o que foi criado e discute a arquitetura, navegação e outros novos conceitos de iOS encontrados ao longo do caminho.
 
 ## <a name="related-links"></a>Links relacionados
 

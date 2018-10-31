@@ -4,15 +4,15 @@ description: Este guia descreve as etapas para instalar o Xamarin.Android para V
 ms.prod: xamarin
 ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 1eb8d4ec9ad60f0f9e81676920df4d950a875088
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: c208bae61f425ccdb69e0543c7686891a7add358
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113177"
 ---
 # <a name="windows-installation"></a>Instalação do Windows
 
@@ -80,13 +80,13 @@ Emular um dispositivo Android em um computador envolve os seguintes componentes:
 
 É possível obter uma melhoria significativa de desempenho ao desenvolver em computadores baseados em x86 usando imagens especiais de emulador otimizadas para a arquitetura x86 e uma das duas tecnologias de virtualização abaixo:
 
-1. Hyper-V do Microsoft &ndash; Disponível em computadores que executam a Atualização de abril do Windows 10.
-2. HAXM (Hardware Accelerated Execution Manager) da Intel &ndash; Disponível em computadores x86 que executam o OS X, o macOS ou versões antigas do Windows.
+1. Hyper-V do Microsoft &ndash; Disponível em computadores que executam a Atualização de abril de 2018 do Windows 10 ou versões posteriores.
+2. HAXM (Hardware Accelerated Execution Manager) da Intel &ndash; Disponível em computadores x86 que executam OS X, macOS ou versões antigas do Windows.
 
 Para obter mais informações sobre o Android Emulator, o Hyper-V e o HAXM, consulte o guia [Aceleração de hardware para desempenho do emulador](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
 > [!NOTE]
-> Em versões anteriores do Windows, o HAXM não é compatível com o Hyper-V. Nesse cenário, é necessário [desabilitar o Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) ou usar as imagens de emulador mais lentas que não têm as otimizações para x86.
+> Em versões do Windows anteriores à Atualização de abril de 2018 do Windows 10, o HAXM não é compatível com o Hyper-V. Nesse cenário, é necessário [desabilitar o Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) ou usar as imagens de emulador mais lentas que não têm as otimizações para x86.
 
 
 <a name="device" />

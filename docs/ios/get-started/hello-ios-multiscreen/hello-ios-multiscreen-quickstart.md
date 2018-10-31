@@ -1,189 +1,170 @@
 ---
 title: Olá, iOS Multitela – Guia de Início Rápido
 description: Este documento demonstra como expandir o aplicativo de exemplo Phoneword para adicionar uma segunda tela, descrevendo o padrão modelo-exibição-controlador, a navegação do iOS e outros conceitos de desenvolvimento fundamentais do iOS ao longo da leitura.
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: 469032dc7caa46c6a89b350dc37bc9a93366066a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: e9ec7bc9186193c8a87bd1ddfabd3e72153d7e81
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103316"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Olá, iOS Multitela – Guia de Início Rápido
 
 Esta parte do passo a passo adicionará uma segunda tela ao aplicativo Phoneword que exibirá um histórico dos números de telefone chamados com o aplicativo. O aplicativo final terá uma segunda tela exibindo o histórico de chamadas, como ilustrado pela seguinte captura de tela:
 
- [![](hello-ios-multiscreen-quickstart-images/00.png "O aplicativo final terá uma segunda tela que exibirá o histórico de chamadas, conforme ilustrado por esta captura de tela")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
+[![](hello-ios-multiscreen-quickstart-images/00.png "O aplicativo final terá uma segunda tela que exibirá o histórico de chamadas, conforme ilustrado por esta captura de tela")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
 O [Aprofundamento relacionado](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md) examinará o aplicativo compilado e discutirá a arquitetura, a navegação e outros novos conceitos de iOS que encontrarmos ao longo do caminho.
-
- <a name="Requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
 Esta guia retoma no ponto em que o documento Hello, iOS parou e exige a conclusão do [Início rápido do Hello, iOS](~/ios/get-started/hello-ios/index.md). A versão completa do aplicativo Phoneword pode ser baixada do [exemplo Hello, iOS](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone pivot="macos"
 
-## <a name="walkthrough"></a>Passo a passo
+## <a name="walkthrough-on-macos"></a>Passo a passo no macOS
 
 Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplicativo **Phoneword**.
-
 
 1. Abra o aplicativo **Phoneword** no Visual Studio para Mac. Se necessário, o aplicativo concluído Phoneword do guia de [Passo a passo do Hello, iOS](~/ios/get-started/hello-ios/index.md) pode ser baixado [aqui](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
 
-
 2. Abra o arquivo **Main.storyboard** do **Painel de Solução**:
 
-  ![](hello-ios-multiscreen-quickstart-images/02new.png "O Main.storyboard no Designer de iOS")
+    ![](hello-ios-multiscreen-quickstart-images/02new.png "O Main.storyboard no Designer de iOS")
 
+3. Arraste um **controlador de navegação** da **Caixa de Ferramentas** para a superfície de design (talvez seja necessário reduzir o zoom para encaixar tudo na superfície de design!):
 
-3. Arraste um **Controlador de Navegação** da **Caixa de Ferramentas** para a superfície de design (talvez seja necessário reduzir o zoom para encaixar tudo na superfície de design!):
+    ![](hello-ios-multiscreen-quickstart-images/03new.png "Arraste um controlador de navegação da Caixa de Ferramentas para a superfície de design")
 
-  ![](hello-ios-multiscreen-quickstart-images/03new.png "Arraste um Controlador de Navegação da Caixa de Ferramentas para a superfície de design")
+4. Arraste o **segue sem origem** (a seta cinza à esquerda do controlador de exibição simples) para o **controlador de navegação** para alterar o ponto de partida do aplicativo:
 
+    ![](hello-ios-multiscreen-quickstart-images/04new.png "Arraste o Segue sem origem para o controlador de navegação para alterar o ponto inicial do aplicativo")
 
-4. Arraste o **Segue Sourceless** (a seta cinza à esquerda do Controlador de Exibição simples) para o **Controlador de Navegação** para alterar o ponto de partida do aplicativo:
+5. Selecione o **controlador de exibição de raiz** existente clicando na barra inferior e pressione **Excluir** para removê-lo da superfície de design.
+Em seguida, mova a cena **Phoneword** ao lado do **controlador de navegação**:
 
-  ![](hello-ios-multiscreen-quickstart-images/04new.png "Arraste o Segue sem origem para o Controlador de Navegação para alterar o ponto inicial do aplicativo")
+    ![](hello-ios-multiscreen-quickstart-images/05new.png "Mova a cena do Phoneword do lado do controlador de navegação")
 
+6. Defina o **ViewController** como o **Controlador de exibição raiz** do controlador de navegação. Pressione a tecla **Ctrl** e clique dentro do **controlador de navegação**. Deve aparecer uma linha azul. Em seguida, ainda mantendo pressionada a tecla **Ctrl**, arraste do **controlador de navegação** para a cena **Phoneword** e solte. Isso se chama _arrastar com Ctrl_:
 
-5. Selecione o **Controlador de Exibição de Raiz** existente clicando na barra inferior e pressionando **Excluir** para removê-lo da superfície de design.
-Em seguida, mova a Cena **Phoneword** ao lado do **Controlador de Navegação**:
-
-  ![](hello-ios-multiscreen-quickstart-images/05new.png "Mova a Cena do Phoneword do lado do Controlador de Navegação")
-
-
-6. Defina o **ViewController** como o **Controlador de Exibição de Raiz** do Controlador de Navegação. Pressione a tecla **Ctrl** e clique dentro do **Controlador de Navegação**. Deve aparecer uma linha azul. Em seguida, ainda mantendo pressionada a tecla **Ctrl**, arraste do **Controlador de Navegação** para a cena **Phoneword** e solte. Isso se chama _arrastar com Ctrl_:
-
- ![](hello-ios-multiscreen-quickstart-images/06.png "Arraste do Controlador de Navegação até a Cena do Phoneword e solte")
-
+    ![](hello-ios-multiscreen-quickstart-images/06.png "Arraste do controlador de navegação até a cena do Phoneword e solte")
 
 7. No pop-over, vamos definir as relações como **Raiz**:
 
-  ![](hello-ios-multiscreen-quickstart-images/07new.png "Configuração da relação como raiz")
+    ![](hello-ios-multiscreen-quickstart-images/07new.png "Configuração da relação como raiz")
 
-  Agora o **ViewController** é o **Controlador de Exibição Raiz dos Controladores de Navegação:**
+    Agora, o **ViewController** é o **controlador de exibição raiz do controlador de navegação:**
 
-  ![](hello-ios-multiscreen-quickstart-images/08.png "Agora o ViewController é o Controlador de Exibição Raiz dos Controladores de Navegação")
-
+    ![](hello-ios-multiscreen-quickstart-images/08.png "Agora, o ViewController é o controlador de exibição raiz do controlador de navegação")
 
 8. Na tela do **Phoneword**, clique duas vezes na barra de **Título** e altere o **Título** para **Phoneword**:
 
-  ![](hello-ios-multiscreen-quickstart-images/09.png "Altere o título para 'Phoneword'")
-
+    ![](hello-ios-multiscreen-quickstart-images/09.png "Altere o título para 'Phoneword'")
 
 9. Arraste um **botão** da **Caixa de Ferramentas** e coloque-o sob o **Botão Chamar**. Arraste as alças para deixar o novo **Botão** com a mesma largura do **Botão Chamar**:
 
-  ![](hello-ios-multiscreen-quickstart-images/10new.png "Deixe o novo botão com a mesma largura que o botão Chamar")
-
+    ![](hello-ios-multiscreen-quickstart-images/10new.png "Deixe o novo botão com a mesma largura que o botão Chamar")
 
 10. No **Painel de Propriedades**, altere o **Nome** do botão para **CallHistoryButton** e altere o **Título** para **Histórico de Chamadas**:
 
-  ![](hello-ios-multiscreen-quickstart-images/11new.png "Altere o Nome do botão para CallHistoryButton e altere o título para Histórico de chamadas")
+    ![](hello-ios-multiscreen-quickstart-images/11new.png "Altere o Nome do botão para CallHistoryButton e altere o título para Histórico de chamadas")
 
+11. Crie a tela **Histórico de Chamadas**. Na **Caixa de Ferramentas**, arraste um **controlador de exibição de tabela** para a superfície de design:
 
-11. Crie a tela **Histórico de Chamadas**. Na **Caixa de Ferramentas**, arraste um **Controlador de Exibição de Tabela** sobre a superfície de design:
+   ![](hello-ios-multiscreen-quickstart-images/12new.png "Arraste o controlador de exibição de tabela para a superfície de design")
 
- ![](hello-ios-multiscreen-quickstart-images/12new.png "Arraste o Controlador de Exibição de Tabela para a superfície de design")
+12. Em seguida, selecione o **controlador de exibição de tabela** clicando na barra preta na parte inferior da cena. No **Painel de Propriedades**, altere a classe do **controlador de exibição de tabela** para `CallHistoryController` e pressione **Enter**:
 
+    ![](hello-ios-multiscreen-quickstart-images/13new.png "Altere a classe do controlador de exibição de tabela para CallHistoryController")
 
-12. Em seguida, selecione o **Controlador de Exibição de Tabela** clicando na barra preta na parte inferior da cena. No **Painel de Propriedades**, altere a classe **Controlador de Exibição de Tabela** para `CallHistoryController` e pressione **Enter**:
+    O Designer do iOS gerará uma classe de suporte personalizada chamada `CallHistoryController` para gerenciar a hierarquia de exibição de conteúdo dessa tela. O arquivo **CallHistoryController.cs** aparecerá no **Painel de Solução**:
 
-  ![](hello-ios-multiscreen-quickstart-images/13new.png "Altere a classe dos Controladores de Exibição de Tabela para CallHistoryController")
-
-  O Designer do iOS gerará uma classe de suporte personalizada chamada `CallHistoryController` para gerenciar a Hierarquia de Exibição de Conteúdo dessa tela.
-  O arquivo **CallHistoryController.cs** aparecerá no **Painel de Solução**:
-
-  ![](hello-ios-multiscreen-quickstart-images/14new.png "O arquivo CallHistoryController.cs no Painel de Soluções")
-
+    ![](hello-ios-multiscreen-quickstart-images/14new.png "O arquivo CallHistoryController.cs no Painel de Soluções")
 
 13. Clique duas vezes no arquivo **CallHistoryController.cs** para abri-lo e substitua os conteúdos pelo seguinte código:
+    
+    ```csharp
+    using System;
+    using Foundation;
+    using UIKit;
+    using System.Collections.Generic;
 
-  ```csharp
-  using System;
-  using Foundation;
-  using UIKit;
-  using System.Collections.Generic;
+    namespace Phoneword_iOS
+    {
+        public partial class CallHistoryController : UITableViewController
+        {
+            public List<string> PhoneNumbers { get; set; }
 
-  namespace Phoneword_iOS
-  {
-      public partial class CallHistoryController : UITableViewController
-      {
-          public List<string> PhoneNumbers { get; set; }
+            static NSString callHistoryCellId = new NSString ("CallHistoryCell");
 
-          static NSString callHistoryCellId = new NSString ("CallHistoryCell");
+            public CallHistoryController (IntPtr handle) : base (handle)
+            {
+                TableView.RegisterClassForCellReuse (typeof(UITableViewCell), callHistoryCellId);
+                TableView.Source = new CallHistoryDataSource (this);
+                PhoneNumbers = new List<string> ();
+            }
 
-          public CallHistoryController (IntPtr handle) : base (handle)
-          {
-              TableView.RegisterClassForCellReuse (typeof(UITableViewCell), callHistoryCellId);
-              TableView.Source = new CallHistoryDataSource (this);
-              PhoneNumbers = new List<string> ();
-          }
+            class CallHistoryDataSource : UITableViewSource
+            {
+                CallHistoryController controller;
 
-          class CallHistoryDataSource : UITableViewSource
-          {
-              CallHistoryController controller;
+                public CallHistoryDataSource (CallHistoryController controller)
+                {
+                    this.controller = controller;
+                }
 
-              public CallHistoryDataSource (CallHistoryController controller)
-              {
-                  this.controller = controller;
-              }
+                public override nint RowsInSection (UITableView tableView, nint section)
+                {
+                    return controller.PhoneNumbers.Count;
+                }
 
-              public override nint RowsInSection (UITableView tableView, nint section)
-              {
-                  return controller.PhoneNumbers.Count;
-              }
+                public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+                {
+                    var cell = tableView.DequeueReusableCell (CallHistoryController.callHistoryCellId);
 
-              public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
-              {
-                  var cell = tableView.DequeueReusableCell (CallHistoryController.callHistoryCellId);
+                    int row = indexPath.Row;
+                    cell.TextLabel.Text = controller.PhoneNumbers [row];
+                    return cell;
+                }
+            }
+        }
+    }
+    ```
 
-                  int row = indexPath.Row;
-                  cell.TextLabel.Text = controller.PhoneNumbers [row];
-                  return cell;
-              }
-          }
-      }
-  }
-  ```
+    Salve o aplicativo (**⌘ + s**) e compile-o (**⌘ + b**) para garantir que não haja erros.
 
-  Salve o aplicativo (**⌘ + s**) e compile-o (**⌘ + b**) para garantir que não haja erros.
+14. Crie um _segue_ (transição) entre uma cena do **Phoneword** e a cena do **Histórico de Chamadas**.
+  Na **Cena do Phoneword**, selecione o **Botão Histórico de Chamadas** e pressione Ctrl e arraste do **Botão** para a cena **Histórico de Chamadas**:
 
+    ![](hello-ios-multiscreen-quickstart-images/15.png "Pressione Ctrl e arraste do botão até a cena de Histórico de Chamadas")
 
-14. Crie um _Segue_ (transição) entre uma Cena do **Phoneword** e a Cena do **Histórico de Chamadas**.
-  Na **Cena do Phoneword**, selecione o **Botão Histórico de Chamadas** e pressione Ctrl-arrastar do **Botão** para a Cena **Histórico de Chamadas**:
+    No pop-over **Segue de Ação**, selecione **Mostrar**
 
-  ![](hello-ios-multiscreen-quickstart-images/15.png "Pressione Ctrl e arraste do botão até Cena de Histórico de Chamadas")
+    O Designer do iOS adicionará um Segue entre as duas cenas:
 
-  No pop-over **Segue de Ação**, selecione **Mostrar**
+    ![](hello-ios-multiscreen-quickstart-images/17new.png "O Segue entre as duas cenas")
 
-  O Designer do iOS adicionará um Segue entre duas Cenas:
+15. Adicione um **Título** ao **controlador de exibição de tabela** selecionando a barra preta na parte inferior da cena e alterando o **Título do controlador de exibição** para **Histórico de Chamadas** no **Painel de Propriedades**:
 
-  ![](hello-ios-multiscreen-quickstart-images/17new.png "O Segue entre as duas cenas")
+    ![](hello-ios-multiscreen-quickstart-images/18new.png "Altere o título do controlador de exibição para Histórico de Chamadas no Painel de Propriedades")
 
+16. Quando o aplicativo for executado, o **Botão Histórico de Chamadas** abrirá a tela **Histórico de Chamadas**, mas a exibição de tabela estará vazia porque não há nenhum código para controlar e exibir os números de telefone.
 
-15. Adicione um **Título** ao **Controlador de Exibição de Tabela** selecionando a barra preta na parte inferior da cena e alterando o **Título do Controlador de Exibição** para **Histórico de Chamadas** no **Painel de Propriedades**:
+    Esse aplicativo armazenará os números de telefone como uma lista de cadeias de caracteres.
 
-  ![](hello-ios-multiscreen-quickstart-images/18new.png "Altere o Título do Controlador de Exibição para Histórico de Chamadas no Painel de Propriedades")
+    Adicione uma política `using` para `System.Collections.Generic` na parte superior do **ViewController**:
 
-16. Quando o aplicativo é executado, o **Botão Histórico de Chamadas** abrirá a tela **Histórico de Chamadas**, mas a Exibição de Tabela estará vazia porque não há nenhum código para controlar e exibir os números de telefone.
-
-  Esse aplicativo armazenará os números de telefone como uma lista de cadeias de caracteres.
-
-  Adicione uma política `using` para `System.Collections.Generic` na parte superior do **ViewController**:
-
-  ```csharp
-  using System.Collections.Generic;
-  ```
-
-
+    ```csharp
+    using System.Collections.Generic;
+    ```
 
 17. Modifique a classe `ViewController` com o código a seguir:
 
@@ -256,12 +237,12 @@ Em seguida, mova a Cena **Phoneword** ao lado do **Controlador de Navegação**:
         {
           base.PrepareForSegue(segue, sender);
 
-          // set the View Controller that’s powering the screen we’re
+          // set the view controller that’s powering the screen we’re
           // transitioning to
 
           var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
 
-          //set the Table View Controller’s list of phone numbers to the
+          //set the table view controller’s list of phone numbers to the
           // list of dialed phone numbers
 
           if (callHistoryContoller != null)
@@ -273,172 +254,159 @@ Em seguida, mova a Cena **Phoneword** ao lado do **Controlador de Navegação**:
     }
     ```
 
+    Há alguns pontos a observar aqui:
 
-Há alguns pontos a observar aqui
-  * A variável `translatedNumber` foi movida do método `ViewDidLoad` para uma _variável no nível de classe_.
-  * O código **CallButton** foi modificado para adicionar números discados à lista de números de telefone chamando `PhoneNumbers.Add(translatedNumber)`
-  * O método `PrepareForSegue` foi adicionado
+    - A variável `translatedNumber` foi movida do método `ViewDidLoad` para uma _variável no nível de classe_.
+    - O código **CallButton** foi modificado para adicionar números discados à lista de números de telefone chamando `PhoneNumbers.Add(translatedNumber)`.
+    - O método `PrepareForSegue` foi adicionado.
 
-  Salve e compile o aplicativo para garantir que não haja erros.
+    Salve e compile o aplicativo para garantir que não haja erros.
 
 20. Pressione o botão **Iniciar** para inicializar o aplicativo dentro do **Simulador de iOS**:
 
-  ![](hello-ios-multiscreen-quickstart-images/19.png "Pressione o botão Iniciar para inicializar o aplicativo dentro do Simulador de iOS")
-
+    ![](hello-ios-multiscreen-quickstart-images/19.png "Pressione o botão Iniciar para inicializar o aplicativo dentro do Simulador de iOS")
 
 Parabéns por concluir seu primeiro aplicativo Xamarin.iOS multitela!
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone-end
+::: zone pivot="windows"
 
-## <a name="walkthrough"></a>Passo a passo
+## <a name="walkthrough-on-windows"></a>Passo a passo no Windows
 
 Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplicativo **Phoneword**.
 
-
-1. Abra o aplicativo **Phoneword** no Visual Studio. Se necessário, baixe o [aplicativo Phoneword completo](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) do guia [passo a passo do Hello, iOS](~/ios/get-started/hello-ios/index.md). Lembre-se de que é necessário conectar-se a um [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar o Designer do iOS e o Simulador de iOS.
-
+1. Abra o aplicativo **Phoneword** no Visual Studio. Se necessário, baixe o [aplicativo Phoneword completo](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) do guia [Passo a passo do Hello, iOS](~/ios/get-started/hello-ios/index.md). Lembre-se de que é necessário conectar-se a um [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar o Designer do iOS e o Simulador de iOS.
 
 2. Comece editando a interface do usuário. Abra o arquivo **Main.Storyboard** no **Gerenciador de Soluções**, certificando-se de que **Exibir como** esteja definido como _iPhone 6_:
 
-  ![](hello-ios-multiscreen-quickstart-images/image1.png "O Main.storyboard no Designer de iOS")
+    ![](hello-ios-multiscreen-quickstart-images/image1.png "O Main.storyboard no Designer de iOS")
 
+3. Arraste um **controlador de navegação** da **Caixa de Ferramentas** para a superfície de design:
 
-3. Arraste um **Controlador de Navegação** da **Caixa de Ferramentas** para a superfície de design:
+    ![](hello-ios-multiscreen-quickstart-images/image2.png "Arraste um controlador de navegação da Caixa de Ferramentas para a superfície de design")
 
-  ![](hello-ios-multiscreen-quickstart-images/image2.png "Arraste um Controlador de Navegação da Caixa de Ferramentas para a superfície de design")
+4. Arraste o **Segue sem origem** (a seta cinza à esquerda da cena **Phoneword**) da cena **Phoneword** para o **controlador de navegação** para alterar o ponto de partida do aplicativo:
 
+    ![](hello-ios-multiscreen-quickstart-images/image3.png "Arraste o Segue sem origem para o controlador de navegação para alterar o ponto inicial do aplicativo")
 
-4. Arraste o **Segue Sourceless** (a seta cinza à esquerda da cena **Phoneword**) da cena **Phoneword** para o **Controlador de Navegação** para alterar o ponto de partida do aplicativo:
+5. Selecione o **Controlador de exibição raiz** clicando na barra preta e pressione **Excluir** para removê-lo da superfície de design.
+  Em seguida, mova a cena **Phoneword** ao lado do **controlador de navegação**:
 
-  ![](hello-ios-multiscreen-quickstart-images/image3.png "Arraste o Segue sem origem para o Controlador de Navegação para alterar o ponto inicial do aplicativo")
+    ![](hello-ios-multiscreen-quickstart-images/image4.png "Mova a cena do Phoneword do lado do controlador de navegação")
 
+6. Defina o **ViewController** como o controlador de exibição raiz do controlador de navegação. Pressione a tecla **Ctrl** e clique dentro do **Controlador de Navegação**. Deve aparecer uma linha azul. Em seguida, ainda mantendo pressionada a tecla **Ctrl**, arraste do **Controlador de Navegação** para a cena **Phoneword** e solte. Isso se chama _arrastar com Ctrl_:
 
-5. Selecione o **Controlador de Exibição de Raiz** clicando na barra preta e pressionando **Excluir** para removê-lo da superfície de design.
-  Em seguida, mova a Cena **Phoneword** ao lado do **Controlador de Navegação**:
-
-  ![](hello-ios-multiscreen-quickstart-images/image4.png "Mova a Cena do Phoneword do lado do Controlador de Navegação")
-
-
-6. Defina o **ViewController** como o `Root View Controller` do Controlador de Navegação. Pressione a tecla **Ctrl** e clique dentro do **Controlador de Navegação**. Deve aparecer uma linha azul. Em seguida, ainda mantendo pressionada a tecla **Ctrl**, arraste do **Controlador de Navegação** para a cena **Phoneword** e solte. Isso se chama _arrastar com Ctrl_:
-
-  ![](hello-ios-multiscreen-quickstart-images/image5.png "Arraste do Controlador de Navegação até a Cena do Phoneword e solte")
-
+    ![](hello-ios-multiscreen-quickstart-images/image5.png "Arraste do controlador de navegação até a cena do Phoneword e solte")
 
 7. No pop-over, vamos definir as relações como **Raiz**:
 
-  ![](hello-ios-multiscreen-quickstart-images/image6.png "Defina a relação como raiz")
+    ![](hello-ios-multiscreen-quickstart-images/image6.png "Defina a relação como raiz")
 
-  O **ViewController** agora é nosso **Controlador de Exibição de Raiz do Controlador de Navegação.**
-
+    O **ViewController** agora é nosso **controlador de exibição raiz do controlador de navegação.**
 
 8. Na tela do **Phoneword**, clique duas vezes na barra de **Título** e altere o **Título** para **Phoneword**:
 
-  ![](hello-ios-multiscreen-quickstart-images/image7.png "Altere o título para Phoneword")
-
+    ![](hello-ios-multiscreen-quickstart-images/image7.png "Altere o título para Phoneword")
 
 9. Arraste um **botão** da **Caixa de Ferramentas** e coloque-o sob o **Botão Chamar**. Arraste as alças para deixar o novo **Botão** com a mesma largura do **Botão Chamar**:
 
-  ![](hello-ios-multiscreen-quickstart-images/image8.png "Deixe o novo botão com a mesma largura que o botão Chamar")
-
+    ![](hello-ios-multiscreen-quickstart-images/image8.png "Deixe o novo botão com a mesma largura que o botão Chamar")
 
 10. No **Gerenciador de Propriedades**, altere o **Nome** do **Botão** para `CallHistoryButton` e altere o **Título** para **Histórico de Chamadas**:
 
-  ![](hello-ios-multiscreen-quickstart-images/image9.png "Altere o Nome do botão para 'CallHistoryButton' e o título para 'Histórico de chamadas'")
+    ![](hello-ios-multiscreen-quickstart-images/image9.png "Altere o Nome do botão para 'CallHistoryButton' e o título para 'Histórico de chamadas'")
 
+11. Crie a tela **Histórico de Chamadas**. Na **Caixa de Ferramentas**, arraste um **controlador de exibição de tabela** para a superfície de design:
 
-11. Crie a tela **Histórico de Chamadas**. Na **Caixa de Ferramentas**, arraste um **Controlador de Exibição de Tabela** sobre a superfície de design:
+    ![](hello-ios-multiscreen-quickstart-images/image10.png "Arraste o controlador de exibição de tabela para a superfície de design")
 
-  ![](hello-ios-multiscreen-quickstart-images/image10.png "Arraste o Controlador de Exibição de Tabela para a superfície de design")
+12. Selecione o **controlador de exibição de tabela** clicando na barra preta na parte inferior da cena. No **Gerenciador de Propriedades**, altere a classe **controlador de exibição de tabela** para `CallHistoryController` e pressione **Enter**:
 
+    ![](hello-ios-multiscreen-quickstart-images/image11.png "Altere a classe do controlador de exibição de tabela para CallHistoryController")
 
-12. Selecione o **Controlador de Exibição de Tabela** clicando na barra preta na parte inferior da Cena. No **Gerenciador de Propriedades**, altere a classe **Controlador de Exibição de Tabela** para `CallHistoryController` e pressione **Enter**:
+    O Designer do iOS gerará uma classe de suporte personalizada chamada `CallHistoryController` para gerenciar a hierarquia de exibição de conteúdo dessa tela. O arquivo **CallHistoryController.cs** aparecerá no **Gerenciador de Soluções**:
 
-  ![](hello-ios-multiscreen-quickstart-images/image11.png "Altere a classe dos Controladores de Exibição de Tabela para CallHistoryController")
-
-  O Designer do iOS gerará uma classe de suporte personalizada chamada `CallHistoryController` para gerenciar a Hierarquia de Exibição de Conteúdo dessa tela.
-  O arquivo **CallHistoryController.cs** aparecerá no **Gerenciador de Soluções**:
-
-  ![](hello-ios-multiscreen-quickstart-images/image12.png "O arquivo CallHistoryController.cs no Gerenciador de Soluções")
-
+    ![](hello-ios-multiscreen-quickstart-images/image12.png "O arquivo CallHistoryController.cs no Gerenciador de Soluções")
 
 13. Clique duas vezes no arquivo **CallHistoryController.cs** para abri-lo e substitua os conteúdos pelo seguinte código:
 
-        using System;
-        using Foundation;
-        using UIKit;
-        using System.Collections.Generic;
+    ```csharp
+    using System;
+    using Foundation;
+    using UIKit;
+    using System.Collections.Generic;
 
-        namespace Phoneword
+    namespace Phoneword
+    {
+        public partial class CallHistoryController : UITableViewController
         {
-            public partial class CallHistoryController : UITableViewController
+            public List<String> PhoneNumbers { get; set; }
+
+            static NSString callHistoryCellId = new NSString ("CallHistoryCell");
+
+            public CallHistoryController (IntPtr handle) : base (handle)
             {
-                public List<String> PhoneNumbers { get; set; }
+                TableView.RegisterClassForCellReuse (typeof(UITableViewCell), callHistoryCellId);
+                TableView.Source = new CallHistoryDataSource (this);
+                PhoneNumbers = new List<string> ();
+            }
 
-                static NSString callHistoryCellId = new NSString ("CallHistoryCell");
+            class CallHistoryDataSource : UITableViewSource
+            {
+                CallHistoryController controller;
 
-                public CallHistoryController (IntPtr handle) : base (handle)
+                public CallHistoryDataSource (CallHistoryController controller)
                 {
-                    TableView.RegisterClassForCellReuse (typeof(UITableViewCell), callHistoryCellId);
-                    TableView.Source = new CallHistoryDataSource (this);
-                    PhoneNumbers = new List<string> ();
+                    this.controller = controller;
                 }
 
-                class CallHistoryDataSource : UITableViewSource
+                // Returns the number of rows in each section of the table
+                public override nint RowsInSection (UITableView tableView, nint section)
                 {
-                    CallHistoryController controller;
+                    return controller.PhoneNumbers.Count;
+                }
 
-                    public CallHistoryDataSource (CallHistoryController controller)
-                    {
-                        this.controller = controller;
-                    }
+                public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+                {
+                    var cell = tableView.DequeueReusableCell (CallHistoryController.callHistoryCellId);
 
-                    // Returns the number of rows in each section of the table
-                    public override nint RowsInSection (UITableView tableView, nint section)
-                    {
-                        return controller.PhoneNumbers.Count;
-                    }
-
-                    public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
-                    {
-                        var cell = tableView.DequeueReusableCell (CallHistoryController.callHistoryCellId);
-
-                        int row = indexPath.Row;
-                        cell.TextLabel.Text = controller.PhoneNumbers [row];
-                        return cell;
-                    }
+                    int row = indexPath.Row;
+                    cell.TextLabel.Text = controller.PhoneNumbers [row];
+                    return cell;
                 }
             }
         }
+    }
+    ```
 
-  Salve o aplicativo e compile-o para garantir que não haja erros. Não tem problema ignorar os avisos de build por enquanto.
+    Salve o aplicativo e compile-o para garantir que não haja erros. Não tem problema ignorar os avisos de build por enquanto.
 
+14. Crie um _segue_ (transição) entre uma cena do **Phoneword** e a cena do **Histórico de Chamadas**.
+  Na **Cena do Phoneword**, selecione o **Botão Histórico de Chamadas** e pressione **Ctrl e arraste** do **Botão** para a cena **Histórico de Chamadas**:
 
-14. Crie um _Segue_ (transição) entre uma Cena do **Phoneword** e a Cena do **Histórico de Chamadas**.
-  Na **Cena do Phoneword**, selecione o **Botão Histórico de Chamadas** e pressione **Ctrl-arrastar** do **Botão** para a Cena **Histórico de Chamadas**:
+    ![](hello-ios-multiscreen-quickstart-images/image13.png "Pressione Ctrl e arraste do botão até a cena de Histórico de Chamadas")
 
-  ![](hello-ios-multiscreen-quickstart-images/image13.png "Pressione Ctrl e arraste do botão até Cena de Histórico de Chamadas")
+    No pop-over **Segue de Ação**, selecione **Mostrar**:
 
-  No pop-over **Segue de Ação**, selecione **Mostrar**:
+    ![](hello-ios-multiscreen-quickstart-images/image14.png "Selecione Mostrar com o tipo de segue")
 
-  ![](hello-ios-multiscreen-quickstart-images/image14.png "Selecione Mostrar com o tipo de segue")
+    O Designer do iOS adicionará um segue entre as duas cenas:
 
-  O Designer do iOS adicionará um Segue entre duas Cenas:
+    ![](hello-ios-multiscreen-quickstart-images/image15.png "O Segue entre as duas cenas")
 
-  ![](hello-ios-multiscreen-quickstart-images/image15.png "O Segue entre as duas cenas")
+15. Adicione um **Título** ao **controlador de exibição de tabela** selecionando a barra preta na parte inferior da cena e alterando o **controlador de exibição > Título** para **Histórico de Chamadas** no **Gerenciador de Propriedades**:
 
+    ![](hello-ios-multiscreen-quickstart-images/image16.png "Altere o título do controlador de exibição para Histórico de Chamadas")
 
-15. Adicione um **Título** ao **Controlador de Exibição de Tabela** selecionando a barra preta na parte inferior da cena e alterando o **Controlador de Exibição > Título** para **Histórico de Chamadas** no **Gerenciador de Propriedades**:
+16. Quando o aplicativo for executado, o **Botão Histórico de Chamadas** abrirá a tela **Histórico de Chamadas**, mas a exibição de tabela estará vazia porque não há nenhum código para controlar e exibir os números de telefone.
 
-  ![](hello-ios-multiscreen-quickstart-images/image16.png "Altere o Título do Controlador de Exibição para Histórico de Chamadas")
+    Esse aplicativo armazenará os números de telefone como uma lista de cadeias de caracteres.
 
+    Adicione uma política `using` para `System.Collections.Generic` na parte superior do **ViewController**:
 
-16. Quando o aplicativo é executado, o **Botão Histórico de Chamadas** abrirá a tela **Histórico de Chamadas**, mas a Exibição de Tabela estará vazia porque não há nenhum código para controlar e exibir os números de telefone.
-
-  Esse aplicativo armazenará os números de telefone como uma lista de cadeias de caracteres.
-
-  Adicione uma política `using` para `System.Collections.Generic` na parte superior do **ViewController**:
-
-        using System.Collections.Generic;
+    ```csharp
+    using System.Collections.Generic;
+    ```
 
 17. Modifique a classe `ViewController` com o código a seguir:
 
@@ -511,12 +479,12 @@ Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplic
         {
           base.PrepareForSegue(segue, sender);
 
-          // set the View Controller that’s powering the screen we’re
+          // set the view controller that’s powering the screen we’re
           // transitioning to
 
           var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
 
-          //set the Table View Controller’s list of phone numbers to the
+          //set the table view controller’s list of phone numbers to the
           // list of dialed phone numbers
 
           if (callHistoryContoller != null)
@@ -528,28 +496,24 @@ Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplic
     }
     ```
 
-Há alguns pontos a observar aqui
-  * A variável `translatedNumber` foi movida do método `ViewDidLoad` para uma _variável no nível de classe_.
-  * O código **CallButton** foi modificado para adicionar números discados à lista de números de telefone chamando `PhoneNumbers.Add(translatedNumber)`
-  * O método `PrepareForSegue` foi adicionado
+    Há alguns pontos a observar aqui
+    - A variável `translatedNumber` foi movida do método `ViewDidLoad` para uma _variável no nível de classe_.
+    - O código **CallButton** foi modificado para adicionar números discados à lista de números de telefone chamando `PhoneNumbers.Add(translatedNumber)`
+    - O método `PrepareForSegue` foi adicionado
 
-  Salve e compile o aplicativo para garantir que não haja erros.
+    Salve e compile o aplicativo para garantir que não haja erros.
 
-  Salve e compile o aplicativo para garantir que não haja erros.
-
+    Salve e compile o aplicativo para garantir que não haja erros.
 
 20. Pressione o botão **Iniciar** para inicializar o aplicativo dentro do **Simulador de iOS**:
 
-  ![](hello-ios-multiscreen-quickstart-images/19.png "A primeira tela do aplicativo de exemplo")
-
+    ![](hello-ios-multiscreen-quickstart-images/19.png "A primeira tela do aplicativo de exemplo")
 
 Parabéns por concluir seu primeiro aplicativo Xamarin.iOS multitela!
 
+::: zone-end
 
------
-
-O aplicativo agora pode lidar com navegação usando tanto Segues de Storyboard quanto código. Agora é hora de examinar as ferramentas e as habilidades que acabamos de aprender no [Aprofundamento na multitela do Hello, iOS](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md).
-
+Agora, o aplicativo pode lidar com navegação usando tanto segues de storyboard quanto código. Agora é hora de examinar as ferramentas e as habilidades que acabamos de aprender no [Aprofundamento na multitela do Hello, iOS](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md).
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -4,17 +4,17 @@ description: 'Este documento fornece links para a documentação relevante para 
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: 1bef756d89a92d082bd5ee29e18047bc4bed2498
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: ae1ac9b40a0e6a62076a6143e64fa8beb82df6c5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792522"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107307"
 ---
-# <a name="xamarinmac--related-documentation"></a>Xamarin.Mac – documentação relacionada
+# <a name="xamarinmac-related-documentation"></a>Xamarin.Mac – documentação relacionada
 
 Além de seção Mac [developer.xamarin.com](~/mac/get-started/index.md) há três fontes excelentes de documentação que podem ser de ajuda com perguntas sobre o Xamarin.Mac:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: c897b1f5fbdf950e6858d7b73ebed60049f60e8e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120938"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabalhando com recursos no Xamarin.iOS
 
@@ -73,7 +73,7 @@ Esta seção explica como usar o provisionamento automático do Visual Studio ou
 
 ## <a name="using-the-ide"></a>Como usar o IDE
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Os recursos são adicionados ao **Entitlements.plist** no Visual Studio para Mac. Para adicionar funcionalidades, siga as etapas abaixo:
 
@@ -93,7 +93,7 @@ Os recursos são adicionados ao **Entitlements.plist** no Visual Studio para Mac
 
     ![Adicionar funcionalidades ao arquivo entitlements.plist](images/image18.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 As funcionalidades são adicionadas ao arquivo **Entitlements.plist**. Para adicionar funcionalidades no Visual Studio 2017, siga as etapas abaixo:
 
@@ -206,12 +206,12 @@ Quando uma capacidade tiver sido habilitada no lado do servidor, ainda haverá t
 
 A lista a seguir detalha alguns dos problemas mais comuns que podem criar obstáculos ao desenvolver um aplicativo com um serviço de aplicativo habilitado.
 
--   Verifique se a ID correta foi criada e registrada corretamente na seção **Certificados, IDs e Perfis** do Portal do Desenvolvedor da Apple.
--   Verifique se o serviço foi adicionado à ID do aplicativo (ou da extensão) e se o serviço está configurado para usar o grupo de aplicativos, a ID do comerciante ou o contêiner criado anteriormente em **Certificados, IDs e Perfis** do Portal do Desenvolvedor da Apple.
--   Verifique se os perfis de provisionamento e IDs do aplicativo foram instaladas e que **Info.plist** do aplicativo (no projeto Xamarin) está usando uma das IDs do aplicativo configuradas acima.
--   Verifique se o arquivo **Entitlements.plist** do aplicativo (no projeto Xamarin) tem o serviço correto habilitado.
+-   Verifique se a ID correta foi criada e registrada corretamente na seção **Certificados, IDs e Perfis** do Portal do Desenvolvedor da Apple.
+-   Verifique se o serviço foi adicionado à ID do aplicativo (ou da extensão) e se o serviço está configurado para usar o Grupo de Aplicativos, a ID do Comerciante ou o Contêiner criado anteriormente em **Certificados, IDs e Perfis** do Portal do Desenvolvedor da Apple.
+-   Verifique se os perfis de provisionamento e IDs do Aplicativo foram instaladas e se o **Info.plist** do Aplicativo (no Projeto Xamarin) está usando uma das IDs do aplicativo configuradas acima.
+-   Verifique se o arquivo **Entitlements.plist** do Aplicativo (no projeto Xamarin) tem o serviço correto habilitado.
 -   Verifique se as chaves de privacidade apropriadas estão definidas no info.plist
--   Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de depuração e do simulador do iOS.
+-   Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de Depuração e do Simulador do iOS.
 
 <a name="summary" />
 

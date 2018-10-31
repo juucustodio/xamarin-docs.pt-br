@@ -1,18 +1,19 @@
 ---
 title: Automatizando teste do Xamarin.Forms com o App Center
 description: O componente UITest do Xamarin pode ser usado com o Xamarin.Forms para gravar testes de interface do usuário a serem executados na nuvem em centenas de dispositivos.
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/31/2016
-ms.openlocfilehash: dc43d8b5623b83be16d437e30290bc8b059be4bb
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cd46aac653d6477f3fc8240e4f193ec1c4a7bb4c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35242941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122433"
 ---
 # <a name="automate-xamarinforms-testing-with-app-center"></a>Automatizar teste do Xamarin.Forms com o App Center
 
@@ -76,19 +77,20 @@ Xamarin.Calabash.Start();
 O assembly Calabash faz uso de APIs não públicas da Apple, o que fará com que os aplicativos sejam rejeitados pela App Store. No entanto, o vinculador Xamarin.iOS removerá o assembly Calabash da IPA final se ela não tiver sido referenciada de forma explícita do código.
 
 > [!NOTE]
->  Os builds da versão não têm a variável do compilador `ENABLE_TEST_CLOUD`, que fará com que o assembly Calabash seja removido do lote de aplicativo. No entanto, os builds da depuração têm a diretiva de compilador definida, impedindo que o vinculador remova o assembly.
+> Os builds da versão não têm a variável do compilador `ENABLE_TEST_CLOUD`, que fará com que o assembly Calabash seja removido do lote de aplicativo. No entanto, os builds da depuração têm a diretiva de compilador definida, impedindo que o vinculador remova o assembly.
 
 A captura de tela a seguir mostra a variável do compilador `ENABLE_TEST_CLOUD` definida para os builds da depuração:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ![](uitest-and-test-cloud-images/12-compiler-directive-vs.png "Opções de build")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 ![](uitest-and-test-cloud-images/11-compiler-directive-xs.png "Opções do compilador")
 
------
+::: zone-end
 
 ### <a name="android-application-project"></a>Projeto de Aplicativo Android
 
@@ -101,20 +103,6 @@ Para obter informações sobre como gravar UITests, consulte a [Documentação d
 ### <a name="use-automationid-in-the-xamarinforms-ui"></a>Usar o AutomationId na interface do usuário do Xamarin.Forms
 
 Antes que quaisquer UITests possam ser gravados, a interface do usuário do aplicativo Xamarin.Forms deve ser passível de script. Certifique-se de que todos os controles na interface do usuário tenham um `AutomationId` para que ele possa ser referenciado no código de teste.
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="adding-a-uitest-project-to-a-new-solution"></a>Adicionando um Projeto UITest em uma Nova Solução
-
-Ao criar um novo projeto do Xamarin.Forms usando o Visual Studio para Mac, um novo projeto do UITest pode ser adicionado à solução ao selecionar **Xamarin Test Cloud: adicionar um projeto de teste de interface do usuário automatizada**:
-
-![](uitest-and-test-cloud-images/01-new-solution-xs.png "Configure seu novo projeto")
-
-A nova solução será automaticamente configurada para executar o Xamarin.UITests em relação ao aplicativo Xamarin.Forms.
-
------
 
 #### <a name="referring-to-the-automationid-in-uitests"></a>Consultando a AutomationId nos UITests
 
@@ -133,18 +121,18 @@ A forma mais curta `app.Query("MyButton")` também funciona.
 
 ### <a name="adding-a-uitest-project-to-an-existing-solution"></a>Adicionando um Projeto UITest a uma Solução Existente
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 O Visual Studio tem um modelo para ajudar a adicionar um projeto Xamarin.UITest em uma solução do Xamarin.Forms existente:
 
 1. Clique com o botão direito do mouse na solução e selecione **Arquivo > Novo Projeto**.
 1. Dos modelos do **Visual C#**, selecione a categoria **Teste**. Selecione o modelo **Aplicativo de Teste da Interface do Usuário > Plataforma Cruzada**:
 
-    ![](uitest-and-test-cloud-images/08-new-uitest-project-vs.png "Adicionar Novo projeto")
+    ![Adicionar Novo Projeto](uitest-and-test-cloud-images/08-new-uitest-project-vs.png "Adicionar Novo Projeto")
 
     Isso adicionará um novo projeto com os pacotes NuGet **NUnit**, **Xamarin.UITest** e **NUnitTestAdapter** na solução:
 
-    ![](uitest-and-test-cloud-images/09-new-uitest-project-xs.png "Gerenciador de pacotes NuGet")
+    ![Gerenciador de Pacotes NuGet](uitest-and-test-cloud-images/09-new-uitest-project-xs.png "Gerenciador de Pacotes NuGet")
 
     O **NUnitTestAdapter** é um executor de teste de terceiros que permite que o Visual Studio execute os testes NUnit do Visual Studio.
 
@@ -152,31 +140,32 @@ O Visual Studio tem um modelo para ajudar a adicionar um projeto Xamarin.UITest 
 
 1. Adicione uma referência de projeto do projeto UITest ao projeto Xamarin.Android:
 
-    ![](uitest-and-test-cloud-images/10-test-apps-vs.png "Gerenciador de Referências do Projeto")
+    ![Gerenciador de Referências de Projeto](uitest-and-test-cloud-images/10-test-apps-vs.png "Gerenciador de Referências de Projeto")
 
     Isso permitirá que o **NUnitTestAdapter** execute os UITests no aplicativo Android do Visual Studio.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 É possível adicionar manualmente um novo projeto do Xamarin.UITest a uma solução existente:
 
 1. Comece ao adicionar um novo projeto selecionando a solução e, em seguida, clicando em **Arquivo > Adicionar novo projeto**. Na caixa de diálogo **Novo Projeto**, selecione **Plataforma cruzada > Testes > Xamarin Test Cloud > Aplicativo de teste da interface do usuário**:
 
-    ![](uitest-and-test-cloud-images/02-new-uitest-project-xs.png "Escolher um modelo")
+    ![Escolha um Modelo](uitest-and-test-cloud-images/02-new-uitest-project-xs.png "Escolha um Modelo")
 
     Isso adicionará um novo projeto que já tenha os pacotes NuGet **NUnit** e **Xamarin.UITest** na solução:
 
-    ![](uitest-and-test-cloud-images/03-new-uitest-project-xs.png "Pacotes NuGet do UITest do Xamarin")
+    ![Pacotes do NuGet de UITest do Xamarin](uitest-and-test-cloud-images/03-new-uitest-project-xs.png "Pacotes do NuGet de UITest do Xamarin")
 
     O novo projeto também tem duas classes. O **AppInitializer** contém o código para auxiliar os testes de inicialização e instalação. A outra classe, **Testes**, contém o código clichê para ajudar a iniciar o UITests.
 
 1. Selecione **Exibição > Painéis > Testes de Unidade** para exibir o painel Teste de Unidade. Expanda **UsingUITest > UsingUITest.UITests > Aplicativos de Teste**:
 
-    ![](uitest-and-test-cloud-images/04-unit-test-pad-xs.png "Painel de teste de unidade")
+    ![Painel de Teste de Unidade](uitest-and-test-cloud-images/04-unit-test-pad-xs.png "Painel de Teste de Unidade")
 
 1. Clique com o botão direito do mouse em **Aplicativos de Teste**, clique em **Adicionar Projeto de Aplicativo** e selecione os projetos do iOS e do Android na caixa de diálogo que aparece:
 
-    ![](uitest-and-test-cloud-images/05-add-test-apps-xs.png "Caixa de diálogo Aplicativos de teste")
+    ![Caixa de Diálogo de Aplicativos de Teste](uitest-and-test-cloud-images/05-add-test-apps-xs.png "Caixa de Diálogo de Aplicativos de Teste")
 
     O painel **Teste de Unidade** agora deve ter uma referência aos projetos do Android e do iOS. Isso permitirá que o executor de teste do Visual Studio para Mac execute os UITests localmente em relação aos dois projetos do Xamarin.Forms.
 
@@ -186,26 +175,26 @@ Há algumas alterações adicionais que precisam ser executadas no aplicativo iO
 
 1. Adicionar o pacote NuGet do **Agente do Xamarin Test Cloud**. Clique com o botão direito do mouse em **Pacotes**, selecione **Adicionar Pacotes**, pesquise no NuGet pelo **Agente do Xamarin Test Cloud** e adicione-o ao projeto Xamarin.iOS:
 
-    ![](uitest-and-test-cloud-images/07-add-test-cloud-agent-xs.png "Adicionar Pacotes NuGet")
+    ![Adicionar Pacotes do NuGet](uitest-and-test-cloud-images/07-add-test-cloud-agent-xs.png "Adicionar Pacotes do NuGet")
 
 1. Edite o método `FinishedLaunching` da classe **AppDelegate** para inicializar o Agente do Xamarin Test Cloud quando o aplicativo iOS inicia e para definir a propriedade `AutomationId` dos modos de exibição. O método `FinishedLaunching` deve se parecer com o exemplo de código a seguir:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 {
-        #if ENABLE_TEST_CLOUD
-        Xamarin.Calabash.Start();
-        #endif
+    #if ENABLE_TEST_CLOUD
+    Xamarin.Calabash.Start();
+    #endif
 
-        global::Xamarin.Forms.Forms.Init();
+    global::Xamarin.Forms.Forms.Init();
 
-        LoadApplication(new App());
+    LoadApplication(new App());
 
-        return base.FinishedLaunching(app, options);
+    return base.FinishedLaunching(app, options);
 }
 ```
 
------
+::: zone-end
 
 Depois de adicionar o Xamarin.UITest à solução do Xamarin.Forms, é possível criar UITests, executá-los localmente e enviá-los ao Xamarin Test Cloud.
 
@@ -214,7 +203,6 @@ Depois de adicionar o Xamarin.UITest à solução do Xamarin.Forms, é possível
 Os aplicativos do Xamarin.Forms podem ser facilmente testados com o **Xamarin.UITest** usando um mecanismo simples para expor o `AutomationId` como um identificador exclusivo do modo de exibição para a automação de teste. Uma vez que o projeto UITest tenha sido adicionado a uma solução do Xamarin.Forms, as etapas para gravação e execução dos testes em um aplicativo Xamarin.Forms serão as mesmas de um aplicativo Xamarin.Android ou Xamarin.iOS.
 
 Para obter informações sobre como enviar testes para o Teste do App Center, consulte [Submitting UITests](/appcenter/test-cloud/preparing-for-upload/uitest/) (Enviando UITests). Para obter informações sobre o UITest, consulte a [documentação do Teste do App Center](/appcenter/test-cloud/).
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -4,15 +4,15 @@ description: Este guia fornece etapas de solução de problemas que podem ser en
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 575e6705679539af6d3e5fae3ffc5721d9f79ba6
-ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
+ms.openlocfilehash: cfc4ecc5bf7ebc5e4c4dae8094fe3eb4ece34068
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36291042"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112489"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solução de problemas de conexão de um host de build do Xamarin.iOS
 
@@ -305,7 +305,7 @@ Causas conhecidas:
 
 - **Recurso de segurança do Xamarin 4.1** – este erro _acontecerá_ se você fizer downgrade para o Xamarin 4.0 depois de usar o Xamarin 4.1 ou superior. Nesse caso o erro será acompanhado pelo aviso adicional "A chave privada está criptografada, mas a frase secreta está vazia". Esse é uma alteração _intencional_ devida a um novo recurso de segurança do Xamarin 4.1. **Solução recomendada**: excluir **id\_rsa** e **id\_rsa.pub** de **%LOCALAPPDATA%\Xamarin\MonoTouch** e, em seguida, reconectar-se ao host de build do Mac.
 
-- **Restrição de segurança SSH** – quando essa mensagem for acompanhada pelo aviso adicional "Não foi possível autenticar o usuário usando as chaves ssh existentes", geralmente indica que um dos arquivos ou diretórios no caminho totalmente qualificado de **$HOME/.ssh/authorized\_keys** no Mac tem permissões de gravação habilitadas para _outros_ ou para membros de _grupo_. **Correção comum**: executar `chmod og-w "$HOME"` em um prompt de comando do Terminal no Mac. Para obter detalhes sobre o arquivo ou diretório específico que está causando o problema, execute `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` no Terminal e, em seguida, abra o arquivo **sshd.log** da área de trabalho e procure por "Autenticação recusada: modos ou propriedade inválida".
+- **Restrição de segurança SSH** – quando essa mensagem for acompanhada pelo aviso adicional "Não foi possível autenticar o usuário usando as chaves SSH existentes", geralmente indica que um dos arquivos ou diretórios no caminho totalmente qualificado de **$HOME/.ssh/authorized\_keys** no Mac tem permissões de gravação habilitadas para _outros_ ou para membros de _grupo_. **Correção comum**: executar `chmod og-w "$HOME"` em um prompt de comando do Terminal no Mac. Para obter detalhes sobre o arquivo ou diretório específico que está causando o problema, execute `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` no Terminal e, em seguida, abra o arquivo **sshd.log** da área de trabalho e procure por "Autenticação recusada: modos ou propriedade inválida".
 
 ### <a name="solutions-cannot-be-loaded-from-a-network-share"></a>As soluções não podem ser carregadas de um compartilhamento de rede
 

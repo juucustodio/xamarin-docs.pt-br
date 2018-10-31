@@ -3,15 +3,15 @@ title: Encontrar a assinatura de seu repositório de chaves
 ms.prod: xamarin
 ms.assetid: 1b511fec-e6f6-453e-89c8-810aafb02b77
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 46b43e6689f751c4fac1e8668234fce7f953521e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d32b2a20fee6b2bb007ee620e0ae4203e950bb98
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764632"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112439"
 ---
 # <a name="finding-your-keystores-signature"></a>Encontrar a assinatura de seu repositório de chaves
 
@@ -21,7 +21,7 @@ A assinatura MD5 ou SHA1 de um aplicativo Xamarin.Android depende do arquivo **.
 
 O Xamarin.Android assina todas as compilações de depuração com o mesmo arquivo **debug.keystore**. Esse arquivo é gerado quando o Xamarin.Android é instalado pela primeira vez. As etapas a seguir detalham o processo para localizar a assinatura SHA1 ou MD5 do arquivo padrão **debug.keystore** do Xamarin.Android.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Localize o arquivo **debug.keystore** do Xamarin que é usado para assinar o aplicativo. Por padrão, o repositório de chaves que é usado para assinar as versões de depuração de um aplicativo Xamarin.Android pode ser encontrado no seguinte local:
 
@@ -60,7 +60,7 @@ Certificate fingerprints:
 ```
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Localize o arquivo **debug.keystore** do Xamarin que é usado para assinar o aplicativo. Por padrão, o repositório de chaves que é usado para assinar as versões de depuração de um aplicativo Xamarin.Android pode ser encontrado no seguinte local:
 
@@ -114,20 +114,20 @@ KeyIdentifier [
 
 Os processos para compilações de lançamento que são assinadas com um arquivo **.keystore** personalizado são os mesmos acima, com o arquivo **.keystore** de lançamento substituindo o arquivo **debug.keystore** que é usado pelo Xamarin.Android. Substitua, com os seus próprios valores, a senha do repositório de chaves e o nome do alias de quando o arquivo do repositório de chaves de lançamento foi criado.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Quando o assistente **Distribuir** do Visual Studio for usado para assinar um aplicativo Xamarin.Android, o repositório de chaves resultante estará no seguinte local:
 
-**C:\\Usuários\\*NOMEDEUSUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+**C:\\Usuários\\*NOME DE USUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*alias*\\*alias*.keystore**
 
 Por exemplo, se você seguiu as etapas em [Criar um Novo Certificado](~/android/deploy-test/signing/index.md#newcertvs) para criar uma nova chave de assinatura, o repositório de chaves resultante de exemplo está no seguinte local:
 
-**C:\\Usuários\\*NOMEDEUSUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+**C:\\Usuários\\*NOMEDEUSUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 Para obter mais informações sobre como assinar um aplicativo Xamarin.Android, consulte [Assinatura do Pacote de Aplicativo Android](~/android/deploy-test/signing/index.md).
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Quando o Assistente **Assinar e distribuir...** do Visual Studio para Mac assinar seu aplicativo, o repositório de chaves resultante estará no seguinte local:
 

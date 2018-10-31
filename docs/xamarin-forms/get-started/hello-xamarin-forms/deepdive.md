@@ -1,6 +1,7 @@
 ---
 title: Aprofundamento no Xamarin.Forms
 description: Este artigo examina os conceitos básicos do desenvolvimento de aplicativos usando o Xamarin.Forms. Os tópicos abordados incluído a anatomia de um aplicativo Xamarin.Forms, arquitetura e conceitos básicos de aplicativo e a interface do usuário.
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
@@ -8,24 +9,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 7eff7f4413b533caadcf2aa8b5eed8c4ab65449d
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: def4ecccf92c47a5cc7c08e2821e5f3387fb752f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242219"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118702"
 ---
 # <a name="xamarinforms-deep-dive"></a>Aprofundamento no Xamarin.Forms
 
 No [Início rápido do Xamarin.Forms](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md), o aplicativo Phoneword foi criado. Este artigo analisa o que foi criado para entender os fundamentos de como os aplicativos Xamarin.Forms funcionam.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ## <a name="introduction-to-visual-studio"></a>Introdução ao Visual Studio
 
-O Visual Studio é um IDE avançado da Microsoft. Ele conta com um designer visual totalmente integrado, um editor de texto complementado com ferramentas de refatoração, um navegador de assembly, integração de código-fonte e muito mais. Este artigo se concentra no uso alguns dos recursos básicos do Visual Studio com o plug-in Xamarin.
-
-O Visual Studio organiza o código em *Soluções* e *Projetos*. Uma solução é um contêiner que pode conter um ou mais Projetos. Um Projeto pode ser um aplicativo, uma biblioteca com suporte, um aplicativo de teste e muito mais. O aplicativo Phoneword consiste em uma solução contendo quatro projetos, conforme mostrado na captura de tela a seguir.
+O Visual Studio organiza o código em *Soluções* e *Projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo, uma biblioteca com suporte, um aplicativo de teste, entre outros. O aplicativo Phoneword consiste em uma solução contendo quatro projetos, conforme mostrado na captura de tela a seguir:
 
 ![](deepdive-images/vs/solution.png "Gerenciador de soluções do Visual Studio")
 
@@ -42,15 +41,17 @@ A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET S
 
 ![](deepdive-images/vs/net-standard-project.png "Conteúdo do projeto do .NET Standard Phoneword")
 
-O projeto tem um nó **Dependências** que contém os nós **NuGet** e **SDK**. O nó **NuGet** contém o pacote do NuGet Xamarin.Forms que foi adicionado ao projeto e o nó **SDK** contém o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes do NuGet que definem o .NET Standard.
+O projeto tem um nó **Dependências** que contém os nós **NuGet** e **SDK**:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+- **NuGet** &ndash; o pacote NuGet do Xamarin.Forms que foi adicionado ao projeto.
+- **SDK** &ndash; o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes NuGet que definem o .NET Standard.
+
+::: zone-end
+::: zone pivot="macos"
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Introdução ao Visual Studio para Mac
 
-O Visual Studio para Mac é um IDE de software livre gratuito semelhante ao Visual Studio. Ele conta com um designer visual totalmente integrado, um editor de texto complementado com ferramentas de refatoração, um navegador de assembly, integração de código-fonte e muito mais. Para obter mais informações sobre o Visual Studio para Mac, consulte [Introdução ao Visual Studio para Mac](/visualstudio/mac/).
-
-O Visual Studio para Mac segue a prática do Visual Studio de organizar o código em *Soluções* e *Projetos*. Uma solução é um contêiner que pode conter um ou mais Projetos. Um Projeto pode ser um aplicativo, uma biblioteca com suporte, um aplicativo de teste e muito mais. O aplicativo Phoneword consiste em uma solução contendo três projetos, conforme mostrado na seguinte captura de tela.
+O [Visual Studio para Mac](/visualstudio/mac/) segue a prática do Visual Studio de organizar o código em *Soluções* e *Projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo, uma biblioteca com suporte, um aplicativo de teste, entre outros. O aplicativo Phoneword consiste em uma solução que contém três projetos, conforme mostrado na captura de tela a seguir:
 
 ![](deepdive-images/xs/solution.png "Painel de soluções do Visual Studio para Mac")
 
@@ -66,9 +67,12 @@ A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET S
 
 ![](deepdive-images/xs/library-project.png "Conteúdo do projeto de biblioteca do .NET Standard Phoneword")
 
-O projeto tem um nó **Dependências** que contém os nós **NuGet** e **SDK**. O nó **NuGet** contém o pacote do NuGet Xamarin.Forms que foi adicionado ao projeto e o nó **SDK** contém o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes do NuGet que definem o .NET Standard.
+O projeto tem um nó **Dependências** que contém os nós **NuGet** e **SDK**:
 
------
+- **NuGet** &ndash; o pacote NuGet do Xamarin.Forms que foi adicionado ao projeto.
+- **SDK** &ndash; o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes NuGet que definem o .NET Standard.
+
+::: zone-end
 
 O projeto também consiste em vários arquivos:
 
@@ -83,19 +87,20 @@ Para saber mais sobre a anatomia de um aplicativo Xamarin.iOS, consulte [Anatomi
 
 ## <a name="architecture-and-application-fundamentals"></a>Arquitetura e conceitos básicos de aplicativo
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 Um aplicativo Xamarin.Forms é arquitetado da mesma forma que um aplicativo tradicional de plataforma cruzada. O código compartilhado normalmente é colocado em uma biblioteca do .NET Standard e aplicativos específicos de plataforma consomem o código compartilhado. O diagrama a seguir mostra uma visão geral dessa relação para o aplicativo Phoneword:
 
 ![](deepdive-images/vs/architecture.png "Arquitetura do Phoneword")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 Um aplicativo Xamarin.Forms é arquitetado da mesma forma que um aplicativo tradicional de plataforma cruzada. O código compartilhado normalmente é colocado em uma biblioteca do .NET Standard e aplicativos específicos de plataforma consomem o código compartilhado. O diagrama a seguir mostra uma visão geral dessa relação para o aplicativo Phoneword:
 
 ![](deepdive-images/xs/architecture.png "Arquitetura do Phoneword")
 
------
+::: zone-end
 
 Para maximizar a reutilização de código de inicialização, os aplicativos Xamarin.Forms têm uma única classe chamada `App`, que é responsável por instanciar a primeira página que será exibida pelo aplicativo em cada plataforma, conforme mostrado no exemplo de código a seguir:
 
@@ -176,6 +181,8 @@ namespace Phoneword.Droid
 
 A substituição `OnCreate` inicializa a estrutura do Xamarin.Forms ao chamar o método `Init`. Isso faz a implementação específica do Android do Xamarin.Forms ser carregada no aplicativo antes de o aplicativo Xamarin.Forms ser carregado. Além disso, a classe `MainActivity` armazena uma referência a si mesma na propriedade `Instance`. A propriedade `Instance` é conhecida como o contexto local e é referenciada da classe `PhoneDialer`.
 
+::: zone pivot="windows"
+
 ## <a name="universal-windows-platform"></a>Plataforma Universal do Windows
 
 Em aplicativos UWP (Plataforma Universal do Windows), o método `Init` que inicializa a estrutura Xamarin.Forms é chamado da classe `App`:
@@ -210,12 +217,14 @@ O aplicativo Xamarin.Forms é carregado com o método `LoadApplication`.
 > [!NOTE]
 > Os aplicativos da Plataforma Universal do Windows (UWP) podem ser criados com o Xamarin.Forms, mas somente usando o Visual Studio no Windows.
 
+::: zone-end
+
 ## <a name="user-interface"></a>Interface do Usuário
 
 Há quatro grupos de controle principais usados para criar a interface do usuário de um aplicativo Xamarin.Forms.
 
 1. **Páginas** – as páginas do Xamarin.Forms representam telas de aplicativos móveis de plataforma cruzada. O aplicativo Phoneword usa a classe [`ContentPage`](xref:Xamarin.Forms.ContentPage) para exibir uma única tela. Para saber mais sobre páginas, consulte [Xamarin.Forms Pages](~/xamarin-forms/user-interface/controls/pages.md) (Páginas do Xamarin.Forms).
-1. **Layouts** – os layouts do Xamarin.Forms são contêineres usados para compor exibições em estruturas lógicas. O aplicativo Phoneword usa a classe [`StackLayout`](xref:Xamarin.Forms.StackLayout) para organizar controles em uma pilha horizontal. Para saber mais sobre layouts, consulte [Xamarin.Forms Layouts](~/xamarin-forms/user-interface/controls/layouts.md) (Layouts do Xamarin.Forms).
+1. **Layouts** – os layouts do Xamarin.Forms são contêineres usados para compor exibições em estruturas lógicas. O aplicativo Phoneword usa a classe [`StackLayout`](xref:Xamarin.Forms.StackLayout) para organizar controles em uma pilha vertical. Para saber mais sobre layouts, consulte [Xamarin.Forms Layouts](~/xamarin-forms/user-interface/controls/layouts.md) (Layouts do Xamarin.Forms).
 1. **Exibições** – as exibições do Xamarin.Forms são os controles exibidos na interface do usuário, como rótulos, botões e caixas de entrada de texto. O aplicativo Phoneword usa os controles [`Label`](xref:Xamarin.Forms.Label), [`Entry`](xref:Xamarin.Forms.Entry) e [`Button`](xref:Xamarin.Forms.Button). Para saber mais sobre exibições, consulte [Xamarin.Forms Views](~/xamarin-forms/user-interface/controls/views.md) (Exibições do Xamarin.Forms).
 1. **Células** – as células do Xamarin.Forms são elementos especializados usados para itens em uma lista e descrevem como cada item em uma lista deve ser desenhado. O aplicativo Phoneword não usa nenhuma célula. Para saber mais sobre células, consulte [Xamarin.Forms Cells](~/xamarin-forms/user-interface/controls/cells.md) (Células do Xamarin.Forms).
 
@@ -232,7 +241,7 @@ Quando o aplicativo Phoneword é executado em qualquer plataforma, ele exibe uma
         <StackLayout>
             <Label Text="Enter a Phoneword:" />
             <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+            <Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
             <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
 </ContentPage>
@@ -265,7 +274,7 @@ O método `OnTranslate` traduz a phoneword para seu número de telefone correspo
 A fiação do botão de traduzir para o método `OnTranslate` ocorre na marcação XAML para a classe `MainPage`:
 
 ```xaml
-<Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+<Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
 ```
 
 ## <a name="additional-concepts-introduced-in-phoneword"></a>Conceitos adicionais introduzidos no Phoneword

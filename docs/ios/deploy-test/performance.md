@@ -4,15 +4,15 @@ description: Este documento descreve técnicas que podem ser usadas para melhora
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 40a2acf28819279b2a0d5c1d50c651a79b455465
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: caf35ab601d20e1cb235ab9ebb131e6dffc614fc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108867"
 ---
 # <a name="xamarinios-performance"></a>Desempenho do Xamarin.iOS
 
@@ -101,7 +101,9 @@ container.AddSubview (new MyView (container));
 
 Aqui, o objeto contido não manterá o pai ativo. No entanto, o pai mantém o filho ativo por meio da chamada feita para `container.AddSubView`.
 
-Isso também ocorre em APIs do iOS que usam o padrão delegado ou de fonte de dados, em que uma classe par contém a implementação, por exemplo, ao definir a propriedade [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) ou a [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) na classe [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
+Isso também ocorre em APIs do iOS que usam o padrão delegado ou de fonte de dados, em que uma classe par contém a implementação, por exemplo, ao definir a propriedade [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
+ou a [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+na classe [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
 
 No caso das classes que são criadas somente para implementar um protocolo, por exemplo a [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), o que você pode fazer é, em vez de criar uma subclasse, apenas implementar a interface na classe e substituir o método, atribuindo a propriedade `DataSource` à `this`.
 

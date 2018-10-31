@@ -5,43 +5,37 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: f1c19d43aa1f9010307df3fb954ac1029221ccd4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 10/05/2018
+ms.openlocfilehash: 3eee66032a33e66d3a6a22ca43cb931fbd59888f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30767733"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122979"
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Multitela do Hello, Android: aprofundamento
 
-_Neste guia de duas partes, o aplicativo Phoneword básico (criado no guia Hello, Android) é expandido para processar uma segunda tela. Ao longo do caminho, são apresentados os Blocos de Construção de Aplicativo Android básico. Um aprofundamento na arquitetura Android está incluído para ajudá-lo a desenvolver uma melhor compreensão da estrutura de aplicativo e da funcionalidade do Android._
-
-## <a name="hello-android-multiscreen-deep-dive"></a>Aprofundamento na multitela do Hello, Android
+_Neste guia de duas partes, o aplicativo Phoneword básico (criado no guia Hello, Android) é expandido para processar uma segunda tela. Ao longo do caminho, são apresentados os blocos de construção do aplicativo Android básico. Um aprofundamento na arquitetura Android está incluído para ajudá-lo a desenvolver uma melhor compreensão da estrutura de aplicativo e da funcionalidade do Android._
 
 No [Início rápido de multitela do Hello, Android](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md), você compilou e executou seu primeiro aplicativo Xamarin.Android multitela.
-Agora é hora de desenvolver uma compreensão mais profunda da arquitetura e da navegação do Android para poder criar aplicativos mais complexos.
 
-Neste guia, você explorará a arquitetura Android mais avançada conforme os *Blocos de Construção do Aplicativo* Android são apresentados. Navegação em Android com *Intenções* é explicada e as opções de navegação de hardware do Android são exploradas. Novas adições ao aplicativo Phoneword são examinadas ao desenvolver uma visão mais holística da relação do aplicativo com o sistema operacional e outros aplicativos.
-
+Neste guia, você explorará a arquitetura Android mais avançada. Navegação em Android com *Intenções* é explicada e as opções de navegação de hardware do Android são exploradas. Novas adições ao aplicativo Phoneword são examinadas ao desenvolver uma visão mais holística da relação do aplicativo com o sistema operacional e outros aplicativos.
 
 ## <a name="android-architecture-basics"></a>Noções básicas sobre a arquitetura do Android
 
 Em [Aprofundamento no Hello, Android](~/android/get-started/hello-android/hello-android-deepdive.md), você aprendeu que aplicativos Android são programas exclusivos porque carecem de um ponto de entrada único. Em vez disso, o sistema operacional (ou outro aplicativo) inicia qualquer uma das Atividades registradas do aplicativo, que, por sua vez, inicia o processo para o aplicativo. Este aprofundamento na arquitetura do Android expande seu entendimento de como os aplicativos Android são construídos, apresentando os Blocos de Construção do Aplicativo Android e suas funções.
 
-
-### <a name="android-application-blocks"></a>Blocos de aplicativos Android
+### <a name="android-application-building-blocks"></a>Aplicativo Android construindo blocos
 
 Um aplicativo Android consiste em uma coleção de classes Android especiais chamadas de *Blocos de Aplicativo*, empacotadas com qualquer número de recursos de aplicativo – imagens, temas, classes auxiliares, etc. &ndash; que são coordenadas por um arquivo XML chamado *Manifesto do Android*.
 
 Blocos de Aplicativos formam o backbone de aplicativos Android porque permitem executar ações que normalmente não seriam possíveis com uma classe regular. Os dois mais importantes são _Atividades_ e _Serviços_:
 
--   **Atividade** &ndash; Uma atividade corresponde a uma tela com uma interface do usuário e é conceitualmente similar a uma página da Web em um aplicativo Web. Por exemplo, em um aplicativo de feed de notícias, a tela de logon seria a primeira atividade, a lista rolável de itens de notícias seria outra atividade e a página de detalhes para cada item seria uma terceira. Saiba mais sobre Atividades no guia [Ciclo de Vida da Atividade](~/android/app-fundamentals/activity-lifecycle/index.md).
+- **Atividade** &ndash; Uma atividade corresponde a uma tela com uma interface do usuário e é conceitualmente similar a uma página da Web em um aplicativo Web. Por exemplo, em um aplicativo de feed de notícias, a tela de logon seria a primeira atividade, a lista rolável de itens de notícias seria outra atividade e a página de detalhes para cada item seria uma terceira. Saiba mais sobre Atividades no guia [Ciclo de Vida da Atividade](~/android/app-fundamentals/activity-lifecycle/index.md).
 
--   **Serviço** &ndash; Serviços do Android dão suporte a atividades assumindo tarefas demoradas e executando-as no segundo plano. Serviços não têm uma interface do usuário e são usados para lidar com tarefas que não estão vinculadas a telas &ndash; por exemplo, tocar uma música em segundo plano ou carregar fotos para um servidor. Para saber mais sobre Serviços, consulte os guias [Como criar serviços](~/android/app-fundamentals/services/index.md) e [Serviços do Android](~/android/app-fundamentals/services/index.md).
-
+- **Serviço** &ndash; Serviços do Android dão suporte a atividades assumindo tarefas demoradas e executando-as no segundo plano. Serviços não têm uma interface do usuário e são usados para lidar com tarefas que não estão vinculadas a telas &ndash; por exemplo, tocar uma música em segundo plano ou carregar fotos para um servidor. Para saber mais sobre Serviços, consulte os guias [Como criar serviços](~/android/app-fundamentals/services/index.md) e [Serviços do Android](~/android/app-fundamentals/services/index.md).
 
 Um aplicativo Android pode não usar todos os tipos de Blocos e geralmente tem vários Blocos de um tipo. Por exemplo, o aplicativo Phoneword do [Início rápido do Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) era composto por apenas uma atividade (tela) e alguns arquivos de recurso. Um aplicativo de player de música simples pode ter várias Atividades e um Serviço para tocar músicas quando o aplicativo está em segundo plano.
 
@@ -51,7 +45,6 @@ Outro conceito fundamental em aplicativos Android é a *Intenção*.
 O Android é desenvolvido em torno do *princípio do privilégio mínimo* &ndash; os aplicativos têm acesso somente aos Blocos de que precisam para funcionar e têm acesso limitado aos Blocos que compõem o sistema operacional ou outros aplicativos. Da mesma forma, os Blocos são *ligeiramente acoplados* &ndash; eles são desenvolvidos para ter pouco conhecimento e acesso limitado a outros Blocos (até mesmo aos blocos que fazem parte do mesmo aplicativo).
 
 Para comunicação, os Blocos de Aplicativos enviam e recebem mensagens assíncronas chamadas *Intenções*. As Intenções contêm informações sobre o Bloco receptor e, às vezes, alguns dados. Uma Intenção enviada de um componente um Aplicativo faz algo acontecer em outro componente de Aplicativo, associando ambos os componentes de Aplicativo e permitindo que eles se comuniquem. Ao enviar e receber Intenções, você pode fazer os Blocos coordenarem ações complexas, como iniciar o aplicativo de câmera para capturar e salvar, coletar informações sobre o local ou navegar de uma tela para a próxima.
-
 
 ### <a name="androidmanifestxml"></a>AndroidManifest.XML
 
@@ -63,8 +56,7 @@ Na versão de tela única do aplicativo Phoneword, apenas uma Atividade, uma Int
 
 Foram feitas tentativas para navegar entre as telas. É hora de aprofundar-se nesse código para ver como as Intenções funcionam e entender sua função na navegação em Android.
 
-
-### <a name="launching-a-second-activity-with-an-intent"></a>Como iniciar uma segunda atividade com uma intenção
+### <a name="launching-a-second-activity-with-an-intent"></a>Iniciando uma segunda atividade com uma intenção
 
 No aplicativo Phoneword, uma Intenção foi usada para inicializar uma segunda tela (Atividade). Comece criando uma Intenção, passando o *Contexto* atual (`this`, fazendo referência ao **Contexto** atual) e o tipo de Bloco de Aplicativo que você está procurando (`TranslationHistoryActivity`):
 
@@ -84,7 +76,6 @@ translationHistoryButton.Click += (sender, e) =>
     StartActivity(intent);
 };
 ```
-
 
 ## <a name="additional-concepts-introduced-in-phoneword"></a>Conceitos adicionais introduzidos no Phoneword
 
@@ -109,7 +100,6 @@ this.ListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.Simple
 
 ListViews e Adaptadores estão além do escopo deste documento, mas são discutidos no guia muito abrangente [ListViews e adaptadores](~/android/user-interface/layouts/list-view/index.md).
 [Popular um ListView usando dados](~/android/user-interface/layouts/list-view/populating.md) trata especificamente do uso de classes `ListActivity` e `ArrayAdapter` internas para criar e popular um `ListView` sem definir um layout personalizado, como foi feito no exemplo Phoneword.
-
 
 ## <a name="summary"></a>Resumo
 
