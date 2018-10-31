@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 01dd59d5e94b473316b03f9035d38305fad42880
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 392a0e6c76357ce106477ec4d5037673e5702b43
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301234"
 ---
 # <a name="xamarinforms-grid"></a>Grade de xamarin. Forms
 
@@ -22,12 +22,12 @@ ms.locfileid: "38994496"
 
 Este artigo abordará:
 
-- **[Finalidade](#Purpose)**  &ndash; usos comuns do `Grid`.
-- **[Uso](#Usage)**  &ndash; como usar `Grid` para alcançar o design desejado.
-  - **[Linhas e colunas](#Rows_and_Columns)**  &ndash; especificar linhas e colunas para o `Grid`.
-  - **[Colocação de modos de exibição](#Placing_Views)**  &ndash; adicionar modos de exibição para a grade em linhas e colunas específicas.
-  - **[Espaçamento](#Spacing)**  &ndash; configurar os espaços entre linhas e colunas.
-  - **[Spans](#Spans)**  &ndash; configurar elementos para abranger várias linhas ou colunas.
+- **[Finalidade](#purpose)**  &ndash; usos comuns do `Grid`.
+- **[Uso](#usage)**  &ndash; como usar `Grid` para alcançar o design desejado.
+  - **[Linhas e colunas](#rows-and-columns)**  &ndash; especificar linhas e colunas para o `Grid`.
+  - **[Colocação de modos de exibição](#placing-views-in-a-grid)**  &ndash; adicionar modos de exibição para a grade em linhas e colunas específicas.
+  - **[Espaçamento](#spacing)**  &ndash; configurar os espaços entre linhas e colunas.
+  - **[Spans](#spans)**  &ndash; configurar elementos para abranger várias linhas ou colunas.
 
 ![](grid-images/grid.png "Exploração de grade")
 
@@ -42,8 +42,6 @@ Este artigo abordará:
 ## <a name="usage"></a>Uso
 
 Ao contrário das tabelas tradicionais, `Grid` não deduz o número e os tamanhos de linhas e colunas do conteúdo. Em vez disso, `Grid` tem `RowDefinitions` e `ColumnDefinitions` coleções. Eles mantêm as definições de quantas linhas e colunas serão dispostas. As exibições são adicionadas à `Grid` com a linha especificada e os índices de coluna, que identificam quais linhas e colunas de um modo de exibição deve ser colocado em.
-
-<a name="Rows_and_Columns" />
 
 ### <a name="rows-and-columns"></a>Linhas e colunas
 
@@ -83,8 +81,6 @@ grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUni
 grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
 grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
 ```
-
-<a name="Placing_Views" />
 
 ### <a name="placing-views-in-a-grid"></a>Colocando exibições em uma grade
 

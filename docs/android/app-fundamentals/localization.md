@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: abf9bf3875f9d64f136224607a6539005fa651c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f50efb7b78db67b310ccddec3eb94bfe4d2e521
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301247"
 ---
 # <a name="android-localization"></a>Localização do Android
 
@@ -36,7 +36,7 @@ Esse valor será um identificador de localidade que contém um código de idioma
 
 Exemplos comuns incluem:
 
-* `en_US` para inglês (EUA Statees)
+* `en_US` para inglês (Estados Unidos)
 * `es_ES` Espanhol (Espanha)
 * `ja_JP` para japonês (Japão)
 * `zh_CN` para chinês (China)
