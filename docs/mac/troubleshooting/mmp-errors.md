@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: 3c7b7c39eb714dbd47049c9440c188667a75e48f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 640d1adc048bec167508d8c288b62d498f061b0d
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106267"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234967"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensagens de erro (mmp) do xamarin. Mac
 
@@ -23,9 +23,9 @@ Por exemplo, parâmetros, ambiente, falta de ferramentas.
 
 <a name="MM0000" />
 
-#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM0000: Erro inesperado - arquivo de um bug relate em http://bugzilla.xamarin.com
+#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: Erro inesperado - arquivo de um bug relate em https://github.com/xamarin/xamarin-macios/issues/new
 
-Ocorreu uma condição de erro inesperado. Por favor [relatório de erro](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) com tantas informações quanto possível, incluindo:
+Ocorreu uma condição de erro inesperado. Por favor [relatório de erro](https://github.com/xamarin/xamarin-macios/issues/new) com tantas informações quanto possível, incluindo:
 
 * Build completo logs, com detalhamento máximo (por exemplo, `-v -v -v -v` no **argumentos mmp adicionais**);
 * Um caso de teste mínimo que reproduza o erro; e

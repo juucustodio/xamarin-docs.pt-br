@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: cf85f8d64026b436c7552033525b9d0f381fd687
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: c7a84a8bd00c5685feef84bfc4aacf02e5891c55
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156971"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234980"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Criando aplicativos móveis com xamarin. Forms book
 
-<p><img src="Images/Cover-sml.png" title="Criando aplicativos móveis com xamarin. Forms Book" align="left" />O livro <i>criação de aplicativos móveis com xamarin. Forms</i> , de Charles Petzold, é um guia para aprender a escrever aplicativos xamarin. Forms. O único pré-requisito é o conhecimento da linguagem de programação c#. O livro oferece uma exploração extensiva na interface do usuário do xamarin. Forms e também aborda a animação, MVVM, gatilhos, comportamentos, layouts personalizados, renderizadores personalizados e muito mais. 
+<p><img src="images/cover-sml.png" title="Criando aplicativos móveis com xamarin. Forms Book" align="left" />O livro <i>criação de aplicativos móveis com xamarin. Forms</i> , de Charles Petzold, é um guia para aprender a escrever aplicativos xamarin. Forms. O único pré-requisito é conhecimento sobre o C# linguagem de programação. O livro oferece uma exploração extensiva na interface do usuário do xamarin. Forms e também aborda a animação, MVVM, gatilhos, comportamentos, layouts personalizados, renderizadores personalizados e muito mais. 
 
 O livro foi publicado na primavera de 2016 e não tiver sido atualizado desde então. Há muito o no livro valioso que permanece, mas alguns dos [material está desatualizado](#ways-in-which-the-book-is-outdated), e alguns tópicos não são totalmente correto ou foi concluído. 
 

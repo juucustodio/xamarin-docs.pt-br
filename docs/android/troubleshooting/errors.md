@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: b51e8b3d931ccbb511afe7d06d9be66fa104fb46
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121835"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235071"
 ---
 # <a name="xamarinandroid-errors-matrix"></a>Matriz de erros do xamarin. Android
 
@@ -40,7 +40,7 @@ Este documento fornece algumas informações sobre os vários códigos de erro d
 
 |Código do erro|Descrição|
 |--- |--- |
-|XA0000|Erro inesperado - preencha uma [relatório de bugs](http://bugzilla.xamarin.com).|
+|XA0000|Erro inesperado - preencha uma [relatório de bugs](https://github.com/xamarin/xamarin-android/issues/new).|
 |XA0001|'-devname foi fornecido sem qualquer ação específica do dispositivo.|
 |XA0002|Não foi possível analisar a variável de ambiente '{0}'.|
 |XA0003|Nome do aplicativo '{0}.exe' conflita com um nome de assembly (. dll) do SDK ou o produto.|

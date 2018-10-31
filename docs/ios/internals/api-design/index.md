@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cd25e5c78885f53902c577a900958b842a70219c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56f9cbdae565f0d89463742377ec2311d8e375ac
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116947"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235045"
 ---
 # <a name="xamarinios-api-design"></a>Design de API do xamarin. IOS
 
@@ -107,7 +107,7 @@ Para obter mais detalhes sobre as APIs de associação, consulte o [gerador de a
 
 ##### <a name="nsobject"></a>NSObject
 
-O [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) tipo é a base para todas as associações do Objective-C. Tipos de xamarin. IOS espelham duas classes de tipos do CocoaTouch APIs do iOS: os tipos do C (normalmente chamado de tipos de CoreFoundation) e os tipos de Objective-C (eles todos derivam da classe de NSObject).
+O [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) tipo é a base para todas as associações do Objective-C. Tipos de xamarin. IOS espelham duas classes de tipos do CocoaTouch APIs do iOS: os tipos de C (normalmente conhecidos como tipos de CoreFoundation) e os tipos de Objective-C (eles todos derivam da classe de NSObject).
 
 Para cada tipo que espelha um tipo não gerenciado, é possível obter o objeto nativo por meio de [manipular](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) propriedade.
 
