@@ -1,5 +1,5 @@
 ---
-title: Jelly Bean recursos
+title: Recursos do Jelly Bean
 description: 'Este documento fornecerá uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4.1. Esses recursos incluem: aprimorada notificações, as atualizações para o compartilhamento de arquivos grandes, as atualizações para a descoberta de rede de multimídia, peer-to-peer, animações, novas permissões Beam do Android.'
 ms.prod: xamarin
 ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
@@ -14,7 +14,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50119235"
 ---
-# <a name="jelly-bean-features"></a>Jelly Bean recursos
+# <a name="jelly-bean-features"></a>Recursos do Jelly Bean
 
 _Este documento fornecerá uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4.1. Esses recursos incluem: aprimorada notificações, as atualizações para o compartilhamento de arquivos grandes, as atualizações para a descoberta de rede de multimídia, peer-to-peer, animações, novas permissões Beam do Android._
 
@@ -34,7 +34,7 @@ Por fim foram adicionadas várias novas permissões no Android 4.1.
 
 ## <a name="requirements"></a>Requisitos
 
-Para desenvolver aplicativos xamarin. Android usar Jelly Bean requer o xamarin. Android 4.2.6 ou posterior e Android 4.1 (API nível 16) ser instalado por meio do Gerenciador de SDK do Android, conforme mostrado na seguinte captura de tela:
+Desenvolver aplicativos xamarin. Android usando o Jelly Bean requer o xamarin. Android 4.2.6 ou posterior e Android 4.1 (API nível 16) ser instalado por meio do Gerenciador de SDK do Android, conforme mostrado na seguinte captura de tela:
 
 [![Selecionando o Android 4.1 no Gerenciador de SDK do Android](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
