@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a3d0edbd933339ee8b8a0a277a4f2493cc8dc70e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 25f6cf341fcf47d5dc5320f73855bb2a4e29a9e8
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675517"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Página Master-Detail do xamarin. Forms
 
@@ -45,7 +45,7 @@ A página de detalhes contém uma barra de navegação, cujo conteúdo é depend
 O comportamento da experiência de navegação entre páginas mestre e de detalhes é dependente da plataforma:
 
 - No iOS, a página de detalhes *slides* à direita como os slides da página mestra da esquerda e a parte esquerda do detalhe página ainda está visível.
-- No Android, as páginas de detalhes e mestre estão *sobrepostos* uns nos outros.
+- No Android, as páginas de detalhes e mestre estão *sobreposto* uns nos outros.
 - Na UWP, as páginas de detalhes e mestre estão *trocado*.
 
 Um comportamento semelhante será observado no modo paisagem, exceto que a página mestra no iOS e Android tem uma largura de semelhante como a página mestra no modo retrato, portanto, mais a página de detalhes ficará visível.
@@ -79,7 +79,7 @@ Mostra o exemplo de código XAML abaixo uma [ `MasterDetailPage` ](xref:Xamarin.
 </MasterDetailPage>
 ```
 
-O exemplo de código a seguir mostra o equivalente [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) criado em c#:
+O exemplo de código a seguir mostra o equivalente [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) criado na C#:
 
 ```csharp
 public class MainPageCS : MasterDetailPage
@@ -269,7 +269,7 @@ O exemplo de código XAML a seguir demonstra como definir a [ `MasterBehavior` ]
 </MasterDetailPage>
 ```
 
-O exemplo de código a seguir mostra o equivalente [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) criado em c#:
+O exemplo de código a seguir mostra o equivalente [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) criado na C#:
 
 ```csharp
 public class MainPageCS : MasterDetailPage

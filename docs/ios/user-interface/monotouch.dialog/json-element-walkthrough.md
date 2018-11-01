@@ -4,14 +4,15 @@ description: MonoTouch (MT. D) inclui suporte para a geração dinâmica de inte
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
+ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 4c04edc5dd66917dbf83385ab88fd5f01e232c2d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24d73bfcc28601f6a7ebbecb71d8c0e9f6864ac3
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105188"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675335"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Usar o JSON para criar uma interface do usuário no xamarin. IOS
 

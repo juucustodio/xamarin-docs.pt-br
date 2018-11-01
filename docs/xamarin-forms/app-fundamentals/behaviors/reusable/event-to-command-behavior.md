@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 92d0f393ff8d96ac9c0040ab7c46a364418cf956
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cc568298ba3710f7d4f092acbb2139bebe5976b
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675283"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizável
 
@@ -25,7 +25,7 @@ O `EventToCommandBehavior` classe é um comportamento personalizado reutilizáve
 As seguintes propriedades de comportamento devem ser definidas para usar o comportamento:
 
 - **EventName** – o nome do evento o comportamento de escuta.
-- **Comando** – o **ICommand** a ser executado. O comportamento de espera encontrar o `ICommand` de instância em de [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) do controle anexado, o que pode ser herdado de um elemento pai.
+- **Comando** – a `ICommand` a ser executado. O comportamento de espera encontrar o `ICommand` de instância em de [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) do controle anexado, o que pode ser herdado de um elemento pai.
 
 As seguintes propriedades de comportamento opcional também podem ser definidas:
 

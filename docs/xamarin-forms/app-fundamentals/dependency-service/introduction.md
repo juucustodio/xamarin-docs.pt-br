@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/15/2018
-ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 3c8cc31c21f354b60001cefb919b51bf4d42da9f
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38995408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675010"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introdução ao DependencyService
 
@@ -42,7 +42,7 @@ A estrutura do aplicativo é explicada pelo diagrama a seguir:
 
 ### <a name="interface"></a>Interface
 
-A interface de design você vai definir como você interage com a funcionalidade específica da plataforma. Tenha cuidado se você estiver desenvolvendo um componente para ser compartilhado como um componente ou pacote do Nuget. Design de API pode fazer ou interromper um pacote. O exemplo a seguir especifica uma interface simples para falar o texto que permite flexibilidade para especificar as palavras a ser falado, mas deixa a implementação seja personalizada para cada plataforma:
+A interface de design você vai definir como você interage com a funcionalidade específica da plataforma. Tenha cuidado se você estiver desenvolvendo um componente para ser compartilhado como um componente ou pacote do NuGet. Design de API pode fazer ou interromper um pacote. O exemplo a seguir especifica uma interface simples para falar o texto que permite flexibilidade para especificar as palavras a ser falado, mas deixa a implementação seja personalizada para cada plataforma:
 
 ```csharp
 public interface ITextToSpeech {

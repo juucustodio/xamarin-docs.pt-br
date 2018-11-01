@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b52f249b184d49731fd5decdb5877c70e29a3b84
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38998066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675192"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Associações do xamarin. Forms Basic
 
@@ -94,7 +94,7 @@ No entanto, incluindo o nome da classe é um bom lembrete do objeto de destino.
 
 Como você manipula a `Slider`, o `Label` gira adequadamente:
 
-[![Associação de código de Basice](basic-bindings-images/basiccodebinding-small.png "vinculação do código básico")](basic-bindings-images/basiccodebinding-large.png#lightbox "vinculação do código básico")
+[![Associação de código básico](basic-bindings-images/basiccodebinding-small.png "vinculação do código básico")](basic-bindings-images/basiccodebinding-large.png#lightbox "vinculação do código básico")
 
 O **associações básicas de Xaml** página é idêntica à **associação básica do código** , exceto que ele define a associação de dados inteira em XAML:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 954a0967e034e0321964e12ca0725ae2a85e3bc6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995531"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675205"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do xamarin. Forms
 
@@ -85,7 +85,8 @@ Gatilhos também podem ser adicionados a um `Style` declaração em um controle,
 
 Gatilhos de dados usam a ligação de dados para monitorar a outro controle para fazer com que o `Setter`s seja chamado. Em vez do `Property` de atributo em um gatilho de propriedade, defina o `Binding` atributo para monitorar o valor especificado.
 
-O exemplo a seguir usa a sintaxe de associação de dados `{Binding Source={x:Reference entry}, Path=Text.Length}` que é como nos referimos a propriedades do controle para outro. Quando o comprimento do `entry` for zero, o gatilho é ativado. Neste exemplo o gatilho desabilita o botão quando a entrada estiver vazia.
+O exemplo a seguir usa a sintaxe de associação de dados `{Binding Source={x:Reference entry}, Path=Text.Length}`
+o que é como nos referimos a propriedades do controle para outro. Quando o comprimento do `entry` for zero, o gatilho é ativado. Neste exemplo o gatilho desabilita o botão quando a entrada estiver vazia.
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -164,7 +165,7 @@ As propriedades expostas pela ação de gatilho podem ser definidas na declaraç
 
 Tenha cuidado ao compartilhar disparadores em uma `ResourceDictionary`, uma instância será compartilhada entre os controles para que qualquer estado que está configurado de uma vez se aplicará a todos eles.
 
-Observe que não têm suporte para gatilhos de evento `EnterActions` e `ExitActions` [descrita abaixo](#enterexit).    
+Observe que não têm suporte para gatilhos de evento `EnterActions` e `ExitActions` [descrita abaixo](#enterexit).
 
 <a name="multi" />
 
@@ -202,7 +203,6 @@ O gatilho multi apenas atualiza seu controle quando todas as condições forem v
 
 Isso pode ser feito com um `IValueConverter`. O código de conversor abaixo transformações de `Text.Length` associação em um `bool` que indica se um campo está vazio ou não:
 
-
 ```csharp
 public class MultiTriggerConverter : IValueConverter
 {
@@ -234,7 +234,7 @@ Para usar esse conversor em um gatilho de várias, primeiro o adicione ao dicion
 O XAML é mostrado abaixo. Observe as seguintes diferenças do primeiro exemplo de gatilho de múltipla:
 
 * O botão tem `IsEnabled="false"` definido por padrão.
-* As condições de gatilho multi usam o conversor para transformar o `Text.Length` valor em um valor booliano.
+* As condições de gatilho multi usam o conversor para transformar a `Text.Length` de valor em um `boolean`.
 * Quando todas as condições forem `true`, o botão faz com que o setter `IsEnabled` propriedade `true`.
 
 ```xaml
@@ -266,7 +266,6 @@ O XAML é mostrado abaixo. Observe as seguintes diferenças do primeiro exemplo 
 
 Essas capturas de tela mostram a diferença entre os dois exemplos de gatilho de várias acima. Na parte superior das telas, texto de entrada em apenas um `Entry` é o suficiente para habilitar o **salvar** botão.
 Na parte inferior das telas, o **Login** botão permanece inativo até que ambos os campos contêm dados.
-
 
 ![](triggers-images/multi-requireall.png "Exemplos multiTrigger")
 
