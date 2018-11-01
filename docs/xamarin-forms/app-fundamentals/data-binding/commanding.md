@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b18d042e34146a72b488da9017648a430c9cd353
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996367"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675233"
 ---
 # <a name="the-xamarinforms-command-interface"></a>A Interface de comando do xamarin. Forms
 
@@ -22,7 +22,7 @@ A interface de comando fornece uma abordagem alternativa à implementação de c
 
 Para permitir que uma associação de dados entre um `Button` e um ViewModel, o `Button` define duas propriedades:
 
-- [`Command`](xref:Xamarin.Forms.Button.Command) do tipo <xref:System.Windows.Input.ICommand>
+- [`Command`](xref:Xamarin.Forms.Button.Command) do tipo [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
 - [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) do tipo `Object`
 
 Para usar a interface de comando, você define uma associação de dados que tem como alvo o `Command` propriedade do `Button` onde a fonte é uma propriedade no ViewModel do tipo `ICommand`. O ViewModel contém código associado que `ICommand` propriedade que é executada quando o botão é clicado. Você pode definir `CommandParameter` para dados arbitrários para distinguir entre vários botões se eles são todos associados ao mesmo `ICommand` propriedade no ViewModel.
@@ -39,7 +39,7 @@ Todos esses comandos podem ser tratados dentro de um ViewModel, de forma que nã
 
 ## <a name="the-icommand-interface"></a>A Interface ICommand
 
-O <xref:System.Windows.Input.ICommand> interface não faz parte do xamarin. Forms. Ela é definida em vez disso, nos [Input](xref:System.Windows.Input) namespace e consiste em dois métodos e um evento:
+O [ `System.Windows.Input.ICommand` ](xref:System.Windows.Input.ICommand) interface não faz parte do xamarin. Forms. Ela é definida em vez disso, nos [Input](xref:System.Windows.Input) namespace e consiste em dois métodos e um evento:
 
 ```csharp
 public interface ICommand
@@ -285,7 +285,7 @@ O programa não tem nenhum recurso para editar entradas existentes e não salva 
 
 Toda a lógica para o **New**, **enviar**, e **Cancelar** botões é tratado no `PersonCollectionViewModel` através de definições do `NewCommand`, `SubmitCommand`, e `CancelCommand` propriedades. O construtor do `PersonCollectionViewModel` define essas três propriedades para objetos do tipo `Command`.  
 
-Um [construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) da `Command` classe permite que você passe argumentos de tipo `Action` e `Func<bool>` correspondente para o `Execute` e `CanExecute` métodos. É mais fácil de definir essas ações e funções como lamda funções diretamente no `Command` construtor. Aqui está a definição do `Command` do objeto para o `NewCommand` propriedade:
+Um [construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) da `Command` classe permite que você passe argumentos de tipo `Action` e `Func<bool>` correspondente para o `Execute` e `CanExecute` métodos. É mais fácil de definir essas ações e funções como diretamente de funções lambda no `Command` construtor. Aqui está a definição do `Command` do objeto para o `NewCommand` propriedade:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -378,7 +378,7 @@ O `canExecute` função para `SubmitCommand` é chamado sempre que houver uma pr
 
 O `execute` funcionar por **enviar** remove o manipulador de propriedade alterada do `PersonViewModel`, adiciona o objeto para o `Persons` coleção e retorna todos os itens para condições iniciais.
 
-O `execute` funcionar para o **Cancelar** botão faz tudo o que o **enviar** botão faz execept adicionar o objeto à coleção:
+O `execute` funcionar para o **Cancelar** botão faz tudo o que o **enviar** botão exceto adicionar o objeto à coleção:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -693,7 +693,6 @@ Se você quiser usar a interface de comando com modos de exibição que não dã
 
 Comandos são conveniente para implementar os menus de navegação, como a mostrada na [ **demonstrações de associação de dados** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) de programa em si. Aqui está parte do **MainPage. XAML**:
 
-
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -763,8 +762,6 @@ A ordem do código nesse construtor faz uma diferença: os `InitializeComponent`
 Configurando ambos `NavigateCommand` e `BindingContext` (em qualquer ordem) antes da chamada a `InitializeComponent` funcionará porque ambos os componentes da associação são definidos quando o analisador XAML encontra a definição de associação.
 
 Associações de dados, às vezes, podem ser complicadas, mas como você viu nesta série de artigos, eles são poderoso e versátil e ajudam muito para organizar seu código, separando a lógica subjacente da interface do usuário.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 
