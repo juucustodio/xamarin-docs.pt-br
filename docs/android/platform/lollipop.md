@@ -1,5 +1,5 @@
 ---
-title: Recursos de pirulito
+title: Recursos do Lollipop
 description: Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 5.0 (Lollipop). Esses recursos incluem um novo estilo de interface de usuário chamado tema de Material, bem como novos recursos de suporte, como animações, sombras de modo de exibição e tonalidade desenháveis. Android 5.0 também inclui notificações aprimoradas, dois novos widgets de interface do usuário, um novo Agendador de trabalho e um punhado de novas APIs para melhorar o armazenamento, rede, conectividade e recursos de multimídia.
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
@@ -14,11 +14,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50117857"
 ---
-# <a name="lollipop-features"></a>Recursos de pirulito
+# <a name="lollipop-features"></a>Recursos do Lollipop
 
 _Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 5.0 (Lollipop). Esses recursos incluem um novo estilo de interface de usuário chamado tema de Material, bem como novos recursos de suporte, como animações, sombras de modo de exibição e tonalidade desenháveis. Android 5.0 também inclui notificações aprimoradas, dois novos widgets de interface do usuário, um novo Agendador de trabalho e um punhado de novas APIs para melhorar o armazenamento, rede, conectividade e recursos de multimídia._
 
-## <a name="lollipop-overview"></a>Visão geral de pirulito
+## <a name="lollipop-overview"></a>Visão geral do Lollipop
 
 Android 5.0 (Lollipop) introduz uma nova linguagem de design *Design de Material*, e com ele dar suporte a conversão de novos recursos para tornar os aplicativos mais fácil e intuitivo usar. Com o Design de Material, Android 5.0 proporciona telefones Android um facelift; Ele também fornece um novo conjunto de regras de design para tablets baseados no Android, computadores desktop, inspeções e smart TVs. Essas regras de design enfatizam a simplicidade e minimalism enquanto torna o uso de familiares atributos táteis (como realistas indicações de superfície e borda) para ajudar os usuários rapidamente e intuitivamente, entendemos a interface.
 
@@ -49,7 +49,7 @@ A seguir é necessário para usar os novos recursos do Android 5.0 em aplicativo
 
 -   **SDK do Android** &ndash; Android 5.0 (API 21) ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
 
--   **Java Developer Kit** &ndash; xamarin. Android exige [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior, se você estiver desenvolvendo para o nível de API 24 ou superior (JDK 1.8 também dá suporte a níveis de API anteriores ao 24, incluindo o pirulito). A versão de 64 bits do JDK 1.8 é necessária se você estiver usando controles personalizados ou o pré-visualizador de formulários.
+-   **Java Developer Kit** &ndash; xamarin. Android exige [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior, se você estiver desenvolvendo para o nível de API 24 ou superior (JDK 1.8 também dá suporte a níveis de API anteriores ao 24, incluindo o Lollipop). A versão de 64 bits do JDK 1.8 é necessária se você estiver usando controles personalizados ou o pré-visualizador de formulários.
 
 Você pode continuar a usar [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se você estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
