@@ -5,12 +5,12 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a5b5385af991ff988902bb3ed9670cd71d421bc6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d9367b7bbaa906ce39d1fafb3d09e56bfd0dc238
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675214"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Secure Storage
 
@@ -18,7 +18,9 @@ ms.locfileid: "50116024"
 
 A classe **SecureStorage** ajuda a armazenar com segurança os pares de chave/valor simples.
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="get-started"></a>Introdução
+
+[!include[](~/essentials/includes/get-started.md)]
 
 Para acessar a funcionalidade **SecureStorage**, a seguinte configuração específica da plataforma é necessária:
 

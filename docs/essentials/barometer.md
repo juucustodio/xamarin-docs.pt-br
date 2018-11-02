@@ -5,18 +5,22 @@ ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/16/2018
-ms.openlocfilehash: 0217b89bc3f45347acecbdb3b8cdccfeed751744
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9172d816fe9a15993ba8f015310d0e79874c2d84
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675023"
 ---
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barometer
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
 A classe **Barometer** permite que você monitore o sensor do barômetro do dispositivo. Esse sensor mede a pressão.
+
+## <a name="get-started"></a>Introdução
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-barometer"></a>Uso do Barometer
 

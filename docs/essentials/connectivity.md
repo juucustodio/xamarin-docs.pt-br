@@ -5,12 +5,12 @@ ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: bc0cd206881356a92128c758f0225f98f88c2814
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: b0d5f28aca5d836608bc5a3423f3dc234a551ca0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111994"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connectivity
 
@@ -18,9 +18,7 @@ ms.locfileid: "50675400"
 
 A classe **Connectivity** permite monitorar alterações em condições de rede do dispositivo, verificar o acesso da rede atual e como ele está conectado no momento.
 
-## <a name="get-started"></a>Introdução
-
-[!include[](~/essentials/includes/get-started.md)]
+## <a name="getting-started"></a>Guia de Introdução
 
 Para acessar a funcionalidade **Connectivity**, a seguinte configuração específica da plataforma é necessária.
 

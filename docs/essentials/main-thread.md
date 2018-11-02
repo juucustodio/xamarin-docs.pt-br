@@ -5,12 +5,12 @@ ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 06/26/2018
-ms.openlocfilehash: 608cd00a2134e6e3fee89c7ae25bf4627d8b23be
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: db2e79ed5c471c11e2d3dc1afe360843e5dfea6a
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675439"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
@@ -23,6 +23,10 @@ A classe **MainThread** permite que os aplicativos executem o código no thread 
 A maioria dos sistemas operacionais, incluindo iOS, Android e a Plataforma Universal do Windows, usa um modelo de threading simples para o código que envolve a interface do usuário. Esse modelo é necessário para serializar adequadamente os eventos da interface do usuário, incluindo pressionamentos de tecla e entrada de toque. Este thread é frequentemente chamado de _thread principal_ ou o _thread da interface do usuário_ ou, ainda, o _thread da IU_. A desvantagem desse modelo é que todo código que acessa os elementos da interface do usuário deve ser executado no thread principal do aplicativo. 
 
 Às vezes, os aplicativos precisam usar eventos que chamam o manipulador de eventos em um thread de execução secundário. (As classes [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) e [`OrientationSensor`](orientation-sensor.md) do Xamarin.Essentials podem todas retornar informações em um thread secundário, quando usadas com velocidades mais rápidas). Se o manipulador de eventos precisar acessar os elementos da interface do usuário, ele deverá executar esse código no thread principal. A classe **MainThread** permite que os aplicativos executem esse código no thread principal.
+
+## <a name="get-started"></a>Introdução
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="running-code-on-the-main-thread"></a>Como executar códigos no Thread Principal
 
