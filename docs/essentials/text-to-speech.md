@@ -1,32 +1,36 @@
 ---
-title: 'Xamarin.Essentials: texto em fala'
-description: A classe TextToSpeech no habilita Xamarin.Essentials um aplicativo utilizar internos nos mecanismos de texto em fala para falar texto back do dispositivo e também a linguagens de consulta disponíveis que o mecanismo pode dar suporte.
+title: 'Xamarin.Essentials: Text-to-Speech'
+description: A classe TextToSpeech no Xamarin.Essentials permite que um aplicativo utilize os mecanismos internos de conversão de texto em fala para repetir o texto do dispositivo e, também, consulte os idiomas disponíveis, compatíveis com o mecanismo.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: ba822870edafce44140caa66b01f4da242fb7779
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.date: 08/30/2018
+ms.openlocfilehash: 29eab430ae3d42934cedfdbd36d7be08e55b5d54
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353607"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675361"
 ---
-# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: texto em fala
+# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Text-to-Speech
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **TextToSpeech** classe permite que um aplicativo utilizar internos nos mecanismos de texto em fala para falar texto back do dispositivo e também a linguagens de consulta disponíveis que o mecanismo pode dar suporte.
+A classe **TextToSpeech** permite que um aplicativo utilize os mecanismos internos de conversão de texto em fala para repetir o texto do dispositivo e, também, consulte os idiomas disponíveis, compatíveis com o mecanismo.
 
-## <a name="using-text-to-speech"></a>Usando texto em fala
+## <a name="get-started"></a>Introdução
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-text-to-speech"></a>Uso da Conversão de Texto em Fala
+
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de texto em fala funciona chamando o `SpeakAsync` método com texto e parâmetros opcionais e retorna depois que a expressão foi concluída. 
+A Conversão de Texto em Fala funciona chamando o método `SpeakAsync` com texto e parâmetros opcionais e retorna depois que a expressão é concluída.
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -46,7 +50,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Esse método usa um recurso opcional `CancellationToken` para interromper a expressão depois que ele for iniciado.
+Esse método usa um recurso opcional `CancellationToken` para interromper a expressão após ela ser iniciada.
 
 ```csharp
 CancellationTokenSource cts;
@@ -67,7 +71,7 @@ public void CancelSpeech()
 }
 ```
 
-Texto em fala colocará em fila automaticamente solicitações de fala do mesmo thread.
+A Conversão de Texto em Fala automaticamente enfileirará as solicitações de voz do mesmo thread.
 
 ```csharp
 bool isBusy = false;
@@ -93,7 +97,7 @@ public void SpeakMultiple()
 
 ### <a name="speech-settings"></a>Configurações de fala
 
-Para obter mais controle sobre como o áudio é falado novamente com `SpeakSettings` que permite definir o Volume, a densidade e a localidade.
+Para obter mais controle sobre como o áudio é falado com `SpeakSettings`, que permite definir o volume, o tom e a localidade.
 
 ```csharp
 public async Task SpeakNow()
@@ -108,7 +112,7 @@ public async Task SpeakNow()
 }
 ```
 
-Os seguintes valores com suporte para esses parâmetros são:
+Veja a seguir os valores com suporte para esses parâmetros:
 
 | Parâmetro | Mínimo | Máximo |
 | --- | :---: | :---: |
@@ -117,7 +121,7 @@ Os seguintes valores com suporte para esses parâmetros são:
 
 ### <a name="speech-locales"></a>Localidades de fala
 
-Cada plataforma oferece localidades para falar texto voltar em vários idiomas e acentos. Cada plataforma tem diferentes códigos e maneiras de especificar isso, razão pela qual Essentials fornece uma plataforma cruzada `Locale` classe e uma maneira para consultá-los com `GetLocalesAsync`.
+Cada plataforma suporta diferentes localidades, para responder em diferentes idiomas e sotaques. As plataformas têm diferentes códigos e formas de especificar a localidade e é por isso que o Xamarin.Essentials fornece uma classe `Locale` de plataforma cruzada e uma maneira de consultá-los com `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -140,10 +144,10 @@ public async Task SpeakNow()
 
 ## <a name="limitations"></a>Limitações
 
-- Fila de expressão não é garantida se chamados por vários threads.
-- Oficialmente, não há suporte para reprodução de áudio em segundo plano.
+- A fila de expressão não terá garantia se for chamada através de múltiplos threads.
+- Oficialmente, não há suporte para a reprodução de áudio em segundo plano.
 
 ## <a name="api"></a>API
 
 - [Código-fonte TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
-- [Documentação da API TextToSpeech](xref:Xamarin.Essentials.TextToSpeech)
+- [Documentação da API do TextToSpeech](xref:Xamarin.Essentials.TextToSpeech)

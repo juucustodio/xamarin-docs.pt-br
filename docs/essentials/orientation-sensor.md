@@ -2,34 +2,34 @@
 title: 'Xamarin.Essentials: OrientationSensor'
 description: A classe OrientationSensor permite monitorar a orientação de um dispositivo no espaço tridimensional.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 05/21/2018
-ms.openlocfilehash: a15338795424885882ed9c86288342d196f6fda2
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 4ea6ebbb85510b5d7262cde73248af9df975b867
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112059"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **OrientationSensor** classe permite que você monitore a orientação de um dispositivo em três espaço dimensional.
+A classe **OrientationSensor** permite monitorar a orientação de um dispositivo no espaço tridimensional.
 
 > [!NOTE]
-> Essa classe é para determinar a orientação de um dispositivo no espaço 3D. Se você precisar determinar se o dispositivo do vídeo vídeo está no modo retrato ou paisagem, use o `Orientation` propriedade do `ScreenMetrics` disponível a partir do objeto a [ `DeviceDisplay` ](device-display.md) classe.
+> Essa classe é usada para determinar a orientação de um dispositivo no espaço tridimensional. Se for necessário determinar se a exibição de vídeo do dispositivo está no modo retrato ou paisagem, use a propriedade `Orientation` do objeto `ScreenMetrics` disponível na classe [`DeviceDisplay`](device-display.md).
 
-## <a name="using-orientationsensor"></a>Usando OrientationSensor
+## <a name="using-orientationsensor"></a>Uso do OrientationSensor
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-O `OrientationSensor` está habilitado por meio da chamada a `Start` método para monitorar as alterações a orientação do dispositivo e desabilitado chamando o `Stop` método. Todas as alterações são enviadas de volta pelo `ReadingChanged` eventos. Aqui está um exemplo de uso:
+O `OrientationSensor` é habilitado pela chamada do método `Start`, para monitorar as alterações da orientação do dispositivo, e desabilitado chamando o método `Stop`. Todas as alterações são enviadas de volta por meio do evento `ReadingChanged`. Veja um exemplo de uso:
 
 ```csharp
 
@@ -72,41 +72,41 @@ public class OrientationSensorTest
 }
 ```
 
-`OrientationSensor` as leituras são reportadas na forma de um [ `Quaternion` ](xref:System.Numerics.Quaternion) que descreve a orientação do dispositivo com base em dois sistemas de coordenadas 3D:
+As leituras `OrientationSensor` são apresentadas na forma de um [`Quaternion`](xref:System.Numerics.Quaternion) que descreve a orientação do dispositivo com base em dois sistemas de coordenadas 3D:
 
-O dispositivo (geralmente um telefone ou tablet) tem um sistema de coordenadas 3D com os seguintes eixos:
+O dispositivo (geralmente um telefone ou tablet) possui um sistema de coordenadas 3D com os seguintes eixos:
 
-- O positivo X pontos de eixo à direita da exibição no modo retrato.
-- O eixo Y positivo aponta para a parte superior do dispositivo no modo retrato.
-- Eixo positivo Z aponta para fora da tela.
+- O eixo positivo X aponta para o canto direito do visor no modo retrato.
+- O eixo positivo Y aponta para o canto superior do dispositivo no modo retrato.
+- O eixo positivo Z aponta para fora da tela.
 
 O sistema de coordenadas 3D da Terra tem os seguintes eixos:
 
-- O positivo eixo X é a tangente para a superfície da Terra e aponta Leste.
-- O eixo Y positivo também é a superfície da Terra e Norte pontos tangente.
-- Eixo positivo Z é perpendicular para a superfície da Terra e pontos de backup.
+- O eixo positivo X é a tangente da superfície da Terra e aponta para leste.
+- O eixo positivo Y também é a tangente da superfície da Terra e aponta para norte.
+- O eixo positivo Z é perpendicular à superfície da Terra e aponta para cima.
 
 O `Quaternion` descreve a rotação do sistema de coordenadas do dispositivo em relação ao sistema de coordenadas da Terra.
 
-Um `Quaternion` valor está muito intimamente relacionado a rotação em torno de um eixo. Se um eixo de rotação é o vetor normalizado (um<sub>x</sub>, um<sub>y</sub>, um<sub>z</sub>), e o ângulo de rotação é Θ, em seguida, (X, Y, Z, W) os componentes do quatérnio são:
+Um valor `Quaternion` está muito intimamente relacionado à rotação em torno de um eixo. Se um eixo de rotação for o vetor normalizado (a<sub>x</sub>, a<sub>y</sub>, a<sub>z</sub>) e o ângulo de rotação for Θ, então, os componentes (X, Y, Z, W) do quatérnio serão:
 
-(um<sub>x</sub>·sin(Θ/2), um<sub>y</sub>·sin(Θ/2), uma<sub>z</sub>·sin(Θ/2), cos(Θ/2))
+(a<sub>x</sub>·sin(Θ/2), a<sub>y</sub>·sin(Θ/2), a<sub>z</sub>·sin(Θ/2), cos(Θ/2))
 
-Esses são os sistemas de coordenadas à direita, portanto, com o polegar da mão direita apontado na direção do eixo de rotação positiva, a curva dos dedos indicar a direção de rotação para ângulos positivos.
+Estes são sistemas de coordenadas à direita, portanto, com o polegar da mão direita apontado na direção positiva do eixo de rotação, a curva dos dedos indica a direção da rotação para ângulos positivos.
 
 Exemplos:
 
-* Quando o dispositivo encontra-se simples em uma tabela com sua tela virada para cima, com a parte superior do dispositivo (no modo retrato) apontando para Norte, os dois sistemas de coordenadas são alinhados. O `Quaternion` valor representa o quatérnio de identidade (0, 0, 0, 1). Todas as rotações podem ser analisadas em relação a essa posição.
+* Os dois sistemas de coordenadas estarão alinhados quando o dispositivo estiver em uma mesa com a tela voltada para cima e a parte superior do dispositivo (no modo retrato) estiver apontando para norte. O valor `Quaternion` representa o quatérnio da identidade (0, 0, 0, 1). Todas as rotações podem ser analisadas em relação a essa posição.
 
-* Quando o dispositivo encontra-se simples em uma tabela com sua tela virada para cima e a parte superior do dispositivo (no modo retrato) apontando para Oeste, o `Quaternion` valor é (0, 0, 0.707, 0.707). O dispositivo foi girado 90 graus em torno do eixo Z da Terra.
+* O valor `Quaternion` será (0, 0, 0.707, 0.707) quando dispositivo estiver em uma mesa com a tela voltada para cima e a parte superior do dispositivo (no modo retrato) estiver apontando para oeste. O dispositivo girou 90 graus em torno do eixo Z da Terra.
 
-* Quando o dispositivo é mantido na vertical para que a parte superior (no modo retrato) aponta para o céu e faces de trás do dispositivo Norte, o dispositivo foi girada em 90 graus em torno do eixo X. O `Quaternion` valor é (0.707, 0, 0, 0.707).
+* O dispositivo terá girado 90 graus ao redor do eixo X quando for colocado na posição vertical de modo que a parte superior (no modo retrato) aponte para o céu e a parte de trás do dispositivo fique voltada para norte. O valor `Quaternion` é (0.707, 0, 0, 0.707).
 
-* Se o dispositivo estiver posicionado para que sua borda esquerda está em uma tabela e os principais pontos Norte, o dispositivo foi girado &ndash;90 graus em torno do eixo Y (ou 90 graus em torno do eixo Y negativo). O `Quaternion` valor é (0,-0.707, 0, 0.707).
+* O dispositivo terá sido girado &ndash;90 graus ao redor do eixo Y (ou 90 graus ao redor do eixo negativo Y) se ele estiver posicionado de forma que sua borda esquerda esteja sobre uma mesa e os pontos superiores ao norte. O valor `Quaternion` é (0, -0.707, 0, 0.707).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
-- [Código-fonte OrientationSensor](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/OrientationSensor)
-- [Documentação da API OrientationSensor](xref:Xamarin.Essentials.OrientationSensor)
+- [Código-fonte do OrientationSensor](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/OrientationSensor)
+- [Documentação da API do OrientationSensor](xref:Xamarin.Essentials.OrientationSensor)

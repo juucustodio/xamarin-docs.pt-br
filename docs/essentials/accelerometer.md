@@ -5,18 +5,18 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 53e7ca70184270662d27043387da836ad44432fe
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 98793d82e553ffe45bf3cd37314a6fe70d856f2f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40184423"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102666"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: Acelerômetro
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-A classe **Acelerômetro** permite monitorar o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo no espaço tridimensional.
+A classe **Accelerometer** permite monitorar o sensor de acelerômetro do dispositivo que indica a aceleração do dispositivo no espaço tridimensional.
 
 ## <a name="using-accelerometer"></a>Uso do acelerômetro
 
@@ -77,11 +77,11 @@ O eixo X é horizontal e aponta para a direita; o eixo Y é vertical e aponta pa
 
 Exemplos:
 
-* Quando o dispositivo estiver em uma superfície plana e for empurrado da esquerda para a direita, o valor de aceleração x será positivo.
+- Quando o dispositivo estiver em uma superfície plana e for empurrado da esquerda para a direita, o valor de aceleração x será positivo.
 
-* Quando o dispositivo estiver em uma superfície plana, o valor de aceleração será +1,00 G ou (+9,81 m/s2), o que corresponde à aceleração do dispositivo (0 m/s2) menos a força da gravidade (-9,81 m/s2) e normalizado em G.
+- Quando o dispositivo estiver em uma superfície plana, o valor de aceleração será +1,00 G ou (+9,81 m/s2), o que corresponde à aceleração do dispositivo (0 m/s2) menos a força da gravidade (-9,81 m/s2) e normalizado em G.
 
-* Quando o dispositivo estiver em uma superfície plana e for empurrado para cima com uma aceleração de A m/s2, o valor da aceleração será igual a A + 9,81, o que corresponde à aceleração do dispositivo (+A m/s2) menos a força da gravidade (-9,81 m/s2) e normalizado em G.
+- Quando o dispositivo estiver em uma superfície plana e for empurrado para cima com uma aceleração de A m/s^2, o valor da aceleração será igual a A + 9,81, o que corresponde à aceleração do dispositivo (+A m/s^2) menos a força da gravidade (-9,81 m/s^2) e normalizado em G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

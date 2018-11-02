@@ -1,32 +1,36 @@
 ---
-title: Navegador aberto Xamarin.Essentials
-description: A classe de navegador no Xamarin.Essentials permite que um aplicativo abrir um link da web no navegador preferencial sistema otimizado ou navegador externo.
+title: Xamarin.Essentials Open Browser
+description: A classe Browser no Xamarin.Essentials permite que um aplicativo abra um link da Web no navegador preferido do sistema otimizado ou no navegador externo.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 7e58d439f5a6eaafe9b1b5e7ca874a986e468cb9
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: a68837ac4447dabcf52a1d1b27913adf80b4cbd7
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353276"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675387"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: navegador
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **navegador** classe permite que um aplicativo abrir um link da web no navegador preferencial sistema otimizado ou navegador externo.
+A classe **Browser** permite que um aplicativo abra um link da Web no navegador preferido do sistema otimizado ou no navegador externo.
 
-## <a name="using-browser"></a>Usando o navegador
+## <a name="get-started"></a>Introdução
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-browser"></a>Uso do Browser
+
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de navegador funciona chamando o `OpenAsync` método com o `Uri` e `BrowserLaunchMode`.
+A funcionalidade Browser funciona chamando o método `OpenAsync` com `Uri` e `BrowserLaunchMode`.
 
 ```csharp
 
@@ -39,25 +43,25 @@ public class BrowserTest
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Particularidades de implementação de plataforma
+## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-O modo de início determina como o navegador é iniciado:
+O Modo de Inicialização determina como o navegador é iniciado:
 
 ## <a name="system-preferred"></a>Sistema preferido
 
-[Guias personalizadas do Chrome](https://developer.chrome.com/multidevice/android/customtabs) será tentada a ser usado o Uri de carregar e manter o reconhecimento de navegação.
+As [Custom Tabs do Chrome](https://developer.chrome.com/multidevice/android/customtabs) tentarão ser usadas para carregar o Uri e manter o reconhecimento da navegação.
 
 ## <a name="external"></a>Externo
 
-Um `Intent` será usado para solicitar o Uri a ser aberto por meio do navegador normal sistemas.
+Uma `Intent` será usada para solicitar o Uri que será aberto por meio do navegador normal dos sistemas.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Sistema preferido
 
-[Ter o SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) é usado para carregar o Uri e manter o reconhecimento de navegação.
+[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) é usado para carregar o Uri e manter o reconhecimento da navegação.
 
 ## <a name="external"></a>Externo
 
@@ -65,11 +69,11 @@ O padrão `OpenUrl` no aplicativo principal é usado para iniciar o navegador pa
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-O navegador do usuário padrão sempre será iniciado independentemente do `BrowserLaunchMode`.
+O navegador padrão do usuário sempre será iniciado independentemente do `BrowserLaunchMode`.
 
 --------------
 
 ## <a name="api"></a>API
 
-- [Código de origem do navegador](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
-- [Documentação do navegador de API](xref:Xamarin.Essentials.Browser)
+- [Código-fonte do Browser](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
+- [Documentação da API do Browser](xref:Xamarin.Essentials.Browser)

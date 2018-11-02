@@ -1,54 +1,91 @@
 ---
-title: 'Xamarin.Essentials: Armazenamento seguro'
-description: Este documento descreve a classe de SecureStorage Xamarin.Essentials, que ajuda a armazenar com segurança os pares chave/valor simples. Ele discute como usar a classe, particularidades de implementação de plataforma e as limitações.
+title: 'Xamarin.Essentials: Secure Storage'
+description: Este documento descreve a classe SecureStorage no Xamarin.Essentials, que ajuda a armazenar com segurança os pares de chave/valor simples. Ele aborda como usar a classe, os detalhes da implementação da plataforma e as limitações.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
-author: redth
-ms.author: jodick
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2dfdb7051b269e73c68290a557849b9ae606c165
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: a5b5385af991ff988902bb3ed9670cd71d421bc6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353289"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116024"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Armazenamento seguro
+# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Secure Storage
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **SecureStorage** classe ajuda a armazenar com segurança os pares chave/valor simples.
+A classe **SecureStorage** ajuda a armazenar com segurança os pares de chave/valor simples.
 
 ## <a name="getting-started"></a>Guia de Introdução
 
-Para acessar o **SecureStorage** funcionalidade, a seguinte configuração específica da plataforma é necessária:
+Para acessar a funcionalidade **SecureStorage**, a seguinte configuração específica da plataforma é necessária:
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Nenhuma configuração adicional necessária.
+> [!TIP]
+> O [Backup Automático para Aplicativos](https://developer.android.com/guide/topics/data/autobackup) é um recurso do Android 6.0 (nível da API 23) e posterior que faz o backup dos dados do aplicativo do usuário (preferências compartilhadas, arquivos no armazenamento interno do aplicativo e outros arquivos específicos). Os dados são restaurados quando um aplicativo é reinstalado ou instalado em um novo dispositivo. Isso pode afetar a `SecureStorage`, que utiliza as preferências de compartilhamento do backup e que não podem ser descriptografadas quando a restauração ocorrer. O Xamarin.Essentials trata automaticamente desse caso removendo a chave para que ela possa ser redefinida. No entanto, você pode avançar e desabilitar o Backup Automático.
+
+### <a name="enable-or-disable-backup"></a>Habilitar ou desabilitar o backup
+Você pode optar por desabilitar o Backup Automático para todo o aplicativo definindo a configuração `android:allowBackup` como falsa no arquivo `AndroidManifest.xml`. Essa abordagem só é recomendada se você planeja restaurar dados de uma outra maneira.
+
+```xml
+<manifest ... >
+    ...
+    <application android:allowBackup="false" ... >
+        ...
+    </application>
+</manifest>
+```
+
+### <a name="selective-backup"></a>Backup seletivo
+O backup automático pode ser configurado para desabilitar o backup de um conteúdo específico. Você pode criar uma regra personalizada definida para excluir itens do `SecureStore` de passarem por backup.
+
+1. Defina o atributo `android:fullBackupContent` em seu **AndroidManifest.xml**:
+
+    ```xml
+    <application ...
+        android:fullBackupContent="@xml/auto_backup_rules">
+    </application>
+    ```
+
+2. Crie um novo arquivo XML chamado **auto_backup_rules.xml** no diretório **Resources/xml**. Em seguida, defina o seguinte conteúdo que inclui todas as preferências compartilhadas, exceto para `SecureStorage`:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <full-backup-content>
+        <include domain="sharedpref" path="."/>
+        <exclude domain="sharedpref" path="${applicationId}.xamarinessentials.xml"/>
+    </full-backup-content>
+    ```
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Ao desenvolver no simulador de iOS, habilite a **Keychain** direitos e adicionar um grupo de acesso ao conjunto de chaves para o identificador de pacote do aplicativo.
+Ao desenvolver no **simulador do iOS**, habilite o direito **Keychain** e inclua um grupo de acesso keychain para o identificador do pacote do aplicativo. 
 
-Abra o **Entitlements. plist** no projeto do iOS e localizar o **conjunto de chaves** direitos e habilitá-lo. Isso adicionará automaticamente o identificador do aplicativo como um grupo.
+Abra **Entitlements.plist** no projeto do iOS, localize o direito **Keychain** e habilite-o. Isso adicionará automaticamente o identificador do aplicativo como um grupo.
 
-Nas propriedades do projeto, sob **assinatura do pacote iOS** definir os **direitos personalizados** para **Entitlements. plist**.
+Nas propriedades do projeto, em **Assinatura de pacote do iOS**, configure os **Direitos Personalizados** para **Entitlements.plist**.
+
+> [!TIP]
+> Ao implantar em um dispositivo iOS, esse direito não é necessário e deverá ser removido.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Nenhuma configuração adicional necessária.
+Não exige mais configurações.
 
 -----
 
-## <a name="using-secure-storage"></a>Usando o armazenamento seguro
+## <a name="using-secure-storage"></a>Uso do armazenamento seguro
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Para salvar um valor para um determinado _chave_ no armazenamento seguro:
+Para salvar um valor para uma determinada _chave_ no armazenamento seguro:
 
 ```csharp
 try
@@ -61,7 +98,7 @@ catch (Exception ex)
 }
 ```
 
-Para recuperar um valor de armazenamento seguro:
+Para recuperar um valor do armazenamento seguro:
 
 ```csharp
 try
@@ -75,7 +112,7 @@ catch (Exception ex)
 ```
 
 > [!NOTE]
-> Se não houver nenhum valor associado com a chave solicitada, `GetAsync` retornará `null`.
+> Se não houver valores associados à chave solicitada, `GetAsync` retornará `null`.
 
 Para remover uma chave específica, chame:
 
@@ -90,43 +127,43 @@ SecureStorage.RemoveAll();
 ```
 
 
-## <a name="platform-implementation-specifics"></a>Particularidades de implementação de plataforma
+## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-O [Android KeyStore](https://developer.android.com/training/articles/keystore.html) é usado para armazenar a chave de criptografia usada para criptografar o valor antes de ser salvo em um [preferências compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html) com um nome de arquivo de **.xamarinessentials [YOUR-APP-pacote-ID]** .  A chave usada no arquivo de preferências compartilhado é um _Hash MD5_ da chave passado para o `SecureStorage` APIs.
+O [Repositório de chaves do Android](https://developer.android.com/training/articles/keystore.html) é usado para armazenar a chave de criptografia usada para criptografar o valor antes que ele seja salvo em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html) com um nome de arquivo **[ID-DO-SEU-PACOTE-DE-APLICATIVO].xamarinessentials**.  A chave usada no arquivo de preferências compartilhadas é um _Hash MD5_ da chave passada para as APIs do `SecureStorage`.
 
-## <a name="api-level-23-and-higher"></a>Nível de API 23 e superior
+## <a name="api-level-23-and-higher"></a>Nível da API 23 e superior
 
-Nos níveis de API mais recentes, uma **AES** chave é obtida do repositório de chaves Android e usada com um **GCM/AES/NoPadding** criptografia para criptografar o valor antes de ser armazenada no arquivo de preferências compartilhado.
+Em níveis da API mais recentes, uma chave **AES** é obtida do Repositório de chaves do Android e usada com uma cifra **AES/GCM/NoPadding** para criptografar o valor antes que ele seja armazenado no arquivo de preferências compartilhadas.
 
-## <a name="api-level-22-and-lower"></a>API nível 22 e inferior
+## <a name="api-level-22-and-lower"></a>Nível da API 22 e inferior
 
-Nos níveis de API mais antigos, o repositório de chaves Android dá suporte apenas a armazenar **RSA** chaves, que é usado com um **ECB/RSA/PKCS1Padding** criptografia para criptografar um **AES** (aleatoriamente da chave gerado em tempo de execução) e armazenados no arquivo de preferências compartilhado sob a chave _SecureStorageKey_, se um já não tiver sido gerado.
+Em níveis de API mais antigos, o Repositório de chaves do Android só é compatível com o armazenamento de chaves **RSA**, que é usado com uma cifra **RSA/ECB/PKCS1Padding** para criptografar uma chave **AES** (aleatoriamente gerada no tempo de execução) e armazenado no arquivo de preferências compartilhadas sob a chave _SecureStorageKey_, caso ainda não tenha sido gerado.
 
-**SecureStorage** usa o [preferências](preferences.md) API e a persistência de dados mesmo descrita a seguir o [preferências](preferences.md#persistence) documentação. Se um dispositivo é atualizado da API nível 22 ou inferior ao nível de API 23 e superior, esse tipo de criptografia continuará a ser usado, a menos que o aplicativo é desinstalado ou **RemoveAll** é chamado.
+**SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence). Se um dispositivo fizer o upgrade do nível da API 22 ou inferior para o nível da API 23 e superior, esse tipo de criptografia continuará a ser usado, a menos que o aplicativo seja desinstalado ou **RemoveAll** seja chamado.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[Conjunto de chaves](https://developer.xamarin.com/api/type/Security.SecKeyChain/) é usado para armazenar valores com segurança em dispositivos iOS.  O `SecRecord` usado para armazenar o valor tem um `Service` valor definido como **.xamarinessentials [YOUR-APP-BUNDLE-ID]**.
+[KeyChain](https://developer.xamarin.com/api/type/Security.SecKeyChain/) é usado para armazenar valores em dispositivos iOS com segurança.  O `SecRecord` usado para armazenar o valor tem um valor `Service` definido como **[ID-DO-SEU-PACOTE-DO-APLICATIVO].xamarinessentials**.
 
-Em alguns casos os dados do conjunto de chaves estão sincronizados com o iCloud e desinstalar o aplicativo não pode remover os valores seguros de iCloud e outros dispositivos do usuário.
+Em alguns casos os dados do conjunto de chaves estão sincronizados com o iCloud e a desinstalação do aplicativo poderá não remover os valores seguros do iCloud e outros dispositivos do usuário.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) é usado para valores criptografados com segurança em dispositivos UWP.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) é usado para valores criptografados em dispositivos UWP com segurança.
 
-Valores criptografados são armazenados no `ApplicationData.Current.LocalSettings`, dentro de um contêiner com o nome **.xamarinessentials [YOUR-APP-ID]**.
+Os valores criptografados são armazenados em `ApplicationData.Current.LocalSettings`, dentro de um contêiner com o nome **[ID-DE-SEU-APLICATIVO].xamarinessentials**.
 
-**SecureStorage** usa o [preferências](preferences.md) API e a persistência de dados mesmo descrita a seguir o [preferências](preferences.md#persistence) documentação.
+**SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence).
 
 -----
 
 ## <a name="limitations"></a>Limitações
 
-Essa API destina-se para armazenar pequenas quantidades de texto.  Desempenho pode ser lento se você tentar usá-lo para armazenar grandes quantidades de texto.
+Essa API destina-se a armazenar pequenas quantidades de texto.  O desempenho pode ser lento se você tentar usá-lo para armazenar grandes quantidades de texto.
 
 ## <a name="api"></a>API
 
-- [Código-fonte SecureStorage](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
-- [Documentação da API SecureStorage](xref:Xamarin.Essentials.SecureStorage)
+- [Código-fonte de SecureStorage](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
+- [Documentação da API de SecureStorage](xref:Xamarin.Essentials.SecureStorage)
