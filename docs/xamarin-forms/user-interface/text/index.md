@@ -1,40 +1,40 @@
 ---
-title: Texto em xamarin. Forms
-description: Xamarin. Forms tem três modos de exibição primários para trabalhar com texto, e este artigo explica como usá-las para inserir e exibir o texto em aplicativos xamarin. Forms.
+title: Texto no xamarin. Forms
+description: Xamarin. Forms tem três modos de exibição primários para trabalhar com texto, e este artigo explica como usá-los para inserir e exibir texto em aplicativos xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: c5bd157299c9388b561f316e65f2ba290bd15224
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 10/26/2018
+ms.openlocfilehash: 60dd54ff8ed06cbeea3a3e202e7058ea7747ea3d
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244981"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911561"
 ---
-# <a name="text-in-xamarinforms"></a>Texto em xamarin. Forms
+# <a name="text-in-xamarinforms"></a>Texto no xamarin. Forms
 
 _Usando o xamarin. Forms para inserir ou exibir texto._
 
 Xamarin. Forms tem três modos de exibição primários para trabalhar com texto:
 
-- **[Rótulo](#Label)**  &mdash; para apresentar o texto de único ou multilinha. Pode mostrar texto com várias opções de formatação na mesma linha.
-- **[Entrada](#Entry)**  &mdash; para inserir o texto que é apenas uma linha. Entrada tem um modo de senha.
-- **[Editor de](#Editor)**  &mdash; para inserir texto que pode levar mais de uma linha.
+- **[Rótulo](#Label)**  &mdash; para a apresentação de texto único ou várias linha. Pode mostrar o texto com várias opções de formatação na mesma linha.
+- **[Entrada](#Entry)**  &mdash; para inserção de texto que é apenas uma linha. Entrada tem um modo de senha.
+- **[Editor](#Editor)**  &mdash; para inserção de texto que pode levar mais de uma linha.
 
-A aparência do texto pode ser alterada usando internas ou personalizadas [estilos](#Styles) e suportam a alguns controles personalizados [fontes](#Fonts).
+Aparência do texto pode ser alterada usando internas ou personalizadas [estilos](#Styles) e alguns controles oferecem suporte personalizado [fontes](#Fonts).
 
 <a name="Label" />
 
 ## <a name="labellabelmd"></a>[Rótulo](label.md)
 
-O `Label` exibição é usada para exibir texto. Ele pode mostrar várias linhas de texto ou uma única linha de texto. `Label` pode apresentar o texto com várias opções de formatação usadas em embutido. O modo de exibição de rótulo pode encapsular ou truncar texto quando ela não couber em uma linha.
+O `Label` exibição é usada para exibir o texto. Ele pode mostrar várias linhas de texto ou uma única linha de texto. `Label` pode apresentar texto com várias opções de formatação usadas em embutido. O modo de exibição do rótulo pode encapsular ou truncar o texto quando ela não couber em uma única linha.
 
 ![](images/label.png "Exemplo de rótulo")
 
-Consulte o [rótulo](label.md) do artigo para obter mais informações.
+Consulte a [rótulo](label.md) do artigo para obter mais informações.
 
 Para obter informações sobre como personalizar a fonte usada em um rótulo, consulte [fontes](fonts.md).
 
@@ -42,37 +42,35 @@ Para obter informações sobre como personalizar a fonte usada em um rótulo, co
 
 ## <a name="entryentrymd"></a>[Entry](entry.md)
 
-`Entry` é usado para aceitar a entrada de texto de linha única. `Entry` oferece controle sobre as cores, mas não pode ter personalizado fontes. `Entry` apresenta um modo de senha e pode mostrar texto do espaço reservado até que o texto é inserido.
+`Entry` é usado para aceitar a entrada de texto de linha única. `Entry` controle de ofertas sobre fontes e cores. `Entry` tem um modo de senha e pode mostrar o texto de espaço reservado até que o texto é inserido.
 
 ![](images/entry.png "Exemplo de entrada")
 
-Consulte o [entrada](entry.md) artigo para obter mais informações.
+Consulte a [entrada](entry.md) artigo para obter mais informações.
 
-Observe que, ao contrário de `Label`, `Entry` não pode ter configurações de fonte personalizada.
+Observe que, diferentemente `Label`, `Entry` não pode ter configurações de fonte personalizado.
 
 <a name="Editor" />
 
 ## <a name="editoreditormd"></a>[Editor](editor.md)
 
-`Editor` é usado para aceitar a entrada de texto de várias linhas. `Editor` pode ter uma cor de plano de fundo personalizado, mas a cor do texto e a fonte não pode ser alterada.
+`Editor` é usado para aceitar a entrada de texto de várias linhas. `Editor` controle de ofertas sobre fontes e cores.
 
 ![](images/editor.png "Exemplo de editor")
 
-Consulte o [Editor](editor.md) artigo para obter mais informações.
+Consulte a [Editor](editor.md) artigo para obter mais informações.
 
 <a name="Fonts" />
 
 ## <a name="fontsfontsmd"></a>[Fontes](fonts.md)
 
-O `Label` controle oferece suporte às configurações de fonte diferente usando as fontes internas em cada plataforma ou fontes personalizadas que acompanha seu aplicativo. Consulte o [fontes](fonts.md) do artigo para obter mais informações.
+O `Label` controle dá suporte a configurações de fonte diferente usando as fontes internas em cada plataforma ou fontes personalizadas, incluídas com o seu aplicativo. Consulte a [fontes](fonts.md) do artigo para obter mais informações.
 
 <a name="Styles" />
 
 ## <a name="stylesstylesmd"></a>[Estilos](styles.md)
 
-Consulte [trabalhando com estilos](~/xamarin-forms/user-interface/styles/index.md) para saber como configurar a fonte, [cor](~/xamarin-forms/user-interface/colors.md)e outras propriedades de exibição que se aplicam a vários controles.
-
-
+Consulte a [trabalhar com estilos](~/xamarin-forms/user-interface/styles/index.md) para saber como configurar a fonte, [cor](~/xamarin-forms/user-interface/colors.md)e outras propriedades de exibição que se aplicam a vários controles.
 
 ## <a name="related-links"></a>Links relacionados
 
