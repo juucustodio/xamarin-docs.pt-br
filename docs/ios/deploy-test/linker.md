@@ -1,5 +1,5 @@
 ---
-title: Vinculando aplicativos Xamarin.iOS
+title: Usando Linker em aplicativos Xamarin.iOS
 description: Este documento descreve o vinculador do Xamarin.iOS, que é usado para eliminar código não utilizado de um aplicativo Xamarin.iOS a fim de reduzir seu tamanho.
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
@@ -14,17 +14,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2018
 ms.locfileid: "50234876"
 ---
-# <a name="linking-xamarinios-apps"></a>Vinculando aplicativos Xamarin.iOS
+# <a name="linking-xamarinios-apps"></a>Usando Linker em aplicativos Xamarin.iOS
 
-Ao compilar seu aplicativo, o Visual Studio para Mac ou o Visual Studio chama uma ferramenta chamada **mtouch**, que inclui um vinculador para código gerenciado. Ele é usado para remover os recursos que o aplicativo não está usando das bibliotecas de classe. A meta é reduzir o tamanho do aplicativo, que será fornecido com apenas os bits necessários.
+Ao compilar seu aplicativo, o Visual Studio para Mac ou o Visual Studio chama uma ferramenta chamada **mtouch**, que inclui um linker para código gerenciado. Ele é usado para remover os recursos que o aplicativo não está usando das class libraries. A meta é reduzir o tamanho do aplicativo, que será fornecido com apenas as partes necessárias.
 
-O vinculador usa análise estática para determinar os diferentes caminhos de código que seu aplicativo é suscetível a seguir. Ela é um pouco pesada, já que precisa passar por todos os detalhes de cada assembly, para verificar se nada detectável foi removido. Ele não é habilitado por padrão em builds do simulador para acelerar o tempo de compilação durante a depuração. No entanto, já que ele produz aplicativos menores e que pode acelerar a compilação AOT e o upload para o dispositivo, todos os *builds de dispositivos (versão)* estão usando o vinculador por padrão.
+O linker usa análise estática para determinar os diferentes caminhos de código que seu aplicativo é suscetível a seguir. Ela é um pouco pesada, já que precisa passar por todos os detalhes de cada assembly, para verificar se nada detectável foi removido. Ele não é habilitado por padrão em builds do simulador para acelerar o tempo de compilação durante a depuração. No entanto, já que ele produz aplicativos menores e que pode acelerar a compilação AOT e o upload para o dispositivo, todos os *builds de dispositivos (Release)* estão usando o linker por padrão.
 
-Já que o vinculador é uma ferramenta estática, ele não pode marcar para tipos de inclusão e métodos que são chamados por meio de reflexão, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
+Já que o linker é uma ferramenta estática, ele não pode marcar para inclusão tipos e métodos que são chamados por meio de reflection, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
 
 <a name="Linker_Behavior" />
 
-## <a name="linker-behavior"></a>Comportamento do vinculador
+## <a name="linker-behavior"></a>Comportamento do Linker
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -44,7 +44,7 @@ Faça o seguinte:
 2. Nas **Propriedades do Projeto**, selecione **Build do iOS**:
 
     ![](linker-images/linking02w.png "Selecionar Build do iOS")
-3. Siga as instruções abaixo para alterar as opções de vinculação.
+3. Siga as instruções abaixo para alterar as opções do linker.
 
 -----
 
@@ -169,6 +169,6 @@ Siga as [instruções para criar um arquivo de configuração do vinculador](~/c
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Configuração personalizada do vinculador](~/cross-platform/deploy-test/linker.md)
-- [Vinculação no Mac](~/mac/deploy-test/linker.md)
-- [Vinculação no Android](~/android/deploy-test/linker.md)
+- [Configuração personalizada do Linker](~/cross-platform/deploy-test/linker.md)
+- [Usando Linker no Mac](~/mac/deploy-test/linker.md)
+- [Usando Linker no Android](~/android/deploy-test/linker.md)
