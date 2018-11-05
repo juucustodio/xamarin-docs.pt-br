@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: dd48d917b669e5f83eaafa2f1ba5af5d9a19a342
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 78b7235d8c9e45c2179b1cca2827f45fe6edd8b2
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107204"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675101"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introdução ao Xamarin.Essentials
 
@@ -66,7 +66,7 @@ O Xamarin.Essentials está disponível como um pacote NuGet que pode ser adicion
     # <a name="androidtabandroid"></a>[Android](#tab/android)
 
     O Xamarin.Essentials suporta uma versão mínima do Android 4.4, correspondente ao nível da API 19, mas, para compilação, a versão de destino do Android deve ser 8.1, que corresponde ao nível da API 27. (No Visual Studio, essas duas versões são definidas na caixa de diálogo Propriedades do Projeto para projetos do Android, na guia Manifesto do Android. No Visual Studio para Mac, elas são definidas na caixa de diálogo Opções do Projeto para projetos do Android, na guia Aplicativo Android). 
-    
+
     O Xamarin.Essentials instala a versão 27.0.2.1 das bibliotecas Xamarin.Android.Support necessárias. Quaisquer outras bibliotecas Xamarin.Android.Support exigidas pelo aplicativo também devem ser atualizadas para a versão 27.0.2.1 usando o gerenciador de pacotes NuGet. Todas as bibliotecas Xamarin.Android.Support usadas pelo aplicativo devem ser as mesmas e devem ter, pelo menos, a versão 27.0.2.1. Confira a [página de solução de problemas](troubleshooting.md) se tiver problemas para adicionar o NuGet do Xamarin.Essentials ou para atualizar NuGets na sua solução.
 
     No `MainLauncher` do projeto do Android ou qualquer `Activity` que é iniciada, o Xamarin.Essentials deve ser inicializado no método `OnCreate`:
@@ -108,7 +108,7 @@ O Xamarin.Essentials está disponível como um pacote NuGet que pode ser adicion
 
 ## <a name="other-resources"></a>Outros recursos
 
-Recomendamos que novos desenvolvedores no Xamarin confiram a [Introdução com o desenvolvimento do Xamarin](~/cross-platform/getting-started/index.md).
+Recomendamos que os novos desenvolvedores do Xamarin confiram a [Introdução ao desenvolvimento do Xamarin](~/cross-platform/getting-started/index.md).
 
 Visite o [Repositório do GitHub do Xamarin.Essentials](http://github.com/xamarin/Essentials) para ver o código-fonte atual, o que vem a seguir, colocar exemplos em prática e clonar o repositório. Contribuições da comunidade são bem-vindas!
 

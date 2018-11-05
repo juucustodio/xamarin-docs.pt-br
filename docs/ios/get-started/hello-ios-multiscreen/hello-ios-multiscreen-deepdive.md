@@ -1,6 +1,6 @@
 ---
 title: Olá, iOS multitela – análise detalhada
-description: Este documento usa uma análise mais detalhada sobre o aplicativo Phoneword expandido, com maiores considerações sobre o padrão modelo-exibição-controlador, sobre a navegação do iOS além de outros conceitos de desenvolvimento do iOS.
+description: Este documento analisa em mais detalhes o aplicativo Phoneword expandido, com maiores considerações sobre o padrão modelo-exibição-controlador, sobre a navegação do iOS, além de outros conceitos de desenvolvimento do iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: d698cd1511e82116180a8af46891973f5f90343b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61a90632849787e28526f83d53247a0491148148
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118962"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235084"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
 
@@ -52,7 +52,7 @@ Em alguns casos, a parte do Modelo do MVC pode estar vazia. Por exemplo, podemos
 > [!NOTE]
 > Na literatura de alguns, a parte do Modelo do padrão MVC pode referir-se a todo o back-end do aplicativo e não apenas aos dados exibidos na interface do usuário. Neste guia, usamos uma interpretação moderna do Modelo, mas a distinção não é particularmente importante.
 
-### <a name="view"></a>Exibir
+### <a name="view"></a>View
 
 Uma Exibição é o componente responsável por renderizar a interface do usuário. Em quase todas as plataformas que usam o padrão MVC, a interface do usuário é composta por uma hierarquia de exibições. Podemos pensar em uma Exibição no MVC como uma hierarquia de exibições com uma única exibição, conhecida como exibição de raiz, na parte superior da hierarquia e qualquer número de exibições filho (conhecidas como subexibições) abaixo dela. No iOS, a hierarquia de Exibição de Conteúdo de uma tela corresponde ao componente de Exibição no MVC.
 

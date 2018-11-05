@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: e9340aaae56da9314c20658b2b05570505fbd742
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c00f074e2f002d82795e9bd445fdf617275089f
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111402"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301260"
 ---
 # <a name="manually-signing-the-apk"></a>Assinando manualmente o APK
 
@@ -47,7 +47,7 @@ No entanto, esse repositório de chaves não é reconhecido como um repositório
 Por esse motivo, um repositório de chaves privado deve ser criado e usado para assinar aplicativos. Essa é uma etapa que deve ser executada apenas uma vez, já que a mesma chave será usada para a publicação de atualizações e, em seguida, poderá ser usada para assinar outros aplicativos.
 
 É importante proteger esse repositório de chaves. Se ele for perdido, não será possível publicar atualizações no aplicativo com o Google Play.
-A única solução para o problema causado por um repositório de chaves perdido seria criar um novo repositório de chaves, assinar novamente o APK com a nova chave e, em seguida, enviar um novo aplicativo. Em seguida, o aplicativo antigo teria que ser removido do Google Play. Da mesma forma, se esse novo repositório de chaves for comprometido ou distribuído publicamente, será possível que versões não oficiais ou mal-intencionadas de um aplicativo sejam distribuídas.
+A única solução para o problema causado por um repositório de chaves perdido seria criar um novo repositório de chaves, assinar novamente o APK com a nova chave e, em seguida, enviar um novo aplicativo. Em seguida, o aplicativo antigo teria que ser removido do Google Play. Da mesma forma, quando esse novo repositório de chaves é comprometido ou distribuído publicamente, é possível que versões não oficiais ou mal-intencionadas de um aplicativo sejam distribuídas.
 
 
 

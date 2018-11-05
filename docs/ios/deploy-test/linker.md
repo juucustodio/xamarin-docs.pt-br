@@ -1,6 +1,6 @@
 ---
 title: Usando Linker em aplicativos Xamarin.iOS
-description: Este documento descreve o vinculador do Xamarin.iOS, que é usado para eliminar código não utilizado de um aplicativo Xamarin.iOS a fim de reduzir seu tamanho.
+description: Este documento descreve o Linker do Xamarin.iOS, que é usado para eliminar código não utilizado de um aplicativo Xamarin.iOS a fim de reduzir seu tamanho.
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
@@ -28,13 +28,13 @@ Já que o linker é uma ferramenta estática, ele não pode marcar para inclusã
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-O processo de vinculação pode ser personalizado por meio do menu suspenso de comportamento do vinculador em **Opções do Projeto**. Para acessá-lo, clique duas vezes no projeto iOS e navegue até **Build do iOS > Opções do Vinculador**, conforme ilustrado abaixo:
+O processo de _linking_ pode ser personalizado por meio do menu suspenso de comportamento do linker em **Opções do Projeto**. Para acessá-lo, clique duas vezes no projeto iOS e navegue até **Build do iOS > Opções do Linker**, conforme ilustrado abaixo:
 
 [![](linker-images/image1.png "Opções do Vinculador")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-O processo de vinculação pode ser personalizado por meio do menu suspenso de comportamento do vinculador nas **Propriedades do Projeto** no Visual Studio.
+O processo de _linking_ pode ser personalizado por meio do menu suspenso de comportamento do linker nas **Propriedades do Projeto** no Visual Studio.
 
 Faça o seguinte:
 
@@ -53,7 +53,7 @@ As três principais opções oferecidas são descritas a seguir:
 
 ### <a name="dont-link"></a>Não Vincular
 
-Desabilitar a vinculação assegura que nenhum assembly seja modificado. Por motivos de desempenho, essa é a configuração padrão quando o seu IDE se destina ao simulador de iOS. Para builds de dispositivos, isso só deve ser usado como uma solução alternativa sempre que o vinculador contém um bug que impede que o aplicativo seja executado. Se o aplicativo funciona apenas com *-nolink*, envie um [relatório de bug](https://github.com/xamarin/xamarin-macios/issues/new).
+Desabilitar o _linker_ assegura que nenhum assembly seja modificado. Por motivos de desempenho, essa é a configuração padrão quando o seu IDE se destina ao simulador de iOS. Para builds de dispositivos, isso só deve ser usado como uma solução alternativa sempre que o linker contém um bug que impede que o aplicativo seja executado. Se o aplicativo funciona apenas com *-nolink*, envie um [relatório de bug](https://github.com/xamarin/xamarin-macios/issues/new).
 
 Isso corresponde à opção *-nolink* ao usar a ferramenta de linha de comando mtouch.
 
@@ -61,9 +61,9 @@ Isso corresponde à opção *-nolink* ao usar a ferramenta de linha de comando m
 
 ### <a name="link-sdk-assemblies-only"></a>Vincular somente os assemblies do SDK
 
-Nesse modo, o vinculador deixará seus assemblies inalterados e reduzirá o tamanho dos assemblies do SDK (ou seja, o que é fornecido com o Xamarin.iOS) removendo tudo o que seu aplicativo não usa. Essa é a configuração padrão quando seu IDE se destina a dispositivos iOS.
+Nesse modo, o _linker_ deixará seus assemblies inalterados e reduzirá o tamanho dos assemblies do SDK (ou seja, o que é fornecido com o Xamarin.iOS) removendo tudo o que seu aplicativo não usa. Essa é a configuração padrão quando seu IDE se destina a dispositivos iOS.
 
-Essa é a opção mais simples, pois não requer nenhuma alteração ao código. A diferença observada vinculando-se tudo é que o vinculador não pode executar algumas otimizações nesse modo, portanto, então trata-se de uma compensação entre o trabalho necessário para vincular tudo e o tamanho final do aplicativo.
+Essa é a opção mais simples, pois não requer nenhuma alteração ao código. A diferença observada vinculando-se tudo é que o _linker_ não pode executar algumas otimizações nesse modo, portanto, então trata-se de uma compensação entre o trabalho necessário para vincular tudo e o tamanho final do aplicativo.
 
 Isso corresponde à opção *-linksdk* ao usar a ferramenta de linha de comando mtouch.
 
@@ -71,7 +71,7 @@ Isso corresponde à opção *-linksdk* ao usar a ferramenta de linha de comando 
 
 ### <a name="link-all-assemblies"></a>Vincular todos os assemblies
 
-Ao vincular tudo, o vinculador pode usar o conjunto completo de suas otimizações para tornar o aplicativo tão pequeno quanto possível. Ele modificará o código do usuário, que poderá falhar sempre que o código usar recursos de uma maneira não detectável pela análise estática do vinculador. Nesses casos, por exemplo, webservices, reflexão ou serialização, alguns ajustes podem ser necessários em seu aplicativo para vincular tudo.
+Ao vincular tudo, o _linker_ pode usar o conjunto completo de suas otimizações para tornar o aplicativo o menor possível. Ele modificará o código do usuário, que poderá falhar sempre que o código usar recursos de uma maneira não detectável pela análise estática do _linker_. Nesses casos, por exemplo, webservices, _reflection_ ou serialização, alguns ajustes podem ser necessários em seu aplicativo para vincular tudo.
 
 Isso corresponde à opção *-linkall* ao usar a ferramenta de linha de comando **mtouch**.
 
@@ -79,7 +79,7 @@ Isso corresponde à opção *-linkall* ao usar a ferramenta de linha de comando 
 
 ## <a name="controlling-the-linker"></a>Controlar o vinculador
 
-Quando você usar o vinculador, ele às vezes será removerá código que você poderia ter chamado dinamicamente, ainda que indiretamente. Para abranger esses casos, o vinculador fornece alguns recursos e opções para permitir maior controle sobre as ações dele.
+Quando você usar o _linker_, ele às vezes removerá código que você pode ter chamado dinamicamente, ainda que indiretamente. Para abranger esses casos, o _linker_ fornece alguns recursos e opções para permitir maior controle sobre as ações dele.
 
 <a name="Preserving_Code" />
 
