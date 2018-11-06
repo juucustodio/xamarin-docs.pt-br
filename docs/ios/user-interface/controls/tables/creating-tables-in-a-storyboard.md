@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d161a267c8ffa5040327db8e6e4f867a324b04f2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105799"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983608"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabalhando com tabelas no Designer do iOS
 
@@ -73,7 +73,7 @@ A primeira alteração ao storyboard é excluir a exibição de detalhes existen
 
 1.  Selecione a barra na parte inferior do controlador de exibição e excluí-lo.
 2.  Arraste uma **controlador de navegação** e uma **controlador de exibição de tabela** até o Storyboard da caixa de ferramentas. 
-3.  Crie um segue do controlador de exibição de raiz para o segundo controlador de exibição de tabela que acabou de ser adicionado. Para criar o segue, controle + arrastar *desde a célula de detalhe* para o UITableViewController recém-adicionado. Escolha a opção **mostram*** sob **seleção Segue**. 
+3.  Crie um segue do controlador de exibição de raiz para o segundo controlador de exibição de tabela que acabou de ser adicionado. Para criar o segue, controle + arrastar *desde a célula de detalhe* para o UITableViewController recém-adicionado. Escolha a opção **mostram** sob **seleção Segue**. 
 4.  Selecione o novo segue que você criou e dê a ele um identificador para referência Isso segue no código. Clique no segue e insira `TaskSegue` para o **identificador** no **painel de propriedades**, semelhante a esta:    
   [![Nomenclatura segue no painel de propriedade](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 

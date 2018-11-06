@@ -6,12 +6,12 @@ ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: fdc57e7028d3a16f9a9d2504caf1f2414d0ac94f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 84f825c19aa1ac08fbcf3e732077304218768bcc
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102978"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983595"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Usando a ferramenta de Pipeline de MonoGame
 
@@ -84,7 +84,7 @@ Vamos examinar algumas das opções mais importantes para o projeto de conteúdo
 
 ### <a name="output-folder"></a>Pasta de saída
 
-Essa é a pasta (relativo ao projeto de conteúdo em si) em que a saída **.xnb** arquivos serão salvos. Para simplificar as coisas, vamos usar a mesma pasta para manter nossa entrada e arquivos de saída. Em outras palavras, alteraremos as **pasta de saída** ser **.\**  :
+Essa é a pasta (relativo ao projeto de conteúdo em si) em que a saída **.xnb** arquivos serão salvos. Para simplificar as coisas, vamos usar a mesma pasta para manter nossa entrada e arquivos de saída. Em outras palavras, alteraremos as **pasta de saída** ser **.\\**  :
 
 ![](walkthrough-images/image10.png "")
 
