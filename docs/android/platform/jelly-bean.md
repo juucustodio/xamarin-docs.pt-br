@@ -34,7 +34,7 @@ Por fim foram adicionadas várias novas permissões no Android 4.1.
 
 ## <a name="requirements"></a>Requisitos
 
-Desenvolver aplicativos xamarin. Android usando o Jelly Bean requer o xamarin. Android 4.2.6 ou posterior e Android 4.1 (API nível 16) ser instalado por meio do Gerenciador de SDK do Android, conforme mostrado na seguinte captura de tela:
+O desenvolvimento de aplicativos xamarin. Android usando o Jelly Bean requer a instalação do xamarin. Android 4.2.6 ou posterior e Android 4.1 (API nível 16) por meio do Gerenciador de SDK do Android, conforme mostrado na seguinte captura de tela:
 
 [![Selecionando o Android 4.1 no Gerenciador de SDK do Android](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
