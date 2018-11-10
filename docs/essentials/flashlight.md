@@ -1,50 +1,52 @@
 ---
-title: 'Xamarin.Essentials: lanterna'
-description: Este documento descreve a classe lanterna Xamarin.Essentials, que tem a capacidade de ativar ou desativar a câmera do dispositivo flash para transformá-lo em uma lanterna.
+title: 'Xamarin.Essentials: Lanterna'
+description: Este documento descreve a classe Flashlight no Xamarin.Essentials, que tem a capacidade de ativar ou desativar o flash da câmera do dispositivo para transformá-lo em uma lanterna.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 8c471f64c14a2e41693c450e02f89e7ac845d060
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: d1a2ad675d615b48b8e8f8433065c5bd0bbae1d0
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675075"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: lanterna
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lanterna
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **lanterna** classe tem a capacidade de ativar ou desativar a câmera do dispositivo flash para transformá-lo em uma lanterna.
+A classe **Flashlight** tem a capacidade de ativar ou desativar o flash da câmera do dispositivo para transformá-lo em uma lanterna.
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="get-started"></a>Introdução
 
-Para acessar o **lanterna** funcionalidade a seguinte configuração específica de plataforma é necessária.
+[!include[](~/essentials/includes/get-started.md)]
+
+Para acessar a funcionalidade **Flashlight**, a seguinte configuração específica da plataforma é necessária.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-As permissões lanterna e câmera são necessárias e devem ser configuradas no projeto do Android. Isso pode ser adicionado das seguintes maneiras:
+As permissões Flashlight e Camera são necessárias e devem ser configuradas no projeto do Android. Isso pode ser usado das seguintes maneiras:
 
-Abra o **AssemblyInfo.cs** do arquivo sob o **propriedades** pasta e adicione:
+Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
 [assembly: UsesPermission(Android.Manifest.Permission.Camera)]
 ```
 
-OU atualize o manifesto do Android:
+OU Atualize o Manifesto do Android:
 
-Abra o **androidmanifest. XML** arquivo sob o **propriedades** pasta e adicione o seguinte dentro do **manifesto** nó.
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto**.
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-Ou clique com botão direito no projeto do Android e abra as propriedades do projeto. Sob **manifesto do Android** localizar o **permissões necessárias:** área e verifique se o **LANTERNA** e **CÂMERA** permissões. Isso atualizará automaticamente a **androidmanifest. XML** arquivo.
+Ou clique com o botão direito do mouse no projeto do Android e abra as propriedades do projeto. Em **Manifesto do Android**, localize a área **Permissões necessárias:** e marque as permissões **FLASHLIGHT** e **CAMERA**. Isso atualizará automaticamente o arquivo **AndroidManifest.xml**.
 
-Adicionando essas permissões [Google Play automaticamente filtrará os dispositivos](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sem hardware específico. Você pode contornar isso adicionando o seguinte ao arquivo AssemblyInfo.cs em seu projeto Android:
+Ao adicionar essas permissões, o [Google Play filtrará automaticamente os dispositivos](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sem um hardware específico. Você pode contornar isso adicionando o seguinte ao seu arquivo AssemblyInfo.cs em seu projeto do Android:
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -53,23 +55,23 @@ Adicionando essas permissões [Google Play automaticamente filtrará os disposit
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Nenhuma configuração adicional necessária.
+Não exige mais configurações.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Nenhuma configuração adicional necessária.
+Não exige mais configurações.
 
 -----
 
-## <a name="using-flashlight"></a>Usando lanterna
+## <a name="using-flashlight"></a>Como usar Flashlight
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A lâmpada pode ser ativada e desativado por meio de `TurnOnAsync` e `TurnOffAsync` métodos:
+A lanterna pode ser ativada e desativada por meio dos métodos `TurnOnAsync` e `TurnOffAsync`:
 
 ```csharp
 try
@@ -94,31 +96,31 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Particularidades de implementação de plataforma
+## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
 ### <a name="androidtabandroid"></a>[Android](#tab/android)
 
-A classe lanterna foi otimizada com base no sistema operacional do dispositivo.
+A classe Flashlight foi otimizada com base no sistema operacional do dispositivo.
 
-#### <a name="api-level-23-and-higher"></a>Nível de API 23 e superior
+#### <a name="api-level-23-and-higher"></a>API nível 23 e superior
 
-Nos níveis de API mais recentes, [tocha modo](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) será usado para ativar ou desativar a unidade flash do dispositivo.
+Em níveis mais recentes da API, o [Modo Tocha](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) será usado para ativar ou desativar a unidade de flash do dispositivo.
 
-#### <a name="api-level-22-and-lower"></a>API nível 22 e inferior
+#### <a name="api-level-22-and-lower"></a>API nível 22 e superior
 
 Uma textura de superfície da câmera é criada para ativar ou desativar o `FlashMode` da unidade de câmera. 
 
 ### <a name="iostabios"></a>[iOS](#tab/ios)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) é usado para ativar e desativar o Torch e o modo de Flash do dispositivo.
+[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) é usado para ativar e desativar o Modo Tocha e o modo Flash do dispositivo.
 
 ### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) é usado para detectar a lâmpada primeiro na parte traseira do dispositivo para ativar ou desativar.
+[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) é usado para detectar a primeira lâmpada na parte traseira do dispositivo a fim de ativá-la ou desativá-la.
 
 -----
 
 ## <a name="api"></a>API
 
-- [Código-fonte lanterna](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
-- [Documentação da API de lanterna](xref:Xamarin.Essentials.Flashlight)
+- [Código-fonte de Lanterna](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Documentação da API de Lanterna](xref:Xamarin.Essentials.Flashlight)

@@ -1,32 +1,36 @@
 ---
-title: 'Xamarin.Essentials: giroscópio'
-description: A classe de giroscópio Xamarin.Essentials permite que você monitore o sensor de giroscópio do dispositivo, que mede a rotação em torno de três eixos de primário do dispositivo.
+title: 'Xamarin.Essentials: Giroscópio'
+description: A classe Gyroscope no Xamarin.Essentials permite que você monitore o sensor de giroscópio do dispositivo, que mede a rotação em torno dos três eixos principais do dispositivo.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f1e1199ae32158889ec569eb5f7e9742f37d45d4
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 1d42658160855e260e0d159c58a1f95e7a8c7d4c
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674695"
 ---
-# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: giroscópio
+# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: Giroscópio
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **giroscópio** classe permite que você monitore o sensor de giroscópio do dispositivo que é a rotação em torno de três eixos de primário do dispositivo.
+A classe **Gyroscope** permite que você monitore o sensor de giroscópio do dispositivo, que mede a rotação em torno dos três eixos principais do dispositivo.
 
-## <a name="using-gyroscope"></a>Usando giroscópio
+## <a name="get-started"></a>Introdução
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-gyroscope"></a>Como usar o Giroscópio
+
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de giroscópio funciona chamando o `Start` e `Stop` métodos para ouvir alterações para o giroscópio. Todas as alterações são enviadas de volta pelo `ReadingChanged` eventos. Aqui está o exemplo de uso:
+A funcionalidade de Giroscópio chama os métodos `Start` e `Stop` e fica atenta às alterações no giroscópio. Todas as alterações são enviadas de volta por meio do evento `ReadingChanged`. Veja um exemplo de uso:
 
 ```csharp
 
@@ -73,5 +77,5 @@ public class GyroscopeTest
 
 ## <a name="api"></a>API
 
-- [Código-fonte giroscópio](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
-- [Documentação da API de giroscópio](xref:Xamarin.Essentials.Gyroscope)
+- [Código-fonte de Giroscópio](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
+- [Documentação da API de Giroscópio](xref:Xamarin.Essentials.Gyroscope)

@@ -1,32 +1,36 @@
 ---
-title: 'Xamarin.Essentials: magnetômetro'
-description: A classe magnetômetro Xamarin.Essentials permite que você monitore o sensor do magnetômetro do dispositivo, que indica a orientação do dispositivo em relação ao campo magnético da Terra.
+title: 'Xamarin.Essentials: Magnetômetro'
+description: A classe Magnetometer no Xamarin.Essentials permite que você monitore o sensor do magnetômetro do dispositivo, que indica a orientação do dispositivo em relação ao campo magnético da Terra.
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3827b9a57ec2667a8716f5b56bfb4631b979d43a
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 2fe610195f881f3d20ecc327c02dd2dfbced35ce
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675049"
 ---
-# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: magnetômetro
+# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetômetro
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **magnetômetro** classe permite que você monitore o sensor de magnetômetro do dispositivo que indica a orientação do dispositivo em relação ao campo magnético da Terra.
+A classe **Magnetometer** permite que você monitore o sensor do magnetômetro do dispositivo, que indica a orientação do dispositivo em relação ao campo magnético da Terra.
 
-## <a name="using-magnetometer"></a>Usando o magnetômetro
+## <a name="get-started"></a>Introdução
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-magnetometer"></a>Como usar Magnetometer
+
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de magnetômetro funciona chamando o `Start` e `Stop` métodos para ouvir alterações para o magnetômetro. Todas as alterações são enviadas de volta pelo `ReadingChanged` eventos. Aqui está o exemplo de uso:
+A funcionalidade do Magnetometer chama os métodos `Start` e `Stop` para ficar atenta às alterações no magnetômetro. Todas as alterações são enviadas de volta por meio do evento `ReadingChanged`. Veja um exemplo de uso:
 
 ```csharp
 
@@ -75,5 +79,5 @@ Todos os dados são retornados em microteslas.
 
 ## <a name="api"></a>API
 
-- [Código-fonte magnetômetro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
-- [Documentação da API do magnetômetro](xref:Xamarin.Essentials.Magnetometer)
+- [Código-fonte de Magnetômetro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
+- [Documentação da API de Magnetômetro](xref:Xamarin.Essentials.Magnetometer)

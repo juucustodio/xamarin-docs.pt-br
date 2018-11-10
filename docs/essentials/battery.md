@@ -1,66 +1,68 @@
 ---
-title: 'Xamarin.Essentials: bateria'
-description: Este documento descreve a classe de bateria Xamarin.Essentials, que permite que você verifique o monitor para que as alterações e informações sobre a bateria do dispositivo.
+title: 'Xamarin.Essentials: Bateria'
+description: Este documento descreve a classe Battery no Xamarin.Essentials, que permite que você verifique as informações da bateria do dispositivo e monitore a ocorrência de alterações.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 6b87625b3305d0a9ec40593d8b3fe29eb551bbf4
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
-ms.translationtype: MT
+ms.openlocfilehash: 6a14c939064538a405a1fe64061e0bb2e903fedd
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675426"
 ---
-# <a name="xamarinessentials-battery"></a>Xamarin.Essentials: bateria
+# <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Bateria
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **bateria** classe permite que você verifique informações sobre a bateria do dispositivo e o monitor para que as alterações.
+A classe **Battery** permite que você verifique informações da bateria do dispositivo e monitore a ocorrência de alterações.
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="get-started"></a>Introdução
 
-Para acessar o **bateria** funcionalidade a seguinte configuração específica de plataforma é necessária.
+[!include[](~/essentials/includes/get-started.md)]
+
+Para acessar a funcionalidade **Battery**, a configuração específica da plataforma a seguir é necessária.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-O `Battery` permissão é necessária e deve ser configurada no projeto do Android. Isso pode ser adicionado das seguintes maneiras:
+A permissão `Battery` é necessária e deve ser configurada no projeto do Android. Isso pode ser usado das seguintes maneiras:
 
-Abra o **AssemblyInfo.cs** do arquivo sob o **propriedades** pasta e adicione:
+Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.BatteryStats)]
 ```
 
-OU atualize o manifesto do Android:
+OU Atualize o Manifesto do Android:
 
-Abra o **androidmanifest. XML** arquivo sob o **propriedades** pasta e adicione o seguinte dentro do **manifesto** nó.
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto**.
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
 ```
 
-Ou clique com botão direito no projeto do Android e abra as propriedades do projeto. Sob **manifesto do Android** localizar o **permissões necessárias:** área e verifique se o **bateria** permissão. Isso atualizará automaticamente a **androidmanifest. XML** arquivo.
+Ou clique com o botão direito do mouse no projeto do Android e abra as propriedades do projeto. Em **Manifesto do Android**, localize a área **Permissões necessárias:** e marque a permissão **Bateria**. Isso atualizará automaticamente o arquivo **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Nenhuma configuração adicional necessária.
+Não exige mais configurações.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Nenhuma configuração adicional necessária.
+Não exige mais configurações.
 
 -----
 
-## <a name="using-battery"></a>Uso da bateria
+## <a name="using-battery"></a>Como usar Battery
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Verifique as informações sobre a bateria atual:
+Verifique as informações atuais da bateria:
 
 ```csharp
 var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or -1.0 if unable to determine.
@@ -108,7 +110,7 @@ switch (source)
 }
 ```
 
-Sempre que qualquer uma das propriedades da bateria for alterada, um evento é disparado:
+Sempre que qualquer uma das propriedades da bateria for alterada, um evento será disparado:
 
 ```csharp
 public class BatteryTest
@@ -129,15 +131,15 @@ public class BatteryTest
 }
 ```
 
-## <a name="platform-differences"></a>Diferenças de plataforma
+## <a name="platform-differences"></a>Diferenças entre plataformas
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Não há diferenças de plataforma.
+Sem diferenças entre plataformas.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* Dispositivo deve ser usado para testar APIs. 
+* O dispositivo deve ser usado para testar APIs. 
 * Só retornará `AC` ou `Battery` para `PowerSource`.
 * Não é possível cancelar a vibração.
 
@@ -149,5 +151,5 @@ Não há diferenças de plataforma.
 
 ## <a name="api"></a>API
 
-- [Código-fonte da bateria](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
-- [Documentação da API de bateria](xref:Xamarin.Essentials.Battery)
+- [Código-fonte de Bateria](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
+- [Documentação da API de Bateria](xref:Xamarin.Essentials.Battery)

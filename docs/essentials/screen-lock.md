@@ -1,32 +1,36 @@
 ---
 title: 'Xamarin.Essentials: Bloqueio de tela'
-description: Este documento descreve a classe de ScreenLock Xamarin.Essentials, que pode solicitar para impedir que a tela que fica no estado de suspensão quando o aplicativo está em execução.
+description: Este documento descreve a classe ScreenLock no Xamarin.Essentials, que pode solicitar que a tela não fique no estado de suspensão quando o aplicativo estiver em execução.
 ms.assetid: 6B67C114-315E-4199-AA72-3F90E85A4909
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3c8110b7abc86fe1d12485579f134997718540e6
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.openlocfilehash: 3bf8c949650cf9f039a5a516366a90e717dc944b
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38848564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675309"
 ---
 # <a name="xamarinessentials-screen-lock"></a>Xamarin.Essentials: Bloqueio de tela
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **ScreenLock** classe pode solicitar para impedir que a tela que fica no estado de suspensão quando o aplicativo está em execução.
+A classe **ScreenLock** pode solicitar que a tela não fique no estado de suspensão quando o aplicativo estiver em execução.
 
-## <a name="using-screenlock"></a>Usando ScreenLock
+## <a name="get-started"></a>Introdução
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-screenlock"></a>Como usar ScreenLock
+
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de bloqueio de tela funciona chamando o `RequestActive` e `RequestRelease` métodos para solicitar a tela de desligar.
+A funcionalidade de bloqueio de tela funciona chamando os métodos `RequestActive` e `RequestRelease` para impedir o desligamento da tela.
 
 ```csharp
 public class ScreenLockTest
@@ -43,5 +47,5 @@ public class ScreenLockTest
 
 ## <a name="api"></a>API
 
-- [Código-fonte de bloqueio de tela](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/ScreenLock)
-- [Documentação da API de bloqueio de tela](xref:Xamarin.Essentials.ScreenLock)
+- [Código-fonte de Bloqueio de tela](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/ScreenLock)
+- [Documentação da API de Bloqueio de tela](xref:Xamarin.Essentials.ScreenLock)

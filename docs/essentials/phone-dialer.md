@@ -1,32 +1,36 @@
 ---
-title: 'Xamarin.Essentials: A discagem telefônica'
-description: A classe PhoneDialer Xamarin.Essentials permite que um aplicativo abrir um número de telefone no discador
+title: 'Xamarin.Essentials: Discagem telefônica'
+description: A classe PhoneDialer no Xamarin.Essentials permite que um aplicativo abra um número de telefone pelo discador
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 34a6c80836d8cb42b1f8fd95718fe248d4701c0f
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
-ms.translationtype: MT
+ms.openlocfilehash: bccc76e1602c475a5e4cc9a95d498d11f9a379b1
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675413"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: A discagem telefônica
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Discagem telefônica
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **PhoneDialer** classe permite que um aplicativo para abrir um número de telefone no discador.
+A classe **PhoneDialer** permite que um aplicativo abra um número de telefone pelo discador.
 
-## <a name="using-phone-dialer"></a>Usando a discagem telefônica
+## <a name="get-started"></a>Introdução
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-phone-dialer"></a>Como usar a Discagem telefônica
+
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de discagem telefônica funciona chamando o `Open` método com um número de telefone para abrir a discagem com. Quando `Open` é solicitada automaticamente tentará a API formatar o número com base no código de país, se especificado.
+A funcionalidade de Discagem telefônica chama o método `Open` com um número de telefone para abrir o discador. Quando `Open` é solicitada, a API automaticamente tenta formatar o número com base no código de país, caso tenha sido especificado.
 
 ```csharp
 public class PhoneDialerTest
@@ -55,5 +59,5 @@ public class PhoneDialerTest
 
 ## <a name="api"></a>API
 
-- [Código-fonte de discagem telefônica](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
-- [Documentação da API de discagem de telefone](xref:Xamarin.Essentials.PhoneDialer)
+- [Código-fonte de Discagem telefônica](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
+- [Documentação da API de Discagem Telefônica](xref:Xamarin.Essentials.PhoneDialer)

@@ -1,32 +1,36 @@
 ---
 title: 'Xamarin.Essentials: Email'
-description: A classe de Email no Xamarin.Essentials permite que um aplicativo para abrir o aplicativo de email padrão com informações incluindo assunto, corpo e os destinatários (para, CC, Cco) especificadas.
+description: A classe Email no Xamarin.Essentials permite que um aplicativo abra o aplicativo de email padrão com uma informação especificada, incluindo assunto, corpo e destinatários (PARA, CC, CCO).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f113cebfebf4238fd4b75ad8ab248e2abf61efea
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: c8d4a83caf6832f911193067324915fd6226b380
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674958"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
 ![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
-O **Email** classe permite que um aplicativo para abrir o aplicativo de email padrão com informações incluindo assunto, corpo e os destinatários (para, CC, Cco) especificadas.
+A classe **Email** permite que um aplicativo abra o aplicativo de email padrão com uma informação especificada, incluindo assunto, corpo e destinatários (PARA, CC, CCO).
 
-## <a name="using-email"></a>Usando o Email
+## <a name="get-started"></a>Introdução
 
-Adicione uma referência ao Xamarin.Essentials em sua classe:
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-email"></a>Como usar Email
+
+Adicione uma referência ao Xamarin.Essentials na classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-A funcionalidade de Email funciona chamando o `ComposeAsync` método um `EmailMessage` que contém informações sobre o email:
+A funcionalidade de Email funciona chamando o método `ComposeAsync` com um `EmailMessage` que contém informações sobre o email:
 
 ```csharp
 public class EmailTest
@@ -59,5 +63,5 @@ public class EmailTest
 
 ## <a name="api"></a>API
 
-- [Código de origem do email](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
-- [Documentação da API de email](xref:Xamarin.Essentials.Email)
+- [Código-fonte de Email](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [Documentação da API de Email](xref:Xamarin.Essentials.Email)
