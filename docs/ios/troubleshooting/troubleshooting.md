@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 80f37e1753362ec0503b70e49a2206684c0fedb5
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "50675322"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527164"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para xamarin. IOS 
 
@@ -354,11 +354,11 @@ Para corrigir esse problema, você precisa manter uma referência ao "actionShee
 
 ## <a name="project-always-runs-in-the-ipad-simulator"></a>Projeto sempre é executado no simulador do iPad
 
-O instalador do iPhone SDK 4.0 instala 2 SDKs - o SDK 3.2, para a criação de aplicativos de iPad e o SDK 4.0, usado para aplicativos universais e construção iPhone. Ele também instala um simulador 3.2, que simula a apenas um iPad, e um simulador 4.0 que simula o iPhone ou iPhone 4. Todos os SDKs e simuladores mais antigos são removidos.
+O instalador do iPhone SDK 4.0 instala 2 SDKs - o SDK 3.2, para a criação de aplicativos de iPad e o SDK 4.0, usado para criar aplicativos universais e iPhone. Ele também instala um simulador 3.2, que simula a apenas um iPad, e um simulador 4.0 que simula o iPhone ou iPhone 4. Todos os SDKs e simuladores mais antigos são removidos.
 
 O Visual Studio para opções de build do Mac iPhone projeto incluem uma configuração para a versão do SDK que será usada na criação de seu aplicativo. Essa configuração pode ser encontrada em **opções de projeto -> Build -> iPhone Build**.
 
-Novos projetos no Visual Studio para Mac usam o SDK instalado mais antigo como sua configuração padrão do SDK, e se o SDK especificado não existir, o Visual Studio para Mac usa o mais próximo que ele pode encontrar a compilar seu aplicativo. Isso foi feito para que os projetos nem sempre seriam requre o SDK mais recente. No entanto, isso é atualmente resulta no 3,2 SDK que está sendo usado - o que resulta no simulador iPad que está sendo usado.
+Novos projetos no Visual Studio para Mac usam o SDK instalado mais antigo como sua configuração padrão do SDK, e se o SDK especificado não existir, o Visual Studio para Mac usa o mais próximo que ele pode encontrar a compilar seu aplicativo. Isso foi feito para que os projetos não iria sempre demandar o SDK mais recente. No entanto, isso é atualmente resulta no 3,2 SDK que está sendo usado - o que resulta no simulador iPad que está sendo usado.
 
 Para corrigir isso, usando o SDK 4.0, vá para **opções de projeto -> Build -> iPhone Build**> e altere o valor do SDK para "4.0" usando a caixa de lista suspensa. Você deve fazer isso para cada combinação de plataforma, acessadas usando os menus suspensos na parte superior do painel e a configuração.
 

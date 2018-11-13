@@ -4,15 +4,15 @@ description: Este artigo explica como usar o Visualizador de XAML para ver seus 
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: def7a7a3bdd9e165252c5ad1928b89ec654e5d74
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d29186681f79a2f7591978411b5d15fd9f90f807
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108074"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563466"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Pré-visualizador XAML para xamarin. Forms
 

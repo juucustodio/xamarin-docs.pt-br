@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a0738b03c4fa0ad975b872307bb17f387b1c5fd5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7d626b8a968835813d87c93e3cead57a00c14000
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120951"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528592"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implantando e testando aplicativos watchOS com Xamarin
 
@@ -50,7 +50,7 @@ Todos os três projetos exigem uma correspondência provisionamento de perfil de
 
 ### <a name="explicit-app-ids"></a>IDs de aplicativo explícita
 
-Criar uma **ID do aplicativo** para a ID de pacote de cada cada projeto (que terá esta aparência no Centro de desenvolvimento iOS):
+Criar uma **ID do aplicativo** para a ID de pacote de cada projeto (que terá esta aparência no Centro de desenvolvimento iOS):
 
 ![As IDs de pacote no Centro de desenvolvimento do iOS](images/appids-specific-sml.png)
 
@@ -88,7 +88,7 @@ O grupo de aplicativos, em seguida, será exibida na lista:
 
 Depois que o grupo é criado, ele pode ser referenciado em seu **ID do aplicativo** configuração. Lembre-se de incluí-lo o iOS App e extensão de inspeção **IDs do aplicativo**.
 
-![Consifurations disponíveis](images/appgroups-sml.png)
+![Configurações disponíveis](images/appgroups-sml.png)
 
 Fazer **não** habilitar grupos de aplicativos na ID de aplicativo do Apple Watch. Não é necessário para ser habilitado no watch.
 

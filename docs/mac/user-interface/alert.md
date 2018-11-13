@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8f84b688998251db52c8c2be71949e1a2e665dc0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6545b1423b809e42293302baf3eba9521848edc1
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103953"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526384"
 ---
 # <a name="alerts-in-xamarinmac"></a>Alertas no xamarin. Mac
 
 _Este artigo aborda o trabalho com alertas em um aplicativo xamarin. Mac. Ele descreve a criação e exibição de alertas do C# código e responder às interações do usuário._
 
-Ao trabalhar com C# e .NET em um aplicativo xamarin. Mac, você tem acesso para o mesmo de alertas que um desenvolvedor que trabalha em *Objective-C* e *Xcode* faz. 
+Ao trabalhar com C# e .NET em um aplicativo xamarin. Mac, você tem acesso para os mesmos alertas que um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. 
 
 Um alerta é um tipo especial de caixa de diálogo que aparece quando um problema sério ocorre (por exemplo, um erro) ou como um aviso (por exemplo, se preparando para excluir um arquivo). Como um alerta é uma caixa de diálogo, ele também requer uma resposta do usuário antes de ser fechado.
 

@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a4fbf2bc38726ad50a07744ed4c2512efbb615bc
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109231"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527242"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Criando e desenho em bitmaps de SkiaSharp
 
@@ -494,7 +494,7 @@ O bitmap invertido é grande o suficiente para incluir o bitmap inteiro original
 
 Outra operação comumente realizada em bitmaps é chamada _inversão_. Conceitualmente, o bitmap é girado em três dimensões em torno de um eixo vertical ou eixo horizontal por meio do centro do bitmap. A inversão vertical cria uma imagem espelhada.
 
-O **Bitmap palheta** página na **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** demonstates aplicativo esses processos. O arquivo XAML contém um `SKCanvasView` e dois botões para Inverter verticalmente e horizontalmente:
+O **palheta de Bitmap** página de **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** aplicativo demonstra esses processos. O arquivo XAML contém um `SKCanvasView` e dois botões para Inverter verticalmente e horizontalmente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

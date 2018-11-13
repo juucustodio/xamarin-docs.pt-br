@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d71c4f0f3221d06c22876329a5933273d8d6f92d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108646"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526761"
 ---
 # <a name="a-basic-recyclerview-example"></a>Um exemplo de RecyclerView básico
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 Esse código reside em que a atividade principal `OnCreate` método. O construtor para o Gerenciador de layout requer um *contexto*, portanto, o `MainActivity` é passado usando `this` como mostrado acima.
 
-Em vez de usar o predefind `LinearLayoutManager`, você pode conectar um Gerenciador de layout personalizado que exibe dois `CardView` itens lado a lado, Implementando um efeito de animação de folheio de página para percorrer a coleção de fotos. Mais adiante neste guia, você verá um exemplo de como modificar o layout, trocando em um Gerenciador de layout diferente.
+Em vez de usar predefinida `LinearLayoutManager`, você pode conectar um Gerenciador de layout personalizado que exibe dois `CardView` itens lado a lado, Implementando um efeito de animação de folheio de página para percorrer a coleção de fotos. Mais adiante neste guia, você verá um exemplo de como modificar o layout, trocando em um Gerenciador de layout diferente.
 
 <a name="view-holder" />
 
@@ -391,7 +391,7 @@ Essa alteração de código substitui o vertical `LinearLayoutManager` com um `G
 
 [![Captura de tela de exemplo de aplicativo com fotos rolar horizontalmente em uma grade](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
-Alterando apenas uma linha de código, é é possível modificar o aplicativo de exibição de fotos para usar um layout diferente com um comportamento diferente.
+Alterando apenas uma linha de código, é possível modificar o aplicativo de exibição de fotos para usar um layout diferente com um comportamento diferente.
 Observe que o código do adaptador nem o XML de layout tinha que ser modificado para alterar o estilo de layout. 
 
 No próximo tópico [estendendo o exemplo de RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md), esse aplicativo de exemplo básico é estendido para lidar com eventos de clique de item e atualizar `RecyclerView` quando as alterações da fonte de dados subjacentes.

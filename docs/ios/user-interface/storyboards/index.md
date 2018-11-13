@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106878"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563999"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução ao Storyboards no xamarin. IOS
 
@@ -100,11 +100,11 @@ NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController 
+    var callHistoryController = segue.DestinationViewController 
                                   as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 }
 ```
@@ -112,14 +112,14 @@ NSObject sender)
 Neste exemplo, o `PrepareForSegue` método será chamado quando o segue é disparado pelo usuário. Primeiro precisamos criar uma instância do controlador de exibição 'receber' e defina isso como o destino do segue o controlador de exibição. Isso é feito pela linha de código a seguir:
 
 ```csharp
-var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 O método agora tem a capacidade de definir propriedades no `DestinationViewController`. Neste exemplo é que nós tiramos proveito disso, passando uma lista chamada `PhoneNumbers` para o `CallHistoryController` e atribuí-la a um objeto do mesmo nome:
 
 ```csharp
-if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 ```
 
@@ -368,7 +368,7 @@ Consulte a solução Storyboards.Conditional na [amostra Manual Storyboards](htt
 
 ## <a name="using-storyboard-references"></a>Usando referências de Storyboard
 
-Uma referência de Storyboard permite que você pegar um design de Storyboard grande e complexo e dividi-la em Storyboards menores do que obterem referenciados do original, assim, removendo a complexidade e tornando a resultante individuais removendo Storyboards mais fácil ao design e Manter.
+Uma referência de Storyboard permite que você usar um design de Storyboard grande e complexo e dividi-la em menores Storyboards que obterem referenciados a partir do original, portanto, remover a complexidade e tornando os Storyboards individuais resultantes mais fácil de desenvolver e manter.
 
 Além disso, uma referência de Storyboard pode fornecer um _âncora_ à cena outro dentro do mesmo Storyboard ou uma cena específica em um diferente.
 

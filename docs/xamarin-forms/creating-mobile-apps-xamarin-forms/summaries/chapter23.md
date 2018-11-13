@@ -7,12 +7,12 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 83a445555f9f184f735c105370de20665ad704a3
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 0e8d666d9da9878d2af3a21903fa0884e09199d8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156750"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527125"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumo do capítulo 23. Gatilhos e comportamentos
 
@@ -152,7 +152,7 @@ O [ **ToggleLabel** ](https://github.com/xamarin/xamarin-forms-book-samples/tree
 
 O [ **FormattedTextToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) exemplo amplia esse conceito, alternando entre dois `FormattedString` objetos.
 
-O [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) classe o **Xamarin.FormsBook.Toolkit** deriva de biblioteca `ContentView`, define uma `IsToggled` propriedade e incorpora um `ToggleBehavior` para alternância lógica. Isso torna mais fácil definir o botão de alternância em XAML, como demonstrado pelo [ **TranditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) exemplo.
+O [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) classe o **Xamarin.FormsBook.Toolkit** deriva de biblioteca `ContentView`, define uma `IsToggled` propriedade e incorpora um `ToggleBehavior` para alternância lógica. Isso torna mais fácil definir o botão de alternância em XAML, como demonstrado pelo [ **TraditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) exemplo.
 
 O [ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) inclui um [ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) classe que deriva de `ToggleBase` e usa um [ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)classe para construir um botão de alternância que se parece com o xamarin. Forms `Switch`.
 

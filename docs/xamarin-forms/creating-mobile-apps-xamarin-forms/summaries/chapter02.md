@@ -4,15 +4,15 @@ description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do cap
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: fe6a8c3d17cf1fe6f489f6425bbdaa3cd30f390a
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: fcb832e851d7467679d979841dad60d117240b59
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156672"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563858"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Resumo do capítulo 2. Anatomia de um aplicativo
 
@@ -102,7 +102,7 @@ Os pacotes de abordagem de biblioteca todas as comuns de código em um projeto d
 
 A maioria dos desenvolvedores de xamarin. Forms prefiro a abordagem de biblioteca. Neste livro, a maioria das soluções de usa uma biblioteca. Aqueles que usam SAP incluem uma **Sap** sufixo no nome do projeto.
 
-Com a abordagem do SAP o código no projeto compartilhado pode executar código diferente para várias plataformas usando diretivas de pré-processador c# (`#if`, #`elif`, e `#endif`) com esses predefinido identificadores:
+Com a abordagem do SAP o código no projeto compartilhado pode executar código diferente para várias plataformas usando C# diretivas de pré-processador (`#if`, #`elif`, e `#endif`) com esses predefinido identificadores:
 
 - iOS: `__IOS__`
 - Android: `__ANDROID__`
@@ -112,7 +112,7 @@ Em uma biblioteca compartilhada, você pode determinar qual plataforma você est
 
 ## <a name="labels-for-text"></a>Rótulos de texto
 
-O [ **saudações** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) solução demonstra como adicionar um novo arquivo c# para o **saudações** projeto. Esse arquivo define uma classe chamada `GreetingsPage` que deriva de `ContentPage`. Neste livro, a maioria dos projetos contêm uma única `ContentPage` derivativo cujo nome é o nome do projeto com o sufixo `Page` acrescentado.
+O [ **saudações** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) solução demonstra como adicionar um novo C# do arquivo para o **saudações** projeto. Esse arquivo define uma classe chamada `GreetingsPage` que deriva de `ContentPage`. Neste livro, a maioria dos projetos contêm uma única `ContentPage` derivativo cujo nome é o nome do projeto com o sufixo `Page` acrescentado.
 
 O `GreetingsPage` construtor instancia uma [ `Label` ](xref:Xamarin.Forms.Label) exibição, que é o modo de exibição do xamarin. Forms que exibe texto. O [ `Text` ](xref:Xamarin.Forms.Label.Text) estiver definida como o texto exibido pelo `Label`. Este programa define a `Label` para o `Content` propriedade de `ContentPage`. O construtor do `App` , em seguida, cria uma instância de classe `GreetingsPage` e o configura para seu `MainPage` propriedade.
 
@@ -131,7 +131,7 @@ Definir um [ `Padding` ](xref:Xamarin.Forms.Page.Padding) propriedade na página
 
 ### <a name="solution-2-include-padding-just-for-ios-sap-only"></a>Solução 2. Incluir o preenchimento apenas para iOS (SAP)
 
-Defina uma propriedade de 'Enchimento' apenas no iOS usando um SAP com uma diretiva de pré-processador c#. Isso é demonstrado na [ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) solução.
+Definir uma propriedade de 'Enchimento' apenas no iOS usando um SAP com uma C# diretiva de pré-processador. Isso é demonstrado na [ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) solução.
 
 ### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>Solução 3. Incluir o preenchimento apenas para iOS (PCL ou SAP)
 
@@ -203,5 +203,5 @@ Essas duas propriedades são definidas somente pelo `Label`, enquanto a `Horizon
 
 - [Capítulo 2 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
 - [Exemplos do capítulo 2](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
-- [Exemplos do capítulo 2 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
+- [Capítulo 2 F# amostras](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
 - [Introdução ao xamarin. Forms](~/xamarin-forms/get-started/index.md)

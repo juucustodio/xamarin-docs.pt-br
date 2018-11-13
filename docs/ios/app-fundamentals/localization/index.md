@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 0c52db61689dd640332fb1e02e2260dda08e4686
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 906489aa3947df24662cbbd0473333caccc032c7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115920"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527255"
 ---
 # <a name="localization-in-xamarinios"></a>Localização no xamarin. IOS
 
@@ -248,7 +248,7 @@ Consulte a maçã [formatadores data](https://developer.apple.com/library/mac/do
 
 iOS fornece inúmeros recursos para ajudá-lo na criação de aplicativos com suporte a RTL:
 
-- Do layout do uso automático `leading` e `trailing` atributos para aligment de controle (que corresponde à esquerda e direita para inglês, mas é revertido para idiomas RTL).
+- Do layout do uso automático `leading` e `trailing` atributos para o alinhamento do controle (que corresponde à esquerda e direita para inglês, mas é revertido para idiomas RTL).
   O [ `UIStackView` ](~/ios/user-interface/controls/uistackview.md) controle é particularmente útil para dispor controles a serem consideradas ao RTL.
 - Use `TextAlignment = UITextAlignment.Natural` para alinhamento de texto (que será deixado para a maioria das linguagens, mas logo para RTL).
 - `UINavigationController` Inverte o botão Voltar e inverte a direção de passar o dedo automaticamente.

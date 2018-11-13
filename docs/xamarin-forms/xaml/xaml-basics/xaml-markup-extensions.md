@@ -4,15 +4,15 @@ description: Extensões de marcação XAML constituem um recurso importante no X
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 3/27/2018
-ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: bffddfdb67238287b868b01edad88bc8d43e5bb1
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935609"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563830"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação XAML
 
@@ -387,7 +387,7 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-Você precisará de declarações de namespace XML adicionais para acessar outras classes. Cada declaração de namespace XML adicional define um novo prefixo. Para acessar classes locais para a biblioteca .NET Standard de aplicativo compartilhado, como `AppConstants`, os programadores XAML geralmente usam o prefixo `local`. A declaração de namespace deve indicar o nome do namespace CLR (Common Language Runtime), também conhecido como o nome de namespace de .NET, que é o nome que aparece no c# `namespace` definição ou em um `using` diretiva:
+Você precisará de declarações de namespace XML adicionais para acessar outras classes. Cada declaração de namespace XML adicional define um novo prefixo. Para acessar classes locais para a biblioteca .NET Standard de aplicativo compartilhado, como `AppConstants`, os programadores XAML geralmente usam o prefixo `local`. A declaração de namespace deve indicar o nome do namespace CLR (Common Language Runtime), também conhecido como o nome de namespace de .NET, que é o nome que aparece em um C# `namespace` definição ou em um `using` diretiva:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"

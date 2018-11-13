@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 0384d96ddc96f8d0b16a42f691305f26ea25881d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108750"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527385"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 

@@ -4,15 +4,15 @@ description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do cap
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156724"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563765"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumo do capítulo 20. E/s assíncrona e de arquivo
 
@@ -28,7 +28,7 @@ Vários programas de exemplo neste livro tem usado o [ `WebRequest` ](xref:Syste
 > [!NOTE]
 > Programas do xamarin. Forms devem usar [ `HttpClient` ](xref:System.Net.Http.HttpClient) vez [ `WebRequest` ](xref:System.Net.WebRequest) para acessar arquivos pela internet. `HttpClient` dá suporte a operações assíncronas.
 
-Uma abordagem mais moderna para processamento assíncrono está disponível no .NET e c#. Isso envolve a [ `Task` ](xref:System.Threading.Tasks.Task) e [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) classes e outros tipos no [ `System.Threading` ](xref:System.Threading) e [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) namespaces, bem como o c# 5.0 `async` e `await` palavras-chave. Esse é o que este capítulo se concentra em.
+Uma abordagem mais moderna para processamento assíncrono está disponível no .NET e c#. Isso envolve a [ `Task` ](xref:System.Threading.Tasks.Task) e [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) classes e outros tipos no [ `System.Threading` ](xref:System.Threading) e [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) namespaces, bem como o C# 5.0 `async` e `await` palavras-chave. Esse é o que este capítulo se concentra em.
 
 ## <a name="from-callbacks-to-await"></a>De retornos de chamada para aguardar
 

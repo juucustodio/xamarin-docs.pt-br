@@ -4,15 +4,15 @@ description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do cap
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: c82e222fd47f3a3f13043c076c488b4769659352
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 0e99d15bbecf6640b714b499997144eb18268183
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156490"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51562699"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumo do capítulo 5. Lidando com tamanhos
 
@@ -92,4 +92,4 @@ Para um `Label`, o primeiro argumento deve ser a largura do contêiner (para per
 
 - [Capítulo 5 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf)
 - [Exemplos do capítulo 5](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
-- [Exemplos do capítulo 5 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FS)
+- [Capítulo 5 F# amostras](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FS)

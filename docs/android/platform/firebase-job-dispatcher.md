@@ -1,5 +1,5 @@
 ---
-title: Dispatcher de trabalho do firebase
+title: Dispatcher de trabalho do Firebase
 description: Este guia aborda como agendar um trabalho em segundo plano usando a biblioteca do Dispatcher de trabalho do Firebase do Google.
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 4ae1fb71209f8116b17ee7e2cb44318ef790d831
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 91bafbbdaee805ad128766bf0a770cb711597a85
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116154"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526917"
 ---
-# <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho do firebase
+# <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho do Firebase
 
 _Este guia aborda como agendar um trabalho em segundo plano usando a biblioteca do Dispatcher de trabalho do Firebase do Google._
 
@@ -44,9 +44,9 @@ O Dispatcher de trabalho do Firebase é uma biblioteca do Google que fornece uma
 * Um `Firebase.JobDispatcher.RetryStrategy` contém informações sobre o que deve ser feito quando uma tarefa falhar para serem executados corretamente. A estratégia de repetição Especifica quanto tempo esperar antes de tentar executar novamente o trabalho. 
 * Um `Firebase.JobDispatcher.Constraint` é um valor opcional que descreve uma condição que deve ser atendida antes de executar o trabalho, como o dispositivo estiver em uma rede não monitorada ou carregada.
 * O `Firebase.JobDispatcher.Job` é uma API que unifica as APIs anteriores para uma unidade de trabalho que pode ser agendado pelo `JobDispatcher`. O `Job.Builder` classe é usada para criar uma instância de um `Job`.
-* Um `Firebasee.JobDispatcher.JobDispatcher` usa as APIs de três anteriores para agendar o trabalho com o sistema operacional e fornecem uma maneira de cancelar trabalhos, se necessário.
+* Um `Firebase.JobDispatcher.JobDispatcher` usa as APIs de três anteriores para agendar o trabalho com o sistema operacional e fornecem uma maneira de cancelar trabalhos, se necessário.
 
-Para agendar o trabalho com o Dispatcher de trabalho do Firebase, um aplicativo xamarin. Android deve encapsular o código em um tipo que estende o `JobService` classe. `JobService` tem três métodos de ciclo de vida que pode ser chamado durante o tempo de vida do trabalho:
+Para agendar o trabalho com o Dispatcher de trabalho do Firebase, um aplicativo xamarin. Android deve encapsular o código em um tipo que estende o `JobService` classe. `JobService` tem três métodos de ciclo de vida que podem ser chamados durante o tempo de vida do trabalho:
 
 * **`bool OnStartJob(IJobParameters parameters)`** &ndash; Esse método é onde o trabalho ocorrerá e sempre deve ser implementado. Ele é executado no thread principal. Esse método retornará `true` se não houver trabalho restante, ou `false` se o trabalho é feito. 
 * **`bool OnStopJob(IJobParameters parameters)`** &ndash; Isso é chamado quando o trabalho é interrompido por algum motivo. Ele deverá retornar `true` se o trabalho deve ser reagendado para uso posterior.
@@ -177,7 +177,7 @@ Cada um desses tópicos será discutida mais nas seções a seguir.
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-jarameters-to-a-job"></a>Passando jarameters para um trabalho
+#### <a name="passing-parameters-to-a-job"></a>Passando parâmetros para um trabalho
 
 Parâmetros são passados para um trabalho com a criação de um `Bundle` que é passado junto com o `Job.Builder.SetExtras` método:
 
@@ -252,7 +252,7 @@ Os dois tipos de políticas de repetição são identificados por esses valores 
 É possível definir um personalizado `RetryStrategy` com o `FirebaseJobDispatcher.NewRetryStrategy` método. Ele usa três parâmetros:
 
 1. `int policy` &ndash; O _diretiva_ é um dos anterior `RetryStrategy` valores `RetryStrategy.RetryPolicyLinear`, ou `RetryStrategy.RetryPolicyExponential`.
-2. `int intialBackoffSeconds` &ndash; O _retirada inicial_ é um atraso, em segundos, que é necessária antes de tentar executar novamente o trabalho. O valor padrão é 30 segundos. 
+2. `int initialBackoffSeconds` &ndash; O _retirada inicial_ é um atraso, em segundos, que é necessária antes de tentar executar novamente o trabalho. O valor padrão é 30 segundos. 
 3. `int maximumBackoffSeconds` &ndash; O _retirada máximo_ valor declara o número máximo de segundos de atraso antes de tentar executar novamente o trabalho. O valor padrão é 3600 segundos. 
 
 ```csharp

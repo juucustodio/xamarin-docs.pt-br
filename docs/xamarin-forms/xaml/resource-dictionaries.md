@@ -4,15 +4,15 @@ description: Recursos XAML são objetos que podem ser compartilhados e reutiliza
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: d305de651f6e770d02ca35f5f8f8ffcf08424e28
-ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
+ms.openlocfilehash: 30eb8522f39438ca4006379b3b9e0d3a613ba112
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39573640"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563024"
 ---
 # <a name="resource-dictionaries"></a>Dicionários de recursos
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b62943fce8a1137c3bde1c629cc4cee9b2b44f3f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103303"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527320"
 ---
 # <a name="kitkat-features"></a>Recursos de KitKat
 
@@ -282,7 +282,7 @@ TransitionManager.Go (scene1, transition);
 
 ### <a name="translucent-ui"></a>Interface do usuário translúcido
 
-KitKat dá mais controle sobre temas seu aplicativo com barras de status e navegação de transclucent opcional. Você pode alterar a translucência de elementos de interface do usuário do sistema no mesmo arquivo XML que você usa para definir o tema do Android. KitKat apresenta as seguintes propriedades:
+KitKat dá mais controle sobre temas seu aplicativo com opcional translúcidos barras de status e a navegação. Você pode alterar a translucência de elementos de interface do usuário do sistema no mesmo arquivo XML que você usa para definir o tema do Android. KitKat apresenta as seguintes propriedades:
 
 -  `windowTranslucentStatus` -Quando definido como true, torna a barra de status superior translúcido.
 
@@ -322,7 +322,7 @@ Captura de tela abaixo mostra o tema acima com status translúcido e barras de n
 
 O Framework de acesso de armazenamento (SAF) é uma nova maneira para os usuários interajam com o conteúdo armazenado como imagens, vídeos e documentos. Em vez de apresentar os usuários com uma caixa de diálogo para escolher um aplicativo para lidar com conteúdo, KitKat abre uma nova interface do usuário que permite aos usuários acessar seus dados em um local de agregação. Depois que o conteúdo foi escolhido, o usuário será retornado para o aplicativo que solicitou o conteúdo e a experiência de aplicativo continuará normalmente.
 
-Essa alteração exige duas ações no lado do desenvolvedor: primeiro, os aplicativos que exigem o conteúdo de provedores precisam ser atualizados para uma nova maneira de reqesting conteúdo. Segundo, os aplicativos que gravam dados em um `ContentProvider` precisam ser modificados para usar a nova estrutura. Ambos os cenários dependem de novo [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
+Essa alteração exige duas ações no lado do desenvolvedor: primeiro, os aplicativos que exigem o conteúdo de provedores precisam ser atualizados para uma nova maneira de solicitar conteúdo. Segundo, os aplicativos que gravam dados em um `ContentProvider` precisam ser modificados para usar a nova estrutura. Ambos os cenários dependem de novo [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
 API.
 
 #### <a name="documentsprovider"></a>DocumentsProvider
@@ -344,7 +344,7 @@ StartActivityForResult (intent, save_request_code);
 
 Chamar `StartActivityForResult` inicia o SAF UI, que o usuário pode procurar para escolher uma imagem:
 
-[![Captura de tela de exemplo de um aplicativo usando a estrutura de acesso de armazenamento para a navegação até uma imagem](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![Captura de tela de exemplo de um aplicativo usando a estrutura de acesso de armazenamento para navegar para uma imagem](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 Depois que o usuário escolheu uma imagem `OnActivityResult` retorna o `Android.Net.Uri` do arquivo escolhido. O exemplo de código a seguir exibe a seleção de imagem do usuário:
 
@@ -424,7 +424,7 @@ Observe que ao carregar e imprimir o conteúdo da web requer a permissão de Int
 A opção de impressão normalmente aparecerão na atividade de [menu de opções](http://developer.android.com/guide/topics/ui/menus.html#options-menu).
 O menu de opções permite aos usuários executar ações em uma atividade. Ele está no canto superior direito da tela e tem esta aparência:
 
-[![Captura de tela de exemplo de impressão exibida de item de menu no canto superior direito da tela](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
+[![Captura de tela de exemplo do item de menu Imprimir exibido no canto superior direito da tela](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 Itens de menu adicionais podem ser definidos na *menus*diretório sob *recursos*. O código a seguir define um amostra item de menu chamado [impressão](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
@@ -542,12 +542,12 @@ Para trabalhar, HCE deve ser capaz de executar em segundo plano, e ele deve inic
 -  *OnDeactivated* – o `HostAdpuService` é desativado quando o serviço HCE não está se comunicando com o leitor de NFC.
 
 
-Um serviço HCE também precisa ser registrado com o manifesto do aplicativo e decorada com as permissões apropriadas, filtro intencional e metadados. O código a seguir é um exemplo de uma `HostApduService` registrados com o manifesto do Android usando o `Service` atributo (para obter mais informações sobre atributos, consulte o Xamarin [trabalhar com o manifesto do Android](~/android/platform/android-manifest.md) guia):
+Um serviço HCE também precisa ser registrado com o manifesto do aplicativo e decorada com as permissões adequadas, filtro intencional e metadados. O código a seguir é um exemplo de uma `HostApduService` registrados com o manifesto do Android usando o `Service` atributo (para obter mais informações sobre atributos, consulte o Xamarin [trabalhar com o manifesto do Android](~/android/platform/android-manifest.md) guia):
 
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
     IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-    MetaData("andorid.nfc.cardemulation.host.apdu_service",
+    MetaData("android.nfc.cardemulation.host.apdu_service",
     Resource="@xml/hceservice")]
 
 class HceService : HostApduService
@@ -599,7 +599,7 @@ Captura de tela abaixo ilustra o contador de etapa em ação:
 
 [![Captura de tela do aplicativo SensorsActivity exibindo um contador de etapa](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
-Você pode criar uma `SensorManager` chamando `GetSystemService(SensorService)` e convertendo o resultado como um `SensorManager`. Para usar o contador de etapa, chame `GetDeafultSensor` sobre o `SensorManager`. Você pode registrar o sensor e ouvir as alterações na contagem de etapa com a Ajuda das [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
+Você pode criar uma `SensorManager` chamando `GetSystemService(SensorService)` e convertendo o resultado como um `SensorManager`. Para usar o contador de etapa, chame `GetDefaultSensor` sobre o `SensorManager`. Você pode registrar o sensor e ouvir as alterações na contagem de etapa com a Ajuda das [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
 interface, conforme ilustrado pelo exemplo de código abaixo:
 
 ```csharp
@@ -689,7 +689,7 @@ Além das alterações descritas acima, KitKat permite que você:
 -  *Pausar animações* -pausar e retomar animações criadas com o [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    .
 
--  *Ler texto alterando dinamicamente* -denotam partes da interface do usuário que atualizam dinamicamente com o novo texto como "regiões dinâmicas" com o novo [ `accesibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *Ler texto alterando dinamicamente* -denotam partes da interface do usuário que atualizam dinamicamente com o novo texto como "regiões dinâmicas" com o novo [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    atributo para que o novo texto serão lidos automaticamente no modo de acessibilidade.
 
 -  *Aprimorar a experiência de áudio* -Verifique faixas de volume com o [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)

@@ -7,12 +7,12 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: 6f7236a3650c04098edbef92f3d6ed620be501c3
-ms.sourcegitcommit: a635312ffec816ba357a92b66c8c5221c8d9044c
+ms.openlocfilehash: 747c04d028b4c4ee142de04abd118572c5bea781
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "39615386"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527099"
 ---
 # <a name="touch-manipulations"></a>Manipulações de toque
 
@@ -229,7 +229,7 @@ public partial class BitmapScalingPage : ContentPage
                         if (!float.IsNaN(scaleX) && !float.IsInfinity(scaleX) &&
                             !float.IsNaN(scaleY) && !float.IsInfinity(scaleY))
                         {
-                            // If smething bad hasn't happened, calculate a scale and translation matrix
+                            // If something bad hasn't happened, calculate a scale and translation matrix
                             SKMatrix scaleMatrix = 
                                 SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
 
@@ -1060,7 +1060,7 @@ O código faz um loop por meio da coleção e exibe a pilha de bitmaps desde o i
 
 Uma operação de dimensionamento geralmente requer um gesto de pinçagem com dois dedos. No entanto, é possível implementar o dimensionamento com um único dedo, fazendo com que o dedo mover os cantos de um bitmap.
 
-Isso é demonstrado na **único dedo canto dimensionamento** página. Porque este exemplo usa um tipo um pouco diferentes de dimensionamento que que implementado de `TouchManipulationManager` classe, não usa essa classe ou o `TouchManipulationBitmap` classe. Em vez disso, toda a lógica de toque é no arquivo code-behind. Isso é lógico um pouco mais simples do que o usual porque ele acompanha apenas um dedo em um tempo e simplesmente ignora qualquer secundários dedos que podem ser tocar na tela.
+Isso é demonstrado na **único dedo canto dimensionamento** página. Porque este exemplo usa um tipo de dimensionamento de um pouco diferente que é implementado de `TouchManipulationManager` classe, não usa essa classe ou o `TouchManipulationBitmap` classe. Em vez disso, toda a lógica de toque é no arquivo code-behind. Isso é lógico um pouco mais simples do que o usual porque ele acompanha apenas um dedo em um tempo e simplesmente ignora qualquer secundários dedos que podem ser tocar na tela.
 
 O [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml) página instancia o `SKCanvasView` classe e cria um `TouchEffect` objeto para acompanhar eventos de toque:
 

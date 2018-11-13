@@ -1,26 +1,26 @@
 ---
 title: Elementos gráficos no xamarin. Forms
-description: Este guia explica como incorporar gráficos e visuais do mecanismo de jogo em um aplicativo xamarin. Forms, usando CocosSharp, SkiaShap e UrhoSharp.
+description: Este guia explica como incorporar elementos gráficos e visuais do mecanismo de jogo em um aplicativo xamarin. Forms, usando CocosSharp, SkiaShap e UrhoSharp.
 ms.prod: xamarin
 ms.assetid: 167ec01a-fb9e-431e-a44d-a10eaf62bf39
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 02/01/2018
-ms.openlocfilehash: 7a632cdab5cd67f8e0c94d5b200fe78bf1bf5310
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 38b06c26208613baed45f40a8f0933f10496c467
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243100"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51562985"
 ---
 # <a name="graphics-in-xamarinforms"></a>Elementos gráficos no xamarin. Forms
 
-_Como incorporar gráficos e visuais do mecanismo de jogo em um aplicativo xamarin. Forms._
+_Como incorporar elementos gráficos e visuais do mecanismo de jogo em um aplicativo xamarin. Forms._
 
 ## <a name="using-cocossharp-in-xamarinformscocossharpmd"></a>[Usar CocosSharp em Xamarin.Forms](cocossharp.md)
 
-Como adicionar CocosSharp para incluir forma precisa, imagem e processamento de texto em um aplicativo xamarin. Forms.
+Como adicionar CocosSharp para incluir a forma precisa, a imagem e a renderização de texto em um aplicativo xamarin. Forms.
 
 ## <a name="using-skiasharp-in-xamarinformsskiasharpindexmd"></a>[Usar SkiaSharp em Xamarin.Forms](skiasharp/index.md)
 

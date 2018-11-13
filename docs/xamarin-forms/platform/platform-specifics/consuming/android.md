@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 50c7b05261cf3f07ea37373cdcdcc8f250243647
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108971"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527268"
 ---
 # <a name="android-platform-specifics"></a>Especificidades da plataforma Android
 
@@ -270,7 +270,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 O resultado é que rolagem rápida por meio de dados em um [ `ListView` ](xref:Xamarin.Forms.ListView) pode ser habilitado, que altera o tamanho de rolagem:
 
-[![](android-images/fastscroll.png "ListView FastScroll específicos da plataforma")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "Específico da plataforma ListView FastScroll")](android-images/fastscroll-large.png#lightbox "ListView FastScroll específicos da plataforma")
 
 <a name="webview-mixed-content" />
 
@@ -490,7 +490,7 @@ O `Application.On<Android>` método Especifica que este específicos da platafor
 
 O resultado é que o teclado virtual área modo operacional pode ser definido quando um controle de entrada tem o foco de entrada:
 
-[![](android-images/pan-resize.png "Teclado virtual operacional modo específico da plataforma")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Flexível de teclado específicos de plataforma de modo operacional")](android-images/pan-resize-large.png#lightbox "teclado virtual operacional modo específico da plataforma")
 
 <a name="disable_lifecycle_events" />
 

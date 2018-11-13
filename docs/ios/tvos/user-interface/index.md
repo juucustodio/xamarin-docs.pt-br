@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: a519af9e4bddb949b6e0547387d804f1437deb21
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0d5bfa83bee74a799398912f77f21cba10c7be45
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104603"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526308"
 ---
 # <a name="building-tvos-user-interfaces-with-xamarin"></a>Criação de Interfaces do usuário com o Xamarin do tvOS
 

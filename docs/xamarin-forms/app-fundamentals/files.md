@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: e31bb46569ed96d514ec87eacaf9f3912dcf3237
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675153"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527359"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Manipulação de arquivo no xamarin. Forms
 
@@ -20,7 +20,7 @@ _Arquivo tratamento com xamarin. Forms pode ser obtido usando o código em uma b
 
 ## <a name="overview"></a>Visão geral
 
-Código do Xamarin.Forms são executados em várias plataformas e cada uma delas tem seu próprio sistema de arquivos. Anteriormente, isso significava que ler e gravar arquivos foram mais facilmente executada usando APIs de arquivo nativo em cada plataforma. Como alternativa, os recursos incorporados são uma solução mais simples para distribuir os arquivos de dados com um aplicativo. No entanto, com o .NET Standard 2.0 é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
+Código do Xamarin.Forms são executados em várias plataformas e cada uma delas tem seu próprio sistema de arquivos. Anteriormente, isso significava que ler e gravar arquivos foi mais facilmente executada usando APIs de arquivo nativo em cada plataforma. Como alternativa, os recursos incorporados são uma solução mais simples para distribuir os arquivos de dados com um aplicativo. No entanto, com o .NET Standard 2.0 é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
 
 Para obter informações sobre o tratamento de arquivos de imagem, consulte o [trabalhando com imagens](~/xamarin-forms/user-interface/images.md) página.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a202dd32bcde5cf91cce3f597c9ea7c17f4adbcd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd97dbbe102c5a755c4a8974cf1a952c0050ac7c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113556"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527177"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Modos de exibição de estrutura de tópicos no xamarin. Mac
 
 _Este artigo aborda o trabalho com modos de exibição de estrutura de tópicos em um aplicativo xamarin. Mac. Ele descreve a criar e manter modos de exibição de estrutura de tópicos no Interface Builder e Xcode e como trabalhar com eles por meio de programação._
 
-Ao trabalhar com c# e .NET em um aplicativo xamarin. Mac, você tem acesso à mesma estrutura de tópicos de exibições que um desenvolvedor que trabalha em *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter seus modos de exibição de estrutura de tópicos (ou, opcionalmente, criá-los diretamente em código c#).
+Ao trabalhar com C# e o .NET em um aplicativo xamarin. Mac, você terá acesso ao mesmo contorno exibições que um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter seus modos de exibição de estrutura de tópicos (ou, opcionalmente, criá-los diretamente em código c#).
 
 Uma exibição de estrutura de tópicos é um tipo de tabela que permite ao usuário expandir ou recolher linhas de dados hierárquicos. Como uma exibição de tabela, uma exibição de estrutura de tópicos exibe dados de um conjunto de itens relacionados, com linhas que representam itens individuais e colunas que representam os atributos desses itens. Ao contrário de uma exibição de tabela, não são itens em uma exibição de estrutura de tópicos em uma lista simples, eles são organizados em uma hierarquia, como arquivos e pastas em um disco rígido.
 

@@ -4,15 +4,15 @@ description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do cap
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 609b0066e033b48be55056d459e818a9acc9625c
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156568"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563312"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumo do capítulo 3. Aprofundamento no texto
 
@@ -20,7 +20,7 @@ Este capítulo explora a [ `Label` ](xref:Xamarin.Forms.Label) exibir mais detal
 
 ## <a name="wrapping-paragraphs"></a>Quebra automática de parágrafos
 
-Quando o [ `Text` ](xref:Xamarin.Forms.Label.Text) propriedade do `Label` contém texto longo, `Label` automaticamente quebra em várias linhas como demonstrado pelo [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) exemplo. Você pode inserir códigos de Unicode como \u2014 travessão ou caracteres de c#, como '\r' quebrar para uma nova linha.
+Quando o [ `Text` ](xref:Xamarin.Forms.Label.Text) propriedade do `Label` contém texto longo, `Label` automaticamente quebra em várias linhas como demonstrado pelo [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) exemplo. Você pode inserir códigos de Unicode como \u2014 para em-dash, ou C# caracteres, como '\r' quebrar para uma nova linha.
 
 Quando o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades de um `Label` são definidos como `LayoutOptions.Fill`, o tamanho geral do `Label` é regido pelo espaço de que seu contêiner disponibiliza. O `Label` será considerada *restrita*. O tamanho do `Label` é o tamanho de seu contêiner.
 
@@ -119,7 +119,7 @@ Defina as [ `FontSize` ](xref:Xamarin.Forms.Label.FontSize) propriedade do `Labe
 
 Como alternativa, você pode obter um dos vários tamanhos de fonte de predefinição dependente de plataforma. Estático [ `Device.GetNamedSize` ](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) método e [sobrecarregar](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element)) retornam uma `double` valor de tamanho de fonte apropriado para a plataforma com base nos membros do [ `NamedSize` ](xref:Xamarin.Forms.NamedSize)enumeração ([`Default`](xref:Xamarin.Forms.NamedSize.Default), [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro), [ `Small` ](xref:Xamarin.Forms.NamedSize.Small), [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium),  e [ `Large` ](xref:Xamarin.Forms.NamedSize.Large)). O valor retornado de `Medium` membro não é necessariamente o mesmo que `Default`. O [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) exemplo exibe texto com esses tamanhos de nomeados.
 
-Defina as [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) propriedade do `Label` a um membro desses [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) enumeração, [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), ou [ `None` ](xref:Xamarin.Forms.FontAttributes.None). Você pode combinar as `Bold` e `Italic` membros com o c# operador bit a bit OR.
+Defina as [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) propriedade do `Label` a um membro desses [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) enumeração, [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), ou [ `None` ](xref:Xamarin.Forms.FontAttributes.None). Você pode combinar as `Bold` e `Italic` membros com o C# operador OR de bit a bit.
 
 ## <a name="formatted-text"></a>Texto formatado
 
@@ -139,6 +139,6 @@ O [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 - [Capítulo 3 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
 - [Exemplos do capítulo 3](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
-- [Exemplos do capítulo 3 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
+- [Capítulo 3 F# amostras](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
 - [Rótulo](~/xamarin-forms/user-interface/text/label.md)
 - [Trabalhar com cores](~/xamarin-forms/user-interface/colors.md)

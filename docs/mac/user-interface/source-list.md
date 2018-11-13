@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fa6b128572490ce1fe330b722181e33bbad1ffd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82e4dfb9add7002fd7d3568d0ec946ea38dfd530
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122043"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526385"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listas de origem no xamarin. Mac
 
 _Este artigo aborda o trabalho com listas de origem em um aplicativo xamarin. Mac. Ele descreve a criação e manutenção de listas de origem no Xcode e Interface Builder e interagir com eles no código c#._
 
-Ao trabalhar com c# e .NET em um aplicativo xamarin. Mac, você tem acesso à mesma fonte de listas que um desenvolvedor que trabalha em *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter listas de origem (ou, opcionalmente, criá-los diretamente em código c#).
+Ao trabalhar com C# e .NET em um aplicativo xamarin. Mac, você tem acesso à mesma fonte de lista que um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter listas de origem (ou, opcionalmente, criá-los diretamente em código c#).
 
 Uma lista de origem é um tipo especial de exibição de estrutura de tópicos usada para mostrar a origem de uma ação, como a barra lateral no Finder ou iTunes.
 

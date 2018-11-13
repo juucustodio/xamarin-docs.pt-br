@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f787adcba78a13f6d4cad3fb446350a65e960aca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cfa450c977ac9f1d6370f40d27f5d704cc774767
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123603"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526670"
 ---
 # <a name="xamarinforms-map"></a>Mapa do xamarin. Forms
 
@@ -36,7 +36,7 @@ Funcionalidade de mapa pode ser aprimorada ainda mais com a criação de um [map
 
 ## <a name="maps-initialization"></a>Inicialização de mapas
 
-Ao adicionar mapas a um aplicativo xamarin. Forms, **Xamarin.Forms.Maps** é um um pacote NuGet separado que você deve adicionar a todos os projetos na solução.
+Ao adicionar mapas a um aplicativo xamarin. Forms, **Xamarin.Forms.Maps** é um pacote do NuGet separado que você deve adicionar a todos os projetos na solução.
 No Android, isso também tem uma dependência no GooglePlayServices (NuGet outro), que é baixada automaticamente quando você adiciona Xamarin.Forms.Maps.
 
 Depois de instalar o pacote do NuGet, um código de inicialização é necessária em cada projeto de aplicativo *após* o `Xamarin.Forms.Forms.Init` chamada de método. Para iOS, use o seguinte código:
@@ -141,7 +141,7 @@ O token de autenticação deve ser especificado, em seguida, no `FormsMaps.Init(
 
 <a name="Using_Maps" />
 
-## <a name="using-maps"></a>Uso de mapas
+## <a name="using-maps"></a>Uso dos mapas
 
 Consulte a [MapPage.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs) na amostra MobileCRM para obter um exemplo de como o controle de mapa pode ser usado no código. Um simples `MapPage` classe pode parecer com este - aviso de que um novo `MapSpan` é criado para posicionar a exibição do mapa:
 
@@ -183,7 +183,7 @@ Válido `MapType` valores são:
 Conforme mostrado no trecho de código acima, fornecendo um `MapSpan` instância para um construtor de mapa define a exibição inicial (o ponto central, e o nível de zoom) do mapa quando ele for carregado. O `MoveToRegion` método da classe map, em seguida, pode ser usado para alterar o nível de zoom ou de posição do mapa. Há duas maneiras para criar um novo `MapSpan` instância:
 
 -  **MapSpan.FromCenterAndRadius()** -um método estático para criar um período de um `Position` e especificando um `Distance` .
--  **New () de MapSpan** -construtor que usa um `Position` e o degress da latitude e longitude para exibir.
+-  **New () de MapSpan** -construtor que usa um `Position` e os graus de latitude e longitude para exibir.
 
 
 Para alterar o nível de zoom do mapa sem alterar o local, crie um novo `MapSpan` usando o local atual do `VisibleRegion.Center` propriedade do controle de mapa. Um `Slider` poderia ser usado para controle de zoom do mapa como este (no entanto, aumentar o zoom diretamente no controle de mapa, atualmente não é possível atualizar o valor do controle deslizante):

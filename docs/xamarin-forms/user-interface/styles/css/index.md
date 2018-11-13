@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/28/2018
-ms.openlocfilehash: 72bb4c359717f419eb500d471fe436d1ca195ae6
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: bcc18672257338e74e7a0c7114876129ae661acb
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "34794079"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527411"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilo a aplicativos xamarin. Forms usando folhas de estilo em cascata (CSS)
 
@@ -374,7 +374,7 @@ As propriedades CSS a seguir têm suporte pelo xamarin. Forms (na **valores** ti
 |`background-color`|`VisualElement`|_Cor_ \| `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_cadeia de caracteres_ \| `initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`|_Cor_ \| `initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`|_Double_ \| `intial` |`border-radius: 10;`|
+|`border-radius`|`BoxView`|_Double_ \| `initial` |`border-radius: 10;`|
 |`border-width`|`Button`|_Double_ \| `initial` |`border-width: .5;`|
 |`color`|`ActivityIndicator`, `BoxView`, `Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_Cor_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
 |`column-gap`|`Grid`|_Double_ \| `initial`|`column-gap: 9;`|
@@ -389,7 +389,7 @@ As propriedades CSS a seguir têm suporte pelo xamarin. Forms (na **valores** ti
   \|
   `initial`|`flex-wrap: wrap-reverse;`|
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_cadeia de caracteres_ \| `initial` |`font-family: Consolas;`|
-|`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_duplo_ \| _namedsize_  \| `initial` |`font-size: 12;`|
+|`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_duplo_ \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold`\|`italic`\|`initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_Double_ \| `initial` |`min-height: 250;`|
 |`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
@@ -434,7 +434,7 @@ Também há suporte para as seguintes propriedades CSS específicas do xamarin. 
 |`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_Cor_ \| `initial` |`-xf-bar-text-color: gray`|
 |`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` só é compatível com um `ScrollView`. |`-xf-orientation: horizontal;`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
-|`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visbility: always;`|
+|`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
 |`-xf-min-track-color`|`Slider`|_Cor_ \| `initial` |`-xf-min-track-color: yellow;`|
 |`-xf-max-track-color`|`Slider`|_Cor_ \| `initial` |`-xf-max-track-color: red;`|
 |`-xf-thumb-color`|`Slider`|_Cor_ \| `initial` |`-xf-thumb-color: limegreen;`|

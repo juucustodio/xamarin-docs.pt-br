@@ -23,7 +23,7 @@
 |6021|Newsstand|
 |6022|Catálogos|
 
-Games (6014) sub-genres:
+Subgêneros de jogos (6014):
 
 |ID de gênero|Nome de gênero|
 |---|---|
@@ -47,7 +47,7 @@ Games (6014) sub-genres:
 |7018|Trívia|
 |7019|Palavra|
 
-Gêneros de subdiretório Newstand (6021):
+Subgêneros de banca de jornal (6021):
 
 |ID de gênero|Nome de gênero|
 |---|---|

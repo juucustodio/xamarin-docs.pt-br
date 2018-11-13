@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: feaa0c3547c01490a8ada82b17b4c7a824e03b0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7bfb0cad8bbc025bc5dba39abe3699ae77ee83ba
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114635"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526475"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS solução de problemas
 
@@ -35,7 +35,7 @@ Esta página contém informações adicionais e soluções alternativas para rec
 
 <a name="deploy" />
 
-- Versões anteriores do Visual Studio para Mac mostram incorretamente uma da a **AppleCompanionSettings** ícones como sendo pixels de 88 x 88; o que resulta em uma **ausente o ícone de erro** se você tentar enviar para o aplicativo Store.
+- Versões anteriores do Visual Studio para Mac mostram incorretamente uma da **AppleCompanionSettings** ícones como sendo pixels de 88 x 88; o que resulta em uma **ausente o ícone de erro** se você tentar enviar para a App Store.
     Esse ícone deve ser 87 x 87 pixels (unidades de 29 para **@3x** telas de Retina). Você não pode corrigir isso no Visual Studio para Mac - editar o ativo de imagem no Xcode ou editar manualmente o **Contents.json** arquivo (para corresponder à [Este exemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
 - Se o projeto de extensão de inspeção **Info. plist > ID do pacote de WKApp** não está [definidas corretamente](~/ios/watchos/get-started/project-references.md) para coincidir com o aplicativo de inspeção **ID do pacote**, o depurador não conseguirão se conectar e o Visual Studio para Mac deverão aguardar com a mensagem *"Aguardando o depurador conectar-se"*.

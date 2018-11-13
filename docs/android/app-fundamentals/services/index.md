@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: b9aa29507ebb37e3912b1027419e47c82832dfa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dfc0e1cb7239381ef2f495b0f9774d390b0dc82e
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116505"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527190"
 ---
 # <a name="creating-android-services"></a>Criando serviços do Android
 
@@ -47,7 +47,7 @@ Há quatro tipos diferentes de serviços do Android:
 
 * **`IntentService`** &ndash; Uma _`IntentService`_ é uma subclasse especializada do `Service` classe que simplifica a criação de serviços e uso. Um `IntentService` destina-se para lidar com chamadas individuais de autônomas. Ao contrário de um serviço, que simultaneamente pode manipular várias chamadas, um `IntentService` é mais parecido com um _processador de fila de trabalho_ &ndash; trabalho na fila e um `IntentService` processa cada trabalho de um por vez em um único thread de trabalho. Normalmente, um`IntentService` não está associado a uma atividade ou um fragmento. 
 
-* **Serviço iniciado** &ndash; um _serviço iniciado_ é um serviço que foi iniciado por algum outro componente Android (por exemplo, uma atividade) e é executado continuamente em segundo plano até que algo explicitamente informa o serviço parar. Ao contrário de um serviço vinculado, um serviço iniciado não tem todos os clientes diretamente associados a ele. Por esse motivo, é importante projetar serviços iniciados para que eles podem ser normalmente reiniciados conforme necessário.
+* **Serviço iniciado** &ndash; um _serviço iniciado_ é um serviço que foi iniciado por algum outro componente Android (por exemplo, uma atividade) e é executado continuamente em segundo plano, até algo explicitamente informa o serviço parar. Ao contrário de um serviço vinculado, um serviço iniciado não tem todos os clientes diretamente associados a ele. Por esse motivo, é importante projetar serviços iniciados para que eles podem ser normalmente reiniciados conforme necessário.
 
 * **Serviço híbrido** &ndash; um _serviço híbrido_ é um serviço que tem as características de um _serviço iniciado_ e um _associado serviço_. Quando um componente é associado a ele ou ela pode ser iniciada por algum evento, um serviço híbrido pode ser iniciado por. Um componente de cliente pode ou não pode ser associado ao serviço híbrido. Um serviço híbrido será manter em execução até que explicitamente é informado para parar, ou até que não haja nenhum outro cliente associado a ele.
 
@@ -59,7 +59,7 @@ Também é possível executar um serviço em seu próprio processo no mesmo disp
 
 ### <a name="background-execution-limits-in-android-80"></a>Limites de execução do plano de fundo no Android 8.0
 
-Partir do Android 8.0 (API nível 26), um aplicativo do Android não tem a capacidade de executar livremente em segundo plano. Quando estiver em primeiro plano, um aplicativo pode iniciar e executar os serviços sem restrição. Quando um aplicativo move para o plano de fundo, Android, será concedido o aplicativo uma determinada quantidade de tempo para iniciar e usar os serviços. Depois de decorrido esse tempo, o aplicativo não poderá mais iniciar todos os serviços e todos os serviços foram iniciados serão encerrados. AT esse ponto não é possível para o aplicativo executar qualquer trabalho. Android considera um aplicativo esteja em primeiro plano se uma das seguintes condições forem atendida:
+Partir do Android 8.0 (API nível 26), um aplicativo do Android não tem a capacidade de executar livremente em segundo plano. Quando estiver em primeiro plano, um aplicativo pode iniciar e executar os serviços sem restrição. Quando um aplicativo move para o plano de fundo, Android, será concedido o aplicativo uma determinada quantidade de tempo para iniciar e usar os serviços. Depois de decorrido esse tempo, o aplicativo não poderá mais iniciar todos os serviços e todos os serviços foram iniciados serão encerrados. No momento não é possível que o aplicativo executar qualquer trabalho. Android considera um aplicativo esteja em primeiro plano se uma das seguintes condições forem atendida:
 
 * Há uma atividade visível (iniciado ou pausado).
 * O aplicativo foi iniciado de um serviço de primeiro plano.
@@ -70,7 +70,7 @@ Há algumas situações em que, mesmo que um aplicativo está em segundo plano, 
 * O aplicativo recebe uma transmissão. 
 * O aplicativo recebe um executa uma `PendingIntent` em resposta a uma notificação.
 
-Os aplicativos xamarin. Android existentes talvez precise alterar a forma como realizam o trabalho em segundo plano para evitar quaisquer problemas que possam surgir no Android 8.0. Aqui estão alguns alterantives prático para um serviço do Android:
+Os aplicativos xamarin. Android existentes talvez precise alterar a forma como realizam o trabalho em segundo plano para evitar quaisquer problemas que possam surgir no Android 8.0. Aqui estão algumas alternativas práticas para um serviço do Android:
 
 * **Agendar trabalhos para execução em segundo plano usando o Agendador de trabalho Android ou o [Dispatcher de trabalho do Firebase](~/android/platform/firebase-job-dispatcher.md)**  &ndash; essas duas bibliotecas fornecem uma estrutura para aplicativos para separar o trabalho de plano de fundo na _trabalhos_, uma unidade separada do trabalho. Aplicativos, em seguida, podem agendar o trabalho com o sistema operacional, juntamente com alguns critérios sobre quando o trabalho pode ser executado.
 * **Inicie o serviço em primeiro plano** &ndash; um serviço de primeiro plano é útil para quando o aplicativo deve executar algumas tarefas em segundo plano e o usuário pode precisar interagir periodicamente com essa tarefa. O serviço de primeiro plano exibirá uma notificação persistente para que o usuário esteja ciente de que o aplicativo está executando uma tarefa em segundo plano e também fornece uma maneira de monitorar ou interagir com a tarefa. Um exemplo disso seria um aplicativo de podcasts reproduzindo um podcast ao usuário ou talvez baixando um episódio do podcast, de modo que ele pode ser aproveitado mais tarde. 

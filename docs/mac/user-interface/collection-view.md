@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: 904db0b97a8b21fd51722b70a63386a53e3f5347
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82dd175222289676c3dacd80522c55e71ba12180
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104031"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526827"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Exibições de coleção no xamarin. Mac
 
 _Este artigo descreve como trabalhar com exibições de coleção em um aplicativo xamarin. Mac. Ele aborda a criação e manter modos de exibição de coleção no Xcode e Interface Builder e trabalhar com eles por meio de programação._
 
-Ao trabalhar com c# e .NET em um aplicativo xamarin. Mac, o desenvolvedor tem acesso à mesma exibição de coleção AppKit controla a que um desenvolvedor que trabalha em *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, o desenvolvedor usa do Xcode _construtor de Interface_ para criar e manter modos de exibição de coleção.
+Ao trabalhar com C# e o .NET em um aplicativo xamarin. Mac, o desenvolvedor tem acesso para a mesma exibição de coleção AppKit controla o que um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, o desenvolvedor usa do Xcode _construtor de Interface_ para criar e manter modos de exibição de coleção.
 
 Um `NSCollectionView` exibe uma grade de subexibições organizados utilizando um `NSCollectionViewLayout`. Cada modo de exibição secundário na grade é representado por um `NSCollectionViewItem` que gerencia o carregamento do conteúdo da exibição de um `.xib` arquivo.
 

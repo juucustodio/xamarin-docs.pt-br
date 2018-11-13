@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118871"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527321"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
@@ -96,7 +96,7 @@ Xamarin. Forms não oferece quaisquer eventos nativos para notificar seu aplicat
 > [!NOTE]
 > Há um pacote de NuGet existente e gratuito para receber notificações de alterações de orientação no código compartilhado. Consulte a [repositório GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) para obter mais informações.
 
-Como alternativa, é possível substituir a [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) método em um `Page`, inserindo qualquer layout alterar lógica nele. O `OnSizeAllocated` método é chamado sempre que um `Page` é alocado um novo tamanho, o que acontece whenver o dispositivo seja girado. Observe que a implementação base de `OnSizeAllocated` executa funções importantes de layout, portanto, é importante chamar a implementação base na substituição:
+Como alternativa, é possível substituir a [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) método em um `Page`, inserindo qualquer layout alterar lógica nele. O `OnSizeAllocated` método é chamado sempre que um `Page` é alocado um novo tamanho, o que ocorre sempre que o dispositivo seja girado. Observe que a implementação base de `OnSizeAllocated` executa funções importantes de layout, portanto, é importante chamar a implementação base na substituição:
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)

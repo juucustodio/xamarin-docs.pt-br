@@ -4,15 +4,15 @@ description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do cap
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 464fbdb043ac35eba7a4cc2d9ec76b78cc91ac5b
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 0f1da94031e658d42205e6346d41b02c5822d992
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156506"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563674"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Resumo do capítulo 6. Cliques de botão
 
@@ -87,5 +87,5 @@ O [ **PersistentKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 - [Capítulo 6 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
 - [Exemplos do capítulo 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
-- [Exemplos do capítulo 6 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
+- [Capítulo 6 F# amostras](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
 - [Botão de xamarin. Forms](~/xamarin-forms/user-interface/button.md)

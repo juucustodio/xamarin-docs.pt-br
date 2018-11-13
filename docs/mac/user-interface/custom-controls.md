@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fde60d48c23bc48ce1602a0643a3af8ad492ec6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104005"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527060"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Criação de controles personalizados no xamarin. Mac
 
-Ao trabalhar com c# e .NET em um aplicativo xamarin. Mac, você tem acesso ao mesmo usuário que controla um desenvolvedor que trabalha em *Objective-C*, *Swift* e *Xcode* faz . Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter seus controles de usuário (ou, opcionalmente, criá-los diretamente em código c#).
+Ao trabalhar com C# e o .NET em um aplicativo xamarin. Mac, você terá acesso ao mesmo usuário que controla um desenvolvedor que trabalha *Objective-C*, *Swift* e *Xcode*faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter seus controles de usuário (ou, opcionalmente, criá-los diretamente em código c#).
 
 Embora o macOS fornece uma série de controles de usuário internos, pode haver vezes em que você precisa criar um controle personalizado para fornecer a funcionalidade fornecida não out-of-the-box ou para corresponder a um tema personalizado da interface do usuário (como uma interface do jogo).
 
@@ -221,7 +221,7 @@ Há duas maneiras básicas que podemos adicionar entrada do usuário para o noss
 
 #### <a name="handling-user-input-with-override-methods"></a>Manipulando a entrada do usuário com os métodos de substituição
 
-Objetos que herdam `NSControl` (ou `NSView`) ter vários substituir métodos para manipulação de mouse ou entrada do teclado. Para nosso controle de exemplo, queremos inverter o estado da opção entre **na** e **Off** quando o usuário clica no controle com o botão esquerdo do mouse. Podemos adicionar o seguinte substituir métodos para o `NSFliwSwitch` classe para lidar com isso:
+Objetos que herdam `NSControl` (ou `NSView`) ter vários substituir métodos para manipulação de mouse ou entrada do teclado. Para nosso controle de exemplo, queremos inverter o estado da opção entre **na** e **Off** quando o usuário clica no controle com o botão esquerdo do mouse. Podemos adicionar o seguinte substituir métodos para o `NSFlipSwitch` classe para lidar com isso:
 
 ```csharp
 #region Mouse Handling Methods
@@ -344,7 +344,7 @@ Com o modo de exibição personalizado ainda selecionada, alterne para o **Inspe
 
 [![](custom-controls-images/custom04.png "Classe do modo de exibição de configuração")](custom-controls-images/custom04.png#lightbox)
 
-Alterne para o **Editor assistente** e criar um **tomada** para o controle personalizado (certificando-se de associá-lo no `ViewControler.h` arquivo e não o `.m` arquivo):
+Alterne para o **Editor assistente** e criar um **tomada** para o controle personalizado (certificando-se de associá-lo no `ViewController.h` arquivo e não o `.m` arquivo):
 
 [![](custom-controls-images/custom05.png "Configurando uma nova saída")](custom-controls-images/custom05.png#lightbox)
 

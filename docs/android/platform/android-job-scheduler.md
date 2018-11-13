@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 4bbb217fa8a3192905d016763b961e182224aa67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108763"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527008"
 ---
 # <a name="android-job-scheduler"></a>Agendador de trabalhos do Android
 
@@ -42,7 +42,7 @@ O Agendador de trabalho Android é uma estrutura integrada do sistema operaciona
 * Um `Android.App.Job.JobService` é uma classe abstrata que deve ser estendida com a lógica que executará o trabalho no thread principal do aplicativo. Isso significa que o `JobService` é responsável como o trabalho é para ser executada de forma assíncrona.
 * Um `Android.App.Job.JobInfo` objeto contém os critérios para orientar o Android quando o trabalho deve ser executado.
 
-Para agendar o trabalho com o Agendador de trabalho Android, um aplicativo xamarin. Android deve encapsular o código em uma classe que estende o `JobService` classe. `JobService` tem três métodos de ciclo de vida que pode ser chamado durante o tempo de vida do trabalho:
+Para agendar o trabalho com o Agendador de trabalho Android, um aplicativo xamarin. Android deve encapsular o código em uma classe que estende o `JobService` classe. `JobService` tem três métodos de ciclo de vida que podem ser chamados durante o tempo de vida do trabalho:
 
 * **bool OnStartJob (parâmetros JobParameters)** &ndash; esse método é chamado pelo `JobScheduler` para executar o trabalho e é executado no thread principal do aplicativo. É responsabilidade do `JobService` assincronamente realizar o trabalho e `true` se não houver trabalho restante, ou `false` se o trabalho é feito.
     
@@ -130,10 +130,10 @@ public static class JobSchedulerHelpers
     }
 }
 
-// Sample usage - creates a JobBuilder for a DownloadJob andsets the Job ID to 1.
+// Sample usage - creates a JobBuilder for a DownloadJob and sets the Job ID to 1.
 var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 
-var jobInfo = jobBuilder.Build();  // creats a JobInfo object.
+var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 ```
 
 Um recurso poderoso do Agendador de trabalho Android é a capacidade de controlar quando um trabalho é executado ou em quais condições um trabalho pode ser executado. A tabela a seguir descreve alguns dos métodos em `JobInfo.Builder` que permitem que um aplicativo influenciar quando um trabalho pode ser executado:  
@@ -186,7 +186,7 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 Para agendar um trabalho, um aplicativo xamarin. Android será obter uma referência para o `JobScheduler` serviço do sistema e a chamada a `JobScheduler.Schedule` método com o `JobInfo` objeto que foi criado na etapa anterior. `JobScheduler.Schedule` retornará imediatamente com um dos dois valores inteiros:
 
-* **JobScheduler.ResultSuccess** &ndash; o trabalho foi agendado de com êxito. 
+* **JobScheduler.ResultSuccess** &ndash; o trabalho foi agendado com êxito. 
 * **JobScheduler.ResultFailure** &ndash; o trabalho não pôde ser agendado. Isso geralmente é causado por conflitos `JobInfo` parâmetros.
 
 Esse código é um exemplo de um trabalho de agendamento e notificar o usuário dos resultados da tentativa de agendamento:
@@ -211,7 +211,7 @@ else
 
 ```csharp
 // Cancel all jobs
-jobSchduler.CancelAll(); 
+jobScheduler.CancelAll(); 
 
 // to cancel a job with jobID = 1
 jobScheduler.Cancel(1)

@@ -5,12 +5,12 @@ description: Este documento compara as semelhanças e diferenças entre o ciclo 
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: cf25cf956fbf9fd566520d9067f0d98a9a7624aa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107099"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526787"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF x. Ciclo de vida de aplicativo xamarin. Forms
 
@@ -83,7 +83,7 @@ Xamarin. Forms está voltada principalmente para cenários móveis. Dessa forma,
 |--- |--- |--- |
 |Ativação inicial|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |Mostrado|Window.IsVisibleChanged|Page.Appearing|
-|Hidden|Window.IsVisibleChanged|Page.Disapearing|
+|Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |Foco de suspender/perdidos|Window.OnDeactivated|Page.OnSleep|
 |Ativado/recebido foco|Window.OnActivated|Page.OnResume|
 |Closed|Window.OnClosing + Window.OnClosed|N/D|
@@ -179,11 +179,11 @@ Se você não definir o `ResourceDictionary`, será gerado um erro de tempo de e
 
 ## <a name="styles"></a>Estilos
 
-Estilos também tem total suporte no xamarin. Forms e pode ser usado para o tema os elementos de xamarin. Forms que compõem a interface do usuário. Eles oferecem suporte a herança de gatilhos (propriedades, eventos e dados), por meio de `BasedOn`e as pesquisas de recursos para valores. Os estilos são aplicados aos elementos qualquer explicitamente por meio de `Style` propriedade, ou implicitamente ao não fornecer uma chave de recurso – assim como o WPF.
+Estilos também tem total suporte no xamarin. Forms e pode ser usado para o tema os elementos de xamarin. Forms que compõem a interface do usuário. Eles oferecem suporte a herança de gatilhos (propriedades, eventos e dados), por meio de `BasedOn`e as pesquisas de recursos para valores. Os estilos são aplicados aos elementos seja explicitamente por meio de `Style` propriedade, ou implicitamente ao não fornecer uma chave de recurso – assim como o WPF.
 
 ### <a name="device-styles"></a>Estilos de dispositivo
 
-O WPF tem um conjunto de propriedades predefinidas (armazenados como valores estáticos em um conjunto de classes estáticas, como `SystemColors`) que determinam o sistema de sites que cores, fontes e métricas na forma de valores e chaves de recurso. Xamarin. Forms é semelhante, mas define um conjunto de [estilos de dispositivo](~/xamarin-forms/user-interface/styles/device.md) para representar as mesmas coisas. Esses estilos são fornecidos pela frameowrk e definidos como valores com base no ambiente de tempo de execução (por exemplo, acessibilidade).
+O WPF tem um conjunto de propriedades predefinidas (armazenados como valores estáticos em um conjunto de classes estáticas, como `SystemColors`) que ditam as cores do sistema, as fontes e as métricas na forma de valores e chaves de recurso. Xamarin. Forms é semelhante, mas define um conjunto de [estilos de dispositivo](~/xamarin-forms/user-interface/styles/device.md) para representar as mesmas coisas. Esses estilos são fornecidos pela estrutura e definidos como valores com base no ambiente de tempo de execução (por exemplo, acessibilidade).
 
 **WPF**
 

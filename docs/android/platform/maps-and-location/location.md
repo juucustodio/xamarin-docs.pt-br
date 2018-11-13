@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: e3cfc9a345c8ab92b35ad428b550ec42de6312e5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120288"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563505"
 ---
 # <a name="location-services"></a>Serviços de localização
 
@@ -190,7 +190,7 @@ Esse método utiliza dois parâmetros:
 
 Para notificar um aplicativo xamarin. Android de uma atualização local, o provedor local adição múltipla invocará o `LocationCallBack.OnLocationResult(LocationResult result)`. O `Android.Gms.Location.LocationResult` parâmetro conterá as informações de local de atualização.
 
-Quando o provedor de adição múltipla local detecta uma alteração na disponibilidade de dados local, ele chamará o `LocationProvider.OnLocationAvaibility(LocationAvailability
+Quando o provedor de adição múltipla local detecta uma alteração na disponibilidade de dados local, ele chamará o `LocationProvider.OnLocationAvailability(LocationAvailability
 locationAvailability)` método. Se o `LocationAvailability.IsLocationAvailable` propriedade retorna `true`, em seguida, é possível pressupor que os resultados de localização do dispositivo relatado pelo `OnLocationResult` são tão precisas e tão atualizados conforme exigido pelo `LocationRequest`. Se `IsLocationAvailable` for false, nenhum resultado local será retornado por `OnLocationResult`.
 
 Este trecho de código é uma implementação de exemplo de `LocationCallback` objeto:
@@ -253,9 +253,9 @@ LocationManager locationManager = (LocationManager) GetSystemService(Context.Loc
 
 ### <a name="request-location-updates-from-the-locationmanager"></a>Atualizações da solicitação de local do LocationManager
 
-Depois que o aplicativo tem uma referência para o `LocationManager`, ele precisa informar o `LocationManager` quais tipos de informações de local que são necessários e a frequência com que essa informação deve ser atualizada. Faça isso chamando `RequestionLocationUpdates` sobre o `LocationManager` objeto e passar alguns critérios para atualizações e um retorno de chamada que receberá as atualizações de local. Esse retorno de chamada é um tipo que deve implementar o `ILocationListener` interface (descrita em mais detalhes mais adiante neste guia).
+Depois que o aplicativo tem uma referência para o `LocationManager`, ele precisa informar o `LocationManager` quais tipos de informações de local que são necessários e a frequência com que essa informação deve ser atualizada. Faça isso chamando `RequestLocationUpdates` sobre o `LocationManager` objeto e passar alguns critérios para atualizações e um retorno de chamada que receberá as atualizações de local. Esse retorno de chamada é um tipo que deve implementar o `ILocationListener` interface (descrita em mais detalhes mais adiante neste guia).
 
-O `RequestionLocationUpdates` método informa o local do sistema de serviço que seu aplicativo gostaria de começar a receber atualizações de local. Esse método permite que você especifique o provedor, bem como os limites de tempo e a distância para controlar a frequência de atualização. Por exemplo, o método a seguir abaixo local solicitações atualizações do provedor de localização de GPS cada 2000 milissegundos, e somente quando o local for alterado mais de 1 metre:
+O `RequestLocationUpdates` método informa o local do sistema de serviço que seu aplicativo gostaria de começar a receber atualizações de local. Esse método permite que você especifique o provedor, bem como os limites de tempo e a distância para controlar a frequência de atualização. Por exemplo, o método abaixo solicita o local de atualizações do provedor de localização de GPS cada 2000 milissegundos, e somente quando o local for alterado mais de 1 metre:
 
 ```csharp
 // For this example, this method is part of a class that implements ILocationListener, described below

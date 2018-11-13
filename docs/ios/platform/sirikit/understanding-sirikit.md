@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: b72246968c9b321329e56fd51eaaa98a1625922e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b2a9e757e8a3407bbb19ae0580e5788eabe84cf0
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123070"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528865"
 ---
 # <a name="understanding-sirikit-concepts"></a>Noções básicas sobre conceitos de SiriKit
 

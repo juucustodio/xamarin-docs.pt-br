@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 469ae19021ae524c302b8a9920aaa64bb4a681f4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117285"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528452"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabalhar com Storyboards no xamarin. Mac
 
@@ -150,7 +150,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Opcionalmente, você pode substituir a `ShouldPerfromSegue` método e o controle ou não o Segue, na verdade, é executado por meio do C# código. Para os controladores de exibição manualmente apresentada, chame seus `DismissController` método para removê-los da exibição quando eles não são mais necessários.
+Opcionalmente, você pode substituir a `ShouldPerformSegue` método e o controle ou não o Segue, na verdade, é executado por meio do C# código. Para os controladores de exibição manualmente apresentada, chame seus `DismissController` método para removê-los da exibição quando eles não são mais necessários.
 
 <a name="Creating-Custom-Segues" />
 
@@ -227,7 +227,7 @@ Janela controladores contenham e controlam os diferentes tipos de janela que seu
 2. O `Storyboard` propriedade conterá o Storyboard que o controlador da janela foi carregado, caso contrário `null` se não foi carregado de um Storyboard.
 3. Você pode chamar o `DismissController` método para fechar a janela de determinado e removê-lo do modo de exibição.
 
-Assim como os controladores de exibição, controladores de janela implementam o `PerformSegue`, `PrepareForSegue` e o `ShouldPerfromSegue` métodos e pode ser usado como a origem de uma operação Segue.
+Assim como os controladores de exibição, controladores de janela implementam o `PerformSegue`, `PrepareForSegue` e o `ShouldPerformSegue` métodos e pode ser usado como a origem de uma operação Segue.
 
 Controlador da janela é responsável para os seguintes recursos de um aplicativo do macOS:
 
@@ -259,7 +259,7 @@ Os identificadores de gesto a seguir estão disponíveis no macOS:
 
 ## <a name="using-storyboard-references"></a>Usando referências de Storyboard
 
-Uma referência de Storyboard permite que você pegar um design de Storyboard grande e complexo e dividi-la em Storyboards menores do que obterem referenciados do original, assim, removendo a complexidade e tornando a resultante individuais removendo Storyboards mais fácil ao design e Manter.
+Uma referência de Storyboard permite que você usar um design de Storyboard grande e complexo e dividi-la em menores Storyboards que obterem referenciados a partir do original, portanto, remover a complexidade e tornando os Storyboards individuais resultantes mais fácil de desenvolver e manter.
 
 Além disso, uma referência de Storyboard pode fornecer um _âncora_ à cena outro dentro do mesmo Storyboard ou uma cena específica em um diferente.
 

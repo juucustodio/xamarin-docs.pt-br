@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 51bd3dd4c27dce19344f7660c31a0d4e741e1ad4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a411d4d85877c9868ec49f92b53ca8d7a81f9959
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121133"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528527"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusão no xamarin. Android
 
@@ -97,7 +97,7 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Aplicativos destinados a Android 8.0 (API nível 26) ou superior não pode estaticamente se registrar para uma difusão implícita. Aplicativos estaticamente ainda podem se registrar para uma transmissão explícita. Há uma pequena lista de difusões implícitas que são isentos dessa restrição. Essas exceções são descritas na [implícita de exceções de difusão](https://developer.android.com/guide/components/broadcast-exceptions.html) guide na documentação do Android. Aplicativos que estejam interessados em transmissões implícitas devem fazer isso dinamicamente usando o `RegisterReceiver` método. Isso é descrito a seguir.
+Aplicativos destinados a Android 8.0 (API nível 26) ou superior não pode estaticamente se registrar para uma difusão implícita. Aplicativos estaticamente ainda podem se registrar para uma transmissão explícita. Há uma pequena lista de transmissões implícitas que são isentos dessa restrição. Essas exceções são descritas na [implícita de exceções de difusão](https://developer.android.com/guide/components/broadcast-exceptions.html) guide na documentação do Android. Aplicativos que estejam interessados em transmissões implícitas devem fazer isso dinamicamente usando o `RegisterReceiver` método. Isso é descrito a seguir.
 
 ### <a name="context-registering-a-broadcast-receiver"></a>Registro de contexto de um receptor de difusão
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: af5554d08ac6c45fc0c392bd17cef5d91251bb1a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 01ff4426dfb4764b7d9ca22703aa2b1667a90454
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106501"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528540"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Layouts com guias com a ActionBar
 
@@ -23,7 +23,7 @@ _Este guia apresenta e explica como usar as APIs ActionBar para criar uma interf
 
 A barra de ação é um padrão de interface do usuário Android que é usado para fornecer uma interface do usuário consistente para os principais recursos, como guias, identidade do aplicativo, menus e pesquisa. No Android 3.0 (API nível 11), o Google apresentou as APIs ActionBar para a plataforma Android. As APIs ActionBar introduzir temas de interface do usuário para fornecer uma aparência consistente e classes que permitem a interfaces do usuário com guias. Este guia aborda como adicionar guias da barra de ação a um aplicativo xamarin. Android. Ele também aborda como usar a biblioteca de suporte ao Android v7 a backport ActionBar guias para aplicativos xamarin. Android visando o Android 2.1 para Android 2.3. 
 
-Observe que `Toolbar` é um componente de barra de ação mais recente e mais generalizada que deve ser usado em vez da `ActionBar` (`Toolbar` foi projetado para substituir `ActionBar`). Para obter mais informações, consulte [barra de ferramentas](~/android/user-interface/controls/tool-bar/index.md). 
+Observe que `Toolbar` é um componente de barra de ação mais recente e mais generalizada que deve ser usado em vez de `ActionBar` (`Toolbar` foi projetado para substituir `ActionBar`). Para obter mais informações, consulte [barra de ferramentas](~/android/user-interface/controls/tool-bar/index.md). 
 
 
 

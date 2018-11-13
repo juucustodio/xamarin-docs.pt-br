@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: e361444f2c717ff44e0771710836f156f90cfcb8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118884"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528800"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificações remotas com o Google Cloud Messaging
 
@@ -91,7 +91,7 @@ Um aplicativo do Android deve ter as seguintes permissões configuradas antes qu
 -   `com.google.android.c2dm.permission.RECEIVE` &ndash; Concede permissão para nosso aplicativo para se registrar e receber mensagens do Google Cloud Messaging. (O que faz `c2dm` significam? Isso significa _nuvem para mensagens de dispositivo_, que é o predecessor agora foi preterida GCM. 
     GCM ainda usa `c2dm` em muitas das suas cadeias de caracteres de permissão.) 
 
--   `android.permission.WAKE_LOCK` &ndash; (Opcional) Impede que o dispositivo da CPU do entrando em suspensão enquanto ouve uma mensagem. 
+-   `android.permission.WAKE_LOCK` &ndash; (Opcional) Impede que o dispositivo da CPU no estado de suspensão enquanto ouve uma mensagem. 
 
 -   `android.permission.INTERNET` &ndash; Concede acesso à internet para que o aplicativo cliente possa se comunicar com o GCM. 
 
@@ -657,7 +657,7 @@ Quando você abre a bandeja de notificação para exibir as notificações, voc�
 
 Parabéns, seu aplicativo recebeu sua primeira notificação remota!
 
-Observe que mensagens do GCM não serão recebidas se o aplicativo for interrompido por força. Para retomar as notificações após uma parada de força, o aplicativo deve ser manualmente reiniciado. Para obter mais informações sobre esta política de Android, consulte [inicie controles em aplicativos interrompidos](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) e isso [postagem de estouro de pilha](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
+Observe que mensagens do GCM não serão recebidas se o aplicativo for interrompido por força. Para retomar as notificações após uma parada de força, o aplicativo deve ser reiniciado manualmente. Para obter mais informações sobre esta política de Android, consulte [inicie controles em aplicativos interrompidos](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) e isso [postagem de estouro de pilha](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
  
 ## <a name="summary"></a>Resumo

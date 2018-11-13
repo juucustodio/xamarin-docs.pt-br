@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ecfe99f66e16eafabc3117036ff065e3a35259c3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f972a32f8daf920f2121e5aa56923c0f3a7f808a
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994342"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528436"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Padrões de aplicativo empresarial usando o livro eletrônico do xamarin. Forms
 
@@ -54,7 +54,7 @@ Este capítulo apresenta um `NavigationService` classe, que é usado para execut
 
 Qualquer aplicativo que aceita entrada de usuários deve garantir que a entrada é válida. Sem validação, um usuário pode fornecer dados que faz com que o aplicativo falhe. Validação impõe regras de negócio e impede que um invasor injetando dados mal-intencionados.
 
-No contexto do modelo modelo de ViewModel (MVVM) padrão, um modelo de exibição ou modelo geralmente precisará executar a validação de dados e sinalizar erros de validação para o modo de exibição para que o usuário possa corrigi-los.
+No contexto do Model-View-ViewModel (MVVM) padrão, um modelo de exibição ou modelo geralmente precisará executar a validação de dados e sinalizar erros de validação para o modo de exibição para que o usuário possa corrigi-los.
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[Gerenciamento de configurações](configuration-management.md)
 

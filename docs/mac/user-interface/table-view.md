@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a8c55c8b4ff3fbd515aad8bf45c52a0b549af9f
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
-ms.translationtype: MT
+ms.openlocfilehash: 0d89fff81d1d13baa578068bcaef11dd5af00e14
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285593"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527047"
 ---
 # <a name="table-views-in-xamarinmac"></a>Modos de exibição de tabela no xamarin. Mac
 
 _Este artigo aborda o trabalho com modos de exibição de tabela em um aplicativo xamarin. Mac. Ele descreve criando modos de exibição de tabela no Xcode e Interface Builder e interagir com eles no código._
 
-Ao trabalhar com c# e .NET em um aplicativo xamarin. Mac, você tem acesso à mesma tabela que exibe um desenvolvedor que trabalha em *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter seus modos de exibição de tabela (ou, opcionalmente, criá-los diretamente em código c#).
+Ao trabalhar com C# e .NET em um aplicativo xamarin. Mac, você tem acesso à mesma tabela que exibe um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter seus modos de exibição de tabela (ou, opcionalmente, criá-los diretamente em código c#).
 
 Uma exibição de tabela exibe dados em um formato de tabela que contém uma ou mais colunas de informações em várias linhas. Com base no tipo de exibição de tabela que está sendo criado, o usuário pode classificar por coluna, reorganizar as colunas, adicionar colunas, remover colunas ou editar os dados contidos dentro da tabela.
 

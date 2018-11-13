@@ -4,15 +4,15 @@ description: Em um aplicativo xamarin. Forms, o XAML é mais usado para definir 
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: f75e49c04ded99b3f7468709926277648f9f3729
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7ee701c659e0051f5509934dbf0d86e9b3890c9a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103160"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563857"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introdução ao XAML
 

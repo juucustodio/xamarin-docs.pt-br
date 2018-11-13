@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: 34406ce8d4276ba36ab2ddd49e73681ff2fef773
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103745"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563336"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Profiler de Xamarin de solução de problemas
 
@@ -79,7 +79,7 @@ Normalmente é devido a não ser capaz de iniciar o simulador / emulador. Tentar
 
 #### <a name="to-watch-a-specific-thread"></a>Para assistir a um thread específico
 
-Se você tiver um thread que você quisesse especificamente assistir, seria ideal para nomear o segmento com o muito a partir de sua criação para que obtenham get `ThreadName` em vez de `0x0`. Por exemplo definir o nome do thread como interface do usuário, você pode usar o código a seguir:
+Se você tiver um thread que você quisesse especificamente assistir, seria ideal para nomear o thread no início de sua criação para obter `ThreadName` em vez de `0x0`. Por exemplo, para definir o nome do thread como `UI`, você pode usar o código a seguir:
 
 ```csharp
 RunOnUiThread (() => {

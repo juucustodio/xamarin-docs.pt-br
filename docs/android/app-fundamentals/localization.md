@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f50efb7b78db67b310ccddec3eb94bfe4d2e521
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
-ms.translationtype: MT
+ms.openlocfilehash: 833bdc0fd087fcf8dbb8cce3b8b23f427302f5e7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301247"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526865"
 ---
 # <a name="android-localization"></a>Localização do Android
 
@@ -207,7 +207,7 @@ Nesta captura de tela, quatro imagens são salvas na **desenháveis** directory,
 
 Você também pode fornecer outros tipos de alternativa, os recursos específicos de linguagem incluindo layouts, animações e arquivos brutos. Isso significa que você pode fornecer um layout de tela específica para um ou mais dos seus idiomas de destino, por exemplo você pode criar um layout especificamente para o alemão que permite que os rótulos de texto muito longo.
 
-Introduziu o suporte para Android 4.2 [direita para idiomas de à esquerda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se você definir a configuração de aplicativo `android:supportsRtl="true"`. O qualificador de recurso `"ldrtl"` pode ser incluído em um nome de diretório de códigos para conter os layouts personalizados que são projetados para a exibição RTL.
+Introduziu o suporte para Android 4.2 [direita para idiomas de à esquerda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se você definir a configuração de aplicativo `android:supportsRtl="true"`. O qualificador de recurso `"ldrtl"` podem ser incluídos em um nome de diretório para conter os layouts personalizados que são projetados para a exibição RTL.
 
 Para obter mais informações sobre nomenclatura de diretório de recursos e fallback, consulte documentos do Android para [fornecer recursos alternativos](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
@@ -225,7 +225,7 @@ O nome do aplicativo é fácil de localizar, usando um `@string/id` em para o `M
 
 Android 4.2 e mais recente oferece suporte completo para layouts RTL, descritos detalhadamente na [blog de suporte nativo de RTL](http://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
 
-Ao usar o Android 4.2 (API nível 17) e mais recente, aligment valores podem ser especificados com `start` e `end` em vez de `left` e `right` (por exemplo `android:paddingStart`). Também há novas APIs, como `LayoutDirection`, `TextDirection`, e `TextAlignment` para ajudar a criar telas que se adaptam para leitores RTL.
+Ao usar o Android 4.2 (API nível 17) e o alinhamento mais recente, valores podem ser especificados com `start` e `end` em vez de `left` e `right` (por exemplo `android:paddingStart`). Também há novas APIs, como `LayoutDirection`, `TextDirection`, e `TextAlignment` para ajudar a criar telas que se adaptam para leitores RTL.
 
 A captura de tela a seguir mostra a [localizada **Tasky** exemplo](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em árabe:
 

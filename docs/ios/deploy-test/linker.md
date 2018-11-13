@@ -85,9 +85,9 @@ Quando você usar o _linker_, ele às vezes removerá código que você pode ter
 
 ### <a name="preserving-code"></a>Preservação do código
 
-Quando você usa o vinculador, ele pode às vezes remover código que você pode ter chamado dinamicamente usando System.Reflection.MemberInfo.Invoke, ou então exportando seus métodos para Objective-C usando o atributo `[Export]` e, em seguida, invocando o seletor manualmente.
+Quando você usa o _linker_, ele pode às vezes remover código que você pode ter chamado dinamicamente usando System.Reflection.MemberInfo.Invoke, ou então exportando seus métodos para Objective-C usando o atributo `[Export]` e, em seguida, invocando o seletor manualmente.
 
-Nesses casos, você pode instruir o vinculador para considerar classes inteiras para serem usadas ou então membros individuais a serem preservados, aplicando o atributo `[Xamarin.iOS.Foundation.Preserve]` no nível de classe ou no nível de membro. Cada membro que não está vinculado estaticamente pelo aplicativo está sujeito a ser removido. Portanto, este atributo é usado para marcar membros que não são referenciados estaticamente, mas que ainda são necessários para o seu aplicativo.
+Nesses casos, você pode instruir o _linker_ para considerar classes inteiras para serem usadas ou então membros individuais a serem preservados, aplicando o atributo `[Xamarin.iOS.Foundation.Preserve]` no nível de classe ou no nível de membro. Cada membro que não está vinculado estaticamente pelo aplicativo está sujeito a ser removido. Portanto, este atributo é usado para marcar membros que não são referenciados estaticamente, mas que ainda são necessários para o seu aplicativo.
 
 Por exemplo, se você cria uma instância de tipos dinamicamente, convém preservar o construtor padrão de seus tipos. Se você usar a serialização de XML, você talvez queira preservar as propriedades de seus tipos.
 
@@ -107,13 +107,13 @@ public sealed class PreserveAttribute : System.Attribute {
 }
 ```
 
-Não importa em qual namespace isso é definido, o vinculador procura esse atributo pelo nome do tipo.
+Não importa em qual namespace isso é definido, o _linker_ procura esse atributo pelo nome do tipo.
 
  <a name="Skipping_Assemblies" />
 
 ### <a name="skipping-assemblies"></a>Ignorar assemblies
 
-É possível especificar os assemblies que devem ser excluídos do processo do vinculador, permitindo simultaneamente que outros assemblies sejam vinculados normalmente. Isso é útil se usar `[Preserve]` em alguns assemblies é impossível (por exemplo, com código de terceiros) ou como uma solução temporária para um bug.
+É possível especificar os assemblies que devem ser excluídos do processo do _linker_, permitindo simultaneamente que outros assemblies sejam vinculados normalmente. Isso é útil se usar `[Preserve]` em alguns assemblies é impossível (por exemplo, com código de terceiros) ou como uma solução temporária para um bug.
 
 Isso corresponde à opção `--linkskip` ao usar a ferramenta de linha de comando mtouch.
 
@@ -123,7 +123,7 @@ Ao usar opção **Vincular Todos os Assemblies**, se você quiser dizer ao vincu
 --linkskip=NameOfAssemblyToSkipWithoutFileExtension
 ```
 
-Se você deseja que o vinculador ignore vários assemblies, inclua vários argumentos `linkskip`:
+Se você deseja que o _linker_ ignore vários assemblies, inclua vários argumentos `linkskip`:
 
 ```csharp
 --linkskip=NameOfFirstAssembly --linkskip=NameOfSecondAssembly
@@ -135,26 +135,26 @@ Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser 
 
 ### <a name="disabling-link-away"></a>Desabilitar a Remoção
 
-O vinculador removerá código que tem uma chance muito baixa de ser usado em dispositivos, por exemplo, que não é compatível ou não é permitido. Em raras ocasiões, é possível que um aplicativo ou a biblioteca dependa desse código (funcionando ou não). Desde o Xamarin.iOS 5.0.1, o vinculador pode ser instruído a ignorar essa otimização.
+O _linker_ removerá código que tem uma chance muito baixa de ser usado em dispositivos, por exemplo, que não é compatível ou não é permitido. Em raras ocasiões, é possível que um aplicativo ou a biblioteca dependa desse código (funcionando ou não). Desde o Xamarin.iOS 5.0.1, o _linker_ pode ser instruído a ignorar essa otimização.
 
 Isso corresponde à opção *-nolinkaway* ao usar a ferramenta de linha de comando mtouch.
 
 Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser fornecida na caixa de diálogo Opções do Projeto do Visual Studio para Mac ou no painel Propriedades do projeto do Visual Studio, dentro do campo de texto **Argumentos adicionais do mtouch**. (por exemplo, *--nolinkaway* não removeria o código extra (cerca de 100 KB)).
 
-### <a name="marking-your-assembly-as-linker-ready"></a>Marcar o assembly como pronto para o vinculador
+### <a name="marking-your-assembly-as-linker-ready"></a>Marcar o assembly como pronto para o Linker
 
 Os usuários podem selecionar a opção de apenas vincular os assemblies do SDK, sem nenhuma vinculação ao seu código.  Isso também significa que todas as bibliotecas de terceiros que não fazem parte do SDK principal do Xamarin não serão vinculadas.
 
-Isso normalmente acontece porque eles não desejam adicionar manualmente atributos `[Preserve]` ao seu código.  O efeito colateral é que bibliotecas de terceiros não serão vinculadas, o que geralmente é um bom padrão, pois não é possível saber se uma outra biblioteca de terceiros é compatível funciona bem com o vinculador ou não.
+Isso normalmente acontece porque eles não desejam adicionar manualmente atributos `[Preserve]` ao seu código.  O efeito colateral é que bibliotecas de terceiros não serão vinculadas, o que geralmente é um bom padrão, pois não é possível saber se uma outra biblioteca de terceiros é compatível com o _linker_ ou não.
 
-Se você tiver uma biblioteca no seu projeto ou se você for um desenvolvedor de bibliotecas reutilizáveis e desejar que o vinculador trate o assembly como vinculável, tudo o que você precisa fazer é adicionar o atributo no nível de assembly [`LinkerSafe`](https://developer.xamarin.com/api/type/Foundation.LinkerSafeAttribute/), assim:
+Se você tiver uma biblioteca no seu projeto ou se você for um desenvolvedor de bibliotecas reutilizáveis e desejar que o _linker_ trate o assembly como vinculável, tudo o que você precisa fazer é adicionar o atributo no nível de assembly [`LinkerSafe`](https://developer.xamarin.com/api/type/Foundation.LinkerSafeAttribute/), assim:
 
 ```csharp
 [assembly:LinkerSafe]
 ```
 
 A biblioteca não precisa efetivamente fazer referência às bibliotecas Xamarin para isso.  Por exemplo, se você está compilando uma biblioteca de classes portátil que será executada em outras plataformas, pode ainda usar um atributo `LinkerSafe`.
-O vinculador do Xamarin procura o atributo `LinkerSafe` por nome, não pelo seu tipo.  Isso significa que você pode escrever este código e ele também funcionará:
+O _linker_ do Xamarin procura o atributo `LinkerSafe` por nome, não pelo seu tipo.  Isso significa que você pode escrever este código e ele também funcionará:
 
 ```csharp
 [assembly:LinkerSafe]
@@ -162,7 +162,7 @@ O vinculador do Xamarin procura o atributo `LinkerSafe` por nome, não pelo seu 
 class LinkerSafeAttribute : System.Attribute {}
 ```
 
-## <a name="custom-linker-configuration"></a>Configuração personalizada do vinculador
+## <a name="custom-linker-configuration"></a>Configuração personalizada do Linker
 
 Siga as [instruções para criar um arquivo de configuração do vinculador](~/cross-platform/deploy-test/linker.md).
 

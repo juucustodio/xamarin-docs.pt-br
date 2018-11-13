@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: b29820cb69702f7570e10a555ebe9e3e0824653f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104148"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526554"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Exibindo uma imagem no xamarin. IOS
 
@@ -41,7 +41,7 @@ Para criar um novo conjunto de imagem e adicionar imagens a ele, faça o seguint
 3. Selecione o novo conjunto de imagens e o editor será exibido:
 
     ![](displaying-an-image-images/imageset03.png "O editor de conjunto de imagem")
-4. A partir daqui, arraste imagens para cada um dos diferentes dispositivos e e as resoluções necessárias. 
+4. A partir daqui, arraste imagens para cada um dos diferentes dispositivos e resoluções necessários. 
 5. Clique duas vezes em do novo conjunto de imagens **nome** na **lista Assets** editá-lo: ![](displaying-an-image-images/imageset04.png "editando o nome do novo conjunto de imagens")
 
 Ao usar um **imagem conjunto** no Designer do iOS, basta selecionar o nome do conjunto na lista suspensa no Editor de propriedades:
@@ -54,7 +54,7 @@ Ao usar um **imagem conjunto** no Designer do iOS, basta selecionar o nome do co
 
     ![](displaying-an-image-images/asset5.png "Clique no sinal de adição botão")
 
-2. Selecione **adicionar imagem conjunto** e o editor de conjunto de imagem será exibido para o novo conjunto de imagem. A partir daqui, arraste imagens para cada um dos diferentes dispositivos e e as resoluções necessárias. 
+2. Selecione **adicionar imagem conjunto** e o editor de conjunto de imagem será exibido para o novo conjunto de imagem. A partir daqui, arraste imagens para cada um dos diferentes dispositivos e resoluções necessários. 
 
     ![](displaying-an-image-images/asset7.png "O editor de conjunto de imagens")
 

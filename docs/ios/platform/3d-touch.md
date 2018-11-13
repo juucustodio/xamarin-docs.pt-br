@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 2bbc61c7fe843fd020093ab7080f38e6e7b180f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08edd3166df8392a5f3e7485a6572f0c94a38f62
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107801"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563648"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introdução ao 3D Touch no xamarin. IOS
 
@@ -188,7 +188,7 @@ public override void ViewDidLoad ()
 
     // Check to see if 3D Touch is available
     if (TraitCollection.ForceTouchCapability == UIForceTouchCapability.Available) {
-        // Regiser for Peek and Pop
+        // Register for Peek and Pop
         RegisterForPreviewingWithDelegate(new PreviewingDelegate(this), View);
     }
     ...

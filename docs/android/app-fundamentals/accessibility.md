@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 4eb4a97a346f3906c925dc9e324ed9378af0b560
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cce3270b9df2aad0037b1ab96f169cc4b564766
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116158"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528124"
 ---
 # <a name="accessibility-on-android"></a>Acessibilidade no Android
 
@@ -74,7 +74,7 @@ Para associar um rótulo com um controle de entrada de dados, use o `LabelFor` p
 
 **C#**
 
-No C#, defina o `LabelFor` descreve de propriedade para a ID de recurso do controle nesse conteúdo (normalmente essa propriedade é definida em um rótulo e faz referência a um outro controle de entrada):
+No C#, defina o `LabelFor` propriedade para a ID do recurso de controle que descreve este conteúdo (normalmente essa propriedade é definida em um rótulo e faz referência a um outro controle de entrada):
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);

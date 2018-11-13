@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106969"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526969"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows no xamarin. Mac
 
 _Este artigo aborda o trabalho com janelas e painéis em um aplicativo xamarin. Mac. Ele descreve a criação de janelas e painéis no Xcode e Interface Builder, carregando-os de arquivos. XIB e storyboards e trabalhar com eles por meio de programação._
 
-Ao trabalhar com c# e .NET em um aplicativo xamarin. Mac, você tem acesso para o mesmo Windows e painéis que um desenvolvedor que trabalha em *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter o Windows e os painéis (ou, opcionalmente, criá-los diretamente em código c#).
+Ao trabalhar com C# e do .NET em um aplicativo xamarin. Mac, você tem acesso para o mesmo Windows e painéis que um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. Como o xamarin. Mac se integra diretamente com Xcode, você pode usar do Xcode _construtor de Interface_ para criar e manter o Windows e os painéis (ou, opcionalmente, criá-los diretamente em código c#).
 
 Com base na sua finalidade, um aplicativo xamarin. Mac pode apresentar um ou mais Windows na tela para gerenciar e coordenar as informações que ele exibe e funciona com. As principais funções de uma janela são:
 
@@ -284,7 +284,7 @@ Por exemplo:
 MyWindow.PerformClose(this);
 ```
 
-Tentar fechar o `MyWindow` `NSWindow` instância. Se tiver êxito, a janela será fechada, caso contrário o som de alerta será emitido e o será permanecerá aberto.
+Tentar fechar o `MyWindow` `NSWindow` instância. Se tiver êxito, a janela será fechada, caso contrário o som de alerta será emitido e o precisará permanecer aberta.
 
 <a name="Close" />
 
@@ -377,7 +377,7 @@ namespace SourceWriter
                 alert.AddButton ("Cancel");
                 var result = alert.RunSheetModal (Window);
 
-                // Take action based on resu;t
+                // Take action based on result
                 switch (result) {
                 case 1000:
                     // Grab controller

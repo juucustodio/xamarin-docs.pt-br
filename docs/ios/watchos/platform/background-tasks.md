@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/13/2017
-ms.openlocfilehash: 4105193ea69eaf369ae62632090a281e641303f7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 45886d787ecc40c9e11ce0c713ffa22819e29db2
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110362"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528813"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Tarefas em segundo plano no Xamarin do watchOS
 
@@ -691,7 +691,7 @@ Apple tem as seguintes sugestões:
 - Ao testar um aplicativo no simulador watchOS, nenhum dos orçamentos de tarefa serão impostas para que um aplicativo pode atualizar tanto quanto necessário para testar adequadamente um recurso.
 - Sempre teste em hardwares reais do Apple Watch para garantir que o aplicativo não está em execução após seus orçamentos antes da publicação para o iTunes Connect.
 - A Apple sugere mantendo o Apple Watch no carregador durante o teste e depuração.
-- Certifique-se de que os frio Iniciando e retomada de um aplicativo são testados throughly.
+- Certifique-se tanto frio Iniciando e retomada de um aplicativo são totalmente testadas.
 - Verifique se que todas as tarefas de aplicativo estão sendo concluídas.
 - Variar o número de aplicativos que estão fixados no Dock para testar o melhor e pior caso de cenários.
 
