@@ -8,17 +8,17 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
-ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
+ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50142330"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617651"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarregamento dinâmico do Xamarin (visualização)
 
 > [!NOTE]
-> A visualização do Xamarin Live Reload terminou, e queremos agradecer a todos por seus comentários e comentários. Leia nossa [roteiro](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) para Visual Studio de 2019 saber mais sobre os novos recursos de produtividade que estamos trabalhando para xamarin. Forms. Essa extensão permanecerão disponível para o Visual Studio 2017, mas não receberá atualizações futuras.
+> A visualização do Xamarin Live Reload terminou, e queremos agradecer a todos por seus comentários e comentários. Leia nossa [roteiro](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) para Visual Studio de 2019 saber mais sobre os novos recursos de produtividade que estamos trabalhando para xamarin. Forms. Essa extensão permanecerão disponível para o Visual Studio 2017, mas não receberá atualizações futuras.
 
 Xamarin Live Reload permite que você **fazer alterações em seu XAML e vê-los refletidas ao vivo, sem a necessidade de compilação de outro e implantar**. As alterações feitas no seu XAML serão reimplantadas em Salvar e refletidas no seu destino da implantação.
 

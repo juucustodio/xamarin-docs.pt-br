@@ -1,4 +1,10 @@
 ### YamlMime:YamlDocument
+ms.openlocfilehash: 091f94f66e07309ca5c6cc6ba69e0631e17eb0c0
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617274"
 documentType: LandingData
 title: Diretrizes de plataforma cruzada
 metadata:
@@ -7,12 +13,6 @@ metadata:
   ms.author: crdun
   ms.date: 04/25/2018
   ms.topic: landing-page
-  ms.openlocfilehash: 9a08ccb3b00990a8b8425a2eb95d1f2390dda30e
-  ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
-  ms.translationtype: HT
-  ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/03/2018
-  ms.locfileid: "32436379"
 abstract:
   description: O Xamarin fornece uma solução de desenvolvimento de plataforma cruzada para dispositivos móveis, tablet e de desktop. Esta seção abrange detalhes que se aplicam a todas as plataformas de destino.
   menu:
@@ -60,7 +60,7 @@ sections:
     - href: ~/cross-platform/get-started/index.md
       html: Tutoriais para ajudar você a usar Xamarin. Verifique se tudo está instalado corretamente e compile seus primeiros aplicativos.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/cross-platform/get-started/index.md
       title: Guia de Introdução
     - href: ~/cross-platform/platform
@@ -78,7 +78,7 @@ sections:
     - href: ~/cross-platform/deploy-test/performance.md
       html: Diretrizes para desempenho e segurança de aplicativos.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_code-performance.svg
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
         href: ~/cross-platform/deploy-test/performance.md
       title: Desempenho e segurança
     - href: ~/cross-platform/deploy-test/
@@ -90,7 +90,7 @@ sections:
     - href: ~/cross-platform/desktop/
       html: Diretriz para desenvolvedores para computadores desktop para .NET interessados em construir aplicativos móveis.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_xplat-code.svg
+        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
         href: ~/cross-platform/desktop/
       title: Desenvolvedores para computadores desktop
 - title: Plataformas

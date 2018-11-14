@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: e0a8d08c30d99eef398f6a3f35ac2351572def6f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1aa21a416f4abca0440e96e25aebe5f834a717ce
+ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120340"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598867"
 ---
 # <a name="mac-platform-setup"></a>Configuração de plataforma do Mac
 
@@ -90,6 +90,7 @@ Siga estas instruções para adicionar um aplicativo do Mac que será executado 
         {
             Forms.Init();
             LoadApplication(new App());
+            base.DidFinishLaunching(notification); 
         }
     }
     ```

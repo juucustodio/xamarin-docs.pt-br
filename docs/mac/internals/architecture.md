@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 04/12/2017
-ms.openlocfilehash: 7b9b3b648f6ac66859714052e916407026da10d4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: HT
+ms.openlocfilehash: 1ea38b527acaa89b9f25690de4e55664a7afd9e8
+ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526930"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51579824"
 ---
 # <a name="xamarinmac-architecture"></a>Arquitetura do xamarin. Mac
 
@@ -145,7 +145,7 @@ Em um alto nível, ele realiza isso executando as seguintes tarefas:
 - Crie uma estrutura de pacote do aplicativo.
 - Copiar em seus assemblies gerenciados.
 - Se a vinculação estiver habilitada, execute o vinculador gerenciado para otimizar seus assemblies, removendo as partes não usadas.
-- Crie um aplicativo de iniciador, vinculando no código do iniciador, falamos sobre juntamente com o código registar se estiver no modo estático.
+- Crie um aplicativo de iniciador, o código de iniciador falou sobre juntamente com o código do registrador em caso de modo estático de vinculação.
 
 Isso é, em seguida, executar como parte do usuário criar processo que compila o código do usuário em um assembly que referenciam xamarin e execuções `mmp` para torná-lo em um pacote
 

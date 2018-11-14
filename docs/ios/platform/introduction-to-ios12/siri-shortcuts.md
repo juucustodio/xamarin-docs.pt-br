@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: f9034799355d01a3ade20a78540d6ecac43d9cc8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526891"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617755"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Atalhos do Siri no xamarin. IOS
 
@@ -695,7 +695,7 @@ Com essas alterações realizadas, o aplicativo será executado em um dispositiv
 
 ### <a name="automatic-provisioning"></a>O provisionamento automático
 
-Observe que você pode usar [provisionamento automático](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) para realizar muitas dessas tarefas diretamente no IDE de provisionamento.
+Observe que você pode usar [provisionamento automático](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) para realizar muitas dessas tarefas diretamente no IDE de provisionamento.
 No entanto, o provisionamento automático não configurar grupos de aplicativos. Você precisará configurar manualmente o **Entitlements. plist** arquivos com o nome do grupo de aplicativo que você deseja usar, visite o Portal do desenvolvedor da Apple para criar o grupo de aplicativos, atribuir esse grupo de aplicativo para cada ID do aplicativo criado pelo automático provisionamento, gere novamente os perfis de provisionamento (aplicativo, extensão de tentativas, a extensão de tentativas da interface do usuário) para incluir o grupo de aplicativos criada recentemente e baixar e instalá-los.
 
 ## <a name="related-links"></a>Links relacionados

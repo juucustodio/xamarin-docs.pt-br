@@ -1,5 +1,5 @@
 ---
-title: Ajustando os parâmetros de memória do Java para o designer do Android
+title: Ajustar os parâmetros de memória do Java para o designer do Android
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: cf0df42ba398944a99cc4179b94f0d3cb8ba503e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118052"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617235"
 ---
-# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustando os parâmetros de memória do Java para o designer do Android
+# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar os parâmetros de memória do Java para o designer do Android
 
 Os parâmetros de memória padrão que são usados ao iniciar o `java` processar para o designer do Android pode ser incompatível com algumas configurações do sistema.
 
@@ -35,7 +35,7 @@ Os seguintes nomes de propriedade correspondem do java indicado [opção de linh
 
 1.  Abra a solução no Visual Studio.
 
-2.  Selecione cada projeto do Android-individualmente no Gerenciador de soluções e clique em [Show All Files](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx) duas vezes em cada projeto. Você pode ignorar os projetos que não contêm nenhuma `.axml` arquivos de layout. Essa etapa garante que cada diretório do projeto contém um `.csproj.user` arquivo.
+2.  Selecione cada projeto do Android-individualmente no Gerenciador de soluções e clique em [Show All Files](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) duas vezes em cada projeto. Você pode ignorar os projetos que não contêm nenhuma `.axml` arquivos de layout. Essa etapa garante que cada diretório do projeto contém um `.csproj.user` arquivo.
 
 3.  Encerre o Visual Studio.
 

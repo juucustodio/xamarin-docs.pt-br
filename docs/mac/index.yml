@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: cd5071d4f1970acd9a34b53ec631b25f15c71fcc
-ms.sourcegitcommit: 7e4070bc104d612b6754ea35dd5a49c5c3d45f4a
+ms.openlocfilehash: 7e6831a78d13cf3ae46a3a921c4b4420c430e28a
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39350672"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617417"
 documentType: LandingData
 title: Xamarin.Mac
 metadata:
@@ -51,7 +51,7 @@ sections:
     - href: ~/mac/get-started/index.md
       html: Tutoriais para ajudar você a usar Xamarin.Mac. Verifique se tudo está instalado corretamente e compile seus primeiros aplicativos Mac.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/mac/get-started/index.md
       title: Guia de Introdução
     - href: ~/mac/app-fundamentals/
@@ -81,7 +81,7 @@ sections:
     - href: ~/mac/internals/
       html: Informações adicionais sobre os recursos internos do Xamarin.Mac e assistência com recursos como acessibilidade.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+        src: https://docs.microsoft.com/media/common/i_config-tools.svg
         href: ~/mac/internals/
       title: Conceitos avançados e recursos internos
 - title: Referência
@@ -91,6 +91,6 @@ sections:
     className: cardsD
     items:
     - title: API
-      html: <p><a href="https://developer.xamarin.com/api/root/monomac-lib/">Documentos de API do Mac</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinmac-3.0">Biblioteca de classes base</a></p>
+      html: <p><a href="https://developer.xamarin.com/api/root/monomac-lib/">Documentos de API do Mac</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0">Biblioteca de classes base</a></p>
     - title: Exemplos
       html: <p><a href="https://developer.xamarin.com/samples/mac/all/">Amostras de Mac</a></p>
