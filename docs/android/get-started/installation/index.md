@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 3a88359eb9d5c382753566bc4d0c3b4f556490ac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b9cecc8863cb4e68338d3226c5bf3744b7010e43
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117506"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617404"
 ---
 # <a name="setup-and-installation"></a>Instalação e Configuração
 
@@ -23,7 +23,7 @@ Os tópicos desta seção explicam como instalar e configurar o Xamarin.Android 
 
 Este guia orienta você pelas etapas de instalação e pelos detalhes de configuração necessários para instalar o Xamarin.Android no Windows. No final do artigo, você terá uma instalação funcional do Xamarin.Android integrada ao Visual Studio e estará pronto para começar a compilar seu primeiro aplicativo Xamarin.Android.
 
-## <a name="mac-installationhttpsdocsmicrosoftcomen-usvisualstudiomacinstallation"></a>[Instalação no Mac](https://docs.microsoft.com/en-us/visualstudio/mac/installation)
+## <a name="mac-installationhttpsdocsmicrosoftcomvisualstudiomacinstallation"></a>[Instalação no Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 
 Este guia orienta você pelas etapas de instalação e pelos detalhes de configuração necessários para instalar o Xamarin.Android em um Mac. No final do artigo, você terá uma instalação funcional do Xamarin.Android integrada ao Visual Studio para Mac e estará pronto para começar a compilar seu primeiro aplicativo Xamarin.Android.
 

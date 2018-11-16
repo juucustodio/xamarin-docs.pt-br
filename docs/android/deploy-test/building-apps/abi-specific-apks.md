@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4cb0a1e598953af0c2bdb5afa6047bfb069c5588
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb9be2140c69578de85128cf7c3a013ad12aa511
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110258"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617560"
 ---
 # <a name="building-abi-specific-apks"></a>Compilação de APKs específicos para ABI
 
@@ -174,7 +174,7 @@ Após a tarefa rake ser concluída, haverá três pastas `bin` com o arquivo `xa
 
 
 > [!NOTE]
-> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](http://fsharp.github.io/FAKE/).
+> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](http://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](http://fsharp.github.io/FAKE/).
 
 
 ## <a name="summary"></a>Resumo

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: deabecc0dc96f8963122afebc0dc0ba256fd92e8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 10e45ec438f1e698a9f09223cecea5934de54da8
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115556"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617708"
 ---
 # <a name="xamarinandroid-performance"></a>Desempenho do Xamarin.Android
 
@@ -233,7 +233,7 @@ Para obter mais informações, confira [Otimizar os recursos de imagem](~/cross-
 
 ## <a name="dispose-of-unused-image-resources"></a>Descartar os Recursos de Imagem não Utilizados
 
-Para salvar no uso de memória, é uma boa ideia descartar recursos de imagem grandes, que não são mais utilizados. No entanto, é importante garantir que as imagens sejam descartadas corretamente. Em vez de usar uma invocação `.Dispose()` explícita, é possível aproveitar as instruções [using](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement) para garantir o uso correto dos objetos `IDisposable`. 
+Para salvar no uso de memória, é uma boa ideia descartar recursos de imagem grandes, que não são mais utilizados. No entanto, é importante garantir que as imagens sejam descartadas corretamente. Em vez de usar uma invocação `.Dispose()` explícita, é possível aproveitar as instruções [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) para garantir o uso correto dos objetos `IDisposable`. 
 
 Por exemplo, a classe [Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) implementa `IDisposable`. O encapsulamento da instanciação de um objeto `BitMap` em um bloco `using` garante que ele será descartado corretamente na saída do bloco:
 

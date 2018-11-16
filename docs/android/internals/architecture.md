@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 815e3ddf44ae94b6b26a325599de1f4c1f6714a8
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121120"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681534"
 ---
 # <a name="architecture"></a>Arquitetura
 
@@ -33,7 +33,8 @@ Para obter mais informações sobre como classes do Android se comunicar com as 
 
 Pacotes de aplicativos Android são contêineres ZIP com um *Apk* extensão de arquivo. Pacotes de aplicativos do xamarin. Android têm a mesma estrutura e o layout de pacotes Android normal, com as seguintes adições:
 
--   Os assemblies do aplicativo (que contém IL) são *armazenados* descompactados dentro de *assemblies* pasta. Durante o processo de inicialização na versão se baseia a *. Apk* é *mmap()* ed em processo e assemblies são carregados da memória. Isso permite a inicialização mais rápida do aplicativo, como assemblies não precisa ser extraído antes da execução. - *Observação:* informações de local do Assembly, como [Assembly.Location](xref:System.Reflection.Assembly.Location) e [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
+-   Os assemblies do aplicativo (que contém IL) são *armazenados* descompactados dentro de *assemblies* pasta. Durante o processo de inicialização na versão se baseia a *. Apk* é *mmap()* ed em processo e assemblies são carregados da memória. Isso permite a inicialização mais rápida do aplicativo, como assemblies não precisa ser extraído antes da execução.  
+-   *Observação:* informações de local do Assembly, como [Assembly.Location](xref:System.Reflection.Assembly.Location) e [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
     *não podem ser utilizados* versão compilações. Eles não existem como entradas de sistema de arquivos distintos e não precisam de nenhum local utilizável.
 
 

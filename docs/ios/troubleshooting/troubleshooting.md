@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527164"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681560"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para xamarin. IOS 
 
@@ -46,9 +46,10 @@ Você pode estar usando uma codificação que não é adicionado por padrão. Ve
 
 O membro provavelmente foi removido pelo vinculador e, portanto, não existe no assembly em tempo de execução.  Há várias soluções para isso:
 
--  Adicione a [[Preserve]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) ao membro de atributo.  Isso impedirá que o vinculador removê-lo.
--  Ao invocar [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , use o **- nolink** ou **- linksdkonly** opções. -    **-nolink** desabilita todas as vinculações.
--    **-linksdkonly** apenas vincular assemblies fornecidos pelo xamarin. IOS, como *MonoTouch* ou xamarin.
+- Adicione a [ `[Preserve]` ](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) ao membro de atributo.  Isso impedirá que o vinculador removê-lo.
+- Ao invocar [ **mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), use o **- nolink** ou **- linksdkonly** opções:
+  - **-nolink** desabilita todas as vinculações.
+  - **-linksdkonly** apenas vincular assemblies fornecidos pelo xamarin. IOS, como **xamarin**, preservando todos os tipos em assemblies criados pelo usuário (ie. seus projetos de aplicativo).
 
 Observe que os assemblies são vinculados para que o executável resultante é menor; Portanto, desabilitar a vinculação pode resultar em um executável maior do que é desejável.
 
