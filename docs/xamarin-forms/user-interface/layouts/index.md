@@ -21,7 +21,7 @@ Xamarin. Forms tem vários layouts e recursos para organizar o conteúdo na tela
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Layouts do xamarin. Forms, por [Xamarin University](https://university.xamarin.com/)**
+**Layouts do Xamarin.Forms, por [Xamarin University](https://university.xamarin.com/)**
 
 Cada controle de layout é descrito abaixo, bem como detalhes sobre como lidar com alterações de orientação de tela:
 
