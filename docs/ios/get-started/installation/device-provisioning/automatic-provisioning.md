@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/22/2018
-ms.openlocfilehash: 5cb388df6223ebfe0a196e7db38495bf7723943f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3db4afedf7f4c48154e1ff880bb182711a733cd2
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110642"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528449"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 

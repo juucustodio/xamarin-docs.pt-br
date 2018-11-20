@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: e9ec7bc9186193c8a87bd1ddfabd3e72153d7e81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 09db1075ef787041e806ef3afb569e4830f51575
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103316"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563817"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Olá, iOS Multitela – Guia de Início Rápido
 
@@ -240,14 +240,14 @@ Em seguida, mova a cena **Phoneword** ao lado do **controlador de navegação**:
           // set the view controller that’s powering the screen we’re
           // transitioning to
 
-          var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+          var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
           //set the table view controller’s list of phone numbers to the
           // list of dialed phone numbers
 
-          if (callHistoryContoller != null)
+          if (callHistoryController != null)
           {
-            callHistoryContoller.PhoneNumbers = PhoneNumbers;
+            callHistoryController.PhoneNumbers = PhoneNumbers;
           }
         }
       }
@@ -482,14 +482,14 @@ Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplic
           // set the view controller that’s powering the screen we’re
           // transitioning to
 
-          var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+          var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
           //set the table view controller’s list of phone numbers to the
           // list of dialed phone numbers
 
-          if (callHistoryContoller != null)
+          if (callHistoryController != null)
           {
-            callHistoryContoller.PhoneNumbers = PhoneNumbers;
+            callHistoryController.PhoneNumbers = PhoneNumbers;
           }
         }
       }

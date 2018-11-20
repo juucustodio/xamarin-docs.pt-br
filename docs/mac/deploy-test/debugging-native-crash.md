@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 10/19/2016
-ms.openlocfilehash: 6cf19efcd2fa0f9d74034214bfa6a4e60ce0f9e2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 777e8d2880313b5a793d6257cc0fd9d8299cb94d
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103875"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528475"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuração de uma falha nativa em um aplicativo Xamarin.Mac
 
@@ -159,7 +159,7 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 
 ```
 
-Este guia ajudará a rastrear bugs dessa natureza se eles aparecerem, relatá-los corretamente para que eles possam ser corrigidos e trabalhar em seu código para evitá-los até que isso aconteça.
+Este guia ajudará a rastrear bugs dessa natureza se eles aparecerem, relatá-los corretamente para que eles possam ser corrigidos e trabalhar no código para evitá-los até que isso aconteça.
 
 ### <a name="locating"></a>Localizar
 

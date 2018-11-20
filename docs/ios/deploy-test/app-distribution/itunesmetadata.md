@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: af1ad32e605bbbe899ec8596a60cdabf226372db
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c03815776921a61c1f54136e3f09c0996dff71d3
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111298"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528403"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>O arquivo iTunesMetadata.plist em aplicativos Xamarin.iOS
 
@@ -20,7 +20,7 @@ _Este artigo aborda o arquivo iTunesMetadata.plist usado para fornecer informaç
 
 Quando um aplicativo iOS é criado no iTune Connect (seja para venda ou para lançamento gratuito pela iTunes App Store), o desenvolvedor pode especificar informações, como o gênero e o subgênero do aplicativo, a notificação de direitos autorais, os dispositivos iOS com suporte e os recursos obrigatórios do dispositivo. Para os aplicativos iOS que são entregues para testadores ou para usuários empresariais por meio da distribuição ad hoc, essas informações estão ausentes.
 
-Para fornecer as informações ausentes a uma distribuição ad hoc, um arquivo `iTunesMetadata.plist` opcional pode ser criado e incluído no arquivo IPA de aplicativos. Esse arquivo plist é um arquivo XML especialmente formatado (consulte o [Propert List Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) (Guia de Programação da Lista de Propriedade) da Apple para obter mais informações), que contém pares de chave/valor que definem as informações sobre um determinado aplicativo iOS.
+Para fornecer as informações ausentes a uma distribuição ad hoc, um arquivo `iTunesMetadata.plist` opcional pode ser criado e incluído no arquivo IPA de aplicativos. Esse arquivo plist é um arquivo XML especialmente formatado (consulte o [Property List Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) (Guia de Programação da Lista de Propriedade) da Apple para obter mais informações), que contém pares de chave/valor que definem as informações sobre um determinado aplicativo iOS.
 
 <a name="iTunesMetadata_contents" />
 
