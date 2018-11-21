@@ -1,6 +1,6 @@
 ---
-title: Layouts no xamarin. Forms
-description: Xamarin. Forms tem vários layouts e recursos para organizar o conteúdo na tela, e este artigo explica-los.
+title: Layouts no Xamarin.Forms
+description: Xamarin.Forms tem vários layouts e recursos para organizar o conteúdo na tela, e este artigo explica-los.
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
@@ -15,9 +15,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38995749"
 ---
-# <a name="layouts-in-xamarinforms"></a>Layouts no xamarin. Forms
+# <a name="layouts-in-xamarinforms"></a>Layouts no Xamarin.Forms
 
-Xamarin. Forms tem vários layouts e recursos para organizar o conteúdo na tela.
+Xamarin.Forms tem vários layouts e recursos para organizar o conteúdo na tela.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
