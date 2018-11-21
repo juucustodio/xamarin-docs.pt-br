@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 566f056bd616c918ce274b9c7406d94fdc265ea2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7f40d0d11fc932121b4ff7789969bbb1e354024c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994553"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172204"
 ---
 # <a name="playing-a-web-video"></a>Reproduzir um vídeo da Web
 
@@ -465,7 +465,7 @@ O `VideoSourceConverter` classe converte a cadeia de caracteres para um `UriVide
 
 [![Reproduzir vídeo da Web](web-videos-images/playwebvideo-small.png "reproduzir vídeo da Web")](web-videos-images/playwebvideo-large.png#lightbox "reproduzir vídeo da Web")
 
-Em cada um dos três plataformas, os controles de transporte desaparecer se eles não forem usados, mas podem ser restaurados para exibir, toque o vídeo.
+Em cada uma das plataformas, os controles de transporte desaparecer se eles não forem usados, mas podem ser restaurados para exibir, toque o vídeo.
 
 Você pode impedir que o vídeo seja iniciado automaticamente definindo a `AutoPlay` propriedade para `false`:
 

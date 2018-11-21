@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 12a97989ac675d2504a2c626da73ebccb596b99b
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: d83b2f249bb0afe4257544d6da731dbc9ac3e317
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563557"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170930"
 ---
 # <a name="xamarinforms-slider"></a>Controle deslizante do xamarin. Forms
 
@@ -109,7 +109,7 @@ Aqui está o programa em execução no iOS, Android e plataforma Universal do Wi
 
 [![Código de controle deslizante básica](slider-images/BasicSliderCode.png "código de controle deslizante básico")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-A segunda `Label` exibe o texto "(não inicializado)" até que o `Slider` seja manipulado, o que faz com que o primeiro `ValueChanged` evento seja acionado. Observe que o número de casas decimais que são exibidos é diferente para as três plataformas. Essas diferenças estão relacionadas às implementações de plataforma a `Slider` e são discutidos neste artigo na seção [diferenças de implementação de plataforma](#implementations).
+A segunda `Label` exibe o texto "(não inicializado)" até que o `Slider` seja manipulado, o que faz com que o primeiro `ValueChanged` evento seja acionado. Observe que o número de casas decimais que são exibidos é diferente para cada plataforma. Essas diferenças estão relacionadas às implementações de plataforma a `Slider` e são discutidos neste artigo na seção [diferenças de implementação de plataforma](#implementations).
 
 ### <a name="creating-a-slider-in-xaml"></a>Criando um controle deslizante no XAML
 

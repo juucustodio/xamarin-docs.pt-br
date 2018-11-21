@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/17/2018
-ms.openlocfilehash: 62e170558fc908b0ec13669b60eb08495c183b09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/14/2018
+ms.openlocfilehash: 452596d3eda9daae4b985490929c1e920a9d936e
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104941"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170904"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Exibições de Interface do usuário do xamarin. Forms
 
@@ -54,6 +54,10 @@ Como incorporar elementos gráficos em um aplicativo xamarin. Forms usando SkiaS
 
 Imagens podem ser compartilhadas entre plataformas com o xamarin. Forms, podem ser carregados especificamente para cada plataforma ou podem ser baixados para exibição.
 
+## <a name="imagebutonimagebuttonmd"></a>[ImageButon](imagebutton.md)
+
+O `ImageButton` exibe uma imagem e responde a um toque ou clique que direciona um aplicativo para executar uma tarefa específica.
+
 ## <a name="layoutslayoutsindexmd"></a>[Layouts](layouts/index.md)
 
 Xamarin. Forms tem vários layouts para organizar conteúdos na tela. `StackLayout`, `Grid`, `FlexLayout`, `AbsoluteLayout`, `ScrollView`, e `RelativeLayout` cada um pode ser usada para criar interfaces do usuário atraentes e dinâmicos.
@@ -74,7 +78,7 @@ O [ `Picker` ](xref:Xamarin.Forms.Picker) exibição é um controle para selecio
 
 O `Slider` permite que um usuário selecione um valor numérico de um intervalo contínuo.
 
-## <a name="steppersteppermd"></a>[Escalonador](stepper.md)
+## <a name="steppersteppermd"></a>[Passador](stepper.md)
 
 O `Stepper` permite que um usuário selecione um valor numérico de um intervalo de valores. Ele consiste em dois botões rotulados com sinais de adição e de subtração. Manipular os dois botões altera o valor selecionado incrementalmente.
 

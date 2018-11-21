@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 0c5e048dd3f3496691b83eb10d377d012efedc72
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: ca9c4ed0871b91bed82f746ccb36af9fb32816c0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528761"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171775"
 ---
 # <a name="oreo-features"></a>Recursos do Oreo
 
@@ -131,7 +131,7 @@ Se você tentar iniciar o Gerenciador de AVD baseado em GUI do Google padrão de
 
 -----
 
-Esta mensagem é exibida porque o Google não fornece mais um Gerenciador de AVD de GUI que dá suporte à API 26.0 e posterior independentes. Para o Android 8.0 Oreo, você deve usar o Gerenciador de emulador de Android do Xamarin ou da linha de comando `avdmanager` ferramenta para criar dispositivos virtuais para Android Oreo.
+Esta mensagem é exibida porque o Google não fornece mais um Gerenciador de AVD de GUI que dá suporte à API 26.0 e posterior autônomo. Para o Android 8.0 Oreo, você deve usar o Gerenciador de emulador de Android do Xamarin ou da linha de comando `avdmanager` ferramenta para criar dispositivos virtuais para Android Oreo.
 
 Para usar o Gerenciador de dispositivos do Android para criar e gerenciar dispositivos virtuais, consulte [gerenciamento de dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 Para criar dispositivos virtuais sem o Android Device Manager, siga as etapas na próxima seção.
@@ -248,7 +248,7 @@ Você também pode criar um arquivo XML fonte família que descreve várias font
 
 ### <a name="downloadable-fonts"></a>Fontes que pode ser baixadas
 
-Começando com o Android Oreo, aplicativos podem solicitar fontes de um provedor em vez de agrupá-las para o APK. As fontes são baixadas da rede, conforme necessário. Esse recurso reduz o tamanho do APK, economizando o uso de dados de celular e de memória do telefone. Você também pode usar esse recurso em versões de API do Android 14 e superior, instalando o pacote Android 26 da biblioteca de suporte.
+Começando com o Android Oreo, aplicativos podem solicitar fontes de um provedor em vez de agrupá-las para o APK. As fontes são baixadas da rede, conforme necessário. Esse recurso reduz o tamanho do APK, economizando o uso de dados de celular e de memória do telefone. Você também pode usar esse recurso em versões de API do Android 14 e superior, instalando o pacote Android 26 de biblioteca de suporte.
 
 Quando seu aplicativo precisa de uma fonte, você cria um `FontsRequest` (especificando a fonte para baixar) do objeto e, em seguida, passá-lo para um `FontsContract` método para baixar a fonte. As etapas a seguir descrevem o processo de download de fonte mais detalhadamente:
 

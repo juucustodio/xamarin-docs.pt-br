@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 44d75322f151850b11e4da90486168c04496eca7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 731eb8cbcf062556e4c37b444376825527f662df
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51564012"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171554"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>O xamarin. Forms FlexLayout
 
@@ -31,7 +31,7 @@ O xamarin. Forms [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) há de novo no 
 
 ## <a name="common-usage-scenarios"></a>Cenários de uso comuns
 
-O **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** programa de exemplo contém várias páginas que demonstrar alguns comum de usos de `FlexLayout` e permite fazer experiências com suas propriedades.
+O **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** programa de exemplo contém várias páginas que demonstram alguns usos comuns do `FlexLayout` e permite fazer experiências com suas propriedades.
 
 ### <a name="using-flexlayout-for-a-simple-stack"></a>Usando FlexLayout para uma pilha simple
 
@@ -187,7 +187,7 @@ public partial class PhotoWrappingPage : ContentPage
 }
 ```
 
-Aqui está o programa em execução nas três plataformas, progressivamente roladas de cima para baixo:
+Aqui está o programa em execução, progressivamente rolado de cima para baixo:
 
 [![A página de quebra automática de foto](flex-layout-images/PhotoWrapping.png "a página de quebra automática de foto")](flex-layout-images/PhotoWrapping-Large.png#lightbox)
 
@@ -242,7 +242,7 @@ O **Layout Santo Graal** página do **[FlexLayoutDemos](https://developer.xamari
 </ContentPage>
 ```
 
-Aqui ele está em execução nas três plataformas:
+Aqui ele está em execução:
 
 [![A página de Layout de Santo Graal](flex-layout-images/HolyGrailLayout.png "a página de Layout de busca Cálice sagrado")](flex-layout-images/HolyGrailLayout-Large.png#lightbox)
 
@@ -384,7 +384,7 @@ Dentro de cada um dos três `FlexLayout` modos de exibição, um espaço em bran
 
 ## <a name="the-bindable-properties-in-detail"></a>As propriedades vinculáveis em detalhes
 
-Agora que você já viu alguns aplicativos comuns `FlexLayout`, as propriedades de `FlexLayout` podem ser explorados mais detalhadamente. 
+Agora que você já viu alguns aplicativos comuns `FlexLayout`, as propriedades de `FlexLayout` podem ser explorados mais detalhadamente.
 `FlexLayout` define seis propriedades vinculáveis definida para o `FlexLayout` em si, em código ou XAML, a orientação do controle e o alinhamento. (Uma dessas propriedades, [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position), não é abordado neste artigo.)
 
 Você pode fazer experiências com cinco restantes propriedades vinculáveis usando o **experiências** página do **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** exemplo. Esta página permite que você adicione ou remova os filhos de um `FlexLayout` e definir combinações das cinco propriedades associáveis. Todos os filhos do `FlexLayout` estão `Label` modos de exibição de várias cores e tamanhos, com o `Text` propriedade definida como um número correspondente à sua posição no `Children` coleção.
@@ -532,7 +532,7 @@ O `Order` propriedade permite que você altere a ordem que os filhos do `FlexLay
 
 ### <a name="the-basis-property"></a>A propriedade de base
 
-O [ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty) anexados a propriedade associável indica a quantidade de espaço é alocado para um filho do `FlexLayout` no eixo principal. Especificado o tamanho, o `Basis` propriedade é o tamanho ao longo do eixo principal do pai `FlexLayout`. Portanto, `Basis` indica a largura de um filho quando os filhos são organizados em linhas ou a altura, quando os filhos são organizados em colunas.
+O [ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty) anexados a propriedade associável indica a quantidade de espaço é alocado para um filho do `FlexLayout` no eixo principal. O tamanho especificado o `Basis` propriedade é o tamanho ao longo do eixo principal do pai `FlexLayout`. Portanto, `Basis` indica a largura de um filho quando os filhos são organizados em linhas ou a altura, quando os filhos são organizados em colunas.
 
 O `Basis` propriedade é do tipo [ `FlexBasis` ](xref:Xamarin.Forms.FlexBasis), uma estrutura. O tamanho pode ser especificado em qualquer um dos unidades independentes de dispositivo ou como uma porcentagem do tamanho do `FlexLayout`. O valor padrão de `Basis` é a propriedade estática `FlexBasis.Auto`, o que significa que o filho solicitado pelo largura ou altura é usada.
 
@@ -735,7 +735,7 @@ button {
 
 Vários `FlexLayout` propriedades vinculáveis anexadas são referenciadas aqui. No `label.empty` seletor, você verá o `flex-grow` atributo, que define o estilo vazio `Label` para fornecer um espaço em branco acima a `Button`. O `image` seletor contém um `order` atributo e um `align-self` atributo, que correspondem aos `FlexLayout` associáveis propriedades anexadas.
 
-Você já viu que você pode definir propriedades diretamente na `FlexLayout` e você pode definir propriedades vinculáveis anexadas nos filhos de um `FlexLayout`. Ou, você pode definir essas propriedades indiretamente usando estilos tradicionais baseado em XAML ou estilos CSS. O importante é saber e compreender essas propriedades. Essas propriedades são o que torna o `FlexLayout` realmente flexível. 
+Você já viu que você pode definir propriedades diretamente na `FlexLayout` e você pode definir propriedades vinculáveis anexadas nos filhos de um `FlexLayout`. Ou, você pode definir essas propriedades indiretamente usando estilos tradicionais baseado em XAML ou estilos CSS. O importante é saber e compreender essas propriedades. Essas propriedades são o que torna o `FlexLayout` realmente flexível.
 
 ## <a name="flexlayout-with-xamarinuniversity"></a>FlexLayout com Xamarin.University
 

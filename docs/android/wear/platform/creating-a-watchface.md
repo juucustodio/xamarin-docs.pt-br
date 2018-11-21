@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: f46e0d27a39c7734e63bf5603ef2e47cd5fa7aa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 067a39838fbfe3f1b33ac0d30b5069366b11e407
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105526"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171996"
 ---
-# <a name="creating-a-watch-face"></a>Criar uma Mostrador
+# <a name="creating-a-watch-face"></a>Como criar um mostrador de relógio
 
 _Este guia explica como implementar um serviço de face de Observação personalizada para o Android Wear 1.0. São fornecidas instruções passo a passo para a criação de um stripped interromper serviço de detecção facial watch digital, seguido por mais de código para criar um estilo analógico Mostrador._
 
@@ -302,7 +302,7 @@ Esse XML faz o seguinte:
 
 3.  Declara uma imagem desenhável chamada `preview` que será exibida a tela de seleção de seletor de inspeção.
 
-4.  Inclui um `intent-filter` para permitir que o Android Saiba que `MyWatchFaceSevice` exibirá uma Mostrador do relógio.
+4.  Inclui um `intent-filter` para permitir que o Android Saiba que `MyWatchFaceService` exibirá uma Mostrador do relógio.
 
 Isso conclui o código para o basic `WatchFace` exemplo. A próxima etapa é adicionar os recursos necessários.
 

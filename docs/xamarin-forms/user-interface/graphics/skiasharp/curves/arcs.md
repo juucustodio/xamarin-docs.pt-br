@@ -1,5 +1,5 @@
 ---
-title: Três maneiras de desenhar um arco
+title: Três formas de desenhar um arco
 description: Este artigo explica como usar SkiaSharp definir arcos de três maneiras diferentes e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 2bb5729ff369abb6e432bfd72ab240c0ce07f28a
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 49b2ee9cf9c8fbdb2f850461241459126750b123
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615399"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172217"
 ---
-# <a name="three-ways-to-draw-an-arc"></a>Três maneiras de desenhar um arco
+# <a name="three-ways-to-draw-an-arc"></a>Três formas de desenhar um arco
 
 _Saiba como usar SkiaSharp definir arcos de três maneiras diferentes_
 
@@ -412,7 +412,7 @@ public partial class TangentArcPage : InteractivePage
 }
 ```
 
-Aqui está o **arco tangente** página em execução em todas as três plataformas:
+Aqui está o **arco tangente** página em execução:
 
 [![](arcs-images/tangentarc-small.png "Captura de tela da página arco tangente tripla")](arcs-images/tangentarc-large.png#lightbox "tripla captura de tela da página do arco tangente")
 
@@ -487,7 +487,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Aqui está o programa em execução nas três plataformas:
+Aqui está o programa em execução:
 
 [![](arcs-images/roundedheptagon-small.png "Captura de tela da página Heptágono arredondado tripla")](arcs-images/roundedheptagon-large.png#lightbox "tripla captura de tela da página Heptágono arredondado")
 
@@ -582,7 +582,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Aqui ele está em execução nas três plataformas:
+Aqui ele está em execução:
 
 [![](arcs-images/ellipticalarc-small.png "Captura de tela da página arco elíptico tripla")](arcs-images/ellipticalarc-large.png#lightbox "tripla captura de tela da página do arco elíptico")
 

@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1e42fdfdf7f90a4efb639ce8ca94f45a49f59c35
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: eaee5d7921b99ea5e14cca9f03e33699a74b06f3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563973"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172243"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumo do capítulo 28. Localização e mapas
 
-> [!NOTE] 
+> [!NOTE]
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Xamarin. Forms dá suporte a um [ `Map` ](xref:Xamarin.Forms.Maps.Map) elemento derivado de `View`. Por causa dos requisitos de plataforma especial envolvidos no uso de mapas, eles são implementados em um assembly separado, **Xamarin.Forms.Maps**e envolvem um namespace diferente: `Xamarin.Forms.Maps`.
@@ -194,7 +194,7 @@ O [LongitudeZoomPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples
 
 ### <a name="the-phones-location"></a>Localização do telefone
 
-O [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) propriedade do `Map` funciona um pouco diferente nas três plataformas como o [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) arquivo demonstra:
+O [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) propriedade do `Map` funciona um pouco diferente em cada plataforma como o [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) arquivo demonstra:
 
 - No iOS, um ponto azul indica a localização do telefone, mas você deve navegar manualmente existe
 - No Android, um ícone é exibido que, quando enviada por push move o mapa de localização do telefone

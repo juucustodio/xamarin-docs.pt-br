@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: fa375720730630065609e328b343e16578c6f1df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130845"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171593"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Fallbacks de associação do xamarin. Forms
 
@@ -44,7 +44,7 @@ Em vez de definir [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackVal
 > [!NOTE]
 > Não é possível definir o `FallbackValue` propriedade com uma expressão de associação.
 
-Aqui está o programa em execução em todas as três plataformas:
+Aqui está o programa em execução:
 
 ![Associação de FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue associação")
 
@@ -93,7 +93,7 @@ Em vez de definir [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNul
 > [!NOTE]
 > Não é possível definir o `TargetNullValue` propriedade com uma expressão de associação.
 
-Aqui está o programa em execução em todas as três plataformas:
+Aqui está o programa em execução:
 
 [![Associação de TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "associação TargetNullValue")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue associação")
 

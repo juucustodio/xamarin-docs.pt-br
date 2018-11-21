@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 985ca3b34b4b85ef234f12fe3f25edd1d1556e23
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0c7e0d01a75d72204ca086fc1b0639d584220651
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563232"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171567"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxe XAML essencial
 
@@ -251,7 +251,7 @@ Aqui está o arquivo GridDemoPage.xaml completo:
 
 O `Grid.Row` e `Grid.Column` configurações de 0 não são necessárias, mas são geralmente é incluídas para fins de esclarecimento.
 
-Aqui está sua aparência em todas as três plataformas:
+Aqui está o que se parece com:
 
 [![](essential-xaml-syntax-images/griddemo.png "Layout de grade")](essential-xaml-syntax-images/griddemo-large.png#lightbox "Layout de grade")
 

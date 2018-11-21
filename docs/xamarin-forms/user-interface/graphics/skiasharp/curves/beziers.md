@@ -1,5 +1,5 @@
 ---
-title: Três tipos de curvas de Bézier
+title: Três tipos de curvas de bézier
 description: Este artigo explica como usar SkiaSharp para renderizar as curvas de Bézier cúbicas, quadráticas e conic em aplicativos xamarin. Forms e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 1da0ee6155548a38057e4c7bf49ae5b90d445d79
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 60024be0c39bd215a828acfd8a4ac6294eeac9d8
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615334"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172343"
 ---
-# <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de Bézier
+# <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de bézier
 
 _Explorar como usar SkiaSharp para renderizar as curvas de Bézier cúbicas, quadráticas e conic_
 
@@ -89,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Aqui, ele é executado em todas as três plataformas:
+Aqui ele está em execução:
 
 [![](beziers-images/beziercurve-small.png "Captura de tela da página da curva de Bézier tripla")](beziers-images/beziercurve-large.png#lightbox "tripla captura de tela da página de curva de Bézier")
 
@@ -207,7 +207,7 @@ float Magnitude(SKPoint v)
 
 Os pontos inicial e final (`point0` e `point3`) são calculados com base nas equações paramétricas normais para o círculo. Porque o círculo é centralizado em (0, 0), esses pontos também podem ser tratados como vetores radiais do centro do círculo para a circunferência. Os pontos de controle estão nas linhas que são tangente no círculo, portanto, eles são ângulos retos para esses vetores radiais. Um vetor em um ângulo reto para outro é simplesmente o vetor original com as coordenadas X e Y trocadas e um deles feitas negativo.
 
-Aqui está o programa em execução nas três plataformas com três ângulos diferentes:
+Aqui está o programa em execução com ângulos diferentes:
 
 [![](beziers-images/beziercirculararc-small.png "Tripla captura de tela da página de arco Circular de Bezier")](beziers-images/beziercirculararc-large.png#lightbox "tripla captura de tela da página de arco Circular de Bézier")
 
@@ -289,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Os pontos são interpolados com base no valor sinusoidally oscilantes `t`. Os pontos interpolados, em seguida, são usados para construir uma série de quatro curvas de Bézier conectadas. Aqui está a animação em execução nas três plataformas mostrando o andamento de um círculo de quadrado:
+Os pontos são interpolados com base no valor sinusoidally oscilantes `t`. Os pontos interpolados, em seguida, são usados para construir uma série de quatro curvas de Bézier conectadas. Aqui está a animação em execução:
 
 [![](beziers-images/squaringthecircle-small.png "Tripla captura de tela do Squaring a página de círculo")](beziers-images/squaringthecircle-large.png#lightbox "tripla captura de tela do Squaring a página de círculo")
 
@@ -338,7 +338,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Pode ser um bom exercício para plotar essas coordenadas no papel de gráfico para ver como eles estão relacionados. O símbolo de infinito é centralizado em torno do ponto (0, 0), e os dois loops tem centros de (–150, 0) e (150, 0) e o raio de 100. Na série de `CubicTo` comandos, você pode ver coordenadas dos pontos de controle assumir valores de –95 e –205 X (esses valores são –150 de adição e subtração 55), 205 e 95 (150 de adição e subtração 55), bem como 250 e –250 para os lados esquerdos e direito. A única exceção é quando o símbolo de infinito cruza em si no centro. Nesse caso, os pontos de controle têm coordenadas com uma combinação de 50 e – 50 alinhe a curva próximo ao centro.
 
-Aqui está o símbolo de infinito em todas as três plataformas:
+Aqui está o símbolo de infinito:
 
 [![](beziers-images/bezierinfinity-small.png "Captura de tela da página infinito de Bézier tripla")](beziers-images/bezierinfinity-large.png#lightbox "tripla captura de tela da página infinito de Bézier")
 
@@ -401,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-E aqui está em execução em todas as três plataformas:
+E aqui está em execução:
 
 [![](beziers-images/quadraticcurve-small.png "Captura de tela da página curva quadrática tripla")](beziers-images/quadraticcurve-large.png#lightbox "tripla captura de tela da página curva quadrática")
 
@@ -479,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Aqui, ele é executado em todas as três plataformas:
+Aqui ele está em execução:
 
 [![](beziers-images/coniccurve-small.png "Captura de tela da página curva Conic tripla")](beziers-images/coniccurve-large.png#lightbox "tripla captura de tela da página Conic curva")
 

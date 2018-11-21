@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: a4fbf2bc38726ad50a07744ed4c2512efbb615bc
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 02ee84560b29fa95d0a16259d5bbbd6bc0144063
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527242"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171203"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Criando e desenho em bitmaps de SkiaSharp
 

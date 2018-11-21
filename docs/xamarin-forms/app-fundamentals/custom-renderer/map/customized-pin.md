@@ -6,13 +6,13 @@ ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.date: 10/24/2018
+ms.openlocfilehash: ab5315d169615430f5f5a733c0fa8c2ca9caa4b0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203079"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172295"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um Pin de mapa
 
@@ -422,9 +422,10 @@ protected override MarkerOptions CreateMarker(Pin pin)
 }
 ```
 
-Esse método cria uma nova `MarkerOption` instância para cada `Pin` instância. Depois de definir a posição, o rótulo e o endereço do marcador, seu ícone é definido com o `SetIcon` método. Esse método usa um `BitmapDescriptor` objeto que contém os dados necessários para renderizar o ícone com o `BitmapDescriptorFactory` classe fornece métodos auxiliares para simplificar a criação do `BitmapDescriptor`.
+Esse método cria uma nova `MarkerOption` instância para cada `Pin` instância. Depois de definir a posição, o rótulo e o endereço do marcador, seu ícone é definido com o `SetIcon` método. Esse método usa um `BitmapDescriptor` objeto que contém os dados necessários para renderizar o ícone com o `BitmapDescriptorFactory` classe fornece métodos auxiliares para simplificar a criação do `BitmapDescriptor`. Para obter mais informações sobre como usar o `BitmapDescriptorFactory` classe personalizar um marcador, consulte [Personalizando um marcador](~/android/platform/maps-and-location/maps/maps-api.md).
 
-Para obter mais informações sobre como usar o `BitmapDescriptorFactory` classe personalizar um marcador, consulte [Personalizando um marcador](~/android/platform/maps-and-location/maps/maps-api.md).
+> [!NOTE]
+> Se necessário, o `GetMarkerForPin` método pode ser chamado em seu renderizador de mapa para recuperar uma `Marker` de um `Pin`.
 
 <a name="Customizing_the_Info_Window" />
 

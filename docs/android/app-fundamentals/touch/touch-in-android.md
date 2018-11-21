@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a25a1c3be8c952536c0ef40b7f7c4a64f5748516
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 84767975eece4f8f0efae1fe53463cbc053bd836
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527229"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171464"
 ---
 # <a name="touch-in-android"></a>Toque no Android
 
@@ -107,7 +107,7 @@ $ adb pull /storage/sdcard0/gestures <projectdirectory>/Resources/raw
 Depois de recuperar o arquivo deve ser empacotado com o aplicativo dentro do diretório /recursos/bruto. A maneira mais fácil de usar esse arquivo de gesto é carregar o arquivo em um GestureLibrary, conforme mostrado no trecho a seguir:
 
 ```csharp
-GestureLibary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
+GestureLibrary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
 if (!myGestures.Load())
 {
     // The library didn't load, so close the activity.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: ecb0adb09c7d6b8bca2f1ee228b8cbdaad1d0314
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563947"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171710"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação XAML
 
@@ -137,7 +137,7 @@ O exemplo final exibe o `Device.RuntimePlatform` valor. O `Environment.NewLine` 
 </Label>
 ```
 
-Aqui está o exemplo em execução em todas as três plataformas:
+Aqui está o exemplo em execução:
 
 [![Demonstração de X:Static](consuming-images/staticdemo-small.png "X:Static demonstração")](consuming-images/staticdemo-large.png#lightbox "X:Static demonstração")
 
@@ -181,7 +181,7 @@ O **demonstração X:Reference** página mostra dois usos do `x:Reference` com a
 </ContentPage>
 ```
 
-Ambos `x:Reference` expressões usam a versão abreviada do `ReferenceExtension` nome da classe e eliminar o `Name=` faz parte da expressão. No primeiro exemplo, o `x:Reference` extensão de marcação é inserida no `Binding` extensão de marcação. Observe que o `Source` e `StringFormat` configurações são separadas por vírgulas. Aqui está o programa em execução em todas as três plataformas:
+Ambos `x:Reference` expressões usam a versão abreviada do `ReferenceExtension` nome da classe e eliminar o `Name=` faz parte da expressão. No primeiro exemplo, o `x:Reference` extensão de marcação é inserida no `Binding` extensão de marcação. Observe que o `Source` e `StringFormat` configurações são separadas por vírgulas. Aqui está o programa em execução:
 
 [![Demonstração de X:Reference](consuming-images/referencedemo-small.png "demonstração X:Reference")](consuming-images/referencedemo-large.png#lightbox "X:Reference demonstração")
 
@@ -449,7 +449,7 @@ O **demonstração X:Null** página ilustra um cenário quando `x:Null` talvez s
 
 Em seguida, você descobre que, para uma da `Label` elementos, você deseja que todas as configurações de propriedade na implícito `Style` , exceto para o `FontFamily`, que você deseja ser o valor padrão. Você pode definir outra `Style` para essa finalidade, mas uma abordagem mais simples é simplesmente definir o `FontFamily` propriedade de determinada `Label` ao `x:Null`, conforme demonstrado no Centro de `Label`.
 
-Aqui está o programa em execução nas três plataformas:
+Aqui está o programa em execução:
 
 [![Demonstração de X:Null](consuming-images/nulldemo-small.png "demonstração X:Null")](consuming-images/nulldemo-large.png#lightbox "X:Null demonstração")
 
@@ -493,7 +493,7 @@ O **demonstração OnPlatform** página mostra como usar o `OnPlatform` extensã
 
 Neste exemplo, todos os três `OnPlatform` expressões usam a versão abreviada do `OnPlatformExtension` nome de classe. Os três `OnPlatform` conjunto de extensões de marcação a [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriedades do [ `BoxView` ](xref:Xamarin.Forms.BoxView) como valores diferentes em iOS, Android e UWP. As extensões de marcação também fornecem valores padrão para essas propriedades nas plataformas que não forem especificadas, eliminando o `Default=` faz parte da expressão. Observe que as propriedades de extensão de marcação que são definidas são separadas por vírgulas.
 
-Aqui está o programa em execução em todas as três plataformas:
+Aqui está o programa em execução:
 
 [![Demonstração de OnPlatform](consuming-images/onplatformdemo-small.png "demonstração OnPlatform")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform demonstração")
 
@@ -531,7 +531,7 @@ O **demonstração OnIdiom** página mostra como usar o `OnIdiom` extensão de m
 
 Neste exemplo, todos os três `OnIdiom` expressões usam a versão abreviada do `OnIdiomExtension` nome de classe. Os três `OnIdiom` conjunto de extensões de marcação a [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriedades do [ `BoxView` ](xref:Xamarin.Forms.BoxView) como valores diferentes em telefone, tablet e expressões da área de trabalho. As extensões de marcação também fornecem valores padrão para essas propriedades em que as linguagens que não forem especificadas, eliminando o `Default=` faz parte da expressão. Observe que as propriedades de extensão de marcação que são definidas são separadas por vírgulas.
 
-Aqui está o programa em execução em todas as três plataformas:
+Aqui está o programa em execução:
 
 [![Demonstração de OnIdiom](consuming-images/onidiomdemo-small.png "demonstração OnIdiom")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom demonstração")
 

@@ -7,16 +7,16 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: dfe2d81673804e2f77694a794ef82931eb88357d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: aa5f42596b6f92285b8b8bed40452928e3c494b1
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563908"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170917"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumo do capítulo 1. Como xamarin. Forms se encaixa?
 
-> [!NOTE] 
+> [!NOTE]
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Um dos trabalhos mais desagradáveis na programação é portar um código de base de uma plataforma para outra, especialmente se essa plataforma envolve uma linguagem de programação diferente. Há uma tentação ao portar o código para refatorá-lo bem, mas se ambas as plataformas devem ser mantidas em paralelo, em seguida, as diferenças entre as duas bases de código dificultará manutenção futura.
@@ -25,7 +25,7 @@ Um dos trabalhos mais desagradáveis na programação é portar um código de ba
 
 Esse problema é comum ao direcionar para plataformas móveis. Atualmente, existem duas principais plataformas móveis, a família de Apple de iPhones e iPads que executam o sistema operacional iOS e o sistema operacional Android que é executado em uma variedade de telefones e tablets. Outra plataforma significativa é Universal Windows Platform (UWP da Microsoft), que permite que um único programa para direcionar o Windows 10 e Windows 10 Mobile.
 
-Um fornecedor de software que deseje esses três plataformas de destino deve lidar com paradigmas de interface de usuário diferente, três ambientes de desenvolvimento diferente, três interfaces de programação diferente, e&mdash;talvez mais incômoda&mdash; três linguagens de programação diferentes: Objective-C para iPhone e iPad, Java para Android e c# para Windows.
+Um fornecedor de software que deseja essas plataformas de destino deve lidar com paradigmas de interface de usuário diferente, três ambientes de desenvolvimento diferente, três interfaces de programação diferente, e&mdash;talvez mais incômoda&mdash;três linguagens de programação diferentes: Objective-C para iPhone e iPad, Java para Android, e C# para Windows.
 
 ## <a name="the-c-and-net-solution"></a>A solução c# e .NET
 
@@ -35,7 +35,7 @@ Atualmente, Xamarin fornece ferramentas para direcionar o Mac, iOS e APIs do And
 
 Os desenvolvedores podem usar a plataforma Xamarin para escrever aplicativos em c# destinados ao Mac, iOS ou Android. Mas quando mais de uma plataforma de direcionamento, faz muito sentido para compartilhar parte do código entre as plataformas de destino. Isso envolve a separação de programa em código dependente de plataforma (geralmente envolvendo a interface do usuário) e o código independente de plataforma, o que geralmente requer apenas o base do .NET framework. Esse código independente de plataforma ou pode residir em uma biblioteca de classe portátil (PCL) ou um projeto compartilhado, geralmente chamado de um projeto de ativo compartilhado ou SAP.
 
-> [!NOTE] 
+> [!NOTE]
 > Bibliotecas de classes portáteis foram substituídas por bibliotecas .NET Standard. O código de exemplo do livro foi convertido para usar bibliotecas padrão do .NET.
 
 ## <a name="introducing-xamarinforms"></a>Introdução ao xamarin. Forms
@@ -48,18 +48,18 @@ Ao direcionar várias plataformas móveis, xamarin. Forms permite o compartilham
 - o tempo de execução do Windows API do Windows 8.1
 - o tempo de execução do Windows API do Windows Phone 8.1
 
-> [!NOTE] 
+> [!NOTE]
 > Xamarin. Forms não oferece suporte a Windows 8.1, Windows Phone 8.1 ou Windows 10 Mobile, mas os aplicativos xamarin. Forms são executados no Windows 10 desktop. Também há suporte para visualização os [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), e [Tizen](/xamarin-forms/platform/tizen.md) plataformas.
 
-A maior parte de um programa do xamarin. Forms existe em uma biblioteca ou um SAP. Cada uma das plataformas consiste em um stub de aplicativo pequeno que chama esse código compartilhado. 
+A maior parte de um programa do xamarin. Forms existe em uma biblioteca ou um SAP. Cada uma das plataformas consiste em um stub de aplicativo pequeno que chama esse código compartilhado.
 
 As APIs Xamarin.Forms mapeados para controles nativos em cada plataforma, para que cada plataforma mantém sua aparência característica:
 
 [![Captura de tela tripla de visuais de plataforma de compartilhamento](images/ch01fg03-small.png "xamarin. Forms controles em cada plataforma")](images/ch01fg03-large.png#lightbox "controles do xamarin. Forms em cada plataforma")
 
-As capturas de tela da esquerda para direita mostram um iPhone, um telefone Android e um telefone Windows 10 Mobile. 
+As capturas de tela da esquerda para direita mostram um iPhone, um telefone Android e um telefone Windows 10 Mobile.
 
-> [!NOTE] 
+> [!NOTE]
 > Xamarin. Forms não oferece suporte a Windows 10 Mobile.
 
 Em cada tela, a página contém um xamarin. Forms [ `Label` ](xref:Xamarin.Forms.Label) para exibir o texto, uma [ `Button` ](xref:Xamarin.Forms.Button) para iniciar ações, uma [ `Switch` ](xref:Xamarin.Forms.Switch) para Escolhendo um valor de ativar/desativar e um [ `Slider` ](xref:Xamarin.Forms.Slider) para especificar um valor dentro de um intervalo contínuo. Todos os quatro essas exibições são filhos de um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) em uma [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 7b7fa2ea99a58b875bc1dc579455511aa9bf72d1
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527320"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172087"
 ---
 # <a name="kitkat-features"></a>Recursos de KitKat
 
@@ -413,7 +413,7 @@ A maioria dos dispositivos que vêm com KitKat automaticamente baixar o aplicati
 
 #### <a name="printing-html-content"></a>Conteúdo HTML de impressão
 
-KitKat cria automaticamente um [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) para uma exibição da web com `WebView.CreatePrintDocumentAdapter`. Conteúdo da web de impressão é um esforço coordenado entre um [ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) que aguarda o conteúdo HTML a ser carregado e permite que a atividade de saber para disponibilizar a opção de impressão no menu de opções e Actvity, que aguarda o usuário Selecione a opção de impressão e chama `Print`sobre o `PrintManager`. Esta seção aborda a configuração básica necessária na tela de imprimir conteúdo HTML.
+KitKat cria automaticamente um [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) para uma exibição da web com `WebView.CreatePrintDocumentAdapter`. Conteúdo da web de impressão é um esforço coordenado entre um [ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) que aguarda o conteúdo HTML a ser carregado e permite que a atividade de saber para disponibilizar a opção de impressão no menu de opções e a atividade, que aguarda o usuário Selecione a opção de impressão e chama `Print`sobre o `PrintManager`. Esta seção aborda a configuração básica necessária na tela de imprimir conteúdo HTML.
 
 Observe que ao carregar e imprimir o conteúdo da web requer a permissão de Internet:
 

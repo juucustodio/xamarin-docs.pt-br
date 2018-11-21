@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 08fa9000a1fd9c97f7881a4a13c15fabfa6dda47
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: faf2c35b49b0b02b9f3b16e19494d2e447361d84
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617664"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171645"
 ---
 # <a name="time-picker"></a>Seletor de tempo
 
@@ -45,7 +45,7 @@ Quando você clica o **tempo PICK** botão, o aplicativo de exemplo é iniciado 
 No `TimePickerDialog`, selecionando uma hora e clicando o **Okey** botão faz com que o `TimePickerDialog` para invocar o método [IOnTimeSetListener.OnTimeSet](https://developer.xamarin.com/api/member/Android.App.TimePickerDialog+IOnTimeSetListener.OnTimeSet/p/Android.Widget.TimePicker/System.Int32/System.Int32/System.Int32/).
 Essa interface é implementada pelo hospeda `DialogFragment` (`TimePickerFragment`descrito abaixo). Clicar a **Cancelar** botão faz com que o fragmento e a caixa de diálogo para ser descartado.
 
-`DialogFragment` Retorna o tempo selecionado para a hospedagem Actvity em uma das três maneiras:
+`DialogFragment` Retorna o tempo selecionado para a atividade de hospedagem em uma destas três maneiras:
 
 1. **Invocando um método ou definindo a propriedade** &ndash; a atividade pode fornecer uma propriedade ou método especificamente para definir esse valor.
 

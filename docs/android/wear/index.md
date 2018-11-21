@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: bd8973b59853a4898336ba153de4835bad46e232
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75b78f27fd6b3a726de9075ce36364168401ec60
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113047"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171463"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -51,7 +51,7 @@ Você pode encontrar um número de [amostras](https://developer.xamarin.com/samp
 |Amostra|Descrição|Captura de tela|
 |--- |--- |--- |
 |[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|Um exemplo simples dos conceitos básicos de projetos, portáteis, incluindo notificações interativas e GridViewPager.|![Captura de tela de Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Uma demonstração simple do controle WatchViewStub que detecta a forma de tela e carrega automaticamente o layout correto.  Veja como WatchViewStub funciona **Resources/layout/main_actvity.xml** layout.|![Captura de tela de WatchViewStub](images/watchview.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Uma demonstração simple do controle WatchViewStub que detecta a forma de tela e carrega automaticamente o layout correto.  Veja como WatchViewStub funciona **Resources/layout/main_activity.xml** layout.|![Captura de tela de WatchViewStub](images/watchview.png)|
 |[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|Demonstração de páginas de notificação de desgaste, na forma de etapas de receita. As notificações são criadas no RecipeService.cs.|![Captura de tela de RecipeAssistant](images/recipeassist.png)|
 |[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|Exemplo divertido de interagir com um assistente"pessoal" chamado Eliza, usando notificações de desgaste interativas para criar uma conversa usando respostas comprimidas.|![Captura de tela de ElizaChat](images/eliza.png)|
 |[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager implementa o padrão de navegação 2D, em que o usuário passa o dedo verticalmente e horizontalmente para navegar por meio de opções e conteúdo.|![Captura de tela de GridViewPager](images/gridviewpager.png)|

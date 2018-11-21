@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: e0ad67db0671996e594f9c5d48b329a5d676fc1d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563427"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171762"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de vinculação de dados
 
@@ -327,7 +327,7 @@ Muito melhor. Agora tudo o que precisamos é aprimorar o modelo de item com mais
 </ContentPage>
 ```
 
-Observe o uso de `OnPlatform` para definir o tamanho de um `BoxView` e a altura do `ListView` linhas. Embora os valores para todas as três plataformas forem iguais, a marcação pode facilmente ser adaptada para outros valores ajustar a exibição.
+Observe o uso de `OnPlatform` para definir o tamanho de um `BoxView` e a altura do `ListView` linhas. Embora os valores para todas as plataformas são os mesmos, a marcação pode facilmente ser adaptada para outros valores ajustar a exibição.
 
 ## <a name="binding-value-converters"></a>Conversores de valor de associação
 
