@@ -1,26 +1,26 @@
 ---
-title: Criando os players de vídeo de plataforma
-description: Este artigo explica como implementar um renderizador personalizado do player de vídeo em cada plataforma, usando o xamarin. Forms.
+title: Criar os players de vídeo de plataforma
+description: Este artigo explica como implementar um renderizador personalizado do player de vídeo em cada plataforma, usando xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: EEE2FB9B-EB73-4A3F-A859-7A1D4808E149
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 205adf802bc0fc496d79e2b9df4a4360e6c27dc0
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 0090ec798e8d7b1dfb9bd8e25f09d71ec0353b45
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241118"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171905"
 ---
-# <a name="creating-the-platform-video-players"></a>Criando os players de vídeo de plataforma
+# <a name="creating-the-platform-video-players"></a>Criar os players de vídeo de plataforma
 
-O [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) solução contém todo o código para implementar um player de vídeo para xamarin. Forms. Ele também inclui uma série de páginas que demonstra como usar o player de vídeo em um aplicativo. Todos os `VideoPlayer` seus renderizadores de plataforma e código residem em pastas de projeto chamadas `FormsVideoLibrary`e também usar o namespace `FormsVideoLibrary`. Isso deve tornar fácil de copiar os arquivos no seu próprio aplicativo e as classes de referência.
+O [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) solução contém todo o código para implementar um player de vídeo para xamarin. Forms. Ele também inclui uma série de páginas que demonstra como usar o player de vídeo dentro de um aplicativo. Todos os as `VideoPlayer` seus renderizadores de plataforma e código residam em pastas de projeto chamadas `FormsVideoLibrary`e também usar o namespace `FormsVideoLibrary`. Isso deve tornar fácil copiar os arquivos no seu próprio aplicativo e as classes de referência.
 
 ## <a name="the-video-player"></a>O player de vídeo
 
-O [ `VideoPlayer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) classe é parte do **VideoPlayerDemos** biblioteca .NET padrão que é compartilhada entre as plataformas. Deriva de `View`:
+O [ `VideoPlayer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) classe faz parte do **VideoPlayerDemos** biblioteca .NET Standard que é compartilhada entre as plataformas. Ela é derivada da `View`:
 
 ```csharp
 using System;
@@ -35,15 +35,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-Os membros dessa classe (e o `IVideoPlayerController` interface) são descritos nos artigos a seguir.
+Os membros dessa classe (e o `IVideoPlayerController` interface) são descritas nos artigos a seguir.
 
-Cada uma das três plataformas contém uma classe denominada `VideoPlayerRenderer` que contém o código específico da plataforma para implementar um player de vídeo. A principal tarefa deste processador é criar um player de vídeo para essa plataforma.
+Cada uma das plataformas contém uma classe denominada `VideoPlayerRenderer` que contém o código específico da plataforma para implementar um player de vídeo. A tarefa principal deste renderizador é criar um player de vídeo para essa plataforma.
 
-### <a name="the-ios-player-view-controller"></a>O controlador de exibição do player iOS
+### <a name="the-ios-player-view-controller"></a>O controlador de exibição do player de iOS
 
-Várias classes estão envolvidos ao implementar um player de vídeo em iOS. O aplicativo cria primeiro um [ `AVPlayerViewController` ](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) e, em seguida, define o [ `Player` ](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) propriedade para um objeto do tipo [ `AVPlayer` ](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/). Classes adicionais são necessárias quando o player é atribuído a uma fonte de vídeo.
+Várias classes envolvidas ao implementar um player de vídeo no iOS. O aplicativo primeiro cria uma [ `AVPlayerViewController` ](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) e, em seguida, define o [ `Player` ](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) propriedade para um objeto do tipo [ `AVPlayer` ](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/). Classes adicionais são necessárias quando o player é atribuído a uma fonte de vídeo.
 
-Como todos os processadores, o iOS [ `VideoPlayerRenderer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) contém um `ExportRenderer` atributo que identifica o `VideoPlayer` exibição com o processador:
+Como todos os processadores, o iOS [ `VideoPlayerRenderer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) contém um `ExportRenderer` atributo que identifica o `VideoPlayer` exibição com a renderização:
 
 ```csharp
 using System;
@@ -71,9 +71,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Geralmente um processador que define um controle de plataforma deriva o [ `ViewRenderer<View, NativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs) classe, onde `View` é o xamarin. Forms `View` derivativo (nesse caso, `VideoPlayer`) e `NativeView` é um iOS `UIView` derivados para a classe de renderizador. Para este processador, esse argumento genérico simplesmente é definido como `UIView`, por motivos de você verá em breve.
+Geralmente um renderizador que define um controle de plataforma deriva de [ `ViewRenderer<View, NativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs) classe, onde `View` é o xamarin. Forms `View` derivativo (nesse caso, `VideoPlayer`) e `NativeView` é um iOS `UIView` derivados da classe de renderizador. Para este processador, esse argumento genérico é simplesmente definido como `UIView`, por motivos de você verá em breve.
 
-Quando um renderizador tem base em um `UIViewController` derivada (como esta é), então a classe deve substituir o `ViewController` propriedade e retornar o controlador de exibição, neste caso `AVPlayerViewController`. Que é a finalidade de `_playerViewController` campo:
+Quando um renderizador se basear em um `UIViewController` derivativo (como esta é), e em seguida, a classe deve substituir o `ViewController` propriedade e retorno, neste caso, o controlador de exibição `AVPlayerViewController`. Que é a finalidade do `_playerViewController` campo:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -112,13 +112,13 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Responsabilidade principal a `OnElementChanged` substituição é verificar se o `Control` é de propriedade `null` e, nesse caso, crie um controle de plataforma e passá-lo para o `SetNativeControl` método. Nesse caso, esse objeto está disponível somente do `View` propriedade o `AVPlayerViewController`. Que `UIView` derivada é uma classe privada denominada `AVPlayerView`, mas porque ele é particular, ele não pode ser especificado explicitamente como o segundo argumento genérico para `ViewRenderer`.
+A principal responsabilidade do `OnElementChanged` substituição é para verificar se o `Control` é de propriedade `null` e, nesse caso, crie um controle de plataforma e passá-lo para o `SetNativeControl` método. Nesse caso, esse objeto só está disponível na `View` propriedade do `AVPlayerViewController`. Que `UIView` derivativos, por acaso, é uma classe privada chamada `AVPlayerView`, mas porque ela é privada, ele não pode ser explicitamente especificado como o segundo argumento genérico para `ViewRenderer`.
 
-Geralmente o `Control` propriedade da classe renderizador posteriormente se refere ao `UIView` usadas para implementar o processador, mas nesse caso o `Control` propriedade não é usada em outro lugar.
+Geralmente o `Control` propriedade da classe de renderizador depois disso se refere ao `UIView` usado para implementar o renderizador, mas nesse caso, o `Control` propriedade não é usada em outro lugar.
 
-### <a name="the-android-video-view"></a>O modo de exibição de vídeo Android
+### <a name="the-android-video-view"></a>A exibição de vídeo do Android
 
-O renderizador do Android para `VideoPlayer` se baseia o Android [ `VideoView` ](https://developer.xamarin.com/api/type/Android.Widget.VideoView/) classe. No entanto, se `VideoView` é usado para reproduzir um vídeo em um aplicativo xamarin. Forms, os vídeos preenchimentos alocado a área para o `VideoPlayer` sem manter a taxa de proporção correta. Para este motivo (como você verá em breve), o `VideoView` é feita a um filho de um Android `RelativeLayout`. Um `using` diretiva define `ARelativeLayout` distingui-lo de que o xamarin. Forms `RelativeLayout`, e que é o segundo argumento genérico `ViewRenderer`:
+O renderizador do Android para `VideoPlayer` se baseia no Android [ `VideoView` ](https://developer.xamarin.com/api/type/Android.Widget.VideoView/) classe. No entanto, se `VideoView` é usado por si só para reproduzir um vídeo em um aplicativo xamarin. Forms, os preenchimentos de vídeos indicado a área para o `VideoPlayer` sem manter a taxa de proporção correta. Para este motivo (como você verá em breve), o `VideoView` é feita a um filho de um Android `RelativeLayout`. Um `using` diretiva define `ARelativeLayout` distingui-lo de que o xamarin. Forms `RelativeLayout`, e que é o segundo argumento genérico `ViewRenderer`:
 
 ```csharp
 using System;
@@ -151,7 +151,7 @@ namespace FormsVideoLibrary.Droid
 
 A partir do xamarin. Forms 2.5, renderizadores Android devem incluir um construtor com um `Context` argumento.
 
-O `OnElementChanged` substituição cria ambos o `VideoView` e `RelativeLayout` e define os parâmetros de layout para o `VideoView` para centralizá-la dentro a `RelativeLayout`.
+O `OnElementChanged` substituição cria ambos os `VideoView` e `RelativeLayout` e define os parâmetros de layout para o `VideoView` para centralizá-la dentro a `RelativeLayout`.
 
 
 ```csharp
@@ -214,13 +214,13 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-Um manipulador para o `Prepared` evento é anexado a este método e desanexado no `Dispose` método. Esse evento é acionado quando o `VideoView` tem informações suficientes para começar a execução de um arquivo de vídeo.
+Um manipulador para o `Prepared` evento é anexado a esse método e desanexado no `Dispose` método. Este evento é disparado quando o `VideoView` tem informações suficientes para começar a reprodução de um arquivo de vídeo.
 
-### <a name="the-uwp-media-element"></a>O elemento de mídia UWP
+### <a name="the-uwp-media-element"></a>O elemento de mídia da UWP
 
-No Windows UWP (plataforma Universal), o player de vídeo mais comum é [ `MediaElement` ](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/). Essa documentação de `MediaElement` indica que o [ `MediaPlayerElement` ](/uwp/api/windows.ui.xaml.controls.mediaplayerelement/) deve ser usado em vez disso, quando é necessário dar suporte a versões da partir do Windows 10 versão 1607 apenas.
+Na Universal Windows Platform (UWP), o player de vídeo mais comuns é [ `MediaElement` ](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/). Essa documentação de `MediaElement` indica que o [ `MediaPlayerElement` ](/uwp/api/windows.ui.xaml.controls.mediaplayerelement/) deve ser usado em vez disso, quando é necessário dar suporte a versões do Windows 10 que começa com build 1607 apenas.
 
-O `OnElementChanged` substituição precisa criar um `MediaElement`, definir alguns manipuladores de eventos e passar o `MediaElement` do objeto para `SetNativeControl`:
+O `OnElementChanged` substituição precisa criar um `MediaElement`, defina alguns manipuladores de eventos e passar a `MediaElement` objeto `SetNativeControl`:
 
 ```csharp
 using System;
@@ -275,13 +275,13 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-Os manipuladores de eventos de dois são desanexados no `Dispose` evento para o processador.
+Os dois manipuladores de evento são desanexados no `Dispose` eventos para o renderizador.
 
-## <a name="showing-the-transport-controls"></a>Mostrar controles de transporte
+## <a name="showing-the-transport-controls"></a>Mostrando os controles de transporte
 
-Todos os os players de vídeo incluídos nas três plataformas oferecem suporte a um conjunto padrão de controles de transporte que incluem botões para reproduzir e pausar e uma barra para indicar a posição atual dentro do vídeo e para mover para uma nova posição.
+Todos os players de vídeo incluídos nas plataformas dão suporte a um conjunto padrão de controles de transporte que incluem botões para reproduzir e pausar e uma barra para indicar a posição atual no vídeo e para mover para uma nova posição.
 
-O `VideoPlayer` classe define uma propriedade chamada `AreTransportControlsEnabled` e define o valor padrão `true`:
+O `VideoPlayer` classe define uma propriedade chamada `AreTransportControlsEnabled` e define o valor padrão para `true`:
 
 
 ```csharp
@@ -304,15 +304,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-Embora essa propriedade tem ambos `set` e `get` acessadores, o processador precisa lidar com casos somente quando a propriedade é definida. O `get` acessador simplesmente retorna o valor atual da propriedade.
+Embora essa propriedade tiver tanto `set` e `get` acessadores, o renderizador tem que lidar com casos somente quando a propriedade está definida. O `get` acessador simplesmente retorna o valor atual da propriedade.
 
-Propriedades como `AreTransportControlsEnabled` são tratadas em renderizadores de plataforma de duas maneiras:
+Propriedades, como `AreTransportControlsEnabled` são tratadas em renderizadores de plataforma de duas maneiras:
 
-- Na primeira vez que é quando o xamarin. Forms cria um `VideoPlayer` elemento. Isso é indicado no `OnElementChanged` substituir do renderizador quando o `NewElement` propriedade não é `null`. Neste momento, pode definir o processador é o player de vídeo própria plataforma do valor inicial da propriedade, conforme definido no `VideoPlayer`.
+- Na primeira vez é quando o xamarin. Forms cria um `VideoPlayer` elemento. Isso é indicado na `OnElementChanged` substituir do renderizador quando o `NewElement` propriedade não é `null`. Neste momento, o renderizador pode definir é o player de vídeo da própria plataforma do valor inicial da propriedade conforme definido no `VideoPlayer`.
 
-- Se a propriedade em `VideoPlayer` alterar posteriormente, o `OnElementPropertyChanged` é chamado de método em que o renderizador. Isso permite que o renderizador atualizar o player de vídeo de plataforma com base na nova configuração de propriedade.
+- Se a propriedade na `VideoPlayer` for alterado posteriormente, em seguida, a `OnElementPropertyChanged` método no renderizador é chamado. Isso permite que o renderizador atualizar o player de vídeo de plataforma com base na nova configuração de propriedade.
 
-Aqui está como o `AreTransportControlsEnabled` propriedade é tratada em três plataformas:
+As seções a seguir discutem como o `AreTransportControlsEnabled` propriedade é tratada em cada plataforma.
 
 ### <a name="ios-playback-controls"></a>controles de reprodução do iOS
 
@@ -359,11 +359,11 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-O `Element` refere-se a propriedade do renderizador para o `VideoPlayer` classe.
+O `Element` refere-se a propriedade do processador para o `VideoPlayer` classe.
 
-### <a name="the-android-media-controller"></a>O controlador de mídia Android
+### <a name="the-android-media-controller"></a>O controlador de mídia do Android
 
-No Android, exibindo os controles de transporte requer a criação de um [ `MediaController` ](https://developer.xamarin.com/api/type/Android.Widget.MediaController/) objeto e associá-lo com o `VideoView` objeto. Os mecanismos são demonstrados no `SetAreTransportControlsEnabled` método:
+No Android, exibindo os controles de transporte requer a criação de um [ `MediaController` ](https://developer.xamarin.com/api/type/Android.Widget.MediaController/) objeto e associá-lo com o `VideoView` objeto. A mecânica é demonstrada a `SetAreTransportControlsEnabled` método:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -420,9 +420,9 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-### <a name="the-uwp-transport-controls-property"></a>A propriedade de controles de transporte UWP
+### <a name="the-uwp-transport-controls-property"></a>A propriedade de controles de transporte de UWP
 
-O UWP `MediaElement` define uma propriedade chamada [ `AreTransportControlsEnabled` ](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled), de modo que a propriedade é definida do `VideoPlayer` propriedade o mesmo nome:
+A UWP `MediaElement` define uma propriedade chamada [ `AreTransportControlsEnabled` ](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled), de modo que a propriedade é definida do `VideoPlayer` propriedade o mesmo nome:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -460,9 +460,9 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-Mais uma propriedade é necessária iniciar a reprodução de um vídeo: Este é o crucial `Source` propriedade que faz referência a um arquivo de vídeo. Implementando o `Source` propriedade é descrita no próximo artigo, [reprodução de um vídeo Web](web-videos.md).
+Mais de uma propriedade é necessária iniciar a reprodução de um vídeo: isso é o crucial `Source` propriedade que faz referência a um arquivo de vídeo. Implementando o `Source` propriedade é descrita no próximo artigo [reproduzir um vídeo da Web](web-videos.md).
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações em vídeo Player (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demonstrações do Player de vídeo (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

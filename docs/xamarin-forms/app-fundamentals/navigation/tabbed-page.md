@@ -6,13 +6,13 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: 3eb978780222da2050fc91dfa41c68ef4bd3b6f4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/24/2018
+ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996289"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171372"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Página com guias do xamarin. Forms
 
@@ -32,13 +32,13 @@ O layout de um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)e suas guias, depe
 
 - No iOS, é exibida na lista de guias na parte inferior da tela e a área de detalhes está acima. Cada guia também tem uma imagem de ícone que deve ser um 30 x 30 PNG com transparência para resolução normal, 60 x 60 para alta resolução e 90 x 90 para iPhone 6 Plus resolução. Se houver mais de cinco guias, uma *mais* guia será exibida, que pode ser usado para acessar as guias adicionais. Para obter mais informações sobre o carregamento de imagens em um aplicativo xamarin. Forms, consulte [trabalhando com imagens](~/xamarin-forms/user-interface/images.md). Para obter mais informações sobre os requisitos de ícone, consulte [criando aplicativos com guias](~/ios/user-interface/controls/creating-tabbed-applications.md).
 
-    > [!NOTE]
+  > [!NOTE]
   > Observe que o `TabbedRenderer` para iOS tem um substituível `GetIcon` método que pode ser usado para carregar ícones de guia de uma origem especificada. Essa substituição torna possível usar as imagens de SVG como ícones em uma `TabbedPage`. Além disso, selecionadas e versões de um ícone podem ser fornecidas.
 
 - No Android, a lista de guias aparece na parte superior da tela, por padrão, e a área de detalhes está abaixo. No entanto, a lista de guias pode ser movida para a parte inferior da tela com uma plataforma específica. Para obter mais informações, consulte [configuração TabbedPage barra de ferramentas de posicionamento e a cor](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
 
-    > [!NOTE]
-  > Observe que, ao usar AppCompat no Android, cada guia também exibirá um ícone. Além disso, o `TabbedPageRenderer` para AppCompat Android tem uma substituível `SetTabIcon` método que pode ser usado para carregar ícones de guia de um personalizado `Drawable`. Essa substituição torna possível usar as imagens de SVG como ícones em uma `TabbedPage`.
+  > [!NOTE]
+  > Observe que, ao usar AppCompat no Android, cada guia também exibirá um ícone. Além disso, o `TabbedPageRenderer` para AppCompat Android tem uma substituível `GetIconDrawable` método que pode ser usado para carregar ícones de guia de um personalizado `Drawable`. Essa substituição torna possível usar as imagens de SVG como ícones em uma `TabbedPage`, e funciona com ambos superior e inferior barras de guia. Como alternativa, o substituível `SetTabIcon` método pode ser usado para carregar ícones de guia de um personalizado `Drawable` para barras de guia superior.
 
 - No Windows tablet fatores de forma, as guias não são sempre visíveis e os usuários precisam passar o dedo para baixo (ou com o botão direito do mouse, se eles tiverem um mouse anexado) para exibir as guias em um `TabbedPage` (conforme mostrado abaixo).
 
@@ -76,7 +76,7 @@ Mostra o exemplo de código XAML abaixo uma [ `TabbedPage` ](xref:Xamarin.Forms.
 </TabbedPage>
 ```
 
-O exemplo de código a seguir mostra o equivalente [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) criado em c#:
+O exemplo de código a seguir mostra o equivalente [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) criado na C#:
 
 ```csharp
 public class MainPageCS : TabbedPage
@@ -174,7 +174,7 @@ public TabbedPageDemoPage ()
 }
 ```
 
-O exemplo de código a seguir mostra o equivalente [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) criado em c#:
+O exemplo de código a seguir mostra o equivalente [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) criado na C#:
 
 ```csharp
 public class TabbedPageDemoPageCS : TabbedPage

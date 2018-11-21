@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 84870de28ffd30b2d29fb5d8fbea815e1fd0d9c4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3397c931dcb23a29b0682699512a5b4c9018de38
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996432"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171060"
 ---
 # <a name="custom-video-transport-controls"></a>Controles personalizados de transporte de vídeo
 
@@ -212,7 +212,7 @@ namespace FormsVideoLibrary.UWP
 
 Implementando o **reproduzir**, **pausar**, e **parar** funções não é suficiente para dar suporte a controles de transporte. Muitas vezes os **reproduzir** e **pausar** comandos são implementados com o mesmo botão que muda de aparência para indicar se o vídeo ainda está execução ou em pausa. Além disso, o botão ainda não deve ser habilitado se o vídeo ainda não tiver carregado.
 
-Esses requisitos implicam que o player de vídeo precisa disponibilizar um status atual que indica se ele está reproduzindo ou pausado, ou se ele ainda não está pronto para reproduzir um vídeo. (As três plataformas também dão suporte a propriedades que indicam se o vídeo pode ser pausado, ou pode ser movido para uma nova posição, mas essas propriedades são aplicáveis para transmissão de vídeo, em vez dos arquivos de vídeo, portanto, eles não têm suporte no `VideoPlayer` descrito aqui.)
+Esses requisitos implicam que o player de vídeo precisa disponibilizar um status atual que indica se ele está reproduzindo ou pausado, ou se ele ainda não está pronto para reproduzir um vídeo. (As propriedades que indicam se o vídeo pode ser pausado, ou pode ser movido para uma nova posição, mas essas propriedades são aplicáveis para transmissão de vídeo, em vez dos arquivos de vídeo, para que eles não são suportados em cada plataforma também oferece suporte a `VideoPlayer` descrito aqui.)
 
 O **VideoPlayerDemos** projeto inclui um `VideoStatus` enumeração com três membros:
 
@@ -532,7 +532,7 @@ Por esse motivo, o ponto de código 0x23F5 não pode ser usado para **reproduzir
 
 - 0x25B6 (triângulo preto apontando para a direita) ou &#x25B6; para **reproduzir**
 
-Isso é compatível com todas as três plataformas, exceto que ele é um triângulo preto simples que não se assemelha a aparência 3D da **pausa** e **parar**. Uma possibilidade é seguir o ponto de código 0x25B6 com um código de variantes:
+Isso é suportado por cada plataforma, exceto que ele é um triângulo preto simples que não se assemelha a aparência 3D da **pausa** e **parar**. Uma possibilidade é seguir o ponto de código 0x25B6 com um código de variantes:
 
 - 0x25B6 seguido por 0xFE0F (variante 16) ou &#x25B6; &#xFE0F; para **reproduzir**
 

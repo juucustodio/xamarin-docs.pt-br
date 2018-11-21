@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: bd865471e3efe42c44a8996a8e364b1c478b69e7
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 8354539288613353dcb7a792ace335daa5dc8f27
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615672"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171138"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efeitos de caminho em SkiaSharp
 
@@ -923,7 +923,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Você pode usar esse efeito com traçar ou preencher com base nas `Style` propriedade do `SKPaint` objeto. Aqui está ele em todas as três plataformas:
+Você pode usar esse efeito com traçar ou preencher com base nas `Style` propriedade do `SKPaint` objeto. Aqui ele está em execução:
 
 [![](effects-images/anotherroundedheptagon-small.png "Tripla captura de tela da página outro Heptágono arredondado")](effects-images/anotherroundedheptagon-large.png#lightbox "tripla captura de tela da página outro Heptágono arredondado")
 
@@ -1068,7 +1068,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Aqui ele está em execução no modo paisagem em todas as três plataformas:
+Aqui ele está em execução no modo paisagem:
 
 [![](effects-images/jittertext-small.png "Captura de tela da página de texto de Tremulação de tripla")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 

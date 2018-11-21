@@ -6,13 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
-ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 11/19/2018
+ms.openlocfilehash: 5de5899b01965a33025c8af0c1ae6c09ac60dc9b
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527268"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171281"
 ---
 # <a name="android-platform-specifics"></a>Especificidades da plataforma Android
 
@@ -143,6 +143,7 @@ No Android, a seguinte funcionalidade específica da plataforma é fornecida par
 
 - Usando o preenchimento padrão e os valores de sombra dos botões do Android. Para obter mais informações, consulte [botões do Android usando](#button-padding-shadow).
 - Configurando o método de entrada opções do editor para o teclado virtual para um [ `Entry` ](xref:Xamarin.Forms.Entry). Para obter mais informações, consulte [opções de configuração de entrada do IME](#entry-imeoptions).
+- Habilitando uma sombra em um `ImageButton`. Para obter mais informações, consulte [habilitando uma sombra em um ImageButton](#imagebutton-drop-shadow).
 - Habilitar a rolagem rápida em um [ `ListView` ](xref:Xamarin.Forms.ListView) para obter mais informações, consulte [habilitando o recurso de rolagem rápida em um ListView](#fastscroll).
 - Controlar se uma [ `WebView` ](xref:Xamarin.Forms.WebView) pode exibir o conteúdo misto. Para obter mais informações, consulte [ativando misto conteúdo em um WebView](#webview-mixed-content).
 
@@ -227,6 +228,67 @@ O `Entry.On<Android>` método Especifica que este específicos da plataforma ser
 O resultado é que a especificada [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) valor é aplicado para o teclado virtual para o [ `Entry` ](xref:Xamarin.Forms.Entry), que define o método de entrada, as opções do editor:
 
 [![Método editor específico da plataforma de entrada de entrada](android-images/entry-imeoptions.png "específicos de plataforma de editor de método de entrada de entrada")](android-images/entry-imeoptions-large.png#lightbox "específicos de plataforma de editor de método de entrada de entrada")
+
+<a name="imagebutton-drop-shadow" />
+
+### <a name="enabling-a-drop-shadow-on-a-imagebutton"></a>Habilitando uma sombra em um ImageButton
+
+Este específicos da plataforma é usado para habilitar uma sombra em um `ImageButton`. Ele é consumido em XAML, definindo o `ImageButton.IsShadowEnabled` para a propriedade associável `true`, junto com um número opcional associável propriedades adicionais que controlam a sombra:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+       <ImageButton ...
+                    Source="XamarinLogo.png"
+                    BackgroundColor="GhostWhite"
+                    android:ImageButton.IsShadowEnabled="true"
+                    android:ImageButton.ShadowColor="Gray"
+                    android:ImageButton.ShadowRadius="12">
+            <android:ImageButton.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </android:ImageButton.ShadowOffset>
+        </ImageButton>
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+Como alternativa, ele pode ser consumido de c# usando a API fluente:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+var imageButton = new Xamarin.Forms.ImageButton { Source = "XamarinLogo.png", BackgroundColor = Color.GhostWhite, ... };
+imageButton.On<Android>()
+           .SetIsShadowEnabled(true)
+           .SetShadowColor(Color.Gray)
+           .SetShadowOffset(new Size(10, 10))
+           .SetShadowRadius(12);
+```
+
+> [!IMPORTANT]
+> Uma sombra é desenhada como parte do `ImageButton` em segundo plano e o plano de fundo é desenhada apenas se o `BackgroundColor` propriedade está definida. Portanto, uma sombra não será desenhada se o `ImageButton.BackgroundColor` propriedade não está definida.
+
+O `ImageButton.On<Android>` método Especifica que este específicos da plataforma serão executado apenas no Android. O `ImageButton.SetIsShadowEnabled` método, no [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace, é usada para controlar se uma sombra está habilitada no `ImageButton`. Além disso, os métodos a seguir podem ser invocados para controlar a sombra:
+
+- `SetShadowColor` – Define a cor da sombra. A cor padrão é [ `Color.Default` ](xref:Xamarin.Forms.Color.Default*).
+- `SetShadowOffset` – Define o deslocamento da sombra. O deslocamento altera a direção da sombra é convertida e é especificada como uma [ `Size` ](xref:Xamarin.Forms.Size) valor. O `Size` valores de estrutura são expressos em unidades independentes de dispositivo, com o primeiro valor que está sendo a distância para a esquerda (valor negativo) ou a direita (valor positivo) e o segundo valor sendo a distância acima (valor negativo) ou abaixo (valor positivo) . O valor padrão dessa propriedade é (0,0, 0,0), que resulta na sombra que está sendo convertido em torno de cada lado do `ImageButton`.
+- `SetShadowRadius`– Define o raio de desfoque usado para renderizar a sombra projetada. O valor de raio padrão é 10.0.
+
+> [!NOTE]
+> O estado de uma sombra pode ser consultado por meio da chamada a `GetIsShadowEnabled`, `GetShadowColor`, `GetShadowOffset`, e `GetShadowRadius` métodos.
+
+O resultado é que uma sombra pode ser habilitada em um `ImageButton`:
+
+![](android-images/imagebutton-drop-shadow.png "ImageButton com sombra")
 
 <a name="fastscroll" />
 
