@@ -39,7 +39,7 @@ Cada controle de layout é descrito abaixo, bem como detalhes sobre como lidar c
 * **[Criar um Layout personalizado](custom.md)**  &ndash; explica como criar uma classe de layout personalizado.
 * **[Compactação de layout](layout-compression.md)**  &ndash; remove especificado o layout da árvore visual em uma tentativa de melhorar o desempenho de renderização da página.
 
-Controles de plataforma também podem ser usados diretamente no xamarin. Forms layouts com [ **incorporação nativa** ](~/xamarin-forms/platform/native-views/index.md) (novo no xamarin. Forms 2.2), e você pode [ **criar layouts personalizados** ](custom.md) para atender às necessidades específicas.
+Controles de plataforma também podem ser usados diretamente no Xamarin.Forms layouts com [ **incorporação nativa** ](~/xamarin-forms/platform/native-views/index.md) (novo no Xamarin.Forms 2.2), e você pode [ **criar layouts personalizados** ](custom.md) para atender às necessidades específicas.
 
 O gráfico a seguir visualiza os controles de layout:
 
@@ -47,7 +47,7 @@ O gráfico a seguir visualiza os controles de layout:
 
 ## <a name="choosing-the-right-layout"></a>Escolher o Layout Certo
 
-Os layouts de que escolha no seu aplicativo podem ajudar ou prejudicar a você como você está criando um aplicativo xamarin. Forms atraente e utilizável. Dedicar algum tempo para considerar como funciona cada layout pode ajudá-lo a escrever código de interface do usuário mais limpo e mais escalonável. Uma tela pode ter uma combinação de layouts diferentes para alcançar um design específico.
+Os layouts que você escolher para seu aplicativo podem ajudar ou prejudicar como você está criando um aplicativo Xamarin.Forms atraente e utilizável. Dedicar algum tempo para considerar como funciona cada layout pode ajudá-lo a escrever código de interface do usuário mais limpo e escalonável. Uma tela pode ter uma combinação de layouts diferentes para alcançar um design específico.
 
 ### <a name="stacklayoutstack-layoutmd"></a>[StackLayout](stack-layout.md)
 
