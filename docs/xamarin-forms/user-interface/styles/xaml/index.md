@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 5145572b30302e58c36250fff40e8b637fcd221f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2607298bdc0842f60a1d1a3299bed61bbea925a1
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995069"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459857"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Aplicar estilo a aplicativos xamarin. Forms usando os estilos XAML
 
 ## <a name="introductionintroductionmd"></a>[Introdução](introduction.md)
 
-Aplicativos xamarin. Forms geralmente contêm vários controles que têm uma aparência idêntica. Definir a aparência de cada controle individual pode ser repetitiva e sujeito a erros. Em vez disso, estilos podem ser criados que personalizam a aparência do controle de agrupamento e propriedades de configurações disponíveis no tipo de controle.
+Aplicativos xamarin. Forms geralmente contêm vários controles que têm uma aparência idêntica. Definir a aparência de cada controle individual pode ser repetitiva e sujeito a erros. Em vez disso, podem ser criados estilos para personalizar a aparência do controle de agrupamento e definindo as propriedades disponíveis no tipo de controle.
 
 ## <a name="explicit-stylesexplicitmd"></a>[Estilos explícitos](explicit.md)
 

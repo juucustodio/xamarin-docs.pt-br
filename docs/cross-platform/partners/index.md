@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: 5165d8f61973b82105c1b2e39d8bf316d0c2b42b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61ed731f22122637963c28c42f44b84ec7fa9f4
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121419"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459948"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Parceiros de consultoria para entregar soluções móveis certificados
 
@@ -290,7 +290,7 @@ _Listadas por local primário, muitos parceiros fornecem serviços entre as bord
 
 | Parceiro | Locais | Descrição |
 | --- | --- | --- |
-|[Software de exibição de alto](http://www.highviewsoft.com)|Pequim, China|Visionsoft Software concentrando-se no fornecimento de aplicativo de plataforma cruzada e design de programa de serviço baseado em nuvem, desenvolvimento, implementação, treinamento técnico e outros serviços de consultoria|
+|[Software de exibição de alto](http://www.highviewsoft.com)|Pequim, China|Exibir Software alta é concentrando-se no fornecimento de aplicativo de plataforma cruzada e design de programa de serviço baseado em nuvem, desenvolvimento, implementação, treinamento técnico e outros serviços de consultoria|
 
 
 ## <a name="colombia"></a>Colômbia

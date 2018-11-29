@@ -6,13 +6,13 @@ ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 30326b8d52f39268015bdcbee1b84b9d9e5516b9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 11/26/2018
+ms.openlocfilehash: 7fea736b0a04a69fd64100ae1d6bcd42c244359f
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998954"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459844"
 ---
 # <a name="customizing-an-entry"></a>Personalizar uma entrada
 
@@ -31,6 +31,9 @@ O processo de renderização pode ser aproveitado para implementar personalizaç
 1. [Criar](#Creating_the_Custom_Renderer_on_each_Platform) o renderizador personalizado para o controle em cada plataforma.
 
 Cada item agora será discutida por sua vez, para implementar uma [ `Entry` ](xref:Xamarin.Forms.Entry) controle que tem uma cor de plano de fundo diferente em cada plataforma.
+
+> [!IMPORTANT]
+> Este artigo explica como criar um renderizador personalizado simple. No entanto, não é necessário criar um renderizador personalizado para implementar um `Entry` que tem uma cor de plano de fundo diferente em cada plataforma. Isso pode ser feito com mais facilidade usando o [ `Device` ](xref:Xamarin.Forms.Device) classe, ou o `OnPlatform` extensão de marcação para fornecer valores específicos da plataforma. Para obter mais informações, consulte [fornecendo valores de específico da plataforma](~/xamarin-forms/platform/device.md#providing-platform-specific-values) e [extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
 <a name="Creating_the_Custom_Entry_Control" />
 
