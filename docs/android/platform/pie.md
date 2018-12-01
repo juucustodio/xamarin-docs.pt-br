@@ -1,5 +1,5 @@
 ---
-title: Android pizza 9
+title: Android 9 Pie
 description: Como começar a desenvolver aplicativos para Android pizza 9 usando xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: c353341af8899960b12437d55602415a02953cbc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
+ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111467"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710017"
 ---
 # <a name="android-pie-features"></a>Recursos de pizza do Android
 
@@ -24,9 +24,7 @@ _Como começar a desenvolver aplicativos para Android pizza 9 usando xamarin. An
 
 Este artigo é estruturado para ajudá-lo a começar a desenvolver aplicativos xamarin. Android para Android pizza. Ele explica como instalar as atualizações necessárias, configure o SDK e preparar um emulador ou dispositivo para teste. Ele também fornece uma descrição dos novos recursos no Android pizza e fornece código-fonte de exemplo que ilustra como usar alguns dos principais recursos do Android pizza.
 
-![Visualizar](~/media/shared/preview.png)
-
-Xamarin. Android 9.0 fornece suporte para Android pizza visualização. Para obter mais informações sobre o suporte de xamarin. Android para Android de pizza, consulte o [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notas de versão.
+Xamarin. Android 9.0 fornece suporte para Android pizza. Para obter mais informações sobre o suporte de xamarin. Android para Android de pizza, consulte o [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notas de versão.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -142,7 +140,7 @@ Observe que o plano de fundo branco do aplicativo não é permitido para estende
 
 Se você precisar de informações mais detalhadas sobre a área de recorte no dispositivo, você pode usar o novo [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) classe. `DisplayCutout` representa a área de exibição que não pode ser usada para exibir o conteúdo. Você pode usar essas informações para recuperar o local e a forma de recorte para que seu aplicativo não tenta exibir o conteúdo nesta área não-funcionais.
 
-Para obter mais informações sobre os novos recursos de recorte no Android P, consulte [recorte suporte a vídeo](https://developer.android.com/preview/features#cutout).
+Para obter mais informações sobre os novos recursos de recorte no Android P, consulte [recorte suporte a vídeo](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
 
 
@@ -223,12 +221,12 @@ O novo [WifiRttManager](https://developer.android.com/reference/android/net/wifi
 
 ### <a name="multi-camera-support"></a>Suporte para a câmera
 
-Muitos dispositivos Android mais recentes têm câmeras dual-front e/ou dual-back que são úteis para recursos, como visão estéreo, efeitos visuais aprimorados e funcionalidade aprimorada de zoom. P Android apresenta um novo [câmera vários](https://developer.android.com/preview/features#camera) API que torna possível para seu aplicativo usar um *câmera lógica* (ou *lógica câmera várias*) que é respaldada por dois ou mais câmeras físicas.
+Muitos dispositivos Android mais recentes têm câmeras dual-front e/ou dual-back que são úteis para recursos, como visão estéreo, efeitos visuais aprimorados e funcionalidade aprimorada de zoom. P Android apresenta um novo [câmera vários](https://developer.android.com/about/versions/pie/android-9.0#camera) API que torna possível para seu aplicativo usar um *câmera lógica* (ou *lógica câmera várias*) que é respaldada por dois ou mais câmeras físicas.
 Para determinar se o dispositivo dá suporte a uma câmera multi lógico, você pode examinar os recursos de cada câmera do dispositivo para ver se ele dá suporte a [RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA).
 
 Pizza Android também inclui um novo [SessionConfiguration](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) classe que pode ser usado para ajudar a reduzir os atrasos durante a captura inicial e eliminar a necessidade de iniciar e iniciar o fluxo da câmera.
 
-Para obter mais informações sobre a câmera suporte no Android P, consulte [atualizações de suporte e a câmera de câmera vários](https://developer.android.com/preview/features#camera).
+Para obter mais informações sobre a câmera suporte no Android P, consulte [atualizações de suporte e a câmera de câmera vários](https://developer.android.com/about/versions/pie/android-9.0#camera).
 
 
 ### <a name="other-features"></a>Outros recursos
@@ -256,7 +254,7 @@ Quando a versão do Android de destino é definida como 28 de nível de API, há
 
 -  Não é permitida diretamente acessando o diretório de dados do aplicativo para outro caminho.
 
-Para obter mais informações sobre as alterações de comportamento para aplicativos direcionados para Android P, consulte [alterações de comportamento](https://developer.android.com/preview/behavior-changes.html#p-apps).
+Para obter mais informações sobre as alterações de comportamento para aplicativos direcionados para Android P, consulte [alterações de comportamento](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 
 
 ## <a name="sample-code"></a>Código de exemplo
