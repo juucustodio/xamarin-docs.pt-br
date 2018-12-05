@@ -26,7 +26,7 @@ Para acessar a funcionalidade **Battery**, a configuração específica da plata
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-A permissão `Battery` é necessária e deve ser configurada no projeto do Android. Isso pode ser usado das seguintes maneiras:
+A permissão `Battery` é necessária e deve ser configurada no projeto do Android. Ela pode ser usado das seguintes maneiras:
 
 Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
