@@ -1,6 +1,6 @@
 ---
-title: Navegação do xamarin. Forms
-description: Este guia explica como executar a navegação em aplicativos xamarin. Forms. Xamarin. Forms fornece uma série de experiências de navegação de página diferente, dependendo do tipo de página que está sendo usado.
+title: Navegação do Xamarin.Forms
+description: Este guia explica como navegar em aplicativos Xamarin.Forms. O Xamarin.Forms oferece uma série de experiências de navegação de página diferentes, dependendo do tipo de página sendo usado.
 ms.prod: xamarin
 ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 202f044ebd7dd5b110b94d2aa60eeb7151150607
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38994722"
 ---
-# <a name="xamarinforms-navigation"></a>Navegação do xamarin. Forms
+# <a name="xamarinforms-navigation"></a>Navegação do Xamarin.Forms
 
-_Xamarin. Forms fornece uma série de experiências de navegação de página diferente, dependendo do tipo de página que está sendo usado._
+_O Xamarin.Forms oferece uma série de experiências de navegação de página diferentes, dependendo do tipo de página sendo usado._
 
-![](images/page-types.png "Tipos de página do xamarin. Forms")
+![](images/page-types.png "Tipos de página do Xamarin.Forms")
 
 ## <a name="hierarchical-navigationhierarchicalmd"></a>[Navegação hierárquica](hierarchical.md)
 
@@ -26,20 +26,20 @@ A classe [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) oferece uma exper
 
 ## <a name="tabbedpagetabbed-pagemd"></a>[TabbedPage](tabbed-page.md)
 
-O xamarin. Forms [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) consiste em uma lista de guias e uma área maior de detalhe, com cada guia Carregando conteúdo na área de detalhes.
+O [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) do Xamarin.Forms consiste em uma lista de guias e uma área de detalhes maior, com cada guia carregando conteúdo na área de detalhes.
 
 ## <a name="carouselpagecarousel-pagemd"></a>[CarouselPage](carousel-page.md)
 
-O xamarin. Forms [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) é uma página que os usuários podem passe o dedo de lado a lado para navegar entre páginas de conteúdo, como uma galeria.
+O [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) do Xamarin.Forms é uma página em que os usuários podem passar o dedo de um lado ao outro para navegar por páginas de conteúdo, assim como uma galeria.
 
 ## <a name="masterdetailpagemaster-detail-pagemd"></a>[MasterDetailPage](master-detail-page.md)
 
-O xamarin. Forms [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) é uma página que gerencia duas páginas de informações relacionadas a uma página mestra que apresenta os itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra.
+O [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) do Xamarin.Forms é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra.
 
 ## <a name="modal-pagesmodalmd"></a>[Páginas modais](modal.md)
 
-Xamarin. Forms também fornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada.
+O Xamarin.Forms também dá suporte a páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada.
 
 ## <a name="displaying-pop-upspop-upsmd"></a>[Exibição de pop-ups](pop-ups.md)
 
-Xamarin. Forms fornece dois elementos de interface do usuário de pop-up semelhante a: um alerta e uma folha de ações. Esses elementos de interface podem ser usados para fazer perguntas simples de usuários e orientar os usuários por meio de tarefas.
+O Xamarin.Forms fornece dois elementos de interface do usuário semelhantes a pop-up: um alerta e uma folha de ações. Esses elementos de interface podem ser usados para fazer perguntas simples a usuários e para orientar os usuários por meio de tarefas.
