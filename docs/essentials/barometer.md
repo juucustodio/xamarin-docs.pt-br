@@ -4,17 +4,15 @@ description: A classe Barometer no Xamarin.Essentials permite que você monitore
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/16/2018
-ms.openlocfilehash: 9172d816fe9a15993ba8f015310d0e79874c2d84
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 342ae1b64fefebaa4b3fa82e9f48c6e9a58d4751
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675023"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899038"
 ---
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barometer
-
-![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
 A classe **Barometer** permite que você monitore o sensor do barômetro do dispositivo. Esse sensor mede a pressão.
 
@@ -30,7 +28,7 @@ Adicione uma referência ao Xamarin.Essentials na classe:
 using Xamarin.Essentials;
 ```
 
-A funcionalidade Barometer funciona chamando os métodos `Start` e `Stop` para escutar as alterações nas leituras de pressão do barômetro em kilopascais. Todas as alterações são enviadas de volta por meio do evento `ReadingChanged`. Veja um exemplo de uso:
+A funcionalidade Barometer funciona chamando os métodos `Start` e `Stop` para escutar as alterações nas leituras de pressão do barômetro em hectopascais. Todas as alterações são enviadas de volta por meio do evento `ReadingChanged`. Veja um exemplo de uso:
 
 ```csharp
 
@@ -49,7 +47,7 @@ public class BarometerTest
     {
         var data = e.Reading;
         // Process Pressure
-        Console.WriteLine($"Reading: Pressure: {data.Pressure} kilopascals");
+        Console.WriteLine($"Reading: Pressure: {data.PressureInHectopascals} hectopascals");
     }
 
     public void ToggleBarometer()

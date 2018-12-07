@@ -4,17 +4,15 @@ description: A classe Geocoding no Xamarin.Essentials fornece APIs para definir 
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 3202d4ace85c68042425ca5f23641ca7a76a6c7e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.date: 11/04/2018
+ms.openlocfilehash: 0f44f179588c564ac9fa46d42ec18de6d303e239
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528384"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898973"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocodificação
-
-![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
 A classe **Geocoding** fornece APIs para definir o código geográfico de um marcador de local para coordenadas posicionais e reverter as coordenadas de código geográfico para um marcador de local.
 
@@ -36,10 +34,10 @@ Não exige mais configurações.
 
 Uma chave de API do Bing Maps é necessária para usar a funcionalidade de geocodificação. Inscreva-se em uma conta gratuita do [Bing Maps](https://www.bingmapsportal.com/). Em **Minha conta > Minhas chaves** crie uma nova chave e preencha as informações com base em seu tipo de aplicativo, que deve ser **Aplicativo Windows Público (UWP, 8.x e anteriores)** para aplicativos UWP.
 
-No início na vida de seu aplicativo, antes de chamar qualquer método de **Geocodificação**, defina a chave de API:
+No início da vida de seu aplicativo, antes de chamar qualquer método de **Geocodificação**, defina a chave de API (que está disponível somente para UWP):
 
 ```csharp
-Geocoding.MapKey = "YOUR-KEY-HERE";
+Platform.MapServiceToken = "YOUR-KEY-HERE";
 ```
 
 -----

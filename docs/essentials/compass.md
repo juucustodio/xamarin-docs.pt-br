@@ -4,17 +4,15 @@ description: Este documento descreve a classe Compass no Xamarin.Essentials, que
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 51812f9b4f88d77bf553a26ef3a6802239e338e0
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 55dd10bff21b7d082b225277d0100232d5efd4f3
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675491"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898778"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Bússola
-
-![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
 A classe **Compass** permite que você monitore o norte magnético do dispositivo.
 
@@ -86,13 +84,13 @@ Saiba que executar simultaneamente vários sensores em seu aplicativo pode ajust
 
 ## <a name="low-pass-filter"></a>Filtro Passa Baixa
 
-Devido ao modo como os valores da bússola do Android são atualizados e calculados, pode haver a necessidade para suavizar os valores. É possível aplicar um _Filtro de Passa Baixa_ que deixa na média os valores de seno e cosseno dos ângulos por meio da definição da propriedade `ApplyLowPassFilter` na classe `Compass`:
+Devido ao modo como os valores da bússola do Android são atualizados e calculados, pode haver a necessidade para suavizar os valores. É possível aplicar um _Filtro de Passa Baixa_ que deixa na média os valores de seno e cosseno dos ângulos por meio da definição da propriedade `Start` na classe `bool applyLowPassFilter`:
 
 ```csharp
-Compass.ApplyLowPassFilter = true;
+Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
 ```
 
-Isso só se aplica à plataforma Android. Encontre mais informações [aqui](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
+Isso só é aplicado na plataforma Android, e o parâmetro é ignorado no iOS e UWP.  Encontre mais informações [aqui](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
 
 --------------
 

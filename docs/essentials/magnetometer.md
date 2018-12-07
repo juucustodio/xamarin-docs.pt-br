@@ -4,17 +4,15 @@ description: A classe Magnetometer no Xamarin.Essentials permite que você monit
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 2fe610195f881f3d20ecc327c02dd2dfbced35ce
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: bfc4916c40b47b715357692308d6b5dfa9db57bf
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675049"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898710"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetômetro
-
-![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
 A classe **Magnetometer** permite que você monitore o sensor do magnetômetro do dispositivo, que indica a orientação do dispositivo em relação ao campo magnético da Terra.
 
@@ -73,7 +71,7 @@ public class MagnetometerTest
 }
 ```
 
-Todos os dados são retornados em microteslas.
+Todos os dados são retornados em µ (microteslas).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

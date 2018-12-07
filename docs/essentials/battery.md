@@ -4,19 +4,17 @@ description: Este documento descreve a classe Battery no Xamarin.Essentials, que
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 6a14c939064538a405a1fe64061e0bb2e903fedd
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 5c457bb8ad9796396f24264e27f6762569ea542c
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675426"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898848"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Bateria
 
-![Pré-lançamento NuGet](~/media/shared/pre-release.png)
-
-A classe **Battery** permite que você verifique informações da bateria do dispositivo e monitore a ocorrência de alterações.
+A classe **Battery** permite que você verifique as informações sobre a bateria do dispositivo e monitore as alterações, além de fornecer informações sobre o status de economia de energia do dispositivo, o que indica se o dispositivo está em execução em um modo de baixa energia. Os aplicativos devem evitar o processamento em segundo plano se o status da economia de energia do dispositivo estiver ativado.
 
 ## <a name="get-started"></a>Introdução
 
@@ -65,7 +63,7 @@ using Xamarin.Essentials;
 Verifique as informações atuais da bateria:
 
 ```csharp
-var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or -1.0 if unable to determine.
+var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or 1.0 when on AC or no battery.
 
 var state = Battery.State;
 
@@ -121,7 +119,7 @@ public class BatteryTest
         Battery.BatteryChanged += Battery_BatteryChanged;
     }
 
-    void Battery_BatteryChanged(object sender, BatteryChangedEventArgs   e)
+    void Battery_BatteryChanged(object sender, BatteryInfoChangedEventArgs   e)
     {
         var level = e.ChargeLevel;
         var state = e.State;
@@ -130,6 +128,39 @@ public class BatteryTest
     }
 }
 ```
+
+Os dispositivos que funcionam com baterias podem ser colocados em um modo de baixo consumo de energia. Por vezes, os dispositivos passam para este modo automaticamente, por exemplo, quando a bateria fica abaixo dos 20% de capacidade. O sistema operacional responde ao modo de economia de energia reduzindo atividades que tendem a esgotar a bateria. Os aplicativos podem ajudar evitando o processamento em segundo plano ou outras atividades que consomem muita energia quando o modo de economia de energia está ativado.
+
+Obtenha o status atual da economia de energia do dispositivo usando a propriedade `Battery.EnergySaverStatus` estática:
+
+```csharp
+// Get energy saver status
+var status = Battery.EnergySaverStatus;
+```
+
+Essa propriedade retorna um membro da enumeração `EnergySaverStatus`, que é `On`, `Off` ou `Unknown`. Se a propriedade retornar `On`, o aplicativo deverá evitar o processamento em segundo plano ou outras atividades que possam consumir muita energia.
+
+O aplicativo também deve instalar um manipulador de eventos. A classe **Power** expõe um evento que é acionado quando o status da economia de energia é alterado:
+
+```csharp
+public class EnergySaverTest
+{
+    public EnergySaverTest()
+    {
+        // Subscribe to changes of energy-saver status
+        Batter.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
+    }
+
+    private void OnEnergySaverStatusChanged(EnergySaverStatusChangedEventArgs e)
+    {
+        // Process change
+        var status = e.EnergySaverStatus;
+    }
+}
+```
+
+Se o status da economia de energia for alterado para `On`, o aplicativo deverá interromper a execução do processamento em segundo plano. Se o status mudar para `Unknown` ou `Off`, o aplicativo poderá retomar o processamento em segundo plano.
+
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas
 
