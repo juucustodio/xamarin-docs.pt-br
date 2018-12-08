@@ -7,14 +7,16 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 91cf14f531b527054b46779e571dae6eacebe765
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c71f0c0e5224c3fc4615d570487ed63c957c5556
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123421"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061666"
 ---
 # <a name="skiasharp-curves-and-paths"></a>Caminhos e as curvas de SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Saiba como usar SkiaSharp desenhar curvas e usar recursos de caminho_
 

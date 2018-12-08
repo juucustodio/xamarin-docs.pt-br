@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 647d9f82eab4d606a940ff887defb864d7770cc3
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 006e4c2b2de56fef96c561e788992649f6582d24
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171073"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054927"
 ---
 # <a name="path-basics-in-skiasharp"></a>Noções básicas de caminho no SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Explorar o objeto de SkiaSharp SKPath para combinar linhas e curvas conectadas_
 

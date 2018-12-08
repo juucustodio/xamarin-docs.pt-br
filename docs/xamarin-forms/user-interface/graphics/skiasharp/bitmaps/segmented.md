@@ -7,14 +7,16 @@ ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 71997acde4545fec801dfdc8147ab1a9ace7ab24
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: be2d998916c81cb2216251e2112ff8ca2af5d87a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119222"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061362"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Exibição segmentada de bitmaps de SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 O SkiaSharp `SKCanvas` objeto define um método chamado `DrawBitmapNinePatch` e dois métodos chamados `DrawBitmapLattice` que são muito semelhantes. Ambos esses métodos processam um bitmap para o tamanho de um retângulo de destino, mas em vez de ampliar o bitmap de maneira uniforme, eles exibem partes do bitmap em suas dimensões de pixel e outras partes do bitmap do stretch para que ele se adapta o retângulo:
 

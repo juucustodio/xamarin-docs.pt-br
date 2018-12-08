@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: f73760e2dc2310a9c1cd7a63a03ead37283a415f
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710004"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059620"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
 
 _Indexação de aplicativo permite que os aplicativos que seriam esquecidos caso contrário, depois de alguns usa para permanecer relevante por apareçam nos resultados da pesquisa. Vinculação profunda permite que os aplicativos responder a um resultado de pesquisa que contém dados de aplicativo, normalmente, navegando até uma página referenciada de um link profundo. Este artigo explica como usar a indexação de aplicativo e vinculação profunda para tornar o conteúdo do aplicativo xamarin. Forms pesquisáveis em dispositivos iOS e Android._
 

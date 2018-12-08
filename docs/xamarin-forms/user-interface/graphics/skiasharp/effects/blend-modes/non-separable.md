@@ -7,14 +7,16 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 07df66e69186803e3322bd71a4b3b37710655de4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130811"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055005"
 ---
 # <a name="the-non-separable-blend-modes"></a>Os modos de mesclagem não separáveis
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Como você viu neste artigo [ **SkiaSharp separável modos do blend**](separable.md), os modos do blend separáveis executam operações nos canais de vermelho, verdes e azuis separadamente. Os modos de mesclagem não separáveis não. Por funcionando com os níveis de matiz, saturação e luminosidade da cor, os modos de mesclagem não separáveis podem alterar as cores de maneiras interessantes:
 

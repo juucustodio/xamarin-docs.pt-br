@@ -7,14 +7,16 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 6eacc7f2688a563f9facf651b0a6da85bd75360f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: de27e151a475856f0789285dddc1526613e0b828
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171346"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053137"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animando bitmaps de SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Os aplicativos que animar elementos gráficos de SkiaSharp geralmente chamar `InvalidateSurface` sobre o `SKCanvasView` a uma taxa fixa, muitas vezes a cada 16 milissegundos. Invalidar a superfície dispara uma chamada para o `PaintSurface` manipulador redesenhar a exibição. Como os visuais são redesenhados 60 vezes por segundo, eles parecem ser animada suavemente.
 
