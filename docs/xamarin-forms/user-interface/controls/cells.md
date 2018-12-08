@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 34e28d8532c232549c6f45e549787885a9155684
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: ac65122e35849786307afd2a4d6e64e186cad466
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526852"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060194"
 ---
 # <a name="xamarinforms-cells"></a>Células do xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 _As células do xamarin. Forms podem ser adicionadas a ListViews e TableViews._
 
@@ -62,4 +64,4 @@ Xamarin. Forms dá suporte aos seguintes tipos de célula:
 - [Introdução ao Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Documentação da API de xamarin. Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Documentação da API do Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

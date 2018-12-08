@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: f8cf3287c6d713d91a0217bd30ca2ee927534aea
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 05ec368fb0dd0e1adfac3eed88c5ddd50960f9ae
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995327"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056578"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Herança de estilo no xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 
 _Estilos podem herdar de outros estilos para reduzir a duplicação e habilitar a reutilização._
 

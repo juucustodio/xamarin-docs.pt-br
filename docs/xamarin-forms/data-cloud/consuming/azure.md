@@ -1,39 +1,41 @@
 ---
-title: Consumo de um aplicativo móvel do Azure
-description: Neste artigo, que só é aplicável a aplicativos móveis do Azure que usam um back-end node. js, explica como consultar, inserir, atualizar e excluir dados armazenados em uma tabela em uma instância dos aplicativos móveis do Azure.
+title: Consumir um aplicativo móvel do Azure
+description: Neste artigo, que só é aplicável aos aplicativos móveis do Azure que usam um back-end do Node. js, explica como consultar, inserir, atualizar e excluir os dados armazenados em uma tabela em uma instância de aplicativos móveis do Azure.
 ms.prod: xamarin
 ms.assetid: 2B3EFD0A-2922-437D-B151-4B4DE46E2095
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 73d74b59ef6e59028eec7cad19feec21908b6329
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 1ac68992d36627eb5d6aee0d4d19564ce63a3936
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36269038"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052129"
 ---
-# <a name="consuming-an-azure-mobile-app"></a>Consumo de um aplicativo móvel do Azure
+# <a name="consuming-an-azure-mobile-app"></a>Consumir um aplicativo móvel do Azure
 
-_Aplicativos móveis do Azure permitem que você desenvolva aplicativos com o back-ends escalonável hospedado no serviço de aplicativo do Azure, com suporte para autenticação móvel, sincronização offline e notificações por push. Neste artigo, que só é aplicável a aplicativos móveis do Azure que usam um back-end node. js, explica como consultar, inserir, atualizar e excluir dados armazenados em uma tabela em uma instância dos aplicativos móveis do Azure._
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure/)
+
+_Aplicativos móveis do Azure permitem que você desenvolva aplicativos com back-ends dimensionável hospedado no serviço de aplicativo do Azure com suporte para autenticação móvel, sincronização offline e notificações por push. Neste artigo, que só é aplicável aos aplicativos móveis do Azure que usam um back-end do Node. js, explica como consultar, inserir, atualizar e excluir os dados armazenados em uma tabela em uma instância de aplicativos móveis do Azure._
 
 > [!NOTE]
-> Iniciando em 30 de junho, todos os aplicativos móveis do novo Azure serão criados com o protocolo TLS 1.2 por padrão. Além disso, também é recomendado se os aplicativos móveis do Azure ser reconfigurados para usar o TLS 1.2. Para obter informações sobre como impor TLS 1.2 no aplicativo móvel do Azure, consulte [impor TLS 1.2](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112). Para obter informações sobre como configurar projetos Xamarin para usar o TLS 1.2, consulte [Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md).
+> Iniciando em 30 de junho, todos os novos aplicativos de móveis do Azure serão criados com o TLS 1.2 por padrão. Além disso, também é recomendado que os aplicativos móveis do Azure ser reconfigurados para usar o TLS 1.2. Para obter informações sobre como impor o TLS 1.2 no aplicativo móvel do Azure, consulte [impor o TLS 1.2](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112). Para obter informações sobre como configurar projetos do Xamarin para usar TLS 1.2, consulte [Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md).
 
-Para obter informações sobre como criar uma instância do Azure Mobile aplicativos que pode ser consumida por xamarin. Forms, consulte [criar um aplicativo xamarin. Forms](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/). Depois de seguir estas instruções, o aplicativo de exemplo para download pode ser configurado para consumir a instância de aplicativos do Azure Mobile definindo o `Constants.ApplicationURL` para a URL da instância os aplicativos móveis do Azure. Em seguida, quando o aplicativo de exemplo é executado ele se conectará à instância os aplicativos móveis do Azure, conforme mostrado na seguinte captura de tela:
+Para obter informações sobre como criar uma instância de aplicativos móveis do Azure que pode ser consumida por xamarin. Forms, consulte [criar um aplicativo xamarin. Forms](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/). Depois de seguir essas instruções, o aplicativo de exemplo para download pode ser configurado para consumir a instância de aplicativos móveis do Azure, definindo o `Constants.ApplicationURL` para a URL da instância de aplicativos móveis do Azure. Em seguida, quando o aplicativo de exemplo for executado ele se conecte à instância de aplicativos móveis do Azure, conforme mostrado na seguinte captura de tela:
 
 ![](azure-images/portal.png "Aplicativo de exemplo")
 
-O acesso a aplicativos móveis do Azure é por meio de [cliente SDK do Azure Mobile](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/), e todas as conexões do aplicativo de exemplo xamarin. Forms no Azure são feitas por HTTPS.
+Acesso a aplicativos móveis do Azure é por meio de [SDK do Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/), e todas as conexões do aplicativo de exemplo do xamarin. Forms para o Azure são feitas por HTTPS.
 
 > [!NOTE]
-> No iOS 9 e superior, a segurança de transporte do aplicativo (ATS) impõe conexões seguras entre os recursos de internet (como o servidor de back-end do aplicativo) e o aplicativo, impedindo assim a divulgação acidental de informações confidenciais. Como ATS está habilitado por padrão em aplicativos criados para o iOS 9, todas as conexões serão sujeitos a requisitos de segurança ATS. Se as conexões não atender a esses requisitos, eles falham com uma exceção.
-> ATS pode ser incluído em se não for possível usar o `HTTPS` de protocolo e proteger a comunicação para recursos da internet. Isso pode ser obtido pela atualização do aplicativo **Info. plist** arquivo. Para obter mais informações, consulte [segurança de transporte do aplicativo](~/ios/app-fundamentals/ats.md).
+> No iOS 9 e superior, a segurança de transporte de aplicativo (ATS) impõe conexões seguras entre recursos da internet (como o servidor de back-end do aplicativo) e o aplicativo, impedindo assim a divulgação acidental de informações confidenciais. Desde que o ATS é habilitado por padrão em aplicativos criados para o iOS 9, todas as conexões serão sujeitos a requisitos de segurança ATS. Se as conexões não atender a esses requisitos, eles falharão com uma exceção.
+> ATS poderá ser aceito de se ele não é possível usar o `HTTPS` de protocolo e proteger a comunicação para recursos da internet. Isso pode ser feito atualizando o aplicativo **Info. plist** arquivo. Para obter mais informações, consulte [segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md).
 
-## <a name="consuming-an-azure-mobile-app-instance"></a>Consumir uma instância de aplicativo móvel do Azure
+## <a name="consuming-an-azure-mobile-app-instance"></a>Consumindo uma instância de aplicativo móvel do Azure
 
-O [cliente SDK do Azure Mobile](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/) fornece o `MobileServiceClient` classe, que é usado por um aplicativo xamarin. Forms para acessar a instância os aplicativos móveis do Azure, conforme mostrado no exemplo de código a seguir:
+O [SDK do Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/) fornece o `MobileServiceClient` classe, que é usado por um aplicativo xamarin. Forms para acessar a instância de aplicativos móveis do Azure, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 IMobileServiceTable<TodoItem> todoTable;
@@ -46,13 +48,13 @@ public TodoItemManager ()
 }
 ```
 
-Quando o `MobileServiceClient` instância é criada, uma URL de aplicativo deve ser especificada para identificar a instância os aplicativos móveis do Azure. Esse valor pode ser obtido para o aplicativo móvel no painel de [Portal do Microsoft Azure](https://portal.azure.com/).
+Quando o `MobileServiceClient` instância é criada, uma URL de aplicativo deve ser especificada para identificar a instância de aplicativos móveis do Azure. Esse valor pode ser obtido a partir do painel para o aplicativo móvel na [Portal do Microsoft Azure](https://portal.azure.com/).
 
-Uma referência para o `TodoItem` tabela armazenada na instância do Azure os aplicativos móveis deve ser obtida antes de operações podem ser executadas na tabela. Isso é feito chamando a `GetTable` método o `MobileServiceClient` da instância, que retorna um `IMobileServiceTable<TodoItem>` referência.
+Uma referência para o `TodoItem` tabela armazenada na instância de aplicativos móveis do Azure deve ser obtida antes de operações podem ser executadas nessa tabela. Isso é feito chamando o `GetTable` método em de `MobileServiceClient` da instância, que retorna um `IMobileServiceTable<TodoItem>` referência.
 
 ### <a name="querying-data"></a>Consultar Dados
 
-O conteúdo de uma tabela pode ser recuperado chamando o `IMobileServiceTable.ToEnumerableAsync` método que avalia a consulta e retorna os resultados de forma assíncrona. Dados também podem ser filtrados do lado do servidor, incluindo um `Where` cláusula na consulta. O `Where` cláusula aplica uma predicado para a consulta em relação à tabela de filtro de linha, conforme mostrado no exemplo de código a seguir:
+O conteúdo de uma tabela pode ser recuperado chamando o `IMobileServiceTable.ToEnumerableAsync` método que avalia a consulta e retorna os resultados de forma assíncrona. Dados também podem ser filtradas do lado do servidor, incluindo um `Where` cláusula na consulta. O `Where` cláusula aplica um predicado à consulta na tabela, a filtragem de linha conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public async Task<ObservableCollection<TodoItem>> GetTodoItemsAsync (bool syncItems = false)
@@ -70,7 +72,7 @@ Esta consulta retorna todos os itens do `TodoItem` tabela cujos `Done` proprieda
 
 ### <a name="inserting-data"></a>Inserindo dados
 
-Ao inserir dados na instância os aplicativos móveis do Azure, novas colunas serão geradas automaticamente na tabela conforme necessário, fornecido a esse esquema dinâmico está habilitado na instância os aplicativos móveis do Azure. O `IMobileServiceTable.InsertAsync` método é usado para inserir uma nova linha de dados da tabela especificada, conforme mostrado no exemplo de código a seguir:
+Ao inserir dados na instância de aplicativos móveis do Azure, novas colunas serão geradas automaticamente na tabela conforme necessário, fornecido o esquema dinâmico está habilitado na instância de aplicativos móveis do Azure. O `IMobileServiceTable.InsertAsync` método é usado para inserir uma nova linha de dados na tabela especificada, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public async Task SaveTaskAsync (TodoItem item)
@@ -81,13 +83,13 @@ public async Task SaveTaskAsync (TodoItem item)
 }
 ```
 
-Ao fazer uma solicitação de inserção, uma ID não deve ser especificada nos dados que está sendo passados para a instância os aplicativos móveis do Azure. Se a solicitação de inserção contém uma ID de um `MobileServiceInvalidOperationException` será lançada.
+Quando você faz uma solicitação de inserção, uma ID não deve ser especificada nos dados que está sendo passados para a instância de aplicativos móveis do Azure. Se a solicitação de inserção contém uma ID de um `MobileServiceInvalidOperationException` será lançada.
 
-Após o `InsertAsync` método é concluído, a ID de dados na instância os aplicativos móveis do Azure será preenchida na `TodoItem` instância no aplicativo xamarin. Forms.
+Após o `InsertAsync` método for concluído, a ID dos dados na instância de aplicativos móveis do Azure será preenchida na `TodoItem` instância no aplicativo xamarin. Forms.
 
 ### <a name="updating-data"></a>Atualizando dados
 
-Ao atualizar dados na instância de aplicativos do Azure Mobile, novas colunas serão geradas automaticamente na tabela conforme necessário, fornecido a esse esquema dinâmico está habilitado na instância os aplicativos móveis do Azure. O `IMobileServiceTable.UpdateAsync` método é usado para atualizar os dados existentes com novas informações, como mostrado no exemplo de código a seguir:
+Ao atualizar dados na instância de aplicativos móveis do Azure, novas colunas serão geradas automaticamente na tabela conforme necessário, fornecido o esquema dinâmico está habilitado na instância de aplicativos móveis do Azure. O `IMobileServiceTable.UpdateAsync` método é usado para atualizar os dados existentes com novas informações, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public async Task SaveTaskAsync (TodoItem item)
@@ -98,11 +100,11 @@ public async Task SaveTaskAsync (TodoItem item)
 }
 ```
 
-Ao fazer uma solicitação de atualização, uma ID deve ser especificada para que a instância de aplicativos do Azure Mobile possa identificar os dados a serem atualizadas. Esse valor de ID é armazenado no `TodoItem.ID` propriedade. Se a solicitação de atualização não contém uma ID não é possível para a instância os aplicativos móveis do Azure determinar os dados a ser atualizado e, portanto, um `MobileServiceInvalidOperationException` será lançada.
+Quando você faz uma solicitação de atualização, uma ID deve ser especificada para que a instância de aplicativos móveis do Azure possa identificar os dados a serem atualizados. Esse valor de ID é armazenado no `TodoItem.ID` propriedade. Se a solicitação de atualização não contém uma ID não é possível para a instância de aplicativos móveis do Azure determinar os dados a ser atualizado e, portanto, um `MobileServiceInvalidOperationException` será lançada.
 
 ### <a name="deleting-data"></a>Excluindo dados
 
-O `IMobileServiceTable.DeleteAsync` método é usado para excluir dados de uma tabela com os aplicativos móveis do Azure, conforme mostrado no exemplo de código a seguir:
+O `IMobileServiceTable.DeleteAsync` método é usado para excluir dados de uma tabela de aplicativos móveis do Azure, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public async Task DeleteTaskAsync (TodoItem item)
@@ -113,16 +115,16 @@ public async Task DeleteTaskAsync (TodoItem item)
 }
 ```
 
-Ao fazer uma solicitação de exclusão, uma ID deve ser especificada para que o aplicativo do Azure Mobile sinstance possa identificar os dados a ser excluído. Esse valor de ID é armazenado no `TodoItem.ID` propriedade. Se a solicitação de exclusão não contém uma ID, não é possível para a instância os aplicativos móveis do Azure determinar os dados a ser excluído e, portanto uma `MobileServiceInvalidOperationException` será lançada.
+Quando você faz uma solicitação de exclusão, uma ID deve ser especificada para que o aplicativo móvel do Azure sinstance possa identificar os dados a ser excluído. Esse valor de ID é armazenado no `TodoItem.ID` propriedade. Se a solicitação de exclusão não contém uma ID, não há nenhuma maneira para a instância de aplicativos móveis do Azure determinar os dados a serem excluídos e, portanto, um `MobileServiceInvalidOperationException` será lançada.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo explicou como usar o [cliente SDK do Azure Mobile](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/) para consultar, inserir, atualizar e excluir dados armazenados em uma tabela em uma instância de aplicativos móveis do Azure. O SDK fornece o `MobileServiceClient` classe que é usado por um aplicativo xamarin. Forms para acessar a instância os aplicativos móveis do Azure.
+Este artigo explicou como usar o [SDK do Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/) para consultar, inserir, atualizar e excluir os dados armazenados em uma tabela em uma instância de aplicativos móveis do Azure. O SDK fornece o `MobileServiceClient` classe que é usado por um aplicativo xamarin. Forms para acessar a instância de aplicativos móveis do Azure.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [TodoAzure (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure/)
+- [TodoAzure (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure/)
 - [Criar um aplicativo xamarin. Forms](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/)
 - [SDK de cliente móvel do Azure](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
 - [MobileServiceClient](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.mobileservices.mobileserviceclient(v=azure.10).aspx)

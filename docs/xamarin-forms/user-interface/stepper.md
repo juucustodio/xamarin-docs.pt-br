@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
-ms.openlocfilehash: 53485d0d948f31b69f74b6933d05c14f69fa64c0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111443"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052200"
 ---
 # <a name="xamarinforms-stepper"></a>Seletor de xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
 
 _Use um seletor para selecionar um valor numérico de um intervalo de valores._
 

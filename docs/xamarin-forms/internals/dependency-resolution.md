@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: 9226e1d26dcc49b6ec82b71f7757eb0e22cd66ec
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 56e50f0c3dffd54fe3d95f4cd140883613c9206f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171970"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052709"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Resolução de dependência no xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
 
 _Este artigo explica como injetar um método de resolução de dependência no xamarin. Forms para que o contêiner de injeção de dependência do aplicativo tem controle sobre a criação e o tempo de vida de renderizadores personalizados, efeitos e implementações de DependencyService. Os exemplos de código neste artigo são tirados o [resolução de dependência usando contêineres](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/) exemplo._
 
@@ -301,6 +303,6 @@ Quando o [ `DependencyService.Resolve<T>` ](xref:Xamarin.Forms.DependencyService
 
 - [Resolução de dependência usando contêineres (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
 - [Injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
-- [Implementando um player de vídeo](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
+- [Implementar um player de vídeo](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Invocação de eventos de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
 - [Escolhendo uma foto na biblioteca de imagens](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

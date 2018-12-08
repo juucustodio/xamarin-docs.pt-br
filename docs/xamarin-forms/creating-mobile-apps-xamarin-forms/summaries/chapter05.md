@@ -7,16 +7,18 @@ ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 0e99d15bbecf6640b714b499997144eb18268183
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51562699"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056078"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumo do capítulo 5. Lidando com tamanhos
 
-> [!NOTE] 
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
+
+> [!NOTE]
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Vários tamanhos em xamarin. Forms até agora foram encontrados:

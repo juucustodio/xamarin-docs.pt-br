@@ -7,16 +7,18 @@ ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: fcb832e851d7467679d979841dad60d117240b59
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 948d25ce379944691053a5ff76ba3b2284385251
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563858"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052631"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Resumo do capítulo 2. Anatomia de um aplicativo
 
-> [!NOTE] 
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+
+> [!NOTE]
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Em um aplicativo xamarin. Forms, os objetos que ocupam espaço na tela são conhecidos como *elementos visuais*, encapsulado pelo [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe. Elementos visuais podem ser divididos em três categorias correspondentes a essas classes:
@@ -31,9 +33,9 @@ Este capítulo demonstra como criar um aplicativo se concentrando na [ `Label` ]
 
 ## <a name="say-hello"></a>Diga Olá
 
-Com a plataforma Xamarin instalado, você pode criar uma nova solução xamarin. Forms no Visual Studio ou Visual Studio para Mac. O [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) solução usa uma biblioteca de classes portátil para o código comum. 
+Com a plataforma Xamarin instalado, você pode criar uma nova solução xamarin. Forms no Visual Studio ou Visual Studio para Mac. O [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) solução usa uma biblioteca de classes portátil para o código comum.
 
-> [!NOTE] 
+> [!NOTE]
 > Bibliotecas de classes portáteis foram substituídas por bibliotecas .NET Standard. O código de exemplo do livro foi convertido para usar bibliotecas padrão do .NET.
 
 Este exemplo demonstra uma solução xamarin. Forms criada no Visual Studio sem modificações. A solução consiste em seis projetos:
@@ -45,8 +47,8 @@ Este exemplo demonstra uma solução xamarin. Forms criada no Visual Studio sem 
 - [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), um projeto de aplicativo para Windows 8.1
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), um projeto de aplicativo para Windows Phone 8.1
 
-> [!NOTE] 
-> Xamarin. Forms não oferece suporte a Windows 8.1, Windows Phone 8.1 ou Windows 10 Mobile, mas os aplicativos xamarin. Forms são executados no Windows 10 desktop. 
+> [!NOTE]
+> Xamarin. Forms não oferece suporte a Windows 8.1, Windows Phone 8.1 ou Windows 10 Mobile, mas os aplicativos xamarin. Forms são executados no Windows 10 desktop.
 
 Você pode tornar o projeto de inicialização, a qualquer um desses projetos de aplicativo e, em seguida, compilar e executar o programa em um dispositivo ou simulador.
 
@@ -56,7 +58,7 @@ Em muitos dos seus programas do xamarin. Forms, você não modificar os projetos
 
 Os elementos visuais exibidos pelo **Hello** programa são definidos no construtor do [ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) classe. `App` deriva da classe xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application).
 
-> [!NOTE] 
+> [!NOTE]
 > Os modelos de solução do Visual Studio para xamarin. Forms criam uma página com um arquivo XAML. XAML não é abordada neste livro até [capítulo 7](chapter07.md).
 
 O **referências** seção o **Hello** projeto PCL inclui os seguintes assemblies do xamarin. Forms:
@@ -74,8 +76,8 @@ O **referências** seções dos projetos de cinco aplicativo incluem assemblies 
 - **Xamarin.Forms.Platform.WinRT.Tablet**
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
-> [!NOTE] 
-> O **referências** seções desses projetos não listam os assemblies. Em vez disso, o arquivo de projeto contém um **PackageReference** marcas referenciando o pacote do NuGet xamarin. Forms. O **referências** seção em listas do Visual Studio a **xamarin. Forms** do pacote em vez dos assemblies do xamarin. Forms. 
+> [!NOTE]
+> O **referências** seções desses projetos não listam os assemblies. Em vez disso, o arquivo de projeto contém um **PackageReference** marcas referenciando o pacote do NuGet xamarin. Forms. O **referências** seção em listas do Visual Studio a **xamarin. Forms** do pacote em vez dos assemblies do xamarin. Forms.
 
 Cada um dos projetos de aplicativo contém uma chamada para estático `Forms.Init` método no `Xamarin.Forms` namespace. Isso inicializa a biblioteca xamarin. Forms. Uma versão diferente do `Forms.Init` é definida para cada plataforma. As chamadas para esse método podem ser encontradas nas seguintes classes:
 
@@ -95,7 +97,7 @@ Caso contrário, esses projetos de aplicativo são programas de "não fazer nada
 
 É possível criar uma solução xamarin. Forms com o código comum em uma biblioteca de classe portátil (PCL) ou um projeto de ativo compartilhado (SAP). Para criar uma solução do SAP, selecione a opção de Shared no Visual Studio. O [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) solução demonstra o modelo SAP sem modificações.
 
-> [!NOTE] 
+> [!NOTE]
 > Bibliotecas de classes portáteis foi substituída por bibliotecas .NET Standard. O código de exemplo do livro foi convertido para usar bibliotecas padrão do .NET. Caso contrário, as bibliotecas PCL e .NET Standard são conceitualmente muito semelhantes.
 
 Os pacotes de abordagem de biblioteca todas as comuns de código em um projeto de biblioteca referenciado pelos projetos de aplicativo de plataforma. Com a abordagem do SAP, o código comum efetivamente existe em todos os projetos de aplicativo de plataforma e é compartilhado entre elas.

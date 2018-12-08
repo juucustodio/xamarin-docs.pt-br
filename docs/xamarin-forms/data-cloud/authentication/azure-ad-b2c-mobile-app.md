@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: cafc1e78779dc393fa0409daa08b3daa8948a1ee
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 135977329e2a190dd4c611937f6b8a664f135f5c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38815671"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051938"
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>A integração do Azure Active Directory B2C com aplicativos móveis do Azure
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuthADB2CClientFlow/)
 
 _Azure Active Directory B2C do diretório é uma solução de gerenciamento de identidade de nuvem para aplicativos móveis e web voltados ao consumidor. Este artigo demonstra como usar o Azure Active Directory B2C para fornecer autenticação e autorização para uma instância de aplicativos móveis do Azure com o xamarin. Forms._
 

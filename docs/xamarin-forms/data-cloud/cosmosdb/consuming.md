@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 7ea7a9bb66e039289e8ce09e77c223c98f90e4c1
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 79547277b00ae1f1d9b035d5fb08685562cefc79
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617625"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052576"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Consumo de um banco de dados de documentos do Azure Cosmos DB
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
 
 _Um banco de dados de documentos do Azure Cosmos DB é um banco de dados NoSQL que fornece acesso de baixa latência para documentos JSON, oferecendo um serviço de banco de dados rápida, altamente disponível e escalonável para aplicativos que exigem dimensionamento perfeito e replicação global. Este artigo explica como usar a biblioteca de cliente .NET Standard do Azure Cosmos DB para integrar um banco de dados de documentos do Azure Cosmos DB em um aplicativo xamarin. Forms._
 

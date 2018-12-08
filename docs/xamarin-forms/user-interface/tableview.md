@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/04/2018
-ms.openlocfilehash: b8e851e735fa39d015e22ce511c39ad825bc97c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0561c2a08aa96755d6d6caa9a3c683a5ce83ae10
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119977"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053980"
 ---
 # <a name="xamarinforms-tableview"></a>Modo de tabela do xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TableView)
 
 [Modo de tabela](xref:Xamarin.Forms.TableView) é um modo de exibição de lista rolável de dados ou opções em que existem linhas que não compartilham o mesmo modelo. Diferentemente [ListView](~/xamarin-forms/user-interface/listview/index.md), modo de tabela não tem o conceito de um `ItemsSource`, portanto, os itens devem ser adicionados como filhos manualmente.
 

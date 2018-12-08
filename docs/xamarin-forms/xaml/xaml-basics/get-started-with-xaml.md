@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 150818379a31fe7b22c1f04a49aba146df84c11c
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 086ed765781d9297f07574519d2cbc9cf93ac4dd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171112"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059542"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introdução ao XAML
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _Em um aplicativo xamarin. Forms, o XAML é usado principalmente para definir o conteúdo visual de uma página e funciona em conjunto com um C# arquivo code-behind._
 

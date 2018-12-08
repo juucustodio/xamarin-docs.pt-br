@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 8d911108d7d72586a37a3281803eab9c0841f16c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 5eb3348df39b8931d8cdd89d8c6f54b8bb3024a0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997101"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057425"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adicionar dados à coleção de itens do seletor
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 
 _O modo de exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor de dados, adicionando-o à coleção de itens e como responder a seleção de item pelo usuário._
 

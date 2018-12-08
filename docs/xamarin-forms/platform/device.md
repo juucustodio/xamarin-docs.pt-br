@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 084c0c292cb7e527d74c77937bc69f76fc8c0658
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114308"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059750"
 ---
 # <a name="xamarinforms-device-class"></a>Classe de dispositivo do xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
 
 O [ `Device` ](xref:Xamarin.Forms.Device) classe contém um número de propriedades e métodos para ajudar os desenvolvedores personalizar o layout e a funcionalidade em uma base por plataforma.
 
@@ -113,7 +115,7 @@ Como alternativa, o `OnIdiom` extensão de marcação pode ser usada em XAML par
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
-O [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valor recupera uma [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valor de enumeração que representa a direção do fluxo atual que está sendo usada pelo dispositivo. Direção do fluxo é a direção na qual os elementos de interface do usuário na página são verificados pelo olhos. Os valores de enumeração são:
+O [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valor recupera uma [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valor de enumeração que representa a direção do fluxo atual que está sendo usada pelo dispositivo. A direção do fluxo é a direção na qual os elementos de interface do usuário na página são detectados pelos olhos. Os valores de enumeração são:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)

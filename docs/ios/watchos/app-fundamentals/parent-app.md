@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 745c10b381ef2bd578278cb8d141a944ef1087e0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 74b9243b1b985cba6d815a673d1abed054eda234
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121978"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059941"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai no Xamarin watchOS
 
@@ -147,7 +147,7 @@ Baixe o C# versão [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [GpsWatch (amostra)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [GpsWatch (amostra)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [WormHoleSharp (amostra)](https://github.com/Clancey/WormHoleSharp)
 - [Referência de WKInterfaceController da Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Apple compartilhamento de dados com seu aplicativo contém](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

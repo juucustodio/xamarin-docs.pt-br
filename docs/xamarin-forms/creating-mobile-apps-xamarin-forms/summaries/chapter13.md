@@ -7,14 +7,16 @@ ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: ac4dd8ffc0ce407aeb9dbc36fe705a809a9c4058
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 737e242e14778f38405845541b2ca30d27c3cf5a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563584"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059594"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumo do capítulo 13. Bitmaps
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
 > [!NOTE] 
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.

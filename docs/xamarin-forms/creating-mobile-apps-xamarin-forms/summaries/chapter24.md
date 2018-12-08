@@ -7,14 +7,16 @@ ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: d90bef4da589215247f412450905a5db541b0444
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 764a148ffffc2c69dbab5aeca872e2d10ce9f159
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563154"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052735"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumo do capítulo 24. Navegação da página
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 
 Muitos aplicativos consistem em várias páginas entre os quais o usuário navega. O aplicativo sempre tem um *principal* página ou *doméstica* página, e a partir daí, o usuário navega para outras páginas, que são mantidas em uma pilha para navegar de volta. Opções adicionais de navegação são abordadas [ **Capítulo 25. Página variedades**](chapter25.md).
 

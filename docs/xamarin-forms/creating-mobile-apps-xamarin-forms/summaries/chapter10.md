@@ -7,14 +7,16 @@ ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 2c9493706930bd3c2ffd54835d963d9847e82e76
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: f326d0434fd2565c30890dea0838168c9d8b4287
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563791"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054735"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Resumo do capítulo 10. Extensões de marcação XAML
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 
 Normalmente, o analisador XAML Converte qualquer cadeia de caracteres definido como um valor de atributo para o tipo da propriedade com base em conversões padrão para os tipos de dados básicos do .NET, ou um [ `TypeConverter` ](xref:Xamarin.Forms.TypeConverter) derivativo anexado à propriedade ou seu tipo com um [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute).
 

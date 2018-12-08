@@ -7,14 +7,16 @@ ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 91a5b65836f21fac22ee2f32af3abdf538b197f8
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 15bdfe43a84927f60300539bce9c27d12b87d19e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615373"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054954"
 ---
 # <a name="skiasharp-drawing-basics"></a>Noções básicas de desenho do SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Aprenda as Noções básicas de coordenadas e conceitos de gráficos de SkiaSharp_
 

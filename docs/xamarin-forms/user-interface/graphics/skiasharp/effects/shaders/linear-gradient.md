@@ -7,14 +7,16 @@ ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: de563c4780a57e439abab61378919501ce88b11b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9551a3b8e093dbb49a55a3761543602c40e81023
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130789"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053568"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Gradiente linear SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 O [ `SKPaint` ](xref:SkiaSharp.SKPaint) classe define um [ `Color` ](xref:SkiaSharp.SKPaint.Color) propriedade que é usada para traçar as linhas ou preencher as áreas com uma cor sólida. Como alternativa, você pode traçar as linhas ou preencher as áreas com _gradientes_, que são graduais misturas de cores:
 

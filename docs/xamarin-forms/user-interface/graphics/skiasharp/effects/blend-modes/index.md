@@ -7,14 +7,16 @@ ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: b2083a819bc688e1742bc4cecccfd24c4d89ac39
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3ea05563ecbca95d26d692d5424c30e961229ac5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111465"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051037"
 ---
 # <a name="skiasharp-blend-modes"></a>Modos de mesclagem de SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Esses artigos enfocam o [ `BlendMode` ](xref:SkiaSharp.SKPaint.BlendMode) propriedade do [ `SKPaint` ](xref:SkiaSharp.SKPaint). O `BlendMode` propriedade é do tipo [ `SKBlendMode` ](xref:SkiaSharp.SKBlendMode), uma enumeração com membros de 29.
 

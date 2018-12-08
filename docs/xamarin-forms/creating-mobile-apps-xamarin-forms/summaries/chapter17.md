@@ -7,14 +7,16 @@ ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db16ee34ed353379ea23899da0d3d16fc8428c62
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: dc9d57c0edf50f7fe5a7241e64cc727413004252
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563349"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050891"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumo do capítulo 17. Domínio da grade
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 O [ `Grid` ](xref:Xamarin.Forms.Grid) é um mecanismo de layout avançados que organiza seus filhos em linhas e colunas de células. Ao contrário do HTML semelhante `table` elemento, o `Grid` é exclusivamente para fins de layout em vez de apresentação.
 

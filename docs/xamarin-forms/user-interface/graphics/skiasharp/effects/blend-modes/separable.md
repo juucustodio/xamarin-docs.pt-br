@@ -7,14 +7,16 @@ ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: c064b7fd5e436092593a194aee5d7498aef6c057
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 594e98230d4f4bd8aca27f92f4544f8c59b5f0a2
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131005"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061449"
 ---
 # <a name="the-separable-blend-modes"></a>Os modos do blend separáveis
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Como você viu neste artigo [ **modos de mesclagem do SkiaSharp Porter-Duff**](porter-duff.md), os modos do blend Porter Duff geralmente executam operações de recorte. Os modos do blend separáveis são diferentes. Os modos de separáveis alteram os componentes de cor vermelho, verde e azul individual de uma imagem. Modos de mesclagem separáveis podem misturar a cor para demonstrar que a combinação de vermelho, verde e azul é, de fato, branca:
 

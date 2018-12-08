@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 53c5f17672cc46ef097e979154a8911f8cdaef63
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171710"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054120"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação XAML
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 Extensões de marcação XAML ajudar a aprimorar o poder e flexibilidade do XAML, permitindo que os atributos do elemento a ser definido de uma variedade de fontes. Várias extensões de marcação XAML são parte da especificação do XAML 2009. Eles aparecem nos arquivos XAML com o habitual `x` prefixo de namespace e são normalmente chamados para com esse prefixo. Este artigo discute as extensões de marcação a seguir:
 

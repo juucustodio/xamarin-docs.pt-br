@@ -1,36 +1,38 @@
 ---
-title: StackLayout xamarin. Forms
-description: Este artigo explica como usar a classe StackLayout xamarin. Forms para apresentar as coleções de modos de exibição em uma dimensão.
+title: StackLayout do xamarin. Forms
+description: Este artigo explica como usar a classe StackLayout do xamarin. Forms para apresentar as coleções de modos de exibição ao longo de uma dimensão.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 6e278c466c352ad19575cd3a84d6e38e14ec2587
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244591"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055796"
 ---
-# <a name="xamarinforms-stacklayout"></a>StackLayout xamarin. Forms
+# <a name="xamarinforms-stacklayout"></a>StackLayout do xamarin. Forms
 
-`StackLayout` Organiza os modos de exibição em uma linha unidimensional ("pilha"), horizontal ou verticalmente. Exibições em um `StackLayout` pode ser dimensionado com base no espaço no layout usando opções de layout. Posicionamento é determinado pela ordem dos modos de exibição foram adicionados para o layout e as opções de layout dos modos de exibição.
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
-[![](stack-layout-images/layouts-sml.png "Layouts de xamarin. Forms")](stack-layout-images/layouts.png#lightbox "xamarin. Forms Layouts")
+`StackLayout` Organiza os modos de exibição em uma linha unidimensional ("pilha"), horizontal ou verticalmente. Exibições em um `StackLayout` pode ser dimensionado com base no espaço no layout usando as opções de layout. Posicionamento é determinada pela ordem de modos de exibição foram adicionados para o layout e as opções de layout dos modos de exibição.
+
+[![](stack-layout-images/layouts-sml.png "Xamarin. Forms Layouts")](stack-layout-images/layouts.png#lightbox "Layouts do xamarin. Forms")
 
 ## <a name="purpose"></a>Finalidade
 
-`StackLayout` é menos complexo do que outros modos de exibição. Interfaces lineares simples podem ser criados, apenas adicionar modos de exibição para um `StackLayout`e as interfaces mais complexas criadas aninhando-los.
+`StackLayout` é menos complexo do que outros modos de exibição. Interfaces de lineares simples podem ser criadas simplesmente adicionando modos de exibição para um `StackLayout`e mais complexas interfaces criadas, aninhando-los.
 
 ## <a name="usage--behavior"></a>Uso e comportamento
 
 ### <a name="spacing"></a>Espaçamento
 
-Por padrão, `StackLayout` adicionará uma margem de 6px entre modos de exibição. Isso pode ser controlado ou definido para não ter nenhuma margem definindo o `Spacing` propriedade StackLayout. O exemplo a seguir demonstra como definir espaçamento e os efeitos das opções de espaçamento diferentes:
+Por padrão, `StackLayout` será adicionada uma margem de 6px entre modos de exibição. Isso pode ser controlado ou definido como não ter nenhuma margem, definindo o `Spacing` propriedade StackLayout. O exemplo a seguir demonstra como definir o espaçamento e o efeito de opções de espaçamento diferentes:
 
-Em XAML:
+No XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -91,24 +93,24 @@ Espaçamento de dez:
 O tamanho de uma exibição em um StackLayout depende das solicitações de altura e largura e as opções de layout. `StackLayout` irá impor o preenchimento. O seguinte `LayoutOption`s fará com que os modos de exibição ocupar o espaço disponível do layout:
 
 - **CenterAndExpand** &ndash; centraliza a exibição no layout e expande para ocupar tanto espaço quanto o layout será dê a ele.
-- **EndAndExpand** &ndash; coloca o modo de exibição no final do layout (inferior ou limite mais à direita) e se expande para ocupar tanto espaço quanto o layout será dê a ele.
-- **FillAndExpand** &ndash; coloca o modo de exibição para que ele tem nenhum preenchimento e ocupa tanto espaço quanto o layout será dê a ele.
-- **StartAndExpand** &ndash; coloca o modo de exibição no início do layout e usa a quantidade de espaço dará o pai.
+- **EndAndExpand** &ndash; coloca o modo de exibição no final do layout (inferior ou limite à direita) e se expande para ocupar tanto espaço quanto o layout será dê a ele.
+- **FillAndExpand** &ndash; coloca o modo de exibição para que ele não tem nenhum preenchimento e ocupa espaço quanto o layout será dê a ele.
+- **StartAndExpand** &ndash; coloca o modo de exibição no início do layout e ocupa tanto espaço quanto fornecerá o pai.
 
 Para obter mais informações, consulte [expansão](~/xamarin-forms/user-interface/layouts/layout-options.md#expansion).
 
 ### <a name="positioning"></a>Posicionamento
 
-Modos de exibição em um StackLayout podem ser posicionados e dimensionados usando `LayoutOptions`. Cada modo de exibição pode ser dado `VerticalOptions` e `HorizontalOptions`, definindo como os modos de exibição irá se posicionar em relação ao layout. O seguinte predefinidos `LayoutOptions` estão disponíveis:
+Modos de exibição em um StackLayout podem ser posicionados e dimensionados usando `LayoutOptions`. Cada modo de exibição pode ser dada `VerticalOptions` e `HorizontalOptions`, definindo como os modos de exibição irá se posicionar em relação ao layout. O seguinte predefinidos `LayoutOptions` estão disponíveis:
 
-- **Centro de** &ndash; centraliza a exibição no layout.
-- **Final** &ndash; coloca o modo de exibição no final do layout (inferior ou limite mais à direita).
-- **Preencher** &ndash; coloca o modo de exibição para que não tenha nenhum preenchimento.
-- **Iniciar** &ndash; coloca o modo de exibição no início do layout.
+- **Centro** &ndash; centraliza a exibição no layout.
+- **Término** &ndash; coloca o modo de exibição no final do layout (inferior ou limite à direita).
+- **Preencher** &ndash; coloca o modo de exibição para que ele não tem nenhum preenchimento.
+- **Inicie** &ndash; coloca o modo de exibição no início do layout.
 
 O código a seguir demonstra as opções de layout de configuração:
 
-Em XAML:
+No XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -156,11 +158,11 @@ public class StackLayoutCode : ContentPage
 
 Para obter mais informações, consulte [alinhamento](~/xamarin-forms/user-interface/layouts/layout-options.md#alignment).
 
-## <a name="exploring-a-complex-layout"></a>Explorar um Layout complexo
+## <a name="exploring-a-complex-layout"></a>Explorando um Layout complexo
 
 Cada um dos layouts têm vantagens e desvantagens para a criação de layouts específicos. Em toda esta série de artigos de layout, um aplicativo de exemplo foi criado com o mesmo layout de página implementado usando três layouts diferentes.
 
-Considere o XAML a seguir:
+Considere o seguinte XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -217,12 +219,12 @@ O código acima resulta no layout a seguir:
 
 ![](stack-layout-images/stack.png "StackLayout complexo")
 
-Observe que `StackLayouts`s estiverem aninhados, como em alguns casos aninhamento layouts pode ser mais fácil do que apresentar todos os elementos do layout do mesmo. Observe também que, como `StackLayout` não oferece suporte para itens sobrepostos, a página não tem alguns iguarias o layout encontrada nas páginas de layouts de.
+Observe que `StackLayouts`s forem aninhadas, pois em alguns casos layouts de aninhamento pode ser mais fácil do que apresentar todos os elementos do layout do mesmo. Observe também que, porque `StackLayout` não dá suporte itens sobrepostos, a página não tem algumas iguarias o layout encontrados nas páginas para os outros layouts.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [LayoutOptions](~/xamarin-forms/user-interface/layouts/layout-options.md)
-- [Layout (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Exemplo de BusinessTumble (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+- [Exemplo de BusinessTumble (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)

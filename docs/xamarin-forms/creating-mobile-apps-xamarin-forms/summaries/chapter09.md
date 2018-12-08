@@ -7,14 +7,16 @@ ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 89056bac86116161512ad32721c5d877850d75f2
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 3aec84ec6598a45bb989d4bbc1705fd797382755
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563219"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057003"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Resumo do capítulo 9. Chamadas à API específicas da plataforma
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
 > [!NOTE] 
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.

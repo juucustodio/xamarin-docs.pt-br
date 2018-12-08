@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 519368031384e72a2d2e0a7c99053be44ea4cffc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 157e044fd96cdeff87d8fb56029fe625b7312bf4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995213"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056234"
 ---
 # <a name="custom-animations-in-xamarinforms"></a>Animações personalizadas no xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/custom/)
 
 _A classe de animação é o bloco de construção de todas as animações de xamarin. Forms, com os métodos de extensão na classe ViewExtensions criando um ou mais objetos de animação. Este artigo demonstra como usar a classe de animação para criar e Cancelar animações, sincronizar várias animações e criar animações personalizadas que animar propriedades que não estão animadas pelos métodos de animação existentes._
 

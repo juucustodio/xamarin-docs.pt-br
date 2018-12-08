@@ -5,12 +5,12 @@ ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 5c457bb8ad9796396f24264e27f6762569ea542c
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 3d69d082495f11c48273e9329bd2a4a61451b33f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898848"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058682"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Bateria
 
@@ -172,7 +172,6 @@ Sem diferenças entre plataformas.
 
 * O dispositivo deve ser usado para testar APIs. 
 * Só retornará `AC` ou `Battery` para `PowerSource`.
-* Não é possível cancelar a vibração.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

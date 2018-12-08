@@ -7,14 +7,16 @@ ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: fe6f02727110fbaa55b788e1716d10b369b5f51a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f16600b6f90755722d031c0fdc21fff1a66673ae
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130874"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059928"
 ---
 # <a name="skiasharp-shaders"></a>Sombreadores de SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Você pode definir as [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) propriedade do `SKPaint` a um objeto do tipo [ `SKShader` ](xref:SkiaSharp.SKShader) para criar vários tipos de gradientes, um padrão de bitmap lado a lado ou ruído de Perlin.
 

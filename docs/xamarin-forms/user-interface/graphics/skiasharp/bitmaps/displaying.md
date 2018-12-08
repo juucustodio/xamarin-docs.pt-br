@@ -7,14 +7,16 @@ ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: f4cc13a5e8794eb5f2f883f35d6a0e4d34788507
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615308"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054914"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Exibição de bitmaps de SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 O assunto de bitmaps de SkiaSharp foi introduzido no artigo  **[Noções básicas de Bitmap no SkiaSharp](../basics/bitmaps.md)**. Esse artigo mostrou três maneiras de bitmaps de carga e de três maneiras de exibir bitmaps. Este artigo examina as técnicas para carregar bitmaps e o uso de se aprofundar a `DrawBitmap` métodos de `SKCanvas`.
 

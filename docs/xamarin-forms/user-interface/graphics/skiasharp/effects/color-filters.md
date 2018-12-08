@@ -7,14 +7,16 @@ ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/28/2018
-ms.openlocfilehash: fafc9db542d804745dbd0eb0fb73db47068ea465
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7edb504a228612d7f1f1fee10a50a467fbb5fc6c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131001"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057094"
 ---
 # <a name="skiasharp-color-filters"></a>Filtros de cores de SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Filtros de cor pode converter cores em um bitmap (ou outra imagem) para as outras cores para efeitos como posterização:
 

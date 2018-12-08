@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: c6a6ed38ec64c681075ffa3e42f3ffaf58c576ec
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 98212483481b2ce60c73a40c014816ee3c3f110c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997209"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059240"
 ---
 # <a name="listview-performance"></a>Desempenho de ListView
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
 
 Ao escrever aplicativos móveis, o desempenho é importante. Os usuários já conhecem rolagem suave e tempos de carregamento rápido. Com falha atender às expectativas dos usuários custam avaliações na loja de aplicativos ou no caso de um aplicativo de linha de negócios, custo organização tempo e dinheiro.
 
@@ -127,7 +129,7 @@ No XAML, defina o `CachingStrategy` atributo conforme mostrado no código a segu
 </ListView>
 ```
 
-Isso tem o mesmo efeito que definir o argumento de estratégia de cache no construtor em c#; Observe que não há nenhuma `CachingStrategy` propriedade `ListView`.
+Isso tem o mesmo efeito que definir o argumento de estratégia de cache do construtor no C#; Observe que não há nenhuma `CachingStrategy` propriedade `ListView`.
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>Definir a estratégia de cache em uma subclasse ListView
 

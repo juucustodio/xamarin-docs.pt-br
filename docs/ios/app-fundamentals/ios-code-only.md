@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 777ba2035511dfd632d64b11c2265e239a646b3a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2fa554264578ec626567ef7d28377ac80bde21d3
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109530"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060168"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Criando interfaces do usuário do iOS no código no xamarin. IOS
 
@@ -204,7 +204,7 @@ Isso produz o controlador aninhado no controlador de navegação, conforme mostr
 
  [![](ios-code-only-images/image2.png "O controlador aninhado no controlador de navegação")](ios-code-only-images/image2.png#lightbox)
 
-## <a name="creating-a-view-vontroller"></a>Criando um modo de exibição vontroller
+## <a name="creating-a-view-controller"></a>Criar um controlador de exibição
 
 Agora que já vimos como adicionar um controlador como o `RootViewController` da janela, vamos ver como criar um controlador de exibição personalizados no código.
 

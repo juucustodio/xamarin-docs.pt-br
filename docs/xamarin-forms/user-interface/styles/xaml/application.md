@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: e7b2a37b868ea03ca626ffd2dcddb006a235b0cc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: b663a7f2a4a67a9c3e18ed474d9935227fe34294
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995395"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059555"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Estilos globais no xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 
 _Estilos podem se tornar disponíveis globalmente ao adicioná-los a dicionário de recursos do aplicativo. Isso ajuda a evitar a duplicação de estilos em páginas ou controles._
 

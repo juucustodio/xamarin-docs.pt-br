@@ -7,14 +7,16 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: eebfe40bca6db92bae1f2fdcc9cbff3173dc4e51
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: cd7c8484827a038bbcf11180296547ea6fedf929
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172009"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059198"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Acessando os bits de pixel do bitmap de SkiaSharp
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Como você viu neste artigo [ **SkiaSharp salvando bitmaps em arquivos**](saving.md), bitmaps geralmente são armazenados em arquivos em um formato compactado, como JPEG ou PNG. Em contraste, um bitmap de SkiaSharp armazenado na memória não é compactado. Ele é armazenado como uma série sequencial de pixels. Esse formato não compactado facilita a transferência de bitmaps a uma superfície de exibição.
 

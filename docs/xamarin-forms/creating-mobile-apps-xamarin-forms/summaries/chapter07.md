@@ -7,16 +7,18 @@ ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1dc4fe12d3ca23a9ca87c3be7819c970683db469
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: ce4dde3716176daf826678809339afb84c25d84a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563492"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052563"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumo do capítulo 7. XAML versus código
 
-> [!NOTE] 
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
+
+> [!NOTE]
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 Xamarin. Forms dá suporte a uma linguagem de marcação baseada em XML chamada o de Extensible Application Markup Language ou XAML (pronunciada "zammel"). XAML fornece uma alternativa para c# na definição do layout da interface do usuário de um aplicativo xamarin. Forms e definir associações entre os elementos de interface do usuário e os dados subjacentes.
@@ -39,7 +41,7 @@ No XAML, classes e os objetos criados a partir delas são expressas como element
 
 Uma biblioteca de classes portátil do xamarin. Forms pode conter uma página XAML quando ele é criado, ou você pode adicionar uma página XAML para um projeto existente. Na caixa de diálogo para adicionar um novo item, escolha o item que se refere a uma página XAML, ou `ContentPage` e XAML. (Não um `ContentView`.)
 
-> [!NOTE] 
+> [!NOTE]
 > Opções do Visual Studio foram alteradas desde que este capítulo foi escrito.
 
 Dois arquivos são criados: um arquivo XAML com a extensão de nome de arquivo. XAML e um arquivo c# com a extensão. xaml.cs. O arquivo do c# é conhecido como o *de lógica* do arquivo XAML. O arquivo code-behind é uma definição de classe parcial que deriva de `ContentPage`. No momento da compilação, o XAML é analisado e outra definição de classe parcial é gerada para a mesma classe. Essa classe gerada inclui um método chamado `InitializeComponent` que é chamado do construtor de arquivo code-behind.

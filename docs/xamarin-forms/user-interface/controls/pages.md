@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: fea1db6c65e533692601439f4712d15371740644
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 588c04729b3387cd1a072f73a21f1e49df4529e5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995892"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050069"
 ---
 # <a name="xamarinforms-pages"></a>Páginas do xamarin. Forms
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Páginas do xamarin. Forms representam telas de aplicativos móveis de plataforma cruzada._
 
@@ -22,7 +24,7 @@ Todos os tipos de página que são descritos abaixo derivam da classe [`Page`](x
 
 [ ![](pages-images/pages-sml.png "Os tipos de página do xamarin. Forms")](pages-images/pages.png#lightbox "os tipos de página do xamarin. Forms")
 
-## <a name="pages"></a>Páginas
+## <a name="pages"></a>Pages (Páginas)
 
 Xamarin. Forms dá suporte aos seguintes tipos de página:
 
@@ -75,4 +77,4 @@ Xamarin. Forms dá suporte aos seguintes tipos de página:
 - [Introdução ao Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
 - [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Documentação da API de xamarin. Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Documentação da API do Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
