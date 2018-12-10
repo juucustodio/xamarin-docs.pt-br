@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: befeb92529aa066f6106e855ed1fbdfe49c51e66
-ms.sourcegitcommit: c59e1882aa4af3ce36fba5c6eaeb5cf73a9cb289
+ms.openlocfilehash: 8e87a284e684dff14a2ea0fcfbf34158ed8adefa
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50919036"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899129"
 ---
-# <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com Mac para o desenvolvimento do Xamarin.iOS
+# <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com o Mac para desenvolvimento no Xamarin.iOS
 
 _Este guia descreve como usar o Emparelhar com Mac para conectar o Visual Studio 2017 a um host de build do Mac._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 A criação de aplicativos do iOS nativos requer acesso às ferramentas de build da Apple, que são executadas somente em Mac. Por isso, o Visual Studio 2017 deve se conectar a um Mac acessível na rede para criar aplicativos Xamarin.iOS.
 
