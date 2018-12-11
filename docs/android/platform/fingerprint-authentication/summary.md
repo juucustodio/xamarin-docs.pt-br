@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3baaaef22916354a6fab28b0b0c6358c9bc25c91
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 535eabe07cb4f4d36e6a6f918b5717efcc99185d
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114906"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898817"
 ---
 # <a name="fingerprint-authentication-guidance"></a>Diretrizes de autenticação por impressão digital
 
@@ -41,4 +41,4 @@ Se você ainda não fez isso, você deve examinar a [aplicativo de exemplo](http
 
 - [Aplicativo de exemplo do guia de impressão digital](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)
 - [Exemplo de caixa de diálogo de impressão digital](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
-- [Ícone de impressão digital](https://developer.android.com https://developer.xamarin.com/samples/FingerprintDialog/res/drawable-hdpi/ic_fp_40px.html)
+- [Ícone de impressão digital](https://raw.githubusercontent.com/xamarin/monodroid-samples/master/FingerprintGuide/FingerprintSampleApp/Resources/drawable-hdpi/ic_fp_40px.png)
