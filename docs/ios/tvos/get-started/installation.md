@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 5f28b037dd67accbcc78b037db3c6f1bf0bd9615
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e84ce04f3745c46ba94845ba2f815c638cf81a74
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117532"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267372"
 ---
 # <a name="installing-tvos-support-in-xamarin"></a>Instalando suporte de tvOS no Xamarin
 
@@ -23,7 +23,7 @@ A Apple TV 4K e tvOS 11, Apple foi lançado. A plataforma de Apple TV está aber
 
 Xamarin. IOS 11 e posterior dão suporte o tvOS 11 SDK é fornecido com o Xcode 9 do Apple.
 
-- [Notas de versão do xamarin. IOS](https://developer.xamarin.com/releases/ios/)
+- [Notas de versão do xamarin. IOS](https://docs.microsoft.com/xamarin/ios/release-notes/)
 - [Notas de versão do Xcode](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876)
 
 ## <a name="installation"></a>Instalação

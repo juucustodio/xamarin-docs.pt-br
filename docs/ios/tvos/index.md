@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: cbec49844d34ab8ad04282b383de15093ecdd891
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ada563fee78e579906e7f765a0120d8bfff67402
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118273"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267502"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Introdução ao tvOS no Xamarin
 
@@ -68,7 +68,7 @@ Além disso, a Apple fornece os seguintes aplicativos de exemplo que podem ser t
 
 ## <a name="known-issues-and-troubleshooting"></a>Problemas conhecidos e solução de problemas
 
-Verifique se você encontrar problemas criando tvOS com o Xamarin, o [notas de versão](http://releases.xamarin.com/), [fóruns do xamarin. IOS](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla rastreador](https://bugzilla.xamarin.com/query.cgi?product=iOS), e [GitHub ](https://github.com/xamarin/xamarin-macios/issues) de problemas existentes.
+Verifique se você encontrar problemas criando tvOS com o Xamarin, o [notas de versão](https://docs.microsoft.com/xamarin/ios/release-notes/), [fóruns do xamarin. IOS](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla rastreador](https://bugzilla.xamarin.com/query.cgi?product=iOS), e [GitHub ](https://github.com/xamarin/xamarin-macios/issues) de problemas existentes.
 
 Relatar novos problemas e sugestões [no GitHub](https://github.com/xamarin/xamarin-macios/issues).
 

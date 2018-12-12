@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710017"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267632"
 ---
 # <a name="android-pie-features"></a>Recursos de pizza do Android
 
@@ -24,7 +24,7 @@ _Como começar a desenvolver aplicativos para Android pizza 9 usando xamarin. An
 
 Este artigo é estruturado para ajudá-lo a começar a desenvolver aplicativos xamarin. Android para Android pizza. Ele explica como instalar as atualizações necessárias, configure o SDK e preparar um emulador ou dispositivo para teste. Ele também fornece uma descrição dos novos recursos no Android pizza e fornece código-fonte de exemplo que ilustra como usar alguns dos principais recursos do Android pizza.
 
-Xamarin. Android 9.0 fornece suporte para Android pizza. Para obter mais informações sobre o suporte de xamarin. Android para Android de pizza, consulte o [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notas de versão.
+Xamarin. Android 9.0 fornece suporte para Android pizza. Para obter mais informações sobre o suporte de xamarin. Android para Android de pizza, consulte o [Android P Developer Preview 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1) notas de versão.
 
 ## <a name="requirements"></a>Requisitos
 
