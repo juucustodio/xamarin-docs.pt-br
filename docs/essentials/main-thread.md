@@ -4,17 +4,15 @@ description: A classe MainThread permite que os aplicativos executem o código n
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 06/26/2018
-ms.openlocfilehash: db2e79ed5c471c11e2d3dc1afe360843e5dfea6a
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 7ec1420d87c898f63614eb6d980c28834e980afd
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675439"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898999"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
-
-![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
 A classe **MainThread** permite que os aplicativos executem o código no thread de execução principal e determinem se certo bloco de código está sendo executado no thread principal.
 

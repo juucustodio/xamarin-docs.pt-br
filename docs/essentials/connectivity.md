@@ -4,17 +4,15 @@ description: A classe Connectivity no Xamarin.Essentials permite monitorar alter
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: bc0cd206881356a92128c758f0225f98f88c2814
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 3c29fc85d20e3a4d91a1ae63feca1cb668af141e
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675400"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899013"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connectivity
-
-![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
 A classe **Connectivity** permite monitorar alterações em condições de rede do dispositivo, verificar o acesso da rede atual e como ele está conectado no momento.
 
@@ -84,7 +82,7 @@ O [acesso à rede](xref:Xamarin.Essentials.NetworkAccess) se enquadra às seguin
 É possível verificar que tipo de [perfil de conexão](xref:Xamarin.Essentials.ConnectionProfile) o dispositivo está usando ativamente:
 
 ```csharp
-var profiles = Connectivity.Profiles;
+var profiles = Connectivity.ConnectionProfiles;
 if (profiles.Contains(ConnectionProfile.WiFi))
 {
     // Active Wi-Fi connection.
@@ -105,7 +103,7 @@ public class ConnectivityTest
     void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs  e)
     {
         var access = e.NetworkAccess;
-        var profiles = e.Profiles;
+        var profiles = e.ConnectionProfiles;
     }
 }
 ```

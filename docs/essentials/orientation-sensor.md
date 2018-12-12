@@ -4,17 +4,15 @@ description: A classe OrientationSensor permite monitorar a orientação de um d
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/21/2018
-ms.openlocfilehash: 5d31ae10120c8b8f2c5e824d336c231e69fc97c7
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: f1fceaef93e7ac30bbbe0f13da7dde3cde5275fd
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674689"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898653"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
-
-![Pré-lançamento NuGet](~/media/shared/pre-release.png)
 
 A classe **OrientationSensor** permite monitorar a orientação de um dispositivo no espaço tridimensional.
 
