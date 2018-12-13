@@ -1,6 +1,6 @@
 ---
 title: Adicionando um reconhecedor de gestos de toque
-description: Este artigo explica como usar o gesto de tocar para detecção e toque em um aplicativo xamarin. Forms. Detecção de toque é implementada com a classe TapGestureRecognizer.
+description: Este artigo explica como usar o gesto de toque para detecção de toque em um aplicativo do Xamarin.Forms. A detecção de toque é implementada com a classe TapGestureRecognizer.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/21/2016
 ms.openlocfilehash: a28afb30770f15861aef06643e7f51070199ea9b
 ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "38994848"
@@ -18,7 +18,7 @@ ms.locfileid: "38994848"
 
 _O gesto de toque é usado para detecção de toque e é implementado com a classe TapGestureRecognizer._
 
-Para criar um elemento de interface do usuário que pode ser clicado com o gesto de tocar, crie uma [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) da instância, lidar com o [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) eventos e adicione o reconhecedor de gestos de novo para o [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) coleta sobre o elemento de interface do usuário. O seguinte exemplo de código mostra uma `TapGestureRecognizer` anexados a uma [ `Image` ](xref:Xamarin.Forms.Image) elemento:
+Para que seja possível clicar em um elemento da interface do usuário com um gesto de toque, crie uma instância de [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer), manipule o evento [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) e adicione o novo reconhecedor de gestos à coleção [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) no elemento de interface do usuário. O exemplo de código a seguir mostra um `TapGestureRecognizer` anexado a um elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -28,19 +28,19 @@ tapGestureRecognizer.Tapped += (s, e) => {
 image.GestureRecognizers.Add(tapGestureRecognizer);
 ```
 
-Por padrão, a imagem responderá aos toques único. Defina as [ `NumberOfTapsRequired` ](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) propriedade aguardar um toque duplo (ou mais toques, se necessário).
+Por padrão, a imagem responderá a toques único. Configure a propriedade [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) para aguardar um toque duplo (ou mais toques se necessário).
 
 ```csharp
 tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
-Quando [ `NumberOfTapsRequired` ](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) é definido acima, o manipulador de eventos será executado somente se os toques ocorrerem em um período definido de tempo (esse período não é configurável). Se os toques de segundo (ou posteriores) não ocorram dentro desse período efetivamente, eles serão ignorados e reinicia a contagem de toque' '.
+Quando [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) é configurado como mais de um, o manipulador de eventos é executado somente quando os toques ocorrem em um período definido (esse período não é configurável). Se o segundo toque (ou os toques posteriores) não ocorrerem dentro desse período, eles serão ignorados e a “contagem de toques” será reiniciada.
 
 <a name="Using_Xaml" />
 
-## <a name="using-xaml"></a>Usando Xaml
+## <a name="using-xaml"></a>Usando XAML
 
-Um reconhecedor de gestos pode ser adicionado a um controle em Xaml usando as propriedades anexadas. A sintaxe para adicionar um [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) a uma imagem é mostrada abaixo (nesse caso, definindo uma *toque duplo* eventos):
+Um reconhecedor de gestos pode ser adicionado a um controle em XAML usando propriedades anexadas. A sintaxe para adicionar um [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) a uma imagem é mostrada abaixo (nesse caso, definindo um evento de *toque duplo*):
 
 ```xaml
 <Image Source="tapped.jpg">
@@ -52,7 +52,7 @@ Um reconhecedor de gestos pode ser adicionado a um controle em Xaml usando as pr
 </Image>
 ```
 
-O código para o manipulador de eventos (no exemplo) incrementa um contador e altera a imagem de cor para preto &amp; branca.
+O código para o manipulador de eventos (no exemplo) incrementa um contador e altera a imagem de colorida para preto &amp; branca.
 
 ```csharp
 void OnTapGestureRecognizerTapped(object sender, EventArgs args)
@@ -70,7 +70,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>Usando ICommand
 
-Aplicativos que usam o padrão Model-View-ViewModel (MVVM) normalmente usam `ICommand` em vez de conectar manipuladores de eventos diretamente. O [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) pode facilmente dar suporte `ICommand` definindo a associação no código:
+Aplicativos que usam o padrão MVVM (Model-View-ViewModel) normalmente usam `ICommand` em vez de conectar manipuladores de eventos diretamente. O [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) pode facilmente dar suporte a `ICommand` definindo a associação no código:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -78,7 +78,7 @@ tapGestureRecognizer.SetBinding (TapGestureRecognizer.CommandProperty, "TapComma
 image.GestureRecognizers.Add(tapGestureRecognizer);
 ```
 
-ou usando Xaml:
+ou usando XAML:
 
 ```xaml
 <Image Source="tapped.jpg">
@@ -90,7 +90,7 @@ ou usando Xaml:
 </Image>
 ```
 
-O código completo para esse modelo de exibição pode ser encontrado na amostra. O relevantes `Command` detalhes de implementação são mostrados abaixo:
+O código completo para esse modelo de exibição pode ser encontrado na amostra. Os detalhes relevantes da implementação de `Command` são mostrados abaixo:
 
 ```csharp
 public class TapViewModel : INotifyPropertyChanged

@@ -1,6 +1,6 @@
 ---
-title: Realçar uma área Circular em um mapa
-description: Este artigo explica como adicionar uma sobreposição circular a um mapa, para realçar uma área circular do mapa. Enquanto o iOS e Android fornecem APIs para adicionar a sobreposição circular no mapa, na UWP, a sobreposição é renderizada como um polígono.
+title: Realçando uma área circular em um mapa
+description: Este artigo explica como adicionar uma sobreposição circular a um mapa a fim de realçar uma área circular nele. Enquanto o iOS e o Android fornecem APIs para adicionar a sobreposição circular ao mapa, na UWP, a sobreposição é renderizada como um polígono.
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
@@ -9,37 +9,37 @@ ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 3064296d4c78a3342fb27afc971c37a029987e5e
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998551"
 ---
-# <a name="highlighting-a-circular-area-on-a-map"></a>Realçar uma área Circular em um mapa
+# <a name="highlighting-a-circular-area-on-a-map"></a>Realçando uma área circular em um mapa
 
-_Este artigo explica como adicionar uma sobreposição circular a um mapa, para realçar uma área circular do mapa._
+_Este artigo explica como adicionar uma sobreposição circular a um mapa a fim de realçar uma área circular nele._
 
 ## <a name="overview"></a>Visão geral
 
-Uma sobreposição é um gráfico em camadas em um mapa. Sobreposições de dar suporte a conteúdo de desenho gráfico que pode ser dimensionado com o mapa conforme ele aparece ampliado. As capturas de tela a seguir mostram o resultado da adição de uma sobreposição circular a um mapa:
+Uma sobreposição é um gráfico em camadas em um mapa. As sobreposições são suporte para elaborar conteúdos gráficos que são dimensionados com o mapa conforme ele é ampliado e reduzido. As capturas de tela a seguir mostram o resultado do acréscimo de uma sobreposição circular a um mapa:
 
 ![](circle-map-overlay-images/screenshots.png)
 
-Quando um [ `Map` ](xref:Xamarin.Forms.Maps.Map) controle é processado por um aplicativo xamarin. Forms, no iOS o `MapRenderer` classe é instanciada, que por sua vez cria uma instância de um nativo `MKMapView` controle. Na plataforma Android, o `MapRenderer` classe instancia um nativo `MapView` controle. Na Universal Windows Platform (UWP), o `MapRenderer` classe instancia um nativo `MapControl`. O processo de renderização pode ser aproveitado para implementar as personalizações do mapa específicas da plataforma, criando um renderizador personalizado para um `Map` em cada plataforma. O processo para fazer isso é o seguinte:
+Quando um controle [`Map`](xref:Xamarin.Forms.Maps.Map) é renderizado por um aplicativo Xamarin.Forms, no iOS é criada uma instância da classe `MapRenderer`, o que por sua vez cria uma instância de um controle `MKMapView` nativo. Na plataforma Android, a classe `MapRenderer` cria uma instância de um controle `MapView` nativo. Na UWP (Plataforma Universal do Windows), a classe `MapRenderer` cria uma instância de um `MapControl` nativo. E possível aproveitar o processo de renderização para implementar personalizações de mapa específicas da plataforma criando um renderizador personalizado para um `Map` em cada plataforma. O processo para fazer isso é o seguinte:
 
-1. [Criar](#Creating_the_Custom_Map) um mapa personalizado do xamarin. Forms.
-1. [Consumir](#Consuming_the_Custom_Map) o mapa personalizado do xamarin. Forms.
-1. [Personalizar](#Customizing_the_Map) o mapa, criando um renderizador personalizado para o mapa em cada plataforma.
+1. [Criar](#Creating_the_Custom_Map) um mapa personalizado do Xamarin.Forms.
+1. [Consumir](#Consuming_the_Custom_Map) o mapa personalizado do Xamarin.Forms.
+1. [Personalizar](#Customizing_the_Map) o mapa criando um renderizador personalizado para o mapa em cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) deve ser inicializado e configurado antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md)
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) precisa ser inicializado e configurado antes do uso. Para obter mais informações, confira [`Maps Control`](~/xamarin-forms/user-interface/map.md)
 
-Para obter informações sobre como personalizar um mapa usando um renderizador personalizado, consulte [Personalizando um Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
+Para obter informações sobre como personalizar um mapa usando um renderizador personalizado, confira [Personalizando um marcador de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
 <a name="Creating_the_Custom_Map" />
 
 ### <a name="creating-the-custom-map"></a>Criando o mapa personalizado
 
-Criar uma `CustomCircle` classe que tem `Position` e `Radius` propriedades:
+Crie uma classe `CustomCircle` com as propriedades `Position` e `Radius`:
 
 ```csharp
 public class CustomCircle
@@ -49,7 +49,7 @@ public class CustomCircle
 }
 ```
 
-Em seguida, crie uma subclasse do [ `Map` ](xref:Xamarin.Forms.Maps.Map) classe, que adiciona uma propriedade de tipo `CustomCircle`:
+Em seguida, crie uma subclasse da classe [`Map`](xref:Xamarin.Forms.Maps.Map), que adiciona uma propriedade do tipo `CustomCircle`:
 
 ```csharp
 public class CustomMap : Map
@@ -62,7 +62,7 @@ public class CustomMap : Map
 
 ### <a name="consuming-the-custom-map"></a>Consumindo o mapa personalizado
 
-Consumir o `CustomMap` controle declarando uma instância na instância de página XAML:
+Consuma o controle `CustomMap` declarando uma instância dele na instância da página XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -75,7 +75,7 @@ Consumir o `CustomMap` controle declarando uma instância na instância de pági
 </ContentPage>
 ```
 
-Como alternativa, consumir o `CustomMap` controle declarando uma instância na instância de página do c#:
+Como alternativa, consuma o controle `CustomMap` declarando uma instância dele na instância da página em C#:
 
 ```csharp
 public class MapPageCS : ContentPage
@@ -93,7 +93,7 @@ public class MapPageCS : ContentPage
 }
 ```
 
-Inicializar o `CustomMap` controlar conforme necessário:
+Inicialize o controle `CustomMap` da forma necessária:
 
 ```csharp
 public partial class MapPage : ContentPage
@@ -120,17 +120,17 @@ public partial class MapPage : ContentPage
 }
 ```
 
-Essa inicialização adiciona [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) e `CustomCircle` instâncias para o mapa personalizado e posiciona a exibição do mapa com o [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) método, que altera a posição e o zoom nível do mapa com a criação de um [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan) de uma [ `Position` ](xref:Xamarin.Forms.Maps.Position) e um [ `Distance` ](xref:Xamarin.Forms.Maps.Distance).
+Essa inicialização adiciona instâncias de [`Pin`](xref:Xamarin.Forms.Maps.Pin) e `CustomCircle` ao mapa personalizado e posiciona a exibição do mapa com o método [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*), que altera a posição e o nível de aplicação de zoom do mapa com a criação de um [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) com base em uma [`Position`](xref:Xamarin.Forms.Maps.Position) e uma [`Distance`](xref:Xamarin.Forms.Maps.Distance).
 
 <a name="Customizing_the_Map" />
 
-### <a name="customizing-the-map"></a>Personalizar o mapa
+### <a name="customizing-the-map"></a>Personalizando o mapa
 
-Agora deve ser adicionado a um renderizador personalizado para cada projeto de aplicativo para adicionar a sobreposição circular no mapa.
+Agora, é necessário adicionar um renderizador personalizado a cada projeto de aplicativo para adicionar a sobreposição circular ao mapa.
 
 #### <a name="creating-the-custom-renderer-on-ios"></a>Criando o renderizador personalizado no iOS
 
-Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` método para adicionar a sobreposição circular:
+Crie uma subclasse da classe `MapRenderer` e substitua seu método `OnElementChanged` para adicionar a sobreposição circular:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -170,13 +170,13 @@ namespace MapOverlay.iOS
 
 ```
 
-Esse método executa a configuração a seguir, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms:
+Esse método executa a seguinte configuração, desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
 
-- O `MKMapView.OverlayRenderer` estiver definida como um delegado correspondente.
-- O círculo é criado, definindo um estático `MKCircle` objeto que especifica o centro do círculo e o raio do círculo em metros.
-- O círculo é adicionado ao mapa chamando o `MKMapView.AddOverlay` método.
+- A propriedade `MKMapView.OverlayRenderer` é definida como um delegado correspondente.
+- O círculo é criado definindo um objeto `MKCircle` estático que especifica o centro do círculo e seu raio em metros.
+- O círculo é adicionado ao mapa chamando o método `MKMapView.AddOverlay`.
 
-Em seguida, implemente o `GetOverlayRenderer` método para personalizar a renderização da sobreposição:
+Em seguida, implemente o método `GetOverlayRenderer` para personalizar a renderização da sobreposição:
 
 ```csharp
 public class CustomMapRenderer : MapRenderer
@@ -200,7 +200,7 @@ public class CustomMapRenderer : MapRenderer
 
 #### <a name="creating-the-custom-renderer-on-android"></a>Criando o renderizador personalizado no Android
 
-Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` e `OnMapReady` métodos para adicionar a sobreposição circular:
+Crie uma subclasse da classe `MapRenderer` e substitua seus métodos `OnElementChanged` e `OnMapReady` para adicionar a sobreposição circular:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -248,11 +248,11 @@ namespace MapOverlay.Droid
 }
 ```
 
-O `OnElementChanged` chamadas de método de `MapView.GetMapAsync` método, que obtém subjacente `GoogleMap` que está vinculada à exibição, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms. Uma vez a `GoogleMap` instância está disponível, o `OnMapReady` método será invocado, em que o círculo é criar uma instância de um `CircleOptions` objeto que especifica o centro do círculo e o raio do círculo em metros. O círculo é adicionado ao mapa chamando o `NativeMap.AddCircle` método.
+O método `OnElementChanged` chamará o método `MapView.GetMapAsync`, que obterá o `GoogleMap` subjacente que está vinculado à exibição, desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms. Quando a instância de `GoogleMap` estiver disponível, o método `OnMapReady` será invocado e o círculo será criado instanciando um objeto `CircleOptions` que especifica o centro do círculo e seu raio em metros. Em seguida, o círculo é adicionado ao mapa chamando o método `NativeMap.AddCircle`.
 
-#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Criando o renderizador personalizado na plataforma Windows Universal
+#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Criando o renderizador personalizado na Plataforma Universal do Windows
 
-Criar uma subclasse do `MapRenderer` de classe e substituir seu `OnElementChanged` método para adicionar a sobreposição circular:
+Crie uma subclasse da classe `MapRenderer` e substitua seu método `OnElementChanged` para adicionar a sobreposição circular:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -296,12 +296,12 @@ namespace MapOverlay.UWP
 }
 ```
 
-Esse método executa as seguintes operações, desde que o renderizador personalizado está anexado a um novo elemento xamarin. Forms:
+Esse método executa as seguintes operações, desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
 
-- A posição do círculo e radius são recuperados do `CustomMap.Circle` propriedade e passado para o `GenerateCircleCoordinates` método, que gera a latitude e longitude coordenadas para o perímetro do círculo. O código para esse método auxiliar é mostrado abaixo.
-- As coordenadas do perímetro de circle são convertidas em um `List` de `BasicGeoposition` coordenadas.
-- O círculo é criar uma instância de um `MapPolygon` objeto. O `MapPolygon` classe é usada para exibir uma forma de vários pontos no mapa, definindo seu `Path` propriedade para um `Geopath` objeto que contém as coordenadas da forma.
-- O polígono é renderizado no mapa, adicionando-o para o `MapControl.MapElements` coleção.
+- A posição e o raio do círculo são recuperados da propriedade `CustomMap.Circle` e passados para o método `GenerateCircleCoordinates`, que gera coordenadas de latitude e longitude para o perímetro do círculo. O código desse método auxiliar é mostrado abaixo.
+- As coordenadas de perímetro do círculo são convertidas em um `List` de coordenadas `BasicGeoposition`.
+- O círculo é criado instanciando um objeto `MapPolygon`. A classe `MapPolygon` é usada para exibir uma forma de vários pontos no mapa, definindo sua propriedade `Path` como um objeto `Geopath` que contém as coordenadas da forma.
+- O polígono é renderizado no mapa adicionando-o à coleção `MapControl.MapElements`.
 
 
 ```
@@ -328,11 +328,11 @@ List<Position> GenerateCircleCoordinates(Position position, double radius)
 
 ## <a name="summary"></a>Resumo
 
-Este artigo explicou como adicionar uma sobreposição circular a um mapa, para realçar uma área circular do mapa.
+Este artigo explicou como adicionar uma sobreposição circular a um mapa a fim de realçar uma área circular nele.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Ovlerlay de mapa circular (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
+- [Sobreposição de mapa circular (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
 - [Personalizar um Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

@@ -1,6 +1,6 @@
 ---
-title: Fontes de vídeo de associação para o player
-description: Este artigo explica como vincular fontes de vídeo para o player de vídeo, usando o xamarin. Forms.
+title: Associando fontes de vídeo ao player
+description: Este artigo explica como associar fontes de vídeo ao player de vídeo usando o Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
 ms.technology: xamarin-forms
@@ -9,14 +9,14 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: b0efdc1a20f52231f15b7a08eb86962e2079c678
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35240024"
 ---
-# <a name="binding-video-sources-to-the-player"></a>Fontes de vídeo de associação para o player
+# <a name="binding-video-sources-to-the-player"></a>Associando fontes de vídeo ao player
 
-Quando o `Source` propriedade o `VideoPlayer` exibição é definida como um novo arquivo de vídeo, o vídeo existente execução é interrompida e o novo vídeo começa. Isso é demonstrado pelo **selecione Web vídeo** página do [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) exemplo. A página inclui um `ListView` com os títulos dos três vídeos referenciados a partir de **App** arquivo:
+Quando a propriedade `Source` da exibição `VideoPlayer` for definida como um novo arquivo de vídeo, o vídeo existente interromperá a execução e o novo vídeo será iniciado. Isso é demonstrado pela página **Selecionar vídeo da Web** do exemplo [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/). A página inclui um `ListView` com os títulos dos três vídeos referenciados no arquivo **App.xaml**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -47,7 +47,7 @@ Quando o `Source` propriedade o `VideoPlayer` exibição é definida como um nov
 </ContentPage>
 ```
 
-Quando um vídeo é selecionado, o `ItemSelected` manipulador de eventos no arquivo code-behind é executado. O manipulador de remove quaisquer espaços em branco e apóstrofos o título e a usa como uma chave para obter um dos recursos definidos no **App** arquivo. Que `UriVideoSource` objeto é definido como o `Source` propriedade o `VideoPlayer`.
+Quando um vídeo for selecionado, o manipulador de eventos `ItemSelected` no arquivo code-behind será executado. O manipulador remove quaisquer espaços em branco e apóstrofos do título e usa isso como uma chave para obter um dos recursos definidos no arquivo **App.xaml**. Esse objeto `UriVideoSource` é definido como a propriedade `Source` do `VideoPlayer`.
 
 ```csharp
 namespace VideoPlayerDemos
@@ -71,11 +71,11 @@ namespace VideoPlayerDemos
 }
 ```
 
-Quando a página for carregada pela primeira vez, nenhum item é selecionado no `ListView`, portanto, você deve selecionar uma para o vídeo seja reproduzido:
+Quando a página é carregada pela primeira vez, nenhum item é selecionado no `ListView`; portanto, é necessário selecionar um para que o vídeo comece a ser reproduzido:
 
-[![Selecione Web vídeo](source-bindings-images/selectwebvideo-small.png "selecione Web vídeo")](source-bindings-images/selectwebvideo-large.png#lightbox "selecione vídeo de Web")
+[![Selecionar vídeo da Web](source-bindings-images/selectwebvideo-small.png "Selecionar vídeo da Web")](source-bindings-images/selectwebvideo-large.png#lightbox "Selecionar vídeo da Web")
 
-O `Source` propriedade `VideoPlayer` é apoiado por uma propriedade ligável, o que significa que ele pode ser o destino de uma associação de dados. Isso é demonstrado pelo **associar VideoPlayer** página. A marcação no **BindToVideoPlayer.xaml** a seguinte classe que encapsula um título de um vídeo e correspondente oferece suporte ao arquivo `VideoSource` objeto:
+A propriedade `Source` de `VideoPlayer` é apoiada por uma propriedade associável, o que significa que ela pode ser o destino de uma associação de dados. Isso é demonstrado pela página **Associar a VideoPlayer**. A marcação no arquivo **BindToVideoPlayer.xaml** é compatível com a seguinte classe que encapsula um título de um vídeo e um objeto `VideoSource` correspondente:
 
 ```csharp
 namespace VideoPlayerDemos
@@ -94,7 +94,7 @@ namespace VideoPlayerDemos
 }
 ```
 
-O `ListView` no **BindToVideoPlayer.xaml** arquivo contém uma matriz desses `VideoInfo` objetos, cada um inicializado com um título de vídeo e o `UriVideoSource` objeto de dicionário de recursos em  **App**:
+O `ListView` no arquivo **BindToVideoPlayer.xaml** contém uma matriz desses objetos `VideoInfo`, cada uma inicializada com um título do vídeo e o objeto `UriVideoSource` do dicionário de recursos em **App.xaml**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,11 +133,11 @@ O `ListView` no **BindToVideoPlayer.xaml** arquivo contém uma matriz desses `Vi
 </ContentPage>
 ```
 
-O `Source` propriedade o `VideoPlayer` está associada ao `ListView`. O `Path` da associação é especificado como `SelectedItem.VideoSource`, que é um caminho composto consiste em duas propriedades: `SelectedItem` é uma propriedade de `ListView`. O item selecionado é do tipo `VideoInfo`, que tem um `VideoSource` propriedade.
+A propriedade `Source` do `VideoPlayer` está associada ao `ListView`. O `Path` da associação é especificado como `SelectedItem.VideoSource`, que é um demarcador composto que consiste em duas propriedades: `SelectedItem` é uma propriedade de `ListView`. O item selecionado é do tipo `VideoInfo`, que tem uma propriedade `VideoSource`.
 
-Assim como acontece com a primeira **selecione Web vídeo** página, nenhum item inicialmente é selecionado do `ListView`, portanto, você precisa selecionar um dos vídeos antes de começar a execução.
+Assim como acontece com a primeira página **Selecionar vídeo da Web**, nenhum item é inicialmente selecionado no `ListView`; portanto, é necessário selecionar um dos vídeos antes de começar a reproduzi-lo.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações em vídeo Player (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demonstrações do player de vídeo (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

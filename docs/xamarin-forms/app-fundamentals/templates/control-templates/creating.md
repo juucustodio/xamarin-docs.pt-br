@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: b83668f6836b1d5d98f67592bf3e2b01e7319edc
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998173"
@@ -18,9 +18,9 @@ ms.locfileid: "38998173"
 
 _Modelos de controle podem ser definidos no nível do aplicativo ou no nível da página. Este artigo demonstra como criar e consumir modelos de controle._
 
-## <a name="creating-a-controltemplate-in-xaml"></a>Criando um ControlTemplate no XAML
+## <a name="creating-a-controltemplate-in-xaml"></a>Criando um ControlTemplate em XAML
 
-Para definir um [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) no nível do aplicativo, uma [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) deve ser adicionado para o `App` classe. Por padrão, todos os aplicativos xamarin. Forms criados de um modelo usam a **App** classe para implementar o [ `Application` ](xref:Xamarin.Forms.Application) subclasse. Para declarar uma `ControlTemplate` no nível do aplicativo, na caixa de diálogo `ResourceDictionary` usando XAML, o padrão **App** classe deve ser substituído por um XAML **aplicativo** classe e code-behind associado, como como mostrado no exemplo de código a seguir:
+Para definir um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) no nível do aplicativo, um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) deve ser adicionado à classe `App`. Por padrão, todos os aplicativos do Xamarin.Forms criados de um modelo usam a classe **App** para implementar a subclasse [`Application`](xref:Xamarin.Forms.Application). Para declarar um `ControlTemplate` no nível do aplicativo, no `ResourceDictionary` do aplicativo usando XAML, a classe **App** padrão deve ser substituída por uma classe **App** XAML e pelo code-behind associado, conforme mostrado no exemplo de código a seguir:
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.App">
@@ -48,9 +48,9 @@ Para definir um [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) no ní
 </Application>
 ```
 
-Cada [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) instância é criada como um objeto reutilizável em uma [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary).  Isso é feito dando cada declaração de uma única `x:Key` atributo, que fornece a ele uma chave descritiva no `ResourceDictionary`.
+Cada instância de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) é criada como um objeto reutilizável em um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary).  Isso é feito dando a cada declaração um atributo `x:Key` exclusivo, que fornece a ela uma chave descritiva no `ResourceDictionary`.
 
-O exemplo de código a seguir mostra associado `App` de lógica:
+O exemplo de código a seguir mostra o code-behind do `App` associado:
 
 ```csharp
 public partial class App : Application
@@ -63,9 +63,9 @@ public partial class App : Application
 }
 ```
 
-Bem como a configuração de [ `MainPage` ](xref:Xamarin.Forms.Application.MainPage) propriedade, o code-behind também deve chamar o `InitializeComponent` método para carregar e analisar o XAML associado.
+Além de configurar a propriedade [`MainPage`](xref:Xamarin.Forms.Application.MainPage), o code-behind também deve chamar o método `InitializeComponent` para carregar e analisar o XAML associado.
 
-O seguinte exemplo de código mostra uma [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) aplicando o `TealTemplate` para o [ `ContentView` ](xref:Xamarin.Forms.ContentView):
+O exemplo de código a seguir mostra um [`ContentPage`](xref:Xamarin.Forms.ContentPage) aplicando um `TealTemplate` ao [`ContentView`](xref:Xamarin.Forms.ContentView):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
@@ -79,13 +79,13 @@ O seguinte exemplo de código mostra uma [ `ContentPage` ](xref:Xamarin.Forms.Co
 </ContentPage>
 ```
 
-O `TealTemplate` é atribuído para o [ `ContentView.ControlTemplate` ](xref:Xamarin.Forms.TemplatedView.ControlTemplate) propriedade usando o `StaticResource` extensão de marcação. O [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) estiver definida como um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) que define o conteúdo a ser exibido no [ `ContentPage` ](xref:Xamarin.Forms.ContentPage). Esse conteúdo será exibido quando o [ `ContentPresenter` ](xref:Xamarin.Forms.ContentPresenter) contidos no `TealTemplate`. Isso resulta na exibição mostrada nas capturas de tela seguir:
+O `TealTemplate` é atribuído à propriedade [`ContentView.ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) usando a extensão de marcação `StaticResource`. A propriedade [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) é definida como um [`StackLayout`](xref:Xamarin.Forms.StackLayout) que define o conteúdo a ser exibido no [`ContentPage`](xref:Xamarin.Forms.ContentPage). Esse conteúdo será exibido pelo [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) contido no `TealTemplate`. Isso resulta na aparência mostrada nas capturas de tela seguir:
 
-![](creating-images/teal-theme.png "Modelo de controle azul-petróleo")
+![](creating-images/teal-theme.png "Modelo de controle azul")
 
-### <a name="re-theming-an-application-at-runtime"></a>Um aplicativo em tempo de execução de re-temas
+### <a name="re-theming-an-application-at-runtime"></a>Redefinindo o tema de um aplicativo em tempo de execução
 
-Clicar a **alterar o tema** botão executa o `OnButtonClicked` método, que é mostrado no exemplo de código a seguir:
+Clicar no botão **Alterar Tema** executa o método `OnButtonClicked`, que é mostrado no exemplo de código a seguir:
 
 ```csharp
 void OnButtonClicked (object sender, EventArgs e)
@@ -95,16 +95,16 @@ void OnButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Esse método substitui o Active Directory [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) instância com a alternativa `ControlTemplate` instância, resultando na seguinte captura de tela:
+Esse método substitui a instância ativa de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) pela instância alternativa de `ControlTemplate`, resultando na seguinte captura de tela:
 
-![](creating-images/aqua-theme.png "Modelo de controle Aqua")
+![](creating-images/aqua-theme.png "Modelo de controle azul claro")
 
 > [!NOTE]
-> Em um `ContentPage`, o `Content` propriedade pode ser atribuída e o `ControlTemplate` propriedade também pode ser definida. Quando isso ocorre, se o `ControlTemplate` contém uma `ContentPresenter` da instância, o conteúdo atribuído ao `Content` propriedade será apresentada pela `ContentPresenter` dentro a `ControlTemplate`.
+> Em um `ContentPage`, a propriedade `Content` pode ser atribuída e a propriedade `ControlTemplate` também pode ser definida. Quando isso ocorre, se o `ControlTemplate` contiver uma instância de `ContentPresenter`, o conteúdo atribuído à propriedade `Content` será apresentado pelo `ContentPresenter` dentro do `ControlTemplate`.
 
 ### <a name="setting-a-controltemplate-with-a-style"></a>Definindo um ControlTemplate com um estilo
 
-Um [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) também podem ser aplicadas por meio de uma [ `Style` ](xref:Xamarin.Forms.Style) expandir ainda mais a capacidade de tema. Isso pode ser obtido com a criação de um *implícita* ou *explícita* estilo para a exibição de destino em um [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)e configuração o `ControlTemplate` propriedade de destino Exibir na [ `Style` ](xref:Xamarin.Forms.Style) instância. O seguinte exemplo de código mostra uma *implícita* estilo que foi adicionado para o nível de aplicativo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
+Um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) também podem ser aplicado por meio de um [`Style`](xref:Xamarin.Forms.Style) para expandir ainda mais a funcionalidade de tema. Isso pode ser feito criando um estilo *implícito* ou *explícito* para a exibição de destino em um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) e definindo a propriedade `ControlTemplate` da exibição de destino na instância de [`Style`](xref:Xamarin.Forms.Style). O seguinte exemplo de código mostra um estilo *implícito* que foi adicionado ao nível de aplicativo [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
 ```xaml
 <Style TargetType="ContentView">
@@ -112,7 +112,7 @@ Um [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) também podem ser a
 </Style>
 ```
 
-Porque o [ `Style` ](xref:Xamarin.Forms.Style) instância está *implícita*, ela será aplicada a todos os `ContentView` instâncias no aplicativo. Portanto, não é necessário definir as [ `ContentView.ControlTemplate` ](xref:Xamarin.Forms.TemplatedView.ControlTemplate) propriedade, conforme demonstrado no exemplo de código a seguir:
+Como a instância de [`Style`](xref:Xamarin.Forms.Style) é *implícita*, ela será aplicada a todas as instâncias de `ContentView` no aplicativo. Portanto, não é mais necessário definir a propriedade [`ContentView.ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate), conforme demonstrado no exemplo de código a seguir:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
@@ -122,11 +122,11 @@ Porque o [ `Style` ](xref:Xamarin.Forms.Style) instância está *implícita*, el
 </ContentPage>
 ```
 
-Para obter mais informações sobre estilos, consulte [estilos](~/xamarin-forms/user-interface/styles/index.md).
+Para mais informações sobre estilos, confira [Estilos](~/xamarin-forms/user-interface/styles/index.md).
 
-### <a name="creating-a-controltemplate-at-page-level"></a>Criando um ControlTemplate no nível de página
+### <a name="creating-a-controltemplate-at-page-level"></a>Criando um ControlTemplate no nível da página
 
-Além de criar [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) instâncias no nível do aplicativo, eles também podem ser criados no nível da página, conforme mostrado no exemplo de código a seguir:
+Além de criar instâncias de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) no nível do aplicativo, elas também podem ser criadas no nível da página, conforme mostrado no exemplo de código a seguir:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
@@ -146,11 +146,11 @@ Além de criar [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) instân
 </ContentPage>
 ```
 
-Ao adicionar um [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) no nível da página, uma [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) é adicionado ao [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)e, em seguida, o `ControlTemplate` instâncias estão incluídas no `ResourceDictionary`.
+Ao adicionar um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) no nível da página, um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) é adicionado ao [`ContentPage`](xref:Xamarin.Forms.ContentPage) e, em seguida, as instâncias de `ControlTemplate` são incluídas no `ResourceDictionary`.
 
 ## <a name="creating-a-controltemplate-in-c35"></a>Criando um ControlTemplate em C&#35;
 
-Para definir um [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) no nível do aplicativo, uma `class` deve ser criado que representa o `ControlTemplate`. A classe deve derivar de [layout](~/xamarin-forms/user-interface/layouts/index.md) que está sendo usado para o modelo, conforme mostrado no exemplo de código a seguir:
+Para definir um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) no nível do aplicativo, deve ser criado um `class` que representa o `ControlTemplate`. A classe deve derivar do [layout](~/xamarin-forms/user-interface/layouts/index.md) que está sendo usado para o modelo, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 class TealTemplate : Grid
@@ -171,9 +171,9 @@ class AquaTemplate : Grid
 }
 ```
 
-O `AquaTemplate` classe é idêntico de `TealTemplate` classe, exceto que as diferentes cores são usadas para o [ `BoxView.Color` ](xref:Xamarin.Forms.BoxView.Color) e [ `Label.TextColor` ](xref:Xamarin.Forms.Label.TextColor) propriedades.
+A classe `AquaTemplate` é idêntica à classe `TealTemplate`, exceto pelo fato de que cores diferentes são usadas para as propriedades [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) e [`Label.TextColor`](xref:Xamarin.Forms.Label.TextColor).
 
-O seguinte exemplo de código mostra uma [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) aplicando o `TealTemplate` para o [ `ContentView` ](xref:Xamarin.Forms.ContentView):
+O exemplo de código a seguir mostra um [`ContentPage`](xref:Xamarin.Forms.ContentPage) aplicando um `TealTemplate` ao [`ContentView`](xref:Xamarin.Forms.ContentView):
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -202,9 +202,9 @@ public class HomePageCS : ContentPage
 }
 ```
 
-O [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) instâncias são criadas, especificando o tipo das classes que definem os modelos de controle, o `ControlTemplate` construtor.
+As instâncias de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) são criadas especificando o tipo das classes que definem os modelos de controle, no construtor `ControlTemplate`.
 
-O [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) estiver definida como um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) que define o conteúdo a ser exibido no [ `ContentPage` ](xref:Xamarin.Forms.ContentPage). Esse conteúdo será exibido quando o [ `ContentPresenter` ](xref:Xamarin.Forms.ContentPresenter) contidos no `TealTemplate`. O mesmo mecanismo descrito anteriormente é usado para alterar o tema em tempo de execução para o `AquaTheme`.
+A propriedade [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) é definida como um [`StackLayout`](xref:Xamarin.Forms.StackLayout) que define o conteúdo a ser exibido no [`ContentPage`](xref:Xamarin.Forms.ContentPage). Esse conteúdo será exibido pelo [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) contido no `TealTemplate`. O mesmo mecanismo descrito anteriormente é usado para alterar o tema em tempo de execução para o `AquaTheme`.
 
 ## <a name="summary"></a>Resumo
 
@@ -218,4 +218,4 @@ Este artigo demonstrou como criar e consumir modelos de controle. Modelos de con
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentPresenter](xref:Xamarin.Forms.ContentPresenter)
 - [ContentView](xref:Xamarin.Forms.ContentView)
-- [Dicionário de recurso](xref:Xamarin.Forms.ResourceDictionary)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

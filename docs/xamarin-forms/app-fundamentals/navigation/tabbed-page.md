@@ -1,6 +1,6 @@
 ---
-title: Página com guias do xamarin. Forms
-description: O xamarin. Forms TabbedPage consiste em uma lista de guias e uma área maior de detalhes, com cada guia Carregando conteúdo na área de detalhes. Este artigo demonstra como usar uma TabbedPage para navegar por meio de uma coleção de páginas.
+title: Página com guias do Xamarin.Forms
+description: A TabbedPage do Xamarin.Forms consiste em uma lista de guias e uma área do detalhe maior, com cada guia carregando conteúdo na área do detalhe. Este artigo demonstra como usar uma TabbedPage para navegar por uma coleção de páginas.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
@@ -9,58 +9,58 @@ ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171372"
 ---
-# <a name="xamarinforms-tabbed-page"></a>Página com guias do xamarin. Forms
+# <a name="xamarinforms-tabbed-page"></a>Página com guias do Xamarin.Forms
 
-_O xamarin. Forms TabbedPage consiste em uma lista de guias e uma área maior de detalhes, com cada guia Carregando conteúdo na área de detalhes. Este artigo demonstra como usar uma TabbedPage para navegar por meio de uma coleção de páginas._
+_A TabbedPage do Xamarin.Forms consiste em uma lista de guias e uma área do detalhe maior, com cada guia carregando conteúdo na área do detalhe. Este artigo demonstra como usar uma TabbedPage para navegar por uma coleção de páginas._
 
 ## <a name="overview"></a>Visão geral
 
-As capturas de tela a seguir mostram uma [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) em cada plataforma:
+As seguintes capturas de tela mostram uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) em cada plataforma:
 
 ![](tabbed-page-images/tab1.png "Exemplo de TabbedPage")
 
-As capturas de tela a seguir se concentram no formato de guia em cada plataforma:
+As seguintes capturas de tela se concentram no formato da guia em cada plataforma:
 
-![](tabbed-page-images/tabbedpage-components.png "TabbedPage guia componentes")
+![](tabbed-page-images/tabbedpage-components.png "Componentes da guia de TabbedPage")
 
-O layout de um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)e suas guias, depende da plataforma:
+O layout de uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), e suas guias, depende da plataforma:
 
-- No iOS, é exibida na lista de guias na parte inferior da tela e a área de detalhes está acima. Cada guia também tem uma imagem de ícone que deve ser um 30 x 30 PNG com transparência para resolução normal, 60 x 60 para alta resolução e 90 x 90 para iPhone 6 Plus resolução. Se houver mais de cinco guias, uma *mais* guia será exibida, que pode ser usado para acessar as guias adicionais. Para obter mais informações sobre o carregamento de imagens em um aplicativo xamarin. Forms, consulte [trabalhando com imagens](~/xamarin-forms/user-interface/images.md). Para obter mais informações sobre os requisitos de ícone, consulte [criando aplicativos com guias](~/ios/user-interface/controls/creating-tabbed-applications.md).
-
-  > [!NOTE]
-  > Observe que o `TabbedRenderer` para iOS tem um substituível `GetIcon` método que pode ser usado para carregar ícones de guia de uma origem especificada. Essa substituição torna possível usar as imagens de SVG como ícones em uma `TabbedPage`. Além disso, selecionadas e versões de um ícone podem ser fornecidas.
-
-- No Android, a lista de guias aparece na parte superior da tela, por padrão, e a área de detalhes está abaixo. No entanto, a lista de guias pode ser movida para a parte inferior da tela com uma plataforma específica. Para obter mais informações, consulte [configuração TabbedPage barra de ferramentas de posicionamento e a cor](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
+- No iOS, a lista de guias é exibida na parte inferior da tela e a área do detalhe fica acima dela. Cada guia também tem uma imagem de ícone que deve ser um PNG 30x30 com transparência para resolução normal, 60x60 para alta resolução e 90x90 para resolução no iPhone 6 Plus. Se houver mais de cinco guias, uma guia *Mais* será exibida, que poderá ser usada para acessar as guias adicionais. Para obter mais informações sobre como carregar imagens em um aplicativo Xamarin.Forms, confira [Trabalhando com imagens](~/xamarin-forms/user-interface/images.md). Para obter mais informações sobre os requisitos de ícone, confira [Criando aplicativos com guias](~/ios/user-interface/controls/creating-tabbed-applications.md).
 
   > [!NOTE]
-  > Observe que, ao usar AppCompat no Android, cada guia também exibirá um ícone. Além disso, o `TabbedPageRenderer` para AppCompat Android tem uma substituível `GetIconDrawable` método que pode ser usado para carregar ícones de guia de um personalizado `Drawable`. Essa substituição torna possível usar as imagens de SVG como ícones em uma `TabbedPage`, e funciona com ambos superior e inferior barras de guia. Como alternativa, o substituível `SetTabIcon` método pode ser usado para carregar ícones de guia de um personalizado `Drawable` para barras de guia superior.
+  > Observe que o `TabbedRenderer` para iOS tem um método `GetIcon` substituível que pode ser usado para carregar ícones de guia de uma origem especificada. Essa substituição possibilita o uso de imagens SVG como ícones em uma `TabbedPage`. Além disso, versões selecionadas e não selecionadas de um ícone podem ser fornecidas.
 
-- No Windows tablet fatores de forma, as guias não são sempre visíveis e os usuários precisam passar o dedo para baixo (ou com o botão direito do mouse, se eles tiverem um mouse anexado) para exibir as guias em um `TabbedPage` (conforme mostrado abaixo).
+- No Android, a lista de guias é exibida na parte superior da tela por padrão e a área do detalhe fica abaixo dela. No entanto, a lista de guias pode ser movida para a parte inferior da tela com um código específico da plataforma. Para obter mais informações, confira [Definindo o posicionamento e a cor da barra de ferramentas da TabbedPage](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
+
+  > [!NOTE]
+  > Observe que, ao usar AppCompat no Android, cada guia também exibirá um ícone. Além disso, o `TabbedPageRenderer` para Android AppCompat tem um método `GetIconDrawable` substituível que pode ser usado para carregar ícones de guia de um `Drawable` personalizado. Essa substituição possibilita o uso de imagens SVG como ícones em uma `TabbedPage` e funciona com barras de guia superior e inferior. Como alternativa, o método `SetTabIcon` substituível pode ser usado para carregar ícones de guia de um `Drawable` personalizado para barras de guia superior.
+
+- Em fatores forma de tablets Windows, as guias não ficam sempre visíveis e os usuários precisam passar o dedo para baixo (ou clicar com o botão direito do mouse, caso tenham um mouse anexado) para exibir as guias em uma `TabbedPage` (conforme mostrado abaixo).
 
 ![](tabbed-page-images/windows-tabs.png "Guias de TabbedPage no Windows")
 
 ## <a name="creating-a-tabbedpage"></a>Criando uma TabbedPage
 
-Duas abordagens podem ser usadas para criar uma [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage):
+Duas abordagens podem ser usadas para criar uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 
-- [Popular](#Populating_a_TabbedPage_with_a_Page_Collection) as [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) com uma coleção de filhos [ `Page` ](xref:Xamarin.Forms.Page) objetos, como uma coleção de [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instâncias.
-- [Atribua](#Populating_a_TabbedPage_with_a_Template) uma coleção para o [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) propriedade e atribuir uma [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para o [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) propriedade a retornar páginas para objetos na coleção.
+- [Popular](#Populating_a_TabbedPage_with_a_Page_Collection) a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) com uma coleção de objetos [`Page`](xref:Xamarin.Forms.Page) filhos, como uma coleção de [`ContentPage`](xref:Xamarin.Forms.ContentPage) instâncias.
+- [Atribuir](#Populating_a_TabbedPage_with_a_Template) uma coleção à propriedade [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) e atribuir um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) à propriedade [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) para retornar páginas para objetos na coleção.
 
-Com as duas abordagens, o [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) exibirá cada página como o usuário seleciona cada guia.
+Com as duas abordagens, a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) exibirá cada página conforme o usuário selecionar cada guia.
 
 > [!NOTE]
-> É recomendável que um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) deve ser preenchido com [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) e [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)somente instâncias. Isso ajudará a garantir uma experiência de usuário consistente em todas as plataformas.
+> É recomendável popular uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) somente com as instâncias [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) e [`ContentPage`](xref:Xamarin.Forms.ContentPage). Isso ajudará a garantir uma experiência do usuário consistente em todas as plataformas.
 
 <a name="Populating_a_TabbedPage_with_a_Page_Collection" />
 
-### <a name="populating-a-tabbedpage-with-a-page-collection"></a>Preenchendo uma TabbedPage com uma coleção de página
+### <a name="populating-a-tabbedpage-with-a-page-collection"></a>Populando uma TabbedPage com uma coleção de páginas
 
-Mostra o exemplo de código XAML abaixo uma [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) construídas populá-lo com uma coleção de filhos [ `Page` ](xref:Xamarin.Forms.Page) objetos:
+O seguinte exemplo de código XAML mostra uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) construída populando-a com uma coleção de objetos [`Page`](xref:Xamarin.Forms.Page) filho:
 
 ```xaml
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -76,7 +76,7 @@ Mostra o exemplo de código XAML abaixo uma [ `TabbedPage` ](xref:Xamarin.Forms.
 </TabbedPage>
 ```
 
-O exemplo de código a seguir mostra o equivalente [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) criado na C#:
+O seguinte exemplo de código mostra a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) equivalente criada em C#:
 
 ```csharp
 public class MainPageCS : TabbedPage
@@ -93,27 +93,27 @@ public class MainPageCS : TabbedPage
 }
 ```
 
-O [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) é preenchida com duas filho [ `Page` ](xref:Xamarin.Forms.Page) objetos. O primeiro filho é um [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instância e a segunda guia é uma [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) que contém um `ContentPage` instância.
+A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) é populada com dois objetos [`Page`](xref:Xamarin.Forms.Page) filho. O primeiro filho é uma instância [`ContentPage`](xref:Xamarin.Forms.ContentPage) e a segunda guia é uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) que contém uma instância `ContentPage`.
 
 > [!NOTE]
-> O [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) não oferece suporte a virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `TabbedPage` contém muitos elementos filho.
+> A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) não dá suporte à virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `TabbedPage` contiver muitos elementos filho.
 
-As capturas de tela a seguir mostram os `TodayPage` [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instância, que é exibida no *hoje* guia:
+As seguintes capturas de tela mostram a instância `TodayPage` [`ContentPage`](xref:Xamarin.Forms.ContentPage), que é mostrada na guia *Hoje*:
 
 ![](tabbed-page-images/today-page.png "ContentPage em uma TabbedPage")
 
-Selecionando o *agenda* guia exibe os `SchedulePage` [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instância, que é encapsulada em um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) da instância e é mostrada no captura de tela a seguir:
+A seleção da guia *Agendamento* exibe a instância `SchedulePage` [`ContentPage`](xref:Xamarin.Forms.ContentPage), que é encapsulada em uma instância [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), e é mostrada na seguinte captura de tela:
 
 ![](tabbed-page-images/schedule-page.png "NavigationPage em uma TabbedPage")
 
-Para obter informações sobre o layout de um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage), consulte [navegação executando](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+Para obter informações sobre o layout de uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), confira [Executando a navegação](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 > [!NOTE]
-> Embora seja aceitável para colocar uma [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) em uma [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage), não é recomendável para colocar um `TabbedPage` em um `NavigationPage`. Isso ocorre porque, no iOS, um `UITabBarController` sempre atua como um wrapper para o `UINavigationController`. Para obter mais informações, consulte [Interfaces de controlador de exibição combinados](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) na biblioteca do desenvolvedor do iOS.
+> Embora seja aceitável colocar uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) em uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), não é recomendável colocar uma `TabbedPage` em uma `NavigationPage`. Isso ocorre porque, no iOS, um `UITabBarController` sempre funciona como um wrapper para o `UINavigationController`. Para obter mais informações, confira [Interfaces combinadas do controlador de exibição](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) na Biblioteca do Desenvolvedor do iOS.
 
 #### <a name="navigation-inside-a-tab"></a>Navegação dentro de uma guia
 
-Navegação pode ser executada a partir da segunda guia invocando o [ `PushAsync` ](xref:Xamarin.Forms.NavigationPage.PushAsync*) método no [ `Navigation` ](xref:Xamarin.Forms.VisualElement.Navigation) propriedade do [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instância, conforme demonstrado no exemplo de código a seguir:
+A navegação pode ser executada na segunda guia invocando o método [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) na propriedade [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) da instância [`ContentPage`](xref:Xamarin.Forms.ContentPage), conforme demonstrado no seguinte exemplo de código:
 
 ```csharp
 async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
@@ -122,17 +122,17 @@ async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Isso faz com que a instância `UpcomingAppointmentsPage` seja enviada por push para a pilha de navegação, em que ele se torna a página ativa. Isso é mostrado nas capturas de tela seguir:
+Isso faz com que a instância `UpcomingAppointmentsPage` seja enviada por push para a pilha de navegação, em que ele se torna a página ativa. Isso é mostrado nas seguintes capturas de tela:
 
 ![](tabbed-page-images/navigationpage.png "Navegação dentro de uma guia")
 
-Para obter mais informações sobre como executar a navegação usando o [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) da classe, consulte [Navegação hierárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+Para obter mais informações sobre como executar a navegação usando a classe [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), confira [Navegação hierárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 <a name="Populating_a_TabbedPage_with_a_Template" />
 
-### <a name="populating-a-tabbedpage-with-a-template"></a>Preenchendo uma TabbedPage com um modelo
+### <a name="populating-a-tabbedpage-with-a-template"></a>Populando uma TabbedPage com um modelo
 
-Mostra o exemplo de código XAML abaixo uma [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) construído atribuindo um [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para o [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) propriedade a retornar páginas para objetos na coleção:
+O exemplo de código XAML a seguir mostra uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) construída pela atribuição de um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) à propriedade [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) para retornar páginas para objetos na coleção:
 
 ```xaml
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -164,7 +164,7 @@ Mostra o exemplo de código XAML abaixo uma [ `TabbedPage` ](xref:Xamarin.Forms.
 </TabbedPage>
 ```
 
-O [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) é preenchida com dados, definindo o [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) propriedade no construtor para o arquivo code-behind:
+A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) é populada com os dados, definindo a propriedade [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) no construtor para o arquivo code-behind:
 
 ```csharp
 public TabbedPageDemoPage ()
@@ -174,7 +174,7 @@ public TabbedPageDemoPage ()
 }
 ```
 
-O exemplo de código a seguir mostra o equivalente [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) criado na C#:
+O seguinte exemplo de código mostra a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) equivalente criada em C#:
 
 ```csharp
 public class TabbedPageDemoPageCS : TabbedPage
@@ -232,20 +232,20 @@ public class TabbedPageDemoPageCS : TabbedPage
 }
 ```
 
-Cada guia exibe uma [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) que usa uma série de [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) e [ `Label` ](xref:Xamarin.Forms.Label) instâncias para exibir dados para a guia. As capturas de tela a seguir mostram o conteúdo para o *Tamarin* guia:
+Cada guia exibe uma [`ContentPage`](xref:Xamarin.Forms.ContentPage) que usa uma série de instâncias [`StackLayout`](xref:Xamarin.Forms.StackLayout) e [`Label`](xref:Xamarin.Forms.Label) para exibir os dados para a guia. As seguintes capturas de tela mostram o conteúdo da guia *Tamarin*:
 
-![](tabbed-page-images/tab3.png "Preenchendo uma TabbedPage com um modelo")
+![](tabbed-page-images/tab3.png "Populando uma TabbedPage com um modelo")
 
-Selecionar outra guia, em seguida, exibe o conteúdo para essa guia.
+A seleção de outra guia exibe o conteúdo dessa guia.
 
 > [!NOTE]
-> O [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) não oferece suporte a virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `TabbedPage` contém muitos elementos filho.
+> A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) não dá suporte à virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `TabbedPage` contiver muitos elementos filho.
 
-Para obter mais informações sobre o [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage), consulte [Capítulo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) de xamarin. Forms livro Charles Petzold.
+Para obter mais informações sobre a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), confira o [Capítulo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) do livro sobre o Xamarin.Forms de Charles Petzold.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou como usar uma TabbedPage para navegar por meio de uma coleção de páginas. O xamarin. Forms [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) consiste em uma lista de guias e uma área maior de detalhe, com cada guia Carregando conteúdo na área de detalhes.
+Este artigo demonstrou como usar uma TabbedPage para navegar por uma coleção de páginas. A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) do Xamarin.Forms consiste em uma lista de guias e uma área do detalhe maior, com cada guia carregando conteúdo na área do detalhe.
 
 
 ## <a name="related-links"></a>Links relacionados

@@ -1,6 +1,6 @@
 ---
-title: Localização da direita para esquerda
-description: Localização da direita para esquerda adiciona suporte para a direção do fluxo da direita para esquerda para aplicativos xamarin. Forms.
+title: Localização da direita para a esquerda
+description: A localização da direita para a esquerda adiciona suporte para a direção do fluxo da direita para a esquerda aos aplicativos Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429
 ms.technology: xamarin-forms
@@ -10,39 +10,39 @@ ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: 67b0d90290b18c7a5b55c5e3496b54970a8cfc38
 ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51617599"
 ---
-# <a name="right-to-left-localization"></a>Localização da direita para esquerda
+# <a name="right-to-left-localization"></a>Localização da direita para a esquerda
 
-_Localização da direita para esquerda adiciona suporte para a direção do fluxo da direita para esquerda para aplicativos xamarin. Forms._
+_A localização da direita para a esquerda adiciona suporte para a direção do fluxo da direita para a esquerda aos aplicativos Xamarin.Forms._
 
 > [!NOTE]
-> Localização da direita para esquerda requer o uso de API 17 ou superior no Android e iOS 9 ou superior.
+> A localização da direita para a esquerda exige o uso do iOS 9 ou superior e da API 17 ou superior no Android.
 
-Direção do fluxo é a direção na qual os elementos de interface do usuário na página são verificados pelo olhos. Algumas linguagens, como árabe e hebraico, exigem que os elementos de interface do usuário são dispostos em uma direção de fluxo da direita para esquerda. Isso pode ser feito definindo a [ `VisualElement.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade. Esta propriedade obtém ou define a direção na qual fluxo de elementos de interface do usuário dentre quaisquer elementos pai que controlem seu layout e devem ser definido como um dos [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valores de enumeração:
+A direção do fluxo é a direção na qual os elementos de interface do usuário na página são detectados pelos olhos. Alguns idiomas, como árabe e hebraico, exigem que os elementos de interface do usuário sejam dispostos em uma direção de fluxo da direita para a esquerda. Isso pode ser feito com a definição da propriedade [`VisualElement.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection). Essa propriedade obtém ou define a direção na qual os elementos de interface do usuário fluem nos elementos pai que controlam seu layout e deve ser definida com um dos valores de enumeração [`FlowDirection`](xref:Xamarin.Forms.FlowDirection):
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-Definindo o [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade [ `RightToLeft` ](xref:Xamarin.Forms.FlowDirection.RightToLeft) em um elemento geralmente define o alinhamento para a direita, a ordem de leitura para a direita para esquerda e o layout do controle para fluir de direita para esquerda:
+Em geral, a definição da propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) como [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) em um elemento define o alinhamento para a direita, o sentido de leitura como direita para esquerda e o layout do controle para fluir da direita para a esquerda:
 
-[![TodoItemPage em árabe com uma direção de fluxo da direita para esquerda](rtl-images/TodoItemPage-Arabic.png "TodoItemPage em árabe com uma direção de fluxo da direita para esquerda")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage em árabe com uma direção de fluxo da direita para esquerda")
-
-> [!TIP]
-> Você só deve definir a [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade no layout inicial. A alteração desse valor em tempo de execução faz com que um processo caro de layout que afeta o desempenho.
-
-O padrão [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) é o valor de propriedade para um elemento sem um pai [ `LeftToRight` ](xref:Xamarin.Forms.FlowDirection.LeftToRight), enquanto o padrão `FlowDirection` para um elemento com um pai é [ `MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). Portanto, um elemento herda o `FlowDirection` valor da propriedade de seu pai na árvore visual e qualquer elemento pode substituir o valor obtido do seu pai.
+[![TodoItemPage em árabe com uma direção de fluxo da direita para a esquerda](rtl-images/TodoItemPage-Arabic.png "TodoItemPage em árabe com uma direção de fluxo da direita para a esquerda")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage em árabe com uma direção de fluxo da direita para a esquerda")
 
 > [!TIP]
-> Ao localizar um aplicativo para idiomas da direita para esquerda, defina as [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade em um layout de página ou raiz. Isso faz com que todos os elementos contidos dentro da página ou o layout de raiz, responder de forma apropriada para a direção do fluxo.
+> Você só deve definir a propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) no layout inicial. A alteração desse valor em tempo de execução causa um processo caro de layout que afetará o desempenho.
 
-## <a name="respecting-device-flow-direction"></a>Respeitar a direção do fluxo de dispositivo
+O valor padrão da propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) de um elemento sem um pai é [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight), enquanto o `FlowDirection` padrão de um elemento com um pai é [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). Portanto, um elemento herda o valor da propriedade `FlowDirection` de seu pai na árvore visual e qualquer elemento pode substituir o valor obtido de seu pai.
 
-Respeitar a direção do fluxo do dispositivo com base no idioma selecionado e a região é uma opção explícita de desenvolvedor e não acontece automaticamente. Isso pode ser feito definindo a [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) em uma página ou o layout de raiz para o `static` [ `Device.FlowDirection` ](xref:Xamarin.Forms.Device.FlowDirection) valor:
+> [!TIP]
+> Ao localizar um aplicativo para idiomas da direita para a esquerda, defina a propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) em uma página ou um layout raiz. Isso faz com que todos os elementos contidos na página ou layout raiz respondam de forma apropriada à direção do fluxo.
+
+## <a name="respecting-device-flow-direction"></a>Respeitando a direção do fluxo do dispositivo
+
+O respeito à direção do fluxo do dispositivo com base na região e no idioma selecionados é uma opção explícita do desenvolvedor e não ocorre automaticamente. Isso pode ser feito com a definição da propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) em uma página ou no layout raiz com o valor `static` [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection):
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -52,15 +52,15 @@ Respeitar a direção do fluxo do dispositivo com base no idioma selecionado e a
 this.FlowDirection = Device.FlowDirection;
 ```
 
-Todos os elementos filho da página ou layout raiz, por padrão, em seguida, herdará as [ `Device.FlowDirection` ](xref:Xamarin.Forms.Device.FlowDirection) valor.
+Em seguida, todos os elementos filho da página ou o layout raiz, por padrão, herdarão o valor [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection).
 
-## <a name="platform-setup"></a>Instalação de plataforma
+## <a name="platform-setup"></a>Instalação da plataforma
 
-Instalação de plataforma específica é necessária para habilitar localidades da direita para esquerda.
+A instalação da plataforma específica é necessária para habilitar localidades com leitura da direita para a esquerda.
 
 ### <a name="ios"></a>iOS
 
-A localidade da direita para esquerda necessária deve ser adicionada como um idioma com suporte para os itens da matriz para o `CFBundleLocalizations` principais no **Info. plist**. O exemplo a seguir mostra o árabe, tendo sido adicionado à matriz para o `CFBundleLocalizations` chave:
+A localidade com leitura da direita para a esquerda necessária deve ser adicionada como um idioma compatível aos itens de matriz da chave `CFBundleLocalizations` em **Info.plist**. O seguinte exemplo mostra o árabe adicionado à matriz da chave `CFBundleLocalizations`:
 
 ```xml
 <key>CFBundleLocalizations</key>
@@ -70,18 +70,18 @@ A localidade da direita para esquerda necessária deve ser adicionada como um id
 </array>
 ```
 
-![Idiomas com suporte de info. plist](rtl-images/ios-locales.png "Info. plist de idiomas com suporte")
+![Idiomas com suporte em Info.plist](rtl-images/ios-locales.png "Idiomas com suporte em Info.plist")
 
-Para obter mais informações, consulte [Noções básicas de localização no iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
+Para obter mais informações, confira [Noções básicas de localização no iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
 
-Localização da direita para esquerda, em seguida, pode ser testada, alterando o idioma e região no dispositivo/simulador para uma localidade da direita para esquerda que foi especificada na **Info. plist**.
+A localização da direita para a esquerda pode então ser testada, alterando o idioma e a região no dispositivo/simulador para uma localidade com leitura da direita para a esquerda que foi especificada em **Info.plist**.
 
 > [!WARNING]
-> Observe que ao alterar o idioma e região para uma localidade da direita para a esquerda no iOS, qualquer [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) exibições lançará uma exceção se você não incluir os recursos necessários para a localidade. Por exemplo, ao testar um aplicativo em árabe que tem um `DatePicker`, certifique-se de que **Ásia** está selecionado no **internacionalização** seção o **Build do iOS** painel.
+> Observe que ao alterar o idioma e a região para uma localidade com leitura da direita para a esquerda no iOS, as exibições [`DatePicker`](xref:Xamarin.Forms.DatePicker) gerarão uma exceção se você não incluir os recursos necessários para a localidade. Por exemplo, ao testar um aplicativo em árabe que tenha um `DatePicker`, verifique se a opção **oriente médio** está selecionada na seção **Internacionalização** no painel **Build do iOS**.
 
 ### <a name="android"></a>Android
 
-O aplicativo **androidmanifest. XML** arquivo deve ser atualizado para que o `<uses-sdk>` conjuntos de nós a `android:minSdkVersion` 17, do atributo e o `<application>` conjuntos de nó a `android:supportsRtl` atributo para `true`:
+O arquivo **AndroidManifest.xml** do aplicativo deve ser atualizado para que o nó `<uses-sdk>` defina o atributo `android:minSdkVersion` como 17 e o nó `<application>` defina o atributo `android:supportsRtl` como `true`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -92,11 +92,11 @@ O aplicativo **androidmanifest. XML** arquivo deve ser atualizado para que o `<u
 </manifest>
 ```
 
-Localização da direita para esquerda, em seguida, pode ser testada, alterando o dispositivo/emulador para usar o idioma da direita para esquerda, ou habilitando **direção do layout RTL força** na **Configurações > Opções do desenvolvedor**.
+A localização da direita para a esquerda pode então ser testada, alterando o dispositivo/emulador para usar o idioma da direita para a esquerda ou habilitando a opção **Forçar direção do layout da direita para esquerda** em **Configurações > Opções do Desenvolvedor**.
 
 ### <a name="universal-windows-platform-uwp"></a>UWP (Plataforma Universal do Windows)
 
-Os recursos de idioma necessário devem ser especificados na `<Resources>` nó do **Package. appxmanifest** arquivo. O exemplo a seguir mostra o árabe ter que foram adicionado ao `<Resources>` nó:
+Os recursos de idioma necessários devem ser especificados no nó `<Resources>` do arquivo **Package.appxmanifest**. O seguinte exemplo mostra o árabe adicionado ao nó `<Resources>`:
 
 ```xml
 <Resources>
@@ -106,7 +106,7 @@ Os recursos de idioma necessário devem ser especificados na `<Resources>` nó d
 </Resources>
 ```
 
-Além disso, a UWP requer que a cultura do aplicativo padrão é explicitamente definida na biblioteca do .NET Standard. Isso pode ser feito definindo a `NeutralResourcesLanguage` de atributo em `AssemblyInfo.cs`, ou em outra classe, para a cultura padrão:
+Além disso, o UWP exige que a cultura padrão do aplicativo seja explicitamente definida na biblioteca do .NET Standard. Isso pode ser feito com a definição do atributo `NeutralResourcesLanguage` em `AssemblyInfo.cs`, ou em outra classe, como a cultura padrão:
 
 ```csharp
 using System.Resources;
@@ -114,41 +114,41 @@ using System.Resources;
 [assembly: NeutralResourcesLanguage("en")]
 ```
 
-Localização da direita para esquerda, em seguida, pode ser testada, alterando o idioma e região no dispositivo para a localidade apropriada da direita para esquerda.
+A localização da direita para a esquerda pode então ser testada, alterando o idioma e a região no dispositivo para a localidade da direita para a esquerda apropriada.
 
 ## <a name="limitations"></a>Limitações
 
-Atualmente, a localização da direita para esquerda de xamarin. Forms tem várias limitações:
+Atualmente, a localização da direita para a esquerda do Xamarin.Forms tem várias limitações:
 
-- [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) local do botão, a barra de ferramentas do item local e, em seguida, animação de transição é controlada pela localidade do dispositivo, em vez de [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) não inverter a direção de passar o dedo.
-- [`Image`](xref:Xamarin.Forms.Image) conteúdo visual não Inverter.
-- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) e [ `DisplayActionSheet` ](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) orientação é controlada pela localidade do dispositivo, em vez de [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`WebView`](xref:Xamarin.Forms.WebView) conteúdo não respeita a [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- Um `TextDirection` propriedade precisa ser adicionado, para controlar o alinhamento do texto.
+- A localização do botão [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), a localização do item da barra de ferramentas e a animação de transição são controlados pela localidade do dispositivo, em vez de pela propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- A direção de passar o dedo de [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) não é invertida.
+- O conteúdo visual de [`Image`](xref:Xamarin.Forms.Image) não é invertido.
+- A orientação de [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) e [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) é controlada pela localidade do dispositivo, em vez de pela propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- O conteúdo de [`WebView`](xref:Xamarin.Forms.WebView) não respeita a propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- Uma propriedade `TextDirection` precisa ser adicionada, para controlar o alinhamento do texto.
 
 ### <a name="ios"></a>iOS
 
-- [`Stepper`](xref:Xamarin.Forms.Stepper) orientação é controlada pela localidade do dispositivo, em vez de [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`EntryCell`](xref:Xamarin.Forms.EntryCell) alinhamento de texto é controlado pela localidade do dispositivo, em vez de [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) gestos e o alinhamento não são revertidas.
+- A orientação de [`Stepper`](xref:Xamarin.Forms.Stepper) é controlada pela localidade do dispositivo, em vez de pela propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- O alinhamento do texto de [`EntryCell`](xref:Xamarin.Forms.EntryCell) é controlado pela localidade do dispositivo, em vez de pela propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- Os gestos e o alinhamento de [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) não são revertidos.
 
 ### <a name="android"></a>Android
 
-- [`SearchBar`](xref:Xamarin.Forms.SearchBar) orientação é controlada pela localidade do dispositivo, em vez de [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) o posicionamento é controlado pela localidade do dispositivo, em vez de [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- A orientação de [`SearchBar`](xref:Xamarin.Forms.SearchBar) é controlada pela localidade do dispositivo, em vez de pela propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- O posicionamento de [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) é controlado pela localidade do dispositivo, em vez de pela propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 
 ### <a name="uwp"></a>UWP
 
-- [`Editor`](xref:Xamarin.Forms.Editor) alinhamento de texto é controlado pela localidade do dispositivo, em vez de [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade não é herdada pela [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) filhos.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) alinhamento de texto é controlado pela localidade do dispositivo, em vez de [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- O alinhamento do texto de [`Editor`](xref:Xamarin.Forms.Editor) é controlado pela localidade do dispositivo, em vez de pela propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- A propriedade de [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) não é herdada pelos filhos de [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage).
+- O alinhamento do texto de [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) é controlado pela localidade do dispositivo, em vez de pela propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 
-## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Suporte a direita para esquerda linguagem com Xamarin.University
+## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Suporte a idiomas da direita para a esquerda com o Xamarin.University
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Suporte de xamarin. Forms 3.0 da direita para a esquerda, por [Xamarin University](https://university.xamarin.com/)**
+**Suporte da direita para a esquerda do Xamarin.Forms 3.0, por [Xamarin University](https://university.xamarin.com/)**
 
 ## <a name="related-links"></a>Links relacionados
 

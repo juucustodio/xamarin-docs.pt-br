@@ -1,6 +1,6 @@
 ---
-title: Xamarin. Forms de cadeia de caracteres de formatação
-description: Este artigo explica como usar associações de dados do xamarin. Forms para formatar e exibir objetos como cadeias de caracteres. Isso é feito definindo o StringFormat da associação para uma cadeia de formatação .NET standard com um espaço reservado.
+title: Formatação de cadeia de caracteres do Xamarin.Forms
+description: Este artigo explica como usar associações de dados do Xamarin.Forms para formatar e exibir objetos como cadeias de caracteres. Isso é feito com a definição de StringFormat de Binding como uma cadeia de caracteres de formatação padrão do .NET com um espaço reservado.
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52170943"
 ---
-# <a name="xamarinforms-string-formatting"></a>Xamarin. Forms de cadeia de caracteres de formatação
+# <a name="xamarinforms-string-formatting"></a>Formatação de cadeia de caracteres do Xamarin.Forms
 
-Às vezes é conveniente usar associações de dados para exibir a representação de cadeia de caracteres de um objeto ou valor. Por exemplo, você talvez queira usar um `Label` para exibir o valor atual de um `Slider`. Nesta associação de dados, o `Slider` é a origem e o destino é o `Text` propriedade do `Label`.
+Às vezes, é conveniente usar associações de dados para exibir a representação de cadeia de caracteres de um objeto ou um valor. Por exemplo, talvez você deseje usar um `Label` para exibir o valor atual de um `Slider`. Nesta associação de dados, o `Slider` é a origem e o destino é a propriedade `Text` do `Label`.
 
-Ao exibir cadeias de caracteres no código, a ferramenta mais poderosa é estática [ `String.Format` ](xref:System.String.Format(System.String,System.Object)) método. A cadeia de caracteres de formatação que inclui códigos específicos para diversos tipos de objetos de formatação, e você pode incluir outro texto junto com os valores que está sendo formatado. Consulte a [tipos de formatação no .NET](/dotnet/standard/base-types/formatting-types/) artigo para obter mais informações sobre a formatação da cadeia de caracteres.
+Ao exibir cadeias de caracteres no código, a ferramenta mais avançada é o método estático [`String.Format`](xref:System.String.Format(System.String,System.Object)). A cadeia de caracteres de formatação inclui códigos de formatação para diversos tipos de objetos, sendo que você pode incluir outros textos junto com os valores que estão sendo formatados. Confira o artigo [Formatando tipos no .NET](/dotnet/standard/base-types/formatting-types/) para obter mais informações sobre a formatação da cadeia de caracteres.
 
 ## <a name="the-stringformat-property"></a>A propriedade StringFormat
 
-Esse recurso é transportado para associações de dados: você definir a [ `StringFormat` ](xref:Xamarin.Forms.BindingBase.StringFormat) propriedade do `Binding` (ou o [ `StringFormat` ](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) propriedade do `Binding` extensão de marcação) para um formatação de cadeia de caracteres com um espaço reservado padrão do .NET:
+Esse recurso é levado para as associações de dados: você define a propriedade [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) de `Binding` (ou a propriedade [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) da extensão de marcação `Binding`) como uma cadeia de caracteres de formatação padrão do .NET com um espaço reservado:
 
 ```xaml
 <Slider x:Name="slider" />
@@ -31,13 +31,13 @@ Esse recurso é transportado para associações de dados: você definir a [ `Str
                       StringFormat='The slider value is {0:F2}'}" />
 ```
 
-Observe que a cadeia de caracteres de formatação é delimitada por caracteres de aspas simples (apóstrofo) para evitar o tratamento de chaves como outra extensão de marcação XAML o analisador XAML. Caso contrário, essa cadeia de caracteres sem o caractere de aspas simples é a mesma cadeia de caracteres que você usaria para exibir um valor de ponto flutuante em uma chamada para `String.Format`. Uma especificação de formatação de `F2` faz com que o valor a ser exibido com duas casas decimais.
+Observe que a cadeia de caracteres de formatação é delimitada por caracteres de aspas simples (apóstrofo) para ajudar o analisador de XAML a evitar tratar as chaves como outra extensão de marcação XAML. De outra forma, essa cadeia de caracteres sem o caractere de aspas simples é a mesma cadeia de caracteres usada para exibir um valor de ponto flutuante em uma chamada a `String.Format`. Uma especificação de formatação de `F2` faz com que o valor seja exibido com duas casas decimais.
 
-O `StringFormat` propriedade só faz sentido quando a propriedade de destino é do tipo `string`, e é o modo de ligação `OneWay` ou `TwoWay`. Para associações bidirecionais, o `StringFormat` é aplicável somente para valores passando da origem ao destino.
+A propriedade `StringFormat` só faz sentido quando a propriedade de destino é do tipo `string` e o modo de associação é `OneWay` ou `TwoWay`. Para vinculações bidirecionais, o `StringFormat` só é aplicável a valores que passam da origem para o destino.
 
-Como você verá no próximo artigo sobre o [caminho de associação](binding-path.md), associações de dados podem se tornar muito complexos e complicados. Ao depurar essas associações de dados, você pode adicionar um `Label` no arquivo XAML com um `StringFormat` exibir algum resultado intermediário. Mesmo se você usá-lo somente para exibir o tipo de um objeto, que pode ser útil.
+Como você verá no próximo artigo sobre o [Caminho de associação](binding-path.md), as associações de dados podem se tornar muito complexas e complicadas. Ao depurar essas associações de dados, você pode adicionar um `Label` ao arquivo XAML com um `StringFormat` para exibir alguns resultados intermediários. Mesmo se você usá-lo somente para exibir o tipo de um objeto, isso pode ser útil.
 
-O **cadeia de caracteres de formatação** página ilustra vários usos do `StringFormat` propriedade:
+A página **Formatação da cadeia de caracteres** ilustra vários usos da propriedade `StringFormat`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -101,33 +101,33 @@ O **cadeia de caracteres de formatação** página ilustra vários usos do `Stri
 </ContentPage>
 ```
 
-As associações na `Slider` e `TimePicker` mostram o uso de especificações de formato específicas `double` e `TimeSpan` tipos de dados. O `StringFormat` que exibe o texto do `Entry` exibição demonstra como especificar as aspas duplas na cadeia de caracteres de formatação com o uso do `&quot;` entidade HTML.
+As associações no `Slider` e no `TimePicker` mostram o uso de especificações de formato específicas aos tipos de dados `double` e `TimeSpan`. O `StringFormat` que exibe o texto na exibição `Entry` demonstra como especificar aspas duplas na cadeia de caracteres de formatação com o uso da entidade HTML `&quot;`.
 
-A próxima seção no arquivo XAML é uma `StackLayout` com um `BindingContext` definido como um `x:Static` extensão de marcação que faz referência estática `DateTime.Now` propriedade. A primeira associação não tem nenhuma propriedade:
+A próxima seção do arquivo XAML é um `StackLayout` com um `BindingContext` definido como uma extensão de marcação `x:Static` que referencia a propriedade estática `DateTime.Now`. A primeira associação não tem nenhuma propriedade:
 
 ```xaml
 <Label Text="{Binding}" />
 ```
 
-Isso simplesmente exibe a `DateTime` valor da `BindingContext` com formatação padrão. A segunda associação exibe a `Ticks` propriedade de `DateTime`, enquanto as outras duas associações exibem o `DateTime` com formatação específica. Observe que isso `StringFormat`:
+Isso apenas exibe o valor `DateTime` do `BindingContext` com a formatação padrão. A segunda associação exibe a propriedade `Ticks` de `DateTime`, enquanto as outras duas associações exibem o próprio `DateTime` com formatação específica. Observe este `StringFormat`:
 
 ```xaml
 <Label Text="{Binding StringFormat='The {{0:MMMM}} specifier produces {0:MMMM}'}" />
 ```
 
-Se você precisar exibir chaves de chaves à direita ou esquerdas em sua cadeia de caracteres de formatação, basta use um par de-los.
+Caso precise exibir chaves direitas ou esquerdas na cadeia de caracteres de formatação, basta usar um par de chaves.
 
-Os últimos conjuntos de seção de `BindingContext` ao valor de `Math.PI` e o exibe com a formatação padrão e dois tipos diferentes de formatação numérica.
+A última seção define o `BindingContext` com valor de `Math.PI` e o exibe com a formatação padrão e dois tipos diferentes de formatação numérica.
 
-Aqui está o programa em execução:
+Este é o programa em execução:
 
-[![Formatação de cadeia de caracteres](string-formatting-images/stringformatting-small.png "formatação de cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "formatação de cadeia de caracteres")
+[![Formatação de cadeia de caracteres](string-formatting-images/stringformatting-small.png "Formatação de cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "Formatação de cadeia de caracteres")
 
-## <a name="viewmodels-and-string-formatting"></a>Cadeia de caracteres de formatação e ViewModels
+## <a name="viewmodels-and-string-formatting"></a>ViewModels e formatação de cadeia de caracteres
 
-Quando você estiver usando `Label` e `StringFormat` para exibir o valor de uma exibição que também é o destino de um ViewModel, você pode definir a associação do modo de exibição para o `Label` ou do ViewModel para a `Label`. Em geral, a segunda abordagem é melhor porque verifica se as associações entre o View e ViewModel estão funcionando.
+Quando estiver usando `Label` e `StringFormat` para exibir o valor de uma exibição que também é o destino de um ViewModel, você poderá definir a associação na exibição como o `Label` ou no ViewModel como a `Label`. Em geral, a segunda abordagem é melhor porque verifica se as associações entre o View e o ViewModel estão funcionando.
 
-Essa abordagem é mostrada na **melhor seletor de cor** exemplo, que usa o mesmo ViewModel como o **seletor de cor simples** programa mostrado na [ **modo associação** ](binding-mode.md) artigo:
+Essa abordagem é apresentada na amostra **Melhor Seletor de Cor**, que usa o mesmo ViewModel do programa **Seletor de Cor Simples** mostrado no artigo [**Modo de associação**](binding-mode.md):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -172,18 +172,18 @@ Essa abordagem é mostrada na **melhor seletor de cor** exemplo, que usa o mesmo
 </ContentPage>    
 ```
 
-Agora há três pares de `Slider` e `Label` elementos que são associados à mesma propriedade em da fonte a `HslColorViewModel` objeto. A única diferença é que `Label` tem uma `StringFormat` propriedade para exibir cada `Slider` valor.
+Agora há três pares de elementos `Slider` e `Label` associados à mesma propriedade de origem no objeto `HslColorViewModel`. A única diferença é que `Label` tem uma propriedade `StringFormat` para exibir cada valor `Slider`.
 
-[![Seletor de cores melhor](string-formatting-images/bettercolorselector-small.png "melhor o seletor de cores")](string-formatting-images/bettercolorselector-large.png#lightbox "melhor o seletor de cores")
+[![Melhor Seletor de Cores](string-formatting-images/bettercolorselector-small.png "Melhor Seletor de Cores")](string-formatting-images/bettercolorselector-large.png#lightbox "Melhor Seletor de Cores")
 
-Você deve estar se perguntando como você pode exibir valores RGB (vermelhos, verdes, azuis) em formato hexadecimal de dois dígitos tradicional. Esses valores inteiros não estão diretamente disponíveis no `Color` estrutura. Uma solução seria calcular valores de inteiro dos componentes de cor dentro do ViewModel e expô-los como propriedades. Você pode, em seguida, formatá-los usando o `X2` especificação de formatação.
+Você deve estar se perguntando como poderá exibir valores RGB (vermelho, verde, azul) em formato hexadecimal tradicional de dois dígitos. Esses valores inteiros não estão diretamente disponíveis na estrutura `Color`. Uma solução é calcular valores inteiros dos componentes de cor dentro do ViewModel e expô-los como propriedades. Em seguida, você pode formatá-los usando a especificação de formatação `X2`.
 
-Outra abordagem é mais geral: você pode escrever uma *conversor de valor de associação* conforme discutido no artigo posterior [ **conversores de valor de associação**](converters.md).
+Outra abordagem é mais geral: você pode escrever um *conversor de valor de associação* conforme abordado no artigo posterior, [**Conversores de valor de associação**](converters.md).
 
-O próximo artigo, no entanto, explora os [ **caminho de associação** ](binding-path.md) em mais detalhe e mostram como você pode usar para fazer referência a subpropriedades e itens em coleções.
+No entanto, o próximo artigo explora o [**Caminho de associação**](binding-path.md) com mais detalhes e mostra como você pode usá-lo para referenciar subpropriedades e itens em coleções.
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capítulo de associação de dados do catálogo de xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo de associação de dados do livro sobre o Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

@@ -1,6 +1,6 @@
 ---
 title: Posicionamento de vídeo personalizado
-description: Este artigo explica como implementar uma barra de posição personalizada em um aplicativo de player de vídeo, usando o xamarin. Forms.
+description: Este artigo explica como implementar uma barra de posição personalizada em um aplicativo de player de vídeo usando o Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 6D792264-30FF-46F7-8C1B-2FEF9D277DF4
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: b5f3c9dcbaa6ba1a9e86568ccabe38416cc653f2
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35241904"
 ---
 # <a name="custom-video-positioning"></a>Posicionamento de vídeo personalizado
 
-Os controles de transporte implementados por cada plataforma incluem uma barra de posição. Essa barra é semelhante a um controle deslizante ou a barra de rolagem e mostra a localização atual do vídeo dentro de sua duração total. Além disso, o usuário pode manipular a barra de posição para frente ou para trás para uma nova posição no vídeo.
+Os controles de transporte implementados por cada plataforma incluem uma barra de posição. Essa barra é semelhante a um controle deslizante ou a uma barra de rolagem e mostra a localização atual do vídeo dentro de sua duração total. Além disso, o usuário pode manipular a barra de posição para mover para frente ou para trás para uma nova posição no vídeo.
 
-Este artigo mostra como você pode implementar sua própria barra de posição personalizada.
+Este artigo mostra como é possível implementar sua própria barra de posição personalizada.
 
 ## <a name="the-duration-property"></a>A propriedade Duration
 
-Um item de informação que `VideoPlayer` precisa dar suporte a um personalizado barra de posição é a duração do vídeo. O `VideoPlayer` define somente leitura `Duration` propriedade do tipo `TimeSpan`:
+Um item de informações que o `VideoPlayer` precisa para dar suporte a uma barra de posição personalizada é a duração do vídeo. O `VideoPlayer` define uma propriedade `Duration` somente leitura do tipo `TimeSpan`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -52,7 +52,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-Como o `Status` propriedade descrito o [artigo anterior](custom-transport.md), este `Duration` propriedade é somente leitura. Ela é definida com uma particular `BindablePropertyKey` e só pode ser definida por referência a `IVideoPlayerController` interface, que inclui esse `Duration` propriedade:
+Como a propriedade `Status` descrita no [artigo anterior](custom-transport.md), essa propriedade `Duration` é somente leitura. É definida com uma `BindablePropertyKey` privada e pode ser definida apenas referenciando a interface `IVideoPlayerController`, que inclui essa propriedade `Duration`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -66,15 +66,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-Observe também o manipulador de propriedade alterada que chama um método chamado `SetTimeToEnd` que é descrita posteriormente neste artigo.
+Além disso, observe o manipulador de propriedade alterada que chama um método chamado `SetTimeToEnd` descrito posteriormente neste artigo.
 
-A duração de um vídeo é *não* disponíveis imediatamente após o `Source` propriedade `VideoPlayer` está definida. O arquivo de vídeo deve ser parcialmente baixado antes que o player de vídeo subjacente pode determinar sua duração.
+A duração de um vídeo *não* está disponível imediatamente depois que a propriedade `Source` de `VideoPlayer` for definida. O arquivo de vídeo deve ser baixado parcialmente antes que o player de vídeo subjacente possa determinar sua duração.
 
-Aqui está como cada um dos processadores de plataforma obtém a duração do vídeo:
+Veja como cada um dos renderizadores de plataforma obtém a duração do vídeo:
 
-### <a name="video-duration-in-ios"></a>Duração de vídeo no iOS
+### <a name="video-duration-in-ios"></a>Duração do vídeo no iOS
 
-No iOS, a duração de um vídeo é obtida a `Duration` propriedade de `AVPlayerItem`, mas não imediatamente após o `AVPlayerItem` é criado. É possível definir um observador do iOS para o `Duration` propriedade, mas o `VideoPlayerRenderer` obtém a duração no `UpdateStatus` método, que é chamado de 10 vezes por segundo:
+No iOS, a duração de um vídeo é obtida com base na propriedade `Duration` de `AVPlayerItem`, mas não imediatamente após a criação de `AVPlayerItem`. É possível definir um observador de iOS para a propriedade `Duration`, mas o `VideoPlayerRenderer` obtém a duração no método `UpdateStatus`, chamado de 10 vezes por segundo:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -102,11 +102,11 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-O `ConvertTime` método converte um `CMTime` o objeto para um `TimeSpan` valor.
+O método `ConvertTime` converte um objeto `CMTime` em um `TimeSpan` valor.
 
-### <a name="video-duration-in-android"></a>Duração de vídeo no Android
+### <a name="video-duration-in-android"></a>Duração do vídeo no Android
 
-O `Duration` propriedade o Android `VideoView` informa uma duração válida em milissegundos quando o `Prepared` eventos de `VideoView` é acionado. O Android `VideoPlayerRenderer` classe usa esse manipulador para obter o `Duration` propriedade:
+A propriedade `Duration` do Android `VideoView` relata uma duração válida em milissegundos quando o evento `Prepared` de `VideoView` é acionado. A classe `VideoPlayerRenderer` do Android usa esse manipulador para obter a propriedade `Duration`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -124,9 +124,9 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-### <a name="video-duration-in-uwp"></a>Duração do vídeo em UWP
+### <a name="video-duration-in-uwp"></a>Duração do vídeo na UWP
 
-O `NaturalDuration` propriedade de `MediaElement` é um `TimeSpan` valor e torna-se válida quando `MediaElement` dispara o `MediaOpened` evento:
+A propriedade `NaturalDuration` de `MediaElement` é um valor `TimeSpan` e torna-se válida quando `MediaElement` aciona o evento `MediaOpened`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -145,7 +145,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="the-position-property"></a>A propriedade Position
 
-`VideoPlayer` também precisa de um `Position` que aumenta de zero a propriedade `Duration` como a reprodução do vídeo. `VideoPlayer` implementa essa propriedade como o `Position` propriedade o UWP `MediaElement`, que é uma propriedade ligável normal com público `set` e `get` acessadores:
+`VideoPlayer` também precisa de uma propriedade `Position` que aumenta de zero a `Duration` conforme o vídeo é reproduzido. `VideoPlayer` implementa essa propriedade como a propriedade `Position` no `MediaElement` UWP, que é uma propriedade associável normal com acessadores públicos `set` e `get`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -168,15 +168,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-O `get` acessador retorna a posição atual do vídeo, pois ele está em execução, mas o `set` acessador destina-se para responder a manipulação do usuário da barra de posição movendo a posição do vídeo para a frente ou para trás.
+O acessador `get` retorna a posição atual do vídeo quando ele está sendo reproduzido, mas o acessador `set` é projetado para responder à manipulação do usuário da barra de posição movendo a posição de vídeo para frente ou para trás.
 
-No iOS e Android, a propriedade que obtém a posição atual tem apenas um `get` acessador e um `Seek` método está disponível para executar esta tarefa de segundo. Se você pensar nisso, um separado `Seek` método parece ser uma abordagem mais adequada do que um único `Position` propriedade. Um único `Position` propriedade tem um problema inerente: durante a reprodução do vídeo, o `Position` propriedade deverá ser continuamente atualizada para refletir a nova posição. Mas não deseja que a maioria das alterações para o `Position` propriedade para fazer com que o player de vídeo mover para uma nova posição no vídeo. Se isso acontecer, o player de vídeo deve responder busca para o último valor de `Position` não adiantar a propriedade e o vídeo.
+No iOS e Android, a propriedade que obtém a posição atual tem apenas um acessador `get`, e um método `Seek` está disponível para executar essa segunda tarefa. Se você pensar a respeito, um método `Seek` separado parecerá ser uma abordagem mais adequada do que uma única propriedade `Position`. Uma única propriedade `Position` tem um problema inerente: durante a reprodução do vídeo, a propriedade `Position` deve ser continuamente atualizada para refletir a nova posição. Mas você não quer que a maioria das alterações à propriedade `Position` faça o player de vídeo se mover para uma nova posição no vídeo. Se isso acontecesse, o player de vídeo responderia buscando o último valor da propriedade `Position` e o vídeo não avançaria.
 
-Apesar das dificuldades de implementação de um `Position` propriedade com `set` e `get` acessadores, essa abordagem foi escolhida porque ele é consistente com o UWP `MediaElement`, e ele tem uma grande vantagem com associação de dados: O `Position` propriedade de `VideoPlayer` podem ser associados para o controle deslizante que é usado para exibir a posição e a busca para uma nova posição. No entanto, várias precauções são necessárias ao implementar isso `Position` propriedade para evitar loops de comentários.
+Apesar das dificuldades de implementar uma propriedade `Position` com os acessadores `set` e `get`, essa abordagem foi escolhida porque é consistente com o `MediaElement` da UWP e ela tem uma grande vantagem relacionada à associação de dados: a propriedade `Position` do `VideoPlayer` pode ser associado ao controle deslizante usado tanto para exibir a posição quanto para buscar uma nova posição. No entanto, várias precauções são necessárias ao implementar essa propriedade `Position` para evitar loops de comentários.
 
-### <a name="setting-and-getting-ios-position"></a>Configuração e a obtenção de posição de iOS
+### <a name="setting-and-getting-ios-position"></a>Definir e obter a posição do iOS
 
-No iOS, o `CurrentTime` propriedade o `AVPlayerItem` objeto indica a posição atual de reprodução de vídeo. O iOS `VideoPlayerRenderer` define o `Position` propriedade o `UpdateStatus` manipulador ao mesmo tempo que define o `Duration` propriedade:
+No iOS, a propriedade `CurrentTime` do objeto `AVPlayerItem` indica a posição atual do vídeo sendo reproduzido. O iOS `VideoPlayerRenderer` define a propriedade `Position` no manipulador `UpdateStatus` ao mesmo tempo em que ele define a propriedade `Duration`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -198,7 +198,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-O renderizador detecta quando o `Position` conjunto de propriedades `VideoPlayer` foi alterado no `OnElementPropertyChanged` substituir e usa esse novo valor para chamar um `Seek` método no `AVPlayer` objeto:
+O renderizador detecta quando o conjunto de propriedades `Position` de `VideoPlayer` foi alterado na substituição do `OnElementPropertyChanged`, e usa esse novo valor para chamar um método `Seek` no objeto `AVPlayer`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -224,13 +224,13 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Tenha em mente que sempre o `Position` propriedade no `VideoPlayer` é definido do `OnUpdateStatus` manipulador, o `Position` propriedade dispara um `PropertyChanged` evento, que é detectado no `OnElementPropertyChanged` substituir. Para a maioria dessas alterações, o `OnElementPropertyChanged` método não deve fazer nada. Caso contrário, com cada alteração na posição do vídeo, ele será movido para a mesma posição atingiu apenas!
+Tenha em mente que sempre que a propriedade `Position` no `VideoPlayer` for definida com base no manipulador `OnUpdateStatus`, a propriedade `Position` disparará um evento `PropertyChanged`, detectado na substituição do `OnElementPropertyChanged`. Para a maioria dessas alterações, o método `OnElementPropertyChanged` não deve fazer nada. Caso contrário, a cada alteração na posição do vídeo, ele seria ser movido para a mesma posição que ela acabou de atingir!
 
-Para evitar este loop de comentários, o `OnElementPropertyChanged` método só chama `Seek` quando a diferença entre o `Position` propriedade e a posição atual do `AVPlayer` é maior do que um segundo.
+Para evitar esse loop de comentários, o método `OnElementPropertyChanged` apenas chamará `Seek` quando a diferença entre a propriedade `Position` e a posição atual do `AVPlayer` for maior que um segundo.
 
-### <a name="setting-and-getting-android-position"></a>Definindo e Obtendo posição Android
+### <a name="setting-and-getting-android-position"></a>Definir e obter a posição do Android
 
-Assim como o renderizador do iOS, o Android `VideoPlayerRenderer` define um novo valor para o `Position` propriedade o `OnUpdateStatus` manipulador. O `CurrentPosition` propriedade `VideoView` contém a nova posição em unidades de milissegundos:
+Como acontece no renderizador do iOS, o `VideoPlayerRenderer` do Android define um novo valor para a propriedade `Position` no manipulador `OnUpdateStatus`. A propriedade `CurrentPosition` de `VideoView` contém a nova posição em unidades de milissegundos:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -249,7 +249,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-Além disso, assim como o renderizador do iOS, Android renderizador chama o `SeekTo` método de `VideoView` quando o `Position` propriedade foi alterada, mas somente quando a alteração é diferente de mais de um segundo a `CurrentPosition` valor `VideoView`:
+Além disso, como acontece no renderizador do iOS, o renderizador do Android chamará o método `SeekTo` de `VideoView` quando a propriedade `Position` tiver sido alterada, mas somente quando a alteração for mais de um segundo diferente do valor `CurrentPosition` de `VideoView`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -273,9 +273,9 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-### <a name="setting-and-getting-uwp-position"></a>Configuração e a obtenção de posição de UWP
+### <a name="setting-and-getting-uwp-position"></a>Definir e obter a posição da UWP
 
-O UWP `VideoPlayerRenderer` identificadores o `Position` da mesma maneira como o iOS e Android renderizadores, mas como o `Position` propriedade o UWP `MediaElement` também é um `TimeSpan` valor, nenhuma conversão é necessária:
+O `VideoPlayerRenderer` da UWP manipula o `Position` da mesma maneira que os renderizadores do iOS e do Android, mas, como a propriedade `Position` do `MediaElement` da UWP também é um valor `TimeSpan`, não é necessária nenhuma conversão:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -306,9 +306,9 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="calculating-a-timetoend-property"></a>Calculando uma propriedade TimeToEnd
 
-Players de vídeo, às vezes, mostram o tempo restante no vídeo. Esse valor começa a duração do vídeo quando o vídeo começa e diminui para zero quando o vídeo termina.
+Às vezes, os players de vídeo mostram o tempo restante no vídeo. Esse valor começa na duração do vídeo quando o vídeo é iniciado e diminui para zero quando o vídeo é encerrado.
 
-`VideoPlayer` inclui somente leitura `TimeToEnd` propriedade que é manipulada inteiramente dentro da classe com base nas alterações de `Duration` e `Position` propriedades:
+`VideoPlayer` inclui uma propriedade `TimeToEnd` somente leitura que é manipulada inteiramente dentro da classe com base nas alterações às propriedades `Duration` e `Position`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -336,11 +336,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-O `SetTimeToEnd` método é chamado de manipuladores de propriedade alterada de ambos `Duration` e `Position`.
+O método `SetTimeToEnd` é chamado dos manipuladores de propriedade alterada de `Duration` e de `Position`.
 
 ## <a name="a-custom-slider-for-video"></a>Um controle deslizante personalizado para vídeo
 
-É possível gravar um controle personalizado de uma barra de posição, ou usar o xamarin. Forms `Slider` ou uma classe que deriva de `Slider`, como o seguinte `PositionSlider` classe. A classe define duas novas propriedades denominadas `Duration` e `Position` do tipo `TimeSpan` que se destinam a ser associado a dados para as duas propriedades de mesmo nome no `VideoPlayer`. Observe que o padrão de associação de modo do `Position` propriedade é bidirecional:
+É possível gravar um controle personalizado para uma barra de posição ou usar o `Slider` do Xamarin.Forms ou uma classe derivada de `Slider`, como a seguinte classe `PositionSlider`. A classe define duas novas propriedades denominadas `Duration` e `Position` do tipo `TimeSpan` que se destinam a ser associadas às duas propriedades de mesmo nome no `VideoPlayer`. Observe que o modo de associação padrão da propriedade `Position` é bidirecional:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -395,11 +395,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-O manipulador de propriedade alterada para o `Duration` conjuntos de propriedades a `Maximum` propriedade subjacente `Slider` para o `TotalSeconds` propriedade o `TimeSpan` valor. Da mesma forma, o manipulador de propriedade alterada para `Position` define o `Value` propriedade o `Slider`. Dessa forma, subjacente `Slider` controla a posição do `PositionSlider`.
+O manipulador de propriedade alterada dos conjuntos de propriedades `Duration` define a propriedade `Maximum` do `Slider` subjacente como a propriedade `TotalSeconds` do valor `TimeSpan`. Da mesma forma, o manipulador de propriedade alterada de `Position` define a propriedade `Value` do `Slider`. Dessa forma, o `Slider` subjacente controla a posição do `PositionSlider`.
 
-O `PositionSlider` é atualizado de subjacente `Slider` em apenas uma instância: quando o usuário manipula a `Slider` para indicar que o vídeo deve ser avançado ou revertido para uma nova posição. Isso é detectado no `PropertyChanged` manipulador no construtor do `PositionSlider`. O manipulador verifica uma alteração no `Value` propriedade, e se ele for diferente de `Position` propriedade, o `Position` propriedade é definida do `Value` propriedade.
+O `PositionSlider` é atualizado do `Slider` subjacente em apenas uma instância: quando o usuário manipula o `Slider` para indicar que o vídeo deve ser avançado ou revertido para uma nova posição. Isso é detectado no manipulador `PropertyChanged` no construtor do `PositionSlider`. O manipulador verifica uma alteração na propriedade `Value` e, se for diferente da propriedade `Position`, então a propriedade `Position` será definida com base na propriedade `Value`.
 
-Em teoria, interna `if` instrução poderia ser escrita como este:
+Em teoria, a instrução `if` interna poderia ser escrita da seguinte forma:
 
 ```csharp
 if (newPosition.Seconds != Position.Seconds)
@@ -408,15 +408,15 @@ if (newPosition.Seconds != Position.Seconds)
 }
 ```
 
-No entanto, a implementação do Android do `Slider` tem apenas 1.000 etapas distintas, independentemente do `Minimum` e `Maximum` configurações. O comprimento de um vídeo é maior que 1.000 segundos, em seguida, dois diferentes `Position` valores corresponde à mesma `Value` configuração do `Slider`e isso `if` instrução irá disparar um falso positivo para a manipulação de um usuário de o `Slider`. É mais seguro em vez disso, verifique que a nova posição e a posição existente são maiores que um-centésimos da duração total.
+No entanto, a implementação do Android de `Slider` tem apenas 1.000 etapas distintas, independentemente das configurações do `Minimum` e do `Maximum`. Se o comprimento de um vídeo for maior que 1.000 segundos, os dois valores `Position` diferentes corresponderá à mesma configuração `Value` do `Slider`, e essa instrução `if` dispararia um falso positivo para a manipulação de um usuário do `Slider`. É mais seguro verificar se a nova posição e a existente são maiores do que um centésimo da duração geral.
 
 ## <a name="using-the-positionslider"></a>Usando o PositionSlider
 
-Documentação para a UWP [ `MediaElement` ](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) avisa sobre a associação para o `Position` propriedade porque a propriedade atualiza com frequência. A documentação recomenda que um timer de ser usada para consultar o `Position` propriedade.
+A documentação da UWP [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) avisa sobre a associação para a propriedade `Position`, porque a propriedade é atualizada com frequência. A documentação recomenda que um temporizador seja usado para consultar a propriedade `Position`.
 
-Essa é uma recomendação válida, mas as três `VideoPlayerRenderer` classes indiretamente já estiver usando um timer para atualizar o `Position` propriedade. O `Position` propriedade é alterada em um manipulador para o `UpdateStatus` evento, que é disparado somente 10 vezes por segundo.
+É uma boa recomendação, mas as três classes `VideoPlayerRenderer` já estão usando indiretamente um temporizador para atualizar a propriedade `Position`. A propriedade `Position` é alterada em um manipulador para o evento `UpdateStatus`, que é disparado apenas 10 vezes por segundo.
 
-Portanto, o `Position` propriedade do `VideoPlayer` podem ser associados ao `Position` propriedade do `PositionSlider` sem problemas de desempenho, conforme demonstrado no **barra de posição personalizada** página:
+Portanto, a propriedade `Position` do `VideoPlayer` pode ser associada à propriedade `Position` do `PositionSlider` sem problemas de desempenho, conforme demonstrado na página **Barra de Posição Personalizada**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -471,12 +471,12 @@ Portanto, o `Position` propriedade do `VideoPlayer` podem ser associados ao `Pos
 </ContentPage>
 ```
 
-No primeiro botão de reticências (...) oculta o `ActivityIndicator`; é igual ao anterior **transporte personalizadas** página. Observe os dois `Label` elementos exibindo o `Position` e `TimeToEnd` propriedades. No botão de reticências entre esses dois `Label` elementos oculta os dois `Button` elementos mostrados na **transporte personalizadas** página para executar, pausar e parar. A lógica por trás do código também é o mesmo que o **transporte personalizadas** página.
+As primeiras reticências (···) ocultam o `ActivityIndicator`; é o mesmo da página **Transporte Personalizada** anterior. Observe os dois elementos `Label` que exibem as propriedades `Position` e `TimeToEnd`. As reticências entre esses dois elementos `Label` oculta os dois elementos `Button` mostrados na página **Transporte Personalizado** para executar, pausar e parar. A lógica code-behind também é a mesma da página **Transporte Personalizado**.
 
-[![Posicionamento personalizado](custom-positioning-images/custompositioning-small.png "posicionamento personalizado")](custom-positioning-images/custompositioning-large.png#lightbox "posicionamento personalizado")
+[![Posicionamento personalizado](custom-positioning-images/custompositioning-small.png "Posicionamento personalizado")](custom-positioning-images/custompositioning-large.png#lightbox "Posicionamento personalizado")
 
-Isso conclui a discussão sobre o `VideoPlayer`.
+Isso conclui a discussão do `VideoPlayer`.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações em vídeo Player (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demonstrações do player de vídeo (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

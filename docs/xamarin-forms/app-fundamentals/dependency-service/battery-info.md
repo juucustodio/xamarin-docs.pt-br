@@ -1,6 +1,6 @@
 ---
-title: Verificando o Status da bateria
-description: Este artigo explica como usar a classe do xamarin. Forms DependencyService para acessar informações sobre a bateria nativamente para cada plataforma.
+title: Verificando o status da bateria
+description: Este artigo explica como usar a classe DependencyService do Xamarin.Forms para acessar informações da bateria de modo nativo para cada plataforma.
 ms.prod: xamarin
 ms.assetid: CF1C5A73-84ED-407D-BDC5-EB1D83D2D3DB
 ms.technology: xamarin-forms
@@ -9,32 +9,32 @@ ms.author: dabritch
 ms.date: 08/09/2016
 ms.openlocfilehash: cbb4a01ac2c6d933fe40a0b3c2571d1fe3ce75c0
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998383"
 ---
-# <a name="checking-battery-status"></a>Verificando o Status da bateria
+# <a name="checking-battery-status"></a>Verificando o status da bateria
 
-Este artigo orienta a criação de um aplicativo que verifica o status da bateria. Este artigo se baseia o plug-in de bateria por James Montemagno. Para obter mais informações, consulte o [repositório GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery).
+Este artigo descreve como criar um aplicativo que verifica o status da bateria. Este artigo se baseia o plug-in Battery de James Montemagno. Para obter mais informações, confira o [Repositório do GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery).
 
-Porque o xamarin. Forms não inclui a funcionalidade para verificar o status da bateria atual, esse aplicativo precisará usar [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) para tirar proveito de APIs nativas.  Este artigo abordará as etapas a seguir para usar `DependencyService`:
+Como o Xamarin.Forms não inclui a funcionalidade para verificar o status atual da bateria, esse aplicativo precisará usar [`DependencyService`](xref:Xamarin.Forms.DependencyService) para tirar proveito de APIs nativas.  Este artigo abordará as etapas a seguir para usar `DependencyService`:
 
-- **[Criando a Interface](#Creating_the_Interface)**  &ndash; entender como a interface é criada em código compartilhado.
-- **[Implementação do iOS](#iOS_Implementation)**  &ndash; Saiba como implementar a interface em código nativo para iOS.
-- **[Implementação do Android](#Android_Implementation)**  &ndash; Saiba como implementar a interface em código nativo para Android.
-- **[Implementação da plataforma Windows universal](#UWPImplementation)**  &ndash; Saiba como implementar a interface em código nativo para Universal Windows Platform (UWP).
-- **[Implementando em código compartilhado](#Implementing_in_Shared_Code)**  &ndash; Saiba como usar `DependencyService` para chamar a implementação nativa a partir do código compartilhado.
+- **[Criando a Interface](#Creating_the_Interface)** &ndash; compreenda como a interface é criada em código compartilhado.
+- **[Implementação de iOS](#iOS_Implementation)** &ndash; saiba como implementar a interface em código nativo para iOS.
+- **[Implementação de Android](#Android_Implementation)** &ndash; saiba como implementar a interface em código nativo para Android.
+- **[Implementação da Plataforma Universal do Windows](#UWPImplementation)** &ndash; saiba como implementar a interface em código nativo para a UWP (Plataforma Universal do Windows).
+- **[Implementação em código compartilhado](#Implementing_in_Shared_Code)** &ndash; saiba como usar `DependencyService` para fazer chamadas na implementação nativa usando código compartilhado.
 
-Quando concluído, o aplicativo usando `DependencyService` terá a seguinte estrutura:
+Quando concluído, o aplicativo que usa `DependencyService` terá a seguinte estrutura:
 
-![](battery-info-images/battery-diagram.png "Estrutura de aplicativo do DependencyService")
+![](battery-info-images/battery-diagram.png "Estrutura de aplicativo de DependencyService")
 
 <a name="Creating_the_Interface" />
 
 ## <a name="creating-the-interface"></a>Criando a Interface
 
-Primeiro, crie uma interface no código compartilhado que expresse a funcionalidade desejada. No caso de uma bateria de verificação de aplicativo, as informações relevantes são a porcentagem de bateria restante, se o dispositivo está carregando ou não e como o dispositivo está recebendo energia:
+Primeiro, crie no código compartilhado uma interface que expressa a funcionalidade desejada. No caso de um aplicativo de verificação de bateria, as informações relevantes são o percentual de bateria restante, se o dispositivo está sendo carregado ou não e como o dispositivo está recebendo energia:
 
 ```csharp
 namespace DependencyServiceSample
@@ -66,16 +66,16 @@ namespace DependencyServiceSample
 }
 ```
 
-Codificação em relação a essa interface no código compartilhado permitirá que o aplicativo xamarin. Forms acessar as APIs de gerenciamento de energia em cada plataforma.
+A codificação nessa interface no código compartilhado permitirá que o aplicativo Xamarin.Forms acesse as APIs de gerenciamento de energia em cada plataforma.
 
 > [!NOTE]
-> Classes que implementam a Interface devem ter um construtor sem parâmetros para trabalhar com o `DependencyService`. Construtores não podem ser definidos pelas interfaces.
+> Classes que implementam a interface devem ter um construtor sem parâmetros para trabalhar com `DependencyService`. Construtores não podem ser definidos pelas interfaces.
 
 <a name="iOS_Implementation" />
 
-## <a name="ios-implementation"></a>Implementação do iOS
+## <a name="ios-implementation"></a>Implementação de iOS
 
-O `IBattery` interface deve ser implementada em cada projeto de aplicativo específico da plataforma. A implementação do iOS usará nativo [ `UIDevice` ](https://developer.xamarin.com/api/type/UIKit.UIDevice/) APIs para acessar as informações da bateria. Observe que a classe a seguir tem um construtor sem parâmetros, de modo que o `DependencyService` pode criar novas instâncias:
+A interface `IBattery` deve ser implementada em cada projeto de aplicativo específico da plataforma. A implementação do iOS usará as APIs de [`UIDevice`](https://developer.xamarin.com/api/type/UIKit.UIDevice/) nativas para acessar as informações da bateria. Observe que a classe a seguir tem um construtor sem parâmetros, de modo que `DependencyService` pode criar novas instâncias:
 
 ```csharp
 using UIKit;
@@ -138,7 +138,7 @@ namespace DependencyServiceSample.iOS
 }
 ```
 
-Por fim, adicione isso `[assembly]` atributo acima da classe (e fora de todos os namespaces que foram definidos), incluindo quaisquer `using` instruções:
+Por fim, adicione este atributo `[assembly]` acima da classe (e fora dos namespaces definidos), incluindo as instruções `using`:
 
 ```csharp
 using UIKit;
@@ -152,13 +152,13 @@ namespace DependencyServiceSample.iOS
     ...
 ```
 
-Este atributo registra a classe como uma implementação do `IBattery` interface, o que significa que `DependencyService.Get<IBattery>` pode ser usado para criar uma instância no código compartilhado:
+Esse atributo registra a classe como uma implementação da Interface de `IBattery`, o que significa que `DependencyService.Get<IBattery>` pode ser usado em código compartilhado para criar uma instância dele:
 
 <a name="Android_Implementation" />
 
-## <a name="android-implementation"></a>Implementação do Android
+## <a name="android-implementation"></a>Implementação de Android
 
-A implementação do Android usa o [ `Android.OS.BatteryManager` ](https://developer.xamarin.com/api/type/Android.OS.BatteryManager/) API. Essa implementação é mais complexa do que a versão do iOS, que exigem verificações para lidar com a falta de permissões da bateria:
+A implementação do Android usa a API [`Android.OS.BatteryManager`](https://developer.xamarin.com/api/type/Android.OS.BatteryManager/). Essa implementação é mais complexa do que a versão do iOS, exigindo verificações para lidar com a falta de permissões da bateria:
 
 ```csharp
 using System;
@@ -295,7 +295,7 @@ namespace DependencyServiceSample.Droid
 }
 ```
 
-Adicione isso `[assembly]` atributo acima da classe (e fora de todos os namespaces que foram definidos), incluindo quaisquer `using` instruções:
+Adicione este atributo `[assembly]` acima da classe (e fora dos namespaces definidos), incluindo as instruções `using`:
 
 ```csharp
 ...
@@ -309,13 +309,13 @@ namespace DependencyServiceSample.Droid
     ...
 ```
 
-Este atributo registra a classe como uma implementação do `IBattery` interface, o que significa que `DependencyService.Get<IBattery>` podem ser usados em código compartilhado pode criar uma instância dele.
+Esse atributo registra a classe como uma implementação da Interface de `IBattery`, o que significa que `DependencyService.Get<IBattery>` pode ser usado no código compartilhado para criar uma instância dele.
 
 <a name="UWPImplementation" />
 
-## <a name="universal-windows-platform-implementation"></a>Implementação da plataforma universal do Windows
+## <a name="universal-windows-platform-implementation"></a>Implementação na Plataforma Universal do Windows
 
-A implementação de UWP usa o `Windows.Devices.Power` APIs para obter informações sobre o status da bateria:
+A implementação da UWP usa as APIs de `Windows.Devices.Power` para obter informações sobre o status da bateria:
 
 ```csharp
 using DependencyServiceSample.UWP;
@@ -409,13 +409,13 @@ namespace DependencyServiceSample.UWP
 }
 ```
 
-O `[assembly]` atributo acima da declaração de namespace registra a classe como uma implementação do `IBattery` interface, o que significa que `DependencyService.Get<IBattery>` pode ser usado no código compartilhado para criar uma instância dele.
+O atributo `[assembly]` acima da declaração de namespace registra a classe como uma implementação da interface de `IBattery`, o que significa que `DependencyService.Get<IBattery>` pode ser usado em código compartilhado para criar uma instância dele.
 
 <a name="Implementing_in_Shared_Code" />
 
-## <a name="implementing-in-shared-code"></a>Implementando em código compartilhado
+## <a name="implementing-in-shared-code"></a>Implementação em código compartilhado
 
-Agora que a interface foi implementada para cada plataforma, o aplicativo de compartilhado pode ser escrito para tirar proveito dela. O aplicativo será composto de uma página com um botão que, quando tocado atualizações seu texto com o status da bateria atual. Ele usa o `DependencyService` para obter uma instância de `IBattery` interface. Em tempo de execução, essa instância será a implementação específica da plataforma que tem acesso completo para o SDK nativo.
+Agora que a interface foi implementada para cada plataforma, o aplicativo compartilhado pode ser escrito de forma a tirar proveito dela. O aplicativo será composto por uma página com um botão que, quando tocado, atualiza seu texto com o status da bateria atual. Ele usa o `DependencyService` para obter uma instância da interface `IBattery`. Em tempo de execução, essa instância será a implementação específica da plataforma com acesso completo ao SDK nativo.
 
 ```csharp
 public MainPage ()
@@ -469,9 +469,9 @@ public MainPage ()
 }
 ```
 
-Executando esse aplicativo no iOS, Android, ou UWP e pressionando o botão resultará no texto do botão sendo atualizada para refletir o status atual de energia do dispositivo.
+Executar esse aplicativo no iOS, no Android ou na UWP e pressionar o botão fará com que o texto do botão seja atualizado para refletir o status de alimentação atual do dispositivo.
 
-![](battery-info-images/battery.png "Exemplo de Status da bateria")
+![](battery-info-images/battery.png "Exemplo de status da bateria")
 
 
 ## <a name="related-links"></a>Links relacionados

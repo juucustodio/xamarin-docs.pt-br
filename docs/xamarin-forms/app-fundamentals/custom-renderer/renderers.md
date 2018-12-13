@@ -1,6 +1,6 @@
 ---
-title: Classes Base do renderizador e controles nativos
-description: Todos os controles xamarin. Forms tem um renderizador que acompanha este artigo para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de controle nativo que implementam cada página do xamarin. Forms, layout, exibição e célula e o renderizador.
+title: Classes base de renderizador e controles nativos
+description: Cada controle do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
 ms.technology: xamarin-forms
@@ -9,44 +9,44 @@ ms.author: dabritch
 ms.date: 11/19/2018
 ms.openlocfilehash: 56df2f7e6b83ddd4a5780506471cbd32a3aced40
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171944"
 ---
-# <a name="renderer-base-classes-and-native-controls"></a>Classes Base do renderizador e controles nativos
+# <a name="renderer-base-classes-and-native-controls"></a>Classes base de renderizador e controles nativos
 
-_Todos os controles xamarin. Forms tem um renderizador que acompanha este artigo para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de controle nativo que implementam cada página do xamarin. Forms, layout, exibição e célula e o renderizador._
+_Cada controle do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms._
 
-Com exceção do `MapRenderer` os renderizadores específicos da plataforma de classe, podem ser encontrados nos seguintes namespaces:
+Com exceção da classe `MapRenderer`, os renderizadores específicos da plataforma podem ser encontrados nos seguintes namespaces:
 
 - **iOS** – Xamarin.Forms.Platform.iOS
 - **Android** – Xamarin.Forms.Platform.Android
 - **Android (AppCompat)** – Xamarin.Forms.Platform.Android.AppCompat
-- **Plataforma universal do Windows (UWP)** – Xamarin.Forms.Platform.UWP
+- **UWP (Plataforma Universal do Windows)** – Xamarin.Forms.Platform.UWP
 
-O `MapRenderer` classe pode ser encontrada nos seguintes namespaces:
+A classe `MapRenderer` pode ser encontrada nos seguintes namespaces:
 
 - **iOS** – Xamarin.Forms.Maps.iOS
 - **Android** – Xamarin.Forms.Maps.Android
-- **Plataforma universal do Windows (UWP)** – Xamarin.Forms.Maps.UWP
+- **UWP (Plataforma Universal do Windows)** – Xamarin.Forms.Maps.UWP
 
 ## <a name="pages"></a>Pages (Páginas)
 
-A tabela a seguir lista as classes de controle nativo que implementam cada xamarin. Forms e o renderizador [página](~/xamarin-forms/user-interface/controls/pages.md) tipo:
+A seguinte tabela lista as classes de renderizador e controle nativo que implementam cada tipo [Page](~/xamarin-forms/user-interface/controls/pages.md) do Xamarin.Forms:
 
 |Página|Renderizador|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |--- |
 |[`ContentPage`](xref:Xamarin.Forms.ContentPage)|[PageRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/contentpage.md)|UIViewController|ViewGroup||FrameworkElement|
-|[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)|PhoneMasterDetailRenderer (iOS – telefone), TabletMasterDetailPageRenderer (iOS – Tablet), MasterDetailRenderer (Android), MasterDetailPageRenderer (AppCompat Android), MasterDetailPageRenderer (UWP)|UIViewController (telefone), UISplitViewController (Tablet)|DrawerLayout (v4)|DrawerLayout (v4)|FrameworkElement (controle personalizado)|
-|[`NavigationPage`](xref:Xamarin.Forms.NavigationPage)|NavigationRenderer (iOS e Android), NavigationPageRenderer (AppCompat Android), NavigationPageRenderer (UWP)|UIToolbar|ViewGroup|ViewGroup|FrameworkElement (controle personalizado)|
-|[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)|TabbedRenderer (iOS e Android), TabbedPageRenderer (AppCompat Android), TabbedPageRenderer (UWP)|UIView|ViewPager|ViewPager|FrameworkElement (dinâmica)|
+|[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)|PhoneMasterDetailRenderer (iOS – Telefone), TabletMasterDetailPageRenderer (iOS – Tablet), MasterDetailRenderer (Android), MasterDetailPageRenderer (Android AppCompat), MasterDetailPageRenderer (UWP)|UIViewController (Telefone), UISplitViewController (Tablet)|DrawerLayout (v4)|DrawerLayout (v4)|FrameworkElement (Controle Personalizado)|
+|[`NavigationPage`](xref:Xamarin.Forms.NavigationPage)|NavigationRenderer (iOS e Android), NavigationPageRenderer (Android AppCompat), NavigationPageRenderer (UWP)|UIToolbar|ViewGroup|ViewGroup|FrameworkElement (Controle Personalizado)|
+|[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)|TabbedRenderer (iOS e Android), TabbedPageRenderer (Android AppCompat), TabbedPageRenderer (UWP)|UIView|ViewPager|ViewPager|FrameworkElement (Pivô)|
 |[`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage)|PageRenderer|UIViewController|ViewGroup||FrameworkElement|
 |[`CarouselPage`](xref:Xamarin.Forms.CarouselPage)|CarouselPageRenderer|UIScrollView|ViewPager|ViewPager|FrameworkElement (FlipView)|
 
 ## <a name="layouts"></a>Layouts
 
-A tabela a seguir lista as classes de controle nativo que implementam cada xamarin. Forms e o renderizador [Layout](~/xamarin-forms/user-interface/controls/layouts.md) tipo:
+A seguinte tabela lista as classes de renderizador e controle nativo que implementam cada tipo [Layout](~/xamarin-forms/user-interface/controls/layouts.md) do Xamarin.Forms:
 
 |Layout|Renderizador|iOS|Android|UWP|
 |--- |--- |--- |--- |--- |
@@ -63,7 +63,7 @@ A tabela a seguir lista as classes de controle nativo que implementam cada xamar
 
 ## <a name="views"></a>Exibições
 
-A tabela a seguir lista as classes de controle nativo que implementam cada xamarin. Forms e o renderizador [exibição](~/xamarin-forms/user-interface/controls/views.md) tipo:
+A seguinte tabela lista as classes de renderizador e controle nativo que implementam cada tipo [View](~/xamarin-forms/user-interface/controls/views.md) do Xamarin.Forms:
 
 |Exibições|Renderizador|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |--- |
@@ -90,19 +90,19 @@ A tabela a seguir lista as classes de controle nativo que implementam cada xamar
 
 ## <a name="cells"></a>Células
 
-A tabela a seguir lista as classes de controle nativo que implementam cada xamarin. Forms e o renderizador [célula](~/xamarin-forms/user-interface/controls/cells.md) tipo:
+A seguinte tabela lista as classes de renderizador e controle nativo que implementam cada tipo [Cell](~/xamarin-forms/user-interface/controls/cells.md) do Xamarin.Forms:
 
 |Células|Renderizador|iOS|Android|UWP|
 |--- |--- |--- |--- |--- |
-|[`EntryCell`](xref:Xamarin.Forms.EntryCell)|EntryCellRenderer|UITableViewCell com um UITextField|LinearLayout com um TextView e EditText|DataTemplate com uma caixa de texto|
-|[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)|SwitchCellRenderer|UITableViewCell com um UISwitch|Alternar|DataTemplate com uma grade que contém um TextBlock e ToggleSwitch|
-|[`TextCell`](xref:Xamarin.Forms.TextCell)|TextCellRenderer|UITableViewCell|LinearLayout com dois TextViews|DataTemplate com um StackPanel que contém dois TextBlocks|
-|[`ImageCell`](xref:Xamarin.Forms.ImageCell)|ImageCellRenderer|UITableViewCell com um UIImage|LinearLayout com dois TextViews e um ImageView|DataTemplate com uma grade que contém uma imagem e dois TextBlocks|
+|[`EntryCell`](xref:Xamarin.Forms.EntryCell)|EntryCellRenderer|UITableViewCell com um UITextField|LinearLayout com uma TextView e um EditText|DataTemplate com uma TextBox|
+|[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)|SwitchCellRenderer|UITableViewCell com um UISwitch|Alternar|DataTemplate com uma Grid contendo um TextBlock e um ToggleSwitch|
+|[`TextCell`](xref:Xamarin.Forms.TextCell)|TextCellRenderer|UITableViewCell|LinearLayout com duas TextViews|DataTemplate com um StackPanel contendo dois TextBlocks|
+|[`ImageCell`](xref:Xamarin.Forms.ImageCell)|ImageCellRenderer|UITableViewCell com uma UIImage|LinearLayout com duas TextViews e uma ImageView|DataTemplate com uma Grade contendo uma Imagem e dois TextBlocks|
 |[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|Exibir|DataTemplate com um ContentPresenter|
 
 ## <a name="summary"></a>Resumo
 
-Este artigo listou o renderizador e classes de controle nativo que implementam cada página do xamarin. Forms, layout, exibição e célula. Todos os controles xamarin. Forms tem um renderizador que acompanha este artigo para cada plataforma que cria uma instância de um controle nativo.
+Este artigo listou as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms. Cada controle do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo.
 
 ## <a name="related-links"></a>Links relacionados
 
