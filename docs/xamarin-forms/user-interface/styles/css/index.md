@@ -385,11 +385,7 @@ As propriedades CSS a seguir têm suporte pelo xamarin. Forms (na **valores** ti
 |`flex-basis`|`VisualElement`|_float_ \| `auto` \| `initial`. Além disso, uma porcentagem no intervalo de 0 a 100% pode ser especificada com o `%` sinal.|`flex-basis: 25%;`|
 |`flex-grow`|`VisualElement`|_float_ \| `initial`|`flex-grow: 1.5;`|
 |`flex-shrink`|`VisualElement`|_float_ \| `initial`|`flex-shrink: 1;`|
-|`flex-wrap`|`VisualElement`| `nowrap`\|`wrap`\|`reverse`
-  \|
-  `wrap-reverse`
-  \|
-  `initial`|`flex-wrap: wrap-reverse;`|
+|`flex-wrap`|`VisualElement`| `nowrap` \| `wrap` \| `reverse` \| `wrap-reverse` \| `initial`|`flex-wrap: wrap-reverse;`|
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_cadeia de caracteres_ \| `initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_duplo_ \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold`\|`italic`\|`initial` |`font-style: bold;`|
@@ -414,11 +410,7 @@ As propriedades CSS a seguir têm suporte pelo xamarin. Forms (na **valores** ti
 |`position`|`FlexLayout`| `relative`\|`absolute`\|`initial`|`position: absolute;`|
 |`row-gap`|`Grid`| _Double_ \| `initial`|`row-gap: 12;`|
 |`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left` e `right` devem ser evitadas em ambientes da direita para esquerda.| `text-align: right;`|
-|`text-decoration`|`Label`, `Span`|`none`\|`underline`\|`strikethrough`
-  \|
-  `line-through`
-  \|
-  `initial`|`text-decoration: underline, line-through;`|
+|`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
 |`transform-origin`|`VisualElement`| _duplo_, _duplo_ \| `initial` |`transform-origin: 7.5, 12.5;`|
 |`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
