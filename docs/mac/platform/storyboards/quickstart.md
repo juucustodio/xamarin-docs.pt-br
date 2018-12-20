@@ -86,7 +86,7 @@ No menu pop-up, selecionaremos **pop-over**:
 
 [![](quickstart-images/qs15.png "Selecionar o tipo de segue")](quickstart-images/qs15.png#lightbox)
 
-Por fim, vamos selecionar o Segue na superfície de Design e defina as **Edge preferencial** para **esquerda**. Em seguida, arrastaremos uma linha do **modo de exibição de âncora** ao botão que desejamos que o pop-over para ser anexado a:
+Por fim, vamos selecionar o Segue na superfície de Design e defina a **Borda preferencial** para **esquerda**. Em seguida, arrastaremos uma linha do **modo de exibição de âncora** ao botão que desejamos que o pop-over para ser anexado a:
 
 [![](quickstart-images/qs16.png "Arrastando para criar um novo segue")](quickstart-images/qs16.png#lightbox)
 
