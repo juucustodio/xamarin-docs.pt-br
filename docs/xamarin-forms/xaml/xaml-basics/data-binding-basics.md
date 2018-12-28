@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 65316bde1d1c709028eae39c19e5dc318821ff70
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055722"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746876"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de vinculação de dados
 
@@ -22,7 +22,7 @@ _Associações de dados permitem que as propriedades de dois objetos a serem vin
 
 ## <a name="data-bindings"></a>Associações de dados
 
-Associações de dados se conectar a propriedades de dois objetos, chamados de *fonte* e o *destino*. No código, são necessárias duas etapas: O `BindingContext` propriedade do objeto de destino deve ser definida para o objeto de origem e o `SetBinding` método (geralmente usado em conjunto com o `Binding` classe) deve ser chamado no objeto de destino para associar uma propriedade de que objeto a uma propriedade do objeto de origem.
+Associações de dados se conectar a propriedades de dois objetos, chamados de *fonte* e o *destino*. No código, são necessárias duas etapas: O `BindingContext` propriedade do objeto de destino deve ser definida para o objeto de origem e o `SetBinding` método (geralmente usado em conjunto com o `Binding` classe) deve ser chamado no objeto de destino para associar uma propriedade desse objeto para uma propriedade da fonte objeto.
 
 A propriedade de destino deve ser uma propriedade vinculável, o que significa que o objeto de destino deve derivar de `BindableObject`. A documentação do xamarin. Forms online indica quais propriedades são propriedades associáveis. Uma propriedade de `Label` , como `Text` associado com a propriedade associável `TextProperty`.
 
@@ -71,7 +71,7 @@ O `Slider` contém uma `x:Name` atributo que é referenciado pelas duas `Label` 
 
 O `x:Reference` extensão de associação define uma propriedade chamada `Name` para definir como o nome do elemento referenciado, nesse caso, `slider`. No entanto, o `ReferenceExtension` classe que define o `x:Reference` extensão de marcação também define um `ContentProperty` de atributo para `Name`, que significa que não é explicitamente necessário. Apenas para a variedade, a primeira `x:Reference` inclui "nome =", mas não o segundo:
 
-```csharp
+```xaml
 BindingContext="{x:Reference Name=slider}"
 …
 BindingContext="{x:Reference slider}"
@@ -79,7 +79,7 @@ BindingContext="{x:Reference slider}"
 
 O `Binding` extensão de marcação em si pode ter várias propriedades, assim como o `BindingBase` e `Binding` classe. O `ContentProperty` para `Binding` é `Path`, mas o "caminho =" parte da extensão de marcação pode ser omitido se o caminho é o primeiro item no `Binding` extensão de marcação. O exemplo primeiro tem "caminho =", mas o segundo exemplo omite a ele:
 
-```csharp
+```xaml
 Rotation="{Binding Path=Value}"
 …
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -87,7 +87,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 As propriedades podem estar em uma linha ou separados em várias linhas:
 
-```csharp
+```xaml
 Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
@@ -96,7 +96,7 @@ Fazer o que for conveniente.
 
 Observe que o `StringFormat` propriedade na segunda `Binding` extensão de marcação. No xamarin. Forms, as associações não executam as conversões de tipo implícito, e se você precisar exibir um objeto de cadeia de caracteres não como uma cadeia de caracteres, você deve fornecer um conversor de tipo ou usar `StringFormat`. Nos bastidores, estático `String.Format` método é usado para implementar `StringFormat`. Que é potencialmente um problema, porque as especificações de formatação .NET envolvem chaves, que também são usadas para delimitar as extensões de marcação. Isso cria um risco de confundir o analisador XAML. Para evitar isso, coloque toda a cadeia de caracteres de formatação em aspas simples:
 
-```csharp
+```xaml
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -117,7 +117,7 @@ A solução para esse e outros problemas envolve a `Mode` propriedade, que é de
 
 O programa a seguir demonstra um uso comum de `OneWayToSource` e `TwoWay` modos de ligação. Quatro `Slider` modos de exibição destinam-se ao controle de `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades de um `Label`. A princípio, parece como se essas quatro propriedades do `Label` deve ser destinos de vinculação de dados, porque cada um está sendo definida um `Slider`. No entanto, o `BindingContext` de `Label` pode ser apenas um objeto, e há quatro controles deslizantes diferentes.
 
-Por esse motivo, todas as associações são definidas aparentemente com versões anteriores maneiras: os `BindingContext` de cada um dos quatro controles deslizantes é definido como o `Label`, e as associações são definidas no `Value` propriedades dos controles deslizantes. Usando o `OneWayToSource` e `TwoWay` modos, essas `Value` propriedades podem definir as propriedades da fonte, que são os `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades do `Label`:
+Por esse motivo, todas as associações são definidas aparentemente com versões anteriores maneiras: O `BindingContext` de cada um dos quatro controles deslizantes é definido como o `Label`, e as associações são definidas no `Value` propriedades dos controles deslizantes. Usando o `OneWayToSource` e `TwoWay` modos, essas `Value` propriedades podem definir as propriedades da fonte, que são os `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades do `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

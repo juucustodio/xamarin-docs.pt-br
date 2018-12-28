@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: c2c0e516c864ec4073d5bb54b77754f58064d6b0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f498aab5bfaffc08a22f62a318f8f9f73ab0afca
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116739"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609903"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Dicas de solução de problemas do xamarin. Mac
 
@@ -77,7 +77,7 @@ O **permitir saída conexões de rede (cliente)** permissão é aquela exigida p
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: não há dados disponíveis para a codificação 437
  
-Ao incluir 3ª bibliotecas de terceiros em seu aplicativo xamarin. Mac, você poderá receber um erro no formato "System. NotSupportedException: nenhum dado está disponível para a codificação 437" ao tentar compilar e executar o aplicativo. Por exemplo, bibliotecas, como `Ionic.Zip.ZipFile`, pode gerar essa exceção durante a operação.
+Ao incluir 3ª bibliotecas de terceiros em seu aplicativo xamarin. Mac, você poderá receber um erro no formato "System. NotSupportedException: Não há dados disponíveis para codificação 437" ao tentar compilar e executar o aplicativo. Por exemplo, bibliotecas, como `Ionic.Zip.ZipFile`, pode gerar essa exceção durante a operação.
 
 Isso pode ser resolvido, abrindo as opções para o projeto xamarin. Mac, vai **Build do Mac** > **internacionalização** e verificando o **Oeste** internacionalização:
 
@@ -110,10 +110,6 @@ Para projetos existentes do xamarin. Mac, você precisará criar manualmente a *
 Insira `Entitlements` para o nome e clique o **New** botão. Se seu projeto anteriormente incluído um arquivo de direitos, você será solicitado a adicioná-lo ao projeto em vez de criar um novo arquivo:
 
 [![Verificando a substituição de um arquivo](troubleshooting-images/entitlements04.png "verificando a substituição de um arquivo")](troubleshooting-images/entitlements04-large.png#lightbox)
-
-## <a name="contacting-support-business-or-enterprise-licenses"></a>Contatando o suporte (licenças de business ou enterprise)
-
-Se você tiver uma licença de enterprise ou business, você está qualificado para solicitar ajuda diretamente de engenheiros de Xamarin por meio de tíquetes de suporte. Ver [xamarin.com/support](http://xamarin.com/support) para obter detalhes.
 
 ## <a name="community-support-on-the-forums"></a>Suporte da comunidade nos fóruns
 

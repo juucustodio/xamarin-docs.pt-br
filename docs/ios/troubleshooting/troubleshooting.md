@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681560"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609929"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para xamarin. IOS 
 
@@ -123,13 +123,13 @@ Os arquivos de designer são gerados usando configurações de namespace padrão
 
 Configurações de Namespace podem ser encontradas na caixa de diálogo Opções do projeto. O namespace padrão é encontrado na **geral -> configurações de Main** seção. Se ele estiver em branco, o nome do seu projeto é usado como o padrão. As configurações mais avançadas do namespace podem ser encontradas na **código-fonte -> políticas de nomenclatura .NET** seção.
 
-## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>Para ações de aviso: O método particular 'Foo' nunca é usado. (CS0169)
+## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>Aviso para ações: O método particular 'Foo' nunca é usado. (CS0169)
 
 Ações para arquivos do construtor de interface são conectadas os widgets por reflexão em tempo de execução, portanto, esse aviso é esperado.
 
 Você pode usar o "aviso #pragma desabilitar 0169" "habilitar o aviso #pragma 0169" em torno de suas ações para suprimir este aviso apenas para esses métodos, ou adicionar 0169 ao campo de "Ignorar avisos" em Opções do compilador se você quiser desabilitá-lo para todo o projeto (não recomendado).
 
-## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch falhou com a seguinte mensagem: não é possível abrir o assembly ' / path/to/yourproject.exe'
+## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch falhou com a seguinte mensagem: Não é possível abrir o assembly ' / path/to/yourproject.exe'
 
 Se você vir essa mensagem de erro, geralmente, o problema é que o caminho absoluto para seu projeto contém um espaço. Isso será corrigido em uma versão futura do xamarin. IOS, mas você pode contornar o problema, movendo o projeto para uma pasta sem espaços.
 
@@ -144,7 +144,7 @@ Isso acontece quando você faz o seguinte:
 
 O problema é que o Mono é pegar o OS X `libsqlite3.dylib`, do não o iPhoneSimulator `libsqlite3.dylib` arquivo. Seu aplicativo *serão* funcionam no dispositivo, mas não o simulador.
 
-## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>Implantar o dispositivo falhará com o System. Exception: AMDeviceInstallApplication retornado 3892346901
+## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>Implante o dispositivo falhará com o System. Exception: AMDeviceInstallApplication retornado 3892346901
 
 Esse erro significa que a configuração de assinatura de código para sua id do certificado/pacote não coincide com o perfil de provisionamento instalado em seu dispositivo.  Confirme se você tiver o certificado apropriado selecionado nas opções de projeto -> assinatura do pacote do iPhone e a id do pacote correto especificada nas opções de projeto -> aplicativo de iPhone
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Isso significa que você está vinculando a uma biblioteca estática compilada com código thumb em seu projeto. A partir da versão SDK do iPhone 3.1 (ou superior no momento da redação deste artigo) Apple introduziu um bug em seu vinculador ao vincular o código de não-Thumb (xamarin. IOS) com o código Thumb (biblioteca estática). Você precisará vincular com uma versão não elevador da sua biblioteca estática para atenuar esse problema.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System. ExecutionEngineException: Tentativa () de Foo[]:System.Collections.Generic.ICollection'1.get_Count de método (wrapper gerenciado para gerenciado) de compilação JIT
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System. ExecutionEngineException: A tentativa de () de Foo[]:System.Collections.Generic.ICollection'1.get_Count de método (wrapper gerenciado para gerenciado) de compilação JIT
 
 O sufixo de [] indica que você ou a biblioteca de classes está chamando um método em uma matriz por meio de uma coleção genérica, como IEnumerable <>, ICollection <> ou <> IList. Como alternativa, você pode forçar explicitamente o compilador AOT para incluir um método desse tipo chamando o método por conta própria e, certificando-se de que esse código é executado antes da chamada que disparou a exceção. Nesse caso, você poderia escrever:
 
@@ -212,7 +212,7 @@ Esse problema é muito raro e extremamente difíceis de reproduzir - ele geralme
 
 Anexe os logs de XS **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}. log**, e **componentes-{TIMESTAMP}. log**(nas versões mais antigas do MonoDevelop/XS, basta enviar **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
- **Observação: Esse problema foi corrigido no Final do XS 2.2**
+ **OBSERVAÇÃO: Esse problema foi corrigido no Final do XS 2.2**
 
 ## <a name="compiled-application-is-very-large"></a>Aplicativo compilado é muito grande
 
@@ -317,7 +317,7 @@ Siga estas etapas:
 -  Criar um Info. plist personalizado para o projeto e defina explicitamente MinimumOSVersion 3.0 nele.   Isso substituirá o valor de MinimumOSVersion 3.2 definido pelo xamarin. IOS.   Se você não fizer isso, o aplicativo não poderá executar em um iPhone.
 -  Recompilação, zip e upload para o iTunes conectam.
 
-## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Exceção sem tratamento: Exception: Falha ao localizar o seletor someSelector: em {type}
+## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Exceção sem tratamento: System.Exception: Falha ao localizar o seletor someSelector: em {type}
 
 Essa exceção é causada por uma das três coisas:
 
@@ -398,7 +398,7 @@ Isso é proibido como o nome do executável no CFBundleExecutable - mesmo que el
 
  * "O valor não deve incluir qualquer extensão no nome." - [http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
-## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Erro: "tipo de atributo personalizado 0x43 não há suporte para" quando arquivos. XIB de clicar duas vezes
+## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Erro: "Não há suporte para o tipo de atributo personalizado 0x43" quando arquivos. XIB de clicar duas vezes
 
 Isso é causado pela tentativa de abrir arquivos. XIB quando as variáveis de ambiente estão configuradas incorretamente. Isso não deve ocorrer com o uso normal do Visual Studio para Mac/Xamarin.iOS e abrir novamente o Visual Studio para Mac na/aplicativos deve corrigir o problema.
 
@@ -413,26 +413,6 @@ Para verificar a ação de compilação, clique com o botão direito no arquivo.
 
 ## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: Não há dados disponíveis para a codificação 437
 
-Ao incluir 3ª bibliotecas de terceiros em seu aplicativo xamarin. IOS, você poderá receber um erro no formato "System. NotSupportedException: nenhum dado está disponível para a codificação 437" ao tentar compilar e executar o aplicativo. Por exemplo, bibliotecas, como `Ionic.Zip.ZipFile`, pode gerar essa exceção durante a operação.
+Ao incluir 3ª bibliotecas de terceiros em seu aplicativo xamarin. IOS, você poderá receber um erro no formato "System. NotSupportedException: Não há dados disponíveis para codificação 437" ao tentar compilar e executar o aplicativo. Por exemplo, bibliotecas, como `Ionic.Zip.ZipFile`, pode gerar essa exceção durante a operação.
 
 Isso pode ser resolvido, abrindo as opções para o projeto xamarin. IOS, vai **Build do iOS** > **internacionalização** e verificando o **Oeste** Internacionalização.
-
-
-
-<a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
-
-
-## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>Não é possível atualizar para o negócio/Indie da conta de avaliação
-
-Se você adquiriu recentemente o xamarin. IOS e iniciados anteriormente uma versão de avaliação do xamarin. IOS, você precisará concluir as seguintes etapas para obter essa alteração de licença selecionada pelo Visual Studio para Mac ou Visual Studio.
-
--  Feche o Visual Studio para Mac/Visual Studio
--  Remover todos os arquivos de ~/Library/MonoTouch no Mac ou %PROGRAMDATA%\MonoTouch\License\ para Windows
--  Abra novamente o Visual Studio para Mac/Visual Studio e compilar um projeto xamarin. IOS
-
-
-## <a name="receiving-activation-incomplete-error-message"></a>Recebendo mensagens de erro 'Ativação incompleta'
-
-Esse problema pode ocorrer ao usar o xamarin. IOS para Visual Studio. Para resolver esse problema, envie os logs do seguinte local para [ contact@xamarin.com ](mailto:contact@xamarin.com).
-
--  Local do log: %LocalAppData%/Xamarin/Logs

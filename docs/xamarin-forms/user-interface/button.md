@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 7108b24f73d1f7389bf37fe8640061ae3e077300
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 250b3de2ef41ce488165f3149c72ce28c39e53a3
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054418"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746889"
 ---
 # <a name="xamarinforms-button"></a>Botão de xamarin. Forms
 
@@ -138,7 +138,7 @@ button.Clicked += OnButtonClicked;
 
 ## <a name="disabling-the-button"></a>Desabilitação do botão
 
-Às vezes, um aplicativo está em um estado específico em que um determinado `Button` clique não é uma operação válida. Nesses casos, o `Button` deve ser desabilitado definindo seu `IsEnabled` propriedade `false`. O exemplo clássico é um `Entry` controle de um nome de arquivo acompanhado por uma abertura de arquivo `Button`: O `Button` deve ser habilitada apenas se algum texto foi digitado no `Entry`.
+Às vezes, um aplicativo está em um estado específico em que um determinado `Button` clique não é uma operação válida. Nesses casos, o `Button` deve ser desabilitado definindo seu `IsEnabled` propriedade `false`. O exemplo clássico é um `Entry` controle de um nome de arquivo acompanhado por uma abertura de arquivo `Button`: O `Button` deve ser habilitada apenas se algum texto foi digitado para o `Entry`.
 Você pode usar um `DataTrigger` para essa tarefa, conforme mostrado na [ **gatilhos de dados** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) artigo.
 
 ## <a name="using-the-command-interface"></a>Usando a interface de comando
@@ -409,7 +409,7 @@ O resultado é que o `Label` apenas gira enquanto é de um dedo em contato com o
 
 [![Pressione e solte o botão](button-images/PressAndReleaseButton.png "pressione e solte o botão")](button-images/PressAndReleaseButton-Large.png)
 
-Esse tipo de comportamento tem aplicativos de jogos: um dedo mantido um `Button` pode fazer um objeto de tela em Mover em uma direção específica.
+Esse tipo de comportamento tem aplicativos de jogos: Um dedo mantido um `Button` pode fazer um objeto de tela em Mover em uma direção específica.
 
 <a name="button-appearance" />
 
@@ -573,7 +573,7 @@ O exemplo XAML a seguir mostra como definir um estado visual para o `Pressed` es
 
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
-</ImageButton>
+</Button>
 ```
 
 O `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) Especifica que, quando o [ `Button` ](xref:Xamarin.Forms.Button) for pressionado, seu [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propriedade será alterada de seu valor padrão de 1 para 0,8. O `Normal` `VisualState` Especifica que, quando o `Button` está em um estado normal, seu `Scale` propriedade será definida como 1. Portanto, o efeito geral é que quando o `Button` é pressionado, ele será escalada novamente para ser um pouco menores e quando o `Button` é lançado, ele será escalada novamente ao seu tamanho padrão.

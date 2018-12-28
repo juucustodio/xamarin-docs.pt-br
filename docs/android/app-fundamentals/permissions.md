@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1a73896e4f98a6535bcd7ed66f478d168b01157f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 204dd903586164691d068a956e741c406df10b36
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526878"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746863"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permissões no xamarin. Android
 
@@ -139,7 +139,7 @@ else
 
 É uma prática recomendada para informar ao usuário sobre por que uma permissão é necessária para um aplicativo para que uma decisão informada pode ser feita para conceder a permissão. Um exemplo disso seria um aplicativo que usa fotos e marcas do geo-los. Está claro para o usuário que a permissão de câmera é necessária, mas pode não ser claro por que o aplicativo também precisa do local do dispositivo. A lógica deve exibir uma mensagem para ajudar o usuário a entender por que a permissão de localização é desejável e que a permissão de câmera é necessária.
 
-O `ActivityCompat.ShouldShowRequestPermissionRational` método é usado para determinar se a lógica deve ser mostrada ao usuário. Esse método retornará `true` se a lógica para uma determinada permissão deve ser exibida. Esta captura de tela mostra um exemplo de um Snackbar exibida por um aplicativo que explica por que o aplicativo precisa saber o local do dispositivo:
+O `ActivityCompat.ShouldShowRequestPermissionRationale` método é usado para determinar se a lógica deve ser mostrada ao usuário. Esse método retornará `true` se a lógica para uma determinada permissão deve ser exibida. Esta captura de tela mostra um exemplo de um Snackbar exibida por um aplicativo que explica por que o aplicativo precisa saber o local do dispositivo:
 
 ![Lógica para local](permissions-images/07-rationale-snackbar.png) 
 
