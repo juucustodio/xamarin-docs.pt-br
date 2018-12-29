@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
-ms.openlocfilehash: adebd5fe7e05d6698a7d69cef56a1d4035b6d8e7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 9924e588808783fe35dbd830bbc9af288f37e7ea
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563063"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53813954"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Linguagem de marcação de aplicativo extensível (XAML)
 
@@ -20,7 +20,7 @@ _XAML é uma linguagem de marcação declarativa que pode ser usada para definir
 
 > [!VIDEO https://youtube.com/embed/H6UOrSyhTEE]
 
-**Evoluir 2016: Tornando-se um mestre de XAML**
+**Evolui 2016: Tornando-se um mestre de XAML**
 
 > [!NOTE]
 > Experimente o [visualização padrão de XAML](standard/index.md)
@@ -29,7 +29,7 @@ _XAML é uma linguagem de marcação declarativa que pode ser usada para definir
 
 ## <a name="xaml-basicsxaml-basicsindexmd"></a>[Noções básicas de XAML](xaml-basics/index.md)
 
-XAML permite que os desenvolvedores definam interfaces do usuário em aplicativos xamarin. Forms usando marcação em vez de código. XAML nunca é necessária em um programa do xamarin. Forms, mas ele é compatível com ferramentas e geralmente é mais visualmente coerente e mais sucinta do que o código equivalente. XAML é especialmente adequado para uso com a arquitetura do aplicativo Model-View-ViewModel (MVVM) populares: XAML define o modo de exibição que esteja vinculado ao código do ViewModel por meio de ligações de dados com base em XAML.
+XAML permite que os desenvolvedores definam interfaces do usuário em aplicativos xamarin. Forms usando marcação em vez de código. XAML nunca é necessária em um programa do xamarin. Forms, mas ele é compatível com ferramentas e geralmente é mais visualmente coerente e mais sucinta do que o código equivalente. XAML é especialmente adequado para uso com a arquitetura de aplicativo populares Model-View-ViewModel (MVVM): XAML define o modo de exibição que esteja vinculado ao código do ViewModel por meio de ligações de dados com base em XAML.
 
 ## <a name="xaml-compilationxamlcmd"></a>[compilação de XAML](xamlc.md)
 
@@ -66,3 +66,7 @@ Uma propriedade anexada é um tipo especial de propriedade associável, definido
 ## <a name="resource-dictionariesresource-dictionariesmd"></a>[Dicionários de recurso](resource-dictionaries.md)
 
 Recursos XAML são definições de objetos que podem ser usados mais de uma vez. Um [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) permite que os recursos sejam definidos em um único local e reutilizadas em todo um aplicativo xamarin. Forms. Este artigo demonstra como criar e consumir um `ResourceDictionary`e como mesclar um `ResourceDictionary` em outro.
+
+## <a name="loading-xaml-at-runtimeruntime-loadmd"></a>[Carregando XAML em tempo de execução](runtime-load.md)
+
+XAML pode ser carregado e analisado em tempo de execução com o [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão.
