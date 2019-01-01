@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 132f31f4c9426dfceeef38f464231d1545f4db50
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dcfcf6c29b0a055c59501d6d95d4f97c16475bb3
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115166"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815224"
 ---
 # <a name="gtk-platform-setup"></a>Instalação de plataforma do GTK #
 
@@ -106,7 +106,7 @@ Siga estas instruções para adicionar um aplicativo do GTK # que será executad
 
     ![Alterar o tipo de saída do projeto](gtk-images/win/change-project-output-type.png "alterar o tipo de saída do projeto")
 
-13. No **Gerenciador de soluções**, o projeto WPF com o botão direito e selecione **definir como projeto de inicialização**. Pressione F5 para executar o programa com o depurador do Visual Studio, na área de trabalho do Windows:
+13. No **Gerenciador de soluções**, clique com botão direito no projeto GTK e selecione **definir como projeto de inicialização**. Pressione F5 para executar o programa com o depurador do Visual Studio, na área de trabalho do Windows:
 
     ![O GTK # jogo da vida útil](gtk-images/win/gtk-gameoflife.png "GTK # jogo da vida útil")
 

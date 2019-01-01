@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 3d031489fe71c580b309bedba30c524dfe6666db
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1d164c8593e358a97b21f42bf7116f64d0ac460d
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057938"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815211"
 ---
 # <a name="xamarinforms-map"></a>Mapa do xamarin. Forms
 
@@ -216,7 +216,7 @@ var pin = new Pin {
 map.Pins.Add(pin);
 ```
 
- `PinType` pode ser definido como um dos valores a seguir, que podem afetar a maneira como o pino no renderizadas (dependendo da plataforma):
+ `PinType` pode ser definido como um dos valores a seguir, que podem afetar a maneira que o pin é renderizado (dependendo da plataforma):
 
 -  Genérico
 -  Local
