@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 156c2f9dca47a7755d4f810d7921a05662388ded
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 1334340f18e664d4c652803e7678f45ee942eea8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996708"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057399"
 ---
 # <a name="displaying-pop-ups"></a>Exibindo pop-ups
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
 
 _O Xamarin.Forms fornece dois elementos de interface do usuário semelhantes a pop-up: um alerta e uma folha de ações. Este artigo demonstra como usar as APIs de folha de alerta e de ação para fazer perguntas simples para os usuários e orientá-los em suas tarefas._
 

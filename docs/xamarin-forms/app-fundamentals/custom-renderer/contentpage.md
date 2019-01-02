@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
+ms.openlocfilehash: e310726ae4ad72d10e8e2890e9fbf07dda9bc48e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "38995736"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052323"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizando uma ContentPage
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)
 
 _Uma ContentPage é um elemento visual que mostra uma única exibição e ocupa a maior parte da tela. Este artigo mostra como criar um renderizador personalizado para a página ContentPage, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica a uma plataforma._
 
@@ -109,7 +111,7 @@ A instância de `CameraPage` é renderizada por classes de `CameraPageRenderer` 
 
 ![](contentpage-images/screenshots.png "CameraPage em cada plataforma")
 
-A classe `PageRenderer` expõe o método `OnElementChanged`, que é chamado quando a página do Xamarin.Forms é criada para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o elemento do Xamarin.Forms a que o renderizador *estava* anexado e o elemento a que o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `CameraPage`.
+A classe `PageRenderer` expõe o método `OnElementChanged`, que é chamado quando a página do Xamarin.Forms é criada para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o elemento do Xamarin.Forms ao qual o renderizador *estava* anexado e o elemento do Xamarin.Forms ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `CameraPage`.
 
 Uma versão de substituição do método `OnElementChanged` na classe `CameraPageRenderer` é o lugar para realização da personalização da página nativa. É possível obter uma referência para a instância da página do Xamarin.Forms que está sendo renderizada por meio da propriedade `Element`.
 

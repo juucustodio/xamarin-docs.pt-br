@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 49f66164c707f91f298b2e5cb09b35f1767186cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106423"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051575"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Associação de um ControlTemplate do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
 
 _Associações de modelo permitem que os controles em um modelo de controle associem dados a propriedades públicas, permitindo que os valores de propriedade em controles no modelo de controle sejam alterados facilmente. Este artigo demonstra como usar associações de modelo para realizar a associação de dados de um modelo de controle._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 25f6cf341fcf47d5dc5320f73855bb2a4e29a9e8
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 3bfb8a10eab1a8a75a3f2048de1ce219df9bde66
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675517"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057659"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Página Mestre/Detalhes do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/)
 
 _A MasterDetailPage do Xamarin.Forms é uma página que gerencia duas páginas relacionadas de informações – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar uma MasterDetailPage e navegar entre suas páginas de informações._
 

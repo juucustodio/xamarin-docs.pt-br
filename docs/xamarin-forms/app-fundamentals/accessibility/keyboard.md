@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: f703dff56d2947c35a9bc76e0eb909bfe9023bac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 69fc1cd146227e464e70c347d3e28d250a7f1346
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130832"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050433"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Navegação por teclado no Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
 Alguns usuários podem ter dificuldade para usar aplicativos que não fornecem acesso apropriado por teclado. Especificar uma ordem de tabulação para os controles habilita a navegação por teclado e prepara as páginas do aplicativo para receber as entradas em uma ordem específica.
 

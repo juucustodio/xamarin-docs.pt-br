@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 0511cd1a4cf76368623c56ef53cd98323114f98e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38994670"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058984"
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 
 _A classe NavigationPage oferece uma experiência de navegação hierárquica em que o usuário pode navegar pelas páginas para frente e para trás, conforme desejado. A classe implementa a navegação como uma pilha UEPS (último a entrar, primeiro a sair) de objetos de Página. Este artigo demonstra como usar a classe NavigationPage para executar a navegação em uma pilha de páginas._
 

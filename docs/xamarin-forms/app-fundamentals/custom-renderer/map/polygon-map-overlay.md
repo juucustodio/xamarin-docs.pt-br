@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0a11e9c25922531727ad2fee3bbed9c8d4e2b80c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 9859df6856f118dcfbc6bb4553b10882295866b2
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998128"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057238"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Realçando uma região em um mapa
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
 
 _Este artigo explicou como adicionar uma sobreposição poligonal a um mapa a fim de realçar uma determinada região. Polígonos são uma forma fechada e têm seus interiores preenchidos._
 
@@ -31,7 +33,7 @@ Quando um controle [`Map`](xref:Xamarin.Forms.Maps.Map) é renderizado por um ap
 1. [Personalizar](#Customizing_the_Map) o mapa criando um renderizador personalizado para o mapa em cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) deve ser inicializado e configurado antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) precisa ser inicializado e configurado antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 Para obter informações sobre como personalizar um mapa usando um renderizador personalizado, confira [Personalizando um marcador de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2018
-ms.openlocfilehash: c5d2f93c8cb97c50f9d35d9ad91adf4c6437a3db
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.openlocfilehash: c716f39faad0b58159df5631bf415239a2c658b1
+ms.sourcegitcommit: 06f88979db160fb8dd1c9ee0d5000d8749107489
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "38999006"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53806945"
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Uma Introdução ao Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GettingStarted/)
 
 _Xamarin.Forms é uma estrutura que permite aos desenvolvedores criar aplicativos multiplataforma para Android, iOS e Windows. As definições de interface do usuário e códigos são compartilhadas entre plataformas, mas são renderizadas usando controles nativos. Este artigo faz uma introdução ao Xamarin.Forms e mostra como começar a desenvolver aplicativos com C# e XAML no Visual Studio._
 
@@ -424,7 +426,7 @@ class EmployeeCell : ViewCell
         var twitterLabel = new Label
         {
            HorizontalOptions = LayoutOptions.FillAndExpand,
-           Font = Fonts.Twitter
+           FontSize = 24
         };
         twitterLabel.SetBinding(Label.TextProperty, "Twitter");
 

@@ -9,14 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/13/2018
-ms.openlocfilehash: f836d6212dfdff6c9840e2d780def3df72bc7c27
-ms.sourcegitcommit: 744c0a50420bb091fca8b92a84c20e61c741cf9e
+ms.openlocfilehash: fcd7f1b9d88b7305f9cccd12a799d71c793c42b4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52742879"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057451"
 ---
 # <a name="xamarinforms-quickstart"></a>Início rápido do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Phoneword/)
 
 Esse passo a passo demonstra como criar um aplicativo que converte um número de telefone alfanumérico inserido pelo usuário em um número de telefone e que chama o número. O aplicativo final é mostrado abaixo:
 
@@ -411,7 +413,7 @@ Esse passo a passo demonstra como criar um aplicativo que converte um número de
     </ContentPage>
     ```
 
-    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 7. No **Painel de Soluções**, clique duas vezes em **MainPage.xaml.cs** para abri-lo:
 
@@ -465,7 +467,7 @@ Esse passo a passo demonstra como criar um aplicativo que converte um número de
     > [!NOTE]
     > Tentar compilar o aplicativo neste ponto resultará em erros que serão corrigidos mais tarde.
 
-    Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 9. No **Painel de Soluções**, selecione o projeto **Phoneword**, clique com botão direito do mouse e selecione **Adicionar > Novo arquivo...**:
 
@@ -531,7 +533,7 @@ Esse passo a passo demonstra como criar um aplicativo que converte um número de
     }
     ```
 
-    Salve as alterações em **PhoneTranslator.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **PhoneTranslator.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 12. No **Painel de Soluções**, selecione o projeto **Phoneword**, clique com botão direito do mouse e selecione **Adicionar > Novo arquivo...**:
 
@@ -552,7 +554,7 @@ Esse passo a passo demonstra como criar um aplicativo que converte um número de
         }
     }
     ```
-    Salve as alterações em **IDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **IDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
     > [!NOTE]
     > Agora o código comum para o aplicativo está concluído. O código de discagem do telefone específico da plataforma agora será implementado como um [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
@@ -587,7 +589,7 @@ Esse passo a passo demonstra como criar um aplicativo que converte um número de
     }
     ```
 
-    Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 18. No **Painel de Soluções**, selecione o projeto **Phoneword.Droid**, clique com botão direito do mouse e selecione **Adicionar > Novo arquivo...**:
 
@@ -646,7 +648,7 @@ Esse passo a passo demonstra como criar um aplicativo que converte um número de
     }
     ```
 
-    Observe que esse código pressupõe que você esteja usando a API do Android mais recente. Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Observe que esse código pressupõe que você esteja usando a API do Android mais recente. Salve as alterações em **PhoneDialer.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 21. No **Painel de Soluções**, no projeto **Phoneword.Droid**, clique duas vezes em **MainActivity.cs** para abri-lo, remova todo o código de modelo e substitua-o pelo código a seguir:
 
@@ -687,7 +689,7 @@ Esse passo a passo demonstra como criar um aplicativo que converte um número de
 
     ![](quickstart-images/xs/android-manifest-changed.png "Habilitar a Permissão de CallPhone")
 
-    Salve as alterações em **AndroidManifest.xml** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **AndroidManifest.xml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
 24. No Visual Studio para Mac, selecione o item de menu **Compilar > Compilar Tudo** (ou pressione **&#8984; + B**). O aplicativo será criado e uma mensagem de êxito será exibida na barra do Visual Studio para Mac.
 

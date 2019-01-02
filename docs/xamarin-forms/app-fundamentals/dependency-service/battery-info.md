@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: cbb4a01ac2c6d933fe40a0b3c2571d1fe3ce75c0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bdfef88e0cf5916b1eec08ddfaa09165a057765a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998383"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058567"
 ---
 # <a name="checking-battery-status"></a>Verificando o status da bateria
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/DependencyService)
 
 Este artigo descreve como criar um aplicativo que verifica o status da bateria. Este artigo se baseia o plug-in Battery de James Montemagno. Para obter mais informações, confira o [Repositório do GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery).
 

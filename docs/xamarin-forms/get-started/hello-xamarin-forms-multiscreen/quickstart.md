@@ -8,14 +8,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 957c3e0d3b0637c8b536d920a05397bc711dfb7d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 406a7e780136f87dc85b28b970de2bfd02db36ec
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123473"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052365"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Início rápido da multitela do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/PhonewordMultiscreen/)
 
 O início rápido demonstra como estender o aplicativo Phoneword ao adicionar uma segunda tela para controlar o histórico de chamadas para o aplicativo. O aplicativo final é mostrado abaixo:
 
