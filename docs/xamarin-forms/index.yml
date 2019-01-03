@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 11ec6840a59f316f3cbfdddaf1191445fc6c4dad
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: 892a6dccae7bf0ec673b19e830fc01e3f9e39833
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267424"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609890"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -28,7 +28,7 @@ sections:
 - title: Introdução
   items:
   - type: paragraph
-    text: Saiba como criar seu primeiro aplicativo Xamarin.Forms com Xamarin e C#, direcionado para Android, iOS e Plataforma Universal do Windows.
+    text: Saiba como criar seu primeiro aplicativo Xamarin.Forms com Xamarin e C#, direcionado para o Android, o iOS e a Plataforma Universal do Windows.
   - type: list
     style: icon48
     items:
