@@ -6,13 +6,13 @@ ms.assetid: 1A674212-72DB-4AA4-B626-A4EC135AD1A0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2018
-ms.openlocfilehash: 933368f7ca1435ece4f20945b2f8e905f7584217
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 12/11/2018
+ms.openlocfilehash: 422311c766584cbd27d0ab0c42adee042e9aac3e
+ms.sourcegitcommit: 408b78dd6eded4696469e316af7922a5991f2211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899379"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246289"
 ---
 # <a name="xamarinforms-shell"></a>Shell do Xamarin.Forms
 
@@ -50,7 +50,7 @@ Dentro de cada `ContentPage`, instâncias de `ContentPage` adicionais podem ser 
 
 ## <a name="bootstrapping-a-shell-application"></a>Inicializando um aplicativo do Shell
 
-Um aplicativo do Shell é inicializado definindo a propriedade `MainPage` da classe `App` para uma nova instância de `Shell`:
+Um aplicativo do Shell é inicializado definindo a propriedade `MainPage` da classe `App` para uma instância de um arquivo Shell:
 
 ```csharp
 namespace TailwindTraders.Mobile
@@ -62,13 +62,13 @@ namespace TailwindTraders.Mobile
             InitializeComponent();
 
             Forms.SetFlags("Shell_Experimental");
-            MainPage = new Shell();
+            MainPage = new TheShell();
         }
     }
 }
 ```
 
-A classe `Shell` é um arquivo XAML que descreve a estrutura visual do aplicativo.
+A classe `TheShell` é um arquivo XAML que descreve a estrutura visual do aplicativo.
 
 > [!IMPORTANT]
 > O Shell é experimental no momento e só pode ser usado com a adição de `Forms.SetFlags("Shell_Experimental");` na classe `App`, antes da criação da instância de `Shell`, ou ao projeto de plataforma, antes da invocação do método `Forms.Init`.
@@ -83,13 +83,13 @@ Um arquivo do Shell consiste em três elementos hierárquicos:
 
 Nenhum desses elementos representa uma interface do usuário, mas sim a organização da estrutura visual do aplicativo. O Shell usará esses elementos e produzirá a interface do usuário de navegação do conteúdo.
 
-O XAML a seguir mostra um exemplo simples de um arquivo `Shell`:
+O XAML a seguir mostra um exemplo simples de um arquivo Shell:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -97,7 +97,7 @@ O XAML a seguir mostra um exemplo simples de um arquivo `Shell`:
                 <local:HomePage />
             </ShellContent>
         </ShellSection>
-    <ShellItem>
+    </ShellItem>
 </Shell>
 ```
 
@@ -117,8 +117,8 @@ O número de itens no submenu pode ser aumentado com a adição de mais instânc
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -349,7 +349,7 @@ As guias podem ser estilizadas usando estilos XAML ou fornecendo um renderizador
 
 O Shell inclui uma experiência de navegação baseada em URI. Os URIs fornecem uma experiência de navegação aprimorada que permite a navegação para qualquer página no aplicativo, sem precisar seguir uma hierarquia de navegação definida. Além disso, eles também oferecem a capacidade de navegar para trás, sem precisar visitar todas as páginas na pilha de navegação.
 
-Essa navegação baseada em URI é realizada com rotas, que são segmentos de URI usados para navegar dentro do aplicativo. O arquivo `Shell` deve declarar um esquema de rota, um host de rota e uma rota:
+Essa navegação baseada em URI é realizada com rotas, que são segmentos de URI usados para navegar dentro do aplicativo. O arquivo Shell deve declarar um esquema de rota, um host de rota e uma rota:
 
 ```xaml
 <Shell ...
@@ -362,9 +362,9 @@ Essa navegação baseada em URI é realizada com rotas, que são segmentos de UR
 
 Combinados, os valores de propriedade `RouteScheme`, `RouteHost` e `Route` formam o URI raiz de `app://www.microsoft.com/tailwindtraders`.
 
-Cada elemento na classe `Shell` também pode definir uma propriedade de rota que pode ser usada na navegação programática.
+Cada elemento no arquivo Shell também pode definir uma propriedade de rota que pode ser usada na navegação programática.
 
-No construtor `Shell` ou em qualquer outro local que seja executado antes da invocação de uma rota, é possível registrar explicitamente rotas adicionais para todas as páginas que não sejam representadas por um elemento do Shell (como instâncias de `MenuItem`):
+No construtor do arquivo Shell ou em qualquer outro local que seja executado antes da invocação de uma rota, é possível registrar explicitamente rotas adicionais para todas as páginas que não sejam representadas por um elemento do Shell (como instâncias de `MenuItem`):
 
 ```csharp
 Routing.RegisterRoute("productcategory", typeof(ProductCategoryPage));

@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: a8858839c51e519ac50dd59d223a6c15cee9e6bf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dff57b142745729d5d38db4cce892bb1d55796a6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123447"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059724"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
-
 
 Depois que um aplicativo tiver sido codificado e testado, será necessário preparar um pacote para distribuição. A primeira tarefa na preparação desse pacote é compilar o aplicativo para a versão, o que envolve principalmente a configuração de alguns atributos do aplicativo.
 
@@ -64,7 +63,6 @@ Nesses exemplos, `@drawable/icon` refere-se a um arquivo de ícone localizado em
 
 Normalmente, `using Android.App` é declarado na parte superior de **AssemblyInfo.cs** (o namespace do atributo `Application` é `Android.App`), mas talvez você precisará adicionar esta instrução `using` se ela ainda não estiver presente.
 
-
 <a name="Versioning" />
 
 ## <a name="version-the-application"></a>Controle de versão do aplicativo
@@ -102,7 +100,7 @@ O modo Versão desativa o tempo de execução compartilhado e ativa a vinculaç�
 
 -   Configuração: Nenhum &ndash; Xamarin.Android 4.2.5 Tamanho = 17,4 MB.
 
--   Configuração: Somente Assemblies do SDK &ndash; Xamarin.Android 4.2.5 Tamanho = 3 MB.
+-   Configuração: Somente Assemblies do SDK &ndash; Xamarin.Android 4.2.5 Tamanho = 3.0 MB.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -136,7 +134,6 @@ As opções para controlar o vinculador são as seguintes:
 -----
 
 A vinculação pode produzir alguns efeitos colaterais indesejados, portanto, é importante que um aplicativo seja testado novamente no modo Liberação em um dispositivo físico.
-
 
 ### <a name="proguard"></a>ProGuard
 
@@ -184,7 +181,6 @@ O manifesto do Android contém o atributo `android:debuggable`, que controla se 
 ```
 
 Observe que as compilações de depuração definem automaticamente algumas permissões para facilitar a depuração (como **Internet** e **ReadExternalStorage**). Compilações de versão, no entanto, usam apenas permissões explicitamente configuradas. Se você achar que alternar para o build de versão faz com que o aplicativo perca uma permissão que estava disponível no build de depuração, verifique se habilitou essa permissão explicitamente na lista **Permissões necessárias** conforme descrito em [Permissões](~/android/app-fundamentals/permissions.md). 
- 
 
 <a name="dotfuscator" id="dotfuscator" />
 
@@ -228,14 +224,13 @@ A opção **Compilação AOT** (na página [Propriedades de Empacotamento](#Set_
 
 A opção **Compilação AOT** requer uma licença Enterprise ou superior. **Compilação AOT** só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão. Para obter mais informações sobre Compilação AOT, consulte [AOT](http://www.mono-project.com/docs/advanced/aot/).
 
-
 #### <a name="llvm-optimizing-compiler"></a>Compilador de otimização de LLVM
 
 O _compilador de otimização LLVM_ criará código compilado mais rápido e menor e converterá os assemblies compilados AOT em código nativo, mas às custas de tempos de compilação mais lentos. O compilador LLVM é desabilitado por padrão. Para usar o compilador LLVM, a opção **Compilação AOT** deve ser habilitada primeiro (na página [Propriedades de Empacotamento](#Set_Packaging_Properties)).
 
 
 > [!NOTE]
-> A opção **Compilador de otimização LLVM** requer uma licença comercial.  
+> A opção **Compilador de otimização LLVM** requer uma licença Enterprise.  
 
 <a name="Set_Packaging_Properties" />
 
@@ -257,16 +252,13 @@ As propriedades de empacotamento podem ser definidas em **Opções de Projeto**,
 
 Muitas dessas propriedades, como **Usar Tempo de Execução Compartilhado** e **Usar Implantação Rápida**, destinam-se ao modo de Depuração. No entanto, quando o aplicativo é configurado para modo Versão, existem outras configurações que determinam como o aplicativo é [otimizado para velocidade de execução e tamanho](#shrink_apk), [como é protegido contra violação](#protect_app) e como pode ser empacotado para dar suporte a restrições de tamanho e arquiteturas diferentes.
 
-
 ### <a name="specify-supported-architectures"></a>Especificar arquiteturas com suporte
 
 Ao preparar um aplicativo Xamarin.Android para a versão, é necessário especificar as arquiteturas de CPU com suporte. Um único APK pode conter código de computador para dar suporte a várias arquiteturas diferentes. Consulte [Arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md) para obter detalhes sobre o suporte a várias arquiteturas de CPU.
 
-
 ### <a name="generate-one-package-apk-per-selected-abi"></a>Gerar um pacote (. APK) por ABI selecionado
 
 Quando essa opção é habilitada, um APK é criado para cada ABI com suporte (selecionado na guia **Avançado**, conforme descrito em [arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md)) em vez de um único e grande APK para todas as ABIs com suporte. Essa opção só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão.
-
 
 ### <a name="multi-dex"></a>Multi-Dex
 
@@ -292,7 +284,6 @@ Depois de concluir todas as etapas acima, compile o aplicativo (selecione **Comp
 
 -----
 
-
 <a name="archive" />
 
 ## <a name="archive-for-publishing"></a>Arquivo morto para publicação
@@ -310,7 +301,6 @@ Para começar o processo de publicação, clique com o botão direito do mouse n
 Outra maneira de criar um arquivo morto é clicar com o botão direito do mouse na Solução no **Gerenciador de Soluções** e selecionar **Arquivar Tudo...**, que compila a solução e arquiva todos os projetos do Xamarin que podem gerar um arquivo morto:
 
 [![Arquivar Tudo](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
-
 
 Tanto **Arquivar** quanto **Arquivar Tudo** inicializam automaticamente o **Gerenciador de Arquivo Morto**. Para iniciar o **Gerenciador de Arquivo Morto** diretamente, clique no item de menu **Ferramentas > Gerenciador de Arquivo Morto...**:
 
@@ -370,7 +360,6 @@ Neste exemplo, o **Gerenciador de Arquivo Morto** lista somente um aplicativo ar
 
 [![Assinar e Distribuir](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
-
 Aqui, é possível selecionar o canal de distribuição:
 
 -   **Ad Hoc** &ndash; Salva um APK assinado no disco de modo que possa ser feito seu sideload para dispositivos Android. Prossiga para a [Assinatura do Pacote do Aplicativo](~/android/deploy-test/signing/index.md) para aprender a criar um identidade de assinatura do Android, criar um novo certificado de autenticação para aplicativos Android e publicar uma versão &ldquo;ad hoc&rdquo; do aplicativo no disco. Essa é uma boa maneira de criar um APK para teste.
@@ -380,7 +369,6 @@ Aqui, é possível selecionar o canal de distribuição:
     Prossiga para [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para saber como assinar e publicar um APK na Google Play Store.
 
 -----
-
 
 ## <a name="related-links"></a>Links relacionados
 

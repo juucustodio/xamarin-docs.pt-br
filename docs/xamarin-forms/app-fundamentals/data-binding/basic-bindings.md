@@ -7,21 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 62dae2f85abb7327e133f008e27e2519ccdc2f68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675192"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051977"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Associações básicas do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 A associação de dados do Xamarin.Forms vincula um par de propriedades entre dois objetos e pelo menos um deles geralmente é um objeto da interface do usuário. Esses dois objetos são chamados de *destino* e *origem*:
 
 - O *destino* é o objeto (e a propriedade) no qual a associação de dados é definida.
 - A *origem* é o objeto (e propriedade) referenciado pela associação de dados.
 
-Essa distinção, às vezes, pode ser um pouco confusa: no caso mais simples, os dados fluem da origem para o destino, o que significa que o valor da propriedade de destino é definido pelo valor da propriedade da origem. No entanto, em alguns casos, os dados podem fluir do destino para a origem ou em ambas os sentidos. Para evitar confusão, tenha em mente que o destino é sempre o objeto no qual a associação de dados está definida, mesmo se estiver fornecendo os dados em vez de recebendo.
+Às vezes, essa distinção pode ser um pouco confusa: No caso mais simples, os dados fluem da origem para o destino, o que significa que o valor da propriedade de destino é definido pelo valor da propriedade da origem. No entanto, em alguns casos, os dados podem fluir do destino para a origem ou em ambas os sentidos. Para evitar confusão, tenha em mente que o destino é sempre o objeto no qual a associação de dados está definida, mesmo se estiver fornecendo os dados em vez de recebendo.
 
 ## <a name="bindings-with-a-binding-context"></a>Associações com um contexto de associação
 
@@ -84,7 +86,7 @@ Essa regra implica que o objeto de destino deve ser uma instância de uma classe
 
 Não há uma regra para a propriedade de origem, que é especificada como uma cadeia de caracteres. Internamente, a reflexão é usada para acessar a propriedade real. Nesse caso específico, no entanto, a propriedade `Value` também tem suporte de uma propriedade associável.
 
-O código pode ser simplificado um pouco: a propriedade associável `RotationProperty` é definida por `VisualElement`e herdada por `Label` e também por `ContentPage`, portanto, o nome de classe não é necessário na chamada `SetBinding`:
+O código pode ser um pouco simplificado: A propriedade associável `RotationProperty` é definida por `VisualElement` e herdada por `Label` e também por `ContentPage`, portanto, o nome de classe não é necessário na chamada `SetBinding`:
 
 ```csharp
 label.SetBinding(RotationProperty, "Value");
@@ -135,7 +137,7 @@ Mas isso não é certo. Essa marcação define a propriedade `BindingContext` pa
 
 Observe que a propriedade de origem é especificada com a propriedade [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) do `BindingExtension`, que corresponde à propriedade [`Path`](xref:Xamarin.Forms.Binding.Path) da classe [`Binding`](xref:Xamarin.Forms.Binding).
 
-A marcação mostrada na página **Associação de XAML básica** pode ser simplificada: extensões de marcação XAML, como `x:Reference` e `Binding`, podem ter atributos de *propriedade de conteúdo* definidos, que, para extensões de marcação XAML, significa que o nome da propriedade não precisa aparecer. A propriedade `Name` é a propriedade de conteúdo do `x:Reference`, e a propriedade `Path` é a propriedade de conteúdo do `Binding`, o que significa que elas podem ser eliminadas das expressões:
+A marcação mostrada na página **Associação de XAML básica** pode ser simplificada: As extensões de marcação XAML, como `x:Reference` e `Binding`, podem ter atributos de *propriedade de conteúdo* definidos, o que, para extensões de marcação XAML, significa que o nome da propriedade não precisa aparecer. A propriedade `Name` é a propriedade de conteúdo do `x:Reference`, e a propriedade `Path` é a propriedade de conteúdo do `Binding`, o que significa que elas podem ser eliminadas das expressões:
 
 ```xaml
 <Label Text="TEXT"
@@ -252,7 +254,7 @@ Embora as extensões de marcação XAML geralmente sejam delimitadas por chaves,
 </Label>
 ```
 
-Agora as propriedades `Source` e `Path` são os atributos XAML regulares: os valores aparecem entre aspas e os atributos não são separados por uma vírgula. A extensão de marcação `x:Reference` também pode se tornar um elemento de objeto:
+Agora as propriedades `Source` e `Path` são atributos normais de XAML: Os valores aparecem entre aspas e os atributos não são separados por uma vírgula. A extensão de marcação `x:Reference` também pode se tornar um elemento de objeto:
 
 ```xaml
 <Label Text="TEXT"
@@ -329,5 +331,5 @@ No [próximo artigo](binding-mode.md), você verá como o *modo de associação*
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

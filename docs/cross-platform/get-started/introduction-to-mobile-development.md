@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: f3b1f5c11a02710de8d0ffd09741acb3017f5cb6
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: cefcc7084b2abab4af61f07ef1f33a4f4c363f69
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "43780519"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815198"
 ---
 # <a name="introduction-to-mobile-development"></a>Introdução ao desenvolvimento móvel
 
@@ -61,7 +61,7 @@ Em ambos os casos, os aplicativos Xamarin utilizam um tempo de execução que pr
 
 Aplicativos Xamarin são compilados em relação a um subconjunto BCL do .NET conhecido como Perfil Móvel do Xamarin. Este perfil foi criado especificamente para aplicativos móveis e empacotado no MonoTouch.dll e no Mono.Android.dll (para iOS e Android, respectivamente). Isso é muito semelhante ao modo como os aplicativos Silverlight (e Moonlight) são compilados com relação ao Perfil .NET do Moonlight/Silverlight. Na verdade, o perfil Móvel do Xamarin é equivalente ao perfil do Silverlight 4.0, com muitas classes BCL adicionadas de volta.
 
-Para obter uma lista completa de classes e assemblies disponíveis, consulte a [Lista de Assemblies do Xamarin.iOS](~/cross-platform/internals/available-assemblies.md) e a [Lista de Assemblies do Xamarin.Android](~/cross-platform/internals/available-assemblies.md)
+Para obter uma lista completa de classes e assemblies disponíveis, consulte a [Lista de Assemblies do Xamarin.iOS](~/cross-platform/internals/available-assemblies.md?context=xamarin/ios) e a [Lista de Assemblies do Xamarin.Android](~/cross-platform/internals/available-assemblies.md?context=xamarin/android)
 
 Além da BCL, essas .dlls incluem invólucros para praticamente todo o SDK iOS e Android, o que permite que as APIs do SDK subjacentes sejam invocadas diretamente do C#.
 

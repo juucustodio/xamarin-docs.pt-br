@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d7719f231a6d70594985a1158340104d68367ffe
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 347d0eebf7340bb8dc7234275d0f58acf7ab16c6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998597"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061024"
 ---
 # <a name="xamarinforms-performance"></a>Desempenho do Xamarin.Forms
 
@@ -20,7 +20,7 @@ _Há muitas técnicas para aumentar o desempenho de aplicativos Xamarin.Forms. C
 
 > [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
-**Evoluir 2016: como otimizar o desempenho do aplicativo com o Xamarin.Forms**
+**Evolve 2016: Como otimizar o desempenho do aplicativo com o Xamarin.Forms**
 
 ## <a name="overview"></a>Visão geral
 
@@ -329,6 +329,5 @@ Esse artigo descreveu e discutiu técnicas para aumentar o desempenho dos aplica
 - [Desempenho de ListView](~/xamarin-forms/user-interface/listview/performance.md)
 - [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
 - [Compactação de Layout](~/xamarin-forms/user-interface/layouts/layout-compression.md)
-- [Exemplo de redimensionador de imagem do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/XamFormsImageResize/)
 - [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
 - [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

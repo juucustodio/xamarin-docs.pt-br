@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 00308a6c7883d4ac6ce41592d4a0e18f9fb28d52
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3452c79621013690f967e065c7afaf0768a50c3f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113307"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057472"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Escolhendo uma foto da biblioteca de imagens
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
 
 Este artigo descreve a criação de um aplicativo que permite que o usuário escolha uma foto da biblioteca de imagens de seu telefone. Como o Xamarin.Forms não inclui essa funcionalidade, é necessário usar [`DependencyService`](xref:Xamarin.Forms.DependencyService) para acessar APIs nativas em cada plataforma.  Este artigo abordará as etapas a seguir para usar `DependencyService` para essa tarefa:
 
@@ -90,11 +92,11 @@ namespace DependencyServiceSample.iOS
 
 ```
 
-O método `GetImageStreamAsync` cria um `UIImagePickerController` e o inicializa para selecionar imagens da biblioteca de fotos. São necessários dois manipuladores de eventos: um para quando o usuário seleciona uma foto e outro para quando o usuário cancela a exibição da biblioteca de fotos. O `PresentModalViewController`, em seguida, exibe a biblioteca de fotos para o usuário.
+O método `GetImageStreamAsync` cria um `UIImagePickerController` e o inicializa para selecionar imagens da biblioteca de fotos. São necessários dois manipuladores de eventos: Um para quando o usuário seleciona uma foto e outro para quando o usuário cancela a exibição da biblioteca de fotos. O `PresentModalViewController`, em seguida, exibe a biblioteca de fotos para o usuário.
 
 Neste ponto, o método `GetImageStreamAsync` deve retornar um objeto `Task<Stream>` para o código que o está chamando. Essa tarefa é concluída somente quando o usuário termina de interagir com a biblioteca de fotos e um dos manipuladores de eventos é chamado. Para situações como essa, a classe [`TaskCompletionSource`](https://msdn.microsoft.com/library/dd449174(v=vs.110).aspx) é essencial. A classe fornece um objeto `Task` do tipo genérico adequado para retornar do método `GetImageStreamAsync`, e mais tarde a classe poderá ser sinalizada quando a tarefa for concluída.
 
-O manipulador de eventos `FinishedPickingMedia` é chamado quando o usuário seleciona uma imagem. No entanto, o manipulador fornece um objeto `UIImage` e o `Task` deve retornar um objeto `Stream` do .NET. Isso é feito em duas etapas: primeiro, o objeto `UIImage` é convertido em um arquivo JPEG na memória armazenado em um objeto `NSData` e, em seguida, o objeto `NSData` é convertido em um objeto `Stream` do .NET. Uma chamada para o método `SetResult` do objeto `TaskCompletionSource` conclui a tarefa fornecendo o objeto `Stream`:
+O manipulador de eventos `FinishedPickingMedia` é chamado quando o usuário seleciona uma imagem. No entanto, o manipulador fornece um objeto `UIImage` e o `Task` deve retornar um objeto `Stream` do .NET. Isso é feito em duas etapas: Primeiro, o objeto `UIImage` é convertido em um arquivo JPEG na memória armazenada em um objeto `NSData` e, em seguida, o objeto `NSData` é convertido em um objeto `Stream` do .NET. Uma chamada para o método `SetResult` do objeto `TaskCompletionSource` conclui a tarefa fornecendo o objeto `Stream`:
 
 ```csharp
 namespace DependencyServiceSample.iOS

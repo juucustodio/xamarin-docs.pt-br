@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 2dd7efb9f295143775961afb97e70b5f241d1337
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170943"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056117"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formatação de cadeia de caracteres do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Às vezes, é conveniente usar associações de dados para exibir a representação de cadeia de caracteres de um objeto ou um valor. Por exemplo, talvez você deseje usar um `Label` para exibir o valor atual de um `Slider`. Nesta associação de dados, o `Slider` é a origem e o destino é a propriedade `Text` do `Label`.
 
@@ -22,7 +24,7 @@ Ao exibir cadeias de caracteres no código, a ferramenta mais avançada é o mé
 
 ## <a name="the-stringformat-property"></a>A propriedade StringFormat
 
-Esse recurso é levado para as associações de dados: você define a propriedade [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) de `Binding` (ou a propriedade [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) da extensão de marcação `Binding`) como uma cadeia de caracteres de formatação padrão do .NET com um espaço reservado:
+Este recurso é levado para as associações de dados: Você define a propriedade [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) de `Binding` (ou a propriedade [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) da extensão de marcação `Binding`) como uma cadeia de caracteres de formatação padrão do .NET com um espaço reservado:
 
 ```xaml
 <Slider x:Name="slider" />
@@ -178,7 +180,7 @@ Agora há três pares de elementos `Slider` e `Label` associados à mesma propri
 
 Você deve estar se perguntando como poderá exibir valores RGB (vermelho, verde, azul) em formato hexadecimal tradicional de dois dígitos. Esses valores inteiros não estão diretamente disponíveis na estrutura `Color`. Uma solução é calcular valores inteiros dos componentes de cor dentro do ViewModel e expô-los como propriedades. Em seguida, você pode formatá-los usando a especificação de formatação `X2`.
 
-Outra abordagem é mais geral: você pode escrever um *conversor de valor de associação* conforme abordado no artigo posterior, [**Conversores de valor de associação**](converters.md).
+Outra abordagem é mais geral: Você pode gravar um *conversor de valor de associação* como abordado no artigo posterior, [**Conversores de valor de associação**](converters.md).
 
 No entanto, o próximo artigo explora o [**Caminho de associação**](binding-path.md) com mais detalhes e mostra como você pode usá-lo para referenciar subpropriedades e itens em coleções.
 
@@ -186,4 +188,4 @@ No entanto, o próximo artigo explora o [**Caminho de associação**](binding-pa
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capítulo de associação de dados do livro sobre o Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

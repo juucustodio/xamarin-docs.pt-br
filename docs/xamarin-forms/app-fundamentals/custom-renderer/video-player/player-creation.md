@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 0090ec798e8d7b1dfb9bd8e25f09d71ec0353b45
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 69e5d74bf9beea02ca8accf6e1f8eb1ccaa5c9fa
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171905"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061953"
 ---
 # <a name="creating-the-platform-video-players"></a>Criando os players de vídeo de plataforma
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 A solução [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) contém todo o código para implementar um player de vídeo para o Xamarin.Forms. Também inclui uma série de páginas que demonstram como usar o player de vídeo em um aplicativo. Todo o código `VideoPlayer` e seus renderizadores de plataforma residem em pastas de projeto chamadas `FormsVideoLibrary` e também usam o namespace `FormsVideoLibrary`. Isso deve facilitar a cópia dos arquivos em seu próprio aplicativo e a referência das classes.
 
@@ -460,7 +462,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-Mais uma propriedade é necessária para iniciar a reprodução de um vídeo: essa é a propriedade `Source` crucial que referencia um arquivo de vídeo. A implementação da propriedade `Source` é descrita no próximo artigo, [Reproduzindo um vídeo da Web](web-videos.md).
+Mais uma propriedade é necessária para iniciar a reprodução do vídeo: Essa é a propriedade `Source` crucial que faz referência a um arquivo de vídeo. A implementação da propriedade `Source` é descrita no próximo artigo, [Reproduzindo um vídeo da Web](web-videos.md).
 
 
 ## <a name="related-links"></a>Links relacionados

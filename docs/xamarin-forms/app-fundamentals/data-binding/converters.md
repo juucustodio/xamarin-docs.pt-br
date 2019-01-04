@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 28892692133020de1fa5a6eb007bb3f9bcf2612b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4594da09d48a0888a88cbce9ab135a007eb6f4cd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997472"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054325"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Conversores de valor de associação do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Normalmente, associações de dados transferem dados de uma propriedade de origem para uma propriedade de destino e, em alguns casos, da propriedade de destino para a propriedade de origem. Essa transferência é simples quando as propriedades de origem e de destino são do mesmo tipo ou quando um tipo pode ser convertido para outro por meio de uma conversão implícita. Quando não é esse o caso, é necessário realizar uma conversão de tipo.
 
@@ -45,7 +47,7 @@ Você define uma instância dessa classe como a propriedade [`Converter`](xref:X
 
 O método `Convert` é chamado quando dados são passados da origem para o destino nas associações `OneWay` ou `TwoWay`. O parâmetro `value` é o objeto ou o valor da origem da associação de dados. O método deve retornar um valor com o tipo do destino da associação de dados. O método mostrado aqui converte o parâmetro `value` para um `int` e, em seguida, o compara com 0 para um valor retornado de `bool`.
 
-O método `ConvertBack` é chamado quando dados são passados do destino para a origem nas associações `TwoWay` ou `OneWayToSource`. `ConvertBack` realiza a conversão oposta: ele pressupõe que o parâmetro `value` é um `bool` do destino e o converte em um valor retornado de `int` para a fonte.
+O método `ConvertBack` é chamado quando dados são passados do destino para a origem nas associações `TwoWay` ou `OneWayToSource`. `ConvertBack` realiza a conversão oposta: Ele pressupõe que o parâmetro `value` é um `bool` do destino e o converte em um valor retornado de `int` para a fonte.
 
 Se a associação de dados também incluir uma configuração de `StringFormat`, o conversor de valor será invocado antes que o resultado seja formatado como uma cadeia de caracteres.
 
@@ -130,7 +132,7 @@ public class BoolToObjectConverter<T> : IValueConverter
 }
 ```
 
-A página **Alternar Indicadores** demonstra como ele pode ser usado para exibir o valor de uma exibição de `Switch`. Embora seja comum instanciar conversores de valor como recursos em um dicionário de recursos, esta página demonstra uma alternativa: cada conversor de valor é instanciado entre marcas do elemento de propriedade `Binding.Converter`. O `x:TypeArguments` indica o argumento genérico e `TrueObject` e `FalseObject` são configurados como objetos desse tipo:
+A página **Alternar Indicadores** demonstra como ele pode ser usado para exibir o valor de uma exibição de `Switch`. Embora seja comum para instanciar os conversores de valor como recursos em um dicionário de recursos, esta página demonstra uma alternativa: Cada conversor de valor é instanciado entre marcas de elemento de propriedade `Binding.Converter`. O `x:TypeArguments` indica o argumento genérico e `TrueObject` e `FalseObject` são configurados como objetos desse tipo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b5f3c9dcbaa6ba1a9e86568ccabe38416cc653f2
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cf2de96022366165e726bc3e6447bb88f30a26bb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241904"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057133"
 ---
 # <a name="custom-video-positioning"></a>Posicionamento de vídeo personalizado
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Os controles de transporte implementados por cada plataforma incluem uma barra de posição. Essa barra é semelhante a um controle deslizante ou a uma barra de rolagem e mostra a localização atual do vídeo dentro de sua duração total. Além disso, o usuário pode manipular a barra de posição para mover para frente ou para trás para uma nova posição no vídeo.
 
@@ -170,9 +172,9 @@ namespace FormsVideoLibrary
 
 O acessador `get` retorna a posição atual do vídeo quando ele está sendo reproduzido, mas o acessador `set` é projetado para responder à manipulação do usuário da barra de posição movendo a posição de vídeo para frente ou para trás.
 
-No iOS e Android, a propriedade que obtém a posição atual tem apenas um acessador `get`, e um método `Seek` está disponível para executar essa segunda tarefa. Se você pensar a respeito, um método `Seek` separado parecerá ser uma abordagem mais adequada do que uma única propriedade `Position`. Uma única propriedade `Position` tem um problema inerente: durante a reprodução do vídeo, a propriedade `Position` deve ser continuamente atualizada para refletir a nova posição. Mas você não quer que a maioria das alterações à propriedade `Position` faça o player de vídeo se mover para uma nova posição no vídeo. Se isso acontecesse, o player de vídeo responderia buscando o último valor da propriedade `Position` e o vídeo não avançaria.
+No iOS e Android, a propriedade que obtém a posição atual tem apenas um acessador `get`, e um método `Seek` está disponível para executar essa segunda tarefa. Se você pensar a respeito, um método `Seek` separado parecerá ser uma abordagem mais adequada do que uma única propriedade `Position`. Uma única propriedade `Position` tem um problema inerente: Durante a reprodução do vídeo, a propriedade `Position` deve ser atualizada continuamente para refletir a nova posição. Mas você não quer que a maioria das alterações à propriedade `Position` faça o player de vídeo se mover para uma nova posição no vídeo. Se isso acontecesse, o player de vídeo responderia buscando o último valor da propriedade `Position` e o vídeo não avançaria.
 
-Apesar das dificuldades de implementar uma propriedade `Position` com os acessadores `set` e `get`, essa abordagem foi escolhida porque é consistente com o `MediaElement` da UWP e ela tem uma grande vantagem relacionada à associação de dados: a propriedade `Position` do `VideoPlayer` pode ser associado ao controle deslizante usado tanto para exibir a posição quanto para buscar uma nova posição. No entanto, várias precauções são necessárias ao implementar essa propriedade `Position` para evitar loops de comentários.
+Apesar das dificuldades da implementação da propriedade `Position` com os acessadores `set` e `get`, essa abordagem foi escolhida porque é consistente com a UWP `MediaElement` e tem uma grande vantagem na associação de dados: A propriedade `Position` do `VideoPlayer` pode ser associada ao controle deslizante usado para exibir a posição e para procurar uma nova posição. No entanto, várias precauções são necessárias ao implementar essa propriedade `Position` para evitar loops de comentários.
 
 ### <a name="setting-and-getting-ios-position"></a>Definir e obter a posição do iOS
 
@@ -397,7 +399,7 @@ namespace FormsVideoLibrary
 
 O manipulador de propriedade alterada dos conjuntos de propriedades `Duration` define a propriedade `Maximum` do `Slider` subjacente como a propriedade `TotalSeconds` do valor `TimeSpan`. Da mesma forma, o manipulador de propriedade alterada de `Position` define a propriedade `Value` do `Slider`. Dessa forma, o `Slider` subjacente controla a posição do `PositionSlider`.
 
-O `PositionSlider` é atualizado do `Slider` subjacente em apenas uma instância: quando o usuário manipula o `Slider` para indicar que o vídeo deve ser avançado ou revertido para uma nova posição. Isso é detectado no manipulador `PropertyChanged` no construtor do `PositionSlider`. O manipulador verifica uma alteração na propriedade `Value` e, se for diferente da propriedade `Position`, então a propriedade `Position` será definida com base na propriedade `Value`.
+O `PositionSlider` é atualizado do `Slider` subjacente em apenas uma instância: Quando o usuário manipula o `Slider` para indicar que o vídeo deve ser avançado ou revertido para uma nova posição. Isso é detectado no manipulador `PropertyChanged` no construtor do `PositionSlider`. O manipulador verifica uma alteração na propriedade `Value` e, se for diferente da propriedade `Position`, então a propriedade `Position` será definida com base na propriedade `Value`.
 
 Em teoria, a instrução `if` interna poderia ser escrita da seguinte forma:
 
@@ -479,4 +481,4 @@ Isso conclui a discussão do `VideoPlayer`.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do player de vídeo (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demonstrações do player de vídeo (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

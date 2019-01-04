@@ -1,18 +1,18 @@
 ---
 title: Recursos de grupo de aplicativo no Xamarin.iOS
-description: A adição de capacidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades do Grupo de aplicativos.
+description: A adição de funcionalidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades do Grupo de aplicativos.
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 4ce04f21a3e520fea9da5d538fb7cc0ac098ad31
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56284f1d3c5fec479badf91852acba2bf538bddd
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119811"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411733"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Recursos de grupo de aplicativo no Xamarin.iOS
 
@@ -34,12 +34,12 @@ Para criar um novo grupo de aplicativos, faça o seguinte:
 
 1.  Visite a [Central de Desenvolvedores do iOS](https://developer.apple.com/account/) da Apple, abra sua **Conta** e faça logon.
 2.  Selecione **Certificados, IDs e Perfis**.
-3.  Em **Identificadores** , selecione **Grupos de Aplicativos** e clique no botão **+** para criar um novo grupo.
+3.  Em **Identificadores** selecione **Grupos de Aplicativos** e clique no botão **+** para criar um novo grupo.
 4.  Insira um **Nome** e um **Identificador** para o novo grupo e clique no botão **Continuar** : 
    
     ![Adicionar detalhes do grupo de aplicativos](app-groups-capabilities-images/image52.png)
 
-5.  Clique no botão **Registrar** para criar o grupo e em **Concluído** para retornar à lista de Grupos de Aplicativos registrados.
+5.  Clique no botão **Register (Registrar)** para criar o grupo e em **Done (Concluído)** para retornar à lista de grupos de aplicativos registrados.
 
 ## <a name="configure-an-app-to-use-app-groups"></a>Configurar um aplicativo para usar grupo de aplicativos
 
@@ -48,15 +48,15 @@ Com o grupo de aplicativos criado, configure as IDs do aplicativo para que os ap
 Faça o seguinte:
 
 1.  Visite a [Central de Desenvolvedores do iOS](https://developer.apple.com/account/) da Apple e faça logon com uma Conta de Desenvolvedor da Apple.
-2.  No menu **Recursos do Programa** , selecione **Certificados, IDs e Perfis**.
-3.  Em **Identificadores** , selecione **IDs de Aplicativos** e clique no botão **+** para criar uma nova ID.
+2.  No menu **Recursos do Programa**, selecione **Certificados, IDs e Perfis**.
+3.  Em **Identifiers (Identificadores)**, selecione **App IDs (IDs do Aplicativo)** e clique no botão **+** para criar uma nova ID.
 4.  Insira um nome para a ID do aplicativo e dê a ela uma ID do aplicativo explícita.
-5.  Em **Serviços de Aplicativos** , habilite **Grupos de Aplicativos**e, em seguida, clique no botão Continuar:
+5.  Em **Serviços de Aplicativos**, habilite **Grupos de Aplicativos** e clique no botão Continuar:
 
     ![Adicionar Serviços de Aplicativos no grupo de aplicativos](app-groups-capabilities-images/image53.png)
 
 6.  Verifique as configurações e clique no botão **Registrar** para criar a ID do Aplicativo.
-7.  Clique no botão **Concluído** para retornar à lista de IDs do Aplicativo registradas.
+7.  Clique no botão **Done (Concluído)** para retornar à lista de IDs do aplicativo registradas.
 8.  Selecione a ID do aplicativo recém-criada na lista e clique no botão **Editar** :
 
     ![Selecionar a ID do aplicativo na lista](app-groups-capabilities-images/image54.png)
@@ -69,7 +69,7 @@ Faça o seguinte:
 
     ![Adicionar grupo de aplicativos](app-groups-capabilities-images/image56.png)
 
-11. Clique no botão **Atribuir** e depois no botão **Concluído** para retornar à lista de IDs do Aplicativo registradas.
+11. Clique no botão **Assign (Atribuir)** e então no botão **Done (Concluído)** para retornar à lista de IDs do aplicativo registradas.
 12. Repita essas etapas para todos os aplicativos (ou extensões) que usarão o grupo de aplicativos.
 
 ## <a name="next-steps"></a>Próximas etapas

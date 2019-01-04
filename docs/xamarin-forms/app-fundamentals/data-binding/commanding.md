@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675233"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053458"
 ---
 # <a name="the-xamarinforms-command-interface"></a>A interface de comando do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Na arquitetura MVVM (Model-View-ViewModel), as associações de dados são definidas entre propriedades no ViewModel, que geralmente é uma classe derivada de `INotifyPropertyChanged`, e propriedades no View, que geralmente é o arquivo XAML. Às vezes, um aplicativo tem necessidades que vão além dessas associações de propriedade ao exigir que o usuário inicie os comandos que afetam algo no ViewModel. Esses comandos geralmente são sinalizados por cliques de botões ou toques de dedos e são tradicionalmente processados no arquivo code-behind em um manipulador para o evento `Clicked` do `Button` ou o evento `Tapped` de um `TapGestureRecognizer`.
 
@@ -275,7 +277,7 @@ Antes de examinar o construtor da classe `PersonCollectionViewModel`, vamos exam
 </ContentPage>
 ```
 
-Veja como ele funciona: o usuário primeiro pressiona o botão **Novo**. Isso habilita o formulário de entrada, mas desabilita o botão **Novo**. O usuário insere, então, um nome, idade e habilidades. A qualquer momento durante a edição, o usuário pode pressionar o botão **Cancelar** para recomeçar. Somente depois que um nome e uma idade válida forem inseridos, o botão **Enviar** será habilitado. Pressionar esse botão **Enviar** transfere a pessoa para a coleção exibida pelo `ListView`. Depois que o botão **Cancelar** ou **Enviar** é pressionado, o formulário de entrada é limpo e o botão **Novo** é habilitado novamente.
+Veja como funciona: O usuário primeiro pressiona o botão **Novo**. Isso habilita o formulário de entrada, mas desabilita o botão **Novo**. O usuário insere, então, um nome, idade e habilidades. A qualquer momento durante a edição, o usuário pode pressionar o botão **Cancelar** para recomeçar. Somente depois que um nome e uma idade válida forem inseridos, o botão **Enviar** será habilitado. Pressionar esse botão **Enviar** transfere a pessoa para a coleção exibida pelo `ListView`. Depois que o botão **Cancelar** ou **Enviar** é pressionado, o formulário de entrada é limpo e o botão **Novo** é habilitado novamente.
 
 A tela do iOS à esquerda mostra o layout antes que uma idade válida seja inserida. As telas do Android e da UWP mostram o botão **Enviar** habilitado depois que uma idade é definida:
 
@@ -412,7 +414,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 O método `canExecute` retorna `true` a qualquer momento que um `PersonViewModel` está sendo editado.
 
-Essas técnicas poderiam ser adaptadas para cenários mais complexos: uma propriedade no `PersonCollectionViewModel` poderia estar associada à propriedade `SelectedItem` do `ListView` para editar itens existentes e um botão **Excluir** poderia ser adicionado para excluir esses itens.
+Essas técnicas poderiam ser adaptadas para cenários mais complexos: Uma propriedade no `PersonCollectionViewModel` poderia estar associada à propriedade `SelectedItem` do `ListView` para editar itens existentes e o botão **Excluir** poderia ser adicionado para excluir esses itens.
 
 Não é necessário definir os métodos `execute` e `canExecute` como funções lambda. É possível gravá-los como métodos privados regulares no ViewModel e referenciá-los nos construtores `Command`. No entanto, essa abordagem tende a resultar em uma grande quantidade de métodos referenciados apenas uma vez no ViewModel.
 
@@ -757,7 +759,7 @@ O construtor define a propriedade `NavigateCommand` como um método `execute` qu
 
 O construtor também define o `BindingContext` da página como a si mesmo para que as associações referenciem o `NavigateCommand` nessa classe.
 
-A ordem do código nesse construtor faz a diferença: a chamada `InitializeComponent` faz o XAML ser analisado, mas, nesse momento, a associação a uma propriedade denominada `NavigateCommand` não pode ser resolvida, porque `BindingContext` é definido como `null`. Se o `BindingContext` for definido no construtor *antes de* `NavigateCommand` ser definido, a associação poderá ser resolvida quando `BindingContext` for definido, mas, nesse momento, `NavigateCommand` ainda será `null`. Definir `NavigateCommand` após `BindingContext` não terá efeito na associação, porque uma alteração no `NavigateCommand` não dispara um evento `PropertyChanged`, e a associação não sabe que `NavigateCommand` é válido agora.
+A ordem do código nesse construtor faz a diferença: A chamada `InitializeComponent` causa a análise do XAML, mas, nesse momento, a associação a uma propriedade denominada `NavigateCommand` não pode ser resolvida, porque `BindingContext` está definido como `null`. Se o `BindingContext` for definido no construtor *antes de* `NavigateCommand` ser definido, a associação poderá ser resolvida quando `BindingContext` for definido, mas, nesse momento, `NavigateCommand` ainda será `null`. Definir `NavigateCommand` após `BindingContext` não terá efeito na associação, porque uma alteração no `NavigateCommand` não dispara um evento `PropertyChanged`, e a associação não sabe que `NavigateCommand` é válido agora.
 
 Definir `NavigateCommand` e `BindingContext` (em qualquer ordem) antes da chamada a `InitializeComponent` funcionará, porque os componentes da associação são definidos quando o analisador XAML encontra a definição da associação.
 

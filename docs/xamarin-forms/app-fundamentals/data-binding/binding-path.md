@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 5ffc167b1e5695663dff6005f3d7e0ba0ea958db
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 0c63e33309802f0945ad94a858af45f6b29b2cc4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172100"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050773"
 ---
 # <a name="xamarinforms-binding-path"></a>Caminho de associação do Xamarin.Forms
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Em todos os exemplos anteriores de associação de dados, a propriedade [`Path`](xref:Xamarin.Forms.Binding.Path) da classe `Binding` (ou a propriedade [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) da extensão de marcação `Binding`) foi definida como uma única propriedade. Na verdade, é possível definir `Path` como uma *subpropriedade* (uma propriedade de uma propriedade) ou como um membro de uma coleção.
 
@@ -140,7 +142,7 @@ Este é o programa em execução:
 
 ## <a name="debugging-complex-paths"></a>Caminhos complexos de depuração
 
-Definições de caminhos complexos podem ser difíceis de serem construídas: você precisa saber o tipo de cada subpropriedade ou o tipo dos itens na coleção para adicionar corretamente a próxima subpropriedade, mas os tipos propriamente ditos não são exibidos no caminho. Uma boa técnica é criar o caminho de forma incremental e examinar os resultados intermediários. Para esse último exemplo, você pode começar sem nenhuma definição de `Path`:
+Definições de caminhos complexos podem ser difíceis de construir: Você precisa saber o tipo de cada subpropriedade ou o tipo dos itens na coleção para adicionar corretamente a próxima subpropriedade, mas os tipos propriamente ditos não são exibidos no caminho. Uma boa técnica é criar o caminho de forma incremental e examinar os resultados intermediários. Para esse último exemplo, você pode começar sem nenhuma definição de `Path`:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},
@@ -166,4 +168,4 @@ Se uma propriedade no caminho de associação não implementar `INotifyPropertyC
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capítulo de associação de dados do livro sobre o Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 09fe3587e4e435383822e50bd12616747b807f82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7eea0a4eba201d7332c5e3e5222729bcb5e14a07
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108451"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054055"
 ---
 # <a name="localization"></a>Localização
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
 
 _Aplicativos do Xamarin.Forms podem ser localizados usando arquivos de recursos do .NET._
 
@@ -86,7 +88,7 @@ Selecione o arquivo **AppResources.resx** e mostre o painel **Propriedades** par
 
 -----
 
-Para tornar as propriedades das cadeias de caracteres fortemente tipadas `public`, você precisa alterar manualmente a configuração para **Ferramenta Personalizada: PublicResXFileCodeGenerator**, conforme mostrado na captura de tela abaixo:
+Para tornar as propriedades `public` da cadeia de caracteres fortemente tipadas, você deve alterar manualmente a configuração da **Ferramenta Personalizada: PublicResXFileCodeGenerator**, como mostrado na captura de tela abaixo:
 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -154,7 +156,7 @@ Arquivos de recurso específico a um idioma devem seguir uma convenção de nome
 
 O padrão geral é usar códigos de idioma com duas letras, mas há alguns exemplos (como chinês) em que um formato diferente é usado, bem como outros exemplos (por exemplo, português brasileiro) em que um identificador de localidade de quatro caracteres é necessário.
 
-Esses arquivos de recursos específicos a um idioma *não* exigem uma classe parcial **.designer.cs** para que possam ser adicionados como arquivos XML regulares, com **Compilar Ação: EmbeddedResource** definido. Esta captura de tela mostra uma solução que contém os arquivos de recursos específicos a um idioma:
+Estes arquivos de recursos específicos a um idioma *não* exigem uma classe parcial **.designer.cs** para que possam ser adicionados como arquivos XML regulares, com **Compilar Ação: EmbeddedResource** definido. Esta captura de tela mostra uma solução que contém os arquivos de recursos específicos a um idioma:
 
 ![](text-images/appresources-langs.png "Arquivos de recursos específicos a um idioma")
 
@@ -556,7 +558,7 @@ namespace UsingResxLocalization.Android
 Após esse código ter sido adicionado ao projeto de aplicativo do Android, ele será capaz de exibir automaticamente as cadeias de caracteres traduzidas.
 
 > [!NOTE]
->**AVISO:** se as cadeias de caracteres traduzidas estiverem funcionando em seus builds de VERSÃO do Android, mas não durante a depuração, clique com o botão direito do mouse em **Projeto do Android** e selecione **Opções > Build > Build do Android** e certifique-se de que **Implantação de Assembly Rápida** NÃO esteja marcado. Essa opção causa problemas ao carregar recursos e não deverá ser usada se você estiver testando aplicativos localizados.
+>️ **AVISO:** Se as cadeias de caracteres traduzidas estiverem funcionando em seus builds de VERSÃO do Android, mas não durante a depuração, clique com o botão direito do mouse em **Projeto do Android** e selecione **Opções > Build > Build do Android** e certifique-se de que **Implantação de Assembly Rápida** NÃO esteja marcado. Essa opção causa problemas ao carregar recursos e não deverá ser usada se você estiver testando aplicativos localizados.
 
 Para obter mais informações sobre a localização no Android, confira [Localização no Android](~/android/app-fundamentals/localization.md).
 
