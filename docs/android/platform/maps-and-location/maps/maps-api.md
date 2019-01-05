@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: db442f45c615b680264e79262f62062eb6a6bfd5
+ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171034"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012289"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Usando a API do Google Maps em seu aplicativo
 
@@ -45,7 +45,7 @@ A primeira etapa é obter uma chave de API do Google Maps (Observe que não é p
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Instalar o SDK dos serviços do Google Play
 
-Google Play Services é uma tecnologia do Google que permite que aplicativos Android tirar proveito dos diversos recursos do Google como o Google +, no aplicativo de cobrança e mapas. Esses recursos são acessíveis em dispositivos Android, como serviços em segundo plano, f que estão contidas na [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en).
+Google Play Services é uma tecnologia do Google que permite que aplicativos Android tirar proveito dos diversos recursos do Google como o Google +, no aplicativo de cobrança e mapas. Esses recursos são acessíveis em dispositivos Android, como serviços em segundo plano, que estão contidos na [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en).
 
 Aplicativos Android interagem com o Google Play Services por meio da biblioteca de cliente do Google Play Services. Esta biblioteca contém as interfaces e classes para os serviços individuais, como mapas. O diagrama a seguir mostra a relação entre um aplicativo do Android e o Google Play Services:
 
@@ -236,7 +236,7 @@ Há cinco tipos diferentes de mapas disponíveis da API de mapas do Google:
 
 A imagem a seguir mostra três dos diferentes tipos de mapas, da esquerda para a direita (normal, híbrido, terreno):
 
-[![Três capturas de tela de exemplo do mapa: Normal, híbrido e terreno](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
+[![Capturas de tela de exemplo de mapa três: Normal, híbrido e terreno](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 O `GoogleMap.MapType` propriedade é usada para definir ou alterar o tipo de mapa é exibido. O trecho de código a seguir mostra como exibir um mapa de satélite.
 
