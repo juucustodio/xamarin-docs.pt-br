@@ -1,5 +1,5 @@
 ---
-title: Suporte à extensão do xamarin. Mac
+title: Suporte à extensão de Xamarin.Mac
 description: Este documento descreve o suporte do xamarin. Mac para extensões de localizador, compartilhamento e hoje. Ele examina as limitações e problemas conhecidos, links para um aplicativo de exemplo e instruções passo a passo e fornece dicas para trabalhar com extensões.
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 60b981a764a2656210730ae0602ff32dc580cd0a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0f4d6bb042f8bc8d48b45d7148984a53e3ce3437
+ms.sourcegitcommit: e3e851080e6ea0b77e355487a61348d8e0419b09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117558"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060064"
 ---
-# <a name="xamarinmac-extension-support"></a>Suporte à extensão do xamarin. Mac
+# <a name="xamarinmac-extension-support"></a>Suporte à extensão de Xamarin.Mac
 
-Na versão prévia do xamarin. MAC 2.10 foi adicionado suporte para vários pontos de extensão do macOS:
+No xamarin. MAC 2.10 foi adicionado suporte para vários pontos de extensão do macOS:
 
 - Localizador
 - Compartilhar
@@ -59,10 +59,10 @@ Um exemplo de projeto de xamarin. Mac contendo pequeno, exemplos de funcionament
 
 ## <a name="summary"></a>Resumo
 
-Este artigo apresentou uma visão geral de trabalhar com as extensões em um aplicativo Xamarin.Max versão 2.10 (e superior).
+Este artigo apresentou uma visão geral de trabalhar com as extensões em um aplicativo xamarin. Mac versão 2.10 (e superior).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Diretrizes de Interface Humana do macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
