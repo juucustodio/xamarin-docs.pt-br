@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d83470db23b1376d18fa36c52c1daabaf68cfe0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61b5a8bd99afda5e8fbeea44e3362574fa7feea
+ms.sourcegitcommit: b18ceed35aa94999d13faf4a3e3177c0b9fc33b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117753"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084575"
 ---
 # <a name="maps-in-xamarinios"></a>Mapas no xamarin. IOS
 
@@ -175,7 +175,7 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 ### <a name="overlays"></a>Sobreposições
 
-Outra maneira de gráficos de camada em um mapa está usando sobreposições. Sobreposições de dar suporte a conteúdo de desenho gráfico que pode ser dimensionado com o mapa conforme ele aparece ampliado. iOS fornece suporte para vários tipos de sobreposições, incluindo:
+Outra maneira de gráficos de camada em um mapa está usando sobreposições. As sobreposições são suporte para elaborar conteúdos gráficos que são dimensionados com o mapa conforme ele é ampliado e reduzido. iOS fornece suporte para vários tipos de sobreposições, incluindo:
 
 -  Polígonos - comumente usados para realçar alguma região em um mapa.
 -  Polilinhas - que costuma ser observadas durante a exibição de uma rota.
@@ -267,23 +267,23 @@ DefinesPresentationContext = true;
 
 //Set the search bar in the navigation bar
 NavigationItem.TitleView = searchController.SearchBar;
+```
 
-```csharp
-Note that you are responsible for incorporating the search bar object into the user interface. In this example, we assigned it to the TitleView of the navigation bar, but if you do not use a navigation controller in your application you will have to find another place to display it.
+Observe que você é responsável por incorporar o objeto de barra de pesquisa a interface do usuário. Neste exemplo, atribuímos para o TitleView da barra de navegação, mas se você não usar um controlador de navegação em seu aplicativo, você terá que encontrar outro lugar para exibi-lo.
 
-In this code snippet, we created another custom view controller – `searchResultsController` –  that displays the search results and then we used this object to create our search controller object. We also created a new search updater, which becomes active when the user interacts with the search bar. It receives notifications about searches with each keystroke and is responsible for updating the UI.
-We will take a look at how to implement both the `searchResultsController` and the `searchResultsUpdater` later in this guide.
+Neste trecho de código, criamos um outro controlador de exibição personalizada – `searchResultsController` – que exibe os resultados da pesquisa e, em seguida, usamos esse objeto para criar nosso objeto de controlador de pesquisa. Além disso, criamos um novo atualizador de pesquisa, que se torna ativo quando o usuário interage com a barra de pesquisa. Ele recebe notificações sobre pesquisas com cada pressionamento de tecla e é responsável por atualizar a interface do usuário.
+Obtemos uma olhada em como implementar ambos os `searchResultsController` e o `searchResultsUpdater` mais adiante neste guia.
 
-This results in a search bar displayed over the map as shown below:
+Isso resulta em uma barra de pesquisa exibida sobre o mapa, conforme mostrado abaixo:
 
- ![](images/07-searchbar.png "A search bar displayed over the map")
+ ![](images/07-searchbar.png "Uma barra de pesquisa exibida sobre o mapa")
  
 
 
-### Displaying the Search Results
+### <a name="displaying-the-search-results"></a>Exibindo os resultados da pesquisa
 
-To display search results, we need to create a custom View Controller; normally a `UITableViewController`. As shown above, the `searchResultsController` is passed to the constructor of the `searchController` when it is being created.
-The following code is an example of how to create this custom View Controller:
+Para exibir os resultados da pesquisa, precisamos criar um controlador de exibição personalizado; normalmente um `UITableViewController`. Como mostrado acima, o `searchResultsController` é passado para o construtor do `searchController` quando ele está sendo criado.
+O código a seguir é um exemplo de como criar esse controlador de exibição personalizado:
 
 ```csharp
 public class SearchResultsViewController : UITableViewController
