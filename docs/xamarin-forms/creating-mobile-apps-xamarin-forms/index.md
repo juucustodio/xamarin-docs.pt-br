@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: a1458d53cb6e57b73317bce77ebdfd5aea64acca
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5dae8f1907b9a61018e335a8fe19ad319d95741d
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061940"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207863"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Criando aplicativos móveis com xamarin. Forms book
 
 [![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples)
 
-<p><img src="images/cover-sml.png" title="Criando aplicativos móveis com xamarin. Forms Book" align="left" />O livro <i>criação de aplicativos móveis com xamarin. Forms</i> , de Charles Petzold, é um guia para aprender a escrever aplicativos xamarin. Forms. O único pré-requisito é conhecimento sobre o C# linguagem de programação. O livro oferece uma exploração extensiva na interface do usuário do xamarin. Forms e também aborda a animação, MVVM, gatilhos, comportamentos, layouts personalizados, renderizadores personalizados e muito mais. 
+<p><img src="images/cover-sml.png" title="Criando aplicativos móveis com xamarin. Forms Book" align="left" />O livro <i>criação de aplicativos móveis com xamarin. Forms</i> , de Charles Petzold, é um guia para aprender a escrever aplicativos xamarin. Forms. O único pré-requisito é conhecimento sobre o C# linguagem de programação. O livro oferece uma exploração extensiva na interface do usuário do xamarin. Forms e também aborda a animação, MVVM, gatilhos, comportamentos, layouts personalizados, renderizadores personalizados e muito mais.
 
-O livro foi publicado na primavera de 2016 e não tiver sido atualizado desde então. Há muito o no livro valioso que permanece, mas alguns dos [material está desatualizado](#ways-in-which-the-book-is-outdated), e alguns tópicos não são totalmente correto ou foi concluído. 
+O livro foi publicado na primavera de 2016 e não tiver sido atualizado desde então. Há muito o no livro valioso que permanece, mas alguns dos [material está desatualizado](#ways-in-which-the-book-is-outdated), e alguns tópicos não são totalmente correto ou foi concluído.
 
 ## <a name="download-ebook-for-free"></a>Baixe o livro eletrônico gratuito
 
@@ -48,7 +48,7 @@ Resumos de capítulo estão disponíveis na [tabela de capítulo](#download-chap
 
 - Links para a documentação da API para obter descrições mais detalhadas de classes xamarin. Forms, estruturas, propriedades, enumerações e assim por diante
 
-Esses resumos também indicam quando pode ser o material no capítulo [um pouco desatualizada](#ways-in-which-the-book-is-outdated). 
+Esses resumos também indicam quando pode ser o material no capítulo [um pouco desatualizada](#ways-in-which-the-book-is-outdated).
 
 ## <a name="download-chapters-and-summaries"></a>Baixe capítulos e resumos
 
@@ -85,13 +85,13 @@ Esses resumos também indicam quando pode ser o material no capítulo [um pouco 
 
 ## <a name="ways-in-which-the-book-is-outdated"></a>Maneiras em que o livro está desatualizado
 
-Desde a publicação da <i>criação de aplicativos móveis com xamarin. Forms</i>, vários recursos novos foram adicionados ao xamarin. Forms. Esses novos recursos são descritos nos artigos individuais a [xamarin. Forms](/xamarin/) documentação. 
+Desde a publicação da <i>criação de aplicativos móveis com xamarin. Forms</i>, vários recursos novos foram adicionados ao xamarin. Forms. Esses novos recursos são descritos nos artigos individuais a [xamarin. Forms](/xamarin/) documentação.
 
 Outras alterações fizeram parte do conteúdo do livro fiquem desatualizados:
 
 ### <a name="net-standard-20-libraries-have-replaced-portable-class-libraries"></a>Bibliotecas do .NET standard 2.0 substituíram as bibliotecas de classes portáteis
 
-Em geral, um aplicativo xamarin. Forms usa uma biblioteca para compartilhar código entre diferentes plataformas. Originalmente, essa foi uma biblioteca de classe portátil (PCL). Há muitas referências a PCLs em todo o catálogo e os resumos de capítulo. 
+Em geral, um aplicativo xamarin. Forms usa uma biblioteca para compartilhar código entre diferentes plataformas. Originalmente, essa foi uma biblioteca de classe portátil (PCL). Há muitas referências a PCLs em todo o catálogo e os resumos de capítulo.
 
 Biblioteca de classes portátil foi substituída por uma biblioteca .NET Standard 2.0, conforme descrito no artigo [suporte no xamarin. Forms do .NET Standard 2.0](~/xamarin-forms/internals/net-standard.md). Todos os [código de exemplo](https://github.com/xamarin/xamarin-forms-book-samples) do livro foi atualizado para usar bibliotecas .NET Standard 2.0.
 
@@ -101,25 +101,25 @@ A biblioteca .NET Standard 2.0 também permite que os aplicativos xamarin. Forms
 
 ### <a name="the-role-of-xaml-has-been-elevated"></a>A função do XAML foi promovida
 
-<i>Criando aplicativos móveis com xamarin. Forms</i> começa descrevendo como escrever aplicativos xamarin. Forms usando a linguagem c#. O de Extensible Application Markup Language (XAML) não é introduzido até [capítulo 7. XAML vs. Código](summaries/chapter07.md). 
+<i>Criando aplicativos móveis com xamarin. Forms</i> começa descrevendo como escrever aplicativos xamarin. Forms usando a linguagem c#. O de Extensible Application Markup Language (XAML) não é introduzido até [capítulo 7. XAML vs. Código](summaries/chapter07.md).
 
 Agora, a XAML tem um papel muito maior no xamarin. Forms. Os modelos de solução do xamarin. Forms distribuídos com o Visual Studio criam arquivos de página baseados em XAML. Um desenvolvedor usando o xamarin. Forms deve se familiarizar com o XAML mais cedo possível. O [linguagem de marcação de aplicativo extensível (XAML)](~/xamarin-forms/xaml/index.md) seção da documentação do xamarin. Forms contém vários artigos sobre XAML para você começar.
 
-### <a name="supported-platforms"></a>Plataformas com suporte 
+### <a name="supported-platforms"></a>Plataformas com suporte
 
-Xamarin. Forms não oferece mais suporte do Windows 8.1 e Windows Phone 8.1. 
+Xamarin. Forms não oferece mais suporte do Windows 8.1 e Windows Phone 8.1.
 
 O livro, às vezes, faz referência à _tempo de execução do Windows_. Esse é um termo que abrange a API do Windows usada em várias versões do Windows e Windows Phone. As versões mais recentes do xamarin. Forms restringe-se para dar suporte a plataforma Universal do Windows, que é a API para o Windows 10 e Windows 10 Mobile.
 
-Uma biblioteca .NET Standard 2.0 não oferece suporte a qualquer versão do Windows 10 Mobile. Portanto, um aplicativo xamarin. Forms usando uma biblioteca .NET Standard não será executado em um dispositivo Windows 10 Mobile. Aplicativos de xamarin. Forms continuarão sendo executados no Windows 10 desktop, versões 10.0.16299.0 e acima. 
+Uma biblioteca .NET Standard 2.0 não oferece suporte a qualquer versão do Windows 10 Mobile. Portanto, um aplicativo xamarin. Forms usando uma biblioteca .NET Standard não será executado em um dispositivo Windows 10 Mobile. Aplicativos de xamarin. Forms continuarão sendo executados no Windows 10 desktop, versões 10.0.16299.0 e acima.
 
-Xamarin. Forms tem suporte de visualização para o [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), e [Tizen](/xamarin-forms/platform/tizen.md) plataformas.
+Xamarin. Forms tem suporte de visualização para o [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), e [Tizen](/xamarin-forms/platform/other/tizen.md) plataformas.
 
 ### <a name="chapter-summaries"></a>Resumos de capítulo
 
 Os resumos de capítulo incluem as informações relacionadas a alterações no xamarin. Forms, pois o livro foi escrito. Eles costumam ser na forma de anotações:
 
-> [!NOTE] 
+> [!NOTE]
 > Observações sobre cada página indicam onde o xamarin. Forms foi bifurcado do material apresentado no livro.
 
 ### <a name="samples"></a>Exemplos
