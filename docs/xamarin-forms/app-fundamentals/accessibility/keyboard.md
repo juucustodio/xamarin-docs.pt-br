@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: 69fc1cd146227e464e70c347d3e28d250a7f1346
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3e3331489c3b437366f4bdcc6990fe282d213a6a
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050433"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207876"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Navegação por teclado no Xamarin.Forms
 
@@ -58,7 +58,7 @@ A captura de tela a seguir mostra a ordem de tabulação padrão para este exemp
 A ordem de tabulação aqui é baseada nas linhas e é a ordem em que os controles são listados no XAML. Portanto, pressionar a tecla Tab navega pelas instâncias de [`Entry`](xref:Xamarin.Forms.Entry) do primeiro nome, seguidas pelas instâncias de `Entry` do sobrenome. No entanto, uma experiência mais intuitiva seria usar a navegação com tabulação por colunas, de modo que pressionar a tecla Tab navegaria pelos pares de primeiro nome e sobrenome. Isso pode ser feito especificando a ordem de tabulação dos controles de entrada.
 
 > [!NOTE]
-> Na Plataforma Universal do Windows, é possível definir atalhos de teclado que fornecem uma maneira intuitiva para os usuários navegarem e interagirem rapidamente com a interface do usuário visível do aplicativo usando um teclado em vez do mouse ou de uma tela de toque. Para obter mais informações, confira [Configurando chaves de acesso de VisualElement](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys).
+> Na Plataforma Universal do Windows, é possível definir atalhos de teclado que fornecem uma maneira intuitiva para os usuários navegarem e interagirem rapidamente com a interface do usuário visível do aplicativo usando um teclado em vez do mouse ou de uma tela de toque. Para obter mais informações, confira [Configurando chaves de acesso de VisualElement](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## <a name="setting-the-tab-order"></a>Configurando a ordem de tabulação
 

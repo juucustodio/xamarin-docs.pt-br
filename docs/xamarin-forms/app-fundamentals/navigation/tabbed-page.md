@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d19d8590171e585b6f65b2a63fc9847d7d672a56
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4e2d33276c865695d70abb2d8e00b3b80d446839
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058391"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207980"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Página com guias do Xamarin.Forms
 
@@ -37,7 +37,7 @@ O layout de uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), e suas guias, dep
   > [!NOTE]
   > Observe que o `TabbedRenderer` para iOS tem um método `GetIcon` substituível que pode ser usado para carregar ícones de guia de uma origem especificada. Essa substituição possibilita o uso de imagens SVG como ícones em uma `TabbedPage`. Além disso, versões selecionadas e não selecionadas de um ícone podem ser fornecidas.
 
-- No Android, a lista de guias é exibida na parte superior da tela por padrão e a área do detalhe fica abaixo dela. No entanto, a lista de guias pode ser movida para a parte inferior da tela com um código específico da plataforma. Para obter mais informações, confira [Definindo o posicionamento e a cor da barra de ferramentas da TabbedPage](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
+- No Android, a lista de guias é exibida na parte superior da tela por padrão e a área do detalhe fica abaixo dela. No entanto, a lista de guias pode ser movida para a parte inferior da tela com um código específico da plataforma. Para obter mais informações, confira [Definindo o posicionamento e a cor da barra de ferramentas da TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
   > [!NOTE]
   > Observe que, ao usar AppCompat no Android, cada guia também exibirá um ícone. Além disso, o `TabbedPageRenderer` para Android AppCompat tem um método `GetIconDrawable` substituível que pode ser usado para carregar ícones de guia de um `Drawable` personalizado. Essa substituição possibilita o uso de imagens SVG como ícones em uma `TabbedPage` e funciona com barras de guia superior e inferior. Como alternativa, o método `SetTabIcon` substituível pode ser usado para carregar ícones de guia de um `Drawable` personalizado para barras de guia superior.
