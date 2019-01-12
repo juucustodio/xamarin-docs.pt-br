@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2357003e3a855981f053c48a596b932d9ba36d90
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
+ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104943"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249184"
 ---
 # <a name="inspector-installation-and-requirements"></a>Requisitos e instalação do Inspetor
 
@@ -52,7 +52,7 @@ Inspeção de aplicativo em tempo real está disponível para clientes empresari
 |Plataforma de aplicativo|Suporte ao IDE|Observações|
 |--- |--- |--- |
 |Mac|Só tem suporte no Visual Studio para Mac|
-|iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| |
+|iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| Comportamento do vinculador deve ser definido como **não vincular** (sob **Build do iOS** opções do projeto) |
 |Android|Com suporte no Visual Studio 2017 e Visual Studio para Mac|Deve ter como destino Android > = 4.0.3, com **fastdev** habilitado.<br />Deve usar os emuladores do Google, o Visual Studio ou o Xamarin Android. Emuladores do Android 7 podem não permitir a inspeção neste momento.|
 |WPF|Só tem suporte no Visual Studio 2017|
 
@@ -114,7 +114,7 @@ Para Android e iOS, é vital que sabemos qual dispositivo você está depurando 
 
 - Nome do dispositivo, conforme mostrado no seu IDE
 - Versão do sistema operacional do dispositivo
-- Android: Verificar se você está usando um x86 emulator
+- Android: Verifique se que você está usando um x86 emulator
 - Android: A plataforma de emulador que você está usando? Emulador do Google? Emulador do Android do Visual Studio? Xamarin Android Player?
 - O aplicativo que você está depurando corretamente aparecer e o dispositivo de função?
 - O dispositivo tem conectividade de rede (seleção por meio do navegador da web)?

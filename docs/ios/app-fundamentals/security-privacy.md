@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1c88a5c16dbe5559f0b551a97a27ebb893991187
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 119fd478727a002622861c94462b93b75720a992
+ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120496"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249197"
 ---
 # <a name="ios-security-and-privacy-features"></a>Recursos de segurança e privacidade de iOS
 
@@ -27,7 +27,7 @@ Apple fez várias melhorias de segurança e privacidade no iOS 10 (e superior) q
 Foram feitas as seguintes alterações gerais para segurança e privacidade no iOS 10:
 
 - O Common Data Security arquitetura (CDSA) API foi preterida e deve ser substituído com a API SecKey para gerar as chaves assimétricas.
-- O novo `NSAllowsArbitraryLoadsInWebContent` chave pode ser adicionar de um aplicativo **Info. plist** de arquivo e permitirá que as páginas da web para carregar corretamente enquanto a proteção de segurança de transporte da Apple (ATS) ainda está habilitada para o restante do aplicativo. Para obter mais informações, consulte nosso [segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md) documentação.
+- O novo `NSAllowsArbitraryLoadsInWebContent` chave pode ser adicionada à um aplicativo **Info. plist** de arquivo e permitirá que as páginas da web para carregar corretamente enquanto a proteção de segurança de transporte da Apple (ATS) ainda está habilitada para o restante do aplicativo. Para obter mais informações, consulte nosso [segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md) documentação.
 - Como a nova área de transferência no iOS 10 e no macOS Sierra permite que o usuário copiar e colar entre dispositivos, a API foi expandida para permitir uma área de transferência a ser limitado a um dispositivo específico e data/hora a ser limpa automaticamente em um determinado ponto. Além disso, áreas de trabalho nomeadas não são persistentes e devem ser substituídas com os contêineres de área de trabalho compartilhados.
 - Para todas as conexões SSL/TLS, a criptografia simétrica de RC4 agora é desabilitada por padrão. Além disso, a API de transporte seguro não oferece suporte a SSLv3 e é recomendável que o desenvolvedor parar usando criptografia SHA-1 e 3DES assim que possível.
 
@@ -51,9 +51,9 @@ A seguir privacidade relacionadas as chaves estão disponíveis:
 - **Privacidade – descrição de uso de atualização de integridade** (`NSHealthUpdateUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja editar dados de integridade do usuário. Para obter mais informações, consulte da Apple [referência de classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore).
 - **Privacidade – descrição de uso do HomeKit** (`NSHomeKitUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja acessar dados de configuração do usuário HomeKit.
 - **Privacidade – descrição de uso sempre local** (`NSLocationAlwaysUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja sempre têm acesso ao local do usuário.
-- [Preterido] **Privacidade – descrição do local de uso** (`NSLocationUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja acessar o local do usuário. *Observação: Essa chave foi preterida no iOS 8 (e superior). Use `NSLocationAlwaysUsageDescription` ou `NSLocationWhenInUseUsageDescription` em vez disso.*
+- [Preterido] **Privacidade – descrição do local de uso** (`NSLocationUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja acessar o local do usuário. *OBSERVAÇÃO: Essa chave foi preterida no iOS 8 (e superior). Use `NSLocationAlwaysUsageDescription` ou `NSLocationWhenInUseUsageDescription` em vez disso.*
 - **Privacidade – local quando em uso descrição de uso** (`NSLocationWhenInUseUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja acessar o local do usuário enquanto ele está em execução.
-- [Preterido] **Privacidade – descrição de uso da biblioteca de mídia** -permite que o desenvolvedor descrever por que o aplicativo deseja acessar a biblioteca de mídia do usuário. *Observação: Essa chave foi preterida no iOS 8 (e superior). Use `NSAppleMusicUsageDescription` em vez disso.*
+- [Preterido] **Privacidade – descrição de uso da biblioteca de mídia** -permite que o desenvolvedor descrever por que o aplicativo deseja acessar a biblioteca de mídia do usuário. *OBSERVAÇÃO: Essa chave foi preterida no iOS 8 (e superior). Use `NSAppleMusicUsageDescription` em vez disso.*
 - **Privacidade – descrição de uso do microfone** (`NSMicrophoneUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja acessar o microfone de dispositivos.
 - **Privacidade – descrição do uso de movimento** (`NSMotionUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja acessar o acelerômetro do dispositivo.
 - **Privacidade – descrição de uso da biblioteca de fotos** (`NSPhotoLibraryUsageDescription`)-permite que o desenvolvedor descrever por que o aplicativo deseja acessar a biblioteca de fotos do usuário.
