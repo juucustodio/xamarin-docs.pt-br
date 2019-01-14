@@ -6,13 +6,13 @@ ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/03/2018
-ms.openlocfilehash: 015a7dfa3d55b411e6626ae2ac70fd2930661e65
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/08/2018
+ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898986"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207811"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Conceitos básicos de aplicativo Xamarin.Forms
 
@@ -27,6 +27,10 @@ A classe `Application` é o ponto de partida para o Xamarin.Forms – todo aplic
 ## <a name="app-lifecycleapp-lifecyclemd"></a>[Ciclo de vida do aplicativo](app-lifecycle.md)
 
 Os métodos `OnStart`, `OnSleep` e `OnResume` da classe `Application`, bem como eventos de navegação modal, permitem que você manipule eventos de ciclo de vida do aplicativo com código personalizado.
+
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indexação de aplicativo e vinculação profunda](deep-linking.md)
+
+A indexação de aplicativo permite que os aplicativos que seriam esquecidos após alguns usos permaneçam relevantes fazendo com que eles apareçam nos resultados da pesquisa. A vinculação profunda permite que os aplicativos respondam a um resultado de pesquisa que contém dados de aplicativo, normalmente navegando até uma página referenciada de um link profundo.
 
 ## <a name="behaviorsbehaviorsindexmd"></a>[Comportamentos](behaviors/index.md)
 
@@ -66,7 +70,7 @@ O Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando 
 
 ## <a name="messaging-centermessaging-centermd"></a>[Centro de mensagens](messaging-center.md)
 
-O `MessagingCenter` do Xamarin.Forms permite exibir modelos e outros componentes com os quais se comunicar sem que eles precisem saber nada uns sobre os outros, além de um contrato de mensagem simples.
+O `MessagingCenter` do Xamarin.Forms habilita a exibição de modelos e outros componentes com os quais se comunicar sem que eles precisem saber nada uns sobre os outros, além de um contrato de mensagem simples.
 
 ## <a name="navigationnavigationindexmd"></a>[Navegação](navigation/index.md)
 
