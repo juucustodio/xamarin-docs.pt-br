@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 741e18d84c25bb4479480949a271a5845e99daa1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c552d97f64b28ed47a9226047862bffcfa8c9e3
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118455"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418680"
 ---
 # <a name="using-sqlitenet-with-android"></a>Usar SQLite.NET com Android
 
@@ -22,8 +22,8 @@ Para incluir a biblioteca SQLite.NET em um aplicativo Xamarin, adicione o seguin
 
 - **Nome do pacote:** sqlite-net-pcl
 - **Autor:** Frank A. Krueger
-- **ID:** sqlite-net-pcl
-- **URL:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Id:** sqlite-net-pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Pacote do SQLite.NET NuGet](using-sqlite-orm-images/image1a-sml.png "SQLite.NET mobileengagement")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -136,7 +136,7 @@ Atributos comuns que você pode aplicar às suas classes para controlar como ele
 -   **[MaxLength(value)]**  &ndash; Restringe o comprimento de uma propriedade de texto, quando uma inserção de banco de dados é tentada. Consumir o código deve validar isso antes de inserir o objeto como esse atributo é 'verificado apenas' durante uma inserção de banco de dados ou a tentativa de operação de atualização.
 
 -   **[Ignorar]**  &ndash; SQLite.NET faz com que a ignorar essa propriedade.
-    Isso é particularmente útil para as propriedades que têm um tipo que não pode ser armazenado no banco de dados ou que as coleções de modelo que não podem ser resolvidas automaticamente ser SQLite.
+    Isso é particularmente útil para propriedades que têm um tipo que não pode ser armazenado no banco de dados, ou propriedades que modelam as coleções que não podem ser resolvidas automaticamente pelo SQLite.
 
 -   **[Unique]**  &ndash; Garante que os valores na coluna de banco de dados subjacentes sejam exclusivos.
 
