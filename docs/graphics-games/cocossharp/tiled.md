@@ -267,7 +267,7 @@ public class GameLayer : CCLayer
 } 
 ```
 
-A maioria do código é auto-explicativo, mas deve discutiremos a manipulação de Tesouro de blocos. Nesse caso, estamos removendo os blocos que são identificados como peitos Tesouro. Isso ocorre porque o Tesouro peitos provavelmente precisará de código personalizado em tempo de execução a colisão de efeito e recompense o conteúdo do Tesouro quando aberto com o player. Além disso, o Tesouro talvez seja necessário reagir a que está sendo aberto (alterando sua aparência visual) e pode ter lógica para somente que aparecem quando tudo na tela inimigos tem sido derrotados.
+A maioria do código é auto-explicativo, mas deve discutiremos a manipulação de Tesouro de blocos. Nesse caso, estamos removendo os blocos que são identificados como baús de tesouro. Isso ocorre porque o baú de tesouro provavelmente precisará de código personalizado em tempo de execução a colisão de efeito e recompense o conteúdo do Tesouro quando aberto com o player. Além disso, o Tesouro talvez seja necessário reagir a que está sendo aberto (alterando sua aparência visual) e pode ter lógica para somente que aparecem quando tudo na tela inimigos tem sido derrotados.
 
 Em outras palavras, o conjunto de ferramentas do Tesouro irão se beneficiar sendo uma entidade em vez de ser um bloco simples no `CCTileMap`. Para obter mais informações sobre entidades de jogos, consulte o [guia de entidades em CocosSharp](~/graphics-games/cocossharp/entities.md).
 
