@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: c761f9f11e8053dcd0960129a28251ed6acf473c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 941b88f9109cf2f3a3485311c52b1250bd08e53f
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479765"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Parte 2 – implementar o WalkingGame
 
@@ -398,7 +398,7 @@ public Rectangle CurrentRectangle
         AnimationFrame currentFrame = null;
 
         // See if we can find the frame
-        TimeSpan accumulatedTime;
+        TimeSpan accumulatedTime = new TimeSpan();
         foreach(var frame in frames)
         {
             if (accumulatedTime + frame.Duration >= timeIntoAnimation)
@@ -510,7 +510,7 @@ Agora o `CharacterEntity` reproduzirá seu `walkDown` animação:
 
 Em seguida, estaremos adicionando movimento para nossa personagem usando controles de toque. Quando o usuário toca na tela, o caractere será movido para o ponto em que a tela é atingida. Se não há toques forem detectados, o caractere dará suporte em vigor.
 
-### <a name="defining-getdesiredvelocityfrominput"></a>Definindo GetDesiredVelocityFromInput
+### <a name="defining-getdesiredvelocityfrominput"></a>Defining GetDesiredVelocityFromInput
 
 Usaremos do MonoGame `TouchPanel` classe, que fornece informações sobre o estado atual da tela sensível ao toque. Vamos adicionar um método que verificará o `TouchPanel` e velocidade desejada do nosso do caractere de retorno:
 
