@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 719efc87b8843d0d2fcd2643aab23aa6849d940a
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746902"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841374"
 ---
 # <a name="images-in-xamarinmac"></a>Imagens no xamarin. Mac
 
@@ -82,7 +82,7 @@ A seguir deve ser levados em consideração ao usar imagens de vetor PDF em cat�
 - Isso não é completa do vetor de suporte, pois o PDF será rasterizado em um bitmap em tempo de compilação e os bitmaps fornecidos no aplicativo final.
 - Você não pode ajustar o tamanho da imagem após ela ter sido definida no catálogo de ativos. Se você tentar redimensionar a imagem (ou no código ou usando o Layout automático e Classes de tamanho) a imagem será distorcida assim como qualquer outro bitmap.
 
-Ao usar um **imagem definida** no Interface Builder do Xcode, basta selecionar o nome do conjunto na lista suspensa na **Inspetor de atributo**: * *
+Ao usar um **imagem definida** no Interface Builder do Xcode, basta selecionar o nome do conjunto na lista suspensa na **Inspetor de atributo**:
 
 ![Selecionar uma imagem definido no Interface Builder do Xcode](image-images/imageset06.png "selecionar uma imagem definido no Interface Builder do Xcode")
 
