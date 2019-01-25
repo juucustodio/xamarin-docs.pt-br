@@ -6,12 +6,13 @@ ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 4e9b782cf266a96f30c79eaf139ef88332e02dca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/25/2015
+ms.openlocfilehash: 014de47660f2c0ac8295495e417b3d5def135470
+ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119807"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54879310"
 ---
 # <a name="systemdata-in-xamarinios"></a>System. Data no xamarin. IOS
 
@@ -110,7 +111,7 @@ class Demo {
 > Conforme mencionado no exemplo de código acima, é uma prática inadequada para inserir cadeias de caracteres em comandos SQL, pois ele torna o código vulnerável a [injeção de SQL](http://en.wikipedia.org/wiki/SQL_injection).
 
 
-### <a name="using-command-parameters"></a>Usando parâmetros de comando
+### <a name="using-command-parameters"></a>Uso de parâmetros de comando
 
 O código a seguir mostra como usar parâmetros de comando para inserir o texto inserido pelo usuário com segurança no banco de dados (mesmo se o texto contiver caracteres especiais do SQL como o apóstrofo único):
 

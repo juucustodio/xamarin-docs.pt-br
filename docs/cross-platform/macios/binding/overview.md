@@ -1,16 +1,17 @@
 ---
 title: Visão geral de associações do Objective-C
-description: Este documento fornece uma visão geral das diferentes maneiras de criar associações c# para o código Objective-C, incluindo associações de linha de comando, projetos de associação e objetivo Sharpie. Ele também discute como funciona a associação.
+description: Este documento fornece uma visão geral das diferentes maneiras de criar C# associações para o código Objective-C, incluindo associações de linha de comando, projetos de associação e objetivo Sharpie. Ele também discute como funciona a associação.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 97d0c5b9f61d4dafe144d2b2f22df6d465cbbccb
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.date: 11/25/2015
+ms.openlocfilehash: 3f15eaf9171ac44b870239fb5ffa14edd6210360
+ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855267"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54879297"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Visão geral de associações do Objective-C
 
@@ -18,14 +19,14 @@ _Detalhes de como funciona o processo de associação_
 
 Associação de uma biblioteca Objective-C para uso com o Xamarin usa três etapas:
 
-1. Gravar um c# "Definição de API" para descrever como a API nativa é exposta em .NET e como ele mapeia subjacente Objective-C. Isso é feito usar o padrão de c# constrói, como `interface` e a associação de vários **atributos** (consulte este [exemplo simples](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. Escrever um C# "Definição de API" para descrever como a API nativa é exposta em .NET e como ele mapeia subjacente Objective-C. Isso é feito usando o padrão C# construções `interface` e a associação de vários **atributos** (consulte este [exemplo simples](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
-2. Quando você tiver gravado a "definição de API" no c#, você compilá-lo para produzir um assembly de "binding". Isso pode ser feito na [ **linha de comando** ](#commandline) ou usando um [ **projeto associação** ](#bindingproject) no Visual Studio para Mac ou Visual Studio.
+2. Depois de você ter escrito a definição de API"" em C#, você compilá-lo para produzir um assembly de "binding". Isso pode ser feito na [ **linha de comando** ](#commandline) ou usando um [ **projeto associação** ](#bindingproject) no Visual Studio para Mac ou Visual Studio.
 
 3. Esse assembly "binding", em seguida, é adicionado ao seu projeto de aplicativo do Xamarin, para que você possa acessar a funcionalidade nativa usando a API que você definiu.
   O projeto de associação é completamente separado do seus projetos de aplicativo.
 
-**Observação:** etapa 1 pode ser automatizada com o auxílio de [ **objetivo Sharpie**](#objectivesharpie). Ele examina a API de Objective-C e gera uma proposta c# "Definição de API". Você pode personalizar os arquivos criados por objetivo Sharpie e usá-los em um projeto de associação (ou na linha de comando) para criar o seu assembly de associação. Objetivo Sharpie não cria associações por si só, é simplesmente uma parte opcional do processo maior.
+**OBSERVAÇÃO:** Etapa 1 pode ser automatizada com o auxílio de [ **objetivo Sharpie**](#objectivesharpie). Ele examina a API de Objective-C e gera uma proposta C# "Definição de API". Você pode personalizar os arquivos criados por objetivo Sharpie e usá-los em um projeto de associação (ou na linha de comando) para criar o seu assembly de associação. Objetivo Sharpie não cria associações por si só, é simplesmente uma parte opcional do processo maior.
 
 Você também pode ler mais detalhes técnicos da [como ele funciona](#howitworks), que ajudará você a escrever suas associações.
 
@@ -33,7 +34,7 @@ Você também pode ler mais detalhes técnicos da [como ele funciona](#howitwork
 
 ## <a name="command-line-bindings"></a>Associações de linha de comando
 
-Você pode usar o `btouch-native` para xamarin. IOS (ou `bmac-native` se você estiver usando o xamarin. Mac) para criar associações diretamente. Ele funciona, passando as definições de API do c# que você criou manualmente (ou usando o objetivo Sharpie) para a ferramenta de linha de comando (`btouch-native` para iOS ou `bmac-native` para Mac).
+Você pode usar o `btouch-native` para xamarin. IOS (ou `bmac-native` se você estiver usando o xamarin. Mac) para criar associações diretamente. Ele funciona, passando o C# definições que você criou manualmente API (ou usando o objetivo Sharpie) para a ferramenta de linha de comando (`btouch-native` para iOS ou `bmac-native` para Mac).
 
 
 A sintaxe geral para invocar essas ferramentas é:
@@ -61,7 +62,7 @@ Siga esse [guia de Introdução](~/cross-platform/macios/binding/objective-c-lib
 
 <a name="objectivesharpie" />
 
-## <a name="objective-sharpie"></a>Objetivo Sharpie
+## <a name="objective-sharpie"></a>Objective Sharpie
 
 Sharpie objetivo é a ferramenta de linha de comando do outro, separado que ajuda com os estágios iniciais de criação de uma associação. Não cria uma associação por si só, em vez disso, ele automatiza a etapa inicial de geração de uma definição de API para a biblioteca nativa de destino.
 
@@ -75,7 +76,7 @@ Ler o [docs objetivo Sharpie](~/cross-platform/macios/binding/objective-sharpie/
 
 Primeiro, encontre um tipo que você deseja associar. Para discussão fins (e manter a simplicidade) faremos o vínculo a [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) tipo (que já foi associado na [Foundation.NSEnumerator](https://developer.xamarin.com/api/type/Foundation.NSEnumerator/); assim, por exemplo, a implementação abaixo é fins).
 
-Em segundo lugar, precisamos criar o tipo do c#. Podemos provavelmente desejará colocar isso em um namespace; uma vez que o Objective-C não oferece suporte a namespaces, será necessário usar o `[Register]` atributo para alterar o nome do tipo que o xamarin. IOS serão registrados com o tempo de execução do Objective-C. O tipo do c# também deve herdar de [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
+Em segundo lugar, precisamos criar o C# tipo. Podemos provavelmente desejará colocar isso em um namespace; uma vez que o Objective-C não oferece suporte a namespaces, será necessário usar o `[Register]` atributo para alterar o nome do tipo que o xamarin. IOS serão registrados com o tempo de execução do Objective-C. O C# tipo também deve herdar de [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
 
 ```csharp
 namespace Example.Binding {
@@ -188,5 +189,5 @@ namespace Example.Binding {
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
