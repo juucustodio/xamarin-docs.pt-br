@@ -6,13 +6,14 @@ ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 02/09/2018
-ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.custom: video
+ms.date: 01/22/2019
+ms.openlocfilehash: 6d64acdcc84c16f33a1f543bf1c9506ae7c8e347
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479687"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implantação sem fio para aplicativos Xamarin.iOS e tvOS
 
@@ -58,7 +59,7 @@ O processo de emparelhamento a seguir só é necessário uma vez por dispositivo
 
 1. Abra o Xcode e vá para **Janela > Dispositivos e Simuladores**.
 2. Conecte o dispositivo iOS ao Mac usando um cabo de alimentação. Talvez seja necessário selecionar **Confiar Neste Computador** no dispositivo.
-3. Selecione o dispositivo e marque a caixa de seleção **Conectar via rede** para emparelhá-lo: ![janela Dispositivo e Simulador mostrando a opção Conectar via rede](wireless-deployment-images/image2.png)
+3. Selecione seu dispositivo e marque a caixa de seleção **Conectar via rede** para emparelhá-lo:  ![Janela Dispositivo e Simulador mostrando a opção Conectar via rede](wireless-deployment-images/image2.png)
 
 ### <a name="pairing-an-apple-tv-with-xcode"></a>Emparelhamento de uma Apple TV com o Xcode
 
@@ -105,3 +106,9 @@ A depuração sem fio é habilitada automaticamente após a implantação sem fi
 ## <a name="related-links"></a>Links relacionados
 
 - [Emparelhar um dispositivo sem fio com o Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Debug-to-iOS-Devices-Over-Wi-Fi/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

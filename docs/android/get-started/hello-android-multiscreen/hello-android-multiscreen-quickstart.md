@@ -1,5 +1,5 @@
 ---
-title: 'Multitela Hello, Android: início rápido'
+title: 'Multitela Hello, Android: Guia de Início Rápido'
 description: Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 774661b36a41e4791207a54892663af13de3b3d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dcc60243957bb1a7720c08dc7a5ce51caf585ce8
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120483"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418654"
 ---
-# <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: início rápido
+# <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: Guia de Início Rápido
 
 _Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android._
 
@@ -143,7 +143,7 @@ translationHistoryButton.Click += (sender, e) =>
 };
 ```
 
-Atualize o botão **Converter** para adicionar o número de telefone à lista de `phoneNumbers`. O manipulador `Click` para o `TranslateHistoryButton` deve se parecer com o código a seguir:
+Atualize o botão **Converter** para adicionar o número de telefone à lista de `phoneNumbers`. O manipulador `Click` para o `translateButton` deve se parecer com o código a seguir:
 
 ```csharp
 // Add code to translate number
