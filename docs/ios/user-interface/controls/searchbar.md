@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 923eebc2674abdbbd66d9db11bebf9f503928569
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c46aa1244699671d46560b0029197981a86d005
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107309"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233322"
 ---
 # <a name="search-bars-in-xamarinios"></a>Barras de pesquisa no xamarin. IOS
 
@@ -84,7 +84,7 @@ Essas propriedades são explicadas abaixo:
 
 - **Prompt de texto, o espaço reservado,** – essas propriedades são usadas para sugerir e instruir como os usuários devem usar a barra de pesquisa. Por exemplo, se seu aplicativo exibida uma lista de repositórios você poderia usar a propriedade prompt para aconselha que os usuários podem "inserir uma cidade, o nome de história ou o código postal"
 - **Estilo de pesquisa** – você pode definir a barra de pesquisa para ser **Prominent** ou **mínimo**. Usar o destaque será tonalizar tudo na tela, exceto para a barra de pesquisa, fazendo com que o foco a ser desenhado à barra de pesquisa. A barra de pesquisa de estilo mínimo será mescla com seu ambiente.
-- **Recursos** – permitindo que essas propriedades exibe apenas o elemento de interface do usuário. A funcionalidade deve ser implementada para eles, gerando o evento correto conforme detalhado no [documentos de API da barra de pesquisa](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
+- **Recursos** – permitindo que essas propriedades exibe apenas o elemento de interface do usuário. A funcionalidade deve ser implementada para eles, gerando o evento correto conforme detalhado no [documentos de API da barra de pesquisa](xref:UIKit.UISearchBar)
     - Mostra os resultados da pesquisa / indicadores botão – será exibido um ícone de resultados de pesquisa ou indicadores na barra de pesquisa
     - Mostra o botão Cancelar – permite que os usuários para sair a função de pesquisa. É recomendável que essa opção é selecionada.
     - Mostra a barra de escopo – Isso permite que os usuários limitar o escopo da pesquisa. Por exemplo, ao pesquisar no aplicativo de música o usuário pode selecionar se desejarem pesquisar Apple Music ou sua biblioteca para uma determinada música ou artista. Para exibir várias opções, adicione uma matriz de títulos para o **ScopeBarTitles** propriedade.

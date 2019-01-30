@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 2f9cc72dcbe506d22c8a986bcf59ddaa6355f043
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: becba36655a5247a11decb7dc54334f9397ecdfc
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103238"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233526"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -38,7 +38,7 @@ Para obter mais informações, consulte nosso [Introdução ao 3D Touch](~/ios/p
 
 Novo para o iOS 9, a segurança de transporte de aplicativo (ATS) impõe conexões seguras entre recursos da internet (como o servidor de back-end do aplicativo) e seu aplicativo. ATS garante que todas as comunicações de internet está em conformidade para proteger a conexão as práticas recomendadas, impedindo assim a divulgação acidental de informações confidenciais diretamente por meio de seu aplicativo ou uma biblioteca que ele está consumindo.
 
-Uma vez que o ATS é habilitado por padrão nos aplicativos criados para o iOS 9 e OS X 10.11 (El Capitan), todas as conexões usando [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) ou [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) estará sujeito Requisitos de segurança ATS. Se suas conexões não atenderem a esses requisitos, ele falhará com uma exceção.
+Uma vez que o ATS é habilitado por padrão nos aplicativos criados para o iOS 9 e OS X 10.11 (El Capitan), todas as conexões usando [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) ou [NSUrlSession](xref:Foundation.NSUrlSession) estará sujeito Requisitos de segurança ATS. Se suas conexões não atenderem a esses requisitos, ele falhará com uma exceção.
 
 Para obter mais informações sobre o ATS, consulte nosso [segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md) guia.
 
@@ -78,7 +78,7 @@ Para obter mais informações, consulte nosso [aperfeiçoamentos feitos na pesqu
 
 ## <a name="new-stack-view"></a>Novo modo de exibição de pilha
 
-O controle de exibição de pilha ([UIStackView](https://developer.xamarin.com/api/type/UIKit.UIStackView/)) aproveita o poder do Layout automático e Classes de tamanho para gerenciar uma pilha de subexibições (horizontal ou verticalmente) que responde dinamicamente ao tamanho de tela e a orientação do dispositivo iOS.
+O controle de exibição de pilha ([UIStackView](xref:UIKit.UIStackView) aproveita o poder do Layout automático e Classes de tamanho para gerenciar uma pilha de subexibições (horizontal ou verticalmente) que responde dinamicamente ao tamanho de tela e a orientação do dispositivo iOS.
 
 Usando o controle de exibição de pilha, a quantidade de trabalho necessário para layout de que uma interface do usuário é bastante reduzida. O layout de todas as subexibições anexado a uma exibição de pilha são gerenciados automaticamente com base nas propriedades de desenvolvedor definido como eixo, distribuição, alinhamento e espaçamento.
 
@@ -87,7 +87,7 @@ Para obter mais informações, consulte nosso [Introdução à exibição de pil
 
 ## <a name="collection-view-changes"></a>Alterações de exibição de coleção
 
-No iOS 9, a exibição de coleção ([UICollectionView](https://developer.xamarin.com/api/type/UIKit.UICollectionView/)) agora dá suporte a arrasta a reorganização de itens fora da caixa, adicionando um reconhecedor de gestos padrão novo e vários novos métodos de suporte.
+No iOS 9, a exibição de coleção ([UICollectionView](xref:UIKit.UICollectionView) agora dá suporte a arrasta a reorganização de itens fora da caixa, adicionando um reconhecedor de gestos padrão novo e vários novos métodos de suporte.
 
 Usando esses novos métodos, você pode facilmente implementar o arrastar para reordenar no modo de exibição de coleção e tem a opção de personalizar a aparência de itens durante qualquer estágio do processo de reordenação.
 
@@ -150,9 +150,9 @@ Para obter mais informações, consulte nosso [Introdução ao Touch ID](~/ios/p
 
 No iOS 9, a Apple fez apresentar uma interface do usuário invertida mais fácil do que nunca, fornecendo suporte completo para idiomas da direita para esquerda. Isso inclui o seguinte:
 
-- Standard [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) controles automaticamente inverterá direita para a esquerda com base nas configurações de localidade e idioma de dispositivos do iOS.
-- O [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) classe fornece atributos que permitem que você defina como um determinado modo de exibição deve aparecer quando invertida à direita para esquerda.
-- A capacidade de inverter uma imagem por meio de programação usando o [FlipsForRightToLeftLayoutDirection](https://developer.xamarin.com/api/property/UIKit.UIImage.FlipsForRightToLeftLayoutDirection/) propriedade da [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/) classe.
+- Standard [UIKit](xref:UIKit) controles automaticamente inverterá direita para a esquerda com base nas configurações de localidade e idioma de dispositivos do iOS.
+- O [UIView](xref:UIKit.UIView) classe fornece atributos que permitem que você defina como um determinado modo de exibição deve aparecer quando invertida à direita para esquerda.
+- A capacidade de inverter uma imagem por meio de programação usando o [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) propriedade da [UIImage](xref:UIKit.UIImage) classe.
 
 Para obter mais informações, consulte da Apple [idiomas da direita para esquerda Supporting](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) documentação.
 

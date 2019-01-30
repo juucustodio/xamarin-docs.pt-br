@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
-ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
+ms.openlocfilehash: 650ed00557a3dd819ab2920a7646f93199b98b9e
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609929"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233946"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para xamarin. IOS 
 
@@ -75,7 +75,7 @@ TypeName XXXX {
 
 A definição acima é gerada automaticamente pelo Visual Studio para Mac para todos os arquivos XIB que você adiciona ao Visual Studio para Mac no `NAME_OF_YOUR_XIB_FILE.designer.xib.cs` arquivo.
 
-Além disso, os tipos que contém o código acima devem ser uma subclasse de [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/).  Se o tipo recipiente estiver dentro de um namespace, ela também deve ter uma [[registrar]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) atributo que fornece um nome de tipo sem um namespace (como o construtor de Interface não dá suporte a namespaces em tipos):
+Além disso, os tipos que contém o código acima devem ser uma subclasse de [NSObject](xref:Foundation.NSObject).  Se o tipo recipiente estiver dentro de um namespace, ela também deve ter uma [[registrar]](xref:Foundation.RegisterAttribute) atributo que fornece um nome de tipo sem um namespace (como o construtor de Interface não dá suporte a namespaces em tipos):
 
 ```csharp
 namespace Samples.GLPaint {
@@ -98,7 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
-## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System. MissingMethodException: Nenhum construtor encontrado para Foo.Bar::ctor(System.IntPtr)
+## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException: Nenhum construtor encontrado para Foo.Bar::ctor(System.IntPtr)
 
 Esse erro é gerado em tempo de execução quando o código tentar instanciar uma instância das classes que são referenciados do seu arquivo de Interface Builder. Isso significa que você se esqueceu de adicionar um construtor que aceita um IntPtr único como um parâmetro.
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Isso significa que você está vinculando a uma biblioteca estática compilada com código thumb em seu projeto. A partir da versão SDK do iPhone 3.1 (ou superior no momento da redação deste artigo) Apple introduziu um bug em seu vinculador ao vincular o código de não-Thumb (xamarin. IOS) com o código Thumb (biblioteca estática). Você precisará vincular com uma versão não elevador da sua biblioteca estática para atenuar esse problema.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System. ExecutionEngineException: A tentativa de () de Foo[]:System.Collections.Generic.ICollection'1.get_Count de método (wrapper gerenciado para gerenciado) de compilação JIT
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException: A tentativa de () de Foo[]:System.Collections.Generic.ICollection'1.get_Count de método (wrapper gerenciado para gerenciado) de compilação JIT
 
 O sufixo de [] indica que você ou a biblioteca de classes está chamando um método em uma matriz por meio de uma coleção genérica, como IEnumerable <>, ICollection <> ou <> IList. Como alternativa, você pode forçar explicitamente o compilador AOT para incluir um método desse tipo chamando o método por conta própria e, certificando-se de que esse código é executado antes da chamada que disparou a exceção. Nesse caso, você poderia escrever:
 
@@ -411,7 +411,7 @@ Esse problema pode se manifestar de várias formas e sempre não produz um erro 
 Para verificar a ação de compilação, clique com o botão direito no arquivo. XIB e escolha **ação de compilação**.
 
 
-## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: Não há dados disponíveis para a codificação 437
+## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException: Não há dados disponíveis para a codificação 437
 
 Ao incluir 3ª bibliotecas de terceiros em seu aplicativo xamarin. IOS, você poderá receber um erro no formato "System. NotSupportedException: Não há dados disponíveis para codificação 437" ao tentar compilar e executar o aplicativo. Por exemplo, bibliotecas, como `Ionic.Zip.ZipFile`, pode gerar essa exceção durante a operação.
 

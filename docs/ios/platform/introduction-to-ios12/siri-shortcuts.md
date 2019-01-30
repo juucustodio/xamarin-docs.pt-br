@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 8b3b9a5b110432f33e06edf7ab51c582681e4ea3
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617755"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233725"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Atalhos do Siri no xamarin. IOS
 
@@ -24,7 +24,7 @@ iOS 12 adiciona Siri atalhos, permitindo que todos os tipos de aplicativos expon
 
 Atalhos de devem ser usados para acelerar a capacidade de um usuário para realizar uma tarefa comum – em muitos casos, sem precisar abrir o aplicativo em questão.
 
-## <a name="sample-app-soup-chef"></a>Aplicativo de exemplo: sopa Chef
+## <a name="sample-app-soup-chef"></a>Aplicativo de exemplo: Sopa Chef
 
 Para entender melhor o Siri atalhos, dê uma olhada a [sopa Chef](https://developer.xamarin.com/samples/monotouch/ios12/SoupChef/) aplicativo de exemplo. Sopa Chef permite aos usuários fazer pedidos de um restaurante sopa imaginário, exibir histórico de seus pedidos e definir expressões para usar ao ordenar sopa interagindo com Siri.
 
@@ -72,9 +72,9 @@ O **Info. plist** arquivo também contém o seguinte:
 </array>
 ```
 
-Isso `NSUserActivityTypes` par chave/valor indica que o Chef sopa sabe como lidar com um `OrderSoupIntent`e um [ `NSUserActivity` ](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/) tendo um [ `ActivityType` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ActivityType/) de "com.xamarin.SoupChef.viewMenu".
+Isso `NSUserActivityTypes` par chave/valor indica que o Chef sopa sabe como lidar com um `OrderSoupIntent`e um [ `NSUserActivity` ](xref:Foundation.NSUserActivity) tendo um [ `ActivityType` ](xref:Foundation.NSUserActivity.ActivityType) de "com.xamarin.SoupChef.viewMenu".
 
-Atividades e intenções personalizadas passadas para o aplicativo em si, em vez de suas extensões são manipuladas na `AppDelegate` (uma [ `UIApplicationDelegate` ](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/)), o [ `ContinueUserActivity` ](https://developer.xamarin.com/api/member/UIKit.UIApplicationDelegate.ContinueUserActivity/) método.
+Atividades e intenções personalizadas passadas para o aplicativo em si, em vez de suas extensões são manipuladas na `AppDelegate` (uma [ `UIApplicationDelegate` ](xref:UIKit.UIApplicationDelegate) pela [ `ContinueUserActivity` ](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) método.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -89,7 +89,7 @@ O **Entitlements. plist** arquivo na **SoupChef** projeto contém o seguinte:
 <true/>
 ```
 
-Essa configuração indica que o aplicativo usa o grupo de aplicativos "group.com.xamarin.SoupChef". O **SoupChefIntents** extensão do aplicativo usa o mesmo grupo de aplicativo, que permite que os dois projetos compartilhar [`NSUserDefaults`](https://developer.xamarin.com/api/type/Foundation.NSUserDefaults/)
+Essa configuração indica que o aplicativo usa o grupo de aplicativos "group.com.xamarin.SoupChef". O **SoupChefIntents** extensão do aplicativo usa o mesmo grupo de aplicativo, que permite que os dois projetos compartilhar [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 dados.
 
 O `com.apple.developer.siri` chave indica que o aplicativo interage com Siri.
@@ -103,7 +103,7 @@ Para criar um atalho que abre um aplicativo para exibir o conteúdo específico,
 
 ### <a name="setting-up-an-nsuseractivity"></a>Configurando um NSUserActivity
 
-Na tela do menu, `SoupMenuViewController` cria um `NSUserActivity` e atribui a ele para o controlador de exibição [ `UserActivity` ](https://developer.xamarin.com/api/property/UIKit.UIResponder.UserActivity/) propriedade:
+Na tela do menu, `SoupMenuViewController` cria um `NSUserActivity` e atribui a ele para o controlador de exibição [ `UserActivity` ](xref:UIKit.UIResponder.UserActivity) propriedade:
 
 ```csharp
 public override void ViewDidLoad()
@@ -149,8 +149,8 @@ public static NSUserActivity ViewMenuActivity {
 Observe o seguinte em particular:
 
 - Definindo `EligibleForPrediction` para `true` indica que o Siri pode prever esta atividade e fazê-lo como um atalho.
-- O [ `ContentAttributeSet` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ContentAttributeSet/) array é um padrão [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) usado para incluir um `NSUserActivity` nos resultados da pesquisa de iOS.
-- [`SuggestedInvocationPhrase`](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.SuggestedInvocationPhrase/) é uma frase que Siri sugerirá ao usuário como uma escolha potencial durante a atribuição de uma frase em um atalho.
+- O [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) array é um padrão [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) usado para incluir um `NSUserActivity` nos resultados da pesquisa de iOS.
+- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) é uma frase que Siri sugerirá ao usuário como uma escolha potencial durante a atribuição de uma frase em um atalho.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>Tratamento de um atalho NSUserActivity
 
@@ -517,7 +517,7 @@ Uma extensão de tentativas da interface do usuário fornece uma interface de us
 
 ### <a name="soupchefintentsui--infoplist-and-entitlementsplist"></a>SoupChefIntentsUI – Info. plist e Entitlements. plist
 
-#### <a name="soupchefintentsui-infoplist"></a>SoupChefIntentsUI – Info. plist
+#### <a name="soupchefintentsui-infoplist"></a>SoupChefIntentsUI – Info.plist
 
 O **Info. plist** na **SoupChefIntentsUI** projeto define o **identificador do pacote** como `com.xamarin.SoupChef.SoupChefIntentsui`.
 
@@ -600,7 +600,7 @@ public void ConfigureView(
 
 Sopa Chef fornece uma interface para atribuir um atalho de voz para cada pedido, tornando possível a sopa de ordem com Siri. Na verdade, a interface usada para registrar e atribuir atalhos de voz é fornecida pelo iOS e exige pouco código personalizado.
 
-Na `OrderDetailViewController`, quando um usuário toca a tabela **adicionar a Siri** linha, o [ `RowSelected` ](https://developer.xamarin.com/api/member/UIKit.UITableViewSource.RowSelected/) método apresenta uma tela para adicionar ou editar um atalho de voz:
+Na `OrderDetailViewController`, quando um usuário toca a tabela **adicionar a Siri** linha, o [ `RowSelected` ](xref:UIKit.UITableViewSource.RowSelected*) método apresenta uma tela para adicionar ou editar um atalho de voz:
 
 ```csharp
 public override void RowSelected(UITableView tableView, NSIndexPath indexPath)

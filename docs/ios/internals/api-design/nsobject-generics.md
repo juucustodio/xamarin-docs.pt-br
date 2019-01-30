@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 39faa4670b17cdf4853bfe24ff104765ca541b9f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 512280e9c298cfbcea6f693b0691236fd1cf5a5f
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106203"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233686"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Subclasses genéricas de NSObject no xamarin. IOS
 
 ## <a name="using-generics-with-nsobjects"></a>Usando genéricos com NSObjects
 
-Começando com o xamarin. IOS 7.2.1, você pode usar genéricos em subclasses de `NSObject` (por exemplo [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/)).
+Começando com o xamarin. IOS 7.2.1, você pode usar genéricos em subclasses de `NSObject` (por exemplo [UIView](xref:UIKit.UIView).
 
 Agora você pode criar classes genéricas, como este:
 
@@ -54,7 +54,7 @@ class Generic<T> : NSObject where T: NSObject
 }
 ```
 
-**Motivo**: O parâmetro de tipo genérico é um `NSObject`, de modo que a assinatura do seletor para `myMethod:` pode ser exposto com segurança para Objective-C (sempre será `NSObject` ou uma subclasse dela).
+**Motivo**: O parâmetro de tipo genérico é um `NSObject`, de modo que a assinatura do seletor para `myMethod:` podem ser expostos com segurança para Objective-C (sempre será `NSObject` ou uma subclasse dela).
 
 **Ruim**:
 
@@ -151,7 +151,7 @@ class MyClass : NSObject
 }
 ```
 
-**Motivo**: isso não é permitido porque o xamarin. IOS não sabe qual tipo para usar para o argumento de tipo `T` quando o método é invocado do Objective-C.
+**Motivo**: Isso não é permitido porque o xamarin. IOS não sabe qual tipo para usar para o argumento de tipo `T` quando o método é invocado do Objective-C.
 
 Uma alternativa é criar um método especializado e a exportação em vez disso:
 
@@ -188,7 +188,7 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**Motivo:** assim como métodos genéricos, o tempo de execução do xamarin. IOS precisa ser capaz de saber que tipo a ser usado para o argumento de tipo genérico T.
+**Motivo:** Assim como métodos genéricos, o tempo de execução do xamarin. IOS precisa ser capaz de saber que tipo a ser usado para o argumento de tipo genérico T.
 
 Por exemplo os membros de instância em si é usada (já que nunca haverá uma instância genérica<T>, sempre será genérico<SomeSpecificClass>), mas essas informações para membros estáticos não estão presentes.
 

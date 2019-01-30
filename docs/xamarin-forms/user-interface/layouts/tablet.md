@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: b98d1fcf0917b9e25d774a92d56bf90bdd291978
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 9d1f54fa4753ba2ef44ba9b8b48a84a3ca932c4b
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998608"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233842"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout para aplicativos de Tablet e área de trabalho
 
@@ -86,7 +86,7 @@ Essa abordagem pode ser expandida para fazer alterações significativas aos lay
 
 ### <a name="leveraging-masterdetailpage"></a>Aproveitando MasterDetailPage
 
-O [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) é ideal para telas maiores, especialmente no iPad em que ele usa o [ `UISplitViewController` ](https://developer.xamarin.com/api/type/UIKit.UISplitViewController/) para fornecer uma experiência do iOS nativo.
+O [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) é ideal para telas maiores, especialmente no iPad em que ele usa o [ `UISplitViewController` ](xref:UIKit.UISplitViewController) para fornecer uma experiência do iOS nativo.
 
 Revisão [esta postagem de blog do Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/) para ver como você pode adaptar sua interface do usuário para que os telefones usam um layout e telas maiores podem usar outro (com o `MasterDetailPage`).
 

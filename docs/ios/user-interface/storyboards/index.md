@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563999"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233552"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução ao Storyboards no xamarin. IOS
 
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Ao criar um Storyboard usando o Designer, o IDE adicionará automaticamente o [[registrar]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) atributo na parte superior do `designer.cs` de classe e passar um identificador de cadeia de caracteres, que é idêntico à ID do Storyboard especificado no etapa anterior. Isso vinculará o c# para a cena relevante no Storyboard.
+Ao criar um Storyboard usando o Designer, o IDE adicionará automaticamente o [[registrar]](xref:Foundation.RegisterAttribute) atributo na parte superior do `designer.cs` de classe e passar um identificador de cadeia de caracteres, que é idêntico à ID do Storyboard especificado no etapa anterior. Isso vinculará o c# para a cena relevante no Storyboard.
 
 Em algum momento, você talvez queira adicionar uma classe existente que foi **não** criados no designer. Nesse caso, se registrar essa classe como de costume:
 
@@ -320,12 +320,12 @@ Antes de começar, siga etapas 1 a 8 acima. Nestas etapas podemos criar nossos s
 1. Agora, vamos criar nossa interface do usuário e adicionar as exibições adicionais listadas para o `MainViewController` para que ela fique assim na captura de tela abaixo:
 
     - UITextField
-        - Name: PasswordTextField
+        - Nome: PasswordTextField
         - Espaço reservado: 'Inserir a senha de segredo'
     - UILabel
-        - Texto: ' erro: incorreto de senha. Você não deve passar!'
-        - Cor: vermelha
-        - Alinhamento: Centro
+        - Texto: ' Erro: Senha incorreta. Você não deve passar!'
+        - Cor: Vermelho
+        - Alinhamento: Centralizado 
         - Linhas: 2
         - Caixa de seleção 'Hidden' verificada 
         

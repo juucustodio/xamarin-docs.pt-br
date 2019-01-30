@@ -1,5 +1,5 @@
 ---
-title: Design de API do xamarin. IOS
+title: Xamarin.iOS API Design
 description: Este documento descreve alguns dos princípios de orientação usada para projetar as APIs de Xamarin.iOS e como eles se relacionam com Objective-C.
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 56f9cbdae565f0d89463742377ec2311d8e375ac
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: 75904ad91df7795c538e736eabb6c6000847b449
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235045"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233647"
 ---
-# <a name="xamarinios-api-design"></a>Design de API do xamarin. IOS
+# <a name="xamarinios-api-design"></a>Xamarin.iOS API Design
 
 Além das bibliotecas de classes Base que fazem parte do Mono, principais [xamarin. IOS](http://www.xamarin.com/iOS) é fornecido com associações para várias APIs para permitir que os desenvolvedores criem aplicativos do iOS nativos com Mono do iOS.
 
@@ -92,9 +92,9 @@ Isso é uma nova associação, projetada especificamente para o iOS, com base na
 
 #### <a name="foundation"></a>Foundation
 
-O [Foundation](https://developer.xamarin.com/api/namespace/Foundation/) namespace fornece os tipos de dados básica é projetada para interoperar com a estrutura de base de Objective-C que faz parte do iOS e é a base para Objective-C. de programação orientada a objeto
+O [Foundation](xref:Foundation) namespace fornece os tipos de dados básica é projetada para interoperar com a estrutura de base de Objective-C que faz parte do iOS e é a base para Objective-C. de programação orientada a objeto
 
-Xamarin. IOS espelha em c#, a hierarquia de classes do Objective-C. Por exemplo, a classe base Objective-C [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) possam ser usados em c# via [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/).
+Xamarin. IOS espelha em c#, a hierarquia de classes do Objective-C. Por exemplo, a classe base Objective-C [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) possam ser usados em c# via [Foundation.NSObject](xref:Foundation.NSObject).
 
 Embora esse namespace fornece associações para os tipos subjacentes do Foundation Objective-C, em alguns casos Mapeamos os tipos subjacentes para tipos .NET. Por exemplo:
 
@@ -107,13 +107,13 @@ Para obter mais detalhes sobre as APIs de associação, consulte o [gerador de a
 
 ##### <a name="nsobject"></a>NSObject
 
-O [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) tipo é a base para todas as associações do Objective-C. Tipos de xamarin. IOS espelham duas classes de tipos do CocoaTouch APIs do iOS: os tipos de C (normalmente conhecidos como tipos de CoreFoundation) e os tipos de Objective-C (eles todos derivam da classe de NSObject).
+O [NSObject](xref:Foundation.NSObject) tipo é a base para todas as associações do Objective-C. Tipos de xamarin. IOS espelham duas classes de tipos do CocoaTouch APIs do iOS: os tipos de C (normalmente conhecidos como tipos de CoreFoundation) e os tipos de Objective-C (eles todos derivam da classe de NSObject).
 
-Para cada tipo que espelha um tipo não gerenciado, é possível obter o objeto nativo por meio de [manipular](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) propriedade.
+Para cada tipo que espelha um tipo não gerenciado, é possível obter o objeto nativo por meio de [manipular](xref:Foundation.NSObject.Handle) propriedade.
 
 Enquanto o Mono fornecerá a coleta de lixo para todos os seus objetos, o `Foundation.NSObject` implementa o [System. IDisposable](xref:System.IDisposable) interface. Isso significa que você pode liberar explicitamente os recursos de qualquer determinado NSObject sem ter de esperar o coletor de lixo para lançamento no. Isso é importante quando você estiver usando NSObjects pesada, por exemplo, UIImages que pode conter os ponteiros para blocos grandes de dados.
 
-Se seu tipo precisa executar finalização determinística, substituir os [NSObject.Dispose(bool) método](https://developer.xamarin.com/api/type/Foundation.NSObject/%2fM%2fDispose) o parâmetro Dispose for "bool disposing", e se definido como true, ele significa que seu método Dispose está sendo chamado porque o usuário explicitamente chamado Dispose () no objeto. Se o valor for false, isso significa que seu método Dispose (bool disposing) está sendo chamado no finalizador no thread do finalizador. []()
+Se seu tipo precisa executar finalização determinística, substituir os [NSObject.Dispose(bool) método](xref:Foundation.NSObject.Dispose(System.Boolean)) o parâmetro Dispose for "bool disposing", e se definido como true, ele significa que seu método Dispose está sendo chamado porque o usuário explicitamente chamado Dispose () no objeto. Se o valor for false, isso significa que seu método Dispose (bool disposing) está sendo chamado no finalizador no thread do finalizador. []()
 
 
 ##### <a name="categories"></a>Categorias
@@ -198,7 +198,7 @@ Você pode aplicar esse atributo a todos os membros de um tipo ou ao tipo propri
 
 #### <a name="uikit"></a>UIKit
 
-O [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) namespace contém um mapeamento individual para todos os componentes de interface do usuário que compõem o CocoaTouch na forma de classes c#. A API foi modificada para seguir as convenções usadas na linguagem c#.
+O [UIKit](xref:UIKit) namespace contém um mapeamento individual para todos os componentes de interface do usuário que compõem o CocoaTouch na forma de classes c#. A API foi modificada para seguir as convenções usadas na linguagem c#.
 
 Delegados c# são fornecidos para operações comuns. Consulte a [delegados](#Delegates) seção para obter mais informações.
 
@@ -283,7 +283,7 @@ Esses delegados desempenham um papel importante no UIKit e outras APIs CocoaTouc
 -  Para direcionar o comportamento de um controle.
 
 
-O padrão de programação foi projetado para minimizar a criação de classes derivadas para alterar o comportamento de um controle. Essa solução é semelhante no espírito ao longo dos anos têm feito outros kits de ferramentas de GUI: Gtk sinaliza, slots de Qt, eventos de Winforms, WPF/Silverlight eventos e assim por diante. Para evitar ter centenas de interfaces (uma para cada ação) ou exigir que os desenvolvedores implementar muitos métodos que eles não precisam, Objective-C oferece suporte a definições de método opcional. Isso é diferente de interfaces do c# que exigem a todos os métodos a serem implementados.
+O padrão de programação foi projetado para minimizar a criação de classes derivadas para alterar o comportamento de um controle. Essa solução é semelhante no espírito ao longo dos anos têm feito outros kits de ferramentas de GUI: GTK sinais, slots de Qt, eventos de Winforms, WPF/Silverlight eventos e assim por diante. Para evitar ter centenas de interfaces (uma para cada ação) ou exigir que os desenvolvedores implementar muitos métodos que eles não precisam, Objective-C oferece suporte a definições de método opcional. Isso é diferente de interfaces do c# que exigem a todos os métodos a serem implementados.
 
 Classes de Objective-C, você verá que as classes que usam esse padrão de programação expõem uma propriedade, geralmente chamada `delegate`, que é necessário para implementar partes obrigatórias da interface e partes de zero ou mais dos opcional.
 
@@ -301,9 +301,9 @@ Por exemplo, considere a [UIWebView](http://developer.apple.com/iphone/library/d
 
 Para muitos tipos, o xamarin. IOS criará automaticamente um delegado apropriado que encaminharão os `UIWebViewDelegate` chamadas para eventos de c#. Para `UIWebView`:
 
--  O [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) método é mapeado para o [UIWebView.LoadStarted](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadStarted/) eventos.
--  O [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) método é mapeado para o [UIWebView.LoadFinished](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadFinished/) eventos.
--  O [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) método é mapeado para o [UIWebView.LoadError](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadError/) eventos.
+-  O [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) método é mapeado para o [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) eventos.
+-  O [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) método é mapeado para o [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) eventos.
+-  O [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) método é mapeado para o [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) eventos.
 
 Por exemplo, esse simples programa registra as horas de início e término quando o carregamento de uma web exibe:
 
@@ -339,7 +339,7 @@ O `UITextField`do `ShouldReturn` propriedade nesse caso é usada como argumento 
 
 ##### <a name="strongly-typed-via-a-delegate-property"></a>Com rigidez de tipos por meio de uma propriedade de delegado
 
-Se você preferir não usar eventos, você pode fornecer seus próprios [UIWebViewDelegate](https://developer.xamarin.com/api/type/UIKit.UIWebViewDelegate/) subclasse e atribuí-lo para o [UIWebView.Delegate](https://developer.xamarin.com/api/property/UIKit.UIWebView.Delegate/) propriedade. Depois que tiver sido atribuído UIWebView.Delegate, o mecanismo de expedição de evento UIWebView deixará de funcionar e os métodos UIWebViewDelegate serão invocados quando ocorrem os eventos correspondentes.
+Se você preferir não usar eventos, você pode fornecer seus próprios [UIWebViewDelegate](xref:UIKit.UIWebViewDelegate) subclasse e atribuí-lo para o [UIWebView.Delegate](xref:UIKit.UIWebView.Delegate) propriedade. Depois que tiver sido atribuído UIWebView.Delegate, o mecanismo de expedição de evento UIWebView deixará de funcionar e os métodos UIWebViewDelegate serão invocados quando ocorrem os eventos correspondentes.
 
 Por exemplo, esse tipo simples registra o tempo necessário para carregar uma exibição da web:
 
@@ -368,9 +368,9 @@ web.Delegate = new Notifier ();
 
 Acima criará um UIWebViewer e ele será instruí-lo para enviar mensagens a uma instância do notificador, uma classe que criamos para responder às mensagens.
 
-Esse padrão também é usado para controlar o comportamento de alguns controles, por exemplo, no caso UIWebView, o [UIWebView.ShouldStartLoad](https://developer.xamarin.com/api/property/UIKit.UIWebView.ShouldStartLoad/) propriedade permite que o `UIWebView` instância de controle se o `UIWebView` carregará um página ou não.
+Esse padrão também é usado para controlar o comportamento de alguns controles, por exemplo, no caso UIWebView, o [UIWebView.ShouldStartLoad](xref:UIKit.UIWebView.ShouldStartLoad) propriedade permite que o `UIWebView` instância de controle se o `UIWebView` carregará um página ou não.
 
-O padrão também é usado para fornecer os dados sob demanda para alguns controles. Por exemplo, o [UITableView](https://developer.xamarin.com/api/type/UIKit.UITableView/) é um poderoso controle de renderização de tabela – e a aparência e o conteúdo é orientado por uma instância de um [UITableViewDataSource](https://developer.xamarin.com/api/type/UIKit.UITableView/DataSource)
+O padrão também é usado para fornecer os dados sob demanda para alguns controles. Por exemplo, o [UITableView](xref:UIKit.UITableView) é um poderoso controle de renderização de tabela – e a aparência e o conteúdo é orientado por uma instância de um [UITableViewDataSource](xref:UIKit.UITableViewDataSource)
 
 <a name="WeakDelegate"/>
 
@@ -379,7 +379,7 @@ O padrão também é usado para fornecer os dados sob demanda para alguns contro
 Além da propriedade com rigidez de tipos, há também um delegado fraco tipado que permite que o desenvolvedor associar itens de forma diferente, se desejado.
 Em todos os lugares fortemente tipado `Delegate` propriedade é exposta na associação do xamarin. IOS, um correspondente `WeakDelegate` propriedade também é exposta.
 
-Ao usar o `WeakDelegate`, você é responsável por corretamente decorando a classe usando o [exportar](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) atributo para especificar o seletor. Por exemplo:
+Ao usar o `WeakDelegate`, você é responsável por corretamente decorando a classe usando o [exportar](xref:Foundation.ExportAttribute) atributo para especificar o seletor. Por exemplo:
 
 ```csharp
 class Notifier : NSObject  {

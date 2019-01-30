@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 369e1a37cc75bb4d10cc71d8f79ed1dd473378ba
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119430"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55234024"
 ---
 # <a name="binding-types-reference-guide"></a>Guia de referência de tipos de associação
 
@@ -1181,7 +1181,7 @@ public class MyClass {
 }
 ```
 
-Os usuários do seu código, em seguida, podem facilmente assinar notificações lançadas para o [NSDefaultCenter](https://developer.xamarin.com/api/property/Foundation.NSNotificationCenter.DefaultCenter/) usando código como este:
+Os usuários do seu código, em seguida, podem facilmente assinar notificações lançadas para o [NSDefaultCenter](xref:Foundation.NSNotificationCenter.DefaultCenter) usando código como este:
 
 ```csharp
 var token = MyClass.Notifications.ObserverDidStart ((notification) => {
@@ -1203,7 +1203,7 @@ O valor retornado de `ObserveDidStart` pode ser usado para facilmente interrompe
 token.Dispose ();
 ```
 
-Ou você pode chamar [NSNotification.DefaultCenter.RemoveObserver](https://developer.xamarin.com/api/member/Foundation.NSNotificationCenter.RemoveObserver/p/Foundation.NSObject//) e passar o token. Se a notificação contiver parâmetros, você deve especificar um auxiliar `EventArgs` interface como esta:
+Ou você pode chamar [NSNotification.DefaultCenter.RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) e passar o token. Se a notificação contiver parâmetros, você deve especificar um auxiliar `EventArgs` interface como esta:
 
 ```csharp
 interface MyClass {
@@ -1226,7 +1226,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-Acima vai gerar uma `MyScreenChangedEventArgs` classe com o `ScreenX` e `ScreenY` propriedades que buscará os dados do [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) usando as chaves de dicionário `ScreenXKey` e `ScreenYKey` respectivamente e aplicar as conversões apropriadas. O `[ProbePresence]` atributo é usado para o gerador para investigar se a chave é definida `UserInfo`, em vez de tentar extrair o valor. Isso é usado para casos em que a presença da chave é o valor (normalmente para valores boolianos).
+Acima vai gerar uma `MyScreenChangedEventArgs` classe com o `ScreenX` e `ScreenY` propriedades que buscará os dados do [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) usando as chaves de dicionário `ScreenXKey` e `ScreenYKey` respectivamente e aplicar as conversões apropriadas. O `[ProbePresence]` atributo é usado para o gerador para investigar se a chave é definida `UserInfo`, em vez de tentar extrair o valor. Isso é usado para casos em que a presença da chave é o valor (normalmente para valores boolianos).
 
 Isso permite que você escreva código como este:
 
@@ -1498,7 +1498,7 @@ Isso normalmente é usado para retornos de chamada que são definidos como este 
 typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 
-Consulte também: [CCallback](#CCallback).
+Confira também:  [CCallback](#CCallback).
 
 <a name="CCallback" />
 
@@ -1512,7 +1512,7 @@ Isso normalmente é usado para retornos de chamada que são definidos como este 
 typedef returnType (*SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 
-Consulte também: [BlockCallback](#BlockCallback).
+Confira também:  [BlockCallback](#BlockCallback).
 
 ### <a name="params"></a>param. autom.
 
@@ -1648,7 +1648,7 @@ interface MyMutableString {
 
 ## <a name="enum-attributes"></a>Atributos Enum
 
-Mapeando `NSString` constantes para valores de enumeração é uma maneira fácil de criar o melhor de API .NET. Ele:
+Mapeando `NSString` constantes para valores de enumeração é uma maneira fácil de criar o melhor de API .NET. It:
 
 * permite que a conclusão de código ser mais útil, mostrando **apenas** os valores corretos para a API;
 * Adiciona segurança de tipos, você não pode usar outro `NSString` constante em um contexto incorreto; e
@@ -1942,13 +1942,13 @@ Você também pode aplicar o atributo no nível de assembly, e ele aplicará a t
 
 Com o xamarin. IOS 8.0 que introduzimos o suporte para criar facilmente classes fortemente tipadas que wrap `NSDictionaries`.
 
-Embora sempre foi possível usar o [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) de tipo de dados junto com uma API manual, agora é muito mais simples de fazer isso.  Para obter mais informações, consulte [identificando forte tipos](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
+Embora sempre foi possível usar o [DictionaryContainer](xref:Foundation.DictionaryContainer) de tipo de dados junto com uma API manual, agora é muito mais simples de fazer isso.  Para obter mais informações, consulte [identificando forte tipos](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
 
 <a name="StrongDictionary" />
 
 ### <a name="strongdictionary"></a>StrongDictionary
 
-Quando esse atributo é aplicado a uma interface, o gerador de produzirá uma classe com o mesmo nome que a interface que deriva de [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) e transforma cada propriedade definida na interface em fortemente tipado getter e setter para o dicionário.
+Quando esse atributo é aplicado a uma interface, o gerador de produzirá uma classe com o mesmo nome que a interface que deriva de [DictionaryContainer](xref:Foundation.DictionaryContainer) e transforma cada propriedade definida na interface em fortemente tipado getter e setter para o dicionário.
 
 Isso gera automaticamente uma classe que pode ser instanciada de uma já existente `NSDictionary` ou que foi criado novo.
 

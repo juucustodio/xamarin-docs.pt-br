@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/20/2018
-ms.openlocfilehash: b0a5d3e75ebbcd70a60a3e4e76eebe166117d31c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0b3fb7d467ae64e2cbfdb61644b1537bc5ae1161
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130790"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233062"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Usando a estrutura de linguagem Natural com xamarin. IOS
 
@@ -20,7 +20,7 @@ Introduzido no iOS 12, a estrutura de linguagem Natural permite processamento em
 
 A estrutura de linguagem Natural também pode usar modelos personalizados do Core ML para classificar e marcar o texto em contextos especializados.
 
-O [NSLinguisticTagger](https://developer.xamarin.com/api/type/Foundation.NSLinguisticTagger/) classe ainda está disponível. No entanto, a estrutura de linguagem Natural é o mecanismo preferido a ser usado para processamento de idioma Natural.
+O [NSLinguisticTagger](xref:Foundation.NSLinguisticTagger) classe ainda está disponível. No entanto, a estrutura de linguagem Natural é o mecanismo preferido a ser usado para processamento de idioma Natural.
 
 ## <a name="sample-app-xamarinnl"></a>Aplicativo de exemplo: XamarinNL
 
@@ -151,7 +151,7 @@ O **Tokenizer** guia do aplicativo de exemplo demonstra como separar um bloco de
 Toque o **palavras** ou **sentenças** botão para buscar uma lista de tokens. Cada token é associado uma palavra ou frase do texto original.
 
 `ShowTokens` divide a entrada do usuário em tokens, chamando o [`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
-método de um `NLTokenizer`. Esse método retorna uma matriz de [`NSValue`](https://developer.xamarin.com/api/type/Foundation.NSValue/)
+método de um `NLTokenizer`. Esse método retorna uma matriz de [`NSValue`](xref:Foundation.NSValue)
 objetos, cada quebra automática de um `NSRange` valor correspondente a um token no texto original.
 
 ```csharp

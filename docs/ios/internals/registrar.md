@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 8/29/2018
-ms.openlocfilehash: cdd57095b03c24472abec5646ee3a70350770d7c
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cd9e92e2c96d0a0696633e49869f2661e410d343
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "34786168"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233582"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Registrador de tipo para xamarin. IOS
 
@@ -22,10 +22,10 @@ Este documento descreve o sistema de registro do tipo usado pelo xamarin. IOS.
 
 Durante a inicialização, irá registrar o xamarin. IOS:
 
-- Classes com um [[registrar]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) atributo como classes de Objective-C.
-- Classes com um [[Category]](https://developer.xamarin.com/api/type/CRuntime.CategoryAttribute) atributo como categorias de Objective-C.
-- Interfaces com um [[Protocol]](https://developer.xamarin.com/api/type/Foundation.ProtocolAttribute/) atributo como protocolos de Objective-C.
-- Os membros com uma [[exportar]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/), tornando possível para Objective-C para acessá-los.
+- Classes com um [[registrar]](xref:Foundation.RegisterAttribute) atributo como classes de Objective-C.
+- Classes com um [[Category]](xref:ObjCRuntime.CategoryAttribute) atributo como categorias de Objective-C.
+- Interfaces com um [[Protocol]](xref:Foundation.ProtocolAttribute) atributo como protocolos de Objective-C.
+- Os membros com uma [[exportar]](xref:Foundation.ExportAttribute), tornando possível para Objective-C para acessá-los.
 
 Por exemplo, considere o gerenciado `Main` método comum em aplicativos xamarin. IOS:
 

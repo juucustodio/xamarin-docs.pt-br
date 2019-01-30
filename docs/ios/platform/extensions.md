@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: f892774b4899fcbac46e8cc7bc2b0dd0336cc036
-ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
+ms.openlocfilehash: 10b692099bae6f444474394144eb7e8bb46d749f
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012276"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233920"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no xamarin. IOS
 
@@ -30,7 +30,7 @@ Todas as extensões são instaladas junto com um aplicativo de contêiner (com a
 |Tipo|Descrição|Ponto de extensão|Aplicativo de host|
 |--- |--- |--- |--- |
 |Ação|Editor especializado ou o visualizador para um determinado tipo de mídia|`com.apple.ui-services`|Qualquer|
-|Provedor de documento|Permite que o aplicativo usar um armazenamento de documento remoto|`com.apple.fileprovider-ui`|Aplicativos que usam um [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|Provedor de documento|Permite que o aplicativo usar um armazenamento de documento remoto|`com.apple.fileprovider-ui`|Aplicativos que usam um [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
 |Teclado|Teclados alternativos|`com.apple.keyboard-service`|Qualquer|
 |Edição de fotos|Edição e manipulação de fotos|`com.apple.photo-editing`|Editor de Photos.App|
 |Compartilhar|Compartilha dados com redes sociais, sistema de mensagens de serviços, etc.|`com.apple.share-services`|Qualquer|
@@ -48,8 +48,8 @@ As limitações de universais são:
 - As extensões não é possível usar [estendido modos em segundo plano](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
 - As extensões não podem acessar o dispositivo câmeras ou microfones (embora eles podem acessar os arquivos de mídia existente)
 - As extensões não podem receber dados de descarte de ar (embora eles possam transmitir dados por meio de descarte de ar)
-- [UIActionSheet](https://developer.xamarin.com/api/type/UIKit.UIActionSheet/) e [UIAlertView](https://developer.xamarin.com/api/type/UIKit.UIAlertView/) não estão disponíveis; as extensões devem usar [UIAlertController](https://developer.xamarin.com/api/type/UIKit.UIAlertController/)
-- Vários membros da [UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/) não estão disponíveis: [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/), `UIApplication.OpenURL`, `UIApplication.BeginIgnoringInteractionEvents` e `UIApplication.EndIgnoringInteractionEvents`
+- [UIActionSheet](xref:UIKit.UIActionSheet) e [UIAlertView](xref:UIKit.UIAlertView) não estão disponíveis; as extensões devem usar [UIAlertController](xref:UIKit.UIAlertController)
+- Vários membros da [UIApplication](xref:UIKit.UIApplication) não estão disponíveis: [UIApplication.SharedApplication](xref:UIKit.UIApplication.SharedApplication), [UIApplication.OpenUrl](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl)), [UIApplication.BeginIgnoringInteractionEvents](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) e [ UIApplication.EndIgnoringInteractionEvents](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
 - o iOS impõe um limite de uso de memória de 16 MB de extensões de hoje.
 - Por padrão, as extensões do teclado não tem acesso à rede. Isso afeta a depuração no dispositivo (não a restrição é imposta no simulador), uma vez que o xamarin. IOS requer acesso à rede para a depuração funcione. É possível solicitar o acesso de rede, definindo o `Requests Open Access` valor no Info. plist do projeto para `Yes`. Consulte da Apple [guia de teclado personalizados](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) para obter mais informações sobre as limitações de extensão de teclado.
 
@@ -65,11 +65,11 @@ Normalmente, o aplicativo de contêiner descreve a extensão e orienta o usuári
 
 ## <a name="extension-lifecycle"></a>Ciclo de vida de extensão
 
-Uma extensão pode ser tão simple quanto uma única [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/) ou extensões mais complexas que apresentam várias telas da interface do usuário. Quando o usuário encontra um _pontos de extensão_ (por exemplo, quando uma imagem de compartilhamento), eles terão a oportunidade de escolher entre as extensões registradas para esse ponto de extensão. 
+Uma extensão pode ser tão simple quanto uma única [UIViewController](xref:UIKit.UIViewController) ou extensões mais complexas que apresentam várias telas da interface do usuário. Quando o usuário encontra um _pontos de extensão_ (por exemplo, quando uma imagem de compartilhamento), eles terão a oportunidade de escolher entre as extensões registradas para esse ponto de extensão. 
 
 Se eles escolherem um aplicativo de extensões, seu `UIViewController` será instanciado e iniciar o ciclo de vida normal do controlador de exibição. No entanto, ao contrário de um aplicativo normal, que são suspensos, mas geralmente não encerrada quando o usuário termina de interagir com eles, extensões são carregadas, executadas e, em seguida, encerradas repetidamente.
 
-As extensões podem se comunicar com seus aplicativos de Host por meio de um [NSExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) objeto. Algumas extensões têm operações que recebem retornos de chamada assíncronos com os resultados. Esses retornos de chamada serão executados em threads em segundo plano e a extensão deve levar isso em consideração; Por exemplo, usando [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/member/Foundation.NSObject.InvokeOnMainThread/) se deseja atualizar a interface do usuário. Consulte a [comunicando-se com o aplicativo Host](#Communicating-with-the-Host-App) seção abaixo para obter mais detalhes.
+As extensões podem se comunicar com seus aplicativos de Host por meio de um [NSExtensionContext](xref:Foundation.NSExtensionContext) objeto. Algumas extensões têm operações que recebem retornos de chamada assíncronos com os resultados. Esses retornos de chamada serão executados em threads em segundo plano e a extensão deve levar isso em consideração; Por exemplo, usando [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se deseja atualizar a interface do usuário. Consulte a [comunicando-se com o aplicativo Host](#Communicating-with-the-Host-App) seção abaixo para obter mais detalhes.
 
 Por padrão, seus aplicativos de contêiner e extensões podem não se comunicar, apesar de que estão sendo instalados juntos. Em alguns casos, o aplicativo de contêiner é essencialmente um contêiner "envio" vazio cujo objetivo é servido depois que a extensão está instalada. No entanto, se as circunstâncias ditarem, o aplicativo de contêiner e a extensão podem compartilhar recursos de uma área comum. Além disso, uma **hoje mesmo a extensão** pode solicitar o seu aplicativo de contêiner para abrir uma URL. Esse comportamento é mostrado na [evoluir Widget de contagem regressiva](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
 
@@ -264,11 +264,11 @@ O novo widget será adicionado para o **hoje mesmo** modo de exibição e os res
 
 ## <a name="communicating-with-the-host-app"></a>Comunicando-se com o aplicativo de host
 
-O exemplo hoje extensão criado acima não se comunica com seu aplicativo de host (a **hoje mesmo** tela). Se tivesse, ele usa o [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) propriedade da `TodayViewController` ou `CodeBasedViewController` classes. 
+O exemplo hoje extensão criado acima não se comunica com seu aplicativo de host (a **hoje mesmo** tela). Se tivesse, ele usa o [ExtensionContext](xref:Foundation.NSExtensionContext) propriedade da `TodayViewController` ou `CodeBasedViewController` classes. 
 
-Para extensões que receberão os dados de seus aplicativos de host, os dados estão na forma de uma matriz de [NSExtensionItem](https://developer.xamarin.com/api/type/Foundation.NSExtensionItem/) objetos armazenados na [InputItems](https://developer.xamarin.com/api/property/Foundation.NSExtensionContext.InputItems/) propriedade do [ExtensionContext ](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) da extensão do `UIViewController`.
+Para extensões que receberão os dados de seus aplicativos de host, os dados estão na forma de uma matriz de [NSExtensionItem](xref:Foundation.NSExtensionItem) objetos armazenados na [InputItems](xref:Foundation.NSExtensionContext.InputItems) propriedade do [ExtensionContext ](xref:Foundation.NSExtensionContext) da extensão do `UIViewController`.
 
-Outras extensões, como extensões de edição de fotos podem distinguir entre o usuário concluir ou cancelar o uso. Isso será sinalizado volta para o aplicativo host por meio de [CompleteRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CompleteRequest/) e [CancelRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CancelRequest/) métodos da [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) propriedade.
+Outras extensões, como extensões de edição de fotos podem distinguir entre o usuário concluir ou cancelar o uso. Isso será sinalizado volta para o aplicativo host por meio de [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) e [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) métodos da [ExtensionContext](xref:Foundation.NSExtensionContext) propriedade.
 
 Para obter mais informações, consulte da Apple [guia de programação de extensão de aplicativo](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1).
 

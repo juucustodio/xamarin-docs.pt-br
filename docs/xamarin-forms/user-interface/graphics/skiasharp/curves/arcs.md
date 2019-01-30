@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: fc08824ba973f5d50dbe92950d57c4ea8ecc3147
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054006"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233985"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três formas de desenhar um arco
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Esses métodos são idênticos do Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) e [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) métodos. O iOS [ `AddArc` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArc/p/System.Boolean/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) método é semelhante, mas é restrito a arcos na circunferência de um círculo em vez de generalizado para uma elipse.
+Esses métodos são idênticos do Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) e [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) métodos. O iOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) método é semelhante, mas é restrito a arcos na circunferência de um círculo em vez de generalizado para uma elipse.
 
 Ambos os métodos começam com um `SKRect` valor que define o local e o tamanho de uma elipse:
 
@@ -226,7 +226,7 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-Isso `ArcTo` método é semelhante do PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) função (página 532) e o iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) método.
+Isso `ArcTo` método é semelhante do PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) função (página 532) e o iOS [ `AddArcToPoint` ](xref:CoreGraphics.CGPath.AddArcToPoint(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat)) método.
 
 O `ArcTo` método envolve três pontos:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d1e0df95b2665f7e3b33a901271b11e1c243b1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f2a612eea39a3447cae03e2d7b675a46c47aad52
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123552"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233738"
 ---
 # <a name="introduction-to-ios-10"></a>Introdução ao iOS 10
 
@@ -135,7 +135,7 @@ iOS 10 apresenta novas maneiras de condução contrato a um aplicativo, permitin
 - Interações de Siri
 - Sugestões de QuickType 
 
-Um aplicativo expõe essa funcionalidade no sistema usando uma coleção de tecnologias, como [NSUserActivity](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/), marcação de web, destaque principal, MapKit, Media Player e UIKit.
+Um aplicativo expõe essa funcionalidade no sistema usando uma coleção de tecnologias, como [NSUserActivity](xref:Foundation.NSUserActivity), marcação de web, destaque principal, MapKit, Media Player e UIKit.
 
 Para obter mais informações, consulte nosso [Introdução ao sugestões proativas](~/ios/platform/search/proactive-suggestions.md) guia.
 
@@ -198,11 +198,11 @@ Novo para iOS 10, a estrutura de conta de assinante de vídeo permite que os apl
 
 iOS 10 estende o suporte para formatos de pixel de intervalo estendido e espaços de cores de toda a gama de cores em todo o sistema, incluindo estruturas como elementos gráficos principais, imagem principal, sistema operacional e AVFoundation. Suporte para dispositivos com telas de cores adicional é facilitado por fornecendo esse comportamento em toda a pilha inteira de gráficos.
 
-Além disso, [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) tiver sido modificado funcionar no novo estendido **sRGB** espaço de cor, que facilita a combinação de cores em gamas de cores amplas sem perda de desempenho significativa.
+Além disso, [UIKit](xref:UIKit) tiver sido modificado funcionar no novo estendido **sRGB** espaço de cor, que facilita a combinação de cores em gamas de cores amplas sem perda de desempenho significativa.
 
 A Apple oferece as seguintes práticas recomendadas ao trabalhar com cores amplas:
 
-- [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/) agora usa o sRGB espaço de cores e não poderá mais clamp valores para o `0.0` para `1.0` intervalo. Se o aplicativo utiliza o comportamento de clamp anterior, ele precisará ser modificado para iOS 10.
+- [UIColor](xref:UIKit.UIColor) agora usa o sRGB espaço de cores e não poderá mais clamp valores para o `0.0` para `1.0` intervalo. Se o aplicativo utiliza o comportamento de clamp anterior, ele precisará ser modificado para iOS 10.
 - O ambiente de desenho será configurado para o espaço de cor sRGB ao executar personalizado `UIView` desenhando em um iPad Pro.
 - Se o aplicativo executa o processamento personalizado de `UIImages`, use a nova [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) classe para especificar o uso de formatos de intervalo estendido ou o intervalo padrão.
 - Ao usar uma API de nível inferior, como elementos gráficos principais ou Bare Metal para fornecer processamento de imagem, o desenvolvedor deve usar uma extensa variedade espaço e pixel formato de cor que dá suporte a valores de ponto flutuante de 16 bits. Quando for necessário, o desenvolvedor precisará clamp manualmente os valores de componente de cor.
@@ -229,7 +229,7 @@ As seguintes APIs foram preteridas no iOS 10:
 - O `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` e `CKFetchRecordChangesOperation` classes foram substituídas no CloudKit do iOS 10. Use o [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) e [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) classes (que dá suporte a compartilhamento de registro) em vez disso.
 - Vários [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) APIs (como as assinaturas de baseados em consulta e zona) foram preteridas. Use o [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) e [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) APIs em vez disso.
 - [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) símbolos relacionados ao conteúdo onipresente foram preteridos.
-- `ADBannerView`, `ADInterstitialAd` e relacionadas a símbolos em de [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/) classe foram preteridos.
+- `ADBannerView`, `ADInterstitialAd` e relacionadas a símbolos em de [UIViewController](xref:UIKit.UIViewController) classe foram preteridos.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) símbolos relacionados a valores de ponto flutuante foram preteridos.
 - O `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` e `UIUserNotificationSettings` classes de UIKit foram preteridas. Use o [notificações do usuário](#User-Notifications) framework em vez disso.
 - O `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`, `DidReceiveLocalNotification` e `DidReceiveRemoteNotification` WatchKit métodos foram preteridos. Use o `HandleActionForNotification` e `DidReceiveNotification` métodos em vez disso.

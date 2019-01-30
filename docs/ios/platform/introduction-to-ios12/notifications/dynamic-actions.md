@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 8a2755de3dc43ccff88cbdf4dc9c4f9ba2d532c0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ddd3e1e6cc3a3a9b42ddb7a597ed2db0ee495d41
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111457"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233309"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Botões de ação de notificação dinâmico no xamarin. IOS
 
@@ -35,9 +35,9 @@ Crie e registre as categorias de notificação enquanto um aplicativo é iniciad
 Por exemplo, nos [aplicativo de exemplo](#sample-app-redgreennotifications), o `FinishedLaunching` método `AppDelegate` faz o seguinte:
 
 - Define uma categoria para notificações vermelhas e outro para notificações verdes
-- Registra essas categorias chamando o [`SetNotificationCategories`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.SetNotificationCategories/)
+- Registra essas categorias chamando o [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
 método de `UNUserNotificationCenter`
-- Anexa um único [`UNNotificationAction`](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationAction/)
+- Anexa um único [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 para cada categoria
 
 O código de exemplo a seguir mostra como isso funciona:
@@ -74,12 +74,12 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Com base nesse código, qualquer notificação cuja [`Content.CategoryIdentifier`](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationContent.CategoryIdentifier/)
+Com base nesse código, qualquer notificação cuja [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 será "vermelho-categoria" ou "verde-", por padrão, mostrar um **girar 20°** botão de ação.
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>No aplicativo tratamento dos botões de ação de notificação
 
-`UNUserNotificationCenter` tem um `Delegate` propriedade do tipo [ `IUNUserNotificationCenterDelegate` ](https://developer.xamarin.com/api/type/UserNotifications.UNUserNotificationCenterDelegate_Extensions/).
+`UNUserNotificationCenter` tem um `Delegate` propriedade do tipo [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
 No aplicativo de exemplo, `AppDelegate` se define como representante da Central de notificação do usuário em `FinishedLaunching`:
 
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-Em seguida, `AppDelegate` implementa [`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse/)
+Em seguida, `AppDelegate` implementa [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 para lidar com o botão de ação toca:
 
 ```csharp
@@ -125,7 +125,7 @@ Essa implementação do `DidReceiveNotificationResponse` não processa a notific
 
 Uma extensão de conteúdo de notificação contém um controlador de exibição que define a interface personalizada para uma notificação.
 
-Esse controlador de exibição pode usar o `GetNotificationActions` e `SetNotificationActions` métodos em seu [`ExtensionContext`](https://developer.xamarin.com/api/property/UIKit.UIViewController.ExtensionContext/)
+Esse controlador de exibição pode usar o `GetNotificationActions` e `SetNotificationActions` métodos em seu [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 propriedade para acessar e modificar os botões de ação da notificação.
 
 No aplicativo de exemplo, o controlador de exibição da extensão de conteúdo de notificação modifica os botões de ação somente ao responder a um toque de um botão de ação já existente.

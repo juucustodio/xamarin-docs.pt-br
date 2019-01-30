@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2018
-ms.openlocfilehash: 35fc743944c04dd1fdb8e035ba94ad6aeb6156ea
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: a98ddc2622682f2c105a6aff32e94bd92a5b11f2
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38985998"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233244"
 ---
 # <a name="buttons-in-xamarinios"></a>Botões no xamarin. IOS
 
@@ -75,7 +75,7 @@ button.TouchUpInside += (sender, e) => {
 ```
 
 > [!NOTE]
-> `TouchUpInside` não é o evento do botão somente está disponível. `UIButton` é uma classe filha da `UIControl`, que define [muitos eventos diferentes](https://developer.xamarin.com/api/type/UIKit.UIControlEvent/).
+> `TouchUpInside` não é o evento do botão somente está disponível. `UIButton` é uma classe filha da `UIControl`, que define [muitos eventos diferentes](xref:UIKit.UIControlEvent).
 
 ### <a name="using-the-ios-designer-to-specify-button-event-handlers"></a>Usando o Designer do iOS para especificar manipuladores de eventos do botão
 
@@ -90,7 +90,7 @@ Para o evento apropriado, digite o nome de um novo manipulador de eventos ou sel
 `UIButton` controles podem existir em um número de estados diferentes, cada uma especificada por um `UIControlState` valor – `Normal`, `Disabled`, `Focused`, `Highlighted`, etc. Cada estado pode ser fornecido um estilo exclusivo, especificado por meio de programação ou com o Designer do iOS.
 
 > [!NOTE]
-> Para obter uma lista completa de todos os `UIControlState` valores, dê uma olhada a [`UIKit.UIControlState enumeration`](https://developer.xamarin.com/api/type/UIKit.UIControlState/)
+> Para obter uma lista completa de todos os `UIControlState` valores, dê uma olhada a [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
 > Documentação.
 
 Por exemplo, para definir a cor do título e a cor da sombra para `UIControlState.Normal`:
@@ -123,8 +123,8 @@ button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlStat
 Dependendo se o usuário toca no botão ou não, ele será renderizado como uma das seguintes imagens (`UIControlState.Normal`, `UIControlState.Highlighted` e `UIControlState.Selected` afirma, respectivamente):
 
 ![UIControlState.Normal](buttons-images/image22.png "UIControlState.Normal")
-![UIControlState.Highlighted](buttons-images/image23.png "UIControlState.Highlighted") 
- ![UIControlState.Selected](buttons-images/image24.png "UIControlState.Selected")
+![UIControlState.Highlighted](buttons-images/image23.png "UIControlState.Highlighted")
+![UIControlState.Selected](buttons-images/image24.png "UIControlState.Selected")
 
 Para obter mais informações sobre como trabalhar com botões personalizados, consulte o [usar uma imagem para um botão](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button) receita.
 

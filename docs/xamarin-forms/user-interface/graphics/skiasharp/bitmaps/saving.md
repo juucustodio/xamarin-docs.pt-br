@@ -7,12 +7,12 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 428a8cbda43736c56b748374dc6f97649036302a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 885bba381e1371d273000fa0d970b465e9ca9c0b
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057120"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233699"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Salvando bitmaps de SkiaSharp em arquivos
 
@@ -46,7 +46,7 @@ O [ `SKBitmap` ](xref:SkiaSharp.SKBitmap) classe contém vários métodos chamad
 
 Além disso, o [ `SKCodec` ](xref:SkiaSharp.SKCodec) classe tem dois métodos chamados `Create` que pode criar um `SKCodec` do objeto de uma fonte compactada e permitir que um aplicativo para obter mais envolvido no processo de decodificação. (O `SKCodec` classe é mostrada no artigo [ **animando Bitmaps de SkiaSharp** ](animating.md#gif-animation) juntamente com um arquivo GIF animado de decodificação.)
 
-Quando estiver codificando um bitmap, mais informações são necessárias: O codificador deve saber o formato de arquivo específico que o aplicativo deseja usar (JPEG ou PNG ou alguma outra coisa). Se um formato com perdas for desejado, a codificação também deve saber o nível de qualidade desejado.
+Quando estiver codificando um bitmap, mais informações são necessárias: O codificador deve saber que o formato de arquivo específico do aplicativo deseja usar (JPEG ou PNG ou alguma outra coisa). Se um formato com perdas for desejado, a codificação também deve saber o nível de qualidade desejado.
 
 O `SKBitmap` classe define um [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) método com a seguinte sintaxe:
 
@@ -87,7 +87,7 @@ As seções a seguir discutem como `SavePhotoAsync` é implementado em cada plat
 
 ### <a name="the-ios-implementation"></a>A implementação do iOS
 
-A implementação do iOS dos `SavePhotoAsync` usa o [ `SaveToPhotosAlbum` ](https://developer.xamarin.com/api/member/UIKit.UIImage.SaveToPhotosAlbum/) método de `UIImage`:
+A implementação do iOS dos `SavePhotoAsync` usa o [ `SaveToPhotosAlbum` ](xref:UIKit.UIImage.SaveToPhotosAlbum*) método de `UIImage`:
 
 ```csharp
 public class PhotoLibrary : IPhotoLibrary
