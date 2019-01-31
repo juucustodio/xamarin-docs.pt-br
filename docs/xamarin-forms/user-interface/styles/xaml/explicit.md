@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 5b3d6f486f802fda1a384b7a8e53b104c1251fdd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fcbdeac5ebceccddee68fcca635a3935944ecac8
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058240"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291928"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Estilos explícitos no xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "53058240"
 
 _Um estilo explícito é aquele que é aplicada aos controles seletivamente, definindo suas propriedades de estilo._
 
-## <a name="creating-an-explicit-style-in-xaml"></a>Criando um estilo explícito em XAML
+## <a name="create-an-explicit-style-in-xaml"></a>Criar um estilo explícito em XAML
 
 Para declarar uma [ `Style` ](xref:Xamarin.Forms.Style) no nível da página, uma [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) deve ser adicionado à página e, em seguida, um ou mais `Style` declarações podem ser incluídas no `ResourceDictionary`. Um `Style` é feita *explícito* fornecendo sua declaração de uma `x:Key` atributo, que concede a ele uma chave descritiva no `ResourceDictionary`. *Explícito* estilos, em seguida, devem ser aplicados a elementos visuais específicos definindo seus [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades.
 
@@ -70,7 +70,7 @@ O [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) define três *
 
 Além disso, o último [ `Label` ](xref:Xamarin.Forms.Label) tem um [ `Style` ](xref:Xamarin.Forms.Style) aplicado a ele, mas também substitui o [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) propriedade para um diferente `Color`valor.
 
-### <a name="creating-an-explicit-style-at-the-control-level"></a>Criando um estilo explícito para o controle nível
+### <a name="create-an-explicit-style-at-the-control-level"></a>Criar um estilo explícito no nível de controle
 
 Além de criar *explícita* estilos no nível da página, eles também podem ser criados no nível de controle, conforme mostrado no exemplo de código a seguir:
 
@@ -97,7 +97,7 @@ Neste exemplo, o *explícita* [ `Style` ](xref:Xamarin.Forms.Style) instâncias 
 
 Para obter informações sobre a criação de estilos em um aplicativo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), consulte [estilos globais](~/xamarin-forms/user-interface/styles/application.md).
 
-## <a name="creating-an-explicit-style-in-c35"></a>Criando um estilo explícito em C&#35;
+## <a name="create-an-explicit-style-in-c35"></a>Criar um estilo explícito em C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) instâncias podem ser adicionadas a uma página [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) coleção no c#, criando um novo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)e, em seguida, adicionando o `Style` para instâncias de `ResourceDictionary`, conforme mostrado no exemplo de código a seguir:
 
@@ -180,12 +180,6 @@ public class ExplicitStylesPageCS : ContentPage
 ```
 
 O construtor define três *explícita* estilos que são aplicados para a página [ `Label` ](xref:Xamarin.Forms.Label) instâncias. Cada `Style` é usado para exibir texto em uma cor diferente, e também define a fonte de opções de layout de tamanho e horizontal e vertical. Cada `Style` é aplicado a um outro `Label` definindo seu [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades. Além disso, o último `Label` tem uma `Style` aplicados a ele, mas também substitui o `TextColor` propriedade em outro `Color` valor.
-
-## <a name="summary"></a>Resumo
-
-Um [ `Style` ](xref:Xamarin.Forms.Style) é feita *explícita* , fornecendo sua declaração de um `x:Key` atributo e, em seguida, seletivamente aplicá-lo a controles, definindo suas [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

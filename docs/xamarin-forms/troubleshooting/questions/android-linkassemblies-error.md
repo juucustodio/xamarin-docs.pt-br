@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 7360ee9064049bcebfd88f0cd36b5938d5337be3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b027dd23b9144a865bc16b55ebac71855bae0725
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105279"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292032"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Erro de build do Android – tarefa o LinkAssemblies falhou inesperadamente
 
-Você poderá ver uma mensagem de erro `The "LinkAssemblies" task failed unexpectedly` quando a criação de um projeto xamarin. Android que usa formulários. Isso acontece quando o vinculador está ativo (normalmente em um *versão* build para reduzir o tamanho do pacote do aplicativo); e isso ocorre porque os destinos Android não são atualizados para o framework mais recente. (Mais informações: [xamarin. Forms para Android requisitos](~/xamarin-forms/get-started/installation.md#android))
+Você poderá ver uma mensagem de erro `The "LinkAssemblies" task failed unexpectedly` quando a criação de um projeto xamarin. Android que usa formulários. Isso acontece quando o vinculador está ativo (normalmente em um *versão* build para reduzir o tamanho do pacote do aplicativo); e isso ocorre porque os destinos Android não são atualizados para o framework mais recente. (Mais informações: [Xamarin. Forms para Android requisitos](~/get-started/installation.md#android))
 
 A resolução para esse problema é certificar-se de ter as versões do SDK do Android mais recente com suporte e defina as **estrutura de destino** à **usar a plataforma mais recente instalada**. Também é recomendável que você defina as **versão destino Android** para **Use a versão do Target Framework** e o **versão mínima do Android** para API 15 ou superior. Isso é considerado a configuração com suporte.
 
@@ -24,7 +24,7 @@ A resolução para esse problema é certificar-se de ter as versões do SDK do A
 
 1.  Clique com botão direito no projeto do Android.
 2.  Vá para **Build > Geral > estrutura de destino**.
-3.  Defina as **estrutura de destino: usar a plataforma mais recente instalada**.
+3.  Defina o **do Framework de destino: Usar a plataforma mais recente instalada**.
 4.  Ainda em Opções de projeto, vá para **compilar > aplicativo Android**.
 5.  Defina a **versão mínima do Android** à API nível 15 ou superior & o **versão destino do Android** para **automático - use a versão do target framework**.
 

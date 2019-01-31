@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: ac65122e35849786307afd2a4d6e64e186cad466
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5ef1aba847954ccdeb230acd82ebbc5015ebd6b7
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060194"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292292"
 ---
 # <a name="xamarinforms-cells"></a>Células do xamarin. Forms
 
@@ -61,7 +61,6 @@ Xamarin. Forms dá suporte aos seguintes tipos de célula:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Introdução ao Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Documentação da API do Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

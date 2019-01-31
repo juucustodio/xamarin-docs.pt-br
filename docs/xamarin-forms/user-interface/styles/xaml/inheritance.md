@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 05ec368fb0dd0e1adfac3eed88c5ddd50960f9ae
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bef48db93ae76346802b6569080bb1e54e3e51b3
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056578"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291941"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Herança de estilo no xamarin. Forms
 
@@ -154,11 +154,6 @@ public class StyleInheritancePageCS : ContentPage
 ```
 
 O `baseStyle` destinos [ `View` ](xref:Xamarin.Forms.View) instâncias e define o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades. O `baseStyle` não é definida diretamente em todos os controles. Em vez disso, `labelStyle` e `buttonStyle` herdam dela, definir valores de propriedade associável adicionais. O `labelStyle` e `buttonStyle` , em seguida, são aplicadas para o [ `Label` ](xref:Xamarin.Forms.Label) instâncias e [ `Button` ](xref:Xamarin.Forms.Button) instância, definindo suas [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades.
-
-## <a name="summary"></a>Resumo
-
-Estilos podem herdar de outros estilos para reduzir a duplicação e habilitar a reutilização. Herança de estilo é executada, definindo o [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) propriedade a um existente [ `Style` ](xref:Xamarin.Forms.Style).
-
 
 ## <a name="related-links"></a>Links relacionados
 

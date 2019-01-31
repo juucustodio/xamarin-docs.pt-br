@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 0f39eb78d46b6156231a165f950f4698e63fc073
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bd6013a0fc1d4f3dfc2d863860052310fed55e4d
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055735"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292136"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Noções básicas de XAML de xamarin. Forms
 
 [![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código. XAML nunca é necessária em um programa do xamarin. Forms, mas geralmente é mais sucinta e coerente visualmente mais que o código equivalente e potencialmente editável. XAML é especialmente adequado para uso com a arquitetura do aplicativo MVVM (Model-View-ViewModel) popular: XAML define o modo de exibição que esteja vinculado ao código do ViewModel por meio de ligações de dados com base em XAML.
+XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código. XAML nunca é necessária em um programa do xamarin. Forms, mas geralmente é mais sucinta e coerente visualmente mais que o código equivalente e potencialmente editável. XAML é especialmente adequado para uso com a arquitetura de aplicativo popular do MVVM (Model-View-ViewModel): XAML define o modo de exibição que esteja vinculado ao código do ViewModel por meio de ligações de dados com base em XAML.
 
 ## <a name="xaml-basics-contents"></a>Conteúdo de Noções básicas XAML
 
@@ -101,17 +101,12 @@ Esses recursos estão *não* extensões XML. XAML é XML inteiramente legal. Mas
 
 ## <a name="requirements"></a>Requisitos
 
-Este artigo pressupõe que esteja familiarizado com o xamarin. Forms. Lendo [uma introdução ao xamarin. Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) é altamente recomendável.
-
-Este artigo também pressupõe alguma familiaridade com XML, inclusive a entender o uso de declarações de namespace XML e os termos *elemento*, *marca*, e *atributo*.
+Este artigo pressupõe que esteja familiarizado com o xamarin. Forms. Este artigo também pressupõe alguma familiaridade com XML, inclusive a entender o uso de declarações de namespace XML e os termos *elemento*, *marca*, e *atributo*.
 
 Quando você estiver familiarizado com o xamarin. Forms e XML, começar a ler [parte 1. Introdução ao XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md).
-
-
 
 ## <a name="related-links"></a>Links relacionados
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [Uma introdução ao xamarin. Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Criar o catálogo de aplicativos móveis](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 - [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)

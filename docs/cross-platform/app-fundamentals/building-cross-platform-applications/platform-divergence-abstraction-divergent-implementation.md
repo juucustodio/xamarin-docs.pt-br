@@ -1,19 +1,19 @@
 ---
-title: Parte 4 – lidar com várias plataformas
+title: Parte 4 – Lidar com várias plataformas
 description: Este documento descreve como manipular divergência de aplicativo com base na plataforma ou recurso. Ele aborda o tamanho da tela, metáforas de navegação, toque e gestos, as notificações por push e paradigmas de interface, como listas e guias.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ef224b7410565ae15da7613c04d11e7bd6a44dcb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f4558d5172d7dcbd2e14e6b74a347dd2f1e3a234
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117935"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292123"
 ---
-# <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 – lidar com várias plataformas
+# <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 – Lidar com várias plataformas
 
 ## <a name="handling-platform-divergence-amp-features"></a>Tratamento de divergência de plataforma &amp; recursos
 
@@ -95,7 +95,7 @@ As vantagens e desvantagens das interfaces se aplicam igualmente a herança, com
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Consulte a [xamarin. Forms](~/xamarin-forms/get-started/index.md) documentação.
+Consulte a [xamarin. Forms](~/get-started/index.md) documentação.
 
 ### <a name="other-cross-platform-libraries"></a>Outras bibliotecas de plataforma cruzada
 

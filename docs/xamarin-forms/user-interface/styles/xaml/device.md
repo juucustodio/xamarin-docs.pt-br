@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 6c1c7bd12922f127ff7f4eecdc982ede419fc515
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fd5181040c1805d3fdabdae4803bbe32c6bb6652
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055930"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292227"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Estilos de dispositivo no xamarin. Forms
 
@@ -122,11 +122,6 @@ As capturas de tela a seguir demonstram os estilos de dispositivo em cada plataf
 As capturas de tela a seguir demonstram os estilos de dispositivo em cada plataforma, com o maior tamanho de fonte acessível:
 
 ![](device-images/maximum-size.png "Estilos de dispositivo grande acessível em cada plataforma")
-
-## <a name="summary"></a>Resumo
-
-Xamarin. Forms inclui seis *dinâmica* estilos, conhecidos como *dispositivo* estilos, o [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe. Todos os estilos de seis só podem ser aplicados a [ `Label` ](xref:Xamarin.Forms.Label) instâncias.
-
 
 ## <a name="related-links"></a>Links relacionados
 
