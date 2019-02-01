@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 3b1769dec78f65544e8996e21cb8ae003e4af198
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b98dcb175c7e28e0ae101bea172aa2a98d3502e
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111324"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292162"
 ---
 # <a name="get-started-with-xamarin"></a>Introdução ao Xamarin
 
@@ -21,7 +21,7 @@ Antes de começar, confira o [requisitos de sistema](requirements.md) e as [inst
 ## <a name="build-your-first-app"></a>Crie seu primeiro aplicativo
 
 > [!div class="nextstepaction"]
-> [Início rápido do Xamarin.Forms](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)
+> [Início rápido do Xamarin.Forms](~/get-started/quickstarts/single-page.md)
 
 Se você deseja criar um aplicativo usando tecnologias de interface do usuário nativas (como Android XML ou Xcode Storyboards), tente um desses guias específicos da plataforma:
 

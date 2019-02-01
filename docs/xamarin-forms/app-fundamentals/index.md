@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 2178c9f4115c42396635e22cb0688695b590ec26
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207811"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292149"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Conceitos básicos de aplicativo Xamarin.Forms
 
@@ -87,8 +87,3 @@ Modelos de controle fornecem a capacidade de definir e redefinir temas de págin
 ## <a name="triggerstriggersmd"></a>[Gatilhos](triggers.md)
 
 Atualize os controles respondendo a alterações de propriedade e eventos no XAML.
-
-
-## <a name="related-links"></a>Links relacionados
-
-- [Introdução ao Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)

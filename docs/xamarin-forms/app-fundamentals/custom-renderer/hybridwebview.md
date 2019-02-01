@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/19/2018
-ms.openlocfilehash: f3b8cf7ec8a42ed031699d8f5e02f32c6eb61458
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 997b3e8a8f847ae08eea7e022e7b3424d0fddd8d
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053854"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233933"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementando um HybridWebView
 
@@ -301,19 +301,19 @@ namespace CustomRenderer.iOS
 }
 ```
 
-A classe `HybridWebViewRenderer` carrega a página da Web especificada na propriedade `HybridWebView.Uri` em um controle [`WKWebView`](https://developer.xamarin.com/api/type/WebKit.WKWebView/) nativo e a função de JavaScript `invokeCSharpAction` é injetada na página da Web. Quando o usuário insere seu nome e clica no elemento HTML `button`, a função de JavaScript `invokeCSharpAction` é executada, com o método `DidReceiveScriptMessage` sendo chamado depois que uma mensagem é recebida da página da Web. Por sua vez, esse método invoca o método `HybridWebView.InvokeAction`, que invoca a ação registrada para exibir o pop-up.
+A classe `HybridWebViewRenderer` carrega a página da Web especificada na propriedade `HybridWebView.Uri` em um controle [`WKWebView`](xref:WebKit.WKWebView) nativo e a função de JavaScript `invokeCSharpAction` é injetada na página da Web. Quando o usuário insere seu nome e clica no elemento HTML `button`, a função de JavaScript `invokeCSharpAction` é executada, com o método `DidReceiveScriptMessage` sendo chamado depois que uma mensagem é recebida da página da Web. Por sua vez, esse método invoca o método `HybridWebView.InvokeAction`, que invoca a ação registrada para exibir o pop-up.
 
 Essa funcionalidade é obtida da seguinte maneira:
 
 - Desde que a propriedade `Control` seja `null`, as seguintes operações serão executadas:
-  - Uma instância de [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) é criada, o que permite postar mensagens e injetar scripts do usuário em uma página da Web.
-  - Uma instância de [`WKUserScript`](https://developer.xamarin.com/api/type/WebKit.WKUserScript/) é criada para injetar a função de JavaScript `invokeCSharpAction` na página da Web após ela ser carregada.
-  - O método [`WKUserContentController.AddScript`](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddUserScript/p/WebKit.WKUserScript/) adiciona a instância de [`WKUserScript`](https://developer.xamarin.com/api/type/WebKit.WKUserScript/) ao controlador de conteúdo.
-  - O método [`WKUserContentController.AddScriptMessageHandler`](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddScriptMessageHandler/p/WebKit.IWKScriptMessageHandler/System.String/) adiciona um manipulador de mensagens de script denominado `invokeAction` à instância de [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/), o que fará com que a função de JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` seja definida em todos os quadros em todas as exibições da Web que usarão a instância de `WKUserContentController`.
-  - Uma instância de [`WKWebViewConfiguration`](https://developer.xamarin.com/api/type/WebKit.WKWebViewConfiguration/) é criada, com a instância de [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) sendo definida como o controlador de conteúdo.
-  - Um controle [`WKWebView`](https://developer.xamarin.com/api/type/WebKit.WKWebView/) é instanciado e o método `SetNativeControl` é chamado para atribuir uma referência ao controle `WKWebView` à propriedade `Control`.
+  - Uma instância de [`WKUserContentController`](xref:WebKit.WKUserContentController) é criada, o que permite postar mensagens e injetar scripts do usuário em uma página da Web.
+  - Uma instância de [`WKUserScript`](xref:WebKit.WKUserScript) é criada para injetar a função de JavaScript `invokeCSharpAction` na página da Web após ela ser carregada.
+  - O método [`WKUserContentController.AddUserScript`](xref:WebKit.WKUserContentController.AddUserScript(WebKit.WKUserScript)) adiciona a instância de [`WKUserScript`](xref:WebKit.WKUserScript) ao controlador de conteúdo.
+  - O método [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) adiciona um manipulador de mensagens de script denominado `invokeAction` à instância de [`WKUserContentController`](xref:WebKit.WKUserContentController), o que fará com que a função de JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` seja definida em todos os quadros em todas as exibições da Web que usarão a instância de `WKUserContentController`.
+  - Uma instância de [`WKWebViewConfiguration`](xref:WebKit.WKWebViewConfiguration) é criada, com a instância de [`WKUserContentController`](xref:WebKit.WKUserContentController) sendo definida como o controlador de conteúdo.
+  - Um controle [`WKWebView`](xref:WebKit.WKWebView) é instanciado e o método `SetNativeControl` é chamado para atribuir uma referência ao controle `WKWebView` à propriedade `Control`.
 - Desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
-  - O método [`WKWebView.LoadRequest`](https://developer.xamarin.com/api/member/WebKit.WKWebView.LoadRequest/p/Foundation.NSUrlRequest/) carrega o arquivo HTML que é especificado pela propriedade `HybridWebView.Uri`. O código especifica que o arquivo seja armazenado na pasta `Content` do projeto. Após a página da Web ser exibida, a função de JavaScript `invokeCSharpAction` será injetada na página da Web.
+  - O método [`WKWebView.LoadRequest`](xref:WebKit.WKWebView.LoadRequest(Foundation.NSUrlRequest)) carrega o arquivo HTML que é especificado pela propriedade `HybridWebView.Uri`. O código especifica que o arquivo seja armazenado na pasta `Content` do projeto. Após a página da Web ser exibida, a função de JavaScript `invokeCSharpAction` será injetada na página da Web.
 - Quando o elemento a que o renderizador está anexado é alterado:
   - Recursos são liberados.
 

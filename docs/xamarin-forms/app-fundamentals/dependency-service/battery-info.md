@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: bdfef88e0cf5916b1eec08ddfaa09165a057765a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 08278c2bc380892706320dbd0e69642257b73005
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058567"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233777"
 ---
 # <a name="checking-battery-status"></a>Verificando o status da bateria
 
@@ -77,7 +77,7 @@ A codificação nessa interface no código compartilhado permitirá que o aplica
 
 ## <a name="ios-implementation"></a>Implementação de iOS
 
-A interface `IBattery` deve ser implementada em cada projeto de aplicativo específico da plataforma. A implementação do iOS usará as APIs de [`UIDevice`](https://developer.xamarin.com/api/type/UIKit.UIDevice/) nativas para acessar as informações da bateria. Observe que a classe a seguir tem um construtor sem parâmetros, de modo que `DependencyService` pode criar novas instâncias:
+A interface `IBattery` deve ser implementada em cada projeto de aplicativo específico da plataforma. A implementação do iOS usará as APIs de [`UIDevice`](xref:UIKit.UIDevice) nativas para acessar as informações da bateria. Observe que a classe a seguir tem um construtor sem parâmetros, de modo que `DependencyService` pode criar novas instâncias:
 
 ```csharp
 using UIKit;

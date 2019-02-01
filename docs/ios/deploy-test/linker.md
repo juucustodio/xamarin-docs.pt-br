@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 667c98d3140d460a6d4b3a26bd898f4c169d6d85
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: 04f92988d4d367abd5e6e864d4450aee2e6c1df2
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234876"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233790"
 ---
 # <a name="linking-xamarinios-apps"></a>Usando Linker em aplicativos Xamarin.iOS
 
 Ao compilar seu aplicativo, o Visual Studio para Mac ou o Visual Studio chama uma ferramenta chamada **mtouch**, que inclui um linker para código gerenciado. Ele é usado para remover os recursos que o aplicativo não está usando das class libraries. A meta é reduzir o tamanho do aplicativo, que será fornecido com apenas as partes necessárias.
 
-O linker usa análise estática para determinar os diferentes caminhos de código que seu aplicativo é suscetível a seguir. Ela é um pouco pesada, já que precisa passar por todos os detalhes de cada assembly, para verificar se nada detectável foi removido. Ele não é habilitado por padrão em builds do simulador para acelerar o tempo de compilação durante a depuração. No entanto, já que ele produz aplicativos menores e que pode acelerar a compilação AOT e o upload para o dispositivo, todos os *builds de dispositivos (Release)* estão usando o linker por padrão.
+O vinculador usa análise estática para determinar os diferentes caminhos de código que seu aplicativo é suscetível a seguir. Ela é um pouco pesada, já que precisa passar por todos os detalhes de cada assembly, para verificar se nada detectável foi removido. Ele não é habilitado por padrão em builds do simulador para acelerar o tempo de compilação durante a depuração. No entanto, já que ele produz aplicativos menores e que pode acelerar a compilação AOT e o upload para o dispositivo, todos os *builds de dispositivos (versão)* estão usando o vinculador por padrão.
 
-Já que o linker é uma ferramenta estática, ele não pode marcar para inclusão tipos e métodos que são chamados por meio de reflection, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
+Já que o vinculador é uma ferramenta estática, ele não pode marcar para tipos de inclusão e métodos que são chamados por meio de reflexão, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
 
 <a name="Linker_Behavior" />
 
@@ -44,7 +44,7 @@ Faça o seguinte:
 2. Nas **Propriedades do Projeto**, selecione **Build do iOS**:
 
     ![](linker-images/linking02w.png "Selecionar Build do iOS")
-3. Siga as instruções abaixo para alterar as opções do linker.
+3. Siga as instruções abaixo para alterar as opções de vinculação.
 
 -----
 
@@ -141,13 +141,13 @@ Isso corresponde à opção *-nolinkaway* ao usar a ferramenta de linha de coman
 
 Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser fornecida na caixa de diálogo Opções do Projeto do Visual Studio para Mac ou no painel Propriedades do projeto do Visual Studio, dentro do campo de texto **Argumentos adicionais do mtouch**. (por exemplo, *--nolinkaway* não removeria o código extra (cerca de 100 KB)).
 
-### <a name="marking-your-assembly-as-linker-ready"></a>Marcar o assembly como pronto para o Linker
+### <a name="marking-your-assembly-as-linker-ready"></a>Marcar o assembly como pronto para o vinculador
 
 Os usuários podem selecionar a opção de apenas vincular os assemblies do SDK, sem nenhuma vinculação ao seu código.  Isso também significa que todas as bibliotecas de terceiros que não fazem parte do SDK principal do Xamarin não serão vinculadas.
 
 Isso normalmente acontece porque eles não desejam adicionar manualmente atributos `[Preserve]` ao seu código.  O efeito colateral é que bibliotecas de terceiros não serão vinculadas, o que geralmente é um bom padrão, pois não é possível saber se uma outra biblioteca de terceiros é compatível com o _linker_ ou não.
 
-Se você tiver uma biblioteca no seu projeto ou se você for um desenvolvedor de bibliotecas reutilizáveis e desejar que o _linker_ trate o assembly como vinculável, tudo o que você precisa fazer é adicionar o atributo no nível de assembly [`LinkerSafe`](https://developer.xamarin.com/api/type/Foundation.LinkerSafeAttribute/), assim:
+Se você tiver uma biblioteca no seu projeto ou se você for um desenvolvedor de bibliotecas reutilizáveis e desejar que o _linker_ trate o assembly como vinculável, tudo o que você precisa fazer é adicionar o atributo no nível de assembly [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute), assim:
 
 ```csharp
 [assembly:LinkerSafe]
@@ -162,13 +162,13 @@ O _linker_ do Xamarin procura o atributo `LinkerSafe` por nome, não pelo seu ti
 class LinkerSafeAttribute : System.Attribute {}
 ```
 
-## <a name="custom-linker-configuration"></a>Configuração personalizada do Linker
+## <a name="custom-linker-configuration"></a>Configuração personalizada do vinculador
 
 Siga as [instruções para criar um arquivo de configuração do vinculador](~/cross-platform/deploy-test/linker.md).
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Configuração personalizada do Linker](~/cross-platform/deploy-test/linker.md)
+- [Configuração personalizada do vinculador](~/cross-platform/deploy-test/linker.md)
 - [Usando Linker no Mac](~/mac/deploy-test/linker.md)
 - [Usando Linker no Android](~/android/deploy-test/linker.md)

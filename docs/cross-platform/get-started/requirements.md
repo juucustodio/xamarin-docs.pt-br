@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 422eb24b86ba14ff4e5362db8aeec5775fab5833
-ms.sourcegitcommit: aa16f267c59725cc88bd84b049544ecfbec297ac
+ms.openlocfilehash: 87c3a189851db66e630095eae31434a590050154
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43263515"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292266"
 ---
 # <a name="system-requirements"></a>Requisitos do sistema
 
@@ -78,7 +78,7 @@ Instruções de [instalação](~/cross-platform/get-started/installation/index.m
 - [Xamarin.Android](~/android/get-started/installation/index.md)
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
-Também há informações adicionais sobre [Requisitos e plataformas com suporte no Xamarin.Forms](~/xamarin-forms/get-started/installation.md).
+Também há informações adicionais sobre [Requisitos e plataformas com suporte no Xamarin.Forms](~/get-started/installation.md).
 
 ## <a name="related-links"></a>Links relacionados
 
