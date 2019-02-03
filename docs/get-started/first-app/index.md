@@ -8,13 +8,13 @@ ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 09/24/2018
-ms.openlocfilehash: d89488e3f6e42f84fc9519eedaa38c99b90ae068
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.date: 02/02/2019
+ms.openlocfilehash: 8adf52d8e08dedeebae8362cf730e5dc3c7c93a9
+ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292669"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55668557"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Compilar seu primeiro aplicativo Xamarin.Forms
 
@@ -25,6 +25,8 @@ _Assista a este vídeo e acompanhe-o para compilar seu primeiro aplicativo móve
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
@@ -40,7 +42,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 4. Inicie o Android Emulator pressionando o botão de depuração (ou o item de menu **Depurar > Iniciar Depuração**).
 
-5. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackPanel>`:
+5. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
@@ -71,6 +73,8 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Instruções passo a passo para Mac
 
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+
 Siga estas etapas em conjunto com o vídeo acima:
 
 1. Escolha **Arquivo > Nova Solução...** ou pressione o botão **Novo Projeto...** e, em seguida, selecione **Multiplataforma > Aplicativo > Aplicativo de Formulários em Branco**:
@@ -87,7 +91,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 4. Inicie o Android Emulator pressionando o botão de depuração (ou **Executar > Iniciar Depuração**).
 
-5. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackPanel>`:
+5. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Handle_Clicked" />
