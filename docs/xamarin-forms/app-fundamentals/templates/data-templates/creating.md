@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 4eea0db32bcfae4dc2ecdec8c2e494989515ef00
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0374d37027546c41305c8cd5f27de593c226fcaa
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060220"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233764"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Criando um DataTemplate do Xamarin.Forms
 
@@ -63,7 +63,7 @@ A propriedade [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) pode ser
 </ListView>
 ```
 
-O filho de um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) embutido deve ser do tipo [`ViewCell`](xref:Xamarin.Forms.ViewCell) ou derivado dele. O layout dentro do `ViewCell` é gerenciado aqui por um [`Grid`](xref:Xamarin.Forms.Grid). O `Grid` contém três instâncias [`Label`](xref:Xamarin.Forms.Label) que associam suas propriedades [`Text`](xref:Xamarin.Forms.Label.Text) às propriedades adequadas de cada objeto `Person` na coleção.
+O filho de um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) embutido deve ser do tipo [`Cell`](xref:Xamarin.Forms.Cell) ou derivado dele. Este exemplo usa um [`ViewCell`](xref:Xamarin.Forms.ViewCell), que deriva de `Cell`. O layout dentro do `ViewCell` é gerenciado aqui por um [`Grid`](xref:Xamarin.Forms.Grid). O `Grid` contém três instâncias [`Label`](xref:Xamarin.Forms.Label) que associam suas propriedades [`Text`](xref:Xamarin.Forms.Label.Text) às propriedades adequadas de cada objeto `Person` na coleção.
 
 O código C# equivalente é mostrado no exemplo de código a seguir:
 
