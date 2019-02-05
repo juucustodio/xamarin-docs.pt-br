@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 3c552d97f64b28ed47a9226047862bffcfa8c9e3
-ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
+ms.openlocfilehash: 6525cb321537a7cefb24feb1e77b532068b098ef
+ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54418680"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712079"
 ---
 # <a name="using-sqlitenet-with-android"></a>Usar SQLite.NET com Android
 
@@ -207,9 +207,11 @@ Você pode verificar o `rowcount` para confirmar o número de linhas afetado (ne
 
 SQLite oferece suporte a três modos diferentes de threads: *Single-thread*, *multi-thread*, e *serializado*. Se você quiser acessar o banco de dados de vários threads sem quaisquer restrições, você pode configurar o SQLite para usar o **serializado** modo de threading. É importante definir esse modo no início do seu aplicativo (por exemplo, no início do `OnCreate` método).
 
-Para alterar o modo de threading, chame `SqliteConnection.SetConfig`. Por exemplo, esta linha de código configura o SQLite para **serializado** modo: 
+Para alterar o modo de threading, chame `SqliteConnection.SetConfig`. Por exemplo, esta linha de código configura o SQLite para **serializado** modo:
 
 ```csharp
+using using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
@@ -225,16 +227,17 @@ A versão do SQLite do Android tem uma limitação que exige mais algumas etapas
     internal static extern int sqlite3_initialize();
     ```
 
-
 2.  No início do `OnCreate` método, adicione este código ao desligamento do SQLite, configurá-la para **serializado** modo e reinicializar SQLite:
 
     ```csharp
+    using using Mono.Data.Sqlite;
+    ...
     sqlite3_shutdown();
     SqliteConnection.SetConfig(SQLiteConfig.Serialized);
     sqlite3_initialize();
     ```
 
-Essa solução alternativa também funciona para o `Mono.Data.Sqlite` biblioteca. Para obter mais informações sobre o SQLite e o multithreading, consulte [SQLite e vários Threads](https://www.sqlite.org/threadsafe.html). 
+Essa solução alternativa também funciona para o `Mono.Data.Sqlite` biblioteca. Para obter mais informações sobre o SQLite e o multithreading, consulte [SQLite e vários Threads](https://www.sqlite.org/threadsafe.html).
 
 ## <a name="related-links"></a>Links relacionados
 
