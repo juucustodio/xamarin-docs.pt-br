@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 53c5f17672cc46ef097e979154a8911f8cdaef63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3fdb2a3853c1320b6bd0b8a02701acd6883bf226
+ms.sourcegitcommit: 999b9f254c56ff18ebd391fd0de2f0d6e95e35b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054120"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55748076"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação XAML
 
@@ -33,7 +33,7 @@ Extensões de marcação XAML adicionais historicamente são suportadas pelas ou
 - `StaticResource` &ndash; fazer referência a objetos de um dicionário de recursos, conforme descrito no artigo [ **dicionários de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` &ndash; responder a alterações em objetos em um dicionário de recursos, conforme descrito no artigo [ **estilos dinâmicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` &ndash; estabelecer um vínculo entre as propriedades de dois objetos, conforme descrito no artigo [ **associação de dados**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; executa a associação de dados de um modelo de controle, conforme discutido no artigo [ **de um modelo de controle de associação**](/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/).
+- `TemplateBinding` &ndash; executa a associação de dados de um modelo de controle, conforme discutido no artigo [ **de um modelo de controle de associação**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding/).
 
 O [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) layout faz uso da extensão de marcação personalizada [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Esta extensão de marcação é descrita no artigo [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
@@ -84,7 +84,7 @@ O analisador XAML também permite que o `StaticExtension` classe deverá ser abr
 </Label>
 ```
 
-Isso pode ser simplificado ainda mais, mas a alteração apresenta algumas novas sintaxes: ele consiste em colocar o `StaticExtension` classe e o membro definição entre chaves. A expressão resultante é definida diretamente para o `FontSize` atributo:
+Isso pode ser simplificado ainda mais, mas a alteração apresenta algumas novas sintaxes: Ele consiste em colocar o `StaticExtension` classe e o membro definição entre chaves. A expressão resultante é definida diretamente para o `FontSize` atributo:
 
 ```xaml
 <Label Text="Label No. 3"
