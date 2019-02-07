@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 3fdb2a3853c1320b6bd0b8a02701acd6883bf226
-ms.sourcegitcommit: 999b9f254c56ff18ebd391fd0de2f0d6e95e35b9
+ms.openlocfilehash: 965f56f7996cc7cf8a06e4201cc4bcf2ea35fb71
+ms.sourcegitcommit: 93c45e456218746df4f4a03bbe93493da0a90153
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55748076"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760713"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação XAML
 
@@ -33,7 +33,7 @@ Extensões de marcação XAML adicionais historicamente são suportadas pelas ou
 - `StaticResource` &ndash; fazer referência a objetos de um dicionário de recursos, conforme descrito no artigo [ **dicionários de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` &ndash; responder a alterações em objetos em um dicionário de recursos, conforme descrito no artigo [ **estilos dinâmicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` &ndash; estabelecer um vínculo entre as propriedades de dois objetos, conforme descrito no artigo [ **associação de dados**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; executa a associação de dados de um modelo de controle, conforme discutido no artigo [ **de um modelo de controle de associação**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding/).
+- `TemplateBinding` &ndash; executa a associação de dados de um modelo de controle, conforme discutido no artigo [ **de um modelo de controle de associação**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
 
 O [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) layout faz uso da extensão de marcação personalizada [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Esta extensão de marcação é descrita no artigo [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
