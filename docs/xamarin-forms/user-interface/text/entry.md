@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: 39af3b0e28bbbf9397ceece55adc330e364dcc3d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 303cca48defdadd69449edbd6c4c3f5e4410bbbb
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061779"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831957"
 ---
 # <a name="xamarinforms-entry"></a>Entrada do xamarin. Forms
 
@@ -44,6 +44,18 @@ Para ler o texto, acessar o `Text` propriedade em c#:
 var text = MyEntry.Text;
 ```
 
+### <a name="setting-placeholder-text"></a>Definir o texto de espaço reservado
+
+O [ `Entry` ](xref:Xamarin.Forms.Entry) pode ser definido para mostrar o texto de espaço reservado quando ele não está armazenando a entrada do usuário. Isso é feito definindo a [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) propriedade como um `string`e geralmente é usado para indicar o tipo de conteúdo que é apropriado para o `Entry`. Além disso, a cor do texto de espaço reservado pode ser controlada definindo a [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) propriedade como um [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<Entry Placeholder="Username" PlaceholderColor="Olive" />
+```
+
+```csharp
+var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
+```
+
 > [!NOTE]
 > A largura de uma `Entry` pode ser definida ao configurar seu `WidthRequest` propriedade. Não dependem da largura de uma `Entry` que está sendo definida com base no valor de seu `Text` propriedade.
 
@@ -60,6 +72,40 @@ var entry = new Entry { ... MaxLength = 10 };
 ```
 
 Um [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) valor de propriedade de 0 indica que nenhuma entrada será permitida e um valor de `int.MaxValue`, que é o valor padrão para um [ `Entry` ](xref:Xamarin.Forms.Entry), indica que não há nenhum limite efetivo no número de caracteres que podem ser inseridos.
+
+### <a name="password-fields"></a>Campos de senha
+
+`Entry` fornece o `IsPassword` propriedade. Quando `IsPassword` é `true`, o conteúdo do campo será apresentado como círculos pretos:
+
+No XAML:
+
+```xaml
+<Entry IsPassword="true" />
+```
+
+No C#:
+
+```csharp
+var MyEntry = new Entry { IsPassword = true };
+```
+
+![](entry-images/password.png "Exemplo de entrada de IsPassword")
+
+Os espaços reservados podem ser usados com instâncias de `Entry` que são configurados como campos de senha:
+
+No XAML:
+
+```xaml
+<Entry IsPassword="true" Placeholder="Password" />
+```
+
+No C#:
+
+```csharp
+var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
+```
+
+![](entry-images/passwordplaceholder.png "Exemplo de espaço reservado e IsPassword de entrada")
 
 ### <a name="setting-the-cursor-position-and-text-selection-length"></a>Definindo a posição do Cursor e o comprimento da seleção de texto
 
@@ -207,52 +253,6 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 
 > [!NOTE]
 > Quando o [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) estiver definida como `false`, e um teclado personalizado não está sendo usado, a previsão de texto e automático correção de texto está desabilitada. No entanto, se um [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) tiver sido definido que desabilita a previsão de texto, o `IsTextPredictionEnabled` propriedade será ignorada. Portanto, a propriedade não pode ser usada para habilitar a previsão de texto para um `Keyboard` que desabilita explicitamente a ele.
-
-### <a name="setting-placeholder-text"></a>Definir o texto de espaço reservado
-
-O [ `Entry` ](xref:Xamarin.Forms.Entry) pode ser definido para mostrar o texto de espaço reservado quando ele não está armazenando a entrada do usuário. Isso é feito definindo a [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) propriedade como um `string`e geralmente é usado para indicar o tipo de conteúdo que é apropriado para o `Entry`. Além disso, a cor do texto de espaço reservado pode ser controlada definindo a [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) propriedade como um [ `Color` ](xref:Xamarin.Forms.Color):
-
-```xaml
-<Entry Placeholder="Username" PlaceholderColor="Olive" />
-```
-
-```csharp
-var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
-```
-
-### <a name="password-fields"></a>Campos de senha
-
-`Entry` fornece o `IsPassword` propriedade. Quando `IsPassword` é `true`, o conteúdo do campo será apresentado como círculos pretos:
-
-No XAML:
-
-```xaml
-<Entry IsPassword="true" />
-```
-
-No C#:
-
-```csharp
-var MyEntry = new Entry { IsPassword = true };
-```
-
-![](entry-images/password.png "Exemplo de entrada de IsPassword")
-
-Os espaços reservados podem ser usados com instâncias de `Entry` que são configurados como campos de senha:
-
-No XAML:
-
-```xaml
-<Entry IsPassword="true" Placeholder="Password" />
-```
-
-No C#:
-
-```csharp
-var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
-```
-
-![](entry-images/passwordplaceholder.png "Exemplo de espaço reservado e IsPassword de entrada")
 
 ### <a name="colors"></a>Cores
 
