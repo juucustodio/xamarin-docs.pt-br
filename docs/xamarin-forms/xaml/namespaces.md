@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
-ms.openlocfilehash: 85b9297a62cfb90485be2cbd927abfdcfec2f13c
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: be6154631b8b51ec61feb4c713d925ff30505b7d
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563037"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831749"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Namespaces XAML no xamarin. Forms
 
@@ -96,10 +96,11 @@ O prefixo de namespace é especificado, em seguida, ao declarar uma instância d
 </ListView>
 ```
 
+Para obter informações sobre como definir um esquema personalizado de namespace, consulte [esquemas personalizados de Namespace XAML](custom-namespace-schemas.md).
+
 ## <a name="summary"></a>Resumo
 
 Este artigo introduziu a sintaxe do namespace XAML e demonstrou como declarar um namespace XAML para um tipo de acesso. XAML usa a `xmlns` atributo XML para tipos e declarações de namespace pode ser referenciado em XAML, declarando um namespace XAML com um prefixo.
-
 
 ## <a name="related-links"></a>Links relacionados
 

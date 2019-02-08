@@ -7,32 +7,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 9da3bd65dfb5cc6f9ca6bd0e2930003e6ac3d182
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 967d4ae65bdb47adf824f20f47c7b32e24211f9a
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059253"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831804"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin. Forms ListView
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/WorkingWithListview)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/WorkingWithListview)
 
-Modo de exibição é um modo de exibição para apresentar as listas de dados, especialmente listas longas que exigem rolagem. Este guia mostrará como usar o ListView:
-
-1. **[Fontes de dados](data-and-databinding.md)**  &ndash; popular um ListView com dados, com ou sem associação de dados.
-2. **[Aparência de célula](customizing-cell-appearance.md)**  &ndash; personalizar a aparência das células internos ou criar sua própria célula personalizado.
-3. **[Listar aparência](customizing-list-appearance.md)**  &ndash; personalizar a aparência do ListView. Definir cabeçalhos e rodapés, habilite os grupos e alterar a altura das linhas.
-4. **[Interatividade](interactivity.md)**  &ndash; manipular toques e as seleções, implementar puxar para atualizar e adicionar ações contextuais.
-5. **[Desempenho](performance.md)**  &ndash; evitar problemas de desempenho.
+[`ListView`](xref:Xamarin.Forms.ListView) é uma exibição para apresentar as listas de dados, especialmente listas longas que exigem rolagem.
 
 ## <a name="use-cases"></a>Casos de uso
+
 Certifique-se de que ListView é o controle certo para suas necessidades. ListView pode ser usado em qualquer situação em que você está exibindo a lista rolável de dados. ListViews dão suporte a ações de contexto e associação de dados.
 
 Não deve ser confundido com o ListView [modo de tabela](~/xamarin-forms/user-interface/tableview.md). O controle de modo de tabela é uma opção melhor, sempre que você tem uma lista não associadas de opções ou de dados. Por exemplo, o aplicativo de configurações do iOS, que tem um conjunto predefinido de principalmente de opções, é mais adequado usar o modo de tabela que ListView.
 
 Também Observe que um ListView é melhor adequada para dados homogêneos &ndash; ou seja, todos os dados devem ser do mesmo tipo. Isso ocorre porque apenas um tipo de célula pode ser usado para cada linha na lista. TableViews pode dar suporte a vários tipos de célula, portanto, eles são uma opção melhor quando você precisar combinar modos de exibição.
-
 
 ## <a name="components"></a>Componentes
 ListView tem um número de componentes disponíveis para praticar a funcionalidade nativa de cada plataforma. Cada um desses componentes é descrita abaixo:
@@ -62,7 +56,6 @@ ListView oferece suporte a um número de estilos de interação, incluindo:
 ![](images/context-default.png "ListView com ações de contexto")
 
 Para saber mais sobre os recursos de interatividade do ListView, consulte [ações & interatividade com ListView](interactivity.md).
-
 
 ## <a name="related-links"></a>Links relacionados
 

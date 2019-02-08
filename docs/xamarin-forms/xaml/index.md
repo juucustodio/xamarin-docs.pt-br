@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
-ms.openlocfilehash: 9924e588808783fe35dbd830bbc9af288f37e7ea
-ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
+ms.openlocfilehash: 7195d56cfee91544f0626a8f89c886cde36752e5
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53813954"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831711"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Linguagem de marcação de aplicativo extensível (XAML)
 
@@ -20,7 +20,7 @@ _XAML é uma linguagem de marcação declarativa que pode ser usada para definir
 
 > [!VIDEO https://youtube.com/embed/H6UOrSyhTEE]
 
-**Evolui 2016: Tornando-se um mestre de XAML**
+**Evolve 2016: Tornando-se um mestre de XAML**
 
 > [!NOTE]
 > Experimente o [visualização padrão de XAML](standard/index.md)
@@ -42,6 +42,10 @@ O [XAML pré-visualizador](~/xamarin-forms/xaml/xaml-previewer.md) renderiza uma
 ## <a name="xaml-namespacesnamespacesmd"></a>[Namespaces XAML](namespaces.md)
 
 XAML usa a `xmlns` atributo XML para declarações de namespace. Este artigo apresenta a sintaxe do namespace XAML e demonstra como declarar um namespace XAML para um tipo de acesso.
+
+## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Esquemas personalizados de Namespace de XAML](custom-namespace-schemas.md)
+
+Um esquema personalizado de namespace XAML pode ser definido com o `XmlnsDefinitionAttribute` classe, que especifica um mapeamento entre uma URL personalizada e um ou mais namespaces CLR. O esquema de namespace personalizado, em seguida, pode ser usado em declarações de namespace XAML.
 
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Extensões de marcação XAML](markup-extensions/index.md)
 
@@ -67,6 +71,6 @@ Uma propriedade anexada é um tipo especial de propriedade associável, definido
 
 Recursos XAML são definições de objetos que podem ser usados mais de uma vez. Um [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) permite que os recursos sejam definidos em um único local e reutilizadas em todo um aplicativo xamarin. Forms. Este artigo demonstra como criar e consumir um `ResourceDictionary`e como mesclar um `ResourceDictionary` em outro.
 
-## <a name="loading-xaml-at-runtimeruntime-loadmd"></a>[Carregando XAML em tempo de execução](runtime-load.md)
+## <a name="loading-xaml-at-runtimeruntime-loadmd"></a>[Carregar XAML em tempo de execução](runtime-load.md)
 
 XAML pode ser carregado e analisado em tempo de execução com o [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão.

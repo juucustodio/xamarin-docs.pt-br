@@ -6,24 +6,19 @@ ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 8adac1711271324b70731a085088bd8805391d31
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059451"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831789"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizando a aparência de ListView
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 
-`ListView` tem opções para controlar a apresentação da lista global, além de subjacente `ViewCell`s. As opções incluem:
-
-- [**Agrupando** ](#Grouping) &ndash; agrupar itens na ListView para facilitar a navegação e melhor organização.
-- [**Cabeçalhos e rodapés** ](#Headers_and_Footers) &ndash; exibir informações no início e término do modo de exibição que rola com os outros itens.
-- [**Separadores de linha** ](#Row_Separators) &ndash; Mostrar ou ocultar as linhas de separador entre itens.
-- [**Linhas de altura variável** ](#Row_Heights) &ndash; por padrão, todas as linhas têm a mesma altura, mas isso pode ser alterado para permitir a linhas com alturas diferentes a serem exibidos.
+[`ListView`](xref:Xamarin.Forms.ListView) tem a capacidade de controlar a apresentação da lista, além de [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) instâncias para cada linha na lista.
 
 <a name="Grouping" />
 
@@ -83,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-No código acima também podemos chamar `Add` nos elementos de `groups`, que são instâncias do tipo `PageTypeGroup`. Isso é possível porque `PageTypeGroup` herda de `List<PageModel>`. Este é um exemplo da lista de padrão de listas observado acima.
+No código acima, também podemos chamar `Add` nos elementos de `groups`, que são instâncias do tipo `PageTypeGroup`. Isso é possível porque `PageTypeGroup` herda de `List<PageModel>`. Este é um exemplo da lista de padrão de listas observado acima.
 
 Aqui está o XAML para exibir a lista agrupada:
 
@@ -205,6 +200,14 @@ Para criar um cabeçalho personalizado e um rodapé, defina os modos de exibiç�
 ```
 
 ![](customizing-list-appearance-images/header-custom.png "ListView com personalizado de cabeçalho e rodapé")
+
+## <a name="scrollbar-visibility"></a>Visibilidade da barra de rolagem
+
+[`ListView`](xref:Xamarin.Forms.ListView) tem `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` propriedades, o qual obtém ou definir um [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa quando a barra de rolagem horizontal ou vertical, está visível. Ambas as propriedades podem ser definidas com os seguintes valores:
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica o comportamento padrão de barra de rolagem para a plataforma e é o valor padrão para o `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` propriedades.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem será visíveis, mesmo quando o conteúdo não se encaixa no modo de exibição.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem não serão visíveis, se o conteúdo não couber na exibição de evento.
 
 <a name="Row_Separators" />
 
