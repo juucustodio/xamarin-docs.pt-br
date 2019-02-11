@@ -6,13 +6,13 @@ ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
-ms.openlocfilehash: f59a528916d2cc5efd19ba7c35a7b4f041ecbe09
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/18/2018
+ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056156"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831983"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propriedades de automação no Xamarin.Forms
 
@@ -138,6 +138,43 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 
 > [!NOTE]
 > Observe que o método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) também pode ser usado para definir a propriedade anexada `AutomationProperties.IsInAccessibleTree` – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+
+## <a name="accessibility-intricacies"></a>Complexidades de acessibilidade
+
+As seções a seguir descrevem as complexidades da configuração dos valores de acessibilidade em certos controles.
+
+### <a name="navigationpage"></a>NavigationPage
+
+No Android, para definir o texto que os leitores de tela lerão para a seta voltar na barra de ação em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), defina as propriedades `AutomationProperties.Name` e `AutomationProperties.HelpText` em um [`Page`](xref:Xamarin.Forms.Page). No entanto, observe que isso não terá um efeito em botões voltar de sistema operacional.
+
+### <a name="masterdetailpage"></a>MasterDetailPage
+
+No iOS e UWP (Plataforma Universal do Windows), para definir o texto que os leitores de tela lerão para o botão de alternância em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), defina as propriedades `AutomationProperties.Name` e `AutomationProperties.HelpText` em `MasterDetailPage` ou na propriedade `Icon` da página `Master`.
+
+No Android, para definir o texto que os leitores da tela lerão para o botão de alternância em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), adicione recursos de cadeia de caracteres ao projeto Android:
+
+```xml
+<resources>
+        <string name="app_name">Xamarin Forms Control Gallery</string>
+        <string name="btnMDPAutomationID_open">Open Side Menu message</string>
+        <string name="btnMDPAutomationID_close">Close Side Menu message</string>
+</resources>
+```
+
+Em seguida, defina a propriedade `AutomationId` da propriedade `Icon` da página `Master` na cadeia de caracteres apropriada:
+
+```csharp
+var master = new ContentPage { ... };
+master.Icon.AutomationId = "btnMDPAutomationID";
+```
+
+### <a name="toolbaritem"></a>ToolbarItem
+
+No iOS, Android e UWP, os leitores de tela lerão o valor da propriedade `Text` das instâncias [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem), contanto que os valores `AutomationProperties.Name` ou `AutomationProperties.HelpText` não estejam definidos.
+
+No iOS e UWP, o valor da propriedade `AutomationProperties.Name` substituirá o valor da propriedade `Text` que é lido pelo leitor de tela.
+
+No Android, os valores de propriedade `AutomationProperties.Name` e/ou `AutomationProperties.HelpText` substituirão completamente o valor da propriedade `Text` que está visível e é lida pelo leitor de tela. Observe que essa é uma limitação de APIs menores que 26.
 
 ## <a name="related-links"></a>Links relacionados
 

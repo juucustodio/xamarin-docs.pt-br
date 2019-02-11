@@ -7,17 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 97b3e5323329d2df024e05f1829b12b239b37299
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 52cd8a15f1b5b232deef62a8e87910b092aad94c
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103033"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831944"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurando um aplicativo no iTunes Connect
 
 > [!IMPORTANT]
-> A Apple [indicou](https://developer.apple.com/news/?id=05072018a) que, a partir de julho de 2018, todos os aplicativos e atualizações enviados à App Store deverão ter sido criados com o SDK do iOS 11 e [ser compatíveis com à exibição do iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> A Apple [indicou](https://developer.apple.com/ios/submit/) que, a partir de março de 2019, todos os aplicativos e atualizações enviados à App Store deverão ter sido criados com o SDK do iOS 12.1 ou posterior, incluído no Xcode 10.1 ou posterior.
+> Aplicativos também devem dar suporte aos tamanhos de tela do iPhone XS e de 12,9 pol. do iPad Pro.
 
 O iTunes Connect é um pacote de ferramentas baseadas na Web para gerenciamento dos aplicativos iOS na App Store, entre outras coisas. Um aplicativo Xamarin.iOS precisará ser corretamente definido e configurado no iTunes Connect antes de ser enviado à Apple para análise e, por fim, ser lançado para venda ou lançado como um aplicativo gratuito na App Store.
 
@@ -116,7 +117,7 @@ Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 7. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
 
 > [!NOTE]
-> Observação: a Apple rejeitará o envio se as capturas de tela ou o vídeo de visualização do aplicativo não corresponderem à funcionalidade atual em seu aplicativo.
+> Observação: A Apple rejeitará o envio se as capturas de tela ou o vídeo de visualização do aplicativo não corresponderem à funcionalidade atual em seu aplicativo.
 
 <a name="metadata" />
 
@@ -188,7 +189,7 @@ Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 6. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
 
 > [!IMPORTANT]
-> Observação: a Apple rejeitará o envio se o Nome, Descrição, Novidades, URLs e Palavras-chave não corresponderem à funcionalidade atual em seu aplicativo.
+> Observação: A Apple rejeitará o envio se o Nome, Descrição, Novidades, URLs e Palavras-chave não corresponderem à funcionalidade atual em seu aplicativo.
 
 <a name="general" />
 
@@ -208,7 +209,7 @@ A Apple sugere as seguintes diretrizes ao criar o ícone do seu aplicativo:
 - Torne o ícone apropriado para seu aplicativo.
 - Crie um ícone simples, consistente com o design do seu aplicativo.
 - Evite usar palavras em seu ícone.
-- Pense globalmente: um único ícone do aplicativo é usado em todos os territórios de repositório.
+- Pense globalmente: Um único ícone do aplicativo é usado em todos os territórios de repositório.
 
 Uma imagem de 1.024 x 1.024 pixels é necessária para o ícone do aplicativo que será exibido na App Store.
 
@@ -233,7 +234,7 @@ Todos os aplicativos precisam ter uma classificação na App Store. Essa classif
 Ao criar aplicativos para crianças, a App Store tem uma categoria especial para crianças de até 11 anos. Mesmo que seu aplicativo não seja especificamente para crianças, ao fornecer classificações de conteúdo apropriadas você ajuda seus clientes a fazer boas escolhas.
 
 > [!IMPORTANT]
-> Observação: a Apple rejeitará envios de aplicativos que considere obscenos, pornográficos, ofensivos ou difamatórios.
+> Observação: A Apple rejeitará envios de aplicativos que considere obscenos, pornográficos, ofensivos ou difamatórios.
 
 ### <a name="copyright-and-company-information"></a>Informações de direitos autorais e da empresa
 
@@ -256,7 +257,7 @@ Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 6. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
 
 > [!NOTE]
-> Observação: a Apple rejeitará o envio se as Categorias ou Classificações não corresponderem à funcionalidade atual em seu aplicativo.
+> Observação: A Apple rejeitará o envio se as Categorias ou Classificações não corresponderem à funcionalidade atual em seu aplicativo.
 
 <a name="game-center" />
 
@@ -359,7 +360,7 @@ Este artigo descreve como usar o iTunes Connect para preparar um aplicativo Xama
 ## <a name="related-links"></a>Links relacionados
 
 - [Trabalhando com imagens](~/ios/app-fundamentals/images-icons/index.md)
-- [Guia de fluxo de trabalho de desenvolvimento de Aplicativo iOS: distribuição de aplicativos](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
+- [Guia de fluxo de trabalho de desenvolvimento de aplicativo do iOS: Distribuindo Aplicativos](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
 - [Dicas de Envio da App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Diretrizes de Análise da App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Guia do Desenvolvedor do iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1)
