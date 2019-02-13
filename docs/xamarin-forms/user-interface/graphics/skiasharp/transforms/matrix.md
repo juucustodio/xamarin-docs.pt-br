@@ -7,12 +7,12 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: dd38d91a808bed715c92c0fc7d98d6786fc43f67
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 192f0745874b54989ab9070014dae2a5e9e98110
+ms.sourcegitcommit: 605f7c480c3f7b5dd364fdb1bd4d983de8f7ed25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054642"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56213771"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Transformações de matriz no SkiaSharp
 
@@ -64,11 +64,11 @@ Esta matriz 1-por-3 é então multiplicado pela matriz de transformação, e o r
 
 Os pontos convertidos usando uma multiplicação de matriz padrão, são da seguinte maneira:
 
-x' = x
+`x' = x`
 
-y' = y
+`y' = y`
 
-z' = 1
+`z' = 1`
 
 Essa é a transformação padrão.
 
@@ -90,9 +90,9 @@ A multiplicação agora é da seguinte maneira:
 
 Aqui estão as fórmulas de transformação:
 
-x' = x + tx
+`x' = x + tx`
 
-y' = y + ty
+`y' = y + ty`
 
 Fatores de dimensionamento tem um valor padrão de 1. Quando você chama o `Scale` método em um novo `SKCanvas` do objeto, a matriz de transformação resultante contém o `sx` e `sy` argumentos nas células diagonais:
 
@@ -104,9 +104,9 @@ Fatores de dimensionamento tem um valor padrão de 1. Quando você chama o `Scal
 
 As fórmulas de transformação são da seguinte maneira:
 
-x' = sx · x
+`x' = sx · x`
 
-y' = sy reforçado y
+`y' = sy · y`
 
 A matriz de transformação depois de chamar `Skew` contém dois argumentos nas células da matriz adjacentes aos fatores de dimensionamento:
 
@@ -118,9 +118,9 @@ A matriz de transformação depois de chamar `Skew` contém dois argumentos nas 
 
 As fórmulas de transformação são:
 
-x' = x + xSkew reforçado y
+`x' = x + xSkew · y`
 
-y' = ySkew reforçado x + y
+`y' = ySkew · x + y`
 
 Para uma chamada para `RotateDegrees` ou `RotateRadians` para um ângulo de α, a matriz de transformação é da seguinte maneira:
 
@@ -132,9 +132,9 @@ Para uma chamada para `RotateDegrees` ou `RotateRadians` para um ângulo de α, 
 
 Aqui estão as fórmulas de transformação:
 
-x' = cos(α) · x - sin(α) · y
+`x' = cos(α) · x - sin(α) · y`
 
-y' = sin(α) · x - cos(α) · y
+`y' = sin(α) · x - cos(α) · y`
 
 Quando α é de 0 graus, é a matriz de identidade. Quando α é 180 graus, a matriz de transformação é da seguinte maneira:
 
@@ -228,11 +228,11 @@ O `Persp0`, `Persp1`, e `Persp2` células são discutidas no artigo [ **transfor
               │ TransX  TransY  1 │
 </pre>
 
-x' = ScaleX reforçado x + SkewX reforçado y + TransX
+`x' = ScaleX · x + SkewX · y + TransX`
 
-y' = SkewX reforçado x + ScaleY reforçado y + TransY
+`y' = SkewX · x + ScaleY · y + TransY`
 
-z' = 1
+`z' = 1`
 
 Essa é a transformação afim bidimensional completa. A transformação afim preserva as linhas paralelas, o que significa que um retângulo nunca é transformado em algo diferente de um paralelogramo.
 
@@ -259,7 +259,7 @@ SKMatrix.Concat(ref R, ref A, ref B);
 
 Realizam a multiplicação a seguir:
 
-R = B × A
+`R = B × A`
 
 Os outros métodos têm apenas dois parâmetros. O primeiro parâmetro é modificado e após o retorno da chamada de método, contém o produto de duas matrizes. Os dois `PostConcat` métodos são chamados como este:
 
@@ -271,7 +271,7 @@ SKMatrix.PostConcat(ref A, ref B);
 
 Essas chamadas de executam a seguinte operação:
 
-A = A × B
+`A = A × B`
 
 Os dois `PreConcat` métodos são semelhantes:
 
@@ -283,7 +283,7 @@ SKMatrix.PreConcat(ref A, ref B);
 
 Essas chamadas de executam a seguinte operação:
 
-A = B × UM
+`A = B × A`
 
 As versões desses métodos com todos os `ref` argumentos são um pouco mais eficientes para chamar as implementações subjacentes, mas ele pode ser confuso para alguém leem seu código e supondo que tudo que for um `ref` argumento for modificado por o método. Além disso, muitas vezes é conveniente passar um argumento que é um resultado de uma da `Make` métodos, por exemplo:
 
@@ -361,7 +361,7 @@ SKMatrix.PostConcat(ref A, C);
 
 Isso é uma série de multiplicações sucessivas, portanto, o resultado é da seguinte maneira:
 
-A × × B C
+`A × B × C`
 
 Multiplicações consecutivas ajudam a compreender o que cada transformação faz. A transformação de escala aumenta o tamanho das coordenadas de caminho por um fator igual a 3, portanto, as coordenadas de intervalo de –300 para 300. A transformação de rotação gira a estrela em torno de sua origem. A transformação de conversão, em seguida, ele muda 300 pixels botão direito do mouse e para baixo, para que todos os as coordenadas que se tornam positivas.
 
