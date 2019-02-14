@@ -391,7 +391,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
 
     Esse código define uma `Database` que cria uma nova propriedade `NoteDatabase` instância como um singleton, passando o nome do arquivo do banco de dados como o argumento para o `NoteDatabase` construtor. A vantagem de expor o banco de dados como um singleton é que uma conexão de banco de dados individual criada é mantida aberta enquanto o aplicativo é executado, evitando, portanto, o trabalho de abrir e fechar o arquivo de banco de dados cada vez que uma operação de banco de dados é realizada.
 
-    Salve as alterações em **App.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **& #8984; + S**) e feche o arquivo.
+    Salve as alterações em **App.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **&#8984; + S**) e feche o arquivo.
 
     > [!WARNING]
     > A tentativa de compilar o aplicativo neste ponto resultará em erros que serão corrigidos em etapas subsequentes.

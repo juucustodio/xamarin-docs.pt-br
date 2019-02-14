@@ -592,7 +592,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](single-page.
 
     Esse código adiciona uma declaração de namespace para o `System.IO` namespace e adiciona uma declaração para um estático `FolderPath` propriedade do tipo `string`. O `FolderPath` propriedade é usada para armazenar o caminho no dispositivo onde Observe que os dados serão armazenados. Além disso, o código inicializa o `FolderPath` propriedade no `App` construtor e inicializa o [ `MainPage` ](xref:Xamarin.Forms.Application.MainPage) propriedade seja uma [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) que hospeda um instância do `NotesPage`. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
 
-    Salve as alterações em **App.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **& #8984; + S**) e feche o arquivo.
+    Salve as alterações em **App.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **&#8984; + S**) e feche o arquivo.
 
 14. No **painel de soluções**, no **notas** do projeto, clique com botão direito **MainPage. XAML**e selecione **remover**. Na caixa de diálogo que aparece pressione a **excluir** botão para remover o arquivo de disco rígido.
 
