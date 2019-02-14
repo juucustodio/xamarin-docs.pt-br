@@ -7,12 +7,12 @@ ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 594e98230d4f4bd8aca27f92f4544f8c59b5f0a2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8c86782d5b8b8250049d0ae060ca7bd548c5a4ef
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061449"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240403"
 ---
 # <a name="the-separable-blend-modes"></a>Os modos do blend separáveis
 
@@ -127,19 +127,21 @@ As capturas de tela da esquerda para direita mostram cada vez maiores `Slider` v
 
 [![Clarear e escurecer](separable-images/LightenAndDarken.png "clarear e escurecer")](separable-images/LightenAndDarken-Large.png#lightbox)
 
-Este programa demonstra o vetor perpendicular à forma em que os modos do blend separáveis são usados: O destino é uma imagem de algum tipo, com muita frequência um bitmap. A fonte é um retângulo exibido usando um `SKPaint` do objeto com seu `BlendMode` propriedade definida como modo de mesclagem separáveis. O retângulo pode ser uma cor sólida (como a seguir) ou um gradiente. A transparência é _não_ geralmente usada com os modos do blend separáveis.
+Este programa demonstra da maneira normal em que os modos do blend separáveis são usados: O destino é uma imagem de algum tipo, com muita frequência um bitmap. A fonte é um retângulo exibido usando um `SKPaint` do objeto com seu `BlendMode` propriedade definida como modo de mesclagem separáveis. O retângulo pode ser uma cor sólida (como a seguir) ou um gradiente. A transparência é _não_ geralmente usada com os modos do blend separáveis.
 
 Ao testar com este programa, você descobrirá que esses modos de mesclagem de dois não clarear e escurecer a imagem de maneira uniforme. Em vez disso, o `Slider` parece definir um limite de algum tipo. Por exemplo, como você aumentar o `Slider` para o `Lighten` modo, as áreas mais escuras da imagem receber luz primeiro enquanto as áreas mais claras permanecem os mesmos.
 
 Para o `Lighten` modo, se o pixel de destino é o valor de cor RGB (recuperação de desastre, gd, banco de dados) e o pixel da fonte é a cor da (Sr, Sg, Sb), em seguida, a saída é (ou, Og, Ob) calculado da seguinte maneira:
 
- Ou = Máx (recuperação de desastre, Sr) Og = máx (gd, Sg) Ob = máx (banco de dados, Sb)
+ `Or = max(Dr, Sr)` `Og = max(Dg, Sg)`
+ `Ob = max(Db, Sb)`
 
 Para vermelho, verde e azul separadamente, o resultado for maior do código-fonte e destino. Isso produz o efeito de ritmo muito escuras áreas de destino pela primeira vez.
 
 O `Darken` modo é semelhante, exceto que o resultado é inferior a origem e destino:
 
- Ou = min (recuperação de desastre, Sr) Og = min (gd, Sg) Ob = min (banco de dados, Sb)
+ `Or = min(Dr, Sr)` `Og = min(Dg, Sg)`
+ `Ob = min(Db, Sb)`
 
 Os componentes vermelhos, verdes e azuis são cada tratados separadamente, por isso, esses modos de mesclagem são conhecidos como o _separáveis_ modos do blend. Por esse motivo, as abreviações **Dc** e **Sc** pode ser usado para as cores de origem e destino, e deve ser entendido que se aplicam os cálculos para cada um dos componentes vermelhos, verdes e azuis separadamente.
 
@@ -147,9 +149,9 @@ A tabela a seguir mostra todos os modos do blend separáveis com breves explica�
 
 | Modo de mesclagem   | Nenhuma alteração | Operação |
 | ------------ | --------- | --------- |
-| `Plus`       | Preto     | Clareia adicionando cores: Sc + controlador de domínio |
-| `Modulate`   | Branco     | Escurece multiplicando cores: Sc· Controlador de domínio | 
-| `Screen`     | Preto     | Complementa o produto de complementa: Sc + Dc &ndash; Sc· Controlador de domínio |
+| `Plus`       | Preto     | Clareia adicionando cores: Sc + Dc |
+| `Modulate`   | Branco     | Escurece multiplicando cores: Sc·Dc | 
+| `Screen`     | Preto     | Complementa o produto de complementos: Sc + Dc &ndash; Sc·Dc |
 | `Overlay`    | Cinza      | Inverso da `HardLight` |
 | `Darken`     | Branco     | Mínimo de cores: min (Sc, o controlador de domínio) |
 | `Lighten`    | Preto     | Máximo de cores: max (Sc, o controlador de domínio) |
@@ -157,9 +159,9 @@ A tabela a seguir mostra todos os modos do blend separáveis com breves explica�
 | `ColorBurn`  | Branco     | Escurece com base na fonte de destino | 
 | `HardLight`  | Cinza      | Semelhante ao efeito de refletor de luz |
 | `SoftLight`  | Cinza      | Semelhante ao efeito de destaque reversível | 
-| `Difference` | Preto     | Subtrai a mais escura mais claras: Abs (controlador de domínio &ndash; Sc) | 
+| `Difference` | Preto     | Subtrai a mais escura mais claras: Abs(Dc &ndash; Sc) | 
 | `Exclusion`  | Preto     | Semelhante ao `Difference` contraste mais baixo, mas |
-| `Multiply`   | Branco     | Escurece multiplicando cores: Sc· Controlador de domínio |
+| `Multiply`   | Branco     | Escurece multiplicando cores: Sc·Dc |
 
 Os algoritmos mais detalhados podem ser encontrados no W3C [ **composição e a combinação do nível 1** ](https://www.w3.org/TR/compositing-1/) especificação e o Skia [ **SkBlendMode referência** ](https://skia.org/user/api/SkBlendMode_Reference), embora a notação nessas duas origens não é o mesmo. Tenha em mente que `Plus` geralmente é considerado como um modo de mesclagem Duff Porter, e `Modulate` não é parte da especificação do W3C.
 

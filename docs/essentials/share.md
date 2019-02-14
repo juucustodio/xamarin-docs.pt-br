@@ -1,18 +1,19 @@
 ---
-title: 'Xamarin.Essentials: compartilhar'
+title: 'Xamarin.Essentials: Compartilhar'
 description: A classe Share no Xamarin.Essentials permite que um aplicativo compartilhe dados, como links de texto e da Web com outros aplicativos no dispositivo.
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 6fd3fd90d1e2ada225dafdd855f8903688677660
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 02/12/2019
+ms.custom: video
+ms.openlocfilehash: 7e61041fa33557c4e1db3613b75b575e9d456231
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899369"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240416"
 ---
-# <a name="xamarinessentials-share"></a>Xamarin.Essentials: compartilhar
+# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
 
 A classe **Share** permite que um aplicativo compartilhe dados, como links de texto e da Web com outros aplicativos no dispositivo.
 
@@ -80,3 +81,9 @@ Interface do usuário para compartilhar com aplicativo externo exibida quando um
 
 - [Código-fonte de Share](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
 - [Documentação da API de Share](xref:Xamarin.Essentials.Share)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Share-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

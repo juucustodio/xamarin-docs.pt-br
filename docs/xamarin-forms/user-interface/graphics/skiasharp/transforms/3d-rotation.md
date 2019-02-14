@@ -7,12 +7,12 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: a4f69287a6f97f3181d88a2d93d308df2676476a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7ac9ec458f16357ef50e23c459a9b0e1f79bdd97
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052683"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240364"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotações 3D em SkiaSharp
 
@@ -63,25 +63,25 @@ Em um sistema de elementos gráficos 3D, um ponto 3D (x, y, z) é convertido em 
 
 Transformações 3D análogo para 2D transformações que ocorrem em três dimensões, são consideradas para entrar em vigor em quatro dimensões. A dimensão do quarto é conhecida como W e o espaço 3D deve para existir dentro do espaço de 4d onde W coordenadas são iguais a 1. As fórmulas de transformação são da seguinte maneira:
 
-x' = M11·x + M21·y + M31·z + M41
+`x' = M11·x + M21·y + M31·z + M41`
 
-y' = M12·x + M22·y + M32·z + M42
+`y' = M12·x + M22·y + M32·z + M42`
 
-z' = M13·x + M23·y + M33·z + M43
+`z' = M13·x + M23·y + M33·z + M43`
 
-w' = M14·x + M24·y + M34·z + M44
+`w' = M14·x + M24·y + M34·z + M44`
 
 É óbvio das fórmulas de transformação que as células `M11`, `M22`, `M33` são fatores de dimensionamento nas direções X, Y e Z, e `M41`, `M42`, e `M43` são fatores de conversão nos X, Y e Z direções.
 
 Para converter essas coordenadas para o espaço 3D onde W é igual a 1, o x', y', e z 'coordenadas são todos divididas por w':
 
-x"= x' / w'
+`x" = x' / w'`
 
-y"= y' / w'
+`y" = y' / w'`
 
-z"= z' / w'
+`z" = z' / w'`
 
-w" = w' / w' = 1
+`w" = w' / w' = 1`
 
 Essa divisão por w' fornece perspectiva no espaço 3D. Se w' é igual a 1 e, em seguida, nenhuma perspectiva ocorre.
 
@@ -140,7 +140,7 @@ O motivo para o nome do argumento `depth` ficará evidente em breve. Esse códig
 
 As fórmulas de transformação resultam no seguinte cálculo da w':
 
-w' = a – z / profundidade + 1
+`w' = –z / depth + 1`
 
 Isso serve para reduzir as coordenadas X e Y quando valores de Z são menor que zero (conceitualmente por trás do plano XY) e aumentar as coordenadas X e Y para valores positivos de Z. Quando a coordenada Z é igual a `depth`, em seguida, w' é zero, e coordenadas se tornar infinitas. Sistemas de elementos gráficos tridimensionais são criados em torno de uma metáfora de câmera e o `depth` valor aqui representa a distância da câmera da origem do sistema de coordenadas. Se um objeto gráfico tem um Z coordenar que é `depth` unidades da origem, conceitualmente tocando a lente da câmera e torna-se muito grande.
 
@@ -173,9 +173,9 @@ w' = M14·x + M24·y + M44
 
 Além disso, o z' coordenada é irrelevante, bem aqui. Quando um objeto 3D é exibido em um sistema de gráficos 2D, ele estiver recolhido para um objeto bidimensional, ignorando os valores de coordenada Z. As fórmulas de transformação são realmente apenas esses dois:
 
-x"= x' / w'
+`x" = x' / w'`
 
-y"= y' / w'
+`y" = y' / w'`
 
 Isso significa que a terceira linha *e* terceira coluna da matriz 4 por 4 pode ser ignorada.
 
@@ -208,17 +208,17 @@ Agora ele pode ser usado para transformar um ponto 2D:
 
 As fórmulas de transformação são:
 
-x' = cos(α)·x
+`x' = cos(α)·x`
 
-y' = y
+`y' = y`
 
-z' = (sin (α) / profundidade) ·x + 1
+`z' = (sin(α)/depth)·x + 1`
 
 Dividir tudo por z':
 
-x"= cos (α) ·x / ((sin (α) / profundidade) ·x + 1)
+`x" = cos(α)·x / ((sin(α)/depth)·x + 1)`
 
-y"= y / ((sin (α) / profundidade) ·x + 1)
+`y" = y / ((sin(α)/depth)·x + 1)`
 
 Quando objetos 2D são girados com um ângulo positivo em torno do eixo Y, em seguida, positivo valores X recuam ao plano de fundo ao negativo valores X vir em primeiro plano. Os valores de X parecem se aproximar do eixo Y (que é controlado pelo valor do cosseno) como coordenadas mais distante do eixo Y se torna menor ou maior à medida que eles se afastar do visualizador ou mais perto do visualizador.
 

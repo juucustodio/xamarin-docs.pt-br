@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: 835663b2d9a9fa8557a31570f91492da95be7a9a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ee1df713315559c076fbfaed6f5a34057940ff36
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059185"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240390"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efeitos de caminho em SkiaSharp
 
@@ -416,13 +416,13 @@ Procurar muito perto e você verá que esses não são realmente círculos. Cada
 
 Uma cadeia ou um cabo de distribuição de peso uniforme trava na forma de um catenary. Um arch criado na forma de um catenary invertida se beneficia de uma distribuição igual de pressão do peso de um arch. O catenary tem uma descrição de matemática aparentemente simple:
 
-y = um. COSH(x / a)
+`y = a · cosh(x / a)`
 
 O *cosh* é a função cosseno hiperbólico. Para *x* igual a 0, *cosh* for zero e *y* é igual a *um*. Que é o centro do catenary. Como o *cosseno* função, *cosh* deve ser *mesmo*, o que significa que *cosh(–x)* é igual a *cosh(x)*, e valores aumentam para aumentar os argumentos de positivos ou negativos. Esses valores descrevem as curvas que formam os lados do catenary.
 
 Localizando o valor apropriado de *um* de acordo com o catenary para as dimensões da página do telefone não é um cálculo direto. Se *w* e *h* a largura e altura de um retângulo, o valor ideal de *um* satisfaz a seguinte equação:
 
-COSH (w/2/a) = 1 + h / a
+`cosh(w / 2 / a) = 1 + h / a`
 
 O seguinte método as [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpora essa igualdade referindo-se a duas expressões à esquerda e à direita do sinal de igual como `left` e `right`. Para valores pequenos de *uma*, `left` é maior que `right`; para valores grandes de *um*, `left` é menor que `right`. O `while` loop é restrita em um valor ideal de *um*:
 
@@ -800,7 +800,7 @@ O `PaintSurface` manipulador conclui com uma chamada para simplesmente traçar o
 
 [![](effects-images/hatchfill-small.png "Captura de tela da página hachura preenchimento tripla")](effects-images/hatchfill-large.png#lightbox "tripla captura de tela da página de hachura de preenchimento")
 
-A tela de Android não realmente ser assim: O dimensionamento da captura de tela causou linhas finas em vermelho e finos espaços para consolidar em linhas vermelhas aparentemente mais amplo e mais amplo.
+A tela Android realmente não parece assim: O dimensionamento da captura de tela causou as linhas finas em vermelho e espaços thin consolidar em linhas vermelhas aparentemente mais ampla e mais amplo.
 
 ## <a name="filling-with-a-path"></a>Preenchendo com um caminho
 
@@ -1086,7 +1086,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 Somente os primeiros dois argumentos são necessários. O método acessa o caminho referenciado pela `src` argumento, modifica os dados de caminho com base nas propriedades de traço na `SKPaint` objeto (incluindo o `PathEffect` propriedade) e, em seguida, grava os resultados no `dst` caminho. O `resScale` parâmetro permite reduzir a precisão para criar um caminho de destino menor e o `cullRect` argumento pode eliminar delimitações fora de um retângulo.
 
-Um uso básico desse método não envolve em todos os efeitos de caminho: se o `SKPaint` objeto tem seus `Style` propriedade definida como `SKPaintStyle.Stroke`e faz *não* tem seu `PathEffect` definido, em seguida, `GetFillPath` cria um caminho que representa uma *contorno* do caminho do código-fonte como se ele tivesse sido feito pelas propriedades de pintura.
+Um uso básico desse método não envolve os efeitos de caminho: Se o `SKPaint` objeto tem seu `Style` propriedade definida como `SKPaintStyle.Stroke`e faz *não* tem seu `PathEffect` definida, então `GetFillPath` cria um caminho que representa um *contorno*do caminho do código-fonte como se ele tivesse sido feito pelas propriedades de pintura.
 
 Por exemplo, se o `src` caminho é um círculo simples do radius 500 e o `SKPaint` objeto Especifica a largura do traço de 100, então o `dst` caminho se torne dois círculos concêntricos, uma com um raio de 450 e outra com um raio de 550. O método é chamado `GetFillPath` porque preencher esse `dst` caminho é o mesmo que traça o `src` caminho. Mas você também pode traçar o `dst` caminho para ver os contornos do caminho.
 

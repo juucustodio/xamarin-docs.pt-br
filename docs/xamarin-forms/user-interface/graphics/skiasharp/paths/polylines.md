@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: c6328135e0310c7b10b89bf2e32ce62869b15cfb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e7327deead917f55d1e7ac8af5302b6dccf6fead
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059980"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240351"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinhas e equações paramétricas
 
@@ -26,21 +26,21 @@ No [ **SkiaSharp curvas e caminhos** ](../curves/index.md) seção deste guia, v
 
 Geralmente é melhor definir uma curva em termos de um par de equações paramétricas. Esses são equações para coordenadas X e Y que dependem de uma variável de terceiro, às vezes chamada de `t` por tempo. Por exemplo, as seguintes equações paramétricas definem um círculo com um raio de 1 centralizado no ponto (0, 0) para *t* de 0 a 1:
 
-x = cos(2πt)
+`x = cos(2πt)`
 
-y = sin(2πt)
+`y = sin(2πt)`
 
  Se você quiser um raio maior do que 1, simplesmente pode multiplicar os valores do seno e cosseno por esse radius e se você precisar mover o centro em outro local, adicione esses valores:
 
-x = xCenter + radius·cos(2πt)
+`x = xCenter + radius·cos(2πt)`
 
-y = yCenter + radius·sin(2πt)
+`y = yCenter + radius·sin(2πt)`
 
 Para uma elipse com o paralelo de eixos horizontal e vertical, dois raios estão envolvidos:
 
-x = xCenter + xRadius·cos(2πt)
+`x = xCenter + xRadius·cos(2πt)`
 
-y = yCenter + yRadius·sin(2πt)
+`y = yCenter + yRadius·sin(2πt)`
 
 Em seguida, você pode colocar o código equivalente do SkiaSharp em um loop que calcula os vários pontos e adiciona-os para um caminho. O código de SkiaSharp a seguir cria um `SKPath` objeto para uma elipse que preenche a superfície de exibição. O loop ciclos diretamente por meio de 360 graus. O centro é metade da largura e altura da superfície de exibição e, portanto, são os dois raios:
 

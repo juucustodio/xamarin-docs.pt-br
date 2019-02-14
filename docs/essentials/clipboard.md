@@ -1,18 +1,19 @@
 ---
-title: 'Xamarin.Essentials: Área de transferência'
+title: 'Xamarin.Essentials: Área de Transferência'
 description: Este documento descreve a classe Clipboard no Xamarin.Essentials, que permite copiar e colar o texto para a área de transferência do sistema entre aplicativos.
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 90ede9d0d0fbee9efabcce25c0ae7c3c439d9e69
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 02/12/2019
+ms.custom: video
+ms.openlocfilehash: 3511850391b2be809daf2b70e81fa5b591db8dfa
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898693"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240338"
 ---
-# <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Área de transferência
+# <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Área de Transferência
 
 A classe **Clipboard** permite que você copie e cole o texto para a área de transferência do sistema entre aplicativos.
 
@@ -50,3 +51,9 @@ var text = await Clipboard.GetTextAsync();
 
 - [Código-fonte de Área de Transferência](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
 - [Documentação de API de Área de Transferência](xref:Xamarin.Essentials.Clipboard)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Clipboard-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

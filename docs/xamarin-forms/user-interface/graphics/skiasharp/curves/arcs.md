@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233985"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240429"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três formas de desenhar um arco
 
@@ -107,9 +107,9 @@ Como você pode ver, o ângulo inicial e o ângulo de flecha podem assumir valor
 
 Essa abordagem para gerar um arco é algoritmicamente a mais simples e é fácil derivar equações paramétricas que descrevem o arco. Sabendo o tamanho e local da elipse e os ângulos de início e de varredura, os pontos inicial e final do arco pode ser calculados usando trigonometria simple:
 
-x = oval. MidX + (oval. Largura / 2) * cos(angle)
+`x = oval.MidX + (oval.Width / 2) * cos(angle)`
 
-y = oval. MidY + (oval. Altura / 2) * sin(angle)
+`y = oval.MidY + (oval.Height / 2) * sin(angle)`
 
 O `angle` valor é `startAngle` ou `startAngle + sweepAngle`.
 
@@ -606,9 +606,9 @@ O raio do círculo é de 100 unidades e a hipotenusa do triângulo é 150 unidad
 
 As coordenadas do ponto de tangente, em seguida, podem ser calculadas usando essas informações:
 
-x = 112·cos(41.8) = 83
+`x = 112·cos(41.8) = 83`
 
-y = 112·sin(41.8) = 75
+`y = 112·sin(41.8) = 75`
 
 Os quatro pontos tangentes são tudo o que é necessário para desenhar um sinal de infinito centralizado no ponto (0, 0) com o raio do círculo de 100:
 
