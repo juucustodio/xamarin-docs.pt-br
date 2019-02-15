@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 9acd1b8f25696267578f5cc269eb1b0c738be571
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
+ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675088"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078414"
 ---
 # <a name="xamarinforms-app-class"></a>Classe App do Xamarin.Forms
 
@@ -149,7 +149,6 @@ public class App : Xamarin.Forms.Application
 Em seguida, essa classe é instanciada em cada projeto específico da plataforma e passada para o método `LoadApplication`, em que o `MainPage` é carregado e exibido para o usuário.
 O código para cada plataforma é mostrado nas seções a seguir. Os modelos de solução do Xamarin.Forms mais recentes já contêm todo esse código pré-configurado para seu aplicativo.
 
-
 ### <a name="ios-project"></a>Projeto do iOS
 
 A classe `AppDelegate` do iOS herda de `FormsApplicationDelegate`. Ele deve:
@@ -196,8 +195,6 @@ public class MainActivity : FormsAppCompatActivity
 
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>UWP (Projeto Universal do Windows) para Windows 10
 
-Confira [Configuração de projetos do Windows](~/xamarin-forms/platform/windows/installation/index.md) para obter informações sobre o suporte para UWP no Xamarin.Forms.
-
 A página principal no projeto da UWP deve herdar de `WindowsPage`:
 
 ```xaml
@@ -222,4 +219,6 @@ public sealed partial class MainPage
  }
 ```
 
-Observe que `Forms.Init()` deve ser chamado em **App.xaml.cs** próximo à linha 63.
+Observe que `Forms.Init()` precisa ser chamado por **App.xaml.cs** no projeto UWP.
+
+Para obter mais informações, confira [Configurar projetos do Windows](~/xamarin-forms/platform/windows/installation/index.md), que inclui as etapas para adicionar um projeto UWP a uma solução do Xamarin.Forms existente que não seja direcionada à UWP.
