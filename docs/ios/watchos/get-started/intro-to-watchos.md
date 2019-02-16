@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: ba5e7a24524f9371cbd810e18c11acc9e2e2a4cb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0b320955cae23b18444732c826849002d6375fe4
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055615"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321136"
 ---
 # <a name="introduction-to-watchos"></a>Introdução ao watchOS
 
@@ -53,10 +53,10 @@ Você pode, no entanto, ocultar e revelar os controles e, com alguns controles, 
 
 O ciclo de vida de um `WKInterfaceController` objeto envolve as seguintes chamadas:
 
-- [Ativos](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.Awake/) : você deve executar a maioria de sua inicialização nesse método.
-- [WillActivate](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.WillActivate/) : chamado logo antes do aplicativo Watch aparece para o usuário. Use esse método para executar a inicialização do último momento, iniciar as animações, etc.
+- [Awake](xref:WatchKit.WKInterfaceController.Awake*) : Você deve executar a maioria de sua inicialização nesse método.
+- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Chamado pouco antes do aplicativo Watch aparece para o usuário. Use esse método para executar a inicialização do último momento, iniciar as animações, etc.
 - Neste ponto, o aplicativo Watch é exibida e a extensão começa respondendo ao usuário de entrada e atualizando a exibição do aplicativo Watch por lógica do aplicativo.
-- [DidDeactivate](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.DidDeactivate/) após o aplicativo Watch foi fechado pelo usuário, esse método é chamado. Depois que esse método retorna, controles de interface do usuário não podem ser modificados até a próxima vez `WillActivate` é chamado. Esse método também será chamado se a conexão para o iPhone é interrompida.
+- [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) após o aplicativo Watch foi fechado pelo usuário, esse método é chamado. Depois que esse método retorna, controles de interface do usuário não podem ser modificados até a próxima vez `WillActivate` é chamado. Esse método também será chamado se a conexão para o iPhone é interrompida.
 - Depois que a extensão foi desativada, é inacessível ao programa. Pendente funções assíncronas **não** ser chamado. Assista ao que Kit de extensões não pode usar modos de processamento em segundo plano. Se o programa é reativado pelo usuário, mas o aplicativo não foi finalizado pelo sistema operacional, o primeiro método chamado será `WillActivate`.
 
 ![](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png "Visão geral do ciclo de vida do aplicativo")
@@ -92,8 +92,8 @@ Para obter mais informações sobre o design de interface do usuário de notific
 
 O Apple Watch tem dois tamanhos de face: 38mm e 42mm, com uma taxa de exibição: 4 de 5 e uma tela retina. Seus tamanhos utilizáveis são:
 
-- pixels lógicos de 38 mm: 136 x 170 (pixels físicos de 340 x 272)
-- 42 mm: 156 x 195 pixels lógicos (312 x 390 pixels físicos).
+- 38mm: pixels lógicos de 136 x 170 (pixels físicos de 340 x 272)
+- 42mm: 156 x 195 pixels lógicos (312 x 390 pixels físicos).
 
 Use `WKInterfaceDevice.ScreenBounds` para determinar em qual exibir o aplicativo de inspeção está sendo executado.
 

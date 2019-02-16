@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: 1ccbea1921b4e0c4189182696c8679d041eea60b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb8aec5a5054c28cf7862d14148e7f2000fa3a35
+ms.sourcegitcommit: c77f84a0686d16de6ac630271fccac719fd9eec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113021"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307912"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitações do xamarin. IOS
 
-Uma vez que os aplicativos no iPhone usando xamarin. IOS são compilados para código estático, não é possível usar todos os recursos que exigem a geração de código em tempo de execução.
+Uma vez que os aplicativos que usam o xamarin. IOS são compilados para código estático, não é possível usar todos os recursos que exigem a geração de código em tempo de execução.
 
 Estas são as limitações de xamarin. IOS em comparação comparadas a área de trabalho Mono:
 
@@ -48,43 +48,12 @@ class Foo<T> : UIView {
 > Embora subclasses genéricas de NSObjects sejam possíveis, há algumas limitações. Leia as [subclasses genéricas de NSObject](~/ios/internals/api-design/nsobject-generics.md) documento para obter mais informações
 
 
-
-### <a name="pinvokes-in-generic-types"></a>P/Invokes em tipos genéricos
-
-Não há suporte para P/Invokes em classes genéricas:
-
-```csharp
-class GenericType<T> {
-    [DllImport ("System")]
-    public static extern int getpid ();
-}
-```
-
- <a name="Property.SetInfo_on_a_Nullable_Type_is_not_supported" />
-
-
-### <a name="propertysetinfo-on-a-nullable-type-is-not-supported"></a>Não há suporte para Property.SetInfo em um tipo que permite valor nulo
-
-Uso Property.SetInfo da reflexão para definir o valor em uma propriedade Nullable&lt;T&gt; não é suportada atualmente.
-
- <a name="Value_types_as_Dictionary_Keys" />
-
-
-### <a name="value-types-as-dictionary-keys"></a>Tipos de valor como chaves de dicionário
-
-Usando um tipo de valor como um dicionário&lt;TKey, TValue&gt; chave é problemático, como padrão o construtor de dicionário tenta usar EqualityComparer&lt;TKey&gt;. Por padrão. EqualityComparer&lt;TKey&gt;. Padrão, em seguida, tenta usar a reflexão para instanciar um novo tipo que implementa o IEqualityComparer&lt;TKey&gt; interface.
-
-Isso funciona para tipos de referência (como a reflexão + criar um novo tipo de etapa será ignorado), mas, por valor de tipos de falhas e irá consumir rapidamente em vez disso, quando você tentar usá-lo no dispositivo.
-
- **Solução alternativa**: implementar manualmente a [IEqualityComparer&lt;TKey&gt; ](xref:System.Collections.Generic.IEqualityComparer`1) em um novo tipo de interface e fornecer uma instância desse tipo para o [dicionário&lt;TKey, TValue&gt; ](xref:System.Collections.Generic.Dictionary`2) [(IEqualityComparer&lt;TKey&gt;)](xref:System.Collections.Generic.IEqualityComparer`1) construtor.
-
-
  <a name="No_Dynamic_Code_Generation" />
 
 
 ## <a name="no-dynamic-code-generation"></a>Não há geração de código dinâmico
 
-Uma vez que o kernel do iPhone impede que um aplicativo de geração de código dinamicamente Mono no iPhone não dá suporte a nenhuma forma de geração de código dinâmico. Elas incluem:
+Uma vez que o kernel iOS impede que um aplicativo de geração de código dinamicamente, xamarin. IOS não dá suporte a nenhuma forma de geração de código dinâmico. Elas incluem:
 
 -  O Emit não está disponível.
 -  Não há suporte para Remoting.
@@ -105,7 +74,7 @@ A falta de System. Reflection. **Emitir** significa que nenhum código que depen
 -  TransparentProxy do comunicação remota ou qualquer outra coisa que faria com que o tempo de execução gerar código dinamicamente. 
 
 
- **Importante:** não confunda **Reflection. Emit** com **reflexão**. Reflection. Emit é sobre como gerar código dinamicamente e ter esse código compilado em JIT e compiladas em código nativo. Devido a limitações no iPhone (nenhuma compilação JIT) isso não é suportado.
+ **Importante:** Não confunda **Reflection. Emit** com **reflexão**. Reflection. Emit é sobre como gerar código dinamicamente e ter esse código compilado em JIT e compiladas em código nativo. Devido a limitações no iOS (nenhuma compilação JIT) isso não é suportado.
 
 Mas a API de reflexão inteira, incluindo Type. GetType ("someClass"), listando os métodos, propriedades, a listagem busca de atributos e valores funciona muito bem.
 

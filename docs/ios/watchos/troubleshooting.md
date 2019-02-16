@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7bfb0cad8bbc025bc5dba39abe3699ae77ee83ba
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 70ef341c066c77e214761d75c173faef00266e4c
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526475"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321149"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS solução de problemas
 
-Esta página contém informações adicionais e soluções alternativas para recursos ainda em desenvolvimento. Algumas dessas soluções alternativas se aplicam somente a nossas versões de visualização.
+Esta página contém informações adicionais e soluções alternativas para problemas que podem ocorrer.
 
 - [Problemas conhecidos](#knownissues)
 
@@ -45,7 +45,7 @@ Esta página contém informações adicionais e soluções alternativas para rec
 - Designer do iOS não mostra as setas de ponto de entrada para controladores de interface rapidamente ou notificação.
 
 - Não é possível adicionar dois `WKNotificationControllers` a um storyboard.
-    Solução alternativa: A `notificationCategory` elemento no XML de storyboard é sempre inserido com o mesmo `id`. Para contornar esse problema, você pode adicionar dois (ou mais) controladores de notificação, abra o arquivo de storyboard em um editor de texto e, em seguida, altere manualmente o `id` elemento a ser exclusivo.
+    Solução alternativa: O `notificationCategory` elemento no XML de storyboard é sempre inserido com o mesmo `id`. Para contornar esse problema, você pode adicionar dois (ou mais) controladores de notificação, abra o arquivo de storyboard em um editor de texto e, em seguida, altere manualmente o `id` elemento a ser exclusivo.
 
     [![](troubleshooting-images/duplicate-id-sml.png "Abrindo o storyboard do arquivo em um editor de texto e alterar manualmente o elemento de id para serem exclusivos")](troubleshooting-images/duplicate-id.png#lightbox)
 
