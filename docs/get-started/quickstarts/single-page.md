@@ -248,7 +248,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
     Esse código define declarativamente a interface do usuário para a página, que consiste em um [`Label`](xref:Xamarin.Forms.Label) para exibir texto, um [`Editor`](xref:Xamarin.Forms.Editor) para entrada de texto e duas instâncias de [`Button`](xref:Xamarin.Forms.Button) que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Label`, o `Editor` e a `Grid` dispostos verticalmente em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Para obter mais informações sobre como criar a interface do usuário, consulte [interface do usuário](deepdive.md#user-interface) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
 
-    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
 
 7. No **Painel de Soluções**, no projeto **Notas**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo:
 
