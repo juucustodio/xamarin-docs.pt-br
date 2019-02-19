@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 65316bde1d1c709028eae39c19e5dc318821ff70
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 4a24c8dbb9ab4e23afa03de4ae2dbc55ddfb5fa4
+ms.sourcegitcommit: e000cc0765857c1d7f49538df9e62e9d3aa60775
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746876"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334560"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de vinculação de dados
 
@@ -114,6 +114,7 @@ A solução para esse e outros problemas envolve a `Mode` propriedade, que é de
 - `OneWay` — valores que são transferidos da origem ao destino
 - `OneWayToSource` — valores que são transferidos do destino para a fonte
 - `TwoWay` — valores são transferidos ambas as direções entre origem e destino
+- `OneTime` — dados vão da fonte para o destino, mas somente quando o `BindingContext` alterações
 
 O programa a seguir demonstra um uso comum de `OneWayToSource` e `TwoWay` modos de ligação. Quatro `Slider` modos de exibição destinam-se ao controle de `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades de um `Label`. A princípio, parece como se essas quatro propriedades do `Label` deve ser destinos de vinculação de dados, porque cada um está sendo definida um `Slider`. No entanto, o `BindingContext` de `Label` pode ser apenas um objeto, e há quatro controles deslizantes diferentes.
 
