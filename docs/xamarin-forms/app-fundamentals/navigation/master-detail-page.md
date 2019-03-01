@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 3bfb8a10eab1a8a75a3f2048de1ce219df9bde66
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 854b3fdbd34444cfb052d36287cf5cd47a36a2e0
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057659"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666903"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Página Mestre/Detalhes do Xamarin.Forms
 
@@ -48,7 +48,7 @@ O comportamento da experiência de navegação entre páginas mestras e de detal
 
 - No iOS, a página de detalhes *desliza* para a direita enquanto a página mestra desliza para a esquerda e a parte esquerda da página de detalhes ainda está visível.
 - No Android, as páginas mestras e de detalhes são *sobrepostas* umas às outras.
-- Na UWP, as páginas mestras e de detalhes estão *trocadas*.
+- Na UWP, a página mestra desliza da esquerda para parte da página de detalhes, desde que a propriedade [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) esteja definida como `Popover`. Para obter mais informações, confira [Controlando o comportamento de exibição da página de detalhes](#Controlling_the_Detail_Page_Display_Behavior).
 
 Um comportamento semelhante será observado no modo paisagem, exceto que a página mestra no iOS e no Android tem uma largura semelhante à da página mestra no modo retrato; portanto, mais coisas da página de detalhes ficarão visíveis.
 
@@ -291,7 +291,6 @@ Contudo, o valor da propriedade [`MasterBehavior`](xref:Xamarin.Forms.MasterDeta
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou como usar uma [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) e navegar entre suas páginas de informações. O `MasterDetailPage` do Xamarin.Forms é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra.
-
 
 ## <a name="related-links"></a>Links relacionados
 
