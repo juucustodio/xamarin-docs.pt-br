@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: d359ea6e56234f14f185ea578fca3a0346e0df50
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 7152e37c4035ac5f9a259fa48b91d5f29752d1f7
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233712"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197128"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introdução ao Xamarin.Essentials
 
@@ -31,7 +31,7 @@ O Xamarin.Essentials é compatível com os seguintes sistemas operacionais e pla
 
 O Xamarin.Essentials está disponível como um pacote NuGet que pode ser adicionado a qualquer projeto, novo ou existente, através do Visual Studio.
 
-1. Faça o download e instale o [Visual Studio](http://visualstudio.com) com as [Ferramentas do Visual Studio para Xamarin](~/cross-platform/get-started/installation/index.md).
+1. Faça o download e instale o [Visual Studio](http://visualstudio.com) com as [Ferramentas do Visual Studio para Xamarin](~/get-started/installation/index.md).
 
 2. Abra um projeto existente ou crie um novo projeto usando o modelo Aplicativo em branco no **C# do Visual Studio** (Android, iPhone e iPad ou plataforma cruzada). **Importante**: Se adicionar a um projeto UWP, verifique se o Build 16299 ou superior está definido nas propriedades do projeto.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 4f69e88e0abff1236dc8365d88c8efbdf58b4031
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: e53f6dce47dd7db60267d21c8d816ece554dc46c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831698"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197103"
 ---
 # <a name="listview-data-sources"></a>Fontes de dados de ListView
 
@@ -71,11 +71,11 @@ A abordagem acima preencherá o `ListView` com uma lista de cadeias de caractere
 Porque `ItemsSource` foi enviada para uma matriz, não será atualizado com as alterações de matriz ou lista subjacentes. Se você quiser que o ListView para atualizar automaticamente à medida que itens são adicionados, removidos ou alterados na lista subjacente, você precisará usar um `ObservableCollection`. [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) é definido em `System.Collections.ObjectModel` e é exatamente como qualquer `List`, exceto que ele pode notificar `ListView` de todas as alterações:
 
 ```csharp
-ObservableCollection<Employees> employeeList = new ObservableCollection<Employess>();
-listView.ItemsSource = employeeList;
+ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+listView.ItemsSource = employees;
 
 //Mr. Mono will be added to the ListView because it uses an ObservableCollection
-employeeList.Add(new Employee(){ DisplayName="Mr. Mono"});
+employees.Add(new Employee(){ DisplayName="Mr. Mono"});
 ```
 
 <a name="Data_Binding" />
@@ -93,7 +93,8 @@ Propriedades de células (e seus filhos de células) podem ser associadas às pr
 A classe do funcionário:
 
 ```csharp
-public class Employee{
+public class Employee
+{
     public string DisplayName {get; set;}
 }
 ```
