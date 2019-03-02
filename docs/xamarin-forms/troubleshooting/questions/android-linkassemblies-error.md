@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: b027dd23b9144a865bc16b55ebac71855bae0725
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 552ad4d2de6e2560dc4301a9b5cc0ce6a5edb348
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292032"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197102"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Erro de build do Android – tarefa o LinkAssemblies falhou inesperadamente
 
-Você poderá ver uma mensagem de erro `The "LinkAssemblies" task failed unexpectedly` quando a criação de um projeto xamarin. Android que usa formulários. Isso acontece quando o vinculador está ativo (normalmente em um *versão* build para reduzir o tamanho do pacote do aplicativo); e isso ocorre porque os destinos Android não são atualizados para o framework mais recente. (Mais informações: [Xamarin. Forms para Android requisitos](~/get-started/installation.md#android))
+Você poderá ver uma mensagem de erro `The "LinkAssemblies" task failed unexpectedly` quando a criação de um projeto xamarin. Android que usa formulários. Isso acontece quando o vinculador está ativo (normalmente em um *versão* build para reduzir o tamanho do pacote do aplicativo); e isso ocorre porque os destinos Android não são atualizados para o framework mais recente. (Mais informações: [Xamarin. Forms para Android requisitos](~/get-started/requirements.md#android))
 
 A resolução para esse problema é certificar-se de ter as versões do SDK do Android mais recente com suporte e defina as **estrutura de destino** à **usar a plataforma mais recente instalada**. Também é recomendável que você defina as **versão destino Android** para **Use a versão do Target Framework** e o **versão mínima do Android** para API 15 ou superior. Isso é considerado a configuração com suporte.
 

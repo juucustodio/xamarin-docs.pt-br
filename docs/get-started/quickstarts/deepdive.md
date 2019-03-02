@@ -9,16 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: aacc63af53d7408b61f01054d49fa2b436588fc7
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292667"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197544"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Aprofundamento de início rápido do xamarin. Forms
 
-No [início rápido do xamarin. Forms](~/get-started/index.md), o aplicativo de anotações foi criado. Este artigo analisa o que foi criado para entender os fundamentos de como os aplicativos Xamarin.Forms funcionam.
+No [início rápido do xamarin. Forms](~/get-started/index.yml), o aplicativo de anotações foi criado. Este artigo analisa o que foi criado para entender os fundamentos de como os aplicativos Xamarin.Forms funcionam.
 
 ::: zone pivot="windows"
 
@@ -373,7 +373,7 @@ Para obter mais informações sobre navegação hierárquica, veja [Navegação 
 
 Vinculação de dados é usada para simplificar como um aplicativo Xamarin.Forms exibe e interage com seus dados. Ela estabelece uma conexão entre a interface do usuário e o aplicativo subjacente. A classe [`BindableObject`](xref:Xamarin.Forms.BindableObject) contém a maior parte da infraestrutura para dar suporte à vinculação de dados.
 
-A vinculação de dados conecta dois objetos, chamados de a *origem* e o *destino*. O objeto *origem* fornece os dados. O objeto *destino* consumirá (e geralmente exibirá) dados do objeto de origem. Por exemplo, um [`Editor`](xref:Xamarin.Forms.Editor) (objeto de *destino*) normalmente associará sua propriedade [`Text`](xref:Xamarin.Forms.Editor.Text) a uma propriedade `string` pública em um objeto de *origem*. O diagrama a seguir ilustra essa relação de associação:
+A vinculação de dados conecta dois objetos, chamados de a *origem* e o *destino*. O objeto *origem* fornece os dados. O objeto *destino* consumirá (e geralmente exibirá) dados do objeto de origem. Por exemplo, um [ `Editor` ](xref:Xamarin.Forms.Editor) (*destino* objeto) normalmente associará sua [ `Text` ](xref:Xamarin.Forms.Editor.Text) propriedade para um público `string` propriedade em um *código-fonte* objeto. O diagrama a seguir ilustra essa relação de associação:
 
 ![](deepdive-images/data-binding.png "Associação de dados")
 
