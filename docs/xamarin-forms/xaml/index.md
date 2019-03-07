@@ -1,19 +1,14 @@
 ---
 title: Linguagem de marcação de aplicativo extensível (XAML)
-description: XAML é uma linguagem de marcação declarativa que pode ser usada para definir interfaces do usuário. A interface do usuário é definida em um arquivo XML usando a sintaxe XAML, enquanto o comportamento de tempo de execução é definido em um arquivo code-behind separado.
+description: 'XAML é uma linguagem de marcação declarativa que pode ser usada para definir interfaces do usuário. A interface do usuário é definida em um arquivo XML usando a sintaxe XAML, enquanto o comportamento de tempo de execução é definido em um arquivo code-behind separado.'
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
-ms.openlocfilehash: 7195d56cfee91544f0626a8f89c886cde36752e5
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831711"
+ms.date: 02/28/2019
 ---
+
 # <a name="extensible-application-markup-language-xaml"></a>Linguagem de marcação de aplicativo extensível (XAML)
 
 _XAML é uma linguagem de marcação declarativa que pode ser usada para definir interfaces do usuário. A interface do usuário é definida em um arquivo XML usando a sintaxe XAML, enquanto o comportamento de tempo de execução é definido em um arquivo code-behind separado._
@@ -43,9 +38,13 @@ O [XAML pré-visualizador](~/xamarin-forms/xaml/xaml-previewer.md) renderiza uma
 
 XAML usa a `xmlns` atributo XML para declarações de namespace. Este artigo apresenta a sintaxe do namespace XAML e demonstra como declarar um namespace XAML para um tipo de acesso.
 
-## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Esquemas personalizados de Namespace de XAML](custom-namespace-schemas.md)
+## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Esquemas Personalizados de Namespace de XAML](custom-namespace-schemas.md)
 
 Um esquema personalizado de namespace XAML pode ser definido com o `XmlnsDefinitionAttribute` classe, que especifica um mapeamento entre uma URL personalizada e um ou mais namespaces CLR. O esquema de namespace personalizado, em seguida, pode ser usado em declarações de namespace XAML.
+
+## <a name="xaml-namespace-recommended-prefixescustom-prefixmd"></a>[Recomendado prefixos de Namespace XAML](custom-prefix.md)
+
+O `XmlnsPrefixAttribute` classe pode ser usada por autores de controle para especificar um prefixo recomendado a ser associado a um namespace XAML, para uso do XAML.
 
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Extensões de marcação XAML](markup-extensions/index.md)
 

@@ -6,13 +6,13 @@ ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
-ms.openlocfilehash: 6eb1e9a6f9c46fd7337003e05daa10d408fb5108
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 02/26/2019
+ms.openlocfilehash: 3bbea036efef44077ccbd28a16af06c97cd7026b
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208006"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557224"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adicionar dados à coleção de itens do seletor
 
@@ -20,12 +20,13 @@ ms.locfileid: "54208006"
 
 _O modo de exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor de dados, adicionando-o à coleção de itens e como responder a seleção de item pelo usuário._
 
-## <a name="populating-a-picker-with-data"></a>Populando um seletor de Data
+## <a name="populating-a-picker-with-data"></a>Populando um seletor de data
 
 Antes de xamarin. Forms 2.3.4, o processo de preenchimento de uma [ `Picker` ](xref:Xamarin.Forms.Picker) com dados era adicionar os dados a ser exibida para somente leitura [ `Items` ](xref:Xamarin.Forms.Picker.Items) coleção, que é do tipo `IList<string>`. Cada item na coleção deve ser do tipo `string`. Itens podem ser adicionados no XAML, inicializando o `Items` propriedade com uma lista de `x:String` itens:
 
 ```xaml
-<Picker Title="Select a monkey">
+<Picker Title="Select a monkey"
+        TitleColor="Red">
   <Picker.Items>
     <x:String>Baboon</x:String>
     <x:String>Capuchin Monkey</x:String>
@@ -41,7 +42,7 @@ Antes de xamarin. Forms 2.3.4, o processo de preenchimento de uma [ `Picker` ](x
 O código c# equivalente é mostrado abaixo:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.Items.Add("Baboon");
 picker.Items.Add("Capuchin Monkey");
 picker.Items.Add("Blue Monkey");
@@ -53,7 +54,7 @@ picker.Items.Add("Japanese Macaque");
 
 Além de adicionar dados usando o `Items.Add` método, dados também podem ser inseridos na coleção usando o `Items.Insert` método.
 
-## <a name="responding-to-item-selection"></a>Respondendo a seleção de Item
+## <a name="responding-to-item-selection"></a>Respondendo a seleção de item
 
 Um [ `Picker` ](xref:Xamarin.Forms.Picker) dá suporte à seleção de um item por vez. Quando um usuário seleciona um item, o [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento é acionado e o [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) propriedade é atualizada em um inteiro que representa o índice do item selecionado na lista. O `SelectedIndex` propriedade é um número com base em zero que indica o item selecionado pelo usuário. Se nenhum item for selecionado, que é o caso quando o `Picker` é criado e inicializado, primeiramente `SelectedIndex` será -1.
 
@@ -79,11 +80,6 @@ Esse método obtém o [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedInde
 
 > [!NOTE]
 > Um [ `Picker` ](xref:Xamarin.Forms.Picker) pode ser inicializado para exibir um item específico, configurando as [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) propriedade. No entanto, o `SelectedIndex` propriedade deve ser definida depois de inicializar o [ `Items` ](xref:Xamarin.Forms.Picker.Items) coleção.
-
-## <a name="summary"></a>Resumo
-
-O [ `Picker` ](xref:Xamarin.Forms.Picker) exibição é um controle para selecionar um item de texto em uma lista de dados. Este artigo explicou como preencher uma `Picker` com os dados, adicionando-o para o [ `Items` ](xref:Xamarin.Forms.Picker.Items) coleta e como responder a seleção de item pelo usuário. Isso foi o processo para usar um `Picker` antes do xamarin. Forms 2.3.4.
-
 
 ## <a name="related-links"></a>Links relacionados
 

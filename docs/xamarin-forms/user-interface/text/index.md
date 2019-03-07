@@ -1,19 +1,14 @@
 ---
 title: Texto no xamarin. Forms
-description: Xamarin. Forms tem três modos de exibição primários para trabalhar com texto, e este artigo explica como usá-los para inserir e exibir texto em aplicativos xamarin. Forms.
+description: 'Xamarin. Forms tem três modos de exibição primários para trabalhar com texto, e este artigo explica como usá-los para inserir e exibir texto em aplicativos xamarin. Forms.'
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 0563921a59bc698e2360a06b482c7f4994e56f6e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060006"
 ---
+
 # <a name="text-in-xamarinforms"></a>Texto no xamarin. Forms
 
 [![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
@@ -66,7 +61,7 @@ Consulte a [Editor](editor.md) artigo para obter mais informações.
 
 ## <a name="fontsfontsmd"></a>[Fontes](fonts.md)
 
-O `Label` controle dá suporte a configurações de fonte diferente usando as fontes internas em cada plataforma ou fontes personalizadas, incluídas com o seu aplicativo. Consulte a [fontes](fonts.md) do artigo para obter mais informações.
+Muitos controles oferecem suporte a configurações de fonte diferente usando as fontes internas em cada plataforma, ou fontes personalizadas, incluídas com o seu aplicativo. Consulte a [fontes](fonts.md) do artigo para obter mais informações.
 
 <a name="Styles" />
 

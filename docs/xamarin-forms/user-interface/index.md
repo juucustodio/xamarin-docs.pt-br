@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: c3759430ce40397418d2f47794e8ecc555ef3ed4
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292279"
 ---
+
 # <a name="xamarinforms-user-interface-views"></a>Exibições de Interface do usuário do xamarin. Forms
 
 [![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/FormsGallery/)
@@ -108,9 +103,9 @@ Temas do xamarin. Forms definem uma aparência visual específica para os contro
 
 O `TimePicker` permite que um usuário selecione uma hora. Ele é implementado usando o seletor de tempo com suporte na plataforma específica que o aplicativo é executado.
 
-## <a name="visualvisualmd"></a>[Visual](visual.md)
+## <a name="visualvisualindexmd"></a>[Visual](visual/index.md)
 
-Este artigo apresenta o Visual do xamarin. Forms, que renderiza modos de exibição de forma idêntica ou em grande parte de forma idêntica, no iOS e Android.
+Visual do xamarin. Forms permite que os renderizadores ser aplicadas seletivamente a `VisualElement` objetos, sem ter de controles do xamarin. Forms subclasse.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Visual State Manager](visual-state-manager.md)
 

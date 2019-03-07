@@ -6,7 +6,7 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2018
+ms.date: 02/22/2019
 ---
 
 # <a name="ios-platform-features"></a>Recursos da plataforma iOS
@@ -25,8 +25,11 @@ A seguinte funcionalidade específica da plataforma é fornecida para exibiçõe
 
 A seguinte funcionalidade específica da plataforma é fornecida para modos de exibição do xamarin. Forms no iOS:
 
+- Definindo o [ `Cell` ](xref:Xamarin.Forms.Cell) cor do plano de fundo. Para obter mais informações, consulte [cor de plano de fundo da célula no iOS](cell-background-color.md).
 - Garantir que inseridos texto se adapta a um [ `Entry` ](xref:Xamarin.Forms.Entry) ajustando o tamanho da fonte. Para obter mais informações, consulte [tamanho da fonte de entrada no iOS](entry-font-size.md).
 - Configurando a cor do cursor uma [ `Entry` ](xref:Xamarin.Forms.Entry). Para obter mais informações, consulte [entrada de cor do Cursor no iOS](entry-cursor-color.md).
+- Controlando se [ `ListView` ](xref:Xamarin.Forms.ListView) células de cabeçalho float durante a rolagem. Para obter mais informações, consulte [ListView estilo do cabeçalho de grupo no iOS](listview-group-header-style.md).
+- Controlar se as animações de linha estão desabilitadas quando o [ `ListView` ](xref:Xamarin.Forms.ListView) coleção de itens está sendo atualizada. Para obter mais informações, consulte [ListView linha animações no iOS](listview-row-animations.md).
 - Definindo o estilo do separador em um [ `ListView` ](xref:Xamarin.Forms.ListView). Para obter mais informações, consulte [ListView estilo do separador no iOS](listview-separator-style.md).
 - Controlando quando a seleção de item ocorre em um [ `Picker` ](xref:Xamarin.Forms.Picker). Para obter mais informações, consulte [seletor de seleção de Item no iOS](picker-selection.md).
 - Habilitando a [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propriedade a ser definido tocando em uma posição no [ `Slider` ](xref:Xamarin.Forms.Slider) barra, em vez de precisar arrastar o `Slider` thumb. Para obter mais informações, consulte [controle deslizante Thumb toque no iOS](slider-thumb.md).
