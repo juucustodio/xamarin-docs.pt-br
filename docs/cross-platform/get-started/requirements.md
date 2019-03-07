@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 87c3a189851db66e630095eae31434a590050154
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 4ea9690812675c48524393576e5509ab37e26981
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292266"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197141"
 ---
 # <a name="system-requirements"></a>Requisitos do sistema
 
@@ -72,13 +72,13 @@ A versão mais recente do Xamarin para macOS pode ser baixada em [xamarin.com/do
 
 Uma lista completa das nossas versões atuais do produto está disponível na [página de versões atuais](http://developer.xamarin.com/releases/current/). Esta página também descreve as versões de produto individuais (e links para as notas de versão) dos nossos canais alfa e beta.
 
-Instruções de [instalação](~/cross-platform/get-started/installation/index.md) específicas para cada plataforma estão disponíveis aqui:
+Instruções de [instalação](~/get-started/installation/index.md) específicas para cada plataforma estão disponíveis aqui:
 
 - [Xamarin.iOS](~/ios/get-started/installation/index.md)
 - [Xamarin.Android](~/android/get-started/installation/index.md)
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
-Também há informações adicionais sobre [Requisitos e plataformas com suporte no Xamarin.Forms](~/get-started/installation.md).
+Também há informações adicionais sobre [Requisitos e plataformas com suporte no Xamarin.Forms](~/get-started/requirements.md).
 
 ## <a name="related-links"></a>Links relacionados
 
