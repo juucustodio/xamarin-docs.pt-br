@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Tutorial de imagem do Xamarin.Forms
+metadata:
+  title: Tutorial de imagem do Xamarin.Forms
+  description: Saiba como exibir imagens em uma página usando o modo de exibição de imagem do Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 05/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 77ad9afcc82f27c78973c279af70ab735dd067f6
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198382"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Criar uma imagem
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Personalizar a aparência
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/customize-appearance.md)]
+- title: Exibir uma imagem local
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/local-file.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

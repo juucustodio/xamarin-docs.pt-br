@@ -1,0 +1,30 @@
+### YamlMime:Tutorial
+title: Tutorial de Pop-ups do Xamarin.Forms
+metadata:
+  title: Tutorial de Pop-ups do Xamarin.Forms
+  description: Saiba como exibir alertas e folhas de ação com o Xamarin.Forms, fazer perguntas simples de usuários e orientar os usuários por meio de tarefas.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 02/19/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 7943f6caf94328d265ba03f90821a0075d1b02fe
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198912"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Exibir um alerta
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/display-alert.md)]
+- title: Exibir uma folha de ações
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/display-action-sheet.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

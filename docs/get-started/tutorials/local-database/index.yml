@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Tutorial do Banco de Dados Local do Xamarin.Forms
+metadata:
+  title: Tutorial do Banco de Dados Local do Xamarin.Forms
+  description: Saiba como usar o pacote SQLite.NET NuGet para incorporar operações de banco de dados local em um aplicativo Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 12/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: b4cd264d11df081fb190044000e73cf012092667
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198562"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Adicionar SQLite.NET
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/add-sqlite.md)]
+- title: Criar classes de acesso a dados
+  durationInMinutes: 5
+  content: >
+    [!INCLUDE [](includes/create-data-access-classes.md)]
+- title: Consumir classes de acesso a dados
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/consume-data-access-classes.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

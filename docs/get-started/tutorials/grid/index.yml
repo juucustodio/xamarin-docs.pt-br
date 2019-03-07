@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Tutorial da Grade do Xamarin.Forms
+metadata:
+  title: Tutorial da Grade do Xamarin.Forms
+  description: Usando a Grade do Xamarin.Forms, saiba como organizar exibições em linhas e colunas que podem ter tamanhos proporcionais ou absolutos.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 08/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 492e26b8488b615d4d50ee63f4fa4a9fa1f4c01e
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57197832"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Criar uma grade
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Especificar colunas e linhas
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/columns-rows.md)]
+- title: Distribuir conteúdo entre colunas ou linhas
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/span-columns-rows.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'
