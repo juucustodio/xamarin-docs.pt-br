@@ -5,12 +5,12 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 3f8e9e2e8608467367af6523c8b89bd8f757d491
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c2caf1583e3099903cb0b05628ed6b2984a954d9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899051"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671410"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lanterna
 
@@ -24,7 +24,7 @@ Para acessar a funcionalidade **Flashlight**, a seguinte configuração específ
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-As permissões Flashlight e Camera são necessárias e devem ser configuradas no projeto do Android. Isso pode ser usado das seguintes maneiras:
+As permissões Flashlight e Camera são necessárias e devem ser configuradas no projeto do Android. Ela pode ser usado das seguintes maneiras:
 
 Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
@@ -44,7 +44,7 @@ Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o se
 
 Ou clique com o botão direito do mouse no projeto do Android e abra as propriedades do projeto. Em **Manifesto do Android**, localize a área **Permissões necessárias:** e marque as permissões **FLASHLIGHT** e **CAMERA**. Isso atualizará automaticamente o arquivo **AndroidManifest.xml**.
 
-Ao adicionar essas permissões, o [Google Play filtrará automaticamente os dispositivos](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sem um hardware específico. Você pode contornar isso adicionando o seguinte ao seu arquivo AssemblyInfo.cs em seu projeto do Android:
+Ao adicionar essas permissões, o [Google Play filtrará automaticamente os dispositivos](https://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sem um hardware específico. Você pode contornar isso adicionando o seguinte ao seu arquivo AssemblyInfo.cs em seu projeto do Android:
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
