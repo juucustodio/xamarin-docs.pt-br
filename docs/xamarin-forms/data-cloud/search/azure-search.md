@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: 81e6cbb39a522a471e739e7e9bbb8a0f451a38cd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 640d50a45b4b7f61113b609fa6a5e4a04566b360
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052874"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667524"
 ---
 # <a name="searching-data-with-azure-search"></a>Pesquisa de dados com o Azure Search
 
@@ -156,7 +156,7 @@ static void UploadDataToSearchIndex()
 }
 ```
 
-Dados a serem importados para o índice são empacotados como um `IndexBatch` objeto que encapsula uma coleção de `IndexAction` objetos. Cada `IndexAction` instância contém um documento e uma propriedade que informam ao Azure Search qual ação executar no documento. No exemplo de código acima, o `IndexAction.Upload` ação for especificada, o que resulta no documento que está sendo inserida no índice, se for novo, ou substituída se ele já existe. O `IndexBatch` objeto, em seguida, é enviado para o índice chamando o `Documents.Index` método o `SearchIndexClient` objeto. Para obter informações sobre outras ações de indexação, consulte [decidir qual ação de indexação para usar](/azure/search/search-import-data-dotnet#ii-decide-which-indexing-action-to-use).
+Dados a serem importados para o índice são empacotados como um `IndexBatch` objeto que encapsula uma coleção de `IndexAction` objetos. Cada `IndexAction` instância contém um documento e uma propriedade que informam ao Azure Search qual ação executar no documento. No exemplo de código acima, o `IndexAction.Upload` ação for especificada, o que resulta no documento que está sendo inserida no índice, se for novo, ou substituída se ele já existe. O `IndexBatch` objeto, em seguida, é enviado para o índice chamando o `Documents.Index` método o `SearchIndexClient` objeto. Para obter informações sobre outras ações de indexação, consulte [decidir qual ação de indexação para usar](/azure/search/search-import-data-dotnet#decide-which-indexing-action-to-use).
 
 > [!NOTE]
 > Apenas 1000 documentos podem ser incluídos em uma única solicitação de indexação.

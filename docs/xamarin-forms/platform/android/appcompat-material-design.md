@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: c2eed44a7c684b91ceed4493a83ff3b4e1578b5f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: cade72aaad60c30993f6b11e98704addd218ffae
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209311"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667484"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Adicionando AppCompat e Design de Material
 
@@ -80,7 +80,7 @@ Um estilo adicionais deve ser incluído na **v21 valores** pasta para aplicar as
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Atualizar androidmanifest. XML
+### <a name="4-update-androidmanifestxml"></a>4. Update AndroidManifest.xml
 
 Para garantir que esse novo tema informações são usado, definido tema na **AndroidManifest** arquivo adicionando `android:theme="@style/MyTheme"` (deixe o restante do XML como ele era).
 
@@ -114,7 +114,7 @@ Crie **Tabbar.axml** e **Toolbar.axml** arquivos no **recursos/layout** diretór
 ```
 
 Algumas propriedades para as guias foram definidas incluindo a gravidade da guia para `fill` e o modo para `fixed`.
-Se você tiver várias guias você talvez queira mudar isso para rolável - ler por meio do Android [TabLayout documentação](http://developer.android.com/reference/android/support/design/widget/TabLayout.html) para saber mais.
+Se você tiver várias guias você talvez queira mudar isso para rolável - ler por meio do Android [TabLayout documentação](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) para saber mais.
 
 **Resources/layout/Toolbar.axml**
 

@@ -1,17 +1,17 @@
 ---
-title: Criando recursos para variação de telas
+title: Criar recursos para variação de telas
 ms.prod: xamarin
 ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: df8ee3da8a1341cd1dd879e8e70687d9fbd9957b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63cbe556783ffe22512ff5312817d522120bd15e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117428"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670565"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Criando recursos para variação de telas
 
@@ -50,7 +50,7 @@ No entanto, é possível que dimensionamento fará com que bitmaps sejam exibido
 
 ### <a name="declare-the-supported-screen-size"></a>Declare o tamanho da tela com suporte
 
-Declarar o tamanho da tela, você garante que somente dispositivos com suporte podem baixar o aplicativo. Isso é feito definindo a [dá suporte a telas](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) elemento o **androidmanifest. XML** arquivo. Esse elemento é usado para especificar quais tamanhos de tela são compatíveis com o aplicativo. Uma determinada tela é considerada como tendo suporte se o aplicativo pode posicionar corretamente os seus layouts para preencher a tela. Usando este elemento de manifesto, o aplicativo não aparecerá na [ *Google Play* ](https://play.google.com/) para dispositivos que não atendem as especificações de tela. No entanto, o aplicativo ainda será executado em dispositivos com telas sem suporte, mas os layouts podem aparecer desfocados e pixelada.
+Declarar o tamanho da tela, você garante que somente dispositivos com suporte podem baixar o aplicativo. Isso é feito definindo a [dá suporte a telas](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) elemento o **androidmanifest. XML** arquivo. Esse elemento é usado para especificar quais tamanhos de tela são compatíveis com o aplicativo. Uma determinada tela é considerada como tendo suporte se o aplicativo pode posicionar corretamente os seus layouts para preencher a tela. Usando este elemento de manifesto, o aplicativo não aparecerá na [ *Google Play* ](https://play.google.com/) para dispositivos que não atendem as especificações de tela. No entanto, o aplicativo ainda será executado em dispositivos com telas sem suporte, mas os layouts podem aparecer desfocados e pixelada.
 
 Tela suportadas sixes são declarados na **Properites/AndroidManifest.xml** arquivo da solução:
 
@@ -64,7 +64,7 @@ Tela suportadas sixes são declarados na **Properites/AndroidManifest.xml** arqu
 
 -----
 
-Edite **androidmanifest. XML** incluir [dá suporte a telas](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+Edite **androidmanifest. XML** incluir [dá suporte a telas](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -178,7 +178,7 @@ Este site ajudará com a criação de bitmaps que se destinam as quatro densidad
 
 Android é executado em um número desconcertante dos dispositivos e a combinação de tamanhos de tela e densidades de tela pode parecer assustadora. As dicas a seguir podem ajudar a minimizar o esforço necessário para dar suporte a vários dispositivos:
 
-- **Apenas projetar e desenvolver para o que você precisa** &ndash; há muitos dispositivos diferentes por aí, mas alguns existem em fatores forma raro que podem levar um esforço significativo para projetar e desenvolver para o. O [ **tamanho da tela e densidade** ](http://developer.android.com/resources/dashboard/screens.html) painel é uma página fornecida pelo Google que fornecem dados sobre a divisão da matriz de densidade de tamanhos de tela da tela. Essa divisão fornece informações sobre como o esforço de desenvolvimento em dar suporte a telas.
+- **Apenas projetar e desenvolver para o que você precisa** &ndash; há muitos dispositivos diferentes por aí, mas alguns existem em fatores forma raro que podem levar um esforço significativo para projetar e desenvolver para o. O [ **tamanho da tela e densidade** ](https://developer.android.com/resources/dashboard/screens.html) painel é uma página fornecida pelo Google que fornecem dados sobre a divisão da matriz de densidade de tamanhos de tela da tela. Essa divisão fornece informações sobre como o esforço de desenvolvimento em dar suporte a telas.
 
 - **Usar o DPs em vez de Pixels** -Pixels se tornar problemáticos como alterações de densidade da tela. Não codificar os valores de pixel. Evite pixels em favor de dp (pixels independentes de densidade).
 

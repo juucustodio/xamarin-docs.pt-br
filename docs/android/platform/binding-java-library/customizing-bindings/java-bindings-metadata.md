@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 858f1e5c0bd2af85b419bb9a1cffb7d484f3f7e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113398"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669889"
 ---
 # <a name="java-bindings-metadata"></a>Metadados de associações de Java
 
@@ -77,7 +77,7 @@ Permite passar para discutir **Metadata** em mais detalhes.
 ## <a name="metadataxml-transform-file"></a>Arquivo de transformação de Metadata. XML
 
 Conforme já aprendemos, o arquivo **Metadata** é usada pelo gerador de associações para influenciar a criação do assembly de associação.
-Usa o formato de metadados [XPath](https://www.w3.org/TR/xpath/) sintaxe e é quase idêntico de *GAPI metadados* descrito na [GAPI metadados](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) guia. Essa implementação é quase uma implementação completa do XPath 1.0 e, portanto, dá suporte a itens no 1.0 padrão. Esse arquivo é um mecanismo XPath com base em Avançado para alterar, adicionar, ocultar ou mover qualquer elemento ou atributo no arquivo de API. Todos os elementos de regra nas especificações de metadados incluem um atributo de caminho para identificar o nó ao qual a regra deve ser aplicada. As regras são aplicadas na seguinte ordem:
+Usa o formato de metadados [XPath](https://www.w3.org/TR/xpath/) sintaxe e é quase idêntico de *GAPI metadados* descrito na [GAPI metadados](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) guia. Essa implementação é quase uma implementação completa do XPath 1.0 e, portanto, dá suporte a itens no 1.0 padrão. Esse arquivo é um mecanismo XPath com base em Avançado para alterar, adicionar, ocultar ou mover qualquer elemento ou atributo no arquivo de API. Todos os elementos de regra nas especificações de metadados incluem um atributo de caminho para identificar o nó ao qual a regra deve ser aplicada. As regras são aplicadas na seguinte ordem:
 
 * **Adicionar nó** &ndash; acrescenta um nó filho para o nó especificado pelo atributo de caminho.
 * **attr** &ndash; define o valor de um atributo do elemento especificado pelo atributo de caminho.
@@ -223,7 +223,7 @@ O exemplo a seguir ilustra uma expressão XPath para renomear o método `java.la
 
 `managedType` é usado para alterar o tipo de retorno de um método. Em algumas situações o gerador de associações incorretamente irá inferir o tipo de retorno de um método de Java, o que resultará em um erro de tempo de compilação. Uma possível solução nessa situação é alterar o tipo de retorno do método.
 
-Por exemplo, o gerador de associações acredita que o método Java `de.neom.neoreadersdk.resolution.compareTo()` deve retornar um `int`, que resulta na mensagem de erro **CS0535 de erro: ' Alemanha. Neom.Neoreadersdk.Resolution' não implementa membro de interface 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. O trecho a seguir demonstra como alterar o tipo de retorno de gerado C# método de um `int` para um `Java.Lang.Object`: 
+Por exemplo, o gerador de associações acredita que o método Java `de.neom.neoreadersdk.resolution.compareTo()` deve retornar um `int`, que resulta na mensagem de erro **CS0535 do erro: ' ALEMANHA. Neom.Neoreadersdk.Resolution' não implementa membro de interface 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. O trecho a seguir demonstra como alterar o tipo de retorno de gerado C# método de um `int` para um `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -255,7 +255,7 @@ Este trecho de código é um exemplo de como gerar um "não ofuscado" C# tipo:
     name="obfuscated">false</attr>
 ```
 
-### <a name="propertyname"></a>PropertyName
+### <a name="propertyname"></a>propertyName
 
 Esse atributo pode ser usado para alterar o nome de uma propriedade gerenciada.
 
@@ -347,4 +347,4 @@ Esse artigo discutiu como o xamarin. Android usa metadados para transformar uma 
 
 - [Trabalhar com JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Associação de uma biblioteca Java](~/android/platform/binding-java-library/index.md)
-- [Metadados GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Metadados GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

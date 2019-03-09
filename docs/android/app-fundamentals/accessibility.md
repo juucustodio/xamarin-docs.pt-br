@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 3cce3270b9df2aad0037b1ab96f169cc4b564766
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: d004b753c89f3995e8dc511877bd115a894396fc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528124"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671618"
 ---
 # <a name="accessibility-on-android"></a>Acessibilidade no Android
 
@@ -172,14 +172,14 @@ No XML de layout, como atributos de acessibilidade `hint` e `contentDescription`
 O benefício de armazenar texto em um arquivo separado é que várias traduções de idioma do arquivo podem ser fornecidas em seu aplicativo. Consulte a [guia de localização Android](~/android/app-fundamentals/localization.md) para saber como adicionar arquivos de cadeia de caracteres localizada para um projeto de aplicativo.
 
 
-## <a name="testing-accessibility"></a>Teste de acessibilidade
+## <a name="testing-accessibility"></a>Testando a acessibilidade
 
-Siga [essas etapas](http://developer.android.com/training/accessibility/testing.html#how-to) para habilitar o TalkBack e explorar por toque testar a acessibilidade em dispositivos Android.
+Siga [essas etapas](https://developer.android.com/training/accessibility/testing.html#how-to) para habilitar o TalkBack e explorar por toque testar a acessibilidade em dispositivos Android.
 
 Talvez você precise instalar [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) no Google Play, se ele não aparecer na **Configurações > acessibilidade**.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Acessibilidade de plataforma cruzada](~/cross-platform/app-fundamentals/accessibility.md)
-- [APIs de acessibilidade do Android](http://developer.android.com/guide/topics/ui/accessibility/index.html)
+- [Acessibilidade multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
+- [APIs de acessibilidade do Android](https://developer.android.com/guide/topics/ui/accessibility/index.html)

@@ -1,20 +1,15 @@
 ---
-title: Autenticação por impressão digital
-description: Este guia aborda como adicionar autenticação por impressão digital, introduzida no Android 6.0, para um aplicativo xamarin. Android.
+title: Autenticação de impressão digital
+description: 'Este guia aborda como adicionar autenticação por impressão digital, introduzida no Android 6.0, para um aplicativo xamarin. Android.'
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: cdb18cd916ddd5daab7db9839bb15ebb098d0c09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123304"
 ---
-# <a name="fingerprint-authentication"></a>Autenticação por impressão digital
+
+# <a name="fingerprint-authentication"></a>Autenticação de impressão digital
 
 _Este guia aborda como adicionar autenticação por impressão digital, introduzida no Android 6.0, para um aplicativo xamarin. Android._
 
@@ -25,7 +20,7 @@ A chegada de scanners de impressões digitais em dispositivos Android fornece ap
 
 As APIs FingerprintManager dispositivos de destino com um scanner de impressão digital e estiver executando a API nível 23 (Android 6.0) ou superior. As APIs são encontradas no `Android.Hardware.Fingerprints` namespace. A biblioteca de suporte ao Android v4 fornece versões das APIs destinadas a versões mais antigas do Android impressões digitais. A compatibilidade APIs são encontradas na `Android.Support.v4.Hardware.Fingerprint` namespace, são distribuídos por meio de [pacote do NuGet Xamarin.Android.Support.v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
 
-O [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e sua contraparte de biblioteca de suporte, [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) é a classe principal para usar a impressão digital da verificação de hardware. Essa classe é um wrapper de SDK do Android em torno do serviço de nível de sistema que gerencia as interações com o próprio hardware. Ele é responsável por iniciar o scanner de impressão digital e responder aos comentários do scanner. Essa classe tem uma interface bem simples com apenas três membros:
+O [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e sua contraparte de biblioteca de suporte, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) é a classe principal para usar a impressão digital da verificação de hardware. Essa classe é um wrapper de SDK do Android em torno do serviço de nível de sistema que gerencia as interações com o próprio hardware. Ele é responsável por iniciar o scanner de impressão digital e responder aos comentários do scanner. Essa classe tem uma interface bem simples com apenas três membros:
 
 * **`Authenticate`** &ndash; Esse método irá inicializar o scanner de hardware e iniciar o serviço em segundo plano, aguardando o usuário digitalizar sua impressão digital.
 * **`EnrolledFingerprints`** &ndash; Essa propriedade retornará `true` se o usuário tiver registrado impressões digitais de uma ou mais com o dispositivo.
@@ -61,8 +56,8 @@ Uma impressão digital já deve ser registrada com o dispositivo para cada usuá
 
 - [Aplicativo de exemplo do guia de impressão digital](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
 - [Exemplo de caixa de diálogo de impressão digital](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
-- [Solicitando permissões em tempo de execução](http://developer.android.com/training/permissions/requesting.html)
-- [android.hardware.fingerprint](http://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
-- [android.support.v4.hardware.fingerprint](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
+- [Solicitando permissões em tempo de execução](https://developer.android.com/training/permissions/requesting.html)
+- [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
+- [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
 - [Android.Content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [API de impressão digital e pagamentos (vídeo)](https://youtu.be/VOn7VrTRlA4)

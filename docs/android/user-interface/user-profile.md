@@ -1,19 +1,19 @@
 ---
-title: Perfil de usuário
+title: Perfil do usuário
 ms.prod: xamarin
 ms.assetid: 6BB01F75-5E98-49A1-BBA0-C2680905C59D
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2018
-ms.openlocfilehash: 2d9dc54801c4df084007a2903becf0c68bf1c6df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0613411e5436a0ea8ed08bf4af52dae84a9a701c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109959"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670877"
 ---
-# <a name="user-profile"></a>Perfil de usuário
+# <a name="user-profile"></a>Perfil do usuário
 
 Tem suporte para o Android enumeração contatos com a [ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/) provedor desde a API de nível 5. Por exemplo, a listagem de contatos é tão simple quanto usar o [ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/) classe conforme mostrado no exemplo de código a seguir:
 
@@ -110,6 +110,6 @@ Trabalhar com o perfil do usuário é semelhante a interagir com outros dados no
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ContactsProviderDemo (amostra)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
+- [ContactsProviderDemo (sample)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
 - [Apresentando o Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
+- [Plataforma 4.0 Android](https://developer.android.com/sdk/android-4.0.html)

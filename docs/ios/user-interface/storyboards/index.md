@@ -1,19 +1,14 @@
 ---
 title: Introdução ao Storyboards no xamarin. IOS
-description: Este documento fornece uma introdução aos storyboards no xamarin. IOS. Ele descreve como um storyboard é usado para definir uma interface de usuário, segues e como usar o Designer do iOS para editar arquivos de storyboard.
+description: 'Este documento fornece uma introdução aos storyboards no xamarin. IOS. Ele descreve como um storyboard é usado para definir uma interface de usuário, segues e como usar o Designer do iOS para editar arquivos de storyboard.'
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233552"
 ---
+
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução ao Storyboards no xamarin. IOS
 
 Neste guia, explicaremos o que um Storyboard é e examinar alguns dos principais componentes – como transições. Vamos examinar como os Storyboards podem ser criados e usados, e quais são as vantagens que eles têm para um desenvolvedor.
@@ -492,5 +487,5 @@ Este artigo apresenta o conceito de como eles podem ser úteis no desenvolviment
 
 - [Storyboard manual (amostra)](https://developer.xamarin.com/samples/ManualStoryboard/)
 - [Introdução ao Designer do iOS](~/ios/user-interface/designer/introduction.md)
-- [Convertendo em Storyboards](http://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
+- [Convertendo em Storyboards](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [Referência de classe UIStoryboard](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

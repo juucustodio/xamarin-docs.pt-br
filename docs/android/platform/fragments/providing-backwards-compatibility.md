@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: 18dac665eec1c5d3ac64065c37e73022670c1ba5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48ef40ce8560fd9fbb842dde70622d968591ab98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108834"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666899"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Com versões anteriores fornece compatibilidade com o pacote de suporte do Android
 
-A utilidade dos fragmentos seria limitado sem compatibilidade com Android anterior dispositivos (API nível 11) 3.0 com versões anteriores. Para fornecer essa capacidade, o Google apresentou o [biblioteca de suporte](http://developer.android.com/sdk/compatibility-library.html) (originalmente chamado de *Android Compatibility Library* quando ele foi lançado) quais backports algumas das APIs de versões mais recentes do Android versões mais antigas do Android. É o pacote de suporte de Android que permite que os dispositivos que executam o Android 1.6 (API nível 4) para Android 2.3.3. (API nível 10).
+A utilidade dos fragmentos seria limitado sem compatibilidade com Android anterior dispositivos (API nível 11) 3.0 com versões anteriores. Para fornecer essa capacidade, o Google apresentou o [biblioteca de suporte](https://developer.android.com/sdk/compatibility-library.html) (originalmente chamado de *Android Compatibility Library* quando ele foi lançado) quais backports algumas das APIs de versões mais recentes do Android versões mais antigas do Android. É o pacote de suporte de Android que permite que os dispositivos que executam o Android 1.6 (API nível 4) para Android 2.3.3. (API nível 10).
 
 > [!NOTE]
 > Somente o `ListFragment` e o `DialogFragment` estão disponíveis por meio do pacote de suporte do Android. Nenhuma das outras fragmento subclasses, tais como o `PreferenceFragment,` têm suporte no pacote de suporte do Android. Elas não funcionarão em aplicativos do Android previamente 3.0. 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9e7dabf87314d87ab5ab335c220c0e292e56073b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: df3d1bba57c1caf23c615410a184bc5458fc848b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110878"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671345"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Serviços iniciados com o xamarin. Android
 
@@ -91,4 +91,4 @@ Os chamadores vários podem solicitar que um serviço ser iniciado. Se houver um
 - [Android.Content.Intent](https://developer.xamarin.com/api/type/Android.Content.Intent)
 - [Android.OS.Handler](https://developer.xamarin.com/api/type/Android.OS.Handler/)
 - [Android.Widget.Toast](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
-- [Ícones da barra de status](http://developer.android.com/guide/practices/ui_guidelines/icon_design_status_bar.html)
+- [Ícones da barra de status](https://developer.android.com/guide/practices/ui_guidelines/icon_design_status_bar.html)

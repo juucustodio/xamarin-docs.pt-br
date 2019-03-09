@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: ccf5d97ff553fd304c4a3af158085d490bb665b7
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: b2f11bd09e1b1b3fd7af29a026229494a081ad11
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267593"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668550"
 ---
 # <a name="troubleshooting-tips"></a>Dicas de solução de problemas
 
@@ -77,7 +77,7 @@ O Visual Studio para Mac sempre grava logs de implantação do dispositivo. Loca
 ## <a name="android-debug-log-output"></a>Saída de Log de depuração do Android
 
 Android irá escrever muitas mensagens para o [Log de depuração do Android](~/android/deploy-test/debugging/android-debug-log.md).
-Xamarin. Android usa propriedades do sistema Android para controlar a geração de mensagens adicionais para o Log de depuração do Android. Propriedades do sistema Android podem ser definidas por meio de *setprop* comando o [Android Debug Bridge (adb)](http://developer.android.com/guide/developing/tools/adb.html):
+Xamarin. Android usa propriedades do sistema Android para controlar a geração de mensagens adicionais para o Log de depuração do Android. Propriedades do sistema Android podem ser definidas por meio de *setprop* comando o [Android Debug Bridge (adb)](https://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE
@@ -91,9 +91,9 @@ Propriedades do sistema são lidos durante a inicialização do processo e, port
 
 Xamarin. Android suporta as seguintes propriedades de sistema:
 
--   *Debug.mono.Debug*: Se uma cadeia de caracteres não vazia, isso é equivalente a `*mono-debug*`.
+-   *debug.mono.debug*: Se uma cadeia de caracteres não vazia, isso é equivalente a `*mono-debug*`.
 
--   *Debug.mono.env*: Um separados por pipe ('*|*') lista de variáveis de ambiente para exportar durante a inicialização do aplicativo *antes de* mono foi inicializado. Isso permite definir variáveis de ambiente controle mono registro em log.
+-   *debug.mono.env*: Um separados por pipe ('*|*') lista de variáveis de ambiente para exportar durante a inicialização do aplicativo *antes de* mono foi inicializado. Isso permite definir variáveis de ambiente controle mono registro em log.
 
     - *Observação*: Como o valor é '*|*'-separados, o valor deve ter um nível extra de delimitação, como o \` *shell do adb* \` comando removerá um conjunto de aspas.
 
@@ -103,16 +103,16 @@ Xamarin. Android suporta as seguintes propriedades de sistema:
 
             adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
--   *Debug.mono.log*: Um separados por vírgula ('*,*') lista de componentes que deve imprimir mensagens adicionais para o Log de depuração do Android. Por padrão, nada é definido. Os componentes incluem:
+-   *debug.mono.log*: Um separados por vírgula ('*,*') lista de componentes que deve imprimir mensagens adicionais para o Log de depuração do Android. Por padrão, nada é definido. Os componentes incluem:
 
-    -   *todos os*: Todas as mensagens de impressão
-    -   *GC*: Imprima mensagens relacionadas a GC.
+    -   *all*: Todas as mensagens de impressão
+    -   *gc*: Imprima mensagens relacionadas a GC.
     -   *gref*: Imprima mensagens de alocação e desalocação de referência (fraca, global).
     -   *lref*: Imprima mensagens de alocação e desalocação de referência local.
 
     *Observação*: essas são *extremamente* detalhado. Não habilite a menos que você realmente precisa.
 
--   *Debug.mono.Trace*: Permite configurar o [mono – rastreamento](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` configuração.
+-   *debug.mono.trace*: Permite configurar o [mono – rastreamento](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` configuração.
 
 
 

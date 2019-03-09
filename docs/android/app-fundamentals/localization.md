@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 634131025b322b64e89ece3b4c9d092e6b17a373
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 1f3e6dcc81c75d12a1dbba8fefc62a85178c8c24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579811"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670656"
 ---
 # <a name="android-localization"></a>Localização do Android
 
@@ -32,7 +32,7 @@ A localidade atual pode ser consultada por meio do contexto atual `Resources`:
 var lang = Resources.Configuration.Locale; // eg. "es_ES"
 ```
 
-Esse valor será um identificador de localidade que contém um código de idioma e um código de localidade, separados por um caractere de sublinhado. Para referência, aqui está uma [lista de localidades de Java](http://www.oracle.com/technetwork/java/javase/locales-137662.html) e [localidades com suporte do Android por meio do StackOverflow](http://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
+Esse valor será um identificador de localidade que contém um código de idioma e um código de localidade, separados por um caractere de sublinhado. Para referência, aqui está uma [lista de localidades de Java](https://www.oracle.com/technetwork/java/javase/locales-137662.html) e [localidades com suporte do Android por meio do StackOverflow](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
 
 Exemplos comuns incluem:
 
@@ -190,7 +190,7 @@ Válido `quantity` opções são:
 * muitos
 * outras
 
-São descritos mais detalhadamente os [docs Android](http://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Se um determinado idioma não exigir tratamento 'especial', aqueles `quantity` cadeias de caracteres serão ignoradas (por exemplo, inglês usa apenas `one` e `other`; especificando uma `zero` cadeia de caracteres não terá efeito, ele não será usado).
+São descritos mais detalhadamente os [docs Android](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Se um determinado idioma não exigir tratamento 'especial', aqueles `quantity` cadeias de caracteres serão ignoradas (por exemplo, inglês usa apenas `one` e `other`; especificando uma `zero` cadeia de caracteres não terá efeito, ele não será usado).
 
 ### <a name="images"></a>Imagens
 
@@ -209,7 +209,7 @@ Você também pode fornecer outros tipos de alternativa, os recursos específico
 
 Introduziu o suporte para Android 4.2 [direita para idiomas de à esquerda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se você definir a configuração de aplicativo `android:supportsRtl="true"`. O qualificador de recurso `"ldrtl"` podem ser incluídos em um nome de diretório para conter os layouts personalizados que são projetados para a exibição RTL.
 
-Para obter mais informações sobre nomenclatura de diretório de recursos e fallback, consulte documentos do Android para [fornecer recursos alternativos](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
+Para obter mais informações sobre nomenclatura de diretório de recursos e fallback, consulte documentos do Android para [fornecer recursos alternativos](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 
 ### <a name="app-name"></a>Nome do aplicativo
@@ -252,7 +252,7 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>Teste de dispositivos
 
 Para testar em um dispositivo, altere o idioma na **configurações** aplicativo.
-**Dica:** faça uma observação dos ícones e o local dos itens de menu para que você possa reverter a linguagem para a configuração original.
+**Dica:** Faça uma observação dos ícones e o local dos itens de menu para que você possa reverter a linguagem para a configuração original.
 
 
 ## <a name="summary"></a>Resumo
@@ -264,7 +264,7 @@ Este artigo aborda os conceitos básicos de localização de aplicativos Android
 ## <a name="related-links"></a>Links relacionados
 
 - [Tasky (localizado no código) (amostra)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
-- [Localização de recursos do Android](http://developer.android.com/guide/topics/resources/localization.html)
+- [Localização de recursos do Android](https://developer.android.com/guide/topics/resources/localization.html)
 - [Visão geral de localização de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md)
 - [Localização do xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
-- [Localização do iOS](~/ios/app-fundamentals/localization/index.md)
+- [Localização no iOS](~/ios/app-fundamentals/localization/index.md)

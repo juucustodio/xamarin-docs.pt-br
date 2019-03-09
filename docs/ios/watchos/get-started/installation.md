@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: fc3a30473b4a38b21f89c5be201c8191658aae63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050316"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668537"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalar e usar o watchOS no Xamarin
 
@@ -232,5 +232,5 @@ Os arquivos de modelo do watchOS (como `InterfaceController`, `ExtensionDelegate
 ## <a name="related-links"></a>Links relacionados
 
 - [WatchKitCatalog (amostra)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Primeiro vídeo de aplicativo de inspeção](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [Primeiro vídeo de aplicativo de inspeção](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Dicas de WatchKit da Apple](https://developer.apple.com/watchkit/tips/)

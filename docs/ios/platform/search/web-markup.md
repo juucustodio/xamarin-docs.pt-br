@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 243408ce6e2236b75ea35dfd17633a9a24493c1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ee07e4b47ed9e1bdca0efc814ad44e513f68e80
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102789"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672359"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Pesquisa com a marcação da Web no xamarin. IOS
 
@@ -209,7 +209,7 @@ Por fim, o HTML a seguir seria adicionar uma ação para obter direções do res
 
 ```
 
-Para obter mais informações, consulte da Apple [Site do desenvolvedor do aplicativo de pesquisa](http://developer.apple.com/ios/search/).
+Para obter mais informações, consulte da Apple [Site do desenvolvedor do aplicativo de pesquisa](https://developer.apple.com/ios/search/).
 
 
 

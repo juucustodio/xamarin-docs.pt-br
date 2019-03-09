@@ -6,12 +6,12 @@ ms.assetid: 5C241AB4-F97E-4B61-B93C-F5D307BCD517
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 60386b3629e8ed9d2fd1ff165cd2c04d9571b51a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ac84d5b28b0f211dccb1697a4b3dbbc9cedf81e9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106228"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670140"
 ---
 # <a name="2d-math-with-cocossharp"></a>Matemática 2D com CocosSharp
 
@@ -24,7 +24,7 @@ Para posicionar e mover objetos com o código é uma parte importante do desenvo
  - Girando objetos CocosSharp
  - Usando a rotação com velocidade
 
-Os desenvolvedores que não têm um plano de fundo de matemática forte, ou quem tiver esquecidas esses tópicos do estudante, não precisa se preocupar – este documento travará conceitos em partes com bites de tamanho e acompanhará explicações teóricas com exemplos práticos. Em resumo, este artigo irá responder à pergunta de aluno de matemática antigo: "Quando eu na verdade, precisará usar tudo isso?"
+Os desenvolvedores que não têm um plano de fundo de matemática forte, ou quem tiver esquecidas esses tópicos do estudante, não precisa se preocupar – este documento travará conceitos em partes com bites de tamanho e acompanhará explicações teóricas com exemplos práticos. Em resumo, este artigo irá responder à pergunta de aluno de matemática antigos: "Quando eu na verdade, precisará usar tudo isso?"
 
 
 ## <a name="requirements"></a>Requisitos
@@ -266,7 +266,7 @@ Esse código resulta no seguinte comportamento:
 
 Observe que o código acima passa o parâmetro Y em primeiro lugar, em seguida, o parâmetro de X, ao chamar o `Atan2` método. Isso é com versões anteriores do X, Y ordenação das coordenadas de posição normal. Para obter mais informações [consulte os documentos Atan2](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx).
 
-Também vale a pena observar que o valor retornado de `Atan2` é em radianos, que é usada para medir os ângulos de outra unidade. Este guia não abordará os detalhes de radianos, mas lembre-se de que todas as funções trigonométricas o `System.Math` namespace utilizarem radianos, portanto, quaisquer valores devem ser convertidos em graus, antes de serem usados em objetos de CocosSharp. Encontre mais informações sobre radianos [na página do Wikipedia em radianos](http://en.wikipedia.org/wiki/Radian).
+Também vale a pena observar que o valor retornado de `Atan2` é em radianos, que é usada para medir os ângulos de outra unidade. Este guia não abordará os detalhes de radianos, mas lembre-se de que todas as funções trigonométricas o `System.Math` namespace utilizarem radianos, portanto, quaisquer valores devem ser convertidos em graus, antes de serem usados em objetos de CocosSharp. Encontre mais informações sobre radianos [na página do Wikipedia em radianos](https://en.wikipedia.org/wiki/Radian).
 
 #### <a name="forward-angle"></a>Ângulo de encaminhamento
 

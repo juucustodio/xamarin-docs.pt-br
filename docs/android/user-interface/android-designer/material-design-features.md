@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: eb636c3b7a41adbab9162e192ead65def377a1a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118975"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669616"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Recursos de Design de Material de Designer do xamarin. Android
 
@@ -20,7 +20,7 @@ _Este tópico descreve os recursos de Designer que tornam mais fácil para os de
 
 > [!Video https://youtube.com/embed/E3_ZjIOzVzY]
 
-**Evoluir 2016: Todos podem criar belos aplicativos com o Design de Material**
+**Evolve 2016: Todos podem criar belos aplicativos com o Design de Material**
 
 ## <a name="overview"></a>Visão geral
 
@@ -90,7 +90,7 @@ Como visto no exemplo a seguir, o **herdar** guia lista a herança de estilo par
 [![Herdar de guia](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
 Neste exemplo, o **tema padrão** herda de um estilo que usa `@color/background_material_light` , mas substitui-lo com `color/material_grey_50`, que tem um valor de código de cor de `#fffafafa`.
-Para obter mais informações sobre herança de estilo, consulte [estilos e temas](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+Para obter mais informações sobre herança de estilo, consulte [estilos e temas](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Seletor de Cor
 
@@ -214,7 +214,7 @@ Quando você clicar nesse ícone, um pop-over de caixa de diálogo é aberta que
 A parte superior da paleta de cores exibe cores primárias de Design de Material, enquanto a parte inferior da Paleta exibe um intervalo de matizes para a cor primária selecionada. Por exemplo, quando você seleciona **Indigo**, uma coleção de **Indigo** matizes é exibido na parte inferior da caixa de diálogo.
 Quando você seleciona um matiz, a cor da propriedade é alterada para o matiz selecionado. No exemplo a seguir, o `Background Tint` do botão é alterado para *500 Indigo*:
 
-[![Escolha Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
+[![Choose Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` é definido como o código de cor para *500 Indigo* (`#ff3f51b5`), e o Designer atualiza a cor do plano de fundo do botão para refletir essa alteração:
 
@@ -271,7 +271,7 @@ Como visto no exemplo a seguir, o **herdar** guia lista a herança de estilo par
 [![Herdar de guia](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 Neste exemplo, o **tema padrão** herda de um estilo que usa `@color/background_material_dark` , mas substitui-lo com `color/material_grey_850`, que tem um valor de código de cor de `#ff303030`.
-Para obter mais informações sobre herança de estilo, consulte [estilos e temas](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+Para obter mais informações sobre herança de estilo, consulte [estilos e temas](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Seletor de Cor
 

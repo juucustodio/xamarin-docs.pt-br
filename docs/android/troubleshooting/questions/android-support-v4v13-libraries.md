@@ -1,5 +1,5 @@
 ---
-title: Suporte a mais inteligente do Xamarin Android v4 / pacotes do NuGet v13
+title: Pacotes NuGet para suporte mais inteligente do Xamarin Android v4/v13
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C
@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 43627884c2f8bc4d9e5b5faa2c3af08f74487b65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a990d933c258812b2b3d3374fb6435af06f729ea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114633"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671787"
 ---
-# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>Suporte a mais inteligente do Xamarin Android v4 / pacotes do NuGet v13
+# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>Pacotes NuGet para suporte mais inteligente do Xamarin Android v4/v13
 
 ## <a name="about-the-android-support-libraries"></a>Sobre as bibliotecas de suporte do Android
 
-Google criou a bibliotecas de suporte para tornar os novos recursos disponíveis para versões mais antigas do Android. Em geral, bibliotecas de suporte recebem um número de versão em seu nome, o que é o menor nível da API Android eles são compatíveis com (por exemplo: v4 suporte só pode ser usado no API nível 4 e superior. Obter mais informações desta [discussão de Stack Overflow](http://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
+Google criou a bibliotecas de suporte para tornar os novos recursos disponíveis para versões mais antigas do Android. Em geral, bibliotecas de suporte recebem um número de versão em seu nome, o que é o menor nível da API Android eles são compatíveis com (por exemplo: Suporte-v4 só pode ser usado na API de nível 4 e superior. Obter mais informações desta [discussão de Stack Overflow](https://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
 
 Duas das bibliotecas de suporte: `Support-v4` e `Support-v13` não podem ser usados juntos no mesmo aplicativo, ou seja, eles são mutuamente exclusivos. Isso ocorre porque `Support-v13` , na verdade, contém todos os tipos e a implementação de `Support-v4`. Se você tentar fazer referência a ambos no mesmo projeto, você encontrará erros de tipo duplicado.
 

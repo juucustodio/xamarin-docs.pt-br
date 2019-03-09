@@ -6,12 +6,12 @@ ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: badd23ebb78e61e7d7650ff6d0973226359fd9d5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c1c03e0ec17ade57536b4ed121469e3ae2274e75
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117091"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668966"
 ---
 # <a name="monogame-gamepad-reference"></a>Referência de GamePad MonoGame
 
@@ -42,9 +42,9 @@ characterInstance.XVelocity = gamePadState.ThumbSticks.Left.X * characterInstanc
 characterInstance.YVelocity = gamePadState.ThumbSticks.Left.Y * characterInstance.MaxSpeed;
 ```
 
-### <a name="example-detecting-pushes"></a>Exemplo: Detectando envios por push
+### <a name="example-detecting-pushes"></a>Exemplo: Detecção de envios por push
 
-`GamePadState` Fornece informações sobre o estado atual do controlador, como se um determinado botão é pressionado. Determinadas ações, como fazer com que um caractere de pular, exigem a verificação se o botão foi pressionado (não era para baixo do último quadro, mas está desativado neste quadro) ou liberado (era para baixo do último quadro, mas não para baixo deste quadro). 
+`GamePadState` Fornece informações sobre o estado atual do controlador, como se um determinado botão é pressionado. Determinadas ações, como fazer com que um caractere de pular, exigem a verificação se o botão foi pressionado (não era para baixo do último quadro, mas está desativado neste quadro) ou liberado (era para baixo do último quadro, mas não para baixo deste quadro).
 
 Para executar esse tipo de lógica, variáveis locais que armazenam o quadro anterior `GamePadState` e o quadro atual `GamePadState` deve ser criado. O exemplo a seguir mostra como armazenar e usar o quadro anterior `GamePadState` implementar saltar:
 
@@ -59,7 +59,7 @@ protected override void Update(GameTime gameTime)
     // store off the last state before reading the new one:
     lastFrameGamePadState = currentGamePadState;
     currentGamePadState = GamePad.GetState(PlayerIndex.One);
-    bool wasAButtonPushed = 
+    bool wasAButtonPushed =
 currentGamePadState.Buttons.A == ButtonState.Pressed
         && lastFrameGamePadState.Buttons.A == ButtonState.Released;
     if(wasAButtonPushed)
@@ -89,7 +89,7 @@ if(!hasBButton || !hasXButton)
 aplicativos iOS oferecem suporte a entrada do controlador de jogo sem fio.
 
 > [!IMPORTANT]
-> Os pacotes do NuGet 3.5 MonoGame não incluem o suporte sem fio para controladores de jogos. Usando a classe de GamePad no iOS requer a criação 3.5 MonoGame de fonte ou usando os binários do NuGet do MonoGame 3.6. 
+> Os pacotes do NuGet 3.5 MonoGame não incluem o suporte sem fio para controladores de jogos. Usando a classe de GamePad no iOS requer a criação 3.5 MonoGame de fonte ou usando os binários do NuGet do MonoGame 3.6.
 
 ### <a name="ios-game-controller"></a>Controlador de jogo do iOS
 
@@ -105,7 +105,7 @@ Jogos da Apple TV podem usar o Siri remoto ou controladores de jogos sem fio par
 
 *Siri remoto* é o dispositivo de entrada nativo para Apple TV. Embora os valores da Siri remoto podem ser lidos por meio de eventos (conforme mostrado na [guia Siri remoto e controladores de Bluetooth](~/ios/tvos/platform/remote-bluetooth.md)), o `GamePad` classe pode retornar valores de Siri remoto.
 
-Observe que `GamePad` só pode ler a entrada do botão Reproduzir e toque superfície: 
+Observe que `GamePad` só pode ler a entrada do botão Reproduzir e toque superfície:
 
 ![](input-images/image2.png "Observe que GamePad só pode ler a entrada do botão Reproduzir e superfície de toque")
 
@@ -113,7 +113,7 @@ Desde o toque superfície movimentação é lida por meio de `DPad` propriedade,
 
 ### <a name="apple-tv-game-controller"></a>Controlador de jogo de TV da Apple
 
-Controladores de jogo para Apple TV se comportam de forma idêntica para controladores de jogo para aplicativos iOS. Para obter mais informações, consulte o [o controlador de jogo do iOS](#iOS_Game_Controller). 
+Controladores de jogo para Apple TV se comportam de forma idêntica para controladores de jogo para aplicativos iOS. Para obter mais informações, consulte o [o controlador de jogo do iOS](#iOS-game-controller). 
 
 ## <a name="xbox-one"></a>Xbox One
 

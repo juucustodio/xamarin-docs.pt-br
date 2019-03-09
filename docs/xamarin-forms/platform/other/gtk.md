@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: dcfcf6c29b0a055c59501d6d95d4f97c16475bb3
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 6243f7d90b921207f4dd406a1f33f4d7af40ecfb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209221"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668356"
 ---
 # <a name="gtk-platform-setup"></a>Instalação de plataforma do GTK #
 
@@ -27,7 +27,7 @@ Antes de começar, crie uma nova solução xamarin. Forms ou usar uma solução 
 
 ## <a name="adding-a-gtk-app"></a>Adicionar um aplicativo do GTK #
 
-O GTK # para macOS e Linux é instalado como parte do [Mono](http://www.mono-project.com/download/stable/). O GTK # para .NET pode ser instalado no Windows com o [instalador do GTK #](http://www.mono-project.com/download/stable/#download-win).
+O GTK # para macOS e Linux é instalado como parte do [Mono](https://www.mono-project.com/download/stable/). O GTK # para .NET pode ser instalado no Windows com o [instalador do GTK #](https://www.mono-project.com/download/stable/#download-win).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

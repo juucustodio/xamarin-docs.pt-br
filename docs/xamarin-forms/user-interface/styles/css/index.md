@@ -8,12 +8,6 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: f84a6dac64300eb17a45576ae83f9b94208f5732
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831918"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilo a aplicativos xamarin. Forms usando folhas de estilo em cascata (CSS)
 
@@ -466,7 +460,7 @@ Um, dois, três ou quatro `thickness` há suporte para valores, cada um separado
 - Quatro valores indicam superior, seguido de à direita, em seguida, inferior e espessura à esquerda.
 
 > [!NOTE]
-> CSS `thickness` valores diferentes de XAML [ `Thickness` ](/api/type/Xamarin.Forms.Thickness/) valores. Por exemplo, em XAML, um valor de dois `Thickness` indica a espessura horizontal e vertical, enquanto um valor de quatro `Thickness` indica à esquerda, em seguida, superior e direita, inferior, em seguida, espessura. Além disso, o XAML `Thickness` valores são delimitados por vírgula.
+> CSS `thickness` valores diferentes de XAML [ `Thickness` ](xref:Xamarin.Forms.Thickness) valores. Por exemplo, em XAML, um valor de dois `Thickness` indica a espessura horizontal e vertical, enquanto um valor de quatro `Thickness` indica à esquerda, em seguida, superior e direita, inferior, em seguida, espessura. Além disso, o XAML `Thickness` valores são delimitados por vírgula.
 
 ### <a name="namedsize"></a>NamedSize
 

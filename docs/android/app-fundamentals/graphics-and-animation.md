@@ -1,5 +1,5 @@
 ---
-title: Gráficos e animação
+title: Elementos gráficos e animação
 description: Android fornece uma estrutura muito avançada e diversificada para dar suporte a animações e gráficos 2D. Este tópico apresenta essas estruturas e discute como criar gráficos personalizados e animações para uso em um aplicativo xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 80086318-6FE4-4711-9A71-5C8F8C28C754
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c49b8855bccaf2eca825096746769d7f201736c5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7f4f7fd3af1e90307a84037f01ddf8e52b1ee030
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116882"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669044"
 ---
-# <a name="graphics-and-animation"></a>Gráficos e animação
+# <a name="graphics-and-animation"></a>Elementos gráficos e animação
 
 _Android fornece uma estrutura muito avançada e diversificada para dar suporte a animações e gráficos 2D. Este tópico apresenta essas estruturas e discute como criar gráficos personalizados e animações para uso em um aplicativo xamarin. Android._
 
@@ -25,7 +25,7 @@ Apesar em execução em dispositivos que são tradicionalmente de energia limita
 
 Felizmente para nós, plataformas móveis modernos têm estruturas muito poderosas para a criação de animações sofisticadas e elementos gráficos personalizados, mantendo a facilidade de uso. Isso permite aos desenvolvedores adicionar interatividade rica com muito pouco esforço.
 
-Estruturas de API de interface do usuário no Android aproximadamente podem ser divididas em duas categorias: elementos gráficos e animação.
+Estruturas de API de interface do usuário no Android aproximadamente podem ser divididas em duas categorias: Gráficos e animação.
 
 Elementos gráficos adicionais são divididos em diferentes abordagens para fazer gráficos 2D e 3D. Gráficos 3D estão disponíveis por meio de um número de estruturas como OpenGL ES (uma móvel versão específica do OpenGL) e estruturas de terceiros, como o MonoGame (uma plataforma cruzada Kit de ferramentas compatível com o Kit de ferramentas do XNA) internos. Embora os gráficos 3D não estão dentro do escopo deste artigo, examinaremos as técnicas de desenho 2D internos.
 
@@ -57,7 +57,7 @@ Além disso, algumas interações podem ocorrer sem os recursos de áudio.
 
 Os aplicativos são mais utilizáveis nessas situações, se elas foram projetadas com acessibilidade em mente: fornecer dicas e assistência de navegação na interface do usuário e garantir que não há conteúdo de texto ou descrições para elementos pictográficos da interface do usuário.
 
-Consulte a [guia de acessibilidade do Google](http://developer.android.com/guide/topics/ui/accessibility/) para obter mais informações sobre como utilizar as APIs de acessibilidade do Android.
+Consulte a [guia de acessibilidade do Google](https://developer.android.com/guide/topics/ui/accessibility/) para obter mais informações sobre como utilizar as APIs de acessibilidade do Android.
 
 
 
@@ -76,23 +76,23 @@ Recursos desenháveis são definidos em um arquivo XML no diretório `/Resources
 Em tempo de execução, um aplicativo do Android carregará esses recursos e use as instruções contidas nesses arquivos XML para criar gráficos 2D.
 Android define vários tipos diferentes de recursos Desenháveis:
 
--   [ShapeDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; esse é um objeto Desenhável que desenha uma forma geométrica primitiva e aplica um conjunto limitado de efeitos gráficos nessa forma. Eles são muito úteis para coisas como personalizando os botões ou definir o plano de fundo de TextViews. Veremos um exemplo de como usar um `ShapeDrawable` mais adiante neste artigo.
+-   [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; esse é um objeto Desenhável que desenha uma forma geométrica primitiva e aplica um conjunto limitado de efeitos gráficos nessa forma. Eles são muito úteis para coisas como personalizando os botões ou definir o plano de fundo de TextViews. Veremos um exemplo de como usar um `ShapeDrawable` mais adiante neste artigo.
 
--   [StateListDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) &ndash; esse é um recurso Desenháveis que irá alterar a aparência de acordo com o estado de um controle de widget /. Por exemplo, um botão pode alterar sua aparência dependendo se ele é pressionado ou não.
+-   [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) &ndash; esse é um recurso Desenháveis que irá alterar a aparência de acordo com o estado de um controle de widget /. Por exemplo, um botão pode alterar sua aparência dependendo se ele é pressionado ou não.
 
--   [LayerDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; este recurso Desenháveis que serão empilhados de várias outras desenháveis um sobre o outro. Um exemplo de uma *LayerDrawable* é mostrado na seguinte captura de tela:
+-   [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; este recurso Desenháveis que serão empilhados de várias outras desenháveis um sobre o outro. Um exemplo de uma *LayerDrawable* é mostrado na seguinte captura de tela:
 
     ![Exemplo de LayerDrawable](graphics-and-animation-images/image1.png)
 
--   [TransitionDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) &ndash; esse é um *LayerDrawable* , mas com uma diferença. Um *TransitionDrawable* é capaz de animar uma camada aparecendo sobre outro.
+-   [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) &ndash; esse é um *LayerDrawable* , mas com uma diferença. Um *TransitionDrawable* é capaz de animar uma camada aparecendo sobre outro.
 
--   [LevelListDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; isso é muito semelhante a um *StateListDrawable* em que ele exibirá uma imagem com base em determinadas condições. No entanto, ao contrário de um *StateListDrawable*, o *LevelListDrawable* exibe uma imagem com base em um valor inteiro. Um exemplo de uma *LevelListDrawable* seria exibir a intensidade do sinal de Wi-Fi. Como a força das alterações de sinal Wi-Fi, a desenháveis que é exibido mudará adequadamente.
+-   [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; isso é muito semelhante a um *StateListDrawable* em que ele exibirá uma imagem com base em determinadas condições. No entanto, ao contrário de um *StateListDrawable*, o *LevelListDrawable* exibe uma imagem com base em um valor inteiro. Um exemplo de uma *LevelListDrawable* seria exibir a intensidade do sinal de Wi-Fi. Como a força das alterações de sinal Wi-Fi, a desenháveis que é exibido mudará adequadamente.
 
--   [ScaleDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; como seu nome implica, essas Desenháveis fornecem dimensionamento e funcionalidade de recorte. O *ScaleDrawable* dimensionará para outra, quando Desenhável, o *ClipDrawable* recortará Drawable outro.
+-   [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; como seu nome implica, essas Desenháveis fornecem dimensionamento e funcionalidade de recorte. O *ScaleDrawable* dimensionará para outra, quando Desenhável, o *ClipDrawable* recortará Drawable outro.
 
--   [InsetDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; este Desenháveis aplicará inserções nos lados do outro recurso Desenhável. Ele é usado quando uma exibição precisa de um plano de fundo é menor do que os limites de real da exibição.
+-   [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; este Desenháveis aplicará inserções nos lados do outro recurso Desenhável. Ele é usado quando uma exibição precisa de um plano de fundo é menor do que os limites de real da exibição.
 
--   XML [BitmapDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; esse arquivo é um conjunto de instruções, em XML, que devem ser executadas em um bitmap real. Algumas ações que pode ser executadas pelo Android são aplicar lado a lado, pontilhado e suavização. Um dos usos muito comuns disso é um bitmap divididas, o plano de fundo de um layout.
+-   XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; esse arquivo é um conjunto de instruções, em XML, que devem ser executadas em um bitmap real. Algumas ações que pode ser executadas pelo Android são aplicar lado a lado, pontilhado e suavização. Um dos usos muito comuns disso é um bitmap divididas, o plano de fundo de um layout.
 
 
 #### <a name="drawable-example"></a>Exemplo de desenhável
@@ -148,7 +148,7 @@ Para ver o que seria a aparência disso, execute as *AnimationsDemo* do projeto 
 
 ![TextView com um plano de fundo personalizado, desenhável com um cantos arredondados e gradiente](graphics-and-animation-images/image1.png)
 
-Para obter mais detalhes sobre os elementos XML e a sintaxe de recursos Desenháveis, consulte [documentação do Google](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
+Para obter mais detalhes sobre os elementos XML e a sintaxe de recursos Desenháveis, consulte [documentação do Google](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
 
 ### <a name="using-the-canvas-drawing-api"></a>Usando a API de desenho da tela
@@ -443,7 +443,7 @@ Este artigo apresentou um muitos conceitos novos e APIs ajudar a adicionar algun
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstração de animação (amostra)](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
-- [Animação e elementos gráficos](http://developer.android.com/guide/topics/graphics/index.html)
+- [Animação e elementos gráficos](https://developer.android.com/guide/topics/graphics/index.html)
 - [Usando animações para dar vida a seus aplicativos móveis](http://youtu.be/ikSk_ILg3d0)
 - [AnimationDrawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
 - [Tela](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/)

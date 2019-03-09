@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 10. Extensões de marcação XAML
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 10. Extensões de marcação XAML'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 10. Extensões de marcação XAML'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: f326d0434fd2565c30890dea0838168c9d8b4287
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 076e9f5155492e5a69d906c587b24495fe39d3f1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054735"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672628"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Resumo do capítulo 10. Extensões de marcação XAML
 
@@ -40,7 +40,7 @@ Essas quatro extensões de marcação XAML têm suporte por muitas implementaç�
 
 - `StaticResource` com suporte [`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension)
 - `DynamicResource` com suporte [`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension)
-- `Binding` com suporte pelo [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash;discutidos [capítulo 16. Associação de dados](#chapter16)
+- `Binding` com suporte pelo [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash;discutidos [capítulo 16. Associação de dados](chapter16.md)
 - `TemplateBinding` com suporte pelo [ `TemplateBindingExtension` ](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) &mdash;não abordados no livro
 
 Uma extensão de marcação XAML adicional é incluída no xamarin. Forms em conexão com [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout):

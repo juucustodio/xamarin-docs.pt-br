@@ -1,19 +1,19 @@
 ---
-title: Usar Jenkins com Xamarin
+title: Usando Jenkins com Xamarin
 description: Este documento descreve como usar o Jenkins para integração contínua com aplicativos Xamarin. Ele aborda como instalar, configurar e usar o Jenkins.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: lobrien
 ms.author: laobri
 ms.date: 03/23/2017
-ms.openlocfilehash: f9d6775b5d31aa98087b8b8cb6aa1401429afd96
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7f66c97ce4b7880d32dfd87aec0691a26a08cfd2
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120678"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669421"
 ---
-# <a name="using-jenkins-with-xamarin"></a>Usar Jenkins com Xamarin
+# <a name="using-jenkins-with-xamarin"></a>Usando Jenkins com Xamarin
 
 _Este guia mostra como configurar o Jenkins como um servidor de integração contínua e automatizar a compilação de aplicativos móveis criados com Xamarin. Ele descreve como instalar o Jenkins nos X, configurá-lo e configurar os trabalhos para compilar aplicativos xamarin. IOS e xamarin. Android quando as alterações são confirmadas para o sistema de gerenciamento de código-fonte._
 
@@ -153,7 +153,7 @@ Para que uma estação de trabalho do macOS interagir com um servidor do TFS [Te
     ```
     $ tf
     Team Explorer Everywhere Command Line Client (version 11.0.0.201306181526)
-    
+
     Available commands and their options:
     ```
 
@@ -230,7 +230,7 @@ A primeira tarefa Jenkins faz é recuperar o código-fonte do sistema de gerenci
 
 #### <a name="using-git-for-source-code-control"></a>Usando o Git para controle do código-fonte
 
-Se você estiver usando o TFS para controle do código-fonte, [ignorar](#Using_TFS_for_Source_Code_Management) esta seção e vá para a próxima seção usando o TFS.
+Se você estiver usando o TFS para controle do código-fonte, [ignorar](#Using-TFS-for-Source-Code-Management) esta seção e vá para a próxima seção usando o TFS.
 
 Jenkins dá suporte ao Git fora da caixa – Nenhum plug-ins extras são necessárias. Para usar Git, clique no **Git** botão de opção e digite a URL do repositório Git, conforme mostrado na seguinte captura de tela:
 

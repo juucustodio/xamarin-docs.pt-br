@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 815e3ddf44ae94b6b26a325599de1f4c1f6714a8
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: ea66cda0e2a1935a430c064c9cebd4134d295729
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681534"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669226"
 ---
 # <a name="architecture"></a>Arquitetura
 
@@ -34,8 +34,8 @@ Para obter mais informações sobre como classes do Android se comunicar com as 
 Pacotes de aplicativos Android são contêineres ZIP com um *Apk* extensão de arquivo. Pacotes de aplicativos do xamarin. Android têm a mesma estrutura e o layout de pacotes Android normal, com as seguintes adições:
 
 -   Os assemblies do aplicativo (que contém IL) são *armazenados* descompactados dentro de *assemblies* pasta. Durante o processo de inicialização na versão se baseia a *. Apk* é *mmap()* ed em processo e assemblies são carregados da memória. Isso permite a inicialização mais rápida do aplicativo, como assemblies não precisa ser extraído antes da execução.  
--   *Observação:* informações de local do Assembly, como [Assembly.Location](xref:System.Reflection.Assembly.Location) e [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
-    *não podem ser utilizados* versão compilações. Eles não existem como entradas de sistema de arquivos distintos e não precisam de nenhum local utilizável.
+-   *Observação:* Informações de local do assembly, como [Assembly.Location](xref:System.Reflection.Assembly.Location) e [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
+    *não podem ser utilizados* em compilações de versão. Eles não existem como entradas de sistema de arquivos distintos e não precisam de nenhum local utilizável.
 
 
 -   Bibliotecas nativas, que contém o tempo de execução Mono estão presentes dentro de *Apk* . Um aplicativo xamarin. Android deve conter as bibliotecas nativas para as arquiteturas de Android/destino desejado, por exemplo, *armeabi* , *armeabi-v7a* , *x86* . Aplicativos xamarin. Android não podem ser executado em uma plataforma, a menos que ele contém as bibliotecas de tempo de execução apropriado.
@@ -47,7 +47,7 @@ Aplicativos xamarin. Android também contêm *Callable Wrappers do Android* para
 
 ## <a name="android-callable-wrappers"></a>Callable Wrappers do Android
 
-- **Callable wrappers do Android** são uma [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) ponte que são usados a qualquer momento em que o tempo de execução do Android precisa chamar código gerenciado. Callable wrappers do Android são métodos como virtuais podem ser substituídas e interfaces de Java podem ser implementadas. Consulte a [visão geral da integração Java](~/android/platform/java-integration/index.md) doc para obter mais informações.
+- **Callable wrappers do Android** são uma [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) ponte que são usados a qualquer momento em que o tempo de execução do Android precisa chamar código gerenciado. Callable wrappers do Android são métodos como virtuais podem ser substituídas e interfaces de Java podem ser implementadas. Consulte a [visão geral da integração Java](~/android/platform/java-integration/index.md) doc para obter mais informações.
 
 
 <a name="Managed_Callable_Wrappers" />
@@ -88,7 +88,7 @@ Há dois cenários em que o *(IntPtr, JniHandleOwnership)* construtor deve ser f
 2. Invocação de método virtual de um construtor de classe base.
 
 
-Observe que (2) é uma abstração de vazamento. Em Java, como em c#, chamadas para métodos virtuais de um construtor sempre chamar a implementação mais derivada do método. Por exemplo, o [TextView (contexto, AttributeSet, int) construtor](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) invoca o método virtual [TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), que está vinculado como o [ Propriedade TextView.DefaultMovementMethod](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
+Observe que (2) é uma abstração de vazamento. Em Java, como em c#, chamadas para métodos virtuais de um construtor sempre chamar a implementação mais derivada do método. Por exemplo, o [TextView (contexto, AttributeSet, int) construtor](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) invoca o método virtual [TextView.getDefaultMovementMethod()](https://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), que está vinculado como o [ Propriedade TextView.DefaultMovementMethod](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
 Assim, se um tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) fosse (1) [subclasse TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [substituir TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)e (3) [ativar uma instância dela classe por meio de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) substituído *DefaultMovementMethod* propriedade seria invocada antes do construtor ACW tido a oportunidade de ser executado e ocorrerá antes do C# construtor tido a oportunidade Execute.
 
 Isso é suportado pela instanciação de uma instância LogTextBox por meio de [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) construtor quando a instância ACW LogTextBox entra em código gerenciado e, em seguida, invocando o [ LogTextBox (contexto, IAttributeSet, int)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) construtor *na mesma instância* quando o construtor ACW for executado.
@@ -99,7 +99,7 @@ Ordem de eventos:
 
 2.  Android instancia o grafo de objeto de Layout e cria uma instância de uma instância do *monodroid.apidemo.LogTextBox* , o ACW para *LogTextBox* .
 
-3.  O *monodroid.apidemo.LogTextBox* construtor executa o [android.widget.TextView](http://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) construtor.
+3.  O *monodroid.apidemo.LogTextBox* construtor executa o [android.widget.TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) construtor.
 
 4.  O *TextView* construtor chama *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* .
 
@@ -178,8 +178,8 @@ Somente *Dispose ()* de gerenciado subclasses de wrapper que pode ser chamado qu
 
 ## <a name="application-startup"></a>Inicialização do aplicativo
 
-Quando uma atividade, serviço, etc. é iniciado, Android primeiro verifica para ver se já houver um processo em execução para hospedar a atividade/service/etc. Se nenhum tal processo existir, será criado um novo processo, o [androidmanifest. XML](http://developer.android.com/guide/topics/manifest/manifest-intro.html) são lidos e o tipo especificado na [ /manifest/application/@android:name ](http://developer.android.com/guide/topics/manifest/application-element.html#nm) atributo é carregado e instanciado. Em seguida, todos os tipos especificados pelo [ /manifest/application/provider/@android:name ](http://developer.android.com/guide/topics/manifest/provider-element.html#nm) valores de atributo são instanciados e ter seus [ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/) método invocado. Ganchos de xamarin. Android em isso adicionando um *mono. MonoRuntimeProvider* *ContentProvider* para androidmanifest. XML durante o processo de compilação. O *mono. MonoRuntimeProvider.attachInfo()* método é responsável por carregar o tempo de execução Mono no processo.
-Qualquer tentativa de usar Mono antes desse ponto falhará. ( *Observação*: é por isso que tipos quais subclasse [Android](https://developer.xamarin.com/api/type/Android.App.Application/) precisa fornecer um [(IntPtr, JniHandleOwnership) construtor](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), conforme é a instância do aplicativo criado antes que o Mono pode ser inicializado.)
+Quando uma atividade, serviço, etc. é iniciado, Android primeiro verifica para ver se já houver um processo em execução para hospedar a atividade/service/etc. Se nenhum tal processo existir, será criado um novo processo, o [androidmanifest. XML](https://developer.android.com/guide/topics/manifest/manifest-intro.html) são lidos e o tipo especificado na [ /manifest/application/@android:name ](https://developer.android.com/guide/topics/manifest/application-element.html#nm) atributo é carregado e instanciado. Em seguida, todos os tipos especificados pelo [ /manifest/application/provider/@android:name ](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) valores de atributo são instanciados e ter seus [ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/) método invocado. Ganchos de xamarin. Android em isso adicionando um *mono. MonoRuntimeProvider* *ContentProvider* para androidmanifest. XML durante o processo de compilação. O *mono. MonoRuntimeProvider.attachInfo()* método é responsável por carregar o tempo de execução Mono no processo.
+Qualquer tentativa de usar Mono antes desse ponto falhará. ( *Observação*: É por isso que tipos de quais subclasse [Android](https://developer.xamarin.com/api/type/Android.App.Application/) precisa fornecer um [(IntPtr, JniHandleOwnership) construtor](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), como a instância do aplicativo é criada antes de Mono pode ser inicializado.)
 
-Após a inicialização do processo de conclusão, `AndroidManifest.xml` é consultada para localizar o nome de classe da atividade de serviço/etc. para iniciar. Por exemplo, o [ /manifest/application/activity/@android:name atributo](http://developer.android.com/guide/topics/manifest/activity-element.html#nm) é usado para determinar o nome de uma atividade para carregar. Para atividades, esse tipo deve herdar [android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/).
-O tipo especificado é carregado por meio [forName ()](http://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (que exige que o tipo de ser um Java digitar, portanto, o Callable Wrappers do Android), então instanciada. Criação de uma instância do Android Callable Wrapper irá disparar a criação de uma instância do tipo c# correspondente. Android, em seguida, invoque [Activity.onCreate(Bundle)](http://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) , que fará com que o correspondente [Activity.OnCreate(Bundle)](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) a ser invocada, e você está desativado para as corridas.
+Após a inicialização do processo de conclusão, `AndroidManifest.xml` é consultada para localizar o nome de classe da atividade de serviço/etc. para iniciar. Por exemplo, o [ /manifest/application/activity/@android:name atributo](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) é usado para determinar o nome de uma atividade para carregar. Para atividades, esse tipo deve herdar [android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/).
+O tipo especificado é carregado por meio [forName ()](https://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (que exige que o tipo de ser um Java digitar, portanto, o Callable Wrappers do Android), então instanciada. Criação de uma instância do Android Callable Wrapper irá disparar a criação de uma instância do tipo c# correspondente. Android, em seguida, invoque [Activity.onCreate(Bundle)](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) , que fará com que o correspondente [Activity.OnCreate(Bundle)](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) a ser invocada, e você está desativado para as corridas.

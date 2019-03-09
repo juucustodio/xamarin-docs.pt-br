@@ -1,19 +1,14 @@
 ---
 title: Fragmentos
-description: Android 3.0 introduziu fragmentos, mostrando como dar suporte a designs mais flexíveis para os tamanhos de tela diferentes muitos encontrados em telefones e tablets. Este artigo abordará como usar fragmentos para desenvolver aplicativos xamarin. Android e também como dar suporte a fragmentos em Android anterior dispositivos (API nível 11) 3.0.
+description: 'Android 3.0 introduziu fragmentos, mostrando como dar suporte a designs mais flexíveis para os tamanhos de tela diferentes muitos encontrados em telefones e tablets. Este artigo abordará como usar fragmentos para desenvolver aplicativos xamarin. Android e também como dar suporte a fragmentos em Android anterior dispositivos (API nível 11) 3.0.'
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: bc4441c7ee0c36af990297bad1b0c2f0e77123f3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113281"
 ---
+
 # <a name="fragments"></a>Fragmentos
 
 _Android 3.0 introduziu fragmentos, mostrando como dar suporte a designs mais flexíveis para os tamanhos de tela diferentes muitos encontrados em telefones e tablets. Este artigo abordará como usar fragmentos para desenvolver aplicativos xamarin. Android e também como dar suporte a fragmentos em Android anterior dispositivos (API nível 11) 3.0._
@@ -63,6 +58,6 @@ Fragmentos estão disponíveis no xamarin. Android 4.0 e superior. Um aplicativo
 ## <a name="related-links"></a>Links relacionados
 
 - [Galeria de Honeycomb (amostra)](https://developer.xamarin.com/samples/monodroid/HoneycombGallery)
-- [Fragmentos](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [Pacote de suporte](http://developer.android.com/sdk/compatibility-library.html)
-- [MOTODEV Webinar: Introdução ao fragmentos](http://motodev.adobeconnect.com/p9h1aqk3ttn/)
+- [Fragmentos](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [Pacote de suporte](https://developer.android.com/sdk/compatibility-library.html)
+- [Webinar MOTODEV: Apresentando os fragmentos](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

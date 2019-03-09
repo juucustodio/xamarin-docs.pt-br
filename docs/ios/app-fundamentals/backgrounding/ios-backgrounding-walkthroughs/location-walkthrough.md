@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d6dac02ac82b74c9b0e33f5fff0b82223df1f47
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108672"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669187"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Passo a passo – local do plano de fundo no xamarin. IOS
 
@@ -103,7 +103,7 @@ Este passo a passo explica alguma chave backgrounding conceitos, incluindo o reg
 
     Há várias coisas importantes acontecendo neste método. Primeiro, podemos executar uma verificação para ver se o aplicativo tem acesso a dados locais no dispositivo. Podemos verificar isso chamando `LocationServicesEnabled` sobre o `CLLocationManager`. Esse método retornará **falsos** se o usuário negou o acesso de aplicativo para informações de localização.
 
-1. Em seguida, informar ao Gerenciador de localização a frequência com que a atualização. `CLLocationManager` fornece muitas opções de filtragem e configurando os dados de local, incluindo a frequência de atualizações. Neste exemplo, defina o `DesiredAccuracy` atualizar sempre que o local for alterado por um medidor. Para obter mais informações sobre como configurar a frequência de atualização do local e outras preferências, consulte o [referência de classe CLLocationManager](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) na documentação da Apple.
+1. Em seguida, informar ao Gerenciador de localização a frequência com que a atualização. `CLLocationManager` fornece muitas opções de filtragem e configurando os dados de local, incluindo a frequência de atualizações. Neste exemplo, defina o `DesiredAccuracy` atualizar sempre que o local for alterado por um medidor. Para obter mais informações sobre como configurar a frequência de atualização do local e outras preferências, consulte o [referência de classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) na documentação da Apple.
 
 1. Por fim, chame `StartUpdatingLocation` sobre o `CLLocationManager` instância. Isso informa ao Gerenciador de localizações para obter uma correção inicial sobre o local atual e iniciar o envio de atualizações
 

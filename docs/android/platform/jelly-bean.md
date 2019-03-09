@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9e83c9a8c1e2740596a981598cafbbfb65e2caf2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24fc14b0342591c56f5bf91862b0d94759a42834
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119235"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670097"
 ---
 # <a name="jelly-bean-features"></a>Recursos do Jelly Bean
 
@@ -79,7 +79,7 @@ Como o `TimeAnimator` instância está em execução, ele invocará `ITimeAnimat
 
 ### <a name="application-stack-navigation"></a>Navegação de pilha do aplicativo
 
-Android 4.1 aprimora a navegação de pilha do aplicativo que foi introduzida no Android 3.0. Especificando o `ParentName` propriedade do `ActivityAttribute`, Android pode abrir a atividades pai apropriado quando o usuário pressiona o [botão](http://developer.android.com/design/patterns/navigation.html#up-vs-back) na barra de ação - Android instanciará a atividade especificada, o `ParentName`propriedade. Isso permite que os aplicativos preservar a hierarquia de atividades que fazem uma determinada tarefa.
+Android 4.1 aprimora a navegação de pilha do aplicativo que foi introduzida no Android 3.0. Especificando o `ParentName` propriedade do `ActivityAttribute`, Android pode abrir a atividades pai apropriado quando o usuário pressiona o [botão](https://developer.android.com/design/patterns/navigation.html#up-vs-back) na barra de ação - Android instanciará a atividade especificada, o `ParentName`propriedade. Isso permite que os aplicativos preservar a hierarquia de atividades que fazem uma determinada tarefa.
 
 Para a maioria dos aplicativos definindo o `ParentName` na atividade são informações suficientes para Android fornecer o comportamento correto para navegar a pilha de aplicativos; Android será sintetizar a pilha voltar necessário com a criação de uma série de tentativas para cada atividade pai. No entanto, como esta é uma pilha de aplicativos artificial, cada atividade sintética não terá o estado salvo que teria uma atividade natural. Para fornecer o estado salvo para uma atividade pai sintética, uma atividade pode substituir o `OnPrepareNavigationUpTaskStack` método. Esse método recebe um `TaskStackBuilder` objetos de instância que terá uma coleção de intenção de que o Android usará para criar a pilha voltar. A atividade pode modificar essas tentativas para que, como a atividade sintética é criada, ele receberá as informações de estado apropriado.
 
@@ -145,7 +145,7 @@ mediaActionPlayer.Release();
 
 
 
-### <a name="connectivity"></a>conectividade
+### <a name="connectivity"></a>Conectividade
 
 
 
@@ -284,6 +284,6 @@ Esse artigo, em seguida, entrou em apresentar as atualizações para enviar noti
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de animação de tempo (amostra)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TimeAnimatorExample/)
-- [Android 4.1 APIs](http://developer.android.com/about/versions/android-4.1.html)
-- [Tarefas e pilhas de back-](http://developer.android.com/guide/components/tasks-and-back-stack.html)
-- [Navegação com Up e voltar](http://developer.android.com/design/patterns/navigation.html)
+- [Android 4.1 APIs](https://developer.android.com/about/versions/android-4.1.html)
+- [Tarefas e pilhas de back-](https://developer.android.com/guide/components/tasks-and-back-stack.html)
+- [Navegação com Up e voltar](https://developer.android.com/design/patterns/navigation.html)

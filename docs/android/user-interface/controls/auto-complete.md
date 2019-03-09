@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 134b8e93279dd60f860e44a444e75e0200e66b99
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cf2221380e5ddbd8278cc2d387c6eb185d990c1a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "30764444"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671892"
 ---
 # <a name="auto-complete"></a>Preenchimento automático
 
@@ -205,5 +205,5 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 *Partes desta página são modificações com base no trabalho criado e compartilhado por Android Open Source Project e usadas de acordo com os termos descritos na* 
  [ *2.5 atribuição de licença da Creative Commons* ](http://creativecommons.org/licenses/by/2.5/) *. Este tutorial se baseia a* 
- [ *tutorial Android Auto Complete*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+ [ *tutorial Android Auto Complete*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
  *.*

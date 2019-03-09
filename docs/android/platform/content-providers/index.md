@@ -1,19 +1,14 @@
 ---
 title: Introdução ao ContentProviders
-description: O sistema operacional Android usa provedores de conteúdo para facilitar o acesso aos dados compartilhados, como arquivos de mídia, contatos e informações de calendário. Este artigo apresenta a classe ContentProvider e fornece dois exemplos de como usá-lo.
+description: 'O sistema operacional Android usa provedores de conteúdo para facilitar o acesso aos dados compartilhados, como arquivos de mídia, contatos e informações de calendário. Este artigo apresenta a classe ContentProvider e fornece dois exemplos de como usá-lo.'
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 4105200c48e41b142fc71e3a524023790b683cdb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105981"
 ---
+
 # <a name="intro-to-contentproviders"></a>Introdução ao ContentProviders
 
 _O sistema operacional Android usa provedores de conteúdo para facilitar o acesso aos dados compartilhados, como arquivos de mídia, contatos e informações de calendário. Este artigo apresenta a classe ContentProvider e fornece dois exemplos de como usá-lo._
@@ -47,7 +42,7 @@ Os tópicos nesta seção fornecem alguns exemplos simples de consumo e a grava�
 
 - [Demonstração de ContactsAdapter (amostra)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
 - [SimpleContentProvider (amostra)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
-- [Guia de desenvolvedores de provedores de conteúdo](http://developer.android.com/guide/topics/providers/content-providers.html)
+- [Guia de desenvolvedores de provedores de conteúdo](https://developer.android.com/guide/topics/providers/content-providers.html)
 - [Referência de classe ContentProvider](https://developer.xamarin.com/api/type/Android.Content.ContentProvider/)
 - [Referência de classe ContentResolver](https://developer.xamarin.com/api/type/Android.Content.ContentResolver/)
 - [Referência de classe de ListView](https://developer.xamarin.com/api/type/Android.Widget.ListView/)

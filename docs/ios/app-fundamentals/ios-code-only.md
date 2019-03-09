@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2fa554264578ec626567ef7d28377ac80bde21d3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2b3ba0a0cf31ae2c2d631da8b595390c973957d6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060168"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670664"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Criando interfaces do usuário do iOS no código no xamarin. IOS
 
@@ -20,7 +20,7 @@ A interface do usuário de um aplicativo iOS é como uma vitrine – o aplicativ
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo: 
+O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo:
 
 [![](ios-code-only-images/image9.png "Este diagrama ilustra as relações entre a janela, exibições, subexibições e controlador de exibição")](ios-code-only-images/image9.png#lightbox)
 
@@ -28,7 +28,7 @@ Essas hierarquias de exibição podem ser criadas usando o [Designer de Xamarin 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo: 
+O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo:
 
 [![](ios-code-only-images/image9.png "Este diagrama ilustra as relações entre a janela, exibições, subexibições e controlador de exibição")](ios-code-only-images/image9.png#lightbox)
 
@@ -65,9 +65,9 @@ O modelo de projeto vazio adiciona 4 arquivos ao projeto:
 ## <a name="ios-templates"></a>modelos de iOS
 
 
-O Visual Studio para Mac não fornece um modelo vazio. Todos os modelos são fornecidos com o suporte a Storyboard, que a Apple recomenda como a principal maneira de criar uma interface do usuário. No entanto, é possível criar sua interface do usuário completamente no código. 
+O Visual Studio para Mac não fornece um modelo vazio. Todos os modelos são fornecidos com o suporte a Storyboard, que a Apple recomenda como a principal maneira de criar uma interface do usuário. No entanto, é possível criar sua interface do usuário completamente no código.
 
-As etapas a seguir explicarão como remover o Storyboard de um aplicativo: 
+As etapas a seguir explicarão como remover o Storyboard de um aplicativo:
 
 
 1. Use o modelo de aplicativo de exibição única para criar um novo projeto do iOS:
@@ -291,7 +291,7 @@ Window.RootViewController = navController;
 Agora quando o aplicativo é carregado, o `CustomViewController` é carregado dentro de um controlador de navegação:
 
  [![](ios-code-only-images/customvc.png "O CustomViewController é carregado dentro de um controlador de navegação")](ios-code-only-images/customvc.png#lightbox)
- 
+
 Clicar no botão, será _push_ um novo controlador de exibição para a pilha de navegação:
 
 [![](ios-code-only-images/customvca.png "Um novo controlador de exibição é enviado para a pilha de navegação")](ios-code-only-images/customvca.png#lightbox)
@@ -306,7 +306,7 @@ Por exemplo, vamos editar o `CustomViewController` para criar uma tela de logon 
 
 ### <a name="adding-the-text-fields"></a>Adicionando campos de texto
 
-Primeiro, remova o manipulador de evento e o botão que foi adicionado a [Inicializando o modo de exibição](#Initializing_the_View) seção. 
+Primeiro, remova o manipulador de evento e o botão que foi adicionado a [Inicializando o modo de exibição](#initializing-the-view) seção. 
 
 Adicione um controle para o nome de usuário criando e inicializando uma `UITextField` e, em seguida, adicioná-lo para a hierarquia de exibição, conforme mostrado abaixo:
 
@@ -359,7 +359,7 @@ public class CustomViewController : UIViewController
             SecureTextEntry = true
         };
 
-      View.AddSubview(usernameField); 
+      View.AddSubview(usernameField);
       View.AddSubview(passwordField);
    }
 }
@@ -414,7 +414,7 @@ Com essas alterações, o modo de exibição terá esta aparência:
 iOS fornece um recurso para adicionar vários modos de exibição para a hierarquia de exibição usando `AddSubviews`.
 
 ```csharp
-View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton }); 
+View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 ```
 
 ## <a name="adding-button-functionality"></a>Adicionando a funcionalidade do botão
@@ -610,12 +610,12 @@ Para obter mais informações sobre como criar uma tela de inicialização, cons
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>Criar uma imagem de inicialização para pré-iOS 8 aplicativos
 
-Uma imagem estática pode ser usada juntamente com um. XIB ou tela de inicialização de Storyboard se seu aplicativo tem como alvo as versões anteriores ao iOS 8. 
+Uma imagem estática pode ser usada juntamente com um. XIB ou tela de inicialização de Storyboard se seu aplicativo tem como alvo as versões anteriores ao iOS 8.
 
 Essa imagem estática pode ser definida no arquivo Info. plist, ou como um catálogo de ativos (para iOS 7) em seu aplicativo. Você precisará fornecer imagens separadas para cada tamanho de dispositivo (320 x 480, 640 x 960, 640 x 1136) que pode ser executados em seu aplicativo. Para obter mais informações sobre tamanhos de tela de inicialização, exibir o [imagens de tela de inicialização](~/ios/app-fundamentals/images-icons/launch-screens.md) guia.
 
 > [!IMPORTANT]
-> Se seu aplicativo não tiver nenhuma tela Iniciar, você pode perceber que ela não couber totalmente a tela. Se esse for o caso, assegure-se de incluir, pelo menos, uma imagem de 640 x 1136 chamada `Default-568@2x.png` ao seu Info. plist. 
+> Se seu aplicativo não tiver nenhuma tela Iniciar, você pode perceber que ela não couber totalmente a tela. Se esse for o caso, assegure-se de incluir, pelo menos, uma imagem de 640 x 1136 chamada `Default-568@2x.png` ao seu Info. plist.
 
 ## <a name="summary"></a>Resumo
 

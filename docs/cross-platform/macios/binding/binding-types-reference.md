@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: d460bf867ce09e614be76d0a4a7ffef01420cf82
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55234024"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669473"
 ---
 # <a name="binding-types-reference-guide"></a>Guia de referência de tipos de associação
 
@@ -1851,7 +1851,7 @@ O `SmartLink` propriedade deve ser definida como true para permitir que o xamari
 
 O `WeakFrameworks` propriedade funciona da mesma forma que o `Frameworks` propriedade, exceto que em tempo de vinculação, o `-weak_framework` especificador é passado para a gcc para cada estrutura listada.
 
-`WeakFrameworks` torna possível para bibliotecas e aplicativos para vincular de modo fraco em relação a estruturas de plataforma para que eles podem usá-los, opcionalmente, se eles estão disponíveis, mas não terão uma dependência neles que é útil se sua biblioteca destina-se para adicionar recursos extras nos mais recentes versões do iOS. Para obter mais informações sobre como vincular fraca, consulte a documentação da Apple no [vinculação fraca](http://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
+`WeakFrameworks` torna possível para bibliotecas e aplicativos para vincular de modo fraco em relação a estruturas de plataforma para que eles podem usá-los, opcionalmente, se eles estão disponíveis, mas não terão uma dependência neles que é útil se sua biblioteca destina-se para adicionar recursos extras nos mais recentes versões do iOS. Para obter mais informações sobre como vincular fraca, consulte a documentação da Apple no [vinculação fraca](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
 
 Bons candidatos para vinculação fraca seria `Frameworks` , como contas, `CoreBluetooth`, `CoreImage`, `GLKit`, `NewsstandKit` e `Twitter` , pois eles só estão disponíveis no iOS 5.
 

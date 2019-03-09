@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: ed49c1d11e30d19b2dc60066c3c35568ade43198
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 3131963efa3d4ba4de9ff63c741c276a62e9d12d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557097"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670409"
 ---
 # <a name="xamarinforms-editor"></a>Editor do xamarin. Forms
 
@@ -258,6 +258,9 @@ Certifique-se de que as cores de plano de fundo e texto que você escolher podem
 
 - [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; gerado quando o texto é alterado no editor. Fornece o texto antes e após a alteração.
 - [Concluída](xref:Xamarin.Forms.Editor.Completed) &ndash; gerado quando o usuário terminou entrada pressionando a tecla return no teclado.
+
+> [!NOTE]
+> O [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe da qual [ `Entry` ](xref:Xamarin.Forms.Entry) herda, também tem [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) e [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)eventos.
 
 ### <a name="completed"></a>Concluído
 

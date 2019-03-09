@@ -1,19 +1,14 @@
 ---
 title: Recursos do Android
-description: Este artigo apresenta o conceito de recursos do Android no xamarin. Android e documentar como usá-los. Ele aborda como usar recursos em seu aplicativo Android para dar suporte à localização do aplicativo e vários dispositivos, incluindo densidades e diferentes tamanhos de tela.
+description: 'Este artigo apresenta o conceito de recursos do Android no xamarin. Android e documentar como usá-los. Ele aborda como usar recursos em seu aplicativo Android para dar suporte à localização do aplicativo e vários dispositivos, incluindo densidades e diferentes tamanhos de tela.'
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d9cd6bf3ae51c6e27be88481e412995bd4113c17
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117246"
 ---
+
 # <a name="android-resources"></a>Recursos do Android
 
 _Este artigo apresenta o conceito de recursos do Android no xamarin. Android e documentar como usá-los. Ele aborda como usar recursos em seu aplicativo Android para dar suporte à localização do aplicativo e vários dispositivos, incluindo densidades e diferentes tamanhos de tela._
@@ -71,6 +66,6 @@ Este artigo será dar uma olhada abrangente usando os recursos e abrangem os tó
 ## <a name="related-links"></a>Links relacionados
 
 - [Uso de recursos do Android](~/android/app-fundamentals/resources-in-android/android-assets.md)
-- [Conceitos básicos de aplicativo](http://developer.android.com/guide/topics/fundamentals.html)
-- [Recursos do aplicativo](http://developer.android.com/guide/topics/resources/index.html)
-- [Suporte a várias telas](http://developer.android.com/guide/practices/screens_support.html)
+- [Conceitos básicos de aplicativo](https://developer.android.com/guide/topics/fundamentals.html)
+- [Recursos do aplicativo](https://developer.android.com/guide/topics/resources/index.html)
+- [Suporte a várias telas](https://developer.android.com/guide/practices/screens_support.html)

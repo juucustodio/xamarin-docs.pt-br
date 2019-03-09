@@ -1,19 +1,19 @@
 ---
-title: Gerenciar fragmentos
+title: Gerenciando fragmentos
 ms.prod: xamarin
 ms.assetid: 02C5E8F0-32EF-4FD9-DC8B-04650E20722C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 107877d0e92d3a46101812b78bc0b414c0fbb320
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e0430b8ed9c42030441021e71c3b08b1ddccc57
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105461"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670539"
 ---
-# <a name="managing-fragments"></a>Gerenciar fragmentos
+# <a name="managing-fragments"></a>Gerenciando fragmentos
 
 Para ajudar com o gerenciamento de fragmentos, o Android fornece o `FragmentManager` classe. Cada atividade tem uma instância de `Android.App.FragmentManager` que irá localizar ou alterar dinamicamente seus fragmentos. Cada conjunto dessas alterações é conhecido como um *transação*e é executado usando uma das APIs contidas na classe `Android.App.FragmentTransation`, que é gerenciado pelo `FragmentManager`. Uma atividade pode iniciar uma transação como este:
 
@@ -40,7 +40,7 @@ fragmentTx.Commit();
 
 Se uma transação for confirmada depois `Activity.OnSaveInstanceState()` é chamado, uma exceção será gerada. Isso acontece porque quando a atividade salva seu estado, o Android também salva o estado de qualquer fragmentos hospedados. Se todas as transações de fragmento são confirmadas depois deste ponto, o estado dessas transações serão perdido quando a atividade é restaurada.
 
-É possível salvar as transações de fragmento da atividade [pilha voltar](http://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) fazendo uma chamada para `FragmentTransaction.AddToBackStack()`. Isso permite ao usuário navegar para trás por fragmento é alterado quando o **volta** é pressionado. Sem uma chamada para esse método, os fragmentos são removidos serão destruídos e não estará disponíveis se o usuário navega de volta por meio da atividade.
+É possível salvar as transações de fragmento da atividade [pilha voltar](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) fazendo uma chamada para `FragmentTransaction.AddToBackStack()`. Isso permite ao usuário navegar para trás por fragmento é alterado quando o **volta** é pressionado. Sem uma chamada para esse método, os fragmentos são removidos serão destruídos e não estará disponíveis se o usuário navega de volta por meio da atividade.
 
 O exemplo a seguir mostra como usar o `AddToBackStack` método de um `FragmentTransaction` para substituir um fragmento, enquanto preserva o estado do primeiro fragmento na pilha voltar:
 

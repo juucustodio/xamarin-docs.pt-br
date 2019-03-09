@@ -1,17 +1,17 @@
 ---
 title: Introdução ao objetivo Sharpie
-description: Este documento fornece uma visão geral do objetivo Sharpie, a ferramenta usada para automatizar a criação de associações c# para o código Objective-C.
+description: Este documento fornece uma visão geral do objetivo Sharpie, a ferramenta usada para automatizar a criação de C# associações a código Objective-C.
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: da8c51c4ba4df74afac950bbff867221e7307d6e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854773"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670110"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Introdução ao objetivo Sharpie
 
@@ -36,7 +36,7 @@ Execute o instalador e siga todos os prompts na tela do Assistente de instalaç�
 
 ## <a name="basic-walkthrough"></a>Instruções passo a passo básica
 
-Objetivo Sharpie é uma ferramenta de linha de comando fornecida por Xamarin que ajuda a criar as definições necessárias para associar uma biblioteca de Objective-C de terceiros 3ª a c#.
+Objetivo Sharpie é uma ferramenta de linha de comando fornecida pelo Xamarin que ajuda a criar as definições necessárias para associar uma biblioteca de Objective-C de terceiros 3ª para C#.
 Mesmo ao usar Sharpie objetivo, o desenvolvedor *serão* precisa modificar os arquivos gerados após a conclusão do objetivo Sharpie para solucionar problemas que não pôde ser tratados automaticamente pela ferramenta.
 
 Sempre que possível, o objetivo Sharpie será anotar APIs com o qual ele tem alguma dúvida sobre como vincular corretamente (muitas construções em código nativo são ambíguas).
@@ -48,7 +48,7 @@ A saída do objetivo Sharpie é um par de arquivos - [ `ApiDefinition.cs` e `Str
 > Objetivo Sharpie vem com uma **principais** regra para o uso correto: você absolutamente necessário transmitir a ela os argumentos de linha de comando do compilador clang corretos para garantir a análise adequada. Isso ocorre porque o Sharpie de objetivo de fase de análise é simplesmente uma ferramenta [implementados com relação o API do libtooling clang](http://clang.llvm.org/docs/LibTooling.html).
 
 Isso significa que o objetivo Sharpie tem todo o poder do Clang (o compilador C/Objective-C/C++ que, na verdade, compila a biblioteca nativa, que você deve vincular) e todo o seu conhecimento interno dos arquivos de cabeçalho para a associação.
-Em vez de converter o analisado [AST](http://en.wikipedia.org/wiki/Abstract_syntax_tree) para o código de objeto, objetivo Sharpie converte o AST para um c# associação "scaffold" adequado para a entrada para o `bmac` e `btouch` ferramentas de ligação do Xamarin.
+Em vez de converter o analisado [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) para o código de objeto, objetivo Sharpie converte o AST para um C# associação "criar o scaffolding" adequado para a entrada para o `bmac` e `btouch` ferramentas de ligação do Xamarin.
 
 Se objetivo Sharpie erros durante a análise, isso significa que clang apresentaram durante sua análise na fase de tentativa de construir a AST e você precisa descobrir o porquê.
 
@@ -61,5 +61,5 @@ Se a biblioteca que você está interessado está disponível como um CocoaPod, 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

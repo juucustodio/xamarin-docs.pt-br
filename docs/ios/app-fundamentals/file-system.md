@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/12/2018
-ms.openlocfilehash: 38422682849de60a3f43e513ef48011d32b030ef
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 09e05fcfe10a994e14aa605b203ea67efae80d62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579863"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672619"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Acesso de sistema de arquivos no xamarin. IOS
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/FileSystemSampleCode/)
 
-Você pode usar o xamarin. IOS e o `System.IO` as classes a *.NET Base Class Library (BCL)* para acessar o sistema de arquivos do iOS. O `File` classe permite que você criar, excluir e ler arquivos e o `Directory` classe permite que você criar, excluir ou enumerar o conteúdo dos diretórios. Você também pode usar `Stream` subclasses, que podem fornecer um maior grau de controle sobre as operações de arquivo (por exemplo, a pesquisa de compactação ou a posição dentro de um arquivo).
+Você pode usar o xamarin. IOS e o `System.IO` as classes a *.NET Base Class Library (BCL)* para acessar o sistema de arquivos do iOS. A classe `File` permite criar, excluir e ler arquivos e a classe `Directory` permite criar, excluir ou enumerar o conteúdo de diretórios. Você também pode usar `Stream` subclasses, que podem fornecer um maior grau de controle sobre as operações de arquivo (por exemplo, a pesquisa de compactação ou a posição dentro de um arquivo).
 
 iOS impõe algumas restrições sobre o que um aplicativo pode fazer com o sistema de arquivos para preservar a segurança dos dados de um aplicativo e para proteger os usuários de aplicativos malignant. Essas restrições são parte dos *de proteção do aplicativo* – um conjunto de regras que limita o acesso de um aplicativo para arquivos, preferências, recursos de rede, hardware, etc. Um aplicativo é limitado a ler e gravar arquivos em seu diretório base (local de instalação); ele não pode acessar arquivos de outro aplicativo.
 
@@ -205,7 +205,7 @@ Esses diretórios, como determinar seu caminho e suas finalidades estão listada
 |Biblioteca /|O diretório de biblioteca é um bom lugar para armazenar arquivos que não são criados diretamente pelo usuário, como bancos de dados ou outros arquivos gerados pelo aplicativo. O conteúdo deste diretório nunca é exposto ao usuário por meio do iTunes.<br /><br />Você pode criar seus próprios subdiretórios na biblioteca; No entanto, já há alguns criado pelo sistema diretórios aqui que você deve estar atento, incluindo as preferências e Caches.<br /><br />O conteúdo deste diretório (exceto para o subdiretório de Caches) é feito backup por iTunes. Diretórios personalizados criados por você na biblioteca serão feitos backup.|
 |Biblioteca/preferências /|Arquivos de preferências específicas do aplicativo são armazenados nesse diretório. Não crie esses arquivos diretamente. Em vez disso, use o `NSUserDefaults` classe.<br /><br />O conteúdo deste diretório é feito backup por iTunes.|
 |Caches/biblioteca /|O diretório de Caches é um bom lugar para armazenar arquivos de dados que podem ajudar seu aplicativo é executado, mas que podem ser facilmente recriados. O aplicativo deve criar e excluir esses arquivos conforme necessário e ser capaz de recriar esses arquivos, se necessário. iOS 5 também pode excluir esses arquivos (em situações de baixa de armazenamento), no entanto, ele não fará isso enquanto o aplicativo está em execução.<br /><br />O conteúdo deste diretório não é feito backup por iTunes, o que significa que eles não estarão presentes se o usuário restaura um dispositivo, e eles podem não estar presentes após a instalação de uma versão atualizada do seu aplicativo.<br /><br />Por exemplo, no caso de seu aplicativo não pode se conectar à rede, você pode usar o diretório de Caches para armazenar arquivos de dados ou para fornecer uma boa experiência offline. O aplicativo pode salvar e recuperar esses dados rapidamente, enquanto aguarda as respostas de rede, mas ele não precisa ser submetido ao backup e pode facilmente ser recuperado ou criado novamente após uma restauração ou a versão da atualização.|
-|tmp /|Aplicativos podem armazenar arquivos temporários que são necessários apenas por um curto período neste diretório. Para economizar espaço, os arquivos devem ser excluídos quando eles não são mais necessários. O sistema operacional também pode excluir arquivos nesse diretório quando um aplicativo não está em execução.<br /><br />O conteúdo deste diretório não é feito backup por iTunes.<br /><br />Por exemplo, o diretório tmp pode ser usado para armazenar arquivos temporários que são baixados para exibição para o usuário (como o Twitter avatares ou anexos de email), mas que pode ser excluído depois que elas já foram exibidas (e baixadas novamente se eles forem necessários no futuro) .|
+|tmp/|Aplicativos podem armazenar arquivos temporários que são necessários apenas por um curto período neste diretório. Para economizar espaço, os arquivos devem ser excluídos quando eles não são mais necessários. O sistema operacional também pode excluir arquivos nesse diretório quando um aplicativo não está em execução.<br /><br />O conteúdo deste diretório não é feito backup por iTunes.<br /><br />Por exemplo, o diretório tmp pode ser usado para armazenar arquivos temporários que são baixados para exibição para o usuário (como o Twitter avatares ou anexos de email), mas que pode ser excluído depois que elas já foram exibidas (e baixadas novamente se eles forem necessários no futuro) .|
 
 Esta captura de tela mostra a estrutura de diretórios em uma janela do localizador:
 
@@ -357,5 +357,5 @@ Este artigo mostrou que as operações de sistema de arquivos com xamarin. IOS s
 ## <a name="related-links"></a>Links relacionados
 
 - [Código de exemplo do sistema de arquivos](https://developer.xamarin.com/samples/FileSystemSampleCode/)
-- [Guia de programação do sistema de arquivos](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
-- [Registrando o arquivo de tipos de suporte do aplicativo](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)
+- [Guia de programação do sistema de arquivos](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
+- [Registrando o arquivo de tipos de suporte do aplicativo](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

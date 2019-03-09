@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: aa522e5226d78c1b43bb52b97991b989491d251f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8690be7551046a26339f58029da5f3f58e18cd15
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120054"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672580"
 ---
 # <a name="understanding-android-api-levels"></a>Noções básicas sobre níveis da API do Android
 
@@ -281,5 +281,5 @@ Este guia explicou como os níveis de API do Android são usados para gerenciar 
 - [Configuração do SDK do Android](~/android/get-started/installation/android-sdk.md)
 - [Alterações de ferramentas da CLI do SDK](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 - [Separação sua compileSdkVersion, minSdkVersion e targetSdkVersion](https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd)
-- [O que é o nível de API?](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+- [O que é o nível de API?](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 - [Codinome, marcas e números de compilação](https://source.android.com/source/build-numbers)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 69952b0bac884fe8b14edcbb87aa8fad47594880
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526554"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670696"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Exibindo uma imagem no xamarin. IOS
 
@@ -42,7 +42,7 @@ Para criar um novo conjunto de imagem e adicionar imagens a ele, faça o seguint
 
     ![](displaying-an-image-images/imageset03.png "O editor de conjunto de imagem")
 4. A partir daqui, arraste imagens para cada um dos diferentes dispositivos e resoluções necessários. 
-5. Clique duas vezes em do novo conjunto de imagens **nome** na **lista Assets** editá-lo: ![](displaying-an-image-images/imageset04.png "editando o nome do novo conjunto de imagens")
+5. Clique duas vezes em do novo conjunto de imagens **nome** na **lista Assets** editá-lo: ![](displaying-an-image-images/imageset04.png "Nome do novo conjunto de imagens de edição")
 
 Ao usar um **imagem conjunto** no Designer do iOS, basta selecionar o nome do conjunto na lista suspensa no Editor de propriedades:
 
@@ -213,7 +213,7 @@ Para qualquer outro formato de imagem, inclua a extensão com o nome. Por exempl
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 ```
 
-Para obter mais informações sobre ícones e imagens, consulte a documentação da Apple no [ícone personalizado e diretrizes de criação de imagem](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
+Para obter mais informações sobre ícones e imagens, consulte a documentação da Apple no [ícone personalizado e diretrizes de criação de imagem](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
 ## <a name="displaying-an-image-in-a-storyboards"></a>Exibindo uma imagem em um storyboards
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: a94c70bb7068847ed1b410dd7eddc70921fdf307
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 42cf10e592a37f9a979d05d7784553059923646c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106033"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667315"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Referenciando as bibliotecas nativas no xamarin. IOS
 
@@ -115,7 +115,7 @@ Há dois tipos de bibliotecas nativas disponíveis no iOS:
 -  Bibliotecas estáticas que são fornecidos com o seu aplicativo.
 
 
-Para acessar os métodos definidos em qualquer um deles, use [funcionalidade de P/Invoke do Mono](http://www.mono-project.com/docs/advanced/pinvoke/) que é a mesma tecnologia que você deseja usar em .NET, que é aproximadamente:
+Para acessar os métodos definidos em qualquer um deles, use [funcionalidade de P/Invoke do Mono](https://www.mono-project.com/docs/advanced/pinvoke/) que é a mesma tecnologia que você deseja usar em .NET, que é aproximadamente:
 
 -  Determinar a função C que você deseja invocar
 -  Determinar sua assinatura

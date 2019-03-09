@@ -1,5 +1,5 @@
 ---
-title: Onde posso encontrar minhas informações de versão e logs?
+title: Onde posso encontrar informações e logs da minha versão?
 description: Este documento descreve onde pesquisar para localizar os logs e informações de versão do Xamarin. Essas informações são úteis ao diagnosticar problemas, enviando bugs ou como obter suporte.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,14 +7,14 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2c3ded2233810ff4e903596d65f64097aa3b0445
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ee4b39aed64d7339bd561cccc49a2959a6daba5c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118221"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668303"
 ---
-# <a name="where-can-i-find-my-version-information-and-logs"></a>Onde posso encontrar minhas informações de versão e logs?
+# <a name="where-can-i-find-my-version-information-and-logs"></a>Onde posso encontrar informações e logs da minha versão?
 
 ## <a name="outline"></a>Contorno
 
@@ -100,7 +100,7 @@ Esses são os logs a partir de `XamarinInstaller.exe` installer.
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-Referência: [opções de linha de comando](http://msdn.microsoft.com/library/aa367988.aspx)
+Referência: [Opções de linha de comando](https://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a name="a-idvisual-studio-startup-verbose-logs-namevisual-studio-startup-verbose-logs-visual-studio-startup-verbose-logs"></a><a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Inicialização do Visual Studio, os logs detalhados
 
@@ -108,7 +108,7 @@ Referência: [opções de linha de comando](http://msdn.microsoft.com/library/aa
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-Referência: [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
+Reference: [/Log (devenv.exe)](https://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a name="a-idmac-logs-namemac-logs-mac-logs"></a><a id="mac-logs" name="mac-logs" />Logs do Mac
 
@@ -126,7 +126,7 @@ Essa pasta também pode ser aberta por meio de "Ajuda -> abrir diretório de Log
 
 Essa pasta também pode ser aberta por meio de "Ajuda -> abrir diretório de Log".
 
-#### <a name="a-idmac-universal-installer-namemac-universal-installer-xamarin-universal-installer"></a><a id="mac-universal-installer" name="mac-universal-installer" />"Universal" instalador do Xamarin
+#### <a name="a-idmac-universal-installer-namemac-universal-installer-xamarin-universal-installer"></a><a id="mac-universal-installer" name="mac-universal-installer" />Xamarin "Universal" installer
 
 `~/Library/Logs/XamarinInstaller/Universal`
 
@@ -146,7 +146,7 @@ Esses são os logs a partir de `XamarinInstaller.dmg` installer.
 
 4.  Copie e cole a saída do build do IDE em um arquivo de texto.
      - Visual Studio (Windows): **Exibir > saída > Mostrar saída de: Build**
-     - O Visual Studio para Mac: **exibição > painéis > erros > saída do Build (guia)**
+     - O Visual Studio para Mac: **Modo de exibição > painéis > erros > saída do Build (guia)**
 
 ## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />Depurar os logs para aplicativos xamarin. Android e xamarin. IOS
 
@@ -158,9 +158,9 @@ Esses são os logs a partir de `XamarinInstaller.dmg` installer.
 
 ### <a name="visual-studio"></a>Visual Studio
 
-**Exibir > saída > Mostrar saída de: depurar**
+**Exibir > saída > Mostrar saída de: Depurar**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](http://developer.android.com/tools/help/adb.html) logcat logs
+### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](https://developer.android.com/tools/help/adb.html) logcat logs
 
 Depois de executar o `adb` de comando, anexe back o **android_logcat.txt** arquivo da área de trabalho. Essas instruções pressupõem que você tem apenas um dispositivo conectado.
 

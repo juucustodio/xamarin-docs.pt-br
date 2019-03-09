@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 51ccf3faa2524035a30b26af6652959699663e24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118507"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672528"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no xamarin. IOS
 
@@ -44,7 +44,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPhone: iOS 9 e 10 (iPhone 6 e 7 Plus)**
 
-    ||3 x|
+    ||3x|
     |---|---|
     |Ícone do Aplicativo|180x180|
     |Em destaque|120x120|
@@ -52,7 +52,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPhone: iOS 7 e 8**
 
-    ||1 x|2 x|
+    ||1x|2x|
     |---|---|---|
     |Ícone do Aplicativo|60x60<sup>1</sup>|120x120|
     |Em destaque|40x40<sup>2</sup>|80x80|
@@ -60,7 +60,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPhone: iOS 5 e 6**
 
-    ||1 x|2 x|
+    ||1x|2x|
     |---|---|---|
     |Ícone do Aplicativo|57 x 57|114x114|
     |Em destaque|29 x 29|58x58|
@@ -78,7 +78,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPad: iOS 7 & 8**
 
-    ||1 x|2 x|
+    ||1x|2x|
     |---|---|---|
     |Ícone do Aplicativo|76 x 76|152x152|
     |Em destaque|40 x 40|80x80|
@@ -86,7 +86,7 @@ Os seguintes tamanhos de ativos de imagem e resoluções serão necessários par
 
 - **iPad: iOS 5 & 6**
 
-    ||1 x|2 x|
+    ||1x|2x|
     |---|---|---|
     |Ícone do Aplicativo|72 x 72|144x144|
     |Em destaque|50 x 50|100x100|
@@ -212,4 +212,4 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 - [Trabalhando com imagens (amostra)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Ícone personalizado e diretrizes de criação de imagem](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))
+- [Ícone personalizado e diretrizes de criação de imagem](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

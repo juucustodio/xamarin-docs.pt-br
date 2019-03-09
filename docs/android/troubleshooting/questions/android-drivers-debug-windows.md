@@ -1,5 +1,5 @@
 ---
-title: Quais drivers USB precisa depurar Android no Windows?
+title: Quais drivers USB são necessários para depurar o Android no Windows?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
@@ -7,20 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 8b996a1cc89acedc47c7169ec579dfb99dae788f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 85045967f5c63eb39c45f917b957d2a393a3a068
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114529"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670277"
 ---
-# <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Quais drivers USB precisa depurar Android no Windows?
+# <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Quais drivers USB são necessários para depurar o Android no Windows?
 
 ## <a name="finding-usb-drivers"></a>Encontrar Drivers de USB
 
-Para depurar em um dispositivo Android ao desenvolver no Windows; Você precisa instalar um driver USB compatível. O Gerenciador de SDK do Android inclui o "Driver de USB do Google" por padrão, que adiciona suporte para dispositivos Nexus conforme descrito aqui: [http://developer.android.com/sdk/win-usb.html](http://developer.android.com/sdk/win-usb.html)
+Para depurar em um dispositivo Android ao desenvolver no Windows; Você precisa instalar um driver USB compatível. O Gerenciador de SDK do Android inclui o "Driver de USB do Google" por padrão, que adiciona suporte para dispositivos Nexus conforme descrito aqui: [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
 
-Outros dispositivos requerem drivers USB especificamente publicados pelo fabricante do dispositivo. Alguns links para os fabricantes mais comuns estão incluídos neste guia: [http://developer.android.com/tools/extras/oem-usb.html](http://developer.android.com/tools/extras/oem-usb.html)
+Outros dispositivos requerem drivers USB especificamente publicados pelo fabricante do dispositivo. Alguns links para os fabricantes mais comuns estão incluídos neste guia: [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
 
 ## <a name="alternatives"></a>Alternativas
 

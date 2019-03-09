@@ -6,12 +6,13 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: da7064997b8a10d4a4604861a405e13dd23a08cf
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 03/19/2017
+ms.openlocfilehash: f7106c9b23fa71b32043ef8190691d798c36370d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233907"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672567"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações de estruturas adicionais do iOS 9
 
@@ -195,9 +196,9 @@ Apple incluiu muitos aprimoramentos para vários elementos do [UIKit](xref:UIKit
 
 ### <a name="3d-touch-events"></a>Eventos de toque 3D
 
-Novo no iOS 9 e o iPhone 6s e iPhone 6s Plus, 3D Touch adiciona gestos confidenciais de pressão para seus aplicativos iOS. Como resultado, se o aplicativo é executado no iOS 9 (ou posterior) e o dispositivo iOS é capaz de suporte 3D Touch, alterações na pressão fará com que o `TouchesMoved` evento seja acionado. 
+Novo no iOS 9 e o iPhone 6s e iPhone 6s Plus, 3D Touch adiciona gestos confidenciais de pressão para seus aplicativos iOS. Como resultado, se o aplicativo é executado no iOS 9 (ou posterior) e o dispositivo iOS é capaz de suporte 3D Touch, alterações na pressão fará com que o `TouchesMoved` evento seja acionado.
 
-Por causa dessa alteração no comportamento, seus aplicativos iOS devem estar preparados para o `TouchesMoved` evento a ser invocado com mais frequência, mesmo que o X / coordenadas Y não foram alterados. 
+Por causa dessa alteração no comportamento, seus aplicativos iOS devem estar preparados para o `TouchesMoved` evento a ser invocado com mais frequência, mesmo que o X / coordenadas Y não foram alterados.
 
 Para obter mais informações, consulte nosso [Introdução ao 3D Touch](~/ios/platform/3d-touch.md) guia.
 

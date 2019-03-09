@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 7bef5de57b7ac709ebab4c39feedbec369e6bd14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1303f21225d3ae7b7d3a796e4845afbfe554a22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122420"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667705"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisitos e instalação de pastas de trabalho
 
@@ -102,11 +102,11 @@ Se você estiver tendo problemas para se conectar a seu iOS ou uma pasta de trab
 
 - Nome do dispositivo que você está tentando se conectar a
 - Versão do sistema operacional do dispositivo
-- Android: Verificar se você está usando um x86 emulator
+- Android: Verifique se que você está usando um x86 emulator
 - Android: A plataforma de emulador que você está usando? Emulador do Google?
   Emulador do Android do Visual Studio? Xamarin Android Player?
-- iOS no Windows: qual versão do iOS Xamarin Remote Simulator você tenha instalado (Verifique **adicionar ou remover programas** na **painel de controle**)?
-- iOS no Windows: também forneça informações de versão de plataforma para o host de build do Mac
+- iOS no Windows: Qual versão do iOS Xamarin Remote Simulator você tenha instalado (Verifique **adicionar ou remover programas** na **painel de controle**)?
+- iOS no Windows: Também forneça informações de versão de plataforma para o host de build do Mac
 - O dispositivo tem conectividade de rede (seleção por meio do navegador da web)?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
@@ -160,5 +160,5 @@ Devido a um bug em instaladores mais antigos, não é possível fazer o downgrad
 
 Para fazer o downgrade de 1,4 ou mais recente para 1.3.2 ou mais antiga:
 
-1. [Desinstalar o Workbooks e Inspector manualmente](#macOS)
+1. [Desinstalar o Workbooks e Inspector manualmente](#uninstall-macos)
 2. Execute o 1.3.2 ou mais antigo `.pkg` installer

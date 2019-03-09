@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas de associações
+title: Solução de problemas de associação
 description: Este artigo resume os vários erros comuns que podem ocorrer durante a geração de associações, juntamente com as possíveis causas e as maneiras sugeridas para resolvê-los.
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f54da980834b44bbca7dc8619943769f8f429a7a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0bb7cbb6160865af5b1e40d40c7b999a8bd5ebc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115283"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668511"
 ---
-# <a name="troubleshooting-bindings"></a>Solução de problemas de associações
+# <a name="troubleshooting-bindings"></a>Solução de problemas de associação
 
 _Este artigo resume os vários erros comuns que podem ocorrer durante a geração de associações, juntamente com as possíveis causas e as maneiras sugeridas para resolvê-los._
 
@@ -74,12 +74,12 @@ Esse arquivo fornece uma lista de todas as APIs de Java que o xamarin. Android e
 Esta seção lista alguns dos sintomas ou mensagens de erro comuns que meu ocorrer durante a tentativa de associar uma biblioteca Android.
 
 
-### <a name="problem-java-version-mismatch"></a>Problema: Incompatibilidade de versão de Java
+### <a name="problem-java-version-mismatch"></a>Problema: Incompatibilidade de versão do Java
 
 Às vezes, tipos de não ser gerados ou falhas inesperadas podem ocorrer porque você estiver usando uma versão mais antiga ou mais recente do Java em comparação comparada o que a biblioteca foi compilada com. Recompile a biblioteca Android com a mesma versão do JDK que seu projeto xamarin. Android estiver usando.
 
 
-### <a name="problem-at-least-one-java-library-is-required"></a>Problema: pelo menos uma biblioteca Java é necessária
+### <a name="problem-at-least-one-java-library-is-required"></a>Problema: Pelo menos uma biblioteca Java é necessária
 
 Você receberá o erro "pelo menos uma biblioteca Java é necessária,", embora um. JAR foi adicionado.
 
@@ -98,7 +98,7 @@ Alguns. Bibliotecas JAR que usam a ofuscação de código (por meio de ferrament
 
 
 
-### <a name="problem-missing-c-types-in-generated-output"></a>Problema: Ausente C# tipos de saída gerada.
+### <a name="problem-missing-c-types-in-generated-output"></a>Problema: Faltando C# tipos de saída gerada.
 
 A associação **. dll** builds, mas perder alguns tipos de Java ou gerado C# fonte não compila devido a um erro informando que há tipos ausentes.
 
@@ -142,9 +142,9 @@ Xamarin. Android inclui uma variedade de campos de Java que são mapeados para e
 
 #### <a name="possible-causes"></a>Possíveis causas:
 
-O motivo mais provável desse erro é que uma biblioteca Java obrigatória precisa ser adicionado ao projeto de aplicativo (**. csproj**). . Arquivos JAR não são resolvidos automaticamente. Uma associação de biblioteca Java não é sempre gerada em relação a um assembly de usuário que não existe no emulador ou dispositivo de destino (como o Google Maps **maps.jar**). Isso não é o caso de suporte de projeto de biblioteca do Android, como a biblioteca. JAR é incorporado na dll de biblioteca. Por exemplo: [4288 Bug](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
+O motivo mais provável desse erro é que uma biblioteca Java obrigatória precisa ser adicionado ao projeto de aplicativo (**. csproj**). . Arquivos JAR não são resolvidos automaticamente. Uma associação de biblioteca Java não é sempre gerada em relação a um assembly de usuário que não existe no emulador ou dispositivo de destino (como o Google Maps **maps.jar**). Isso não é o caso de suporte de projeto de biblioteca do Android, como a biblioteca. JAR é incorporado na dll de biblioteca. Por exemplo: [Bug 4288](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
 
-### <a name="problem-duplicate-custom-eventargs-types"></a>Problema: Duplicar tipos personalizados de EventArgs
+### <a name="problem-duplicate-custom-eventargs-types"></a>Problema: Tipos de EventArgs personalizados duplicados
 
 O build falha devido a tipos personalizados de EventArgs duplicados. Ocorre um erro como este:
 
@@ -222,7 +222,7 @@ Isso é um problema que ocorre com métodos Java de associação com tipos de re
     </attr>
     ```
 
-### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problema: Nomeie colisões em Classes internas / propriedades
+### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problema: Conflitos em Classes internas de nome / propriedades
 
 Visibilidade conflitante em objetos herdados.
 
@@ -238,7 +238,7 @@ Em Java, não é necessário que uma classe derivada tem a mesma visibilidade qu
 
 ### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>Problema: Um **. SO** biblioteca exigida pela associação não é carregar
 
-Alguns projetos de associação também podem depender de funcionalidade em um **. SO** biblioteca. É possível que o xamarin. Android não será carregado automaticamente a **. SO** biblioteca. Quando executa o código encapsulado do Java, xamarin. Android não consegue fazer a chamada JNI e a mensagem de erro _java.lang.UnsatisfiedLinkError: método nativo não encontrado:_ será exibido o logcat-out para o aplicativo.
+Alguns projetos de associação também podem depender de funcionalidade em um **. SO** biblioteca. É possível que o xamarin. Android não será carregado automaticamente a **. SO** biblioteca. Quando executa o código encapsulado do Java, xamarin. Android não consegue fazer a chamada JNI e a mensagem de erro _java.lang.UnsatisfiedLinkError: Método nativo não encontrado:_ será exibido o logcat-out para o aplicativo.
 
 A correção para isso é para carregar manualmente os **. SO** biblioteca com uma chamada para `Java.Lang.JavaSystem.LoadLibrary`. Por exemplo, supondo que um projeto xamarin. Android tem biblioteca compartilhada **libpocketsphinx_jni.so** incluído no projeto de associação com uma ação de build **EmbeddedNativeLibrary**, o trecho a seguir (executado antes de usar a biblioteca compartilhada) carregará o **. SO** biblioteca:
 
@@ -253,7 +253,7 @@ Neste artigo, estamos listados problemas comuns de solução de problemas associ
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Projetos de biblioteca](http://developer.android.com/tools/projects/index.html#LibraryProjects)
+- [Projetos de biblioteca](https://developer.android.com/tools/projects/index.html#LibraryProjects)
 - [Trabalhar com JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Habilitar a saída de diagnóstico](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output)
 - [Xamarin para desenvolvedores do Android](~/android/get-started/java-developers.md)

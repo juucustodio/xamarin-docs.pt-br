@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 006e4c2b2de56fef96c561e788992649f6582d24
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 833e24e91a37b92eb5025aacdc9509f092b823cd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054927"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672080"
 ---
 # <a name="path-basics-in-skiasharp"></a>Noções básicas de caminho no SkiaSharp
 
@@ -28,26 +28,26 @@ Um caminho gráfico é encapsulado pela [ `SKPath` ](xref:SkiaSharp.SKPath) obje
 
 Um contorno geralmente começa com uma chamada para o método a seguir `SKPath`:
 
-- [`MoveTo`](SkiaSharp.SKPath.MoveTo*) para iniciar uma nova delimitação
+- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) para iniciar uma nova delimitação
 
 O argumento para esse método é um único ponto, você pode expressar como um `SKPoint` de valor ou como separado de X e Y coordena. O `MoveTo` chamada estabelece um ponto no início de uma inicial e da delimitação *ponto atual*. Você pode chamar os métodos a seguir para continuar a delimitação com uma linha ou curva do ponto atual para um ponto especificado no método, que então se torna o novo ponto atual:
 
-- [`LineTo`](SkiaSharp.SKPath.LineTo*) Para adicionar uma linha reta ao caminho
-- [`ArcTo`](SkiaSharp.SKPath.ArcTo*) Para adicionar um arco, que é uma linha na circunferência de um círculo ou elipse
-- [`CubicTo`](SkiaSharp.SKPath.CubicTo*) Para adicionar uma spline de Bézier cúbica
-- [`QuadTo`](SkiaSharp.SKPath.QuadTo*) Para adicionar uma spline de Bézier quadrática
-- [`ConicTo`](SkiaSharp.SKPath.ConicTo*) Para adicionar um racional spline de Bézier quadrático, que pode processar com precisão as seções de conic (elipses, parábolas e hipérboles)
+- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) Para adicionar uma linha reta ao caminho
+- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) Para adicionar um arco, que é uma linha na circunferência de um círculo ou elipse
+- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*) Para adicionar uma spline de Bézier cúbica
+- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*) Para adicionar uma spline de Bézier quadrática
+- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) Para adicionar um racional spline de Bézier quadrático, que pode processar com precisão as seções de conic (elipses, parábolas e hipérboles)
 
 Nenhum desses cinco métodos contêm todas as informações necessárias para descrever a linha ou curva. Cada um desses cinco métodos funciona em conjunto com o ponto atual estabelecido pela chamada de método imediatamente anterior a ele. Por exemplo, o `LineTo` método adiciona uma linha reta para a delimitação com base no ponto atual, portanto, o parâmetro para `LineTo` é apenas um único ponto.
 
 O `SKPath` classe também define métodos que têm os mesmos nomes que esses seis métodos, mas com um `R` no início:
 
-- [`RMoveTo`]((SkiaSharp.SKPath.RMoveTo*))
-- [`RLineTo`](SkiaSharp.SKPath.RLineTo*)
-- [`RArcTo`](SkiaSharp.SKPath.RArcTo*)
-- [`RCubicTo`](SkiaSharp.SKPath.RCubicTo*)
-- [`RQuadTo`](SkiaSharp.SKPath.RQuadTo*)
-- [`RConicTo`](SkiaSharp.SKPath.RConicTo*)
+- [`RMoveTo`](xref:SkiaSharp.SKPath.RMoveTo*)
+- [`RLineTo`](xref:SkiaSharp.SKPath.RLineTo*)
+- [`RArcTo`](xref:SkiaSharp.SKPath.RArcTo*)
+- [`RCubicTo`](xref:SkiaSharp.SKPath.RCubicTo*)
+- [`RQuadTo`](xref:SkiaSharp.SKPath.RQuadTo*)
+- [`RConicTo`](xref:SkiaSharp.SKPath.RConicTo*)
 
 O `R` signifca *relativo*. Esses métodos têm a mesma sintaxe que os métodos correspondentes sem o `R` , mas são relativos ao ponto atual. Essas ferramentas são úteis para desenhar partes semelhantes de um caminho em um método que você chamar várias vezes.
 

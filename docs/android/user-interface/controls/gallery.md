@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 54c9e4fad71d74fe40fc119592a45f6c94b47056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b73428531deeacc7bdea271cdc0c2872038e99
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122251"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666953"
 ---
 # <a name="gallery"></a>Galeria
 
@@ -36,8 +36,8 @@ Em seguida, é o construtor da classe, em que o [`Context`](https://developer.xa
 para um `ImageAdapter` instância é definida e salvo em um campo local.
 Em seguida, isso implementa alguns métodos necessários herdados de [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/).
 O construtor e o [`Count`](https://developer.xamarin.com/api/property/Android.Widget.BaseAdapter.Count/)
-propriedade são auto-explicativos. Normalmente, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/p/System.Int32/)
-deve retornar o objeto real na posição especificada no adaptador, mas é ignorado para este exemplo. Da mesma forma, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/p/System.Int32/)
+propriedade são auto-explicativos. Normally, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/p/System.Int32/)
+deve retornar o objeto real na posição especificada no adaptador, mas é ignorado para este exemplo. Likewise, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/p/System.Int32/)
 deve retornar a id da linha do item, mas não é necessária aqui.
 
 O método faz o trabalho para aplicar uma imagem a um [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
@@ -57,7 +57,7 @@ Iniciar um novo projeto chamado *HelloGallery*.
 
 [![Captura de tela do novo projeto Android na caixa de diálogo nova solução](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
-Encontrar algumas fotos que você deseja usar, ou [baixar essas imagens de exemplo](http://developer.android.com/shareables/sample_images.zip).
+Encontrar algumas fotos que você deseja usar, ou [baixar essas imagens de exemplo](https://developer.android.com/shareables/sample_images.zip).
 Adicione os arquivos de imagem para o projeto **recursos/Drawable** directory. No **propriedades** janela, defina a Build Action de cada um para **AndroidResource**.
 
 Abra **Resources/Layout/Main.axml** e insira o seguinte:

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 1cb71fa2c73b9ab151555559b22def4be1cf5c73
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 81bb4e302f81b58eec91ea2a2aef985adbf72e2c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112761"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670916"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
@@ -19,7 +19,7 @@ O [GridViewPager](https://developer.xamarin.com/samples/GridViewPager/) que demo
 
 ![Captura de tela do exemplo de GridViewPager em uma tela quadrada](gridviewpager-images/gridviewpager.png)
 
-Primeiro adicione a [suporte do Xamarin Android Wear](http://www.nuget.org/packages/Xamarin.Android.Wear/) pacote NuGet ao seu projeto.
+Primeiro adicione a [suporte do Xamarin Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear/) pacote NuGet ao seu projeto.
 
 O layout XML tem esta aparência:
 
@@ -31,8 +31,8 @@ O layout XML tem esta aparência:
     android:keepScreenOn="true" />
 ```
 
-Criar um [`GridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(ou subclasse como [`FragmentGridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+Criar um [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(ou subclasse como [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 para fornecer modos de exibição a ser exibido como o usuário navega.
 
 O [adaptador de amostra](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) mostra como implementar os métodos necessários, incluindo substituições para `RowCount`, `GetColumnCount`, `GetBackground`, e `GetFragment`

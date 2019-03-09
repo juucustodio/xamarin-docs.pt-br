@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 0df39dc51cf17e1b9ecfd2279d047020f0237cb6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1195685db9e85e7fba006272ef300e22d47d1fa6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123084"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666332"
 ---
 # <a name="using-native-libraries"></a>Usar bibliotecas nativas
 
@@ -40,7 +40,7 @@ Como alternativa, você pode editar seu arquivo de projeto para especificar expl
 </ItemGroup>
 ```
 
-Para obter mais informações sobre como usar bibliotecas nativas, consulte [interoperabilidade com bibliotecas nativas](http://www.mono-project.com/docs/advanced/pinvoke/).
+Para obter mais informações sobre como usar bibliotecas nativas, consulte [interoperabilidade com bibliotecas nativas](https://www.mono-project.com/docs/advanced/pinvoke/).
 
 ## <a name="debugging-native-code-with-visual-studio-2017"></a>Depurando código nativo com o Visual Studio 2017
 

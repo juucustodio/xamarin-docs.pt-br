@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 322bb630194f973d37d7ca27a0ca9fe1b548b240
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f8fae79af654339b54a8df0d2ea32eef38f34adb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107203"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668446"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin. IOS 9 – solução de problemas
 
@@ -24,7 +24,7 @@ O Designer do iOS Xamarin ainda não dá suporte para recursos do Xcode 7. Story
 
 suporte para recursos do Xcode 7 do Designer do iOS é direcionado para a próxima versão do recurso de 6 de ciclo. A versão prévia do ciclo de 6 está disponível atualmente no canal alfa e tem suporte limitado para os novos recursos do Xcode 7.
 
-Solução alternativa parcial para o Visual Studio para Mac: o storyboard com o botão direito e escolha **abrir com** > **Xcode Interface Builder**.
+Solução alternativa parcial para o Visual Studio para Mac: O storyboard com o botão direito e escolha **abrir com** > **Xcode Interface Builder**.
 
 ## <a name="where-are-the-ios-8-simulators"></a>Onde estão o iOS 8 simuladores?
 
@@ -42,23 +42,23 @@ No iOS 8 (e anterior), elementos de interface do usuário em Storyboards poderia
 
 Se o Storyboard mesmo em executar no iOS 9, isso resultará em uma exceção no seguinte formato:
 
-> Finalizando o aplicativo devido uma exceção não percebida 'NSInvalidArgumentException', motivo: '*** + [NSLayoutConstraint constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:]: uma restrição não pode ser feita entre à esquerda/à direita atributo e um atributo de direita ou esquerda. Use à esquerda/direita para ambos ou nenhum dos dois.'
+> Encerrando o aplicativo devido a exceção não percebida 'NSInvalidArgumentException', motivo: ' * * * + [NSLayoutConstraint constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:]: Uma restrição não pode ser feita entre um atributo à esquerda/direita e um atributo de direita/esquerda. Use à esquerda/direita para ambos ou nenhum dos dois.'
 
 iOS 9 impõe layouts para usar um **direita** & **esquerda** _ou_ **levando**  &   **À direita** atributos, mas *não* ambos. Para corrigir esse problema, altere todas as restrições de layout para usar o mesmo atributo definido dentro do arquivo do Storyboard.
 
-Para obter mais informações, consulte o [erro de restrição do iOS 9](http://stackoverflow.com/questions/32692841/ios-9-constraint-error) discussão de Stack Overflow.
+Para obter mais informações, consulte o [erro de restrição do iOS 9](https://stackoverflow.com/questions/32692841/ios-9-constraint-error) discussão de Stack Overflow.
 
-## <a name="error-itms-90535-unexpected-cfbundleexecutable-key"></a>Erro ITMS-90535: Inesperado CFBundleExecutable chave
+## <a name="error-itms-90535-unexpected-cfbundleexecutable-key"></a>ERROR ITMS-90535: Chave de CFBundleExecutable inesperado
 
 Depois de alternar para o iOS 9, de um aplicativo usa componentes de terceiros 3ª (especificamente nosso componente Google Maps existente) que foi compilado e executado no iOS 8 (ou anterior), ao tentar enviar a nova compilação para o iTunes Connect, você pode receber um erro no formulário:
 
-> Erro ITMS-90535: Chave de CFBundleExecutable inesperado. O pacote no 'Payload/app-name.app/component.bundle' não contém um executável do pacote...
+> ERROR ITMS-90535: Chave de CFBundleExecutable inesperado. O pacote no 'Payload/app-name.app/component.bundle' não contém um executável do pacote...
 
 Esse problemas podem geralmente ser resolvido, localizando o pacote nomeado no projeto e em seguida, - editado assim como a mensagem de erro sugere - a `Info.plist` que está no grupo, removendo o `CFBundleExecutable` chave. O `CFBundlePackageType` chave deve ser definida como `BNDL` também.
 
 Depois de fazer essas alterações, fazer uma limpeza e recompile o projeto inteiro. Você deve ser capaz de enviar para o iTunes Connect sem problemas depois de fazer essas alterações.
 
-Para obter mais informações, consulte este [Stack Overflow](http://stackoverflow.com/questions/32096130/unexpected-cfbundleexecutable-key) discussão.
+Para obter mais informações, consulte este [Stack Overflow](https://stackoverflow.com/questions/32096130/unexpected-cfbundleexecutable-key) discussão.
 
 ## <a name="cfnetwork-sslhandshake-failed--9824-error"></a>Falha de CFNetwork SSLHandshake erro (-9824)
 
@@ -90,9 +90,9 @@ Consulte nosso [informações de compatibilidade do iOS 9](~/ios/platform/introd
 
 ## <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell.ContentView é Null em construtores
 
-**Motivo:** no iOS 9 a `initWithFrame:` construtor agora é necessária devido a alterações de comportamento no iOS 9, como o [UICollectionView documentação declara](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se você registrou uma classe para o identificador especificado e deve ser criada uma nova célula, a célula agora é inicializada chamando seu `initWithFrame:` método.
+**Motivo:** No iOS 9 a `initWithFrame:` construtor agora é necessária devido a alterações de comportamento no iOS 9, como o [UICollectionView documentação declara](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se você registrou uma classe para o identificador especificado e deve ser criada uma nova célula, a célula agora é inicializada chamando seu `initWithFrame:` método.
 
-**Correção:** adicionar o `initWithFrame:` construtor como este:
+**Correção:** Adicionar o `initWithFrame:` construtor como este:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -108,9 +108,9 @@ Amostras relacionadas: [MotionGraph](https://github.com/xamarin/monotouch-sample
 
 ## <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView Falha ao Init com o codificador ao carregar um modo de exibição de um Xib/Nib
 
-**Motivo:** o `initWithCoder:` construtor é a chamada quando o carregamento de um modo de exibição de um arquivo Xib do construtor de Interface. Se esse construtor não é exportado o código não gerenciado não é possível chamar nossa versão gerenciada dele. Anteriormente (por exemplo. no iOS 8) o `IntPtr` construtor foi invocado para inicializar o modo de exibição.
+**Motivo:** O `initWithCoder:` construtor é a chamada quando o carregamento de um modo de exibição de um arquivo Xib do construtor de Interface. Se esse construtor não é exportado o código não gerenciado não é possível chamar nossa versão gerenciada dele. Anteriormente (por exemplo. no iOS 8) o `IntPtr` construtor foi invocado para inicializar o modo de exibição.
 
-**Correção:** criar e exportar o `initWithCoder:` construtor como este:
+**Correção:** Criar e exportar o `initWithCoder:` construtor como este:
 
 ```csharp
 [Export ("initWithCoder:")]
@@ -120,7 +120,7 @@ public YourClassName (NSCoder coder) : base (coder)
 }
 ```
 
-Exemplo relacionado: [bate-papo](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
+Exemplo relacionado: [Chat](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
 
 ## <a name="dyld-message-no-cache-image-with-name"></a>Mensagem Dyld: Nenhuma imagem de Cache com o nome...
 
@@ -131,9 +131,9 @@ Dyld Error Message:
 Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**Motivo:** este é um bug no vinculador nativo da Apple, que acontece quando eles fizerem uma estrutura privada pública (JavaScriptCore se tornou público no iOS 7, antes que ele era uma estrutura privada), e o destino da implantação do aplicativo é para uma versão iOS quando o Framework era privado. Nesse caso, vinculador da Apple será vinculada à versão particular do framework em vez da versão pública.
+**Motivo:** Este é um bug no vinculador nativo da Apple, que acontece quando eles fizerem uma estrutura privada pública (JavaScriptCore se tornou público no iOS 7, antes que ele era uma estrutura privada), e o destino da implantação do aplicativo é para uma versão iOS quando o framework era privado. Nesse caso, vinculador da Apple será vinculada à versão particular do framework em vez da versão pública.
 
-**Correção:** isso será abordado para iOS 9, mas não há uma solução fácil aplicar por conta própria nesse: apenas uma versão iOS posterior em seu projeto (você pode tentar iOS 7 neste caso) de destino. Outras estruturas podem apresentar problemas semelhantes, por exemplo o framework do WebKit se tornou público no iOS 8 (e para direcionamento ao iOS 7 irá resultar nesse erro; você deve ter como destino o iOS 8 para usar WebKit em seu aplicativo).
+**Correção:** Isso será abordado para iOS 9, mas não há uma solução fácil aplicar por conta própria nesse: apenas uma versão iOS posterior em seu projeto (você pode tentar iOS 7 neste caso) de destino. Outras estruturas podem apresentar problemas semelhantes, por exemplo o framework do WebKit se tornou público no iOS 8 (e para direcionamento ao iOS 7 irá resultar nesse erro; você deve ter como destino o iOS 8 para usar WebKit em seu aplicativo).
 
 ## <a name="untrusted-enterprise-developer"></a>Desenvolvedor corporativo não confiável
 
@@ -177,7 +177,7 @@ Por fim, seu aplicativo deve usar um arquivo de storyboard para sua tela de inic
 
 Ao compilar e executar um aplicativo existente do xamarin. IOS para iOS 9, você poderá receber um erro no formulário:
 
-> Exceção Objective-C é gerada.  Nome: NSInternalInconsistencyException motivo: janelas de aplicativos devem ter um controlador de exibição de raiz no final da inicialização do aplicativo
+> Exceção Objective-C é gerada.  Nome: NSInternalInconsistencyException motivo: Janelas de aplicativos devem ter um controlador de exibição de raiz no final do aplicativo Iniciar
 
 Isso é o erro está sendo gerado porque o aplicativo Windows devem ter um controlador de exibição de raiz no final da inicialização do aplicativo e não de seu aplicativo existente.
 

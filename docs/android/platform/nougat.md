@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: bf2842679aded21c9677d9cef31910f273518acd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: de2b92a4007f085a14c16f0c1e8ca9e568df1aff
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119170"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668355"
 ---
 # <a name="nougat-features"></a>Recursos de nougat
 
@@ -27,7 +27,7 @@ Este artigo fornece uma estrutura de tópicos dos recursos introduzidos no Andro
 
 [![Imagens de Hero de tablets Android e telefones executando o Android Nougat](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
-Para obter mais informações sobre o Android 7.x APIs, consulte [Android 7.1 para desenvolvedores](http://developer.android.com/preview/api-overview.html).
+Para obter mais informações sobre o Android 7.x APIs, consulte [Android 7.1 para desenvolvedores](https://developer.android.com/preview/api-overview.html).
 Para obter uma lista dos problemas conhecidos do xamarin. Android 7.0, consulte o [notas de versão](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/).
 
 Android Nougat oferece muitos novos recursos de interesse para desenvolvedores do xamarin. Android. Esses recursos incluem:
@@ -53,7 +53,7 @@ A seguir é necessário para usar os novos recursos do Android Nougat em aplicat
 
 -   **SDK do Android** -7.0 do SDK do Android (API 24) ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
 
--   **Java Developer Kit** &ndash; desenvolvimento do Xamarin Android 7.0 requer [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior, se você estiver desenvolvendo para o nível de API 24 ou superior (JDK 8 também dá suporte a níveis de API anteriores ao 24). A versão de 64 bits do JDK 8 é necessária se você estiver usando controles personalizados ou o pré-visualizador de formulários.
+-   **Java Developer Kit** &ndash; desenvolvimento do Xamarin Android 7.0 requer [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior, se você estiver desenvolvendo para o nível de API 24 ou superior (JDK 8 também dá suporte a níveis de API anteriores ao 24). A versão de 64 bits do JDK 8 é necessária se você estiver usando controles personalizados ou o pré-visualizador de formulários.
 
 > [!IMPORTANT]
 > O Xamarin.Android não é compatível com o JDK 9.
@@ -124,7 +124,7 @@ Quando você cria um projeto do Android, você deve configurar as configuraçõe
 Se você estiver usando um emulador, inicie o Gerenciador de AVD do Android e criar um novo dispositivo usando as seguintes configurações:
 
 -   Dispositivo: Nexus 5 X, Nexus 6, Nexus 6P, Nexus Player, Nexus 9 ou Pixel C.
--   Destino: Android 7.0 – nível de API 24
+-   destino: 7.0 Android – 24 de nível de API
 -   ABI: x86 ou x86\_64
 
 Por exemplo, este dispositivo virtual é configurado para emular um Nexus 6:

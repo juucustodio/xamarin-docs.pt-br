@@ -1,19 +1,14 @@
 ---
 title: Introdução ao MonoTouch para xamarin. IOS
-description: Este documento descreve MonoTouch (MT. D), uma estrutura para desenvolvimento de interface do usuário rápida e declarativo com xamarin. IOS. Ele aborda como usar as APIs MonoTouch.Dialog para criar uma interface no código ou JSON e usar recursos como puxar para atualizar, pesquisa, o carregamento de imagem de plano de fundo e muito mais.
+description: 'Este documento descreve MonoTouch (MT. D), uma estrutura para desenvolvimento de interface do usuário rápida e declarativo com xamarin. IOS. Ele aborda como usar as APIs MonoTouch.Dialog para criar uma interface no código ou JSON e usar recursos como puxar para atualizar, pesquisa, o carregamento de imagem de plano de fundo e muito mais.'
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: c291a440a1937d2b0f1c229e3fa969caedba9ab9
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675452"
 ---
+
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introdução ao MonoTouch para xamarin. IOS
 
 MonoTouch, conhecido como MT. D para abreviar, é um kit de ferramentas de desenvolvimento da interface do usuário rápida que permite aos desenvolvedores criar as telas do aplicativo e a navegação por meio de informações, em vez do tédio de criação de controladores de exibição, tabelas, etc. Como tal, ele fornece uma simplificação significativa de redução de desenvolvimento e o código de interface do usuário. Por exemplo, considere a seguinte captura de tela:
@@ -393,7 +388,7 @@ O `JsonElement` é uma subclasse de `RootElement` que estende um `RootElement` s
 O `JsonElement` é um `RootElement` que pode ser instanciado em duas formas. Cria uma versão um `RootElement` que carregará o conteúdo sob demanda. Eles são criados usando o `JsonElement` construtores que usam um argumento extra no final, a url para carregar o conteúdo do:
 
 ```csharp
-var je = new JsonElement ("Dynamic Data", "http://tirania.org/tmp/demo.json");
+var je = new JsonElement ("Dynamic Data", "https://tirania.org/tmp/demo.json");
 ```
 
 A outra forma cria os dados de um arquivo local ou um existente `System.Json.JsonObject` que você já tiver analisado:
@@ -589,10 +584,10 @@ Este artigo abordou as muitas informações sobre MonoTouch. Ele discutiu os fun
 
 - [Screencast - Miguel de Icaza cria uma tela de logon do iOS com MonoTouch](http://youtu.be/3butqB1EG0c)
 - [Screencast - criar facilmente iOS interfaces do usuário com MonoTouch](http://youtu.be/j7OC5r8ZkYg)
-- [Passo a passo: criar um aplicativo usando a API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
-- [Passo a passo: criar um aplicativo usando a API de reflexão](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
-- [Passo a passo: usar um elemento JSON para criar uma interface do usuário](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
+- [Passo a passo: criando um aplicativo usando a API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
+- [Passo a passo: criando um aplicativo usando a API de reflexão](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
+- [Passo a passo: Usando um elemento JSON para criar uma Interface do usuário](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [MonoTouch.Dialog JSON Markup](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
 - [Caixa de diálogo MonoTouch no Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [Referência de classe UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Referência de classe UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [Referência de classe UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Referência de classe UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

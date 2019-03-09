@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 84c4b699ba2c046eeb70963f3df71ca9a4760f3b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61b3fee9009afb86ccd3fd0e16d7812a8e90feb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104174"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672788"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controles de câmera manuais no xamarin. IOS
 
@@ -276,7 +276,7 @@ Com esse código em vigor, os controles de câmera manuais podem ser facilmente 
 
 Ao permitir que o usuário final entrem em contato diretamente com controles do foco, um aplicativo pode fornecer mais artístico controle sobre a imagem extraída.
 
-Por exemplo, fotógrafa profissional pode suavizar o foco de uma imagem para obter um [Bokeh efeito](http://en.wikipedia.org/wiki/Bokeh):
+Por exemplo, fotógrafa profissional pode suavizar o foco de uma imagem para obter um [Bokeh efeito](https://en.wikipedia.org/wiki/Bokeh):
 
 [![](intro-to-manual-camera-controls-images/image2.png "Um efeito Bokeh")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
@@ -517,7 +517,7 @@ Antes de discutir os detalhes de controle da exposição em um aplicativo IOS 8.
 Os três elementos básicos que são reunidos para controlar a exposição são:
 
 -  **Obturador velocidade** – esse é o período de tempo que obturador está aberto para permitir que a luz sobre o sensor da câmera. A mais curta o tempo que obturador estiver aberto, a menos luz é permitem que e é a imagem de nítidos (menos movimento desfoque). Quanto mais longa obturador estiver aberto, a luz mais let além e movimento mais desfoque ocorre.
--  **Mapeamento de ISO** – isso é um termo emprestado da fotografia de filme e refere-se a confidencialidade de produtos químicos no filme à luz. Valores de ISO de baixa no filme têm menor detalhamento e a reprodução de cores mais refinada; valores baixos de ISO nos sensores digitais têm menos ruído de sensor, mas menos brilho. Quanto maior o valor ISO, quanto mais brilhantes na imagem, mas com mais ruído do sensor. "ISO" em um sensor digital é uma medida da [ganho eletrônico](http://en.wikipedia.org/wiki/Gain), não é um recurso físico. 
+-  **Mapeamento de ISO** – isso é um termo emprestado da fotografia de filme e refere-se a confidencialidade de produtos químicos no filme à luz. Valores de ISO de baixa no filme têm menor detalhamento e a reprodução de cores mais refinada; valores baixos de ISO nos sensores digitais têm menos ruído de sensor, mas menos brilho. Quanto maior o valor ISO, quanto mais brilhantes na imagem, mas com mais ruído do sensor. "ISO" em um sensor digital é uma medida da [ganho eletrônico](https://en.wikipedia.org/wiki/Gain), não é um recurso físico. 
 -  **Abertura de lente** – esse é o tamanho da abertura das lentes. Em todos os dispositivos iOS a diafragma for corrigida, para que o somente dois valores que podem ser usados para ajustar a exposição do obturador velocidade e ISO.
 
 
@@ -817,7 +817,7 @@ O novo iOS 8 exposição API permite que o aplicativo assumir o controle do proc
 
 Antes de discutir os detalhes de controle de saldo em branco em um aplicativo IOS 8. Vamos dar uma olhada rápida em branco como funciona o saldo:
 
-No estudo de percepção de cor, o [CIE 1931 RGB de cor espaço e o espaço de cor CIE 1931 XYZ](http://en.wikipedia.org/wiki/CIE_1931_color_space) são o primeiro matematicamente, espaços de cores. Eles foram criados pela comissão internacional de iluminação (CIE) em 1931.
+No estudo de percepção de cor, o [CIE 1931 RGB de cor espaço e o espaço de cor CIE 1931 XYZ](https://en.wikipedia.org/wiki/CIE_1931_color_space) são o primeiro matematicamente, espaços de cores. Eles foram criados pela comissão internacional de iluminação (CIE) em 1931.
 
 [![](intro-to-manual-camera-controls-images/image17.png "O espaço de cores RGB CIE 1931 e CIE 1931 XYZ espaço de cores")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
@@ -825,7 +825,7 @@ O gráfico acima mostra todas as cores visíveis ao olho humano, dos níveis mai
 
 Como visível no gráfico, há valores de X e Y que podem ser plotados no gráfico que seria fora do intervalo de visão humana e, como resultado, essas cores não podem ser reproduzidas por uma câmera.
 
-A curva menor no gráfico acima é chamada de [Planckian local](http://en.wikipedia.org/wiki/Planckian_locus), que expressa a temperatura de cor (em graus kelvin) com números mais altos no lado do azul (mais quente) e inferior de números no lado do vermelho (mais frio). Elas são úteis para situações de iluminação típico.
+A curva menor no gráfico acima é chamada de [Planckian local](https://en.wikipedia.org/wiki/Planckian_locus), que expressa a temperatura de cor (em graus kelvin) com números mais altos no lado do azul (mais quente) e inferior de números no lado do vermelho (mais frio). Elas são úteis para situações de iluminação típico.
 
 Em condições de iluminação misto, os ajustes de balanço de branco precisa desviar-se o local de Planckian para fazer as alterações necessárias. Nessas situações, que o ajuste será necessário ser deslocados para verde ou vermelho/magenta lado o CIE dimensionar.
 

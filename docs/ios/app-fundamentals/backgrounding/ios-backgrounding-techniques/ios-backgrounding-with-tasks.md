@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120990"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669824"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding com tarefas
 
@@ -67,7 +67,7 @@ public override void DidEnterBackground (UIApplication application) {
 Começamos, substituindo o `DidEnterBackground` método na `AppDelegate`, em que registramos nossa tarefa por meio de `BeginBackgroundTask` como fizemos no exemplo anterior. Em seguida, podemos gerar um novo thread e executar a nossa tarefa de longa execução. Observe que o `EndBackgroundTask` é agora feita chamada de dentro da tarefa de execução longa, já que o `DidEnterBackground` método será já devolvidos.
 
 > [!IMPORTANT]
-> o iOS usa uma [mecanismo de watchdog](http://developer.apple.com/library/ios/qa/qa1693/_index.html) para garantir que a interface de usuário do aplicativo permaneça responsivo. Um aplicativo que gasta muito tempo na `DidEnterBackground` deixará de responder na interface do usuário. Iniciar as tarefas sejam executadas em segundo plano permite que `DidEnterBackground` retornar de maneira oportuna, manter a interface do usuário responsiva e impedindo que o watchdog encerrar o aplicativo.
+> o iOS usa uma [mecanismo de watchdog](https://developer.apple.com/library/ios/qa/qa1693/_index.html) para garantir que a interface de usuário do aplicativo permaneça responsivo. Um aplicativo que gasta muito tempo na `DidEnterBackground` deixará de responder na interface do usuário. Iniciar as tarefas sejam executadas em segundo plano permite que `DidEnterBackground` retornar de maneira oportuna, manter a interface do usuário responsiva e impedindo que o watchdog encerrar o aplicativo.
 
 
 ## <a name="handling-background-task-time-limits"></a>Tratamento de limites de tempo de tarefa de segundo plano

@@ -1,5 +1,5 @@
 ---
-title: "Android.Support.v7.AppCompat – nenhum recurso encontrado que corresponde ao nome fornecido: attr 'android: actionModeShareDrawable'"
+title: "Android.Support.v7.AppCompat – Não encontramos um recurso correspondente ao nome fornecido: attr 'android:actionModeShareDrawable'"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5814069C-FC43-41DE-B5A5-024D05E59929
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: fea681ac3b99abed09d3d3e745bd4bf6015970df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ff2a586773e33a1f4cf78657c3c69c22e79ed047
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112410"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670227"
 ---
-# <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat – nenhum recurso encontrado que corresponde ao nome fornecido: attr 'android: actionModeShareDrawable'
+# <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat – Não encontramos um recurso correspondente ao nome fornecido: attr 'android:actionModeShareDrawable'
 
 1. Certifique-se de que baixar os mais recentes extras, bem como o Android 5.0 SDK por meio do Gerenciador de SDK do Android (API 21).
 
@@ -24,11 +24,11 @@ ms.locfileid: "50112410"
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 
-*Observação*: se você instalar manualmente isso por meio do Console do Gerenciador de pacotes, certifique-se de também instalar a mesma versão do Xamarin.Android.Support.v4
+*Observação*: Se você instalar manualmente isso por meio do Console do Gerenciador de pacotes, certifique-se de que também instalar a mesma versão do Xamarin.Android.Support.v4
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v4/](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 
-Referência de estouro de pilha: [http://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro](http://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro)
+Referência de estouro de pilha: [https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro](https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro)
 
 ## <a name="see-also"></a>Consulte também
 

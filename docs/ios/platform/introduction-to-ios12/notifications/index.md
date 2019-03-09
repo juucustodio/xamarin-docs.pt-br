@@ -6,21 +6,15 @@ ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
-ms.openlocfilehash: f4abc3c87a4c38da8863347fa08f198dece791a8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111458"
+ms.date: 09/04/2018
 ---
 # <a name="notifications-in-ios-12"></a>Notificações no iOS 12
 
-## <a name="critical-alertscritical-alertsmd"></a>[Alertas críticos](critical-alerts.md)
+## <a name="critical-alertscritical-alertsmd"></a>[Alertas Críticos](critical-alerts.md)
 
 iOS 12 torna possível enviar alertas críticos. Alertas críticos tocar um som, independentemente de estarem ou não, não incomodar está habilitado ou a opção de alternar está desativado.
 
-## <a name="dynamic-notification-action-buttonsdynamic-actionsmd"></a>[Botões de ação de notificação dinâmico](dynamic-actions.md)
+## <a name="dynamic-notification-action-buttonsdynamic-actionsmd"></a>[Botões de ação de notificação dinâmicos](dynamic-actions.md)
 
 Com o iOS 12, as notificações agora podem modificar seus botões de ação em tempo de execução.
 Isso torna possível exibir ações mais relevantes para o conteúdo de notificação e a interação do usuário com ele.
@@ -37,6 +31,6 @@ No iOS 12, a interface do usuário personalizada de uma notificação pode inclu
 
 iOS 12 can link profundo à tela de gerenciamento de notificação do aplicativo, tornando mais fácil para os usuários habilitar ou desabilitar tipos específicos de notificações.
 
-## <a name="provisional-notificationsprovisionalmd"></a>[Notificações provisionais](provisional.md)
+## <a name="provisional-notificationsprovisionalmd"></a>[Notificações provisórias](provisional.md)
 
 Notificações provisória permitem que os aplicativos exibir notificações silenciosa sem exigir que o usuário optar por participar. Notificações silenciosa não tocar um som e aparecem somente no Centro de notificação. Eles fornecem uma maneira para os usuários visualizem as notificações de um aplicativo envia antes de decidir se deseja ou não permitir ou não-los.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: bb8aec5a5054c28cf7862d14148e7f2000fa3a35
-ms.sourcegitcommit: c77f84a0686d16de6ac630271fccac719fd9eec4
+ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56307912"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668342"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitações do xamarin. IOS
 
@@ -27,7 +27,7 @@ Estas são as limitações de xamarin. IOS em comparação comparadas a área de
 
 Ao contrário do Mono/.NET tradicional, o código no iPhone é compilado estaticamente antecipadamente em vez de que está sendo compilado sob demanda por um compilador JIT.
 
-Mono [AOT completo](http://www.mono-project.com/docs/advanced/aot/#full-aot) tecnologia tem algumas limitações em relação aos genéricos, esses erros são causados porque nem todos os possíveis instanciação genérica pode ser determinada com antecedência no tempo de compilação. Isso não é um problema para tempos de execução regulares do .NET ou Mono, como sempre, o código é compilado em tempo de execução usando o Just in compilador do tempo. Mas isso apresenta um desafio para um compilador estático, como xamarin. IOS.
+Mono [AOT completo](https://www.mono-project.com/docs/advanced/aot/#full-aot) tecnologia tem algumas limitações em relação aos genéricos, esses erros são causados porque nem todos os possíveis instanciação genérica pode ser determinada com antecedência no tempo de compilação. Isso não é um problema para tempos de execução regulares do .NET ou Mono, como sempre, o código é compilado em tempo de execução usando o Just in compilador do tempo. Mas isso apresenta um desafio para um compilador estático, como xamarin. IOS.
 
 Alguns dos problemas comuns que os desenvolvedores encontram, incluem:
 

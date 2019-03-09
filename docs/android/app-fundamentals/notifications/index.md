@@ -6,13 +6,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a0778de5dcc7e21ba011fe144be703b3b83b8247
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114035"
 ---
+
 # <a name="notifications-in-xamarinandroid"></a>Notificações no xamarin. Android
 
 
@@ -36,7 +31,7 @@ Este passo a passo aborda como usar notificações locais em um aplicativo xamar
 
 [O firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) é um serviço que facilita o sistema de mensagens entre aplicativos móveis e aplicativos de servidor. O firebase Cloud Messaging pode ser usado para implementar notificações remotas (também chamadas de notificações por push) em aplicativos xamarin. Android.
 
-[Notificações](http://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; tópico esse desenvolvedor Android é o guia definitivo para notificações do Android. Ele inclui um design de seção de considerações que ajuda você a projetar suas notificações, de modo que eles estão em conformidade com as diretrizes da interface do usuário do Android. Ele fornece informações complementares sobre navegação preserviing ao iniciar uma atividade, e explica como exibir o progresso em uma notificação e controle a reprodução de mídia na tela de bloqueio. 
+[Notificações](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; tópico esse desenvolvedor Android é o guia definitivo para notificações do Android. Ele inclui um design de seção de considerações que ajuda você a projetar suas notificações, de modo que eles estão em conformidade com as diretrizes da interface do usuário do Android. Ele fornece informações complementares sobre navegação preserviing ao iniciar uma atividade, e explica como exibir o progresso em uma notificação e controle a reprodução de mídia na tela de bloqueio. 
 
 [NotificationListenerService](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/) &ndash; Android esse serviço torna possível para seu aplicativo escutar (e interagir com) todas as notificações são postados no dispositivo Android, não apenas as notificações de que seu aplicativo está registrado para receber. Observe que o usuário explicitamente deve conceder permissão ao seu aplicativo para que ele seja capaz de detectar notificações no dispositivo.
 

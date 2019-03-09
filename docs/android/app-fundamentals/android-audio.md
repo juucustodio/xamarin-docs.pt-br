@@ -1,5 +1,5 @@
 ---
-title: Áudio Android
+title: Android Audio
 description: O sistema operacional Android fornece amplo suporte para multimídia, que abrange o áudio e vídeo. Este guia se concentra em áudio no Android e aborda a reprodução e gravação de áudio usando o player de áudio internos e classes de gravador, bem como a API de áudio de nível baixo. Ele também aborda o trabalho com eventos de áudio de difusão por outros aplicativos, para que os desenvolvedores podem criar aplicativos bem comportados.
 ms.prod: xamarin
 ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 9b7e9354250881074fc6f0db5d97dc83e4d3fa77
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a1a9dd06fb3cd6899dd3a564072bb63e413edf22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114659"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667526"
 ---
-# <a name="android-audio"></a>Áudio Android
+# <a name="android-audio"></a>Android Audio
 
 _O sistema operacional Android fornece amplo suporte para multimídia, que abrange o áudio e vídeo. Este guia se concentra em áudio no Android e aborda a reprodução e gravação de áudio usando o player de áudio internos e classes de gravador, bem como a API de áudio de nível baixo. Ele também aborda o trabalho com eventos de áudio de difusão por outros aplicativos, para que os desenvolvedores podem criar aplicativos bem comportados._
 
@@ -124,7 +124,7 @@ Gravação de áudio com a `MediaRecorder` exige as seguintes etapas:
 
 2. Especifique qual dispositivo de hardware para usar para capturar a entrada de áudio por meio de [SetAudioSource](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioSource/p/Android.Media.AudioSource/) método.
 
-3. Defina o formato de áudio de arquivo de saída usando o [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) método. Para obter uma lista dos tipos de áudio com suporte, consulte [Android suporte para formatos de mídia](http://developer.android.com/guide/appendix/media-formats.html).
+3. Defina o formato de áudio de arquivo de saída usando o [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) método. Para obter uma lista dos tipos de áudio com suporte, consulte [Android suporte para formatos de mídia](https://developer.android.com/guide/appendix/media-formats.html).
 
 4. Chame o [SetAudioEncoder](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioEncoder/p/Android.Media.AudioEncoder/) método para definir o tipo de codificação de áudio.
 
@@ -210,7 +210,7 @@ Foco de áudio é uma ideia semelhante e impede que mais de um aplicativo de exe
 
 Foco de áudio pode ser concedido imediatamente, ou inicialmente negado e concedido mais tarde. Por exemplo, se um aplicativo solicitações áudio foco durante uma chamada telefônica, será negado, mas também pode ser concedido foco depois que a chamada telefônica é concluída. Nesse caso, um ouvinte está registrado para responder adequadamente se o foco do áudio é tomado. Solicitar o foco de áudio é usado para determinar se é ou não Okey reproduzir ou gravar áudio.
 
-Para obter mais informações sobre o foco de áudio, consulte [gerenciamento de foco áudio](http://developer.android.com/training/managing-audio/audio-focus.html).
+Para obter mais informações sobre o foco de áudio, consulte [gerenciamento de foco áudio](https://developer.android.com/training/managing-audio/audio-focus.html).
 
 
 

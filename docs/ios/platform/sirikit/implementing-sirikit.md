@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: ea037aaaac97d9f326f1a2fbcb28d97c9d8a9b45
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d5c1394bee2ca2419904b077522fac9d03d825
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110245"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669434"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementar SiriKit no xamarin. IOS
 
@@ -209,7 +209,7 @@ Devido à segurança estrita de Apple colocou em torno do framework SiriKit, qua
 
 Faça o seguinte em seu Mac:
 
-1. Em um navegador da web, navegue até [ http://developer.apple.com ](http://developer.apple.com) e faça logon em sua conta.
+1. Em um navegador da web, navegue até [ https://developer.apple.com ](https://developer.apple.com) e faça logon em sua conta.
 2. Clique em **certificados**, **identificadores** e **perfis**.
 3. Selecione **perfis de provisionamento** e selecione **IDs do aplicativo**, em seguida, clique o **+** botão.
 4. Insira um **nome** para o novo perfil.
@@ -235,7 +235,7 @@ Faça o seguinte em seu Mac:
 18. Clique duas vezes o `Info.plist` arquivo o **Gerenciador de soluções**.
 18. Certifique-se de que o **identificador de pacote** coincide com aquele criado no Portal do desenvolvedor da Apple acima: 
 
-    [![](implementing-sirikit-images/setup06.png "O identificador de pacote")](implementing-sirikit-images/setup06.png#lightbox)
+    [![](implementing-sirikit-images/setup06.png "The Bundle Identifier")](implementing-sirikit-images/setup06.png#lightbox)
 18. No **Gerenciador de soluções**, selecione o **projeto**.
 19. Clique com botão direito no projeto e selecione **opções**.
 21. Selecione **assinatura do pacote iOS**, selecione o **identidade de assinatura** e **perfil de provisionamento** criado acima: 
@@ -664,11 +664,11 @@ Expanda o `IntentsSupported` da chave e adicione o nome de qualquer classe de in
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](implementing-sirikit-images/intents09.png "A chave INSendMessageIntent")](implementing-sirikit-images/intents09.png#lightbox)
+[![](implementing-sirikit-images/intents09.png "The INSendMessageIntent key")](implementing-sirikit-images/intents09.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](implementing-sirikit-images/intents09w.png "A chave INSendMessageIntent")](implementing-sirikit-images/intents09w.png#lightbox)
+[![](implementing-sirikit-images/intents09w.png "The INSendMessageIntent key")](implementing-sirikit-images/intents09w.png#lightbox)
 
 -----
 
@@ -923,11 +923,11 @@ Expanda o `IntentsSupported` da chave e adicione o nome de qualquer classe de in
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](implementing-sirikit-images/intents15.png "A chave INSendMessageIntent")](implementing-sirikit-images/intents15.png#lightbox)
+[![](implementing-sirikit-images/intents15.png "The INSendMessageIntent key")](implementing-sirikit-images/intents15.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](implementing-sirikit-images/intents15w.png "A chave INSendMessageIntent")](implementing-sirikit-images/intents15w.png#lightbox)
+[![](implementing-sirikit-images/intents15w.png "The INSendMessageIntent key")](implementing-sirikit-images/intents15w.png#lightbox)
 
 -----
 

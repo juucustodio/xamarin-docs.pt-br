@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 05a2187a5e8dc010f04e89757b566eaf44cb5fd6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563505"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668928"
 ---
 # <a name="location-services"></a>Serviços de localização
 
@@ -32,7 +32,7 @@ No Android, não importa qual API você escolher para trabalhar com dados de loc
 
 Várias tecnologias são usadas internamente para identificar a localização do usuário. O hardware usado depende do tipo de *localizador* selecionado para o trabalho de coleta de dados. Android usa três provedores de local:
 
--   **Provedor de GPS** &ndash; GPS fornece o local mais preciso, usa mais poder e funciona melhor em áreas externas. Este provedor usa uma combinação de GPS e GPS assistido ([aGPS](http://en.wikipedia.org/wiki/Assisted_GPS)), que retorna dados GPS coletados pelo torres de celulares.
+-   **Provedor de GPS** &ndash; GPS fornece o local mais preciso, usa mais poder e funciona melhor em áreas externas. Este provedor usa uma combinação de GPS e GPS assistido ([aGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), que retorna dados GPS coletados pelo torres de celulares.
 
 -   **Provedor de rede** &ndash; fornece uma combinação de dados do Wi-Fi e celular, incluindo dados de aGPS coletados pelo torres de célula. Ele usa menos energia do que o provedor de GPS, mas retorna dados de localização de precisão variável.
 
@@ -59,7 +59,7 @@ Para definir as permissões, expanda o **propriedades** pasta o **painel de solu
 Definição de uma dessas permissões informa ao Android que seu aplicativo precisa de permissão do usuário para acessar os provedores de local. Dispositivos que executar a API nível 22 (Android 5.1) ou inferior solicitará ao usuário conceder essas permissões a cada vez que o aplicativo está instalado. Em dispositivos que executam a API nível 23 (Android 6.0) ou superior, o aplicativo deve executar uma verificação de permissão de tempo de execução antes de fazer uma solicitação do localizador. 
 
 > [!NOTE]
->Observação: A configuração `ACCESS_FINE_LOCATION` implica acesso a ambos os dados de localização aproximada e tudo bem. Você nunca precisará definir ambas as permissões, apenas o *mínimo* permissão ao seu aplicativo requer para funcionar.
+>Observação: Definindo `ACCESS_FINE_LOCATION` implica acesso a ambos os dados de localização aproximada e tudo bem. Você nunca precisará definir ambas as permissões, apenas o *mínimo* permissão ao seu aplicativo requer para funcionar.
 
 Este trecho de código é um exemplo de como verificar se um aplicativo tem permissão para o `ACCESS_FINE_LOCATION` permissão:
 
@@ -84,7 +84,7 @@ O provedor de adição múltipla local é a maneira preferencial para aplicativo
  
 A API do provedor de adição múltipla local fornece uma variedade de outras ferramentas para capacitar aplicativos com reconhecimento de local, incluindo isolamento geográfico e monitoramento de atividades. Nesta seção, vamos nos concentrar Noções básicas sobre como configurar o `LocationClient`, estabelecendo provedores e obter a localização do usuário.
 
-O provedor de adição múltipla local faz parte do [Google Play Services](http://developer.android.com/google/play-services/index.html).
+O provedor de adição múltipla local faz parte do [Google Play Services](https://developer.android.com/google/play-services/index.html).
 O pacote do Google Play Services deve ser instalado e configurado corretamente no aplicativo para a API do provedor de adição múltipla local para trabalhar, e o dispositivo deve ter o APK Google Play Services instalado.
 
 Antes de um xamarin. Android aplicativo pode usar o provedor de adição múltipla local, ele deve adicionar o **Xamarin.GooglePlayServices.Maps** pacote ao projeto. Além disso, os seguintes `using` instruções devem ser adicionadas a quaisquer arquivos de origem que fazem referência as classes descritas abaixo:
@@ -231,7 +231,7 @@ O serviço de localização Android é uma API mais antiga para usar informaçõ
 
 O serviço de localização é mais adequado para aplicativos que devem ser executados em dispositivos que não têm o Google Play Services instalado.
 
-O serviço de localização é um tipo especial de [serviço](http://developer.android.com/guide/components/services.html) gerenciada pelo sistema. Um serviço do sistema interage com o hardware do dispositivo e está sempre em execução. Para tocar nas atualizações do local em nosso aplicativo, inscreveremos para atualizações de local do serviço de localização de sistema usando um `LocationManager` e um `RequestLocationUpdates` chamar.
+O serviço de localização é um tipo especial de [serviço](https://developer.android.com/guide/components/services.html) gerenciada pelo sistema. Um serviço do sistema interage com o hardware do dispositivo e está sempre em execução. Para tocar nas atualizações do local em nosso aplicativo, inscreveremos para atualizações de local do serviço de localização de sistema usando um `LocationManager` e um `RequestLocationUpdates` chamar.
 
 Para obter a localização do usuário usando o serviço de localização Android envolve várias etapas:
 
@@ -357,10 +357,10 @@ Este guia abordou como obter a localização do usuário usando o serviço de lo
 
 - [Local (exemplo)](https://developer.xamarin.com/samples/Location/)
 - [FusedLocationProvider (amostra)](https://developer.xamarin.com/samples/FusedLocationProvider/)
-- [Google Play Services](http://developer.android.com/google/play-services/index.html)
+- [Google Play Services](https://developer.android.com/google/play-services/index.html)
 - [Classe de critérios](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [Classe LocationManager](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)
 - [Classe LocationListener](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/)
-- [LocationClient API](http://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
-- [LocationListener API](http://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
+- [LocationClient API](https://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
+- [LocationListener API](https://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
 - [LocationRequest API](https://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html)

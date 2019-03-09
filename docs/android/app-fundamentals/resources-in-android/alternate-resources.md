@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: e71e79b58d912ecb697576e92ae921a848f24f4c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527385"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671150"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
 Recursos alternativos são aqueles recursos que se destinam a um dispositivo específico ou a configuração de tempo de execução, como o idioma atual, o tamanho de tela específica ou a densidade de pixels. Se o Android pode corresponder a um recurso que é mais específico para um determinado dispositivo ou a configuração do que o recurso padrão, em seguida, esse recurso será usado em vez disso. Se não encontrar um recurso alternativo que corresponde à configuração atual, em seguida, os recursos padrão serão carregados. Como Android decide quais recursos serão usados por um aplicativo serão abordados em mais detalhes abaixo, na seção local do recurso
 
-Recursos alternativos são organizados como um subdiretório dentro da pasta de recursos de acordo com o tipo de recurso, assim como os recursos padrão. O nome do subdiretório recurso alternativo está no formato: _ResourceType_-_qualificador_
+Recursos alternativos são organizados como um subdiretório dentro da pasta de recursos de acordo com o tipo de recurso, assim como os recursos padrão. É o nome do subdiretório recurso alternativo no formulário: _ResourceType_-_Qualifier_
 
 *Qualificador* é um nome que identifica uma configuração de dispositivo específico.
 Pode haver mais de um qualificador em um nome, cada um deles separados por um traço. Por exemplo, a captura de tela abaixo mostra um projeto simple que tem recursos alternativos para várias configurações, como a localidade, densidade da tela, tamanho da tela e orientação:
@@ -43,10 +43,10 @@ As seguintes regras se aplicam ao adicionar os qualificadores a um tipo de recur
 
 Os qualificadores possíveis estão listados abaixo para referência:
 
-- **MCC e MNC** &ndash; as [código do país móveis](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) e, opcionalmente, o [código de rede móvel](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). O cartão SIM fornecerá o MCC, enquanto o dispositivo está conectado à rede fornecerá o MNC. Embora seja possível para localidades de destino usando o código do país móveis, a abordagem recomendada é usar o qualificador de idioma especificado abaixo. Por exemplo, para recursos de destino para a Alemanha, o qualificador seria `mcc262`. Para recursos de destino para o T-Mobile nos EUA, o qualificador é `mcc310-mnc026`.
+- **MCC e MNC** &ndash; as [código do país móveis](https://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) e, opcionalmente, o [código de rede móvel](https://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). O cartão SIM fornecerá o MCC, enquanto o dispositivo está conectado à rede fornecerá o MNC. Embora seja possível para localidades de destino usando o código do país móveis, a abordagem recomendada é usar o qualificador de idioma especificado abaixo. Por exemplo, para recursos de destino para a Alemanha, o qualificador seria `mcc262`. Para recursos de destino para o T-Mobile nos EUA, o qualificador é `mcc310-mnc026`.
   Para obter uma lista completa de códigos de país móveis e de rede móvel consulte <http://mcc-mnc.com/>.
 
-- **Linguagem** &ndash; de duas letras [código do ISO 639-1 idioma](http://en.wikipedia.org/wiki/ISO_639-1) e, opcionalmente, seguido de duas letras [código de região ISO 3166-alfa 2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
+- **Linguagem** &ndash; de duas letras [código do ISO 639-1 idioma](https://en.wikipedia.org/wiki/ISO_639-1) e, opcionalmente, seguido de duas letras [código de região ISO 3166-alfa 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   Se os dois qualificadores são fornecidos, eles são separados por um `-r`. Por exemplo, para as localidades falando em francês de destino e em seguida, o qualificador de `fr` é usado. Para ter como destino de localidades do francês canadense, a `fr-rCA` seria usado. Para obter uma lista completa de códigos de idioma e região, consulte [códigos para a representação de nomes de idiomas](http://www.loc.gov/standards/iso639-2/php/English_list.php) e [nomes de países e elementos de código](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).
 
 - **Menor largura** &ndash; Especifica a largura da tela menor que o aplicativo deve ser executado em. Abordado em mais detalhes nas [criação de recursos para telas variados](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
@@ -123,7 +123,7 @@ Os qualificadores possíveis estão listados abaixo para referência:
 -  **Versão da plataforma (nível da API)** &ndash; nível a API com suporte pelo dispositivo no formato v*N*, onde *N* é o nível de API que está sendo direcionado. Por exemplo, v11 será direcionada a um nível de API 11 (Android 3.0) dispositivo.
 
 
-Para obter informações mais completas sobre o recurso Consulte qualificadores [fornecendo recursos](http://developer.android.com/guide/topics/resources/providing-resources.html) no site de desenvolvedores do Android.
+Para obter informações mais completas sobre o recurso Consulte qualificadores [fornecendo recursos](https://developer.android.com/guide/topics/resources/providing-resources.html) no site de desenvolvedores do Android.
 
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Como o Android determina quais recursos para uso

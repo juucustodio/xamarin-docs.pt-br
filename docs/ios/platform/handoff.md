@@ -6,12 +6,13 @@ ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 4b19d060bd8adf1c2b09bb18b7ff608381a35231
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 03/19/2017
+ms.openlocfilehash: 899e40460371933a3e1cb694618c7d33a124e76c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116661"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672697"
 ---
 # <a name="handoff-in-xamarinios"></a>Entrega no xamarin. IOS
 
@@ -109,24 +110,24 @@ Por causa dos requisitos de segurança impostos pelo entrega, um aplicativo xama
 
 Faça o seguinte:
 
-1. Faça logon na [Portal do desenvolvedor Apple](http://developer.apple.com).
+1. Faça logon na [Portal do desenvolvedor Apple](https://developer.apple.com).
 2. Clique em **certificados, identificadores e perfis**.
 3. Se você ainda não fez isso, clique em **identificadores** e crie uma ID para seu aplicativo (por exemplo, `com.company.appname`), ou editar sua ID existente.
-4. Certifique-se de que o **iCloud** serviço foi verificado para a ID especificada: 
+4. Certifique-se de que o **iCloud** serviço foi verificado para a ID especificada:
 
     [![](handoff-images/provision01.png "Habilitar o serviço do iCloud para a ID especificada")](handoff-images/provision01.png#lightbox)
 5. Salve as alterações.
-4. Clique em **perfis de provisionamento** > **desenvolvimento** e criar um novo perfil de provisionamento para você de desenvolvimento de aplicativo: 
+4. Clique em **perfis de provisionamento** > **desenvolvimento** e criar um novo perfil de provisionamento para você de desenvolvimento de aplicativo:
 
     [![](handoff-images/provision02.png "Criar um novo perfil para o aplicativo de provisionamento de desenvolvimento")](handoff-images/provision02.png#lightbox)
 5. Baixe e instale o novo perfil de provisionamento ou usar o Xcode para baixar e instalar o perfil de.
-6. Edite as opções de projeto do xamarin. IOS e certifique-se de que você está usando o perfil de provisionamento que você acabou de criar: 
+6. Edite as opções de projeto do xamarin. IOS e certifique-se de que você está usando o perfil de provisionamento que você acabou de criar:
 
     [![](handoff-images/provision03.png "Selecione o perfil de provisionamento recém-criado")](handoff-images/provision03.png#lightbox)
-7. Em seguida, edite sua **Info. plist** de arquivo e certifique-se de que você está usando a ID do aplicativo que foi usado para criar o perfil de provisionamento: 
+7. Em seguida, edite sua **Info. plist** de arquivo e certifique-se de que você está usando a ID do aplicativo que foi usado para criar o perfil de provisionamento:
 
     [![](handoff-images/provision04.png "Defina a ID do aplicativo")](handoff-images/provision04.png#lightbox)
-8. Role até a **modos de segundo plano** seção e verifique os seguintes itens: 
+8. Role até a **modos de segundo plano** seção e verifique os seguintes itens:
 
     [![](handoff-images/provision05.png "Habilitar os modos em segundo plano necessários")](handoff-images/provision05.png#lightbox)
 9. Salve as alterações a todos os arquivos.
@@ -463,7 +464,7 @@ Esse arquivo JSON contém um dicionário que especifica uma lista de IDs de apli
 }
 ```
 
-Para assinar o arquivo JSON (para que ele tenha correto `Content-Type` de `application/pkcs7-mime`), use o **Terminal** aplicativo e uma `openssl` com um certificado e chave emitido por uma autoridade de certificação confiável para iOS (consulte [ http://support.apple.com/kb/ht5012 ](http://support.apple.com/kb/ht5012) para obter uma lista). Por exemplo:
+Para assinar o arquivo JSON (para que ele tenha correto `Content-Type` de `application/pkcs7-mime`), use o **Terminal** aplicativo e uma `openssl` com um certificado e chave emitido por uma autoridade de certificação confiável para iOS (consulte [ https://support.apple.com/kb/ht5012 ](https://support.apple.com/kb/ht5012) para obter uma lista). Por exemplo:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",
@@ -606,7 +607,7 @@ O êxito da implementação da continuação de uma atividade de usuário por me
 
 ## <a name="example-handoff-app"></a>Exemplo de aplicativo de entrega
 
-Como um exemplo de uso serão entregues em um aplicativo xamarin. IOS, incluímos o [ **MonkeyBrowser** ](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/) aplicativo de exemplo com este guia. O aplicativo tem quatro guias que o usuário pode usar para navegar na web, cada um com um tipo de atividade fornecida: clima, favorito, café e trabalho.
+Como um exemplo de uso serão entregues em um aplicativo xamarin. IOS, incluímos o [ **MonkeyBrowser** ](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/) aplicativo de exemplo com este guia. O aplicativo tem quatro guias que o usuário pode usar para navegar na web, cada um com um tipo de atividade fornecida: Clima, favorito, café e trabalho.
 
 Em qualquer guia, quando o usuário insere uma nova URL e toques a **vá** botão, um novo `NSUserActivity` é criado para a guia que contém a URL que o usuário está navegando atualmente:
 

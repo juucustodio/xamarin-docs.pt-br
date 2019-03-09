@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 8e95e674f52cb23be769473e27dc8eb785a77820
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116037"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668745"
 ---
 # <a name="introduction-to-ios-8"></a>Introdução ao iOS 8
 
@@ -151,7 +151,7 @@ Para obter mais informações, consulte nosso [SpriteKit](~/ios/platform/gaming/
 ## <a name="other-changes"></a>Outras alterações
 Bem como as principais alterações no iOS 8 descritos acima, a Apple atualizou adicionalmente muitas estruturas existentes. Eles são detalhados abaixo:
 
-- **[Imagem de núcleo](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  – Apple expandiu com sua estrutura de processamento de imagem com a adição de um suporte melhor para a detecção de regiões retangulares, e os códigos QR dentro de imagens. Mike Bluestein explora isso em seu blog intitulada post [detecção de imagem no iOS 8](http://blog.xamarin.com/image-detection-in-ios-8/)
+- **[Imagem de núcleo](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  – Apple expandiu com sua estrutura de processamento de imagem com a adição de um suporte melhor para a detecção de regiões retangulares, e os códigos QR dentro de imagens. Mike Bluestein explora isso em seu blog intitulada post [detecção de imagem no iOS 8](https://blog.xamarin.com/image-detection-in-ios-8/)
 
 ## <a name="deprecated-apis"></a>APIs obsoletas
 Com todas as melhorias feitas no iOS 8, uma série de APIs tê preterido. Alguns deles são detalhadas abaixo.

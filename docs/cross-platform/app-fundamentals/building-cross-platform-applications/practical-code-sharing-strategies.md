@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: b20760d3e8d7e168b0f0508222d8ae0b743a9368
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9fbbe7d33428c1274d78ed882ced3985b8459072
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058906"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671475"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5 – Estratégias práticas de compartilhamento de código
 
@@ -201,7 +201,7 @@ Armazenamento isolado é uma API comum para salvar e carregar arquivos em todas 
 
 É o mecanismo padrão para acesso a arquivos no Windows Phone (Silverlight) que foi implementado no xamarin. IOS e xamarin. Android para permitir que o código de acesso a arquivos comuns a serem gravados. O `System.IO.IsolatedStorage` classe pode ser referenciada em todas as três plataformas em um [projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Consulte a [visão geral de armazenamento isolado para de Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) para obter mais informações.
+Consulte a [visão geral de armazenamento isolado para de Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) para obter mais informações.
 
 As APIs de armazenamento isolado não estão disponíveis no [bibliotecas de classes portáteis](~/cross-platform/app-fundamentals/pcl.md). Uma alternativa para a PCL é o [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
@@ -295,7 +295,7 @@ Ações que um aplicativo móvel pode levar essas situações incluem:
 -  Mesmo se a rede estiver disponível, é uma boa prática para verificar a conectividade com o servidor de destino antes de iniciar outras solicitações. Isso impedirá a operações de rede do aplicativo atinjam o tempo limite repetidamente e também permitem que uma mensagem de erro mais informativa a ser exibida ao usuário.
 
 
-Há um [exemplo de xamarin. IOS](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) disponíveis (que é baseado da Apple [código de exemplo de acessibilidade](http://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) para ajudar a detectar a disponibilidade de rede.
+Há um [exemplo de xamarin. IOS](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) disponíveis (que é baseado da Apple [código de exemplo de acessibilidade](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) para ajudar a detectar a disponibilidade de rede.
 
 
 ## <a name="webservices"></a>Serviços Web
@@ -387,7 +387,7 @@ Para o código que não utilizam a biblioteca paralela de tarefas, cada platafor
 
 IOS e Android sintaxe requer uma classe de 'context' esteja disponível, que significa que o código precisa passar esse objeto para todos os métodos que exigem um retorno de chamada no thread da interface do usuário.
 
-Para fazer chamadas do thread de interface do usuário no código compartilhado, execute as [exemplo IDispatchOnUIThread](http://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (cortesia do [ @follesoe ](http://jonas.follesoe.no/)). Declare e um programa para um `IDispatchOnUIThread` de interface no código compartilhado e, em seguida, implementar as classes específicas da plataforma, como mostrado aqui:
+Para fazer chamadas do thread de interface do usuário no código compartilhado, execute as [exemplo IDispatchOnUIThread](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (cortesia do [ @follesoe ](http://jonas.follesoe.no/)). Declare e um programa para um `IDispatchOnUIThread` de interface no código compartilhado e, em seguida, implementar as classes específicas da plataforma, como mostrado aqui:
 
 ```csharp
 // program to the interface in shared code

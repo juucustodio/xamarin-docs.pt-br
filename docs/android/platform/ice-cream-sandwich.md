@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: adb53af9d2e6707cb1fca3c59af63db76e5346d5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 00b553ae8de0dfcd86d57d1d5e3e2a892d6b5463
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102614"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667274"
 ---
 # <a name="ice-cream-sandwich-features"></a>Recursos do ICE Cream Sandwich
 
@@ -65,8 +65,8 @@ Por fim, examinamos como usar o *ContactsContract* provedor para acessar dados d
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplos do ICE Cream Sandwich](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ICS_Samples/)
-- [TextureViewDemo (amostra)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
+- [TextureViewDemo (sample)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
 - [CalendarDemo (amostra)](https://developer.xamarin.com/samples/monodroid/CalendarDemo/)
 - [Tutorial do guia Layout](~/android/user-interface/layouts/tab-layout/index.md)
-- [ICE Cream Sandwich](http://developer.android.com/about/versions/android-4.0-highlights.html)
-- [Plataforma 4.0 Android](http://developer.android.com/about/versions/android-4.0.html)
+- [ICE Cream Sandwich](https://developer.android.com/about/versions/android-4.0-highlights.html)
+- [Plataforma 4.0 Android](https://developer.android.com/about/versions/android-4.0.html)

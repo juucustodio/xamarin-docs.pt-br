@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 60751437b891579c97acee0e032defcca2b510f6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233855"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668732"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introdução ao 3D Touch no xamarin. IOS
 
@@ -86,7 +86,7 @@ Se o usuário pressiona mais difícil, ele insere o modo de exibição de mensag
 
 ### <a name="checking-for-3d-touch-availability"></a>Verificando a disponibilidade de toque 3D
 
-Ao trabalhar com um [UIViewController]() você pode usar o código a seguir para ver se o dispositivo iOS que o aplicativo está em execução no dá suporte a toque 3D:
+Ao trabalhar com um `UIViewController` você pode usar o código a seguir para ver se o dispositivo iOS que o aplicativo está em execução no dá suporte a toque 3D:
 
 ```csharp
 public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
@@ -101,7 +101,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
         ...
 ```
 
-Esse método pode ser chamado antes de *ou posterior* `ViewDidLoad()`. 
+Esse método pode ser chamado antes de *ou posterior* `ViewDidLoad()`.
 
 ### <a name="handling-peek-and-pop"></a>Pop e tratamento de espiada
 
@@ -281,7 +281,7 @@ Aqui definimos dois itens de ação rápida estáticos com as seguintes chaves:
 * `UIApplicationShortcutItemType` -É um valor de cadeia de caracteres que serão usadas para identificar o item em nosso aplicativo. Consulte a seguinte seção para obter mais informações.
 
 > [!IMPORTANT]
-> Itens de atalho ação rápidas que são definidas na `Info.plist` não puder ser acessado com o `Application.ShortcutItems` propriedade. Eles apenas são passados para o `HandleShortcutItem` manipulador de eventos. 
+> Itens de atalho ação rápidas que são definidas na `Info.plist` não puder ser acessado com o `Application.ShortcutItems` propriedade. Eles apenas são passados para o `HandleShortcutItem` manipulador de eventos.
 
 
 

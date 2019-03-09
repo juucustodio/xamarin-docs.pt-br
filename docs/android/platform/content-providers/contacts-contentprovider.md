@@ -1,19 +1,19 @@
 ---
-title: Usar o ContentProvider de contatos
+title: Usando o ContentProvider de contatos
 ms.prod: xamarin
 ms.assetid: 21C5D1B4-3783-6090-33AB-78A484E65925
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: 95d11ef692ec8b43c128cb55a21d0973151cd24a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48bb334e7e400d57e7eddc23b0b4ff183a7eba9b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120431"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669408"
 ---
-# <a name="using-the-contacts-contentprovider"></a>Usar o ContentProvider de contatos
+# <a name="using-the-contacts-contentprovider"></a>Usando o ContentProvider de contatos
 
 Código que usa acessar os dados expostos por um `ContentProvider` não requer uma referência para o `ContentProvider` classe em todos os. Em vez disso, um Uri é usado para criar um cursor sobre os dados apresentados pelo `ContentProvider`. Android usa o Uri para procurar no sistema para o aplicativo que expõe um `ContentProvider` com esse identificador. O Uri é uma cadeia de caracteres, normalmente em um formato de DNS reverso, como `com.android.contacts/data`.
 
@@ -108,7 +108,7 @@ var cursor = (ICursor)loader.LoadInBackground();
 
 O `CursorLoader` garante que todas as operações de cursor são feitas em um thread em segundo plano e podem inteligentemente reutilizar um cursor existente em instâncias de atividade quando uma atividade é reiniciada (por exemplo, devido a uma alteração de configuração) em vez disso, que recarregar os dados novamente.
 
-Versões anteriores do Android também podem usar o `CursorLoader` classe usando o [bibliotecas de suporte de v4](http://developer.android.com/tools/support-library/index.html).
+Versões anteriores do Android também podem usar o `CursorLoader` classe usando o [bibliotecas de suporte de v4](https://developer.android.com/tools/support-library/index.html).
 
 
 

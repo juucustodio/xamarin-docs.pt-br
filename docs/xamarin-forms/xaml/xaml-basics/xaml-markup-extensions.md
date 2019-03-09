@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
-ms.date: 3/27/2018
-ms.openlocfilehash: a93503762528885dfc7d3b5400bf4ec716ea9fab
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/27/2018
+ms.openlocfilehash: 86abe932e9c244e1a959042cfc995bc184f89cc9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056208"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671280"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação XAML
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Observe que a palavra-chave `clr-namespace` é seguido por dois-pontos e, em seguida, o nome do namespace .NET, seguido por um ponto e vírgula, a palavra-chave `assembly`, um sinal de igual e o nome do assembly.
 
-Sim, seguido por dois pontos `clr-namespace` , mas o sinal de igual segue `assembly`. A sintaxe foi definida desta maneira deliberadamente: declarações de namespace XML mais fazer referência a um URI que começa um nome de esquema URI, como `http`, que é sempre seguido por dois-pontos. O `clr-namespace` parte dessa cadeia de caracteres destina-se para simular que a convenção.
+Sim, seguido por dois pontos `clr-namespace` , mas o sinal de igual segue `assembly`. A sintaxe foi definida desta maneira deliberadamente: A maioria das declarações de namespace XML fazem referência a um URI que começa um nome de esquema URI, como `http`, que é sempre seguido por dois-pontos. O `clr-namespace` parte dessa cadeia de caracteres destina-se para simular que a convenção.
 
 As duas declarações de namespace esses estão incluídas na **StaticConstantsPage** exemplo. Observe que o `BoxView` dimensões são definidas como `Math.PI` e `Math.E`, mas em escala por um fator de 100:
 
@@ -547,7 +547,7 @@ Aqui está um exemplo:
 </ContentPage>
 ```
 
-Talvez a lição mais importante que você deve executar este exemplo é a sintaxe de extensão de marcação: sem aspas devem aparecer dentro das chaves de uma extensão de marcação. Ao digitar a extensão de marcação em um arquivo XAML, é natural deseja colocar os valores das propriedades entre aspas. Resista à tentação!
+Talvez a lição mais importante que você deve executar este exemplo é a sintaxe de extensão de marcação: Sem aspas devem aparecer dentro das chaves de uma extensão de marcação. Ao digitar a extensão de marcação em um arquivo XAML, é natural deseja colocar os valores das propriedades entre aspas. Resista à tentação!
 
 Aqui está o programa em execução:
 

@@ -1,18 +1,13 @@
 ---
 title: Introdução ao desenvolvimento de jogos com o Xamarin
-description: Este documento fornece uma visão geral do desenvolvimento de jogos com o Xamarin, que descreve como os jogos são feitos e uma amostragem das tecnologias disponíveis para uso com xamarin. IOS e xamarin. Android.
+description: 'Este documento fornece uma visão geral do desenvolvimento de jogos com o Xamarin, que descreve como os jogos são feitos e uma amostragem das tecnologias disponíveis para uso com xamarin. IOS e xamarin. Android.'
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: d6e9fd03025e00da5cff5ed284bdc5f0f268a22b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122602"
 ---
+
 # <a name="introduction-to-game-development-with-xamarin"></a>Introdução ao desenvolvimento de jogos com o Xamarin
 
 Desenvolvimento de jogos pode ser muito interessante, especialmente considerando como ele pode ser fácil publicar seu trabalho em plataformas móveis. Este artigo aborda os conceitos e tecnologias relacionadas ao desenvolvimento de jogos que ajudará você a criam jogos, se seu objetivo é criar uma alta qualidade AAA, jogo ou apenas para o programa por diversão.
@@ -25,12 +20,12 @@ Este artigo aborda os seguintes tópicos:
 - **Tecnologia de desenvolvimento de jogos** – aqui vai listamos alguns das tecnologias de plataforma cruzada disponíveis que podem aumentar sua produtividade como desenvolvedor de jogos.
 
 
-# <a name="game-vs-non-game-programming-concepts"></a>Jogos vs. Conceitos de programação não é de jogo
+## <a name="game-vs-non-game-programming-concepts"></a>Jogos vs. Conceitos de programação não é de jogo
 
 Mover para o desenvolvimento de jogos de programadores muitas vezes se confrontam com novos conceitos e padrões de desenvolvimento. Esta seção apresenta uma visão geral de alguns desses conceitos.
 
 
-## <a name="the-game-loop"></a>O Loop do jogo
+### <a name="the-game-loop"></a>O Loop do jogo
 
 Um jogo típico requer constante movimento ou alteração na tela em resposta à interação do usuário e a lógica do jogo automática está ocorrendo. Isso é obtido com o que é normalmente conhecido como um *loop do jogo*. Um loop do jogo é algum tipo de instrução (por exemplo, um loop while) que é executado em uma alta frequência, como 30 ou 60 de looping *quadros por segundo*.
 
@@ -54,7 +49,7 @@ Tipos comuns de lógica que pode ser executado cada quadro incluem:
 Tenha em mente que muitas das atividades listadas acima podem alterar o estado de todo o aplicativo, enquanto que muitos aplicativos não é de jogo tendem a alterar o estado em resposta a eventos que está sendo gerado.
 
 
-## <a name="content-loading-and-unloading"></a>Carregar conteúdo e descarregar
+### <a name="content-loading-and-unloading"></a>Carregar conteúdo e descarregar
 
 Conteúdo manualmente Carregando e descarregando (ou descarte) pode ser necessários, dependendo de qual tecnologia você está usando no desenvolvimento. Manualmente, carregamento e descarregamento de ativos podem ser necessários por uma série de motivos:
 
@@ -65,7 +60,7 @@ Conteúdo manualmente Carregando e descarregando (ou descarte) pode ser necessá
 Formatos de arquivo personalizado, talvez seja necessário processamento em tempo de carregamento, exigir que o código de carregamento de personalizado.
 
 
-## <a name="math"></a>Matemática
+### <a name="math"></a>Matemática
 
 Muitos jogos exigem cálculos mais avançados que os aplicativos não é de jogo. É claro, o nível de matemática depende da complexidade do jogo. Em geral, jogos 3D exigem mais matemática que 2D. Felizmente, você sempre pode começar a usar com jogos simples e desde o início. Desenvolvimento de jogos pode ser uma ótima maneira de aprender matemática!
 
@@ -82,14 +77,14 @@ Funções trigonométricas (como o seno e cosseno) normalmente são usadas em jo
 Se você estiver planejando fazer um jogo 3D, em seguida, você provavelmente precisará estar familiarizado com conceitos de álgebra Linear (para rotação e movimentação no espaço 3D), bem como alguns cálculo (para a implementação de aceleração).
 
 
-## <a name="content-pipelines"></a>Pipelines de conteúdo
+### <a name="content-pipelines"></a>Pipelines de conteúdo
 
 O termo *pipeline de conteúdo* refere-se ao processo de um arquivo necessário para obter do seu formato quando criado (por exemplo, um arquivo de imagem. png) em seu formato final quando usado em um jogo. O formato final depende em qual tipo de conteúdo está sendo usado, bem como qual tecnologia está sendo usada para apresentar o conteúdo.
 
 Alguns pipelines de conteúdo pode ser muito rápidas e não exigir nenhum esforço manual. Por exemplo, a maioria das APIs e mecanismos de jogos pode carregar o formato de arquivo. PNG em seu formato não processado. Por outro lado, mais complicados formatos (como modelos 3D) talvez precise ser processado em um formato diferente antes que está sendo carregado, e esse processamento pode demorar algum tempo dependendo do tamanho e da complexidade do ativo.
 
 
-# <a name="game-development-teams"></a>Equipes de desenvolvimento de jogos
+## <a name="game-development-teams"></a>Equipes de desenvolvimento de jogos
 
 Desenvolvimento de jogos apresenta novas funções e títulos para as pessoas envolvidas no processo. A maioria dos desenvolvedores de jogos não são capazes de satisfazer o amplo conjunto de habilidades necessárias para liberar um jogo completo, portanto, um número de disciplinas existe. Tenha em mente que isso não é uma lista completa das áreas de desenvolvimento – apenas algumas das mais comuns.
 
@@ -100,7 +95,7 @@ Desenvolvimento de jogos apresenta novas funções e títulos para as pessoas en
 - **Designer de som** – designers de som são responsáveis por ativos de áudio de um jogo. Algumas equipes podem diferenciar entre os indivíduos responsáveis pela criação de efeitos de som e compositores, enquanto as equipes menores podem ter um único indivíduo responsável por todo o áudio.
 
 
-# <a name="creating-a-game-idea"></a>Criando uma ideia de jogo
+## <a name="creating-a-game-idea"></a>Criando uma ideia de jogo
 
 Projetar um jogo pode aparecer ser fácil de fazer – afinal o único requisito é "tornar algo divertido". Infelizmente, muitos desenvolvedores se veem em uma perda quando chega o momento de criar uma ideia do qual iniciar o desenvolvimento.
 
@@ -115,12 +110,12 @@ Outra técnica para a geração de novas ideias é considerar um gênero especí
 Refazendo a jogos existentes também é uma experiência educacional, embora isso pode limitar a viabilidade de comercial do produto acabado. O processo de criação de um jogo, mesmo um que é um clone preciso, fornece uma experiência de educacional valiosa.
 
 
-# <a name="game-development-technology"></a>Tecnologia de desenvolvimento de jogos
+## <a name="game-development-technology"></a>Tecnologia de desenvolvimento de jogos
 
 Os desenvolvedores que usam o xamarin. Android e xamarin. IOS têm uma ampla variedade de tecnologias disponíveis a eles para ajudar no desenvolvimento de jogos. Esta seção aborda algumas das mais populares soluções de plataforma cruzada.
 
 
-## <a name="cocossharp"></a>CocosSharp
+### <a name="cocossharp"></a>CocosSharp
 
 CocosSharp é uma versão de software livre, plataforma cruzada do mecanismo de jogos 2D Cocos. O mecanismo fornece acesso ao Android, iOS, Mac OS X, área de trabalho do Windows, Windows RT e Windows Phone.
 
@@ -135,7 +130,7 @@ O jogo Ovelha Ninjas é criado com CocosSharp e pode ser um bom ponto de partida
 Você pode baixá-lo e obter mais informações o [página do AngryNinjas Github](https://github.com/xamarin/AngryNinjas).
 
 
-## <a name="monogame"></a>MonoGame
+### <a name="monogame"></a>MonoGame
 
 MonoGame é uma software livre, plataforma de versão da API do XNA da Microsoft. MonoGame pode ser usado para criar jogos para iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One e comutador.
 
@@ -156,7 +151,7 @@ Bastiões:
 Para começar a trabalhar com o MonoGame, vá até nossa [MonoGame guias](~/graphics-games/monogame/index.md).
 
 
-## <a name="urhosharp"></a>UrhoSharp
+### <a name="urhosharp"></a>UrhoSharp
 
 UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar animadas cenas 3D e 2D para seus aplicativos usando geometrias, material, luzes e câmeras.
 
@@ -164,18 +159,13 @@ UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode 
 
 Confira a [UrhoSharp guias](~/graphics-games/urhosharp/index.md) para começar a usar.
 
-## <a name="additional-technology"></a>Tecnologia adicional
+### <a name="additional-technology"></a>Tecnologia adicional
 
 As tecnologias realçadas acima é apenas uma amostra das tecnologias disponíveis. Outras tecnologias importantes incluem:
 
-- **Sprite Kit** – Xamarin fornece suporte para a estrutura da Apple Sprite Kit jogo, que fornece acesso a toda a funcionalidade da API nativa. Como o Sprite Kit é uma tecnologia criada pela Apple, ele fornece uma integração profunda com o resto do ecossistema do iOS. É claro, Sprite Kit não é plataforma cruzada para que ele não pode ser usado no Android. Para obter mais informações sobre como usar o Sprite Kit, consulte esta postagem:  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **Kit de cena** – Xamarin também oferece suporte para estrutura Scene Kit da Apple, que simplifica a implementação de elementos gráficos 3D em aplicativos do iOS. Scene Kit também é fornecida pela Apple, para que ele tenha a integração e considerações específicas da plataforma mencionadas acima para Sprite Kit de tecnologia. Para obter mais informações sobre o Kit de cena, consulte esta postagem: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **Sprite Kit** – Xamarin fornece suporte para a estrutura da Apple Sprite Kit jogo, que fornece acesso a toda a funcionalidade da API nativa. Como o Sprite Kit é uma tecnologia criada pela Apple, ele fornece uma integração profunda com o resto do ecossistema do iOS. É claro, Sprite Kit não é plataforma cruzada para que ele não pode ser usado no Android. Para obter mais informações sobre como usar o Sprite Kit, consulte esta postagem:  [https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Kit de cena** – Xamarin também oferece suporte para estrutura Scene Kit da Apple, que simplifica a implementação de elementos gráficos 3D em aplicativos do iOS. Scene Kit também é fornecida pela Apple, para que ele tenha a integração e considerações específicas da plataforma mencionadas acima para Sprite Kit de tecnologia. Para obter mais informações sobre o Kit de cena, consulte esta postagem: [https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
 - **OpenTK –** OpenTK (que representa o Kit de ferramentas aberta) fornece acesso de baixo nível OpenGL para Mac, iOS e Apple hardware. Para obter mais informações sobre OpenTK, consulte a página principal em:  [http://www.opentk.com/](http://www.opentk.com/)
-
-
-# <a name="summary"></a>Resumo
-
-Este artigo aborda os conceitos principais de desenvolvimento de jogos e fornece informações sobre como começar a fazer o seu primeiro jogo. Depois de concluir este artigo, as próximas etapas são a escolha sua tecnologia e começar a trabalhar por meio de nossa série de tutoriais vinculados nas seções acima apropriadas.
 
 ## <a name="related-links"></a>Links relacionados
 

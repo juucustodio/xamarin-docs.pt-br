@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: f21eca052ef13fd0e3d6efa261e1ff70b3b14372
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1a9856a5b6257c82b2072e9eb44be481373abfcf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120704"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671852"
 ---
 # <a name="splash-screen"></a>Splash Screen
 
@@ -52,7 +52,7 @@ A tela inicial é implementada como uma atividade que exibe a marca desenháveis
 
 A tela inicial exibirá um XML desenhável no plano de fundo da tela inicial da atividade. É necessário usar uma imagem de bitmap (como um PNG ou JPG) para a imagem para exibir.
 
-Neste guia, usamos uma [camada lista](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centralizar a imagem da tela inicial do aplicativo. O trecho a seguir está um exemplo de uma `drawable` de recursos usando um `layer-list`:
+Neste guia, usamos uma [camada lista](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centralizar a imagem da tela inicial do aplicativo. O trecho a seguir está um exemplo de uma `drawable` de recursos usando um `layer-list`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -229,5 +229,5 @@ Este guia discutiu a uma maneira de implementar uma tela inicial em um aplicativ
 ## <a name="related-links"></a>Links relacionados
 
 - [Tela inicial (amostra)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
-- [lista de camada Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [lista de camada Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [ Padrões de Design de material - telas de inicialização](https://material.io/design/communication/launch-screen.html#usage)

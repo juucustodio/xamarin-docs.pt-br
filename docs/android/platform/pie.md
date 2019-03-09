@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: fa41affc57714254a12623f79da3dc1396ecd009
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267632"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670123"
 ---
 # <a name="android-pie-features"></a>Recursos de pizza do Android
 
@@ -34,7 +34,7 @@ A lista a seguir é necessário para usar os recursos do Android pizza em aplica
 
 -   **Xamarin. Android** &ndash; xamarin. Android ão 9.0.0.17 ou posterior deve ser instalado com o Visual Studio (xamarin. Android é instalado automaticamente como parte do **desenvolvimento móvel com .NET** carga de trabalho).
 
--   **Java Developer Kit** &ndash; 9.0 Android do Xamarin de desenvolvimento requer [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (ou você pode tentar a visualização da distribuição da Microsoft dos [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 é instalado automaticamente como parte do **desenvolvimento móvel com .NET** carga de trabalho.
+-   **Java Developer Kit** &ndash; 9.0 Android do Xamarin de desenvolvimento requer [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (ou você pode tentar a visualização da distribuição da Microsoft dos [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 é instalado automaticamente como parte do **desenvolvimento móvel com .NET** carga de trabalho.
 
 -   **SDK do Android** &ndash; API do Android SDK 28 ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
 

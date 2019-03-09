@@ -6,12 +6,12 @@ ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
 author: lobrien
 ms.author: laobri
 ms.date: 04/19/2018
-ms.openlocfilehash: a16821e83dc169d7800162e1eaf45c4be661185a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 66475b7629f01b4229539e1edc323491a7861dfe
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106800"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668394"
 ---
 # <a name="getting-started-with-c"></a>Introdução ao C
 
@@ -23,7 +23,7 @@ Para usar a incorporação do .NET com C, você precisará de um máquina execut
 
 * macOS 10.12 (Sierra) ou posterior
 * 8.3.2 do Xcode ou posterior
-* [Mono](http://www.mono-project.com/download/)
+* [Mono](https://www.mono-project.com/download/)
 
 ### <a name="windows"></a>Windows
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: d3cba67f27d5b7de7bdcbfa5439061067f759890
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d8a6044c47c568c7f1e17d01915e2e5a6e888f95
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112520"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671813"
 ---
 # <a name="calendar"></a>Calendário
 
@@ -287,4 +287,4 @@ Como você pode ver, o Android permite acesso eficiente e fácil recuperar e per
 
 - [Demonstração de calendário (amostra)](https://developer.xamarin.com/samples/CalendarDemo/)
 - [Apresentando o Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
+- [Plataforma 4.0 Android](https://developer.android.com/sdk/android-4.0.html)

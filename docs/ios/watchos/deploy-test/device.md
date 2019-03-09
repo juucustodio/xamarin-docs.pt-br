@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f4a21e25f418cc81d5f210098ded648b3d70ae14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c15e9205b96a02caa182e47b71c6d36c8bff1aa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116726"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671046"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Testes em dispositivos do Apple Watch
 
@@ -93,7 +93,7 @@ Quando você tiver configurado seu dispositivo, as IDs do aplicativo e perfis de
 
 Se ocorrer um erro durante o uso de implantação do **Exibir > Pads > Log do dispositivo** para obter mais informações sobre o erro. Alguns erros e suas causas estão listadas abaixo:
 
-### <a name="error-mt3001-could-not-aot-the-assembly"></a>Erro MT3001: Poderia AOT o assembly
+### <a name="error-mt3001-could-not-aot-the-assembly"></a>Error MT3001: Poderia AOT o assembly
 
 Isso pode ocorrer ao compilar no modo de depuração para implantar em um dispositivo Apple Watch.
 
@@ -152,7 +152,7 @@ Se o **saída do aplicativo** janela fica preso mostrando
 waiting for debugger to connect
 ```
 
-Verifique se qualquer um dos NuGets que foram incluídos em seu projeto tem uma dependência **Microsoft.Bcl.Build**. Isso é adicionado automaticamente com algumas bibliotecas publicadas pela Microsoft, incluindo o popular [bibliotecas de cliente Http Microsoft](http://www.nuget.org/packages/Microsoft.Net.Http/).
+Verifique se qualquer um dos NuGets que foram incluídos em seu projeto tem uma dependência **Microsoft.Bcl.Build**. Isso é adicionado automaticamente com algumas bibliotecas publicadas pela Microsoft, incluindo o popular [bibliotecas de cliente Http Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http/).
 
 O **Microsoft.Bcl.Build.targets** arquivo que é adicionado para o **. csproj** pode interferir com o empacotamento de extensões do iOS durante a implantação. Você pode acompanhar o [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
 Uma solução alternativa é possível editar o arquivo. csproj e mover manualmente o **Microsoft.Bcl.Build.targets** para ser o último elemento.

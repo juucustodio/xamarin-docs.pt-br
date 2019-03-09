@@ -1,19 +1,14 @@
 ---
 title: Imagens e ícones no xamarin. IOS
-description: Esta seção inclui uma variedade de artigos que abrangem a trabalhar com imagens em um aplicativo xamarin. IOS, como usá-las como ícones, telas de lançamento ou incluindo-os em controles e fornecendo os ícones para tipos de documento personalizados.
+description: 'Esta seção inclui uma variedade de artigos que abrangem a trabalhar com imagens em um aplicativo xamarin. IOS, como usá-las como ícones, telas de lançamento ou incluindo-os em controles e fornecendo os ícones para tipos de documento personalizados.'
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 09afcac8dcecd5a1d05961c2981c0940fff00a01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102354"
 ---
+
 # <a name="images-and-icons-in-xamarinios"></a>Imagens e ícones no xamarin. IOS
 
 _Esta seção inclui uma variedade de artigos que abrangem a trabalhar com imagens em um aplicativo xamarin. IOS, como usá-las como ícones, telas de lançamento ou incluindo-os em controles e fornecendo os ícones para tipos de documento personalizados._
@@ -66,4 +61,4 @@ Aborda esse artigo incluindo e gerenciar um ativo de imagem em um aplicativo xam
 
 - [Trabalhando com imagens (amostra)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Ícone personalizado e diretrizes de criação de imagem](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Ícone personalizado e diretrizes de criação de imagem](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

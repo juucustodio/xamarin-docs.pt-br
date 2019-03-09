@@ -6,23 +6,23 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9ec27402aefd28ded4cf53e7e9fa52eedd2b86b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63164d90419f3a49d9eb52a52d02e05fbee43dbf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103004"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667614"
 ---
 # <a name="gridview"></a>GridView
 
-[`GridView`](https://developer.xamarin.com/api/type/Android.Widget.GridView/) é um [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+[`GridView`](https://developer.xamarin.com/api/type/Android.Widget.GridView/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
 que exibe itens em uma grade bidimensional, rolável. Os itens de grade são inseridos automaticamente para o layout usando um [ `ListAdapter` ](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/).
 
 Neste tutorial, você criará uma grade de miniaturas de imagem. Quando um item é selecionado, será exibida uma mensagem de notificação do sistema a posição da imagem.
 
 Iniciar um novo projeto chamado **HelloGridView**.
 
-Encontrar algumas fotos que você deseja usar, ou [baixar essas imagens de exemplo](http://developer.android.com/shareables/sample_images.zip). Adicione os arquivos de imagem para o projeto **recursos/Drawable** directory. No **propriedades** janela, defina a Build Action de cada um para **AndroidResource**.
+Encontrar algumas fotos que você deseja usar, ou [baixar essas imagens de exemplo](https://developer.android.com/shareables/sample_images.zip). Adicione os arquivos de imagem para o projeto **recursos/Drawable** directory. No **propriedades** janela, defina a Build Action de cada um para **AndroidResource**.
 
 Abra o **Resources/Layout/Main.axml** de arquivo e insira o seguinte:
 
@@ -129,8 +129,8 @@ public class ImageAdapter : BaseAdapter
 }
 ```
 
-Em primeiro lugar, isso implementa alguns métodos necessários herdados de [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/). O construtor e o [ `Count` ](https://developer.xamarin.com/api/property/Android.Widget.BaseAdapter.Count/) propriedade são auto-explicativos. Normalmente, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/)
-deve retornar o objeto real na posição especificada no adaptador, mas é ignorado para este exemplo. Da mesma forma, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/)
+Em primeiro lugar, isso implementa alguns métodos necessários herdados de [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/). O construtor e o [ `Count` ](https://developer.xamarin.com/api/property/Android.Widget.BaseAdapter.Count/) propriedade são auto-explicativos. Normally, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/)
+deve retornar o objeto real na posição especificada no adaptador, mas é ignorado para este exemplo. Likewise, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/)
 deve retornar a id da linha do item, mas não é necessária aqui.
 
 É o primeiro método necessário [ `GetView()` ](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetView/).

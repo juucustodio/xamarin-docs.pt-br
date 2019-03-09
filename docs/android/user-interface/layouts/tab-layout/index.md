@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5d88ffb44d12ee142314c74ca8e749164cbfe3b9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105955"
 ---
+
 # <a name="tabbed-layouts"></a>Layouts com guias
 
 
@@ -34,6 +29,6 @@ As guias são um padrão de interface do usuário populares em aplicativos móve
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Guias de Design de material -](https://material.io/guidelines/components/tabs.html)- [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
+- [Guias de Design de material -](https://material.io/guidelines/components/tabs.html)- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
 - [Pacote do NuGet do suporte do Android biblioteca v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
-- [biblioteca de appcompat v7](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [biblioteca de appcompat v7](https://developer.android.com/tools/support-library/features.html#v7-appcompat)

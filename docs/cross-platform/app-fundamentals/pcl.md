@@ -6,14 +6,14 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
-ms.openlocfilehash: 83b1da5cd10a46b8480b0755eeb16bf7434a5906
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: a1e7152ca0f24d1ac660742e97907ea9300df9a7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270083"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666873"
 ---
-# <a name="portable-class-libraries-pcl"></a>Bibliotecas de classes portáteis (PCL)
+# <a name="portable-class-libraries-pcl"></a>PCL (Bibliotecas de classe portáteis)
 
 > [!WARNING]
 > Bibliotecas de classes portáteis (PCLs) são consideradas preterida nas versões mais recentes do Visual Studio.
@@ -54,7 +54,7 @@ Isso inclui os perfis que são combinações de:
 - Windows Phone 8
 - Aplicativos UWP
 
-Você pode ler mais sobre os recursos a diferentes perfis na [site da Microsoft](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) e ver outro membro da comunidade [perfil PCL resumo](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) que inclui suporte para informações de estrutura e outras observações.
+Você pode ler mais sobre os recursos a diferentes perfis na [site da Microsoft](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) e ver outro membro da comunidade [perfil PCL resumo](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) que inclui suporte para informações de estrutura e outras observações.
 
 **Benefícios**
 

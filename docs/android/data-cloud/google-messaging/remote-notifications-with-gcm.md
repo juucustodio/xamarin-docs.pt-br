@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: e5a5e44a61d352b5de05564ebb7192d21ed83dfa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528800"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668888"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificações remotas com o Google Cloud Messaging
 
@@ -119,7 +119,7 @@ Vamos definir essas permissões no manifesto do Android. Vamos editar **androidm
 
 No XML acima, altere *YOUR_PACKAGE_NAME* para o nome do pacote para o seu projeto de aplicativo do cliente. Por exemplo, `com.xamarin.gcmexample`. 
 
-### <a name="check-for-google-play-services"></a>Verificação de serviços do Google Play
+### <a name="check-for-google-play-services"></a>Check for Google Play Services
 
 Para este passo a passo, estamos criando um aplicativo básico com um único `TextView` na interface do usuário. Esse aplicativo diretamente não indica a interação com o GCM. Em vez disso, podemos assiste a janela de saída para ver como nosso handshakes de aplicativo com o GCM, e vamos verificar a bandeja de notificação para novas notificações assim que elas chegam. 
 
@@ -617,7 +617,7 @@ GCM, por sua vez, encaminha essa mensagem, para seu aplicativo cliente. Vamos cr
 
 ### <a name="try-it"></a>Experimente!
 
-Agora estamos prontos para testar nosso aplicativo de cliente. Se você estiver usando um emulador ou se seu dispositivo está se comunicando com o GCM Wi-Fi, você deve abrir as seguintes portas TCP no firewall para que as mensagens do GCM obter por meio de: 5228, 5229 e 5230.
+Agora estamos prontos para testar nosso aplicativo de cliente. Se você estiver usando um emulador ou se seu dispositivo está se comunicando com o GCM Wi-Fi, é necessário abrir as seguintes portas TCP no firewall para que as mensagens do GCM obter por meio de: 5228, 5229 e 5230.
 
 Inicie o aplicativo cliente e observe a janela de saída. Após o `RegistrationIntentService` recebe com êxito um registro de token do GCM, a janela de saída deve exibir o token de saída de log a seguir:
 
@@ -657,7 +657,7 @@ Quando você abre a bandeja de notificação para exibir as notificações, voc�
 
 Parabéns, seu aplicativo recebeu sua primeira notificação remota!
 
-Observe que mensagens do GCM não serão recebidas se o aplicativo for interrompido por força. Para retomar as notificações após uma parada de força, o aplicativo deve ser reiniciado manualmente. Para obter mais informações sobre esta política de Android, consulte [inicie controles em aplicativos interrompidos](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) e isso [postagem de estouro de pilha](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
+Observe que mensagens do GCM não serão recebidas se o aplicativo for interrompido por força. Para retomar as notificações após uma parada de força, o aplicativo deve ser reiniciado manualmente. Para obter mais informações sobre esta política de Android, consulte [inicie controles em aplicativos interrompidos](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) e isso [postagem de estouro de pilha](https://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
  
 ## <a name="summary"></a>Resumo

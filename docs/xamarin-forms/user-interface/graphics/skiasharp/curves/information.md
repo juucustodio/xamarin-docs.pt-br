@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: 98975d51c31b8e8c52d184c631194388cd6cfa87
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b5d32f486b45005534adc8929caf6158d1c62a4b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053894"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671397"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 
@@ -24,7 +24,7 @@ O [ `SKPath` ](xref:SkiaSharp.SKPath) classe define várias propriedades e méto
 
 Às vezes é útil para determinar o comprimento total de todas as linhas e curvas que compõem um caminho. Calcular esse comprimento não é uma tarefa algoritmicamente simple, portanto, toda uma classe denominada [ `PathMeasure` ](xref:SkiaSharp.SKPathMeasure) é dedicada a ele.
 
-Também, às vezes, é útil obter todas as operações de desenho e pontos que compõem um caminho. A princípio, esse recurso pode parecer desnecessário: se o programa tiver criado o caminho, o programa já sabe o conteúdo. No entanto, você viu que caminhos também podem ser criados por [efeitos de caminho](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e convertendo [cadeias de caracteres de texto em demarcadores](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). Você também pode obter todas as operações de desenho e pontos que compõem esses caminhos. Uma possibilidade é aplicar uma transformação algorítmica para todos os pontos, por exemplo, para encapsular o texto ao redor de um hemisfério:
+Também, às vezes, é útil obter todas as operações de desenho e pontos que compõem um caminho. A princípio, esse recurso pode parecer desnecessário: Se seu programa tiver criado o caminho, o programa já sabe o conteúdo. No entanto, você viu que caminhos também podem ser criados por [efeitos de caminho](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e convertendo [cadeias de caracteres de texto em demarcadores](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). Você também pode obter todas as operações de desenho e pontos que compõem esses caminhos. Uma possibilidade é aplicar uma transformação algorítmica para todos os pontos, por exemplo, para encapsular o texto ao redor de um hemisfério:
 
 ![](information-images/pathenumerationsample.png "Texto encapsulado em um hemisfério")
 
@@ -140,7 +140,7 @@ O **Pipe monociclo metade** página anima uma figura de pilha em um monociclo qu
 
 [![](information-images/unicyclehalfpipe-small.png "Tripla captura de tela da página Pipe monociclo metade")](information-images/unicyclehalfpipe-large.png#lightbox "tripla captura de tela da página Pipe monociclo metade")
 
-O `SKPaint` objeto usado para traçar o pipe de meia e o monociclo é definido como um campo de [ `UnicycleHalfPipePage` ]() classe. Também é definido é o `SKPath` objeto para o monociclo:
+O `SKPaint` objeto usado para traçar o pipe de meia e o monociclo é definido como um campo de `UnicycleHalfPipePage` classe. Também é definido é o `SKPath` objeto para o monociclo:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -253,7 +253,7 @@ O verbo problemático, no entanto, é `Close`. Esse comando desenha uma linha re
 
 A maioria dessas cartas consistem em linhas retas, ainda que essas linhas retas aparentemente tem sido envolvidas em curvas. Como é possível?
 
-A chave é que as linhas retas originais são divididas em uma série de linhas retas menores. Essas linhas retas menores individuais, em seguida, podem ser manipuladas de maneiras diferentes para formar uma curva. 
+A chave é que as linhas retas originais são divididas em uma série de linhas retas menores. Essas linhas retas menores individuais, em seguida, podem ser manipuladas de maneiras diferentes para formar uma curva.
 
 Para ajudar nesse processo, o [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo contém um estático [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe com um `Interpolate` método divide um linha reta em várias linhas curtas que são apenas uma unidade de comprimento. Além disso, a classe contém vários métodos que convertem os três tipos de curvas de Bézier em uma série de linhas retas pequenas que se aproximam da curva. (As fórmulas paramétricas eram apresentadas neste artigo [ **tipos de três das curvas de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Esse processo é chamado _nivelamento_ a curva:
 

@@ -1,5 +1,5 @@
 ---
-title: É possível se conectar aos emuladores de Android em execução em um Mac de uma VM do Windows?
+title: É possível se conectar aos emuladores de Android em execução em um Mac usando uma VM do Windows?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 6e66bf4edb4269aa0f3b765df4a08b78c128f763
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 35bfdb92ccfffe54f0ca10dc001d8919703a5bd8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115623"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668147"
 ---
-# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>É possível se conectar aos emuladores de Android em execução em um Mac de uma VM do Windows?
+# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>É possível se conectar aos emuladores de Android em execução em um Mac usando uma VM do Windows?
 
 Para se conectar ao emulador do Android em execução em um Mac de uma máquina virtual do Windows, use as seguintes etapas:
 
@@ -35,9 +35,9 @@ Para se conectar ao emulador do Android em execução em um Mac de uma máquina 
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    A porta de número ímpar é usada para se conectar ao `adb`. Consulte também [ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    A porta de número ímpar é usada para se conectar ao `adb`. Consulte também [ https://developer.android.com/tools/devices/emulator.html#emulatornetworking ](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4.  _Opção 1_: uso [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
+4.  _Opção 1_: Use [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
     para encaminhar pacotes TCP de entrada recebido externamente na porta 5555 (ou qualquer outra porta desejado) para a porta ímpares na interface de loopback (**127.0.0.1 5555** neste exemplo), e para encaminhar os pacotes de saída de outra forma de volta:
 
     ```bash
@@ -50,7 +50,7 @@ Para se conectar ao emulador do Android em execução em um Mac de uma máquina 
 
     (Opção 1 é geralmente mais fácil do que a opção 2, especialmente se **preferências do sistema > segurança e privacidade > Firewall** está ativada.) 
 
-    _Opção 2_: uso [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
+    _Opção 2_: Use [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
     Para redirecionar os pacotes TCP de porta `5555` (ou qualquer outra porta que você deseja) na [compartilhada de rede](http://kb.parallels.com/en/4948) interface para a porta ímpares na interface de loopback (`127.0.0.1:5555` neste exemplo):
 
     ```bash
@@ -95,7 +95,7 @@ Um pequeno cuidado: se você usar a porta `5555` para a porta local, `adb` pensa
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>Técnica alternativa usando `adb -H` ainda não é suportado
 
-Em teoria, outra abordagem seria usar `adb`do recurso interno para se conectar a um `adb` server em execução em um computador remoto (consulte, por exemplo [ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325)).
+Em teoria, outra abordagem seria usar `adb`do recurso interno para se conectar a um `adb` server em execução em um computador remoto (consulte, por exemplo [ https://stackoverflow.com/a/18551325 ](https://stackoverflow.com/a/18551325)).
 Mas, atualmente, as extensões do IDE do xamarin. Android fornecem uma maneira de configurar essa opção.
 
 ## <a name="contact-information"></a>Informações de contato

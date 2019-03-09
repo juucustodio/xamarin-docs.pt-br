@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 63379a9a4195bf5128c96caaf8745df8dd0addf3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b4cd84e9134db2b2106af3205f189fbc2a92bdcc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050706"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669435"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Desenhar um círculo simples em SkiaSharp
 
@@ -108,7 +108,7 @@ O [ `Style` ](xref:SkiaSharp.SKPaint.Style) propriedade indica que você deseja 
 
 O padrão é `Fill`. Use a terceira opção para traçar a linha e preencher o interior com a mesma cor.
 
-Defina as [ `Color` ](xref:SkiaSharp.SKPaint.Color) propriedade para um valor do tipo [ `SKColor` ](xref:SkiaSharp.SKColor). É uma maneira de obter um `SKColor` valor está convertendo um xamarin. Forms `Color` valor para um `SKColor` valor usando o método de extensão [ `ToSKColor` ](SkiaSharp.Views.Forms.Extensions.ToSKColor*). O [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) classe o `SkiaSharp.Views.Forms` namespace inclui outros métodos que convertem entre valores de xamarin. Forms e SkiaSharp.
+Defina as [ `Color` ](xref:SkiaSharp.SKPaint.Color) propriedade para um valor do tipo [ `SKColor` ](xref:SkiaSharp.SKColor). É uma maneira de obter um `SKColor` valor está convertendo um xamarin. Forms `Color` valor para um `SKColor` valor usando o método de extensão [ `ToSKColor` ](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). O [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) classe o `SkiaSharp.Views.Forms` namespace inclui outros métodos que convertem entre valores de xamarin. Forms e SkiaSharp.
 
 O [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propriedade indica a espessura da linha. Aqui, ele é definido como 25 pixels.
 
@@ -153,7 +153,7 @@ Um `SKPaint` objeto é pouco mais do que uma coleção de propriedades de desenh
 > [!NOTE]
 > O `SKPaint` classe define um [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) para habilitar a suavização no processamento de seus elementos gráficos. A suavização geralmente resulta em bordas visualmente mais suaves, portanto, você provavelmente desejará definir essa propriedade como `true` na maioria dos seus `SKPaint` objetos. Para fins de simplicidade, essa propriedade é _não_ definido na maioria das páginas de exemplo.
 
-Embora a largura do contorno do círculo é especificada como 25 pixels &mdash; ou um quarto do raio do círculo &mdash; ele parece ser mais finos e há um bom motivo para isso: metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão até o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura permeiam círculo Geométrico &mdash; pela metade dentro e fora da metade.
+Embora a largura do contorno do círculo é especificada como 25 pixels &mdash; ou um quarto do raio do círculo &mdash; ele parece ser mais finos e há um bom motivo para isso: Metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão até o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura permeiam círculo Geométrico &mdash; pela metade dentro e fora da metade.
 
 O exemplo a seguir na [a integração com o xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) artigo demonstra isso visualmente.
 

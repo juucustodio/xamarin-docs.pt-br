@@ -6,13 +6,13 @@ ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 8/29/2018
-ms.openlocfilehash: cd9e92e2c96d0a0696633e49869f2661e410d343
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 08/29/2018
+ms.openlocfilehash: 83340ce2d5db145c29166d90d3a5180b1767d7ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233582"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672489"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Registrador de tipo para xamarin. IOS
 
@@ -144,7 +144,7 @@ Abaixo estão alguns exemplos dos erros capturados pelo registrador de novo.
 
     ```csharp
     [Register]
-    class MyDemo : NSObject 
+    class MyDemo : NSObject
     {
         [Export ("foo:")]
         void Foo (NSString str);
@@ -178,7 +178,7 @@ Abaixo estão alguns exemplos dos erros capturados pelo registrador de novo.
 
 Algumas coisas para ter em mente sobre o registrador novo:
 
-- Algumas bibliotecas de terceiros devem ser atualizadas para funcionar com o novo sistema de registro. Ver [necessárias modificações](#required_modifications) abaixo para obter mais detalhes.
+- Algumas bibliotecas de terceiros devem ser atualizadas para funcionar com o novo sistema de registro. Ver [necessárias modificações](#required-modifications) abaixo para obter mais detalhes.
 
 - Uma desvantagem de curto prazo é também que Clang deve ser usada se a estrutura de contas é usada (Isso ocorre porque da Apple **accounts.h** cabeçalho só pode ser compilado pelo Clang). Adicionar `--compiler:clang` aos argumentos adicionais do mtouch usar Clang, se você estiver usando o Xcode 4.6 ou anterior (xamarin. IOS automaticamente selecionará Clang no Xcode 5.0 ou posterior.)
 
@@ -203,6 +203,8 @@ O antigo sistema de registro tem as seguintes desvantagens:
 - Você pode exportar os dois métodos com a mesma assinatura do Objective-C. Mais uma vez qual delas será chamado de Objective-C foi aleatório (mas esse problema não era tão comum que o anterior, principalmente porque a única maneira de experimentar, na verdade, esse bug foi substituir o método gerenciado sorte).
 - O conjunto de métodos que foi exportado foi um pouco diferentes entre compilações dinâmicas e estáticas.
 - Ele não funciona corretamente ao exportar as classes genéricas (qual implementação genérica exata executada em tempo de execução seria aleatória, resultando efetivamente em um comportamento indeterminado).
+
+<a name="required-modifications" />
 
 ## <a name="new-registrar-required-changes-to-bindings"></a>Novo registrador: exigiu alterações às associações
 

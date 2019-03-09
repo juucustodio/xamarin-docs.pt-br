@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce5c8f7cf30407e64464c412359263b52e134675
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: a5083e1d31377caece1b8fb4faf33b6e3ff88202
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267385"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672450"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Dicas para atualizar o código para a API unificada
 
@@ -88,7 +88,7 @@ Algumas coisas que talvez precisem ser corrigidos manualmente incluem:
 
  * `NSAction` tem sido [substituído](~/cross-platform/macios/unified/overview.md#NSAction) com o .NET starndard `Action`. Alguns delegados simples (único parâmetro) também foram substituídos por `Action<T>`.
 
-Por fim, consulte o [diferenças de API unificada do clássico v](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) para pesquisar alterações às APIs em seu código. Pesquisando [nesta página](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) o ajudará a localizar APIs clássicas e o que eles já foi atualizados para.
+Por fim, consulte o [diferenças de API unificada do clássico v](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) para pesquisar alterações às APIs em seu código. Pesquisando [nesta página](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) o ajudará a localizar APIs clássicas e o que eles já foi atualizados para.
 
 **Observação:** o `MonoTouch.Dialog` namespace permanece o mesmo após a migração. Se seu código usa **MonoTouch** deverá continuar a usar esse namespace – fazer *não* alterar `MonoTouch.Dialog` para `Dialog`!
 
@@ -100,7 +100,7 @@ Outros exemplos de erros comuns estão listados abaixo, junto com a solução:
 
 Correção: Isso geralmente significa que o projeto referencia um componente ou pacote do NuGet que não foi criado com a API unificada. Você deve excluir e adicionar novamente todos os componentes e NuGet pacotes. Se isso não corrigir o erro, a biblioteca externa pode ainda não suporta a API unificada.
 
-**Erro MT0034: Não é possível incluir 'MonoTouch. dll' e 'Xamarin' no mesmo projeto xamarin. IOS - 'Xamarin' é referenciada explicitamente, enquanto 'MonoTouch. dll' é referenciado por ' Mobile, versão = 0.6.3.0, Culture = neutral, PublicKeyToken = null'.**
+**Error MT0034: Não é possível incluir 'MonoTouch. dll' e 'Xamarin' no mesmo projeto xamarin. IOS - 'Xamarin' é referenciada explicitamente, enquanto 'MonoTouch. dll' é referenciado por ' Mobile, versão = 0.6.3.0, Culture = neutral, PublicKeyToken = null'.**
 
 Correção: Excluir o componente que está causando o erro e adicione novamente ao projeto.
 

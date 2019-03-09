@@ -1,19 +1,14 @@
 ---
 title: Associação de uma biblioteca Java
-description: A comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo. Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin. Android, criando uma biblioteca de associações.
+description: 'A comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo. Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin. Android, criando uma biblioteca de associações.'
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c41aecf5f8c65ad5bfba5361b77d7c7fc047cda4
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171606"
 ---
+
 # <a name="binding-a-java-library"></a>Associação de uma biblioteca Java
 
 _A comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo. Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin. Android, criando uma biblioteca de associações._
@@ -103,7 +98,7 @@ A documentação da API deve ser o doclet padrão de Java8, Java7 ou o SDK Java6
 
 ## <a name="including-a-native-library-in-a-binding"></a>Incluindo uma biblioteca nativa em uma associação
 
-Talvez seja necessário incluir um **. SO** biblioteca em um projeto de associação do xamarin. Android como parte de uma biblioteca Java de associação. Quando executa o código encapsulado do Java, xamarin. Android não consegue fazer a chamada JNI e a mensagem de erro _java.lang.UnsatisfiedLinkError: método nativo não encontrado:_ será exibido o logcat-out para o aplicativo.
+Talvez seja necessário incluir um **. SO** biblioteca em um projeto de associação do xamarin. Android como parte de uma biblioteca Java de associação. Quando executa o código encapsulado do Java, xamarin. Android não consegue fazer a chamada JNI e a mensagem de erro _java.lang.UnsatisfiedLinkError: Método nativo não encontrado:_ será exibido o logcat-out para o aplicativo.
 
 A correção para isso é para carregar manualmente os **. SO** biblioteca com uma chamada para `Java.Lang.JavaSystem.LoadLibrary`. Por exemplo, supondo que um projeto xamarin. Android tem biblioteca compartilhada **libpocketsphinx_jni.so** incluído no projeto de associação com uma ação de build **EmbeddedNativeLibrary**, o trecho a seguir (executado antes de usar a biblioteca compartilhada) carregará o **. SO** biblioteca:
 
@@ -145,5 +140,5 @@ Os guias de cenário de associação a seguir podem ajudar você a vincular uma 
 ## <a name="related-links"></a>Links relacionados
 
 - [Trabalhar com JNI](~/android/platform/java-integration/working-with-jni.md)
-- [Metadados GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Metadados GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [Usar bibliotecas nativas](~/android/platform/native-libraries.md)

@@ -6,12 +6,12 @@ ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 4582b59a8a441c9e22761d498126898e66db08c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8e7ef890af264bb08827d86c635d555184f1ec00
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117922"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672502"
 ---
 # <a name="using-tiled-with-cocossharp"></a>Usar lado a lado com CocosSharp
 
@@ -35,7 +35,7 @@ Mapas de bloco tem existido no desenvolvimento de jogos por décadas, mas ainda 
 
 ![](tiled-images/image2.png "Um modo de exibição visualizado como conjuntos de bloco são usados com a adição de uma grade para o conjunto de bloco que será usado na demonstração")
 
-Mapas de bloco organizar os blocos individuais de conjuntos de bloco. Devemos observar que cada mapa lado a lado não precisa armazenar sua própria cópia do bloco definido – em vez disso, vários mapas de bloco podem referenciar o mesmo conjunto de bloco. Isso significa que, além do conjunto de lado a lado, os mapas de bloco exigem muito pouca memória. Isso permite a criação de um grande número de mapas de bloco, mesmo quando eles são usados para criar uma área de grande jogo, como um [rolagem plataforma](http://en.wikipedia.org/wiki/Platform_game) ambiente. O exemplo a seguir mostra possíveis organizações que usam o mesmo conjunto de bloco:
+Mapas de bloco organizar os blocos individuais de conjuntos de bloco. Devemos observar que cada mapa lado a lado não precisa armazenar sua própria cópia do bloco definido – em vez disso, vários mapas de bloco podem referenciar o mesmo conjunto de bloco. Isso significa que, além do conjunto de lado a lado, os mapas de bloco exigem muito pouca memória. Isso permite a criação de um grande número de mapas de bloco, mesmo quando eles são usados para criar uma área de grande jogo, como um [rolagem plataforma](https://en.wikipedia.org/wiki/Platform_game) ambiente. O exemplo a seguir mostra possíveis organizações que usam o mesmo conjunto de bloco:
 
 ![](tiled-images/image3.png "Esta imagem mostra possíveis organizações que usam o mesmo conjunto de bloco")
 
@@ -267,7 +267,7 @@ public class GameLayer : CCLayer
 } 
 ```
 
-A maioria do código é auto-explicativo, mas deve discutiremos a manipulação de Tesouro de blocos. Nesse caso, estamos removendo os blocos que são identificados como baús de tesouro. Isso ocorre porque o baú de tesouro provavelmente precisará de código personalizado em tempo de execução a colisão de efeito e recompense o conteúdo do Tesouro quando aberto com o player. Além disso, o Tesouro talvez seja necessário reagir a que está sendo aberto (alterando sua aparência visual) e pode ter lógica para somente que aparecem quando tudo na tela inimigos tem sido derrotados.
+A maioria do código é auto-explicativo, mas deve discutiremos a manipulação de Tesouro de blocos. Nesse caso, estamos removendo os blocos que são identificados como peitos Tesouro. Isso ocorre porque o Tesouro peitos provavelmente precisará de código personalizado em tempo de execução a colisão de efeito e recompense o conteúdo do Tesouro quando aberto com o player. Além disso, o Tesouro talvez seja necessário reagir a que está sendo aberto (alterando sua aparência visual) e pode ter lógica para somente que aparecem quando tudo na tela inimigos tem sido derrotados.
 
 Em outras palavras, o conjunto de ferramentas do Tesouro irão se beneficiar sendo uma entidade em vez de ser um bloco simples no `CCTileMap`. Para obter mais informações sobre entidades de jogos, consulte o [guia de entidades em CocosSharp](~/graphics-games/cocossharp/entities.md).
 
