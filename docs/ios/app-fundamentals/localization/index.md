@@ -1,19 +1,14 @@
 ---
 title: Localização no xamarin. IOS
-description: Este documento descreve os recursos de localização de iOS e como usar esses recursos em aplicativos xamarin. IOS. Ele aborda o idioma, localidade, arquivos de cadeias de caracteres, imagens de inicialização e muito mais.
+description: 'Este documento descreve os recursos de localização de iOS e como usar esses recursos em aplicativos xamarin. IOS. Ele aborda o idioma, localidade, arquivos de cadeias de caracteres, imagens de inicialização e muito mais.'
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 906489aa3947df24662cbbd0473333caccc032c7
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527255"
 ---
+
 # <a name="localization-in-xamarinios"></a>Localização no xamarin. IOS
 
 _Este documento aborda os recursos de localização do SDK do iOS e como acessá-los com o Xamarin._
@@ -22,11 +17,11 @@ Consulte a [codificações de internacionalização](encodings.md) para obter in
 
 ## <a name="ios-platform-features"></a>recursos da plataforma iOS
 
-Esta seção descreve alguns dos recursos de localização no iOS. Vá para o [próxima seção](#basics) para ver exemplos e código específicos.
+Esta seção descreve alguns dos recursos de localização no iOS. Vá para o [próxima seção](#Localization-basics-in-iOS) para ver exemplos e código específicos.
 
 ### <a name="language"></a>Idioma
 
-Os usuários escolher seu idioma na **configurações** aplicativo. Essa configuração afeta a cadeias de caracteres de idioma e as imagens exibidas pelo sistema operacional e nos aplicativos. 
+Os usuários escolher seu idioma na **configurações** aplicativo. Essa configuração afeta a cadeias de caracteres de idioma e as imagens exibidas pelo sistema operacional e nos aplicativos.
 
 Para determinar o idioma que está sendo usado em um aplicativo, obter o primeiro elemento da `NSBundle.MainBundle.PreferredLocalizations`:
 
@@ -59,7 +54,7 @@ O primeiro valor pode ser armazenados em cache pelo sistema operacional e então
 > [!NOTE]
 > Mono (o tempo de execução .NET no qual se baseia o xamarin. IOS) e APIs do iOS da Apple não dão suporte a conjuntos idênticos de combinações de idioma/região.
 > Por isso, é possível selecionar uma combinação de idioma/região no iOS **configurações** aplicativo que não é mapeado para um valor válido em Mono. Por exemplo, a definição de idioma de um iPhone para inglês e sua região Espanha fará com que as seguintes APIs produzir valores diferentes:
-> 
+>
 > - `CurrentThead.CurrentCulture`: en-US (API do Mono)
 > - `CurrentThread.CurrentUICulture`: en-US (API do Mono)
 > - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (API da Apple)
@@ -76,14 +71,14 @@ Os seguintes recursos do iOS serão facilmente utilizados no Xamarin para fornec
 
 ### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Especificando padrão e idiomas com suporte no Info. plist
 
-Na [técnica p e R QA1828: como iOS determina o idioma para seu aplicativo](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple descreve como o seleciona um idioma a ser usado em um aplicativo iOS. Os seguintes fatores afetam a linguagem que é exibida:
+No [técnica p um QA1828: Como o iOS determina o idioma para seu aplicativo](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple descreve como o seleciona um idioma a ser usado em um aplicativo iOS. Os seguintes fatores afetam a linguagem que é exibida:
 
 - Idiomas preferencial do usuário (encontrada na **configurações** app)
 - Entre as localizações agrupado com o aplicativo (.lproj pastas)
 - `CFBundleDevelopmentRegion` (**Info. plist** valor que especifica o idioma padrão para o aplicativo)
 - `CFBundleLocalizations` (**Info. plist** matriz especificando localizações todos com suporte)
 
-Conforme indicado na técnica p e R, `CFBundleDevelopmentRegion` representa o idioma e região padrão de um aplicativo. Se o aplicativo não explicitamente dá suporte a qualquer um dos idiomas de preferência do usuário, ele usará o idioma especificado por esse campo. 
+Conforme indicado na técnica p e R, `CFBundleDevelopmentRegion` representa o idioma e região padrão de um aplicativo. Se o aplicativo não explicitamente dá suporte a qualquer um dos idiomas de preferência do usuário, ele usará o idioma especificado por esse campo.
 
 > [!IMPORTANT]
 > iOS 11 se aplica a esse mecanismo de seleção de idioma mais estritamente que foram a versões anteriores do sistema operacional. Por isso, qualquer aplicativo iOS 11 que não declara explicitamente suas localizações com suporte – incluindo .lproj pastas ou definindo um valor para `CFBundleLocalizations` – pode ser exibido um idioma diferente no iOS 11, do que tinha no iOS 10.
@@ -255,7 +250,7 @@ iOS fornece inúmeros recursos para ajudá-lo na criação de aplicativos com su
 
 As capturas de tela a seguir mostram os [localizado exemplo Tasky](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em árabe e hebraico (embora foi inserido em inglês nos campos):
 
-[![](images/rtl-ar-sml.png "Localização em árabe")](images/rtl-ar.png#lightbox "Arabic") 
+[![](images/rtl-ar-sml.png "Localização em árabe")](images/rtl-ar.png#lightbox "Arabic")
 
 [![](images/rtl-he-sml.png "Localização em hebraico")](images/rtl-he.png#lightbox "Hebrew")
 
@@ -346,7 +341,7 @@ No exemplo **Mainstoryboard.strings** abaixo você pode ver `UITextField`s têm 
 
 > [!IMPORTANT]
 > Usando um storyboard com classes de tamanho pode resultar em traduções que não aparecem no aplicativo. [Notas de versão do Xcode da Apple](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) indicam que um storyboard ou XIB vai não localizar corretamente se três itens forem verdadeiros: ele usa as classes de tamanho, a localização de base e o destino de build são definidos como Universal e o build direciona iOS 7.0. A correção é duplicar seu arquivo do storyboard cadeias de caracteres em dois arquivos idênticos: **MainStoryboard~iphone.strings** e **MainStoryboard~ipad.strings**, conforme mostrado na seguinte captura de tela:
-> 
+>
 > ![](images/xs-dup-strings.png "Arquivos de cadeias de caracteres")
 
 <a name="appstore" />
@@ -368,4 +363,4 @@ Você pode aprender mais sobre i18n e L10n para aplicativos iOS, Android e plata
 - [Guia de localização da Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [Visão geral de localização de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md)
 - [Localização do xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
-- [Localização do Android](~/android/app-fundamentals/localization.md)
+- [Localização no Android](~/android/app-fundamentals/localization.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: f3315563725da7c54febd852298c60003eb056a4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2ed14752cc5906b68d277b4f492875f7e281b053
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104889"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671449"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, comutadores e controles segmentados no xamarin. IOS
 
@@ -22,7 +22,7 @@ ms.locfileid: "50104889"
 
 Permite o controle deslizante simples seleção de um valor numérico em um intervalo. O controle padrão é um valor entre 0 e 1, mas esses limites podem ser personalizados.
 
- [![](slider-switch-segmented-controls-images/image25a.png "Controle deslizante")](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image25a.png "Slider")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 Captura de tela a seguir mostra as propriedades que podem ser editadas no Designer:
 
@@ -50,7 +50,7 @@ O controle deslizante personalizado tem esta aparência:
  [![](slider-switch-segmented-controls-images/image27a.png "Controle deslizante personalizado")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Atualmente, há uma [bug](http://stackoverflow.com/a/19496179) causando o `ThumbTint` para não processar em tempo de execução, conforme o esperado. Você pode adicionar a seguinte linha de código **antes de** o código acima como uma solução alternativa. [[Origem](http://stackoverflow.com/a/21396794)]:
+> Atualmente, há uma [bug](https://stackoverflow.com/a/19496179) causando o `ThumbTint` para não processar em tempo de execução, conforme o esperado. Você pode adicionar a seguinte linha de código **antes de** o código acima como uma solução alternativa. [[Origem](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
