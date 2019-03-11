@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056952"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557276"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de associação do Xamarin.Forms
 
@@ -101,10 +101,7 @@ A lógica é que uma associação na propriedade `SelectedItem` deve resultar na
 
 ### <a name="one-time-bindings"></a>Associações avulsas
 
-Várias propriedades têm um modo de associação padrão igual a `OneTime`. Elas são:
-
-- Propriedade `IsTextPredictionEnabled` de `Entry`
-- Propriedades `Text`, `BackgroundColor` e `Style` de `Span`.
+Várias propriedades têm um modo de associação padrão do `OneTime`, incluindo a propriedade `IsTextPredictionEnabled` de `Entry`.
 
 Propriedades de destino com um modo de associação igual a `OneTime` são atualizadas somente quando o contexto de associação é alterado. Para as associações nessas propriedades de destino, isso simplifica a infraestrutura de associação porque não é necessário monitorar as alterações nas propriedades de origem.
 

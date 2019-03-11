@@ -6,20 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/03/2018
-ms.openlocfilehash: ae005b487e13ab4d2d39b26b10c7ca08e263ef67
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 99b5798e8d3cd5723f99aa2483d5d1c0eff8d57c
+ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899168"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305640"
 ---
 # <a name="build-process"></a>Processo de build
-
 
 ## <a name="overview"></a>Visão geral
 
 O processo de build do Xamarin.Android é responsável por juntar tudo isto: [gerar `Resource.designer.cs`](~/android/internals/api-design.md), dar suporte a `AndroidAsset`, `AndroidResource` e outras [ações de build](#Build_Actions), gerar [wrappers que podem ser chamados pelo Android](~/android/platform/java-integration/android-callable-wrappers.md) e gerar um `.apk` para execução em dispositivos Android.
-
 
 ## <a name="application-packages"></a>Pacotes de aplicativos
 
@@ -43,7 +41,7 @@ O tempo de execução compartilhado pode ser desabilitado em builds de depuraç�
 
 O *Fast Deployment* trabalha em conjunto com o tempo de execução compartilhado para reduzir ainda mais o tamanho do pacote do aplicativo Android. Isso é feito não agrupando assemblies do aplicativo dentro do pacote. Em vez disso, eles são copiados para o destino por meio de `adb push`. Esse processo agiliza o ciclo de build/implantação/depuração porque se *somente* assemblies são alterados, o pacote não é reinstalado. Em vez disso, apenas os assemblies atualizados são sincronizados novamente ao dispositivo de destino. 
 
-O Fast Deployment reconhecidamente falha em dispositivos que bloqueiam a sincronização de `adb` ao diretório `/data/data/@PACKAGE_NAME@/files/.__override__`. 
+O Fast Deployment reconhecidamente falha em dispositivos que bloqueiam a sincronização de `adb` ao diretório `/data/data/@PACKAGE_NAME@/files/.__override__`.
 
 O Fast Deployment é habilitado por padrão e pode ser desabilitado em builds de depuração, definindo a propriedade `$(EmbedAssembliesIntoApk)` para `True`.
 
@@ -176,7 +174,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
 -   **AndroidFastDeploymentType** &ndash; Uma lista de valores separados por `:` (dois pontos) para controlar quais tipos podem ser implantados no [diretório da Implantação Rápida](#Fast_Deployment) no dispositivo de destino quando a propriedade `$(EmbedAssembliesIntoApk)` do MSBuild é `False`. Se um recurso é implantado por Fast Deployment, ele *não* é inserido no `.apk` gerado, o que pode acelerar os tempos de implantação. (Quanto mais rápido ele é implantado, menor a frequência com que o `.apk` precisa ser recriado, acelerando assim o processo de instalação.) Os valores válidos incluem:
 
-    - `Assemblies`: implantar os assemblies do aplicativo.
+    - `Assemblies`: implantar assemblies do aplicativo.
 
     - `Dexes`: implantar arquivos `.dex`, recursos do Android e ativos do Android. **Esse valor pode ser usado *somente* em dispositivos que executam o Android 4.4 ou posterior (API-19).**
 
@@ -197,25 +195,25 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
     Isso pode ser substituído para que contenha `Xamarin.Android.Net.AndroidClientHandler`, que usa as APIs Java para Android para executar solicitações de rede. Isso permite acessar as URLs TLS 1.2 quando a versão do Android subjacente dá suporte ao TLS 1.2.  
     Somente versões Android 5.0 e posteriores fornecem suporte confiável ao TLS 1.2 por meio de Java.
 
-    *Observação*: se o suporte ao TLS 1.2 for requerido nas versões do Android anteriores a 5.0 *ou* se o suporte ao TLS 1.2 for requerido com o `System.Net.WebClient` e APIs relacionadas, então `$(AndroidTlsProvider)` deverá ser usado.
+    *Observação*: Se o suporte a TLS 1.2 for necessário nas versões do Android anteriores à 5.0 *ou* com o `System.Net.WebClient` e as APIs relacionadas, o `$(AndroidTlsProvider)` deverá ser usado.
 
-    *Observação*: o suporte para esta propriedade funciona por meio da configuração da [variável de ambiente `XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
+    *Observação*: o suporte para esta propriedade funciona por meio da definição da [variável de ambiente `XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
     Um valor `$XA_HTTP_CLIENT_HANDLER_TYPE` encontrado em um arquivo com uma ação de build de `@(AndroidEnvironment)` terá precedência.
 
     Adicionado no Xamarin.Android 6.1.
 
 -   **AndroidTlsProvider** &ndash; um valor de cadeia de caracteres que especifica qual provedor TLS deve ser usado em um aplicativo. Os possíveis valores são:
 
-    - `btls`: usar [Boring SSL](https://boringssl.googlesource.com/boringssl) para a comunicação por TLS com [HttpWebRequest](xref:System.Net.HttpWebRequest).
+    - `btls`: use [Boring SSL](https://boringssl.googlesource.com/boringssl) para a comunicação TLS com [HttpWebRequest](xref:System.Net.HttpWebRequest).
       Isso permite usar o TLS 1.2 em todas as versões do Android.
 
-    - `legacy`: usar a implementação de SSL gerenciada histórica para interação de rede. Isso *não* é compatível com a TLS 1.2.
+    - `legacy`: use a implementação SSL gerenciada histórica para interação na rede. Isso *não* é compatível com a TLS 1.2.
 
     - `default`: permitir *Mono* para escolher o provedor TLS padrão.
       Isto é equivalente a `legacy`, mesmo no Xamarin.Android 7.3.  
-      *Observação*: é improvável que esse valor apareça em valores de `.csproj`, pois o valor IDE "Padrão" resulta na *remoção* da propriedade `$(AndroidTlsProvider)`.
+      *Observação*: é improvável que esse valor apareça nos valores de `.csproj`, pois o valor "Padrão" do IDE resulta na *remoção* da propriedade `$(AndroidTlsProvider)`.
 
-    - Cadeia de caracteres não definida/vazia: no Xamarin.Android 7.1, isso é equivalente a `legacy`.  
+    - Não definido/a cadeia de caracteres está vazia: no Xamarin.Android 7.1, isso é equivalente a `legacy`.  
       No In Xamarin.Android 7.3, isso é equivalente a `btls`.
 
     O valor padrão é a cadeia de caracteres vazia.
@@ -224,11 +222,11 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
 -   **AndroidLinkMode** &ndash; especifica qual tipo de [vinculação](~/android/deploy-test/linker.md) deve ser realizada em assemblies contidos no pacote Android. Usado somente em projetos de aplicativo Android. O valor padrão é *SdkOnly*. Os valores válidos são:
 
-    - **None**: nenhuma tentativa de vinculação ocorrerá.
+    - **Nenhum**: não será tentada nenhuma vinculação.
 
-    - **SdkOnly**: a vinculação ocorrerá apenas nas bibliotecas de classe base, não nos assemblies do usuário.
+    - **SdkOnly**: a vinculação será executada apenas nas bibliotecas de classe base, não nos assemblies do usuário.
 
-    - **Full**: a vinculação ocorrerá nas bibliotecas de classe base e nos assemblies do usuário. **Observação:** o uso de um valor `AndroidLinkMode` definido como *Full* normalmente resulta em aplicativos com falha, especialmente quando a reflexão é usada. Evite usar isso, a menos que você *realmente* saiba o que está fazendo.
+    - **Full**: a vinculação será executada nas bibliotecas de classe base e nos assemblies do usuário. **Observação:** o uso de um valor `AndroidLinkMode` definido como *Full* normalmente resulta em aplicativos com falha, principalmente quando a reflexão é usada. Evite usar isso, a menos que você *realmente* saiba o que está fazendo.
 
     ```xml
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
@@ -244,7 +242,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
     [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
 
--   **LinkerDumpDependencies** &ndash; uma propriedade booliana que permite a geração do arquivo de dependências do vinculador. Esse arquivo pode ser usado como entrada para a ferramenta [illinkanalyzer](https://github.com/mono/linker/tree/master/analyzer).
+-   **LinkerDumpDependencies** &ndash; uma propriedade booliana que permite a geração do arquivo de dependências do vinculador. Esse arquivo pode ser usado como entrada para a ferramenta [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md).
 
     O valor padrão é False.
 
@@ -317,19 +315,19 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
 -   **MandroidI18n**&ndash; especifica o suporte à internacionalização incluído com o aplicativo, tal como tabelas de ordenação e de classificação. O valor é uma lista separada por vírgula ou ponto e vírgula de um ou mais dos seguintes valores que não diferenciam maiúsculas e minúsculas:
 
-    -   **None**: não incluir nenhuma codificação adicional.
+    -   **Nenhum**: não incluir nenhuma codificação adicional.
 
     -   **All**: incluir todas as codificações disponíveis.
 
-    -   **CJK**: incluir codificações de Chinês, Japonês e Coreano, tais como *Japonês (EUC)* \[enc-jp, CP51932\], *Japonês (Shift-JIS)* \[iso-2022-jp, shift\_jis, CP932\], *Japonês (JIS)* \[CP50220\], *Chinês Simplificado (GB2312)* \[gb2312, CP936\], *Coreano (UHC)* \[ks\_c\_5601-1987, CP949\], *Coreano (EUC)* \[euc-kr, CP51949\], *Chinês Tradicional (Big5)* \[big5, CP950\] e *Chinês Simplificado (GB18030)* \[GB18030, CP54936\].
+    -   **CJK**: incluir codificações de chinês, japonês e coreano, como *Japonês (EUC)* \[enc-jp, CP51932\], *japonês (Shift-JIS)* \[iso-2022-jp, shift\_jis, CP932\], *japonês (JIS)* \[CP50220\], *chinês simplificado (GB2312)* \[gb2312, CP936\], *coreano (UHC)* \[ks\_c\_5601-1987, CP949\], *coreano (EUC)* \[euc-kr, CP51949\], *chinês tradicional (Big5)* \[big5, CP950\] e *chinês simplificado (GB18030)* \[GB18030, CP54936\].
 
-    -   **Oriente Médio**: incluir codificações do oriente médio, tais como *Turco (Windows)* \[iso-8859-9, CP1254\], *Hebraico (Windows)* \[windows-1255, CP1255\], *Árabe (Windows)* \[windows-1256, CP1256\], *Árabe (ISO)* \[iso-8859-6, CP28596\], *Hebraico (ISO)* \[iso-8859-8, CP28598\], *Latim 5 (ISO)* \[iso-8859-9, CP28599\] e *Hebraico (alternativa ao ISO)* \[iso-8859-8, CP38598\].
+    -   **MidEast**: Incluir codificações do Oriente Médio, como *turco (Windows)* \[iso-8859-9, CP1254\], *hebraico (Windows)* \[windows-1255, CP1255\], *árabe (Windows)* \[windows-1256, CP1256\], *árabe (ISO)* \[iso-8859-6, CP28596\], *hebraico (ISO)* \[iso-8859-8, CP28598\], *latim 5 (ISO)* \[iso-8859-9, CP28599\] e *hebraico (ISO alternativa)* \[iso-8859-8, CP38598\].
 
-    -   **Outros**: incluir outras codificações como *Cirílico (Windows)* \[CP1251\], *Báltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirílico (KOI8-R)* \[koi8-r, CP1251\], *Ucraniano (KOI8-U)* \[koi8-u, CP1251\], *Báltico (ISO)* \[iso-8859-4, CP1257\], *Cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII Davenagari* \[x-iscii-de, CP57002\], *ISCII Bengalês* \[x-iscii-be, CP57003\], *ISCII Tâmil* \[x-iscii-ta, CP57004\], *ISCII Télugo* \[x-iscii-te, CP57005\], *ISCII Assamês* \[x-iscii-as, CP57006\], *ISCII Odia* \[x-iscii-or, CP57007\], *ISCII Canarim* \[x-iscii-ka, CP57008\], *ISCII Malaiala* \[x-iscii-ma, CP57009\], *ISCII Guzerate* \[x-iscii-gu, CP57010\], *ISCII Panjabi* \[x-iscii-pa, CP57011\] e *Tailandês (Windows)* \[CP874\].
+    -   **Other**: incluir outras codificações como *cirílico (Windows)* \[CP1251\], *báltico (Windows)* \[iso-8859-4, CP1257\], *vietnamita (Windows)* \[CP1258\], *cirílico (KOI8-R)* \[koi8-r, CP1251\], *ucraniano (KOI8-U)* \[koi8-u, CP1251\], *báltico (ISO)* \[iso-8859-4, CP1257\], *cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII devanágari* \[x-iscii-de, CP57002\], *ISCII bengalês* \[x-iscii-be, CP57003\], *ISCII tâmil* \[x-iscii-ta, CP57004\], *ISCII télugo* \[x-iscii-te, CP57005\], *ISCII assamês* \[x-iscii-as, CP57006\], *ISCII odia* \[x-iscii-or, CP57007\], *ISCII canarim* \[x-iscii-ka, CP57008\], *ISCII malaiala* \[x-iscii-ma, CP57009\], *ISCII guzerate* \[x-iscii-gu, CP57010\], *ISCII panjabi* \[x-iscii-pa, CP57011\] e *tailandês (Windows)* \[CP874\].
 
-    -   **Raro**: incluir codificações raras, tais como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Open Systems Latim 1)* \[CP1047\], *IBM EBCDIC (EUA-Canadá com Euro)* \[CP1140\], *IBM EBCDIC (Alemanha com Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega com Euro)* \[CP1142\], *IBM EBCDIC (Finlândia/Suécia com Euro)* \[CP1143\], *IBM EBCDIC (Itália com Euro)* \[CP1144\], *IBM EBCDIC (América Latina/Espanha com Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido com Euro)* \[CP1146\], *IBM EBCDIC (França com Euro)* \[CP1147\], *IBM EBCDIC (Internacional com Euro)* \[CP1148\], *IBM EBCDIC (Islandês com Euro)* \[CP1149\], *IBM EBCDIC (Alemanha)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlândia/Suécia)* \[CP20278\], *IBM EBCDIC (Itália)* \[CP20280\], *IBM EBCDIC (América Latina/Espanha)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana Japonês Estendido)* \[CP20290\], *IBM EBCDIC (França)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebraico)* \[CP20424\], *IBM EBCDIC (Islandês)* \[CP20871\], *IBM EBCDIC (Cirílico – Servo, Búlgaro)* \[CP21025\], *IBM EBCDIC (EUA-Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centro-europeu (DOS)* \[CP852\]*, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeu Ocidental (DOS com Euro)* \[CP858\], *Hebraico (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Russo (DOS)* \[CP866\], *Grego (DOS)* \[CP869\], *IBM EBCDIC (Latim 2)* \[CP870\] e *IBM EBCDIC (Grego)* \[CP875\].
+    -   **Rare**: incluir codificações raras, tais como *IBM EBCDIC (turco)* \[CP1026\], *IBM EBCDIC (Open Systems Latim 1)* \[CP1047\], *IBM EBCDIC (EUA-Canadá com Euro)* \[CP1140\], *IBM EBCDIC (Alemanha com Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega com Euro)* \[CP1142\], *IBM EBCDIC (Finlândia/Suécia com Euro)* \[CP1143\], *IBM EBCDIC (Itália com Euro)* \[CP1144\], *IBM EBCDIC (América Latina/Espanha com Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido com Euro)* \[CP1146\], *IBM EBCDIC (França com Euro)* \[CP1147\], *IBM EBCDIC (Internacional com Euro)* \[CP1148\], *IBM EBCDIC (islandês com Euro)* \[CP1149\], *IBM EBCDIC (Alemanha)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlândia/Suécia)* \[CP20278\], *IBM EBCDIC (Itália)* \[CP20280\], *IBM EBCDIC (América Latina/Espanha)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (katakana japonês estendido)* \[CP20290\], *IBM EBCDIC (França)* \[CP20297\], *IBM EBCDIC (árabe)* \[CP20420\], *IBM EBCDIC (hebraico)* \[CP20424\], *IBM EBCDIC (islandês)* \[CP20871\], *IBM EBCDIC (cirílico – servo, búlgaro)* \[CP21025\], *IBM EBCDIC (EUA-Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *árabe (ASMO 708)* \[CP708\], *Centro-europeu (DOS)* \[CP852\]*, cirílico (DOS)* \[CP855\], *turco (DOS)* \[CP857\], *europeu ocidental (DOS com Euro)* \[CP858\], *hebraico (DOS)* \[CP862\], *árabe (DOS)* \[CP864\], *russo (DOS)* \[CP866\], *grego (DOS)* \[CP869\], *IBM EBCDIC (latim 2)* \[CP870\] e *IBM EBCDIC (grego)* \[CP875\].
 
-    -   **Oeste**: incluir codificações ocidentais, tais como *Europeu Ocidental (Mac)* \[macintosh, CP10000\], *Islandês (Mac)* \[x-mac-islandês, CP10079\], *Centro-europeu (Windows)* \[iso 8859-2, CP1250\], *Europeu Ocidental (Windows)* \[iso 8859-1, CP1252\], *Grego (Windows)* \[iso-8859-7, CP1253\], *Centro-europeu (ISO)* \[iso 8859-2, CP28592\], *Latim 3 (ISO)* \[iso 8859-3, CP28593\], *Grego (ISO)* \[iso-8859-7, CP28597\], *Latim 9 (ISO)*  \[iso 8859-15, CP28605\], *OEM Estados Unidos* \[CP437\], *Europeu Ocidental (DOS)* \[CP850\], *Português (DOS)* \[CP860\], *Islandês (DOS)* \[CP861\], *Francês Canadense (DOS)* \[CP863\], e *Nórdico (DOS)* \[CP865\].
+    -   **West**: incluir codificações ocidentais, como *europeu ocidental (Mac)* \[macintosh, CP10000\], *islandês (Mac)* \[x-mac-islandês, CP10079\], *Centro-europeu (Windows)* \[iso-8859-2, CP1250\], *europeu ocidental (Windows)* \[iso-8859-1, CP1252\], *grego (Windows)* \[iso-8859-7, CP1253\], *Centro-europeu (ISO)* \[iso 8859-2, CP28592\], *latim 3 (ISO)* \[iso-8859-3, CP28593\], *grego (ISO)* \[iso-8859-7, CP28597\], *latim 9 (ISO)* \[iso-8859-15, CP28605\], *OEM Estados Unidos* \[CP437\], *Europeu Ocidental (DOS)* \[CP850\], *português (DOS)* \[CP860\], *islandês (DOS)* \[CP861\], *francês canadense (DOS)* \[CP863\] e *nórdico (DOS)* \[CP865\].
 
 
     ```xml
@@ -459,7 +457,7 @@ As seguintes propriedades de MSBuild são usadas com [projetos de associação](
     - **class-parse**: usa `class-parse.exe` para analisar o código de bytes Java diretamente, sem a assistência de uma JVM. Esse valor é experimental. 
 
 
-    - **jar2xml**: usar `jar2xml.jar` para usar a reflexão do Java para extrair tipos e membros de um arquivo `.jar`.
+    - **jar2xml**: usa `jar2xml.jar` para usar a reflexão do Java para extrair tipos e membros de um arquivo `.jar`.
 
     As vantagens de `class-parse` sobre `jar2xml` são:
 
@@ -477,7 +475,7 @@ As seguintes propriedades de MSBuild são usadas com [projetos de associação](
 
     - **XamarinAndroid**: usa a API de associação de JNI presente desde o Mono para Android 1.0. Assemblies de associação criados com Xamarin.Android 5.0 ou posterior podem ser executados apenas no Xamarin.Android 5.0 ou posterior (adições de API/ABI), mas o *código-fonte* é compatível com o das versões anteriores do produto.
 
-    - **XAJavaInterop1**: usar Java.Interop para invocações de JNI. Assemblies de associação usando `XAJavaInterop1` só podem compilar e executar com o Xamarin.Android 6.1 ou posterior. O Xamarin.Android 6.1 e os posteriores associam `Mono.Android.dll` com esse valor.
+    - **XAJavaInterop1**: usar o Java.Interop para invocações de JNI. Assemblies de associação usando `XAJavaInterop1` só podem compilar e executar com o Xamarin.Android 6.1 ou posterior. O Xamarin.Android 6.1 e os posteriores associam `Mono.Android.dll` com esse valor.
 
       Os benefícios de `XAJavaInterop1` incluem:
 

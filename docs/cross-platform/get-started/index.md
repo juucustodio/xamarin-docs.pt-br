@@ -1,24 +1,19 @@
 ---
 title: Introdução ao Xamarin
-description: Este documento apresenta links para vários guias que descrevem como começar no desenvolvimento do Xamarin. O conteúdo vinculado descreve como criar um primeiro aplicativo, fornece uma introdução geral ao desenvolvimento móvel e faz uma breve apresentação sobre treinamento no Xamarin University.
+description: 'Este documento apresenta links para vários guias que descrevem como começar no desenvolvimento do Xamarin. O conteúdo vinculado descreve como criar um primeiro aplicativo, fornece uma introdução geral ao desenvolvimento móvel e faz uma breve apresentação sobre treinamento no Xamarin University.'
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 1b98dcb175c7e28e0ae101bea172aa2a98d3502e
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292162"
 ---
-# <a name="get-started-with-xamarin"></a>Introdução ao Xamarin
 
-Antes de começar, confira o [requisitos de sistema](requirements.md) e as [instruções de instalação](installation/index.md) para verificar se tudo está pronto para começar.
+# <a name="building-mobile-apps"></a>Criando aplicativos móveis
 
-## <a name="build-your-first-app"></a>Crie seu primeiro aplicativo
+Antes de começar, confira o [requisitos de sistema](requirements.md) e as [instruções de instalação](~/get-started/installation/index.md) para verificar se tudo está pronto para começar.
+
+## <a name="build-your-first-app"></a>Criar seu primeiro aplicativo
 
 > [!div class="nextstepaction"]
 > [Início rápido do Xamarin.Forms](~/get-started/quickstarts/single-page.md)
@@ -57,4 +52,4 @@ Saiba mais sobre o Ambiente de Desenvolvimento Integrado (IDE) para macOS do Vis
 ## <a name="related-links"></a>Links relacionados
 
 - [Requisitos do sistema](requirements.md)
-- [Instruções de instalação](~/cross-platform/get-started/installation/index.md)
+- [Instruções de instalação](~/get-started/installation/index.md)
