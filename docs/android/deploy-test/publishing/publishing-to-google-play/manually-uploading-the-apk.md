@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4f0378f7e2fe29a5d11c2cbc02fc736adf12577c
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 76292dac6281837ee48b3bb76a362255108bd62c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171723"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667497"
 ---
 # <a name="manually-uploading-the-apk"></a>Carregando o APK Manualmente
 
@@ -162,29 +162,29 @@ Quando os usuários buscam por aplicativos no site do Google Play, eles podem pe
 
 É possível adicionar elementos ao manifesto do aplicativo para ajudar a controlar como o aplicativo é filtrado na Google Play Store. A seguir estão listados os elementos e atributos do manifesto que podem ser usados para filtrar aplicativos:
 
--   [supports-screen](http://developer.android.com/guide/topics/manifest/supports-screens-element.html)&ndash; O Google Play usará os atributos para determinar se um aplicativo poderá ser implantado em um dispositivo com base no tamanho da tela. 
+-   [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html)&ndash; O Google Play usará os atributos para determinar se um aplicativo poderá ser implantado em um dispositivo com base no tamanho da tela. 
     O Google Play pressupõe que o Android pode adaptar um layout menor a telas maiores, mas não vice-versa. Desse modo, um aplicativo que declara o suporte para telas normais aparecerá em pesquisas por telas grandes, mas não em pesquisas por telas pequenas. Se um aplicativo Xamarin.Android não fornecer um elemento `<supports-screen>` no arquivo de manifesto, o Google Play presumirá que todos os atributos têm valor true e que o aplicativo dá suporte a todos os tamanhos de tela. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 
--   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html)&ndash; Este elemento de manifesto é usado para solicitar determinados recursos de hardware, como o tipo de teclado, dispositivos de navegação, uma tela sensível ao toque, etc. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
+-   [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html)&ndash; Este elemento de manifesto é usado para solicitar determinados recursos de hardware, como o tipo de teclado, dispositivos de navegação, uma tela sensível ao toque, etc. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 
--   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html)&ndash; Este elemento de manifesto declara os recursos de hardware ou software que um dispositivo deve ter para que o aplicativo funcione. Esse atributo é apenas informativo. O Google Play não exibirá o aplicativo em dispositivos que não satisfaçam esse filtro. Ainda é possível instalar o aplicativo por outros meios (manualmente ou baixando). Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
+-   [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html)&ndash; Este elemento de manifesto declara os recursos de hardware ou software que um dispositivo deve ter para que o aplicativo funcione. Esse atributo é apenas informativo. O Google Play não exibirá o aplicativo em dispositivos que não satisfaçam esse filtro. Ainda é possível instalar o aplicativo por outros meios (manualmente ou baixando). Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 
--   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html)&ndash; Este elemento especifica que certas bibliotecas compartilhadas devem estar presentes no dispositivo, por exemplo, Google Maps. Esse elemento também pode ser especificado com o `Android.App.UsesLibraryAttribute`. Por exemplo: 
+-   [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html)&ndash; Este elemento especifica que certas bibliotecas compartilhadas devem estar presentes no dispositivo, por exemplo, Google Maps. Esse elemento também pode ser especificado com o `Android.App.UsesLibraryAttribute`. Por exemplo: 
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
--   [uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html)&ndash; Este elemento é usado para inferir determinados recursos de hardware necessários para a execução do aplicativo e que talvez não tenham sido adequadamente declarados com um elemento `<uses-feature>`. Por exemplo, se um aplicativo solicitar permissão para usar a câmera, o Google Play presumirá que os dispositivos devem ter uma câmera, mesmo se não houver nenhum elemento `<uses-feature>` declarando a câmera. Esse elemento pode ser definido com o `Android.App.UsesPermissionsAttribute`. Por exemplo: 
+-   [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html)&ndash; Este elemento é usado para inferir determinados recursos de hardware necessários para a execução do aplicativo e que talvez não tenham sido adequadamente declarados com um elemento `<uses-feature>`. Por exemplo, se um aplicativo solicitar permissão para usar a câmera, o Google Play presumirá que os dispositivos devem ter uma câmera, mesmo se não houver nenhum elemento `<uses-feature>` declarando a câmera. Esse elemento pode ser definido com o `Android.App.UsesPermissionsAttribute`. Por exemplo: 
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]
     ```
 
--   [uses-sdk](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html)&ndash; O elemento é usado para declarar o nível mínimo necessário de API do Android para o aplicativo. Esse elemento pode ser definido nas opções de um projeto Xamarin.Android. 
+-   [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html)&ndash; O elemento é usado para declarar o nível mínimo necessário de API do Android para o aplicativo. Esse elemento pode ser definido nas opções de um projeto Xamarin.Android. 
 
--   [compatible-screens](http://developer.android.com/guide/topics/manifest/compatible-screens-element.html)&ndash; Este elemento é usado para filtrar os aplicativos que não correspondem nem à densidade, nem ao tamanho da tela especificados por este elemento. A maioria dos aplicativos não deve usar este filtro. Ele destina-se a jogos de alto desempenho ou aplicativos específicos que exigiram controles estritos na distribuição do aplicativo. O atributo `<support-screen>` mencionado acima é preferível. 
+-   [compatible-screens](https://developer.android.com/guide/topics/manifest/compatible-screens-element.html)&ndash; Este elemento é usado para filtrar os aplicativos que não correspondem nem à densidade, nem ao tamanho da tela especificados por este elemento. A maioria dos aplicativos não deve usar este filtro. Ele destina-se a jogos de alto desempenho ou aplicativos específicos que exigiram controles estritos na distribuição do aplicativo. O atributo `<support-screen>` mencionado acima é preferível. 
 
--   [supports-gl-texture](http://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html)&ndash; Este elemento é usado para declarar as formações de compactação de textura GL que o aplicativo exige. A maioria dos aplicativos não deve usar este filtro. Ele destina-se a jogos de alto desempenho ou aplicativos específicos que exigiram controles estritos na distribuição do aplicativo. 
+-   [supports-gl-texture](https://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html)&ndash; Este elemento é usado para declarar as formações de compactação de textura GL que o aplicativo exige. A maioria dos aplicativos não deve usar este filtro. Ele destina-se a jogos de alto desempenho ou aplicativos específicos que exigiram controles estritos na distribuição do aplicativo. 
 
 Para obter mais informações sobre como configurar o manifesto do aplicativo, confira o tópico sobre o [Manifesto do Aplicativo](https://developer.android.com/guide/topics/manifest/manifest-intro.html) do Android.
