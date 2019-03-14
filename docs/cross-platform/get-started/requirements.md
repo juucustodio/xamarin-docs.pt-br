@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 4ea9690812675c48524393576e5509ab37e26981
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 486c5c57961e897eae59df66b216a9078d5df517
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197141"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667984"
 ---
 # <a name="system-requirements"></a>Requisitos do sistema
 
@@ -70,7 +70,7 @@ Os aplicativos móveis do Xamarin podem ser implantados em dispositivos físicos
 
 A versão mais recente do Xamarin para macOS pode ser baixada em [xamarin.com/download](http://xamarin.com/download). Para o Windows, siga as instruções de instalação do [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
-Uma lista completa das nossas versões atuais do produto está disponível na [página de versões atuais](http://developer.xamarin.com/releases/current/). Esta página também descreve as versões de produto individuais (e links para as notas de versão) dos nossos canais alfa e beta.
+Uma lista completa das nossas versões atuais do produto está disponível na [página de versões atuais](https://developer.xamarin.com/releases/current/). Esta página também descreve as versões de produto individuais (e links para as notas de versão) dos nossos canais alfa e beta.
 
 Instruções de [instalação](~/get-started/installation/index.md) específicas para cada plataforma estão disponíveis aqui:
 

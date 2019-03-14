@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831983"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672554"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propriedades de automação no Xamarin.Forms
 
@@ -36,7 +36,7 @@ Cada plataforma tem um leitor de tela diferente para narrar os valores de acessi
 
 - O iOS tem o VoiceOver. Para obter mais informações, confira [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) (Testando a acessibilidade em seu dispositivo com o VoiceOver) em developer.apple.com.
 - O Android tem o TalkBack. Para obter mais informações, confira [Testing Your App's Accessibility](https://developer.android.com/training/accessibility/testing.html#talkback) (Testando a acessibilidade de seu aplicativo) em developer.android.com.
-- O Windows tem o Narrador. Para obter mais informações, confira [Verificar cenários do aplicativo principal usando o Narrador](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator/).
+- O Windows tem o Narrador. Para obter mais informações, confira [Verificar cenários do aplicativo principal usando o Narrador](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator).
 
 No entanto, o comportamento exato do leitor de tela depende do software e da configuração que o usuário faz nele. Por exemplo, a maioria dos leitores de tela lê o texto associado a um controle quando ele entra em foco, permitindo que os usuários se orientem enquanto percorrem os controles na página. Alguns leitores de tela também leem toda a interface do usuário do aplicativo quando a página é exibida, o que permite que o usuário receba todo o conteúdo informativo disponível na página antes de tentar navegar por ela.
 

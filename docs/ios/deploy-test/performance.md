@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 01c743b4b0eff81bbf4c41e1c2f387e0dc40c067
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233751"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671112"
 ---
 # <a name="xamarinios-performance"></a>Desempenho do Xamarin.iOS
 
-O baixo desempenho de aplicativo se apresenta de várias maneiras. Ele pode fazer com que o aplicativo pareça não responder, deixar a rolagem lenta ou reduzir a vida útil da bateria. No entanto, a otimização do desempenho engloba mais do que apenas a implementação de um código eficiente. A experiência do usuário quanto ao desempenho do aplicativo também deve ser considerada. Por exemplo, garantir que as operações sejam executadas sem impedir o usuário de realizar outras atividades pode ajudar a melhorar a experiência do usuário. 
+O baixo desempenho de aplicativo se apresenta de várias maneiras. Ele pode fazer com que o aplicativo pareça não responder, deixar a rolagem lenta ou reduzir a vida útil da bateria. No entanto, a otimização do desempenho engloba mais do que apenas a implementação de um código eficiente. A experiência do usuário quanto ao desempenho do aplicativo também deve ser considerada. Por exemplo, garantir que as operações sejam executadas sem impedir o usuário de realizar outras atividades pode ajudar a melhorar a experiência do usuário.
 
 Este documento descreve técnicas que podem ser usadas para melhorar o desempenho e o uso de memória em aplicativos Xamarin.iOS.
 
@@ -140,7 +140,7 @@ public class MyFooDelegate : FooDelegate {
 Veja abaixo outro exemplo do uso de `[Weak]` no contexto do padrão de [delegação](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html):
 
 ```csharp
-public class MyViewController : UIViewController 
+public class MyViewController : UIViewController
 {
     WKWebView webView;
 
@@ -155,7 +155,7 @@ public class MyViewController : UIViewController
     }
 }
 
-public class UIDelegate : WKUIDelegate 
+public class UIDelegate : WKUIDelegate
 {
     [Weak] MyViewController controller;
 
@@ -196,7 +196,7 @@ class MyContainer : UIView
 Para um objeto filho que mantém uma referência forte ao seu pai, limpe a referência ao pai na implementação `Dispose`:
 
 ```csharp
-class MyChild : UIView 
+class MyChild : UIView
 {
     MyContainer container;
     public MyChild (MyContainer container)
@@ -215,13 +215,13 @@ Você também encontra uma boa discussão nesta postagem do blog: [Xamarin.iOS, 
 
 ### <a name="more-information"></a>Mais informações
 
-Para obter mais informações, confira [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Regras para evitar a retenção de ciclos) em Cocoa With Love, [Is this a bug in MonoTouch GC](http://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (Isso é um bug no MonoTouch GC?) em StackOverflow e [Why can't MonoTouch GC kill managed objects with refcount > 1?](http://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Por que o MonoTouch GC não pode eliminar objetos gerenciados com contagem de referência > 1?) no StackOverflow.
+Para obter mais informações, confira [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Regras para evitar a retenção de ciclos) em Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (Isso é um bug no MonoTouch GC?) em StackOverflow e [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Por que o MonoTouch GC não pode eliminar objetos gerenciados com contagem de referência > 1?) no StackOverflow.
 
 ## <a name="optimize-table-views"></a>Otimizar modos de exibição de tabela
 
 Os usuários desejam obter uma rolagem suave e tempos de carregamento rápidos nas instâncias [`UITableView`](xref:UIKit.UITableView). No entanto, o desempenho de rolagem pode ser prejudicado quando as células tiverem hierarquias do modo de exibição profundamente aninhadas ou quando as células tiverem layouts complexos. Contudo, existem técnicas que podem ser usadas para evitar o baixo desempenho de `UITableView`:
 
-- Células de reutilização. Para saber mais, confira [Células de Reutilização](#reusecells).
+- Células de reutilização. Para saber mais, confira [Células de Reutilização](#reuse-cells).
 - Reduzir o número de subexibições.
 - Armazene em cache o conteúdo da célula que for recuperado de um serviço Web.
 - Armazene a altura das linhas em cache, se elas não forem idênticas.

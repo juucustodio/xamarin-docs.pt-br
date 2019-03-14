@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d1a3090318649e6f04a5b8f44dc4a9b2689a870
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a6cc7ffe52711f4e65f0191f8dc556760e8817ea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119625"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668771"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
@@ -26,7 +26,7 @@ Use o suporte à depuração nativo do Visual Studio para Mac para depurar C# e 
 
 O depurador do Xamarin.iOS é integrado ao IDE e permite que os desenvolvedores depurem aplicativos Xamarin.iOS criados com qualquer uma das linguagens gerenciadas com suporte no Xamarin.iOS no simulador e no dispositivo.
 
-O depurador Xamarin.iOS usa o [Depurador Flexível Mono](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), o que significa que o código gerado e o tempo de execução Mono cooperam com o IDE para proporcionar uma experiência de depuração. Isso é diferente de depuradores rígidos, como LLDB ou MDB, que controlam um programa sem o conhecimento ou a cooperação do programa depurado.
+O depurador Xamarin.iOS usa o [Depurador Flexível Mono](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), o que significa que o código gerado e o tempo de execução Mono cooperam com o IDE para proporcionar uma experiência de depuração. Isso é diferente de depuradores rígidos, como LLDB ou MDB, que controlam um programa sem o conhecimento ou a cooperação do programa depurado.
 
 ## <a name="setting-breakpoints"></a>Configuração de pontos de interrupção
 

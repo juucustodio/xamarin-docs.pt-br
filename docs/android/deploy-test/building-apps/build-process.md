@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/03/2018
-ms.openlocfilehash: 99b5798e8d3cd5723f99aa2483d5d1c0eff8d57c
-ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
+ms.openlocfilehash: 86e2380a2931517b021162a6cecadc7d6d5b4c43
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305640"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669382"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -98,7 +98,7 @@ Propriedades do MSBuild controlam o comportamento dos destinos. Elas são especi
 
 Propriedades de instalação controlam o comportamento dos destinos `Install` e `Uninstall`.
 
--   **AdbTarget** &ndash; especifica o dispositivo de destino do Android no qual o pacote Android pode ser instalado ou do qual ele pode ser removido. O valor dessa propriedade o mesmo da [opção de dispositivo de destino `adb`](http://developer.android.com/tools/help/adb.html#issuingcommands):
+-   **AdbTarget** &ndash; especifica o dispositivo de destino do Android no qual o pacote Android pode ser instalado ou do qual ele pode ser removido. O valor dessa propriedade o mesmo da [opção de dispositivo de destino `adb`](https://developer.android.com/tools/help/adb.html#issuingcommands):
 
     ```bash
     # Install package onto emulator via -e
@@ -145,7 +145,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
     Essa propriedade é `False` por padrão.
 
--   **AndroidEnableSGenConcurrent** &ndash; uma propriedade booliana que determina se o [coletor de GC simultâneo](http://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen) do Mono será ou não usado.
+-   **AndroidEnableSGenConcurrent** &ndash; uma propriedade booliana que determina se o [coletor de GC simultâneo](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen) do Mono será ou não usado.
 
     O suporte para essa propriedade foi adicionado no Xamarin.Android 7.2.
 
@@ -293,7 +293,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
     Essa propriedade é ignorada, a menos que a propriedade `$(AotAssemblies)` do MSBuild seja `True`.
 
--   **EnableProguard** &ndash; uma propriedade booliana que determina se [proguard](http://developer.android.com/tools/help/proguard.html) é ou não executado como parte do processo de empacotamento para vincular o código Java.
+-   **EnableProguard** &ndash; uma propriedade booliana que determina se [proguard](https://developer.android.com/tools/help/proguard.html) é ou não executado como parte do processo de empacotamento para vincular o código Java.
 
     O suporte para essa propriedade foi adicionado no Xamarin.Android 5.1.
 

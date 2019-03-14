@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 38568fa9258c7e3de2c3333cdca5dc7d5867319c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56c5aa7f0f8db746fbc6d7f8b5409f7d6c0f5d0d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117090"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666886"
 ---
 # <a name="apk-expansion-files"></a>Arquivos de Expansão APK
 
@@ -73,7 +73,7 @@ Quando um aplicativo é instalado do Google Play, os arquivos de expansão devem
 
 [![Fluxograma de expansão de APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
-Quando um aplicativo é iniciado, ele deve verificar se os arquivos de expansão apropriados existem no dispositivo atual. Se não existirem, o aplicativo deve fazer uma solicitação [Licenciamento de Aplicativos](http://developer.android.com/google/play/licensing/index.html) do Google Play. Essa verificação é feita usando a *LVL (Biblioteca de Verificação de Licença)* e deve ser feita tanto para aplicativos gratuitos quanto para licenciados. A LVL é usada principalmente por aplicativos pagos para impor restrições de licença. No entanto, o Google estendeu a LVL para que possa ser usada com bibliotecas de expansão também. Aplicativos gratuitos precisam realizar a verificação de LVL, mas podem ignorar as restrições de licença. A solicitação da LVL é responsável por fornecer as seguintes informações sobre os arquivos de expansão que o aplicativo requer: 
+Quando um aplicativo é iniciado, ele deve verificar se os arquivos de expansão apropriados existem no dispositivo atual. Se não existirem, o aplicativo deve fazer uma solicitação [Licenciamento de Aplicativos](https://developer.android.com/google/play/licensing/index.html) do Google Play. Essa verificação é feita usando a *LVL (Biblioteca de Verificação de Licença)* e deve ser feita tanto para aplicativos gratuitos quanto para licenciados. A LVL é usada principalmente por aplicativos pagos para impor restrições de licença. No entanto, o Google estendeu a LVL para que possa ser usada com bibliotecas de expansão também. Aplicativos gratuitos precisam realizar a verificação de LVL, mas podem ignorar as restrições de licença. A solicitação da LVL é responsável por fornecer as seguintes informações sobre os arquivos de expansão que o aplicativo requer: 
 
 -   **Tamanho do Arquivo** &ndash; Os tamanhos dos arquivos de expansão são usados como parte da verificação que determina se os arquivos de expansão corretos já foram baixados ou não.
 -   **Nomes de Arquivo** &ndash; O nome de arquivo (no dispositivo atual) com o qual os pacotes de expansão devem ser salvos.

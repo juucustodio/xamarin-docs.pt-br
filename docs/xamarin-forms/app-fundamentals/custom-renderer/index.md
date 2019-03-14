@@ -1,19 +1,14 @@
 ---
 title: Renderizadores personalizados do Xamarin.Forms
-description: Renderizadores personalizados substituem a renderização dos controles nativos em cada plataforma, para personalizar a aparência e o comportamento de controles do Xamarin.Forms.
+description: 'Renderizadores personalizados substituem a renderização dos controles nativos em cada plataforma, para personalizar a aparência e o comportamento de controles do Xamarin.Forms.'
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: c7ae25688b2f8635a9a89318e0b307e58add7a5a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998731"
 ---
+
 # <a name="xamarinforms-custom-renderers"></a>Renderizadores personalizados do Xamarin.Forms
 
 _As interfaces do usuário do Xamarin.Forms são renderizadas usando controles nativos da plataforma de destino, permitindo que os aplicativos Xamarin.Forms mantenham a aparência apropriada para cada plataforma. Renderizadores personalizados permitem que os usuários substituam esse processo para personalizar a aparência e o comportamento de controles do Xamarin.Forms em cada plataforma._
@@ -24,7 +19,7 @@ Renderizadores personalizados fornecem uma abordagem eficiente para personalizar
 
 ## <a name="renderer-base-classes-and-native-controlsrenderersmd"></a>[Classes base do renderizador e controles nativos](renderers.md)
 
-Cada um dos controles do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de controle nativas e de renderizador que implementam cada página, layout, exibição e célula do Xamarin.Forms.
+Cada um dos controles do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms.
 
 ## <a name="customizing-an-entryentrymd"></a>[Personalizar uma entrada](entry.md)
 
@@ -63,4 +58,3 @@ Este artigo mostra como gravar renderizadores para implementar um controle perso
 
 - [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Renderizadores personalizados (vídeo do Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)
-- [Amostra de renderizadores personalizados (vídeo do Xamarin University)](http://bit.ly/xf-customrenderer)

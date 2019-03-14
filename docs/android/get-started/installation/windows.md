@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 26865fdbfc1cc6f11a978a70bd768e63771bcd4b
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 0053bf97dbcc98c5ffbd6fbddb1e40f884810e60
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197466"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670747"
 ---
 # <a name="windows-installation"></a>Instalação do Windows
 
@@ -47,7 +47,7 @@ O Xamarin.Android usa o JDK (Java Development Kit) e o SDK do Android para criar
 
 Para a maioria dos usuários, os locais padrão funcionam sem que sejam feitas mais alterações. No entanto, você pode configurar o Visual Studio com locais personalizados para essas ferramentas (por exemplo, se tiver instalado o JDK do Java, o NDK ou o SDK do Android em um local diferente). Clique em **Alterar** ao lado do caminho que deseja alterar e, em seguida, navegue até o novo local.
 
-O Xamarin.Android usa o [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), que é necessário quando você está desenvolvendo para o nível de API 24 ou superior (o JDK 8 também é compatível com níveis de API anteriores ao 24). Você poderá continuar usando o [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
+O Xamarin.Android usa o [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), que é necessário quando você está desenvolvendo para o nível de API 24 ou superior (o JDK 8 também é compatível com níveis de API anteriores ao 24). Você poderá continuar usando o [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
 > [!IMPORTANT]
 > O Xamarin.Android não é compatível com o JDK 9.
