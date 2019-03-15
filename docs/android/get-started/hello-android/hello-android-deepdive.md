@@ -1,5 +1,5 @@
 ---
-title: 'Hello, Android: aprofundamento'
+title: 'Olá, Android: Aprofundamento'
 description: Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentaremos ferramentas, conceitos e etapas necessários para criar e implantar um aplicativo Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: cdd0a792a76fa411fdc010c3d662a3d1acc2f373
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108802"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670175"
 ---
-# <a name="hello-android-deep-dive"></a>Hello, Android: aprofundamento
+# <a name="hello-android-deep-dive"></a>Olá, Android: Aprofundamento
 
 _Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentaremos ferramentas, conceitos e etapas necessários para criar e implantar um aplicativo Xamarin.Android._
 
@@ -113,7 +113,7 @@ O diretório **Recursos** contém quatro pastas chamadas **drawable** (desenháv
 
 Os itens estão resumidos na tabela abaixo:
 
-- **desenhável** &ndash; os diretórios desenháveis contêm [recursos desenháveis](http://developer.android.com/guide/topics/resources/drawable-resource.html), como imagens e bitmaps.
+- **desenhável** &ndash; os diretórios desenháveis contêm [recursos desenháveis](https://developer.android.com/guide/topics/resources/drawable-resource.html), como imagens e bitmaps.
 
 - **mipmap** &ndash; O diretório mipmap contém arquivos desenháveis para diferentes densidades de ícones do inicializador. No modelo padrão, o diretório desenhável contém o arquivo de ícone do aplicativo, **Icon.png**.
 
@@ -269,7 +269,7 @@ Quando o `MainActivity` é iniciado, ele cria uma exibição com base no conteú
 ::: zone-end
 ::: zone pivot="macos"
 
-No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Designer Android. Para carregar a interface do usuário, chame `SetContentView` e passe para ele o *nome do recurso de layout* para o arquivo de layout: **Main.axml**. O layout está localizado em `Resource.Layout.Main`:
+No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Designer Android. Para carregar a interface do usuário, chame `SetContentView` e passe o *nome do recurso de layout* para o arquivo de layout: **Main.axml**. O layout está localizado em `Resource.Layout.Main`:
 
 ```csharp
 SetContentView (Resource.Layout.Main);

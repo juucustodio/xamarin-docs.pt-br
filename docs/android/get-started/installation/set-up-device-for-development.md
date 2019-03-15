@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: ce102f189321cbd49b37e7718c1f3d478c322f55
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: e009ec60abc5afd06e43122424c325bbb1bf42ac
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526683"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668862"
 ---
 # <a name="set-up-device-for-development"></a>Configurar o dispositivo para desenvolvimento
 
@@ -77,7 +77,7 @@ Execute o aplicativo **android.bat** no diretório **[caminho de instalação do
 ### <a name="download-the-usb-drivers"></a>Baixar os Drivers USB
 
 Os dispositivos Google Nexus (exceto o Galaxy Nexus) exigem o Driver USB do Google. O driver para o Galaxy Nexus é [distribuído pela Samsung](http://www.samsung.com/us/support/downloads/).
-Todos os outros dispositivos Android devem usar o [driver USB do seu respectivo fabricante](http://developer.android.com/tools/extras/oem-usb.html#Drivers).
+Todos os outros dispositivos Android devem usar o [driver USB do seu respectivo fabricante](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
 Instale o pacote do **Driver USB do Google** iniciando o Gerenciador de SDK do Android e expandindo a pasta **Extras**, como pode ser visto na captura de tela a seguir:
 
@@ -144,7 +144,7 @@ A etapa final é conectar o dispositivo ao computador. Há duas formas de fazer 
 
 ### <a name="connecting-over-wifi"></a>Conectando via WiFi
 
-Por padrão, o [Android Debug Bridge](http://developer.android.com/tools/help/adb.html) (*ADB*) é configurado para se comunicar com um dispositivo Android via USB. É possível reconfigurá-lo para usar TCP/IP em vez de USB. Para fazer isso, o dispositivo e o computador devem estar na mesma rede WiFi. Para configurar seu ambiente para depurar via WiFi, execute essas etapas da linha de comando:
+Por padrão, o [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) é configurado para se comunicar com um dispositivo Android via USB. É possível reconfigurá-lo para usar TCP/IP em vez de USB. Para fazer isso, o dispositivo e o computador devem estar na mesma rede WiFi. Para configurar seu ambiente para depurar via WiFi, execute essas etapas da linha de comando:
 
 1.  Determine o endereço IP do seu dispositivo Android. Uma maneira de descobrir o endereço IP é procurar em **Configurações > WiFi** e, em seguida, tocar na rede WiFi na qual o dispositivo está conectado. Isso abrirá uma tela de configurações que mostra as informações sobre a conexão de rede, de modo semelhante ao que é visto na captura de tela abaixo:
 
@@ -184,9 +184,9 @@ Esse artigo discutiu como configurar um dispositivo Android para desenvolvimento
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Android Debug Bridge](http://developer.android.com/tools/help/adb.html)
-- [Usando Dispositivos de Hardware](http://developer.android.com/tools/device.html)
+- [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
+- [Usando Dispositivos de Hardware](https://developer.android.com/tools/device.html)
 - [Downloads de Drivers Samsung](http://www.samsung.com/us/support/downloads/)
-- [Drivers USB OEM](http://developer.android.com/tools/extras/oem-usb.html#Drivers)
-- [Driver USB do Google](http://developer.android.com/sdk/win-usb.html)
-- [Desenvolvedores XDA: Windows 8 – problema do ADB/driver de inicialização rápida resolvido](http://forum.xda-developers.com/showthread.php?t=1583801)
+- [Drivers USB OEM](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
+- [Driver USB do Google](https://developer.android.com/sdk/win-usb.html)
+- [Desenvolvedores de XDA: Windows 8 – Problema do ADB/driver de inicialização rápida resolvido](http://forum.xda-developers.com/showthread.php?t=1583801)

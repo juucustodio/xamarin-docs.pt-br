@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: bd08e1f83f7b1752a2830bda1390ffae4f86b360
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 7f03df796c338380a776f9af26563af2e60e59a1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242401"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672645"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -257,7 +257,7 @@ Para obter mais informações, veja [Visão geral do suporte assíncrono](~/cros
 
 Linguagens gerenciadas como o C# usam a coleta de lixo para recuperar a memória alocada para objetos que não estão mais em uso. Os dois coletores de lixo usados pela plataforma Xamarin são:
 
-- [**SGen**](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/) – esse é um coletor de lixo geracional e é o coletor de lixo padrão na plataforma Xamarin.
+- [**SGen**](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) – esse é um coletor de lixo geracional e é o coletor de lixo padrão na plataforma Xamarin.
 - [**Boehm**](http://www.hboehm.info/gc/) – esse é um coletor de lixo conservador, não geracional. É o coletor de lixo padrão usado para aplicativos Xamarin.iOS que usam a API clássica.
 
 SGen utiliza um dos três heaps para alocar espaço para objetos:
@@ -334,7 +334,7 @@ As etapas a seguir podem ser usadas para reduzir ainda mais o tamanho do execut�
 - Reduza o tamanho do código gerenciado do aplicativo. Isso pode ser feito habilitando o vinculador em cada assembly (*Vincular todos* para projetos iOS e *Vincular todos os assemblies* para projetos Android).
 
 Aplicativos Android também podem ser divididos em um APK separado para cada ABI ("arquitetura").
-Saiba mais nesta postagem de blog: [How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down) (Como manter o tamanho de seu aplicativo Android pequeno).
+Saiba mais nesta postagem no blog: [Como reduzir o tamanho do aplicativo Android](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
 
 <a name="optimizeimages" />
 

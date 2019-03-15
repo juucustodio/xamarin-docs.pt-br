@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 0ec24e49e03237829474515a9abe9b014d10014f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 336f1ec4e4406d2ab40c5e8aea247bd3be9ed765
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527112"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672723"
 ---
 # <a name="hello-ios--quickstart"></a>Olá, iOS – Guia de Início Rápido
 
@@ -274,7 +274,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
 Este passo a passo descreve como criar um aplicativo chamado Phoneword que converte um número de telefone alfanumérico em um número de telefone numérico.
 
-**Observação**: este passo a passo usa o Visual Studio Enterprise 2017 em uma máquina virtual do Windows 10. Sua instalação pode diferir desta, desde que atenda aos requisitos acima, mas lembre-se de que algumas capturas de tela podem ser diferentes para sua instalação.
+**Observação**: Este passo a passo usa o Visual Studio Enterprise 2017 em uma máquina virtual do Windows 10. Sua instalação pode diferir desta, desde que atenda aos requisitos acima, mas lembre-se de que algumas capturas de tela podem ser diferentes para sua instalação.
 
 > [!NOTE]
 > Antes de continuar com este passo a passo, você já deve estar conectado ao Mac do Visual Studio. Isso ocorre porque o Xamarin.iOS depende das ferramentas da Apple para compilar e iniciar o iOS Designer e os aplicativos. Para obter a configuração, siga as etapas do guia [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
@@ -496,5 +496,5 @@ Agora é hora de examinar as ferramentas e as habilidades mostradas neste guia n
 
 - [Ícones de aplicativo e imagens de inicialização do Xamarin (amostra)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
 - [Hello, iOS (amostra)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [Diretrizes da interface humana do iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

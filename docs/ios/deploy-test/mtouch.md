@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 870a9cb20ea962b3c1a342e7222c5e9322537dd1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f545893ca4cde441cd05fc3d8e52ecf0f6aae98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109205"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669486"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Usando mtouch para o agrupar aplicativos Xamarin.iOS
 
@@ -66,7 +66,7 @@ Para compilar software para o dispositivo, você compilará seu aplicativo usand
 $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
-Nesse caso específico, estamos usando o certificado "iPhone Developer: Miguel de Icaza" para assinar o aplicativo. Essa etapa é muito importante, ou o dispositivo físico não aceitará carregar o aplicativo.
+Nesse caso específico, estamos usando o certificado "Desenvolvedor de iPhone: Miguel de Icaza" para assinar o aplicativo. Essa etapa é muito importante, ou o dispositivo físico não aceitará carregar o aplicativo.
 
  <a name="Running_your_Application" />
 
@@ -110,7 +110,7 @@ Se o aplicativo falhar, você poderá ver a saída e o erro para diagnosticar o 
 
 ### <a name="deploying-to-a-device"></a>Implantação em um dispositivo
 
-Para implantar seu dispositivo, você precisa provisionar seu dispositivo conforme descrito no documento [Gerenciando dispositivos](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) da Apple. Depois que o dispositivo tiver sido configurado corretamente, você poderá usar o comando mtouch para implantar um ".app" compilado em seu dispositivo. Você faz isso usando este comando:
+Para implantar seu dispositivo, você precisa provisionar seu dispositivo conforme descrito no documento [Gerenciando dispositivos](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) da Apple. Depois que o dispositivo tiver sido configurado corretamente, você poderá usar o comando mtouch para implantar um ".app" compilado em seu dispositivo. Você faz isso usando este comando:
 
 ```bash
 $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app

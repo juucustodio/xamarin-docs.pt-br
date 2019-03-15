@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: bfb20e8eddb4969f3418d0a0dddfcd19f2eeba02
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: df477dc0e4708a1d309810b5b8d4f755f3c49afb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117545"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669811"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Manual de introdução a C# para Desenvolvedores de Objective-C
 
@@ -123,7 +123,7 @@ Quando a palavra-chave static é aplicada a uma variável em Objective-C, a vari
 
 C# também tem uma palavra-chave static. Quando aplicada a um método, ela faz o mesmo que o modificador `+` faz em Objective-C. Ou seja, cria um método de classe. Da mesma forma, quando aplicada a outros constructos, como campos, propriedades e eventos, torna-os parte do tipo em que são declarados, em vez de com qualquer instância desse tipo. Você também pode criar uma classe estática, em que todos os métodos definidos na classe também devem ser estáticos.
 
-### <a name="nsarray-vs-list-initialization"></a>NSArray vs. Inicialização de lista
+### <a name="nsarray-vs-list-initialization"></a>NSArray vs. Inicialização de Lista
 
 Objective-C agora inclui a sintaxe literal para uso com `NSArray`, tornando mais fácil inicializar. Porém, C# tem um tipo mais avançado, chamado `List`, que é *genérico*. Isso significa que o tipo que a lista contém pode ser fornecido pelo código que cria a lista (como modelos em C++). Além disso, listas dão suporte à sintaxe de inicialização automática conforme mostrado abaixo:
 
@@ -143,7 +143,7 @@ Objective-C usa *blocos* para criar fechamentos, em que você pode criar uma fun
 };
 ```
 
-Para obter mais informações sobre expressões lambda, confira o [Guia de Programação em C#](http://msdn.microsoft.com/library/vstudio/bb397687.aspx) da Microsoft.
+Para obter mais informações sobre expressões lambda, confira o [Guia de Programação em C#](https://msdn.microsoft.com/library/vstudio/bb397687.aspx) da Microsoft.
 
 ## <a name="summary"></a>Resumo
 

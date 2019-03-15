@@ -6,13 +6,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: dff57b142745729d5d38db4cce892bb1d55796a6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059724"
 ---
+
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
 Depois que um aplicativo tiver sido codificado e testado, será necessário preparar um pacote para distribuição. A primeira tarefa na preparação desse pacote é compilar o aplicativo para a versão, o que envolve principalmente a configuração de alguns atributos do aplicativo.
@@ -222,7 +217,7 @@ Observe que a opção **Agrupar em Código Nativo** *não* significa que os asse
 
 A opção **Compilação AOT** (na página [Propriedades de Empacotamento](#Set_Packaging_Properties)) permite compilação AOT (Ahead-of-Time) de assemblies. Quando essa opção é habilitada, a sobrecarga de inicialização JIT (Just In Time) é minimizada pela pré-compilação de assemblies antes do tempo de execução. O código nativo resultante está incluído no APK juntamente com os assemblies não compilados. Isso resulta em menor tempo de inicialização do aplicativo, mas às custas de tamanhos um pouco maiores de APK.
 
-A opção **Compilação AOT** requer uma licença Enterprise ou superior. **Compilação AOT** só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão. Para obter mais informações sobre Compilação AOT, consulte [AOT](http://www.mono-project.com/docs/advanced/aot/).
+A opção **Compilação AOT** requer uma licença Enterprise ou superior. **Compilação AOT** só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão. Para obter mais informações sobre Compilação AOT, consulte [AOT](https://www.mono-project.com/docs/advanced/aot/).
 
 #### <a name="llvm-optimizing-compiler"></a>Compilador de otimização de LLVM
 
@@ -266,7 +261,7 @@ Quando a opção **Habilitar Multi-Dex** é habilitada, as ferramentas de SDK do
 
 É possível que um aplicativo não use todos os métodos em cada biblioteca referenciada, portanto, é possível que uma ferramenta como o ProGuard (veja acima) possa remover métodos não utilizados do código. A prática recomendada será habilitar **Habilitar Multi-Dex** somente se for absolutamente necessário, ou seja, o aplicativo ainda faz referência a mais métodos Java de 65K, mesmo após usar o ProGuard.
 
-Para obter mais informações sobre Multi-Dex, consulte [Configurar aplicativos com métodos acima de 64K](http://developer.android.com/tools/building/multidex.html).
+Para obter mais informações sobre Multi-Dex, consulte [Configurar aplicativos com métodos acima de 64K](https://developer.android.com/tools/building/multidex.html).
 
 <a name="Compile" />
 
@@ -374,6 +369,6 @@ Aqui, é possível selecionar o canal de distribuição:
 
 - [Dispositivos de vários núcleos e o Xamarin.Android](~/android/deploy-test/multicore-devices.md)
 - [Arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md)
-- [AOT](http://www.mono-project.com/docs/advanced/aot/)
-- [Reduzir seus códigos e recursos](http://developer.android.com/tools/help/proguard.html)
-- [Configurar aplicativos com mais de 64 mil métodos](http://developer.android.com/tools/building/multidex.html)
+- [AOT](https://www.mono-project.com/docs/advanced/aot/)
+- [Reduzir seus códigos e recursos](https://developer.android.com/tools/help/proguard.html)
+- [Configurar aplicativos com mais de 64 mil métodos](https://developer.android.com/tools/building/multidex.html)

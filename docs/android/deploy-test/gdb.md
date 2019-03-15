@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 84e99849e3b3d925747df59ffcde242c145dbe74
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c64714974f6467bcd7e0e4705a1426c83aa691b5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111376"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667579"
 ---
 # <a name="gdb"></a>GDB
 
@@ -155,7 +155,7 @@ A depuração de aplicativo pode ser habilitada configurando a propriedade de at
 
 Um `gdbserver` acessível pode ser fornecido seguindo a seção [Builds de depuração sem o Fast Deployment](#Debug_Builds_without_Fast_Deployment).
 
-Um probleminha: o destino `_Gdb` do MSBuild finalizará quaisquer instâncias de aplicativo em execução anteriormente. Isso não funcionará em destinos com Android anterior à v4.0.
+Um probleminha: O destino `_Gdb` do MSBuild finalizará todas as instâncias de aplicativo em execução anteriormente. Isso não funcionará em destinos com Android anterior à v4.0.
 
 <a name="Troubleshooting" />
 
@@ -163,7 +163,7 @@ Um probleminha: o destino `_Gdb` do MSBuild finalizará quaisquer instâncias de
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` não funciona
 
-A função `mono_pmip` (útil para [obter registros de ativação gerenciados](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) é exportada do `libmonosgen-2.0.so`, cujo pull não é efetuado pelo destino `_Gdb` atualmente. (Isso será corrigido em uma versão futura.)
+A função `mono_pmip` (útil para [obter registros de ativação gerenciados](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) é exportada do `libmonosgen-2.0.so`, cujo pull não é efetuado pelo destino `_Gdb` atualmente. (Isso será corrigido em uma versão futura.)
 
 Para habilitar a chamada a funções localizadas em `libmonosgen-2.0.so`, copie-o do dispositivo de destino para o diretório `gdb-symbols`:
 
