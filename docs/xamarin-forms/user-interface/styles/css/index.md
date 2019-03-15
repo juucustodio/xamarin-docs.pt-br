@@ -181,7 +181,7 @@ stacklayout {
 Este seletor identifica qualquer [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) elementos nas páginas que consomem a folha de estilos e define suas margens para uma espessura uniforme de 20.
 
 > [!NOTE]
-> O `element` seletor não identifica as classes de subpropriedades do tipo especificado.
+> O `element` seletor não identifica as subclasses do tipo especificado.
 
 ### <a name="selecting-elements-by-base-class"></a>Selecionando elementos pela classe base
 
@@ -336,7 +336,7 @@ Os seguintes seletores CSS são suportados pelo xamarin. Forms:
 |`.class`|`.header`|Seleciona todos os elementos com o `StyleClass` propriedade contendo 'header'. Observe que este seletor é diferencia maiusculas de minúsculas.|
 |`#id`|`#email`|Seleciona todos os elementos com `StyleId` definido como `email`. Se `StyleId` não for definido, o retorno ao `x:Name`. Ao usar XAML, `x:Name` é preferível `StyleId`. Observe que este seletor é diferencia maiusculas de minúsculas.|
 |`*`|`*`|Seleciona todos os elementos.|
-|`element`|`label`|Seleciona todos os elementos do tipo `Label`, mas não classes inferior. Observe que este seletor é diferencia maiusculas de minúsculas.|
+|`element`|`label`|Seleciona todos os elementos do tipo `Label`, mas não as subclasses. Observe que este seletor é diferencia maiusculas de minúsculas.|
 |`^base`|`^contentpage`|Seleciona todos os elementos com `ContentPage` como a classe base, incluindo `ContentPage` em si. Observe que este seletor diferencia maiusculas de minúsculas e não faz parte da especificação do CSS.|
 |`element,element`|`label,button`|Seleciona todos os `Button` elementos e todos os `Label` elementos. Observe que este seletor é diferencia maiusculas de minúsculas.|
 |`element element`|`stacklayout label`|Seleciona todos os `Label` elementos dentro de um `StackLayout`. Observe que este seletor é diferencia maiusculas de minúsculas.|

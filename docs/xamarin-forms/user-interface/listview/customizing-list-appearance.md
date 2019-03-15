@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831789"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972644"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizando a aparência de ListView
 
@@ -206,8 +206,8 @@ Para criar um cabeçalho personalizado e um rodapé, defina os modos de exibiç�
 [`ListView`](xref:Xamarin.Forms.ListView) tem `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` propriedades, o qual obtém ou definir um [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa quando a barra de rolagem horizontal ou vertical, está visível. Ambas as propriedades podem ser definidas com os seguintes valores:
 
 - [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica o comportamento padrão de barra de rolagem para a plataforma e é o valor padrão para o `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` propriedades.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem será visíveis, mesmo quando o conteúdo não se encaixa no modo de exibição.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem não serão visíveis, se o conteúdo não couber na exibição de evento.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem será visíveis, mesmo quando o conteúdo se ajusta no modo de exibição.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem não será visíveis, mesmo se o conteúdo não se encaixa no modo de exibição.
 
 <a name="Row_Separators" />
 

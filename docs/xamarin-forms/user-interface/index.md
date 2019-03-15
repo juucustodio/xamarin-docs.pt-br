@@ -105,7 +105,7 @@ O `TimePicker` permite que um usuário selecione uma hora. Ele é implementado u
 
 ## <a name="visualvisualindexmd"></a>[Visual](visual/index.md)
 
-Visual do xamarin. Forms permite que os renderizadores ser aplicadas seletivamente a `VisualElement` objetos, sem ter de controles do xamarin. Forms subclasse.
+Material do xamarin. Forms Visual pode ser usado para criar aplicativos xamarin. Forms que se parecem idênticos ou praticamente idênticas, no iOS e Android.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Visual State Manager](visual-state-manager.md)
 

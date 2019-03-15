@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557032"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972670"
 ---
 # <a name="xamarinforms-label"></a>Rótulo do xamarin. Forms
 
@@ -356,7 +356,7 @@ O `TapCommand` executa o `OpenBrowser` método, passando a [ `TapGestureRecogniz
 
 ### <a name="creating-a-reusable-hyperlink-class"></a>Criando uma classe reutilizável de hiperlink
 
-A abordagem anterior para criar um hiperlink requer escrevendo código repetitivo toda vez que você precisar de um hiperlink em seu aplicativo. No entanto, ambos os [ `Label` ](xref:Xamarin.Forms.Label) e [ `Span` ](xref:Xamarin.Forms.Span) as classes podem ser subclasses para criar `HyperlinkLabel` e `HyperlinkSpan` classes, com o reconhecedor de gestos e formatação de texto código adicionado lá.
+A abordagem anterior para criar um hiperlink requer escrevendo código repetitivo toda vez que você precisar de um hiperlink em seu aplicativo. No entanto, ambos os [ `Label` ](xref:Xamarin.Forms.Label) e [ `Span` ](xref:Xamarin.Forms.Span) classes podem ser uma subclasse para criar `HyperlinkLabel` e `HyperlinkSpan` classes, com o código de formatação de texto e o reconhecedor de gestos adicionado lá.
 
 O exemplo de código a seguir, extraído o [hiperlink demonstrações](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) exemplo mostra um `HyperlinkSpan` classe:
 

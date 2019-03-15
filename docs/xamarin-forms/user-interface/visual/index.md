@@ -1,6 +1,6 @@
 ---
 title: Visual do xamarin. Forms
-description: 'Visual do xamarin. Forms permite que os renderizadores ser aplicadas seletivamente a objetos VisualElement, sem ter de controles do xamarin. Forms subclasse.'
+description: 'Visual do xamarin. Forms permite que os renderizadores ser aplicadas seletivamente a objetos VisualElement, sem ter de exibições do xamarin. Forms subclasse.'
 ms.prod: xamarin
 ms.assetid: 69228A9C-39C4-46AE-A803-C38EED6FB965
 ms.technology: xamarin-forms
@@ -17,4 +17,4 @@ Material do xamarin. Forms Visual pode ser usado para criar aplicativos xamarin.
 
 ## <a name="create-a-xamarinforms-visual-renderercreatemd"></a>[Criar um renderizador Visual do xamarin. Forms](create.md)
 
-Visual do xamarin. Forms permite que os renderizadores ser aplicadas seletivamente a `VisualElement` objetos, sem ter de controles do xamarin. Forms subclasse.
+Visual do xamarin. Forms permite que os renderizadores ser aplicadas seletivamente ao [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) objetos, sem ter de exibições do xamarin. Forms subclasse.
