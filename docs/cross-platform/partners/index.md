@@ -487,7 +487,7 @@ _Listadas por local primário, muitos parceiros fornecem serviços entre as bord
 
 | Parceiro | Locais | Descrição |
 | --- | --- | --- |
-|[Código química](http://www.codechem.com)|Macedônia, Skopje|Código química fornece desenvolvimento de software, gerenciamento de projetos e consulting services. |
+|[Código química](http://www.codechem.com)|Macedônia do Norte, Skopje|Código química fornece desenvolvimento de software, gerenciamento de projetos e consulting services. |
 
 
 ## <a name="mexico"></a>México
