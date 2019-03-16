@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cfb684df89bf800a0d32607b119d1bd3fc297c58
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 41a9ec90b4b734dde7a982ac3d4b2e7b2082321c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123733"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070860"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Designer do Xamarin para iOS
 
@@ -22,7 +22,7 @@ Neste guia, apresentamos as restrições e como trabalhar com eles no Designer d
 
 ## <a name="requirements"></a>Requisitos
 
-O Designer de Xamarin para iOS está disponível no Visual Studio para Mac no Visual Studio 2015 e 2017 no Windows.
+O Designer de Xamarin para iOS está disponível no Visual Studio para Mac no Visual Studio 2017 e posterior no Windows.
 
 Este guia pressupõe conhecimento dos componentes do Designer do [Introdução ao Designer do iOS](~/ios/user-interface/designer/introduction.md) guia.
 
@@ -56,11 +56,11 @@ Por padrão, não há restrições são criadas ou visível na superfície de. E
 
 A barra de ferramentas de restrições foi atualizada e agora consiste em duas partes principais:
 
-- **Uma alternância de botão de modo de restrições**: anteriormente, você inseriu o modo de restrições clicando novamente em um modo de exibição selecionado na superfície de design. Agora, você deve usar este botão de alternância na barra de restrições:
+- **Uma alternância de botão de modo de restrições**: Anteriormente, você inseriu o modo de restrições clicando novamente em um modo de exibição selecionado na superfície de design. Agora, você deve usar este botão de alternância na barra de restrições:
 
   ![alternância de modos de restrições](designer-auto-layout-images/constraints.png)
 
-- **Um botão "Atualizar restrições":** é importante observar que as alterações, dependendo se você está no modo de edição de restrições.
+- **Um botão "Atualizar restrições":** É importante observar que as alterações, dependendo se você está no modo de edição de restrições.
   - No modo de edição de restrição esse botão ajusta as restrições para coincidir com o quadro de elemento.
   - No modo de edição de quadro esse botão ajusta o quadro de elemento para coincidir com a posição em que as restrições estão definindo.
 

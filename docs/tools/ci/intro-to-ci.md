@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: lobrien
 ms.author: laobri
 ms.date: 07/19/2017
-ms.openlocfilehash: f2db5f4acd57cbf887d9955d9ea61fce4427c1c3
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 35c5811d57ade1d320e56e292c1eeed094963a0d
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672398"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070911"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introdução à integração contínua com o Xamarin
 
@@ -65,7 +65,7 @@ Um resumo de todos os recursos de gerenciamento de ciclo de vida de aplicativos 
 
 Git pode operar inteiramente por meio de navegadores da web ou por meio [clientes de GUI](http://git-scm.com/downloads/guis) que são executados no Windows, Mac OSX e Linux. Ele é gratuito para repositórios públicos; repositórios privados exigem uma [plano pago](https://github.com/pricing).
 
-Visual Studio 2015 e Visual Studio para Mac fornecem suporte nativo para o Git; para versões mais antigas, a Microsoft fornece um [extensão que pode ser baixado para o Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c). Conforme observado acima, o Visual Studio Team Services e TFS pode usar o Git para controle de versão em vez de TFVC.
+As versões atuais do Visual Studio para Windows e Mac oferecem suporte nativo para o Git. A Microsoft fornece um [extensão que pode ser baixado para o Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) para versões mais antigas do Visual Studio. Conforme observado acima, o Visual Studio Team Services e TFS pode usar o Git para controle de versão em vez de TFVC.
 
 ### <a name="subversion"></a>Subversion
 

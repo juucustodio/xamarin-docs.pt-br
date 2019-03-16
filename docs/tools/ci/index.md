@@ -1,19 +1,14 @@
 ---
 title: Introdução à integração contínua com o Xamarin
-description: Este documento leva a guias que descrevem a integração contínua com o Xamarin. Conteúdo vinculado fornece uma visão geral da integração contínua e discute a compilação do App Center, TeamCity e Jenkins.
+description: 'Este documento leva a guias que descrevem a integração contínua com o Xamarin. Conteúdo vinculado fornece uma visão geral da integração contínua e discute a compilação do App Center, TeamCity e Jenkins.'
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: lobrien
 ms.author: laobri
 ms.date: 10/23/2018
-ms.openlocfilehash: 9171eeb461f2e4d363de6e01ea92fa448f04d41a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121627"
 ---
-# <a name="introduction-to-continuous-integration-with-xamarin"></a>Introdução à integração contínua com o Xamarin
+
+# <a name="continuous-integration-with-xamarin"></a>Integração contínua com o Xamarin
 
 > [!Video https://youtube.com/embed/wXgnh2Q7Uv8]
 

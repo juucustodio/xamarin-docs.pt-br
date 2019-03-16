@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 56456372b13dad5b5040c0c466f2efdf6ecdbc2a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668875"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071015"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usando o iCloud com xamarin. IOS
 
@@ -37,7 +37,7 @@ Este documento aborda os dois primeiros tipos – pares chave-valor e subclasses
 
 - A versão estável mais recente do xamarin. IOS
 - Xcode 8 ou mais recente
-- O Visual Studio para Mac ou Visual Studio 2015 e versões mais recente.
+- O Visual Studio para Mac ou Visual Studio 2017 e versões mais recente.
 
 ## <a name="preparing-for-icloud-development"></a>Preparando para o desenvolvimento do iCloud
 

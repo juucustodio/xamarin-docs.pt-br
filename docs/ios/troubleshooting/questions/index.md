@@ -1,5 +1,5 @@
 ---
-title: Perguntas frequentes
+title: Perguntas frequentes sobre o xamarin. IOS
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
@@ -7,14 +7,9 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d2d0af5a69920f392eba1cd655f1d8ab74971be6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107502"
 ---
-# <a name="frequently-asked-questions"></a>Perguntas frequentes
+
+# <a name="ios-frequently-asked-questions"></a>Perguntas frequentes do iOS
 
 ## <a name="general-questions"></a>Perguntas gerais
 
@@ -58,7 +53,7 @@ Sim, é possível, mas ele normalmente exigirão que você assine novamente o `.
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[É possível criar um arquivo. xcarchive no Visual Studio?](create-xcarchive.md)
 A partir do Xamarin 4, é possível criar uma `.xcarchive` do Windows, definindo o `ArchiveOnBuild` propriedade `true`.
 
-### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Por que meu envio de aplicativo falha com: "Caminhos não permitidos ("iTunesMetadata.plist") encontrados em..."?](itunesmetadata-disallowed-paths.md)
+### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Por que o envio do meu aplicativo falha com: "Disallowed paths ( "iTunesMetadata.plist" ) found at ..." ?](itunesmetadata-disallowed-paths.md)
 Esse erro é o resultado de uma alteração no processo de verificação da Apple App Store. Esse erro específico é _não_ relacionadas à versão particular do Xamarin que você instalou, portanto, fazer o downgrade serão _não_ ajuda. Links neste guia para obter mais informações sobre como corrigir o problema.
 
 
@@ -70,10 +65,10 @@ Erros com `RegisterServicePort` e mensagens de erro semelhantes, como acima são
 ### <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychainno-codesigning-keysmd"></a>[Por que minha compilação do iOS falha com: Nenhuma chave de assinatura de código do iPhone foi encontrada no conjunto de chaves?](no-codesigning-keys.md)
 Essa mensagem de erro ocorre quando o projeto em questão está procurando por credenciais válidas de assinatura de código, mas não conseguir encontrá-los. Assinatura de código é necessária para testes e implantações em dispositivos iOS físicos; Assim como Ad-hoc & aplicativo armazenam compilações.
 
-### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Por que meu aplicativo do iOS 9 falha com: System.Exception: falha ao realizar marshal do objeto Objective-C?](exception-marshal-obj-c.md)
+### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Por que meu aplicativo iOS 9 falha com: System.Exception: Failed to marshal the Objective-C object?](exception-marshal-obj-c.md)
 Alterações de API no iOS 9 exigem que um construtor de retorno de chamada usado ao chamar código não gerenciado, como a API básica agora espera que ele.
 
-### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Erro de tempo de execução: o assembly mscorlib.dll não foi encontrado ou não foi possível carregá-lo](error-mscorlib-not-found.md)
+### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Erro de tempo de execução: The assembly mscorlib.dll was not found or could not be loaded](error-mscorlib-not-found.md)
 Esse problema ocorre quando o *ocultos* `.monotouch-32` e `.monotouch-64` pastas estão ausentes do `.xcarchive` para assinar / criação de IPA, aciona o erro de tempo de execução.
 
 ## <a name="deprecated"></a>Preterido
@@ -86,10 +81,10 @@ Esse problema ocorre quando o *ocultos* `.monotouch-32` e `.monotouch-64` pastas
 ### <a name="ipa-file-is-0-bytesipa-zero-bytesmd"></a>[O arquivo IPA tem 0 bytes](ipa-zero-bytes.md)
 Havia alguns problemas conhecidos em versões anteriores do Xamarin que pode fazer com que o arquivo de IPA no Windows para ser de 0 bytes.
 
-### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Erro IBTool: Não foi possível concluir a operação.](error-ibtool.md)
+### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Erro de IBTool: The operation couldn’t be completed.](error-ibtool.md)
 Apple [corrigido](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) isso `ibtool` bug no Xcode 6.1.1, portanto, a atualização para o Xcode 6.1.1 ou superior é a correção mais fácil.
 
-### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Erro MT1009: Não foi possível copiar o assembly](error-mt1009.md)
+### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Erro de MT1009: Could not copy the assembly](error-mt1009.md)
 Isso afeta os usuários que executam o xamarin. IOS 7.2.6. Esse problema é devido à necessidade de privilégios mais altos quando o xamarin. IOS é instalado com uma conta de usuário diferente de permissões de arquivo, em seguida, conta de principal do desenvolvedor.
 
 ### <a name="systemexception-amdevicenotificationsubscribe-returned-exception-amddevicenotificationsubscribemd"></a>[System.Exception AMDeviceNotificationSubscribe retornou ...](exception-amddevicenotificationsubscribe.md)

@@ -5,12 +5,12 @@ description: Uma explicação simple de como desacoplar formulários existentes 
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 3d3af9c78b7486e7ebfb063a3cb00fabdbd0f5b7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 4bf1dea170bd6b63209693963d54cc2e16163eea
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617534"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071093"
 ---
 # <a name="desktop-app-porting-guidance"></a>Diretrizes de portabilidade do aplicativo da área de trabalho
 
@@ -26,7 +26,7 @@ Para aplicativos Windows Forms e WPF escritos com o C# (ou Visual Basic.NET) uma
 
 ## <a name="net-portability-analyzer"></a>.NET portability Analyzer
 
-Suporte do Visual Studio 2015 e 2017 a [.NET Portability Analyzer](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([baixar para Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) que pode examinar seus aplicativos existentes e lhe dizer quanto de código pode ser portado "como está" para outras plataformas . Você pode aprender mais sobre ele neste [vídeo do Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
+Visual Studio 2017 e posteriores dão suporte à [.NET Portability Analyzer](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([baixar para Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) que pode examinar seus aplicativos existentes e lhe dizer quanto de código pode ser portado "como está" outros plataformas. Você pode aprender mais sobre ele neste [vídeo do Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
 Há também uma ferramenta de linha de comando pode ser baixada do [Portability Analyzer no GitHub](https://github.com/Microsoft/dotnet-apiport) e usado para fornecer os mesmos relatórios.
 

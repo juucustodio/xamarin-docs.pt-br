@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: d5478a09c461ec8f1bf51efaa7b4dc2f862d69b4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b69fe417bb521781453042269b9b52609d8e00a0
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668927"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070950"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 visão geral dos recursos novos
 
@@ -20,38 +20,9 @@ _A versão mais recente do C# linguagem – versão 6 – continua a evoluir a l
 
 Este documento apresenta os novos recursos do C# 6. Ele é totalmente suportado pelo compilador mono e os desenvolvedores podem começar a usar os novos recursos em todas as plataformas de destino do Xamarin.
 
-Este artigo inclui trechos de código breves do C# 6 código que ilustram o uso básico.
-O aplicativo de exemplo é um programa de linha de comando que é executado em todas as plataformas de destino do Xamarin e exercita os vários recursos.
-
-
 > [!VIDEO https://youtube.com/embed/7UdV7zGPfMU]
 
 **O que há de novo no C# 6, por [Xamarin University](https://university.xamarin.com/)**
-
-
-## <a name="development-environment"></a>Ambiente de desenvolvimento
-
-### <a name="mac"></a>Mac
-
-* **O Visual Studio para Mac** tem suporte para C# 6: você pode criar e compilar aplicativos do Xamarin usando o C# 6 recursos.
-  Leia mais sobre [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/).
-
-### <a name="windows"></a>Windows
-
-* **Visual Studio 2015 e 2017** e acima têm suporte completo para C# 6. Versões anteriores do Visual Studio não dará suporte C# 6.
-
-* **Xamarin Studio para Windows** não oferece suporte a C# 6 recursos no editor.
-
-
-
-## <a name="compiler"></a>Compilador
-
-O Mono C# compilador 6 está incluída no Mono 4.0 e posterior, que é [disponível gratuitamente para download](https://www.mono-project.com/download/).
-O Visual Studio para Mac atualiza automaticamente a instalação do Mono no seu sistema.
-
-Os usuários do Windows devem ter [Visual Studio 2015 ou 2017 ^](https://visualstudio.microsoft.com/) instalado para compilar C# código de 6 (mesmo se você escolher o Xamarin Studio para Windows como seu IDE).
-
-^ ou *[Microsoft Build Tools 2015](https://www.microsoft.com/download/details.aspx?id=48159)* para comando de linha compilação ou servidores de compilação, por exemplo.
 
 ## <a name="using-c-6"></a>Usando o C# 6
 

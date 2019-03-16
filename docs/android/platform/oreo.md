@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 765494b5d9a55aedd9c9b3f0ea29ea389346ae3c
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: c34d81feee48caca94989973a67ba783a0139a90
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267619"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071055"
 ---
 # <a name="oreo-features"></a>Recursos do Oreo
 
@@ -65,8 +65,6 @@ Para adicionar suporte do Android Oreo para o Visual Studio, faça o seguinte:
     1. Atualização para o Visual Studio 2017 versão 15.7 ou posterior (consulte [atualizar o Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
 
     2. Use o [Gerenciador de SDK](~/android/get-started/installation/android-sdk.md) para instalar o nível de API 26.0 ou posterior.
-
--   Se você estiver usando o Visual Studio 2015, é recomendável fazer o downgrade de SDK Tools 25 e usando a GUI do Gerenciador de emulador do Google antigo. Ferramentas do SDK 25 ainda podem ser usadas junto com a API 26, 27 e mais recente e não afetarão o desenvolvimento para novas plataformas. Isso lhe dará uma interface para o gerenciamento do SDK do Android para versões mais antigas do VS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -364,4 +362,4 @@ Este artigo introduziu o Android Oreo e explicou como instalar e configurar as f
 
 ## <a name="related-links"></a>Links relacionados
 
-- [O Android Oreo 8.0](https://developer.android.com/index.html)
+- [Android 8.0 Oreo](https://developer.android.com/index.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 06a7a3b00934b7a2f3eeb4fcfa6fc90071901ba0
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669889"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070898"
 ---
 # <a name="java-bindings-metadata"></a>Metadados de associações de Java
 
@@ -246,7 +246,10 @@ Altera o tipo de retorno de um método. Isso não altera o atributo de retorno (
 
 ### <a name="obfuscated"></a>ofuscado
 
-Ferramentas de que o ofuscar bibliotecas Java podem interferir com o gerador de associação do xamarin. Android e sua capacidade de gerar C# classes de wrapper. Características das classes ofuscadas incluem: * inclui o nome da classe uma **$**, ou seja, **um. ' $Class** * o nome de classe seja comprometido inteiramente de caracteres em letras minúsculas, ou seja,  **a.class**
+Ferramentas de que o ofuscar bibliotecas Java podem interferir com o gerador de associação do xamarin. Android e sua capacidade de gerar C# classes de wrapper. As características das classes ofuscadas incluem: 
+
+* O nome de classe inclui uma **$**, ou seja, **um. ' $Class**
+* O nome de classe seja comprometido inteiramente de caracteres em letras minúsculas, ou seja, **a.class**
 
 Este trecho de código é um exemplo de como gerar um "não ofuscado" C# tipo:
 

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: b37070ca627e535f9470916e9f84cdf55bb2aed3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7626c49b2267cbd087a16c310f1b85aea7139823
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056130"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981725"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>O xamarin. Forms FlexLayout
 
@@ -393,7 +393,7 @@ Você pode fazer experiências com cinco restantes propriedades vinculáveis usa
 
 Quando o programa for iniciado, cinco `Picker` modos de exibição exibem os valores padrão desses cinco `FlexLayout` propriedades. O `FlexLayout` na parte inferior da tela contém três filhos:
 
-[![A página de teste: Default](flex-layout-images/ExperimentDefault.png "padrão a página de teste:")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
+[![A página de teste: Padrão](flex-layout-images/ExperimentDefault.png "padrão a página de teste:")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
 
 Cada um dos `Label` modos de exibição tem um plano de fundo cinza que mostra o espaço alocado para que `Label` dentro de `FlexLayout`. Plano de fundo do `FlexLayout` em si é azul-bebê. Ele ocupa a área inteira inferior da página, exceto para uma pequena margem à esquerda e direita.
 
@@ -447,7 +447,7 @@ O [ `JustifyContent` ](xref:Xamarin.Forms.FlexLayout.JustifyContent) propriedade
 
 Esta propriedade especifica como os itens são espaçados no eixo principal, que é o eixo horizontal neste exemplo:
 
-[![A página de teste: Justificar conteúdo](flex-layout-images/ExperimentJustifyContent.png "conteúdo de justificar a página de teste:")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
+[![A página de teste: Conteúdo de justificar](flex-layout-images/ExperimentJustifyContent.png "conteúdo de justificar a página de teste:")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
 
 Em todos os três capturas de tela, o `Wrap` estiver definida como `Wrap`. O `Start` padrão é mostrado na captura de tela Android anterior. Mostra a captura de tela do iOS aqui o `Center` opção: todos os itens são movidos para o centro. As três outras opções começando com a palavra `Space` alocar o espaço extra não ocupado pelos itens. `SpaceBetween` aloca o espaço igualmente entre os itens; `SpaceAround` puts igual espaço ao redor de cada item, enquanto `SpaceEvenly` puts igual espaço entre cada item e antes do primeiro item e depois do último item na linha.
 
@@ -490,7 +490,7 @@ Como o `AlignItems`, o `AlignContent` propriedade também alinha filhos no eixo 
 
 A captura de tela do iOS, ambas as linhas estão na parte superior; na captura de tela Android está no Centro de; e a captura de tela de UWP que eles estão na parte inferior. As linhas também podem ser espaçadas de várias maneiras:
 
-[![A página de teste: Alinhar conteúdo 2](flex-layout-images/ExperimentAlignContent2.png "na página de teste - alinhar conteúdo 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![A página de teste:  Alinhar conteúdo 2](flex-layout-images/ExperimentAlignContent2.png "na página de teste - alinhar conteúdo 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 O `AlignContent` não tem nenhum efeito quando há apenas uma linha ou coluna.
 
@@ -517,13 +517,13 @@ Para qualquer filho individual do `FlexLayout`, essa propriedade substituirá o 
 Para um `Label` elemento denominado `label` (ou exemplo), você pode definir o `AlignSelf` propriedade no código como este:
 
 ```csharp
-FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
+FlexLayout.SetAlignSelf(label, FlexAlignSelf.Center);
 ```
 
 Observe que não há nenhuma referência para o `FlexLayout` pai do `Label`. No XAML, você definir a propriedade como este:
 
 ```xaml
-<Label ... FlexAlign.AlignSelf="Center" ... />
+<Label ... FlexLayout.AlignSelf="Center" ... />
 ```
 
 ### <a name="the-order-property"></a>A propriedade de ordem
@@ -580,7 +580,7 @@ O **base experiências** página do **[FlexLayoutDemos](https://developer.xamari
 
 [![Página de teste de base](flex-layout-images/BasisExperiment.png "página de teste de base")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-A captura de tela do iOS à esquerda mostra os dois `Label` elementos que estão sendo fornecidos alturas em unidades independentes de dispositivo. A tela Android mostra-las sendo dada alturas menos da metade da altura total do `FlexLayout`. Se o `Basis` é definida em 100%, em seguida, o filho é a altura do `FlexLayout`e passe para a próxima coluna e ocupa toda a altura da coluna, como demonstra a captura de tela UWP: ele aparece como se os filhos de cinco são organizados em uma linha , mas, na verdade, são dispostos em cinco colunas.
+A captura de tela do iOS à esquerda mostra os dois `Label` elementos que estão sendo fornecidos alturas em unidades independentes de dispositivo. A tela Android mostra-las sendo dada alturas menos da metade da altura total do `FlexLayout`. Se o `Basis` é definida em 100%, em seguida, o filho é a altura do `FlexLayout`e passe para a próxima coluna e ocupa toda a altura da coluna, como demonstra a captura de tela UWP: Ele aparece como se os filhos de cinco são organizados em uma linha, mas, na verdade, são dispostos em cinco colunas.
 
 ### <a name="the-grow-property"></a>A propriedade de crescimento
 

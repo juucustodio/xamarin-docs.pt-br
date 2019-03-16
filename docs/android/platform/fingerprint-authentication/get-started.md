@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 731aeaf0ad89a44211072962bf9891851a44ffcc
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 3082dfcd6d0ffbc6404a89a10819e60b57b9c61c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667714"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070703"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Introdução à autenticação por impressão digital
 
@@ -25,7 +25,7 @@ Para começar, primeiro, vamos abordar como configurar um projeto xamarin. Andro
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Um aplicativo do Android deve solicitar o `USE_FINGERPRINT` permissão no manifesto. Captura de tela a seguir mostra como adicionar essa permissão ao aplicativo no Visual Studio 2015:
+Um aplicativo do Android deve solicitar o `USE_FINGERPRINT` permissão no manifesto. Captura de tela a seguir mostra como adicionar essa permissão ao aplicativo no Visual Studio:
 
 [![Habilitar uso\_impressão digital na tela de manifesto do Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
