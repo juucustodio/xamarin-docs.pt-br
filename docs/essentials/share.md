@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/12/2019
 ms.custom: video
-ms.openlocfilehash: 7e61041fa33557c4e1db3613b75b575e9d456231
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.openlocfilehash: ad56a626133e03c1ca75b1db26b0904d5df7fea3
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240416"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175324"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
 
@@ -57,7 +57,7 @@ public class ShareTest
 
 Interface do usuário para compartilhar com aplicativo externo exibida quando uma solicitação é feita:
 
-![Compartilhar](share-images/share.png)
+![Compartilhar](images/share.png)
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas
 

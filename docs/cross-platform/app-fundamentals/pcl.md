@@ -6,18 +6,18 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
-ms.openlocfilehash: a1e7152ca0f24d1ac660742e97907ea9300df9a7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 221ee49e282b3b038d03f659d238336710283a66
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666873"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175402"
 ---
 # <a name="portable-class-libraries-pcl"></a>PCL (Bibliotecas de classe portáteis)
 
-> [!WARNING]
+> [!TIP]
 > Bibliotecas de classes portáteis (PCLs) são consideradas preterida nas versões mais recentes do Visual Studio.
-> Enquanto você ainda pode abrir, editar e compilar PCLs, para novos projetos, é recomendável usar [bibliotecas .NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
+> Enquanto você ainda pode abrir, editar e compilar PCLs, para novos projetos, é recomendável usar [bibliotecas .NET Standard](~/cross-platform/app-fundamentals/net-standard.md) para acessar uma área de superfície da API maior.
 
 Um componente fundamental da criação de aplicativos de plataforma cruzada é a possibilidade de compartilhar código entre vários projetos específicos da plataforma. No entanto, isso é complicado pelo fato de que plataformas diferentes geralmente usam um sub conjunto diferente de .NET Base classe Library (BCL) e, portanto, na verdade, são criadas para um perfil diferente do .NET Core Library. Isso significa que cada plataforma só pode usar bibliotecas de classes que são direcionadas para o mesmo perfil para que eles seriam exibidos exigir que os projetos de biblioteca de classe separada para cada plataforma.
 

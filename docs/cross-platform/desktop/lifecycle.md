@@ -1,18 +1,18 @@
 ---
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
-title: WPF x. Ciclo de vida de aplicativo xamarin. Forms
+title: WPF vs. Ciclo de vida do aplicativo no Xamarin.Forms
 description: Este documento compara as semelhanças e diferenças entre o ciclo de vida do aplicativo para aplicativos xamarin. Forms e WPF. Ele também analisa a árvore visual, gráficos, recursos e estilos.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 5f157f2bbf36076e542a5f96b912cb1788a99052
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526787"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175220"
 ---
-# <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF x. Ciclo de vida de aplicativo xamarin. Forms
+# <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF vs. Ciclo de vida do aplicativo no Xamarin.Forms
 
 Xamarin. Forms usa muitas diretrizes de design das estruturas com base em XAML antes dele, particularmente o WPF. No entanto, de outras maneiras ele tiver um desvio significativamente que pode ser um ponto de adesivo para as pessoas tentando migrar sobre. Este documento tenta identificar alguns desses problemas e fornecer orientações sempre que possível, a ponte de dados de conhecimento do WPF para xamarin. Forms.
 
@@ -112,7 +112,7 @@ Além disso, a maioria dos elementos têm propriedades para influenciar como ele
 | WPF | Xamarin.Forms | Finalidade |
 |--- |--- |--- |
 |HorizontalAlignment|HorizontalOptions|Opções de esquerda/Center/direita/Stretch|
-|VerticalAlignment|Propriedades VerticalOptions|Opções de início/Center/inferior/Stretch|
+|VerticalAlignment|VerticalOptions|Opções de início/Center/inferior/Stretch|
 
 > [!NOTE]
 > A interpretação real dessas propriedades depende do contêiner pai.
@@ -137,7 +137,7 @@ Ambas as plataformas usam _propriedades anexadas_ para ajustar os filhos.
 
 ### <a name="rendering"></a>Renderização
 
-O mecanismo de renderização para xamarin. Forms e WPF é radicalmente diferente. No WPF, os controles que você criar diretamente renderizem conteúdo pixels na tela. WPF mantém dois grafos de objeto (_árvores_) para representá-lo - as _árvore lógica_ representa os controles, conforme definido no código ou XAML e o _árvore visual_ representa o processamento real ocorre na tela que é executado diretamente pelo elemento visual (por meio de um método draw virtual) ou por meio de um XAML definido `ControlTemplate` que podem ser substituído ou personalizado. Normalmente, a árvore visual é mais complexa, pois isso inclui como bordas em torno de controles, os rótulos para conteúdo implícito, etc. O WPF inclui um conjunto de APIs (`LogicalTreeHelper` e `VisualTreeHelper`) para examinar esses dois gráficos de objetos.
+O mecanismo de renderização para xamarin. Forms e WPF é radicalmente diferente. No WPF, os controles que você criar diretamente renderizem conteúdo pixels na tela. WPF mantém dois grafos de objeto (_árvores_) para representá-lo - as _árvore lógica_ representa os controles, conforme definido no código ou XAML e o _árvore visual_ representa o processamento real ocorre na tela que é executado diretamente pelo elemento visual (por meio de um método draw virtual) ou por meio de um XAML definido `ControlTemplate` que podem ser substituído ou personalizado. Normalmente, a árvore visual é mais complexa, pois ele inclui coisas como bordas em torno de controles, os rótulos para conteúdo implícito, etc. O WPF inclui um conjunto de APIs (`LogicalTreeHelper` e `VisualTreeHelper`) para examinar esses dois gráficos de objetos.
 
 No xamarin. Forms, os controles que você define em um `Page` são objetos de dados realmente bem simples. Eles são semelhantes a representação de árvore lógica, mas nunca renderizam conteúdo por conta própria. Em vez disso, eles são os _modelo de dados_ que influencia a renderização de elementos. O processamento real é feito por uma [separar o conjunto de _renderizadores visual_ que é mapeado para cada tipo de controle](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Esses processadores são registrados em cada um dos projetos específicos da plataforma por conjuntos de módulos específicos da plataforma xamarin. Forms. Você pode ver uma lista [aqui](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md). Além de substituir ou estender o renderizador, xamarin. Forms também tem suporte para [efeitos](~/xamarin-forms/app-fundamentals/effects/index.md) que pode ser usado para influenciar a renderização nativa em uma base por plataforma.
 
@@ -151,7 +151,7 @@ Xamarin. Forms não inclui um sistema de elementos gráficos para primitivos, al
 
 ## <a name="resources"></a>Recursos
 
-Xamarin. Forms e WPF têm o conceito de recursos e dicionários de recursos. Você pode colocar qualquer tipo de objeto em uma `ResourceDictionary` com uma chave e, em seguida, procurá-lo com `{StaticResource}` para coisas que não serão alterado, ou `{DynamicResource}` para coisas que podem ser alterado no dicionário em tempo de execução. O uso e a mecânica é os mesmos, com uma diferença: xamarin. Forms requer que você defina as `ResourceDictionary` para atribuir ao `Resources` propriedade enquanto o WPF cria previamente um e atribui-lo para você.
+Xamarin. Forms e WPF têm o conceito de recursos e dicionários de recursos. Você pode colocar qualquer tipo de objeto em uma `ResourceDictionary` com uma chave e, em seguida, procurá-lo com `{StaticResource}` para coisas que não serão alterado, ou `{DynamicResource}` para coisas que podem ser alterado no dicionário em tempo de execução. O uso e a mecânica é os mesmos, com uma diferença: Xamarin. Forms requer que você defina as `ResourceDictionary` para atribuir ao `Resources` propriedade enquanto o WPF cria previamente um e atribui-lo para você.
 
 Por exemplo, consulte a definição abaixo:
 
