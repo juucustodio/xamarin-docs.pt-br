@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 25c5077b3637c54370fa1a42a9b652ef211c0ed9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0d5df986caa01bba69b03d6502682889e78ecbc7
+ms.sourcegitcommit: ee464f165eee7b4485266c11f167be557a0bacb2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059334"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222309"
 ---
 # <a name="xamarinforms-grid"></a>Grade de xamarin. Forms
 
@@ -54,7 +54,7 @@ Informações de linha e coluna são armazenadas no `Grid`do `RowDefinitions`  &
 - **Absoluto** &ndash; dimensiona as colunas e linhas com valores de altura e largura fixas, específicos. Especificado como um valor e `GridUnitType.Absolute` em c# e como `#` em XAML, com `#` sendo o valor desejado.
 
 > [!NOTE]
-> Os valores de largura de colunas são definidos como ' * ' por padrão no xamarin. Forms, que garante que a coluna preencherá o espaço disponível.
+> Os valores de largura de colunas são definidos como `*` por padrão no xamarin. Forms, que garante que a coluna preencherá o espaço disponível. Os valores de altura para linhas também são definidos como `*` por padrão. 
 
 Considere um aplicativo que precisa de três linhas e duas colunas. A linha inferior precisa ser exatamente 200px altura e a linha superior precisa ser duas vezes com a altura da linha intermediária. A coluna à esquerda deve ser grande o suficiente para caber o conteúdo e a coluna à direita precisa preencher o espaço restante.
 

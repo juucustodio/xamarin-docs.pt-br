@@ -153,8 +153,8 @@ Esse estágio exige a [pré-compilado bibliotecas](https://github.com/xamarin/mo
 
 11. Partir **Gerenciador de soluções**, clique duas vezes no **MathFuncs.Standard** projeto.
 12. Navegue até **principais configurações do**, em seguida, atualize **Namespace padrão** para **MathFuncs**.
-13. Navegue até a **saída** as configurações, em seguida, atualize **nome do Assembly** para **MathFuncs** , em seguida, clique em **Okey**.
-14. Navegue até a **compilador** alterar configurações, o **Configuration** para **versão**, definir **informações de depuração** para  **Símbolos somente**.
+13. Navegue até a **saída** as configurações, em seguida, atualize **nome do Assembly** para **MathFuncs**.
+14. Navegue até a **compilador** alterar configurações, o **Configuration** para **versão**, definir **informações de depuração** para  **Símbolos somente** , em seguida, clique em **Okey**.
 15. Exclua **Class1.cs/Getting iniciado** do projeto (se um deles tiver sido incluído como parte do modelo).
 16. **CTRL + clique** no projeto **dependências/referências** pasta, em seguida, escolha **Editar referências**.
 17. Selecione **MathFuncs.Shared** da **projetos** guia e, em seguida, clique em **Okey**.
