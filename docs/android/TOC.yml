@@ -390,10 +390,14 @@ items:
       href: ~/essentials/battery.md?context=xamarin/android
     - name: Área de Transferência
       href: ~/essentials/clipboard.md?context=xamarin/android
+    - name: Conversores de cor
+      href: ~/essentials/color-converters.md?context=xamarin/android
     - name: Bússola
       href: ~/essentials/compass.md?context=xamarin/android
     - name: Conectividade
       href: ~/essentials/connectivity.md?context=xamarin/android
+    - name: Detectar movimento
+      href: ~/essentials/detect-shake.md?context=xamarin/android
     - name: Informações sobre DeviceDisplay
       href: ~/essentials/device-display.md?context=xamarin/android
     - name: Informações sobre o dispositivo
@@ -424,6 +428,8 @@ items:
       href: ~/essentials/orientation-sensor.md?context=xamarin/android
     - name: Discagem telefônica
       href: ~/essentials/phone-dialer.md?context=xamarin/android
+    - name: Extensões da plataforma (tamanho, retângulo, ponto)
+      href: ~/essentials/platform-extensions.md?context=xamarin/android
     - name: Preferências
       href: ~/essentials/preferences.md?context=xamarin/android
     - name: Armazenamento seguro
@@ -434,6 +440,8 @@ items:
       href: ~/essentials/sms.md?context=xamarin/android
     - name: Conversão de texto em fala
       href: ~/essentials/text-to-speech.md?context=xamarin/android
+    - name: Conversores de unidade
+      href: ~/essentials/unit-converters.md?context=xamarin/android
     - name: Monitoramento de versões
       href: ~/essentials/version-tracking.md?context=xamarin/android
     - name: Vibrar
@@ -645,14 +653,14 @@ items:
         href: wear/deploy-test/debug-on-device.md
       - name: Packaging
         href: wear/deploy-test/packaging.md
-  - name: Notas de Versão
+  - name: Notas sobre a versão
     href: https://docs.microsoft.com/xamarin/android/release-notes/
   - name: Exemplos
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 40bbc9dbf2a05212c1a901492520ff83f06c974c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7621bf3950c58cb4ffd6f33b73e9153409f93c9e
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671592"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58175376"
