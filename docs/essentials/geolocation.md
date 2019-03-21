@@ -4,13 +4,13 @@ description: Este documento descreve a classe Geolocation no Xamarin.Essentials,
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 84e0a5d37b757d14750f6bd3119d8695b35d7544
-ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
+ms.date: 03/13/2019
+ms.openlocfilehash: 93abf62e5d0b1df48606e4515fca6747146c7777
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841361"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175350"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
 
@@ -187,6 +187,22 @@ A tabela a seguir descreve a precisão por plataforma:
 | UWP | <= 10 |
 
 <a name="calculate-distance" />
+
+## <a name="detecting-mock-locations"></a>Detectando locais fictícios
+Alguns dispositivos podem retornar um local fictício do provedor ou por um aplicativo que fornece locais fictícios. Você pode detectar isso usando o `IsFromMockProvider` em qualquer [`Location`](xref:Xamarin.Essentials.Location).
+
+```csharp
+var request = new GeolocationRequest(GeolocationAccuracy.Medium);
+var location = await Geolocation.GetLocationAsync(request);
+
+if (location != null)
+{
+    if(location.IsFromMockProvider)
+    {
+        // location is from a mock provider
+    }
+}
+```
 
 ## <a name="distance-between-two-locations"></a>Distância entre dois locais
 
