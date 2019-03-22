@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c43b3f3204cba890cb2fa9c4cfc33a23250e0550
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b6b95f730b966ef5edaabbe7b0f333c2cacf5bc5
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112046"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58070833"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>Instalação do NUnit 2.6.4 por meio do NuGet
 
@@ -25,7 +25,7 @@ Este guia abordará como instalar o NUnit 2.6.4 usando o NuGet para Visual Studi
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Este guia explicará como fazer o downgrade do NUnit 3.0 para o NUnit 2.6.4 usando o NuGet no Visual Studio 2015.
+Este guia explicará como fazer downgrade do NUnit 3.0 para o NUnit 2.6.4 usando o NuGet no Visual Studio 2015 ou posterior.
 
 -----
 
@@ -62,7 +62,7 @@ Este guia abordou como fazer o downgrade do NUnit 3.0 para o NUnit 2.6.4 no Visu
 
 ## <a name="installing-nunit-264-in-visual-studio"></a>Instalação do NUnit 2.6.4 no Visual Studio
 
-Esta seção abordará o uso do _Console do Gerenciador de Pacotes NuGet_ no Visual Studio 2015 para desinstalar o NUnit 3.0 e instalar o NUnit 2.6.4.
+Esta seção abordará o uso do _Console do Gerenciador de Pacotes NuGet_ no Visual Studio 2015 ou posterior para desinstalar o NUnit 3.0 e instalar o NUnit 2.6.4.
 
 
 1. **Iniciar o Console do Gerenciador de Pacotes NuGet** – Selecione **Ferramentas > Gerenciador de Pacotes NuGet > Console do Gerenciador de Pacotes**:
@@ -105,7 +105,7 @@ Se a versão for o NUnit 3.0 ou superior, você deverá fazer o downgrade para o
     
 ## <a name="summary"></a>Resumo
 
-Este guia abordou como fazer o downgrade do NUnit 3.0 para o NUnit 2.6.4 no Visual Studio 2015 usando o Console do Gerenciador de Pacotes.
+Este guia abordou como fazer downgrade do NUnit 3.0 para o NUnit 2.6.4 no Visual Studio 2015 ou posterior usando o Console do Gerenciador de Pacotes.
 
 -----
 
