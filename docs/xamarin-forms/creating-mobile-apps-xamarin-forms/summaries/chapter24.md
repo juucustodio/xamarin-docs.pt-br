@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 24. Navegação da página
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 24. Navegação da página'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 24. Navegação da página'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 764a148ffffc2c69dbab5aeca872e2d10ce9f159
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7210cffb3cd348a6bdbf6cee80c4b6cd55553c58
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052735"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329371"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumo do capítulo 24. Navegação da página
 
@@ -22,7 +22,7 @@ Muitos aplicativos consistem em várias páginas entre os quais o usuário naveg
 
 ## <a name="modal-pages-and-modeless-pages"></a>Páginas modais e sem janela restrita
 
-`VisualElement` define uma [ `Navigation` ](xref:Xamarin.Forms.VisualElement.Navigation) propriedade do tipo [ `INavigation` ](xref:Xamarin.Forms.INavigation), que inclui os dois métodos para navegar até uma nova página a seguir:
+`VisualElement` define uma [ `Navigation` ](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade do tipo [ `INavigation` ](xref:Xamarin.Forms.INavigation), que inclui os dois métodos para navegar até uma nova página a seguir:
 
 - [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page))
 - [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page))
