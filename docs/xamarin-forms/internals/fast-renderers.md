@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 42889e3805391e9e586cda61d26103398ba16269
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 9a40644df6abcbbcc327b1b0c2dcb26c2dbc4db5
+ms.sourcegitcommit: 247a6d00a95fd7f4cf918d923e5f357c8db56761
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898518"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420204"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Renderizadores de xamarin. Forms Fast
 
 ![Visualizar](~/media/shared/preview.png)
 
-_Este artigo apresenta os renderizadores rápidos, o que reduz os custos de renderização de um controle xamarin. Forms no Android e inflação nivelando a hierarquia de controle nativo resultante._
+_Este artigo apresenta os renderizadores rápidos (adicionados no xamarin. Forms 2.4), que reduz os custos de renderização de um controle xamarin. Forms no Android e inflação nivelando a hierarquia de controle nativo resultante._
 
 Tradicionalmente, a maioria dos renderizadores de controle original no Android é compostas de dois modos de exibição:
 
