@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/18/2018
-ms.openlocfilehash: e78c224bae3a0e2c2dfcfded30a4bf2c4794e255
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 370867b52ec09d0c3ad0f801b6a75c356d806734
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112007"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477389"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Usar SQLite.NET com xamarin. IOS
 
@@ -27,8 +27,8 @@ Para incluir a biblioteca SQLite.NET em um aplicativo Xamarin, adicione o seguin
 
 - **Nome do pacote:** sqlite-net-pcl
 - **Autor:** Frank A. Krueger
-- **ID:** sqlite-net-pcl
-- **URL:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Id:** sqlite-net-pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Pacote do SQLite.NET NuGet](using-sqlite-orm-images/image1a-sml.png "SQLite.NET mobileengagement")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -198,9 +198,11 @@ Você pode verificar o `rowcount` para confirmar o número de linhas afetado (ne
 
 SQLite oferece suporte a três modos diferentes de threads: *Single-thread*, *multi-thread*, e *serializado*. Se você quiser acessar o banco de dados de vários threads sem quaisquer restrições, você pode configurar o SQLite para usar o **serializado** modo de threading. É importante definir esse modo no início do seu aplicativo (por exemplo, no início do `OnCreate` método).
 
-Para alterar o modo de threading, chame `SqliteConnection.SetConfig`. Por exemplo, esta linha de código configura o SQLite para **serializado** modo:
+Para alterar o modo de threading, chame `SqliteConnection.SetConfig` que está no `Mono.Data.Sqlite` namespace. Por exemplo, esta linha de código configura o SQLite para **serializado** modo:
 
 ```csharp
+using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
