@@ -1,19 +1,19 @@
 ---
-title: Usar UrhoSharp para criar um jogo 3D
+title: Using UrhoSharp To Build A 3D Game
 description: Este documento fornece uma visão geral do UrhoSharp, descrevendo as cenas, componentes, formas, câmeras, ações, entrada do usuário, som e muito mais.
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7d07733ebf62e6e12ccee05f9b72eaf1a74afad2
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34784033"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507156"
 ---
-# <a name="using-urhosharp-to-build-a-3d-game"></a>Usar UrhoSharp para criar um jogo 3D
+# <a name="using-urhosharp-to-build-a-3d-game"></a>Using UrhoSharp To Build A 3D Game
 
 Antes de escrever seu primeiro jogo, você deseja Familiarize-se com as Noções básicas: como configurar sua cena, como carregar recursos (que contém sua arte final) e como criar interações simples para o seu jogo.
 
@@ -23,7 +23,7 @@ Antes de escrever seu primeiro jogo, você deseja Familiarize-se com as Noções
 
 O modelo de cena pode ser descrito como um grafo de cena baseadas em componentes. A cena consiste em uma hierarquia de nós da cena, começando a partir do nó raiz, que também representa a cena inteira. Cada [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) tem uma transformação 3D (posição, rotação e escala), um nome, uma ID, além de um número arbitrário de componentes.  Componentes coloque um nó à vida, eles podem tornar a adicionar uma representação visual ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), eles podem emitir um som ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), eles podem fornecer um limite de colisão e assim por diante.
 
-Você pode criar suas cenas e nós de instalação usando o [Urho Editor](#UrhoEditor), ou você pode fazer coisas do seu código c#.  Neste documento, exploraremos o uso de código, definindo as configurações conforme elas ilustram os elementos necessários para colocar as coisas sejam exibidos na tela
+Você pode criar suas cenas e nós de instalação usando o [Urho Editor](#urhoeditor), ou você pode fazer coisas do seu código c#.  Neste documento, exploraremos o uso de código, definindo as configurações conforme elas ilustram os elementos necessários para colocar as coisas sejam exibidos na tela
 
 Além de configurar sua cena, é preciso configurar uma [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), isso é o que determina o que será obter mostrado ao usuário.
 
@@ -192,7 +192,7 @@ Estas são as ações com suporte no UrhoSharp:
 * Nós de esmaecimento: [ `FadeIn` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeIn), [ `FadeTo` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeTo), [ `FadeOut` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeOut), [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [`Blink`](https://developer.xamarin.com/api/type/Urho.Actions.Blink)
 * Tonalidade: [ `TintTo` ](https://developer.xamarin.com/api/type/Urho.Actions.TintTo), [`TintBy`](https://developer.xamarin.com/api/type/Urho.Actions.TintBy)
 * Momentos: [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [ `Show` ](https://developer.xamarin.com/api/type/Urho.Actions.Show), [ `Place` ](https://developer.xamarin.com/api/type/Urho.Actions.Place), [ `RemoveSelf` ](https://developer.xamarin.com/api/type/Urho.Actions.RemoveSelf), [`ToggleVisibility`](https://developer.xamarin.com/api/type/Urho.Actions.ToggleVisibility)
-* Loop: [ `Repeat` ](https://developer.xamarin.com/api/type/Urho.Actions.Repeat), [ `RepeatForever` ](https://developer.xamarin.com/api/type/Urho.Actions.RepeatForever), [`ReverseTime`](https://developer.xamarin.com/api/type/Urho.Actions.ReverseTime)
+* Looping: [`Repeat`](https://developer.xamarin.com/api/type/Urho.Actions.Repeat), [`RepeatForever`](https://developer.xamarin.com/api/type/Urho.Actions.RepeatForever), [`ReverseTime`](https://developer.xamarin.com/api/type/Urho.Actions.ReverseTime)
 
 Outros recursos avançados incluem a combinação da [ `Spawn` ](https://developer.xamarin.com/api/type/Urho.Actions.Spawn) e [ `Sequence` ](https://developer.xamarin.com/api/type/Urho.Actions.Sequence) ações.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 59c61cc637a435f8107256ddcd6bfacfb0466867
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669616"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507013"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Recursos de Design de Material de Designer do xamarin. Android
 
@@ -145,9 +145,9 @@ Quando um recurso de cor é alterado, uma mensagem é exibida com a mensagem *te
 
 O **plano de fundo** cor no Designer foi alterado para a nova seleção de cor, mas essa alteração ainda não foi salvo. Neste ponto, você pode fazer o seguinte:
 
--   Clique em **descartar alterações** para descartar a nova opção de cor (ou opções) e reverter o tema ao seu estado original. 
+-   Clique em **descartar alterações** para descartar a nova opção de cor (ou opções) e reverter o tema ao seu estado original.
 
--   Pressione <kbd>CTRL + S</kbd> para salvar suas alterações para o tema no momento. 
+-   Pressione <kbd>CTRL + S</kbd> para salvar suas alterações para o tema no momento.
 
 No exemplo a seguir <kbd>CTRL + S</kbd> foi pressionada para que as alterações foram salvas **AppTheme**:
 
@@ -300,7 +300,7 @@ Usando o **recursos** guia restringe as opções para essa lista de cores. Lembr
 
 ### <a name="material-palette"></a>Paleta de materiais
 
-O **Material paleta** guia é aberta a **paleta de cores de Design de Material** descrito [anteriores](#material_palette). Escolher um valor de cor da paleta desse restringe sua opção de cor para que ele seja consistente com as diretrizes de Design de Material.
+O **Material paleta** guia é aberta a **paleta de cores de Design de Material** descrito [anteriores](#material-design-color-palette). Escolher um valor de cor da paleta desse restringe sua opção de cor para que ele seja consistente com as diretrizes de Design de Material.
 
 [![Paleta de materiais](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
@@ -316,9 +316,9 @@ Quando um recurso de cor é alterado, uma mensagem é exibida com a mensagem *te
 
 Foi feita a alteração de cor no Designer, mas essa alteração ainda não foi salvo. Neste ponto, você pode fazer o seguinte:
 
--   Clique em **descartar alterações** para descartar a nova opção de cor (ou opções) e reverter o tema ao seu estado original. 
+-   Clique em **descartar alterações** para descartar a nova opção de cor (ou opções) e reverter o tema ao seu estado original.
 
--   Pressione  **&#8984; + S** salvar suas alterações em um novo tema chamado **personalizado**. 
+-   Pressione  **&#8984; + S** salvar suas alterações em um novo tema chamado **personalizado**.
 
 
 ## <a name="summary"></a>Resumo
