@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 32d0775baa75b70ebc118457945efc0f6c0acec2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: c84995e210d61e735d12a089f40bf9afa720acb5
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057055"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329280"
 ---
 # <a name="xamarinforms-modal-pages"></a>Páginas modais do Xamarin.Forms
 
@@ -39,9 +39,9 @@ Para retornar à página anterior, o aplicativo removerá a página atual da pil
 
 ## <a name="performing-navigation"></a>Executando a navegação
 
-Os métodos de navegação modal são expostos pela propriedade [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) em quaisquer tipos derivados de [`Page`](xref:Xamarin.Forms.Page). Esses métodos possibilitam [enviar páginas modais por push](#Pushing_Pages_to_the_Modal_Stack) para a pilha modal e [remover páginas modais](#Popping_Pages_from_the_Modal_Stack) da pilha modal.
+Os métodos de navegação modal são expostos pela propriedade [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) em quaisquer tipos derivados de [`Page`](xref:Xamarin.Forms.Page). Esses métodos possibilitam [enviar páginas modais por push](#Pushing_Pages_to_the_Modal_Stack) para a pilha modal e [remover páginas modais](#Popping_Pages_from_the_Modal_Stack) da pilha modal.
 
-A propriedade [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) também expõe uma propriedade [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) da qual as páginas modais na pilha modal podem ser obtidas. No entanto, não há nenhum conceito de realização de manipulação de pilha modal ou remoção do item mais recente da pilha até a página raiz na navegação modal. Isso ocorre porque não há suporte universal para essas operações pelas plataformas subjacentes.
+A propriedade [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) também expõe uma propriedade [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) da qual as páginas modais na pilha modal podem ser obtidas. No entanto, não há nenhum conceito de realização de manipulação de pilha modal ou remoção do item mais recente da pilha até a página raiz na navegação modal. Isso ocorre porque não há suporte universal para essas operações pelas plataformas subjacentes.
 
 > [!NOTE]
 > Uma instância de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) não é necessária para executar a navegação de página modal.
@@ -50,7 +50,7 @@ A propriedade [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) també
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>Enviando páginas por push para a pilha modal
 
-Para navegar até o `ModalPage`, é necessário invocar o método [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) na propriedade [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) da página atual, conforme demonstrado no exemplo de código a seguir:
+Para navegar até o `ModalPage`, é necessário invocar o método [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) na propriedade [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) da página atual, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -107,7 +107,7 @@ No Android, o usuário sempre pode retornar à página anterior pressionando o b
 
 ### <a name="animating-page-transitions"></a>Animando transições de página
 
-A propriedade [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de cada página também fornece métodos de envio por push e remoção substituídos que incluem um parâmetro `boolean` que controla se deve ser exibida uma animação de página durante a navegação, conforme mostrado no código de exemplo a seguir:
+A propriedade [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de cada página também fornece métodos de envio por push e remoção substituídos que incluem um parâmetro `boolean` que controla se deve ser exibida uma animação de página durante a navegação, conforme mostrado no código de exemplo a seguir:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)

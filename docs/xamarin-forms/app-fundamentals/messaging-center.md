@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 2e87142594da8f028323b5dc81afb0e9f8021028
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 6af392988b8ffa5f01ef07f81be53ea8f82e8fb5
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667049"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477324"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
@@ -35,7 +35,7 @@ Há duas partes para `MessagingCenter`:
 -  **Assinar** – escute mensagens com uma determinada assinatura e execute alguma ação quando elas forem recebidas. Vários assinantes podem escutar a mesma mensagem.
 -  **Enviar** – publique uma mensagem na qual os ouvintes devem agir. Se nenhum ouvinte tiver assinado, a mensagem será ignorada.
 
-O `MessagingService` é uma classe estática com os métodos `Subscribe` e `Send` que são usados em toda a solução.
+O `MessagingCenter` é uma classe estática com os métodos `Subscribe` e `Send` que são usados em toda a solução.
 
 As mensagens têm um parâmetro `message` de cadeia de caracteres que é usado como uma maneira de *endereçar* mensagens. Os métodos `Subscribe` e `Send` usam parâmetros genéricos para controlar como as mensagens são entregues – duas mensagens com o mesmo texto `message`, mas os argumentos de tipo genérico diferentes não serão entregues ao mesmo assinante.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1334340f18e664d4c652803e7678f45ee942eea8
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 36a253a46b76e4c883639ca683a8eab64700b064
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057399"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329306"
 ---
 # <a name="displaying-pop-ups"></a>Exibindo pop-ups
 
@@ -39,7 +39,7 @@ O método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) também pode s
 ```csharp
 async void OnAlertYesNoClicked (object sender, EventArgs e)
 {
-  var answer = await DisplayAlert ("Question?", "Would you like to play a game", "Yes", "No");
+  bool answer = await DisplayAlert ("Question?", "Would you like to play a game", "Yes", "No");
   Debug.WriteLine ("Answer: " + answer);
 }
 ```
@@ -55,7 +55,7 @@ Para exibir uma folha de ação, `await`[`DisplayActionSheet`](xref:Xamarin.Form
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 {
-  var action = await DisplayActionSheet ("ActionSheet: Send to?", "Cancel", null, "Email", "Twitter", "Facebook");
+  string action = await DisplayActionSheet ("ActionSheet: Send to?", "Cancel", null, "Email", "Twitter", "Facebook");
   Debug.WriteLine ("Action: " + action);
 }
 ```
@@ -67,7 +67,7 @@ O botão `destroy` é renderizado de forma diferente dos outros e pode ser deixa
 ```csharp
 async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 {
-  var action = await DisplayActionSheet ("ActionSheet: SavePhoto?", "Cancel", "Delete", "Photo Roll", "Email");
+  string action = await DisplayActionSheet ("ActionSheet: SavePhoto?", "Cancel", "Delete", "Photo Roll", "Email");
   Debug.WriteLine ("Action: " + action);
 }
 ```
