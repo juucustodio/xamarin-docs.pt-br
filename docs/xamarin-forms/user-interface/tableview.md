@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: fda8c08cdbdab01f5d68b7f349d5f28f31316290
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: c18eba873dc1a1dae36c401507d55652ed233b00
+ms.sourcegitcommit: 236a346838c421c7d8951f50abbf4f5365559372
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831996"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58641433"
 ---
 # <a name="xamarinforms-tableview"></a>Modo de tabela do xamarin. Forms
 
@@ -115,7 +115,7 @@ Todas essas propriedades são associáveis.
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) é útil quando você precisa exibir dados de texto que o usuário pode editar. Ele define as propriedades a seguir:
 
 - `Keyboard` – O teclado para exibir durante a edição. Há opções para coisas como valores numéricos, email, números de telefone, etc. [Consulte os documentos de API](xref:Xamarin.Forms.Keyboard).
-- `Label` – O texto de rótulo a ser exibida à direita do campo de entrada de texto.
+- `Label` – O texto de rótulo a ser exibida à esquerda do campo de entrada de texto.
 - `LabelColor` – A cor do texto do rótulo.
 - `Placeholder` – Texto exibido no campo de entrada quando ele é nulo ou vazio. Esse texto desaparece quando a entrada de texto começa.
 - `Text` – O texto no campo de entrada.

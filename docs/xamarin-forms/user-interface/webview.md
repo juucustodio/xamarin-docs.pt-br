@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 6d3355b1ebac5001984677eb8cc527fe619b8349
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/29/2019
+ms.openlocfilehash: 658ce23b0aaced8e195461a485f3e846900c2026
+ms.sourcegitcommit: 236a346838c421c7d8951f50abbf4f5365559372
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052245"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58641446"
 ---
 # <a name="xamarinforms-webview"></a>WebView do xamarin. Forms
 
@@ -331,11 +331,25 @@ public partial class InAppBrowserXaml : ContentPage
 
 WebView aciona os eventos a seguir para ajudá-lo a responder a alterações no estado:
 
-- **Navegando** – evento gerado quando o WebView começa a carregar uma nova página.
-- **Navegado** – evento gerado quando a página é carregada e navegação foi interrompido.
-- **ReloadRequested** – evento gerado quando uma solicitação é feita para recarregar o conteúdo atual.
+- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) – Evento gerado quando o WebView começa a carregar uma nova página.
+- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) – Evento gerado quando a página é carregada e navegação foi interrompido.
+- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested) – Evento gerado quando uma solicitação é feita para recarregar o conteúdo atual.
 
-Se você antecipar o uso de páginas da Web que levam muito tempo para carregar, considere usar o `Navigating` e `Navigated` eventos para implementar um indicador de status. Por exemplo, o XAML fica assim:
+O [ `WebNavigatingEventArgs` ](xref:Xamarin.Forms.WebNavigatingEventArgs) objeto que acompanha o [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) eventos tem quatro propriedades:
+
+- `Cancel` – Indica se deve ou não cancelar a navegação.
+- `NavigationEvent` – o evento de navegação que foi gerado.
+- `Source` – o elemento que executou a navegação.
+- `Url` – o destino de navegação.
+
+O [ `WebNavigatedEventArgs` ](xref:Xamarin.Forms.WebNavigatedEventArgs) objeto que acompanha o [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) eventos tem quatro propriedades:
+
+- `NavigationEvent` – o evento de navegação que foi gerado.
+- `Result` – Descreve o resultado do painel de navegação, usando um [ `WebNavigationResult` ](xref:Xamarin.Forms.WebNavigationResult) membro de enumeração. Os valores válidos são `Cancel`, `Failure`, `Success` e `Timeout`.
+- `Source` – o elemento que executou a navegação.
+- `Url` – o destino de navegação.
+
+Se você antecipar o uso de páginas da Web que levam muito tempo para carregar, considere usar o [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) e [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) eventos para implementar um indicador de status. Por exemplo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
