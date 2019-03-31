@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 14c62051afd7489389f154c21b3a76b9aad3f32e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115530"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677944"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri remoto e controladores de Bluetooth para tvOS no Xamarin
 
@@ -40,7 +40,7 @@ Siri remoto tem os seguintes recursos e usos esperados dentro de seu aplicativo 
 |---|---|---|
 |**Superfície de toque**<br />Passe o dedo para navegar, pressione a para selecionar e armazenar para menus contextuais.|**Passe o dedo/toque**<br />Navegação da interface do usuário entre os itens de controle.<br /><br />**Clique em**<br />Ativa o item selecionado do (em foco).|**Passe o dedo/toque**<br />Depende do projeto de jogo e pode ser usado como um direcional tocando nas bordas.<br /><br />**Clique em**<br />Execute a função do botão principal.|
 |**Menu**<br />Pressione para retornar à tela anterior ou menu.|Retorna à tela anterior e sai para a tela inicial para Apple TV na tela principal do aplicativo.|Pausar e retomar o jogo, para retornar à tela anterior e fecha a tela inicial para Apple TV na tela principal do aplicativo.|
-|**Siri/pesquisa**<br />Em países com Siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|N/D|N/D|
+|**Siri/Search**<br />Em países com Siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|N/D|N/D|
 |**Reproduzir/Pausar**<br />Reproduzir e pausar mídia ou fornece uma função secundária em aplicativos.|Inicia a reprodução de mídia e pausar/retomar a reprodução.|Executa a função do botão secundário ou ignora o vídeo de Introdução (se existir).|
 |**Início**<br />Pressione para retornar à tela inicial, clique duas vezes para exibir os aplicativos em execução, pressione e segure em suspensão do dispositivo.|N/D|N/D|
 |**Volume**<br />Controles o volume de equipamento de áudio/vídeo anexado.|N/D|N/D|
@@ -292,7 +292,7 @@ Um controlador de jogo tem os seguintes recursos e usos esperados dentro de seu 
 |**Gatilho à esquerda**|Navega à esquerda.|Depende do jogo.|
 |**Botão de direito Shoulder**|Navega à direita.|Depende do jogo.|
 |**Gatilho certo**|Navega direita|Depende do jogo.|
-|**Analógico esquerdo**|Navega por meio de elementos de interface do usuário (altera o foco).|Depende do jogo.|
+|**Left Thumbstick**|Navega por meio de elementos de interface do usuário (altera o foco).|Depende do jogo.|
 |**Alavanca direcional direita**|N/D|Depende do jogo.|
 
 A Apple fornece as sugestões a seguir para trabalhar com controladores de jogo:
@@ -310,7 +310,7 @@ Como mencionado acima, além dos padrão Siri remoto que é fornecido com a Appl
 Se a entrada de baixo nível do controlador de necessária de seu aplicativo, você pode usa da Apple [estrutura de controlador de jogo](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) que tem as seguintes modificações para tvOS:
 
 - O perfil do controlador de jogo Micro (`GCMicroGamepad`) foi adicionado ao Siri remoto de destino.
-- O novo `GCEventViewController` classe pode ser usado para encaminhar eventos de controlador de jogo por meio de seu aplicativo. Consulte a [determinando o jogo de controlador de entrada](#Determining-Game-Controller-Input) seção abaixo para obter mais detalhes.
+- O novo `GCEventViewController` classe pode ser usado para encaminhar eventos de controlador de jogo por meio de seu aplicativo. Consulte a [determinando o jogo de controlador de entrada](#determining-game-controller-input) seção abaixo para obter mais detalhes.
 
 <a name="Game-Controller-Support-Requirements" />
 

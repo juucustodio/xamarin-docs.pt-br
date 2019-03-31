@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 02db7dce6ba38b6c1e943ff189ff69efb7cc1c08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528774"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677827"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Aplicativos de treinamento em Xamarin do watchOS
 
@@ -636,7 +636,7 @@ Opcionalmente, o aplicativo pode calcular e criar um subconjunto menor de amostr
 
 ## <a name="workouts-and-ios-10"></a>Exercícios físicos e o iOS 10
 
-Todos os aplicativos de ginástica watchOS 3 tem um aplicativo-pai iOS 10 baseada em treinamento e, novo no iOS 10, este aplicativo iOS pode ser usado para iniciar um treinamento que colocar o Apple Watch no modo de treinamento (sem a intervenção do usuário) e executar o aplicativo watchOS no modo de execução do plano de fundo (consulte [sobre o plano de fundo em execução](#About-Background-Running) acima para obter mais detalhes).
+Todos os aplicativos de ginástica watchOS 3 tem um aplicativo-pai iOS 10 baseada em treinamento e, novo no iOS 10, este aplicativo iOS pode ser usado para iniciar um treinamento que colocar o Apple Watch no modo de treinamento (sem a intervenção do usuário) e executar o aplicativo watchOS no modo de execução do plano de fundo (consulte [sobre o plano de fundo em execução](#about-background-running) acima para obter mais detalhes).
 
 Enquanto o aplicativo watchOS é executado, ele pode usar WatchConnectivity para mensagens e comunicação com o aplicativo iOS pai.
 
@@ -649,7 +649,7 @@ Dar uma olhada em como esse processo funciona:
 3. Usando o que for passado na configuração de treinamento, o aplicativo watchOS 3 inicia uma nova sessão de treinamento (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> Para o aplicativo de iPhone pai iniciar uma ginástica na Apple Watch, o aplicativo watchOS 3 deve ter habilitado executando o plano de fundo. Consulte [habilitando em execução em segundo plano](#Enabling-Background-Running) acima para obter mais detalhes.
+> Para o aplicativo de iPhone pai iniciar uma ginástica na Apple Watch, o aplicativo watchOS 3 deve ter habilitado executando o plano de fundo. Consulte [habilitando em execução em segundo plano](#enabling-background-running) acima para obter mais detalhes.
 
 Esse processo é muito semelhante ao processo de iniciar uma sessão de treinamento no aplicativo watchOS 3 diretamente. No iPhone, use o seguinte código:
 

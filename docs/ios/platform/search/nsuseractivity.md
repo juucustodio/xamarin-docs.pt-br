@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: acfff90b4b983f92718bb9af1f587a73ec0f8da7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b853bd3bc55a2d4cb613a9f0079aebae9f57027b
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104252"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677853"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Pesquisa com NSUserActivity no xamarin. IOS
 
@@ -29,7 +29,7 @@ As seguintes propriedades de `NSUserActivity` são usados para dar suporte à pe
 
  - `EligibleForHandoff` – Se `true`, essa atividade pode ser usada em uma operação de entrega.
  - `EligibleForSearch` – Se `true`, essa atividade será adicionada ao índice no dispositivo e verá nos resultados da pesquisa.
- - `EligibleForPublicIndexing` – Se `true`, essa atividade será adicionada ao índice de baseado em nuvem da Apple e apresentada aos usuários que ainda não tiver instalado o aplicativo em seu dispositivo iOS (por meio de pesquisa). Consulte a [indexação de pesquisa público](#Public-Search-Indexing) seção abaixo para obter mais detalhes.
+ - `EligibleForPublicIndexing` – Se `true`, essa atividade será adicionada ao índice de baseado em nuvem da Apple e apresentada aos usuários que ainda não tiver instalado o aplicativo em seu dispositivo iOS (por meio de pesquisa). Consulte a [indexação de pesquisa público](#public-search-indexing) seção abaixo para obter mais detalhes.
  - `Title` – Fornece um título para que sua atividade e é exibido nos resultados da pesquisa. Os usuários também podem pesquisar o texto do título em si.
  - `Keywords` – É uma matriz de cadeias de caracteres usada para descrever sua atividade que será indexada e tornar pesquisável pelo usuário final.
  - `ContentAttributeSet` – É um `CSSearchableItemAttributeSet` usado para descrever sua atividade em detalhes ainda mais e fornecer conteúdo avançado nos resultados da pesquisa.

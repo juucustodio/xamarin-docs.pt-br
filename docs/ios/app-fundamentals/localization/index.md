@@ -17,7 +17,7 @@ Consulte a [codificações de internacionalização](encodings.md) para obter in
 
 ## <a name="ios-platform-features"></a>recursos da plataforma iOS
 
-Esta seção descreve alguns dos recursos de localização no iOS. Vá para o [próxima seção](#Localization-basics-in-iOS) para ver exemplos e código específicos.
+Esta seção descreve alguns dos recursos de localização no iOS. Vá para o [próxima seção](#localization-basics-in-ios) para ver exemplos e código específicos.
 
 ### <a name="language"></a>Idioma
 

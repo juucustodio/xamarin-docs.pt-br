@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: f9308d3a746a5a0a43cf47cc5ea809c0f82bbe7b
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: a901e16b3d5befc25864af39cb255d1833400e7f
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233816"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677879"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Segurança de transporte de aplicativo no xamarin. IOS
 
@@ -73,13 +73,13 @@ Para um aplicativo existente, a Apple sugere que você oferece suporte a `HTTPS`
 
 Para um novo aplicativo xamarin. IOS, você deve usar `HTTPS` exclusivamente ao se comunicar com recursos da internet. Novamente, pode haver situações (como usar um serviço web de terceiros 3ª) em que isso não é possível e você precisará recusar ATS.
 
-Além disso, o ATS impõe comunicação alto nível da API a ser criptografado usando TLS versão 1.2 com sigilo. Consulte a [requisitos de Conexão de ATS](#ATS-Connection-Requirements) e [codificações compatíveis de ATS](#ATS-Compatible-Ciphers) seções acima para obter mais detalhes.
+Além disso, o ATS impõe comunicação alto nível da API a ser criptografado usando TLS versão 1.2 com sigilo. Consulte a [requisitos de Conexão de ATS](#ats-connection-requirements) e [codificações compatíveis de ATS](#ats-compatible-ciphers) seções acima para obter mais detalhes.
 
 Embora você não pode estar familiarizado com o TLS ([Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)) é o sucessor do SSL ([Secure Socket Layer](https://en.wikipedia.org/wiki/Transport_Layer_Security)) e fornece uma coleção de protocolos de criptografia para impor a segurança ao longo conexões de rede.
 
 O nível TLS é controlado pelo serviço da web que está consumindo e, portanto, fora do controle do aplicativo. Tanto a `HttpClient` e o `ModernHttpClient` deve usar automaticamente o nível mais alto de criptografia de TLS com suporte pelo servidor.
 
-Dependendo do servidor que você está se comunicando com (especialmente se ele é um serviço de terceiros 3ª), talvez seja necessário desabilitar o sigilo ou selecione um nível inferior do TLS. Consulte a [Configurando opções de ATS](#Configuring-ATS-Options) seção abaixo para obter mais detalhes.
+Dependendo do servidor que você está se comunicando com (especialmente se ele é um serviço de terceiros 3ª), talvez seja necessário desabilitar o sigilo ou selecione um nível inferior do TLS. Consulte a [Configurando opções de ATS](#configuring-ats-options) seção abaixo para obter mais detalhes.
 
 > [!IMPORTANT]
 > Segurança de transporte de aplicativo não se aplica aos aplicativos do Xamarin usando **implementações HTTPClient gerenciados**. Ele se aplica a conexões usando CFNetwork **implementações HTTPClient** ou **implementações NSURLSession HTTPClient** somente.

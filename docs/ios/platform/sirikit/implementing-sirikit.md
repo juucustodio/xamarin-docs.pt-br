@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: c8d5c1394bee2ca2419904b077522fac9d03d825
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2c3bddc89348b46c9bba277580071cb8ac3d6943
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669434"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678048"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementar SiriKit no xamarin. IOS
 
@@ -635,7 +635,7 @@ Para adicionar uma extensão de tentativas para a solução, faça o seguinte:
     
 -----
 
-Repita essas etapas para o número de extensões de intenção (com base em [arquitetar o aplicativo para extensões](#Architecting-the-App-for-Extensions) seção acima) que o aplicativo exigirá.
+Repita essas etapas para o número de extensões de intenção (com base em [arquitetar o aplicativo para extensões](#architecting-the-app-for-extensions) seção acima) que o aplicativo exigirá.
 
 ### <a name="configuring-the-infoplist"></a>Configurando o Info. plist
 

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122667"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677840"
 ---
 # <a name="stack-views-in-xamarinios"></a>Modos de exibição de pilha no xamarin. IOS
 
@@ -233,7 +233,7 @@ Há várias propriedades que controlam como um modo de exibição de pilha será
 - **Linha de base relativa** – se `true`, o espaçamento vertical de cada modo de exibição secundário será derivado da sua linha de base.
 - **Layout margens relativo** – coloca as subexibições relativa às margens do layout padrão.
 
-Normalmente, você usará uma exibição de pilha para organizar um pequeno número de subexibições. Interfaces de usuário mais complexas podem ser criadas por um ou mais modos de exibição de pilha dentro uns aos outros de aninhamento (como fizemos na [UIStackView Quickstart](#UIStackView-Quickstart) acima).
+Normalmente, você usará uma exibição de pilha para organizar um pequeno número de subexibições. Interfaces de usuário mais complexas podem ser criadas por um ou mais modos de exibição de pilha dentro uns aos outros de aninhamento (como fizemos na [UIStackView Quickstart](#uistackview-quickstart) acima).
 
 Você pode ajustar ainda mais a aparência de interfaces do usuário adicionando restrições adicionais para as subexibições (por exemplo, para o controle a altura ou largura). No entanto, tome cuidado para não incluir restrições conflitantes aos introduzidos pela exibição de pilha em si.
 

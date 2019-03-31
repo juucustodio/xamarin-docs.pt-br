@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a8b31d9f2e9c8921420b1fd50c4092273962f54b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e7fc3d627b5d7a1dc73caa395a9181efb0b5f08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105890"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677996"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabalhando com exibições de tabela no Xamarin do tvOS
 
@@ -101,7 +101,7 @@ Para começar, faça o seguinte:
 1. Para cada **célula protótipo**, selecione-o e atribua um único **identificador** no **Widget** guia do **Gerenciador de propriedades**. Esta etapa é _muito importante_ pois você precisará mais tarde esse identificador ao popular a tabela. Por exemplo `AttrCell`: 
 
     [![](table-views-images/table12.png "Na guia de Widget")](table-views-images/table12.png#lightbox)
-1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#Table-View-Cell-Types) por meio do **estilo** lista suspensa ou defina-o como **personalizado** e usar a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário da **caixa de ferramentas**: 
+1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#table-view-cell-types) por meio do **estilo** lista suspensa ou defina-o como **personalizado** e usar a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário da **caixa de ferramentas**: 
 
     [![](table-views-images/table13.png "O layout da célula")](table-views-images/table13.png#lightbox)
 1. Atribuir um único **nome** a cada elemento de interface do usuário no design de protótipo de célula na **Widget** guia dos **Gerenciador de propriedades** para que você pode acessá-los posteriormente em C# código: 
@@ -142,7 +142,7 @@ Para começar, faça o seguinte:
 1. Para cada **célula protótipo**, selecione-o e atribua um único **identificador** no **Widget** guia do **Gerenciador de propriedades**. Esta etapa é _muito importante_ pois você precisará mais tarde esse identificador ao popular a tabela. Por exemplo `AttrCell`: 
 
     [![](table-views-images/table12-vs.png "Atribuir um identificador")](table-views-images/table12-vs.png#lightbox)
-1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#Table-View-Cell-Types) por meio do **estilo** lista suspensa ou defina-o como **personalizado** e usar a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário da **caixa de ferramentas**: 
+1. Você também pode selecionar para apresentar a célula como uma da [tipos de célula de exibição de tabela padrão](#table-view-cell-types) por meio do **estilo** lista suspensa ou defina-o como **personalizado** e usar a superfície de Design para a célula de layout arrastando-os em outros widgets de interface do usuário da **caixa de ferramentas**: 
 
     [![](table-views-images/table13-vs.png "A lista suspensa de estilo")](table-views-images/table13-vs.png#lightbox)
 1. Atribuir um único **nome** a cada elemento de interface do usuário no design de protótipo de célula na **Widget** guia dos **Gerenciador de propriedades** para que você pode acessá-los posteriormente em C# código: 

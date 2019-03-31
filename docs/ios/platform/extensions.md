@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e02d7a13a1fd5b554943f9facd6c9f120096a6a5
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b21bf4da7cf862bd32e71708f9e3657f577682c2
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667809"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677918"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no xamarin. IOS
 
@@ -69,7 +69,7 @@ Uma extensão pode ser tão simple quanto uma única [UIViewController](xref:UIK
 
 Se eles escolherem um aplicativo de extensões, seu `UIViewController` será instanciado e iniciar o ciclo de vida normal do controlador de exibição. No entanto, ao contrário de um aplicativo normal, que são suspensos, mas geralmente não encerrada quando o usuário termina de interagir com eles, extensões são carregadas, executadas e, em seguida, encerradas repetidamente.
 
-As extensões podem se comunicar com seus aplicativos de Host por meio de um [NSExtensionContext](xref:Foundation.NSExtensionContext) objeto. Algumas extensões têm operações que recebem retornos de chamada assíncronos com os resultados. Esses retornos de chamada serão executados em threads em segundo plano e a extensão deve levar isso em consideração; Por exemplo, usando [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se deseja atualizar a interface do usuário. Consulte a [comunicando-se com o aplicativo Host](#Communicating-with-the-Host-App) seção abaixo para obter mais detalhes.
+As extensões podem se comunicar com seus aplicativos de Host por meio de um [NSExtensionContext](xref:Foundation.NSExtensionContext) objeto. Algumas extensões têm operações que recebem retornos de chamada assíncronos com os resultados. Esses retornos de chamada serão executados em threads em segundo plano e a extensão deve levar isso em consideração; Por exemplo, usando [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se deseja atualizar a interface do usuário. Consulte a [comunicando-se com o aplicativo Host](#communicating-with-the-host-app) seção abaixo para obter mais detalhes.
 
 Por padrão, seus aplicativos de contêiner e extensões podem não se comunicar, apesar de que estão sendo instalados juntos. Em alguns casos, o aplicativo de contêiner é essencialmente um contêiner "envio" vazio cujo objetivo é servido depois que a extensão está instalada. No entanto, se as circunstâncias ditarem, o aplicativo de contêiner e a extensão podem compartilhar recursos de uma área comum. Além disso, uma **hoje mesmo a extensão** pode solicitar o seu aplicativo de contêiner para abrir uma URL. Esse comportamento é mostrado na [evoluir Widget de contagem regressiva](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
 

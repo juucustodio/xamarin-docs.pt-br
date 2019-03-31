@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b7564e3b94062c2294919121f32c4f830346bda
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105331"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677892"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introdução ao sugestões proativas no xamarin. IOS
 
@@ -397,7 +397,7 @@ namespace MonkeyNotification
 }
 ```
 
-Examinar esse código detalhadamente, ele cria e preenche uma instância de `NSUserActivity` (conforme mostrado na [criando uma atividade](#Creating-an-Activity) seção acima). Em seguida, ele cria uma instância do `INSendMessageIntent` (que herda de `INIntent`) e a preenche com os detalhes da mensagem sendo enviada:
+Examinar esse código detalhadamente, ele cria e preenche uma instância de `NSUserActivity` (conforme mostrado na [criando uma atividade](#creating-an-activity) seção acima). Em seguida, ele cria uma instância do `INSendMessageIntent` (que herda de `INIntent`) e a preenche com os detalhes da mensagem sendo enviada:
 
 ```csharp
 var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);
@@ -442,7 +442,7 @@ Como mostrado acima, `NSUserActivity` ajuda o sistema a entender quais informaç
 
 Schema.org pode fornecer os mesmos tipos de interações baseadas na localização para o site. Apple projetado as sugestões de local novo funcione tão bem quando visualizado no Safari, como fazem em um aplicativo nativo.
 
-Algumas informações básicas de Schema.org:
+Some Schema.org background:
 
 - Ele fornece um padrão de vocabulário de marcação de web aberta.
 - Ele funciona, incluindo metadados estruturados em páginas da web.

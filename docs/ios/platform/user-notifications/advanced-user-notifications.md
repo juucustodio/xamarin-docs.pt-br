@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: b0571f826101576b402368923c2147e35aa9299e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4472654064812142e3281374754ace0042b542bf
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116323"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677749"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificações de usuário avançadas no xamarin. IOS
 
@@ -375,7 +375,7 @@ Para eliminar esse efeito, edite o `Info.plist` arquivo para a extensão e defin
 
 ### <a name="using-media-attachments-in-custom-ui"></a>Usando anexos de mídia na interface do usuário personalizada
 
-Como anexos de mídia (como visto na [adicionar anexos de mídia](#Adding-Media-Attachments) seção acima) fazem parte da carga de notificação, pode ser acessadas e exibidos na extensão de conteúdo de notificação assim como seriam no padrão Notificação de interface do usuário.
+Como anexos de mídia (como visto na [adicionar anexos de mídia](#adding-media-attachments) seção acima) fazem parte da carga de notificação, pode ser acessadas e exibidos na extensão de conteúdo de notificação assim como seriam no padrão Notificação de interface do usuário.
 
 Por exemplo, se a interface de usuário personalizada acima incluído um `UIImageView` que foi exposto a C# de código, o seguinte código pode ser usado para preenchê-lo com o anexo de mídia:
 

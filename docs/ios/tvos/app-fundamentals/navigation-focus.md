@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1cfa51b8e5434480d7d15fbf23d78f8b8735f16a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cb8d1c1d92146e70056c6cf562f2fa1cb028e7c
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112579"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677866"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabalhando com foco no Xamarin e navegação do tvOS
 
@@ -25,7 +25,7 @@ Este artigo aborda o conceito de [foco](#Focus-and-Selection) e como ela é usad
 
 Em seguida, vamos dar uma olhada em como o foco pode ser usado com [Parallax](#Focus-and-Parallax) e *imagens em camadas* fornecer pistas visuais para o estado atual de navegação para o usuário final.
 
-Por fim, vamos examinar trabalhando com [foco](#Working-with-Focus), [atualizações de foco](#Working-with-Focus-Updates), [guias foco](#Working-with-Focus-Guides), [foco nas coleções](#Working-with-Focus-in-Collections) e [ Habilitação da Parallax](#Enabling-Parallax) nos modos de exibição de imagem em seus aplicativos xamarin. tvos.
+Por fim, vamos examinar trabalhando com [foco](#Working-with-Focus), [atualizações de foco](#Working-with-Focus-Updates), [guias foco](#Working-with-Focus-Guides), [foco nas coleções](#Working-with-Focus-in-Collections) e [ Habilitação da Parallax](#enabling-parallax) nos modos de exibição de imagem em seus aplicativos xamarin. tvos.
 
 <a name="Navigation" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 899e40460371933a3e1cb694618c7d33a124e76c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 1a5cc9f06fdca5944a9a3201ac15d63ca7f15453
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672697"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677957"
 ---
 # <a name="handoff-in-xamarinios"></a>Entrega no xamarin. IOS
 
@@ -52,9 +52,9 @@ Somente os aplicativos que compartilham o mesmo ID de equipe de desenvolvedor e 
 
 O aplicativo de recebimento usa as informações do `NSUserActivity`do `UserInfo` dicionário para configurar sua interface do usuário e restaurar o estado da atividade de determinado, para que a transição pareça perfeita ao usuário final.
 
-Se a continuação exigir mais informações que podem ser enviados com eficiência por meio um `NSUserActivity`, a retomada do aplicativo pode enviar uma chamada para o aplicativo de origem e estabelecer um ou mais fluxos para transmitir os dados necessários. Por exemplo, se a atividade foi editando um documento de texto grande com várias imagens, streaming seria ser necessária para transferir as informações necessárias para continuar a atividade no dispositivo de recebimento. Para obter mais informações, consulte o [Supporting continuação fluxos](#Supporting-Continuation-Streams) seção abaixo.
+Se a continuação exigir mais informações que podem ser enviados com eficiência por meio um `NSUserActivity`, a retomada do aplicativo pode enviar uma chamada para o aplicativo de origem e estabelecer um ou mais fluxos para transmitir os dados necessários. Por exemplo, se a atividade foi editando um documento de texto grande com várias imagens, streaming seria ser necessária para transferir as informações necessárias para continuar a atividade no dispositivo de recebimento. Para obter mais informações, consulte o [Supporting continuação fluxos](#supporting-continuation-streams) seção abaixo.
 
-Conforme mencionado acima, `NSDocument` ou `UIDocument` aplicativos com base têm automaticamente entrega suporte interno. Para obter mais informações, consulte o [que dão suporte a entrega em aplicativos baseados em documentos](#Supporting-Handoff-in-Document-Based-Apps) seção abaixo.
+Conforme mencionado acima, `NSDocument` ou `UIDocument` aplicativos com base têm automaticamente entrega suporte interno. Para obter mais informações, consulte o [que dão suporte a entrega em aplicativos baseados em documentos](#supporting-handoff-in-document-based-apps) seção abaixo.
 
 ### <a name="the-nsuseractivity-class"></a>A classe NSUserActivity
 
@@ -68,7 +68,7 @@ O `NSUserActivityDelegate` é usado para manter informações em um `NSUserActiv
 
 Você precisará implementar o `UserActivityWillSave` e fazer todas as alterações para o `NSUserActivity` (como `UserInfo`, `Title`, etc.) para garantir que ele ainda reflete o estado da atividade atual. Quando o sistema chama o `UserActivityWillSave` método, o `NeedsSave` sinalizador será limpo. Se você modificar qualquer uma das propriedades de dados da atividade, você precisará definir `NeedsSave` para `true` novamente.
 
-Em vez de usar o `UserActivityWillSave` método apresentado acima, você pode ter opcionalmente `UIKit` ou `AppKit` gerenciar a atividade de usuário automaticamente. Para fazer isso, defina o objeto de Respondente `UserActivity` propriedade e implementar o `UpdateUserActivityState` método. Consulte a [que dão suporte a entrega em respondentes](#Supporting-Handoff-in-Responders) seção abaixo para obter mais informações.
+Em vez de usar o `UserActivityWillSave` método apresentado acima, você pode ter opcionalmente `UIKit` ou `AppKit` gerenciar a atividade de usuário automaticamente. Para fazer isso, defina o objeto de Respondente `UserActivity` propriedade e implementar o `UpdateUserActivityState` método. Consulte a [que dão suporte a entrega em respondentes](#supporting-handoff-in-responders) seção abaixo para obter mais informações.
 
 ### <a name="app-framework-support"></a>Suporte de estrutura de aplicativo
 
@@ -84,7 +84,7 @@ Nos X, o `NSUserActivity` gerenciadas pelo `AppKit` e associados com respondente
 
 `AppKit` vai restaurar automaticamente a qualquer `UserActivity` propriedade criada dessa maneira nos X. Isso ocorre se o `ContinueUserActivity` método retorna `false` ou se for não implementada. Nessa situação, o documento é aberto com o `OpenDocument` método da `NSDocumentController` e, em seguida, receberá um `RestoreUserActivityState` chamada de método.
 
-Consulte a [que dão suporte a entrega em aplicativos baseados em documentos](#Supporting-Handoff-in-Document-Based-Apps) seção abaixo para obter mais informações.
+Consulte a [que dão suporte a entrega em aplicativos baseados em documentos](#supporting-handoff-in-document-based-apps) seção abaixo para obter mais informações.
 
 #### <a name="user-activities-and-responders"></a>Os respondentes e atividades do usuário
 
@@ -94,7 +94,7 @@ Se vários Respondentes compartilham um único `NSUserActivity` instância, eles
 
 Para desassociar em si de uma atividade, um Respondente pode definir seus `UserActivity` propriedade para `null`. Quando uma estrutura de aplicativo gerenciado `NSUserActivity` instância tem não mais associados respondentes ou documentos, ele é automaticamente invalidado.
 
-Consulte a [que dão suporte a entrega em respondentes](#Supporting-Handoff-in-Responders) seção abaixo para obter mais informações.
+Consulte a [que dão suporte a entrega em respondentes](#supporting-handoff-in-responders) seção abaixo para obter mais informações.
 
 #### <a name="user-activities-and-the-appdelegate"></a>Atividades do usuário e a AppDelegate
 
@@ -102,7 +102,7 @@ Seu aplicativo `AppDelegate` é seu ponto de entrada principal ao lidar com uma 
 
 O `NSUserActivity` instância será entregue quando o `AppDelegate`do `ContinueUserActivity` método é chamado. Neste ponto, você deve configurar a interface do usuário do aplicativo e continuar a atividade fornecida.
 
-Consulte a [entrega implementando](#Implementing-Handoff) seção abaixo para obter mais informações.
+Consulte a [entrega implementando](#implementing-handoff) seção abaixo para obter mais informações.
 
 ## <a name="enabling-handoff-in-a-xamarin-app"></a>Habilitando a entrega em um aplicativo Xamarin
 
@@ -201,7 +201,7 @@ namespace MonkeyBrowse
 }
 ```
 
-O `UserActivityReceivedData` método é chamado quando um Stream de continuação recebeu dados de um dispositivo de envio. Para obter mais informações, consulte o [Supporting continuação fluxos](#Supporting-Continuation-Streams) seção abaixo.
+O `UserActivityReceivedData` método é chamado quando um Stream de continuação recebeu dados de um dispositivo de envio. Para obter mais informações, consulte o [Supporting continuação fluxos](#supporting-continuation-streams) seção abaixo.
 
 O `UserActivityWasContinued` método é chamado quando outro dispositivo assumiu uma atividade do dispositivo atual. Dependendo do tipo de atividade, como adicionar um novo item à lista de tarefas, o aplicativo talvez seja necessário anular a atividade no dispositivo de envio.
 
@@ -246,7 +246,7 @@ userInfo.Add (new NSString ("Url"), new NSString (url));
 UserActivity.AddUserInfoEntries (userInfo);
 ```
 
-Apple sugere mantendo as informações enviadas para o mínimo absoluto para garantir que a atividade seja enviada de forma oportuna para o dispositivo de recebimento. Se forem necessárias, maiores informações, como uma imagem anexada a um documento ser editado precisa ser enviada, você deve usar fluxos de continuação. Consulte a [Supporting continuação fluxos](#Supporting-Continuation-Streams) seção abaixo para obter mais detalhes.
+Apple sugere mantendo as informações enviadas para o mínimo absoluto para garantir que a atividade seja enviada de forma oportuna para o dispositivo de recebimento. Se forem necessárias, maiores informações, como uma imagem anexada a um documento ser editado precisa ser enviada, você deve usar fluxos de continuação. Consulte a [Supporting continuação fluxos](#supporting-continuation-streams) seção abaixo para obter mais detalhes.
 
 ### <a name="continuing-an-activity"></a>Continuar uma atividade
 
@@ -421,7 +421,7 @@ public override void RestoreUserActivityState (NSUserActivity activity)
 }
 ```
 
-Para aplicativos baseados em documentos, se você não implemente a `ContinueUserActivity` ou método retorna `false`, `UIKit` ou `AppKit` pode retomar automaticamente a atividade. Consulte a [que dão suporte a entrega em aplicativos baseados em documentos](#Supporting-Handoff-in-Document-Based-Apps) seção abaixo para obter mais informações.
+Para aplicativos baseados em documentos, se você não implemente a `ContinueUserActivity` ou método retorna `false`, `UIKit` ou `AppKit` pode retomar automaticamente a atividade. Consulte a [que dão suporte a entrega em aplicativos baseados em documentos](#supporting-handoff-in-document-based-apps) seção abaixo para obter mais informações.
 
 ### <a name="failing-handoff-gracefully"></a>Entrega em desgraça
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6a8e74860efd606ae6dd565ea7e3f67884eefc11
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103212"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677931"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interação rápida para watchOS 3 no Xamarin
 
@@ -299,7 +299,7 @@ Além disso, SpriteKit e SceneKit podem ser combinados com elementos padrão da 
 
 ## <a name="simple-navigation"></a>Navegação simples
 
-watchOS 3 apresenta várias maneiras que um desenvolvedor pode simplificar a navegação dentro de seus aplicativos watchOS, como o novo [paginação Vertical](#Vertical-Paging), [suporte do reconhecedor de gestos](#Gesture-Recognizer-Support) e [Crown Digital Rotação](#Digital-Crown-Rotation) recursos apresentados acima.
+watchOS 3 apresenta várias maneiras que um desenvolvedor pode simplificar a navegação dentro de seus aplicativos watchOS, como o novo [paginação Vertical](#vertical-paging), [suporte do reconhecedor de gestos](#gesture-recognizer-support) e [Crown Digital Rotação](#digital-crown-rotation) recursos apresentados acima.
 
 O Crown Digital é exclusivo para o Apple Watch e pode ser usado de várias maneiras para simplificar a navegação. Por exemplo, um aplicativo de temporizador pode usar o Crown Digital para depurar por meio de comprimentos de temporizador disponíveis.
 
