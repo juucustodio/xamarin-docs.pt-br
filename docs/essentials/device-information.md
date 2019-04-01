@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Informações do dispositivo'
+title: 'Xamarin.Essentials: Informações sobre o dispositivo'
 description: Este documento descreve a classe DeviceInfo no Xamarin.Essentials, que fornece informações sobre o dispositivo no qual o aplicativo está em execução.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: b78c04d30871552f9b1e18a42c871e24464c4802
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: a7868277cd5e924d55ad688df1e8e07c81c5f074
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898947"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329319"
 ---
-# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informações do dispositivo
+# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informações sobre o dispositivo
 
 A classe **DeviceInfo** fornece informações sobre o dispositivo no qual o aplicativo está em execução.
 
@@ -53,18 +53,18 @@ var idiom = DeviceInfo.Idiom;
 var deviceType = DeviceInfo.DeviceType;
 ```
 
-## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[Plataformas](xref:Xamarin.Essentials.DeviceInfo.Platforms)
+## <a name="platforms"></a>Plataformas
 
-`DeviceInfo.Platform` correlaciona com uma cadeia de caracteres constante que mapeia para o sistema operacional. Os valores podem ser verificados com a classe `DevicePlatform`:
+[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform) correlaciona com uma cadeia de caracteres constante que mapeia para o sistema operacional. Os valores podem ser verificados com a classe `DevicePlatform`:
 
 - **DevicePlatform.iOS** – iOS
 - **DevicePlatform.Android** – Android
 - **DevicePlatform.UWP** – UWP
 - **DevicePlatform.Unknown** – Desconhecido
 
-## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idioms](xref:Xamarin.Essentials.DeviceInfo.Idioms)
+## <a name="idioms"></a>Linguagens
 
-`DeviceInfo.Idiom` correlaciona uma cadeia de caracteres constante que mapeia para o tipo de dispositivo em que o aplicativo está sendo executado. Os valores podem ser verificados com a classe `DeviceIdiom`:
+[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom) correlaciona uma cadeia de caracteres constante que mapeia para o tipo de dispositivo em que o aplicativo está sendo executado. Os valores podem ser verificados com a classe `DeviceIdiom`:
 
 - **DeviceIdiom.Phone** – Telefone
 - **DeviceIdiom.Tablet** – Tablet
