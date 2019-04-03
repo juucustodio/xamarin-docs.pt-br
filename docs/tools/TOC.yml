@@ -2,19 +2,6 @@ items:
 - name: Ferramentas
   href: index.yml
   items:
-  - name: Live Player
-    href: live-player/index.md
-    items:
-    - name: Configuração
-      href: live-player/install.md
-    - name: Aplicativo Xamarin Live Player
-      href: live-player/player.md
-    - name: Exemplos
-      href: live-player/samples.md
-    - name: Limitações
-      href: live-player/limitations.md
-    - name: Solução de problemas
-      href: live-player/troubleshooting.md
   - name: iOS Simulator
     href: ios-simulator/index.md
     items:
@@ -31,6 +18,15 @@ items:
       href: inspector/inspect.md
     - name: Notas de Versão
       href: /xamarin/tools/inspector/release-notes/
+  - name: Live Player
+    href: live-player/index.md
+    items:
+    - name: Configuração
+      href: live-player/install.md
+    - name: Aplicativo Xamarin Live Player
+      href: live-player/player.md
+    - name: Solução de problemas
+      href: live-player/troubleshooting.md
   - name: Criador de Perfil
     href: profiler/index.md
     items:
@@ -126,9 +122,9 @@ items:
     - name: Usando Jenkins com Xamarin
       href: ci/jenkins-walkthrough.md
   expanded: true
-ms.openlocfilehash: 4e1f5a02b1f53d9b1f2acc75f31123f4a910c2dd
-ms.sourcegitcommit: 7db5be0bb11e8914e1d1760e5f969ed17731e3a1
+ms.openlocfilehash: d5645302045dd5b7552f79bcddbcb60b43c74d7a
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54114973"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854958"
