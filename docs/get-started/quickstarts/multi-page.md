@@ -1,5 +1,5 @@
 ---
-title: Executar a navegação em um aplicativo do xamarin. Forms com várias página
+title: Navegar em um aplicativo Xamarin.Forms de várias páginas
 description: Este artigo explica como ativar o aplicativo de página única, capaz de armazenar uma anotação única, em um aplicativo de várias página, capaz de armazenar várias anotações.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: f3c5ec1c6d37c74fd9b4fb4980c68a59c9864c05
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.date: 04/01/2019
+ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197362"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854971"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Executar a navegação em um aplicativo xamarin. Forms de várias páginas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 Neste início rápido, você aprenderá como:
 
@@ -39,7 +39,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](single-page.
 
 ## <a name="update-the-app-with-visual-studio"></a>Atualizar um aplicativo com o Visual Studio
 
-1. Inicie o Visual Studio. Na página inicial, clique em **Abrir projeto / solução**e, nas **Abrir projeto** caixa de diálogo Selecionar o arquivo de solução para o projeto de notas:
+1. Inicie o Visual Studio. Na janela de início, clique o **notas** solução na lista de projetos/soluções recentes, ou clique em **abrir um projeto ou solução**e, na **Abrir projeto/solução** caixa de diálogo Selecione o arquivo de solução para o projeto de notas:
 
     ![](multi-page-images/vs/open-solution.png "Abrir Projeto")
 
@@ -285,9 +285,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](single-page.
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -324,7 +322,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](single-page.
 
 ## <a name="update-the-app-with-visual-studio-for-mac"></a>Atualizar um aplicativo com o Visual Studio para Mac
 
-1. Inicialize o Visual Studio para Mac. Na página inicial, clique em **abra...** e na caixa de diálogo, selecione o arquivo de solução para o projeto de notas:
+1. Inicialize o Visual Studio para Mac. Na janela de início, clique em **abrir**e na caixa de diálogo, selecione o arquivo de solução para o projeto de notas:
 
     ![](multi-page-images/vsmac/open-solution.png "Abrir Solução")
 
@@ -570,9 +568,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](single-page.
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -621,5 +617,5 @@ Para modificar o aplicativo para que ele armazena seus dados em um banco de dado
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+- [Anotações (amostra)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 - [Aprofundamento de início rápido do xamarin. Forms](deepdive.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: becba36655a5247a11decb7dc54334f9397ecdfc
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233526"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870190"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -58,7 +58,7 @@ Para obter mais informações sobre as novas capacidades de multitarefa do iOS 9
 
 ## <a name="new-contacts-and-contacts-ui-frameworks"></a>Novos contatos e estruturas de interface do usuário de contatos
 
-Com a introdução do iOS 9, a Apple lançou duas novas estruturas [contatos](https://developer.xamarin.com/api/namespace/Contacts/) e [ContactsUI](https://developer.xamarin.com/api/namespace/ContactsUI/), que substitui o catálogo de endereços existente e estruturas do catálogo de endereço da interface do usuário usados pelo iOS 8 e versões anteriores.
+Com a introdução do iOS 9, a Apple lançou duas novas estruturas [contatos](xref:Contacts) e [ContactsUI](xref:ContactsUI), que substitui o catálogo de endereços existente e estruturas do catálogo de endereço da interface do usuário usados pelo iOS 8 e versões anteriores.
 
 Essas estruturas novas orientada a objeto, fornecem o seguinte:
 
@@ -103,7 +103,7 @@ Para obter mais informações, consulte nosso [aprimoramentos de jogo](~/ios/pla
 
 ## <a name="homekit-framework-changes"></a>Alterações de estrutura HomeKit
 
-O [HomeKit](https://developer.xamarin.com/api/namespace/HomeKit/) estrutura, introduzida no iOS 8, fornece a capacidade de configurar e controlar várias Acessórios do HomeKit habilitado (por exemplo, luzes automatizadas, bloqueios de porta e portas de garagens garagem) de um aplicativo xamarin. IOS. Além de ser fácil de instalar e configurar, Acessórios do HomeKit podem ser controlados por meio de comandos falados do Siri.
+O [HomeKit](xref:HomeKit) estrutura, introduzida no iOS 8, fornece a capacidade de configurar e controlar várias Acessórios do HomeKit habilitado (por exemplo, luzes automatizadas, bloqueios de porta e portas de garagens garagem) de um aplicativo xamarin. IOS. Além de ser fácil de instalar e configurar, Acessórios do HomeKit podem ser controlados por meio de comandos falados do Siri.
 
 No iOS 9, Apple tem mais fácil instalação, expandido de tipos de Acessórios, suporte e fornecidas mais interações Acessórios (como controlar um acessório remotamente por meio do iCloud).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 7f3c196eafd71e8571ea49a17784e5290e7ef44e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 559ef9cc9a3e5ace7a4023e81363825c6861f6d4
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233595"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870307"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 no xamarin. IOS
 
@@ -394,7 +394,7 @@ No Xamarin, o tipo comum para manipular matrizes de transformação é `NVector4
 
 ![linhas principais vs coluna principal](images/arkit_row_vs_column.png)
 
-Seja consistente com a opção de interpretação de matriz é vital para o comportamento apropriado. Como matrizes de transformação 3D são 4 x 4, erros de consistência não produzirá nenhum tipo de exceção de tempo de compilação ou tempo de execução até mesmo — ele é apenas que as operações serão agir inesperadamente. Se seu SceneKit / ARKit objetos parecem estar preso, voar distância ou tremulação, uma matriz de transformação incorreta é uma boa possibilidade. A solução é simples: [ `NMatrix4.Transpose` ](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) executará uma transposição no local de elementos.
+Seja consistente com a opção de interpretação de matriz é vital para o comportamento apropriado. Como matrizes de transformação 3D são 4 x 4, erros de consistência não produzirá nenhum tipo de exceção de tempo de compilação ou tempo de execução até mesmo — ele é apenas que as operações serão agir inesperadamente. Se seu SceneKit / ARKit objetos parecem estar preso, voar distância ou tremulação, uma matriz de transformação incorreta é uma boa possibilidade. A solução é simples: [ `NMatrix4.Transpose` ](xref:OpenTK.NMatrix4.Transpose*) executará uma transposição no local de elementos.
 
 ## <a name="related-links"></a>Links relacionados
 

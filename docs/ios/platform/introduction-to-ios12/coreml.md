@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 2d62e42e755a0d3088283adb863dfd684ddeae28
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617573"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869722"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Core ML 2 no xamarin. IOS
 
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>para loop
 
-O `for` versão de loop do teste ingenuamente itera sobre o número especificado de entradas, chamando [ `GetPrediction` ](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/) para cada e descartando o resultado. O método atinge o tempo quanto tempo leva para fazer as previsões:
+O `for` versão de loop do teste ingenuamente itera sobre o número especificado de entradas, chamando [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) para cada e descartando o resultado. O método atinge o tempo quanto tempo leva para fazer as previsões:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,7 +94,7 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>GetPredictions (API de lote novo)
 
-Cria a versão do lote do teste de um `MLArrayBatchProvider` objeto da matriz de entrada (já que este é um parâmetro de entrada necessário para o `GetPredictions` método), cria um [`MLPredictionOptions`](https://developer.xamarin.com/api/type/CoreML.MLPredictionOptions/)
+Cria a versão do lote do teste de um `MLArrayBatchProvider` objeto da matriz de entrada (já que este é um parâmetro de entrada necessário para o `GetPredictions` método), cria um [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
 objeto que impede que os cálculos de previsão sejam restritas à CPU e usa o `GetPredictions` API para buscar as previsões, descartando novamente o resultado:
 
 ```csharp

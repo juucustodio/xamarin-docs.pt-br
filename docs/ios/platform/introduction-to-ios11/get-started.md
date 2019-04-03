@@ -1,18 +1,18 @@
 ---
 title: Introdução ao iOS 11
-description: Este documento descreve as etapas que devem ser concluídas para começar a desenvolver aplicativos iOS 11. Ele aborda como baixar o Xcode e atualizar o Visual Studio 2017.
+description: Este documento descreve as etapas que devem ser concluídas para começar a desenvolver aplicativos iOS 11. Ele aborda como baixar o Xcode e atualizar o Visual Studio de 2019.
 ms.prod: xamarin
 ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
-ms.openlocfilehash: 697ae79ea7dd9aaeedb1400a405a4ca5c4dc3d1e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec69cd7d176ca4047ffa37fcc2ed8554bd9f9353
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123629"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854594"
 ---
 # <a name="getting-started-with-ios-11"></a>Introdução ao iOS 11
 
@@ -27,7 +27,7 @@ _Baixe e instale o Xcode 9_
 
 Siga estas etapas para garantir que você está pronto para trabalhar com o iOS mais recente, tvOS e watchOS recursos:
 
-1. **Instalar a mais recente do Xcode** – [Baixe](https://developer.apple.com/download/) e instale a versão mais recente do _Xcode 9_.
+1. **Instalar a mais recente do Xcode** – [Baixe](https://developer.apple.com/download/) e instale a versão mais recente do _Xcode 10_.
 
 2. **Execute primeiro Xcode** – Xcode executado uma vez, antes de atualizar e executando o Visual Studio para Mac, conforme ele instala algumas ferramentas que Xamarin requer na primeira vez que ele é executado.
 

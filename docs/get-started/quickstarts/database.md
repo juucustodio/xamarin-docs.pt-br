@@ -1,5 +1,5 @@
 ---
-title: Data Store em um banco de dados local SQLite.NET
+title: Armazenar dados em um banco de dados SQLite.NET local
 description: Este artigo explica como armazenar dados em um banco de dados local do SQLite.NET.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: 3cea41aa3c021dbb03f851a4deb443ee86fcad25
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.date: 04/01/2019
+ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292714"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854984"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Store dados em um banco de dados Local SQLite.NET
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 Neste início rápido, você aprenderá como:
 
@@ -44,19 +44,19 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
 
     ![](database-images/vs/add-nuget-packages.png "Adicionar Pacotes NuGet")    
 
-3. No **Gerenciador de pacotes NuGet**, selecione o **procurar** guia, procure o **sqlite-net-pcl** pacote do NuGet, selecione-o e clique no **instalar**botão para adicioná-lo ao projeto:
+3. No **Gerenciador de Pacotes NuGet**, selecione a guia **Procurar**, pesquise pelo pacote NuGet **sqlite-net-pcl**, selecione-o e clique no botão **Instalar** para adicioná-lo ao projeto:
 
     ![](database-images/vs/add-package.png "Adicionar pacote")
 
     > [!NOTE]
-    > Há um número de pacotes do NuGet com nomes semelhantes. O pacote correto possui estes atributos:
-    > - **Autores:** Frank A. Krueger
+    > Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
+    > - **Autor(es):** Frank A. Krueger
     > - **Id:** sqlite-net-pcl
     > - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
-    > Apesar do nome do pacote, esse pacote NuGet pode ser usado em projetos do .NET Standard.
+    > Apesar do nome do pacote, este pacote NuGet pode ser usado em projetos do .NET Standard.
 
-    Este pacote será usado para incorporar operações de banco de dados no aplicativo.
+    Este pacote será usado para incorporar operações de banco de dados ao aplicativo.
 
 4. Na **Gerenciador de soluções**, no **notas** projeto, abra **Note.cs** no **modelos** pasta e substitua o existente de código com o o código a seguir:
 
@@ -139,7 +139,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
     }
     ```
 
-    Essa classe contém código para criar o banco de dados, ler dados a partir dele, gravação de dados e exclua dados dele. O código usa SQLite.NET APIs assíncronas que mover as operações de banco de dados para threads de segundo plano. Além disso, o `NoteDatabase` construtor usa o caminho do arquivo de banco de dados como um argumento. Esse caminho será fornecido pelo `App` classe na próxima etapa.
+    Essa classe contém código para criar o banco de dados, ler dados a partir dele, gravação de dados e exclua dados dele. O código usa APIs SQLite.NET assíncronas que movem operações de banco de dados para threads de segundo plano. Além disso, o construtor `NoteDatabase` usa o caminho para o arquivo de banco de dados como um argumento. Esse caminho será fornecido pelo `App` classe na próxima etapa.
 
     Salve as alterações em **NoteDatabase.cs** pressionando **CTRL + S**e feche o arquivo.
 
@@ -152,10 +152,8 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -249,19 +247,19 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
 
     ![](database-images/vsmac/add-nuget-packages.png "Adicionar Pacotes NuGet")    
 
-3. No **adicionar pacotes** janela, procure o **sqlite-net-pcl** pacote do NuGet, selecione-o e clique no **Adicionar pacote** botão para adicioná-lo ao projeto:
+3. Na janela **Adicionar Pacotes**, pesquise pelo pacote NuGet **sqlite-net-pcl**, selecione-o e clique no botão **Adicionar Pacote** para adicioná-lo ao projeto:
 
     ![](database-images/vsmac/add-package.png "Adicionar pacote")
 
     > [!NOTE]
-    > Há um número de pacotes do NuGet com nomes semelhantes. O pacote correto possui estes atributos:
+    > Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
     > - **Autor:** Frank A. Krueger
     > - **Id:** sqlite-net-pcl
     > - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
-    > Apesar do nome do pacote, esse pacote NuGet pode ser usado em projetos do .NET Standard.
+    > Apesar do nome do pacote, este pacote NuGet pode ser usado em projetos do .NET Standard.
 
-    Este pacote será usado para incorporar operações de banco de dados no aplicativo.
+    Este pacote será usado para incorporar operações de banco de dados ao aplicativo.
 
 4. No **painel de soluções**, no **notas** projeto, abra **Note.cs** no **modelos** pasta e substitua o código existente pelo seguinte código:
 
@@ -344,7 +342,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
     }
     ```
 
-    Essa classe contém código para criar o banco de dados, ler dados a partir dele, gravação de dados e exclua dados dele. O código usa SQLite.NET APIs assíncronas que mover as operações de banco de dados para threads de segundo plano. Além disso, o `NoteDatabase` construtor usa o caminho do arquivo de banco de dados como um argumento. Esse caminho será fornecido pelo `App` classe na próxima etapa.
+    Essa classe contém código para criar o banco de dados, ler dados a partir dele, gravação de dados e exclua dados dele. O código usa APIs SQLite.NET assíncronas que movem operações de banco de dados para threads de segundo plano. Além disso, o construtor `NoteDatabase` usa o caminho para o arquivo de banco de dados como um argumento. Esse caminho será fornecido pelo `App` classe na próxima etapa.
 
     Salve as alterações em **NoteDatabase.cs** escolhendo **arquivo > Salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
@@ -357,10 +355,8 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -459,5 +455,5 @@ Para definir o estilo de aplicativo com os estilos XAML, continue para o próxim
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [Anotações (amostra)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 - [Aprofundamento de início rápido do xamarin. Forms](deepdive.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
-ms.openlocfilehash: 0a5edaeb6f9edc992c5f735d37adba464c72d4ad
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57199642"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854736"
 ---
 # <a name="xamarinforms-requirements"></a>Requisitos do Xamarin.Forms
 
@@ -52,21 +52,21 @@ Você precisa ter a plataforma das Ferramentas do SDK do Android e da API do And
 
 Além disso, a versão de destino/compilação para projetos do Android **deve** ser definida como *Usar a plataforma mais recente instalada*. No entanto, a versão mínima pode ser definida como API 19, de modo que você pode continuar dando suporte a dispositivos que usam Android 4.4 e mais recentes. Esses valores são definidos nas **Opções de Projeto**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-**Opções de Projeto > Aplicativo > Propriedades do Aplicativo**
+**Opções do projeto > aplicativo > Propriedades do aplicativo**
 
-![](requirements-images/options-android-vs-sml.png "Opções de build no Visual Studio")
+![Opções de build no Visual Studio](requirements-images/options-android-vs-sml.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
-**Build > Geral**
+**Build > geral**
 
-![](requirements-images/options-general-sml.png "Build > Geral")
+![Selecione a estrutura de destino mais recente](requirements-images/options-general-sml.png)
 
-**Build > Aplicativo Android**
+**Build > aplicativo Android**
 
-![](requirements-images/options-android-sml.png "Build > Aplicativo Android")
+![Selecione o mínimo e versões do Android para o aplicativo de destino](requirements-images/options-android-sml.png)
 
 -----
 
@@ -76,7 +76,7 @@ Aplicativos Xamarin.Forms podem ser desenvolvidos no macOS e no Windows. No enta
 
 ## <a name="mac-system-requirements"></a>Requisitos do sistema do Mac
 
-Você pode usar o Visual Studio para Mac para desenvolver aplicativos Xamarin.Forms no OS X El Capitan (10.11) ou mais recente. Para desenvolver aplicativos iOS, é recomendável ter pelo menos o SDK do iOS 10 e o Xcode 8 instalados.
+Você pode usar o Visual Studio para Mac para desenvolver aplicativos xamarin. Forms em macOS High Sierra (10.13) ou mais recente. Para desenvolver aplicativos iOS, é recomendável ter pelo menos o iOS 10 SDK e o Xcode 9 instalado.
 
 > [!NOTE]
 >  Aplicativos do Windows não podem ser desenvolvidos no macOS.
@@ -91,11 +91,10 @@ Aplicativos Xamarin.Forms para iOS e Android podem ser compilados em qualquer in
 
 O desenvolvimento de aplicativos Xamarin.Forms para UWP requer:
 
-- Windows 10 (é recomendável o Fall Creators Update)
+- Windows 10 (versão mais recente recomendada, mínimo Fall Creators Update)
 
-- Visual Studio 2017
+- Visual Studio de 2019 recomendado (Visual Studio 2017 versão 15,8 mínimo)
 
-- [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
+- [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
-Os projetos da UWP são incluídos em soluções do Xamarin.Forms criadas no Visual Studio 2017, exceto as soluções criadas no Visual Studio 2017 para Mac.
 Você pode também [adicionar um aplicativo UWP (Plataforma Universal do Windows)](~/xamarin-forms/platform/windows/installation/index.md) a uma solução Xamarin.Forms existente a qualquer momento.

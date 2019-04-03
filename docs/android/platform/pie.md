@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: fa41affc57714254a12623f79da3dc1396ecd009
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: e08324d5a905639e7ecd59bc4c7a5c0f02d0adfe
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670123"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854711"
 ---
 # <a name="android-pie-features"></a>Recursos de pizza do Android
 
@@ -30,19 +30,20 @@ Xamarin. Android 9.0 fornece suporte para Android pizza. Para obter mais informa
 
 A lista a seguir é necessário para usar os recursos do Android pizza em aplicativos baseados em Xamarin:
 
--   **Visual Studio** &ndash; se você estiver usando o Windows, atualize para o Visual Studio 2017 versão 15,8 ou posterior. Se você estiver usando um Mac, atualize para o Visual Studio 2017 para Mac versão 7,6 ou posterior.
+- **Visual Studio** &ndash; 2019 do Visual Studio é recomendado.
+    Se você estiver usando o Visual Studio 2017, na atualização do Windows para Visual Studio 2017 versão 15,8 ou posterior. No macOS, atualize para o Visual Studio 2017 para Mac versão 7,6 ou posterior.
 
--   **Xamarin. Android** &ndash; xamarin. Android ão 9.0.0.17 ou posterior deve ser instalado com o Visual Studio (xamarin. Android é instalado automaticamente como parte do **desenvolvimento móvel com .NET** carga de trabalho).
+- **Xamarin. Android** &ndash; xamarin. Android ão 9.0.0.17 ou posterior deve ser instalado com o Visual Studio (xamarin. Android é instalado automaticamente como parte do **desenvolvimento móvel com .NET** carga de trabalho).
 
--   **Java Developer Kit** &ndash; 9.0 Android do Xamarin de desenvolvimento requer [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (ou você pode tentar a visualização da distribuição da Microsoft dos [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 é instalado automaticamente como parte do **desenvolvimento móvel com .NET** carga de trabalho.
+- **Java Developer Kit** &ndash; 9.0 Android do Xamarin de desenvolvimento requer [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (ou você pode tentar a visualização da distribuição da Microsoft dos [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 é instalado automaticamente como parte do **desenvolvimento móvel com .NET** carga de trabalho.
 
--   **SDK do Android** &ndash; API do Android SDK 28 ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
+- **SDK do Android** &ndash; API do Android SDK 28 ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
 
 ## <a name="getting-started"></a>Introdução
 
 Para começar a desenvolver aplicativos de pizza Android com xamarin. Android, você deve baixar e instalar os pacotes do SDK e ferramentas mais recentes antes de criar seu primeiro projeto do Android pizza:
 
-1. Atualizar para [Visual Studio 2017 versão 15,8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou posterior. Se você estiver usando o Visual Studio para Mac, atualizar para [Visual Studio 2017 para Mac versão 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou posterior.
+1. Recomenda-se o Visual Studio de 2019. Se você estiver usando o Visual Studio 2017, atualizar para [Visual Studio 2017 versão 15,8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou posterior. Se você estiver usando o Visual Studio para Mac, atualizar para [Visual Studio 2017 para Mac versão 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou posterior.
 
 2. Instale **pizza Android (API 28)** pacotes e ferramentas por meio do Gerenciador de SDK.
 
@@ -52,13 +53,11 @@ Para começar a desenvolver aplicativos de pizza Android com xamarin. Android, v
 
 Cada uma dessas etapas é explicada nas seções a seguir:
 
-
 ### <a name="update-visual-studio"></a>Atualizar o Visual Studio
 
-Para adicionar suporte de pizza Android para o Visual Studio, atualize o Visual Studio 2017 versão 15,8 ou posterior (para obter instruções, consulte [atualizar o Visual Studio 2017 para a versão mais recente](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
+2019 do Visual Studio é recomendado para criação de aplicativos do Android pizza usando o Xamarin.
 
-Para adicionar suporte de pizza Android para o Visual Studio para Mac, atualize o Visual Studio 2017 para Mac 7.6 ou posterior (para obter instruções, consulte [programa de instalação e instalar o Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)).
-
+Se você estiver usando o Visual Studio 2017, atualize para o Visual Studio 2017 versão 15,8 ou posterior (para obter instruções, consulte [atualizar o Visual Studio 2017 para a versão mais recente](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). No macOS, atualize o Visual Studio 2017 para Mac 7.6 ou posterior (para obter instruções, consulte [programa de instalação e instalar o Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)).
 
 ### <a name="install-the-android-sdk"></a>Instalar o SDK do Android
 
@@ -68,15 +67,13 @@ Para criar um projeto com o xamarin. Android 9.0, primeiro você deve usar o Ger
 
 2. No canto inferior direito, clique no ícone de engrenagem e selecione **repositório > Google (sem suporte)**:
 
-    [![Configurando o repositório do Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![Sconfiguração do repositório para o Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
 3. Instalar o **Android pizza** pacotes SDK, que são listados como **28 de plataforma do SDK do Android** no **plataformas** guia (para obter mais informações sobre como usar o Gerenciador de SDK, consulte [ Instalação do SDK do Android](~/android/get-started/installation/android-sdk.md)):
 
-    [![Instalar os pacotes de pizza Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![Ipacotes de pizza Android nstalling](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
 4. Se você estiver usando um emulador, criar um dispositivo virtual que dá suporte a **28 de nível de API**. Para obter mais informações sobre como criar dispositivos virtuais, consulte [gerenciamento de dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-
-
 
 ### <a name="start-a-xamarinandroid-project"></a>Iniciar um projeto xamarin. Android
 
@@ -114,7 +111,7 @@ As seções a seguir destacam esses recursos e fornecem exemplos de código brev
 Muitos dispositivos Android mais recentes com a borda telas têm uma *recorte exibir* (ou "entalhe") na parte superior da tela para a câmera e alto-falante.
 Captura de tela a seguir fornece um exemplo de emulador de corte:
 
-[![Emulador do Android simulando um recorte](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![Aemulador ndroid simulando um recorte](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 Para gerenciar como sua janela de aplicativo exibe seu conteúdo em dispositivos com um recorte de exibição, pizza Android adicionou uma nova [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) atributo de layout de janela. Esse atributo pode ser definido para um dos seguintes valores:
 
@@ -133,7 +130,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 
 Os exemplos a seguir fornecem exemplos desses modos de recorte. É a primeira captura de tela à esquerda do aplicativo no modo de não-tela inteira. A captura de tela do centro, o aplicativo fica em tela inteira com `LayoutInDisplayCutoutMode` definido como `LayoutInDisplayCutoutModeShortEdges`. Observe que o plano de fundo branco do aplicativo se estende para a área de recorte de exibição:
 
-[![Modos de recorte de exibição de exemplo no emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[![Example exibir modos de recorte no emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
 Na captura de tela final (acima à direita), `LayoutInDisplayCutoutMode` é definido como `LayoutInDisplayCutoutModeShortNever` antes da transferência para tela inteira.
 Observe que o plano de fundo branco do aplicativo não é permitido para estender para a área de recorte de exibição.
@@ -158,7 +155,7 @@ Pizza Android apresenta os seguintes aprimoramentos para melhorar a experiência
 
 O exemplo a seguir ilustra como usar as novas APIs para gerar uma notificação que contém uma imagem. Nas capturas de tela seguir, uma notificação de texto é lançada e é seguida por uma notificação com uma imagem inserida. Quando as notificações são expandidas (como visto no lado direito), o texto da primeira notificação será exibido e a imagem incorporada na segunda notificação é ampliada:
 
-[![Exemplo de notificação com imagem](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![Enotificação de xample com imagem](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
 O exemplo a seguir ilustra como incluir uma imagem em uma notificação de pizza Android, e ele demonstra o uso do novo `Person` classe:
 
@@ -214,7 +211,7 @@ Para obter mais informações sobre a criação de notificações, consulte [not
 
 Pizza Android fornece suporte para IEEE 802.11mc (também conhecido como _Wi-Fi ida-viagem tempo_ ou _WiFi RTT_), que torna possível para os aplicativos detectem a distância para um ou mais acesso de Wi-Fi aponta. Usando essas informações, é possível que seu aplicativo aproveitar *posicionamento interno* com uma precisão de um ou dois medidores. Em dispositivos Android que dão suporte de hardware para IEEE 801.11mc, seu aplicativo pode oferecer recursos de navegação, como controle baseados na localização de aplicativos inteligentes ou instruções de turno detalhados por meio de um repositório:
 
-[![Exemplo de navegação interno usando o RTT WiFi](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
+[![Example do painel de navegação interno usando o WiFi RTT](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 O novo [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) classe e várias classes de auxiliar fornece os meios para medir a distância em dispositivos de Wi-Fi. Para obter mais informações sobre as APIs de posicionamento interno introduzidas no Android P, consulte [Android.Net.Wifi.Rtt](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
 
@@ -270,4 +267,4 @@ Ele incluía links para documentação de API e tópicos do Android Developer pa
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Android pizza 9](https://developer.android.com/about/versions/pie/)
+- [Android 9 Pie](https://developer.android.com/about/versions/pie/)

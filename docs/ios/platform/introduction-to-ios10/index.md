@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
+ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870242"
 ---
-
 # <a name="introduction-to-ios-10"></a>Introdução ao iOS 10
 
 _Este artigo apresenta todas as APIs e recursos disponíveis no iOS 10 novos e modificados para desenvolvedores do xamarin. IOS._
@@ -221,9 +226,9 @@ Para obter mais informações, consulte nosso [alterações adicionais do Framew
 
 As seguintes APIs foram preteridas no iOS 10:
 
-- O `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` e `CKFetchRecordChangesOperation` classes foram substituídas no CloudKit do iOS 10. Use o [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) e [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) classes (que dá suporte a compartilhamento de registro) em vez disso.
-- Vários [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) APIs (como as assinaturas de baseados em consulta e zona) foram preteridas. Use o [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) e [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) APIs em vez disso.
-- [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) símbolos relacionados ao conteúdo onipresente foram preteridos.
+- O `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` e `CKFetchRecordChangesOperation` classes foram substituídas no CloudKit do iOS 10. Use o [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) e [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) classes (que dá suporte a compartilhamento de registro) em vez disso.
+- Vários [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) APIs (como as assinaturas de baseados em consulta e zona) foram preteridas. Use o [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) e [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) APIs em vez disso.
+- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) símbolos relacionados ao conteúdo onipresente foram preteridos.
 - `ADBannerView`, `ADInterstitialAd` e relacionadas a símbolos em de [UIViewController](xref:UIKit.UIViewController) classe foram preteridos.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) símbolos relacionados a valores de ponto flutuante foram preteridos.
 - O `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` e `UIUserNotificationSettings` classes de UIKit foram preteridas. Use o [notificações do usuário](#user-notifications) framework em vez disso.

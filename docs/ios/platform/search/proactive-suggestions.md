@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677892"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870398"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introdução ao sugestões proativas no xamarin. IOS
 
@@ -51,7 +51,7 @@ Por exemplo, se o usuário está inserindo texto em um campo de texto marcado `U
 
 ## <a name="media-based-suggestions"></a>Sugestões baseadas em mídia
 
-Se o aplicativo reproduz a mídia usando o [MPPlayableContentManager](https://developer.xamarin.com/api/type/MediaPlayer.MPPlayableContentManager/) API, o iOS 10 permite aos usuários exibir a arte do álbum e reproduzir mídia por meio do aplicativo na tela de bloqueio.
+Se o aplicativo reproduz a mídia usando o [MPPlayableContentManager](xref:MediaPlayer.MPPlayableContentManager) API, o iOS 10 permite aos usuários exibir a arte do álbum e reproduzir mídia por meio do aplicativo na tela de bloqueio.
 
 ## <a name="contextual-siri-reminders"></a>Siri contextuais lembretes
 
@@ -63,12 +63,12 @@ Permite que o aplicativo contatos (e entre em contato com informações relacion
 
 ## <a name="ride-sharing-based-suggestions"></a>Jornada de compartilhamento com base em sugestões
 
-Se um aplicativo de compartilhamento usa o [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, o iOS 10 apresentará como uma opção no alternador de aplicativo nos momentos em que o usuário é provável que queira uma jornada. O aplicativo também deve ser registrado como um aplicativo de compartilhamento, especificando o `MKDirectionsModeRideShare` para o [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) chave no seu `Info.plist` arquivo.
+Se um aplicativo de compartilhamento usa o [MKDirectionsRequest](xref:MapKit.MKDirectionsRequest) API, o iOS 10 apresentará como uma opção no alternador de aplicativo nos momentos em que o usuário é provável que queira uma jornada. O aplicativo também deve ser registrado como um aplicativo de compartilhamento, especificando o `MKDirectionsModeRideShare` para o [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) chave no seu `Info.plist` arquivo.
 
 Se o aplicativo dá suporte apenas a jornada de compartilhamento, a sugestão de sistema começaria com *"Obter uma jornada para..."*, se houver suporte para outros tipos de roteamento direção (como Walking ou bicicletas), o sistema usará *"Obter direções para..."*
 
 > [!IMPORTANT]
-> O [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) objeto que recebe o aplicativo não pode incluir informações de longitude e latitude e exigirá a geocodificação.
+> O [MKMapItem](xref:MapKit.MKMapItem) objeto que recebe o aplicativo não pode incluir informações de longitude e latitude e exigirá a geocodificação.
 
 ## <a name="implementing-proactive-suggestions"></a>Implementação de sugestões proativas
 
@@ -189,7 +189,7 @@ O desenvolvedor precisa garantir que este é o mesmo identificador de tipo de at
 
 Com a quantidade mínima de código apresentado acima, o aplicativo agora é possível tirar proveito dos três novos recursos do iOS 10:
 
-- **Handoff**
+- **Entrega**
 - **Pesquisa de destaque**
 - **Siri contextuais lembretes**
 

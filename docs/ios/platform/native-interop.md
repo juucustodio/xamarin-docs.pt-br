@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: 42cf10e592a37f9a979d05d7784553059923646c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7ed8fc18624f46abd4a9fc293d8c33a1722da7dd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667315"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870255"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Referenciando as bibliotecas nativas no xamarin. IOS
 
@@ -122,8 +122,7 @@ Para acessar os métodos definidos em qualquer um deles, use [funcionalidade de 
 -  Determinar qual biblioteca reside no
 -  Gravar a declaração de P/Invoke adequada
 
-
-Quando você usar P/Invoke, você precisará especificar o caminho da biblioteca que você está vinculando com. Quando usando iOS bibliotecas compartilhadas, você pode a codificar o caminho ou você pode usar as constantes de conveniência que definimos em nossa [classe constantes](https://developer.xamarin.com/api/type/Constants/), constantes devem abranger as bibliotecas compartilhada do iOS.
+Quando você usar P/Invoke, você precisará especificar o caminho da biblioteca que você está vinculando com. Quando usando iOS bibliotecas compartilhadas, você pode a codificar o caminho ou você pode usar as constantes de conveniência que definimos em nossa `Constants`, constantes devem abranger as bibliotecas compartilhada do iOS.
 
 Por exemplo, se você quisesse invocar o método UIRectFrameUsingBlendMode da biblioteca de UIKit da Apple que tem essa assinatura em c:
 

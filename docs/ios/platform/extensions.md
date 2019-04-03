@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: b21bf4da7cf862bd32e71708f9e3657f577682c2
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 25b27765a35310c5cdbaf5ae19902b1d19eff6ea
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677918"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870268"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no xamarin. IOS
 
@@ -99,7 +99,7 @@ Além disso, o projeto da extensão tem os seguintes requisitos:
 
     ![](extensions-images/registerandprincipalclass.png)
 
-Tipos específicos de extensões podem ter requisitos adicionais. Por exemplo, uma **hoje** ou **Centro de notificação** deve implementar a classe de entidade de segurança da extensão [INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/).
+Tipos específicos de extensões podem ter requisitos adicionais. Por exemplo, uma **hoje** ou **Centro de notificação** deve implementar a classe de entidade de segurança da extensão [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
 > [!IMPORTANT]
 > Se você iniciar seu projeto usando um os modelos de extensões fornecidos pelo Visual Studio para Mac, maioria (se não todos) esses requisitos serão fornecidos e atendidos para você automaticamente pelo modelo.

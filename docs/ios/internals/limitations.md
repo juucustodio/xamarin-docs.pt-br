@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668342"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870165"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitações do xamarin. IOS
 
@@ -83,7 +83,7 @@ Mas a API de reflexão inteira, incluindo Type. GetType ("someClass"), listando 
 Para chamar uma função nativa por meio de um representante do c#, a declaração do delegado deve ser decorada com um dos seguintes atributos:
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (de preferência, uma vez que ele é compatível com o .NET Standard 1.1 + e de plataforma cruzada)
-- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+- [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 Deixar de fornecer um desses atributos resultará em um erro de tempo de execução, como:
 
@@ -100,8 +100,8 @@ Em Mono padrão, é possível passar instâncias de delegado do c# para código 
 
 Em Mono essas pontes são implementados por Just-in-Time compilador. Quando usar o compilador ahead of time exigido por iPhone existem duas limitações importantes neste momento:
 
--  Você deve sinalizar todos os seus métodos de retorno de chamada com o [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
--  Os métodos precisam ser métodos estáticos, não há suporte por exemplo métodos. 
+-  Você deve sinalizar todos os seus métodos de retorno de chamada com o [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
+-  Os métodos precisam ser métodos estáticos, não há suporte por exemplo métodos.
  
 <a name="No_Remoting" />
 

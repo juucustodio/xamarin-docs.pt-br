@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fa8a48e165764a449af4bc5414d2e66aecea8269
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669187"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870138"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Passo a passo – local do plano de fundo no xamarin. IOS
 
@@ -72,7 +72,7 @@ Este passo a passo explica alguma chave backgrounding conceitos, incluindo o reg
     }
     ```
 
-    O código acima define um número de propriedades e permissões sobre o [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) classe:
+    O código acima define um número de propriedades e permissões sobre o [CLLocationManager](xref:CoreLocation.CLLocationManager) classe:
 
     - `PausesLocationUpdatesAutomatically` – Esse é um valor booleano que pode ser definido, dependendo se o sistema tem permissão para pausar as atualizações de local. Em alguns dispositivos padrão é `true`, que pode fazer com que o dispositivo parar de receber atualizações do local após cerca de 15 minutos de plano de fundo.
     - `RequestAlwaysAuthorization` -Você deve passar esse método para atribuir o usuário do aplicativo a opção para permitir que o local a ser acessado em segundo plano. `RequestWhenInUseAuthorization` também pode ser passado se você quiser dar ao usuário a opção para permitir que o local a ser acessado somente quando o aplicativo estiver em primeiro plano.
