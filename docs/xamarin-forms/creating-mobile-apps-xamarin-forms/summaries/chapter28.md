@@ -1,22 +1,22 @@
 ---
 title: Resumo do capítulo 28. Localização e mapas
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 28. Localização e mapas'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 28. Localização e mapas'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: bcca7bc7ac56b745945b6d7daef3c4ddd634b486
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0abd7e6cb5b8b9650a3dc324338587ff59a80a19
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059399"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870411"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumo do capítulo 28. Localização e mapas
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
+[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
@@ -62,7 +62,7 @@ O [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-bo
 
 #### <a name="the-ios-location-manager"></a>O Gerenciador de localização do iOS
 
-A implementação do iOS dos `ILocationTracker` é um [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) classe que faz uso de iOS [ `CLLocationManager` ](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/).
+A implementação do iOS dos `ILocationTracker` é um [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) classe que faz uso de iOS [ `CLLocationManager` ](xref:CoreLocation.CLLocationManager).
 
 #### <a name="the-android-location-manager"></a>O Gerenciador local Android
 

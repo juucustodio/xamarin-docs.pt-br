@@ -1,22 +1,22 @@
 ---
 title: Resumo do capítulo 18. MVVM
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 18. MVVM'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 18. MVVM'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db837ac8bfa1b7a946ee606e9481f9feb2a8a31f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050108"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870216"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Resumo do capítulo 18. MVVM
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 Uma das melhores maneiras de projetar um aplicativo é, separando a interface do usuário do código subjacente, que é chamado, às vezes, o *lógica de negócios*. Existem diversas técnicas, mas aquele que é destinada a ambientes baseados em XAML é conhecido como Model-View-ViewModel ou MVVM.
 
@@ -87,7 +87,7 @@ O `Button` elementos podem ser facilmente substituídos por `TapGestureRecognize
 
 ### <a name="a-calculator-almost"></a>Uma calculadora, quase
 
-O [ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) exemplo faz uso de ambos os o `Execute` e `CanExecute` métodos de `ICommand`. Ele usa um [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) classe os [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) biblioteca. O ViewModel contém seis propriedades do tipo `ICommand`. Eles são inicializados do [ `Command` construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action)) e [ `Command` construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de `Command` e o [ `Command<T>` construtor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command%3CT%3E.Command%3CT%3E/p/System.Action%7BT%7D/System.Func%7BT,System.Boolean%7D/) de `Command<T>`. As chaves numéricas da Calculadora são associadas à propriedade que é inicializada com `Command<T>`e uma `string` argumento `Execute` e `CanExecute` identifica a chave particular.
+O [ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) exemplo faz uso de ambos os o `Execute` e `CanExecute` métodos de `ICommand`. Ele usa um [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) classe os [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) biblioteca. O ViewModel contém seis propriedades do tipo `ICommand`. Eles são inicializados do [ `Command` construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action)) e [ `Command` construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de `Command` e o [ `Command<T>` construtor](https://docs.microsoft.com/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) de `Command<T>`. As chaves numéricas da Calculadora são associadas à propriedade que é inicializada com `Command<T>`e uma `string` argumento `Execute` e `CanExecute` identifica a chave particular.
 
 ## <a name="viewmodels-and-the-application-lifecycle"></a>ViewModels e o ciclo de vida do aplicativo
 

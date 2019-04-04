@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: dea9d128efd777a84e166ccd066a7a2357b5c9e3
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267475"
 documentType: LandingData
 title: Xamarin.iOS
 metadata:
@@ -15,116 +9,116 @@ metadata:
   ms.topic: landing-page
   ms.technology: xamarin-ios
 abstract:
-  description: Xamarin.iOS expõe o SDK de iOS completo para desenvolvedores de .NET. Compile aplicativos iOS totalmente nativos usando C# ou F# no Visual Studio.
+  description: 'Xamarin.iOS expõe o SDK de iOS completo para desenvolvedores de .NET. Compile aplicativos iOS totalmente nativos usando C# ou F# no Visual Studio.'
   menu:
     items:
-    - href: ~/ios/samples/index.yml
-      text: Amostras do iOS
-    - href: https://docs.microsoft.com/xamarin/ios/release-notes/
-      text: Notas de Versão
-    - href: https://developer.apple.com/documentation/
-      text: Documentação para desenvolvedores da Apple
-    - href: /visualstudio/
-      text: Visual Studio
+      - href: ~/ios/samples/index.yml
+        text: Amostras do iOS
+      - href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
+        text: Notas sobre a versão
+      - href: 'https://developer.apple.com/documentation/'
+        text: Documentação para desenvolvedores da Apple
+      - href: /visualstudio/
+        text: Visual Studio
 sections:
-- title: Introdução
-  items:
-  - type: paragraph
-    text: Aprenda a compilar seu primeiro aplicativo do iOS com Xamarin e C#.
-  - type: list
-    style: icon48
+  - title: Introdução
     items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: Configuração
-      href: ~/ios/get-started/installation/index.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Hello, iOS
-      href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Aplicativos com várias telas
-      href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: iOS 12
-      href: ~/ios/platform/introduction-to-ios12/index.md
-- title: Guias
-  items:
-  - type: list
-    style: cards
-    className: cardsB
+      - type: paragraph
+        text: 'Aprenda a compilar seu primeiro aplicativo do iOS com Xamarin e C#.'
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
+            text: Configuração
+            href: ~/ios/get-started/installation/index.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
+            text: 'Hello, iOS'
+            href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
+            text: Aplicativos com várias telas
+            href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+            text: iOS 12
+            href: ~/ios/platform/introduction-to-ios12/index.md
+  - title: Guias
     items:
-    - href: ~/ios/get-started/index.md
-      html: Tutoriais para ajudar você a usar Xamarin.iOS. Verifique se tudo está instalado corretamente e compile seus primeiros aplicativos iOS.
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/ios/get-started/index.md
-      title: Guia de Introdução
-    - href: ~/ios/app-fundamentals/
-      html: Tudo o que você precisa saber para compilar aplicativos iOS, como trabalhar com arquivos, imagens, bancos de dados e muito mais.
-      image:
-        src: ~/media/icons/i_app-build.svg
-        href: ~/ios/app-fundamentals/
-      title: Conceitos básicos de aplicativo
-    - href: ~/ios/user-interface
-      html: Saiba mais sobre o conjunto completo de controles de interface do usuário disponíveis para iOS no UIKit.
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: ~/ios/user-interface/
-      title: Interface do Usuário
-    - href: ~/ios/platform/
-      html: Trabalhar com recursos da plataforma iOS, como ARKit e CoreML e outros recursos novos no iOS 11.
-      image:
-        src: ~/media/icons/i_platform.svg
-        href: ~/ios/platform/
-      title: Recursos da plataforma
-    - href: ~/essentials/index.md?context=xamarin/ios
-      html: APIs multiplataforma para aplicativos móveis.
-      image:
-        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
-        href: ~/essentials/index.md?context=xamarin/ios
-      title: Xamarin.Essentials
-    - href: ~/ios/data-cloud/
-      html: Armazenamento e recuperação de dados locais e remotos, e outros serviços baseados em nuvem.
-      image:
-        src: ~/media/icons/i_data-cloud.svg
-        href: ~/ios/data-cloud/
-      title: Serviços de dados e de nuvem
-    - href: ~/ios/deploy-test/
-      html: Instruções para compilação e implantação de aplicativos na App Store, e dicas para testá-los com antecedência!
-      image:
-        src: ~/media/icons/i_deploy-test.svg
-        href: ~/ios/deploy-test/
-      title: Implantação e Teste
-    - href: ~/ios/internals/
-      html: Informações detalhadas sobre como funciona o Xamarin.iOS.
-      image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-        href: ~/ios/internals/
-      title: Conceitos avançados e recursos internos
-    - href: ~/ios/watchos/
-      html: Compile aplicativos para Apple Watch!
-      image:
-        src: ~/media/icons/i_watchos.svg
-        href: ~/ios/watchos/
-      title: watchOS
-    - href: ~/ios/tvos/
-      html: Compile aplicativos para Apple TV!
-      image:
-        src: ~/media/icons/i_tvos.svg
-        href: ~/ios/tvos/
-      title: tvOS
-- title: Referência
-  items:
-  - type: list
-    style: cards
-    className: cardsD
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: ~/ios/get-started/index.md
+            html: Tutoriais para ajudar você a usar Xamarin.iOS. Verifique se tudo está instalado corretamente e compile seus primeiros aplicativos iOS.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+              href: ~/ios/get-started/index.md
+            title: Guia de Introdução
+          - href: ~/ios/app-fundamentals/
+            html: 'Tudo o que você precisa saber para compilar aplicativos iOS, como trabalhar com arquivos, imagens, bancos de dados e muito mais.'
+            image:
+              src: ~/media/icons/i_app-build.svg
+              href: ~/ios/app-fundamentals/
+            title: Conceitos básicos de aplicativo
+          - href: ~/ios/user-interface
+            html: Saiba mais sobre o conjunto completo de controles de interface do usuário disponíveis para iOS no UIKit.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: ~/ios/user-interface/
+            title: Interface do Usuário
+          - href: ~/ios/platform/
+            html: 'Trabalhar com recursos da plataforma iOS, como ARKit e CoreML e outros recursos novos no iOS 11.'
+            image:
+              src: ~/media/icons/i_platform.svg
+              href: ~/ios/platform/
+            title: Recursos da plataforma
+          - href: ~/essentials/index.md?context=xamarin/ios
+            html: APIs multiplataforma para aplicativos móveis.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
+              href: ~/essentials/index.md?context=xamarin/ios
+            title: Xamarin.Essentials
+          - href: ~/ios/data-cloud/
+            html: 'Armazenamento e recuperação de dados locais e remotos, e outros serviços baseados em nuvem.'
+            image:
+              src: ~/media/icons/i_data-cloud.svg
+              href: ~/ios/data-cloud/
+            title: Serviços de dados e de nuvem
+          - href: ~/ios/deploy-test/
+            html: 'Instruções para compilação e implantação de aplicativos na App Store, e dicas para testá-los com antecedência!'
+            image:
+              src: ~/media/icons/i_deploy-test.svg
+              href: ~/ios/deploy-test/
+            title: Implantação e Teste
+          - href: ~/ios/internals/
+            html: Informações detalhadas sobre como funciona o Xamarin.iOS.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
+              href: ~/ios/internals/
+            title: Conceitos avançados e recursos internos
+          - href: ~/ios/watchos/
+            html: Compile aplicativos para Apple Watch!
+            image:
+              src: ~/media/icons/i_watchos.svg
+              href: ~/ios/watchos/
+            title: watchOS
+          - href: ~/ios/tvos/
+            html: Compile aplicativos para Apple TV!
+            image:
+              src: ~/media/icons/i_tvos.svg
+              href: ~/ios/tvos/
+            title: tvOS
+  - title: Referência
     items:
-    - title: API
-      href: https://developer.xamarin.com/api/root/ios-unified/
-      html: <p><a href="https://developer.xamarin.com/api/root/ios-unified/">Documentos de API do iOS</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8">Biblioteca de classes base</a></p>
-    - title: Exemplos
-      href: https://developer.xamarin.com/samples
-      html: <p><a href="https://developer.xamarin.com/samples/ios/all/">Amostras do iOS</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">Exemplos de watchOS</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">Amostras do tvOS</a></p>
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: API
+            href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12'
+            html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12">Documentos de API do iOS</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8">Biblioteca de classes base</a></p>'
+          - title: Exemplos
+            href: 'https://developer.xamarin.com/samples'
+            html: '<p><a href="https://developer.xamarin.com/samples/ios/all/">Amostras do iOS</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">Exemplos de watchOS</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">Exemplos do tvOS</a></p>'

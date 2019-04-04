@@ -1,22 +1,22 @@
 ---
 title: Resumo do capítulo 14. Layout absoluto
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 14. Layout absoluto'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 14. Layout absoluto'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: a67a2e12a12039755970a78739ea2ca3d2ffae08
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7371f134944d7492e51aa2d02247c0ab48345a47
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053484"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870229"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Resumo do capítulo 14. Layout absoluto
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
+[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
 Como o `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) deriva `Layout<View>` e herda um `Children` propriedade. `AbsoluteLayout` implementa um sistema de layout que exige que o programador especificar as posições dos seus filhos e, opcionalmente, seu tamanho. A posição é especificada pelo canto superior esquerdo do filho em relação ao canto superior esquerdo do `AbsoluteLayout` em unidades independentes de dispositivo. `AbsoluteLayout` também implementa um posicionamento proporcional e o recurso de dimensionamento.
 
@@ -26,7 +26,7 @@ Esse capítulo também introduz o recurso importante da *anexado propriedades vi
 
 ## <a name="absolutelayout-in-code"></a>AbsoluteLayout no código
 
-Você pode adicionar um filho para o `Children` coleção de um `AbsoluteLayout` usando o padrão [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) método, mas `AbsoluteLayout` também fornece um estendido [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) método que permite que você especifique um [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Outra [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) método requer apenas um [ `Point` ](xref:Xamarin.Forms.Point), caso em que o filho é irrestrito e se dimensiona.
+Você pode adicionar um filho para o `Children` coleção de um `AbsoluteLayout` usando o padrão [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) método, mas `AbsoluteLayout` também fornece um estendido [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) método que permite que você especifique um [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Outra [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) método requer apenas um [ `Point` ](xref:Xamarin.Forms.Point), caso em que o filho é irrestrito e se dimensiona.
 
 Você pode criar uma `Rectangle` valor com um [construtor](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)) que requer quatro valores &mdash; as duas primeiras indicando a posição do canto superior esquerdo do filho em relação ao seu pai e os dois que indica o tamanho do filho. Ou você pode usar um [construtor](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)) que requer uma `Point` e uma [ `Size` ](xref:Xamarin.Forms.Size) valor.
 

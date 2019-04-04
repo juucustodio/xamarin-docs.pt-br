@@ -1,22 +1,22 @@
 ---
 title: Resumo do capítulo 17. Domínio da grade
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 17. Domínio da grade'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 17. Domínio da grade'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: dc9d57c0edf50f7fe5a7241e64cc727413004252
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050891"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869982"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumo do capítulo 17. Domínio da grade
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 O [ `Grid` ](xref:Xamarin.Forms.Grid) é um mecanismo de layout avançados que organiza seus filhos em linhas e colunas de células. Ao contrário do HTML semelhante `table` elemento, o `Grid` é exclusivamente para fins de layout em vez de apresentação.
 
@@ -68,11 +68,11 @@ O `RowDefinitions` e `ColumnDefinitions` coleções não são estritamente neces
 
 ### <a name="the-grid-in-code"></a>A grade no código
 
-O [ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) exemplo demonstra como criar e popular um `Grid` no código. Você pode definir as propriedades anexadas para cada filho diretamente ou indiretamente por meio da chamada adicional `Add` métodos como [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) definidas pelo [Grid.IGridList<T> ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid+IGridList%3CT%3E/) interface.
+O [ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) exemplo demonstra como criar e popular um `Grid` no código. Você pode definir as propriedades anexadas para cada filho diretamente ou indiretamente por meio da chamada adicional `Add` métodos como [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) definidas pelo [Grid.IGridList<T> ](xref:Xamarin.Forms.Grid.IGridList`1) interface.
 
 ### <a name="the-grid-bar-chart"></a>O gráfico de barras da grade
 
-O [ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) exemplo mostra como adicionar vários `BoxView` elementos a um `Grid` usando o bulk [ `AddHorizontal` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.AddHorizontal/p/System.Collections.Generic.IEnumerable%7BXamarin.Forms.View%7D/) método. Por padrão, esses `BoxView` elementos têm a mesma largura. A altura de cada `BoxView` , em seguida, pode ser controlado para se parecer com um gráfico de barras.
+O [ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) exemplo mostra como adicionar vários `BoxView` elementos a um `Grid` usando o bulk [ `AddHorizontal` ](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) método. Por padrão, esses `BoxView` elementos têm a mesma largura. A altura de cada `BoxView` , em seguida, pode ser controlado para se parecer com um gráfico de barras.
 
 O `Grid` no **GridBarChart** compartilhamentos de exemplo uma `AbsoluteLayout` pai com inicialmente invisível `Frame`. O programa também define uma `TapGestureRecognizer` em cada `BoxView` usar o `Frame` para exibir informações sobre a barra tocada.
 
