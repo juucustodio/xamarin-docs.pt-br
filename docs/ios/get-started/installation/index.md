@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 67f43c0ac6cfac2a7b58afa7046875059529500b
-ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
+ms.openlocfilehash: 24aa6dae3767255155c6b739e50174214a28d3d8
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55668583"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855244"
 ---
 # <a name="xamarinios-installation"></a>Instalação do Xamarin.iOS
 
@@ -31,7 +31,6 @@ A versão mais recente do Xcode pode ser baixada da [Central de Desenvolvedores 
 ## <a name="mac-installation"></a>Instalação no Mac
 
 Para obter instruções sobre como instalar o Xamarin.iOS em um Mac, visite o guia [Instalação do Mac](https://docs.microsoft.com/visualstudio/mac/installation).
-
 
 ## <a name="windows-installation"></a>Instalação do Windows
 

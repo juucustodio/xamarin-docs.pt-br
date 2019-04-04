@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671112"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870385"
 ---
 # <a name="xamarinios-performance"></a>Desempenho do Xamarin.iOS
 
@@ -101,11 +101,11 @@ container.AddSubview (new MyView (container));
 
 Aqui, o objeto contido não manterá o pai ativo. No entanto, o pai mantém o filho ativo por meio da chamada feita para `container.AddSubView`.
 
-Isso também ocorre em APIs do iOS que usam o padrão delegado ou de fonte de dados, em que uma classe par contém a implementação, por exemplo, ao definir a propriedade [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
-ou a [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+Isso também ocorre em APIs do iOS que usam o padrão delegado ou de fonte de dados, em que uma classe par contém a implementação, por exemplo, ao definir a propriedade [`Delegate`](xref:UIKit.UITableView.Delegate*)
+ou a [`DataSource`](xref:UIKit.UITableView.DataSource*)
 na classe [`UITableView`](xref:UIKit.UITableView).
 
-No caso das classes que são criadas somente para implementar um protocolo, por exemplo a [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), o que você pode fazer é, em vez de criar uma subclasse, apenas implementar a interface na classe e substituir o método, atribuindo a propriedade `DataSource` à `this`.
+No caso das classes que são criadas somente para implementar um protocolo, por exemplo a [`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource), o que você pode fazer é, em vez de criar uma subclasse, apenas implementar a interface na classe e substituir o método, atribuindo a propriedade `DataSource` à `this`.
 
 #### <a name="weak-attribute"></a>Atributo fraco
 
@@ -278,7 +278,7 @@ Em particular, o simulador não simula de forma alguma a memória ou as restriç
 
 Os jogos tendem a ter loops comprimidos para executar a lógica do jogo e atualizar a tela. As taxas de quadro típicas variam de trinta a sessenta quadros por segundo. Alguns desenvolvedores acreditam que devem atualizar a tela quantas vezes forem possíveis por segundo, combinando a simulação de jogo com as atualizações na tela e podem se sentir motivados a ir além dos sessenta quadros por segundo.
 
-No entanto, o servidor de exibição executa atualizações de tela em um limite de sessenta vezes por segundo. Portanto, a tentativa de atualizar a tela de modo mais rápido do que esse limite pode causar subdivisão e intermitências da tela. É melhor estruturar o código para que as atualizações de tela sejam sincronizadas com a atualização da exibição. Isso pode ser obtido usando a classe [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/), que é um temporizador adequado para visualização e jogos executados em sessenta quadros por segundo.
+No entanto, o servidor de exibição executa atualizações de tela em um limite de sessenta vezes por segundo. Portanto, a tentativa de atualizar a tela de modo mais rápido do que esse limite pode causar subdivisão e intermitências da tela. É melhor estruturar o código para que as atualizações de tela sejam sincronizadas com a atualização da exibição. Isso pode ser obtido usando a classe [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink), que é um temporizador adequado para visualização e jogos executados em sessenta quadros por segundo.
 
 ## <a name="avoid-core-animation-transparency"></a>Evitar transparência de animação de núcleo
 
