@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
+ms.openlocfilehash: b98ee5afbd65d5cf32bc6e3151284678e248cf47
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666835"
 ---
-
 # <a name="notifications-in-xamarinandroid"></a>Notificações no xamarin. Android
 
 

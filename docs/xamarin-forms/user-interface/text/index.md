@@ -1,14 +1,19 @@
 ---
 title: Texto no xamarin. Forms
-description: 'Xamarin. Forms tem três modos de exibição primários para trabalhar com texto, e este artigo explica como usá-los para inserir e exibir texto em aplicativos xamarin. Forms.'
+description: Xamarin. Forms tem três modos de exibição primários para trabalhar com texto, e este artigo explica como usá-los para inserir e exibir texto em aplicativos xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
+ms.openlocfilehash: 8754f6573b00334fd228b1c9bd094cd91565976c
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557084"
 ---
-
 # <a name="text-in-xamarinforms"></a>Texto no xamarin. Forms
 
 [![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)

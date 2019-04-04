@@ -1,14 +1,19 @@
 ---
 title: Seletor de xamarin. Forms
-description: 'O seletor de xamarin. Forms exibe uma lista curta de itens, do qual o usuário pode selecionar um item. Este artigo explica como usar a classe de seletor para selecionar um item de texto em uma lista de dados.'
+description: O seletor de xamarin. Forms exibe uma lista curta de itens, do qual o usuário pode selecionar um item. Este artigo explica como usar a classe de seletor para selecionar um item de texto em uma lista de dados.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
+ms.openlocfilehash: dc39fd9c129fb63fa4a3a73b15aea4204a38cdbd
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557263"
 ---
-
 # <a name="xamarinforms-picker"></a>Seletor de xamarin. Forms
 
 _O modo de exibição do seletor é um controle para selecionar um item de texto de uma lista de dados._

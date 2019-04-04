@@ -1,13 +1,18 @@
 ---
 title: Criador de perfil do Xamarin
-description: 'Este guia explora os principais recursos do que o Xamarin Profiler. Ele procurar em criadores de perfil, a criação de perfil e quando deve ser usados e em um fluxo de trabalho padrão para a criação de perfil de aplicativos Xamarin.'
+description: Este guia explora os principais recursos do que o Xamarin Profiler. Ele procurar em criadores de perfil, a criação de perfil e quando deve ser usados e em um fluxo de trabalho padrão para a criação de perfil de aplicativos Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
+ms.openlocfilehash: 15739ff191953e4730d44c6ad9f63dccb9a0017e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668407"
 ---
-
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
 _Este guia explora os principais recursos do que o Xamarin Profiler. Ele procurar em criadores de perfil, a criação de perfil e quando deve ser usados e em um fluxo de trabalho padrão para a criação de perfil de aplicativos Xamarin._

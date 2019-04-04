@@ -1,14 +1,19 @@
 ---
 title: Autenticação de impressão digital
-description: 'Este guia aborda como adicionar autenticação por impressão digital, introduzida no Android 6.0, para um aplicativo xamarin. Android.'
+description: Este guia aborda como adicionar autenticação por impressão digital, introduzida no Android 6.0, para um aplicativo xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 70e12abdf61a6a0bfb36d281bcaa6214199e567d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667324"
 ---
-
 # <a name="fingerprint-authentication"></a>Autenticação de impressão digital
 
 _Este guia aborda como adicionar autenticação por impressão digital, introduzida no Android 6.0, para um aplicativo xamarin. Android._

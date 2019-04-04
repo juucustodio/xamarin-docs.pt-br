@@ -1,14 +1,19 @@
 ---
 title: Associação de uma biblioteca Java
-description: 'A comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo. Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin. Android, criando uma biblioteca de associações.'
+description: A comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo. Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin. Android, criando uma biblioteca de associações.
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
+ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670526"
 ---
-
 # <a name="binding-a-java-library"></a>Associação de uma biblioteca Java
 
 _A comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo. Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin. Android, criando uma biblioteca de associações._

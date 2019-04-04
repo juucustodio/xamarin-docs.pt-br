@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
+ms.openlocfilehash: 78908e1b1ad6d3f572ce45c8189d8f4ee48ad6ee
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666331"
 ---
-
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Como usar o Google Maps e local com o xamarin. Android
 
 _Este artigo discute como usar mapas e local com o xamarin. Android. Ele aborda tudo desde o aproveitamento do aplicativo de mapas internos para usar o Google mapeia Android API V2 diretamente._

@@ -6,8 +6,13 @@ ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
+ms.openlocfilehash: e4c8c43b4df1a7bfc5436f14564c6d0164216c46
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669239"
 ---
-
 # <a name="portable-visual-basicnet"></a>Visual Basic.NET portátil
 
 Xamarin iOS e Android projetos não suportados nativamente Visual Basic; No entanto os desenvolvedores podem usar bibliotecas de classes portáteis para migrar o código existente do Visual Basic para iOS e Android, ou para gravar uma parte significativa da sua lógica de aplicativo no Visual Basic. Aplicativos xamarin. Forms podem ser criados inteiramente no Visual Basic (excluindo os renderizadores personalizados, serviços de dependência e codebehind XAML).

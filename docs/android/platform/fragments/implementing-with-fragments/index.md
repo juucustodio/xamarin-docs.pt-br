@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
+ms.openlocfilehash: 2ff4729e68497391d41521da26917571c146b541
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667251"
 ---
-
 # <a name="implementing-fragments---walkthrough"></a>Implementação de fragmentos - instruções passo a passo
 
 _Os fragmentos são componentes independentes e modulares que podem ajudar a lidar com a complexidade de aplicativos Android destinados a dispositivos com uma variedade de tamanhos de tela. Este artigo explica como criar e usar fragmentos ao desenvolver aplicativos xamarin. Android._

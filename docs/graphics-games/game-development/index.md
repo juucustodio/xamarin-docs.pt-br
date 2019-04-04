@@ -1,13 +1,18 @@
 ---
 title: Introdução ao desenvolvimento de jogos com o Xamarin
-description: 'Este documento fornece uma visão geral do desenvolvimento de jogos com o Xamarin, que descreve como os jogos são feitos e uma amostragem das tecnologias disponíveis para uso com xamarin. IOS e xamarin. Android.'
+description: Este documento fornece uma visão geral do desenvolvimento de jogos com o Xamarin, que descreve como os jogos são feitos e uma amostragem das tecnologias disponíveis para uso com xamarin. IOS e xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
+ms.openlocfilehash: 2fa40925b67e60c5e03e3059c7c369f2a53ce540
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672424"
 ---
-
 # <a name="introduction-to-game-development-with-xamarin"></a>Introdução ao desenvolvimento de jogos com o Xamarin
 
 Desenvolvimento de jogos pode ser muito interessante, especialmente considerando como ele pode ser fácil publicar seu trabalho em plataformas móveis. Este artigo aborda os conceitos e tecnologias relacionadas ao desenvolvimento de jogos que ajudará você a criam jogos, se seu objetivo é criar uma alta qualidade AAA, jogo ou apenas para o programa por diversão.

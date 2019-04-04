@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
+ms.openlocfilehash: 9620362b48e9cf1db4c25e4470851fb518a8e0f3
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671151"
 ---
-
 # <a name="android-wear-controls"></a>Controles do Android Wear
 
 Aplicativos do Android Wear podem usar muitos dos mesmos controles já em uso para aplicativos Android regulares, incluindo `Button`, `TextView`e a imagem desenháveis. Controles de layout incluindo `ScrollView`, `LinearLayout`, e `RelativateLayout` também pode ser usado.
