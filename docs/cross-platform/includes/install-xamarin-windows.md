@@ -1,15 +1,15 @@
 ---
 ms.topic: include
-ms.openlocfilehash: cfb387f452939bf72ca3606f9f88f482f6622202
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.openlocfilehash: 5fccbcf56037b4c4538ccfa16515ea63aa53c57c
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58855336"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59041594"
 ---
-O Xamarin pode ser instalado como parte de um _novo_ instalação do Visual Studio de 2019, com as seguintes etapas:
+O Xamarin pode ser instalado como parte de uma _nova_ instalação do Visual Studio 2017, com as seguintes etapas:
 
-1. Baixe o Visual Studio 2019 Community, Visual Studio Professional ou Visual Studio Enterprise na [Visual Studio](https://visualstudio.microsoft.com/vs/) página (links para download são fornecidos na parte inferior).
+1. Baixe o Visual Studio 2017 Community, o Visual Studio Professional ou o Visual Studio Enterprise na página do [Visual Studio](https://visualstudio.microsoft.com/vs/) (os links para download são fornecidos na parte inferior).
 
 2. Clique duas vezes no pacote baixado para iniciar a instalação.
 
@@ -21,22 +21,22 @@ O Xamarin pode ser instalado como parte de um _novo_ instalação do Visual Stud
 
     ![Painel Detalhes da instalação com a lista de opções do Xamarin que podem ser instaladas](~/get-started/installation/windows-images/02-summary.png)
 
-5. Quando você estiver pronto para começar a instalação do Visual Studio de 2019, clique o **instalar** botão no canto inferior direito:
+5. Quando estiver pronto para começar a instalação do Visual Studio 2017, clique no botão **Instalar** no canto inferior direito:
 
     ![Botão Instalar](~/get-started/installation/windows-images/03-click-install.png)
 
-   Dependendo de qual edição do Visual Studio de 2019 que você está instalando, o processo de instalação pode levar muito tempo para ser concluída. Você pode usar as barras de progresso para monitorar a instalação:
+   Dependendo da edição do Visual Studio 2017 que você estiver instalando, o processo de instalação poderá levar muito tempo para ser concluído. Você pode usar as barras de progresso para monitorar a instalação:
 
     ![Barras de progresso durante a instalação](~/get-started/installation/windows-images/04-progress-bars.png)
 
-6. Quando a instalação do Visual Studio de 2019 for concluída, clique no **inicie** botão para iniciar o Visual Studio:
+6. Quando a instalação do Visual Studio 2017 for concluída, clique no botão **Iniciar** para iniciá-lo:
 
     ![Local do botão Iniciar](~/get-started/installation/windows-images/05-launch.png)
 
 <a name="vs2017" />
 
-### <a name="adding-xamarin-to-visual-studio-2019"></a>Adicionando o Xamarin ao Visual Studio de 2019
+### <a name="adding-xamarin-to-visual-studio-2017"></a>Adicionando o Xamarin ao Visual Studio 2017
 
-Se o Visual Studio de 2019 já estiver instalado, adicionar o Xamarin executando novamente o instalador do Visual Studio de 2019 para modificar as cargas de trabalho (consulte [modificar o Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter detalhes). Em seguida, siga as etapas listadas acima para instalar o Xamarin.
+Se o Visual Studio 2017 já está instalado, adicione o Xamarin executando novamente o instalador do Visual Studio 2017 para modificar as cargas de trabalho (consulte [Modificar o Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obter detalhes). Em seguida, siga as etapas listadas acima para instalar o Xamarin.
 
-Para obter mais informações sobre como baixar e instalar o Visual Studio de 2019, consulte [instalar o Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
+Para obter mais informações sobre como baixar e instalar o Visual Studio 2017, consulte [Instalar o Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
