@@ -1,14 +1,19 @@
 ---
 title: Introdução ao Storyboards no xamarin. IOS
-description: 'Este documento fornece uma introdução aos storyboards no xamarin. IOS. Ele descreve como um storyboard é usado para definir uma interface de usuário, segues e como usar o Designer do iOS para editar arquivos de storyboard.'
+description: Este documento fornece uma introdução aos storyboards no xamarin. IOS. Ele descreve como um storyboard é usado para definir uma interface de usuário, segues e como usar o Designer do iOS para editar arquivos de storyboard.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
+ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071106"
 ---
-
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução ao Storyboards no xamarin. IOS
 
 Neste guia, explicaremos o que um Storyboard é e examinar alguns dos principais componentes – como transições. Vamos examinar como os Storyboards podem ser criados e usados, e quais são as vantagens que eles têm para um desenvolvedor.

@@ -1,6 +1,6 @@
 ---
-title: 'Multitela Hello, iOS'
-description: 'Este documento contém links para instruções passo a passo que expandem o aplicativo de exemplo Phoneword para adicionar uma segunda tela. As explicações passo a passo exploram o padrão de design modelo-exibição-controlador, a navegação do iOS e outros conceitos fundamentais de desenvolvimento do iOS.'
+title: Multitela Hello, iOS
+description: Este documento contém links para instruções passo a passo que expandem o aplicativo de exemplo Phoneword para adicionar uma segunda tela. As explicações passo a passo exploram o padrão de design modelo-exibição-controlador, a navegação do iOS e outros conceitos fundamentais de desenvolvimento do iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
@@ -8,6 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
+ms.openlocfilehash: 8545afc9957f263104afa69359847d2b187e2558
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669356"
 ---
 # <a name="hello-ios-multiscreen"></a>Multitela Hello, iOS
 

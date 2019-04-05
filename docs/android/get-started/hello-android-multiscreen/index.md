@@ -1,6 +1,6 @@
 ---
-title: 'Multitela Hello, Android'
-description: 'Neste guia de duas partes, você expande o aplicativo Phoneword criado no guia do Hello, Android para processar uma segunda tela. Ao longo do caminho, este guia apresentará os blocos de construção do aplicativo Android e se aprofundará na arquitetura do Android à medida que você desenvolve uma melhor compreensão da estrutura e funcionalidade do aplicativo Android.'
+title: Multitela Hello, Android
+description: Neste guia de duas partes, você expande o aplicativo Phoneword criado no guia do Hello, Android para processar uma segunda tela. Ao longo do caminho, este guia apresentará os blocos de construção do aplicativo Android e se aprofundará na arquitetura do Android à medida que você desenvolve uma melhor compreensão da estrutura e funcionalidade do aplicativo Android.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D82EC193-2CB7-44C3-8688-0CEBDF60C3D6
@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
+ms.openlocfilehash: c67d2be3d0bb1a159d234e815b16a988b93087d4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670878"
 ---
-
 # <a name="hello-android-multiscreen"></a>Multitela Hello, Android
 
 _Neste guia de duas partes, você expande o aplicativo Phoneword criado no guia do Hello, Android para processar uma segunda tela. Ao longo do caminho, este guia apresentará os blocos de construção do aplicativo Android e se aprofundará na arquitetura do Android à medida que você desenvolve uma melhor compreensão da estrutura e funcionalidade do aplicativo Android._

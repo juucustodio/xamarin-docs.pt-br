@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/28/2018
+ms.openlocfilehash: 75de62017c01c14ef4d2bab6d458336484d5cd69
+ms.sourcegitcommit: 4c97f5d73be7eb2da153a85183be4258b6b11ca6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288609"
 ---
-
 # <a name="styling-xamarinforms-apps"></a>Aplicativos xamarin. Forms de estilo
 
 ## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[Aplicar estilo a aplicativos do Xamarin.Forms usando os estilos XAML](xaml/index.md)

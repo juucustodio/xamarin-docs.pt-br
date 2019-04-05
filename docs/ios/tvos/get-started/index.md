@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
+ms.openlocfilehash: 1d7f6f3939d79c9ad28701bb89eb75256503a977
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070626"
 ---
-
 # <a name="getting-started-with-tvos-in-xamarin"></a>Introdução ao tvOS no Xamarin
 
 Esta série apresenta os conceitos básicos do desenvolvimento do xamarin. tvos. Ele vai de instalando o suporte de tvOS para iniciar, projetar, codificar e executando um aplicativo. Ao longo do caminho, ele ensina as habilidades e o conjunto de ferramentas que serão necessários para trabalhar em qualquer aplicativo tvos.

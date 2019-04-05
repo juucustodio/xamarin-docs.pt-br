@@ -1,14 +1,19 @@
 ---
 title: Visual do xamarin. Forms
-description: 'Visual do xamarin. Forms permite que os renderizadores ser aplicadas seletivamente a objetos VisualElement, sem ter de exibições do xamarin. Forms subclasse.'
+description: Visual do xamarin. Forms permite que os renderizadores ser aplicadas seletivamente a objetos VisualElement, sem ter de exibições do xamarin. Forms subclasse.
 ms.prod: xamarin
 ms.assetid: 69228A9C-39C4-46AE-A803-C38EED6FB965
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/05/2019
+ms.openlocfilehash: d440c6e95788fc876d6b0aa094f5bc2fce84bfb0
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972553"
 ---
-
 # <a name="xamarinforms-visual"></a>Visual do xamarin. Forms
 
 ## <a name="xamarinforms-material-visualmaterial-visualmd"></a>[Material do xamarin. Forms Visual](material-visual.md)

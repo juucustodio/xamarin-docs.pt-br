@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 8ba0d14fff22d38d9e1a1d062fcce3f9ace88dea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668849"
 ---
-
 # <a name="publishing-to-google-play"></a>Publicando no Google Play
 
 Embora existam muitos mercados de aplicativo para a distribuição de um aplicativo, o Google Play é indiscutivelmente o maior e mais visitado repositório do mundo para aplicativos Android. O Google Play fornece uma plataforma única para distribuição, publicidade, vendas e análise das vendas de um aplicativo Android.
