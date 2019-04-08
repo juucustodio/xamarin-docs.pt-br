@@ -264,7 +264,7 @@ O `Shadow` específico da plataforma é consumido em XAML, definindo o `Shadow.I
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

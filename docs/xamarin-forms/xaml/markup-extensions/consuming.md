@@ -191,7 +191,7 @@ Ambos `x:Reference` expressões usam a versão abreviada do `ReferenceExtension`
 
 ## <a name="xtype-markup-extension"></a>Extensão de marcação x:Type
 
-O `x:Type` extensão de marcação é o equivalente em XAML do c# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) palavra-chave. Ele dá suporte a [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) classe, que define uma propriedade chamada [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) do tipo `string` que é definido como um nome de classe ou estrutura. O `x:Type` retorna da extensão de marcação a [ `System.Type` ](xref:System.Type) objeto dessa classe ou estrutura. `TypeName` é a propriedade de conteúdo do `TypeExtension`, portanto `TypeName=` não é necessário quando `x:Type` é exibida com as chaves.
+O `x:Type` extensão de marcação é o equivalente em XAML do C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) palavra-chave. Ele dá suporte a [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) classe, que define uma propriedade chamada [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) do tipo `string` que é definido como um nome de classe ou estrutura. O `x:Type` retorna da extensão de marcação a [ `System.Type` ](xref:System.Type) objeto dessa classe ou estrutura. `TypeName` é a propriedade de conteúdo do `TypeExtension`, portanto `TypeName=` não é necessário quando `x:Type` é exibida com as chaves.
 
 Dentro do xamarin. Forms, há várias propriedades que têm argumentos de tipo `Type`. Os exemplos incluem o [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propriedade do `Style`e o [X:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) atributo usado para especificar argumentos em classes genéricas. No entanto, o analisador XAML executa o `typeof` operação automaticamente e o `x:Type` extensão de marcação não é usada nesses casos.
 
@@ -406,7 +406,7 @@ Ao definir matrizes de tipos comuns, como cadeias de caracteres ou números, use
 
 ## <a name="xnull-markup-extension"></a>Extensão de marcação x:Null
 
-O `x:Null` extensão de marcação dá suporte a [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Ele não tem propriedades e é simplesmente o equivalente XAML do c# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) palavra-chave.
+O `x:Null` extensão de marcação dá suporte a [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Ele não tem propriedades e é simplesmente o equivalente XAML do C# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) palavra-chave.
 
 O `x:Null` extensão de marcação é raramente necessário e raramente usada, mas se você encontrar uma necessidade para ele, você ficará feliz por isso ele existe.
 

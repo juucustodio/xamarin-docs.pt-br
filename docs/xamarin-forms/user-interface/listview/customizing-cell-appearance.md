@@ -119,7 +119,7 @@ O XAML acima está fazendo muito. Vamos dividi-lo:
 
 ### <a name="cnum"></a>C&num;
 
-Especificar uma célula personalizada em c# é um pouco mais detalhado do que o equivalente em XAML. Vamos analisar:
+Especificar uma célula personalizada em C# é um pouco mais detalhado do que o equivalente em XAML. Vamos analisar:
 
 Primeiro, defina uma classe de célula personalizado, com `ViewCell` como a classe base:
 
@@ -240,7 +240,7 @@ No XAML, associando o tipo de célula personalizado a dados pode ser obtida conf
 
 Isso vincula o `Name`, `Age`, e `Location` propriedades vinculáveis no `CustomCell` da instância, como o `Name`, `Age`, e `Location` propriedades de cada objeto na coleção subjacente.
 
-A associação equivalente em c# é mostrada no exemplo de código a seguir:
+A associação equivalente em C# é mostrada no exemplo de código a seguir:
 
 ```csharp
 var customCell = new DataTemplate (typeof(CustomCell));

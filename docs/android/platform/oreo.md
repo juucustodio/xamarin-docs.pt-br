@@ -352,7 +352,7 @@ Vários exemplos de xamarin. Android estão disponíveis para mostrar como tirar
 
 > [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
 
-**Desenvolvimento do Oreo 8.0 Android com c#**
+**Desenvolvimento do Oreo 8.0 Android com C#**
 
 
 ## <a name="summary"></a>Resumo

@@ -42,7 +42,7 @@ Essas hierarquias de exibição podem ser criadas usando o [Designer de Xamarin 
 
 ## <a name="ios-blank-project-template"></a>modelo de projeto em branco do iOS
 
-Primeiro, crie um projeto do iOS no Visual Studio usando o **arquivo > Novo projeto > Visual c# > iPhone & iPad > aplicativo iOS (Xamarin)** projeto, como mostrado abaixo:
+Primeiro, crie um projeto do iOS no Visual Studio usando o **arquivo > Novo projeto > Visual C# > iPhone & iPad > aplicativo iOS (Xamarin)** projeto, como mostrado abaixo:
 
 [![Caixa de diálogo Novo projeto](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 

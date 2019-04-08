@@ -77,7 +77,7 @@ Aplicativos podem optarem por usar os renderizadores de material, definindo o [ 
 </ContentPage>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 ContentPage contentPage = new ContentPage();

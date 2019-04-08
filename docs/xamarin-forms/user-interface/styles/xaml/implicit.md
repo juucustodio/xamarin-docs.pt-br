@@ -86,7 +86,7 @@ Para obter informações sobre a criação de estilos em um aplicativo [ `Resour
 
 ## <a name="create-an-implicit-style-in-c35"></a>Criar um estilo implícito em C&#35;
 
-[`Style`](xref:Xamarin.Forms.Style) instâncias podem ser adicionadas a uma página [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) coleção no c#, criando um novo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)e, em seguida, adicionando o `Style` para instâncias de `ResourceDictionary`, conforme mostrado no exemplo de código a seguir:
+[`Style`](xref:Xamarin.Forms.Style) instâncias podem ser adicionadas a uma página [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) coleção no C#, criando um novo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)e, em seguida, adicionando o `Style` para instâncias de `ResourceDictionary`, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public class ImplicitStylesPageCS : ContentPage
@@ -135,7 +135,7 @@ O exemplo a seguir mostra um estilo implícito que define a cor de fundo [ `Butt
 
 Colocando esse estilo em um nível de página [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) resultará em que ele está sendo aplicada a todos os [ `Button` ](xref:Xamarin.Forms.Button) instâncias na página e também para todos os controles que derivam de `Button`. No entanto, se o [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) propriedade permanece definida, o estilo só deve ser aplicado a `Button` instâncias.
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 var buttonStyle = new Style(typeof(Button))

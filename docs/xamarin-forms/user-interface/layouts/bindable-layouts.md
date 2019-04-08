@@ -42,7 +42,7 @@ Um layout associável é preenchido com dados, definindo sua `ItemsSource` propr
 <Grid BindableLayout.ItemsSource="{Binding Items}" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 IEnumerable<string> items = ...;
@@ -72,7 +72,7 @@ A aparência de cada item no layout associável pode ser definida ao configurar 
 </StackLayout>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 DataTemplate circleImageTemplate = ...;
@@ -97,7 +97,7 @@ A aparência de cada item no layout associável pode ser escolhida em tempo de e
             ... />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 DataTemplateSelector dataTemplateSelector = new TechItemTemplateSelector { ... };

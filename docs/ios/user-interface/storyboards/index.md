@@ -20,7 +20,7 @@ Neste guia, explicaremos o que um Storyboard é e examinar alguns dos principais
 
 Antes do formato de arquivo de Storyboard foi introduzido pela Apple, como uma representação visual da interface do usuário de um aplicativo iOS, os desenvolvedores criou arquivos XIB para cada controlador de exibição e programado a navegação entre cada exibição manualmente.  Usar um Storyboard permite ao desenvolvedor definir controladores de exibição e a navegação entre elas em uma superfície de design e oferece a edição WYSIWYG da interface do usuário do aplicativo.
 
-Pode ser criado, aberto e editado com o Designer do iOS Xamarin um Storyboard. Este guia será também instruções passo a passo como usar o Designer para criar storyboards usando o c# para programar a navegação.
+Pode ser criado, aberto e editado com o Designer do iOS Xamarin um Storyboard. Este guia será também instruções passo a passo como usar o Designer para criar storyboards usando o C# para programar a navegação.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Ao criar um Storyboard usando o Designer, o IDE adicionará automaticamente o [[registrar]](xref:Foundation.RegisterAttribute) atributo na parte superior do `designer.cs` de classe e passar um identificador de cadeia de caracteres, que é idêntico à ID do Storyboard especificado no etapa anterior. Isso vinculará o c# para a cena relevante no Storyboard.
+Ao criar um Storyboard usando o Designer, o IDE adicionará automaticamente o [[registrar]](xref:Foundation.RegisterAttribute) atributo na parte superior do `designer.cs` de classe e passar um identificador de cadeia de caracteres, que é idêntico à ID do Storyboard especificado no etapa anterior. Isso vinculará o C# para a cena relevante no Storyboard.
 
 Em algum momento, você talvez queira adicionar uma classe existente que foi **não** criados no designer. Nesse caso, se registrar essa classe como de costume:
 

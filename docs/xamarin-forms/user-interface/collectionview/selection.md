@@ -57,7 +57,7 @@ A exemplo XAML a seguir mostra um `CollectionView` que pode responder a seleçã
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -98,7 +98,7 @@ Quando o `SelectionMode` estiver definida como `Single`, um único item na `Coll
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -202,7 +202,7 @@ Para obter mais informações sobre estados visuais, consulte [Gerenciador de es
                 SelectionMode="None" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView

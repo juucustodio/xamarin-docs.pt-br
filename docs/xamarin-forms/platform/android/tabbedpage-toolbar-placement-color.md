@@ -30,7 +30,7 @@ Esses itens específicos à plataforma são usadas para definir o posicionamento
 </TabbedPage>
 ```
 
-Como alternativa, eles podem ser consumidos em c# usando a API fluente:
+Como alternativa, eles podem ser consumidos em C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

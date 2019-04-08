@@ -172,7 +172,7 @@ $ adb shell pm revoke com.companyname.app android.permission.WRITE_EXTERNAL_STOR
 
 ## <a name="deleting-files"></a>Excluindo arquivos
 
-Qualquer uma das APIs do c# pode ser usadas para excluir um arquivo de armazenamento externo, como o padrão de [ `System.IO.File.Delete` ](xref:System.IO.File.Delete*). Também é possível usar as APIs de Java às custas de portabilidade do código. Por exemplo:
+Qualquer uma das APIs do C# pode ser usadas para excluir um arquivo de armazenamento externo, como o padrão de [ `System.IO.File.Delete` ](xref:System.IO.File.Delete*). Também é possível usar as APIs de Java às custas de portabilidade do código. Por exemplo:
 
 ```csharp
 System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/files/count.txt");

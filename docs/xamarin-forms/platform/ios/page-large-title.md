@@ -30,7 +30,7 @@ Este específicos da plataforma iOS é usado para exibir o título da página co
 </NavigationPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -54,7 +54,7 @@ Desde que os títulos grandes estão habilitados na [ `NavigationPage` ](xref:Xa
 </ContentPage>
 ```
 
-Como alternativa, o comportamento de página pode ser substituído no c# usando a API fluente:
+Como alternativa, o comportamento de página pode ser substituído no C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

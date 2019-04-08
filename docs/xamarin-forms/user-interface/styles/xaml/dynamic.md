@@ -86,7 +86,7 @@ Quando o `OnButtonClicked` manipulador de eventos é executado, `searchBarStyle`
 [![](dynamic-images/dynamic-style-blue.png "Estilo dinâmico de exemplo de azul")](dynamic-images/dynamic-style-blue-large.png#lightbox "azul estilo dinâmico de exemplo")
 [![](dynamic-images/dynamic-style-green.png "verde estilo dinâmico de exemplo") ] (dynamic-images/dynamic-style-green-large.png#lightbox "Verde estilo dinâmico de exemplo")
 
-O exemplo de código a seguir demonstra a página equivalente em c#:
+O exemplo de código a seguir demonstra a página equivalente em C#:
 
 ```csharp
 public class DynamicStylesPageCS : ContentPage
@@ -122,7 +122,7 @@ public class DynamicStylesPageCS : ContentPage
 }
 ```
 
-No c#, o [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) instâncias de uso de [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource*) método a referenciar `searchBarStyle`. O `OnButtonClicked` código do manipulador de eventos é idêntico ao exemplo XAML e, quando executada, `searchBarStyle` alternará entre `blueSearchBarStyle` e `greenSearchBarStyle`.
+No C#, o [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) instâncias de uso de [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource*) método a referenciar `searchBarStyle`. O `OnButtonClicked` código do manipulador de eventos é idêntico ao exemplo XAML e, quando executada, `searchBarStyle` alternará entre `blueSearchBarStyle` e `greenSearchBarStyle`.
 
 ## <a name="dynamic-style-inheritance"></a>Herança de estilo dinâmica
 
@@ -165,7 +165,7 @@ No arquivo code-behind, o construtor cria um [ `ResourceDictionary` ](xref:Xamar
 [![](dynamic-images/dynamic-style-inheritance-blue.png "Exemplo de herança de estilo dinâmica de azul")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "azul exemplo de herança de estilo dinâmica")
 [![](dynamic-images/dynamic-style-inheritance-green.png "verde estilos dinâmica Exemplo de herança")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "verde de exemplo de herança de estilo dinâmica")
 
-O exemplo de código a seguir demonstra a página equivalente em c#:
+O exemplo de código a seguir demonstra a página equivalente em C#:
 
 ```csharp
 public class DynamicStylesInheritancePageCS : ContentPage

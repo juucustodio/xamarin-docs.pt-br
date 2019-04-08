@@ -53,7 +53,7 @@ Um `CollectionView` é preenchido com dados, definindo seu `ItemsSource` proprie
 > [!NOTE]
 > Observe que o elemento `x:Array` requer um atributo `Type` que indica o tipo dos itens na matriz.
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -86,7 +86,7 @@ Para obter informações sobre como alterar o `CollectionView` layout, consulte 
 <CollectionView ItemsSource="{Binding Monkeys}" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -137,7 +137,7 @@ A aparência de cada item na `CollectionView` pode ser definida ao configurar o 
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView();

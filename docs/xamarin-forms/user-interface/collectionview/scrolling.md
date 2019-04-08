@@ -166,7 +166,7 @@ Por padrão, o `SnapPointsAlignment` estiver definida como `SnapPointsAlignment.
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -210,7 +210,7 @@ O `SnapPointsAlignment.Center` membro indica que pontos de alinhamento são alin
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -254,7 +254,7 @@ O `SnapPointsAlignment.End` membro indica que os pontos de alinhamento são alin
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView

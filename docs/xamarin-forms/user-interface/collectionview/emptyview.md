@@ -46,7 +46,7 @@ O `EmptyView` propriedade pode ser definida como uma cadeia de caracteres, que s
                 EmptyView="No items to display" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -95,7 +95,7 @@ O `EmptyView` propriedade pode ser definida como um modo de exibição, que ser�
 </StackLayout>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -150,7 +150,7 @@ O `EmptyView` propriedade pode ser definida como um tipo personalizado, cujo mod
 </StackLayout>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };

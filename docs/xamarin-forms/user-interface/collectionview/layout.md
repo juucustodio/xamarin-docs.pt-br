@@ -117,7 +117,7 @@ Como alternativa, isso também pode ser feito definindo a `ItemsLayout` propried
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -185,7 +185,7 @@ Como alternativa, isso também pode ser feito definindo a `ItemsLayout` propried
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -241,7 +241,7 @@ Isso resulta em uma lista de única linha, que cresce horizontalmente conforme n
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -297,7 +297,7 @@ Por padrão, um vertical `GridItemsLayout` exibirá itens em uma única coluna. 
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -355,7 +355,7 @@ O exemplo de código a seguir mostra a configuração de `ItemSizingStrategy` pr
 </CollectionView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 CollectionView collectionView = new CollectionView

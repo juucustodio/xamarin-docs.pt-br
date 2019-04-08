@@ -28,7 +28,7 @@ O layout de todas as subexibições anexado a uma exibição de pilha são geren
 
 [![](uistackview-images/stacked01.png "Diagrama de layout de exibição de pilha")](uistackview-images/stacked01.png#lightbox)
 
-Ao usar um `UIStackView` em um aplicativo xamarin. IOS, o desenvolvedor pode definir as subexibições tanto dentro de um Storyboard no Designer do iOS, ou adicionando e removendo subexibições em código c#.
+Ao usar um `UIStackView` em um aplicativo xamarin. IOS, o desenvolvedor pode definir as subexibições tanto dentro de um Storyboard no Designer do iOS, ou adicionando e removendo subexibições em código C#.
 
 Este documento consiste em duas partes: um guia rápido para ajudá-lo a implementar sua pilha primeiro exibir e, em seguida, mais alguns detalhes técnicos sobre como ele funciona.
 

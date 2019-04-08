@@ -22,7 +22,7 @@ _Estilos podem herdar de outros estilos para reduzir a duplicação e habilitar 
 
 ## <a name="style-inheritance-in-xaml"></a>Herança de estilo em XAML
 
-Herança de estilo é executada, definindo o [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) propriedade a um existente [ `Style` ](xref:Xamarin.Forms.Style). No XAML, isso é feito definindo a `BasedOn` propriedade para um `StaticResource` extensão de marcação que faz referência a um criado anteriormente `Style`. No c#, isso é feito definindo a `BasedOn` propriedade para um `Style` instância.
+Herança de estilo é executada, definindo o [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) propriedade a um existente [ `Style` ](xref:Xamarin.Forms.Style). No XAML, isso é feito definindo a `BasedOn` propriedade para um `StaticResource` extensão de marcação que faz referência a um criado anteriormente `Style`. No C#, isso é feito definindo a `BasedOn` propriedade para um `Style` instância.
 
 Estilos de herdam de um estilo de base podem incluir [ `Setter` ](xref:Xamarin.Forms.Setter) instâncias para novas propriedades, ou usá-los para substituir os estilos do estilo de base. Além disso, os estilos que herdam de um estilo base devem ter como destino o mesmo tipo ou um tipo derivado do tipo de destino pelo estilo de base. Por exemplo, se um estilo base utiliza [ `View` ](xref:Xamarin.Forms.View) instâncias, os estilos que são baseados no estilo de base podem ter como destino `View` instâncias ou tipos que derivam de `View` classe, como [ `Label` ](xref:Xamarin.Forms.Label) e [ `Button` ](xref:Xamarin.Forms.Button) instâncias.
 
@@ -110,7 +110,7 @@ Neste exemplo, `labelStyle` e `buttonStyle` é recursos de nível de controle en
 
 ## <a name="style-inheritance-in-c35"></a>Herança de estilo em C&#35;
 
-A equivalente c# página, onde [ `Style` ](xref:Xamarin.Forms.Style) instâncias são atribuídas diretamente para o [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades dos controles necessários, é mostrado no exemplo de código a seguir:
+A equivalente C# página, onde [ `Style` ](xref:Xamarin.Forms.Style) instâncias são atribuídas diretamente para o [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades dos controles necessários, é mostrado no exemplo de código a seguir:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage

@@ -36,7 +36,7 @@ Este específicos da plataforma podem ser consumidos em XAML, definindo o [ `App
 </Application>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

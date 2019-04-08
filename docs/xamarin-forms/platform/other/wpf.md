@@ -35,7 +35,7 @@ Siga estas instruções para adicionar um aplicativo do WPF que serão executado
 
 1. No Visual Studio de 2019, clique com botão direito no nome da solução nos **Gerenciador de soluções** e escolha **Adicionar > Novo projeto...** .
 
-2. No **novo projeto** janela, à esquerda, selecione **Visual c#** e **área de trabalho clássica do Windows**. Na lista de tipos de projeto, escolha **aplicativo WPF (.NET Framework)**. 
+2. No **novo projeto** janela, à esquerda, selecione **Visual C#** e **área de trabalho clássica do Windows**. Na lista de tipos de projeto, escolha **aplicativo WPF (.NET Framework)**. 
 
 3. Digite um nome para o projeto com um **WPF** extensão, por exemplo, **BoxViewClock.WPF**. Clique o **navegue** botão, selecione o **BoxViewClock** pasta e pressione **Selecionar pasta**. Isso colocará o projeto WPF no mesmo diretório que os outros projetos na solução.
 
