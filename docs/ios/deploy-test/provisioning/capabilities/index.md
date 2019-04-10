@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120938"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855023"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabalhando com recursos no Xamarin.iOS
 
-_A adição de funcionalidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para todas as funcionalidades._
+_A adição de capacidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para todas as capacidades._
 
 A Apple fornece _capacidades_ aos desenvolvedores, geralmente conhecidas como _serviços de aplicativos_, como uma forma de estender as funcionalidades e ampliar o escopo daquilo que os aplicativos iOS podem fazer. As capacidades permitem que os desenvolvedores adicionem uma integração mais profunda dos recursos de plataforma em seus aplicativo, como: a capacidade de realizar transações monetárias iniciadas no aplicativo, serviços de dispositivo adicionais como Siri e muito mais.
 Essas capacidades podem ser usadas com projetos Xamarin.iOS. A lista completa de serviços está descrita abaixo:
@@ -44,14 +44,13 @@ Essas capacidades podem ser usadas com projetos Xamarin.iOS. A lista completa de
 * Múltiplos caminhos
 * Leitura da marca NFC
 
-
-As funcionalidades podem ser habilitadas por meio do Visual Studio para Mac e do Visual Studio 2017 ou manualmente no Portal do Desenvolvedor da Apple. Determinadas capacidades, como Wallet, Apple Pay e iCloud, exigem a configuração adicional das IDs do aplicativo.
+As funcionalidades podem ser habilitadas por meio do Visual Studio para Mac e do Visual Studio 2019 ou manualmente no Portal do Desenvolvedor da Apple. Determinadas capacidades, como Wallet, Apple Pay e iCloud, exigem a configuração adicional das IDs do aplicativo.
 
 Este guia explica como habilitar cada um desses Serviços de Aplicativos em seu aplicativo automaticamente no Visual Studio para Mac e manualmente por meio da central de desenvolvedores, incluindo qualquer configuração adicional que possa ser necessária. 
 
 ## <a name="adding-app-services"></a>Adicionando Serviços de Aplicativos
 
-Para usar capacidades, o aplicativo deve ter um perfil de provisionamento válido que contenha uma ID do aplicativo com o serviço correto habilitado. A criação desse perfil de provisionamento pode ser realizada automaticamente no Visual Studio para Mac e no Visual Studio 2017 ou manualmente na Central de Desenvolvedores da Apple.
+Para usar capacidades, o aplicativo deve ter um perfil de provisionamento válido que contenha uma ID do aplicativo com o serviço correto habilitado. A criação desse perfil de provisionamento pode ser realizada automaticamente no Visual Studio para Mac e no Visual Studio 2019 ou manualmente na Central de Desenvolvedores da Apple.
 
 Esta seção explica como usar o provisionamento automático do Visual Studio ou a Central de Desenvolvedores para habilitar a maioria das funcionalidades. Há algumas capacidades, como Wallet, iCloud, Apple Pay e Grupos de Aplicativos que exigem uma configuração adicional. Elas são explicadas em detalhes nos guias adjacentes.
 
@@ -73,7 +72,7 @@ Esta seção explica como usar o provisionamento automático do Visual Studio ou
 
 ## <a name="using-the-ide"></a>Como usar o IDE
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 Os recursos são adicionados ao **Entitlements.plist** no Visual Studio para Mac. Para adicionar funcionalidades, siga as etapas abaixo:
 
@@ -93,11 +92,11 @@ Os recursos são adicionados ao **Entitlements.plist** no Visual Studio para Mac
 
     ![Adicionar funcionalidades ao arquivo entitlements.plist](images/image18.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-As funcionalidades são adicionadas ao arquivo **Entitlements.plist**. Para adicionar funcionalidades no Visual Studio 2017, siga as etapas abaixo:
+As funcionalidades são adicionadas ao arquivo **Entitlements.plist**. Para adicionar funcionalidades no Visual Studio 2019, siga as etapas abaixo:
 
-1. Emparelhe o Visual Studio 2017 com um Mac conforme descrito no guia [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Emparelhe o Visual Studio 2019 com um Mac conforme descrito no guia [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 2. Abra as opções de Provisionamento selecionando **Projeto > Propriedades de Provisionamento…**
 
@@ -142,7 +141,7 @@ Usar a central de desenvolvedores é um processo de duas etapas que requer a cri
     ![Página de seleção de Serviços de Aplicativos](images/image8.png)
 
 7.  Pressione **Continuar**.
-8.  Confirme a ID do aplicativo. Cada serviço estará em um dos seguintes estados: **Habilitado**, **Desabilitado**, ou **Configurável**, conforme é ilustrado abaixo. Se estiver **Habilitado,** estará pronto para ser usado em um perfil de provisionamento. Se estiver **Configurável**, uma configuração adicional será necessária para essa capacidade. Estas etapas adicionais estão descritas mais detalhadamente nas próximas seções.
+8.  Confirme a ID do aplicativo. Cada serviço estará em um dos seguintes estados: **Habilitado**, **Desabilitado** ou **Configurável**, conforme ilustrado abaixo. Se estiver **Habilitado,** estará pronto para ser usado em um perfil de provisionamento. Se estiver **Configurável**, uma configuração adicional será necessária para essa capacidade. Estas etapas adicionais estão descritas mais detalhadamente nas próximas seções.
 
     ![Confirmação de ID do aplicativo](images/image9.png)
 

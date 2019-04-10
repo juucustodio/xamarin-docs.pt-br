@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 2679756cd9a9a60c2d7ab637678ff1d8262b2403
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 4bfbd065c9b17ce402c5a15289c7ff608eb58b23
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669980"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870008"
 ---
 # <a name="creating-the-platform-video-players"></a>Criando os players de vídeo de plataforma
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![DBaixar a amostra](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 A solução [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) contém todo o código para implementar um player de vídeo para o Xamarin.Forms. Também inclui uma série de páginas que demonstram como usar o player de vídeo em um aplicativo. Todo o código `VideoPlayer` e seus renderizadores de plataforma residem em pastas de projeto chamadas `FormsVideoLibrary` e também usam o namespace `FormsVideoLibrary`. Isso deve facilitar a cópia dos arquivos em seu próprio aplicativo e a referência das classes.
 
@@ -43,7 +43,7 @@ Cada uma das plataformas contém uma classe chamada `VideoPlayerRenderer` que co
 
 ### <a name="the-ios-player-view-controller"></a>O controlador de exibição do player do iOS
 
-Várias classes estão envolvidas ao implementar um player de vídeo no iOS. O aplicativo primeiro cria um [`AVPlayerViewController`](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) e, em seguida, define a propriedade [`Player`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) como um objeto do tipo [`AVPlayer`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/). Classes adicionais são necessárias quando o player recebe uma fonte de vídeo.
+Várias classes estão envolvidas ao implementar um player de vídeo no iOS. O aplicativo primeiro cria um [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController) e, em seguida, define a propriedade [`Player`](xref:AVKit.AVPlayerViewController.Player*) como um objeto do tipo [`AVPlayer`](xref:AVFoundation.AVPlayer). Classes adicionais são necessárias quando o player recebe uma fonte de vídeo.
 
 Como todos os renderizadores, o [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) do iOS contém um atributo `ExportRenderer` que identifica a exibição `VideoPlayer` com o renderizador:
 
@@ -318,7 +318,7 @@ As seções a seguir abordam como a propriedade `AreTransportControlsEnabled` é
 
 ### <a name="ios-playback-controls"></a>Controles de reprodução do iOS
 
-A propriedade do `AVPlayerViewController` do iOS que controla a exibição dos controles de transporte é [`ShowsPlaybackControls`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.ShowsPlaybackControls/). É assim como essa propriedade é definida no `VideoViewRenderer` do iOS:
+A propriedade do `AVPlayerViewController` do iOS que controla a exibição dos controles de transporte é [`ShowsPlaybackControls`](xref:AVKit.AVPlayerViewController.ShowsPlaybackControls*). É assim como essa propriedade é definida no `VideoViewRenderer` do iOS:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -467,4 +467,4 @@ Mais uma propriedade é necessária para iniciar a reprodução do vídeo: Essa 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do player de vídeo (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demonstrações do player de vídeo (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

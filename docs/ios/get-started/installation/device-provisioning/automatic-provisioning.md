@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 9f198336d3fc9cca3bc79c377749a1211ebbac55
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479674"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855166"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 
@@ -21,18 +21,19 @@ _Após o Xamarin.iOS ter sido instalado com êxito, a próxima etapa no desenvol
 
 ## <a name="requirements"></a>Requisitos
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 - Visual Studio para Mac 7.3 ou posterior
 - Xcode 9 ou posterior
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-- Visual Studio 2017 versão 15.7 (ou superior)
+- Visual Studio 2019
+- OU Visual Studio 2017 versão 15.7 (ou superior)
 
 Você também precisa estar emparelhado com um host de build do Mac que tem o seguinte:
 
-- Xcode 9 ou posterior
+- Xcode 10 ou posterior
 
 -----
 
@@ -54,7 +55,7 @@ Antes de iniciar o processo de assinatura automática, você deve adicionar uma 
 
 Para assinar seu aplicativo automaticamente para implantação em um dispositivo iOS, faça o seguinte:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 1. Abra o projeto iOS no Visual Studio para Mac.
 
@@ -72,9 +73,9 @@ Para assinar seu aplicativo automaticamente para implantação em um dispositivo
 
     Se a assinatura automática falhar, o **Painel de assinatura automática** exibirá o motivo do erro.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-1. Emparelhe o Visual Studio 2017 com um Mac conforme descrito no guia [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Emparelhe o Visual Studio 2019 com um Mac conforme descrito no guia [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 2. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nome do projeto e selecione **Propriedades**. Em seguida, navegue até a guia **Assinatura do Pacote do iOS**.
 

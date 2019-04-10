@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 0062c5da4db206a9fe4dc0030a104ec034ab97f1
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 296284b7f9a8eac26817e76a97bf35b03d591532
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197154"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855322"
 ---
 # <a name="introduction-to-mobile-development"></a>Introdução ao desenvolvimento móvel
 
@@ -38,14 +38,10 @@ O Xamarin é o único que combina toda a potência das plataformas nativas e adi
 1.   **IDE (Ambiente de Desenvolvimento Integrado) Moderno** – o Xamarin usa o Visual Studio para Mac no Mac OS X e Visual Studio no Windows. Ambos são IDEs modernos que incluem recursos como preenchimento automático de código, um sofisticado sistema de gerenciamento de Projeto e Solução, uma biblioteca de modelos de projeto abrangente, controle do código-fonte integrado e muitos outros.
 1.   **Suporte para Plataforma Cruzada Móvel** – o Xamarin oferece suporte sofisticado para plataforma cruzada para as três principais plataformas móveis: iOS, Android e Windows Phone. Os aplicativos podem ser escritos para compartilhar até 90% de seu código e nossa biblioteca Xamarin.Mobile oferece uma API unificada para acessar recursos comuns em todas as três plataformas. Isso pode reduzir significativamente os custos de desenvolvimento e o tempo para colocação no mercado para desenvolvedores móveis almejam as três plataformas móveis mais populares.
 
-
 Devido ao conjunto de recursos eficiente e abrangente do Xamarin, ele fecha uma lacuna para desenvolvedores de aplicativos que desejam usar uma linguagem e plataforma modernas para desenvolver aplicativos móveis de plataforma cruzada.
-
 
 > [!NOTE]
 > Esta série de Introdução concentra-se em começar a compilar aplicativos iOS e Android. A Microsoft oferece informações sobre o [desenvolvimento da UWP (Plataforma Universal do Windows)](https://docs.microsoft.com/windows/uwp/develop/) para tablets e desktops. Para saber mais sobre o desenvolvimento multiplataforma com o Xamarin (incluindo aplicativos UWP para Windows), leia o [guia Criando aplicativos multiplataforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
-
-
 
 ## <a name="how-does-xamarin-work"></a>Como funciona o Xamarin?
 
@@ -54,8 +50,6 @@ O Xamarin oferece dois produtos comerciais: Xamarin.iOS e Xamarin.Android. Ambos
 No iOS, o Compilador *AOT* (*Ahead Of Time*) Xamarin compila aplicativos Xamarin.iOS diretamente para o código do assembly nativo do ARM. No Android, o compilador do Xamarin compila para *IL* (*Linguagem Intermediária*), que então é compilada *JIT* (*Just-in-Time*) para o assembly nativo quando o aplicativo é iniciado.
 
 Em ambos os casos, os aplicativos Xamarin utilizam um tempo de execução que processa automaticamente elementos como alocação de memória, coleta de lixo, interoperabilidade de plataforma subjacente, etc.
-
-
 
 ### <a name="xamariniosdll-and-monoandroiddll"></a>Xamarin.iOS.dll e Mono.Android.dll
 
@@ -69,27 +63,10 @@ Além da BCL, essas .dlls incluem invólucros para praticamente todo o SDK iOS e
 
 Quando os aplicativos Xamarin são compilados, o resultado é um Pacote de Aplicativo, seja um arquivo .app em iOS ou um arquivo .apk no Android. Não é possível distinguir esses arquivos dos pacotes de aplicativos compilados com os IDEs padrão da plataforma e são implantáveis exatamente da mesma maneira.
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="next-steps"></a>Próximas etapas
 
-Agora que você aprendeu um pouco sobre como o Xamarin funciona, é hora de ir mais fundo!
+Agora que você aprendeu um pouco sobre como funciona o Xamarin, a próxima etapa é começar a criar um aplicativo usando um destes guias:
 
-A próxima etapa é começar a compilar o aplicativo usando um destes guias:
-
-* [**Hello, iOS**](~/ios/get-started/hello-ios/index.md)
-
-![](introduction-to-mobile-development-images/ios.png "Hello, iOS")
-
-* [**Hello, Android**](~/android/get-started/hello-android/index.md)
-
-![](introduction-to-mobile-development-images/android.png "Hello, Android")
-
-* [**Introdução ao Xamarin.Forms**](~/get-started/index.yml)
-
-## <a name="summary"></a>Resumo
-
-Este documento simplesmente apresentou a plataforma Xamarin. A diversão de verdade começa quando seu primeiro aplicativo começa a funcionar. Confira os guias [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) e [Introdução ao Xamarin.Forms](~/get-started/index.yml) para começar.
-
-## <a name="related-links"></a>Links relacionados
-
-- [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](~/android/get-started/hello-android/index.md)
+- [**Introdução ao Xamarin.Forms**](~/get-started/index.yml)
+- [**Introdução ao Xamarin.iOS**](~/ios/get-started/hello-ios/index.md)
+- [**Introdução ao Xamarin.Android**](~/android/get-started/hello-android/index.md)

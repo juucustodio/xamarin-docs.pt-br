@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 15cba21eed510ec13bfa3dc3f176fce30fb4ed68
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059373"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870294"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![DBaixar a amostra](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
 _Este artigo demonstra como criar um renderizador personalizado para o Controle de Mapeamento, que exibe um mapa nativo com um marcador personalizado e uma exibição personalizada dos dados de marcador em cada plataforma._
 
@@ -225,9 +225,9 @@ namespace CustomRenderer.iOS
 }
 ```
 
-O método `OnElementChanged` executa a seguinte configuração da instância [`MKMapView`](https://developer.xamarin.com/api/type/MapKit.MKMapView/), desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
+O método `OnElementChanged` executa a seguinte configuração da instância [`MKMapView`](xref:MapKit.MKMapView), desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
 
-- A propriedade [`GetViewForAnnotation`](https://developer.xamarin.com/api/property/MapKit.MKMapView.GetViewForAnnotation/) é definida como o método `GetViewForAnnotation`. Esse método é chamado quando a [localização da anotação se torna visível no mapa](#Displaying_the_Annotation) e é usado para personalizar a anotação antes da exibição.
+- A propriedade [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) é definida como o método `GetViewForAnnotation`. Esse método é chamado quando a [localização da anotação se torna visível no mapa](#Displaying_the_Annotation) e é usado para personalizar a anotação antes da exibição.
 - Os manipuladores de eventos para os eventos `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` e `DidDeselectAnnotationView` são registrados. Esses eventos são disparados quando o usuário [toca o acessório direito no texto explicativo](#Tapping_on_the_Right_Callout_Accessory_View) e quando o usuário [marca](#Selecting_the_Annotation) e [desmarca](#Deselecting_the_Annotation) a anotação, respectivamente. A assinatura dos eventos é cancelada somente quando o elemento ao qual o renderizador está anexado é alterado.
 
 <a name="Displaying_the_Annotation" />
@@ -273,7 +273,7 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
 Esse método garante que a anotação seja exibida como uma imagem personalizada, em vez de como um marcador definido pelo sistema, e que quando a anotação for tocada, um texto explicativo seja exibido que inclua conteúdo adicional à esquerda e à direita do título da anotação e do endereço. Isso é feito da seguinte maneira:
 
 1. O método `GetCustomPin` é chamado para retornar os dados de marcador personalizados da anotação.
-1. Para conservar a memória, a exibição da anotação é colocada em pool para reutilização com a chamada a [`DequeueReusableAnnotation`](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
+1. Para conservar a memória, a exibição da anotação é colocada em pool para reutilização com a chamada a [`DequeueReusableAnnotation`](xref:MapKit.MKMapView.DequeueReusableAnnotation*).
 1. A classe `CustomMKAnnotationView` estende a classe `MKAnnotationView` com as propriedades `Id` e `Url` que correspondem às propriedades idênticas na instância `CustomPin`. Uma nova instância da `CustomMKAnnotationView` é criada, desde que a anotação seja `null`:
     - A propriedade `CustomMKAnnotationView.Image` está definida como a imagem que representará a anotação no mapa.
     - A propriedade `CustomMKAnnotationView.CalloutOffset` é definida como um `CGPoint` que especifica que o texto explicativo será centralizado acima da anotação.
@@ -281,7 +281,7 @@ Esse método garante que a anotação seja exibida como uma imagem personalizada
     - A propriedade `CustomMKAnnotationView.RightCalloutAccessoryView` é definida como um botão *Informações* que será exibido à direita do título da anotação e do endereço.
     - A propriedade `CustomMKAnnotationView.Id` é definida como a propriedade `CustomPin.Id` retornada pelo método `GetCustomPin`. Isso permite que a anotação seja identificada para que seu [texto explicativo possa ser personalizado ainda mais](#Selecting_the_Annotation), se desejado.
     - A propriedade `CustomMKAnnotationView.Url` é definida como a propriedade `CustomPin.Url` retornada pelo método `GetCustomPin`. A URL será direcionada quando o usuário [tocar o botão exibido na exibição acessório direita do texto explicativo](#Tapping_on_the_Right_Callout_Accessory_View).
-1. A propriedade [`MKAnnotationView.CanShowCallout`](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) é definida como `true` para que o texto explicativo seja exibido quando a anotação é tocada.
+1. A propriedade [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) é definida como `true` para que o texto explicativo seja exibido quando a anotação é tocada.
 1. A anotação é retornada para a exibição no mapa.
 
 <a name="Selecting_the_Annotation" />
@@ -403,8 +403,8 @@ Desde que o renderizador personalizado esteja anexado a um novo elemento do Xama
 
 A classe `CustomMapRenderer` implementa a interface `GoogleMap.IInfoWindowAdapter` para [personalizar a janela de informações](#Customizing_the_Info_Window). Essa interface especifica que os seguintes métodos precisam ser implementados:
 
-- `public Android.Views.View GetInfoWindow(Marker marker)` – esse método é chamado para retornar uma janela de informações personalizada para um marcador. Se ele retornar `null`, a renderização de janela padrão será usada. Se ele retornar uma `View`, essa `View` será colocada dentro do quadro da janela de informações.
-- `public Android.Views.View GetInfoContents(Marker marker)` – esse método é chamado para retornar uma `View` que traz o conteúdo da janela de informações e só será chamado se o método `GetInfoWindow` retornar `null`. Se ele retornar `null`, a renderização padrão do conteúdo da janela de informações será usada.
+- `public Android.Views.View GetInfoWindow(Marker marker)` – Esse método é chamado para retornar uma janela de informações personalizada para um marcador. Se ele retornar `null`, a renderização de janela padrão será usada. Se ele retornar uma `View`, essa `View` será colocada dentro do quadro da janela de informações.
+- `public Android.Views.View GetInfoContents(Marker marker)` – Esse método é chamado para retornar uma `View` que traz o conteúdo da janela de informações e só é chamado se o método `GetInfoWindow` retorna `null`. Se ele retornar `null`, a renderização padrão do conteúdo da janela de informações será usada.
 
 No aplicativo de exemplo, somente o conteúdo da janela de informações é personalizado e, portanto, o método `GetInfoWindow` retorna `null` para permitir isso.
 
@@ -663,4 +663,4 @@ Este artigo demonstrou como criar um renderizador personalizado para o controle 
 - [Controle de mapas](~/xamarin-forms/user-interface/map.md)
 - [Mapas do iOS](~/ios/user-interface/controls/ios-maps/index.md)
 - [API de mapas](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Marcador personalizado (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+- [Marcador personalizado (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)

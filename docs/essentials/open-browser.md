@@ -4,13 +4,14 @@ description: A classe Browser no Xamarin.Essentials permite que um aplicativo ab
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 4a822b4b6738e261b9ddaee02334ad629e1d4879
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.date: 04/02/2019
+ms.custom: video
+ms.openlocfilehash: 3f9e5a7a1e20b8e7d708ff80712e6262bae4baa7
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175311"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869581"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Navegador
 
@@ -63,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 O Modo de Inicialização determina como o navegador é iniciado:
 
@@ -75,17 +76,17 @@ As [Custom Tabs do Chrome](https://developer.chrome.com/multidevice/android/cust
 
 Uma `Intent` será usada para solicitar o Uri que será aberto por meio do navegador normal dos sistemas.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Sistema preferido
 
-[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) é usado para carregar o Uri e manter o reconhecimento da navegação.
+[SFSafariViewController](xref:SafariServices.SFSafariViewController) é usado para carregar o Uri e manter o reconhecimento da navegação.
 
 ## <a name="external"></a>Externo
 
 O padrão `OpenUrl` no aplicativo principal é usado para iniciar o navegador padrão fora do aplicativo.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 O navegador padrão do usuário sempre será iniciado independentemente do `BrowserLaunchMode`.
 
@@ -95,3 +96,10 @@ O navegador padrão do usuário sempre será iniciado independentemente do `Brow
 
 - [Código-fonte do Browser](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
 - [Documentação da API do Browser](xref:Xamarin.Essentials.Browser)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

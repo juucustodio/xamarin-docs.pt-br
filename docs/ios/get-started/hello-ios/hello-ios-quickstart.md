@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 336f1ec4e4406d2ab40c5e8aea247bd3be9ed765
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ed59f32711bae56672d1d7f114fbb80a906d67ce
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672723"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855283"
 ---
 # <a name="hello-ios--quickstart"></a>Olá, iOS – Guia de Início Rápido
 
@@ -42,7 +42,7 @@ O [guia de Instalação do Mac do Xamarin.iOS](~/ios/get-started/installation/ma
 
 O Xamarin.iOS funciona com a seguinte configuração:
 
-- A versão mais recente do Visual Studio 2017 Community, Professional ou Enterprise no Windows 10, emparelhada com um host de build do Mac que atenda às especificações acima.
+- A versão mais recente do Visual Studio 2019 ou Visual Studio 2017 Community, Professional ou Enterprise no Windows 10, emparelhada com um host de build do Mac que atenda às especificações acima.
 
 O [Guia de instalação do Xamarin.iOS no Windows](~/ios/get-started/installation/windows/index.md) está disponível para fornecer instruções de instalação passo a passo.
 
@@ -494,7 +494,7 @@ Agora é hora de examinar as ferramentas e as habilidades mostradas neste guia n
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Ícones de aplicativo e imagens de inicialização do Xamarin (amostra)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
-- [Hello, iOS (amostra)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Ícones de aplicativo e imagens de inicialização do Xamarin (exemplo)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
+- [Hello, iOS (exemplo)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

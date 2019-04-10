@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 12fcf6ff1b289c773e0dce03be4ac62105f6acd4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
+ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669460"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58751258"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS – Aprofundamento
 
@@ -310,7 +310,7 @@ Para obter mais informações sobre como trabalhar com controladores de exibiç�
 
 A função mais importante do controlador de exibição é responder a interações do usuário como pressionamentos de botão, navegação e muito mais. A maneira mais simples de manipular a interação do usuário é conectar um controle para escutar a entrada do usuário e anexar um manipulador de eventos para responder à entrada. Por exemplo, um botão pode ser conectado para responder a um evento de toque, conforme demonstrado no aplicativo Phoneword.
 
-Agora que você já tem uma compreensão mais profunda das exibições e controladores de exibição, vamos explorar como isso funciona.
+Vamos explorar como isso funciona.
 No projeto `Phoneword_iOS`, um botão chamado `TranslateButton` foi adicionado à hierarquia de exibição de conteúdo:
 
 [![](hello-ios-deepdive-images/image1.png "Um botão chamado TranslateButton foi adicionado à Hierarquia de exibição de conteúdo")](hello-ios-deepdive-images/image1.png#lightbox)

@@ -1,7 +1,15 @@
+---
+ms.openlocfilehash: 090d9916206572c2d23fab24236f500b197ddc4f
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855362"
+---
 ||Recomendado|Observações|
 |---|---|---|
 |**Sistema operacional**|Windows 10|A versão mínima do sistema operacional é Windows 7. O suporte à Plataforma Universal do Windows Xamarin.Forms exige o Windows 10.
-|**Xamarin.iOS**|SDK do iOS 10 (instalado em um Mac)|Para criar projetos do iOS no Windows, é necessário:<ul><li>Visual Studio 2017 e</li><li>um computador Mac, <a href="~/ios/get-started/installation/windows/connecting-to-mac/index.md">acessível pela rede</a> do computador Windows, que esteja em conformidade com os requisitos mínimos para executar o Xamarin no macOS.</li></ul>|
+|**Xamarin.iOS**|SDK do iOS 10 (instalado em um Mac)|Para criar projetos do iOS no Windows, é necessário:<ul><li>Visual Studio 2017 (é recomendado o Visual Studio 2019) e</li><li>um computador Mac, <a href="~/ios/get-started/installation/windows/connecting-to-mac/index.md">acessível pela rede</a> do computador Windows, que esteja em conformidade com os requisitos mínimos para executar o Xamarin no macOS.</li></ul>|
 |**Xamarin.Android**|Android 6.0 / API nível 23|Você ainda pode direcionar versões mais antigas do Android enquanto estiver usando o SDK mais recente ou pode compilar em relação a versões anteriores do SDK, se necessário.|
 |**Xamarin.Forms**||<ul><li>Aplicativos Xamarin.Forms para iOS e Android podem ser implantados nas plataformas relevantes, conforme descrito acima.</li><li>Usar o Visual Studio também significa que você pode testar aplicativos da Plataforma Universal do Windows (no Windows 10) diretamente no computador de desenvolvimento.</li></ul>|
 |**Xamarin.Mac**||Projetos Xamarin.Mac (aplicativos de área de trabalho do macOS) podem ser abertos no Visual Studio e compilados para verificar se há erros, mas aplicativos Mac não podem ser criados atualmente para a distribuição no Visual Studio. Consulte as notas de versão no <a href="https://developer.xamarin.com/releases/vs/xamarin.vs_4/xamarin.vs_4.2/#Xamarin.Mac_minimum_support.">Suporte do Xamarin.Mac</a> para obter mais informações sobre as limitações de projetos Mac no Visual Studio.|

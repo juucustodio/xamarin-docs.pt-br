@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: b8f36ef407c3acc9b3472539735816649e13b7db
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672658"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855231"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introdução ao ciclo de vida de desenvolvimento de software móvel
 
@@ -151,11 +151,11 @@ Isso permite aos desenvolvedores o uso de um canal de distribuição para seus a
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### <a name="uwp"></a>UWP 
+#### <a name="uwp"></a>UWP
 
 Aplicativos UWP são distribuídos aos usuários por meio da Microsoft Store. Os desenvolvedores enviam seus aplicativos para aprovação e depois disso eles aparecem na loja. Para saber mais sobre como publicar aplicativos do Windows, consulte a documentação de [Publicação](https://docs.microsoft.com/windows/uwp/publish/) da UWP.
 
-## <a name="mobile-development-considerations"></a>Considerações sobre Desenvolvimento Móvel
+## <a name="mobile-development-considerations"></a>Considerações sobre desenvolvimento móvel
 
 Embora o desenvolvimento de aplicativos móveis não seja fundamentalmente diferente de desenvolvimento de área de trabalho/Web tradicional em termos de arquitetura ou processo, há algumas considerações sobre as quais devemos estar atentos.
 
@@ -233,7 +233,7 @@ Essa é uma etapa essencial no modelo de distribuição Android por causa do mod
 
 #### <a name="multitasking"></a>Multitarefa
 
-A execução multitarefa na UWP tem duas partes: o ciclo de vida de páginas e aplicativos e os processos em segundo plano. Cada tela em um aplicativo é uma instância de uma classe de página, que tem eventos associados que estão sendo tornados ativos ou inativos (com regras especiais para lidar com o estado inativo ou sendo "marcados para exclusão"). 
+A execução multitarefa na UWP tem duas partes: o ciclo de vida de páginas e aplicativos e os processos em segundo plano. Cada tela em um aplicativo é uma instância de uma classe de página, que tem eventos associados que estão sendo tornados ativos ou inativos (com regras especiais para lidar com o estado inativo ou sendo "marcados para exclusão").
 
 A segunda parte é fornecer agentes de segundo plano para tarefas de processamento, mesmo quando o aplicativo não está em execução em primeiro plano. 
 
@@ -249,9 +249,8 @@ Para saber mais sobre considerações de segurança importantes na UWP, consulte
 
 Este guia forneceu uma introdução para o SDLC, pois ele diz respeito ao desenvolvimento móvel. Ele introduziu considerações gerais para a criação de aplicativos móveis e examinou uma série de considerações específicas da plataforma incluindo design, teste e implantação.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="next-steps"></a>Próximas etapas
 
 - [Introdução ao desenvolvimento móvel](~/cross-platform/get-started/introduction-to-mobile-development.md)
-- [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
-- [Conceitos básicos de aplicativo](~/cross-platform/app-fundamentals/index.md)
+- [Introdução ao Xamarin](~/get-started/index.yml)
+- [Compartilhando código entre plataformas](~/cross-platform/app-fundamentals/index.md)

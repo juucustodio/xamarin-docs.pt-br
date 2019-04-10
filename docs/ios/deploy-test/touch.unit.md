@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: b995ed5cf8d8735e87fb18c3a69d43b5a079b82f
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: f488ebe1df814a476346de15c740093fc6de54df
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674977"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854685"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Teste de unidade de aplicativos Xamarin.iOS
 
@@ -58,7 +58,7 @@ public partial class AppDelegate : UIApplicationDelegate
 ```
 
 > [!NOTE]
-> O tipo de projeto de teste de unidade do iOS não está disponível no Visual Studio 2017 no Windows.
+> O tipo de projeto de teste de unidade do iOS não está disponível no Visual Studio 2019 ou no Visual Studio 2017 no Windows.
 
 ## <a name="writing-some-tests"></a>Gravando alguns testes
 
