@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 2fa40925b67e60c5e03e3059c7c369f2a53ce540
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 314bedcb6bb2d7ebf9d8f98428b6a7cad059f73b
+ms.sourcegitcommit: 9e9340999d569a3db01b4b59a0fcf24b8caa869c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672424"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59509947"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introdução ao desenvolvimento de jogos com o Xamarin
 
@@ -24,11 +24,9 @@ Este artigo aborda os seguintes tópicos:
 - **Criando uma ideia de jogo** – nesta seção pode ajudá-lo a criar uma nova ideia de jogo – a primeira etapa na criação de um novo jogo.
 - **Tecnologia de desenvolvimento de jogos** – aqui vai listamos alguns das tecnologias de plataforma cruzada disponíveis que podem aumentar sua produtividade como desenvolvedor de jogos.
 
-
 ## <a name="game-vs-non-game-programming-concepts"></a>Jogos vs. Conceitos de programação não é de jogo
 
 Mover para o desenvolvimento de jogos de programadores muitas vezes se confrontam com novos conceitos e padrões de desenvolvimento. Esta seção apresenta uma visão geral de alguns desses conceitos.
-
 
 ### <a name="the-game-loop"></a>O Loop do jogo
 
@@ -53,7 +51,6 @@ Tipos comuns de lógica que pode ser executado cada quadro incluem:
 
 Tenha em mente que muitas das atividades listadas acima podem alterar o estado de todo o aplicativo, enquanto que muitos aplicativos não é de jogo tendem a alterar o estado em resposta a eventos que está sendo gerado.
 
-
 ### <a name="content-loading-and-unloading"></a>Carregar conteúdo e descarregar
 
 Conteúdo manualmente Carregando e descarregando (ou descarte) pode ser necessários, dependendo de qual tecnologia você está usando no desenvolvimento. Manualmente, carregamento e descarregamento de ativos podem ser necessários por uma série de motivos:
@@ -63,7 +60,6 @@ Conteúdo manualmente Carregando e descarregando (ou descarte) pode ser necessá
  - Jogos talvez seja necessário exibir mais ativos que pode caber na RAM. "Abrir o mundo" jogos geralmente incluem grandes ambientes que os jogadores podem navegar pelo perfeitamente – isso é com nenhuma tela de carregamento. Nesse caso, você talvez precise criar um sistema personalizado para o conteúdo de streaming em e gerenciar o uso de memória.
 
 Formatos de arquivo personalizado, talvez seja necessário processamento em tempo de carregamento, exigir que o código de carregamento de personalizado.
-
 
 ### <a name="math"></a>Matemática
 
@@ -77,17 +73,13 @@ Se você estiver familiarizado com o plano cartesiano – o que está usando coo
 > Alguns mecanismos/APIs usam um sistema de coordenadas onde aumentar o valor de Y de um objeto irá movê-lo para baixo, enquanto outros sistemas usam um sistema de coordenadas onde Y positivo está ativo. Tenha isso em mente, se você estiver movendo entre sistemas.
 Funções trigonométricas (como o seno e cosseno) normalmente são usadas em jogos 2D que implementam qualquer forma de rotação.
 
-
-
 Se você estiver planejando fazer um jogo 3D, em seguida, você provavelmente precisará estar familiarizado com conceitos de álgebra Linear (para rotação e movimentação no espaço 3D), bem como alguns cálculo (para a implementação de aceleração).
-
 
 ### <a name="content-pipelines"></a>Pipelines de conteúdo
 
 O termo *pipeline de conteúdo* refere-se ao processo de um arquivo necessário para obter do seu formato quando criado (por exemplo, um arquivo de imagem. png) em seu formato final quando usado em um jogo. O formato final depende em qual tipo de conteúdo está sendo usado, bem como qual tecnologia está sendo usada para apresentar o conteúdo.
 
 Alguns pipelines de conteúdo pode ser muito rápidas e não exigir nenhum esforço manual. Por exemplo, a maioria das APIs e mecanismos de jogos pode carregar o formato de arquivo. PNG em seu formato não processado. Por outro lado, mais complicados formatos (como modelos 3D) talvez precise ser processado em um formato diferente antes que está sendo carregado, e esse processamento pode demorar algum tempo dependendo do tamanho e da complexidade do ativo.
-
 
 ## <a name="game-development-teams"></a>Equipes de desenvolvimento de jogos
 
@@ -98,7 +90,6 @@ Desenvolvimento de jogos apresenta novas funções e títulos para as pessoas en
 - **3D artistas** – artistas 3D são responsáveis pela criação *ativos 3D*. Eles incluem modelos 3D para ambientes, caracteres e objetos (móveis, plantas e outros objetos inanimados). Algumas equipes de diferenciam entre artistas 3D e animadores 3D, dependendo do tamanho da equipe. Você pode encontrar livre arte 3D para o seu jogo no [ http://opengameart.org/ ](http://opengameart.org/) .
 - **Designer de jogos** – designers de jogos são responsáveis por definir como o jogo. Isso pode incluir as decisões de alto nível, como a configuração do jogo, o objetivo geral do jogo e como um jogador progride através do jogo. Designers de jogo também podem ser envolvidos nas decisões muito detalhadas, como a entrada de mapeamento para ações, definindo os coeficientes para movimentação ou nível-no-break e criação de layout de nível. Tenha em mente que o termo *designer* podem se referir a um jogo designer ou um designer visual, dependendo do contexto.
 - **Designer de som** – designers de som são responsáveis por ativos de áudio de um jogo. Algumas equipes podem diferenciar entre os indivíduos responsáveis pela criação de efeitos de som e compositores, enquanto as equipes menores podem ter um único indivíduo responsável por todo o áudio.
-
 
 ## <a name="creating-a-game-idea"></a>Criando uma ideia de jogo
 
@@ -114,11 +105,9 @@ Outra técnica para a geração de novas ideias é considerar um gênero especí
 
 Refazendo a jogos existentes também é uma experiência educacional, embora isso pode limitar a viabilidade de comercial do produto acabado. O processo de criação de um jogo, mesmo um que é um clone preciso, fornece uma experiência de educacional valiosa.
 
-
 ## <a name="game-development-technology"></a>Tecnologia de desenvolvimento de jogos
 
 Os desenvolvedores que usam o xamarin. Android e xamarin. IOS têm uma ampla variedade de tecnologias disponíveis a eles para ajudar no desenvolvimento de jogos. Esta seção aborda algumas das mais populares soluções de plataforma cruzada.
-
 
 ### <a name="cocossharp"></a>CocosSharp
 
@@ -133,7 +122,6 @@ O jogo Ovelha Ninjas é criado com CocosSharp e pode ser um bom ponto de partida
 ![](images/image3.png "O jogo Ninjas Ovelha foi criado com CocosSharp")
 
 Você pode baixá-lo e obter mais informações o [página do AngryNinjas Github](https://github.com/xamarin/AngryNinjas).
-
 
 ### <a name="monogame"></a>MonoGame
 
@@ -155,7 +143,6 @@ Bastiões:
 
 Para começar a trabalhar com o MonoGame, vá até nossa [MonoGame guias](~/graphics-games/monogame/index.md).
 
-
 ### <a name="urhosharp"></a>UrhoSharp
 
 UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar animadas cenas 3D e 2D para seus aplicativos usando geometrias, material, luzes e câmeras.
@@ -176,4 +163,4 @@ As tecnologias realçadas acima é apenas uma amostra das tecnologias disponíve
 
 - [Guias de CocosSharp](~/graphics-games/cocossharp/index.md)
 - [Guias de MonoGame](~/graphics-games/monogame/index.md)
-- [Guias de UrhoSharp](~/graphics-games/urhosharp/index.md)
+- [UrhoSharp Guides](~/graphics-games/urhosharp/index.md)

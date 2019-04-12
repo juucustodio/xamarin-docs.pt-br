@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
-ms.openlocfilehash: e165e6c713028517d69fee92916c94bbf0e46f33
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
+ms.sourcegitcommit: 9e9340999d569a3db01b4b59a0fcf24b8caa869c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329229"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59509896"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/FormsGallery/)
+[![DBaixar a amostra](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Modos de exibição do xamarin. Forms são os blocos de construção de interfaces de usuário móvel de plataforma cruzada._
 
@@ -183,7 +183,7 @@ Essas duas classes derivam a [ `InputView` ](xref:Xamarin.Forms.InputView) class
 
 |     |     |
 | --- | --- |
-| [`ListView`](xref:Xamarin.Forms.ListView) deriva [ `ItemsView[Cell]` ](xref:Xamarin.Forms.ItemsView`1) e exibe uma lista rolável de itens de dados podem ser selecionados. Definir a [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriedade a uma coleção de objetos e defina o [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propriedade para um [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objeto que descreve como os itens são a ser formatado. O [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento sinaliza que uma seleção foi feita, que está disponível como a [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propriedade.<br /><br />[Documentação da API](xref:Xamarin.Forms.ListView) / [guia](~/xamarin-forms/user-interface/listview/index.md) / [exemplo](https://developer.xamarin.com/samples/WorkingWithListview) | [![exemplo ListView](views-images/ListView.png "Exemplo de ListView")](views-images/ListView-Large.png#lightbox "exemplo ListView")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+| [`ListView`](xref:Xamarin.Forms.ListView) deriva [ `ItemsView` ](xref:Xamarin.Forms.ItemsView`1) e exibe uma lista rolável de itens de dados podem ser selecionados. Definir a [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriedade a uma coleção de objetos e defina o [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propriedade para um [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objeto que descreve como os itens são a ser formatado. O [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento sinaliza que uma seleção foi feita, que está disponível como a [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propriedade.<br /><br />[Documentação da API](xref:Xamarin.Forms.ListView) / [guia](~/xamarin-forms/user-interface/listview/index.md) / [exemplo](https://developer.xamarin.com/samples/WorkingWithListview) | [![exemplo ListView](views-images/ListView.png "Exemplo de ListView")](views-images/ListView-Large.png#lightbox "exemplo ListView")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="picker"></a>Seletor
@@ -205,5 +205,5 @@ Essas duas classes derivam a [ `InputView` ](xref:Xamarin.Forms.InputView) class
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
-- [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Documentação da API do Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Exemplos do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Documentação da API de xamarin. Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
