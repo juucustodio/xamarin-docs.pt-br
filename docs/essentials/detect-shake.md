@@ -5,12 +5,12 @@ ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: f1482de3fd1c3e550ac9739d0f815092f7fe753d
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 2a14d739806fef353472a5186a9dbedd8e218662
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58176009"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59019302"
 ---
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Detectar movimento
 
@@ -28,14 +28,14 @@ Adicione uma referência ao Xamarin.Essentials na classe:
 using Xamarin.Essentials;
 ```
 
-Para detectar um movimento do dispositivo, você deve usar a funcionalidade do acelerômetro, chamando os métodos `Start` e `Stop` para ouvir alterações na aceleração e detectar um movimento. Sempre que um movimento for detectado, um evento `ShakeDetected ` será disparado. Veja um exemplo de uso:
+Para detectar um movimento do dispositivo, você deve usar a funcionalidade do acelerômetro, chamando os métodos `Start` e `Stop` para ouvir alterações na aceleração e detectar um movimento. Sempre que um movimento for detectado, um evento `ShakeDetected ` será disparado. Recomenda-se usar `Game` ou mais veloz para o `SensorSpeed`. Veja um exemplo de uso:
 
 ```csharp
 
 public class DetectShakeTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.UI;
+    SensorSpeed speed = SensorSpeed.Game;
 
     public DetectShakeTest()
     {
