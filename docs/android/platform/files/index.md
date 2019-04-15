@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2978f0b2bcbdd463876784a9addd7dec055b8af9
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116791"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574813"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>O armazenamento de arquivos e acesso com o xamarin. Android
 
@@ -64,17 +64,16 @@ Este documento fará referência para o diretório de armazenamento interno como
 
 Para maximizar o compartilhamento de código, os aplicativos xamarin. Android (ou aplicativos xamarin. Forms com foco em xamarin. Android) devem usar o [ `System.Environment.GetFolderPath()` ](xref:System.Environment.GetFolderPath*) método. No xamarin. Android, esse método retornará uma cadeia de caracteres para um diretório que é o mesmo local que `Android.Content.Context.FilesDir`. Esse método usa uma enum, `System.Environment.SpecialFolder`, que é usado para identificar um conjunto de constantes enumeradas que representam os caminhos de pastas especiais usados pelo sistema operacional. Nem todos os `System.Environment.SpecialFolder` valores serão mapeadas para um diretório válido no xamarin. Android. A tabela a seguir descreve o caminho pode ser esperado para um determinado valor de `System.Environment.SpecialFolder`:
 
-| SpecialFolder | Caminho  |
+| System.Environment.SpecialFolder | Caminho  |
 |----------------------|---|
-| `ApplicationData` | **_INTERNO\_armazenamento_/.config** |
-| `Desktop` | **_INTERNO\_armazenamento_  /área de trabalho** |
-| `LocalApplicationData` | **_INTERNO\_armazenamento_/.local/share** |
-| `MyComputer` | **_INTERNO\_armazenamento_/.local/share** |
-| `MyDocuments` | **_INTERNO\_ARMAZENAMENTO_** |
-| `MyMusic` | **_INTERNO\_armazenamento_/Music** |
-| `MyPictures` | **_INTERNO\_armazenamento_/Music** |
-| `MyVideos` | **_INTERNO\_armazenamento_/Videos** |
-| `Personal` | **_INTERNO\_ARMAZENAMENTO_** |
+| `ApplicationData` | **_INTERNAL\_STORAGE_/.config** |
+| `Desktop` | **_INTERNAL\_STORAGE_/Desktop** |
+| `LocalApplicationData` | **_INTERNAL\_STORAGE_/.local/share** |
+| `MyDocuments` | **_INTERNAL\_STORAGE_** |
+| `MyMusic` | **_INTERNAL\_STORAGE_/Music** |
+| `MyPictures` | **_INTERNAL\_STORAGE_/Pictures** |
+| `MyVideos` | **_INTERNAL\_STORAGE_/Videos** |
+| `Personal` | **_INTERNAL\_STORAGE_** |
 
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>Lendo ou gravando em arquivos no armazenamento interno
