@@ -1,19 +1,19 @@
 ---
-title: Noções básicas do recurso do Android
+title: Noções básicas sobre o recurso do Android
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0f747c37362997563a35d9b94f8e677d4104ee1
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110128"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587758"
 ---
-# <a name="android-resource-basics"></a>Noções básicas do recurso do Android
+# <a name="android-resource-basics"></a>Noções básicas sobre o recurso do Android
 
 Quase todos os aplicativos Android que algum tipo de recursos dentro deles; no mínimo, eles geralmente têm os layouts de interface do usuário na forma de arquivos XML. Quando um aplicativo xamarin. Android é criado, os recursos padrão são configuradas pelo modelo de projeto xamarin. Android:
 
@@ -96,8 +96,8 @@ Isso permite que o arquivo **icon. PNG** ao ser chamado no código como `Resourc
 
 Ao fazer referência a recursos por meio de programação (código), eles podem ser acessados por meio da hierarquia de classe de recursos que usa a seguinte sintaxe:
 
-```xml
-@[<PackageName>.]Resource.<ResourceType>.<ResourceName>
+```csharp
+[<PackageName>.]Resource.<ResourceType>.<ResourceName>
 ```
 
 -  **PackageName** &ndash; o pacote que está fornecendo o recurso e só é necessário quando os recursos de outros pacotes que estão sendo usados.
@@ -112,7 +112,7 @@ Ao fazer referência a recursos por meio de programação (código), eles podem 
 Recursos em um arquivo XML são acessados por um seguindo uma sintaxe especial:
 
 ```xml
-@[<PackageName>:]<ResourceType>/<ResourceName>.
+@[<PackageName>:]<ResourceType>/<ResourceName>
 ```
 
 -  **PackageName** &ndash; o pacote que está fornecendo o recurso e só é necessário quando os recursos de outros pacotes que estão sendo usados.
@@ -136,8 +136,7 @@ Por exemplo, o conteúdo de um arquivo de layout **Main. axml**, são da seguint
 </LinearLayout>
 ```
 
-Este exemplo tem um [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) que requer um recurso desenhável denominado **sinalizador**. O `ImageView` tem sua `src` atributo definido como **@drawable/flag**. Quando a atividade é iniciado, o Android ficará dentro do diretório **recurso/Drawable** para um arquivo denominado **flag.png** (a extensão de arquivo pode ser outro formato de imagem, como **flag.jpg**) e carregue o arquivo e exibi-lo no `ImageView`.
+Este exemplo tem um [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) que requer um recurso desenhável denominado **sinalizador**. O `ImageView` tem sua `src` atributo definido como `@drawable/flag`. Quando a atividade é iniciado, o Android ficará dentro do diretório **recurso/Drawable** para um arquivo denominado **flag.png** (a extensão de arquivo pode ser outro formato de imagem, como **flag.jpg**) e carregue o arquivo e exibi-lo no `ImageView`.
 Quando esse aplicativo é executado, ele seria algo semelhante a imagem a seguir:
 
 ![ImageView localizada](android-resource-basics-images/03-localized-screenshot.png)
-

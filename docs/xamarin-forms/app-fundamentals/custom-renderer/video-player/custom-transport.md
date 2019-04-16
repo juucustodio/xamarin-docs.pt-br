@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58870151"
 ---
 # <a name="custom-video-transport-controls"></a>Controles personalizados de transporte de vídeo
 
-[![DBaixar a amostra](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Os controles de transporte de um player de vídeo incluem os botões que executam as funções **Reproduzir**, **Pausar** e **Parar**. Em geral, esses botões são identificados com ícones conhecidos, em vez de um texto, e as funções **Reproduzir** e **Pausar** geralmente são combinadas em um botão.
 
@@ -540,7 +540,7 @@ Há suporte para isso em cada plataforma, exceto que ele é um triângulo preto 
 
 Isso é o que é usado na marcação mostrada abaixo. No iOS, ele fornece o símbolo **Reproduzir** a mesma aparência 3D dos botões **Pausar** e **Parar**, mas a variante não funciona no Android e no UWP.
 
-A página **Transporte personalizado** define a propriedade **AreTransportControlsEnabled** como **falso** e inclui um `ActivityIndicator` exibido quando o vídeo está sendo carregado e dois botões. `DataTrigger` Os objetos são usados para habilitar e desabilitar o `ActivityIndicator` e os botões, bem como para alternar o primeiro botão entre **Reproduzir** e **Pausar**:
+A página **Transporte personalizado** define a propriedade **AreTransportControlsEnabled** como **falso** e inclui um `ActivityIndicator` exibido quando o vídeo está sendo carregado e dois botões. Os objetos `DataTrigger` são usados para habilitar e desabilitar o `ActivityIndicator` e os botões, bem como para alternar o primeiro botão entre **Reproduzir** e **Pausar**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -660,4 +660,4 @@ Em um aplicativo de produção, provavelmente, você desejará usar suas própri
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do player de vídeo (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demonstrações do player de vídeo (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
