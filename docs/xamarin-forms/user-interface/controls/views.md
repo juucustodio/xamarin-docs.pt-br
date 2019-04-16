@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
 ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
-ms.sourcegitcommit: 9e9340999d569a3db01b4b59a0fcf24b8caa869c
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/16/2019
 ms.locfileid: "59509896"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
-[![DBaixar a amostra](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/FormsGallery/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Modos de exibição do xamarin. Forms são os blocos de construção de interfaces de usuário móvel de plataforma cruzada._
 
@@ -205,5 +205,5 @@ Essas duas classes derivam a [ `InputView` ](xref:Xamarin.Forms.InputView) class
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
-- [Exemplos do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Documentação da API de xamarin. Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Documentação da API do Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

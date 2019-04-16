@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/16/2019
 ms.locfileid: "58854984"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Store dados em um banco de dados Local SQLite.NET
 
-[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 Neste início rápido, você aprenderá como:
 
@@ -455,5 +455,5 @@ Para definir o estilo de aplicativo com os estilos XAML, continue para o próxim
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Anotações (amostra)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [Notas (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 - [Aprofundamento de início rápido do xamarin. Forms](deepdive.md)
