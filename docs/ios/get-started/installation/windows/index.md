@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 12066b25ff3e5f02cf4ad17e7c8cbfdb31395405
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.openlocfilehash: 7c7a3e311a6c5f19242b51dd14f59bcdc9a75c64
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58854880"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574709"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Como instalar o Xamarin.iOS no Windows
 
@@ -27,11 +27,16 @@ Para criar aplicativos do Xamarin.iOS com o Visual Studio 2019 no Windows, você
 
 - Um computador Windows com o Visual Studio 2019 instalado. Ele pode ser físico ou uma máquina virtual.
 
-  - [Requisitos do sistema do Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
+  - [Requisitos de sistema do Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
 
 - Uma rede acessível por Mac configurada com ferramentas de build da Apple e Xamarin.iOS. O Visual Studio 2019 acessa esse computador através de uma conexão de rede para usar as ferramentas de build da Apple, que são necessárias para compilar aplicativos do iOS nativos.
 
   - [Requisitos de sistema do Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
+
+  > [!TIP]
+  > Você não tem acesso a um Mac?
+  >
+  > Se não tiver acesso a um Mac, você poderá usar [MacinCloud](https://www.macincloud.com/pages/visual-studio-mac.html) ou [MacStadium](https://www.macstadium.com/). Ambos os serviços fornecem o hardware do Mac baseado em nuvem que você pode usar para criar projetos do Xamarin.iOS.
 
 ## <a name="setup"></a>Configuração
 
@@ -67,7 +72,7 @@ Para obter a configuração para o desenvolvimento do Xamarin.iOS no Visual Stud
 Para criar aplicativos Xamarin.iOS com o Visual Studio 2017 no Windows, você precisará de:
 
 -  Um computador Windows com o Visual Studio 2017 instalado. Ele pode ser físico ou uma máquina virtual.
-    - [Requisitos do sistema do Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
+    - [Requisitos de sistema do Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
     
 -  Uma rede acessível por Mac configurada com ferramentas de build da Apple e Xamarin.iOS. O Visual Studio 2017 acessa esse computador com uma conexão de rede para usar as ferramentas de build da Apple, que são necessárias para compilar aplicativos do iOS nativos. 
     - [Requisitos de sistema do Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
