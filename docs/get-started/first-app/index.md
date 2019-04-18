@@ -9,16 +9,16 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2019
-ms.openlocfilehash: 0031cb7fb46cf5ad35872963fd3c3def0a2ae9a6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.openlocfilehash: 5dc37212facbc5b58b807d3fbcba8650a5b065f8
+ms.sourcegitcommit: 34819671c7910d29f018bdb394ddd4a4b0cd3a31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58855296"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59675810"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Compilar seu primeiro aplicativo Xamarin.Forms
 
-_Assista a este vídeo e acompanhá-lo para criar seu primeiro aplicativo móvel com xamarin. Forms._
+_Assista a este vídeo e acompanhe-o para compilar seu primeiro aplicativo móvel com Xamarin.Forms._
 
 ::: zone pivot="windows"
 
@@ -26,13 +26,13 @@ _Assista a este vídeo e acompanhá-lo para criar seu primeiro aplicativo móvel
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
-[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
 1. Escolha **arquivo > Novo > projeto...**  ou pressione o **criar novo projeto...**  botão:
 
-    [![Ccriar um novo projeto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+    [![Criar um novo projeto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
 2. Pesquise por "Xamarin" ou escolha **Mobile** da **tipo de projeto** menu. Selecione o **aplicativo móvel (xamarin. Forms)** tipo de projeto:
 
@@ -40,11 +40,11 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 3. Escolha um nome de projeto &ndash; o exemplo usa "AwesomeApp":
 
-    [![CEscolha um nome de projeto](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+    [![Escolha um nome de projeto](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
-4. Clique no **preto** tipo de projeto e verifique se **Android** e **iOS** estão selecionadas:
+4. Clique no **em branco** tipo de projeto e verifique se **Android** e **iOS** estão selecionadas:
 
-    [![Android e iOS, com o .NET Standard](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
+    [![Android e iOS, com .NET Standard](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
 
 5. Aguarde até que os pacotes do NuGet sejam restaurados (a mensagem "Restauração concluída" será exibida na barra de status).
 
@@ -81,17 +81,17 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
-[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
 1. Escolha **Arquivo > Novo > Projeto...**  ou pressione o botão **Criar novo projeto...** e, em seguida, selecione **Visual C# > Multiplataforma > Aplicativo Móvel (Xamarin.Forms)**:
 
-    [![Mobile App (xamarin. Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
+    [![Aplicativo Móvel (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
 2. Certifique-se de que **Android** e **iOS** estejam selecionados, com compartilhamento de código **.NET Standard**:
 
-    [![Android e iOS, com o .NET Standard](images/win/02-sml.png)](images/win/02.png#lightbox)
+    [![Android e iOS, com .NET Standard](images/win/02-sml.png)](images/win/02.png#lightbox)
 
 3. Aguarde até que os pacotes do NuGet sejam restaurados (a mensagem "Restauração concluída" será exibida na barra de status).
 
@@ -128,17 +128,17 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Instruções passo a passo para Mac
 
-[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
 1. Escolha **Arquivo > Nova Solução...** ou pressione o botão **Novo Projeto...** e, em seguida, selecione **Multiplataforma > Aplicativo > Aplicativo de Formulários em Branco**:
 
-    [![BAplicativo de formulários ranco](images/01-sml.png)](images/01.png#lightbox)
+    [![Aplicativo de Formulários em Branco](images/01-sml.png)](images/01.png#lightbox)
 
 2. Certifique-se de que **Android** e **iOS** estejam selecionados, com compartilhamento de código **.NET Standard**:
 
-    [![Android e iOS, com o .NET Standard](images/02-sml.png)](images/02.png#lightbox)
+    [![Android e iOS, com .NET Standard](images/02-sml.png)](images/02.png#lightbox)
 
 3. Restaure os pacotes do NuGet clicando com o botão direito do mouse na solução:
 
@@ -169,7 +169,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 8. Clique com o botão direito do mouse para definir o iOS para o **Projeto de inicialização**:
 
-    [![SET o projeto de inicialização para o iOS](images/08-sml.png)](images/08.png#lightbox)
+    [![Defina o projeto de inicialização como iOS](images/08-sml.png)](images/08.png#lightbox)
 
 9. Depure o aplicativo no iOS:
 

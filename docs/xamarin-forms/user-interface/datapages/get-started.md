@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: ef3ec5f8d1a2ded8fc7cae34663f10ab6eb7c86f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e3256787c0bc0852275f663772b8a91a6825a0dd
+ms.sourcegitcommit: 34819671c7910d29f018bdb394ddd4a4b0cd3a31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052965"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59675862"
 ---
 # <a name="getting-started-with-datapages"></a>Guia de Introdução DataSourceControl
 
@@ -34,7 +34,7 @@ Adicione esses pacotes do Nuget aos seus projetos de biblioteca e o aplicativo x
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
-* Uma implementação de tema (por exemplo, o Nuget Xamarin.Forms.Themes.Light)
+* Uma implementação de tema (por exemplo, o Nuget Xamarin.Forms.Theme.Light)
 
 ## <a name="2-add-theme-reference"></a>2. Adicionar referência de tema
 
@@ -51,7 +51,7 @@ No **App. XAML** do arquivo, adicione um personalizado `xmlns:mytheme` do tema e
 </Application>
 ```
 
-**IMPORTANTE:** você também deve seguir as etapas a serem [carregar assemblies de tema (abaixo)](#loadtheme) adicionando um código clichê para o iOS `AppDelegate` e Android `MainActivity`. Isso será melhorado em uma versão de visualização futura.
+**IMPORTANTE:** Você também deve seguir as etapas a serem [carregar assemblies de tema (abaixo)](#loadtheme) adicionando um código clichê para o iOS `AppDelegate` e Android `MainActivity`. Isso será melhorado em uma versão de visualização futura.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. Adicionar uma página XAML
