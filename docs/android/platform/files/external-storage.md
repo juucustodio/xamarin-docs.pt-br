@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
 ms.openlocfilehash: 78051fce44239eea86948988a4d19ac37c5ea0d5
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854893"
 ---
 # <a name="external-storage"></a>Armazenamento externo
@@ -140,17 +140,17 @@ Todos os aplicativos do Android devem declarar uma das duas permissões para arm
 > [!NOTE]
 > Se o usuário concede `WRITE_EXTERNAL_STORAGE`, em seguida, `READ_EXTERNAL_STORAGE` também é implicitamente concedida. Não é necessário solicitar as permissões no **androidmanifest. XML**.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 As permissões também podem ser adicionadas usando o **manifesto do Android** guia da **propriedades da solução**:
 
 ![Gerenciador de soluções – permissões necessárias para o Visual Studio](./images/required-permissions.w157.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 As permissões também podem ser adicionadas usando o **manifesto do Android** guia o **painel de propriedades de solução**:
 
-[![Solução Pad - permissões necessárias para o Visual Studio para Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![Painel de soluções – permissões necessárias para o Visual Studio para Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 
@@ -172,7 +172,7 @@ $ adb shell pm revoke com.companyname.app android.permission.WRITE_EXTERNAL_STOR
 
 ## <a name="deleting-files"></a>Excluindo arquivos
 
-Qualquer uma das APIs do C# pode ser usadas para excluir um arquivo de armazenamento externo, como o padrão de [ `System.IO.File.Delete` ](xref:System.IO.File.Delete*). Também é possível usar as APIs de Java às custas de portabilidade do código. Por exemplo:
+Qualquer uma das APIs do c# pode ser usadas para excluir um arquivo de armazenamento externo, como o padrão de [ `System.IO.File.Delete` ](xref:System.IO.File.Delete*). Também é possível usar as APIs de Java às custas de portabilidade do código. Por exemplo:
 
 ```csharp
 System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/files/count.txt");

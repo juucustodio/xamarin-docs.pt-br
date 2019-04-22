@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: c0875534d88ea5b66b3072c35b9d38894fe98934
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870021"
 ---
 # <a name="xamarinessentials-map"></a>Xamarin.Essentials: Mapa
@@ -103,31 +103,31 @@ public class MapTest
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
-- `NavigationMode` Compatível com Ciclismo, Condução de veículos e Caminhada.
+- `NavigationMode` oferece suporte a Ciclismo, Condução de veículos e Caminhada.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
-- `NavigationMode` Compatível com Condução de veículos, Trânsito e Caminhada.
+- `NavigationMode` oferece suporte a Condução de veículos, Trânsito e Caminhada.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-- `NavigationMode` Compatível com Condução de veículos, Trânsito e Caminhada.
+- `NavigationMode` oferece suporte a Condução de veículos, Trânsito e Caminhada.
 
 --------------
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 O Android usa o esquema de Uri `geo:` para iniciar o aplicativo de mapas no dispositivo. Isso pode levar o usuário a optar por um aplicativo existente que suporte esse esquema de Uri.  O Xamarin.Essentials é testado com o Google Maps, que é compatível com este esquema.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 Sem detalhes da implementação específica da plataforma.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Sem detalhes da implementação específica da plataforma.
 

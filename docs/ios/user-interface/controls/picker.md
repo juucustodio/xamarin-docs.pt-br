@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/14/2018
 ms.openlocfilehash: 946cba08e1e504962c093f67e336d72b654a3a41
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869995"
 ---
 # <a name="picker-control-in-xamarinios"></a>Controle de seletor no xamarin. IOS

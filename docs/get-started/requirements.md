@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
 ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854736"
 ---
 # <a name="xamarinforms-requirements"></a>Requisitos do Xamarin.Forms
@@ -52,19 +52,19 @@ Você precisa ter a plataforma das Ferramentas do SDK do Android e da API do And
 
 Além disso, a versão de destino/compilação para projetos do Android **deve** ser definida como *Usar a plataforma mais recente instalada*. No entanto, a versão mínima pode ser definida como API 19, de modo que você pode continuar dando suporte a dispositivos que usam Android 4.4 e mais recentes. Esses valores são definidos nas **Opções de Projeto**:
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-**Opções do projeto > aplicativo > Propriedades do aplicativo**
+**Opções de Projeto > Aplicativo > Propriedades do Aplicativo**
 
 ![Opções de build no Visual Studio](requirements-images/options-android-vs-sml.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-**Build > geral**
+**Build > Geral**
 
 ![Selecione a estrutura de destino mais recente](requirements-images/options-general-sml.png)
 
-**Build > aplicativo Android**
+**Build > Aplicativo Android**
 
 ![Selecione o mínimo e versões do Android para o aplicativo de destino](requirements-images/options-android-sml.png)
 
@@ -95,6 +95,6 @@ O desenvolvimento de aplicativos Xamarin.Forms para UWP requer:
 
 - Visual Studio de 2019 recomendado (Visual Studio 2017 versão 15,8 mínimo)
 
-- [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
+- [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 
 Você pode também [adicionar um aplicativo UWP (Plataforma Universal do Windows)](~/xamarin-forms/platform/windows/installation/index.md) a uma solução Xamarin.Forms existente a qualquer momento.

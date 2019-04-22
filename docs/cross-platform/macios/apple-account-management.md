@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.openlocfilehash: 8617d6e0c0930f581c45dbb461dfcb5d85a2becc
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855049"
 ---
 # <a name="apple-account-management"></a>Gerenciamento de contas da Apple
@@ -44,7 +44,7 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Obter
 
 ## <a name="adding-an-apple-developer-account"></a>Adicionando uma conta de desenvolvedor da Apple
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Para abrir a caixa de diálogo de gerenciamento de conta, acesse **Visual Studio > Preferências > conta de desenvolvedor da Apple**:
 
@@ -68,7 +68,7 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Obter
 
     ![Exibição mostrando de tela de detalhes identidades de assinatura e provisionamento perfis em seu computador](apple-account-management-images/image6.png)
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Antes de começar a adicionar sua ID da Apple ao Visual Studio de 2019, certifique-se de que seu ambiente de desenvolvimento está [emparelhado com um host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
@@ -109,11 +109,11 @@ Para criar uma nova identidade de assinatura, selecione a **criar um certificado
 
 Se uma opção na lista suspensa estiver esmaecida e desmarcada, isso significa que você não tem as permissões de equipe correta para criar esse tipo de certificado.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Criar opções de certificado](apple-account-management-images/image8.png)
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Criar opções de certificado](apple-account-management-images/prov3.png)
 
@@ -123,11 +123,11 @@ Se uma opção na lista suspensa estiver esmaecida e desmarcada, isso significa 
 
 A caixa de diálogo de detalhes de equipe também exibe uma lista de todos os perfis de provisionamento, conectado à sua conta de desenvolvedor. Você pode baixar todos os perfis de provisionamento em seu computador local, pressionando as **baixar todos os perfis** botão
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Seção de perfis de provisionamento de download](apple-account-management-images/image9.png)
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Seção de perfis de provisionamento de download](apple-account-management-images/prov4.png)
 

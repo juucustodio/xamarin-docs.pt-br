@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
 ms.openlocfilehash: 1b0771a0ccc2597ebd800468b82044e4020d9d94
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854607"
 ---
 # <a name="using-native-libraries"></a>Usar bibliotecas nativas
@@ -53,7 +53,7 @@ Para depurar código C++ nativo em seu projeto, siga estas etapas:
 2. Role para baixo até **opções de depuração**.
 3. No **depurador** menu suspenso, selecione **C++** (em vez do padrão **.Net (Xamarin)**).
 
-Os desenvolvedores do Visual Studio C++ podem ver o [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) de exemplo para testar a depuração de C++ de 2019 do Visual Studio ou Visual Studio 2017 com Xamarin; e consulte a nossa [postagem de blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) para obter mais informações.
+Visual Studio C++ os desenvolvedores podem ver o [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) exemplo tentar depurar C++ de 2019 do Visual Studio ou Visual Studio 2017 com Xamarin; e consulte a nossa [postagem do blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) para obter mais informações informações.
 
 
 

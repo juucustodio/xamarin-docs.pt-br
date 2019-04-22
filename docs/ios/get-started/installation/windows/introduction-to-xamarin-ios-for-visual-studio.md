@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
 ms.openlocfilehash: e6f95713fdf3dbe8983c9f51554df7165637fc9a
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855127"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introdução ao Xamarin.iOS para Visual Studio
@@ -83,7 +83,7 @@ Captura de tela abaixo mostra as janelas de saída disponíveis, que podem ser d
 
 - **Xamarin** – contém informações relacionadas apenas ao Xamarin, como a conexão ao Mac e o status de ativação.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Informações relacionadas apenas ao Xamarin, como a conexão com o Mac e o status de ativação")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Informações relacionadas apenas ao Xamarin, como a conexão ao Mac e o status de ativação")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Diagnóstico do Xamarin** – mostra informações mais detalhadas sobre seu projeto Xamarin, como a interação com Android.
 
@@ -149,7 +149,7 @@ Os blocos de log do Android e do iOS são unificados no Visual Studio 2017.
 
 A nova janela de ferramentas de Log do Dispositivo para Visual Studio permite mostrar logs de dispositivos Android e iOS. Ela pode ser exibida executando qualquer um dos seguintes comandos:
 
-- **Exibir > Outras Janelas > Log do Dispositivo**
+- **Exibir -> Outras Janelas -> Log do Dispositivo**
 - **Ferramentas > iOS > Log do Dispositivo**
 - **Barra de ferramentas do iOS > Log do Dispositivo**
 
@@ -181,7 +181,7 @@ Este artigo descreveu como usar o Xamarin iOS para Visual Studio. Ele listou os 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Instalação do Xamarin.iOS](~/ios/get-started/installation/windows/index.md)
+- [Xamarin.iOS Installation](~/ios/get-started/installation/windows/index.md)
 - [Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/index.md)
 - [Criando a interface do usuário iOS no Código](~/ios/app-fundamentals/ios-code-only.md)
 - [Conectar um Mac ao seu ambiente do Visual Studio com XMA (vídeo)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)

@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870190"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
@@ -34,7 +34,7 @@ Novo no iOS 9 e o iPhone 6s e iPhone 6s Plus, 3D Touch adiciona gestos confidenc
 
 Para obter mais informações, consulte nosso [Introdução ao 3D Touch](~/ios/platform/3d-touch.md) guia.
 
-## <a name="app-transport-security"></a>Segurança de transporte de aplicativo
+## <a name="app-transport-security"></a>Segurança do transporte de aplicativo
 
 Novo para o iOS 9, a segurança de transporte de aplicativo (ATS) impõe conexões seguras entre recursos da internet (como o servidor de back-end do aplicativo) e seu aplicativo. ATS garante que todas as comunicações de internet está em conformidade para proteger a conexão as práticas recomendadas, impedindo assim a divulgação acidental de informações confidenciais diretamente por meio de seu aplicativo ou uma biblioteca que ele está consumindo.
 

@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
 ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869722"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Core ML 2 no xamarin. IOS

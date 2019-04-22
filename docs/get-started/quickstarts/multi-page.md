@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854971"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Executar a navegação em um aplicativo xamarin. Forms de várias páginas
 
-[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 Neste início rápido, você aprenderá como:
 
@@ -617,5 +617,5 @@ Para modificar o aplicativo para que ele armazena seus dados em um banco de dado
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Anotações (amostra)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+- [Notas (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 - [Aprofundamento de início rápido do xamarin. Forms](deepdive.md)

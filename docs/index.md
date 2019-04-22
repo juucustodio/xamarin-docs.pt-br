@@ -9,10 +9,10 @@ ms.date: 02/12/2019
 featureFlags:
 - clicktale
 ms.openlocfilehash: ee92a3430fcce5bcd389d2bfa78762b71d1d5be9
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853996"
 ---
 <div id="main" class="v2">
@@ -176,7 +176,7 @@ Layout empilhado </a>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/label/index.yml">
                                                                         <img src="~/media/icons/i_form-label.svg" alt="">
-Rotular </a>
+Rótulo </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/button/index.yml">
@@ -191,7 +191,7 @@ Entrada de texto </a>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/editor/index.yml">
                                                                         <img src="~/media/icons/i_form-editor.svg" alt="">
-Editor de texto </a>
+Editor de Texto </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/image/index.yml">
@@ -225,12 +225,12 @@ Ciclo de vida do aplicativo </a>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/local-database/index.yml">
                                                                         <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="">
-Banco de Dados </a>
+Banco de dados </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/web-service/index.yml">
                                                                         <img src="https://docs.microsoft.com/media/common/i_server.svg" alt="">
-Serviços da Web </a>
+Serviços Web </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -743,24 +743,19 @@ Mac</a>
         <h2>Mantenha contato conosco</h2>
         <ul class="links">
            <li>
-                <a href="https://blog.xamarin.com/">
-Blog </a>
+                <a href="https://blog.xamarin.com/"> Blog </a>
             </li>
             <li>
-                <a href="https://forums.xamarin.com/">
-Fóruns </a>
+                <a href="https://forums.xamarin.com/"> Fóruns </a>
             </li>
             <li>
-                <a href="https://twitter.com/xamarinhq">
-Twitter </a>
+                <a href="https://twitter.com/xamarinhq"> Twitter </a>
             </li>
             <li>
-                <a href="https://stackoverflow.com/questions/tagged/xamarin">
-Stack Overflow </a>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://dotnet.microsoft.com/platform/community">
-Comunidade de Desenvolvedores </a>
+                <a href="https://dotnet.microsoft.com/platform/community"> Developer Community </a>
             </li>
         </ul>
     </div>

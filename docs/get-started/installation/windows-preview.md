@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
 ms.openlocfilehash: 9ce56891eeab73f661a9c22cc047c4d0bcb10337
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854789"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Instalação da versão prévia do Xamarin no Windows
@@ -38,7 +38,7 @@ A captura de tela **Instalador da Visualização** abaixo mostra as opções Pr�
 
 Durante o processo de instalação, um **Apelido da Instalação** pode ser aplicado à instalação lado a lado (para que possam ser diferenciados no menu Iniciar), conforme mostrado abaixo:
 
-[![eApelido da DIT antes de instalar](windows-images/vs2017-nickname-sml.png "Editar apelido antes de instalar")](windows-images/vs2017-nickname.png#lightbox)
+[![editar apelido antes de instalar](windows-images/vs2017-nickname-sml.png "editar apelido antes de instalar")](windows-images/vs2017-nickname.png#lightbox)
 
 ### <a name="uninstalling-visual-studio-2019-preview"></a>Desinstalando o Visual Studio Preview de 2019
 

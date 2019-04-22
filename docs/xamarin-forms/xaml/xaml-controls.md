@@ -9,15 +9,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
 ms.openlocfilehash: a8a61ac505eab8c458c49bde9184d6e96583d37f
-ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59020075"
 ---
 # <a name="xaml-controls"></a>Controles XAML
 
-[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/FormsGallery/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/FormsGallery/)
 
 Modos de exibição são objetos de interface do usuário, como rótulos, botões e controles deslizantes que são normalmente conhecidos como *controles* ou *widgets* em outros ambientes de programação gráficas. As exibições compatíveis com o xamarin. Forms todos derivam de [ `View` ](xref:Xamarin.Forms.View) classe.
 
@@ -48,7 +48,7 @@ Todas as exibições que são definidas no xamarin. Forms podem ser referenciada
 |     |     |
 | --- | --- |
 | <h3>Controle deslizante</h3>Permite a seleção de um `double` valor de um intervalo contínuo.<p align="center">![Captura de tela de um controle deslizante](xaml-controls-images/Slider.png "controle deslizante")</p>[API](xref:Xamarin.Forms.Slider) / [guia](~/xamarin-forms/user-interface/slider.md) | <p valign="center"><pre>&lt;Slider Minimum="0"<br />        Maximum="100"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>Passador</h3>Permite a seleção de um `double` valor de um intervalo de incremental.<p align="center">![Captura de tela de um seletor](xaml-controls-images/Stepper.png "escalonador")</p>[API](xref:Xamarin.Forms.Stepper) / [guia](~/xamarin-forms/user-interface/stepper.md) | <p valign="center"><pre>&lt;Stepper Minimum="0"<br />         Maximum="10"<br />         Increment="0.1"<br />         HorizontalOptions="Center"<br />         VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>Escalonador</h3>Permite a seleção de um `double` valor de um intervalo de incremental.<p align="center">![Captura de tela de um seletor](xaml-controls-images/Stepper.png "escalonador")</p>[API](xref:Xamarin.Forms.Stepper) / [guia](~/xamarin-forms/user-interface/stepper.md) | <p valign="center"><pre>&lt;Stepper Minimum="0"<br />         Maximum="10"<br />         Increment="0.1"<br />         HorizontalOptions="Center"<br />         VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Alternar</h3>Permite a seleção de um `boolean` valor.<p align="center">![Captura de tela de um comutador](xaml-controls-images/Switch.png "Switch")</p>[API](xref:Xamarin.Forms.Switch) | <p valign="center"><pre>&lt;Switch IsToggled="false"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>DatePicker</h3>Permite a seleção de uma data.<p align="center">![Captura de tela de um DatePicker](xaml-controls-images/DatePicker.png "DatePicker")</p>[API](xref:Xamarin.Forms.DatePicker) / [guia](~/xamarin-forms/user-interface/datepicker.md) | <p valign="center"><pre>&lt;DatePicker Format="D"<br/>            VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>TimePicker</h3>Permite a seleção de uma hora.<p align="center">![Captura de tela de um TimePicker](xaml-controls-images/TimePicker.png "TimePicker")</p>[API](xref:Xamarin.Forms.TimePicker) / [guia](~/xamarin-forms/user-interface/timepicker.md) | <p valign="center"><pre>&lt;TimePicker Format="T"<br />            VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
@@ -77,11 +77,11 @@ Todas as exibições que são definidas no xamarin. Forms podem ser referenciada
 | <h3>CollectionView</h3>Exibe uma lista rolável de itens selecionáveis de dados, usando as especificações de layout diferente.<p align="center">![Captura de tela de uma CollectionView](xaml-controls-images/CollectionView.png "CollectionView")</p>[Guia](~/xamarin-forms/user-interface/collectionview/index.md) | <p valign="center"><pre>&lt;CollectionView ItemsSource="{Binding Monkeys}"&gt;<br/>                ItemTemplate="{StaticResource MonkeyTemplate}"<br />    &lt;CollectionView.ItemsLayout&gt;<br />       &lt;GridItemsLayout Orientation="Vertical"<br />                        Span="2" /&gt;<br />    &lt;/CollectionView.ItemsLayout&gt;<br />&lt;/CollectionView/&gt;</pre></p> |
 | <h3>ListView</h3>Exibe uma lista rolável de itens de dados podem ser selecionados.<p align="center">![Captura de tela de um ListView](xaml-controls-images/ListView.png "ListView")</p>[API](xref:Xamarin.Forms.ListView) / [guia](~/xamarin-forms/user-interface/listview/index.md) | <p valign="center"><pre>&lt;ListView ItemsSource="{Binding Monkeys}"&gt;<br />          ItemTemplate="{StaticResource MonkeyTemplate}" /&gt;</pre></p> |
 | <h3>Seletor</h3>Exibe o item de seleção de uma lista de cadeias de caracteres de texto.<p align="center">![Captura de tela de um seletor](xaml-controls-images/Picker.png "seletor")</p>[API](xref:Xamarin.Forms.Picker) / [guia](~/xamarin-forms/user-interface/picker/index.md) | <p valign="center"><pre>&lt;Picker Title="Select a monkey"<br />        TitleColor="Red"&gt;<br />  &lt;Picker.ItemsSource&lt;<br />    &lt;x:Array Type="{x:Type x:String}"&gt;<br />      &lt;x:String&gt;Baboon&lt;/x:String&gt;<br />      &lt;x:String&gt;Capuchin Monkey&lt;/x:String&gt;<br />      &lt;x:String&gt;Blue Monkey&lt;/x:String&gt;<br />      &lt;x:String&gt;Squirrel Monkey&lt;/x:String&gt;<br />      &lt;x:String&gt;Golden Lion Tamarin&lt;/x:String&gt;<br />      &lt;x:String&gt;Howler Monkey&lt;/x:String&gt;<br />      &lt;x:String&gt;Japanese Macaque&lt;/x:String&gt;<br />    &lt;/x:Array&gt;<br />  &lt;/Picker.ItemsSource&gt;<br />&lt;/Picker&gt;</pre></p> |
-| <h3>TableView</h3>Exibe uma lista de linhas interativas.<p align="center">![Captura de tela de um modo de tabela](xaml-controls-images/TableView.png "modo de tabela")</p>[API](xref:Xamarin.Forms.TableView) / [guia](~/xamarin-forms/user-interface/tableview.md) | <p valign="center"><pre>&lt;TableView Intent="Settings"&gt;<br />    &lt;TableRoot&gt;<br />        &lt;TableSection Title="Ring"&gt;<br />            &lt;SwitchCell Text="New Voice Mail" /&gt;<br />            &lt;SwitchCell Text="New Mail" On="true" /&gt;<br />        &lt;/TableSection&gt;<br />    &lt;/TableRoot&gt;<br />&lt;/TableView&gt;</pre></p> |
+| <h3>Modo de tabela</h3>Exibe uma lista de linhas interativas.<p align="center">![Captura de tela de um modo de tabela](xaml-controls-images/TableView.png "modo de tabela")</p>[API](xref:Xamarin.Forms.TableView) / [guia](~/xamarin-forms/user-interface/tableview.md) | <p valign="center"><pre>&lt;TableView Intent="Settings"&gt;<br />    &lt;TableRoot&gt;<br />        &lt;TableSection Title="Ring"&gt;<br />            &lt;SwitchCell Text="New Voice Mail" /&gt;<br />            &lt;SwitchCell Text="New Mail" On="true" /&gt;<br />        &lt;/TableSection&gt;<br />    &lt;/TableRoot&gt;<br />&lt;/TableView&gt;</pre></p> |
 |     |     |
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
-- [Exemplos do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Documentação da API de xamarin. Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Documentação da API do Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

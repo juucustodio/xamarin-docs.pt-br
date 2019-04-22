@@ -8,17 +8,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: 5156259f8178da69595464f75a10cd8f41965519
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870320"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações de estruturas adicionais do iOS 9
 
 _Este artigo aborda as alterações adicionais, secundárias ou aprimoramentos para as estruturas existentes para o iOS 9._
 
-[![](additional-framework-changes-images/ios9-sml.png "iOS 9 logotipo")](additional-framework-changes-images/ios9.png#lightbox)
+[![](additional-framework-changes-images/ios9-sml.png "iOS 9 Logo")](additional-framework-changes-images/ios9.png#lightbox)
 
 Além das principais alterações para o iOS, o Apple fez modificações e melhorias nas várias estruturas existentes no iOS 9.
 

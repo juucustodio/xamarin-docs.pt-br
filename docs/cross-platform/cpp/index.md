@@ -6,10 +6,10 @@ author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
 ms.openlocfilehash: a235a24d544e938d4bf29e6569564aface2f6972
-ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866378"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usar bibliotecas de C/C++ com o Xamarin

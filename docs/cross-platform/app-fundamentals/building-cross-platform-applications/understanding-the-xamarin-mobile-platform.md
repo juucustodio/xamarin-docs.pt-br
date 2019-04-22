@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
 ms.openlocfilehash: f5008d4986baa0575030e077b66b69ec0a4fad00
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854412"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1 – Noções básicas sobre a plataforma Xamarin Mobile

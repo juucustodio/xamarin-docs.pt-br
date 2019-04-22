@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866352"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar dados de tempo de Design com o pré-visualizador XAML
@@ -36,7 +36,7 @@ Por exemplo, você pode adicionar texto a um rótulo que geralmente tem dados as
 <Label Text={Binding Name} d:Text="Name" />
 ```
 
-[![DCriar dados de tempo com texto em um rótulo](xaml-previewer-images/designtimedata-label-sm.png "Design um rótulo de dados com o texto de hora")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Dados de tempo com o texto em um rótulo de design](xaml-previewer-images/designtimedata-label-sm.png "Design um rótulo de dados com o texto de hora")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
  Neste exemplo, sem `d:Text`, pré-visualizador XAML mostraria nada para o rótulo. Em vez disso, ele mostra "Name" no qual o rótulo terá dados reais no tempo de execução.
 
@@ -46,7 +46,7 @@ Você pode usar `d:` com qualquer atributo para um controle xamarin. Forms, como
 <d:Button Text="Design Time Button" />
 ```
 
-[![DCriar dados de tempo com um controle de botão](xaml-previewer-images/designtimedata-controls-sm.png "dados com um controle de botão de tempo de Design")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Criar dados de tempo com um controle de botão](xaml-previewer-images/designtimedata-controls-sm.png "dados com um controle de botão de tempo de Design")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 Neste exemplo, o botão aparece apenas em tempo de design. Use esse método para colocar um espaço reservado para um [controle personalizado não compatível com o pré-visualizador XAML](render-custom-controls.md).
 
@@ -57,7 +57,7 @@ Você pode definir um fonte de tempo de design para imagens que está vinculada 
 ```csharp
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
-[![DCriar dados de tempo com imagens](xaml-previewer-images/designtimedata-image-sm.png "projetar os dados de tempo com iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![Criar dados de tempo com imagens](xaml-previewer-images/designtimedata-image-sm.png "projetar os dados de tempo com iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Dados de tempo de design para ListViews
 
@@ -83,7 +83,7 @@ ListViews são uma maneira popular para exibir dados em um aplicativo móvel. No
 </StackLayout>
 ```
 
-[![DCriar dados de tempo com um ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "projetar os dados de tempo com um ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Criar dados de tempo com um ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "projetar os dados de tempo com um ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
 Este exemplo mostrará um ListView de três TextCells no pré-visualizador XAML. Você pode alterar `x:String` para um modelo de dados existente em seu projeto.
 

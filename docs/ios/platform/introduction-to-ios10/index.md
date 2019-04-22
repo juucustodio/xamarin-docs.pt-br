@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
 ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870242"
 ---
 # <a name="introduction-to-ios-10"></a>Introdução ao iOS 10
@@ -61,7 +61,7 @@ Além disso, 3º extensões de aplicativo de teclado de terceiros têm os seguin
 
 Para obter mais informações, consulte nosso [Introdução às extensões](~/ios/platform/extensions.md), [integração de aplicativos de mensagem](~/ios/platform/message-app-integration/index.md), [Introdução ao sugestões proativas](~/ios/platform/search/proactive-suggestions.md), [ Introdução ao SiriKit](~/ios/platform/sirikit/index.md), [Introdução a notificações de usuário](~/ios/platform/user-notifications/index.md) da Apple [guia de programação de extensão do aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
 
-## <a name="app-search-enhancements"></a>Aperfeiçoamentos feitos na pesquisa do aplicativo
+## <a name="app-search-enhancements"></a>Aperfeiçoamentos na pesquisa de aplicativo
 
 Destaque principal no iOS 10 oferece vários aprimoramentos para o aplicativo de pesquisa, como:
 
@@ -103,7 +103,7 @@ Além disso, a API de CallKit fornece a capacidade de criar extensões de aplica
 
 Para obter mais informações, consulte nosso [Introdução ao Callkit](~/ios/platform/callkit.md) guia.
 
-## <a name="message-app-integration"></a>Integração de aplicativos de mensagem
+## <a name="message-app-integration"></a>Integração do aplicativo de mensagens
 
 iOS 10 permite a inclusão de uma extensão de aplicativo de mensagem na solução xamarin. IOS que se integra com o **mensagens** aplicativo e apresenta novas funcionalidades para o usuário. A extensão pode enviar mensagens de texto, adesivos, arquivos de mídia e interativas. Dois tipos de mensagem da extensão do aplicativo estão disponíveis:
 
@@ -116,7 +116,7 @@ Para obter mais informações, consulte nosso [integração de aplicativos de me
 
 Com o iOS 10, Apple será permitir que qualquer pessoa principais revistas e novas organizações bloggers e editores independentes para se inscrever e produto e entregar conteúdo para o aplicativo Apple News. Para obter mais informações, consulte da Apple [notícias recursos](https://newsresources.apple.com/) documentação.
 
-## <a name="providing-haptic-feedback"></a>Fornecer comentários Hápticos
+## <a name="providing-haptic-feedback"></a>Como fornecer comentários hápticos
 
 No iPhone 7 e iPhone 7 Além disso, o Apple incluiu novas respostas haptics que fornecem maneiras adicionais para envolver fisicamente o usuário. Use as novas opções de comentários táteis para obter a atenção do usuário e reforçar suas ações.
 
@@ -139,7 +139,7 @@ Um aplicativo expõe essa funcionalidade no sistema usando uma coleção de tecn
 
 Para obter mais informações, consulte nosso [Introdução ao sugestões proativas](~/ios/platform/search/proactive-suggestions.md) guia.
 
-## <a name="request-app-review"></a>Solicitação de revisão de aplicativo
+## <a name="request-app-review"></a>Solicitação de revisão do aplicativo
 
 Novo para o iOS 10.3, o `RequestReview()` método permite que um aplicativo iOS solicitar que o usuário avalie ou revisá-lo. Embora esse método pode ser chamado a qualquer momento em que faz sentido na experiência do usuário, o processo de revisão é regido e manipulado pela política da App Store. Como resultado, esse método pode ou não pode exibir um alerta e nunca deve ser chamado em resposta a uma ação do usuário, como tocar em um botão.
 

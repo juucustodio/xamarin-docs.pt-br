@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: df50b4280335001f2d27ff23a91e4098eed3ba99
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870203"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Com suporte de assemblies do Xamarin para tvOS
@@ -26,7 +26,7 @@ Esta é uma lista dos assemblies de suporte para o Xamarin para seus aplicativos
 |Mono.Data.Sqlite.dll|1.2|Provedor ADO.NET para SQLite; ver [limitações](~/ios/data-cloud/system.data.md).|
 |Mono.Data.Tds.dll|1.2|Suporte de protocolo TDS; usado para [System.Data.SqlClient](xref:System.Data.SqlClient) suportem [System. Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|APIs de criptografia.|
-|monotouch.dll|1.0|Esse assembly contém o [C# associação para a API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
+|monotouch.dll|1.0|Esse assembly contém o [c# associação para a API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
 |mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |OpenTK.dll|1.0|APIs, orientado ao objeto de OpenGL/OpenAL [estendida para oferecer suporte a dispositivos iPhone](xref:OpenGLES).|
 |System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), além de tipos dos namespaces a seguir: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|

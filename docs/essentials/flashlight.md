@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: b94ba73b334ac68b256ca840956f987a4ef670ce
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870099"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lanterna
@@ -22,7 +22,7 @@ A classe **Flashlight** tem a capacidade de ativar ou desativar o flash da câme
 
 Para acessar a funcionalidade **Flashlight**, a seguinte configuração específica da plataforma é necessária.
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 As permissões Flashlight e Camera são necessárias e devem ser configuradas no projeto do Android. Ela pode ser usado das seguintes maneiras:
 
@@ -51,11 +51,11 @@ Ao adicionar essas permissões, o [Google Play filtrará automaticamente os disp
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 Não exige mais configurações.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Não exige mais configurações.
 
@@ -96,7 +96,7 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
-### [<a name="android"></a>Android](#tab/android)
+### <a name="androidtabandroid"></a>[Android](#tab/android)
 
 A classe Flashlight foi otimizada com base no sistema operacional do dispositivo.
 
@@ -108,11 +108,11 @@ Em níveis mais recentes da API, o [Modo Tocha](https://developer.android.com/re
 
 Uma textura de superfície da câmera é criada para ativar ou desativar o `FlashMode` da unidade de câmera. 
 
-### [<a name="ios"></a>iOS](#tab/ios)
+### <a name="iostabios"></a>[iOS](#tab/ios)
 
 [AVCaptureDevice](xref:AVFoundation.AVCaptureDevice) é usado para ativar e desativar o Modo Tocha e o modo Flash do dispositivo.
 
-### [<a name="uwp"></a>UWP](#tab/uwp)
+### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 [Lamp](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp) é usado para detectar a primeira lâmpada na parte traseira do dispositivo a fim de ativá-la ou desativá-la.
 

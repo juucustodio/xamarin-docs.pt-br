@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
 ms.openlocfilehash: 7e9bfa841db9f0a76f762bab22050377830d85de
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854867"
 ---
 # <a name="gtk-platform-setup"></a>Instalação de plataforma do GTK #
@@ -29,13 +29,13 @@ Antes de começar, crie uma nova solução xamarin. Forms ou usar uma solução 
 
 O GTK # para macOS e Linux é instalado como parte do [Mono](https://www.mono-project.com/download/stable/). O GTK # para .NET pode ser instalado no Windows com o [instalador do GTK #](https://www.mono-project.com/download/stable/#download-win).
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Siga estas instruções para adicionar um aplicativo do GTK # que será executado na área de trabalho do Windows:
 
 1. No Visual Studio de 2019, clique com botão direito no nome da solução no **Gerenciador de soluções** e escolha **Adicionar > Novo projeto...** .
 
-2. No **novo projeto** janela, à esquerda, selecione **Visual C#** e **área de trabalho clássica do Windows**. Na lista de tipos de projeto, escolha **biblioteca de classes (.NET Framework)** e certifique-se de que o **Framework** suspensa é definida como um mínimo de .NET Framework 4.7.
+2. No **novo projeto** janela, à esquerda, selecione **Visual c#** e **área de trabalho clássica do Windows**. Na lista de tipos de projeto, escolha **biblioteca de classes (.NET Framework)** e certifique-se de que o **Framework** suspensa é definida como um mínimo de .NET Framework 4.7.
 
 3. Digite um nome para o projeto com um **GTK** extensão, por exemplo **GameOfLife.GTK**. Clique no **navegue** botão, selecione a pasta que contém a plataforma de outra projetos e pressione **Selecionar pasta**. Isso colocará o projeto GTK no mesmo diretório que os outros projetos na solução.
 
@@ -110,7 +110,7 @@ Siga estas instruções para adicionar um aplicativo do GTK # que será executad
 
     ![O GTK # jogo da vida útil](gtk-images/win/gtk-gameoflife.png "GTK # jogo da vida útil")
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Siga estas instruções para adicionar um aplicativo do GTK # que será executado na área de trabalho Mac:
 
@@ -175,7 +175,7 @@ Siga estas instruções para adicionar um aplicativo do GTK # que será executad
 
 ## <a name="next-steps"></a>Próximas etapas
 
-### <a name="platform-specifics"></a>Especificidades da plataforma
+### <a name="platform-specifics"></a>Especificações da plataforma
 
 Você pode determinar em qual plataforma está em execução no seu aplicativo xamarin. Forms de XAML ou código. Isso permite que você altere as características do programa quando ele é executado em GTK #. No código, comparar o valor de `Device.RuntimePlatform` com o `Device.GTK` constante (que é igual a cadeia de caracteres "GTK"). Se houver uma correspondência, o aplicativo está em execução em GTK #.
 

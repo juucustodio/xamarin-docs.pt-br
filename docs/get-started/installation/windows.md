@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
 ms.openlocfilehash: 5d9f91300194eb45c5f5f3c52403660cf4898a19
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853970"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Instalando o Xamarin no Visual Studio de 2019
@@ -44,14 +44,14 @@ Para obter informações mais detalhadas, consulte o guia [Como instalar o Xamar
 1. [Instalar o Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Conectar o Visual Studio ao host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [Configuração do desenvolvedor iOS](~/ios/get-started/installation/device-provisioning/index.md) – necessária para executar o aplicativo no dispositivo
-5. [Simulador de iOS Remoto](~/tools/ios-simulator/index.md)
+5. [Simulador de iOS remoto](~/tools/ios-simulator/index.md)
 6. [Introdução ao Xamarin.iOS para Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
 ### <a name="android"></a>Android
 
 Para obter informações mais detalhadas, consulte o guia [Instalando o Xamarin.Android no Windows](~/android/get-started/installation/windows.md).
 
-1. [Configuração do xamarin. Android](~/android/get-started/installation/windows.md#configuration)
+1. [Configuração do Xamarin.Android](~/android/get-started/installation/windows.md#configuration)
 2. [Usando o Gerenciador de SDK do Xamarin Android](~/android/get-started/installation/android-sdk.md?ide=vs)
 3. [Emulador do SDK do Android](~/android/get-started/installation/android-emulator/index.md)
 4. [Configurar o dispositivo para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md)

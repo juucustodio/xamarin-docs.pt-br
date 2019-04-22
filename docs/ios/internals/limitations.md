@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
 ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870165"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitações do xamarin. IOS
@@ -80,7 +80,7 @@ Mas a API de reflexão inteira, incluindo Type. GetType ("someClass"), listando 
 
 ### <a name="using-delegates-to-call-native-functions"></a>Usando delegados para chamar funções nativas
 
-Para chamar uma função nativa por meio de um representante do C#, a declaração do delegado deve ser decorada com um dos seguintes atributos:
+Para chamar uma função nativa por meio de um representante do c#, a declaração do delegado deve ser decorada com um dos seguintes atributos:
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (de preferência, uma vez que ele é compatível com o .NET Standard 1.1 + e de plataforma cruzada)
 - [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
@@ -96,7 +96,7 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
 ### <a name="reverse-callbacks"></a>Inverter os retornos de chamada
 
-Em Mono padrão, é possível passar instâncias de delegado do C# para código não gerenciado no lugar de um ponteiro de função. O tempo de execução normalmente seria transformar esses ponteiros de função em uma conversão pequeno que permite que o código não gerenciado retornar a chamada para código gerenciado.
+Em Mono padrão, é possível passar instâncias de delegado do c# para código não gerenciado no lugar de um ponteiro de função. O tempo de execução normalmente seria transformar esses ponteiros de função em uma conversão pequeno que permite que o código não gerenciado retornar a chamada para código gerenciado.
 
 Em Mono essas pontes são implementados por Just-in-Time compilador. Quando usar o compilador ahead of time exigido por iPhone existem duas limitações importantes neste momento:
 

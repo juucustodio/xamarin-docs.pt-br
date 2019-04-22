@@ -7,17 +7,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
 ms.openlocfilehash: f9cfc69c2cd711460233e609d63bcbb8eb172ccf
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854750"
 ---
 # <a name="xamarin-live-player-setup"></a>O programa de instalação do Xamarin Live Player
 
 Xamarin Live Player permite que você faça edições dinâmicas para seu aplicativo e tem essas alterações refletidas em tempo real no dispositivo. O código é executado dentro do aplicativo Xamarin Live Player – sem necessidade de configurar os emuladores ou use cabos para implantar! Este artigo descreve como configurar o Xamarin Live Player.
 
-![Recurso de visualização](~/media/shared/preview.png)
+![Versão prévia do recurso](~/media/shared/preview.png)
 
 > [!NOTE]
 > A visualização dinâmica do Player só está disponível no Visual Studio 2017.
@@ -26,7 +26,7 @@ Xamarin Live Player permite que você faça edições dinâmicas para seu aplica
 
 Xamarin Live Player está disponível para Android por instalar diretamente do [HockeyApp](https://aka.ms/xlp-hockeyapp).
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="2-get-visual-studio-2017"></a>2. Obtenha o Visual Studio 2017
 
@@ -66,7 +66,7 @@ Requer o Xamarin Live Player:
 
     Se o dispositivo não pode ser contatado para emparelhamento, pode aparecer um erro.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="2-get-visual-studio-for-mac"></a>2. Obtenha o Visual Studio para Mac
 
@@ -82,7 +82,7 @@ Requer o Xamarin Live Player:
 2. Vá para **Visual Studio > Preferências...**  e selecione o **projetos > Xamarin Live Player (versão prévia)** guia.
 3. Escala **habilitar Xamarin Live Player**:
 
-    [![Cverificar a caixa Habilitar Xamarin Live Player na janela Opções](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
+    [![Marque a caixa Habilitar Xamarin Live Player na janela Opções](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
 4. Criar ou abrir um projeto do Xamarin (ou um [exemplo](~/tools/live-player/samples.md)).
 5. Escolher **Live Player** na lista de dispositivos.

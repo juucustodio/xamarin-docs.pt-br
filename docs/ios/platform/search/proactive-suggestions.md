@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870398"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introdução ao sugestões proativas no xamarin. IOS
@@ -189,7 +189,7 @@ O desenvolvedor precisa garantir que este é o mesmo identificador de tipo de at
 
 Com a quantidade mínima de código apresentado acima, o aplicativo agora é possível tirar proveito dos três novos recursos do iOS 10:
 
-- **Entrega**
+- **Handoff**
 - **Pesquisa de destaque**
 - **Siri contextuais lembretes**
 

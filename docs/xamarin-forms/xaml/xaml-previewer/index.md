@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: db243a9c8dcb25f51bc7926a7aa239531e9c24f6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859006"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Pré-visualizador XAML para xamarin. Forms
@@ -31,7 +31,7 @@ O pré-visualizador XAML mostra qual será a aparência de sua página XAML de x
 
 Você pode abrir o pré-visualizador XAML clicando nas setas no painel de exibição de divisão. Se você quiser alterar o padrão dividir o comportamento do modo de exibição, use o **Ferramentas > Opções > Xamarin > formulários pré-visualizador** caixa de diálogo. Nesta caixa de diálogo, você pode selecionar o modo de exibição de documento padrão e a orientação de divisão.
 
-[![Xamarin. Opções do Visualizador de formulários no Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "opções do Visualizador do xamarin. Forms no Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
+[![Opções de pré-visualizador do xamarin. Forms no Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "opções do Visualizador do xamarin. Forms no Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
 Quando você abre um arquivo XAML, o editor será aberto em tamanho normal ou Avançar para o pré-visualizador, com base nas configurações selecionadas na **Ferramentas > Opções > Xamarin > formulários pré-visualizador** caixa de diálogo. No entanto, a divisão pode ser alterada para cada arquivo na janela do editor.
 
@@ -39,11 +39,11 @@ Quando você abre um arquivo XAML, o editor será aberto em tamanho normal ou Av
 
 Escolha se você quiser ver seu código, o pré-visualizador de XAML, ou ambas selecionando esses botões na divisão de exibir o painel. O botão do meio alterna o que são o pré-visualizador de lado e seu código em:
 
-[![Xamarin. Controles de visualizador para alternar entre o modo de divisão no Visual Studio, fonte e design de formulários](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "controla o pré-visualizador de xamarin. Forms para alternar entre o design, a origem e o modo de divisão no Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Controla o pré-visualizador de xamarin. Forms para alternar entre o design, a origem e o modo de divisão no Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "controla o pré-visualizador de xamarin. Forms para alternar entre o design, a origem e o modo de divisão no Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 Você pode alterar se a tela é dividida verticalmente ou horizontalmente, ou recolher um painel completamente:
 
-[![Xamarin. Controles de orientação do painel Visualizador do Forms no Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "controles de orientação de painel pré-visualizador de xamarin. Forms no Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![Controles de orientação de painel pré-visualizador de xamarin. Forms no Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "controles de orientação de painel pré-visualizador de xamarin. Forms no Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -52,7 +52,7 @@ Você pode alterar se a tela é dividida verticalmente ou horizontalmente, ou re
 
 O **visualização** botão é exibido no editor quando você abre uma página XAML. Mostrar ou ocultar o pré-visualizador pressionando a **visualização** botão no canto superior direito de qualquer janela de documento XAML:
 
-[![Xamarin. Pré-visualizador de formulários no Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "pré-visualizador de xamarin. Forms no Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Pré-visualizador do xamarin. Forms no Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "pré-visualizador de xamarin. Forms no Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
 
 ::: zone-end
 

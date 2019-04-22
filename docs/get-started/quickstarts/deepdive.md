@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
 ms.openlocfilehash: 67b189254cc08fac0323b7df5fcbab5abd994c05
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855010"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Aprofundamento de início rápido do xamarin. Forms
@@ -534,9 +534,9 @@ Como alternativa, veja [_Criando aplicativos móveis com Xamarin.Forms_](~/xamar
 
 - [Linguagem de marcação de aplicativo extensível (XAML)](~/xamarin-forms/xaml/index.md)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Referência de Controles](~/xamarin-forms/user-interface/controls/index.md)
+- [Referência de controles](~/xamarin-forms/user-interface/controls/index.md)
 - [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Exemplos do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Exemplos de Introdução](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
-- [Referência de API de xamarin. Forms](xref:Xamarin.Forms)
+- [Referência da API Xamarin.Forms](xref:Xamarin.Forms)
 - [Aprendizado autodirigido gratuito (vídeo)](https://university.xamarin.com/self-guided/)

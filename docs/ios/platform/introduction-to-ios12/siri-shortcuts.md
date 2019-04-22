@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
 ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869818"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Atalhos do Siri no xamarin. IOS
@@ -227,8 +227,7 @@ Criando o projeto do Xcode que contém essa definição personalizada de intenç
 Para exibir esse código gerado:
 
 - Abra **Appdelegate**.
-- Adicione uma importação para o arquivo de cabeçalho da intenção personalizado:
-`#import "OrderSoupIntent.h"`
+- Adicione uma importação para o arquivo de cabeçalho da intenção personalizado: `#import "OrderSoupIntent.h"`
 - Em qualquer método na classe, adicione uma referência ao `OrderSoupIntent`.
 - Clique duas vezes em `OrderSoupIntent` e escolha **ir para definição**.
 - Clique com botão direito no arquivo de recém-aberta **OrderSoupIntent.h**e selecione **Mostrar no localizador**.

@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
 ms.openlocfilehash: 2bef13e7f465dd213649f88deb572eb661895250
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854802"
 ---
 # <a name="wpf-platform-setup"></a>Instalação de plataforma do WPF
@@ -35,7 +35,7 @@ Siga estas instruções para adicionar um aplicativo do WPF que serão executado
 
 1. No Visual Studio de 2019, clique com botão direito no nome da solução nos **Gerenciador de soluções** e escolha **Adicionar > Novo projeto...** .
 
-2. No **novo projeto** janela, à esquerda, selecione **Visual C#** e **área de trabalho clássica do Windows**. Na lista de tipos de projeto, escolha **aplicativo WPF (.NET Framework)**. 
+2. No **novo projeto** janela, à esquerda, selecione **Visual c#** e **área de trabalho clássica do Windows**. Na lista de tipos de projeto, escolha **aplicativo WPF (.NET Framework)**. 
 
 3. Digite um nome para o projeto com um **WPF** extensão, por exemplo, **BoxViewClock.WPF**. Clique o **navegue** botão, selecione o **BoxViewClock** pasta e pressione **Selecionar pasta**. Isso colocará o projeto WPF no mesmo diretório que os outros projetos na solução.
 
@@ -124,7 +124,7 @@ Siga estas instruções para adicionar um aplicativo do WPF que serão executado
 
 ## <a name="next-steps"></a>Próximas etapas
 
-### <a name="platform-specifics"></a>Especificidades da plataforma
+### <a name="platform-specifics"></a>Especificações da plataforma
 
 Você pode determinar em qual plataforma está em execução no seu aplicativo xamarin. Forms de código ou XAML. Isso permite que você altere as características do programa quando ele está em execução no WPF. No código, comparar o valor de `Device.RuntimePlatform` com o `Device.WPF` constante (que é igual a cadeia de caracteres "WPF"). Se houver uma correspondência, o aplicativo está em execução no WPF.
 

@@ -7,15 +7,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
 ms.openlocfilehash: 5eb0dcead230e0bb2e7d99241e5d8e5a4115f838
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855257"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Solução de problemas de Xamarin Live Player
 
-![Recurso de visualização](~/media/shared/preview.png)
+![Versão prévia do recurso](~/media/shared/preview.png)
 
 > [!NOTE]
 > A visualização dinâmica do Player só está disponível no Visual Studio 2017.
@@ -162,5 +162,5 @@ Projetos do Android do xamarin. Forms devem usar "Toolbar.axml" e "Tabbar.axml" 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Configuração](~/tools/live-player/install.md)
+- [Instalação](~/tools/live-player/install.md)
 - [Amostras a serem usadas com o Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

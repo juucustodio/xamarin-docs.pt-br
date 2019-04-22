@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 0abd7e6cb5b8b9650a3dc324338587ff59a80a19
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870411"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumo do capítulo 28. Localização e mapas
 
-[![Dbaixar exemplo](~/media/shared/download.png) Baixar a amostra](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
 > Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.

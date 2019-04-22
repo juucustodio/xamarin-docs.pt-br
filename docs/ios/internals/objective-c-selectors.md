@@ -1,6 +1,6 @@
 ---
 title: Seletores de Objective-C no xamarin. IOS
-description: Este documento discute como interagir com os seletores de Objective-C do C#. Ele descreve como invocar seletores e considerações técnicas que devem ser levadas em conta ao fazer isso.
+description: Este documento discute como interagir com os seletores de Objective-C do c#. Ele descreve como invocar seletores e considerações técnicas que devem ser levadas em conta ao fazer isso.
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
 ms.openlocfilehash: 15db59945f482728f760006095e294bc5628c8bd
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870164"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Seletores de Objective-C no xamarin. IOS

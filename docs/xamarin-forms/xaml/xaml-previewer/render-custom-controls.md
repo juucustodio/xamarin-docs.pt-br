@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: 977c29312e0be8b92f216c224414f9bd03f8562d
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58858966"
 ---
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>Renderizar controles personalizados no pré-visualizador XAML

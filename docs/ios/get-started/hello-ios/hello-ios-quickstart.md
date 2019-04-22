@@ -10,10 +10,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
 ms.openlocfilehash: ed59f32711bae56672d1d7f114fbb80a906d67ce
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855283"
 ---
 # <a name="hello-ios--quickstart"></a>Olá, iOS – Guia de Início Rápido
@@ -494,7 +494,7 @@ Agora é hora de examinar as ferramentas e as habilidades mostradas neste guia n
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Ícones de aplicativo e imagens de inicialização do Xamarin (exemplo)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
-- [Hello, iOS (exemplo)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Ícones de aplicativo e imagens de inicialização do Xamarin (amostra)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
+- [Hello, iOS (amostra)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

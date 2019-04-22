@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: 1a9a7b008773255d9d7743a4fcb21f02feb3e116
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869371"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
@@ -61,16 +61,16 @@ Interface do usuário para compartilhar com aplicativo externo exibida quando um
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* `Subject` a propriedade é usada para o assunto desejado de uma mensagem.
+* A propriedade `Subject` é usada para o assunto desejado de uma mensagem.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 * `Subject` não usado.
 * `Title` não usado.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 * `Title` assumirá o padrão de Nome do Aplicativo se não for definido.
 * `Subject` não usado.
@@ -105,8 +105,8 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="api"></a>API
 
-- [Compartilhar código-fonte](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
-- [Compartilhar documentação da API](xref:Xamarin.Essentials.Share)
+- [Código-fonte de Share](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
+- [Documentação da API de Share](xref:Xamarin.Essentials.Share)
 
 ## <a name="related-video"></a>Vídeo relacionados
 

@@ -1,5 +1,5 @@
 ---
-title: MonoTouch.Dialog Json Markup
+title: Markup Json MonoTouch.Dialog
 description: Este documento descreve a sintaxe JSON que pode ser usada para criar uma interface de usuário do xamarin. IOS usando MonoTouch.
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
@@ -8,13 +8,13 @@ ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
 ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870125"
 ---
-# <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json Markup
+# <a name="monotouchdialog-json-markup"></a>Markup Json MonoTouch.Dialog
 
 Esta página descreve a marcação do Json aceita do MonoTouch [JsonElement](xref:MonoTouch.Dialog.JsonElement)
 
@@ -153,7 +153,7 @@ A seção contém:
 
 -  `header` (opcional)
 -  `footer` (opcional)
--  `elements` array
+-  Matriz `elements`
 
 
  <a name="header" />

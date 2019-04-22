@@ -9,10 +9,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
 ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855309"
 ---
 # <a name="hello-mac-walkthrough"></a>Olá, Mac – passo a passo
@@ -277,7 +277,7 @@ A seção **Hierarquia de interface** permite que o desenvolvedor acesse facilme
 
 ### <a name="interface-editor"></a>Editor de interface
 
-A seção **Editor de interface** fornece a superfície em que a interface do usuário é disposta graficamente. Arrastar elementos da seção **Biblioteca** da seção **Propriedades e utilitários** para criar o design. Conforme elementos de interface do usuário (exibições) são adicionados à área de design, eles serão adicionados à seção **Hierarquia de interface** na ordem em que aparecem no **Editor de interface**.
+A seção **Editor de interface** fornece a superfície em que a interface do usuário é disposta graficamente. Arrastar elementos da seção Biblioteca da seção **Propriedades e utilitários** para criar o design. Conforme elementos de interface do usuário (exibições) são adicionados à área de design, eles serão adicionados à seção **Hierarquia de interface** na ordem em que aparecem no **Editor de interface**.
 
 ### <a name="properties--utilities"></a>Propriedades e utilitários
 
@@ -591,5 +591,5 @@ Este artigo abordou os conceitos básicos de um aplicativo Xamarin.Mac padrão. 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, Mac (exemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello, Mac (amostra)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

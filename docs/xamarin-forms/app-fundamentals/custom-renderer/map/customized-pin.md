@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870294"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
-[![DBaixar a amostra](~/media/shared/download.png) Baixar a amostra](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
 _Este artigo demonstra como criar um renderizador personalizado para o Controle de Mapeamento, que exibe um mapa nativo com um marcador personalizado e uma exibição personalizada dos dados de marcador em cada plataforma._
 
@@ -403,8 +403,8 @@ Desde que o renderizador personalizado esteja anexado a um novo elemento do Xama
 
 A classe `CustomMapRenderer` implementa a interface `GoogleMap.IInfoWindowAdapter` para [personalizar a janela de informações](#Customizing_the_Info_Window). Essa interface especifica que os seguintes métodos precisam ser implementados:
 
-- `public Android.Views.View GetInfoWindow(Marker marker)` – Esse método é chamado para retornar uma janela de informações personalizada para um marcador. Se ele retornar `null`, a renderização de janela padrão será usada. Se ele retornar uma `View`, essa `View` será colocada dentro do quadro da janela de informações.
-- `public Android.Views.View GetInfoContents(Marker marker)` – Esse método é chamado para retornar uma `View` que traz o conteúdo da janela de informações e só é chamado se o método `GetInfoWindow` retorna `null`. Se ele retornar `null`, a renderização padrão do conteúdo da janela de informações será usada.
+- `public Android.Views.View GetInfoWindow(Marker marker)` – esse método é chamado para retornar uma janela de informações personalizada para um marcador. Se ele retornar `null`, a renderização de janela padrão será usada. Se ele retornar uma `View`, essa `View` será colocada dentro do quadro da janela de informações.
+- `public Android.Views.View GetInfoContents(Marker marker)` – esse método é chamado para retornar uma `View` que traz o conteúdo da janela de informações e só será chamado se o método `GetInfoWindow` retornar `null`. Se ele retornar `null`, a renderização padrão do conteúdo da janela de informações será usada.
 
 No aplicativo de exemplo, somente o conteúdo da janela de informações é personalizado e, portanto, o método `GetInfoWindow` retorna `null` para permitir isso.
 
@@ -663,4 +663,4 @@ Este artigo demonstrou como criar um renderizador personalizado para o controle 
 - [Controle de mapas](~/xamarin-forms/user-interface/map.md)
 - [Mapas do iOS](~/ios/user-interface/controls/ios-maps/index.md)
 - [API de mapas](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Marcador personalizado (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+- [Marcador personalizado (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
