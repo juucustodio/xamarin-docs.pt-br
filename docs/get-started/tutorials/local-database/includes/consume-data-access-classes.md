@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7fbd2a81c30726bc6c38586186e9334ddd4ea282
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61192760"
+---
 Neste exercício, você criará uma interface do usuário para consumir as classes de acesso a dados criadas anteriormente.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

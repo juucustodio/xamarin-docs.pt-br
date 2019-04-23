@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384648"
+---
 O Xamarin.Forms tem um pop-up modal, conhecido como um alerta, para alertar o usuário ou para fazer perguntas simples sobre eles. Neste exercício, você aprenderá a usar o método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), da classe [`Page`](xref:Xamarin.Forms.Page), para exibir um alerta ao usuário e fazer uma pergunta simples.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

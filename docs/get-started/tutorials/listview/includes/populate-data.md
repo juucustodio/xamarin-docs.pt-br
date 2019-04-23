@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a13426f4213d7c306c0de6922d336d4bb7723d72
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037327"
+---
 Um [`ListView`](xref:Xamarin.Forms.ListView) é populado com os dados usando a propriedade [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), que é do tipo `IEnumerable`. A etapa anterior populou o `ListView` no XAML com uma matriz de cadeias de caracteres. No entanto, normalmente um `ListView` será populado com os dados de uma coleção, definida no code-behind, que implementa `IEnumerable`.
 
 Neste exercício, você modificará o projeto **ListViewTutorial** para popular o [`ListView`](xref:Xamarin.Forms.ListView) com os dados de uma coleção de objetos armazenados em um `List`.

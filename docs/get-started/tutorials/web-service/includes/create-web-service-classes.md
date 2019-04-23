@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f0c07199a8f839d8dc9d334ae06c96a9b363c36e
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61388762"
+---
 Solicitações REST são feitas por HTTP usando os mesmos verbos HTTP que os navegadores da Web usam para recuperar páginas e para enviar dados para os servidores. Neste exercício, você criará uma classe que usa o verbo GET para recuperar dados da API Web [OpenWeatherMap](https://openweathermap.org/). Essa API Web pode ser usada para recuperar dados de previsão do tempo para uma localização especificada. Para usar essa API Web, é necessário inscrever-se para receber uma chave de API.
 
 > [!div class="nextstepaction"]

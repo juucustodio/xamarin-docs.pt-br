@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 550828327eb6b72c1c9712e54e6e36c9e30bd1f0
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384365"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **ImageTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.

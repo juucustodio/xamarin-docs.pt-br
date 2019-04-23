@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 92b9f9c80672e1c98ecca3de3f236ea3dd606f9b
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292058"
 documentType: LandingData
 title: Gráficos e jogos
 metadata:
@@ -17,56 +11,56 @@ abstract:
   description: Jogos com gráficos 2D e 3D de plataforma cruzada para plataformas móveis e desktop.
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/
-      text: Exemplos
-    - href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
-      text: Notas de Versão
+      - href: 'https://developer.xamarin.com/samples/'
+        text: Exemplos
+      - href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
+        text: Notas sobre a versão
 sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsC
+  - title: null
     items:
-    - href: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
-      image:
-        src: ~/media/index/xamarin-graphics-skia.svg
-        href: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
-      title: SkiaSharp
-      html: Gráficos 2D de plataforma cruzada para desktop e celular.
-    - href: ~/graphics-games/urhosharp/index.md
-      image:
-        src: ~/media/index/xamarin-graphics-urho.svg
-        href: ~/graphics-games/urhosharp/index.md
-      title: UrhoSharp
-      html: Jogos e gráficos 3D de plataforma cruzada.
-    - href: ~/graphics-games/cocossharp/index.md
-      image:
-        src: ~/media/index/xamarin-graphics-cocos.svg
-        href: ~/graphics-games/cocossharp/index.md
-      title: CocosSharp
-      html: Compile jogos 2D de plataforma cruzada para dispositivos móveis.
-    - href: ~/graphics-games/monogame/index.md
-      image:
-        src: ~/media/index/xamarin-graphics-monogame.svg
-        href: ~/graphics-games/monogame/index.md
-      title: MonoGame
-      html: Compile jogos de desktop, móveis e de console com C#.
-- title: Plataformas
-  items:
-  - type: list
-    style: cards
-    className: cardsD
+      - type: list
+        style: cards
+        className: cardsC
+        items:
+          - href: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
+            image:
+              src: ~/media/index/xamarin-graphics-skia.svg
+              href: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
+            title: SkiaSharp
+            html: Gráficos 2D de plataforma cruzada para desktop e celular.
+          - href: ~/graphics-games/urhosharp/index.md
+            image:
+              src: ~/media/index/xamarin-graphics-urho.svg
+              href: ~/graphics-games/urhosharp/index.md
+            title: UrhoSharp
+            html: Jogos e gráficos 3D de plataforma cruzada.
+          - href: ~/graphics-games/cocossharp/index.md
+            image:
+              src: ~/media/index/xamarin-graphics-cocos.svg
+              href: ~/graphics-games/cocossharp/index.md
+            title: CocosSharp
+            html: Compile jogos 2D de plataforma cruzada para dispositivos móveis.
+          - href: ~/graphics-games/monogame/index.md
+            image:
+              src: ~/media/index/xamarin-graphics-monogame.svg
+              href: ~/graphics-games/monogame/index.md
+            title: MonoGame
+            html: 'Compile jogos de desktop, móveis e de console com C#.'
+  - title: Plataformas
     items:
-    - title: Xamarin.Forms
-      href: ~/xamarin-forms/index.md
-      html: <p><a href="~/get-started/quickstarts/index.md">Introdução</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interface do usuário</a><br /><a href="~/xamarin-forms/platform/index.md">Recursos da plataforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/xamarin-forms/internals/index.md">Conceitos avançados e recursos internos</a></p>
-    - title: Android
-      href: ~/android/index.md
-      html: <p><a href="~/android/get-started/index.md">Introdução</a><br /><a href="~/android/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/android/user-interface/index.md">Interface do usuário</a><br /><a href="~/android/platform/index.md">Recursos da plataforma</a><br /><a href="~/android/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/android/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/android/internals/index.md">Conceitos avançados e recursos internos</a></p>
-    - title: iOS
-      href: ~/ios/index.md
-      html: <p><a href="~/ios/get-started/index.md">Introdução</a><br /><a href="~/ios/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/ios/user-interface/index.md">Interface do usuário</a><br /><a href="~/ios/platform/index.md">Recursos da plataforma</a><br /><a href="~/ios/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/ios/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/ios/internals/index.md">Conceitos avançados e recursos internos</a></p>
-    - title: Mac
-      href: ~/mac/index.md
-      html: <p><a href="~/mac/get-started/index.md">Introdução</a><br /><a href="~/mac/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/mac/user-interface/index.md">Interface do usuário</a><br /><a href="~/mac/platform/index.md">Recursos da plataforma</a><br /><a href="~/mac/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/mac/internals/index.md">Conceitos avançados e recursos internos</a></p>
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: Xamarin.Forms
+            href: ~/xamarin-forms/index.md
+            html: <p><a href="~/get-started/quickstarts/index.md">Introdução</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interface do usuário</a><br /><a href="~/xamarin-forms/platform/index.md">Recursos da plataforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/xamarin-forms/internals/index.md">Conceitos avançados e recursos internos</a></p>
+          - title: Android
+            href: ~/android/index.md
+            html: <p><a href="~/android/get-started/index.md">Introdução</a><br /><a href="~/android/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/android/user-interface/index.md">Interface do usuário</a><br /><a href="~/android/platform/index.md">Recursos da plataforma</a><br /><a href="~/android/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/android/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/android/internals/index.md">Conceitos avançados e recursos internos</a></p>
+          - title: iOS
+            href: ~/ios/index.md
+            html: <p><a href="~/ios/get-started/index.md">Introdução</a><br /><a href="~/ios/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/ios/user-interface/index.md">Interface do usuário</a><br /><a href="~/ios/platform/index.md">Recursos da plataforma</a><br /><a href="~/ios/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/ios/data-cloud/index.md">Serviços de dados e de nuvem</a><br /><a href="~/ios/internals/index.md">Conceitos avançados e recursos internos</a></p>
+          - title: Mac
+            href: ~/mac/index.md
+            html: <p><a href="~/mac/get-started/index.md">Introdução</a><br /><a href="~/mac/app-fundamentals/index.md">Conceitos básicos do aplicativo</a><br /><a href="~/mac/user-interface/index.md">Interface do usuário</a><br /><a href="~/mac/platform/index.md">Recursos da plataforma</a><br /><a href="~/mac/deploy-test/index.md">Implantação e Teste</a><br /><a href="~/mac/internals/index.md">Conceitos avançados e recursos internos</a></p>

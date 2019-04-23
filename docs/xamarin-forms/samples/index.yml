@@ -7,64 +7,58 @@ metadata:
   ms.author: crdun
   ms.date: 02/17/2018
   ms.topic: sample
-  ms.openlocfilehash: 8da516babffc33706b6f81e3826d9a432a72cd16
-  ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-  ms.translationtype: HT
-  ms.contentlocale: pt-BR
-  ms.lasthandoff: 06/08/2018
-  ms.locfileid: "35243308"
 abstract:
   description: Aplicativos de exemplo do Xamarin.Forms e demonstrações de código para ajudar você entender os conceitos em Xamarin.Forms.
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/xamarin-forms/all/
-      text: Todos os exemplos do Xamarin.Forms
+      - href: 'https://developer.xamarin.com/samples/xamarin-forms/all/'
+        text: Todos os exemplos do Xamarin.Forms
 sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsW
+  - title: null
     items:
-    - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: Este exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados e acessados em um banco de dados local do SQLite.
-      image:
-        src: images/todo.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      title: Todo
-    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      html: Este é um jogo conhecido com um novo toque. Dez bugs ficam ocultos em uma grade de blocos 9 por 9. Para vencer, você deve localizar e sinalizador os dez bugs.
-      image:
-        src: images/bugsweeper.png
-        href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      title: BugSweeper
-    - href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      html: Uma calculadora RPN (Reverse Polish Notation) permite que os números e as operações sejam inseridas sem parênteses ou uma chave de igual.
-      image:
-        src: images/rpncalc.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      title: Calculadora de RPN
-    - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      html: O programa simula um disco giratório que você poderá pintar tocando e movendo seus dedos. O SpinPaint responde ao toque pintando uma linha sob o dedo, mas também duplica essa linha em três imagens de espelho nos outros três quadrantes do disco.
-      image:
-        src: images/spinpaint.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      title: SpinPaint
-    - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      html: XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código.
-      image:
-        src: images/xaml.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      title: Amostras XAML
-    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      html: XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código.
-      image:
-        src: images/xuzzle.png
-        href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      title: Xuzzle
-    - href: https://developer.xamarin.com/samples/xamarin-forms/all/
-      html: O conjunto completo de aplicativos e demonstrações de código de exemplo do Xamarin.Forms.
-      image:
-        src: ~/media/shared/sample-download.svg
-        href: https://developer.xamarin.com/samples/xamarin-forms/all/
-      title: Todos os exemplos do Xamarin.Forms
+      - type: list
+        style: cards
+        className: cardsW
+        items:
+          - href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+            html: Este exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados e acessados em um banco de dados local do SQLite.
+            image:
+              src: images/todo.png
+              href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+            title: Todo
+          - href: 'https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/'
+            html: 'Este é um jogo conhecido com um novo toque. Dez bugs ficam ocultos em uma grade de blocos 9 por 9. Para vencer, você deve localizar e sinalizador os dez bugs.'
+            image:
+              src: images/bugsweeper.png
+              href: 'https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/'
+            title: BugSweeper
+          - href: 'https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/'
+            html: Uma calculadora RPN (Reverse Polish Notation) permite que os números e as operações sejam inseridas sem parênteses ou uma chave de igual.
+            image:
+              src: images/rpncalc.png
+              href: 'https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/'
+            title: Calculadora de RPN
+          - href: 'https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/'
+            html: 'O programa simula um disco giratório que você poderá pintar tocando e movendo seus dedos. O SpinPaint responde ao toque pintando uma linha sob o dedo, mas também duplica essa linha em três imagens de espelho nos outros três quadrantes do disco.'
+            image:
+              src: images/spinpaint.png
+              href: 'https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/'
+            title: SpinPaint
+          - href: 'https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/'
+            html: XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código.
+            image:
+              src: images/xaml.png
+              href: 'https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/'
+            title: Amostras XAML
+          - href: 'https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/'
+            html: XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código.
+            image:
+              src: images/xuzzle.png
+              href: 'https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/'
+            title: Xuzzle
+          - href: 'https://developer.xamarin.com/samples/xamarin-forms/all/'
+            html: O conjunto completo de aplicativos e demonstrações de código de exemplo do Xamarin.Forms.
+            image:
+              src: ~/media/shared/sample-download.svg
+              href: 'https://developer.xamarin.com/samples/xamarin-forms/all/'
+            title: Todos os exemplos do Xamarin.Forms

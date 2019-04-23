@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c33db7de63a585cb6fb47aa1145aa724c9eb790f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037262"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Em **MainPage.xaml**, modifique a declaração [`ListView`](xref:Xamarin.Forms.ListView) de modo que ela defina manipuladores para os eventos [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) e [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped):

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384646"
+---
 
 O Xamarin.Forms tem um pop-up modal, conhecido como uma folha de ações, que pode ser usado para orientar os usuários durante uma tarefa. Neste exercício, você usará o método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*), da classe [`Page`](xref:Xamarin.Forms.Page), para exibir uma folha de ações que orienta os usuários durante uma tarefa.
 

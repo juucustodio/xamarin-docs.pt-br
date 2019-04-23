@@ -7,82 +7,76 @@ metadata:
   ms.author: crdun
   ms.date: 02/26/2018
   ms.topic: sample
-  ms.openlocfilehash: e60722dbd99ab845c63eee2c585905f8d06e5279
-  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-  ms.translationtype: HT
-  ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/04/2018
-  ms.locfileid: "30768422"
 abstract:
-  description: Aplicativos de exemplo de plataforma cruzada do Xamarin e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin.
+  description: 'Aplicativos de exemplo de plataforma cruzada do Xamarin e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin.'
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/
-      text: Todos os exemplos de Xamarin
+      - href: 'https://developer.xamarin.com/samples/'
+        text: Todos os exemplos de Xamarin
 sections:
-- title: Introdução
-  items:
-  - type: list
-    style: cards
-    className: cardsW
+  - title: Introdução
     items:
-    - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: Este exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados e acessados em um banco de dados local do SQLite, criado com o Xamarin.Forms.
-      image:
-        src: images/todo.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      title: Todo
-    - href: https://github.com/xamarinhq/app-myshoppe
-      html: Aplicativo de demonstração para os vendedores acompanharem o desempenho de vendas, gerenciarem leads, exibirem contatos, gerenciarem pedidos e consultarem o catálogo de produtos.
-      image:
-        src: images/myshoppe.png
-        href: https://github.com/xamarinhq/app-myshoppe
-      title: My Shoppe
-    - href: https://github.com/xamarin/app-crm
-      html: Aplicativo de demonstração para os vendedores acompanharem o desempenho de vendas, gerenciarem leads, exibirem contatos, gerenciarem pedidos e consultarem o catálogo de produtos.
-      image:
-        src: images/crm.png
-        href: https://github.com/xamarin/app-crm
-      title: Xamarin CRM
-- title: Azure & Enterprise
-  items:
-  - type: list
-    style: cards
-    className: cardsW
+      - type: list
+        style: cards
+        className: cardsW
+        items:
+          - href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+            html: 'Este exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados e acessados em um banco de dados local do SQLite, criado com o Xamarin.Forms.'
+            image:
+              src: images/todo.png
+              href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+            title: Todo
+          - href: 'https://github.com/xamarinhq/app-myshoppe'
+            html: 'Aplicativo de demonstração para os vendedores acompanharem o desempenho de vendas, gerenciarem leads, exibirem contatos, gerenciarem pedidos e consultarem o catálogo de produtos.'
+            image:
+              src: images/myshoppe.png
+              href: 'https://github.com/xamarinhq/app-myshoppe'
+            title: My Shoppe
+          - href: 'https://github.com/xamarin/app-crm'
+            html: 'Aplicativo de demonstração para os vendedores acompanharem o desempenho de vendas, gerenciarem leads, exibirem contatos, gerenciarem pedidos e consultarem o catálogo de produtos.'
+            image:
+              src: images/crm.png
+              href: 'https://github.com/xamarin/app-crm'
+            title: Xamarin CRM
+  - title: Azure & Enterprise
     items:
-    - href: https://github.com/xamarinhq/app-acquaint/
-      html: Aplicativo de lista de contatos com uma tela de detalhes e edição. O código-fonte está disponível no Xamarin.Forms e nas implementações nativas do Xamarin.
-      image:
-        src: images/acquaint.jpg
-        href: https://github.com/xamarinhq/app-acquaint
-      title: Acquaint
-    - href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
-      html: Demonstração na Connect 2017 de compilação de um pacote de aplicativos, incluindo o Xamarin e o Azure.
-      image:
-        src: images/smarthotel360.png
-        href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
-      title: SmartHotel360
-    - href: https://github.com/Microsoft/BikeSharing360_MobileApps
-      html: Demonstração na Connect 2016 de compilação de um pacote de aplicativos, incluindo o Xamarin e o Azure.
-      image:
-        src: images/bikesharing360.png
-        href: https://github.com/Microsoft/BikeSharing360_MobileApps
-      title: BikeSharing360
-    - href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
-      html: Diretrizes de arquitetura empresarial para a criação de aplicativos usando contêineres no Azure.
-      image:
-        src: images/eshop.png
-        href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
-      title: eShop
-- title: Todas as amostras
-  items:
-  - type: list
-    style: cards
-    className: cardsW
+      - type: list
+        style: cards
+        className: cardsW
+        items:
+          - href: 'https://github.com/xamarinhq/app-acquaint/'
+            html: Aplicativo de lista de contatos com uma tela de detalhes e edição. O código-fonte está disponível no Xamarin.Forms e nas implementações nativas do Xamarin.
+            image:
+              src: images/acquaint.jpg
+              href: 'https://github.com/xamarinhq/app-acquaint'
+            title: Acquaint
+          - href: 'https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps'
+            html: 'Demonstração na Connect 2017 de compilação de um pacote de aplicativos, incluindo o Xamarin e o Azure.'
+            image:
+              src: images/smarthotel360.png
+              href: 'https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps'
+            title: SmartHotel360
+          - href: 'https://github.com/Microsoft/BikeSharing360_MobileApps'
+            html: 'Demonstração na Connect 2016 de compilação de um pacote de aplicativos, incluindo o Xamarin e o Azure.'
+            image:
+              src: images/bikesharing360.png
+              href: 'https://github.com/Microsoft/BikeSharing360_MobileApps'
+            title: BikeSharing360
+          - href: 'https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile'
+            html: Diretrizes de arquitetura empresarial para a criação de aplicativos usando contêineres no Azure.
+            image:
+              src: images/eshop.png
+              href: 'https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile'
+            title: eShop
+  - title: Todas as amostras
     items:
-    - href: https://developer.xamarin.com/samples/
-      html: O conjunto completo de aplicativos de exemplo e demonstrações de código multiplataforma do Xamarin.
-      image:
-        src: ~/media/shared/sample-download.svg
-        href: https://developer.xamarin.com/samples/
-      title: Todos os exemplos de Xamarin
+      - type: list
+        style: cards
+        className: cardsW
+        items:
+          - href: 'https://developer.xamarin.com/samples/'
+            html: O conjunto completo de aplicativos de exemplo e demonstrações de código multiplataforma do Xamarin.
+            image:
+              src: ~/media/shared/sample-download.svg
+              href: 'https://developer.xamarin.com/samples/'
+            title: Todos os exemplos de Xamarin

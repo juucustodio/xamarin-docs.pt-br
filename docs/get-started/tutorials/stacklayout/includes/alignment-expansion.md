@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382477"
+---
 O tamanho e a posição das exibições filho dentro de um [`StackLayout`](xref:Xamarin.Forms.StackLayout) dependem dos valores das propriedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) da exibição filho e dos valores das propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
 
 As propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) podem ser definidas como campos do struct [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions), que encapsula duas preferências de layout:
