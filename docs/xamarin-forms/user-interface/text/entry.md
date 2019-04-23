@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
 ms.openlocfilehash: c9be74bcc6e5d149856e06c98d3bef9a841d4bab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230192"
 ---
 # <a name="xamarinforms-entry"></a>Entrada do xamarin. Forms
 
@@ -38,7 +38,7 @@ No C#:
 var MyEntry = new Entry { Text = "I am an Entry" };
 ```
 
-Para ler o texto, acessar o `Text` propriedade em c#:
+Para ler o texto, acessar o `Text` propriedade em C#:
 
 ```csharp
 var text = MyEntry.Text;
@@ -168,7 +168,7 @@ Isso pode ser feito no XAML da seguinte maneira:
 <Entry Keyboard="Chat" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 var entry = new Entry { Keyboard = Keyboard.Chat };
@@ -201,7 +201,7 @@ O exemplo de código XAML a seguir mostra como personalizar o padrão [ `Keyboar
 </Entry>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter text here" };
@@ -225,7 +225,7 @@ O exemplo XAML a seguir mostra como definir a chave de retornada:
 <Entry ReturnType="Send" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 var entry = new Entry { ReturnType = ReturnType.Send };
@@ -342,7 +342,7 @@ O evento concluído pode ser assinado em XAML:
 <Entry Completed="Entry_Completed" />
 ```
 
-e o c#:
+e o C#:
 
 ```csharp
 var entry = new Entry ();
@@ -371,7 +371,7 @@ O `TextChanged` eventos podem ser assinados em XAML:
 <Entry TextChanged="Entry_TextChanged" />
 ```
 
-e o c#:
+e o C#:
 
 ```csharp
 var entry = new Entry ();
