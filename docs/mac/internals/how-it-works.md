@@ -1,5 +1,5 @@
 ---
-title: Como funciona o xamarin. Mac
+title: Como o Xamarin.Mac funciona
 description: Este documento descreve o funcionamento interno do xamarin. Mac. Em particular, ele examina construtores, gerenciamento de memória, à frente de compilação de tempo e o registrador.
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/25/2017
-ms.openlocfilehash: cd5371cde1dfcbe3cb1aea5dbdf8439816d66d95
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0635e110cb2aa7bc00234d3d06df57e0fd6f966e
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111311"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893225"
 ---
-# <a name="how-xamarinmac-works"></a>Como funciona o xamarin. Mac
+# <a name="how-xamarinmac-works"></a>Como o Xamarin.Mac funciona
 
 Na maioria das vezes, o desenvolvedor nunca precisará se preocupar sobre o interno "mágica" do xamarin. Mac, no entanto, ter uma compreensão aproximada de como as coisas funciona nos bastidores ajudará em ambos os interpretação documentação existente com um C# lente e depuração problemas quando eles surgem.
 
-No xamarin. Mac, um aplicativo preenche dois mundos: não há tempo de execução com base em Objective-C que contém instâncias de classes nativas (`NSString`, `NSApplication`, etc) e não há o C# classes gerenciadas do tempo de execução que contém instâncias de (`System.String` `HttpClient`, etc). Entre esses dois mundos, o xamarin. Mac cria uma ponte de duas maneiras para que um aplicativo pode chamar métodos (seletores) em Objective-C (como `NSApplication.Init`) e Objective-C pode chamar o aplicativo C# métodos de volta (como métodos em um representante do aplicativo). Em geral, chamadas em Objective-C são manipuladas de forma transparente por meio **P/Invokes** e algum código de tempo de execução, o Xamarin fornece.
+No xamarin. Mac, um aplicativo preenche dois mundos: Não há tempo de execução com base em Objective-C que contém instâncias de classes nativas (`NSString`, `NSApplication`, etc) e não há o C# classes gerenciadas do tempo de execução que contém instâncias de (`System.String`, `HttpClient`, etc). Entre esses dois mundos, o xamarin. Mac cria uma ponte de duas maneiras para que um aplicativo pode chamar métodos (seletores) em Objective-C (como `NSApplication.Init`) e Objective-C pode chamar o aplicativo C# métodos de volta (como métodos em um representante do aplicativo). Em geral, chamadas em Objective-C são manipuladas de forma transparente por meio **P/Invokes** e algum código de tempo de execução, o Xamarin fornece.
 
 <a name="exposing-classes" />
 
@@ -120,7 +120,7 @@ Há várias opções diferentes que podem ser ajustadas ao habilitar a compilaç
 - `core` -AOT compila as `Xamarin.Mac`, `System` e `mscorlib` assemblies.
 - `sdk` -AOT compila o `Xamarin.Mac` e assemblies de bibliotecas de classe Base (BCL).
 - `|hybrid` -Adicionar isso a uma das opções acima habilita o AOT que permite a remoção de IL híbrido, mas será resultam em mais tempos de compilação.
-- `+` – Inclui uma única para a compilação AOT.
+- `+` – Inclui um único arquivo de compilação AOT.
 - `-` – Remove um único arquivo de compilação AOT.
 
 Por exemplo, `--aot:all,-MyAssembly.dll` permitiria que a compilação AOT em todos os assemblies no MonoBundle _exceto_ `MyAssembly.dll` e `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` habilitaria híbrido, código AOT incluem o `MyOtherAssembly.dll` e excluindo o `mscorlib.dll`.

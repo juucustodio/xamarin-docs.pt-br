@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
 ms.openlocfilehash: 7ed8fc18624f46abd4a9fc293d8c33a1722da7dd
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870255"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893108"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Referenciando as bibliotecas nativas no xamarin. IOS
 
