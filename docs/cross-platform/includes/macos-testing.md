@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d3b7a14938e204898f7e32d3c75be60787bfb324
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61303257"
+---
 ||Notas de teste|
 |---|---|
 |**Xamarin.iOS**|<ul><li>A maneira mais fácil para começar é usando o iPhone, iPad, Apple Watch e simuladores de Apple TV inclusos no Xcode.</li><li>Para usar um dispositivo para teste, siga <a href="~/ios/get-started/installation/device-provisioning/index.md">estas instruções</a>.</li></ul>|

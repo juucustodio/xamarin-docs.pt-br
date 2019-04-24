@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6f72c951f28940c5382e3ed321cbd982cdafcfbf
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61303258"
+---
 ||Recomendado|Observações|
 |---|---|---|
 |**Sistema operacional**|macOS High Sierra|[O Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876) exige o macOS High Sierra ou mais recente.|
