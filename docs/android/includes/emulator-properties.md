@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b39fb6157c247416c85846d4d8e63e6e1b7c6028
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60956818"
+---
 |Propriedade|Descrição|Opções|
 |--- |--- |--- |
 |`abi.type`|**Tipo de ABI** &ndash; especifica o tipo de ABI (interface binária de aplicativo) do dispositivo emulado. A opção **x86** é para o conjunto de instruções normalmente chamado de "x86" ou "IA-32". A opção **x86_64** é para o conjunto de instruções x86 de 64 bits. A opção **armeabi-v7a** é para o conjunto de instruções ARM com extensões ARM v7-a. A opção **arm64-v8a** é para o conjunto de instruções ARM que oferece suporte a AArch64.|x86, x86_64, armeabi-v7a, arm64-v8a|
@@ -30,7 +38,7 @@
 |`hw.gsmModem`|**Suporte para modem GSM** &ndash; determina se o dispositivo emulado inclui um modem que oferece suporte ao sistema de telefonia móvel GSM (Sistema Global para Comunicações Móveis).|sim, não|
 |`hw.initialOrientation`|**Orientação da tela de inicial** &ndash; configura a orientação inicial da tela no dispositivo emulado (modo retrato ou paisagem). No modo retrato, a tela é mais alta do que larga. No modo paisagem, a tela é mais larga do que alta. Ao executar o dispositivo emulado, é possível alterar a orientação se os modos retrato e paisagem tiverem suporte no perfil do dispositivo.|retrato, paisagem|
 |`hw.keyboard`|**Suporte para teclado** &ndash; determina se o dispositivo emulado dá suporte a um teclado QWERTY.|sim, não|
-|`hw.keyboard.charmap`|**Nome do charmap do teclado** &ndash; o nome do charmap do hardware do dispositivo. OBSERVAÇÃO: esse sempre deve ser o padrão **qwerty2**, a menos que você tenha modificado a imagem do sistema adequadamente. Esse nome é enviado para o kernel no momento da inicialização. Usar um nome incorreto resulta em um dispositivo virtual inutilizável.||
+|`hw.keyboard.charmap`|**Nome do charmap do teclado** &ndash; o nome do charmap do hardware do dispositivo. OBSERVAÇÃO: Esse sempre deve ser o padrão **qwerty2**, a menos que você tenha modificado a imagem do sistema adequadamente. Esse nome é enviado para o kernel no momento da inicialização. Usar um nome incorreto resulta em um dispositivo virtual inutilizável.||
 |`hw.keyboard.lid`|**Suporte para a tampa de teclado** &ndash; se o suporte para teclado estiver habilitado, essa configuração determina se o teclado QWERTY pode ser fechado/oculto ou aberto/visível. Essa configuração será ignorada se hw.keyboard estiver definido como false. OBSERVAÇÃO: o valor padrão será false se o dispositivo emulado tiver como alvo o nível da API 12 ou superior.|sim, não|
 |`hw.lcd.backlight`|**Luz de fundo LCD** &ndash; determina se uma luz de fundo LCD é simulada pelo dispositivo emulado.|sim, não|
 |`hw.lcd.density`|**Densidade de LCD** &ndash; a densidade da tela de LCD emulada, medida em pixels independentes de densidade ou dp (dp é uma unidade virtual de pixel). Quando a configuração é de 160 dp, cada dp corresponde a um pixel físico. Em tempo de execução, o Android usa esse valor para selecionar e dimensionar os recursos/ativos apropriados para a renderização correta da exibição.|120, 160, 240, 213, 320|
