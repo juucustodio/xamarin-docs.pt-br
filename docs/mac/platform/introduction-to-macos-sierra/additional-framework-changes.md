@@ -1,5 +1,5 @@
 ---
-title: Adicionais macOS Sierra alterações de estrutura
+title: Alterações adicionais de estrutura do MacOS Serra
 description: Este documento descreve algumas pequenas alterações e aprimoramentos para as estruturas existentes introduzidos no macOS Sierra. Ele examina as alterações do framework Accelerate, AppKit, AVFoundation, dados principais, imagem principal, Foundation e muito mais.
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 6ed827c018931e5b79887dc355f136e2a84623d6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61031621"
 ---
-# <a name="additional-macos-sierra-framework-changes"></a>Adicionais macOS Sierra alterações de estrutura
+# <a name="additional-macos-sierra-framework-changes"></a>Alterações adicionais de estrutura do MacOS Serra
 
 <a name="Accelerate-Framework-Enhancements" />
 

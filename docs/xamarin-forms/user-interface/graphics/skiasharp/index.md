@@ -7,11 +7,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 9cd5a25c598a25500aee595439aeecd648d50526
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61291140"
 ---
 # <a name="skiasharp-graphics-in-xamarinforms"></a>Elementos gráficos de SkiaSharp em Xamarin.Forms
 

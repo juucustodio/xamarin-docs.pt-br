@@ -8,11 +8,11 @@ ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
 ms.openlocfilehash: d5dda3cc22d91248cc31cc526e898a5eabbbefd0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61415302"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introdução ao MonoTouch para xamarin. IOS
 
@@ -463,7 +463,7 @@ A classe ImageLoader expõe um método de limpeza que você pode chamar, quando 
 
 ## <a name="using-linq-to-create-element-hierarchy"></a>Usando o LINQ para criar a hierarquia de elementos
 
-Por meio do uso inteligente do LINQ e do # sintaxe de inicialização, o LINQ pode ser usado para criar uma hierarquia de elemento. Por exemplo, o código a seguir cria uma tela de algumas matrizes de cadeia de caracteres e identificadores de seleção por meio de uma função anônima que é passada para cada célula `StringElement`:
+Por meio do uso inteligente de LINQ e C#da sintaxe de inicialização, o LINQ pode ser usado para criar uma hierarquia de elemento. Por exemplo, o código a seguir cria uma tela de algumas matrizes de cadeia de caracteres e identificadores de seleção por meio de uma função anônima que é passada para cada célula `StringElement`:
 
 ```csharp
 var rootElement = new RootElement ("LINQ root element") {

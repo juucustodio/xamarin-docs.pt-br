@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 58d3b3ae067913a85c3ada5f5b35e64511523ff8
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334576"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumo do capítulo 1. Como xamarin. Forms se encaixa?
 
@@ -29,13 +29,13 @@ Esse problema é comum ao direcionar para plataformas móveis. Atualmente, exist
 
 Um fornecedor de software que deseja essas plataformas de destino deve lidar com paradigmas de interface de usuário diferente, três ambientes de desenvolvimento diferente, três interfaces de programação diferente, e&mdash;talvez mais incômoda&mdash;três linguagens de programação diferentes: Objective-C para iPhone e iPad, Java para Android, e C# para Windows.
 
-## <a name="the-c-and-net-solution"></a>A solução c# e .NET
+## <a name="the-c-and-net-solution"></a>A solução C# e .NET
 
-Embora Objective-C, Java e c# são derivados da linguagem de programação C, eles foram desenvolvidos por caminhos muito diferentes. C# é a mais recente dessas linguagens e tem sido amadurecimento de maneiras muito útil. Além disso, o c# é estreitamente relacionados com uma infra-estrutura de programação toda chamada .NET, que fornece suporte para matemática, depuração, reflexão, coleções, globalização, e/s de arquivo, rede, segurança, threading, serviços web, manipulação de dados e XML e JSON de leitura e gravação.
+Embora Objective-C, Java e C# são derivados da linguagem de programação C, eles foram desenvolvidos por caminhos muito diferentes. C# é a mais recente dessas linguagens e tem sido amadurecimento de maneiras muito útil. Além disso, o C# é estreitamente relacionados com uma infra-estrutura de programação toda chamada .NET, que fornece suporte para matemática, depuração, reflexão, coleções, globalização, e/s de arquivo, rede, segurança, threading, serviços web, manipulação de dados e XML e JSON de leitura e gravação.
 
-Atualmente, Xamarin fornece ferramentas para direcionar o Mac, iOS e APIs do Android usando c# e .NET native. Essas ferramentas são chamadas de xamarin. Mac, xamarin. IOS e xamarin. Android, coletivamente conhecido como a plataforma Xamarin. Essas são as bibliotecas e as ligações que expressam as APIs nativas dessas plataformas com linguagens .NET.
+Atualmente, Xamarin fornece ferramentas para direcionar o Mac, iOS e APIs do Android usando C# e .NET native. Essas ferramentas são chamadas de xamarin. Mac, xamarin. IOS e xamarin. Android, coletivamente conhecido como a plataforma Xamarin. Essas são as bibliotecas e as ligações que expressam as APIs nativas dessas plataformas com linguagens .NET.
 
-Os desenvolvedores podem usar a plataforma Xamarin para escrever aplicativos em c# destinados ao Mac, iOS ou Android. Mas quando mais de uma plataforma de direcionamento, faz muito sentido para compartilhar parte do código entre as plataformas de destino. Isso envolve a separação de programa em código dependente de plataforma (geralmente envolvendo a interface do usuário) e o código independente de plataforma, o que geralmente requer apenas o base do .NET framework. Esse código independente de plataforma ou pode residir em uma biblioteca de classe portátil (PCL) ou um projeto compartilhado, geralmente chamado de um projeto de ativo compartilhado ou SAP.
+Os desenvolvedores podem usar a plataforma Xamarin para escrever aplicativos em C# destinados ao Mac, iOS ou Android. Mas quando mais de uma plataforma de direcionamento, faz muito sentido para compartilhar parte do código entre as plataformas de destino. Isso envolve a separação de programa em código dependente de plataforma (geralmente envolvendo a interface do usuário) e o código independente de plataforma, o que geralmente requer apenas o base do .NET framework. Esse código independente de plataforma ou pode residir em uma biblioteca de classe portátil (PCL) ou um projeto compartilhado, geralmente chamado de um projeto de ativo compartilhado ou SAP.
 
 > [!NOTE]
 > Bibliotecas de classes portáteis foram substituídas por bibliotecas .NET Standard. O código de exemplo do livro foi convertido para usar bibliotecas padrão do .NET.

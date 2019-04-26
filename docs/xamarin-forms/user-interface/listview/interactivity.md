@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
 ms.openlocfilehash: 1447526ef925431e3cad5f36d4ce7a528c8ab07c
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386552"
 ---
 # <a name="listview-interactivity"></a>Interatividade do ListView
 
@@ -69,11 +69,11 @@ Muitas vezes, os usuários desejarão agir em um item em um `ListView`. Por exem
 
 ![](interactivity-images/context-default.png "ListView com ações de contexto")
 
-Ações de contexto podem ser implementadas em c# e XAML. Abaixo você encontrará guias específicos para ambos, mas primeiro vamos dar uma olhada em alguns detalhes de implementação fundamentais para ambos.
+Ações de contexto podem ser implementadas em C# e XAML. Abaixo você encontrará guias específicos para ambos, mas primeiro vamos dar uma olhada em alguns detalhes de implementação fundamentais para ambos.
 
 Ações de contexto são criadas usando `MenuItem`s. Eventos de toque para MenuItems são acionados por MenuItem em si, não o ListView. Isso é diferente de como os eventos de toque são tratados para células, onde o ListView gera o evento em vez da célula. Porque o ListView está gerando o evento, seu manipulador de eventos recebe informações de chave, como o qual o item foi selecionado ou tocado.
 
-Por padrão, um MenuItem não tem nenhuma maneira de saber qual célula pertence. `CommandParameter` está disponível em `MenuItem` para armazenar objetos, como o objeto por trás ViewCell de MenuItem. `CommandParameter` pode ser definido em XAML e c#.
+Por padrão, um MenuItem não tem nenhuma maneira de saber qual célula pertence. `CommandParameter` está disponível em `MenuItem` para armazenar objetos, como o objeto por trás ViewCell de MenuItem. `CommandParameter` pode ser definido em XAML e C#.
 
 ### <a name="c"></a>C#  
 
@@ -156,7 +156,7 @@ Os usuários já conhecem movendo para baixo em uma lista de dados que será atu
           IsPullToRefreshEnabled="true" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 listView.IsPullToRefreshEnabled = true;
@@ -170,7 +170,7 @@ Um controle giratório aparece durante a atualização, o que é preta por padr�
           RefreshControlColor="Red" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 listView.RefreshControlColor = Color.Red;

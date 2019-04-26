@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61282920"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Caixas de diálogo no xamarin. Mac
 
@@ -87,7 +87,7 @@ Ou ele pode ser exibido como uma planilha:
 
 ### <a name="save-dialogs"></a>Salvar as caixas de diálogo
 
-A caixa de diálogo Salvar oferece aos usuários uma maneira consistente para salvar um item em um aplicativo. A caixa de diálogo Salvar tem dois estados: **mínimo** (também conhecido como recolhido):
+A caixa de diálogo Salvar oferece aos usuários uma maneira consistente para salvar um item em um aplicativo. A caixa de diálogo Salvar tem dois estados: **Mínimo** (também conhecido como recolhido):
 
 [![](dialog-images/save01.png "A caixa de diálogo Salvar")](dialog-images/save01.png#lightbox)
 
@@ -754,7 +754,7 @@ namespace SourceWriter
 }
 ```
 
-Observe que essa classe tem feito duas coisas aqui: primeiro, há um auxiliar `App` propriedade para ter acesso a **AppDelegate** mais fácil. Segundo, o `Preferences` propriedade expõe global **AppPreferences** para vinculação de dados com todos os controles da interface do usuário é colocado nesta exibição de classe.
+Observe que essa classe tem feito duas coisas aqui: Primeiro, há um auxiliar `App` propriedade para ter acesso a **AppDelegate** mais fácil. Segundo, o `Preferences` propriedade expõe global **AppPreferences** para vinculação de dados com todos os controles da interface do usuário é colocado nesta exibição de classe.
 
 Em seguida, clique duas vezes no arquivo de Storyboard para abri-la novamente no construtor de Interface (e ver as alterações feitas recentemente acima). Arraste os controles da interface do usuário necessários para criar a interface de preferências no modo de exibição. Para cada controle, alterne para o **Inspetor de associação** e associar a propriedades individual da **AppPreference** classe:
 

@@ -1,5 +1,5 @@
 ---
-title: ListView e o ciclo de vida de atividade
+title: ListView e o ciclo de vida da atividade
 ms.prod: xamarin
 ms.assetid: 40840D03-6074-30A2-74DA-3664703E3367
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: b2328759b3158920bc8683ec14c2aebefd7a04ae
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187067"
 ---
-# <a name="listview-and-the-activity-lifecycle"></a>ListView e o ciclo de vida de atividade
+# <a name="listview-and-the-activity-lifecycle"></a>ListView e o ciclo de vida da atividade
 
 As atividades percorrem determinados estados conforme seu aplicativo é executado, por exemplo, iniciar, em execução, em pausa e que está sendo interrompido. Para obter mais informações e diretrizes específicas sobre o tratamento de transições de estado, consulte a [Tutorial de ciclo de vida de atividade](~/android/app-fundamentals/activity-lifecycle/index.md).
 É importante entender o ciclo de vida de atividade e coloque seu `ListView` código nos locais corretos.

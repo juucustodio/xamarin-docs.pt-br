@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
 ms.openlocfilehash: 6080b4dc152558d6f532399cee7424670c588c28
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61319565"
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Sincronizar dados Offline com aplicativos móveis do Azure
 

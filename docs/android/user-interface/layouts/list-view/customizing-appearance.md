@@ -1,5 +1,5 @@
 ---
-title: Personalizando a aparência de um ListView
+title: Personalizar a aparência de uma ListView
 ms.prod: xamarin
 ms.assetid: B09AD282-2C4F-D71E-6806-9B1EF05C2CD4
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
 ms.openlocfilehash: fef81fb5e5d2de79508b43a5612bf56af68d0772
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61178386"
 ---
-# <a name="customizing-a-listviews-appearance"></a>Personalizando a aparência de um ListView
+# <a name="customizing-a-listviews-appearance"></a>Personalizar a aparência de uma ListView
 
 
 ## <a name="overview"></a>Visão geral

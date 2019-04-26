@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: dda197f71b2a2ab3e0d61a838ab85d79b7a078c7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61270282"
 ---
 # <a name="introduction-to-tvos-9"></a>Introdução ao tvOS 9
 
@@ -66,8 +66,8 @@ O novo Apple TV tem as seguintes especificações de hardware:
  - processador de A8 de 64 bits
  - GB de 32 ou 64GB de armazenamento
  - 2GB de RAM
- - 10/100 Mbps Ethernet
- - 802.11a/b/g/n/ac Wi-Fi
+ - 10/100Mbps Ethernet
+ - WiFi 802.11a/b/g/n/ac
  - resolução de 1080p
  - HDMI
  - Porta de C de USB (para o desenvolvedor e o uso do diagnóstico somente)
@@ -75,7 +75,7 @@ O novo Apple TV tem as seguintes especificações de hardware:
 
 ### <a name="siri-remote"></a>Siri remoto
 
-Com base na região, fornecido da Apple TV remoto virá em configurações com um uma: Siri remoto ou Apple TV remoto.
+Com base na região, fornecido da Apple TV remoto virão em qualquer um configurações: Siri remoto ou Apple TV remoto.
 
 Siri remoto está disponível nos seguintes países:
 

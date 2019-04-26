@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2018
 ms.openlocfilehash: ce027eacbfb47299cb1c627b530caae4a14c4ba0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199656"
 ---
 # <a name="unified-api-for-xamarinios-and-xamarinmac"></a>API unificada para xamarin. IOS e xamarin. Mac
 

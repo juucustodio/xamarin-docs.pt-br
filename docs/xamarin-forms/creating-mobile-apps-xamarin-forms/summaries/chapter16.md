@@ -1,6 +1,6 @@
 ---
 title: Resumo do capítulo 16. Associação de dados
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 16. Associação de dados'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 16. Associação de dados'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: df3cee3fe71553b63bf4b050cad141b66ad98a06
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334164"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Resumo do capítulo 16. Associação de dados
 

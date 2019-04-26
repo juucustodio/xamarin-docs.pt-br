@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/02/2018
 ms.openlocfilehash: ad706700001ab07d74f518d50ab389c8590ba131
-ms.sourcegitcommit: 7016df4979e763963eb024eb2fe6d79f466d871a
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53748439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61418644"
 ---
 # <a name="how-can-i-download-a-previous-version-of-xcode"></a>Como baixar uma versão anterior do Xcode?
 

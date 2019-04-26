@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
 ms.openlocfilehash: 5b969c6118d1fa23558efaabc87cd53a920f3490
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61281970"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player para xamarin. Forms
 

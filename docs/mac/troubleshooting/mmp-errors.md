@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
 ms.openlocfilehash: 640d1adc048bec167508d8c288b62d498f061b0d
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61233196"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensagens de erro (mmp) do xamarin. Mac
 
@@ -35,7 +35,7 @@ A maneira mais fácil para obter informações de versão exata é usar o **Xama
 
 <a name="MM0001" />
 
-#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001: Esta versão do xamarin. Mac requer o Mono {0} (a versão atual do Mono é {1}). Atualize o Mono.framework do http://mono-project.com/Downloads
+#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001: Esta versão do xamarin. Mac requer Mono {0} (a versão atual do Mono é {1}). Atualize o Mono.framework do http://mono-project.com/Downloads
 
 <a name="MM0003" />
 
@@ -109,7 +109,7 @@ A maneira mais fácil para obter informações de versão exata é usar o **Xama
 
 <a name="MM0068" />
 
-#### <a name="mm0068-invalid-value-for-target-framework-0"></a>MM0068: O valor inválido para a estrutura de destino: {0}.
+#### <a name="mm0068-invalid-value-for-target-framework-0"></a>MM0068: Valor inválido para a estrutura de destino: {0}.
 
 <a name="MM0071" />
 
@@ -154,7 +154,7 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 <a name="MM0114" />
 
-#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114: AOT híbrido compilação exige que todos os assemblies a serem AOT compilado.
+#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114: Compilação de AOT híbrido requer que todos os assemblies a serem AOT compilado.
 
 ## <a name="mm1xxx-file-copy--symlinks-project-related"></a>MM1xxx: cópia do arquivo / links simbólicos (projeto relacionado)
 
@@ -166,7 +166,7 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 <a name="MM1401" />
 
-#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401: Necessários '{0}' assembly está ausente das referências
+#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401: O obrigatório '{0}' assembly está ausente das referências
 
 <a name="MM1402" />
 
@@ -192,35 +192,35 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 #### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Incompatibilidade entre a referência do xamarin. Mac '{0}'e a estrutura de destino selecionado'{1}'.
 
-### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx: Erros Assembly coletando (não exigindo de vinculador)
+### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx: Erros de coleta (não exigindo de vinculador) do assembly
 
 <a name="MM1501" />
 
-#### <a name="mm1501-can-not-resolve-reference-0"></a>MM1501: Não pode resolver a referência: {0}
+#### <a name="mm1501-can-not-resolve-reference-0"></a>MM1501: Não é possível resolver a referência: {0}
 
 ### <a name="machocs"></a>MachO.cs
 
 <a name="MM1600" />
 
-#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600: Não uma Mach-O biblioteca dinâmica (cabeçalho desconhecido ' 0 x{0}'): {1}.
+#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600: Não uma biblioteca dinâmica Mach-O (cabeçalho desconhecido ' 0 x{0}'): {1}.
 
 <a name="MM1601" />
 
-#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601: Não uma biblioteca estática (cabeçalho desconhecido '{0}'): {1}.
+#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601: Não é uma biblioteca estática (cabeçalho desconhecido '{0}'): {1}.
 
 <a name="MM1602" />
 
-#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602: Não uma Mach-O biblioteca dinâmica (cabeçalho desconhecido ' 0 x{0}'): {1}.
+#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602: Não uma biblioteca dinâmica Mach-O (cabeçalho desconhecido ' 0 x{0}'): {1}.
 
 <a name="MM1603" />
 
-#### <a name="mm1603-unknown-format-for-fat-entry-at-position-0-in-1"></a>MM1603: Formato desconhecido entrada fat na posição {0} em {1}.
+#### <a name="mm1603-unknown-format-for-fat-entry-at-position-0-in-1"></a>MM1603: Formato desconhecido para entrada fat na posição {0} em {1}.
 
 <a name="MM1604" />
 
-#### <a name="mm1604-file-of-type-0-is-not-a-macho-file-1"></a>MM1604: O arquivo do tipo {0} não é um arquivo MachO ({1}).
+#### <a name="mm1604-file-of-type-0-is-not-a-macho-file-1"></a>MM1604: Arquivo do tipo {0} não é um arquivo MachO ({1}).
 
-## <a name="mm2xxx-linker"></a>MM2xxx: Linker
+## <a name="mm2xxx-linker"></a>MM2xxx: Vinculador
 
 ### <a name="mm20xx-linker-general-errors"></a>MM20xx: Erros de vinculador (geral)
 
@@ -230,7 +230,7 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 <a name="MM2002" />
 
-#### <a name="mm2002-can-not-resolve-reference-0"></a>MM2002: Não pode resolver a referência: {0}
+#### <a name="mm2002-can-not-resolve-reference-0"></a>MM2002: Não é possível resolver a referência: {0}
 
 <a name="MM2003" />
 
@@ -238,7 +238,7 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 <a name="MM2004" />
 
-#### <a name="mm2004-extra-linker-definitions-file-0-could-not-be-located"></a>MM2004: Arquivo de definições de vinculador Extra '{0}' não pôde ser localizado.
+#### <a name="mm2004-extra-linker-definitions-file-0-could-not-be-located"></a>MM2004: Arquivo de definições de vinculador extra '{0}' não pôde ser localizado.
 
 <a name="MM2005" />
 
@@ -250,15 +250,15 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 <a name="MM2007" />
 
-#### <a name="mm2007-xamarinmac-unified-api-against-a-full-net-profile-does-not-support-linking-pass-the--nolink-flag"></a>MM2007: API unificada do xamarin. MAC em relação a um perfil completo do .NET não suporta vinculação. Passe o sinalizador - nolink.
+#### <a name="mm2007-xamarinmac-unified-api-against-a-full-net-profile-does-not-support-linking-pass-the--nolink-flag"></a>MM2007: API unificada do xamarin. MAC em relação a um perfil completo do .NET não oferece suporte à vinculação. Passe o sinalizador - nolink.
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: Referenciada por {0}.{1}     ** Esta mensagem está relacionada ao MM2006 **
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: Referenciado por {0}.{1}     * * Esta mensagem está relacionada ao MM2006 * *
 
 <a name="MM2010" />
 
-#### <a name="mm2010-unknown-httpmessagehandler-0-valid-values-are-httpclienthandler-default-cfnetworkhandler-or-nsurlsessionhandler"></a>MM2010: HttpMessageHandler desconhecido `{0}`. Os valores válidos são HttpClientHandler (padrão), CFNetworkHandler ou NSUrlSessionHandler
+#### <a name="mm2010-unknown-httpmessagehandler-0-valid-values-are-httpclienthandler-default-cfnetworkhandler-or-nsurlsessionhandler"></a>MM2010: O HttpMessageHandler desconhecido `{0}`. Os valores válidos são HttpClientHandler (padrão), CFNetworkHandler ou NSUrlSessionHandler
 
 <a name="MM2011" />
 
@@ -266,7 +266,7 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Apenas as primeiras {0} de {1} "Referenciado por" avisos mostrados. ** Esta mensagem relacionada a 2009 \*\*
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Somente o primeiro {0} de {1} "Referenciado por" avisos mostrados. ** Esta mensagem relacionada a 2009 \*\*
 
 <a name="MM2013" />
 
@@ -274,7 +274,7 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Extensões do xamarin. Mac não suporta vinculação. A solicitação de vinculação será ignorada. ** Esta mensagem está obsoleta em XM 3.6 + \*\*
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Extensões do xamarin. Mac não têm suporte para a vinculação. A solicitação de vinculação será ignorada. ** Esta mensagem está obsoleta em XM 3.6 + \*\*
 
 <!-- 2015 used by mtouch -->
 
@@ -288,15 +288,15 @@ Uma solução de última Gota seria usar uma versão mais antiga do xamarin. Mac
 
 <a name="MM202x" />
 
-#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x: Falha de associação otimizador processamento `...`.
+#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x: Falha ao associar o otimizador de processamento `...`.
 
 <a name="MM2100" />
 
-#### <a name="mm2100-xamarinmac-classic-api-does-not-support-platform-linking"></a>MM2100: Xamarin. Mac clássico API não suporta vinculação de plataforma.
+#### <a name="mm2100-xamarinmac-classic-api-does-not-support-platform-linking"></a>MM2100: Xamarin. Mac clássico API não oferece suporte a vinculação de plataforma.
 
 <a name="MM2103" />
 
-#### <a name="mm2103-error-processing-assembly--"></a>MM2103: Assembly de processamento de erro '\*': *
+#### <a name="mm2103-error-processing-assembly--"></a>MM2103: Erro ao processar o assembly '\*': *
 
 Erro inesperado durante o processamento de um assembly.
 
@@ -348,7 +348,7 @@ Consulte https://msdn.microsoft.com/library/x0w2664k.aspx para obter mais inform
 
 #### <a name="mm4134-your-application-is-using-the-0-framework-which-isnt-included-in-the-macos-sdk-youre-using-to-build-your-app-this-framework-was-introduced-in-osx-2-while-youre-building-with-the-macos-1-sdk-this-configuration-is-not-supported-with-the-static-registrar-pass---registrardynamic-as-an-additional-mmp-argument-in-your-projects-mac-build-option-to-select-alternatively-select-a-newer-sdk-in-your-apps-mac-build-options"></a>MM4134: Seu aplicativo está usando o '{0}' framework, que não está incluído no SDK do MacOS que você está usando para criar seu aplicativo (essa estrutura foi introduzida no OSX {2}, enquanto você está criando com o MacOS {1} SDK.) Não há suporte para essa configuração com o registrador estático (pass – registrador: dinâmico como um argumento mmp adicionais na opção de Build do Mac do seu projeto para selecionar). Como alternativa, selecione um SDK mais recente nas opções de Build do Mac do seu aplicativo.
 
-## <a name="mm5xxx-gcc-and-toolchain"></a>MM5xxx: GCC e a cadeia de ferramentas
+## <a name="mm5xxx-gcc-and-toolchain"></a>MM5xxx: GCC e cadeia de ferramentas
 
 ### <a name="mm51xx-compilation"></a>MM51xx: compilação
 
@@ -368,7 +368,7 @@ Consulte https://msdn.microsoft.com/library/x0w2664k.aspx para obter mais inform
 
 <a name="MM5202" />
 
-#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono.framework MDK está ausente. Instale o MDK para sua versão Mono.framework do http://mono-project.com/Downloads
+#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono.Framework MDK está ausente. Instale o MDK para sua versão Mono.framework do http://mono-project.com/Downloads
 
 <a name="MM5203" />
 

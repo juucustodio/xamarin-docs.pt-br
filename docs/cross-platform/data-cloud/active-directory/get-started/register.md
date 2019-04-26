@@ -1,19 +1,19 @@
 ---
-title: Etapa 1. Registrar um aplicativo para usar o Active Directory do Azure
-description: Este documento descreve como registrar um aplicativo do Azure com o Azure Active Directory para que ele possa ser acessado com segurança por clientes móveis.
+title: Etapa 1. Registrar um aplicativo para usar o Azure Active Directory
+description: Este documento descreve como registrar um aplicativo do Azure com o Azure Active Directory para que possam ser acessado com segurança pelos clientes móveis.
 ms.prod: xamarin
 ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
 ms.openlocfilehash: 7f1e743eea81edc0aa45b49f6acb6a9fd461bc80
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61188183"
 ---
-# <a name="step-1-register-an-app-to-use-azure-active-directory"></a>Etapa 1. Registrar um aplicativo para usar o Active Directory do Azure
+# <a name="step-1-register-an-app-to-use-azure-active-directory"></a>Etapa 1. Registrar um aplicativo para usar o Azure Active Directory
 
 1. Navegue até [windowsazure.com](https://manage.windowsazure.com) e faça logon com sua conta de organização no Portal do Azure ou Account da Microsoft. Se você não tiver uma assinatura do Azure, você pode obter uma avaliação de [azure.com](http://www.azure.com)
 
@@ -21,7 +21,7 @@ ms.locfileid: "34780663"
 
   [ ![](register-images/01.-active-directory-in-azure-portal-sml.jpg "seção e escolha o diretório onde você deseja registrar o aplicativo")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
 
-3. Clique em **adicionar** para criar um novo aplicativo, em seguida, selecione **adicionar um aplicativo que minha organização esteja desenvolvendo**
+3. Clique em **Add** para criar um novo aplicativo, em seguida, selecione **adicionar um aplicativo que minha organização esteja desenvolvendo**
 
   [ ![](register-images/02.-add-new-application-sml.jpg "Adicionar um aplicativo que minha organização esteja desenvolvendo")](register-images/02.-add-new-application.jpg#lightbox)
 
@@ -30,16 +30,16 @@ ms.locfileid: "34780663"
 
   ![](register-images/03.-app-name.jpg "Certifique-se de que selecionar o aplicativo cliente nativo como o tipo de aplicativo")
 
-5. Na tela final, forneça um **URI de redirecionamento* seja exclusivo para seu aplicativo como ele será retornada para esse URI quando a autenticação é concluída.
+5. Na tela final, forneça um **URI de redirecionamento* que é exclusiva para seu aplicativo como ele retornarão para esse URI quando a autenticação é concluída.
 
-  ![](register-images/04.-app-redirect.jpg "Na tela final, forneça um URI de redirecionamento que é exclusivo para seu aplicativo como ele será retornada para esse URI quando a autenticação é concluída")
+  ![](register-images/04.-app-redirect.jpg "Na tela final, forneça um URI de redirecionamento que é exclusivo para seu aplicativo como ele retornarão para esse URI quando a autenticação é concluída")
 
-6. Quando o aplicativo é criado, navegue até o **configurar** guia. Anote o **ID do cliente** que usaremos nosso aplicativo mais tarde. Além disso, nessa tela, você pode conceder acesso ao seu aplicativo móvel para o Active Directory ou adicionar outro aplicativo, como a API da Web ou o Office 365, que pode ser usado pelo aplicativo móvel quando a autenticação é concluída.
+6. Depois que o aplicativo é criado, navegue até a **configurar** guia. Anote o **ID do cliente** que usaremos em nosso aplicativo mais tarde. Além disso, nessa tela, você pode dar a seu aplicativo móvel o acesso ao Active Directory ou adicionar outro aplicativo, como a API da Web ou o Office 365, que pode ser usado pelo aplicativo móvel após a conclusão da autenticação.
 
-    ![](register-images/05.-configure.jpg "Além disso, nessa tela você pode conceder acesso ao seu aplicativo móvel para o Active Directory ou adicionar outro aplicativo, como a API da Web ou o Office 365")
+    ![](register-images/05.-configure.jpg "Além disso, nessa tela você pode dar a seu aplicativo móvel o acesso ao Active Directory ou adicionar outro aplicativo, como a API da Web ou o Office 365")
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de NativeClient Microsoft](https://github.com/AzureADSamples/NativeClient-MultiTarget-DotNet)
+- [Exemplo de Microsoft NativeClient](https://github.com/AzureADSamples/NativeClient-MultiTarget-DotNet)

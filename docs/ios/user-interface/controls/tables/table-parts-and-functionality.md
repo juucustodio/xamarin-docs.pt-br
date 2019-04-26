@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: c4d788cce12a9aabdd1170cd1a52915f3b30285f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200491"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Partes da tabela e a funcionalidade no xamarin. IOS
 

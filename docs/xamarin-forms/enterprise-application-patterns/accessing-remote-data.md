@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61277931"
 ---
 # <a name="accessing-remote-data"></a>Acesso a dados remotos
 
@@ -55,7 +55,7 @@ A Figura 10-1 mostra a interação de classes que leem dados do catálogo do mic
 
 [![](accessing-remote-data-images/catalogdata.png "Recuperando dados de microsserviço de catálogo")](accessing-remote-data-images/catalogdata-large.png#lightbox "recuperando dados de microsserviço de catálogo")
 
-**Figura 10-1**: recuperando dados de microsserviço de catálogo
+**Figura 10-1**: Recuperando dados de microsserviço de catálogo
 
 Quando o `CatalogView` é acessada, o `OnInitialize` método no `CatalogViewModel` classe é chamada. Esse método recupera dados de catálogo do microsserviço de catálogo, conforme demonstrado no exemplo de código a seguir:
 
@@ -68,7 +68,7 @@ public override async Task InitializeAsync(object navigationData)
 }
 ```
 
-Este método chama o `GetCatalogAsync` método da `CatalogService` que foi injetada na instância a `CatalogViewModel` por Autofac. O seguinte exemplo de código mostra o `GetCatalogAsync` método:
+Este método chama o `GetCatalogAsync` método da `CatalogService` que foi injetada na instância a `CatalogViewModel` por Autofac. O seguinte exemplo de código mostra o método `GetCatalogAsync`:
 
 ```csharp
 public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
@@ -160,7 +160,7 @@ Figura 10-2 mostra a interação de classes que envie os dados de carrinho de co
 
 [![](accessing-remote-data-images/basketdata.png "Enviando dados para o microsserviço carrinho de compras")](accessing-remote-data-images/basketdata-large.png#lightbox "enviando dados para o microsserviço carrinho de compras")
 
-**Figura 10-2**: enviando dados para o microsserviço carrinho de compras
+**Figura 10-2**: Enviando dados para o microsserviço carrinho de compras
 
 Quando um item é adicionado ao carrinho de compras, o `ReCalculateTotalAsync` método no `BasketViewModel` classe é chamada. Esse método atualiza o valor total de itens no carrinho de compras e envia os dados de carrinho de compras para o microsserviço de cesta de compras, conforme demonstrado no exemplo de código a seguir:
 
@@ -233,7 +233,7 @@ Figura 10-3 mostra as interações de classes que excluir dados de carrinho de c
 
 ![](accessing-remote-data-images/checkoutdata.png "Dados de exclusão de microsserviço carrinho de compras")
 
-**Figura 10-3**: excluindo dados de microsserviço carrinho de compras
+**Figura 10-3**: Excluindo dados de microsserviço carrinho de compras
 
 Quando o processo de check-out é invocado, o `CheckoutAsync` método no `CheckoutViewModel` classe é chamada. Esse método cria um novo pedido, antes de limpar o carrinho de compras, conforme demonstrado no exemplo de código a seguir:
 
@@ -298,7 +298,7 @@ Aplicativos distribuídos, como o eShopOnContainers Referência de aplicativo, d
 -   Um cache compartilhado, que pode ser acessado por vários processos ou computadores.
 -   Um cache privado, onde os dados são mantidos localmente no dispositivo que executa o aplicativo.
 
-O aplicativo móvel do eShopOnContainers usa um cache privado, onde os dados são mantidos localmente no dispositivo que está executando uma instância do aplicativo. Para obter informações sobre o cache usado pelo aplicativo eShopOnContainers de referência, consulte [Microsserviços do .NET: arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
+O aplicativo móvel do eShopOnContainers usa um cache privado, onde os dados são mantidos localmente no dispositivo que está executando uma instância do aplicativo. Para obter informações sobre o cache usado pelo aplicativo eShopOnContainers de referência, consulte [Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
 
 > [!TIP]
 > Considere o cache como um armazenamento de dados temporários que pode desaparecer a qualquer momento. Certifique-se de que os dados são mantidos no armazenamento de dados original, bem como o cache. A possibilidade de perda de dados, em seguida, é minimizada se o cache ficar indisponível.
@@ -380,7 +380,7 @@ Se uma solicitação ainda falhar após um número de novas tentativas, é melho
 
 O aplicativo móvel do eShopOnContainers não implementar o padrão de repetição no momento ao fazer solicitações da web RESTful. No entanto, o `CachedImage` controle, fornecido pelo [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) biblioteca dá suporte a tratamento de falhas transitórias ao repetir de carregamento de imagem. Se o carregamento da imagem falhe, serão feitas tentativas adicionais. O número de tentativas é especificado pelo `RetryCount` propriedade e repetições ocorrerá após um atraso especificado pelo `RetryDelay` propriedade. Se esses valores de propriedade não definido explicitamente, seu valores são aplicados – do padrão 3 para o `RetryCount` propriedade e 250 MS para o `RetryDelay` propriedade. Para obter mais informações sobre o `CachedImage` de controle, consulte [cache de imagens](#caching_images).
 
-O aplicativo de referência eShopOnContainers implementa o padrão de repetição. Para obter mais informações, incluindo uma discussão sobre como combinar o padrão de repetição com o `HttpClient` classe, consulte [Microsserviços do .NET: arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
+O aplicativo de referência eShopOnContainers implementa o padrão de repetição. Para obter mais informações, incluindo uma discussão sobre como combinar o padrão de repetição com o `HttpClient` classe, consulte [Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
 
 Para obter mais informações sobre o padrão de repetição, consulte a [Repita](/azure/architecture/patterns/retry/) padrão.
 
@@ -397,7 +397,7 @@ O padrão de disjuntor pode impedir que um aplicativo tente executar uma operaç
 
 Um disjuntor atua como um proxy para operações que podem falhar. O proxy deve monitorar o número de falhas recentes ocorridas e usar essas informações para decidir se deseja permitir que a operação para continuar, ou para retornar uma exceção imediatamente.
 
-O aplicativo móvel do eShopOnContainers implementa o padrão de disjuntor no momento. No entanto, o eShopOnContainers faz. Para obter mais informações, consulte [Microsserviços do .NET: arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
+O aplicativo móvel do eShopOnContainers implementa o padrão de disjuntor no momento. No entanto, o eShopOnContainers faz. Para obter mais informações, consulte [Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
 
 > [!TIP]
 > Combine os padrões de disjuntor e tente novamente. Um aplicativo pode combinar os padrões de disjuntor e tente novamente usando o padrão de repetição para invocar uma operação por meio de um disjuntor. No entanto, a lógica de repetição deve ser sensível às exceções retornadas pelo disjuntor e abandonar tentativas de repetição se o disjuntor indica que uma falha não é transitória.

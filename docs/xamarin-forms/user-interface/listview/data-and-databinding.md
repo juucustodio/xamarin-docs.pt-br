@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
 ms.openlocfilehash: e53f6dce47dd7db60267d21c8d816ece554dc46c
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61319888"
 ---
 # <a name="listview-data-sources"></a>Fontes de dados de ListView
 
@@ -42,7 +42,7 @@ Um [ `ListView` ](xref:Xamarin.Forms.ListView) é preenchida com dados usando o 
 </ListView>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 var listView = new ListView();

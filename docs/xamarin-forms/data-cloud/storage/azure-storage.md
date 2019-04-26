@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
 ms.openlocfilehash: 4ecffa0902d186b659e7df07dbcf17053e29c818
-ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53814005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61319886"
 ---
 # <a name="storing-and-accessing-data-in-azure-storage"></a>Armazenar e acessar dados no armazenamento do Azure
 

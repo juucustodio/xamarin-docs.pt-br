@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/18/2016
 ms.openlocfilehash: aa3e15797ae1dac621ea8a78345044be1387ebaa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61179502"
 ---
 # <a name="accessibility-on-ios"></a>Acessibilidade no iOS
 
@@ -112,7 +112,7 @@ Consulte a [guia de localização do iOS](~/ios/app-fundamentals/localization/in
 
 <a name="testing" />
 
-## <a name="testing-accessibility"></a>Teste de acessibilidade
+## <a name="testing-accessibility"></a>Testando a acessibilidade
 
 VoiceOver está habilitada no **as configurações** aplicativo navegando para **geral > Acessibilidade > VoiceOver**:
 
@@ -140,6 +140,6 @@ Enquanto o Inspetor está visível, use o ícone "X" no canto superior esquerdo 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Acessibilidade de plataforma cruzada](~/cross-platform/app-fundamentals/accessibility.md)
+- [Acessibilidade multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS acessibilidade (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
 - [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)

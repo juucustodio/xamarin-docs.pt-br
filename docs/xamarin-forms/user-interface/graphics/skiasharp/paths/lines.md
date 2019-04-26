@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290690"
 ---
 # <a name="lines-and-stroke-caps"></a>Limites de linha e de traço
 
@@ -30,7 +30,7 @@ Para desenhar linhas únicas, `SKCanvas` define um simples [ `DrawLine` ](xref:S
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-Por padrão, o [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propriedade de instâncias recém-criadas `SKPaint` objeto é 0, que tem o mesmo efeito que um valor de 1 na renderização de uma linha de um pixel na espessura. Isso parece muito fino em alta resolução dispositivos como telefones, portanto, você provavelmente vai querer definir o `StrokeWidth` para um valor maior. Mas depois de começar a desenhar linhas de uma espessura dimensionável, que gera outra questão: como deve o começa e termina dessas linhas espessa ser renderizada?
+Por padrão, o [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propriedade de instâncias recém-criadas `SKPaint` objeto é 0, que tem o mesmo efeito que um valor de 1 na renderização de uma linha de um pixel na espessura. Isso parece muito fino em alta resolução dispositivos como telefones, portanto, você provavelmente vai querer definir o `StrokeWidth` para um valor maior. Mas, após começar a desenhar linhas de uma espessura dimensionável, que gera outra questão: Como deve o começa e termina dessas linhas espessa renderizada?
 
 A aparência do começa e termina de linhas é chamada de um *limite de linha* ou, em Skia, um *limite do traço*. A palavra "cap" neste contexto refere-se a um tipo de hat &mdash; algo que se encontra no final da linha. Você definir a [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) propriedade do `SKPaint` objeto para um dos seguintes membros dos [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) enumeração:
 

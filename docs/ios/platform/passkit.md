@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
 ms.openlocfilehash: d1c640bef41e875b3bb427d657c9c239e4c3e16d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191724"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit no xamarin. IOS
 
@@ -169,7 +169,7 @@ Há um grande número de outras chaves JSON em cada passagem, um exemplo disso �
 
 ### <a name="barcodes"></a>Códigos de barras
 
-Há suporte para formatos apenas 2D: PDF417, asteca, QR. Apple declarações que os códigos de barras 1D são inadequados para verificação em uma tela do telefone de luz de fundo.
+Somente há suporte para formatos 2D: PDF417, Aztec, QR. Apple declarações que os códigos de barras 1D são inadequados para verificação em uma tela do telefone de luz de fundo.
 
 Texto alternativo exibido abaixo o código de barras é opcional – alguns comerciantes desejam ser capaz de leitura/tipo manualmente.
 
@@ -225,9 +225,9 @@ Para criar um, faça passar a ID do tipo a seguir.
 
 A primeira etapa é configurar uma ID de tipo de passar para cada diferentes _tipo_ de passe a ter suporte. ID do passe (ou identificador de tipo de passe) cria um identificador exclusivo para a passagem. Usaremos essa ID para vincular a passagem com sua conta de desenvolvedor usando um certificado.
 
-1. No [seção certificados, identificadores e perfis do Portal de provisionamento do iOS](https://developer.apple.com/account/overview.action), navegue até **identificadores** e selecione **passar IDs de tipo** . Em seguida, selecione a **+** botão para criar um novo tipo de passagem: [ ![](passkit-images/passid.png "criar um novo tipo de passagem")](passkit-images/passid.png#lightbox)
+1. No [seção certificados, identificadores e perfis do Portal de provisionamento do iOS](https://developer.apple.com/account/overview.action), navegue até **identificadores** e selecione **passar IDs de tipo** . Em seguida, selecione a **+** botão para criar um novo tipo de aprovação: [![](passkit-images/passid.png "Criar um novo tipo de passagem")](passkit-images/passid.png#lightbox)
 
-2.   Fornecer um **descrição** (nome) e **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo passar deve começar com a cadeia de caracteres `pass.` neste exemplo, usamos `pass.com.xamarin.coupon.banana` : [ ![](passkit-images/register.png "fornecer uma descrição e um identificador")](passkit-images/register.png#lightbox)
+2.   Fornecer um **descrição** (nome) e **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo passar deve começar com a cadeia de caracteres `pass.` neste exemplo, usamos `pass.com.xamarin.coupon.banana` : [![](passkit-images/register.png "Forneça uma descrição e um identificador")](passkit-images/register.png#lightbox)
 
 
 3.   Confirme a ID do passe pressionando a **registrar** botão.
@@ -236,7 +236,7 @@ A primeira etapa é configurar uma ID de tipo de passar para cada diferentes _ti
 
 Para criar um novo certificado para essa ID de tipo de passe, faça o seguinte:
 
-1.  Selecione a ID do passe recém-criado na lista e clique em **edite** : [ ![](passkit-images/pass-done.png "selecione a nova ID de passar na lista")](passkit-images/pass-done.png#lightbox)
+1.  Selecione a ID do passe recém-criado na lista e clique em **editar** : [![](passkit-images/pass-done.png "Selecione a nova ID de passar na lista")](passkit-images/pass-done.png#lightbox)
 
     Em seguida, selecione **Create Certificate...** :
 

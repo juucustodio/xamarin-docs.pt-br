@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61317596"
 ---
 # <a name="introduction-to-ios-8"></a>Introdução ao iOS 8
 
@@ -83,7 +83,7 @@ A caixa de diálogo Novo projeto fornece sete novos modelos de projeto para a cr
 
 Para obter mais informações sobre como usar extensões de aplicativo no Xamarin, consulte o [Introdução às extensões de aplicativo](~/ios/platform/extensions.md) guia.
 
-### <a name="touch-id"></a>ID de toque
+### <a name="touch-id"></a>ID de Toque
 
 ID de toque foi introduzido no iOS 7 como um meio de autenticação do usuário – semelhante a uma senha. No entanto, ele era limitado para desbloquear o dispositivo, usando o App Store, usando o iTunes e autenticar o conjunto de chaves do iCloud apenas 
 
@@ -95,13 +95,13 @@ Em segundo lugar, LocalAuthentication fornece dois métodos para autenticar seu 
 
 Para obter mais informações sobre a ID de toque e saber como integrá-las em um aplicativo xamarin. IOS, consulte a [Introdução ao TouchID](~/ios/platform/touchid.md) guias.
 
-### <a name="document-picker"></a>Seletor de documento
+### <a name="document-picker"></a>Seletor de documentos
 
 Funciona de seletor de documento com uma unidade de iCloud de usuários para permitir que o usuário abrir arquivos que foram criados em um aplicativo diferente, importam e manipulá-los e exportação-los volta novamente. Isso cria um fluxo de trabalho intuitivo e, portanto, uma experiência muito melhor, para que os usuários. Sincronizando iCloud leva isso um passo além, todas as alterações feitas em um aplicativo também irá refletir consistentemente em todos os seus dispositivos.
 
 Para saber mais sobre o seletor de documento mais detalhadamente e saiba como integrá-lo a um aplicativo xamarin. IOS, consulte a [Introdução ao seletor de documento o](~/ios/platform/document-picker.md) guia.
 
-### <a name="handoff"></a>Entrega
+### <a name="handoff"></a>Handoff
 
 Entrega, que é parte do recurso de continuidade dos maior, leva a uma etapa em direção a integração dos X e iOS. Isso inclui o AirDrop de plataforma cruzada, a capacidade de receber chamadas do iPhone, SMS no iPad e Mac e aprimoramentos no compartilhamento do seu iPhone.
 

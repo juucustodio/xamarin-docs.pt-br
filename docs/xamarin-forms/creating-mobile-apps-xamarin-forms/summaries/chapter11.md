@@ -1,6 +1,6 @@
 ---
 title: Resumo do Capítulo 11. A infraestrutura associável
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do Capítulo 11. A infraestrutura associável'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do Capítulo 11. A infraestrutura associável'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: f9e3326c0f55469cfa84a019a674679d82dfc007
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334279"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Resumo do Capítulo 11. A infraestrutura associável
 

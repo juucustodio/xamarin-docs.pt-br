@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61240284"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows no xamarin. Mac
 
@@ -744,7 +744,7 @@ No **Inspetor de atributo**, você tem as seguintes opções específicas para p
 
 [![](window-images/panel03.png "O Inspetor de atributos")](window-images/panel03.png#lightbox)
 
-- **Estilo** -permitem que você ajuste o estilo do painel de: painel Regular (parecidas com uma janela padrão), o painel do utilitário (tem uma barra de título menor), painel HUD (é translúcida e a barra de título é parte do plano de fundo).
+- **Estilo** -permitem que você ajuste o estilo do painel de: Painel regular (parecidas com uma janela padrão), o painel do utilitário (tem uma barra de título menor), painel HUD (é translúcida e a barra de título é parte do plano de fundo).
 - **Ativando não** -determina no painel se torna a janela de chave.
 - **Documentar Modal** -se documento Modal, o painel só flutua sobre janelas do aplicativo, caso contrário ela flutua acima de tudo.
 

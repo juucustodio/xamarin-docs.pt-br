@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
 ms.openlocfilehash: 4f4ca327479a7f4eb4a7dc7feafdd71291c1b7fe
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61186133"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Criação manual de pacotes do NuGet para Xamarin
 

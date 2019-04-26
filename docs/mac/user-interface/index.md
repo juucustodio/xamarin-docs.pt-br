@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
 ms.openlocfilehash: a12553cf0b7b9584bb8ff7bc04ed326ad4a7ad2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61281589"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>controles de interface de usuário do macOS no xamarin. Mac
 
@@ -38,7 +38,7 @@ Este artigo aborda o trabalho com alertas em um aplicativo xamarin. Mac. Ele abo
 
 ## <a name="menusmacuser-interfacemenumd"></a>[Menus](~/mac/user-interface/menu.md)
 
-Menus são usados em várias partes da interface do usuário de um aplicativo Mac; do menu principal do aplicativo na parte superior da tela para menus pop-up e menus contextuais que podem aparecer em qualquer lugar em uma janela. Menus são parte integrante da experiência do usuário de um aplicativo Mac. Este artigo aborda o trabalho com menus Cocoa em um aplicativo xamarin. Mac.
+Menus são usados em várias partes da interface do usuário de um aplicativo Mac; do menu principal do aplicativo na parte superior da tela para menus pop-up e menus contextuais que podem aparecer em qualquer lugar em uma janela. Menus são uma parte integrante da experiência do usuário de um aplicativo Mac. Este artigo aborda o trabalho com menus Cocoa em um aplicativo xamarin. Mac.
 
 ## <a name="standard-controlsmacuser-interfacestandard-controlsmd"></a>[Controles padrão](~/mac/user-interface/standard-controls.md)
 
@@ -74,4 +74,4 @@ Sugerimos também dar uma olhada a [Galeria de exemplos do Mac](https://develope
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Diretrizes de Interface humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Diretrizes de Interface Humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
 ms.openlocfilehash: e88f6e24cbf4c8b2f0c0486c6408e234e87066cc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61228564"
 ---
 # <a name="android-speech"></a>Fala de Android
 
@@ -233,7 +233,7 @@ Este guia, examinamos as Noções básicas da conversão de texto em fala e fala
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin. Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
 - [Texto em fala (exemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
 - [Reconhecimento de fala (exemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
 - [Namespace do Android. Speech](https://developer.xamarin.com/api/namespace/Android.Speech/)

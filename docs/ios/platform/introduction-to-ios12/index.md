@@ -1,6 +1,6 @@
 ---
 title: Introdução ao iOS 12
-description: Este documento fornece uma descrição detalhada de algumas APIs do iOS 12 para visualização do Xamarin, qual versão fornece associações C#.
+description: Este documento fornece uma descrição detalhada de algumas APIs do iOS 12 para visualização do Xamarin, qual versão fornece associações c#.
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
@@ -8,15 +8,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/08/2018
 ms.openlocfilehash: 99f2b98614c2b8d558dd8744b31a62b787fc955c
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61035927"
 ---
 # <a name="introduction-to-ios-12"></a>Introdução ao iOS 12
 
-Este documento fornece uma descrição detalhada de algumas APIs do iOS 12 para visualização do Xamarin, qual versão fornece associações C#.
+Este documento fornece uma descrição detalhada de algumas APIs do iOS 12 para visualização do Xamarin, qual versão fornece associações c#.
 
 Para começar a criar aplicativos iOS 12 com Xamarin, consulte o [guia de Introdução](get-started.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Noções básicas sobre conceitos de SiriKit
+title: Noções básicas sobre os conceitos de SiriKit
 description: Este documento descreve os principais conceitos necessários para trabalhar com SiriKit em um aplicativo xamarin. IOS. Por exemplo, ele aborda as intenções e extensões de interface do usuário de tentativas, SiriKit permissões, criação de uma ótima experiência e muito mais.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: b2a9e757e8a3407bbb19ae0580e5788eabe84cf0
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61188874"
 ---
-# <a name="understanding-sirikit-concepts"></a>Noções básicas sobre conceitos de SiriKit
+# <a name="understanding-sirikit-concepts"></a>Noções básicas sobre os conceitos de SiriKit
 
 _Este artigo aborda os principais conceitos que serão necessários para trabalhar com SiriKit em um aplicativo xamarin. IOS._
 
@@ -65,16 +65,16 @@ Há muitas maneiras que o usuário pode iniciar uma interação com o aplicativo
 
 Por exemplo, se o usuário quisesse enviar uma mensagem para o seu amigo Bobo, eles podem ter a conversa seguir com Siri:
 
-_Usuário: Ei Siri, enviar uma mensagem MonkeyChat._<br />
+_Usuário: Siri Ei, enviar uma mensagem MonkeyChat._<br />
 _Siri: A quem?_<br />
 _Usuário: Bobo._<br />
-_Siri: O que você deseja dizer ao Bobo?_<br />
+_Siri: O que você quer dizer para Bobo?_<br />
 _Usuário: Envie Bananas mais._<br />
 
 Outra pessoa pode fazer a mesma solicitação com uma conversa diferente:
 
 _Usuário: Envie uma mensagem para Bobo em MonkeyChat._<br />
-_Siri: O que você deseja dizer ao Bobo?_<br />
+_Siri: O que você quer dizer para Bobo?_<br />
 _Usuário: Envie bananas mais._<br />
 
 E outro usuário pode fazer uma solicitação ainda mais curta:
@@ -85,11 +85,11 @@ _Siri: Okey, envio de mensagem, envie mais bananas para Bobo em Monkeychat._<br 
 Ou, até mesmo fazer a mesma solicitação em um idioma diferente:
 
 _Usuário: MonkeyChat Bobo s'il vous plaît envoyer além de bananes._<br />
-_Siri: Oui, envoyer de plaît envoi mensagem s'il vous além de bananes à Bobo sur Monkeychat._<br />
+_Siri: OUI, envoyer de plaît envoi mensagem s'il vous além de bananes à Bobo sur Monkeychat._<br />
 
 Ainda outro usuário pode ser muito detalhado em sua conversa:
 
-_Usuário: Ei Siri, pode você faça um favor mim e inicie o aplicativo MonkeyChat para enviar um texto com a mensagem, envie bananas mais._<br />
+_Usuário: Siri Ei, pode você faça um favor mim e iniciar o aplicativo de MonkeyChat para enviar um texto com a mensagem, envie bananas mais._<br />
 _Siri: A quem?_<br />
 _Usuário: Meu melhor pal Bobo._<br />
 
@@ -123,8 +123,8 @@ Há três maneiras principais que o aplicativo pode fazer parte de conversação
 
 Considerando as informações acima, examine como a conversa a seguir interagiria com o aplicativo MonkeyChat:
 
-_Usuário: Ei Siri, enviar uma mensagem Bobo em MonkeyChat._<br />
-_Siri: O que você deseja dizer ao Bobo?_<br />
+_Usuário: Siri Ei, envie uma mensagem para Bobo em MonkeyChat._<br />
+_Siri: O que você quer dizer para Bobo?_<br />
 _Usuário: Envie bananas mais._<br />
 
 A primeira função de que o aplicativo recebe a conversa é ajudar a Siri entender a voz do usuário:
@@ -141,10 +141,10 @@ No exemplo acima, o usuário tiver respondido, *"Envie mais bananas"*, que Siri 
 
 A intenção a estruturadas conterá as seguintes informações:
 
-- **Domínio:** mensagens
+- **Domínio:** Mensagens
 - **Intenção:** sendMessage
-- **O destinatário:** Bobo
-- **Conteúdo:** envie mais bananas
+- **Destinatário:** Bobo
+- **Conteúdo:** Envie mais bananas
 
 Cada domínio possui como conjunto de saber *ações* que podem ser executadas neles e com base em domínio e a ação, zero a muitos parâmetros podem ser incluídos na intenção enviada ao aplicativo.
 
@@ -290,7 +290,7 @@ O vocabulário específico do aplicativo define as palavras e frases específica
 
 Há várias partes para um vocabulário `AppIntentVocabulary.plist` arquivo:
 
-- **Aplicativo de exemplo usa** -eles fornecem um conjunto de casos de uso comuns para as solicitações que o usuário possa fazer do aplicativo. Por exemplo: *"Começar uma ginástica com MonkeyFit".*
+- **Aplicativo de exemplo usa** -eles fornecem um conjunto de casos de uso comuns para as solicitações que o usuário possa fazer do aplicativo. Por exemplo: *"Iniciar uma ginástica com MonkeyFit".*
 - **Parâmetros** -eles fornecem um conjunto de tipos de parâmetro fora do padrão específicos para o aplicativo. Por exemplo, nomes ginástica para o aplicativo MonkeyFit. Eles consistem em:
     - **Frase** -permite que o aplicativo definir termos exclusivos para o aplicativo. Por exemplo: o tipo de treinamento "Bananarific" para o aplicativo MonkeyFit. 
     - **Pronúncia** -fornece dicas de pronúncia a Siri como uma ortografia fonética simple para uma determinada frase. Por exemplo, "ba nana ri especí".

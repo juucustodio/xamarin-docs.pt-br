@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
 ms.openlocfilehash: 3bbea036efef44077ccbd28a16af06c97cd7026b
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230297"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adicionar dados à coleção de itens do seletor
 
@@ -39,7 +39,7 @@ Antes de xamarin. Forms 2.3.4, o processo de preenchimento de uma [ `Picker` ](x
 </Picker>
 ```
 
-O código c# equivalente é mostrado abaixo:
+O código C# equivalente é mostrado abaixo:
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };

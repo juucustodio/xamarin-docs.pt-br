@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
 ms.openlocfilehash: 3131963efa3d4ba4de9ff63c741c276a62e9d12d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61229726"
 ---
 # <a name="xamarinforms-editor"></a>Editor do xamarin. Forms
 
@@ -41,7 +41,7 @@ No C#:
 var MyEditor = new Editor { Text = "I am an Editor" };
 ```
 
-Para ler o texto, acessar o `Text` propriedade em c#:
+Para ler o texto, acessar o `Text` propriedade em C#:
 
 ```csharp
 var text = MyEditor.Text;
@@ -130,7 +130,7 @@ Isso pode ser feito no XAML da seguinte maneira:
 <Editor Keyboard="Chat" />
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 var editor = new Editor { Keyboard = Keyboard.Chat };
@@ -163,7 +163,7 @@ O exemplo de código XAML a seguir mostra como personalizar o padrão [ `Keyboar
 </Editor>
 ```
 
-O código c# equivalente é:
+O código C# equivalente é:
 
 ```csharp
 var editor = new Editor();

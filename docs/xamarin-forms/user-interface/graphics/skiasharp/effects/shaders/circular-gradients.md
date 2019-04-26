@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61218071"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares de SkiaSharp
 
@@ -140,7 +140,7 @@ Esse código cria um gradiente com preta no centro, esmaecida gradualmente para 
 
 [![Gradiente radial](circular-gradients-images/RadialGradient.png "gradiente Radial")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-Em todos os três casos, o gradiente preenche a tela. Na tela do iOS à esquerda, o gradiente além do raio continua com a última cor é branca. Que é o resultado de `SKShaderTileMode.Clamp`. A tela Android mostra o efeito de `SKShaderTileMode.Repeat`: em 100 pixels do centro do gradiente iniciado novamente com a primeira cor é preta. O gradiente se repete a cada 100 pixels do radius. 
+Em todos os três casos, o gradiente preenche a tela. Na tela do iOS à esquerda, o gradiente além do raio continua com a última cor é branca. Que é o resultado de `SKShaderTileMode.Clamp`. A tela Android mostra o efeito de `SKShaderTileMode.Repeat`: Com 100 pixels a partir do centro, o gradiente é iniciado novamente com a primeira cor é preta. O gradiente se repete a cada 100 pixels do radius. 
 
 Tela da plataforma Universal do Windows o direito mostra como `SKShaderTileMode.Mirror` faz com que os gradientes para direções alternativos. O primeiro gradiente é de preto no centro em branco em um raio de 100 pixels. A próxima é branca do raio de 100 pixels para preto em um raio de 200 pixels e Avançar gradiente é invertido novamente.
 

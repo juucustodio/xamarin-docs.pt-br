@@ -8,11 +8,11 @@ ms.author: crdun
 ms.custom: video
 ms.date: 07/18/2018
 ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191264"
 ---
 # <a name="net-standard-library-code-sharing"></a>O compartilhamento de código do .NET standard Library
 
@@ -36,7 +36,7 @@ Você pode adicionar uma biblioteca .NET Standard à sua solução com estas eta
 
 2. Na próxima tela, escolha a estrutura de destino - **.NET Standard 2.0** é recomendável:
 
-    [![Escolher o .NET Standard 2.0](net-standard-images/vsm01a-m157-sml.png)](net-standard-images/vsm01a-m157.png#lightbox)
+    [![Choose .NET Standard 2.0](net-standard-images/vsm01a-m157-sml.png)](net-standard-images/vsm01a-m157.png#lightbox)
 
 3. Na tela final, digite o nome do projeto e clique em **criar**.
 
@@ -52,7 +52,7 @@ As configurações de biblioteca .NET Standard podem ser exibidas e alteradas cl
 
 Em que você pode alterar sua versão do `netstandard` alterando o `Target Framework` valor da lista suspensa.
 
-**Além disso:** você pode editar o `.csproj` diretamente para alterar esse valor.
+**Além disso:** Você pode editar o `.csproj` diretamente para alterar esse valor.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -78,7 +78,7 @@ As configurações de biblioteca .NET Standard podem ser exibidas e alteradas cl
 
 ![Editar .NET frameworks de destino padrão nas propriedades do projeto](net-standard-images/vs03-w157.png "fazer referência a uma biblioteca .NET Standard da mesma maneira que outros projetos")
 
-**Além disso:** você pode editar o `.csproj` diretamente para editar o `TargetFramework` elemento e alteração de qual versão é o destino (por exemplo. `<TargetFramework>netstandard2.0</TargetFramework>`).
+**Além disso:** Você pode editar a `.csproj` diretamente para editar o `TargetFramework` elemento e alteração de qual versão é o destino (por exemplo. `<TargetFramework>netstandard2.0</TargetFramework>`).
 
 ### <a name="using-a-net-standard-library-project"></a>Usando um projeto de biblioteca do .NET Standard
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
 ms.openlocfilehash: 85edbf657382b7c85ab2c5af543431fb51fb0d4e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019514"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin. Forms BoxView
 
@@ -52,7 +52,7 @@ O `WidthRequest` e `HeightRequest` propriedades desempenham uma função somente
 
 O `WidthRequest` e `HeightRequest` propriedades são ignoradas se o `BoxView` é *restrita* no layout, nesse caso, o contêiner de layout impõe seu próprio tamanho no `BoxView`.
 
-Um `BoxView` pode ser restrito em uma dimensão e sem restrições no outro. Por exemplo, se o `BoxView` é um filho de um vertical `StackLayout`, a dimensão vertical do `BoxView` é irrestrita e sua dimensão horizontal geralmente é restrito. Mas há exceções para a dimensão horizontal: se o `BoxView` tem sua `HorizontalOptions` propriedade definida como algo diferente de `LayoutOptions.Fill`, em seguida, a dimensão horizontal também é irrestrita. Também é possível que o `StackLayout` em si para ter uma dimensão horizontal irrestrita, caso em que o `BoxView` também será horizontalmente irrestrita.
+Um `BoxView` pode ser restrito em uma dimensão e sem restrições no outro. Por exemplo, se o `BoxView` é um filho de um vertical `StackLayout`, a dimensão vertical do `BoxView` é irrestrita e sua dimensão horizontal geralmente é restrito. Mas há exceções para a dimensão horizontal: Se o `BoxView` tem sua `HorizontalOptions` propriedade definida como algo diferente de `LayoutOptions.Fill`, em seguida, a dimensão horizontal também é irrestrita. Também é possível que o `StackLayout` em si para ter uma dimensão horizontal irrestrita, caso em que o `BoxView` também será horizontalmente irrestrita.
 
 O [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView) exemplo exibe um one-polegadas-quadrado irrestrita `BoxView` no centro da sua página:
 
@@ -776,7 +776,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-A mão de segundo é tratada de maneira um pouco diferente: uma função de easing de animação é aplicada para fazer com que o movimento pareça ser mecânico, em vez de suave. Em todas as marcas, a mão segundo efetua pull de voltar um pouco e, em seguida, overshoots seu destino. Esse pequeno trecho de código adiciona muito o realismo do movimento.
+A mão de segundo é tratada de maneira um pouco diferente: Uma função de easing de animação é aplicada para fazer com que o movimento pareça ser mecânico, em vez de suave. Em todas as marcas, a mão segundo efetua pull de voltar um pouco e, em seguida, overshoots seu destino. Esse pequeno trecho de código adiciona muito o realismo do movimento.
 
 ## <a name="conclusion"></a>Conclusão
 

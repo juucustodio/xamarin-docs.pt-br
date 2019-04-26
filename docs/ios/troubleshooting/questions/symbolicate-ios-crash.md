@@ -1,5 +1,5 @@
 ---
-title: Onde posso encontrar o arquivo. dsym para simbolizar os logs de falha do iOS?
+title: Onde posso encontrar o arquivo .dSYM para simbolizar os logs de falha do iOS?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/09/2018
 ms.openlocfilehash: 0b8f3aa736cba6e70fbf346766499c23a9bbe270
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61418198"
 ---
-# <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>Onde posso encontrar o arquivo. dsym para simbolizar os logs de falha do iOS?
+# <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>Onde posso encontrar o arquivo .dSYM para simbolizar os logs de falha do iOS?
 
 Ao criar um aplicativo iOS com o Visual Studio para Mac ou Visual Studio 2017, o arquivo. dsym que é necessário para simbolizar relatórios de falha será colocado na mesma hierarquia de diretório do arquivo de projeto do seu aplicativo (. csproj). O local exato depende de configurações de compilação do seu projeto:
 
@@ -32,7 +32,7 @@ Ao criar um aplicativo iOS com o Visual Studio para Mac ou Visual Studio 2017, o
 
     Por exemplo:
 
-    **TestApp/bin/iPhone/Release /**
+    **TestApp/bin/iPhone/Release/**
 
 > [!NOTE]
 > Como parte do processo de compilação, o Visual Studio 2017 copia o arquivo. dsym do host de build do Mac para Windows. Se você não vir um arquivo. dsym no Windows, certifique-se de que você configurou as configurações de compilação do seu aplicativo para [criar um arquivo. IPA](~/ios/deploy-test/app-distribution/ipa-support.md).

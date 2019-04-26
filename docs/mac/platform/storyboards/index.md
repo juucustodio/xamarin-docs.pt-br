@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 166a50021c22aa09be3eecdb8b745a70e75c3d51
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61031433"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introdução ao Storyboards no xamarin. Mac
 
@@ -94,7 +94,7 @@ No [início rápido do Storyboard](~/mac/platform/storyboards/quickstart.md) gui
 
 <a name="Working-with-Storyboards" />
 
-## <a name="working-with-storyboards"></a>Trabalhar com Storyboards
+## <a name="working-with-storyboards"></a>Trabalhando com Storyboards
 
 Esta seção aborda os detalhes do [trabalhar com Storyboards](~/mac/platform/storyboards/indepth.md) em um aplicativo xamarin. Mac. Vamos dar uma visão detalhada de cenas e como eles são compostos de controladores de exibição e modo de exibição. Em seguida, vamos dar uma olhada em como as cenas são reunidas com transições. Por fim, vamos dar uma olhada em como trabalhar com tipos personalizados de Segue. 
 

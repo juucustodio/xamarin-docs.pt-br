@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
 ms.openlocfilehash: 719efc87b8843d0d2fcd2643aab23aa6849d940a
-ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61078603"
 ---
 # <a name="images-in-xamarinmac"></a>Imagens no xamarin. Mac
 

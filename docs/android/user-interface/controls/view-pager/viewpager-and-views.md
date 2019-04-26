@@ -1,5 +1,5 @@
 ---
-title: ViewPager com modos de exibição
+title: ViewPager com exibição
 description: ViewPager é um Gerenciador de layout que permite que você implemente gestual navegação. Navegação gestual permite que o usuário passe o dedo para esquerda e direita para percorrer as páginas de dados. Este guia explica como implementar uma interface do usuário deslizantes com ViewPager e PagerTabStrip, usando modos de exibição como páginas de dados (um guia subsequente sobre como usar os fragmentos para as páginas).
 ms.prod: xamarin
 ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: a8b7fa53d3384821d028e4a88ba22071a17e5bd9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61311527"
 ---
-# <a name="viewpager-with-views"></a>ViewPager com modos de exibição
+# <a name="viewpager-with-views"></a>ViewPager com exibição
 
 _ViewPager é um Gerenciador de layout que permite que você implemente gestual navegação. Navegação gestual permite que o usuário passe o dedo para esquerda e direita para percorrer as páginas de dados. Este guia explica como implementar uma interface do usuário deslizantes com ViewPager e PagerTabStrip, usando modos de exibição como páginas de dados (um guia subsequente sobre como usar os fragmentos para as páginas)._
 
@@ -29,7 +29,7 @@ Embora `ViewPager`-com base de aplicativos geralmente são implementados com `Fr
 
 ## <a name="start-an-app-project"></a>Iniciar um projeto de aplicativo
 
-Criar um novo projeto Android chamado **TreePager** (consulte [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para obter mais informações sobre como criar novos projetos Android). Em seguida, inicie o Gerenciador de pacotes do NuGet. (Para obter mais informações sobre como instalar pacotes do NuGet, consulte [instruções passo a passo: incluindo o NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Localizar e instalar **biblioteca de suporte ao Android v4**: 
+Criar um novo projeto Android chamado **TreePager** (consulte [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para obter mais informações sobre como criar novos projetos Android). Em seguida, inicie o Gerenciador de pacotes do NuGet. (Para obter mais informações sobre como instalar pacotes do NuGet, consulte [passo a passo: Incluir um NuGet no projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Localizar e instalar **biblioteca de suporte ao Android v4**: 
 
 [![Captura de tela de suporte v4 Nuget selecionado no Gerenciador de pacotes NuGet](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 

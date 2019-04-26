@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/26/2018
 ms.openlocfilehash: 69e8b919c5cc925be813cf1f768833ccfd948ada
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61311271"
 ---
 # <a name="tizen-net"></a>Tizen .NET
 
@@ -28,7 +28,7 @@ Para obter informações sobre como adicionar um projeto .NET Tizen a uma soluç
 
 ## <a name="documentation"></a>Documentação
 
-- [Documentação do xamarin. Forms](~/xamarin-forms/index.yml) &ndash; como compilar aplicativos de plataforma cruzada com C# e xamarin. Forms.
+- [Documentação do xamarin. Forms](~/xamarin-forms/index.yml) &ndash; como compilar aplicativos de plataforma cruzada com c# e xamarin. Forms.
 - [**Developer.tizen.org** ](https://developer.tizen.org/development) &ndash; documentação e vídeos para ajudá-lo a criar e implantar aplicativos Tizen.
 
 ## <a name="samples"></a>Exemplos

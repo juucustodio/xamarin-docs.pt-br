@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 8ad742607e506df436a5526d31621ac7636ac29b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61086936"
 ---
 # <a name="push-notifications-in-ios"></a>Notificações por push no iOS
 
@@ -22,7 +22,7 @@ ms.locfileid: "50110011"
 Notificações por push devem ser mantidas em breves e contenham apenas dados suficientes para notificar o aplicativo móvel que ele deverá contatar o aplicativo de servidor para uma atualização. Por exemplo, quando novo email chega, o aplicativo de servidor só seria notificar o aplicativo móvel novo email recebido. A notificação não conteria o novo email em si. O aplicativo móvel, em seguida, seria recuperar novos emails do servidor quando ele estava apropriado
 
 No Centro de push de notificações no iOS é o *notificação Gateway serviço APNS (Apple Push)*. Isso é um serviço fornecido pela Apple que é responsável por notificações de roteamentos de um servidor de aplicativos para dispositivos iOS.
-A imagem a seguir ilustra a topologia de notificação por push para iOS: ![](remote-notifications-in-ios-images/image4.png "esta imagem ilustra a topologia de notificação por push para iOS")
+A imagem a seguir ilustra a topologia de notificação por push para iOS: ![](remote-notifications-in-ios-images/image4.png "Esta imagem ilustra a topologia de notificação por push para iOS")
 
 Notificações remotas em si são cadeias de caracteres que seguem o formato formatadas em JSON e protocolos especificado na [a carga de notificação](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) seção o [Local e enviar por Push notificação Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)no [documentação do desenvolvedor do iOS](https://developer.apple.com/devcenter/ios/index.action).
 

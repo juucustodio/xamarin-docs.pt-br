@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
 ms.openlocfilehash: 4ae86ca5fa47169bb5d78eb9d1116e419c23ed6d
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61012446"
 ---
 # <a name="creating-android-services"></a>Criando serviços do Android
 

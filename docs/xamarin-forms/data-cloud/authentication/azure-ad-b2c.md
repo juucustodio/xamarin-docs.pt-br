@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61331469"
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Autenticar usuários com o Azure Active Directory B2C
 
@@ -35,8 +35,8 @@ Azure Active Directory B2C do diretório é um serviço de gerenciamento de iden
 O processo para integrar o serviço de gerenciamento de identidade do Azure Active Directory B2C em um aplicativo móvel é da seguinte maneira:
 
 1. Crie um locatário do Azure Active Directory B2C. Para obter mais informações, consulte [criar um locatário do Azure Active Directory B2C no portal do Azure](/azure/active-directory-b2c/active-directory-b2c-get-started/).
-1. Registre seu aplicativo móvel com o locatário do Azure Active Directory B2C. O processo de registro atribui uma **ID do aplicativo** que identifica exclusivamente o seu aplicativo e um **URL de redirecionamento** que pode ser usado para direcionar as respostas de volta ao seu aplicativo. Para obter mais informações, consulte [Azure Active Directory B2C: registrar seu aplicativo](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
-1. Crie uma política de inscrição e entrada. Essa política definirá as experiências pelas quais os consumidores passarão durante a inscrição e entrada e também especifica o conteúdo dos tokens que o aplicativo receberá bem-sucedido inscrever-se ou entrar. Para obter mais informações, consulte [Azure Active Directory B2C: políticas internas](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+1. Registre seu aplicativo móvel com o locatário do Azure Active Directory B2C. O processo de registro atribui uma **ID do aplicativo** que identifica exclusivamente o seu aplicativo e um **URL de redirecionamento** que pode ser usado para direcionar as respostas de volta ao seu aplicativo. Para obter mais informações, consulte [do Azure Active Directory B2C: Registrar seu aplicativo](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
+1. Crie uma política de inscrição e entrada. Essa política definirá as experiências pelas quais os consumidores passarão durante a inscrição e entrada e também especifica o conteúdo dos tokens que o aplicativo receberá bem-sucedido inscrever-se ou entrar. Para obter mais informações, consulte [do Azure Active Directory B2C: Políticas internas](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 1. Use o [biblioteca de autenticação da Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) em seu aplicativo móvel para iniciar um fluxo de trabalho de autenticação com seu locatário do Azure Active Directory B2C.
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Cada solicitação é enviada a um locatário do Azure Active Directory B2C Espe
 - Conteúdo da página de inscrição.
 - Declarações de token que o aplicativo móvel recebe quando a política foi executada.
 
-Um locatário do Azure Active Directory pode conter várias políticas de tipos diferentes, que podem ser usados em seu aplicativo conforme necessário. Além disso, as políticas podem ser reutilizadas em aplicativos, permitindo que você definir e modificar experiências de identidade do consumidor sem alterar seu código. Para obter mais informações sobre políticas, consulte [Azure Active Directory B2C: políticas internas](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+Um locatário do Azure Active Directory pode conter várias políticas de tipos diferentes, que podem ser usados em seu aplicativo conforme necessário. Além disso, as políticas podem ser reutilizadas em aplicativos, permitindo que você definir e modificar experiências de identidade do consumidor sem alterar seu código. Para obter mais informações sobre políticas, consulte [do Azure Active Directory B2C: Políticas internas](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 
 ## <a name="setup"></a>Configuração
 

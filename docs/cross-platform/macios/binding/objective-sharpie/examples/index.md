@@ -1,17 +1,17 @@
 ---
 title: Exemplos de Sharpie objetivo
-description: Este documento leva a vários guias que descrevem como usar a ferramenta de Sharpie objetivo, que é usada para automatizar o processo de criação de associações c# para o código Objective-C.
+description: Este documento contém links para vários guias que descrevem como usar a ferramenta de Sharpie objetivo, que é usada para automatizar o processo de criação de C# associações a código Objective-C.
 ms.prod: xamarin
 ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: 4cb2dde4dc23bb9376343b49a091277b667d834e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199617"
 ---
 # <a name="objective-sharpie-examples"></a>Exemplos de Sharpie objetivo
 
@@ -29,5 +29,5 @@ Um número de associações concluídos pode ser exibido ou baixado dos [reposit
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

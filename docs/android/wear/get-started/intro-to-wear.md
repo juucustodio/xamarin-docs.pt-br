@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: a35cb82f4f6d20e91f45a782c73d3ef811947c3a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61284165"
 ---
 # <a name="introduction-to-android-wear"></a>Introdução ao Android Wear
 
@@ -186,7 +186,7 @@ Aqui estão alguns exemplos de dispositivos que podem ser executados Android Wea
 * [Motorola 360](https://moto360.motorola.com/)
 * [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
 * [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
-* [Samsung engrenagem ao vivo](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
+* [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
 * [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
 * [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
 ms.openlocfilehash: 03e4a5ac8906d2593cbdf3c15f6b2d1f4a2c6d19
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199634"
 ---
 # <a name="objective-sharpie-release-history"></a>Histórico de versão do objetivo Sharpie
 
@@ -68,13 +68,13 @@ ms.locfileid: "57667250"
 
 [Baixar v2.1.0](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.0.pkg)
 
-* [bxc#27849](https://bugzilla.xamarin.com/show_bug.cgi?id=27849): Certifique-se `using ObjCRuntime;` é produzido quando `ArgumentSemantic` é usado.
-* [bxc#27850](https://bugzilla.xamarin.com/show_bug.cgi?id=27850): Certifique-se `using System.Runtime.InteropServices;` é produzido quando `DllImport` é usado.
-* [bxc#27852](https://bugzilla.xamarin.com/show_bug.cgi?id=27852): Padrão `DllImport` para carregar símbolos de `__Internal`.
-* [bxc#27848](https://bugzilla.xamarin.com/show_bug.cgi?id=27848): Ignorar declarações de contêiner de Objective-C declarados de encaminhamento.
-* [bxc#27846](https://bugzilla.xamarin.com/show_bug.cgi?id=27846): Associar tipos de protocolo com um único qualificação como interfaces concretos (`id<Foo>` como `Foo` em vez de `Foundation.NSObject<Foo>`).
-* [bxc#28037](https://bugzilla.xamarin.com/show_bug.cgi?id=28037): Associar `UInt32`, `UInt64`, e `Int64` literais como `Int32` para descartar o `u` e/ou `uL` sufixos quando os valores com segurança podem se encaixar em `Int32`.
-* [bxc#28038](https://bugzilla.xamarin.com/show_bug.cgi?id=28038): Corrija o mapeamento de nome de enumeração quando o nome nativo original começa com um `k` prefixo.
+* [bxC#27849](https://bugzilla.xamarin.com/show_bug.cgi?id=27849): Certifique-se `using ObjCRuntime;` é produzido quando `ArgumentSemantic` é usado.
+* [bxC#27850](https://bugzilla.xamarin.com/show_bug.cgi?id=27850): Certifique-se `using System.Runtime.InteropServices;` é produzido quando `DllImport` é usado.
+* [bxC#27852](https://bugzilla.xamarin.com/show_bug.cgi?id=27852): Padrão `DllImport` para carregar símbolos de `__Internal`.
+* [bxC#27848](https://bugzilla.xamarin.com/show_bug.cgi?id=27848): Ignorar declarações de contêiner de Objective-C declarados de encaminhamento.
+* [bxC#27846](https://bugzilla.xamarin.com/show_bug.cgi?id=27846): Associar tipos de protocolo com um único qualificação como interfaces concretos (`id<Foo>` como `Foo` em vez de `Foundation.NSObject<Foo>`).
+* [bxC#28037](https://bugzilla.xamarin.com/show_bug.cgi?id=28037): Associar `UInt32`, `UInt64`, e `Int64` literais como `Int32` para descartar o `u` e/ou `uL` sufixos quando os valores com segurança podem se encaixar em `Int32`.
+* [bxC#28038](https://bugzilla.xamarin.com/show_bug.cgi?id=28038): Corrija o mapeamento de nome de enumeração quando o nome nativo original começa com um `k` prefixo.
 * `sizeof` Expressões de C cujo tipo de argumento não é mapeado para um C# tipo primitivo será avaliado em Clang e vinculado como um literal inteiro para evitar a geração inválido C#.
 * Corrija a sintaxe de Objective-C para propriedades cujo tipo é um bloco (código Objective-C que aparece nos comentários acima declarações associadas).
 * Associar tipos diminuísse como seu tipo original (`int[]` decai para `int*` durante a análise semântica em Clang, mas associá-lo do original como escrito `int[]` em vez disso).

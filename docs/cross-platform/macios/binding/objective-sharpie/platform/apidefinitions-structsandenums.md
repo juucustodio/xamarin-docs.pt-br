@@ -1,17 +1,17 @@
 ---
 title: ApiDefinitions e StructsAndEnums arquivos
-description: Este documento descreve os arquivos ApiDefinitions.cs e StructsAndEnums.cs que gera Sharpie objetivo. Esses arquivos, em seguida, são usados para acessar o código de Objective-C do c#.
+description: Este documento descreve os arquivos ApiDefinitions.cs e StructsAndEnums.cs que gera Sharpie objetivo. Esses arquivos, em seguida, são usados para acessar o código Objective-C em C#.
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: df8d4508db14116a5b36e893f161ac891d58dc46
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61266350"
 ---
 # <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions e StructsAndEnums arquivos
 
@@ -22,11 +22,11 @@ Na *alguns* casos esses arquivos gerados podem ser tudo o que você precisa, no 
 
 Algumas das próximas etapas incluem:
 
-- **Ajustando nomes**: às vezes, você desejará ajustar os nomes dos métodos e classes para coincidir com as diretrizes de Design do .NET Framework.
-- **Métodos ou propriedades**: A heurística usada por objetivo Sharpie, às vezes, selecionará um método a ser transformado em uma propriedade. Neste ponto, você pode decidir se este é o comportamento desejado ou não.
-- **Conectar eventos**: você pode vincular suas classes com suas classes de delegado e gerar automaticamente os eventos para aqueles.
-- **Enganchar notificações**: não é possível extrair o contrato de API de notificações dos arquivos de cabeçalho pura, isso exigirá uma viagem para a documentação da API. Se você quiser com rigidez de tipos de notificações, você precisará atualizar o resultado.
-- **Curadoria da API**: neste ponto, você pode optar por fornecer construtores adicionais, adicione métodos (para permitir a sintaxe de inicialização na construção do c#), a sobrecarga de operador e implementar suas próprias interfaces no arquivo de definições extras.
+- **Ajustando nomes**: Às vezes você desejará ajustar os nomes dos métodos e classes para coincidir com as diretrizes de Design do .NET Framework.
+- **Métodos ou propriedades**: A heurística usada por objetivo Sharpie, às vezes, escolherá um método a ser transformado em uma propriedade. Neste ponto, você pode decidir se este é o comportamento desejado ou não.
+- **Conectar eventos**: Você pode vincular suas classes com suas classes de delegado e gere automaticamente os eventos para aqueles.
+- **Enganchar notificações**: Não é possível extrair o contrato de API de notificações dos arquivos de cabeçalho pura, isso exigirá uma viagem para a documentação da API. Se você quiser com rigidez de tipos de notificações, você precisará atualizar o resultado.
+- **Curadoria da API**: Neste ponto, você pode optar por fornecer construtores adicionais, adicione métodos (para permitir a C# sintaxe de inicialização na construção), operador de sobrecarga e implementar suas próprias interfaces no arquivo de definições extras.
 
 Consulte a [associação de uma API](~/cross-platform/macios/binding/objective-c-libraries.md) descrição para ver como esses arquivos se encaixam no processo de associação, conforme mostrado no diagrama a seguir:
 
@@ -36,5 +36,5 @@ Consulte a [referência de tipos de associação](~/cross-platform/macios/bindin
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

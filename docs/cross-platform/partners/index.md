@@ -9,11 +9,11 @@ ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
 ms.openlocfilehash: ddf80fb650127b91bef89792fc622267ad1ed0d4
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61211594"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Parceiros de consultoria para entregar soluções móveis certificados
 
@@ -557,7 +557,7 @@ _Listadas por local primário, muitos parceiros fornecem serviços entre as bord
 
 | Parceiro | Locais | Descrição |
 | --- | --- | --- |
-|[Enlighten Designs](https://www.enlighten.co.nz)|Auckland, Nova Zelândia|Enlighten existe para trazer excepcionalmente projetado e inovadores e soluções de tecnologia para o mundo focadas no cliente. Eles usam tecnologias Microsoft para criar um aplicativo em C# para iOS, Android e Windows|
+|[Enlighten Designs](https://www.enlighten.co.nz)|Auckland, Nova Zelândia|Enlighten existe para trazer excepcionalmente projetado e inovadores e soluções de tecnologia para o mundo focadas no cliente. Eles usam tecnologias Microsoft para criar um aplicativo em c# para iOS, Android e Windows|
 |[Hydrogen Apps Ltd](http://www.hydrogenapps.com)|Auckland, Nova Zelândia|Ao aproveitar mais de uma década de experiência de entrega bem-sucedida de plataformas de grande escala em todo o mundo, Hydrogen traz sua experiência profunda pendentes de entrega de software para a nova era de aplicativos, mobilidade e desenvolvimento de jogos|
 |[Magnetism Solutions Ltd](https://www.magnetismsolutions.com/)|Auckland, Nova Zelândia; Christchurch, Nova Zelândia|Que tiramos um lançamento de toda implementação de CRM, que fornecemos aos nossos clientes. Ter iniciado com êxito a mais de 1500 deles, temos orgulhosos de nossos diversos e ampla que variam de portfólio. Nossa experiência na implementação do CRM internacionalmente significa que podemos está bem colocados para fornecer sua solução de CRM. |
 |[Cruzamento zebra](http://zebracrossing.co.nz/)|Taranaki, Nova Zelândia|Podemos usar a tecnologia para a inovação de negócios. Uma parceria com alguém que ouvi-lo, aprenderá a suas metas e entregar o que você precisa.|

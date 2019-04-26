@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 6803dc2668b89ee2d037da8b34e202191dd5465d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61307345"
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Tratar várias resoluções no CocosSharp
 
@@ -25,8 +25,8 @@ O comportamento de resolução padrão de CocosSharp é corresponder os pixels f
 | **Dispositivo** | **Resolução de vídeo** | **Captura de tela de exemplo** |
 |--- | --- |--- |
 |Exibição desejada|368 x 240 (com barras pretas para taxa de proporção)| ![368 x 240 (com barras pretas para taxa de proporção)](resolutions-images/image1.png) |
-|iPhone 4s|960x640| ![iPhone 4s 640 x 960](resolutions-images/image2.png) |
-|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920x1080](resolutions-images/image3.png) |
 
 Este documento aborda como usar CocosSharp para corrigir o problema mostrado na tabela acima. Ou seja, abordaremos como fazer com que qualquer dispositivo renderizar conforme mostrado na primeira linha – independentemente da resolução de tela.
 

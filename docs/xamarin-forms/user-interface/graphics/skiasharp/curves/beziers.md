@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
 ms.openlocfilehash: 58cf11b2a88e0c399ee197e9c8365d7deafd0f39
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61229524"
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de bézier
 
@@ -22,7 +22,7 @@ _Explorar como usar SkiaSharp para renderizar as curvas de Bézier cúbicas, qua
 
 A curva de Bézier é nomeada após Pierre Bézier (1910 – 1999), um engenheiro de francês da empresa automotiva Renault, que usaram a curva para o design auxiliada por computador de corpos de carro.
 
-Curvas de Bézier são conhecidas por ser adequada para o design interativo: eles são bem comportados &mdash; em outras palavras, não existem singularities que fazem com que a curva se torne infinito ou intricada &mdash; e geralmente são uma escolha esteticamente agradáveis :
+Curvas de Bézier são conhecidas por ser adequada para o design interativo: Eles são bem comportados &mdash; em outras palavras, não existem singularities que fazem com que a curva se torne infinito ou intricada &mdash; e geralmente são uma escolha esteticamente agradáveis:
 
 ![](beziers-images/beziersample.png "Uma curva de Bézier de exemplo")
 
@@ -493,7 +493,7 @@ Em teoria, pesos negativos são permitidos, em fazer com que a curva a ser curva
 
 ![](beziers-images/conicarc.png "Uma renderização de arco conic de um arco circular")
 
-Você pode usar trigonometria para determinar a distância do ponto de controle do centro do círculo: é o raio do círculo dividido pelo cosseno de metade do ângulo α. Para desenhar um arco circular entre os pontos inicial e final, defina o peso para esse mesmo cosseno metade do ângulo. Observe que se o ângulo de 180 graus, em seguida, as linhas tangentes nunca se encontram e o peso é zero. Mas para ângulos menor que 180 graus, a matemática funciona bem.
+Você pode usar trigonometria para determinar a distância do ponto de controle do centro do círculo: É o raio do círculo dividido pelo cosseno de metade do ângulo α. Para desenhar um arco circular entre os pontos inicial e final, defina o peso para esse mesmo cosseno metade do ângulo. Observe que se o ângulo de 180 graus, em seguida, as linhas tangentes nunca se encontram e o peso é zero. Mas para ângulos menor que 180 graus, a matemática funciona bem.
 
 O **Conic arco Circular** página demonstra isso. O [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) arquivo XAML instancia um `Slider` para selecionar o ângulo. O `PaintSurface` manipulador na [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) arquivo code-behind calcula o ponto de controle e o peso:
 

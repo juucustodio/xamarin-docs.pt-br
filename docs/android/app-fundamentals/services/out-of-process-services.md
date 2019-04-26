@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: db312c4c102feb98791109af19185762bb25856e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61012889"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Serviços do Android em execução em processos remotos
 

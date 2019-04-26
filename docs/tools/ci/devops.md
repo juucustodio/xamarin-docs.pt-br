@@ -1,5 +1,5 @@
 ---
-title: DevOps com o Xamarin
+title: DevOps com Xamarin
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
 author: conceptdev
 ms.author: crdun
@@ -8,13 +8,13 @@ ms.workload:
 - xamarin
 ms.date: 10/23/2018
 ms.openlocfilehash: de7cb0d3cce97f251fe6d9625fb1373e6aac7a67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293681"
 ---
-# <a name="devops-with-xamarin"></a>DevOps com o Xamarin
+# <a name="devops-with-xamarin"></a>DevOps com Xamarin
 
 O Xamarin permite criar aplicativos móveis de plataforma cruzada direcionados para Android, iOS e Windows usando C#, .NET e Visual Studio. O Xamarin permite que uma grande parte do código seja compartilhada entre plataformas, com apenas um pequeno percentual precisando ser específico da plataforma.
 
@@ -26,7 +26,7 @@ As tabelas a seguir identificam quais recursos de DevOps no Visual Studio devem 
 
 ## <a name="agile-tools"></a>Ferramentas agile
 
-Link de referência: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/overview?view=vsts)** (Sobre as ferramentas Agile e o gerenciamento de projetos Agile)
+Link de referência: **[Sobre as ferramentas do Agile e gerenciamento de projeto Agile](/azure/devops/boards/backlogs/overview?view=vsts)**
 
 Comentário Geral: todos os recursos de planejamento e acompanhamento são independentes do tipo de projeto e de linguagens de codificação.
 
@@ -102,7 +102,7 @@ Link de referência: **[Melhorar a qualidade do código](/visualstudio/test/impr
 
 ## <a name="release-management"></a>Gerenciamento de liberações
 
-Link de referência: **[Build e versão no Azure Pipelines e no TFS](/azure/devops/pipelines/overview?view=vsts)**
+Link de referência: **[Compilar e liberar em Pipelines do Azure e o TFS](/azure/devops/pipelines/overview?view=vsts)**
 
 |Recurso|Tem suporte com o Xamarin|Comentários Adicionais|
 |-------------|----------------------------|-------------------------|
@@ -112,7 +112,7 @@ Link de referência: **[Build e versão no Azure Pipelines e no TFS](/azure/devo
 
 ## <a name="monitor-with-hockeyapp"></a>Monitorar com HockeyApp
 
-Link de referência: **[Monitorar com HockeyApp](https://www.hockeyapp.net/features/)**
+Link de referência: **[Monitoramento com o HockeyApp](https://www.hockeyapp.net/features/)**
 
 |Recurso|Tem suporte com o Xamarin|Comentários Adicionais|
 |-------------|----------------------------|-------------------------|

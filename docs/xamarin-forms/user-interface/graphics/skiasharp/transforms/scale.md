@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
 ms.openlocfilehash: 9bc320273df192f9daf2520f451601335731e7b0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61189075"
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
@@ -102,7 +102,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Você talvez esteja se perguntando: como os fatores de dimensionamento afetam o valor retornado de `MeasureText` método de `SKPaint`? A resposta é: nada. `Scale` é um método de `SKCanvas`. Ele não afeta qualquer coisa que você pode fazer com um `SKPaint` objeto até que você usa esse objeto para renderizar algo na tela.
+Você talvez esteja se perguntando: Como os fatores de dimensionamento afetam o valor retornado de `MeasureText` método de `SKPaint`? A resposta é: De forma alguma. `Scale` é um método de `SKCanvas`. Ele não afeta qualquer coisa que você pode fazer com um `SKPaint` objeto até que você usa esse objeto para renderizar algo na tela.
 
 Como você pode ver, tudo o que desenhado após o `Scale` chamar aumenta proporcionalmente:
 

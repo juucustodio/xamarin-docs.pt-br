@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
 ms.openlocfilehash: 640d50a45b4b7f61113b609fa6a5e4a04566b360
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61326993"
 ---
 # <a name="searching-data-with-azure-search"></a>Pesquisa de dados com o Azure Search
 

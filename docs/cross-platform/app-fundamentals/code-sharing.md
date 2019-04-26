@@ -1,17 +1,17 @@
 ---
 title: Visão geral do código do compartilhamento
-description: 'Este documento compara os diferentes métodos de compartilhar código entre projetos de plataforma cruzada: projetos compartilhados, bibliotecas de classes portáteis e .NET Standard, incluindo as vantagens e desvantagens de cada um.'
+description: 'Este documento compara os diferentes métodos de compartilhar código entre projetos de plataforma cruzada: Compartilhado projetos, bibliotecas de classes portáteis e .NET Standard, incluindo as vantagens e desvantagens de cada um.'
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
 ms.date: 08/06/2018
 ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
-ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39520279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227932"
 ---
 # <a name="sharing-code-overview"></a>Visão geral do código do compartilhamento
 
@@ -31,7 +31,7 @@ Este artigo compara os métodos disponíveis para ajudá-lo a escolher o tipo de
 
 <a name="Net_Standard" />
 
-## <a name="net-standard-libraries"></a>Bibliotecas do .NET standard
+## <a name="net-standard-libraries"></a>.NET Standard Libraries
 
 [.NET standard](~/cross-platform/app-fundamentals/net-standard.md) bibliotecas fornecem um conjunto bem definido de bibliotecas de classes base que pode ser referenciado em diferentes tipos de projeto, incluindo projetos de plataforma cruzada como xamarin. Android e xamarin. IOS. .NET standard 2.0 é recomendada para compatibilidade máxima com o código existente do .NET Framework.
 

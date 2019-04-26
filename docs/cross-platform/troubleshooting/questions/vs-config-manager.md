@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
 ms.openlocfilehash: d7aeac2f433e8fdf231f5887f1537f15e2bd1976
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61341302"
 ---
 # <a name="why-doesnt-visual-studio-include-my-referenced-library-project-in-my-build"></a>Por que o Visual Studio não inclui meu projeto de biblioteca referenciado no build?
 
@@ -26,6 +26,6 @@ Alguns modelos gerados com um projeto de biblioteca referenciada já terão a bi
 3. Marque as caixas de seleção para os projetos que deseja incluir.
 
 > [!NOTE]
-> Acinzentados caixas são tratadas automaticamente e não será necessário as alterações.
+> Acinzentados caixas são manipuladas automaticamente e não necessitam alteração.
 
-Screencast destas etapas: [http://screencast.com/t/zLoQOpEn](http://screencast.com/t/zLoQOpEn)
+Screencast dessas etapas: [http://screencast.com/t/zLoQOpEn](http://screencast.com/t/zLoQOpEn)

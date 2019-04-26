@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61321542"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Associáveis Layouts no xamarin. Forms
 
@@ -85,7 +85,7 @@ Neste exemplo, todos os itens a `TopFollowers` coleção será exibida por um `C
 
 ![Layout associável com um DataTemplate](bindable-layouts-images/top-followers.png "associável layout com um modelo de dados")
 
-Para obter mais informações sobre modelos de dados, consulte [modelos de dados do xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obter mais informações sobre modelos de dados, confira [Modelos de dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choosing-item-appearance-at-runtime"></a>Escolhendo a aparência do item em tempo de execução
 

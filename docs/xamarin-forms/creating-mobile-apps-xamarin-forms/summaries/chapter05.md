@@ -1,6 +1,6 @@
 ---
 title: Resumo do capítulo 5. Lidando com tamanhos
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 5. Lidando com tamanhos'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 5. Lidando com tamanhos'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334298"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumo do capítulo 5. Lidando com tamanhos
 
@@ -80,7 +80,7 @@ O [ **FitToSizeClock** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ## <a name="accessibility-issues"></a>Problemas de acessibilidade
 
-O **EstimatedFontSize** programa e o **FitToSizeClock** os dois programas contêm uma falha sutil: se o usuário altera as configurações de acessibilidade do telefone no Android ou Windows 10 Mobile, o programa não é mais possível estimar o tamanho que o texto é renderizado com base no tamanho da fonte. O [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) que demonstra esse problema.
+O **EstimatedFontSize** programa e o **FitToSizeClock** os dois programas contêm uma falha sutil: Se o usuário altera as configurações de acessibilidade do telefone no Android ou Windows 10 Mobile, o programa não é mais possível estimar quanto o texto é renderizado com base no tamanho da fonte. O [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) que demonstra esse problema.
 
 ## <a name="empirically-fitting-text"></a>Empiricamente ajustando o texto
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61289073"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtros de máscara de SkiaSharp
 
@@ -180,9 +180,9 @@ As capturas de tela até o momento mostraram desfoque criado com o `SKBlurStyle.
 
 [![Mascarar o experimento de desfoque](mask-filters-images/MaskBlurExperiment.png "mascarar o experimento de desfoque")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-A captura de tela do iOS mostra o `Solid` estilo: caracteres de texto ainda estão presentes como traços pretos sólidos, e o desfoque é adicionado para fora desses caracteres de texto. 
+A captura de tela do iOS mostra o `Solid` estilo: Os caracteres de texto ainda estão presentes como traços pretos sólidos, e o desfoque é adicionado para fora desses caracteres de texto. 
 
-A captura de tela de Android no meio mostra o `Outer` estilo: os traços de caractere em si são eliminados (como o bitmap) e o desfoque envolve o espaço vazio no qual os caracteres de texto apareceram uma vez. 
+A captura de tela de Android no meio mostra o `Outer` estilo: Os traços de caractere em si são eliminados (como o bitmap) e o desfoque envolve o espaço vazio no qual os caracteres de texto apareceram uma vez. 
 
 A captura de tela UWP no direito mostra o `Inner` estilo. O desfoque é restrito para a área ocupada normalmente por caracteres de texto.
 

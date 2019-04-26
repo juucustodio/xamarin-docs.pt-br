@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61205345"
 ---
 # <a name="porter-duff-blend-modes"></a>Modos de mesclagem Porter Duff
 
@@ -279,7 +279,7 @@ Pode haver uma tentação de substituir os bitmaps na **grade Porter Duff** pág
 
 ## <a name="using-mattes-with-porter-duff"></a>Usando foscos com Porter Duff
 
-O **composição de parede de tijolos** página mostra um exemplo de uma tarefa de composição clássico: uma imagem precisa ser montada a partir de várias partes, incluindo um bitmap com um plano de fundo que precisa ser eliminada. Aqui está o **SeatedMonkey.jpg** bitmap com o plano de fundo de um problema:
+O **composição de parede de tijolos** página mostra um exemplo de uma tarefa de composição clássico: Uma imagem precisa ser montada a partir de várias partes, incluindo um bitmap com um plano de fundo que precisa ser eliminada. Aqui está o **SeatedMonkey.jpg** bitmap com o plano de fundo de um problema:
 
 ![Encaixado Monkey](porter-duff-images/SeatedMonkey.jpg "encaixado Monkey")
 

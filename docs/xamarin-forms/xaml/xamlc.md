@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2018
 ms.openlocfilehash: 9567f3ad8d748a94a03cd1c86254072d4ba3bbdc
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075110"
 ---
 # <a name="xaml-compilation-in-xamarinforms"></a>Compilação de XAML no xamarin. Forms
 

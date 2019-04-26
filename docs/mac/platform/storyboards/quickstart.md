@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: 7f7d23a01a3c3c6567d6bab45d0abbfb078fb512
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61033379"
 ---
 # <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboards no xamarin. Mac – guia de início rápido
 

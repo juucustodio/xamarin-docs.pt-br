@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: a3e14ebca961e828fc578035adaca5ba2a809438
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34783549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61288503"
 ---
 # <a name="an-introduction-to-urhosharp"></a>Uma introdução ao UrhoSharp
 
@@ -38,7 +38,7 @@ UrhoSharp é um mecanismo de jogo com muita funcionalidade prontos:
 
 ## <a name="getting-started"></a>Guia de Introdução
 
-UrhoSharp convenientemente é distribuído como um [pacote do NuGet](https://www.nuget.org/) e ele pode ser adicionado aos seus projetos em C# ou F # destinados ao Windows, Mac, Android ou iOS.  O NuGet é fornecido com tanto as bibliotecas necessárias para executar seu programa, bem como os ativos básicos (CoreData) usados pelo mecanismo.
+UrhoSharp convenientemente é distribuído como um [pacote do NuGet](https://www.nuget.org/) e ele pode ser adicionado ao seu C# ou F# projetos destinados a Windows, Mac, Android ou iOS.  O NuGet é fornecido com tanto as bibliotecas necessárias para executar seu programa, bem como os ativos básicos (CoreData) usados pelo mecanismo.
 
 ### <a name="urho-as-a-portable-class-library"></a>Urho como uma biblioteca de classes portátil
 

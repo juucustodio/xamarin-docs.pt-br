@@ -7,11 +7,11 @@ ms.date: 04/17/2018
 author: asb3993
 ms.author: amburns
 ms.openlocfilehash: d9aa85b946f20addb7d69c559bff68c6b1f75429
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61342268"
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>Estudo de caso de PCL: como posso resolver problemas relacionados a System.Diagnostics.Tracing para o pacote NuGet de Fluxo de Dados de TPL da Microsoft?
 

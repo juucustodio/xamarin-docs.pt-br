@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
 ms.openlocfilehash: 8bd77ec4975fae3cc7245c5adc2b5ef18568b9e1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61328370"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Consumir um aplicativo móvel do Azure
 

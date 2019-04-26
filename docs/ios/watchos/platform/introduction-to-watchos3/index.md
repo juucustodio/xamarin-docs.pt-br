@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
 ms.openlocfilehash: 0428a0df157e359ab34a6a71dbba31bdeb6962fa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61224056"
 ---
 # <a name="introduction-to-watchos-3"></a>Introdução ao watchOS 3
 
@@ -53,7 +53,7 @@ Para obter mais informações, consulte nosso [aprimoramentos de pagamento de Ap
 
 <a name="Background-Tasks" />
 
-## <a name="background-tasks"></a>Tarefas em Segundo Plano
+## <a name="background-tasks"></a>Background Tasks
 
 watchOS 3 apresenta várias tarefas em segundo plano que um aplicativo pode usar para atualizar suas informações garantindo que ele tenha o conteúdo que o usuário precisa antes de abri-lo.
 
@@ -151,7 +151,7 @@ watchOS 3 inclui várias melhorias para a estrutura de WatchKit, incluindo o seg
 - O aplicativo pode obter o estado da coroa a Digital usando o novo [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) classe e receber atualizações quando o usuário gira o crown usando o [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) classe.
 - O [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) classe agora inclui o `ApplicationState` método e [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) constante de que o aplicativo pode usar para controlar o estado de tempo de execução do aplicativo. `WKExtension` também fornece dois novos métodos que podem ser usados para agendar tarefas em segundo plano.
 - O [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) agora inclui a nova `ApplicationWillEnterForeground`, `ApplicationDidEnterBackground` e `HandleBackgroundTasks` métodos para monitorar alterações no estado do aplicativo e lidar com atualizações de tarefa em segundo plano.
-- Uma nova [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) classe foi adicionada para fornecer os seguintes tipos de reconhecimento de gesto para os aplicativos do watch: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer ](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) e [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
+- Uma nova [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) classe foi adicionada para fornecer os seguintes tipos de reconhecimento de gesto para os aplicativos do watch: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) e [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
 - O novo [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) classe fornece uma interface para qualquer HomeKit anexados a câmera IP.
 - O novo [WKInterfaceInlineMovie](https://developer.apple.com/reference/watchkit/wkinterfaceinlinemovie) classe permite que o aplicativo exibir um filme "pôster" é substituído pelo filme em execução quando o usuário toca-lo.
 - O novo [WKInterfacePaymentButton](https://developer.apple.com/reference/watchkit/wkinterfacepaymentbutton) classe permite que o aplicativo apresentar um botão de Apple Pay em sua interface do usuário que iniciará uma solicitação de pagamento quando tocada.

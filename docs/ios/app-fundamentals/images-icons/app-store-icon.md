@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/26/2017
 ms.openlocfilehash: 53e25ae9f4650254f2aaaa03dc8727fae674c9f0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61258072"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Ícones da App Store no xamarin. IOS
 
@@ -25,7 +25,7 @@ A Apple sugere as seguintes diretrizes ao criar o ícone do seu aplicativo:
 - Torne o ícone apropriado para seu aplicativo.
 - Crie um ícone simples, consistente com o design do seu aplicativo.
 - Evite usar palavras em seu ícone.
-- Pense globalmente: um único ícone do aplicativo é usado em todos os territórios de repositório.
+- Pense globalmente: Um único ícone do aplicativo é usado em todos os territórios de repositório.
 
 Uma imagem de 1.024 x 1.024 pixels é necessária para o ícone do aplicativo que será exibido na App Store.  A Apple declarou que o ícone da App Store no catálogo de ativos não pode ser transparente nem conter um canal alfa.
 

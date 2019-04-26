@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
 ms.openlocfilehash: 086ed765781d9297f07574519d2cbc9cf93ac4dd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61344708"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introdução ao XAML
 
@@ -203,9 +203,9 @@ O `ContentPage.Content` marcas são chamadas *elemento de propriedade* marcas. `
 
 Observe também que um `Title` atributo foi definido na marca raiz.
 
-Neste momento, a relação entre as classes, propriedades e XML deve ser evidente: xamarin. Forms uma classe (como `ContentPage` ou `Label`) aparece no arquivo XAML como um elemento XML. Propriedades da classe — incluindo `Title` na `ContentPage` e sete propriedades de `Label`— normalmente são exibidos como atributos XML.
+Neste momento, a relação entre as classes, propriedades e XML deve ser evidente: Uma classe de xamarin. Forms (como `ContentPage` ou `Label`) aparece no arquivo XAML como um elemento XML. Propriedades da classe — incluindo `Title` na `ContentPage` e sete propriedades de `Label`— normalmente são exibidos como atributos XML.
 
-Existem muitos atalhos para definir os valores dessas propriedades. Algumas propriedades são tipos de dados básicos: por exemplo, o `Title` e `Text` propriedades são do tipo `String`, `Rotation` é do tipo `Double`, e `IsVisible` (que é `true` por padrão e é definido aqui apenas para ilustração) é do tipo `Boolean`.
+Existem muitos atalhos para definir os valores dessas propriedades. Algumas propriedades são tipos de dados básicos: Por exemplo, o `Title` e `Text` propriedades são do tipo `String`, `Rotation` é do tipo `Double`, e `IsVisible` (que é `true` por padrão e é definido aqui apenas para ilustração) é do tipo `Boolean`.
 
 O `HorizontalTextAlignment` propriedade é do tipo `TextAlignment`, que é uma enumeração. Para uma propriedade de qualquer tipo de enumeração, tudo o que você precisa fornecer é um nome de membro.
 

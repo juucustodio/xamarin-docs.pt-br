@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/07/2017
 ms.openlocfilehash: 7e895dc2865880ec2789a40f8cdf047a20f8693b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61400262"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Atualizações de SiriKit no iOS 11
 
@@ -118,7 +118,7 @@ Em seguida, adicione um novo projeto de extensão ao seu aplicativo para lidar c
 
 1. Clique duas vezes em sua solução e escolha **Adicionar > Adicionar novo projeto...** .
 2. Escolha o **iOS > extensão > extensão de tentativas** modelo.
-3. Dois novos projetos serão adicionados: intenção e IntentUI. Personalizando a interface do usuário é opcional, portanto, o exemplo inclui apenas o código na **intenção** projeto.
+3. Dois novos projetos serão adicionados: Intenção e IntentUI. Personalizando a interface do usuário é opcional, portanto, o exemplo inclui apenas o código na **intenção** projeto.
 
 O projeto de extensão é onde todas as solicitações de SiriKit serão processadas. Como uma extensão separada, ele não tem automaticamente qualquer forma de se comunicar com seu aplicativo principal – isso geralmente é resolvido com a implementação de armazenamento de arquivos compartilhados usando grupos de aplicativos.
 
@@ -217,7 +217,7 @@ Alguns erros que podem ocorrer durante a execução do exemplo ou adicionando Si
 
 ### <a name="nsinternalinconsistencyexception"></a>NSInternalInconsistencyException
 
-_Exceção Objective-C é gerada.  Nome: NSInternalInconsistencyException motivo: uso da classe < INPreferences: 0x60400082ff00 > de um aplicativo requer o direito com.apple.developer.siri. Você habilitou o recurso de Siri em seu projeto Xcode?_
+_Exceção Objective-C é gerada.  Nome: NSInternalInconsistencyException motivo: Uso da classe < INPreferences: 0x60400082ff00 > de um aplicativo requer o direito com.apple.developer.siri. Você habilitou o recurso de Siri em seu projeto Xcode?_
 
 - SiriKit está marcada na **Entitlements. plist**.
 - **Entitlements. plist** está configurado na **opções do projeto > Build > assinatura do pacote iOS**.

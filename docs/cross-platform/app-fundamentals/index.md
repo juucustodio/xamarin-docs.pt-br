@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: 35c210cc75033f2ad2c83ed6f5196f71d26d000f
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227016"
 ---
 # <a name="sharing-code-on-multiple-platforms"></a>Compartilhamento de código em várias plataformas
 

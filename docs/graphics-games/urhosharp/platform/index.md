@@ -1,5 +1,5 @@
 ---
-title: Suporte à plataforma do UrhoSharp
+title: UrhoSharp Platform Support
 description: Este documento leva a vários guias que descrevem como adicionar Urho a um projeto nativo existente para uma plataforma específica. Ele aborda o Android, iOS, tvOS, macOS, Windows e xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 6205E430-1036-4CC3-8E97-AA5554E3D468
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 46330fb16be4f3b7be60e1bf72eb6a36fafefe77
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61364380"
 ---
-# <a name="urhosharp-platform-support"></a>Suporte à plataforma do UrhoSharp
+# <a name="urhosharp-platform-support"></a>UrhoSharp Platform Support
 
 Nesta seção, discutiremos como adicionar Urho a um projeto existente native para sua plataforma e como tirar proveito da integração de plataforma específica.
 

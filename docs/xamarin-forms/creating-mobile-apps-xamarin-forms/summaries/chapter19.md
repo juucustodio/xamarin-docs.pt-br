@@ -1,6 +1,6 @@
 ---
 title: Resumo do capítulo 19. Exibições de coleção
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 19. Exibições de coleção'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 19. Exibições de coleção'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 795478805b582b956ee491bdfecd84485c1bc30e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334283"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Resumo do capítulo 19. Exibições de coleção
 

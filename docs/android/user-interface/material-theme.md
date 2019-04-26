@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: ff94211086956e36da377445d90359789b62fc60
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 512775864f5ad55ddfedd53b83dd02d7b0e1d1f8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61309053"
 ---
 # <a name="material-theme"></a>Tema de material
 
@@ -52,7 +52,7 @@ Para saber como configurar um projeto de aplicativo do Android 5.0, consulte [co
 
 ## <a name="using-the-built-in-themes"></a>Usando os temas internos
 
-A maneira mais fácil de usar tema de Material é configurar seu aplicativo para usar um tema internos sem personalização. Se você não quiser configurar explicitamente um tema, seu aplicativo usará como padrão `Theme.Material` (o tema escuro). Se seu aplicativo tem apenas uma atividade, você pode configurar um tema no nível do aplicativo. Se seu aplicativo tiver várias atividades, você pode configurar um tema no nível do aplicativo para que ele usa o mesmo tema em todas as atividades, ou você pode atribuir diferentes temas para atividades diferentes. As seções a seguir explicam como configurar os temas no nível do aplicativo e no nível de atividade.
+A maneira mais fácil de usar tema de Material é configurar seu aplicativo para usar um tema internos sem personalização. Se você não quiser configurar explicitamente um tema, seu aplicativo usará como padrão `Theme.Material` (o tema escuro). Se seu aplicativo tem apenas uma atividade, você pode configurar um tema no nível de atividade. Se seu aplicativo tiver várias atividades, você pode configurar um tema no nível do aplicativo para que ele usa o mesmo tema em todas as atividades, ou você pode atribuir diferentes temas para atividades diferentes. As seções a seguir explicam como configurar os temas no nível do aplicativo e no nível de atividade.
 
 
 ### <a name="theming-an-application"></a>Um aplicativo de temas

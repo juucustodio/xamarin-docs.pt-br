@@ -1,5 +1,5 @@
 ---
-title: Estilo de um aplicativo de plataforma cruzada xamarin. Forms
+title: Definir o estilo de um aplicativo Xamarin.Forms multiplataforma
 description: Este artigo explica como aplicar estilo a um aplicativo de plataforma cruzada xamarin. Forms com estilos XAML.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -10,11 +10,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
 ms.openlocfilehash: 56f8632c9cc7d170b4c6594fd51e6aa3e92ad02b
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191217"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Definir o estilo de um aplicativo xamarin. Forms de plataforma cruzada
 

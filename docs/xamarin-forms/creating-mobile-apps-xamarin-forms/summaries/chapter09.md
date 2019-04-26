@@ -1,6 +1,6 @@
 ---
 title: Resumo do capítulo 9. Chamadas à API específicas da plataforma
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 9. Chamadas à API específicas da plataforma'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 9. Chamadas à API específicas da plataforma'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 3aec84ec6598a45bb989d4bbc1705fd797382755
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334456"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Resumo do capítulo 9. Chamadas à API específicas da plataforma
 

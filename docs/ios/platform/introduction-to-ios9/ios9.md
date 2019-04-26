@@ -1,5 +1,5 @@
 ---
-title: iOS 9 compatibilidade
+title: Compatibilidade com o iOS 9
 description: Mesmo se você não planeja adicionar funcionalidades do iOS 9 ao seu aplicativo imediatamente, você deve recompilar seus aplicativos com a versão mais recente do Xamarin.
 ms.prod: xamarin
 ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: 6ade1c05c8e1cc64a4d24df1284d86175083ab80
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293638"
 ---
-# <a name="ios-9-compatibility"></a>iOS 9 compatibilidade
+# <a name="ios-9-compatibility"></a>Compatibilidade com o iOS 9
 
 _Mesmo se você não planeja adicionar funcionalidades do iOS 9 ao seu aplicativo imediatamente, você deve recompilar seus aplicativos com a versão mais recente do Xamarin._
 
@@ -60,9 +60,9 @@ Há alguns casos de código que os padrões *usado* para funcionar em versões a
 
 ### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell.ContentView é nulo em construtores
 
-**Motivo:** no iOS 9 a `initWithFrame:` construtor agora é necessária devido a alterações de comportamento no iOS 9, como o [UICollectionView documentação declara](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se você registrou uma classe para o identificador especificado e deve ser criada uma nova célula, a célula agora é inicializada chamando seu `initWithFrame:` método.
+**Motivo:** No iOS 9 a `initWithFrame:` construtor agora é necessária devido a alterações de comportamento no iOS 9, como o [UICollectionView documentação declara](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se você registrou uma classe para o identificador especificado e deve ser criada uma nova célula, a célula agora é inicializada chamando seu `initWithFrame:` método.
 
-**Correção:** adicionar o `initWithFrame:` construtor como este:
+**Correção:** Adicionar o `initWithFrame:` construtor como este:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -78,9 +78,9 @@ Amostras relacionadas: [MotionGraph](https://github.com/xamarin/monotouch-sample
 
 ### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView Falha ao init com o codificador ao carregar um modo de exibição de um Xib/Nib
 
-**Motivo:** o `initWithCoder:` construtor é a chamada quando o carregamento de um modo de exibição de um arquivo Xib do construtor de Interface. Se esse construtor não é exportado o código não gerenciado não é possível chamar nossa versão gerenciada dele. Anteriormente (por exemplo. no iOS 8) o `IntPtr` construtor foi invocado para inicializar o modo de exibição.
+**Motivo:** O `initWithCoder:` construtor é a chamada quando o carregamento de um modo de exibição de um arquivo Xib do construtor de Interface. Se esse construtor não é exportado o código não gerenciado não é possível chamar nossa versão gerenciada dele. Anteriormente (por exemplo. no iOS 8) o `IntPtr` construtor foi invocado para inicializar o modo de exibição.
 
-**Correção:** criar e exportar o `initWithCoder:` construtor como este:
+**Correção:** Criar e exportar o `initWithCoder:` construtor como este:
 
 ```csharp
 [Export ("initWithCoder:")]
@@ -90,7 +90,7 @@ public YourClassName (NSCoder coder) : base (coder)
 }
 ```
 
-Exemplo relacionado: [bate-papo](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
+Exemplo relacionado: [Chat](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
 
 
 ### <a name="dyld-message-no-cache-image-with-name"></a>Mensagem Dyld: nenhuma imagem de cache com o nome...
@@ -102,9 +102,9 @@ Dyld Error Message:
 Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**Motivo:** este é um bug no vinculador nativo da Apple, que acontece quando eles fizerem uma estrutura privada pública (JavaScriptCore se tornou público no iOS 7, antes que ele era uma estrutura privada), e o destino da implantação do aplicativo é para uma versão iOS quando o Framework era privado. Nesse caso, vinculador da Apple será vinculada à versão particular do framework em vez da versão pública.
+**Motivo:** Este é um bug no vinculador nativo da Apple, que acontece quando eles fizerem uma estrutura privada pública (JavaScriptCore se tornou público no iOS 7, antes que ele era uma estrutura privada), e o destino da implantação do aplicativo é para uma versão iOS quando o framework era privado. Nesse caso, vinculador da Apple será vinculada à versão particular do framework em vez da versão pública.
 
-**Correção:** isso será abordado para iOS 9, mas não há uma solução fácil aplicar por conta própria nesse: apenas uma versão iOS posterior em seu projeto (você pode tentar iOS 7 neste caso) de destino. Outras estruturas podem apresentar problemas semelhantes, por exemplo o framework do WebKit se tornou público no iOS 8 (e para direcionamento ao iOS 7 irá resultar nesse erro; você deve ter como destino o iOS 8 para usar WebKit em seu aplicativo).
+**Correção:** Isso será abordado para iOS 9, mas não há uma solução fácil aplicar por conta própria nesse: apenas uma versão iOS posterior em seu projeto (você pode tentar iOS 7 neste caso) de destino. Outras estruturas podem apresentar problemas semelhantes, por exemplo o framework do WebKit se tornou público no iOS 8 (e para direcionamento ao iOS 7 irá resultar nesse erro; você deve ter como destino o iOS 8 para usar WebKit em seu aplicativo).
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com tabelas no Designer do iOS
+title: Como trabalhar com tabelas no iOS Designer
 description: Nas seções anteriores exploramos o desenvolvimento usando tabelas. Nesse ponto, a quinta e última seção, vamos agregar o que aprendemos até aqui e criar um aplicativo de lista do fardo básico usando um Storyboard.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
@@ -8,17 +8,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
-ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227316"
 ---
-# <a name="working-with-tables-in-the-ios-designer"></a>Trabalhando com tabelas no Designer do iOS
+# <a name="working-with-tables-in-the-ios-designer"></a>Como trabalhar com tabelas no iOS Designer
 
 Storyboards são uma maneira WYSIWYG para criar aplicativos iOS e têm suporte dentro do Visual Studio no Mac e Windows. Para obter mais informações sobre Storyboards, consulte o [Introdução ao Storyboards](~/ios/user-interface/storyboards/index.md) documento. Storyboards também permitem que você edite os layouts de célula *em* a tabela, que simplifica o desenvolvimento com tabelas e células
 
-Ao configurar propriedades de uma exibição de tabela no Designer do iOS, há dois tipos de conteúdo da célula podem ser escolhidos: **dinâmica** ou **estático** conteúdo de protótipo.
+Ao configurar propriedades de uma exibição de tabela no Designer do iOS, há dois tipos de conteúdo da célula que podem ser escolhidos: **Dinâmico** ou **estático** conteúdo de protótipo.
 
 <a name="Prototype_Content" />
 
@@ -79,11 +79,11 @@ A primeira alteração ao storyboard é excluir a exibição de detalhes existen
 
 5. Em seguida, configure as duas exibições de tabela selecionando-os e usando o painel de propriedades. Certifique-se de selecionar o modo de exibição e controlador de exibição não – você pode usar a estrutura de tópicos do documento para ajudar com a seleção.
 
-6.  Altere o controlador de exibição de raiz para ser **conteúdo: dinâmico protótipos** (o modo de exibição na superfície de Design será rotulado **protótipo conteúdo** ):
+6.  Altere o controlador de exibição de raiz para ser **conteúdo: Protótipos dinâmicos** (o modo de exibição na superfície de Design será rotulado **protótipo conteúdo** ):
 
     [![Configurando a propriedade de conteúdo para protótipos dinâmicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7.  Alterar o novo **UITableViewController** ser **conteúdo: células estático**. 
+7.  Alterar o novo **UITableViewController** ser **conteúdo: Células estáticas**. 
 
 
 8. O novo UITableViewController deve ter seu nome de classe e o identificador definido. Selecione o controlador de exibição e digite _TaskDetailViewController_ para o **classe** no **painel de propriedades** – Isso criará um novo `TaskDetailViewController.cs` arquivo na solução Painel. Insira o **StoryboardID** como _detalhe_, conforme ilustrado no exemplo a seguir. Isso será usado posteriormente para carregar este modo de exibição no C# código:  
@@ -115,7 +115,7 @@ Em seguida, você precisará criar um botão que irá adicionar novas tarefas, c
 Faça o seguinte: 
 
 -  Arraste uma **Item de botão de barra** da caixa de ferramentas para o _lado direito da barra de navegação_.
--  No **painel de propriedades**, em **Item de botão de barra** selecionar **identificador: adicionar** (para torná-lo um *+* além de botão). 
+-  No **painel de propriedades**, em **Item de botão de barra** selecione **identificador: Adicione** (para torná-lo um *+* além de botão). 
 -  Dê um nome para que possa ser identificado no código em um estágio posterior. Observe que você precisa dar um nome de classe de controlador de exibição de raiz (por exemplo **ItemViewController**) para permitir que você defina o nome do item de botão de barra.
 
 
@@ -130,9 +130,9 @@ As etapas para criar o layout completo são:
 Selecione o modo de exibição de tabela e abra o **painel de propriedade**. Atualize as propriedades a seguir:
 
 -  **Seções**: _2_ 
--  **Estilo**: _agrupados_
+-  **Estilo**: _Agrupados_
 -  **Separador**: _None_
--  **Seleção**: _nenhuma seleção_
+-  **Seleção de**: _Nenhuma seleção_
 
 Selecione a seção superior e, em **Propriedades > seção de exibição de tabela** alterar **linhas** para _3_, conforme ilustrado abaixo:
 
@@ -141,15 +141,15 @@ Selecione a seção superior e, em **Propriedades > seção de exibição de tab
 
 Para cada célula aberta a **painel de propriedades** e defina:
 
--  **Estilo**: _personalizado_
--  **Identificador**: escolha um identificador exclusivo para cada célula (por exemplo. "_title_","_notas_","_feito_").
+-  **Estilo**:  _Personalizado_
+-  **Identificador**: Escolha um identificador exclusivo para cada célula (por exemplo. "_title_","_notas_","_feito_").
 -  Arraste os controles necessários para produzir o layout mostrado na captura de tela (Coloque **UILabel**, **UITextField** e **UISwitch** nas células corretas e defina os rótulos apropriadamente, ie. Título, anotações e feito).
 
 
 A segunda seção, defina **linhas** à _1_ e arraste a alça de redimensionamento inferior da célula para torná-lo o mais alto.
 
 -  **O identificador do conjunto de**: para um valor exclusivo (por exemplo. "salve"). 
--  **Definir o plano de fundo**: _Limpar cores_ .
+-  **Definir o plano de fundo**:  _Limpar cores_ .
 -  Arraste dois botões para a célula e defina seus títulos adequadamente (ou seja, _salve_ e _excluir_), conforme ilustrado abaixo:
 
    [![configuração de dois botões na seção inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)

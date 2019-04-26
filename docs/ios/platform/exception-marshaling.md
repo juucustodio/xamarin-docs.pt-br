@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/05/2017
 ms.openlocfilehash: 167d6ac421bdd2652e7f8474e1ea21bd9040723f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075082"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Exceção de Marshaling no xamarin. IOS
 
@@ -265,7 +265,7 @@ Os modos a seguir estão disponíveis:
 - `UnwindNativeCode`: Esse é o comportamento (indefinido) anterior. Isso não está disponível ao usar o GC no modo cooperativo (que é a única opção na watchOS; portanto, isso não é uma opção válida no watchOS), mas é a opção padrão para todas as outras plataformas.
 - `ThrowObjectiveCException`: Converter a exceção gerenciada em uma exceção de Objective-C e lançar a exceção de Objective-C. Esse é o padrão no watchOS.
 - `Abort`: Anule o processo.
-- `Disable`: Desativa a interceptação de exceção, portanto, não faz sentido definir esse valor no manipulador de eventos, mas depois que o evento é gerado que é tarde demais para desabilitá-lo. Em qualquer caso, se definido, ele se comportará como `UnwindNativeCode`.
+- `Disable`: Desabilita a interceptação de exceção, portanto, não faz sentido definir esse valor no manipulador de eventos, mas depois que o evento é gerado que é tarde demais para desabilitá-lo. Em qualquer caso, se definido, ele se comportará como `UnwindNativeCode`.
 
 Para realizar marshaling exceções Objective-C para código gerenciado, os modos a seguir estão disponíveis:
 

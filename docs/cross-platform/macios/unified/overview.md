@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: 1d159d280bd3b8855c32e3e437dfdefcbe0463cb
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261123"
 ---
 # <a name="unified-api-overview"></a>Visão geral da API unificada
 
@@ -40,8 +40,8 @@ Independentemente de quais aplicativos você está migrando, fazer check-out [es
 
 Desse ponto em diante, ocorrerão nossas APIs de duas maneiras:
 
--  **API clássica:** limitados a 32 bits (somente) e expostas em de `monotouch.dll` e `XamMac.dll` assemblies.
--  **API unificada:** dão suporte ao desenvolvimento de bit 32 e 64 com uma única API disponível na `Xamarin.iOS.dll` e `Xamarin.Mac.dll` assemblies.
+-  **API clássica:** Limitado a 32 bits (somente) e expostas na `monotouch.dll` e `XamMac.dll` assemblies.
+-  **API unificada:** Suporte para o desenvolvimento de bit 32 e 64 com uma única API disponível na `Xamarin.iOS.dll` e `Xamarin.Mac.dll` assemblies.
 
 Isso significa que, para empresas, desenvolvedores (não direcionado para a App Store), você pode continuar usando as APIs clássicas existentes, como podemos manter mantendo-os para sempre, ou você podem atualizar para as novas APIs.
 
@@ -55,8 +55,8 @@ Podemos está descartando o prefixo "MonoTouch" de nossos produtos de iOS e "Mon
 
 Isso torna mais simples de compartilhar código entre as plataformas Mac e iOS sem recorrer a compilação condicional e reduzirá o ruído na parte superior dos arquivos de código de origem.
 
--  **API clássica:** usar Namespaces `MonoTouch.` ou `MonoMac.` prefixo.
--  **API unificada:** nenhum prefixo de namespace
+-  **API clássica:** Usar namespaces `MonoTouch.` ou `MonoMac.` prefixo.
+-  **API unificada:** No namespace prefix
 
 ## <a name="runtime-defaults"></a>Padrões de tempo de execução
 
@@ -179,7 +179,7 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 
 API clássica do xamarin. IOS de dentro (MonoTouch. dll) a `[Obsolete]` atributo foi usado de duas maneiras diferentes:
 
--  **Preterido API do iOS:** isso é quando Apple dicas para você parar de usar uma API, porque ela está sendo substituída por uma mais recente. A API clássica é ainda bem e geralmente necessário (se houver suporte a versão mais antiga do iOS).
+-  **API do iOS preteridos:** Isso é quando Apple dicas para você parar de usar uma API, porque ela está sendo substituída por uma mais recente. A API clássica é ainda bem e geralmente necessário (se houver suporte a versão mais antiga do iOS).
  API desse tipo (e o `[Obsolete]` atributo) estão incluídos para os novos assemblies do xamarin. IOS.
 -  **API incorreto** API alguns tiver erros de digitação em seus nomes.
 
@@ -187,7 +187,7 @@ Para os assemblies originais (MonoTouch. dll e XamMac.dll), mantivemos o código
 
 <a name="NSObject_ctor" />
 
-### <a name="nsobject-subclasses-ctorintptr"></a>.Ctor(IntPtr) de subclasses de NSObject
+### <a name="nsobject-subclasses-ctorintptr"></a>NSObject subclasses .ctor(IntPtr)
 
 Cada `NSObject` subclasse tem um construtor que aceita um `IntPtr`. Isso é como podemos pode criar uma nova instância gerenciada de um identificador de ObjC nativo.
 
@@ -287,7 +287,7 @@ Mas esse método só funcionará se a instância de acordo com o protocolo NSCod
 
 A API unificada Corrigimos isso.  Os novos assemblies terá apenas o `.ctor(NSCoder)` se o tipo está em conformidade com `NSCoding`. Também esses tipos agora tem um `Encode(NSCoder)` método que está de acordo com o `INSCoding` interface.
 
-Baixo impacto: Na maioria dos casos essa alteração não afetará aplicativos como os construtores antigos, removidos, não pode ser usados.
+Baixo impacto: Na maioria dos casos essa alteração não afetará os aplicativos como os construtores antigos, removidos, não pode ser usados.
 
 ## <a name="further-tips"></a>Dicas adicionais
 

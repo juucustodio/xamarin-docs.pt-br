@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 2092b12254008936f2c5b6a7d9dd610ff751e802
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61207379"
 ---
 # <a name="working-with-watchos-text-input-in-xamarin"></a>Trabalhando com entrada de texto no Xamarin do watchOS
 
@@ -83,7 +83,7 @@ Se uma imagem animada emoji for selecionado o `result` na conclusão manipulador
 Para levar o usuário diretamente para a tela de ditado sem mostrar qualquer sugestão (ou a opção de rabisco):
 
 - passar uma matriz vazia para a lista de sugestões, e
-- Definir `WatchKit.WKTextInputMode.Plain`.
+- set `WatchKit.WKTextInputMode.Plain`.
 
 ```csharp
 PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (result) => {

@@ -7,17 +7,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/11/2018
 ms.openlocfilehash: 5c3dd406f1132f51a86ddf574ab7ad0b279bc9ec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215335"
 ---
 # <a name="net-embedding-errors"></a>Erros de incorporação do .NET
 
 ## <a name="em0xxx-binding-error-messages"></a>EM0xxx: Mensagens de erro de associação
 
-Por exemplo, parâmetros, o ambiente
+Por exemplo, parameters, environment
 
 <!-- 0xxx: the generator itself, e.g. parameters, environment -->
 
@@ -59,7 +59,7 @@ A ferramenta não dá suporte para o destino `X`. É possível que outra versão
 
 <a name="EM0005" />
 
-### <a name="em0005-the-compilation-target-x-is-not-valid"></a>EM0005: Destino de compilação `X` não é válido.
+### <a name="em0005-the-compilation-target-x-is-not-valid"></a>EM0005: O destino de compilação `X` não é válido.
 
 A ferramenta não dá suporte para o destino de compilação `X`. É possível que outra versão da ferramenta dá suporte a ele ou ela não é aplicada nesse ambiente.
 
@@ -153,7 +153,7 @@ Isso indica um bug no .NET inserção; Envie um relatório de bug no [ https://g
 
 <a name="EM1010" />
 
-### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: Digite `T` não é gerada porque `X` não têm suporte.
+### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: Tipo de `T` não é gerada porque `X` não têm suporte.
 
 Isso é um **aviso** que o tipo `T` será ignorada (ou seja, nada será gerado) porque ele usa `X`, um recurso que não tem suporte.
 
@@ -161,7 +161,7 @@ Observação: Recursos com suporte evoluirá com novas versões da ferramenta.
 
 <a name="EM1011" />
 
-### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: Digite `T` não é gerada porque ele não tem código de marshaling com um equivalente nativo.
+### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: Tipo `T` não é gerada porque ele não tem código de marshaling com um equivalente nativo.
 
 Esse é um **aviso** que o tipo `T` será ignorada (ou seja, nada será gerado) porque ela expõe algo a partir do .NET framework que exige marshaling extra.
 
@@ -251,7 +251,7 @@ Observação: Recursos com suporte evoluirá com novas versões da ferramenta.
 
 <a name="EM1041" />
 
-### <a name="em1041-indexed-properties-on-t-is-not-generated-because-multiple-indexed-properties-are-not-supported"></a>EM1041: As propriedades indexadas em `T` não é gerada porque não há suporte para várias propriedades indexadas.
+### <a name="em1041-indexed-properties-on-t-is-not-generated-because-multiple-indexed-properties-are-not-supported"></a>EM1041: Propriedades indexadas em `T` não é gerada porque não há suporte para várias propriedades indexadas.
 
 Esse é um **aviso** que as propriedades indexadas em `T` será ignorada (ou seja, nada será gerado) porque não há suporte para várias propriedades indexadas.
 

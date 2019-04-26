@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290162"
 ---
 # <a name="skiasharp-image-filters"></a>Filtros de imagem de SkiaSharp
 
@@ -427,7 +427,7 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-O primeiro argumento de `SKImageFilter.CreateDistantLitDiffuse` é a direção da luz. Positivo X e Y coordenadas indicam que a luz é apontada para a direita e para baixo. Ponto de coordenadas Z positivo para a tela. O arquivo XAML permite que você selecione os valores de Z negativos, mas é apenas para que você possa ver o que acontece: conceitualmente, as coordenadas de Z negativas fazem com que a luz apontar para fora da tela. Para qualquer coisa que outros valores negativos, em seguida, pequenos, o efeito de iluminação deixará de funcionar.
+O primeiro argumento de `SKImageFilter.CreateDistantLitDiffuse` é a direção da luz. Positivo X e Y coordenadas indicam que a luz é apontada para a direita e para baixo. Ponto de coordenadas Z positivo para a tela. O arquivo XAML permite que você selecione os valores de Z negativos, mas é apenas para que você possa ver o que acontece: Conceitualmente, as coordenadas de Z negativas fazer com que a luz apontar para fora da tela. Para qualquer coisa que outros valores negativos, em seguida, pequenos, o efeito de iluminação deixará de funcionar.
 
 O `surfaceScale` argumento pode variar de -1 para 1. (Os valores maiores ou menores não tem nenhum efeito adicional.) Esses são valores relativos no eixo Z que indicam o deslocamento do objeto gráfico (nesse caso, a cadeia de caracteres de texto) da superfície da tela. Use valores negativos para gerar a cadeia de caracteres de texto acima da superfície da tela e valores positivos seja pressionado-lo na tela.
 

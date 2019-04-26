@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
 ms.openlocfilehash: 2c6409410ecba7df8559c07c3231f5e493c98897
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58071058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61079623"
 ---
 # <a name="ios-designer-basics"></a>Noções básicas do Designer do iOS
 
@@ -34,7 +34,7 @@ Esta seção descreve como o Designer do iOS facilita a criação de uma interfa
 
 O Designer do iOS permite aos desenvolvedores criar visualmente a interface do usuário do aplicativo. Conforme descrito na [Introdução ao Storyboards](~/ios/user-interface/storyboards/index.md) guia, um storyboard descreve as telas (controladores de exibição) que compõem um aplicativo, os elementos de interface (exibições) colocados nesses controladores de exibição e o fluxo geral de navegação do aplicativo . 
 
-Um controlador de exibição tem duas partes: uma representação visual no iOS Designer e uma classe C# associada:
+Um controlador de exibição tem duas partes: uma representação visual no iOS Designer e uma classe c# associada:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

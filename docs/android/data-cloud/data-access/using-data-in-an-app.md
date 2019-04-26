@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
 ms.openlocfilehash: e9af8df3cbe6f125788f298be6a181472c1cd27d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61012838"
 ---
-# <a name="using-data-in-an-app"></a>Usando dados em um aplicativo
+# <a name="using-data-in-an-app"></a>Usar dados em um aplicativo
 
 O **DataAccess_Adv** exemplo mostra um aplicativo funcional que permite a entrada do usuário e a funcionalidade de banco de dados CRUD (criar, ler, atualizar e excluir). O aplicativo consiste em duas telas: uma lista e um formulário de entrada de dados. Todo o código de acesso de dados é pode ser reutilizado no iOS e Android sem modificação.
 

@@ -7,17 +7,17 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
 ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261162"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Comandos e ferramentas de Sharpie objetivo
 
 _Visão geral das ferramentas incluídas com o objetivo Sharpie e os argumentos de linha de comando para usá-los._
 
-<style type="text/css"> azul .terminal {cor: rgb(10,96,254);} .terminal verde {color: rgb(12,156,26);} .terminal magenta {cor: rgb(152,12,103);} </style>
+<style type="text/css"> .terminal-blue { color: rgb(10,96,254); } .terminal-green { color: rgb(12,156,26); } .terminal-magenta { color: rgb(152,12,103); } </style>
 
 
 Depois que o objetivo Sharpie é com êxito [instalados](~/cross-platform/macios/binding/objective-sharpie/get-started.md), abra um terminal e se familiarizar com as <em>comandos</em> objetivo Sharpie tem a oferecer:
@@ -88,5 +88,5 @@ Acima, podemos ver que temos a `iphoneos9.1` SDK instalado na máquina e tem `ar
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

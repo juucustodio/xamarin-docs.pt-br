@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61087961"
 ---
 # <a name="stack-views-in-xamarinios"></a>Modos de exibição de pilha no xamarin. IOS
 
@@ -28,7 +28,7 @@ O layout de todas as subexibições anexado a uma exibição de pilha são geren
 
 [![](uistackview-images/stacked01.png "Diagrama de layout de exibição de pilha")](uistackview-images/stacked01.png#lightbox)
 
-Ao usar um `UIStackView` em um aplicativo xamarin. IOS, o desenvolvedor pode definir as subexibições tanto dentro de um Storyboard no Designer do iOS, ou adicionando e removendo subexibições em código C#.
+Ao usar um `UIStackView` em um aplicativo xamarin. IOS, o desenvolvedor pode definir as subexibições tanto dentro de um Storyboard no Designer do iOS, ou adicionando e removendo subexibições em código c#.
 
 Este documento consiste em duas partes: um guia rápido para ajudá-lo a implementar sua pilha primeiro exibir e, em seguida, mais alguns detalhes técnicos sobre como ele funciona.
 

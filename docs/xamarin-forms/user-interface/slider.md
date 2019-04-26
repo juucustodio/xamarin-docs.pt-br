@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
 ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250668"
 ---
 # <a name="xamarinforms-slider"></a>Controle deslizante do xamarin. Forms
 
@@ -56,7 +56,7 @@ O `Slider` também define várias propriedades que afetam sua aparência:
 
 ## <a name="basic-slider-code-and-markup"></a>Marcação e código básico do controle deslizante
 
-O [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemplo começa com três páginas que são funcionalmente idênticos, mas são implementadas de maneiras diferentes. A primeira página usa apenas um código c#, o segundo usa XAML com um manipulador de eventos no código e o terceiro é capaz de evitar o manipulador de eventos usando a associação de dados no arquivo XAML.
+O [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemplo começa com três páginas que são funcionalmente idênticos, mas são implementadas de maneiras diferentes. A primeira página usa apenas um código C#, o segundo usa XAML com um manipulador de eventos no código e o terceiro é capaz de evitar o manipulador de eventos usando a associação de dados no arquivo XAML.
 
 ### <a name="creating-a-slider-in-code"></a>Criando um controle deslizante no código
 
@@ -222,7 +222,7 @@ Slider slider = new Slider
 };
 ```
 
-O compilador c# gera código que define essas duas propriedades em sequência, e quando o `Minimum` estiver definida como 10, é maior que o padrão `Maximum` valor 1. Você pode evitar a exceção nesse caso, definindo o `Maximum` propriedade primeiro:
+O compilador C# gera código que define essas duas propriedades em sequência, e quando o `Minimum` estiver definida como 10, é maior que o padrão `Maximum` valor 1. Você pode evitar a exceção nesse caso, definindo o `Maximum` propriedade primeiro:
 
 ```csharp
 Slider slider = new Slider

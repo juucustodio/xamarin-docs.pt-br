@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
 ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250420"
 ---
 # <a name="xamarinforms-stepper"></a>Seletor de xamarin. Forms
 
@@ -182,7 +182,7 @@ O **associações básicas de escalonador** página mostra como escrever um apli
 </ContentPage>
 ```
 
-O [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propriedade do primeiro [ `Label` ](xref:Xamarin.Forms.Label) está associado a [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propriedade do [ `Stepper` ](xref:Xamarin.Forms.Stepper), como é o [ `Text` ](xref:Xamarin.Forms.Label.Text) propriedade do segundo `Label` com um `StringFormat` especificação. O **associações básicas de escalonador** funções da página um pouco diferente das duas páginas anteriores: quando a página aparece pela primeira vez, o segundo `Label` exibe a cadeia de caracteres de texto com o valor. Esse é um benefício do uso de associação de dados. Para exibir texto sem a associação de dados, você precisa inicializar especificamente a `Text` propriedade do `Label` ou simular um acionamento da [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) evento chamando o manipulador de eventos do construtor de classe .
+O [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propriedade do primeiro [ `Label` ](xref:Xamarin.Forms.Label) está associado a [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propriedade do [ `Stepper` ](xref:Xamarin.Forms.Stepper), como é o [ `Text` ](xref:Xamarin.Forms.Label.Text) propriedade do segundo `Label` com um `StringFormat` especificação. O **associações básicas de escalonador** funções da página um pouco diferente das duas páginas anteriores: Quando a página aparece pela primeira vez, o segundo `Label` exibe a cadeia de caracteres de texto com o valor. Esse é um benefício do uso de associação de dados. Para exibir texto sem a associação de dados, você precisa inicializar especificamente a `Text` propriedade do `Label` ou simular um acionamento da [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) evento chamando o manipulador de eventos do construtor de classe .
 
 ## <a name="precautions"></a>Precauções
 

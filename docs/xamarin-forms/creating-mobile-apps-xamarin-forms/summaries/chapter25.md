@@ -1,6 +1,6 @@
 ---
 title: Resumo do Capítulo 25. Variedades de página
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do Capítulo 25. Variedades de página'
+description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do Capítulo 25. Variedades de página'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: db6c329c029f52180fe508f277a1cf4834ab493a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61331793"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Resumo do Capítulo 25. Variedades de página
 
