@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 9a9bec364990f683a59e6ddce1a536950cdf3861
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392611"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Trabalhando com o watchOS Layout no Xamarin
 

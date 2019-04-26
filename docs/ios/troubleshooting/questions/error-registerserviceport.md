@@ -8,16 +8,16 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: fc4c143d6b5f7c211d24e6e3ed2ed3bb8d264410
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421964"
 ---
 # <a name="ios-designer-error-with-registerserviceport"></a>Erro de iOS Designer com RegisterServicePort
 
 ## <a name="sample-error"></a>Erro de amostra
-> System. aggregateexception: Um ou mais erros---> System. SystemException: RegisterServicePort (com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Kernel retornado: -308 (-308): servidor (ipc/mig) morreu
+> System.AggregateException: Um ou mais erros ocorreram---> System. SystemException: RegisterServicePort(com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Kernel retornado: -308 (-308): servidor (ipc/mig) morreu
 
 ## <a name="explanation"></a>Explicação
 Erros com `RegisterServicePort` e mensagens de erro semelhantes, como acima são normalmente um problema com spyware/malware no computador. . Considere a [comentário sobre este relatório de bug](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) para obter mais informações, juntamente com o link para o [Fórum de discussão do Apple](https://discussions.apple.com/thread/5596008) sobre como remover uma infecção do possível. 

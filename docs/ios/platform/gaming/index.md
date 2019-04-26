@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: d8a531e495a19be7437d4a600e758028594248ab
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953304"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>APIs de jogos no xamarin. IOS do iOS
 
@@ -445,7 +445,7 @@ Apple adicionou os seguintes recursos novos para SceneKit para iOS 9:
 - O `SCNView` e `SCNSceneRenderer` classes podem ser usadas para habilitar a renderização de Metal (em dispositivos iOS com suporte).
 - O `SCNAudioPlayer` e `SCNNode` classes podem ser usadas para adicionar efeitos de áudio espaciais que controlam automaticamente uma posição do jogador em um aplicativo iOS.
 
-Para obter mais informações, consulte nosso [documentação do SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) da Apple [referência de estrutura de SceneKit](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) e [Fox: Criando um jogo do SceneKit com o Xcode cena Editor](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154)projeto de exemplo.
+Para obter mais informações, consulte nosso [documentação do SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) da Apple [referência de estrutura de SceneKit](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) e [Fox: Criando um jogo do SceneKit com o Editor do Xcode cena](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) projeto de exemplo.
 
 ## <a name="spritekit"></a>SpriteKit
 

@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 31eb0bfae58ecdca40548e46d1d9d95828be67b4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61347793"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerações sobre a plataforma de 32/64 bits
 
@@ -79,7 +79,7 @@ Durante a transição da Apple do iOS de 32 bits para 64 bits, aplicativos preci
 Direcionamento de arquiteturas de 32 bits e 64 bits aumentará significativamente o tamanho de um aplicativo. No entanto, fazer isso permitirá dispositivos mais recentes executar o código otimizado e ainda dar suporte a dispositivos mais antigos.
 
 > [!IMPORTANT]
-> Se você receber a seguinte mensagem de erro ao enviar um aplicativo iOS ao iTunes App Store, _"aviso ITMS-9000: falta de suporte de 64 bits. Começando em 1º de fevereiro de 2015, novo iOS aplicativos carregados para o aplicativo Store devem incluir o suporte de 64 bits e ser criados com o iOS 8 SDK, incluído no Xcode 6 ou posterior. Para habilitar 64-bit em seu projeto, é recomendável usar o padrão de definição de "Standard architectures" de build do Xcode para criar um único binário com o código de 32 bits e 64 bits. "_ Você precisa alternar as arquiteturas com suporte para um dos disponíveis **ARM64** combinação (como mostrado acima), recompile e envie novamente.
+> Se você receber a seguinte mensagem de erro ao enviar um aplicativo iOS ao iTunes App Store, _"aviso ITMS-9000: Suporte de 64 bits ausente. Começando em 1º de fevereiro de 2015, novo iOS aplicativos carregados para o aplicativo Store devem incluir o suporte de 64 bits e ser criados com o iOS 8 SDK, incluído no Xcode 6 ou posterior. Para habilitar 64-bit em seu projeto, é recomendável usar o padrão de definição de "Standard architectures" de build do Xcode para criar um único binário com o código de 32 bits e 64 bits. "_ Você precisa alternar as arquiteturas com suporte para um dos disponíveis **ARM64** combinação (como mostrado acima), recompile e envie novamente.
 
 ## <a name="mac"></a>Mac
 

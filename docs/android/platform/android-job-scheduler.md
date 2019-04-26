@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
 ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60956277"
 ---
 # <a name="android-job-scheduler"></a>Agendador de trabalhos do Android
 

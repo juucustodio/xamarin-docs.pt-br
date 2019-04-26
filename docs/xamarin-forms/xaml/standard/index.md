@@ -1,5 +1,5 @@
 ---
-title: XAML Standard (visualização)
+title: XAML Standard (Versão prévia)
 description: Este artigo explica como começar a explorar a visualização padrão de XAML no xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 24382DF1-BE70-4608-B86F-B79FB23E4A78
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/15/2017
 ms.openlocfilehash: d9fb19fb233c25e5dd525c7c157013ef66f4a4f3
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51562751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61169643"
 ---
-# <a name="xaml-standard-preview"></a>XAML Standard (visualização)
+# <a name="xaml-standard-preview"></a>XAML Standard (Versão prévia)
 
 ![Visualizar](~/media/shared/preview.png)
 

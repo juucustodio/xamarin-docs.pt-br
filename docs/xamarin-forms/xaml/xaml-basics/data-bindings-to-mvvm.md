@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61174525"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. De associações de dados a MVVM
 
@@ -35,7 +35,7 @@ O programa pode usar `x:Static` para obter a data e hora atuais do estático `Da
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext` é uma propriedade muito especial: quando você define o `BindingContext` em um elemento, ela é herdada por todos os filhos desse elemento. Isso significa que todos os filhos do `StackLayout` ter esse mesmo `BindingContext`, e podem conter associações simples às propriedades desse objeto.
+`BindingContext` é uma propriedade muito especial: Quando você define o `BindingContext` em um elemento, ela é herdada por todos os filhos desse elemento. Isso significa que todos os filhos do `StackLayout` ter esse mesmo `BindingContext`, e podem conter associações simples às propriedades desse objeto.
 
 No **DateTime One-Shot** programa, dois dos filhos contém associações a propriedades desse `DateTime` valor, mas dois outros filhos contenham associações que parecem estar faltando um caminho de associação. Isso significa que o `DateTime` próprio valor é usado para o `StringFormat`:
 
@@ -298,7 +298,7 @@ A associação em cada `Label` é o padrão `OneWay`. Ele só precisa para exibi
 
 ## <a name="commanding-with-viewmodels"></a>Comandos com ViewModels
 
-Em muitos casos, o padrão MVVM é restrito à manipulação de itens de dados: objetos de interface do usuário na exibição de objetos de dados no ViewModel em paralelo.
+Em muitos casos, o padrão MVVM é restrito à manipulação de itens de dados: Objetos de interface do usuário na exibição de objetos de dados no ViewModel em paralelo.
 
 No entanto, às vezes, o modo de exibição precisa conter botões que disparam várias ações no ViewModel. Mas o ViewModel não deve conter `Clicked` manipuladores para os botões porque o que seria vincular o ViewModel para um paradigma de interface de usuário específica.
 

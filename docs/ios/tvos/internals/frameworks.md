@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: 85067d1dc95ee63cf905e81fba7afc973f7ec37e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61395262"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>Estruturas de compatíveis e sem suportadas do tvOS
 
@@ -43,7 +43,7 @@ Esta é uma lista das estruturas fornecidas pela Apple para uso em seus aplicati
 * Foundation
 * GameController
 * GameKit
-* Jogo
+* GamePlay
 * GLKit
 * ImageIO
 * MachO
@@ -58,9 +58,9 @@ Esta é uma lista das estruturas fornecidas pela Apple para uso em seus aplicati
 * OpenGES
 * SceneKit
 * Segurança
-* SIMD
+* simd
 * SpriteKit
-* No StoreKit
+* StoreKit
 * SystemConfiguration
 * TVMLKit (adicionado)
 * TVServices (adicionado)
@@ -73,7 +73,7 @@ Esta é uma lista das estruturas fornecidas pela Apple para uso em seus aplicati
 A seguir está uma lista de estruturas que são compatíveis com iOS 9, mas foram removidos do suporte de tvOS 9 pela Apple e, portanto, não pode ser usado em seus aplicativos xamarin. tvos:
 
 * Contas
-* Catálogo de endereços
+* AddressBook
 * AddressBookUI
 * AssetsLibrary
 * Contatos
@@ -82,7 +82,7 @@ A seguir está uma lista de estruturas que são compatíveis com iOS 9, mas fora
 * CoreMIDI
 * CoreMotion
 * CoreTelephony
-* Kit de eventos
+* EventKit
 * EventKitUI
 * Por ExternalAccessory
 * GSS

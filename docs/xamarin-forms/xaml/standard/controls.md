@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/15/2017
 ms.openlocfilehash: b9bf0e1ba14f4e8584bfd8492776ac7c8668df87
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61175172"
 ---
 # <a name="xaml-standard-preview-controls"></a>Controles do XAML Standard (visualização)
 
@@ -41,12 +41,12 @@ Também é uma lista de controles que têm novos nomes de propriedade e de enume
 |Controles do xamarin. Forms com as propriedades atualizadas|Propriedade do xamarin. Forms ou enumeração|Equivalente XAML padrão|
 |--- |--- |--- |
 |Botão, entrada, rótulo, DatePicker, Editor, SearchBar, TimePicker|TextColor|Primeiro plano|
-|VisualElement|BackgroundColor|Plano de fundo *|
+|VisualElement|BackgroundColor|Background *|
 |Seletor de botão|BorderColor, OutlineColor|BorderBrush|
 |Botão|BorderWidth|BorderThickness|
 |ProgressBar|Progresso|Valor|
 |Botão, entrada, rótulo, Editor, SearchBar, Span, fonte|FontAttributesBold, itálico, None|FontStyleItalic, Normal|
-|Botão, entrada, rótulo, Editor, SearchBar, Span, fonte|FontAttributes|FontWeights * negrito, Normal|
+|Botão, entrada, rótulo, Editor, SearchBar, Span, fonte|FontAttributes|FontWeights *Bold, Normal|
 |InputView|KeyboardDefault, Url, número, telefone, texto, bate-papo, envie um Email|InputScopeNameValue * padrão, Url, número, TelephoneNumber, texto, bate-papo, EmailNameOrAddress|
 |StackPanel|StackOrientation|Orientação *|
 

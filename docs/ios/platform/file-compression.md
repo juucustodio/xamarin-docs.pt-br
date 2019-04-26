@@ -8,11 +8,11 @@ author: mandel-macaque
 ms.author: mandel
 ms.date: 03/04/2019
 ms.openlocfilehash: f7a1df65047fd8040dd40e9f7f057d6bfe6dea61
-ms.sourcegitcommit: 4c97f5d73be7eb2da153a85183be4258b6b11ca6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61403025"
 ---
 # <a name="file-compression-in-xamarinios"></a>Compactação de arquivo no xamarin. IOS
 

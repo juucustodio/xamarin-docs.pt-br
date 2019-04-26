@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 9551a3b8e093dbb49a55a3761543602c40e81023
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158332"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Gradiente linear SkiaSharp
 
@@ -27,7 +27,7 @@ O tipo mais básico do gradiente é um _linear_ gradiente. A mistura de cores oc
 Esses métodos retornam um objeto do tipo [ `SKShader` ](xref:SkiaSharp.SKShader) que você definir para o [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) propriedade `SKPaint`. Se o `Shader` propriedade não for nulo, ele substituirá o `Color` propriedade. Qualquer linha que é traçada ou qualquer área preenchida usando este `SKPaint` objeto baseia-se no gradiente em vez da cor sólida.
 
 > [!NOTE]
-> O `Shader` propriedade será ignorada quando você inclui um `SKPaint` do objeto em um `DrawBitmap` chamar. Você pode usar o `Color` propriedade de `SKPaint` para definir um nível de transparência para exibir um bitmap (conforme descrito no artigo [SkiaSharp exibindo bitmaps](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), mas não é possível usar o `Shader` propriedade para exibir um bitmap com um gradiente transparência. Outras técnicas estão disponíveis para exibição de bitmaps com gradiente transparências: elas são descritas nos artigos [gradientes circulares de SkiaSharp](circular-gradients.md#radial-gradients-for-masking) e [modos de composição e o blend SkiaSharp](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
+> O `Shader` propriedade será ignorada quando você inclui um `SKPaint` do objeto em um `DrawBitmap` chamar. Você pode usar o `Color` propriedade de `SKPaint` para definir um nível de transparência para exibir um bitmap (conforme descrito no artigo [SkiaSharp exibindo bitmaps](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), mas não é possível usar o `Shader` propriedade para exibir um bitmap com um gradiente transparência. Outras técnicas estão disponíveis para exibição de bitmaps com transparências gradientes: Elas são descritas nos artigos [gradientes circulares de SkiaSharp](circular-gradients.md#radial-gradients-for-masking) e [modos de composição e o blend SkiaSharp](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
 
 ## <a name="corner-to-corner-gradients"></a>Canto ao outro gradientes
 
@@ -477,7 +477,7 @@ public class GradientAnimationPage : ContentPage
 
 O `OnTimerTick` método calcula um `angle` valor que é animado de 0 a 2π cada 3 segundos. 
 
-Aqui está uma maneira de calcular os dois pontos de gradiente. Uma `SKPoint` valor denominado `vector` é calculada para estender do centro da tela para um ponto em que o raio do círculo. A direção desse vetor baseia-se nos valores de seno e cosseno do ângulo. Os dois pontos de gradiente opostos, em seguida, são calculados: um ponto é calculado subtraindo esse vetor a partir do ponto central, e outro ponto é calculado somando-se do vetor ao ponto central:
+Aqui está uma maneira de calcular os dois pontos de gradiente. Uma `SKPoint` valor denominado `vector` é calculada para estender do centro da tela para um ponto em que o raio do círculo. A direção desse vetor baseia-se nos valores de seno e cosseno do ângulo. Os dois pontos de gradiente opostos, em seguida, são calculados: Um ponto é calculado subtraindo esse vetor a partir do ponto central, e outro ponto é calculado somando-se do vetor ao ponto central:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -617,7 +617,7 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-Os dois pontos de gradiente no `CreateLinearGradient` método baseiam-se em dois pontos que definem esse caminho: os dois pontos forem perto do canto superior esquerdo. A primeira fica na borda superior da tela e o segundo é na borda esquerda da tela. Aqui está o resultado:
+Os dois pontos de gradiente no `CreateLinearGradient` método baseiam-se em dois pontos que definem esse caminho: Os dois pontos estão perto do canto superior esquerdo. A primeira fica na borda superior da tela e o segundo é na borda esquerda da tela. Aqui está o resultado:
 
 [![Gradiente de Rainbow defeituoso](linear-gradient-images/RainbowGradientFaulty.png "Rainbow gradiente com defeito")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 

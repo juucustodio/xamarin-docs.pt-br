@@ -1,5 +1,5 @@
 ---
-title: Usando ativos do Android
+title: Uso de ativos do Android
 ms.prod: xamarin
 ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
 ms.openlocfilehash: 1e9a71de7725c8382e133d85977407bcc859fc58
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013571"
 ---
-# <a name="using-android-assets"></a>Usando ativos do Android
+# <a name="using-android-assets"></a>Uso de ativos do Android
 
 _Ativos_ fornecem uma maneira de incluir arquivos arbitrários como texto, xml, fontes, música e vídeo em seu aplicativo. Se você tentar incluir esses arquivos como "recursos", o Android processá-los em seu sistema de recursos e não será capaz de obter os dados brutos. Se você quiser acessar os dados inalterados, ativos são uma maneira de fazê-lo.
 

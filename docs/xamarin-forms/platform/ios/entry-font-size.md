@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 80142f5eef4b6fdca15709b61c85f09038ddb696
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60952163"
 ---
 # <a name="entry-font-size-on-ios"></a>Tamanho da fonte de entrada no iOS
 

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 1d3bd071eeffb77f94a1b5f35f1df59f2d8c7a8a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61022186"
 ---
 # <a name="xamarinandroid-application-fundamentals"></a>Conceitos básicos de aplicativo do xamarin. Android
 
@@ -77,7 +77,7 @@ Este artigo descreve como manipular as alterações de orientação do dispositi
 
 
 
-##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Áudio Android](~/android/app-fundamentals/android-audio.md)
+##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Android Audio](~/android/app-fundamentals/android-audio.md)
 
 O sistema operacional Android fornece amplo suporte para multimídia, que abrange o áudio e vídeo. Este guia se concentra em áudio no Android e aborda a reprodução e gravação de áudio usando o player de áudio internos e classes de gravador, bem como a API de áudio de nível baixo. Ele também aborda o trabalho com eventos de áudio de difusão por outros aplicativos, para que os desenvolvedores podem criar aplicativos bem comportados.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 0dcda2e4fd1ca7773668a0a6fdf46e01f2f0841d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61366880"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Visão geral de StoreKit e ao recuperar informações do produto no xamarin. IOS
 
@@ -52,7 +52,7 @@ O diagrama a seguir mostra as relações entre as várias classes de StoreKit (c
 
 A maioria das operações no StoreKit exigem um dispositivo real para teste. Recuperando informações do produto (ie. preço &amp; descrição) funcionarão no simulador, mas compra e operações de restauração serão retornado um erro (como o código de FailedTransaction = 5002 Ocorreu um erro desconhecido).
 
-Observação: Não operam StoreKit no iOS Simulator. Ao executar seu aplicativo no simulador de iOS, StoreKit registra um aviso se seu aplicativo tenta recuperar a fila de pagamento. Teste o armazenamento deve ser feito em dispositivos reais.   
+Observação: Não funciona no StoreKit no iOS Simulator. Ao executar seu aplicativo no simulador de iOS, StoreKit registra um aviso se seu aplicativo tenta recuperar a fila de pagamento. Teste o armazenamento deve ser feito em dispositivos reais.   
    
    
    

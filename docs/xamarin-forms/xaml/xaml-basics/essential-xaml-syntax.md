@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61407624"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxe XAML essencial
 
@@ -351,7 +351,7 @@ Você certamente pode incluir a `Content` e `Children` propriedades como element
 </ContentPage>
 ```
 
-A pergunta real é: por que são esses elementos de propriedade *não* necessárias no arquivo XAML?
+A pergunta real é: Por que são esses elementos de propriedade *não* necessárias no arquivo XAML?
 
 Os elementos definidos no xamarin. Forms para uso em XAML podem ter uma propriedade sinalizada no `ContentProperty` atributo na classe. Se você pesquisar o `ContentPage` classe na documentação online do xamarin. Forms, você verá esse atributo:
 

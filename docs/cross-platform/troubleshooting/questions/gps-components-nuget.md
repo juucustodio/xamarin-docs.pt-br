@@ -1,5 +1,5 @@
 ---
-title: Unificar o Google Play Services, componentes e NuGet
+title: Unificar os componentes do Google Play Services e o NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
@@ -7,23 +7,23 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 3f5c5f75ae1c7a44537afa59ff4a15d54b1df50b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61357430"
 ---
-# <a name="unifying-google-play-services-components-and-nuget"></a>Unificar o Google Play Services, componentes e NuGet
+# <a name="unifying-google-play-services-components-and-nuget"></a>Unificar os componentes do Google Play Services e o NuGet
 
 ## <a name="history"></a>Histórico
 
 Costumava ser de vários componentes do Google Play Services e pacotes do NuGet:
 
--   Serviços do Google Play (Froyo)
+-   Google Play Services (Froyo)
 -   Serviços do Google Play (Gingerbread)
--   (ICS) de serviços do Google Play
--   Serviços do Google Play (JellyBean)
--   Serviços do Google Play (KitKat)
+-   Google Play Services (ICS)
+-   Google Play Services (JellyBean)
+-   Google Play Services (KitKat)
 
 . Jar do programa de navios dois do Google, na verdade, somente arquivos do Google Play Services:
 
@@ -56,8 +56,8 @@ Gingerbread não tem fragmento suporte por padrão e, por isso, algumas das clas
 Uma vez que eles não são mais necessários, temos desabilitado/Delisted os seguintes componentes/NuGets:
 
 -   Serviços do Google Play (Gingerbread)
--   Serviços do Google Play (JellyBean)
--   Serviços do Google Play (KitKat)
+-   Google Play Services (JellyBean)
+-   Google Play Services (KitKat)
 
 Existente _Google Play Services ICS ()_ Nuget do componente foi renomeado para _Google Play Services_ e será mantido atualizado no futuro. Todos os projetos de referência a um dos pacotes desabilitado/Delisted devem ser atualizados para usar essa associação.
 

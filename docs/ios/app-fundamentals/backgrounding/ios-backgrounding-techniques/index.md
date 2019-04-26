@@ -1,5 +1,5 @@
 ---
-title: Técnicas de Backgrounding do iOS
+title: Técnicas de operação em segundo plano no iOS
 description: 'Este documento contém links para guias que descrevem várias técnicas de backgrounding no iOS: notificações remotas, serviço de transferência em segundo plano, busca em segundo plano e tarefas em segundo plano.'
 ms.prod: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 00cca0c75cc79858f6edda5d6fb954611d81161b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61169600"
 ---
-# <a name="ios-backgrounding-techniques"></a>Técnicas de Backgrounding do iOS
+# <a name="ios-backgrounding-techniques"></a>Técnicas de operação em segundo plano no iOS
 
 As seções a seguir, vamos explorar os seguintes recursos do iOS junto com as opções de backgrounding existentes:
 

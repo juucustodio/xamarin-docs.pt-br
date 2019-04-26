@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
 ms.openlocfilehash: b5d32f486b45005534adc8929caf6158d1c62a4b
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61357129"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 

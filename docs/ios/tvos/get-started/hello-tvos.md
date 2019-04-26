@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
 ms.openlocfilehash: 8c8bf3f86091f49633913b37ef5108ddbae6d276
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60951379"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Olá, guia de início rápido do tvOS
 
@@ -362,7 +362,7 @@ Quando o botão é clicado, o rótulo deve atualizar com base no número de cliq
     [![](hello-tvos-images/name1.png "Selecione a guia de Widget")](hello-tvos-images/name1.png#lightbox)
 3. Sob **identidade > nome**, adicione `ClickedLabel`:
 
-    [![](hello-tvos-images/name2.png "Definir ClickedLabel")](hello-tvos-images/name2.png#lightbox)
+    [![](hello-tvos-images/name2.png "Set ClickedLabel")](hello-tvos-images/name2.png#lightbox)
 
 Agora estamos prontos para começar a atualizar o rótulo!
 

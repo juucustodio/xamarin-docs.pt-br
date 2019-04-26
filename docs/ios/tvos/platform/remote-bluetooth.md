@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932957"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri remoto e controladores de Bluetooth para tvOS no Xamarin
 
@@ -51,7 +51,7 @@ Siri remoto tem os seguintes recursos e usos esperados dentro de seu aplicativo 
 
 Superfície de toque de Siri Remote é capaz de detectar uma variedade de gestos de dedo que você pode responder a em seu aplicativo tvos:
 
-|Passe o dedo|Clique em|Toque em|
+|Passar o dedo|Clique em|Toque|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |Move a seleção (foco) entre os elementos de interface do usuário na tela (para cima, para baixo à esquerda, com o botão direito). Passar o dedo pode ser usado para percorrer grandes listas de conteúdo rapidamente usando inércia.|Ativa o item selecionado (em foco) ou funciona como o botão principal em um jogo. Clicando e segurando podem ativar funções secundárias ou menus contextuais.|Apenas superficialmente tocando a superfície de toque nas bordas atua como botões direcional em uma direcional, movendo o foco para cima para baixo, esquerda ou direita dependendo da área tocado. Dependendo do aplicativo, pode ser usado para revelar controles ocultos.|

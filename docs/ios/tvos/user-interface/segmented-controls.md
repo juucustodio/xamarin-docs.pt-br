@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 98a770d05014e0498b805ed9ffa0c84314efc765
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61374945"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Trabalhando com controles segmentados de tvOS no Xamarin
 
@@ -42,7 +42,7 @@ Você não pode misturar texto e ícones em um determinado segmento e você deve
 
 A Apple deixa as sugestões a seguir para trabalhar com texto de segmento:
 
-- **Usar curto, substantivos significativo** -título o segmento claramente deve indicar o tipo de conteúdo que o usuário deve esperar ao selecionar um determinado segmento. Por exemplo: música ou vídeos.
+- **Usar curto, substantivos significativo** -título o segmento claramente deve indicar o tipo de conteúdo que o usuário deve esperar ao selecionar um determinado segmento. Por exemplo: Música ou vídeos.
 - **Usar a capitalização de capitalização de título** -todas as palavras do título de segmentos devem estar em letras maiusculas, exceto artigos, associações e preposições de menos de quatro (4) caracteres.
 - **Usar curto, com foco títulos** -manter os títulos curtos e focados no tipo de conteúdo esperado quando o segmento está selecionado.
 

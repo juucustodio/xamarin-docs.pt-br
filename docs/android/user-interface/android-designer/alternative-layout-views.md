@@ -1,5 +1,5 @@
 ---
-title: Modos de exibição de Layout alternativo
+title: Exibições de layout alternativos
 description: Este tópico explica como os layouts podem ser atualizados usando os qualificadores de recursos. Por exemplo, pode haver uma versão de um layout que é usado somente quando o dispositivo estiver no modo paisagem e uma versão de layout que é apenas para o modo retrato.
 ms.prod: xamarin
 ms.assetid: 5EBF51FC-9048-F0CF-624A-D8782A91C1FD
@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 03b80d3fb1ed7c8db108f86b3b3923c20e1d908f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61089627"
 ---
 # <a name="alternative-layout-views"></a>Modos de exibição de layout alternativo
 
@@ -79,7 +79,7 @@ Quando você clica o **padrão** layout para exibi-lo, o `TextView` cadeia de ca
 
 ## <a name="handling-conflicts"></a>Tratamento de conflitos 
 
-Se você optar por alterar a cor do texto na **padrão** layout para verde, você verá um ícone de aviso são exibidos no layout vinculado. Clicar em que o layout é aberto o layout para revelar o conflito. O widget que causou o conflito é realçado com um contorno vermelho e a seguinte mensagem é exibida: *alterações recentes causaram conflitos neste layout alternativo*. 
+Se você optar por alterar a cor do texto na **padrão** layout para verde, você verá um ícone de aviso são exibidos no layout vinculado. Clicar em que o layout é aberto o layout para revelar o conflito. O widget que causou o conflito é realçado com um contorno vermelho e a seguinte mensagem é exibida: *Alterações recentes causaram conflitos neste layout alternativo*. 
 
 [![Alteração conflitante](alternative-layout-views-images/vs/11-conflicting-change-sml.png "alteração conflitante")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
  
@@ -101,7 +101,7 @@ Se um `CheckBox` é adicionado ao **padrão** layout, outro conflito é gerado e
 
 [![Conflito de caixa de seleção](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "conflito de caixa de seleção")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
  
-Clicar a **grande land** layout revela o conflito. A seguinte mensagem é exibida: *alterações recentes causaram conflitos neste layout alternativo*: 
+Clicar a **grande land** layout revela o conflito. A seguinte mensagem é exibida: *Alterações recentes causaram conflitos neste layout alternativo*: 
 
 [![Conflito de layout ALT](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "conflito de layout Alt")](alternative-layout-views-images/vs/14-alt-layout-conflict.png#lightbox)
 
@@ -179,7 +179,7 @@ Quando você clica o **padrão** layout para exibi-lo, o `TextView` cadeia de ca
 
 ## <a name="handling-conflicts"></a>Tratamento de conflitos 
 
-Se você optar por alterar a cor do texto na **padrão** layout para verde, você verá um ícone de aviso são exibidos no layout vinculado. Clicar em que o layout é aberto o layout para revelar o conflito. O widget que causou o conflito é realçado com um contorno vermelho e a seguinte mensagem é exibida: *alterações recentes causaram conflitos neste layout alternativo*. 
+Se você optar por alterar a cor do texto na **padrão** layout para verde, você verá um ícone de aviso são exibidos no layout vinculado. Clicar em que o layout é aberto o layout para revelar o conflito. O widget que causou o conflito é realçado com um contorno vermelho e a seguinte mensagem é exibida: *Alterações recentes causaram conflitos neste layout alternativo*. 
 
 [![Alteração conflitante](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
 
@@ -201,7 +201,7 @@ Se um `CheckBox` é adicionado ao **padrão** layout, outro conflito é gerado e
 
 [![Conflito de caixa de seleção](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
  
-Clicar a **grande land** layout revela o conflito. A seguinte mensagem é exibida: *alterações recentes causaram conflitos neste layout alternativo*. 
+Clicar a **grande land** layout revela o conflito. A seguinte mensagem é exibida: *Alterações recentes causaram conflitos neste layout alternativo*. 
 
 [![Conflito de layout ALT](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
  

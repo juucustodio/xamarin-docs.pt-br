@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
 ms.openlocfilehash: fe909d72f3c6d6733318b5dcbd1858a1a9e28b37
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61164860"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Noções básicas do xamarin. Android Designer
 
@@ -45,7 +45,7 @@ Quando você edita um layout no Designer, você use os recursos a seguir para cr
 
 -   **Painel de fonte** &ndash; fornece uma exibição da fonte XML subjacente que corresponde ao design apresentado na **superfície de Design**.
 
--   **Barra de ferramentas Designer** &ndash; exibe uma lista de seletores: **dispositivo**, **versão**, **tema**, configuração de layout e as configurações da barra de ação. O **barra de ferramentas do Designer** também inclui ícones para iniciar o Editor de tema e para ativar a grade de Design de Material.
+-   **Barra de ferramentas Designer** &ndash; exibe uma lista de seletores: **Dispositivo**, **versão**, **tema**, configuração de layout e as configurações da barra de ação. O **barra de ferramentas do Designer** também inclui ícones para iniciar o Editor de tema e para ativar a grade de Design de Material.
 
 -   **Caixa de ferramentas** &ndash; fornece uma lista de widgets e layouts que você pode arrastar e soltar os **superfície de Design**.
 
@@ -310,7 +310,7 @@ Quando você edita um layout no Designer, você use os recursos a seguir para cr
 
 -   **Superfície de design** &ndash; facilita a construção visual de interface do usuário, fornecendo uma representação editável de como o layout será exibido no dispositivo.
 
--   **Barra de ferramentas** &ndash; exibe uma lista de seletores: **dispositivo**, **versão**, **tema**, configuração de layout e as configurações da barra de ação. A barra de ferramentas também inclui ícones para iniciar o Editor de tema e para ativar a grade de Design de Material.
+-   **Barra de ferramentas** &ndash; exibe uma lista de seletores: **Dispositivo**, **versão**, **tema**, configuração de layout e as configurações da barra de ação. A barra de ferramentas também inclui ícones para iniciar o Editor de tema e para ativar a grade de Design de Material.
 
 -   **Caixa de ferramentas** &ndash; fornece uma lista de widgets e layouts que você pode arrastar e soltar na superfície de Design.
 

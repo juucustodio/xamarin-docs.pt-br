@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58507156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61352064"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>Using UrhoSharp To Build A 3D Game
 
@@ -23,7 +23,7 @@ Antes de escrever seu primeiro jogo, você deseja Familiarize-se com as Noções
 
 O modelo de cena pode ser descrito como um grafo de cena baseadas em componentes. A cena consiste em uma hierarquia de nós da cena, começando a partir do nó raiz, que também representa a cena inteira. Cada [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) tem uma transformação 3D (posição, rotação e escala), um nome, uma ID, além de um número arbitrário de componentes.  Componentes coloque um nó à vida, eles podem tornar a adicionar uma representação visual ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), eles podem emitir um som ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), eles podem fornecer um limite de colisão e assim por diante.
 
-Você pode criar suas cenas e nós de instalação usando o [Urho Editor](#urhoeditor), ou você pode fazer coisas do seu código C#.  Neste documento, exploraremos o uso de código, definindo as configurações conforme elas ilustram os elementos necessários para colocar as coisas sejam exibidos na tela
+Você pode criar suas cenas e nós de instalação usando o [Urho Editor](#urhoeditor), ou você pode fazer coisas do seu código c#.  Neste documento, exploraremos o uso de código, definindo as configurações conforme elas ilustram os elementos necessários para colocar as coisas sejam exibidos na tela
 
 Além de configurar sua cena, é preciso configurar uma [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), isso é o que determina o que será obter mostrado ao usuário.
 
@@ -138,7 +138,7 @@ Nós e os componentes podem ser excluídos da atualização de cena, desabilitá
 
 A melhor maneira de estruturar seu jogo é fazer com que seu próprio componente que encapsulam um ator ou um elemento em seu jogo.  Isso faz com que o recurso autocontido, de que os ativos utilizados para exibi-lo, ao seu comportamento.
 
-A maneira mais simples de Adicionar comportamento a um componente é usar as ações, que são instruções que você pode enfileirar e combinar isso com programação assíncrona em C#.  Isso permite que o comportamento de seu componente possa ser de nível muito alto e torna mais simples de entender o que está acontecendo.
+A maneira mais simples de Adicionar comportamento a um componente é usar as ações, que são instruções que você pode enfileirar e combinar isso com programação assíncrona em c#.  Isso permite que o comportamento de seu componente possa ser de nível muito alto e torna mais simples de entender o que está acontecendo.
 
 Como alternativa, você pode controlar exatamente o que acontece ao seu componente Atualizando propriedades do componente em cada quadro (discutido na seção de comportamento baseado em quadro).
 
@@ -180,7 +180,7 @@ Se você quiser que as duas ações ocorram ao mesmo tempo, pode usar a ação p
 
 No exemplo acima, a nuvem moverá e fade out ao mesmo tempo.
 
-Você observará que eles estão usando a linguagem C# await, que permite que você pense linearmente sobre o comportamento que você deseja atingir.
+Você observará que eles estão usando a linguagem c# await, que permite que você pense linearmente sobre o comportamento que você deseja atingir.
 
 ### <a name="basic-actions"></a>Ações básicas
 
@@ -215,7 +215,7 @@ Há muitos modos de atenuação, o gráfico a seguir mostra os vários tipos de 
 ### <a name="using-actions-and-async-code"></a>Usando as ações e o código assíncrono
 
 No seu [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/) subclasse, você deverá apresentar um método assíncrono que prepara o comportamento do seu componente e a funcionalidade de discos para ele.
-Em seguida, você faria para invocar esse método usando a linguagem C# `await` palavra-chave de outra parte do seu programa qualquer um dos seus `Application.Start` método ou em resposta a um ponto de usuário ou a história em seu aplicativo.
+Em seguida, você faria para invocar esse método usando a linguagem c# `await` palavra-chave de outra parte do seu programa qualquer um dos seus `Application.Start` método ou em resposta a um ponto de usuário ou a história em seu aplicativo.
 
 Por exemplo:
 
@@ -376,7 +376,7 @@ using (var file = new File(Context, prefabPath, FileMode.Read))
 
 ## <a name="events"></a>Eventos
 
-UrhoObjects gerar uma série de eventos, elas são exibidas como C# eventos sobre as várias classes que geram eles.  Além do C#-modelo baseado em evento, também é possível usar um o `SubscribeToXXX` métodos que permitem que você assine e mantenha um token de assinatura que você pode usar posteriormente para cancelar a assinatura.  A diferença é que o primeiro permitirá muitos chamadores inscrever-se, enquanto o segundo é só permite um, mas permite o estilo lambda mais agradável abordagem a ser usada e ainda assim, permite a fácil remoção da assinatura.  Eles são mutuamente exclusivos.
+UrhoObjects gerar uma série de eventos, elas são exibidas como c# eventos sobre as várias classes que geram eles.  Além do c#-modelo baseado em evento, também é possível usar um o `SubscribeToXXX` métodos que permitem que você assine e mantenha um token de assinatura que você pode usar posteriormente para cancelar a assinatura.  A diferença é que o primeiro permitirá muitos chamadores inscrever-se, enquanto o segundo é só permite um, mas permite o estilo lambda mais agradável abordagem a ser usada e ainda assim, permite a fácil remoção da assinatura.  Eles são mutuamente exclusivos.
 
 Quando você assina um evento, você deve fornecer um método que usa um argumento com os argumentos de evento apropriado.
 
@@ -567,7 +567,7 @@ E isso é o que aparece se você usar uma textura em blocos:
 UrhoSharp é uma biblioteca de thread única.  Isso significa que você não deve tentar invocar métodos em UrhoSharp de um thread em segundo plano, ou corromper o estado do aplicativo de risco e provavelmente a falha de seu aplicativo.
 
 Se você quiser executar um código em segundo plano e, em seguida, atualize Urho componentes da interface do usuário principal, você pode usar o [`Application.InvokeOnMain(Action)`](https://developer.xamarin.com/api/member/Urho.Application.InvokeOnMain)
-método.  Além disso, você pode usar C# await e o .NET APIs para garantir que o código é executado no thread adequado de tarefas.
+método.  Além disso, você pode usar c# await e o .NET APIs para garantir que o código é executado no thread adequado de tarefas.
 
 ## <a name="urhoeditor"></a>UrhoEditor
 

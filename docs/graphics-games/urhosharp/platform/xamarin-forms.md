@@ -1,5 +1,5 @@
 ---
-title: Suporte de xamarin. Forms UrhoSharp
+title: UrhoSharp Xamarin.Forms Support
 description: Configuração específica do xamarin. Forms para UrhoSharp.
 ms.prod: xamarin
 ms.assetid: B630B8BE-3D8D-4CDB-BDB0-9709052AA46C
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 1056ddf4fc600bd96665a8dc3f97df7d0d6d214a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386302"
 ---
-# <a name="urhosharp-xamarinforms-support"></a>Suporte de xamarin. Forms UrhoSharp
+# <a name="urhosharp-xamarinforms-support"></a>UrhoSharp Xamarin.Forms Support
 
 UrhoSharp pode ser hospedado em aplicativos xamarin. Forms. O código Urho pode ser gravado em uma PCL e compartilhado entre plataformas.
 

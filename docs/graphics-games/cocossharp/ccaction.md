@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
 ms.openlocfilehash: c486bb2e78579360e0f935219cd82958fedee34b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61357605"
 ---
 # <a name="animating-with-ccaction"></a>Animação com CCAction
 
@@ -147,7 +147,7 @@ Um `In` facilitando a ação afetará a forma como uma variável é aplicada em 
 ![](ccaction-images/image7.gif "CCEaseExponentialIn moverá mais lentamente no início da ação")
 
 
-### <a name="inout"></a>Entrada/saída
+### <a name="inout"></a>InOut
 
 `InOut` geralmente se aplica as alterações mais perceptíveis tanto no início e término. `InOut` a atenuação é geralmente simétrica. Por exemplo, `CCEaseExponentialInOut` moverá lentamente no início e término da ação:
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
 ms.openlocfilehash: 8897736878d0ddee22cdad073cc16deb8ce824e1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61359929"
 ---
 # <a name="webview-mixed-content-on-android"></a>WebView conteúdo no Android misturadas
 
@@ -27,7 +27,7 @@ Este específicos da plataforma Android controla se um [ `WebView` ](xref:Xamari
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

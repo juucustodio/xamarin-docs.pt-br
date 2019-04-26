@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: e0121a9f40135e24663b93bb1db6b6456f2abb3a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60854994"
 ---
 # <a name="page-toolbar-placement-on-windows"></a>Posicionamento da barra de ferramentas da página no Windows
 
@@ -28,7 +28,7 @@ Específico da plataforma essa plataforma Universal do Windows é usado para alt
 </TabbedPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

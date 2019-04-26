@@ -1,5 +1,5 @@
 ---
-title: Atualizar seu aplicativo para iOS 11
+title: Como atualizar seu aplicativo para iOS 11
 description: Este documento leva a vários guias que descrevem os novos recursos disponíveis para desenvolvedores do xamarin. IOS com a versão do iOS 11. Por exemplo, atualizações de design visual, alterações de Store de aplicativo e de atualizações de ícone do aplicativo.
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
 ms.openlocfilehash: 3193f27c30080a4335abfe969acb3c8b33516469
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386333"
 ---
-# <a name="updating-your-app-to-ios-11"></a>Atualizar seu aplicativo para iOS 11
+# <a name="updating-your-app-to-ios-11"></a>Como atualizar seu aplicativo para iOS 11
 
 No iOS 11, a Apple introduziu as atualizações de arquitetura, novas alterações visual e um processo de conectar-se atualizado do iTunes. Este guia explora a cada uma dessas alterações, ajudando você a obter o aplicativo xamarin. IOS atualizado para o iOS 11.
 

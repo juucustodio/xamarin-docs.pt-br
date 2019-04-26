@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61429964"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboards unificadas no xamarin. IOS
 
@@ -625,7 +625,7 @@ Consulte a seção de classe de tamanho deste artigo para obter mais informaçõ
 
 ### <a name="adaptive-segue-types"></a>Tipos de Segue adaptável
 
-Se o desenvolvedor usou storyboards antes, eles estarão familiarizados com os tipos de segue existente de **enviar por Push**, **Modal** e **pop-over**. Quando as Classes de tamanho estão habilitadas em um arquivo de Storyboard Unificação, os seguintes adaptável Segue tipos (que correspondem à nova API de controlador de exibição discutida acima) são disponibilizados: **mostram** e **Mostrar detalhe** .
+Se o desenvolvedor usou storyboards antes, eles estarão familiarizados com os tipos de segue existente de **enviar por Push**, **Modal** e **pop-over**. Quando as Classes de tamanho estão habilitadas em um arquivo de Storyboard Unificação, os seguintes adaptável Segue tipos (que correspondem à nova API de controlador de exibição discutida acima) são disponibilizados: **Mostrar** e **Mostrar detalhes**.
 
 > [!IMPORTANT]
 > Quando as Classes de tamanho estão habilitadas, todos os existentes segues irá ser convertida para os novos tipos.

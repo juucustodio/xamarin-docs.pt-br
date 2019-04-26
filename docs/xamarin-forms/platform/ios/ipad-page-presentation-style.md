@@ -1,5 +1,5 @@
 ---
-title: Estilo de apresentação de página Modal do iPad
+title: Estilo de apresentação da página modal do iPad
 description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar os conjuntos de específico da plataforma iOS o estilo de apresentação de uma página modal em um iPad.
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: b99898301ed6469b6e0d62ae0077b96aa9c4f3eb
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896905"
 ---
-# <a name="ipad-modal-page-presentation-style"></a>Estilo de apresentação de página Modal do iPad
+# <a name="ipad-modal-page-presentation-style"></a>Estilo de apresentação da página modal do iPad
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
@@ -28,7 +28,7 @@ Este específicos da plataforma iOS é usado para definir o estilo de apresenta�
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

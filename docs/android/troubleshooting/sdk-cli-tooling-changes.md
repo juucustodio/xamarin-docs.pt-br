@@ -9,11 +9,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
 ms.openlocfilehash: dbd3287e7c646be7fd969699eab685906a1c6c1a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093928"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Alterações nas Ferramentas do SDK do Android
 

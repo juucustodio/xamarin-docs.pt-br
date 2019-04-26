@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
 ms.openlocfilehash: f72aaa781b0712e206cf02725cfc434594287f41
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61365783"
 ---
 # <a name="request-app-review-in-xamarinios"></a>Solicitação de revisão de aplicativo no xamarin. IOS
 

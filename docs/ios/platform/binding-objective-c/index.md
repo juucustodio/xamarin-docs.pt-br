@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: e599d4f99877e24e06de2c26ed2cafe48526f6f5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61346834"
 ---
 # <a name="binding-ios-libraries"></a>Associação de bibliotecas do iOS
 
@@ -47,6 +47,6 @@ Objetivo Sharpie será usado para auxiliar no processo de associação.
 ## <a name="related-links"></a>Links relacionados
 
 - [Associação do Objective-C](~/cross-platform/macios/binding/index.md)
-- [Associação de Mac](~/mac/platform/binding.md)
-- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Mac Binding](~/mac/platform/binding.md)
+- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

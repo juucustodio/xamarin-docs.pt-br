@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: ea03c8b382e2de29bd20ab1d696d7abb7733e182
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61369218"
 ---
 # <a name="eventkit-in-xamarinios"></a>Kit de eventos no xamarin. IOS
 

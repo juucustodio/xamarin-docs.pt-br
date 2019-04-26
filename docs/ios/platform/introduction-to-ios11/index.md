@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
 ms.openlocfilehash: 5e75a7872081d82c289db0312bbc7d84bce77b4e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170914"
 ---
 # <a name="introduction-to-ios-11"></a>Introdução ao iOS 11
 

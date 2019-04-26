@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
 ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61160523"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Profiler de Xamarin de solução de problemas
 
@@ -56,7 +56,7 @@ O **.mlpd** de uma sessão atual também pode ser salvos, escolhendo **arquivo >
 A lista a seguir mostra as armadilhas comuns, soluções alternativas e dicas e truques para usar o Profiler.
 
 > [!NOTE]
-> **Observação**: você precisa ser um Visual Studio **Enterprise** assinante para desbloquear esse recurso em qualquer Visual Studio Enterprise no Windows ou o Visual Studio para Mac.
+> **OBSERVAÇÃO**: Você precisa ser um Visual Studio **Enterprise** assinante para desbloquear esse recurso em qualquer Visual Studio Enterprise no Windows ou o Visual Studio para Mac.
 
 #### <a name="i-cant-see-the-ios-profiler-option-or-it-is-greyed-out-visual-studio-and-visual-studio-for-mac"></a>Não consigo ver a opção de criador de perfil do iOS ou ela fica acinzentada [Visual Studio e o Visual Studio para Mac]
 

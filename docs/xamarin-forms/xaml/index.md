@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
 ms.openlocfilehash: 1f6bdfb1aed87f8a2dabdc0efcea3a1b8bf2ecf2
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59019341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075262"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Linguagem de marcação de aplicativo extensível (XAML)
 

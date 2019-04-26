@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 06aa6569301d1bfdbf9f6fd1e7397a38a9beb6f6
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157187"
 ---
 # <a name="general-frequently-asked-questions"></a>Perguntas frequentes sobre o geral
 
@@ -23,7 +23,7 @@ Este guia lista os recursos e métodos para determinar se sua biblioteca existen
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[API de reflexão de PCL](pcl-reflection.md)
 A Microsoft desenvolveu uma nova API de reflexão para uso em bibliotecas de classes portáteis. Se você tiver um código de reflexão existente que você deseja mover para uma PCL, podem não funcionar.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Estudo de caso de PCL: como posso resolver problemas relacionados a System.Diagnostics.Tracing para o pacote NuGet de Fluxo de Dados de TPL da Microsoft?](pcl-case-study.md)
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Estudo de caso PCL: Como resolver problemas relacionados à Tracing para o pacote NuGet de fluxo de dados TPL da Microsoft?](pcl-case-study.md)
 Xamarin. IOS e xamarin. Android não implementam 100% de cada perfil PCL que permitem a eles como referências. Para conveniência prática no Visual Studio para Mac, o Visual Studio e o Gerenciador de pacotes do NuGet, projetos Xamarin permitem o uso de vários perfis que só têm implementações incompletas. Por exemplo, nem o xamarin. IOS nem o xamarin. Android no momento, inclui uma implementação completa dos tipos no `System.Diagnostics.Tracing` namespace PCL. Você pode contornar isso, alternando o projeto de aplicativo para referenciar o portátil TargetFramework="net45 win8 + wp8 + wpa81 versão da biblioteca de fluxo de dados TPL.
 
 ## <a name="nuget-packages--xamarin-components"></a>Pacotes do NuGet e componentes do Xamarin

@@ -1,5 +1,5 @@
 ---
-title: Onde os componentes são armazenados no meu computador?
+title: Onde meus componentes são armazenados no meu computador?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5EBB49EE-39E5-428B-866F-9FC1BB215B31
@@ -7,13 +7,13 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 4152c8ef7eeba3748d9244e27e48f3f9a2c0019b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61359087"
 ---
-# <a name="where-are-the-components-stored-on-my-machine"></a>Onde os componentes são armazenados no meu computador?
+# <a name="where-are-the-components-stored-on-my-machine"></a>Onde meus componentes são armazenados no meu computador?
 
 Sempre que você instala um componente do Xamarin em um projeto de aplicativo, ele obtém colocado em dois locais:
 

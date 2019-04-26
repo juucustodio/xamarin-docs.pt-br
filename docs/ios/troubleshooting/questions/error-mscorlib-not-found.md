@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: 84bb6815c19bcacb4a9d1bddc44d340d51199c32
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421977"
 ---
 # <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Erro de tempo de execução: O assembly mscorlib. dll não foi encontrado ou não pôde ser carregado
 

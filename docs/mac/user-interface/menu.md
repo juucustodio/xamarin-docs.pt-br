@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 0a14e3e3eb58b264d1909b6576bbbc4f7e8f4068
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61166212"
 ---
 # <a name="menus-in-xamarinmac"></a>Menus no xamarin. Mac
 
@@ -1011,7 +1011,7 @@ Vamos criar um menu de encaixe personalizado para nosso aplicativo fazendo o seg
 1. No Visual Studio para Mac, clique com botão direito no projeto do aplicativo e selecione **Add** > **novo arquivo...** Na caixa de diálogo Novo arquivo, selecione **xamarin. Mac** > **definição de Interface vazia**, use "DockMenu" para o **nome** e clique no **novo**  botão para criar o novo **DockMenu.xib** arquivo:
 
     ![Adicionando uma definição de interface vazia](menu-images/dock02.png "adicionando uma definição de interface vazia")
-2. No **painel de soluções**, clique duas vezes o **DockMenu.xib** arquivo para abri-lo para edição no Xcode. Criar um novo **menus** com os seguintes itens: **endereço**, **data**, **saudação**, e **assinatura** 
+2. No **painel de soluções**, clique duas vezes o **DockMenu.xib** arquivo para abri-lo para edição no Xcode. Criar um novo **Menu** com os seguintes itens: **Endereço**, **data**, **saudação**, e **assinatura** 
 
     [![Dispor a interface do usuário](menu-images/dock03.png "dispor a interface do usuário")](menu-images/dock03-large.png#lightbox)
 3. Em seguida, vamos nos conectar nossos novos itens de menu a nossas ações existentes que criamos para nosso menu personalizado na [adicionando, editando e excluindo Menus](#Adding,_Editing_and_Deleting_Menus) seção acima. Alterne para o **Inspetor de Conexão** e selecione o **Respondente primeiro** no **hierarquia de Interface**. Role para baixo e localize o `phraseAddress:` ação. Arraste uma linha do círculo em que a ação de **endereço** item de menu:
@@ -1051,7 +1051,7 @@ Vamos criar um botão personalizado pop-up para nosso aplicativo fazendo o segui
 1. Editar o **Main. Storyboard** arquivo no Xcode e arraste uma **botão pop-up** do **Inspetor de biblioteca** até o **painel** janela que criamos na o [Menus contextuais](#Contextual_Menus) seção: 
 
     [![Adicionando um botão de pop-up](menu-images/popup01.png "adicionando um botão de pop-up")](menu-images/popup01-large.png#lightbox)
-2. Adicionar um novo item de menu e definir os títulos dos itens no pop-up para: **endereço**, **data**, **saudação**, e **assinatura** 
+2. Adicionar um novo item de menu e defina os títulos dos itens no pop-up para: **Endereço**, **data**, **saudação**, e **assinatura** 
 
     [![Configurando os itens de menu](menu-images/popup02.png "Configurando os itens de menu")](menu-images/popup02-large.png#lightbox)
 3. Em seguida, vamos nos conectar nossos novos itens de menu para as ações existentes que criamos para nosso menu personalizado na [adicionando, editando e excluindo Menus](#Adding,_Editing_and_Deleting_Menus) seção acima. Alterne para o **Inspetor de Conexão** e selecione o **Respondente primeiro** no **hierarquia de Interface**. Role para baixo e localize o `phraseAddress:` ação. Arraste uma linha do círculo em que a ação de **endereço** item de menu: 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 979b103db478e3888d3a3c20df6afbd91d0c37d8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386509"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugestões proativas no Xamarin do watchOS
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: cd5e7299874bbfb1b652315a549b9d067d58e9a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60881240"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabela no Xamarin do watchOS
 
@@ -160,7 +160,7 @@ Como [explicado pela Apple](https://developer.apple.com/reference/watchkit/wkint
 
 <a name="add_row_controller" />
 
-## <a name="appendix-row-controller-code-example"></a>Apêndice: Exemplo de código de controlador de linha
+## <a name="appendix-row-controller-code-example"></a>Apêndice: Exemplo de código do controlador de linha
 
 O IDE criará dois arquivos de código automaticamente quando um controlador de linha é criado no designer. O código nesses arquivos gerado é mostrado abaixo para referência.
 

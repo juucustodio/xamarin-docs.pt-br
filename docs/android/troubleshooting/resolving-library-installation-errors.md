@@ -1,5 +1,5 @@
 ---
-title: Resolvendo erros de instalação da biblioteca
+title: Resolver Erros de Instalação da Biblioteca
 description: Em alguns casos, você poderá receber erros ao instalar as bibliotecas de suporte do Android. Este guia fornece soluções alternativas para alguns erros comuns.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -9,13 +9,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2018
 ms.openlocfilehash: 2ef81cfda92a6497e69f27b0584a97996094b1a4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093258"
 ---
-# <a name="resolving-library-installation-errors"></a>Resolvendo erros de instalação da biblioteca
+# <a name="resolving-library-installation-errors"></a>Resolver Erros de Instalação da Biblioteca
 
 _Em alguns casos, você poderá receber erros ao instalar as bibliotecas de suporte do Android. Este guia fornece soluções alternativas para alguns erros comuns._
 

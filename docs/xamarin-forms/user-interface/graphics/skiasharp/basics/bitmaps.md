@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: e1e21fe121fba30755efbabe302ed0f22149e7e0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157376"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Noções básicas de bitmap no SkiaSharp
 
@@ -104,7 +104,7 @@ Estático `SKBitmap.Decode` método é responsável pela decodificação de arqu
 
 Em termos de código, a abordagem mais fácil para carregar os bitmaps está incluindo um recurso de bitmap diretamente em seu aplicativo. O **SkiaSharpFormsDemos** programa inclui uma pasta chamada **mídia** que contém vários arquivos, incluindo um denominado de bitmap **monkey.png**. Para bitmaps armazenados como recursos do programa, você deve usar o **propriedades** caixa de diálogo dê ao arquivo um **Build Action** dos **Embedded Resource**!
 
-Cada recurso inserido tem um *ID do recurso* que consiste no nome do projeto, a pasta e o nome do arquivo, tudo conectado por períodos: **SkiaSharpFormsDemos.Media.monkey.png**. Você pode obter acesso a esse recurso com a especificação desse recurso ID como um argumento para o [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método da [ `Assembly` ](xref:System.Reflection.Assembly) classe:
+Cada recurso inserido tem um *ID do recurso* que consiste no nome do projeto, a pasta e o nome do arquivo, tudo conectado por pontos: **SkiaSharpFormsDemos.Media.monkey.png**. Você pode obter acesso a esse recurso com a especificação desse recurso ID como um argumento para o [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método da [ `Assembly` ](xref:System.Reflection.Assembly) classe:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";

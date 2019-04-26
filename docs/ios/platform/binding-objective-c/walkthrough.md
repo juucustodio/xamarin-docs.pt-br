@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Associação de um biblioteca Objective-C do iOS'
+title: 'Passo a passo: Como associar uma biblioteca Objective-C do iOS'
 description: Este artigo fornece uma passo a passo prático de criação de uma associação xamarin. IOS para uma biblioteca Objective-C existente, InfColorPicker. Ele aborda tópicos como compilar uma biblioteca estática do Objective-C, associá-la e usando a associação em um aplicativo xamarin. IOS.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61391624"
 ---
-# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Passo a passo: Associação de um biblioteca Objective-C do iOS
+# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Passo a passo: Como associar uma biblioteca Objective-C do iOS
 
 _Este artigo fornece uma passo a passo prático de criação de uma associação xamarin. IOS para uma biblioteca Objective-C existente, InfColorPicker. Ele aborda tópicos como compilar uma biblioteca estática do Objective-C, associá-la e usando a associação em um aplicativo xamarin. IOS._
 

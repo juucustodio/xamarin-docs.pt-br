@@ -1,5 +1,5 @@
 ---
-title: System. Exception AMDeviceNotificationSubscribe retornou...
+title: System.Exception AMDeviceNotificationSubscribe retornou ...
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7E4ACC7E-F4FB-46C1-8837-C7FBAAFB2DC7
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 4fb0712366422e8810a2db60d40c3b85d9f4cd82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421938"
 ---
-# <a name="systemexception-amdevicenotificationsubscribe-returned-"></a>System. Exception AMDeviceNotificationSubscribe retornou...
+# <a name="systemexception-amdevicenotificationsubscribe-returned-"></a>System.Exception AMDeviceNotificationSubscribe retornou ...
 
 > [!IMPORTANT]
 > Esse problema foi resolvido em versões recentes do Xamarin. No entanto, se o problema ocorre na versão mais recente do software, envie uma [novo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) com o controle de versão completo completo e informações saída de log de compilação.
@@ -30,7 +30,7 @@ ms.locfileid: "50119248"
 
 2.  Se isso não resolver o problema, reinicialize o Mac.
 
-## <a name="error-message"></a>mensagem de erro
+## <a name="error-message"></a>Mensagem de erro
 
 ```csharp
 Exception: Exception type: System.Exception
@@ -63,4 +63,4 @@ Com base nos erros a partir `system.log` parece que esse problema pode estar rel
 
 ## <a name="references"></a>Referências
 
-*   [Bug 11789 - MonoTouch.MobileDevice.MobileDeviceException: Retornado AMDeviceNotificationSubscribe: 0xe8000063 [RESOLVIDO SEM_RESPOSTA]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)
+*   [Bug 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe retornou: 0xe8000063 [RESOLVED NORESPONSE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)

@@ -1,5 +1,5 @@
 ---
-title: Por que minha compilação de versão do Android não pode se conectar à Internet?
+title: Por que meu build de versão do Android não pode se conectar à Internet?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A6FE770B-A19A-4BF8-95E9-2CF880D4AFC5
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
 ms.openlocfilehash: cd27d5c884086cd0fade4364851039fd0cd915a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945455"
 ---
-# <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Por que minha compilação de versão do Android não pode se conectar à Internet?
+# <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Por que meu build de versão do Android não pode se conectar à Internet?
 
 ## <a name="cause"></a>Causa
 
@@ -25,9 +25,9 @@ A causa mais comum desse problema é que o **INTERNET** permissão é incluída 
 
 Para resolver o problema, você pode exigir a permissão de Internet no manifesto do Android. Isso pode ser feito por meio do editor de manifesto ou sourcecode do manifesto:
 
--   Corrigir no Editor: no seu projeto Android, acesse **Propriedades -> androidmanifest. XML -> permissões necessárias** e verifique **Internet**
+-   Corrigi no Editor: No seu projeto Android, acesse **Propriedades -> androidmanifest. XML -> permissões necessárias** e verifique **Internet**
 
--   Corrigir em Sourcecode: Abra o AndroidManifest em um editor de código-fonte e adicione a marca de permissão dentro de `<Manifest>` marcas:
+-   Corrigi em Sourcecode: Abra o AndroidManifest em um editor de código-fonte e adicione a marca de permissão dentro de `<Manifest>` marcas:
 
     ```xml
     <Manifest>

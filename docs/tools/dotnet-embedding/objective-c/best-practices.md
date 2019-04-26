@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 33138b7858b8bc04a5be30f9fad1709e916f5575
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61364025"
 ---
 # <a name="net-embedding-best-practices-for-objective-c"></a>.NET incorporação práticas recomendadas para Objective-C
 
@@ -29,7 +29,7 @@ Ele pode ser uma boa ideia criar um assembly diferente, menor, para expor soment
 
 Há um preço a pagar para fazer a transição de nativo para gerenciado (e voltar). Como tal, é melhor expor _robusto, em vez de com ruídos_ APIs para desenvolvedores nativos, por exemplo,
 
-**Com ruídos**
+**Chatty**
 
 ```csharp
 public class Person {

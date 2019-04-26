@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
 ms.openlocfilehash: e6e3a989db922dc2941cca4c888c862ffe159241
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61422046"
 ---
 # <a name="xamarinios-errors"></a>Erros do xamarin. IOS
 
@@ -2770,19 +2770,19 @@ Em que * pode ser:
 
 <a name="MT7050" />
 
-### <a name="mt7050-delete-cant-delete-entry--from-parent"></a>MT7050: Exclua: Não é possível excluir a entrada, *, do pai.
+### <a name="mt7050-delete-cant-delete-entry--from-parent"></a>MT7050: Excluir: Não é possível excluir a entrada, *, do pai.
 
 *Tarefa do MSBuild: PropertyListEditorTaskBase*
 
 <a name="MT7051" />
 
-### <a name="mt7051-delete-entry--contains-invalid-array-index"></a>MT7051: Exclua: Entrada, *, contém o índice de matriz inválido.
+### <a name="mt7051-delete-entry--contains-invalid-array-index"></a>MT7051: Excluir: Entrada, *, contém o índice de matriz inválido.
 
 *Tarefa do MSBuild: PropertyListEditorTaskBase*
 
 <a name="MT7052" />
 
-### <a name="mt7052-delete-entry--does-not-exist"></a>MT7052: Exclua: Entrada, *, não existe.
+### <a name="mt7052-delete-entry--does-not-exist"></a>MT7052: Excluir: Entrada, *, não existe.
 
 *Tarefa do MSBuild: PropertyListEditorTaskBase*
 

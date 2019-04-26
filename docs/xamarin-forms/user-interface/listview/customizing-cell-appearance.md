@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
 ms.openlocfilehash: 1e57764dacf7ae0599df46f13bd4f5505c4cc4a2
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61370659"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personalizando a aparência de célula do ListView
 

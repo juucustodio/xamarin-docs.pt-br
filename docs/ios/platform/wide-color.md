@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: f139bcceda12752e43a3a8330fa0a0e038e539f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61423509"
 ---
 # <a name="wide-color-in-xamarinios"></a>Cores amplas no xamarin. IOS
 
@@ -130,7 +130,7 @@ Para dar suporte a cores de largura e a ampla gama de dentro do iOS 10 e macOS S
 
 - UIKit (para iOS)
 - SceneKit
-- Elementos gráficos principais
+- Gráficos principais
 - ImageIO
 - Imagem principal
 - WebKit
@@ -385,7 +385,7 @@ Como o iOS 10 com o `UIGraphicsImageRenderer` classe mostrada acima, de maneira 
 Se o aplicativo precisa saber como o processamento está sendo feito em um `UIView` ou `UIViewController`, ele pode verificar o novo `DisplayGamut` propriedade o `UITraitCollection` classe. Esse valor será uma `UIDisplayGamut` enum das seguintes opções:
 
 - P3
-- SRGB
+- Srgb
 - Não especificado
 
 Se o aplicativo deseja controle qual espaço de cores é usado para desenhar uma imagem, pode usar um novo `ContentsFormat` propriedade do `CALayer` para especificar o espaço de cor desejado. Esse valor pode ser um `CAContentsFormat` enum das seguintes opções:

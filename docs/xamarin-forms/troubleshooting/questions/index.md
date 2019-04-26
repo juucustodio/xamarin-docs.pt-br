@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
 ms.openlocfilehash: 24e2ae456e478585f30aa704917f66bb0bf11da9
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57981634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61247783"
 ---
 # <a name="xamarinforms-frequently-asked-questions"></a>Perguntas frequentes sobre o xamarin. Forms
 

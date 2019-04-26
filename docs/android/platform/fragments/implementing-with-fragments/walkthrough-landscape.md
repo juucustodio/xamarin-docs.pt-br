@@ -1,5 +1,5 @@
 ---
-title: Parte 2 – passo a passo – fragmentos
+title: Passo a passo de fragmentos – Parte 2
 ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: 444A894D-5197-4726-934F-79BA80A71CB0
@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
 ms.openlocfilehash: 7ec8ad6ce428107d2255dd07c7e69c9e77780c09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61026211"
 ---
 # <a name="fragments-walkthrough-ndash-landscape"></a>Instruções passo a passo – fragmentos &ndash; paisagem
 

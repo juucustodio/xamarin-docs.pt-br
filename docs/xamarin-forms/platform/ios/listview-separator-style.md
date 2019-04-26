@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 0fc8cdfac22ad54b73af193ce76e8fd27b8fb0da
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60948981"
 ---
 # <a name="listview-separator-style-on-ios"></a>Estilo do separador de ListView no iOS
 

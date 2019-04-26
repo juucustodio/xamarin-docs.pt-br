@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
 ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61076651"
 ---
 # <a name="resource-dictionaries"></a>Dicionários de recursos
 
@@ -149,7 +149,7 @@ O original `PageBackgroundColor` e `NormalTextColor` instâncias, definidas no n
 
 No entanto, observe que a barra de plano de fundo do [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) ainda está amarela, porque o [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) propriedade é definida como o valor da `PageBackgroundColor` recursos definidos no aplicativo nível de `ResourceDictionary`.
 
-Aqui está outra maneira de pensar `ResourceDictionary` precedência: analisador de XAML a quando encontra um `StaticResource`, ele procura por uma chave correspondente, percorrendo-se através da árvore visual, usando a primeira correspondência que ele encontra. Se essa pesquisa termina na página e a chave ainda não foi encontrada, o analisador XAML pesquisará o `ResourceDictionary` anexado ao `App` objeto. Se a chave ainda não for encontrada, uma exceção é gerada.
+Aqui está outra maneira de pensar sobre `ResourceDictionary` precedência: Quando o analisador XAML encontra um `StaticResource`, ele procura por uma chave correspondente, percorrendo-se através da árvore visual, usando a primeira correspondência que ele encontra. Se essa pesquisa termina na página e a chave ainda não foi encontrada, o analisador XAML pesquisará o `ResourceDictionary` anexado ao `App` objeto. Se a chave ainda não for encontrada, uma exceção é gerada.
 
 ## <a name="stand-alone-resource-dictionaries"></a>Dicionários de recurso autônomo
 

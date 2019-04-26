@@ -1,5 +1,5 @@
 ---
-title: Serviços de primeiro plano
+title: Serviços em primeiro plano
 ms.prod: xamarin
 ms.assetid: C10FD999-7A91-4708-B642-0C1B0901BD24
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
 ms.openlocfilehash: df917896f901060a5518076afa859d34a03f4d6d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61012262"
 ---
-# <a name="foreground-services"></a>Serviços de primeiro plano
+# <a name="foreground-services"></a>Serviços em primeiro plano
 
 Um serviço de primeiro plano é um tipo especial de um serviço vinculado ou um serviço iniciado. Ocasionalmente, esses serviços serviços irá executar as tarefas que os usuários devem estar atento ativamente, são conhecidos como _serviços em primeiro plano_. Um exemplo de um serviço de primeiro plano é um aplicativo que está fornecendo o usuário com direções ao dirigir ou andar. Mesmo se o aplicativo está em segundo plano, ele ainda é importante que o serviço tem recursos suficientes para funcionar corretamente e se o usuário tem uma maneira rápida e útil para acessar o aplicativo. Para um aplicativo Android, isso significa que um serviço de primeiro plano deve receber uma prioridade maior que um serviço "normal" e um serviço de primeiro plano deve fornecer um `Notification` que Android exibirá desde que o serviço está em execução.
  
@@ -105,4 +105,4 @@ Se o serviço é interrompido com uma chamada para `StopSelf` ou `StopService`, 
 - [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
 - [Android.App.Service.StartForeground](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)
 - [Notificações locais](~/android/app-fundamentals/notifications/local-notifications.md)
-- [ForegroundServiceDemo (amostra)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)
+- [ForegroundServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)

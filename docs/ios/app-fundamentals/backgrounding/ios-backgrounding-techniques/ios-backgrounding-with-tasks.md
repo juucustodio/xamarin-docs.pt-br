@@ -1,5 +1,5 @@
 ---
-title: iOS Backgrounding com tarefas
+title: Operação em segundo plano no iOS com tarefas
 description: Este documento descreve como usar tarefas em segundo plano para executar tarefas de longa execução depois que um aplicativo é colocado em segundo plano.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170648"
 ---
-# <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding com tarefas
+# <a name="ios-backgrounding-with-tasks"></a>Operação em segundo plano no iOS com tarefas
 
 A maneira mais simples de executar backgrounding no iOS é dividir seus requisitos de backgrounding em tarefas e executar as tarefas em segundo plano. Tarefas estão em um limite estrito do tempo e obtém normalmente cerca de 600 segundos (10 minutos) de tempo de processamento depois que um aplicativo foi movida para o plano de fundo no iOS 6 e menos de 10 minutos no iOS 7 +.
 

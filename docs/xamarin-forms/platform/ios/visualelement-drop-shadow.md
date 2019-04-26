@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 1019ecb6f5311d34a38cb0d330b25fc1e25b5c41
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085854"
 ---
 # <a name="visualelement-drop-shadows-on-ios"></a>VisualElement Drop sombras no iOS
 
@@ -43,7 +43,7 @@ Este específicos da plataforma iOS é usado para habilitar uma sombra em um [ `
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

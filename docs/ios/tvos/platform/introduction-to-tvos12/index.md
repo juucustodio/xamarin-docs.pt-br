@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
 ms.openlocfilehash: f7fb8cc379a070b848c5154c9c1d4fbfc8186266
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932530"
 ---
 # <a name="introduction-to-tvos-12"></a>Introdução ao tvOS 12
 

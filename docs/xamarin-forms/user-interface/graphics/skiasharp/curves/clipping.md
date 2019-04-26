@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
 ms.openlocfilehash: 4f8b6b7ea0db8d46886c3391f1aef3ba20a5be44
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085892"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte com caminhos de regiões
 
@@ -24,7 +24,7 @@ _Use caminhos para gráficos de clipe para áreas específicas e para criar regi
 
 ![](clipping-images/clippingsample.png "Monkey por meio de um buraco de fechadura")
 
-O *área de recorte* é a área da tela na qual os gráficos são renderizados. Tudo o que é exibido fora da área de recorte não é renderizado. A área de recorte normalmente é definida por um retângulo ou um [ `SKPath` ](xref:SkiaSharp.SKPath) objeto, mas você também pode definir uma área de recorte usando um [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto. Esses dois tipos de objetos no parecem a princípio relacionados porque você pode criar uma região de um caminho. No entanto, não é possível criar um caminho de uma região, e eles são muito diferentes internamente: um caminho consiste em uma série de linhas e curvas, enquanto uma região é definida por uma série de linhas de varredura horizontal.
+O *área de recorte* é a área da tela na qual os gráficos são renderizados. Tudo o que é exibido fora da área de recorte não é renderizado. A área de recorte normalmente é definida por um retângulo ou um [ `SKPath` ](xref:SkiaSharp.SKPath) objeto, mas você também pode definir uma área de recorte usando um [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto. Esses dois tipos de objetos no parecem a princípio relacionados porque você pode criar uma região de um caminho. No entanto, não é possível criar um caminho de uma região, e eles são muito diferentes internamente: Um caminho consiste em uma série de linhas e curvas, enquanto uma região é definida por uma série de linhas de varredura horizontal.
 
 A imagem acima foi criada pela **Monkey por meio de buraco de fechadura** página. O [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) classe define um caminho usando dados SVG e usa o construtor para carregar um bitmap de recursos do programa:
 
@@ -366,7 +366,7 @@ Para entender a lógica para essa diferença, é útil entender é que uma regi�
 
 Esse trabalho é simplificado consideravelmente se cada caminho é reduzido a uma série de linhas de varredura horizontal, como aqueles no antiga câmara de vácuo TVs. Cada linha de verificação é simplesmente uma linha horizontal com um ponto inicial e um ponto de extremidade. Por exemplo, um círculo com um raio de 10 pixels pode ser decomposto em 20 linhas de varredura horizontal, cada um deles inicia na parte esquerda do círculo e termina na parte direita. Combinar dois círculos com qualquer operação de região se torna muito simple, porque ele é simplesmente uma questão de examinar as coordenadas de início e término de cada par correspondente de linhas de varredura.
 
-Isso é o que é uma região: uma série de linhas de varredura horizontal que definem uma área.
+Isso é o que é uma região: Uma série de linhas de varredura horizontal que definem uma área.
 
 No entanto, quando uma área é reduzida a uma série de verificação de linhas, essas linhas são baseadas em uma dimensão de pixel específico de verificação. Estritamente falando, a região não é um objeto de gráfico vetorial. É mais semelhante a um bitmap monocromático compactado que para um caminho. Consequentemente, regiões não podem ser dimensionadas ou giradas sem perder a fidelidade e por esse motivo que não são transformadas quando usado para áreas de recorte.
 

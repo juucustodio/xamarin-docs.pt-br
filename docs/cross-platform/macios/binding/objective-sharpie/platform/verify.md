@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
 ms.openlocfilehash: 4bca896afb4dfc96fd6c1d7cdf489feb6a879e31
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261214"
 ---
 # <a name="objective-sharpie-verify-attributes"></a>Objetivo Sharpie verificar atributos
 
@@ -22,7 +22,7 @@ Verificação é recomendada para _todos os_ associado declarações, mas é mai
 Uma vez que você verificou que a associação é corrigir ou corrigiram-o para correto, _remova_ o `[Verify]` atributo da associação.
 
 > [!IMPORTANT]
-> `[Verify]` atributos intencionalmente causam erros de compilação do c# para que você é forçado para verificar a associação. Você deve remover o `[Verify]` quando você tiver revisado (e possivelmente corrigido) o código do atributo.
+> `[Verify]` atributos causam intencionalmente C# erros de compilação para que você é forçado para verificar a associação. Você deve remover o `[Verify]` quando você tiver revisado (e possivelmente corrigido) o código do atributo.
 
 ## <a name="verify-hints-reference"></a>Verificar a referência de dicas
 
@@ -32,7 +32,7 @@ O argumento de dica fornecido para o atributo pode ser cruzado referenciada com 
 |---|---|
 |InferredFromPreceedingTypedef|O nome dessa declaração foi inferido pela convenção comum dos imediatamente anterior `typedef` no código nativo de origem original. Verifique se o nome deduzido está correto, como essa convenção é ambígua.|
 |ConstantsInterfaceAssociation|Não há nenhuma maneira de prova para determinar com qual interface Objective-C, uma declaração de variável externa pode ser associada. Essas instâncias são associadas como `[Field]` propriedades em uma interface parcial em uma interface quase-by, concreto, para produzir uma API mais intuitiva, possivelmente eliminando as constantes de interface completamente.|
-|MethodToProperty|Um método de Objective-C foram associado como uma propriedade de c# devido a convenção como pegar sem parâmetros e retornar um valor (retorno não nulo). Geralmente os métodos como esses devem ser associados como propriedades à tona uma API mais agradável, mas, às vezes, os falsos positivos podem ocorrer e a associação, na verdade, deve ser um método.|
+|MethodToProperty|Um método de Objective-C foram associado como uma C# propriedade devido a convenção como pegar sem parâmetros e retornar um valor (retorno não nulo). Geralmente os métodos como esses devem ser associados como propriedades à tona uma API mais agradável, mas, às vezes, os falsos positivos podem ocorrer e a associação, na verdade, deve ser um método.|
 |StronglyTypedNSArray|Um nativo `NSArray*` foram associados como `NSObject[]`. Pode ser possível para o tipo mais forte a matriz na associação com base nas expectativas definidas por meio de documentação da API (por exemplo, os comentários no arquivo de cabeçalho) ou examinando o conteúdo da matriz por meio de testes. Por exemplo, um NSArray * contendo apenas NSNumber * instancescan ser associado como `NSNumber[]` em vez de `NSObject[]`.|
 
 Você pode receber também rapidamente a documentação para usar uma dica de `sharpie verify-docs` ferramenta, por exemplo:
@@ -43,5 +43,5 @@ sharpie verify-docs InferredFromPreceedingTypedef
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
 ms.openlocfilehash: c1955226f04203ad2e5805c47f35a32281942eab
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61361652"
 ---
 # <a name="soft-keyboard-input-mode-on-android"></a>Modo de entrada de teclado virtual no Android
 
@@ -28,7 +28,7 @@ Este específicos da plataforma Android é usado para definir o modo de operaç�
 </Application>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

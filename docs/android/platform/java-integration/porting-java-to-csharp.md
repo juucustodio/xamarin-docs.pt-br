@@ -1,5 +1,5 @@
 ---
-title: Portabilidade de Java paraC#
+title: Portabilidade de Java para C#
 description: Uma terceira opção para usar Java em um aplicativo xamarin. Android é a portabilidade de código-fonte Java para C#.
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/05/2016
 ms.openlocfilehash: 9beb6d59c9376a404c06af7f0cd1efd985929843
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075134"
 ---
-# <a name="porting-java-to-c"></a>Portabilidade de Java paraC#
+# <a name="porting-java-to-c"></a>Portabilidade de Java para C#
 
 _Uma terceira opção para usar Java em um aplicativo xamarin. Android é a portabilidade de código-fonte Java para C#._
 

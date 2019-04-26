@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: a30256722647bbea482970d0c4a751954810d99e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170780"
 ---
 # <a name="listview"></a>ListView
 
@@ -35,7 +35,7 @@ Primeiro, um breve tutorial apresenta o `ListView` com um exemplo de código bá
 
 ## <a name="listview-tutorial"></a>Tutorial de ListView
 
-[`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) é um [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+[`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
 Isso cria uma lista de itens roláveis. Os itens da lista são inseridos automaticamente à lista usando um [ `IListAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.IListAdapter/).
 
 Neste tutorial, você criará uma lista rolável de nomes de país que são lidos a partir de uma matriz de cadeia de caracteres. Quando um item de lista é selecionado, será exibida uma mensagem de notificação do sistema a posição do item na lista.

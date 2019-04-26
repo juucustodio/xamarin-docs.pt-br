@@ -1,5 +1,5 @@
 ---
-title: Inspecionar s aplicativos ativos
+title: Inspecionando aplicativos ativos
 description: Este documento descreve como usar o Xamarin Inspector para inspecionar os aplicativos. Ele também discute as limitações da ferramenta Xamarin Inspector.
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
@@ -7,13 +7,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
 ms.openlocfilehash: 2bd68def0a29d4bb94f8cc66c8cbfa00add1700d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60948135"
 ---
-# <a name="inspecting-live-applications"></a>Inspecionar s aplicativos ativos
+# <a name="inspecting-live-applications"></a>Inspecionando aplicativos ativos
 
 Inspeção de aplicativo em tempo real está disponível para clientes empresariais.
 

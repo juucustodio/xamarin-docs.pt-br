@@ -1,5 +1,5 @@
 ---
-title: Criar um ContentProvider personalizado
+title: Criando um ContentProvider personalizado
 description: A seção anterior demonstrou como consumir dados de uma implementação de ContentProvider interna. Esta seção explicará como criar um ContentProvider personalizado e, em seguida, consumir seus dados.
 ms.prod: xamarin
 ms.assetid: 36742B59-607E-070E-5D0E-B9C18917D3F4
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
 ms.openlocfilehash: da8aacac1f282fefb6b8d0e84cae168cf3a7148b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953352"
 ---
-# <a name="creating-a-custom-contentprovider"></a>Criar um ContentProvider personalizado
+# <a name="creating-a-custom-contentprovider"></a>Criando um ContentProvider personalizado
 
 _A seção anterior demonstrou como consumir dados de uma implementação de ContentProvider interna. Esta seção explicará como criar um ContentProvider personalizado e, em seguida, consumir seus dados._
 

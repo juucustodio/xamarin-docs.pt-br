@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420862"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Pode adicionar ou remover arquivos de um arquivo de IPA após compilá-lo no Visual Studio?
 
@@ -40,13 +40,13 @@ Para este exemplo, suponha que o nome do projeto xamarin. IOS está `iPhoneApp1`
 
 7.  Descompacte o `.ipa` arquivo para um temporário `old/` pasta usando o comando a seguir. Ajustar a `Ad-Hoc` e `iPhoneApp1` nomes conforme necessário para seu projeto específico.
 
-    > idem - xk bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa antigo /
+    > ditto -xk bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa old/
 
 8.  Manter o `Terminal.app` janela aberta.
 
 9.  Exclua os arquivos desejados do `.ipa`. Você pode movê-los para a Lixeira usando o Finder ou excluí-las na linha de comando usando `Terminal.app`. Para exibir o conteúdo a `Payload/iPhone` o arquivo do arquivo no Finder, CTRL + clique e selecione **Mostrar conteúdo do pacote**.
 
-10.  Usando a mesma abordagem geral, como na etapa 3, localize o arquivo de log sob `~/Library/Logs/Xamarin/MonoTouchVS/` que tem o nome do projeto e o `generated session id` no nome: ![](modify-ipa-images/build-log.png "localizar o log de build do projeto no Finder")
+10.  Usando a mesma abordagem geral, como na etapa 3, localize o arquivo de log sob `~/Library/Logs/Xamarin/MonoTouchVS/` que tem o nome do projeto e o `generated session id` no nome: ![](modify-ipa-images/build-log.png "Localize o log de build do projeto no Finder")
 
 11.  Abra o log de compilação da etapa 10, por exemplo clicando duas vezes nele.
 
@@ -88,4 +88,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 E o processo de verificação da App Store relatará uma mensagem de erro semelhante:
 
-> Erro ITMS-90035: "assinatura inválida. Um recurso lacrado está ausente ou inválido. O binário no caminho [iPhoneApp1.app/iPhoneApp1] contém uma assinatura inválida. Verifique se que você tiver assinado o seu aplicativo com um certificado de distribuição, e não um certificado do ad-hoc ou um certificado de desenvolvimento. Verifique se as configurações de assinatura de código em Xcode estão corretas no nível de destino (o que substituir quaisquer valores no nível do projeto). Além disso, verifique se o pacote que você está carregando foi criado usando um destino de versão no Xcode, não um destino do simulador. Se você tiver certeza de que as configurações de assinatura de código estão corretas, escolha "Limpar tudo" no Xcode, exclua o diretório "build" no Finder e recompilar seu destino de versão. Para obter mais informações, consulte [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> ERROR ITMS-90035: "Assinatura inválida. Um recurso lacrado está ausente ou inválido. O binário no caminho [iPhoneApp1.app/iPhoneApp1] contém uma assinatura inválida. Verifique se que você tiver assinado o seu aplicativo com um certificado de distribuição, e não um certificado do ad-hoc ou um certificado de desenvolvimento. Verifique se as configurações de assinatura de código em Xcode estão corretas no nível de destino (o que substituir quaisquer valores no nível do projeto). Além disso, verifique se o pacote que você está carregando foi criado usando um destino de versão no Xcode, não um destino do simulador. Se você tiver certeza de que as configurações de assinatura de código estão corretas, escolha "Limpar tudo" no Xcode, exclua o diretório "build" no Finder e recompilar seu destino de versão. Para obter mais informações, consulte [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

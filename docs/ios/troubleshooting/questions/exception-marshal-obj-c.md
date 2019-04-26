@@ -1,5 +1,5 @@
 ---
-title: 'Por que meu aplicativo do iOS 9 falha com: System. Exception: Falha ao realizar marshaling do objeto Objective-C?'
+title: 'Por que meu aplicativo iOS 9 falha com: System.Exception: Falha ao realizar marshaling do objeto Objective-C?'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0
@@ -8,17 +8,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: dfe1918d271946eb96d1f57d32c533a075f6d0bd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421951"
 ---
-# <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>Por que meu aplicativo do iOS 9 falha com: System. Exception: Falha ao realizar marshaling do objeto Objective-C?
+# <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>Por que meu aplicativo iOS 9 falha com: System.Exception: Falha ao realizar marshaling do objeto Objective-C?
 
 Você verá um erro neste formato:
 
-> System. Exception: Falha ao realizar marshaling do objeto Objective-C... Não foi possível localizar uma instância gerenciada existente para esse objeto...
+> System.Exception: Falha ao realizar marshaling do objeto Objective-C... Não foi possível localizar uma instância gerenciada existente para esse objeto...
 
 Alterações de API no iOS 9 exigem que um construtor de retorno de chamada usado ao chamar código não gerenciado, como a API básica agora espera que ele. Use a linha a seguir para adicionar o construtor de retorno de chamada à classe: 
 

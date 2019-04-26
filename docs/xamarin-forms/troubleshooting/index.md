@@ -9,19 +9,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
 ms.openlocfilehash: fbe4fb6fce52636b59a9637ee0150c4c19fcc9da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30788517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60850428"
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 
 _Condições de erro comuns e como resolvê-los_
 
-## <a name="error-unable-to-find-a-version-of-xamarinforms-compatible-with"></a>Erro: "não é possível localizar uma versão do xamarin. Forms compatível com..."
+## <a name="error-unable-to-find-a-version-of-xamarinforms-compatible-with"></a>Erro: "Não foi possível encontrar compatível com uma versão do xamarin. Forms..."
 
-Os erros a seguir podem aparecer no **pacote Console** janela ao atualizar todos os pacotes do Nuget em uma solução xamarin. Forms ou em um projeto de aplicativo xamarin. Forms Android:
+Os erros a seguir podem aparecer na **Console de pacotes** janela ao atualizar todos os pacotes Nuget em uma solução do xamarin. Forms ou em um projeto de aplicativo do Android do xamarin. Forms:
 
 ```csharp
 Attempting to resolve dependency 'Xamarin.Android.Support.v7.AppCompat (= 23.3.0.0)'.
@@ -34,28 +34,28 @@ Unable to find a version of 'Xamarin.Forms' that is compatible with 'Xamarin.And
 
 ### <a name="what-causes-this-error"></a>O que causa esse erro?
 
-O Visual Studio para Mac (ou o Visual Studio) pode indicar que atualizações estejam disponíveis para o xamarin. Forms Nuget packge *e todas as suas dependências*. Do Xamarin Studio, a solução **pacotes** nó pode ter esta aparência (os números de versão podem ser diferentes):
+O Visual Studio para Mac (ou o Visual Studio) pode indicar que as atualizações estão disponíveis para o Nuget xamarin. Forms packge *e todas as suas dependências*. Do Xamarin Studio, a solução **pacotes** nó teria esta aparência (os números de versão podem ser diferentes):
 
-![](images/updates-available.png "Pasta de pacotes do projeto Android")
+![](images/updates-available.png "Pasta de pacotes do projeto do Android")
 
 Esse erro pode ocorrer se você tentar atualizar _todos os_ os pacotes.
 
-Isso é porque com Android projetos definidos para uma versão de compilação/destino do Android 6.0 (API 23) ou abaixo, xamarin. Forms tem uma dependência de disco rígida em *específico* versões do Android que suportam a pacotes. Embora as versões atualizadas desses pacotes podem estar disponíveis, xamarin. Forms não é necessariamente compatível com eles.
+Isso ocorre porque com Android projetos definidos para uma versão de destino/compilação do Android 6.0 (API 23) ou abaixo, o xamarin. Forms tem uma dependência forte *específico* versões do Android dão suporte a pacotes. Embora as versões atualizadas desses pacotes podem estar disponíveis, o xamarin. Forms não é necessariamente compatível com eles.
 
-Nesse caso, você deve atualizar _somente_ o **xamarin. Forms** pois isso assegurará que as dependências permanecem em versões compatíveis do pacote. Outros pacotes que você adicionou ao seu projeto também podem ser atualizados individualmente, contanto que eles não fazem com que os pacotes de suporte do Android atualizar.
+Nesse caso, você deve atualizar _só_ as **xamarin. Forms** porque isso garantirá que as dependências permanecem em versões compatíveis do pacote. Outros pacotes que você adicionou ao seu projeto também podem ser atualizados individualmente, desde que eles fazem com que os pacotes de suporte do Android atualizar.
 
 
 > [!NOTE]
-> Se você estiver usando o xamarin. Forms 2.3.4 ou posterior **e** versão de destino/compilação do seu projeto Android é definido para o Android 7.0 (API 24) ou superior, em seguida, as dependências de disco rígidas mencionadas acima não se aplicam e você pode atualizar o suporte pacotes independentemente do pacote xamarin. Forms.
+> Se você estiver usando o xamarin. Forms 2.3.4 ou superior **e** versão de destino/compilação do seu projeto Android é definido para o Android 7.0 (API 24) ou superior, em seguida, as dependências de disco rígidas mencionadas acima não se aplicam, e você pode atualizar o suporte pacotes independentemente do pacote xamarin. Forms.
 
 
-### <a name="fix-remove-all-packages-and-re-add-xamarinforms"></a>Correção: Remover todos os pacotes e adicionar novamente o xamarin. Forms
+### <a name="fix-remove-all-packages-and-re-add-xamarinforms"></a>Correção: Remova todos os pacotes e adicione novamente o xamarin. Forms
 
-Se o **Xamarin.Android.Support** pacotes foram atualizados para versões incompatíveis, a correção mais simples é:
+Se o **Support** pacotes foram atualizados para versões incompatíveis, a correção mais simples é:
 
 1. Exclua manualmente todos os pacotes do Nuget no projeto do Android, em seguida
-2. Adicionar novamente o **xamarin. Forms** pacote.
+2. Adicione novamente o **xamarin. Forms** pacote.
 
-Isso fará o download automaticamente o *correto* versões dos outros pacotes.
+Isso baixará automaticamente a *correto* versões dos outros pacotes.
 
-Para ver um vídeo desse processo, consulte a [post fóruns](https://forums.xamarin.com/discussion/comment/170012/#Comment_170012).
+Para ver um vídeo desse processo, consulte este [fóruns post](https://forums.xamarin.com/discussion/comment/170012/#Comment_170012).

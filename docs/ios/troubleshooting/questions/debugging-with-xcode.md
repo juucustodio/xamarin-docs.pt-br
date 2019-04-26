@@ -8,11 +8,11 @@ author: migueldeicaza
 ms.author: miguel
 ms.date: 02/22/2018
 ms.openlocfilehash: e0127d4b24236d350e5fa967110316544c320d0f
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61422429"
 ---
 # <a name="debugging-xamarinios-apps-with-xcode"></a>Depuração de aplicativos do xamarin. IOS com Xcode
 

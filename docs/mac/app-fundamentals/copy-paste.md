@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: f9e05b6d16210021257fe3958966739e526aed18
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61378510"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copie e cole no xamarin. Mac
 
@@ -1283,4 +1283,4 @@ Este artigo apresentou uma visão detalhada de como trabalhar com a área de tra
 - [MacCopyPaste (amostra)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Guia de programação em área de trabalho](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
-- [Diretrizes de Interface humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Diretrizes de Interface Humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

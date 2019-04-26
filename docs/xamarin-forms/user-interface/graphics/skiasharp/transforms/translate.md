@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: a51a441aeacf265093b82ddb65237887b0a30719
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382399"
 ---
 # <a name="the-translate-transform"></a>A transformação de conversão
 
@@ -136,7 +136,7 @@ O primeiro exemplo simplesmente chama `Translate` novamente, mas com valores neg
 
 O segundo exemplo chama [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix). Isso faz com que todas as transformações retornar ao seu estado padrão.
 
-O terceiro exemplo salva o estado do `SKCanvas` objeto com uma chamada para [ `Save` ](xref:SkiaSharp.SKCanvas.Save) e, em seguida, restaura o estado com uma chamada para [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Essa é a maneira mais versátil para manipular as transformações para uma série de operações de desenho. Esses `Save` e `Restore` função como uma pilha de chamadas: você pode chamar `Save` várias vezes e, em seguida, chame `Restore` em inversa sequência para retornar ao estado anterior. O `Save` método retorna um inteiro, e você pode passar esse inteiro para [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) efetivamente chamar `Restore` várias vezes. O [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) propriedade retorna o número de estados salvos no momento na pilha.
+O terceiro exemplo salva o estado do `SKCanvas` objeto com uma chamada para [ `Save` ](xref:SkiaSharp.SKCanvas.Save) e, em seguida, restaura o estado com uma chamada para [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Essa é a maneira mais versátil para manipular as transformações para uma série de operações de desenho. Eles `Save` e `Restore` função como uma pilha de chamadas: Você pode chamar `Save` várias vezes e, em seguida, chame `Restore` em inversa sequência para retornar ao estado anterior. O `Save` método retorna um inteiro, e você pode passar esse inteiro para [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) efetivamente chamar `Restore` várias vezes. O [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) propriedade retorna o número de estados salvos no momento na pilha.
 
 Você também pode usar o [ `SKAutoCanvasRestore` ](xref:SkiaSharp.SKAutoCanvasRestore) classe para restaurar o estado da tela. O construtor dessa classe se destina a ser chamado em um `using` instrução; a tela de estado é restaurado automaticamente no final do `using` bloco. 
 

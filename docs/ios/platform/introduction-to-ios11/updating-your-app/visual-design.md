@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
 ms.openlocfilehash: c6351f2c25f8e31181c761aea1b471315a8a05e8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61400162"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Atualizações de Design visual no iOS 11
 

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
 ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945299"
 ---
 # <a name="xamarinandroid-errors-matrix"></a>Matriz de erros do xamarin. Android
 
@@ -78,7 +78,7 @@ Este documento fornece algumas informações sobre os vários códigos de erro d
 |XA1103|Não foi possível desanexar.|
 |XA1104|Falha ao enviar o pacote: {0}.|
 |XA1105|Tipo de resposta inesperado.|
-|XA1106|Não foi possível obter a lista de aplicativos no dispositivo: solicitação atingiu o tempo limite.|
+|XA1106|Não foi possível obter a lista de aplicativos no dispositivo: Solicitação atingiu o tempo limite.|
 |XA1107|Falha ao iniciar o aplicativo.|
 |XA1201|Não foi possível carregar o simulador: {0}.|
 |XA1301|Biblioteca nativa '{0}' ({1}) foi ignorada, pois ele não coincide com o architecture(s) build atual ({2}).|
@@ -101,7 +101,7 @@ Esses são erros AOT.
 |Código do erro|Descrição|
 |--- |--- |
 |XA3001|Poderia AOT o assembly '{0}'.|
-|XA3002|Restrição de AOT: método '{0}' deve ser estático, pois ela será decorada com [MonoPInvokeCallback].|
+|XA3002|Restrição de AOT: Método '{0}' deve ser estático, pois ela será decorada com [MonoPInvokeCallback].|
 |XA3003|Conflitantes – opções de depuração e – llvm. Soft-depuração está desabilitada.|
 
 
@@ -173,24 +173,24 @@ Esses códigos de erro são erros de licenciamento e ativação.
 
 #### <a name="xa9000"></a>XA9000
 
- **Causa:** licença expirada
+ **Causa:** Licença expirada
 
  **Verificado durante:** Build
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|AVISO|AVISO|AVISO|AVISO|AVISO|
+|WARNING|WARNING|WARNING|WARNING|WARNING|
 
 
 #### <a name="xa9001"></a>XA9001
 
- **Causa:** avaliação expirou
+ **Causa:** A avaliação expirou
 
  **Verificado durante:** Build
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|AVISO|AVISO|AVISO|AVISO|AVISO|
+|WARNING|WARNING|WARNING|WARNING|WARNING|
 
 
 
@@ -202,7 +202,7 @@ Esses códigos de erro são erros de licenciamento e ativação.
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
  **Causa:** AndroidJavaLibrary
 
@@ -210,7 +210,7 @@ Esses códigos de erro são erros de licenciamento e ativação.
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
  **Se um assembly de associação tem o. jar incorporado, isso é capturado no tempo de pacote, não o tempo de compilação.**
 
@@ -220,26 +220,26 @@ Esses códigos de erro são erros de licenciamento e ativação.
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
 
 #### <a name="xa9003"></a>XA9003
 
- **Causa:** Serialization
+ **Causa:** System.Runtime.Serialization
 
- **Verificado durante:** pacote
-
-|Starter|Indie|Business(Trial)|Negócio|Enterprise|
-|--- |--- |--- |--- |--- |
-|ERRO|ERRO|OK|OK|OK|
-
- **Cause:** System.ServiceModel.Web
-
- **Verificado durante:** pacote
+ **Verificado durante:** Pacote
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
+
+ **Causa:** System.ServiceModel.Web
+
+ **Verificado durante:** Pacote
+
+|Starter|Indie|Business(Trial)|Negócio|Enterprise|
+|--- |--- |--- |--- |--- |
+|ERROR|ERROR|OK|OK|OK|
 
  **Causa:** Mono.Data.Tds
 
@@ -247,17 +247,17 @@ Esses códigos de erro são erros de licenciamento e ativação.
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
  **Isso é referenciado pela DLL, que é permitido**
 
- **Cause:** Mono.Android.Export
+ **Causa:** Mono.Android.Export
 
  **Verificado durante:** Build
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
 
 
@@ -265,23 +265,23 @@ Esses códigos de erro são erros de licenciamento e ativação.
 
  **Causa:** – criação de perfil
 
- **Verificado durante:** pacote
+ **Verificado durante:** Pacote
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 
 #### <a name="xa9005"></a>XA9005
 
- **Causa:** limite de tamanho (32 kb).
+ **Causa:** Limite de tamanho (32kb).
 
- **Verificado durante:** pacote
+ **Verificado durante:** Pacote
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|OK|-|-|-|
+|ERROR|OK|-|-|-|
 
 
 
@@ -289,33 +289,33 @@ Esses códigos de erro são erros de licenciamento e ativação.
 
  **Causa:** System.Data.SqlClient namespace.
 
- **Verificado durante:** pacote
+ **Verificado durante:** Pacote
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 #### <a name="xa9008"></a>XA9008
 
- **Causa:** compilando da linha de comando.
+ **Causa:** Compilando da linha de comando.
 
  **Verificado durante:** Build
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 #### <a name="xa9009"></a>XA9009
 
- **Causa:** o número de série ausente.
+ **Causa:** Número de série ausente.
 
- **Verificado durante:** emaranhados
+ **Verificado durante:** Emaranhados
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|ERRO|ERRO|ERRO|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9010"></a>XA9010
@@ -326,7 +326,7 @@ Esses códigos de erro são erros de licenciamento e ativação.
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|ERRO|ERRO|ERRO|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 Equivalente ao XA9018.
 
@@ -336,63 +336,63 @@ Equivalente ao XA9018.
 
  **Causa:** Falha ao atualizar o arquivo de licença (para o novo formato de arquivo).
 
- **Verificado durante:** ativação
+ **Verificado durante:** Ativação
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|ERRO|ERRO|ERRO|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 #### <a name="xa9012"></a>XA9012
 
- **Causa:** sem internet
+ **Causa:** Sem internet
 
- **Verificado durante:** ativação
+ **Verificado durante:** Ativação
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|ERRO|ERRO|ERRO|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9013"></a>XA9013
 
- **Causa:** erro desconhecido
+ **Causa:** Erro desconhecido
 
- **Verificado durante:** ativação
+ **Verificado durante:** Ativação
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|ERRO|ERRO|ERRO|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9014"></a>XA9014
 
- **Causa:** código de ativação inválido
+ **Causa:** Código de ativação inválido
 
- **Verificado durante:** ativação
+ **Verificado durante:** Ativação
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|ERRO|ERRO|ERRO|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9017"></a>XA9017
 
- **Causa:** servidor de ativação não retorna uma licença válida.
+ **Causa:** Servidor de ativação não retorna uma licença válida.
 
- **Verificado durante:** ativação
+ **Verificado durante:** Ativação
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|ERRO|ERRO|ERRO|ERRO|ERRO|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9018"></a>XA9018
 
-**Causa:** licença inválida
+**Causa:** Licença inválida
 
 **Verificado durante:** Build
 
 |Starter|Indie|Business(Trial)|Negócio|Enterprise|
 |--- |--- |--- |--- |--- |
-|-|-|ERRO|-|-|
+|-|-|ERROR|-|-|
 

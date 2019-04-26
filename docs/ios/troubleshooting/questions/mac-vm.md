@@ -1,5 +1,5 @@
 ---
-title: Pode usar uma VM de Mac com Xamarin?
+title: Posso usar uma VM de Mac com o Xamarin?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 386C9030-8865-48DE-8AF7-42909C7055E9
@@ -8,15 +8,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: f0fc6ad7e6bf23fce2d742b4e0ed15da73549dc9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420847"
 ---
-# <a name="can-i-use-a-mac-vm-with-xamarin"></a>Pode usar uma VM de Mac com Xamarin? 
+# <a name="can-i-use-a-mac-vm-with-xamarin"></a>Posso usar uma VM de Mac com o Xamarin? 
 
-## <a name="mac-hardware"></a>Hardware do Mac
+## <a name="mac-hardware"></a>Mac Hardware
 Sim; tenha cuidado para seguir os termos da Apple de uso.
 
 ## <a name="non-mac-hardware"></a>Hardware de não-Mac

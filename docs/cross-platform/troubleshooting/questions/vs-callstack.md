@@ -1,5 +1,5 @@
 ---
-title: Como posso coletar as pilhas de chamadas atual do processo do Visual Studio?
+title: Como posso coletar as pilhas de chamadas atuais do processo do Visual Studio?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 64c24b09-2c4a-43ad-b94d-6cd05a1aee44
@@ -7,19 +7,19 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/30/2017
 ms.openlocfilehash: e81c28f0610a0df2e4fe06349685ef5e0744071a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33919755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61159097"
 ---
-# <a name="how-do-i-collect-the-current-call-stacks-of-the-visual-studio-process"></a>Como posso coletar as pilhas de chamadas atual do processo do Visual Studio?
+# <a name="how-do-i-collect-the-current-call-stacks-of-the-visual-studio-process"></a>Como posso coletar as pilhas de chamadas atuais do processo do Visual Studio?
 
-Quando a GUI trava congela (trava) no Visual Studio, uma parte importante das informações de diagnósticas para coletar é o conjunto de pilhas de chamadas de todos os threads de processo do Visual Studio. Para salvar essas informações para uma instância de travamento do Visual Studio, você pode usar uma segunda instância do Visual Studio:
+Quando a GUI é bloqueada (trava, congela) no Visual Studio, uma parte importante de informações de diagnóstico para coletar é o conjunto de pilhas de chamadas de todos os threads de processo do Visual Studio. Para salvar essas informações para uma instância travada do Visual Studio, você pode usar uma segunda instância do Visual Studio:
 
 1. Inicie uma segunda instância (uma nova janela) do Visual Studio.
 
-2. Feche quaisquer soluções abertas na nova instância do Visual Studio.
+2. Feche soluções abertas na nova instância do Visual Studio.
 
 3. Selecione **Depurar > Anexar ao processo**.
 
@@ -35,8 +35,8 @@ Quando a GUI trava congela (trava) no Visual Studio, uma parte importante das in
 
   ![](vs-callstack-images/image3.png "Selecione Depurar > Salvar despejo como")
 
-7. Alterar **Salvar como tipo** para **minidespejo (\*. dmp)**. Isso produzirá um arquivo menor que **minidespejo com Heap**, e o heap geralmente não é relevante para diagnosticar congelar.
+7. Alteração **Salvar como tipo** à **minidespejo (\*. dmp)**. Isso produzirá um arquivo menor que **minidespejo com Heap**, e o heap geralmente não é relevante para diagnosticar congela.
 
-  ![](vs-callstack-images/image4.png "Isso produzirá um arquivo menor que minidespejo com Heap e o heap geralmente não é relevante para diagnosticar congela")
+  ![](vs-callstack-images/image4.png "Isso produzirá um arquivo menor que o minidespejo com Heap e o heap geralmente não é relevante para diagnosticar congela")
 
-8. Salve o arquivo de despejo de memória. Se o envio de arquivo online, você pode zip para reduzir o tamanho.
+8. Salve o arquivo de despejo. Se enviar o arquivo online, você pode zip-lo para reduzir o tamanho.

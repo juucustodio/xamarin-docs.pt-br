@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
 ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093686"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fontes no xamarin. Forms
 
@@ -28,7 +28,7 @@ Use as três propriedades de fonte de todos os controles que exibem texto:
 
 - **FontFamily** &ndash; o `string` nome da fonte.
 - **FontSize** &ndash; o tamanho da fonte como um `double`.
-- **FontAttributes** &ndash; especificando informações de estilo, como uma cadeia de caracteres *itálico* e **negrito** (usando o `FontAttributes` enumeração em c#).
+- **FontAttributes** &ndash; especificando informações de estilo, como uma cadeia de caracteres *itálico* e **negrito** (usando o `FontAttributes` enumeração em C#).
 
 Este código mostra como criar um rótulo e especificar o tamanho da fonte e o peso para exibir:
 
@@ -225,7 +225,7 @@ O exemplo XAML a seguir tem um ícone de fonte única que está sendo exibido po
 </Image>
 ```
 
-Esse código exibe um ícone do XBox, da família de fonte Ionicons, em um [ `Image` ](xref:Xamarin.Forms.Image) exibição. Observe que, enquanto o unicode, para esse ícone é de caractere `\uf30c`, ele tem que ser substituídos no XAML e portanto se torna `&#xf30c;`. O código c# equivalente é:
+Esse código exibe um ícone do XBox, da família de fonte Ionicons, em um [ `Image` ](xref:Xamarin.Forms.Image) exibição. Observe que, enquanto o unicode, para esse ícone é de caractere `\uf30c`, ele tem que ser substituídos no XAML e portanto se torna `&#xf30c;`. O código C# equivalente é:
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

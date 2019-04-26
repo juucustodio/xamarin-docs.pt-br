@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: 10d62ea050296eb6d36c9861b757ca44d3a2e452
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61026088"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>O xamarin. Forms Visual State Manager
 
@@ -253,7 +253,7 @@ Marcação semelhante a esta é a base para o **VSM na exibição** página na *
 
 Observe que a segunda `Entry` também tem um `DataTrigger` como parte de seu `Trigger` coleção. Isso faz com que o `Entry` será desabilitada até que algo seja digitado à terceira `Entry`. Aqui está a página na inicialização em execução no iOS, Android e Universal Windows Platform (UWP):
 
-[![VSM no modo de exibição: desabilitado](vsm-images/VsmOnViewDisabled.png "VSM na exibição - desabilitada")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
+[![VSM no modo de exibição: Desabilitado](vsm-images/VsmOnViewDisabled.png "VSM na exibição - desabilitada")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
 
 O estado visual atual é "Disabled" para que o plano de fundo do segundo `Entry` é rosa em telas de Android e iOS. A implementação de UWP do `Entry` não permite definir o plano de fundo de cor quando o `Entry` está desabilitado. 
 
@@ -263,7 +263,7 @@ Quando você digitar um texto à terceira `Entry`, o segundo `Entry` alterna par
 
 Quando você tocar o segundo `Entry`, ele obtém o foco de entrada. Ele muda para o estado de "Focalizado" e se expande para duas vezes sua altura:
 
-[![VSM no modo de exibição: focado](vsm-images/VsmOnViewFocused.png "VSM na exibição - focalizada")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
+[![VSM no modo de exibição: Focado](vsm-images/VsmOnViewFocused.png "VSM na exibição - focalizada")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
 
 Observe que o `Entry` não retém o plano de fundo verde-limão quando ele recebe o foco de entrada. Como o Gerenciador de estado Visual alterna entre os estados visuais, as propriedades definidas pelo estado anterior são não definidas. Tenha em mente que os estados visuais são mutuamente exclusivos. O estado "Normal" não significa apenas que o `Entry` está habilitado. Isso significa que o `Entry` está habilitado e não tem o foco de entrada. 
 
@@ -426,7 +426,7 @@ VisualStateManager.GoToState(this, "Focused");
 
 Isso é o único código do Gerenciador de estado Visual que você encontrará o `VisualElement` classe. Porque `GoToState` é chamado para cada objeto com base em cada classe que deriva de `VisualElement`, você pode usar o Gerenciador de estado Visual com qualquer `VisualElement` objeto para responder a essas alterações.
 
-Curiosamente, o nome do grupo de estados visuais "CommonStates" não é explicitamente referenciado nos `VisualElement`. O nome do grupo não é parte da API para o Gerenciador de estado Visual. Dentro de um a dois programa de exemplo mostrado até agora, você pode alterar o nome do grupo de "CommonStates" para qualquer outra coisa, e o programa ainda funcionará. O nome do grupo é meramente uma descrição geral dos estados no grupo. É implicitamente entendido que os estados visuais em qualquer grupo são mutuamente exclusivos: uma e apenas um estado é atual a qualquer momento.
+Curiosamente, o nome do grupo de estados visuais "CommonStates" não é explicitamente referenciado nos `VisualElement`. O nome do grupo não é parte da API para o Gerenciador de estado Visual. Dentro de um a dois programa de exemplo mostrado até agora, você pode alterar o nome do grupo de "CommonStates" para qualquer outra coisa, e o programa ainda funcionará. O nome do grupo é meramente uma descrição geral dos estados no grupo. É implicitamente entendido que os estados visuais em qualquer grupo são mutuamente exclusivos: Um estado e apenas um estado é atual a qualquer momento.
 
 Se você quiser implementar seus próprios estados visuais, você precisará chamar `VisualStateManager.GoToState` do código. Geralmente, você fará essa chamada do arquivo code-behind da sua classe de página.
 
@@ -492,11 +492,11 @@ Marcação VSM está anexada à segunda `Label` (chamado `helpLabel`) e o `Butto
 
 Se o `Entry` não contém um número de telefone válido, em seguida, o estado atual é "Inválido" e, portanto, a segunda `Label` está visível e o `Button` está desabilitado:
 
-[![VSM validação: Estado inválido](vsm-images/VsmValidationInvalid.png "validação VSM - inválido")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
+[![VSM validação: Estado inválido](vsm-images/VsmValidationInvalid.png "validação VSM - inválida")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
 Quando um número de telefone válido for inserido, em seguida, o estado atual se torna "Válido". A segunda `Entry` desaparece e a `Button` agora está habilitado:
 
-[![Validação VSM: Estado válido](vsm-images/VsmValidationValid.png "validação VSM - válida")](vsm-images/VsmValidationValid-Large.png#lightbox)
+[![VSM validação: Estado válido](vsm-images/VsmValidationValid.png "validação VSM - válida")](vsm-images/VsmValidationValid-Large.png#lightbox)
 
 O arquivo code-behind é responsável para a manipulação de `TextChanged` eventos do `Entry`. O manipulador usa uma expressão regular para determinar se a cadeia de caracteres de entrada é válida ou não. O método em que o arquivo code-behind chamado `GoToState` chama estático `VisualStateManager.GoToState` método para ambos `helpLabel` e `submitButton`:
 
@@ -529,7 +529,7 @@ Observe também que o `GoToState` método é chamado de construtor para iniciali
 
 Observe que o arquivo code-behind deve levar em conta todos os objetos na página que é afetada por esses estados visuais e chamar `VisualStateManager.GoToState` para cada um desses objetos. Neste exemplo, ele é apenas dois objetos (o `Label` e o `Button`), mas poderia ser vários mais.
 
-Você talvez esteja se perguntando: se o arquivo code-behind deve fazer referência a todos os objetos na página que é afetado por esses estados visuais, por que não o arquivo code-behind simplesmente acessar os objetos diretamente? Obviamente, foi possível. No entanto, a vantagem de usar o VSM é que você pode controlar os elementos visuais como reagir a estado diferente inteiramente em XAML, que mantém todos o design de interface do usuário em um único local. Isso evita a aparência visual de configuração por meio de acessar elementos visuais diretamente no code-behind.
+Você talvez esteja se perguntando: Se o arquivo code-behind deve fazer referência a todos os objetos na página que é afetado por esses estados visuais, por que não o arquivo code-behind simplesmente acessar os objetos diretamente? Obviamente, foi possível. No entanto, a vantagem de usar o VSM é que você pode controlar os elementos visuais como reagir a estado diferente inteiramente em XAML, que mantém todos o design de interface do usuário em um único local. Isso evita a aparência visual de configuração por meio de acessar elementos visuais diretamente no code-behind.
 
 Pode ser tentador considere derivar uma classe de `Entry` e talvez definindo uma propriedade que você pode definir uma função externa de validação. A classe que deriva de `Entry` , em seguida, pode chamar o `VisualStateManager.GoToState` método. Esse esquema funcionaria bem, mas somente se o `Entry` foram o único objeto afetado pelos estados visuais diferentes. Neste exemplo, uma `Label` e um `Button` também são afetados. Não é possível para marcação VSM anexados a um `Entry` para controlar outros objetos na página e nenhuma maneira para marcação VSM anexados a esses outros objetos para fazer referência a uma alteração de estado visual de outro objeto.
 

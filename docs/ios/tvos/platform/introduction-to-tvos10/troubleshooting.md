@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 3815790cfb73f93f399c14d3da44aa3210725388
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932432"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solução de problemas de tvOS 10 aplicativos criados com o Xamarin
 

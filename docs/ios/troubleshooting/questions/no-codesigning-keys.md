@@ -1,5 +1,5 @@
 ---
-title: 'Por que minha compilação do iOS falha com: nenhum código do iPhone chaves de assinatura encontrada no conjunto de chaves?'
+title: 'Por que minha compilação do iOS falha com: Nenhuma chave de assinatura de código do iPhone foi encontrada no conjunto de chaves?'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9DF24C46-D521-4112-9B21-52EA4E8D90D0
@@ -8,20 +8,20 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: fe267db1f83695b3d0e8f3d828f91e01b56ba8ee
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61419659"
 ---
-# <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Por que minha compilação do iOS falha com: nenhum código do iPhone chaves de assinatura encontrada no conjunto de chaves?
+# <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Por que minha compilação do iOS falha com: Nenhuma chave de assinatura de código do iPhone foi encontrada no conjunto de chaves?
 
 ## <a name="cause-of-the-error"></a>Causa do erro
 Essa mensagem de erro ocorre quando o projeto em questão está procurando por credenciais válidas de assinatura de código, mas não conseguir encontrá-los. Assinatura de código é necessária para testes e implantações em dispositivos iOS físicos; Assim como Ad-hoc & aplicativo armazenam compilações. 
 
 
 ### <a name="provisioning-devices"></a>Provisionamento de dispositivos
-Se você ainda não provisionou um dispositivo iOS antes, o guia a seguir o guiará pelo processo passo a passo completo: [guia de provisionamento de dispositivo](~/ios/get-started/installation/device-provisioning/index.md)
+Se você ainda não provisionou um dispositivo iOS antes, o guia a seguir o guiará pelo processo passo a passo completo: [Guia de provisionamento de dispositivo](~/ios/get-started/installation/device-provisioning/index.md)
 
 
 ## <a name="bug-when-using-ios-simulator"></a>Bug ao usar o simulador de iOS
@@ -35,7 +35,7 @@ Havia um bug no Xamarin.Visual Studio 3.11 que fazia com que o projeto do iOS em
 ### <a name="how-to-fix"></a>Como corrigir
 Você pode contornar o problema removendo o `<CodesignEntitlements>` sinalizador de depuração se baseia no arquivo. csproj. Você pode fazer isso da seguinte maneira:
 
-*Aviso: Erros em arquivos. csproj podem interromper seu projeto, portanto, é uma boa ideia fazer backup de seus arquivos antes de tentar isso.*
+*Aviso: Erros em arquivos. csproj podem quebrar o seu projeto, portanto, é uma boa ideia fazer backup de seus arquivos antes de tentar isso.*
 
 1. Com o botão direito do mouse no projeto do iOS no painel de soluções e selecione **descarregar projeto**
 2. Com o botão direito do mouse no projeto novamente e selecione **Editar csproj [ProjectName]**

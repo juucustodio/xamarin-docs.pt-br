@@ -1,5 +1,5 @@
 ---
-title: Usar controles personalizados com o Designer do iOS
+title: Como usar controles personalizados com o iOS Designer
 description: Este documento descreve como criar um controle personalizado e usá-lo com o Designer do Xamarin para iOS. Ele mostra como tornar o controle disponíveis na caixa de ferramentas do Designer do iOS, implementar o controle para que ele renderize corretamente e tempo de design e muito mais.
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61154316"
 ---
-# <a name="using-custom-controls-with-the-ios-designer"></a>Usar controles personalizados com o Designer do iOS
+# <a name="using-custom-controls-with-the-ios-designer"></a>Como usar controles personalizados com o iOS Designer
 
 ## <a name="requirements"></a>Requisitos
 
@@ -28,7 +28,7 @@ Este guia pressupõe uma familiaridade com o conteúdo abordados os [guias de In
 > A maneira na qual os controles personalizados são criados a partir do xamarin. Studio 5.5, é ligeiramente diferente para versões anteriores. Para criar um controle personalizado, ou o `IComponent` interface é necessária (com os métodos de implementação associada) ou a classe pode ser anotada com `[DesignTimeVisible(true)]`. O último método está sendo usado no exemplo de passo a passo a seguir.
 
 
-1. Criar uma nova solução do **iOS > aplicativo > aplicativo de exibição única > C#** modelo, nomeie- `ScratchTicket`e prossiga com o Assistente de novo projeto:
+1. Criar uma nova solução do **iOS > aplicativo > aplicativo de exibição única > c#** modelo, nomeie- `ScratchTicket`e prossiga com o Assistente de novo projeto:
 
     [![](ios-designable-controls-walkthrough-images/01new.png "Criar uma nova solução")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 

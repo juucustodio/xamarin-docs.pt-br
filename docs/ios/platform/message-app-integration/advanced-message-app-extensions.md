@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: baceb59116dd907918b34eca4f44293051190954
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155475"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensões de aplicativo de mensagens avançadas no xamarin. IOS
 
@@ -181,7 +181,7 @@ Depois que o novo conteúdo estiver no campo de entrada, o usuário é capaz de 
 
 Uma extensão de aplicativo de mensagem pode ser exibida em um dos dois modos de exibição diferentes:
 
-[![](advanced-message-app-extensions-images/interactive08.png "Uma extensão de aplicativo de mensagem exibido em dois modos de exibição diferentes: CD & expandido")](advanced-message-app-extensions-images/interactive08.png#lightbox)
+[![](advanced-message-app-extensions-images/interactive08.png "Uma extensão de aplicativo de mensagem exibido em dois modos de exibição diferentes: Compact & expandido")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -isso é o modo padrão em que a mensagem da extensão do aplicativo se ocupa a parte inferior 25% da exibição de mensagem. No modo compacto, o aplicativo não tem acesso ao teclado, a rolagem horizontal ou reconhecedores de gestos de passar o dedo. O aplicativo tem acesso ao campo de entrada e chamadas para `InsertMessage` instantaneamente será exibido para o usuário existe.
 - **Expandido** -a extensão de aplicativo de mensagem preenche toda a exibição de mensagem. Ele não tem acesso ao campo de entrada, mas tem acesso ao teclado, a rolagem horizontal e reconhecedores de gestos de passar o dedo.

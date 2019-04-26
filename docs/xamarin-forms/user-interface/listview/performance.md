@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
 ms.openlocfilehash: 98212483481b2ce60c73a40c014816ee3c3f110c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386546"
 ---
 # <a name="listview-performance"></a>Desempenho de ListView
 
@@ -133,7 +133,7 @@ Isso tem o mesmo efeito que definir o argumento de estratégia de cache do const
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>Definir a estratégia de cache em uma subclasse ListView
 
-Definindo o `CachingStrategy` atributo do XAML em uma subclasse [ `ListView` ](xref:Xamarin.Forms.ListView) não produzirá o comportamento desejado, porque não há nenhum `CachingStrategy` propriedade `ListView`. Além disso, se [XAMLC](~/xamarin-forms/xaml/xamlc.md) é habilitada, a seguinte mensagem de erro será produzida: **nenhuma propriedade, a propriedade associável ou evento encontrado para 'CachingStrategy'**
+Definindo o `CachingStrategy` atributo do XAML em uma subclasse [ `ListView` ](xref:Xamarin.Forms.ListView) não produzirá o comportamento desejado, porque não há nenhum `CachingStrategy` propriedade `ListView`. Além disso, se [XAMLC](~/xamarin-forms/xaml/xamlc.md) é habilitado, a seguinte mensagem de erro será produzida: **Nenhuma propriedade, a propriedade associável ou evento encontrado para 'CachingStrategy'**
 
 A solução para esse problema é para especificar um construtor na subclasse [ `ListView` ](xref:Xamarin.Forms.ListView) que aceita um [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) parâmetro e o passa para a classe base:
 

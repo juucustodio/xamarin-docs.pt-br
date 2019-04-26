@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
 ms.openlocfilehash: 95227689303a8367785202956a6aaef921c1c593
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085149"
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>Desempenho e efeitos visuais com CCRenderTexture
 
@@ -67,7 +67,7 @@ O exemplo é codificado para expor dois problemas que podem ocorrer quando cada 
 
 ### <a name="card-draw-calls"></a>Chamadas de desenho do cartão
 
-Nosso código é uma simplificação do que pode ser encontrado em uma completa *jogo de cartas colecionáveis* (CCG) como "Coletando a mágica:" ou "Hearthstone". Nosso jogo só exibe três cartões ao mesmo tempo e tem um pequeno número de unidades possíveis (azul, verde e laranja). Por outro lado, um jogo completo pode ter mais de vinte cartões na tela em um determinado momento e players podem ter centenas de cartões para escolher ao criar suas apresentações. Mesmo que o nosso jogo no momento, não apresentam problemas de desempenho, talvez seja um jogo completo com a implementação semelhante.
+Nosso código é uma simplificação do que pode ser encontrado em uma completa *jogo de cartas colecionáveis* (CCG), como "mágica: A coleta"ou"Hearthstone". Nosso jogo só exibe três cartões ao mesmo tempo e tem um pequeno número de unidades possíveis (azul, verde e laranja). Por outro lado, um jogo completo pode ter mais de vinte cartões na tela em um determinado momento e players podem ter centenas de cartões para escolher ao criar suas apresentações. Mesmo que o nosso jogo no momento, não apresentam problemas de desempenho, talvez seja um jogo completo com a implementação semelhante.
 
 CocosSharp fornece algum esclarecimento sobre o desempenho de renderização, expondo as chamadas de desenho executada por quadro. Nossos `GameLayer.AddedToScene` método define o `GameView.Stats.Enabled` para `true`, resultando em informações de desempenho mostradas na parte inferior esquerda da tela:
 

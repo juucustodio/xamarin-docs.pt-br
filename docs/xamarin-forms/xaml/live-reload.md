@@ -9,11 +9,11 @@ ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
 ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384903"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarregamento dinâmico do Xamarin (visualização)
 
@@ -125,19 +125,19 @@ Nº Na verdade, você pode até mesmo iniciar todos os seus destinos com suporte
 
 ### <a name="error-codes"></a>Códigos de erro
 
-* **XLR001**: *o projeto atual faz referência a versão do pacote NuGet 'Xamarin.LiveReload' '[VERSION]', mas a extensão do Xamarin Live Reload requer a versão '[VERSION]'.*
+* **XLR001**: *O projeto atual faz referência a versão do pacote NuGet 'Xamarin.LiveReload' '[VERSION]', mas a extensão do Xamarin Live Reload requer a versão '[VERSION]'.*
 
   Para permitir que a iteração rápida e a evolução do recurso de Live Reload, o pacote do nuget e a extensão do Visual Studio devem corresponder exatamente. Atualize o pacote do nuget para a mesma versão da extensão que você instalou.
 
-* **XLR002**: *Live Reload requer pelo menos a propriedade 'MqttHostname' ao compilar na linha de comando. Como alternativa, definir 'EnableLiveReload' como 'false' para desabilitar o recurso.*
+* **XLR002**: *Recarregamento dinâmico requer pelo menos a propriedade 'MqttHostname' ao compilar na linha de comando. Como alternativa, definir 'EnableLiveReload' como 'false' para desabilitar o recurso.*
 
   As propriedades exigidas pelo Live Reload não estão disponíveis quando compilar da linha de comando (ou em integração contínua) e, portanto, deve ser fornecido explicitamente. 
 
-* **XLR003**: *pacote do nuget Live Reload requer instalação da extensão do Xamarin Live Reload para Visual Studio.*
+* **XLR003**: *Pacote do nuget recarregamento dinâmico exige a instalação a extensão do Xamarin Live Reload para Visual Studio.*
 
   Tentativa de compilar um projeto que referencia o pacote do nuget Live Reload, mas a extensão do Visual não está instalada.  
 
-* *Exceção ao carregar assemblies: System.IO.FileNotFoundException: não foi possível carregar o assembly ' Xamarin.Live.Reload, versão = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
+* *Exceção ao carregar assemblies: System.IO.FileNotFoundException: Não foi possível carregar o assembly ' Xamarin.Live.Reload, versão = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
 
   O projeto de host deve usar `PackageReference` em vez de `packages.config`
 

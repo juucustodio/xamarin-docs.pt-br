@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 799d6dd532e530f5ee9c9a974b2d93b6a3be0efb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b2968399279fe3e9d160471bbcae08ae091be93e
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075643"
 ---
 # <a name="search-apis-in-xamarinios"></a>APIs de pesquisa no xamarin. IOS
 
@@ -59,7 +59,7 @@ A Apple fornece as seguintes sugestões sobre quais ações e o conteúdo para f
  - Pontos de navegação e os recursos do aplicativo.
  - Coisas como novas mensagens, conteúdo ou outros tipos de itens exibidos pelo seu aplicativo que recentemente foram baixados no dispositivo.
 
-## <a name="app-search-enhancements"></a>Aperfeiçoamentos feitos na pesquisa do aplicativo
+## <a name="app-search-enhancements"></a>Aperfeiçoamentos na pesquisa de aplicativo
 
 Destaque principal no iOS 10 oferece vários aprimoramentos para o aplicativo de pesquisa, como:
 
@@ -82,7 +82,7 @@ iOS 10 apresenta novas maneiras de condução contrato a um aplicativo, permitin
 - Interações de Siri
 - Sugestões de QuickType 
 
-Um aplicativo expõe essa funcionalidade no sistema usando uma coleção de tecnologias, como [NSUserActivity](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/), marcação de web, destaque principal, MapKit, Media Player e UIKit.
+Um aplicativo expõe essa funcionalidade no sistema usando uma coleção de tecnologias, como [NSUserActivity](xref:Foundation.NSUserActivity), marcação de web, destaque principal, MapKit, Media Player e UIKit.
 
 Para obter mais informações, consulte nosso [sugestões proativas](~/ios/platform/search/proactive-suggestions.md) guia.
 

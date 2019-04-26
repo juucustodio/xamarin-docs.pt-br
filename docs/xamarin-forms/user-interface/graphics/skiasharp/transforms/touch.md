@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
 ms.openlocfilehash: d525725b58a961afb9c4c5d80962d05f8d08b83e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60876826"
 ---
 # <a name="touch-manipulations"></a>Manipulações de toque
 
@@ -273,7 +273,7 @@ O **girar Bitmap** página permite que você use dois dedos de rotação ou dime
 
 A primeira grande diferença nesse programa é a lógica de teste de clique. Os programas anteriores usados os `Contains` método de `SKRect` para determinar se o ponto de toque é dentro do retângulo transformado que corresponde ao bitmap. Mas como o usuário manipula o bitmap, o bitmap pode ser girado, e `SKRect` corretamente não pode representar um retângulo girado. Você talvez tenha medo de que a lógica do teste de clique precisa implementar da geometria analítica complexa em vez disso, nesse caso.
 
-No entanto, um atalho está disponível: determinar se um ponto está dentro dos limites de um retângulo transformado é igual a determinar se um ponto transformado inverso se encontra dentro dos limites do retângulo não transformado. Que é um cálculo muito mais fácil, e a lógica pode continuar a usar o conveniente `Contains` método:
+No entanto, um atalho está disponível: Determinar se um ponto está dentro dos limites de um retângulo transformado é igual a determinar se um ponto transformado inverso se encontra dentro dos limites do retângulo não transformado. Que é um cálculo muito mais fácil, e a lógica pode continuar a usar o conveniente `Contains` método:
 
 ```csharp
 public partial class BitmapRotationPage : ContentPage

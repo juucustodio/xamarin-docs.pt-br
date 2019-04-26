@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
 ms.openlocfilehash: a9975eeec445ac59dc71a44a1156804835795982
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61032092"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introdução ao macOS Mojave
 

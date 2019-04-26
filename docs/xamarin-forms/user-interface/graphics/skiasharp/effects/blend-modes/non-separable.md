@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61162244"
 ---
 # <a name="the-non-separable-blend-modes"></a>Os modos de mesclagem não separáveis
 
@@ -28,7 +28,7 @@ Para entender os modos de mesclagem não separáveis, é necessário tratar os p
 
 O modelo de cor HSL foi discutido no artigo [ **a integração com o xamarin. Forms** ](../../basics/integration.md) e um programa de exemplo neste artigo permite experimentação com cores HSL. Você pode criar uma `SKColor` valor com os valores de matiz, saturação e luminosidade com estático [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) método.
 
-O matiz representa o comprimento de onda dominante da cor. Valores de Matiz variam de 0 a 360 e percorrer os primários aditivos e subtrativas: vermelho é o valor 0, amarelo é 60, verde é 120, ciano é 180, azul é 240, magenta é de 300 e o ciclo de volta para vermelho no 360.
+O matiz representa o comprimento de onda dominante da cor. Valores de Matiz variam de 0 a 360 e percorrer os primários aditivos e subtrativas: Vermelho é o valor 0, amarelo é 60, verde é 120, ciano é 180, azul é 240, magenta é de 300 e o ciclo de volta para vermelho no 360.
 
 Se não houver nenhuma cor dominante &mdash; por exemplo, a cor é em branco ou preto ou um tom de cinza &mdash; em seguida, o matiz é indefinido e geralmente é definido como 0. 
 
@@ -198,7 +198,7 @@ O `SKBlendModes.Color` modo blend retém a luminosidade do destino, mas usa o ma
 
 Você verá um aplicativo desse modo blend em breve.
 
-Por fim, o `SKBlendModes.Luminosity` modo de mesclagem é o oposto da `SKBlendModes.Color`. Ele retém o matiz e a saturação do destino, mas usa a luminosidade da fonte de. O `Luminosity` modo de mesclagem é mais misterioso do lote: os controles deslizantes a matiz e a saturação afetam a imagem, mas mesmo a luminosidade médio, a imagem não é diferente:
+Por fim, o `SKBlendModes.Luminosity` modo de mesclagem é o oposto da `SKBlendModes.Color`. Ele retém o matiz e a saturação do destino, mas usa a luminosidade da fonte de. O `Luminosity` modo de mesclagem é mais misterioso do lote: Os controles deslizantes de matiz e a saturação afetam a imagem, mas mesmo a luminosidade médio, a imagem não é diferente:
 
 [![Modos de mesclagem não separáveis - luminosidade](non-separable-images/NonSeparableBlendModes-Luminosity.png "modos de mesclagem não separáveis - luminosidade")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 

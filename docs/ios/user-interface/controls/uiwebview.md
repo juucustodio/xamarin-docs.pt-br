@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 9adf514e4fc510617e3f4d801569935ee4a03f25
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093742"
 ---
 # <a name="web-views-in-xamarinios"></a>Modos de exibição da Web no xamarin. IOS
 
@@ -119,7 +119,7 @@ Navegar usuários para longe de seu aplicativo para o Safari deve sempre ser nor
 
 melhorias do iOS 9 é permitir que o usuário retornar facilmente a seu aplicativo por meio de um botão Voltar fornecido no canto superior esquerdo da página Safari.
 
-## <a name="app-transport-security"></a>Segurança de transporte de aplicativo
+## <a name="app-transport-security"></a>Segurança do transporte de aplicativo
 
 Segurança de transporte de aplicativo, ou *ATS* foi introduzido pela Apple no iOS 9 para garantir que todas as comunicações de internet sigam para proteger as práticas recomendadas de conexão.
 

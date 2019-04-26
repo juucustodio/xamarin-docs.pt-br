@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61038353"
 ---
 # <a name="viewpager-with-fragments"></a>ViewPager com fragmentos
 
@@ -29,7 +29,7 @@ Este guia não abrange os conceitos básicos de fragmentos &ndash; se você aind
 
 ## <a name="start-an-app-project"></a>Iniciar um projeto de aplicativo
 
-Criar um novo projeto Android chamado **FlashCardPager**. Em seguida, inicie o Gerenciador de pacotes do NuGet (para obter mais informações sobre como instalar pacotes do NuGet, consulte [instruções passo a passo: incluindo o NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Localizar e instalar o **Xamarin.Android.Support.v4** pacote conforme explicado nas [Viewpager e modos de exibição](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
+Criar um novo projeto Android chamado **FlashCardPager**. Em seguida, inicie o Gerenciador de pacotes do NuGet (para obter mais informações sobre como instalar pacotes do NuGet, consulte [passo a passo: Incluir um NuGet no projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Localizar e instalar o **Xamarin.Android.Support.v4** pacote conforme explicado nas [Viewpager e modos de exibição](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
 
 
 

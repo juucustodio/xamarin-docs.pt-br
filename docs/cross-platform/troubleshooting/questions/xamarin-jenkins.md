@@ -8,11 +8,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 06/05/2018
 ms.openlocfilehash: c2e409b796d5ef2525079e02aafdd0c6e8db5d81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158930"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Por que o Jenkins não é suportado pela Microsoft?
 
@@ -32,7 +32,7 @@ Embora conforme observado acima Jenkins problemas não são suportados diretamen
 
 A mensagem de erro para esse problema tem esta aparência:
 
-> Erro XA5205: não foi possível encontrar o diretório do SDK do Android. Defina via /p:AndroidSdkDirectory
+> Erro XA5205: Não foi possível encontrar o diretório do SDK do Android. Defina via /p:AndroidSdkDirectory
 
 Suas opções para definir o local do SDK podem variar, dependendo do plugin Jenkins Android exatamente que você está usando; é um bom lugar para procurar como configurar isso no guia de plug-in. Por exemplo: o [plug-in do emulador do Android](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) procura automaticamente o SDK, mas se ele não é possível encontrá-lo; o local também pode ser definido por meio da página de configuração do sistema Jenkins para esse plug-in. 
 
@@ -47,10 +47,10 @@ Suas opções para definir o local do SDK podem variar, dependendo do plugin Jen
 ### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins relata uma licença Xamarin inválida
 As mensagens de erro para esse problema normalmente são algo como
 
-> Erro XA9008: construção de linha de comando requer uma licença comercial
+> Erro XA9008: Construção de linha de comando requer uma licença comercial
 
 ou
 
-> Erro: A Starter Edition do xamarin. IOS não dá suporte à construção fora do Xamarin Studio 
+> Erro: O Starter Edition do xamarin. IOS não dá suporte a construção fora do Xamarin Studio 
 
 A causa mais comum desse cenário é o uso do Jenkins, fazendo logon com uma conta de usuário não está associada com a licença do Xamarin. É a maneira mais simples de resolver isso instalar o Jenkins como um aplicativo diretamente por meio da conta de usuário. Esse processo e algumas considerações adicionais são descritas aqui: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)

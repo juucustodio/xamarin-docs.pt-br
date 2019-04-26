@@ -1,5 +1,5 @@
 ---
-title: Xamarin. Android vs. Área de trabalho - as diferenças no tempo de execução Mono
+title: Xamarin.Android vs. Área de trabalho - as diferenças no tempo de execução Mono
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 115d715214d7af3174c41d9d82e894ce429dab42
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953338"
 ---
 # <a name="limitations"></a>Limitações
 
@@ -159,5 +159,5 @@ Temos algumas classes que não se aplicam a essa limitação, mas eles são ajus
 - [Callable Wrappers do Android](~/android/platform/java-integration/android-callable-wrappers.md)
 - [Trabalhar com JNI](~/android/platform/java-integration/working-with-jni.md)
 - [ExportAttribute](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute/)
-- [Ampliação](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/)
+- [SuperString](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/)
 - [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)

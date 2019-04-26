@@ -1,5 +1,5 @@
 ---
-title: 'Erro IBTool: Não foi possível concluir a operação.'
+title: 'Erro de IBTool: Não foi possível concluir a operação.'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A804EBC4-2BBF-4A98-A4E8-A455DB2E8A17
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: c2f727b55b21dc3bd976f0b41c71b794841cfca4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421990"
 ---
-# <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Erro IBTool: Não foi possível concluir a operação.
+# <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Erro de IBTool: Não foi possível concluir a operação.
 
 ## <a name="fixed-in-xcode-611"></a>Corrigido no Xcode 6.1.1
 

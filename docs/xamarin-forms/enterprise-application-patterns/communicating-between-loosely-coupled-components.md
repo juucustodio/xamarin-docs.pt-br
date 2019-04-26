@@ -1,5 +1,5 @@
 ---
-title: Comunicação entre fracamente acoplados componentes
+title: Comunicação entre componentes flexíveis
 description: 'Este capítulo explica como o aplicativo móvel do eShopOnContainers implementa a publicar-padrão, permitindo a comunicação baseada em mensagens entre os componentes são inconvenientes para vincular as referências de objeto e o tipo de assinatura '
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381863"
 ---
-# <a name="communicating-between-loosely-coupled-components"></a>Comunicação entre fracamente acoplados componentes
+# <a name="communicating-between-loosely-coupled-components"></a>Comunicação entre componentes flexíveis
 
 Publicar-assinar padrão é um padrão de mensagens na qual os editores enviam mensagens sem ter conhecimento de quaisquer destinatários, conhecido como assinantes. Da mesma forma, assinantes escutam mensagens específicas, sem a necessidade de Conhecimento de quaisquer Publicadores.
 
@@ -28,7 +28,7 @@ O [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe fornece a pub
 
 ![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Publicar-assinar funcionalidade de multicast")
 
-**Figura 4-1:** publicar-assinar funcionalidade de Multicast
+**Figura 4-1:** Publicar-assinar funcionalidade de multicast
 
 Editores enviam mensagens usando o [ `MessagingCenter.Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) método, enquanto os assinantes escutam mensagens usando o [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) método. Além disso, os assinantes podem também cancelar a assinatura de assinaturas de mensagem, se necessário, com o [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) método.
 
@@ -55,16 +55,16 @@ Para obter mais informações sobre [ `MessagingCenter` ](xref:Xamarin.Forms.Mes
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) as mensagens são cadeias de caracteres que são usadas para identificar mensagens. O exemplo de código a seguir mostra as mensagens definidas dentro do aplicativo móvel do eShopOnContainers:
 
 ```csharp
-public class MessengerKeys  
+public class MessengerKeys  
 {  
-    // Add product to basket  
-    public const string AddProduct = "AddProduct";  
+    // Add product to basket  
+    public const string AddProduct = "AddProduct";  
 
-    // Filter  
-    public const string Filter = "Filter";  
+    // Filter  
+    public const string Filter = "Filter";  
 
-    // Change selected Tab programmatically  
-    public const string ChangeTab = "ChangeTab";  
+    // Change selected Tab programmatically  
+    public const string ChangeTab = "ChangeTab";  
 }
 ```
 
@@ -75,7 +75,7 @@ Neste exemplo, as mensagens são definidas usando constantes. A vantagem dessa a
 Os editores notificam assinantes de uma mensagem com um dos [ `MessagingCenter.Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) sobrecargas. O exemplo de código a seguir demonstra a publicação de `AddProduct` mensagem:
 
 ```csharp
-MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
 ```
 
 Neste exemplo, o [ `Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) método especifica três argumentos:
@@ -94,12 +94,12 @@ O [ `Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) método publicará a mens
 Os assinantes podem se registrar para receber uma mensagem usando um dos [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) sobrecargas. O exemplo de código a seguir demonstra como o aplicativo móvel do eShopOnContainers assina e processa, o `AddProduct` mensagem:
 
 ```csharp
-MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
-    this, MessageKeys.AddProduct, async (sender, arg) =>  
+MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
+    this, MessageKeys.AddProduct, async (sender, arg) =>  
 {  
-    BadgeCount++;  
+    BadgeCount++;  
 
-    await AddCatalogItemAsync(arg);  
+    await AddCatalogItemAsync(arg);  
 });
 ```
 
@@ -115,7 +115,7 @@ Um assinante talvez não precise lidar com todas as instâncias de uma mensagem 
 Os assinantes podem cancelar a assinatura de mensagens que não deseja receber. Isso é feito com um dos [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sobrecargas, como demonstrado no exemplo de código a seguir:
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
 ```
 
 Neste exemplo, o [ `Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sintaxe de método reflete os argumentos de tipo especificados ao inscrever-se para receber o `AddProduct` mensagem.

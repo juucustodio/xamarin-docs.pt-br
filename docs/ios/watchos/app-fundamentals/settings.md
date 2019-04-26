@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 36164e1e9f92b5a5520d10f769f3953cfa2ceb85
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61412776"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Trabalhando com o watchOS configurações no Xamarin
 

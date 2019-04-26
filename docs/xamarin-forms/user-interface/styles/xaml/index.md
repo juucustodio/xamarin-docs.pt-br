@@ -1,5 +1,5 @@
 ---
-title: Aplicar estilo a aplicativos xamarin. Forms usando os estilos XAML
+title: Aplicar estilo a aplicativos do Xamarin.Forms usando os estilos do XAML
 description: Este guia explica como personalizar a aparência de um aplicativo xamarin. Forms usando estilos XAML.
 ms.prod: xamarin
 ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
 ms.openlocfilehash: ec41955ac15ab23579a5e63b9e17eed61a74e86f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55291980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61393721"
 ---
-# <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Aplicar estilo a aplicativos xamarin. Forms usando os estilos XAML
+# <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Aplicar estilo a aplicativos do Xamarin.Forms usando os estilos do XAML
 
 ## <a name="introductionintroductionmd"></a>[Introdução](introduction.md)
 
@@ -44,6 +44,6 @@ Estilos não responder a alterações de propriedade e permanecem inalterados du
 
 Xamarin. Forms inclui seis *dinâmica* estilos, conhecidos como *dispositivo* estilos, o [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe. Todos os seis estilos podem ser aplicados a [ `Label` ](xref:Xamarin.Forms.Label) somente instâncias.
 
-## <a name="style-classesstyle-classmd"></a>[Classes de estilo](style-class.md)
+## <a name="style-classesstyle-classmd"></a>[Classes de estilos](style-class.md)
 
 Classes de estilo do xamarin. Forms permitem que vários estilos a ser aplicado a um controle, sem recorrer à herança de estilo.

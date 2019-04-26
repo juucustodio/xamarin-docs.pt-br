@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: f59aa92f5f4f013a2d14b1667f4d0679a7ba82b3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384784"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Pontos e traços em SkiaSharp
 
@@ -26,7 +26,7 @@ SkiaSharp permite desenhar linhas que não sejam sólidos, mas em vez disso, sã
 
 Você fazer isso com uma *efeito de caminho*, que é uma instância das [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) classe definida como o [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) propriedade do `SKPaint`. Você pode criar um caminho de efeito (ou combinar efeitos de caminho) usando um dos métodos de criação estáticos definidos por `SKPathEffect`. (`SKPathEffect` é um dos efeitos de seis com suporte pelo SkiaSharp; os outros são descritos na seção [ **SkiaSharp efeito**](../effects/index.md).)
 
-Para desenhar linhas tracejadas ou pontilhadas, use o [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) método estático. Há dois argumentos: primeiro, isso é uma matriz de `float` valores que indicam os comprimentos dos pontos e traços e o comprimento dos espaços entre elas. Essa matriz deve ter um número par de elementos, e deve haver pelo menos dois elementos. (Pode haver zero elementos na matriz, mas que resulte em uma linha sólida.) Se houver dois elementos, a primeira é o comprimento de um ponto ou traço e o segundo é o comprimento da lacuna antes do próximo ponto ou traço. Se há mais de dois elementos, eles são nesta ordem: traço comprimento, comprimento da lacuna, comprimento do traço, tamanho do intervalo e assim por diante.
+Para desenhar linhas tracejadas ou pontilhadas, use o [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) método estático. Há dois argumentos: Primeiro, isso é uma matriz de `float` valores que indicam os comprimentos dos pontos e traços e o comprimento dos espaços entre elas. Essa matriz deve ter um número par de elementos, e deve haver pelo menos dois elementos. (Pode haver zero elementos na matriz, mas que resulte em uma linha sólida.) Se houver dois elementos, a primeira é o comprimento de um ponto ou traço e o segundo é o comprimento da lacuna antes do próximo ponto ou traço. Se há mais de dois elementos, eles são nesta ordem: traço comprimento, comprimento da lacuna, comprimento do traço, tamanho do intervalo e assim por diante.
 
 Em geral, você vai querer fazer os comprimentos de traço e gap um múltiplo da largura do traço. Se a largura do traço é de 10 pixels, por exemplo, em seguida, a matriz {10, 10} desenhará uma linha pontilhada onde as pontos e os espaços são o mesmo tamanho que a espessura do traço.
 

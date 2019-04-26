@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/21/2018
 ms.openlocfilehash: 2e09e89fe17956efaef910638e827b69a5795bc0
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60857470"
 ---
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas de personalizado de Namespace XAML no xamarin. Forms
 
@@ -144,5 +144,5 @@ O resultado é que dois `CircleButton` instâncias são exibidas:
 ## <a name="related-links"></a>Links relacionados
 
 - [Esquemas personalizados de Namespace (amostra)](https://developer.xamarin.com/samples/xamarin-forms/XAML/CustomNamespaceSchemas/)
-- [Recomendado prefixos de Namespace XAML](custom-prefix.md)
+- [Prefixos recomendados de Namespace de XAML](custom-prefix.md)
 - [Namespaces XAML no xamarin. Forms](namespaces.md)

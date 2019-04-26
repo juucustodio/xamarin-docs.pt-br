@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: efb88ada8a4b4c36dd49de137eb64acd63552968
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382330"
 ---
 # <a name="user-interfaces-in-ios"></a>Interfaces do usuário no iOS
 
@@ -26,7 +26,7 @@ Partes relacionadas de grupos de Apple de funcionalidade em "estruturas", que co
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[Opções de layout](~/ios/user-interface/ios-ui/layout-options.md)
 
-Há dois mecanismos diferentes para controlar o layout quando um modo de exibição é redimensionado ou girado: dimensionamento automático e o layout automático.
+Há dois mecanismos diferentes para controlar o layout quando um modo de exibição é redimensionado ou girado: Dimensionamento automático e o layout automático.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Fornecer comentários hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 

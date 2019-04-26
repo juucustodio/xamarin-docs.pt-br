@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 7696c820ab6fdf19bdef46db31061fb5914e6cf4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60880666"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Controle de Menu (Force Touch) no Xamarin do watchOS
 
@@ -40,7 +40,7 @@ Até o menu de quatro itens podem ser adicionados ao controle de menu. Eles pode
 
 - Título, e
 - Imagem personalizada, ou
-- Uma imagem do sistema: aceitar, adicionar, bloco, recusar, Info, talvez, mais, mudo, Pause, Play, repetir, retomar, compartilhamento, em ordem aleatória, alto-falante, Lixeira.
+- Uma imagem do sistema: Aceitar, adicionar, bloco, recusar, Info, talvez, mais, mudo, Pause, Play, repetir, retomar, compartilhamento, em ordem aleatória, alto-falante, Lixeira.
 
 Criar uma `Action` selecionando o **eventos** seção os **propriedades** pad e digitando o nome para o método de ação. Um método parcial será criado no código, que pode ser implementado na classe do controlador de interface, como este:
 

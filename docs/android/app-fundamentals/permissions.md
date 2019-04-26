@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
 ms.openlocfilehash: 204dd903586164691d068a956e741c406df10b36
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61026882"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permissões no xamarin. Android
 

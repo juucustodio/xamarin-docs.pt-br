@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
 ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946732"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar os parâmetros de memória do Java para o designer do Android
 
@@ -24,7 +24,7 @@ Começando com o Xamarin Studio 5.7.2.7 (e posterior, o Visual Studio para Mac) 
 
 Os seguintes nomes de propriedade correspondem do java indicado [opção de linha de comando](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
 
-- **AndroidDesignerJavaRendererMinMemory** Xms -
+- **AndroidDesignerJavaRendererMinMemory** -Xms
 
 - **AndroidDesignerJavaRendererMaxMemory** -Xmx
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
 ms.openlocfilehash: b3dd300d28e0cf27cc1b5ebea59a68d57145fd61
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61359903"
 ---
 # <a name="visualelement-elevation-on-android"></a>Elevação VisualElement no Android
 
@@ -37,7 +37,7 @@ Este específicos da plataforma Android é usado para controlar a ordem Z, de el
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido de C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

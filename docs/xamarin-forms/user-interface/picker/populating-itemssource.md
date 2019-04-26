@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
 ms.openlocfilehash: 2c7daca80a207d0c060fc3a867b1eda03dd65258
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61082863"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Definindo a propriedade ItemsSource de um seletor
 
@@ -47,7 +47,7 @@ Um [ `Picker` ](xref:Xamarin.Forms.Picker) podem ser populados com dados, defini
 > [!NOTE]
 > Observe que o `x:Array` elemento requer um `Type` atributo que indica o tipo dos itens na matriz.
 
-O código c# equivalente é mostrado abaixo:
+O código C# equivalente é mostrado abaixo:
 
 ```csharp
 var monkeyList = new List<string>();
@@ -76,7 +76,7 @@ O exemplo de código a seguir mostra como recuperar o [ `SelectedItem` ](xref:Xa
 <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
 ```
 
-O código c# equivalente é mostrado abaixo:
+O código C# equivalente é mostrado abaixo:
 
 ```csharp
 var monkeyNameLabel = new Label();
@@ -114,7 +114,7 @@ Um [ `Picker` ](xref:Xamarin.Forms.Picker) pode ser também preenchido com dados
         ItemDisplayBinding="{Binding Name}" />
 ```
 
-O código c# equivalente é mostrado abaixo:
+O código C# equivalente é mostrado abaixo:
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
@@ -152,7 +152,7 @@ Associação de dados pode ser usada para definir um objeto com o [ `SelectedIte
 <Label Text="{Binding SelectedMonkey.Details}" ... />
 ```
 
-O código c# equivalente é mostrado abaixo:
+O código C# equivalente é mostrado abaixo:
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };

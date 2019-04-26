@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
 ms.openlocfilehash: ca87e5997fa05e014be56f85087ce3e7ffe1ab12
-ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250734"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilo a aplicativos xamarin. Forms usando folhas de estilo em cascata (CSS)
 

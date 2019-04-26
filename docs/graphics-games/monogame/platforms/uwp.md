@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 9f39580d282defed354f3b9e5cbe4eb1cdec4796
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61161061"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Criar um projeto UWP MonoGame
 

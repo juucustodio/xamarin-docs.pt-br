@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
 ms.openlocfilehash: 2c3bddc89348b46c9bba277580071cb8ac3d6943
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58678048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61434254"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementar SiriKit no xamarin. IOS
 

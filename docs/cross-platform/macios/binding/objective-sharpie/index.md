@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
 ms.openlocfilehash: 53fcbbc408ae147405a3285d9391457051d6e16e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261188"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Criando associações com objetivo Sharpie
 
@@ -44,10 +44,10 @@ No entanto, o objetivo Sharpie é uma ferramenta muito avançada que exige conhe
 ## <a name="related-links"></a>Links relacionados
 
 - [Download do objetivo Sharpie](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
-- [Passo a passo: Associando uma biblioteca Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Passo a passo: Associação de uma biblioteca Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Associação de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Detalhes da associação](~/cross-platform/macios/binding/overview.md)
 - [Guia de referência de tipos de associação](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin para desenvolvedores de Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Xamarin University curso: Criação de uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
 - [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
 ms.openlocfilehash: 7e569aaddef912d9534e98f2f987ad5dfca8a5a6
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61167915"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Modos de exibição HTML de construção usando modelos do Razor
 
@@ -86,7 +86,7 @@ O diretório base é especificado como `NSBundle.MainBundle.BundleUrl` que refer
 
 A ação de compilação para todos os arquivos de conteúdo estáticos deve ser **BundleResource**:
 
- ![ação de build do projeto do iOS: BundleResource](images/image2_250x131.png)
+ ![ação de build do projeto iOS: BundleResource](images/image2_250x131.png)
 
 #### <a name="android"></a>Android
 

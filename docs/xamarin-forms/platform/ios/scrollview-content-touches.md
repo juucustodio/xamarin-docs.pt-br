@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 7f6ec13b1b21a1526bb53f260c4d80e881e7feba
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60952219"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>ScrollView toques de conteúdo no iOS
 

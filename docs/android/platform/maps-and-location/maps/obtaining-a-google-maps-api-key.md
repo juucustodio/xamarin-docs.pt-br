@@ -1,5 +1,5 @@
 ---
-title: Obter chave de API um Google Maps
+title: Obter uma chave de API do Google Maps
 description: Como obter uma chave de API do Google Maps para adicionar mapas a funcionalidade ao seu aplicativo.
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
 ms.openlocfilehash: bfeb9d8fa2a0b5a9b18ab8266500586e2e3b6c68
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155265"
 ---
-# <a name="obtaining-a-google-maps-api-key"></a>Obter chave de API um Google Maps
+# <a name="obtaining-a-google-maps-api-key"></a>Obter uma chave de API do Google Maps
 
 Para usar a funcionalidade do Google Maps no Android, você precisa se registrar para uma chave de API de mapas com o Google. Enquanto isso, você verá apenas uma grade em branco em vez de um mapa em seus aplicativos. Você deve obter uma chave de API do Google Maps Android v2 - chaves do v1 de chave de API do Google Maps Android mais antigos não funcionarão.
 
@@ -38,7 +38,7 @@ Por padrão, o repositório de chaves que é usado para assinar as versões de d
 
 Informações sobre um repositório de chaves são obtidas executando o comando `keytool` no JDK. Essa ferramenta normalmente é encontrada no diretório bin do Java:
 
-**C:\\arquivos de programas (x86)\\Java\\jdk [versão]\\bin\\keytool.exe**
+**C:\\Program Files (x86)\\Java\\jdk[VERSION]\\bin\\keytool.exe**
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

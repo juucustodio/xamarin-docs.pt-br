@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 835dccaea79467582f56fd4b8b6b3b8f42acd632
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392311"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Atualizando um aplicativo xamarin. IOS em segundo plano
 
@@ -162,4 +162,4 @@ No entanto, o APNs permitirá notificações silenciosas "se aproveitam" junto c
 
 Nesta seção, abordamos as várias opções para atualizar conteúdo em segundo plano para executar tarefas que não se encaixam em uma categoria de plano de fundo necessário. Agora, vamos ver algumas dessas APIs em ação.
 
- [Em seguida: Parte 4 - instruções passo a passo de Backgrounding do iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+ [Avançar: Parte 4 - instruções passo a passo de Backgrounding do iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)

@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 4ab98d59bc74672f9531f4dbd3c33a6270582612
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "33920800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386252"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introdução ao desenvolvimento de jogos com MonoGame
 
@@ -45,7 +45,7 @@ Os desenvolvedores familiarizados com o XNA já estará familiarizados com a sin
 
 - [Projeto de MonoGame WalkingGame (amostra)](https://developer.xamarin.com/samples/mobile/WalkingGameMG/)
 - [Fontes XNB iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
-- [XNB fontes Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
+- [XNB Fonts Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
 - [MonoGame Android no NuGet](https://www.nuget.org/packages/MonoGame.Framework.Android/)
 - [MonoGame iOS no NuGet](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [Documentação do MonoGame API](http://www.monogame.net/documentation/?page=main)
