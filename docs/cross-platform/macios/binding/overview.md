@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: d29239d986ebfe153381915dbe0f4bfbbe738007
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ec173c0ed7881439ecbe2b5cf83c8f5484c7e5aa
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199079"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977621"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Visão geral de associações do Objective-C
 
@@ -186,8 +186,3 @@ namespace Example.Binding {
     }
 }
 ```
-
-## <a name="related-links"></a>Links relacionados
-
-- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

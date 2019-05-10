@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c4f7f1e9702fb2ee0f5525343a52e3aacd85d68c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e820a0c208907a95dda4a50427bb4dac27b88964
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61200273"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977899"
 ---
 # <a name="advanced-manual-real-world-example"></a>Exemplo do mundo Real (manual) avançado
 
@@ -137,8 +137,3 @@ Esses são básica no primeiro passo do objetivo Sharpie da associação e, em a
 Depois que as atualizações forem concluídas, esses dois arquivos agora podem ser adicionados a um projeto de associação no Visual Studio para Mac ou ser passados diretamente para o `btouch` ou `bmac` ferramentas para produzir a ligação final.
 
 Para obter uma descrição completa do processo de associação, consulte nosso [instruções passo a passo completo](~/ios/platform/binding-objective-c/walkthrough.md).
-
-## <a name="related-links"></a>Links relacionados
-
-- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

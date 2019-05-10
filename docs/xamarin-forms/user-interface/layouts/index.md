@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 5bd232293c979566faed2856de7287903da94054
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 661f27b90882234ddc629ac280690d534aca499d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61300382"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977790"
 ---
 # <a name="layouts-in-xamarinforms"></a>Layouts no Xamarin.Forms
 
@@ -23,7 +23,7 @@ Xamarin.Forms tem vários layouts e recursos para organizar o conteúdo na tela.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Layouts do Xamarin.Forms, por [Xamarin University](https://university.xamarin.com/)**
+**Vídeo de Layouts do xamarin. Forms**
 
 Cada controle de layout é descrito abaixo, bem como detalhes sobre como lidar com alterações de orientação de tela:
 

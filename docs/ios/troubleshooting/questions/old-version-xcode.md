@@ -9,7 +9,7 @@ ms.author: chhamo
 ms.date: 04/16/2019
 ms.openlocfilehash: 7cbc14e0a912fe9c55ff672796e839a8dcdfd9b5
 ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "64347113"
@@ -76,7 +76,7 @@ Há várias áreas potenciais que podem dar errado incluindo:
 
 Apple reserva o direito a atualizações para as regras de envios de loja de aplicativos a qualquer momento. Essas alterações de regra apenas algumas vezes são anunciadas com antecedência. Algumas dessas alterações exigem alterações para dar suporte, o que exigem um componente do xamarin. IOS atualizado de ferramentas.
 
-Além das alterações de regra, a Apple geralmente adiciona validações adicionais para aplicativos enviados ou reforça as existentes. Alguns desses exigem alterações em nossas ferramentas (por exemplo, uma nova lista negra símbolos). Muitos deles são encontrados pela primeira vez por clientes para enviar, pois não há nenhum anúncio (ou lista) das regras.
+Além das alterações de regra, a Apple geralmente adiciona validações adicionais para aplicativos enviados ou reforça as existentes. Alguns desses exigem alterações em nossas ferramentas (por exemplo, uma nova lista de bloqueios de símbolos). Muitos deles são encontrados pela primeira vez por clientes para enviar, pois não há nenhum anúncio (ou lista) das regras.
 
 ## <a name="summary"></a>Resumo
 

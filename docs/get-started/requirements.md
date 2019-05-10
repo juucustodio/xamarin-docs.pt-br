@@ -6,13 +6,13 @@ ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/01/2019
+ms.openlocfilehash: 89afb106320ce77e86a66f2c78bd6e32de8c38f3
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61189683"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64986975"
 ---
 # <a name="xamarinforms-requirements"></a>Requisitos do Xamarin.Forms
 
@@ -25,10 +25,10 @@ Consulte o artigo de [Instalação](installation/index.md) para obter uma visão
 Aplicativos Xamarin.Forms podem ser gravados para os seguintes sistemas operacionais:
 
 - iOS 8 ou superior
-- Android 4.4 (API 19) ou superior ([mais detalhes](#android))
+- Android 5.0 (API 21) ou superior ([mais detalhes](#android))
 - Plataforma Universal do Windows do Windows 10 ([mais detalhes](#windows10))
 
-Presume-se que os desenvolvedores estejam familiarizados com o [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) e com [Projetos Compartilhados](~/cross-platform/app-fundamentals/shared-projects.md).
+Supõe-se que os desenvolvedores têm familiaridade com [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
 
 ### <a name="additional-platform-support"></a>Suporte adicional da plataforma
 
@@ -38,13 +38,6 @@ O status dessas plataformas está disponível no [GitHub do Xamarin.Forms](https
 - macOS
 - GTK#
 - WPF
-
-### <a name="platforms-from-earlier-versions"></a>Plataformas de versões anteriores
-
-Não há suporte para uso do Xamarin.Forms 3.0 nas seguintes plataformas:
-
-- *WinRT do Windows 8.1/Windows Phone 8.1*
-- *Windows Phone 8 Silverlight*
 
 ### <a name="android"></a>Android
 
@@ -98,3 +91,10 @@ O desenvolvimento de aplicativos Xamarin.Forms para UWP requer:
 - [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 
 Você pode também [adicionar um aplicativo UWP (Plataforma Universal do Windows)](~/xamarin-forms/platform/windows/installation/index.md) a uma solução Xamarin.Forms existente a qualquer momento.
+
+## <a name="deprecated-platforms"></a>Plataformas obsoletas
+
+Não há suporte para essas plataformas ao usar o xamarin. Forms 3.0 ou mais recente:
+
+- *WinRT do Windows 8.1/Windows Phone 8.1*
+- *Windows Phone 8 Silverlight*

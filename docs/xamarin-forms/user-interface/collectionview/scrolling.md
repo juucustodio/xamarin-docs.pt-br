@@ -1,27 +1,24 @@
 ---
-title: Rolar um Item na exibição
+title: Rolagem de CollectionView de xamarin. Forms
 description: Quando um dedo do usuário para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens são totalmente exibidas. Além disso, o CollectionView define dois métodos de ScrollTo, que rolagem programaticamente os itens na exibição.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: da7f379076b8e193deddc99e9004f051ba006cbb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367521"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048171"
 ---
-# <a name="scroll-an-item-into-view"></a>Rolar um Item na exibição
+# <a name="xamarinforms-collectionview-scrolling"></a>Rolagem de CollectionView de xamarin. Forms
 
-![Visualizar](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Essa API é atualmente pré-lançamento")
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> O `CollectionView` atualmente é uma visualização e não tem algumas das suas funcionalidades planejada. Além disso, a API pode mudar conforme a implementação for concluída.
 
 `CollectionView` define dois `ScrollTo` métodos, que rolagem os itens na exibição. Uma das sobrecargas rola o item no índice especificado na exibição, enquanto o outro rola o item especificado na exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar a posição exata do item depois que a rolagem for concluída e se deseja animar a rolagem.
 

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
-ms.openlocfilehash: 2bef13e7f465dd213649f88deb572eb661895250
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a7dbe7ae5bb1162bcbcb58ea1b39df197b8ed916
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61245332"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977719"
 ---
 # <a name="wpf-platform-setup"></a>Instalação de plataforma do WPF
 
@@ -27,7 +27,7 @@ Antes de começar, criar uma nova solução xamarin. Forms no Visual Studio de 2
 
 > [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
 
-**Xamarin. Forms 3.0 WPF dão suporte, por [Xamarin University](https://university.xamarin.com/)**
+**Vídeo de suporte a WPF do xamarin. Forms 3.0**
 
 ## <a name="adding-a-wpf-app"></a>Adicionar um aplicativo do WPF
 

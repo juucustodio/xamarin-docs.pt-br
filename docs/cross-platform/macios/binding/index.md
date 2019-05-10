@@ -6,12 +6,12 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 3f1e1ce324e849c0c939d936eb6ee1470cf24a3b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bdf284d66539da3eca35e79d761712012674de0d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266602"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978453"
 ---
 # <a name="binding-objective-c"></a>Associação do Objective-C
 
@@ -45,17 +45,13 @@ Este artigo fornece uma explicação passo a passo de criação de um projeto de
 
 ### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[Exemplos de associação](https://github.com/mono/monotouch-bindings)
 
-Uma coleção de associações de terceiros que podem ser usados uma referência ao criar novos projetos de associação.
+Uma coleção de associações de terceiros que pode ser usado como referência ao criar novos projetos de associação.
 
 ## <a name="mac"></a>Mac
 
 Historicamente [associação de Mac](~/mac/platform/binding.md) tem sido um processo muito manual. Atualmente, há uma [baixável visualização](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) do suporte a projetos de associação do Mac para uma versão futura do Visual Studio para Mac.
 
-
-
 ## <a name="related-links"></a>Links relacionados
 
 - [iOS de associação](~/ios/platform/binding-objective-c/index.md)
 - [Mac Binding](~/mac/platform/binding.md)
-- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -1,27 +1,24 @@
 ---
-title: Exibir um EmptyView quando dados não estão disponível
+title: Xamarin. Forms CollectionView EmptyView
 description: Em CollectionView, um modo de exibição vazio pode ser especificado que fornece comentários ao usuário quando não há dados disponíveis para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou vários modos de exibição.
 ms.prod: xamarin
 ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: a430387bba83887045e5687c99d9295d4be373e4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 78e9ddcb1d9dd91dadea94016b206867ac9508e6
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019414"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048180"
 ---
-# <a name="display-an-emptyview-when-data-is-unavailable"></a>Exibir um EmptyView quando dados não estão disponível
+# <a name="xamarinforms-collectionview-emptyview"></a>Xamarin. Forms CollectionView EmptyView
 
-![Visualizar](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Essa API é atualmente pré-lançamento")
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> O `CollectionView` atualmente é uma visualização e não tem algumas das suas funcionalidades planejada. Além disso, a API pode mudar conforme a implementação for concluída.
 
 `CollectionView` Define as propriedades a seguir que podem ser usadas para fornecer comentários do usuário quando não há nenhum dado para exibir:
 
@@ -260,8 +257,80 @@ O `ToggleEmptyView` método define o `EmptyView` propriedade da `collectionView`
 
 Para obter mais informações sobre dicionários de recursos, consulte [dicionários de recursos do xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
+## <a name="choose-an-emptyviewtemplate-at-runtime"></a>Escolha um EmptyViewTemplate em tempo de execução
+
+A aparência do `EmptyView` pode ser escolhido no tempo de execução, com base em seu valor, definindo o `CollectionView.EmptyViewTemplate` propriedade para um [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) objeto:
+
+```xaml
+<ContentPage ...
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AdvancedTemplate">
+            ...
+        </DataTemplate>
+
+        <DataTemplate x:Key="BasicTemplate">
+            ...
+        </DataTemplate>
+
+        <controls:SearchTermDataTemplateSelector x:Key="SearchSelector"
+                                                 DefaultTemplate="{StaticResource AdvancedTemplate}"
+                                                 OtherTemplate="{StaticResource BasicTemplate}" />
+    </ContentPage.Resources>
+
+    <StackLayout Margin="20">
+        <SearchBar x:Name="searchBar"
+                   SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+                   Placeholder="Filter" />
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        EmptyView="{Binding Source={x:Reference searchBar}, Path=Text}"
+                        EmptyViewTemplate="{StaticResource SearchSelector}" />
+    </StackLayout>
+</ContentPage>
+```
+
+O código C# equivalente é:
+
+```csharp
+SearchBar searchBar = new SearchBar { ... };
+CollectionView collectionView = new CollectionView
+{
+    EmptyView = searchBar.Text,
+    EmptyViewTemplate = new SearchTermDataTemplateSelector { ... }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+O `EmptyView` estiver definida como o [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) propriedade e o `EmptyViewTemplate` estiver definida como um `SearchTermDataTemplateSelector` objeto.
+
+Quando o [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo `CollectionView` é filtrado para o termo de pesquisa são armazenados no [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) propriedade. Se a operação de filtragem não produz nenhum dado, o [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) escolhido pelo `SearchTermDataTemplateSelector` objeto é definido como o `EmptyViewTemplate` propriedade e exibido.
+
+A exemplo a seguir mostra o `SearchTermDataTemplateSelector` classe:
+
+```csharp
+public class SearchTermDataTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate DefaultTemplate { get; set; }
+    public DataTemplate OtherTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        string query = (string)item;
+        return query.ToLower().Equals("xamarin") ? OtherTemplate : DefaultTemplate;
+    }
+}
+```
+
+O `SearchTermTemplateSelector` classe define `DefaultTemplate` e `OtherTemplate` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) propriedades que são definidas para modelos de dados diferentes. O `OnSelectTemplate` substituir retorna `DefaultTemplate`, que exibe uma mensagem para o usuário, quando a consulta de pesquisa não for igual a "xamarin". Quando a consulta de pesquisa é igual a "xamarin", o `OnSelectTemplate` substituir retorna `OtherTemplate`, que exibe uma mensagem básica para o usuário:
+
+[![Captura de tela da seleção de modelo CollectionView runtime modo de exibição vazio, no iOS e Android](emptyview-images/datatemplateselector.png "seleção de modelo de exibição vazio de tempo de execução em um CollectionView")](emptyview-images/datatemplateselector-large.png#lightbox "modelo vazio do modo de exibição de tempo de execução seleção em um CollectionView")
+
+Para obter mais informações sobre os seletores de modelo de dados, consulte [criar um xamarin. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+
 ## <a name="related-links"></a>Links relacionados
 
 - [CollectionView (amostra)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Modelos de dados do xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Dicionários de recursos do xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Criar um DataTemplateSelector xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

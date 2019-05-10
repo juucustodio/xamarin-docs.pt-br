@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 10d62ea050296eb6d36c9861b757ca44d3a2e452
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d33dc7d789b9a21fd843cd1f7cab8d221145f492
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61026088"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978039"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>O xamarin. Forms Visual State Manager
 
@@ -712,9 +712,8 @@ Pode parecer como se o arquivo code-behind pode lidar com alterações de orient
 
 > [!VIDEO https://youtube.com/embed/qhUHbVP5mIQ]
 
-**Xamarin. Forms 3.0 Visual State Manager, por [Xamarin University](https://university.xamarin.com/)**
+**Vídeo de Gerenciador de estado Visual do xamarin. Forms 3.0**
 
 ## <a name="related-links"></a>Links relacionados
 
 - [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)
-

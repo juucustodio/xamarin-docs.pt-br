@@ -6,12 +6,12 @@ ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 51a0b81204b743824e24cfed83bd73308fa8d506
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261162"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977659"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Comandos e ferramentas de Sharpie objetivo
 
@@ -85,8 +85,3 @@ Para que possamos começar o processo de associação, precisamos obter informa�
 <span class="terminal-blue">sdk:</span> watchos2.0      <span class="terminal-green">arch:</span> armv7</pre>
 
 Acima, podemos ver que temos a `iphoneos9.1` SDK instalado na máquina e tem `arm64` suporte de arquitetura. Vamos usar esse valor para todos os exemplos nesta seção. Com essas informações em vigor, estamos prontos para analisar um arquivos de cabeçalho de biblioteca do Objective-C em inicial `ApiDefinition.cs` e `StructsAndEnums.cs` para o projeto de associação.
-
-## <a name="related-links"></a>Links relacionados
-
-- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

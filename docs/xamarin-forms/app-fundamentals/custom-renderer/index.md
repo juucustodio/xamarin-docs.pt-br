@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3a59cbb8385fe201d7eef086092c9b393a21cc71
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666328"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978131"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Renderizadores personalizados do Xamarin.Forms
 
@@ -58,8 +58,6 @@ Este artigo demonstra como criar um renderizador personalizado para um controle 
 
 Este artigo mostra como gravar renderizadores para implementar um controle personalizado `VideoPlayer` que pode reproduzir vídeos da Web, vídeos inseridos como recursos de aplicativo ou vídeos armazenados na biblioteca de vídeos no dispositivo do usuário. Várias técnicas são demonstradas, incluindo a implementação de métodos e de propriedades vinculáveis somente leitura.
 
-
 ## <a name="related-links"></a>Links relacionados
 
 - [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Renderizadores personalizados (vídeo do Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

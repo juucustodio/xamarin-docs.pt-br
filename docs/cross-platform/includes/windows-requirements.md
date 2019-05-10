@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: 090d9916206572c2d23fab24236f500b197ddc4f
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.topic: include
+ms.openlocfilehash: a8d762fca98c413d17e2aef791093aeadc0dcd59
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855362"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64987082"
 ---
 ||Recomendado|Observações|
 |---|---|---|
@@ -12,4 +13,4 @@ ms.locfileid: "58855362"
 |**Xamarin.iOS**|SDK do iOS 10 (instalado em um Mac)|Para criar projetos do iOS no Windows, é necessário:<ul><li>Visual Studio 2017 (é recomendado o Visual Studio 2019) e</li><li>um computador Mac, <a href="~/ios/get-started/installation/windows/connecting-to-mac/index.md">acessível pela rede</a> do computador Windows, que esteja em conformidade com os requisitos mínimos para executar o Xamarin no macOS.</li></ul>|
 |**Xamarin.Android**|Android 6.0 / API nível 23|Você ainda pode direcionar versões mais antigas do Android enquanto estiver usando o SDK mais recente ou pode compilar em relação a versões anteriores do SDK, se necessário.|
 |**Xamarin.Forms**||<ul><li>Aplicativos Xamarin.Forms para iOS e Android podem ser implantados nas plataformas relevantes, conforme descrito acima.</li><li>Usar o Visual Studio também significa que você pode testar aplicativos da Plataforma Universal do Windows (no Windows 10) diretamente no computador de desenvolvimento.</li></ul>|
-|**Xamarin.Mac**||Projetos Xamarin.Mac (aplicativos de área de trabalho do macOS) podem ser abertos no Visual Studio e compilados para verificar se há erros, mas aplicativos Mac não podem ser criados atualmente para a distribuição no Visual Studio. Consulte as notas de versão no <a href="https://developer.xamarin.com/releases/vs/xamarin.vs_4/xamarin.vs_4.2/#Xamarin.Mac_minimum_support.">Suporte do Xamarin.Mac</a> para obter mais informações sobre as limitações de projetos Mac no Visual Studio.|
+|**Xamarin.Mac**||Projetos Xamarin.Mac (aplicativos de área de trabalho do macOS) podem ser abertos no Visual Studio e compilados para verificar se há erros, mas aplicativos Mac não podem ser criados atualmente para a distribuição no Visual Studio.|

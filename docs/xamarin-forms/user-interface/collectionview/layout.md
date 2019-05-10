@@ -1,27 +1,24 @@
 ---
-title: Especifique o Layout do xamarin. Forms CollectionView
+title: Layout de CollectionView do xamarin. Forms
 description: Por padrão, um CollectionView exibirá seus itens em uma lista vertical. No entanto, grades e listas verticais e horizontais podem ser especificadas.
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
-ms.openlocfilehash: 8ed365ed41ac31c66d41f1a32a7a16929cdc6770
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 5543bcc93f3c38b56a4a6caa0ea23b8ccf434e1c
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367500"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048246"
 ---
-# <a name="specify-xamarinforms-collectionview-layout"></a>Especifique o Layout do xamarin. Forms CollectionView
+# <a name="xamarinforms-collectionview-layout"></a>Layout de CollectionView do xamarin. Forms
 
-![Visualizar](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Essa API é atualmente pré-lançamento")
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> O `CollectionView` atualmente é uma visualização e não tem algumas das suas funcionalidades planejada. Além disso, a API pode mudar conforme a implementação for concluída.
 
 `CollectionView` Define as seguintes propriedades que controlam o layout:
 
@@ -43,7 +40,7 @@ Esses layouts podem ser especificados definindo a `ItemsLayout` propriedade para
 - `SnapPointsAlignment`, do tipo `SnapPointsAlignment`, especifica como os pontos de alinhamento são alinhados com os itens.
 - `SnapPointsType`, do tipo `SnapPointsType`, especifica o comportamento de pontos de alinhamento durante a rolagem.
 
-Essas propriedades têm o respaldo [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser alvos de vinculações de dados. Para obter mais informações sobre pontos de alinhamento, consulte [ajustar pontos](scrolling.md#snap-points) na [rolar um Item na exibição](scrolling.md) guia.
+Essas propriedades têm o respaldo [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser alvos de vinculações de dados. Para obter mais informações sobre pontos de alinhamento, consulte [ajustar pontos](scrolling.md#snap-points) na [rolagem do xamarin. Forms CollectionView](scrolling.md) guia.
 
 O `ItemsLayoutOrientation` enumeração define os seguintes membros:
 
@@ -344,7 +341,7 @@ Por padrão, cada item em uma `CollectionView` é individualmente medido e dimen
 - `MeasureFirstItem` – somente o primeiro item é medido, com todos os itens subsequentes que está sendo fornecidos do mesmo tamanho que o primeiro item.
 
 > [!IMPORTANT]
-> O `MeasureFirstItem` estratégia de dimensionamento deve ser usado em situações em que o tamanho do item se destina a ser uniforme em todos os itens e resultará em um melhor desempenho.
+> O `MeasureFirstItem` estratégia de dimensionamento resultará em maior desempenho quando usado em situações em que o tamanho do item deve ser uniforme entre todos os itens.
 
 O exemplo de código a seguir mostra a configuração de `ItemSizingStrategy` propriedade:
 
@@ -365,8 +362,11 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
+> [!NOTE]
+> O item de estratégia de dimensionamento está atualmente apenas implementado no iOS.
+
 ## <a name="related-links"></a>Links relacionados
 
 - [CollectionView (amostra)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Localização da direita para esquerda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Rolar um Item na exibição](scrolling.md)
+- [Rolagem de CollectionView de xamarin. Forms](scrolling.md)

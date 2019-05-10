@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c8adc7ec7f717cf0004f79e3b71123d6daeaee86
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61391624"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978431"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Passo a passo: Como associar uma biblioteca Objective-C do iOS
 
@@ -734,5 +734,3 @@ Este artigo percorreu pelo processo de criação e uso de um projeto de associa�
 - [Guia de referência de tipos de associação](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin para desenvolvedores de Objective-C](~/ios/get-started/objective-c-developers/index.md)
 - [Diretrizes de design do Framework](https://msdn.microsoft.com/library/ms229042.aspx)
-- [Xamarin University curso: Compilando uma biblioteca de associações do Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University curso: Criar uma biblioteca de associações do Objective-C com objetivo Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
