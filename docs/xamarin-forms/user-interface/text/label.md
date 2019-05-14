@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 31303114ddd829b596569981b5812b91c4e95b30
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61186417"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557451"
 ---
 # <a name="xamarinforms-label"></a>Rótulo do xamarin. Forms
 
@@ -157,7 +157,7 @@ O `FormattedText` propriedade é do tipo [ `FormattedString` ](xref:Xamarin.Form
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – o tamanho da fonte para o texto no trecho.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – a cor do texto no trecho. Essa propriedade está obsoleta e foi substituída pelo `TextColor` propriedade.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -o multiplicador para aplicar a altura de linha padrão da extensão. Para obter mais informações, consulte [altura da linha](#line-height).
-- [`Text`](xref:Xamarin.Forms.Span.Text)  – o estilo a ser aplicado para o período.
+- [`Style`](xref:Xamarin.Forms.Span.Style)  – o estilo a ser aplicado para o período.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – o texto da marca span.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – a cor do texto no trecho.
 - `TextDecorations` -as decorações para aplicar ao texto no trecho. Para obter mais informações, consulte [decorações de texto](#text-decorations).

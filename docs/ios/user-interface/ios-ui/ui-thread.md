@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 6dd55f5c4316ed8f1d4f16d9e282cc2647350518
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9bde539286b69569b4928bc28b20faecee0f5209
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61245311"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557378"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabalhando com o Thread de interface do usuário no xamarin. IOS
 
@@ -61,7 +61,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-Você não precisa fazer uso isso para o restante dos exemplos neste documento, mas ele é um conceito importante a lembrar quando seu aplicativo faz solicitações de rede usa o Centro de notificação ou outros métodos que exigem um manipulador de conclusão que será executado em outro thread.
+Você não precisará usar isso para o restante dos exemplos neste documento, mas é um importante conceito a lembrar quando seu aplicativo faz solicitações de rede usa o Centro de notificação ou outros métodos que exigem um manipulador de conclusão que será executado em outro thread.
 
  <a name="Async_Await_Example" />
 

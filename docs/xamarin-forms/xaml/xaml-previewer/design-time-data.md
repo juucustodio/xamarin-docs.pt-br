@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 60074c3c1b69a57d313ad0243246ba6db93dde3d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876304"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557428"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar dados de tempo de Design com o pré-visualizador XAML
 
@@ -22,7 +22,7 @@ _Alguns layouts são difíceis de visualizar sem dados. Use estas dicas para faz
 
 Os dados são dados falsos que você definir para tornar seus controles mais fáceis de visualizar no pré-visualizador XAML do tempo de design. Para começar, adicione as seguintes linhas de código para o cabeçalho da página XAML:
 
-```csharp
+```xaml
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -32,17 +32,17 @@ Depois de adicionar os namespaces, você pode colocar `d:` na frente de qualquer
 
 Por exemplo, você pode adicionar texto a um rótulo que geralmente tem dados associados a ele.
 
-```csharp
-<Label Text={Binding Name} d:Text="Name" />
+```xaml
+<Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
 [![Dados de tempo com o texto em um rótulo de design](xaml-previewer-images/designtimedata-label-sm.png "Design um rótulo de dados com o texto de hora")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
- Neste exemplo, sem `d:Text`, pré-visualizador XAML mostraria nada para o rótulo. Em vez disso, ele mostra "Name" no qual o rótulo terá dados reais no tempo de execução.
+Neste exemplo, sem `d:Text`, pré-visualizador XAML mostraria nada para o rótulo. Em vez disso, ele mostra que "Nome"! onde o rótulo terá dados reais no tempo de execução.
 
 Você pode usar `d:` com qualquer atributo para um controle xamarin. Forms, como cores, tamanhos de fonte e espaçamento. Você pode até mesmo adicioná-lo ao próprio controle:
 
-```csharp
+```xaml
 <d:Button Text="Design Time Button" />
 ```
 
@@ -54,7 +54,7 @@ Neste exemplo, o botão aparece apenas em tempo de design. Use esse método para
 
 Você pode definir um fonte de tempo de design para imagens que está vinculada à página ou carregado na dinamicamente. Em seu projeto Android, adicione a imagem que você deseja mostrar no pré-visualizador XAML para o **recursos > Drawable** pasta. Em seu projeto do iOS, adicione a imagem para o **recursos** pasta. Em seguida, você pode mostrar essa imagem no pré-visualizador XAML em tempo de design:
 
-```csharp
+```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 [![Criar dados de tempo com imagens](xaml-previewer-images/designtimedata-image-sm.png "projetar os dados de tempo com iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
@@ -63,7 +63,7 @@ Você pode definir um fonte de tempo de design para imagens que está vinculada 
 
 ListViews são uma maneira popular para exibir dados em um aplicativo móvel. No entanto, eles são difíceis de visualizar sem dados reais. Para usar dados de tempo de design com eles, você precisará criar uma matriz de tempo de design para usar como um ItemsSource. O pré-visualizador de XAML exibe o que está na matriz na sua ListView em tempo de design.
 
-```csharp
+```xaml
 <StackLayout>
     <ListView ItemsSource="{Binding Items}">
         <d:ListView.ItemsSource>
@@ -87,8 +87,7 @@ ListViews são uma maneira popular para exibir dados em um aplicativo móvel. No
 
 Este exemplo mostrará um ListView de três TextCells no pré-visualizador XAML. Você pode alterar `x:String` para um modelo de dados existente em seu projeto.
 
-Consulte a [aplicativo de Hanselman.Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L36-L57) para obter um exemplo mais complexo.
-
+Consulte a [aplicativo de Hanselman.Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) para obter um exemplo mais complexo.
 
 ## <a name="alternative-hardcode-a-static-viewmodel"></a>Alternativa: Codificar um ViewModel estático
 

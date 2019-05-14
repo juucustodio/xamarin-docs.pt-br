@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 971effc34716596ec6be3708ac9da4e68d7bdfee
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: fb5cea018180966e914a5bce5e85cb83fbdf901d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978583"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557255"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no xamarin. IOS
 
@@ -71,7 +71,7 @@ Se eles escolherem um aplicativo de extensões, seu `UIViewController` será ins
 
 As extensões podem se comunicar com seus aplicativos de Host por meio de um [NSExtensionContext](xref:Foundation.NSExtensionContext) objeto. Algumas extensões têm operações que recebem retornos de chamada assíncronos com os resultados. Esses retornos de chamada serão executados em threads em segundo plano e a extensão deve levar isso em consideração; Por exemplo, usando [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se deseja atualizar a interface do usuário. Consulte a [comunicando-se com o aplicativo Host](#communicating-with-the-host-app) seção abaixo para obter mais detalhes.
 
-Por padrão, seus aplicativos de contêiner e extensões podem não se comunicar, apesar de que estão sendo instalados juntos. Em alguns casos, o aplicativo de contêiner é essencialmente um contêiner "envio" vazio cujo objetivo é servido depois que a extensão está instalada. No entanto, se as circunstâncias ditarem, o aplicativo de contêiner e a extensão podem compartilhar recursos de uma área comum. Além disso, uma **hoje mesmo a extensão** pode solicitar o seu aplicativo de contêiner para abrir uma URL. Esse comportamento é mostrado na [evoluir Widget de contagem regressiva](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
+Por padrão, seus aplicativos de contêiner e extensões podem não se comunicar, apesar de que estão sendo instalados juntos. Em alguns casos, o aplicativo de contêiner é essencialmente um contêiner "envio" vazio cujo objetivo é servido depois que a extensão está instalada. No entanto, se as circunstâncias ditarem, o aplicativo de contêiner e a extensão podem compartilhar recursos de uma área comum. Além disso, uma **hoje mesmo a extensão** pode solicitar o seu aplicativo de contêiner para abrir uma URL. Esse comportamento é mostrado na [Widget de contagem regressiva de evento](https://github.com/xamarin/ios-samples/tree/master/intro-to-extensions).
 
 ## <a name="creating-an-extension"></a>Criação de uma extensão
 
