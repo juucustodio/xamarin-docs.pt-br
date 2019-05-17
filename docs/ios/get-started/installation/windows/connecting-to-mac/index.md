@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: e77a5d7863428d743c536b5aa7b2bb88d12cffc0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855140"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978321"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com o Mac para desenvolvimento no Xamarin.iOS
 
@@ -247,7 +247,7 @@ Este artigo descreveu como usar o Emparelhar com Mac para conectar o Visual Stud
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Solução de problemas de conexão](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
-- [Agente de build do Xamarin Mac – Palestra rápida da Xamarin University](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Vídeo sobre o agente de build do Xamarin Mac](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introdução ao Xamarin.iOS para Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Simulador remoto de iOS para Windows](~/tools/ios-simulator/index.md)
 - [Implantação sem fio](~/ios/deploy-test/wireless-deployment.md)

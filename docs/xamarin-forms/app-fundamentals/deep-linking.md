@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e8bfb01c6f5aa22332d226b8b2768f56a2904a7d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208052"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978502"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
@@ -23,7 +23,7 @@ _A indexação de aplicativo permite que os aplicativos que seriam esquecidos ap
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
-**Vinculação profunda com o Xamarin.Forms e o Azure, por [Xamarin University](https://university.xamarin.com/)**
+**Vídeo sobre a vinculação profunda com o Xamarin.Forms e o Azure**
 
 
 A indexação de aplicativo e a vinculação profunda do Xamarin.Forms fornecem uma API para publicar metadados para indexação de aplicativo à medida que os usuários navegam pelos aplicativos. O conteúdo indexado pode ser pesquisado no Spotlight Search, na Pesquisa Google ou em uma pesquisa na Web. Tocar em um resultado de pesquisa que contém um link profundo acionará um evento que poderá ser tratado por um aplicativo. Isso normalmente é usado para navegar até a página referenciada do link profundo.

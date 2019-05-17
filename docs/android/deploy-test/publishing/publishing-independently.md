@@ -6,25 +6,24 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 04cc7a911290d3c2f92fc1bbef474822d2891b2b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d7135611c3c0a13794b1ed538d62a0788227b7bd
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114542"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977748"
 ---
 # <a name="publishing-independently"></a>Publicação Independente
 
 É possível publicar um aplicativo sem usar nenhum dos mercados Android existentes. Esta seção explicará esses outros métodos de publicação e os níveis de licenciamento do Xamarin.Android.
 
-
 ## <a name="xamarin-licensing"></a>Licenciamento do Xamarin
 
-Quatro licenças estão disponíveis para desenvolvimento, implantação e distribuição de aplicativos Xamarin.Android:
+Algumas licenças estão disponíveis para desenvolvimento, implantação e distribuição de aplicativos Xamarin.Android:
 
 -   **Comunidade do Visual Studio** &ndash; Para estudantes, pequenas equipes e desenvolvedores de SO que usam o Windows.
 
--   **Visual Studio Professional** &ndash; Para desenvolvedores individuais ou pequenas equipes (somente Windows). Esta licença oferece uma assinatura padrão ou nuvem, acesso a conteúdo adicional da Xamarin University e sem restrições de uso.
+-   **Visual Studio Professional** &ndash; Para desenvolvedores individuais ou pequenas equipes (somente Windows). Esta licença oferece uma assinatura padrão ou de nuvem e nenhuma restrição de uso.
 
 -   **Visual Studio Enterprise** &ndash; Para equipes de qualquer tamanho (somente Windows). Esta licença inclui recursos da empresa, uma assinatura padrão ou de nuvem.
 

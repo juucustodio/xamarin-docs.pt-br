@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: cfc4ecc5bf7ebc5e4c4dae8094fe3eb4ece34068
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112489"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978530"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solução de problemas de conexão de um host de build do Xamarin.iOS
 
@@ -124,17 +124,17 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
 
 Causas conhecidas:
 
-- **Limitação** – este erro pode ocorrer ao tentar fazer logon no host de build usando o _Nome Completo_ da conta, se o nome incluir um caractere acentuado. Esta é uma limitação da [Biblioteca SSH.NET](https://sshnet.codeplex.com/) que o Xamarin usa para a conexão SSH. **Solução alternativa**: consulte a etapa 5 acima.
+- **Limitação** – este erro pode ocorrer ao tentar fazer logon no host de build usando o _Nome Completo_ da conta, se o nome incluir um caractere acentuado. Esta é uma limitação da [Biblioteca SSH.NET](https://sshnet.codeplex.com/) que o Xamarin usa para a conexão SSH. **Solução alternativa**: Consulte a etapa 5 acima.
 
 #### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>"Não é possível autenticar com chaves SSH. Tente fazer logon com credenciais primeiro"
 
 Causa conhecida:
 
-- **Restrição de segurança SSH** – geralmente, essa mensagem significa que um dos arquivos ou diretórios no caminho totalmente qualificado do **$HOME/.ssh/authorized\_keys** no Mac tem permissões de gravação habilitadas para _outros_ ou para membros de _grupo_. **Correção comum**: executar `chmod og-w "$HOME"` em um prompt de comando do Terminal no Mac. Para obter detalhes sobre o arquivo ou diretório específico que está causando o problema, execute `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` no Terminal e, em seguida, abra o arquivo **sshd.log** da área de trabalho e procure por "Autenticação recusada: modos ou propriedade inválida".
+- **Restrição de segurança SSH** – geralmente, essa mensagem significa que um dos arquivos ou diretórios no caminho totalmente qualificado do **$HOME/.ssh/authorized\_keys** no Mac tem permissões de gravação habilitadas para _outros_ ou para membros de _grupo_. **Correção comum**: Execute `chmod og-w "$HOME"` em um prompt de comando de Terminal no Mac. Para obter detalhes sobre o arquivo ou diretório específico que está causando o problema, execute `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` no Terminal e, em seguida, abra o arquivo **sshd.log** da área de trabalho e procure por "Autenticação recusada: modos ou propriedade inválida".
 
 #### <a name="trying-to-connect-never-completes"></a>"Tentando se conectar..." nunca é concluído
 
-- **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  – Esse problema poderá acontecer no Xamarin 4.1 se **Login shell (Shell de logon)** no menu de contexto **Opções Avançadas** para o usuário do Mac em **System Preferences (Preferências do sistema) &gt; Users (Usuários) &amp; Groups (Grupos)** estiver definido como um valor diferente de **/bin/bash**. (A partir do Xamarin 4.2, esse cenário leva à mensagem de erro “Não foi possível conectar”.) **Solução alternativa**: mude o **Login shell (Shell de logon)** para o padrão original de **/bin/bash**.
+- **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  – Esse problema poderá acontecer no Xamarin 4.1 se **Login shell (Shell de logon)** no menu de contexto **Opções Avançadas** para o usuário do Mac em **System Preferences (Preferências do sistema) &gt; Users (Usuários) &amp; Groups (Grupos)** estiver definido como um valor diferente de **/bin/bash**. (A partir do Xamarin 4.2, esse cenário leva à mensagem de erro “Não foi possível conectar”.) **Solução alternativa**: Altere o **shell de logon** de volta para o padrão original **/bin/bash**.
 
 <a name="tryagain" />
 
@@ -142,19 +142,19 @@ Causa conhecida:
 
 Causas relatadas:
 
-- **Bug** – alguns usuários viram essa mensagem de erro juntamente com um erro mais detalhado nos arquivos de log "Ocorreu um erro inesperado durante a configuração de SSH para o usuário... A operação de sessão expirou" ao tentar fazer logon no host de build usando um Active Directory ou outra conta de usuário de domínio de serviço de diretório. **Solução alternativa:** faça logon no host de build usando uma conta de usuário local como alternativa.
+- **Bug** – alguns usuários viram essa mensagem de erro juntamente com um erro mais detalhado nos arquivos de log "Ocorreu um erro inesperado durante a configuração de SSH para o usuário... A operação de sessão expirou" ao tentar fazer logon no host de build usando um Active Directory ou outra conta de usuário de domínio de serviço de diretório. **Solução alternativa:** Faça logon no host de build usando uma conta de usuário local.
 
-- **Bug** – alguns usuários viram esse erro ao tentar se conectar ao host de build clicando duas vezes no nome do Mac na caixa de diálogo de conexão. **Solução alternativa possível**: [adicionar manualmente o Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) usando o endereço IP.
+- **Bug** – alguns usuários viram esse erro ao tentar se conectar ao host de build clicando duas vezes no nome do Mac na caixa de diálogo de conexão. **Solução alternativa possível**: [Adicione manualmente o Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) usando o endereço IP.
 
-- **Bug [#35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**  – alguns usuários encontraram esse erro ao usar uma conexão de rede sem fio entre o host de build do Mac e o Windows. **Solução alternativa possível**: mover ambos os computadores para uma conexão de rede com fio.
+- **Bug [#35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**  – alguns usuários encontraram esse erro ao usar uma conexão de rede sem fio entre o host de build do Mac e o Windows. **Solução alternativa possível**: Mova ambos os computadores para uma conexão de rede com fio.
 
-- **Bug [#36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**  – no Xamarin 4.0, esta mensagem será exibida a qualquer momento que o arquivo **$HOME/.bashrc** no Mac contiver um erro. (A partir do Xamarin 4.1, os erros no arquivo **.bashrc** não afetarão mais o processo de conexão.) **Solução alternativa**: mover o arquivo **.bashrc** para um local de backup (ou excluí-lo, se você souber que ele não é necessário).
+- **Bug [#36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**  – no Xamarin 4.0, esta mensagem será exibida a qualquer momento que o arquivo **$HOME/.bashrc** no Mac contiver um erro. (A partir do Xamarin 4.1, os erros no arquivo **.bashrc** não afetarão mais o processo de conexão.) **Solução alternativa**: Mova o arquivo **.bashrc** para um local de backup (ou exclua-o se souber que ele não é necessário).
 
-- **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – esse erro poderá aparecer se **Shell de logon** no menu de contexto **Opções Avançadas** para o usuário do Mac em **Preferências do sistema > Usuários e Grupos** estiver definido como um valor diferente de **/bin/bash**. **Solução alternativa**: mude o **Login shell (Shell de logon)** para o padrão original de **/bin/bash**.
+- **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – esse erro poderá aparecer se **Shell de logon** no menu de contexto **Opções Avançadas** para o usuário do Mac em **Preferências do sistema > Usuários e Grupos** estiver definido como um valor diferente de **/bin/bash**. **Solução alternativa**: Altere o **shell de logon** de volta para o padrão original **/bin/bash**.
 
 - **Limitação** – este erro pode ocorrer se o host de build do Mac estiver conectado a um roteador que não tem acesso à Internet (ou se o Mac estiver usando um servidor DNS que atinge o tempo limite ao ser solicitado para buscar o DNS reverso do computador Windows). O Visual Studio levará aproximadamente 30 segundos para recuperar a impressão digital de SSH e, eventualmente, falhará para se conectar.
 
-    **Solução alternativa possível**: adicione "UseDNS no" ao arquivo **sshd\_config**. Certifique-se de ler sobre essa configuração de SSH antes de alterá-la. Consulte, por exemplo [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](http://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option).
+    **Solução alternativa possível**: Adicione "UseDNS no" ao arquivo **sshd\_config**. Certifique-se de ler sobre essa configuração de SSH antes de alterá-la. Consulte, por exemplo [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](http://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option).
 
     As etapas a seguir descrevem uma forma para alterar a configuração. Você precisará fazer logon com uma conta de administrador no Mac para concluir as etapas.
 
@@ -210,7 +210,7 @@ Esta seção discute algumas mensagens que podem aparecer nas Janela de Saída e
 
 Se você confirma que o Mac e Windows estão atualizados no mesmo canal de distribuição do Xamarin, esse aviso pode ser ignorado.
 
-#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Falha ao executar 'ls /usr/bin/mono': ExitStatus=1"
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Falha ao executar 'ls /usr/bin/mono': ExitStatus = 1"
 
 Essa mensagem pode ser ignorada se o Mac estiver executando o OS X 10.11 (El Capitan) ou mais recente. Esta mensagem não é um problema no OS X 10.11 porque o Xamarin também verifica **/usr/local/bin/mono**, que é o local correto esperado para o `mono` no OS X 10.11.
 
@@ -303,9 +303,9 @@ Esta seção aborda alguns problemas que podem ocorrer depois que o Visual Studi
 
 Causas conhecidas:
 
-- **Recurso de segurança do Xamarin 4.1** – este erro _acontecerá_ se você fizer downgrade para o Xamarin 4.0 depois de usar o Xamarin 4.1 ou superior. Nesse caso o erro será acompanhado pelo aviso adicional "A chave privada está criptografada, mas a frase secreta está vazia". Esse é uma alteração _intencional_ devida a um novo recurso de segurança do Xamarin 4.1. **Solução recomendada**: excluir **id\_rsa** e **id\_rsa.pub** de **%LOCALAPPDATA%\Xamarin\MonoTouch** e, em seguida, reconectar-se ao host de build do Mac.
+- **Recurso de segurança do Xamarin 4.1** – este erro _acontecerá_ se você fizer downgrade para o Xamarin 4.0 depois de usar o Xamarin 4.1 ou superior. Nesse caso o erro será acompanhado pelo aviso adicional "A chave privada está criptografada, mas a frase secreta está vazia". Esse é uma alteração _intencional_ devida a um novo recurso de segurança do Xamarin 4.1. **Correção recomendada**: Exclua **id\_rsa** e **id\_rsa.pub** do **%LOCALAPPDATA%\Xamarin\MonoTouch** e conecte-se novamente ao host de build do Mac.
 
-- **Restrição de segurança SSH** – quando essa mensagem for acompanhada pelo aviso adicional "Não foi possível autenticar o usuário usando as chaves SSH existentes", geralmente indica que um dos arquivos ou diretórios no caminho totalmente qualificado de **$HOME/.ssh/authorized\_keys** no Mac tem permissões de gravação habilitadas para _outros_ ou para membros de _grupo_. **Correção comum**: executar `chmod og-w "$HOME"` em um prompt de comando do Terminal no Mac. Para obter detalhes sobre o arquivo ou diretório específico que está causando o problema, execute `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` no Terminal e, em seguida, abra o arquivo **sshd.log** da área de trabalho e procure por "Autenticação recusada: modos ou propriedade inválida".
+- **Restrição de segurança SSH** – quando essa mensagem for acompanhada pelo aviso adicional "Não foi possível autenticar o usuário usando as chaves SSH existentes", geralmente indica que um dos arquivos ou diretórios no caminho totalmente qualificado de **$HOME/.ssh/authorized\_keys** no Mac tem permissões de gravação habilitadas para _outros_ ou para membros de _grupo_. **Correção comum**: Execute `chmod og-w "$HOME"` em um prompt de comando de Terminal no Mac. Para obter detalhes sobre o arquivo ou diretório específico que está causando o problema, execute `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` no Terminal e, em seguida, abra o arquivo **sshd.log** da área de trabalho e procure por "Autenticação recusada: modos ou propriedade inválida".
 
 ### <a name="solutions-cannot-be-loaded-from-a-network-share"></a>As soluções não podem ser carregadas de um compartilhamento de rede
 
@@ -377,4 +377,4 @@ Se você estiver solucionando um problema de build e deseja verificar se o compo
 ## <a name="related-links"></a>Links relacionados
 
 - [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Agente de build do Xamarin Mac – Palestra rápida da Xamarin University](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Vídeo sobre o agente de build do Xamarin Mac](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: c085b515bf6618d110d95dc5a6456df182fa803f
-ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
+ms.openlocfilehash: b5c11b5db75da22d48b7db265ea013cb600ef02c
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55668570"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978231"
 ---
 # <a name="get-started-with-xamarinios"></a>Introdução ao Xamarin.iOS
 
@@ -49,8 +49,8 @@ Este guia de duas partes explora a expansão do aplicativo criado no guia do Hel
 
 Fornece informações para desenvolvedores do Objective-C que estão em transição para a plataforma Xamarin.
 
-## <a name="xamarin-university-video"></a>Vídeo do Xamarin University
+## <a name="video"></a>Vídeo
 
 > [!VIDEO https://youtube.com/embed/1ilsDnYC-B8]
 
-**Criando seu primeiro aplicativo iOS com o Xamarin para Visual Studio, da [Xamarin University](https://university.xamarin.com)**
+**Como criar seu primeiro aplicativo iOS com o Xamarin para Visual Studio**

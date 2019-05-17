@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 4583b703d6c6b15105d60a98e7a1064e6a2e9263
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557276"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977783"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de associação do Xamarin.Forms
 
@@ -109,7 +109,7 @@ Propriedades de destino com um modo de associação igual a `OneTime` são atual
 
 A página **Seletor de cor simples** demonstra o uso de um ViewModel simples. As associações de dados permitem que o usuário selecione uma cor usando três elementos `Slider` para o matiz, a saturação e a luminosidade.
 
-O ViewModel é a origem da associação de dados. O ViewModel *não* define propriedades vinculáveis, mas implementa um mecanismo de notificação que permite que a infraestrutura de associação seja notificada quando o valor de uma propriedade é alterado. Esse mecanismo de notificação é a interface [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), que define uma única propriedade chamada [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Em geral, uma classe que implementa essa interface dispara o evento quando uma de suas propriedades públicas altera o valor. O evento não precisa ser disparado se a propriedade nunca é alterada. (A interface `INotifyPropertyChanged` também é implementada por `BindableObject` e um evento `PropertyChanged` é disparado sempre que uma propriedade vinculável altera o valor.)
+O ViewModel é a origem da associação de dados. O ViewModel *não* define propriedades vinculáveis, mas implementa um mecanismo de notificação que permite que a infraestrutura de associação seja notificada quando o valor de uma propriedade é alterado. Esse mecanismo de notificação é a interface [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), que define um único evento chamado [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Em geral, uma classe que implementa essa interface dispara o evento quando uma de suas propriedades públicas altera o valor. O evento não precisa ser disparado se a propriedade nunca é alterada. (A interface `INotifyPropertyChanged` também é implementada por `BindableObject` e um evento `PropertyChanged` é disparado sempre que uma propriedade vinculável altera o valor.)
 
 A classe `HslColorViewModel` define cinco propriedades: As propriedades `Hue`, `Saturation`, `Luminosity` e `Color` estão correlacionadas. Quando um dos três componentes de cor altera o valor, a propriedade `Color` é recalculada e os eventos `PropertyChanged` são disparados para todas as quatro propriedades:
 
@@ -677,7 +677,7 @@ A captura de tela do iOS à esquerda mostra o programa quando ele é executado p
 
 [![Configurações de exemplo](binding-mode-images/samplesettings-small.png "Configurações de exemplo")](binding-mode-images/samplesettings-large.png#lightbox "Configurações de exemplo")
 
-As outras duas capturas de tela mostram as configurações alteradas. Ao experimentar com essa página, lembre-se de colocar o programa no modo de suspensão ou encerrá-lo no dispositivo ou no emulador em que está sendo executado. O encerramento do programa no depurador do Visual Studio não chamará a substituição `OnSleep` na classe `App`.
+A outra captura de tela mostra as configurações alteradas. Ao experimentar com essa página, lembre-se de colocar o programa no modo de suspensão ou encerrá-lo no dispositivo ou no emulador em que está sendo executado. O encerramento do programa no depurador do Visual Studio não chamará a substituição `OnSleep` na classe `App`.
 
 No próximo artigo, você verá como especificar a [**Formatação da cadeia de caracteres**](string-formatting.md) de associações de dados que são definidas na propriedade `Text` de `Label`.
 
