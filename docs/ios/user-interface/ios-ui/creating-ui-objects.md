@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: a4cf63b84d0686bc28b02b18a6266908251bdf6f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c24b2c2f0742ee2c6814d9821f3c0603c6e48a96
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153910"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804925"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Criando objetos de Interface do usuário no xamarin. IOS
 
@@ -80,7 +80,7 @@ Ao projetar sua interface do usuário com o Interface Builder, você deve criar 
 
  [![](creating-ui-objects-images/image6a.png "Botão Editor Assistente")](creating-ui-objects-images/image6a.png#lightbox)
 
-Clique em um objeto de interface do usuário; em seguida **arrastar controle** no arquivo. h. Para * * controle arraste * *, mantenha pressionada a tecla control e em seguida, clique e mantenha sobre o objeto de interface do usuário que você está criando a saída (ou a ação) para. Manter pressionada a tecla Control enquanto você arrasta para o arquivo de cabeçalho. Concluir arrastando abaixo o `@interface` definição. Uma linha azul deve aparecer com uma legenda inserir tomada ou a coleção de saída, conforme ilustrado na captura de tela abaixo.
+Clique em um objeto de interface do usuário; em seguida **arrastar controle** no arquivo. h. Para **arrastar controle**, mantenha pressionada a tecla control e em seguida, clique e mantenha sobre o objeto de interface do usuário que você está criando a saída (ou a ação) para. Manter pressionada a tecla Control enquanto você arrasta para o arquivo de cabeçalho. Concluir arrastando abaixo o `@interface` definição. Uma linha azul deve aparecer com uma legenda inserir tomada ou a coleção de saída, conforme ilustrado na captura de tela abaixo.
 
 Quando você soltar o clique, você será solicitado a fornecer um nome para a saída, que será usado para criar um C# propriedade que pode ser referenciada no código:
 

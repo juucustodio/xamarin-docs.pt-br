@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: cf04c3e89e3effdd317fa98beb46f9075a1defcd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7a5c09bfe46b9e775383889e07fd93094ba9bf68
+ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61301900"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65731528"
 ---
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
@@ -37,8 +37,8 @@ Para inserir uma exibição nativa em um arquivo XAML de xamarin. Forms:
 1. Adicionar um `xmlns` declaração de namespace no arquivo XAML para o namespace que contém o modo nativo.
 1. Crie uma instância do modo nativo no arquivo XAML.
 
-> [!NOTE]
-> XAMLC deve ser desativado para todas as páginas XAML que usam exibições nativas.
+> [!IMPORTANT]
+> XAML compilado deve ser desabilitada para todas as páginas XAML que usam exibições nativas. Isso pode ser feito decorando a classe code-behind para a sua página XAML com o `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obter mais informações sobre a compilação de XAML, consulte [compilação XAML no xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
 
 Para fazer referência a um modo de exibição nativo de um arquivo code-behind, você deve usar um projeto de ativo compartilhado (SAP) e encapsule o código específico da plataforma com diretivas de compilação condicional. Para obter mais informações, consulte [referindo-se a exibições nativas do código](#native_view_code).
 

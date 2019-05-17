@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e462346c2c0130c972d098aa2c988bdd61fc360
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370593"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804901"
 ---
 # <a name="xamarinforms-stacklayout"></a>StackLayout do xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
-`StackLayout` Organiza os modos de exibição em uma linha unidimensional ("pilha"), horizontal ou verticalmente. Exibições em um `StackLayout` pode ser dimensionado com base no espaço no layout usando as opções de layout. Posicionamento é determinada pela ordem de modos de exibição foram adicionados para o layout e as opções de layout dos modos de exibição.
+[StackLayout](xref:Xamarin.Forms.StackLayout) organiza os modos de exibição em uma linha unidimensional ("pilha"), horizontal ou verticalmente. Exibições em um `StackLayout` pode ser dimensionado com base no espaço no layout usando as opções de layout. Posicionamento é determinada pela ordem de modos de exibição foram adicionados para o layout e as opções de layout dos modos de exibição.
 
 [![](stack-layout-images/layouts-sml.png "Xamarin. Forms Layouts")](stack-layout-images/layouts.png#lightbox "Layouts do xamarin. Forms")
 
