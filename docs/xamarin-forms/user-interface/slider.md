@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e65124df4b20a50091ad93e18621f8e6707ebbe
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250668"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970548"
 ---
 # <a name="xamarinforms-slider"></a>Controle deslizante do xamarin. Forms
 
@@ -49,10 +49,10 @@ O `Slider` também define várias propriedades que afetam sua aparência:
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) é a barra de cor à esquerda do elevador.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) é a barra de cor à direita do elevador.
 - [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) é a cor do elevador.
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) é a imagem a ser usado para o elevador, do tipo [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource).
+- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty) é a imagem a ser usado para o elevador, do tipo [ `ImageSource` ](xref:Xamarin.Forms.ImageSource).
 
 > [!NOTE]
-> O `ThumbColor` e `ThumbImage` propriedades são mutuamente exclusivas. Se ambas as propriedades estiverem definidas, o `ThumbImage` propriedade terá precedência.
+> O `ThumbColor` e `ThumbImageSource` propriedades são mutuamente exclusivas. Se ambas as propriedades estiverem definidas, o `ThumbImageSource` propriedade terá precedência.
 
 ## <a name="basic-slider-code-and-markup"></a>Marcação e código básico do controle deslizante
 

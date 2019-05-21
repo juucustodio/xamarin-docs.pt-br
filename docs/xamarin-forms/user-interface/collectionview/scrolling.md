@@ -7,28 +7,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: b2f32f6695fffa27068fce9d8c12f4ecd9157bc2
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048171"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970534"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Rolagem de CollectionView de xamarin. Forms
 
-![](~/media/shared/preview.png "Essa API é atualmente pré-lançamento")
-
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 
-`CollectionView` define dois `ScrollTo` métodos, que rolagem os itens na exibição. Uma das sobrecargas rola o item no índice especificado na exibição, enquanto o outro rola o item especificado na exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar a posição exata do item depois que a rolagem for concluída e se deseja animar a rolagem.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define dois [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos, que rolagem os itens na exibição. Uma das sobrecargas rola o item no índice especificado na exibição, enquanto o outro rola o item especificado na exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar a posição exata do item depois que a rolagem for concluída e se deseja animar a rolagem.
 
-`CollectionView` define uma `ScrollToRequested` evento que é disparado quando uma da `ScrollTo` métodos é invocado. O `ScrollToRequestedEventArgs` objeto que acompanha o `ScrollToRequested` evento tem muitas propriedades, incluindo `IsAnimated`, `Index`, `Item`, e `ScrollToPosition`. Essas propriedades são definidas a partir dos argumentos especificados no `ScrollTo` chamadas de método.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define uma [ `ScrollToRequested` ](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que é disparado quando um dos [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos é invocado. O [ `ScrollToRequestedEventArgs` ](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompanha o `ScrollToRequested` evento tem muitas propriedades, incluindo `IsAnimated`, `Index`, `Item`, e `ScrollToPosition`. Essas propriedades são definidas a partir dos argumentos especificados no `ScrollTo` chamadas de método.
 
 Quando um dedo do usuário para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens são totalmente exibidas. Esse recurso é conhecido como encaixe, como itens de ajuste para posicionar durante a rolagem é interrompido. Para obter mais informações, consulte [ajustar pontos](#snap-points).
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>Rolar um item em um índice na exibição
 
-A primeira `ScrollTo` sobrecarga do método rola o item no índice especificado na exibição. Considerando um `CollectionView` objeto chamado `collectionView`, o exemplo a seguir mostra como rolar o item no índice 12 no modo de exibição:
+A primeira [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) sobrecarga do método rola o item no índice especificado na exibição. Considerando um [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) objeto chamado `collectionView`, o exemplo a seguir mostra como rolar o item no índice 12 no modo de exibição:
 
 ```csharp
 collectionView.ScrollTo(12);
@@ -36,7 +34,7 @@ collectionView.ScrollTo(12);
 
 ## <a name="scroll-an-item-into-view"></a>Rolar um item na exibição
 
-O segundo `ScrollTo` sobrecarga do método rola o item especificado na exibição. Considerando um `CollectionView` objeto chamado `collectionView`, o exemplo a seguir mostra como rolar o item especificado no modo de exibição:
+A segunda [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) sobrecarga do método rola o item especificado na exibição. Considerando um [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) objeto chamado `collectionView`, o exemplo a seguir mostra como rolar o item especificado no modo de exibição:
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -46,7 +44,7 @@ collectionView.ScrollTo(monkey);
 
 ## <a name="control-scroll-position"></a>Posição de rolagem de controle
 
-Ao rolar um item no modo de exibição, a posição exata do item após a rolagem pode ser especificada com o `position` argumento do `ScrollTo` métodos. Esse argumento aceita uma [ `ScrollToPosition` ](xref:Xamarin.Forms.ScrollToPosition) membro de enumeração.
+Ao rolar um item no modo de exibição, a posição exata do item após a rolagem pode ser especificada com o `position` argumento do [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos. Esse argumento aceita uma [ `ScrollToPosition` ](xref:Xamarin.Forms.ScrollToPosition) membro de enumeração.
 
 ### <a name="makevisible"></a>MakeVisible
 
@@ -109,10 +107,10 @@ collectionView.ScrollTo(monkey, animate: false);
 
 ## <a name="snap-points"></a>Pontas de encaixe
 
-Quando um dedo do usuário para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens são totalmente exibidas. Esse recurso é conhecido como encaixe, como itens de ajustar-se à posição quando rolagem for interrompido e é controlada pelas seguintes propriedades do `ItemsLayout` classe:
+Quando um dedo do usuário para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens são totalmente exibidas. Esse recurso é conhecido como encaixe, como itens de ajustar-se à posição quando rolagem for interrompido e é controlada pelas seguintes propriedades do [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) classe:
 
-- `SnapPointsType`, do tipo `SnapPointsType`, especifica o comportamento de pontos de alinhamento durante a rolagem.
-- `SnapPointsAlignment`, do tipo `SnapPointsAlignment`, especifica como os pontos de alinhamento são alinhados com os itens.
+- [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), do tipo [ `SnapPointsType` ](xref:Xamarin.Forms.SnapPointsType), especifica o comportamento de pontos de alinhamento durante a rolagem.
+- [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), do tipo [ `SnapPointsAlignment` ](xref:Xamarin.Forms.SnapPointsAlignment), especifica como os pontos de alinhamento são alinhados com os itens.
 
 Essas propriedades têm o respaldo [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser alvos de vinculações de dados.
 
@@ -121,28 +119,28 @@ Essas propriedades têm o respaldo [ `BindableProperty` ](xref:Xamarin.Forms.Bin
 
 ### <a name="snap-points-type"></a>Tipo de pontas de encaixe
 
-O `SnapPointsType` enumeração define os seguintes membros:
+O [ `SnapPointsType` ](xref:Xamarin.Forms.SnapPointsType) enumeração define os seguintes membros:
 
 - `None` indica que rolagem não se ajusta aos itens.
 - `Mandatory` indica que o conteúdo sempre se ajusta para o mais próximo snap aponta para onde rolagem naturalmente pararia, ao longo da direção da inércia.
 - `MandatorySingle` indica o mesmo comportamento que `Mandatory`, mas rola apenas um item por vez.
 
-Por padrão, o `SnapPointsType` estiver definida como `SnapPointsType.None`, que garante que a rolagem não se ajusta itens, conforme mostrado nas capturas de tela seguir:
+Por padrão, o [ `SnapPointsType` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) estiver definida como `SnapPointsType.None`, que garante que a rolagem não se ajusta itens, conforme mostrado nas capturas de tela seguir:
 
 [![Captura de tela de uma lista vertical de CollectionView sem pontos de alinhamento, no iOS e Android](scrolling-images/snappoints-none.png "lista vertical de CollectionView sem pontos de alinhamento")](scrolling-images/snappoints-none-large.png#lightbox "lista vertical de CollectionView sem snap pontos")
 
 ### <a name="snap-points-alignment"></a>Ajustar-se pontos de alinhamento
 
-O `SnapPointsAlignment` enumeração define `Start`, `Center`, e `End` membros.
+O [ `SnapPointsAlignment` ](xref:Xamarin.Forms.SnapPointsAlignment) enumeração define `Start`, `Center`, e `End` membros.
 
 > [!IMPORTANT]
-> O valor da `SnapPointsAlignment` propriedade só é respeitada quando o `SnapPointsType` estiver definida como `Mandatory`, ou `MandatorySingle`.
+> O valor da [ `SnapPointsAlignment` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propriedade só é respeitada quando o [ `SnapPointsType` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propriedade é definida como `Mandatory`, ou `MandatorySingle`.
 
 #### <a name="start"></a>Início
 
 O `SnapPointsAlignment.Start` membro indica que pontos de alinhamento são alinhados com a borda à esquerda de itens.
 
-Por padrão, o `SnapPointsAlignment` estiver definida como `SnapPointsAlignment.Start`. No entanto, para fins de integridade, o exemplo XAML a seguir mostra como definir este membro de enumeração:
+Por padrão, o [ `SnapPointsAlignment` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) estiver definida como `SnapPointsAlignment.Start`. No entanto, para fins de integridade, o exemplo XAML a seguir mostra como definir este membro de enumeração:
 
 ```xaml
 <CollectionView x:Name="collectionView"

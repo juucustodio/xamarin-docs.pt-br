@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28846e6e9590d2adf56114fce8bc6056c0112ac1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61321542"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970961"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Associáveis Layouts no xamarin. Forms
 
@@ -31,8 +31,10 @@ Essas propriedades podem ser anexadas à [ `AbsoluteLayout` ](xref:Xamarin.Forms
 
 O `Layout<T>` classe expõe um [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) coleta, à qual os elementos filho de um layout são adicionados. Quando o `BinableLayout.ItemsSource` propriedade é definida como uma coleção de itens e anexada a uma [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)-classe derivada, cada item na coleção é adicionado ao `Layout<T>.Children` coleção para exibição pelo layout. O `Layout<T>`-classe derivada, em seguida, atualize suas exibições filha quando a coleção subjacente é alterado. Para obter mais informações sobre o ciclo de layout do xamarin. Forms, consulte [criação de um Layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md).
 
+Layouts associáveis só devem ser usados quando a coleção de itens a serem exibidos é pequena e de rolagem e a seleção não é necessária. Enquanto a rolagem pode ser fornecida, encapsulando um layout associável em uma [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), isso não é recomendado como associáveis layouts não têm a virtualização de interface do usuário. Quando a rolagem é necessária, uma exibição rolável que inclui a virtualização de interface do usuário, como [ `ListView` ](xref:Xamarin.Forms.ListView) ou [ `CollectionView` ](xref:Xamarin.Forms.CollectionView), deve ser usado. Para observar essa recomendação pode levar a problemas de desempenho.
+
 > [!IMPORTANT]
-> Layouts associáveis só devem ser usados quando a coleção de itens a serem exibidos é pequena e de rolagem e a seleção não é necessária. Enquanto a rolagem pode ser fornecida, encapsulando um layout associável em uma [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), isso não é recomendado como associáveis layouts não têm a virtualização de interface do usuário. Quando a rolagem é necessária, uma exibição rolável que inclui a virtualização de interface do usuário, como [ `ListView` ](xref:Xamarin.Forms.ListView) ou `CollectionView`, deve ser usado. Para observar essa recomendação pode levar a problemas de desempenho.
+>Embora seja tecnicamente possível anexar um layout associável a qualquer classe de layout que deriva de [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe, nem sempre é prático fazer isso, particularmente para o [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) , [ `Grid` ](xref:Xamarin.Forms.Grid), e [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) classes. Por exemplo, considere o cenário que desejam exibir uma coleção de dados em um [ `Grid` ](xref:Xamarin.Forms.Grid) usando um layout vinculável, em que cada item na coleção é um objeto que contém várias propriedades. Cada linha na `Grid` deve exibir um objeto de coleção, a cada coluna no `Grid` exibindo uma das propriedades do objeto. Porque o [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para o layout associável só pode conter um único objeto, é necessário para o objeto a ser uma classe de layout que contém vários modos de exibição que exibem uma das propriedades do objeto em uma determinada `Grid` coluna. Embora esse cenário pode ser realised com layouts vinculáveis, isso resulta em um pai `Grid` que contém um filho `Grid` para cada item na coleção associada, que é um uso altamente ineficiente e um problema do `Grid` layout.
 
 ## <a name="populating-a-bindable-layout-with-data"></a>Populando um layout associável com dados
 

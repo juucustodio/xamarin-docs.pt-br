@@ -7,16 +7,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 329c139d1f38946527e565980492060e4dc9683e
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ad96fa84a9d60aeeaef1cf568a4971f5ffe7a13f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926436"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970614"
 ---
 # <a name="tabbedpage-toolbar-placement-and-color-on-android"></a>Posicionamento da barra de ferramentas TabbedPage e cor no Android
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+
+> [!IMPORTANT]
+> As especificações de plataforma que definir a cor da barra de ferramentas em uma [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) agora estão obsoletos e foram substituídas pela [ `SelectedTabColor` ](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) e [ `UnselectedTabColor` ](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor)propriedades. Para obter mais informações, consulte [criando uma TabbedPage](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md#creating-a-tabbedpage).
 
 Esses itens específicos à plataforma são usadas para definir o posicionamento e a cor da barra de ferramentas em uma [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Eles são consumidos no XAML, definindo o [ `TabbedPage.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.ToolbarPlacementProperty) propriedade anexada a um valor da [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement) enumeração e o [ `TabbedPage.BarItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarItemColorProperty) e [ `TabbedPage.BarSelectedItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarSelectedItemColorProperty) anexado propriedades para um [ `Color` ](xref:Xamarin.Forms.Color):
 

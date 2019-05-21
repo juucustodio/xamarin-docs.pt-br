@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 12420f0559d27becb839307d6a1ed4489c895e7d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7a149a41a6e50d3b18da166d9c7cb61e36f2d0e7
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926891"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970463"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Estilos explícitos no xamarin. Forms
 
@@ -27,7 +27,7 @@ Para declarar uma [ `Style` ](xref:Xamarin.Forms.Style) no nível da página, um
 O seguinte exemplo de código mostra *explícita* estilos declarados em XAML em uma página `ResourceDictionary` e aplicadas para a página [ `Label` ](xref:Xamarin.Forms.Label) instâncias:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="labelRedStyle" TargetType="Label">
@@ -75,7 +75,7 @@ Além disso, o último [ `Label` ](xref:Xamarin.Forms.Label) tem um [ `Style` ](
 Além de criar *explícita* estilos no nível da página, eles também podem ser criados no nível de controle, conforme mostrado no exemplo de código a seguir:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <StackLayout.Resources>

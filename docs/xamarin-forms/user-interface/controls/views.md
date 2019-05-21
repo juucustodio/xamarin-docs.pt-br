@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
-ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
-ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
+ms.openlocfilehash: 779b39441893324e38843e036614484443e37574
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "61358732"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971298"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -174,7 +174,7 @@ Essas duas classes derivam a [ `InputView` ](xref:Xamarin.Forms.InputView) class
 
 |     |     |
 | --- | --- |
-| `CollectionView` Exibe uma lista rolável de itens selecionáveis de dados, usando as especificações de layout diferente. Tem como objetivo fornecer uma mais flexível e alternativa de alto desempenho para o [ `ListView` ](xref:Xamarin.Forms.ListView). Definir a `ItemsSource` propriedade a uma coleção de objetos e defina o `ItemTemplate` propriedade para um [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objeto que descreve como os itens devem ser formatados. O `SelectionChanged` evento sinaliza que uma seleção foi feita, que está disponível como a `SelectedItem` propriedade.<br /><br />[Guia](~/xamarin-forms/user-interface/collectionview/index.md) / [exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Exemplo de CollectionView](views-images/CollectionView.png "exemplo CollectionView")](views-images/CollectionView-Large.png#lightbox "CollectionView de exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
+| [`CollectionView`](xref:Xamarin.Forms.CollectionView) Exibe uma lista rolável de itens selecionáveis de dados, usando as especificações de layout diferente. Tem como objetivo fornecer uma mais flexível e alternativa de alto desempenho para o [ `ListView` ](xref:Xamarin.Forms.ListView). Definir a `ItemsSource` propriedade a uma coleção de objetos e defina o `ItemTemplate` propriedade para um [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objeto que descreve como os itens devem ser formatados. O `SelectionChanged` evento sinaliza que uma seleção foi feita, que está disponível como a `SelectedItem` propriedade.<br /><br />[Guia](~/xamarin-forms/user-interface/collectionview/index.md) / [exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Exemplo de CollectionView](views-images/CollectionView.png "exemplo CollectionView")](views-images/CollectionView-Large.png#lightbox "CollectionView de exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
 <a name="listView" />

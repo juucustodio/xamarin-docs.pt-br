@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2019
-ms.openlocfilehash: 471e09f236be505190ad2c08169bd445dcfca0a3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f77b2346808f78e182edc59f9ea92d0a8a99344f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61365655"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971014"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>recursos da plataforma iOS no xamarin. Forms
 
@@ -45,6 +45,7 @@ A seguinte funcionalidade específica da plataforma é fornecida para páginas d
 - Controlar se a barra de navegação é translúcida. Para obter mais informações, consulte [Translucência da barra de navegação no iOS](navigation-bar-translucent.md).
 - Controlar se o texto da barra de status de cor em um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) é ajustado para coincidir com a luminosidade da barra de navegação. Para obter mais informações, consulte [modo de cor de texto NavigationPage barra no iOS](status-bar-text-color.md).
 - Controlar se o título da página é exibido como um título grande na barra de navegação de página. Para obter mais informações, consulte [títulos de página grande no iOS](page-large-title.md).
+- Definir a visibilidade do indicador inicial em um [ `Page` ](xref:Xamarin.Forms.Page). Para obter mais informações, consulte [página inicial de indicador de visibilidade no iOS](page-home-indicator.md).
 - Definindo a visibilidade da barra de status em uma [ `Page` ](xref:Xamarin.Forms.Page). Para obter mais informações, consulte [página de visibilidade da barra de Status no iOS](page-status-bar-visibility.md).
 - Garantir que esse conteúdo da página está posicionado em uma área da tela que é segura para todos os dispositivos iOS. Para obter mais informações, consulte [guia do Layout da área de segurança no iOS](page-safe-area-layout.md).
 - Definindo o estilo de apresentação de páginas modais em um iPad. Para obter mais informações, consulte [iPad estilo de apresentação de página Modal](ipad-page-presentation-style.md).

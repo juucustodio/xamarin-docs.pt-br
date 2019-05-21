@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 5c1d73acfef7a4384db7220daf7319251eb61f85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 996e6469347a50523964a5b855804b0041ff8d21
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61040919"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970978"
 ---
 # <a name="images-in-xamarinforms"></a>Imagens no xamarin. Forms
 
@@ -102,13 +102,13 @@ Nomes de arquivo de imagem UWP [pode ser com o sufixo `.scale-xxx` antes da exte
 
 Alguns controles têm propriedades que exibem uma imagem, como:
 
-- [`Page`](xref:Xamarin.Forms.Page) -Qualquer tipo que deriva de página `Page` tem [ `Icon` ](xref:Xamarin.Forms.Page.Icon) e [ `BackgroundImage` ](xref:Xamarin.Forms.Page.BackgroundImage) propriedades, que podem ser atribuídas a uma referência de arquivo local. Em determinadas circunstâncias, como quando um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) está exibindo um [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), o ícone será exibido se houver suporte pela plataforma.
+- [`Page`](xref:Xamarin.Forms.Page) -Qualquer tipo que deriva de página `Page` tem [ `IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) e [ `BackgroundImageSource` ](xref:Xamarin.Forms.Page.BackgroundImageSource) propriedades que podem ser atribuídas a um arquivo, o recurso inserido, o URI ou o fluxo. Em determinadas circunstâncias, como quando um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) está exibindo um [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), o ícone será exibido se houver suporte pela plataforma.
 
   > [!IMPORTANT]
-  > No iOS, o [ `Page.Icon` ](xref:Xamarin.Forms.Page.Icon) não é possível popular a propriedade de uma imagem em um conjunto de imagens de catálogo ativo. Em vez disso, carregar imagens de ícone para o `Page.Icon` propriedade a partir de **recursos** pasta no projeto do iOS.
+  > No iOS, o [ `Page.IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) não é possível popular a propriedade de uma imagem em um conjunto de imagens de catálogo ativo. Em vez disso, carregar imagens de ícone para o `Page.IconImageSource` propriedade de um arquivo, o recurso inserido, o URI ou o fluxo.
 
-- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) – Tem um [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) propriedade que pode ser definida como uma referência de arquivo local.
-- [`ImageCell`](xref:Xamarin.Forms.ImageCell) – Tem um [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) recuperados de propriedade que pode ser definida como uma imagem de um arquivo local, um recurso inserido ou um URI.
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) – Tem um [ `IconImageSource` ](xref:Xamarin.Forms.MenuItem.IconImageSource) propriedade que pode ser definida como uma imagem que é carregada de um arquivo, o recurso inserido, o URI ou o fluxo.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell) – Tem um [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) recuperados de propriedade que pode ser definida como uma imagem de um arquivo, o recurso inserido, o URI ou o fluxo.
 
 ## <a name="embedded-images"></a>Imagens inseridas
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 665f5d1653b74997519149cef68e0882f476179d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7b13a192f883ea667977f4d9ae3eea41d8c65e24
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924611"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971180"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Estilos globais no xamarin. Forms
 
@@ -49,7 +49,7 @@ Isso [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) define um �
 O exemplo de código a seguir mostra uma página do XAML aplicando o `buttonStyle` para a página [ `Button` ](xref:Xamarin.Forms.Button) instâncias:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <Button Text="These buttons" Style="{StaticResource buttonStyle}" />
@@ -71,7 +71,7 @@ Para obter informações sobre a criação de estilos em uma página [ `Resource
 Estilos inferiores na hierarquia de exibição têm precedência sobre aquelas definidas superior para cima. Por exemplo, definir uma [ `Style` ](xref:Xamarin.Forms.Style) que define [ `Button.TextColor` ](xref:Xamarin.Forms.Button.TextColor) para `Red` no aplicativo de nível será substituído por um estilo de nível de página que define `Button.TextColor` para `Green`. Da mesma forma, um estilo de nível de página será substituído por um estilo de controle. Além disso, se `Button.TextColor` for definido diretamente em uma propriedade de controle, isso terá precedência sobre todos os estilos. Essa precedência é demonstrada no exemplo de código a seguir:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonStyle" TargetType="Button">

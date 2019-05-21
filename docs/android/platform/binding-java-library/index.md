@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 016ac7269f334f6df7fba9635897b9608f459284
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60957430"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970212"
 ---
 # <a name="binding-a-java-library"></a>Associação de uma biblioteca Java
 
@@ -70,7 +70,7 @@ Ao associar uma biblioteca Android existente, é necessário ter os seguintes po
 
 * **Há dependências externas para a biblioteca?** &ndash; Quaisquer dependências de Java exigidas pela biblioteca do Android devem ser incluídas no projeto xamarin. Android como um **ReferenceJar** ou como um **EmbeddedReferenceJar**. Todos os assemblies nativos devem ser adicionados ao projeto de associação como uma **EmbeddedNativeLibrary**.  
 
-* **Qual versão da API do Android é que o destino da biblioteca do Android?** &ndash; Não é possível fazer o "downgrade" nível de API do Android; Certifique-se de que o projeto de associação do xamarin. Android está direcionando a mesma API nível (ou superior) como a biblioteca Android.
+* **Qual versão da API do Android faz o Android destino biblioteca?** &ndash; Não é possível fazer o "downgrade" nível de API do Android; Certifique-se de que o projeto de associação do xamarin. Android está direcionando a mesma API nível (ou superior) como a biblioteca Android.
 
 * **Qual versão do JDK foi usado para compilar a biblioteca?** &ndash; Erros de associação podem ocorrer se a biblioteca Android foi criada com uma versão diferente do JDK que em uso pelo xamarin. Android. Se possível, recompile a biblioteca do Android usando a mesma versão do JDK que é usado pela sua instalação do xamarin. Android.
 
