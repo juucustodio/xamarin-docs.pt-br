@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 1e9c46fe9535c313581d6d0053559a28aa327887
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b57718038c43f7bc2a9e27e780a0624eb50a54fe
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359889"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926417"
 ---
 # <a name="tabbedpage-page-transition-animations-on-android"></a>Animações de transição de página TabbedPage no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Este específicos da plataforma Android é usado para desabilitar animações de transição ao navegar pelas páginas, seja programaticamente ou ao usar a barra de guias, em um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Ele é consumido em XAML, definindo o `TabbedPage.IsSmoothScrollEnabled` para a propriedade associável `false`:
 
@@ -46,7 +46,7 @@ O `TabbedPage.On<Android>` método Especifica que este específicos da plataform
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

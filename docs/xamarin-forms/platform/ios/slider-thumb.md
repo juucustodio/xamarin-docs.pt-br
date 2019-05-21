@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 43cc87f9d319295ce65d55488e1be032ae00a697
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b195a277defa04bac88ad65b928957c6efff4601
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61082156"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925343"
 ---
 # <a name="slider-thumb-tap-on-ios"></a>Controle deslizante Thumb toque no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Este específicos da plataforma iOS permite que o [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propriedade a ser definido tocando em uma posição no [ `Slider` ](xref:Xamarin.Forms.Slider) barra, em vez de precisar arrastar o `Slider` thumb. Ele é consumido em XAML, definindo o [ `Slider.UpdateOnTap` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Slider.UpdateOnTapProperty) para a propriedade associável `true`:
 
@@ -49,6 +49,6 @@ O resultado é que um toque do [ `Slider` ](xref:Xamarin.Forms.Slider) barra pod
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

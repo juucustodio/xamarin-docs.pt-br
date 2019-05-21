@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 98212483481b2ce60c73a40c014816ee3c3f110c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 37b14b60f3cd9aa6a3fb182583bde902cc677b89
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386546"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925083"
 ---
 # <a name="listview-performance"></a>Desempenho de ListView
 
@@ -186,5 +186,5 @@ Criar um renderizador personalizado para um [ `ListView` ](xref:Xamarin.Forms.Li
 ## <a name="related-links"></a>Links relacionados
 
 - [Exibição de renderizador personalizado (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [ViewCell de renderizador personalizado (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+- [ViewCell de renderizador personalizado (amostra)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

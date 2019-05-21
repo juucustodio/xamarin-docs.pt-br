@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: b99898301ed6469b6e0d62ae0077b96aa9c4f3eb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fa851ddc753d1fb9cb39f4c08dcfde518a123b62
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896905"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926744"
 ---
 # <a name="ipad-modal-page-presentation-style"></a>Estilo de apresentação da página modal do iPad
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Este específicos da plataforma iOS é usado para definir o estilo de apresentação de uma página modal em um iPad. Ele é consumido em XAML, definindo o `Page.ModalPresentationStyle` propriedade associável a uma `UIModalPresentationStyle` valor de enumeração:
 
@@ -61,6 +61,6 @@ O resultado é que o estilo de apresentação modal em uma [ `Page` ](xref:Xamar
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

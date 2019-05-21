@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: f14014b257ee5061b6dd074719c3ca27577c6013
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c480f398c37ce43b634e0ec1c955b965466757f1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60854929"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926846"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Chaves de acesso de VisualElement no Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Chaves de acesso são atalhos de teclado que melhoram a usabilidade e a acessibilidade de aplicativos na plataforma Universal de Windows (UWP), fornecendo uma maneira intuitiva para os usuários a navegar rapidamente e interagir com a interface do usuário visível do aplicativo por meio de um teclado em vez de por meio de toque ou um mouse. Eles são combinações da tecla Alt e uma ou mais chaves alfanuméricas, normalmente pressionadas em sequência. Atalhos de teclado automaticamente têm suporte para chaves de acesso que usam um único caractere alfanumérico.
 
@@ -104,6 +104,6 @@ Para obter mais informações sobre chaves de acesso, consulte [chaves de acesso
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

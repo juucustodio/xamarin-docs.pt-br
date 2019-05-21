@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 130f4e3efdd7b3792f6458ad28fc85654e6e38c8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c1fb596abb580cf42edda21ab71f2c70de59a547
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857426"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924553"
 ---
 # <a name="attached-properties"></a>Propriedades anexadas
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 
 _Uma propriedade anexada é um tipo especial de propriedade associável, definido em uma classe, mas anexado a outros objetos e reconhecível no XAML como um atributo que contém uma classe e um nome de propriedade separados por um período. Este artigo fornece uma introdução para propriedades anexadas e demonstra como criar e consumi-los._
 
@@ -126,7 +126,7 @@ Propriedades anexadas também podem ser adicionadas a um controle por um estilo.
 </Style>
 ```
 
-O [ `Style` ](xref:Xamarin.Forms.Style) pode ser aplicado a um [ `Label` ](xref:Xamarin.Forms.Label) definindo seu [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedade para o `Style` instância usando o `StaticResource`extensão de marcação, conforme demonstrado no exemplo de código a seguir:
+O [ `Style` ](xref:Xamarin.Forms.Style) pode ser aplicado a um [ `Label` ](xref:Xamarin.Forms.Label) definindo seu [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriedade para o `Style` instância usando o `StaticResource`extensão de marcação, conforme demonstrado no exemplo de código a seguir:
 
 ```xaml
 <Label Text="Label Shadow Effect" Style="{StaticResource ShadowEffectStyle}" />
@@ -147,6 +147,6 @@ Este artigo fornece uma introdução para propriedades anexadas e demonstrou com
 
 - [Propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md)
 - [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Efeito de sombra (amostra)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [Efeito de sombra (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

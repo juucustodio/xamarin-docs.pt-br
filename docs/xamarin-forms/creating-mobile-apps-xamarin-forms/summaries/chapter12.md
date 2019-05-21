@@ -7,12 +7,12 @@ ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: bb2cd1c97cc588923e0da1a8793f16445c111f0e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 408f171a3c7c690b700f7be21a3dcaff503467d9
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334266"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926916"
 ---
 # <a name="summary-of-chapter-12-styles"></a>Resumo do capítulo 12. Estilos
 
@@ -20,7 +20,7 @@ ms.locfileid: "61334266"
 
 No xamarin. Forms, os estilos permitem vários modos de exibição compartilhar uma coleção de configurações de propriedade. Isso reduz a marcação e permite que temas visuais consistentes de manutenção.
 
-Estilos de quase sempre são definidos e consumidos na marcação. Um objeto do tipo [ `Style` ](xref:Xamarin.Forms.Style) é instanciado em um dicionário de recursos e, em seguida, defina como o [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedade de um elemento visual usando um `StaticResource` ou `DynamicResource` marcação extensão.
+Estilos de quase sempre são definidos e consumidos na marcação. Um objeto do tipo [ `Style` ](xref:Xamarin.Forms.Style) é instanciado em um dicionário de recursos e, em seguida, defina como o [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriedade de um elemento visual usando um `StaticResource` ou `DynamicResource` marcação extensão.
 
 ## <a name="the-basic-style"></a>O estilo básico
 

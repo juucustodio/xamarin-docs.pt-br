@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 0251d06ff68185990ed8b7acb46389c59c71a99a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d3e1c8a2b17ba41e3c9d212948f42023c15205ac
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075177"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926237"
 ---
 # <a name="bindable-properties"></a>Propriedades vinculáveis
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 
 _No xamarin. Forms, a funcionalidade de propriedades comuns de runtime (CLR) de linguagem é estendida por propriedades associáveis. Uma propriedade associável é um tipo especial de propriedade, em que o valor da propriedade é controlado pelo sistema de propriedades de xamarin. Forms. Este artigo fornece uma introdução a propriedades associáveis e demonstra como criar e consumi-los._
 
@@ -226,7 +226,7 @@ Este artigo fornece uma introdução para propriedades vinculáveis e demonstrou
 ## <a name="related-links"></a>Links relacionados
 
 - [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Eventos para comportamento de comando (amostra)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+- [Eventos para comportamento de comando (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 - [Retorno de chamada de validação (amostra)](https://developer.xamarin.com/samples/xamarin-forms/xaml/validationcallback/)
 - [Impor o valor de retorno de chamada (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/xaml/coercevaluecallback/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)

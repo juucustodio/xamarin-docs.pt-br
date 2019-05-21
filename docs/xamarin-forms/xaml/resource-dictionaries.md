@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8b5a610cbd87ca9e80272b6be8e726e4fd323dd0
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076651"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925615"
 ---
 # <a name="resource-dictionaries"></a>Dicionários de recursos
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
 
 _Recursos XAML são definições de objetos que podem ser compartilhados e reutilizados em todo um aplicativo xamarin. Forms._
 
@@ -305,6 +305,6 @@ Este artigo explicou como criar e consumir um [ `ResourceDictionary` ](xref:Xama
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Dicionários de recursos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
+- [Dicionários de recursos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
 - [Estilos](~/xamarin-forms/user-interface/styles/index.md)
 - [Dicionário de recurso](xref:Xamarin.Forms.ResourceDictionary)

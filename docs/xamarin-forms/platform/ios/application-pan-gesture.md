@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 32c3651734fcc94dd75372f0c47f0ffb22b4a4ee
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4587bb89ddfe43873e666a07514075f1a952e985
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031368"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926785"
 ---
 # <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Reconhecimento de gesto de panorâmica simultâneas no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Quando um [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) é anexado a um modo de exibição dentro de uma exibição de rolagem, todos a panorâmica de gestos são capturados pelo `PanGestureRecognizer` e não serão passados para o modo de exibição de rolagem. Portanto, o modo de exibição de rolagem não mais será rolada.
 
@@ -46,6 +46,6 @@ Portanto, com essa específicos da plataforma habilitado, quando um [ `ListView`
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

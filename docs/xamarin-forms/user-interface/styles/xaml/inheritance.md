@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: bef48db93ae76346802b6569080bb1e54e3e51b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c0b38453c5e573a13a51b6c001d3324936a8b7fb
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61393993"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926871"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Herança de estilo no xamarin. Forms
 
@@ -62,7 +62,7 @@ O código a seguir demonstra *explícita* herança de estilo em uma página XAML
 </ContentPage>
 ```
 
-O `baseStyle` destinos [ `View` ](xref:Xamarin.Forms.View) instâncias e define o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades. O `baseStyle` não é definida diretamente em todos os controles. Em vez disso, `labelStyle` e `buttonStyle` herdam dela, definir valores de propriedade associável adicionais. O `labelStyle` e `buttonStyle` , em seguida, são aplicadas para o [ `Label` ](xref:Xamarin.Forms.Label) instâncias e [ `Button` ](xref:Xamarin.Forms.Button) instância, definindo suas [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades. Isso resulta na exibição mostrada nas capturas de tela seguir:
+O `baseStyle` destinos [ `View` ](xref:Xamarin.Forms.View) instâncias e define o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades. O `baseStyle` não é definida diretamente em todos os controles. Em vez disso, `labelStyle` e `buttonStyle` herdam dela, definir valores de propriedade associável adicionais. O `labelStyle` e `buttonStyle` , em seguida, são aplicadas para o [ `Label` ](xref:Xamarin.Forms.Label) instâncias e [ `Button` ](xref:Xamarin.Forms.Button) instância, definindo suas [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriedades. Isso resulta na exibição mostrada nas capturas de tela seguir:
 
 [![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
@@ -110,7 +110,7 @@ Neste exemplo, `labelStyle` e `buttonStyle` é recursos de nível de controle en
 
 ## <a name="style-inheritance-in-c35"></a>Herança de estilo em C&#35;
 
-A equivalente C# página, onde [ `Style` ](xref:Xamarin.Forms.Style) instâncias são atribuídas diretamente para o [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades dos controles necessários, é mostrado no exemplo de código a seguir:
+A equivalente C# página, onde [ `Style` ](xref:Xamarin.Forms.Style) instâncias são atribuídas diretamente para o [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriedades dos controles necessários, é mostrado no exemplo de código a seguir:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage
@@ -153,7 +153,7 @@ public class StyleInheritancePageCS : ContentPage
 }
 ```
 
-O `baseStyle` destinos [ `View` ](xref:Xamarin.Forms.View) instâncias e define o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades. O `baseStyle` não é definida diretamente em todos os controles. Em vez disso, `labelStyle` e `buttonStyle` herdam dela, definir valores de propriedade associável adicionais. O `labelStyle` e `buttonStyle` , em seguida, são aplicadas para o [ `Label` ](xref:Xamarin.Forms.Label) instâncias e [ `Button` ](xref:Xamarin.Forms.Button) instância, definindo suas [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriedades.
+O `baseStyle` destinos [ `View` ](xref:Xamarin.Forms.View) instâncias e define o [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) e [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propriedades. O `baseStyle` não é definida diretamente em todos os controles. Em vez disso, `labelStyle` e `buttonStyle` herdam dela, definir valores de propriedade associável adicionais. O `labelStyle` e `buttonStyle` , em seguida, são aplicadas para o [ `Label` ](xref:Xamarin.Forms.Label) instâncias e [ `Button` ](xref:Xamarin.Forms.Button) instância, definindo suas [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriedades.
 
 ## <a name="related-links"></a>Links relacionados
 
