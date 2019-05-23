@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b5d368a091248ec4cbec3930b878580cf6d18fa8
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
-ms.translationtype: HT
+ms.openlocfilehash: 6bf24cb81bbd40c7e3f5b0f65ed2a2af7cbbe98b
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971128"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005322"
 ---
 # <a name="xamarinforms-collectionview-emptyview"></a>Xamarin. Forms CollectionView EmptyView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) Define as propriedades a seguir que podem ser usadas para fornecer comentários do usuário quando não há nenhum dado para exibir:
 
@@ -328,7 +330,7 @@ Para obter mais informações sobre os seletores de modelo de dados, consulte [c
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CollectionView (amostra)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (amostra)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 - [Modelos de dados do xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Dicionários de recursos do xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Criar um DataTemplateSelector xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

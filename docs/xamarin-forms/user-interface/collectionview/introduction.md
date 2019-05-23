@@ -7,20 +7,28 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 2ee7b2c203251e519af088a550e7e26f30aa62c8
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
-ms.translationtype: HT
+ms.openlocfilehash: 889c78ea6849cdd094d34ed0cf74ceebd33ce51d
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971095"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005148"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Introdução do xamarin. Forms CollectionView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) é um modo de exibição para apresentar as listas de dados usando as especificações de layout diferente. Tem como objetivo fornecer uma mais flexível e alternativa de alto desempenho para o [ `ListView` ](xref:Xamarin.Forms.ListView). Por exemplo, capturas de tela as seguir mostram um `CollectionView` que usa uma grade vertical de duas colunas, e que permite que a seleção múltipla:
 
 [![Captura de tela de um layout de grade vertical CollectionView, no iOS e Android](introduction-images/verticalgrid-multipleselection.png "CollectionView layout de grade vertical com seleção múltipla")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "CollectionView layout de grade vertical com seleção múltipla")
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) está disponível no xamarin. Forms 4.0. No entanto, ele é atualmente experimental e só pode ser usado, adicionando a seguinte linha de código para seus `AppDelegate` classe no iOS, ou para seus `MainActivity` classe no Android, antes de chamar `Forms.Init`:
+
+```csharp
+Forms.SetFlags("CollectionView_Experimental");
+```
 
 > [!IMPORTANT]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) só está disponível no iOS e Android.
@@ -57,4 +65,4 @@ Enquanto o [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) e [ `ListView
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CollectionView (amostra)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (amostra)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
