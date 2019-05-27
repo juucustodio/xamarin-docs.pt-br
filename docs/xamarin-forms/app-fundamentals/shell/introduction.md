@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 20d9fb79d03990824dd884b62138a3e29b3ee04f
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: f6662f20485c6671edcb5a1654569cdd8498607e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054476"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005203"
 ---
 # <a name="xamarinforms-shell"></a>Shell do Xamarin.Forms
 
-![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 O Shell do Xamarin.Forms reduz a complexidade do desenvolvimento de aplicativos móveis, fornecendo os recursos fundamentais que a maioria dos aplicativos móveis exige, incluindo:
 
@@ -30,52 +28,11 @@ O Shell do Xamarin.Forms reduz a complexidade do desenvolvimento de aplicativos 
 Além disso, o aplicativo Shell tem a vantagem de aumentar a velocidade de renderização e reduzir o consumo de memória.
 
 > [!IMPORTANT]
-> Os aplicativos iOS e Android existentes podem adotar o Shell e beneficiar-se imediatamente das melhorias de navegação, desempenho e extensibilidade.
-
-O Shell é experimental no momento e só pode ser usado com a adição de `Forms.SetFlags("Shell_Experimental");` ao projeto de plataforma, antes da invocação do método `Forms.Init`.
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-```csharp
-public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-{
-    protected override void OnCreate(Bundle savedInstanceState)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        TabLayoutResource = Resource.Layout.Tabbar;
-        ToolbarResource = Resource.Layout.Toolbar;
-
-        base.OnCreate(savedInstanceState);
-
-        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-        LoadApplication(new App());
-    }
-}
-```
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-```csharp
-public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-{
-    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new App());
-
-        return base.FinishedLaunching(app, options);
-    }
-}
-```
-
-----
+> O Shell do Xamarin.Forms só está disponível no iOS e no Android. Os aplicativos iOS e Android existentes podem adotar o Shell e beneficiar-se imediatamente das melhorias de navegação, desempenho e extensibilidade.
 
 ## <a name="shell-navigation-experience"></a>Experiência de navegação do Shell
 
-O Shell fornece uma experiência de navegação obstinada, com base em guias e submenus. O nível superior da navegação em um aplicativo Shell é um submenu:
+O Shell fornece uma experiência de navegação obstinada, com base em guias e submenus. O nível superior da navegação em um aplicativo do Shell é um submenu:
 
 [![Captura de tela de um submenu do Shell no iOS e no Android](introduction-images/flyout.png "Submenu Shell")](introduction-images/flyout-large.png#lightbox "Submenu Shell")
 
@@ -181,11 +138,11 @@ Neste exemplo, a classe `AppShell` é um arquivo XAML que deriva da classe `Shel
 
 A classe `Shell` define as propriedades a seguir que controlam a aparência do aplicativo Shell:
 
-- `ShellBackgroundColor`, do tipo `Color`, uma propriedade anexada que define a cor de fundo no cromado Shell. A cor não preencherá por trás do conteúdo Shell.
-- `ShellDisabledColor`, do tipo `Color`, uma propriedade anexada que define a cor da tonalidade do texto e dos ícones que estão desabilitados.
-- `ShellForegroundColor`, do tipo `Color`, uma propriedade anexada que define a cor da tonalidade do texto e dos ícones.
-- `ShellTitleColor`, do tipo `Color`, uma propriedade anexada que define a cor usada no título da página atual.
-- `ShellUnselectedColor`, do tipo `Color`, uma propriedade anexada que define a cor usada no texto não selecionado e nos ícones no cromado Shell.
+- `BackgroundColor`, do tipo `Color`, uma propriedade anexada que define a cor de fundo no cromado Shell. A cor não preencherá por trás do conteúdo Shell.
+- `DisabledColor`, do tipo `Color`, uma propriedade anexada que define a cor da tonalidade do texto e dos ícones que estão desabilitados.
+- `ForegroundColor`, do tipo `Color`, uma propriedade anexada que define a cor da tonalidade do texto e dos ícones.
+- `TitleColor`, do tipo `Color`, uma propriedade anexada que define a cor usada no título da página atual.
+- `UnselectedColor`, do tipo `Color`, uma propriedade anexada que define a cor usada no texto não selecionado e nos ícones no cromado Shell.
 
 Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), o que significa que essas propriedades podem ser o destino de vinculações de dados.
 
@@ -196,7 +153,6 @@ Além disso, essas propriedades podem ser definidas usando as folhas de estilo e
 A classe `Shell` define as propriedades a seguir que controlam o layout do aplicativo Shell:
 
 - `NavBarIsVisible`, do tipo `boolean`, uma propriedade anexada que define se a barra de navegação deve estar visível quando uma página é apresentada. Essa propriedade deve ser definida em uma página, e seu valor padrão é `true`.
-- `SetPaddingInsets`, do tipo `bool`, uma propriedade anexada que controla se o conteúdo da página fluirá sob qualquer cromado Shell. Essa propriedade deve ser definida em uma página, e seu valor padrão é `false`.
 - `TabBarIsVisible`, do tipo `bool`, uma propriedade anexada que define se a barra de guia deve estar visível quando a página é apresentada. Essa propriedade deve ser definida em uma página, e seu valor padrão é `true`.
 - `TitleView`, do tipo `View`, uma propriedade anexada que define o `TitleView` de uma página. Essa propriedade deve ser definida em uma página.
 
@@ -204,5 +160,5 @@ Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xam
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Propriedades específicas do Shell do Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

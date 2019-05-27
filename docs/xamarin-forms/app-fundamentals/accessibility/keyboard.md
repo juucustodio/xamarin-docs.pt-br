@@ -1,26 +1,26 @@
 ---
-title: Navegação por teclado
-description: Em vez de usar a sequência de tabulação padrão, às vezes é necessário ajustar a interface do usuário especificando a sequência de tabulação com uma combinação das propriedades TabIndex e IsTapStop.
+title: Acessibilidade do teclado
+description: Em vez de usar a sequência de tabulação padrão, às vezes é necessário ajustar a acessibilidade da interface do usuário especificando a sequência de tabulação com uma combinação das propriedades TabIndex e IsTapStop.
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/15/2018
-ms.openlocfilehash: 3e3331489c3b437366f4bdcc6990fe282d213a6a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 05/09/2019
+ms.openlocfilehash: 66cd9f9de712583ea4e8fb9304a9f1642e7e3ee1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207876"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971270"
 ---
-# <a name="keyboard-navigation-in-xamarinforms"></a>Navegação por teclado no Xamarin.Forms
+# <a name="keyboard-accessibility-in-xamarinforms"></a>Acessibilidade do teclado no Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
-Alguns usuários podem ter dificuldade para usar aplicativos que não fornecem acesso apropriado por teclado. Especificar uma ordem de tabulação para os controles habilita a navegação por teclado e prepara as páginas do aplicativo para receber as entradas em uma ordem específica.
+Os usuários que utilizam leitores de tela ou que tenham problemas de mobilidade podem ter dificuldade para usar aplicativos que não fornecem acesso apropriado por teclado. Os aplicativos Xamarin.Forms aceitam a especificação de uma ordem de tabulação a fim de melhorar a usabilidade e a acessibilidade. Especificar uma ordem de tabulação para os controles habilita a navegação por teclado, prepara as páginas do aplicativo para receber as entradas em uma ordem específica e possibilita aos leitores de tela a leitura de elementos focalizáveis para o usuário.
 
-Por padrão, a ordem de tabulação dos controles é a mesma ordem em que eles são listados no XAML ou são adicionados de maneira programática a uma coleção filho. Essa é a ordem em que os controles serão navegados usando um teclado e geralmente a ordem padrão é a melhor ordem. No entanto, a ordem padrão nem sempre é o mesmo que a ordem esperada, conforme mostrado no exemplo de código XAML a seguir:
+Por padrão, a ordem de tabulação dos controles é a mesma ordem em que eles são listados no XAML ou são adicionados de maneira programática a uma coleção filho. Essa é a ordem em que os controles serão navegados usando um teclado e lidos pelos leitores de tela, e geralmente essa ordem padrão é a melhor. No entanto, a ordem padrão nem sempre é o mesmo que a ordem esperada, conforme mostrado no exemplo de código XAML a seguir:
 
 ```xaml
 <Grid>
@@ -113,6 +113,9 @@ A captura de tela a seguir mostra a ordem de tabulação para este exemplo de c�
 ![](keyboard-images/correct-tab-order.png "Ordem de tabulação baseada em colunas")
 
 A ordem de tabulação aqui é baseada em colunas. Portanto, pressionar a tecla Tab navega pelos pares de [`Entry`](xref:Xamarin.Forms.Entry) de primeiro nome e sobrenome.
+
+> [!IMPORTANT]
+> Os leitores de tela no iOS e no Android respeitarão a `TabIndex` de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) ao ler os elementos acessíveis na tela.
 
 ## <a name="excluding-controls-from-the-tab-order"></a>Excluindo controles da ordem de tabulação
 

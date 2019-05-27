@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: d1e43d211f639c422bbed3a6afad9f2136551071
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59690284"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925054"
 ---
 # <a name="set-up-device-for-development"></a>Configurar o dispositivo para desenvolvimento
 
@@ -135,7 +135,7 @@ A etapa final é conectar o dispositivo ao computador. Há duas formas de fazer 
 
 ### <a name="connecting-over-wifi"></a>Conectando via WiFi
 
-Por padrão, o [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) é configurado para se comunicar com um dispositivo Android via USB. É possível reconfigurá-lo para usar TCP/IP em vez de USB. Para fazer isso, o dispositivo e o computador devem estar na mesma rede WiFi. Para configurar seu ambiente para depurar via WiFi, execute essas etapas da linha de comando:
+Por padrão, o [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) é configurado para se comunicar com um dispositivo Android via USB. É possível reconfigurá-lo para usar TCP/IP em vez de USB. Para fazer isso, o dispositivo e o computador devem estar na mesma rede WiFi. Para configurar o ambiente para depurar via Wi-Fi, execute estas etapas da linha de comando:
 
 1. Determine o endereço IP do seu dispositivo Android. Uma maneira de descobrir o endereço IP é procurar em **Configurações > WiFi** e, em seguida, tocar na rede WiFi na qual o dispositivo está conectado. Isso abrirá uma tela de configurações que mostra as informações sobre a conexão de rede, de modo semelhante ao que é visto na captura de tela abaixo:
 

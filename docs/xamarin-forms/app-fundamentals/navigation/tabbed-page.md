@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 0f0c2e9f3e0a2309db1ad96ff286d6ac17f78bc5
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 8926813e8efae72efa9af2221318d6f1ff1e344f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329293"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970933"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Página com guias do Xamarin.Forms
 
@@ -44,9 +44,18 @@ O layout de uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), e suas guias, dep
 
 - Em fatores forma de tablets Windows, as guias não ficam sempre visíveis e os usuários precisam passar o dedo para baixo (ou clicar com o botão direito do mouse, caso tenham um mouse anexado) para exibir as guias em uma `TabbedPage` (conforme mostrado abaixo).
 
-![](tabbed-page-images/windows-tabs.png "Guias de TabbedPage no Windows")
+    ![](tabbed-page-images/windows-tabs.png "Guias de TabbedPage no Windows")
 
 ## <a name="creating-a-tabbedpage"></a>Criando uma TabbedPage
+
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) define as propriedades a seguir:
+
+- [`BarBackgroundColor`](xref:Xamarin.Forms.TabbedPage.BarBackgroundColor) do tipo [`Color`](xref:Xamarin.Forms.Color), a cor da tela de fundo da barra de guias.
+- [`BarTextColor`](xref:Xamarin.Forms.TabbedPage.BarTextColor) do tipo [`Color`](xref:Xamarin.Forms.Color), a cor do texto na barra de guias.
+- [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) do tipo [`Color`](xref:Xamarin.Forms.Color), a cor da guia quando selecionada.
+- [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) do tipo [`Color`](xref:Xamarin.Forms.Color), a cor da guia quando não está selecionada.
+
+Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), o que significa que podem ser estilizadas e que as propriedades podem ser o destino de vinculações de dados.
 
 Duas abordagens podem ser usadas para criar uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 
@@ -56,7 +65,7 @@ Duas abordagens podem ser usadas para criar uma [`TabbedPage`](xref:Xamarin.Form
 Com as duas abordagens, a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) exibirá cada página conforme o usuário selecionar cada guia.
 
 > [!NOTE]
-> É recomendável popular uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) somente com as instâncias [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) e [`ContentPage`](xref:Xamarin.Forms.ContentPage). Isso ajudará a garantir uma experiência do usuário consistente em todas as plataformas.
+> É recomendável preencher uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) somente com as instâncias [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) e [`ContentPage`](xref:Xamarin.Forms.ContentPage). Isso ajudará a garantir uma experiência do usuário consistente em todas as plataformas.
 
 <a name="Populating_a_TabbedPage_with_a_Page_Collection" />
 
@@ -70,7 +79,7 @@ O seguinte exemplo de código XAML mostra uma [`TabbedPage`](xref:Xamarin.Forms.
             xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
             x:Class="TabbedPageWithNavigationPage.MainPage">
     <local:TodayPage />
-    <NavigationPage Title="Schedule" Icon="schedule.png">
+    <NavigationPage Title="Schedule" IconImageSource="schedule.png">
         <x:Arguments>
             <local:SchedulePage />
         </x:Arguments>
@@ -86,7 +95,7 @@ public class MainPageCS : TabbedPage
   public MainPageCS ()
   {
     var navigationPage = new NavigationPage (new SchedulePageCS ());
-    navigationPage.Icon = "schedule.png";
+    navigationPage.IconImageSource = "schedule.png";
     navigationPage.Title = "Schedule";
 
     Children.Add (new TodayPageCS ());
@@ -148,7 +157,7 @@ O exemplo de código XAML a seguir mostra uma [`TabbedPage`](xref:Xamarin.Forms.
   </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
+      <ContentPage Title="{Binding Name}" IconImageSource="monkeyicon.png">
         <StackLayout Padding="5, 25">
           <Label Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Center" />
           <Image Source="{Binding PhotoUrl}" WidthRequest="200" HeightRequest="200" />
@@ -204,7 +213,7 @@ public class TabbedPageDemoPageCS : TabbedPage
       ...
 
       var contentPage = new ContentPage {
-        Icon = "monkeyicon.png",
+        IconImageSource = "monkeyicon.png",
         Content = new StackLayout {
           Padding = new Thickness (5, 25),
           Children = {

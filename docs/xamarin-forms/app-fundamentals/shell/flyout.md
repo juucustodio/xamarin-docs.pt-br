@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 05ce2536c04306c2881ccc5dfa5e2016c9025b11
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a64e96e1ee3804cd7aefd9834486613ba8d09d5f
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054486"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005222"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Submenu Shell do Xamarin.Forms
 
-![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais:
 
@@ -183,8 +181,8 @@ O Shell tem operadores de conversão implícita que permitem que a hierarquia vi
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
-    <views:CatsPage Icon="cat.png" />
-    <views:DogsPage Icon="dog.png" />
+    <views:CatsPage IconImageSource="cat.png" />
+    <views:DogsPage IconImageSource="dog.png" />
 </Shell>
 ```
 
@@ -360,23 +358,18 @@ Opcionalmente, os itens de menu aparecem no submenu, abaixo dos itens do submenu
 > [!NOTE]
 > A classe `MenuItem` tem um evento [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) e uma propriedade [`Command`](xref:Xamarin.Forms.MenuItem.Command). Portanto, os objetos `MenuItem` permitem cenários que executam uma ação em resposta ao `MenuItem` que está sendo tocado. Esses cenários incluem realizar a navegação e abrir um navegador em uma página da Web específica.
 
-A coleção `Shell.MenuItems` define a lista de objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) que serão exibidos no submenu. Essa coleção pode ser preenchida com objetos `MenuItem` conforme mostrado no exemplo a seguir:
+Os objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) podem ser adicionados ao submenu, conforme mostrado no exemplo a seguir:
 
 ```xaml
-<Shell ...
-       x:Name="self">
+<Shell ...>
     ...            
-    <Shell.MenuItems>
-        <MenuItem Text="Random"
-                  Icon="random.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding RandomPageCommand}" />
-        <MenuItem Text="Help"
-                  Icon="help.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding HelpCommand}"
-                  CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
-    </Shell.MenuItems>    
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />    
 </Shell>
 ```
 
@@ -384,7 +377,10 @@ Esse código adiciona dois objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) ao 
 
 [![Captura de tela do submenu contendo objetos MenuItem no iOS e Android](flyout-images/flyout.png "Submenu Shell contendo objetos MenuItem")](flyout-images/flyout-large.png#lightbox "Submenu Shell contendo objetos MenuItem")
 
-O primeiro objeto [`MenuItem`](xref:Xamarin.Forms.MenuItem) executa um `ICommand` denominado `RandomPageCommand`, que navega para uma página aleatória no aplicativo. O segundo objeto `MenuItem` executa um `ICommand` denominado `HelpCommand`, que abre a URL especificada pela propriedade `CommandParameter` em um navegador da Web. O [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada `MenuItem` está definido como o objeto `Shell` na subclasse.
+O primeiro objeto [`MenuItem`](xref:Xamarin.Forms.MenuItem) executa um `ICommand` denominado `RandomPageCommand`, que navega para uma página aleatória no aplicativo. O segundo objeto `MenuItem` executa um `ICommand` denominado `HelpCommand`, que abre a URL especificada pela propriedade `CommandParameter` em um navegador da Web.
+
+> [!NOTE]
+> O [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada `MenuItem` é herdado do objeto `Shell` na subclasse.
 
 ## <a name="define-menuitem-appearance"></a>Definir a aparência do MenuItem
 
@@ -415,8 +411,8 @@ Este exemplo exibe o título de cada objeto `MenuItem` em itálico:
 [![Captura de tela do modelo de objetos MenuItem no iOS e Android](flyout-images/menuitem-templated.png "Modelos de objetos MenuItem do Shell")](flyout-images/menuitem-templated-large.png#lightbox "Modelos de objetos MenuItem do Shell")
 
 > [!NOTE]
-> O Shell fornece as propriedades [`Text`](xref:Xamarin.Forms.MenuItem.Text) e [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) para o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `MenuItemTemplate`.`
+> O Shell fornece as propriedades [`Text`](xref:Xamarin.Forms.MenuItem.Text) e [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) para o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `MenuItemTemplate`.`
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

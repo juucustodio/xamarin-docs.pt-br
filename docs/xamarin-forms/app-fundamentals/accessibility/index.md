@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: ac0ffbdce6b0c55e8ad9d774d80e3d9b8bf84089
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 20ea72e588e2e3b1d575bd593446bf6724d73d8c
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116440"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971056"
 ---
 # <a name="xamarinforms-accessibility"></a>Acessibilidade do Xamarin.Forms
 
@@ -24,7 +24,7 @@ Os guias [Acessibilidade do Android](~/android/app-fundamentals/accessibility.md
 
 O Xamarin.Forms não tem suporte *interno* para todas as APIs de acessibilidade disponíveis em cada uma das plataformas subjacentes. No entanto, ele dá suporte a propriedades de automação de configuração em elementos de interface do usuário para dar suporte a ferramentas de assistência de navegação e de leitor de tela, uma das partes mais importantes da criação de aplicativos acessíveis. Para obter mais informações, veja [Propriedades de automação](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
 
-Aplicativos Xamarin.Forms também podem ter a ordem de tabulação de controles especificada. Para obter mais informações, veja [Navegação pelo teclado](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
+Os aplicativos Xamarin.Forms também podem ter a ordem de tabulação de controles especificada, a fim de melhorar a usabilidade e a acessibilidade. Para saber mais, confira [Acessibilidade do teclado](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
 
 Outras APIs de acessibilidade (assim como [PostNotification no iOS](~/ios/app-fundamentals/accessibility.md)) podem ser mais adequadas para uma implementação de [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) ou de [renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Elas não são abordadas neste guia.
 
