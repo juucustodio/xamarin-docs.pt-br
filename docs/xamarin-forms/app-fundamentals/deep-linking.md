@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: e8bfb01c6f5aa22332d226b8b2768f56a2904a7d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: ca9c71d5bdac1900c4f0e5d07898e65b06cdcf90
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978502"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925578"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DeepLinking/)
 
 _A indexação de aplicativo permite que os aplicativos que seriam esquecidos após alguns usos permaneçam relevantes fazendo com que eles apareçam nos resultados da pesquisa. A vinculação profunda permite que os aplicativos respondam a um resultado de pesquisa que contém dados de aplicativo, normalmente navegando até uma página referenciada de um link profundo. Este artigo explica como usar a indexação de aplicativo e a vinculação profunda para fazer com que o Xamarin.Forms tenha conteúdo pesquisável em dispositivos iOS e Android._
 
@@ -248,7 +248,7 @@ Este artigo explicou como usar a indexação de aplicativo e a vinculação prof
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Vinculação profunda (amostra)](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
+- [Vinculação profunda (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DeepLinking/)
 - [APIs de pesquisa do iOS](~/ios/platform/search/index.md)
 - [Vinculação de aplicativo no Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

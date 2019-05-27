@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: bb58866a0fc0ddb542c0a40eb7a0bd9b37562776
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 784c4d22a112de1adc98d6b7f183f9fa2081a897
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869659"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926278"
 ---
 # <a name="playing-a-web-video"></a>Reproduzindo um vídeo da Web
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 A classe `VideoPlayer` define uma propriedade `Source` usada para especificar a origem do arquivo de vídeo, bem como uma propriedade `AutoPlay`. `AutoPlay` tem uma configuração padrão igual a `true`, o que significa que o vídeo deve iniciar a reprodução automaticamente após a definição de `Source`:
 
@@ -449,7 +449,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="setting-a-url-source"></a>Definindo uma fonte de URL
 
-Com a implementação dessas propriedades nos três renderizadores, é possível reproduzir um vídeo de uma fonte de URL. A página **Reproduzir um vídeo da Web** no programa [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/customrenderers/videoplayerdemos/index.md) é definida pelo seguinte arquivo XAML:
+Com a implementação dessas propriedades nos três renderizadores, é possível reproduzir um vídeo de uma fonte de URL. A página **Reproduzir um vídeo da Web** no programa [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) é definida pelo seguinte arquivo XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -525,4 +525,4 @@ Como alternativa, você pode definir a propriedade `Source` em um arquivo de ví
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do player de vídeo (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demonstrações do player de vídeo (amostra)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

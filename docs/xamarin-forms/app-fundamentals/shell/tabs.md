@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: bc1ca01f4bf5cb8f7ef51c705319fb2cc1a0bd99
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a8da1e96bbdf51899b1780265933402da791a03e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054306"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005152"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Guias do Shell do Xamarin.Forms
 
-![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Depois de um submenu, o próximo nível de navegação em um aplicativo Shell é a barra de guias inferior. Como alternativa, quando o submenu é fechado, a barra de guias inferior é considerada o nível principal da navegação.
 
@@ -112,8 +110,8 @@ Como alternativa, os operadores de conversão implícita do Shell podem ser usad
        x:Class="Xaminals.AppShell"
        FlyoutBehavior="Disabled">
     <FlyoutItem>
-        <views:CatsPage Icon="cat.png" />
-        <views:DogsPage Icon="dog.png" />
+        <views:CatsPage IconImageSource="cat.png" />
+        <views:DogsPage IconImageSource="dog.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -228,7 +226,7 @@ Como alternativa, os operadores de conversão implícita do Shell podem ser usad
             <views:CatsPage />
             <views:DogsPage />
         </Tab>
-        <views:MonkeysPage Icon="monkey.png" />
+        <views:MonkeysPage IconImageSource="monkey.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -268,11 +266,11 @@ Esse XAML cria e exibe `CatsPage`, pois esse é o primeiro item do conteúdo dec
 
 A classe `Shell` define as propriedades a seguir, que controlam a aparência das guias:
 
-- `ShellTabBarBackgroundColor`, do tipo `Color`, uma propriedade anexada que define a cor da barra de guias. Se a propriedade não for definida, o valor de propriedade `ShellBackgroundColor` será usado.
-- `ShellTabBarDisabledColor`, do tipo `Color`, uma propriedade anexada que define a cor da barra de guias. Se a propriedade não for definida, o valor de propriedade `ShellDisabledColor` será usado.
-- `ShellTabBarForegroundColor`, do tipo `Color`, uma propriedade anexada que define a cor de primeiro plano da barra de guias. Se a propriedade não for definida, o valor de propriedade `ShellForegroundColor` será usado.
-- `ShellTabBarTitleColor`, do tipo `Color`, uma propriedade anexada que define a cor de título da barra de guias. Se a propriedade não for definida, o valor de propriedade `ShellTitleColor` será usado.
-- `ShellTabBarUnselectedColor`, do tipo `Color`, uma propriedade anexada que define a cor de não seleção da barra de guias. Se a propriedade não for definida, o valor de propriedade `ShellUnselectedColor` será usado.
+- `TabBarBackgroundColor`, do tipo `Color`, uma propriedade anexada que define a cor da barra de guias. Se a propriedade não for definida, o valor de propriedade `BackgroundColor` será usado.
+- `TabBarDisabledColor`, do tipo `Color`, uma propriedade anexada que define a cor da barra de guias. Se a propriedade não for definida, o valor de propriedade `DisabledColor` será usado.
+- `TabBarForegroundColor`, do tipo `Color`, uma propriedade anexada que define a cor de primeiro plano da barra de guias. Se a propriedade não for definida, o valor de propriedade `ForegroundColor` será usado.
+- `TabBarTitleColor`, do tipo `Color`, uma propriedade anexada que define a cor de título da barra de guias. Se a propriedade não for definida, o valor de propriedade `TitleColor` será usado.
+- `TabBarUnselectedColor`, do tipo `Color`, uma propriedade anexada que define a cor de não seleção da barra de guias. Se a propriedade não for definida, o valor de propriedade `UnselectedColor` será usado.
 
 Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), o que significa que essas propriedades podem ser o destino de vinculações de dados.
 
@@ -281,11 +279,11 @@ Portanto, as guias podem ser estilizadas usando estilos XAML. O exemplo a seguir
 ```xaml
 <Style x:Key="BaseStyle"
        TargetType="Element">
-    <Setter Property="Shell.ShellTabBarBackgroundColor"
+    <Setter Property="Shell.TabBarBackgroundColor"
             Value="#3498DB" />
-    <Setter Property="Shell.ShellTabBarTitleColor"
+    <Setter Property="Shell.TabBarTitleColor"
             Value="White" />
-    <Setter Property="Shell.ShellTabBarUnselectedColor"
+    <Setter Property="Shell.TabBarUnselectedColor"
             Value="#B4FFFFFF" />
 </Style>
 ```
@@ -294,6 +292,6 @@ Além disso, as guias também podem ser estilizadas usando as folhas de estilo e
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Navegação do Shell do Xamarin.Forms](navigation.md)
 - [Propriedades específicas do Shell do Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

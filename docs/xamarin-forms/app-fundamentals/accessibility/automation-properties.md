@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 634ba351d419b1d18dcc5d5bdbf5e248f510329d
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672554"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971253"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propriedades de automação no Xamarin.Forms
 
@@ -149,7 +149,7 @@ No Android, para definir o texto que os leitores de tela lerão para a seta volt
 
 ### <a name="masterdetailpage"></a>MasterDetailPage
 
-No iOS e UWP (Plataforma Universal do Windows), para definir o texto que os leitores de tela lerão para o botão de alternância em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), defina as propriedades `AutomationProperties.Name` e `AutomationProperties.HelpText` em `MasterDetailPage` ou na propriedade `Icon` da página `Master`.
+No iOS e UWP (Plataforma Universal do Windows), para definir o texto que os leitores de tela lerão para o botão de alternância em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), defina as propriedades `AutomationProperties.Name` e `AutomationProperties.HelpText` em `MasterDetailPage` ou na propriedade `IconImageSource` da página `Master`.
 
 No Android, para definir o texto que os leitores da tela lerão para o botão de alternância em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), adicione recursos de cadeia de caracteres ao projeto Android:
 
@@ -161,11 +161,11 @@ No Android, para definir o texto que os leitores da tela lerão para o botão de
 </resources>
 ```
 
-Em seguida, defina a propriedade `AutomationId` da propriedade `Icon` da página `Master` na cadeia de caracteres apropriada:
+Em seguida, defina a propriedade `AutomationId` da propriedade `IconImageSource` da página `Master` na cadeia de caracteres apropriada:
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### <a name="toolbaritem"></a>ToolbarItem

@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 489d2a76e6eff661360b24d1872ed1343c74b85e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 847566feec2069dea924bcd2a18abf2b3ddb250b
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261175"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213283"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Trabalhando com tipos nativos em aplicativos multiplataforma
 
@@ -28,7 +28,7 @@ APIs de Unificação de xamarin. Mac e xamarin. IOS ainda incluem o `int`, `uint
 
 Dependendo da natureza do código que está sendo compartilhado, pode haver momentos em que o código de plataforma cruzada talvez precise lidar com o `nint`, `nuint` e `nfloat` tipos de dados. Por exemplo: uma biblioteca que manipula as transformações nos dados retangulares que estava usando anteriormente `System.Drawing.RectangleF` compartilhar a funcionalidade entre versões do xamarin. IOS e xamarin. Android de um aplicativo, precisa ser atualizada para lidar com tipos nativos no iOS.
 
-Como essas alterações são tratadas depende do tamanho e da complexidade do aplicativo e o formulário de código de compartilhamento que foi usado, como veremos as seções a seguir.
+Como essas alterações são tratadas depende do tamanho e da complexidade do aplicativo e o formulário de código de compartilhamento que foi usado, como veremos nas seções a seguir.
 
 ## <a name="code-sharing-considerations"></a>Considerações de compartilhamento de código
 
@@ -36,9 +36,9 @@ Conforme mencionado na [opções de compartilhamento de código](~/cross-platfor
 
 ### <a name="portable-class-library-projects"></a>Projetos de biblioteca de classes portátil
 
-Uma biblioteca de classe portátil (PCL) permite direcionar as plataformas que você deseja dar suporte e usar Interfaces para fornecer a funcionalidade específica da plataforma.
+Uma biblioteca de classe portátil (PCL) permite que você as plataformas que você deseja dar suporte e usar interfaces para fornecer a funcionalidade específica da plataforma de destino.
 
-Uma vez que o tipo de projeto de PCL é compilado para baixo até um `.DLL` e ele tem nenhum sentido de que a API unificada, você será forçado a continuar a usar os tipos de dados existente (`int`, `uint`, `float`) na PCL código-fonte e o tipo convertem as chamadas para os PCLs classes e métodos em aplicativos de front-end. Por exemplo:
+Uma vez que o tipo de projeto de PCL é compilado para baixo até um `.DLL` e ele tem nenhum sentido de que a API unificada, você será forçado a continuar a usar os tipos de dados existente (`int`, `uint`, `float`) na PCL código-fonte e o tipo convertem as chamadas para a PCL classes e métodos em aplicativos de front-end. Por exemplo:
 
 ```csharp
 using NativePCL;
@@ -52,7 +52,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 O tipo de projeto de ativo compartilhado permite organizar seu código-fonte em um projeto separado, em seguida, obtém incluído e compilado em aplicativos individuais específicos da plataforma de front-end e usar `#if` conforme necessário para gerenciar as diretivas de compilador requisitos específicos da plataforma.
 
-O tamanho e a complexidade da frente encerrar aplicativos móveis que estão consumindo o código compartilhado, juntamente com o tamanho e a complexidade do código que está sendo compartilhado, precisa ser levada em conta ao escolher o método de suporte a dados nativos tipos de plataforma cruzada com o Tipo de projeto de ativo compartilhado.
+O tamanho e a complexidade dos aplicativos móveis front-end que estão consumindo o código compartilhado, juntamente com o tamanho e a complexidade do código que está sendo compartilhado, precisa ser levadas em conta ao escolher o método de suporte para tipos de dados nativos em uma plataforma cruzada Projeto de ativo compartilhado.
 
 Com base nesses fatores, os seguintes tipos de soluções podem ser implementados usando o `if __UNIFIED__ ... #endif` diretivas de compilador para lidar com as alterações específicas de API unificada no código.
 
@@ -103,7 +103,7 @@ No código acima, uma vez que o `CalculateArea` rotina é muito simple, temos us
 
 #### <a name="using-method-overloads"></a>Usar o método Overloads
 
-Nesse caso, a solução pode ser criar uma versão de sobrecarga dos métodos usando tipos de dados de 32 bits para que eles tomem agora `CGRect` como parâmetro e/ou valor de retorno, converter esse valor em uma `RectangleF` (sabendo que a conversão de `nfloat` para `float` é uma conversão sem perdas) e chamar a versão original da rotina para fazer o trabalho real. Por exemplo:
+Nesse caso, a solução pode ser criar uma versão de sobrecarga dos métodos usando tipos de dados de 32 bits para que eles tomem agora `CGRect` como um parâmetro de e/ou um valor de retorno, converter esse valor em uma `RectangleF` (sabendo que a conversão de `nfloat` para `float` é uma conversão sem perdas) e chamar a versão original da rotina para fazer o trabalho real. Por exemplo:
 
 ```csharp
 using System;
@@ -127,8 +127,8 @@ namespace NativeShared
         #if __UNIFIED__
             public static nfloat CalculateArea(CGRect rect) {
 
-            // Call original routine to calculate area
-            return (nfloat)CalculateArea((RectangleF)rect);
+                // Call original routine to calculate area
+                return (nfloat)CalculateArea((RectangleF)rect);
 
             }
         #endif
@@ -173,12 +173,12 @@ using System;
 using System.Drawing;
 
 #if __UNIFIED__
-    // Mappings Unified CoreGraphic classes to MonoTouch classes
+    // Map Unified CoreGraphic classes to MonoTouch classes
     using RectangleF = global::CoreGraphics.CGRect;
     using SizeF = global::CoreGraphics.CGSize;
     using PointF = global::CoreGraphics.CGPoint;
 #else
-    // Mappings Unified types to MonoTouch types
+    // Map Unified types to MonoTouch types
     using nfloat = global::System.Single;
     using nint = global::System.Int32;
     using nuint = global::System.UInt32;
@@ -207,7 +207,7 @@ namespace NativeShared
 }
 ```
 
-Observe que aqui, alteramos a `CalculateArea` retorno de método uma `nfloat` em vez do padrão `float`. Isso foi feito para que não seria possível obter um erro de compilação ao tentar _implicitamente_ converter o `nfloat` resultado de nosso cálculo (uma vez que são os dois valores que está sendo multiplicados `nfloat`) em um `float` valor de retorno.
+Observe que aqui, alteramos a `CalculateArea` método para retornar um `nfloat` em vez do padrão `float`. Isso foi feito para que não seria possível obter um erro de compilação ao tentar _implicitamente_ converter o `nfloat` resultado de nosso cálculo (já que ambos os valores que está sendo multiplicados são do tipo `nfloat`) em um `float` valor de retorno.
 
 Se o código é compilado e executado em um dispositivo não API unificada, o `using nfloat = global::System.Single;` mapeia os `nfloat` para um `Single` que será convertido implicitamente em um `float` permitindo que o aplicativo de consumo de front-end chamar o `CalculateArea` método sem modificação.
 
@@ -236,13 +236,13 @@ O exemplo a seguir é necessária para usar o xamarin. Forms para interfaces do 
 - A solução inteira deve estar usando a versão 1.3.1 (ou superior) do pacote do NuGet xamarin. Forms.
 - Para qualquer renderizações personalizadas do xamarin. IOS, use os mesmos tipos de soluções apresentadas acima com base em como o código de interface do usuário tiver sido compartilhado (projeto compartilhado ou PCL).
 
-Como em um aplicativo de plataforma cruzada padrão, 32 bits existentes dados tipos devem ser usados em qualquer código compartilhado e de plataforma cruzada para a maioria das situações de todos os. Novos tipos de dados nativo só deve ser usados ao fazer uma chamada para uma API do iOS ou Mac no qual o suporte para tipos de arquitetura são necessários.
+Como em um aplicativo de plataforma cruzada padrão, os tipos de dados de 32 bits existente devem ser usados em qualquer código compartilhado e de plataforma cruzada para a maioria das situações. Novos tipos de dados nativo só deve ser usados ao fazer uma chamada para uma API do iOS ou Mac em que dá suporte para tipos de arquitetura é necessária.
 
 Para obter mais detalhes, consulte nosso [Atualizando aplicativos existentes do xamarin. Forms](https://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/) documentação.
 
 ## <a name="summary"></a>Resumo
 
-Neste artigo, nós temos ver quando devemos usar os tipos de dados nativos em um aplicativo de API unificada e sua implicações multiplataforma. Apresentamos várias soluções que podem ser usadas em situações em que os novos tipos de dados nativo deve ser usados em bibliotecas de plataforma cruzada. E vimos um guia rápido para dar suporte a APIs unificadas em aplicativos de plataforma cruzada do xamarin. Forms.
+Neste artigo vimos quando usar os tipos de dados nativos em um aplicativo de API unificada e sua implicações multiplataforma. Apresentamos várias soluções que podem ser usadas em situações em que os novos tipos de dados nativo deve ser usados em bibliotecas de plataforma cruzada. Além disso, nós vimos um guia rápido para dar suporte a APIs unificadas em aplicativos de plataforma cruzada do xamarin. Forms.
 
 
 

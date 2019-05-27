@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 559ef9cc9a3e5ace7a4023e81363825c6861f6d4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 81d9ab12a4b8e8184e0a61dc9b6d53d72004d25c
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399159"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213323"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 no xamarin. IOS
 
@@ -300,7 +300,7 @@ ARKit 2 dá suporte a "ambientais texturização" que usa imagens capturadas par
 Para usar a texturização ambientais:
 
 * Sua [ `SCNMaterial` ](xref:SceneKit.SCNMaterial) objetos devem usar [ `SCNLightingModel.PhysicallyBased` ](xref:SceneKit.SCNLightingModel.PhysicallyBased) e atribua um valor no intervalo de 0 a 1 para [ `Metalness.Contents` ](xref:SceneKit.SCNMaterial.Metalness) e [ `Roughness.Contents` ](xref:SceneKit.SCNMaterialProperty.Contents) e
-* A configuração de rastreamento deve ser definido [ `EnvironmentTexturing` ](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [AREnvironmentTexturing.Automatic'](xref:ARKit.AREnvironmentTexturing.Automatic) :
+* A configuração de rastreamento deve ser definido [ `EnvironmentTexturing` ](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [ `AREnvironmentTexturing.Automatic` ](xref:ARKit.AREnvironmentTexturing.Automatic) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -323,7 +323,7 @@ Embora a textura perfeitamente refletiva mostrada no trecho de código anterior 
 
 ### <a name="shared-and-persistent-ar-experiences"></a>Experiências de AR compartilhadas e persistentes
 
-Outra grande adição como ARKit 2 é o [ `ARWorldMap` ](xref:ARKit.ARWorldMap) classe, que permite que você compartilhe ou armazenar dados de acompanhamento do mundo. Obter o mapa-múndi atual com [ `ARSession.GetCurrentWorldMapAsync` ](xref:ARKit.ARSession.GetCurrentWorldMapAsync) ou [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>` ](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
+Outra grande adição como ARKit 2 é o [ `ARWorldMap` ](xref:ARKit.ARWorldMap) classe, que permite que você compartilhe ou armazenar dados de acompanhamento do mundo. Obter o mapa-múndi atual com [ `ARSession.GetCurrentWorldMapAsync` ](xref:ARKit.ARSession.GetCurrentWorldMapAsync) ou [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>)` ](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
 
 ```csharp
 // Local storage

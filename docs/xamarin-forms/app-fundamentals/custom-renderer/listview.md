@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 39ba281f036b9c57f85629390f5ba76377c99dd8
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bf2ba7d0cfe5b5b35eda423654e929e53fff451c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054205"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926666"
 ---
 # <a name="customizing-a-listview"></a>Personalizando uma ListView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ListView/)
 
 _Uma ListView do Xamarin.Forms é uma exibição que mostra uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula os controles de lista e layouts de célula nativa específicos a uma plataforma, permitindo mais controle sobre o desempenho do controle de lista nativo._
 
@@ -567,4 +567,4 @@ Este artigo demonstrou como criar um renderizador personalizado que encapsula os
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CustomRendererListView (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)
+- [CustomRendererListView (amostra)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ListView/)

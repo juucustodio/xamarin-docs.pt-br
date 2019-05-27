@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 98c15f3e3503ccae164c2bb14b6de13c227893d6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8553eb57ca33efd23b2fedf78413eb1df00bb63e
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051550"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925969"
 ---
 # <a name="attached-behaviors"></a>Comportamentos anexados
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/behaviors/attachednumericvalidationbehavior/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/AttachedNumericValidationBehavior/)
 
 _Comportamentos anexados são classes estáticas com uma ou mais propriedades anexadas. Este artigo demonstra como criar e consumir comportamentos anexados._
 
@@ -132,4 +132,4 @@ Este artigo demonstrou como criar e consumir comportamentos anexados. Comportame
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Comportamentos anexados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/attachednumericvalidationbehavior/)
+- [Comportamentos anexados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/AttachedNumericValidationBehavior/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 854b3fdbd34444cfb052d36287cf5cd47a36a2e0
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: c60eecd5ebd0f518514cd77d8dd963568d1a1d43
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666903"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970910"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Página Mestre/Detalhes do Xamarin.Forms
 
@@ -111,7 +111,7 @@ O exemplo de código XAML a seguir mostra a declaração do objeto `MasterPage`,
              xmlns:local="using:MasterDetailPageNavigation"
              x:Class="MasterDetailPageNavigation.MasterPage"
              Padding="0,40,0,0"
-             Icon="hamburger.png"
+             IconImageSource="hamburger.png"
              Title="Personal Organiser">
     <StackLayout>
         <ListView x:Name="listView" x:FieldModifier="public">
@@ -145,7 +145,7 @@ A página consiste em uma [`ListView`](xref:Xamarin.Forms.ListView) populada com
 
 Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) é atribuído à propriedade [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate), para exibir cada `MasterPageItem`. O `DataTemplate` contém um [`ViewCell`](xref:Xamarin.Forms.ViewCell) que consiste em um [`Image`](xref:Xamarin.Forms.Image) e em um [`Label`](xref:Xamarin.Forms.Label). O [`Image`](xref:Xamarin.Forms.Image) exibe o valor da propriedade `IconSource`, e o [`Label`](xref:Xamarin.Forms.Label) exibe o valor da propriedade `Title`, para cada `MasterPageItem`.
 
-A página tem seu conjunto de propriedades [`Title`](xref:Xamarin.Forms.Page.Title) e [`Icon`](xref:Xamarin.Forms.Page.Icon). O ícone será exibido na página de detalhes, desde que ela tenha uma barra de título. Isso deve ser habilitado no iOS encapsulando a instância da página de detalhes em uma instância [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
+A página tem seu conjunto de propriedades [`Title`](xref:Xamarin.Forms.Page.Title) e [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource). O ícone será exibido na página de detalhes, desde que ela tenha uma barra de título. Isso deve ser habilitado no iOS encapsulando a instância da página de detalhes em uma instância [`NavigationPage`](xref:Xamarin.Forms.NavigationPage).
 
 > [!NOTE]
 > A página [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) deve ter a propriedade [`Title`](xref:Xamarin.Forms.Page.Title) definida ou ocorrerá uma exceção.
@@ -198,7 +198,7 @@ public class MasterPageCS : ContentPage
       SeparatorVisibility = SeparatorVisibility.None
     };
 
-    Icon = "hamburger.png";
+    IconImageSource = "hamburger.png";
     Title = "Personal Organiser";
     Content = new StackLayout
     {
@@ -239,7 +239,7 @@ public partial class MainPage : MasterDetailPage
 
 O método `OnItemSelected` executa as seguintes ações:
 
-- Ele recupera o [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) da instância [`ListView`](xref:Xamarin.Forms.ListView) e, contanto que não seja `null`, define a página de detalhes como uma nova instância do tipo de página armazenado na propriedade `TargetType` do `MasterPageItem`. O tipo de página é encapsulado em uma instância [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) para garantir que o ícone referenciado por meio da propriedade [`Icon`](xref:Xamarin.Forms.Page.Icon) no `MasterPage` seja mostrado na página de detalhes no iOS.
+- Ele recupera o [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) da instância [`ListView`](xref:Xamarin.Forms.ListView) e, contanto que não seja `null`, define a página de detalhes como uma nova instância do tipo de página armazenado na propriedade `TargetType` do `MasterPageItem`. O tipo de página é encapsulado em uma instância [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) para garantir que o ícone referenciado por meio da propriedade [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) no `MasterPage` seja mostrado na página de detalhes no iOS.
 - O item selecionado no [`ListView`](xref:Xamarin.Forms.ListView) é definido como `null` para garantir que nenhum dos itens `ListView` serão selecionados na próxima vez em que o `MasterPage` for apresentado.
 - A página de detalhes é apresentada ao usuário definindo a propriedade [`MasterDetailPage.IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) como `false`. Esta propriedade controla se a página mestra ou de detalhes é apresentada. Ela deve ser definida como `true` para exibir a página mestra e como `false` para exibir a página de detalhes.
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 1e7a96b2f33d7dc89c4373ab612ac3d26692f64e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 90215be6356722729b441513bf749150c77755ca
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060453"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924644"
 ---
 # <a name="customizing-a-viewcell"></a>Personalizando um ViewCell
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
 
 _Um ViewCell do Xamarin.Forms é uma célula que pode ser adicionada a um ListView ou a um TableView, que contém uma exibição definida pelo desenvolvedor. Este artigo demonstra como criar um renderizador personalizado para um ViewCell hospedado dentro de um controle ListView do Xamarin.Forms. Isso impede que os cálculos de layout do Xamarin.Forms sejam chamados repetidamente durante a rolagem de ListView._
 
@@ -577,4 +577,4 @@ Este artigo demonstrou como criar um renderizador personalizado para um [`ViewCe
 ## <a name="related-links"></a>Links relacionados
 
 - [Desempenho de ListView](~/xamarin-forms/user-interface/listview/performance.md)
-- [CustomRendererViewCell (amostra)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
+- [CustomRendererViewCell (amostra)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)

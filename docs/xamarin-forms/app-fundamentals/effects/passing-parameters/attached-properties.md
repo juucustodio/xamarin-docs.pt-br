@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 642a4a63ca2c451c6a085f0e99cebd93babe078d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fbc5ccda4e798b818b4c21dd459bab6b467cba31
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058750"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925446"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
 
 _Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de tempo de execução. Este artigo demonstra o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em tempo de execução._
 
@@ -174,7 +174,7 @@ Os efeitos que podem ser consumidos adicionando propriedades anexadas a um contr
 </Style>
 ```
 
-O [`Style`](xref:Xamarin.Forms.Style) pode ser aplicado a um [`Label`](xref:Xamarin.Forms.Label) definindo sua propriedade [`Style`](xref:Xamarin.Forms.VisualElement.Style) para a instância de `Style` usando a extensão de marcação `StaticResource`, conforme demonstrado no exemplo de código a seguir:
+O [`Style`](xref:Xamarin.Forms.Style) pode ser aplicado a um [`Label`](xref:Xamarin.Forms.Label) definindo sua propriedade [`Style`](xref:Xamarin.Forms.NavigableElement.Style) para a instância de `Style` usando a extensão de marcação `StaticResource`, conforme demonstrado no exemplo de código a seguir:
 
 ```xaml
 <Label Text="Label Shadow Effect" ... Style="{StaticResource ShadowEffectStyle}" />
@@ -440,4 +440,4 @@ Este artigo demonstrou o uso de propriedades anexadas para passar parâmetros pa
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Efeito de sombra (amostra)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)
+- [Efeito de sombra (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
