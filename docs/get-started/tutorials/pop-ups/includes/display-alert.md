@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1e7b4b2ce4b7592c2350af20cf516436e244d95f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384648"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193791"
 ---
 O Xamarin.Forms tem um pop-up modal, conhecido como um alerta, para alertar o usuário ou para fazer perguntas simples sobre eles. Neste exercício, você aprenderá a usar o método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), da classe [`Page`](xref:Xamarin.Forms.Page), para exibir um alerta ao usuário e fazer uma pergunta simples.
 
@@ -67,7 +67,7 @@ O Xamarin.Forms tem um pop-up modal, conhecido como um alerta, para alertar o us
 
     Observe que, depois de selecionar uma resposta à pergunta, a resposta é enviada para a janela de **Saída** do Visual Studio.
 
-    Para obter mais informações sobre como exibir alertas, confira [Exibindo um alerta](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) no guia [Exibindo pop-ups](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Confira mais informações sobre a exibição de alertas em [Exibir um alerta](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) no guia [Exibir pop-ups](~/xamarin-forms/user-interface/pop-ups.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -128,4 +128,4 @@ O Xamarin.Forms tem um pop-up modal, conhecido como um alerta, para alertar o us
 
     Observe que, depois de selecionar uma resposta à pergunta, a resposta é enviada para a janela de **Saída do Aplicativo** do Visual Studio para Mac.
 
-    Para obter mais informações sobre como exibir alertas, confira [Exibindo um alerta](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) no guia [Exibindo pop-ups](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Confira mais informações sobre a exibição de alertas em [Exibir um alerta](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) no guia [Exibir pop-ups](~/xamarin-forms/user-interface/pop-ups.md).

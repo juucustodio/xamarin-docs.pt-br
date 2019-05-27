@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384646"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193821"
 ---
 
 O Xamarin.Forms tem um pop-up modal, conhecido como uma folha de ações, que pode ser usado para orientar os usuários durante uma tarefa. Neste exercício, você usará o método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*), da classe [`Page`](xref:Xamarin.Forms.Page), para exibir uma folha de ações que orienta os usuários durante uma tarefa.
@@ -41,7 +41,7 @@ O Xamarin.Forms tem um pop-up modal, conhecido como uma folha de ações, que po
 
     Observe que, após selecionar uma alternativa na caixa de diálogo de folha de ações, a seleção aparece na janela de **Saída** do Visual Studio.
 
-    Para obter mais informações sobre a exibição de folhas de ações, confira [Orientando usuários durante tarefas](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) no guia [Exibindo pop-ups](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Confira mais informações sobre a exibição de folhas de ação em [Orientar usuários durante tarefas](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) no guia [Exibir pop-ups](~/xamarin-forms/user-interface/pop-ups.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -75,4 +75,4 @@ O Xamarin.Forms tem um pop-up modal, conhecido como uma folha de ações, que po
 
     Observe que, após selecionar uma alternativa na caixa de diálogo de folha de ações, a seleção aparece na janela de **Saída do Aplicativo** do Visual Studio para Mac.
 
-    Para obter mais informações sobre a exibição de folhas de ações, confira [Orientando usuários durante tarefas](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) no guia [Exibindo pop-ups](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Confira mais informações sobre a exibição de folhas de ação em [Orientar usuários durante tarefas](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) no guia [Exibir pop-ups](~/xamarin-forms/user-interface/pop-ups.md).
