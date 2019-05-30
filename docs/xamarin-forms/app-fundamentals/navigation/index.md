@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 202f044ebd7dd5b110b94d2aa60eeb7151150607
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f67ab15466da118d12c280d597972d2d11f8e600
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994722"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178119"
 ---
 # <a name="xamarinforms-navigation"></a>Navegação do Xamarin.Forms
 
@@ -26,7 +26,7 @@ A classe [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) oferece uma exper
 
 ## <a name="tabbedpagetabbed-pagemd"></a>[TabbedPage](tabbed-page.md)
 
-O [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) do Xamarin.Forms consiste em uma lista de guias e uma área de detalhes maior, com cada guia carregando conteúdo na área de detalhes.
+A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) do Xamarin.Forms consiste em uma lista de guias e uma área do detalhe maior, com cada guia carregando conteúdo na área do detalhe.
 
 ## <a name="carouselpagecarousel-pagemd"></a>[CarouselPage](carousel-page.md)
 
@@ -39,7 +39,3 @@ O [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) do Xamarin.Forms é 
 ## <a name="modal-pagesmodalmd"></a>[Páginas modais](modal.md)
 
 O Xamarin.Forms também dá suporte a páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada.
-
-## <a name="displaying-pop-upspop-upsmd"></a>[Exibição de pop-ups](pop-ups.md)
-
-O Xamarin.Forms fornece dois elementos de interface do usuário semelhantes a pop-up: um alerta e uma folha de ações. Esses elementos de interface podem ser usados para fazer perguntas simples a usuários e para orientar os usuários por meio de tarefas.

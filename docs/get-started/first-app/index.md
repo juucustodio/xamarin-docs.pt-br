@@ -8,13 +8,13 @@ ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 04/02/2019
-ms.openlocfilehash: 5dc37212facbc5b58b807d3fbcba8650a5b065f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/23/2019
+ms.openlocfilehash: 3b25be2c929e0f072af2ff563d49ceaf07cae058
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61351848"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252339"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Compilar seu primeiro aplicativo Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Assista a este vídeo e acompanhe-o para compilar seu primeiro aplicativo móve
 
 ::: zone pivot="windows"
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-Android-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
@@ -74,6 +74,12 @@ Siga estas etapas em conjunto com o vídeo acima:
     > [!TIP]
     > É possível compilar e depurar o aplicativo iOS no Visual Studio com um computador Mac em rede. Veja as [instruções de instalação](~/ios/get-started/installation/windows/index.md) para obter mais informações.
 
+## <a name="build-an-ios-app-in-visual-studio-2019"></a>Criar um aplicativo iOS no Visual Studio de 2019
+
+Este vídeo aborda o processo de criação e teste um aplicativo iOS usando o Visual Studio de 2019 no Windows:
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
+
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
@@ -85,7 +91,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 Siga estas etapas em conjunto com o vídeo acima:
 
-1. Escolha **Arquivo > Novo > Projeto...**  ou pressione o botão **Criar novo projeto...** e, em seguida, selecione **Visual C# > Multiplataforma > Aplicativo Móvel (Xamarin.Forms)**:
+1. Escolha **Arquivo > Novo > Projeto...**  ou pressione o botão **Criar novo projeto...** e, em seguida, selecione **Visual C# > Multiplataforma > Aplicativo Móvel (Xamarin.Forms)** :
 
     [![Aplicativo Móvel (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 

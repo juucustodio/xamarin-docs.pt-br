@@ -7,13 +7,13 @@ ms.assetid: 0f813a14-2f0c-415d-8667-4563f3dc06e8
 author: conceptdev
 ms.author: crdun
 ms.custom: video
-ms.date: 04/02/2019
-ms.openlocfilehash: 642f66e068f021e76402c9dcc6f167bb74283aaa
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/23/2019
+ms.openlocfilehash: cf54d4a6d8cdedc4ddde0beedeaadd361356990a
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61264097"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252315"
 ---
 # <a name="installing-xamarin"></a>Instalando o Xamarin
 
@@ -23,7 +23,7 @@ _Como configurar o Visual Studio e o Xamarin para começar a compilar aplicativo
 
 ## <a name="installing-xamarin-on-windows"></a>Instalando o Xamarin no Windows
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2019-for-Mobile-Development-with-NET--Xamarin/player]
 
 ## <a name="step-by-step-instructions"></a>Instruções passo a passo
 

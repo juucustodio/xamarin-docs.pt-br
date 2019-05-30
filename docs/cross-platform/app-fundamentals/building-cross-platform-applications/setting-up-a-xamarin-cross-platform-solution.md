@@ -1,25 +1,25 @@
 ---
-title: Parte 3 – configuração de uma solução multiplataforma do Xamarin
-description: Este documento descreve como configurar uma solução de plataforma cruzada no Xamarin. Ele descreve compartilhado de código várias estratégias de compartilhamento, como projetos e .NET Standard.
+title: Parte 3 - configuração de uma solução de plataforma cruzada do Xamarin
+description: Este documento descreve como configurar uma solução de plataforma cruzada no Xamarin. Ele aborda várias estratégias, como projetos compartilhados e .NET Standard de compartilhamento de código.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: f802e31d851915d33cb6dbf5866f8cba3ab90303
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d20275bab4e4ce90f902a5e72321701d94b1d416
+ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276507"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354065"
 ---
-# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3 – configuração de uma solução multiplataforma do Xamarin
+# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3 - configuração de uma solução de plataforma cruzada do Xamarin
 
 Independentemente de quais plataformas estão sendo usadas, todos os projetos do Xamarin usam o mesmo formato de arquivo de solução (o Visual Studio **. sln** formato de arquivo). As soluções podem ser compartilhadas entre ambientes de desenvolvimento, mesmo quando projetos individuais não podem ser carregados (por exemplo, um projeto do Windows no Visual Studio para Mac).
 
 
 
-Ao criar uma nova entre o aplicativo da plataforma, a primeira etapa é criar uma solução em branco. Esta seção apresenta o que acontece em seguida: como configurar projetos para compilar aplicativos móveis de plataforma cruzada.
+Ao criar um novo aplicativo de plataforma cruzada, a primeira etapa é criar uma solução em branco. Esta seção explica o que acontece em seguida: como configurar projetos para compilar aplicativos móveis de plataforma cruzada.
 
  <a name="Sharing_Code" />
 
@@ -33,7 +33,7 @@ Consulte a [opções de compartilhamento de código](~/cross-platform/app-fundam
 
 ### <a name="shared-projects"></a>Projetos compartilhados
 
-A abordagem mais simples ao compartilhamento de arquivos de código é usar um [projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
+A abordagem mais simples ao compartilhamento de arquivos de código está usando um [projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
 
 Esse método permite que você compartilhar o mesmo código em projetos de plataforma diferente e usar diretivas de compilador para incluir caminhos de código diferente, específica de plataforma.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: c8adc7ec7f717cf0004f79e3b71123d6daeaee86
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 2897129779b698eae60338d44f9af19b6a2761bc
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978431"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252351"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Passo a passo: Como associar uma biblioteca Objective-C do iOS
 
@@ -138,7 +138,7 @@ A primeira etapa é para que possamos adicionar o código-fonte InfoColorPicker 
 
     [![](walkthrough-images/image12.png "Copie todos os arquivos de InfColorPicker")](walkthrough-images/image12.png#lightbox)
 
-7. Retornar para o Xcode, clique com botão direito do **InfColorPicker** pasta e selecione **adicionar arquivos ao "InfColorPicker..."**:
+7. Retornar para o Xcode, clique com botão direito do **InfColorPicker** pasta e selecione **adicionar arquivos ao "InfColorPicker..."** :
 
     [![](walkthrough-images/image08.png "Adicionando arquivos")](walkthrough-images/image08.png#lightbox)
 
@@ -172,7 +172,7 @@ Neste ponto, estamos fechar, mas não exatamente terminamos. A biblioteca estát
 
 ### <a name="creating-a-fat-binary"></a>Criação de um binário Fat
 
-Todos os dispositivos iOS têm processadores multifuncionais na arquitetura ARM que desenvolveram ao longo do tempo. Cada nova arquitetura adicionadas novas instruções e outras melhorias e ainda manter compatibilidade com versões anteriores. Em dispositivos iOS temos armv6, armv7, armv7s, conjuntos de instruções arm64 – Embora [não usamos mais armv6](~/ios/deploy-test/compiling-for-different-devices.md). O simulador de iOS não é alimentado por ARM e é em vez de um x86 e x86_64 alimentado simulator. É o que significa para nós é que podemos deve fornecer bibliotecas em cada instrução define.
+Todos os dispositivos iOS têm processadores multifuncionais na arquitetura ARM que desenvolveram ao longo do tempo. Cada nova arquitetura adicionadas novas instruções e outras melhorias e ainda manter compatibilidade com versões anteriores. os dispositivos iOS têm armv6, armv7, armv7s, conjuntos de instruções arm64 – Embora [armv6 não mais usada](~/ios/deploy-test/compiling-for-different-devices.md). O simulador de iOS não é alimentado por ARM e em vez disso, é um x86 e x86_64 alimentado simulator. Isso significa que bibliotecas devem ser fornecidas para cada conjunto de instruções.
 
 É uma biblioteca Fat `.a` arquivo que contém todas as arquiteturas com suporte.
 
@@ -182,9 +182,9 @@ Criar uma fat binário é um processo de três etapas:
 - Compile uma versão x86 e x84_64 da biblioteca estática.
 - Use o `lipo` ferramenta de linha de comando para combinar as duas bibliotecas estáticas em uma.
 
-Embora essas três etapas são bastante simples e pode ser necessário repeti-los no futuro, quando a biblioteca do Objective-C recebe atualizações ou se Exigimos que as correções de bugs. Se você decidir automatizar estas etapas, simplificará a manutenção futura e o suporte de projeto de associação do iOS.
+Embora essas três etapas são simples em vez disso, ele pode ser necessário repeti-los no futuro, quando a biblioteca do Objective-C recebe atualizações ou se é necessário correções de bugs. Se você decidir automatizar estas etapas, simplificará a manutenção futura e o suporte de projeto de associação do iOS.
 
-Há muitas ferramentas disponíveis para automatizar tarefas - um script de shell [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), e [fazer](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando instalamos as ferramentas de linha de comando do Xcode, também instalamos make, é assim que o sistema de compilação que será usado para este passo a passo. Aqui está uma **Makefile** que você pode usar para criar uma biblioteca compartilhada de várias arquitetura que funcionará em um dispositivo iOS e o simulador para qualquer biblioteca do:
+Há muitas ferramentas disponíveis para automatizar tarefas - um script de shell [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), e [fazer](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando as ferramentas de linha de comando do Xcode estão instaladas, `make` também estiver instalado, portanto, que é o sistema de compilação que será usado para este passo a passo. Aqui está uma **Makefile** que você pode usar para criar uma biblioteca compartilhada de várias arquitetura que funcionará em um dispositivo iOS e o simulador para qualquer biblioteca:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -213,7 +213,7 @@ clean:
     -rm -f *.a *.dll
 ```
 
-Insira o **Makefile** comandos no editor de texto sem formatação de sua escolha e atualize as seções com **nome do seu projeto** com o nome do seu projeto. Também é importante garantir que estamos você cole as instruções acima, as guias dentro das instruções foram preservadas.
+Insira o **Makefile** comandos no editor de texto sem formatação de sua escolha e atualize as seções com **nome do seu projeto** com o nome do seu projeto. Também é importante garantir que você cola as instruções acima exatamente, com as guias dentro das instruções preservadas.
 
 Salve o arquivo com o nome **Makefile** no mesmo local como a biblioteca estática do Xcode InfColorPicker criamos acima:
 

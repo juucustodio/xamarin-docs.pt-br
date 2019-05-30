@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 2536e123cb4bdfd194c573802a91cba7a8c1208d
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178131"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabalhando com recursos no Xamarin.iOS
 
@@ -205,12 +205,12 @@ Quando uma capacidade tiver sido habilitada no lado do servidor, ainda haverá t
 
 A lista a seguir detalha alguns dos problemas mais comuns que podem criar obstáculos ao desenvolver um aplicativo com um serviço de aplicativo habilitado.
 
--   Verifique se a ID correta foi criada e registrada corretamente na seção **Certificados, IDs e Perfis** do Portal do Desenvolvedor da Apple.
--   Verifique se o serviço foi adicionado à ID do aplicativo (ou da extensão) e se o serviço está configurado para usar o Grupo de Aplicativos, a ID do Comerciante ou o Contêiner criado anteriormente em **Certificados, IDs e Perfis** do Portal do Desenvolvedor da Apple.
--   Verifique se os perfis de provisionamento e IDs do Aplicativo foram instaladas e se o **Info.plist** do Aplicativo (no Projeto Xamarin) está usando uma das IDs do aplicativo configuradas acima.
--   Verifique se o arquivo **Entitlements.plist** do Aplicativo (no projeto Xamarin) tem o serviço correto habilitado.
+-   Verifique se a ID correta foi criada e registrada corretamente na seção **Certificados, IDs e Perfis** do Portal do Desenvolvedor da Apple.
+-   Verifique se o serviço foi adicionado à ID do aplicativo (ou da extensão) e se o serviço está configurado para usar o grupo de aplicativos, a ID do comerciante ou o contêiner criado anteriormente em **Certificados, IDs e Perfis** do Portal do Desenvolvedor da Apple.
+-   Verifique se os perfis de provisionamento e IDs do aplicativo foram instaladas e que **Info.plist** do aplicativo (no projeto Xamarin) está usando uma das IDs do aplicativo configuradas acima.
+-   Verifique se o arquivo **Entitlements.plist** do aplicativo (no projeto Xamarin) tem o serviço correto habilitado.
 -   Verifique se as chaves de privacidade apropriadas estão definidas no info.plist
--   Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de Depuração e do Simulador do iOS.
+-   Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de depuração e do simulador do iOS.
 
 <a name="summary" />
 
