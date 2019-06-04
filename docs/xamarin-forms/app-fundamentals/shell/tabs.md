@@ -1,46 +1,50 @@
 ---
 title: Layout do Shell do Xamarin.Forms
-description: Depois de um submenu, o próximo nível de navegação em um aplicativo Shell é a barra de guias inferior. Quando uma guia contiver mais de uma página, as páginas poderão ser navegadas pelas guias superiores.
+description: Depois de um submenu, o próximo nível de navegação em um aplicativo Shell é a barra de guias inferior. Como alternativa, o padrão de navegação de um aplicativo pode começar com as guias inferiores e sem o uso de um submenu. Em ambos os casos, quando uma guia inferior contiver mais de uma página, as páginas poderão ser navegadas pelas guias superiores.
 ms.prod: xamarin
 ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a8da1e96bbdf51899b1780265933402da791a03e
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 05/23/2019
+ms.openlocfilehash: cd3bfd9186c87594fc42702e2d62b33e68973db6
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005152"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252288"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Guias do Shell do Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
-Depois de um submenu, o próximo nível de navegação em um aplicativo Shell é a barra de guias inferior. Como alternativa, quando o submenu é fechado, a barra de guias inferior é considerada o nível principal da navegação.
+Quando o padrão de navegação de um aplicativo inclui um submenu, o próximo nível de navegação no aplicativo é a barra de guias inferior. Além disso, quando o submenu é fechado, a barra de guias inferior pode ser considerada o nível principal da navegação.
 
-Cada objeto `FlyoutItem` pode conter um ou mais objetos `Tab`, e cada objeto `Tab` representa uma guia na barra de guias inferior. Cada objeto `Tab` pode conter um ou mais objetos `ShellContent`, e cada objeto `ShellContent` exibirá um único objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage). Quando mais de um objeto `ShellContent` estiver presente em um objeto `Tab`, será possível navegar pelos objetos `ContentPage` por meio das guias principais.
+Como alternativa, o padrão de navegação de um aplicativo pode começar com as guias inferiores e sem o uso de um submenu. Neste cenário, o filho do objeto `Shell` deve ser um objeto `TabBar`, que representa a barra de guias inferior.
 
-Dentro de cada objeto `ContentPage`, é possível navegar para objetos `ContentPage` adicionais. Saiba mais sobre a navegação na [navegação do Shell do Xamarin.Forms](navigation.md).
+> [!NOTE]
+> O tipo `TabBar` desabilita o submenu.
+
+Cada objeto `FlyoutItem` ou `TabBar` pode conter um ou mais objetos `Tab`, e cada objeto `Tab` representa uma guia na barra de guias inferior. Cada objeto `Tab` pode conter um ou mais objetos `ShellContent`, e cada objeto `ShellContent` exibirá um único objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage). Quando mais de um objeto `ShellContent` estiver presente em um objeto `Tab`, será possível navegar pelos objetos `ContentPage` por meio das guias principais.
+
+Dentro de cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), é possível navegar para objetos `ContentPage` adicionais. Saiba mais sobre a navegação na [navegação do Shell do Xamarin.Forms](navigation.md).
 
 ## <a name="single-page-application"></a>Aplicativo de página única
 
-O aplicativo Shell mais simples é um aplicativo de página única, que pode ser criado pela adição de um único objeto `Tab` a um objeto `FlyoutItem`. Dentro do objeto `Tab`, um objeto `ShellContent` deve ser definido como um objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+O aplicativo Shell mais simples é um aplicativo de página única, que pode ser criado pela adição de um único objeto `Tab` a um objeto `TabBar`. Dentro do objeto `Tab`, um objeto `ShellContent` deve ser definido como um objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab>
             <ShellContent>
                 <views:CatsPage />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -48,12 +52,10 @@ Este exemplo de código resulta no seguinte aplicativo de página única:
 
 [![Captura de tela de um aplicativo Shell de página única no iOS e Android](tabs-images/single-page-app.png "Aplicativo Shell de página única")](tabs-images/single-page-app-large.png#lightbox "Aplicativo Shell de página única")
 
-O submenu não é necessário em um aplicativo de página única e, portanto, a propriedade `Shell.FlyoutBehavior` é definida como `Disabled`.
-
 > [!NOTE]
 > A barra de navegação pode ser ocultada, se necessário, definindo a propriedade anexada `Shell.NavBarIsVisible` como `false` no objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
-O Shell tem operadores de conversão implícita que permitem que a hierarquia visual no Shell seja simplificada, sem a introdução de modos de exibição adicionais na árvore visual. Isso é possível porque um objeto `Shell` na subclasse só pode conter objetos de `FlyoutItem`, que só podem conter objetos de `Tab`, que só podem conter objetos de `ShellContent`. Esses operadores de conversão implícita podem ser usados para remover os objetos de `FlyoutItem`, `Tab` e `ShellContent` do exemplo anterior:
+O Shell tem operadores de conversão implícita que permitem que a hierarquia visual no Shell seja simplificada, sem a introdução de modos de exibição adicionais na árvore visual. Isso é possível porque um objeto `Shell` na subclasse só pode conter objetos `FlyoutItem` ou um objeto `TabBar`, que só podem conter objetos `Tab`, que só podem conter objetos `ShellContent`. Esses operadores de conversão implícita podem ser usados para remover os objetos de `TabBar`, `Tab` e `ShellContent` do exemplo anterior:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -65,22 +67,21 @@ O Shell tem operadores de conversão implícita que permitem que a hierarquia vi
 </Shell>
 ```
 
-Essa conversão implícita automaticamente encapsula o objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) em um objeto `ShellContent`, que é encapsulado em um objeto `Tab`, que é encapsulado em um objeto `FlyoutItem`.
+Essa conversão implícita automaticamente encapsula o objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) em um objeto `ShellContent`, que é encapsulado em um objeto `Tab`, que é encapsulado em um objeto `FlyoutItem`. O submenu não é necessário em um aplicativo de página única e, portanto, a propriedade `Shell.FlyoutBehavior` é definida como `Disabled`.
 
 > [!IMPORTANT]
 > Em um aplicativo do Shell, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) que é filho de um objeto `ShellContent` é criado durante a inicialização do aplicativo. Adicionar outros objetos `ShellContent` usando essa abordagem fará com que sejam criadas outras páginas durante a inicialização do aplicativo, o que pode levar a uma experiência ruim de inicialização. No entanto, o Shell também é capaz de criar páginas sob demanda, em resposta à navegação. Saiba mais em [carregamento de páginas eficiente](tabs.md#efficient-page-loading).
 
 ## <a name="bottom-tabs"></a>Guias inferiores
 
-Os objetos `Tab` são renderizados como guias inferiores, desde que haja vários objetos `Tab` em um único objeto `FlyoutItem`:
+Os objetos `Tab` são renderizados como guias inferiores, desde que haja vários objetos `Tab` em um único objeto `TabBar`:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab Title="Cats"
              Icon="cat.png">
             <ShellContent>
@@ -93,7 +94,7 @@ Os objetos `Tab` são renderizados como guias inferiores, desde que haja vários
                 <views:DogsPage />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -107,12 +108,11 @@ Como alternativa, os operadores de conversão implícita do Shell podem ser usad
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <views:CatsPage IconImageSource="cat.png" />
         <views:DogsPage IconImageSource="dog.png" />
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -131,7 +131,9 @@ A classe `Tab` inclui as seguintes propriedades que controlam a aparência e com
 - `Icon`, do tipo `ImageSource`, define o ícone a ser exibido em partes do cromado que não são o submenu.
 - `IsChecked`, do tipo `boolean`, define se o item está realçado naquele momento no submenu.
 - `IsEnabled`, do tipo `boolean`, define se o item é selecionável no cromado.
-- `Items`, do tipo `ShellContentCollection`, define todo o conteúdo dentro de um `Tab`.
+- `IsTabStop`, do tipo `bool`, indica se um `Tab` está incluído na navegação por tabulação. Seu valor padrão é `true`, e quando o valor é `false`, o `Tab` é ignorado pela infraestrutura da navegação por tabulação, independentemente de `TabIndex` estar definido.
+- `Items`, do tipo `IList<ShellContent>`, define todo o conteúdo dentro de um `Tab`.
+- `TabIndex`, do tipo `int`, indica a ordem na qual os objetos de `Tab` recebem o foco quando o usuário navega pelos itens pressionando a tecla Tab. O valor padrão da propriedade é 0.
 - `Title`, do tipo `string`, o título a ser exibido na guia na interface do usuário.
 
 ## <a name="shell-content"></a>Conteúdo do Shell
@@ -142,9 +144,8 @@ O filho de cada objeto `Tab` é um objeto `ShellContent`, cuja propriedade `Cont
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab Title="Cats"
              Icon="cat.png">
             <ShellContent>
@@ -157,11 +158,11 @@ O filho de cada objeto `Tab` é um objeto `ShellContent`, cuja propriedade `Cont
                 <views:DogsPage />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
-Dentro de cada objeto `ContentPage`, é possível navegar para objetos `ContentPage` adicionais. Saiba mais sobre a navegação na [navegação do Shell do Xamarin.Forms](navigation.md).
+Dentro de cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage), é possível navegar para objetos `ContentPage` adicionais. Saiba mais sobre a navegação na [navegação do Shell do Xamarin.Forms](navigation.md).
 
 ### <a name="shellcontent-class"></a>Classe ShellContent
 
@@ -180,15 +181,14 @@ Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xam
 
 ## <a name="bottom-and-top-tabs"></a>Guias inferior e superior
 
-Quando mais de um objeto `ShellContent` está presente em um objeto `Tab`, uma barra de guia superior é adicionada à guia inferior, por meio da qual é possível navegar pelos objetos `ContentPage`:
+Quando mais de um objeto `ShellContent` está presente em um objeto `Tab`, uma barra de guia superior é adicionada à guia inferior, por meio da qual é possível navegar pelos objetos [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab Title="Domestic"
              Icon="domestic.png">
             <ShellContent>
@@ -204,7 +204,7 @@ Quando mais de um objeto `ShellContent` está presente em um objeto `Tab`, uma b
                 <views:MonkeysPage />
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -218,16 +218,15 @@ Como alternativa, os operadores de conversão implícita do Shell podem ser usad
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell"
-       FlyoutBehavior="Disabled">
-    <FlyoutItem>
+       x:Class="Xaminals.AppShell">
+    <TabBar>
         <Tab Title="Domestic"
              Icon="domestic.png">
             <views:CatsPage />
             <views:DogsPage />
         </Tab>
         <views:MonkeysPage IconImageSource="monkey.png" />
-    </FlyoutItem>
+    </TabBar>
 </Shell>
 ```
 
@@ -242,8 +241,7 @@ Em um aplicativo Shell, cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPa
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
        x:Class="Xaminals.AppShell">    
-    <FlyoutItem Title="Animals"
-                FlyoutDisplayOptions="AsMultipleItems">
+    <TabBar>
         <Tab Title="Domestic"
              Icon="paw.png">
             <ShellContent Title="Cats"
@@ -256,7 +254,7 @@ Em um aplicativo Shell, cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPa
         <ShellContent Title="Monkeys"
                       Icon="monkey.png"
                       ContentTemplate="{DataTemplate views:MonkeysPage}" />
-    </FlyoutItem>    
+    </TabBar>    
 </Shell>
 ```
 
@@ -264,17 +262,17 @@ Esse XAML cria e exibe `CatsPage`, pois esse é o primeiro item do conteúdo dec
 
 ## <a name="tab-appearance"></a>Aparência da guia
 
-A classe `Shell` define as propriedades a seguir, que controlam a aparência das guias:
+A classe `Shell` define as propriedades anexadas a seguir, que controlam a aparência das guias:
 
-- `TabBarBackgroundColor`, do tipo `Color`, uma propriedade anexada que define a cor da barra de guias. Se a propriedade não for definida, o valor de propriedade `BackgroundColor` será usado.
-- `TabBarDisabledColor`, do tipo `Color`, uma propriedade anexada que define a cor da barra de guias. Se a propriedade não for definida, o valor de propriedade `DisabledColor` será usado.
-- `TabBarForegroundColor`, do tipo `Color`, uma propriedade anexada que define a cor de primeiro plano da barra de guias. Se a propriedade não for definida, o valor de propriedade `ForegroundColor` será usado.
-- `TabBarTitleColor`, do tipo `Color`, uma propriedade anexada que define a cor de título da barra de guias. Se a propriedade não for definida, o valor de propriedade `TitleColor` será usado.
-- `TabBarUnselectedColor`, do tipo `Color`, uma propriedade anexada que define a cor de não seleção da barra de guias. Se a propriedade não for definida, o valor de propriedade `UnselectedColor` será usado.
+- `TabBarBackgroundColor`, do tipo `Color`, que define a cor da tela de fundo da barra de guias. Se a propriedade não for definida, o valor de propriedade `BackgroundColor` será usado.
+- `TabBarDisabledColor`, do tipo `Color`, que define a cor desabilitada da barra de guias. Se a propriedade não for definida, o valor de propriedade `DisabledColor` será usado.
+- `TabBarForegroundColor`, do tipo `Color`, que define a cor de primeiro plano da barra de guias. Se a propriedade não for definida, o valor de propriedade `ForegroundColor` será usado.
+- `TabBarTitleColor`, do tipo `Color`, que define a cor do título da barra de guias. Se a propriedade não for definida, o valor de propriedade `TitleColor` será usado.
+- `TabBarUnselectedColor`, do tipo `Color`, que define a cor não selecionada da barra de guias. Se a propriedade não for definida, o valor de propriedade `UnselectedColor` será usado.
 
-Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), o que significa que essas propriedades podem ser o destino de vinculações de dados.
+Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), o que significa que essas propriedades podem ser o destino de vinculações de dados e estilizadas.
 
-Portanto, as guias podem ser estilizadas usando estilos XAML. O exemplo a seguir mostra um estilo XAML que define diferentes propriedades de cor da guia:
+O exemplo a seguir mostra um estilo XAML que define diferentes propriedades de cor da guia:
 
 ```xaml
 <Style x:Key="BaseStyle"
@@ -294,4 +292,4 @@ Além disso, as guias também podem ser estilizadas usando as folhas de estilo e
 
 - [Xaminals (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Navegação do Shell do Xamarin.Forms](navigation.md)
-- [Propriedades específicas do Shell do Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)
+- [Propriedades específicas do CSS Shell do Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

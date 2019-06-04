@@ -6,15 +6,15 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: e97dbb993cb108245636ae459a572e18b13d6817
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 05/24/2019
+ms.openlocfilehash: df8ecba2527015dd6a7e2fd324b34306295b94d3
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005193"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213310"
 ---
-# <a name="xamarinforms-shell"></a>Shell do Xamarin.Forms
+# <a name="xamarinforms-shell-search"></a>Pesquisa do Shell do Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
@@ -22,50 +22,11 @@ O Shell do Xamarin.Forms inclui a funcionalidade de pesquisa integrada fornecida
 
 [![Captura de tela de um SearchHandler do Shell no iOS e Android](search-images/searchhandler.png "SearchHandler do Shell")](search-images/searchhandler-large.png#lightbox "SearchHandler do Shell")
 
-Quando uma consulta é inserida na caixa de pesquisa, a área de sugestões de pesquisa pode ser preenchida com dados:
+Quando uma consulta é inserida na caixa de pesquisa, a propriedade `Query` é atualizada e, em cada atualização, o método `OnQueryChanged` é executado. Esse método pode ser substituído para preencher a área de sugestões de pesquisa com dados:
 
 [![Captura de tela dos resultados da pesquisa em um SearchHandler do Shell no iOS e Android](search-images/search-suggestions.png "Resultados da pesquisa no SearchHandler do Shell")](search-images/search-suggestions-large.png#lightbox "Resultados da pesquisa no SearchHandler do Shell")
 
-Em seguida, quando um resultado de pesquisa é selecionado, o aplicativo pode responder apropriadamente, por exemplo, navegando para outra página.
-
-## <a name="searchhandler-class"></a>Classe SearchHandler
-
-A classe `SearchHandler` define as seguintes propriedades que controlam sua aparência e seu comportamento:
-
-- `ClearIcon`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone exibido para limpar o conteúdo da caixa de pesquisa.
-- `ClearIconHelpText`, do tipo `string`, o texto acessível de ajuda para o ícone de limpeza.
-- `ClearIconName`, do tipo `string`, o nome do ícone de limpeza para uso com leitores de tela.
-- `ICommand`, do tipo `ClearPlaceholderIcon`, que é executado quando `ClearPlaceholderCommand` é tocado.
-- `ClearPlaceholderCommandParameter`, do tipo `object`, que é o parâmetro passado para `ClearPlaceholderCommand`.
-- `ClearPlaceholderEnabled`, do tipo `bool`, que determina se o `ClearPlaceholderCommand` pode ser executado. O valor padrão é `true`.
-- `ClearPlaceholderHelpText`, do tipo `string`, o texto acessível de ajuda para o ícone de espaço reservado de limpeza.
-- `ClearPlaceholderIcon`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone de espaço reservado de limpeza exibido quando a caixa de pesquisa está vazia.
-- `ClearPlaceholderName`, do tipo `string`, o nome do ícone de espaço reservado de limpeza para uso com leitores de tela.
-- `Command`, do tipo `ICommand`, que é executado quando a consulta de pesquisa é confirmada.
-- `CommandParameter`, do tipo `object`, que é o parâmetro passado para `Command`.
-- `DisplayMemberName`, do tipo `string`, que representa o nome ou caminho da propriedade que é exibida para cada item de dados na coleção `ItemsSource`.
-- `IsSearchEnabled`, do tipo `bool`, que representa o estado habilitado da caixa de pesquisa. O valor padrão é `true`.
-- `ItemsSource`, do tipo `IEnumerable`, especifica a coleção de itens a serem exibidos na área de sugestão e tem um valor padrão de `null`.
-- `ItemTemplate`, do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), especifica o modelo a ser aplicado em cada item na coleção de itens a ser exibida na área de sugestão.
-- `Placeholder`, do tipo `string`, o texto a ser exibido quando a caixa de pesquisa está vazia.
-- `Query`, do tipo `string`, o texto inserido pelo usuário na caixa de pesquisa.
-- `QueryIcon`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone usado para indicar ao usuário que a pesquisa está disponível.
-- `QueryIconHelpText`, do tipo `string`, o texto de ajuda acessível para o ícone de consulta.
-- `QueryIconName`, do tipo `string`, o nome do ícone de consulta para uso com leitores de tela.
-- `SearchBoxVisibility`, do tipo `SearchBoxVisibility`, a visibilidade da caixa de pesquisa. Por padrão, a caixa de pesquisa fica visível e totalmente expandida.
-- `SelectedItem`, do tipo `object`, o item selecionado nos resultados da pesquisa. Essa propriedade é somente leitura e tem um valor padrão de `null`.
-- `ShowsResults`, do tipo `bool`, indica se os resultados da pesquisa devem ser esperados na área de sugestão na entrada de texto. O valor padrão é `false`.
-
-Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), o que significa que essas propriedades podem ser o destino de vinculações de dados.
-
-Além disso, a classe `SearchHandler` fornece os seguintes métodos substituíveis:
-
-- `OnClearPlaceholderClicked`, que é chamado sempre que `ClearPlaceholderIcon` é tocado.
-- `OnItemSelected`, que é chamado sempre que um resultado de pesquisa é selecionado pelo usuário.
-- `Query`, que é chamado quando a propriedade `OnQueryChanged` é alterada.
-- `OnQueryConfirmed`, que é chamado sempre que o usuário pressiona ou confirma a consulta na caixa de pesquisa.
-
-Quando o usuário inserir uma consulta na caixa de pesquisa, a propriedade `Query` será atualizada e, em cada atualização, o método `OnQueryChanged` será executado. Esse método pode ser usado para atualizar a área de sugestões que aparece abaixo da caixa de pesquisa. Quando o usuário seleciona um resultado da área de sugestões, o método `OnItemSelected` é executado.
+Em seguida, quando um resultado é selecionado na área de sugestões de pesquisa, o método `OnItemSelected` é executado. Esse método pode ser substituído para responder apropriadamente, por exemplo, navegando para uma página de detalhes.
 
 ## <a name="create-a-searchhandler"></a>Criar um SearchHandler
 
@@ -215,9 +176,9 @@ As capturas de tela a seguir mostram o resultado dos modelos de cada item na ár
 
 Para obter mais informações sobre modelos de dados, confira [Modelos de dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
-## <a name="searchbox-visibility"></a>Visibilidade da SearchBox
+## <a name="search-box-visibility"></a>Visibilidade da caixa de pesquisa
 
-Quando uma caixa de pesquisa é adicionada na parte superior de uma página, por padrão, essa caixa fica visível e totalmente expandida. No entanto, esse comportamento pode ser alterado definindo a propriedade `SearchHandler.SearchBoxVisibility` para um dos membros da enumeração `SearchBoxVisibility`:
+Quando um `SearchHandler` é adicionado na parte superior de uma página, por padrão, a caixa de pesquisa fica visível e totalmente expandida. No entanto, esse comportamento pode ser alterado definindo a propriedade `SearchHandler.SearchBoxVisibility` para um dos membros da enumeração `SearchBoxVisibility`:
 
 - `Hidden` – a caixa de pesquisa não está visível ou acessível.
 - `Collapsible` – a caixa de pesquisa está oculta até que o usuário execute uma ação para mostrá-la.
@@ -235,6 +196,133 @@ O exemplo a seguir mostra como ocultar a caixa de pesquisa:
     ...
 </ContentPage>
 ```
+
+## <a name="search-box-focus"></a>Foco na caixa de pesquisa
+
+Tocar na caixa de pesquisa invoca o teclado na tela, e a caixa de pesquisa recebe o foco de entrada. Isso também pode ser feito de forma programática chamando o método `Focus`, que tenta definir o foco de entrada na caixa de pesquisa e retornará `true` se for bem-sucedido. Quando o foco passa para a caixa de pesquisa, o evento `Focus` é acionado, e o método `OnFocused` substituível é chamado.
+
+Quando o foco de entrada estiver em uma caixa de pesquisa, tocar em qualquer parte da tela fará o teclado na tela desaparecer e a caixa de pesquisa perder o foco de entrada. Isso também poderá ser feito de forma programática chamando o método `Unfocus`. Quando a caixa de pesquisa perde o foco, o evento `Unfocused` é acionado, e o método `OnUnfocus` substituível é chamado.
+
+O estado do foco de uma caixa de pesquisa poderá ser recuperado por meio da propriedade `IsFocused`, que retornará `true` se um `SearchHandler` estiver com o foco de entrada no momento.
+
+## <a name="searchhandler-appearance"></a>Aparência do SearchHandler
+
+A classe `SearchHandler` define as seguintes propriedades que afetam sua aparência:
+
+- `BackgroundColor`, do tipo `Color`, é a cor do segundo plano do texto da caixa de pesquisa.
+- `CancelButtonColor`, do tipo `Color`, é a cor do botão Cancelar.
+- `FontAttributes`, do tipo `FontAttributes`, indica se o texto da caixa de pesquisa está em negrito ou em itálico.
+- `FontFamily`, do tipo `string`, é a família da fonte usada para o texto da caixa de pesquisa.
+- `FontSize`, do tipo `double`, é o tamanho do texto da caixa de pesquisa.
+- `HorizontalTextAlignment`, do tipo `TextAlignment`, é o alinhamento horizontal da caixa de pesquisa.
+- `PlaceholderColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa do espaço reservado.
+- `TextColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa.
+
+## <a name="searchhandler-keyboard"></a>Teclado do SearchHandler
+
+O teclado que é exibido quando um usuário interage com um `SearchHandler` pode ser definido de forma programática por meio da propriedade do `Keyboard`, para uma das seguintes propriedades da classe [`Keyboard`](xref:Xamarin.Forms.Keyboard):
+
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – usado para mensagens de texto e lugares em que os emojis são úteis.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – o teclado padrão.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) – usado ao inserir endereços de email.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) – usado ao inserir números.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – usado ao inserir texto, sem nenhum [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) especificado.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – usado ao inserir números de telefone.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – usado ao inserir texto.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – usado para inserir caminhos de arquivos e endereços web.
+
+Isso pode ser feito no XAML da seguinte maneira:
+
+```xaml
+<SearchHandler Keyboard="Email" />
+```
+
+Este é o código C# equivalente:
+
+```csharp
+SearchHandler searchHandler = new SearchHandler { Keyboard = Keyboard.Email };
+```
+
+A classe [`Keyboard`](xref:Xamarin.Forms.Keyboard) também tem um método de fábrica [`Create`](xref:Xamarin.Forms.Keyboard.Create*) que pode ser usado para personalizar um teclado especificando o comportamento de capitalização, de verificação ortográfica e de sugestão. Os valores de enumeração [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) são especificados como argumentos para o método, e um `Keyboard` personalizado é retornado. A enumeração `KeyboardFlags` contém os seguintes valores:
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – nenhum recurso é adicionado ao teclado.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – indica que as primeiras letras das primeiras palavras de cada frase serão automaticamente maiúsculas.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) – indica que a verificação ortográfica será executada no texto digitado.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) – indica que os preenchimentos de palavra sugerida será realizado no texto digitado.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – indica que a primeira letra de cada palavra será automaticamente maiúscula.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – indica que todos os caracteres serão automaticamente colocados em maiúsculas.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) – indica que não ocorrerá nenhuma capitalização automática ocorrerá.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – indica que a verificação ortográfica, os preenchimentos de palavra sugerida e a capitalização de frases ocorrerão no texto digitado.
+
+O seguinte exemplo de código XAML mostra como personalizar o [`Keyboard`](xref:Xamarin.Forms.Keyboard) padrão para oferecer preenchimentos de palavra sugerida e capitalizar todos os caracteres inseridos:
+
+```xaml
+<SearchHandler Placeholder="Enter search terms">
+    <SearchHandler.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </SearchHandler.Keyboard>
+</SearchHandler>
+```
+
+Este é o código C# equivalente:
+
+```csharp
+SearchHandler searchHandler = new SearchHandler { Placeholder = "Enter search terms" };
+searchHandler.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
+
+## <a name="searchhandler-reference"></a>Referência do SearchHandler
+
+A classe `SearchHandler` define as seguintes propriedades que controlam sua aparência e seu comportamento:
+
+- `BackgroundColor`, do tipo `Color`, é a cor do segundo plano do texto da caixa de pesquisa.
+- `CancelButtonColor`, do tipo `Color`, é a cor do botão Cancelar.
+- `ClearIcon`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone exibido para limpar o conteúdo da caixa de pesquisa.
+- `ClearIconHelpText`, do tipo `string`, o texto acessível de ajuda para o ícone de limpeza.
+- `ClearIconName`, do tipo `string`, o nome do ícone de limpeza para uso com leitores de tela.
+- `ICommand`, do tipo `ClearPlaceholderIcon`, que é executado quando `ClearPlaceholderCommand` é tocado.
+- `ClearPlaceholderCommandParameter`, do tipo `object`, que é o parâmetro passado para `ClearPlaceholderCommand`.
+- `ClearPlaceholderEnabled`, do tipo `bool`, que determina se o `ClearPlaceholderCommand` pode ser executado. O valor padrão é `true`.
+- `ClearPlaceholderHelpText`, do tipo `string`, o texto acessível de ajuda para o ícone de espaço reservado de limpeza.
+- `ClearPlaceholderIcon`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone de espaço reservado de limpeza exibido quando a caixa de pesquisa está vazia.
+- `ClearPlaceholderName`, do tipo `string`, o nome do ícone de espaço reservado de limpeza para uso com leitores de tela.
+- `Command`, do tipo `ICommand`, que é executado quando a consulta de pesquisa é confirmada.
+- `CommandParameter`, do tipo `object`, que é o parâmetro passado para `Command`.
+- `DisplayMemberName`, do tipo `string`, que representa o nome ou caminho da propriedade que é exibida para cada item de dados na coleção `ItemsSource`.
+- `FontAttributes`, do tipo `FontAttributes`, indica se o texto da caixa de pesquisa está em negrito ou em itálico.
+- `FontFamily`, do tipo `string`, é a família da fonte usada para o texto da caixa de pesquisa.
+- `FontSize`, do tipo `double`, é o tamanho do texto da caixa de pesquisa.
+- `HorizontalTextAlignment`, do tipo `TextAlignment`, é o alinhamento horizontal da caixa de pesquisa.
+- `IsFocused`, do tipo `bool`, representando se um `SearchHandler` tem atualmente foco de entrada.
+- `IsSearchEnabled`, do tipo `bool`, que representa o estado habilitado da caixa de pesquisa. O valor padrão é `true`.
+- `ItemsSource`, do tipo `IEnumerable`, especifica a coleção de itens a serem exibidos na área de sugestão e tem um valor padrão de `null`.
+- `ItemTemplate`, do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), especifica o modelo a ser aplicado em cada item na coleção de itens a ser exibida na área de sugestão.
+- `Keyboard`, do tipo `Keyboard`, é o teclado para o `SearchHandler`.
+- `Placeholder`, do tipo `string`, o texto a ser exibido quando a caixa de pesquisa está vazia.
+- `PlaceholderColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa do espaço reservado.
+- `Query`, do tipo `string`, o texto inserido pelo usuário na caixa de pesquisa.
+- `QueryIcon`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone usado para indicar ao usuário que a pesquisa está disponível.
+- `QueryIconHelpText`, do tipo `string`, o texto de ajuda acessível para o ícone de consulta.
+- `QueryIconName`, do tipo `string`, o nome do ícone de consulta para uso com leitores de tela.
+- `SearchBoxVisibility`, do tipo `SearchBoxVisibility`, a visibilidade da caixa de pesquisa. Por padrão, a caixa de pesquisa fica visível e totalmente expandida.
+- `SelectedItem`, do tipo `object`, o item selecionado nos resultados da pesquisa. Essa propriedade é somente leitura e tem um valor padrão de `null`.
+- `ShowsResults`, do tipo `bool`, indica se os resultados da pesquisa devem ser esperados na área de sugestão na entrada de texto. O valor padrão é `false`.
+- `TextColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa.
+
+Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), o que significa que essas propriedades podem ser o destino de vinculações de dados.
+
+Além disso, a classe `SearchHandler` fornece os seguintes métodos substituíveis:
+
+- `OnClearPlaceholderClicked`, que é chamado sempre que `ClearPlaceholderIcon` é tocado.
+- `OnItemSelected`, que é chamado sempre que um resultado de pesquisa é selecionado pelo usuário.
+- `OnFocused`, que é chamado quando um `SearchHandler` adquire o foco de entrada.
+- `Query`, que é chamado quando a propriedade `OnQueryChanged` é alterada.
+- `OnQueryConfirmed`, que é chamado sempre que o usuário pressiona ou confirma a consulta na caixa de pesquisa.
+- `OnUnfocus`, que é chamado quando um `SearchHandler` fecha o foco de entrada.
 
 ## <a name="related-links"></a>Links relacionados
 

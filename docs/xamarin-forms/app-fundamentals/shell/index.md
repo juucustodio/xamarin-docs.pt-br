@@ -6,13 +6,13 @@ ms.assetid: 85B322AA-808F-41B6-953A-5877264AE643
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 40f955d39799598093060f3230629a099885e4a2
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.date: 05/28/2019
+ms.openlocfilehash: a988a99e20af76d071f55c4cd2c97b135ad077f8
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970770"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252283"
 ---
 # <a name="xamarinforms-shell"></a>Shell do Xamarin.Forms
 
@@ -20,13 +20,21 @@ ms.locfileid: "65970770"
 
 O Shell do Xamarin.Forms reduz a complexidade do desenvolvimento de aplicativos móveis, fornecendo os recursos fundamentais que a maioria dos aplicativos móveis exige. Isso inclui uma experiência de usuário de navegação comum, um esquema de navegação baseado em URI e um manipulador de pesquisa integrado.
 
+## <a name="create-a-xamarinforms-shell-applicationcreatemd"></a>[Criar um Aplicativo do Shell do Xamarin.Forms](create.md)
+
+O processo para a criação de um aplicativo do Shell do Xamarin.Forms é criar um arquivo XAML que seja uma subclasse da classe `Shell`, definir a propriedade `MainPage` da classe `App` do aplicativo para o objeto `Shell` na subclasse e descrever a hierarquia visual do aplicativo na classe `Shell` na subclasse.
+
 ## <a name="flyoutflyoutmd"></a>[Submenu](flyout.md)
 
 O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais.
 
 ## <a name="tabstabsmd"></a>[Guias](tabs.md)
 
-Depois de um submenu, o próximo nível de navegação em um aplicativo Shell é a barra de guias inferior. Quando uma guia contiver mais de uma página, as páginas poderão ser navegadas pelas guias superiores.
+Depois de um submenu, o próximo nível de navegação em um aplicativo Shell é a barra de guias inferior. Como alternativa, o padrão de navegação de um aplicativo pode começar com as guias inferiores e sem o uso de um submenu. Em ambos os casos, quando uma guia inferior contiver mais de uma página, as páginas poderão ser navegadas pelas guias superiores.
+
+## <a name="page-configurationconfigurationmd"></a>[Configuração de página](configuration.md)
+
+A classe do `Shell` define as propriedades anexadas que podem ser usadas para configurar a aparência das páginas em aplicativos do Shell do Xamarin.Forms. Isso inclui a configuração das cores da página, a desabilitação da barra de navegação, a desabilitação da barra de guias e a exibição dos modos de exibição na barra de navegação.
 
 ## <a name="navigationnavigationmd"></a>[Navegação](navigation.md)
 
