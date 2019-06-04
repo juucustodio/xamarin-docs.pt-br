@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 4cccf0660e306cb0dc466f5376d74411fa6c4ba1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b861993f0d9661a5c9f5c5983020fa0d275ff78c
+ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61029536"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469490"
 ---
 # <a name="controls-reference"></a>Referência de Controles
 
@@ -31,9 +31,9 @@ Os quatro grupos de controle principal usados para criar a interface do usuário
 
 Geralmente, uma página do xamarin. Forms ocupa a tela inteira. A página normalmente contém um layout, que contém exibições e possivelmente outros layouts. As células são componentes especializados usados na conexão com [ `TableView` ](views.md#tableView) e [ `ListView` ](views.md#listView).
 
-Nos quatro artigos sobre [ **páginas**](pages.md), [ **Layouts**](layouts.md), [ **exibições** ](views.md), e [ **células**](cells.md), cada tipo de controle é descrito com links para documentação da API, um artigo que descreve seu uso (se houver) e um ou mais programas de exemplo (se existirem). Cada tipo de controle também é acompanhado de uma captura de tela mostrando uma página a partir de [ **FormsGallery** ](https://developer.xamarin.com/samples/FormsGallery/) exemplo dispositivos em execução no iOS, Android e UWP. Cada captura de tela abaixo estão os links para o código-fonte para a página em C#, a página XAML equivalente e (quando apropriado) o arquivo de code-behind do C# para a página XAML.
+Nos quatro artigos sobre [ **páginas**](pages.md), [ **Layouts**](layouts.md), [ **exibições** ](views.md), e [ **células**](cells.md), cada tipo de controle é descrito com links para documentação da API, um artigo que descreve seu uso (se houver) e um ou mais programas de exemplo (se existirem). Cada tipo de controle também é acompanhado de uma captura de tela mostrando uma página a partir de [ **FormsGallery** ](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/) exemplo dispositivos em execução no iOS, Android e UWP. Cada captura de tela abaixo estão os links para o código-fonte para a página em C#, a página XAML equivalente e (quando apropriado) o arquivo de code-behind do C# para a página XAML.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
+- [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Documentação da API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

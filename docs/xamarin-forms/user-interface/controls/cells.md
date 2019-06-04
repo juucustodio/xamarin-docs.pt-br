@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 5ef1aba847954ccdeb230acd82ebbc5015ebd6b7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c4d73f131b8b20f17c5a3df13a3c4590f4ca926c
+ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61030567"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469499"
 ---
 # <a name="xamarinforms-cells"></a>Células do xamarin. Forms
 
@@ -48,7 +48,7 @@ Xamarin. Forms dá suporte aos seguintes tipos de célula:
 
 |     |     |
 | --- | --- |
-| O [ `SwitchCell` ](xref:Xamarin.Forms.SwitchCell) contém o texto definido com o [ `Text`'](xref:Xamarin.Forms.SwitchCell.Text) propriedade e ativar/desativar opção inicialmente é definida com o valor booliano [ `On` ](xref:Xamarin.Forms.SwitchCell.On) propriedade. Lidar com o [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) evento a ser notificado quando o `On` alterações de propriedade.<br /><br />[Documentação da API](xref:Xamarin.Forms.SwitchCell) / [guia](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![Exemplo de SwitchCell](cells-images/SwitchCell.png "exemplo SwitchCell")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
+| O [ `SwitchCell` ](xref:Xamarin.Forms.SwitchCell) contém o texto definido com o [ `Text` ](xref:Xamarin.Forms.SwitchCell.Text) propriedade e uma chave liga/desliga são definidos inicialmente com o valor booliano [ `On` ](xref:Xamarin.Forms.SwitchCell.On) propriedade. Lidar com o [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) evento a ser notificado quando o `On` alterações de propriedade.<br /><br />[Documentação da API](xref:Xamarin.Forms.SwitchCell) / [guia](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![Exemplo de SwitchCell](cells-images/SwitchCell.png "exemplo SwitchCell")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="entrycell"></a>EntryCell
