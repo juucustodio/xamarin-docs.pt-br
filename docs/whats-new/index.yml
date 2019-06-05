@@ -1,0 +1,111 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Novidades na Documentação do Xamarin
+metadata:
+  title: Novidades na Documentação do Xamarin
+  description: Novidades nos documentos do Xamarin.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 7D34BF92-6326-40F5-B34B-18B03F293B34
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 05/31/2019
+abstract:
+  description: Seja bem-vindo às novidades nos documentos do Xamarin.
+sections:
+  - title: Novidades
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: 2019-06.md
+            html: 'Novidades nos documentos do Xamarin em junho de 2019: Lançamento do Xamarin.Forms 4.0, atualizações de dados e de serviços de nuvem, documentos da API agora disponíveis em docs.microsoft.com.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: 2019-06.md
+            title: Junho de 2019
+          - href: 2019-03.md
+            html: 'Novidades nos documentos do Xamarin em março de 2019: novo exemplo de introdução e 12 novos tutoriais, Xamarin.Forms 3.6 e Xamarin.Forms 3.5.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: 2019-03.md
+            title: Março de 2019
+  - title: Contribuições de software livre
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: 'https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md'
+            html: 'Se você estiver interessado em colaborar com o conteúdo do Xamarin, comece com este guia do colaborador.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_library.svg'
+              href: 'https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md'
+            title: Guia do Colaborador
+          - href: 'https://github.com/MicrosoftDocs/xamarin-docs'
+            html: 'Se você tiver sugestões ou ideias de conteúdo, abra um novo problema no repositório de documentos do GitHub.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_feedback.svg'
+              href: 'https://github.com/MicrosoftDocs/xamarin-docs'
+            title: Repositório de documentos do GitHub no Xamarin
+          - href: 'https://github.com/xamarin/Xamarin.Forms-api-docs'
+            html: 'Se você quiser colaborar com os documentos da API do Xamarin.Forms, poderá fazê-lo no repositório de documentos da API do Xamarin.Forms.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+              href: 'https://github.com/xamarin/Xamarin.Forms-api-docs'
+            title: Repositório de Documentos do GitHub da API do Xamarin.Forms
+          - href: 'https://github.com/xamarin/apple-api-docs'
+            html: 'Se você quiser colaborar com os documentos da API do Xamarin.iOS ou do Xamarin.Mac, poderá fazê-lo no repositório de documentos da API do Xamarin.iOS e do Xamarin.Mac.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+              href: 'https://github.com/xamarin/apple-api-docs'
+            title: Repositório de documentos do GitHub da API do Xamarin.iOS e do Xamarin.Mac
+          - href: 'https://github.com/xamarin/android-api-docs'
+            html: 'Se você quiser colaborar com os documentos da API do Xamarin.Android, poderá fazê-lo no repositório de documentos da API do Xamarin.Android.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+              href: 'https://github.com/xamarin/android-api-docs'
+            title: Repositório de documentos do GitHub da API do Xamarin.Android
+          - href: 'https://github.com/mono/skiasharp-api-docs'
+            html: 'Se você quiser colaborar com os documentos da API do SkiaSharp, poderá fazê-lo no repositório de documentos da API do SkiaSharp.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+              href: 'https://github.com/mono/skiasharp-api-docs'
+            title: Repositório de documentos do GitHub da API do SkiaSharp
+  - title: Notas sobre a versão do produto
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
+            html: Exibir as notas sobre a versão do Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_xamarin.svg'
+              href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
+            title: Xamarin.Forms
+          - href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
+            html: Exibir as notas sobre a versão do Xamarin.iOS.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
+              href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
+            title: Xamarin.iOS
+          - href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
+            html: Exibir as notas sobre a versão do Xamarin.Android.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_android.svg'
+              href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
+            title: Xamarin.Android
+          - href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
+            html: Exibir as notas sobre a versão do Xamarin.Mac.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
+              href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
+            title: Xamarin.Mac
+          - href: 'https://docs.microsoft.com/xamarin/tools/'
+            html: 'Exibir as notas sobre a versão das ferramentas do Xamarin, incluindo <a href="https://docs.microsoft.com/xamarin/tools/dotnet-embedding/release-notes/">.NET Embedding</a>, <a href="https://docs.microsoft.com/xamarin/tools/inspector/release-notes/">Inspector e Workbooks</a>, <a href="https://docs.microsoft.com/xamarin/tools/ios-simulator/release-notes/">Simulador remoto de iOS para Windows</a> e <a href="https://docs.microsoft.com/xamarin/tools/profiler/release-notes/">Criador de perfil</a>.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_tools.svg'
+              href: 'https://docs.microsoft.com/xamarin/tools/'
+            title: Ferramentas

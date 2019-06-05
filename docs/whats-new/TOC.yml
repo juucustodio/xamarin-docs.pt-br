@@ -1,0 +1,11 @@
+- name: O Que Há de Novo
+  href: index.yml
+  expanded: true
+  items:
+    - name: 2019
+      expanded: true
+      items:
+        - name: Junho
+          href: 2019-06.md
+        - name: Março
+          href: 2019-03.md
