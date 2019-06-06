@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 747fabd68187dbe48b5e68b40916cef45269c4ae
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.openlocfilehash: 9f48659a8af7bb74cc33ec0929f41b2a881e1978
+ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005175"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469513"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegação do Shell do Xamarin.Forms
 
@@ -213,11 +213,11 @@ A classe `Shell` define um evento `Navigating`, que é acionado quando a navega�
 
 | Propriedade | Tipo | Descrição |
 |---|---|---|
-| Atual | `ShellNavigationState` | O URI da página atual. |
-| Origem | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
-| Destino | `ShellNavigationState`  | O URI que representa para onde a navegação se destina. |
-| CanCancel  | `bool` | Um valor que indica se é possível cancelar a navegação. |
-| Cancelada  | `bool` | Um valor que indica se a navegação foi cancelada. |
+| `Current` | `ShellNavigationState` | O URI da página atual. |
+| `Source` | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
+| `Target` | `ShellNavigationState`  | O URI que representa para onde a navegação se destina. |
+| `CanCancel`  | `bool` | Um valor que indica se é possível cancelar a navegação. |
+| `Cancelled`  | `bool` | Um valor que indica se a navegação foi cancelada. |
 
 Além disso, a classe `ShellNavigatingEventArgs` fornece um método `Cancel` que pode ser usado para cancelar a navegação.
 
@@ -228,9 +228,9 @@ A classe `Shell` também define um evento`Navigated`, que é acionado quando a n
 
 | Propriedade | Tipo | Descrição |
 |---|---|---|
-| Atual | `ShellNavigationState` | O URI da página atual. |
-| Voltar| `ShellNavigationState` | O URI da página anterior. |
-| Origem  | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
+| `Current` | `ShellNavigationState` | O URI da página atual. |
+| `Previous`| `ShellNavigationState` | O URI da página anterior. |
+| `Source`  | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
 
 > [!NOTE]
 > O evento `Navigating` é acionado pelo método substituível `OnNavigated` na classe `Shell`.
