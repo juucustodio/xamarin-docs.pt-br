@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 415a888a61b4c4ca9164166aadb1983df2d828dd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 949958387ab710cb671cd9874bb9062227f3e3b8
+ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107333"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66394667"
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin para desenvolvedores de Objective-C
 
@@ -29,7 +29,7 @@ Isso não precisa ser limitado a um código que não seja da interface do usuár
 Você encontrará uma grande quantidade de informações no site de documentação para ajudar a facilitar a transição para o Xamarin, mostrando como integrar o código C# com o que você já sabe. Alguns destaques de introdução incluem:
 
 -   [Prévia do C# para Desenvolvedores do Objective-C](primer.md) – Uma breve prévia para desenvolvedores do Objective-C que desejam migrar para o Xamarin e a linguagem C#. 
--   [Passo a passo: Como associar uma Biblioteca do Objective-C](~/ios/platform/binding-objective-c/walkthrough.md) - um passo a passo para reutilizar o código Objective-C existente em um aplicativo Xamarin.iOS. 
+-   [Passo a passo: Como associar uma Biblioteca do Objective-C](~/ios/platform/binding-objective-c/walkthrough.md) – um passo a passo para reutilizar o código Objective-C existente em um aplicativo Xamarin.iOS. 
 
 
 ## <a name="binding-objective-c"></a>Associação do Objective-C
