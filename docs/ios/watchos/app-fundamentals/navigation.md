@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 0f087e4ce8fac2d86d45b6a27dc00c3fe4ad18db
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 264bdcc9a7a0d73ebe3385246ee6dfae3d9a850f
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61412693"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740988"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Trabalhando com o watchOS navegação no Xamarin
 
@@ -53,7 +53,7 @@ Apresenta as cenas como uma pilha que pode ser navegado por meio, semelhante à 
 
 Assim como acontece com iOS, um left-edge-passar o dedo navega de volta para o controlador pai em uma pilha de Navegação hierárquica.
 
-Os dois os [WatchKitCatalog](https://developer.xamarin.com/samples/WatchKitCatalog) e [WatchTables](https://developer.xamarin.com/samples/WatchTables) os exemplos incluem Navegação hierárquica.
+Os dois os [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) e [WatchTables](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) os exemplos incluem Navegação hierárquica.
 
 ### <a name="pushing-and-popping-in-code"></a>Enviar por push e pop em código
 

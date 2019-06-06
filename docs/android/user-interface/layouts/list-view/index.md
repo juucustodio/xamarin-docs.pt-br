@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: a30256722647bbea482970d0c4a751954810d99e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2560a451f3a6e7dd09b687f9db8c0c070598def6
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61170780"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740656"
 ---
 # <a name="listview"></a>ListView
 
@@ -227,15 +227,15 @@ Este conjunto de tópicos introduzido `ListView` e fornecidos alguns exemplos de
 
 ## <a name="related-links"></a>Links relacionados
 
-- [AccessoryViews (amostra)](https://developer.xamarin.com/samples/AccessoryViews/)
-- [BasicTableAndroid (amostra)](https://developer.xamarin.com/samples/BasicTableAndroid/)
-- [BasicTableAdapter (amostra)](https://developer.xamarin.com/samples/BasicTableAdapter/)
-- [BuiltInViews (amostra)](https://developer.xamarin.com/samples/BuiltInViews/)
-- [CustomRowView (amostra)](https://developer.xamarin.com/samples/CustomRowView/)
-- [FastScroll (amostra)](https://developer.xamarin.com/samples/FastScroll/)
-- [SectionIndex (amostra)](https://developer.xamarin.com/samples/SectionIndex/)
-- [SimpleCursorTableAdapter (amostra)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
-- [CursorTableAdapter (amostra)](https://developer.xamarin.com/samples/CursorTableAdapter/)
+- [AccessoryViews (amostra)](https://developer.xamarin.com/samples/monodroid/AccessoryViews/)
+- [BasicTableAndroid (amostra)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
+- [BasicTableAdapter (amostra)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
+- [BuiltInViews (amostra)](https://developer.xamarin.com/samples/monodroid/BuiltInViews/)
+- [CustomRowView (amostra)](https://developer.xamarin.com/samples/monodroid/CustomRowView/)
+- [FastScroll (amostra)](https://developer.xamarin.com/samples/monodroid/FastScroll/)
+- [SectionIndex (amostra)](https://developer.xamarin.com/samples/monodroid/SectionIndex/)
+- [SimpleCursorTableAdapter (amostra)](https://developer.xamarin.com/samples/monodroid/SimpleCursorTableAdapter/)
+- [CursorTableAdapter (amostra)](https://developer.xamarin.com/samples/monodroid/CursorTableAdapter/)
 - [Tutorial de ciclo de vida de atividade](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Trabalhar com tabelas e células (no xamarin. IOS)](~/ios/user-interface/controls/tables/index.md)
 - [Referência de classe de ListView](https://developer.xamarin.com/api/type/Android.Widget.ListView/)

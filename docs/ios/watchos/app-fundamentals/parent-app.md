@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 74b9243b1b985cba6d815a673d1abed054eda234
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b3a6f45d78c0febb2aacf4f7693bc6e328c3ec0
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61409859"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740955"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai no Xamarin watchOS
 
@@ -35,7 +35,7 @@ O aplicativo pai, às vezes, também é conhecido como o aplicativo de contêine
 
 ## <a name="run-code"></a>Executar código
 
-Comunicação entre uma extensão de inspeção e o aplicativo de iPhone pai é demonstrada na [GpsWatch exemplo](https://developer.xamarin.com/samples/GpsWatch).
+Comunicação entre uma extensão de inspeção e o aplicativo de iPhone pai é demonstrada na [GpsWatch exemplo](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/).
 Sua extensão de inspeção pode solicitar o aplicativo do iOS pai fazer algum processamento em seu nome usando o `OpenParentApplication` método.
 
 Isso é especialmente útil para tarefas em execução demorada (incluindo solicitações de rede) - somente o pai aplicativo iOS podem tirar proveito do processamento em segundo plano para concluir essas tarefas e salvar os dados recuperados em um local acessível para a extensão de inspeção.

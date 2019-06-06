@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 81bb4e302f81b58eec91ea2a2aef985adbf72e2c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 12e7e31cda9818a3cb2e2efc331a0be5d0c334e5
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61285272"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740854"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
-O [GridViewPager](https://developer.xamarin.com/samples/GridViewPager/) que demonstra como implementar o padrão de navegação do seletor 2D para o Android Wear.
+O [GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/) que demonstra como implementar o padrão de navegação do seletor 2D para o Android Wear.
 
 ![Captura de tela do exemplo de GridViewPager em uma tela quadrada](gridviewpager-images/gridviewpager.png)
 
@@ -49,4 +49,4 @@ pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 
 - [Documento de seletor 2D do Google](https://developer.android.com/training/wearables/ui/2d-picker.html)
 - [Android.support.wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-- [GridViewPager (amostra)](https://developer.xamarin.com/samples/GridViewPager/)
+- [GridViewPager (amostra)](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)

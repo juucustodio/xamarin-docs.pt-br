@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: ec988508aaff1b433008add0bfbf0f2ad5f2dcf3
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: f9a3f6301005210d221f3223607e82adc0971a32
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970947"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741026"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin. Forms ListView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/WorkingWithListview)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
 
 [`ListView`](xref:Xamarin.Forms.ListView) é uma exibição para apresentar as listas de dados, especialmente listas longas que exigem rolagem.
 
@@ -62,7 +62,7 @@ Para saber mais sobre os recursos de interatividade do ListView, consulte [açõ
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Trabalhando com ListView (amostra)](https://developer.xamarin.com/samples/WorkingWithListview)
+- [Trabalhando com ListView (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
 - [Associação bidirecional (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
 - [Criado em células (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
 - [Células personalizadas (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
