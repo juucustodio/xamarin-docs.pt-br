@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: 51ccf3faa2524035a30b26af6652959699663e24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1eb3ec77dd478744906625dcfcd9fb843e74577c
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61260857"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827480"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no xamarin. IOS
 
@@ -210,6 +210,6 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Trabalhando com imagens (amostra)](https://developer.xamarin.com/samples/WorkingWithImages/)
+- [Trabalhando com imagens (amostra)](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [Ícone personalizado e diretrizes de criação de imagem](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 3b81ba51a0fbdf4c684ca602cb083f8da08c7d6a
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 306cce581eb1506e770222ea10e160c4fdbe1b29
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977992"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827491"
 ---
 # <a name="binding-objective-c-libraries"></a>Associação de bibliotecas de Objective-C
 
@@ -44,7 +44,7 @@ Você pode fazer isso no Visual Studio para Mac selecionando o tipo de projeto *
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 A maneira mais fácil para criar uma associação é criar um projeto de associação do xamarin. IOS.
-Você pode fazer isso do Visual Studio no Windows, selecionando o tipo de projeto **Visual C# > iOS > biblioteca de associações (iOS)**:
+Você pode fazer isso do Visual Studio no Windows, selecionando o tipo de projeto **Visual C# > iOS > biblioteca de associações (iOS)** :
 
 [![](objective-c-libraries-images/00vs-sml.png "Biblioteca de associações de iOS do iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
@@ -1403,4 +1403,4 @@ Historicamente, exigimos copiando o protocolo para cada implementação, mas nes
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de associação](https://developer.xamarin.com/samples/BindingSample/)
+- [Exemplo de associação](https://developer.xamarin.com/samples/monotouch/BindingSample/)

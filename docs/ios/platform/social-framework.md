@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 08ccd5b5ac78e82bf745764d70e59d2db9ec6776
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4548f74495ff7ed8ef07d31cdb3f1370c5275dd4
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61184996"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827885"
 ---
 # <a name="social-framework-in-xamarinios"></a>Estrutura social no xamarin. IOS
 
@@ -476,5 +476,5 @@ Este artigo mostrou como usar a estrutura Social para interagir com o Twitter e 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [SocialFrameworkDemo (sample)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
+- [SocialFrameworkDemo (sample)](https://developer.xamarin.com/samples/monotouch/SocialFrameworkDemo/)
 - [Introdução aos serviços Web](~/cross-platform/data-cloud/web-services/index.md)

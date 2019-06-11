@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: a1a9dd06fb3cd6899dd3a564072bb63e413edf22
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f34a76879c2a38ec8253d8f3dd3230f03d9af32e
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61022605"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827315"
 ---
 # <a name="android-audio"></a>Android Audio
 
@@ -426,7 +426,7 @@ O sistema operacional Android fornece uma estrutura poderosa para reprodução, 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Trabalhando com áudio (amostra)](https://developer.xamarin.com/samples/Example_WorkingWithAudio/)
+- [Trabalhando com áudio (amostra)](https://developer.xamarin.com/samples/monodroid/Example_WorkingWithAudio/)
 - [Player de mídia](https://developer.xamarin.com/api/type/Android.Media.MediaPlayer/)
 - [Gravador de mídia](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/)
 - [Gerenciador de áudio](https://developer.xamarin.com/api/type/Android.Media.AudioManager/)

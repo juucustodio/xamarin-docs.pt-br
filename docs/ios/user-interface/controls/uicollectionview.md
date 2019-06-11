@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: f57f2a2bc17690b7a1e0a72c583b0e94519ca4db
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a93de9d60a515b6089b35a64eb8832c456c96557
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61079137"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827351"
 ---
 # <a name="collection-views-in-xamarinios"></a>Exibições de coleção no xamarin. IOS
 
@@ -1299,6 +1299,6 @@ Ele abordou a implementação de uma ação de arrastar para reordenar simple em
 
 - [Amostras do iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Exemplo de exibição de coleção](https://developer.xamarin.com/samples/monotouch/ios9/CollectionView/)
-- [SimpleCollectionView (amostra)](https://developer.xamarin.com/samples/SimpleCollectionView/)
+- [SimpleCollectionView (amostra)](https://developer.xamarin.com/samples/monotouch/SimpleCollectionView/)
 - [Eventos, protocolos e delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Trabalhando com tabelas e células](~/ios/user-interface/controls/tables/index.md)

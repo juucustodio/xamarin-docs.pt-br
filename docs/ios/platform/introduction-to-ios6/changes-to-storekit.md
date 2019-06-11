@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 5d1bb5ab636cd7527a560332a9890e9907fac454
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 35bac91e54181753bd1f3fd8b4cf0b851bfa1882
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61295594"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827502"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit no iOS 6
 
@@ -522,7 +522,7 @@ Este artigo apresentou dois novos recursos do Store Kit no iOS6: compra iTunes e
 
 ## <a name="related-links"></a>Links relacionados
 
-- [StoreKit (amostra)](https://developer.xamarin.com/samples/StoreKit/)
+- [StoreKit (amostra)](https://developer.xamarin.com/samples/monotouch/StoreKit/)
 - [Compras no aplicativo](~/ios/platform/in-app-purchasing/index.md)
 - [Referência de estrutura no StoreKit](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Referência de classe SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)

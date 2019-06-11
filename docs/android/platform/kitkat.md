@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b3981572e4d2629fd88d1e255fc7459bfe8912f1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f957bd5b361d7287353542186916c7f934ee0490
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60949897"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827790"
 ---
 # <a name="kitkat-features"></a>Recursos de KitKat
 
@@ -564,7 +564,7 @@ class HceService : HostApduService
 }
 ```
 
-O serviço acima fornece uma maneira para o leitor de NFC interagir com o aplicativo, mas o leitor de NFC tem ainda não há como saber se esse serviço está emulando o cartão de NFC que ele precisa examinar. Para ajudar o leitor de NFC para identificar o serviço, podemos atribuir o serviço de um único *ID do aplicativo (Ajuda)*. Podemos especificar um AUXÍLIO, juntamente com outros metadados sobre o serviço HCE, em um arquivo de recurso xml registrado com o `MetaData` atributo (consulte o exemplo de código acima). Esse arquivo de recurso Especifica um ou mais filtros de AUXÍLIO - identificador exclusivo cadeias de caracteres em formato hexadecimal que correspondem aos auxílios de um ou mais dispositivos de leitor de NFC:
+O serviço acima fornece uma maneira para o leitor de NFC interagir com o aplicativo, mas o leitor de NFC tem ainda não há como saber se esse serviço está emulando o cartão de NFC que ele precisa examinar. Para ajudar o leitor de NFC para identificar o serviço, podemos atribuir o serviço de um único *ID do aplicativo (Ajuda)* . Podemos especificar um AUXÍLIO, juntamente com outros metadados sobre o serviço HCE, em um arquivo de recurso xml registrado com o `MetaData` atributo (consulte o exemplo de código acima). Esse arquivo de recurso Especifica um ou mais filtros de AUXÍLIO - identificador exclusivo cadeias de caracteres em formato hexadecimal que correspondem aos auxílios de um ou mais dispositivos de leitor de NFC:
 
 ```xml
 <host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
@@ -713,6 +713,6 @@ Este artigo introduziu algumas das novas APIs disponíveis no Android 4.4 (API n
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de KitKat](https://developer.xamarin.com/samples/KitKat/)
+- [Exemplo de KitKat](https://developer.xamarin.com/samples/monodroid/KitKat/)
 - [Android 4.4 APIs](https://developer.android.com/about/versions/android-4.4.html)
 - [KitKat Android](https://developer.android.com/about/versions/kitkat.html)

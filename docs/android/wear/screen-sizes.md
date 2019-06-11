@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 9fc22a3c08b60a8474b006f1c9225155b9705507
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a9b71fb069a428d9bec03481c986f4deb4c904ea
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61285694"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827737"
 ---
 # <a name="working-with-screen-sizes"></a>Trabalhando com tamanhos de tela
 
@@ -27,7 +27,7 @@ Lembre-se de que alguns dos outros controles da biblioteca de suporte (como `Gri
 
 ### <a name="watchviewstub"></a>WatchViewStub
 
-Consulte a [WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/) exemplo para ver como detectar o tipo de tela e exibir um layout diferente para cada tipo.
+Consulte a [WatchViewStub](https://developer.xamarin.com/samples/monodroid/wear/WatchViewStub/) exemplo para ver como detectar o tipo de tela e exibir um layout diferente para cada tipo.
 
 O arquivo de layout principal contém um `android.support.wearable.view.WatchViewStub` que faz referência a diferentes layouts para telas retangulares e redondos usando o `app:rectLayout` e `app:roundLayout` atributos:
 

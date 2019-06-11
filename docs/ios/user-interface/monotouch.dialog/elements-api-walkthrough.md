@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 14711f9cc2c34d72765e28db158379bc2a26849b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9331c7e6920f94d2ff0dddc50eb8f1ff9817d982
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61201037"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827847"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Criando um aplicativo xamarin. IOS usando a API de elementos
 
@@ -146,9 +146,7 @@ Este artigo apresentou um passo a passo que mostrou como usar a API de elementos
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MTDWalkthrough (amostra)](https://developer.xamarin.com/samples/MTDWalkthrough/)
-- [Screencast - Miguel de Icaza cria uma tela de logon do iOS com MonoTouch](http://youtu.be/3butqB1EG0c)
-- [Screencast - criar facilmente iOS interfaces do usuário com MonoTouch](http://youtu.be/j7OC5r8ZkYg)
+- [MTDWalkthrough (amostra)](https://developer.xamarin.com/samples/monotouch/MTDWalkthrough/)
 - [Introdução ao MonoTouch](~/ios/user-interface/monotouch.dialog/index.md)
 - [Instruções passo a passo de API de reflexão](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Passo a passo de elemento JSON](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

@@ -6,12 +6,12 @@ ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 84f825c19aa1ac08fbcf3e732077304218768bcc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2227e2f56071b92c209c5d9fda994faa5a97a03d
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371140"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827779"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Usando a ferramenta de Pipeline de MonoGame
 
@@ -69,7 +69,7 @@ Quando o projeto tiver sido criado, vamos executar-o para verificar que ele se b
 
 ## <a name="creating-a-content-project"></a>Criando um projeto de conteúdo
 
-Agora que temos um projeto de jogo, podemos criar um projeto de MonoGame de Pipeline. Para fazer isso, no, selecione a ferramenta de Pipeline MonoGame **arquivo > Novo...**  e navegue até a pasta de conteúdo do seu projeto. Para o Android, a pasta está localizada em **[projeto root]\BouncingGame.Android\Assets\Content\\**. Para iOS, a pasta está localizada em **[projeto root]\BouncingGame.iOS\Content\\**.
+Agora que temos um projeto de jogo, podemos criar um projeto de MonoGame de Pipeline. Para fazer isso, no, selecione a ferramenta de Pipeline MonoGame **arquivo > Novo...**  e navegue até a pasta de conteúdo do seu projeto. Para o Android, a pasta está localizada em **[projeto root]\BouncingGame.Android\Assets\Content\\** . Para iOS, a pasta está localizada em **[projeto root]\BouncingGame.iOS\Content\\** .
 
 Alterar o **nome do arquivo** ao **ContentProject** e clique no **salvar** botão:
 
@@ -243,5 +243,5 @@ Este passo a passo mostrou como usar a ferramenta de MonoGame de Pipeline para c
 
 - [Downloads de MonoGame](http://www.monogame.net/downloads/)
 - [Documentação do MonoGame de Pipeline](http://www.monogame.net/documentation/?page=Pipeline)
-- [Iniciar projeto BouncingGame para Android (amostra)](https://developer.xamarin.com/samples/BouncingGameCompleteAndroid/)
+- [Iniciar projeto BouncingGame para Android (amostra)](https://developer.xamarin.com/samples/monodroid/BouncingGameCompleteAndroid/)
 - [ball.PNG gráfico (amostra)](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/ball.png?raw=true)
