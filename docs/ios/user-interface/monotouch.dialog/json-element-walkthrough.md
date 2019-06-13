@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: cd80217b39ecca2cc7b49437b9469aaa1107208b
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: e1eae07fab4a74a4f47f565d4c4ca0b7f6bc1aa9
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827231"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039669"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Usar o JSON para criar uma interface do usuário no xamarin. IOS
 
@@ -42,27 +42,27 @@ Neste exemplo, vamos carregar o JSON de um arquivo no projeto chamado `task.json
 
 Por exemplo, o JSON a seguir descreve os elementos para os detalhes da tarefa e seções:
 
-```csharp
+```json
 {
     "title": "Task",
     "sections": [
         {
-          "elements" : [
-            {
-                "id" : "task-description",
-                "type": "entry",
-                "placeholder": "Enter task description"
-            },
-            {
-                "id" : "task-duedate",
-                "type": "date",
-                "caption": "Due Date",
-                "value": "00:00"
-            }
-         ]
+            "elements" : [
+                {
+                    "id" : "task-description",
+                    "type": "entry",
+                    "placeholder": "Enter task description"
+                },
+                {
+                    "id" : "task-duedate",
+                    "type": "date",
+                    "caption": "Due Date",
+                    "value": "00:00"
+                }
+            ]
         }
     ]
-  }
+}
 ```
 
 Observe que o JSON acima inclui uma id para cada elemento. Qualquer elemento pode incluir uma id, para fazer referência a ele em tempo de execução. Veremos como isso é usado em um momento quando vamos mostrar como carregar o JSON no código.
@@ -79,14 +79,13 @@ Uma vez que estamos adicionando isso sob demanda sempre que uma tarefa é criada
 
 ```csharp
 _addButton.Clicked += (sender, e) => {
+    ++n;
 
-        ++n;
+    var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
 
-        var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
+    var taskElement = JsonElement.FromFile ("task.json");
 
-        var taskElement = JsonElement.FromFile ("task.json");
-
-        _rootElement [0].Add (taskElement);
+    _rootElement [0].Add (taskElement);
 };
 ```
 
@@ -96,28 +95,27 @@ Lembre-se de que adicionamos uma id para ambos os elementos quando declaramos no
 
 ```csharp
 _addButton.Clicked += (sender, e) => {
+    ++n;
 
-        ++n;
+    var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
 
-        var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
+    var taskElement = JsonElement.FromFile ("task.json");
 
-        var taskElement = JsonElement.FromFile ("task.json");
+    taskElement.Caption = task.Name;
 
-        taskElement.Caption = task.Name;
+    var description = taskElement ["task-description"] as EntryElement;
 
-        var description = taskElement ["task-description"] as EntryElement;
+    if (description != null) {
+        description.Caption = task.Name;
+        description.Value = task.Description;       
+    }
 
-        if (description != null) {
-                description.Caption = task.Name;
-                description.Value = task.Description;       
-        }
+    var duedate = taskElement ["task-duedate"] as DateElement;
 
-        var duedate = taskElement ["task-duedate"] as DateElement;
-
-        if (duedate != null) {                
-                duedate.DateValue = task.DueDate;
-        }
-        _rootElement [0].Add (taskElement);
+    if (duedate != null) {                
+        duedate.DateValue = task.DueDate;
+    }
+    _rootElement [0].Add (taskElement);
 };
 ```
 
@@ -125,37 +123,37 @@ _addButton.Clicked += (sender, e) => {
 
 MT. D também oferece suporte carregamento dinâmico de JSON de uma Url externa, simplesmente passando a Url para o construtor do `JsonElement`. MT. 1!d expandirá a hierarquia declarada no JSON sob demanda, como navegar entre telas. Por exemplo, considere um arquivo JSON, como a mostrada abaixo localizado na raiz do servidor web local:
 
-```csharp
+```json
 {
     "type": "root",
     "title": "home",
     "sections": [
-       {
-         "header": "Nested view!",
-         "elements": [
-           {
-             "type": "boolean",
-             "caption": "Just a boolean",
-             "id": "first-boolean",
-             "value": false
-           },
-           {
-             "type": "string",
-             "caption": "Welcome to the nested controller"
-           }
-         ]
-       }
-     ]
+        {
+            "header": "Nested view!",
+            "elements": [
+                {
+                    "type": "boolean",
+                    "caption": "Just a boolean",
+                    "id": "first-boolean",
+                    "value": false
+                },
+                {
+                    "type": "string",
+                    "caption": "Welcome to the nested controller"
+                }
+            ]
+        }
+    ]
 }
 ```
 
 Podemos pode carregar isso usando o `JsonElement` como no código a seguir:
 
 ```csharp
-_rootElement = new RootElement ("Json Example"){
-        new Section (""){ new JsonElement ("Load from url",
-                "http://localhost/sample.json")
-        }
+_rootElement = new RootElement ("Json Example") {
+    new Section ("") {
+        new JsonElement ("Load from url", "http://localhost/sample.json")
+    }
 };
 ```
 

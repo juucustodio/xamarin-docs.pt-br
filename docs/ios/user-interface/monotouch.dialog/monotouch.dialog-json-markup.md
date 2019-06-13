@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc6842871a2f59c9851e90adbc6609707a7ecd1f
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61395135"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039650"
 ---
 # <a name="monotouchdialog-json-markup"></a>Markup Json MonoTouch.Dialog
 
@@ -20,58 +20,58 @@ Esta página descreve a marcação do Json aceita do MonoTouch [JsonElement](xre
 
 Vamos começar com um exemplo. O exemplo a seguir é um arquivo Json completo que pode ser passado para JsonElement.
 
-```csharp
+```json
 {     
-  "title": "Json Sample",
-  "sections": [ 
-      {
-          "header": "Booleans",
-          "footer": "Slider or image-based",
-          "id": "first-section",
-          "elements": [
-              { 
-                  "type" : "boolean",
-                  "caption" : "Demo of a Boolean",
-                  "value"   : true
-              }, {
-                  "type": "boolean",
-                  "caption" : "Boolean using images",
-                  "value"   : false,
-                  "on"      : "favorite.png",
-                  "off"     : "~/favorited.png"
-              }, {
-                      "type": "root",
-                      "title": "Tap for nested controller",
-                      "sections": [ {
-                         "header": "Nested view!",
-                         "elements": [
-                           {
-                             "type": "boolean",
-                             "caption": "Just a boolean",
-                             "id": "the-boolean",
-                             "value": false
-                           },
-                           {
-                             "type": "string",
-                             "caption": "Welcome to the nested controller"
-                           }
-                         ]
-                       }
-                     ]
-                   }
-          ]
-      }, {
-          "header": "Entries",
-          "elements" : [
-              {
-                  "type": "entry",
-                  "caption": "Username",
-                  "value": "",
-                  "placeholder": "Your account username"
-              }
-          ]
-      }
-  ]
+    "title": "Json Sample",
+    "sections": [ 
+        {
+            "header": "Booleans",
+            "footer": "Slider or image-based",
+            "id": "first-section",
+            "elements": [
+                { 
+                    "type": "boolean",
+                    "caption": "Demo of a Boolean",
+                    "value": true
+                }, {
+                    "type": "boolean",
+                    "caption": "Boolean using images",
+                    "value": false,
+                    "on": "favorite.png",
+                    "off": "~/favorited.png"
+                }, {
+                    "type": "root",
+                    "title": "Tap for nested controller",
+                    "sections": [
+                        {
+                            "header": "Nested view!",
+                            "elements": [
+                                {
+                                    "type": "boolean",
+                                    "caption": "Just a boolean",
+                                    "id": "the-boolean",
+                                    "value": false
+                                }, {
+                                    "type": "string",
+                                    "caption": "Welcome to the nested controller"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "header": "Entries",
+            "elements" : [
+                {
+                    "type": "entry",
+                    "caption": "Username",
+                    "value": "",
+                    "placeholder": "Your account username"
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -86,7 +86,7 @@ var jsonElement = JsonElement.FromFile ("demo.json");
 
 var firstSection = jsonElement ["first-section"] as Section;
 
-var theBoolean = jsonElement ["the-boolean"] as BooleanElement
+var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 ```
 
  <a name="Root_Element_Syntax" />
@@ -192,38 +192,38 @@ Elementos de cadeia de caracteres podem ser usados como botões, fornecendo um m
 
 Os elementos de renderização são baseados no C# StringElement e StyledStringElement e eles podem processar informações de várias maneiras e é possível renderizá-los de várias maneiras. Os elementos mais simples podem ser criados como este:
 
-```csharp
+```json
 {
-        "type": "string",
-        "caption": "Json Serializer",
+    "type": "string",
+    "caption": "Json Serializer"
 }
 ```
 
 Isso mostrará uma simple cadeia de caracteres com todos os padrões: fonte, plano de fundo, cor do texto e decorações. É possível vincular ações a esses elementos e torná-los a se comportar como botões, definindo o `"ontap"` propriedade ou o `"onaccessorytap"` propriedades:
 
-```csharp
+```json
 {
-    "type":    "string",
-        "caption": "View Photos",
-        "ontap:    "Acme.PhotoLibrary.ShowPhotos"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos"
 }
 ```
 
 As opções acima invocará o método "ShowPhotos" na classe "Acme.PhotoLibrary". O `"onaccessorytap"` é semelhante, mas ele será invocado apenas se o usuário toca o acessório em vez de tocar na célula. Para habilitar isso, você também deve definir o acessório:
 
-```csharp
+```json
 {
-    "type":     "string",
-        "caption":  "View Photos",
-        "ontap:     "Acme.PhotoLibrary.ShowPhotos",
-        "accessory: "detail-disclosure",
-        "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos",
+    "accessory": "detail-disclosure",
+    "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
 }
 ```
 
 Renderização de elementos ao mesmo tempo é possível exibir a duas cadeias de caracteres, um é a legenda e outro é o valor. Como essas cadeias de caracteres são renderizadas depende do estilo, você pode definir isso usando o `"style"` propriedade. O padrão mostrará a legenda à esquerda, e o valor à direita. Consulte a seção sobre o estilo para obter mais detalhes. As cores são codificadas usando o símbolo '#' seguido de números hexadecimais que representam os valores para os valores de vermelhos, verdes, azuis e alfa talvez. O conteúdo pode ser codificado em forma abreviada (3 ou 4 dígitos hexadecimais) que representa valores RGB ou RGBA. Ou o formato longo (6 ou 8 dígitos) que representam valores RGB ou RGBA. A versão curta é um tipo de taquigrafia para escrever o mesmo dígito hexadecimal duas vezes. Portanto, a constante "#1bc" é interpretado como vermelho = 0x11, verde = 0xbb e azul = 0xcc. Se o valor alfa não estiver presente, a cor é opaca. Alguns exemplos:
 
-```csharp
+```json
 "background": "#f00"
 "background": "#fa08f880"
 ```
@@ -324,7 +324,7 @@ Se isso for definido como zero, ele se tornará o autotamanho do elemento depend
  <a name="style" />
 
 
-### <a name="style"></a>Estilo 
+### <a name="style"></a>Estilo
 
 O estilo determina o tipo de estilo de célula que será usado para renderizar o conteúdo e correspondem aos valores de enumeração UITableViewCellStyle.
 Os valores possíveis são:
@@ -353,7 +353,7 @@ A cor a ser usada para o texto.
  <a name="value" />
 
 
-### <a name="value"></a>Valor 
+### <a name="value"></a>Valor
 
 O valor secundário a ser mostrado no elemento de renderização. O layout dessa é afetado pelo `"style"` configuração. A fonte e cor podem ser personalizados definindo a `"detailfont"` e `"detailcolor"`.
 
@@ -364,19 +364,19 @@ O valor secundário a ser mostrado no elemento de renderização. O layout dessa
 
 Elementos boolianos devem definir o tipo como `"bool"`, pode conter um `"caption"` para exibir e o `"value"` é definido como true ou false. Se o `"on"` e `"off"` são definidas, elas são consideradas imagens. As imagens são resolvidas em relação ao diretório de trabalho atual no aplicativo. Se você quiser fazer referência a arquivos de pacote relativo, você pode usar o `"~"` como um atalho para representar o diretório de pacote do aplicativo. Por exemplo `"~/favorite.png"` será o favorite.png que está contido no arquivo de pacote. Por exemplo:
 
-```csharp
+```json
 { 
-    "type" : "boolean",
-    "caption" : "Demo of a Boolean",
-    "value"   : true
+    "type": "boolean",
+    "caption": "Demo of a Boolean",
+    "value": true
 },
 
 {
     "type": "boolean",
-    "caption" : "Boolean using images",
-    "value"   : false,
-    "on"      : "favorite.png",
-    "off"     : "~/favorited.png"
+    "caption": "Boolean using images",
+    "value": false,
+    "on": "favorite.png",
+    "off": "~/favorited.png"
 }
 ```
 
@@ -394,30 +394,30 @@ Tipo pode ser definido como `"boolean"` ou `"checkbox"`. Se definido como boolia
 
 Você pode usar elementos de entrada para permitir que o usuário insira dados. O tipo de elementos de entrada é `"entry"` ou `"password"`. O `"caption"` propriedade é definida para o texto para mostrar à direita e o `"value"` é definido como o valor inicial para definir a entrada para. O `"placeholder"` é usado para mostrar uma dica para o usuário para entradas vazias (ele é mostrado esmaecido). Estes são alguns exemplos:
 
-```csharp
+```json
 {
-        "type": "entry",
-        "caption": "Username",
-        "value": "",
-        "placeholder": "Your account username"
+    "type": "entry",
+    "caption": "Username",
+    "value": "",
+    "placeholder": "Your account username"
 }, {
-        "type": "password",
-        "caption": "Password",
-        "value": "",
-        "placeholder": "You password"
+    "type": "password",
+    "caption": "Password",
+    "value": "",
+    "placeholder": "You password"
 }, {
-        "type": "entry",
-        "caption": "Zip Code",
-        "value": "01010",
-        "placeholder": "your zip code",
-        "keyboard": "numbers"
+    "type": "entry",
+    "caption": "Zip Code",
+    "value": "01010",
+    "placeholder": "your zip code",
+    "keyboard": "numbers"
 }, {
-        "type": "entry",
-        "return-key": "route",
-        "caption": "Entry with 'route'",
-        "placeholder": "captialization all + no corrections",
-        "capitalization": "all",
-        "autocorrect": "no"
+    "type": "entry",
+    "return-key": "route",
+    "caption": "Entry with 'route'",
+    "placeholder": "captialization all + no corrections",
+    "capitalization": "all",
+    "autocorrect": "no"
 }
 ```
 
@@ -496,7 +496,7 @@ O rótulo usado para a tecla return. Os valores possíveis são:
  <a name="value" />
 
 
-### <a name="value"></a>Valor 
+### <a name="value"></a>Valor
 
 O valor inicial para a entrada
 
@@ -515,22 +515,22 @@ Além disso, se um valor é definido para o `"group"` propriedade, esse botão d
 
 Os tipos de elementos `"datetime"`, `"date"` e `"time"` são usados para renderizar as datas com horas, datas ou horas. Esses elementos usam como parâmetros de uma legenda e um valor. O valor pode ser escrito em qualquer formato aceito pela função DateTime. Parse do .NET. Exemplo:
 
-```csharp
+```json
 "header": "Dates and Times",
 "elements": [
-        {
-                "type": "datetime",
-                "caption": "Date and Time",
-                "value": "Sat, 01 Nov 2008 19:35:00 GMT"
-        }, {
-                "type": "date",
-                "caption": "Date",
-                "value": "10/10"
-        }, {
-                "type": "time",
-                "caption": "Time",
-                "value": "11:23"
-                }                       
+    {
+        "type": "datetime",
+        "caption": "Date and Time",
+        "value": "Sat, 01 Nov 2008 19:35:00 GMT"
+    }, {
+        "type": "date",
+        "caption": "Date",
+        "value": "10/10"
+    }, {
+        "type": "time",
+        "caption": "Time",
+        "value": "11:23"
+    }                       
 ]
 ```
 
@@ -541,10 +541,10 @@ Os tipos de elementos `"datetime"`, `"date"` e `"time"` são usados para renderi
 
 Você pode criar uma célula que quando tocada incorporará um UIWebView que renderiza o conteúdo de uma URL especificada, local ou remoto usando o `"html"` tipo. São apenas duas propriedades para este elemento `"caption"` e `"url"`:
 
-```csharp
+```json
 {
-        "type": "html",
-        "caption": "Miguel's blog",
-        "url": "https://tirania.org/blog" 
+    "type": "html",
+    "caption": "Miguel's blog",
+    "url": "https://tirania.org/blog" 
 }
 ```

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 2ac828c8efca3a1a5c54d4dcdaf175ebfc63fdc2
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: fac19cd7273b5b396946fc1867049db19348c853
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827309"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039687"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Criando um aplicativo xamarin. IOS usando a API de reflexão
 
@@ -42,19 +42,19 @@ A primeira coisa que precisamos usar a API de reflexão é uma classe decorada c
 ```csharp
 public class Expense
 {
-        [Section("Expense Entry")]
+    [Section("Expense Entry")]
 
-        [Entry("Enter expense name")]
-        public string Name;
+    [Entry("Enter expense name")]
+    public string Name;
         
-        [Section("Expense Details")]
+    [Section("Expense Details")]
   
-        [Caption("Description")]
-        [Entry]
-        public string Details;
+    [Caption("Description")]
+    [Entry]
+    public string Details;
         
-        [Checkbox]
-        public bool IsApproved = true;
+    [Checkbox]
+    public bool IsApproved = true;
 }
 ```
 
@@ -79,20 +79,18 @@ Tudo o que precisamos fazer para criar a interface do usuário é adicionar o `B
 ```csharp
 UIWindow window;
 
-public override bool FinishedLaunching (UIApplication app, 
-        NSDictionary options)
-{
-   
-        window = new UIWindow (UIScreen.MainScreen.Bounds);
+public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+{   
+    window = new UIWindow (UIScreen.MainScreen.Bounds);
             
-        var expense = new Expense ();
-        var bctx = new BindingContext (null, expense, "Create a task");
-        var dvc = new DialogViewController (bctx.Root);
+    var expense = new Expense ();
+    var bctx = new BindingContext (null, expense, "Create a task");
+    var dvc = new DialogViewController (bctx.Root);
             
-        window.RootViewController = dvc;
-        window.MakeKeyAndVisible ();
+    window.RootViewController = dvc;
+    window.MakeKeyAndVisible ();
             
-        return true;
+    return true;
 }
 ```
 
@@ -116,17 +114,17 @@ Com a inclusão de um `UINavigationController`, agora podemos pode tirar proveit
 ```csharp
 public enum Category
 {
-        Travel,
-        Lodging,
-        Books
+    Travel,
+    Lodging,
+    Books
 }
         
 public class Expense
 {
-        …
+    …
 
-        [Caption("Category")]
-        public Category ExpenseCategory;
+    [Caption("Category")]
+    public Category ExpenseCategory;
 }
 ```
 

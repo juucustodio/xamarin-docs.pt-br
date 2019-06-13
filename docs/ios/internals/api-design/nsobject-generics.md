@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 512280e9c298cfbcea6f693b0691236fd1cf5a5f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: becdd842f46cc7100bd7d9a6fd7347b541685c35
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036463"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039627"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Subclasses genéricas de NSObject no xamarin. IOS
 
@@ -107,7 +107,7 @@ Instanciação de tipos genéricos de Objective-C não é permitida. Isso normal
 
 Considere esta definição de classe, que expõe um construtor que usa um `IntPtr` (a maneira de xamarin. IOS de construir um C# objeto a partir de uma instância de Objective-C nativo):
     
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
     public Generic () {}
@@ -121,7 +121,7 @@ Enquanto o constructo acima está tudo bem, em tempo de execução, isso gerará
 
 Esse problema pode ser contornado, criando uma subclasse especializada do tipo genérico.   Por exemplo:
     
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
     public Generic () {}
