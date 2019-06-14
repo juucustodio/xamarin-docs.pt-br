@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 07f1fbae6c4fbfcfad45fc96970339e34b5de040
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3f22556948fc87dc604870f5a8625b80a4a0b29d
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102835"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827206"
 ---
 # <a name="linking-on-android"></a>Vinculação no Android
 
 Aplicativos Xamarin.Android usam um *vinculador* para reduzir o tamanho do aplicativo. O vinculador utiliza uma análise estática do seu aplicativo para determinar quais assemblies, tipos e membros são realmente usados. O vinculador, em seguida, se comporta como um *coletor de lixo*, procurando continuamente assemblies, tipos e membros que são referenciados, até todo o fechamento desses elementos ser encontrado. Tudo fora esse fechamento é *descartado*.
 
-Por exemplo, a amostra [Hello, Android](https://developer.xamarin.com/samples/HelloM4A/):
+Por exemplo, a amostra [Hello, Android](https://developer.xamarin.com/samples/monodroid/HelloM4A/):
 
 |Configuração|Tamanho 1.2.0|Tamanho 4.0.1|
 |---|---|---|

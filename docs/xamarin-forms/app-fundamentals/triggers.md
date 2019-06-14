@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 7a273d43ce43ca2946e1ff3177fc4575cd92a534
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 901bf683f59574d71c035b9635abaa3441152252
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050602"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741059"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/WorkingWithTriggers)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 
 Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade.
 
@@ -333,5 +333,5 @@ Observação: `EnterActions` e `ExitActions` são ignorados em **Gatilhos de eve
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de gatilhos](https://developer.xamarin.com/samples/WorkingWithTriggers)
+- [Exemplo de gatilhos](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 - [Documentação da API do Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)

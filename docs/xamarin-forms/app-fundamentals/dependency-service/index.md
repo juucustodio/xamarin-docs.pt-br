@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: f07b26ed06e85e1b20a29459d2f8f0d2626a2855
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8a56ca7fcb6bfb6d463d1830e53210cf46fa499a
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054862"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741031"
 ---
 # <a name="xamarinforms-dependencyservice"></a>Xamarin.Forms DependencyService
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/UsingDependencyService)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 
 _O Xamarin.Forms permite aos desenvolvedores definir o comportamento em projetos específicos a uma plataforma. O DependencyService, em seguida, localiza a implementação de plataforma certa, permitindo que o código compartilhado acesse a funcionalidade nativa._
 
@@ -31,6 +31,6 @@ Este guia é composto dos seguintes artigos:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Usando o DependencyService (amostra)](https://developer.xamarin.com/samples/UsingDependencyService)
-- [DependencyService (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
+- [Usando o DependencyService (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [DependencyService (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 - [Amostras do Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
