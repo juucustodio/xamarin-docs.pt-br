@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 0b063619387d9984e24f6987234605b626289e2d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 5fbe711cb8ad4902da047a2027fc05e9956de863
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978296"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039723"
 ---
 # <a name="hello-ios--quickstart"></a>Olá, iOS – Guia de Início Rápido
 
@@ -283,7 +283,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/image001-.png "A Tela inicial")
 
-    Crie uma solução Xamarin.iOS selecionando **Arquivo > Novo > Projeto... > Visual C# > iPhone e iPad > Aplicativo iOS (Xamari**:
+    Crie uma solução Xamarin.iOS selecionando **Arquivo > Novo > Projeto... > Visual C# > iPhone e iPad > Aplicativo iOS (Xamarin)**:
 
     ![Selecione o tipo de projeto do aplicativo iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Select iOS App (Xamarin) project type")
 

@@ -7,18 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: f67ab15466da118d12c280d597972d2d11f8e600
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 682e3bd0ac4cdd651203496dd28586db2cef3165
+ms.sourcegitcommit: c2bba24233624c2ec0e9ee9827310ca022212a2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66178119"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66835260"
 ---
 # <a name="xamarinforms-navigation"></a>Navegação do Xamarin.Forms
 
 _O Xamarin.Forms oferece uma série de experiências de navegação de página diferentes, dependendo do tipo de página sendo usado._
 
 ![](images/page-types.png "Tipos de página do Xamarin.Forms")
+
+Como alternativa, os aplicativos de Shell Xamarin.Forms usam uma experiência de navegação baseada em URI que não impõe uma hierarquia de navegação de conjunto. Saiba mais sobre a [Navegação do Shell do Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/navigation.md).
 
 ## <a name="hierarchical-navigationhierarchicalmd"></a>[Navegação hierárquica](hierarchical.md)
 
