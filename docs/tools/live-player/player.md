@@ -5,22 +5,23 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2017
-ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/13/2019
+ms.openlocfilehash: fce0eeae4ef5776842ea1b45c36163118042dc49
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279245"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157735"
 ---
 # <a name="xamarin-live-player-app"></a>Aplicativo Xamarin Live Player
 
 ![Versão prévia do recurso](~/media/shared/preview.png)
 
-> [!NOTE]
-> A visualização dinâmica do Player só está disponível no Visual Studio 2017.
+> [!WARNING]
+> O Xamarin Live Player visualização foi encerrada. O aplicativo não está mais disponível. As instruções a seguir são fornecidas para clientes que continuam a usar a visualização com o Visual Studio 2017.
 
-Depois de instalar o aplicativo em seu telefone, siga as [instruções de instalação](~/tools/live-player/install.md) para se conectar ao seu computador. Tente uma da [aplicativos de exemplo](~/tools/live-player/samples.md) fazê-lo funcionar.
+> [!TIP]
+> Você pode usar o [XAML pré-visualizador](~/xamarin-forms/xaml/xaml-previewer/index.md) no 2019 do Visual Studio ou Visual Studio para Mac para exibir seus designs de tela, conforme você editá-los.
 
 Na inicialização, o aplicativo Xamarin Live Player tem esta aparência:
 
@@ -56,7 +57,7 @@ Exibir logs para diagnosticar problemas.
 
 Para conectar um dispositivo pela primeira vez, siga as instruções em [requisitos de & instalação](~/tools/live-player/install.md). Você pode combinar vários dispositivos e gerenciá-los por meio do IDE.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
 No Visual Studio, escolha **Ferramentas > Xamarin Live Player > Gerenciar dispositivos...**
 
@@ -95,4 +96,4 @@ Se você tiver qualquer consulte problemas [limitações e solução de problema
 ## <a name="related-links"></a>Links relacionados
 
 - [Solução de problemas](~/tools/live-player/troubleshooting.md)
-- [Amostras a serem usadas com o Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+
