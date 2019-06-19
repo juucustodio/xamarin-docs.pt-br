@@ -19,9 +19,10 @@
         - name: Notas de Versão
           href: /xamarin/tools/inspector/release-notes/
     - name: Live Player
-      href: live-player/index.md
       items:
-        - name: Configuração
+        - name: Sobre a versão prévia do Xamarin Live Player
+          href: live-player/index.md
+        - name: Configuração do Visual Studio
           href: live-player/install.md
         - name: Aplicativo Xamarin Live Player
           href: live-player/player.md
