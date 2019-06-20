@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f0e2c93c4a6be0e83c9c4f1607b125b8d240ccc1
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: db5fd78a7907826bcb60ce1c2635491e01f0c02b
+ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557213"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194931"
 ---
 # <a name="contributing"></a>Contribuição
 
@@ -70,13 +70,13 @@ Em um determinado ritmo, efetuaremos push de todas as confirmações do branch m
 Abaixo, há uma lista curta de regras de orientação que você deve considerar ao contribuir para a documentação do .NET.
 
 - **NÃO FAZER:** não nos surpreenda com solicitações de pull grandes. Em vez disso, registre um problema e inicie uma discussão para que possamos concordar sobre o que fazer antes de você gastar muito tempo nisso.
-- **FAZER:** leia o [guia de estilo](../contributing-guidelines/template.md) e as diretrizes sobre [voz e tom](../contributing-guidelines/voice-tone.md).
-- **FAZER:** use o arquivo de [modelo](../contributing-guidelines/template.md) como o ponto de partida do seu trabalho.
+- **FAZER:** leia o [guia de estilo](contributing-guidelines/template.md) e as diretrizes sobre [voz e tom](contributing-guidelines/voice-tone.md).
+- **FAZER:** use o arquivo de [modelo](contributing-guidelines/template.md) como o ponto de partida do seu trabalho.
 - **FAZER:** crie um branch separado em seu fork antes de trabalhar nos artigos.
 - **FAZER:** siga o [fluxo de trabalho do GitHub Flow](https://guides.github.com/introduction/flow/).
 - **FAZER:** faça postagem em blogs e no Twitter (ou em outros) sobre suas contribuições, com frequência.
 
 > [!NOTE]
-> Você poderá observar que, no momento, alguns dos tópicos não estão seguindo todas as diretrizes especificadas aqui e também no [guia de estilo](./contributing-guidelines/template.md). Estamos trabalhando para atingir a consistência em todo o site. 
+> Você poderá observar que, no momento, alguns dos tópicos não estão seguindo todas as diretrizes especificadas aqui e também no [guia de estilo](contributing-guidelines/template.md). Estamos trabalhando para atingir a consistência em todo o site. 
 
 
