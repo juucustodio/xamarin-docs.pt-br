@@ -7,18 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e84f5acdd1660633521d1a99325155b614b87e1b
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61402397"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268913"
 ---
 # <a name="introduction-to-ios-10"></a>Introdução ao iOS 10
-
-_Este artigo apresenta todas as APIs e recursos disponíveis no iOS 10 novos e modificados para desenvolvedores do xamarin. IOS._
-
-## <a name="introducing-ios-10"></a>Introdução ao iOS 10
 
 Com o novo iOS SDK 10, Apple incluiu novas APIs e serviços que permitem ao desenvolvedor criar novas categorias de aplicativos e recursos. Um aplicativo iOS agora pode estender os aplicativos de mensagens, Siri, telefone e mapas para fornecer a funcionalidade de avançados e envolvente para o usuário final que não estavam disponível anteriormente.
 
@@ -27,7 +23,6 @@ Para obter mais informações sobre o iOS 10, consulte da Apple [iOS + aplicativ
 ## <a name="whats-new-in-ios-10"></a>O que há de novo no iOS 10
 
 Apple adicionou várias novas APIs e serviços no iOS 10 junto com muitos aprimoramentos aos recursos existentes, incluindo:
-
 
 ## <a name="adapting-to-the-true-tone-display"></a>Adaptação de acordo com a exibição de tom True
 
@@ -40,8 +35,6 @@ Os valores a seguir estão disponíveis:
 - `UIWhitePointAdaptivityStyleGame` – Usado para aplicativos focados no jogo.
 - `UIWhitePointAdaptivityStyleVideo` – Usado para aplicativos focados no vídeo.
 - `UIWhitePointAdaptivityStylePhoto` – Usado para aplicativos voltados a fotografia onde a fidelidade de cor é mais importante do que o ponto branco ambientais ajustes.
-
-<a name="app-extensions" />
 
 ## <a name="app-extensions"></a>Extensões de aplicativo
 
@@ -87,13 +80,12 @@ Para obter mais informações, consulte nosso [aprimoramentos de pagamento de Ap
 
 Apple adicionou várias melhorias para o iOS 10.3 que permitem que um aplicativo gerenciar seu ícone:
 
- - `ApplicationIconBadgeNumber` -Obtém ou define o selo do ícone do aplicativo em do Springboard.
- - `SupportsAlternateIcons` -Se `true` o aplicativo tem um conjunto alternativo de ícones.
- - `AlternateIconName` -Retorna o nome do ícone alternativo selecionado no momento ou `null` se usando o ícone principal.
- - `SetAlternameIconName` -Use esse método para alternar o ícone do aplicativo para o ícone alternativo especificado.
+- `ApplicationIconBadgeNumber` -Obtém ou define o selo do ícone do aplicativo em do Springboard.
+- `SupportsAlternateIcons` -Se `true` o aplicativo tem um conjunto alternativo de ícones.
+- `AlternateIconName` -Retorna o nome do ícone alternativo selecionado no momento ou `null` se usando o ícone principal.
+- `SetAlternameIconName` -Use esse método para alternar o ícone do aplicativo para o ícone alternativo especificado.
 
 Para obter mais informações, consulte nosso [ícones de aplicativos alternativo](~/ios/app-fundamentals/images-icons/alternate-app-icons.md) guia.
-
 
 ## <a name="introduction-to-callkit"></a>Introdução ao CallKit
 
@@ -133,7 +125,7 @@ iOS 10 apresenta novas maneiras de condução contrato a um aplicativo, permitin
 - CarPlay
 - Mapas
 - Interações de Siri
-- Sugestões de QuickType 
+- Sugestões de QuickType
 
 Um aplicativo expõe essa funcionalidade no sistema usando uma coleção de tecnologias, como [NSUserActivity](xref:Foundation.NSUserActivity), marcação de web, destaque principal, MapKit, Media Player e UIKit.
 
@@ -228,7 +220,7 @@ As seguintes APIs foram preteridas no iOS 10:
 
 - O `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` e `CKFetchRecordChangesOperation` classes foram substituídas no CloudKit do iOS 10. Use o [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) e [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) classes (que dá suporte a compartilhamento de registro) em vez disso.
 - Vários [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) APIs (como as assinaturas de baseados em consulta e zona) foram preteridas. Use o [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) e [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) APIs em vez disso.
-- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) símbolos relacionados ao conteúdo onipresente foram preteridos.
+- [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) símbolos relacionados ao conteúdo onipresente foram preteridos.
 - `ADBannerView`, `ADInterstitialAd` e relacionadas a símbolos em de [UIViewController](xref:UIKit.UIViewController) classe foram preteridos.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) símbolos relacionados a valores de ponto flutuante foram preteridos.
 - O `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` e `UIUserNotificationSettings` classes de UIKit foram preteridas. Use o [notificações do usuário](#user-notifications) framework em vez disso.
@@ -238,9 +230,6 @@ As seguintes APIs foram preteridas no iOS 10:
 
 Consulte da Apple [iOS 9.3 às diferenças de API do iOS 10.0](https://developer.apple.com/library/prerelease/content/releasenotes/General/iOS10APIDiffs/index.html) documentação para obter uma lista completa de substituições.
 
-
-
 ## <a name="related-links"></a>Links relacionados
 
 - [Amostras do iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [O que há de novo no iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)

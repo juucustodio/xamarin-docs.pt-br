@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/08/2018
-ms.openlocfilehash: 99f2b98614c2b8d558dd8744b31a62b787fc955c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5ac19571bc1f1163539a48ea2689c743445d8047
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035927"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268864"
 ---
 # <a name="introduction-to-ios-12"></a>Introdução ao iOS 12
 
@@ -42,7 +42,7 @@ Permitem extensões de conteúdo de notificação no iOS 12 para interfaces do u
 
 A estrutura de linguagem Natural permite que os aplicativos executar vários tipos de análise de linguagem. Por exemplo, ele pode identificar partes da fala e determinar o idioma representado por um bloco de texto.
 
-## <a name="vision-framework"></a>Estrutura Vision
+## <a name="vision-frameworkiosplatformintroduction-to-ios11visionmd"></a>[Estrutura Vision](~/ios/platform/introduction-to-ios11/vision.md)
 
 A estrutura de visão inclui um detector de face aprimorados que pode detectar faces em várias orientações. Além disso, revisões de solicitação podem selecionar a revisão de algoritmo de framework visão específica.
 
@@ -81,7 +81,3 @@ Com o iOS 12, a Apple preteriu:
 
 - OpenGL ES [encoraja os desenvolvedores](https://developer.apple.com/ios/whats-new/) adotar Bare Metal.
 - [`UIWebView`](xref:UIKit.UIWebView), [em favor da `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
-
-## <a name="related-links"></a>Links relacionados
-
-- [Prepare-se para iOS 12 (Apple)](https://developer.apple.com/ios/)

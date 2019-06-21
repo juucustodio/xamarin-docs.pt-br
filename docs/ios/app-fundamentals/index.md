@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 120bbfe0d5fa91e632fc56ee05431f5555653360
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61248511"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268599"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Conceitos básicos de aplicativo do xamarin. IOS
 
@@ -33,6 +33,10 @@ Plano de fundo de processamento ou backgrounding é o processo de permitir que a
 ## <a name="creating-ios-applications-in-codeiosapp-fundamentalsios-code-onlymd"></a>[Criando aplicativos iOS no código](~/ios/app-fundamentals/ios-code-only.md)
 
 Este artigo examina como criar aplicativos iOS inteiramente no código usando o Visual Studio e o Visual Studio para Mac. Ele mostra como começar de um modelo de projeto vazio para fazer uma tela de aplicativo em um controlador, criando uma hierarquia de modos de exibição de UIKit. Depois, aborda como criar modos de exibição personalizados que podem ser carregados em um controlador.
+
+## <a name="exception-marshalingiosplatformexception-marshalingmd"></a>[Marshaling de exceção](~/ios/platform/exception-marshaling.md)
+
+Descreve como Objective-C e exceções gerenciadas têm o marshaling realizadas entre os quadros nativos e gerenciados.
 
 ## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[Eventos, protocolos e delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 
