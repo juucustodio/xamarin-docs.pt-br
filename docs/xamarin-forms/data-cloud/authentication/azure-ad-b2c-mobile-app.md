@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2019
-ms.openlocfilehash: 4c3cc489f7c65636ad9f2b5541e552665b10980e
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: 2f9cfceee4765dea946dfdac974ac2d56595ef94
+ms.sourcegitcommit: 9aaae4f0af096cd136b3dcfbb9af591ba307dc25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557348"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398689"
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>A integração do Azure Active Directory B2C com aplicativos móveis do Azure
 
@@ -115,9 +115,9 @@ public async Task<bool> LoginAsync(bool useSilent = false)
     ...
 
     var payload = new JObject();
-    if (authenticationResult != null && !string.IsNullOrWhiteSpace(authenticationResult.IdToken))
+    if (authenticationResult != null && !string.IsNullOrWhiteSpace(authenticationResult.AccessToken))
     {
-        payload["access_token"] = authenticationResult.IdToken;
+        payload["access_token"] = authenticationResult.AccessToken;
     }
 
     User = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(
@@ -131,9 +131,9 @@ public async Task<bool> LoginAsync(bool useSilent = false)
 
 A biblioteca de autenticação Microsoft (MSAL) é usado para iniciar um fluxo de trabalho de autenticação com o locatário do Azure Active Directory B2C. O `AcquireTokenAsync` método inicia o navegador da web do dispositivo e exibe as opções de autenticação definidas na política do Azure Active Directory B2C é especificada pela política referenciada por meio de `Constants.AuthoritySignin` constante. Essa política define a experiência de entrada e inscrição do usuário e as declarações que o aplicativo recebe após a autenticação bem-sucedida.
 
-O resultado do `AcquireTokenAsync` chamada de método é um `AuthenticationResult` instância. Se a autenticação for bem-sucedida, o `AuthenticationResult` instância conterá um token de identidade, que será armazenado localmente. Se a autenticação for bem-sucedida, o `AuthenticationResult` instância conterá os dados que indicam por que a autenticação falhou. Para obter informações sobre como usar MSAL para se comunicar com um locatário do Azure Active Directory B2C, consulte [autenticando usuários com o Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md).
+O resultado do `AcquireTokenAsync` chamada de método é um `AuthenticationResult` instância. Se a autenticação for bem-sucedida, o `AuthenticationResult` instância conterá um token de acesso que será armazenado localmente. Se a autenticação for bem-sucedida, o `AuthenticationResult` instância conterá os dados que indicam por que a autenticação falhou. Para obter informações sobre como usar MSAL para se comunicar com um locatário do Azure Active Directory B2C, consulte [autenticando usuários com o Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md).
 
-Quando o `CurrentClient.LoginAsync` método é invocado, a instância de aplicativos móveis do Azure recebe o token de identidade encapsulado em um `JObject`. A presença de um meio de token válido que a instância de aplicativos móveis do Azure não precisa iniciar o seu próprio fluxo de autenticação OAuth 2.0. Em vez disso, o `CurrentClient.LoginAsync` método retorna um `MobileServiceUser` que será armazenada na instância a `MobileServiceClient.CurrentUser` propriedade. Esta propriedade fornece `UserId` e `MobileServiceAuthenticationToken` propriedades. Elas representam o usuário autenticado e o token, que pode ser usado até que ela expire. O token de autenticação será incluído em todas as solicitações feitas para a instância de aplicativos móveis do Azure, permitindo que o aplicativo xamarin. Forms executar ações que exigem permissões de usuário autenticado.
+Quando o `CurrentClient.LoginAsync` método é invocado, a instância de aplicativos móveis do Azure recebe o token de acesso encapsulado em um `JObject`. A presença de um meio de token válido que a instância de aplicativos móveis do Azure não precisa iniciar o seu próprio fluxo de autenticação OAuth 2.0. Em vez disso, o `CurrentClient.LoginAsync` método retorna um `MobileServiceUser` que será armazenada na instância a `MobileServiceClient.CurrentUser` propriedade. Esta propriedade fornece `UserId` e `MobileServiceAuthenticationToken` propriedades. Elas representam o usuário autenticado e o token, que pode ser usado até que ela expire. O token de autenticação será incluído em todas as solicitações feitas para a instância de aplicativos móveis do Azure, permitindo que o aplicativo xamarin. Forms executar ações que exigem permissões de usuário autenticado.
 
 ### <a name="signing-out"></a>Sair
 
