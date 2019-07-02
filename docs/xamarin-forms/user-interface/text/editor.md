@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: 3131963efa3d4ba4de9ff63c741c276a62e9d12d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bf7a1461a26a860c77a913edabb94d76b4ca2a6a
+ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229726"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67493339"
 ---
 # <a name="xamarinforms-editor"></a>Editor do xamarin. Forms
 
@@ -69,7 +69,7 @@ Os usuários podem ser impedidos de modificar o texto em uma [ `Editor` ](xref:X
 ```
 
 ```csharp
-var editor= new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
+var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
 ```
 
 > [!NOTE]

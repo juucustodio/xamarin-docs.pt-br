@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 086ed765781d9297f07574519d2cbc9cf93ac4dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 855bbc61fb5e4e653dbd39ddf05fac3e2fb42d8c
+ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61344708"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67493351"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introdução ao XAML
 
@@ -102,7 +102,7 @@ O **MainPage. XAML** arquivo tem esta aparência (embora a formatação pode ser
 </ContentPage>
 ```
 
-O namespace XML de dois ( `xmlns`) declarações façam referência URIs, a primeira aparentemente no site de web do Xamarin e o segundo da Microsoft. Não se preocupe em que ponto os URIs para a verificação. Não há nada. Eles são simplesmente URIs pertencentes a Xamarin e a Microsoft e eles basicamente funcionam como identificadores de versão.
+O namespace XML de dois (`xmlns`) declarações façam referência URIs, a primeira aparentemente no site de web do Xamarin e o segundo da Microsoft. Não se preocupe em que ponto os URIs para a verificação. Não há nada. Eles são simplesmente URIs pertencentes a Xamarin e a Microsoft e eles basicamente funcionam como identificadores de versão.
 
 A primeira declaração de namespace XML significa que marcas definidas dentro do arquivo XAML sem prefixo se referem às classes no xamarin. Forms, por exemplo `ContentPage`. A segunda declaração de namespace define um prefixo de `x`. Isso é usado para vários elementos e atributos que são intrínsecos para XAML em si e que são compatíveis com outras implementações de XAML. No entanto, esses elementos e atributos são ligeiramente diferentes dependendo do ano inserido no URI. Xamarin. Forms dá suporte à especificação do XAML 2009, mas nem tudo dela.
 
@@ -149,7 +149,7 @@ Para visuais mais interessantes, tudo o que você precisa é mais interessante d
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Para adicionar outros XAML baseado `ContentPage` classes ao seu projeto, selecione o **XamlSamples** biblioteca .NET Standard de projeto e invoque o **projeto > Adicionar Novo Item** item de menu. Na parte esquerda dos **Adicionar Novo Item** caixa de diálogo, selecione **Visual C#**  e **xamarin. Forms**. Na lista Selecione **página de conteúdo** (não **página de conteúdo (C#)**, que cria uma página somente de código, ou **exibição de conteúdo**, que não é uma página). Nomeie a página, por exemplo, **HelloXamlPage.xaml**:
+Para adicionar outros XAML baseado `ContentPage` classes ao seu projeto, selecione o **XamlSamples** biblioteca .NET Standard de projeto e invoque o **projeto > Adicionar Novo Item** item de menu. Na parte esquerda dos **Adicionar Novo Item** caixa de diálogo, selecione **Visual C#**  e **xamarin. Forms**. Na lista Selecione **página de conteúdo** (não **página de conteúdo (C#)** , que cria uma página somente de código, ou **exibição de conteúdo**, que não é uma página). Nomeie a página, por exemplo, **HelloXamlPage.xaml**:
 
 ![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "Diálogo Adicionar Novo Item")
 
