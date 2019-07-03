@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: a3704552c8fc147588919ecdde2813e831237d89
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e6d8ccea7331f53d2e7262630689075a8b9a1ff1
+ms.sourcegitcommit: 450106d5f05b4473bf7f5b9100b2eaf18c9110de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019301"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522958"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pilha de HttpClient e seletor de implementação SSL/TLS para Android
 
@@ -112,7 +112,7 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 ```
 
 > [!NOTE]
-> O dispositivo Android subjacente deve dar suporte a TLS 1.2 (ie. Android 4.1 e posterior)
+> O dispositivo Android subjacente deve dar suporte a TLS 1.2 (ie. Android 4.1 e posterior). Observe que o suporte oficial para o TLS 1.2 no Android 5.0 +. No entanto alguns dispositivos dão suporte a TLS 1.2 no Android 4.1 ou superior.
 
 
 ## <a name="ssltls-implementation-build-option"></a>Opção de compilação de implementação SSL/TLS

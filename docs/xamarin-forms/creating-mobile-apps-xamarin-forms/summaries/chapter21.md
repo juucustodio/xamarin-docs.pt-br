@@ -7,12 +7,12 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 56c4345dffe71f79e9d89c64478a9c6c38fc1d84
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 313348952b87d94db63d1682f8e1b9413d56714d
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61335186"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67513022"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumo do capítulo 21. Transformações
 
@@ -39,7 +39,7 @@ Transformações são compatíveis com oito propriedades do tipo `double` defini
 - [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 - [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-Todas essas propriedades são apoiadas por propriedades associáveis. Eles podem ser destinos de vinculação de dados e o estilo. [**Capítulo 22. Animação** ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) demonstra como essas propriedades podem ser animadas, mas alguns exemplos neste capítulo mostram como é possível animá-los usando o xamarin. Forms [temporizador](~/xamarin-forms/platform/device.md#Device_StartTimer).
+Todas essas propriedades são apoiadas por propriedades associáveis. Eles podem ser destinos de vinculação de dados e o estilo. [**Capítulo 22. Animação** ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) demonstra como essas propriedades podem ser animadas, mas alguns exemplos neste capítulo mostram como é possível animá-los usando o xamarin. Forms [temporizador](~/xamarin-forms/platform/device.md#devicestarttimer).
 
 Transformar propriedades afetam apenas o modo como o elemento é renderizado e fazer *não* afetam como o elemento é percebido no layout.
 

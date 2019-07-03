@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2019
-ms.openlocfilehash: f77b2346808f78e182edc59f9ea92d0a8a99344f
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7aa9d298c2219dff60ca8ca1f917c72194ad21ca
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971014"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512678"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>recursos da plataforma iOS no xamarin. Forms
 
@@ -56,6 +56,7 @@ A seguinte funcionalidade específica da plataforma é fornecida para layouts do
 
 A seguinte funcionalidade específica da plataforma é fornecida para o xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application) classe no iOS:
 
+- Desabilitando o dimensionamento para tamanhos de fonte nomeada de acessibilidade. Para obter mais informações, consulte [acessibilidade colocação em escala para tamanhos de fonte chamado no iOS](named-font-size-scaling.md).
 - Habilitando o controle de layout e renderização atualizações a serem executadas no thread principal. Para obter mais informações, consulte [atualizações de controle do Thread principal no iOS](main-thread-updates-ui.md).
 - Habilitando um [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) em uma exibição de rolagem para capturar e compartilhar o gesto de panorâmica com o modo de exibição de rolagem. Para obter mais informações, consulte [simultâneas reconhecimento de gesto de panorâmica no iOS](application-pan-gesture.md).
 

@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/21/2019
-ms.openlocfilehash: 258468b836a4c1243b9123022ebbf1d55430321e
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.date: 06/11/2019
+ms.openlocfilehash: 6fbe1104d238929d0c6c6978a9145cd51d52cb6c
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740969"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67513078"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -90,6 +90,13 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 |     |     |
 
 ## <a name="views-for-setting-values"></a>Modos de exibição para definir valores
+
+### <a name="checkbox"></a>CheckBox
+
+|     |     |
+| --- | --- |
+| `CheckBox` permite que o usuário selecione um valor booliano usando um tipo de botão que pode ser feito check ou vazio. O `IsChecked` propriedade é o estado do `CheckBox`e o `CheckedChanged` evento é acionado quando o estado é alterado.<br /><br />Documentação da API / [Guide](~/xamarin-forms/user-interface/checkbox.md) / [exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CheckBoxDemos) | [![Exemplo de caixa de seleção](views-images/CheckBox.png "exemplo de caixa de seleção")](views-images/CheckBox-Large.png#lightbox "exemplo de caixa de seleção")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxDemoPage.xaml) |
+|     |     |
 
 ### <a name="slider"></a>Controle deslizante
 

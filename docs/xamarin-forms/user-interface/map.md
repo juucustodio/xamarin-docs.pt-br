@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/27/2018
-ms.openlocfilehash: 166927f2168015cb4786502d841e01b2faeb0c51
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.date: 06/13/2019
+ms.openlocfilehash: 60d78797406f2e69c435fb597e36775d906852f9
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741011"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67513113"
 ---
 # <a name="xamarinforms-map"></a>Mapa do xamarin. Forms
 
@@ -31,7 +31,7 @@ Funcionalidade de mapa pode ser aprimorada ainda mais com a criação de um [map
 
 <a name="Maps_Initialization" />
 
-## <a name="maps-initialization"></a>Inicialização de mapas
+## <a name="map-initialization"></a>Inicialização do mapa
 
 Ao adicionar mapas a um aplicativo xamarin. Forms, **Xamarin.Forms.Maps** é um pacote do NuGet separado que você deve adicionar a todos os projetos na solução.
 No Android, isso também tem uma dependência no GooglePlayServices (NuGet outro), que é baixada automaticamente quando você adiciona Xamarin.Forms.Maps.
@@ -146,7 +146,7 @@ O token de autenticação deve ser especificado, em seguida, no `FormsMaps.Init(
 
 <a name="Using_Maps" />
 
-## <a name="using-maps"></a>Uso de mapas
+## <a name="map-configuration"></a>Configuração de mapa
 
 Consulte a [MapPage.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs) na amostra MobileCRM para obter um exemplo de como o controle de mapa pode ser usado no código. Um simples `MapPage` classe pode parecer com este - aviso de que um novo `MapSpan` é criado para posicionar a exibição do mapa:
 
@@ -218,18 +218,35 @@ var pin = new Pin {
 map.Pins.Add(pin);
 ```
 
- `PinType` pode ser definido como um dos valores a seguir, que podem afetar a maneira que o pin é renderizado (dependendo da plataforma):
+`PinType` pode ser definido como um dos valores a seguir, que podem afetar a maneira que o pin é renderizado (dependendo da plataforma):
 
 -  Genérico
 -  Local
 -  SavedPin
 -  SearchResult
 
+### <a name="map-clicks"></a>Mapa de cliques
+
+`Map` define um `MapClicked` evento que é acionado quando o mapa é tocado. O `MapClickedEventArgs` objeto que acompanha o `MapClicked` evento tem uma propriedade única chamada `Position`, do tipo `Position`. Quando o evento é acionado, o valor da `Position` estiver definida como o local do mapa que foi tocado.
+
+O exemplo de código a seguir mostra um manipulador de eventos para o `MapClicked` evento:
+
+```csharp
+map.MapClicked += OnMapClicked;
+
+void OnMapClicked(object sender, MapClickedEventArgs e)
+{
+    System.Diagnostics.Debug.WriteLine($"MapClick: {e.Position.Latitude}, {e.Position.Longitude}");
+}
+```
+
+Neste exemplo, o `OnMapClicked` saídas de manipulador de eventos a latitude e longitude que representa o local do mapa tocados.
+
 <a name="Using_Xaml" />
 
-## <a name="using-xaml"></a>Usando XAML
+### <a name="create-a-map-in-xaml"></a>Criar um mapa em XAML
 
-Mapas também podem ser posicionados em layouts XAML, conforme mostrado neste trecho de código.
+Mapas também podem ser criados em XAML, conforme mostrado neste exemplo:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -238,8 +255,10 @@ Mapas também podem ser posicionados em layouts XAML, conforme mostrado neste tr
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="MapDemo.MapPage">
     <StackLayout VerticalOptions="StartAndExpand" Padding="30">
-        <maps:Map WidthRequest="320" HeightRequest="200"
-                  x:Name="MyMap"
+        <maps:Map x:Name="MyMap"
+                  Clicked="OnMapClicked"
+                  WidthRequest="320"
+                  HeightRequest="200"                  
                   IsShowingUser="true"
                   MapType="Hybrid" />
     </StackLayout>
@@ -249,7 +268,7 @@ Mapas também podem ser posicionados em layouts XAML, conforme mostrado neste tr
 > [!NOTE]
 > Adicional `xmlns` definição de namespace é necessário para referenciar os controles Xamarin.Forms.Maps.
 
-O `MapRegion` e `Pins` pode ser definido no código usando o `MyMap` referência (ou o mapa de tudo o que é chamado).
+O `MapRegion` e `Pins` pode ser definida no código usando a referência nomeada para o `Map`:
 
 ```csharp
 MyMap.MoveToRegion(
@@ -257,14 +276,18 @@ MyMap.MoveToRegion(
         new Position(37,-122), Distance.FromMiles(1)));
 ```
 
-## <a name="populating-a-map-with-data-using-data-binding"></a>Preenchendo um mapa com dados usando a associação de dados
+## <a name="populate-a-map-with-data-using-data-binding"></a>Preencher um mapa com dados usando a associação de dados
 
 O [ `Map` ](xref:Xamarin.Forms.Maps.Map) classe também expõe as propriedades a seguir:
 
 - `ItemsSource` – Especifica a coleção de `IEnumerable` itens a serem exibidos.
 - `ItemTemplate` – Especifica o [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para aplicar a cada item na coleção de itens exibidos.
+- `ItemTemplateSelector` – Especifica o [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) que será usado para escolher um [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para um item em tempo de execução.
 
-Portanto, uma [ `Map` ](xref:Xamarin.Forms.Maps.Map) podem ser populados com dados por meio de associação de dados para associar seu `ItemsSource` propriedade para um `IEnumerable` coleção:
+> [!NOTE]
+> O `ItemTemplate` propriedade terá precedência quando tanto o `ItemTemplate` e `ItemTemplateSelector` são definidas.
+
+Um [ `Map` ](xref:Xamarin.Forms.Maps.Map) podem ser populados com dados por meio de associação de dados para associar seu `ItemsSource` propriedade para um `IEnumerable` coleção:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -296,8 +319,65 @@ As capturas de tela a seguir mostram uma [ `Map` ](xref:Xamarin.Forms.Maps.Map) 
 
 [![Captura de tela do mapa com os dados associados pins no iOS e Android](map-images/pins-itemssource.png "mapear com dados pins associados")](map-images/pins-itemssource-large.png#lightbox "alfinetes com os dados associados")
 
+### <a name="choose-item-appearance-at-runtime"></a>Escolha a aparência do item em tempo de execução
+
+A aparência de cada item na `IEnumerable` coleção pode ser escolhida no tempo de execução, com base no valor do item, definindo o `ItemTemplateSelector` propriedade para um [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector):
+
+```xaml
+<ContentPage ...
+             xmlns:local="clr-namespace:WorkingWithMaps"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+    <ContentPage.Resources>
+        <local:MapItemTemplateSelector x:Key="MapItemTemplateSelector">
+            <local:MapItemTemplateSelector.DefaultTemplate>
+                <DataTemplate>
+                    <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding Description}" />
+                </DataTemplate>
+            </local:MapItemTemplateSelector.DefaultTemplate>
+            <local:MapItemTemplateSelector.XamarinTemplate>
+                <DataTemplate>
+                    <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="Xamarin!" />
+                </DataTemplate>
+            </local:MapItemTemplateSelector.XamarinTemplate>    
+        </local:MapItemTemplateSelector>
+    </ContentPage.Resources>
+
+    <Grid>
+        ...
+        <maps:Map x:Name="map"
+                  ItemsSource="{Binding Locations}"
+                  ItemTemplateSelector="{StaticResource MapItemTemplateSelector}" />
+        ...
+    </Grid>
+</ContentPage>
+```
+
+A exemplo a seguir mostra o `MapItemTemplateSelector` classe:
+
+```csharp
+public class MapItemTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate DefaultTemplate { get; set; }
+    public DataTemplate XamarinTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        return ((Location)item).Address.Contains("San Francisco") ? XamarinTemplate : DefaultTemplate;
+    }
+}
+```
+
+O `MapItemTemplateSelector` classe define `DefaultTemplate` e `XamarinTemplate` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) propriedades que são definidas para modelos de dados diferentes. O `OnSelectTemplate` método retorna o `XamarinTemplate`, que exibe "Xamarin" como um rótulo quando um `Pin` é tocado, quando o item tem um endereço que contém "San Francisco". Quando o item não tem um endereço que contém "San Francisco", o `OnSelectTemplate` método retorna o `DefaultTemplate`.
+
+Para obter mais informações sobre os seletores de modelo de dados, consulte [criando um xamarin. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+
 ## <a name="related-links"></a>Links relacionados
 
 - [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 - [Mapear o renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
 - [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Criando um DataTemplateSelector xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

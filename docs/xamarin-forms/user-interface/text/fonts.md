@@ -6,13 +6,13 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/04/2019
-ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/28/2019
+ms.openlocfilehash: de77be818abbe1250946ee2ce1599235b79d8c01
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61093686"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512983"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fontes no xamarin. Forms
 
@@ -50,18 +50,7 @@ O `FontSize` propriedade pode ser definida como um valor duplo, por exemplo:
 label.FontSize = 24;
 ```
 
-Você também pode usar o `NamedSize` enumeração que tem quatro opções internas; Xamarin. Forms escolhe o melhor tamanho de cada plataforma.
-
--  **Micro**
--  **Pequeno**
--  **Médio**
--  **Grande**
-
-O `NamedSize` enumeração pode ser usado onde quer que um `FontSize` pode ser especificado usando o `Device.GetNamedSize` método para converter o valor de um `double`:
-
-```csharp
-label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-```
+Xamarin. Forms também define os campos na [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) enumeração que representam os tamanhos de fonte específica. Para obter mais informações sobre tamanhos de fonte nomeados, consulte [chamado tamanhos de fonte](#named-font-sizes).
 
 <a name="FontAttributes" />
 
@@ -111,7 +100,7 @@ Não há um conversor interno para o `FontSize` propriedade que permite que toda
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) também pode ser usado em XAML para renderizar uma fonte diferente em cada plataforma. O exemplo a seguir usa uma face de fonte personalizada no iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-finos</span>) e especifica o tamanho/atributos somente em outras plataformas:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) também pode ser usado em XAML para renderizar uma fonte diferente em cada plataforma. O exemplo a seguir usa uma face de fonte personalizada no iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-finos</span>) e especifica o tamanho/atributos somente em outras plataformas:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -126,6 +115,32 @@ Não há um conversor interno para o `FontSize` propriedade que permite que toda
 ```
 
 Ao especificar uma face de fonte personalizado, é sempre uma boa ideia usar `OnPlatform`, que é difícil encontrar uma fonte que está disponível em todas as plataformas.
+
+## <a name="named-font-sizes"></a>Tamanhos de fonte nomeada
+
+Xamarin. Forms define os campos na [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) enumeração que representam os tamanhos de fonte específica. A tabela a seguir mostra o `NamedSize` membros e seus tamanhos padrão no iOS, Android e Universal Windows Platform (UWP):
+
+| Membro | iOS | Android | UWP |
+| --- | --- | --- | --- |
+| `Default` | 16 | 14 | 14 |
+| `Micro` | 11 | 10 | 15.667 |
+| `Small` | 13 | 14 | 18.667 |
+| `Medium` | 16 | 17 | 22.667 |
+| `Large` | 20 | 22 | 32 |
+| `Body` | 17 | 16 | 14 |
+| `Header` | 17 | 96 | 46 |
+| `Title` | 28 | 24 | 24 |
+| `Subtitle` | 22 | 16 | 20 |
+| `Caption` | 12 | 12 | 12 |
+
+Tamanhos de fonte nomeada podem ser definidos por meio de XAML e código. Além disso, o `Device.GetNamedSize` método pode ser chamado para retornar um `double` que representa o tamanho de fonte nomeada:
+
+```csharp
+label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
+```
+
+> [!NOTE]
+> No iOS e Android, tamanhos de fonte nomeada serão o dimensionamento automático com base nas opções de acessibilidade do sistema operacional. Esse comportamento pode ser desabilitado no iOS com uma plataforma específica. Para obter mais informações, consulte [acessibilidade colocação em escala para tamanhos de fonte chamado no iOS](~/xamarin-forms/platform/ios/named-font-size-scaling.md).
 
 <a name="Using_a_Custom_Font" />
 
@@ -185,7 +200,7 @@ Agora o código comum para o aplicativo está concluído. O código de discagem 
 
 ### <a name="xaml"></a>XAML
 
-Você também pode usar [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#providing-platform-values) no XAML para renderizar uma fonte personalizada:
+Você também pode usar [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) no XAML para renderizar uma fonte personalizada:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
