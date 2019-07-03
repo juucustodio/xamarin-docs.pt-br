@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9848d2b832990032bc7eb7f2e3a93c896457134c
+ms.sourcegitcommit: e95296f9e516975f5f32d822c323a71fd84007b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61381863"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67538690"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicação entre componentes flexíveis
 
@@ -43,7 +43,7 @@ O aplicativo móvel de eShopOnContainers usa a [ `MessagingCenter` ](xref:Xamari
 > [!NOTE]
 > Enquanto o [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe permite a comunicação entre classes acoplados de forma flexível, ele não oferece a solução de arquitetura somente para esse problema. Por exemplo, a comunicação entre um modelo de exibição e um modo de exibição também pode ser obtida pelo mecanismo de associação e por meio de notificações de alteração de propriedade. Além disso, a comunicação entre dois modelos de exibição também pode ser obtida pela passagem de dados durante a navegação.
 
-No aplicativo móvel do eShopOnContainers[ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) é usado para atualizar na interface do usuário em resposta a uma ação que ocorrem em outra classe. Portanto, as mensagens são publicadas no thread da interface do usuário, com assinantes para receber a mensagem no mesmo thread.
+No aplicativo móvel do eShopOnContainers [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) é usado para atualizar na interface do usuário em resposta a uma ação que ocorrem em outra classe. Portanto, as mensagens são publicadas no thread da interface do usuário, com assinantes para receber a mensagem no mesmo thread.
 
 > [!TIP]
 > Marshaling para o thread de interface do usuário quando realizar a interface do usuário atualiza. Se uma mensagem que é enviada de um thread em segundo plano é necessária para atualizar a interface do usuário, processar a mensagem no thread da interface do usuário no assinante, invocando o [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) método.
