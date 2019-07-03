@@ -136,6 +136,7 @@
 #### [Animações personalizadas](user-interface/animation/custom.md)
 ### [BoxView](user-interface/boxview.md)
 ### [Button](user-interface/button.md)
+### [CheckBox](user-interface/checkbox.md)
 ### [CollectionView](user-interface/collectionview/index.md)
 #### [Introdução](user-interface/collectionview/introduction.md)
 #### [Dados](user-interface/collectionview/populate-data.md)
