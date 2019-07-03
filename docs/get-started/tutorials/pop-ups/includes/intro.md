@@ -1,37 +1,23 @@
 ---
-ms.openlocfilehash: bc9b8d94025f7cf452d34c315052f7a125ee7048
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 98eb75948ec2b53919b8de7cdc80d39d7c3ebf4c
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384649"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277093"
 ---
+Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
+
+- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
+- Tutorial de [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
+- Tutorial de [Botão](~/get-started/tutorials/button/index.yml).
+
 Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 > - Exibir um alerta para solicitar que o usuário faça uma escolha.
 > - Exibir uma folha de ações para orientar o usuário durante uma tarefa.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como exibir pop-ups no Xamarin.Forms. Estas capturas de tela mostram o aplicativo final:
 
-### <a name="prerequisites"></a>Pré-requisitos
-
-Para concluir este tutorial, você precisará ter o Visual Studio 2017 (versão mais recente) com a carga de trabalho **Desenvolvimento móvel com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2017 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
-
-- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial de [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
-- Tutorial de [Botão](~/get-started/tutorials/button/index.yml).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Pré-requisitos
-
-Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
-
-Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
-
-- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial de [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
-- Tutorial de [Botão](~/get-started/tutorials/button/index.yml).
+[![Captura de tela de uma folha de ações, no iOS e Android](../images/actionsheet-reduced.png "Folha de ações que orienta os usuários durante uma tarefa")](../images/actionsheet-large.png#lightbox "Folha de ações que orienta os usuários durante uma tarefa")

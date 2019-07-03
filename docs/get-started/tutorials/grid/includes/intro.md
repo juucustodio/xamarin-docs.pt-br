@@ -1,11 +1,15 @@
 ---
-ms.openlocfilehash: a677ee16346aac6250c0b8750fcd263470aa0f7c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bb85c69b13fa052f33186a3153be266ef87a7925
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61375333"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277074"
 ---
+Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
+
+- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
+
 Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
@@ -13,22 +17,6 @@ Neste tutorial, você aprenderá como:
 > - Especificar colunas e linhas para `Grid`.
 > - Distribuir o conteúdo em diversas colunas ou linhas em `Grid`.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como dispor controles em um [`Grid`](xref:Xamarin.Forms.Grid). Estas capturas de tela mostram o aplicativo final:
 
-### <a name="prerequisites"></a>Pré-requisitos
-
-Para concluir este tutorial, você precisará ter o Visual Studio 2017 (versão mais recente) com a carga de trabalho **Desenvolvimento móvel com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2017 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
-
-- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Pré-requisitos
-
-Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
-
-Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
-
-- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
+[![Captura de tela de uma Grade que tem conteúdo que se estende por várias colunas e linhas no iOS e no Android](../images/span-columns-rows.png "Grade com conteúdo abrangendo colunas e linhas")](../images/span-columns-rows-large.png#lightbox "Grade com conteúdo abrangendo colunas e linhas")

@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: a7a5d51b8931aa9dffd2c16b4ead51371390f033
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 854212951844d2443c5d1b332d94b533673640c4
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61372895"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277087"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão mais recente) com a carga de trabalho **Desenvolvimento mobile com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2019 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **ButtonTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
 
@@ -37,6 +39,8 @@ ms.locfileid: "61372895"
     Observe que, por padrão, um [`Button`](xref:Xamarin.Forms.Button) tende a ocupar todo o espaço permitido – neste caso, a largura total de seu elemento pai ([`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+
+Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
 
 1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **ButtonTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
 

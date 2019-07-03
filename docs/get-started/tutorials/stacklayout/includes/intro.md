@@ -1,11 +1,15 @@
 ---
-ms.openlocfilehash: 86c9ce71b72f88b8b920784f72ae572d7f629776
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f171a3f56c7fc516d409400aefa7e097e6ccbff6
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382478"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277092"
 ---
+Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
+
+- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
+
 Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
@@ -13,22 +17,6 @@ Neste tutorial, você aprenderá como:
 > - Especificar a orientação de `StackLayout`.
 > - Controlar a expansão e o alinhamento da exibição filho dentro de `StackLayout`.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como alinhar controles em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Estas capturas de tela mostram o aplicativo final:
 
-### <a name="prerequisites"></a>Pré-requisitos
-
-Para concluir este tutorial, você precisará ter o Visual Studio 2017 (versão mais recente) com a carga de trabalho **Desenvolvimento móvel com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2017 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
-
-- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Pré-requisitos
-
-Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
-
-Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
-
-- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
+[![Captura de tela das exibições filho em um StackLayout, com as opções de alinhamento e expansão definidas, no iOS e Android](../images/alignment-expansion-reduced.png "StackLayout contendo instâncias de Rótulo, com o alinhamento e a expansão definidos")](../images/alignment-expansion-large.png#lightbox "StackLayout contendo instâncias de Rótulo, com o alinhamento e a expansão definidos")

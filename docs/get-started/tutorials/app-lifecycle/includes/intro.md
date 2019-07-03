@@ -1,37 +1,23 @@
 ---
-ms.openlocfilehash: 244dfa31045bf71e36577d2ac9e1782a2d506697
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9143b65b2e7cb9b85195e3c20695e3034295b2d2
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187424"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277080"
 ---
+Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
+
+- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
+- Tutorial de [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
+- Tutorial de [Entrada](~/get-started/tutorials/entry/index.yml).
+
 Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 > - Responder quando um aplicativo é iniciado, suspenso ou retomado.
 > - Persistir dados entre alterações de estado do ciclo de vida.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como persistir dados entre alterações de estado do ciclo de vida. Estas capturas de tela mostram o aplicativo final:
 
-### <a name="prerequisites"></a>Pré-requisitos
-
-Para concluir este tutorial, você precisará ter o Visual Studio 2017 (versão mais recente) com a carga de trabalho **Desenvolvimento móvel com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2017 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
-
-- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial de [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
-- Tutorial de [Entrada](~/get-started/tutorials/entry/index.yml).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Pré-requisitos
-
-Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
-
-Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
-
-- Início rápido [Compilar seu primeiro aplicativo Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial de [StackLayout](~/get-started/tutorials/stacklayout/index.yml).
-- Tutorial de [Entrada](~/get-started/tutorials/entry/index.yml).
+[![Captura de tela de uma Entrada cuja propriedade de Texto é persistida entre alterações de estado do ciclo de vida, no iOS e Android](../images/persist-data.png "Entrada cuja propriedade de Texto é persistida entre alterações de estado do ciclo de vida")](../images/persist-data-large.png#lightbox "Entrada cuja propriedade de Texto é persistida entre alterações de estado do ciclo de vida")
