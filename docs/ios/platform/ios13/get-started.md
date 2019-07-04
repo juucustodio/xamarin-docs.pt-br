@@ -1,18 +1,18 @@
 ---
 title: Introdução ao iOS 13, iPadOS 13, 13 de tvOS e watchOS 6
-description: Este documento descreve como concluir a configuração até iOS build 13, iPadOS 13, 13 de tvOS e watchOS 6 aplicativos com o Xamarin. Ele aborda como baixar o Xcode 11 e atualizar o Visual Studio para Mac e Visual Studio de 2019.
+description: Este documento descreve como concluir a configuração até iOS build 13, iPadOS 13, 13 de tvOS e watchOS 6 aplicativos com o Xamarin. Ele aborda como baixar o Xcode 11 e atualizar o Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 97414545-85D2-433C-9246-63B6763F488A
 ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: d2bb69394d8e9bfeb949a734291179a3e6f5a495
-ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
+ms.openlocfilehash: 554cddf5717401f912cab38c78a6af17659a0cf7
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/03/2019
-ms.locfileid: "67540432"
+ms.locfileid: "67558687"
 ---
 # <a name="get-started-with-ios-13"></a>Introdução ao iOS 13
 
@@ -44,3 +44,4 @@ Este documento descreve como começar a criar aplicativos Xamarin que chamam API
 ## <a name="related-links"></a>Links relacionados
 
 - [Baixar o Xcode](https://developer.apple.com/download/)
+- [Notas de versão de visualização do xamarin. IOS](/xamarin/ios/release-notes/12/12.99)
