@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 347d0eebf7340bb8dc7234275d0f58acf7ab16c6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b445c1f8d3d440ecf609d5f3c1b7cc7147343fe0
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061024"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268615"
 ---
 # <a name="xamarinforms-performance"></a>Desempenho do Xamarin.Forms
 
@@ -300,21 +300,23 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-Um novo controle nativo deve ser instanciado apenas uma vez, quando a propriedade `Control` é `null`. O controle deve ser configurado e os manipuladores de eventos devem ser inscritos apenas quando o renderizador personalizado for anexado a um novo elemento Xamarin.Forms. Da mesma forma, a inscrição de quaisquer manipuladores de evento inscritos só deverá ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado de desempenho eficiente que não sofra perdas de memória.
+Um novo controle nativo deve ser instanciado apenas uma vez, quando a propriedade `Control` é `null`. Além disso, o controle só deve ser criado e configurado e os manipuladores de eventos devem ser inscritos apenas quando o renderizador personalizado for anexado a um novo elemento Xamarin.Forms. Da mesma forma, a inscrição de quaisquer manipuladores de evento inscritos só deverá ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado de desempenho eficiente que não sofra perdas de memória.
+
+> [!IMPORTANT]
+> O método `SetNativeControl` só deve ser chamado se `e.NewElement` não for `null`.
 
 Para obter mais informações sobre renderizadores personalizados, consulte [Como personalizar controles em cada plataforma](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 

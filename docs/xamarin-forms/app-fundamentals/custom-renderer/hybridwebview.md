@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 625a860469c82da6e6986b03b8c3e55503433e67
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: d09188373d11b33f3b3d78b92faa46bf754797f6
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926682"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268992"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementando um HybridWebView
 
@@ -172,22 +172,24 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control and assign it to the Control property with
-    // the SetNativeControl method
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control and assign it to the Control property with
+      // the SetNativeControl method
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-Um novo controle nativo deve ser instanciado apenas uma vez, quando a propriedade `Control` é `null`. O controle deve ser configurado e os manipuladores de eventos devem ser inscritos apenas quando o renderizador personalizado for anexado a um novo elemento Xamarin.Forms. Da mesma forma, a inscrição de quaisquer manipuladores de evento inscritos só deve ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado com bom desempenho que não sofre perdas de memória.
+Um novo controle nativo deve ser instanciado apenas uma vez, quando a propriedade `Control` é `null`.  Além disso, o controle só deve ser criado e configurado e os manipuladores de eventos devem ser inscritos apenas quando o renderizador personalizado for anexado a um novo elemento Xamarin.Forms. Da mesma forma, a inscrição de quaisquer manipuladores de evento inscritos só deve ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado com bom desempenho que não sofre perdas de memória.
+
+> [!IMPORTANT]
+> O método `SetNativeControl` só deve ser chamado se `e.NewElement` não for `null`.
 
 Cada classe de renderizador personalizado é decorada com um atributo `ExportRenderer` que registra o renderizador no Xamarin.Forms. O atributo aceita dois parâmetros – o nome do tipo de controle personalizado do Xamarin.Forms que está sendo renderizado e o nome do tipo de renderizador personalizado. O prefixo `assembly` do atributo especifica que o atributo se aplica a todo o assembly.
 
@@ -271,16 +273,6 @@ namespace CustomRenderer.iOS
         {
             base.OnElementChanged (e);
 
-            if (Control == null) {
-                userController = new WKUserContentController ();
-                var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
-                userController.AddUserScript (script);
-                userController.AddScriptMessageHandler (this, "invokeAction");
-
-                var config = new WKWebViewConfiguration { UserContentController = userController };
-                var webView = new WKWebView (Frame, config);
-                SetNativeControl (webView);
-            }
             if (e.OldElement != null) {
                 userController.RemoveAllUserScripts ();
                 userController.RemoveScriptMessageHandler ("invokeAction");
@@ -288,6 +280,16 @@ namespace CustomRenderer.iOS
                 hybridWebView.Cleanup ();
             }
             if (e.NewElement != null) {
+                if (Control == null) {
+                    userController = new WKUserContentController ();
+                    var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
+                    userController.AddUserScript (script);
+                    userController.AddScriptMessageHandler (this, "invokeAction");
+
+                    var config = new WKWebViewConfiguration { UserContentController = userController };
+                    var webView = new WKWebView (Frame, config);
+                    SetNativeControl (webView);
+                }
                 string fileName = Path.Combine (NSBundle.MainBundle.BundlePath, string.Format ("Content/{0}", Element.Uri));
                 Control.LoadRequest (new NSUrlRequest (new NSUrl (fileName, false)));
             }
@@ -305,14 +307,14 @@ A classe `HybridWebViewRenderer` carrega a página da Web especificada na propri
 
 Essa funcionalidade é obtida da seguinte maneira:
 
-- Desde que a propriedade `Control` seja `null`, as seguintes operações serão executadas:
-  - Uma instância de [`WKUserContentController`](xref:WebKit.WKUserContentController) é criada, o que permite postar mensagens e injetar scripts do usuário em uma página da Web.
-  - Uma instância de [`WKUserScript`](xref:WebKit.WKUserScript) é criada para injetar a função de JavaScript `invokeCSharpAction` na página da Web após ela ser carregada.
-  - O método [`WKUserContentController.AddUserScript`](xref:WebKit.WKUserContentController.AddUserScript(WebKit.WKUserScript)) adiciona a instância de [`WKUserScript`](xref:WebKit.WKUserScript) ao controlador de conteúdo.
-  - O método [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) adiciona um manipulador de mensagens de script denominado `invokeAction` à instância de [`WKUserContentController`](xref:WebKit.WKUserContentController), o que fará com que a função de JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` seja definida em todos os quadros em todas as exibições da Web que usarão a instância de `WKUserContentController`.
-  - Uma instância de [`WKWebViewConfiguration`](xref:WebKit.WKWebViewConfiguration) é criada, com a instância de [`WKUserContentController`](xref:WebKit.WKUserContentController) sendo definida como o controlador de conteúdo.
-  - Um controle [`WKWebView`](xref:WebKit.WKWebView) é instanciado e o método `SetNativeControl` é chamado para atribuir uma referência ao controle `WKWebView` à propriedade `Control`.
 - Desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
+  - Desde que a propriedade `Control` seja `null`, as seguintes operações serão executadas:
+    - Uma instância de [`WKUserContentController`](xref:WebKit.WKUserContentController) é criada, o que permite postar mensagens e injetar scripts do usuário em uma página da Web.
+    - Uma instância de [`WKUserScript`](xref:WebKit.WKUserScript) é criada para injetar a função de JavaScript `invokeCSharpAction` na página da Web após ela ser carregada.
+    - O método [`WKUserContentController.AddUserScript`](xref:WebKit.WKUserContentController.AddUserScript(WebKit.WKUserScript)) adiciona a instância de [`WKUserScript`](xref:WebKit.WKUserScript) ao controlador de conteúdo.
+    - O método [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) adiciona um manipulador de mensagens de script denominado `invokeAction` à instância de [`WKUserContentController`](xref:WebKit.WKUserContentController), o que fará com que a função de JavaScript `window.webkit.messageHandlers.invokeAction.postMessage(data)` seja definida em todos os quadros em todas as exibições da Web que usarão a instância de `WKUserContentController`.
+    - Uma instância de [`WKWebViewConfiguration`](xref:WebKit.WKWebViewConfiguration) é criada, com a instância de [`WKUserContentController`](xref:WebKit.WKUserContentController) sendo definida como o controlador de conteúdo.
+    - Um controle [`WKWebView`](xref:WebKit.WKWebView) é instanciado e o método `SetNativeControl` é chamado para atribuir uma referência ao controle `WKWebView` à propriedade `Control`.
   - O método [`WKWebView.LoadRequest`](xref:WebKit.WKWebView.LoadRequest(Foundation.NSUrlRequest)) carrega o arquivo HTML que é especificado pela propriedade `HybridWebView.Uri`. O código especifica que o arquivo seja armazenado na pasta `Content` do projeto. Após a página da Web ser exibida, a função de JavaScript `invokeCSharpAction` será injetada na página da Web.
 - Quando o elemento a que o renderizador está anexado é alterado:
   - Recursos são liberados.
@@ -352,13 +354,6 @@ namespace CustomRenderer.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                var webView = new Android.Webkit.WebView(_context);
-                webView.Settings.JavaScriptEnabled = true;
-                webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
-                SetNativeControl(webView);
-            }
             if (e.OldElement != null)
             {
                 Control.RemoveJavascriptInterface("jsBridge");
@@ -367,6 +362,13 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                    var webView = new Android.Webkit.WebView(_context);
+                    webView.Settings.JavaScriptEnabled = true;
+                    webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
+                    SetNativeControl(webView);
+                }
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
                 Control.LoadUrl($"file:///android_asset/Content/{Element.Uri}");
             }
@@ -397,10 +399,10 @@ public class JavascriptWebViewClient : WebViewClient
 
 Quando o usuário insere seu nome e clica no elemento HTML `button`, a função de JavaScript `invokeCSharpAction` é executada. Essa funcionalidade é obtida da seguinte maneira:
 
-- Desde que a propriedade `Control` seja `null`, as seguintes operações serão executadas:
-  - Uma instância de [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) nativa é criada, o JavaScript é habilitado no controle e uma instância de `JavascriptWebViewClient` é definida como a implementação de `WebViewClient`.
-  - O método `SetNativeControl` é chamado para atribuir uma referência ao controle [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) nativo à propriedade `Control`.
 - Desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
+  - Desde que a propriedade `Control` seja `null`, as seguintes operações serão executadas:
+    - Uma instância de [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) nativa é criada, o JavaScript é habilitado no controle e uma instância de `JavascriptWebViewClient` é definida como a implementação de `WebViewClient`.
+    - O método `SetNativeControl` é chamado para atribuir uma referência ao controle [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) nativo à propriedade `Control`.
   - O método [`WebView.AddJavascriptInterface`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) injeta uma nova instância de `JSBridge` no quadro principal do contexto do JavaScript do WebView, denominando-a `jsBridge`. Isso permite que métodos na classe `JSBridge` sejam acessados do JavaScript.
   - O método [`WebView.LoadUrl`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) carrega o arquivo HTML que é especificado pela propriedade `HybridWebView.Uri`. O código especifica que o arquivo seja armazenado na pasta `Content` do projeto.
   - Na classe `JavascriptWebViewClient`, a função de JavaScript `invokeCSharpAction` é injetada na página da Web depois que a página termina de ser carregada.
@@ -456,10 +458,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                SetNativeControl(new Windows.UI.Xaml.Controls.WebView());
-            }
             if (e.OldElement != null)
             {
                 Control.NavigationCompleted -= OnWebViewNavigationCompleted;
@@ -467,6 +465,10 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                    SetNativeControl(new Windows.UI.Xaml.Controls.WebView());
+                }
                 Control.NavigationCompleted += OnWebViewNavigationCompleted;
                 Control.ScriptNotify += OnWebViewScriptNotify;
                 Control.Source = new Uri(string.Format("ms-appx-web:///Content//{0}", Element.Uri));
@@ -494,9 +496,9 @@ A classe `HybridWebViewRenderer` carrega a página da Web especificada na propri
 
 Essa funcionalidade é obtida da seguinte maneira:
 
-- Desde que a propriedade `Control` seja `null`, as seguintes operações serão executadas:
-  - O método `SetNativeControl` é chamado para instanciar um novo controle `WebView` nativo e para atribuir uma referência a ele para a propriedade `Control`.
 - Desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
+  - Desde que a propriedade `Control` seja `null`, as seguintes operações serão executadas:
+    - O método `SetNativeControl` é chamado para instanciar um novo controle `WebView` nativo e para atribuir uma referência a ele para a propriedade `Control`.
   - Manipuladores de eventos para os eventos `NavigationCompleted` e `ScriptNotify` são registrados. O evento `NavigationCompleted` é acionado quando o controle nativo `WebView` termina de carregar o conteúdo atual ou quando a navegação falha. O evento `ScriptNotify` é acionado quando o conteúdo no controle `WebView` nativo usa JavaScript para passar uma cadeia de caracteres para o aplicativo. A página da Web aciona o evento `ScriptNotify` chamando `window.external.notify` ao passar um parâmetro `string`.
   - A propriedade `WebView.Source` é definida como o URI do arquivo HTML que é especificado pela propriedade `HybridWebView.Uri`. O código presume que o arquivo seja armazenado na pasta `Content` do projeto. Depois que a página da Web é exibida, o evento `NavigationCompleted` é acionado e o método `OnWebViewNavigationCompleted` é invocado. A função de JavaScript `invokeCSharpAction`, em seguida, será injetada na página da Web com o método `WebView.InvokeScriptAsync`, desde que a navegação tenha sido concluída com êxito.
 - Quando o elemento a que o renderizador está anexado é alterado:

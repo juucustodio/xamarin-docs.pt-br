@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 93abf62e5d0b1df48606e4515fca6747146c7777
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 4ac6344165730bc8c348c16fe8f3a932d4ac3548
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175350"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268622"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
 
@@ -54,13 +54,13 @@ Ou clique com o botão direito no projeto do Android e abra as propriedades do p
 
 O **Info.plist** do seu aplicativo deve conter a chave `NSLocationWhenInUseUsageDescription` para acessar o local do dispositivo.
 
-Abra o editor de plist e adicione a propriedade **Privacy - Location When In Use Usage Description** e um valor para exibir ao usuário.
+Abra o editor de plist e adicione a propriedade **Privacy - Location When In Use Usage Description** e preencha um valor a ser exibido ao usuário.
 
-Ou, edite manualmente o arquivo e adicione o seguinte:
+Ou edite manualmente o arquivo, adicione o seguinte e atualize a justificativa:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
-<string>This app needs access location when open.</string>
+<string>Fill in a reason why your app needs access to location.</string>
 ```
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
@@ -152,7 +152,7 @@ A tabela a seguir descreve a precisão por plataforma:
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
-| UWP | 1.000–5.000 |
+| UWP | 1\.000–5.000 |
 
 ### <a name="low"></a>Baixo
 

@@ -4,13 +4,13 @@ description: A classe PhoneDialer no Xamarin.Essentials permite que um aplicativ
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 8d4b0cdcae5e33ac2c48baa0b7749597314eae8c
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 07/02/2019
+ms.openlocfilehash: 0b00307759d95b8e2efe27bd9a17d2c6efd3d5c0
+ms.sourcegitcommit: e95296f9e516975f5f32d822c323a71fd84007b9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898258"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67538684"
 ---
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Discagem telefônica
 
@@ -33,7 +33,7 @@ A funcionalidade de Discagem telefônica chama o método `Open` com um número d
 ```csharp
 public class PhoneDialerTest
 {
-    public async Task PlacePhoneCall(string number)
+    public void PlacePhoneCall(string number)
     {
         try
         {

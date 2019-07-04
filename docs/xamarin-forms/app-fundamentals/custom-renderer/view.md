@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 88be56cae52e881792ec7a187ef7e158790e8a1b
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 8f5c440784205fa0e7e2001c981e37eab8646f24
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926600"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268939"
 ---
 # <a name="implementing-a-view"></a>Implementando uma exibição
 
@@ -138,22 +138,24 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control and assign it to the Control property with
-    // the SetNativeControl method
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control and assign it to the Control property with
+      // the SetNativeControl method
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-Um novo controle nativo deve ser instanciado apenas uma vez, quando a propriedade `Control` é `null`. O controle deve ser configurado e os manipuladores de eventos devem ser inscritos apenas quando o renderizador personalizado for anexado a um novo elemento Xamarin.Forms. Da mesma forma, a inscrição de quaisquer manipuladores de evento inscritos só deve ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado com bom desempenho que não sofre perdas de memória.
+Um novo controle nativo deve ser instanciado apenas uma vez, quando a propriedade `Control` é `null`. Além disso, o controle só deve ser criado e configurado e os manipuladores de eventos devem ser inscritos apenas quando o renderizador personalizado for anexado a um novo elemento Xamarin.Forms. Da mesma forma, a inscrição de quaisquer manipuladores de evento inscritos só deve ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado com bom desempenho que não sofre perdas de memória.
+
+> [!IMPORTANT]
+> O método `SetNativeControl` só deve ser chamado se `e.NewElement` não for `null`.
 
 Cada classe de renderizador personalizado é decorada com um atributo `ExportRenderer` que registra o renderizador no Xamarin.Forms. O atributo aceita dois parâmetros – o nome do tipo de controle personalizado do Xamarin.Forms que está sendo renderizado e o nome do tipo de renderizador personalizado. O prefixo `assembly` do atributo especifica que o atributo se aplica a todo o assembly.
 
@@ -175,15 +177,15 @@ namespace CustomRenderer.iOS
         {
             base.OnElementChanged (e);
 
-            if (Control == null) {
-                uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
-                SetNativeControl (uiCameraPreview);
-            }
             if (e.OldElement != null) {
                 // Unsubscribe
                 uiCameraPreview.Tapped -= OnCameraPreviewTapped;
             }
             if (e.NewElement != null) {
+                if (Control == null) {
+                  uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
+                  SetNativeControl (uiCameraPreview);
+                }
                 // Subscribe
                 uiCameraPreview.Tapped += OnCameraPreviewTapped;
             }
@@ -226,12 +228,6 @@ namespace CustomRenderer.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                cameraPreview = new CameraPreview(Context);
-                SetNativeControl(cameraPreview);
-            }
-
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -239,6 +235,11 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                  cameraPreview = new CameraPreview(Context);
+                  SetNativeControl(cameraPreview);
+                }
                 Control.Preview = Camera.Open((int)e.NewElement.Camera);
 
                 // Subscribe
@@ -284,15 +285,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                ...
-                _captureElement = new CaptureElement();
-                _captureElement.Stretch = Stretch.UniformToFill;
-
-                SetupCamera();
-                SetNativeControl(_captureElement);
-            }
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -301,6 +293,15 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                  ...
+                  _captureElement = new CaptureElement();
+                  _captureElement.Stretch = Stretch.UniformToFill;
+
+                  SetupCamera();
+                  SetNativeControl(_captureElement);
+                }
                 // Subscribe
                 Tapped += OnCameraPreviewTapped;
             }

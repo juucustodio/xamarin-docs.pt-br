@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: d8562cd74b661b5f72f373151b9aa0acc36f8477
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 7aa918a1aa70910cd05b17916e060e65ca5404bd
+ms.sourcegitcommit: 17376f0e54467d826b8928a11965fd0c879704f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869748"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131973"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introdução ao Xamarin.Essentials
 
@@ -35,7 +35,7 @@ O Xamarin.Essentials está disponível como um pacote NuGet que pode ser adicion
 
 2. Abra um projeto existente ou crie um novo projeto usando o modelo Aplicativo em branco no **C# do Visual Studio** (Android, iPhone e iPad ou plataforma cruzada). **Importante**: Se adicionar a um projeto UWP, verifique se o Build 16299 ou superior está definido nas propriedades do projeto.
 
-3. Adicione o pacote NuGet do **Xamarin.Essentials** a cada projeto:
+3. Adicione o pacote NuGet [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) a cada projeto:
 
     # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -43,7 +43,7 @@ O Xamarin.Essentials está disponível como um pacote NuGet que pode ser adicion
 
     # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-    No painel do Gerenciador de Soluções, clique com o botão direito do mouse no nome do projeto e escolha **Adicionar > Adicionar pacotes NuGet...**. Pesquise **Xamarin.Essentials** e instale o pacote em **TODOS** os projetos, incluindo bibliotecas do Android, iOS e .NET Standard.
+    No painel do Gerenciador de Soluções, clique com o botão direito do mouse no nome do projeto e escolha **Adicionar > Adicionar pacotes NuGet...** . Pesquise **Xamarin.Essentials** e instale o pacote em **TODOS** os projetos, incluindo bibliotecas do Android, iOS e .NET Standard.
 
     -----
 
