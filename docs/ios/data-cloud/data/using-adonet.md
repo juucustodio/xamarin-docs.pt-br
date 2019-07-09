@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 9314e1b69df4a5965dfd045d0b4ca3e44f1b9de6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 293ccc66395edbe18399717caf632292ff760b0b
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153658"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650183"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Usando o ADO.NET com o xamarin. IOS
 
@@ -219,4 +219,4 @@ O `ExecuteScalar` é do tipo de retorno do método `object` – você deve conve
 - [DataAccess Basic (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avançadas (amostra)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS receitas de dados](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Acesso a dados do xamarin. Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Acesso a dados do xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)
