@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/18/2018
-ms.openlocfilehash: 370867b52ec09d0c3ad0f801b6a75c356d806734
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 253c67ef5c46c83884df05d265613305dd5837f5
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61277823"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650159"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Usar SQLite.NET com xamarin. IOS
 
@@ -210,4 +210,4 @@ SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 
 - [DataAccess Basic (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avançadas (amostra)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Acesso a dados do xamarin. Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Acesso a dados do xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
-ms.openlocfilehash: ce9822b9c6c6a360f8c289f46d4d777d80b898e1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: afb582129a5587e6a386a0ce2c23368af9bcd619
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61217418"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650254"
 ---
 # <a name="configuring-sqlite-in-xamarinios"></a>Configurando o SQLite no xamarin. IOS
 
@@ -71,4 +71,4 @@ Todo o acesso de banco de dados (leituras, gravações, atualizações, etc.) de
 - [DataAccess Basic (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avançadas (amostra)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS receitas de dados](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Acesso a dados do xamarin. Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Acesso a dados do xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)

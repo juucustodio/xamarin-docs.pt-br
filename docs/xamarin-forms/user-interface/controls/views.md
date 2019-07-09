@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 6fbe1104d238929d0c6c6978a9145cd51d52cb6c
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 4d0fc5c4ee3947de74a62e8c42fedb8aeedbfdd9
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513078"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650624"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -116,7 +116,7 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 
 |     |     |
 | --- | --- |
-| [`Switch`](xref:Xamarin.Forms.Switch) assume a forma de uma chave liga/desliga para permitir que o usuário selecione um valor booliano. O [ `IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) propriedade é o estado do comutador e o [ `Toggled` ](xref:Xamarin.Forms.Switch.Toggled) evento é acionado quando o estado é alterado.<br /><br />[Documentação da API](xref:Xamarin.Forms.Switch) | [![Alternar de exemplo](views-images/Switch.png "alternar exemplo")](views-images/Switch-Large.png#lightbox "alternar de exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
+| [`Switch`](xref:Xamarin.Forms.Switch) assume a forma de uma chave liga/desliga para permitir que o usuário selecione um valor booliano. O [ `IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) propriedade é o estado do comutador e o [ `Toggled` ](xref:Xamarin.Forms.Switch.Toggled) evento é acionado quando o estado é alterado.<br /><br />[Documentação da API](xref:Xamarin.Forms.Switch) / [guia](~/xamarin-forms/user-interface/switch.md) / [exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SwitchDemos) | [![Alternar de exemplo](views-images/Switch.png "alternar exemplo")](views-images/Switch-Large.png#lightbox "alternar de exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
 |     |     |
 
 ### <a name="datepicker"></a>DatePicker

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: e9af8df3cbe6f125788f298be6a181472c1cd27d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7d402e6f665baa8db68d571945490a8d1ae18881
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61012838"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649562"
 ---
 # <a name="using-data-in-an-app"></a>Usar dados em um aplicativo
 
@@ -140,4 +140,4 @@ public class YourAndroidApp : Application {
 - [DataAccess Basic (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avançadas (amostra)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Receitas de dados do Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Acesso a dados do xamarin. Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Acesso a dados do xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)

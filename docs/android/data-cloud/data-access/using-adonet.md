@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 7ecf7244fb2ccbe0e4163c89941f9de5138ba713
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 10b5a1696b0416bfda115627f7c7b8c2fbd20fcb
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018497"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649577"
 ---
 # <a name="using-adonet-with-android"></a>Usando o ADO.NET com o Android
 
@@ -61,7 +61,7 @@ using (var command = connection.CreateCommand ()) {
 }
 ```
 
-Ao executar o SQL diretamente no banco de dados que você deve tomar as precauções normais não façam solicitações inválidas, como a tentativa de criar uma tabela que já existe. Manter o controle da estrutura do seu banco de dados para que não fazem com que um `SqliteException` , como **já existe uma tabela de erro do SQLite [itens]**.
+Ao executar o SQL diretamente no banco de dados que você deve tomar as precauções normais não façam solicitações inválidas, como a tentativa de criar uma tabela que já existe. Manter o controle da estrutura do seu banco de dados para que não fazem com que um `SqliteException` , como **já existe uma tabela de erro do SQLite [itens]** .
 
 ## <a name="basic-data-access"></a>Acesso a dados básicos
 
@@ -220,4 +220,4 @@ O `ExecuteScalar` é do tipo de retorno do método `object` &ndash; você deve c
 - [DataAccess Basic (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avançadas (amostra)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Receitas de dados do Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Acesso a dados do xamarin. Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Acesso a dados do xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)

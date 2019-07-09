@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: bf7a1461a26a860c77a913edabb94d76b4ca2a6a
-ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
+ms.openlocfilehash: 97bb5ec954f36e48d8ae115baf8738862e5a8358
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493339"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649542"
 ---
 # <a name="xamarinforms-editor"></a>Editor do xamarin. Forms
 
@@ -264,7 +264,7 @@ Certifique-se de que as cores de plano de fundo e texto que você escolher podem
 
 ### <a name="completed"></a>Concluído
 
-O `Completed` evento é usado para responder à realização de uma interação com um `Editor`. `Completed` é gerado quando o usuário encerra a entrada com um campo, inserindo a tecla return no teclado. O manipulador para o evento é um manipulador de eventos genéricos, levando o remetente e `EventArgs`:
+O `Completed` evento é usado para responder à realização de uma interação com um `Editor`. `Completed` é gerado quando o usuário encerra a entrada com um campo, inserindo a tecla return no teclado (ou pressionando a tecla Tab na UWP). O manipulador para o evento é um manipulador de eventos genéricos, levando o remetente e `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)

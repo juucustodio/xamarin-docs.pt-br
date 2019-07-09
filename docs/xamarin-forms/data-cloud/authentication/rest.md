@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: d3f07a72ee26d6be4fafa72137dc9b6c3a724e00
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bf334c7fde8433b7bbe45c8caaf962705c39320d
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61330627"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650394"
 ---
-# <a name="authenticating-a-restful-web-service"></a>Autenticar um serviço Web RESTful
+# <a name="authenticate-a-restful-web-service"></a>Autenticar um serviço Web RESTful
 
 _HTTP oferece suporte ao uso de vários mecanismos de autenticação para controlar o acesso aos recursos. Autenticação básica oferece acesso a recursos somente a clientes que possuem as credenciais corretas. Este artigo demonstra como usar a autenticação básica para proteger o acesso aos recursos do serviço web RESTful._
 
@@ -86,5 +86,5 @@ O módulo de autenticação básica usada pelo IIS, os usuários são autenticad
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Consumir um serviço web RESTful](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [Consumir um serviço web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

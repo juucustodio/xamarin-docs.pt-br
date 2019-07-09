@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2019
-ms.openlocfilehash: 658ce23b0aaced8e195461a485f3e846900c2026
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6410be4019772ad11cd97d27c5de3c0300d58519
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61389023"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649631"
 ---
 # <a name="xamarinforms-webview"></a>WebView do xamarin. Forms
 
@@ -109,6 +109,9 @@ browser.Source = htmlSource;
 
 No código acima, `@` é usado para marcar o HTML como uma cadeia de caracteres literal, o que significa que todos os caracteres de escape comuns são ignorados.
 
+> [!NOTE]
+> Talvez seja necessário definir a `WidthRequest` e `HeightRequest` propriedades da [ `WebView` ](xref:Xamarin.Forms.WebView) para ver o conteúdo HTML, dependendo do layout de `WebView` é um filho de. Por exemplo, isso é necessário em uma [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
+
 ### <a name="local-html-content"></a>Conteúdo HTML local
 
 WebView pode exibir o conteúdo do HTML, CSS e Javascript inserido dentro do aplicativo. Por exemplo:
@@ -140,7 +143,7 @@ body,p,h1 {
 
 Observe que as fontes especificadas no CSS acima precisará ser personalizado para cada plataforma, pois nem todas as plataforma tem as mesmas fontes.
 
-Para exibição local conteúdo usando um `WebView`, você precisará abrir o arquivo HTML como qualquer outro e, em seguida, carregar o conteúdo como uma cadeia de caracteres para o `Html` propriedade de um `HtmlWebViewSource`. Para obter mais informações sobre a abertura de arquivos, consulte [trabalhando com arquivos](~/xamarin-forms/app-fundamentals/files.md).
+Para exibição local conteúdo usando um `WebView`, você precisará abrir o arquivo HTML como qualquer outro e, em seguida, carregar o conteúdo como uma cadeia de caracteres para o `Html` propriedade de um `HtmlWebViewSource`. Para obter mais informações sobre a abertura de arquivos, consulte [trabalhando com arquivos](~/xamarin-forms/data-cloud/data/files.md).
 
 As capturas de tela a seguir mostram o resultado de exibição de conteúdo local em cada plataforma:
 

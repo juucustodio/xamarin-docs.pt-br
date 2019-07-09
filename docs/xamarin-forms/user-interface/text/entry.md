@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: c9be74bcc6e5d149856e06c98d3bef9a841d4bab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 238ba1853df523ee275de628ebdbd138a6d1d1bf
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61230192"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649607"
 ---
 # <a name="xamarinforms-entry"></a>Entrada do xamarin. Forms
 
@@ -327,7 +327,7 @@ Entrada expõe dois eventos:
 
 ### <a name="completed"></a>Concluído
 
-O `Completed` evento é usado para responder à realização de uma interação com uma entrada. `Completed` é gerado quando o usuário encerra a entrada com um campo, pressionando a tecla return no teclado. O manipulador para o evento é um manipulador de eventos genéricos, levando o remetente e `EventArgs`:
+O `Completed` evento é usado para responder à realização de uma interação com uma entrada. `Completed` é gerado quando o usuário encerra a entrada com um campo, pressionando a tecla return no teclado (ou pressionando a tecla Tab na UWP). O manipulador para o evento é um manipulador de eventos genéricos, levando o remetente e `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
