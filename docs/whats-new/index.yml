@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: 2019-07.md
+            html: 'Novidades nos documentos do Xamarin em julho de 2019: Lançamento do Xamarin.Forms 4.1, atualizações de dados e de serviços de nuvem e outras atualizações.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: 2019-06.md
+            title: Julho de 2019
           - href: 2019-06.md
             html: 'Novidades nos documentos do Xamarin em junho de 2019: Lançamento do Xamarin.Forms 4.0, atualizações de dados e de serviços de nuvem, documentos da API agora disponíveis em docs.microsoft.com.'
             image:

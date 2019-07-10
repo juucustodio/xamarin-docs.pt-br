@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9520a219d2ac8a86fb33536b374167b09749c27f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e759917eac2c6d966d8cd577838c311c13b2a9e
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61388765"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659739"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -32,5 +32,5 @@ Como alternativa, veja [_Criando aplicativos móveis com Xamarin.Forms_](~/xamar
 ## <a name="related-links"></a>Links relacionados
 
 - [WebServiceTutorial (amostra)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/WebServiceTutorial)
-- [Consumindo um serviço Web RESTful (guia)](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [Consumir um serviço Web RESTful (guia)](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Pacote do NuGet Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)

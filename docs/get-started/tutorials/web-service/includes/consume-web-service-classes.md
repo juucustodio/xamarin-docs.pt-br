@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe38e13ff4b6c89905769d5ef0e5163a538e1e86
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61388763"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659740"
 ---
 Neste exercício, você criará uma interface do usuário para consumir a classe `RestService`, que, por sua vez, recupera dados da API Web [OpenWeatherMap](https://openweathermap.org/).
 
@@ -191,7 +191,7 @@ Neste exercício, você criará uma interface do usuário para consumir a classe
 
     Além disso, a [`Entry`](xref:Xamarin.Forms.Entry) tem um nome especificado com o atributo `x:Name`. Isso permite que o arquivo code-behind acesse o objeto usando o nome atribuído.
 
-    Para obter mais informações sobre como consumir serviços Web baseados em REST no Xamarin.Forms, confira [Consumindo um serviço Web RESTful (guia)](~/xamarin-forms/data-cloud/consuming/rest.md).
+    Para obter mais informações sobre como consumir serviços Web baseados em REST no Xamarin.Forms, confira [Consumir um serviço Web RESTful (guia)](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 1. No **Painel de Soluções**, no projeto **WebServiceTutorial**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo. Então, em **MainPage.xaml.cs**, remova todo o código de modelo e substitua-o pelo código a seguir:
 
@@ -250,4 +250,4 @@ Neste exercício, você criará uma interface do usuário para consumir a classe
     > [!IMPORTANT]
     > Sua chave de API OpenWeatherMap pessoal deve ser definida como o valor da constante `OpenWeatherMapAPIKey` na classe `Constants`.
 
-    Para obter mais informações sobre como consumir serviços Web baseados em REST no Xamarin.Forms, confira [Consumindo um serviço Web RESTful (guia)](~/xamarin-forms/data-cloud/consuming/rest.md).
+    Para obter mais informações sobre como consumir serviços Web baseados em REST no Xamarin.Forms, confira [Consumir um serviço Web RESTful (guia)](~/xamarin-forms/data-cloud/web-services/rest.md).
