@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: a667f952eead5bed8305f4c9f4201fd6235b883a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ee8d6966b9eac2dad6a36c215bf7aa5bdf79a867
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239965"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512986"
 ---
 # <a name="xamarinforms-control-templates"></a>Modelos de Controle do Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Modelos de controle fornecem uma separação clara entre a aparência de uma p�
 
 Os modelos de controle do Xamarin.Forms fornecem a capacidade de tematizar e tematizar novamente páginas de aplicativo em tempo de execução. Este artigo fornece uma introdução a modelos de controle.
 
-## <a name="creating-a-controltemplatecreatingmd"></a>[Criando um ControlTemplate](creating.md)
+## <a name="create-a-controltemplatecreatingmd"></a>[Criar um ControlTemplate](creating.md)
 
 Modelos de controle podem ser definidos no nível do aplicativo ou no nível da página. Este artigo demonstra como criar e consumir modelos de controle.
 
