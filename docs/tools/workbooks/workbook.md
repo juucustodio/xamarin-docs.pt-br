@@ -6,12 +6,12 @@ ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 71f46535ffd0a99ad78acb8f0e3bbc5870abf33e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a900d427ad6ac2a0e211ef4f00d2f014b13e5d1c
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61197923"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674414"
 ---
 # <a name="interactive-workbooks"></a>Pastas de trabalho interativas
 
@@ -27,7 +27,7 @@ Pastas de trabalho podem ser salvo e abertas novamente mais tarde no aplicativo.
 
 O janela de edição de código fornece conclusão de código, colorização de sintaxe, embutido live-diagnostics e suporte à instrução de várias linhas.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "O janela de edição de código fornece conclusão de código, colorização de sintaxe, embutido live-diagnostics e suporte à instrução de várias linhas")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![](workbook-images/inspector-0.6.0-repl-small.png "O janela de edição de código fornece conclusão de código, colorização de sintaxe, embutido live-diagnostics e suporte à instrução de várias linhas")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin Workbooks são salvas em um `.workbook` arquivo, que é um arquivo CommonMark com alguns metadados na parte superior (consulte [tipos de arquivo de pastas de trabalho](#workbooks-files-types) para obter mais detalhes sobre como as pastas de trabalho podem ser salvas).
 
@@ -138,7 +138,7 @@ Pacotes de pasta de trabalho, que está sendo diretórios, podem ser difícil di
 
 A partir 1.1 de pastas de trabalho, ao salvar um pacote da pasta de trabalho, a caixa de diálogo Salvar oferece a opção de salvar como arquivo morto em vez disso. Pastas de trabalho 1.0 não tinham nenhum modo interno de criar ou salvar arquivos mortos.
 
-Em pastas de trabalho 1.0, quando um arquivo de pasta de trabalho foi aberto, transparente, ele foi convertido em um pacote da pasta de trabalho e o arquivo zip foi perdido. 1.1 de pastas de trabalho, o arquivo zip permanece. Quando o usuário salva o arquivo morto, ele será substituído por um novo arquivo zip.
+Em pastas de trabalho 1.0, quando um arquivo de pasta de trabalho foi aberto, transparente, ele foi convertido em um pacote da pasta de trabalho e o arquivo zip foi perdido. 1\.1 de pastas de trabalho, o arquivo zip permanece. Quando o usuário salva o arquivo morto, ele será substituído por um novo arquivo zip.
 
 Você pode criar um arquivo de pasta de trabalho manualmente clicando duas vezes um pacote da pasta de trabalho e selecionando **compactar** no Mac, ou **enviar para > pasta compactada (zipada)** no Windows. Renomeie o arquivo zip para ter um `.workbook` extensão de arquivo. Isso só funciona com os pacotes de pasta de trabalho, arquivos de pasta de trabalho não sem formatação.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: faa52c80fdb776f2c6c7320874b0d08720b4e4ec
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8da40e5500e5669027f658ec95930e3b3a37530e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218688"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675240"
 ---
 # <a name="introduction-to-watchos"></a>Introdução ao watchOS
 
@@ -29,7 +29,7 @@ Uma solução de aplicativo watchOS tem 3 projetos:
 
 Em aplicativos watchOS 1, o código na extensão é executado no iPhone – a Apple Watch é efetivamente um vídeo externo. aplicativos do watchOS 2 e 3 são executados inteiramente na Apple Watch. Essa diferença é mostrada no diagrama a seguir:
 
-[ ![](intro-to-watchos-images/arch-sml.png "A diferença entre o watchOS 1 e watchOS 2 (e superior) é mostrada neste diagrama")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "A diferença entre o watchOS 1 e watchOS 2 (e superior) é mostrada neste diagrama")](intro-to-watchos-images/arch.png#lightbox)
 
 Independentemente de qual versão do watchOS destina-se, no Visual Studio para painel do Mac de soluções uma solução completa será algo parecido com isso:
 

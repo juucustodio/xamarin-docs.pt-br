@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 36164e1e9f92b5a5520d10f769f3953cfa2ceb85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a8fe2c2765676db52c23fd7c475f218f14697caf
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61412776"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675238"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Trabalhando com o watchOS configurações no Xamarin
 
@@ -36,7 +36,7 @@ No **aplicativo de iPhone** em sua solução (*não* o aplicativo de inspeção 
 
 3. Adicione uma nova chave `ApplicationGroupContainerIdentifier` para o **root. plist** com o valor definido para o grupo de aplicativos que você configurou, (por exemplo. `group.com.xamarin.WatchSettings` no exemplo):
 
-   [ ![](settings-images/settings-appgroup-sml.png "Adicionar uma chave de ApplicationGroupContainerIdentifier para o root. plist")](settings-images/settings-appgroup.png#lightbox)
+   [![](settings-images/settings-appgroup-sml.png "Adicionar uma chave de ApplicationGroupContainerIdentifier para o root. plist")](settings-images/settings-appgroup.png#lightbox)
 
 4. Editar o **Settings-Watch.bundle/Root.plist** para conter as opções que você deseja usar - o arquivo de modelo contém um grupo.
   campo de texto, switch de alternância e slider por padrão (que você pode excluir e substituir por suas próprias configurações):

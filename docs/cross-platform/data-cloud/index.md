@@ -6,16 +6,16 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 25eec247a0cb664897541a0e6e818a77018fda43
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dd211fecad0bff58cb9ff6c6a99ae6a15c60eb7b
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187762"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674983"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure e o Xamarin
 
-[ ![](images/evolve-mikej-azure-sml.png "Recursos de serviços de aplicativos do Azure são fáceis de adicionar a aplicativos do Xamarin, incluindo o armazenamento de dados de nuvem e notificações por push de plataforma cruzada")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Recursos de serviços de aplicativos do Azure são fáceis de adicionar a aplicativos do Xamarin, incluindo o armazenamento de dados de nuvem e notificações por push de plataforma cruzada")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 [Evolve 2016: Desenvolvimento de aplicativos conectados usando o Azure e o Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
@@ -28,7 +28,7 @@ O novo [serviços conectados](connected-services.md) recurso do Visual Studio pa
 Há uma coleção de [documentação de aplicativos móveis do Azure](~/cross-platform/data-cloud/mobile-apps.md) que explica o processo de implementação de [Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 O Xamarin oferece também pacotes do NuGet um sistema de mensagens do Azure para [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) e [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) para ajudar a implementar notificações por push entre plataformas.
 
-Configurar seus aplicativos na [portal de serviços de aplicativo do Azure](https://portal.azure.com/) para acessar APIs da Web, aplicativos móveis, armazenamento e muito mais. Saiba mais sobre [como os serviços de aplicativos são diferentes](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) e assista na [esses vídeos da Microsoft](http://azure.microsoft.com/campaigns/azure-march-announcement/).
+Configurar seus aplicativos na [portal de serviços de aplicativo do Azure](https://portal.azure.com/) para acessar APIs da Web, aplicativos móveis, armazenamento e muito mais. Saiba mais sobre [como os serviços de aplicativos são diferentes](https://azure.microsoft.com/updates/whats-new-with-azure-app-service/) e assista na [esses vídeos da Microsoft](https://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## <a name="active-directory-authentication"></a>Autenticação do Active Directory
 
@@ -61,5 +61,5 @@ Além de [exemplos de documentação](https://github.com/xamarin/mobile-samples/
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de PCL do Azure (por @paulbatum) (amostra)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
-- [Portal do Azure](http://azure.microsoft.com/)
+- [Portal do Azure](https://azure.microsoft.com/)
 - [Cliente móvel para Xamarin (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

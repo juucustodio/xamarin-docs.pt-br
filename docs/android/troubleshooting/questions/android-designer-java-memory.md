@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c42be49aff56453bb1bc3b3c732cad151ccd62e0
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60946732"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674457"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar os parâmetros de memória do Java para o designer do Android
 
@@ -35,7 +35,7 @@ Os seguintes nomes de propriedade correspondem do java indicado [opção de linh
 
 1.  Abra a solução no Visual Studio.
 
-2.  Selecione cada projeto do Android-individualmente no Gerenciador de soluções e clique em [Show All Files](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) duas vezes em cada projeto. Você pode ignorar os projetos que não contêm nenhuma `.axml` arquivos de layout. Essa etapa garante que cada diretório do projeto contém um `.csproj.user` arquivo.
+2.  Selecione cada projeto do Android-individualmente no Gerenciador de soluções e clique em [Show All Files](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) duas vezes em cada projeto. Você pode ignorar os projetos que não contêm nenhuma `.axml` arquivos de layout. Essa etapa garante que cada diretório do projeto contém um `.csproj.user` arquivo.
 
 3.  Encerre o Visual Studio.
 

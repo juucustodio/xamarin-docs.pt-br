@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 1a9856a5b6257c82b2072e9eb44be481373abfcf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b28dba9031840b312868e2ebc45e348a390d3b12
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61308194"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675056"
 ---
 # <a name="splash-screen"></a>Splash Screen
 
@@ -230,4 +230,4 @@ Este guia discutiu a uma maneira de implementar uma tela inicial em um aplicativ
 
 - [Tela inicial (amostra)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
 - [lista de camada Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
-- [ Padrões de Design de material - telas de inicialização](https://material.io/design/communication/launch-screen.html#usage)
+- [Padrões de Design de material - telas de inicialização](https://material.io/design/communication/launch-screen.html#usage)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5417050daa84197dd7dc2a270ae054a3a73fd3bc
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037392"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675075"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API Design
 
@@ -113,7 +113,7 @@ Para cada tipo que espelha um tipo não gerenciado, é possível obter o objeto 
 
 Enquanto o Mono fornecerá a coleta de lixo para todos os seus objetos, o `Foundation.NSObject` implementa o [System. IDisposable](xref:System.IDisposable) interface. Isso significa que você pode liberar explicitamente os recursos de qualquer determinado NSObject sem ter de esperar o coletor de lixo para lançamento no. Isso é importante quando você estiver usando NSObjects pesada, por exemplo, UIImages que pode conter os ponteiros para blocos grandes de dados.
 
-Se seu tipo precisa executar finalização determinística, substituir os [NSObject.Dispose(bool) método](xref:Foundation.NSObject.Dispose(System.Boolean)) o parâmetro Dispose for "bool disposing", e se definido como true, ele significa que seu método Dispose está sendo chamado porque o usuário explicitamente chamado Dispose () no objeto. Se o valor for false, isso significa que seu método Dispose (bool disposing) está sendo chamado no finalizador no thread do finalizador. []()
+Se seu tipo precisa executar finalização determinística, substituir os [NSObject.Dispose(bool) método](xref:Foundation.NSObject.Dispose(System.Boolean)) o parâmetro Dispose for "bool disposing", e se definido como true, ele significa que seu método Dispose está sendo chamado porque o usuário explicitamente chamado Dispose () no objeto. Se o valor for false, isso significa que seu método Dispose (bool disposing) está sendo chamado no finalizador no thread do finalizador.
 
 
 ##### <a name="categories"></a>Categorias

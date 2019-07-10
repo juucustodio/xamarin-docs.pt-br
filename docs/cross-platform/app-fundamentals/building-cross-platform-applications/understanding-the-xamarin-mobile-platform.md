@@ -6,12 +6,12 @@ ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: f5008d4986baa0575030e077b66b69ec0a4fad00
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c7c0f582ac4a7dc8571fbc607dba9b0ad97d49e1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61275587"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674840"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1 – Noções básicas sobre a plataforma Xamarin Mobile
 
@@ -116,7 +116,7 @@ Cada plataforma tem um método diferente para dispor visualmente telas:
 
 Essas capturas de tela mostram os designers de tela visual disponíveis em cada plataforma:
 
- [ ![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "Essas capturas de tela mostram os designers de tela visual disponíveis em cada plataforma")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
+ [![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "Essas capturas de tela mostram os designers de tela visual disponíveis em cada plataforma")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
 
 Em todos os casos, os elementos que você crie visualmente podem ser referenciados em seu código.
 

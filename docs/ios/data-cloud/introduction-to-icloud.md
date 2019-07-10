@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 009e061726f655999c08192b5839a5c962d35e24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c30b5d0b3a02223a8808e57f5d0cdc5e7000e156
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61091390"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674877"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usando o iCloud com xamarin. IOS
 
@@ -55,7 +55,7 @@ Para configurar corretamente um aplicativo para acessar o iCloud:
 
 - **Adicione o identificador do contêiner ao Entitlements. plist** -o formato do identificador de contêiner é `TeamID.BundleID`. Para obter mais informações, consulte o [trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md) guia.
 
-- **Configurar as propriedades do projeto** - no Info. plist arquivo Certifique-se o **identificador de pacote** corresponde a **ID do pacote** definida quando [criando uma ID do aplicativo ](~/ios/deploy-test/provisioning/capabilities/index.md); O iOS assinatura de pacote usa uma **perfil de provisionamento** que contêm uma ID de aplicativo com o serviço de aplicativo, iCloud e o **direitos personalizados** arquivo selecionado. Isso pode ser feito no Visual Studio sob o painel de propriedades do projeto.
+- **Configurar as propriedades do projeto** - no Info. plist arquivo Certifique-se o **identificador de pacote** corresponde a **ID do pacote** definida quando [criando uma ID do aplicativo](~/ios/deploy-test/provisioning/capabilities/index.md); O iOS assinatura de pacote usa uma **perfil de provisionamento** que contêm uma ID de aplicativo com o serviço de aplicativo, iCloud e o **direitos personalizados** arquivo selecionado. Isso pode ser feito no Visual Studio sob o painel de propriedades do projeto.
 
 - **Habilitar iCloud no dispositivo** – acesse **Configurações > iCloud** e certifique-se de que o dispositivo está conectado.
 Selecionar e ativar o **documentos e dados** opção.
