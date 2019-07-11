@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: c81c84b8b32bdde6949918f3a31f171983007f39
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855153"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675217"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicar aplicativos Xamarin.iOS na App Store
 
@@ -78,7 +78,7 @@ Para criar e instalar um perfil de provisionamento da App Store, siga estas etap
 
 1. Faça logon no [Apple Developer Portal](https://developer.apple.com/account/).
 2. Em **Certificates, IDs & Profiles** (Certificados, IDs e perfis), selecione **Provisioning Profiles > Distribution** (Perfis de provisionamento > Distribuição).
-3. Clique no botão **+**, selecione **App Store**, e clique em **Continue** (Continuar).
+3. Clique no botão **+** , selecione **App Store**, e clique em **Continue** (Continuar).
 4. Selecione a **ID do aplicativo** do seu aplicativo na lista e clique em **Continue** (Continuar).
 5. Selecione um certificado de autenticação e clique em **Continue** (Continuar).
 6. Insira um **Profile Name** (Nome de perfil) e clique em **Continue** (Continuar) para gerar o perfil.
@@ -111,7 +111,7 @@ Os projetos novos do Xamarin.iOS configuram automaticamente as _configurações 
 
 11. Navegue para a guia **Assinatura de Pacote do iOS**. Se as opções não forem editáveis, verifique se o **Provisionamento manual** está selecionado no arquivo **Info.plist**.
 12. Verifique se a **Configuração** está definida como **Versão** e se a **Plataforma** está definida como **iPhone**.
-13. Defina **Identidade de assinatura** como **Distribuição (automática)**.
+13. Defina **Identidade de assinatura** como **Distribuição (automática)** .
 14. Selecione o **Perfil de provisionamento** da App Store [criado acima](#create-and-install-an-app-store-provisioning-profile).
 
     As opções de assinatura de pacote do projeto serão parecidas com isto:
@@ -140,7 +140,7 @@ Os projetos novos do Xamarin.iOS configuram automaticamente as _configurações 
     Confira também o guia [Mecânica de compilação do iOS](~/ios/deploy-test/ios-build-mechanics.md), que descreve as configurações de build.
 
 11. Navegue para a guia **Assinatura de Pacote do iOS**. Defina **Configuração** como **Versão**, **Plataforma** como **iPhone** e marque **Provisionamento manual**.
-12. Defina **Identidade de assinatura** como **Distribuição (automática)**.
+12. Defina **Identidade de assinatura** como **Distribuição (automática)** .
 13. Selecione o **Perfil de provisionamento** da App Store [criado acima](#create-and-install-an-app-store-provisioning-profile).
 
     As opções de assinatura de pacote do projeto serão parecidas com isto:
@@ -149,7 +149,7 @@ Os projetos novos do Xamarin.iOS configuram automaticamente as _configurações 
 
 14. Navegue até a guia **Opções de IPA do iOS**.
 15. Verifique se a **Configuração** está definida como **Versão** e se a **Plataforma** está definida como **iPhone**.
-16. Marque a caixa de seleção **Compilar IPA (iTunes Package Archive)**. Essa configuração fará com que cada **Versão** de build (já que é a configuração selecionada) gere um arquivo .ipa. Esse arquivo pode ser enviado à Apple para lançamento na App Store.
+16. Marque a caixa de seleção **Compilar IPA (iTunes Package Archive)** . Essa configuração fará com que cada **Versão** de build (já que é a configuração selecionada) gere um arquivo .ipa. Esse arquivo pode ser enviado à Apple para lançamento na App Store.
 
     > [!NOTE]
     > **Metadados do iTunes** e **Arte do iTunes** não são necessários para as versões da App Store. Para saber mais, confira [O arquivo iTunesMetadata.plist em aplicativos Xamarin.iOS](~/ios/deploy-test/app-distribution/itunesmetadata.md) e [Arte do iTunes](~/ios/app-fundamentals/images-icons/app-icons.md#itunes-artwork).
@@ -256,7 +256,7 @@ Com as configurações de build configuradas corretamente e o iTunes Connect agu
 7. Faça logon no Carregador de Aplicativos (observe que é necessário [criar uma senha específica do aplicativo](https://support.apple.com/ht204397) para sua ID Apple).
 8. Selecione **Entregar seu aplicativo** e clique no botão **Escolher**:
 
-    ![Selecionar Entregar seu aplicativo ](publishing-to-the-app-store-images/publishvs01.png "Selecionar Entregar seu aplicativo")
+    ![Selecionar Entregar seu aplicativo](publishing-to-the-app-store-images/publishvs01.png "Selecionar Entregar seu aplicativo")
 
 9. Selecione o arquivo .ipa criado anteriormente e clique em **OK**.
 10. O Application Loader validará o arquivo:

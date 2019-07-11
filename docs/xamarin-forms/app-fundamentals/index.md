@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: 1e40b0a71317d8c9cb3de391a0b941a5bb081956
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 61d9c5b1c7b81bfc8a20932ce1d188cd0cb0f980
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048153"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650442"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Conceitos básicos de aplicativo Xamarin.Forms
 
@@ -52,10 +52,6 @@ O `DependencyService` fornece um localizador simples para que você possa codifi
 
 Efeitos permitem que os controles nativos em cada plataforma sejam personalizados e são geralmente usados para pequenas alterações de estilo.
 
-## <a name="filesfilesmd"></a>[Arquivos](files.md)
-
-O tratamento de arquivos com o Xamarin.Forms pode ser alcançado usando código em uma biblioteca .NET Standard ou usando recursos inseridos.
-
 ## <a name="gesturesgesturesindexmd"></a>[Gestos](gestures/index.md)
 
 A classe [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) do Xamarin.Forms dá suporte a gestos de toque, pinçagem e panorâmica em controles da interface do usuário.
@@ -63,10 +59,6 @@ A classe [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) do Xamarin.
 ## <a name="localizationlocalizationindexmd"></a>[Localização](localization/index.md)
 
 A estrutura de localização interna do .NET pode ser usada para criar aplicativos multilíngues multiplataforma com o Xamarin.Forms.
-
-## <a name="local-databasesdatabasesmd"></a>[Bancos de dados locais](databases.md)
-
-O Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que torna possível carregar e salvar objetos em código compartilhado.
 
 ## <a name="messaging-centermessaging-centermd"></a>[Centro de mensagens](messaging-center.md)
 

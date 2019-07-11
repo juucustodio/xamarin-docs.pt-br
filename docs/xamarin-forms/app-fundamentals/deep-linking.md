@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: ca9c71d5bdac1900c4f0e5d07898e65b06cdcf90
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: e7b8ae57f127b4c9397ab4e5f7e097fa330e827a
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925578"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650655"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
@@ -34,7 +34,7 @@ Este aplicativo de exemplo demonstra um aplicativo de Lista de tarefas em que os
 
 Cada instância `TodoItem` criada pelo usuário é indexada. Então, a pesquisa específica da plataforma pode ser usada para localizar dados indexados do aplicativo. Quando o usuário toca em um item de resultado de pesquisa para o aplicativo, o aplicativo é iniciado, o `TodoItemPage` é navegada e o `TodoItem` referenciado do link profundo é exibido.
 
-Para obter mais informações sobre como usar um banco de dados do SQLite, consulte [Bancos de Dados Locais do Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md).
+Para obter mais informações sobre como usar um banco de dados do SQLite, consulte [Bancos de Dados Locais do Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).
 
 > [!NOTE]
 > A funcionalidade de indexação de aplicativo e vinculação profunda do Xamarin.Forms somente está disponível nas plataformas Android e iOS e requer um mínimo de iOS 9 e API 23, respectivamente.
