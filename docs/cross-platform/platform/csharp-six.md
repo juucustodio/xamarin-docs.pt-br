@@ -1,22 +1,25 @@
 ---
 title: C#6 visão geral dos recursos novos
-description: A versão mais recente do C# linguagem – versão 6 – continua a evoluir a linguagem para ter menos clichê, melhor clareza e mais consistência. Sintaxe de inicialização mais limpa, a capacidade de usar await em blocos catch/finally e o nulo condicional? operador são especialmente úteis.
+description: Versão 6 do C# linguagem continua a evoluir a linguagem para ter menos código clichê, melhor clareza e mais consistência. Sintaxe de inicialização mais limpa, a capacidade de usar await em blocos catch/finally e o nulo condicional? operador são especialmente úteis.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 1a261c009f105994ac0b9c84f3d0ac037c4a3517
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 0fd7f4e9972f7bf762a44c9edf30fa13f9d989bc
+ms.sourcegitcommit: 0845ed2daa65468b6fe12ac4e9386f3315d72f4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978496"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67850945"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 visão geral dos recursos novos
 
-_A versão mais recente do C# linguagem – versão 6 – continua a evoluir a linguagem para ter menos clichê, melhor clareza e mais consistência. Sintaxe de inicialização mais limpa, a capacidade de usar await em blocos catch/finally e o nulo condicional? operador são especialmente úteis._
+_Versão 6 do C# linguagem continua a evoluir a linguagem para ter menos código clichê, melhor clareza e mais consistência. Sintaxe de inicialização mais limpa, a capacidade de usar await em blocos catch/finally e o nulo condicional? operador são especialmente úteis._
+
+> [!NOTE]
+> Para obter informações sobre a versão mais recente do C# linguagem – versão 7 – consulte o artigo [o que há de novo no C# 7.0](/dotnet/csharp/whats-new/csharp-7)
 
 Este documento apresenta os novos recursos do C# 6. Ele é totalmente suportado pelo compilador mono e os desenvolvedores podem começar a usar os novos recursos em todas as plataformas de destino do Xamarin.
 
