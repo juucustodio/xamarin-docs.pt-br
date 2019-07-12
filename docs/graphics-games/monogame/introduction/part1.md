@@ -6,12 +6,12 @@ ms.assetid: FC69E69B-04D4-45DF-9BBF-2A6CDEAD9B2F
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 82b1408cafedf98a8619e8e039ba00b332f74516
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c8ef426c742f875e26fc0fcf88a9468e1618e30f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61381789"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832535"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1 – criar um MonoGame de plataforma cruzada
 
@@ -30,7 +30,7 @@ MonoGame pode ser adicionado como um suplemento para o Visual Studio para Mac. N
 ![O Visual Studio para a Galeria de extensões de Mac selecionando MonoGame](part1-images/image2.png)
 
 > [!IMPORTANT]
-> **Observação**: Se o **desenvolvimento de jogos** seção não aparece no Gerenciador de suplementos, manualmente, você pode baixar e instalar a versão mais recente a partir daqui: http://www.monogame.net/downloads/. Talvez você precise reiniciar o Visual Studio para Mac para os modelos apareçam.
+> Se o **desenvolvimento de jogos** seção não aparece no Gerenciador de suplementos, manualmente, você pode baixar e instalar a versão mais recente a partir daqui: http://www.monogame.net/downloads/. Talvez você precise reiniciar o Visual Studio para Mac para os modelos apareçam.
 
 Uma vez instalado, modelos de MonoGame serão exibidos no Visual Studio para Mac, como veremos na próxima seção.
 

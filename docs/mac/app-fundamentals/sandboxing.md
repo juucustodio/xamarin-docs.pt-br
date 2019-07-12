@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 6bf2f63e944e178d80f76fe363ef24410ff052ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c51960a24e1277b3faec0905da3b9a5986359681
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61236603"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830667"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Área restrita um aplicativo xamarin. Mac
 
@@ -226,7 +226,7 @@ Além do comportamento de bloqueio de recurso, existem três maneiras principais
 
 ### <a name="debugging-a-sandboxed-app"></a>Depurar um aplicativo em área restrita
 
-O depurador se conectar a aplicativos xamarin. MAC por meio de TCP, o que significa que por padrão quando você habilita a área restrita, não é possível se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões adequadas habilitadas, você receberá um erro *"não é possível se conectar ao o depurador"*. 
+O depurador se conectar a aplicativos xamarin. MAC por meio de TCP, o que significa que por padrão quando você habilita a área restrita, não é possível se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões adequadas habilitadas, você receberá um erro *"não é possível se conectar ao o depurador"* . 
 
 [![Definindo as opções necessárias](sandboxing-images/debug01.png "definindo as opções necessárias")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -460,7 +460,7 @@ Para permitir que a versão assinada do Apple do aplicativo xamarin. Mac para se
 
 1. Abra o aplicativo Terminal (em `/Applications/Utilities`).
 2. Abra uma janela do localizador para a versão assinada do Apple do aplicativo xamarin. Mac.
-3. Tipo `asctl container acl add -file ` na janela do Terminal.
+3. Tipo `asctl container acl add -file` na janela do Terminal.
 4. Arraste o ícone do aplicativo xamarin. MAC da janela do localizador e solte-a na janela do Terminal.
 5. O caminho completo para o arquivo será adicionado ao comando no Terminal.
 6. Pressione **Enter** para executar o comando.

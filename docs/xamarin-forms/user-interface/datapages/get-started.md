@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e3256787c0bc0852275f663772b8a91a6825a0dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a77ebd8a6c64d2ee44011e8d51977adf88b52be9
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250649"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832437"
 ---
 # <a name="getting-started-with-datapages"></a>Guia de Introdução DataSourceControl
 
@@ -51,7 +51,8 @@ No **App. XAML** do arquivo, adicione um personalizado `xmlns:mytheme` do tema e
 </Application>
 ```
 
-**IMPORTANTE:** Você também deve seguir as etapas a serem [carregar assemblies de tema (abaixo)](#loadtheme) adicionando um código clichê para o iOS `AppDelegate` e Android `MainActivity`. Isso será melhorado em uma versão de visualização futura.
+> [!IMPORTANT]
+> Você também deve seguir as etapas a serem [carregar assemblies de tema (abaixo)](#loadtheme) adicionando um código clichê para o iOS `AppDelegate` e Android `MainActivity`. Isso será melhorado em uma versão de visualização futura.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. Adicionar uma página XAML
@@ -98,7 +99,8 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 Excluir o `Content` elemento e substituí-lo com um `p:ListDataPage.DataSource` para preencher a página com os dados. No exemplo a seguir um Json remoto o arquivo de dados está sendo carregado de uma URL.
 
-**Observação:** a versão prévia *requer* um `StyleClass` atributo para fornecer indícios de renderização para a fonte de dados. O `StyleClass="Events"` refere-se a um layout que é predefinido na visualização e contém estilos *embutidos em código* para corresponder à fonte de dados JSON que está sendo usada.
+> [!NOTE]
+> A versão prévia *requer* um `StyleClass` atributo para fornecer indícios de renderização para a fonte de dados. O `StyleClass="Events"` refere-se a um layout que é predefinido na visualização e contém estilos *embutidos em código* para corresponder à fonte de dados JSON que está sendo usada.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>

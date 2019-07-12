@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 4e236f2517482665406008d0b86af487e2d799dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 26ab7880b3c4b6176c806783fec7a499d68511c3
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61212101"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831901"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles padrão no xamarin. Mac
 
@@ -257,7 +257,7 @@ Alinhar com a definição no `MainWindow.h` arquivo no Xcode:
 @property (nonatomic, retain) IBOutlet NSSplitView *SplitView;
 ```
 
-Como você pode ver, o Visual Studio para Mac escuta de alterações para o `.h` do arquivo e sincroniza automaticamente essas alterações no respectivo `.designer.cs` arquivo expô-los ao seu aplicativo. Você pode perceber que também `SplitViewController.designer.cs` é uma classe parcial, para que o Visual Studio para Mac não precise modificar `SplitViewController.cs ` que substituiria as alterações feitas à classe.
+Como você pode ver, o Visual Studio para Mac escuta de alterações para o `.h` do arquivo e sincroniza automaticamente essas alterações no respectivo `.designer.cs` arquivo expô-los ao seu aplicativo. Você pode perceber que também `SplitViewController.designer.cs` é uma classe parcial, para que o Visual Studio para Mac não precise modificar `SplitViewController.cs` que substituiria as alterações feitas à classe.
 
 Você normalmente nunca precisará abrir o `SplitViewController.designer.cs` por conta própria, ele foi apresentado aqui apenas para fins educacionais.
 

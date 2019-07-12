@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 0a72dead1b6c001f1514f1a089df9b407eb90644
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cca147f0c5dd1a217f464ffbed2a1ad2618c9b80
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037192"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830189"
 ---
 # <a name="async-support-overview"></a>Visão geral do suporte assíncrono
 
@@ -23,7 +23,7 @@ Suporte de assíncrono do Xamarin é criado sobre a base do Mono 3.0 e atualiza 
 
 Este documento apresenta o novo async e await palavras-chave, o orienta por meio de alguns exemplos simples de implementar métodos assíncronos em xamarin. IOS e xamarin. Android.
 
-Para uma discussão mais completa sobre os novos recursos assíncronos de C# 5 (incluindo muitos exemplos e cenários de uso diferentes) consulte a documentação do MSDN [programação assíncrona com Async e Await](https://msdn.microsoft.com/library/vstudio/hh191443.aspx).
+Para uma discussão mais completa sobre os novos recursos assíncronos de C# 5 (incluindo muitos exemplos e cenários de uso diferentes), consulte o artigo [programação assíncrona](https://docs.microsoft.com/dotnet/csharp/async).
 
 O aplicativo de exemplo faz uma solicitação web assíncrona simples (sem bloquear o thread principal) e atualiza a interface do usuário com o html baixado e a contagem de caracteres.
 
@@ -69,7 +69,7 @@ Usando await não bloqueia o thread do chamador – em vez disso, o controle é 
 
 Quando a tarefa for concluída, o método retoma a execução no mesmo ponto no código. Isso inclui a retornar ao escopo try de um bloco try-catch-finally (caso haja algum). await não pode ser usado em um catch ou o bloco finally.
 
-Leia mais sobre [await no MSDN](https://msdn.microsoft.com/library/vstudio/hh156528.aspx).
+Leia mais sobre [await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) no Microsoft Docs.
 
 ## <a name="exception-handling"></a>Tratamento de Exceção
 
@@ -85,7 +85,7 @@ Métodos assíncronos que levar muito tempo para ser concluído devem dar suport
 
 A tarefa, em seguida, cancela a mesmo e confirma o cancelamento.
 
-Para obter mais informações sobre cancelamento, consulte [como cancelar uma tarefa assíncrona](https://msdn.microsoft.com/library/vstudio/jj155761.aspx) no MSDN.
+Para obter mais informações sobre o cancelamento, consulte [Ajuste fino de seu aplicativo assíncrono (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application).
 
 ## <a name="example"></a>Exemplo
 
@@ -201,10 +201,9 @@ Este documento forneceu uma visão geral de como as novas palavras-chave e os ex
 - [Dados (iOS) (amostra)](https://developer.xamarin.com/samples/monotouch/Data/)
 - [HttpClient (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
 - [MapKitSearch (iOS) (amostra)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
-- [Webinar: C#Async no iOS e Android (vídeo)](http://xamarin.wistia.com/medias/k27mc627xz)
-- [Programação assíncrona com Async e Await (MSDN)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx)
-- [Ajustando seu aplicativo Async (MSDN)](https://msdn.microsoft.com/library/vstudio/jj155761.aspx)
-- [Await e a interface do usuário e deadlocks! Ah, meu! (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
-- [Processamento de tarefas conforme são concluídas (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
+- [Programação assíncrona](https://docs.microsoft.com/dotnet/csharp/async)
+- [Ajuste fino de seu aplicativo assíncrono (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)
+- [Await e a interface do usuário e deadlocks! Ah, meu!](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
+- [Processamento de tarefas conforme são concluídas)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
 - [TAP (Padrão Assíncrono Baseado em Tarefa)](https://msdn.microsoft.com/library/hh873175.aspx)
 - [A assincronia em C# 5 (blog de Eric Lippert –) sobre a introdução de palavras-chave](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

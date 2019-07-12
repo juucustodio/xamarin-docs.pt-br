@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 941b88f9109cf2f3a3485311c52b1250bd08e53f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c9e0cf2f29d304f042bc56ee91029adadcaba570
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61162058"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832499"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Parte 2 – implementar o WalkingGame
 
@@ -53,7 +53,7 @@ Em seguida, podemos desenhará um sprite de único para a tela para mostrar como
 
 ### <a name="creating-a-texture2d"></a>Criando uma Texture2D
 
-É necessário criar um `Texture2D` instância a ser usado ao renderizar nossa sprite. Todo o conteúdo do jogo, por fim, está contido em uma pasta chamada **conteúdo,** localizado no projeto específico da plataforma. Projetos de MonoGame compartilhado não podem conter conteúdo, como o conteúdo deve usar ações de build específico da plataforma. Os desenvolvedores de CocosSharp localizar a pasta de conteúdo um conceito familiar – eles estão localizados no mesmo local em projetos do CocosSharp e MonoGame. A pasta de conteúdo pode ser encontrada no projeto do iOS e dentro da pasta ativos no projeto do Android.
+É necessário criar um `Texture2D` instância a ser usado ao renderizar nossa sprite. Todo o conteúdo do jogo, por fim, está contido em uma pasta chamada **conteúdo,** localizado no projeto específico da plataforma. Projetos de MonoGame compartilhado não podem conter conteúdo, como o conteúdo deve usar ações de build específico da plataforma. A pasta de conteúdo pode ser encontrada no projeto do iOS e dentro da pasta ativos no projeto do Android.
 
 Para adicionar o conteúdo do nosso jogo, clique com botão direito no **conteúdo** pasta e selecione **Adicionar > Adicionar arquivos...** Navegue até o local onde o arquivo de content.zip foi extraído e selecione o **charactersheet.png** arquivo. Se for perguntado sobre como adicionar o arquivo à pasta, devemos selecionar o **cópia** opção:
 
@@ -548,7 +548,7 @@ Se o usuário toca a tela, mudaremos o caractere para o primeiro toque, em outra
         desiredVelocity.Y = touchCollection [0].Position.Y - this.Y;
 ```
 
-O que vem a seguir é um pouco de matemática que manterá o caractere de movimentação na mesma velocidade. Para ajudar a explicar por que isso é importante, vamos considerar uma situação em que o usuário toca os 500 pixels de tela para longe de onde se encontra o caractere. A primeira linha onde `desiredVelocity.X` é conjunto atribuiria um valor de 500. No entanto, se o usuário foram tocam a tela em uma distância de apenas 100 unidades de caractere, em seguida, a `desiredVelocity.X `seria definido como 100. O resultado seria que velocidade do movimento do caractere responderia como distante o ponto de toque é de caractere. Como queremos que o caractere para sempre mover na mesma velocidade, precisamos modificar o desiredVelocity.
+O que vem a seguir é um pouco de matemática que manterá o caractere de movimentação na mesma velocidade. Para ajudar a explicar por que isso é importante, vamos considerar uma situação em que o usuário toca os 500 pixels de tela para longe de onde se encontra o caractere. A primeira linha onde `desiredVelocity.X` é conjunto atribuiria um valor de 500. No entanto, se o usuário foram tocam a tela em uma distância de apenas 100 unidades de caractere, em seguida, a `desiredVelocity.X` seria definido como 100. O resultado seria que velocidade do movimento do caractere responderia como distante o ponto de toque é de caractere. Como queremos que o caractere para sempre mover na mesma velocidade, precisamos modificar o desiredVelocity.
 
 O `if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)` instrução está verificando se a velocidade é de não-zero – em outras palavras, ele verifica para certificar-se de que o usuário não toca mesmo lugar como a posição atual do caractere. Se não, em seguida, precisamos definir a velocidade do caractere seja constante, independentemente de como longe o toque é. Podemos fazer isso ao normalizar o vetor de velocidade que resulta em que ele está sendo um comprimento de 1. Um vetor de velocidade de 1 significa que o caractere serão movidos em 1 pixel por segundo. Podemos vai acelerar isso multiplicando o valor pela velocidade desejada de 200.
 

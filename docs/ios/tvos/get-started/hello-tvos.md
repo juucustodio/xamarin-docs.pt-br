@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c8bf3f86091f49633913b37ef5108ddbae6d276
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60951379"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832473"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Olá, guia de início rápido do tvOS
 
@@ -415,7 +415,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Precisamos usar `ViewDidLoad `, em vez de outro método como `Initialize`, porque `ViewDidLoad ` é chamado *após* o sistema operacional ter carregado e instanciado a Interface do usuário do `.storyboard` arquivo. Se tentar acessar o controle de rótulo antes do `.storyboard` arquivo ter sido totalmente carregado e instanciado, obteremos um `NullReferenceException` erro porque o controle de rótulo não seria criado ainda.
+Precisamos usar `ViewDidLoad`, em vez de outro método como `Initialize`, porque `ViewDidLoad` é chamado *após* o sistema operacional ter carregado e instanciado a Interface do usuário do `.storyboard` arquivo. Se tentar acessar o controle de rótulo antes do `.storyboard` arquivo ter sido totalmente carregado e instanciado, obteremos um `NullReferenceException` erro porque o controle de rótulo não seria criado ainda.
 
 Em seguida, precisamos adicionar o código para responder ao usuário clicar no botão. Adicione o seguinte ao parcial de classe para que criamos:
 

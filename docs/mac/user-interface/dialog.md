@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61282920"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832516"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Caixas de diálogo no xamarin. Mac
 
@@ -413,7 +413,7 @@ Se podemos executar nosso aplicativo e abra a folha, ele será anexado à janela
 
 ## <a name="creating-a-preferences-dialog"></a>Criando uma caixa de diálogo de preferências
 
-Antes de nós dispor o modo de preferência no Interface Builder, precisaremos adicionar um tipo de segue personalizado para lidar com as preferências de alternância. Adicione uma nova classe ao seu projeto e chamá-lo `ReplaceViewSeque `. Edite a classe e torná-lo a seguinte aparência:
+Antes de nós dispor o modo de preferência no Interface Builder, precisaremos adicionar um tipo de segue personalizado para lidar com as preferências de alternância. Adicione uma nova classe ao seu projeto e chamá-lo `ReplaceViewSeque`. Edite a classe e torná-lo a seguinte aparência:
 
 ```csharp
 using System;

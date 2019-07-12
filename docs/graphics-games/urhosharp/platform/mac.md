@@ -1,19 +1,19 @@
 ---
-title: Suporte a Mac UrhoSharp
+title: Suporte a UrhoSharp Mac
 description: Este documento aborda o suporte ao macOS UrhoSharp. Ele descreve como criar um projeto e fornece um link para um código de exemplo.
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 6d0a048020284319682c1bee0f9a1d7f9af00977
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ee0a03d168b6e628893b18a27d73b46d3fa2fbc2
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386358"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832653"
 ---
-# <a name="urhosharp-mac-support"></a>Suporte a Mac UrhoSharp
+# <a name="urhosharp-mac-support"></a>Suporte a UrhoSharp Mac
 
 _Recursos e configuração específicas do Mac_
 
@@ -25,7 +25,7 @@ Nas páginas a seguir, suponha que `MyGame` é uma subclasse do `Application` cl
 
 **Arquiteturas com suporte:** x86/x86-64 para 32 bits e 64 bits.
 
-## <a name="creating-a-project"></a>Criando um projeto
+## <a name="creating-a-project"></a>Criar um projeto
 
 Criar um projeto de console, o Urho NuGet de referência e, em seguida, certifique-se de que você pode localizar os ativos (os diretórios que contém o diretório de dados).
 
@@ -37,5 +37,3 @@ new MyGame().Run();
 ## <a name="example"></a>Exemplo
 
 [Exemplo completo](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Cocoa)
-
-

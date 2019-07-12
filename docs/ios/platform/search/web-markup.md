@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 4ee07e4b47ed9e1bdca0efc814ad44e513f68e80
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a9cf3dab9c112bf7ff99cbc0dd9541c3c1e35142
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076547"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830133"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Pesquisa com a marcação da Web no xamarin. IOS
 
@@ -158,14 +158,14 @@ O exemplo a seguir mostra um exemplo de metadados do seu site que está fornecen
 
 Apple atualmente suporta os seguintes tipos de esquema de schema.org:
 
- - AggregateRating
- - ImageObject
- - InteractionCount
- - Ofertas
- - Organização
- - PriceRange
- - Receita
- - SearchAction
+- AggregateRating
+- ImageObject
+- InteractionCount
+- Ofertas
+- Organização
+- PriceRange
+- Receita
+- SearchAction
 
 Para obter mais informações sobre esses tipos de esquema, consulte [schema.org](http://schema.org).
 
@@ -173,9 +173,9 @@ Para obter mais informações sobre esses tipos de esquema, consulte [schema.org
 
 Tipos específicos de dados estruturados permitirá que um resultado de pesquisa ser acionáveis pelo usuário final. Atualmente, há suporte para as seguintes ações:
 
- - Discar um número de telefone.
- - Introdução a direção de mapa para um determinado endereço.
- - Execução de um arquivo de áudio ou vídeo.
+- Discar um número de telefone.
+- Introdução a direção de mapa para um determinado endereço.
+- Execução de um arquivo de áudio ou vídeo.
 
 Por exemplo, definir uma ação para discar um número de telefone pode parecer com o seguinte:
 

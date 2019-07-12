@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: c900ab714fed2bb1e02367ba39ad3c5a0a76121e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60eaad98e2d5469e9c43e6b4ad889080e1aa63ba
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61408295"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832060"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Referências de projeto no Xamarin do watchOS
 
@@ -26,16 +26,16 @@ Exiba as referências clicando duas vezes em nós de referências para cada proj
 
 - **aplicativo de iPhone** referências **aplicativo Watch**
 
-![](project-references-images/catalog-reference1.png "Aplicativo de inspeção faz referência a aplicativo do iPhone")
+  ![](project-references-images/catalog-reference1.png "Aplicativo de inspeção faz referência a aplicativo do iPhone")
 
 - **Assista ao aplicativo** referências **extensão de aplicativo de inspeção**
 
-![](project-references-images/catalog-reference2.png "Aplicativo de inspeção faz referência a aplicativo do iPhone")
+  ![](project-references-images/catalog-reference2.png "Aplicativo de inspeção faz referência a aplicativo do iPhone")
 
 
- - O **extensão de aplicativo de inspeção** não faz referência a qualquer um dos outros projetos
+- O **extensão de aplicativo de inspeção** não faz referência a qualquer um dos outros projetos
 
-![](project-references-images/catalog-reference3.png "Assista a que extensão do aplicativo não faz referência a outros projetos")
+  ![](project-references-images/catalog-reference3.png "Assista a que extensão do aplicativo não faz referência a outros projetos")
 
 
 
@@ -44,17 +44,17 @@ Exiba as referências clicando duas vezes em nós de referências para cada proj
 Você também precisará certificar-se sua **identificadores de pacote** estão corretos.
 Todos os três projetos devem ter o *mesmo* prefixo do identificador, com os projetos de dois inspeção tendo predefinidos extensões do `watchkitextension` e `watchkitapp`, da seguinte maneira (para o **WatchKitCatalog** exemplo):
 
- - Projeto do xamarin. IOS unificado- `com.xamarin.WatchKitCatalog`
+- Projeto do xamarin. IOS unificado- `com.xamarin.WatchKitCatalog`
 
- - Projeto de extensão WatchKit- `com.xamarin.WatchKitCatalog.watchkitextension`
+- Projeto de extensão WatchKit- `com.xamarin.WatchKitCatalog.watchkitextension`
 
- - Projeto de aplicativo Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
+- Projeto de aplicativo Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
 
 Também verifique se esses **Info. plist** configurações estão corretas:
 
- - O projeto de aplicativo Watch `WKCompanionAppBundleIdentifier` corresponda à ID de pacote do aplicativo recipiente/pai (ie. aquele que é executado no iPhone);
+- O projeto de aplicativo Watch `WKCompanionAppBundleIdentifier` corresponda à ID de pacote do aplicativo recipiente/pai (ie. aquele que é executado no iPhone);
 
- - O projeto de extensão do Kit de inspeção **ID do pacote de WKApp** corresponde à ID de pacote. do projeto de aplicativo de inspeção
+- O projeto de extensão do Kit de inspeção **ID do pacote de WKApp** corresponde à ID de pacote. do projeto de aplicativo de inspeção
 
 Você pode editar os identificadores clicando duas vezes sobre o **Info. plist** arquivo em cada projeto.
 

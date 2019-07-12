@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d57f27bf0d3aaa2a7ba14f23481a8f2bb2d87f2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f081ccda507fe3fe65af0e2fb50841aecd7b3c23
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261137"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830461"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migrar uma associação para a API unificada
 
@@ -27,8 +27,8 @@ Além disso, qualquer projeto de associação do Xamarin também deve oferecer s
 
 O exemplo a seguir é necessário para concluir as etapas apresentadas neste artigo:
 
- -  **O Visual Studio para Mac** -a versão mais recente do Visual Studio para Mac instalado e configurado no computador de desenvolvimento.
- -  **Apple Mac** - uma Apple mac é necessário para compilar projetos de associação para iOS e Mac.
+- **O Visual Studio para Mac** -a versão mais recente do Visual Studio para Mac instalado e configurado no computador de desenvolvimento.
+- **Apple Mac** - uma Apple mac é necessário para compilar projetos de associação para iOS e Mac.
 
 Não há suporte para projetos de associação no Visual studio em um computador Windows.
 

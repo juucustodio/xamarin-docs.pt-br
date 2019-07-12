@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 490331663d94a1e3130fc794a11a52acdacca014
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013175"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829751"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Associar serviços no xamarin. Android
 
@@ -230,7 +230,7 @@ O `OnServiceDisconnected` método é chamado somente quando a conexão entre um 
 
 ## <a name="starting-and-binding-to-a-service-with-an-explicit-intent"></a>Iniciando e associação a um serviço com uma intenção explícita
 
-Para usar um serviço vinculado, um cliente (como uma atividade) deve instanciar um objeto que implementa `Android.Content.IServiceConnection` e chamar o `BindService` método.` BindService` retornará `true` se o serviço está vinculado, `false` se não for. O `BindService` método assume três parâmetros:
+Para usar um serviço vinculado, um cliente (como uma atividade) deve instanciar um objeto que implementa `Android.Content.IServiceConnection` e chamar o `BindService` método. `BindService` retornará `true` se o serviço está vinculado, `false` se não for. O `BindService` método assume três parâmetros:
 
 * **Uma `Intent`**  &ndash; a intenção deve identificar explicitamente para se conectar ao qual o serviço.
 * **Uma `IServiceConnection` objeto** &ndash; esse objeto é um intermediário que fornece métodos de retorno de chamada para notificar o cliente quando o serviço vinculado é iniciado e parado.

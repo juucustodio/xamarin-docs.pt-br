@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: e6e3a989db922dc2941cca4c888c862ffe159241
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d7684df771f24ecf9126f472e7d799eea4a5431
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61422046"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832697"
 ---
 # <a name="xamarinios-errors"></a>Erros do xamarin. IOS
 
@@ -838,7 +838,7 @@ Para obter mais informações, consulte bug n º[52727](https://bugzilla.xamarin
 
 Ocorreu uma falha ao tocar em um arquivo (que é feito para garantir que as compilações parciais sejam realizadas corretamente).
 
-Provavelmente, esse aviso pode ser ignorado; em caso de problemas, registre um bug (https://bugzilla.xamarin.com] (https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) e ser investigado.
+Provavelmente, esse aviso pode ser ignorado; em caso de problemas, registre um bug (https://bugzilla.xamarin.com ] (https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) e ser investigado.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Mensagens de erro relacionadas do projeto
 
@@ -1840,7 +1840,7 @@ Isso é sempre um bug no xamarin. IOS; Envie um relatório de bug no [ http://bu
 
 <a name="MT4117" />
 
-### <a name="mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4117: O registrador encontrada uma incompatibilidade de assinatura no método '*.*'-o seletor de indica que o método utiliza * parâmetros, enquanto o método gerenciado tem * parâmetros.
+### <a name="mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4117: O registrador encontrada uma incompatibilidade de assinatura no método ' *.* '-o seletor de indica que o método utiliza * parâmetros, enquanto o método gerenciado tem * parâmetros.
 
 <a name="MT4118" />
 
@@ -1934,7 +1934,7 @@ Esse erro indica um bug no xamarin. IOS. Envie um relatório de bug no [ http://
 
 <a name="MT4140" />
 
-### <a name="mt4140-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-variadic-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4140: O registrador encontrada uma incompatibilidade de assinatura no método '*.*'-o seletor de indica que o método variadic usa * parâmetros, enquanto o método gerenciado tem * parâmetros.
+### <a name="mt4140-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-variadic-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4140: O registrador encontrada uma incompatibilidade de assinatura no método ' *.* '-o seletor de indica que o método variadic usa * parâmetros, enquanto o método gerenciado tem * parâmetros.
 
 <a name="MT4141" />
 
@@ -2141,7 +2141,7 @@ Verifique se que o tipo no atributo BindAs corresponde ao tipo do membro a que �
 
 O registrador não oferece suporte à conversão entre tipos mencionados.
 
-Este é um bug no xamarin. IOS, se a API em questão for fornecida pelo xamarin. IOS; Envie um bug no [ http://bugzilla.xamarin.com ] [ 1].
+Este é um bug no xamarin. IOS, se a API em questão for fornecida pelo xamarin. IOS; Envie um bug no [ http://bugzilla.xamarin.com ][1].
 
 Se você enfrentar isso durante o desenvolvimento de um projeto de associação para uma biblioteca nativa, estamos abertos à adição de suporte para novas combinações de tipos. Se esse for o caso, envie uma solicitação de aprimoramento ([http://bugzilla.xamarin.com][2]) com um teste de caso e podemos avaliará-lo.
 
@@ -2322,9 +2322,9 @@ class MyImports {
 
 Há algumas soluções possíveis:
 
-  -  Remova o P/Invokes em questão de código-fonte.
-  -  Habilite o vinculador gerenciado para todos os assemblies (Isso é feito no iOS do projeto opções de compilação definindo o "comportamento do vinculador" a "Todos os assemblies"). Isso efetivamente removerá todos os de P/Invokes não usar do aplicativo (automaticamente, em vez de manualmente como o ponto anterior). A desvantagem é que isso fará com que suas compilações de simulador um pouco mais lento, e pode dividir seu aplicativo se ele está usando reflexão, obter mais informações sobre o vinculador podem ser encontradas [aqui](~/ios/deploy-test/linker.md) )
-  -  Crie uma biblioteca nativa de segundo, que contém os símbolos nativos ausentes. Observe que isso é simplesmente uma solução alternativa (se você tentar chamar essas funções, seu aplicativo falhará).
+- Remova o P/Invokes em questão de código-fonte.
+- Habilite o vinculador gerenciado para todos os assemblies (Isso é feito no iOS do projeto opções de compilação definindo o "comportamento do vinculador" a "Todos os assemblies"). Isso efetivamente removerá todos os de P/Invokes não usar do aplicativo (automaticamente, em vez de manualmente como o ponto anterior). A desvantagem é que isso fará com que suas compilações de simulador um pouco mais lento, e pode dividir seu aplicativo se ele está usando reflexão, obter mais informações sobre o vinculador podem ser encontradas [aqui](~/ios/deploy-test/linker.md) )
+- Crie uma biblioteca nativa de segundo, que contém os símbolos nativos ausentes. Observe que isso é simplesmente uma solução alternativa (se você tentar chamar essas funções, seu aplicativo falhará).
 
 <a name="MT5215" />
 
@@ -2919,7 +2919,7 @@ Isso indica que algo está errado no processo de compilação. Envie um bug no [
 
 <a name="MT8009" />
 
-### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: Não é possível localizar o bloco para o método de conversão para o método de representante *.*' s parâmetro #*. Envie um bug no http://bugzilla.xamarin.com.
+### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: Não é possível localizar o bloco para o método de conversão para o método de representante *.* ' s parâmetro #*. Envie um bug no http://bugzilla.xamarin.com.
 
 Isso indica que uma API não foi associada corretamente. Quando se trata de uma API exposta pelo Xamarin, registre um bug em nosso bugzilla ([http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)), se ele é uma associação de terceiros, entre em contato com o fornecedor.
 
@@ -2931,7 +2931,7 @@ Isso indica que algo está errado no processo de compilação. Envie um bug no [
 
 <a name="MT8011" />
 
-### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: Não é possível localizar o delegado ao atributo de conversão de bloco ([DelegateProxy]) para o valor retornado do método *.*. Envie um bug no http://bugzilla.xamarin.com.
+### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: Não é possível localizar o delegado ao atributo de conversão de bloco ([DelegateProxy]) para o valor retornado do método *.* . Envie um bug no http://bugzilla.xamarin.com.
 
 Xamarin. IOS não pôde localizar um método necessário em tempo de execução (para converter um delegado em um bloco).
 
@@ -2939,7 +2939,7 @@ Isso geralmente indica um bug no xamarin. IOS; Envie um bug no [ http://bugzilla
 
 <a name="MT8012" />
 
-### <a name="mt8012-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8012: DelegateProxyAttribute inválido para o valor retornado do método *.*: DelegateType é nulo. Envie um bug no http://bugzilla.xamarin.com.
+### <a name="mt8012-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8012: DelegateProxyAttribute inválido para o valor retornado do método *.* : DelegateType é nulo. Envie um bug no http://bugzilla.xamarin.com.
 
 O atributo DelegateProxy para o método em questão é inválido.
 
@@ -2947,7 +2947,7 @@ Isso geralmente indica um bug no xamarin. IOS; Envie um bug no [ http://bugzilla
 
 <a name="MT8013" />
 
-### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: DelegateProxyAttribute inválido para o valor retornado do método *.*: DelegateType ({2}) especifica um tipo sem um campo 'Handler'. Envie um bug no http://bugzilla.xamarin.com.
+### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: DelegateProxyAttribute inválido para o valor retornado do método *.* : DelegateType ({2}) especifica um tipo sem um campo 'Handler'. Envie um bug no http://bugzilla.xamarin.com.
 
 O atributo DelegateProxy para o método em questão é inválido.
 
@@ -2955,7 +2955,7 @@ Isso geralmente indica um bug no xamarin. IOS; Envie um bug no [ http://bugzilla
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: DelegateProxyAttribute inválido para o valor retornado do método *.*: O DelegateType ({2}) 'Manipulador' campo é nulo. Envie um bug no http://bugzilla.xamarin.com.
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: DelegateProxyAttribute inválido para o valor retornado do método *.* : O DelegateType ({2}) 'Manipulador' campo é nulo. Envie um bug no http://bugzilla.xamarin.com.
 
 O atributo DelegateProxy para o método em questão é inválido.
 
@@ -2963,7 +2963,7 @@ Isso geralmente indica um bug no xamarin. IOS; Envie um bug no [ http://bugzilla
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: DelegateProxyAttribute inválido para o valor retornado do método *.*: O DelegateType ({2}) o campo 'Manipulador' não é um delegado, que é um *. Envie um bug no http://bugzilla.xamarin.com.
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: DelegateProxyAttribute inválido para o valor retornado do método *.* : O DelegateType ({2}) o campo 'Manipulador' não é um delegado, que é um *. Envie um bug no http://bugzilla.xamarin.com.
 
 O atributo DelegateProxy para o método em questão é inválido.
 
@@ -2971,7 +2971,7 @@ Isso geralmente indica um bug no xamarin. IOS; Envie um bug no [ http://bugzilla
 
 <a name="MT8016" />
 
-### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: Não é possível converter o delegado para bloquear o valor de retorno para o método *.*, porque a entrada não é um delegado é um *. Envie um bug no http://bugzilla.xamarin.com.
+### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: Não é possível converter o delegado para bloquear o valor de retorno para o método *.* , porque a entrada não é um delegado é um *. Envie um bug no http://bugzilla.xamarin.com.
 
 O atributo DelegateProxy para o método em questão é inválido.
 

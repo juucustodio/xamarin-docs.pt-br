@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 82f1455ff5e5ac06b50664e1d4d533d4964b7a0e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61298856"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831124"
 ---
 # <a name="preface-to-enterprise-app-development"></a>Prefácio para desenvolvimento de aplicativos empresariais
 
@@ -26,7 +26,7 @@ O guia é fornecido com o código-fonte para o [aplicativo móvel do eShopOnCont
 
 Este guia destina-se a leitores que já estão familiarizados com o xamarin. Forms. Para obter uma introdução detalhada ao xamarin. Forms, consulte a [documentação do xamarin. Forms](~/xamarin-forms/index.yml), e [criação de aplicativos móveis com xamarin. Forms](https://aka.ms/xamebook).
 
-O guia é um complemento [Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook), que se concentra no desenvolvimento e implantação de microsserviços em contêineres. Outros guias que vale a pena ler incluem [projetar e desenvolver aplicativos Web modernos com o ASP.NET Core e Microsoft Azure](http://aka.ms/WebAppEbook), [em contêineres Docker ciclo de vida do Microsoft Platform e ferramentas](http://aka.ms/dockerlifecycleebook), e [plataforma e ferramentas para desenvolvimento de aplicativos móveis Microsoft](http://aka.ms/MobAppDev/StndPDF).
+O guia é um complemento [Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook), que se concentra no desenvolvimento e implantação de microsserviços em contêineres. Outros guias que vale a pena ler incluem [projetar e desenvolver aplicativos Web modernos com o ASP.NET Core e Microsoft Azure](https://aka.ms/WebAppEbook), [em contêineres Docker ciclo de vida do Microsoft Platform e ferramentas](https://aka.ms/dockerlifecycleebook), e [plataforma e ferramentas para desenvolvimento de aplicativos móveis Microsoft](https://aka.ms/MobAppDev/StndPDF).
 
 ## <a name="who-should-use-this-guide"></a>Quem deve usar este guia
 

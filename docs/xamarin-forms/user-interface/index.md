@@ -7,18 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: fa53d7253862e696d23289fe3c57f215b29da6c5
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 0fff9b7ce4b78e29409d1cc7a55e7f447baf722c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649573"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831095"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Exibições de Interface do usuário do xamarin. Forms
 
 [![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Como usar os modos de exibição fornecidos pelo xamarin. Forms_
+
+## <a name="activityindicatoractivityindicatormd"></a>[ActivityIndicator](activityindicator.md)
+
+O `ActivityIndicator` é um controle animado que indica aos usuários que o aplicativo está envolvido em uma atividade demorada, sem fornecer nenhuma indicação de progresso.
 
 ## <a name="animationanimationindexmd"></a>[Animação](animation/index.md)
 
@@ -87,6 +91,10 @@ Adicionar mapas requer um download adicional de pacote do NuGet e algumas config
 ## <a name="pickerpickerindexmd"></a>[Seletor](picker/index.md)
 
 O [ `Picker` ](xref:Xamarin.Forms.Picker) exibição é um controle para selecionar um item de texto em uma lista de dados.
+
+## <a name="progressbarprogressbarmd"></a>[ProgressBar](progressbar.md)
+
+O [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar) é um controle que representa visualmente o progresso como uma barra horizontal que é preenchida com base em uma propriedade de float.
 
 ## <a name="sliderslidermd"></a>[Slider](slider.md)
 

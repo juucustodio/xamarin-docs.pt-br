@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 314bedcb6bb2d7ebf9d8f98428b6a7cad059f73b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0fa4dbbf256e005fe17841f06acf1338197784b0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382005"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832280"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introdução ao desenvolvimento de jogos com o Xamarin
 
@@ -55,9 +55,9 @@ Tenha em mente que muitas das atividades listadas acima podem alterar o estado d
 
 Conteúdo manualmente Carregando e descarregando (ou descarte) pode ser necessários, dependendo de qual tecnologia você está usando no desenvolvimento. Manualmente, carregamento e descarregamento de ativos podem ser necessários por uma série de motivos:
 
- - Ativos podem levar muito tempo para carregar relativo ao tamanho de um único quadro. Alguns ativos ainda podem levar segundos para carregar, que gravemente pode atrapalhar a experiência se carregado mid jogo. Se o tempo de carregamento é especialmente longo (por exemplo, mais de um segundo ou dois) você talvez queira mostrar uma imagem ao carregar a barra de progresso ou de tela.
- - Ativos podem consumir muita RAM, que exigem gerenciamento ativo do que é carregado para se ajustarem no que é fornecido por plataformas de destino do jogo.
- - Jogos talvez seja necessário exibir mais ativos que pode caber na RAM. "Abrir o mundo" jogos geralmente incluem grandes ambientes que os jogadores podem navegar pelo perfeitamente – isso é com nenhuma tela de carregamento. Nesse caso, você talvez precise criar um sistema personalizado para o conteúdo de streaming em e gerenciar o uso de memória.
+- Ativos podem levar muito tempo para carregar relativo ao tamanho de um único quadro. Alguns ativos ainda podem levar segundos para carregar, que gravemente pode atrapalhar a experiência se carregado mid jogo. Se o tempo de carregamento é especialmente longo (por exemplo, mais de um segundo ou dois) você talvez queira mostrar uma imagem ao carregar a barra de progresso ou de tela.
+- Ativos podem consumir muita RAM, que exigem gerenciamento ativo do que é carregado para se ajustarem no que é fornecido por plataformas de destino do jogo.
+- Jogos talvez seja necessário exibir mais ativos que pode caber na RAM. "Abrir o mundo" jogos geralmente incluem grandes ambientes que os jogadores podem navegar pelo perfeitamente – isso é com nenhuma tela de carregamento. Nesse caso, você talvez precise criar um sistema personalizado para o conteúdo de streaming em e gerenciar o uso de memória.
 
 Formatos de arquivo personalizado, talvez seja necessário processamento em tempo de carregamento, exigir que o código de carregamento de personalizado.
 
@@ -109,25 +109,11 @@ Refazendo a jogos existentes também é uma experiência educacional, embora iss
 
 Os desenvolvedores que usam o xamarin. Android e xamarin. IOS têm uma ampla variedade de tecnologias disponíveis a eles para ajudar no desenvolvimento de jogos. Esta seção aborda algumas das mais populares soluções de plataforma cruzada.
 
-### <a name="cocossharp"></a>CocosSharp
-
-CocosSharp é uma versão de software livre, plataforma cruzada do mecanismo de jogos 2D Cocos. O mecanismo fornece acesso ao Android, iOS, Mac OS X, área de trabalho do Windows, Windows RT e Windows Phone.
-
-CocosSharp se concentra em um programador simple API para desenvolvimento de jogos 2D. O crescimento em jogos em dispositivos móveis tenha ajudado a reignite a popularidade do desenvolvimento de jogos 2D, tornando a tecnologia viável CocosSharp para hobby e comerciais semelhantes de projetos. Ele é fornecido como arquivos de código ou. dll de origem (que podem ser obtidos por meio do NuGet), mas ele não oferece um editor visual; Portanto, qualquer interação com o mecanismo de CocosSharp requer conhecimento de programação.
-
-Para começar com CocosSharp, Confira nossos [CocosSharp guias](~/graphics-games/cocossharp/index.md).
-
-O jogo Ovelha Ninjas é criado com CocosSharp e pode ser um bom ponto de partida se você estiver procurando um jogo já em execução para várias plataformas:
-
-![](images/image3.png "O jogo Ninjas Ovelha foi criado com CocosSharp")
-
-Você pode baixá-lo e obter mais informações o [página do AngryNinjas Github](https://github.com/xamarin/AngryNinjas).
-
 ### <a name="monogame"></a>MonoGame
 
 MonoGame é uma software livre, plataforma de versão da API do XNA da Microsoft. MonoGame pode ser usado para criar jogos para iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One e comutador.
 
-Ao contrário de CocosSharp, MonoGame é tecnicamente não um mecanismo de jogo, mas em vez disso, um jogo de desenvolvimento de API. Isso significa que o trabalho com MonoGame requer diretamente gerenciando objetos do jogo, manualmente objetos de desenho e implementar objetos comuns, como câmeras e *gráficos da cena* (a hierarquia pai-filho entre objetos do jogo). Para ajudar a compreender a diferença, considere que CocosSharp se baseia no MonoGame. MonoGame generaliza algumas das tecnologias específicas da plataforma, como gráficos, renderização e áudio, enquanto CocosSharp fornece código para organizar e implementar a lógica do jogo.
+MonoGame é tecnicamente não um mecanismo de jogo, mas em vez disso, um jogo de desenvolvimento de API. Isso significa que o trabalho com MonoGame requer diretamente gerenciando objetos do jogo, manualmente objetos de desenho e implementar objetos comuns, como câmeras e *gráficos da cena* (a hierarquia pai-filho entre objetos do jogo).
 
 MonoGame não oferece um ambiente de desenvolvimento visual padrão, portanto, trabalhar com MonoGame requer conhecimento de programação.
 
@@ -161,6 +147,5 @@ As tecnologias realçadas acima é apenas uma amostra das tecnologias disponíve
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Guias de CocosSharp](~/graphics-games/cocossharp/index.md)
 - [Guias de MonoGame](~/graphics-games/monogame/index.md)
 - [Guias de UrhoSharp](~/graphics-games/urhosharp/index.md)

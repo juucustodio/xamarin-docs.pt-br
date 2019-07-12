@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a93de9d60a515b6089b35a64eb8832c456c96557
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 890c11908b11b18d6ca626820f1a835d817870da
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827351"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829868"
 ---
 # <a name="collection-views-in-xamarinios"></a>Exibições de coleção no xamarin. IOS
 
@@ -739,10 +739,10 @@ public override void ViewDidLoad ()
 
 Aqui, estamos usando vários novos métodos adicionados à exibição de coleção para implementar e controlar a operação de arrastar:
 
- - `BeginInteractiveMovementForItem` -Marca o início de uma operação de movimentação.
- - `UpdateInteractiveMovementTargetPosition` -É enviado como o local do item é atualizado.
- - `EndInteractiveMovement` -Marca o fim de mover um item.
- - `CancelInteractiveMovement` U2012 \ marca o usuário cancelar a operação de movimentação.
+- `BeginInteractiveMovementForItem` -Marca o início de uma operação de movimentação.
+- `UpdateInteractiveMovementTargetPosition` -É enviado como o local do item é atualizado.
+- `EndInteractiveMovement` -Marca o fim de mover um item.
+- `CancelInteractiveMovement` U2012 \ marca o usuário cancelar a operação de movimentação.
 
 Quando o aplicativo é executado, a operação de arrastar funcionará exatamente como o padrão arraste reconhecedor de gestos que vem com a exibição de coleção.
 
@@ -1217,78 +1217,78 @@ Nas seções a seguir, vamos dar uma visão detalhada das alterações feitas a 
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionView` classe para iOS 9:
 
- - `BeginInteractiveMovementForItem` – Marca o início de uma operação de arrastar.
- - `CancelInteractiveMovement` – Informa a coleção de modo que o usuário cancelou uma operação de arrastar.
- - `EndInteractiveMovement` – Informa a coleção de modo que o usuário termina uma operação de arrastar.
- - `GetIndexPathsForVisibleSupplementaryElements` – Retorna o `indexPath` de um cabeçalho ou rodapé em uma seção de exibição de coleção.
- - `GetSupplementaryView` – Retorna o determinado cabeçalho ou rodapé.
- - `GetVisibleSupplementaryViews` – Retorna uma lista de todos os cabeçalho visível e rodapés.
- - `UpdateInteractiveMovementTargetPosition` – Informa a coleção de modo que o usuário foi movido ou está se movendo, um item durante uma operação de arrastar.
+- `BeginInteractiveMovementForItem` – Marca o início de uma operação de arrastar.
+- `CancelInteractiveMovement` – Informa a coleção de modo que o usuário cancelou uma operação de arrastar.
+- `EndInteractiveMovement` – Informa a coleção de modo que o usuário termina uma operação de arrastar.
+- `GetIndexPathsForVisibleSupplementaryElements` – Retorna o `indexPath` de um cabeçalho ou rodapé em uma seção de exibição de coleção.
+- `GetSupplementaryView` – Retorna o determinado cabeçalho ou rodapé.
+- `GetVisibleSupplementaryViews` – Retorna uma lista de todos os cabeçalho visível e rodapés.
+- `UpdateInteractiveMovementTargetPosition` – Informa a coleção de modo que o usuário foi movido ou está se movendo, um item durante uma operação de arrastar.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionViewController` classe no iOS 9:
 
- - `InstallsStandardGestureForInteractiveMovement` – Se `true` o reconhecedor de gestos novo que automaticamente dá suporte a arrastar para reordenar será usado.
- - `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
- - `GetTargetContentOffset` – Usado para obter o deslocamento de um item de exibição de coleção fornecidos.
- - `GetTargetIndexPathForMove` – Obtém a `indexPath` de um determinado item para uma operação de arrastar.
- - `MoveItem` – Move a ordem de um determinado item na lista.
+- `InstallsStandardGestureForInteractiveMovement` – Se `true` o reconhecedor de gestos novo que automaticamente dá suporte a arrastar para reordenar será usado.
+- `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
+- `GetTargetContentOffset` – Usado para obter o deslocamento de um item de exibição de coleção fornecidos.
+- `GetTargetIndexPathForMove` – Obtém a `indexPath` de um determinado item para uma operação de arrastar.
+- `MoveItem` – Move a ordem de um determinado item na lista.
 
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionViewDataSource` classe no iOS 9:
 
- - `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
- - `MoveItem` – Move a ordem de um determinado item na lista.
+- `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
+- `MoveItem` – Move a ordem de um determinado item na lista.
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionViewDelegate` classe no iOS 9:
 
- - `GetTargetContentOffset` – Usado para obter o deslocamento de um item de exibição de coleção fornecidos.
- - `GetTargetIndexPathForMove` – Obtém a `indexPath` de um determinado item para uma operação de arrastar.
+- `GetTargetContentOffset` – Usado para obter o deslocamento de um item de exibição de coleção fornecidos.
+- `GetTargetIndexPathForMove` – Obtém a `indexPath` de um determinado item para uma operação de arrastar.
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionViewFlowLayout` classe no iOS 9:
 
- - `SectionFootersPinToVisibleBounds` – Pen drives os rodapés de seção para os limites de exibição de coleção visível.
- - `SectionHeadersPinToVisibleBounds` – Pen drives os cabeçalhos de seção para os limites de exibição de coleção visível.
+- `SectionFootersPinToVisibleBounds` – Pen drives os rodapés de seção para os limites de exibição de coleção visível.
+- `SectionHeadersPinToVisibleBounds` – Pen drives os cabeçalhos de seção para os limites de exibição de coleção visível.
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionViewLayout` classe no iOS 9:
 
- - `GetInvalidationContextForEndingInteractiveMovementOfItems` – Retorna o contexto de invalidação do final de uma operação de arrastar quando o usuário termina a operação de arrastar ou cancela a ele.
- - `GetInvalidationContextForInteractivelyMovingItems` – Retorna o contexto de invalidação no início de uma operação de arrastar.
- - `GetLayoutAttributesForInteractivelyMovingItem` – Obtém os atributos de Layout para um determinado item ao arrastar um item.
- - `GetTargetIndexPathForInteractivelyMovingItem` – Retorna o `indexPath` do item que é o momento determinado ao arrastar um item.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` – Retorna o contexto de invalidação do final de uma operação de arrastar quando o usuário termina a operação de arrastar ou cancela a ele.
+- `GetInvalidationContextForInteractivelyMovingItems` – Retorna o contexto de invalidação no início de uma operação de arrastar.
+- `GetLayoutAttributesForInteractivelyMovingItem` – Obtém os atributos de Layout para um determinado item ao arrastar um item.
+- `GetTargetIndexPathForInteractivelyMovingItem` – Retorna o `indexPath` do item que é o momento determinado ao arrastar um item.
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionViewLayoutAttributes` classe no iOS 9:
 
- - `CollisionBoundingPath` – Retorna o caminho de colisão de dois itens durante uma operação de arrastar.
- - `CollisionBoundsType` – Retorna o tipo de colisão (como um `UIDynamicItemCollisionBoundsType`) que ocorreu durante uma operação de arrastar.
+- `CollisionBoundingPath` – Retorna o caminho de colisão de dois itens durante uma operação de arrastar.
+- `CollisionBoundsType` – Retorna o tipo de colisão (como um `UIDynamicItemCollisionBoundsType`) que ocorreu durante uma operação de arrastar.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionViewLayoutInvalidationContext` classe no iOS 9:
 
- - `InteractiveMovementTarget` – Retorna o item de destino de uma operação de arrastar.
- - `PreviousIndexPathsForInteractivelyMovingItems` – Retorna o `indexPaths` de outros itens envolvidos em uma operação de arrastar para reordenar a operação.
- - `TargetIndexPathsForInteractivelyMovingItems` – Retorna o `indexPaths` de itens que serão reordenados como resultado de uma operação de arrastar para reordenar.
+- `InteractiveMovementTarget` – Retorna o item de destino de uma operação de arrastar.
+- `PreviousIndexPathsForInteractivelyMovingItems` – Retorna o `indexPaths` de outros itens envolvidos em uma operação de arrastar para reordenar a operação.
+- `TargetIndexPathsForInteractivelyMovingItems` – Retorna o `indexPaths` de itens que serão reordenados como resultado de uma operação de arrastar para reordenar.
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
 Foram feitas as seguintes alterações ou adições para o `UICollectionViewSource` classe no iOS 9:
 
- - `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
- - `GetTargetContentOffset` – Retorna os deslocamentos de itens que serão movidos por meio de uma operação de arrastar para reordenar.
- - `GetTargetIndexPathForMove` – Retorna o `indexPath` de um item que será movido durante uma operação de arrastar para reordenar.
- - `MoveItem` – Move a ordem de um determinado item na lista.
+- `CanMoveItem` – Informa à exibição de coleção, se um determinado item pode ser reordenada de arrastar.
+- `GetTargetContentOffset` – Retorna os deslocamentos de itens que serão movidos por meio de uma operação de arrastar para reordenar.
+- `GetTargetIndexPathForMove` – Retorna o `indexPath` de um item que será movido durante uma operação de arrastar para reordenar.
+- `MoveItem` – Move a ordem de um determinado item na lista.
 
 ## <a name="summary"></a>Resumo
 

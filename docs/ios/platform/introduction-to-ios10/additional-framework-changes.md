@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: a7b029aad69e65192d48d969dba2b9bb9a0d7a50
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ac255baf44951518b29112d2903950039a80ee53
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61364251"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831218"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Alterações de estruturas adicionais do iOS 10
 
@@ -132,10 +132,10 @@ Para obter mais informações, consulte da Apple [guia de programação de Metal
 
 As seguintes melhorias foram feitas para a estrutura ModelIO no iOS 10:
 
- - Agora há suporte para o formato de arquivo USD.
- - Assinado campo distância foi adicionado suporte para o [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) classe.
- - Usar o novo `MDLLightProbeIrradianceDataSource` classe para auxiliar na investigação de luz de posicionamento.
- - Usar o novo `MDLMaterialPropertyGraph` classe para suportar facilmente o tempo de execução é alterado para modelos.
+- Agora há suporte para o formato de arquivo USD.
+- Assinado campo distância foi adicionado suporte para o [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) classe.
+- Usar o novo `MDLLightProbeIrradianceDataSource` classe para auxiliar na investigação de luz de posicionamento.
+- Usar o novo `MDLMaterialPropertyGraph` classe para suportar facilmente o tempo de execução é alterado para modelos.
 
 ## <a name="photos-enhancements"></a>Aprimoramentos de fotos
 

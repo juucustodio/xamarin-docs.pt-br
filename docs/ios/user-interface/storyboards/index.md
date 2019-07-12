@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5c3c9714cb4d6cd077f898778f4388d63018fa00
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61428820"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831696"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução ao Storyboards no xamarin. IOS
 
@@ -68,7 +68,7 @@ Há diferentes tipos de transições, cada controle dando sobre como um novo con
 
 -  **Mostrar / enviar por Push** – segue um envio por push adiciona o controlador de exibição para a pilha de navegação. Ele pressupõe que o controlador de exibição, o envio por push de origem faz parte do mesmo controlador de navegação que o controlador de exibição que está sendo adicionado à pilha. Isso faz a mesma coisa que `pushViewController` e geralmente é usado quando há alguma relação entre os dados nas telas. Usando o envio por push segue lhe dar ao luxo de ter uma barra de navegação com um botão Voltar e título adicionado para cada modo de exibição na pilha, permitindo a navegação pela hierarquia de exibição de busca detalhada.
 -  **Modal** – um segue modal cria uma relação entre qualquer controlador de exibição de dois em seu projeto, com a opção de uma transição animada que está sendo mostrada. O controlador de exibição filho será obscurecer completamente o controlador de exibição de pai quando colocado na exibição. Ao contrário de um envio por push segue, que adiciona um botão Voltar para nós; Quando usar uma modal segue `DismissViewController` deve ser usado para retornar para o controlador de exibição anterior.
--  **Personalizado** – qualquer personalizado segue pode ser criado como uma subclasse de ` UIStoryboardSegue`.
+-  **Personalizado** – qualquer personalizado segue pode ser criado como uma subclasse de `UIStoryboardSegue`.
 -  **Desenrolar** – um desenrolamento segue pode ser usado para navegar de volta por meio de um envio por push ou modal segue – por exemplo, ignorando o controlador de exibição de forma restrita apresentada. Além disso, você poderá desenrolar por meio de não apenas um, mas uma série de envio por push e modal segues e voltar várias etapas na sua hierarquia de navegação com uma única ação de desenrolamento. Para entender como usar um desenrolamento segue no iOS, leia as [criação de desenrolamento Segues](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) receita.
 -  **Sourceless** – um segue sourceless indica a cena que contém o controlador de exibição inicial e, portanto, qual exibir o usuário verá primeiro. Ele é representado pelo segue mostrado abaixo:  
 
@@ -325,7 +325,7 @@ Antes de começar, siga etapas 1 a 8 acima. Nestas etapas podemos criar nossos s
     - UILabel
         - Texto: ' Erro: Senha incorreta. Você não deve passar!'
         - Cor: Vermelho
-        - Alinhamento: Centralizado 
+        - Alinhamento: Centralizado
         - Linhas: 2
         - Caixa de seleção 'Hidden' verificada 
         

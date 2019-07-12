@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 260d01d6aa8344dd3cf107f1ffc34167c457a491
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6bad05f62fa9168818aa9a2e73cc1e2830af03b3
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61269302"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830031"
 ---
 # <a name="introduction-to-tvos-10"></a>Introdução ao tvOS 10
 
@@ -56,10 +56,10 @@ Além disso, `UIKit` foi modificado funcionar no novo estendido **sRGB** espaço
 
 A Apple oferece as seguintes práticas recomendadas ao trabalhar com cores amplas:
 
- - `UIColor` agora usa o sRGB espaço de cores e não poderá mais clamp valores para o `0.0` para `1.0` intervalo. Se o aplicativo utiliza o comportamento de clamp anterior, ele precisará ser modificado para tvOS 10.
- - Se o aplicativo executa o processamento personalizado de `UIImages`, use a nova [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) classe para especificar o uso de formatos de intervalo estendido ou o intervalo padrão.
- - Ao usar uma API de nível inferior, como elementos gráficos principais ou Bare Metal para fornecer processamento de imagem, o aplicativo deve usar um intervalo estendido espaço e pixel formato de cor que dá suporte a valores de ponto flutuante de 16 bits. Quando for necessário, o aplicativo terá serem fixados manualmente os valores de componente de cor.
- - Elementos gráficos principais, imagem principal e sombreadores de desempenho do sistema operacional fornecem novos métodos para converter entre os espaços de duas cores.
+- `UIColor` agora usa o sRGB espaço de cores e não poderá mais clamp valores para o `0.0` para `1.0` intervalo. Se o aplicativo utiliza o comportamento de clamp anterior, ele precisará ser modificado para tvOS 10.
+- Se o aplicativo executa o processamento personalizado de `UIImages`, use a nova [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) classe para especificar o uso de formatos de intervalo estendido ou o intervalo padrão.
+- Ao usar uma API de nível inferior, como elementos gráficos principais ou Bare Metal para fornecer processamento de imagem, o aplicativo deve usar um intervalo estendido espaço e pixel formato de cor que dá suporte a valores de ponto flutuante de 16 bits. Quando for necessário, o aplicativo terá serem fixados manualmente os valores de componente de cor.
+- Elementos gráficos principais, imagem principal e sombreadores de desempenho do sistema operacional fornecem novos métodos para converter entre os espaços de duas cores.
 
 Para obter mais informações, consulte nosso [Introdução a cores amplas](~/ios/platform/wide-color.md) guia.
 
@@ -67,12 +67,12 @@ Para obter mais informações, consulte nosso [Introdução a cores amplas](~/io
 
 Várias estruturas que estavam disponíveis no iOS (e não tvOS), foram disponibilizados para tvOS 10, como:
 
- - Por ExternalAccessory
- - HomeKit
- - MultipeerConnectivity
- - Fotos
- - ReplayKit
- - UserNotification
+- Por ExternalAccessory
+- HomeKit
+- MultipeerConnectivity
+- Fotos
+- ReplayKit
+- UserNotification
 
 ## <a name="additional-framework-changes"></a>Alterações de estrutura adicionais
 

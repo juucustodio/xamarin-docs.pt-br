@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/22/2016
-ms.openlocfilehash: 1b379bef98e498df4c58ba7209aa46b0b2542fe1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 322acff3279d0513266c7d9883726cac726334f7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031415"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830549"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin. Mac - macOS serra de solução de problemas
 
@@ -52,7 +52,7 @@ Se uma expiração incorreto data ou segurança código (CW) é inserido ao adic
 Problemas Conhecidos:
 
 - Chamando `NSObject.ValueForKey` será um `null` chave resultará em uma exceção.
-- Ambos `NSURLSession` e NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://' URLs.
+- Ambos `NSURLSession` e `NSURLConnection` não há mais conjuntos de criptografia RC4 durante o handshake TLS para `http://` URLs.
 - Aplicativos podem parar de responder se eles modificam a geometria de uma visão em qualquer um de `ViewWillLayoutSubviews` ou `LayoutSubviews` métodos.
 - Para todas as conexões SSL/TLS, a criptografia simétrica de RC4 agora é desabilitada por padrão. Além disso, a API de transporte seguro não oferece suporte a SSLv3 e é recomendável que o aplicativo parar de usar criptografia SHA-1 e 3DES assim que possível.
 

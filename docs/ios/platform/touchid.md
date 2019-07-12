@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 2d67bc71361e335515cfba8b5a20e157ed6b6b05
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 25ace6d7febe495164378b3633f06371806e2f82
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61087747"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832314"
 ---
 # <a name="touch-id-in-xamarinios"></a>ID de toque no xamarin. IOS
 
@@ -81,10 +81,10 @@ Para usar a ACL que devemos usar o `SecAccessControl` política e, em seguida, v
 
 Há muitas coisas que podemos deve ter em mente ao usar o ACL com o conjunto de chaves e algumas delas estão listadas abaixo:
 
--   Use somente com o aplicativo de primeiro plano – se você chamar qualquer operação de conjunto de chaves em um thread em segundo plano que a chamada falhará.
--   Adicionando e Atualizando itens de conjunto de chaves podem exigir autenticação.
--   Se uma solicitação retornar vários itens correspondentes no conjunto de chaves, a autenticação pode ser necessária.
--   Itens protegidos de ACL são somente para dispositivos e, portanto, não sincronizado ou submetido a backup.
+- Use somente com o aplicativo de primeiro plano – se você chamar qualquer operação de conjunto de chaves em um thread em segundo plano que a chamada falhará.
+- Adicionando e Atualizando itens de conjunto de chaves podem exigir autenticação.
+- Se uma solicitação retornar vários itens correspondentes no conjunto de chaves, a autenticação pode ser necessária.
+- Itens protegidos de ACL são somente para dispositivos e, portanto, não sincronizado ou submetido a backup.
 
 ### <a name="using-local-authentication-without-keychain-services"></a>Usando a autenticação Local sem os serviços de conjunto de chaves
 

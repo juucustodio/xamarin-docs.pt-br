@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 8ad742607e506df436a5526d31621ac7636ac29b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 22ac6a3776e5fa5de2fc238efe90c435190e8005
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61086936"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832077"
 ---
 # <a name="push-notifications-in-ios"></a>Notificações por push no iOS
 
@@ -21,7 +21,7 @@ ms.locfileid: "61086936"
 
 Notificações por push devem ser mantidas em breves e contenham apenas dados suficientes para notificar o aplicativo móvel que ele deverá contatar o aplicativo de servidor para uma atualização. Por exemplo, quando novo email chega, o aplicativo de servidor só seria notificar o aplicativo móvel novo email recebido. A notificação não conteria o novo email em si. O aplicativo móvel, em seguida, seria recuperar novos emails do servidor quando ele estava apropriado
 
-No Centro de push de notificações no iOS é o *notificação Gateway serviço APNS (Apple Push)*. Isso é um serviço fornecido pela Apple que é responsável por notificações de roteamentos de um servidor de aplicativos para dispositivos iOS.
+No Centro de push de notificações no iOS é o *notificação Gateway serviço APNS (Apple Push)* . Isso é um serviço fornecido pela Apple que é responsável por notificações de roteamentos de um servidor de aplicativos para dispositivos iOS.
 A imagem a seguir ilustra a topologia de notificação por push para iOS: ![](remote-notifications-in-ios-images/image4.png "Esta imagem ilustra a topologia de notificação por push para iOS")
 
 Notificações remotas em si são cadeias de caracteres que seguem o formato formatadas em JSON e protocolos especificado na [a carga de notificação](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) seção o [Local e enviar por Push notificação Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)no [documentação do desenvolvedor do iOS](https://developer.apple.com/devcenter/ios/index.action).
@@ -67,7 +67,7 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
     [![](remote-notifications-in-ios-images/image10new.png "Criar o certificado para a ID do aplicativo")](remote-notifications-in-ios-images/image8.png#lightbox)
 
-4.  Selecione se você gostaria de usar um certificado de desenvolvimento ou produção:
+4. Selecione se você gostaria de usar um certificado de desenvolvimento ou produção:
 
     [![](remote-notifications-in-ios-images/image11new.png "Selecione um certificado de desenvolvimento ou produção")](remote-notifications-in-ios-images/image11new.png#lightbox)
 

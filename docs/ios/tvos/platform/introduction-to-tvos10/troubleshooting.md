@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3815790cfb73f93f399c14d3da44aa3210725388
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 97cfe7220f8b351ec30a9f2c7a7347d318378fbc
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60932432"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830483"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solução de problemas de tvOS 10 aplicativos criados com o Xamarin
 
@@ -32,8 +32,8 @@ As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usa
 
 Problemas Conhecidos:
 
- - Ao testar as compras no aplicativo no ambiente de área restrita, a caixa de diálogo de autenticação pode aparecer duas vezes.
- - Ao testar as compras no aplicativo com o conteúdo hospedado no ambiente de área restrita, a caixa de diálogo de senha será exibida sempre que o aplicativo é colocado em primeiro plano até que o download de conteúdo seja concluída.
+- Ao testar as compras no aplicativo no ambiente de área restrita, a caixa de diálogo de autenticação pode aparecer duas vezes.
+- Ao testar as compras no aplicativo com o conteúdo hospedado no ambiente de área restrita, a caixa de diálogo de senha será exibida sempre que o aplicativo é colocado em primeiro plano até que o download de conteúdo seja concluída.
 
 <a name="Binary-Compatibility" />
 
@@ -41,11 +41,11 @@ Problemas Conhecidos:
 
 Problemas Conhecidos:
 
- - Chamando `NSObject.ValueForKey` será um `null` chave resultará em uma exceção.
- - Referenciando uma fonte por nome ao chamar `UIFont.WithName` causará uma falha.
- - Ambos `NSURLSession` e NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://' URLs.
- - Aplicativos podem parar de responder se eles modificam a geometria de uma visão em qualquer um de `ViewWillLayoutSubviews` ou `LayoutSubviews` métodos.
- - Para todas as conexões SSL/TLS, a criptografia simétrica de RC4 agora é desabilitada por padrão. Além disso, a API de transporte seguro não oferece suporte a SSLv3 e é recomendável que o aplicativo parar de usar criptografia SHA-1 e 3DES assim que possível.
+- Chamando `NSObject.ValueForKey` será um `null` chave resultará em uma exceção.
+- Referenciando uma fonte por nome ao chamar `UIFont.WithName` causará uma falha.
+- Ambos `NSURLSession` e `NSURLConnection` não há mais conjuntos de criptografia RC4 durante o handshake TLS para `http://` URLs.
+- Aplicativos podem parar de responder se eles modificam a geometria de uma visão em qualquer um de `ViewWillLayoutSubviews` ou `LayoutSubviews` métodos.
+- Para todas as conexões SSL/TLS, a criptografia simétrica de RC4 agora é desabilitada por padrão. Além disso, a API de transporte seguro não oferece suporte a SSLv3 e é recomendável que o aplicativo parar de usar criptografia SHA-1 e 3DES assim que possível.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
@@ -77,12 +77,12 @@ Após uma operação de entrega, o `UserInfo` propriedade de um `NSUserActivity`
 
 Problemas Conhecidos:
 
- - Alterações à aparência do plano de fundo `UINavigationBar`, `UITabBar` ou `UIToolBar` pode resultar em uma passagem de layout para resolver a nova aparência. A tentativa de modificar essas aparências dentro de um `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` ou `DidUpdateSubviews` eventos podem resultar em um loop infinito de layout.
- - No tvOS 10, chamando o `RemoveGestureRecognizer` método de um `UIView` objeto explicitamente cancela qualquer reconhecedor de gestos em andamento.
- - Controladores de exibição apresentada agora pode afetar a aparência da barra de status.
- - tvOS 10 exige que o desenvolvedor chamar `base.AwakeFromNib` quando subclasses `UIViewController` e substituindo o `AwakeFromNib` método.
- - Aplicativos com personalizado `UIView` subclasses que substituem `LayoutSubviews` e sujos o layout antes de chamar `base.LayoutSubviews` podem disparar um loop infinito de layout no tvOS 10.
- - Ativos de imagens específicas de direção ou flippable não são quando atribuído a nenhum inversão `UIButton` objetos.
+- Alterações à aparência do plano de fundo `UINavigationBar`, `UITabBar` ou `UIToolBar` pode resultar em uma passagem de layout para resolver a nova aparência. A tentativa de modificar essas aparências dentro de um `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` ou `DidUpdateSubviews` eventos podem resultar em um loop infinito de layout.
+- No tvOS 10, chamando o `RemoveGestureRecognizer` método de um `UIView` objeto explicitamente cancela qualquer reconhecedor de gestos em andamento.
+- Controladores de exibição apresentada agora pode afetar a aparência da barra de status.
+- tvOS 10 exige que o desenvolvedor chamar `base.AwakeFromNib` quando subclasses `UIViewController` e substituindo o `AwakeFromNib` método.
+- Aplicativos com personalizado `UIView` subclasses que substituem `LayoutSubviews` e sujos o layout antes de chamar `base.LayoutSubviews` podem disparar um loop infinito de layout no tvOS 10.
+- Ativos de imagens específicas de direção ou flippable não são quando atribuído a nenhum inversão `UIButton` objetos.
 
 ## <a name="related-links"></a>Links relacionados
 

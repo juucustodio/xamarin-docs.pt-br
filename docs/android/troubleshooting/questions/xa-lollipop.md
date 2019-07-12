@@ -7,16 +7,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7e31f9ad46a04b648a6a1f24c075426f7d98a663
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: db0cb221ee18998fbb98449ae03c442c84bcfcd7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61228249"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829709"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>Qual versão do Xamarin.Android adicionou suporte ao Lollipop?
 
-**Observação:** Este guia foi escrito originalmente para a visualização do Android L.
+> [!NOTE]
+> Este guia foi escrito originalmente para a visualização do Android L.
 
 -   [Xamarin. Android 4.17](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.17/) adicionou suporte de visualização do Android L.
 -   [Xamarin. Android 4.20](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.20/) adicionou suporte ao Android Lollipop.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c9d98d9d3052f52dc7860ba513756e3a33d1dc58
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61429964"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831916"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboards unificadas no xamarin. IOS
 
@@ -693,12 +693,12 @@ Novo para o iOS 8, o desenvolvedor pode criar um único atômico `.xib` arquivo 
 
 Telas de inicialização dinâmica tem as seguintes limitações e considerações:
 
- - Use apenas `UIKit` classes.
- - Usar uma exibição de raiz única que é um `UIView` ou `UIViewController` objeto.
- - Não faça nenhuma conexão com o código do aplicativo (não adicionam **ações** ou **saídas**).
- - Não adicione `UIWebView` objetos.
- - Não use a quaisquer classes personalizadas.
- - Não use atributos de tempo de execução.
+- Use apenas `UIKit` classes.
+- Usar uma exibição de raiz única que é um `UIView` ou `UIViewController` objeto.
+- Não faça nenhuma conexão com o código do aplicativo (não adicionam **ações** ou **saídas**).
+- Não adicione `UIWebView` objetos.
+- Não use a quaisquer classes personalizadas.
+- Não use atributos de tempo de execução.
 
 Com as diretrizes acima em mente, vamos dar uma olhada na adição de uma tela de inicialização dinâmica para um projeto existente do Xamarin iOS 8.
 

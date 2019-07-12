@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 15b4154ad6e95aabb5e88784660a93bb53c0b252
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 7bea80c22f6931858d0629382f6882203dfd374f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650203"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829948"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Estudo de caso do aplicativo de plataforma cruzada: Tasky
 
@@ -29,9 +29,9 @@ ms.locfileid: "67650203"
 
 A primeira etapa na criação de um aplicativo é identificar os recursos desejados. Eles podem ser metas de alto nível ou são detalhadas casos de uso. Tasky tem requisitos funcionais simples:
 
- -  Exibir uma lista de tarefas
- -  Adicionar, editar e excluir tarefas
- -  Definir status da tarefa para 'concluído'
+-  Exibir uma lista de tarefas
+-  Adicionar, editar e excluir tarefas
+-  Definir status da tarefa para 'concluído'
 
 Você deve considerar o uso de recursos específicos à plataforma.  Pode Tasky tirar proveito de delimitação de iOS ou blocos dinâmicos do Windows Phone? Mesmo se você não usar recursos específicos da plataforma na primeira versão, você deve planejar com antecedência garantir que seus negócios e as camadas de dados podem acomodá-los.
 
@@ -52,9 +52,9 @@ Saber quais dados precisam ser armazenados ajudará a determinar qual mecanismo 
 
 Tasky precisa armazenar três propriedades para cada TaskItem:
 
- -  **Nome** – cadeia de caracteres
- -  **Notas de** – cadeia de caracteres
- -  **Feito** -booliano
+- **Nome** – cadeia de caracteres
+- **Notas de** – cadeia de caracteres
+- **Feito** -booliano
 
  <a name="Core_Functionality" />
 
@@ -62,11 +62,11 @@ Tasky precisa armazenar três propriedades para cada TaskItem:
 
 Considere a API que a interface do usuário precisam consumir para atender aos requisitos. Uma lista de tarefas requer as seguintes funções:
 
- -   **Listar todas as tarefas** – para exibir a lista de tela principal de todas as tarefas disponíveis
- -  **Obtenha uma tarefa** – quando uma linha de tarefa é atingida
- -  **Salvar uma tarefa** – quando uma tarefa é editada
- -  **Excluir uma tarefa** – quando uma tarefa é excluída
- -  **Criar tarefa vazia** – quando uma nova tarefa é criada.
+- **Listar todas as tarefas** – para exibir a lista de tela principal de todas as tarefas disponíveis
+- **Obtenha uma tarefa** – quando uma linha de tarefa é atingida
+- **Salvar uma tarefa** – quando uma tarefa é editada
+- **Excluir uma tarefa** – quando uma tarefa é excluída
+- **Criar tarefa vazia** – quando uma nova tarefa é criada.
 
 Para atingir a reutilização de código, essa API deve ser implementada uma vez na *biblioteca de classes portátil*.
 
@@ -76,10 +76,10 @@ Para atingir a reutilização de código, essa API deve ser implementada uma vez
 
 Depois que o design do aplicativo foi acordado, considere como ele pode ser implementado como um aplicativo de plataforma cruzada. Isso se tornará a arquitetura do aplicativo. As diretrizes a seguir a [criando aplicativos de plataforma cruzada](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) documento, o código do aplicativo deve ser interrompido para baixo nas seguintes partes:
 
- -   **Código comum** – um projeto comum que contém o código novamente utilizável para armazenar os dados de tarefa; expor uma classe de modelo e uma API para gerenciar o salvamento e carregamento de dados.
- -   **Código específico da plataforma** – projetos específicos da plataforma que implementam uma interface do usuário nativa para cada sistema operacional, utilizando o código comum como 'back-end'.
+- **Código comum** – um projeto comum que contém o código novamente utilizável para armazenar os dados de tarefa; expor uma classe de modelo e uma API para gerenciar o salvamento e carregamento de dados.
+- **Código específico da plataforma** – projetos específicos da plataforma que implementam uma interface do usuário nativa para cada sistema operacional, utilizando o código comum como 'back-end'.
 
- [![](case-study-tasky-images/taskypro-architecture.png "Projetos específicos da plataforma implementam uma interface do usuário nativa para cada sistema operacional, utilizando o código comum como o back-end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
+[![](case-study-tasky-images/taskypro-architecture.png "Projetos específicos da plataforma implementam uma interface do usuário nativa para cada sistema operacional, utilizando o código comum como o back-end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
 
 Essas duas partes são descritos nas seções a seguir.
 
@@ -280,8 +280,8 @@ A camada de aplicativo e a camada de Interface do usuário são implementados ne
 
 A camada de aplicativo contém classes específicas da plataforma necessárias para 'associar' os objetos expostos pelo PCL na interface do usuário. O aplicativo específico do iOS tem duas classes para ajudar a exibir tarefas:
 
- -   **EditingSource** – essa classe é usada para associar as listas de tarefas para a interface do usuário. Porque `MonoTouch.Dialog` foi usado para a lista de tarefas, precisamos implementar esse auxiliar para habilitar a funcionalidade de passar o dedo para exclusão no `UITableView` . Passe o dedo para exclusão é comum no iOS, mas não Android ou Windows Phone, para que o projeto específico do iOS é o único que a implementa.
- -   **TaskDialog** – essa classe é usada para associar uma única tarefa na interface do usuário. Ele usa o `MonoTouch.Dialog` API de reflexão para 'wrap' o `TaskItem` objeto com uma classe que contém os atributos corretos para permitir que a tela de entrada a ser formatado corretamente.
+- **EditingSource** – essa classe é usada para associar as listas de tarefas para a interface do usuário. Porque `MonoTouch.Dialog` foi usado para a lista de tarefas, precisamos implementar esse auxiliar para habilitar a funcionalidade de passar o dedo para exclusão no `UITableView` . Passe o dedo para exclusão é comum no iOS, mas não Android ou Windows Phone, para que o projeto específico do iOS é o único que a implementa.
+- **TaskDialog** – essa classe é usada para associar uma única tarefa na interface do usuário. Ele usa o `MonoTouch.Dialog` API de reflexão para 'wrap' o `TaskItem` objeto com uma classe que contém os atributos corretos para permitir que a tela de entrada a ser formatado corretamente.
 
 O `TaskDialog` classe usa `MonoTouch.Dialog` atributos para criar uma tela com base nas propriedades de uma classe. A classe tem esta aparência:
 
@@ -389,9 +389,9 @@ Semelhante à versão do iOS que vimos anteriormente, a camada de aplicativo no 
 
 Camada de Interface do usuário do aplicativo Android é uma combinação de código e marcação XML.
 
- -   **Recursos/Layout** – layouts de tela e a linha da célula implementado como arquivos AXML de design. O AXML pode ser escrito à mão, ou horizontal apresentados visualmente usando o Designer de interface do usuário do Xamarin para Android.
- -   **Recursos/Drawable** – imagens (ícones) e o botão personalizado.
- -   **As telas** – subclasses de atividade que definem cada tela e seu comportamento. Vincula a interface do usuário com as classes de camada de aplicativo e a API comum (`TaskItemManager`).
+- **Recursos/Layout** – layouts de tela e a linha da célula implementado como arquivos AXML de design. O AXML pode ser escrito à mão, ou horizontal apresentados visualmente usando o Designer de interface do usuário do Xamarin para Android.
+- **Recursos/Drawable** – imagens (ícones) e o botão personalizado.
+- **As telas** – subclasses de atividade que definem cada tela e seu comportamento. Vincula a interface do usuário com as classes de camada de aplicativo e a API comum (`TaskItemManager`).
 
  <a name="Home_Screen" />
 

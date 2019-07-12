@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 327070f723aabf8d5d07f4f86580b69ffb5917a7
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: d80363cd339d5d3177ae063df2a20d7938f59169
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675280"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832397"
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -67,7 +67,7 @@ Atualmente, o Xamarin Profiler podem ser usado para testar aplicativos xamarin. 
 
 Suporte para o Xamarin Profiler está disponível nas seguintes plataformas:
 
- - O Visual Studio para Mac (macOS, com licença Enterprise)
+- O Visual Studio para Mac (macOS, com licença Enterprise)
     - Android
         - Dispositivo e o emulador
     - iOS
@@ -76,7 +76,7 @@ Suporte para o Xamarin Profiler está disponível nas seguintes plataformas:
         - Dispositivo e simulador
     - Mac
 
- - Visual Studio (apenas **Enterprise** versão)
+- Visual Studio (apenas **Enterprise** versão)
     - Android
         - Dispositivo e o emulador
     - iOS [Experimental]
@@ -94,7 +94,7 @@ Esta seção apresenta as partes do que o Xamarin Profiler e faz um tour pelas s
 
 Antes de com êxito, você pode analisar seu aplicativo, você precisa permitir a criação de perfil nas opções de projeto do aplicativo.
 
- - iOS:
+- iOS:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -110,7 +110,7 @@ Antes de com êxito, você pode analisar seu aplicativo, você precisa permitir 
 
 -----
 
- - Android:
+- Android:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -216,7 +216,7 @@ Na parte superior do criador de perfil é o gráfico de alocações, que exibe a
 
 Há exibições de dados diferentes no instrumento alocações, que permitem aos desenvolvedores analisar como seu aplicativo está usando e liberar memória. Essas exibições são descritas abaixo:
 
- -   **Alocações** – exibe uma lista de todas as alocações e agrupa-os pelo nome da classe. Isso fornece uma ótima visão geral de classes e métodos que estão sendo usados, a frequência com que eles são usados e o tamanho coletivo das classes usadas. Clicando duas vezes em uma classe mostrará a memória alocada: 
+- **Alocações** – exibe uma lista de todas as alocações e agrupa-os pelo nome da classe. Isso fornece uma ótima visão geral de classes e métodos que estão sendo usados, a frequência com que eles são usados e o tamanho coletivo das classes usadas. Clicando duas vezes em uma classe mostrará a memória alocada: 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -230,7 +230,7 @@ Há exibições de dados diferentes no instrumento alocações, que permitem aos
 
 Exibição do Inspetor para alocações fornece opções de filtragem e agrupamento de objetos, fornecendo estatísticas de memória alocada e as alocações principais, bem como modos de exibição para rastreamento de pilha e o caminho para a raiz.
 
- -   **Árvore de chamadas** – exibe a árvore de chamadas inteira de todos os threads no aplicativo e inclui informações sobre a memória alocada em cada nó. Quando um elemento for selecionado na lista, todos os nós irmãos aparecerá cinza. Você pode expandir a árvore ou clique duas vezes no elemento para fazer drill down nele. Ao exibir este modo de exibição de dados, a inspeção de configurações de exibição pode ser usada para alterar a forma como ela é apresentada. Atualmente, há duas opções:
+- **Árvore de chamadas** – exibe a árvore de chamadas inteira de todos os threads no aplicativo e inclui informações sobre a memória alocada em cada nó. Quando um elemento for selecionado na lista, todos os nós irmãos aparecerá cinza. Você pode expandir a árvore ou clique duas vezes no elemento para fazer drill down nele. Ao exibir este modo de exibição de dados, a inspeção de configurações de exibição pode ser usada para alterar a forma como ela é apresentada. Atualmente, há duas opções:
     1.  **Invertida Call Tree** – isso considera o rastreamento de pilha de cima para baixo. Essa é uma opção de exibição conveniente pois indica os métodos mais profundos em que a CPU tem sido dedicando seu tempo.
     2.  **Separado por thread** – essa opção organiza a árvore de chamadas por thread.
 
@@ -244,7 +244,7 @@ Exibição do Inspetor para alocações fornece opções de filtragem e agrupame
 
 -----
 
- -   **Instantâneos** – esse painel exibe informações sobre instantâneos de memória. Para gerá-los durante a criação de perfil de um aplicativo ao vivo, clique no _câmera_ botão na barra de ferramentas em cada ponto em que você gostaria de ver qual memória é mantida e liberada. Você pode clicar em cada instantâneo para explorar o que está acontecendo nos bastidores. Observe que só podem ser criados instantâneos quando ao vivo de um aplicativo de criação de perfil. 
+- **Instantâneos** – esse painel exibe informações sobre instantâneos de memória. Para gerá-los durante a criação de perfil de um aplicativo ao vivo, clique no _câmera_ botão na barra de ferramentas em cada ponto em que você gostaria de ver qual memória é mantida e liberada. Você pode clicar em cada instantâneo para explorar o que está acontecendo nos bastidores. Observe que só podem ser criados instantâneos quando ao vivo de um aplicativo de criação de perfil. 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

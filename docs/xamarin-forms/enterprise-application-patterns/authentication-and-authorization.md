@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: edab6b7edd5ca95cb5abe5fc2caccb5714efda56
-ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
+ms.openlocfilehash: efaea24e559aa2f3bdfd87c1c083ce1d777dbb3f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67540406"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832163"
 ---
 # <a name="authentication-and-authorization"></a>Autenticação e autorização
 
@@ -97,7 +97,8 @@ Depois de chamar o `services.AddIdentityServer` método, APIs fluentes adicionai
 -   Clientes que se conectarem ao solicitar tokens.
 -   Identidade do ASP.NET Core.
 
->💡 **Dica**: Carregar dinamicamente a configuração de IdentityServer 4. APIs do IdentityServer 4 permitem configurar o IdentityServer de uma lista na memória de objetos de configuração. No aplicativo eShopOnContainers de referência, essas coleções na memória são embutidos em código no aplicativo. Entretanto, em cenários de produção pode ser carregados dinamicamente de um arquivo de configuração ou de um banco de dados.
+> [!TIP]
+> Carregar dinamicamente a configuração de IdentityServer 4. APIs do IdentityServer 4 permitem configurar o IdentityServer de uma lista na memória de objetos de configuração. No aplicativo eShopOnContainers de referência, essas coleções na memória são embutidos em código no aplicativo. Entretanto, em cenários de produção pode ser carregados dinamicamente de um arquivo de configuração ou de um banco de dados.
 
 Para obter informações sobre como configurar o IdentityServer para usar a identidade do ASP.NET Core, consulte [usando o ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/8_aspnet_identity.html) na documentação do IdentityServer.
 
@@ -317,7 +318,8 @@ private async Task NavigateAsync(string url)
 
 Esse método analisa a resposta de autenticação que está contida no URI de retorno, e desde que um código de autorização válido estiver presente, ele faz uma solicitação para do IdentityServer [ponto de extremidade token](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html), passando o código de autorização, o Verificador de segredo PKCE e outras os parâmetros necessários. O ponto de extremidade de token está no `/connect/token` na porta 5105 do ponto de extremidade base exposto como uma configuração de usuário. Para obter mais informações sobre as configurações do usuário, consulte [gerenciamento de configuração](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
->💡 **Dica**: Valide o retorno de URIs. Embora o aplicativo móvel do eShopOnContainers não valida o URI de retorno, a prática recomendada é validar que o URI de retorno se refere a um local conhecido, para evitar ataques de redirecionamento aberto.
+> [!TIP]
+> Valide o retorno de URIs. Embora o aplicativo móvel do eShopOnContainers não valida o URI de retorno, a prática recomendada é validar que o URI de retorno se refere a um local conhecido, para evitar ataques de redirecionamento aberto.
 
 Se o ponto de extremidade de token recebe um código de autorização válido e o verificador de segredo PKCE, ele responde com um token de acesso, o token de identidade e o token de atualização. O token de acesso (o que permite o acesso aos recursos da API) e o token de identidade, em seguida, são armazenadas como configurações de aplicativo e navegação de página é executada. Portanto, o efeito geral no aplicativo móvel do eShopOnContainers é isso: desde que os usuários são capazes de se autenticar com êxito com IdentityServer, ele navega para o `MainView` página, que é um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) que exibe o `CatalogView` como seu guia selecionada.
 

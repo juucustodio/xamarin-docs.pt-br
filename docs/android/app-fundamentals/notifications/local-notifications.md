@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 362041efc5a19dfb70430054f3e4636d4fdfbd7e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c36b31e28011bea287903ee0681a316209abd22d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61021595"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829989"
 ---
 <a name="compatibility"></a>
 
@@ -84,7 +84,8 @@ Android inclui suporte para metadados de notificação para que as notificaçõe
 
 -   **Categoria** &ndash; informa o sistema como manipular a notificação em várias circunstâncias, como quando o dispositivo está em *não incomodar* modo.
 
-**Observação:** **Visibilidade** e **categoria** foram introduzidas no Android 5.0 e não estão disponíveis em versões anteriores do Android. Começando com o Android 8.0 [canais de notificação](#notif-chan) são usados para controlar como as notificações são apresentadas ao usuário.
+> [!NOTE]
+> **Visibilidade** e **categoria** foram introduzidas no Android 5.0 e não estão disponíveis em versões anteriores do Android. Começando com o Android 8.0 [canais de notificação](#notif-chan) são usados para controlar como as notificações são apresentadas ao usuário.
 
 
 ### <a name="expanded-layouts"></a>Layouts expandidos
@@ -752,7 +753,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 }
 ```
 
-Neste exemplo, o aplicativo **estrutura de destino** é definido como Android 5.0 e o **versão mínima do Android** está definido como **Android 4.1 (API nível 16)**. Porque `SetCategory` está disponível no nível da API 21 e versões posterior, esse código de exemplo chamará `SetCategory` apenas quando ele está disponível &ndash; chamará não `SetCategory` quando o nível de API é menor que 21.
+Neste exemplo, o aplicativo **estrutura de destino** é definido como Android 5.0 e o **versão mínima do Android** está definido como **Android 4.1 (API nível 16)** . Porque `SetCategory` está disponível no nível da API 21 e versões posterior, esse código de exemplo chamará `SetCategory` apenas quando ele está disponível &ndash; chamará não `SetCategory` quando o nível de API é menor que 21.
 
 
 ### <a name="lock-screen-visibility"></a>Visibilidade da tela de bloqueio

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 3d8e69af7f790415343abf464ea2bb22e879e025
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 089ada051b6780a15acfcdd7f9e32ddda1384d05
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61170750"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832045"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Restrições de Layout programáticas no xamarin. IOS
 
@@ -119,10 +119,10 @@ Ao contrário de com a API de âncora de Layout, o `NSLayoutConstraint` métodos
 O idioma do formato Visual permite que você defina restrições usando arte ASCII, como cadeias de caracteres que fornecem uma representação visual da restrição que está sendo criada. Isso tem as seguintes vantagens e desvantagens:
 
 - A linguagem Visual do formato impõe a criação de restrições válidas somente.
- - Layout automático gera restrições no console usando o idioma do formato Visual, portanto, as mensagens de depuração serão parecida com o código usado para criar a restrição.
- - O idioma do formato Visual permite que você crie várias restrições ao mesmo tempo com uma expressão muito compacta.
- - Como não há nenhuma validação de compilação lado das cadeias de caracteres de idioma de formato Visual, problemas só podem ser detectados em tempo de execução.
- - Uma vez que o idioma do formato Visual enfatiza a visualização sobre integridade de que alguns tipos de restrição não podem ser criados com ele (como taxas).
+- Layout automático gera restrições no console usando o idioma do formato Visual, portanto, as mensagens de depuração serão parecida com o código usado para criar a restrição.
+- O idioma do formato Visual permite que você crie várias restrições ao mesmo tempo com uma expressão muito compacta.
+- Como não há nenhuma validação de compilação lado das cadeias de caracteres de idioma de formato Visual, problemas só podem ser detectados em tempo de execução.
+- Uma vez que o idioma do formato Visual enfatiza a visualização sobre integridade de que alguns tipos de restrição não podem ser criados com ele (como taxas).
 
 Ao usar o idioma de formato Visual para criar uma restrição, você executar as seguintes etapas:
 

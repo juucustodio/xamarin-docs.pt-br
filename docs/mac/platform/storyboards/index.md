@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 166a50021c22aa09be3eecdb8b745a70e75c3d51
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8a5a2f87c16a5dd040cefb2fbc615b01431ebcf5
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031433"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832298"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introdução ao Storyboards no xamarin. Mac
 
@@ -56,9 +56,9 @@ Dessa forma, cada controlador de exibição é um emparelhamento reutilizável, 
 
 Dentro de uma cena determinada, você pode fazer todas as coisas que normalmente seriam terem sido manipuladas por indivíduo `.xib` arquivos: 
 
- - Local subviews e controles (como botões e caixas de texto).
- - Defina posições de elemento e restrições do layout automático.
- - Wire-up ações e as saídas para expor elementos de interface do usuário ao código.
+- Local subviews e controles (como botões e caixas de texto).
+- Defina posições de elemento e restrições do layout automático.
+- Wire-up ações e as saídas para expor elementos de interface do usuário ao código.
 
 <a name="Working-with-Segues" />
 

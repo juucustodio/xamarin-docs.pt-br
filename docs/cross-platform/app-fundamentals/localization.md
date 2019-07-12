@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4799d6aaa095127e242c5e0750db686519d0c21d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a1218d836aad827390d9f5e70de189a869b7c6b8
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61226509"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830995"
 ---
 # <a name="localization"></a>Localização
 
@@ -36,12 +36,12 @@ Internacionalização que é muitas vezes abreviada para i18n – uma abreviaç�
 Este documento apresenta os conceitos associados à internacionalização e localização, e como elas se aplicam em geral ao desenvolvimento de aplicativos móveis.
 Ao projetar e criar um aplicativo, as coisas que você pode ter anteriormente embutidos em código mas que deve ser parametrizado para localização incluem:
 
--   Layouts de tela e texto,
--   Ícones, gráficos e cores,
--   Arquivos de som e vídeo
--   Texto dinâmico e a formatação de texto (como números, moeda e datas),
- - As alterações de layout para idiomas do direita para esquerda (RTL), e
--   Classificação de dados.
+- Layouts de tela e texto,
+- Ícones, gráficos e cores,
+- Arquivos de som e vídeo
+- Texto dinâmico e a formatação de texto (como números, moeda e datas),
+- As alterações de layout para idiomas do direita para esquerda (RTL), e
+- Classificação de dados.
 
 Independentemente de qual plataformas móveis, seu aplicativo for destinado a estas dicas ajudarão você compilar um aplicativo localizado de alta qualidade.
 
@@ -81,9 +81,9 @@ Escreva suas regras de validação com internacionalização, lembre-se – esco
 Nem toda imagem precisa ser alterado com base na preferência de idioma do usuário. Vários ícones ou fotos será adequado para todos os usuários, não importa qual linguagem que elas falam.
 Alguns recursos fazem sentido para localizar no entanto, tais como:
 
- - Imagens que descrevam as pessoas ou locais específicos – seu aplicativo pode se sentir mais relevante para os usuários se ele mostra o local de pessoas/locais.
- - Ícones – alguns iconografia pode ser específicas da cultura e você pode tornar mais fácil de usar Localizando as imagens para refletir o local Noções básicas sobre seu aplicativo.
- - Cores – algumas culturas entender as cores de forma diferente – vermelho pode significar aviso em uma região, mas a boa sorte em outro. Verifique com alto-falantes nativos ao projetar seu aplicativo para determinar se você deve criar um mecanismo para localizar as cores.
+- Imagens que descrevam as pessoas ou locais específicos – seu aplicativo pode se sentir mais relevante para os usuários se ele mostra o local de pessoas/locais.
+- Ícones – alguns iconografia pode ser específicas da cultura e você pode tornar mais fácil de usar Localizando as imagens para refletir o local Noções básicas sobre seu aplicativo.
+- Cores – algumas culturas entender as cores de forma diferente – vermelho pode significar aviso em uma região, mas a boa sorte em outro. Verifique com alto-falantes nativos ao projetar seu aplicativo para determinar se você deve criar um mecanismo para localizar as cores.
 
 
 ### <a name="videos-and-sound"></a>Vídeos e som
@@ -120,10 +120,10 @@ Consulte a [Analisando cadeias de caracteres numéricas](https://msdn.microsoft.
 Algumas linguagens, como árabe, hebraico e Urdu (por exemplo), são lidos da direita para esquerda.
 Os aplicativos que dão suporte a esses idiomas devem usar designs de tela que se adaptam para os leitores da direita para esquerda, por exemplo:
 
- - Texto deve ser alinhado à direita.
- - Rótulos devem aparecer à direita dos campos de entrada.
- - Posicionamento de botão padrão geralmente é revertido.
- - Passar o dedo Navegação hierárquica e animação (e outros metáforas de navegação e animações) que usam a direção de contexto também deve ser invertido.
+- Texto deve ser alinhado à direita.
+- Rótulos devem aparecer à direita dos campos de entrada.
+- Posicionamento de botão padrão geralmente é revertido.
+- Passar o dedo Navegação hierárquica e animação (e outros metáforas de navegação e animações) que usam a direção de contexto também deve ser invertido.
 
 IOS e Android dão suporte a layouts da direita para esquerda e a renderização da fonte, com recursos internos que ajudam a fazer os ajustes acima. Automaticamente no momento, o xamarin. Forms não oferece suporte para a renderização de RTL.
 
@@ -139,10 +139,10 @@ Consulte a [detalhes de comparação de cadeia de caracteres](https://msdn.micro
 
 Verifique se você escrever e testar seu algoritmo de pesquisa com vários idiomas em mente. Pontos a serem considerados incluem:
 
- - Preenchimento automático – se você tiver criado uma função de preenchimento automático garantem a fontes de sugestões relevantes para o idioma do usuário.
- - A consulta correspondente aos dados – pesquisará consultas inseridas em uma determinada linguagem ser executadas em relação ao conteúdo apenas, escritos nessa linguagem, ou em relação a todo o conteúdo em seu aplicativo?
- - Lematização – se a pesquisa é criada para procurar palavras semelhantes, raízes do word e outras otimizações de pesquisa, é essas otimizações criadas para todos os idiomas que você oferece suporte?
- - Classificação – Verifique se os resultados são classificados corretamente (consulte acima).
+- Preenchimento automático – se você tiver criado uma função de preenchimento automático garantem a fontes de sugestões relevantes para o idioma do usuário.
+- A consulta correspondente aos dados – pesquisará consultas inseridas em uma determinada linguagem ser executadas em relação ao conteúdo apenas, escritos nessa linguagem, ou em relação a todo o conteúdo em seu aplicativo?
+- Lematização – se a pesquisa é criada para procurar palavras semelhantes, raízes do word e outras otimizações de pesquisa, é essas otimizações criadas para todos os idiomas que você oferece suporte?
+- Classificação – Verifique se os resultados são classificados corretamente (consulte acima).
 
 
 ### <a name="data-from-external-sources"></a>Dados de fontes externas
@@ -151,9 +151,9 @@ Muitos aplicativos baixar dados de fontes externas, do Twitter e RSS feeds ao cl
 
 Há algumas estratégias que você pode usar para tentar e garantir que seu aplicativo exibe os dados relevantes para o usuário:
 
- - Fontes diferentes – seu aplicativo pode baixar os dados de uma fonte diferente dependendo do idioma ou localidade do usuário. Preços de notícias, clima e estoque de localidade podem fazer mais sentido que algo baixado de um feed na América do Norte.
- - Modo de exibição localizado – se você estiver exibindo um Twitter ou uma foto do feed, você deve exibir os metadados (como o tempo gasto) em seu próprio idioma, mesmo se o conteúdo em si permanece no idioma original.
- - Tradução – você pode criar uma opção de conversão em seu aplicativo faça uma tradução de dados de entrada. Isso pode ser automático ou a critério do usuário – não se esqueça de notificar o usuário se isso estiver ocorrendo, já que as traduções de máquina nunca são perfeitas!
+- Fontes diferentes – seu aplicativo pode baixar os dados de uma fonte diferente dependendo do idioma ou localidade do usuário. Preços de notícias, clima e estoque de localidade podem fazer mais sentido que algo baixado de um feed na América do Norte.
+- Modo de exibição localizado – se você estiver exibindo um Twitter ou uma foto do feed, você deve exibir os metadados (como o tempo gasto) em seu próprio idioma, mesmo se o conteúdo em si permanece no idioma original.
+- Tradução – você pode criar uma opção de conversão em seu aplicativo faça uma tradução de dados de entrada. Isso pode ser automático ou a critério do usuário – não se esqueça de notificar o usuário se isso estiver ocorrendo, já que as traduções de máquina nunca são perfeitas!
 
 Isso também pode afetar os links externos para faixas de áudio ou vídeos – ao projetar seu aplicativo não se esqueça de planejar com antecedência para fornecimento traduzida conteúdo ou garantir que os usuários serão informados adequadamente pela interface do usuário quando o conteúdo não aparecerá na sua idioma.
 
@@ -162,10 +162,10 @@ Isso também pode afetar os links externos para faixas de áudio ou vídeos – 
 
 Algumas cadeias de caracteres em seu aplicativo podem não precisar converter ou na pior das hipóteses precisam de atenção especial pelo conversor. Os exemplos podem incluir:
 
- - URLs – se você listar uma URL, ele pode ou talvez não precise ser ajustado por idioma. Por exemplo, facebook.com não requer conversão ele detecta automaticamente o idioma no site principal. Outros sites possuem conteúdo específico da localidade e você talvez queira oferecer uma URL diferente, como yahoo.com versus yahoo.fr ou yahoo.it.
- - Números de telefone – especialmente aqueles com códigos de país diferentes ou números para chamadores que falam um determinado idioma.
- - Detalhes de contato – endereços e outras informações podem variar por idioma ou localidade.
- - Marcas comerciais e nomes de produto – algumas cadeias de caracteres não é necessário converter porque eles sempre são escritos no mesmo idioma.
+- URLs – se você listar uma URL, ele pode ou talvez não precise ser ajustado por idioma. Por exemplo, facebook.com não requer conversão ele detecta automaticamente o idioma no site principal. Outros sites possuem conteúdo específico da localidade e você talvez queira oferecer uma URL diferente, como yahoo.com versus yahoo.fr ou yahoo.it.
+- Números de telefone – especialmente aqueles com códigos de país diferentes ou números para chamadores que falam um determinado idioma.
+- Detalhes de contato – endereços e outras informações podem variar por idioma ou localidade.
+- Marcas comerciais e nomes de produto – algumas cadeias de caracteres não é necessário converter porque eles sempre são escritos no mesmo idioma.
 
 Por fim, certifique-se de incluir instruções detalhadas para o conversor, se determinadas cadeias de caracteres exigem tratamento especial.
 
@@ -264,16 +264,16 @@ Ou, mais precisamente, não reutilize cadeias de caracteres apenas porque elas s
 
 Por exemplo: imagine que você tem uma chave liga/desliga em seu aplicativo e o controle de switch precisa o texto para 'on' e 'off' deve ser localizado. Você também exibir o valor dessa configuração em outro lugar no aplicativo em um rótulo de texto. Você deve usar cadeias de caracteres diferentes para a exibição do comutador em comparação com o status da opção (mesmo se eles forem a mesma cadeia de caracteres em seu idioma padrão) – por exemplo:
 
--   "Ligado" – exibido no comutador em si
--   "Off" – exibidas no comutador em si
--   "Ligado" – exibido em um rótulo
--   "Off" – exibidas em um rótulo
+- "Ligado" – exibido no comutador em si
+- "Off" – exibidas no comutador em si
+- "Ligado" – exibido em um rótulo
+- "Off" – exibidas em um rótulo
 
 Isso fornece flexibilidade máxima para a tradução:
 
--   Por motivos de design, talvez a própria opção Use letras minúsculas de "on" e "desativado", mas o rótulo de exibição usa letras maiusculas "On" e "Desativado".
--   Algumas linguagens talvez seja necessário que o valor da opção deve ser abreviado para caber no controle de interface do usuário, enquanto a completar palavra (traduzida) pode aparecer no rótulo.
--   Como alternativa, para alguns idiomas a renderização de seu comutador pode ser usar "I" e "O" para cultura familiaridade, mas você ainda poderá ser necessário o rótulo a ser lido "On" ou "Desativado".
+- Por motivos de design, talvez a própria opção Use letras minúsculas de "on" e "desativado", mas o rótulo de exibição usa letras maiusculas "On" e "Desativado".
+- Algumas linguagens talvez seja necessário que o valor da opção deve ser abreviado para caber no controle de interface do usuário, enquanto a completar palavra (traduzida) pode aparecer no rótulo.
+- Como alternativa, para alguns idiomas a renderização de seu comutador pode ser usar "I" e "O" para cultura familiaridade, mas você ainda poderá ser necessário o rótulo a ser lido "On" ou "Desativado".
 
 ### <a name="translation-services"></a>Serviços de tradução
 

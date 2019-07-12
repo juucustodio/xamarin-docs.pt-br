@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
-ms.openlocfilehash: 9a18c97ba227615ae42529424b5c22b5e144f5e5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e7a383f899fab0400104493fa89b125788d610aa
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357856"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831332"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>Quais configurações do projeto são necessárias para o depurador?
 
@@ -30,6 +30,6 @@ Siga estas etapas para verificar as configurações de ambiente:
 1. Abrir as opções de projeto
 2. Vá para **Build > compilador > Opções gerais**. Definir informações de depuração para **completo**
 3. Configurações para cada plataforma:
-  - Vá para **Build > Build do Android > Opções de depuração**. Escala de **habilitar instrumentação do desenvolvedor** caixa.
-  - Vá para **Build > depuração do iOS**. Escala de **Ativar depuração** caixa.
+    - Vá para **Build > Build do Android > Opções de depuração**. Escala de **habilitar instrumentação do desenvolvedor** caixa.
+    - Vá para **Build > depuração do iOS**. Escala de **Ativar depuração** caixa.
 

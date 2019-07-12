@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d145a8a3cd8bc321f0fce76a8831fca681ad29a0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61077680"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830584"
 ---
 # <a name="cardview"></a>CardView
 
@@ -174,8 +174,8 @@ Observe que esses atributos (exceto para a cor do plano de fundo) aceitam um val
 
 
 #### <a name="padding"></a>Enchimento
-`
-CardView` oferece cinco atributos de preenchimento para posicionar o conteúdo dentro do cartão. Você pode defini-las em seu layout de XML ou você pode chamar métodos análogos no seu código:
+
+`CardView` oferece cinco atributos de preenchimento para posicionar o conteúdo dentro do cartão. Você pode defini-las em seu layout de XML ou você pode chamar métodos análogos no seu código:
 
 [![Diagrama de widgets CardView atributos de preenchimento](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 

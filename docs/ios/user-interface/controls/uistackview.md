@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: e9c18920386cb58f152d7631c52240b4b5b72ff9
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 88496452595f308c97d26d0f27fae305baef894f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977851"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830822"
 ---
 # <a name="stack-views-in-xamarinios"></a>Modos de exibição de pilha no xamarin. IOS
 
@@ -197,16 +197,16 @@ Enquanto o modo de exibição de pilha tem total controle sobre o layout de qual
 
 Em geral, isso significa que pelo menos duas bordas de exibição de pilha para expandir e contrair, definindo, portanto, sua posição de fixação. Sem nenhuma restrição adicional, o modo de exibição de pilha será redimensionado automaticamente para atender a todas as suas subexibições da seguinte maneira:
 
- - O tamanho ao longo de seu `Axis` será a soma de todos os tamanhos de modo de exibição secundário além de qualquer espaço que foi definido entre cada modo de exibição secundário.
- - Se o `LayoutMarginsRelativeArrangement` é de propriedade `true`, o tamanho da pilha de modos de exibição também incluirá o espaço para as margens.
- - O tamanho perpendicular ao `Axis` será definido como o modo de exibição secundário maior na coleção.
+- O tamanho ao longo de seu `Axis` será a soma de todos os tamanhos de modo de exibição secundário além de qualquer espaço que foi definido entre cada modo de exibição secundário.
+- Se o `LayoutMarginsRelativeArrangement` é de propriedade `true`, o tamanho da pilha de modos de exibição também incluirá o espaço para as margens.
+- O tamanho perpendicular ao `Axis` será definido como o modo de exibição secundário maior na coleção.
 
 Além disso, você pode especificar restrições para o modo de exibição de pilha **altura** e **largura**. Nesse caso, as subexibições serão dispostas (tamanho) para preencher o espaço especificado pela exibição de pilha, conforme determinado pela `Distribution` e `Alignment` propriedades.
 
 Se o `BaselineRelativeArrangement` é de propriedade `true`, as subexibições serão dispostas com base na linha de base do subexibição primeiro ou último, em vez de usar o **superior**, **inferior** ou **Center** -  **Y** posição. Eles são calculados sobre o conteúdo do modo de exibição de pilha da seguinte maneira:
 
- - Um modo de exibição de pilha Vertical retornará o primeiro modo de exibição de secundário para a primeira linha de base e o último para o último. Se alguma desses subexibições é próprios modos de exibição de pilha, em seguida, sua linha de base do primeira ou última será usada.
- - Um modo de exibição de pilha Horizontal usará sua subexibição mais alta para ambas as primeira e a última linha de base. Se o modo de exibição mais alto também é uma exibição de pilha, ele usará subexibição mais alta é como a linha de base.
+- Um modo de exibição de pilha Vertical retornará o primeiro modo de exibição de secundário para a primeira linha de base e o último para o último. Se alguma desses subexibições é próprios modos de exibição de pilha, em seguida, sua linha de base do primeira ou última será usada.
+- Um modo de exibição de pilha Horizontal usará sua subexibição mais alta para ambas as primeira e a última linha de base. Se o modo de exibição mais alto também é uma exibição de pilha, ele usará subexibição mais alta é como a linha de base.
 
 > [!IMPORTANT]
 > Alinhamento da linha de base não funciona em tamanhos de subexibição ampliada ou compactado como a linha de base será calculada para a posição errada. Para o alinhamento da linha de base, certifique-se de que o modo de exibição de secundário **altura** coincide com a exibição de conteúdo intrínseco **altura**.
@@ -216,9 +216,9 @@ Se o `BaselineRelativeArrangement` é de propriedade `true`, as subexibições s
 Há vários tipos de layout que funcionam bem com controles de exibição de pilha. De acordo com a Apple, aqui estão alguns dos usos mais comuns:
 
 - **Definir o tamanho ao longo do eixo** – fixando ambas as bordas ao longo do modo de exibição de pilha `Axis` e uma das bordas adjacentes para definir a posição, a pilha de modo de exibição aumentará ao longo do eixo de acordo com o espaço definido por suas subexibições.
- -  **Definir a posição do modo de exibição de secundário** – fixando bordas adjacentes da exibição da pilha para exibição do pai, o modo de exibição de pilha aumentará em ambas as dimensões de acordo com seu recipiente subexibições.
+- **Definir a posição do modo de exibição de secundário** – fixando bordas adjacentes da exibição da pilha para exibição do pai, o modo de exibição de pilha aumentará em ambas as dimensões de acordo com seu recipiente subexibições.
 - **Definir o tamanho e posição da pilha** – fixando todas as quatro bordas do modo de exibição de pilha para o modo de exibição de pai, o modo de exibição de pilha organiza as subexibições com base no espaço de definido dentro da exibição de pilha.
- -  **Definir o tamanho Perpendicular do eixo** – fixando perpendicular ambas as bordas no modo de exibição de pilha `Axis` e uma das bordas ao longo do eixo para definir a posição, a pilha de modo de exibição crescerá perpendicular ao eixo de acordo com o espaço definido por seu subexibições.
+- **Definir o tamanho Perpendicular do eixo** – fixando perpendicular ambas as bordas no modo de exibição de pilha `Axis` e uma das bordas ao longo do eixo para definir a posição, a pilha de modo de exibição crescerá perpendicular ao eixo de acordo com o espaço definido por seu subexibições.
 
 ### <a name="managing-the-appearance"></a>Gerenciando a aparência
 
@@ -241,14 +241,14 @@ Você pode ajustar ainda mais a aparência de interfaces do usuário adicionando
 
 O modo de exibição de pilha para garantir que seu `ArrangedSubviews` propriedade é sempre um subconjunto de seus `Subviews` propriedade usando as seguintes regras:
 
- - Se um modo de exibição secundário for adicionado à `ArrangedSubviews` coleta, ele será automaticamente adicionado para o `Subviews` coleção (a menos que ele já é parte da coleção).
- - Se um modo de exibição secundário é removido do `Subviews` coleção (removida da exibição), ele também é removido do `ArrangedSubviews` coleção.
- - Removendo um modo de exibição secundário do `ArrangedSubviews` coleção não o remove do `Subviews` coleção. Portanto, ele não será disposto pela exibição de pilha, mas ainda estarão visível na tela.
+- Se um modo de exibição secundário for adicionado à `ArrangedSubviews` coleta, ele será automaticamente adicionado para o `Subviews` coleção (a menos que ele já é parte da coleção).
+- Se um modo de exibição secundário é removido do `Subviews` coleção (removida da exibição), ele também é removido do `ArrangedSubviews` coleção.
+- Removendo um modo de exibição secundário do `ArrangedSubviews` coleção não o remove do `Subviews` coleção. Portanto, ele não será disposto pela exibição de pilha, mas ainda estarão visível na tela.
 
 O `ArrangedSubviews` coleção sempre é um subconjunto do `Subview` coleção, no entanto a ordem das subexibições individuais dentro de cada coleção é separada e controlado pelo seguinte:
 
- - A ordem das subexibições dentro a `ArrangedSubviews` coleção determinar sua ordem de exibição dentro da pilha.
- - A ordem das subexibições dentro a `Subview` coleção determina sua ordem Z (ou a disposição em camadas) no modo de exibição para a frente.
+- A ordem das subexibições dentro a `ArrangedSubviews` coleção determinar sua ordem de exibição dentro da pilha.
+- A ordem das subexibições dentro a `Subview` coleção determina sua ordem Z (ou a disposição em camadas) no modo de exibição para a frente.
 
 ### <a name="dynamically-changing-content"></a>Alterar dinamicamente o conteúdo
 

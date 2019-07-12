@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 306cce581eb1506e770222ea10e160c4fdbe1b29
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 206379b162c7778663ee2baf64dfeb1d33666ab4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827491"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831459"
 ---
 # <a name="binding-objective-c-libraries"></a>Associação de bibliotecas de Objective-C
 
@@ -267,7 +267,7 @@ string Text { get; [NullAllowed] set; }
 As seguintes condições devem ser consideradas ao configurar a associação para um controle personalizado:
 
 1. **Propriedades de associação devem ser estáticas** - ao definir a associação de propriedades, o [ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute) atributo deve ser usado.
- 2. **Nomes de propriedade devem corresponder exatamente** -o nome usado para associar a propriedade deve corresponder exatamente ao nome da propriedade no controle personalizado.
+2. **Nomes de propriedade devem corresponder exatamente** -o nome usado para associar a propriedade deve corresponder exatamente ao nome da propriedade no controle personalizado.
 3. **Tipos de propriedade devem corresponder exatamente** -o tipo de variável usado para associar a propriedade deve corresponder exatamente o tipo da propriedade no controle personalizado.
 4. **Pontos de interrupção e o getter/setter** – pontos de interrupção colocado no getter ou métodos setter da propriedade nunca serão atingidos.
 5. **Observar os retornos de chamada** -você precisará usar retornos de chamada de Observação para ser notificado de alterações nos valores de propriedade de controles personalizados.

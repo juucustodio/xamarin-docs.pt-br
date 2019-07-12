@@ -6,12 +6,12 @@ ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 471029375d8a61a6c48d94a66d7836807e0da22f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 46a028da577a4c49e18cccb681351d7614bb196b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386300"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832652"
 ---
 # <a name="urhosharp-windows-support"></a>Suporte do Windows do UrhoSharp
 
@@ -25,7 +25,7 @@ Você pode ver exemplos completos que mostram como usar isso em nosso [exemplos]
 
 ## <a name="standalone-project"></a>Projeto autônomo
 
-### <a name="creating-a-project"></a>Criando um projeto
+### <a name="creating-a-project"></a>Criar um projeto
 
 Criar um projeto de Console, o Urho NuGet de referência e, em seguida, certifique-se de que você pode localizar os ativos (os diretórios que contém o diretório de dados).
 
@@ -44,7 +44,7 @@ new MyGame().Run();
 
 ## <a name="integrated-with-wpf"></a>Integrado com o WPF
 
-### <a name="creating-a-project"></a>Criando um projeto
+### <a name="creating-a-project"></a>Criar um projeto
 
 Criar um projeto WPF, o Urho NuGet de referência e, em seguida, certifique-se de que você pode localizar os ativos (os diretórios que contém o diretório de dados).
 
@@ -88,7 +88,7 @@ Criar uma subclasse de `Window` e configurar seus ativos como este:
 
 ## <a name="integrated-with-uwp"></a>Integrado com a UWP
 
-### <a name="creating-a-project"></a>Criando um projeto
+### <a name="creating-a-project"></a>Criar um projeto
 
 Crie um projeto UWP, o Urho NuGet de referência e, em seguida, certifique-se de que você pode localizar os ativos (os diretórios que contém o diretório de dados).
 
@@ -97,33 +97,33 @@ Crie um projeto UWP, o Urho NuGet de referência e, em seguida, certifique-se de
 Criar uma subclasse de `Window` e configurar seus ativos como este:
 
 ```csharp
-{
-            InitializeComponent();
-            GameTypes = typeof(Sample).GetTypeInfo().Assembly.GetTypes()
-                .Where(t => t.GetTypeInfo().IsSubclassOf(typeof(Application)) && t != typeof(Sample))
-                .Select((t, i) => new TypeInfo(t, $"{i + 1}. {t.Name}", ""))
-                .ToArray();
-            DataContext = this;
-            Loaded += (s, e) => RunGame (new MyGame ());
-        }
-
-        public void RunGame(TypeInfo value)
-        {
-            //at this moment, UWP supports assets only in pak files (see PackageTool)
-            currentApplication = UrhoSurface.Run(value.Type, "Data.pak");
-        }
+    {
+        InitializeComponent();
+        GameTypes = typeof(Sample).GetTypeInfo().Assembly.GetTypes()
+            .Where(t => t.GetTypeInfo().IsSubclassOf(typeof(Application)) && t != typeof(Sample))
+            .Select((t, i) => new TypeInfo(t, $"{i + 1}. {t.Name}", ""))
+            .ToArray();
+        DataContext = this;
+        Loaded += (s, e) => RunGame (new MyGame ());
     }
+
+    public void RunGame(TypeInfo value)
+    {
+        //at this moment, UWP supports assets only in pak files (see PackageTool)
+        currentApplication = UrhoSurface.Run(value.Type, "Data.pak");
+    }
+}
 ```
 
 ### <a name="example"></a>Exemplo
 
 [Exemplo completo](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 
-## <a name="integrated-with-windowsforms"></a>Integrado ao Windows. Forms
+## <a name="integrated-with-windows-forms"></a>Integrado com o Windows Forms
 
-### <a name="creating-a-project"></a>Criando um projeto
+### <a name="creating-a-project"></a>Criar um projeto
 
-Criar um projeto do Windows. Forms, o Urho NuGet de referência e, em seguida, certifique-se de que você pode localizar os ativos (os diretórios que contém o diretório de dados).
+Criar um projeto Windows Forms, o Urho NuGet de referência e, em seguida, certifique-se de que você pode localizar os ativos (os diretórios que contém o diretório de dados).
 
 ### <a name="configuring-and-launching-urho-from-windowsforms"></a>Configurando e iniciando Urho do Windows. Forms
 

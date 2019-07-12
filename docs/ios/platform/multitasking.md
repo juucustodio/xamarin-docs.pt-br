@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 6a9c66720aeb97c5b894cbea42c6cc0c5285c67d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 888e00fbdbf30b5b2842bc30822a55f57372eb34
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978623"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831817"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarefa para iPad em xamarin. IOS
 
@@ -48,10 +48,10 @@ Este artigo abordará as etapas necessárias para garantir que seu aplicativo xa
 
 Para dar suporte à **Deslizar ao longo** ou **modo de exibição dividido** seu aplicativo deve fazer o seguinte:
 
- - Ser criado em relação a iOS 9 (ou posterior).
- - Usar um Storyboard para sua tela de inicialização (e não ativos de imagem).
- - Use um Storyboard com layout automático e Classes de tamanho para sua interface do usuário.
- - Suporte a todos os 4 iOS orientações do dispositivo (retrato, retrato de cabeça para baixo, esquerda paisagem e paisagem direita).
+- Ser criado em relação a iOS 9 (ou posterior).
+- Usar um Storyboard para sua tela de inicialização (e não ativos de imagem).
+- Use um Storyboard com layout automático e Classes de tamanho para sua interface do usuário.
+- Suporte a todos os 4 iOS orientações do dispositivo (retrato, retrato de cabeça para baixo, esquerda paisagem e paisagem direita).
 
 <a name="Multitasking" />
 
@@ -242,9 +242,9 @@ Na maioria das situações, seu aplicativo deve permitir que o usuário executar
 
 Para recusar a reprodução de vídeo do PIP, faça o seguinte em seu aplicativo:
 
- - Se você estiver usando um `AVPlayerViewController` para exibir o vídeo, defina a `AllowsPictureInPicturePlayback` propriedade `false`.
- - Se você estiver usando o `AVPlayerLayer` para exibir o vídeo, não instancie um `AVPictureInPictureController`.
- - Se você estiver usando um `WKWebView` para exibir o vídeo, defina a `AllowsPictureInPictureMediaPlayback` propriedade `false`.
+- Se você estiver usando um `AVPlayerViewController` para exibir o vídeo, defina a `AllowsPictureInPicturePlayback` propriedade `false`.
+- Se você estiver usando o `AVPlayerLayer` para exibir o vídeo, não instancie um `AVPictureInPictureController`.
+- Se você estiver usando um `WKWebView` para exibir o vídeo, defina a `AllowsPictureInPictureMediaPlayback` propriedade `false`.
 
 <a name="Summary" />
 

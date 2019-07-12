@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: ebf0f21ed57b7d436721018abb2dca329b56baa4
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: e9aed82ef0db9de35bd4cffe7daebcaa9389e42e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194969"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832132"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Store dados em um banco de dados Local SQLite.NET
 
@@ -177,7 +177,21 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            //...
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
     ```
@@ -380,7 +394,21 @@ Você deve concluir com êxito a [guia de início rápido anterior](multi-page.m
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
     ```

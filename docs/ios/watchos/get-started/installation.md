@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb8aabb3649da3818c1b020508b78a03f513963b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218306"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830680"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalar e usar o watchOS no Xamarin
 
@@ -144,7 +144,7 @@ Você pode iniciar aplicativos do watch no simulador usando o Visual Studio para
 
 Há dois modos para iniciar um aplicativo WatchKit:
 
- - modo de aplicativo normal (padrão), e
+- modo de aplicativo normal (padrão), e
 - [Notificações](~/ios/watchos/platform/notifications.md) (que exige uma carga de notificação de teste no formato JSON).
 
 ### <a name="xcode-8-support"></a>Suporte ao Xcode 8
@@ -178,8 +178,9 @@ Por padrão, um aplicativo de inspeção é iniciado no modo normal **app** mode
 
 Ao usar o Xcode 6, somente o iPhone 5, iPhone 5S, iPhone 6 e iPhone 6 Plus pode ativar o monitor externo para uma **Apple Watch - 38mm** ou **Apple Watch - 42mm** onde estarão os aplicativos do watch exibido.
 
-**Observação:** Lembre-se de que a tela de inspeção não aparecem automaticamente no simulador de iOS ao usar o Xcode 6.
-Use o **Hardware > monitores externos** menu para mostrar a tela de inspeção.
+> [!NOTE]
+> Lembre-se de que a tela de inspeção não aparecem automaticamente no simulador de iOS ao usar o Xcode 6.
+> Use o **Hardware > monitores externos** menu para mostrar a tela de inspeção.
 
 <a name="custommodes" />
 
@@ -212,8 +213,8 @@ Lembre-se fornecer um arquivo JSON de notificação durante a depuração no mod
 
 ![](installation-images/debug-sml.png "Esta captura de tela mostra um ponto de interrupção de depuração está sendo atingido em um aplicativo de inspeção")
 
-Depois de seguir as instruções de inicialização você acabará com seu aplicativo de inspeção executando o **iOS Simulator (Watch)**.
-Para o modo de notificação, você pode selecionar **Depurar > Abrir Log do sistema** (**CMD + /**) e usar `Console.WriteLine` em seu código.
+Depois de seguir as instruções de inicialização você acabará com seu aplicativo de inspeção executando o **iOS Simulator (Watch)** .
+Para o modo de notificação, você pode selecionar **Depurar > Abrir Log do sistema** (**CMD + /** ) e usar `Console.WriteLine` em seu código.
 
 ### <a name="debugging-lifecycle-event-handlers"></a>Manipuladores de eventos de ciclo de vida de depuração
 

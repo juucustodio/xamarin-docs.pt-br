@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 02aeedd5498c47950e2fbc0d218de05bc0bb3204
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d83cdce7076eac5a022863b583ecb01346ae440a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61298957"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831092"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Aplicativos empresariais testes de unidade
 
@@ -170,7 +170,8 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 
 Esse teste de unidade gerará uma exceção, porque o [ `ListView` ](xref:Xamarin.Forms.ListView) controle não tem um evento chamado `OnItemTapped`. O `Assert.Throws<T>` é um método genérico onde `T` é o tipo da exceção esperada. O argumento passado para o `Assert.Throws<T>` método é uma expressão lambda que lançará a exceção. Portanto, o teste de unidade passará desde que a expressão lambda lançar um `ArgumentException`.
 
->💡 **Dica**: Evite escrever testes de unidade que examinar cadeias de caracteres de mensagem de exceção. Cadeias de caracteres de mensagem de exceção pode ser alterado ao longo do tempo e, portanto, os testes de unidade que dependem de sua presença são consideradas como frágil.
+> [!TIP]
+> Evite escrever testes de unidade que examinar cadeias de caracteres de mensagem de exceção. Cadeias de caracteres de mensagem de exceção pode ser alterado ao longo do tempo e, portanto, os testes de unidade que dependem de sua presença são consideradas como frágil.
 
 ### <a name="testing-validation"></a>Teste de validação
 

@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2bd68def0a29d4bb94f8cc66c8cbfa00add1700d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2def0a01bdd28af5eefb76afc19a0e49fd1df355
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60948135"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831560"
 ---
 # <a name="inspecting-live-applications"></a>Inspecionando aplicativos ativos
 
@@ -46,8 +46,8 @@ A árvore visual também é muito útil. Representa o instantâneo atual da sua 
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
- - Somente há suporte para seleção de exibição no vídeo principal.
- - Edição de grade de propriedade não está disponível para Mac e no Windows é limitada a alguns tipos de dados. Use o REPL para uma edição mais poderosa.
- - Desde que a extensão da addin Inspector é instalado e ativado no seu IDE, estamos injetando código no seu aplicativo sempre que for iniciado no modo de depuração. Se você observar qualquer comportamento estranho em seu aplicativo, por favor tente desabilitar ou desinstalar a extensão da addin Inspector, reiniciar o IDE e verificando novamente. E, por favor [arquivar bugs](~/tools/inspector/install.md#reporting-bugs) informe!
- - Se inspecionar um elemento de interface do usuário faz com que a mudança no mesmo assim, faça [Fale conosco](~/tools/inspector/install.md#reporting-bugs), pois isso pode indicar um bug.
+- Somente há suporte para seleção de exibição no vídeo principal.
+- Edição de grade de propriedade não está disponível para Mac e no Windows é limitada a alguns tipos de dados. Use o REPL para uma edição mais poderosa.
+- Desde que a extensão da addin Inspector é instalado e ativado no seu IDE, estamos injetando código no seu aplicativo sempre que for iniciado no modo de depuração. Se você observar qualquer comportamento estranho em seu aplicativo, por favor tente desabilitar ou desinstalar a extensão da addin Inspector, reiniciar o IDE e verificando novamente. E, por favor [arquivar bugs](~/tools/inspector/install.md#reporting-bugs) informe!
+- Se inspecionar um elemento de interface do usuário faz com que a mudança no mesmo assim, faça [Fale conosco](~/tools/inspector/install.md#reporting-bugs), pois isso pode indicar um bug.
 

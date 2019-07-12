@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 9deb685c92092ceb0e1c775a1e53ac1bce5a4a57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fbb4047b95fd70f829cd79e4ea26b2958273297
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61299962"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831175"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
 
@@ -72,7 +72,7 @@ O aplicativo de exemplo é fornecido com três aplicativos de cliente:
 -   Um aplicativo de página única (SPA) desenvolvidos com o Angular 2 e Typescript. Essa abordagem para aplicativos web evita executando uma ida e volta ao servidor com cada operação.
 -   Um aplicativo móvel desenvolvido com o xamarin. Forms, que dá suporte a iOS, Android e Universal Windows Platform (UWP).
 
-Para obter informações sobre os aplicativos web, consulte [projetar e desenvolver aplicativos Web modernos com o ASP.NET Core e Microsoft Azure](http://aka.ms/WebAppEbook).
+Para obter informações sobre os aplicativos web, consulte [projetar e desenvolver aplicativos Web modernos com o ASP.NET Core e Microsoft Azure](https://aka.ms/WebAppEbook).
 
 O aplicativo de exemplo inclui os seguintes serviços de back-end:
 

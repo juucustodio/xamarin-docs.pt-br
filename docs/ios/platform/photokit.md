@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: d59cac9403a244ce553d84e0590b8a9c3d4d2f30
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 78646a0a420820218a8c61ea34ecc5db4438a91d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61365818"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832732"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit no xamarin. IOS
 
@@ -71,9 +71,9 @@ Isso é como lidar com a consulta e leitura de dados. Você também pode escreve
     
 Para realmente gravar alterações de volta do seu aplicativo, você deve criar uma solicitação de alteração. Cada uma das classes de modelo tem uma classe de solicitação de alteração associada. Por exemplo, para alterar um PHAsset, crie um PHAssetChangeRequest. As etapas para realizar as alterações que são gravadas de volta a biblioteca de fotos e enviadas para observadores como a mostrada acima são:
 
--   Execute a operação de edição.
--   Salve os dados de imagem filtrada em uma instância de PHContentEditingOutput.
--   Fazer uma solicitação de alteração para publicar o formulário de alterações a saída de edição.
+- Execute a operação de edição.
+- Salve os dados de imagem filtrada em uma instância de PHContentEditingOutput.
+- Fazer uma solicitação de alteração para publicar o formulário de alterações a saída de edição.
 
 Aqui está um exemplo que grava uma alteração de volta para uma imagem que aplica um filtro de noir imagem principal:
 

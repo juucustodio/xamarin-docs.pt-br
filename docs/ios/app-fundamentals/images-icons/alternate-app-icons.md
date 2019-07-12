@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: cc5052c8988a27605cf7680a3853f80e7afd38b7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fc4ef6eb16893cc1df0d980d27af8589a280e933
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61170874"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832422"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Ícones de aplicativos alternativo no xamarin. IOS
 
@@ -20,10 +20,10 @@ _Este artigo aborda usando os ícones de aplicativos alternativo no xamarin. IOS
 
 Apple adicionou várias melhorias para o iOS 10.3 que permitem que um aplicativo gerenciar seu ícone:
 
- - `ApplicationIconBadgeNumber` -Obtém ou define o selo do ícone do aplicativo em do Springboard.
- - `SupportsAlternateIcons` -Se `true` o aplicativo tem um conjunto alternativo de ícones.
- - `AlternateIconName` -Retorna o nome do ícone alternativo selecionado no momento ou `null` se usando o ícone principal.
- - `SetAlternameIconName` -Use esse método para alternar o ícone do aplicativo para o ícone alternativo especificado.
+- `ApplicationIconBadgeNumber` -Obtém ou define o selo do ícone do aplicativo em do Springboard.
+- `SupportsAlternateIcons` -Se `true` o aplicativo tem um conjunto alternativo de ícones.
+- `AlternateIconName` -Retorna o nome do ícone alternativo selecionado no momento ou `null` se usando o ícone principal.
+- `SetAlternameIconName` -Use esse método para alternar o ícone do aplicativo para o ícone alternativo especificado.
 
 ![](alternate-app-icons-images/icons04.png "Um exemplo do alerta quando um aplicativo altera seu ícone")
 

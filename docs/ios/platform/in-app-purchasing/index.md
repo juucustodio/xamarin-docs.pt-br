@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4b301c18ea0e69c818cf65b3b7df1cc8351350f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4165f9e6c3088a41d6bd746b1912a64570c553a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61402449"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832551"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Compra no xamarin. IOS no aplicativo
 
@@ -34,17 +34,17 @@ Para dar suporte a compras no aplicativo, você deve usar o xamarin. IOS 5.0 ou 
 
 ## <a name="contents"></a>Conteúdo
 
- * [Noções básicas e configuração de compras no aplicativo](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+* [Noções básicas e configuração de compras no aplicativo](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [Visão geral de StoreKit e ao recuperar informações do produto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+* [Visão geral de StoreKit e ao recuperar informações do produto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
- * [Comprar produtos de consumo](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+* [Comprar produtos de consumo](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
- * [Comprar produtos não consumíveis](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+* [Comprar produtos não consumíveis](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
- * [Transações e verificação](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+* [Transações e verificação](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
- * [Assinaturas e relatórios](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+* [Assinaturas e relatórios](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 ## <a name="summary"></a>Resumo
 

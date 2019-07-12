@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6793190fa3278455a00d7ea08ab52a643c369a35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371375"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831540"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit no xamarin. IOS
 
@@ -384,77 +384,77 @@ Cada `HMService` objeto pode conter uma coleção de `HMCharacteristic` objetos 
 
 O `HMCharacteristicType` enum fornece um conjunto de valores de metadados de característica que pode ser definida ou modificada da seguinte maneira:
 
- - AdminOnlyAccess
- - AirParticulateDensity
- - AirParticulateSize
- - AirQuality
- - AudioFeedback
- - BatteryLevel
- - Brilho
- - CarbonDioxideDetected
- - CarbonDioxideLevel
- - CarbonDioxidePeakLevel
- - CarbonMonoxideDetected
- - CarbonMonoxideLevel
- - CarbonMonoxidePeakLevel
- - ChargingState
- - ContactState
- - CoolingThreshold
- - CurrentDoorState
- - CurrentHeatingCooling
- - CurrentHorizontalTilt
- - CurrentLightLevel
- - CurrentLockMechanismState
- - CurrentPosition
- - CurrentRelativeHumidity
- - CurrentSecuritySystemState
- - CurrentTemperature
- - CurrentVerticalTilt
- - FirmwareVersion
- - HardwareVersion
- - HeatingCoolingStatus
- - HeatingThreshold
- - HoldPosition
- - Matiz
- - Identificar
- - InputEvent
- - LeakDetected
- - LockManagementAutoSecureTimeout
- - LockManagementControlPoint
- - LockMechanismLastKnownAction
- - Logs
- - Fabricante
- - Modelo
- - MotionDetected
- - Nome
- - ObstructionDetected
- - OccupancyDetected
- - OutletInUse
- - OutputState
- - PositionState
- - PowerState
- - RotationDirection
- - RotationSpeed
- - saturação
- - SerialNumber
- - SmokeDetected
- - SoftwareVersion
- - StatusActive
- - StatusFault
- - StatusJammed
- - StatusLowBattery
- - StatusTampered
- - TargetDoorState
- - TargetHeatingCooling
- - TargetHorizontalTilt
- - TargetLockMechanismState
- - TargetPosition
- - TargetRelativeHumidity
- - TargetSecuritySystemState
- - TargetTemperature
- - TargetVerticalTilt
- - TemperatureUnits
- - Versão
+- AdminOnlyAccess
+- AirParticulateDensity
+- AirParticulateSize
+- AirQuality
+- AudioFeedback
+- BatteryLevel
+- Brilho
+- CarbonDioxideDetected
+- CarbonDioxideLevel
+- CarbonDioxidePeakLevel
+- CarbonMonoxideDetected
+- CarbonMonoxideLevel
+- CarbonMonoxidePeakLevel
+- ChargingState
+- ContactState
+- CoolingThreshold
+- CurrentDoorState
+- CurrentHeatingCooling
+- CurrentHorizontalTilt
+- CurrentLightLevel
+- CurrentLockMechanismState
+- CurrentPosition
+- CurrentRelativeHumidity
+- CurrentSecuritySystemState
+- CurrentTemperature
+- CurrentVerticalTilt
+- FirmwareVersion
+- HardwareVersion
+- HeatingCoolingStatus
+- HeatingThreshold
+- HoldPosition
+- Matiz
+- Identificar
+- InputEvent
+- LeakDetected
+- LockManagementAutoSecureTimeout
+- LockManagementControlPoint
+- LockMechanismLastKnownAction
+- Logs
+- Fabricante
+- Modelo
+- MotionDetected
+- Nome
+- ObstructionDetected
+- OccupancyDetected
+- OutletInUse
+- OutputState
+- PositionState
+- PowerState
+- RotationDirection
+- RotationSpeed
+- saturação
+- SerialNumber
+- SmokeDetected
+- SoftwareVersion
+- StatusActive
+- StatusFault
+- StatusJammed
+- StatusLowBattery
+- StatusTampered
+- TargetDoorState
+- TargetHeatingCooling
+- TargetHorizontalTilt
+- TargetLockMechanismState
+- TargetPosition
+- TargetRelativeHumidity
+- TargetSecuritySystemState
+- TargetTemperature
+- TargetVerticalTilt
+- TemperatureUnits
+- Versão
 
 ### <a name="working-with-a-characteristics-value"></a>Trabalhando com valor de uma característica
 
@@ -667,7 +667,7 @@ Deve alterar o estado da luz no simulador de Acessórios do HomeKit. Se o valor 
 Este artigo abordou os recursos básicos necessários para trabalhar com os acessórios do HomeKit em um aplicativo xamarin. IOS. No entanto, há vários recursos avançados do HomeKit que não são abordados nesta introdução:
 
 - **Salas** -Acessórios do HomeKit habilitada podem, opcionalmente, organizados em salas pelo usuário final. Isso permite que HomeKit presentes Acessórios de forma que seja fácil de entender e trabalhar com o usuário. Para obter mais informações sobre a criação e manutenção de ambientes, consulte da Apple [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) documentação.
-- **As zonas** -salas, opcionalmente, podem ser organizados em zonas pelo usuário final. Uma zona se refere a uma coleção de ambientes nos quais o usuário pode tratar como uma única unidade. Por exemplo: Quartinho, Downstairs ou porão. Novamente, isso permite que o HomeKit apresentar e trabalhar com os acessórios de uma maneira que faça sentido para o usuário final. Para obter mais informações sobre como criar e manter as zonas, consulte da Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) documentação.
+- **As zonas** -salas, opcionalmente, podem ser organizados em zonas pelo usuário final. Uma zona se refere a uma coleção de ambientes nos quais o usuário pode tratar como uma única unidade. Por exemplo:  Quartinho, Downstairs ou porão. Novamente, isso permite que o HomeKit apresentar e trabalhar com os acessórios de uma maneira que faça sentido para o usuário final. Para obter mais informações sobre como criar e manter as zonas, consulte da Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) documentação.
 - **Ações e ação define** -ações modificar características de acessório do serviço e podem ser agrupadas em conjuntos. Conjuntos de ações atuam como scripts para controlar um grupo de Acessórios e coordenar suas ações. Por exemplo, um script de "Assistir TV" talvez feche as janelas, dim as luzes e ativar a televisão e seu sistema de som. Para obter mais informações sobre como criar e manter conjuntos de ações e ações, consulte da Apple [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) e [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) documentação.
 - **Gatilhos** – um gatilho pode ativar um ou mais ação definida quando um determinado conjunto de condições foram atendidas. Por exemplo, ative a luz portch e bloquear todas as portas externas quando fica escuro fora. Para obter mais informações sobre como criar e manter os gatilhos, consulte da Apple [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) documentação.
 
@@ -677,9 +677,9 @@ Como esses recursos usam as mesmas técnicas apresentadas acima, eles devem ser 
 
 Antes de enviar um HomeKit habilitado aplicativo xamarin. IOS no iTunes Connect para lançamento na iTunes App Store, certifique-se de que você siga as diretrizes da Apple para aplicativos do HomeKit habilitado:
 
- - Objetivo de principal do aplicativo _deve_ ser automação residencial se usando a estrutura HomeKit.
- - Texto de marketing do aplicativo deve notificar os usuários que HomeKit está sendo usado e eles devem fornecer uma política de privacidade.
- - Coleta de informações do usuário ou usar o HomeKit para publicidade é estritamente proibida.
+- Objetivo de principal do aplicativo _deve_ ser automação residencial se usando a estrutura HomeKit.
+- Texto de marketing do aplicativo deve notificar os usuários que HomeKit está sendo usado e eles devem fornecer uma política de privacidade.
+- Coleta de informações do usuário ou usar o HomeKit para publicidade é estritamente proibida.
 
 Completo, examine as diretrizes, consulte da Apple [diretrizes de examinar da App Store](https://developer.apple.com/app-store/review/guidelines/).
 

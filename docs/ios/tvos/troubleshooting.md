@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 60b54ffdce5f6bda2324c08bd3159eefeb5bc7f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6830df267aa0b9c4f12fbd53520206ea94fc8a38
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270220"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831889"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solucionar problemas de aplicativos do tvOS criados com o Xamarin
 
@@ -40,7 +40,7 @@ As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usa
 
 ### <a name="invalid-executable---the-executable-does-not-contain-bitcode"></a>Executável inválido - o executável não contêm bitcode
 
-Ao tentar enviar um aplicativo xamarin. tvos para a Store de aplicativo da Apple TV, você poderá receber uma mensagem de erro no formulário _"Executável inválido - o executável não contêm bitcode"_.
+Ao tentar enviar um aplicativo xamarin. tvos para a Store de aplicativo da Apple TV, você poderá receber uma mensagem de erro no formulário _"Executável inválido - o executável não contêm bitcode"_ .
 
 Para resolver esse problema, faça o seguinte:
 
@@ -184,7 +184,7 @@ Durante a tentativa de incluir uma biblioteca de classe portátil (PCL) em um pr
 
 _Estrutura de destino incompatível:. NetPortable, versão = v4.5, perfil = Profile78_
 
-Para resolver esse problema, adicione um arquivo XML chamado ` Xamarin.TVOS.xml` com o seguinte conteúdo:
+Para resolver esse problema, adicione um arquivo XML chamado `Xamarin.TVOS.xml` com o seguinte conteúdo:
 
 ```xml
 <Framework Identifier="Xamarin.TVOS" MinimumVersion="1.0" Profile="*" DisplayName="Xamarin.TVOS"/>

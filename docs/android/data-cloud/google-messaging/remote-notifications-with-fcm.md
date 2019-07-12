@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 0c84f530f759285c2cfc71f60d7b6f80fba6a03d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a50a2014e28becacb2c9f4965b7f3377be57ab16
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018720"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830313"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notificações remotas com o Firebase Cloud Messaging
 
@@ -682,6 +682,7 @@ using System.Collections.Generic;
 Adicione o seguinte método à `MyFirebaseMessagingService`:
 
 <a name="sendnotification-method"></a>
+
 ```csharp
 void SendNotification(string messageBody, IDictionary<string, string> data)
 {
@@ -711,7 +712,7 @@ void SendNotification(string messageBody, IDictionary<string, string> data)
 
 Para distinguir esta notificação de notificações do plano de fundo, esse código marca notificações com um ícone que é diferente do ícone do aplicativo. Adicione o arquivo [ic\_stat\_ic\_notification.png](remote-notifications-with-fcm-images/ic-stat-ic-notification.png) para **recursos/drawable** e incluí-lo no **FCMClient** projeto .
 
-O `SendNotification` método usos ` NotificationCompat.Builder` para criar a notificação e `NotificationManagerCompat` é usado para iniciar a notificação. A notificação contém um `PendingIntent` que permitirá que o usuário abrir o aplicativo e exibir o conteúdo da cadeia de caracteres passada para `messageBody`. Para obter mais informações sobre `NotificationCompat.Builder`, consulte [notificações locais](~/android/app-fundamentals/notifications/local-notifications.md).
+O `SendNotification` método usos `NotificationCompat.Builder` para criar a notificação e `NotificationManagerCompat` é usado para iniciar a notificação. A notificação contém um `PendingIntent` que permitirá que o usuário abrir o aplicativo e exibir o conteúdo da cadeia de caracteres passada para `messageBody`. Para obter mais informações sobre `NotificationCompat.Builder`, consulte [notificações locais](~/android/app-fundamentals/notifications/local-notifications.md).
 
 Chame o `SendNotification` método no final do `OnMessageReceived` método:
 

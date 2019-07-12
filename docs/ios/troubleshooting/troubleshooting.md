@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 1a98cf854ffdd1d4904981f85fd8e33ad486743c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 38c0ece3e8f0361f3c891713e53b033351512f94
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61417368"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829916"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para xamarin. IOS 
 
@@ -109,7 +109,7 @@ Para corrigir isso, adicione a seguinte linha de código à classe Bar:
 ```csharp
 public Bar (IntPtr handle) : base (handle) { }
 ```
-## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>Tipo {Foo} não contém uma definição para `GetNativeField' and no extension method `GetNativeField' do tipo {Foo} foi encontrado
+## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>Tipo {Foo} não contém uma definição para `GetNativeField` e nenhum método de extensão `GetNativeField` do tipo {Foo} foi encontrado
 
 Se você receber esse erro nos arquivos gerados designer (*. xib.designer.cs), isso significa que uma das duas coisas:
 
@@ -366,7 +366,7 @@ Para corrigir isso, usando o SDK 4.0, vá para **opções de projeto -> Build ->
 A versão do SDK não deve ser confundida com a configuração de "Versão do sistema operacional mínimo".
 Esse valor não precisa corresponder ao valor de versão do SDK – ele afeta a versão mínima do sistema operacional de seu aplicativo será instalado, que pode ser mais antigo que o SDK, desde que você use apenas as APIs que existem no sistema operacional mais antigo ou se proteger o uso dos recursos mais novos usando Veri de versão do sistema operacional de tempo de execução ks. Você deve defini-lo para a versão mais antiga do sistema operacional em que você teste seu aplicativo.
 
-Observe também que o **projeto de destino do simulador do iPhone ->**> menu pode ser usado para escolher o simulador que é usado por padrão durante a execução/depuração de um projeto. Além disso, o **Executar -> executar com**> menu pode ser usado para escolher um simulador específico com o qual deve ser executado
+Observe também que o **projeto de destino do simulador do iPhone ->** > menu pode ser usado para escolher o simulador que é usado por padrão durante a execução/depuração de um projeto. Além disso, o **Executar -> executar com**> menu pode ser usado para escolher um simulador específico com o qual deve ser executado
 
 ## <a name="ibtool-returns-error-133"></a>ibtool retorna erro 133
 
@@ -389,14 +389,15 @@ Se você receber uma falha de tempo de execução (SIGSEGV) dentro do simulador,
 ```
 ... então você provavelmente terá uma (ou mais) assembly obsoleto no diretório do aplicativo simulador. Esses assemblies podem existir como Apple iOS simulator adiciona e atualiza os arquivos, mas nunca exclui-los. Se isso acontecer, em seguida, a solução mais fácil é selecionar "Redefinir e conteúdo e configurações..." no menu de simulador.   
 
-**Aviso:** isso removerá todos os arquivos, aplicativos e dados do simulador.   Próxima vez que executar seu aplicativo, o Visual Studio para Mac implantá-lo no simulador e não haverá nenhum assembly antigo e obsoleto para causar a falha.
+> [!WARNING]
+> Isso removerá todos os arquivos, aplicativos e dados do simulador.   Próxima vez que executar seu aplicativo, o Visual Studio para Mac implantá-lo no simulador e não haverá nenhum assembly antigo e obsoleto para causar a falha.
 
 ## <a name="simulator-hangs-during-application-installation"></a>Simulador congela durante a instalação do aplicativo
 
 Isso pode acontecer quando os nomes de aplicativo incluem um '.' (ponto) em seu nome.
 Isso é proibido como o nome do executável no CFBundleExecutable - mesmo que ele pode funciona em muitos outros casos (como dispositivos).
 
- * "O valor não deve incluir qualquer extensão no nome." - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+ \* "O valor não deve incluir qualquer extensão no nome." - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
 ## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Erro: "Não há suporte para o tipo de atributo personalizado 0x43" quando arquivos. XIB de clicar duas vezes
 

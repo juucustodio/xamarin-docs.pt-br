@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 4d0fc5c4ee3947de74a62e8c42fedb8aeedbfdd9
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: cc673077502e15894ce4c4519df051174feb7e8e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650624"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830921"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -56,7 +56,7 @@ Modos de exibição são objetos de interface do usuário, como rótulos, botõe
 
 |     |     |
 | --- | --- |
-| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView) exibe gráficos OpenGL em projetos do iOS e Android. Não há nenhum suporte para a plataforma Universal do Windows. Os projetos do iOS e Android exigem uma referência para o **OpenTK 1.0** assembly ou o **OpenTK** assembly versão 1.0.0.0. `OpenGLView` é mais fácil de usar em um projeto compartilhado; Se usado em uma biblioteca .NET Standard, uma dependência de serviço também será necessária (conforme mostrado no código de exemplo).<br /><br />Esse é o recurso de apenas gráficos que é incorporado ao xamarin. Forms, mas um aplicativo xamarin. Forms também pode renderizar elementos gráficos usando [ `CocosSharp` ](~/xamarin-forms/user-interface/graphics/cocossharp.md), [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), ou [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentação da API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Exemplo de OpenGLView](views-images/OpenGLView.png "exemplo OpenGLView")](views-images/OpenGLView-Large.png#lightbox "OpenGLView exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) com [de lógica](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView) exibe gráficos OpenGL em projetos do iOS e Android. Não há nenhum suporte para a plataforma Universal do Windows. Os projetos do iOS e Android exigem uma referência para o **OpenTK 1.0** assembly ou o **OpenTK** assembly versão 1.0.0.0. `OpenGLView` é mais fácil de usar em um projeto compartilhado; Se usado em uma biblioteca .NET Standard, uma dependência de serviço também será necessária (conforme mostrado no código de exemplo).<br /><br />Esse é o recurso de apenas gráficos que é incorporado ao xamarin. Forms, mas um aplicativo xamarin. Forms também pode renderizar elementos gráficos usando [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), ou [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentação da API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Exemplo de OpenGLView](views-images/OpenGLView.png "exemplo OpenGLView")](views-images/OpenGLView-Large.png#lightbox "OpenGLView exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) com [de lógica](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="map"></a>Mapa
@@ -163,7 +163,7 @@ Essas duas classes derivam a [ `InputView` ](xref:Xamarin.Forms.InputView) class
 
 |     |     |
 | --- | --- |
-| [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) usa uma animação para mostrar que o aplicativo está envolvido em uma atividade demorada sem fornecer nenhuma indicação de progresso. O [ `IsRunning` ](xref:Xamarin.Forms.ActivityIndicator.IsRunning) propriedade controla a animação.<br /><br />Se o progresso da atividade for conhecido, use uma [ `ProgressBar` ](#progressbar) em vez disso.<br /><br />[Documentação da API](xref:Xamarin.Forms.ActivityIndicator) | [![Exemplo de ActivityIndicator](views-images/ActivityIndicator.png "exemplo ActivityIndicator")](views-images/ActivityIndicator-Large.png#lightbox "ActivityIndicator exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ActivityIndicatorDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ActivityIndicatorDemoPage.xaml) |
+| [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) usa uma animação para mostrar que o aplicativo está envolvido em uma atividade demorada sem fornecer nenhuma indicação de progresso. O [ `IsRunning` ](xref:Xamarin.Forms.ActivityIndicator.IsRunning) propriedade controla a animação.<br /><br />Se o progresso da atividade for conhecido, use uma [ `ProgressBar` ](#progressbar) em vez disso.<br /><br />[Documentação da API](xref:Xamarin.Forms.ActivityIndicator) / [guia](~/xamarin-forms/user-interface/activityindicator.md) / [exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ActivityIndicatorDemos) | [![Exemplo de ActivityIndicator](views-images/ActivityIndicator.png "exemplo ActivityIndicator")](views-images/ActivityIndicator-Large.png#lightbox "ActivityIndicator exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ActivityIndicatorDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ActivityIndicatorDemoPage.xaml) |
 |     |     |
 
 <a name="progressbar" />
@@ -172,7 +172,7 @@ Essas duas classes derivam a [ `InputView` ](xref:Xamarin.Forms.InputView) class
 
 |     |     |
 | --- | --- |
-| [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) usa uma animação para mostrar que o aplicativo está em andamento através de uma atividade demorada. Defina as [ `Progress` ](xref:Xamarin.Forms.ProgressBar.Progress) propriedade para valores entre 0 e 1 para indicar o progresso.<br /><br />Se o progresso da atividade não for conhecido, use uma [ `ActivityIndicator` ](#activityindicator) em vez disso.<br /><br />[Documentação da API](xref:Xamarin.Forms.ProgressBar) | [![Exemplo de ProgressBar](views-images/ProgressBar.png "exemplo ProgressBar")](views-images/ProgressBar-Large.png#lightbox "exemplo ProgressBar")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ProgressBarDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml) com [de lógica](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml.cs) |
+| [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) usa uma animação para mostrar que o aplicativo está em andamento através de uma atividade demorada. Defina as [ `Progress` ](xref:Xamarin.Forms.ProgressBar.Progress) propriedade para valores entre 0 e 1 para indicar o progresso.<br /><br />Se o progresso da atividade não for conhecido, use uma [ `ActivityIndicator` ](#activityindicator) em vez disso.<br /><br />[Documentação da API](xref:Xamarin.Forms.ProgressBar) / [guia](~/xamarin-forms/user-interface/progressbar.md) / [exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ProgressBarDemos) | [![Exemplo de ProgressBar](views-images/ProgressBar.png "exemplo ProgressBar")](views-images/ProgressBar-Large.png#lightbox "exemplo ProgressBar")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ProgressBarDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml) com [de lógica](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml.cs) |
 |     |     |
 
 ## <a name="views-that-display-collections"></a>Exibições que mostram coleções

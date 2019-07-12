@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 86f41bf227b97ef24651f482ff133a065226ee14
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035874"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830396"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitações do xamarin. IOS
 
@@ -74,7 +74,8 @@ A falta de System. Reflection. **Emitir** significa que nenhum código que depen
 -  TransparentProxy do comunicação remota ou qualquer outra coisa que faria com que o tempo de execução gerar código dinamicamente. 
 
 
- **Importante:** Não confunda **Reflection. Emit** com **reflexão**. Reflection. Emit é sobre como gerar código dinamicamente e ter esse código compilado em JIT e compiladas em código nativo. Devido a limitações no iOS (nenhuma compilação JIT) isso não é suportado.
+  > [!IMPORTANT]
+  > Não confunda **Reflection. Emit** com **reflexão**. Reflection. Emit é sobre como gerar código dinamicamente e ter esse código compilado em JIT e compiladas em código nativo. Devido a limitações no iOS (nenhuma compilação JIT) isso não é suportado.
 
 Mas a API de reflexão inteira, incluindo Type. GetType ("someClass"), listando os métodos, propriedades, a listagem busca de atributos e valores funciona muito bem.
 
