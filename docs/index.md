@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: d88807a47b141f69d4e4eea6ec55a97fc61e80a1
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 4613eec9db017f27f6ab890522867ab4d68b4684
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675209"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830845"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -697,25 +697,6 @@ O Xamarin.Forms é um kit de ferramentas multiplataforma para Android, iOS, Mac 
                                                 <div class="cardText">
                                                     <h3>UrhoSharp</h3>
                                                     <p>Jogos e gráficos 3D de plataforma cruzada.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/graphics-games/cocossharp/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-graphics-cocos.svg?branch=master" alt="CocosSharp" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>CocosSharp</h3>
-                                                    <p>Compile jogos 2D de plataforma cruzada para dispositivos móveis.</p>
                                                 </div>
                                             </div>
                                         </div>
