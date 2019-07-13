@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: bf86759832a1aba0ccc1c144981af6ea4eae8670
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 58e3593dc09c76439a3e128e51f354c169d7e72e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343612"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865976"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Implantando aplicativos do watchOS para a App Store
 
@@ -89,15 +89,15 @@ Você pode usar o simulador de inspeção de 42mm fazer capturas de tela nesse t
 
 1. Certifique-se de que o aplicativo iOS é o projeto de inicialização. Caso contrário, clique com botão direito para configurá-lo:
 
-  ![](appstore-images/xs-startup.png "Definindo o projeto de inicialização")
+   ![](appstore-images/xs-startup.png "Definindo o projeto de inicialização")
 
 2. Escolha o **AppStore** configuração de compilação:
 
-  ![](appstore-images/xs-appstore.png "A configuração de build da loja de aplicativos")
+   ![](appstore-images/xs-appstore.png "A configuração de build da loja de aplicativos")
 
 3. Escolha o **compilar > arquivo morto** item de menu para iniciar o processo de arquivamento:
 
-  ![](appstore-images/xs-archive.png "O menu Build")
+   ![](appstore-images/xs-archive.png "O menu Build")
 
 Você também pode escolher o **exibição > arquivos mortos...**  item de menu para ver os arquivos que foram criados anteriormente.
 
@@ -111,21 +111,21 @@ Xcode mostrará automaticamente os arquivos criados no Visual Studio para Mac.
 
 1. Inicie o Xcode e escolha **Janela > organizador**:
 
-  ![](appstore-images/xc-organizer.png "Menu janela")
+   ![](appstore-images/xc-organizer.png "Menu janela")
 
 2. Alterne para o **arquivos mortos** guia e selecione o arquivo que foi criado com o Visual Studio para Mac:
 
-  ![](appstore-images/xc-archives.png "A guia arquivos")
+   ![](appstore-images/xc-archives.png "A guia arquivos")
 
 3. Opcionalmente, **validar...**  o arquivo morto, em seguida, escolha **enviar...**  para carregar o aplicativo no iTunes Connect.
 
 4. Escolha a equipe de desenvolvimento (se você pertencer a mais de uma) e, em seguida, confirme se o envio:
 
-  ![](appstore-images/xc-submit1.png "A seção da equipe de desenvolvimento")
+   ![](appstore-images/xc-submit1.png "A seção da equipe de desenvolvimento")
 
 5. Visite o iTunes Connect novamente para ver o binário carregado. Acesse a página de configuração do seu aplicativo e escolha **pré-lançamento** no menu superior para ver as **compilações** lista:
 
-  [![](appstore-images/itc-prerelease-sml.png "A página de configuração de aplicativos no iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
+   [![](appstore-images/itc-prerelease-sml.png "A página de configuração de aplicativos no iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 Em seguida, você pode enviar o aplicativo de aprovação na **versões** página. Consulte a [visão geral da distribuição de aplicativo do iOS](~/ios/deploy-test/app-distribution/index.md) para obter mais informações.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 0a40d50d02008439e81d5db19bcda0647203e2da
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d2f4031eeddbaa206f38b7b1c2bb49d21482c175
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61414398"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864939"
 ---
 # <a name="tvos-app-distribution-overview"></a>Visão geral da distribuição de aplicativo do tvOS
 
@@ -28,8 +28,8 @@ Depois que seu aplicativo tvos tiver sido desenvolvido, a próxima etapa no cicl
 A Apple fornece as seguintes maneiras de distribuir um aplicativo tvOS, que são compatíveis com o xamarin. tvos:
 
 1. [**App Store**](#Apple-TV-App-Store-Distribution)
-2. [**Interno (Enterprise)**](#In-House-Distribution) 
-2. [**Ad Hoc**](#Ad_Hoc_Distribution) 
+2. [**Interno (Enterprise)** ](#In-House-Distribution) 
+3. [**Ad Hoc**](#Ad_Hoc_Distribution) 
 
 Todos esses cenários exigem que os aplicativos sejam provisionados usando o *perfil de provisionamento* apropriado. Perfis de provisionamento são arquivos que contêm informações de assinatura de código, bem como a identidade do aplicativo e o mecanismo de distribuição desejado. Para a distribuição fora da App Store, também há informações sobre em quais dispositivos o aplicativo pode ser implantado.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f23a506acda385b53942661244bcd7a8510c8c7f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61240284"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865992"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows no xamarin. Mac
 
@@ -221,13 +221,13 @@ Para obter mais informações sobre como trabalhar com **tomadas** e **ações**
 Para qualquer janela que você criar e trabalhar com seu aplicativo xamarin. Mac, o processo é basicamente o mesmo que o que estamos apenas ter feito acima:
 
 1. Para o novo windows que não são o padrão adicionado automaticamente ao seu projeto, adicione uma nova definição de janela para o projeto. Isso será discutido em detalhes abaixo.
-2. Clique duas vezes o `Main.storyboard` arquivo para abrir o design de janela para edição no Interface Builder do Xcode.
-3. Arraste uma nova janela para o design da Interface do usuário e a janela de gancho na janela principal usando _transições_ (para obter mais informações, consulte o [transições](~/mac/platform/storyboards/indepth.md#Segues) seção do nosso [trabalhar com Storyboards](~/mac/platform/storyboards/indepth.md) documentação).
-3. Definir propriedades de qualquer janela necessária na **Inspetor de atributo** e o **Inspetor de tamanho**.
-4. Arraste os controles necessários para compilar sua interface e configurá-los de **Inspetor de atributo**.
-5. Use o **Inspetor de tamanho** para lidar com o redimensionamento para elementos de interface do usuário.
-6. Expor elementos de interface do usuário da janela ao código c# por meio **tomadas** e **ações**.
-7. Salve suas alterações e voltar para o Visual Studio para Mac sincronizar com o Xcode.
+1. Clique duas vezes o `Main.storyboard` arquivo para abrir o design de janela para edição no Interface Builder do Xcode.
+1. Arraste uma nova janela para o design da Interface do usuário e a janela de gancho na janela principal usando _transições_ (para obter mais informações, consulte o [transições](~/mac/platform/storyboards/indepth.md#Segues) seção do nosso [trabalhar com Storyboards](~/mac/platform/storyboards/indepth.md) documentação).
+1. Definir propriedades de qualquer janela necessária na **Inspetor de atributo** e o **Inspetor de tamanho**.
+1. Arraste os controles necessários para compilar sua interface e configurá-los de **Inspetor de atributo**.
+1. Use o **Inspetor de tamanho** para lidar com o redimensionamento para elementos de interface do usuário.
+1. Expor elementos de interface do usuário da janela ao código c# por meio **tomadas** e **ações**.
+1. Salve suas alterações e voltar para o Visual Studio para Mac sincronizar com o Xcode.
 
 Agora que temos uma janela básica criada, vamos examinar os processos típicos um xamarin. Mac aplicativo faz ao trabalhar com o windows. 
 
@@ -259,7 +259,7 @@ public override void ViewWillAppear ()
     // Set Window Title
     this.View.Window.Title = "untitled";
 }
-``` 
+```    
 
 > [!NOTE]
 > Definimos o valor da janela do `Title` propriedade em de `ViewWillAppear` método em vez do `ViewDidLoad` método porque, enquanto o modo de exibição pode ser carregado na memória, ele não seja ainda totalmente instanciado. Se tentar acessar o `Title` propriedade no `ViewDidLoad` método, teríamos uma `null` exceção, pois a janela ainda não foi construída e com fio-up à propriedade ainda.
@@ -711,14 +711,14 @@ Para adicionar uma nova janela, faça o seguinte:
 3. No **Inspetor de identidade**, insira `PreferencesWindow` para o **ID do Storyboard**: 
 
     [![](window-images/new02.png "Definir a ID do storyboard")](window-images/new02.png#lightbox)
-5. Sua interface de design: 
+4. Sua interface de design: 
 
     [![](window-images/new03.png "Projetando a interface do usuário")](window-images/new03.png#lightbox)
-6. Abra o Menu de aplicativo (`MacWindows`), selecione **preferências...** , CTRL + clique e arraste para a nova janela: 
+5. Abra o Menu de aplicativo (`MacWindows`), selecione **preferências...** , CTRL + clique e arraste para a nova janela: 
 
     [![](window-images/new05.png "Criando um segue")](window-images/new05.png#lightbox)
-7. Selecione **Mostrar** no menu pop-up.
-6. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
+6. Selecione **Mostrar** no menu pop-up.
+7. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
 Se vamos executar o código e selecionar o **preferências...**  do **Menu aplicativo**, a janela será exibida:
 
@@ -734,7 +734,7 @@ Assim como qualquer outro tipo de janela que você cria e trabalhar com em seu a
 
 1. Adicione uma nova definição de janela para o projeto.
 2. Clique duas vezes o `.xib` arquivo para abrir o design de janela para edição no Interface Builder do Xcode.
-2. Definir propriedades de qualquer janela necessária na **Inspetor de atributo** e o **Inspetor de tamanho**.
+3. Definir propriedades de qualquer janela necessária na **Inspetor de atributo** e o **Inspetor de tamanho**.
 4. Arraste os controles necessários para compilar sua interface e configurá-los de **Inspetor de atributo**.
 5. Use o **Inspetor de tamanho** para lidar com o redimensionamento para elementos de interface do usuário.
 6. Expor elementos de interface do usuário da janela ao código c# por meio **tomadas** e **ações**.
@@ -768,11 +768,11 @@ Para adicionar um novo painel, faça o seguinte:
 7. Alterne para o **Inspetor de identidade** e defina a classe do painel para `DocumentPanel`: 
 
     [![](window-images/panels03.png "Classe do painel de configuração")](window-images/panels03.png#lightbox)
-6. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
-7. Editar o `DocumentPanel.cs` de arquivo e altere a definição de classe para o seguinte: 
+8. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
+9. Editar o `DocumentPanel.cs` de arquivo e altere a definição de classe para o seguinte: 
 
     `public partial class DocumentPanel : NSPanel`
-8. Salve as alterações no arquivo.
+10. Salve as alterações no arquivo.
 
 Editar o `AppDelegate.cs` do arquivo e verifique o `DidFinishLaunching` método são semelhantes ao seguinte:
 

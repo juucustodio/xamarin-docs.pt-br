@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e24b448bedc60a537bfcd4a5bfbdbe9562163818
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61032849"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865927"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabalhar com Storyboards no xamarin. Mac
 
@@ -273,17 +273,17 @@ Para adicionar uma referência a um Storyboard externo, faça o seguinte:
 
     [![](indepth-images/ref01.png "Adicionando um novo Storyboard")](indepth-images/ref01.png#lightbox)
 2. No **Gerenciador de soluções**, clique duas vezes o novo nome do Storyboard para abri-lo para edição no Interface Builder do Xcode.
-2. Como você normalmente faria e salva suas alterações de design o layout dos bastidores do novo Storyboard: 
+3. Como você normalmente faria e salva suas alterações de design o layout dos bastidores do novo Storyboard: 
 
     [![](indepth-images/ref02.png "Projetar a interface")](indepth-images/ref02.png#lightbox)
-3. Alterne para o Storyboard que você pretende adicionar a referência no Interface Builder.
-4. Arraste uma **referência do Storyboard** da **biblioteca de objeto** na superfície de Design: 
+4. Alterne para o Storyboard que você pretende adicionar a referência no Interface Builder.
+5. Arraste uma **referência do Storyboard** da **biblioteca de objeto** na superfície de Design: 
 
     [![](indepth-images/ref03.png "Selecionando uma referência de Storyboard na biblioteca")](indepth-images/ref03.png#lightbox)
-5. No **Inspetor de atributo**, selecione o nome da **Storyboard** criado acima: 
+6. No **Inspetor de atributo**, selecione o nome da **Storyboard** criado acima: 
 
     [![](indepth-images/ref04.png "Configurando a referência")](indepth-images/ref04.png#lightbox)
-6. CTRL + clique em um Widget de interface do usuário (como um botão) em uma cena existente e criar um novo Segue para a **referência de Storyboard** que você acabou de criar.  No menu pop-up, selecione **Mostrar** para concluir o Segue: 
+7. CTRL + clique em um Widget de interface do usuário (como um botão) em uma cena existente e criar um novo Segue para a **referência de Storyboard** que você acabou de criar.  No menu pop-up, selecione **Mostrar** para concluir o Segue: 
 
     [![](indepth-images/ref06.png "Definindo o tipo de Segue")](indepth-images/ref06.png#lightbox) 
 8. Salve suas alterações para o Storyboard.
@@ -304,14 +304,14 @@ Para adicionar uma referência a uma cena específica um Storyboard externo (e n
 3. No **Inspetor de identidade**, insira um **ID do Storyboard** para o controlador da janela da nova cena: 
 
     [![](indepth-images/ref08.png "Definir a ID do Storyboard")](indepth-images/ref08.png#lightbox)
-3. Abra o Storyboard que você pretende adicionar a referência no Interface Builder.
-4. Arraste uma **referência do Storyboard** da **biblioteca de objeto** na superfície de Design: 
+4. Abra o Storyboard que você pretende adicionar a referência no Interface Builder.
+5. Arraste uma **referência do Storyboard** da **biblioteca de objeto** na superfície de Design: 
 
     [![](indepth-images/ref03.png "Selecionando uma Storyboard de referência da biblioteca")](indepth-images/ref03.png#lightbox)
-5. No **Inspetor de identidade**, selecione o nome da **Storyboard** e o **ID de referência** (ID do Storyboard) da cena que você criou acima: 
+6. No **Inspetor de identidade**, selecione o nome da **Storyboard** e o **ID de referência** (ID do Storyboard) da cena que você criou acima: 
 
     [![](indepth-images/ref09.png "Definindo a ID de referência")](indepth-images/ref09.png#lightbox)
-6. CTRL + clique em um Widget de interface do usuário (como um botão) em uma cena existente e criar um novo Segue para a **referência de Storyboard** que você acabou de criar. No menu pop-up, selecione **Mostrar** para concluir o Segue: 
+7. CTRL + clique em um Widget de interface do usuário (como um botão) em uma cena existente e criar um novo Segue para a **referência de Storyboard** que você acabou de criar. No menu pop-up, selecione **Mostrar** para concluir o Segue: 
 
     [![](indepth-images/ref06.png "Definindo o tipo de Segue")](indepth-images/ref06.png#lightbox) 
 8. Salve suas alterações para o Storyboard.
@@ -332,7 +332,7 @@ Para adicionar uma referência a uma cena específica o Storyboard mesmo, faça 
 3. No **Inspetor de identidade**, insira um **ID do Storyboard** para o controlador da janela da nova cena: 
 
     [![](indepth-images/ref12.png "Definir a ID do Storyboard")](indepth-images/ref12.png#lightbox)
-3. Arraste uma **referência do Storyboard** da **caixa de ferramentas** na superfície de Design: 
+4. Arraste uma **referência do Storyboard** da **caixa de ferramentas** na superfície de Design: 
 
     [![](indepth-images/ref03.png "Selecionando uma Storyboard de referência da biblioteca")](indepth-images/ref03.png#lightbox)
 5. Na **Inspetor de atributo**, selecione **ID de referência** (ID do Storyboard) da cena que você criou acima: 
@@ -341,8 +341,8 @@ Para adicionar uma referência a uma cena específica o Storyboard mesmo, faça 
 6. CTRL + clique em um Widget de interface do usuário (como um botão) em uma cena existente e criar um novo Segue para a **referência de Storyboard** que você acabou de criar. No menu pop-up, selecione **Mostrar** para concluir o Segue: 
 
     [![](indepth-images/ref06.png "Selecionar o tipo de Segue")](indepth-images/ref06.png#lightbox) 
-8. Salve suas alterações para o Storyboard.
-9. Retorne ao Visual Studio para Mac sincronizar suas alterações.
+7. Salve suas alterações para o Storyboard.
+8. Retorne ao Visual Studio para Mac sincronizar suas alterações.
 
 Quando o aplicativo é executado e o usuário clica no elemento de interface do usuário que você criou o Segue da cena com o determinado **ID do Storyboard** no mesmo Storyboard especificado na referência do Storyboard será exibida.
 

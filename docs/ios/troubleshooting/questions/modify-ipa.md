@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: bc9396a8cb667b8170c4b3511b9fe8423741e6b1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 047ee06522d4b2c07937e0e1bd9985248a164f01
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829935"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865025"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Pode adicionar ou remover arquivos de um arquivo de IPA após compilá-lo no Visual Studio?
 
@@ -24,55 +24,55 @@ Observe que a modificação de `.ipa` arquivo não é necessário o uso normal. 
 
 Para este exemplo, suponha que o nome do projeto xamarin. IOS está `iPhoneApp1` e o `generated session id` é `cc530d20d6b19da63f6f1c6f67a0a254`
 
-1.  Compilar o `.ipa` de arquivo como normal do Visual Studio.
+1. Compilar o `.ipa` de arquivo como normal do Visual Studio.
 
-2.  Alternar para o host de build do Mac.
+2. Alternar para o host de build do Mac.
 
-3.  Encontre a compilação no `~/Library/Caches/Xamarin/mtbs/builds` pasta. Você pode colar esse caminho em **Finder > Ir > vá para a pasta** para procurar a pasta no Finder. Procure a pasta que corresponde ao nome do projeto. Dentro dessa pasta, procure a pasta que corresponde a `generated session id` da compilação. Isso provavelmente será a subpasta que tenha a hora da modificação mais recente.
+3. Encontre a compilação no `~/Library/Caches/Xamarin/mtbs/builds` pasta. Você pode colar esse caminho em **Finder > Ir > vá para a pasta** para procurar a pasta no Finder. Procure a pasta que corresponde ao nome do projeto. Dentro dessa pasta, procure a pasta que corresponde a `generated session id` da compilação. Isso provavelmente será a subpasta que tenha a hora da modificação mais recente.
 
-4.  Abra uma nova `Terminal.app` janela.
+4. Abra uma nova `Terminal.app` janela.
 
-5.  Tipo de `cd` na janela de terminal e, em seguida, arrastar e soltar o `generated session id` pasta para o `Terminal.app` janela:
+5. Tipo de `cd` na janela de terminal e, em seguida, arrastar e soltar o `generated session id` pasta para o `Terminal.app` janela:
 
     ![](modify-ipa-images/session-id-folder.png "Localizar a pasta de id de sessão gerado no Finder")
 
-6.  Digite a chave de retornada para alterar o diretório para o `generated session id` pasta.
+6. Digite a chave de retornada para alterar o diretório para o `generated session id` pasta.
 
-7.  Descompacte o `.ipa` arquivo para um temporário `old/` pasta usando o comando a seguir. Ajustar a `Ad-Hoc` e `iPhoneApp1` nomes conforme necessário para seu projeto específico.
+7. Descompacte o `.ipa` arquivo para um temporário `old/` pasta usando o comando a seguir. Ajustar a `Ad-Hoc` e `iPhoneApp1` nomes conforme necessário para seu projeto específico.
 
     > ditto -xk bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa old/
 
-8.  Manter o `Terminal.app` janela aberta.
+8. Manter o `Terminal.app` janela aberta.
 
-9.  Exclua os arquivos desejados do `.ipa`. Você pode movê-los para a Lixeira usando o Finder ou excluí-las na linha de comando usando `Terminal.app`. Para exibir o conteúdo a `Payload/iPhone` o arquivo do arquivo no Finder, CTRL + clique e selecione **Mostrar conteúdo do pacote**.
+9. Exclua os arquivos desejados do `.ipa`. Você pode movê-los para a Lixeira usando o Finder ou excluí-las na linha de comando usando `Terminal.app`. Para exibir o conteúdo a `Payload/iPhone` o arquivo do arquivo no Finder, CTRL + clique e selecione **Mostrar conteúdo do pacote**.
 
-10.  Usando a mesma abordagem geral, como na etapa 3, localize o arquivo de log sob `~/Library/Logs/Xamarin/MonoTouchVS/` que tem o nome do projeto e o `generated session id` no nome: ![](modify-ipa-images/build-log.png "Localize o log de build do projeto no Finder")
+10. Usando a mesma abordagem geral, como na etapa 3, localize o arquivo de log sob `~/Library/Logs/Xamarin/MonoTouchVS/` que tem o nome do projeto e o `generated session id` no nome: ![](modify-ipa-images/build-log.png "Localize o log de build do projeto no Finder")
 
-11.  Abra o log de compilação da etapa 10, por exemplo clicando duas vezes nele.
+11. Abra o log de compilação da etapa 10, por exemplo clicando duas vezes nele.
 
-12.  Localize a linha que inclui `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
+12. Localize a linha que inclui `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
 
-13.  Tipo `/usr/bin/codesign` na janela de terminal da etapa 8.
+13. Tipo `/usr/bin/codesign` na janela de terminal da etapa 8.
 
-14.  Copiar todos os argumentos a partir do `-v` da linha na etapa 12 e cole-os na janela de terminal.
+14. Copiar todos os argumentos a partir do `-v` da linha na etapa 12 e cole-os na janela de terminal.
 
-15.  Alterar o último argumento para ser o `.app` pacote localizado dentro de `old/Payload/` pasta e, em seguida, execute o comando.
+15. Alterar o último argumento para ser o `.app` pacote localizado dentro de `old/Payload/` pasta e, em seguida, execute o comando.
 
-```bash
-/usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
-```
+    ```bash
+    /usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
+    ```
 
-16.  Altere para o `old/` diretório no Terminal:
+16. Altere para o `old/` diretório no Terminal:
 
-```bash
-cd old
-```
+    ```bash
+    cd old
+    ```
 
-17.  Compacte o conteúdo do diretório em uma nova `.ipa` de arquivos usando o `zip` comando. Você pode alterar o `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` argumento para a saída de `.ipa` onde quer que você gostaria de arquivo:
+17. Compacte o conteúdo do diretório em uma nova `.ipa` de arquivos usando o `zip` comando. Você pode alterar o `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` argumento para a saída de `.ipa` onde quer que você gostaria de arquivo:
 
-```bash
-zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
-```
+    ```bash
+    zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
+    ```
 
 ## <a name="common-error-messages"></a>Mensagens de erro comuns
 

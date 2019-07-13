@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: b785ef171d2cb00d4f8f5a17f37d49de17fd3da9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0837deccdb535c178e8b00b052efeb7c9bd49679
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153276"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864124"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Como automatizar um projeto de Teste NUnit do Android?
 
@@ -74,13 +74,13 @@ As etapas a seguir explicam a esse processo:
     </Project>
     ```
 
-3.  Use o seguinte comando para executar os testes de unidade. Substitua `PACKAGE_NAME` com o nome do pacote do aplicativo (o nome do pacote pode ser encontrado no aplicativo do `/manifest/@package` atributo localizado na **androidmanifest. XML**):
+4.  Use o seguinte comando para executar os testes de unidade. Substitua `PACKAGE_NAME` com o nome do pacote do aplicativo (o nome do pacote pode ser encontrado no aplicativo do `/manifest/@package` atributo localizado na **androidmanifest. XML**):
 
     ```shell
     adb shell am instrument -w PACKAGE_NAME/app.tests.TestInstrumentation
     ```
 
-4.  Opcionalmente, você pode modificar os `.csproj` arquivo para adicionar o `RunTests` destino do MSBuild. Isso torna possível invocar os testes de unidade com um comando semelhante ao seguinte:
+5.  Opcionalmente, você pode modificar os `.csproj` arquivo para adicionar o `RunTests` destino do MSBuild. Isso torna possível invocar os testes de unidade com um comando semelhante ao seguinte:
 
     ```shell
     msbuild /t:RunTests Project.csproj

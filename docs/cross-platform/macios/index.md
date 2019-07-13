@@ -6,12 +6,12 @@ ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b40758fa562e57415cd3c0818763ef0a7ce5dcca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c30d70d8a36c0e5a9b9ff6ddc74710dec4fb86a4
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199761"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864395"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Plataforma Apple (iOS e Mac)
 
@@ -21,7 +21,7 @@ Para elementos do seu código que não possuem nenhum elemento de interface do u
 
 Para o código que precisa fazer algum trabalho de interface do usuário e ainda assim, você deseja compartilhar, você deve usar [projetos compartilhados](~/cross-platform/app-fundamentals/shared-projects.md) que permitem que você coloque o código para compartilhar em um único projeto e que ele seja compilado com o Mac e iOS quando referenciado.
 
-##  <a name="unified-apiunifiedindexmd"></a>[API Unificada](unified/index.md)
+## <a name="unified-apiunifiedindexmd"></a>[API Unificada](unified/index.md)
 
 A API unificada para projetos do iOS e Mac usa os mesmos namespaces para estruturas, para que o mesmo arquivo de código pode ser usado nas duas plataformas, para o compartilhamento de código contínuo. Ele também permite que builds de bit 32 e 64. A API unificada tem sido o padrão de modelo desde o início de 2015 e é recomendada para todos os novos projetos - *apenas* projetos de API unificada que podem ser enviados para a App Store.
 
@@ -47,11 +47,11 @@ Xamarin permite que você traga bibliotecas nativas em seus aplicativos com asso
 
 ## <a name="native-referencesnative-referencesmd"></a>[Referências nativas](native-references.md)
 
-##  <a name="macios-native-typesnativetypesmd"></a>[Tipos nativos do Mac/iOS](nativetypes.md)
+## <a name="macios-native-typesnativetypesmd"></a>[Tipos nativos do Mac/iOS](nativetypes.md)
 
 Para dar suporte ao código de bit 32 e 64 transparente do C# e F#, estamos introduzindo novos tipos de dados.   Saiba mais sobre eles aqui.
 
-##  <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Aplicativos 32 e 64 bits](32-and-64/index.md)
+## <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Aplicativos 32 e 64 bits](32-and-64/index.md)
 
 O que você precisa saber para dar suporte a aplicativos de bit 32 e 64.
 

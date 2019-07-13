@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 1a5cc9f06fdca5944a9a3201ac15d63ca7f15453
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 084b9924af467459a017413a958ec2e46ff219fc
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61385459"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865306"
 ---
 # <a name="handoff-in-xamarinios"></a>Entrega no xamarin. IOS
 
@@ -117,20 +117,20 @@ Faça o seguinte:
 
     [![](handoff-images/provision01.png "Habilitar o serviço do iCloud para a ID especificada")](handoff-images/provision01.png#lightbox)
 5. Salve as alterações.
-4. Clique em **perfis de provisionamento** > **desenvolvimento** e criar um novo perfil de provisionamento para você de desenvolvimento de aplicativo:
+6. Clique em **perfis de provisionamento** > **desenvolvimento** e criar um novo perfil de provisionamento para você de desenvolvimento de aplicativo:
 
     [![](handoff-images/provision02.png "Criar um novo perfil para o aplicativo de provisionamento de desenvolvimento")](handoff-images/provision02.png#lightbox)
-5. Baixe e instale o novo perfil de provisionamento ou usar o Xcode para baixar e instalar o perfil de.
-6. Edite as opções de projeto do xamarin. IOS e certifique-se de que você está usando o perfil de provisionamento que você acabou de criar:
+7. Baixe e instale o novo perfil de provisionamento ou usar o Xcode para baixar e instalar o perfil de.
+8. Edite as opções de projeto do xamarin. IOS e certifique-se de que você está usando o perfil de provisionamento que você acabou de criar:
 
     [![](handoff-images/provision03.png "Selecione o perfil de provisionamento recém-criado")](handoff-images/provision03.png#lightbox)
-7. Em seguida, edite sua **Info. plist** de arquivo e certifique-se de que você está usando a ID do aplicativo que foi usado para criar o perfil de provisionamento:
+9. Em seguida, edite sua **Info. plist** de arquivo e certifique-se de que você está usando a ID do aplicativo que foi usado para criar o perfil de provisionamento:
 
     [![](handoff-images/provision04.png "Defina a ID do aplicativo")](handoff-images/provision04.png#lightbox)
-8. Role até a **modos de segundo plano** seção e verifique os seguintes itens:
+10. Role até a **modos de segundo plano** seção e verifique os seguintes itens:
 
     [![](handoff-images/provision05.png "Habilitar os modos em segundo plano necessários")](handoff-images/provision05.png#lightbox)
-9. Salve as alterações a todos os arquivos.
+11. Salve as alterações a todos os arquivos.
 
 Com essas configurações em vigor, o aplicativo agora está pronto para acessar as APIs de estrutura de entrega. Para obter informações detalhadas sobre o provisionamento, consulte nosso [aprovisionamento](~/ios/get-started/installation/device-provisioning/index.md) e [provisionamento do seu aplicativo](~/ios/get-started/installation/device-provisioning/index.md) guias.
 

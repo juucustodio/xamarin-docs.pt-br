@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: c1f488213f9b3be945fd98e09f630c243d0b0d62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8af7474036eb0fd6e2236cf52e96b8d12c8bc44e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382784"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865716"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconhecimento de fala no xamarin. IOS
 
@@ -111,15 +111,15 @@ Para fornecer o necessária `NSSpeechRecognitionUsageDescription` principais no 
 4. Se o aplicativo estará manipulando a transcrição de áudio ao vivo, ela também exigirá uma descrição de uso do microfone. Clique em **adicionar nova entrada**, insira `NSMicrophoneUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
 
     [![](speech-images/speech04.png "Adicionando NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
-4. Salve as alterações no arquivo.
+5. Salve as alterações no arquivo.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Clique duas vezes o `Info.plist` arquivo para abri-lo para edição.
-3. Clique em **adicionar nova entrada**, insira `NSSpeechRecognitionUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
+2. Clique em **adicionar nova entrada**, insira `NSSpeechRecognitionUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
 
     [![](speech-images/speech03w.png "Adicionando NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-4. Se o aplicativo estará manipulando a transcrição de áudio ao vivo, ela também exigirá uma descrição de uso do microfone. Clique em **adicionar nova entrada**, insira `NSMicrophoneUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
+3. Se o aplicativo estará manipulando a transcrição de áudio ao vivo, ela também exigirá uma descrição de uso do microfone. Clique em **adicionar nova entrada**, insira `NSMicrophoneUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
 
     [![](speech-images/speech04w.png "Adicionando NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Salve as alterações no arquivo.

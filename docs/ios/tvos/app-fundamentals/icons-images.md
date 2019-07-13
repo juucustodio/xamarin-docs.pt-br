@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 96af7fab366c3fd3493cf5adbf183d80b7c1ee26
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dab1b0f7bf7aabb4dfcfbfdcb5e202baa48e664d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61417959"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865162"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabalhando com ícones e imagens no Xamarin do tvOS
 
@@ -181,7 +181,7 @@ Para definir os ícones de aplicativo necessários para o projeto de tvOS, faça
 5. Clique no **1X a entrada de Apple TV** e selecione um arquivo de imagem.
 6. Repita as etapas acima para o `Front` e `Middle` ativos.
 7. Em seguida, repita as mesmas etapas para definir o `App Icon - Large` ativo.
-4. Salve as alterações.
+8. Salve as alterações.
 
 <a name="Top-Shelf-Image" />
 
@@ -218,8 +218,8 @@ Para definir a imagem da prateleira superior necessários para o projeto de tvOS
 3. Clique no `Top Shelf Image` ativo: 
 
     [![](icons-images-images/asset07.png "O ativo de imagem da prateleira superior")](icons-images-images/asset07.png#lightbox)
-5. Clique no **1X a entrada de Apple TV** e selecione um arquivo de imagem.
-6. Salve as alterações.
+4. Clique no **1X a entrada de Apple TV** e selecione um arquivo de imagem.
+5. Salve as alterações.
 
 <a name="Dynamic-Top-Shelf-Content" />
 

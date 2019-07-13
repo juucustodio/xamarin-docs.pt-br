@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 859bbd22640ba3d09324fcd3853cda26e563a1cd
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832473"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865284"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Olá, guia de início rápido do tvOS
 
@@ -298,20 +298,20 @@ Faça o seguinte:
 9. Quando concluído, suas restrições devem ser semelhantes na guia Layout do painel de propriedades:
 
     [![](hello-tvos-images/designer11.png "Restrições de exemplo")](hello-tvos-images/designer11.png#lightbox)
-8. Arraste uma **botão** da **caixa de ferramentas** e coloque-o sob o rótulo.
-9. Clique no **Title** propriedade no **painel de propriedade** e altere o título do botão para `Click Me`:
+10. Arraste uma **botão** da **caixa de ferramentas** e coloque-o sob o rótulo.
+11. Clique no **Title** propriedade no **painel de propriedade** e altere o título do botão para `Click Me`:
 
     [![](hello-tvos-images/designer12.png "Altere o título de botões para Click Me")](hello-tvos-images/designer12.png#lightbox)
-10. Repita as etapas 5 a 8 acima para restringir o botão na janela do tvOS. No entanto, em vez de arrastar a alça de T na parte superior da janela (como etapa #7), arraste-o até a parte inferior do rótulo:
+12. Repita as etapas 5 a 8 acima para restringir o botão na janela do tvOS. No entanto, em vez de arrastar a alça de T na parte superior da janela (como etapa #7), arraste-o até a parte inferior do rótulo:
 
     [![](hello-tvos-images/designer14.png "Restringir o botão")](hello-tvos-images/designer14.png#lightbox)
-11. Arraste outro rótulo do botão, dimensione-o para ser a mesma largura que o primeiro rótulo e defina suas **alinhamento** à **Center**:
+13. Arraste outro rótulo do botão, dimensione-o para ser a mesma largura que o primeiro rótulo e defina suas **alinhamento** à **Center**:
 
     [![](hello-tvos-images/designer15.png "Arraste outro rótulo do botão, dimensione-o para ser a mesma largura que o primeiro rótulo e defina seu alinhamento ao centro")](hello-tvos-images/designer15.png#lightbox)
-12. Como o primeiro botão e label, defina esse rótulo para centralizar e fixá-lo no local e o tamanho:
+14. Como o primeiro botão e label, defina esse rótulo para centralizar e fixá-lo no local e o tamanho:
 
     [![](hello-tvos-images/designer16.png "O rótulo no local e o tamanho do PIN")](hello-tvos-images/designer16.png#lightbox)
-13. Salve suas alterações à Interface do usuário.
+15. Salve suas alterações à Interface do usuário.
 
 Conforme você foram redimensionar e mover controles, você deve ter notado que o designer fornece dicas úteis de ajuste que se baseiam [diretrizes de Interface humana da Apple TV](https://developer.apple.com/tvos/human-interface-guidelines/). Essas diretrizes ajudarão você a criar aplicativos de alta qualidade que terão uma aparência familiar para os usuários de Apple TV.
 

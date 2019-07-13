@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 1362767bf9a80af1eac37d316bd99a6ab364063f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bed8180c513eefd5765be767a5dca7cecefa6101
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61413946"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865957"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Trabalhando com o watchOS localização no Xamarin
 
@@ -127,19 +127,19 @@ Imagens que são preenchidas, o código podem ser definidas de duas maneiras.
 
 1. Você pode alterar um `Image` controle definindo seu valor como o nome de cadeia de caracteres de uma imagem que já existe no aplicativo de inspeção, por exemplo:
 
-  ```csharp
-  displayImage.SetImage("gradient"); // image in Watch App (as shown above)
-  ```
+    ```csharp
+    displayImage.SetImage("gradient"); // image in Watch App (as shown above)
+    ```
 
 2. Você pode mover uma imagem da extensão para o watch usando `FromBundle` e o aplicativo escolherá automaticamente a imagem correta para a seleção do idioma do usuário. Na solução de exemplo é uma imagem **language@2x.png** em cada linguagem pasta e ele é exibido em `DetailController` usando o seguinte código:
 
-  ```csharp
-  using (var image = UIImage.FromBundle ("language")) {
-    displayImage.SetImage (image);
-  }
-  ```
+    ```csharp
+    using (var image = UIImage.FromBundle ("language")) {
+        displayImage.SetImage (image);
+    }
+    ```
 
-  Observe que você não precisará especificar o **@2x** ao fazer referência ao nome do arquivo da imagem.
+    Observe que você não precisará especificar o **@2x** ao fazer referência ao nome do arquivo da imagem.
 
 O segundo método também é aplicável se você baixar uma imagem de um servidor remoto para renderizar no watch; No entanto nesse caso, você deve garantir que a imagem que você baixe corretamente é localizada de acordo com as preferências do usuário.
 

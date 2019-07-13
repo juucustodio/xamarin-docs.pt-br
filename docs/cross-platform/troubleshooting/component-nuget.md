@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 70ca9a73c83bed5233b77a6f7be80a13f04f2bcb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fbef8f60a31511be926ee2adf5e239ad8955b208
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61360717"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864530"
 ---
 # <a name="updating-component-references-to-nuget"></a>Atualizando referências de componentes para NuGet
 
@@ -39,7 +39,7 @@ Para remover um componente de seu projeto:
 
 1. Abra o **. csproj** arquivo. Para fazer isso, clique com botão direito no nome do projeto e selecione **descarregar projeto**. 
 
-2. Clique novamente no projeto descarregado e selecione **editar. csproj do {your-project-name}**.
+2. Clique novamente no projeto descarregado e selecione **editar. csproj do {your-project-name}** .
 
 3. Localizar todas as referências no arquivo para `XamarinComponentReference`. Ele deve ser semelhante ao exemplo a seguir:
 
@@ -180,7 +180,7 @@ Isso excluirá o componente e todas as referências. Isso interromperá o build,
 1. Clique com botão direito no **pacotes** nó e escolha **adicionar pacotes...** .
 2. Procure a substituição do NuGet por nome ou o autor:
 
-  ![](component-nuget-images/nuget-search-sml.png)
+    ![](component-nuget-images/nuget-search-sml.png)
 
 3. Pressione **Adicionar pacote**.
 

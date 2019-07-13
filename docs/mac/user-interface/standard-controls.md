@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 26ab7880b3c4b6176c806783fec7a499d68511c3
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 696432fb51060a236780eedee0b60661e3a86712
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831901"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865188"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles padrão no xamarin. Mac
 
@@ -603,16 +603,16 @@ Para criar um pop-over, faça o seguinte:
 2. Arraste uma **exibir controlador** da **Inspetor de biblioteca** até o **Editor de Interface**: 
 
     [![](standard-controls-images/content02.png "Selecionar um controlador de exibição da biblioteca")](standard-controls-images/content02.png#lightbox)
-4. Definir o tamanho e o layout do **modo de exibição personalizado**: 
+3. Definir o tamanho e o layout do **modo de exibição personalizado**: 
 
     [![](standard-controls-images/content04.png "Edição do layout")](standard-controls-images/content04.png#lightbox)
-5. CTRL + clique e arraste a origem do pop-up para o **controlador de exibição**: 
+4. CTRL + clique e arraste a origem do pop-up para o **controlador de exibição**: 
 
     [![](standard-controls-images/content05.png "Arrastando para criar um segue")](standard-controls-images/content05.png#lightbox)
-6. Selecione **pop-over** no menu pop-up: 
+5. Selecione **pop-over** no menu pop-up: 
 
     [![](standard-controls-images/content06.png "Definindo o tipo de segue")](standard-controls-images/content06.png#lightbox)
-7. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
+6. Salve suas alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
 <a name="Tab_Views" />
 

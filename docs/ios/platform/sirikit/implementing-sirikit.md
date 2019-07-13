@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2c3bddc89348b46c9bba277580071cb8ac3d6943
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7fc675b69132ac41ffa9d87f4b3264de431b11bd
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61434254"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865672"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementar SiriKit no xamarin. IOS
 
@@ -181,12 +181,12 @@ Faça o seguinte:
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Clique duas vezes o `Entitlements.plist` do arquivo na **Gerenciador de soluções** para abri-lo para edição.
-3. Adicione a `com.apple.developer.siri` **propriedade**, defina as **tipo** para `Boolean` e o **valor** para `Yes`: 
+2. Adicione a `com.apple.developer.siri` **propriedade**, defina as **tipo** para `Boolean` e o **valor** para `Yes`: 
 
     [![](implementing-sirikit-images/setup01w.png "Adicione a propriedade com.apple.developer.siri")](implementing-sirikit-images/setup01w.png#lightbox)
-4. Salve as alterações no arquivo.
-5. Clique duas vezes o **arquivo de projeto** na **Gerenciador de soluções** para abri-lo para edição.
-6. Selecione **assinatura do pacote iOS** e certifique-se de que o `Entitlements.plist` arquivo for selecionado no **direitos personalizados** campo.
+3. Salve as alterações no arquivo.
+4. Clique duas vezes o **arquivo de projeto** na **Gerenciador de soluções** para abri-lo para edição.
+5. Selecione **assinatura do pacote iOS** e certifique-se de que o `Entitlements.plist` arquivo for selecionado no **direitos personalizados** campo.
 
 -----
 
@@ -233,15 +233,15 @@ Faça o seguinte em seu Mac:
 16. Certifique-se de que o **perfil de provisionamento** criado acima foi instalado no Xcode.
 17. Abra o projeto para adicionar o suporte para SiriKit no Visual Studio para Mac.
 18. Clique duas vezes o `Info.plist` arquivo o **Gerenciador de soluções**.
-18. Certifique-se de que o **identificador de pacote** coincide com aquele criado no Portal do desenvolvedor da Apple acima: 
+19. Certifique-se de que o **identificador de pacote** coincide com aquele criado no Portal do desenvolvedor da Apple acima: 
 
     [![](implementing-sirikit-images/setup06.png "The Bundle Identifier")](implementing-sirikit-images/setup06.png#lightbox)
-18. No **Gerenciador de soluções**, selecione o **projeto**.
-19. Clique com botão direito no projeto e selecione **opções**.
-21. Selecione **assinatura do pacote iOS**, selecione o **identidade de assinatura** e **perfil de provisionamento** criado acima: 
+20. No **Gerenciador de soluções**, selecione o **projeto**.
+21. Clique com botão direito no projeto e selecione **opções**.
+22. Selecione **assinatura do pacote iOS**, selecione o **identidade de assinatura** e **perfil de provisionamento** criado acima: 
 
     [![](implementing-sirikit-images/setup07.png "Selecione a identidade de assinatura e o perfil de provisionamento")](implementing-sirikit-images/setup07.png#lightbox)
-22. Clique no botão **OK** para salvar as alterações.
+23. Clique no botão **OK** para salvar as alterações.
 
 > [!IMPORTANT]
 > Teste SiriKit só funciona em um iOS reais 10 dispositivos de Hardware e não no iOS 10 Simulator. Se o aplicativo xamarin. IOS em hardwares reais habilitado para tendo problemas ao instalar um SiriKit, certifique-se de que os direitos necessários, a ID do aplicativo, o identificador de assinatura e o perfil de provisionamento foram corretamente configurados no Portal do desenvolvedor da Apple e Visual Studio para Mac.
@@ -629,7 +629,7 @@ Para adicionar uma extensão de tentativas para a solução, faça o seguinte:
 
     [![](implementing-sirikit-images/intents05.w157-sml.png "Selecione a extensão de intenção")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. Em seguida, insira um **nome** para o propósito de extensão e clique o **Okey** botão.
-1. No **Gerenciador de soluções**, clique com botão direito no **referências** pasta da extensão de tentativas recém-criado e escolha **Adicionar > referência**. Verifique o nome do projeto de biblioteca de código compartilhado comum (o que o aplicativo criado acima) e clique no **Okey** botão:
+4. No **Gerenciador de soluções**, clique com botão direito no **referências** pasta da extensão de tentativas recém-criado e escolha **Adicionar > referência**. Verifique o nome do projeto de biblioteca de código compartilhado comum (o que o aplicativo criado acima) e clique no **Okey** botão:
 
     [![](implementing-sirikit-images/intents08w.png "Selecione o nome do projeto de biblioteca de código compartilhado comum")](implementing-sirikit-images/intents08w.png#lightbox)
     
@@ -891,7 +891,7 @@ Para adicionar uma extensão de interface do usuário de tentativas para a solu�
 1. Com o botão direito no **nome da solução** na **Gerenciador de soluções** e selecione **Add** > **adicionar novo projeto...**
 2. Na caixa de diálogo Selecionar **iOS** > **extensões** > **intenção de extensão de interface do usuário** e clique no **próxima** botão.
 3. Em seguida, insira um **nome** para o propósito de extensão e clique o **Okey** botão.
-5. No **Gerenciador de soluções**, clique com botão direito no **referências** pasta da intenção de extensão recém-criada. Verifique o nome do projeto de biblioteca de código compartilhado comum (o que o aplicativo criado acima) e clique no **Okey** botão.
+4. No **Gerenciador de soluções**, clique com botão direito no **referências** pasta da intenção de extensão recém-criada. Verifique o nome do projeto de biblioteca de código compartilhado comum (o que o aplicativo criado acima) e clique no **Okey** botão.
     
 -----
 

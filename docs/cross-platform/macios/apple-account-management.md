@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 8617d6e0c0930f581c45dbb461dfcb5d85a2becc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28a7d299e78a7fa6837ba9285795d380760f13b7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61206012"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864639"
 ---
 # <a name="apple-account-management"></a>Gerenciamento de contas da Apple
 
@@ -54,17 +54,17 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Obter
 
     ![caixa de diálogo do FastLane.](apple-account-management-images/image2.png)
 
-4. Insira sua Apple ID e senha e clique no **entrar** botão. Isso salvará suas credenciais no conjunto de chaves seguro neste computador. [o FastLane](~/ios/deploy-test/provisioning/fastlane/index.md) é usado para lidar com suas credenciais com segurança e passá-los para o portal do desenvolvedor da Apple.
+3. Insira sua Apple ID e senha e clique no **entrar** botão. Isso salvará suas credenciais no conjunto de chaves seguro neste computador. [o FastLane](~/ios/deploy-test/provisioning/fastlane/index.md) é usado para lidar com suas credenciais com segurança e passá-los para o portal do desenvolvedor da Apple.
  
-5. Selecione **sempre permitir** na caixa de diálogo alerta para permitir que o Visual Studio para usar suas credenciais:
+4. Selecione **sempre permitir** na caixa de diálogo alerta para permitir que o Visual Studio para usar suas credenciais:
 
     ![Sempre permitir a caixa de diálogo alerta](apple-account-management-images/image4.png)
 
-6. Depois que sua conta tiver sido adicionada com êxito, você verá sua ID da Apple e qualquer equipes que sua ID da Apple é parte do.
+5. Depois que sua conta tiver sido adicionada com êxito, você verá sua ID da Apple e qualquer equipes que sua ID da Apple é parte do.
 
     ![Caixa de diálogo do Apple developer conta com as contas adicionadas](apple-account-management-images/image5.png)
 
-7. Selecione qualquer equipe e pressione a **exibir detalhes...** . Isso exibirá uma lista de todas as identidades de assinatura e perfis de provisionamento que são instalados em seu computador:
+6. Selecione qualquer equipe e pressione a **exibir detalhes...** . Isso exibirá uma lista de todas as identidades de assinatura e perfis de provisionamento que são instalados em seu computador:
 
     ![Exibição mostrando de tela de detalhes identidades de assinatura e provisionamento perfis em seu computador](apple-account-management-images/image6.png)
 

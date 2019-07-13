@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: 1eb3ec77dd478744906625dcfcd9fb843e74577c
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: cf2da9f7fe8d90c52517118cc3b4aa0e046d1f69
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827480"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864557"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no xamarin. IOS
 
@@ -134,16 +134,16 @@ Para usar um catálogo de ativos, faça o seguinte:
 2. Clique no **ativos visuais** guia e clique no **usar o catálogo de ativos** botão sob **ícones do aplicativo**: 
 
     ![](app-icons-images/icon02w.png "Selecione a guia ativos visuais")
-4. Dos **Gerenciador de soluções**, expanda o **catálogo de ativos** pasta: 
+3. Dos **Gerenciador de soluções**, expanda o **catálogo de ativos** pasta: 
 
     ![](app-icons-images/image009.png "Expanda a pasta do catálogo de ativos")
-5. Clique duas vezes o **mídia** arquivo para abri-lo no editor: 
+4. Clique duas vezes o **mídia** arquivo para abri-lo no editor: 
 
     ![](app-icons-images/image010.png "Abra o arquivo de mídia no editor")
-6. Sob o **Gerenciador de propriedades** o desenvolvedor pode selecionar os diferentes tipos e tamanhos de ícones necessários.
-7. Clique no ícone de tipo fornecido e selecione um arquivo de imagem para o tipo/tamanho necessário.
-8. Clique o **abrir** botão para incluir a imagem no projeto e defina-o do xcasset.
-9. Repita para todas as imagens necessárias.
+5. Sob o **Gerenciador de propriedades** o desenvolvedor pode selecionar os diferentes tipos e tamanhos de ícones necessários.
+6. Clique no ícone de tipo fornecido e selecione um arquivo de imagem para o tipo/tamanho necessário.
+7. Clique o **abrir** botão para incluir a imagem no projeto e defina-o do xcasset.
+8. Repita para todas as imagens necessárias.
 
 -----
 
@@ -203,8 +203,8 @@ Para especificar a Arte do iTunes, faça o seguinte:
 2. Clique no **ativos visuais** guia e expanda o **arte do iTunes**: 
 
     ![](app-icons-images/itunes01w.png "Edição de arte no Visual Studio do iTunes")
-4. Para qualquer imagem ausente, clique na miniatura no editor, selecione o arquivo de imagem para a arte do iTunes desejada na caixa de diálogo Abrir arquivo e clique no **abrir** botão.
-5. Repita essa etapa até que todos os necessários imagens foram especificadas para o aplicativo.
+3. Para qualquer imagem ausente, clique na miniatura no editor, selecione o arquivo de imagem para a arte do iTunes desejada na caixa de diálogo Abrir arquivo e clique no **abrir** botão.
+4. Repita essa etapa até que todos os necessários imagens foram especificadas para o aplicativo.
 
 -----
 

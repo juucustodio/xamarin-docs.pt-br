@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3eccba01f235382b7969a2f4a122c09ce9b4127b
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ab6236198d0a5826fc613d1f3839bafdb980d235
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832341"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865639"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Alterações de estruturas adicional tvOS 10
 
@@ -25,7 +25,7 @@ Além das alterações principais para tvOS, o Apple fez modificações e melhor
 A estrutura de AVFoundation inclui os seguintes aprimoramentos:
 
 - TvOS 10, o aplicativo não implementa diferentes [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) comportamentos com base no tipo de conteúdo. Basta definir o `Rate` propriedade e AVFoundation determinará quando conteúdo suficiente está disponível para a reprodução sem atraso das.
- - O novo `AVPlayerLooper` classe torna mais fácil executar uma determinada parte da mídia de um loop durante a reprodução.
+- O novo `AVPlayerLooper` classe torna mais fácil executar uma determinada parte da mídia de um loop durante a reprodução.
 
 <a name="AVKit-Framework-Enhancements" />
 

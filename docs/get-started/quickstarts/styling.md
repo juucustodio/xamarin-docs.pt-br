@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 53d2a0aae3398ea31676fbc3dab95d500dfe2104
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: 1b68afc1f3d3c57a5c336e9d30c97ce2375acb9f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309495"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864339"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Definir o estilo de um aplicativo xamarin. Forms de plataforma cruzada
 
@@ -120,7 +120,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](database.md)
 
     Salve as alterações em **NotesPage.xaml** pressionando **CTRL + S**e feche o arquivo.
 
-5. Na **Gerenciador de soluções**, no **notas** do projeto, clique duas vezes em **NoteEntryPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+4. Na **Gerenciador de soluções**, no **notas** do projeto, clique duas vezes em **NoteEntryPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -169,7 +169,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](database.md)
 
     Salve as alterações em **NoteEntryPage.xaml** pressionando **CTRL + S**e feche o arquivo.
 
-6. Compile e execute o projeto em cada plataforma. Para obter mais informações, consulte [criando o guia de início rápido](single-page.md#building-the-quickstart).
+5. Compile e execute o projeto em cada plataforma. Para obter mais informações, consulte [criando o guia de início rápido](single-page.md#building-the-quickstart).
 
     Sobre o **NotesPage** pressione a **+** botão para navegar para o **NoteEntryPage** e insira uma observação. Em cada página, observe como o estilo foi alterado de início rápido anterior.
 
@@ -261,7 +261,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](database.md)
 
     Salve as alterações em **NotesPage.xaml** escolhendo **arquivo > Salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
-5. No **painel de soluções**, no **notas** do projeto, clique duas vezes em **NoteEntryPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+4. No **painel de soluções**, no **notas** do projeto, clique duas vezes em **NoteEntryPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -310,7 +310,7 @@ Você deve concluir com êxito a [guia de início rápido anterior](database.md)
 
     Salve as alterações em **NoteEntryPage.xaml** escolhendo **arquivo > Salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
-6. Compile e execute o projeto em cada plataforma. Para obter mais informações, consulte [criando o guia de início rápido](single-page.md#building-the-quickstart).
+5. Compile e execute o projeto em cada plataforma. Para obter mais informações, consulte [criando o guia de início rápido](single-page.md#building-the-quickstart).
 
     Sobre o **NotesPage** pressione a **+** botão para navegar para o **NoteEntryPage** e insira uma observação. Em cada página, observe como o estilo foi alterado de início rápido anterior.
 

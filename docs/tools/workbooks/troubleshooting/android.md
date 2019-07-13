@@ -6,12 +6,12 @@ ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: a93288829ff99027a4b33e7720a7f849df37e9b1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 08fa7f57f3fe44721bc00f0d59ed5df93300cf1e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61423776"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864029"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solução de problemas de pastas de trabalho do Xamarin no Android
 
@@ -24,7 +24,7 @@ Se você deve ter o Hyper-V habilitado em seu sistema, ir com o emulador Android
 
 Você deve ter um emulador que executa o Android 5.0 ou posterior. Não há suporte para emuladores ARM. Use `x86` ou `x86_64` somente para dispositivos.
 
-Leia [nossa documentação sobre como configurar os emuladores de Android] [ android-emu] se você não estiver familiarizado com o processo.
+Leia [nossa documentação sobre como configurar os emuladores de Android][android-emu] se você não estiver familiarizado com o processo.
 
 > [!NOTE]
 > Pastas de trabalho, 1.1 e anteriores serão tente (e falhar!) para usar emuladores ARM se elas estiverem disponíveis. Para contornar isso, emulador de inicialização x86 de sua escolha, antes de abrir ou criar uma pasta de trabalho do Android. Pastas de trabalho sempre preferirão para se conectar ao emulador em execução, desde que ele é compatível.
@@ -39,14 +39,14 @@ Primeiro, verifique que o emulador tem acesso à rede de trabalho totalmente pel
 
 Se o emulador não tem acesso à rede, você precisa seguir estas etapas para corrigir o comutador de rede do Hyper-V. Se você alternar entre as redes de Wi-Fi com frequência você precisa repetir isso periodicamente:
 
-0. **Certifique-se de que todas as operações críticas de rede forem concluídas, pois isso pode desconectar-se temporariamente Windows da internet.**
+1. **Certifique-se de que todas as operações críticas de rede forem concluídas, pois isso pode desconectar-se temporariamente Windows da internet.**
 1. Feche os emuladores.
-2. Abra `Hyper-V Manager`.
-3. Sob `Actions`, abra `Virtual Switch Manager...`.
-4. Exclua todos os comutadores virtuais.
-5. Clique em `OK`.
-6. Inicie o emulador Android do VS. Você provavelmente precisará recriar o comutador de rede virtual.
-7. Teste de que o navegador do emulador do VS Android pode acessar a internet.
+1. Abra `Hyper-V Manager`.
+1. Sob `Actions`, abra `Virtual Switch Manager...`.
+1. Exclua todos os comutadores virtuais.
+1. Clique em `OK`.
+1. Inicie o emulador Android do VS. Você provavelmente precisará recriar o comutador de rede virtual.
+1. Teste de que o navegador do emulador do VS Android pode acessar a internet.
 
 [android-emu]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/
 

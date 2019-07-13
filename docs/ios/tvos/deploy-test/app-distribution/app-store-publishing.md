@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: b941bcc8588e7fb0377430cca2829ad72ecbc8c6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 73ee7fc3c28fc7a8476010e8bf7567b3e5ef590d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61416548"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865086"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Como publicar na Apple TV App Store
 
@@ -59,7 +59,7 @@ Faça o seguinte:
 6. Fornecer **categorias**, **subcategorias**, e **palavras-chave** para ajudar o usuário a encontrar seu aplicativo em de Store de aplicativo da Apple TV.
 7. Forneça URLs de **Contact (Contato)** e **Support (Suporte)** para o seu site exigido pela Apple.
 8. Defina o aplicativo **classificação**, que é usado por controles dos pais de Store de aplicativo da Apple TV.
-9. Configure tecnologias opcionais da App Store, como **Game Center** e **In-App Purchase (Compra no aplicativo)**.
+9. Configure tecnologias opcionais da App Store, como **Game Center** e **In-App Purchase (Compra no aplicativo)** .
 
 Para obter mais detalhes, consulte nosso [configurar seu aplicativo tvOS no iTunes Connect](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md) documentação.
 
@@ -192,19 +192,19 @@ Com a compilação de distribuição concluída, você está pronto para enviar 
 
 O fluxo de trabalho de arquivamento no Visual Studio para Mac abrirá o Application Loader automaticamente, assim que você tiver salvo o `.ipa`:
 
-2. Selecione *Entregar seu aplicativo* e clique no botão *Escolher*:
+1. Selecione *Entregar seu aplicativo* e clique no botão *Escolher*:
 
     [![](app-store-publishing-images/publishvs01.png "Selecionar Entregar seu aplicativo")](app-store-publishing-images/publishvs01.png#lightbox)
 
-3. Selecione o arquivo zip ou IPA criado anteriormente e clique no botão **OK**.
-4. O Application Loader validará o arquivo:
+2. Selecione o arquivo zip ou IPA criado anteriormente e clique no botão **OK**.
+3. O Application Loader validará o arquivo:
 
     [![](app-store-publishing-images/publishvs02.png "A tela de validação do carregador de aplicativos")](app-store-publishing-images/publishvs02.png#lightbox)
-5. Clique no botão *Avançar* e o aplicativo será validados na App Store:
+4. Clique no botão *Avançar* e o aplicativo será validados na App Store:
 
     [![](app-store-publishing-images/publishvs03.png "O aplicativo que está sendo validado em relação a App Store")](app-store-publishing-images/publishvs03.png#lightbox)
-6. Clique no botão **Enviar** para enviar o aplicativo para a Apple para análise.
-7. O Application Loader informará quando o arquivo for carregado com êxito.
+5. Clique no botão **Enviar** para enviar o aplicativo para a Apple para análise.
+6. O Application Loader informará quando o arquivo for carregado com êxito.
 
 <a name="iTunes_Connect_Status" />
 
