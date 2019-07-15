@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 239f20515e734a6c0b517e07bc2d1e4289cabe65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e57254ce724c5660e53dcd9deaa0f4a27bf91400
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104785"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675193"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Teste e implantação do Xamarin.iOS – solução de problemas
 
@@ -28,7 +28,7 @@ Assinatura de Código e Provisionamento com iOS podem ser bastante complicados e
 
 * Mantenha o Acesso de Conjunto de Chaves organizado e exclua certificados e perfis expirados. Certificados corporativos duram três anos, enquanto outros duram apenas um ano. Certificados não podem ser renovados, portanto, será necessário criar novos certificados antes dos antigos expirarem. Certifique-se de revogar e excluir certificados antigos e assinar novamente os aplicativos com novos certificados.
 
-* Remova os perfis de provisionamento antigos conforme novos são instalados. Isso significa que o Visual Studio para Mac não está em uma posição em que ele deve decidir qual perfil a ser usado. Para fazer isso, primeiro certifique-se de excluir o perfil no Centro de desenvolvedores da Apple e, em seguida, navegue até *Preferências > Sua Conta > Exibir Detalhes...*. Selecione o perfil de provisionamento e clique em **Mostrar no Localizador**. Isso revelará o local do perfil no sistema de arquivos do Mac, no qual ele pode ser excluído usando o Finder.
+* Remova os perfis de provisionamento antigos conforme novos são instalados. Isso significa que o Visual Studio para Mac não está em uma posição em que ele deve decidir qual perfil a ser usado. Para fazer isso, primeiro certifique-se de excluir o perfil no Centro de desenvolvedores da Apple e, em seguida, navegue até *Preferências > Sua Conta > Exibir Detalhes...* . Selecione o perfil de provisionamento e clique em **Mostrar no Localizador**. Isso revelará o local do perfil no sistema de arquivos do Mac, no qual ele pode ser excluído usando o Finder.
 
 * Certifique-se de que todos os certificados e as chaves privadas correspondentes estejam disponíveis. Para cada equipe será necessário obter um certificado de desenvolvedor (para instalar aplicativos em um dispositivo próprio) e um certificado de distribuição (para instalar em outros dispositivos)
 

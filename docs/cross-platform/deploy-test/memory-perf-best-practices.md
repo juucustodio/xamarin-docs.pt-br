@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f03df796c338380a776f9af26563af2e60e59a1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9377dcca1cd72b68a0e5b6a5ac5ac4d12d25d50c
+ms.sourcegitcommit: 41b44f2e9bde3b174e7c08605bff65aff594dcd6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672645"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690917"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -281,7 +281,7 @@ Para reduzir a pressão sobre o coletor de lixo, siga estas diretrizes:
 
 - Evite a coleta de lixo em loops apertados usando pools de objeto. Isso é particularmente relevante para jogos, que precisam criar a maioria de seus objetos com antecedência.
 - Libere explicitamente recursos como fluxos, conexões de rede, blocos grandes de memória e arquivos quando eles não forem mais necessários. Para obter mais informações, veja [Liberar recursos IDisposable](#idisposable).
-- Cancele o registro de manipuladores de eventos quando eles não forem mais necessários para tornar os objetos colecionáveis. Para obter mais informações, consulte [Unsubscribe from Events](#events) (Cancelar assinatura de eventos).
+- Cancele o registro de manipuladores de eventos quando eles não forem mais necessários para tornar os objetos colecionáveis. Para obter mais informações, confira [Unsubscribe from Events](#events) (Cancelar assinatura de eventos).
 
 <a name="linker" />
 

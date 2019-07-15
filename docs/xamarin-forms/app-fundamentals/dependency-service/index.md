@@ -1,36 +1,29 @@
 ---
 title: Xamarin.Forms DependencyService
-description: O Xamarin.Forms permite aos desenvolvedores definir o comportamento em projetos específicos a uma plataforma. O DependencyService, em seguida, localiza a implementação de plataforma certa, permitindo que o código compartilhado acesse a funcionalidade nativa.
+description: A classe DependencyService do Xamarin.Forms é um localizador de serviço que permite que os aplicativos Xamarin.Forms invoquem a funcionalidade de plataforma nativa de código compartilhado.
 ms.prod: xamarin
 ms.assetid: 403479F2-6751-41F2-ADCE-3AF595062FE4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/06/2017
-ms.openlocfilehash: 8a56ca7fcb6bfb6d463d1830e53210cf46fa499a
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.date: 06/05/2019
+ms.openlocfilehash: ea259d1ee9dc4a94322c38b3e96bee654197bb87
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741031"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650450"
 ---
 # <a name="xamarinforms-dependencyservice"></a>Xamarin.Forms DependencyService
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+## <a name="introductionintroductionmd"></a>[Introdução](introduction.md)
 
-_O Xamarin.Forms permite aos desenvolvedores definir o comportamento em projetos específicos a uma plataforma. O DependencyService, em seguida, localiza a implementação de plataforma certa, permitindo que o código compartilhado acesse a funcionalidade nativa._
+A classe [`DependencyService`](xref:Xamarin.Forms.DependencyService) é um localizador de serviço que permite que os aplicativos Xamarin.Forms invoquem a funcionalidade de plataforma nativa de um código compartilhado.
 
-Este guia é composto dos seguintes artigos:
+## <a name="registration-and-resolutionregistration-and-resolutionmd"></a>[Registro e resolução](registration-and-resolution.md)
 
-- **[Introdução](introduction.md)** &ndash; apresenta a arquitetura geral do conceito `DependencyService`.
-- **[Implementando a conversão de texto em fala](text-to-speech.md)** &ndash; apresenta um exemplo de como usar o sistema de texto em fala nativo de cada plataforma.
-- **[Verificando a orientação do dispositivo](device-orientation.md)** &ndash; apresenta um exemplo de como usar APIs da plataforma nativa para determinar a orientação do dispositivo.
-- **[Obtendo informações sobre a bateria](battery-info.md)** &ndash; apresenta um exemplo de como usar APIs nativas para obter informações sobre o status da bateria.
-- **[Escolhendo uma foto na biblioteca](photo-picker.md)** &ndash; apresenta um exemplo de como usar APIs nativas para escolher uma foto da biblioteca de imagens do telefone.
+As implementações de plataforma devem ser registradas no [`DependencyService`](xref:Xamarin.Forms.DependencyService) e então resolvidas de um código compartilhado para invocá-las.
 
+## <a name="picking-a-photo-from-the-libraryphoto-pickermd"></a>[Como escolher uma foto da biblioteca de imagens](photo-picker.md)
 
-## <a name="related-links"></a>Links relacionados
-
-- [Usando o DependencyService (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
-- [DependencyService (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
-- [Amostras do Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
+Este artigo explica como usar a classe [`DependencyService`](xref:Xamarin.Forms.DependencyService) do Xamarin.Forms para escolher uma foto da biblioteca de imagens do telefone.

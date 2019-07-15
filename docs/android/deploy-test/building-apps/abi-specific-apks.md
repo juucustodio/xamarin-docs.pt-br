@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b34ac82cf240b892e60707d76c82da64ff232a20
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 8c79075c9e01ef5da73255b152b4cbbd676b4f4e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827416"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674741"
 ---
 # <a name="building-abi-specific-apks"></a>Compilação de APKs específicos para ABI
 
@@ -29,7 +29,7 @@ Em algumas situações, pode ser vantajoso para um aplicativo ter vários APKs �
 -  **Dar suporte a diferentes arquiteturas de CPU** – se seu aplicativo tem bibliotecas compartilhadas para CPUs específicas, você pode distribuir apenas as compartilhadas para uma determinada CPU.
 
 
-Vários APKs podem complicar a distribuição – um problema que é abordado pelo Google Play. O Google Play garantirá que o APK correto seja entregue a um dispositivo com base no código da versão do aplicativo e outros metadados contidos em **AndroidManifest.XML**. Para obter detalhes específicos e restrições no modo como o Google Play é compatível com vários APKs para um aplicativo, consulte a [Documentação do Google sobre o suporte a vários APKs](https://developer.android.com/google/play/publishing/multiple-apks.html).
+Vários APKs podem complicar a distribuição – um problema que é abordado pelo Google Play. O Google Play garantirá que o APK correto seja entregue a um dispositivo com base no código da versão do aplicativo e outros metadados contidos em **AndroidManifest.XML**. Para obter detalhes específicos e restrições no modo como o Google Play é compatível com vários APKs para um aplicativo, confira a [Documentação do Google sobre o suporte a vários APKs](https://developer.android.com/google/play/publishing/multiple-apks.html).
 
 Este guia abordará como criar o script o build de múltiplos APKs para um aplicativo Xamarin.Android, cada APK direcionado a um ABI específico. Ele aborda os seguintes tópicos:
 
@@ -45,7 +45,7 @@ No final deste guia há um passo a passo que demonstra como criar o script dessa
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Criar um código de versão para o APK
 
-O Google recomenda um algoritmo específico para o código de versão, que usa um código de versão de sete dígitos (consulte a seção *Usando um esquema de código de versão* no [Documento de suporte a vários APKs](https://developer.android.com/google/play/publishing/multiple-apks.html)).
+O Google recomenda um algoritmo específico para o código de versão, que usa um código de versão de sete dígitos (confira a seção *Usando um esquema de código de versão* no [Documento de suporte a vários APKs](https://developer.android.com/google/play/publishing/multiple-apks.html)).
 Expandindo esse esquema de código da versão de oito dígitos, será possível incluir, no código de versão, algumas informações de ABI que garantirão que o Google Play distribuirá o APK correto para um dispositivo. A lista a seguir explica este formato de código de versão de oito dígitos (indexado da esquerda para a direita):
 
 -   **Índice 0** (vermelho no diagrama abaixo) &ndash; um inteiro para a ABI:
@@ -154,7 +154,7 @@ O [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerA
 
 1. [Compilar um build de versão](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L63) do projeto Xamarin.Android que terá como destino exclusivo a ABI, usando o **AndroidManifest.XML** que foi criado na etapa anterior.
 
-1. [Assinar o APK ](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) com um repositório de chaves de produção.
+1. [Assine o APK](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) com um repositório de chaves de produção.
 
 1. [Efetuar o zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67) no APK.
 
@@ -174,7 +174,7 @@ Após a tarefa rake ser concluída, haverá três pastas `bin` com o arquivo `xa
 
 
 > [!NOTE]
-> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](http://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](http://fsharp.github.io/FAKE/).
+> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](http://fsharp.github.io/FAKE/).
 
 
 ## <a name="summary"></a>Resumo

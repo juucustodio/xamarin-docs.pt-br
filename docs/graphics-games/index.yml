@@ -5,7 +5,7 @@ metadata:
   description: Jogos com gráficos 2D e 3D de plataforma cruzada para plataformas móveis e desktop.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 07/10/2018
   ms.topic: landing-page
 abstract:
   description: Jogos com gráficos 2D e 3D de plataforma cruzada para plataformas móveis e desktop.
@@ -13,8 +13,6 @@ abstract:
     items:
       - href: 'https://developer.xamarin.com/samples/'
         text: Exemplos
-      - href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
-        text: Notas sobre a versão
 sections:
   - title: null
     items:
@@ -34,19 +32,13 @@ sections:
               href: ~/graphics-games/urhosharp/index.md
             title: UrhoSharp
             html: Jogos e gráficos 3D de plataforma cruzada.
-          - href: ~/graphics-games/cocossharp/index.md
-            image:
-              src: ~/media/index/xamarin-graphics-cocos.svg
-              href: ~/graphics-games/cocossharp/index.md
-            title: CocosSharp
-            html: Compile jogos 2D de plataforma cruzada para dispositivos móveis.
           - href: ~/graphics-games/monogame/index.md
             image:
               src: ~/media/index/xamarin-graphics-monogame.svg
               href: ~/graphics-games/monogame/index.md
             title: MonoGame
             html: 'Compile jogos de desktop, móveis e de console com C#.'
-  - title: Plataformas
+  - title: Desenvolvimento de aplicativo móvel do Xamarin com o .NET
     items:
       - type: list
         style: cards
