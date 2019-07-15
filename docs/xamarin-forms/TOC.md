@@ -278,6 +278,7 @@
 
 ## [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms)
 ### [Introdução](~/essentials/get-started.md?context=xamarin/xamarin-forms)
+### [Suporte a recursos e a plataformas](~/essentials/platform-feature-support.md?context=xamarin/xamarin-forms)
 ### [Acelerômetro](~/essentials/accelerometer.md?context=xamarin/xamarin-forms)
 ### [Informações do aplicativo](~/essentials/app-information.md?context=xamarin/xamarin-forms)
 ### [Barômetro](~/essentials/barometer.md?context=xamarin/xamarin-forms)
