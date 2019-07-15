@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 9daedbe9bba5a2923a247104c4e69ae2e1b635aa
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831540"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865778"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit no xamarin. IOS
 
@@ -59,20 +59,20 @@ Faça o seguinte:
 
     [![](homekit-images/provision01.png "Habilitar o serviço do HomeKit para a ID especificada")](homekit-images/provision01.png#lightbox)
 5. Salve as alterações.
-4. Clique em **perfis de provisionamento** > **desenvolvimento** e criar um novo perfil para seu aplicativo de provisionamento de desenvolvimento: 
+6. Clique em **perfis de provisionamento** > **desenvolvimento** e criar um novo perfil para seu aplicativo de provisionamento de desenvolvimento: 
 
     [![](homekit-images/provision02.png "Criar um novo perfil para o aplicativo de provisionamento de desenvolvimento")](homekit-images/provision02.png#lightbox)
-5. Baixe e instale o novo perfil de provisionamento ou usar o Xcode para baixar e instalar o perfil de.
-6. Edite as opções de projeto do xamarin. IOS e certifique-se de que você está usando o perfil de provisionamento que você acabou de criar: 
+7. Baixe e instale o novo perfil de provisionamento ou usar o Xcode para baixar e instalar o perfil de.
+8. Edite as opções de projeto do xamarin. IOS e certifique-se de que você está usando o perfil de provisionamento que você acabou de criar: 
 
     [![](homekit-images/provision03.png "Selecione o perfil de provisionamento recém-criado")](homekit-images/provision03.png#lightbox)
-7. Em seguida, edite sua **Info. plist** de arquivo e certifique-se de que você está usando a ID do aplicativo que foi usado para criar o perfil de provisionamento: 
+9. Em seguida, edite sua **Info. plist** de arquivo e certifique-se de que você está usando a ID do aplicativo que foi usado para criar o perfil de provisionamento: 
 
     [![](homekit-images/provision04.png "Defina a ID do aplicativo ")](homekit-images/provision04.png#lightbox)
-8. Por fim, edite sua **Entitlements. plist** do arquivo e certifique-se de que o **HomeKit** direito tiver sido selecionado: 
+10. Por fim, edite sua **Entitlements. plist** do arquivo e certifique-se de que o **HomeKit** direito tiver sido selecionado: 
 
     [![](homekit-images/provision05.png "Habilitar os direitos do HomeKit")](homekit-images/provision05.png#lightbox)
-9. Salve as alterações a todos os arquivos.
+11. Salve as alterações a todos os arquivos.
 
 Com essas configurações em vigor, o aplicativo agora está pronto para acessar as APIs de estrutura HomeKit. Para obter informações detalhadas sobre o provisionamento, consulte nosso [aprovisionamento](~/ios/get-started/installation/device-provisioning/index.md) e [provisionamento do seu aplicativo](~/ios/get-started/installation/device-provisioning/index.md) guias.
 

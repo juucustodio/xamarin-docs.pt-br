@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: be017103c5a3a2c890f49e4a510d20fcd0c03094
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: f0cfeaa049355c2b524ead748696eafd884a1c54
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675097"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865696"
 ---
 # <a name="introduction-to-ios-6"></a>Introdução ao iOS 6
 
@@ -34,17 +34,17 @@ Exibições de coleção permitem que o conteúdo a ser exibido usando layouts a
 PassKit framework permite que os aplicativos interagir com passos de digitais que são gerenciados no aplicativo Passbook. Para obter mais informações consulte, o [Introdução ao guia do Kit de passar](~/ios/platform/passkit.md).
 
 
-##  <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[Introdução ao Kit de eventos](~/ios/platform/eventkit.md)
+## <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[Introdução ao Kit de eventos](~/ios/platform/eventkit.md)
 
 O framework do Kit de eventos fornece uma maneira de acessar os calendários, eventos de calendário e dados de lembretes que armazena o banco de dados de calendário. Acesso ao calendário e calendários de eventos está disponível desde o iOS 4, mas o iOS 6 agora expõe o acesso aos dados de lembretes. Para obter mais informações, consulte o [eu](~/ios/platform/eventkit.md) [Introdução ao Kit de eventos](~/ios/platform/eventkit.md) guia.
 
 
-##  <a name="introduction-to-the-social-frameworkiosplatformsocial-frameworkmd"></a>[Introdução ao Framework Social](~/ios/platform/social-framework.md)
+## <a name="introduction-to-the-social-frameworkiosplatformsocial-frameworkmd"></a>[Introdução ao Framework Social](~/ios/platform/social-framework.md)
 
 A estrutura Social fornece uma API unificada para interagir com redes sociais, incluindo o Facebook e Twitter, bem como SinaWeibo para os usuários na China. Para obter mais informações consulte, o [Introdução ao Framework Social](~/ios/platform/social-framework.md) guia.
 
 
-##  <a name="changes-to-storekitchanges-to-storekitmd"></a>[Alterações no StoreKit](changes-to-storekit.md)
+## <a name="changes-to-storekitchanges-to-storekitmd"></a>[Alterações no StoreKit](changes-to-storekit.md)
 
 Apple introduziu dois novos recursos do Store Kit: comprar e baixar iTunes ou o conteúdo da App Store de dentro de seu aplicativo e hospedando seus arquivos de conteúdo para compras no aplicativo!. Para obter mais informações consulte, o [muda para Store Kit](changes-to-storekit.md) guia.
 

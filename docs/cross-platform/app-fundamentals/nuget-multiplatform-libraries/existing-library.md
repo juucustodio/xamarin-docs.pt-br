@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 7f407b22d1793d585ae40aeae8c2d9b7616784e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e043334d3ca45a573423ebdfdf1ec9149167b55
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267775"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864700"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Criando um NuGet de projetos de biblioteca existentes
 
@@ -21,13 +21,13 @@ Bibliotecas PCL existente ou .NET Standard podem ser transformadas em NuGets por
 
 2. Vá para o **pacote do NuGet > metadados** seção e insira todas a [as informações necessárias](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) no **geral** guia:
 
-  [![](existing-library-images/existing-metadata-sml.png "Insira os metadados necessários")](existing-library-images/existing-metadata.png#lightbox)
+   [![](existing-library-images/existing-metadata-sml.png "Insira os metadados necessários")](existing-library-images/existing-metadata.png#lightbox)
 
 3. Opcionalmente, [adicionar metadados adicionais](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) na **detalhes** guia.
 
 4. Depois de configurar os metadados, você pode clique com botão direito no projeto e escolha **criar pacote do NuGet** e o **. nupkg** serão salvas no arquivo de pacote do NuGet a **/bin/** pasta (Debug ou Release, dependendo da configuração).
 
-  ![](existing-library-images/create-nuget-package.png "Escolha Criar pacote do NuGet no menu de atalho")
+   ![](existing-library-images/create-nuget-package.png "Escolha Criar pacote do NuGet no menu de atalho")
 
 5. Para criar o pacote do NuGet na _cada_ compilar ou implantar, vá para o **pacote do NuGet > compilar** seção e escala **criar um pacote NuGet ao compilar o projeto**:
 

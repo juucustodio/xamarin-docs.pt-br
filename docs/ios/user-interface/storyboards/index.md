@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 5c3c9714cb4d6cd077f898778f4388d63018fa00
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 79c1d7852cdde9b557965931706fcd24e43954f7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831696"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865210"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução ao Storyboards no xamarin. IOS
 
@@ -327,7 +327,7 @@ Antes de começar, siga etapas 1 a 8 acima. Nestas etapas podemos criar nossos s
         - Cor: Vermelho
         - Alinhamento: Centralizado
         - Linhas: 2
-        - Caixa de seleção 'Hidden' verificada 
+        - Caixa de seleção 'Hidden' verificada    
         
     [![](images/passwordvc.png "Linhas de Center")](images/passwordvc.png#lightbox)
     
@@ -424,25 +424,25 @@ Para adicionar uma referência a uma cena específica um Storyboard externo (e n
 
     [![](images/ref08.png "Insira uma ID do Storyboard para o novo controlador de exibição de cenas")](images/ref08.png#lightbox)
     
-3. Abra o Storyboard que você pretende adicionar a referência a no Designer do iOS.
+4. Abra o Storyboard que você pretende adicionar a referência a no Designer do iOS.
 
-4. Arraste uma **referência do Storyboard** da **caixa de ferramentas** na superfície de Design: 
+5. Arraste uma **referência do Storyboard** da **caixa de ferramentas** na superfície de Design: 
 
     [![](images/ref03.png "Uma referência de Storyboard")](images/ref03.png#lightbox)
     
-5. No **Widget** guia da **Gerenciador de propriedades**, selecione o nome da **Storyboard** e o **ID de referência** (ID do Storyboard) do Cena que você criou acima: 
+6. No **Widget** guia da **Gerenciador de propriedades**, selecione o nome da **Storyboard** e o **ID de referência** (ID do Storyboard) do Cena que você criou acima: 
 
     [![](images/ref09.png "Na guia de Widget ")](images/ref09.png#lightbox)
     
-6. CTRL + clique em um Widget de interface do usuário (como um botão) em uma cena existente e criar um novo Segue para a **referência de Storyboard** que você acabou de criar: 
+7. CTRL + clique em um Widget de interface do usuário (como um botão) em uma cena existente e criar um novo Segue para a **referência de Storyboard** que você acabou de criar: 
 
     [![](images/ref10.png "Criando um segue")](images/ref10.png#lightbox) 
     
-7. No menu pop-up, selecione **Mostrar** para concluir o Segue: 
+8. No menu pop-up, selecione **Mostrar** para concluir o Segue: 
 
     [![](images/ref06.png "Selecionando Mostrar para concluir o Segue")](images/ref06.png#lightbox) 
     
-8. Salve suas alterações para o Storyboard.
+9. Salve suas alterações para o Storyboard.
 
 Quando o aplicativo é executado e o usuário clica no elemento de interface do usuário que você criou o Segue da cena com o determinado **ID do Storyboard** do Storyboard externo especificado na referência do Storyboard será exibida.
 
@@ -462,9 +462,9 @@ Para adicionar uma referência a uma cena específica o Storyboard mesmo, faça 
 
     [![](images/ref12.png "Na guia de Widget")](images/ref12.png#lightbox)
     
-3. Arraste uma **referência do Storyboard** da **caixa de ferramentas** na superfície de Design: 
+4. Arraste uma **referência do Storyboard** da **caixa de ferramentas** na superfície de Design: 
 
-    [![](images/ref03.png "Uma referência de Storyboard")](images/ref03.png#lightbox)
+   [![](images/ref03.png "Uma referência de Storyboard")](images/ref03.png#lightbox)
     
 5. No **Widget** guia o **Gerenciador de propriedades**, selecione **ID de referência** (ID do Storyboard) da cena que você criou acima: 
 
