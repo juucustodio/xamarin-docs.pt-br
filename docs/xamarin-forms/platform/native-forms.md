@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/03/2019
-ms.openlocfilehash: f0ad4e3271ac8c1f8d30a0440b38d8a46c57783e
-ms.sourcegitcommit: b4a12607ca944de10fd166139765241a4501831c
+ms.openlocfilehash: 9c427dc48f6fe19098c312bad16d9630bb480264
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66687068"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290154"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin. Forms em projetos do Xamarin nativo
 
@@ -119,6 +119,9 @@ O `NavigateToNoteEntryPage` método converte o xamarin. Forms [ `ContentPage` ](
 [![Captura de tela de um aplicativo xamarin. IOS que usa uma interface do usuário definido em XAML](native-forms-images/ios-noteentrypage.png "aplicativo xamarin. IOS com um XAML UI")](native-forms-images/ios-noteentrypage-large.png#lightbox "aplicativo xamarin. IOS com uma UI do XAML")
 
 Quando o `NoteEntryPage` for exibida, tocando o back seta será exibida a `UIViewController` para o `NoteEntryPage` de classe da `UINavigationController`, retornando o usuário para o `UIViewController` para o `NotesPage` classe.
+
+> [!WARNING]
+> O Popping de um `UIViewController` do iOS nativo navegação pilha automaticamente descarte `UIViewController`s. É responsabilidade do desenvolvedor para garantir que qualquer `UIViewController` que não é mais necessário tem seu `Dispose()` chamada de método, caso contrário o `UIViewController` e anexadas `Page` se tornem órfãs e não será coletado pelo coletor de lixo, resultando em um vazamento de memória.
 
 ## <a name="android"></a>Android
 
