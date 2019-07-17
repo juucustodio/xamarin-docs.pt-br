@@ -9,11 +9,11 @@
         - name: Requisitos
           displayName: System requirements
           href: get-started/requirements.md
-        - name: Introdução ao desenvolvimento móvel
+        - name: O que é o Xamarin?
           href: get-started/introduction-to-mobile-development.md
-        - name: Introdução ao SDLC Móvel
+        - name: O ciclo de vida do desenvolvimento de software móvel
           href: get-started/introduction-to-mobile-sdlc.md
-        - name: Compilando aplicativos multiplataforma
+        - name: Passo a passo para a criação de um aplicativo de multiplataforma
           href: app-fundamentals/building-cross-platform-applications/index.md
           items:
             - name: Visão geral
@@ -75,10 +75,10 @@
               href: platform/fsharp/overview.md
             - name: 'Amostras do F#'
               href: platform/fsharp/samples.md
-        - name: Visual Basic.NET
+        - name: Visual Basic
           href: platform/visual-basic/index.md
           items:
-            - name: Xamarin iOS e Android
+            - name: Xamarin Android e iOS
               href: platform/visual-basic/native-apps.md
             - name: Xamarin.Forms
               href: platform/visual-basic/xamarin-forms.md
