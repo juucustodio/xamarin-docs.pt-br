@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 5fbe711cb8ad4902da047a2027fc05e9956de863
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: f7319a2c3dd4c3f77873d9b3d2cba74a77f14ae0
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039723"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865591"
 ---
 # <a name="hello-ios--quickstart"></a>Olá, iOS – Guia de Início Rápido
 
@@ -84,56 +84,56 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     Observe que as _classes de tamanho_ estão habilitadas por padrão. Consulte o guia [Storyboards Unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para saber mais sobre elas.
 
-8. No **Painel de Caixa de Ferramentas**, digite "rótulo" na barra de pesquisa e arraste um **Rótulo** para a superfície de design (a área no centro):
+7. No **Painel de Caixa de Ferramentas**, digite "rótulo" na barra de pesquisa e arraste um **Rótulo** para a superfície de design (a área no centro):
 
     ![](hello-ios-quickstart-images/image8new.png "Arraste um Rótulo para a área da superfície de design no centro")
 
     > [!NOTE]
     > Você pode abrir o painel **Propriedades** ou a **Caixa de Ferramentas** a qualquer momento navegando para **Exibir > Painéis**.
 
-9. Pegue as alças dos *Controles de Arraste* (os círculos ao redor do controle) e torne o rótulo mais largo:
+8. Pegue as alças dos *Controles de Arraste* (os círculos ao redor do controle) e torne o rótulo mais largo:
 
     ![](hello-ios-quickstart-images/image9.png "Torne o rótulo mais largo")
 
-10. Com o **Rótulo** selecionado na superfície de design, use o **Painel de Propriedades** para alterar a propriedade **Texto** do **Rótulo** para “Inserir um Phoneword:”
+9. Com o **Rótulo** selecionado na superfície de design, use o **Painel de Propriedades** para alterar a propriedade **Texto** do **Rótulo** para “Inserir um Phoneword:”
 
     ![](hello-ios-quickstart-images/image10.png "Defina o rótulo para Inserir um Phoneword")
 
-11. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até o **Campo de Texto** ter a mesma largura que o **Rótulo**:
+10. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até o **Campo de Texto** ter a mesma largura que o **Rótulo**:
 
     ![](hello-ios-quickstart-images/image12new.png "Deixe o Campo de texto com a mesma largura que o Rótulo")
 
-12. Com o **Campo de Texto** selecionado na superfície de design, no **Campo de Texto**, altere a propriedade **Nome** na seção Identidade do **Painel de Propriedades** para `PhoneNumberText` e altere a propriedade **Texto** para "1-855-XAMARIN":
+11. Com o **Campo de Texto** selecionado na superfície de design, no **Campo de Texto**, altere a propriedade **Nome** na seção Identidade do **Painel de Propriedades** para `PhoneNumberText` e altere a propriedade **Texto** para "1-855-XAMARIN":
 
     ![](hello-ios-quickstart-images/image13new.png "Altere a propriedade Título para 1-855-XAMARIN")
 
-13. Arraste um **Botão** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Campo de Texto**. Ajuste a largura de modo que o **botão** seja tão largo quanto o **Campo de Texto** e o **Rótulo**:
+12. Arraste um **Botão** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Campo de Texto**. Ajuste a largura de modo que o **botão** seja tão largo quanto o **Campo de Texto** e o **Rótulo**:
 
     ![](hello-ios-quickstart-images/image14new.png "Ajuste a largura para que o botão tenha a mesma largura que o Campo de texto e o Rótulo")
 
-14. Com o **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** do **Painel de Propriedades** para `TranslateButton`. Altere a propriedade **Título** “Traduzir”:
+13. Com o **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** do **Painel de Propriedades** para `TranslateButton`. Altere a propriedade **Título** “Traduzir”:
 
     ![](hello-ios-quickstart-images/image15new.png "Altere a propriedade Título para Traduzir")
 
-15. Repita as duas etapas acima e arraste um **Botão** de **Caixa de Ferramentas** para a superfície de design e coloque-o sob o primeiro **Botão**. Ajuste a largura para que o **Botão** tenha a mesma largura que o primeiro **Botão**:
+14. Repita as duas etapas acima e arraste um **Botão** de **Caixa de Ferramentas** para a superfície de design e coloque-o sob o primeiro **Botão**. Ajuste a largura para que o **Botão** tenha a mesma largura que o primeiro **Botão**:
 
     ![](hello-ios-quickstart-images/image16new.png "Ajuste a largura para que o botão tenha a mesma largura que o primeiro botão")
 
-16. Com o segundo **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** do **Painel de Propriedades** para `CallButton`. Alterar a propriedade **Título** para “Chamada”:
+15. Com o segundo **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** do **Painel de Propriedades** para `CallButton`. Alterar a propriedade **Título** para “Chamada”:
 
     ![](hello-ios-quickstart-images/image17new.png "Altere a propriedade Título para Chamar")
 
     Salve as alterações navegando até **Arquivo > Salvar** ou pressionando **⌘ + s**.
 
-17. Alguma lógica precisa ser adicionada ao aplicativo para converter números de telefone de alfanuméricos para numéricos. Adicione um novo arquivo ao projeto clicando com o botão direito do mouse no projeto **Phoneword_iOS** no **Painel de Soluções** e escolhendo **Adicionar > Novo Arquivo...** ou pressionando **⌘ + n**:
+16. Alguma lógica precisa ser adicionada ao aplicativo para converter números de telefone de alfanuméricos para numéricos. Adicione um novo arquivo ao projeto clicando com o botão direito do mouse no projeto **Phoneword_iOS** no **Painel de Soluções** e escolhendo **Adicionar > Novo Arquivo...** ou pressionando **⌘ + n**:
 
     ![](hello-ios-quickstart-images/image18.png "Adicione um novo arquivo ao projeto")
 
-18. Na caixa de diálogo **Novo Arquivo**, selecione **Geral > Classe Vazia** e nomeie o novo arquivo `PhoneTranslator`:
+17. Na caixa de diálogo **Novo Arquivo**, selecione **Geral > Classe Vazia** e nomeie o novo arquivo `PhoneTranslator`:
 
     ![](hello-ios-quickstart-images/image19.png "Selecione a Classe vazia e dê um nome ao novo arquivo PhoneTranslator")
 
-19. Isso cria uma nova classe C# vazia para nós. Remova todo o código de modelo e substitua-o pelo código a seguir:
+18. Isso cria uma nova classe C# vazia para nós. Remova todo o código de modelo e substitua-o pelo código a seguir:
 
     ```csharp
     using System.Text;
@@ -199,11 +199,11 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     Salve o arquivo **PhoneTranslator.cs** e feche-o.
 
-20. Adicione código para conectar a interface do usuário. Para fazer isso, clique duas vezes em **ViewController.cs** no **Painel de Solução** para abri-lo:
+19. Adicione código para conectar a interface do usuário. Para fazer isso, clique duas vezes em **ViewController.cs** no **Painel de Solução** para abri-lo:
 
     ![](hello-ios-quickstart-images/image20new.png "Adicione um código para conectar a interface do usuário")
 
-21. Comece conectando `TranslateButton`. Na classe **ViewController**, localize o método `ViewDidLoad` e adicione o seguinte código sob a chamada `base.ViewDidLoad()`:
+20. Comece conectando `TranslateButton`. Na classe **ViewController**, localize o método `ViewDidLoad` e adicione o seguinte código sob a chamada `base.ViewDidLoad()`:
 
     ```csharp
     string translatedNumber = "";
@@ -230,7 +230,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     Incluir `using Phoneword_iOS;` se o namespace do arquivo for diferente.
 
-22. Adicione código para responder quando o usuário pressiona o segundo botão, que se chama `CallButton`. Coloque o código a seguir abaixo do código para `TranslateButton` e adicione `using Foundation;` à parte superior do arquivo:
+21. Adicione código para responder quando o usuário pressiona o segundo botão, que se chama `CallButton`. Coloque o código a seguir abaixo do código para `TranslateButton` e adicione `using Foundation;` à parte superior do arquivo:
 
     ```csharp
         CallButton.TouchUpInside += (object sender, EventArgs e) => {
@@ -246,20 +246,20 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
         };
     ```
 
-23. Salve as alterações e compile o aplicativo escolhendo **Compilar > Compilar Tudo** ou pressionando **⌘ + B**.  Se o aplicativo for compilado, uma mensagem de êxito será exibida na parte superior do IDE:
+22. Salve as alterações e compile o aplicativo escolhendo **Compilar > Compilar Tudo** ou pressionando **⌘ + B**.  Se o aplicativo for compilado, uma mensagem de êxito será exibida na parte superior do IDE:
 
     ![](hello-ios-quickstart-images/image21.png "Será exibida uma mensagem de êxito na parte superior do IDE")
 
     Se houver erros, repita as etapas anteriores e corrija-os até que o aplicativo seja compilado com êxito.
 
-27. Por fim, teste o aplicativo no **Simulador do iOS**. No canto superior esquerdo do IDE, escolha **Depurar** na primeira lista suspensa e **iPhone XR iOS 12.0** (ou outro simulador disponível) na segunda lista suspensa e pressione **Iniciar** (o botão triangular que lembra um botão Reproduzir):
+23. Por fim, teste o aplicativo no **Simulador do iOS**. No canto superior esquerdo do IDE, escolha **Depurar** na primeira lista suspensa e **iPhone XR iOS 12.0** (ou outro simulador disponível) na segunda lista suspensa e pressione **Iniciar** (o botão triangular que lembra um botão Reproduzir):
 
     ![](hello-ios-quickstart-images/image27.png "Selecione um simulador e pressione iniciar")
 
     > [!NOTE]
     > No momento, devido a um requisito da Apple, pode ser necessário ter um certificado de desenvolvimento ou *identidade de assinatura* para poder compilar código para o dispositivo ou simulador. Siga as etapas no [guia Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar isso.
 
-28. Isso inicializará o aplicativo no Simulador do iOS:
+24. Isso inicializará o aplicativo no Simulador do iOS:
 
     ![](hello-ios-quickstart-images/image28.png "O aplicativo em execução dentro do Simulador de iOS")
 
@@ -274,7 +274,8 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
 Este passo a passo descreve como criar um aplicativo chamado Phoneword que converte um número de telefone alfanumérico em um número de telefone numérico.
 
-**Observação**: Este passo a passo usa o Visual Studio Enterprise 2017 em uma máquina virtual do Windows 10. Sua instalação pode diferir desta, desde que atenda aos requisitos acima, mas lembre-se de que algumas capturas de tela podem ser diferentes para sua instalação.
+> [!NOTE]
+> Este passo a passo usa o Visual Studio Enterprise 2017 em uma máquina virtual do Windows 10. Sua instalação pode diferir desta, desde que atenda aos requisitos acima, mas lembre-se de que algumas capturas de tela podem ser diferentes para sua instalação.
 
 > [!NOTE]
 > Antes de continuar com este passo a passo, você já deve estar conectado ao Mac do Visual Studio. Isso ocorre porque o Xamarin.iOS depende das ferramentas da Apple para compilar e iniciar o iOS Designer e os aplicativos. Para obter a configuração, siga as etapas do guia [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
@@ -283,7 +284,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/image001-.png "A Tela inicial")
 
-    Crie uma solução Xamarin.iOS selecionando **Arquivo > Novo > Projeto... > Visual C# > iPhone e iPad > Aplicativo iOS (Xamarin)**:
+    Crie uma solução Xamarin.iOS selecionando **Arquivo > Novo > Projeto... > Visual C# > iPhone e iPad > Aplicativo iOS (Xamarin)** :
 
     ![Selecione o tipo de projeto do aplicativo iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Select iOS App (Xamarin) project type")
 
@@ -320,41 +321,41 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/vs-image12.png "Ajuste a largura até o Campo de texto ter a mesma largura que o Rótulo")
 
-10. Com o **Campo de Texto** selecionado na superfície de design, no **Campo de Texto**, altere a propriedade **Nome** na seção Identidade de **Propriedades** para `PhoneNumberText` e altere a propriedade **Texto** para “1-855-XAMARIN”:
+1. Com o **Campo de Texto** selecionado na superfície de design, no **Campo de Texto**, altere a propriedade **Nome** na seção Identidade de **Propriedades** para `PhoneNumberText` e altere a propriedade **Texto** para “1-855-XAMARIN”:
 
     ![](hello-ios-quickstart-images/vs-image13.png "Altere a propriedade Texto para 1-855-XAMARIN")
 
-11. Arraste um **Botão** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Campo de Texto**. Ajuste a largura de modo que o **botão** seja tão largo quanto o **Campo de Texto** e o **Rótulo**:
+1. Arraste um **Botão** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Campo de Texto**. Ajuste a largura de modo que o **botão** seja tão largo quanto o **Campo de Texto** e o **Rótulo**:
 
     ![](hello-ios-quickstart-images/vs-image14.png "Ajuste a largura para que o botão tenha a mesma largura que o Campo de texto e o Rótulo")
 
 
-12. Com o **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** de **Propriedades** para `TranslateButton`. Altere a propriedade **Título** “Traduzir”:
+1. Com o **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** de **Propriedades** para `TranslateButton`. Altere a propriedade **Título** “Traduzir”:
 
     ![](hello-ios-quickstart-images/vs-image15.png "Altere a propriedade Título para Traduzir")
 
-13. Repita as duas etapas anteriores e arraste um **Botão** de **Caixa de Ferramentas** para a superfície de design e coloque-o sob o primeiro **Botão**. Ajuste a largura para que o **Botão** tenha a mesma largura que o primeiro **Botão**:
+1. Repita as duas etapas anteriores e arraste um **Botão** de **Caixa de Ferramentas** para a superfície de design e coloque-o sob o primeiro **Botão**. Ajuste a largura para que o **Botão** tenha a mesma largura que o primeiro **Botão**:
 
     ![](hello-ios-quickstart-images/vs-image16.png "Ajuste a largura para que o botão tenha a mesma largura que o primeiro botão")
 
-14. Com o segundo **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** de **Propriedades** para `CallButton`. Alterar a propriedade **Título** para “Chamada”:
+1. Com o segundo **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** de **Propriedades** para `CallButton`. Alterar a propriedade **Título** para “Chamada”:
 
     ![](hello-ios-quickstart-images/vs-image17.png "Altere a propriedade Título para Chamar")
 
     Salve as alterações navegando até **Arquivo > Salvar Tudo** ou pressionando **Ctrl + s**.
 
-15. Adicione algum código para converter números de telefone de alfanuméricos para numéricos. Para fazer isso, primeiro adicione um novo arquivo ao Projeto clicando com o botão direito do mouse no Projeto **Phoneword** no **Gerenciador de Soluções** e escolhendo **Adicionar > Novo Item…** ou pressionando **Ctrl + Shift + A**:
+1. Adicione algum código para converter números de telefone de alfanuméricos para numéricos. Para fazer isso, primeiro adicione um novo arquivo ao Projeto clicando com o botão direito do mouse no Projeto **Phoneword** no **Gerenciador de Soluções** e escolhendo **Adicionar > Novo Item…** ou pressionando **Ctrl + Shift + A**:
 
     ![](hello-ios-quickstart-images/vs-image18.png "Adicione algum código para converter números de telefone de alfanuméricos em numéricos")
 
-16. Na caixa de diálogo **Adicionar Novo Item** (clique com o botão direito do mouse no projeto e escolha Adicionar > Novo Item...), selecione **Apple > Classe** e o nome do novo arquivo `PhoneTranslator`:
+1. Na caixa de diálogo **Adicionar Novo Item** (clique com o botão direito do mouse no projeto e escolha Adicionar > Novo Item...), selecione **Apple > Classe** e o nome do novo arquivo `PhoneTranslator`:
 
     ![](hello-ios-quickstart-images/vs-image19.w157.png "Adicione uma nova classe chamada PhoneTranslator")
 
     > [!IMPORTANT]
     > Selecione o modelo "class" que tem C# no ícone. Caso contrário, você não poderá fazer referência a essa nova classe.
 
-17. Isso cria uma nova classe C#. Remova todo o código de modelo e substitua-o pelo código a seguir:
+1. Isso cria uma nova classe C#. Remova todo o código de modelo e substitua-o pelo código a seguir:
 
     ```csharp
     using System.Text;
@@ -420,12 +421,12 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     Salve o arquivo **PhoneTranslator.cs** e feche-o.
 
-18. Clique duas vezes em **ViewController.cs** no **Gerenciador de Soluções** para abri-lo de modo que a lógica pode ser adicionada a interações de alças com botões:
+1. Clique duas vezes em **ViewController.cs** no **Gerenciador de Soluções** para abri-lo de modo que a lógica pode ser adicionada a interações de alças com botões:
 
     ![](hello-ios-quickstart-images/vs-image20.png "Lógica adicionada para manipular as interações com os botões")
 
 
-19. Comece conectando `TranslateButton`. Na classe **ViewController**, localize o método `ViewDidLoad`. Adicione o seguinte código de botão dentro de `ViewDidLoad`, abaixo da chamada `base.ViewDidLoad()`:
+1. Comece conectando `TranslateButton`. Na classe **ViewController**, localize o método `ViewDidLoad`. Adicione o seguinte código de botão dentro de `ViewDidLoad`, abaixo da chamada `base.ViewDidLoad()`:
 
     ```csharp
     string translatedNumber = "";
@@ -451,7 +452,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
     ```
     Incluir `using Phoneword;` se o namespace do arquivo for diferente.
 
-20. Adicione código para responder quando o usuário pressiona o segundo botão, que se chama `CallButton`. Coloque o código a seguir abaixo do código para `TranslateButton` e adicione `using Foundation;` à parte superior do arquivo:
+1. Adicione código para responder quando o usuário pressiona o segundo botão, que se chama `CallButton`. Coloque o código a seguir abaixo do código para `TranslateButton` e adicione `using Foundation;` à parte superior do arquivo:
 
     ```csharp
     CallButton.TouchUpInside += (object sender, EventArgs e) => {
@@ -468,17 +469,17 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
     };
     ```
 
-21. Salve as alterações e, em seguida, compile o aplicativo escolhendo **Compilar > Compilar Solução** ou pressionando **Ctrl + Shift + B**.  Se o aplicativo for compilado, uma mensagem de êxito será exibida na parte inferior do IDE:
+1. Salve as alterações e, em seguida, compile o aplicativo escolhendo **Compilar > Compilar Solução** ou pressionando **Ctrl + Shift + B**.  Se o aplicativo for compilado, uma mensagem de êxito será exibida na parte inferior do IDE:
 
     ![](hello-ios-quickstart-images/vs-image21.png "Será exibida uma mensagem de êxito na parte inferior do IDE")
 
     Se houver erros, repita as etapas anteriores e corrija-os até que o aplicativo seja compilado com êxito.
 
-22. Por fim, teste o aplicativo no **Simulador do iOS Remoto**. Na barra de ferramentas de IDE, escolha **Depurar** e **iPhone 8 Plus iOS x.x** no menu suspenso e pressione **Iniciar** (o triângulo verde parecido com o botão Executar):
+1. Por fim, teste o aplicativo no **Simulador do iOS Remoto**. Na barra de ferramentas de IDE, escolha **Depurar** e **iPhone 8 Plus iOS x.x** no menu suspenso e pressione **Iniciar** (o triângulo verde parecido com o botão Executar):
 
     ![](hello-ios-quickstart-images/vs-image27.png "Pressione Iniciar")
 
-23. Isso inicializará o aplicativo no Simulador do iOS:
+1. Isso inicializará o aplicativo no Simulador do iOS:
 
     ![](hello-ios-quickstart-images/vs-image28.png "O aplicativo em execução dentro do Simulador de iOS")
 

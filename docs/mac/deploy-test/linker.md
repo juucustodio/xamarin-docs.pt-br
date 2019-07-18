@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: 73f652be32c72ef51170f44c28ce1590e6a0e92b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dd42de4dda4b5d5b09156898fd7a8bab331adf88
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106839"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865900"
 ---
 # <a name="xamarinmac-linker-options"></a>Opções do vinculador do Xamarin.Mac
 
@@ -49,7 +49,7 @@ Para alterar a configuração do vinculador para um projeto Xamarin.Mac, faça o
 2. No **Gerenciador de Soluções**, clique duas vezes no arquivo do projeto para abrir a caixa de diálogo **Opções de Projeto**.
 3. Na guia **Build do Mac**, selecione o tipo de **Comportamento do Vinculador** que atende às necessidades do aplicativo:
 
-  ![Escolher qual comportamento do vinculador usar](linker-images/link-behavior.png "Escolher qual comportamento do vinculador usar")
+    ![Escolher qual comportamento do vinculador usar](linker-images/link-behavior.png "Escolher qual comportamento do vinculador usar")
 
 4. A vinculação da plataforma para Estruturas de Destino Completas não aparecerá no IDE até uma atualização futura. Até lá, adicione `--linkplatform` aos **Argumentos mmp adicionais** em vez disso.
 5. Clique no botão **OK** para salvar suas alterações.

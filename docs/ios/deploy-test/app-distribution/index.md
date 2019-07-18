@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 1bd61474daedd8bd330c0370948d6dee6f8ea50e
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: d533996a9c4e86efa360bf2ed71165571c7ca260
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194951"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865828"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Visão geral da distribuição de aplicativos Xamarin.iOS
 
@@ -27,8 +27,8 @@ Depois que um aplicativo Xamarin.iOS for desenvolvido, a próxima etapa no ciclo
 Apple fornece as seguintes maneiras de distribuir um aplicativo iOS, que tem suporte com Xamarin.iOS:
 
 1. [**App Store**](#App_Store_Distribution)
-2. [**Interno (Enterprise)**](#In-House_Distribution)
-2. [**Ad Hoc**](#Ad_Hoc_Distribution)
+2. [**Interno (Enterprise)** ](#In-House_Distribution)
+3. [**Ad Hoc**](#Ad_Hoc_Distribution)
 
 Todos esses cenários exigem que os aplicativos sejam provisionados usando o *perfil de provisionamento* apropriado. Perfis de provisionamento são arquivos que contêm informações de assinatura de código, bem como a identidade do aplicativo e o mecanismo de distribuição desejado. Para a distribuição fora da App Store, também há informações sobre em quais dispositivos o aplicativo pode ser implantado.
 

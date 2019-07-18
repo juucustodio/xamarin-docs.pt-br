@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 3dc68d0879d3ce4d5dd9b658a3bce7a00c348c09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0ae5dd86341912354938a8509668c843d412367b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121237"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832586"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Recursos Wallet no Xamarin.iOS
 
@@ -32,21 +32,21 @@ Os desenvolvedores podem trabalhar com o Wallet de várias maneiras:
 
 Para criar um novo perfil de provisionamento a ser usado com o Wallet, faça o seguinte:
 
-1.  Procure a seção [Certificados, Identificadores e Perfis](https://developer.apple.com/account/ios/certificate/) do Portal do Desenvolvedor da Apple.
-2.  Em **Identificadores**, procure **IDs do aplicativo**: 
+1. Procure a seção [Certificados, Identificadores e Perfis](https://developer.apple.com/account/ios/certificate/) do Portal do Desenvolvedor da Apple.
+2. Em **Identificadores**, procure **IDs do aplicativo**: 
     
     ![Seleção de ID do aplicativo](wallet-capabilities-images/image17.png)
 
-3.  Clique no ícone **+** no canto superior direito da página.
-4.  Registre uma nova ID do aplicativo, dando a ela um **nome** e um identificador de lote. (Observe que esse identificador de lote deve corresponder à ID de lote no projeto):
+3. Clique no ícone **+** no canto superior direito da página.
+4. Registre uma nova ID do aplicativo, dando a ela um **nome** e um identificador de lote. (Observe que esse identificador de lote deve corresponder à ID de lote no projeto):
    
     ![Adicionar detalhes da ID do aplicativo](wallet-capabilities-images/image18.png)
 
-5.  Selecione o serviço de aplicativo **Wallet** na lista de serviços:
+5. Selecione o serviço de aplicativo **Wallet** na lista de serviços:
     
     ![Tela de seleção de serviço](wallet-capabilities-images/image19.png)
 
-6.  Pressione **Continuar** e, em seguida, **Registrar** para criar a ID do aplicativo.
+6. Pressione **Continuar** e, em seguida, **Registrar** para criar a ID do aplicativo.
 
 Se necessário, as IDs do aplicativo existentes poderão ser editadas para adicionar a capacidade do Wallet.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ff4c72eaaf856083ab8e2e240ac8ce3eff37470c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 24cf255d5cf9269a7d0d485ad8a88abe6842b07a
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669619"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865602"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurando um aplicativo no iTunes Connect
 
@@ -44,10 +44,10 @@ A seção **Agreements, Tax, and Banking (Contratos, imposto e transações banc
 
 Deste ponto em diante, você pode:
 
-- Fornecer um **Team Agent (Agente de Equipe)** e definir outras funções de usuário para sua conta do iTunes Connect, por exemplo, **Admin (Administrador)** ou **Finance (Finanças)**.
+- Fornecer um **Team Agent (Agente de Equipe)** e definir outras funções de usuário para sua conta do iTunes Connect, por exemplo, **Admin (Administrador)** ou **Finance (Finanças)** .
 - Registrar-se em **Contracts (Contratos)** que permitam que uma organização distribua aplicativos na App Store e manter esses contratos.
 - Especificar o nome da **Legal Entity (Pessoa Jurídica)** (nome do vendedor na App Store) usado para fazer a correspondência de informações tributárias, contratos e informações fiscais associadas à sua organização.
-- Fornecer informações **Banking (Tributárias)** e **Tax (Fiscais)**, caso você pretenda vender aplicativos por meio da App Store.
+- Fornecer informações **Banking (Tributárias)** e **Tax (Fiscais)** , caso você pretenda vender aplicativos por meio da App Store.
 
 Novamente, essas informações _devem_ estar configuradas corretamente, in-loco e atualizadas antes que um aplicativo iOS possa ser enviado ao iTunes Connect para análise e liberação. Para obter mais informações, consulte a documentação de [Gerenciamento de contratos, impostos e transações bancárias](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/ManagingContractsandBanking.html#//apple_ref/doc/uid/TP40011225-CH21-SW1) da Apple.
 
@@ -57,7 +57,7 @@ Novamente, essas informações _devem_ estar configuradas corretamente, in-loco 
 
 Antes que um aplicativo Xamarin.iOS possa ser carregado no iTunes Connect para distribuição por meio da App Store, você precisará criar um registro para o aplicativo no iTunes Connect. Esse registro inclui todas as informações sobre o aplicativo do modo como ele aparecerá na App Store (em tantos idiomas quantos forem necessários) e todas as informações necessárias para gerenciar o aplicativo por meio do processo de distribuição. Além disso, ele será usado para configurar tecnologias de App Store como Game Center ou iAd App Network.
 
-Para adicionar um aplicativo iOS ao iTunes Connect, é necessário ser o **Team Agent (Agente de Equipe)** ou um usuário com uma função de **Admin (Administrador)** ou **Technical (Técnico)**.
+Para adicionar um aplicativo iOS ao iTunes Connect, é necessário ser o **Team Agent (Agente de Equipe)** ou um usuário com uma função de **Admin (Administrador)** ou **Technical (Técnico)** .
 
 Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
@@ -71,7 +71,7 @@ Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 
     [![](itunesconnect-images/add03.png "A caixa de diálogo Novo Aplicativo iOS")](itunesconnect-images/add03.png#lightbox)
 4. Insira um **Name (Nome)** e o **Version Number (Número de Versão)** para o aplicativo como eles devem ser exibidos na App Store.
-5. Selecione o **Primary Language (Idioma primário)**.
+5. Selecione o **Primary Language (Idioma primário)** .
 6. Insira um número de **SKU**, que é um identificador constante e exclusivo que será usado para rastrear o aplicativo. Ele não será exibido para o usuário final e _não poderá_ ser alterado depois que o aplicativo for criado.
 7. Selecione a **Bundle ID (ID do pacote)** para o aplicativo que você criou no centro de desenvolvedores ao provisionar o aplicativo. Será necessário usar essa mesma ID do pacote ao assinar o pacote de distribuição no Visual Studio para Mac ou Visual Studio. Para obter mais informações, veja nossa documentação sobre [Criação de um perfil de distribuição](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) e [Seleção de um perfil de distribuição em um projeto Xamarin.iOS](~/ios/get-started/installation/device-provisioning/index.md).
 8. Clique no botão **Create (Criar)** para compilar o novo Registro do iTunes Connect para o aplicativo.
@@ -106,10 +106,10 @@ Os seguintes tamanhos de tela e resoluções são necessários no momento:
 
 Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Clique em **My Apps (Meus Aplicativos)**.
+1. Clique em **My Apps (Meus Aplicativos)** .
 2. Clique no **ícone** do seu aplicativo.
-3. Selecione a guia **Versions (Versões)**.
-4. Role até a seção **Screenshots (Capturas de tela)**.
+3. Selecione a guia **Versions (Versões)** .
+4. Role até a seção **Screenshots (Capturas de tela)** .
 5. Selecione o **Tamanho da imagem** e arraste as imagens necessárias (até 5 por tamanho da tela):
 
     [![](itunesconnect-images/screenshot01.png "Selecionar o Tamanho da Imagem e arrastar as imagens necessárias")](itunesconnect-images/screenshot01.png#lightbox)
@@ -136,7 +136,7 @@ A Apple sugere as diretrizes a seguir ao escolher o nome de um aplicativo:
 - Faça-o corresponder à funcionalidade do aplicativo.
 - Forneça nomes localizados para mercados estrangeiros quando apropriado.
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 Escreva uma descrição clara, concisa e informativa do aplicativo e seus recursos. As primeiras linhas são os mais importantes e lhe dão a oportunidade de fazer uma primeira impressão excelente e atrair o usuário. Descreva o que torna o seu aplicativo especial e o distingue de outros aplicativos semelhantes.
 
@@ -179,10 +179,10 @@ Opcionalmente, você pode fornecer um link para informações de marketing hospe
 
 Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Clique em **My Apps (Meus Aplicativos)**.
+1. Clique em **My Apps (Meus Aplicativos)** .
 2. Clique no **ícone** do seu aplicativo.
-3. Selecione a guia **Versions (Versões)**.
-4. Role até a seção **Name (Nome)**.
+3. Selecione a guia **Versions (Versões)** .
+4. Role até a seção **Name (Nome)** .
 5. Preencha todas as informações necessárias:
 
     [![](itunesconnect-images/name01.png "Editando Nome, Descrição, Novidades, Palavras-Chave e URLs no iTunes Connect")](itunesconnect-images/name01.png#lightbox)
@@ -244,17 +244,17 @@ A Apple permite que você forneça informações de direitos autorais sobre seu 
 
 Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Clique em **My Apps (Meus Aplicativos)**.
+1. Clique em **My Apps (Meus Aplicativos)** .
 2. Clique no **ícone** do seu aplicativo.
-3. Selecione a guia **Versions (Versões)**.
-4. Role até a seção **General App Information (Informações gerais do aplicativo)**.
+3. Selecione a guia **Versions (Versões)** .
+4. Role até a seção **General App Information (Informações gerais do aplicativo)** .
 5. Preencha todas as informações necessárias:
 
     [![](itunesconnect-images/general01.png "Editando Informações gerais do aplicativo no iTunes Connect")](itunesconnect-images/general01.png#lightbox)
 6. Clique no botão **Editar** ao lado de **Classificação** para definir as informações de classificação:
 
     [![](itunesconnect-images/general02.png "Editando a Classificação")](itunesconnect-images/general02.png#lightbox)
-6. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
+7. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
 
 > [!NOTE]
 > Observação: A Apple rejeitará o envio se as Categorias ou Classificações não corresponderem à funcionalidade atual em seu aplicativo.
@@ -269,15 +269,15 @@ Para aplicativos de jogo do iOS que oferecem suporte Game Center da Apple, você
 
 Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Clique em **My Apps (Meus Aplicativos)**.
+1. Clique em **My Apps (Meus Aplicativos)** .
 2. Clique no **ícone** do seu aplicativo.
-3. Selecione a guia **Versions (Versões)**.
+3. Selecione a guia **Versions (Versões)** .
 4. Role até a seção **Game Center**.
-5. Inverta o comutador na seção **Game Center** para a posição **On (Ligado)**.
-5. Preencha todas as informações necessárias:
+5. Inverta o comutador na seção **Game Center** para a posição **On (Ligado)** .
+6. Preencha todas as informações necessárias:
 
     [![](itunesconnect-images/gamecenter01.png "Editando as informações do Game Center no iTunes Connect")](itunesconnect-images/gamecenter01.png#lightbox)
-6. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
+7. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
 
 Use a guia **Game Center** para ativar o Game Center e manter quaisquer **Leaderboards (Placares de Líderes)** ou **Achievements (Conquistas)** disponíveis para este aplicativo:
 
@@ -293,17 +293,17 @@ Use esta seção para fornecer as informações necessárias à equipe da Apple 
 
 Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Clique em **My Apps (Meus Aplicativos)**.
+1. Clique em **My Apps (Meus Aplicativos)** .
 2. Clique no **ícone** do seu aplicativo.
-3. Selecione a guia **Versions (Versões)**.
-4. Role até a seção **App Review Information (Informações de análise do aplicativo)**.
+3. Selecione a guia **Versions (Versões)** .
+4. Role até a seção **App Review Information (Informações de análise do aplicativo)** .
 5. Preencha todas as informações necessárias:
 
     [![](itunesconnect-images/review01.png "Editando Informações de Análise do Aplicativo no iTunes Connect")](itunesconnect-images/review01.png#lightbox)
 6. Selecione como você deseja que o aplicativo seja liberado para a App Store depois de ter sido analisado com êxito:
 
     [![](itunesconnect-images/review02.png "Editando informações de versão no iTunes Connect")](itunesconnect-images/review02.png#lightbox)
-6. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
+7. Clique no botão **Save (Salvar)** na parte superior da tela para salvar suas alterações.
 
 
 ## <a name="maintaining-pricing-information"></a>Manutenção de informações de preço
@@ -326,16 +326,16 @@ Aplicativos entre empresas personalizados não estarão disponíveis para client
 
 Faça o seguinte no [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa):
 
-1. Clique em **My Apps (Meus Aplicativos)**.
+1. Clique em **My Apps (Meus Aplicativos)** .
 2. Clique no **ícone** do seu aplicativo.
 3. Selecione a guia **Preços**:
 
     [![](itunesconnect-images/price02.png "Editando informações de preço no iTunes Connect")](itunesconnect-images/price02.png#lightbox)
-4. Configure um **Availability Date (Alerta de Disponibilidade)**.
-5. Selecione o preço desejado da lista suspensa **Price Tier (Faixa de Preço)**.
-5. Opcionalmente, habilite **Educational Discounts (Descontos Educacionais)**.
-6. Opcionalmente, definir o aplicativo como um **Custom Business to Business Application (Aplicativo entre Empresas Personalizado)**.
-6. Clique no botão **Save (Salvar)** para salvar suas alterações.
+4. Configure um **Availability Date (Alerta de Disponibilidade)** .
+5. Selecione o preço desejado da lista suspensa **Price Tier (Faixa de Preço)** .
+6. Opcionalmente, habilite **Educational Discounts (Descontos Educacionais)** .
+7. Opcionalmente, definir o aplicativo como um **Custom Business to Business Application (Aplicativo entre Empresas Personalizado)** .
+8. Clique no botão **Save (Salvar)** para salvar suas alterações.
 
 <a name="iap" />
 

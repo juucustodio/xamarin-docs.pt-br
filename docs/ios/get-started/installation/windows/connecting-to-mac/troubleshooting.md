@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 864c801597f251940e55232e8c59d3a6ea19c392
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978530"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865801"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solução de problemas de conexão de um host de build do Xamarin.iOS
 
@@ -35,8 +35,8 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
 
 > [!IMPORTANT]
 > Essas etapas de solução de problemas se destinam principalmente a problemas que ocorrem durante a configuração inicial em um novo sistema.  Se anteriormente você usar a conexão com êxito em um ambiente específico e, em seguida, a conexão parar de funcionar de repente ou intermitentemente, você poderá (na maioria dos casos) verificar diretamente se qualquer uma das seguintes ações ajuda: 
->   * Elimine os processos restantes conforme descrito abaixo em [Erros devido a processos de host de build existentes](#errors). 
->   * Desmarque os agentes, conforme descrito em [Desmarcar o Agente, o IDB, o Build e os Agentes de Designer](#clearing) e, em seguida, use uma conexão de Internet via cabo e conecte-se diretamente pelo endereço IP, conforme descrito em [Não foi possível se conectar ao MacBuildHost.local. Tente novamente.](#tryagain).  
+> * Elimine os processos restantes conforme descrito abaixo em [Erros devido a processos de host de build existentes](#errors). 
+> * Desmarque os agentes, conforme descrito em [Desmarcar o Agente, o IDB, o Build e os Agentes de Designer](#clearing) e, em seguida, use uma conexão de Internet via cabo e conecte-se diretamente pelo endereço IP, conforme descrito em [Não foi possível se conectar ao MacBuildHost.local. Tente novamente.](#tryagain).  
 > Se nenhuma dessas opções solucionar o problema, siga as instruções na [etapa 9](#stepnine) para registrar um novo relatório de bug.
 
 1. Verifique se você tem as versões compatíveis do Xamarin.iOS instaladas no seu Mac. Para fazer isso com o Visual Studio 2017, verifique se você está no canal de distribuição **Estável** no Visual Studio para Mac. No Visual Studio 2015 e anteriores, verifique se você está no mesmo canal de distribuição em ambos os IDEs.
@@ -103,7 +103,7 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
 
     - As configurações de firewall do OS X estão desautorizando a conexão. Certifique-se de verificar novamente a etapa 3.
 
-        Ocasionalmente, a configuração por aplicativo para o firewall do OS X também pode terminar em um estado inválido, em que as configurações mostradas em Preferências do Sistema não refletem o comportamento real. Excluir o arquivo de configuração (**/Library/Preferences/com.apple.alf.plist**) e reinicializar o computador pode ajudar a restaurar o comportamento padrão. Uma maneira de excluir o arquivo é inserir no Localizador **/biblioteca/preferências** em **Ir &gt; Ir para a pasta** e, em seguida, mover o arquivo **com.apple.alf.plist** para a Lixeira.
+        Ocasionalmente, a configuração por aplicativo para o firewall do OS X também pode terminar em um estado inválido, em que as configurações mostradas em Preferências do Sistema não refletem o comportamento real. Excluir o arquivo de configuração ( **/Library/Preferences/com.apple.alf.plist**) e reinicializar o computador pode ajudar a restaurar o comportamento padrão. Uma maneira de excluir o arquivo é inserir no Localizador **/biblioteca/preferências** em **Ir &gt; Ir para a pasta** e, em seguida, mover o arquivo **com.apple.alf.plist** para a Lixeira.
 
     - As configurações de firewall de um dos roteadores entre o Mac e o computador Windows está bloqueando a conexão.
 
@@ -162,23 +162,23 @@ Causas relatadas:
 
         [![](troubleshooting-images/troubleshooting-image18.png "Executando `ls /etc/ssh/sshd_config` e `ls /etc/sshd_config` no Terminal")](troubleshooting-images/troubleshooting-image18.png#lightbox)
 
-    3. Execute `cp /etc/ssh/sshd_config "$HOME/Desktop/"` no Terminal para copiar o arquivo para a sua área de trabalho.
+    2. Execute `cp /etc/ssh/sshd_config "$HOME/Desktop/"` no Terminal para copiar o arquivo para a sua área de trabalho.
 
-    4. Abra o arquivo da área de trabalho em um editor de texto. Por exemplo, você pode executar `open -a TextEdit "$HOME/Desktop/sshd_config"` no Terminal.
+    3. Abra o arquivo da área de trabalho em um editor de texto. Por exemplo, você pode executar `open -a TextEdit "$HOME/Desktop/sshd_config"` no Terminal.
 
-    5. Adicione a seguinte linha na parte inferior do arquivo:
+    4. Adicione a seguinte linha na parte inferior do arquivo:
 
         ```
         UseDNS no
         ```
-        
-    6. Remova todas as linhas que dizem `UseDNS yes` para certificar-se de que a nova configuração entrará em vigor.
 
-    7. Salve o arquivo.
+    5. Remova todas as linhas que dizem `UseDNS yes` para certificar-se de que a nova configuração entrará em vigor.
 
-    8. Execute `sudo cp "$HOME/Desktop/sshd_config" /etc/ssh/sshd_config` no Terminal para copiar o arquivo editado de volta para o lugar dele. Insira sua senha se solicitado.
+    6. Salve o arquivo.
 
-    9. Desabilite e reabilite o **Logon Remoto** em **Preferências do Sistema &gt; Compartilhamento &gt; Logon Remoto** para reiniciar o servidor SSH.
+    7. Execute `sudo cp "$HOME/Desktop/sshd_config" /etc/ssh/sshd_config` no Terminal para copiar o arquivo editado de volta para o lugar dele. Insira sua senha se solicitado.
+
+    8. Desabilite e reabilite o **Logon Remoto** em **Preferências do Sistema &gt; Compartilhamento &gt; Logon Remoto** para reiniciar o servidor SSH.
 
 <a name="clearing" />
 

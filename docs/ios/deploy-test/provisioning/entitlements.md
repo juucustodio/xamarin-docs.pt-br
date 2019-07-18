@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/13/2018
-ms.openlocfilehash: 5ce778d0e6c2d023362ca5c9c691d77548dd7383
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 0314ec958b2c38e702c56ef64d1cc2bba1383060
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672593"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865838"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Trabalhar com direitos no Xamarin.iOS
 
@@ -44,7 +44,7 @@ Para configurar os direitos no Visual Studio para Mac, faça o seguinte:
 1. No **Gerenciador de Soluções**, clique duas vezes no arquivo **Info.plist** para abri-lo para edição.
 2. Na seção **Destino do aplicativo iOS**, preencha um nome para o aplicativo e insira o **Identificador do pacote** que foi criado quando a ID do aplicativo foi definida:
 
-  ![](entitlements-images/servicexs01.png "Insira um Identificador do pacote")
+    ![](entitlements-images/servicexs01.png "Insira um Identificador do pacote")
 
 3. Salve as alterações no arquivo **Info.plist**.
 4. No **Gerenciador de Soluções**, clique duas vezes no arquivo **Entitlements.plist** para abri-lo para edição:
@@ -61,7 +61,7 @@ Para configurar os direitos no Visual Studio, faça o seguinte:
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Info.plist**, selecione **Abrir Com...** e o arquivo **Editor de Lista de Propriedades** para abri-lo para edição.
 2. Na seção **Destino do aplicativo iOS**, preencha um nome para o aplicativo e insira o **Identificador do pacote** que foi criado quando a ID do aplicativo foi definida:
 
-  ![](entitlements-images/servicevs01.png "Configuração de um Identificador do pacote")
+    ![](entitlements-images/servicevs01.png "Configuração de um Identificador do pacote")
 
 3. Salve as alterações no arquivo **Info.plist**.
 4. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Entitlements.plist**, selecione **Abrir Com...** e **Editor de Lista de Propriedades** para abri-lo para edição:
@@ -81,10 +81,10 @@ Os direitos são adicionados a um aplicativo por meio do arquivo Entitlements.pl
 
 Para adicionar um arquivo Entitlements.plist no Xamarin.iOS, faça o seguinte:
 
-1.  Clique com o botão direito do mouse no arquivo de projeto e navegue até **Adicionar > Novo Arquivo...**:
+1. Clique com o botão direito do mouse no arquivo de projeto e navegue até **Adicionar > Novo Arquivo...** :
 
     ![Menu de contexto Adicionar Arquivos](entitlements-images/image1.png)
-2.  Na caixa de diálogo Novo Arquivo, selecione **iOS > Lista de Propriedades** e nomeie-a como Direitos:
+2. Na caixa de diálogo Novo Arquivo, selecione **iOS > Lista de Propriedades** e nomeie-a como Direitos:
 
     ![Caixa de diálogo Novo Arquivo](entitlements-images/image2.png)
 
