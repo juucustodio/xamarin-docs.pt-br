@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 31992c7d9219289847ebc3e9c8af755d54dc18ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 39e641d5e911b179ca8da9fc6c1b7685a9644364
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672710"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831488"
 ---
 # <a name="localization"></a>Localização
 
@@ -56,7 +56,7 @@ A primeira etapa da globalização de um aplicativo de biblioteca .NET Standard 
 
 #### <a name="base-language-resource"></a>Recurso de idioma base
 
-O arquivo de recursos base (RESX) contém as cadeias de caracteres de idioma padrão (os exemplos pressupõem o que inglês seja o idioma padrão). Adicione o arquivo ao projeto de código comum do Xamarin.Forms clicando com o botão direito do mouse no projeto e escolhendo **Adicionar > Novo Arquivo...**.
+O arquivo de recursos base (RESX) contém as cadeias de caracteres de idioma padrão (os exemplos pressupõem o que inglês seja o idioma padrão). Adicione o arquivo ao projeto de código comum do Xamarin.Forms clicando com o botão direito do mouse no projeto e escolhendo **Adicionar > Novo Arquivo...** .
 
 Escolha um nome significativo, como **AppResources**, e pressione **OK**.
 
@@ -464,7 +464,7 @@ Após você ter implementado o serviço de dependência e atualizado **Info.plis
 
 > [!NOTE]
 > Observe que a Apple trata o idioma português um pouco diferente da forma esperada.
-> Nos [documentos a Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"use pt como a ID do idioma português usado no Brasil e pt-PT como a ID do idioma português usado em Portugal"_.
+> Nos [documentos a Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"use pt como a ID do idioma português usado no Brasil e pt-PT como a ID do idioma português usado em Portugal"_ .
 > Isso significa que, quando o idioma português é escolhido em uma localidade não padrão, o idioma de fallback é o português brasileiro no iOS, a menos que seja escrito um código para alterar esse comportamento (como o `ToDotnetFallbackLanguage` acima).
 
 Para obter mais informações sobre a localização no iOS, confira [Localização no iOS](~/ios/app-fundamentals/localization/index.md).
@@ -561,8 +561,8 @@ namespace UsingResxLocalization.Android
 
 Após esse código ter sido adicionado ao projeto de aplicativo do Android, ele será capaz de exibir automaticamente as cadeias de caracteres traduzidas.
 
-> [!NOTE]
->️ **AVISO:** Se as cadeias de caracteres traduzidas estiverem funcionando em seus builds de VERSÃO do Android, mas não durante a depuração, clique com o botão direito do mouse em **Projeto do Android** e selecione **Opções > Build > Build do Android** e certifique-se de que **Implantação de Assembly Rápida** NÃO esteja marcado. Essa opção causa problemas ao carregar recursos e não deverá ser usada se você estiver testando aplicativos localizados.
+> [!WARNING]
+> Se as cadeias de caracteres traduzidas estiverem funcionando em seus builds de VERSÃO do Android, mas não durante a depuração, clique com o botão direito do mouse em **Projeto do Android** e selecione **Opções > Build > Build do Android** e certifique-se de que **Implantação de Assembly Rápida** NÃO esteja marcado. Essa opção causa problemas ao carregar recursos e não deverá ser usada se você estiver testando aplicativos localizados.
 
 Para obter mais informações sobre a localização no Android, confira [Localização no Android](~/android/app-fundamentals/localization.md).
 

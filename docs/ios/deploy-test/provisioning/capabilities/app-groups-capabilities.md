@@ -1,18 +1,18 @@
 ---
 title: Recursos de grupo de aplicativo no Xamarin.iOS
-description: A adição de funcionalidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades do Grupo de aplicativos.
+description: A adição de capacidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades do Grupo de aplicativos.
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: f75c4777ce7a47e983683bf3d92ac20ab1b15c1c
-ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
+ms.openlocfilehash: 0dcc0c9499a1f4085e489fe6d8dcfa3fbf2fa3e0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841348"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832411"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Recursos de grupo de aplicativo no Xamarin.iOS
 
@@ -32,14 +32,14 @@ O grupo de aplicativos terá um identificador, que normalmente é a ID de Pacote
 
 Para criar um novo grupo de aplicativos, faça o seguinte:
 
-1.  Visite o  [Centro de Desenvolvedores do iOS](https://developer.apple.com/account/) da Apple, abra sua **Conta** e faça logon.
-2.  Selecione **Certificados, IDs e Perfis**.
-3.  Em **Identificadores** selecione **Grupos de Aplicativos** e clique no botão **+** para criar um novo grupo.
-4.  Insira um **Nome** e um **Identificador** para o novo grupo e clique no botão **Continuar**: 
+1. Visite o  [Centro de Desenvolvedores do iOS](https://developer.apple.com/account/) da Apple, abra sua **Conta** e faça logon.
+2. Selecione **Certificados, IDs e Perfis**.
+3. Em **Identificadores** selecione **Grupos de Aplicativos** e clique no botão **+** para criar um novo grupo.
+4. Insira um **Nome** e um **Identificador** para o novo grupo e clique no botão **Continuar**: 
    
     ![Adicionar detalhes do grupo de aplicativos](app-groups-capabilities-images/image52.png)
 
-5.  Clique no botão **Register (Registrar)** para criar o grupo e em **Done (Concluído)** para retornar à lista de grupos de aplicativos registrados.
+5. Clique no botão **Register (Registrar)** para criar o grupo e em **Done (Concluído)** para retornar à lista de grupos de aplicativos registrados.
 
 ## <a name="configure-an-app-to-use-app-groups"></a>Configurar um aplicativo para usar grupo de aplicativos
 
@@ -47,25 +47,25 @@ Com o grupo de aplicativos criado, configure as IDs do aplicativo para que os ap
 
 Faça o seguinte:
 
-1.  Visite a [Central de Desenvolvedores do iOS](https://developer.apple.com/account/) da Apple e faça logon com uma Conta de Desenvolvedor da Apple.
-2.  No menu **Recursos do Programa**, selecione **Certificados, IDs e Perfis**.
-3.  Em **Identifiers (Identificadores)**, selecione **App IDs (IDs do Aplicativo)** e clique no botão **+** para criar uma nova ID.
-4.  Insira um nome para a ID do aplicativo e dê a ela uma ID do aplicativo explícita.
-5.  Em **Serviços de Aplicativos**, habilite **Grupos de Aplicativos** e clique no botão Continuar:
+1. Visite a [Central de Desenvolvedores do iOS](https://developer.apple.com/account/) da Apple e faça logon com uma Conta de Desenvolvedor da Apple.
+2. No menu **Recursos do Programa**, selecione **Certificados, IDs e Perfis**.
+3. Em **Identifiers (Identificadores)** , selecione **App IDs (IDs do Aplicativo)** e clique no botão **+** para criar uma nova ID.
+4. Insira um nome para a ID do aplicativo e dê a ela uma ID do aplicativo explícita.
+5. Em **Serviços de Aplicativos**, habilite **Grupos de Aplicativos** e clique no botão Continuar:
 
     ![Adicionar Serviços de Aplicativos no grupo de aplicativos](app-groups-capabilities-images/image53.png)
 
-6.  Verifique as configurações e clique no botão **Registrar** para criar a ID do aplicativo.
-7.  Clique no botão **Done (Concluído)** para retornar à lista de IDs do aplicativo registradas.
-8.  Selecione a ID do aplicativo recém-criada na lista e clique no botão **Edit (Editar)**:
+6. Verifique as configurações e clique no botão **Registrar** para criar a ID do aplicativo.
+7. Clique no botão **Done (Concluído)** para retornar à lista de IDs do aplicativo registradas.
+8. Selecione a ID do aplicativo recém-criada na lista e clique no botão **Edit (Editar)** :
 
     ![Selecionar a ID do aplicativo na lista](app-groups-capabilities-images/image54.png)
 
-9.  No serviço **App Group (Grupo de Aplicativos)**, clique no botão **Edit (Editar)**:
+9. No serviço **App Group (Grupo de Aplicativos)** , clique no botão **Edit (Editar)** :
 
     ![Selecionar a ID do aplicativo na lista](app-groups-capabilities-images/image55.png)
 
-10. Selecione o grupo de aplicativo que foi criado anteriormente e clique no botão **Continue (Continuar)**:
+10. Selecione o grupo de aplicativo que foi criado anteriormente e clique no botão **Continue (Continuar)** :
 
     ![Adicionar grupo de aplicativos](app-groups-capabilities-images/image56.png)
 

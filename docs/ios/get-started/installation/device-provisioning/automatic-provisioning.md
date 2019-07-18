@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: d4bb117273e669cc3c520c42451296e16b6023eb
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855166"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865314"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 
@@ -67,7 +67,7 @@ Para assinar seu aplicativo automaticamente para implantação em um dispositivo
 
 4. Selecione sua equipe na lista suspensa **Equipe**.
 
-6. Depois de alguns segundos, um Certificado de Assinatura e um Perfil de Provisionamento serão criados:
+5. Depois de alguns segundos, um Certificado de Assinatura e um Perfil de Provisionamento serão criados:
 
     ![certificado e perfil criados com sucesso](automatic-provisioning-images/image5.png)
 
@@ -87,7 +87,7 @@ Para assinar seu aplicativo automaticamente para implantação em um dispositivo
 
     ![Seleção da equipe](automatic-provisioning-images/prov3.png)
 
-4. Isso inicia o processo de assinatura automática. Em seguida, o Visual Studio tenta gerar a ID do aplicativo, o perfil de provisionamento e a identidade de assinatura para usar esses artefatos para a assinatura. É possível ver o processo de geração na saída do build:
+5. Isso inicia o processo de assinatura automática. Em seguida, o Visual Studio tenta gerar a ID do aplicativo, o perfil de provisionamento e a identidade de assinatura para usar esses artefatos para a assinatura. É possível ver o processo de geração na saída do build:
 
     ![Saída do build mostrando a geração de artefatos](automatic-provisioning-images/prov5.png)
 

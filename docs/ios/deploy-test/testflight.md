@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 87be250bdc425558a8e386a8209596e18f13b3ed
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 27fd8cac85cdf139278d3824ebf71e54cdc7d140
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120509"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865576"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -77,7 +77,7 @@ Para obter mais informações sobre como criar um novo registro do iTunes Connec
 
 
 
-###  <a name="completing-the-new-ios-app-submission-form"></a>Preenchendo o novo formulário de envio de aplicativo iOS
+### <a name="completing-the-new-ios-app-submission-form"></a>Preenchendo o novo formulário de envio de aplicativo iOS
 
 O formulário deve refletir exatamente as informações no arquivo Info.plist do seu aplicativo, conforme ilustrado abaixo:
 
@@ -100,7 +100,7 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-###  <a name="create-an-archive"></a>Criar um arquivo morto
+### <a name="create-an-archive"></a>Criar um arquivo morto
 
  Para compilar um binário no Visual Studio para Mac, você precisará usar a função _Arquivo Morto_. Clique com o botão direito dou mouse no projeto e selecione **Arquivo Morto para Publicação**, conforme ilustrado abaixo:
 
@@ -109,9 +109,9 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 
  Consulte o guia [Criando o distribuível](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para obter mais informações.
 
-###  <a name="sign-and-distribute-your-app"></a>Assinar e distribuir seu aplicativo
+### <a name="sign-and-distribute-your-app"></a>Assinar e distribuir seu aplicativo
 
- Criar um arquivo morto abrirá automaticamente a **Exibição de Arquivos Mortos**, exibindo todos os projetos em arquivo morto, agrupados por solução. Para assinar seu aplicativo e prepará-lo para distribuição, selecione **Assinar e Distribuir…**, conforme mostrado abaixo:
+ Criar um arquivo morto abrirá automaticamente a **Exibição de Arquivos Mortos**, exibindo todos os projetos em arquivo morto, agrupados por solução. Para assinar seu aplicativo e prepará-lo para distribuição, selecione **Assinar e Distribuir…** , conforme mostrado abaixo:
 
 [![](testflight-images/archive-view.png "Criar um arquivo morto abrirá automaticamente a Exibição de Arquivos Mortos")](testflight-images/archive-view.png#lightbox)
 
@@ -121,14 +121,14 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 
  Consulte a seção [Enviando seu aplicativo para a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para saber mais sobre essas etapas.
 
-###  <a name="submitting-your-build"></a>Enviando seu Build
+### <a name="submitting-your-build"></a>Enviando seu Build
  O assistente de publicação abrirá o programa Carregador de Aplicativos para você carregar seu build para o iTunes Connect. Selecione a opção **Entregar seu Aplicativo** e, em seguida, carregue o arquivo `.ipa` criado acima. O Carregador de Aplicativos validará e carregará seu build para o iTunes Connect.
 
  Consulte a seção [Enviando seu aplicativo para a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para saber mais sobre essas etapas.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-###  <a name="building-your-final-distributable"></a>Compilando seu distribuível final
+### <a name="building-your-final-distributable"></a>Compilando seu distribuível final
  Uma vez que o plug-in Xamarin para Visual Studio não dá suporte a arquivamento de aplicativos Xamarin.iOS para publicação na App Store, há duas opções para publicar um aplicativo iOS do Visual Studio. Elas são:
 
 1. Carregar um IPA criado por meio do comando de Compilar IPA Adhoc.
@@ -136,7 +136,7 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 
  O guia [Criando o distribuível](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) contém instruções para essas duas opções.
 
-###  <a name="submitting-your-build"></a>Enviando seu Build
+### <a name="submitting-your-build"></a>Enviando seu Build
  Para enviar seu aplicativo para a Apple, você precisará ir para seu Host do Build e usar o programa Carregador de Aplicativos, que é instalado como parte do Xcode. Para obter mais informações sobre como acessar o Carregador de Aplicativos, confira o guia [Access Application Loader](http://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) (Acessar o Carregador de Aplicativos) da Apple.
 
 Após abri-lo, selecione a opção **Deliver Your App**  (Entregar seu Aplicativo) e carregue o zip ou arquivo `.ipa` criado acima. O Carregador de Aplicativos validará e carregará seu build para o iTunes Connect.

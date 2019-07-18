@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 2c05e46309fb2a38b6b3c1542051e7115a58d13c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 849c60507fe0ff7b8bf1743be5bbf89ca94b9d6f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668823"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865570"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Olá, iOS Multitela – Guia de Início Rápido
 
@@ -79,7 +79,7 @@ Em seguida, mova a cena **Phoneword** ao lado do **controlador de navegação**:
 
 11. Crie a tela **Histórico de Chamadas**. Na **Caixa de Ferramentas**, arraste um **controlador de exibição de tabela** para a superfície de design:
 
-   ![](hello-ios-multiscreen-quickstart-images/12new.png "Arraste o controlador de exibição de tabela para a superfície de design")
+    ![](hello-ios-multiscreen-quickstart-images/12new.png "Arraste o controlador de exibição de tabela para a superfície de design")
 
 12. Em seguida, selecione o **controlador de exibição de tabela** clicando na barra preta na parte inferior da cena. No **Painel de Propriedades**, altere a classe do **controlador de exibição de tabela** para `CallHistoryController` e pressione **Enter**:
 
@@ -262,7 +262,7 @@ Em seguida, mova a cena **Phoneword** ao lado do **controlador de navegação**:
 
     Salve e compile o aplicativo para garantir que não haja erros.
 
-20. Pressione o botão **Iniciar** para inicializar o aplicativo dentro do **Simulador de iOS**:
+18. Pressione o botão **Iniciar** para inicializar o aplicativo dentro do **Simulador de iOS**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "Pressione o botão Iniciar para inicializar o aplicativo dentro do Simulador de iOS")
 
@@ -505,7 +505,7 @@ Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplic
 
     Salve e compile o aplicativo para garantir que não haja erros.
 
-20. Pressione o botão **Iniciar** para inicializar o aplicativo dentro do **Simulador de iOS**:
+18. Pressione o botão **Iniciar** para inicializar o aplicativo dentro do **Simulador de iOS**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "A primeira tela do aplicativo de exemplo")
 

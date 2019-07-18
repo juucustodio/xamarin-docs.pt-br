@@ -7,27 +7,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 4c9ab8c14db131427329cef51e7b74e982a1c7b8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 86447c2338b8dd43e37170fa547883e47cbf6b4c
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103680"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864205"
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
 
 Os guias desta seção explicam como testar um aplicativo, otimizar seu desempenho, prepará-lo para lançamento, assiná-lo com um certificado e publicá-lo em uma loja de aplicativos.
 
 
-##  <a name="application-package-sizesapp-package-sizemd"></a>[Tamanho dos pacotes de aplicativos](app-package-size.md)
+## <a name="application-package-sizesapp-package-sizemd"></a>[Tamanho dos pacotes de aplicativos](app-package-size.md)
 
 Este artigo examina as partes que constituem um pacote de aplicativos do Xamarin.Android e as estratégias associadas que podem ser usadas para a implantação eficiente do pacote durante a depuração e as etapas de lançamento da implantação.
 
-##  <a name="building-appsbuilding-appsindexmd"></a>[Compilar aplicativos](building-apps/index.md)
+## <a name="building-appsbuilding-appsindexmd"></a>[Compilar aplicativos](building-apps/index.md)
 
 Esta seção descreve como funciona o processo de compilação e explica como compilar APKs específicos para ABI.
 
-##  <a name="command-line-emulatorcommand-line-emulatormd"></a>[Emulador de linha de comando](command-line-emulator.md)
+## <a name="command-line-emulatorcommand-line-emulatormd"></a>[Emulador de linha de comando](command-line-emulator.md)
 
 Este artigo aborda brevemente a inicialização do emulador por meio da linha de comando.
 
@@ -35,23 +35,23 @@ Este artigo aborda brevemente a inicialização do emulador por meio da linha de
 
 As guias da seção ajudam a depurar o aplicativo usando os emuladores de Android, dispositivos Android reais e o log de depuração.
 
-##  <a name="setting-the-debuggable-attributeandroiddeploy-testdebuggable-attributemd"></a>[Configuração do atributo depurável](~/android/deploy-test/debuggable-attribute.md)
+## <a name="setting-the-debuggable-attributeandroiddeploy-testdebuggable-attributemd"></a>[Configuração do atributo depurável](~/android/deploy-test/debuggable-attribute.md)
 
 Este artigo explica como definir o atributo depurável para que as ferramentas como `adb` possam se comunicar com o JVM.
 
-##  <a name="environmentenvironmentmd"></a>[Ambiente](environment.md)
+## <a name="environmentenvironmentmd"></a>[Ambiente](environment.md)
 
 Este artigo descreve o ambiente de execução do Xamarin.Android e as propriedades do sistema Android que influenciam na execução do programa.
 
-##  <a name="gdbgdbmd"></a>[GDB](gdb.md)
+## <a name="gdbgdbmd"></a>[GDB](gdb.md)
 
 Este artigo explica como usar o `gdb` para depurar um aplicativo Xamarin.Android.
 
-##  <a name="installing-a-system-appinstall-system-appmd"></a>[Instalar um aplicativo do sistema](install-system-app.md)
+## <a name="installing-a-system-appinstall-system-appmd"></a>[Instalar um aplicativo do sistema](install-system-app.md)
 
 Este guia explica como instalar um aplicativo Xamarin.Android como um Aplicativo de Sistema em um dispositivo Android ou como parte de um ROM personalizado.
 
-##  <a name="linking-on-androidlinkermd"></a>[Vinculação no Android](linker.md)
+## <a name="linking-on-androidlinkermd"></a>[Vinculação no Android](linker.md)
 
 Este artigo aborda o processo de vinculação usado pelo Xamarin.Android para reduzir o tamanho final de um aplicativo. Ele descreve os vários níveis de vinculação que podem ser executados e fornece algumas diretrizes e orientações para atenuar os erros que possam resultar do uso do vinculador.
 

@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0e7516f030955c9b0f89db6db11b93afd9b358de
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854828"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865498"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implantação sem fio para aplicativos Xamarin.iOS e tvOS
 
@@ -85,7 +85,7 @@ Para implantar em um dispositivo iOS ou tvOS, siga as seguintes etapas:
 
 2. Selecione o dispositivo na lista de dispositivos de destino e execute o aplicativo.
 
-2. Se o dispositivo estiver bloqueado, você será solicitado a desbloqueá-lo. Depois que o dispositivo estiver desbloqueado, o aplicativo será implantado nele.
+3. Se o dispositivo estiver bloqueado, você será solicitado a desbloqueá-lo. Depois que o dispositivo estiver desbloqueado, o aplicativo será implantado nele.
 
 A depuração sem fio é habilitada automaticamente após a implantação sem fio, para que seja possível usar pontos de interrupção previamente definidos e continuar o fluxo de trabalho de depuração como sempre.
 
