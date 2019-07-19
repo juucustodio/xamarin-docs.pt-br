@@ -1,25 +1,25 @@
 ---
 title: Instruções de configuração de firewall do Xamarin
-description: Este documento fornece uma lista de hosts que devem ser colocados na lista de permissões do seu firewall para permitir que o Xamarin funcione em um ambiente corporativo.
+description: Este documento fornece uma lista de hosts que devem ser permitidos em seu firewall para permitir que o Xamarin funcione em um ambiente corporativo.
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: asb3993
 ms.author: amburns
-ms.date: 10/05/2018
-ms.openlocfilehash: 68689ce7d92a038d0724e1441f68fddcb1d0bba8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 07/17/2019
+ms.openlocfilehash: b2509bb99a5caf5b508d34aafc0f0c4862a7e563
+ms.sourcegitcommit: 9a2a21974d35353c3765eb683ef2fd7161c1d94a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61346797"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329948"
 ---
-# <a name="xamarin-firewall-configuration-instructions"></a>Instruções de configuração de firewall do Xamarin
+# <a name="xamarin-firewall-configuration-instructions"></a>Instruções de configuração do Xamarin firewall
 
-_Uma lista de hosts que precisam ser colocados na lista de permissões no firewall para permitir que a plataforma do Xamarin funcione para a sua empresa._
+_Uma lista de hosts que você precisa permitir no firewall para permitir que a plataforma do Xamarin funcione para sua empresa._
 
-Para que os produtos Xamarin sejam instalados e funcionem corretamente, determinados pontos de extremidade devem estar acessíveis para baixar as ferramentas necessárias e as atualizações para o seu software. Se você ou sua empresa têm configurações estritas de firewall, é possível que você tenha problemas com a instalação, licenciamento, componentes além de outros problemas. Este documento descreve alguns dos pontos de extremidade conhecidos que precisam ser colocados na lista de permissões em seu firewall para o Xamarin funcionar. Essa lista não inclui os pontos de extremidade necessários para todas as ferramentas de terceiros incluídas no download. Se você ainda estiver com problemas depois de passar por essa lista, consulte os guias de solução de problemas de instalação da Apple ou do Android.
+Para que os produtos Xamarin sejam instalados e funcionem corretamente, determinados pontos de extremidade devem estar acessíveis para baixar as ferramentas necessárias e as atualizações para o seu software. Se você ou sua empresa têm configurações estritas de firewall, é possível que você tenha problemas com a instalação, licenciamento, componentes além de outros problemas. Este documento descreve alguns dos pontos de extremidade conhecidos que precisam ser permitidos em seu firewall para que o Xamarin funcione. Essa lista não inclui os pontos de extremidade necessários para todas as ferramentas de terceiros incluídas no download. Se você ainda estiver com problemas depois de passar por essa lista, consulte os guias de solução de problemas de instalação da Apple ou do Android.
 
-## <a name="endpoints-to-whitelist"></a>Pontos de extremidade a serem adicionados à lista de permissões
+## <a name="endpoints-to-allow"></a>Pontos de extremidade para permitir
 
 ### <a name="xamarin-installer"></a>Instalador do Xamarin
 
@@ -39,8 +39,8 @@ Se você estiver usando um Mac e encontrar problemas de instalação do Xamarin.
 
 Os seguintes endereços precisarão ser adicionados para acessar o NuGet (o Xamarin.Forms é empacotado como um NuGet):
 
-- www\.nuget.org (para acessar o NuGet)
-- az320820.vo.msecnd.net (downloads do NuGet)
+- www.nuget.org (para acessar o NuGet)
+- globalcdn.nuget.org (downloads do NuGet)
 - dl-ssl.google.com (componentes do Google para Android e Xamarin.Forms)
 
 ### <a name="software-updates"></a>Atualizações de software
@@ -54,7 +54,3 @@ Os seguintes endereços precisarão ser adicionados para garantir que as atualiz
 ## <a name="xamarin-mac-agent"></a>Agente do Mac do Xamarin
 
 Para conectar o Visual Studio a um host de build do Mac usando o Agente do Mac do Xamarin é necessário que a porta SSH esteja aberta. Por padrão, essa é a **Porta 22**.
-
-## <a name="summary"></a>Resumo
-
-Este guia abordou os pontos de extremidade a serem adicionados à lista de permissões para permitir que os produtos do Xamarin sejam instalados e atualizados corretamente em seu computador.

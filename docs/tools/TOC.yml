@@ -44,11 +44,6 @@
           href: workbooks/workbook.md
         - name: Atalhos de teclado do editor
           href: workbooks/keybindings.md
-        - name: Pastas de trabalho de amostra
-          href: workbooks/samples/index.md
-          items:
-            - name: TinyRenderer
-              href: workbooks/samples/tinyrenderer.md
         - name: Solução de problemas
           href: workbooks/troubleshooting/index.md
           items:
