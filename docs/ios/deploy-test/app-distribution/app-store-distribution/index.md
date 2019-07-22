@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 14cf2910767e9c205e5ddc8f580020505f54ef46
-ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
+ms.openlocfilehash: 8b3782554615c5ce3350294fc3300e3c369f8af7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "55832022"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831515"
 ---
 # <a name="app-store-distribution"></a>Distribuição da App Store
 
@@ -25,7 +25,7 @@ Depois que um aplicativo Xamarin.iOS foi desenvolvido, a próxima etapa do ciclo
 Distribuir um aplicativo, assim como ocorre com o desenvolvimento de um aplicativo, requer provisionar os aplicativos usando o *perfil de provisionamento* apropriado. Perfis de provisionamento são arquivos que contêm informações de assinatura de código, bem como a identidade do aplicativo e o mecanismo de distribuição desejado. Também apresentam informações sobre os dispositivos nos quais o aplicativo pode ser implantado para distribuição fora da App Store.
 
 > [!IMPORTANT]
-> É **importante** observar que, para usar o iTunes Connect e, portanto, publicar um aplicativo na App Store, você **deve** fazer parte de um Programa de Desenvolvedores da Apple individual ou organizacional. Você não poderá seguir as etapas nesta página se você for um membro de um Programa **Empresarial** de Desenvolvedor da Apple.
+> Para usar o iTunes Connect e, portanto, publicar um aplicativo na App Store, você **deve** fazer parte de um Programa de Desenvolvedores da Apple individual ou organizacional. Você não poderá seguir as etapas nesta página se você for um membro de um Programa **Empresarial** de Desenvolvedor da Apple.
 
 <a name="provisioning" />
 
@@ -46,7 +46,7 @@ Você pode selecionar a mesma **ID do Aplicativo** e os mesmos **Dispositivos** 
 ## <a name="creating-a-distribution-certificate"></a>Criando um certificado de distribuição
 
 1. Navegue até a seção *Certificates, Identifiers & Profiles (Certificados, Identificadores e Perfis)* do Apple Developer Member Center (Central de Associados do Desenvolvedor da Apple).
-2. Em *Certificates (Certificados)*, selecione **Production (Produção)**.
+2. Em *Certificates (Certificados)* , selecione **Production (Produção)** .
 3. Clique no botão **+** para criar um novo Certificado.
 4. No título *Produção*, selecione **App Store e Ad Hoc**:
 
@@ -64,7 +64,7 @@ Você pode selecionar a mesma **ID do Aplicativo** e os mesmos **Dispositivos** 
 
 Também é possível solicitar um Certificado usando a caixa de diálogo Preferências no Xcode. Para fazer isso, siga as etapas abaixo:
 
-1.   Selecione sua equipe e clique em **Gerenciar certificados…**: [![](images/selectteam.png "Selecione a equipe e os Detalhes da Exibição")](images/selectteam.png#lightbox)
+1.   Selecione sua equipe e clique em **Gerenciar certificados…** : [![](images/selectteam.png "Selecione a equipe e os Detalhes da Exibição")](images/selectteam.png#lightbox)
 
 2.   Em seguida, clique no botão **Criar** próximo ao **Certificado de Distribuição iOS**: [![](images/selectcert.png "Crie um Certificado de Distribuição iOS")](images/selectcert.png#lightbox)
 
@@ -82,7 +82,7 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Aplicativo será necessária para identificar o Aplicativo que você está distribuindo ao dispositivo do usuário. Se ainda não tiver criado uma, siga as etapas abaixo para criá-la:
 
 
-1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)*. Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)**.
+1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)* . Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)** .
 2. Clique no botão **+** e forneça um **Name (Nome)** que o identificará no Portal.
 3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explícita ou Curinga e insira uma ID de Pacote no formato DNS inverso, como:
     - **Explícito**: com.[DomainName].[AppName]

@@ -1,19 +1,19 @@
 ---
-title: Introdução ao desenvolvimento móvel
+title: O que é o Xamarin?
 description: Este documento oferece uma introdução ao desenvolvimento móvel, abordando o Xamarin, como ele funciona e os aplicativos que ele produz.
 ms.prod: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
-author: asb3993
-ms.author: amburns
-ms.date: 03/28/2017
-ms.openlocfilehash: 3b75ef6b0937248a43aa2e2ff3fc13a578d25d3c
-ms.sourcegitcommit: 5f48dbd99a33acbb376a1703485c7b659df2111b
+author: conceptdev
+ms.author: crdun
+ms.date: 07/16/2019
+ms.openlocfilehash: f958e53a2468263898ffedf0ca2ab6afc42d2923
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67467843"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290119"
 ---
-# <a name="introduction-to-mobile-development"></a>Introdução ao desenvolvimento móvel
+# <a name="what-is-xamarin"></a>O que é o Xamarin?
 
 Criar aplicativos móveis pode ser tão fácil quanto abrir o IDE, escrever e testar um aplicativo e enviá-lo para uma App Store, tudo em uma tarde. Ou pode ser um processo extremamente complexo que envolve um design inicial rigoroso, teste de usabilidade, teste de garantia de qualidade em milhares de dispositivos, um ciclo de vida completo beta e, em seguida, implantação de várias maneiras diferentes.
 
@@ -23,20 +23,18 @@ Veja os [requisitos de sistema](~/cross-platform/get-started/requirements.md#mac
 
 ## <a name="introduction-to-xamarin"></a>Introdução ao Xamarin
 
-Ao considerar como compilar aplicativos iOS e Android, muitas pessoas pensam que as linguagens nativas, Objective-C, Swift e Java, são a única opção. No entanto, nos últimos anos, surgiu todo um novo ecossistema de plataformas para criar aplicativos móveis.
+Ao considerar como compilar aplicativos iOS e Android, muitas pessoas pensam que as linguagens nativas, Objective-C, Swift, Java e Kotlin, são a única opção.
 
-O Xamarin é exclusivo nesse espaço ao oferecer uma única linguagem (C#), biblioteca de classes e tempo de execução que funciona em todas as três plataformas móveis, iOS, Android e Windows Phone (a linguagem nativa do Windows Phone já é C#), enquanto ainda compila aplicativos nativos (não interpretada) que têm um desempenho alto o bastante mesmo para jogos exigentes.
+O Xamarin permite o desenvolvimento em linguagem C#, com uma biblioteca de classes e tempo de execução que funciona em todas as plataformas, inclusive iOS, Android e Windows, enquanto compila aplicativos nativos (não interpretados) com desempenho suficiente para jogos exigentes.
 
-Cada uma dessas plataformas tem um conjunto de recursos diferente e cada um varia em sua capacidade de escrever aplicativos nativos – ou seja, aplicativos compilados para código nativo e que interoperam de modo fluente com o subsistema Java subjacente. Por exemplo, algumas plataformas só permitem que aplicativos sejam compilados em HTML e JavaScript, enquanto outras são de nível baixo e só permitem código C/C++. Algumas plataformas nem sequer utilizam o kit de ferramentas de controle nativo.
-
-O Xamarin é o único que combina toda a potência das plataformas nativas e adiciona vários recursos eficientes próprios, incluindo:
+O Xamarin combina toda a capacidade das plataformas nativas e adiciona vários recursos eficientes próprios, entre eles:
 
 1.   **Associação completa para os SDKs subjacentes** – Xamarin contém associações para praticamente toda plataforma subjacente SDKs no iOS e Android. Além disso, essas associações são fortemente tipadas, o que significa que são fáceis de navegar e usar e oferecem uma verificação de tipo de tempo de build e durante o desenvolvimento. Isso resulta em menos erros de tempo de execução e aplicativos de qualidade mais alta.
 1.   **Objective-C, Java, C e C++ Interop** – o Xamarin oferece recursos para invocar diretamente bibliotecas Objective-C, Java, C e C++, permitindo que você use uma ampla gama de código de terceiros já criado. Isso permite aproveitar as bibliotecas do iOS e Android existentes escritas em Objective-C, Java ou C/C++. Além disso, o Xamarin oferece projetos de associação que permitem associar facilmente bibliotecas Objective-C e Java nativas usando uma sintaxe declarativa.
 1.   **Construções de Linguagem Moderna** – os aplicativos Xamarin são escritos em C#, uma linguagem moderna que inclui aprimoramentos significativos com relação a Objective-C e Java, como *Recursos de Linguagem Dinâmica, *Construções Funcionais* como *Lambdas, *LINQ, recursos de *Programação Paralela*, *Genéricos sofisticados e muito mais.
 1.   **BCL (Biblioteca de Classes Base) Incrível** – aplicativos Xamarin usam a BCL do .NET, uma grande coleção de classes com recursos abrangente e simplificados, como suporte eficiente a XML, Banco de Dados, Serialização, E/S, Cadeia de Caracteres e Rede, e muito mais. O código C# existente pode ser compilado para uso em um aplicativo, que fornece acesso a milhares de bibliotecas que permitem fazer coisas que não são abordadas na BCL.
 1.   **IDE (Ambiente de Desenvolvimento Integrado) Moderno** – o Xamarin usa o Visual Studio para Mac no macOS e Visual Studio no Windows. Ambos são IDEs modernos que incluem recursos como preenchimento automático de código, um sofisticado sistema de gerenciamento de Projeto e Solução, uma biblioteca de modelos de projeto abrangente, controle do código-fonte integrado e muitos outros.
-1.   **Suporte para Plataforma Cruzada Móvel** – o Xamarin oferece suporte sofisticado para plataforma cruzada para as três principais plataformas móveis: iOS, Android e Windows Phone. Os aplicativos podem ser escritos para compartilhar até 90% de seu código e nossa biblioteca Xamarin.Mobile oferece uma API unificada para acessar recursos comuns em todas as três plataformas. Isso pode reduzir significativamente os custos de desenvolvimento e o tempo para colocação no mercado para desenvolvedores móveis almejam as três plataformas móveis mais populares.
+1.   **Suporte para Plataforma Cruzada Móvel**: o Xamarin oferece suporte sofisticado para plataforma cruzada para as três principais plataformas móveis: iOS, Android e Windows. Os aplicativos podem ser escritos para compartilhar até 90% de seu código e nossa biblioteca Xamarin.Mobile oferece uma API unificada para acessar recursos comuns em todas as três plataformas. Isso pode reduzir significativamente os custos de desenvolvimento e o tempo para colocação no mercado para desenvolvedores móveis almejam as três plataformas móveis mais populares.
 
 Devido ao conjunto de recursos eficiente e abrangente do Xamarin, ele fecha uma lacuna para desenvolvedores de aplicativos que desejam usar uma linguagem e plataforma modernas para desenvolver aplicativos móveis de plataforma cruzada.
 
@@ -53,7 +51,7 @@ Em ambos os casos, os aplicativos Xamarin utilizam um tempo de execução que pr
 
 ### <a name="xamariniosdll-and-monoandroiddll"></a>Xamarin.iOS.dll e Mono.Android.dll
 
-Aplicativos Xamarin são compilados em relação a um subconjunto BCL do .NET conhecido como Perfil Móvel do Xamarin. Este perfil foi criado especificamente para aplicativos móveis e empacotado no MonoTouch.dll e no Mono.Android.dll (para iOS e Android, respectivamente). Isso é muito semelhante ao modo como os aplicativos Silverlight (e Moonlight) são compilados com relação ao Perfil .NET do Moonlight/Silverlight. Na verdade, o perfil Móvel do Xamarin é equivalente ao perfil do Silverlight 4.0, com muitas classes BCL adicionadas de volta.
+Aplicativos Xamarin são compilados em relação a um subconjunto BCL do .NET conhecido como Perfil Móvel do Xamarin. Este perfil foi criado especificamente para aplicativos móveis e pacote no Xamarin.iOS.dll e no Mono.Android.dll (para iOS e Android, respectivamente). Isso é muito semelhante ao modo como os aplicativos Silverlight (e Moonlight) são compilados com relação ao Perfil .NET do Moonlight/Silverlight. Na verdade, o perfil Móvel do Xamarin é equivalente ao perfil do Silverlight 4.0, com muitas classes BCL adicionadas de volta.
 
 Para obter uma lista completa de classes e assemblies disponíveis, consulte a [Lista de Assemblies do Xamarin.iOS](~/cross-platform/internals/available-assemblies.md?context=xamarin/ios) e a [Lista de Assemblies do Xamarin.Android](~/cross-platform/internals/available-assemblies.md?context=xamarin/android)
 
@@ -71,4 +69,3 @@ Agora que você aprendeu um pouco sobre como funciona o Xamarin, a próxima etap
 - [**Introdução ao Xamarin.iOS**](~/ios/get-started/hello-ios/index.md)
 - [**Introdução ao Xamarin.Android**](~/android/get-started/hello-android/index.md)
 - [**Introdução ao Xamarin.Mac**](~/mac/get-started/hello-mac.md)
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: c1e1b2d7bfb43c256c71abb62e7d85a05b096419
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a2dc974fba7beb70f1caecf8198181193d32e4c2
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103576"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865526"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuição interna para aplicativos Xamarin.iOS
 
@@ -52,7 +52,7 @@ Certificados do Programa de Desenvolvedores Corporativos da Apple durão três a
 ## <a name="creating-a-distribution-certificate"></a>Criando um certificado de distribuição
 
 1. Navegue até a seção *Certificates, Identifiers & Profiles (Certificados, Identificadores e Perfis)* do Apple Developer Member Center (Central de Associados do Desenvolvedor da Apple).
-2. Em *Certificates (Certificados)*, selecione **Production (Produção)**.
+2. Em *Certificates (Certificados)* , selecione **Production (Produção)** .
 3. Clique no botão **+** para criar um novo Certificado.
 4. No título *Produção*, selecione **Interna e Ad Hoc**:
 
@@ -74,13 +74,13 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 1. Selecione a equipe e clique em *Exibir Detalhes*:
 
-    [![](in-house-distribution-images/selectteam.png "Selecionar sua equipe")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Selecionar sua equipe")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Em seguida, clique no botão **Criar** próximo ao **Certificado de Distribuição iOS**:
 
    [![](in-house-distribution-images/selectcert.png "Criar o Certificado de distribuição iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
-2.   Em seguida, clique no botão de **mais (+)** e selecione **iOS App Store**:
+3. Em seguida, clique no botão de **mais (+)** e selecione **iOS App Store**:
 
    [![](in-house-distribution-images/selectcert.png "Selecione a App Store do iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
@@ -95,9 +95,9 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Aplicativo será necessária para identificar o Aplicativo que você distribuirá para o dispositivo do usuário. Se ainda não tiver criado uma, siga as etapas abaixo para criá-la:
 
 
-1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)*. Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)**.
+1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)* . Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)** .
 2. Clique no botão **+** e forneça um **Name (Nome)** que o identificará no Portal.
-3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explicit (Explícita) ou Wildcard (Curinga) e insira uma ID de Pacote em um formato DNS inverso, como: **Explicit (Explícita)**: com.[DomainName].[AppName] **Wildcard (Curinga)**:com.[DomainName].*
+3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explícita ou Curinga e insira uma ID de Pacote no formato DNS inverso, como: **Explicit (Explícita)** : com.[NomeDeDomínio].[NomeDeAplicativo] **Wildcard (Curinga)** :com.[NomeDeDomínio].*
 4. Selecione [App Services (Serviços de Aplicativos)](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) que seu aplicativo solicitar.
 5. Clique no botão **Continue (Continuar)** e siga as instruções na tela para criar a nova ID do Aplicativo.
 
@@ -119,11 +119,11 @@ Depois de obter os componentes obrigatórios necessários para criar um Perfil d
 
    [![](in-house-distribution-images/distribute04.png "Selecione o certificado de distribuição necessário para assinar o aplicativo")](in-house-distribution-images/distribute04.png#lightbox)
 
-6. Clique no botão **Continuar** e digite um **Nome** para o novo Perfil de Distribuição:
+5. Clique no botão **Continuar** e digite um **Nome** para o novo Perfil de Distribuição:
 
    [![](in-house-distribution-images/distribute06.png "Insira um nome para o novo Perfil de Distribuição")](in-house-distribution-images/distribute06.png#lightbox)
 
-7. Clique no botão **Generate (Gerar)** para criar o novo perfil e finalizar o processo.
+6. Clique no botão **Generate (Gerar)** para criar o novo perfil e finalizar o processo.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
