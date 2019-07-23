@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 3e660e821e54d673b5c28c611ad24dcb4eefd4bb
-ms.sourcegitcommit: 247a6d00a95fd7f4cf918d923e5f357c8db56761
+ms.openlocfilehash: 43f8b1185900ff20f8e4c53680c1adf62ac8316a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58420179"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829691"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -257,7 +257,10 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
     -   **SdkOnly**: a vinculação será executada apenas nas bibliotecas de classe base, não nos assemblies do usuário.
 
-    -   **Full**: a vinculação será executada nas bibliotecas de classe base e nos assemblies do usuário. **Observação:** o uso de um valor `AndroidLinkMode` definido como *Full* normalmente resulta em aplicativos com falha, principalmente quando a reflexão é usada. Evite usar isso, a menos que você *realmente* saiba o que está fazendo.
+    -   **Full**: a vinculação será executada nas bibliotecas de classe base e nos assemblies do usuário.
+
+        > [!NOTE]
+        > o uso de um valor `AndroidLinkMode` definido como *Full* normalmente resulta em aplicativos com falha, principalmente quando a reflexão é usada. Evite usar isso, a menos que você *realmente* saiba o que está fazendo.
 
     ```xml
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
@@ -449,7 +452,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
     -   **Other**: incluir outras codificações como *cirílico (Windows)* \[CP1251\], *báltico (Windows)* \[iso-8859-4, CP1257\], *vietnamita (Windows)* \[CP1258\], *cirílico (KOI8-R)* \[koi8-r, CP1251\], *ucraniano (KOI8-U)* \[koi8-u, CP1251\], *báltico (ISO)* \[iso-8859-4, CP1257\], *cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII devanágari* \[x-iscii-de, CP57002\], *ISCII bengalês* \[x-iscii-be, CP57003\], *ISCII tâmil* \[x-iscii-ta, CP57004\], *ISCII télugo* \[x-iscii-te, CP57005\], *ISCII assamês* \[x-iscii-as, CP57006\], *ISCII odia* \[x-iscii-or, CP57007\], *ISCII canarim* \[x-iscii-ka, CP57008\], *ISCII malaiala* \[x-iscii-ma, CP57009\], *ISCII guzerate* \[x-iscii-gu, CP57010\], *ISCII panjabi* \[x-iscii-pa, CP57011\] e *tailandês (Windows)* \[CP874\].
 
-    -   **Rare**: incluir codificações raras, tais como *IBM EBCDIC (turco)* \[CP1026\], *IBM EBCDIC (Open Systems Latim 1)* \[CP1047\], *IBM EBCDIC (EUA-Canadá com Euro)* \[CP1140\], *IBM EBCDIC (Alemanha com Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega com Euro)* \[CP1142\], *IBM EBCDIC (Finlândia/Suécia com Euro)* \[CP1143\], *IBM EBCDIC (Itália com Euro)* \[CP1144\], *IBM EBCDIC (América Latina/Espanha com Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido com Euro)* \[CP1146\], *IBM EBCDIC (França com Euro)* \[CP1147\], *IBM EBCDIC (Internacional com Euro)* \[CP1148\], *IBM EBCDIC (islandês com Euro)* \[CP1149\], *IBM EBCDIC (Alemanha)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlândia/Suécia)* \[CP20278\], *IBM EBCDIC (Itália)* \[CP20280\], *IBM EBCDIC (América Latina/Espanha)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (katakana japonês estendido)* \[CP20290\], *IBM EBCDIC (França)* \[CP20297\], *IBM EBCDIC (árabe)* \[CP20420\], *IBM EBCDIC (hebraico)* \[CP20424\], *IBM EBCDIC (islandês)* \[CP20871\], *IBM EBCDIC (cirílico – servo, búlgaro)* \[CP21025\], *IBM EBCDIC (EUA-Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *árabe (ASMO 708)* \[CP708\], *Centro-europeu (DOS)* \[CP852\]*, cirílico (DOS)* \[CP855\], *turco (DOS)* \[CP857\], *europeu ocidental (DOS com Euro)* \[CP858\], *hebraico (DOS)* \[CP862\], *árabe (DOS)* \[CP864\], *russo (DOS)* \[CP866\], *grego (DOS)* \[CP869\], *IBM EBCDIC (latim 2)* \[CP870\] e *IBM EBCDIC (grego)* \[CP875\].
+    -   **Rare**: incluir codificações raras, tais como *IBM EBCDIC (turco)* \[CP1026\], *IBM EBCDIC (Open Systems Latim 1)* \[CP1047\], *IBM EBCDIC (EUA-Canadá com Euro)* \[CP1140\], *IBM EBCDIC (Alemanha com Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega com Euro)* \[CP1142\], *IBM EBCDIC (Finlândia/Suécia com Euro)* \[CP1143\], *IBM EBCDIC (Itália com Euro)* \[CP1144\], *IBM EBCDIC (América Latina/Espanha com Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido com Euro)* \[CP1146\], *IBM EBCDIC (França com Euro)* \[CP1147\], *IBM EBCDIC (Internacional com Euro)* \[CP1148\], *IBM EBCDIC (islandês com Euro)* \[CP1149\], *IBM EBCDIC (Alemanha)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlândia/Suécia)* \[CP20278\], *IBM EBCDIC (Itália)* \[CP20280\], *IBM EBCDIC (América Latina/Espanha)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (katakana japonês estendido)* \[CP20290\], *IBM EBCDIC (França)* \[CP20297\], *IBM EBCDIC (árabe)* \[CP20420\], *IBM EBCDIC (hebraico)* \[CP20424\], *IBM EBCDIC (islandês)* \[CP20871\], *IBM EBCDIC (cirílico – servo, búlgaro)* \[CP21025\], *IBM EBCDIC (EUA-Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *árabe (ASMO 708)* \[CP708\], *Centro-europeu (DOS)* \[CP852\] *, cirílico (DOS)* \[CP855\], *turco (DOS)* \[CP857\], *europeu ocidental (DOS com Euro)* \[CP858\], *hebraico (DOS)* \[CP862\], *árabe (DOS)* \[CP864\], *russo (DOS)* \[CP866\], *grego (DOS)* \[CP869\], *IBM EBCDIC (latim 2)* \[CP870\] e *IBM EBCDIC (grego)* \[CP875\].
 
     -   **West**: incluir codificações ocidentais, como *europeu ocidental (Mac)* \[macintosh, CP10000\], *islandês (Mac)* \[x-mac-islandês, CP10079\], *Centro-europeu (Windows)* \[iso-8859-2, CP1250\], *europeu ocidental (Windows)* \[iso-8859-1, CP1252\], *grego (Windows)* \[iso-8859-7, CP1253\], *Centro-europeu (ISO)* \[iso 8859-2, CP28592\], *latim 3 (ISO)* \[iso-8859-3, CP28593\], *grego (ISO)* \[iso-8859-7, CP28597\], *latim 9 (ISO)* \[iso-8859-15, CP28605\], *OEM Estados Unidos* \[CP437\], *Europeu Ocidental (DOS)* \[CP850\], *português (DOS)* \[CP860\], *islandês (DOS)* \[CP861\], *francês canadense (DOS)* \[CP863\] e *nórdico (DOS)* \[CP865\].
 
@@ -562,11 +565,11 @@ Por padrão, o destino da assinatura gera uma nova chave de assinatura de depura
 
 -   **AndroidSigningKeyAlias** &ndash; especifica o alias para a chave no repositório de chaves. Este é o valor de **keytool-alias** usado ao criar o repositório de chaves.
 
--   **AndroidSigningKeyPass** &ndash; especifica a senha da chave de dentro do arquivo do repositório de chaves. Esse é o valor digitado quando `keytool` solicita **Insira a senha da chave para $(AndroidSigningKeyAlias)**.
+-   **AndroidSigningKeyPass** &ndash; especifica a senha da chave de dentro do arquivo do repositório de chaves. Esse é o valor digitado quando `keytool` solicita **Insira a senha da chave para $(AndroidSigningKeyAlias)** .
 
 -   **AndroidSigningKeyStore** &ndash; especifica o nome do arquivo do repositório de chaves criado por `keytool`. Isso corresponde ao valor fornecido à opção **keytool -keystore**.
 
--   **AndroidSigningStorePass** &ndash; especifica a senha para `$(AndroidSigningKeyStore)`. Esse é o valor fornecido a `keytool` ao criar o arquivo de repositório de chaves e ao solicitar **Insira a senha do repositório de chaves:**.
+-   **AndroidSigningStorePass** &ndash; especifica a senha para `$(AndroidSigningKeyStore)`. Esse é o valor fornecido a `keytool` ao criar o arquivo de repositório de chaves e ao solicitar **Insira a senha do repositório de chaves:** .
 
 Por exemplo, considere a seguinte invocação de `keytool`:
 
