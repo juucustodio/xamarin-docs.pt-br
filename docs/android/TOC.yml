@@ -128,10 +128,10 @@
     - name: Interface do Usuário
       href: user-interface/index.md
       items:
-        - name: Designer Android
+        - name: Android Designer
           href: user-interface/android-designer/index.md
           items:
-            - name: Usando o Designer Android
+            - name: Usando o Android Designer
               href: user-interface/android-designer/designer-walkthrough.md
             - name: Noções básicas do Designer
               href: user-interface/android-designer/designer-basics.md
@@ -607,7 +607,7 @@
               href: troubleshooting/questions/xa-lollipop.md
             - name: 'Android.Support.v7.AppCompat – Não encontramos um recurso correspondente ao nome fornecido: attr ''android:actionModeShareDrawable'''
               href: troubleshooting/questions/missing-action-mode-share-drawable.md
-            - name: Ajustar os parâmetros de memória do Java para o designer do Android
+            - name: Ajustar os parâmetros de memória do Java para o Android Designer
               href: troubleshooting/questions/android-designer-java-memory.md
             - name: Meu arquivo Resource.designer.cs do Android não será atualizado
               href: troubleshooting/questions/resource-designer-wont-update.md

@@ -45,7 +45,7 @@ Na **Caixa de Ferramentas**, arraste um **Botão** para a superfície de design 
 
 [![Arrastar um novo botão](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
-Ajuste a propriedade **Texto** do botão para `@string/translationHistory`. O Designer do Android interpretará isso literalmente, porém vamos fazer algumas alterações para que o texto do botão seja exibido corretamente:
+Ajuste a propriedade **Texto** do botão para `@string/translationHistory`. O Android Designer interpretará isso literalmente, porém vamos fazer algumas alterações para que o texto do botão seja exibido corretamente:
 
 [![Definir o texto de botão do histórico de conversão](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png#lightbox)
 
@@ -73,7 +73,7 @@ Com o botão **Histórico de Conversão** selecionado na superfície de design, 
 
 ### <a name="creating-the-second-activity"></a>Criando a segunda atividade
 
-Crie uma segunda Atividade para ligar a segunda tela. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **Phoneword** e selecione **Adicionar > Novo Item…**:
+Crie uma segunda Atividade para ligar a segunda tela. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **Phoneword** e selecione **Adicionar > Novo Item…** :
 
 [![Adicionar um novo arquivo](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
@@ -184,7 +184,7 @@ Na **Caixa de Ferramentas**, arraste um **Botão** para a superfície de design 
 
 [![Arrastar um novo botão](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
-Ajuste a propriedade **Texto** do botão para `@string/translationHistory`. O Designer do Android interpretará isso literalmente, porém vamos fazer algumas alterações para que o texto do botão seja exibido corretamente:
+Ajuste a propriedade **Texto** do botão para `@string/translationHistory`. O Android Designer interpretará isso literalmente, porém vamos fazer algumas alterações para que o texto do botão seja exibido corretamente:
 
 [![Definir o texto de botão do histórico de conversão](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
@@ -213,7 +213,7 @@ Com o botão **Histórico de Conversão** selecionado na superfície de design, 
 
 ### <a name="creating-the-second-activity"></a>Criando a segunda atividade
 
-Crie uma segunda Atividade para ligar a segunda tela. No **Painel de Soluções**, clique no ícone de engrenagem cinza ao lado do projeto **Phoneword** e escolha **Adicionar > Novo Arquivo...**:
+Crie uma segunda Atividade para ligar a segunda tela. No **Painel de Soluções**, clique no ícone de engrenagem cinza ao lado do projeto **Phoneword** e escolha **Adicionar > Novo Arquivo...** :
 
 Na caixa de diálogo **Novo Arquivo**, escolha **Android > Atividade**, nomeie a Atividade `TranslationHistoryActivity` e clique em **Adicionar**.
 

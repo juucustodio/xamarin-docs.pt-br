@@ -149,13 +149,13 @@ Já que não há nenhuma progressão linear em um aplicativo do Android (você p
 
 [![Auxiliares de recursos](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
 
-As próximas seções exploram as relações entre as diversas partes do aplicativo **Phoneword**, o que deve fornecer uma compreensão melhor do diagrama acima. Essa exploração começa com a interface do usuário, pois ela aborda os arquivos de layout e do Designer do Android.
+As próximas seções exploram as relações entre as diversas partes do aplicativo **Phoneword**, o que deve fornecer uma compreensão melhor do diagrama acima. Essa exploração começa com a interface do usuário, pois ela aborda os arquivos de layout e do Android Designer.
 
 ## <a name="user-interface"></a>Interface do Usuário
 
 ::: zone pivot="windows"
 
-**activity_main.axml** é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Designer do Android (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **activity_main.axml** no IDE, ele abre o editor visual de arquivos de layout do Android, chamado *Designer Android*:
+**activity_main.axml** é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Android Designer (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **activity_main.axml** no IDE, ele abre o editor visual de arquivos de layout do Android, chamado *Android Designer*:
 
 [![Designer Android](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
@@ -166,7 +166,7 @@ No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/
 ::: zone-end
 ::: zone pivot="macos"
 
-**Main.axml** é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Designer do Android (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **Main.axml** no IDE, ele abrirá o editor visual para arquivos de layout do Android chamado de *Designer do Android*:
+**Main.axml** é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Android Designer (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **Main.axml** no IDE, ele abrirá o editor visual para arquivos de layout do Android chamado de *Android Designer*:
 
 [![Designer Android](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
@@ -180,7 +180,7 @@ Quando você define a propriedade `id` do **TranslateButton**, o Designer Androi
 
 ### <a name="source-view"></a>Exibição de fonte
 
-Tudo que está definido na área de design é traduzido em XML para o Xamarin.Android usar. O Designer do Android fornece uma exibição do código-fonte que contém o XML que foi gerado do designer visual. Você pode exibir esse XML alternando para o painel **Código-fonte** no canto inferior esquerdo da exibição de designer, conforme ilustrado na captura de tela abaixo:
+Tudo que está definido na área de design é traduzido em XML para o Xamarin.Android usar. O Android Designer fornece uma exibição do código-fonte que contém o XML que foi gerado do designer visual. Você pode exibir esse XML alternando para o painel **Código-fonte** no canto inferior esquerdo da exibição de designer, conforme ilustrado na captura de tela abaixo:
 
 ::: zone pivot="windows"
 
@@ -193,7 +193,7 @@ Tudo que está definido na área de design é traduzido em XML para o Xamarin.An
 
 ::: zone-end
 
-Esse código-fonte XML deve conter os elementos **Texto (Grande)**, **Texto Sem Formatação** e dois elementos de **Botão**. Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
+Esse código-fonte XML deve conter os elementos **Texto (Grande)** , **Texto Sem Formatação** e dois elementos de **Botão**. Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
 
 As ferramentas e os conceitos por trás da parte visual da interface do usuário foram agora abordados. Em seguida, é hora de se aprofundar no código que aciona a interface do usuário conforme as atividades e o ciclo de vida da atividade são explorados.
 
@@ -258,7 +258,7 @@ protected override void OnCreate (Bundle bundle)
 
 ::: zone pivot="windows"
 
-No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Designer Android. Para carregar a interface do usuário, chame `SetContentView` e passe para ele o *nome do recurso de layout* para o arquivo de layout: **activity_main.axml**. O layout está localizado em `Resource.Layout.activity_main`:
+No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Android Designer. Para carregar a interface do usuário, chame `SetContentView` e passe para ele o *nome do recurso de layout* para o arquivo de layout: **activity_main.axml**. O layout está localizado em `Resource.Layout.activity_main`:
 
 ```csharp
 SetContentView (Resource.Layout.activity_main);
@@ -269,7 +269,7 @@ Quando o `MainActivity` é iniciado, ele cria uma exibição com base no conteú
 ::: zone-end
 ::: zone pivot="macos"
 
-No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Designer Android. Para carregar a interface do usuário, chame `SetContentView` e passe o *nome do recurso de layout* para o arquivo de layout: **Main.axml**. O layout está localizado em `Resource.Layout.Main`:
+No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Android Designer. Para carregar a interface do usuário, chame `SetContentView` e passe o *nome do recurso de layout* para o arquivo de layout: **Main.axml**. O layout está localizado em `Resource.Layout.Main`:
 
 ```csharp
 SetContentView (Resource.Layout.Main);
@@ -333,7 +333,7 @@ Depois que o dispositivo estiver configurado, você poderá implantar nele conec
 ::: zone-end
 ::: zone pivot="macos"
 
-Depois que o dispositivo estiver configurado, você poderá implantar nele conectando-o, pressionando **Iniciar (reproduzir)**, selecionando-o na caixa de diálogo **Selecionar Dispositivo** e pressionando **OK**:
+Depois que o dispositivo estiver configurado, você poderá implantar nele conectando-o, pressionando **Iniciar (reproduzir)** , selecionando-o na caixa de diálogo **Selecionar Dispositivo** e pressionando **OK**:
 
 [![Selecionar dispositivo de depuração](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
@@ -404,7 +404,7 @@ Para obter mais informações sobre tamanhos de ícones e requisitos, consulte o
 O _Google Play Services_ é um conjunto de bibliotecas de complementos que permite aos desenvolvedores Android tirar proveito dos recursos mais recentes do Google como o Google Maps, Google Cloud Messaging e cobrança no aplicativo.
 Anteriormente, as associações para todas as bibliotecas do Google Play Services eram fornecidas pelo Xamarin na forma de um único pacote &ndash; do Visual Studio para Mac em diante, uma caixa de diálogo de novo projeto está disponível para selecionar quais pacotes do Google Play Services incluir em seu aplicativo.
 
-Para adicionar uma ou mais bibliotecas do Google Play Services, clique com o botão direito do mouse no nó **Pacotes** na sua árvore de projeto e clique em **Adicionar Google Play Service...**:
+Para adicionar uma ou mais bibliotecas do Google Play Services, clique com o botão direito do mouse no nó **Pacotes** na sua árvore de projeto e clique em **Adicionar Google Play Service...** :
 
 [![Adicionar serviço do Google Play](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 

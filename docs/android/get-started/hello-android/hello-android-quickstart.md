@@ -73,7 +73,7 @@ Na caixa de diálogo **Novo Aplicativo Android**, clique em **Aplicativo em Bran
 ## <a name="create-a-layout"></a>Criar um layout
 
 Depois da criação do novo projeto, expanda a pasta **Recursos** e, em seguida, a pasta **Layout** no **Gerenciador de Soluções**.
-Clique duas vezes em **activity_main.axml** para abri-lo no Designer Android. Este é o arquivo de layout da tela do aplicativo:
+Clique duas vezes em **activity_main.axml** para abri-lo no Android Designer. Este é o arquivo de layout da tela do aplicativo:
 
 [![Abra o arquivo axml da atividade](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
 
@@ -91,7 +91,7 @@ Com o controle **Texto (Grande)** selecionado na superfície de design, use o pa
 
 [![Definir propriedades de texto grande](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158.png#lightbox)
 
-Arraste um widget **Texto Sem Formatação** da **Caixa de ferramentas** para a superfície de design e coloque-o sob o widget de **Texto (Grande)**. O posicionamento do widget não ocorrerá até que você mova o ponteiro do mouse até um local no layout que aceite o widget. Nas capturas de tela abaixo, o widget não poderá ser posicionado (como visto à esquerda) até que o ponteiro do mouse esteja logo abaixo do `TextView` anterior (conforme mostrado à direita):
+Arraste um widget **Texto Sem Formatação** da **Caixa de ferramentas** para a superfície de design e coloque-o sob o widget de **Texto (Grande)** . O posicionamento do widget não ocorrerá até que você mova o ponteiro do mouse até um local no layout que aceite o widget. Nas capturas de tela abaixo, o widget não poderá ser posicionado (como visto à esquerda) até que o ponteiro do mouse esteja logo abaixo do `TextView` anterior (conforme mostrado à direita):
 
 [![O mouse indica onde o widget pode ser posicionado](hello-android-quickstart-images/vs/06a-cant-drop-w158-sml.png)](hello-android-quickstart-images/vs/06a-cant-drop-w158.png#lightbox)
 
@@ -119,7 +119,7 @@ Salve seu trabalho pressionando **CTRL + S**.
 
 ## <a name="write-some-code"></a>Escrever algum código
 
-A próxima etapa é adicionar algum código para converter números de telefone de alfanuméricos para numéricos. Adicione um novo arquivo ao projeto clicando com o botão direito do mouse no projeto **Phoneword** no painel **Gerenciador de Soluções** e escolhendo **Adicionar > Novo Item…**, conforme é mostrado abaixo:
+A próxima etapa é adicionar algum código para converter números de telefone de alfanuméricos para numéricos. Adicione um novo arquivo ao projeto clicando com o botão direito do mouse no projeto **Phoneword** no painel **Gerenciador de Soluções** e escolhendo **Adicionar > Novo Item…** , conforme é mostrado abaixo:
 
 [![Adicionar novo item](hello-android-quickstart-images/vs/12-add-new-item-w158-sml.png)](hello-android-quickstart-images/vs/12-add-new-item-w158.png#lightbox)
 
@@ -219,7 +219,7 @@ namespace Phoneword
 }
 ```
 
-Obtenha uma referência para os controles criados no arquivo de layout por meio do Designer do Android. Adicione o seguinte código dentro do método `OnCreate` após a chamada para `SetContentView`:
+Obtenha uma referência para os controles criados no arquivo de layout por meio do Android Designer. Adicione o seguinte código dentro do método `OnCreate` após a chamada para `SetContentView`:
 
 ```csharp
 // Get our UI controls from the loaded layout
@@ -292,7 +292,7 @@ Na caixa de diálogo **Configurar seu novo Aplicativo Android**, deixe os nomes 
 ## <a name="create-a-layout"></a>Criar um layout
 
 Depois de criar o novo projeto, expanda a pasta **Recursos** e, em seguida, a pasta **Layout** no painel **Solução**.
-Clique duas vezes em **Main.axml** para abri-lo no Designer do Android. Este é o arquivo de layout da tela quando ele for exibido no Designer Android:
+Clique duas vezes em **Main.axml** para abri-lo no Android Designer. Este é o arquivo de layout da tela quando ele for exibido no Android Designer:
 
 [![Abrir Main.axml](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
 
@@ -306,7 +306,7 @@ Com o widget **Texto (Grande)** selecionado na superfície de design, use o pain
 
 [![Definir propriedades do widget de texto grande](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png#lightbox)
 
-Em seguida, arraste um widget de **Texto Sem Formatação** da **Caixa de ferramentas** para a superfície de design e coloque-o sob o widget de **Texto (Grande)**. Observe que você pode usar o campo de pesquisa para ajudar a localizar widgets por nome:
+Em seguida, arraste um widget de **Texto Sem Formatação** da **Caixa de ferramentas** para a superfície de design e coloque-o sob o widget de **Texto (Grande)** . Observe que você pode usar o campo de pesquisa para ajudar a localizar widgets por nome:
 
 [![Adicionar widget de texto sem formatação](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png#lightbox)
 
@@ -330,7 +330,7 @@ Salve seu trabalho pressionando **&#8984; + S**.
 
 ## <a name="write-some-code"></a>Escrever algum código
 
-Agora, adicione algum código para traduzir números de telefone de alfanuméricos para numéricos. Adicione um novo arquivo ao projeto clicando no ícone de engrenagem ao lado do projeto **Phoneword** no painel **Solução** e escolhendo **Adicionar > Novo Arquivo...**:
+Agora, adicione algum código para traduzir números de telefone de alfanuméricos para numéricos. Adicione um novo arquivo ao projeto clicando no ícone de engrenagem ao lado do projeto **Phoneword** no painel **Solução** e escolhendo **Adicionar > Novo Arquivo...** :
 
 [![Adicionar um novo arquivo ao projeto](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png#lightbox)
 
@@ -433,7 +433,7 @@ namespace Phoneword
 }
 ```
 
-Em seguida, uma referência é necessária para os controles que foram criados no arquivo de layout com o Designer do Android. Adicione o seguinte código dentro do método `OnCreate` (após a chamada para `SetContentView`):
+Em seguida, uma referência é necessária para os controles que foram criados no arquivo de layout com o Android Designer. Adicione o seguinte código dentro do método `OnCreate` (após a chamada para `SetContentView`):
 
 ```csharp
 // Get our UI controls from the loaded layout

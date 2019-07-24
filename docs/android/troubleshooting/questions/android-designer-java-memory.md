@@ -1,5 +1,5 @@
 ---
-title: Ajustar os parâmetros de memória do Java para o designer do Android
+title: Ajustar os parâmetros de memória do Java para o Android Designer
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
@@ -14,7 +14,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/09/2019
 ms.locfileid: "67674457"
 ---
-# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar os parâmetros de memória do Java para o designer do Android
+# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar os parâmetros de memória do Java para o Android Designer
 
 Os parâmetros de memória padrão que são usados ao iniciar o `java` processar para o designer do Android pode ser incompatível com algumas configurações do sistema.
 
