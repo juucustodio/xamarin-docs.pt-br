@@ -24,7 +24,7 @@ O exemplo de coletor cozinha demonstra os dois conjuntos de conceitos:
 * As partes de representação demonstram como usar `RepresentationManager` para melhorar a renderização usando as representações internas.
 * O `Person` objeto e seu renderizador JavaScript associado demonstram o uso de `ISerializableObject` sem passar por um provedor de representação.
 
-Consulte também [SkiaSharp] [ skiasharp] para obter um exemplo de uma integração que usa existente reais [representações](~/tools/workbooks/sdk/representations.md) fornecidos pelo Xamarin Workbooks para processar seus tipos.
+Consulte também [SkiaSharp][skiasharp] para obter um exemplo de uma integração que usa existente reais [representações](~/tools/workbooks/sdk/representations.md) fornecidos pelo Xamarin Workbooks para processar seus tipos.
 
 [KitchenSink]: https://github.com/xamarin/Workbooks/tree/master/SDK/Samples/KitchenSink
 [skiasharp]: https://github.com/mono/SkiaSharp/tree/master/source/SkiaSharp.Workbooks
