@@ -1,28 +1,28 @@
 ---
-title: TextureView
+title: TextureView Xamarin. Android
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2017
-ms.openlocfilehash: 8f20666ddf5f74ff9451a22e289790eb14071f90
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 589cf1787f5dc3090cbfb1165e91d8ef58df37a6
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076104"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510159"
 ---
-# <a name="textureview"></a>TextureView
+# <a name="xamarinandroid-textureview"></a>TextureView Xamarin. Android
 
-O `TextureView` classe é um modo de exibição que usa renderização 2D acelerada por hardware para habilitar um vídeo ou um fluxo de conteúdo do OpenGL a ser exibido. Por exemplo, a captura de tela a seguir mostra o `TextureView` exibindo uma transmissão ao vivo da câmera do dispositivo:
+A `TextureView` classe é uma exibição que usa renderização 2D acelerada por hardware para permitir que um fluxo de conteúdo de vídeo ou OpenGL seja exibido. Por exemplo, a captura de tela a `TextureView` seguir mostra a exibição de um feed ao vivo da câmera do dispositivo:
 
 [![Captura de tela de exemplo de uma imagem ao vivo da câmera do dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
 
-Ao contrário de `SurfaceView` classe, que também pode ser usado para exibir o OpenGL ou conteúdo de vídeo, o TextureView não é renderizado em uma janela separada.
-Portanto, `TextureView` é capaz de dar suporte a transformações de modo de exibição, como qualquer outra exibição. Por exemplo, girando uma `TextureView` pode ser feito simplesmente definindo seu `Rotation` propriedade, a transparência, definindo seu `Alpha` propriedade e assim por diante.
+Ao contrário `SurfaceView` da classe, que também pode ser usada para exibir o conteúdo de vídeo ou OpenGL, o TextureView não é renderizado em uma janela separada.
+Portanto, `TextureView` o é capaz de dar suporte a transformações de exibição como qualquer outra exibição. Por exemplo, girar um `TextureView` pode ser realizado simplesmente definindo sua `Rotation` Propriedade, sua transparência definindo sua `Alpha` Propriedade e assim por diante.
 
-Portanto, com o `TextureView` agora podemos fazer coisas como exibir uma transmissão ao vivo da câmera e transformá-la, conforme mostrado no código a seguir:
+Portanto, com o `TextureView` , agora podemos fazer coisas como exibir um fluxo ao vivo da câmera e transformá-la, conforme mostrado no código a seguir:
 
 ```csharp
 public class TextureViewActivity : Activity,
@@ -65,16 +65,16 @@ public class TextureViewActivity : Activity,
 }
 ```
 
-O código acima cria uma `TextureView` instância na atividade de `OnCreate` método e define a atividade como o `TextureView`do `SurfaceTextureListener`. Para ser o `SurfaceTextureListener`, a atividade implementa o `TextureView.ISurfaceTextureListener` interface. O sistema irá chamar o `OnSurfaceTextAvailable` método quando o `SurfaceTexture` está pronto para uso. Nesse método, podemos levar a `SurfaceTexture` que é passado e defini-lo como textura de visualização da câmera. Em seguida, estamos livres para executar operações normais com base no modo de exibição, como a configuração de `Rotation` e `Alpha`, conforme mostrado no exemplo acima. O aplicativo resultante, em execução em um dispositivo, é mostrado abaixo:
+O código acima cria uma `TextureView` instância no método da `OnCreate` atividade e define `SurfaceTextureListener`a atividade como a `TextureView`. Para ser o `SurfaceTextureListener`, a atividade implementa a `TextureView.ISurfaceTextureListener` interface. O sistema chamará o `OnSurfaceTextAvailable` método quando o `SurfaceTexture` estiver pronto para uso. Nesse método, pegamos o `SurfaceTexture` que é passado e o definimos para a textura de visualização da câmera. Em seguida, temos a liberdade de executar operações normais baseadas em modo de exibição, `Rotation` como `Alpha`a definição de e, como no exemplo acima. O aplicativo resultante, em execução em um dispositivo, é mostrado abaixo:
 
-[![Exemplo de como o aplicativo em execução em um dispositivo, exibindo uma imagem](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
+[![Exemplo do aplicativo em execução em um dispositivo, exibindo uma imagem](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
-Para usar o `TextureView`, aceleração de hardware deve ser habilitada, que será por padrão a partir de 14 de nível de API. Também, uma vez que este exemplo usa a câmera, tanto a `android.permission.CAMERA` permissão e o `android.hardware.camera` recurso deve ser definido na **androidmanifest. XML**.
+Para usar o `TextureView`, a aceleração de hardware deve ser habilitada, que será por padrão a partir do nível de API 14. Além disso, como este exemplo usa a câmera, a `android.permission.CAMERA` permissão e o `android.hardware.camera` recurso devem ser definidos no **AndroidManifest. xml**.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [TextureViewDemo (sample)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
-- [Apresentando o Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma 4.0 Android](https://developer.android.com/sdk/android-4.0.html)
+- [TextureViewDemo (exemplo)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
+- [Introdução ao sanduíche de sorvete](http://www.android.com/about/ice-cream-sandwich/)
+- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

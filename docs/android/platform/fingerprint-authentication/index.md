@@ -1,37 +1,37 @@
 ---
 title: Autenticação de impressão digital
-description: Este guia aborda como adicionar autenticação por impressão digital, introduzida no Android 6.0, para um aplicativo xamarin. Android.
+description: Este guia discute como adicionar a autenticação de impressão digital, introduzida no Android 6,0, a um aplicativo Xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 70e12abdf61a6a0bfb36d281bcaa6214199e567d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7917f0cc03a4079d6b2adaba37fdc0332f8626c8
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023464"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510600"
 ---
 # <a name="fingerprint-authentication"></a>Autenticação de impressão digital
 
-_Este guia aborda como adicionar autenticação por impressão digital, introduzida no Android 6.0, para um aplicativo xamarin. Android._
+_Este guia discute como adicionar a autenticação de impressão digital, introduzida no Android 6,0, a um aplicativo Xamarin. Android._
 
 
-## <a name="fingerprint-authentication-overview"></a>Visão geral de autenticação por impressão digital
+## <a name="fingerprint-authentication-overview"></a>Visão geral da autenticação de impressão digital
 
-A chegada de scanners de impressões digitais em dispositivos Android fornece aplicativos com uma alternativa para o método tradicional de nome de usuário e senha de autenticação do usuário. O uso de impressões digitais para autenticar um usuário torna possível para um aplicativo de incorporar a segurança é menos intrusiva que um nome de usuário e senha.
+A chegada de scanners de impressão digital em dispositivos Android fornece aos aplicativos uma alternativa ao método de nome de usuário/senha tradicional de autenticação de usuários. O uso de impressões digitais para autenticar um usuário possibilita que um aplicativo incorpore segurança menos invasiva do que um nome de usuário e senha.
 
-As APIs FingerprintManager dispositivos de destino com um scanner de impressão digital e estiver executando a API nível 23 (Android 6.0) ou superior. As APIs são encontradas no `Android.Hardware.Fingerprints` namespace. A biblioteca de suporte ao Android v4 fornece versões das APIs destinadas a versões mais antigas do Android impressões digitais. A compatibilidade APIs são encontradas na `Android.Support.v4.Hardware.Fingerprint` namespace, são distribuídos por meio de [pacote do NuGet Xamarin.Android.Support.v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
+As APIs de impressões digitais direcionam dispositivos com um scanner de impressão digital e estão executando o nível de API 23 (Android 6,0) ou superior. As APIs são encontradas no `Android.Hardware.Fingerprints` namespace. A biblioteca de suporte do Android v4 fornece versões das APIs de impressão digital destinadas a versões mais antigas do Android. As APIs de compatibilidade são encontradas no `Android.Support.v4.Hardware.Fingerprint` namespace, são distribuídas por meio do [pacote NuGet Xamarin. Android. support. v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
 
-O [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e sua contraparte de biblioteca de suporte, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) é a classe principal para usar a impressão digital da verificação de hardware. Essa classe é um wrapper de SDK do Android em torno do serviço de nível de sistema que gerencia as interações com o próprio hardware. Ele é responsável por iniciar o scanner de impressão digital e responder aos comentários do scanner. Essa classe tem uma interface bem simples com apenas três membros:
+O [fingerprintid](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e seu equivalente da biblioteca de suporte, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) é a classe principal para usar o hardware de verificação de impressão digital. Essa classe é um wrapper SDK do Android em volta do serviço de nível do sistema que gerencia as interações com o próprio hardware. Ele é responsável por iniciar o scanner de impressão digital e responder aos comentários do verificador. Essa classe tem uma interface razoavelmente simples com apenas três membros:
 
-* **`Authenticate`** &ndash; Esse método irá inicializar o scanner de hardware e iniciar o serviço em segundo plano, aguardando o usuário digitalizar sua impressão digital.
-* **`EnrolledFingerprints`** &ndash; Essa propriedade retornará `true` se o usuário tiver registrado impressões digitais de uma ou mais com o dispositivo.
+* **`Authenticate`** &ndash; Esse método inicializará o scanner de hardware e iniciará o serviço em segundo plano, aguardando que o usuário examine sua impressão digital.
+* **`EnrolledFingerprints`** Essa propriedade retornará `true` se o usuário tiver registrado uma ou mais impressões digitais com o dispositivo. &ndash;
 * **`HardwareDetected`** &ndash; Essa propriedade é usada para determinar se o dispositivo dá suporte à verificação de impressão digital.
 
-O `FingerprintManager.Authenticate` método é usado por um aplicativo Android para iniciar o scanner de impressão digital. O trecho a seguir está um exemplo de como invocá-lo usando a APIs de compatibilidade da biblioteca de suporte:
+O `FingerprintManager.Authenticate` método é usado por um aplicativo Android para iniciar o scanner de impressão digital. O trecho a seguir é um exemplo de como chamá-lo usando as APIs de compatibilidade de biblioteca de suporte:
 
 ```csharp
 // context is any Android.Content.Context instance, typically the Activity 
@@ -44,13 +44,13 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
                                );
 ```
 
-Este guia discute como usar o `FingerprintManager` APIs para aprimorar um aplicativo Android com autenticação por impressão digital. Ele aborda como criar uma instância e criar um `CryptoObject` para ajudar a proteger os resultados usando o scanner de impressão digital. Vamos examinar como um aplicativo deve subclasse `FingerprintManager.AuthenticationCallback` e responder aos comentários usando o scanner de impressão digital. Por fim, veremos como registrar uma impressão digital em um emulador ou dispositivo Android e como usar **adb** para simular uma verificação de impressão digital.
+Este guia explicará como usar as `FingerprintManager` APIs para aprimorar um aplicativo Android com autenticação de impressão digital. Ele abordará como instanciar e criar um `CryptoObject` para ajudar a proteger os resultados do scanner de impressão digital. Vamos examinar como um aplicativo deve ser subclasse `FingerprintManager.AuthenticationCallback` e responder aos comentários do scanner de impressão digital. Por fim, veremos como registrar uma impressão digital em um dispositivo Android ou emulador e como usar o **ADB** para simular uma verificação de impressão digital.
 
 ## <a name="requirements"></a>Requisitos
 
-Autenticação por impressão digital requer o Android 6.0 (API nível 23) ou superior e um dispositivo com o scanner de impressão digital. 
+A autenticação de impressão digital requer Android 6,0 (API nível 23) ou superior e um dispositivo com um scanner de impressão digital. 
 
-Uma impressão digital já deve ser registrada com o dispositivo para cada usuário que deve ser autenticado. Isso envolve configurar um bloqueio de tela que usa uma senha, PIN, padrão de passar o dedo ou reconhecimento facial. É possível simular algumas das funcionalidades de autenticação por impressão digital no emulador do Android.  Para obter mais informações sobre esses dois tópicos, consulte o [registrar uma impressão digital](enrolling-fingerprint.md) seção. 
+Uma impressão digital já deve estar inscrita no dispositivo para cada usuário que deve ser autenticado. Isso envolve a configuração de um bloqueio de tela que usa uma senha, PIN, padrão de toque ou reconhecimento facial. É possível simular algumas das funcionalidades de autenticação de impressão digital em um Android Emulator.  Para obter mais informações sobre esses dois tópicos, consulte a seção [registrando uma impressão digital](enrolling-fingerprint.md) . 
 
 
 
@@ -59,10 +59,10 @@ Uma impressão digital já deve ser registrada com o dispositivo para cada usuá
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo do guia de impressão digital](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
+- [Aplicativo de exemplo de guia de impressão digital](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
 - [Exemplo de caixa de diálogo de impressão digital](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
 - [Solicitando permissões em tempo de execução](https://developer.android.com/training/permissions/requesting.html)
 - [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
 - [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
-- [Android.Content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
-- [API de impressão digital e pagamentos (vídeo)](https://youtu.be/VOn7VrTRlA4)
+- [Android.Content.Context](xref:Android.Content.Context)
+- [API de impressão digital e de pagamentos (vídeo)](https://youtu.be/VOn7VrTRlA4)

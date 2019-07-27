@@ -1,41 +1,41 @@
 ---
 title: Introdução ao macOS Mojave
-description: Este documento descreve como concluir a configuração até macOS build Mojave aplicativos com xamarin. Mac. Ele aborda como baixar o Xcode 10 e atualizar o Visual Studio para Mac.
+description: Este documento descreve como ser configurado para criar aplicativos macOS Mojave com o Xamarin. Mac. Ele discute como baixar o Xcode 10 e atualizar o Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 6acf79d158869a09f93ff9cd129650304c209a35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 369133f49566625dd677dc077ed8ff6a0bb0b4db
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031668"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511664"
 ---
 # <a name="get-started-with-macos-mojave"></a>Introdução ao macOS Mojave
 
-Este documento descreve como concluir a configuração até macOS build Mojave aplicativos com xamarin. Mac. Ele aborda como baixar o Xcode 10 e atualizar o Visual Studio para Mac.
+Este documento descreve como ser configurado para criar aplicativos macOS Mojave com o Xamarin. Mac. Ele discute como baixar o Xcode 10 e atualizar o Visual Studio para Mac.
 
-## <a name="download-and-install"></a>Baixe e instale
+## <a name="download-and-install"></a>Baixar e instalar
 
-1. **Instalar o beta mais recente do Xcode 10** – os desenvolvedores da Apple registrado podem baixar e instalar a versão mais recente do Xcode 10 do [Portal do desenvolvedor Apple](https://developer.apple.com/download/).
+1. **Instale o mais recente Xcode 10 beta** – os desenvolvedores da Apple registrados podem baixar e instalar a versão mais recente do Xcode 10 no [portal do desenvolvedor da Apple](https://developer.apple.com/download/).
 
-2. **Executar o Xcode 10** – executar o Xcode 10 antes de atualizar e executando o Visual Studio para Mac; ela instala algumas ferramentas que requer o Xamarin.
+2. **Executar o Xcode 10** – execute o Xcode 10 antes de atualizar e executar o Visual Studio para Mac; Ele instala algumas ferramentas exigidas pelo Xamarin.
 
-3. **Atualizar o Visual Studio para Mac** – Use a versão estável mais recente do Visual Studio para Mac, com [xamarin. Mac 5.0](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/) ou mais recente.
+3. **Atualizar Visual Studio para Mac** – use a versão estável mais recente do Visual Studio para Mac, com [Xamarin. Mac 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md) ou mais recente.
 
-4. _(opcional)_  **Instalar o macOS Mojave no Mac** –
+4. _(opcional)_ **Instalar o MacOS Mojave no seu Mac** –
 
    > [!TIP]
-   > Mesmo se seu aplicativo não usa qualquer macOS novas APIs Mojave, certifique-se de criá-lo com o macOS Mojave SDK e testá-lo para certificar-se de que tudo está funcionando conforme o esperado. Se um aplicativo não chamar novas APIs, você pode recompilá-lo com o macOS Mojave SDK e testá-lo sem atualizar o sistema operacional do seu Mac.
+   > Mesmo que seu aplicativo não use novas APIs do macOS Mojave, certifique-se de compilá-lo com o SDK do macOS Mojave e testá-lo para garantir que tudo funcione conforme o esperado. Se um aplicativo não chamar novas APIs, você poderá recompilá-lo com o SDK do macOS Mojave e testá-lo sem Atualizar o sistema operacional do Mac.
    >
-   > Antes de atualizar seu Mac para macOS Mojave para compilar e testar aplicativos xamarin. MAC que chamam o macOS novas APIs de Mojave:
+   > Antes de atualizar seu Mac para macOS Mojave para compilar e testar aplicativos Xamarin. Mac que chamam novas APIs do macOS Mojave:
    >
-   > - Leia [notas de versão da Apple](https://developer.apple.com/download/) para a atualização do sistema operacional.
+   > - Leia as [notas de versão da Apple](https://developer.apple.com/download/) para a atualização do sistema operacional.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Baixar o Xcode 10](https://developer.apple.com/download/)
-- [Notas de versão do xamarin. Mac 5.0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Notas de versão do Xamarin. Mac 5,0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)

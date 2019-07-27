@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a38249236e758728452ff25fd0c486c3d03ce8fc
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 2c218b030739dee8d3e49fab4e5c2a70ff5e71e0
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970996"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511824"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
@@ -71,7 +71,7 @@ Xamarin. Android dá suporte a várias opções para especificar a orientação:
 - **Paisagem** &ndash; força a orientação do aplicativo para ser paisagem, independentemente dos dados do sensor.
 - **Retrato** &ndash; força a orientação do aplicativo para ser retrato, independentemente dos dados do sensor.
 - **Usuário** &ndash; faz com que o aplicativo a ser apresentada usando a orientação de preferência do usuário.
-- **Por trás** &ndash; faz com que a orientação do aplicativo ser o mesmo que a orientação do [atividade](https://developer.xamarin.com/api/type/Android.App.Activity/) por trás dele.
+- **Por trás** &ndash; faz com que a orientação do aplicativo ser o mesmo que a orientação do [atividade](xref:Android.App.Activity) por trás dele.
 - **Sensor** &ndash; faz com que a orientação do aplicativo seja determinado pelo sensor, mesmo se o usuário tiver desabilitado a rotação automática.
 - **SensorLandscape** &ndash; faz com que o aplicativo para usar a orientação de paisagem durante o uso de dados de sensor para alterar a direção em que a tela é voltado para a (de modo que a tela não é vista como cabeça para baixo).
 - **SensorPortrait** &ndash; faz com que o aplicativo para usar a orientação de retrato durante o uso de dados de sensor para alterar a direção em que a tela é voltado para a (de modo que a tela não é vista como cabeça para baixo).

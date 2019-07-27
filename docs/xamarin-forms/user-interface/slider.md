@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 6e65124df4b20a50091ad93e18621f8e6707ebbe
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 1fa46af1ac1cf6ea49a53e3f8d3c3dca6ba83e13
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970548"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511896"
 ---
 # <a name="xamarinforms-slider"></a>Controle deslizante do xamarin. Forms
 
@@ -39,7 +39,7 @@ O `Slider` impõe a `Value` propriedade para que ele fique entre `Minimum` e `Ma
 
 O [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) objeto que acompanha o `ValueChanged` evento tem duas propriedades, ambos do tipo `double`: [ `OldValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) e [ `NewValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). No momento do evento é acionado, o valor de `NewValue` é igual a `Value` propriedade do `Slider` objeto.
 
-`Slider` também define `DragStarted` e `DragCompleted` eventos, que são acionados no início e no final da ação de arrastar. Ao contrário o [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) evento, o `DragStarted` e `DragCompleted` os eventos são disparados somente por meio de manipulação de usuário do `Slider`. Quando o `DragStarted` evento é acionado, o `DragStartedCommand`, do tipo `ICommand`, é executado. Da mesma forma, quando o `DragCompleted` evento é acionado, o `DragCompletedCommand`, do tipo `ICommand`, é executado.
+`Slider`também define `DragStarted` e `DragCompleted` eventos, que são acionados no início e no final da ação de arrastar. Ao contrário [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) do evento, `DragStarted` os `DragCompleted` eventos e `Slider`são disparados apenas por meio da manipulação de usuário do. Quando o `DragStarted` evento é acionado `DragStartedCommand`, o, `ICommand`do tipo, é executado. Da mesma forma, `DragCompleted` quando o evento é `DragCompletedCommand`acionado, `ICommand`o, do tipo, é executado.
 
 > [!WARNING]
 > Não use opções de layout horizontal irrestrita de `Center`, `Start`, ou `End` com `Slider`. No Android e UWP, o `Slider` recolhe a uma barra de comprimento zero e no iOS, a barra é muito curto. Mantenha o padrão `HorizontalOptions` configuração do `Fill`e não use uma largura de `Auto` ao colocar `Slider` em um `Grid` layout.
@@ -205,7 +205,7 @@ O **associações básicas do controle deslizante** página mostra como escrever
 </ContentPage>
 ```
 
-O `Rotation` propriedade do primeiro `Label` está associado ao `Value` propriedade do `Slider`, como é o `Text` propriedade do segundo `Label` com um `StringFormat` especificação. O **associações básicas do controle deslizante** funções da página um pouco diferente das duas páginas anteriores: Quando a página aparece pela primeira vez, o segundo `Label` exibe a cadeia de caracteres de texto com o valor. Esse é um benefício do uso de associação de dados. Para exibir texto sem a associação de dados, você precisa inicializar especificamente a `Text` propriedade do `Label` ou simular um acionamento do `ValueChanged` evento chamando o manipulador de eventos do construtor da classe.
+O `Rotation` propriedade do primeiro `Label` está associado ao `Value` propriedade do `Slider`, como é o `Text` propriedade do segundo `Label` com um `StringFormat` especificação. O **controle deslizante básico vincula** funções de página um pouco diferente das duas páginas anteriores: Quando a página é exibida pela primeira vez `Label` , a segunda exibe a cadeia de caracteres de texto com o valor. Esse é um benefício do uso de associação de dados. Para exibir texto sem a associação de dados, você precisa inicializar especificamente a `Text` propriedade do `Label` ou simular um acionamento do `ValueChanged` evento chamando o manipulador de eventos do construtor da classe.
 
 <a name="precautions" />
 
@@ -289,11 +289,11 @@ As capturas de tela mostradas anteriormente exibem o valor da `Slider` com um n�
 
 ### <a name="the-android-implementation"></a>A implementação do Android
 
-A implementação de Android da `Slider` se baseia no Android [ `SeekBar` ](https://developer.xamarin.com/api/type/Android.Widget.SeekBar/) e sempre define o [ `Max` ](https://developer.xamarin.com/api/property/Android.Widget.ProgressBar.Max/) propriedade a 1000. Isso significa que o `Slider` no Android tem apenas que 1.001 valores discretos. Se você definir a `Slider` para ter um `Minimum` igual a 0 e um `Maximum` de 5000, em seguida, como o `Slider` seja manipulado, o `Value` propriedade tem valores de 0, 5, 10, 15 e assim por diante.
+A implementação de Android da `Slider` se baseia no Android [ `SeekBar` ](xref:Android.Widget.SeekBar) e sempre define o [ `Max` ](xref:Android.Widget.ProgressBar.Max) propriedade a 1000. Isso significa que o `Slider` no Android tem apenas que 1.001 valores discretos. Se você definir a `Slider` para ter um `Minimum` igual a 0 e um `Maximum` de 5000, em seguida, como o `Slider` seja manipulado, o `Value` propriedade tem valores de 0, 5, 10, 15 e assim por diante.
 
 ### <a name="the-uwp-implementation"></a>A implementação de UWP
 
-A implementação UWP `Slider` baseia-se na UWP [ `Slider` ](/uwp/api/windows.ui.xaml.controls.slider) controle. O `StepFrequency` propriedade da UWP `Slider` é definido como a diferença entre o `Maximum` e `Minimum` propriedades dividido por 10, mas não é maior que 1.
+A implementação UWP `Slider` baseia-se na UWP [ `Slider` ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) controle. O `StepFrequency` propriedade da UWP `Slider` é definido como a diferença entre o `Maximum` e `Minimum` propriedades dividido por 10, mas não é maior que 1.
 
 Por exemplo, para o intervalo padrão de 0 a 1, o `StepFrequency` estiver definida como 0,1. Como o `Slider` seja manipulado, o `Value` propriedade é restrita a 0, 0.1, 0.2, 0.3, 0,4, 0,5, 0,6, 0,7, 0,8, 0,9 e 1.0. (Isso fica evidente na última página do [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemplo.) Quando a diferença entre o `Maximum` e `Minimum` propriedades é 10 ou superior, em seguida, `StepFrequency` é definido como 1 e o `Value` propriedade tem valores integrais.
 

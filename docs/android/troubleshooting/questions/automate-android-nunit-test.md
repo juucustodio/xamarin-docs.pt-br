@@ -7,28 +7,28 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 0837deccdb535c178e8b00b052efeb7c9bd49679
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 94a0bddcb3a9a1e7236bed4b4c95fc38e1f9f0dd
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864124"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510432"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Como automatizar um projeto de Teste NUnit do Android?
 
 > [!NOTE]
-> Este guia explica como automatizar um projeto de teste do NUnit do Android, não em um projeto xamarin. uitest. Xamarin. uitest guias podem ser encontrados [aqui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+> Este guia explica como automatizar um projeto de teste do Android NUnit, não um projeto Xamarin. UITest. Os guias do Xamarin. UITest podem ser encontrados [aqui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
 
-Quando você cria um **aplicativo de teste de unidade (Android)** projeto no Visual Studio (ou **teste de unidade Android** projeto no Visual Studio para Mac), este será de projeto não automaticamente executar os testes por padrão.
-Para executar testes NUnit em um dispositivo de destino, você pode criar uma [Android.App.Instrumentation](https://developer.xamarin.com/api/type/Android.App.Instrumentation/) subclasse é iniciada usando o comando a seguir: 
+Quando você cria um projeto de **aplicativo de teste de unidade (Android)** no Visual Studio (ou no projeto de **teste de unidade do Android** no Visual Studio para Mac), este projeto não executa automaticamente os testes por padrão.
+Para executar testes NUnit em um dispositivo de destino, você pode criar uma subclasse de [Android. app. Instrumentation](xref:Android.App.Instrumentation) que é iniciada usando o seguinte comando: 
 
 ```shell
 adb shell am instrument 
 ```
 
-As etapas a seguir explicam a esse processo:
+As etapas a seguir explicam esse processo:
 
-1.  Criar um novo arquivo chamado **TestInstrumentation.cs**: 
+1.  Crie um novo arquivo chamado **TestInstrumentation.cs**: 
 
     ```cs 
     using System;
@@ -54,11 +54,11 @@ As etapas a seguir explicam a esse processo:
         }
     }
     ```
-    Nesse arquivo, [Xamarin.Android.NUnitLite.TestSuiteInstrumentation](https://developer.xamarin.com/api/type/Xamarin.Android.NUnitLite.TestSuiteInstrumentation/) (da **Xamarin.Android.NUnitLite.dll**) é uma subclasse para criar `TestInstrumentation`.
+    Neste arquivo, `Xamarin.Android.NUnitLite.TestSuiteInstrumentation` (de **Xamarin. Android. novo nunitlite. dll**) é subclasse para Create. `TestInstrumentation`
 
-2.  Implemente a [TestInstrumentation](https://developer.xamarin.com/api/constructor/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.TestSuiteInstrumentation/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) construtor e o [AddTests](https://developer.xamarin.com/api/member/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.AddTests%28%29) método. O `AddTests` controles de método, na verdade, os quais testes são executados.
+2.  Implemente `TestInstrumentation` o construtor e `AddTests` o método. O `AddTests` método controla quais testes são realmente executados.
 
-3.  Modificar a `.csproj` arquivo a ser adicionado **TestInstrumentation.cs**. Por exemplo:
+3.  Modifique o `.csproj` arquivo para adicionar **TestInstrumentation.cs**. Por exemplo:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -74,25 +74,25 @@ As etapas a seguir explicam a esse processo:
     </Project>
     ```
 
-4.  Use o seguinte comando para executar os testes de unidade. Substitua `PACKAGE_NAME` com o nome do pacote do aplicativo (o nome do pacote pode ser encontrado no aplicativo do `/manifest/@package` atributo localizado na **androidmanifest. XML**):
+4.  Use o comando a seguir para executar os testes de unidade. Substitua `PACKAGE_NAME` pelo nome do pacote do aplicativo (o nome do pacote pode ser encontrado no atributo do `/manifest/@package` aplicativo localizado em **AndroidManifest. xml**):
 
     ```shell
     adb shell am instrument -w PACKAGE_NAME/app.tests.TestInstrumentation
     ```
 
-5.  Opcionalmente, você pode modificar os `.csproj` arquivo para adicionar o `RunTests` destino do MSBuild. Isso torna possível invocar os testes de unidade com um comando semelhante ao seguinte:
+5.  Opcionalmente, você pode modificar o `.csproj` arquivo para adicionar o `RunTests` destino do MSBuild. Isso possibilita invocar os testes de unidade com um comando semelhante ao seguinte:
 
     ```shell
     msbuild /t:RunTests Project.csproj
     ```
-    (Observe que não é necessário usar esse novo destino; o anterior `adb` comando pode ser usado em vez de `msbuild`.)
+    (Observe que o uso desse novo destino não é necessário; o `adb` comando anterior pode ser usado em `msbuild`vez de).
 
-Para obter mais informações sobre como usar o `adb shell am instrument` comando para executar testes de unidade, consulte o desenvolvedor do Android [executando testes com o ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) tópico.
+Para obter mais informações sobre como `adb shell am instrument` usar o comando para executar testes de unidade, consulte o tópico Android Developer [running tests with ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .
 
 
 > [!NOTE]
-> Com o [xamarin. Android 5.0](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) release, os nomes de pacote padrão para Callable Wrappers do Android se baseará o MD5SUM do nome qualificado pelo assembly do tipo que está sendo exportado. Isso permite que o mesmo nome totalmente qualificado para ser fornecidos por meio de dois assemblies diferentes e não receber um erro de empacotamento. Portanto, certifique-se de que você use o `Name` propriedade no `Instrumentation` atributo para gerar um nome de classe/ACW legível.
+> Com a versão [Xamarin. Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) , os nomes de pacote padrão para wrappers que podem ser chamados pelo Android serão baseados no md5sum do nome qualificado pelo assembly do tipo que está sendo exportado. Isso permite que o mesmo nome totalmente qualificado seja fornecido de dois assemblies diferentes e não obtenha um erro de empacotamento. Portanto, certifique-se de usar `Name` a propriedade `Instrumentation` no atributo para gerar um nome legível de ACW/classe.
 
-_O nome ACW deve ser usado na `adb` comando acima_.
-Refatoração/renomeação o C# classe, portanto, será necessário modificar o `RunTests` comando para usar o nome correto do ACW.
+_O nome do ACW deve ser usado no `adb` comando acima_.
+A renomeação/refatoração da C# classe exigirá, `RunTests` portanto, a modificação do comando para usar o nome de ACW correto.
 

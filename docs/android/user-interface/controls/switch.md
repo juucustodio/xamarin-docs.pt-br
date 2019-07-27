@@ -1,29 +1,28 @@
 ---
-title: Alternar
-description: Como usar o widget de comutador em um aplicativo xamarin. Android
+title: Opção Xamarin. Android
+description: Como usar o widget switch em um aplicativo Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: ef400aaa31992b577762ad695418b865882e2e2d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7ff10433ffe11965ccfb8c9a46a785b8cb0304e6
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075730"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510179"
 ---
-# <a name="switch"></a>Alternar
+# <a name="xamarinandroid-switch"></a>Opção Xamarin. Android
 
-O `Switch` widget (mostrada abaixo) permite que o usuário alterne entre dois estados, como em ou desativado. O `Switch` valor padrão é OFF. Em seus estados ON e OFF, o widget é mostrado abaixo:
+O `Switch` widget (mostrado abaixo) permite que um usuário alterne entre dois Estados, como ativado ou desativado. O `Switch` valor padrão é off. O widget é mostrado abaixo nos Estados de ligar e desligar:
 
-[![Capturas de tela de um widget de comutador e ativar Estados](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
+[![Capturas de tela de um widget de comutador nos Estados desligado e em](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
 
+## <a name="creating-a-switch"></a>Criando uma opção
 
-## <a name="creating-a-switch"></a>Criar um comutador
-
-Para criar um comutador, simplesmente declare um `Switch` elemento no XML da seguinte maneira:
+Para criar uma opção, basta declarar um `Switch` elemento em XML da seguinte maneira:
 
 ```xml
 <Switch android:layout_width="wrap_content"
@@ -32,12 +31,11 @@ Para criar um comutador, simplesmente declare um `Switch` elemento no XML da seg
 
 Isso cria um comutador básico, conforme mostrado abaixo:
 
-[![Captura de tela do aplicativo de demonstração, exibindo um comutador no estado desligado](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
+[![Captura de tela do aplicativo de demonstração exibindo um interruptor no estado desligado](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
+## <a name="changing-default-values"></a>Alterando valores padrão
 
-## <a name="changing-default-values"></a>Alterando os valores padrão
-
-O texto que o controle exibe para o ON e OFF estados e o valor padrão são configuráveis. Por exemplo, para tornar a opção ON por padrão e Sim/não de leitura em vez de ligar/desligar, podemos definir o `checked`, `textOn`, e `textOff` atributos no XML a seguir.
+O texto que o controle exibe para os Estados ligado e desligado e o valor padrão é configurável. Por exemplo, para tornar a opção padrão para ativado e ler não/sim em vez de off/on, podemos definir os `checked`atributos `textOn`, e `textOff` no XML a seguir.
 
 ```xml
 <Switch android:layout_width="wrap_content"
@@ -49,9 +47,9 @@ O texto que o controle exibe para o ON e OFF estados e o valor padrão são conf
 
 
 
-## <a name="providing-a-title"></a>Fornecer um título
+## <a name="providing-a-title"></a>Fornecendo um título
 
-O `Switch` widget também dá suporte a incluindo um rótulo de texto, definindo o `text` atributo da seguinte maneira:
+O `Switch` widget também dá suporte à inclusão de um rótulo de `text` texto definindo o atributo da seguinte maneira:
 
 ```xml
 <Switch android:text="Is Xamarin.Android great?"
@@ -62,12 +60,12 @@ O `Switch` widget também dá suporte a incluindo um rótulo de texto, definindo
         android:textOff="NO" />
 ```
 
-Essa marcação produz a seguinte captura de tela em tempo de execução:
+Essa marcação produz a seguinte captura de tela no tempo de execução:
 
-[![Captura de tela do aplicativo de demonstração com o texto horizontalmente antecede o widget de Switch](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
+[![Captura de tela do aplicativo de demonstração com texto que precede horizontalmente o widget de alternância](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
 
-Quando um `Switch`do valor for alterado, ele gera um `CheckedChange` eventos.
-Por exemplo, no código a seguir, podemos capturar esse evento e apresentar uma `Toast` widget com uma mensagem com base no `isChecked` valor de `Switch`, que é passado para o manipulador de eventos como parte do `CompoundButton.CheckedChangeEventArg` argumento.
+Quando um `Switch`valor é alterado, ele gera um `CheckedChange` evento.
+Por exemplo, no código a `Toast` seguir, capturamos esse evento e apresentamos um widget com uma mensagem baseada no `isChecked` valor `Switch`de, que é passado `CompoundButton.CheckedChangeEventArg` para o manipulador de eventos como parte do argumento.
 
 ```csharp
 Switch s = FindViewById<Switch> (Resource.Id.monitored_switch);
@@ -82,5 +80,5 @@ s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs
 
 ## <a name="related-links"></a>Links relacionados
 
-- [SwitchDemo (amostra)](https://developer.xamarin.com/samples/monodroid/SwitchDemo/)
-- [Tutorial do guia Layout](~/android/user-interface/layouts/tab-layout/index.md)
+- [SwitchDemo (exemplo)](https://developer.xamarin.com/samples/monodroid/SwitchDemo/)
+- [Tutorial de layout de guia](~/android/user-interface/layouts/tab-layout/index.md)

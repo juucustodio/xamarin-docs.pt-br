@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: a1642c4cbb790cf09d2a31e629408afc61d5b7ab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e3f7d788e71718f4ca1336b7906cf3d63bf07f32
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61011362"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509205"
 ---
 # <a name="writing-responsive-applications"></a>Escrevendo aplicativos responsivos
 
-Uma das chaves para manter uma GUI responsiva é fazer tarefas de longa execução em um thread em segundo plano para que a interface gráfica do usuário não seja bloqueada. Digamos que queremos calcular um valor a ser exibido para o usuário, mas esse valor leva de 5 segundos para calcular:
+Uma das chaves para manter uma GUI responsiva é realizar tarefas de longa execução em um thread em segundo plano para que a GUI não seja bloqueada. Digamos que desejamos calcular um valor a ser exibido para o usuário, mas esse valor leva 5 segundos para calcular:
 
 ```csharp
 public class ThreadDemo : Activity
@@ -43,7 +43,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-Isso funcionará, mas o aplicativo será "congelar" por 5 segundos enquanto o valor é calculado. Durante esse tempo, o aplicativo não responder a qualquer interação do usuário. Para contornar isso, queremos fazer nossos cálculos em um thread em segundo plano:
+Isso funcionará, mas o aplicativo será "interrompido" por 5 segundos enquanto o valor é calculado. Durante esse tempo, o aplicativo não responderá a nenhuma interação do usuário. Para contornar isso, queremos fazer nossos cálculos em um thread em segundo plano:
 
 ```csharp
 public class ThreadDemo : Activity
@@ -71,7 +71,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-Agora, podemos calcular o valor em um thread em segundo plano para que nossa interface gráfica do usuário permaneça responsivo durante o cálculo. No entanto, quando o cálculo é concluído, nosso aplicativo falha, deixe esse no log:
+Agora, calculamos o valor em um thread em segundo plano para que nossa GUI permaneça responsiva durante o cálculo. No entanto, quando o cálculo é feito, nosso aplicativo falha, deixando isso no log:
 
 ```shell
 E/mono    (11207): EXCEPTION handling: Android.Util.AndroidRuntimeException: Exception of type 'Android.Util.AndroidRuntimeException' was thrown.
@@ -82,7 +82,7 @@ E/mono    (11207):   at Android.Widget.TextView.set_Text (IEnumerable`1 value)
 E/mono    (11207):   at MonoDroidDebugging.Activity1.SlowMethod ()
 ```
 
-Isso ocorre porque você deve atualizar a GUI do thread de GUI. Nosso código atualiza a GUI do thread do ThreadPool, causando a falha no aplicativo. Precisamos calcular nosso valor no thread em segundo plano, mas, em seguida, fazer nossa atualização no thread de GUI, que é tratado com [Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
+Isso ocorre porque você deve atualizar a GUI do thread de GUI. Nosso código atualiza a GUI do thread ThreadPool, fazendo com que o aplicativo falhe. Precisamos calcular nosso valor no thread em segundo plano, mas, em seguida, fazer nossa atualização no thread de GUI, que é manipulado com [Activity. RunOnUIThread](xref:Android.App.Activity.RunOnUiThread*):
 
 ```csharp
 public class ThreadDemo : Activity
@@ -110,6 +110,6 @@ public class ThreadDemo : Activity
 }
 ```
 
-Esse código funciona conforme o esperado. Essa interface gráfica do usuário permanece responsiva e é atualizada corretamente depois que o cálculo é comple.
+Esse código funciona conforme o esperado. Essa GUI permanece responsiva e é atualizada corretamente quando o cálculo é comple.
 
-Observe que essa técnica não é usada apenas para calcular um valor de caro. Ele pode ser usado para qualquer tarefa de longa execução que pode ser feita em segundo plano, como uma chamada de serviço web ou baixar dados de internet.
+Observe que essa técnica não é usada apenas para calcular um valor caro. Ele pode ser usado para qualquer tarefa de execução longa que pode ser feita em segundo plano, como uma chamada de serviço Web ou o download de dados da Internet.

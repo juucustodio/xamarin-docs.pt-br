@@ -1,25 +1,25 @@
 ---
-title: Criando um CryptoObject
+title: Criando um Cryptoobject
 ms.prod: xamarin
 ms.assetid: 4D159B80-FFF4-4136-A7F0-F8A5C6B86838
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1305a8a1f39d34b5e91e478a769750911afb2b3e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8e5d4cf50874a0976c1dd10e35e7bd84518f14c4
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953182"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511148"
 ---
-# <a name="creating-a-cryptoobject"></a>Criando um CryptoObject
+# <a name="creating-a-cryptoobject"></a>Criando um Cryptoobject
 
-A integridade dos resultados da autenticação por impressão digital é importante para um aplicativo &ndash; é como o aplicativo sabe a identidade do usuário. É teoricamente possível que o malware de terceiros interceptar e adulterar os resultados retornados pelo scanner de impressão digital. Esta seção abordará uma técnica para preservar a validade dos resultados de impressão digital. 
+A integridade dos resultados da autenticação de impressão digital é importante para &ndash; um aplicativo, é assim que o aplicativo sabe a identidade do usuário. Teoricamente, é possível que o malware de terceiros intercepte e viole os resultados retornados pelo scanner de impressão digital. Esta seção discutirá uma técnica para preservar a validade dos resultados da impressão digital. 
 
-O `FingerprintManager.CryptoObject` é um wrapper em torno de APIs de criptografia do Java e é usado pelo `FingerprintManager` para proteger a integridade da solicitação de autenticação. Normalmente, um `Javax.Crypto.Cipher` objeto é o mecanismo para criptografar os resultados de scanner de impressão digital. O `Cipher` próprio objeto usará uma chave que é criada pelo aplicativo usando as APIs de armazenamento de chaves Android.
+O `FingerprintManager.CryptoObject` é um wrapper em volta das APIs de Java Cryptography e é usado `FingerprintManager` pelo para proteger a integridade da solicitação de autenticação. Normalmente, um `Javax.Crypto.Cipher` objeto é o mecanismo para criptografar os resultados do scanner de impressão digital. O `Cipher` objeto em si usará uma chave que é criada pelo aplicativo usando as APIs do repositório de chaves do Android.
 
-Para entender como todas essas classes funcionam juntos, vamos primeiro examinar o seguinte código que demonstra como criar um `CryptoObject`e, em seguida, explicarei em mais detalhes:
+Para entender como essas classes funcionam juntas, vamos primeiro examinar o código a seguir, que demonstra como criar um `CryptoObject`e, em seguida, explicar com mais detalhes:
 
 ```csharp
 public class CryptoObjectHelper
@@ -99,40 +99,40 @@ public class CryptoObjectHelper
 }
 ```
 
-O código de exemplo cria um novo `Cipher` para cada `CryptoObject`, usando uma chave que foi criada pelo aplicativo. A chave é identificada pela `KEY_NAME` variável que foi definida no início do `CryptoObjectHelper` classe. O método `GetKey` irá tentar e recuperar a chave usando as APIs do Android Keystore. Se a chave não existir, em seguida, o método `CreateKey` criará uma nova chave para o aplicativo.
+O código de exemplo criará um `Cipher` novo para `CryptoObject`cada, usando uma chave que foi criada pelo aplicativo. A chave é identificada pela `KEY_NAME` variável que foi definida no início `CryptoObjectHelper` da classe. O método `GetKey` tentará recuperar a chave usando as APIs do repositório de chaves do Android. Se a chave não existir, o método `CreateKey` criará uma nova chave para o aplicativo.
 
-A criptografia é instanciada com uma chamada para `Cipher.GetInstance`, sempre levando um _transformação_ (um valor de cadeia de caracteres que informa a codificação como criptografar e descriptografar dados). A chamada para `Cipher.Init` concluirá a inicialização da criptografia, fornecendo uma chave do aplicativo. 
+A codificação é instanciada com uma chamada para `Cipher.GetInstance`, usando uma _transformação_ (um valor de cadeia de caracteres que informa ao Cipher como criptografar e descriptografar dados). A chamada para `Cipher.Init` concluirá a inicialização da codificação fornecendo uma chave do aplicativo. 
 
 É importante perceber que há algumas situações em que o Android pode invalidar a chave: 
 
-* Uma nova impressão tenha sido registrada com o dispositivo.
-* Não há nenhum impressões digitais registradas com o dispositivo.
+* Uma nova impressão digital foi registrada com o dispositivo.
+* Não há impressões digitais registradas no dispositivo.
 * O usuário desabilitou o bloqueio de tela.
-* O usuário alterou o bloqueio de tela (o tipo do screenlock ou o PIN/padrão usado).
+* O usuário alterou o bloqueio de tela (o tipo de screenlock ou o PIN/padrão usado).
 
-Quando isso acontece, `Cipher.Init` lançará uma [ `KeyPermanentlyInvalidatedException` ](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html). O código de exemplo acima interceptar essa exceção, exclua a chave e, em seguida, crie um novo.
+Quando isso acontecer, `Cipher.Init` o gerará [`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)um. O código de exemplo acima interceptará essa exceção, excluirá a chave e, em seguida, criará uma nova.
 
-A próxima seção discute como criar a chave e armazená-lo no dispositivo.
+A próxima seção explicará como criar a chave e armazená-la no dispositivo.
 
 ## <a name="creating-a-secret-key"></a>Criando uma chave secreta
 
-O `CryptoObjectHelper` classe usa o Android [ `KeyGenerator` ](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) para criar uma chave e armazená-lo no dispositivo. O `KeyGenerator` classe pode criar a chave, mas precisa alguns metadados sobre o tipo de chave a ser criada. Essas informações são fornecidas por uma instância de [ `KeyGenParameterSpec` ](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) classe. 
+A `CryptoObjectHelper` classe usa o Android [`KeyGenerator`](xref:Javax.Crypto.KeyGenerator) para criar uma chave e armazená-la no dispositivo. A `KeyGenerator` classe pode criar a chave, mas precisa de alguns metadados sobre o tipo de chave a ser criado. Essas informações são fornecidas por uma instância da [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) classe. 
 
-Um `KeyGenerator` é instanciado usando o `GetInstance` método de fábrica. O código de exemplo usa o [ _Advanced Encryption Standard_ ](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) como o algoritmo de criptografia. AES será dividir os dados em blocos de tamanho fixo e criptografar cada um desses blocos.
+Um `KeyGenerator` é instanciado usando o `GetInstance` método de fábrica. O código de exemplo usa o [_criptografia AES_](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) como o algoritmo de criptografia. O AES interromperá os dados em blocos de um tamanho fixo e criptografará cada um desses blocos.
 
-Em seguida, uma `KeyGenParameterSpec` é criado usando o `KeyGenParameterSpec.Builder`. O `KeyGenParameterSpec.Builder` envolve as seguintes informações sobre a chave que deve ser criado:
+Em seguida, `KeyGenParameterSpec` um é criado usando `KeyGenParameterSpec.Builder`o. O `KeyGenParameterSpec.Builder` encapsula as seguintes informações sobre a chave a ser criada:
 
 * O nome da chave.
 * A chave deve ser válida para criptografia e descriptografia.
-* No código de exemplo a `BLOCK_MODE` é definido como _Cipher Block Chaining_ (`KeyProperties.BlockModeCbc`), que significa que cada bloco recebe XOR com o bloco anterior (Criando dependências entre cada bloco). 
-* O `CryptoObjectHelper` usa [ _pública Key Cryptography Standard #7_ ](https://tools.ietf.org/html/rfc2315) (_PKCS7_) para gerar os bytes que preencherá os blocos para garantir que eles sejam todos do mesmo tamanho .
-* `SetUserAuthenticationRequired(true)` significa que autenticação de usuário é necessária antes que a chave pode ser usada.
+* No código de exemplo, `BLOCK_MODE` o é definido como _encadeamento de blocos_ de`KeyProperties.BlockModeCbc`codificação (), o que significa que cada bloco é XORed com o bloco anterior (Criando dependências entre cada bloco). 
+* O `CryptoObjectHelper` usa a lista de [_criptografia de chave pública #7_](https://tools.ietf.org/html/rfc2315) (_PKCS7_) para gerar os bytes que irão preencher os blocos para garantir que eles sejam do mesmo tamanho.
+* `SetUserAuthenticationRequired(true)`significa que a autenticação do usuário é necessária antes que a chave possa ser usada.
 
-Uma vez a `KeyGenParameterSpec` é criado, ele é usado para inicializar o `KeyGenerator`, que gerará uma chave e armazene-o com segurança no dispositivo. 
+Depois que `KeyGenParameterSpec` o é criado, ele é usado para inicializar `KeyGenerator`o, que irá gerar uma chave e armazená-la com segurança no dispositivo. 
 
 ## <a name="using-the-cryptoobjecthelper"></a>Usando o CryptoObjectHelper
 
-Agora que o código de exemplo tem encapsulado grande parte da lógica para a criação de um `CryptoWrapper` para o `CryptoObjectHelper` classe, vamos rever o código desde o início deste guia e usar o `CryptoObjectHelper` para criar a codificação e iniciar um scanner de impressão digital: 
+Agora que o código de exemplo encapsulava grande parte da lógica para criar um `CryptoWrapper` `CryptoObjectHelper` na classe, Vamos revisitar o código desde o início deste guia e usar o `CryptoObjectHelper` para criar a codificação e iniciar um scanner de impressão digital: 
 
 ```csharp
 protected void FingerPrintAuthenticationExample()
@@ -153,19 +153,19 @@ protected void FingerPrintAuthenticationExample()
 }
 ```
 
-Agora que vimos como criar uma `CryptoObject`, permite a movimentação ver como o `FingerprintManager.AuthenticationCallbacks` são usados para transferir os resultados do serviço de scanner de impressão digital para um aplicativo do Android.
+Agora que vimos como criar um `CryptoObject`, vamos continuar a ver como os `FingerprintManager.AuthenticationCallbacks` são usados para transferir os resultados do serviço de scanner de impressão digital para um aplicativo Android.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Codificação](https://developer.xamarin.com/api/type/Javax.Crypto.Cipher/)
+- [Codificação](xref:Javax.Crypto.Cipher)
 - [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
 - [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
-- [KeyGenerator](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/)
+- [KeyGenerator](xref:Javax.Crypto.KeyGenerator)
 - [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
 - [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
 - [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
 - [KeyProperties](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
 - [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-- [RFC 2315 - PCKS #7](https://tools.ietf.org/html/rfc2315)
+- [RFC 2315-PCKS #7](https://tools.ietf.org/html/rfc2315)

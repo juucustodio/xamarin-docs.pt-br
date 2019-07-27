@@ -1,6 +1,6 @@
 ---
 title: Recursos do Oreo
-description: Como começar a usar xamarin. Android para desenvolver aplicativos para a versão mais recente do Android.
+description: Como começar a usar o Xamarin. Android para desenvolver aplicativos para a versão mais recente do Android.
 ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
@@ -8,230 +8,230 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 24a9fa0e954ddba1451ba8bf98216550d7d70b51
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 29f7725e41e5163b8f990c827983fbd79bdd1b1e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61196737"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510489"
 ---
 # <a name="oreo-features"></a>Recursos do Oreo
 
-_Como começar a usar xamarin. Android para desenvolver aplicativos para a versão mais recente do Android._
+_Como começar a usar o Xamarin. Android para desenvolver aplicativos para a versão mais recente do Android._
 
-[O Android 8.0 Oreo](https://developer.android.com/index.html) é a versão mais recente do Android disponível no Google. O Android Oreo oferece muitos recursos novos de interesse para desenvolvedores do xamarin. Android. Esses recursos incluem os canais de notificação, notificações de notificação, fontes personalizadas em XML, que pode ser baixadas fontes, preenchimento automático e picture in picture (PIP). O Android Oreo inclui novas APIs para esses novos recursos e essas APIs estão disponíveis para aplicativos xamarin. Android quando você usa o xamarin. Android 8.0 e posterior.
+[Android 8,0 Oreo](https://developer.android.com/index.html) é a versão mais recente do Android disponível no Google. O Android Oreo oferece muitos recursos novos de interesse para desenvolvedores do Xamarin. Android. Esses recursos incluem canais de notificação, notificações de notificação, fontes personalizadas em XML, fontes para download, preenchimento automático e imagem em imagem (PIP). O Android Oreo inclui novas APIs para esses novos recursos, e essas APIs estão disponíveis para aplicativos Xamarin. Android quando você usa o Xamarin. Android 8,0 e posterior.
 
-[![Imagem do herói do Android Oreo](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
+[![Imagem do herói Oreo do Android](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
-Este artigo é estruturado para ajudá-lo a começar a desenvolver aplicativos xamarin. Android para o Android 8.0 Oreo. Ele explica como instalar as atualizações necessárias, configure o SDK e criar um (dispositivo ou emulador) para teste. Ele também fornece uma descrição dos novos recursos do Android 8.0 Oreo, com links para aplicativos de exemplo que ilustram como usar os recursos do Android Oreo em aplicativos xamarin. Android.
+Este artigo foi estruturado para ajudá-lo a começar a desenvolver aplicativos Xamarin. Android para Android 8,0 Oreo. Ele explica como instalar as atualizações necessárias, configurar o SDK e criar um emulador (ou dispositivo) para teste. Ele também fornece uma descrição dos novos recursos no Android 8,0 Oreo, com links para aplicativos de exemplo que ilustram como usar os recursos do Oreo do Android em aplicativos Xamarin. Android.
 
 
 ## <a name="requirements"></a>Requisitos
 
-A seguir é necessário para usar os recursos do Android Oreo em aplicativos baseados em Xamarin:
+O seguinte é necessário para usar os recursos do Android Oreo em aplicativos baseados no Xamarin:
 
--   **Visual Studio** &ndash; se você estiver usando o Windows, versão 15.5 ou posterior do Visual Studio é necessária.  Se você estiver usando um Mac, o Visual Studio para Mac versão 7.2.0 é necessário.
+-   **Visual Studio** &ndash; Se você estiver usando o Windows, a versão 15,5 ou posterior do Visual Studio será necessária.  Se você estiver usando um Mac, Visual Studio para Mac versão 7.2.0 será necessária.
 
--   **Xamarin. Android** &ndash; xamarin. Android 8.0 ou posterior deve ser instalado e configurado com o Visual Studio.
+-   **Xamarin. Android** &ndash; xamarin. Android 8,0 ou posterior deve ser instalado e configurado com o Visual Studio.
 
--   **SDK do Android** &ndash; SDK do Android 8.0 (API 26) ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
+-   **SDK do Android** &ndash; SDK do Android 8,0 (API 26) ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
 
 
 
 ## <a name="getting-started"></a>Guia de Introdução
 
-Para começar a usar o Android Oreo com xamarin. Android, você deve baixar e instalar os pacotes do SDK e ferramentas mais recentes antes de criar um projeto do Android Oreo:
+Para começar a usar o Android Oreo com o Xamarin. Android, você deve baixar e instalar as ferramentas e os pacotes de SDK mais recentes antes de criar um projeto Oreo do Android:
 
 1. Atualize para a versão mais recente do Visual Studio.
 
-2. Instalar o **8.0.0 Android (API 26)** ou posterior pacotes e ferramentas por meio do Gerenciador de SDK.
+2. Instale o **Android 8.0.0 (API 26)** ou pacotes e ferramentas posteriores por meio do Gerenciador do SDK.
 
-3. Crie um novo projeto do xamarin. Android que tem como alvo o Android Oreo (API 26).
+3. Crie um novo projeto Xamarin. Android que tenha como alvo o Android Oreo (API 26).
 
 4. Configure um emulador ou dispositivo para testar aplicativos Android Oreo.
 
-Cada uma dessas etapas é explicada nas seções a seguir:
+Cada uma dessas etapas é explicada nas seguintes seções:
 
-### <a name="update-visual-studio-and-xamarinandroid"></a>Xamarin. Android e atualizar o Visual Studio
+### <a name="update-visual-studio-and-xamarinandroid"></a>Atualizar o Visual Studio e o Xamarin. Android
 
-Para adicionar suporte do Android Oreo para o Visual Studio, faça o seguinte:
+Para adicionar o suporte do Android Oreo ao Visual Studio, faça o seguinte:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-- Para o Visual Studio de 2019, use o [Gerenciador de SDK](~/android/get-started/installation/android-sdk.md) para instalar o nível de API 26.0 ou posterior.
+- Para o Visual Studio 2019, use o [Gerenciador do SDK](~/android/get-started/installation/android-sdk.md) para instalar o nível de API 26,0 ou posterior.
 
 - Se você estiver usando o Visual Studio 2017:
 
-    1. Atualização para o Visual Studio 2017 versão 15.7 ou posterior (consulte [atualizar o Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
+    1. Atualize para o Visual Studio 2017 versão 15,7 ou posterior (consulte [atualizar o visual studio 2017](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
 
-    2. Use o [Gerenciador de SDK](~/android/get-started/installation/android-sdk.md) para instalar o nível de API 26.0 ou posterior.
+    2. Use o [Gerenciador do SDK](~/android/get-started/installation/android-sdk.md) para instalar o nível de API 26,0 ou posterior.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-- Atualizar para a versão estável mais recente do Visual Studio para Mac, conforme explicado em [atualização do Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/update).
+- Atualize para a versão estável mais recente do Visual Studio para Mac, conforme explicado em [atualizando Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/update).
 
 -----
 
-Para obter mais informações sobre o suporte de Xamarin para Android Oreo, consulte o [notas de versão do xamarin. Android 8.0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
+Para obter mais informações sobre o suporte do Xamarin para Android Oreo, consulte [notas de versão do xamarin. Android 8,0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
 
 
 
 ### <a name="install-the-android-sdk"></a>Instalar o SDK do Android
 
-Para criar um projeto com o xamarin. Android 8.0, primeiro você deve usar o Gerenciador de SDK do Xamarin Android para instalar a plataforma SDK para **Android 8.0 - Oreo** ou posterior. Você também deve instalar as Android SDK Tools 26.0 ou posterior.
+Para criar um projeto com o Xamarin. Android 8,0, primeiro você deve usar o Xamarin SDK do Android Manager para instalar a plataforma SDK para **Android 8,0-Oreo** ou posterior. Você também deve instalar o Android SDK Tools 26,0 ou posterior.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Inicie o Gerenciador de SDK (no Visual Studio, clique em **Ferramentas > Android > Gerenciador de SDK do Android**).
+1. Inicie o Gerenciador do SDK (no Visual Studio, clique em **ferramentas > Android > o Gerenciador de SDK do Android**).
 
-2. Instalar o **Android 8.0 - Oreo** pacotes. Se você estiver usando o emulador do SDK do Android, certifique-se de incluir a **x86** imagens do sistema que você precisará de:
+2. Instale os pacotes do **Android 8,0-Oreo** . Se você estiver usando o emulador de SDK do Android, certifique-se de incluir as imagens do sistema **x86** que serão necessárias:
 
-    [![Selecionando pacotes do Android 8.0 no Gerenciador de SDK do Android](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
+    [![Selecionando pacotes do Android 8,0 no Gerenciador de SDK do Android](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
 
-3. Instale **Android SDK Tools 26.0.2** ou posterior **Android SDK Platform-Tools 26.0.0** ou posterior, e **Android SDK Build-Tools 26.0.0** (ou posterior):
+3. Instale o **Android SDK Tools 26.0.2** ou posterior, **SDK do Android plataforma-ferramentas 26.0.0** ou posterior e **SDK do Android 26.0.0 de ferramentas de compilação** (ou posterior):
 
-    [![Selecionando o Android SDK Tools 26 no Gerenciador de SDK do Android](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
+    [![Selecionando Android SDK Tools 26 no Gerenciador de SDK do Android](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Inicie o Gerenciador de SDK (no Visual Studio para Mac, clique em **Ferramentas > Gerenciador de SDK**).
+1. Inicie o Gerenciador do SDK (em Visual Studio para Mac, clique em **ferramentas > Gerenciador do SDK**).
 
-2. Instalar o **Android 8.0 - Oreo** pacotes do SDK. Se você estiver usando o emulador do SDK do Android, certifique-se de incluir a **x86** imagens do sistema que você precisará de:
+2. Instale os pacotes do SDK **8,0-Oreo do Android** . Se você estiver usando o emulador de SDK do Android, certifique-se de incluir as imagens do sistema **x86** que serão necessárias:
 
-    [![Selecionando pacotes do Android 8.0 no Gerenciador de SDK](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
+    [![Selecionando pacotes do Android 8,0 no Gerenciador do SDK](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
 
-3. Instale **Android SDK Tools 26.0.2** ou posterior **Android SDK Platform-Tools 26.0.0** ou posterior, e **Android SDK Build-Tools 26.0.0** (ou posterior):
+3. Instale o **Android SDK Tools 26.0.2** ou posterior, **SDK do Android plataforma-ferramentas 26.0.0** ou posterior e **SDK do Android 26.0.0 de ferramentas de compilação** (ou posterior):
 
-    [![Selecionando o Android SDK Tools 26 no Gerenciador de SDK](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
+    [![Selecionando o Android SDK Tools 26 no Gerenciador do SDK](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
 
 -----
 
 
 
-### <a name="start-a-xamarinandroid-project"></a>Iniciar um projeto xamarin. Android
+### <a name="start-a-xamarinandroid-project"></a>Iniciar um projeto Xamarin. Android
 
-Crie um novo projeto do xamarin. Android. Se você for novo no desenvolvimento de Android com Xamarin, consulte [Hello, Android](~/android/get-started/hello-android/index.md) para saber mais sobre como criar projetos do xamarin. Android.
+Crie um novo projeto Xamarin. Android. Se você for novo no desenvolvimento do Android com o Xamarin, consulte [Olá, Android](~/android/get-started/hello-android/index.md) para saber mais sobre como criar projetos do Xamarin. Android.
 
-Quando você cria um projeto do Android, você deve configurar as configurações de versão destino Android 8.0 ou posterior. Por exemplo, para direcionar seu projeto para o Android 8.0, você deve configurar o nível de API do Android de destino do seu projeto para **Android 8.0 (API 26)**. É recomendável que você também pode definir seu nível de estrutura de destino para a API 26 ou posterior. Para obter mais informações sobre como configurar níveis de nível de API do Android, consulte [Noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md).
+Ao criar um projeto do Android, você deve definir as configurações de versão para o Android 8,0 ou posterior de destino. Por exemplo, para direcionar seu projeto para Android 8,0, você deve configurar o nível de API do Android de destino do seu projeto para **android 8,0 (API 26)** . É recomendável que você também defina seu nível de estrutura de destino como API 26 ou posterior. Para saber mais sobre como configurar níveis de nível de API do Android, confira [noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md)
 
 
-### <a name="configure-an-emulator-or-device"></a>Configurar um dispositivo ou emulador
+### <a name="configure-an-emulator-or-device"></a>Configurar um emulador ou dispositivo
 
-Se você tentar iniciar o Gerenciador de AVD baseado em GUI do Google padrão depois de instalar o Android SDK Tools 26.0 de ou posterior, você pode receber o diálogo de erro a seguir, que pede que você use a ferramenta de Gerenciador de AVD de linha de comando **avdmanager** em vez disso :
+Se você tentar iniciar o Gerenciador de AVD baseado em GUI do Google padrão depois de instalar o Android SDK Tools 26,0 ou posterior, você poderá obter a seguinte caixa de diálogo de erro, que instrui você a usar a ferramenta de linha de comando AVD Manager **avdmanager** em vez disso:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Caixa de diálogo de aviso de Gerenciador de emulador do Android](oreo-images/win/03-avd-warning.png)
+![Caixa de diálogo de aviso do Android Emulator Manager](oreo-images/win/03-avd-warning.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![Caixa de diálogo de aviso de Gerenciador de emulador do Android](oreo-images/mac/03-avd-warning.png)
+![Caixa de diálogo de aviso do Android Emulator Manager](oreo-images/mac/03-avd-warning.png)
 
 -----
 
-Esta mensagem é exibida porque o Google não fornece mais um Gerenciador de AVD de GUI que dá suporte à API 26.0 e posterior autônomo. Para o Android 8.0 Oreo, você deve usar o Gerenciador de emulador de Android do Xamarin ou da linha de comando `avdmanager` ferramenta para criar dispositivos virtuais para Android Oreo.
+Essa mensagem é exibida porque o Google não fornece mais um Gerenciador de AVD de GUI autônomo que dá suporte à API 26,0 e posterior. Para o Android 8,0 Oreo, você deve usar o Xamarin Android Emulator Manager ou a ferramenta de linha `avdmanager` de comando para criar dispositivos virtuais para Oreo do Android.
 
-Para usar o Gerenciador de dispositivos do Android para criar e gerenciar dispositivos virtuais, consulte [gerenciamento de dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
+Para usar o Android Device Manager para criar e gerenciar dispositivos virtuais, consulte [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 Para criar dispositivos virtuais sem o Android Device Manager, siga as etapas na próxima seção.
 
 
-#### <a name="creating-virtual-devices-using-avdmanager"></a>Criar dispositivos virtuais usando avdmanager
+#### <a name="creating-virtual-devices-using-avdmanager"></a>Criando dispositivos virtuais usando o avdmanager
 
-Para usar **avdmanager** para criar um novo dispositivo virtual, siga estas etapas:
+Para usar o **avdmanager** para criar um novo dispositivo virtual, siga estas etapas:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  Abra uma janela de Prompt de comando e defina `JAVA_HOME` até o local do SDK do Java em seu computador. Para uma instalação típica do Xamarin, você pode usar o comando a seguir:
+1.  Abra uma janela de prompt de comando `JAVA_HOME` e defina como o local do SDK do Java em seu computador. Para uma instalação típica do Xamarin, você pode usar o seguinte comando:
 
     ```cmd
     setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
     ```
 
-2.  Adicione o local do SDK do Android `bin` pasta para sua `PATH`.
-    Para uma instalação típica do Xamarin, você pode usar o comando a seguir:
+2.  Adicione o local da pasta SDK do Android `bin` ao seu. `PATH`
+    Para uma instalação típica do Xamarin, você pode usar o seguinte comando:
 
     ```cmd
     setx PATH "%PATH%;C:\Program Files (x86)\Android\android-sdk\tools\bin"
     ```
 
-3.  Feche a janela de Prompt de comando e abrir uma nova janela de Prompt de comando. Criar um novo dispositivo virtual usando o [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html) comando. Por exemplo, para criar um AVD chamado **AVD-Oreo-8.0** usando x86 a imagem do sistema para o nível de API 26, use o seguinte comando:
+3.  Feche a janela do prompt de comando e abra uma nova janela do prompt de comando. Crie um novo dispositivo virtual usando o comando [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html) . Por exemplo, para criar um AVD chamado **AVD-Oreo-8,0** usando a imagem do sistema x86 para o nível de API 26, use o seguinte comando:
 
     ```cmd
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-4.  Quando for solicitado com **você deseja criar um perfil de hardware personalizado [não]** você pode inserir **nenhuma** e aceitar o perfil de hardware padrão. Se você disser **yes**, **avdmanager** solicitará que você com uma lista de perguntas para personalizar o perfil de hardware.
+4.  Quando for solicitado **que você deseja criar um perfil de hardware personalizado [não]** , você poderá digitar **não** e aceitar o perfil de hardware padrão. Se você disser **Sim**, o **avdmanager** emitirá uma lista de perguntas para personalizar o perfil de hardware.
 
-Depois que você **avdmanager** para criar o seu dispositivo virtual, ele será incluído no menu suspenso do dispositivo:
+Depois de **avdmanager** criar seu dispositivo virtual, ele será incluído no menu suspenso do dispositivo:
 
 [![Novo AVD adicionado ao menu suspenso do dispositivo](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1.  Abra uma **Terminal** janela e mudar para o local do diretório de ferramentas do SDK do Android no Mac. Para uma instalação típica do Xamarin, você pode usar o comando a seguir:
+1.  Abra uma janela de **terminal** e altere para o local do diretório de ferramentas de SDK do Android no seu Mac. Para uma instalação típica do Xamarin, você pode usar o seguinte comando:
 
     ```bash
     cd ~/Library/Developer/Xamarin/android-sdk-macosx/tools/bin
     ```
 
-2.  Criar um novo dispositivo virtual usando o [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html) comando. Por exemplo, para criar um AVD chamado **AVD-Oreo-8.0** usando x86 a imagem do sistema para o nível de API 26, use o seguinte comando:
+2.  Crie um novo dispositivo virtual usando o comando [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html) . Por exemplo, para criar um AVD chamado **AVD-Oreo-8,0** usando a imagem do sistema x86 para o nível de API 26, use o seguinte comando:
 
     ```bash
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-3.  Quando for solicitado com **você deseja criar um perfil de hardware personalizado [não]** você pode inserir **nenhuma** e aceitar o perfil de hardware padrão. Se você disser **yes**, **avdmanager** solicitará que você com uma lista de perguntas para personalizar o perfil de hardware.
+3.  Quando for solicitado **que você deseja criar um perfil de hardware personalizado [não]** , você poderá digitar **não** e aceitar o perfil de hardware padrão. Se você disser **Sim**, o **avdmanager** emitirá uma lista de perguntas para personalizar o perfil de hardware.
 
-Depois de usar **avdmanager** para criar o seu dispositivo virtual, ele será incluído no menu suspenso do dispositivo:
+Depois de usar o **avdmanager** para criar seu dispositivo virtual, ele será incluído no menu suspenso do dispositivo:
 
 [![Novo AVD adicionado ao menu suspenso do dispositivo](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
 
 -----
 
-Para obter mais informações sobre como configurar um emulador do Android para teste e depuração, consulte [depuração no emulador do Android](~/android/deploy-test/debugging/debug-on-emulator.md).
+Para obter mais informações sobre como configurar um emulador do Android para teste e depuração, consulte Depurando [no Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
-Se você estiver usando um dispositivo físico, como um Nexus ou um Pixel, você pode atualizar seu dispositivo por meio de automático sobre as atualizações de ar (OTA) ou baixar uma imagem do sistema e seu dispositivo flash diretamente. Para obter mais informações sobre como atualizar manualmente seu dispositivo para Android Oreo, consulte [Factory imagens para dispositivos de Pixel e Nexus](https://developers.google.com/android/images).
+Se você estiver usando um dispositivo físico, como um Nexus ou um pixel, poderá atualizar seu dispositivo por meio de atualizações automáticas por satélite (OTA) ou baixar uma imagem do sistema e atualizar seu dispositivo diretamente. Para obter mais informações sobre a atualização manual do dispositivo para o Android Oreo, consulte [imagens de fábrica para dispositivos Nexus e de pixel](https://developers.google.com/android/images).
 
 
 
 ## <a name="new-features"></a>Novos recursos
 
-O Android Oreo apresenta uma variedade de novos recursos e funcionalidades, como canais de notificação, selos de notificação, fontes personalizadas em XML, que pode ser baixadas fontes, preenchimento automático e picture in picture. As seções a seguir destacam esses recursos e fornecem links para ajudá-lo a começar a usá-las em seu aplicativo.
+O Android Oreo apresenta uma variedade de novos recursos e funcionalidades, como canais de notificação, notificações de notificação, fontes personalizadas em XML, fontes para download, preenchimento automático e imagem em imagem. As seções a seguir destacam esses recursos e fornecem links para ajudá-lo a começar a usá-los em seu aplicativo.
 
 
 
 ### <a name="notification-channels"></a>Canais de notificação
 
-*Canais de notificação* são categorias definidas pelo aplicativo para notificações.
-Você pode criar um canal de notificação para cada tipo de notificação de que você precisa enviar, e você pode criar canais de notificação para refletir as opções feitas por usuários do seu aplicativo. O novo recurso de canais de notificação torna possível para você fornecer controle refinado que os usuários de diferentes tipos de notificações. Por exemplo, se você estiver implementando um aplicativo de mensagens, você pode criar canais de notificação separada para cada grupo de conversa é criado por um usuário.
+Os *canais de notificação* são categorias definidas pelo aplicativo para notificações.
+Você pode criar um canal de notificação para cada tipo de notificação que precisa enviar e pode criar canais de notificação para refletir as escolhas feitas pelos usuários do seu aplicativo. O novo recurso de canais de notificação possibilita que você forneça ao usuário um controle refinado sobre diferentes tipos de notificações. Por exemplo, se você estiver implementando um aplicativo de mensagens, poderá criar canais de notificação separados para cada grupo de conversa criado por um usuário.
 
-[Canais de notificação](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explica como criar um canal de notificação e usá-lo para lançamento de notificações locais. Para obter um exemplo de código do mundo real, consulte o [NotificationChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) exemplo; Este aplicativo de exemplo gerencia dois canais e define as opções de notificação adicionais.
+Os [canais de notificação](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explicam como criar um canal de notificação e usá-lo para postar notificações locais. Para obter um exemplo de código do mundo real, consulte o exemplo [NotificationChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) ; Este aplicativo de exemplo gerencia dois canais e define opções de notificação adicionais.
 
 
 
-### <a name="notification-badges"></a>Selos de notificação
+### <a name="notification-badges"></a>Notificações de notificação
 
-Selos de notificação são pequenos pontos que aparecem ao longo de ícones do aplicativo, conforme mostrado nesta captura de tela:
+As notificações de notificação são pequenos pontos que aparecem sobre ícones de aplicativos, conforme mostrado nesta captura de tela:
 
-[![Selos de notificação de exemplo nos ícones de aplicativo](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
+[![Notificações de notificação de exemplo em ícones de aplicativo](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
 
-Esses pontos indicam que há novas notificações para um ou mais canais de notificação no aplicativo associado com esse ícone do aplicativo &ndash; esses são notificações que o usuário ainda não foi descartada ou tratados. Os usuários podem longa-pressione em um ícone olhei as notificações associadas a uma notificação de notificação, ignorando ou atuando em notificações no menu pressione longa que appeaars.
+Esses pontos indicam que há novas notificações para um ou mais canais de notificação no aplicativo associado a esse ícone &ndash; de aplicativo essas são notificações que o usuário ainda não ignorou ou agiu. Os usuários podem pressionar por longos um ícone para resumir as notificações associadas a um crachá de notificação, descartando ou agindo em notificações do menu de pressionamento longo que appeaars.
 
-Para obter mais informações sobre notificações de notificação, consulte o desenvolvedor do Android [selos de notificação](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#Badges) tópico.
+Para obter mais informações sobre notificações de notificação, consulte o tópico notificações de [notificação](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#Badges) para desenvolvedores do Android.
 
 
 
 ### <a name="custom-fonts-in-xml"></a>Fontes personalizadas em XML
 
-Apresenta o Android Oreo *fontes no XML*, que possibilita a incorporar fontes personalizadas como recursos. OpenType (**. OTF**) e TrueType (**. ttf**) há suporte para formatos de fonte. Para adicionar fontes como recursos, faça o seguinte:
+O Android Oreo introduz *fontes em XML*, o que torna possível incorporar fontes personalizadas como recursos. Há suporte para os formatos de fonte OpenType ( **. otf**) e TrueType ( **. ttf**). Para adicionar fontes como recursos, faça o seguinte:
 
-1. Criar uma **recursos/fonte** pasta.
+1. Crie uma pasta de **recursos/fontes** .
 
-2. Copie os arquivos de fonte (exemplo, **. ttf** e **. OTF** arquivos) para **recursos/fonte**. 
+2. Copie os arquivos de fonte (exemplo, **. ttf** e **. otf** ) para **recursos/fontes**. 
 
-3. Se necessário, renomeie cada arquivo de fonte para que ela adere às convenções de nomenclatura de arquivo Android (ou seja, use somente minúscula *-z*, *0-9*e sublinhados em nomes de arquivo). Por exemplo, o arquivo de fonte `Pacifico-Regular.ttf` pode ser renomeado para algo como `pacifico.ttf`.
+3. Se necessário, renomeie cada arquivo de fonte para que ele atenda às convenções de nomenclatura de arquivo do Android (ou seja, use apenas letras minúsculas *a-z*, *0-9*e sublinhados em nomes de arquivo). Por exemplo, o arquivo `Pacifico-Regular.ttf` de fonte pode ser renomeado para algo como. `pacifico.ttf`
 
-4. Aplicar a fonte personalizada usando o novo `android:fontFamily` atributo em seu layout de XML. Por exemplo, a seguinte `TextView` declaração usa adicionado **pacifico.ttf** recurso de fonte:
+4. Aplique a fonte personalizada usando o novo `android:fontFamily` atributo no XML de layout. Por exemplo, a Declaração `TextView` a seguir usa o recurso de fonte **Pacifico. ttf** adicionado:
 
    ```xml
    <TextView
@@ -241,125 +241,125 @@ Apresenta o Android Oreo *fontes no XML*, que possibilita a incorporar fontes pe
      android:fontFamily="@font/pacifico" />
    ```
 
-Você também pode criar um arquivo XML fonte família que descreve várias fontes, bem como detalhes de estilo e peso. Para obter mais informações, consulte o desenvolvedor do Android [fontes no XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html) tópico.
+Você também pode criar um arquivo XML da família de fontes que descreve várias fontes, bem como detalhes de estilo e peso. Para obter mais informações, consulte o tópico [fontes de](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html) desenvolvedor do Android no XML.
 
 
-### <a name="downloadable-fonts"></a>Fontes que pode ser baixadas
+### <a name="downloadable-fonts"></a>Fontes para download
 
-Começando com o Android Oreo, aplicativos podem solicitar fontes de um provedor em vez de agrupá-las para o APK. As fontes são baixadas da rede, conforme necessário. Esse recurso reduz o tamanho do APK, economizando o uso de dados de celular e de memória do telefone. Você também pode usar esse recurso em versões de API do Android 14 e superior, instalando o pacote Android 26 de biblioteca de suporte.
+A partir do Android Oreo, os aplicativos podem solicitar fontes de um provedor em vez de agrupá-las no APK. As fontes são baixadas da rede somente conforme necessário. Esse recurso reduz o tamanho do APK, conservando a memória do telefone e o uso de dados da rede celular. Você também pode usar esse recurso nas versões 14 ou superiores da API do Android instalando o pacote da biblioteca de suporte do Android 26.
 
-Quando seu aplicativo precisa de uma fonte, você cria um `FontsRequest` (especificando a fonte para baixar) do objeto e, em seguida, passá-lo para um `FontsContract` método para baixar a fonte. As etapas a seguir descrevem o processo de download de fonte mais detalhadamente:
+Quando seu aplicativo precisar de uma fonte, você cria `FontsRequest` um objeto (especificando a fonte a ser baixada) e, em `FontsContract` seguida, passa-o para um método para baixar a fonte. As etapas a seguir descrevem o processo de download de fonte em mais detalhes:
 
-1.  Criar uma instância de um [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) objeto. 
+1.  Crie uma instância de um objeto [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) . 
 
-2.  Subclasse e instanciar [FontsContract.FontRequestCallback](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html).
+2.  Subclasse e instancie [FontsContract. FontRequestCallback](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html).
 
-3.  Implemente a [FontRequestCallback.OnTypeFaceRetrieved](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRetrieved%28android.graphics.Typeface%29) método, que é usado para manipular a conclusão da solicitação da fonte.
+3.  Implemente o método [FontRequestCallback. OnTypeFaceRetrieved](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRetrieved%28android.graphics.Typeface%29) , que é usado para lidar com a conclusão da solicitação de fonte.
 
-4.  Implemente a [FontRequestCallback.OnTypeFaceRequestFailed](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRequestFailed%28int%29) método, que é usado para informar o seu aplicativo de quaisquer erros que ocorrem durante o processo de solicitação de fonte.
+4.  Implemente o método [FontRequestCallback. OnTypeFaceRequestFailed](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRequestFailed%28int%29) , que é usado para informar seu aplicativo sobre quaisquer erros que ocorrem durante o processo de solicitação de fonte.
 
-5.  Chame o [FontsContract.RequestFonts](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) método para recuperar a fonte do provedor de fonte. 
+5.  Chame o método [FontsContract. RequestFonts](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) para recuperar a fonte do provedor de fontes. 
 
-Quando você chama o `RequestFonts` método, ele primeiro verifica para ver se a fonte é armazenada em cache localmente (de uma chamada anterior a `RequestFont`). Se não estiver em cache, ele chama o provedor de fonte, recupera a fonte de forma assíncrona e, em seguida, passa os resultados novamente até seu aplicativo invocando o `OnTypeFaceRetrieved` método.
+Quando você chama o `RequestFonts` método, ele primeiro verifica se a fonte está armazenada em cache localmente (de uma chamada anterior para `RequestFont`). Se não estiver armazenado em cache, ele chamará o provedor de fontes, recuperará a fonte de forma assíncrona e, em seguida, passará os `OnTypeFaceRetrieved` resultados de volta para seu aplicativo invocando seu método.
 
-O [baixável fontes](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) exemplo demonstra como usar o recurso de fontes que pode ser baixado, introduzido no Android Oreo. 
+O exemplo de [fontes baixáveis](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) demonstra como usar o recurso de fontes para download introduzido no Android Oreo. 
 
-Para obter mais informações sobre como baixar fontes, consulte o desenvolvedor do Android [baixável fontes](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) tópico.
+Para obter mais informações sobre como baixar fontes, consulte o tópico [fontes para download](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) de desenvolvedores do Android.
 
 
 
 ### <a name="autofill"></a>Preenchimento automático
 
-O novo _Autopreenchimento_ framework no Android Oreo torna mais fácil para os usuários lidar com tarefas repetitivas, como logon, a criação da conta e transações de cartão de crédito. Os usuários gastam menos tempo que digitar novamente as informações (que podem levar a erros de entrada). Antes de seu aplicativo pode trabalhar com a estrutura de preenchimento automático, um serviço de preenchimento automático deve ser habilitado nas configurações do sistema (os usuários podem habilitar ou desabilitar o preenchimento automático).
+A nova estrutura de _preenchimento automático_ no Android Oreo torna mais fácil para os usuários manipular tarefas repetitivas, como logon, criação de conta e transações de cartão de crédito. Os usuários passam menos tempo redigitando as informações (o que pode levar a erros de entrada). Antes que seu aplicativo possa trabalhar com a estrutura de preenchimento automático, um serviço de preenchimento automático deve ser habilitado nas configurações do sistema (os usuários podem habilitar ou desabilitar o preenchimento automático).
 
-O [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework/) exemplo demonstra o uso da estrutura de preenchimento automático. Ele inclui implementações do cliente de atividades com modos de exibição que deve ser autofilled e um serviço que pode fornecer dados de preenchimento automático para atividades do cliente.
+O exemplo [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework/) demonstra o uso da estrutura de preenchimento automático. Ele inclui implementações de atividades do cliente com exibições que devem ser preenchidas de modo automático e um serviço que pode fornecer dados de Autopreenchimento para atividades do cliente.
 
-Para obter mais informações sobre o novo recurso de preenchimento automático e como otimizar seu aplicativo para preenchimento automático, consulte o desenvolvedor do Android [estrutura de preenchimento automático](https://developer.android.com/guide/topics/text/autofill.html) tópico.
+Para obter mais informações sobre o novo recurso de preenchimento automático e como otimizar seu aplicativo para preenchimento automático, consulte o tópico [Framework de preenchimento automático](https://developer.android.com/guide/topics/text/autofill.html) para desenvolvedores do Android.
 
 
 
-### <a name="picture-in-picture-pip"></a>Picture in Picture (PIP)
+### <a name="picture-in-picture-pip"></a>Imagem em imagem (PIP)
 
-O Android Oreo torna possível para uma atividade Iniciar em modo de (PIP) picture in picture, sobreposição de tela de outra atividade. Esse recurso destina-se a reprodução de vídeo.
+O Android Oreo torna possível que uma atividade seja iniciada no modo PIP (Picture-in-Picture), sobrepondo a tela de outra atividade. Este recurso destina-se à reprodução de vídeo.
 
-Para especificar que a atividade do seu aplicativo pode usar modo PIP, defina o seguinte sinalizador como true no manifesto do Android:
+Para especificar que a atividade do aplicativo pode usar o modo PIP, defina o seguinte sinalizador como true no manifesto do Android:
 
 ```xml
 android:supportsPictureInPicture
 ```
 
-Para especificar como sua atividade deve se comportar quando ele estiver no modo PIP, use a nova [PictureInPictureParams](https://developer.android.com/reference/android/app/PictureInPictureParams.html) objeto. `PictureInPictureParams` representa um conjunto de parâmetros que podem ser usados para inicializar e atualizar uma atividade no modo PIP (por exemplo, da atividade preferencial proporção). Os novos métodos PIP a seguir foram adicionados ao `Activity` no Android Oreo:
+Para especificar como sua atividade deve se comportar quando estiver no modo PIP, use o novo objeto [PictureInPictureParams](https://developer.android.com/reference/android/app/PictureInPictureParams.html) . `PictureInPictureParams`representa um conjunto de parâmetros que você usa para inicializar e atualizar uma atividade no modo PIP (por exemplo, a taxa de proporção preferida da atividade). Os novos métodos Pip a seguir foram adicionados `Activity` ao no Android Oreo:
 
--   [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29) &ndash; coloca a atividade no modo PIP. A atividade é colocada no canto da tela, e o restante da tela é preenchido com a atividade anterior que estava na tela.
+-   [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29) &ndash; coloca a atividade no modo PIP. A atividade é colocada no canto da tela e o restante da tela é preenchido com a atividade anterior que estava na tela.
 
--   [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; de atualizações de definições de configuração de PIP da atividade (por exemplo, uma alteração na taxa de proporção).
+-   [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; Atualiza as definições de configuração de Pip da atividade (por exemplo, uma alteração na taxa de proporção).
 
-O [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) exemplo demonstra o uso básico do modo Picture in Picture (PiP) para dispositivos portáteis, introduzido no Oreo. O exemplo reproduz um vídeo que continua sem interrupções ao alternar entre modos de exibição ou outras atividades.
+O exemplo [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) demonstra o uso básico do modo PIP (Picture-in-Picture) para dispositivos portáteis introduzidos no Oreo. O exemplo reproduz um vídeo que continua sem interrupção enquanto alterna entre os modos de exibição ou outras atividades.
 
 
 
 ### <a name="other-features"></a>Outros recursos
 
-O Android Oreo contém muitos outros novos recursos, como os limites do Emoji suporte biblioteca, a API de localização, plano de fundo, cor de toda a gama de aplicativos, novos codecs de áudio, aprimoramentos de exibição da Web, suporte à navegação de teclado aprimorada e uma nova API AAudio (áudio pro) para áudio de baixa latência de alto desempenho, para obter mais informações sobre esses recursos, consulte o desenvolvedor do Android [APIs e recursos do Android Oreo](https://developer.android.com/about/versions/oreo/android-8.0.html) tópico.
+O Android Oreo contém muitos outros novos recursos, como a biblioteca de suporte de Emoji, a API de local, os limites de plano de fundo, a cor de ampla gama de aplicativos, novos codecs de áudio, aprimoramentos do WebView, suporte aprimorado à navegação de teclado e uma nova API de AAudio (Pro Audio) para áudio de baixa latência de alto desempenho, para obter mais informações sobre esses recursos, consulte o tópico [recursos e APIs de Oreo do Android](https://developer.android.com/about/versions/oreo/android-8.0.html) para desenvolvedores do Android.
 
 
 
 ## <a name="behavior-changes"></a>Alterações de comportamento
 
-O Android Oreo inclui uma variedade de sistema e as alterações de comportamento de API que podem ter um impacto sobre a funcionalidade dos aplicativos existentes. Essas alterações são descritas da seguinte maneira.
+O Android Oreo inclui uma variedade de alterações de comportamento de API e sistema que podem afetar a funcionalidade dos aplicativos existentes. Essas alterações são descritas a seguir.
 
 
-### <a name="background-execution-limits"></a>Limites de execução do plano de fundo
+### <a name="background-execution-limits"></a>Limites de execução em segundo plano
 
-Para melhorar a experiência do usuário, o Android Oreo impõe limitações a quais aplicativos podem fazer durante a execução em segundo plano. Por exemplo, se o usuário está assistindo a um vídeo ou um jogo, um aplicativo em execução em segundo plano pode prejudicar o desempenho de um aplicativo de vídeo intensiva em execução em primeiro plano. Como resultado, o Android Oreo coloca as seguintes restrições em aplicativos que não estão interagindo diretamente com o usuário:
+Para melhorar a experiência do usuário, o Android Oreo impõe limitações sobre o que os aplicativos podem fazer durante a execução em segundo plano. Por exemplo, se o usuário estiver assistindo a um vídeo ou jogando um jogo, um aplicativo em execução em segundo plano poderá prejudicar o desempenho de um aplicativo com uso intensivo de vídeo em execução em primeiro plano. Como resultado, o Android Oreo coloca as seguintes restrições em aplicativos que não estão interagindo diretamente com o usuário:
 
-1.  **Limitações do serviço de plano de fundo** &ndash; quando um aplicativo é executado em segundo plano, ele tem uma janela de vários minutos em que ele ainda é permitido para criar e usar os serviços. No final dessa janela, Android interrompe o serviço de plano de fundo do aplicativo e os tratará como sendo _ocioso_.
+1.  **Limitações de serviço em segundo plano** &ndash; Quando um aplicativo está em execução em segundo plano, ele tem uma janela de vários minutos em que ainda é permitido criar e usar serviços. No final dessa janela, o Android interrompe o serviço em segundo plano do aplicativo e o trata como estando _ocioso_.
 
-2.  **Limitações de difusão** &ndash; Android 7.0 (API 25) colocado limitações em que um aplicativo registra para receber transmissões. O Android Oreo torna essas limitações mais estritos. Por exemplo, aplicativos do Android Oreo não podem registrar receptores de difusão para transmissões implícitas em seus manifestos.
+2.  **Limitações de difusão** &ndash; O Android 7,0 (API 25) colocou as limitações nas difusões que um aplicativo registra para receber. O Android Oreo torna essas limitações mais rigorosas. Por exemplo, os aplicativos Android Oreo não podem mais registrar receptores de difusão para difusões implícitas em seus manifestos.
 
-Para obter mais informações sobre os novos limites de execução em segundo plano, consulte o desenvolvedor do Android [limites de execução do plano de fundo](https://developer.android.com/about/versions/oreo/background.html) tópico.
+Para obter mais informações sobre os novos limites de execução em segundo plano, consulte o tópico [limites de execução em segundo plano](https://developer.android.com/about/versions/oreo/background.html) do desenvolvedor do Android.
 
 
 ### <a name="breaking-changes"></a>Alterações significativas
 
-Aplicativos destinados a Android Oreo ou superior, deverá modificar seus aplicativos para dar suporte as alterações a seguir, quando aplicável:
+Os aplicativos destinados ao Android Oreo ou superior devem modificar seus aplicativos para dar suporte às seguintes alterações, quando aplicável:
 
-- O Android Oreo pretere a capacidade de definir a prioridade de notificações individuais. Em vez disso, você definir um nível de importância recomendada durante a criação de um canal de notificação. O nível de importância que você atribuir a um canal de notificação se aplica a todas as mensagens de notificação que você postar a ele.
+- O Android Oreo substitui a capacidade de definir a prioridade de notificações individuais. Em vez disso, você define um nível de importância recomendado ao criar um canal de notificação. O nível de importância que você atribui a um canal de notificação se aplica a todas as mensagens de notificação postadas nele.
 
-- Para aplicativos direcionados para Android Oreo, `PendingIntent.GetService()` não funciona devido a novos limites colocados em serviços iniciados em segundo plano. Se você tiver como alvo o Android Oreo, você deve usar [PendingIntent.GetBroadcast](https://developer.xamarin.com/api/member/Android.App.PendingIntent.GetBroadcast/p/Android.Content.Context/System.Int32/Android.Content.Intent/Android.App.PendingIntentFlags/) em vez disso.  
+- Para aplicativos destinados a Oreo do `PendingIntent.GetService()` Android, o não funciona devido a novos limites colocados em serviços iniciados em segundo plano. Se você estiver destinando ao Android Oreo, deverá usar [PendingIntent. getbroadcast](xref:Android.App.PendingIntent.GetBroadcast*) .  
 
 
 ## <a name="sample-code"></a>Código de exemplo
 
-Vários exemplos de xamarin. Android estão disponíveis para mostrar como tirar proveito dos recursos do Android Oreo:
+Vários exemplos do Xamarin. Android estão disponíveis para mostrar como aproveitar os recursos do Oreo do Android:
 
--   [NotificationsChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) demonstra como usar o novo sistema de canais de notificação introduzido no Android Oreo. Este exemplo gerencia dois canais de notificações: uma com importância padrão e o outro com alta importância.
+-   [NotificationsChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) demonstra como usar o novo sistema de canais de notificação introduzido no Android Oreo. Este exemplo gerencia dois canais de notificações: um com importância padrão e o outro com alta importância.
 
--   [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) demonstra o uso básico do modo Picture in Picture (PiP) para dispositivos portáteis, introduzido no Oreo. O exemplo reproduz um vídeo que continua sem interrupções ao alternar entre modos de exibição ou outras atividades.
+-   O [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) demonstra o uso básico do modo PIP (Picture-in-Picture) para dispositivos portáteis introduzidos no Oreo. O exemplo reproduz um vídeo que continua sem interrupção enquanto alterna entre os modos de exibição ou outras atividades.
 
--   [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework) demonstra o uso da estrutura de preenchimento automático. Ele inclui implementações do cliente de atividades com modos de exibição que deve ser autofilled e um serviço que pode fornecer dados de preenchimento automático para atividades do cliente.
+-   [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework) demonstra o uso da estrutura de preenchimento automático. Ele inclui implementações de atividades do cliente com exibições que devem ser preenchidas de modo automático e um serviço que pode fornecer dados de Autopreenchimento para atividades do cliente.
 
--   [Fontes que pode ser baixadas](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) fornece um exemplo de como usar o recurso de fontes para download descrito anteriormente.
+-   As [fontes para download](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) fornecem um exemplo de como usar o recurso de fontes para download descrito anteriormente.
 
--   [EmojiCompat](https://developer.xamarin.com/samples/monodroid/android-o/EmojiCompat) demonstra o uso da biblioteca de suporte do EmojiCompat. Você pode usar esta biblioteca para impedir que seu aplicativo do mostrando ausente emoji caracteres como caracteres de "Bananas".
+-   [EmojiCompat](https://developer.xamarin.com/samples/monodroid/android-o/EmojiCompat) demonstra o uso da biblioteca de suporte do EmojiCompat. Você pode usar essa biblioteca para impedir que seu aplicativo mostre caracteres de Emoji ausentes como caracteres "tofu".
 
--   [Local atualizações pendentes intenção](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdPendIntent) ilustra o uso da API de localização para obter atualizações sobre o local de um dispositivo usando um `PendingIntent`.
+-   A [tentativa pendente de atualizações de local](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdPendIntent) ilustra o uso da API de localização para obter atualizações sobre o local `PendingIntent`de um dispositivo usando um.
 
--   [Serviço de primeiro plano de atualizações local](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService) demonstra como usar a API de localização para obter atualizações sobre o local de um dispositivo usando um serviço de primeiro plano associado e ser iniciado.
+-   O [serviço de primeiro plano de atualizações de local](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService) demonstra como usar a API de localização para obter atualizações sobre o local de um dispositivo usando um serviço de primeiro plano associado e iniciado.
 
 
 ## <a name="video"></a>Vídeo
 
 > [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
 
-**Desenvolvimento do Oreo 8.0 Android com c#**
+**Desenvolvimento do Android 8,0 Oreo comC#**
 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo introduziu o Android Oreo e explicou como instalar e configurar as ferramentas mais recentes e os pacotes para o desenvolvimento do xamarin. Android no Android Oreo. Ele forneceu uma visão geral dos principais recursos disponíveis no Android Oreo, com links para código-fonte de exemplo para vários recursos novos. Ele incluía links para documentação de API e tópicos do Android Developer para ajudar você a começar a criação de aplicativos para Android Oreo. Ele também realçado as alterações de comportamento Android Oreo mais importantes que podem afetar aplicativos existentes.
+Este artigo introduziu o Android Oreo e explicou como instalar e configurar as ferramentas e os pacotes mais recentes para o desenvolvimento do Xamarin. Android no Android Oreo. Ele forneceu uma visão geral dos principais recursos disponíveis no Android Oreo, com links para código-fonte de exemplo para vários novos recursos. Ele inclui links para documentação de API e tópicos para desenvolvedores do Android para ajudá-lo a começar a criar aplicativos para Android Oreo. Ele também realçou as alterações de comportamento Oreo do Android mais importantes que poderiam afetar os aplicativos existentes.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Android 8.0 Oreo](https://developer.android.com/index.html)
+- [Android 8,0 Oreo](https://developer.android.com/index.html)

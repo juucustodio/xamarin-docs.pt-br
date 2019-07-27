@@ -1,85 +1,85 @@
 ---
-title: Profiler de Xamarin de solução de problemas
-description: Este documento fornece informações de solução de problemas relacionadas ao Xamarin Profiler. Ele descreve os problemas relacionados ao registro em log e diagnóstico, o IDE e outros tópicos.
+title: Solução de problemas Xamarin Profiler
+description: Este documento fornece informações de solução de problemas relacionadas ao Xamarin Profiler. Ele descreve problemas relacionados ao log e diagnóstico, ao IDE e a outros tópicos.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: e4a4376291ff56433c8cd9785989af2983a80c1c
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: d6125f9d8dd2899a19181f4ccd7f9c06b06e5d5b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832157"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511575"
 ---
-# <a name="xamarin-profiler-troubleshooting"></a>Profiler de Xamarin de solução de problemas
+# <a name="xamarin-profiler-troubleshooting"></a>Solução de problemas Xamarin Profiler
 
 ## <a name="logging-and-diagnostics"></a>Registro em log e diagnóstico
 
-A equipe do Xamarin pode ajudar a acompanhar os problemas se você nos fornecer informações, incluindo:
+A equipe do Xamarin pode ajudar a acompanhar problemas se você nos fornecer informações, incluindo:
 
-- Screencast do problema, falha, ou falha e o fluxo de trabalho que levam a ele.
+- Um screencast do problema, falha ou falha e seu fluxo de trabalho que levou até ele.
 - Saídas de log (veja abaixo).
-- O **.mlpd** sendo gerados para a sessão de criação de perfil (veja abaixo).
+- O **. MLPD** que está sendo gerado para a sessão de criação de perfil (veja abaixo).
 
-### <a name="getting-log-outputs"></a>Obtenção de resultados de Log
+### <a name="getting-log-outputs"></a>Obtendo saídas de log
 
-No Mac os logs são salvos para `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
+Nos logs do Mac são salvos `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`no.
 
-No Windows, eles são salvos em `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` , inclua o log mais recente sempre que você envie um problema.
+No Windows, eles são salvos `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` para incluir o log mais recente sempre que você enviar um problema.
 
-Estamos adicionando mais registro em log à medida que avançarmos, portanto, essa saída deve crescem e se tornam mais úteis ao longo do tempo.
+Estamos adicionando mais registro em log à medida que passamos, portanto, essa saída deve aumentar e se tornar mais útil ao longo do tempo.
 
 <a name="gen_mlpd" />
 
-### <a name="generating-mlpd-files"></a>Gerando arquivos .mlpd
+### <a name="generating-mlpd-files"></a>Gerando arquivos. MLPD
 
-Uma **.mlpd** arquivo é a saída compactada do criador de perfil de tempo de execução mono. A GUI do Xamarin Profiler lê os dados de um **.mlpd** e o exibe para o usuário. **.mlpd** os arquivos são úteis para ferramentas de depuração para Xamarin porque elas ajudam nossos engenheiros de diagnosticar problemas do Profiler que possam estar ocorrendo com seus dados.
+Um arquivo **. MLPD** é a saída compactada do analisador de tempo de execução mono. O Xamarin Profiler GUI lê os dados de um **. MLPD** e os exibe para o usuário. arquivos **. MLPD** são ferramentas de depuração úteis para o Xamarin, pois ajudam nossos engenheiros a diagnosticar problemas que o criador de perfil pode ter com seus dados.
 
-O **.mlpd** para a sessão atual é salvo automaticamente no seu Mac `/tmp` diretório e pode ser identificado pelo carimbo de hora. Se você ativar o registro em log, a primeira saída será o caminho para o **.mlpd** arquivo. O **.mlpd** arquivo normalmente será salvo no diretório iniciando ~/var/pastas...
+O **. MLPD** para a sessão atual é automaticamente salvo no diretório do `/tmp` seu Mac e pode ser identificado pelo carimbo de data/hora. Se você ativar o registro em log, a primeira saída será o caminho para o arquivo **. MLPD** . O arquivo **. MLPD** normalmente será salvo no diretório a partir de ~/var/Folders...
 
-O **.mlpd** de uma sessão atual também pode ser salvos, escolhendo **arquivo > Salvar como...** no menu do Profiler:
+O **. MLPD** para uma sessão atual também pode ser salvo escolhendo **arquivo > salvar como...** no menu do criador de perfil:
 
-**O Visual Studio para Mac**:
+**Visual Studio para Mac**:
 
-![](troubleshooting-images/image17.png "Salvando arquivo .mlpd no Visual Studio para Mac")
+![](troubleshooting-images/image17.png "Salvando arquivo. MLPD no Visual Studio para Mac")
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Salvando arquivo .mlpd no Visual Studio")
+![](troubleshooting-images/image17-vs.png "Salvando arquivo. MLPD no Visual Studio")
 
-É importante observar que **.mlpd** contêm muitas informações e o tamanho do arquivo será grande.
+É importante observar que **. MLPD** contêm muitas informações e o tamanho do arquivo será grande.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-A lista a seguir mostra as armadilhas comuns, soluções alternativas e dicas e truques para usar o Profiler.
+A lista a seguir mostra armadilhas comuns, soluções alternativas e dicas e truques para usar o criador de perfil.
 
 > [!NOTE]
-> Você precisa ser um Visual Studio **Enterprise** assinante para desbloquear esse recurso em qualquer Visual Studio Enterprise no Windows ou o Visual Studio para Mac.
+> Você precisa ser um assinante do Visual Studio **Enterprise** para desbloquear esse recurso em qualquer Visual Studio Enterprise no Windows ou Visual Studio para Mac.
 
-#### <a name="i-cant-see-the-ios-profiler-option-or-it-is-greyed-out-visual-studio-and-visual-studio-for-mac"></a>Não consigo ver a opção de criador de perfil do iOS ou ela fica acinzentada [Visual Studio e o Visual Studio para Mac]
+#### <a name="i-cant-see-the-ios-profiler-option-or-it-is-greyed-out-visual-studio-and-visual-studio-for-mac"></a>Não consigo ver a opção do criador de perfil do iOS ou ela está esmaecida [Visual Studio e Visual Studio para Mac]
 
-Verifique as configurações a seguir para resolver esse problema:
+Verifique as seguintes configurações para resolver isso:
 
-- Certifique-se de que você está usando a configuração de depuração
-- Certifique-se de que você está usando o coletor de lixo SGen.
-- Verifique se a plataforma está [suporte](~/tools/profiler/index.md#Profiler_Support).
-- Certifique-se de que você tenha a licença correta.
-- Certifique-se de que você está conectado no e adequadamente autenticados.
-- [Visual Studio] Você deve usar [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/enterprise/) e ter uma licença válida do Enterprise.
+- Verifique se você está usando a configuração de depuração
+- Verifique se você está usando o coletor de lixo do SGen.
+- Verifique se a plataforma tem [suporte](~/tools/profiler/index.md#Profiler_Support).
+- Verifique se você tem a licença correta.
+- Verifique se você está conectado e autenticado corretamente.
+- [Visual Studio] Você deve estar usando [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/enterprise/) e ter uma licença corporativa válida.
 
-#### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>Eu recebo um erro ao tentar iniciar o criador de perfil
+#### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>Recebo um erro ao tentar iniciar o criador de perfil
 
-Se você executar nessa caixa de erro ao usar o criador de perfil no Visual Studio:
+Se você encontrar essa caixa de erro ao usar o criador de perfil no Visual Studio:
 
 ![](troubleshooting-images/error.png "Caixa de erro ao usar o criador de perfil no Visual Studio")
 
-Normalmente é devido a não ser capaz de iniciar o simulador / emulador. Tentar executar o aplicativo normalmente, corrija os problemas que ele oferece e, em seguida, tente usar o Profiler novamente.
+Normalmente, é porque não é possível iniciar o simulador/emulador. Tente executar o aplicativo normalmente, corrija os problemas que ele fornece e tente usar o criador de perfil novamente.
 
 #### <a name="to-watch-a-specific-thread"></a>Para assistir a um thread específico
 
-Se você tiver um thread que você quisesse especificamente assistir, seria ideal para nomear o thread no início de sua criação para obter `ThreadName` em vez de `0x0`. Por exemplo, para definir o nome do thread como `UI`, você pode usar o código a seguir:
+Se você tiver um thread que quisesse observar especificamente, seria ideal nomear o thread no início da criação para obter `ThreadName` em vez de. `0x0` Por exemplo, para definir o nome do `UI`thread como, você pode usar o seguinte código:
 
 ```csharp
 RunOnUiThread (() => {
@@ -89,6 +89,6 @@ RunOnUiThread (() => {
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Passo a passo: usando o Xamarin Profiler](~/tools/profiler/index.md)
-- [Práticas recomendadas de desempenho e memória](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [Notas de Versão](https://developer.xamarin.com/releases/profiler/preview/)
+- [Walkthrough – usando o Xamarin Profiler](~/tools/profiler/index.md)
+- [Práticas recomendadas de memória e desempenho](~/cross-platform/deploy-test/memory-perf-best-practices.md)
+- [Notas de Versão](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)

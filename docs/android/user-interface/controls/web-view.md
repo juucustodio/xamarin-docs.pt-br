@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ae0b67de5856e6baef9a4989a93e65ead2854a62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2718953c9e5628374c45fa3741d1ad3be3125dd9
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61310561"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510145"
 ---
-# <a name="web-view"></a>Exibição da Web
+# <a name="xamarinandroid-web-view"></a>Exibição da Web do Xamarin. Android
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) permite que você crie sua própria janela para exibir páginas da web (ou até mesmo desenvolver um navegador concluído). Neste tutorial, você criará um simples [`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)
-que pode exibir e navegar em páginas da web.
+[`WebView`](xref:Android.Webkit.WebView)permite que você crie sua própria janela para exibir páginas da Web (ou até mesmo desenvolver um navegador completo). Neste tutorial, você criará um simples[`Activity`](xref:Android.App.Activity)
+Isso pode exibir e navegar em páginas da Web.
 
-Criar um novo projeto chamado **HelloWebView**.
+Crie um novo projeto chamado **HelloWebView**.
 
-Abra **Resources/Layout/Main.axml** e insira o seguinte:
+Abra **Resources/layout/Main. axml** e insira o seguinte:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -30,23 +30,23 @@ Abra **Resources/Layout/Main.axml** e insira o seguinte:
     android:layout_height="fill_parent" />
 ```
 
-Como esse aplicativo for acessar a Internet, você deve adicionar que as permissões apropriadas para o Android o arquivo de manifesto. Abra as propriedades do projeto para especificar quais permissões seu aplicativo requer para operar. Habilitar o `INTERNET` permissão conforme mostrado abaixo:
+Como esse aplicativo acessará a Internet, você deve adicionar as permissões apropriadas ao arquivo de manifesto do Android. Abra as propriedades do projeto para especificar quais permissões seu aplicativo precisa para operar. Habilite `INTERNET` a permissão, conforme mostrado abaixo:
 
-![Definir a permissão de INTERNET no manifesto do Android](web-view-images/01-set-internet-permissions.png)
+![Configurando a permissão de INTERNET no manifesto do Android](web-view-images/01-set-internet-permissions.png)
 
-Agora, abra **MainActivity.cs** e adicionar uma diretiva para Webkit:
+Agora abra **MainActivity.cs** e adicione uma diretiva using para WebKit:
 
 ```csharp
 using Android.Webkit;
 ```
 
-Na parte superior do `MainActivity` classe, declare uma [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) objeto:
+Na parte superior da `MainActivity` classe, declare um [`WebView`](xref:Android.Webkit.WebView) objeto:
 
 ```csharp
 WebView web_view;
 ```
 
-Quando o **WebView** é solicitado a carregar uma URL, ele por padrão delegará a solicitação para o navegador padrão. Para ter o **WebView** carregar a URL (em vez do navegador padrão), você deve ter como subclasse `Android.Webkit.WebViewClient` e substitua o `ShouldOverriderUrlLoading` método. Uma instância dessa prática `WebViewClient` é fornecido para o `WebView`. Para fazer isso, adicione o seguinte aninhados `HelloWebViewClient` dentro de classe `MainActivity`:
+Quando a **WebView** é solicitada a carregar uma URL, ela, por padrão, delegará a solicitação ao navegador padrão. Para que o **WebView** carregue a URL (em vez do navegador padrão), você deve subclasse `Android.Webkit.WebViewClient` e substituir o `ShouldOverriderUrlLoading` método. Uma instância desse personalizado `WebViewClient` é fornecida para o. `WebView` Para fazer isso, adicione a seguinte classe `HelloWebViewClient` aninhada `MainActivity`dentro:
 
 ```csharp
 public class HelloWebViewClient : WebViewClient
@@ -59,9 +59,9 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-Quando `ShouldOverrideUrlLoading` retorna `false`, ele sinaliza para o Android que atual `WebView` instância tratou a solicitação e nenhuma ação adicional é necessária. 
+Quando `ShouldOverrideUrlLoading` `WebView` retorna `false`, ele sinaliza ao Android que a instância atual tratou a solicitação e que nenhuma outra ação é necessária. 
 
-Se você estiver direcionando o nível de API 24 ou posterior, use a sobrecarga de `ShouldOverrideUrlLoading` que usa um `IWebResourceRequest` para o segundo argumento, em vez de um `string`:
+Se você estiver direcionando o nível de API 24 ou posterior, use `ShouldOverrideUrlLoading` a sobrecarga de `IWebResourceRequest` que usa um para o segundo argumento `string`em vez de um:
 
 ```csharp
 public class HelloWebViewClient : WebViewClient
@@ -75,8 +75,7 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-Em seguida, use o seguinte código para o [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
-método:
+Em seguida, use o seguinte código para [`OnCreate()`](xref:Android.App.Activity.OnCreate*)o método):
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -93,20 +92,20 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Isso inicializa o membro [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) com do [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) layout e permite que o JavaScript para o [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) com [ `JavaScriptEnabled` ](https://developer.xamarin.com/api/property/Android.Webkit.WebSettings.JavaScriptEnabled/) 
- `= true` (consulte a [C chamar\# do JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) receita para obter informações sobre como chamar o C\# funções do JavaScript). Por fim, uma página da web inicial é carregado com [ `LoadUrl(String)` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/%2fM%2fLoadUrl).
+Isso inicializa o membro [`WebView`](xref:Android.Webkit.WebView) com aquele [`Activity`](xref:Android.App.Activity) do layout e habilita o JavaScript para o [`WebView`](xref:Android.Webkit.WebView) com `= true` [`JavaScriptEnabled`](xref:Android.Webkit.WebSettings.JavaScriptEnabled) 
+ (consulte a [chamada C\# do JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) receita para obter informações sobre como chamar funções\# C do JavaScript). Por fim, uma página da Web inicial é [`LoadUrl(String)`](xref:Android.Webkit.WebView)carregada com.
 
-Compile e execute o aplicativo. Você deve ver um aplicativo de Visualizador de página da web simples como aquele mostrado na seguinte captura de tela:
+Compile e execute o aplicativo. Você deve ver um aplicativo Web Viewer simples como aquele visto na seguinte captura de tela:
 
-[![Exemplo de aplicativo, exibindo um WebView](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
+[![Exemplo de aplicativo exibindo um WebView](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
-Para lidar com o **volta** botão pressionamento de tecla, adicione a seguinte instrução using:
+Para manipular o pressionamento da tecla do botão **voltar** , adicione a seguinte instrução Using:
 
 ```csharp
 using Android.Views;
 ```
 
-Em seguida, adicione o seguinte método dentro de `HelloWebView` atividade:
+Em seguida, adicione o seguinte método dentro `HelloWebView` da atividade:
 
 ```csharp
 public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.KeyEvent e)
@@ -120,20 +119,18 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 }
 ```
 
-Esse [`OnKeyDown(int, KeyEvent)`](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))
-método de retorno de chamada será chamado sempre que um botão é pressionado enquanto a atividade está em execução. A condição de usa a [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) verificar se a tecla pressionada é o **volta** botão e se a [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) é realmente capaz de navegar de volta (se ele tem um histórico). Se ambos forem verdadeiros, em seguida, a [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) método é chamado, o que navegará de volta uma etapa a [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) histórico. Retornando `true` indica que o evento foi tratado. Se essa condição não for atendida, o evento é enviado para o sistema.
+Esta[`OnKeyDown(int, KeyEvent)`](xref:Android.App.Activity.OnKeyDown*)
+o método de retorno de chamada será chamado sempre que um botão for pressionado enquanto a atividade estiver em execução. A condição dentro usa o [`KeyEvent`](xref:Android.Views.KeyEvent) para verificar se a tecla pressionada é o botão **voltar** e se [`WebView`](xref:Android.Webkit.WebView) a é realmente capaz de navegar de volta (se tiver um histórico). Se ambos forem verdadeiros, o [`GoBack()`](xref:Android.Webkit.WebView.GoBack) método será chamado, que navegará de volta uma etapa [`WebView`](xref:Android.Webkit.WebView) no histórico. Retornando `true` indica que o evento foi tratado. Se essa condição não for atendida, o evento será enviado de volta para o sistema.
 
-Execute o aplicativo novamente. Agora você deve ser capaz de seguir os links e navegar para trás no histórico de página:
+Execute o aplicativo novamente. Agora você deve ser capaz de seguir os links e navegar de volta pelo histórico de página:
 
-[![Capturas de tela de exemplo do botão Voltar em ação](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
+[![Capturas de tela de exemplo do botão voltar em ação](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
-
-*Partes desta página são modificações com base no trabalho criado e compartilhado por Android Open Source Project e usadas de acordo com os termos descritos na*
-[*2.5 atribuição de licença da Creative Commons* ](http://creativecommons.org/licenses/by/2.5/).
-
+*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do*
+[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Chamar C# do JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
-- [Android.Webkit.WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView)
-- [KeyEvent](https://developer.xamarin.com/api/type/Android.Webkit.WebView/Client)
+- [Android.Webkit.WebView](xref:Android.Webkit.WebView)
+- [KeyEvent](xref:Android.Webkit.WebView)

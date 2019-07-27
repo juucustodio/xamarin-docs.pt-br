@@ -1,50 +1,40 @@
 ---
-title: Notificações no xamarin. Android
+title: Notificações no Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b98ee5afbd65d5cf32bc6e3151284678e248cf47
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e4d7901e703544d52bb0e4a377875847b9af0c0a
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61014245"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509347"
 ---
-# <a name="notifications-in-xamarinandroid"></a>Notificações no xamarin. Android
+# <a name="notifications-in-xamarinandroid"></a>Notificações no Xamarin. Android
 
+Esta seção explica como implementar notificações no Xamarin. Android. Ele descreve os vários elementos da interface do usuário de uma notificação do Android e discute as APIs envolvidas na criação e exibição de uma notificação.
 
-## <a name="overview"></a>Visão geral
+## <a name="local-notifications-in-androidlocal-notificationsmd"></a>[Notificações locais no Android](local-notifications.md)
 
-Esta seção explica como implementar notificações no xamarin. Android. Ele descreve os vários elementos de interface do usuário de uma notificação de Android e discute a API do envolvido com a criação e exibindo uma notificação.
+Esta seção explica como implementar notificações locais no Xamarin. Android. Ele descreve os vários elementos da interface do usuário de uma notificação do Android e discute as APIs envolvidas na criação e exibição de uma notificação.
 
-
-## <a name="sections"></a>Seções
-
-### <a name="local-notifications-in-androidlocal-notificationsmd"></a>[Notificações locais no Android](local-notifications.md)
-
-Esta seção explica como implementar notificações locais no xamarin. Android. Ele descreve os vários elementos de interface do usuário de uma notificação de Android e discutir a API do envolvido com a criação e exibindo uma notificação. 
-
-### <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[Passo a passo: usar notificações locais no xamarin. Android](local-notifications-walkthrough.md)  
+## <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[Walkthrough – usando notificações locais no Xamarin. Android](local-notifications-walkthrough.md)  
  
-Este passo a passo aborda como usar notificações locais em um aplicativo xamarin. Android. Ele demonstra as Noções básicas de criação e publicação de uma notificação. Quando o usuário clica em uma notificação na gaveta de notificação ele inicia uma segunda atividade. 
+Este tutorial explica como usar notificações locais em um aplicativo Xamarin. Android. Ele demonstra as noções básicas de criação e publicação de uma notificação. Quando o usuário clica na notificação na gaveta de notificação, ele inicia uma segunda atividade. 
 
+## <a name="further-reading"></a>Leitura adicional
 
-## <a name="for-further-reading"></a>Para leitura adicional
+[Mensagens de nuvem firebase](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; O FCM (firebase Cloud Messaging) é um serviço que facilita o sistema de mensagens entre aplicativos móveis e aplicativos de servidor. O firebase Cloud Messaging pode ser usado para implementar notificações remotas (também chamadas de notificações por push) em aplicativos Xamarin. Android.
 
-[O firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) é um serviço que facilita o sistema de mensagens entre aplicativos móveis e aplicativos de servidor. O firebase Cloud Messaging pode ser usado para implementar notificações remotas (também chamadas de notificações por push) em aplicativos xamarin. Android.
+[Notificações](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) do &ndash; Este tópico do desenvolvedor do Android é o guia definitivo para notificações do Android. Ele inclui uma seção considerações de design que ajuda você a projetar suas notificações para que elas estejam em conformidade com as diretrizes da interface do usuário do Android. Ele fornece mais informações básicas sobre a navegação preserviing ao iniciar uma atividade e explica como exibir o progresso em uma notificação e controlar a reprodução de mídia na tela de bloqueio.
 
-[Notificações](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; tópico esse desenvolvedor Android é o guia definitivo para notificações do Android. Ele inclui um design de seção de considerações que ajuda você a projetar suas notificações, de modo que eles estão em conformidade com as diretrizes da interface do usuário do Android. Ele fornece informações complementares sobre navegação preserviing ao iniciar uma atividade, e explica como exibir o progresso em uma notificação e controle a reprodução de mídia na tela de bloqueio. 
-
-[NotificationListenerService](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/) &ndash; Android esse serviço torna possível para seu aplicativo escutar (e interagir com) todas as notificações são postados no dispositivo Android, não apenas as notificações de que seu aplicativo está registrado para receber. Observe que o usuário explicitamente deve conceder permissão ao seu aplicativo para que ele seja capaz de detectar notificações no dispositivo.
-
-
-
-
+[NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; Esse serviço Android possibilita que seu aplicativo Ouça (e interaja com) todas as notificações postadas no dispositivo Android, não apenas as notificações que seu aplicativo está registrado para receber.
+Observe que o usuário deve conceder explicitamente permissão ao seu aplicativo para que ele possa escutar notificações no dispositivo.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notificações locais (amostra)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
-- [Notificações remotas (amostra)](https://developer.xamarin.com/samples/monodroid/RemoteNotifications/)
+- [Notificações locais (exemplo)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
+- [Notificações remotas (exemplo)](https://developer.xamarin.com/samples/monodroid/RemoteNotifications/)

@@ -6,25 +6,25 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 63164d90419f3a49d9eb52a52d02e05fbee43dbf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a1bcb83d6057cb7d4a43c510d7b5805b574812e6
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61310242"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510056"
 ---
-# <a name="gridview"></a>GridView
+# <a name="xamarinandroid-gridview"></a>O Xamarin. Android GridView
 
-[`GridView`](https://developer.xamarin.com/api/type/Android.Widget.GridView/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
-que exibe itens em uma grade bidimensional, rolável. Os itens de grade são inseridos automaticamente para o layout usando um [ `ListAdapter` ](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/).
+[`GridView`](xref:Android.Widget.GridView)é um[`ViewGroup`](xref:Android.Views.ViewGroup)
+Isso exibe os itens de uma grade rolável bidimensional. Os itens de grade são inseridos automaticamente no layout usando [`ListAdapter`](xref:Android.App.ListActivity.ListAdapter)um.
 
-Neste tutorial, você criará uma grade de miniaturas de imagem. Quando um item é selecionado, será exibida uma mensagem de notificação do sistema a posição da imagem.
+Neste tutorial, você criará uma grade de miniaturas de imagem. Quando um item é selecionado, uma mensagem do sistema exibirá a posição da imagem.
 
-Iniciar um novo projeto chamado **HelloGridView**.
+Inicie um novo projeto chamado **HelloGridView**.
 
-Encontrar algumas fotos que você deseja usar, ou [baixar essas imagens de exemplo](https://developer.android.com/shareables/sample_images.zip). Adicione os arquivos de imagem para o projeto **recursos/Drawable** directory. No **propriedades** janela, defina a Build Action de cada um para **AndroidResource**.
+Encontre algumas fotos que você gostaria de usar ou [Baixe essas imagens de exemplo](https://developer.android.com/shareables/sample_images.zip). Adicione os arquivos de imagem ao diretório de **recursos/empates** do projeto. Na janela **Propriedades** , defina a ação de compilação para cada para **AndroidResource**.
 
-Abra o **Resources/Layout/Main.axml** de arquivo e insira o seguinte:
+Abra o arquivo Resources **/layout/Main. axml** e insira o seguinte:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -41,10 +41,10 @@ Abra o **Resources/Layout/Main.axml** de arquivo e insira o seguinte:
 />
 ```
 
-Isso [ `GridView` ](https://developer.xamarin.com/api/type/Android.Widget.GridView/) preencherá a tela inteira. Os atributos são bastante auto-explicativo. Para obter mais informações sobre atributos válidos, consulte o [ `GridView` ](https://developer.xamarin.com/api/type/Android.Widget.GridView/) referência.
+Isso [`GridView`](xref:Android.Widget.GridView) preencherá a tela inteira. Os atributos são, na verdade, auto-explicativos. Para obter mais informações sobre atributos válidos, consulte [`GridView`](xref:Android.Widget.GridView) a referência.
 
-Abra `HelloGridView.cs` e insira o seguinte código para o [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-método:
+Abra `HelloGridView.cs` e insira o código a seguir para o[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+forma
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -62,13 +62,13 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Após o **Main. axml** layout é definido para a exibição de conteúdo, o [ `GridView` ](https://developer.xamarin.com/api/type/Android.Widget.GridView/) for capturada do layout com [ `FindViewById` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/). O [`Adapter`](https://developer.xamarin.com/api/property/Android.Widget.AdapterView.RawAdapter/)
-propriedade, em seguida, é usada para definir um adaptador personalizado (`ImageAdapter`) como a fonte para todos os itens a serem exibidos na grade. O `ImageAdapter` é criado na próxima etapa.
+Depois que o layout **Main. axml** é definido para o modo de exibição [`GridView`](xref:Android.Widget.GridView) de conteúdo, o é capturado [`FindViewById`](xref:Android.App.Activity.FindViewById*)do layout com. Dos[`Adapter`](xref:Android.Widget.AdapterView.RawAdapter)
+em seguida, a propriedade é usada para definir um`ImageAdapter`adaptador personalizado () como a origem de todos os itens a serem exibidos na grade. O `ImageAdapter` é criado na próxima etapa.
 
-Para fazer algo quando um item na grade é clicado, um delegado anônimo está inscrito para o [ `ItemClick` ](https://developer.xamarin.com/api/event/Android.Widget.AdapterView.ItemClick/) eventos.
-Ele mostra uma [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) que exibe a posição de índice (baseado em zero) do item selecionado (em um cenário do mundo real, a posição pode ser usada para obter a imagem completa de tamanhos para alguma outra tarefa). Observe que as classes de ouvinte no estilo Java podem ser usadas em vez de eventos .NET.
+Para fazer algo quando um item na grade é clicado, um delegado anônimo é assinado para o [`ItemClick`](xref:Android.Widget.AdapterView.ItemClick) evento.
+Ele mostra um [`Toast`](xref:Android.Widget.Toast) que exibe a posição do índice (com base em zero) do item selecionado (em um cenário do mundo real, a posição pode ser usada para obter a imagem de tamanho completo de alguma outra tarefa). Observe que as classes de ouvinte em estilo Java podem ser usadas em vez de eventos .NET.
 
-Criar uma nova classe chamada `ImageAdapter` que pode efetuar subclasses [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/):
+Crie uma nova classe chamada `ImageAdapter` que as [`BaseAdapter`](xref:Android.Widget.BaseAdapter)subclasses:
 
 ```csharp
 public class ImageAdapter : BaseAdapter
@@ -129,43 +129,42 @@ public class ImageAdapter : BaseAdapter
 }
 ```
 
-Em primeiro lugar, isso implementa alguns métodos necessários herdados de [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/). O construtor e o [ `Count` ](https://developer.xamarin.com/api/property/Android.Widget.BaseAdapter.Count/) propriedade são auto-explicativos. Normally, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/)
-deve retornar o objeto real na posição especificada no adaptador, mas é ignorado para este exemplo. Likewise, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/)
-deve retornar a id da linha do item, mas não é necessária aqui.
+Primeiro, isso implementa alguns métodos necessários herdados [`BaseAdapter`](xref:Android.Widget.BaseAdapter)do. O construtor e a [`Count`](xref:Android.Widget.BaseAdapter.Count) Propriedade são auto-explicativos. Alinha[`GetItem(int)`](xref:Android.Widget.BaseAdapter.GetItem*)
+deve retornar o objeto real na posição especificada no adaptador, mas é ignorado para este exemplo. Dessa[`GetItemId(int)`](xref:Android.Widget.BaseAdapter.GetItemId*)
+deve retornar a ID de linha do item, mas não é necessário aqui.
 
-É o primeiro método necessário [ `GetView()` ](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetView/).
-Esse método cria um novo [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
-para cada imagem adicionada para o `ImageAdapter`. Quando isso é chamado, um [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
-é passado, que normalmente é um objeto reciclado (pelo menos depois que isso é chamado uma vez), portanto, há uma verificação para ver se o objeto é nulo. Se ele *é* nulo, um [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
-é instanciada e configurada com as propriedades desejadas para a apresentação de imagem:
+O primeiro método necessário é [`GetView()`](xref:Android.Widget.BaseAdapter.GetView*).
+Esse método cria um novo[`View`](xref:Android.Views.View)
+para cada imagem adicionada ao `ImageAdapter`. Quando isso é chamado, um[`View`](xref:Android.Views.View)
+é passado, que normalmente é um objeto reciclado (pelo menos depois que isso é chamado uma vez), portanto, há uma verificação para ver se o objeto é nulo. Se *for* NULL, um[`ImageView`](xref:Android.Widget.ImageView)
+é instanciado e configurado com as propriedades desejadas para a apresentação da imagem:
 
-- [`LayoutParams`](https://developer.xamarin.com/api/property/Android.Views.View.LayoutParameters/) Define a altura e largura para o modo de exibição&mdash;Isso garante que, independentemente do tamanho do desenháveis, cada imagem é redimensionada e cortada para se ajustar essas dimensões, conforme apropriado.
+- [`LayoutParams`](xref:Android.Views.View.LayoutParameters)define a altura e a largura da exibição&mdash;. isso garante que, não importa o tamanho do empate, cada imagem seja redimensionada e cortada para caber nessas dimensões, conforme apropriado.
 
-- [`SetScaleType()`](https://developer.xamarin.com/api/member/Android.Widget.ImageView.SetScaleType/) declara que as imagens devem ser cortadas em direção ao centro (se necessário).
+- [`SetScaleType()`](xref:Android.Widget.ImageView.SetScaleType*)declara que as imagens devem ser cortadas em direção ao centro (se necessário).
 
-- [`SetPadding(int, int, int, int)`](https://developer.xamarin.com/api/member/Android.Views.View.SetPadding/) Define o preenchimento para todos os lados. (Observe que, se as imagens têm proporções diferentes, em seguida, menos preenchimento fará com que para cortar mais da imagem se ele não coincide com as dimensões fornecidas para o ImageView).
+- [`SetPadding(int, int, int, int)`](xref:Android.Views.View.SetPadding*)define o preenchimento de todos os lados. (Observe que, se as imagens tiverem proporções de aspecto diferentes, menos preenchimento causará mais corte da imagem se não corresponder às dimensões atribuídas ao ImageView.)
 
-Se o [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) passados para [ `GetView()` ](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetView/) é *não* nulo, então local [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
-é inicializado com o reciclado [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) objeto.
+Se o [`View`](xref:Android.Views.View) passado para [`GetView()`](xref:Android.Widget.BaseAdapter.GetView*) *não* for nulo, o local[`ImageView`](xref:Android.Widget.ImageView)
+é inicializado com o [`View`](xref:Android.Views.View) objeto reciclado.
 
-No final das [`GetView()`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetView/)
-método, o `position` inteiro passado para o método é usado para selecionar uma imagem do `thumbIds` array, que é definido como o recurso de imagem para o [ `ImageView` ](https://developer.xamarin.com/api/type/Android.Widget.ImageView/).
+No final do[`GetView()`](xref:Android.Widget.BaseAdapter.GetView*)
+, o `position` número inteiro passado para o método é usado para selecionar uma imagem `thumbIds` da matriz, que é definida como o recurso de imagem para o [`ImageView`](xref:Android.Widget.ImageView).
 
-Tudo o que resta é definir o `thumbIds` matriz de recursos desenháveis.
+Tudo o que resta é definir a `thumbIds` matriz de recursos desenháveis.
 
-Execute o aplicativo. O layout de grade deve ter esta aparência:
+Execute o aplicativo. O layout da grade deve ser semelhante ao seguinte:
 
-[![Captura de tela de exemplo de controle GridView exibindo 15 imagens](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png#lightbox)
+[![Captura de tela de exemplo de GridView exibindo 15 imagens](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png#lightbox)
 
-Faça experiências com os comportamentos do [ `GridView` ](https://developer.xamarin.com/api/type/Android.Widget.GridView/) e [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
-elementos ajustando suas propriedades. Por exemplo, em vez de usar [ `LayoutParams` ](https://developer.xamarin.com/api/property/Android.Views.View.LayoutParameters/) tente usar [ `SetAdjustViewBounds()` ](https://developer.xamarin.com/api/member/Android.Widget.ImageView.SetAdjustViewBounds/).
-
+Tente experimentar os comportamentos do [`GridView`](xref:Android.Widget.GridView) e do[`ImageView`](xref:Android.Widget.ImageView)
+elementos ajustando suas propriedades. Por exemplo, em vez de [`LayoutParams`](xref:Android.Views.View.LayoutParameters) usar try [`SetAdjustViewBounds()`](xref:Android.Widget.ImageView.SetAdjustViewBounds*)usando.
 
 ## <a name="references"></a>Referências
 
--   [`GridView`](https://developer.xamarin.com/api/type/Android.Widget.GridView/) 
--   [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
--   [`BaseAdapter`](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/).
+- [`GridView`](xref:Android.Widget.GridView)
+- [`ImageView`](xref:Android.Widget.ImageView)
+- [`BaseAdapter`](xref:Android.Widget.BaseAdapter)
 
-*Partes desta página são modificações com base no trabalho criado e compartilhado por Android Open Source Project e usadas de acordo com os termos descritos na*
-[*2.5 atribuição de licença da Creative Commons* ](http://creativecommons.org/licenses/by/2.5/).
+*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do*
+[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).

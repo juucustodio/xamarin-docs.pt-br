@@ -6,53 +6,53 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 63cbe556783ffe22512ff5312817d522120bd15e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 49e0de909e2255d850211e51596efdaa43f293ae
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013466"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509365"
 ---
-# <a name="creating-resources-for-varying-screens"></a>Criando recursos para variação de telas
+# <a name="creating-resources-for-varying-screens"></a>Criando recursos para diferentes telas
 
-Android em si é executado em vários dispositivos diferentes, cada qual com uma ampla variedade de resoluções e tamanhos de tela densidades de tela. Android realizará a escala e o redimensionamento para tornar seu aplicativo funcionar nestes dispositivos, mas isso pode resultar em uma experiência de usuário abaixo do ideal. Por exemplo, imagens que apareciam desfocadas, ou pode ser posicionados conforme o esperado em um modo de exibição.
+O Android é executado em vários dispositivos diferentes, cada um com uma ampla variedade de resoluções, tamanhos de tela e densidades de tela. O Android executará o dimensionamento e o redimensionamento para fazer seu aplicativo funcionar nesses dispositivos, mas isso pode resultar em uma experiência de usuário abaixo do ideal. Por exemplo, as imagens podem aparecer borradas ou podem estar posicionadas conforme o esperado em uma exibição.
 
 
 ## <a name="concepts"></a>Conceitos
 
 Alguns termos e conceitos são importantes para entender para dar suporte a várias telas.
 
-- **Tamanho da tela** &ndash; a quantidade de espaço físico para a exibição de seu aplicativo
+- **Tamanho da tela** &ndash; A quantidade de espaço físico para exibir seu aplicativo
 
-- **Densidade de tela** &ndash; o número de pixels em qualquer determinada área na tela. Unidade de medida típica é pontos por polegada (dpi).
+- **Densidade da tela** &ndash; O número de pixels em qualquer área especificada na tela. A unidade de medida típica é de pontos por polegada (DPI).
 
-- **Resolução** &ndash; o número total de pixels na tela. Ao desenvolver aplicativos, a resolução não é tão importante quanto a densidade e o tamanho da tela.
+- **Resolução** &ndash; O número total de pixels na tela. Ao desenvolver aplicativos, a resolução não é tão importante quanto o tamanho e a densidade da tela.
 
-- **Independente de densidade de pixel (dp)** &ndash; uma unidade virtual de medida para permitir layouts ser projetado independentes de densidade. Essa fórmula é usada para converter o ponto de distribuição em pixels da tela:
+- **Pixel independente de densidade (DP)** &ndash; Uma unidade de medida virtual para permitir que os layouts sejam projetados independentemente da densidade. Esta fórmula é usada para converter o DP em pixels da tela:
 
-    px &equals; dp &times; dpi &divide; 160
+    PX &equals; DP &times; dpi 160&divide;
 
-- **Orientação** &ndash; a orientação da tela é considerada como paisagem quando ele for maior do que a altura. Por outro lado, a orientação retrato é quando a tela é mais alta do que largo. A orientação pode alterar durante o tempo de vida de um aplicativo, conforme o usuário gira o dispositivo.
+- **Orientação** do &ndash; A orientação da tela é considerada paisagem quando é mais larga do que a altura. Por outro lado, a orientação retrato é quando a tela é mais alta do que a largura. A orientação pode ser alterada durante o tempo de vida de um aplicativo enquanto o usuário gira o dispositivo.
 
-Observe que as três primeiras desses conceitos são inter-relacionados &ndash; aumentar a resolução sem aumentar a densidade aumentará o tamanho da tela. No entanto se são aumentados a densidade e a resolução, em seguida, o tamanho da tela pode permanece inalterado. Essa relação entre o tamanho da tela, densidade e resolução complicam suporte de tela rapidamente.
+Observe que os três primeiros desses conceitos são inter-relacionados, &ndash; aumentando a resolução sem aumentar a densidade aumentará o tamanho da tela. No entanto, se a densidade e a resolução forem aumentadas, o tamanho da tela poderá permanecer inalterado. Essa relação entre o tamanho da tela, a densidade e a resolução complica o suporte de tela rapidamente.
 
-Para ajudar a lidar com essa complexidade, a estrutura do Android prefere usar *pixels independentes de densidade (dp)* para layouts de tela. Ao usar pixels independentes de densidade, elementos de interface do usuário serão exibida para o usuário tenha o mesmo tamanho físico em telas com diferentes densidades.
-
-
-## <a name="supporting-various-screen-sizes-and-densities"></a>Suporte a vários tamanhos de tela e densidades
-
-Android manipula a maioria do trabalho para processar os layouts corretamente para cada configuração de tela. No entanto, há algumas ações que podem ser executadas para ajudar o sistema.
-
-O uso de pixels independentes de densidade em vez de pixels reais em layouts é suficiente na maioria dos casos, para garantir a independência de densidade.
-Android dimensionará o desenháveis em tempo de execução para o tamanho apropriado.
-No entanto, é possível que dimensionamento fará com que bitmaps sejam exibidos desfocado. Para contornar esse problema, fornece recursos alternativos para diferentes densidades. Ao projetar dispositivos para diversas resoluções e densidades de tela, ela será prova mais fácil começar com a resolução mais alta ou densidade imagens e, em seguida, reduzir verticalmente.
+Para ajudar a lidar com essa complexidade, a estrutura do Android prefere usar os *espd (pixels independentes de densidade)* para layouts de tela. Usando pixels independentes de densidade, os elementos da interface do usuário aparecerão para que ele tenha o mesmo tamanho físico em telas com diferentes densidades.
 
 
-### <a name="declare-the-supported-screen-size"></a>Declare o tamanho da tela com suporte
+## <a name="supporting-various-screen-sizes-and-densities"></a>Dando suporte a vários tamanhos de tela e densidades
 
-Declarar o tamanho da tela, você garante que somente dispositivos com suporte podem baixar o aplicativo. Isso é feito definindo a [dá suporte a telas](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) elemento o **androidmanifest. XML** arquivo. Esse elemento é usado para especificar quais tamanhos de tela são compatíveis com o aplicativo. Uma determinada tela é considerada como tendo suporte se o aplicativo pode posicionar corretamente os seus layouts para preencher a tela. Usando este elemento de manifesto, o aplicativo não aparecerá na [ *Google Play* ](https://play.google.com/) para dispositivos que não atendem as especificações de tela. No entanto, o aplicativo ainda será executado em dispositivos com telas sem suporte, mas os layouts podem aparecer desfocados e pixelada.
+O Android lida com a maior parte do trabalho para renderizar os layouts corretamente para cada configuração de tela. No entanto, há algumas ações que podem ser tomadas para ajudar o sistema a sair.
 
-Tela suportadas sixes são declarados na **Properites/AndroidManifest.xml** arquivo da solução:
+O uso de pixels independentes de densidade em vez de pixels reais em layouts é suficiente na maioria dos casos para garantir a independência de densidade.
+O Android dimensionará o drawables em tempo de execução para o tamanho apropriado.
+No entanto, é possível que o dimensionamento faça com que os bitmaps apareçam borrados. Para contornar esse problema, forneça recursos alternativos para as diferentes densidades. Ao criar dispositivos para várias resoluções e densidades de tela, será mais fácil começar com as imagens mais altas de resolução ou de alta capacidade e, em seguida, reduzir verticalmente.
+
+
+### <a name="declare-the-supported-screen-size"></a>Declarar o tamanho de tela com suporte
+
+A declaração do tamanho da tela garante que apenas os dispositivos com suporte possam baixar o aplicativo. Isso é feito definindo o elemento [suportation-screens](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) no arquivo **AndroidManifest. xml** . Esse elemento é usado para especificar quais tamanhos de tela têm suporte no aplicativo. Uma determinada tela será considerada suportada se o aplicativo puder posicionar corretamente seus layouts para preencher a tela. Usando esse elemento de manifesto, o aplicativo não aparecerá no [*Google Play*](https://play.google.com/) para dispositivos que não atendem às especificações da tela. No entanto, o aplicativo ainda será executado em dispositivos com telas sem suporte, mas os layouts podem parecer borrados e pixels.
+
+As Sixes de tela com suporte são declaradas no arquivo **colocalizadas/AndroidManifest. xml** da solução:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -64,7 +64,7 @@ Tela suportadas sixes são declarados na **Properites/AndroidManifest.xml** arqu
 
 -----
 
-Edite **androidmanifest. XML** incluir [dá suporte a telas](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+Edite **AndroidManifest. xml** para incluir [suporte-telas](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -88,34 +88,34 @@ Edite **androidmanifest. XML** incluir [dá suporte a telas](https://developer.a
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>Fornecer layouts alternativos para diferentes tamanhos de tela
 
 
-Layouts alternativos possibilitam personalizar um modo de exibição para um tamanho específico da tela, alterando o posicionamento ou o tamanho dos elementos de interface do usuário do componente.
+Layouts alternativos possibilitam personalizar um modo de exibição para um tamanho de tela específico, alterando o posicionamento ou o tamanho dos elementos da interface do usuário do componente.
 
-Começando com o API nível 13 (Android 3.2), os tamanhos de tela são preteridos em favor do uso o sw*N*qualificador de dp. Esse novo qualificador declara que a quantidade de espaço em um determinado layout precisa. É recomendável que os aplicativos que se destinam a ser executado no Android 3.2 ou superior devem usar esses qualificadores mais recentes.
+Começando com o nível de API 13 (Android 3,2), os tamanhos de tela são preteridos em favor do uso do qualificador de DP SW*N*. Esse novo qualificador declara a quantidade de espaço que um determinado layout precisa. É recomendável que os aplicativos que devem ser executados no Android 3,2 ou superior devam usar esses qualificadores mais recentes.
 
-Por exemplo, se um layout necessário um mínimo de 700 dp da largura da tela, o layout alternativo deve ir em uma pasta **sw700dp layout**:
+Por exemplo, se um layout exigir um mínimo de 700 DP de largura de tela, o layout alternativo entrará em um layout de pasta **-sw700dp**:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Pasta de layout para a largura de tela de dp 700](resources-for-varying-screens-images/03-layout-sw700dp-vs.png)
+![Pasta de layout para largura de tela de 700 DP](resources-for-varying-screens-images/03-layout-sw700dp-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![Pasta de layout para a largura de tela de dp 700](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
+![Pasta de layout para largura de tela de 700 DP](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
 
 -----
 
 
 Como diretriz, aqui estão alguns números para vários dispositivos:
 
-- **Telefone típico** &ndash; 320 dp: um telefone típico
+- **Telefone típico** &ndash; 320 DP: um telefone típico
 
-- **Um tablet 5"/"tweener"dispositivo** &ndash; 480 dp: como a observação da Samsung
+- **Um dispositivo 5 "Tablet/" Tweener "** &ndash; 480 DP: como a observação do Samsung
 
-- **Um tablet 7"** &ndash; 600 dp: como a Barnes &amp; Nook Noble
+- **Um 7 "Tablet** 600 DP: como o Nook da &amp;BarnesNoble &ndash;
 
-- **Um tablet de 10"** &ndash; 720 dp: como o Motorola Xoom
+- **Um Tablet de 10 "** &ndash; 720 DP: como o Motorola Xoom
 
-Para aplicativos que os níveis de API de destino até 12 (Android 3.1), os layouts devem ir em diretórios que usam os qualificadores **pequena**/**normal**/**grandes**  / **xlarge** como generalizações dos vários tamanhos de tela que estão disponíveis na maioria dos dispositivos. Por exemplo, na imagem abaixo, há recursos alternativos para os quatro tamanhos de tela diferentes:
+Para aplicativos que têm como destino os níveis de API de até 12 (Android 3,1), os layouts devem ir em diretórios que usam os qualificadores **Small**//**xlarges** pequenos**normais**/como generalizações de os vários tamanhos de tela que estão disponíveis na maioria dos dispositivos. Por exemplo, na imagem abaixo, há recursos alternativos para os quatro tamanhos de tela diferentes:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -127,18 +127,18 @@ Para aplicativos que os níveis de API de destino até 12 (Android 3.1), os layo
 
 -----
 
-A seguir está uma comparação de como os qualificadores de tamanho de tela do mais antigos pré-API nível 13 se comparam com pixels independentes de densidade:
+Veja a seguir uma comparação de como os qualificadores de tamanho de tela mais antigos do nível de pré-API se comparam a pixels independentes de densidade:
 
-- 426 dp x 320 dp é **pequeno**
+- 426 DP x 320 DP é **pequeno**
 
-- 470 dp x 320 dp é **normal**
+- 470 DP x 320 DP é **normal**
 
-- 640 dp x 480 dp é **grandes**
+- 640 DP x 480 DP é **grande**
 
-- 960 dp x 720 dp é **xlarge**
+- 960 DP x 720 DP é **XLarge**
 
-A tela mais recente dimensionar qualificadores no nível da API 13 e backup têm uma precedência maior do que os qualificadores de tela mais antigas dos níveis de API 12 e inferiores.
-Para aplicativos que abrangerão os antigos e novos níveis de API, ele pode ser necessário criar recursos alternativos usando os dois conjuntos de qualificadores, conforme mostrado na seguinte captura de tela:
+Os qualificadores de tamanho de tela mais recentes no nível de API 13 e acima têm uma precedência mais alta do que os qualificadores de tela mais antigos dos níveis de API 12 e inferiores.
+Para aplicativos que irão abranger os níveis de API antigos e novos, pode ser necessário criar recursos alternativos usando os dois conjuntos de qualificadores, conforme mostrado na seguinte captura de tela:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -154,49 +154,49 @@ Para aplicativos que abrangerão os antigos e novos níveis de API, ele pode ser
 
 ### <a name="provide-different-bitmaps-for-different-screen-densities"></a>Fornecer bitmaps diferentes para diferentes densidades de tela
 
-Embora o Android dimensionará bitmaps conforme necessário para um dispositivo, os bitmaps em si não pode elegantemente escalar ou reduzir verticalmente: poderão ficar difusa ou indefinida. Fornecer bitmaps apropriado para a densidade da tela para atenuar esse problema.
+Embora o Android dimensione os bitmaps conforme necessário para um dispositivo, os próprios bitmaps podem não ser expandidos ou reduzidos de forma elegante: eles podem se tornar difusas ou borrados. Fornecer bitmaps apropriados para a densidade da tela atenuará esse problema.
 
-Por exemplo, a imagem abaixo é um exemplo de layout e aparência problemas que podem ocorrer quando densidade-especificar recursos não são fornecidos.
+Por exemplo, a imagem abaixo é um exemplo de problemas de layout e aparência que podem ocorrer quando os recursos de densidade-especificação não são fornecidos.
 
 ![Capturas de tela sem recursos de densidade](resources-for-varying-screens-images/06-density-not-provided.png)
 
-Compare isso com um layout que é projetado com recursos específicos de densidade:
+Compare isso com um layout projetado com recursos específicos de densidade:
 
 ![Capturas de tela com recursos específicos de densidade](resources-for-varying-screens-images/07-density-specific-resources.png)
 
 
-### <a name="create-varying-density-resources-with-android-asset-studio"></a>Criar recursos de densidade variados com Android Asset Studio
+### <a name="create-varying-density-resources-with-android-asset-studio"></a>Criar recursos de densidade variável com o Android Asset Studio
 
-A criação de migrar esses bitmaps de várias densidades pode ser um pouco entediante. Como tal, o Google criou um utilitário on-line que pode reduzir alguns do tédio envolvido na criação desses bitmaps chamada a [ **Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/).
+A criação desses bitmaps de várias densidades pode ser um pouco entediante. Dessa forma, o Google criou um utilitário online que pode reduzir alguns dos tédio envolvidos na criação desses bitmaps chamados [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/).
 
 [![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
-Este site ajudará com a criação de bitmaps que se destinam as quatro densidades de tela comum, fornecendo uma imagem. Android Asset Studio criará, em seguida, os bitmaps com algumas personalizações e, em seguida, permitir que eles sejam baixados como um arquivo zip.
+Este site ajudará na criação de bitmaps direcionados para as quatro densidades de tela comuns, fornecendo uma imagem. O Android Asset Studio criará os bitmaps com algumas personalizações e, em seguida, permitirá que eles sejam baixados como um arquivo zip.
 
 
 ## <a name="tips-for-multiple-screens"></a>Dicas para várias telas
 
-Android é executado em um número desconcertante dos dispositivos e a combinação de tamanhos de tela e densidades de tela pode parecer assustadora. As dicas a seguir podem ajudar a minimizar o esforço necessário para dar suporte a vários dispositivos:
+O Android é executado em um número desconcertante de dispositivos, e a combinação de tamanhos de tela e densidades de tela pode parecer difícil. As dicas a seguir podem ajudar a minimizar o esforço necessário para dar suporte a vários dispositivos:
 
-- **Apenas projetar e desenvolver para o que você precisa** &ndash; há muitos dispositivos diferentes por aí, mas alguns existem em fatores forma raro que podem levar um esforço significativo para projetar e desenvolver para o. O [ **tamanho da tela e densidade** ](https://developer.android.com/resources/dashboard/screens.html) painel é uma página fornecida pelo Google que fornecem dados sobre a divisão da matriz de densidade de tamanhos de tela da tela. Essa divisão fornece informações sobre como o esforço de desenvolvimento em dar suporte a telas.
+- **Projete e desenvolva apenas para o que você precisa** &ndash; Há muitos dispositivos diferentes por aí, mas alguns existem em fatores forma raros que podem levar a um esforço significativo para criar e desenvolver para o. O painel [**tamanho da tela e densidade**](https://developer.android.com/resources/dashboard/screens.html) é uma página fornecida pelo Google que fornece dados sobre a divisão da matriz de tamanho da tela/densidade da tela. Essa divisão fornece informações sobre como fazer o desenvolvimento de telas de suporte.
 
-- **Usar o DPs em vez de Pixels** -Pixels se tornar problemáticos como alterações de densidade da tela. Não codificar os valores de pixel. Evite pixels em favor de dp (pixels independentes de densidade).
+- **Use o DPS em vez de pixels** . os pixels se tornarão problemáticos conforme as alterações na densidade da tela. Não codifique valores de pixel. Evite pixels em favor de DP (pixels independentes de densidade).
 
-- **Evite** [AbsoluteLayout](https://developer.xamarin.com/api/type/Android.Widget.AbsoluteLayout/)
-  **sempre que possível** &ndash; ele foi preterido no nível da API 3 (1.5 Android) e resultará em layouts frágil. Ele não deve ser usado. Em vez disso, tente usar os widgets de layout mais flexíveis, como [ **LinearLayout**](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/), [ **RelativeLayout**](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/), ou o novo [ **GridLayout**](https://developer.xamarin.com/api/type/Android.Widget.GridLayout/).
+- **Evitar** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) Sempre que possível&ndash; , ele é preterido no nível de API 3 (Android 1,5) e resultará em layouts frágeis.  
+   Ele não deve ser usado. Em vez disso, tente usar widgets de layout mais flexíveis, como [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)ou a nova [**GridLayout**](xref:Android.Widget.GridLayout).
 
-- **Escolher uma orientação de layout como padrão** &ndash; por exemplo, em vez de fornecer recursos alternativos **layout land** e **layout porta**, coloque os recursos para Paisagem no **layout**e os recursos para retrato no **layout porta**.
+- **Escolha uma orientação de layout como padrão**    Por exemplo, em vez de fornecer os recursos alternativos layout-Land e layout-Port, coloque os recursos para paisagem no layout e os recursos para retrato em layout-Port. &ndash;
 
-- **Use LayoutParams para altura e largura** - ao definir os elementos de interface do usuário em um arquivo de layout XML, um aplicativo Android usando o **wrap_content** e **fill_parent** valores terão mais sucesso Certifique-se de uma aparência apropriada em diferentes dispositivos que o uso de pixels ou unidades independentes de densidade. Esses valores de dimensão fazer com que o Android para dimensionar recursos de bitmap conforme apropriado. Por essa mesma razão, unidades independentes de densidade são mais adequadas para quando especificando as margens e preenchimento de elementos de interface do usuário.
+- **Usar LayoutParams para altura e largura** – ao definir elementos da interface do usuário em um arquivo de layout XML, um aplicativo Android usando os valores **wrap_content** e **fill_parent** terá mais sucesso para garantir uma aparência adequada em diferentes dispositivos do que usando unidades independentes de pixel ou densidade. Esses valores de dimensão fazem com que o Android dimensione os recursos de bitmap conforme apropriado. Por esse mesmo motivo, as unidades independentes de densidade são mais bem reservadas para a especificação de margens e preenchimento de elementos de interface do usuário.
 
 
-## <a name="testing-multiple-screens"></a>Teste várias telas
+## <a name="testing-multiple-screens"></a>Testando várias telas
 
-Um aplicativo do Android deve ser testado em relação a todas as configurações que terão suporte. O ideal é que os dispositivos devem ser testados nos próprios dispositivos mas em muitos casos isso não é possível ou prático.
-Nesse caso, o uso do emulador e a instalação de dispositivos virtuais Android para cada configuração de dispositivo será útil.
+Um aplicativo Android deve ser testado em relação a todas as configurações que terão suporte. O ideal é que os dispositivos sejam testados nos próprios dispositivos, mas em muitos casos isso não é possível ou prático.
+Nesse caso, o uso da configuração do emulador e dos dispositivos virtuais Android para cada configuração de dispositivo será útil.
 
-O SDK do Android fornece alguns emulador capas podem ser usadas para criar AVDs replicará o tamanho, a densidade e a resolução de vários dispositivos.
-Da mesma forma, muitos fornecedores de hardware fornecem capas para seus dispositivos.
+O SDK do Android fornece algumas capas do emulador que podem ser usadas para criar AVDs replicará o tamanho, a densidade e a resolução de muitos dispositivos.
+Muitos dos fornecedores de hardware, de modo semelhante, fornecem capas para seus dispositivos.
 
-Outra opção é usar os serviços do serviço de teste.
-Esses serviços levar um APK, executá-lo em vários dispositivos diferentes e, em seguida, fornecer comentários como o aplicativo funcionou.
+Outra opção é usar os serviços de um serviço de teste de terceiros.
+Esses serviços terão um APK, executarão em vários dispositivos diferentes e, em seguida, fornecerão comentários sobre como o aplicativo funcionou.

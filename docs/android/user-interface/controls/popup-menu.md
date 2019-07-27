@@ -1,29 +1,29 @@
 ---
 title: Menu pop-up
-description: Como adicionar um menu pop-up que é ancorado a um modo de exibição específico.
+description: Como adicionar um menu pop-up que está ancorado a uma exibição específica.
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 1e74c8b7745936f6e9a8890fd26acafe2f2fb6d5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e7665ee1d3506fb4b6a237a7c6906d9bfb3e9cb1
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61288632"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510218"
 ---
-# <a name="popup-menu"></a>Menu pop-up
+# <a name="xamarinandroid-popup-menu"></a>Menu pop-up do Xamarin. Android
 
-O [PopupMenu](https://developer.xamarin.com/api/type/Android.Widget.PopupMenu/) (também chamado de um _menu de atalho_) é um menu que é ancorado a um modo de exibição específico. No exemplo a seguir, uma única atividade contém um botão. Quando o usuário toca no botão, é exibido um menu pop-up de três itens:
+O [PopupMenu](xref:Android.Widget.PopupMenu) (também chamado de _menu de atalho_) é um menu que é ancorado a uma determinada exibição. No exemplo a seguir, uma única atividade contém um botão. Quando o usuário toca no botão, um menu pop-up de três itens é exibido:
 
-[![Exemplo de um aplicativo com um botão e três itens de menu pop-up](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
+[![Exemplo de um aplicativo com um botão e um menu pop-up de três itens](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 
-## <a name="creating-a-popup-menu"></a>Criando um Menu pop-up
+## <a name="creating-a-popup-menu"></a>Criando um menu pop-up
 
-A primeira etapa é criar um arquivo de recurso de menu para o menu e colocá-lo no **menu derecursos/**. Por exemplo, o XML a seguir é o código para o menu de três itens é exibido na captura de tela anterior **Resources/menu/popup_menu.xml**:
+A primeira etapa é criar um arquivo de recurso de menu para o menu e colocá-lo em **recursos/menu**. Por exemplo, o XML a seguir é o código para o menu de três itens exibido na captura de tela anterior, Resources **/menu/popup_menu. xml**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -37,9 +37,9 @@ A primeira etapa é criar um arquivo de recurso de menu para o menu e colocá-lo
 </menu>
 ```
 
-Em seguida, crie uma instância de `PopupMenu` e ancorava-o em seu modo de exibição. Quando você cria uma instância do `PopupMenu`, você passa ao construtor uma referência para o `Context` , bem como o modo de exibição para o qual o menu será anexado. Como resultado, o menu pop-up é ancorado a essa exibição durante sua construção.
+Em seguida, crie uma instância `PopupMenu` do e-a em sua exibição. Quando você cria uma instância do `PopupMenu`, passa seu Construtor uma referência para o `Context` , bem como a exibição à qual o menu será anexado. Como resultado, o menu pop-up é ancorado a esta exibição durante sua construção.
 
-No exemplo a seguir, o `PopupMenu` é criado no manipulador de eventos de clique do botão (que é denominado `showPopupMenu`). Esse botão também é o modo de exibição para o qual o `PopupMenu` é ancorado, conforme mostrado no exemplo de código a seguir:
+No exemplo a seguir, o `PopupMenu` é criado no manipulador de eventos de clique para o botão (que é `showPopupMenu`denominado). Esse botão também é a exibição à qual o `PopupMenu` é ancorado, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -47,7 +47,7 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-Por fim, no menu pop-up deve ser *inflado* com o recurso de menu que foi criado anteriormente. No exemplo a seguir, a chamada para o menu [inflar](https://developer.xamarin.com/api/member/Android.Views.LayoutInflater.Inflate/p/System.Int32/Android.Views.ViewGroup/) método é adicionado e seu [Mostrar](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Show%28%29/) método é chamado para exibi-lo:
+Por fim, o menu pop-  up deve ser replanado com o recurso de menu que foi criado anteriormente. No exemplo a seguir, a chamada para o método [inflar](xref:Android.Views.LayoutInflater.Inflate*) do menu é adicionada e seu método [show](xref:Android.Widget.PopupMenu.Show) é chamado para exibi-lo:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -58,9 +58,9 @@ showPopupMenu.Click += (s, arg) => {
 ```
 
 
-## <a name="handling-menu-events"></a>Manipulação de eventos de Menu
+## <a name="handling-menu-events"></a>Manipulando eventos de menu
 
-Quando o usuário seleciona um item de menu, o [MenuItemClick](https://developer.xamarin.com/api/event/Android.Widget.PopupMenu.MenuItemClick/) clique evento será gerado e o menu será liberado. Tocando em qualquer lugar fora do menu simplesmente será descartá-la. Em ambos os casos, quando o menu é descartado, sua [DismissEvent](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Dismiss%28%29/) será gerado. O código a seguir adiciona manipuladores de eventos para ambos os `MenuItemClick` e `DismissEvent` eventos:
+Quando o usuário seleciona um item de menu, o evento de clique [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) será gerado e o menu será Descartado. Tocar em qualquer lugar fora do menu simplesmente irá descartá-lo. Em ambos os casos, quando o menu for descartado, seu [DismissEvent](xref:Android.Widget.PopupMenu.Dismiss) será gerado. O código a seguir adiciona manipuladores de eventos para `MenuItemClick` os `DismissEvent` eventos e:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -82,4 +82,4 @@ showPopupMenu.Click += (s, arg) => {
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PopupMenuDemo (sample)](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)
+- [PopupMenuDemo (exemplo)](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)

@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c93441bff02322fb938a67806ba7f5163c8c969e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61088319"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511901"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três formas de desenhar um arco
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Esses métodos são idênticos do Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) e [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) métodos. O iOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) método é semelhante, mas é restrito a arcos na circunferência de um círculo em vez de generalizado para uma elipse.
+Esses métodos são idênticos aos métodos [`AddArc`](xref:Android.Graphics.Path.AddArc*) Android e`ArcTo`[] xref: Android. Graphics. Path. ArcTo *). O iOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) método é semelhante, mas é restrito a arcos na circunferência de um círculo em vez de generalizado para uma elipse.
 
 Ambos os métodos começam com um `SKRect` valor que define o local e o tamanho de uma elipse:
 
@@ -58,7 +58,7 @@ A curva adicionada ao caminho com o `AddArc` ou `ArcTo` método é simplesmente 
 
 ![](arcs-images/anglearc.png "O arco ângulo por si só")
 
-O `startAngle` ou `sweepAngle` argumentos podem ser negativos: O arco é no sentido horário para valores positivos de `sweepAngle` e no sentido anti-horário para valores negativos.
+Os `startAngle` argumentos `sweepAngle` ou podem ser negativos: O arco é no sentido horário para valores `sweepAngle` positivos e no sentido anti-horário para valores negativos.
 
 No entanto, `AddArc` faz *não* definem uma delimitação fechada. Se você chamar `LineTo` após `AddArc`, uma linha é desenhada do final do arco até o ponto na `LineTo` método e o mesmo é verdadeiro para `ArcTo`.
 
@@ -521,7 +521,7 @@ Se essa elipse inclinada é posicionado, em seguida, para que ele aborda os dois
 
 ![](arcs-images/ellipticalarcellipse1.png "O primeiro conjunto de arcos elípticos")
 
-Esses dois arcos podem ser diferenciados de duas maneiras: O arco superior é maior do que o arco inferior e conforme o arco é desenhado da esquerda para a direita, superior arco é desenhado no sentido horário, enquanto o arco inferior é desenhado no sentido anti-horário.
+Esses dois arcos podem ser diferenciados de duas maneiras: O arco superior é maior que o arco inferior e, como o arco é desenhado da esquerda para a direita, o arco superior é desenhado em uma direção horária enquanto o arco inferior é desenhado em uma direção no sentido anti-horário.
 
 Também é possível ajustar a elipse entre os dois pontos de outra forma:
 
@@ -535,10 +535,10 @@ Esses dois pontos, portanto, podem ser conectados por um arco definido por uma e
 
 Esses quatro arcos são diferenciados por quatro combinações do [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) e [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) argumentos de tipo de enumeração para o `ArcTo` método:
 
-- vermelho: SKPathArcSize.Large e SKPathDirection.Clockwise
-- verde: SKPathArcSize.Small e SKPathDirection.Clockwise
-- azul: SKPathArcSize.Small e SKPathDirection.CounterClockwise
-- magenta: SKPathArcSize.Large e SKPathDirection.CounterClockwise
+- vermelho SKPathArcSize. Large e SKPathDirection. no sentido horário
+- amarela SKPathArcSize. Small e SKPathDirection. no sentido horário
+- azul SKPathArcSize. Small e SKPathDirection. anti-horário
+- magenta: SKPathArcSize. Large e SKPathDirection. anti-horário
 
 Se a elipse inclinada não é grande o suficiente para caber entre os dois pontos, em seguida, ele é dimensionado uniformemente até que seja grande o suficiente. Apenas dois arcos exclusivos conectam os dois pontos nesse caso. Eles podem ser diferenciados com o `SKPathDirection` parâmetro.
 

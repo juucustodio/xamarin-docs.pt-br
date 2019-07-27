@@ -1,27 +1,27 @@
 ---
-title: Criar otimizações
-description: Este documento explica as várias otimizações que são aplicadas em tempo de compilação para aplicativos xamarin. IOS e xamarin. Mac.
+title: Otimizações de compilação
+description: Este documento explica as várias otimizações que são aplicadas no momento da compilação para os aplicativos Xamarin. iOS e Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
 author: conceptdev
 ms.author: crdun
 ms.date: 04/16/2018
-ms.openlocfilehash: f1aa805b9b7a16ad1e8af573cf4170f885eb0197
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a14845646fb400285adac8579af4b15db61e047b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261189"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511159"
 ---
-# <a name="build-optimizations"></a>Criar otimizações
+# <a name="build-optimizations"></a>Otimizações de compilação
 
-Este documento explica as várias otimizações que são aplicadas em tempo de compilação para aplicativos xamarin. IOS e xamarin. Mac.
+Este documento explica as várias otimizações que são aplicadas no momento da compilação para os aplicativos Xamarin. iOS e Xamarin. Mac.
 
-## <a name="remove-uiapplicationensureuithread--nsapplicationensureuithread"></a>Remover UIApplication.EnsureUIThread / NSApplication.EnsureUIThread
+## <a name="remove-uiapplicationensureuithread--nsapplicationensureuithread"></a>Remover UIApplication. EnsureUIThread/NSApplication. EnsureUIThread
 
-Remove as chamadas para [UIApplication.EnsureUIThread] [ 1] (para xamarin. IOS) ou `NSApplication.EnsureUIThread` (para xamarin. Mac).
+Remove chamadas para [UIApplication. EnsureUIThread][1] (para xamarin. Ios) ou `NSApplication.EnsureUIThread` (para xamarin. Mac).
 
-Essa otimização será alterado o seguinte tipo de código:
+Essa otimização irá alterar o seguinte tipo de código:
 
 ```csharp
 public virtual void AddChildViewController (UIViewController childController)
@@ -31,7 +31,7 @@ public virtual void AddChildViewController (UIViewController childController)
 }
 ```
 
-da seguinte maneira:
+para o seguinte:
 
 ```csharp
 public virtual void AddChildViewController (UIViewController childController)
@@ -40,19 +40,19 @@ public virtual void AddChildViewController (UIViewController childController)
 }
 ```
 
-Essa otimização requer o vinculador a ser habilitado e só é aplicado aos métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
+Essa otimização requer que o vinculador esteja habilitado e seja aplicado somente a métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
-Por padrão, que ele é habilitado para a versão se baseia.
+Por padrão, ele é habilitado para compilações de versão.
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]remove-uithread-checks` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]remove-uithread-checks` para mTouch/MMP.
 
 [1]: https://docs.microsoft.com/dotnet/api/UIKit.UIApplication.EnsureUIThread
 
-## <a name="inline-intptrsize"></a>IntPtr.Size embutido
+## <a name="inline-intptrsize"></a>IntPtr embutido. tamanho
 
-O valor da constante de linhas internas de `IntPtr.Size` acordo com a plataforma de destino.
+Embuti o valor constante de de `IntPtr.Size` acordo com a plataforma de destino.
 
-Essa otimização será alterado o seguinte tipo de código:
+Essa otimização irá alterar o seguinte tipo de código:
 
 ```csharp
 if (IntPtr.Size == 8) {
@@ -62,7 +62,7 @@ if (IntPtr.Size == 8) {
 }
 ```
 
-da seguinte maneira (durante a criação de uma plataforma de 64 bits):
+para o seguinte (ao compilar para uma plataforma de 64 bits):
 
 ```csharp
 if (8 == 8) {
@@ -72,21 +72,21 @@ if (8 == 8) {
 }
 ```
 
-Essa otimização requer o vinculador a ser habilitado e só é aplicado aos métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
+Essa otimização requer que o vinculador esteja habilitado e seja aplicado somente a métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
-Por padrão, ele é habilitado se direcionando para uma única arquitetura de ou para o assembly de plataforma (**xamarin**, **Xamarin.TVOS.dll**, **Xamarin.WatchOS.dll** ou  **Xamarin**).
+Por padrão, ele é habilitado se estiver direcionando a uma única arquitetura ou para o assembly da plataforma (**xamarin. Ios. dll**, **xamarin. TVOS. dll**, **xamarin. WatchOS. dll** ou **xamarin. Mac. dll**).
 
-Se estiver direcionando para várias arquiteturas, essa otimização criará assemblies diferentes para a versão de 32 bits e a versão de 64 bits do aplicativo, e ambas as versões terão a serem incluídos no aplicativo, efetivamente, aumentando o tamanho final do aplicativo em vez de reduzi -lo.
+Se estiver direcionando várias arquiteturas, essa otimização criará diferentes assemblies para a versão de 32 bits e a versão de 64 bits do aplicativo, e ambas as versões precisarão ser incluídas no aplicativo, aumentando efetivamente o tamanho final do aplicativo em vez de diminuir fosse.
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]inline-intptr-size` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]inline-intptr-size` para mTouch/MMP.
 
-## <a name="inline-nsobjectisdirectbinding"></a>NSObject.IsDirectBinding embutido
+## <a name="inline-nsobjectisdirectbinding"></a>NSObject embutido. isdirectbinding
 
-`NSObject.IsDirectBinding` é uma propriedade de instância que determina se é uma instância específica de um tipo de wrapper ou não (um tipo de wrapper é um tipo gerenciado que é mapeado para um tipo nativo; para instância gerenciada `UIKit.UIView` tipo é mapeado para o nativo `UIView` tipo - o oposto é um tipo de usuário Nesse caso, `class MyUIView : UIKit.UIView` seria um tipo de usuário).
+`NSObject.IsDirectBinding`é uma propriedade de instância que determina se uma determinada instância é de um tipo de wrapper ou não (um tipo de wrapper é um tipo gerenciado que é mapeado para um tipo nativo; `UIKit.UIView` por exemplo, o tipo `UIView` gerenciado é mapeado para o tipo nativo – o oposto é um tipo de usuário , nesse caso `class MyUIView : UIKit.UIView` , seria um tipo de usuário).
 
-É necessário saber o valor de `IsDirectBinding` ao chamar em Objective-C, pois o valor determina qual versão do `objc_msgSend` usar.
+É necessário saber o valor de `IsDirectBinding` ao chamar o Objective-C, pois o valor determina qual versão do `objc_msgSend` usar.
 
-Considerando apenas o código a seguir:
+Dado apenas o código a seguir:
 
 ```csharp
 class UIView : NSObject {
@@ -117,7 +117,7 @@ class MyUIView : UIView {
 }
 ```
 
-Podemos determinar que, na `UIView.SomeProperty` o valor de `IsDirectBinding` não é uma constante e não pode ser embutida:
+Podemos determinar que no `UIView.SomeProperty` valor de `IsDirectBinding` não é uma constante e não pode ser embutido:
 
 ```csharp
 void uiView = new UIView ();
@@ -126,7 +126,7 @@ void myView = new MyUIView ();
 Console.WriteLine (myView.SomeProperty); // prints 'false'
 ```
 
-No entanto, é possível examinar todos os tipos no aplicativo e determinar que não existem tipos que herdam `NSUrl`, e, portanto, é seguro para embutir o `IsDirectBinding` valor a uma constante `true`:
+No entanto, é possível examinar todos os tipos no aplicativo e determinar que não há tipos que herdam de `NSUrl`e, portanto, é seguro embutir o `IsDirectBinding` valor em uma constante `true`:
 
 ```csharp
 void myURL = new NSUrl ();
@@ -134,7 +134,7 @@ Console.WriteLine (myURL.SomeOtherProperty); // prints 'true'
 // There's no way to make SomeOtherProperty print anything but 'true', since there are no NSUrl subclasses.
 ```
 
-Em particular, essa otimização alterará o seguinte tipo de código (esse é o código de associação para `NSUrl.AbsoluteUrl`):
+Em particular, essa otimização alterará o seguinte tipo de código (este é o código de associação `NSUrl.AbsoluteUrl`para):
 
 ```csharp
 if (IsDirectBinding) {
@@ -144,7 +144,7 @@ if (IsDirectBinding) {
 }
 ```
 
-da seguinte maneira (quando ele pode ser determinado que não há nenhum subclasses de `NSUrl` no aplicativo):
+para o seguinte (quando pode ser determinado que não há subclasses de `NSUrl` no aplicativo):
 
 ```csharp
 if (true) {
@@ -154,15 +154,15 @@ if (true) {
 }
 ```
 
-Essa otimização requer o vinculador a ser habilitado e só é aplicado aos métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
+Essa otimização requer que o vinculador esteja habilitado e seja aplicado somente a métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
-Ele está sempre habilitado por padrão para o xamarin. IOS e sempre desabilitado por padrão para xamarin. MAC (porque é possível carregar dinamicamente os assemblies no xamarin. Mac, não é possível determinar que uma determinada classe nunca é uma subclasse).
+Ele é sempre habilitado por padrão para Xamarin. iOS e sempre desabilitado por padrão para o Xamarin. Mac (porque é possível carregar dinamicamente os assemblies no Xamarin. Mac, não é possível determinar que uma classe específica nunca seja subclasseda).
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]inline-isdirectbinding` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]inline-isdirectbinding` para mTouch/MMP.
 
-## <a name="inline-runtimearch"></a>Runtime.Arch embutido
+## <a name="inline-runtimearch"></a>Tempo de execução embutido. Arch
 
-Essa otimização será alterado o seguinte tipo de código:
+Essa otimização irá alterar o seguinte tipo de código:
 
 ```csharp
 if (Runtime.Arch == Arch.DEVICE) {
@@ -172,7 +172,7 @@ if (Runtime.Arch == Arch.DEVICE) {
 }
 ```
 
-da seguinte maneira (durante a criação do dispositivo):
+para o seguinte (ao compilar para o dispositivo):
 
 ```csharp
 if (Arch.DEVICE == Arch.DEVICE) {
@@ -182,15 +182,15 @@ if (Arch.DEVICE == Arch.DEVICE) {
 }
 ```
 
-Essa otimização requer o vinculador a ser habilitado e só é aplicado aos métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
+Essa otimização requer que o vinculador esteja habilitado e seja aplicado somente a métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
-Ele está sempre habilitado por padrão para xamarin. IOS (ele não está disponível para xamarin. Mac).
+Ele está sempre habilitado por padrão para o Xamarin. iOS (ele não está disponível para o Xamarin. Mac).
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]inline-runtime-arch` para mtouch.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]inline-runtime-arch` para mTouch.
 
 ## <a name="dead-code-elimination"></a>Eliminação de código inativo
 
-Essa otimização será alterado o seguinte tipo de código:
+Essa otimização irá alterar o seguinte tipo de código:
 
 ```csharp
 if (true) {
@@ -200,13 +200,13 @@ if (true) {
 }
 ```
 
-into:
+porta
 
 ```csharp
 Console.WriteLine ("Doing this");
 ```
 
-Ela também será avaliada constante comparações, como este:
+Ele também irá avaliar as comparações constantes, como esta:
 
 ```csharp
 if (8 == 8) {
@@ -216,13 +216,13 @@ if (8 == 8) {
 }
 ```
 
-e determinar que a expressão `8 == 8` é um sempre verdadeiro e reduzi-lo para:
+e determinar se a expressão `8 == 8` é sempre verdadeira e reduzi-la para:
 
 ```csharp
 Console.WriteLine ("Doing this");
 ```
 
-Isso é uma otimização de poderosa quando usado junto com as otimizações de inlining, porque ele pode transformar o seguinte tipo de código (esse é o código de associação para `NFCIso15693ReadMultipleBlocksConfiguration.Range`):
+Essa é uma otimização poderosa quando usada junto com as otimizações de inalinhamento, porque ela pode transformar o seguinte tipo de código (esse é o código de `NFCIso15693ReadMultipleBlocksConfiguration.Range`Associação para):
 
 ```csharp
 NSRange ret;
@@ -254,7 +254,7 @@ if (IsDirectBinding) {
 return ret;
 ```
 
-Para isso (durante a criação de um dispositivo de 64 bits e quando também capaz de garantir que há nenhum `NFCIso15693ReadMultipleBlocksConfiguration` subclasses no aplicativo):
+para isso (ao compilar para um dispositivo de 64 bits e quando também é `NFCIso15693ReadMultipleBlocksConfiguration` possível garantir que não haja subclasses no aplicativo):
 
 ```csharp
 NSRange ret;
@@ -262,25 +262,25 @@ ret = global::ObjCRuntime.Messaging.NSRange_objc_msgSend (this.Handle, Selector.
 return ret;
 ```
 
-O compilador AOT já é capaz de eliminar o código morto como este, mas essa otimização é feita no vinculador, o que significa que o vinculador pode ver que há vários métodos que não são mais usados e, portanto, podem ser removidos (a menos que usado em outro lugar) :
+O compilador AOT já é capaz de eliminar códigos mortos como esse, mas essa otimização é feita dentro do vinculador, o que significa que o vinculador consegue ver que há vários métodos que não são mais usados e, portanto, podem ser removidos (a menos que sejam usados em outro lugar) :
 
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSend_stret`
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSendSuper`
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSendSuper_stret`
 
-Essa otimização requer o vinculador a ser habilitado e só é aplicado aos métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
+Essa otimização requer que o vinculador esteja habilitado e seja aplicado somente a métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
-Ele está sempre habilitado por padrão (quando o vinculador está habilitado).
+Ele sempre é habilitado por padrão (quando o vinculador está habilitado).
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]dead-code-elimination` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]dead-code-elimination` para mTouch/MMP.
 
-## <a name="optimize-calls-to-blockliteralsetupblock"></a>Otimizar a chamadas para BlockLiteral.SetupBlock
+## <a name="optimize-calls-to-blockliteralsetupblock"></a>Otimizar chamadas para BlockLiteral. SetupBlock
 
-O tempo de execução Xamarin.iOS/Mac precisa saber a assinatura do bloco durante a criação de um bloco de Objective-C para um delegado. Isso pode ser uma operação relativamente cara. Essa otimização calculam a assinatura de bloco em tempo de compilação e modificar o IL para chamar um `SetupBlock` método que usa a assinatura como um argumento em vez disso. Isso evita a necessidade para calcular a assinatura em tempo de execução.
+O tempo de execução do Xamarin. iOS/Mac precisa saber a assinatura de bloco ao criar um bloco Objective-C para um delegado gerenciado. Essa pode ser uma operação bastante cara. Essa otimização calculará a assinatura de bloco no momento da compilação e modificará o Il para `SetupBlock` chamar um método que usa a assinatura como um argumento em vez disso. Isso evita a necessidade de calcular a assinatura em tempo de execução.
 
-Parâmetros de comparação mostram que isso acelera um bloco de chamada por um fator de 10 a 15.
+Os parâmetros de comparação mostram que isso acelera a chamada de um bloco por um fator de 10 a 15.
 
-Ele transformará o seguinte [código](https://github.com/xamarin/xamarin-macios/blob/018f7153441d9d7e0f58e2046f39eeb46f1ff480/src/UIKit/UIAccessibility.cs#L198-L211):
+Ele irá transformar o seguinte [código](https://github.com/xamarin/xamarin-macios/blob/018f7153441d9d7e0f58e2046f39eeb46f1ff480/src/UIKit/UIAccessibility.cs#L198-L211):
 
 ```csharp
 public static void RequestGuidedAccessSession (bool enable, Action<bool> completionHandler)
@@ -291,7 +291,7 @@ public static void RequestGuidedAccessSession (bool enable, Action<bool> complet
 }
 ```
 
-into:
+porta
 
 ```csharp
 public static void RequestGuidedAccessSession (bool enable, Action<bool> completionHandler)
@@ -302,51 +302,51 @@ public static void RequestGuidedAccessSession (bool enable, Action<bool> complet
 }
 ```
 
-Essa otimização requer o vinculador a ser habilitado e só é aplicado aos métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
+Essa otimização requer que o vinculador esteja habilitado e seja aplicado somente a métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
-Ele é habilitado por padrão ao usar o registrador estático (em xamarin. IOS o registrador estático está habilitado por padrão para compilações de dispositivo e no registrador de estática é habilitado por padrão para a versão de xamarin. Mac se baseia).
+Ele é habilitado por padrão ao usar o registrador estático (no Xamarin. iOS, o registrador estático é habilitado por padrão para compilações de dispositivo e, no Xamarin. Mac, o registrador estático é habilitado por padrão para compilações de versão).
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]blockliteral-setupblock` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]blockliteral-setupblock` para mTouch/MMP.
 
 ## <a name="optimize-support-for-protocols"></a>Otimizar o suporte para protocolos
 
-O tempo de execução Xamarin.iOS/Mac precisa obter informações sobre protocolos de implementa Objective-C de tipos gerenciados. Essas informações são armazenadas em interfaces (e os atributos nessas interfaces), que não é um formato muito eficiente, nem é amigável para o vinculador.
+O tempo de execução do Xamarin. iOS/Mac precisa de informações sobre como os tipos gerenciados implementam os protocolos Objective-C. Essas informações são armazenadas em interfaces (e atributos nessas interfaces), o que não é um formato muito eficiente, nem é amigável para vinculador.
 
-Um exemplo é que essas interfaces armazenam informações sobre todos os membros de protocolo em um `[ProtocolMember]` atributo, que, entre outras coisas, contêm referências para os tipos de parâmetro desses membros. Isso significa que basta implementar uma interface desse tipo fará com que o vinculador preservar todos os tipos usados nessa interface, mesmo para membros opcionais o nunca chama ou o aplicativo implementa.
+Um exemplo é que essas interfaces armazenam informações sobre todos os membros de `[ProtocolMember]` protocolo em um atributo, que entre outras coisas contêm referências aos tipos de parâmetro desses membros. Isso significa que simplesmente implementar tal interface fará com que o vinculador preserve todos os tipos usados nessa interface, mesmo para membros opcionais que o aplicativo nunca chama ou implementa.
 
-Essa otimização fará com que o registrador estático armazenar todas as informações necessárias em um formato eficiente que utiliza pouca memória que é fácil e rápido encontrar no tempo de execução.
+Essa otimização fará com que o registrador estático armazene todas as informações necessárias em um formato eficiente que use pouca memória que seja fácil e rápida de encontrar no tempo de execução.
 
-Ele também ensina o vinculador que ele não necessariamente precisa preservar essas interfaces, nem qualquer um dos atributos relacionados.
+Ele também ensinará o vinculador de que ele não precisa necessariamente preservar essas interfaces nem qualquer um dos atributos relacionados.
 
-Essa otimização requer que o vinculador e o registrador estático ser habilitado.
+Essa otimização exige que o vinculador e o registrador estático sejam habilitados.
 
-No xamarin. IOS essa otimização é habilitada por padrão quando o vinculador e o registrador estático estão habilitados.
+No Xamarin. iOS, essa otimização é habilitada por padrão quando o vinculador e o registrador estático estão habilitados.
 
-No xamarin. Mac essa otimização nunca é habilitada por padrão, porque dá suporte de xamarin. Mac carregar assemblies dinamicamente e os assemblies podem não foram conhecidas em tempo de compilação (e, portanto, não otimizada).
+No Xamarin. Mac, essa otimização nunca é habilitada por padrão, pois o Xamarin. Mac dá suporte ao carregamento de assemblies dinamicamente, e esses assemblies podem não ter sido conhecidos no momento da compilação (e, portanto, não são otimizados).
 
-O comportamento padrão pode ser substituído passando `--optimize=-register-protocols` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=-register-protocols` para mTouch/MMP.
 
 ## <a name="remove-the-dynamic-registrar"></a>Remover o registrador dinâmico
 
-O xamarin. IOS e o tempo de execução do xamarin. Mac incluem suporte para [registrando tipos gerenciados](https://developer.xamarin.com/guides/ios/advanced_topics/registrar/) com o tempo de execução do Objective-C. Ele pode ser feito no momento da compilação ou em tempo de execução (ou parcialmente em tempo de compilação e o restante em tempo de execução), mas se estiver totalmente pronto no momento da compilação, isso significa que o código de suporte para fazê-lo em tempo de execução pode ser removido. Isso resulta em uma redução significativa no tamanho do aplicativo, em particular para aplicativos menores, como extensões ou aplicativos watchOS.
+O Xamarin. iOS e o tempo de execução do Xamarin. Mac incluem suporte para o [registro de tipos gerenciados](~/ios/internals/registrar.md) com o tempo de execução Objective-C. Ele pode ser feito no momento da compilação ou em tempo de execução (ou parcialmente no tempo de compilação e no restante em tempo de execução), mas se for completamente feito no momento da compilação, significa que o código de suporte para fazer isso em tempo de execução pode ser removido. Isso resulta em uma diminuição significativa no tamanho do aplicativo, especialmente para aplicativos menores, como extensões ou aplicativos watchOS.
 
-Essa otimização requer o registrador estático e o vinculador a ser habilitado.
+Essa otimização exige que o registrador estático e o vinculador sejam habilitados.
 
-O vinculador tenta determinar se é seguro remover o registrador dinâmico e se, portanto, tentar removê-lo.
+O vinculador tentará determinar se é seguro remover o registrador dinâmico e, se for, tentará removê-lo.
 
-Uma vez que o xamarin. Mac dá suporte a dinamicamente ao carregar assemblies em tempo de execução (que não eram conhecidas no momento da compilação), é impossível determinar no tempo de compilação se esta é uma otimização de segurança. Isso significa que essa otimização nunca é habilitada por padrão para aplicativos xamarin. Mac.
+Como o Xamarin. Mac dá suporte ao carregamento dinâmico de assemblies em tempo de execução (que não eram conhecidos no momento da compilação), é impossível determinar no momento da compilação se essa é uma otimização segura. Isso significa que essa otimização nunca é habilitada por padrão para aplicativos Xamarin. Mac.
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]remove-dynamic-registrar` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]remove-dynamic-registrar` para mTouch/MMP.
 
-Se o padrão é substituído para remover o registrador dinâmico, o vinculador emitirá avisos se detectar que não é seguro (mas o registrador dinâmico ainda será removido).
+Se o padrão for substituído para remover o registrador dinâmico, o vinculador emitirá avisos se detectar que ele não é seguro (mas o registrador dinâmico ainda será removido).
 
-## <a name="inline-runtimedynamicregistrationsupported"></a>Runtime.DynamicRegistrationSupported embutido
+## <a name="inline-runtimedynamicregistrationsupported"></a>Tempo de execução embutido. DynamicRegistrationSupported
 
-O valor de linhas internas de `Runtime.DynamicRegistrationSupported` conforme determinado no momento da compilação.
+Embuti o valor de `Runtime.DynamicRegistrationSupported` como determinado no tempo de compilação.
 
-Se o registrador dinâmico for removido (consulte a [remover o registrador dinâmico](#remove-the-dynamic-registrar) otimização), isso é uma constante `false` o valor, caso contrário, ela é uma constante `true` valor.
+Se o registrador dinâmico for removido (consulte [remover a otimização do registrador dinâmico](#remove-the-dynamic-registrar) ), esse é `false` um valor constante, caso contrário, `true` é um valor constante.
 
-Essa otimização será alterado o seguinte tipo de código:
+Essa otimização irá alterar o seguinte tipo de código:
 
 ```csharp
 if (Runtime.DynamicRegistrationSupported) {
@@ -356,31 +356,31 @@ if (Runtime.DynamicRegistrationSupported) {
 }
 ```
 
-para o seguinte quando o registrador dinâmico é removido:
+para o seguinte quando o registrador dinâmico for removido:
 
 ```csharp
 throw new Exception ("dynamic registration is not supported");
 ```
 
-para o seguinte quando o registrador dinâmico não é removido:
+para o seguinte quando o registrador dinâmico não for removido:
 
 ```csharp
 Console.WriteLine ("do something");
 ```
 
-Essa otimização requer o vinculador a ser habilitado e só é aplicado aos métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
+Essa otimização requer que o vinculador esteja habilitado e seja aplicado somente a métodos com o `[BindingImpl (BindingImplOptions.Optimizable)]` atributo.
 
-Ele está sempre habilitado por padrão (quando o vinculador está habilitado).
+Ele sempre é habilitado por padrão (quando o vinculador está habilitado).
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]inline-dynamic-registration-supported` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]inline-dynamic-registration-supported` para mTouch/MMP.
 
-## <a name="precompute-methods-to-create-managed-delegates-for-objective-c-blocks"></a>Pré-calcular métodos para criar delegados gerenciados para blocos de Objective-C
+## <a name="precompute-methods-to-create-managed-delegates-for-objective-c-blocks"></a>Métodos pré-calcular para criar delegados gerenciados para blocos Objective-C
 
-Quando Objective-C chama um seletor que usa um bloco como um parâmetro e, em seguida, o código gerenciado tenha substituído esse método, o xamarin. IOS / precisa criar um delegado para esse bloco de tempo de execução do xamarin. Mac.
+Quando Objective-C chama um seletor que usa um bloco como parâmetro e, em seguida, o código gerenciado tem substituído esse método, o tempo de execução do Xamarin. iOS/Xamarin. Mac precisa criar um delegado para esse bloco.
 
-O código de associação gerado pelo gerador de associação incluirá uma `[BlockProxy]` atributo, que especifica o tipo com um `Create` método que pode fazer isso.
+O código de associação gerado pelo gerador de associação incluirá `[BlockProxy]` um atributo, que especifica o tipo com `Create` um método que pode fazer isso.
 
-Considerando o seguinte código de Objective-C:
+Dado o seguinte código Objective-C:
 
 ```objc
 @interface ObjCBlockTester : NSObject {
@@ -404,7 +404,7 @@ Considerando o seguinte código de Objective-C:
 @end
 ```
 
-e o código de associação a seguir:
+e o seguinte código de ligação:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -503,15 +503,15 @@ static class Trampolines
 }
 ```
 
-Quando chama Objective-C `[ObjCBlockTester callClassCallback]`, o xamarin. IOS / xamarin. MAC de tempo de execução examinará a `[BlockProxy (typeof (Trampolines.NIDActionArity1V0))]` atributo no parâmetro. Ele irá pesquisar, em seguida, o `Create` método nesse tipo e chamar esse método para criar o delegado.
+Quando o Objective- `[ObjCBlockTester callClassCallback]`C chama, o tempo de execução do xamarin. Ios/xamarin. `[BlockProxy (typeof (Trampolines.NIDActionArity1V0))]` Mac examinará o atributo no parâmetro. Em seguida, ele pesquisará `Create` o método nesse tipo e chamará esse método para criar o delegado.
 
-Essa otimização encontrará o `Create` método em tempo de compilação e o registrador estático irá gerar o código que pesquisa o método em tempo de execução usando os tokens de metadados em vez de usar o atributo e reflexão (Isso é muito mais rápido e também permite que o vinculador Para remover o código de tempo de execução correspondentes, tornando o aplicativo menor).
+Essa otimização encontrará o `Create` método no momento da compilação, e o registrador estático gerará código que pesquisa o método em tempo de execução usando os tokens de metadados usando o atributo e a reflexão (isso é muito mais rápido e também permite o vinculador para remover o código de tempo de execução correspondente, tornando o aplicativo menor).
 
-Se o mmp/mtouch não consegue encontrar o `Create` método, em seguida, será mostrado um aviso MT4174/MM4174 e a pesquisa será executada em tempo de execução em vez disso.
-A causa mais provável manualmente é escrita o código de associação sem necessários `[BlockProxy]` atributos.
+Se MMP/mTouch não conseguir localizar o `Create` método, um aviso de MT4174/MM4174 será mostrado e a pesquisa será executada em tempo de execução.
+A causa mais provável é o código de associação gravado manualmente sem `[BlockProxy]` os atributos necessários.
 
-Essa otimização requer o registrador estático ser habilitado.
+Essa otimização requer que o registrador estático esteja habilitado.
 
-Ele está sempre habilitado por padrão (desde que o registrador estático está habilitado).
+Ele sempre é habilitado por padrão (desde que o registrador estático esteja habilitado).
 
-O comportamento padrão pode ser substituído passando `--optimize=[+|-]static-delegate-to-block-lookup` para mtouch/mmp.
+O comportamento padrão pode ser substituído passando `--optimize=[+|-]static-delegate-to-block-lookup` para mTouch/MMP.

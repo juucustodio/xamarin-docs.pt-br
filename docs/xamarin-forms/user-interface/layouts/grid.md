@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1d445e3ef8869c74f052eb1153774dfab51ffd45
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 78a84fd8d4f380739a9f080a1a5aad7c5942d0c9
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649593"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511874"
 ---
 # <a name="xamarinforms-grid"></a>Grade de xamarin. Forms
 
@@ -54,7 +54,7 @@ Informações de linha e coluna são armazenadas no `Grid`do `RowDefinitions`  &
 - **Absoluto** &ndash; dimensiona as colunas e linhas com valores de altura e largura fixas, específicos. Especificado como um valor e `GridUnitType.Absolute` em C# e como `#` em XAML, com `#` sendo o valor desejado.
 
 > [!NOTE]
-> Os valores de largura de colunas são definidos como `*` por padrão no xamarin. Forms, que garante que a coluna preencherá o espaço disponível. Os valores de altura para linhas também são definidos como `*` por padrão.
+> Os valores de largura para colunas são definidos `*` como por padrão no Xamarin. Forms, o que garante que a coluna preencherá o espaço disponível. Os valores de altura das linhas também são definidos `*` como por padrão.
 
 Considere um aplicativo que precisa de três linhas e duas colunas. A linha inferior precisa ser exatamente 200px altura e a linha superior precisa ser duas vezes com a altura da linha intermediária. A coluna à esquerda deve ser grande o suficiente para caber o conteúdo e a coluna à direita precisa preencher o espaço restante.
 
@@ -137,7 +137,7 @@ grid.Children.Add(bottomRight, 1, 1);
 
 O código acima cria a grade com quatro rótulos, duas colunas e duas linhas. Observe que cada rótulo terá o mesmo tamanho e que as linhas se expandem para usar todo o espaço disponível.
 
-No exemplo acima, as exibições são adicionadas para o [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) coleção usando o [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) sobrecarga que especifica os argumentos left e top. Ao usar o [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) durante a sobrecarga que especifica para a esquerda, direita, superior e argumentos de parte inferior, esquerda e argumentos superior sempre fará referência às células dentro a [ `Grid` ](xref:Xamarin.Forms.Grid), à direita e argumentos de parte inferior podem aparecer para se referir às células que estão fora de `Grid`. Isso ocorre porque o argumento à direita sempre deve ser maior que o argumento esquerdo e o argumento inferior sempre deve ser maior que o argumento superior. O exemplo a seguir mostra o código equivalente usando os dois `Add` sobrecargas:
+No exemplo acima, as exibições são adicionadas para o [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) coleção usando o [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) sobrecarga que especifica os argumentos left e top. Ao usar o [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) durante a sobrecarga que especifica para a esquerda, direita, superior e argumentos de parte inferior, esquerda e argumentos superior sempre fará referência às células dentro a [ `Grid` ](xref:Xamarin.Forms.Grid), à direita e argumentos de parte inferior podem aparecer para se referir às células que estão fora de `Grid`. Isso ocorre porque o argumento à direita sempre deve ser maior que o argumento esquerdo e o argumento inferior sempre deve ser maior que o argumento superior. O exemplo a seguir mostra o código equivalente usando os dois `Add` sobrecargas:
 
 ```csharp
 // left, top

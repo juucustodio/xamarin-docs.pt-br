@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 518c13aea431a8e973579768cc70b8281a31acac
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: ffe1c33c2ec93ae04af70a67d0417ab253591183
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674723"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510290"
 ---
-# <a name="edit-text"></a>Editar texto
+# <a name="xamarinandroid-edit-text"></a>Editar texto do Xamarin. Android
 
-Nesta seção, você aprenderá a usar o [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) widget para criar um campo de texto de entrada do usuário. Depois que foi digitado no campo de texto a **Enter** chave exibirá o texto em uma mensagem de notificação do sistema.
+Nesta seção, você usará o widget [EDITTEXT](xref:Android.Widget.EditText) para criar um campo de texto para entrada do usuário. Depois que o texto tiver sido inserido no campo, a tecla **Enter** exibirá o texto em uma mensagem do sistema.
 
-Abra **Resources/layout/activity_main.axml** e adicione o [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) elemento a um recipiente de layout. O exemplo a seguir **activity_main.axml** tem um `EditText` que tenha sido adicionado a um `LinearLayout`:
+Abra **Resources/layout/activity_main. axml** e adicione o elemento [EDITTEXT](xref:Android.Widget.EditText) a um layout de contenção. O exemplo a seguir **activity_main. axml** tem `EditText` um que foi adicionado a um `LinearLayout`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -35,10 +35,10 @@ Abra **Resources/layout/activity_main.axml** e adicione o [EditText](https://dev
 </LinearLayout>
 ```
 
-Neste exemplo de código, o `EditText` atributo `android:imeOptions` é definido como `actionGo`. Essa configuração altera o padrão [feito](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) ação para o [Ir](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) ação, de modo que tocar o **Enter** gatilhos da chave o `KeyPress` manipulador de entrada.
-(Normalmente, `actionGo` é usado para que o **Enter** chave leva o usuário para o destino de uma URL que é digitado.)
+Neste exemplo de código, o `EditText` atributo `android:imeOptions` é definido como `actionGo`. Essa configuração altera a ação padrão [feita](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) para a ação [go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) para que tocar a tecla **Enter** dispare `KeyPress` o manipulador de entrada.
+(Normalmente, `actionGo` é usado para que a tecla **Enter** leve o usuário para o destino de uma URL que é digitada em.)
 
-Para lidar com entrada de texto do usuário, adicione o seguinte código ao final dos [OnCreate](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/) método na **MainActivity.cs**:
+Para manipular a entrada de texto do usuário, adicione o seguinte código ao final do método [OnCreate](xref:Android.App.Activity.OnCreate*) em **MainActivity.cs**:
 
 ```csharp
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);
@@ -52,19 +52,19 @@ edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
 };
 ```
 
-Além disso, adicione o seguinte `using` instrução na parte superior do **MainActivity.cs** se ele não ainda estiver presente:
+Além disso, adicione a seguinte `using` instrução à parte superior de **MainActivity.cs** se ela ainda não estiver presente:
 
 ```csharp
 using Android.Views;
 ```
 
-Este exemplo de código infla a [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) elemento do layout e adiciona uma [KeyPress](https://developer.xamarin.com/api/event/Android.Views.View.KeyPress/) manipulador que define a ação a ser feita quando uma tecla é pressionada enquanto o widget tem o foco. Nesse caso, o método é definido para escutar o **Enter** chave (quando tocado) e, em seguida, pop-up uma [Toast](https://developer.xamarin.com/api/type/Android.Widget.Toast/) mensagem com o texto que foi inserido. Observe que o [Handled](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/) propriedade deve ser sempre `true` se o evento foi tratado. Isso é necessário para impedir que o evento por propagação up (o que resulta em um retorno de carro no campo de texto).
+Este exemplo de código inplana o elemento [EDITTEXT](xref:Android.Widget.EditText) do layout e adiciona um manipulador de [pressionamento](xref:Android.Views.View.KeyPress) de teclas que define a ação a ser feita quando uma tecla é pressionada enquanto o widget tem foco. Nesse caso, o método é definido para escutar a tecla **Enter** (quando tocado) e, em seguida, exibir uma mensagem do [sistema](xref:Android.Widget.Toast) com o texto que foi inserido. Observe que a propriedade [Handled](xref:Android.Views.View.KeyEventArgs.Handled) sempre deve ser `true` se o evento tiver sido manipulado. Isso é necessário para impedir que o evento seja bolha (o que resultaria em um retorno de carro no campo de texto).
 
-Execute o aplicativo e digite algum texto no campo de texto. Quando você pressiona o **Enter** chave, a notificação do sistema será exibida conforme mostrado à direita:
+Execute o aplicativo e insira algum texto no campo de texto. Quando você pressionar a tecla **Enter** , o sistema de notificação será exibido conforme mostrado à direita:
 
-[![Exemplos de como inserir texto em EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
+[![Exemplos de inserção de texto em EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Partes desta página são modificações com base no trabalho criado e* [ *compartilhados por Android Open Source Project* ](http://code.google.com/policies.html) *e usadas de acordo com os termos descritos no* [ *Licença de atribuição creative Commons 2.5* ](http://creativecommons.org/licenses/by/2.5/) *. Este tutorial se baseia a* [ *tutorial Android coisas de forma* ](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Partes desta página são modificações com base no trabalho criado e* [*compartilhado pelo projeto de código aberto do Android*](http://code.google.com/policies.html) *e usado de acordo com os termos descritos no* [*Licença de atribuição do Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/) *. Este tutorial se baseia no tutorial* de [*coisas de formulário do Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 
 ## <a name="related-links"></a>Links relacionados

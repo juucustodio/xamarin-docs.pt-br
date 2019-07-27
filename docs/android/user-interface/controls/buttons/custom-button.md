@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: b5ccefa1eb7e659584c1c82481bbd4473a3a8abc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ecb745f2f50b5aa0e22e331a4def0be9d8f86aa5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076223"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510390"
 ---
 # <a name="custom-button"></a>Botão personalizado
 
-Nesta seção, você criará um botão com uma imagem personalizada em vez de texto, usando o [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) widget e um arquivo XML que define três diferentes imagens a ser usado para os estados do botão diferente. Quando o botão é pressionado, uma mensagem curta será exibida.
+Nesta seção, você criará um botão com uma imagem personalizada em vez de texto, usando o [`Button`](xref:Android.Widget.Button) widget e um arquivo XML que define três imagens diferentes a serem usadas para os Estados de botão diferentes. Quando o botão for pressionado, uma mensagem curta será exibida.
 
-Com o botão direito e baixar as três imagens abaixo e, em seguida, copiá-los para o **recursos/drawable** do seu projeto. Eles serão usados para os estados do botão diferente.
+Clique com o botão direito do mouse e baixe as três imagens abaixo e copie-as para o diretório de **recursos/empates** do seu projeto. Eles serão usados para os diferentes Estados de botão.
 
- [![Ícone verde Android para o estado normal](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [ ![ícone laranja Android para o estado de foco](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [ ![ícone amarelo Android para o estado pressionado](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
+ [ ![](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [ ÍconeverdedoAndroidparaoestadonormalíconedoAndroidemlaranjaparaoestadoprioritárioícone![do](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [ ![Android amarelo para o estado pressionado](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
 
-Criar um novo arquivo na **recursos/drawable** diretório chamado **android_button.xml**. Insira o seguinte XML:
+Crie um novo arquivo no diretório de **recursos/empates** chamado **android_button. xml**. Insira o seguinte XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -34,14 +34,14 @@ Criar um novo arquivo na **recursos/drawable** diretório chamado **android_butt
 </selector>
 ```
 
-Isso define um único recurso desenhável, que vai alterar sua imagem com base no estado atual do botão. A primeira `<item>` define **android_pressed.png** como a imagem quando o botão é pressionado (ela foi ativada); o segundo `<item>` define **android_focused.png** como a imagem quando o botão destina-se (quando o botão está realçado usando o trackball ou direcional); e o terceiro `<item>` define **android_normal.png** como a imagem para o estado normal (quando pressionado nem focalizado). Esse arquivo XML agora representa um único recurso desenhável e quando referenciado por uma [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) para seu plano de fundo, a imagem exibida será alterada com base em um destes três estados.
+Isso define um único recurso que poderá ser desenhado, que alterará sua imagem com base no estado atual do botão. O primeiro `<item>` define **android_pressed. png** como a imagem quando o botão é pressionado (ele foi ativado); o segundo `<item>` define **android_focused. png** como a imagem quando o botão está focalizado (quando o botão é realçado usando o trackball ou o pad direcional); e o terceiro `<item>` define **android_normal. png** como a imagem para o estado normal (quando não pressionada nem focada). Esse arquivo XML agora representa um único recurso de desenho e, quando referenciado [`Button`](xref:Android.Widget.Button) por um para seu plano de fundo, a imagem exibida será alterada com base nesses três Estados.
 
 
 > [!NOTE]
-> A ordem dos `<item>` elementos é importante. Quando nesse desenháveis é referenciada, o `<item>`s são percorridos em ordem para determinar qual delas é apropriado para o estado atual do botão.
-> Como a imagem "normal" é o último, é apenas aplicada quando as condições `android:state_pressed` e `android:state_focused` ambos avaliou false.
+> A ordem dos `<item>` elementos é importante. Quando esse empate é referenciado, os `<item>`s são percorridos em ordem para determinar qual deles é apropriado para o estado atual do botão.
+> Como a imagem "normal" é por último, ela só é aplicada quando as `android:state_pressed` condições `android:state_focused` e ambos são avaliados como falso.
 
-Abra o **Resources/layout/Main.axml** arquivo e adicione o [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) elemento:
+Abra o arquivo Resources **/layout/Main. axml** e [`Button`](xref:Android.Widget.Button) adicione o elemento:
 
 ```xml
 <Button
@@ -52,10 +52,10 @@ Abra o **Resources/layout/Main.axml** arquivo e adicione o [ `Button` ](https://
         android:background="@drawable/android_button" />
 ```
 
-O `android:background` atributo especifica o recurso desenhável a ser usado para o plano de fundo do botão (que, quando salvo no **Resources/drawable/android.xml**, é referenciado como `@drawable/android`). Isso substitui a imagem normal do plano de fundo usada nos botões em todo o sistema. Em ordem para desenháveis alterar sua imagem de acordo com o estado do botão, a imagem deve ser aplicada ao plano de fundo.
+O `android:background` atributo especifica o recurso que deve ser desenhado a ser usado para o plano de fundo do botão (que, quando salvo em **recursos/desenhável/Android. xml**, é referenciado como `@drawable/android`). Isso substitui a imagem de plano de fundo normal usada para botões em todo o sistema. Para que o Draw possa alterar sua imagem com base no estado do botão, a imagem deve ser aplicada ao plano de fundo.
 
-Para fazer com que o botão fazer algo quando pressionado, adicione o seguinte código no final das [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle/)
-método:
+Para fazer com que o botão faça algo quando pressionado, adicione o seguinte código ao final do[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+forma
 
 ```csharp
 Button button = FindViewById<Button>(Resource.Id.button);
@@ -65,10 +65,10 @@ button.Click += (o, e) => {
 };
 ```
 
-Isso captura a [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) do layout, em seguida, adiciona um [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) mensagem a ser exibida quando o [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) é clicado.
+Isso captura o [`Button`](xref:Android.Widget.Button) do layout e, em seguida, adiciona [`Toast`](xref:Android.Widget.Toast) uma mensagem a ser exibida quando [`Button`](xref:Android.Widget.Button) o é clicado.
 
-Agora execute o aplicativo.
+Agora, execute o aplicativo.
 
 
-*Partes desta página são modificações com base no trabalho criado e compartilhado por Android Open Source Project e usadas de acordo com os termos descritos na*
-[*2.5 atribuição de licença da Creative Commons* ](http://creativecommons.org/licenses/by/2.5/).
+*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do*
+[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).

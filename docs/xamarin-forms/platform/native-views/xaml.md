@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 7a5c09bfe46b9e775383889e07fd93094ba9bf68
-ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
+ms.openlocfilehash: b2e441a8e1443d1d32d553e9bbf1126fe5e380e7
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65731528"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508855"
 ---
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
@@ -38,7 +38,7 @@ Para inserir uma exibição nativa em um arquivo XAML de xamarin. Forms:
 1. Crie uma instância do modo nativo no arquivo XAML.
 
 > [!IMPORTANT]
-> XAML compilado deve ser desabilitada para todas as páginas XAML que usam exibições nativas. Isso pode ser feito decorando a classe code-behind para a sua página XAML com o `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obter mais informações sobre a compilação de XAML, consulte [compilação XAML no xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
+> O XAML compilado deve ser desabilitado para qualquer página XAML que use exibições nativas. Isso pode ser feito decorando a classe code-behind para sua página XAML com o `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obter mais informações sobre a compilação XAML, consulte [compilação XAML no Xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
 
 Para fazer referência a um modo de exibição nativo de um arquivo code-behind, você deve usar um projeto de ativo compartilhado (SAP) e encapsule o código específico da plataforma com diretivas de compilação condicional. Para obter mais informações, consulte [referindo-se a exibições nativas do código](#native_view_code).
 
@@ -184,7 +184,7 @@ O exemplo de código a seguir demonstra as duas técnicas:
 
 O [ `UIFont.FromName` ](xref:UIKit.UIFont.FromName*) método de fábrica é usado para definir a [ `UILabel.Font` ](xref:UIKit.UILabel.Font) propriedade para um novo [ `UIFont` ](xref:UIKit.UIFont) no iOS. O `UIFont` nome e tamanho são especificados pelos argumentos de método que são filhos do `x:Arguments` atributo.
 
-O [ `Typeface.Create` ](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/p/System.String/Android.Graphics.TypefaceStyle/) método de fábrica é usado para definir a [ `TextView.Typeface` ](https://developer.xamarin.com/api/property/Android.Widget.TextView.Typeface/) propriedade para um novo [ `Typeface` ](https://developer.xamarin.com/api/type/Android.Graphics.Typeface/) no Android. O `Typeface` nome da família e estilo são especificados pelos argumentos de método que são filhos do `x:Arguments` atributo.
+O [ `Typeface.Create` ](xref:Android.Graphics.Typeface.Create*) método de fábrica é usado para definir a [ `TextView.Typeface` ](xref:Android.Widget.TextView.Typeface) propriedade para um novo [ `Typeface` ](xref:Android.Graphics.Typeface) no Android. O `Typeface` nome da família e estilo são especificados pelos argumentos de método que são filhos do `x:Arguments` atributo.
 
 O [ `FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) construtor é usado para definir a [ `TextBlock.FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) propriedade para um novo `FontFamily` no Universal Windows Platform (UWP). O `FontFamily` nome é especificado pelo argumento do método que é um filho do `x:Arguments` atributo.
 
@@ -325,7 +325,7 @@ A página contém um [ `Label` ](xref:Xamarin.Forms.Label) que exibe as frutas e
 
 A página também contém um modo de exibição de seletor de nativo para cada plataforma. Cada exibição nativa exibe a coleção de frutas, associando sua `ItemSource` propriedade para o `SubclassedNativeControlsPageViewModel.Fruits` coleção. Isso permite que o usuário escolha uma frutas, conforme mostrado nas capturas de tela seguir:
 
-![](xaml-images/sub-classed.png "Exibições nativas subclasse")
+![](xaml-images/sub-classed.png "Exibições nativas de subclasse")
 
 No iOS e Android os seletores nativos usam métodos para configurar os controles. Portanto, esses seletores devem ser uma subclasse para expor as propriedades para torná-las amigável a XAML. Na Universal Windows Platform (UWP), o `ComboBox` já é compatível com XAML e, portanto, não exige a criação de subclasses.
 
@@ -423,7 +423,7 @@ O `PickerModel` classe fornece o armazenamento subjacente para o `MyUIPickerView
 
 ### <a name="android"></a>Android
 
-As subclasses de implementação do Android a [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) exibição e expõe propriedades e um evento que pode ser facilmente consumido de XAML:
+As subclasses de implementação do Android a [ `Spinner` ](xref:Android.Widget.Spinner) exibição e expõe propriedades e um evento que pode ser facilmente consumido de XAML:
 
 ```csharp
 class MySpinner : Spinner
@@ -481,7 +481,7 @@ class MySpinner : Spinner
 }
 ```
 
-O `MySpinner` classe expõe `ItemsSource` e `SelectedObject` propriedades e um `ItemSelected` eventos. Os itens exibidos pelo `MySpinner` classe são fornecidas pelo [ `Adapter` ](https://developer.xamarin.com/api/type/Android.Widget.Adapter/) associado com o modo de exibição e itens serão populadas na `Adapter` quando o `ItemsSource` propriedade é definida pela primeira vez. Sempre que o item selecionado na `MySpinner` classe alterações, o `OnBindableSpinnerItemSelected` atualizações do manipulador de eventos a `SelectedObject` propriedade.
+O `MySpinner` classe expõe `ItemsSource` e `SelectedObject` propriedades e um `ItemSelected` eventos. Os itens exibidos pelo `MySpinner` classe são fornecidas pelo [ `Adapter` ](xref:Android.Widget.Adapter) associado com o modo de exibição e itens serão populadas na `Adapter` quando o `ItemsSource` propriedade é definida pela primeira vez. Sempre que o item selecionado na `MySpinner` classe alterações, o `OnBindableSpinnerItemSelected` atualizações do manipulador de eventos a `SelectedObject` propriedade.
 
 ## <a name="summary"></a>Resumo
 

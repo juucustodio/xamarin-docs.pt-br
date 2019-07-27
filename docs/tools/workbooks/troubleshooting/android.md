@@ -1,56 +1,55 @@
 ---
-title: Solução de problemas de pastas de trabalho do Xamarin no Android
-description: Este documento fornece dicas de solução de problemas para trabalhar com pastas de trabalho do Xamarin no Android. Ele aborda o suporte do emulador, pastas de trabalho que não é possível carregar e outros tópicos.
+title: Solução de problemas Xamarin Workbooks no Android
+description: Este documento fornece dicas de solução de problemas para trabalhar com o Xamarin Workbooks no Android. Ele aborda o suporte do emulador, pastas de trabalho que não serão carregadas e outros tópicos.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 08fa7f57f3fe44721bc00f0d59ed5df93300cf1e
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 0d04b42a8d9f230c48bb09059296eb3740336dc6
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864029"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511843"
 ---
-# <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solução de problemas de pastas de trabalho do Xamarin no Android
+# <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solução de problemas Xamarin Workbooks no Android
 
-## <a name="emulator-support"></a>Suporte do emulador
+## <a name="emulator-support"></a>Suporte a emulador
 
-Para executar uma pasta de trabalho do Android, emulador do Android deve estar disponível para uso. Não há suporte para dispositivos Android físicos.
+Para executar uma pasta de trabalho do Android, um emulador do Android deve estar disponível para uso. Não há suporte para dispositivos Android físicos.
 
-Recomendamos o emulador do Google com HAXM se o computador oferecer suporte a ele.
-Se você deve ter o Hyper-V habilitado em seu sistema, ir com o emulador Android do Visual Studio.
+Recomendamos o emulador do Google junto com HAXM se o seu computador oferecer suporte a ele.
+Se você precisar ter o Hyper-V habilitado no seu sistema, vá com o Android Emulator do Visual Studio em vez disso.
 
-Você deve ter um emulador que executa o Android 5.0 ou posterior. Não há suporte para emuladores ARM. Use `x86` ou `x86_64` somente para dispositivos.
+Você deve ter um emulador que executa o Android 5,0 ou posterior. Não há suporte para emuladores ARM. Use `x86` dispositivos `x86_64` ou somente.
 
-Leia [nossa documentação sobre como configurar os emuladores de Android][android-emu] se você não estiver familiarizado com o processo.
+Leia [nossa documentação sobre como configurar os emuladores do Android][android-emu] se você não estiver familiarizado com o processo.
 
 > [!NOTE]
-> Pastas de trabalho, 1.1 e anteriores serão tente (e falhar!) para usar emuladores ARM se elas estiverem disponíveis. Para contornar isso, emulador de inicialização x86 de sua escolha, antes de abrir ou criar uma pasta de trabalho do Android. Pastas de trabalho sempre preferirão para se conectar ao emulador em execução, desde que ele é compatível.
+> As pastas de trabalho 1,1 e anteriores tentarão (e falharão!) para usar os emuladores do ARM, se estiverem disponíveis. Para contornar isso, inicie o emulador x86 de sua escolha antes de abrir ou criar uma pasta de trabalho do Android. As pastas de trabalho sempre preferem se conectar a um emulador em execução, desde que seja compatível.
 
-## <a name="workbooks-wont-load"></a>Pastas de trabalho não pôde ser carregada
+## <a name="workbooks-wont-load"></a>Pastas de trabalho não serão carregadas
 
-### <a name="workbook-window-spins-forever-never-loads-windows"></a>Janela de pasta de trabalho para sempre, nunca gira cargas (Windows)
+### <a name="workbook-window-spins-forever-never-loads-windows"></a>Rotação da janela da pasta de trabalho para sempre, nunca carrega (Windows)
 
-Primeiro, verifique que o emulador tem acesso à rede de trabalho totalmente pelo teste de qualquer site no navegador de web do emulador.
+Primeiro, verifique se o emulador tem acesso à rede totalmente funcional testando qualquer site no navegador da Web do emulador.
 
-### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>Emulador Android do Visual Studio não pode se conectar à internet
+### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>O Android Emulator do Visual Studio não pode se conectar à Internet
 
-Se o emulador não tem acesso à rede, você precisa seguir estas etapas para corrigir o comutador de rede do Hyper-V. Se você alternar entre as redes de Wi-Fi com frequência você precisa repetir isso periodicamente:
+Se o emulador não tiver acesso à rede, talvez seja necessário seguir estas etapas para corrigir o comutador de rede do Hyper-V. Se você alternar entre redes Wi-Fi com frequência, talvez seja necessário repetir isso periodicamente:
 
-1. **Certifique-se de que todas as operações críticas de rede forem concluídas, pois isso pode desconectar-se temporariamente Windows da internet.**
+1. **Verifique se todas as operações de rede críticas foram concluídas, pois isso pode desconectar temporariamente o Windows da Internet.**
 1. Feche os emuladores.
 1. Abra `Hyper-V Manager`.
-1. Sob `Actions`, abra `Virtual Switch Manager...`.
+1. Em `Actions`, abra `Virtual Switch Manager...`.
 1. Exclua todos os comutadores virtuais.
 1. Clique em `OK`.
-1. Inicie o emulador Android do VS. Você provavelmente precisará recriar o comutador de rede virtual.
-1. Teste de que o navegador do emulador do VS Android pode acessar a internet.
+1. Inicie o VS Android Emulator. Você provavelmente será solicitado a recriar o comutador de rede virtual.
+1. Teste se o navegador do VS Android Emulator pode acessar a Internet.
 
-[android-emu]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/
-
+[android-emu]: ~/android/deploy-test/debugging/debug-on-emulator.md
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Relatório de Bugs](~/tools/workbooks/install.md#reporting-bugs)
+- [Relatando bugs](~/tools/workbooks/install.md#reporting-bugs)

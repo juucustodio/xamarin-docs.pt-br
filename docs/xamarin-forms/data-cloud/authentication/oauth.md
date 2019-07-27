@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 006e403b50a452265a40a0e95d17769fa0446a1a
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 294483e8b831aa085fc338eb05147ced1098c1c5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650409"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508255"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Autenticar usuários com um provedor de identidade
 
@@ -171,7 +171,7 @@ O `OpenUrl` método converte a URL recebida de um `NSUrl` para um .NET `Uri`, an
 
 #### <a name="android"></a>Android
 
-No Android, um esquema de URL personalizado está registrado com a especificação de um [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) atributo o `Activity` que irá manipular o esquema. Quando o provedor de identidade conclui a solicitação de autorização, ele redireciona para a URL de redirecionamento do aplicativo. Como a URL usa um esquema personalizado, ele resulta na inicialização do aplicativo do Android, passando a URL como um parâmetro de inicialização, onde ela é processada pelo `OnCreate` método da `Activity` registrado para manipular o esquema de URL personalizado. O exemplo de código a seguir mostra a classe do aplicativo de exemplo que manipula o esquema de URL personalizado:
+No Android, um esquema de URL personalizado está registrado com a especificação de um [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) atributo o `Activity` que irá manipular o esquema. Quando o provedor de identidade conclui a solicitação de autorização, ele redireciona para a URL de redirecionamento do aplicativo. Como a URL usa um esquema personalizado, ele resulta na inicialização do aplicativo do Android, passando a URL como um parâmetro de inicialização, onde ela é processada pelo `OnCreate` método da `Activity` registrado para manipular o esquema de URL personalizado. O exemplo de código a seguir mostra a classe do aplicativo de exemplo que manipula o esquema de URL personalizado:
 
 ```csharp
 [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop )]
@@ -197,7 +197,7 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-O `DataSchemes` propriedade do [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) deve ser definido como o identificador de cliente invertido é obtido da id do cliente Android para o projeto no [Console de API do Google](http://console.developers.google.com).
+O `DataSchemes` propriedade do [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) deve ser definido como o identificador de cliente invertido é obtido da id do cliente Android para o projeto no [Console de API do Google](http://console.developers.google.com).
 
 O `OnCreate` método converte a URL recebida de um `Android.Net.Url` para um .NET `Uri`, antes de processar a URL de redirecionamento com o `OnPageLoading` método de um público `OAuth2Authenticator` objeto. Isso faz com que AUTH fechar a guia do navegador da web e analisar os dados recebidos do OAuth.
 

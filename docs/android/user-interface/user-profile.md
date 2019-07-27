@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2018
-ms.openlocfilehash: 0613411e5436a0ea8ed08bf4af52dae84a9a701c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bed346b33ac92f6a1c73cdd3b29fb70ba17c5e91
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61307940"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509664"
 ---
 # <a name="user-profile"></a>Perfil do usuário
 
-Tem suporte para o Android enumeração contatos com a [ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/) provedor desde a API de nível 5. Por exemplo, a listagem de contatos é tão simple quanto usar o [ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/) classe conforme mostrado no exemplo de código a seguir:
+O Android tem suporte para enumerar contatos com o provedor [ContactsContract](xref:Android.Provider.ContactsContract) desde o nível de API 5. Por exemplo, listar contatos é tão simples quanto usar a classe [ContactContracts. Contacts](xref:Android.Provider.ContactsContract.Contacts) , conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 // Get the URI for the user's contacts:
@@ -45,18 +45,16 @@ if (cursor != null)
 }
 ```
 
-Começando com o Android 4 (API nível 14), o [ContactsContact.Profile](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Profile/) classe está disponível por meio de `ContactsContract` provedor. O `ContactsContact.Profile` fornece acesso ao perfil pessoal para o proprietário de um dispositivo, que inclui dados de contato, como do proprietário do dispositivo nome e número de telefone.
-
+A partir do Android 4 (API nível 14), a classe [ContactsContact. Profile](xref:Android.Provider.ContactsContract.Profile) está disponível por `ContactsContract` meio do provedor. O `ContactsContact.Profile` fornece acesso ao perfil pessoal para o proprietário de um dispositivo, que inclui dados de contato, como o nome do proprietário do dispositivo e o número de telefone.
 
 ## <a name="required-permissions"></a>Permissões necessárias
 
-Para ler e gravar dados de contato, os aplicativos devem solicitar a `READ_CONTACTS` e `WRITE_CONTACTS` permissões, respectivamente.
-Além disso, para ler e editar o perfil do usuário, aplicativos devem solicitar a `READ_PROFILE` e `WRITE_PROFILE` permissões.
+Para ler e gravar dados de contato, os aplicativos devem `READ_CONTACTS` solicitar `WRITE_CONTACTS` as permissões e, respectivamente.
+Além disso, para ler e editar o perfil do usuário, os aplicativos `READ_PROFILE` devem `WRITE_PROFILE` solicitar as permissões e.
 
+## <a name="updating-profile-data"></a>Atualizando dados de perfil
 
-## <a name="updating-profile-data"></a>Atualização de dados de perfil
-
-Depois que essas permissões tiverem sido definidas, um aplicativo pode usar técnicas normais de Android para interagir com os dados do perfil do usuário. Por exemplo, para atualizar o nome de exibição do perfil, chame [ContentResolver.Update](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.Update) com um `Uri` recuperados por meio de [ContactsContract.Profile.ContentRawContactsUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentRawContactsUri/) propriedade, conforme mostrado abaixo:
+Depois que essas permissões tiverem sido definidas, um aplicativo poderá usar as técnicas normais do Android para interagir com os dados do perfil do usuário. Por exemplo, para atualizar o nome de exibição do perfil, chame [ContentResolver retornem. Update](xref:Android.Content.ContentResolver.Update*) com `Uri` um recuperado por meio da propriedade [ContactsContract. Profile. ContentRawContactsUri](xref:Android.Provider.ContactsContract.Profile.ContentRawContactsUri) , conforme mostrado abaixo:
 
 ```csharp
 var values = new ContentValues ();
@@ -66,9 +64,9 @@ values.Put (ContactsContract.Contacts.InterfaceConsts.DisplayName, "John Doe");
 ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri, values, null, null);
 ```
 
-## <a name="reading-profile-data"></a>Leitura de dados de perfil
+## <a name="reading-profile-data"></a>Lendo dados de perfil
 
-Emitir uma consulta para o [ContactsContact.Profile.ContentUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentUri/) leituras de volta os dados de perfil. Por exemplo, o código a seguir lerá o nome de exibição do perfil do usuário:
+Emitir uma consulta para o [ContactsContact. Profile. ContentUri](xref:Android.Provider.ContactsContract.Profile.ContentUri) lê os dados do perfil. Por exemplo, o código a seguir lerá o nome de exibição do perfil do usuário:
 
 ```csharp
 // Read the profile
@@ -92,24 +90,22 @@ if (cursor != null)
 
 ## <a name="navigating-to-the-user-profile"></a>Navegando até o perfil do usuário
 
-Por fim, para navegar até o perfil do usuário, crie uma intenção com um `ActionView` ação e uma `ContactsContract.Profile.ContentUri` , em seguida, passá-lo para o `StartActivity` método como este:
+Por fim, para navegar até o perfil do usuário, crie uma intenção `ActionView` com uma ação `ContactsContract.Profile.ContentUri` e, em seguida, `StartActivity` passe-a para o método como este:
 
 ```csharp
 var intent = new Intent (Intent.ActionView,
-    ContactsContract.Profile.ContentUri);           
+    ContactsContract.Profile.ContentUri);
 StartActivity (intent);
 ```
 
-Ao executar o código acima, o perfil do usuário é exibido, conforme ilustrado na captura de tela a seguir:
+Ao executar o código acima, o perfil do usuário é exibido conforme ilustrado na captura de tela a seguir:
 
-[![Captura de tela de perfil para exibir o perfil de usuário de John Doe](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
+[![Captura de tela do perfil exibindo o perfil de usuário John Doe](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
-Trabalhar com o perfil do usuário é semelhante a interagir com outros dados no Android, e oferece um nível adicional de personalização do dispositivo.
-
-
+Trabalhar com o perfil do usuário é semelhante a interagir com outros dados no Android e oferece um nível adicional de personalização de dispositivos.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ContactsProviderDemo (sample)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
-- [Apresentando o Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma 4.0 Android](https://developer.android.com/sdk/android-4.0.html)
+- [ContactsProviderDemo (exemplo)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
+- [Introdução ao sanduíche de sorvete](http://www.android.com/about/ice-cream-sandwich/)
+- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

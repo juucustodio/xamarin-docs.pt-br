@@ -1,27 +1,27 @@
 ---
-title: TableLayout
+title: TableLayout Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 25b2393d2133c0a1f3f8354584c276fcd7ddaa4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9a5186fe49edc81f5d6ec8ca297146a27a0274fa
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61305135"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509681"
 ---
-# <a name="tablelayout"></a>TableLayout
+# <a name="xamarinandroid-tablelayout"></a>TableLayout Xamarin. Android
 
-[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
-que exibe o filho [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+[`TableLayout`](xref:Android.Widget.TableLayout)é um[`ViewGroup`](xref:Android.Views.ViewGroup)
+que exibe o filho[`View`](xref:Android.Views.View)
 elementos em linhas e colunas.
 
-Iniciar um novo projeto chamado **HelloTableLayout**.
+Inicie um novo projeto chamado **HelloTableLayout**.
 
-Abra o **Resources/Layout/Main.axml** de arquivo e insira o seguinte:
+Abra o arquivo Resources **/layout/Main. axml** e insira o seguinte:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,13 +102,13 @@ Abra o **Resources/Layout/Main.axml** de arquivo e insira o seguinte:
 </TableLayout>
 ```
 
-Observe como isso se parece com a estrutura de uma tabela HTML. O [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/)
-elemento é como o HTML `<table>` elemento; [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/)
-é como uma `<tr>` elemento; mas para as células, você pode usar qualquer tipo de [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) elemento. Neste exemplo, um [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
-é usado para cada célula. Entre algumas das linhas, também há um basic [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/), que é usado para desenhar uma linha horizontal.
+Observe como isso se assemelha à estrutura de uma tabela HTML. Dos[`TableLayout`](xref:Android.Widget.TableLayout)
+o elemento é como o `<table>` elemento HTML;[`TableRow`](xref:Android.Widget.TableRow)
+é como um `<tr>` elemento; mas, para as células, você pode usar qualquer tipo [`View`](xref:Android.Views.View) de elemento. Neste exemplo, um[`TextView`](xref:Android.Widget.TextView)
+é usado para cada célula. Entre algumas das linhas, há também um básico [`View`](xref:Android.Views.View), que é usado para desenhar uma linha horizontal.
 
-Certifique-se de sua **HelloTableLayout** esse layout na atividade é carregada a [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-método:
+Verifique se sua atividade **HelloTableLayout** carrega esse layout no[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+forma
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -118,9 +118,9 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-O [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) método carrega o arquivo de layout para o [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), especificado pela ID de recurso &mdash; `Resource.Layout.Main` refere-se ao **recursos/Layout / Main. axml** arquivo de layout.
+O [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)método) carrega o arquivo de layout para [`Activity`](xref:Android.App.Activity)o, especificado pela ID &mdash; `Resource.Layout.Main` do recurso refere-se ao arquivo de layout Resources **/layout/Main. axml** .
 
-Execute o aplicativo. Você verá o seguinte:
+Execute o aplicativo. Você deve ver o seguinte:
 
 [![Captura de tela de exemplo do aplicativo TableLayout exibindo várias linhas da tabela](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
@@ -128,11 +128,11 @@ Execute o aplicativo. Você verá o seguinte:
 
 ## <a name="references"></a>Referências
 
--   [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 
+-   [`TableLayout`](xref:Android.Widget.TableLayout) 
 
--   [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/) 
+-   [`TableRow`](xref:Android.Widget.TableRow) 
 
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
+-   [`TextView`](xref:Android.Widget.TextView) 
 
-*Partes desta página são modificações com base no trabalho criado e compartilhado por Android Open Source Project e usadas de acordo com os termos descritos na*
-[*2.5 atribuição de licença da Creative Commons* ](http://creativecommons.org/licenses/by/2.5/).
+*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do*
+[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).

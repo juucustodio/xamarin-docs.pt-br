@@ -1,50 +1,50 @@
 ---
-title: Provedores funcionam como conteúdo
+title: Como os provedores de conteúdo funcionam
 ms.prod: xamarin
 ms.assetid: B9E2EF89-7EBE-45F5-1ED9-7D2C70BE792C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: df4c2e10e34c308e4fadb44fba9c6a14714ae1b9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 64a12f4f797630ad37e5821cd04a14a9d561c53e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60952840"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510685"
 ---
-# <a name="how-content-providers-work"></a>Provedores funcionam como conteúdo
+# <a name="how-content-providers-work"></a>Como os provedores de conteúdo funcionam
 
-Há duas classes envolvidas em um `ContentProvider` interação:
+Há duas classes envolvidas em uma `ContentProvider` interação:
 
-- **ContentProvider** &ndash; implementa uma API que expõe um conjunto de dados de uma maneira padrão. Os principais métodos são a consulta, inserção, atualização e exclusão.
+- **ContentProvider** &ndash; Implementa uma API que expõe um conjunto de dados de forma padrão. Os principais métodos são consulta, inserção, atualização e exclusão.
 
-- **ContentResolver** &ndash; um proxy estático que se comunica com um `ContentProvider` para acessar seus dados, seja de dentro do mesmo aplicativo ou de outro aplicativo.
+- **ContentResolver retornem** Um proxy estático que se comunica com um `ContentProvider` para acessar seus dados, seja de dentro do mesmo aplicativo ou de outro aplicativo. &ndash;
 
-Um provedor de conteúdo normalmente é apoiado por um banco de dados SQLite, mas a API significa que consome o código não precisa saber nada sobre o SQL subjacente. Consultas são feitas por meio de um Uri usando constantes para fazer referência a nomes de coluna (para reduzir as dependências na estrutura de dados subjacente) e um `ICursor` é retornado para o código de consumo iterar sobre.
+Um provedor de conteúdo é normalmente apoiado por um banco de dados SQLite, mas a API significa que o consumo de código não precisa saber nada sobre o SQL subjacente. As consultas são feitas por meio de um URI usando constantes para referenciar nomes de coluna (para reduzir as dependências na estrutura `ICursor` de dados subjacente) e um é retornado para que o código de consumo seja iterado.
 
 
 ## <a name="consuming-a-contentprovider"></a>Consumindo um ContentProvider
 
-`ContentProviders` expor sua funcionalidade por meio de um Uri que é registrado na **androidmanifest. XML** do aplicativo que publica os dados. Há uma convenção em que o Uri e as colunas de dados que são expostas devem estar disponíveis como constantes de tornar mais fácil associar aos dados. Interno do Android `ContentProviders` tudo fornecem classes de conveniência com constantes que fazem referência a estrutura de dados em de [ `Android.Providers` ](https://developer.xamarin.com/api/namespace/Android.Provider/) namespace.
+`ContentProviders`expor sua funcionalidade por meio de um URI que é registrado no **AndroidManifest. xml** do aplicativo que publica os dados. Há uma convenção em que o URI e as colunas de dados que são expostas devem estar disponíveis como constantes para facilitar a ligação aos dados. `ContentProviders` Tudo interno do Android fornece classes de conveniência com constantes que fazem referência à estrutura de dados [`Android.Providers`](xref:Android.Provider) no namespace.
 
 
 
 ### <a name="built-in-providers"></a>Provedores internos
 
-Android oferece acesso a uma ampla variedade de sistema e dados de usuário usando `ContentProviders`:
+O Android oferece acesso a uma ampla variedade de dados do sistema e `ContentProviders`do usuário usando:
 
-- *Navegador* &ndash; indicadores e o histórico do navegador (requer a permissão `READ_HISTORY_BOOKMARKS` e/ou `WRITE_HISTORY_BOOKMARKS`).
+- *Navegador* indicadores e histórico de navegador (requer permissão `READ_HISTORY_BOOKMARKS` e/ou `WRITE_HISTORY_BOOKMARKS`). &ndash;
 
 - *CallLog* &ndash; chamadas recentes feitas ou recebidas com o dispositivo.
 
-- *Contatos* &ndash; detalhados de informações da lista de contatos do usuário, incluindo as pessoas, telefones, fotos e grupos.
+- *Contatos* do &ndash; informações detalhadas da lista de contatos do usuário, incluindo pessoas, telefones, fotos & grupos.
 
-- *MediaStore* &ndash; conteúdo de dispositivo do usuário: áudio (álbuns, artistas, gêneros, listas de reprodução), (incluindo miniaturas) de imagens e vídeos.
+- *MediaStore* &ndash; conteúdo do dispositivo do usuário: áudio (álbuns, artistas, gêneros, listas de reprodução), imagens (incluindo miniaturas) & vídeo.
 
-- *As configurações* &ndash; preferências e configurações de dispositivo de todo o sistema.
+- *Configurações* do &ndash; configurações e preferências do dispositivo de todo o sistema.
 
-- *UserDictionary* &ndash; conteúdo do dicionário definido pelo usuário usado para a entrada de texto preditivo.
+- *Userdictionary* &ndash; conteúdo do dicionário definido pelo usuário usado para entrada de texto preditiva.
 
 - *Caixa postal* &ndash; histórico de mensagens de correio de voz.
 
@@ -52,31 +52,31 @@ Android oferece acesso a uma ampla variedade de sistema e dados de usuário usan
 
 ## <a name="classes-overview"></a>Visão geral de classes
 
-Classes primárias usadas ao trabalhar com um `ContentProvider` são mostrados aqui:
+As classes primárias usadas ao trabalhar com `ContentProvider` um são mostradas aqui:
 
-[![Diagrama de classe do aplicativo do provedor de conteúdo e interações de aplicativo de consumo](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
+[![Diagrama de classes do aplicativo provedor de conteúdo e interações de aplicativo de consumo](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
 
-Neste diagrama, o `ContentProvider` implementa consultas e registra o URI que outros aplicativos usam para localizar os dados. O `ContentResolver` atua como um proxy para o `ContentProvider` (consultar, inserir, atualizar e excluir métodos). O `SQLiteOpenHelper` contém dados usados pelo `ContentProvider`, mas ele não é diretamente exposto a aplicativos que consomem.
-O `CursorAdapter` passa o cursor retornado pela `ContentResolver` para exibir em um `ListView`. O `UriMatcher` é uma classe auxiliar que analisa os URIs durante o processamento de consultas.
+Neste diagrama, o implementa `ContentProvider` as consultas e registra os URIs que outros aplicativos usam para localizar dados. O `ContentResolver` atua como um ' proxy ' para os `ContentProvider` métodos (consulta, inserção, atualização e exclusão). O `SQLiteOpenHelper` contém dados usados `ContentProvider`pelo, mas não é exposto diretamente ao consumo de aplicativos.
+O `CursorAdapter` passa o cursor retornado `ContentResolver` pelo para exibir em um `ListView`. O `UriMatcher` é uma classe auxiliar que analisa URIs ao processar consultas.
 
 A finalidade de cada classe é descrita abaixo:
 
-- **ContentProvider** &ndash; implementar métodos dessa classe abstrata para expor os dados. A API é disponibilizada para outros aplicativos por meio do atributo de Uri que é adicionado à definição de classe e classes.
+- **ContentProvider** &ndash; Implemente os métodos dessa classe abstrata para expor dados. A API é disponibilizada para outras classes e aplicativos por meio do atributo URI que é adicionado à definição de classe.
 
-- **SQLiteOpenHelper** &ndash; ajuda a implementa o armazenamento de dados SQLite que é exposto pelo `ContentProvider`.
+- **SQLiteOpenHelper** Ajuda a implementar o repositório de armazenamento do SQLite que é `ContentProvider`exposto pelo. &ndash;
 
-- **UriMatcher** &ndash; uso `UriMatcher` em seu `ContentProvider` implementação para ajudar a gerenciar os Uris que são usados para consultar o conteúdo.
+- **UriMatcher** &ndash; Use em`UriMatcher` sua`ContentProvider` implementação para ajudar a gerenciar URIs que são usados para consultar o conteúdo.
 
-- **ContentResolver** &ndash; consumo código usa um `ContentResolver` para acessar um `ContentProvider` instância. As duas classes juntos cuidam dos problemas de comunicação entre processos, permitindo que os dados sejam facilmente compartilhados entre aplicativos. Nunca consumo código cria uma `ContentProvider` classe explicitamente; em vez disso, os dados são acessados com a criação de um cursor com base em um Uri exposto pelo `ContentProvider` aplicativo.
+- **ContentResolver retornem** O consumo de código `ContentResolver` usa um para `ContentProvider` acessar uma instância do. &ndash; As duas classes juntos cuidam dos problemas de comunicação entre processos, permitindo que os dados sejam facilmente compartilhados entre os aplicativos. O consumo de código nunca `ContentProvider` cria uma classe explicita; em vez disso, os dados são acessados criando um cursor com base `ContentProvider` em um URI exposto pelo aplicativo.
 
-- **CursorAdapter** &ndash; uso `CursorAdapter` ou `SimpleCursorAdapter` para exibir os dados acessados por meio de um `ContentProvider`.
+- **CursorAdapter** &ndash; `ContentProvider`Use `CursorAdapter` ou paraexibirdadosacessados`SimpleCursorAdapter` por meio de um.
 
-O `ContentProvider` API permite que os consumidores executar uma variedade de operações nos dados, tais como:
+A `ContentProvider` API permite que os consumidores realizem uma variedade de operações nos dados, como:
 
--  Consultar os dados para retornar listas ou registros individuais.
+-  Consultar dados para retornar listas ou registros individuais.
 -  Modificar registros individuais.
--  Adicione novos registros.
--  Exclua registros.
+-  Adicionar novos registros.
+-  Excluir registros.
 
-Este documento contém um exemplo que usa um sistema forneceu `ContentProvider`, bem como um exemplo simples de somente leitura que implementa um personalizado `ContentProvider`.
+Este documento contém um exemplo que usa um fornecido `ContentProvider`pelo sistema, bem como um exemplo simples de somente leitura que implementa um personalizado. `ContentProvider`
 

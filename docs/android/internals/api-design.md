@@ -1,72 +1,69 @@
 ---
-title: Princípios de Design de API do xamarin. Android
+title: Princípios de design da API do Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c10935f4623fd4455ec5cf8a80c6473c0f69d9b9
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 2958e456aeb25ba39697ad82500d574907e963e4
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674683"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510755"
 ---
-# <a name="xamarinandroid-api-design-principles"></a>Princípios de Design de API do xamarin. Android
+# <a name="xamarinandroid-api-design-principles"></a>Princípios de design da API do Xamarin. Android
 
+Além das principais bibliotecas de classes base que fazem parte do mono, o Xamarin. Android é fornecido com associações para várias APIs do Android para permitir que os desenvolvedores criem aplicativos Android nativos com o mono.
 
-## <a name="overview"></a>Visão geral
-
-Além das principais bibliotecas de classes Base que fazem parte do Mono, xamarin. Android é fornecido com associações para várias APIs do Android permitir aos desenvolvedores criar aplicativos nativos Android com o Mono.
-
-A essência do xamarin. Android existe é um mecanismo de interoperabilidade nesse mundo pontes de c# com o mundo Java e fornece aos desenvolvedores acesso às APIs do Java do c# ou outras linguagens .NET.
+No núcleo do Xamarin. Android há um mecanismo de interoperabilidade que une C# o mundo com o mundo Java e fornece aos desenvolvedores acesso às APIs Java de C# ou de outras linguagens .net.
 
 
 ## <a name="design-principles"></a>Princípios de design
 
-Estes são alguns dos nossos princípios de design para a associação do xamarin. Android
+Estes são alguns dos princípios de design para a associação do Xamarin. Android
 
--  Estar em conformidade com o [diretrizes de Design do .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
+-  Obedecer às [diretrizes de design de .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
 
--  Permitir que os desenvolvedores classes Java de subclasse.
+-  Permitir que os desenvolvedores criem classes Java de subclasse.
 
--  Subclasse deve trabalhar com construções de linguagem c# padrão.
+-  A subclasse deve funcionar com C# construções padrão.
 
 -  Derive de uma classe existente.
 
--  Chame o construtor de base para a cadeia.
+-  Chame o construtor base para a cadeia.
 
--  Substituindo métodos deve ser feito com C#de substituir o sistema.
+-  Os métodos de substituição devem ser C#feitos com o sistema de substituição.
 
--  Possibilitam tarefas comuns de Java fácil e difíceis de tarefas de Java.
+-  Torne as tarefas Java comuns fáceis e as tarefas de Java difíceis possíveis.
 
--  Expor propriedades JavaBean como propriedades do c#.
+-  Expor propriedades de JavaBean C# como propriedades.
 
 -  Expor uma API fortemente tipada:
 
-    - Aumente a segurança de tipos.
+    - Aumente a segurança do tipo.
 
     - Minimize os erros de tempo de execução.
 
-    - Obter o intellisense do IDE em tipos de retorno.
+    - Obter o IntelliSense do IDE em tipos de retorno.
 
-    - Permite a documentação de pop-up do IDE.
+    - Permite documentação de popup do IDE.
 
--  Incentive a explorar as APIs no IDE:
+-  Incentive a exploração no IDE das APIs:
 
-    - Utilize alternativas de estrutura para minimizar Java Classlib exposição.
+    - Utilize alternativas de estrutura para minimizar a exposição do Java classlib.
 
-    - Expor delegados c# (lambdas, métodos anônimos e System. Delegate) em vez de interfaces de método único quando apropriado e aplicável.
+    - Exponha C# delegados (lambdas, métodos anônimos e System. Delegate) em vez de interfaces de método único quando apropriado e aplicável.
 
-    - Fornecem um mecanismo para chamar as bibliotecas de Java arbitrárias ( [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)).
+    - Forneça um mecanismo para chamar bibliotecas Java arbitrárias ( [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)).
 
 
 ## <a name="assemblies"></a>Assemblies
 
-Xamarin. Android inclui um número de assemblies que constituem o *MonoMobile perfil*. O [Assemblies](~/cross-platform/internals/available-assemblies.md) página tem mais informações.
+O Xamarin. Android inclui vários assemblies que constituem o *perfil monomobile*. A página [assemblies](~/cross-platform/internals/available-assemblies.md) tem mais informações.
 
-As associações para a plataforma Android estão contidas no `Mono.Android.dll` assembly. Esse assembly contém a associação inteira para consumo de APIs de Android e se comunicando com o tempo de execução do Android VM.
+As associações à plataforma Android estão contidas no `Mono.Android.dll` assembly. Esse assembly contém toda a associação para consumir APIs do Android e se comunicar com a VM de tempo de execução do Android.
 
 
 ## <a name="binding-design"></a>Design de associação
@@ -74,21 +71,21 @@ As associações para a plataforma Android estão contidas no `Mono.Android.dll`
 
 ### <a name="collections"></a>Coleções
 
-As APIs do Android utilizar as coleções Util extensivamente para fornecer listas, conjuntos e mapas. Podemos expor esses elementos usando o [Collections](xref:System.Collections.Generic) interfaces em nossa ligação. Os mapeamentos fundamentais são:
+As APIs do Android utilizam extensivamente as coleções de Java. util para fornecer listas, conjuntos e mapas. Nós expõemos esses elementos usando as interfaces [System. Collections. Generic](xref:System.Collections.Generic) em nossa associação. Os mapeamentos fundamentais são:
 
--   [java.util.Set<E> ](https://developer.android.com/reference/java/util/Set.html) mapeia para o tipo de sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), classe auxiliar [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
+-   [Java. util. Set<E> ](https://developer.android.com/reference/java/util/Set.html) mapeia para tipo de [sistema<T>ICollection](xref:System.Collections.Generic.ICollection`1) [<T>, classe auxiliar Android. Runtime. javaset](xref:Android.Runtime.JavaSet`1).
 
--   [java.util.List<E> ](https://developer.android.com/reference/java/util/List.html) mapeia para o tipo de sistema [IList<T>](xref:System.Collections.Generic.IList`1), classe auxiliar [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
+-   [Java. util. List<E> ](https://developer.android.com/reference/java/util/List.html) mapeia para tipo de [sistema<T>IList](xref:System.Collections.Generic.IList`1) [<T>, classe auxiliar Android. Runtime. javalist](xref:Android.Runtime.JavaList`1).
 
--   [java.util.Map < K, V >](https://developer.android.com/reference/java/util/Map.html) mapeia para o tipo de sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), classe auxiliar [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
+-   [Java. util. Map < K, V >](https://developer.android.com/reference/java/util/Map.html) mapeia para o tipo de sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), classe auxiliar [Android. Runtime. JavaDictionary < K, V >](xref:Android.Runtime.JavaDictionary`2).
 
--   [java.util.Collection<E> ](https://developer.android.com/reference/java/util/Collection.html) mapeia para o tipo de sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), classe auxiliar [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
+-   o [Java. util.<E> Collection](https://developer.android.com/reference/java/util/Collection.html) é mapeado para o tipo de sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1) [<T>, a classe auxiliar Android. Runtime. javacollection](xref:Android.Runtime.JavaCollection`1).
 
-Nós fornecemos classes auxiliares para facilitar mais rápido copyless marshaling desses tipos. Quando possível, é recomendável usar esses fornecidos coleções em vez da implementação da estrutura fornecida, como [ `List<T>` ](xref:System.Collections.Generic.List`1) ou [ `Dictionary<TKey, TValue>` ](xref:System.Collections.Generic.Dictionary`2). O [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) implementações utilizar uma coleção nativa do Java internamente e, portanto, não exigem copiar de e para uma coleção nativa ao passar para um membro de API do Android.
+Fornecemos classes auxiliares para facilitar o marshaling mais rápido desses tipos. Quando possível, é recomendável usar essas coleções fornecidas em vez da implementação fornecida pela estrutura [`List<T>`](xref:System.Collections.Generic.List`1) , [`Dictionary<TKey, TValue>`](xref:System.Collections.Generic.Dictionary`2)como ou. As implementações do [Android. Runtime](xref:Android.Runtime) utilizam uma coleção Java nativa internamente e, portanto, não exigem a cópia de e para uma coleção nativa ao passar para um membro da API do Android.
 
-Você pode passar qualquer implementação de interface para um método Android aceitar essa interface, por exemplo, passar uma `List<int>` para o [ArrayAdapter&lt;int&gt;(contexto, int, IList&lt;int&gt;)](https://developer.xamarin.com/api/constructor/Android.Widget.ArrayAdapter%3CT%3E.ArrayAdapter%3CT%3E/p/Android.Content.Context/System.Int32/System.Collections.Generic.IList%7BT%7D/)construtor. *No entanto*, para todas as implementações *exceto* para as implementações de Android.Runtime, isso envolve *copiando* a lista da VM Mono no tempo de execução Android VM. Se a lista for posterior alterada dentro do tempo de execução do Android (por exemplo, invocando o [ArrayAdapter&lt;T&gt;. Add(T)](https://developer.xamarin.com/api/member/Android.Widget.ArrayAdapter%3CT%3E.Add/p/T/) método), essas alterações *não* estar visível em código gerenciado. Se um `JavaList<int>` foram usadas, essas alterações seria visíveis.
+Você pode passar qualquer implementação de interface para um método Android aceitando essa interface, por exemplo `List<int>` , passar um para o construtor [ArrayAdapter&lt;&gt;int (Context&lt;,&gt;int, IList int)](xref:Android.Widget.ArrayAdapter`1) . *No entanto*, para todas as implementações, *exceto* para as implementações do Android. Runtime, isso envolve *copiar* a lista da VM mono para a VM de tempo de execução do Android. Se a lista for alterada posteriormente no tempo de execução do Android (por exemplo, invocando [&lt;ArrayAdapter&gt;T. Add (T)](xref:Android.Widget.ArrayAdapter`1.Add*) Method), essas alterações *não serão* visíveis no código gerenciado. Se um `JavaList<int>` tiver sido usado, essas alterações ficarão visíveis.
 
-Refeita, coleções de interface implementações que são *não* uma das opções acima listadas **classe auxiliar**es apenas empacotar [In]:
+As implementações de interface de coleções reformuladas que *não* são uma das **classes auxiliares**listadas acima apenas empacotam [in]:
 
 ```csharp
 // This fails:
@@ -109,21 +106,21 @@ if (goodSource.Count != 4) // false
 
 ### <a name="properties"></a>Propriedades
 
-Métodos Java são transformados em propriedades, quando apropriado:
+Os métodos Java são transformados em Propriedades, quando apropriado:
 
--  O par de métodos Java `T getFoo()` e `void setFoo(T)` são transformados no `Foo` propriedade. Exemplo: [Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/).
+-  O par `T getFoo()` de métodos Java `void setFoo(T)` e é transformado na `Foo` propriedade. Exemplo: [Activity. intuito](xref:Android.App.Activity.Intent).
 
--  O método Java `getFoo()` é transformado em que a propriedade de Foo somente leitura. Exemplo: [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/).
+-  O método `getFoo()` Java é transformado na propriedade foo somente leitura. Exemplo: [Context.PackageName](xref:Android.Content.Context.PackageName).
 
--  Propriedades de conjunto não são geradas.
+-  As propriedades somente set não são geradas.
 
--  As propriedades são *não* gerado se o tipo de propriedade seria uma matriz.
+-  As propriedades *não* serão geradas se o tipo de propriedade for uma matriz.
 
 
 
 ### <a name="events-and-listeners"></a>Eventos e ouvintes
 
-As APIs do Android são criadas com base no Java e seus componentes seguem o padrão de Java para conectar ouvintes de eventos. Este padrão tende a ser inconveniente, pois exige que o usuário criar uma classe anônima e declarar os métodos para substituir, por exemplo, isso é como as coisas seriam realizadas no Android com o Java:
+As APIs do Android são criadas com base no Java e seus componentes seguem o padrão Java para conectar ouvintes de evento. Esse padrão tende a ser complicado, pois requer que o usuário crie uma classe anônima e declare os métodos a serem substituídos, por exemplo, isso é como as coisas seriam feitas no Android com Java:
 
 ```csharp
 final android.widget.Button button = new android.widget.Button(context);
@@ -136,7 +133,7 @@ button.setOnClickListener (new View.OnClickListener() {
 });
 ```
 
-O código equivalente em c# usando eventos seria:
+O código equivalente no C# uso de eventos seria:
 
 ```csharp
 var button = new Android.Widget.Button (context) {
@@ -147,58 +144,57 @@ button.Click += (sender, e) => {
 };
 ```
 
-Observe que ambos os mecanismos acima estão disponíveis com o xamarin. Android. Você pode implementar uma interface de ouvinte e anexá-lo com View.SetOnClickListener, ou você pode anexar um delegado que foi criado por meio de qualquer um dos paradigmas c# normais para o evento de clique.
+Observe que os dois mecanismos acima estão disponíveis com o Xamarin. Android. Você pode implementar uma interface de ouvinte e anexá-la a View. SetOnClickListener, ou você pode anexar um delegado criado por meio C# de qualquer um dos paradigmas usuais ao evento de clique.
 
-Quando o método de retorno de chamada de ouvinte tem um retorno nulo, podemos criar elementos de API com base em um [EventHandler&lt;TEventArgs&gt; ](xref:System.EventHandler`1) delegar. Podemos gerar um evento como o exemplo acima para esses tipos de ouvinte. No entanto, se o retorno de chamada de ouvinte retorna um não nulo e não- **boolean** valor, eventos e EventHandlers não são usados. Em vez disso, podemos gerar um delegado específico para a assinatura do retorno de chamada e adicionar propriedades ao invés de eventos. O motivo é lidar com ordem de invocação de delegado e retornar a manipulação. Essa abordagem espelha o que é feito com a API do xamarin. IOS.
+Quando o método de retorno de chamada do ouvinte tem um retorno nulo, criamos elementos de API com base em um delegado [TEventArgs&lt;&gt; EventHandler](xref:System.EventHandler`1) . Geramos um evento como o exemplo acima para esses tipos de ouvinte. No entanto, se o retorno de chamada do ouvinte retornar um  valor não nulo e não booliano, os eventos e os EventHandlers não serão usados. Em vez disso, geramos um delegado específico para a assinatura do retorno de chamada e adicionamos Propriedades em vez de eventos. O motivo é lidar com a ordem de invocação de delegado e o tratamento de retorno. Essa abordagem espelha o que é feito com a API do Xamarin. iOS.
 
-Eventos de C# ou propriedades são geradas automaticamente apenas se o método de registro de evento Android:
+C#eventos ou propriedades são gerados automaticamente se o método de registro de evento do Android:
 
-1. Tem um `set` prefixo, por exemplo, [ *definir*OnClickListener](https://developer.xamarin.com/api/member/Android.Views.View.SetOnClickListener/).
+1. Tem um `set` prefixo, por exemplo, [ *set*OnClickListener](xref:Android.Views.View.SetOnClickListener*).
 
 1. Tem um `void` tipo de retorno.
 
-1. Aceita apenas um parâmetro, o tipo de parâmetro é uma interface, a interface tem apenas um método e o nome da interface termina `Listener` , por exemplo, [View.OnClick *ouvinte*](https://developer.xamarin.com/api/type/Android.Views.View+IOnClickListener/).
+1. Aceita apenas um parâmetro, o tipo de parâmetro é uma interface, a interface tem apenas um método e o nome da interface termina `Listener` em, por exemplo, o ouvinte de [View ](xref:Android.Views.View.IOnClickListener). OnClick.
 
 
-Além disso, se o ouvinte do método de interface tem um tipo de retorno **boolean** em vez de **void**, em seguida, gerado *EventArgs* subclasse conterá um *Handled* propriedade. O valor da *Handled* propriedade é usada como o valor retornado para o *ouvinte* método e ele assume como padrão `true`.
+Além disso, se o método de interface do ouvinte tiver  um tipo de retorno booliano, em vez de **void**, a subclasse *EventArgs* gerada conterá uma propriedade *manipulada* . O valor da propriedade *Handled* é usado como o valor de retorno para o  método de ouvinte e o `true`padrão é.
 
-Por exemplo, o Android [View.setOnKeyListener()](https://developer.xamarin.com/api/member/Android.Views.View.SetOnKeyListener/p/Android.Views.View+IOnKeyListener/) método aceita o [View.OnKeyListener](https://developer.xamarin.com/api/type/Android.Views.View+IOnKeyListener) interface e o [View.OnKeyListener.onKey (modo de exibição, int, KeyEvent)](https://developer.xamarin.com/api/member/Android.Views.View+IOnKeyListener.OnKey/p/Android.Views.View/Android.Views.Keycode/Android.Views.KeyEvent/) método tem um tipo de retorno booleano. Xamarin. Android gera um correspondente [View.KeyPress](https://developer.xamarin.com/api/event/Android.Views.View.KeyPress/) evento, que é um [EventHandler&lt;View.KeyEventArgs&gt;](https://developer.xamarin.com/api/type/Android.Views.View+KeyEventArgs/).
-O *KeyEventArgs* classe por sua vez tem um [View.KeyEventArgs.Handled](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/) propriedade, que é usada como o valor retornado para o *View.OnKeyListener.onKey()* método.
+Por exemplo, o método de exibição do Android [. setOnKeyListener ()](xref:Android.Views.View.SetOnKeyListener*) aceita a interface [View. OnKeyListener](xref:Android.Views.View.IOnKeyListener) e o método [View. OnKeyListener. onKey (View, int, KeyEvent)](xref:Android.Views.View.IOnKeyListener.OnKey*) tem um tipo de retorno booleano. O Xamarin. Android gera um evento [View. KeyPress](xref:Android.Views.View.KeyPress) correspondente, que é um [modo de exibição EventHandler&lt;. KeyEventArgs.&gt;](xref:Android.Views.View.KeyEventArgs)
+A classe *KeyEventArgs* , por sua vez, tem uma propriedade [View. KeyEventArgs. Handled](xref:Android.Views.View.KeyEventArgs.Handled) , que é usada como o valor de retorno para o método *View. OnKeyListener. onKey ()* .
 
-Pretendemos adicionar sobrecargas para outros métodos e construtores de expor a conexão com base em delegado. Além disso, os ouvintes com vários retornos de chamada exigem algum inspeção adicional para determinar se é razoável, implementar retornos de chamada individuais para que os que estão sendo convertidos esses conforme eles são identificados. Se não houver nenhum evento correspondente, ouvintes devem ser usados no c#, mas traga qualquer um que você acha que poderia ter utilização de delegado para a nossa atenção. Também fizemos algumas conversões de interfaces sem o sufixo "Ouvinte" quando ficou claro que se beneficiariam de uma alternativa de delegado.
+Pretendemos adicionar sobrecargas para outros métodos e construtores para expor a conexão baseada em delegado. Além disso, os ouvintes com vários retornos de chamada exigem uma inspeção adicional para determinar se a implementação de retornos de chamada individuais é razoável, então estamos convertendo esses como eles são identificados. Se não houver nenhum evento correspondente, os ouvintes deverão ser usados C#no, mas você poderá ter um delegado de uso para nossa atenção. Também fizemos algumas conversões de interfaces sem o sufixo "Listener" quando estava claro que elas se beneficiarão de uma alternativa de delegado.
 
-Todas as interfaces de ouvintes de implementam o [`Android.Runtime.IJavaObject`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)
-interface, por causa dos detalhes da implementação da associação, portanto, classes de ouvinte devem implementar essa interface. Isso pode ser feito pela implementação da interface de ouvinte em uma subclasse de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) ou qualquer outro objeto de Java, como uma atividade do Android de encapsulado.
+Todas as interfaces de ouvintes implementam o[`Android.Runtime.IJavaObject`](xref:Android.Runtime.IJavaObject)
+interface, devido aos detalhes de implementação da associação, portanto, as classes de ouvinte devem implementar essa interface. Isso pode ser feito com a implementação da interface do ouvinte em uma subclasse de [Java. lang. Object](xref:Java.Lang.Object) ou qualquer outro objeto Java encapsulado, como uma atividade do Android.
 
 
 ### <a name="runnables"></a>Executáveis
 
-Java utiliza o [java.lang.Runnable](https://developer.xamarin.com/api/type/Java.Lang.Runnable/) interface para fornecer um mecanismo de delegação. O [java.lang.Thread](https://developer.xamarin.com/api/type/Java.Lang.Thread/) classe é um consumidor notável desta interface. Android contratou a interface na API também.
-[Activity.runOnUiThread()](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/p/Java.Lang.IRunnable/) e [View.post()](https://developer.xamarin.com/api/member/Android.Views.View.Post/p/Java.Lang.IRunnable) são exemplos importantes.
+O Java utiliza a interface [Java. lang. executável](xref:Java.Lang.Runnable) para fornecer um mecanismo de delegação. A classe [Java. lang. thread](xref:Java.Lang.Thread) é um consumidor notável desta interface. O Android também emprega a interface na API.
+[Activity. runOnUiThread ()](xref:Android.App.Activity.RunOnUiThread*) e [View.post ()](xref:Android.Views.View.Post*) são exemplos notáveis.
 
-O `Runnable` interface contém um único método void [Run ()](https://developer.xamarin.com/api/member/Java.Lang.Runnable.Run%28%29/). Ele, portanto, se presta a associação em c# como um [System. Action](xref:System.Action) delegar. Fornecemos sobrecargas na associação que aceitam um `Action` parâmetro para todos os membros de API que consumir um `Runnable` na API nativa, por exemplo, [Activity.RunOnUiThread()](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)) e [View.Post()](https://developer.xamarin.com/api/member/Android.Views.View.Post/(System.Action)).
+A `Runnable` interface contém um único método void, [Execute ()](xref:Java.Lang.Runnable.Run). Portanto, ele se presta à associação C# como um delegado [System. Action](xref:System.Action) . Fornecemos sobrecargas na associação `Action` que aceitam um parâmetro para todos os membros da API que consomem um `Runnable` na API nativa, por exemplo, [Activity. RunOnUiThread ()](xref:Android.App.Activity.RunOnUiThread*) e [View.post ()](xref:Android.Views.View.Post*).
 
-Deixamos os [IRunnable](https://developer.xamarin.com/api/type/Java.Lang.IRunnable/) sobrecargas em vigor em vez de substituí-los, já que vários tipos implementam a interface e podem, portanto, ser passado como executáveis diretamente.
+Deixamos as sobrecargas [IRunnable](xref:Java.Lang.IRunnable) em vigor em vez de substituí-las, pois vários tipos implementam a interface e, portanto, podem ser passados como executáveis diretamente.
 
 
 ### <a name="inner-classes"></a>Classes internas
 
-Java tem dois tipos diferentes de [aninhados classes](http://download.oracle.com/javase/tutorial/java/javaOO/nested.html): estático aninhado classes e classes não estáticas.
+O Java tem dois tipos diferentes de [classes aninhadas](http://download.oracle.com/javase/tutorial/java/javaOO/nested.html): classes aninhadas estáticas e classes não estáticas.
 
-Classes aninhadas estáticas do Java são idênticas aos tipos aninhados em c#.
+As classes aninhadas do Java static C# são idênticas aos tipos aninhados.
 
-Não-estático aninhado classes, também chamadas de *classes internas*, são significativamente diferentes. Eles contêm uma referência implícita a uma instância do tipo delimitador e não podem conter membros estáticos (entre outras diferenças fora do escopo desta visão geral).
+Classes aninhadas não estáticas, também chamadas de *classes internas*, são significativamente diferentes. Eles contêm uma referência implícita a uma instância de seu tipo delimitador e não podem conter membros estáticos (entre outras diferenças fora do escopo desta visão geral).
 
-Quando se trata de associação e o uso do c#, classes aninhadas estáticas são tratadas como tipos aninhados normais. Classes internas, enquanto isso, tem duas diferenças significativas:
+Quando se trata de Binding e C# use, as classes aninhadas estáticas são tratadas como tipos aninhados normais. As classes internas, enquanto isso, têm duas diferenças significativas:
 
-1. A referência implícita ao tipo recipiente deve ser fornecida explicitamente como um parâmetro de construtor.
+1. A referência implícita para o tipo recipiente deve ser fornecida explicitamente como um parâmetro de construtor.
 
-1. Ao herdar de uma classe interna, a classe interna *deve* ser aninhadas dentro de um tipo que herda do tipo recipiente da classe base interna e o tipo derivado deve fornecer um construtor do mesmo tipo como o c# que contém o tipo.
+1. Ao herdar de uma classe interna, a classe interna *deve* ser aninhada dentro de um tipo que herda do tipo recipiente da classe base interna e o tipo derivado deve fornecer um construtor do mesmo tipo que o C# tipo recipiente.
 
+Por exemplo, considere a classe interna [Android. Service. wallpaper. WallpaperService. Engine](xref:Android.Service.Wallpaper.WallpaperService.Engine) . Como é uma classe interna, o [Construtor WallpaperService. Engine ()](xref:Android.Service.Wallpaper.WallpaperService.Engine#ctor) usa uma referência a uma instância [WallpaperService](xref:Android.Service.Wallpaper.WallpaperService) (compare e contraste com o Construtor Java WallpaperService. Engine (), que não usa parâmetros).
 
-Por exemplo, considere a [Android.Service.Wallpaper.WallpaperService.Engine](https://developer.xamarin.com/api/type/Android.Service.Wallpaper.WallpaperService+Engine/) classe interna. Pois é uma classe interna, o [construtor WallpaperService.Engine()](https://developer.xamarin.com/api/constructor/Android.Service.Wallpaper.WallpaperService+Engine.Engine/p/Android.Service.Wallpaper.WallpaperService/) usa uma referência a um [WallpaperService](https://developer.xamarin.com/api/type/Android.Service.Wallpaper.WallpaperService/) instância (compare e contraste para Java [WallpaperService.Engine ( construtor),](https://developer.xamarin.com/api/type/Android.Service.Wallpaper.WallpaperService+Engine/) que não usa nenhum parâmetro).
-
-Uma derivação de exemplo de uma classe interna é CubeWallpaper.CubeEngine:
+Uma derivação de exemplo de uma classe interna é CubeWallpaper. CubeEngine:
 
 ```csharp
 class CubeWallpaper : WallpaperService {
@@ -216,12 +212,11 @@ class CubeWallpaper : WallpaperService {
 }
 ```
 
-Observe como `CubeWallpaper.CubeEngine` é aninhada dentro de `CubeWallpaper`, `CubeWallpaper` herda da classe recipiente de `WallpaperService.Engine`, e `CubeWallpaper.CubeEngine` tem um construtor que usa o tipo de declaração `CubeWallpaper` nesse caso - todos como especificado acima.
-
+Observe como `CubeWallpaper.CubeEngine` o é aninhado `CubeWallpaper` em `CubeWallpaper`, herdado da classe `WallpaperService.Engine`recipiente de `CubeWallpaper.CubeEngine` `CubeWallpaper` e tem um construtor que usa o tipo declarativo – nesse caso, todos conforme especificado acima.
 
 ### <a name="interfaces"></a>Interfaces
 
-As interfaces de Java podem conter três conjuntos de membros, dois dos quais causam problemas em c#:
+As interfaces Java podem conter três conjuntos de membros, dois dos quais causam problemas C#de:
 
 1. Métodos
 
@@ -229,51 +224,49 @@ As interfaces de Java podem conter três conjuntos de membros, dois dos quais ca
 
 1. Campos
 
-
-Interfaces de Java são convertidas em dois tipos:
+As interfaces Java são convertidas em dois tipos:
 
 1. Uma interface (opcional) que contém declarações de método. Essa interface possui o mesmo nome como a interface de Java, *exceto* também possui um ' *I* ' prefixo.
 
-1. Uma classe estática (opcional) que contém todos os campos declarados dentro da interface Java.
+1. Uma classe estática (opcional) que contém todos os campos declarados na interface java.
 
-Tipos aninhados são "realocados" para ser irmãos da interface do delimitador, em vez de tipos aninhados, com o nome da interface delimitador como um prefixo.
+Os tipos aninhados são "realocados" para serem irmãos da interface delimitadora em vez de tipos aninhados, com o nome da interface de circunscrição como um prefixo.
 
-Por exemplo, considere a [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) interface.
-O *Parcelable* interface contém métodos, tipos aninhados e constantes. O *Parcelable* métodos de interface são colocados na [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) interface.
-O *Parcelable* constantes de interface são colocadas na [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) tipo. Aninhado [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) e [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) tipos não estão no momento associado devido a limitações no nosso suporte a genéricos; Se eles tivessem suporte, eles estaria presentes como o *Android.OS.IParcelableClassLoaderCreator* e *Android.OS.IParcelableCreator* interfaces. Por exemplo, aninhada [android.os.IBinder.DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) interface está vinculado como o [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) interface.
-
+Por exemplo, considere a interface [Android. os.](xref:Android.OS.Parcelable) consideble.
+A  interface de diremessa contém métodos, tipos aninhados e constantes. Os métodos *de interface de* colocação são colocados na interface [Android. os. IParcelable](xref:Android.OS.IParcelable) .
+As constantes *de interface que* podem ser armazenadas são colocadas no tipo [Android. os. ParcelableConsts](xref:Android.OS.ParcelableConsts) . Os tipos aninhados [Android. os&lt;. ClassLoaderCreator t >](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) e [Android. os. Creator&lt;t >](https://developer.android.com/reference/android/os/Parcelable.Creator.html) não estão associados no momento devido a limitações em nosso suporte a genéricos; se eles tiverem suporte, eles estaria presente como as interfaces *Android. os. IParcelableClassLoaderCreator* e *Android. os. IParcelableCreator* . Por exemplo, a interface do [Android. os. IBinder. DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) aninhada é associada como a interface [Android. os. IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) .
 
 > [!NOTE]
-> Começando com o xamarin. Android 1.9, constantes de interface do Java são <em>duplicado</em> em um esforço para simplificar a portabilidade de Java de código. Isso ajuda a melhorar a portabilidade código Java que dependa [provedor android](https://developer.android.com/reference/android/provider/package-summary.html) constantes de interface.
+> A partir do Xamarin. Android 1,9, as constantes da  interface java são duplicadas em um esforço para simplificar a portagem do código Java. Isso ajuda a melhorar o portamento do código Java que depende das constantes da interface do [provedor do Android](https://developer.android.com/reference/android/provider/package-summary.html) .
 
-Além dos tipos acima, há quatro alterações adicionais:
+Além dos tipos acima, há quatro outras alterações:
 
-1. Um tipo com o mesmo nome que a interface Java é gerado para conter constantes.
+1. Um tipo com o mesmo nome da interface java é gerado para conter constantes.
 
-1. Tipos que contêm constantes interface também contêm todas as constantes que vêm de interfaces implementadas de Java.
+1. Tipos que contêm constantes de interface também contêm todas as constantes que vêm de interfaces Java implementadas.
 
-1. Todas as classes que implementam uma interface de Java que contêm constantes obtém um novo tipo InterfaceConsts aninhado que contém as constantes de todas as interfaces implementadas.
+1. Todas as classes que implementam uma interface java contendo constantes obtêm um novo tipo de InterfaceConsts aninhado que contém constantes de todas as interfaces implementadas.
 
-1. O *Consts* tipo agora está obsoleto.
+1. O  tipo CONSTS agora é obsoleto.
 
 
-Para o *android.os.Parcelable* interface, isso significa que agora haverá um [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) tipo para conter as constantes. Por exemplo, o [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) constante será associada como o [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) constante, em vez de como o  *ParcelableConsts.ContentsFileDescriptor* constante.
+Para a interface *Android. os.* refinable, isso significa que agora haverá um tipo [*Android. os.* ](xref:Android.OS.Parcelable) refinable para conter as constantes. Por exemplo, a constante de amortizable [. CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) será associada como a constante de amortizable [ *. ContentsFileDescriptor*](xref:Android.OS.Parcelable.ContentsFileDescriptor) , em vez de como a constante *ParcelableConsts. ContentsFileDescriptor* .
 
-Para interfaces que contém as constantes que implementam outras interfaces que contém ainda mais constantes, a união de todas as constantes é gerada. Por exemplo, o [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) interface implementa o [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) interface. No entanto, anteriores à 1.9, o [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) tipo não tem nenhuma maneira de acessar as constantes declaradas na [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
-Como resultado, a expressão de Java *MediaStore.Video.VideoColumns.TITLE* precisa ser associado à expressão c# *MediaStore.Video.MediaColumnsConsts.Title* que seria difícil de descobrir sem leitura muita documentação do Java. Na versão 1.9, o equivalente a C# expressão serão [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
+Para interfaces que contêm constantes que implementam outras interfaces que contêm ainda mais constantes, a União de todas as constantes agora é gerada. Por exemplo, a interface [Android. Provider. MediaStore. video. VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) implementa a interface [Android. Provider. MediaStore. MediaColumns](xref:Android.Provider.MediaStore.MediaColumns) . No entanto, antes de 1,9, o tipo [Android. Provider. MediaStore. video. VideoColumnsConsts](xref:Android.Provider.MediaStore.Video.VideoColumnsConsts) não tem como acessar as constantes declaradas em [Android. Provider. MediaStore. MediaColumnsConsts](xref:Android.Provider.MediaStore.MediaColumnsConsts).
+Como resultado, a expressão Java *MediaStore. video. VideoColumns. title* precisa ser associada à C# expressão *MediaStore. video. MediaColumnsConsts. title* , que é difícil de descobrir sem ler muita documentação do Java. Em 1,9, a expressão C# equivalente será [MediaStore. vídeo. VideoColumns. title](xref:Android.Provider.MediaStore.Video.VideoColumns.Title).
 
-Além disso, considere a [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) tipo, que implementa o Java *Parcelable* interface. Como ele implementa a interface, todas as constantes na interface são acessíveis "por meio de" o tipo de pacote, por exemplo, *Bundle.CONTENTS_FILE_DESCRIPTOR* é uma expressão de Java perfeitamente válida.
-Anteriormente, para essa expressão para a porta C# você precisaria examinar todas as interfaces que são implementadas para ver de qual tipo de *CONTENTS_FILE_DESCRIPTOR* veio. A partir do xamarin. Android 1.9, classes que implementam as interfaces de Java que contêm constantes terá um aninhados *InterfaceConsts* tipo, que irá conter todas as constantes de interface herdada. Isso permitirá que a tradução *Bundle.CONTENTS_FILE_DESCRIPTOR* à [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).
+Além disso, considere o tipo [Android. os. Bundle](xref:Android.OS.Bundle) , que implementa a *interface de* conconjunto de Java. Como ele implementa a interface, todas as constantes nessa interface podem ser acessadas "por meio de" o tipo de pacote, por exemplo, *Bundle. CONTENTS_FILE_DESCRIPTOR* é uma expressão Java perfeitamente válida.
+Anteriormente, para portar essa expressão C# para você precisaria examinar todas as interfaces implementadas para ver de qual tipo o *CONTENTS_FILE_DESCRIPTOR* veio. A partir do Xamarin. Android 1,9, as classes que implementam interfaces Java que contêm constantes terão um tipo *InterfaceConsts* aninhado, que conterá todas as constantes de interface herdadas. Isso permitirá a tradução de *Bundle. CONTENTS_FILE_DESCRIPTOR* para [*Bundle. InterfaceConsts. ContentsFileDescriptor*](xref:Android.OS.Bundle.InterfaceConsts.ContentsFileDescriptor).
 
-Por fim, tipos com uma *Consts* sufixo como *Android.OS.ParcelableConsts* são agora obsoleto, senão o recém-lançado InterfaceConsts tipos aninhados. Eles serão removidos no xamarin. Android 3.0.
+Por fim, os tipos  com um sufixo CONSTS, como *Android. os. ParcelableConsts* , agora são obsoletos, além dos tipos aninhados InterfaceConsts recém introduzidos. Eles serão removidos no Xamarin. Android 3,0.
 
 
 ## <a name="resources"></a>Recursos
 
 Imagens, descrições de layout, blobs binários e dicionários de cadeia de caracteres podem ser incluídos em seu aplicativo como [arquivos de recurso](https://developer.android.com/guide/topics/resources/providing-resources.html).
-Várias APIs do Android são projetadas para [operam nas IDs de recurso](https://developer.android.com/guide/topics/resources/accessing-resources.html) em vez de lidar com imagens, cadeias de caracteres ou binário blobs diretamente.
+Várias APIs do Android são projetadas para [operar nas IDs de recurso](https://developer.android.com/guide/topics/resources/accessing-resources.html) em vez de lidar com imagens, cadeias de caracteres ou blobs binários diretamente.
 
-Por exemplo, um aplicativo Android de exemplo que contém um layout de interface do usuário ( `main.axml`), uma cadeia de caracteres de tabela de internacionalização ( `strings.xml`) e alguns ícones ( `drawable-*/icon.png`) mantém seus recursos no diretório "Recursos" do aplicativo:
+Por exemplo, um aplicativo Android de exemplo que contém um layout de interface `main.axml`do usuário (), uma cadeia de `strings.xml`caracteres da tabela de internacionalização () e alguns ícones ( `drawable-*/icon.png`) manteria seus recursos no diretório "recursos" do aplicativo:
 
     Resources/
         drawable-hdpi/
@@ -291,7 +284,7 @@ Por exemplo, um aplicativo Android de exemplo que contém um layout de interface
         values/
             strings.xml
 
-Nativo APIs do Android funciona diretamente com nomes de arquivo, mas em vez disso, opera em IDs de recurso. Quando você compila um aplicativo do Android que usa os recursos, o sistema de compilação empacotar os recursos para distribuição e gera uma classe chamada `Resource` que contém os tokens para cada um dos recursos incluídos. Por exemplo, para o layout de recursos acima, isso é o que poderia expor a classe de R:
+As APIs nativas do Android não operam diretamente com nomes de File, mas operam em IDs de recurso. Quando você compila um aplicativo Android que usa recursos, o sistema de compilação empacotará os recursos para distribuição e gerará uma `Resource` classe chamada que contém os tokens para cada um dos recursos incluídos. Por exemplo, para o layout de recursos acima, isso é o que a classe R exporia:
 
 ```csharp
 public class Resource {
@@ -310,18 +303,18 @@ public class Resource {
 }
 ```
 
-Em seguida, você usaria `Resource.Drawable.icon` a referência a `drawable/icon.png` arquivo, ou `Resource.Layout.main` a referência a `layout/main.xml` arquivo, ou `Resource.String.first_string` para fazer referência a primeira cadeia de caracteres no arquivo de dicionário `values/strings.xml`.
+Em seguida, você `Resource.Drawable.icon` usaria para `drawable/icon.png` fazer referência ao `Resource.Layout.main` arquivo ou fazer `layout/main.xml` referência ao arquivo `Resource.String.first_string` ou fazer referência à primeira cadeia de caracteres no `values/strings.xml`arquivo de dicionário.
 
 
 ## <a name="constants-and-enumerations"></a>Constantes e enumerações
 
-Nativo APIs do Android tem muitos métodos que aceitam ou retornam um int que deve ser mapeado para um campo constante para determinar o que significa que o int. Para usar esses métodos, o usuário é necessário consultar a documentação para ver quais constantes são os valores apropriados, que é inferior ao ideal.
+As APIs nativas do Android têm muitos métodos que assumem ou retornam um int que deve ser mapeado para um campo constante para determinar o que significa o int. Para usar esses métodos, o usuário precisa consultar a documentação para ver quais constantes são valores apropriados, o que é menor que o ideal.
 
-Por exemplo, considere [Activity.requestWindowFeature (int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
+Por exemplo, considere a [atividade. requestWindowFeature (int FeatureId)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
 
-Nesses casos, podemos se esforçar para agrupar constantes relacionadas em uma enumeração do .NET e remapear o método para tirar a enumeração em vez disso.
-Ao fazer isso, somos capazes de oferecer a seleção do IntelliSense de valores possíveis.
+Nesses casos, fazemos a tarefa de agrupar constantes relacionadas em uma enumeração .NET e remapear o método para pegar a enumeração.
+Ao fazer isso, podemos oferecer a seleção de IntelliSense dos valores potenciais.
 
-O exemplo acima se torna: [Activity.RequestWindowFeature(WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/).
+O exemplo acima se torna: [Activity. RequestWindowFeature (WindowFeatures FeatureId)](xref:Android.App.Activity.RequestWindowFeature*).
 
-Observe que esse é um processo manual muito para descobrir quais constantes pertencem juntas, e quais APIs consumam essas constantes. Envie bugs para qualquer constantes usadas na API do que seria melhor expressada como uma enumeração.
+Observe que esse é um processo muito manual para descobrir quais constantes pertencem em conjunto e quais APIs consomem essas constantes. Registre bugs para qualquer constante usada na API que seria melhor expressa como uma enumeração.

@@ -1,31 +1,31 @@
 ---
-title: LinearLayout
+title: LinearLayout Xamarin. Android
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: f3d0394f6b2388918f728bd5a25e9e809a832ca6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fd5ac3e9e5752aa143872138e9b452a61dbe862e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187081"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510090"
 ---
-# <a name="linearlayout"></a>LinearLayout
+# <a name="xamarinandroid-linearlayout"></a>LinearLayout Xamarin. Android
 
-[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
-que exibe o filho [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
-os elementos em uma direção linear, vertical ou horizontalmente.
+[`LinearLayout`](xref:Android.Widget.LinearLayout)é um[`ViewGroup`](xref:Android.Views.ViewGroup)
+que exibe o filho[`View`](xref:Android.Views.View)
+elementos em uma direção linear, tanto vertical quanto horizontalmente.
 
-Você deve ter cuidado em excesso usando o [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/).
-Se você começar o aninhamento múltiplo [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s, você talvez queira considerar o uso de um [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
-em vez disso.
+Você deve ter cuidado ao usar o [`LinearLayout`](xref:Android.Widget.LinearLayout).
+Se você começar a aninhar [`LinearLayout`](xref:Android.Widget.LinearLayout)vários s, talvez queira considerar o uso de um[`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+Stead.
 
-Iniciar um novo projeto chamado **HelloLinearLayout**.
+Inicie um novo projeto chamado **HelloLinearLayout**.
 
-Abra **Resources/Layout/Main.axml** e insira o seguinte:
+Abra **Resources/layout/Main. axml** e insira o seguinte:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,14 +103,14 @@ Abra **Resources/Layout/Main.axml** e insira o seguinte:
 </LinearLayout>
 ```
 
-Inspecione cuidadosamente esse XML. Há uma raiz [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
-que define sua orientação para ser vertical &ndash; todos os filhos [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)s (dos quais ele tem duas) serão empilhados verticalmente. O primeiro filho é outra [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
-que usa uma orientação horizontal e o segundo filho é um [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
-que usa uma orientação vertical. Cada um deles aninhado [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s contêm vários [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
-elementos, que são orientados uns com os outros da forma definida por seu pai [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/).
+Inspecione cuidadosamente este XML. Há uma raiz[`LinearLayout`](xref:Android.Widget.LinearLayout)
+Isso define sua orientação como vertical &ndash; todos os s filhos [`View`](xref:Android.Views.View)(dos quais ele tem dois) serão empilhados verticalmente. O primeiro filho é outro[`LinearLayout`](xref:Android.Widget.LinearLayout)
+que usa uma orientação horizontal e o segundo filho é um[`LinearLayout`](xref:Android.Widget.LinearLayout)
+que usa uma orientação vertical. Cada um desses s [`LinearLayout`](xref:Android.Widget.LinearLayout)aninhados contém vários[`TextView`](xref:Android.Widget.TextView)
+elementos, que são orientados entre si da maneira definida por seu pai [`LinearLayout`](xref:Android.Widget.LinearLayout).
 
-Agora, abra **HelloLinearLayout.cs** e certifique-se de que ele carrega o **Resources/Layout/Main.axml** layout no [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-método:
+Agora, abra **HelloLinearLayout.cs** e verifique se ele carrega o layout de **recursos/layout/Main. axml** no[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+forma
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -120,21 +120,21 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-O [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) método carrega o arquivo de layout para o [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), especificado pela ID de recurso &ndash; `Resources.Layout.Main` refere-se ao **recursos/Layout / Main. axml** arquivo de layout.
+O [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)método) carrega o arquivo de layout para [`Activity`](xref:Android.App.Activity)o, especificado pela ID &ndash; `Resources.Layout.Main` do recurso refere-se ao arquivo de layout Resources **/layout/Main. axml** .
 
-Execute o aplicativo. Você verá o seguinte:
+Execute o aplicativo. Você deve ver o seguinte:
 
-[![Captura de tela do aplicativo primeiro LinearLayout organizado horizontalmente, verticalmente segundo](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
+[![Captura de tela do aplicativo primeiro LinearLayout organizada horizontalmente, segundo verticalmente](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-Observe como os atributos XML definem o comportamento do cada modo de exibição. Faça experiências com valores diferentes para `android:layout_weight` ver como o real da tela é distribuído com base no peso de cada elemento. Consulte a [objetos comuns do Layout](https://developer.android.com/guide/topics/ui/declaring-layout.html) documento para obter mais informações sobre como [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
-identificadores de `android:layout_weight` atributo.
+Observe como os atributos XML definem o comportamento de cada exibição. Tente experimentar com valores diferentes para `android:layout_weight` ver como o espaço da tela é distribuído com base no peso de cada elemento. Consulte o documento [objetos de layout comuns](https://developer.android.com/guide/topics/ui/declaring-layout.html) para saber mais sobre como[`LinearLayout`](xref:Android.Widget.LinearLayout)
+manipula o `android:layout_weight` atributo.
 
 
 ## <a name="references"></a>Referências
 
--   [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
+-   [`LinearLayout`](xref:Android.Widget.LinearLayout) 
+-   [`TextView`](xref:Android.Widget.TextView) 
 
-*Partes desta página são modificações com base no trabalho criado e compartilhado por Android Open Source Project e usadas de acordo com os termos descritos na*
-[*2.5 atribuição de licença da Creative Commons* ](http://creativecommons.org/licenses/by/2.5/).
+*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do*
+[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).
 
