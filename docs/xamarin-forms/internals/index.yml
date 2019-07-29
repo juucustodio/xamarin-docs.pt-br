@@ -1,0 +1,39 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Conceitos avançados e recursos internos
+metadata:
+  title: Conceitos avançados e recursos internos
+  description: Saiba mais sobre os conceitos avançados e os recursos internos do Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/23/2019
+abstract:
+  description: Saiba mais sobre os conceitos avançados e os recursos internos do Xamarin.Forms.
+sections:
+  - title: null
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: dependency-resolution.md
+            html: 'Saiba como injetar um método de resolução de dependência no Xamarin.Forms, de modo que um aplicativo tenha controle sobre a criação e o tempo de vida dos renderizadores personalizados, efeitos e implementações de DependencyService.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+              href: dependency-resolution.md
+            title: Resolução de dependência
+          - href: fast-renderers.md
+            html: 'Aprenda sobre renderizadores rápidos, que reduzem os custos de renderização e inflação de um controle Xamarin.Forms no Android nivelando a hierarquia resultante de controle nativo.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
+              href: fast-renderers.md
+            title: Renderizadores Rápidos
+          - href: net-standard.md
+            html: Saiba como converter um aplicativo Xamarin.Forms para usar o .NET Standard 2.0.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_NETstandard.svg'
+              href: net-standard.md
+            title: .NET Standard

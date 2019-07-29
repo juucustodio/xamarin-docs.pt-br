@@ -51,7 +51,7 @@ sections:
         className: cardsB
         items:
           - href: ~/android/get-started/index.md
-            html: Tutoriais para ajudar você a usar Xamarin.Android. Verifique se tudo está instalado corretamente e compile seus primeiros aplicativos Mac.
+            html: Tutoriais para ajudar você a usar Xamarin.Android. Verifique se tudo está instalado corretamente e compile seus primeiros aplicativos Android.
             image:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/android/get-started/index.md
@@ -111,8 +111,8 @@ sections:
         className: cardsD
         items:
           - title: API
-            href: 'https://developer.xamarin.com/api/root/MonoAndroid-lib/'
-            html: '<p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Documentos de API do Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Biblioteca de classes base</a></p>'
+            href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9'
+            html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9">Documentos de API do Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Biblioteca de classes base</a></p>'
           - title: Exemplos
             href: 'https://developer.xamarin.com/samples/android/all/'
             html: '<p><a href="https://developer.xamarin.com/samples/android/all/">Exemplos do Android</a></p>'

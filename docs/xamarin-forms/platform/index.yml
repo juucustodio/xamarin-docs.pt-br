@@ -1,0 +1,69 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Recursos da plataforma Xamarin.Forms
+metadata:
+  title: Recursos da plataforma Xamarin.Forms
+  description: 'Saiba como aproveitar os recursos específicos da plataforma no Xamarin.Forms, usando diversas técnicas.'
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/23/2019
+abstract:
+  description: 'Saiba como aproveitar os recursos específicos da plataforma no Xamarin.Forms, usando diversas técnicas.'
+sections:
+  - title: Elementos específicos à plataforma
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: android/index.md
+            html: Saiba como usar os elementos específicos à plataforma Android fornecidos pelo Xamarin.Forms e como atualizar aplicativos Android existentes do Xamarin.Forms para usar o design de material.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_android.svg'
+              href: android/index.md
+            title: Android
+          - href: ios/index.md
+            html: Saiba como usar os elementos específicos à plataforma iOS fornecidos pelo Xamarin.Forms e como realizar aplicação de estilos adicionais do iOS.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
+              href: ios/index.md
+            title: iOS
+          - href: windows/index.md
+            html: Saiba como usar os elementos específicos à plataforma UWP fornecidos pelo Xamarin.Forms e como adicionar um projeto UWP a uma solução Xamarin.Forms existente.
+            image:
+              src: 'https://docs.microsoft.com/media/logos/logo_Windows.svg'
+              href: windows/index.md
+            title: Windows
+          - href: platform-specifics/index.md
+            html: Saiba mais sobre os elementos específicos à plataforma e como os fornecedores podem criar elementos específicos à plataforma específicas de plataforma com efeitos.
+            image:
+              src: ~/media/icons/i_app-build.svg
+              href: platform-specifics/index.md
+            title: Criar elementos específicos à plataforma
+  - title: Recursos da plataforma
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: device.md
+            html: Saiba como usar a classe de dispositivo para fornecer controle refinado sobre a funcionalidade e os layouts de acordo com a plataforma.
+            image:
+              src: ~/media/icons/i_desktop-phone.svg
+              href: device.md
+            title: Classe de dispositivo
+          - href: native-forms.md
+            html: 'Saiba como as páginas derivadas de ContentPage do Xamarin.Forms podem ser consumidas por projetos nativos UWP, Xamarin.iOS e Xamarin.Android.'
+            image:
+              src: ~/media/icons/i_xaml-forms.svg
+              href: native-forms.md
+            title: Formulários nativos
+          - href: native-views/index.md
+            html: 'Saiba como exibições nativas do Android, iOS e Plataforma Universal do Windows podem ser diretamente referenciadas de aplicativos Xamarin.Forms.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_form.svg'
+              href: native-views/index.md
+            title: Exibições nativas
