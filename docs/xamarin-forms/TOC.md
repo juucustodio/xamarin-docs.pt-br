@@ -180,6 +180,7 @@
 #### [Definir a propriedade ItemsSource de um seletor](user-interface/picker/populating-itemssource.md)
 #### [Adicionar dados à coleção de itens do seletor](user-interface/picker/populating-items.md)
 ### [ProgressBar](user-interface/progressbar.md)
+### [SearchBar](user-interface/searchbar.md)
 ### [Slider](user-interface/slider.md)
 ### [Passador](user-interface/stepper.md)
 ### [Estilos](user-interface/styles/index.md)
