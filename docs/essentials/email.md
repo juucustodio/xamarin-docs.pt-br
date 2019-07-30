@@ -5,12 +5,12 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
-ms.openlocfilehash: 5ddbb6f3d1c1ebf16ca5534b7effd1993c3d8b26
-ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
+ms.openlocfilehash: 73c398a7dbc2b8b7b22b9b8e38177efe2ff48735
+ms.sourcegitcommit: 8fe8d163cb9927917f6a83204b4c387fc50181c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65804906"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388506"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
@@ -63,22 +63,6 @@ public class EmailTest
 ```
 
 
-## <a name="platform-differences"></a>Diferenças entre plataformas
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-Nem todos os clientes de email para Android dão suporte para `Html`. Como não há nenhuma maneira de detectar isso, é recomendável usar `PlainText` ao enviar emails.
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-Sem diferenças entre plataformas.
-
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
-
-Só há suporte para `PlainText`, pois se `BodyFormat` tentar enviar `Html` lançará `FeatureNotSupportedException`.
-
------
-
 ## <a name="file-attachments"></a>Anexos de Arquivo
 
 ![Versão prévia do recurso](~/media/shared/preview.png)
@@ -108,6 +92,24 @@ message.Attachments.Add(new EmailAttachment(file));
 
 await Email.ComposeAsync(message);
 ```
+
+## <a name="platform-differences"></a>Diferenças entre plataformas
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Nem todos os clientes de email para Android dão suporte para `Html`. Como não há nenhuma maneira de detectar isso, é recomendável usar `PlainText` ao enviar emails.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+Sem diferenças entre plataformas.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Só há suporte para `PlainText`, pois se `BodyFormat` tentar enviar `Html` lançará `FeatureNotSupportedException`.
+
+Nem todos os clientes de email dão suporte ao envio de anexos. Confira a [documentação](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para saber mais.
+
+-----
 
 ## <a name="api"></a>API
 
