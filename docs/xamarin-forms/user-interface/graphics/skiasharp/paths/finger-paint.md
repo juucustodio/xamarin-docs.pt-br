@@ -7,16 +7,16 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: eb7622fb2cebc13abd5e49e42b21511e45c72a45
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 571ddae0757691cd7fee301076f0b1310749531d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61302009"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657465"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Pintura a dedo em SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use os dedos para pintar na tela._
 
@@ -24,9 +24,9 @@ Um `SKPath` objeto pode ser continuamente atualizado e exibido. Esse recurso per
 
 ![](finger-paint-images/fingerpaintsample.png "Um exercício de pintura a dedo")
 
-O suporte a toque no xamarin. Forms não permite o acompanhamento de dedos individuais na tela, portanto, um efeito de controle de toque do xamarin. Forms foi desenvolvido para oferecer suporte a toque adicionais. Esse efeito é descrito no artigo [ **invocar eventos de efeitos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). O programa de exemplo [ **demonstrações de efeito do controle de toque** ](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) inclui duas páginas que usam SkiaSharp, incluindo um programa para pintura com dedo.
+O suporte a toque no xamarin. Forms não permite o acompanhamento de dedos individuais na tela, portanto, um efeito de controle de toque do xamarin. Forms foi desenvolvido para oferecer suporte a toque adicionais. Esse efeito é descrito no artigo [ **invocar eventos de efeitos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). O programa de exemplo [ **demonstrações de efeito do controle de toque** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) inclui duas páginas que usam SkiaSharp, incluindo um programa para pintura com dedo.
 
-O [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solução inclui esse evento de acompanhamento de toque. O projeto de biblioteca .NET Standard inclui o `TouchEffect` classe, o `TouchActionType` enumeração, o `TouchActionEventHandler` delegar e o `TouchActionEventArgs` classe. Cada um dos projetos de plataforma inclui um `TouchEffect` para a plataforma de classe; o projeto do iOS também contém um `TouchRecognizer` classe.
+O [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) solução inclui esse evento de acompanhamento de toque. O projeto de biblioteca .NET Standard inclui o `TouchEffect` classe, o `TouchActionType` enumeração, o `TouchActionEventHandler` delegar e o `TouchActionEventArgs` classe. Cada um dos projetos de plataforma inclui um `TouchEffect` para a plataforma de classe; o projeto do iOS também contém um `TouchRecognizer` classe.
 
 O **pintura a dedo** página no **SkiaSharpFormsDemos** é uma implementação simplificada de pintura a dedo. Não permitir a seleção de cor ou largura de traço, ele não tem nenhuma maneira para limpar a tela e certamente não é possível salvar sua arte final.
 
@@ -172,6 +172,6 @@ Agora, você já viu como desenhar linhas e definir curvas usando equações par
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [Demonstrações de efeito do controle de toque (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Demonstrações de efeito do controle de toque (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 - [Invocação de eventos de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

@@ -7,16 +7,16 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9054539b08da89c0f7d8a93150866fb1b41e63f1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61162244"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642786"
 ---
 # <a name="the-non-separable-blend-modes"></a>Os modos de mesclagem não separáveis
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Como você viu neste artigo [ **SkiaSharp separável modos do blend**](separable.md), os modos do blend separáveis executam operações nos canais de vermelho, verdes e azuis separadamente. Os modos de mesclagem não separáveis não. Por funcionando com os níveis de matiz, saturação e luminosidade da cor, os modos de mesclagem não separáveis podem alterar as cores de maneiras interessantes:
 
@@ -28,7 +28,7 @@ Para entender os modos de mesclagem não separáveis, é necessário tratar os p
 
 O modelo de cor HSL foi discutido no artigo [ **a integração com o xamarin. Forms** ](../../basics/integration.md) e um programa de exemplo neste artigo permite experimentação com cores HSL. Você pode criar uma `SKColor` valor com os valores de matiz, saturação e luminosidade com estático [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) método.
 
-O matiz representa o comprimento de onda dominante da cor. Valores de Matiz variam de 0 a 360 e percorrer os primários aditivos e subtrativas: Vermelho é o valor 0, amarelo é 60, verde é 120, ciano é 180, azul é 240, magenta é de 300 e o ciclo de volta para vermelho no 360.
+O matiz representa o comprimento de onda dominante da cor. Os valores de matiz variam de 0 a 360 e percorre os primários aditivos e subtraídos: Vermelho é o valor 0, amarelo é 60, verde é 120, ciano é 180, azul é 240, magenta é 300 e o ciclo volta para o vermelho às 360.
 
 Se não houver nenhuma cor dominante &mdash; por exemplo, a cor é em branco ou preto ou um tom de cinza &mdash; em seguida, o matiz é indefinido e geralmente é definido como 0. 
 
@@ -198,7 +198,7 @@ O `SKBlendModes.Color` modo blend retém a luminosidade do destino, mas usa o ma
 
 Você verá um aplicativo desse modo blend em breve.
 
-Por fim, o `SKBlendModes.Luminosity` modo de mesclagem é o oposto da `SKBlendModes.Color`. Ele retém o matiz e a saturação do destino, mas usa a luminosidade da fonte de. O `Luminosity` modo de mesclagem é mais misterioso do lote: Os controles deslizantes de matiz e a saturação afetam a imagem, mas mesmo a luminosidade médio, a imagem não é diferente:
+Por fim, o `SKBlendModes.Luminosity` modo de mesclagem é o oposto da `SKBlendModes.Color`. Ele retém o matiz e a saturação do destino, mas usa a luminosidade da fonte de. O `Luminosity` modo de mesclagem é o mais misterioso do lote: Os controles deslizantes de matiz e saturação afetam a imagem, mas mesmo em luminosidade média, a imagem não é distinta:
 
 [![Modos de mesclagem não separáveis - luminosidade](non-separable-images/NonSeparableBlendModes-Luminosity.png "modos de mesclagem não separáveis - luminosidade")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 
@@ -208,11 +208,11 @@ Ele geralmente não é o caso em que você vai querer usar um dos modos de mescl
 
 ## <a name="a-matte-for-a-separable-mode"></a>Um fosco para um modo separável
 
-Aqui está um dos bitmaps de incluído como um recurso nas [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo. O nome do arquivo **Banana.jpg**:
+Aqui está um dos bitmaps de incluído como um recurso nas [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo. O nome do arquivo **Banana.jpg**:
 
 ![Banana Monkey](non-separable-images/Banana.jpg "Monkey Banana")
 
-É possível criar um fosco que abrange apenas a banana. Isso também é um recurso nas [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo. O nome do arquivo **BananaMatte.png**:
+É possível criar um fosco que abrange apenas a banana. Isso também é um recurso nas [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo. O nome do arquivo **BananaMatte.png**:
 
 ![Banana fosco](non-separable-images/BananaMatte.png "fosco Banana")
 
@@ -292,4 +292,4 @@ Tente alterar o modo de mesclagem para `SKBlendMode.Saturation`. O banana perman
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

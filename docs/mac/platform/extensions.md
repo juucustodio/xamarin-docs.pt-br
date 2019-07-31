@@ -1,24 +1,24 @@
 ---
 title: Suporte à extensão de Xamarin.Mac
-description: Este documento descreve o suporte do xamarin. Mac para extensões de localizador, compartilhamento e hoje. Ele examina as limitações e problemas conhecidos, links para um aplicativo de exemplo e instruções passo a passo e fornece dicas para trabalhar com extensões.
+description: Este documento descreve o suporte do Xamarin. Mac para o Finder, o compartilhamento e as extensões atuais. Ele examina as limitações e problemas conhecidos, links para um aplicativo de exemplo e instruções e fornece dicas para trabalhar com extensões.
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 0f4d6bb042f8bc8d48b45d7148984a53e3ce3437
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5138062cec6ee71f1db17d0118001b59dd7bc02c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61032501"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642950"
 ---
 # <a name="xamarinmac-extension-support"></a>Suporte à extensão de Xamarin.Mac
 
-No xamarin. MAC 2.10 foi adicionado suporte para vários pontos de extensão do macOS:
+No Xamarin. Mac 2,10, o suporte foi adicionado para vários pontos de extensão do macOS:
 
-- Localizador
+- Localizado
 - Compartilhar
 - Hoje
 
@@ -26,43 +26,43 @@ No xamarin. MAC 2.10 foi adicionado suporte para vários pontos de extensão do 
 
 ## <a name="limitations-and-known-issues"></a>Limitações e problemas conhecidos
 
-A seguir é as limitações e conhecer os problemas que podem ocorrer durante o desenvolvimento de extensões no xamarin. Mac:
+A seguir estão as limitações e os problemas conhecidos que podem ocorrer ao desenvolver extensões no Xamarin. Mac:
 
-* Atualmente, não há nenhum suporte à depuração no Visual Studio para Mac. Depuração de todos os precisará ser feito por meio **NSLog** e o **Console**. Consulte a seção de dicas abaixo para obter detalhes.
-* As extensões devem estar contidas em um aplicativo de host, que, quando executado uma vez com o registro com o sistema. Eles devem estar habilitados na **extensão** seção **preferências do sistema**. 
-* Algumas falhas de extensão podem desestabilizar o aplicativo host e causar um comportamento estranho. Em particular, **Finder** e o **hoje mesmo** seção o **Centro de notificações** podem se tornar "obstruído" e pare de responder. Isso tem sido experiente em projetos de extensão também no Xcode e aparece no momento não relacionado ao xamarin. Mac. Geralmente isso pode ser visto no log do sistema (via **Console**, confira dicas para obter detalhes) imprimir mensagens de erro repetidos. Reiniciar o macOS é exibida para corrigir esse problema.
+* No momento, não há suporte para depuração no Visual Studio para Mac. Toda a depuração precisará ser feita via **NSLog** e o **console**. Consulte a seção dicas abaixo para obter detalhes.
+* As extensões devem estar contidas em um aplicativo host, que, quando executado uma vez com o registro com o sistema. Eles devem ser habilitados na seção **extensão** de **preferências do sistema**. 
+* Algumas falhas de extensão podem desestabilizar o aplicativo host e causar um comportamento estranho. Em particular, o **Finder** e a seção de **hoje** do **centro de notificação** podem se tornar "obstruídos" e deixar de responder. Isso também foi observado em projetos de extensão no Xcode e, no momento, parece não relacionado ao Xamarin. Mac. Geralmente, isso pode ser visto no log do sistema (por meio do **console**do, consulte Dicas para obter detalhes) imprimindo mensagens de erro repetidas. A reinicialização do macOS parece corrigir isso.
 
 <a name="Tips" />
 
 ## <a name="tips"></a>Dicas
 
-As dicas a seguir podem ser úteis ao trabalhar com extensões no xamarin. Mac:
+As dicas a seguir podem ser úteis ao trabalhar com extensões no Xamarin. Mac:
 
-- Como atualmente xamarin. Mac não dá suporte a extensões de depuração, a experiência de depuração dependerão principalmente execução e `printf` como instruções. No entanto, as extensões executadas em um processo de área restrita, assim `Console.WriteLine` não atuará como faz em outros aplicativos do xamarin. Mac. Invocando [ `NSLog` diretamente](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) produzirá mensagens de depuração para o Log do sistema.
-- O processo de extensão, fornecendo apenas uma pequena quantidade de informações úteis no causará uma pane em exceções não identificadas as **Log do sistema**. Quebra automática de código problemático em uma `try/catch` (exceção) bloquear que `NSLog`do antes de lançar novamente pode ser útil.
-- O **Log do sistema** podem ser acessados da **Console** aplicativo sob **aplicativos** > **utilitários**:
+- Como o Xamarin. Mac atualmente não oferece suporte a extensões de depuração, a experiência de depuração dependerá `printf` principalmente de instruções de execução e semelhantes. No entanto, as extensões são executadas em um `Console.WriteLine` processo de área restrita, portanto, não funcionará como acontece em outros aplicativos Xamarin. Mac. Chamar diretamente fará com que as mensagens de depuração sejam enviadas para o log do sistema. [ `NSLog` ](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554)
+- Quaisquer exceções não capturadas apresentarão o processo de extensão, fornecendo apenas uma pequena quantidade de informações úteis no **log do sistema**. O encapsulamento de código `try/catch` problemático em um `NSLog`bloco (exceção) antes da recriação pode ser útil.
+- O **log do sistema** pode ser acessado no aplicativo de **console** em**utilitários**de **aplicativos** > :
 
     [![](extensions-images/extension02.png "O log do sistema")](extensions-images/extension02.png#lightbox)
-- Conforme observado acima, executando o aplicativo de host de extensão registrá-lo com o sistema. A exclusão do pacote de aplicativo com cancelar o registro. 
-- Se "isoladas" versões de extensões do aplicativo forem registradas, use o seguinte comando para localizá-los (de modo que possam ser excluídos): `plugin kit -mv`
+- Conforme observado acima, a execução do aplicativo host de extensão o registrará no sistema. Excluindo o pacote de aplicativos com o cancelamento do registro. 
+- Se as versões "isoladas" das extensões de um aplicativo forem registradas, use o seguinte comando para localizá-las (para que elas possam ser excluídas):`plugin kit -mv`
 
 
 <a name="Walkthrough-and-Sample-App" />
 
-## <a name="walkthrough-and-sample-app"></a>Aplicativo de exemplo e instruções passo a passo
+## <a name="walkthrough-and-sample-app"></a>Aplicativo de exemplo e instruções
 
-Uma vez que o desenvolvedor será criar e trabalhar com as extensões do xamarin. MAC da mesma forma como extensões do xamarin. IOS, consulte nosso [Introdução às extensões](~/ios/platform/extensions.md) documentação para obter mais detalhes.
+Como o desenvolvedor criará e trabalhará com as extensões do Xamarin. Mac da mesma forma que as extensões do Xamarin. iOS, consulte a documentação [introdução às extensões](~/ios/platform/extensions.md) para obter mais detalhes.
 
-Um exemplo de projeto de xamarin. Mac contendo pequeno, exemplos de funcionamento de cada tipo de extensão podem ser encontrados [aqui](https://developer.xamarin.com/samples/mac/ExtensionSamples/).
+Um projeto Xamarin. Mac de exemplo que contém exemplos pequenos e funcionais de cada tipo de extensão pode ser encontrado [aqui](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples).
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
-Este artigo apresentou uma visão geral de trabalhar com as extensões em um aplicativo xamarin. Mac versão 2.10 (e superior).
+Este artigo deu uma olhada rápida no trabalho com extensões em um aplicativo Xamarin. Mac versão 2,10 (e superior).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
+- [ExtensionSamples](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

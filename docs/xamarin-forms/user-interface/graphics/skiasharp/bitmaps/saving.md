@@ -7,16 +7,16 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 885bba381e1371d273000fa0d970b465e9ca9c0b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4414ce498bdf69e82269137c35af8f27b9e5f541
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61410609"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649573"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Salvando bitmaps de SkiaSharp em arquivos
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Depois que um aplicativo de SkiaSharp criou ou modificou um bitmap, o aplicativo poderá salvar o bitmap para a biblioteca de fotos do usuário:
 
@@ -46,7 +46,7 @@ O [ `SKBitmap` ](xref:SkiaSharp.SKBitmap) classe contém vários métodos chamad
 
 Além disso, o [ `SKCodec` ](xref:SkiaSharp.SKCodec) classe tem dois métodos chamados `Create` que pode criar um `SKCodec` do objeto de uma fonte compactada e permitir que um aplicativo para obter mais envolvido no processo de decodificação. (O `SKCodec` classe é mostrada no artigo [ **animando Bitmaps de SkiaSharp** ](animating.md#gif-animation) juntamente com um arquivo GIF animado de decodificação.)
 
-Quando estiver codificando um bitmap, mais informações são necessárias: O codificador deve saber que o formato de arquivo específico do aplicativo deseja usar (JPEG ou PNG ou alguma outra coisa). Se um formato com perdas for desejado, a codificação também deve saber o nível de qualidade desejado.
+Ao codificar um bitmap, mais informações são necessárias: O codificador deve saber o formato de arquivo específico que o aplicativo deseja usar (JPEG ou PNG ou outra coisa). Se um formato com perdas for desejado, a codificação também deve saber o nível de qualidade desejado.
 
 O `SKBitmap` classe define um [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) método com a seguinte sintaxe:
 
@@ -68,7 +68,7 @@ Salvar em um arquivo no armazenamento local do aplicativo é muito fácil, porqu
 
 Se você quiser que o arquivo a ser compartilhado por outros aplicativos, ele deve ser salvo para a biblioteca de fotos do usuário. Esta tarefa requer código específico da plataforma e o uso do xamarin. Forms [ `DependencyService` ](xref:Xamarin.Forms.DependencyService).
 
-O **SkiaSharpFormsDemo** do projeto na [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) aplicativo define uma `IPhotoLibrary` interface usada com o `DependencyService` classe. Isso define a sintaxe de um `SavePhotoAsync` método:
+O **SkiaSharpFormsDemo** do projeto na [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) aplicativo define uma `IPhotoLibrary` interface usada com o `DependencyService` classe. Isso define a sintaxe de um `SavePhotoAsync` método:
 
 ```csharp
 public interface IPhotoLibrary
@@ -280,7 +280,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 
 O `SKManagedWStream` deriva de classe `SKWStream` (que significa "fluxo gravável"). O `Encode` método grava o arquivo de bitmap codificado no fluxo. Consultem os comentários no código algum erro, talvez seja necessário executar a verificação.
 
-O **salvar arquivo de formatos** página na [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) aplicativo usa um código semelhante para permitir que você pode experimentar com a economia de um bitmap em vários formatos.
+O **salvar arquivo de formatos** página na [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) aplicativo usa um código semelhante para permitir que você pode experimentar com a economia de um bitmap em vários formatos.
 
 O arquivo XAML contém um `SKCanvasView` que exibe um bitmap, enquanto o restante da página contém tudo o que o aplicativo precisa chamar o `Encode` método `SKBitmap`. Ele tem um `Picker` para um membro do `SKEncodedImageFormat` enumeração, um `Slider` para o argumento de qualidade para formatos de bitmap com perdas, dois `Entry` modos de exibição para um nome de nome de arquivo e pasta e um `Button` para salvar o arquivo.
 
@@ -471,7 +471,7 @@ Um uso comum de um bitmap é em programas, de desenho em que ele funcione confor
 
 O [ **pintura a dedo em SkiaSharp** ](../paths/finger-paint.md) artigo demonstrou como usar o toque de controle para implementar um programa para pintura com dedo primitivo. O programa de suporte a uma única cor e largura do traço apenas uma, mas ele mantido o desenho inteiro em uma coleção de `SKPath` objetos.
 
-O **pintura a dedo com salve** página na [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo também mantém o desenho inteiro em uma coleção de `SKPath` objetos, mas ele também renderiza o desenho no bitmap, que pode salvar sua biblioteca de fotos.
+O **pintura a dedo com salve** página na [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo também mantém o desenho inteiro em uma coleção de `SKPath` objetos, mas ele também renderiza o desenho no bitmap, que pode salvar sua biblioteca de fotos.
 
 Grande parte desse programa é semelhante ao original **pintura a dedo** programa. Uma melhoria é que o arquivo XAML agora instancia botões rotulados **clara** e **salvar**:
 
@@ -698,7 +698,7 @@ Aqui está o programa em ação:
 
 [![Finger pintura de salvamento](saving-images/FingerPaintSave.png "Finger Paint salvar")](saving-images/FingerPaintSave-Large.png#lightbox)
 
-Uma técnica muito semelhante é usada na [ **SpinPaint** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/) exemplo. Isso também é um programa para pintura com dedo, exceto pelo fato do usuário pinta em um disco de rotação que, em seguida, reproduza os designs em seus quatro quadrantes. A cor das alterações de pintura a dedo, como o disco está girando:
+Uma técnica muito semelhante é usada na [ **SpinPaint** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) exemplo. Isso também é um programa para pintura com dedo, exceto pelo fato do usuário pinta em um disco de rotação que, em seguida, reproduza os designs em seus quatro quadrantes. A cor das alterações de pintura a dedo, como o disco está girando:
 
 [![Rotação Paint](saving-images/SpinPaint.png "girar tinta")](saving-images/SpinPaint-Large.png#lightbox)
 
@@ -707,5 +707,5 @@ O **salve** botão de `SpinPaint` classe é semelhante ao **pintura a dedo** em 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [SpinPaint (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SpinPaint (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)

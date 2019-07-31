@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: e4d7901e703544d52bb0e4a377875847b9af0c0a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 7d153491802a74ff06b3a5cd63e585b7fd18ff03
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509347"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644312"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Notificações no Xamarin. Android
 
@@ -36,5 +36,5 @@ Observe que o usuário deve conceder explicitamente permissão ao seu aplicativo
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notificações locais (exemplo)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
-- [Notificações remotas (exemplo)](https://developer.xamarin.com/samples/monodroid/RemoteNotifications/)
+- [Notificações locais (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
+- [Notificações remotas (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: f9c7ada224cefc9bb80e0bcba370d0dee4a664c9
-ms.sourcegitcommit: 25be5acf979f6b18b6d0e64392c9ab307259c032
+ms.openlocfilehash: 36e2869ec272f74b1d76a3cdab7a63a6fbf0780d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68603846"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642933"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Exibições de Interface do usuário do xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/FormsGallery/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Como usar os modos de exibição fornecidos pelo xamarin. Forms_
 
@@ -146,4 +146,4 @@ Xamarin. Forms usa o controle de navegador da web nativos em cada plataforma e p
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Galeria do Xamarin.Forms (amostra)](https://developer.xamarin.com/samples/FormsGallery/)
+- [Galeria do Xamarin.Forms (amostra)](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)

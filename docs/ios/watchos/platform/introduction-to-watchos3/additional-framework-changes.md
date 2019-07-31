@@ -1,93 +1,93 @@
 ---
-title: Alterações de estruturas adicionais do watchOS 3
-description: Este documento descreve várias alterações de estrutura introduzidas com o watchOS 3 e como trabalhar com eles no Xamarin. Dados básicos, animação de núcleo, Foundation, HealthKit, HomeKit, PassKit e UIKit são discutidos.
+title: Alterações adicionais de estruturas watchOS 3
+description: Este documento descreve várias alterações de estrutura introduzidas com o watchOS 3 e como trabalhar com elas no Xamarin. Os dados principais, o Motion Core, o Foundation, o HealthKit, o HomeKit, o PassKit e o UIKit são discutidos.
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: e3eb4e3454aeab08d1333c5dbc3d4808fa4d676c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d8c1ace9972f15c3f068bda88bc21e7cb5990f25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61224507"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655563"
 ---
-# <a name="additional-watchos-3-frameworks-changes"></a>Alterações de estruturas adicionais do watchOS 3
+# <a name="additional-watchos-3-frameworks-changes"></a>Alterações adicionais de estruturas watchOS 3
 
-_Este artigo aborda as alterações adicionais, secundárias ou aprimoramentos para as estruturas existentes para watchOS 3._
+_Este artigo aborda as alterações adicionais e secundárias ou aprimoramentos nas estruturas existentes do watchOS 3._
 
-Além das principais alterações para o iOS, o Apple fez modificações e melhorias nas várias estruturas existentes no watchOS 3.
-
-
-## <a name="core-data"></a>Dados básicos
-
-A estrutura de dados principal para watch OS 3 têm feitas as seguintes melhorias:
-
-- Raiz [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) simultâneo com falha e buscando sem serialização dá suporte a objetos.
-- O [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) classe mantém um pool de armazenamentos de dados SQLite.
-- O [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) objetos com armazenamentos de dados SQLite no suporte a nova geração de consulta WAL diário modo em que contextos de objeto gerenciado (MOC) podem ser fixados em versões de banco de dados específico para buscar futuras de recursos e transações com falha.
-- Usando o alto nível `NSPersistenceContainer` a referência a `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) e outros recursos de configuração de dados principal.
-- Vários métodos de conveniência novos foram adicionados ao `NSManagedObject` tornando mais fácil executar buscas e criar subclasses.
-
-Para obter mais informações, consulte da Apple [referência de estrutura de dados de núcleo](https://developer.apple.com/reference/coredata).
+Além das principais alterações no iOS, a Apple fez modificações e melhorias em várias estruturas existentes no watchOS 3.
 
 
-## <a name="core-motion"></a>Animação de núcleo
+## <a name="core-data"></a>Dados principais
 
-A estrutura de animação de núcleo para watch OS 3 têm feitas as seguintes melhorias:
+Os aprimoramentos a seguir foram feitos na estrutura de dados principal para o sistema operacional de inspeção 3:
 
-- O novo evento de movimento do dispositivo usa o acelerômetro e o giroscópio para fornecer atualizações de movimento e a orientação. O aplicativo pode se registrar para essa atualização (com taxas de até 100Hz).
-- O novo evento Pedometer rápidos e habilita notificações em tempo real quando o usuário pausa e retoma a execução. Use o [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) para registrar eventos de pedometer primeiro ou segundo plano.
+- Os objetos raiz [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) dão suporte à falha e busca simultâneas sem serialização.
+- A classe [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) mantém um pool de armazenamentos de dados do SQLite.
+- Os objetos [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) com armazenamentos de dados SQLite no modo de diário Wal dão suporte ao novo recurso de geração de consulta em que os contextos de objeto gerenciado (MOC) podem ser fixados em versões de banco de dados específicas para futuras transações de busca e falha.
+- Usando o alto nível `NSPersistenceContainer` para fazer referência a, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) e outros recursos principais de configuração de `NSPersistentStoreCoordinator`dados.
+- Vários novos métodos de conveniência foram adicionados para `NSManagedObject` tornar mais fácil executar buscas e criar subclasses.
+
+Para obter mais informações, consulte a [referência da estrutura de dados principal](https://developer.apple.com/reference/coredata)da Apple.
 
 
-## <a name="foundation"></a>Foundation
+## <a name="core-motion"></a>Movimento principal
 
-Fez as seguintes melhorias para a estrutura de base para inspeção 3 do sistema operacional:
+Os aprimoramentos a seguir foram feitos na estrutura de movimento principal para o sistema operacional de inspeção 3:
 
-- Use a nova [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) classe para fazer cálculos de intervalo de data e hora como durações, para comparar os intervalos e teste para interseções de intervalo.
-- Várias novas propriedades foram adicionadas para o [NSLocal](https://developer.apple.com/reference/foundation/nslocale) classe para adquirir informações locais e os formatos de exibição disponíveis.
-- Use a nova [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) classe para converter entre diferentes unidades de medida (unidade de medida) ou executar cálculos nos valores de UOMs diferentes.
-- Use a nova [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) classe Formatar medidas localizadas para a exibição para o usuário final.
-- Use a nova [NSUnit](https://developer.apple.com/reference/foundation/nsunit) e [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) classes para representar UOMs específicos.
+- O novo evento de movimento do dispositivo usa o acelerômetro e o giroscópio para fornecer atualizações de movimento e de orientação. O aplicativo pode se registrar para essa atualização (em taxas de até 100Hz).
+- O novo evento pedometer permite notificações rápidas e em tempo real quando o usuário pausa e retoma a execução. Use o [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) para se registrar em eventos de pedometer de primeiro plano ou em segundo plano.
+
+
+## <a name="foundation"></a>Fundamental
+
+Os aprimoramentos a seguir foram feitos na estrutura de base para o sistema operacional de inspeção 3:
+
+- Use a nova classe [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) para fazer cálculos de intervalo de data e hora, como durações, para comparar intervalos e testar as interseções de intervalo.
+- Várias novas propriedades foram adicionadas à classe [NSLocal](https://developer.apple.com/reference/foundation/nslocale) para adquirir informações locais e os formatos de exibição disponíveis.
+- Use a nova classe [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) para converter entre diferentes unidades de medida (unidade ea) ou executar cálculos em valores em diferentes UOMs.
+- Use a nova classe [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) para formatar as medidas localizadas para exibição para o usuário final.
+- Use as novas classes [NSUnit](https://developer.apple.com/reference/foundation/nsunit) e [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) para representar UOMs específicos.
 
 
 ## <a name="healthkit"></a>HealthKit
 
-Fez as seguintes melhorias para a estrutura de HealthKit para inspeção 3 do sistema operacional:
+Os seguintes aprimoramentos foram feitos na estrutura HealthKit para o sistema operacional de observação 3:
 
-- Use a nova [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) classe para especificar o `ActivityType` e `LocationType` de uma ginástica.
-- O novo [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) e o `WheelchairUse` método da [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) classe foram adicionadas para trabalhar com cadeiras de rodas nos dados de integridade relacionados.
-- Foram adicionadas novas chaves de metadados para tipos de clima (como `HKWeatherConditionClear` e `HKWeatherConditionCloudy`) e tipos de treinamento (como `HKWorkoutActivityTypeFlexibility` e `HKWorkoutActivityTypeWheelchairRunPace`) foram adicionadas.
+- Use a nova classe [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) para especificar o `ActivityType` e `LocationType` de um treinamento.
+- O novo [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) e o `WheelchairUse` método da classe [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) foram adicionados para trabalhar com dados de integridade relacionados a cadeira de rodas.
+- Foram adicionadas novas chaves de metadados para os tipos meteorológicos `HKWeatherConditionClear` ( `HKWeatherConditionCloudy`como e) e os tipos de `HKWorkoutActivityTypeFlexibility` treinamento `HKWorkoutActivityTypeWheelchairRunPace`(como e) foram adicionados.
 
 
 ## <a name="homekit"></a>HomeKit
 
-Fez as seguintes melhorias para a estrutura HomeKit para inspeção 3 do sistema operacional:
+Os seguintes aprimoramentos foram feitos na estrutura HomeKit para o sistema operacional de observação 3:
 
-- Adicionada a capacidade de exibir e interagir com o HomeKit conectados IP câmeras.
-- Adicionados vários novos serviços e características.
-- Adicionadas mais contexto e a configuração de Acessórios de serviços principais e os serviços de link.
+- Adicionada a capacidade de exibir e interagir com câmeras de IP conectadas do HomeKit.
+- Foram adicionados vários novos serviços e características.
+- Adição de mais contexto e configuração dos acessórios de serviços primários e serviços de link.
 
 
 ## <a name="passkit"></a>PassKit
 
-Fez as seguintes melhorias ao PassKit framework para inspeção 3 do sistema operacional:
+Os seguintes aprimoramentos foram feitos na estrutura PassKit para o sistema operacional de observação 3:
 
-- Expande o framework para dar suporte a pagamentos seguros no aplicativo do Apple Watch de bens físicos e serviços.
-- As classes a seguir agora estão disponíveis: [PKPayment](https://developer.apple.com/reference/passkit/pkpayment), [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod), [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) e [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
+- Expande a estrutura para dar suporte a pagamentos seguros e no aplicativo na Apple Watch de bens e serviços físicos.
+- As seguintes classes agora estão disponíveis: [PKPayment](https://developer.apple.com/reference/passkit/pkpayment), [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod), [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) e [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
 
 
 ## <a name="uikit"></a>UIKit
 
-Fez as seguintes melhorias para a estrutura UIKit para inspeção 3 do sistema operacional:
+Os seguintes aprimoramentos foram feitos na estrutura UIKit para o sistema operacional de observação 3:
 
-- Para dar suporte a tipo dinâmico em rótulos, campos de texto e caixas de texto usam a nova `PreferredFontForTextStyle` método da `UIFont` classe.
-- O `ColorWithDisplayP3` método foi adicionado para dar suporte a cores de largura.
+- Para dar suporte ao tipo dinâmico em rótulos, campos `PreferredFontForTextStyle` `UIFont` de texto e caixas de texto, use o novo método da classe.
+- O `ColorWithDisplayP3` método foi adicionado para dar suporte à cor ampla.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Guia de Introdução (amostra)](https://developer.xamarin.com/samples/monotouch/WatchKit/)
+- [exemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS%20watchos)
 - [O que há de novo no watchOS 3](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)

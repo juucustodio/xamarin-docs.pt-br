@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: ffe1c33c2ec93ae04af70a67d0417ab253591183
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: a937de27fc032b0d88dfdf717339b47e0df8e58d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510290"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644628"
 ---
 # <a name="xamarinandroid-edit-text"></a>Editar texto do Xamarin. Android
 
@@ -69,4 +69,4 @@ Execute o aplicativo e insira algum texto no campo de texto. Quando você pressi
 
 ## <a name="related-links"></a>Links relacionados
 
-- [EditTextSample](https://developer.xamarin.com/samples/monodroid/UserInterface/EditTextSample/)
+- [EditTextSample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-edittextsample)

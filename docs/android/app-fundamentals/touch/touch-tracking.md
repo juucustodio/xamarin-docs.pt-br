@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 877cd7d10cfd81281d2ca94bf5443531d721cdfa
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 26dfc4f9327f12d6854d72349dc46e0b4427fa72
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509094"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643924"
 ---
 # <a name="multi-touch-finger-tracking"></a>Acompanhamento de dedos multitoque
 
@@ -23,7 +23,7 @@ Há ocasiões em que um aplicativo multitoque precisa acompanhar os dedos indivi
 Para todos os eventos associados a um dedo específico, o código de ID permanece o mesmo. O código de ID é atribuído quando um dedo entra na tela pela primeira vez e se torna inválido depois que o dedo é levantado da tela.
 Esses códigos de ID geralmente são inteiros muito pequenos e o Android os reutiliza para eventos de toque posteriores.
 
-Quase sempre, um programa que controla os dedos individuais mantém um dicionário para acompanhamento de toque. A chave de dicionário é o código de ID que identifica um dedo específico. O valor do dicionário depende do aplicativo. No programa [FingerPaint](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint) , cada traço de dedo (de toque para liberação) é associado a um objeto que contém todas as informações necessárias para renderizar a linha desenhada com esse dedo. O programa define uma classe `FingerPaintPolyline` pequena para essa finalidade:
+Quase sempre, um programa que controla os dedos individuais mantém um dicionário para acompanhamento de toque. A chave de dicionário é o código de ID que identifica um dedo específico. O valor do dicionário depende do aplicativo. No programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) , cada traço de dedo (de toque para liberação) é associado a um objeto que contém todas as informações necessárias para renderizar a linha desenhada com esse dedo. O programa define uma classe `FingerPaintPolyline` pequena para essa finalidade:
 
 ```csharp
 class FingerPaintPolyline
@@ -98,7 +98,7 @@ A `ActionMasked` propriedade usa um número menor de valores porque ela deve ser
 
 Ao usar `ActionMasked`o, `ActionIndex` o faz distinção entre os dedos subsequentes para tocar e sair da tela, mas normalmente não é necessário usar esse valor, exceto como um argumento `MotionEvent` para outros métodos no objeto. Para o multitoque, um dos mais importantes desses métodos é `GetPointerId` chamado no código acima. Esse método retorna um valor que você pode usar para uma chave de dicionário para associar eventos específicos a dedos.
 
-A `OnTouchEvent` substituição no programa [FingerPaint](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint) processa os eventos `MotionEventActions.Down` e `PointerDown` de forma idêntica, criando um novo `FingerPaintPolyline` objeto e adicionando-o ao dicionário:
+A `OnTouchEvent` substituição no programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) processa os eventos `MotionEventActions.Down` e `PointerDown` de forma idêntica, criando um novo `FingerPaintPolyline` objeto e adicionando-o ao dicionário:
 
 ```csharp
 public override bool OnTouchEvent(MotionEvent args)
@@ -191,7 +191,7 @@ public override bool OnTouchEvent(MotionEvent args)
 }
 ```
 
-Esse tipo de processamento permite que o programa [FingerPaint](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint) acompanhe os dedos individuais e desenhe os resultados na tela:
+Esse tipo de processamento permite que o programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) acompanhe os dedos individuais e desenhe os resultados na tela:
 
 [![Exemplo de captura de tela do exemplo de FingerPaint](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
@@ -201,4 +201,4 @@ Agora você viu como é possível acompanhar os dedos individuais na tela e faze
 ## <a name="related-links"></a>Links relacionados
 
 - [Guia equivalente do Xamarin iOS](~/ios/app-fundamentals/touch/touch-tracking.md)
-- [FingerPaint (exemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint)
+- [FingerPaint (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)

@@ -1,68 +1,68 @@
 ---
 title: Alterações no StoreKit no iOS 6
-description: 'iOS 6 apresenta duas alterações para a API do Store Kit: a capacidade de exibir o iTunes (e o aplicativo Store/Eróticos) opção em que a Apple hospedará os arquivos para download de compra de produtos de dentro de seu aplicativo e um aplicativo no novo. Este documento explica como implementar esses recursos com o xamarin. IOS.'
+description: 'o iOS 6 apresenta duas alterações na API do kit de loja: a capacidade de exibir produtos iTunes (e App Store/eróticos da iBookstore) de dentro de seu aplicativo e uma nova opção de compra no aplicativo, na qual a Apple hospedará seus arquivos baixáveis. Este documento explica como implementar esses recursos com o Xamarin. iOS.'
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 35bac91e54181753bd1f3fd8b4cf0b851bfa1882
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 03c18c50b15db05d26e1cec20e571367219f8643
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827502"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643065"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit no iOS 6
 
-_iOS 6 introduziu duas alterações para a API do Store Kit: a capacidade de exibir o iTunes (e o aplicativo Store/Eróticos) opção em que a Apple hospedará os arquivos para download de compra de produtos de dentro de seu aplicativo e um aplicativo no novo. Este documento explica como implementar esses recursos com o xamarin. IOS._
+_o iOS 6 introduziu duas alterações na API do kit de loja: a capacidade de exibir produtos iTunes (e App Store/eróticos da iBookstore) de dentro de seu aplicativo e uma nova opção de compra no aplicativo, na qual a Apple hospedará seus arquivos baixáveis. Este documento explica como implementar esses recursos com o Xamarin. iOS._
 
-As principais alterações Store Kit em iOS6 são esses dois novos recursos:
+As principais alterações no kit de armazenamento no iOS6 são esses dois novos recursos:
 
-- **Exibição de conteúdo no aplicativo e compras** – os usuários podem comprar e baixar aplicativos, música, livros e outras iTunes de conteúdo sem sair do seu aplicativo. Você também pode vincular a seus próprios aplicativos para promover a compra ou apenas incentivar as revisões e classificações.
-- **No aplicativo de compra hospedado conteúdo** – Apple armazenará e entregar o conteúdo associado com seus produtos de compra no aplicativo, o que elimina a necessidade de um servidor separado hospedar os arquivos, automaticamente dá suporte a download em segundo plano e permite que você Escreva menos código.
+- **Exibição de conteúdo no aplicativo & compra** – os usuários podem comprar e baixar aplicativos, música, livros e outros conteúdos do iTunes sem sair de seu aplicativo. Você também pode vincular a seus próprios aplicativos para promover a compra ou apenas incentivar análises e classificações.
+- **Conteúdo hospedado de compra no aplicativo** – a Apple armazenará e fornecerá o conteúdo associado aos seus produtos de compra no aplicativo, o que elimina a necessidade de um servidor separado para hospedar seus arquivos, oferece suporte automático ao download em segundo plano e permite que você escreva menos código.
 
-Consulte a [compra no aplicativo](~/ios/platform/in-app-purchasing/index.md) guias para cobertura detalhada das APIs StoreKit.
+Consulte os guias de [compra no aplicativo](~/ios/platform/in-app-purchasing/index.md) para obter uma cobertura detalhada das APIs do StoreKit.
 
 ## <a name="requirements"></a>Requisitos
 
-Os recursos do Store Kit discutidos neste documento exigem o iOS 6 e o Xcode 4.5 juntamente com o xamarin. IOS 6.0.
+Os recursos do kit de loja discutidos neste documento exigem o iOS 6 e o Xcode 4,5, juntamente com o Xamarin. iOS 6,0.
 
-## <a name="in-app-content-display--purchasing"></a>Exibição de conteúdo no aplicativo e compras
+## <a name="in-app-content-display--purchasing"></a>Exibição de conteúdo no aplicativo & compra
 
-O novo recurso de compra no aplicativo do iOS permite aos usuários exibir informações sobre o produto e comprar ou baixar o produto de dentro de seu aplicativo.
-Anteriormente aplicativos teria disparar Eróticos, o que resultam no usuário deixar o aplicativo original, a App Store ou iTunes. Esse novo recurso retorna automaticamente o usuário ao seu aplicativo quando eles são feitos.
+O novo recurso de compra no aplicativo no iOS permite que os usuários exibam informações do produto e comprem ou baixem o produto de dentro de seu aplicativo.
+Anteriormente, os aplicativos teriam de disparar o iTunes, a App Store ou o eróticos da iBookstore, o que resultaria no usuário deixar o aplicativo original. Esse novo recurso retorna automaticamente o usuário para seu aplicativo quando eles são concluídos.
 
 [![](changes-to-storekit-images/image1.png "Retornando automaticamente para um aplicativo após a compra")](changes-to-storekit-images/image1.png#lightbox)
 
-Exemplos de como isso poderia ser usado:
+Exemplos de como isso pode ser usado incluem:
 
-- **Incentivar os usuários de seu aplicativo** – você pode abrir a página de Store de aplicativo para que o usuário possa classificar e examinar seu aplicativo sem deixá-lo.
-- **Ao promover entre aplicativos** – permitir que o usuário veja outros aplicativos que você publicar, com a capacidade de comprar/download imediatamente.
-- **Ajudando os usuários a localizar e baixar conteúdo** – ajudam os usuários a comprar conteúdo que seu aplicativo localiza, gerencia ou agrega (por exemplo. um aplicativo de música pode fornecer uma lista de reprodução de músicas e permitir que cada música ser adquirido de dentro do aplicativo).
+- **Incentivando os usuários a classificarem seu aplicativo** – você pode abrir a página da loja de aplicativos para que o usuário possa classificar e examinar seu aplicativo sem deixá-lo.
+- **Aplicativos de promoção cruzada** – permite que o usuário veja outros aplicativos que você publica, com a capacidade de comprar/baixar imediatamente.
+- **Ajudando os usuários a localizar e baixar conteúdo** – ajudar os usuários a comprar conteúdo que seu aplicativo encontra, gerencia ou agregações (por exemplo, um aplicativo relacionado à música pode fornecer uma lista de reprodução de músicas e permitir que cada música seja comprada de dentro do aplicativo).
 
-Uma vez o `SKStoreProductViewController` foi exibido o usuário pode interagir com as informações do produto, como se estivesse no iTunes, a App Store ou o Eróticos. O usuário pode:
+Depois que `SKStoreProductViewController` o tiver sido exibido, o usuário poderá interagir com as informações do produto como se estivesse no iTunes, na loja de aplicativos ou no eróticos da iBookstore. O usuário pode:
 
-- Capturas de tela de exibição (para aplicativos)
-- Músicas de exemplo ou um vídeo (para música, programas de TV e filmes),
-- Revisões de leitura (e gravação)
-- Compra e download, o que acontece inteiramente dentro do Store Kit e controlador de exibição.
+- Exibir capturas de tela (para aplicativos),
+- Vídeo ou músicas de exemplo (para música, programas de TV e filmes),
+- Ler (e gravar) revisões,
+- Compre & download, que ocorre inteiramente dentro do controlador de exibição e do kit de armazenamento.
 
-Algumas opções dentro de `SKStoreProductViewController` ainda será forçar o usuário para deixar seu aplicativo e abra o aplicativo da loja relevante, como clicar em **produtos relacionados** ou um aplicativo **suporte** link.
+Algumas opções dentro do `SKStoreProductViewController` ainda forçarão o usuário a deixar seu aplicativo e abrir o aplicativo de loja relevante, como clicar em **produtos relacionados** ou no link de **suporte** de um aplicativo.
 
 ### <a name="skstoreproductviewcontroller"></a>SKStoreProductViewController
 
-A API para mostrar um produto em qualquer aplicativo é simples: requer apenas que você cria e exibe um `SKStoreProductViewController`. Siga estas etapas para criar e exibir um produto:
+A API para mostrar um produto em qualquer aplicativo é simples: requer apenas que você crie e exiba um `SKStoreProductViewController`. Siga estas etapas para criar e mostrar um produto:
 
-1. Criar uma `StoreProductParameters` objeto para passar parâmetros para o controlador de exibição, incluindo o `productId` no construtor.
-1. Criar uma instância de `SKProductViewController`. Atribuí-lo a um campo de nível de classe.
-1. Atribuir um manipulador para o controlador de exibição `Finished` evento, que deve ignorar o controlador de exibição. Esse evento é chamado quando o usuário pressionar Cancelar; ou, caso contrário, Finaliza uma transação dentro do controlador de exibição.
-1. Chame o `LoadProduct` método passando o `StoreProductParameters` e um manipulador de conclusão. O manipulador de conclusão deve verificar se a solicitação de produto foi com êxito e apresentar nesse caso, o `SKProductViewController` modalmente. Tratamento de erros apropriado deve ser adicionado, caso o produto não pode ser recuperado.
+1. Crie um `StoreProductParameters` objeto para passar parâmetros para o controlador de exibição, incluindo `productId` o no construtor.
+1. Crie uma `SKProductViewController`instância do. Atribua-o a um campo de nível de classe.
+1. Atribua um manipulador ao evento do `Finished` controlador de exibição, que deve ignorar o controlador de exibição. Esse evento é chamado quando o usuário pressiona cancelar; ou, de outra forma, finaliza uma transação dentro do controlador de exibição.
+1. Chame o `LoadProduct` método passando o `StoreProductParameters` e um manipulador de conclusão. O manipulador de conclusão deve verificar se a solicitação do produto foi bem-sucedida e, em caso afirmativo `SKProductViewController` , apresentar as modalidades. O tratamento de erros apropriado deve ser adicionado caso o produto não possa ser recuperado.
 
 ### <a name="example"></a>Exemplo
 
-O *ProductView* project na *StoreKit* código de exemplo para este artigo implementa um `Buy` método que aceita qualquer produto da ID da Apple e exibe o `SKStoreProductViewController`. O código a seguir exibe as informações de produto para qualquer determinada ID da Apple:
+O projeto *ProductView* no código de exemplo *StoreKit* para este artigo implementa um `Buy` método que aceita a ID da Apple de qualquer produto e `SKStoreProductViewController`exibe o. O código a seguir exibe as informações do produto para qualquer ID da Apple determinada:
 
 ```csharp
 void Buy (int productId)
@@ -86,15 +86,15 @@ void Buy (int productId)
 }
 ```
 
-O aplicativo se parece com a captura de tela abaixo, quando em execução – download ou compra ocorre inteiramente dentro do `SKStoreProductViewController`:
+O aplicativo se parece com a captura de tela abaixo ao executar – o download ou a `SKStoreProductViewController`compra ocorre inteiramente dentro do:
 
-[![](changes-to-storekit-images/image2.png "O aplicativo tem esta aparência quando em execução")](changes-to-storekit-images/image2.png#lightbox)
+[![](changes-to-storekit-images/image2.png "O aplicativo tem a seguinte aparência quando executado")](changes-to-storekit-images/image2.png#lightbox)
 
 ### <a name="supporting-older-operating-systems"></a>Suporte a sistemas operacionais mais antigos
 
-O aplicativo de exemplo inclui código que mostra como abrir o aplicativo Store, iTunes ou o Eróticos em versões anteriores do iOS. Use o `OpenUrl` método para abrir um criado corretamente **itunes.com** URL.
+O aplicativo de exemplo inclui código que mostra como abrir a loja de aplicativos, o iTunes ou o eróticos da iBookstore em versões anteriores do iOS. Use o `OpenUrl` método para abrir uma URL de **iTunes.com** corretamente criada.
 
-Você pode implementar uma verificação de versão para determinar qual código deve ser executado, conforme mostrado aqui:
+Você pode implementar uma verificação de versão para determinar qual código executar, conforme mostrado aqui:
 
 ```csharp
 if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
@@ -109,280 +109,280 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 
 ### <a name="errors"></a>Erros
 
-O seguinte erro ocorrerá se a ID da Apple que você usa não for válida, que pode ser confuso, pois ele implica um problema de rede ou autenticação de algum tipo.
+O seguinte erro ocorrerá se a ID da Apple usada não for válida, o que pode ser confuso, pois implica um problema de rede ou de autenticação de algum tipo.
 
  `Error Domain=SKErrorDomain Code=5 "Cannot connect to iTunes Store"`
 
 ### <a name="reading-objective-c-documentation"></a>Lendo a documentação do Objective-C
 
-Os desenvolvedores lendo sobre o Kit de Store no Portal do desenvolvedor da Apple verá um protocolo – [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) – discutido em relação a esse novo recurso. O protocolo de delegado tem apenas um método – productViewControllerDidFinish – que foi exposto como o `Finished` eventos sobre o `SKStoreProductViewController` no xamarin. IOS.
+Os desenvolvedores lendo sobre o kit de loja no portal do desenvolvedor da Apple verão um protocolo – [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) – discutido em relação a esse novo recurso. O protocolo delegado tem apenas um método – productViewControllerDidFinish – que foi exposto como o `Finished` evento `SKStoreProductViewController` no Xamarin. Ios.
 
-## <a name="determining-apple-ids"></a>Determinando as IDs da Apple
+## <a name="determining-apple-ids"></a>Determinando IDs da Apple
 
-A ID da Apple necessários para o `SKStoreProductViewController` é um *número* (não deve ser confundido com as IDs do lote, como "com.xamarin.mwc2012"). Há algumas maneiras diferentes, que você pode encontrar a ID da Apple para os produtos que você deseja exibir, listados abaixo:
+A ID da Apple exigida `SKStoreProductViewController` pelo é um *número* (não deve ser confundido com IDs de pacote como "com. xamarin. mwc2012"). Há algumas maneiras diferentes de descobrir a ID da Apple para os produtos que você deseja exibir, listados abaixo:
 
 ### <a name="itunesconnect"></a>iTunesConnect
 
-Para aplicativos que você publicar, é fácil encontrar as **ID da Apple** no iTunes Connect:
+Para aplicativos que você publica, é fácil encontrar a ID da **Apple** no iTunes Connect:
 
-[![](changes-to-storekit-images/image3.png "Localizando a ID da Apple no iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
+[![](changes-to-storekit-images/image3.png "Encontrando a ID da Apple no iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
 
  <a name="Search_API" />
 
 ### <a name="search-api"></a>API de pesquisa
 
-A Apple fornece uma API de pesquisa dinâmica para todos os produtos na Store do aplicativo, iTunes e o Eróticos da consulta. Informações sobre como acessar a API de pesquisa podem ser encontradas no [afiliado recursos da Apple](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), embora a API é exposta a qualquer pessoa (não está registradas apenas afiliadas). O JSON resultante pode ser analisado para descobrir os `trackId` que é a ID da Apple para usar com `SKStoreProductViewController`.
+A Apple fornece uma API de pesquisa dinâmica para consultar todos os produtos na App Store, no iTunes e no eróticos da iBookstore. Informações sobre como acessar a API de pesquisa podem ser encontradas nos [recursos afiliados da Apple](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), embora a API seja exposta a qualquer pessoa (não apenas afiliadas registradas). O JSON resultante pode ser analisado para descobrir `trackId` que é a ID da Apple a ser usada com `SKStoreProductViewController`o.
 
-Os resultados incluirão também outros metadados, incluindo informações de exibição e as URLs de arte final que podem ser usadas para renderizar o produto em seu aplicativo.
+Os resultados também incluirão outros metadados, incluindo informações de exibição e URLs do trabalho artístico que podem ser usados para renderizar o produto em seu aplicativo.
 
 Estes são alguns exemplos:
 
-- **aplicativo iBooks** – [ http://itunes.apple.com/search?term=ibooks&amp; entidade = software&amp;país = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Ponto e o adversário iBook** – [ http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entidade = ebook&amp;país = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **aplicativo iBooks** – [ http://itunes.apple.com/search?term=ibooks&amp ; entidade = software&amp; Country = US](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Ponto e Kangaroo iBook** – [ http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; Entity = livro eletrônico&amp; Country = US](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
-### <a name="enterprise-partner-feed"></a>Feed de parceiro da empresa
+### <a name="enterprise-partner-feed"></a>Feed de parceiro corporativo
 
-A Apple fornece a parceiros aprovados com um despejo de dados completos de todos os seus produtos, na forma de arquivos simples de pronto para o banco de dados que pode ser baixados. Se você for qualificado para acessar o [Feed de parceiro empresarial](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html), e em seguida, a ID da Apple para qualquer produto pode ser encontrada no conjunto de dados.
+A Apple fornece aos parceiros aprovados um despejo de dados completo de todos os seus produtos, na forma de arquivos simples prontos para o banco de dado para download. Se você se qualifica para acesso ao [feed de parceiros corporativos](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html), a ID da Apple para qualquer produto pode ser encontrada nesse conjunto de código.
 
-Muitos usuários do Feed de parceiro a Enterprise são membros do [programa para afiliadas](http://www.apple.com/itunes/affiliates) que permite comissões de ser conquistada nas vendas do produto. `SKStoreProductViewController` não oferece suporte a IDs afiliado (no momento da gravação).
+Muitos usuários do feed de parceiros corporativos são membros do [programa afiliado](http://www.apple.com/itunes/affiliates) que permite que as comissões sejam obtidas em vendas de produtos. `SKStoreProductViewController`o não oferece suporte a IDs de afiliação (no momento da gravação).
 
-### <a name="direct-product-links"></a>Produto Links diretos
+### <a name="direct-product-links"></a>Links diretos de produtos
 
-A ID da Apple para um produto pode ser inferida de seu link de URL de visualização do iTunes.
-Em qualquer iTunes links de produtos (para aplicativos, música ou livros) encontrar a parte do início com URL `id` e usar o número que segue.
+A ID da Apple para um produto pode ser inferida de seu link de URL do iTunes Preview.
+Em qualquer link de produto do iTunes (para aplicativos, música ou livros), localize a parte da URL `id` que começa com e use o número a seguir.
 
-Por exemplo, é o link direto para iBooks
+Por exemplo, o link direto para iBooks é
 
 ```csharp
 http://itunes.apple.com/us/app/ibooks/id364709193?mt=8
 ```
 
-e é a ID da Apple **364709193**. Da mesma forma para o aplicativo MWC2012, o link direto é
+e a ID da Apple é **364709193**. Da mesma forma para o aplicativo MWC2012, o link direto é
 
 ```csharp
 http://itunes.apple.com/us/app/mwc-2012-unofficial/id496963922?mt=8
 ```
 
-e é a ID da Apple **496963922**.
+e a ID da Apple é **496963922**.
 
-## <a name="in-app-purchase-hosted-content"></a>Compra no aplicativo hospedado de conteúdo
+## <a name="in-app-purchase-hosted-content"></a>Conteúdo hospedado de compra no aplicativo
 
-Se suas compras no aplicativo consistem em conteúdo que pode ser baixado (por exemplo, manuais ou outras mídias, arte de nível de jogo e configuração ou outros arquivos grandes), em seguida, esses arquivos são usados para ser hospedado em seu servidor web e aplicativos tinham que incorporar o código para baixá-los após o com segurança Compre. Começando com o iOS 6, a Apple hospedará os arquivos em seus servidores, removendo a necessidade de um servidor separado. O recurso só está disponível para os produtos não consumíveis (não utilizado ou assinaturas). Vantagens de usar o serviço de hospedagem da Apple:
+Se suas compras no aplicativo consistirem em conteúdo para download (como livros ou outras mídias, arte e configuração de nível de jogo ou outros arquivos grandes), esses arquivos serão usados para serem hospedados no servidor Web e os aplicativos precisarão incorporar o código para baixá-los com segurança após compras. A partir do iOS 6, a Apple hospedará seus arquivos em seus servidores, eliminando a necessidade de um servidor separado. O recurso está disponível somente para produtos não consumíveis (não consumíveis ou assinaturas). As vantagens de usar o serviço de hospedagem da Apple incluem:
 
-- Economize custos de hospedagem e a largura de banda.
-- Provavelmente mais escalonável do que qualquer host de servidor que você está usando atualmente. 
-- Menos código para escrever, uma vez que você não precise criar qualquer processamento do lado do servidor. 
-- Download em segundo plano é implementado para você.
+- Economize os custos de largura de banda & de hospedagem.
+- Provavelmente mais escalonável do que qualquer host de servidor que esteja sendo usado no momento. 
+- Menos código para escrever, já que você não precisa criar nenhum processamento do lado do servidor. 
+- O download em segundo plano é implementado para você.
 
-Observação: teste hospedado conteúdo de compra no aplicativo no iOS que Simulator não for compatível, portanto, você deve testar com um dispositivo real.
+Observação: não há suporte para testar conteúdo de compra no aplicativo hospedado no simulador do iOS, portanto, você deve testar com um dispositivo real.
 
-### <a name="hosted-content-basics"></a>Noções básicas de conteúdo hospedadas
+### <a name="hosted-content-basics"></a>Noções básicas de conteúdo hospedado
 
-Antes do iOS 6, havia duas maneiras de fornecer um produto (descrito mais detalhadamente [as compras no aplicativo do Xamarin](~/ios/platform/in-app-purchasing/index.md) documentação):
+Antes do iOS 6, havia duas maneiras de fornecer um produto (descrito mais detalhadamente na documentação de [compra no aplicativo do Xamarin](~/ios/platform/in-app-purchasing/index.md) ):
 
-- **Produtos internos** – recursos que estão 'desbloqueada' com a compra, mas que são criados para o aplicativo (como o código ou recursos inseridos). Exemplos de produtos internos incluem filtros de foto desbloqueados ou geradores de energia no jogo.
-- **Produtos de servidor-entregue** – após a compra, o aplicativo deve baixar o conteúdo de um servidor que você opera. Este conteúdo é baixado durante a compra, armazenado no dispositivo e, em seguida, renderizado como parte do fornecimento de produto. Exemplos incluem livros, revistos problemas ou níveis de jogos que consistem em arquivos de arte e configuração do plano de fundo.
+- **Produtos internos** – recursos que são "desbloqueados" pela compra, mas que são incorporados ao aplicativo (como código ou recursos incorporados). Exemplos de produtos internos incluem filtros de fotos desbloqueados ou Power ups em jogo.
+- **Produtos entregues pelo servidor** – após a compra, o aplicativo deve baixar o conteúdo de um servidor que você opera. Esse conteúdo é baixado durante a compra, armazenado no dispositivo e, em seguida, renderizado como parte do fornecimento do produto. Os exemplos incluem livros, problemas da revista ou níveis de jogos que consistem em arquivos de configuração e arte em segundo plano.
 
-No iOS 6 Apple oferece uma variação de produtos de servidor fornecesse: eles hospedará os arquivos de conteúdo em seus servidores. Isso torna muito mais simples de criar produtos de servidor fornecesse porque não é necessário para operar um servidor separado e Store Kit fornece funcionalidade de download em segundo plano que anteriormente você precisava escrever por conta própria. Para tirar proveito de hospedagem da Apple, habilitar a hospedagem de conteúdo para os novos produtos de compra no aplicativo e modificar seu código do Store Kit para tirar proveito dela. Arquivos de conteúdo do produto, em seguida, são criados usando o Xcode e carregados para servidores da Apple para análise e lançamento.
+No iOS 6, a Apple oferece uma variação de produtos entregues por servidor: eles hospedarão seus arquivos de conteúdo em seus servidores. Isso torna muito mais simples a criação de produtos entregues por servidor, pois não é necessário operar um servidor separado, e o kit de armazenamento fornece a funcionalidade de download em segundo plano que você tinha que escrever anteriormente. Para aproveitar a hospedagem da Apple, habilite a hospedagem de conteúdo para novos produtos de compra no aplicativo e modifique seu código do kit de loja para tirar proveito dele. Os arquivos de conteúdo do produto são então criados usando o Xcode e carregados nos servidores da Apple para revisão e liberação.
 
-[![](changes-to-storekit-images/image4.png "O processo de compilação e entrega")](changes-to-storekit-images/image4.png#lightbox)
+[![](changes-to-storekit-images/image4.png "O processo de Build e entrega")](changes-to-storekit-images/image4.png#lightbox)
 
-Usando o aplicativo Store para fornecer a compras no aplicativo *com hospedado conteúdo* requer a instalação e configuração a seguir:
+Usar a App Store para fornecer compras no aplicativo *com conteúdo hospedado* requer a seguinte configuração e configuração:
 
-- **o iTunes Connect** – você *deve* forneceu suas informações de serviços bancários e imposto para a Apple para que eles podem remeter fundos coletados em seu nome. Em seguida, você pode configurar produtos para vender e configurar contas de usuário de área restrita para testar a compra.  _Você também deve configurar conteúdo hospedado para esses produtos não consumíveis que você deseja hospedar com a Apple_.
-- **Portal de provisionamento iOS** – criando um identificador de pacote e habilitando o acesso de Store de aplicativo para seu aplicativo, como você faria para qualquer aplicativo que dá suporte a compras no aplicativo.
-- **Store Kit** – adicionar código ao seu aplicativo para exibir produtos, compra de produtos e restaurando transações.  _No iOS 6 Store Kit também gerenciar o download de conteúdo seu produto, em segundo plano, com atualizações de andamento._
-- **Código personalizado** : para acompanhar as compras feitas por clientes e fornecer produtos ou serviços adquiridos. Utilize as novas classes do Store Kit iOS 6, como `SKDownload` para recuperar o conteúdo hospedado pela Apple.
+- **iTunes Connect** – você *deve* ter fornecido suas informações bancárias e fiscais para a Apple para que elas possam remeter os fundos coletados em seu nome. Em seguida, você pode configurar produtos para vender e configurar contas de usuário de área restrita para testar a compra.  _Você também deve configurar o conteúdo hospedado para os produtos não consumíveis que você deseja hospedar com a Apple_.
+- **portal de provisionamento do IOS** – criando um identificador de pacote e habilitando o acesso à App Store para seu aplicativo, como você faria para qualquer aplicativo que dê suporte à compra no aplicativo.
+- **Kit de loja** – adicionando código ao seu aplicativo para exibir produtos, comprar produtos e restaurar transações.  _No kit de armazenamento do iOS 6 também gerenciará o download do conteúdo do produto, em segundo plano, com atualizações de progresso._
+- **Código personalizado** – para controlar as compras feitas pelos clientes e fornecer os produtos ou serviços que eles compraram. Utilize novas classes do kit de armazenamento do `SKDownload` Ios 6 como para recuperar o conteúdo hospedado pela Apple.
 
-As seções a seguir explicam como implementar o conteúdo hospedado, desde a criação e carregamento do pacote de gerenciamento a compra e download de processo, usando o código de exemplo para este artigo.
+As seções a seguir explicam como implementar conteúdo hospedado, desde a criação e o carregamento do pacote até o gerenciamento do processo de compra e de download, usando o código de exemplo deste artigo.
 
 ### <a name="sample-code"></a>Código de exemplo
 
-O projeto de exemplo *HostedNonConsumables* (StoreKitiOS6.zip) usa hospedado conteúdo. O aplicativo oferece duas "capítulos de livros" para venda, o conteúdo para o qual é hospedado em servidores da Apple. O conteúdo consiste em um arquivo de texto e uma imagem, embora muito mais complexo do conteúdo pode ser usado em um aplicativo real.
+O projeto de exemplo *HostedNonConsumables* (em StoreKitiOS6. zip) usa conteúdo hospedado. O aplicativo oferece dois "capítulos de livros" para venda, o conteúdo para o qual é hospedado nos servidores da Apple. O conteúdo consiste em um arquivo de texto e uma imagem, embora um conteúdo muito mais complexo possa ser usado em um aplicativo real.
 
-O aplicativo se parece com isso antes, durante e após uma compra:
+O aplicativo tem esta aparência antes, durante e após uma compra:
 
- [![](changes-to-storekit-images/image5.png "O aplicativo se parece com isso antes, durante e após uma compra")](changes-to-storekit-images/image5.png#lightbox)
+ [![](changes-to-storekit-images/image5.png "O aplicativo tem esta aparência antes, durante e após uma compra")](changes-to-storekit-images/image5.png#lightbox)
 
-O arquivo de texto e imagem são baixados e copiados no diretório de documentos do aplicativo. Para obter mais informações sobre os diferentes diretórios disponíveis para o armazenamento de aplicativo, consulte o [documentação do sistema de arquivos](~/ios/app-fundamentals/file-system.md).
+O arquivo de texto e a imagem são baixados e copiados para o diretório de documentos do aplicativo. Para obter mais informações sobre os diferentes diretórios disponíveis para o armazenamento de aplicativos, consulte a [documentação do sistema de arquivos](~/ios/app-fundamentals/file-system.md).
 
-## <a name="itunes-connect"></a>iTunes Connect
+## <a name="itunes-connect"></a>Conexão do iTunes
 
-Quando a criação de novos produtos que irá usar o Apple do conteúdo de hospedagem, não se esqueça de selecionar o **não consumível** tipo de produto. Outros tipos de produto não têm suporte para hospedagem de conteúdo. Além disso, você não deve habilitar hospedagem de conteúdo para *existentes* produtos que vendem; ativar somente de hospedagem de conteúdo para os novos produtos.
+Ao criar novos produtos que usarão a hospedagem de conteúdo da Apple, certifique-se de selecionar o tipo de produto **não consumível** . Outros tipos de produtos não dão suporte à Hospedagem de conteúdo. Além disso, você não deve habilitar a hospedagem de conteúdo para os produtos *existentes* que vende; Ative apenas a hospedagem de conteúdo para novos produtos.
 
  [![](changes-to-storekit-images/image6.png "Selecione o tipo de produto não consumível")](changes-to-storekit-images/image6.png#lightbox)
 
-Insira um **ID do produto**. Essa ID será necessária mais tarde quando você cria o conteúdo para este produto.
+Insira uma **ID de produto**. Essa ID será necessária mais tarde quando você criar o conteúdo para este produto.
 
  [![](changes-to-storekit-images/image7.png "Insira uma ID de produto")](changes-to-storekit-images/image7.png#lightbox)
 
-Hospedagem de conteúdo é definida na seção de detalhes. Antes da compra no aplicativo ficarem ativos, desmarque a **hospedar conteúdo com a Apple** caixa de seleção se você desejar cancelar (mesmo se você tiver carregado o conteúdo de teste). No entanto hospedagem de conteúdo não pode ser removido após a compra no aplicativo passou em tempo real.
+A hospedagem de conteúdo é definida na seção detalhes. Antes de a compra no aplicativo ficar ativa, desmarque a caixa de seleção **conteúdo do host com Apple** se você quiser cancelar (mesmo que tenha carregado algum conteúdo de teste). No entanto, a hospedagem de conteúdo não pode ser removida depois que a compra no aplicativo tiver ficado em tempo real.
 
- [![](changes-to-storekit-images/image8.png "Hospedagem de conteúdo com a Apple")](changes-to-storekit-images/image8.png#lightbox)
+ [![](changes-to-storekit-images/image8.png "Hospedando conteúdo com a Apple")](changes-to-storekit-images/image8.png#lightbox)
 
-Depois que você tenha ativado a hospedagem de conteúdo, o produto entrará **aguardando carregamento** status e mostrar esta mensagem:
+Depois de ativar o conteúdo de hospedagem, o produto entrará em **espera pelo status de carregamento** e mostrará esta mensagem:
 
- [![](changes-to-storekit-images/image9.png "O produto será inserir espera para status de Upload e mostrar esta mensagem")](changes-to-storekit-images/image9.png#lightbox)
+ [![](changes-to-storekit-images/image9.png "O produto entrará em espera pelo status de carregamento e mostrará esta mensagem")](changes-to-storekit-images/image9.png#lightbox)
 
-O pacote de conteúdo deve ser criado com o Xcode e carregado usando a ferramenta de arquivamento. Instruções para criar pacotes de conteúdo são fornecidas na próxima seção **criando. Arquivos PKG**.
+O pacote de conteúdo deve ser criado com o Xcode e carregado usando a ferramenta de arquivamento. As instruções para criar pacotes de conteúdo são fornecidas na próxima seção **criando. Arquivos PKG**.
 
-## <a name="creating-pkg-files"></a>Criando. Arquivos de pacote
+## <a name="creating-pkg-files"></a>Criar. Arquivos PKG
 
-Os arquivos de conteúdo que você carrega para a Apple devem atender aos seguintes restrições:
+Os arquivos de conteúdo que você carrega na Apple devem atender às seguintes restrições:
 
 - Não pode exceder 2 GB de tamanho.
-- Não pode conter código executável (ou links simbólicos que apontam para fora o conteúdo).
-- Deve ser formatado adequadamente (incluindo uma **. plist** arquivo) e ter um **. pkg** extensão de arquivo. Isso será feito automaticamente se você seguir essas instruções de uso do Xcode.
+- Não pode conter código executável (ou symlinks que aponta para fora do conteúdo).
+- Deve ser formatado corretamente (incluindo um arquivo **. plist** ) e ter uma extensão de arquivo **. pkg** . Isso será feito automaticamente se você seguir estas instruções usando o Xcode.
 
-Você pode adicionar muitos arquivos e diferentes tipos de arquivos, desde que atenderem a essas restrições. O conteúdo é compactado antes da entrega para seu aplicativo e descompactado pela Store Kit antes de seu código o acessa.
+Você pode adicionar vários arquivos diferentes e tipos de arquivos, desde que eles atendam a essas restrições. O conteúdo é compactado antes da entrega ao seu aplicativo e descompactado pelo kit de armazenamento antes de seu código acessá-lo.
 
-Depois de carregar um pacote de conteúdo, ele pode ser substituído com o conteúdo mais recente. Novo conteúdo deve ser carregado e enviado para revisão/aprovação por meio do processo normal. Incremento de `ContentVersion` campo em pacotes de conteúdo atualizados para indicar que ele é mais recente.
+Depois de carregar um pacote de conteúdo, ele pode ser substituído por conteúdo mais recente. O novo conteúdo deve ser carregado e enviado para revisão/aprovação por meio do processo normal. Incrementar `ContentVersion` o campo em pacotes de conteúdo atualizados para indicar que ele é mais recente.
 
-### <a name="xcode-in-app-purchase-content-projects"></a>Projetos de conteúdo de compra do Xcode no aplicativo
+### <a name="xcode-in-app-purchase-content-projects"></a>Projetos de conteúdo de compra no aplicativo Xcode
 
-Criação de pacotes de conteúdo para os produtos de compra no aplicativo no momento, exige o Xcode. Não há nenhum OBJECTIVE-C a necessidade de CODIFICAÇÃO; Xcode tiver um novo tipo de projeto para esses pacotes que contém apenas os arquivos e um plist.
+A criação de pacotes de conteúdo para produtos de compra no aplicativo atualmente requer o Xcode. Não há nenhuma codificação OBJECtive-C necessária; O Xcode tem um novo tipo de projeto para esses pacotes que contém apenas seus arquivos e um plist.
 
-Nosso aplicativo de exemplo tem capítulos do livro para venda – cada pacote de conteúdo do capítulo contém:
+Nosso aplicativo de exemplo tem capítulos de livros para venda – cada pacote de conteúdo do capítulo conterá:
 
--  um arquivo de texto, e
+-  um arquivo de texto e
 -  uma imagem para representar o capítulo.
 
 
-Comece selecionando **arquivo > Novo projeto** no menu e escolhendo **o conteúdo de compra no aplicativo**:
+Comece selecionando **arquivo > novo projeto** no menu e escolhendo **conteúdo de compra no aplicativo**:
 
- [![](changes-to-storekit-images/image10.png "Escolha o conteúdo de compra no aplicativo")](changes-to-storekit-images/image10.png#lightbox)
+ [![](changes-to-storekit-images/image10.png "Escolher conteúdo de compra no aplicativo")](changes-to-storekit-images/image10.png#lightbox)
 
-Insira o **nome do produto** e **identificador da empresa** , de modo que o **identificador de pacote** corresponde a **ID do produto** inserido no iTunes Conecte-se para este produto.
+Insira o **nome do produto** e o **identificador da empresa** de modo que o **identificador do pacote** corresponda à ID do **produto** que você inseriu no iTunes Connect para este produto.
 
-[![](changes-to-storekit-images/image11.png "Insira o nome e identificador")](changes-to-storekit-images/image11.png#lightbox)
+[![](changes-to-storekit-images/image11.png "Insira o nome e o identificador")](changes-to-storekit-images/image11.png#lightbox)
 
-Agora, você terá um espaço em branco **o conteúdo de compra no aplicativo** projeto. Você pode com o botão direito e **adicionar arquivos...** ou arraste-os para o **navegador de projeto**. Certifique-se de que o **ContentVersion** está correto (ele deve começam em 1.0, mas se você escolher mais tarde atualizar seu conteúdo, lembre-se de incrementá-lo).
+Agora você terá um projeto **de conteúdo de compra no aplicativo** em branco. Você pode clicar com o botão direito e **Adicionar arquivos...** ou arraste-os para o **navegador do projeto**. Verifique se o **ContentVersion** está correto (ele deve começar em 1,0, mas se você optar por atualizar o conteúdo mais tarde, lembre-se de incrementar).
 
-Esta captura de tela mostra o Xcode com os arquivos de conteúdo incluídos no projeto e as entradas de plist visíveis na janela principal:
+Esta captura de tela mostra o Xcode com os arquivos de conteúdo incluídos no projeto e as entradas do plist visíveis na janela principal:
 
-[![](changes-to-storekit-images/image12.png "Esta captura de tela mostra o Xcode com os arquivos de conteúdo incluídos no projeto e as entradas de plist visíveis na janela principal")](changes-to-storekit-images/image12.png#lightbox)
+[![](changes-to-storekit-images/image12.png "Esta captura de tela mostra o Xcode com os arquivos de conteúdo incluídos no projeto e as entradas do plist visíveis na janela principal")](changes-to-storekit-images/image12.png#lightbox)
 
-Depois de adicionar todos os seus arquivos de conteúdo pode salvar este projeto e editá-lo novamente mais tarde ou iniciar o processo de carregamento.
+Depois de adicionar todos os arquivos de conteúdo, você pode salvar este projeto e editá-lo novamente mais tarde, ou iniciar o processo de carregamento.
 
-## <a name="uploading-pkg-files"></a>Carregando. Arquivos de pacote
+## <a name="uploading-pkg-files"></a>Carregar. Arquivos PKG
 
-A maneira mais fácil para carregar pacotes de conteúdo é com o **ferramenta de arquivamento do Xcode**. Escolher **produto > arquivo morto** no menu Iniciar:
+A maneira mais fácil de carregar pacotes de conteúdo é com a **ferramenta de arquivamento Xcode**. Escolha **produto > arquivo morto** no menu para começar:
 
-![](changes-to-storekit-images/image13.png "Escolha Archiven")
+![](changes-to-storekit-images/image13.png "Escolha arquivamento")
 
-O pacote de conteúdo, em seguida, será exibida no arquivo morto, conforme mostrado abaixo. O tipo de arquivo e o ícone mostram essa linha é um **arquivamento de conteúdo de compra no aplicativo**. Clique em **validar...** Para verificar o nosso pacote de conteúdo para erros sem realmente executar o carregamento.
+O pacote de conteúdo será exibido no arquivo, conforme mostrado abaixo. O tipo e o ícone de arquivamento mostram essa linha é um **arquivo de conteúdo de compra no aplicativo**. Clique em **validar...** para verificar se há erros no nosso pacote de conteúdo sem realmente executar o carregamento.
 
 [![](changes-to-storekit-images/image14.png "Validar o pacote")](changes-to-storekit-images/image14.png#lightbox)
 
-Faça logon com sua as credenciais de conexão do iTunes:
+Faça logon com suas credenciais do iTunes Connect:
 
-[![](changes-to-storekit-images/image15.png "Faça logon com sua as credenciais de conexão do iTunes")](changes-to-storekit-images/image15.png#lightbox)
+[![](changes-to-storekit-images/image15.png "Faça logon com suas credenciais do iTunes Connect")](changes-to-storekit-images/image15.png#lightbox)
 
-Escolha o aplicativo correto e compra no aplicativo para associar esse conteúdo com:
+Escolha o aplicativo correto e a compra no aplicativo para associar este conteúdo a:
 
-[![](changes-to-storekit-images/image16.png "Escolha o aplicativo correto e compra no aplicativo para associar esse conteúdo com")](changes-to-storekit-images/image16.png#lightbox)
+[![](changes-to-storekit-images/image16.png "Escolha o aplicativo correto e a compra no aplicativo para associar esse conteúdo")](changes-to-storekit-images/image16.png#lightbox)
 
-Você verá uma mensagem semelhante esta captura de tela:
+Você deverá ver uma mensagem como esta captura de tela:
 
-![Um exemplo nenhuma mensagem de problemas](changes-to-storekit-images/image17.png "um exemplo nenhuma mensagem de problemas")
+![Um exemplo de mensagem sem problemas](changes-to-storekit-images/image17.png "Um exemplo de mensagem sem problemas")
 
-Agora, passar por um processo semelhante, mas clicar em **distribuir...** Na verdade, carregará o conteúdo.
+Agora, passe por um processo semelhante, mas clicando em **distribuir...** na verdade, carregará o conteúdo.
 
-[![Distribuir o aplicativo](changes-to-storekit-images/image18.png "distribuir o aplicativo")](changes-to-storekit-images/image18.png#lightbox)
+[![Distribuir o aplicativo](changes-to-storekit-images/image18.png "Distribuir o aplicativo")](changes-to-storekit-images/image18.png#lightbox)
 
-Selecione a primeira opção, para carregar o conteúdo:
+Selecione a primeira opção para carregar o conteúdo:
 
-![Carregar o conteúdo](changes-to-storekit-images/image19.png "carregar o conteúdo")
+![Carregar o conteúdo](changes-to-storekit-images/image19.png "Carregar o conteúdo")
 
-Entre novamente:
+Entrar novamente:
 
-[![](changes-to-storekit-images/image15.png "Logon no")](changes-to-storekit-images/image15.png#lightbox)
+[![](changes-to-storekit-images/image15.png "Logon em")](changes-to-storekit-images/image15.png#lightbox)
 
-Escolha o aplicativo correto e o registro de compra no aplicativo para carregar o conteúdo para:
+Escolha o aplicativo correto e o registro de compra no aplicativo para carregar o conteúdo:
 
-[![](changes-to-storekit-images/image20.png "Escolha o registro de aplicativo e no aplicativo de compra")](changes-to-storekit-images/image20.png#lightbox)
+[![](changes-to-storekit-images/image20.png "Escolha o aplicativo e o registro de compra no aplicativo")](changes-to-storekit-images/image20.png#lightbox)
 
-Aguarde enquanto os arquivos sejam carregados:
+Aguarde enquanto os arquivos são carregados:
 
-[![](changes-to-storekit-images/image21.png "A caixa de diálogo de upload do conteúdo")](changes-to-storekit-images/image21.png#lightbox)
+[![](changes-to-storekit-images/image21.png "A caixa de diálogo de carregamento de conteúdo")](changes-to-storekit-images/image21.png#lightbox)
 
-Quando o upload for concluído, uma mensagem será exibida para avisá-lo de que o conteúdo foi enviado para a App Store.
+Quando o upload for concluído, uma mensagem será exibida para avisá-lo que o conteúdo foi enviado para a loja de aplicativos.
 
 [![](changes-to-storekit-images/image22.png "Um exemplo de mensagem de upload bem-sucedido")](changes-to-storekit-images/image22.png#lightbox)
 
-Depois que tiver sido feito, quando você retornar para a página de produto no iTunes Connect, ele mostrará os detalhes do pacote e estar no **pronto para enviar** status. Quando o produto estiver nesse status, você pode começar a testar no ambiente de área restrita. Você não precisa do produto para a área restrita de teste de 'Enviar'.
+Depois que isso for feito, quando você retornar para a página do produto no iTunes Connect, ele mostrará os detalhes do pacote e estará **pronto para enviar** o status. Quando o produto estiver nesse status, você poderá começar a testar no ambiente de área restrita. Você não precisa enviar o produto para teste na área restrita.
 
-[![](changes-to-storekit-images/image23.png "iTunes Connect, ele mostrará os detalhes do pacote e estar em pronto para o status de envio")](changes-to-storekit-images/image23.png#lightbox)
+[![](changes-to-storekit-images/image23.png "o iTunes Connect irá mostrar os detalhes do pacote e estar pronto para enviar o status")](changes-to-storekit-images/image23.png#lightbox)
 
-Pode levar algum tempo (por exemplo. alguns minutos) entre carregar o arquivo morto e o status de conexão que está sendo atualizado do iTunes. Você pode enviar o produto para revisão separadamente ou enviá-lo em conjunto com um binário de aplicativo. Depois de Apple oficialmente aprovou o conteúdo será disponível no aplicativo Store de produção para compra em seu aplicativo.
+Pode levar algum tempo (por exemplo, alguns minutos) entre o carregamento do arquivo morto e o status do iTunes Connect sendo atualizado. Você pode enviar o produto para revisão separadamente ou enviá-lo em conjunto com um binário de aplicativo. Somente após a Apple ter aprovado oficialmente o conteúdo, ele estará disponível na loja de aplicativos de produção para compra em seu aplicativo.
 
 ### <a name="pkg-file-format"></a>Formato de arquivo PKG
 
-Usando a ferramenta de arquivamento e Xcode para criar e carregar um pacote de conteúdo hospedado significa que você nunca verá o conteúdo do próprio pacote. Os arquivos e diretórios em que os pacotes criados para obter a aparência do aplicativo de exemplo, como a captura de tela abaixo, com o **plist** arquivo na raiz e os arquivos de produto em um **conteúdo** subdiretório:
+Usar o Xcode e a ferramenta de arquivamento para criar e carregar um pacote de conteúdo hospedado significa que você nunca vê o conteúdo do pacote em si. Os arquivos e diretórios nos pacotes criados para o aplicativo de exemplo são parecidos com a captura de tela abaixo, com o arquivo **plist** na raiz e os arquivos do produto em um subdiretório de **conteúdo** :
 
-[![](changes-to-storekit-images/image24.png "O arquivo de plist na raiz e os arquivos de produto em um subdiretório de conteúdo")](changes-to-storekit-images/image24.png#lightbox)
+[![](changes-to-storekit-images/image24.png "O arquivo plist na raiz e os arquivos do produto em um subdiretório de conteúdo")](changes-to-storekit-images/image24.png#lightbox)
 
-Observe a estrutura do diretório do pacote (especialmente a localização dos arquivos no `Contents` subdiretório) porque você precisará entender essas informações para extrair os arquivos do pacote no dispositivo.
+Observe a estrutura de diretório do pacote (especialmente o local dos arquivos no `Contents` subdiretório), pois você precisará entender essas informações para extrair os arquivos do pacote no dispositivo.
 
-### <a name="updating-package-content"></a>Atualizando o conteúdo do pacote
+### <a name="updating-package-content"></a>Atualizando conteúdo do pacote
 
-O procedimento para atualizar o conteúdo depois de ter sido aprovado:
+O procedimento para atualizar o conteúdo depois que ele foi aprovado:
 
-- Edite o conteúdo de compra no aplicativo projeto no Xcode.
-- Aumentar o número de versão.
-- Carregar novamente para o iTunes Connect. Compradores subsequentes receberá automaticamente a versão mais recente, mas os usuários que já têm a versão antiga não receberão qualquer notificação.
-- Seu aplicativo é responsável por notificar os usuários e encorajando-os para recuperar uma versão mais recente do conteúdo. O aplicativo também deve criar uma função que baixa a nova versão, usando o recurso de restauração do Store Kit.
-- Para determinar se existe uma versão mais recente, você pode criar um recurso em seu aplicativo para buscar SKProducts (por exemplo. mesmo processo que é usado para recuperar os preços dos produtos) e compare a propriedade ContentVersion.
+- Edite o projeto de conteúdo de compra no aplicativo no Xcode.
+- Número da versão do tapa.
+- Carregar para o iTunes Connect novamente. Os compradores subsequentes receberão automaticamente a versão mais recente, mas os usuários que já tiverem a versão antiga não receberão nenhuma notificação.
+- Seu aplicativo é responsável por notificar os usuários e incentiva-los a recuperar uma versão mais recente do conteúdo. O aplicativo também deve criar uma função que baixe a nova versão, usando o recurso restaurar do Store Kit.
+- Para determinar se existe uma versão mais recente, você pode criar um recurso em seu aplicativo para buscar SKProducts (por exemplo, mesmo processo que é usado para recuperar os preços do produto) e comparar a propriedade ContentVersion.
 
-## <a name="purchasing-overview"></a>Visão geral de compras
+## <a name="purchasing-overview"></a>Visão geral da compra
 
-Antes de ler esta seção, revisar a arquitetura [documentação de compra no aplicativo](~/ios/platform/in-app-purchasing/index.md).
+Antes de ler esta seção, examine a [documentação de compra no aplicativo](~/ios/platform/in-app-purchasing/index.md)existente.
 
-A sequência de eventos que ocorre quando um produto com o conteúdo hospedado é adquirida e download é ilustrado neste diagrama:
+A sequência de eventos que ocorre quando um produto com conteúdo hospedado é comprado e o download é ilustrado neste diagrama:
 
-[![](changes-to-storekit-images/image25.png "A sequência de eventos que ocorre quando um produto com o conteúdo hospedado é adquirida e baixar")](changes-to-storekit-images/image25.png#lightbox)
+[![](changes-to-storekit-images/image25.png "A sequência de eventos que ocorre quando um produto com conteúdo hospedado é comprado e baixado")](changes-to-storekit-images/image25.png#lightbox)
 
-1. Novos produtos podem ser criados no iTunes Connect com o conteúdo da hospedado habilitado. O conteúdo real é construído separadamente no Xcode (como simplesmente como arrastar arquivos em uma pasta) e, em seguida, arquivado e carregado no iTunes (nenhuma codificação é necessária). Cada produto, em seguida, é enviado para aprovação, após o qual ele se torna disponível para compra. No código de exemplo essas IDs de produto são embutidos em código, mas a hospedagem de conteúdo com a Apple é mais flexível, se você armazenar a lista de produtos disponíveis em um servidor remoto para que possa ser atualizado quando você envia o conteúdo para o iTunes Connect e novos produtos.
-1. Quando o usuário compra um produto, uma transação é colocada na fila para processamento de pagamento.
-1. Store Kit encaminha a solicitação de compra para servidores do iTunes para processamento.
-1. Transação é concluída (por exemplo, em servidores do iTunes cliente é cobrado) e uma confirmação é retornada ao aplicativo, com informações sobre o produto anexado incluindo se ele está disponível para download (e nesse caso, o tamanho do arquivo e outros metadados).
-1. Seu código deve verificar se o produto está disponível para download e, nesse caso, faça uma solicitação de download de conteúdo que também é colocada na fila de pagamento. Store Kit envia essa solicitação para os servidores do iTunes.
-1. Servidor retorna o arquivo de conteúdo para Store Kit, que fornece um retorno de chamada para retornar o progresso do download e o tempo restante estimativas ao seu código.
-1. Uma vez concluído, obtenha notificado e passado de um local de arquivo na pasta de Cache.
-1. Seu código deve copiar os arquivos e verificá-los, salvar qualquer estado que você precisa se lembrar que o produto foi adquirido. Aproveite essa oportunidade para definir o sinalizador de backup corretamente nos novos arquivos (Dica: se eles vêm de um servidor e nunca são editados pelo usuário, você deve ignorar o fazer o backup, uma vez que o usuário pode sempre recuperá-las de servidores da Apple no futuro).
-1. Chame FinishTransaction. Esta etapa é importante, pois ele remove a transação da fila de pagamento. Também é importante que você não chamar FinishTransaction até depois de ter copiado o conteúdo fora do diretório de Cache. Depois de chamar FinishTransaction, os arquivos em cache provavelmente sejam limpos rapidamente.
+1. Novos produtos podem ser criados no iTunes Connect com conteúdo hospedado habilitado. O conteúdo real é construído separadamente no Xcode (como simplesmente arrastar arquivos para uma pasta) e, em seguida, arquivado e carregado no iTunes (nenhuma codificação é necessária). Em seguida, cada produto é enviado para aprovação, após o qual ele fica disponível para compra. No código de exemplo, essas IDs de produto são codificadas, mas a hospedagem de conteúdo com a Apple será mais flexível se você armazenar a lista de produtos disponíveis em um servidor remoto para que ele possa ser atualizado quando você enviar novos produtos e conteúdo ao iTunes Connect.
+1. Quando o usuário adquire um produto, uma transação é colocada na fila de pagamento para processamento.
+1. O kit de loja encaminha a solicitação de compra para servidores iTunes para processamento.
+1. A transação é concluída nos servidores iTunes (por exemplo, o cliente é cobrado) e um recebimento é retornado para o aplicativo, com informações do produto anexadas, incluindo se é baixável (e, nesse caso, o tamanho do arquivo e outros metadados).
+1. Seu código deve verificar se o produto pode ser baixado e, em caso afirmativo, fazer uma solicitação de download de conteúdo que também é colocada na fila de pagamento. O kit de loja envia essa solicitação para os servidores iTunes.
+1. O servidor retorna o arquivo de conteúdo para o kit de armazenamento, que fornece um retorno de chamada para retornar o progresso do download e as estimativas de tempo restantes para seu código.
+1. Depois de concluído, você receberá uma notificação e passará um local de arquivo na pasta de cache.
+1. Seu código deve copiar os arquivos e verificá-los, salvar qualquer estado de que você precise se lembrar de que o produto foi comprado. Aproveite esta oportunidade para definir o sinalizador de backup corretamente nos novos arquivos (dica: se eles vierem de um servidor e nunca forem editados pelo usuário, você provavelmente deverá ignorar o backup deles, pois o usuário sempre poderá recuperá-los dos servidores da Apple no futuro).
+1. Chame FinishTransaction. Essa etapa é importante, pois remove a transação da fila de pagamentos. Também é importante que você não chame FinishTransaction até depois de ter copiado o conteúdo do diretório de cache. Depois de chamar FinishTransaction, os arquivos armazenados em cache provavelmente serão limpos rapidamente.
 
-## <a name="implementing-hosted-content-purchase"></a>Implementando a compra de conteúdo hospedada
+## <a name="implementing-hosted-content-purchase"></a>Implementando a compra de conteúdo hospedado
 
-As informações a seguir devem ser lida em conjunto com o completo [documentação de compras no aplicativo](~/ios/platform/in-app-purchasing/index.md). As informações neste documento se concentra nas diferenças entre o conteúdo hospedado e a implementação anterior.
+As informações a seguir devem ser lidas em conjunto com a documentação completa de [compras no aplicativo](~/ios/platform/in-app-purchasing/index.md). As informações neste documento se concentram nas diferenças entre o conteúdo hospedado e a implementação anterior.
 
 ### <a name="classes"></a>Classes
 
-As classes a seguir foram adicionadas ou alteradas para o conteúdo hospedado de suporte no iOS 6:
+As seguintes classes foram adicionadas ou alteradas para dar suporte ao conteúdo hospedado no iOS 6:
 
-- **SKDownload** – nova classe que representa um download em andamento. A API permite mais de uma por produto, no entanto, inicialmente apenas um foi implementado.
-- **SKProduct** – as novas propriedades adicionadas: `Downloadable`, `ContentVersion`, `ContentLengths` matriz.
-- **SKPaymentTransaction** – nova propriedade adicionada: `Downloads`, que contém uma coleção de `SKDownload` objetos se este produto tem hospedado conteúdo disponível para download.
-- **SKPaymentQueue** – novo método adicionado: `StartDownloads`. Chamar esse método com `SKDownload` objetos para buscar o conteúdo hospedado. Baixando pode ocorrer em segundo plano.
-- **SKPaymentTransactionObserver** – novo método: `UpdateDownloads`. Store Kit chama esse método com informações de progresso sobre operações atuais de download.
+- **SKDownload** – nova classe que representa um download em andamento. A API permite mais de um por produto, no entanto, inicialmente, apenas um foi implementado.
+- **SKProduct** – novas propriedades adicionadas `Downloadable`: `ContentVersion`, `ContentLengths` , matriz.
+- **SKPaymentTransaction** – nova propriedade adicionada: `Downloads`, que contém uma coleção de `SKDownload` objetos se este produto tem conteúdo hospedado disponível para download.
+- **SKPaymentQueue** – novo método adicionado: `StartDownloads`. Chame esse método com `SKDownload` objetos para buscar seu conteúdo hospedado. O download pode ocorrer em segundo plano.
+- **SKPaymentTransactionObserver** – novo método: `UpdateDownloads`. O kit de loja chama esse método com informações de progresso sobre as operações de download atuais.
 
-Detalhes do novo `SKDownload` classe:
+Detalhes da nova `SKDownload` classe:
 
-- **Progresso** – um valor entre 0 a 1 que você pode usar para exibir um indicador de porcentagem de conclusão para o usuário. Não use o andamento = = 1 para detectar se o download for concluído, verificar estado = = concluído.
-- **TimeRemaining** – estimativa do download tempo restante, em segundos. -1 significa que ele ainda está calculando estimativa.
-- **Estado** – Active Directory, aguardando, concluído, falha, pausada, cancelada.
-- **ContentURL** – onde o conteúdo foi colocado no disco, além do local do arquivo a `Cache` directory. Populado somente após a conclusão do download.
-- **Erro** – Verifique se a propriedade se o estado de falha.
+- **Progresso** – um valor entre 0-1 que você pode usar para exibir um indicador de porcentagem concluída para o usuário. Não use Progress = = 1 para detectar se o download está concluído, verifique o estado = = concluído.
+- Timecontinueing – estimativa do tempo de download restante, em segundos. -1 significa que ainda está calculando a estimativa.
+- **Estado** – ativo, aguardando, concluído, falha, pausado, cancelado.
+- **ContentURL** – local do arquivo em que o conteúdo foi colocado no disco, `Cache` no diretório. Preenchido apenas depois que o download for concluído.
+- **Erro** – Verifique essa propriedade se o estado falhar.
 
-As interações entre as classes no código de exemplo são mostradas neste diagrama (o código específico a compras de conteúdo hospedadas é mostrado em verde):
+As interações entre as classes no código de exemplo são mostradas neste diagrama (o código específico para compras de conteúdo hospedado é mostrado em verde):
 
-[![](changes-to-storekit-images/image26.png "Compras de conteúdo hospedadas é mostrado em verde no diagrama")](changes-to-storekit-images/image26.png#lightbox)
+[![](changes-to-storekit-images/image26.png "As compras de conteúdo hospedado são mostradas em verde neste diagrama")](changes-to-storekit-images/image26.png#lightbox)
 
 O código de exemplo em que essas classes foram usadas é mostrado no restante desta seção:
 
 ### <a name="custompaymentobserver-skpaymenttransactionobserver"></a>CustomPaymentObserver (SKPaymentTransactionObserver)
 
-Alterar existente `UpdatedTransactions` substituição é para verificar se há conteúdo disponível para download e chamada `StartDownloads` se necessário:
+Altere a substituição `UpdatedTransactions` existente para verificar se há conteúdo para download e chame `StartDownloads` se necessário:
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -415,7 +415,7 @@ public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransac
 }
 ```
 
-Novo método substituído `UpdatedDownloads` é mostrado abaixo. Store Kit chama esse método após `StartDownloads` é disparada no `UpdatedTransactions`. Esse método é chamado *várias vezes* em intervalos indeterminados para fornecer a você com o andamento do download e, em seguida, novamente quando o download foi concluído. Observe que o método aceita uma matriz de `SKDownload` objetos, para que cada chamada de método pode fornecer o status de vários downloads na fila. Conforme mostrado na implementação abaixo que os status de download são verificados cada hora e a ação apropriada.
+O novo método `UpdatedDownloads` substituído é mostrado abaixo. O kit de `UpdatedTransactions`loja chama esse `StartDownloads` método depois que é disparado. Esse método é chamado *várias vezes* em intervalos indeterminados para fornecer o progresso do download e, em seguida, novamente quando o download for concluído. Observe que o método aceita uma matriz `SKDownload` de objetos, de modo que cada chamada de método pode fornecer o status de vários downloads na fila. Conforme mostrado na implementação abaixo, os status de download são verificados toda vez e a ação apropriada é executada.
 
 ```csharp
 // ENTIRELY NEW METHOD IN iOS6
@@ -455,11 +455,11 @@ public override void PaymentQueueUpdatedDownloads (SKPaymentQueue queue, SKDownl
 
 ### <a name="inapppurchasemanager-skproductsrequestdelegate"></a>InAppPurchaseManager (SKProductsRequestDelegate)
 
-Essa classe contém um novo método `SaveDownload` que é chamado após cada download é concluído com êxito.
+Essa classe contém um novo método `SaveDownload` que é chamado depois que cada download é concluído com êxito.
 
-O conteúdo hospedado foi baixado com êxito e descompactado no `Cache` directory. A estrutura da. Arquivo PKG requer que todos os arquivos sejam salvos em um `Contents` subdiretório, portanto, o código a seguir extrai os arquivos de dentro do `Contents` subdiretório.
+O conteúdo hospedado foi baixado com êxito e descompactado no `Cache` diretório. A estrutura do. O arquivo pkg requer que todos os arquivos sejam salvos `Contents` em um subdiretório, portanto, o código a seguir extrai arquivos de `Contents` dentro do subdiretório.
 
-O código itera em todos os arquivos no pacote de conteúdo e os copia para o `Documents` diretório, em uma subpasta nomeada para o `ProductIdentifier`. Por fim, ele chama `CompleteTransaction`, que chama `FinishTransaction` para remover a transação de fila de pagamento.
+O código itera em todos os arquivos no pacote de conteúdo e os copia `Documents` no diretório, em uma subpasta chamada para o. `ProductIdentifier` Finalmente, ele `CompleteTransaction`chama, que `FinishTransaction` chama para remover a transação da fila de pagamentos.
 
 ```csharp
 // ENTIRELY NEW METHOD IN iOS 6
@@ -483,51 +483,51 @@ public void SaveDownload (SKDownload download)
 }
 ```
 
-Quando `FinishTransaction` é chamado, o baixado arquivos não são necessariamente no `Cache` directory. Todos os arquivos devem ser copiados antes de chamar `FinishTransaction`.
+Quando `FinishTransaction` é chamado, os arquivos baixados não são mais garantidos `Cache` no diretório. Todos os arquivos devem ser copiados `FinishTransaction`antes de chamar.
 
 
 ## <a name="other-considerations"></a>Outras considerações
 
-Exemplo de código acima demonstra uma implementação bastante simple de comprar o conteúdo hospedado. Há alguns pontos adicionais que devem ser considerados:
+O código de exemplo acima demonstra uma implementação relativamente simples da compra de conteúdo hospedado. Há alguns pontos adicionais que devem ser considerados:
 
-### <a name="detecting-updated-content"></a>Detectar conteúdo atualizado
+### <a name="detecting-updated-content"></a>Detectando conteúdo atualizado
 
-Embora seja possível atualizar seus pacotes de conteúdo hospedados, Store Kit não oferece nenhum mecanismo para enviar por push essas atualizações aos usuários que já tenham baixado e adquiriu o produto. Para implementar essa funcionalidade, seu código pode verificar o novo `SKProduct.ContentVersion` propriedade (se o `SKProduct` é `Downloadable`) regularmente e detectar se o valor é incrementado. Como alternativa, você poderia criar um sistema de notificação por push.
+Embora seja possível atualizar seus pacotes de conteúdo hospedados, o kit de armazenamento não fornece nenhum mecanismo para enviar por push essas atualizações para os usuários que já baixaram e compraram o produto. Para implementar essa funcionalidade, seu código pode verificar a `SKProduct.ContentVersion` nova propriedade ( `SKProduct` se for `Downloadable`) regularmente e detectar se o valor é incrementado. Como alternativa, você pode criar um sistema de notificação por push.
 
-### <a name="installing-updated-content-versions"></a>Instalando versões atualizadas do conteúdo
+### <a name="installing-updated-content-versions"></a>Instalando versões de conteúdo atualizadas
 
-O código de exemplo acima ignora a cópia de arquivo se o arquivo já existe. Isso não é uma boa ideia se você deseja dar suporte a versões mais recentes do conteúdo que está sendo baixado.
+O código de exemplo acima ignora a cópia de arquivo se o arquivo já existe. Essa não é uma boa ideia se você quiser dar suporte a versões mais recentes do conteúdo que está sendo baixado.
 
-Uma alternativa seria copie o conteúdo para uma pasta chamada para a versão e manter o controle de qual é a versão atual (por exemplo. no `NSUserDefaults` ou onde quer que você armazena os registros de compra completa).
+Uma alternativa pode ser copiar o conteúdo em uma pasta chamada para a versão e controlar qual é a versão atual (por exemplo, no `NSUserDefaults` ou onde você armazena os registros de compra concluídos).
 
-### <a name="restoring-transactions"></a>Restauração de transações
+### <a name="restoring-transactions"></a>Restaurando transações
 
-Quando `SKPaymentQueue.DefaultQueue.RestoreCompletedTransactions` é chamado, o Kit de Store retorna todas as transações anteriores para o usuário. Se eles compraram um grande número de itens ou se cada compra grandes pacotes de conteúdo, a restauração pode resultar em uma grande quantidade de tráfego de rede, tudo o que obtém o enfileiramento para download ao mesmo tempo.
+Quando `SKPaymentQueue.DefaultQueue.RestoreCompletedTransactions` é chamado, o kit de armazenamento retorna todas as transações anteriores para o usuário. Se eles tiverem comprado um grande número de itens ou se cada compra tiver grandes pacotes de conteúdo, a restauração poderá resultar em muito tráfego de rede, pois tudo será colocado na fila para download de uma vez.
 
-Considere manter o controle de um produto foi comprado separadamente do download do pacote de conteúdo associado.
+Considere manter o controle de se um produto foi adquirido separadamente do download real do pacote de conteúdo associado.
 
-### <a name="pausing-restarting-and-canceling-downloads"></a>Pausar, reiniciar e Cancelar Downloads
+### <a name="pausing-restarting-and-canceling-downloads"></a>Pausando, reiniciando e cancelando downloads
 
-Embora o código de exemplo não demonstra este recurso, é possível pausar e reiniciar os downloads de conteúdo hospedados. O `SKPaymentQueue.DefaultQueue` tem métodos para `PauseDownloads`, `ResumeDownloads` e `CancelDownloads`.
+Embora o código de exemplo não demonstre esse recurso, é possível pausar e reiniciar downloads de conteúdo hospedado. O `SKPaymentQueue.DefaultQueue` tem métodos para `PauseDownloads`, `ResumeDownloads` e `CancelDownloads`.
 
-Se o código chama `FinishTransaction` na fila antes do download que está sendo pagamento `Finished` e em seguida, esse download é cancelada automaticamente.
+Se o código chamar `FinishTransaction` a fila de pagamentos antes do download ser `Finished` cancelado automaticamente.
 
-### <a name="setting-the-skip-backup-flag-on-the-downloaded-content"></a>Definir o sinalizador de Backup ignorar no conteúdo baixado
+### <a name="setting-the-skip-backup-flag-on-the-downloaded-content"></a>Configurando o sinalizador SKIP-backup no conteúdo baixado
 
-Diretrizes de Backup do iCloud da Apple sugerem que o conteúdo de não usuário facilmente restaurados de um servidor deve *não* ser submetidos a backup (porque ele usaria desnecessariamente o armazenamento no iCloud). Para obter mais informações sobre como definir o atributo de backup, consulte a [sistema de arquivos](~/ios/app-fundamentals/file-system.md) documentação.
+As diretrizes de backup do iCloud da Apple sugerem que o conteúdo de não-usuário que é facilmente restaurado de um servidor *não* deve ser submetido a backup (porque ele desnecessariamente usaria o armazenamento do icloud). Para obter mais informações sobre como definir o atributo backup, consulte a documentação do [sistema de arquivos](~/ios/app-fundamentals/file-system.md) .
 
 ## <a name="summary"></a>Resumo
 
-Este artigo apresentou dois novos recursos do Store Kit no iOS6: compra iTunes e outros conteúdos de dentro de seu aplicativo e da utilização de servidor da Apple para hospedar seus próprio compras no aplicativo. Esta introdução deve ser lida em conjunto com os existentes [documentação de compra no aplicativo](~/ios/platform/in-app-purchasing/index.md) para cobertura completa de como implementar a funcionalidade do Store Kit.
+Este artigo introduziu dois novos recursos do Store Kit no iOS6: comprando o iTunes e outro conteúdo de dentro de seu aplicativo e utilizando o servidor da Apple para hospedar suas próprias compras no aplicativo. Essa introdução deve ser lida em conjunto com a [documentação de compra no aplicativo](~/ios/platform/in-app-purchasing/index.md) existente para obter uma cobertura completa da funcionalidade da implementação do kit de armazenamento.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [StoreKit (amostra)](https://developer.xamarin.com/samples/monotouch/StoreKit/)
+- [StoreKit (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit)
 - [Compras no aplicativo](~/ios/platform/in-app-purchasing/index.md)
-- [Referência de estrutura no StoreKit](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
+- [Referência da estrutura do StoreKit](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Referência de classe SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
 - [Referência da API de pesquisa do iTunes](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [SKDownload](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)
-- [WWDC vídeo: Produtos vendidos com Store Kit](https://developer.apple.com/videos/wwdc/2012/?include=302#302)
+- [Vídeo do WWDC: Vendendo produtos com o kit de loja](https://developer.apple.com/videos/wwdc/2012/?include=302#302)

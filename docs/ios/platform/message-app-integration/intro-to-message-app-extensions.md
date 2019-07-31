@@ -1,179 +1,179 @@
 ---
-title: Noções básicas sobre a extensão do aplicativo da mensagem no xamarin. IOS
-description: Este artigo mostra como incluir uma extensão de aplicativo de mensagem em uma solução do xamarin. IOS que se integra com o aplicativo de mensagens e apresenta a nova funcionalidade para o usuário.
+title: Noções básicas da extensão do aplicativo de mensagens no Xamarin. iOS
+description: Este artigo mostra como incluir uma extensão de aplicativo de mensagem em uma solução Xamarin. iOS que se integra ao aplicativo de mensagens e apresenta a nova funcionalidade para o usuário.
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: cdeaae6cb83062f0d84a3605582b9779c9f36145
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 7004c4692158be2e51eca93dece349da2a735bab
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66178053"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654389"
 ---
-# <a name="message-app-extension-basics-in-xamarinios"></a>Noções básicas sobre a extensão do aplicativo da mensagem no xamarin. IOS
+# <a name="message-app-extension-basics-in-xamarinios"></a>Noções básicas da extensão do aplicativo de mensagens no Xamarin. iOS
 
-_Este artigo mostra como incluir uma extensão de aplicativo de mensagem em uma solução do xamarin. IOS que se integra com o aplicativo de mensagens e apresenta a nova funcionalidade para o usuário._
+_Este artigo mostra como incluir uma extensão de aplicativo de mensagem em uma solução Xamarin. iOS que se integra ao aplicativo de mensagens e apresenta a nova funcionalidade para o usuário._
 
-Novo para o iOS 10, uma mensagem da extensão do aplicativo se integra com o **mensagens** aplicativo e apresenta novas funcionalidades para o usuário. A extensão pode enviar mensagens de texto, adesivos, arquivos de mídia e interativas.
+Novo no iOS 10, uma extensão de aplicativo de mensagem se integra ao aplicativo de **mensagens** e apresenta uma nova funcionalidade ao usuário. A extensão pode enviar texto, adesivos, arquivos de mídia e mensagens interativas.
 
-## <a name="about-message-app-extensions"></a>Sobre extensões de aplicativo de mensagem
+## <a name="about-message-app-extensions"></a>Sobre extensões de aplicativo de mensagens
 
-Como mencionado acima, uma mensagem da extensão do aplicativo se integra com o **mensagens** aplicativo e apresenta novas funcionalidades para o usuário. A extensão pode enviar mensagens de texto, adesivos, arquivos de mídia e interativas. Dois tipos de mensagem da extensão do aplicativo estão disponíveis:
+Como mencionado acima, uma extensão de aplicativo de mensagem se integra ao aplicativo de **mensagens** e apresenta uma nova funcionalidade ao usuário. A extensão pode enviar texto, adesivos, arquivos de mídia e mensagens interativas. Dois tipos de extensão de aplicativo de mensagem estão disponíveis:
 
-- **Pacotes de adesivo** -contém uma coleção de adesivos que o usuário pode adicionar a uma mensagem. Pacotes de adesivo podem ser criados sem escrever nenhum código.
-- **iMessage aplicativo** -pode apresentar uma Interface de usuário personalizada dentro do aplicativo de mensagens para selecionar os adesivos, inserir texto, incluindo arquivos de mídia (com conversões de tipo opcional) e criando, editando e enviando mensagens de interação.
+- **Pacotes de adesivo** -contém uma coleção de adesivos que o usuário pode adicionar a uma mensagem. Os pacotes adesivos podem ser criados sem escrever nenhum código.
+- **aplicativo IMessage** – pode apresentar uma interface do usuário personalizada no aplicativo mensagens para selecionar adesivos, inserir texto, incluir arquivos de mídia (com conversões de tipo opcionais) e criar, editar e enviar mensagens de interação.
 
-Extensões de aplicativos de mensagens fornecer três principais tipos de conteúdo:
+As extensões de aplicativos de mensagens fornecem três tipos de conteúdo principais:
 
-- **Mensagens interativas** -são um tipo de conteúdo de mensagem personalizada que gera um aplicativo, quando o usuário toca na mensagem, o aplicativo será iniciado em primeiro plano.
-- **Adesivos** -são imagens geradas pelo aplicativo que pode ser incluído nas mensagens enviadas entre usuários.
-- **Outros tipos de conteúdo com suporte** – o aplicativo poderá fornecer o conteúdo, como fotos, vídeos, texto ou tipos de links para qualquer outro conteúdo que sempre são suportados pelo aplicativo de mensagens.
+- **Mensagens** interativas – são um tipo de conteúdo de mensagem personalizada que um aplicativo gera, quando o usuário toca na mensagem, o aplicativo será iniciado em primeiro plano.
+- **Adesivos** -são imagens geradas pelo aplicativo que podem ser incluídas nas mensagens enviadas entre os usuários.
+- **Outro conteúdo com suporte** -o aplicativo pode fornecer conteúdo como fotos, vídeos, texto ou links para qualquer outro tipo de conteúdo que sempre tenha sido suportado pelo aplicativo de mensagens.
 
-Novo para o iOS 10, o aplicativo de mensagem agora inclui seu próprio Store de aplicativo dedicado e internos. Todos os aplicativos que incluem as extensões de aplicativos de mensagem serão exibidos e promovidos neste repositório. A gaveta de aplicativo de mensagens novas exibirá todos os aplicativos que tiverem sido baixados de Store de aplicativo de mensagens para fornecer acesso rápido aos usuários.
+Novo no iOS 10, o aplicativo de mensagens agora inclui sua própria loja de aplicativos interna dedicada. Todos os aplicativos que incluem extensões de aplicativos de mensagens serão exibidos e promovidos nesse armazenamento. A gaveta de aplicativos de novas mensagens exibirá todos os aplicativos que foram baixados da loja de aplicativos de mensagens para fornecer acesso rápido aos usuários.
 
-Também novo no iOS 10, Apple adicionou Inline App Attribution que permite ao usuário descobrir facilmente um aplicativo. Por exemplo, se um usuário envia o conteúdo para outro de um aplicativo que o usuário 2º não tiver instalado (como um adesivo por exemplo), o nome do aplicativo de envio é listado sob o conteúdo no histórico de mensagens. Se o usuário toca o aplicativo nome, Store de aplicativo a mensagem ser abrimos e o aplicativo selecionado no repositório.
+Também novidade no iOS 10, a Apple adicionou a atribuição de aplicativo embutido que permite ao usuário descobrir facilmente um aplicativo. Por exemplo, se um usuário enviar conteúdo para outro de um aplicativo que o segundo usuário não tenha instalado (como um adesivo, por exemplo), o nome do aplicativo de envio será listado sob o conteúdo no histórico de mensagens. Se o usuário tocar no nome do aplicativo, a mensagem App Store será aberta e o aplicativo selecionado na loja.
 
-Extensões de aplicativos de mensagem são semelhantes aos aplicativos existentes do iOS que o desenvolvedor estiver familiarizado com a criação e eles terão acesso a todos os recursos de um aplicativo iOS padrão e estruturas padrão. Por exemplo:
+As extensões de aplicativos de mensagens são semelhantes aos aplicativos iOS existentes que o desenvolvedor está familiarizado com a criação e terão acesso a todas as estruturas e recursos padrão de um aplicativo iOS padrão. Por exemplo:
 
-- Eles têm acesso a compra no aplicativo.
-- Eles têm acesso à Apple Pay.
+- Eles têm acesso à compra no aplicativo.
+- Eles têm acesso ao Apple Pay.
 - Eles têm acesso ao hardware do dispositivo, como a câmera.
 
-Somente há suporte para extensões de aplicativos de mensagem no iOS 10, no entanto, o conteúdo que enviam essas extensões é visível em dispositivos watchOS e macOS. O novo _Recents Page_ adicionado ao watchOS 3, exibirá os adesivos recentes que foram enviados do telefone, incluindo aqueles de extensões de aplicativos de mensagem, e permitir que o usuário enviar os adesivos de inspeção.
+Extensões de aplicativos de mensagens só têm suporte no iOS 10, no entanto, o conteúdo que essas extensões envia são visíveis em dispositivos watchOS e macOS. A nova _página recentes_ adicionada ao watchOS 3 exibirá adesivos recentes que foram enviados do telefone, incluindo aqueles de extensões de aplicativos de mensagem, e permitem que o usuário envie esses adesivos da inspeção.
 
 ## <a name="about-the-messages-framework"></a>Sobre a estrutura de mensagens
 
-Novo para o iOS 10, a estrutura de mensagens fornece a interface entre a extensão de aplicativos de mensagem e o aplicativo de mensagem no dispositivo iOS do usuário. Quando o usuário inicia um aplicativo de dentro do aplicativo de mensagens, essa estrutura permite que o aplicativo a ser descoberto e fornece os dados e o contexto necessário para dispor de sua interface do usuário.
+Novo no iOS 10, a estrutura de mensagens fornece a interface entre a extensão de aplicativos de mensagem e o aplicativo de mensagem no dispositivo iOS do usuário. Quando o usuário inicia um aplicativo de dentro do aplicativo messages, essa estrutura permite que o aplicativo seja descoberto e fornece os dados e o contexto necessários para o layout de sua interface do usuário.
 
-Depois que o aplicativo é iniciado, o usuário interage com ele para criar um novo conteúdo de compartilhamento por meio de uma mensagem. O aplicativo, em seguida, usa a estrutura de mensagens para transferir o conteúdo criado recentemente para o aplicativo de mensagens para processamento.
+Depois que o aplicativo é iniciado, o usuário interage com ele para criar um novo conteúdo a ser compartilhado por meio de uma mensagem. Em seguida, o aplicativo usa a estrutura messages para transferir o conteúdo recém-criado para o aplicativo messages para processamento.
 
-A estrutura de mensagens e a mensagem de extensões de aplicativos são criadas sobre tecnologias de extensões de aplicativo do iOS já existente. Para obter mais informações sobre extensões de aplicativo, consulte da Apple [guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+A estrutura de mensagens e as extensões de aplicativos de mensagens são criadas com base nas tecnologias de extensões de aplicativo iOS pré-existentes. Para obter mais informações sobre extensões de aplicativo, consulte o [Guia de programação de extensões de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)da Apple.
 
-Ao contrário de outros pontos de extensão que fornecido pela Apple em todo o sistema, o desenvolvedor não precisa fornecer um aplicativo de host para suas extensões de aplicativos de mensagem, pois o aplicativo de mensagem em si está agindo como o contêiner. No entanto, o desenvolvedor tem a opção de incluindo a extensão de aplicativos de mensagem dentro de um aplicativo iOS novo ou existente e enviá-lo junto com o pacote.
+Ao contrário de outros pontos de extensão que a Apple forneceu em todo o sistema, o desenvolvedor não precisa fornecer um aplicativo host para suas extensões de aplicativos de mensagens, pois o próprio aplicativo de mensagens está agindo como o contêiner. No entanto, o desenvolvedor tem a opção de incluir a extensão de aplicativos de mensagem dentro de um aplicativo iOS novo ou existente e enviá-lo junto com o pacote.
 
-Se as extensões de aplicativos de mensagem está incluída no pacote de um aplicativo iOS, o ícone do aplicativo será exibido na tela inicial do dispositivo e na gaveta de aplicativo de mensagem de dentro do aplicativo mensagens. Se ele não está incluído em um pacote de aplicativo, a extensão de aplicativos de mensagens só aparecerão na gaveta de aplicativos de mensagem.
+Se as extensões de aplicativos de mensagem estiverem incluídas no grupo de um aplicativo iOS, o ícone do aplicativo será exibido na tela inicial do dispositivo e na gaveta do aplicativo de mensagem de dentro do aplicativo mensagens. Se não estiver incluído em um pacote de aplicativo, a extensão de aplicativos de mensagem será exibida somente na gaveta do aplicativo de mensagens.
 
-Mesmo se as extensões de aplicativos de mensagem não está incluída em um pacote de aplicativo de host, o desenvolvedor precisará fornecer um ícone de aplicativo no pacote de extensão de aplicativos de mensagem, pois esse é o ícone que será exibido em outras partes do sistema, como a gaveta de aplicativos de mensagem ou as configurações , para a extensão.
+Mesmo que as extensões de aplicativos de mensagem não estejam incluídas em um pacote de aplicativo de host, o desenvolvedor precisará fornecer um ícone de aplicativo no grupo da extensão de aplicativos de mensagem, pois esse é o ícone que será exibido em outras partes do sistema, como a gaveta do aplicativo de mensagens ou as configurações , para a extensão.
 
-## <a name="about-stickers"></a>Sobre os adesivos
+## <a name="about-stickers"></a>Sobre adesivos
 
-Apple projetado adesivos como uma nova maneira para os usuários do iMessage para se comunicar, permitindo que os adesivos a serem enviados embutido como qualquer outro conteúdo de mensagem ou eles podem ser anexados a anterior balões de mensagem dentro da conversa.
+Os adesivos criados pela Apple como uma nova maneira de iMessage os usuários a se comunicarem, permitindo que os adesivos sejam enviados embutidos como qualquer outro conteúdo de mensagem ou possam ser anexados a bolhas de mensagem anteriores dentro da conversa.
 
-Quais são os adesivos?
+O que são adesivos?
 
-- Eles são imagens que fornece a extensão de aplicativos de mensagem.
+- São imagens fornecidas pela extensão de aplicativos de mensagem.
 - Eles podem ser imagens animadas ou estáticas.
 - Eles fornecem uma nova maneira de compartilhar conteúdo de imagem de dentro de um aplicativo.
 
-Há duas maneiras de criar os adesivos:
+Há duas maneiras de criar adesivos:
 
-1. Extensões de aplicativos um adesivo de pacote de mensagem podem ser criadas de dentro do Xcode sem incluir qualquer código. Tudo o que é necessário é que os ativos para os adesivos e ícones do aplicativo.
-2. Criando uma extensão de aplicativos de mensagem padrão que fornece os adesivos de código por meio da estrutura de mensagens.
+1. Uma mensagem do pacote de adesivo extensões de aplicativos podem ser criadas de dentro do Xcode sem incluir nenhum código. Tudo o que é necessário são os ativos para os adesivos e os ícones do aplicativo.
+2. Criando uma extensão de aplicativos de mensagem padrão que fornece adesivos do código por meio da estrutura de mensagens.
 
-### <a name="creating-sticker-packs"></a>Criar pacotes de adesivo
+### <a name="creating-sticker-packs"></a>Criando pacotes adesivos
 
-Pacotes de adesivo são criados a partir de um modelo especial dentro do Xcode e simplesmente fornecem um conjunto estático de ativos de imagem que pode ser usado como adesivos. Como mencionado acima, eles não exigem qualquer código, o desenvolvedor simplesmente arrasta os arquivos de imagem na pasta do pacote de adesivo dentro do catálogo de ativos de adesivos.
+Os pacotes adesivos são criados a partir de um modelo especial dentro do Xcode e simplesmente fornecem um conjunto estático de ativos de imagem que podem ser usados como adesivos. Conforme mencionado acima, eles não exigem nenhum código, o desenvolvedor simplesmente arrasta os arquivos de imagem para a pasta do pacote de adesivo dentro do catálogo de ativos adesivos.
 
-Para uma imagem a ser incluído em um pacote de adesivo, ele deve atender aos seguintes requisitos:
+Para que uma imagem seja incluída em um pacote de adesivo, ela deve atender aos seguintes requisitos:
 
-- Imagens devem ser em um formato PNG, APNG, GIF ou JPEG. Apple sugere o uso apenas os formatos de PNG e APNG ao fornecer ativos de adesivo.
-- Adesivos animados somente dão suporte os formatos APNG e GIF.
-- Imagens de adesivo devem fornecer um plano de fundo transparente, pois pode ser colocados em balões de mensagem na conversa pelo usuário.
-- Os arquivos de imagem individuais devem ser inferior a 500kb.
-- Imagens não podem ser maior ou menor que 100 x 100 pontos que aponta de 206 x 206.
+- As imagens devem estar em um formato PNG, APNG, GIF ou JPEG. A Apple sugere usar apenas os formatos PNG e APNG ao fornecer ativos adesivos.
+- Os adesivos animados dão suporte apenas aos formatos APNG e GIF.
+- As imagens adesivas devem fornecer um plano de fundo transparente, pois elas podem ser colocadas sobre bolhas de mensagem na conversa pelo usuário.
+- Os arquivos de imagem individuais devem ser inferiores a 500 KB.
+- As imagens não podem ser menores do que 100x100 pontos ou maiores que 206 x 206 pontos.
 
 > [!IMPORTANT]
-> Imagens de adesivo sempre devem ser fornecidas no `@3x` resolução no intervalo 300 x 300 para 618 x 618 pixel. O sistema gerará automaticamente o `@2x` e `@1x` versões em tempo de execução conforme necessário.
+> As imagens adesivas devem ser sempre fornecidas na `@3x` resolução no intervalo de 300 x 300 a 618 x 618 pixel. O sistema irá gerar automaticamente as `@2x` versões `@1x` e em tempo de execução, conforme necessário.
 
-A Apple sugere testando os ativos de imagem de adesivo em relação a vários planos de fundo coloridos diferentes (como em branco, preto, vermelho, amarelo e multicoloridas) e fotos acima, para garantir que elas são o melhor em todas as situações possíveis.
+A Apple sugere testar os ativos de imagem de adesivo em vários planos de fundo coloridos diferentes (como branco, preto, vermelho, amarelo e colorido) e em fotos, para garantir que eles tenham a melhor aparência em todas as situações possíveis.
 
-Pacotes de adesivo podem fornecer os adesivos de uma das três tamanhos disponíveis:
+Os pacotes adesivos podem fornecer adesivos em um dos três tamanhos disponíveis:
 
-- **Pequeno** – 100 x 100 pontos.
-- **Médio** - 136 x 136 pontos. Esse é o tamanho padrão.
-- **Grandes** - 206 x 206 pontos.
+- **Pequenos** -100 x 100 pontos.
+- **Médio** -136 x 136 pontos. Esse é o tamanho padrão.
+- **Grandes** -206 x 206 pontos.
 
-Use o Inspetor de atributos do Xcode para definir o tamanho para o pacote inteiro do adesivo e apenas fornecer ativos de imagem que corresponde ao tamanho solicitado, para obter melhores resultados no navegador adesivo dentro do aplicativo de mensagens.
+Use o Inspetor de atributos do Xcode para definir o tamanho do pacote de adesivo inteiro e fornecer apenas ativos de imagem que correspondam ao tamanho solicitado, para obter os melhores resultados no navegador adesivo dentro do aplicativo mensagens.
 
-Para obter mais informações, consulte nosso [construtor de sorvete](https://developer.xamarin.com/samples/monotouch/ios10/IceCreamBuilder/) aplicativo e do Apple [referência de mensagens](https://developer.apple.com/reference/messages).
+Para obter mais informações, consulte nosso aplicativo [Ice Builder](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) e a referência de [mensagens](https://developer.apple.com/reference/messages)da Apple.
 
-## <a name="creating-a-custom-sticker-experience"></a>Criar uma experiência personalizada de adesivo
+## <a name="creating-a-custom-sticker-experience"></a>Criando uma experiência de adesivo personalizada
 
-Se o aplicativo exigir mais controle ou a flexibilidade que é fornecido por um pacote de adesivo, pode incluir uma extensão de aplicativo de mensagem e fornecer os adesivos por meio da estrutura de mensagens para uma experiência de adesivo personalizado.
+Se o aplicativo exigir mais controle ou flexibilidade do que o fornecido por um pacote de adesivo, ele poderá incluir uma extensão de aplicativo de mensagem e fornecer os adesivos por meio da estrutura de mensagens para uma experiência de adesivo personalizada.
 
-Quais são os benefícios da criação de uma experiência de adesivo personalizado?
+Quais são os benefícios de criar uma experiência de adesivo personalizada?
 
-1. Permite que o aplicativo personalizar como os adesivos são exibidos para os usuários do aplicativo. Por exemplo, para adesivos presentes em um formato que não seja o layout de grade padrão ou em um plano de fundo colorido diferente.
-2. Permite que os adesivos seja criado dinamicamente no código em vez de ser incluído como ativos de imagem estática.
-3. Permite que os ativos de imagem de adesivo dinamicamente ser baixado do servidor de web do desenvolvedor sem a necessidade de uma nova versão para a App Store.
-4. Permite acesso da câmera do dispositivo para criar os adesivos em interrupções.
-5. Permite a compras no aplicativo para que o usuário pode comprar mais adesivos de dentro do aplicativo.
+1. Permite que o aplicativo personalize como os adesivos são exibidos para os usuários do aplicativo. Por exemplo, para apresentar adesivos em um formato diferente do layout de grade padrão ou em um plano de fundo colorido diferente.
+2. Permite que os adesivos sejam criados dinamicamente a partir do código, em vez de serem incluídos como ativos de imagem estática.
+3. Permite que ativos de imagem de adesivo sejam baixados dinamicamente do servidor Web do desenvolvedor sem a necessidade de liberar uma nova versão para a loja de aplicativos.
+4. Permite o acesso da câmera do dispositivo para criar adesivos rapidamente.
+5. Permite compras no aplicativo para que o usuário possa comprar mais adesivos de dentro do aplicativo.
 
 Para criar uma experiência de adesivo personalizada, faça o seguinte:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Inicie o Visual Studio para Mac.
+1. Iniciar Visual Studio para Mac.
 2. Abra a solução para adicionar uma extensão de aplicativo de mensagem. 
-3. Selecione **iOS** > **extensões** > **extensão do iMessage** e clique no **próxima** botão: 
+3. Selecione > **extensões** do IOS IMessage extensão e clique no botão Avançar: >  
 
-    [![](intro-to-message-app-extensions-images/message01.png "Selecione a extensão do iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
-4. Insira um **nome da extensão** e clique no **próxima** botão: 
+    [![](intro-to-message-app-extensions-images/message01.png "Selecione a extensão iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
+4. Insira um **nome de extensão** e clique no botão **Avançar** : 
 
     [![](intro-to-message-app-extensions-images/message02.png "Insira um nome de extensão")](intro-to-message-app-extensions-images/message02.png#lightbox)
-5. Clique o **criar** botão para criar a extensão: 
+5. Clique no botão **criar** para criar a extensão: 
 
-    [![](intro-to-message-app-extensions-images/message03.png "Clique no botão Criar")](intro-to-message-app-extensions-images/message03.png#lightbox)
+    [![](intro-to-message-app-extensions-images/message03.png "Clique no botão criar")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Inicie o Visual Studio.
 2. Abra a solução para adicionar uma extensão de aplicativo de mensagem.
-3. Selecione **extensões do iOS > (iOS) da extensão do iMessage** e clique no **próxima** botão:
+3. Selecione **extensões do ios > extensão IMessage (Ios)** e clique no botão **Avançar** :
 
-    [![Selecione (iOS) da extensão do iMessage](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
+    [![Selecionar extensão iMessage (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
 
-4. Insira um **nome** e clique no **Okey** botão
+4. Insira um **nome** e clique no botão **OK**
 
 -----
 
-Por padrão, o `MessagesViewController.cs` arquivo será adicionado à solução. Esse é o ponto de entrada principal para a extensão e ela herda o `MSMessageAppViewController` classe.
+Por padrão, o `MessagesViewController.cs` arquivo será adicionado à solução. Esse é o ponto de entrada principal na extensão e ele é herdado `MSMessageAppViewController` da classe.
 
 A estrutura de mensagens fornece classes para apresentar os adesivos disponíveis para o usuário:
 
-- `MSStickerBrowserViewController` -Controla a exibição que os adesivos serão apresentados no. Ele também está de acordo com o `IMSStickerBrowserViewDataSource` interface para retornar a contagem de adesivo e o adesivo de um índice de determinado navegador.
-- `MSStickerBrowserView` -Este é o modo de exibição que os adesivos disponíveis serão exibidos no.
-- `MSStickerSize` -Decide os tamanhos individuais de célula da grade de selos apresentados na exibição do navegador.
+- `MSStickerBrowserViewController`-Controla a exibição na qual os adesivos serão apresentados. Ele também está em conformidade com a `IMSStickerBrowserViewDataSource` interface para retornar a contagem de adesivos e o adesivo de um determinado índice de navegador.
+- `MSStickerBrowserView`-Esta é a exibição na qual os adesivos disponíveis serão exibidos.
+- `MSStickerSize`– Decide os tamanhos de célula individuais para a grade de adesivos apresentados no modo de exibição de navegador.
 
-### <a name="creating-a-custom-sticker-browser"></a>Criação de um navegador personalizado adesivo
+### <a name="creating-a-custom-sticker-browser"></a>Criando um navegador adesivo personalizado
 
-O desenvolvedor pode personalizar ainda mais a experiência de adesivo para o usuário, fornecendo um navegador de adesivo personalizado (`MSMessageAppBrowserViewController`) na extensão de aplicativo de mensagem. O navegador de adesivo personalizado altera como adesivos são apresentados ao usuário quando eles são selecionando um adesivo a serem incluídos no fluxo de mensagens.
+O desenvolvedor pode personalizar ainda mais a experiência do adesivo para o usuário, fornecendo um navegador adesivo personalizado (`MSMessageAppBrowserViewController`) na extensão do aplicativo de mensagens. O navegador adesivo personalizado altera como os adesivos são apresentados ao usuário quando eles estão selecionando um adesivo para incluir no fluxo de mensagens.
 
 Faça o seguinte:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. No **painel de soluções**, clique com botão direito no nome do projeto da extensão e selecione **Add** > **novo arquivo...**   >  **iOS | Apple Watch** > **controlador de Interface**.
-2. Insira `StickerBrowserViewController` para o **nome** e clique no **New** botão: 
+1. Na **painel de soluções**, clique com o botão direito do mouse no nome do projeto da extensão e selecione **Adicionar** > **novo arquivo...**  >  **Ios |** AppleWatch > **controlador de interface**.
+2. Insira `StickerBrowserViewController` para o **nome** e clique no botão **novo** : 
 
-    [![](intro-to-message-app-extensions-images/browser01.png "Digite StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.png#lightbox)
+    [![](intro-to-message-app-extensions-images/browser01.png "Insira StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Abra o `StickerBrowserViewController.cs` arquivo para edição.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. No **Gerenciador de soluções**, clique com botão direito no nome do projeto da extensão e selecione **Add** > **novo arquivo...**   >  **iOS | Apple Watch** > **controlador de Interface**.
-2. Insira `StickerBrowserViewController` para o **nome** e clique no **New** botão: 
+1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto da extensão e selecione **Adicionar** > **novo arquivo...**  >  **Ios |** AppleWatch > **controlador de interface**.
+2. Insira `StickerBrowserViewController` para o **nome** e clique no botão **novo** : 
 
-    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Digite StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
+    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Insira StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
 3. Abra o `StickerBrowserViewController.cs` arquivo para edição.
 
 -----
 
-Verifique o `StickerBrowserViewController.cs` semelhante ao seguinte:
+Faça a `StickerBrowserViewController.cs` aparência semelhante à seguinte:
 
 ```csharp
 using System;
@@ -262,13 +262,13 @@ namespace MonkeyStickers
 }
 ```
 
-Examine o código acima em detalhes. Ele cria o armazenamento para os adesivos com a extensão fornece:
+Dê uma olhada no código acima em detalhes. Ele cria o armazenamento para os adesivos que a extensão fornece:
 
 ```csharp
 public List<MSSticker> Stickers { get; set; } = new List<MSSticker> ();
 ```
 
-E substitui os dois métodos o `MSStickerBrowserViewController` classe para fornecer dados para o navegador desse armazenamento de dados:
+E substitui dois métodos da `MSStickerBrowserViewController` classe para fornecer dados para o navegador deste armazenamento de dados:
 
 ```csharp
 public override nint GetNumberOfStickers (MSStickerBrowserView stickerBrowserView)
@@ -282,7 +282,7 @@ public override MSSticker GetSticker (MSStickerBrowserView stickerBrowserView, n
 }
 ```
 
-O `CreateSticker` método obtém o caminho de um ativo de imagem do pacote de extensão e usa-o para criar uma nova instância de um `MSSticker` desse ativo, o que ele adiciona à coleção:
+O `CreateSticker` método obtém o caminho de um ativo de imagem do pacote da extensão e o usa para criar uma nova instância de um `MSSticker` desse ativo, que ele adiciona à coleção:
 
 ```csharp
 private void CreateSticker (string assetName, string localizedDescription)
@@ -309,9 +309,9 @@ private void CreateSticker (string assetName, string localizedDescription)
 }
 ```
 
-O `LoadSticker` método é chamado de `ViewDidLoad` para criar uma etiqueta do ativo de imagem nomeada (incluído no pacote do aplicativo) e adicioná-lo à coleção de adesivos.
+O `LoadSticker` método é chamado de `ViewDidLoad` para criar um adesivo a partir do ativo de imagem nomeada (incluído no grupo do aplicativo) e adicioná-lo à coleção de adesivos.
 
-Para implementar o navegador de adesivo personalizado, edite o `MessagesViewController.cs` de arquivo e torná-lo semelhante ao seguinte:
+Para implementar o navegador adesivo personalizado, edite o `MessagesViewController.cs` arquivo e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -354,13 +354,13 @@ namespace MonkeyStickers
 }
 ```
 
-Vamos analisar esse código detalhadamente, ele cria o armazenamento para o navegador personalizado:
+Dando uma olhada nesse código em detalhes, ele cria o armazenamento para o navegador personalizado:
 
 ```csharp
 public StickerBrowserViewController BrowserViewController { get; set;}
 ```
 
-E, no `ViewDidLoad` método, ele cria e configura um novo navegador:
+E, no `ViewDidLoad` método, ele instancia e configura um novo navegador:
 
 ```csharp
 // Create new browser and configure it
@@ -369,7 +369,7 @@ BrowserViewController.View.Frame = View.Frame;
 BrowserViewController.ChangeBackgroundColor (UIColor.Gray);
 ```
 
-Em seguida, ele adiciona o navegador para o modo de exibição para exibi-lo:
+Em seguida, ele adiciona o navegador à exibição para exibi-lo:
 
 ```csharp
 // Add to view
@@ -378,21 +378,21 @@ BrowserViewController.DidMoveToParentViewController (this);
 View.AddSubview (BrowserViewController.View);
 ```
 
-### <a name="further-sticker-customization"></a>Outra personalização de adesivo
+### <a name="further-sticker-customization"></a>Personalização adicional do adesivo
 
-Personalização de adesivo adicional é possível incluindo apenas duas classes na extensão de aplicativo de mensagem:
+A personalização mais adesiva é possível com a inclusão de apenas duas classes na extensão do aplicativo de mensagem:
 
 - `MSStickerView`
 - `MSSticker`
 
-Usando os métodos acima, a extensão pode dar suporte a seleção de adesivo que não depende do método de etiqueta com o navegador padrão. Além disso, a exibição de adesivo pode ser alternada entre dois modos de exibição diferentes:
+Usando os métodos acima, a extensão pode dar suporte à seleção de adesivo que não depende do método de navegador adesivo padrão. Além disso, a exibição adesivo pode ser alternada entre dois modos de exibição diferentes:
 
-- **Compact** -isso é o modo padrão em que o modo de exibição de adesivo se ocupa a parte inferior 25% da exibição de mensagem.
-- **Expandido** -o modo de exibição de adesivo preenche toda a exibição de mensagem.
+- **Compact** -esse é o modo padrão em que a exibição adesivo ocupa os 25% inferiores da exibição de mensagem.
+- **Expandido** -a exibição adesivo preenche a exibição de mensagem inteira.
 
-Este modo de exibição de adesivo pode ser alternado entre esses modos de forma programática ou manualmente pelo usuário.
+Essa exibição de adesivo pode ser alternada entre esses modos de forma programática ou manual pelo usuário.
 
-Vejamos o exemplo a seguir de lidar com a alternância entre os dois modos de exibição diferente. Dois controladores de exibição diferentes serão necessárias para cada estado. O `StickerBrowserViewController` manipula a **Compact** modo de exibição e se parece com a seguinte:
+Veja o exemplo a seguir de como tratar a opção entre os dois modos de exibição diferentes. Dois controladores de exibição diferentes serão necessários para cada Estado. O `StickerBrowserViewController` lida com a exibição **compacta** e é semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -493,7 +493,7 @@ namespace MessageExtension
 }
 ```
 
-O `AddStickerViewController` manipulará as **expandido** etiqueta com o modo de exibição e a aparência semelhante à seguinte:
+O `AddStickerViewController` manipulará a exibição de adesivo expandida e será semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -545,7 +545,7 @@ namespace MessageExtension
 }
 ```
 
-O `MessageViewController` implementa esses controladores de exibição para determinar o estado solicitado:
+O `MessageViewController` implementa esses controladores de exibição para orientar o estado solicitado:
 
 ```csharp
 using System;
@@ -665,14 +665,14 @@ namespace MessageExtension
 }
 ```
 
-Quando o usuário solicita para adicionar um novo adesivo à sua coleção disponível, um novo `AddStickerViewController` é feita, o controlador visível e o modo de exibição de adesivo entra o **expandido** exibição:
+Quando o usuário solicita a adição de um novo adesivo à sua coleção disponível, um novo `AddStickerViewController` é tornado o controlador visível e a exibição adesivo entra no modo de exibição **expandido** :
 
 ```csharp
 // Switch to expanded view mode
 Request (MSMessagesAppPresentationStyle.Expanded);
 ```
 
-Quando o usuário escolhe um adesivo para adicionar, ele é adicionado à sua coleção disponível e o **Compact** exibição é solicitada:
+Quando o usuário escolhe um adesivo para adicionar, ele é adicionado à sua coleção disponível e a exibição **compacta** é solicitada:
 
 ```csharp
 public void AddStickerToCollection (MSSticker sticker)
@@ -706,12 +706,12 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 ## <a name="summary"></a>Resumo
 
-Este artigo cobriu incluem uma extensão de aplicativo de mensagem em uma solução do xamarin. IOS que se integra com o **mensagens** presente novas funcionalidades para o usuário e aplicativo. Ele abordou usando a extensão para enviar mensagens de texto, adesivos, arquivos de mídia e interativas.
+Este artigo abordou inclui uma extensão de aplicativo de mensagem em uma solução Xamarin. iOS que se integra ao aplicativo de **mensagens** e apresenta novas funcionalidades para o usuário. Ele abordou o uso da extensão para enviar texto, adesivos, arquivos de mídia e mensagens interativas.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Construtor de sorvete (amostra)](https://developer.xamarin.com/samples/monotouch/ios10/IceCreamBuilder/)
+- [Construtor de sorvetes (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder)
 - [Referência de mensagens](https://developer.apple.com/reference/messages)
-- [Guia de programação de extensão do aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)
+- [Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)

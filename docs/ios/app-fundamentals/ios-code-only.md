@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 28475df4baa225cc9a608607be6ed673ad0e6e8a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 105d06c7cea23ac0873c8de68d7ad1ad62ae1ffc
+ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61251217"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68665709"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Criando interfaces do usuário do iOS no código no xamarin. IOS
 
@@ -89,10 +89,10 @@ As etapas a seguir explicarão como remover o Storyboard de um aplicativo:
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -118,10 +118,10 @@ public class AppDelegate : UIApplicationDelegate
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -132,7 +132,7 @@ Se você executar esse aplicativo agora, você provavelmente obteria uma exceç�
 
 ## <a name="adding-a-controller"></a>Adicionando um controlador
 
-Seu aplicativo pode conter muitos controladores de exibição, mas ela precisa ter um controlador de exibição de raiz para controlar todos os controladores de exibição.  Adicionar um controlador para a janela, criando uma `UIViewController` instância e defini-lo como o `window.RootViewController` propriedade:
+Seu aplicativo pode conter muitos controladores de exibição, mas ela precisa ter um controlador de exibição de raiz para controlar todos os controladores de exibição.  Adicionar um controlador para a janela, criando uma `UIViewController` instância e defini-lo como o `Window.RootViewController` propriedade:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -632,4 +632,4 @@ Esse artigo discutiu como desenvolver aplicativos do iOS por meio de programaç�
 
 ## <a name="related-links"></a>Links relacionados
 
-- [SimpleLogin (amostra)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)
+- [SimpleLogin (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)
