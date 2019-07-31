@@ -1,48 +1,48 @@
 ---
-title: Exibição de alertas no xamarin. IOS
-description: Este documento descreve como exibir alertas no xamarin. IOS usando a APIs do iOS 8 UIAlertController.
+title: Exibindo alertas no Xamarin. iOS
+description: Este documento descreve como exibir alertas no Xamarin. iOS usando as APIs UIAlertController introduzidas no iOS 8.
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 576de9a46fc89fe01c564c05568d4331a32dbd96
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 4c47e12468d9107cbe03d4bc45ffa77e4ad918e9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674405"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652058"
 ---
-# <a name="displaying-alerts-in-xamarinios"></a>Exibição de alertas no xamarin. IOS
+# <a name="displaying-alerts-in-xamarinios"></a>Exibindo alertas no Xamarin. iOS
 
-Começando com o iOS 8, UIAlertController tem UIActionSheet substituído concluído e UIAlertView que agora são preteridos.
+A partir do iOS 8, o UIAlertController foi concluído, o UIActionSheet e o UIAlertView já foram substituídos.
 
-Ao contrário das classes que foi substituída, que são subclasses de UIView, UIAlertController é uma subclasse de UIViewController.
+Ao contrário das classes substituídas, que são subclasses de UIView, UIAlertController é uma subclasse de UIViewController.
 
-Use `UIAlertControllerStyle` para indicar o tipo de alerta para exibir. Esses tipos de alertas são:
+Use `UIAlertControllerStyle` para indicar o tipo de alerta a ser exibido. Esses tipos de alertas são:
 
 - **UIAlertControllerStyleActionSheet**
-    * Pré-iOS 8 isso teria sido um UIActionSheet
+    * Antes do iOS 8, isso teria sido um UIActionSheet
 - **UIAlertControllerStyleAlert**
-    * Pré-iOS 8 isso teria sido UIAlertView 
+    * Antes do iOS 8, isso teria sido UIAlertView 
 
-Há três etapas necessárias a serem executadas durante a criação de um controlador de alerta:
+Há três etapas necessárias a serem seguidas ao criar um controlador de alerta:
 
-- Criar e configurar o alerta com r:
+- Crie e configure o alerta com um:
     * título
     * mensagem
     * preferredStyle
     
-- (Opcional) Adicionar um campo de texto
-- Adicione as ações necessárias
+- Adicional Adicionar um campo de texto
+- Adicionar as ações necessárias
 - Apresentar o controlador de exibição
 
 O alerta mais simples contém um único botão, conforme mostrado nesta captura de tela:
 
  ![Alerta com um botão](alerts-images/alert1.png)
 
-O código para exibir um alerta simples é da seguinte maneira:
+O código para exibir um alerta simples é o seguinte:
 
 ```csharp
 okayButton.TouchUpInside += (sender, e) => {
@@ -58,7 +58,7 @@ okayButton.TouchUpInside += (sender, e) => {
 };
 ```
 
-Exibindo um alerta com várias opções, é feito de maneira semelhante, mas adicionar duas ações. Por exemplo, a captura de tela a seguir mostra um alerta com dois botões:
+Exibir um alerta com várias opções é feito de maneira semelhante, mas adiciona duas ações. Por exemplo, a captura de tela a seguir mostra um alerta com dois botões:
 
  ![Alerta com dois botões](alerts-images/alert2.png)
 
@@ -77,11 +77,11 @@ okayCancelButton.TouchUpInside += ((sender, e) => {
 });
 ```
 
-Alertas também podem exibir uma folha de ação, semelhante à captura de tela abaixo:
+Os alertas também podem exibir uma planilha de ações, semelhante à captura de tela abaixo:
 
- ![Alerta de folha de ação](alerts-images/alert3.png)
+ ![Alerta de planilha de ações](alerts-images/alert3.png)
 
-Botões são adicionados ao alerta com o `AddAction` método:
+Os botões são adicionados ao alerta com o `AddAction` método:
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
@@ -111,5 +111,5 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Controles (amostra)](https://developer.xamarin.com/samples/monotouch/Controls/)
+- [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
 - [Controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

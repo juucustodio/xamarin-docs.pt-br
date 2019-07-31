@@ -7,22 +7,22 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: b4cd84e9134db2b2106af3205f189fbc2a92bdcc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 484a3ac742d162e1d6faaa38ad2e4eb056ed64a3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018285"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644492"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Desenhar um círculo simples em SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Aprenda as Noções básicas de desenho do SkiaSharp, inclusive canvases e pintar objetos_
 
 Este artigo apresenta os conceitos de desenho de gráficos no xamarin. Forms usando SkiaSharp, incluindo a criação de um `SKCanvasView` objeto para hospedar os gráficos, manipulação de `PaintSurface` event e usando um `SKPaint` objeto para especificar a cor e outro desenho atributos.
 
-O [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa contém todo o código de exemplo para esta série de artigos de SkiaSharp. A primeira página é intitulada **círculo simples** e chama a classe page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Este código mostra como desenhar um círculo no centro da página com um raio de 100 pixels. O contorno do círculo é vermelho e o interior do círculo é azul.
+O [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa contém todo o código de exemplo para esta série de artigos de SkiaSharp. A primeira página é intitulada **círculo simples** e chama a classe page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Este código mostra como desenhar um círculo no centro da página com um raio de 100 pixels. O contorno do círculo é vermelho e o interior do círculo é azul.
 
 ![](circle-images/circleexample.png "Um círculo azul descrito em vermelho")
 
@@ -153,7 +153,7 @@ Um `SKPaint` objeto é pouco mais do que uma coleção de propriedades de desenh
 > [!NOTE]
 > O `SKPaint` classe define um [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) para habilitar a suavização no processamento de seus elementos gráficos. A suavização geralmente resulta em bordas visualmente mais suaves, portanto, você provavelmente desejará definir essa propriedade como `true` na maioria dos seus `SKPaint` objetos. Para fins de simplicidade, essa propriedade é _não_ definido na maioria das páginas de exemplo.
 
-Embora a largura do contorno do círculo é especificada como 25 pixels &mdash; ou um quarto do raio do círculo &mdash; ele parece ser mais finos e há um bom motivo para isso: Metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão até o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura permeiam círculo Geométrico &mdash; pela metade dentro e fora da metade.
+Embora a largura do contorno do círculo seja especificada como 25 pixels &mdash; ou um quarto do raio do círculo &mdash; , parece ser mais fino, e há um bom motivo para isso: Metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão até o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura permeiam círculo Geométrico &mdash; pela metade dentro e fora da metade.
 
 O exemplo a seguir na [a integração com o xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) artigo demonstra isso visualmente.
 
@@ -161,4 +161,4 @@ O exemplo a seguir na [a integração com o xamarin. Forms](~/xamarin-forms/user
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

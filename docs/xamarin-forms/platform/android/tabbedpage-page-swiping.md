@@ -1,24 +1,24 @@
 ---
-title: Página TabbedPage passar o dedo no Android
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar o Android específicos da plataforma que permite passar o dedo com um gesto horizontal dedo entre páginas em uma TabbedPage.
+title: TabbedPagendo o toque no Android
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma Android específica que permite passar o dedo com um gesto de dedo horizontal entre as páginas de um TabbedPage.
 ms.prod: xamarin
 ms.assetid: D1C09CCB-7246-41A4-8BD2-FA6FABCF1C72
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 36fd3d047f9f847cfdaadc3787ba81a583f25e57
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 47a941b88ef22a24383f54aad72563a4814ac077
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926457"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649943"
 ---
-# <a name="tabbedpage-page-swiping-on-android"></a>Página TabbedPage passar o dedo no Android
+# <a name="tabbedpage-page-swiping-on-android"></a>TabbedPagendo o toque no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos da plataforma Android é usado para habilitar o dedo com um gesto horizontal dedo entre páginas em um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Ele é consumido em XAML, definindo o [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) anexado à propriedade um `boolean` valor:
+Essa plataforma do Android específica é usada para habilitar o passar o dedo com um gesto de dedo horizontal entre [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)as páginas em um. Ele é consumido em XAML, definindo o [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) anexado à propriedade um `boolean` valor:
 
 ```xaml
 <TabbedPage ...
@@ -48,7 +48,7 @@ O resultado é que paginação passe o dedo para as páginas exibidas por um [ `
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

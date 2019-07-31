@@ -1,24 +1,24 @@
 ---
-title: Seleção de Item de seletor no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir do iOS específicas da plataforma que controla quando a seleção de item ocorre em um seletor.
+title: Seleção de item do seletor no iOS
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma do iOS específica que controla quando a seleção de itens ocorre em um seletor.
 ms.prod: xamarin
 ms.assetid: 26B0604A-BD30-49FD-83A6-F0EDFBB0524B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: aeefa22c8a17611579c56b3105be860c12a8711c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 57420921100c99db1e2c3a5259ece30cfda719f2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925373"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651838"
 ---
-# <a name="picker-item-selection-on-ios"></a>Seleção de Item de seletor no iOS
+# <a name="picker-item-selection-on-ios"></a>Seleção de item do seletor no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos da plataforma iOS controla quando a seleção de item ocorre em um [ `Picker` ](xref:Xamarin.Forms.Picker), permitindo que o usuário especifique que a seleção de item ocorre ao navegar por itens no controle, ou apenas uma vez a **feito** botão é pressionado. Ele é consumido em XAML, definindo o `Picker.UpdateMode` propriedade anexada a um valor da `UpdateMode` enumeração:
+Esses controles específicos da plataforma iOS quando a seleção de item ocorre [`Picker`](xref:Xamarin.Forms.Picker)em um, permitindo ao usuário especificar que a seleção de item ocorre durante a pesquisa de itens no controle ou apenas uma vez que o botão **Done** é pressionado. Ele é consumido em XAML, definindo o `Picker.UpdateMode` propriedade anexada a um valor da `UpdateMode` enumeração:
 
 ```xaml
 <ContentPage ...
@@ -67,6 +67,6 @@ O resultado é que a especificada `UpdateMode` é aplicada para o [ `Picker` ](x
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

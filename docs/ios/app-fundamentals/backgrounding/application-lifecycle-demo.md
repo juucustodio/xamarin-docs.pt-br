@@ -1,22 +1,22 @@
 ---
-title: Demonstração do ciclo de vida do aplicativo para xamarin. IOS
-description: Este documento examina vários eventos de ciclo de vida tratados pelo representante do aplicativo em um aplicativo iOS, demonstrando a quando e como esses eventos são manipulados.
+title: Demonstração do ciclo de vida do aplicativo para Xamarin. iOS
+description: Este documento examina vários eventos de ciclo de vida manipulados pelo representante do aplicativo em um aplicativo iOS, demonstrando quando e como esses eventos são tratados.
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/17/2018
-ms.openlocfilehash: 3beb511c03b328ecea824bf89355d056df003f3e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4eefbd63a91c6fd9eeed7a6e5043db5a2ee9105b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60946136"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649370"
 ---
-# <a name="application-lifecycle-demo-for-xamarinios"></a>Demonstração do ciclo de vida do aplicativo para xamarin. IOS
+# <a name="application-lifecycle-demo-for-xamarinios"></a>Demonstração do ciclo de vida do aplicativo para Xamarin. iOS
 
-Este artigo e [código de exemplo](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/) demonstra os estados de quatro aplicativos no iOS e a função do `AppDelegate` métodos em notificando-o de quando os estados sejam alterados. O aplicativo imprimirá atualizações no console sempre que o aplicativo mudar de estado:
+Este artigo e [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) demonstra os quatro Estados do aplicativo no Ios e a função dos `AppDelegate` métodos de notificação da aplicação de quando os Estados são alterados. O aplicativo imprimirá atualizações no console sempre que o aplicativo alterar o estado:
 
 [![](application-lifecycle-demo-images/image3-sml.png "O aplicativo de exemplo")](application-lifecycle-demo-images/image3.png#lightbox)
 
@@ -24,8 +24,8 @@ Este artigo e [código de exemplo](https://developer.xamarin.com/samples/monotou
 
 ## <a name="walkthrough"></a>Passo a passo
 
-1. Abra o **ciclo de vida** do projeto na **LifecycleDemo** solução.
-1. Abra o `AppDelegate` classe. Registro em log foi adicionado para os métodos de ciclo de vida para indicar quando o aplicativo foi alterado o estado:
+1. Abra o projeto de **ciclo de vida** na solução **LifecycleDemo** .
+1. Abra a `AppDelegate` classe. O registro em log foi adicionado aos métodos do ciclo de vida para indicar quando o estado do aplicativo foi alterado:
 
     ```csharp
     public override void OnActivated(UIApplication application)
@@ -51,13 +51,13 @@ Este artigo e [código de exemplo](https://developer.xamarin.com/samples/monotou
     }
     ```
 
-1. Inicie o aplicativo no simulador ou no dispositivo. `OnActivated` será chamado quando o aplicativo for iniciado. O aplicativo está agora na _Active_ estado.
-1. Pressione o botão Home no simulador ou dispositivo para trazer o aplicativo para o plano de fundo. `OnResignActivation` e `DidEnterBackground` será chamado como as transições de aplicativo do `Active` à `Inactive` para o `Backgrounded` estado. Como não há nenhum conjunto de código do aplicativo para executar em segundo plano, o aplicativo é considerado _suspenso_ na memória.
-1. Navegue de volta para o aplicativo para colocá-los de volta em primeiro plano. `WillEnterForeground` e `OnActivated` serão ambos chamadas:
+1. Inicie o aplicativo no simulador ou no dispositivo. `OnActivated`será chamado quando o aplicativo for iniciado. O aplicativo agora está no estado _ativo_ .
+1. Pressione o botão Início no simulador ou dispositivo para colocar o aplicativo em segundo plano. `OnResignActivation`e `DidEnterBackground` será chamado como o aplicativo faz a transição de `Active` para `Inactive` e para o `Backgrounded` estado. Como não há nenhum código de aplicativo definido para ser executado em segundo plano, o aplicativo é considerado _suspenso_ na memória.
+1. Navegue de volta para o aplicativo para trazê-lo de volta para o primeiro plano. `WillEnterForeground`e `OnActivated` ambos serão chamados:
 
-    ![](application-lifecycle-demo-images/image4.png "Alterações de estado impresso no console")
+    ![](application-lifecycle-demo-images/image4.png "Alterações de estado impressas no console")
 
-    A seguinte linha de código no controlador de exibição é executada quando o aplicativo entrou em primeiro plano do plano de fundo e altera o texto exibido na tela:
+    A linha de código a seguir no controlador de exibição é executada quando o aplicativo insere o primeiro plano do plano de fundo e altera o texto exibido na tela:
 
     ```csharp
     UIApplication.Notifications.ObserveWillEnterForeground ((sender, args) => {
@@ -65,16 +65,16 @@ Este artigo e [código de exemplo](https://developer.xamarin.com/samples/monotou
     });
     ```
 
-1. Pressione a **Home** botão para colocar o aplicativo em segundo plano. Em seguida, com um toque duplo a **Home** botão para abrir o seletor de aplicativo. No iPhone X, passe o dedo para cima na parte inferior da tela:
+1. Pressione o botão **página inicial** para colocar o aplicativo em segundo plano. Em seguida, toque duas vezes no botão **página inicial** para abrir o alternador de aplicativo. No iPhone X, passe o dedo para cima na parte inferior da tela:
 
-    [![O seletor de aplicativo](application-lifecycle-demo-images/app-switcher-sml.png "o alternador de aplicativo")](application-lifecycle-demo-images/app-switcher.png#lightbox)
+    [![O alternador de aplicativo](application-lifecycle-demo-images/app-switcher-sml.png "O alternador de aplicativo")](application-lifecycle-demo-images/app-switcher.png#lightbox)
   
-1. Localize o aplicativo no alternador de aplicativo e passe o dedo para cima para removê-lo (no iOS pressionamento longo 11, até que os ícones vermelhos aparecem no canto):
+1. Localize o aplicativo no alternador de aplicativo e deslize para cima para removê-lo (no iOS 11, com uma prensa longa até que os ícones vermelhos apareçam no canto):
 
-    [![Passe o dedo para remover um aplicativo em execução](application-lifecycle-demo-images/app-switcher-swipe-sml.png "passar o dedo para remover um aplicativo em execução")](application-lifecycle-demo-images/app-switcher-swipe.png#lightbox)
+    [![Passe o dedo para cima para remover um aplicativo em execução](application-lifecycle-demo-images/app-switcher-swipe-sml.png "Passe o dedo para cima para remover um aplicativo em execução")](application-lifecycle-demo-images/app-switcher-swipe.png#lightbox)
 
-encerrar o aplicativo iOS. Observe que `WillTerminate` não é chamado porque o aplicativo já _suspenso_ em segundo plano.
+o iOS encerrará o aplicativo. Observe que `WillTerminate` não é chamado porque o aplicativo já está _suspenso_ em segundo plano.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [LifecycleDemo (amostra)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
+- [LifecycleDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)

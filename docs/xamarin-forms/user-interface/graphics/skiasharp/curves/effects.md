@@ -7,16 +7,16 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: ee1df713315559c076fbfaed6f5a34057940ff36
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e0af5188dd34e76b419b4cd5bf8d604fb059b7d3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61083037"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642760"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efeitos de caminho em SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descobrir os diversos efeitos de caminho que permitem que os caminhos a ser usado para traçar e o preenchimento_
 
@@ -418,7 +418,7 @@ Uma cadeia ou um cabo de distribuição de peso uniforme trava na forma de um ca
 
 `y = a · cosh(x / a)`
 
-O *cosh* é a função cosseno hiperbólico. Para *x* igual a 0, *cosh* for zero e *y* é igual a *um*. Que é o centro do catenary. Como o *cosseno* função, *cosh* deve ser *mesmo*, o que significa que *cosh(–x)* é igual a *cosh(x)*, e valores aumentam para aumentar os argumentos de positivos ou negativos. Esses valores descrevem as curvas que formam os lados do catenary.
+O *cosh* é a função cosseno hiperbólico. Para *x* igual a 0, *cosh* for zero e *y* é igual a *um*. Que é o centro do catenary. Como o *cosseno* função, *cosh* deve ser *mesmo*, o que significa que *cosh(–x)* é igual a *cosh(x)* , e valores aumentam para aumentar os argumentos de positivos ou negativos. Esses valores descrevem as curvas que formam os lados do catenary.
 
 Localizando o valor apropriado de *um* de acordo com o catenary para as dimensões da página do telefone não é um cálculo direto. Se *w* e *h* a largura e altura de um retângulo, o valor ideal de *um* satisfaz a seguinte equação:
 
@@ -794,13 +794,13 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-Se você examinar cuidadosamente os resultados, você verá que as linhas de hachura de vermelho e azul não estão restritos precisamente para o retângulo arredondado. (Isso é, aparentemente, uma característica do código subjacente Skia.) Se isso for insatisfatório, uma abordagem alternativa é mostrada para as linhas de Hachura diagonal em verde: O retângulo arredondado é usado como um caminho de recorte e as linhas de hachura são desenhadas em toda a página.
+Se você examinar cuidadosamente os resultados, você verá que as linhas de hachura de vermelho e azul não estão restritos precisamente para o retângulo arredondado. (Isso é, aparentemente, uma característica do código subjacente Skia.) Se isso não for satisfatório, uma abordagem alternativa será mostrada para as linhas de hachura diagonal em verde: O retângulo arredondado é usado como um caminho de recorte e as linhas de hachura são desenhadas na página inteira.
 
 O `PaintSurface` manipulador conclui com uma chamada para simplesmente traçar o retângulo arredondado, para que você possa ver a discrepância com as linhas de hachura de vermelho e azul:
 
 [![](effects-images/hatchfill-small.png "Captura de tela da página hachura preenchimento tripla")](effects-images/hatchfill-large.png#lightbox "tripla captura de tela da página de hachura de preenchimento")
 
-A tela Android realmente não parece assim: O dimensionamento da captura de tela causou as linhas finas em vermelho e espaços thin consolidar em linhas vermelhas aparentemente mais ampla e mais amplo.
+A tela do Android não tem a seguinte aparência: O dimensionamento da captura de tela fez com que as linhas vermelhas finas e os espaços finos essolidem em linhas vermelhas mais largas e espaços mais largos.
 
 ## <a name="filling-with-a-path"></a>Preenchendo com um caminho
 
@@ -1086,7 +1086,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 Somente os primeiros dois argumentos são necessários. O método acessa o caminho referenciado pela `src` argumento, modifica os dados de caminho com base nas propriedades de traço na `SKPaint` objeto (incluindo o `PathEffect` propriedade) e, em seguida, grava os resultados no `dst` caminho. O `resScale` parâmetro permite reduzir a precisão para criar um caminho de destino menor e o `cullRect` argumento pode eliminar delimitações fora de um retângulo.
 
-Um uso básico desse método não envolve os efeitos de caminho: Se o `SKPaint` objeto tem seu `Style` propriedade definida como `SKPaintStyle.Stroke`e faz *não* tem seu `PathEffect` definida, então `GetFillPath` cria um caminho que representa um *contorno*do caminho do código-fonte como se ele tivesse sido feito pelas propriedades de pintura.
+Um uso básico desse método não envolve efeitos de caminho: Se o `SKPaint` objeto tiver sua `Style` propriedade definida como `SKPaintStyle.Stroke` *e não tiver seu* `PathEffect` conjunto, o criaráumcaminhoquerepresentaumcontornodocaminhodeorigemcomosetivessesidotraçado`GetFillPath` pelo Propriedades de pintura.
 
 Por exemplo, se o `src` caminho é um círculo simples do radius 500 e o `SKPaint` objeto Especifica a largura do traço de 100, então o `dst` caminho se torne dois círculos concêntricos, uma com um raio de 450 e outra com um raio de 550. O método é chamado `GetFillPath` porque preencher esse `dst` caminho é o mesmo que traça o `src` caminho. Mas você também pode traçar o `dst` caminho para ver os contornos do caminho.
 
@@ -1418,4 +1418,4 @@ Agora que você já viu que variam de simples pontos e traços a combinações e
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

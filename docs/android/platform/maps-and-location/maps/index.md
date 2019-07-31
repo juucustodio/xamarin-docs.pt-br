@@ -1,39 +1,39 @@
 ---
-title: Como usar o Google Maps e local com o xamarin. Android
-description: Este artigo discute como usar mapas e local com o xamarin. Android. Ele aborda tudo desde o aproveitamento do aplicativo de mapas internos para usar o Google mapeia Android API V2 diretamente.
+title: Como usar o Google Maps e o local com o Xamarin. Android
+description: Este artigo discute como usar mapas e localização com o Xamarin. Android. Ele aborda tudo, desde o aproveitamento do aplicativo de mapas interno até o uso direto da API do Google Maps para Android v2.
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 78908e1b1ad6d3f572ce45c8189d8f4ee48ad6ee
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 80ec7a2ae13b3c76bccae80d2c6956533b027047
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61176532"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643248"
 ---
-# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Como usar o Google Maps e local com o xamarin. Android
+# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Como usar o Google Maps e o local com o Xamarin. Android
 
-_Este artigo discute como usar mapas e local com o xamarin. Android. Ele aborda tudo desde o aproveitamento do aplicativo de mapas internos para usar o Google mapeia Android API V2 diretamente._
+_Este artigo discute como usar mapas e localização com o Xamarin. Android. Ele aborda tudo, desde o aproveitamento do aplicativo de mapas interno até o uso direto da API do Google Maps para Android v2._
 
 ## <a name="maps-overview"></a>Visão geral de mapas
 
-Tecnologias de mapeamento são um complemento de todos os lugares para dispositivos móveis. Laptops e computadores desktop não tendem a ter reconhecimento de locais internos. Por outro lado, os dispositivos móveis usam esses aplicativos para localizar dispositivos e exibir informações de localização de alteração. O Android tem recursos poderosos de tecnologia que exibe dados de localização em mapas usando o hardware local que pode estar disponível no dispositivo. Este artigo aborda um espectro de que os aplicativos de mapas em xamarin. Android tem a oferecer, incluindo: 
+As tecnologias de mapeamento são um complemento onipresente aos dispositivos móveis. Computadores desktop e laptops não tendem a ter o reconhecimento de local interno. Por outro lado, os dispositivos móveis usam esses aplicativos para localizar dispositivos e para exibir informações de localização em alteração. O Android tem uma tecnologia integrada e avançada que exibe dados de localização em mapas usando o hardware de local que pode estar disponível no dispositivo. Este artigo aborda um espectro do que os aplicativos de mapas em Xamarin. Android têm a oferecer, incluindo: 
 
--  Usando o interno mapas de aplicativo para adicionar rapidamente a funcionalidade de mapeamento.
--  Trabalhando com a API de mapas de controlar a exibição de um mapa.
--  Usando uma variedade de técnicas para adicionar a gráficas sobreposições.
+-  Usando o aplicativo de mapas interno para adicionar rapidamente a funcionalidade de mapeamento.
+-  Trabalhar com a API Maps para controlar a exibição de um mapa.
+-  Usando uma variedade de técnicas para adicionar sobreposições gráficas.
 
-Os tópicos nesta seção abordam uma ampla variedade de recursos de mapeamento.
-Em primeiro lugar, explique como aproveitar o aplicativo de mapas internos do Android e como exibir uma visão panorâmica Rua de um local. Em seguida, eles discutem como usar a API de mapas a incorporação de recursos de mapeamento diretamente dentro de um aplicativo, abordando os dois como a posição do controle e a exibição de um mapa, bem como adicionar sobreposições gráficas.
+Os tópicos desta seção abrangem uma ampla gama de recursos de mapeamento.
+Primeiro, eles explicam como aproveitar o aplicativo de mapas interno do Android e como exibir uma visão panorâmica de um local. Em seguida, eles abordam como usar a API Maps para incorporar recursos de mapeamento diretamente dentro de um aplicativo, cobrindo como controlar a posição e a exibição de um mapa, além de como adicionar sobreposições gráficas.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MapsAndLocationDemo_v3 (sample)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
+- [MapsAndLocationDemo_v3 (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
 - [Ciclo de vida da atividade](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obter uma chave de API do Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Lista de propósitos: Invocar aplicativos do Google em dispositivos Android](https://developer.android.com/guide/appendix/g-app-intents.html)
-- [Localização e mapas](https://developer.android.com/guide/topics/location/index.html)
+- [Lista de tentativas: Invocando aplicativos do Google em dispositivos Android](https://developer.android.com/guide/appendix/g-app-intents.html)
+- [Local e mapas](https://developer.android.com/guide/topics/location/index.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 8da40e5500e5669027f658ec95930e3b3a37530e
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 364e10b8b59fcc8d640799ab6a0f11dcf4ded818
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675240"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644517"
 ---
 # <a name="introduction-to-watchos"></a>Introdução ao watchOS
 
@@ -29,7 +29,7 @@ Uma solução de aplicativo watchOS tem 3 projetos:
 
 Em aplicativos watchOS 1, o código na extensão é executado no iPhone – a Apple Watch é efetivamente um vídeo externo. aplicativos do watchOS 2 e 3 são executados inteiramente na Apple Watch. Essa diferença é mostrada no diagrama a seguir:
 
-[![](intro-to-watchos-images/arch-sml.png "A diferença entre o watchOS 1 e watchOS 2 (e superior) é mostrada neste diagrama")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "A diferença entre watchOS 1 e watchOS 2 (e superior) é mostrada neste diagrama")](intro-to-watchos-images/arch.png#lightbox)
 
 Independentemente de qual versão do watchOS destina-se, no Visual Studio para painel do Mac de soluções uma solução completa será algo parecido com isso:
 
@@ -53,8 +53,8 @@ Você pode, no entanto, ocultar e revelar os controles e, com alguns controles, 
 
 O ciclo de vida de um `WKInterfaceController` objeto envolve as seguintes chamadas:
 
-- [Awake](xref:WatchKit.WKInterfaceController.Awake*) : Você deve executar a maioria de sua inicialização nesse método.
-- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Chamado pouco antes do aplicativo Watch aparece para o usuário. Use esse método para executar a inicialização do último momento, iniciar as animações, etc.
+- [Ativo](xref:WatchKit.WKInterfaceController.Awake*) : Você deve executar a maior parte da inicialização nesse método.
+- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Chamado logo antes de o aplicativo Watch aparecer para o usuário. Use esse método para executar a inicialização do último momento, iniciar as animações, etc.
 - Neste ponto, o aplicativo Watch é exibida e a extensão começa respondendo ao usuário de entrada e atualizando a exibição do aplicativo Watch por lógica do aplicativo.
 - [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) após o aplicativo Watch foi fechado pelo usuário, esse método é chamado. Depois que esse método retorna, controles de interface do usuário não podem ser modificados até a próxima vez `WillActivate` é chamado. Esse método também será chamado se a conexão para o iPhone é interrompida.
 - Depois que a extensão foi desativada, é inacessível ao programa. Pendente funções assíncronas **não** ser chamado. Assista ao que Kit de extensões não pode usar modos de processamento em segundo plano. Se o programa é reativado pelo usuário, mas o aplicativo não foi finalizado pelo sistema operacional, o primeiro método chamado será `WillActivate`.
@@ -69,7 +69,7 @@ Todos são programados usando classes personalizadas de subpropriedades da `WKIn
 ### <a name="normal-interaction"></a>Interação normal
 
 A maioria da interação de extensão do aplicativo watch será com classes de subpropriedades da `WKInterfaceController` que você escreve para corresponder ao plano em seu aplicativo de inspeção **Interface.storyboard**. Isso é abordado em detalhes na [instalação](~/ios/watchos/get-started/installation.md) e [Introdução](~/ios/watchos/get-started/index.md) artigos.
-A imagem a seguir mostra uma parte do [Watch Kit catálogo](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) Storyboard do exemplo. Para cada cena que mostrei aqui, há um personalizado correspondente `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.) no projeto de extensão.
+A imagem a seguir mostra uma parte do [Watch Kit catálogo](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) Storyboard do exemplo. Para cada cena que mostrei aqui, há um personalizado correspondente `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.) no projeto de extensão.
 
 ![](intro-to-watchos-images/scenes.png "Exemplos de interação de normal")
 
@@ -90,10 +90,10 @@ Para obter mais informações sobre o design de interface do usuário de notific
 
 ## <a name="screen-sizes"></a>Tamanhos de tela
 
-O Apple Watch tem dois tamanhos de face: 38mm e 42mm, com uma taxa de exibição: 4 de 5 e uma tela retina. Seus tamanhos utilizáveis são:
+O Apple Watch tem dois tamanhos de face: 38 mm e 42 mm, com uma taxa de exibição de 5:4 e uma tela de retina. Seus tamanhos utilizáveis são:
 
-- 38mm: pixels lógicos de 136 x 170 (pixels físicos de 340 x 272)
-- 42mm: 156 x 195 pixels lógicos (312 x 390 pixels físicos).
+- 38 mm 136 x 170 pixels lógicos (272 x 340 pixels físicos)
+- 42 mm 156 x 195 pixels lógicos (312 x 390 pixels físicos).
 
 Use `WKInterfaceDevice.ScreenBounds` para determinar em qual exibir o aplicativo de inspeção está sendo executado.
 
@@ -133,8 +133,8 @@ Confira a documentação da Apple:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [watchOS 3 catálogo (amostra)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [watchOS 1 catálogo (amostra)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [watchOS 3 catálogo (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 1 catálogo (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Instalar e configurar](~/ios/watchos/get-started/installation.md)
 - [Primeiro vídeo de aplicativo de inspeção](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Desenvolvimento de Apple para guia do Kit de inspeção](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)

@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 29f7725e41e5163b8f990c827983fbd79bdd1b1e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 08339ba3017983cf79d75adc1c6c21a2fb9ad98b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510489"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643437"
 ---
 # <a name="oreo-features"></a>Recursos do Oreo
 
@@ -205,7 +205,7 @@ O Android Oreo apresenta uma variedade de novos recursos e funcionalidades, como
 Os *canais de notificação* são categorias definidas pelo aplicativo para notificações.
 Você pode criar um canal de notificação para cada tipo de notificação que precisa enviar e pode criar canais de notificação para refletir as escolhas feitas pelos usuários do seu aplicativo. O novo recurso de canais de notificação possibilita que você forneça ao usuário um controle refinado sobre diferentes tipos de notificações. Por exemplo, se você estiver implementando um aplicativo de mensagens, poderá criar canais de notificação separados para cada grupo de conversa criado por um usuário.
 
-Os [canais de notificação](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explicam como criar um canal de notificação e usá-lo para postar notificações locais. Para obter um exemplo de código do mundo real, consulte o exemplo [NotificationChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) ; Este aplicativo de exemplo gerencia dois canais e define opções de notificação adicionais.
+Os [canais de notificação](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explicam como criar um canal de notificação e usá-lo para postar notificações locais. Para obter um exemplo de código do mundo real, consulte o exemplo [NotificationChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) ; Este aplicativo de exemplo gerencia dois canais e define opções de notificação adicionais.
 
 
 
@@ -262,7 +262,7 @@ Quando seu aplicativo precisar de uma fonte, você cria `FontsRequest` um objeto
 
 Quando você chama o `RequestFonts` método, ele primeiro verifica se a fonte está armazenada em cache localmente (de uma chamada anterior para `RequestFont`). Se não estiver armazenado em cache, ele chamará o provedor de fontes, recuperará a fonte de forma assíncrona e, em seguida, passará os `OnTypeFaceRetrieved` resultados de volta para seu aplicativo invocando seu método.
 
-O exemplo de [fontes baixáveis](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) demonstra como usar o recurso de fontes para download introduzido no Android Oreo. 
+O exemplo de [fontes baixáveis](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) demonstra como usar o recurso de fontes para download introduzido no Android Oreo. 
 
 Para obter mais informações sobre como baixar fontes, consulte o tópico [fontes para download](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) de desenvolvedores do Android.
 
@@ -272,7 +272,7 @@ Para obter mais informações sobre como baixar fontes, consulte o tópico [font
 
 A nova estrutura de _preenchimento automático_ no Android Oreo torna mais fácil para os usuários manipular tarefas repetitivas, como logon, criação de conta e transações de cartão de crédito. Os usuários passam menos tempo redigitando as informações (o que pode levar a erros de entrada). Antes que seu aplicativo possa trabalhar com a estrutura de preenchimento automático, um serviço de preenchimento automático deve ser habilitado nas configurações do sistema (os usuários podem habilitar ou desabilitar o preenchimento automático).
 
-O exemplo [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework/) demonstra o uso da estrutura de preenchimento automático. Ele inclui implementações de atividades do cliente com exibições que devem ser preenchidas de modo automático e um serviço que pode fornecer dados de Autopreenchimento para atividades do cliente.
+O exemplo [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) demonstra o uso da estrutura de preenchimento automático. Ele inclui implementações de atividades do cliente com exibições que devem ser preenchidas de modo automático e um serviço que pode fornecer dados de Autopreenchimento para atividades do cliente.
 
 Para obter mais informações sobre o novo recurso de preenchimento automático e como otimizar seu aplicativo para preenchimento automático, consulte o tópico [Framework de preenchimento automático](https://developer.android.com/guide/topics/text/autofill.html) para desenvolvedores do Android.
 
@@ -294,7 +294,7 @@ Para especificar como sua atividade deve se comportar quando estiver no modo PIP
 
 -   [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; Atualiza as definições de configuração de Pip da atividade (por exemplo, uma alteração na taxa de proporção).
 
-O exemplo [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) demonstra o uso básico do modo PIP (Picture-in-Picture) para dispositivos portáteis introduzidos no Oreo. O exemplo reproduz um vídeo que continua sem interrupção enquanto alterna entre os modos de exibição ou outras atividades.
+O exemplo [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) demonstra o uso básico do modo PIP (Picture-in-Picture) para dispositivos portáteis introduzidos no Oreo. O exemplo reproduz um vídeo que continua sem interrupção enquanto alterna entre os modos de exibição ou outras atividades.
 
 
 
@@ -333,19 +333,19 @@ Os aplicativos destinados ao Android Oreo ou superior devem modificar seus aplic
 
 Vários exemplos do Xamarin. Android estão disponíveis para mostrar como aproveitar os recursos do Oreo do Android:
 
--   [NotificationsChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) demonstra como usar o novo sistema de canais de notificação introduzido no Android Oreo. Este exemplo gerencia dois canais de notificações: um com importância padrão e o outro com alta importância.
+-   [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) demonstra como usar o novo sistema de canais de notificação introduzido no Android Oreo. Este exemplo gerencia dois canais de notificações: um com importância padrão e o outro com alta importância.
 
--   O [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) demonstra o uso básico do modo PIP (Picture-in-Picture) para dispositivos portáteis introduzidos no Oreo. O exemplo reproduz um vídeo que continua sem interrupção enquanto alterna entre os modos de exibição ou outras atividades.
+-   O [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) demonstra o uso básico do modo PIP (Picture-in-Picture) para dispositivos portáteis introduzidos no Oreo. O exemplo reproduz um vídeo que continua sem interrupção enquanto alterna entre os modos de exibição ou outras atividades.
 
--   [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework) demonstra o uso da estrutura de preenchimento automático. Ele inclui implementações de atividades do cliente com exibições que devem ser preenchidas de modo automático e um serviço que pode fornecer dados de Autopreenchimento para atividades do cliente.
+-   [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) demonstra o uso da estrutura de preenchimento automático. Ele inclui implementações de atividades do cliente com exibições que devem ser preenchidas de modo automático e um serviço que pode fornecer dados de Autopreenchimento para atividades do cliente.
 
--   As [fontes para download](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) fornecem um exemplo de como usar o recurso de fontes para download descrito anteriormente.
+-   As [fontes para download](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) fornecem um exemplo de como usar o recurso de fontes para download descrito anteriormente.
 
--   [EmojiCompat](https://developer.xamarin.com/samples/monodroid/android-o/EmojiCompat) demonstra o uso da biblioteca de suporte do EmojiCompat. Você pode usar essa biblioteca para impedir que seu aplicativo mostre caracteres de Emoji ausentes como caracteres "tofu".
+-   [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat) demonstra o uso da biblioteca de suporte do EmojiCompat. Você pode usar essa biblioteca para impedir que seu aplicativo mostre caracteres de Emoji ausentes como caracteres "tofu".
 
--   A [tentativa pendente de atualizações de local](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdPendIntent) ilustra o uso da API de localização para obter atualizações sobre o local `PendingIntent`de um dispositivo usando um.
+-   A [tentativa pendente de atualizações de local](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) ilustra o uso da API de localização para obter atualizações sobre o local `PendingIntent`de um dispositivo usando um.
 
--   O [serviço de primeiro plano de atualizações de local](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService) demonstra como usar a API de localização para obter atualizações sobre o local de um dispositivo usando um serviço de primeiro plano associado e iniciado.
+-   O [serviço de primeiro plano de atualizações de local](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice) demonstra como usar a API de localização para obter atualizações sobre o local de um dispositivo usando um serviço de primeiro plano associado e iniciado.
 
 
 ## <a name="video"></a>Vídeo
